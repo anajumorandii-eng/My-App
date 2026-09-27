@@ -34,3 +34,13 @@
 .bp-detail cite { display: block; margin-top: .28rem; color: var(--vs-blue); font-style: normal; font-size: .7rem; }
 @media (max-width: 620px) { .bp-board { padding: .2rem; } .bp-board text { font-size: 13px; } .bp-stepper { grid-template-columns: repeat(2, minmax(0, 1fr)); } .bp-stepper button { min-height: 54px; padding: .55rem; } .bp-detail { grid-template-columns: 1fr; gap: .6rem; } }
 @media (prefers-reduced-motion: reduce) { .bp-board * { transition: none !important; } }
+
+/* Figura deslizável no celular: ver o comentário em BiologiaFisiologia.tsx. */
+.bp-pan-hint { display: none; }
+.bp-board:focus-visible, .bp-process-figure:focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 2px; }
+@media (max-width: 660px) {
+  .bp-board, .bp-process-figure { overflow-x: auto; overflow-y: hidden; }
+  /* .tc-scene na frente: BiologiaProcessos.css, carregado depois, fixa width: 100%. */
+  .tc-scene .bp-board svg, .tc-scene .bp-process-figure svg { width: 760px; max-width: none; }
+  .bp-pan-hint { display: block; margin: .3rem 0 .75rem; color: var(--vs-dim); font: 600 .75rem/1.4 system-ui, sans-serif; }
+}

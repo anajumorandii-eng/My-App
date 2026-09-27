@@ -88,6 +88,12 @@ function Diagram({ id, active, total }: { id: string } & DiagramProps) {
   return <EndocrineDiagram active={active} total={total}/>;
 }
 
+export function rolarComSetas(event: React.KeyboardEvent<HTMLDivElement>) {
+  if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
+  event.preventDefault();
+  event.currentTarget.scrollLeft += event.key === 'ArrowRight' ? 120 : -120;
+}
+
 export function BiologiaFisiologia({ entry }: { entry: SceneEntry }) {
   const [active, setActive] = useState(0);
   const transition = useSceneMotion();
@@ -95,7 +101,11 @@ export function BiologiaFisiologia({ entry }: { entry: SceneEntry }) {
 
   return <section className="tc-scene bp-scene" aria-label={entry.question}>
     <header><small>CRIVO · atlas fisiológico</small><h4>{entry.question}</h4></header>
-    <div className="bp-board"><Diagram id={entry.chapterId} active={active} total={entry.items.length}/></div>
+    {/* No celular o quadro de 620 encolhia a ~350 px e as legendas caíam para
+        6–7 px (auditoria 39, §4.7). Largura mínima e rolagem só dentro da
+        prancha, como nas cenas de História e Geografia. */}
+    <div className="bp-board" role="region" tabIndex={0} aria-label="Prancha visual: deslize para ver a figura inteira; com teclado, use as setas" onKeyDown={rolarComSetas}><Diagram id={entry.chapterId} active={active} total={entry.items.length}/></div>
+    <p className="bp-pan-hint">Deslize a prancha para ver toda a figura. Com teclado, use as setas.</p>
     <div className="bp-stepper" aria-label="Etapas do mecanismo">
       {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => setActive(index)} animate={{ opacity: index === active ? 1 : .66, scale: index === active ? 1.02 : 1 }} transition={transition}><span>{String(index + 1).padStart(2, '0')}</span><strong>{candidate.label}</strong></motion.button>)}
     </div>

@@ -119,7 +119,7 @@ function Ecology() {
   const [level,setLevel]=useState(0); const transition=useInkMotion();
   return <Studio title="Mude a escala da observação" note="Da população à biosfera: o que passa a fazer parte do estudo?">
     <svg viewBox="0 0 480 270" role="img" aria-label={`Escala selecionada: ${ecologyLevels[level][0]}`}>
-      <motion.ellipse cx="240" cy="142" animate={{rx:level===3?207:178,ry:level===3?110:88,opacity:level>=2?1:.15}} transition={transition} fill="none" stroke="var(--vs-blue)" strokeWidth="2"/>
+      <motion.ellipse cx="240" cy="142" initial={{rx:level===3?207:178,ry:level===3?110:88}} animate={{rx:level===3?207:178,ry:level===3?110:88,opacity:level>=2?1:.15}} transition={transition} fill="none" stroke="var(--vs-blue)" strokeWidth="2"/>
       <path d="M42 203Q112 157 175 202T438 204" className="ts-guide"/>
       {[135,185,235].map((x,i)=><g key={x} transform={`translate(${x},${115+i%2*30})`}><path d="M0 28V-10Q-28-25-29-6Q-26 8 0 8Q27-20 34-9Q39 9 0 17" fill="var(--vs-green)" opacity=".75"/></g>)}
       <motion.g animate={{opacity:level>=1?1:.12}} transition={transition}>

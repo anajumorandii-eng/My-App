@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { motion, useReducedMotion } from 'motion/react';
+import { motion } from 'motion/react';
 import { BIOLOGY_REMAINING, biologyRemainingReadout, type BiologyRemainingId } from '../../lib/biologyRemainingLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
@@ -75,8 +75,8 @@ function BiologyMechanism({ id, value, ratio }: { id: BiologyRemainingId; value:
       <path d="M286 113h22" stroke={accent} strokeWidth="4"/>
       <text x="194" y="155" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">orelha</text><text x="238" y="174" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">ossículos</text><text x="270" y="155" textAnchor="middle" fill={accent} fontSize="10">cóclea</text><text x="297" y="179" textAnchor="middle" fill="var(--vs-dim)" fontSize="10">nervo</text>
       <path d="M30 218h260" stroke="var(--vs-ink)" strokeWidth="1.5" opacity=".35"/>
-      <text x="160" y="245" textAnchor="middle" fill={accent} fontSize="13" fontWeight="700">receptor especializado converte estímulo em impulso nervoso</text>
-      <text x="160" y="270" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">fotorreceptores na retina · células ciliadas na cóclea</text>
+      <text x="160" y="245" textAnchor="middle" fill={accent} fontSize="13" fontWeight="700">receptor converte estímulo</text><text x="160" y="263" textAnchor="middle" fill={accent} fontSize="13" fontWeight="700">em impulso nervoso</text>
+      <text x="160" y="288" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">fotorreceptores na retina · células ciliadas na cóclea</text>
     </g>;
     case 'reproduction': return <><circle cx="82" cy="145" r="26" {...line}/><circle cx="160" cy="145" r="26" {...line}/><circle cx="238" cy="145" r="26" {...line}/><motion.path d="M108 145h104" stroke={accent} strokeWidth="5" initial={false} animate={{pathLength:ratio}}/></>;
     case 'plant-tissues': return <><path d="M145 227V79m30 148V79" {...line}/><path d="M160 78q-54 10-57-50 44 3 57 48m0 2q54 10 57-50-44 3-57 48" {...line}/><path d="M151 223V85" stroke="var(--vs-blue)" strokeWidth="5"/><path d="M169 223V85" stroke={accent} strokeWidth="5"/></>;
@@ -99,26 +99,35 @@ function BiologyMechanism({ id, value, ratio }: { id: BiologyRemainingId; value:
       <path d="M104 113h52m-10-8 10 8-10 8" stroke="var(--vs-blue)" strokeWidth="3" fill="none"/>
       <circle cx="184" cy="112" r="29" fill="var(--vs-paper-strong)" stroke="var(--vs-blue)" strokeWidth="3"/>
       <path d="M169 102q12-12 24 0m-25 18q16 15 30-4" fill="none" stroke="var(--vs-blue)" strokeWidth="2"/>
-      <text x="184" y="164" textAnchor="middle" fill="var(--vs-ink)" fontSize="11">microrganismos</text>
+      <text x="178" y="164" textAnchor="middle" fill="var(--vs-ink)" fontSize="11">microrganismos</text>
       <path d="M218 112h42" stroke="var(--vs-blue)" strokeWidth="3"/>
       <circle cx="278" cy="113" r={6 + (1 - ratio) * 13} fill={accent} opacity={0.4 + (1 - ratio) * 0.5}/>
-      <text x="265" y="163" textAnchor="middle" fill="var(--vs-ink)" fontSize="11">disponibilidade</text>
+      <text x="274" y="150" textAnchor="middle" fill="var(--vs-ink)" fontSize="11">disponibilidade</text>
       <path d="M22 218h276" {...line}/>
       <text x="160" y="245" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">degradação depende do composto e do ambiente</text>
     </g>;
     default: return <><path d="M65 200C115 70 205 70 255 200" {...line}/><motion.path d="M65 200H255" stroke={accent} strokeWidth="6" initial={false} animate={{pathLength:ratio}}/><circle cx="160" cy="140" r="32" fill="var(--vs-blue)" opacity=".35"/></>;
   }
 }
+// Primeira frase, com reticências se ainda passar do limite: o corte seco em
+// 180 caracteres partia palavras ao meio no cartão.
+function resumir(texto?: string) {
+  const frase = texto?.trim().split(/(?<=[.!?])\s/)[0] ?? '';
+  return frase.length > 180 ? `${frase.slice(0, 176).trimEnd()}…` : frase;
+}
+
+// A cena não leva mais a barra de progresso e a lista de etapas no rodapé:
+// desenhadas por cima de toda cena, caíam sobre os gametas da genética e
+// passavam da borda na tipagem sanguínea, e as etapas já estão nas leituras.
 export function biologyRemainingInstrument(id: BiologyRemainingId) {
   const [name, question, label, min, max, step, initial, suffix, relation, insight, stations] = BIOLOGY_REMAINING[id];
   return function BiologyRemainingBoard(props: BoardProps) {
     const [value, setValue] = useState<number>(initial);
-    const reduced = useReducedMotion();
     const ratio = (value - min) / (max - min);
     const readout = biologyRemainingReadout(id, value);
     const pair = boardPair(props);
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
-    return <BoardShell kicker="Laboratório de biologia" title={name} subtitle={question} ariaLabel={`Instrumento de biologia: ${props.map.title}`} condition={{ label, value: readout }} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${name}: ${readout}`}><BiologyMechanism id={id} value={value} ratio={ratio}/><motion.path d="M70 265H250" stroke={accent} strokeWidth="3" fill="none" initial={false} animate={{ pathLength: ratio }} transition={{ duration: reduced ? 0 : .4 }}/><text x="160" y="292" textAnchor="middle" fill="var(--vs-ink)" fontSize="13">{stations.join(' → ')}</text></svg><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`biology-rem-${id}`}><strong>{label}</strong><span>{question}</span><b aria-live="polite">{id === "genetics-intro" ? ["AA","Aa","aa"][value] : id === "blood-groups" ? ["O","A","B","AB"][value] : `${value}${suffix}`}</b></label><input id={`biology-rem-${id}`} type="range" min={min} max={max} step={step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts"><div data-pivot="true"><dt>Resultado do modelo</dt><dd aria-live="polite">{readout}</dd></div><div><dt>Etapas</dt><dd>{stations.join(' → ')}</dd></div></dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: first?.excerpt?.slice(0, 180) ?? '', formula: relation }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: second?.excerpt?.slice(0, 180) ?? '', formula: readout }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Mecanismo', general: relation, condition: 'observa-se', reduced: readout }} closing={insight}/>;
+    return <BoardShell kicker="Laboratório de biologia" title={name} subtitle={question} ariaLabel={`Instrumento de biologia: ${props.map.title}`} condition={{ label, value: readout }} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${name}: ${readout}`}><BiologyMechanism id={id} value={value} ratio={ratio}/></svg><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`biology-rem-${id}`}><strong>{label}</strong><span>{question}</span><b aria-live="polite">{id === "genetics-intro" ? ["AA","Aa","aa"][value] : id === "blood-groups" ? ["O","A","B","AB"][value] : `${value}${suffix}`}</b></label><input id={`biology-rem-${id}`} type="range" min={min} max={max} step={step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts"><div data-pivot="true"><dt>Resultado do modelo</dt><dd aria-live="polite">{readout}</dd></div><div><dt>Etapas</dt><dd>{stations.join(' → ')}</dd></div></dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: resumir(first?.excerpt), formula: relation }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: resumir(second?.excerpt), formula: readout }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Mecanismo', general: relation, condition: 'observa-se', reduced: readout }} closing={insight}/>;
   };
 }
