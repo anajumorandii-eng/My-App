@@ -2271,20 +2271,25 @@
   --vs-paper: #ffffff;
   --vs-paper-strong: #ffffff;
   --vs-line: rgba(15, 23, 42, .1);
-  --vs-tech-particula: 99, 102, 241;
   --vs-tech-borda: rgba(15, 23, 42, .09);
-  --vs-tech-realce: var(--vs-kit-roxo);
+  --vs-tech-realce: var(--t-b);
   position: relative;
   isolation: isolate;
   overflow: hidden;
   border: 1px solid var(--vs-tech-borda);
   border-radius: 24px;
   color: var(--vs-ink);
+  /* Paleta do ambiente do capítulo (lib/visualAmbiente.ts), com o piloto
+     original como reserva para quando a prancha é forçada fora do Visual. */
+  --t-a: var(--amb-a, var(--vs-kit-ciano));
+  --t-b: var(--amb-b, var(--vs-kit-roxo));
+  --t-c: var(--amb-c, var(--vs-kit-acc));
+  --t-fundo: var(--amb-fundo, #f6f8fc);
   background:
-    radial-gradient(60% 45% at 12% 0%, rgba(124, 58, 237, .14), transparent 70%),
-    radial-gradient(50% 40% at 95% 12%, rgba(8, 145, 178, .14), transparent 70%),
-    radial-gradient(60% 50% at 60% 100%, rgba(219, 39, 119, .08), transparent 70%),
-    #f6f8fc;
+    radial-gradient(60% 45% at 12% 0%, color-mix(in srgb, var(--t-b) 16%, transparent), transparent 70%),
+    radial-gradient(50% 40% at 95% 12%, color-mix(in srgb, var(--t-a) 16%, transparent), transparent 70%),
+    radial-gradient(60% 50% at 60% 100%, color-mix(in srgb, var(--t-c) 10%, transparent), transparent 70%),
+    var(--t-fundo);
   background-size: 140% 140%;
   animation: vs-aurora 22s ease-in-out infinite alternate;
   box-shadow: 0 30px 80px -40px rgba(15, 23, 42, .25);
@@ -2296,13 +2301,13 @@
   --vs-paper: #0a0f1c;
   --vs-paper-strong: #0d1324;
   --vs-line: rgba(148, 163, 184, .14);
-  --vs-tech-particula: 125, 211, 252;
   --vs-tech-borda: rgba(148, 163, 184, .14);
+  --t-fundo: var(--amb-fundo, #05070d);
   background:
-    radial-gradient(60% 45% at 12% 0%, rgba(124, 58, 237, .32), transparent 70%),
-    radial-gradient(50% 40% at 95% 12%, rgba(34, 211, 238, .2), transparent 70%),
-    radial-gradient(60% 50% at 60% 100%, rgba(244, 114, 182, .14), transparent 70%),
-    #05070d;
+    radial-gradient(60% 45% at 12% 0%, color-mix(in srgb, var(--t-b) 32%, transparent), transparent 70%),
+    radial-gradient(50% 40% at 95% 12%, color-mix(in srgb, var(--t-a) 22%, transparent), transparent 70%),
+    radial-gradient(60% 50% at 60% 100%, color-mix(in srgb, var(--t-c) 14%, transparent), transparent 70%),
+    var(--t-fundo);
   background-size: 140% 140%;
   box-shadow: 0 40px 120px -40px rgba(0, 0, 0, .8);
 }
@@ -2314,7 +2319,7 @@
   inset: 0;
   z-index: -1;
   pointer-events: none;
-  background: radial-gradient(420px circle at var(--luz-x, -500px) var(--luz-y, -500px), color-mix(in srgb, var(--vs-kit-ciano) 16%, transparent), transparent 70%);
+  background: radial-gradient(420px circle at var(--luz-x, -500px) var(--luz-y, -500px), color-mix(in srgb, var(--t-a) 16%, transparent), transparent 70%);
 }
 .vs-tech-particulas {
   position: absolute;
@@ -2332,15 +2337,15 @@
   width: 8px;
   height: 8px;
   border-radius: 50%;
-  background: var(--vs-kit-ciano);
-  box-shadow: 0 0 0 3px color-mix(in srgb, var(--vs-kit-ciano) 22%, transparent), 0 0 14px var(--vs-kit-ciano);
+  background: var(--t-a);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--t-a) 22%, transparent), 0 0 14px var(--t-a);
   animation: vs-pulso 2.4s ease-in-out infinite;
 }
 .vs-study-board--tech .vs-board-kicker {
   display: inline-flex;
   align-items: center;
   gap: .6rem;
-  color: var(--vs-kit-ciano);
+  color: var(--t-a);
   font: 700 .72rem/1 "JetBrains Mono", ui-monospace, monospace;
   font-style: normal;
   letter-spacing: .22em;
@@ -2353,7 +2358,7 @@
   line-height: .98;
   letter-spacing: -.045em;
   color: var(--vs-ink);
-  background: linear-gradient(100deg, var(--vs-ink) 0%, var(--vs-ink) 38%, var(--vs-kit-ciano) 52%, var(--vs-kit-roxo) 64%, var(--vs-ink) 80%);
+  background: linear-gradient(100deg, var(--vs-ink) 0%, var(--vs-ink) 38%, var(--t-a) 52%, var(--t-b) 64%, var(--vs-ink) 80%);
   background-size: 260% 100%;
   -webkit-background-clip: text;
   background-clip: text;
@@ -2369,16 +2374,17 @@
 }
 /* A condição vira mostrador de HUD em vidro. */
 .vs-study-board--tech .vs-q-callout {
-  flex-basis: 150px;
+  flex: 0 0 auto;
+  min-width: 150px;
   min-height: 96px;
   padding: 12px 14px;
-  border: 1px solid color-mix(in srgb, var(--vs-kit-ciano) 45%, transparent);
+  border: 1px solid color-mix(in srgb, var(--t-a) 45%, transparent);
   border-radius: 16px;
   transform: none;
   background: var(--vs-kit-vidro);
   -webkit-backdrop-filter: blur(14px);
   backdrop-filter: blur(14px);
-  box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset, 0 0 40px -10px color-mix(in srgb, var(--vs-kit-ciano) 55%, transparent);
+  box-shadow: 0 0 0 1px rgba(255,255,255,.04) inset, 0 0 40px -10px color-mix(in srgb, var(--t-a) 55%, transparent);
 }
 .vs-study-board--tech .vs-q-callout > span {
   color: var(--vs-dim);
@@ -2388,10 +2394,12 @@
 .vs-study-board--tech .vs-q-callout strong,
 .vs-study-board--tech .vs-q-callout[data-long] strong {
   margin-top: 6px;
-  color: var(--vs-kit-ciano);
+  color: var(--t-a);
   font: 700 1.25rem/1.1 "JetBrains Mono", ui-monospace, monospace;
   font-variant-numeric: tabular-nums;
-  text-shadow: 0 0 18px color-mix(in srgb, var(--vs-kit-ciano) 60%, transparent);
+  /* "27 × 10¹⁰ J" quebrava em duas linhas no mostrador de 150 px. */
+  white-space: nowrap;
+  text-shadow: 0 0 18px color-mix(in srgb, var(--t-a) 60%, transparent);
 }
 /* O pincel vira feixe de luz que percorre a linha. */
 .vs-study-board--tech .vs-brush {
@@ -2400,7 +2408,7 @@
   border-radius: 0;
   transform: none;
   overflow: hidden;
-  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--vs-kit-roxo) 70%, transparent), color-mix(in srgb, var(--vs-kit-ciano) 70%, transparent), transparent);
+  background: linear-gradient(90deg, transparent, color-mix(in srgb, var(--t-b) 70%, transparent), color-mix(in srgb, var(--t-a) 70%, transparent), transparent);
 }
 .vs-study-board--tech .vs-brush::after {
   content: "";
@@ -2441,8 +2449,8 @@
 }
 .vs-study-board--tech .vs-plane-control label strong,
 .vs-study-board--tech .vs-plane-control label b { font-family: "JetBrains Mono", ui-monospace, monospace; }
-.vs-study-board--tech .vs-plane-control label b { color: var(--vs-kit-ciano); }
-.vs-study-board--tech .vs-plane-control input[type="range"] { accent-color: var(--vs-kit-ciano); }
+.vs-study-board--tech .vs-plane-control label b { color: var(--t-a); }
+.vs-study-board--tech .vs-plane-control input[type="range"] { accent-color: var(--t-a); }
 .vs-study-board--tech .vs-plane-readouts > div {
   border: 1px solid var(--vs-tech-borda);
   border-radius: 12px;
@@ -2450,8 +2458,8 @@
   background: color-mix(in srgb, var(--vs-paper) 55%, transparent);
 }
 .vs-study-board--tech .vs-plane-readouts > div[data-pivot="true"] {
-  border-color: color-mix(in srgb, var(--vs-kit-ciano) 55%, transparent);
-  box-shadow: 0 0 24px -8px color-mix(in srgb, var(--vs-kit-ciano) 70%, transparent);
+  border-color: color-mix(in srgb, var(--t-a) 55%, transparent);
+  box-shadow: 0 0 24px -8px color-mix(in srgb, var(--t-a) 70%, transparent);
 }
 .vs-study-board--tech .vs-plane-readouts dt {
   font: 700 .6rem/1.3 "JetBrains Mono", ui-monospace, monospace;
@@ -2532,8 +2540,8 @@
   letter-spacing: -.02em;
 }
 .vs-study-board--tech .vs-equation-strip strong:last-child {
-  color: var(--vs-kit-ciano);
-  text-shadow: 0 0 18px color-mix(in srgb, var(--vs-kit-ciano) 50%, transparent);
+  color: var(--t-a);
+  text-shadow: 0 0 18px color-mix(in srgb, var(--t-a) 50%, transparent);
 }
 /* Sem morros: a ideia central é uma barra de vidro com o ponto aceso. */
 .vs-study-board--tech .vs-landscape { min-height: 0; margin: 20px 0 0; }
@@ -2549,13 +2557,13 @@
 .vs-study-board--tech .vs-landscape p .vs-tech-dot { margin-right: .7rem; vertical-align: .08rem; }
 .vs-study-board--tech .vs-landscape p strong {
   margin-right: .45rem;
-  color: var(--vs-kit-ciano);
+  color: var(--t-a);
   font: 700 .68rem/1 "JetBrains Mono", ui-monospace, monospace;
   letter-spacing: .18em;
   text-transform: uppercase;
 }
 .vs-study-board--tech .vs-faces button[aria-selected="true"] {
-  background: linear-gradient(120deg, var(--vs-kit-roxo), var(--vs-kit-ciano));
+  background: linear-gradient(120deg, var(--t-b), var(--t-a));
   color: #fff;
 }
 /* Entrada em cascata: cada bloco sobe e desfoca para o nítido, como os
@@ -2596,4 +2604,195 @@
     padding: 8px 14px;
   }
   .vs-study-board--tech .vs-q-callout strong { margin-top: 0; font-size: 1.05rem; white-space: nowrap; }
+}
+
+/* ==========================================================================
+   Ambiente da tela inteira. `useAmbienteDaTela` põe `data-ambiente` e as cores
+   neon do capítulo no <html>; aqui elas viram o tema da tela — o Visual em
+   volta da prancha e também o topo, o trilho lateral e a barra de baixo, que
+   são do layout e ficam fora do Visual. Sem isso a prancha acendia violeta e
+   ciano dentro de uma moldura creme e verde (a quebra que a Ana Júlia apontou).
+
+   No escuro as cores são o neon da paleta; no claro, o mesmo tom escurecido,
+   que o neon puro some no vidro branco.
+   ========================================================================== */
+:root[data-ambiente="tecnologico"] {
+  --amb-a: color-mix(in oklab, var(--amb-a-neon) 68%, #0b1020);
+  --amb-b: color-mix(in oklab, var(--amb-b-neon) 68%, #0b1020);
+  --amb-c: color-mix(in oklab, var(--amb-c-neon) 68%, #0b1020);
+  --amb-fundo: color-mix(in srgb, var(--amb-a-neon) 6%, #f6f8fc);
+  --amb-texto: #0b1020;
+  --amb-dim: #5b6478;
+  --amb-linha: rgba(15, 23, 42, .1);
+  --amb-vidro: rgba(255, 255, 255, .6);
+  --amb-vidro-forte: rgba(255, 255, 255, .88);
+  --amb-aurora:
+    radial-gradient(55% 45% at 0% 0%, color-mix(in srgb, var(--amb-b) 14%, transparent), transparent 70%),
+    radial-gradient(50% 45% at 100% 20%, color-mix(in srgb, var(--amb-a) 14%, transparent), transparent 70%),
+    radial-gradient(60% 50% at 50% 100%, color-mix(in srgb, var(--amb-c) 9%, transparent), transparent 70%),
+    var(--amb-fundo);
+}
+:root.dark[data-ambiente="tecnologico"] {
+  --amb-a: var(--amb-a-neon);
+  --amb-b: var(--amb-b-neon);
+  --amb-c: var(--amb-c-neon);
+  --amb-fundo: var(--amb-fundo-escuro);
+  --amb-texto: #e9eef8;
+  --amb-dim: #93a0b8;
+  --amb-linha: rgba(148, 163, 184, .14);
+  --amb-vidro: rgba(148, 163, 184, .07);
+  --amb-vidro-forte: rgba(8, 12, 24, .84);
+  --amb-aurora:
+    radial-gradient(55% 45% at 0% 0%, color-mix(in srgb, var(--amb-b) 24%, transparent), transparent 70%),
+    radial-gradient(50% 45% at 100% 20%, color-mix(in srgb, var(--amb-a) 16%, transparent), transparent 70%),
+    radial-gradient(60% 50% at 50% 100%, color-mix(in srgb, var(--amb-c) 10%, transparent), transparent 70%),
+    var(--amb-fundo);
+}
+:root[data-ambiente="tecnologico"],
+:root[data-ambiente="tecnologico"] body { background: var(--amb-fundo); }
+
+/* --- Layout: fundo, topo, trilho e barra de baixo ------------------------- */
+:root[data-ambiente="tecnologico"] .ni-production-app,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light {
+  --primary: var(--amb-a) !important;
+  --secondary: var(--amb-a) !important;
+  --wash: color-mix(in srgb, var(--amb-a) 18%, transparent) !important;
+  --text: var(--amb-texto);
+  --dim: var(--amb-dim);
+  --faint: var(--amb-dim);
+  --line: var(--amb-linha);
+  --surface: var(--amb-vidro-forte);
+  --surface2: var(--amb-vidro);
+  --ink: var(--amb-fundo);
+  background: var(--amb-aurora);
+  background-attachment: fixed;
+  color: var(--amb-texto);
+  transition: background .6s ease;
+}
+:root[data-ambiente="tecnologico"] .ni-top,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-top,
+:root[data-ambiente="tecnologico"] .ni-production-mobile,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-production-mobile {
+  border-bottom-color: var(--amb-linha);
+  background: var(--amb-vidro-forte);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+:root[data-ambiente="tecnologico"] .ni-top strong,
+:root[data-ambiente="tecnologico"] .ni-production-mobile strong {
+  color: var(--amb-texto);
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  letter-spacing: -.03em;
+}
+:root[data-ambiente="tecnologico"] .ni-top nav a { color: var(--amb-dim); }
+:root[data-ambiente="tecnologico"] .ni-top nav a.active,
+:root[data-ambiente="tecnologico"] .ni-top nav a:hover { color: var(--amb-texto); }
+:root[data-ambiente="tecnologico"] .ni-top nav a.active::after { background: linear-gradient(90deg, var(--amb-b), var(--amb-a)); box-shadow: 0 0 10px var(--amb-a); }
+:root[data-ambiente="tecnologico"] .ni-prototype-badge { color: var(--amb-dim); font-family: "JetBrains Mono", ui-monospace, monospace; }
+:root[data-ambiente="tecnologico"] .ni-theme-toggle,
+:root[data-ambiente="tecnologico"] .ni-avatar { border-color: var(--amb-linha); background: var(--amb-vidro); color: var(--amb-texto); }
+:root[data-ambiente="tecnologico"] .ni-rail,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail {
+  border-right-color: var(--amb-linha);
+  background: var(--amb-vidro-forte);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+:root[data-ambiente="tecnologico"] .ni-rail .ni-icon-depth,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail .ni-icon-depth,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail-scroll a,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail-scroll a b { color: var(--amb-dim); }
+:root[data-ambiente="tecnologico"] .ni-rail-scroll a.active,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail-scroll a.active {
+  background: color-mix(in srgb, var(--amb-a) 14%, transparent);
+  box-shadow: inset 2px 0 var(--amb-a);
+}
+:root[data-ambiente="tecnologico"] .ni-rail-scroll a.active .ni-icon-depth,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail-scroll a.active .ni-icon-depth {
+  color: var(--amb-a);
+  filter: drop-shadow(0 0 7px color-mix(in srgb, var(--amb-a) 60%, transparent));
+}
+:root[data-ambiente="tecnologico"] .crivo-mobile-toolbar__surface {
+  border-color: var(--amb-linha) !important;
+  background: var(--amb-vidro-forte) !important;
+}
+:root[data-ambiente="tecnologico"] .crivo-mobile-toolbar__item { color: var(--amb-dim) !important; }
+:root[data-ambiente="tecnologico"] .crivo-mobile-toolbar__item.is-active { color: var(--amb-a) !important; }
+
+/* --- O Visual em volta da prancha ---------------------------------------- */
+/* Os tokens do Visual são redefinidos pelo ambiente: modos, cadeia, trilha,
+   domínio e painel lateral leem --vs-burgundy, --vs-paper e cia., então quase
+   tudo se adapta sozinho. As cores de estado não mudam — são leitura, não
+   decoração. */
+.crivo-visual.crivo-visual--tech,
+.dark .crivo-visual.crivo-visual--tech {
+  --vs-ink: var(--amb-texto);
+  --vs-dim: var(--amb-dim);
+  --vs-ink-muted: var(--amb-dim);
+  --vs-paper: var(--amb-vidro-forte);
+  --vs-paper-strong: var(--amb-vidro);
+  --vs-line: var(--amb-linha);
+  --vs-burgundy: var(--amb-a);
+  --vs-coral: var(--amb-c);
+  --vs-mint: color-mix(in srgb, var(--amb-a) 30%, transparent);
+  color: var(--amb-texto);
+}
+.crivo-visual--tech .vs-topic-bar { border-bottom-color: var(--amb-linha); }
+.crivo-visual--tech .vs-topic-bar .vs-back-button { border-color: var(--amb-linha); background: var(--amb-vidro); color: var(--amb-texto); }
+.crivo-visual--tech .vs-topic-identity span { color: var(--amb-a); font-family: "JetBrains Mono", ui-monospace, monospace; letter-spacing: .14em; }
+.crivo-visual--tech .vs-topic-identity strong { font-family: "Space Grotesk", Inter, system-ui, sans-serif; letter-spacing: -.02em; }
+.crivo-visual--tech .vs-hand-note { color: var(--amb-dim); font: 600 .66rem/1.35 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .12em; text-transform: uppercase; transform: none; }
+.crivo-visual--tech .vs-hand-note::after { background: linear-gradient(90deg, transparent, var(--amb-a)); transform: none; }
+.crivo-visual--tech .vs-modes > button { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
+.crivo-visual--tech .vs-modes > button[aria-selected='true'],
+.dark .crivo-visual--tech .vs-modes > button[aria-selected='true'] {
+  border-bottom-color: var(--amb-a) !important;
+  color: var(--amb-a) !important;
+  box-shadow: 0 8px 18px -12px var(--amb-a) !important;
+}
+.crivo-visual--tech .vs-mode-hint { font: 500 .8rem/1.4 Inter, system-ui, sans-serif; }
+.crivo-visual--tech .vs-journey,
+.crivo-visual--tech .vs-chain-link,
+.crivo-visual--tech .vs-domain,
+.crivo-visual--tech .vs-inspector,
+.dark .crivo-visual--tech .vs-inspector,
+.crivo-visual--tech .vs-priority-panel {
+  border-color: var(--amb-linha);
+  background: var(--amb-vidro);
+  color: var(--amb-texto);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .06) inset, 0 24px 60px -34px rgba(2, 6, 23, .5);
+}
+.crivo-visual--tech .vs-journey-heading h2,
+.crivo-visual--tech .vs-priority-panel h2,
+.crivo-visual--tech .vs-priority-panel p strong { font-family: "Space Grotesk", Inter, system-ui, sans-serif; letter-spacing: -.03em; }
+.crivo-visual--tech .vs-priority-panel { border-radius: 20px; }
+.crivo-visual--tech .vs-priority-panel::after { display: none; }
+.crivo-visual--tech .vs-priority-kicker,
+.crivo-visual--tech .vs-priority-panel small { color: var(--amb-a); font-family: "JetBrains Mono", ui-monospace, monospace; letter-spacing: .16em; }
+.crivo-visual--tech .vs-priority-panel > button {
+  border-radius: 12px;
+  background: linear-gradient(120deg, var(--amb-b), var(--amb-a));
+  color: #fff;
+  box-shadow: 0 12px 30px -12px var(--amb-a);
+}
+.crivo-visual--tech .vs-chain-link strong { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
+.crivo-visual--tech .vs-journey-count,
+.crivo-visual--tech .vs-journey-number { font-family: "JetBrains Mono", ui-monospace, monospace; color: var(--amb-a); }
+@media (prefers-reduced-motion: reduce) {
+  :root[data-ambiente="tecnologico"] .ni-production-app { transition: none; }
+}
+/* Trilha e cadeia: os títulos e rótulos ainda saíam no serif itálico do
+   caderno, logo abaixo da prancha em Space Grotesk. */
+.crivo-visual--tech :is(.vs-journey-heading h2, .vs-journey-steps strong, .vs-journey-page h3, .vs-mechanism h3) {
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  letter-spacing: -.02em;
+}
+.crivo-visual--tech :is(.vs-journey .vs-board-kicker, .vs-chain-stage) {
+  color: var(--amb-a);
+  font: 700 .64rem/1.2 "JetBrains Mono", ui-monospace, monospace;
+  font-style: normal;
+  letter-spacing: .16em;
+  text-transform: uppercase;
 }

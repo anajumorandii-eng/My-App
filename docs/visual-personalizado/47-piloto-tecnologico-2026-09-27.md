@@ -110,14 +110,92 @@ No ambiente remoto o servidor de fontes é bloqueado, então as capturas mostram
 fontes de fallback. No aparelho da Ana Júlia o título sai em Space Grotesk e
 os números em JetBrains Mono.
 
+## A tela inteira acompanha o capítulo
+
+A Ana Júlia viu a prancha tecnológica dentro da tela antiga e apontou a
+quebra: a prancha acendia violeta e ciano, e em volta ficava tudo como antes.
+
+- a barra do topo e o trilho lateral seguiam creme e verde;
+- o painel "Diagnóstico vivo" também não mudava.
+
+Ela pediu a tela inteira "adaptável de acordo com a matéria e o conteúdo".
+
+**A paleta** sai de `src/lib/visualAmbiente.ts`, um módulo puro testado em
+`node:test`, em duas camadas.
+
+1. **Matéria:**
+
+   | Matéria | Paleta |
+   | --- | --- |
+   | Física | ciano e violeta |
+   | Química | âmbar e magenta |
+   | Biologia | esmeralda e lima |
+   | Matemática | azul e índigo |
+
+2. **Conteúdo:** uma regra lida do tópico do capítulo ajusta a base quando o
+   assunto tem cor natural. Nos cinco capítulos do piloto:
+
+   | Capítulo | Regra | Paleta |
+   | --- | --- | --- |
+   | Órbitas | espaço | índigo e ciano, fundo azul-noite |
+   | Equivalência massa-energia | energia nuclear | âmbar e laranja |
+   | Interferência e reflexão em cordas | ondas | ciano e violeta |
+   | O movimento circular | mecânica | laranja e verde-água |
+
+Outras regras já existem, prontas para quando a moldura se estender:
+
+- eletricidade, luz e calor;
+- vida vegetal, célula, circulação e genética;
+- ácido e base, e eletroquímica.
+
+Nenhuma cor é escolhida à mão por capítulo. Um capítulo sem regra fica com a
+cor da matéria.
+
+O teste achou um erro de ordem nas regras: "fenômenos ondulatórios:
+refração e reflexão em cordas" caía na paleta de luz por causa de
+"refração". A regra de ondas passou a vir antes da de luz.
+
+**Uma fonte só.** `CAPITULOS_TECNOLOGICOS` diz quais capítulos usam a moldura.
+
+- O Visual lê essa lista e avisa o `BoardShell` por contexto.
+- Antes, cada instrumento passava a própria lista, e a tela em volta não tinha
+  como saber.
+
+**A tela inteira.** `useAmbienteDaTela` põe o ambiente no `<html>` enquanto o
+capítulo está aberto e remove ao sair. Assim ele alcança também o que é do
+layout:
+
+- topo em vidro, com o link ativo em luz;
+- trilho lateral com o ícone ativo aceso;
+- barra de baixo do celular;
+- fundo com aurora.
+
+Dentro do Visual, os tokens (`--vs-ink`, `--vs-paper`, `--vs-burgundy`…) são
+redefinidos pelo ambiente. Por isso modos, trilha, cadeia, domínio e o painel
+"Diagnóstico vivo" se adaptam quase sozinhos. As cores de estado não mudam:
+são leitura, não decoração.
+
+**Teste** (`ambiente.test.tsx`): o `<html>` recebe o ambiente enquanto o
+capítulo está aberto e volta ao normal ao sair. O resto do app não pode herdar
+a cor do último capítulo visto.
+
+**Achados da captura, corrigidos:**
+
+- "27 × 10¹⁰ J" quebrava em duas linhas no mostrador;
+- títulos da trilha e da cadeia ainda saíam no serif itálico do caderno.
+
+**Conferência:**
+
+- tela inteira no iPad nos cinco capítulos e no celular em dois, claro e
+  escuro, com o tema aplicado pelo caminho do próprio app (`crivo_theme`);
+- nenhuma rolagem lateral e nenhum erro de página;
+- ao voltar à biblioteca, o ambiente some.
+
 ## Pendente
 
 - **Aprovação da Ana Júlia** desta direção nos cinco capítulos.
-- **O resto do app.** Ela pediu o app inteiro. O que está em volta da prancha
-  continua no estilo anterior, e fica claro nas capturas:
-  - navegação lateral e superior;
-  - painel "Diagnóstico vivo";
-  - Hoje, Resumos, Questões e Caderno.
+- **O resto do app.** A navegação e o Visual já acompanham o capítulo. Hoje,
+  Resumos, Questões e Caderno continuam no estilo anterior.
 
   Se a direção for aprovada, a ordem proposta é:
   1. tokens globais de tema (fundo, vidro, tipografia);

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from 'react';
 import { BookOpen, Cog, Lightbulb, PenLine, Sparkles, Target } from 'lucide-react';
 import { SceneViewport } from './SceneViewport';
 import { NODE_STATE_LABEL, type NodeState } from '../../lib/visualStudy';
+import { useMolduraTecnologica } from './ambiente';
 
 /**
  * A composição que toda prancha compartilha: cabeçalho com a condição do
@@ -57,6 +58,9 @@ export interface BoardShellProps {
    * monoespaçada. A Ana Júlia mandou vídeos de sites imersivos e pediu "assim,
    * moderno e tecnológico". Por enquanto é opcional: vale só para o piloto de
    * cinco capítulos, até ela aprovar e a moldura virar a de todas as pranchas.
+   *
+   * Sem a prop, vale o contexto do Visual (`usaMolduraTecnologica`), que é a
+   * lista única de capítulos. A prop existe para teste e para forçar.
    */
   tecnologico?: boolean;
 }
@@ -90,8 +94,10 @@ export default function BoardShell({
   kicker = 'Prancha ilustrada', title, subtitle, condition,
   left, right, leftState, rightState,
   onSelectLeft, onSelectRight, leftSelected, rightSelected,
-  scene, sceneFirst = false, sceneNotes, emphasis = 'nenhum', equation, supports, closing, ariaLabel, tecnologico = false,
+  scene, sceneFirst = false, sceneNotes, emphasis = 'nenhum', equation, supports, closing, ariaLabel, tecnologico: tecnologicoProp,
 }: BoardShellProps) {
+  const doContexto = useMolduraTecnologica();
+  const tecnologico = tecnologicoProp ?? doContexto;
   const compacto = useCompacto();
   // Luz que segue o dedo ou o mouse: a borda dos vidros acende perto dele,
   // como nos sites de referência. Só grava duas variáveis CSS; o desenho é
@@ -296,7 +302,9 @@ function CampoParticulas() {
       canvas.width = largura * dpr; canvas.height = altura * dpr;
       ctx.setTransform(dpr, 0, 0, dpr, 0, 0);
     };
-    const cor = () => getComputedStyle(canvas).getPropertyValue('--vs-tech-particula').trim() || '120, 220, 255';
+    // A cor sai do ambiente do capítulo (`--amb-a-rgb`), lida a cada quadro:
+    // trocar de capítulo troca a cor sem remontar o canvas.
+    const cor = () => getComputedStyle(canvas).getPropertyValue('--amb-a-rgb').trim() || '120, 220, 255';
     const desenhar = () => {
       ctx.clearRect(0, 0, largura, altura);
       const rgb = cor();

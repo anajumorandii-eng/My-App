@@ -21,6 +21,8 @@ import { VisualArtifact } from './VisualArtifact';
 import { ConceptChain } from './ConceptChain';
 import { VisualJourney } from './VisualJourney';
 import { MOTION_DURATION } from '../design-system/motion/tokens';
+import { MolduraTecnologicaContext, useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDoCapitulo, usaMolduraTecnologica } from '../lib/visualAmbiente';
 import './Visual.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
@@ -285,6 +287,13 @@ export default function Visual() {
     [itemProgress, map],
   );
 
+  // A tela inteira acompanha a prancha: quando o capítulo usa a moldura
+  // tecnológica, o ambiente (matéria + conteúdo) veste também o topo, o trilho
+  // e a barra de baixo. Precisa vir antes dos `return` antecipados — é hook.
+  const tecnologico = summary ? usaMolduraTecnologica(summary.id) : false;
+  const ambiente = useMemo(() => (summary && tecnologico ? ambienteDoCapitulo(summary) : null), [summary, tecnologico]);
+  useAmbienteDaTela(ambiente);
+
   const hidden = useMemo(() => (map ? chooseHiddenRelations(map, answers) : []), [map, answers]);
   const intervention = useMemo(() => (map ? minimalIntervention(map, answers) : null), [map, answers]);
 
@@ -398,7 +407,8 @@ export default function Visual() {
   };
 
   return (
-    <div className="crivo-visual pb-16">
+    <MolduraTecnologicaContext.Provider value={tecnologico}>
+    <div className={`crivo-visual pb-16${tecnologico ? ' crivo-visual--tech' : ''}`}>
       <header className="vs-topic-bar">
         <button onClick={() => setSearchParams({})} className="vs-back-button" aria-label="Voltar à biblioteca visual">
           <ArrowLeft aria-hidden="true" />
@@ -732,5 +742,6 @@ export default function Visual() {
         ) : null}
       </div>
     </div>
+    </MolduraTecnologicaContext.Provider>
   );
 }
