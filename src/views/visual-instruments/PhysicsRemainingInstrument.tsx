@@ -4,7 +4,7 @@ import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import { PHYSICS_REMAINING, type PhysicsRemainingId } from '../../lib/physicsRemainingLab';
 import type { BoardProps } from '../visual-boards/types';
-import { Marca, Nota, Rotulo, Sombra, useKit } from './illustrationKit';
+import { Brilho, Nota, Painel, Papel, Pilula, Rotulo, Sombra, cor, useKit } from './illustrationKit';
 import { motion, useReducedMotion } from 'motion/react';
 
 const short = (text?: string) => { const first = text?.trim().split(/(?<=[.!?])\s/)[0] ?? ''; return first.length > 180 ? `${first.slice(0, 176)}…` : first; };
@@ -27,34 +27,48 @@ function RopeBoundaryScene({ fixed }: { fixed: boolean }) {
   const kit = useKit();
   const parede = 272;
   const pulso = (centro: number, y: number, sobe: boolean) => {
-    const pts = Array.from({ length: 61 }, (_, i) => { const x = 24 + ((parede - 24) * i) / 60; const g = Math.exp(-(((x - centro) / 17) ** 2)); return `${x.toFixed(1)} ${(y - (sobe ? 1 : -1) * 38 * g).toFixed(1)}`; });
+    const pts = Array.from({ length: 61 }, (_, i) => { const x = 22 + ((parede - 22) * i) / 60; const g = Math.exp(-(((x - centro) / 17) ** 2)); return `${x.toFixed(1)} ${(y - (sobe ? 1 : -1) * 34 * g).toFixed(1)}`; });
     return `M${pts.join('L')}`;
   };
-  const corda = (d: string, cor: string) => <g>
-    <path d={d} fill="none" stroke="var(--vs-ink)" strokeWidth="6" strokeLinecap="round" opacity=".85" />
-    <path d={d} fill="none" stroke={cor} strokeWidth="3" strokeLinecap="round" />
+  // Corda torcida: contorno de tinta, cor por dentro e um tracejado claro que
+  // imita as fibras. Uma linha lisa lia como gráfico, não como corda.
+  const corda = (d: string, tom: 'laranja' | 'ciano') => <g>
+    <path d={d} fill="none" stroke="var(--vs-kit-contorno)" strokeWidth="8" strokeLinecap="round" />
+    <path d={d} fill="none" stroke={cor(tom)} strokeWidth="5" strokeLinecap="round" />
+    <path d={d} fill="none" stroke="#fff" strokeWidth="1.4" strokeDasharray="2 5" opacity=".55" />
   </g>;
-  const yIda = 96, yVolta = 212;
+  const yIda = 84, yVolta = 196;
+  const seta = (x: number, y: number, esquerda: boolean) => <g stroke="var(--vs-ink)" strokeWidth="2.2" fill="none" strokeLinecap="round">
+    <path d={`M${x} ${y}h${esquerda ? -36 : 36}`} /><path d={esquerda ? `M${x - 30} ${y - 5}l-6 5 6 5` : `M${x + 30} ${y - 5}l6 5-6 5`} />
+  </g>;
   const extremidade = (y: number) => fixed
-    ? <circle cx={parede} cy={y} r="4" fill="var(--vs-ink)" />
-    : <g><rect x={parede - 7} y={y - 9} width="14" height="18" rx="5" fill={kit.metal} stroke="var(--vs-ink)" strokeWidth="1.5" /></g>;
+    ? <circle cx={parede} cy={y} r="4.5" fill={cor('sol')} stroke="var(--vs-kit-contorno)" strokeWidth="1.3" />
+    : <g><rect x={parede - 8} y={y - 10} width="16" height="20" rx="6" fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.5" /><rect x={parede - 8} y={y - 10} width="16" height="20" rx="6" fill={kit.lapis} /></g>;
   return <g data-physics-system="rope-boundary">
     <kit.Defs />
+    <Papel kit={kit} />
+    <Painel x={8} y={22} w={252} h={92} titulo="IDA" tom="laranja" />
+    <Painel x={8} y={134} w={252} h={102} titulo="VOLTA" tom="ciano" />
     {fixed
-      ? <g><rect x={parede} y="36" width="30" height="220" fill={kit.metal} stroke="var(--vs-ink)" strokeWidth="2" />
-          {Array.from({ length: 11 }, (_, k) => <path key={k} d={`M${parede + 2} ${46 + k * 20}l26 -14`} stroke="var(--vs-ink)" strokeWidth="1" opacity=".45" />)}</g>
-      : <g><rect x={parede - 3} y="36" width="6" height="220" rx="3" fill={kit.metal} stroke="var(--vs-ink)" strokeWidth="1.5" /><Sombra cx={parede} cy={260} rx={16} /></g>}
-    <Rotulo x={22} y={yIda - 50} ancora="start" tom="dim" tam={11}>ida</Rotulo>
-    {corda(pulso(118, yIda, true), 'var(--vs-kit-acc, var(--vs-burgundy))')}
+      ? <g filter={kit.tremido}>
+          {Array.from({ length: 11 }, (_, linha) => Array.from({ length: 2 }, (_, col) => {
+            const x = parede + (linha % 2 ? -6 : 0) + col * 17, y = 18 + linha * 20;
+            return <rect key={`${linha}-${col}`} x={Math.max(parede, x)} y={y} width={Math.min(17, x + 17 - Math.max(parede, x), 306 - Math.max(parede, x))} height="20" fill={cor('vermelho')} stroke="var(--vs-kit-contorno)" strokeWidth="1.2" />;
+          }))}
+          <rect x={parede} y="18" width="34" height="220" fill={kit.lapis} />
+        </g>
+      : <g><Sombra cx={parede} cy={242} rx={16} /><rect x={parede - 3} y="18" width="6" height="222" rx="3" fill={kit.metal} stroke="var(--vs-kit-contorno)" strokeWidth="1.5" /></g>}
+    {corda(pulso(112, yIda, true), 'laranja')}
     {extremidade(yIda)}
-    <path d="M150 46h44" stroke="var(--vs-ink)" strokeWidth="2" markerEnd="none" /><path d="M188 41l8 5-8 5" fill="var(--vs-ink)" />
-    <Rotulo x={22} y={yVolta - 50} ancora="start" tom="dim" tam={11}>volta</Rotulo>
-    {corda(pulso(170, yVolta, !fixed), 'var(--vs-blue)')}
+    {seta(170, 40, false)}
+    {corda(pulso(140, yVolta, !fixed), 'ciano')}
     {extremidade(yVolta)}
-    <path d="M140 150h-44" stroke="var(--vs-ink)" strokeWidth="2" /><path d="M102 145l-8 5 8 5" fill="var(--vs-ink)" />
-    <Nota de={[118, yIda - 40]} em={[60, 28]} texto="crista" ancora="middle" curva={-1} />
-    <Nota de={[170, fixed ? yVolta + 40 : yVolta - 40]} em={fixed ? [228, 286] : [96, 262]} ancora={fixed ? "middle" : undefined} tom="azul" texto={fixed ? 'volta como vale' : 'volta como crista'} curva={fixed ? 1 : -1} />
-    <Nota de={[parede - (fixed ? 2 : 9), yIda]} em={[fixed ? 262 : 250, 150]} ancora="end" tom="tinta" tam={12} texto={fixed ? ['amarrada: não', 'se desloca'] : ['o anel sobe', 'e desce livre']} curva={1} />
+    {seta(236, 152, true)}
+    <Brilho x={112} y={yIda - 44} r={6} />
+    <Nota de={[104, yIda - 36]} em={[40, 50]} texto="crista" ancora="middle" curva={-1} tom="laranja" />
+    <Nota de={[fixed ? 152 : 150, fixed ? yVolta + 30 : yVolta - 30]} em={[190, fixed ? 166 : 218]} ancora="start" tom="ciano" texto={fixed ? ['volta', 'como vale'] : ['volta', 'como crista']} curva={fixed ? 1 : -1} />
+    <Nota de={[parede - (fixed ? 4 : 10), yIda + 2]} em={[252, 104]} ancora="end" tom="roxo" tam={12} texto={fixed ? 'presa: não se desloca' : 'o anel sobe e desce'} curva={1} />
+    <Pilula x={14} y={258} w={292} tom={fixed ? 'vermelho' : 'verde'}>{fixed ? 'ponta fixa: o pulso volta invertido' : 'ponta livre: o pulso volta igual'}</Pilula>
   </g>;
 }
 
@@ -69,7 +83,7 @@ function PulleysScene({ raio }: { raio: number }) {
   const kit = useKit();
   const reduzir = useReducedMotion();
   const esc = 2;
-  const c1 = { x: 56, y: 128 }, c2 = { x: 220, y: 128 };
+  const c1 = { x: 58, y: 122 }, c2 = { x: 220, y: 122 };
   const R1 = 10 * esc, R2 = raio * esc;
   const w1 = 30, w2 = 300 / raio;
   const d = c2.x - c1.x;
@@ -78,45 +92,52 @@ function PulleysScene({ raio }: { raio: number }) {
   const base = (c: { x: number; y: number }, R: number) => [c.x - R * Math.sin(a), c.y + R * Math.cos(a)];
   const [t1, t2, b2, b1] = [topo(c1, R1), topo(c2, R2), base(c2, R2), base(c1, R1)].map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`);
   const correia = `M${t1}L${t2}A${R2} ${R2} 0 1 1 ${b2}L${b1}A${R1} ${R1} 0 0 1 ${t1}Z`;
-  const polia = (c: { x: number; y: number }, R: number, w: number) => {
+  const polia = (c: { x: number; y: number }, R: number, w: number, tom: 'vermelho' | 'ciano') => {
     const raios = Array.from({ length: 4 }, (_, k) => { const g = (k * Math.PI) / 4; return `M${c.x - (R - 5) * Math.cos(g)} ${c.y - (R - 5) * Math.sin(g)}L${c.x + (R - 5) * Math.cos(g)} ${c.y + (R - 5) * Math.sin(g)}`; }).join('');
     return <g>
-      <circle cx={c.x} cy={c.y} r={R} fill={kit.metal} stroke="var(--vs-ink)" strokeWidth="2" />
-      <circle cx={c.x} cy={c.y} r={Math.max(R - 5, 4)} fill="none" stroke="var(--vs-ink)" strokeWidth="1" opacity=".5" />
+      <circle cx={c.x} cy={c.y} r={R} fill={kit.esfera(tom)} />
+      <circle cx={c.x} cy={c.y} r={R} fill={kit.lapis} />
+      <circle cx={c.x} cy={c.y} r={Math.max(R - 5, 4)} fill="none" stroke="#fff" strokeWidth="1.2" opacity=".45" />
       <motion.g style={{ originX: `${c.x}px`, originY: `${c.y}px` }} animate={reduzir ? undefined : { rotate: 360 }} transition={{ duration: 36 / w, repeat: Infinity, ease: 'linear' }}>
-        <path d={raios} stroke="var(--vs-ink)" strokeWidth="2" opacity=".55" />
+        <path d={raios} stroke="#fff" strokeWidth="2.2" opacity=".75" strokeLinecap="round" />
       </motion.g>
-      <circle cx={c.x} cy={c.y} r="5" fill={kit.esfera('tinta')} />
+      <circle cx={c.x} cy={c.y} r="5.5" fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.2" />
     </g>;
   };
   // Arco de ω: 5° por rad/s, com ponta. O arco curto da polia grande é a
   // leitura estática do que a animação mostra.
   const arco = (c: { x: number; y: number }, R: number, w: number) => {
-    const r = R + 16, g0 = -150 * Math.PI / 180, g1 = g0 + (w * 5 * Math.PI) / 180;
+    const r = R + 15, g0 = -150 * Math.PI / 180, g1 = g0 + (w * 5 * Math.PI) / 180;
     const p = (g: number) => `${(c.x + r * Math.cos(g)).toFixed(1)} ${(c.y + r * Math.sin(g)).toFixed(1)}`;
     const ang = g1 + Math.PI / 2, px = c.x + r * Math.cos(g1), py = c.y + r * Math.sin(g1);
-    const ponta = (s: number) => `${(px - 8 * Math.cos(ang + s)).toFixed(1)} ${(py - 8 * Math.sin(ang + s)).toFixed(1)}`;
-    return <g stroke="var(--vs-amber)" strokeWidth="3" fill="none" strokeLinecap="round">
+    const ponta = (s: number) => `${(px - 9 * Math.cos(ang + s)).toFixed(1)} ${(py - 9 * Math.sin(ang + s)).toFixed(1)}`;
+    return <g stroke={cor('sol')} strokeWidth="3.5" fill="none" strokeLinecap="round" strokeLinejoin="round">
       <path d={`M${p(g0)}A${r} ${r} 0 ${w * 5 > 180 ? 1 : 0} 1 ${p(g1)}`} />
       <path d={`M${ponta(0.5)}L${px.toFixed(1)} ${py.toFixed(1)}L${ponta(-0.5)}`} />
     </g>;
   };
-  const vTopo = topo(c1, R1);
+  const meio = [(topo(c1, R1)[0] + topo(c2, R2)[0]) / 2, (topo(c1, R1)[1] + topo(c2, R2)[1]) / 2] as const;
+  const w2txt = String(Math.round(w2 * 100) / 100).replace('.', ',');
   return <g data-physics-system="circular-motion">
     <kit.Defs />
-    <Sombra cx={(c1.x + c2.x) / 2} cy={c2.y + R2 + 16} rx={120} ry={8} />
-    {polia(c1, R1, w1)}{polia(c2, R2, w2)}
-    <path d={correia} fill="none" stroke="var(--vs-ink)" strokeWidth="6" strokeLinejoin="round" />
-    <path d={correia} fill="none" stroke="var(--vs-dim)" strokeWidth="1.5" strokeDasharray="3 5" />
+    <Papel kit={kit} />
+    <Painel x={6} y={14} w={308} h={222} titulo="CORREIA" tom="laranja" />
+    <Sombra cx={(c1.x + c2.x) / 2} cy={c2.y + R2 + 14} rx={116} ry={7} />
+    {polia(c1, R1, w1, 'vermelho')}{polia(c2, R2, w2, 'ciano')}
+    <g filter={kit.tremido}>
+      <path d={correia} fill="none" stroke="var(--vs-kit-contorno)" strokeWidth="7" strokeLinejoin="round" />
+      <path d={correia} fill="none" stroke="#8a5a2b" strokeWidth="4" strokeLinejoin="round" />
+    </g>
+    <path d={correia} fill="none" stroke="#f3d7a8" strokeWidth="1.3" strokeDasharray="3 5" />
     {arco(c1, R1, w1)}{arco(c2, R2, w2)}
-    <path d={`M${c1.x} ${c1.y}h${R1}`} stroke="var(--vs-blue)" strokeWidth="2.5" />
-    <path d={`M${c2.x} ${c2.y}h${R2}`} stroke="var(--vs-blue)" strokeWidth="2.5" />
-    <Rotulo x={c1.x} y={246} tam={12}>R₁ = 10 cm</Rotulo>
-    <Rotulo x={c1.x} y={266} tam={12}>ω₁ = 30 rad/s</Rotulo>
-    <Rotulo x={c2.x} y={246} tam={12}>R₂ = {raio} cm</Rotulo>
-    <Nota de={[(vTopo[0] + topo(c2, R2)[0]) / 2, (vTopo[1] + topo(c2, R2)[1]) / 2 - 4]} em={[118, 24]} texto="mesma v na correia" curva={-1} />
-    <Marca x={c2.x - 60} y={253} w={120} h={20} />
-    <Rotulo x={c2.x} y={268} tam={14} tom="acc">ω₂ = {String(Math.round(w2 * 100) / 100).replace('.', ',')} rad/s</Rotulo>
+    <path d={`M${c1.x} ${c1.y}h${R1}`} stroke={cor('sol')} strokeWidth="2.5" />
+    <path d={`M${c2.x} ${c2.y}h${R2}`} stroke={cor('sol')} strokeWidth="2.5" />
+    <Rotulo x={c1.x} y={224} tam={13}>R₁ = 10 cm</Rotulo>
+    <Rotulo x={c2.x} y={224} tam={13}>R₂ = {raio} cm</Rotulo>
+    <Brilho x={meio[0]} y={meio[1] - 10} r={5} />
+    <Nota de={[meio[0], meio[1] - 4]} em={[158, 36]} ancora="middle" texto="mesma v na correia" curva={-1} tom="roxo" />
+    <Pilula x={6} y={256} w={144} tom="vermelho">ω₁ = 30 rad/s</Pilula>
+    <Pilula x={158} y={256} w={156} tom="ciano">ω₂ = {w2txt} rad/s</Pilula>
   </g>;
 }
 

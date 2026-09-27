@@ -1,10 +1,10 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import type { DynamicsId } from '../../lib/dynamicsLab';
 import type { VectorId } from '../../lib/vectorsLab';
 import type { OrbitalId } from '../../lib/orbitalLab';
 import type { EnergyId } from '../../lib/energyLab';
-import { Marca, Nota, Rotulo as RotuloKit, useKit } from './illustrationKit';
+import { Brilho, Nota, Painel, Papel, Pilula, useKit } from './illustrationKit';
 
 // Auditoria 37: dinâmica, vetores, órbitas e energia desenhavam uma cena só
 // por instrumento — uma caixa com três setas, um triângulo, um círculo dentro
@@ -296,30 +296,47 @@ export function OrbitalCena({ id, v }: { id: OrbitalId; v: number }) {
  */
 function OrbitaCena({ v, reduzir }: { v: number; reduzir: boolean }) {
   const kit = useKit();
+  const clip = `${useId().replace(/:/g, '')}-ceu`;
   const traj = trajetoria(v);
   const sat = { x: PLANETA.x, y: PLANETA.y - traj.r0 };
   // Estrelas fixas: posições tiradas de uma sequência determinística, para o
   // desenho não mudar a cada render nem entre servidor e teste.
-  const estrelas = Array.from({ length: 22 }, (_, k) => [(k * 97) % 300 + 10, (k * 53) % 280 + 10, k % 3 ? 0.8 : 1.4]);
-  const leitura = traj.caiu ? 'cai: a queda alcança o planeta' : v === 4 ? 'órbita circular: Fg = Fc' : 'órbita elíptica';
+  const estrelas = Array.from({ length: 26 }, (_, k) => [(k * 97) % 290 + 16, (k * 53) % 214 + 24, k % 3 ? 0.9 : 1.6]);
+  const leitura = traj.caiu ? 'cai: a queda alcança o planeta' : v === 4 ? 'órbita circular: Fg = Fc' : 'órbita elíptica: ainda cai em volta';
+  const { x, y, r } = PLANETA;
   return <g data-phys="orbitas">
     <kit.Defs /><Pontas />
-    {estrelas.map(([x, y, r], k) => Math.hypot(x - PLANETA.x, y - PLANETA.y) > PLANETA.r + 14 && <circle key={k} cx={x} cy={y} r={r} fill="var(--vs-dim)" opacity=".55" />)}
-    <circle cx={PLANETA.x} cy={PLANETA.y} r={PLANETA.r + 4} fill="none" stroke={blue} strokeWidth="4" opacity=".3" />
-    <circle cx={PLANETA.x} cy={PLANETA.y} r={PLANETA.r} fill={kit.esfera('azul')} />
-    <path d={`M${PLANETA.x - 26} ${PLANETA.y - 18}q10 -12 22 -4t14 12q-8 10 -20 6t-16 -14z M${PLANETA.x + 6} ${PLANETA.y + 10}q14 -6 24 4t-4 18q-12 2 -18 -8z`} fill={`color-mix(in srgb, var(--vs-green) 70%, ${paper})`} opacity=".8" />
-    <motion.path key={v} d={traj.d} fill="none" stroke={traj.caiu ? amber : 'var(--vs-kit-acc, var(--vs-burgundy))'} strokeWidth="3" strokeDasharray="1 0" initial={reduzir ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.2, ease: 'easeOut' }} />
-    <Seta x1={sat.x} y1={sat.y} x2={sat.x + 10 + v * 7} y2={sat.y} cor={blue} largura={3.5} />
-    <Seta x1={sat.x} y1={sat.y + 10} x2={sat.x} y2={sat.y + 34} cor={accent} largura={3.5} />
-    <g>
-      <rect x={sat.x - 21} y={sat.y - 4} width="13" height="8" fill={kit.metal} stroke={ink} strokeWidth="1" />
-      <rect x={sat.x + 8} y={sat.y - 4} width="13" height="8" fill={kit.metal} stroke={ink} strokeWidth="1" />
-      <circle cx={sat.x} cy={sat.y} r="7" fill={kit.esfera('ambar')} stroke={ink} strokeWidth="1" />
+    <defs><clipPath id={clip}><rect x="6" y="14" width="308" height="232" rx="10" /></clipPath></defs>
+    <Papel kit={kit} />
+    <Painel x={6} y={14} w={308} h={232} titulo="ÓRBITA" tom="roxo" escuro />
+    <g clipPath={`url(#${clip})`}>
+      {estrelas.map(([ex, ey, er], k) => Math.hypot(ex - x, ey - y) > r + 14 && <circle key={k} cx={ex} cy={ey} r={er} fill="#fff" opacity=".7" />)}
+      <Brilho x={40} y={60} r={6} /><Brilho x={282} y={210} r={5} tom="claro" /><Brilho x={270} y={70} r={4} tom="sol" />
+      <circle cx={x} cy={y} r={r + 6} fill="none" stroke="#7fc8ff" strokeWidth="5" opacity=".35" />
+      <circle cx={x} cy={y} r={r} fill="#2f7fc1" />
+      <path d={`M${x - 30} ${y - 16}q8 -16 24 -10t12 12q-6 12 -20 8t-16 -10z M${x + 4} ${y + 8}q16 -8 28 2t-4 22q-14 4 -22 -8z M${x - 22} ${y + 18}q8 -2 12 6t-6 8q-8 -2 -6 -14z`} fill="#4caf6a" stroke="#1f5f36" strokeWidth="1" />
+      <path d={`M${x - 36} ${y + 2}q10 -5 20 0M${x + 8} ${y - 26}q10 -4 18 2`} fill="none" stroke="#fff" strokeWidth="3" strokeLinecap="round" opacity=".8" />
+      <circle cx={x} cy={y} r={r} fill={kit.lapis} />
+      <circle cx={x} cy={y} r={r} fill={kit.esfera('claro')} opacity=".25" />
+      <circle cx={x} cy={y} r={r} fill="none" stroke="#0d1210" strokeWidth="1.5" />
+      <motion.path key={v} d={traj.d} fill="none" stroke={traj.caiu ? '#ff9a62' : '#ffd23f'} strokeWidth="3" strokeDasharray="7 5" strokeLinecap="round" initial={reduzir ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.2, ease: 'easeOut' }} />
     </g>
-    <Nota de={[sat.x + 12 + v * 7, sat.y]} em={[308, 30]} ancora="end" tom="azul" texto="v: para o lado" curva={-1} />
-    <Nota de={[sat.x - 3, sat.y + 28]} em={[12, 96]} ancora="start" texto={['gravidade:', 'para o centro']} curva={1} />
-    <Marca x={16} y={268} w={Math.min(290, leitura.length * 8)} h={20} />
-    <RotuloKit x={22} y={283} ancora="start" tam={13} tom={traj.caiu ? 'ambar' : 'acc'}>{leitura}</RotuloKit>
+    {/* Setas com cor própria: o azul e o vinho do papel somem no céu escuro,
+        e o `marker` de `Seta` só conhece esses tons. */}
+    <g strokeWidth="3.5" strokeLinecap="round" strokeLinejoin="round" fill="none">
+      <path d={`M${sat.x} ${sat.y}H${sat.x + 12 + v * 7}m-8 -6l8 6-8 6`} stroke="#6fd0e0" />
+      <path d={`M${sat.x} ${sat.y + 10}V${sat.y + 34}m-6 -8l6 8 6-8`} stroke="#ff7b7b" />
+    </g>
+    <g>
+      {[-1, 1].map(lado => <g key={lado}>
+        <rect x={lado < 0 ? sat.x - 25 : sat.x + 9} y={sat.y - 5} width="16" height="10" fill="#3a6fb0" stroke="#0d1210" strokeWidth="1" />
+        <path d={`M${lado < 0 ? sat.x - 17 : sat.x + 17} ${sat.y - 5}v10M${lado < 0 ? sat.x - 25 : sat.x + 9} ${sat.y}h16`} stroke="#bcd7f5" strokeWidth=".8" />
+      </g>)}
+      <circle cx={sat.x} cy={sat.y} r="8" fill={kit.ouro} stroke="#0d1210" strokeWidth="1.2" />
+    </g>
+    <Nota de={[sat.x + 14 + v * 7, sat.y - 2]} em={[304, 42]} ancora="end" tom="ciano" texto="v: para o lado" curva={-1} />
+    <Nota de={[sat.x - 4, sat.y + 28]} em={[18, 104]} ancora="start" tom="vermelho" texto={['gravidade:', 'para o centro']} curva={1} />
+    <Pilula x={14} y={258} w={292} tom={traj.caiu ? 'laranja' : 'roxo'}>{leitura}</Pilula>
   </g>;
 }
 

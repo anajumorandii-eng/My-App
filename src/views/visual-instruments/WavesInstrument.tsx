@@ -4,7 +4,7 @@ import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import { WAVES, type WavesId } from '../../lib/wavesLab';
 import type { BoardProps } from '../visual-boards/types';
-import { Marca, Nota, Rotulo, senoide, useKit } from './illustrationKit';
+import { Brilho, Painel, Papel, Pilula, Rotulo, cor, senoide, useKit } from './illustrationKit';
 
 const ink = { stroke: 'var(--vs-ink)', strokeWidth: 3, fill: 'none' };
 const wine = { stroke: 'var(--vs-burgundy)', strokeWidth: 4, fill: 'none' };
@@ -12,50 +12,61 @@ const short = (text?: string) => { const sentence = text?.trim().split(/(?<=[.!?
 const wave = (amplitude: number, phase = 0) => Array.from({ length: 17 }, (_, i) => `${i ? 'L' : 'M'} ${35 + i * 16} ${150 - amplitude * Math.sin((i / 16) * Math.PI * 4 + phase)}`).join(' ');
 
 /**
- * Interferência em três faixas: onda 1 + onda 2 = resultado. Antes as três
+ * Interferência em três quadros: onda 1 + onda 2 = soma. Antes as três
  * curvas eram sobrepostas no mesmo eixo, com 17 pontos cada, e o que se via
  * era um novelo em zigue-zague. Separadas, a linha tracejada da crista da onda
- * 1 atravessa as três faixas e mostra o que a fase faz: onde a crista da onda
- * 2 cai em relação a ela, e o tamanho do que sobra embaixo.
+ * 1 atravessa os três quadros e mostra o que a fase faz: onde a crista da
+ * onda 2 cai em relação a ela, e o tamanho do que sobra embaixo.
  */
 function InterferenceScene({ value }: { value: number }) {
   const kit = useKit();
   const fase = (value * Math.PI) / 180;
-  const A = 15;
+  const A = 13;
   const resultante = 2 * A * Math.abs(Math.cos(fase / 2));
   const cm = String(Math.round(4 * Math.abs(Math.cos(fase / 2)) * 10) / 10).replace('.', ',');
-  const x0 = 58, x1 = 304, ciclos = 2;
+  const x0 = 62, x1 = 302, ciclos = 2;
   // A primeira crista da onda 1 fica em t = 1/(4·ciclos); a da onda 2 chega
   // antes na proporção da fase.
-  const crista1 = x0 + (x1 - x0) / (4 * ciclos);
   const periodo = (x1 - x0) / ciclos;
+  const crista1 = x0 + periodo / 4;
   const recuo = crista1 - periodo * (fase / (2 * Math.PI));
   const crista2 = recuo < x0 ? recuo + periodo : recuo;
-  const faixas = [{ y: 58, rotulo: 'onda 1' }, { y: 128, rotulo: 'onda 2' }];
-  const yR = 218;
   const leitura = value === 0 ? 'crista + crista: reforça' : value === 180 ? 'crista + vale: anula' : value < 90 ? 'quase em fase: reforça' : 'quase oposta: enfraquece';
-  // Em oposição não há crista: a nota aponta para a linha reta do meio.
-  const cristaR = value === 180 ? 180 : x0 + periodo * ((Math.PI / 2 - fase / 2) / (2 * Math.PI));
+  const faixas = [{ y: 52, titulo: 'ONDA 1', tom: 'roxo' as const, fase: 0 }, { y: 128, titulo: 'ONDA 2', tom: 'ciano' as const, fase }];
+  const yR = 208;
+  const soma = senoide({ x0, x1, y: yR, amp: resultante, ciclos, fase: fase / 2 });
+  // Alto-falante de cartum: a fonte de cada onda, no lugar da bolinha solta.
+  const falante = (y: number, tom: 'roxo' | 'ciano') => <g>
+    <rect x="16" y={y - 8} width="10" height="16" rx="2" fill={cor(tom)} stroke="var(--vs-kit-contorno)" strokeWidth="1.3" />
+    <path d={`M26 ${y - 8}L40 ${y - 16}V${y + 16}L26 ${y + 8}Z`} fill={cor(tom)} stroke="var(--vs-kit-contorno)" strokeWidth="1.3" strokeLinejoin="round" />
+    <path d={`M26 ${y - 8}L40 ${y - 16}V${y + 16}L26 ${y + 8}Z`} fill={kit.lapis} />
+    <path d={`M45 ${y - 7}q5 7 0 14M50 ${y - 11}q8 11 0 22`} fill="none" stroke={cor(tom)} strokeWidth="1.6" strokeLinecap="round" />
+  </g>;
+  const sinal = (y: number, texto: string) => <g>
+    <circle cx="160" cy={y} r="9" fill={cor("sol")} stroke="var(--vs-kit-contorno)" strokeWidth="1.3" />
+    <Rotulo x={160} y={y + 5} tam={14}>{texto}</Rotulo>
+  </g>;
   return <g data-waves="interference">
     <kit.Defs />
-    {faixas.map(({ y, rotulo }, k) => <g key={rotulo}>
-      <path d={`M${x0} ${y}H${x1}`} stroke="var(--vs-dim)" strokeWidth="1" strokeDasharray="3 4" opacity=".6" />
-      <circle cx="30" cy={y} r="11" fill={kit.esfera(k ? 'azul' : 'tinta')} />
-      <Rotulo x={30} y={y - 15} tam={10.5} tom="dim">{rotulo}</Rotulo>
-      <path d={senoide({ x0, x1, y, amp: A, ciclos, fase: k ? fase : 0 })} fill="none" stroke={k ? 'var(--vs-blue)' : 'var(--vs-ink)'} strokeWidth="3" strokeLinecap="round" />
+    <Papel kit={kit} />
+    {faixas.map(f => <g key={f.titulo}>
+      <Painel x={8} y={f.y - 34} w={304} h={64} titulo={f.titulo} tom={f.tom} />
+      {falante(f.y, f.tom)}
+      <path d={`M${x0} ${f.y}H${x1}`} stroke="var(--vs-dim)" strokeWidth="1" strokeDasharray="3 4" opacity=".6" />
+      <g filter={kit.tremido}><path d={senoide({ x0, x1, y: f.y, amp: A, ciclos, fase: f.fase })} fill="none" stroke={cor(f.tom)} strokeWidth="4" strokeLinecap="round" /></g>
     </g>)}
-    <Rotulo x={30} y={94} tam={18} tom="dim">+</Rotulo>
-    <Rotulo x={30} y={178} tam={20} tom="dim">=</Rotulo>
-    <path d={`M${crista1.toFixed(1)} 34V${yR + 36}`} stroke="var(--vs-amber)" strokeWidth="1.5" strokeDasharray="4 4" />
-    <circle cx={crista1} cy={58 - A} r="4" fill="var(--vs-amber)" />
-    <circle cx={crista2} cy={128 - A} r="4" fill="var(--vs-blue)" />
+    {sinal(88, "+")}
+    {sinal(166, "=")}
+    <Painel x={8} y={yR - 34} w={304} h={70} titulo="SOMA" tom="laranja" />
     <path d={`M${x0} ${yR}H${x1}`} stroke="var(--vs-dim)" strokeWidth="1" opacity=".7" />
-    <path d={`${senoide({ x0, x1, y: yR, amp: resultante, ciclos, fase: fase / 2 })}L${x1} ${yR}L${x0} ${yR}Z`} fill="color-mix(in srgb, var(--vs-kit-acc, var(--vs-burgundy)) 18%, transparent)" stroke="none" />
-    <path d={senoide({ x0, x1, y: yR, amp: resultante, ciclos, fase: fase / 2 })} fill="none" stroke="var(--vs-kit-acc, var(--vs-burgundy))" strokeWidth="5" strokeLinecap="round" />
-    <Rotulo x={30} y={yR + 5} tam={10.5} tom="dim">soma</Rotulo>
-    <Nota de={[cristaR, yR - resultante - 3]} em={[value < 90 ? 306 : 150, 168]} ancora={value < 90 ? 'end' : undefined} texto={leitura} curva={value < 90 ? -1 : 1} />
-    <Marca x={106} y={270} w={108} h={20} />
-    <Rotulo x={160} y={285} tam={15} tom="acc">Aᵣ = {cm} cm</Rotulo>
+    <path d={`${soma}L${x1} ${yR}L${x0} ${yR}Z`} fill={`color-mix(in srgb, ${cor('laranja')} 35%, transparent)`} />
+    <path d={`${soma}L${x1} ${yR}L${x0} ${yR}Z`} fill={kit.lapis} />
+    <g filter={kit.tremido}><path d={soma} fill="none" stroke={cor('laranja')} strokeWidth="5" strokeLinecap="round" /></g>
+    <path d={`M${crista1.toFixed(1)} 22V${yR + 30}`} stroke={cor('sol')} strokeWidth="1.8" strokeDasharray="4 4" />
+    <Brilho x={crista1} y={52 - A - 7} r={6} />
+    <circle cx={crista2} cy={128 - A} r="4.5" fill={cor('ciano')} stroke="var(--vs-kit-contorno)" strokeWidth="1" />
+    <Brilho x={296} y={14} r={5} tom="roxo" /><Brilho x={284} y={22} r={3} />
+    <Pilula x={14} y={258} w={292} tom="laranja">{leitura} · Aᵣ = {cm} cm</Pilula>
   </g>;
 }
 

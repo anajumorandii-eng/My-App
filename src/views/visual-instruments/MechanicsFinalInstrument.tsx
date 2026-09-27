@@ -4,7 +4,7 @@ import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import { MECHANICS_FINAL, type MechanicsFinalId } from '../../lib/mechanicsFinalLab';
 import type { BoardProps } from '../visual-boards/types';
-import { Marca, Nota, Rotulo, Sombra, useKit } from './illustrationKit';
+import { Bola, Brilho, Nota, Painel, Papel, Pilula, Rotulo, Sombra, cor, useKit } from './illustrationKit';
 
 const text = { fontWeight: 800, fill: 'var(--vs-ink)' } as const;
 function short(content?: string) { const first = content?.trim().split(/(?<=[.!?])\s/)[0] ?? ''; return first.length > 180 ? `${first.slice(0, 176)}…` : first; }
@@ -21,56 +21,61 @@ function MassEnergyScene({ value }: { value: number }) {
   const kit = useKit();
   const energia = MECHANICS_FINAL['mass-energy'].readouts(value)[0].value;
   const t = (value * 0.9 * Math.PI) / 180;
-  const pivo = { x: 160, y: 72 }, braco = 110;
+  const pivo = { x: 160, y: 62 }, braco = 108;
   const esq = { x: pivo.x - braco * Math.cos(t), y: pivo.y + braco * Math.sin(t) };
   const dir = { x: pivo.x + braco * Math.cos(t), y: pivo.y - braco * Math.sin(t) };
   const prato = (c: { x: number; y: number }) => {
-    const y = c.y + 62;
+    const y = c.y + 58;
     return <g>
       <path d={`M${c.x} ${c.y}L${c.x - 38} ${y}M${c.x} ${c.y}L${c.x + 38} ${y}`} stroke="var(--vs-dim)" strokeWidth="1.5" />
-      <path d={`M${c.x - 44} ${y}Q${c.x} ${y + 26} ${c.x + 44} ${y}Z`} fill={kit.metal} stroke="var(--vs-ink)" strokeWidth="2" />
-      <circle cx={c.x} cy={c.y} r="3.5" fill="var(--vs-ink)" />
+      <path d={`M${c.x - 44} ${y}Q${c.x} ${y + 26} ${c.x + 44} ${y}Z`} fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.8" />
+      <path d={`M${c.x - 44} ${y}Q${c.x} ${y + 26} ${c.x + 44} ${y}Z`} fill={kit.lapis} />
+      <circle cx={c.x} cy={c.y} r="4" fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.2" />
     </g>;
   };
   // Seis núcleons, três prótons e três nêutrons: afastados à esquerda, colados
   // à direita. A contagem é do desenho, não de um núcleo específico.
-  const tipos = ['acc', 'azul', 'acc', 'azul', 'acc', 'azul'] as const;
+  const tipos = ['vermelho', 'azul', 'vermelho', 'azul', 'vermelho', 'azul'] as const;
   const soltos = [[-30, -9], [-10, -9], [10, -9], [30, -9], [-20, -28], [20, -28]];
   const colados = [[-11, -9], [0, -9], [11, -9], [-5.5, -19], [5.5, -19], [0, -29]];
   // A energia sai do núcleo formado: um leque de fótons que cresce com Δm.
-  const nucleo = { x: dir.x, y: dir.y + 44 };
+  const nucleo = { x: dir.x, y: dir.y + 40 };
   const raios = Math.min(value, 6);
   const pontas: [number, number][] = [];
   const ondas = Array.from({ length: raios }, (_, k) => {
     const a = ((raios === 1 ? -90 : -160 + (k * 140) / (raios - 1)) * Math.PI) / 180;
-    const r0 = 24, r1 = 32 + value * 2.2;
+    const r0 = 24, r1 = 30 + value * 2;
     const pts = Array.from({ length: 13 }, (_, i) => { const r = r0 + ((r1 - r0) * i) / 12; const w = Math.sin(i * 1.6) * 3; return [nucleo.x + r * Math.cos(a) - w * Math.sin(a), nucleo.y + r * Math.sin(a) + w * Math.cos(a)]; });
     pontas.push(pts[12] as [number, number]);
     return `M${pts.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join('L')}`;
   });
   return <g data-mechanics="mass-energy">
     <kit.Defs />
-    <Sombra cx={pivo.x} cy={262} rx={58} />
-    <path d={`M${pivo.x - 46} 258L${pivo.x - 30} 240H${pivo.x + 30}L${pivo.x + 46} 258Z`} fill={kit.metal} stroke="var(--vs-ink)" strokeWidth="2" />
-    <rect x={pivo.x - 5} y={pivo.y} width="10" height={168} fill={kit.metal} stroke="var(--vs-ink)" strokeWidth="1.5" />
-    <path d={`M${pivo.x - 9} ${pivo.y - 2}L${pivo.x} ${pivo.y - 20}L${pivo.x + 9} ${pivo.y - 2}`} fill="var(--vs-ink)" />
-    <g transform={`rotate(${(-t * 180) / Math.PI} ${pivo.x} ${pivo.y})`}>
-      <rect x={pivo.x - braco - 4} y={pivo.y - 4} width={2 * braco + 8} height="8" rx="4" fill={kit.metal} stroke="var(--vs-ink)" strokeWidth="1.5" />
+    <Papel kit={kit} />
+    <Painel x={6} y={14} w={308} h={236} titulo="DEFEITO DE MASSA" tom="roxo" />
+    <Bola kit={kit} cx={24} cy={36} r={5} tom="vermelho" /><Rotulo x={33} y={40} ancora="start" tam={10.5}>próton</Rotulo>
+    <Bola kit={kit} cx={78} cy={36} r={5} tom="azul" /><Rotulo x={87} y={40} ancora="start" tam={10.5}>nêutron</Rotulo>
+    <Sombra cx={pivo.x} cy={232} rx={56} />
+    <g filter={kit.tremido}>
+      <path d={`M${pivo.x - 44} 228L${pivo.x - 28} 210H${pivo.x + 28}L${pivo.x + 44} 228Z`} fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.8" />
+      <rect x={pivo.x - 5} y={pivo.y} width="10" height={150} fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.5" />
+      <path d={`M${pivo.x - 9} ${pivo.y - 2}L${pivo.x} ${pivo.y - 20}L${pivo.x + 9} ${pivo.y - 2}Z`} fill={cor('vermelho')} stroke="var(--vs-kit-contorno)" strokeWidth="1.3" />
+      <g transform={`rotate(${(-t * 180) / Math.PI} ${pivo.x} ${pivo.y})`}>
+        <rect x={pivo.x - braco - 4} y={pivo.y - 4} width={2 * braco + 8} height="8" rx="4" fill={kit.ouro} stroke="var(--vs-kit-contorno)" strokeWidth="1.5" />
+      </g>
     </g>
     {prato(esq)}{prato(dir)}
-    {soltos.map(([dx, dy], k) => <circle key={`s${k}`} cx={esq.x + dx} cy={esq.y + 62 + dy} r="8.5" fill={kit.esfera(tipos[k])} />)}
-    {colados.map(([dx, dy], k) => <circle key={`c${k}`} cx={dir.x + dx} cy={dir.y + 62 + dy} r="8.5" fill={kit.esfera(tipos[k])} />)}
-    {ondas.map((d, k) => <path key={k} d={d} fill="none" stroke="var(--vs-amber)" strokeWidth="2.2" strokeLinecap="round" />)}
-    <circle cx="22" cy="22" r="6" fill={kit.esfera('acc')} /><Rotulo x={32} y={26} ancora="start" tam={10.5} tom="dim">próton</Rotulo>
-    <circle cx="82" cy="22" r="6" fill={kit.esfera('azul')} /><Rotulo x={92} y={26} ancora="start" tam={10.5} tom="dim">nêutron</Rotulo>
-    <Rotulo x={esq.x} y={esq.y + 96} tam={11}>núcleons</Rotulo><Rotulo x={esq.x} y={esq.y + 109} tam={11}>separados</Rotulo>
-    <Rotulo x={dir.x} y={dir.y + 96} tam={11}>núcleo</Rotulo><Rotulo x={dir.x} y={dir.y + 109} tam={11}>formado</Rotulo>
+    {soltos.map(([dx, dy], k) => <Bola key={`s${k}`} kit={kit} cx={esq.x + dx} cy={esq.y + 58 + dy} r={8.5} tom={tipos[k]} />)}
+    {colados.map(([dx, dy], k) => <Bola key={`c${k}`} kit={kit} cx={dir.x + dx} cy={dir.y + 58 + dy} r={8.5} tom={tipos[k]} />)}
+    {ondas.map((d, k) => <path key={k} d={d} fill="none" stroke={cor('sol')} strokeWidth="2.4" strokeLinecap="round" />)}
+    {pontas.map(([x, y], k) => <Brilho key={k} x={x} y={y} r={k % 2 ? 4 : 6} />)}
+    <Rotulo x={esq.x} y={esq.y + 94} tam={12}>núcleons</Rotulo><Rotulo x={esq.x} y={esq.y + 108} tam={12}>separados</Rotulo>
+    <Rotulo x={dir.x} y={dir.y + 94} tam={12}>núcleo</Rotulo><Rotulo x={dir.x} y={dir.y + 108} tam={12}>formado</Rotulo>
     {value > 0
-      ? <Nota de={[esq.x - 30, esq.y + 76]} em={[14, 232]} ancora="start" texto={[`pesa ${value} mg a mais`, 'que o núcleo']} curva={-1} />
-      : <Nota de={[pivo.x, pivo.y - 20]} em={[308, 40]} ancora="end" texto="sem defeito: equilíbrio" />}
-    {value > 0 && <Nota de={pontas[pontas.length - 1]} em={[306, 232]} ancora="end" tom="ambar" texto={['a massa que falta', 'saiu como energia']} curva={1} />}
-    <Marca x={98} y={271} w={124} h={20} />
-    <Rotulo x={160} y={286} tam={14} tom="acc">E = {energia}</Rotulo>
+      ? <Nota de={[esq.x - 40, esq.y + 56]} em={[16, 214]} ancora="start" texto={[`pesa ${value} mg a mais`, 'que o núcleo']} curva={-1} tom="roxo" />
+      : <Nota de={[pivo.x, pivo.y - 20]} em={[304, 44]} ancora="end" texto="sem defeito: equilíbrio" tom="roxo" />}
+    {value > 0 && <Nota de={pontas[pontas.length - 1]} em={[306, 214]} ancora="end" tom="laranja" texto={['a massa que falta', 'saiu como energia']} curva={1} />}
+    <Pilula x={50} y={260} w={220} tom="laranja">E = {energia}</Pilula>
   </g>;
 }
 

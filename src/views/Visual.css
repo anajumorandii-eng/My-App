@@ -2236,8 +2236,18 @@
 .vs-kit-sombra { fill: var(--vs-shadow); }
 .vs-kit-nota path { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
 .vs-kit-nota text { font-family: "Kalam", "Newsreader", Georgia, serif; font-weight: 700; stroke: none; }
-.vs-kit-nota--acc path { stroke: var(--vs-kit-acc); } .vs-kit-nota--acc text { fill: var(--vs-kit-acc); }
-.vs-kit-nota--azul path { stroke: var(--vs-blue); } .vs-kit-nota--azul text { fill: var(--vs-blue); }
-.vs-kit-nota--ambar path { stroke: var(--vs-amber); } .vs-kit-nota--ambar text { fill: var(--vs-amber); }
-.vs-kit-nota--verde path { stroke: var(--vs-green); } .vs-kit-nota--verde text { fill: var(--vs-green); }
-.vs-kit-nota--tinta path { stroke: var(--vs-ink); } .vs-kit-nota--tinta text { fill: var(--vs-ink); }
+
+/* Segunda rodada do kit: os lápis dos pôsteres de caderno ilustrado. Na lousa
+   cada lápis clareia, senão roxo e vermelho somem no fundo escuro. */
+.crivo-visual {
+  --vs-kit-sol: #f2b705; --vs-kit-roxo: #7b5ea7; --vs-kit-laranja: #e8743b;
+  --vs-kit-ciano: #2a9db0; --vs-kit-vermelho: #d64545; --vs-kit-verde: #3f9a5c;
+  --vs-kit-ceu: #17213d; --vs-kit-contorno: #1d2421;
+}
+.dark .crivo-visual {
+  --vs-kit-sol: #ffd23f; --vs-kit-roxo: #b69ce0; --vs-kit-laranja: #ff9a62;
+  --vs-kit-ciano: #6fd0e0; --vs-kit-vermelho: #ff7b7b; --vs-kit-verde: #7fd197;
+  --vs-kit-ceu: #0b1226; --vs-kit-contorno: #0d1210;
+}
+.vs-kit-mao { font-family: "Kalam", "Newsreader", Georgia, serif; font-weight: 700; }
+.vs-kit-ponto { fill: var(--vs-dim); opacity: .35; }

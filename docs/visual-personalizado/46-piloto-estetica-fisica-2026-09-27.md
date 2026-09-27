@@ -133,10 +133,46 @@ Dois pontos de escolha do desenho, não do resumo:
 - **Checagens:** `npm run lint` limpo; `npm test` verde (711 node:test e 737
   vitest).
 
+## Segunda rodada — "mais divertido"
+
+Depois da primeira versão, a Ana Júlia mandou capturas de três pôsteres de
+caderno ilustrado (astronomia, eletricidade e DNA) e pediu "um pouco mais
+assim, mais divertido". As capturas vêm de um vídeo de terceiros e não foram
+versionadas: o repositório é público. O que elas têm e as cenas não tinham:
+
+| No pôster | Peça no kit | Onde aparece |
+| --- | --- | --- |
+| Blocos de borda colorida com etiqueta ("SOLAR SYSTEM") | `Painel` | ONDA 1 / ONDA 2 / SOMA, IDA / VOLTA, DEFEITO DE MASSA, ÓRBITA, CORREIA |
+| Faixa de céu escuro do sistema solar | `Painel escuro` | a órbita, escura também no tema claro |
+| Contorno de tinta em cada objeto | `Bola`, contornos explícitos | núcleons, planeta, polias, alto-falantes |
+| Textura de lápis de cor | padrão `lapis` (hachura) | preenchimentos |
+| Traço de mão | filtro `tremido` | ondas, balança, correia, parede — nunca em texto |
+| Estrelinhas e brilhos | `Brilho`, `Estrela` | crista, fótons, céu |
+| Rótulo manuscrito | `Rotulo` em Kalam | todos os rótulos da cena |
+| Frase-resumo com estrela | `Pilula` | o resultado do cursor, embaixo de cada cena |
+| Papel pontilhado | `Papel` | fundo de toda cena |
+
+Os lápis novos (sol, roxo, laranja, ciano, vermelho, verde) são tokens de
+`Visual.css` com versão clara para a lousa.
+
+Dois defeitos foram achados na captura e corrigidos no kit:
+
+- **Notas pretas e sem seta.** A cor da nota vinha de uma classe por tom, e só
+  havia classe para os cinco tons da primeira rodada. Agora a cor vai inline.
+- **A soma zerada sumia.** Com Δφ = 180°, a soma é uma linha reta de altura
+  zero, e o filtro de traço trêmulo, medido na caixa do próprio objeto, a
+  apagava. A região do filtro agora é a da cena.
+
+A varredura de contorno herdado nos 613 capítulos, no tema escuro e no tamanho
+do iPad, terminou com **zero achados** (eram 14 antes da correção).
+
 ## Pendente
 
 - **Aprovação da Ana Júlia** do estilo deste piloto, antes de estendê-lo às
   outras pranchas.
+- O título da prancha continua em serif. Os pôsteres usam letra de marcador;
+  trocar a fonte do título mexe em todas as pranchas de uma vez e fica para
+  depois da aprovação.
 - No ambiente remoto a Kalam não carrega, porque `fonts.googleapis.com` é
   bloqueado. As capturas mostram as notas no serif de fallback. No aparelho
   dela, elas saem manuscritas.
