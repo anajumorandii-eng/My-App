@@ -1,9 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
-import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
-import '../TopicScene.css';
-import './QuimicaFenomenos.css';
+import { useSceneMotion } from '../useSceneMotion';
+import { FenomenoFrame, FOCO, type Cena, type CenaFenomeno } from './FenomenoFrame';
 
 // Seis capítulos de Química caíam na família genérica `tipologia`, que não
 // desenha nada: só cartões com rótulo e citação (auditoria geral, doc 38). Aqui
@@ -12,9 +11,7 @@ import './QuimicaFenomenos.css';
 // escolhida pelo rótulo, e um rótulo sem desenho falha no teste em vez de cair
 // num quadro vazio. Formas e proporções são esquema, e a prancha diz isso.
 
-type Cena = { ativo: string; t: ReturnType<typeof useSceneMotion> };
 
-const FOCO = (ligado: boolean) => ({ opacity: ligado ? 1 : 0.28 });
 
 // ---------------------------------------------------------------------------
 // Tabela periódica: o contorno das 18 colunas, a família acesa, e ao lado o
@@ -432,7 +429,7 @@ function QuimicaAmbiental({ ativo, t }: Cena) {
   </g>;
 }
 
-export const QUIMICA_FENOMENO_CENAS: Record<string, { cena: React.ComponentType<Cena>; rotulos: string[]; titulo: string }> = {
+export const QUIMICA_FENOMENO_CENAS: Record<string, CenaFenomeno> = {
   'summary-quimica-organizacao-da-tabela-periodica-dos-elementos': { cena: TabelaPeriodica, rotulos: Object.keys(COLUNA), titulo: 'famílias da tabela' },
   'summary-quimica-radioatividade-o-estudo-das-radiacoes': { cena: Radioatividade, rotulos: Object.keys(FEIXES), titulo: 'poder de penetração' },
   'summary-quimica-composicao-da-materia-estados-fisicos': { cena: EstadosFisicos, rotulos: Object.keys(ESTADO_TEXTO), titulo: 'partículas e forças' },
@@ -448,30 +445,6 @@ export const QUIMICA_FENOMENO_CENAS: Record<string, { cena: React.ComponentType<
 export const QUIMICA_FENOMENO_IDS = new Set(Object.keys(QUIMICA_FENOMENO_CENAS));
 
 export function QuimicaFenomenos({ entry }: { entry: SceneEntry }) {
-  const [ativo, setAtivo] = useState(0);
   const t = useSceneMotion();
-  const { cena: Cena, titulo } = QUIMICA_FENOMENO_CENAS[entry.chapterId];
-  const item = entry.items[ativo];
-  return <section className="tc-scene qf-scene" aria-label={entry.question}>
-    <header><small>CRIVO · {titulo}</small><h4>{entry.question}</h4></header>
-    {/* No celular o quadro de 480 encolhia a ~350 px e as legendas caíam para
-        7 px. Mesmo precedente das cenas de História e Geografia: largura
-        mínima e rolagem só dentro da prancha, nunca da página. */}
-    <div className="qf-figure" role="region" tabIndex={0} aria-label="Prancha visual: deslize para ver a figura inteira; com teclado, use as setas" onKeyDown={(event) => {
-      if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
-      event.preventDefault();
-      event.currentTarget.scrollLeft += event.key === 'ArrowRight' ? 120 : -120;
-    }}>
-      <svg viewBox="0 0 480 300" className="qf-svg" role="img" aria-label={`${item.label}: ${item.claim}`}>
-        <Cena ativo={item.label} t={t} />
-      </svg>
-    </div>
-    <p className="qf-pan-hint">Deslize a prancha para ver toda a figura. Com teclado, use as setas.</p>
-    <div className="tc-choices" role="group" aria-label="Escolha o caso da prancha">
-      {entry.items.map((it, i) => <button key={it.label} type="button" aria-pressed={ativo === i} onClick={() => setAtivo(i)}>{it.label}</button>)}
-    </div>
-    <p className="tc-observation" role="status" aria-live="polite"><strong>{item.label}:</strong> {item.claim}</p>
-    <blockquote className="tc-quote">“{item.quote}” <cite>{item.section}</cite></blockquote>
-    <p className="qf-nota">Desenho esquemático: formas e proporções ilustram o mecanismo; o texto e a citação vêm do resumo.</p>
-  </section>;
+  return <FenomenoFrame entry={entry} cenas={QUIMICA_FENOMENO_CENAS} t={t} />;
 }
