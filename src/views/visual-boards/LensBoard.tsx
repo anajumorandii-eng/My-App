@@ -4,10 +4,14 @@ import { boardPair } from './pair';
 import type { BoardProps } from './types';
 import LensMechanism from './LensMechanism';
 import LensPowerMechanism from './LensPowerMechanism';
+import LensAnalyticMechanism from './LensAnalyticMechanism';
 
 export default function LensBoard(props: BoardProps) {
   const par = boardPair(props);
   const maker = props.map.summaryId === 'summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes';
+  // O estudo analítico caía no mesmo ramo do gráfico e saía idêntico a ele,
+  // título e texto inclusive (auditoria 37). Os textos abaixo saem do resumo.
+  if (props.map.summaryId === 'summary-fisica-estudo-analitico-das-lentes-esfericas') return <LensAnalyticBoard {...props} />;
   return (
     <BoardShell
       title={maker ? 'Fabricante e associação de lentes' : 'Lentes: onde a imagem se forma'}
@@ -53,6 +57,31 @@ export default function LensBoard(props: BoardProps) {
         </>
       }
       closing={maker ? 'a soma é de vergências, e o foco depende também do meio que envolve as lentes.' : 'para um objeto real, a convergente depende da posição; a divergente forma imagem virtual, direita e menor. A equação de Gauss confirma o traçado.'}
+    />
+  );
+}
+
+function LensAnalyticBoard(props: BoardProps) {
+  const par = boardPair(props);
+  return (
+    <BoardShell
+      title="Lentes: duas equações e um sinal"
+      subtitle="Sem traçar raio: o sinal de p′ já diz se a imagem é real ou virtual."
+      condition={{ label: 'objeto real', value: 'p > 0' }}
+      ariaLabel="Prancha de estudo analítico das lentes esféricas"
+      scene={<LensAnalyticMechanism />}
+      sceneFirst
+      emphasis={par.emphasis}
+      left={{ label: 'Gauss', headline: 'Posição da imagem.', detail: 'f positivo para convergente, negativo para divergente; p′ positivo é imagem real, negativo é virtual.', formula: '1/f = 1/p + 1/p′' }}
+      right={{ label: 'Aumento', headline: 'Tamanho e orientação.', detail: 'A positivo é imagem direita; A negativo, invertida. O módulo diz quantas vezes maior ou menor.', formula: 'A = −p′/p = i/o' }}
+      leftState={par.leftState}
+      rightState={par.rightState}
+      leftSelected={par.leftSelected}
+      rightSelected={par.rightSelected}
+      onSelectLeft={par.selectLeft}
+      onSelectRight={par.selectRight}
+      equation={{ label: 'Vergência', general: 'V = 1/f', condition: 'f em metros', reduced: 'di-optrias' }}
+      closing="p′ negativo não é erro de conta: é imagem virtual, e o sinal de f vem do tipo de lente, nunca é escolhido."
     />
   );
 }
