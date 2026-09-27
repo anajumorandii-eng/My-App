@@ -90,8 +90,15 @@ cultura e mídia.
   - nenhuma das onze fichas volta a desenhar "delimitar";
   - nenhum desenho se repete entre capítulos;
   - o defeito e a correção são desenhos diferentes.
-- **Varredura:** Redação, Entendimento de Texto e Atualidades (fim deste
-  documento).
+- **Varredura** (Redação 58, Entendimento de Texto 12, Atualidades 1; 1440
+  claro e 390 escuro). Achou dois defeitos anteriores a este lote, em código
+  que ele não tinha tocado, e os dois foram corrigidos:
+  - "a forma também responde à proposta", título da cena `genre`, saía do
+    quadro nos 7 capítulos que a usam. Foi quebrado em duas linhas;
+  - em "Fatores de textualidade" (experimento `cohesion`), a curva animava `d`
+    sem valor inicial e o console acusava erro no primeiro quadro.
+
+  Depois das correções, nenhum dos 71 capítulos tem achado.
 
 ## Pendente
 

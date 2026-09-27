@@ -44,7 +44,7 @@ function WritingScene({ id, selected }: { id: WritingInstrumentId; selected: num
     <motion.path d="M54 250H266" stroke="var(--vs-ink-muted)" strokeWidth="3" initial={false} animate={{ pathLength: .35 + selected * .3 }} transition={transition} /><circle cx={54 + selected * 106} cy="250" r="9" fill="var(--vs-burgundy)"/><text x="160" y="282" textAnchor="middle" style={ink}>{state.label}</text>
   </>;
   if (scene === 'genre') return <>
-    <text x="24" y="38" style={{ ...accent, fontSize: 15 }}>a forma também responde à proposta</text>
+    <text x="24" y="32" style={{ ...accent, fontSize: 15 }}>a forma também</text><text x="24" y="52" style={{ ...accent, fontSize: 15 }}>responde à proposta</text>
     {[['quem lê', 38], ['voz', 107], ['função', 176], ['efeito', 245]].map(([label, x], item) => <g key={String(label)}><motion.rect x={Number(x)} y={94 + (item === selected ? -12 : 0)} width="46" height="104" rx="10" fill="var(--vs-paper)" initial={false} animate={{ stroke: item === selected ? 'var(--vs-burgundy)' : 'var(--vs-ink-muted)', strokeWidth: item === selected ? 5 : 2 }} transition={transition}/><text x={Number(x)+23} y="132" textAnchor="middle" style={{ ...ink, fontSize: 10 }}>{label}</text><motion.path d={`M${Number(x)+11} 155H${Number(x)+35}`} stroke={item <= selected ? 'var(--vs-burgundy)' : 'var(--vs-ink-muted)'} strokeWidth="4" initial={false} animate={{ pathLength: item <= selected ? 1 : .25 }} transition={transition}/></g>)}
     <text x="160" y="246" textAnchor="middle" style={accent}>{state.label}</text><text x="160" y="278" textAnchor="middle" style={ink}>estrutura guiada por interlocutor</text>
   </>;

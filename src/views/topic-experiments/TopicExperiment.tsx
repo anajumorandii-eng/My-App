@@ -100,7 +100,7 @@ function Powers() {
         <circle r="18" fill="none" stroke={i<a?'var(--vs-burgundy)':'var(--vs-blue)'} strokeWidth="2"/>
         <text textAnchor="middle" y="6">2</text>{i<a+b-1&&<text x="22" y="6">·</text>}
       </motion.g>)}
-      <motion.path animate={{d:`M30 97v12h${(a+b-1)*43+36}v-12`}} transition={transition} className="ts-reference"/>
+      <motion.path d={`M30 97v12h${(a+b-1)*43+36}v-12`} initial={false} animate={{d:`M30 97v12h${(a+b-1)*43+36}v-12`}} transition={transition} className="ts-reference"/>
       <text x="30" y="143">{a+b} fatores · resultado {2**(a+b)}</text>
     </svg>
     <div className="ts-sliders"><label>Primeiro expoente: {a}<input type="range" min="1" max="4" value={a} onChange={e=>setA(+e.target.value)}/></label><label>Segundo expoente: {b}<input type="range" min="1" max="4" value={b} onChange={e=>setB(+e.target.value)}/></label></div>
@@ -175,7 +175,7 @@ function Cohesion() {
   return <Studio title="Um conector muda a relação" note="Observe a diferença entre ligar palavras e construir um sentido coerente.">
     <div className="ts-choices"><button type="button" aria-pressed={relation==='cause'} onClick={()=>setRelation('cause')}>Consequência</button><button type="button" aria-pressed={relation==='contrast'} onClick={()=>setRelation('contrast')}>Contraste</button></div>
     <div className="ts-sentence"><span>Choveu muito.</span><motion.strong key={relation} initial={false} animate={{opacity:1}} transition={transition}>{relation==='cause'?'Por isso,':'Mesmo assim,'}</motion.strong><span>{relation==='cause'?'a partida foi cancelada.':'a partida continuou.'}</span></div>
-    <svg viewBox="0 0 480 85" aria-hidden="true"><motion.path animate={{d:relation==='cause'?'M45 25Q240 80 430 25':'M45 25Q240-20 430 25'}} transition={transition} className="ts-reference"/><path d="M419 18l11 7-13 5" className="ts-reference"/></svg>
+    <svg viewBox="0 0 480 85" aria-hidden="true">{/* Sem `d` inicial, o primeiro quadro gravava d="undefined" e o console acusava erro. */}<motion.path d={relation==='cause'?'M45 25Q240 80 430 25':'M45 25Q240-20 430 25'} initial={false} animate={{d:relation==='cause'?'M45 25Q240 80 430 25':'M45 25Q240-20 430 25'}} transition={transition} className="ts-reference"/><path d="M419 18l11 7-13 5" className="ts-reference"/></svg>
     <p className="ts-observation" role="status">{relation==='cause'?'“Por isso” apresenta o cancelamento como consequência da chuva.':'“Mesmo assim” indica que a partida continuou contra uma expectativa gerada pela chuva.'} O conector estabelece coesão; a interpretação da relação depende do contexto.</p>
   </Studio>;
 }
