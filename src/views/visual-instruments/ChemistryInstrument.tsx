@@ -19,14 +19,22 @@ function ChemistryDiagram({ config, value }: { config: ChemistryConfig; value: n
       <path d="M110 73h100l-18 38h-64Z" fill="var(--vs-paper)" stroke={ink} strokeWidth="3" />
       <path d="M127 111h66" stroke={emphasis} strokeWidth="5" strokeDasharray="3 4" />
       <path d="M138 204h44l-6 37h-32Z" fill="var(--vs-paper)" stroke={ink} strokeWidth="3" />
+      {/* Ao atravessar, a partícula desce para dentro da haste (x 137–183):
+          antes ela descia na mesma vertical e aparecia fora do vidro. Os nomes
+          ficam numa legenda acima da borda porque, escritos sobre as
+          partículas, "areia argila soluto" se encostavam. */}
       {[{ x: 132, r: 10, name: 'areia' }, { x: 160, r: 5, name: 'argila' }, { x: 190, r: 3, name: 'soluto' }].map(({ x, r, name }, i) => {
         const crosses = (name === 'areia' ? value > 8 : name === 'argila' ? value > 2 : true);
-        return <g key={name}><motion.circle cx={x} cy={76 + i * 8} r={r} fill={name === 'areia' ? emphasis : muted} animate={{ cy: crosses ? 181 + i * 12 : 98 + i * 4, opacity: crosses ? .8 : 1 }} transition={transition} /><text x={x} y="56" textAnchor="middle" fill={ink} fontSize="10">{name}</text></g>;
+        const fill = name === 'areia' ? emphasis : muted;
+        return <g key={name}>
+          <motion.circle r={r} fill={fill} initial={{ cx: x, cy: 76 + i * 8 }} animate={{ cx: crosses ? 148 + i * 12 : x, cy: crosses ? 181 + i * 12 : 98 + i * 4, opacity: crosses ? .8 : 1 }} transition={transition} />
+          <circle cx={84 + i * 66} cy="17" r={Math.min(r, 6)} fill={fill} /><text x={94 + i * 66} y="21" fill={ink} fontSize="11">{name}</text>
+        </g>;
       })}
       <text x="70" y="248" fill={ink} fontSize="12" fontWeight="700">resíduo</text><text x="207" y="248" fill={ink} fontSize="12" fontWeight="700">filtrado</text>
     </g>}
     {config.diagram === 'particles' && <>
-      <motion.rect x="35" y="45" height="170" rx="12" fill="none" stroke={ink} strokeWidth="4" animate={{ width: config.title.includes('Seringa') ? 150 + 110 * fraction : 250 }} transition={transition} />
+      <motion.rect x="35" y="45" height="170" rx="12" fill="none" stroke={ink} strokeWidth="4" initial={{ width: config.title.includes('Seringa') ? 150 + 110 * fraction : 250 }} animate={{ width: config.title.includes('Seringa') ? 150 + 110 * fraction : 250 }} transition={transition} />
       {Array.from({ length: 12 }, (_, i) => <motion.circle key={i} cx={74 + (i % 4) * 54} cy={78 + Math.floor(i / 4) * 52} r="7" fill={emphasis} animate={{ x: (i % 2 ? 1 : -1) * fraction * 12, y: (i % 3 - 1) * fraction * 9, opacity: config.title.includes('Da massa') ? (i < Math.ceil((value / 18) / 10 * 12) ? 1 : .16) : 1 }} transition={transition} />)}
       <motion.path d="M0 45v170" fill="none" stroke={emphasis} strokeWidth="5" animate={{ x: config.title.includes('Seringa') ? 185 + 110 * fraction : 285 }} transition={transition} />
       <text x="160" y="242" textAnchor="middle" fill={ink} fontSize="13">{config.title.includes('Da massa') ? 'pontos ilustram proporção de mols' : config.title.includes('Seringa') ? 'amostra fixa · expansão' : 'amostra fixa · choques mais energéticos'}</text>
@@ -78,7 +86,7 @@ function ChemistryDiagram({ config, value }: { config: ChemistryConfig; value: n
     {config.title === 'Escala de pKa' && <>
       <path d="M35 152h250m-8-8 8 8-8 8" stroke={ink} strokeWidth="4" fill="none" />
       {[1, 3, 5, 7].map(v => <g key={v}><path d={`M${35 + (v - 1) / 6 * 245} 143v18`} stroke={muted} strokeWidth="2" /><text x={35 + (v - 1) / 6 * 245} y="183" textAnchor="middle" fill={ink}>{v}</text></g>)}
-      <motion.circle cy="152" r="12" fill={emphasis} animate={{ cx: 35 + fraction * 245 }} transition={transition} />
+      <motion.circle cy="152" r="12" fill={emphasis} initial={{ cx: 35 + fraction * 245 }} animate={{ cx: 35 + fraction * 245 }} transition={transition} />
       <text x="160" y="75" textAnchor="middle" fill={ink} fontSize="16">menor pKa → ácido mais forte</text>
     </>}
     {config.diagram === 'equilibrium' && config.title !== 'Escala de pKa' && <>

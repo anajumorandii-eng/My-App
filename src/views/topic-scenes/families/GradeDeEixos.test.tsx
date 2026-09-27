@@ -29,8 +29,10 @@ describe('Grade de eixos', () => {
 
   it('rotula os eixos a partir da entrada, não de texto fixo', () => {
     render(<GradeDeEixos entry={entry} />);
-    expect(screen.getByText('Integração')).toBeInTheDocument();
-    expect(screen.getByText('Regulação')).toBeInTheDocument();
+    // Uma vez no controle e outra na borda da grade, que agora nomeia os eixos.
+    expect(screen.getAllByText('Integração')).toHaveLength(2);
+    expect(screen.getAllByText('Regulação')).toHaveLength(2);
+    expect(document.querySelectorAll('svg .tc-grade-polo')).toHaveLength(4);
     expect(screen.getAllByRole('button', { name: 'excessiva' })).toHaveLength(2);
   });
 
@@ -73,5 +75,15 @@ describe('Grade de eixos', () => {
     const integracaoExcessiva = screen.getAllByRole('button', { name: 'excessiva' })[0];
     fireEvent.click(integracaoExcessiva);
     expect(screen.getByRole('status')).toHaveTextContent('Fatalista');
+  });
+});
+
+describe('Grade de eixos: rótulo longo', () => {
+  it('quebra no "+" do cruzamento em vez de escrever numa linha só', () => {
+    const longa: SceneEntry = { ...entry, items: entry.items.map((it, i) => (i === 0 ? { ...it, label: 'Ácido fraco + base forte' } : it)) };
+    render(<GradeDeEixos entry={longa} />);
+    // Em Equilíbrios Iônicos II o rótulo inteiro numa linha saía da célula e da tela.
+    expect(screen.getByText('Ácido fraco +')).toBeInTheDocument();
+    expect(screen.getByText('base forte')).toBeInTheDocument();
   });
 });

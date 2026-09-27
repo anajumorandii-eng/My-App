@@ -40,8 +40,11 @@ export function EscalaDeGraus({ entry }: { entry: SceneEntry }) {
               </text>
             </g>;
           })}
+          {/* Sem cy inicial, o motion escrevia cy="undefined" no primeiro quadro
+              e o navegador acusava erro no console. */}
           <motion.circle
             cx="445" r="9"
+            initial={{ cy: alturaDe(grau) }}
             animate={{ cy: alturaDe(grau) }}
             transition={transition}
             className="tc-marcador"
