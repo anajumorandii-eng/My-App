@@ -5,15 +5,38 @@ import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
+import { WRITING_MECHANISM_IDS, WritingMechanismScene } from './WritingMechanismScenes';
 
 const ink = { fontWeight: 800, fill: 'var(--vs-ink)' } as const;
 const accent = { fontWeight: 800, fill: 'var(--vs-burgundy)' } as const;
+
+// Recorte e repertório são o mesmo mecanismo em oito domínios, e a régua
+// permite o objeto compartilhado; mas a cena não mostrava de que domínio se
+// tratava (auditoria 34, lote 4). O ícone entre as duas caixas diz isso.
+const DOMINIO = /-(environment|work|abstract|body|violence|citizenship|culture|media)$/;
+function DomainIcon({ id }: { id: WritingInstrumentId }) {
+  const d = DOMINIO.exec(id)?.[1];
+  if (!d) return null;
+  const st = { fill: 'none', stroke: 'var(--vs-burgundy)', strokeWidth: 2.5, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
+  const desenho: Record<string, React.ReactNode> = {
+    environment: <><path d="M-12 10C-12-6 0-14 14-14C14 2 6 12-8 12Z" {...st} /><path d="M-12 14L4-4" {...st} /></>,
+    work: <><circle r="7" {...st} />{Array.from({ length: 8 }, (_, k) => { const a = (k * Math.PI) / 4; return <path key={k} d={`M${(10 * Math.cos(a)).toFixed(1)} ${(10 * Math.sin(a)).toFixed(1)}L${(15 * Math.cos(a)).toFixed(1)} ${(15 * Math.sin(a)).toFixed(1)}`} {...st} />; })}</>,
+    abstract: <><path d="M-8 4a11 11 0 1 1 16 0c-3 3-3 5-3 8h-10c0-3 0-5-3-8Z" {...st} /><path d="M-4 16h8" {...st} /></>,
+    body: <><circle cy="-10" r="5" {...st} /><path d="M0-5v12m-10-7h20M0 7l-7 10M0 7l7 10" {...st} /></>,
+    violence: <><path d="M0-15L13-9V1C13 9 7 14 0 16C-7 14-13 9-13 1V-9Z" {...st} /><path d="M2-10L-3 0 3 2-2 12" {...st} /></>,
+    citizenship: <><rect x="-13" y="-4" width="26" height="18" rx="2" {...st} /><path d="M-6-4v-10h12v10M-4 5h8" {...st} /></>,
+    culture: <><path d="M0-12C-6-15-13-14-15-12V12C-13 10-6 9 0 12C6 9 13 10 15 12V-12C13-14 6-15 0-12Z" {...st} /><path d="M0-12V12" {...st} /></>,
+    media: <><rect x="-15" y="-11" width="30" height="20" rx="3" {...st} /><path d="M-6 15h12M0 9v6" {...st} /></>,
+  };
+  return <g transform="translate(158 178)"><circle r="21" fill="var(--vs-paper)" stroke="var(--vs-ink-muted)" strokeWidth="1.5" />{desenho[d]}</g>;
+}
 
 function WritingScene({ id, selected }: { id: WritingInstrumentId; selected: number }) {
   const state = writingInstrumentState(id, selected);
   const scene = WRITING_INSTRUMENTS[id].scene;
   const reduced = useReducedMotion();
   const transition = { duration: reduced ? 0 : .28, ease: 'easeOut' as const };
+  if (WRITING_MECHANISM_IDS.has(id)) return <WritingMechanismScene id={id} selected={selected} />;
   if (scene === 'prompt') return <>
     <text x="24" y="38" style={{ ...accent, fontSize: 15 }}>leia o comando antes do rascunho</text>
     {[102, 68, 34].map((radius, item) => <motion.circle key={radius} cx="160" cy="150" r={radius} fill={item === selected ? 'color-mix(in srgb, var(--vs-burgundy) 14%, transparent)' : 'transparent'} initial={false} animate={{ stroke: item === selected ? 'var(--vs-burgundy)' : 'var(--vs-ink-muted)', strokeWidth: item === selected ? 5 : 2, opacity: item === selected ? 1 : .45 }} transition={transition} />)}
@@ -35,14 +58,15 @@ function WritingScene({ id, selected }: { id: WritingInstrumentId; selected: num
     <motion.rect x="28" y="85" width="76" height="96" rx="12" fill="var(--vs-paper)" initial={false} animate={{ stroke: selected === 0 ? 'var(--vs-burgundy)' : 'var(--vs-ink)', strokeWidth: selected === 0 ? 5 : 2 }} transition={transition}/><text x="66" y="128" textAnchor="middle" style={accent}>LENTE</text><text x="66" y="150" textAnchor="middle" style={{ ...ink, fontSize: 10 }}>conceito</text>
     <motion.path d="M112 133H203" stroke="var(--vs-burgundy)" strokeWidth="4" initial={false} animate={{ pathLength: .35 + selected * .3 }} transition={transition}/><text x="158" y="122" textAnchor="middle" style={{ ...accent, fontSize: 10 }}>mecanismo</text>
     <motion.rect x="211" y="85" width="80" height="96" rx="12" fill="var(--vs-paper)" initial={false} animate={{ stroke: selected === 2 ? 'var(--vs-burgundy)' : 'var(--vs-ink)', strokeWidth: selected === 2 ? 5 : 2 }} transition={transition}/><text x="251" y="128" textAnchor="middle" style={accent}>TESE</text><text x="251" y="150" textAnchor="middle" style={{ ...ink, fontSize: 10 }}>explicada</text>
-    <circle cx={66 + selected * 92} cy="224" r="8" fill="var(--vs-burgundy)"/><path d="M66 224H250" stroke="var(--vs-ink-muted)" strokeWidth="3"/><text x="160" y="264" textAnchor="middle" style={ink}>{state.label}</text>
+    <circle cx={66 + selected * 92} cy="224" r="8" fill="var(--vs-burgundy)"/><path d="M66 224H250" stroke="var(--vs-ink-muted)" strokeWidth="3"/><text x="160" y="264" textAnchor="middle" style={ink}>{state.label}</text><DomainIcon id={id} />
   </>;
   if (scene === 'theme') return <>
-    <text x="24" y="38" style={{ ...accent, fontSize: 15 }}>um recorte por vez, com profundidade</text>
+    {/* Em 15 px a frase passava da largura de 320 e saía "profundida". */}
+    <text x="24" y="32" style={{ ...accent, fontSize: 15 }}>um recorte por vez,</text><text x="24" y="52" style={{ ...accent, fontSize: 15 }}>com profundidade</text>
     <motion.rect x="27" y="91" width="78" height="88" rx="12" fill="var(--vs-paper)" initial={false} animate={{ stroke: selected === 0 ? 'var(--vs-burgundy)' : 'var(--vs-ink)', strokeWidth: selected === 0 ? 5 : 2 }} transition={transition}/><text x="66" y="130" textAnchor="middle" style={accent}>EIXO</text><text x="66" y="150" textAnchor="middle" style={{ ...ink, fontSize: 10 }}>amplo</text>
     <motion.path d="M112 135H205" stroke="var(--vs-burgundy)" strokeWidth="4" initial={false} animate={{ pathLength: .35 + selected * .3 }} transition={transition}/><text x="158" y="122" textAnchor="middle" style={{ ...accent, fontSize: 10 }}>delimitar</text>
     <motion.rect x="213" y="91" width="80" height="88" rx="12" fill="var(--vs-paper)" initial={false} animate={{ stroke: selected === 2 ? 'var(--vs-burgundy)' : 'var(--vs-ink)', strokeWidth: selected === 2 ? 5 : 2 }} transition={transition}/><text x="253" y="130" textAnchor="middle" style={accent}>TESE</text><text x="253" y="150" textAnchor="middle" style={{ ...ink, fontSize: 10 }}>focada</text>
-    <text x="160" y="229" textAnchor="middle" style={accent}>{state.label}</text><text x="160" y="264" textAnchor="middle" style={ink}>fator → consequência → posição</text>
+    <text x="160" y="229" textAnchor="middle" style={accent}>{state.label}</text><text x="160" y="264" textAnchor="middle" style={ink}>fator → consequência → posição</text><DomainIcon id={id} />
   </>;
   if (id === 'evaluation') return <>
     <text x="24" y="42" style={{ ...accent, fontSize: 16 }}>folha de correção</text><path d="M24 57H296" stroke="var(--vs-ink-muted)" strokeWidth="2" strokeDasharray="4 4"/>
@@ -56,7 +80,7 @@ function WritingScene({ id, selected }: { id: WritingInstrumentId; selected: num
     <text x="160" y="151" textAnchor="middle" style={accent}>{selected === 0 ? 'TEMA' : selected === 1 ? 'TESE' : 'PLANO'}</text><text x="160" y="286" textAnchor="middle" style={ink}>{state.label}</text>
   </>;
   if (id === 'repertoire') return <>
-    <text x="34" y="47" style={{...ink,fontSize:14}}>repertório só vale quando vira prova</text><rect x="28" y="75" width="94" height="112" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" /><rect x="198" y="75" width="94" height="112" rx="12" fill="var(--vs-paper)" stroke="var(--vs-burgundy)" strokeWidth="3" />
+    <text x="34" y="36" style={{...ink,fontSize:14}}>repertório só vale</text><text x="34" y="54" style={{...ink,fontSize:14}}>quando vira prova</text><rect x="28" y="75" width="94" height="112" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" /><rect x="198" y="75" width="94" height="112" rx="12" fill="var(--vs-paper)" stroke="var(--vs-burgundy)" strokeWidth="3" />
     <path d="M44 105H105M44 120H99M44 135H87" stroke="var(--vs-ink-muted)" strokeWidth="3"/><text x="75" y="165" textAnchor="middle" style={{...ink,fontSize:11}}>referência</text><text x="245" y="113" textAnchor="middle" style={{...accent,fontSize:13}}>TESE</text><text x="245" y="140" textAnchor="middle" style={{...ink,fontSize:11}}>explicada</text>
     <motion.path d="M128 132H191" stroke="var(--vs-burgundy)" initial={false} animate={{ strokeWidth: 3 + selected * 3, pathLength: selected === 0 ? .45 : selected === 1 ? .75 : 1, opacity: selected === 0 ? .55 : 1 }} transition={transition} strokeDasharray={selected === 0 ? '5 6' : undefined} /><text x="160" y="124" textAnchor="middle" style={{...accent,fontSize:12}}>ponte</text><text x="160" y="230" textAnchor="middle" style={accent}>{state.label}</text>
   </>;
