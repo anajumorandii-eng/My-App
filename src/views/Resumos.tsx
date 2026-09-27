@@ -4,6 +4,7 @@ import { useSearchParams } from 'react-router-dom';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { evaluateRetrievalAnswer, filterSummaries, getReadingProgress } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
+import { useMateriaLembrada } from '../hooks/useMateriaLembrada';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
@@ -27,7 +28,7 @@ export default function Resumos() {
   const [selectedId, setSelectedId] = useState<string | null>(requestedSummaryId);
   const [query, setQuery] = useState('');
   const [onlyDeep, setOnlyDeep] = useState(false);
-  const [subject, setSubject] = useState(() => searchParams.get('subject') ?? '');
+  const [subject, setSubject] = useMateriaLembrada('crivo_materia_resumos', searchParams.get('subject'));
   const [board, setBoard] = useState(() => searchParams.get('board') ?? '');
   const [phase, setPhase] = useState(() => searchParams.get('phase') ?? '');
   const [status, setStatus] = useState<StudyStatus | ''>('');

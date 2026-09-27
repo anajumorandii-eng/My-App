@@ -334,3 +334,19 @@ describe('prancha no celular', () => {
     }
   });
 });
+
+describe('biblioteca do Visual lembra a matéria', () => {
+  beforeEach(() => { progress = {}; localStorage.removeItem('crivo_materia_visual'); });
+
+  // A Ana Júlia escolhia Matemática, abria um capítulo e, ao voltar, a lista
+  // tinha caído em "Todas".
+  it('volta do capítulo para a mesma matéria', async () => {
+    const user = userEvent.setup();
+    render(<MemoryRouter initialEntries={['/visual']}><Visual /></MemoryRouter>);
+    await user.selectOptions(screen.getByRole('combobox'), 'Matemática');
+    const primeiro = interactiveSummaries.find((item) => item.subject === 'Matemática')!;
+    await user.click(screen.getByRole('button', { name: new RegExp(primeiro.title.replace(/[.*+?^${}()|[\]\\]/g, '\\$&')) }));
+    await user.click(screen.getByRole('button', { name: 'Voltar à biblioteca visual' }));
+    expect(screen.getByRole('combobox')).toHaveValue('Matemática');
+  });
+});
