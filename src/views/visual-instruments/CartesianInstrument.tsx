@@ -3,7 +3,9 @@ import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from '../visual-boards/types';
-import { FAMILIES, num, samplePoints, type Family, type FamilyId } from '../../lib/curveFamilies';
+import { FAMILIES, num, samplePoints, type Family, type FamilyId, type FamilyParam } from '../../lib/curveFamilies';
+
+const mostrar = (p: FamilyParam, v: number) => p.valueLabels?.[v] ?? num(v);
 
 /**
  * Plano cartesiano com dois parâmetros que a estudante move.
@@ -42,8 +44,8 @@ function PlanoCartesiano({
 
   // A curva vira vários traços: cada buraco de domínio quebra o path, em vez de
   // ligar os dois lados com uma reta que a função não tem.
-  const trechos = useMemo(() => {
-    const pontos = samplePoints(family, a, b);
+  const tracar = (fn: (x: number, a: number, b: number) => number | null) => {
+    const pontos = samplePoints(family, a, b, 240, fn);
     const saida: string[] = [];
     let atual: string[] = [];
     for (const p of pontos) {
@@ -64,6 +66,25 @@ function PlanoCartesiano({
     }
     if (atual.length > 1) saida.push(atual.join(' '));
     return saida;
+  };
+  const trechos = useMemo(() => tracar(family.f), [family, a, b]);
+  const referencia = useMemo(() => (family.reference ? tracar(family.reference.f) : []), [family, a, b]);
+
+  // Intervalos de sinal constante sobre o eixo x. Varredura fina em vez de
+  // fórmula de raiz: serve a qualquer família que ligue `signBands`.
+  const faixas = useMemo(() => {
+    if (!family.signBands) return [];
+    const passos = 480;
+    const sinal = (x: number) => { const y = family.f(x, a, b); return y === null ? 0 : Math.abs(y) < 1e-9 ? 0 : Math.sign(y); };
+    const saida: Array<{ de: number; ate: number; sinal: number }> = [];
+    for (let i = 0; i < passos; i += 1) {
+      const x0 = domain.min + ((domain.max - domain.min) * i) / passos;
+      const x1 = domain.min + ((domain.max - domain.min) * (i + 1)) / passos;
+      const s = sinal((x0 + x1) / 2);
+      const ultimo = saida[saida.length - 1];
+      if (ultimo && ultimo.sinal === s) ultimo.ate = x1; else saida.push({ de: x0, ate: x1, sinal: s });
+    }
+    return saida.filter((f) => f.sinal !== 0);
   }, [family, a, b]);
 
   // Marcas inteiras dos dois eixos, sem repetir a origem.
@@ -112,6 +133,30 @@ function PlanoCartesiano({
         </g>
       )}
 
+      {family.diagonal && (
+        <line
+          className="vs-plane-mirror"
+          x1={paraTelaX(Math.max(domain.min, range.min))} y1={paraTelaY(Math.max(domain.min, range.min))}
+          x2={paraTelaX(Math.min(domain.max, range.max))} y2={paraTelaY(Math.min(domain.max, range.max))}
+        />
+      )}
+
+      {faixas.map((f) => {
+        const x1 = paraTelaX(f.de);
+        const x2 = paraTelaX(f.ate);
+        return (
+          <g key={`${f.de}`} className="vs-plane-sign" data-sinal={f.sinal > 0 ? 'positivo' : 'negativo'}>
+            <line x1={x1} y1={eixoY} x2={x2} y2={eixoY} />
+            {/* Sinal do lado oposto ao dos números do eixo, que ficam embaixo. */}
+            {x2 - x1 > 18 && <text x={(x1 + x2) / 2} y={eixoY - 7} textAnchor="middle">{f.sinal > 0 ? '+' : '−'}</text>}
+          </g>
+        );
+      })}
+
+      {referencia.map((d, i) => (
+        <path key={`r${i}`} className="vs-plane-reference" d={d} />
+      ))}
+
       {trechos.map((d, i) => (
         <path key={i} className="vs-plane-curve" d={d} />
       ))}
@@ -147,6 +192,12 @@ function PlanoCartesiano({
       <text className="vs-plane-expression" x={LARGURA - MARGEM.direita} y={ALTURA - 8} textAnchor="end">
         {family.expression(a, b)}
       </text>
+      {family.reference && (
+        <text className="vs-plane-legend" x={MARGEM.esquerda + 4} y={MARGEM.topo + 10}>
+          <tspan className="vs-plane-legend-ref">- - {family.reference.label}</tspan>
+          <tspan dx="10" className="vs-plane-legend-main">— {family.reference.mainLabel}</tspan>
+        </text>
+      )}
     </svg>
   );
 }
@@ -197,7 +248,7 @@ export function cartesianInstrument(familyId: FamilyId) {
           <label htmlFor={inputId}>
             <strong>{p.symbol}</strong>
             <span>{p.role}</span>
-            <b>{num(valor)}</b>
+            <b>{mostrar(p, valor)}</b>
           </label>
           <input
             id={inputId}
@@ -217,7 +268,7 @@ export function cartesianInstrument(familyId: FamilyId) {
         kicker="Prancha manipulável"
         title={family.name}
         subtitle={family.question}
-        condition={{ label: family.params[0].symbol, value: num(a) }}
+        condition={{ label: family.params[0].symbol, value: mostrar(family.params[0], a) }}
         ariaLabel={`Prancha manipulável de ${family.name.toLowerCase()}: ${props.map.title}`}
         emphasis={par.emphasis}
         scene={
@@ -247,7 +298,7 @@ export function cartesianInstrument(familyId: FamilyId) {
           label: STAGE_LABEL[noSegundo?.stage ?? 'aplicacao'],
           headline: noSegundo?.label ?? props.map.title,
           detail: resumir(noSegundo?.excerpt),
-          formula: `${family.params[1].symbol} = ${num(b)}`,
+          formula: `${family.params[1].symbol} = ${mostrar(family.params[1], b)}`,
         }}
         leftState={par.leftState}
         rightState={par.rightState}
@@ -259,7 +310,7 @@ export function cartesianInstrument(familyId: FamilyId) {
           label: `Expressão de ${family.name.toLowerCase()}`,
           general: family.expression(a, b),
           condition: 'com',
-          reduced: `${family.params[0].symbol} = ${num(a)} · ${family.params[1].symbol} = ${num(b)}`,
+          reduced: `${family.params[0].symbol} = ${mostrar(family.params[0], a)} · ${family.params[1].symbol} = ${mostrar(family.params[1], b)}`,
         }}
         closing={family.insight}
       />

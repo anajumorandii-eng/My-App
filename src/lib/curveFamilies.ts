@@ -16,7 +16,8 @@
 
 export type FamilyId =
   | 'afim' | 'quadratica' | 'exponencial' | 'logaritmica'
-  | 'senoidal' | 'modular' | 'polinomial';
+  | 'senoidal' | 'modular' | 'polinomial'
+  | 'inversa' | 'sinal' | 'transformacao';
 
 export interface FamilyParam {
   /** Símbolo como aparece na expressão. */
@@ -27,6 +28,8 @@ export interface FamilyParam {
   max: number;
   step: number;
   initial: number;
+  /** Controle discreto cujo valor é um caso, não um número: "2" não diria nada. */
+  valueLabels?: Record<number, string>;
 }
 
 export interface Readout {
@@ -75,6 +78,17 @@ export interface Family {
   annotations(a: number, b: number): Annotation[];
   /** O que a manipulação ensina. Vira o fecho da prancha. */
   insight: string;
+  /**
+   * Segunda curva, tracejada: a original de que esta foi obtida. Existe porque
+   * três capítulos pegavam emprestadas a quadrática e a logarítmica — com o
+   * título delas — e nenhum desenhava a relação que era o assunto: f e f⁻¹
+   * espelhadas, x² antes e depois de deslocar e refletir.
+   */
+  reference?: { label: string; mainLabel: string; f(x: number, a: number, b: number): number | null };
+  /** Traça a reta y = x, o espelho da inversão. */
+  diagonal?: boolean;
+  /** Marca sobre o eixo x os intervalos em que f é positiva e negativa. */
+  signBands?: boolean;
 }
 
 /** Número em pt-BR, sem casa decimal inútil. */
@@ -376,6 +390,132 @@ export const FAMILIES: Record<FamilyId, Family> = {
     insight:
       'grau ímpar leva a função de −∞ a +∞, então ela obrigatoriamente cruza o eixo x pelo menos uma vez. Mexa nos coeficientes: o número de raízes muda entre uma e três, mas nunca chega a zero.',
   },
+
+  inversa: {
+    id: 'inversa',
+    name: 'Inversão de funções',
+    question: 'Por que o gráfico da inversa é o espelho do original na reta y = x?',
+    params: [
+      { symbol: 'a', role: 'inclinação de f', min: -3, max: 3, step: 0.5, initial: 2 },
+      { symbol: 'b', role: 'termo independente de f', min: -3, max: 3, step: 1, initial: 1 },
+    ],
+    domain: { min: -5, max: 5 },
+    range: { min: -5, max: 5 },
+    expression: (a, b) => (a === 0 ? `f(x) = ${num(b)}` : `f(x) = ${coef(a)}x${parcela(b)}`),
+    f: (x, a, b) => a * x + b,
+    reference: { label: 'f⁻¹', mainLabel: 'f', f: (x, a, b) => (a === 0 ? null : (x - b) / a) },
+    diagonal: true,
+    readouts: (a, b) => {
+      const q = a + b;
+      return [
+        { label: 'f⁻¹(x)', value: a === 0 ? 'não existe' : b === 0 ? `x / ${num(a)}` : `(x${parcela(-b)}) / ${num(a)}` },
+        { label: 'ponto de f', value: `(1, ${num(q)})` },
+        { label: 'ponto de f⁻¹', value: `(${num(q)}, 1)` },
+        { label: 'inversa existe?', value: a === 0 ? 'não: f constante não é injetora' : 'sim: f é bijetora', pivot: true },
+      ];
+    },
+    annotations: (a, b) => {
+      const q = a + b;
+      const marcas: Annotation[] = [{ text: 'y = x', x: -3.6, y: -3.6, dx: 1.9, dy: -0.9 }];
+      if (Math.abs(q) > 4.6) return marcas;
+      // Cada rótulo vai para o seu lado da diagonal. A primeira versão punha os
+      // dois com o mesmo deslocamento, e com inclinação negativa eles se
+      // encontravam no meio do quadro; a segunda, na perpendicular exata,
+      // caía sobre os números das escalas perto de x = 4 e y = 4. O passo
+      // maior vai paralelo a um eixo, o menor atravessa o outro, e o sentido
+      // depende de o ponto estar acima ou abaixo da diagonal.
+      const afastar = (x: number, y: number) => (y > x ? { dx: -2.4, dy: 0.9 } : { dx: 0.9, dy: -2.4 });
+      marcas.push({ text: '(1, f(1))', x: 1, y: q, ...afastar(1, q) });
+      // Sem inversa, ou com o ponto sobre a própria diagonal, não há espelho
+      // distinto para apontar.
+      if (a !== 0 && q !== 1) marcas.push({ text: '(f(1), 1)', x: q, y: 1, ...afastar(q, 1) });
+      return marcas;
+    },
+    insight:
+      'trocar x por y é refletir na reta y = x: cada ponto (p, q) de f vira (q, p) em f⁻¹. Zere a inclinação e a inversa some — uma função constante leva todo x ao mesmo y e não tem como voltar.',
+  },
+
+  sinal: {
+    id: 'sinal',
+    name: 'Estudo do sinal',
+    question: 'Onde a função é positiva, onde é negativa, e o que decide a fronteira?',
+    params: [
+      { symbol: 'a', role: 'sinal de a e abertura', min: -2, max: 2, step: 0.5, initial: 1 },
+      { symbol: 'c', role: 'altura do vértice', min: -5, max: 5, step: 0.5, initial: -3 },
+    ],
+    domain: { min: -6, max: 6 },
+    range: { min: -8, max: 8 },
+    expression: (a, c) => (a === 0 ? `f(x) = ${num(c)}` : `f(x) = ${coef(a)}x²${parcela(c)}`),
+    f: (x, a, c) => a * x * x + c,
+    signBands: true,
+    readouts: (a, c) => {
+      if (a === 0) {
+        return [
+          { label: 'raízes', value: c === 0 ? 'todo x' : 'nenhuma' },
+          { label: 'sinal', value: c > 0 ? 'sempre positiva' : c < 0 ? 'sempre negativa' : 'nula' },
+          { label: 'regra', value: 'constante: não troca de sinal', pivot: true },
+        ];
+      }
+      const r2 = -c / a;
+      const fora = a > 0 ? 'f(x) > 0' : 'f(x) < 0';
+      const entre = a > 0 ? 'f(x) < 0' : 'f(x) > 0';
+      return [
+        { label: 'raízes', value: r2 > 0 ? `x = ±${num(Math.sqrt(r2))}` : r2 === 0 ? 'x = 0 (dupla)' : 'nenhuma real' },
+        { label: 'fora das raízes', value: r2 > 0 ? fora : '—' },
+        { label: 'entre as raízes', value: r2 > 0 ? entre : '—' },
+        {
+          label: 'regra',
+          value: r2 > 0 ? 'concorda com a fora, discorda entre' : `sempre com o sinal de a${r2 === 0 ? ', salvo na raiz' : ''}`,
+          pivot: true,
+        },
+      ];
+    },
+    annotations: (a, c) => {
+      if (a === 0 || -c / a <= 0) return [];
+      const raiz = Math.sqrt(-c / a);
+      return raiz < 4.6 ? [{ text: 'o sinal troca aqui', x: raiz, y: 0, dx: 1.5, dy: a > 0 ? -2.6 : 2.6 }] : [];
+    },
+    insight:
+      'o sinal de uma quadrática concorda com o de a fora das raízes e discorda entre elas. Sem raiz real não há onde trocar: a parábola inteira fica do lado que a manda — é isso que uma inequação pergunta.',
+  },
+
+  transformacao: {
+    id: 'transformacao',
+    name: 'Transformações em gráficos',
+    question: 'Por que f(x − h) anda para a direita, e onde o sinal de menos reflete?',
+    params: [
+      { symbol: 'h', role: 'deslocamento horizontal', min: -4, max: 4, step: 1, initial: 2 },
+      {
+        symbol: 'reflexão', role: 'onde entra o sinal de menos', min: 0, max: 2, step: 1, initial: 0,
+        valueLabels: { 0: 'nenhuma', 1: '−f(x)', 2: 'f(−x)' },
+      },
+    ],
+    domain: { min: -6, max: 6 },
+    range: { min: -8, max: 8 },
+    expression: (h, r) => {
+      const dentro = h === 0 ? 'x' : `x ${h > 0 ? '−' : '+'} ${num(Math.abs(h))}`;
+      const g = r === 1 ? `−(${dentro})²` : r === 2 ? `(−x ${h > 0 ? '−' : '+'} ${num(Math.abs(h))})²` : `(${dentro})²`;
+      return `f(x) = x² → g(x) = ${r === 2 && h === 0 ? '(−x)²' : g}`;
+    },
+    f: (x, h, r) => (r === 1 ? -((x - h) ** 2) : r === 2 ? (-x - h) ** 2 : (x - h) ** 2),
+    reference: { label: 'f', mainLabel: 'g', f: (x) => x * x },
+    readouts: (h, r) => {
+      const vx = r === 2 ? -h : h;
+      return [
+        { label: 'na expressão', value: h === 0 ? 'x' : `x ${h > 0 ? '−' : '+'} ${num(Math.abs(h))}` },
+        { label: 'deslocamento', value: h > 0 ? `${num(h)} para a direita` : h < 0 ? `${num(-h)} para a esquerda` : 'nenhum' },
+        { label: 'reflexão', value: r === 1 ? 'no eixo x' : r === 2 ? 'no eixo y' : 'nenhuma' },
+        { label: 'vértice de g', value: `(${num(vx)}, 0)`, pivot: true },
+      ];
+    },
+    annotations: (h, r) => {
+      const vx = r === 2 ? -h : h;
+      if (vx === 0) return [];
+      return [{ text: `vértice em x = ${num(vx)}`, x: vx, y: 0, dx: vx > 0 ? -1 : 1, dy: r === 1 ? 2.4 : -2.4 }];
+    },
+    insight:
+      'subtrair h dentro do parêntese anda para a direita: g(h) = f(0), então o ponto que f tinha em 0 agora está em h. E o lugar do menos decide o espelho — fora, −f(x), inverte as saídas; dentro, f(−x), inverte as entradas.',
+  },
 };
 
 /** Pontos da curva, já em coordenadas do plano (não da tela). */
@@ -384,12 +524,13 @@ export function samplePoints(
   a: number,
   b: number,
   passos = 240,
+  fn: (x: number, a: number, b: number) => number | null = family.f,
 ): Array<{ x: number; y: number } | null> {
   const { min, max } = family.domain;
   const largura = max - min;
   return Array.from({ length: passos + 1 }, (_, i) => {
     const x = min + (largura * i) / passos;
-    const y = family.f(x, a, b);
+    const y = fn(x, a, b);
     // Fora do domínio, ou tão alto que sairia do quadro: corta o traço em vez
     // de desenhar uma linha vertical falsa até a borda.
     if (y === null || !Number.isFinite(y)) return null;
