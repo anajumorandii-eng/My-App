@@ -1,0 +1,89 @@
+/* Cenas de fenômeno biológico: só variáveis do tema, como em QuimicaFenomenos. */
+.bf-anel { fill: color-mix(in srgb, var(--vs-amber) 22%, var(--vs-paper-strong)); stroke: var(--vs-amber); stroke-width: 1.6; }
+.bf-ligacao { stroke: var(--vs-ink); stroke-width: 2; }
+.bf-cromossomo { fill: color-mix(in srgb, var(--vs-blue) 25%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 1.5; }
+.bf-gene { fill: var(--vs-burgundy); }
+.bf-populacao { fill: color-mix(in srgb, var(--vs-paper-strong) 90%, transparent); stroke: var(--vs-dim); stroke-width: 1.5; }
+.bf-alelo--a { fill: var(--vs-blue); }
+.bf-alelo--b { fill: var(--vs-burgundy); }
+.bf-alelo--n { fill: var(--vs-amber); stroke: var(--vs-ink); stroke-width: 1.5; }
+.bf-alelo--x { fill: var(--vs-burgundy); opacity: .15; }
+.bf-segmento { stroke: var(--vs-ink); stroke-width: 1; }
+.bf-segmento--a { fill: var(--vs-blue); }
+.bf-segmento--b { fill: var(--vs-burgundy); }
+.bf-seta { stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linecap: round; }
+.bf-barreira { stroke: var(--vs-ink); stroke-width: 4; stroke-linecap: round; }
+.bf-tronco { fill: none; stroke: color-mix(in srgb, var(--vs-amber) 60%, var(--vs-ink)); stroke-width: 3; stroke-linecap: round; }
+.bf-copa { fill: color-mix(in srgb, var(--vs-green) 65%, var(--vs-paper-strong)); stroke: var(--vs-green); }
+.bf-copa--seca { fill: color-mix(in srgb, var(--vs-amber) 35%, var(--vs-green)); }
+.bf-capim { fill: none; stroke: var(--vs-green); stroke-width: 1.5; }
+.bf-cacto { fill: none; stroke: var(--vs-green); stroke-width: 5; stroke-linecap: round; stroke-linejoin: round; }
+.bf-solo { stroke: color-mix(in srgb, var(--vs-amber) 55%, var(--vs-ink)); stroke-width: 2; }
+.bf-agua { fill: none; stroke: var(--vs-blue); stroke-width: 2.5; stroke-linecap: round; }
+.bf-barra { fill: color-mix(in srgb, var(--vs-dim) 25%, var(--vs-paper-strong)); }
+.bf-barra--resta { fill: var(--vs-green); }
+.bf-celula { fill: color-mix(in srgb, var(--vs-blue) 14%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 2; }
+.bf-nucleo { fill: var(--vs-burgundy); opacity: .75; }
+.bf-flagelo { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.2; stroke-linecap: round; }
+.bf-cilio { stroke: var(--vs-burgundy); stroke-width: 1.4; stroke-linecap: round; }
+.bf-pe { fill: none; stroke: var(--vs-ink); stroke-width: 6; stroke-linecap: round; }
+.bf-concha { fill: color-mix(in srgb, var(--vs-amber) 25%, var(--vs-paper-strong)); stroke: color-mix(in srgb, var(--vs-amber) 65%, var(--vs-ink)); stroke-width: 2; }
+.bf-manto { fill: color-mix(in srgb, var(--vs-burgundy) 30%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 2; }
+.bf-tentaculo { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linecap: round; }
+.bf-segmento-verme { fill: color-mix(in srgb, var(--vs-burgundy) 20%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 1.2; }
+.bf-clitelo { fill: color-mix(in srgb, var(--vs-amber) 55%, var(--vs-paper-strong)); stroke: var(--vs-amber); }
+.bf-cerda { stroke: var(--vs-ink); stroke-width: 1.2; }
+.bf-parapodio { fill: none; stroke: var(--vs-burgundy); stroke-width: 2; }
+.bf-ventosa { fill: color-mix(in srgb, var(--vs-blue) 25%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 2; }
+.bf-equino { fill: color-mix(in srgb, var(--vs-amber) 35%, var(--vs-paper-strong)); stroke: color-mix(in srgb, var(--vs-amber) 70%, var(--vs-ink)); stroke-width: 2; }
+.bf-espinho { stroke: color-mix(in srgb, var(--vs-amber) 70%, var(--vs-ink)); stroke-width: 1.5; }
+.bf-braco { fill: none; stroke: color-mix(in srgb, var(--vs-amber) 70%, var(--vs-ink)); stroke-width: 3; stroke-linecap: round; }
+
+.bf-faisca { fill: none; stroke: var(--vs-amber); stroke-width: 2; stroke-linejoin: round; }
+.bf-monomero { fill: var(--vs-burgundy); }
+.bf-cadeia { fill: none; stroke: var(--vs-burgundy); stroke-width: 2; }
+.bf-coacervado { fill: color-mix(in srgb, var(--vs-blue) 16%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 2; stroke-dasharray: 5 3; }
+.bf-rna { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.4; }
+.bf-rna--copia { stroke: var(--vs-blue); }
+.bf-aminoacido { fill: color-mix(in srgb, var(--vs-amber) 40%, var(--vs-paper-strong)); stroke: var(--vs-amber); stroke-width: 1.5; }
+.bf-helice, .bf-folha { fill: none; stroke: var(--vs-blue); stroke-width: 2.6; stroke-linejoin: round; }
+.bf-dobra { fill: color-mix(in srgb, var(--vs-blue) 15%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 2.4; }
+.bf-sitio { fill: none; stroke: var(--vs-burgundy); stroke-width: 4; stroke-linecap: round; }
+.bf-subunidade { fill: color-mix(in srgb, var(--vs-burgundy) 30%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 1.5; }
+.bf-subunidade--b { fill: color-mix(in srgb, var(--vs-blue) 30%, var(--vs-paper-strong)); stroke: var(--vs-blue); }
+.bf-blastomero { fill: color-mix(in srgb, var(--vs-amber) 30%, var(--vs-paper-strong)); stroke: color-mix(in srgb, var(--vs-amber) 70%, var(--vs-ink)); stroke-width: 1.2; }
+.bf-capsidio { fill: color-mix(in srgb, var(--vs-burgundy) 35%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 1.5; }
+.bf-espicula, .bf-receptor { stroke: var(--vs-ink); stroke-width: 1.5; }
+.bf-genoma { fill: none; stroke: var(--vs-burgundy); stroke-width: 2.2; stroke-linecap: round; }
+.bf-nucleo-celula { fill: color-mix(in srgb, var(--vs-blue) 18%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 1.5; }
+.bf-xilema { fill: color-mix(in srgb, var(--vs-blue) 18%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 1.5; }
+.bf-floema { fill: color-mix(in srgb, var(--vs-amber) 18%, var(--vs-paper-strong)); stroke: var(--vs-amber); stroke-width: 1.5; }
+.bf-folha-planta { fill: color-mix(in srgb, var(--vs-green) 45%, var(--vs-paper-strong)); stroke: var(--vs-green); stroke-width: 1.5; }
+.bf-raiz { fill: none; stroke: color-mix(in srgb, var(--vs-amber) 60%, var(--vs-ink)); stroke-width: 2.4; stroke-linecap: round; }
+.bf-estomato { fill: none; stroke: var(--vs-ink); stroke-width: 2; }
+.bf-agua-molecula { fill: var(--vs-blue); }
+.bf-ponte-h { stroke: var(--vs-burgundy); stroke-width: 2; stroke-dasharray: 2 2; }
+.bf-sacarose { fill: var(--vs-amber); stroke: var(--vs-ink); stroke-width: 1; }
+.bf-camada { fill: none; stroke: color-mix(in srgb, var(--vs-amber) 45%, var(--vs-paper-strong)); stroke-width: 11; stroke-linecap: round; }
+.bf-camada--interna { stroke: color-mix(in srgb, var(--vs-burgundy) 35%, var(--vs-paper-strong)); stroke-width: 8; }
+.bf-seta--agua { stroke: var(--vs-blue); }
+.bf-fluxo { stroke: var(--vs-burgundy); stroke-width: 4; stroke-dasharray: 8 5; }
+.bf-arvore { fill: none; stroke: var(--vs-ink); stroke-width: 2.2; }
+.bf-nivel { fill: color-mix(in srgb, var(--vs-blue) 5%, transparent); stroke: var(--vs-blue); stroke-width: 1; }
+.bf-anfibio { fill: color-mix(in srgb, var(--vs-green) 45%, var(--vs-paper-strong)); stroke: var(--vs-green); stroke-width: 2; }
+.bf-ovo-agua { fill: none; stroke: var(--vs-blue); stroke-width: 1.5; }
+.bf-ovo { fill: var(--vs-paper-strong); stroke: color-mix(in srgb, var(--vs-amber) 70%, var(--vs-ink)); stroke-width: 2.4; }
+.bf-ovo-amnio { fill: none; stroke: var(--vs-blue); stroke-width: 1.5; stroke-dasharray: 3 2; }
+.bf-mamifero { fill: color-mix(in srgb, var(--vs-amber) 40%, var(--vs-paper-strong)); stroke: color-mix(in srgb, var(--vs-amber) 70%, var(--vs-ink)); stroke-width: 2; }
+.bf-musgo { fill: none; stroke: var(--vs-green); stroke-width: 3; stroke-linecap: round; }
+.bf-gota { stroke: var(--vs-blue); stroke-width: 3; stroke-linecap: round; }
+.bf-vaso { stroke: var(--vs-blue); stroke-width: 4; }
+.bf-fronde { fill: none; stroke: var(--vs-green); stroke-width: 2.4; stroke-linecap: round; }
+.bf-polen { fill: color-mix(in srgb, var(--vs-amber) 55%, var(--vs-paper-strong)); stroke: var(--vs-amber); stroke-width: 1.5; }
+.bf-vento { fill: none; stroke: var(--vs-dim); stroke-width: 2; stroke-linecap: round; stroke-dasharray: 4 4; }
+.bf-bacteria { fill: color-mix(in srgb, var(--vs-blue) 35%, var(--vs-paper-strong)); stroke: var(--vs-blue); }
+.bf-bacteria--r { fill: color-mix(in srgb, var(--vs-burgundy) 45%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); }
+.bf-placa { fill: color-mix(in srgb, var(--vs-paper-strong) 90%, transparent); stroke: var(--vs-ink); stroke-width: 1.8; }
+.bf-placa--antibiotico { fill: color-mix(in srgb, var(--vs-amber) 14%, var(--vs-paper-strong)); }
+.bf-colonia { fill: var(--vs-blue); }
+.bf-colonia--r { fill: var(--vs-burgundy); }

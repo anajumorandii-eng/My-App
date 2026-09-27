@@ -2072,12 +2072,16 @@
   .vs-mode-hint { grid-column: 1 / -1; font-size: .72rem; }
   .vs-workspace { grid-template-columns: minmax(0, 1fr); }
   .vs-study-board { padding: 18px 14px 20px; border-radius: 4px 20px 5px 18px; }
+  /* Sem margem negativa: o −18 px fazia o painel subir como folha sobre a
+     prancha quando vinha logo depois dela. Com a cadeia de conceitos entre os
+     dois, ele cobria o rodapé dos cartões "Intuição" e "Conceito" em todo
+     capítulo no celular (auditoria 39, §4.3). */
   .vs-priority-panel,
   .vs-inspector-shell {
     position: relative;
     top: auto;
     z-index: 5;
-    margin-top: -18px;
+    margin-top: 12px;
     border-radius: 24px 24px 10px 10px;
   }
 }

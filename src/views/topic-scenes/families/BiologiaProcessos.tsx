@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
+import { rolarComSetas } from './BiologiaFisiologia';
 import type { SceneEntry } from '../types';
 import './BiologiaProcessos.css';
 
@@ -124,7 +125,8 @@ export function BiologiaProcessos({ entry }: { entry: SceneEntry }) {
   const biomagnification = entry.chapterId === 'bio-ecologia-biomagnificacao';
   return <section className="tc-scene bp-process" aria-label={entry.question}>
     <header><small>CRIVO · atlas biológico</small><h4>{entry.question}</h4></header>
-    <div className="bp-process-figure">{algae ? <AlgaeDiagram focus={focus}/> : respiration ? <RespirationDiagram focus={focus}/> : biomagnification ? <BiomagnificationDiagram focus={focus}/> : <LifeCycleDiagram focus={focus}/>}</div>
+    <div className="bp-process-figure" role="region" tabIndex={0} aria-label="Prancha visual: deslize para ver a figura inteira; com teclado, use as setas" onKeyDown={rolarComSetas}>{algae ? <AlgaeDiagram focus={focus}/> : respiration ? <RespirationDiagram focus={focus}/> : biomagnification ? <BiomagnificationDiagram focus={focus}/> : <LifeCycleDiagram focus={focus}/>}</div>
+    <p className="bp-pan-hint">Deslize a prancha para ver toda a figura. Com teclado, use as setas.</p>
     <div className="bp-process-tabs" aria-label={algae ? 'Profundidade e pigmento' : respiration ? 'Etapas da respiração aeróbia' : biomagnification ? 'Níveis tróficos' : 'Posição da meiose'}>
       {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={focus === index} onClick={() => setFocus(index)} animate={{ y: focus === index ? -3 : 0 }} transition={transition}>{candidate.label}</motion.button>)}
     </div>

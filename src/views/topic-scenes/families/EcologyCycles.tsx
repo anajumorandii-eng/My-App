@@ -18,7 +18,7 @@ function NitrogenDiagram({ active, selected, replay }: EcologyDiagramProps) {
     <text x="215" y="79" textAnchor="middle" className="eco-formula">N₂</text><text x="215" y="111" textAnchor="middle" className="eco-label">atmosfera</text>
     <Soil top={298}/><Plant x={286} y={297} size={1.36}/>
     <path d="M286 298q-12 47-41 66m36-48 32 45m-33-18-42-9m57 17-5 30m-33-41-14 30m58-9 28 10" fill="none" stroke="var(--eco-root)" strokeWidth="3"/>
-    {[[260,326],[247,348],[301,347]].map(([x,y],i) => <motion.ellipse key={i} cx={x} cy={y} rx="7" ry="5" fill="var(--eco-accent)" animate={{rx:active===0?10:7}} transition={{duration: reduced ? 0 : MOTION_DURATION.mechanism}}/>)}
+    {[[260,326],[247,348],[301,347]].map(([x,y],i) => <motion.ellipse key={i} cx={x} cy={y} ry="5" fill="var(--eco-accent)" initial={{rx:active===0?10:7}} animate={{rx:active===0?10:7}} transition={{duration: reduced ? 0 : MOTION_DURATION.mechanism}}/>)}
     <text x="312" y="184" className="eco-note">leguminosa</text><path d="M317 190 291 219" className="eco-annotation"/>
     <text x="312" y="310" className="eco-label">raízes + nódulos</text>
     <path d="M41 284q12-21 28-8t29 6l-13 12-35-2Z" fill="var(--eco-root)"/><text x="32" y="259" className="eco-label">matéria</text><text x="32" y="277" className="eco-label">orgânica</text>

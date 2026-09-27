@@ -76,7 +76,7 @@ export default function PhotosynthesisMechanism() {
           <motion.g animate={{ opacity: step === 1 ? 1 : .8 }} transition={transition}>
             <circle cx="367" cy="269" r="43" fill="none" stroke="var(--photo-green)" strokeWidth="1.5" strokeDasharray="3 4" />
             <Route d="M338 240A40 40 0 1 1 328 271" color="var(--photo-green)" replay={key} />
-            <text x="367" y="265" textAnchor="middle" className="photo-small">ciclo de</text><text x="367" y="282" textAnchor="middle" className="photo-small">Calvin</text>
+            <text x="367" y="263" textAnchor="middle" className="photo-small">ciclo de</text><text x="367" y="283" textAnchor="middle" className="photo-small">Calvin</text>
             <text x="378" y="102" className="photo-label">CO₂</text>
             <Route d="M399 115Q417 176 386 221" color="var(--photo-blue)" replay={key} />
             <Route d="M399 299Q454 357 423 416" color="var(--photo-green)" replay={key} />
