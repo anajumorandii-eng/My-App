@@ -98,7 +98,7 @@ export function chemistryInstrument(id: ChemistryId) {
     const pair = boardPair(props);
     const [value, setValue] = useState(config.initial);
     const result = config.read(value);
-    const first = props.map.nodes[0];
+    const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
     return <BoardShell
       kicker="Laboratório de Química" title={config.title} subtitle={config.question}

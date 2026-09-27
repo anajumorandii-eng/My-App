@@ -50,7 +50,8 @@ export interface Marca {
 
 export type ConfigId =
   | 'dois-pontos' | 'ponto-reta' | 'circunferencia'
-  | 'duas-retas' | 'reta-circunferencia' | 'complexo';
+  | 'duas-retas' | 'reta-circunferencia' | 'complexo'
+  | 'alinhamento' | 'baricentro';
 
 export interface AnalyticConfig {
   id: ConfigId;
@@ -76,6 +77,12 @@ export interface AnalyticConfig {
    */
   retaDe?: (p: Ponto) => Reta;
   circulo?: Circulo;
+  /** Vértices fixos além de A, com o rótulo que a leitura usa. */
+  outros?: Array<{ p: Ponto; rotulo: string }>;
+  /** Preenche o triângulo A, outros, ponto arrastado. */
+  triangulo?: boolean;
+  /** Traça as três medianas, os pontos médios e o baricentro. */
+  medianas?: boolean;
   readouts(p: Ponto): Leitura[];
   annotations(p: Ponto): Marca[];
   insight: string;
@@ -148,6 +155,71 @@ export function posicaoRetaCirculo(r: Reta, c: Circulo, tolerancia = 0.12): Posi
   return d < c.r ? 'secante' : 'externa';
 }
 
+/** Área pelo determinante; zero é exatamente o caso de pontos alinhados. */
+export function areaTriangulo(a: Ponto, b: Ponto, c: Ponto): number {
+  return Math.abs(a.x * (b.y - c.y) + b.x * (c.y - a.y) + c.x * (a.y - b.y)) / 2;
+}
+
+/**
+ * Primeiro deslocamento, entre os candidatos, que deixa o rótulo fora das
+ * faixas onde o instrumento escreve os números dos eixos (logo abaixo do eixo
+ * x e à esquerda do eixo y), longe dos vértices nomeados e dentro do quadro. Sem isso, "área ≠ 0" e "G"
+ * caíam sobre o "2" e o "−2" em quase um terço das posições do arraste.
+ * `unidadePorLetra` é a largura de uma letra em unidades do plano, num quadro
+ * útil de 248 px. Usa 5,8 px, e não os 4,6 px com que o instrumento prende o
+ * rótulo na moldura: com 4,6 a conta subestimava a Kalam em negrito, e o
+ * rótulo ainda encostava nos números do eixo y.
+ */
+export function afastarDosEixos(
+  texto: string,
+  x: number,
+  y: number,
+  alcance: number,
+  candidatos: Array<[number, number]>,
+  evitar: Ponto[] = [],
+): { dx: number; dy: number } {
+  const unidadePorLetra = (5.8 * 2 * alcance) / 248;
+  const meia = (texto.length * unidadePorLetra) / 2;
+  // Medido no navegador: os números do eixo x ocupam y ∈ [−0,75; −0,23] e os
+  // do eixo y, x ∈ [−0,76; −0,29]. O rótulo é escrito a partir da linha de
+  // base e sobe cerca de 0,5 unidade — por isso a faixa proibida em torno do
+  // eixo x é assimétrica.
+  const defeitos = ([dx, dy]: [number, number]) => {
+    const lx = x + dx;
+    const ly = y + dy;
+    const foraDoQuadro = Math.abs(lx) + meia > alcance || ly > alcance - 0.6 || ly < -alcance + 0.2;
+    const naFaixaX = ly > -1.45 && ly < 0.35;
+    const naFaixaY = lx + meia > -1.0 && lx - meia < 0.1;
+    // O nome de cada vértice é escrito ao lado dele, até ~1 unidade de
+    // distância: o rótulo não pode cair nessa vizinhança.
+    const sobreVertice = evitar.filter((v) => Math.abs(v.x - lx) < meia + 1.1 && Math.abs(v.y - ly) < 1.1).length;
+    return Number(foraDoQuadro) * 3 + Number(naFaixaX) + Number(naFaixaY) + sobreVertice;
+  };
+  // As preferidas vêm primeiro; se todas estiverem ocupadas, uma rosa de oito
+  // direções em três raios quase sempre tem uma posição livre. Só as
+  // preferidas não bastavam: com o triângulo esticado, as quatro caíam juntas
+  // sobre números de eixo ou nomes de vértice. Sem nenhuma livre, fica a que
+  // tem menos conflitos — antes caía na primeira, que podia ser a pior.
+  const rosa: Array<[number, number]> = [];
+  for (const r of [1.8, 2.6, 3.4]) {
+    for (let k = 0; k < 8; k += 1) rosa.push([r * Math.cos((k * Math.PI) / 4), r * Math.sin((k * Math.PI) / 4)]);
+  }
+  const todos = [...candidatos, ...rosa];
+  let melhor = todos[0];
+  let menor = Infinity;
+  for (const c of todos) {
+    const d = defeitos(c);
+    if (d < menor) { menor = d; melhor = c; }
+    if (d === 0) break;
+  }
+  const [dx, dy] = melhor;
+  return { dx, dy };
+}
+
+export function baricentro(a: Ponto, b: Ponto, c: Ponto): Ponto {
+  return { x: (a.x + b.x + c.x) / 3, y: (a.y + b.y + c.y) / 3 };
+}
+
 export function moduloEArgumento(p: Ponto): { modulo: number; argumento: number } {
   const graus = (Math.atan2(p.y, p.x) * 180) / Math.PI;
   return { modulo: Math.hypot(p.x, p.y), argumento: graus < 0 ? graus + 360 : graus };
@@ -193,10 +265,18 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
     annotations: (p) => {
       const a = { x: -3, y: -2 };
       const m = pontoMedio(a, p);
-      return [
-        { text: 'ponto médio', x: m.x, y: m.y, dx: 0.4, dy: -1.5 },
-        { text: 'a distância é a hipotenusa', x: (a.x + p.x) / 2, y: (a.y + p.y) / 2, dx: 0.3, dy: 1.9 },
-      ];
+      // Esta configuração serve hoje só a "Estudo Analítico da Reta": ponto
+      // médio e distância ganharam pranchas próprias. As duas notas antigas —
+      // ponto médio e hipotenusa — apontavam para o mesmo ponto e se
+      // sobrepunham, ou caíam sobre A, B e os números dos eixos, em 128 das 169
+      // posições inteiras de B. Fica uma, sobre a inclinação, que é o assunto.
+      const comp = Math.hypot(p.x - a.x, p.y - a.y) || 1;
+      const nx = -(p.y - a.y) / comp;
+      const ny = (p.x - a.x) / comp;
+      return [{
+        text: 'm = Δy / Δx', x: m.x, y: m.y,
+        ...afastarDosEixos('m = Δy / Δx', m.x, m.y, 6, [[nx * 1.8, ny * 1.8], [-nx * 1.8, -ny * 1.8]], [a, p]),
+      }];
     },
     insight:
       'a distância entre dois pontos é Pitágoras aplicado ao triângulo que as diferenças de x e de y formam — não é fórmula nova. Arraste B até alinhá-lo verticalmente com A e veja o coeficiente angular deixar de existir.',
@@ -357,5 +437,91 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
     ],
     insight:
       'o módulo é a distância até a origem, e o conjugado é a reflexão no eixo real. Multiplicar por i gira o ponto 90° — a operação que parece abstrata na álgebra é um giro no plano.',
+  },
+  // A(−2, −3) e C(2, 5) estão na reta y = 2x + 1, a mesma do exemplo do
+  // capítulo (A(1,1), B(3,5), C(5,9)) transladada para caber no quadro.
+  alinhamento: {
+    id: 'alinhamento',
+    name: 'Três pontos alinhados',
+    question: 'Como a álgebra decide se três pontos estão na mesma reta?',
+    alcance: 6,
+    inicial: { x: 1, y: -1 },
+    rotulo: 'B',
+    fixo: { x: -2, y: -3 },
+    outros: [{ p: { x: 2, y: 5 }, rotulo: 'C' }],
+    triangulo: true,
+    readouts: (p) => {
+      const a = { x: -2, y: -3 };
+      const c = { x: 2, y: 5 };
+      const area = areaTriangulo(a, p, c);
+      const mAB = coeficienteAngular(a, p);
+      const mBC = coeficienteAngular(p, c);
+      return [
+        { label: 'distância AB', value: num(distanciaEntrePontos(a, p)) },
+        { label: 'área de ABC', value: num(area) },
+        { label: 'm(AB) e m(BC)', value: `${mAB === null ? '∄' : num(mAB)} e ${mBC === null ? '∄' : num(mBC)}` },
+        { label: 'alinhados?', value: area < 1e-9 ? 'sim: a área é zero' : 'não: há triângulo', pivot: true },
+      ];
+    },
+    annotations: (p) => {
+      const a = { x: -2, y: -3 };
+      const c = { x: 2, y: 5 };
+      if (areaTriangulo(a, p, c) < 1e-9) {
+        return [{
+          text: 'área zero: uma reta', x: p.x, y: p.y,
+          ...afastarDosEixos('área zero: uma reta', p.x, p.y, 6, [[2.6, -1.4], [-2.6, 1.4], [2.6, 1.6], [-2.6, -1.6]], [a, c, p]),
+        }];
+      }
+      const g = baricentro(a, p, c);
+      const lado = p.x > g.x ? -1 : 1;
+      return [{
+        text: 'área ≠ 0', x: g.x, y: g.y,
+        ...afastarDosEixos('área ≠ 0', g.x, g.y, 6, [[2.6 * lado, 1.4], [2.6 * lado, -1.6], [-2.6 * lado, 1.4], [-2.6 * lado, -1.6], [1.2, 2.6], [1.2, -2.6], [0, 2.2], [0, -2.2]], [a, p, c]),
+      }];
+    },
+    insight:
+      'três pontos estão na mesma reta exatamente quando o triângulo que formam não tem área: o determinante zera, e os coeficientes angulares de AB e BC ficam iguais. Leve B até (0, 1) e veja as duas coisas acontecerem juntas.',
+  },
+
+  // A(−3, −3), B(3, −3), C(0, 6): o triângulo do "Pratique e confira"
+  // (A(0,0), B(6,0), C(3,9)) transladado. G começa na origem, como lá começa
+  // em (3, 3).
+  baricentro: {
+    id: 'baricentro',
+    name: 'Medianas e baricentro',
+    question: 'Por que o baricentro é a média dos três vértices, e não o meio da mediana?',
+    alcance: 6,
+    inicial: { x: 0, y: 6 },
+    rotulo: 'C',
+    fixo: { x: -3, y: -3 },
+    outros: [{ p: { x: 3, y: -3 }, rotulo: 'B' }],
+    triangulo: true,
+    medianas: true,
+    readouts: (p) => {
+      const a = { x: -3, y: -3 };
+      const b = { x: 3, y: -3 };
+      const m = pontoMedio(a, b);
+      const g = baricentro(a, b, p);
+      const gm = distanciaEntrePontos(g, m);
+      return [
+        { label: 'M, meio de AB', value: `(${num(m.x)}; ${num(m.y)})` },
+        { label: 'G, média dos vértices', value: `(${num(g.x)}; ${num(g.y)})` },
+        { label: 'CG : GM', value: gm < 1e-9 ? '—' : `${num(distanciaEntrePontos(p, g) / gm)} : 1`, pivot: true },
+      ];
+    },
+    annotations: (p) => {
+      const a = { x: -3, y: -3 };
+      const b = { x: 3, y: -3 };
+      const g = baricentro(a, b, p);
+      const lado = p.x >= 0 ? -1 : 1;
+      const rotuloG = afastarDosEixos('G', g.x, g.y, 6, [[1.6 * lado, 1.4], [1.6 * lado, -1.4], [-1.6 * lado, 1.4], [-1.6 * lado, -1.4]], [a, b, p]);
+      const rotuloM = afastarDosEixos('M', 0, -3, 6, [[1.2, -1.6], [-1.2, -1.6], [2, -1.2]], [a, b, p, g, { x: g.x + rotuloG.dx, y: g.y + rotuloG.dy }]);
+      return [
+        { text: 'G', x: g.x, y: g.y, ...rotuloG },
+        { text: 'M', x: 0, y: -3, ...rotuloM },
+      ];
+    },
+    insight:
+      'as três medianas se cruzam num só ponto, a dois terços de cada vértice: CG é o dobro de GM, nunca a metade. Mova C para onde quiser — a razão não sai de 2 : 1, e G continua sendo a média das três coordenadas.',
   },
 };

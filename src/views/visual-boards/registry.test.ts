@@ -81,6 +81,15 @@ describe('registro de pranchas', () => {
     }
   });
 
+  it('usa cenas próprias para probabilidade e trigonometria no triângulo retângulo', () => {
+    const probabilidade = interactiveSummaries.find((s) => s.id === 'mat-probabilidade-contagem');
+    const triangulo = interactiveSummaries.find((s) => s.id === 'summary-matematica-trigonometria-no-triangulo-retangulo');
+    expect(probabilidade).toBeDefined();
+    expect(triangulo).toBeDefined();
+    expect(findBoard(probabilidade!)?.id).toBe('probabilidade-pares');
+    expect(findBoard(triangulo!)?.id).toBe('trigonometria-triangulo');
+  });
+
   it('não registra prancha que nenhum capítulo alcança', () => {
     // Uma entrada cujas keywords não casam com nada é prancha escrita e nunca
     // exibida — o tipo de coisa que passa despercebida até alguém abrir a tela.

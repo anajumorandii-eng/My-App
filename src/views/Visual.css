@@ -245,21 +245,23 @@
 }
 .dark .vs-concept-card code { background: rgba(0,0,0,.18); }
 
-.vs-newton-core { fill: color-mix(in srgb, var(--vs-blue) 14%, transparent); stroke: var(--vs-blue); stroke-width: 2; }
-.vs-newton-core { filter: url(#chalk-glow); stroke-dasharray: 5 2 9 1; }
-.vs-newton-core-copy { fill: currentColor; font: 700 13px/1 ui-monospace, SFMono-Regular, monospace; letter-spacing: .08em; }
-.vs-newton-sparks path { fill: none; stroke: var(--vs-amber); stroke-width: 2; stroke-linecap: round; opacity: .8; }
-.vs-force-mini rect { fill: color-mix(in srgb, var(--vs-burgundy) 22%, var(--vs-paper-strong)); stroke: currentColor; stroke-width: 1.4; }
-.vs-force-mini path { fill: none; stroke: var(--vs-burgundy); stroke-width: 1.8; stroke-linecap: round; stroke-linejoin: round; }
-.vs-newton-hand { fill: var(--vs-amber); font: 700 12px/1 "Kalam", cursive; }
-.vs-newton-hand-arrow { fill: none; stroke: var(--vs-amber); stroke-width: 1.5; stroke-linecap: round; stroke-dasharray: 4 2; }
-.vs-newton-link { fill: none; stroke: var(--vs-blue); stroke-width: 2.2; stroke-linecap: round; transition: stroke-width .2s ease, filter .2s ease; }
-.vs-newton-link.is-active { stroke-width: 4; filter: drop-shadow(0 0 6px var(--vs-blue)); }
-.vs-newton-law rect { fill: color-mix(in srgb, var(--vs-paper-strong) 86%, var(--vs-blue)); stroke: var(--vs-blue); stroke-width: 1.4; }
-.vs-newton-law text { fill: currentColor; font: 700 11px/1.2 "Kalam", "Newsreader", Georgia, serif; }
-.vs-newton-law--three rect { stroke: var(--vs-amber); }
-.dark .vs-newton-law rect { fill: #111a22; }
-.dark .vs-newton-core-copy, .dark .vs-newton-law text { fill: #f5ecdc; }
+/* Cena radial das três leis: substitui .vs-atlas-scene--newton (webp), cujas
+   regras abaixo foram removidas junto — a auditoria achou o mesmo anti-padrão
+   do pistão adiabático, um raster que carregava sem desenhar o que a tela
+   precisa. */
+.vs-newton-radial { width: 100%; max-width: 300px; margin: 0 auto; overflow: visible; }
+.vs-newton-spoke { stroke: var(--vs-line); stroke-width: 1.5; fill: none; }
+.vs-newton-hub { fill: color-mix(in srgb, var(--vs-paper-strong) 88%, var(--vs-ink)); stroke: var(--vs-ink); stroke-width: 1.6; }
+.vs-newton-hub-label { fill: var(--vs-ink); font: 700 13px/1 "Newsreader", Georgia, serif; }
+.vs-newton-block { fill: color-mix(in srgb, var(--vs-paper-strong) 86%, var(--vs-blue)); stroke: var(--vs-blue); stroke-width: 1.4; transition: stroke-width .2s ease, filter .2s ease; }
+.vs-newton-panel--3 .vs-newton-block { stroke: var(--vs-amber); }
+.vs-newton-force { stroke: var(--vs-burgundy); stroke-width: 2.2; }
+.vs-newton-force path { fill: var(--vs-burgundy); }
+.vs-newton-inertia-path { stroke: var(--vs-dim); stroke-width: 1.6; stroke-dasharray: 4 5; }
+.vs-newton-panel-title { fill: var(--vs-ink); font: 700 12px/1.2 "Newsreader", Georgia, serif; }
+.vs-newton-panel-sub { fill: var(--vs-ink-muted); font: 600 11px/1.2 ui-monospace, SFMono-Regular, monospace; }
+.vs-newton-panel[data-active] .vs-newton-block { stroke-width: 2.6; filter: drop-shadow(0 0 5px color-mix(in srgb, var(--vs-blue) 55%, transparent)); }
+.dark .vs-newton-block { fill: #111a22; }
 
 .vs-drop-target {
   min-height: 48px;
@@ -1412,6 +1414,23 @@
   stroke-linejoin: round;
 }
 .vs-plane[data-destaque="true"] .vs-plane-curve { stroke: var(--vs-blue); }
+.vs-plane-reference {
+  fill: none;
+  stroke: var(--vs-ink);
+  stroke-width: 1.6;
+  stroke-dasharray: 5 4;
+  opacity: 0.5;
+}
+.vs-plane-mirror { stroke: var(--vs-amber); stroke-width: 1.2; stroke-dasharray: 2 3; }
+.vs-plane-sign line { stroke-width: 5; stroke-linecap: butt; opacity: 0.75; }
+.vs-plane-sign[data-sinal="positivo"] line { stroke: var(--vs-green); }
+.vs-plane-sign[data-sinal="negativo"] line { stroke: var(--vs-burgundy); }
+.vs-plane-sign text { font: 700 12px ui-monospace, "SFMono-Regular", Menlo, monospace; }
+.vs-plane-sign[data-sinal="positivo"] text { fill: var(--vs-green); }
+.vs-plane-sign[data-sinal="negativo"] text { fill: var(--vs-burgundy); }
+.vs-plane-legend { font: 10px ui-monospace, "SFMono-Regular", Menlo, monospace; }
+.vs-plane-legend-ref { fill: var(--vs-dim); }
+.vs-plane-legend-main { fill: var(--vs-burgundy); }
 .vs-plane-expression {
   fill: var(--vs-ink);
   font-family: ui-monospace, "SFMono-Regular", Menlo, monospace;
@@ -1788,6 +1807,10 @@
   stroke-dasharray: 5 4;
 }
 .vs-analytic-segment { fill: none; stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-analytic-triangle { fill: color-mix(in srgb, var(--vs-blue) 12%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; }
+.vs-analytic-medians path { stroke: var(--vs-amber); stroke-width: 1.3; stroke-dasharray: 4 3; fill: none; }
+.vs-analytic-midpoint { fill: var(--vs-amber); }
+.vs-analytic-centroid { fill: var(--vs-burgundy); stroke: var(--vs-paper-strong); stroke-width: 1.5; }
 .vs-analytic-fixed circle { fill: var(--vs-dim); }
 .vs-analytic-fixed text,
 .vs-analytic-point text {
@@ -1845,11 +1868,9 @@
 .vs-force-vector--drive { stroke: #c83b50; }
 .vs-force-vector--weight { stroke: #d19730; }
 .vs-force-vector--normal { stroke: #378a67; }
-.vs-newton-motion marker path { fill: #c83b50; }
 .vs-interaction-pulse { fill: none; stroke: #6d79dc; stroke-width: 2.5; }
 .vs-atlas-scene--photo img { width: 118%; max-width: none; height: 300px; }
-.vs-atlas-scene--atom img,
-.vs-atlas-scene--newton img { width: 128%; max-width: none; height: 315px; }
+.vs-atlas-scene--atom img { width: 128%; max-width: none; height: 315px; }
 .vs-atlas-label {
   position: absolute;
   z-index: 2;
@@ -1866,20 +1887,16 @@
 .vs-atlas-label--right::after { right: 92%; top: 18px; transform: rotate(20deg); }
 .vs-atlas-label--sun { left: 2px; top: 16px; color: #9a5c10; }
 .vs-atlas-label--sun::after { left: 84%; top: 18px; transform: rotate(14deg); }
-.vs-atlas-label--atom-left,
-.vs-atlas-label--newton-left { left: -4px; bottom: 28px; }
-.vs-atlas-label--atom-left::after,
-.vs-atlas-label--newton-left::after { left: 88%; top: -8px; transform: rotate(-22deg); }
-.vs-atlas-label--atom-right,
-.vs-atlas-label--newton-right { right: -8px; top: 22px; transform: rotate(3deg); }
-.vs-atlas-label--atom-right::after,
-.vs-atlas-label--newton-right::after { right: 90%; top: 18px; transform: rotate(20deg); }
+.vs-atlas-label--atom-left { left: -4px; bottom: 28px; }
+.vs-atlas-label--atom-left::after { left: 88%; top: -8px; transform: rotate(-22deg); }
+.vs-atlas-label--atom-right { right: -8px; top: 22px; transform: rotate(3deg); }
+.vs-atlas-label--atom-right::after { right: 90%; top: 18px; transform: rotate(20deg); }
 @media (max-width: 700px) {
   .vs-atlas-scene { min-height: 270px; }
   .vs-atlas-scene img { height: 265px; }
   .vs-atlas-scene--photo img { width: 112%; height: 245px; }
-  .vs-atlas-scene--atom img,
-  .vs-atlas-scene--newton img { width: 120%; height: 255px; }
+  .vs-atlas-scene--atom img { width: 120%; height: 255px; }
+  .vs-newton-radial { max-width: 240px; }
 }
 
 /* Composição editorial aprovada: a prancha começa no primeiro enquadramento e

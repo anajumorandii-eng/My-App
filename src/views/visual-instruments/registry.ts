@@ -95,9 +95,10 @@ import type { LiteraryAuthorId } from '../../lib/literaryAuthorLab';
  *
  * O que NÃO muda é a regra de não emprestar ilustração: o instrumento só entra
  * onde ele é o objeto do capítulo. "Função quadrática" recebe a parábola porque
- * a parábola é o assunto; "Determinantes" não recebe nada, e continua no aviso,
- * até existir um instrumento de matriz. Preencher tela com o que estiver à mão
- * continua sendo o erro que o `ap_mat_fuvest_110` nomeia.
+ * a parábola é o assunto; "Determinantes" só passou a ter prancha quando existiu
+ * o instrumento de matriz — antes disso ficava no aviso, e não com a parábola.
+ * Preencher tela com o que estiver à mão continua sendo o erro que o
+ * `ap_mat_fuvest_110` nomeia.
  */
 export interface InstrumentEntry {
   id: string;
@@ -194,11 +195,11 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
   plano('funcao-afim', ['função afim'], 'afim'),
   plano('funcao-quadratica', ['função quadrática'], 'quadratica'),
-  plano('estudo-do-sinal', ['estudo do sinal'], 'quadratica'),
-  plano('transformacoes-graficos', ['transformações em gráficos'], 'quadratica'),
+  plano('estudo-do-sinal', ['estudo do sinal'], 'sinal'),
+  plano('transformacoes-graficos', ['transformações em gráficos'], 'transformacao'),
   plano('modulo-real', ['módulo de um número real'], 'modular'),
   plano('funcoes-logaritmicas', ['funções logarítmicas'], 'logaritmica'),
-  plano('inversao-funcoes', ['inversão de funções'], 'logaritmica'),
+  plano('inversao-funcoes', ['inversão de funções'], 'inversa'),
   plano('modelagem-exponencial', ['modelagem exponencial'], 'exponencial'),
   plano('funcoes-trigonometricas', ['funções trigonométricas'], 'senoidal'),
   plano('transformacoes-trigonometricas', ['transformações trigonométricas'], 'senoidal'),
@@ -207,8 +208,8 @@ export const INSTRUMENTS: InstrumentEntry[] = [
 
   // Geometria analítica: aqui a manipulação é arrastar um ponto, não mover um
   // parâmetro — a diferença sai do conteúdo, não de preferência de interface.
-  analitico('geometria-analitica', ['introdução à geometria analítica'], 'dois-pontos'),
-  analitico('ponto-medio', ['ponto médio'], 'dois-pontos'),
+  analitico('geometria-analitica', ['introdução à geometria analítica'], 'alinhamento'),
+  analitico('ponto-medio', ['ponto médio'], 'baricentro'),
   analitico('reta-analitica', ['estudo analítico da reta'], 'dois-pontos'),
   analitico('distancia-ponto-reta', ['distância entre um ponto e uma reta'], 'ponto-reta'),
   analitico('circunferencia', ['equação da circunferência'], 'circunferencia'),

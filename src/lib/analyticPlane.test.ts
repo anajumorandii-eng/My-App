@@ -5,6 +5,7 @@ import {
   interseccao, moduloEArgumento, num, pontoMedio, posicaoDeRetas, posicaoNoCirculo,
   posicaoRetaCirculo, projecaoNaReta, type ConfigId,
 } from './analyticPlane';
+import { areaTriangulo, baricentro } from './analyticPlane';
 
 const IDS = Object.keys(CONFIGS) as ConfigId[];
 
@@ -170,4 +171,21 @@ test('a anotação das duas retas não confunde paralelismo com cruzamento fora 
     c.readouts({ x: 3, y: 1 }).find((l) => l.label === 'posição')?.value,
     'concorrentes',
   );
+});
+
+test('alinhamento: a área zera exatamente quando B cai na reta de A e C', () => {
+  const cfg = CONFIGS.alinhamento;
+  const pivot = (p: { x: number; y: number }) => cfg.readouts(p).find((l) => l.pivot)!.value;
+  assert.match(pivot({ x: 0, y: 1 }), /^sim/);
+  assert.match(pivot({ x: 1, y: -1 }), /^não/);
+  assert.equal(areaTriangulo({ x: 1, y: 1 }, { x: 3, y: 5 }, { x: 5, y: 9 }), 0);
+});
+
+test('baricentro: CG é o dobro de GM em qualquer posição de C', () => {
+  const cfg = CONFIGS.baricentro;
+  for (const c of [{ x: 0, y: 6 }, { x: -5, y: 2 }, { x: 4, y: -1 }]) {
+    assert.equal(cfg.readouts(c).find((l) => l.pivot)!.value, '2 : 1');
+  }
+  // O exemplo do capítulo: A(0,0), B(6,0), C(3,9) dá G(3,3).
+  assert.deepEqual(baricentro({ x: 0, y: 0 }, { x: 6, y: 0 }, { x: 3, y: 9 }), { x: 3, y: 3 });
 });

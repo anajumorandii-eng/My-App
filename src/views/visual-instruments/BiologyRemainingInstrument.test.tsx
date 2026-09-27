@@ -62,4 +62,15 @@ describe('mecanismos de Biologia', () => {
     expect(biologyRemainingReadout('angiosperms', 2)).toBe('fruto (do ovário)');
     expect(biologyRemainingReadout('procaryotes', 1)).toBe('transdução');
   });
+  it('distingue dispersão no ar de transformação de contaminantes por biorremediação', () => {
+    const air = render(React.createElement(biologyRemainingInstrument('air-pollution'), props(EXPECTED['air-pollution'])));
+    expect(air.container.querySelector('[data-bio-system="air-dispersion"]')).not.toBeNull();
+    expect(air.container.textContent).toContain('dispersão');
+    air.unmount();
+
+    const climate = render(React.createElement(biologyRemainingInstrument('climate-pops'), props(EXPECTED['climate-pops'])));
+    expect(climate.container.querySelector('[data-bio-system="bioremediation"]')).not.toBeNull();
+    expect(climate.container.textContent).toContain('microrganismos');
+    climate.unmount();
+  });
 });

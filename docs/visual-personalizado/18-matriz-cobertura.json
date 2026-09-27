@@ -4116,7 +4116,7 @@
       "subject": "Matemática",
       "title": "Trigonometria no Triângulo Retângulo",
       "primary": "board",
-      "artifact": "trigonometria",
+      "artifact": "trigonometria-triangulo",
       "ignored": []
     },
     {
@@ -4877,7 +4877,7 @@
       "subject": "Matemática",
       "title": "Contagem sistemática e probabilidade",
       "primary": "board",
-      "artifact": "contagem",
+      "artifact": "probabilidade-pares",
       "ignored": []
     },
     {

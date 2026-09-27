@@ -82,7 +82,7 @@ export function electrochemistryInstrument(id: ElectrochemistryId) {
     const [value, setValue] = useState(config.control.initial);
     const readouts = config.readouts(value);
     const pivot = readouts.find(item => item.pivot) ?? readouts[0];
-    const first = props.map.nodes[0];
+    const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
 
     return <BoardShell

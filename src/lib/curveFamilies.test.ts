@@ -155,3 +155,34 @@ test('a raiz da cúbica é encontrada de verdade', () => {
   // Sem troca de sinal no intervalo, devolve null em vez de chutar.
   assert.equal(primeiraRaiz((x) => x * x + 1, -3, 3), null);
 });
+
+test('a inversa é o espelho em y = x e some quando f é constante', () => {
+  const inv = FAMILIES.inversa;
+  // Todo ponto (p, f(p)) de f reaparece como (f(p), p) na inversa.
+  for (const p of [-2, 0, 1.5, 3]) {
+    const q = inv.f(p, 2, 1)!;
+    assert.ok(Math.abs(inv.reference!.f(q, 2, 1)! - p) < 1e-9, `f⁻¹(f(${p})) ≠ ${p}`);
+  }
+  assert.equal(inv.reference!.f(1, 0, 2), null);
+  assert.match(inv.readouts(0, 2).find((r) => r.pivot)!.value, /^não/);
+});
+
+test('o sinal concorda com a fora das raízes e discorda entre elas', () => {
+  const s = FAMILIES.sinal;
+  // a > 0, raízes ±√3: positivo fora, negativo entre.
+  assert.ok(s.f(3, 1, -3)! > 0 && s.f(0, 1, -3)! < 0);
+  const leitura = Object.fromEntries(s.readouts(1, -3).map((r) => [r.label, r.value]));
+  assert.equal(leitura['fora das raízes'], 'f(x) > 0');
+  assert.equal(leitura['entre as raízes'], 'f(x) < 0');
+  assert.equal(s.readouts(-1, -3).find((r) => r.label === 'raízes')!.value, 'nenhuma real');
+});
+
+test('f(x − h) anda para a direita, e o lugar do menos decide o espelho', () => {
+  const t = FAMILIES.transformacao;
+  // Vértice de (x − 2)² em x = 2; de (−x − 2)², refletido no eixo y, em x = −2.
+  assert.equal(t.f(2, 2, 0), 0);
+  assert.equal(t.f(-2, 2, 2), 0);
+  // −f(x) inverte as saídas sem mexer nas entradas.
+  assert.equal(t.f(3, 2, 1), -t.f(3, 2, 0)!);
+  assert.equal(t.readouts(2, 2).find((r) => r.pivot)!.value, '(−2, 0)');
+});
