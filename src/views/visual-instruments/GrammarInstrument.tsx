@@ -16,10 +16,13 @@ const textStyle = { fill: 'var(--vs-ink)', fontWeight: 800 } as const;
 function NounPhraseScene({ value }: { value: number }) {
   const words = nounPhrase(value);
   const roles: Record<string, string> = { as: 'artigo', duas: 'numeral', propostas: 'núcleo', urgentes: 'adjetivo' };
-  const width = 260 / words.length;
+  // Com quatro palavras, cada caixa tinha 57 de largura e "propostas" em
+  // negrito padrão invadia a vizinha (auditoria 35).
+  const width = 290 / words.length;
+  const tam = words.length >= 4 ? 11.5 : 13;
   return <>{words.map((word, index) => {
-    const x = 30 + index * width;
-    return <g key={word}><rect x={x} y="105" width={width - 8} height="64" rx="10" fill={word === 'propostas' ? 'color-mix(in srgb,var(--vs-burgundy) 28%,var(--vs-paper))' : 'var(--vs-paper)'} stroke={word === 'propostas' ? 'var(--vs-burgundy)' : 'var(--vs-ink-muted)'} strokeWidth="2" /><text x={x + (width - 8) / 2} y="132" textAnchor="middle" style={textStyle}>{word}</text><text x={x + (width - 8) / 2} y="153" textAnchor="middle" style={{ fill: 'var(--vs-ink-muted)', fontSize: 12 }}>{roles[word]}</text><path d={`M${x + (width - 8) / 2} 169V215`} stroke="var(--vs-ink-muted)" /></g>;
+    const x = 15 + index * width;
+    return <g key={word}><rect x={x} y="105" width={width - 8} height="64" rx="10" fill={word === 'propostas' ? 'color-mix(in srgb,var(--vs-burgundy) 28%,var(--vs-paper))' : 'var(--vs-paper)'} stroke={word === 'propostas' ? 'var(--vs-burgundy)' : 'var(--vs-ink-muted)'} strokeWidth="2" /><text x={x + (width - 8) / 2} y="132" textAnchor="middle" style={{ ...textStyle, fontSize: tam }}>{word}</text><text x={x + (width - 8) / 2} y="153" textAnchor="middle" style={{ fill: 'var(--vs-ink-muted)', fontSize: 11 }}>{roles[word]}</text><path d={`M${x + (width - 8) / 2} 169V215`} stroke="var(--vs-ink-muted)" /></g>;
   })}<path d="M48 215H272" stroke="var(--vs-ink)" strokeWidth="3" /><text x="160" y="239" textAnchor="middle" style={{ fill: 'var(--vs-ink-muted)', fontSize: 12 }}>“As duas propostas urgentes”</text><text x="160" y="267" textAnchor="middle" style={textStyle}>um sintagma · um núcleo</text></>;
 }
 
@@ -31,7 +34,7 @@ function AgreementScene({ value }: { value: number }) {
 function CommaScene({ value }: { value: number }) {
   const explanatory = Boolean(value);
   const item = commaReading(explanatory);
-  return <><text x="160" y="55" textAnchor="middle" style={{...textStyle,fontSize:13}}>Os estudantes {explanatory ? ', que estudaram,' : 'que estudaram'} passaram.</text><g>{[68, 100, 132, 188, 220, 252].map((x, index) => <circle key={x} cx={x} cy="130" r="15" fill={explanatory || index < 3 ? 'var(--vs-burgundy)' : 'var(--vs-paper)'} stroke="var(--vs-ink)" strokeWidth="2" />)}</g><path d={explanatory ? 'M42 88H278V172H42Z' : 'M44 88H156V172H44Z'} fill="none" stroke="var(--vs-burgundy)" strokeWidth="3" strokeDasharray="7 5" /><text x="160" y="215" textAnchor="middle" style={textStyle}>{item.role}: {item.scope}</text><text x="160" y="251" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontSize: 13 }}>{explanatory ? 'informação acessória' : 'restrição do grupo'}</text></>;
+  return <><text x="160" y="55" textAnchor="middle" style={{...textStyle,fontSize:13}}>Os estudantes {explanatory ? ', que estudaram,' : 'que estudaram'} passaram.</text><g>{[68, 100, 132, 188, 220, 252].map((x, index) => <circle key={x} cx={x} cy="130" r="15" fill={explanatory || index < 3 ? 'var(--vs-burgundy)' : 'var(--vs-paper)'} stroke="var(--vs-ink)" strokeWidth="2" />)}</g><path d={explanatory ? 'M42 88H278V172H42Z' : 'M44 88H156V172H44Z'} fill="none" stroke="var(--vs-burgundy)" strokeWidth="3" strokeDasharray="7 5" /><text x="160" y="208" textAnchor="middle" style={textStyle}>{item.role}:</text><text x="160" y="228" textAnchor="middle" style={textStyle}>{item.scope}</text><text x="160" y="251" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontSize: 13 }}>{explanatory ? 'informação acessória' : 'restrição do grupo'}</text></>;
 }
 
 function CrasisScene({ value }: { value: number }) {
@@ -64,6 +67,14 @@ function isWideRelationId(id: GrammarInstrumentId): id is WideRelationId {
  * frases e seus dois rótulos próprios, então nenhum capítulo herda a leitura
  * de outro.
  */
+function quebrarLinha(texto: string, max: number) {
+  return texto.split(' ').reduce<string[]>((acc, w) => {
+    const u = acc[acc.length - 1];
+    if (u !== undefined && `${u} ${w}`.length <= max) acc[acc.length - 1] = `${u} ${w}`; else acc.push(w);
+    return acc;
+  }, []);
+}
+
 function WideRelationScene({ id, value }: { id: WideRelationId; value: number }) {
   const selected = Math.round(value);
   const data: Record<WideRelationId, { sentences: string[]; top: string[]; bottom: string[]; caption: string }> = {
@@ -86,24 +97,28 @@ function WideRelationScene({ id, value }: { id: WideRelationId; value: number })
   };
   const item = data[id];
   const sentence = item.sentences[selected];
-  const long = sentence.length > 34;
+  // Legenda, frase e texto da caixa direita eram uma linha só de SVG: a
+  // legenda passava dos dois lados do quadro em 13 capítulos a 390 px e o
+  // texto da caixa saía dela (auditoria 35). Agora cada um quebra na largura.
+  const frase = quebrarLinha(sentence, 38);
+  const direita = quebrarLinha(item.bottom[selected], 15);
+  const legenda = quebrarLinha(item.caption, 30);
   return <>
-    <text x="160" y={long ? 46 : 53} textAnchor="middle" style={{ ...textStyle, fontSize: long ? 12 : 13 }}>{sentence}</text>
+    {frase.map((l, k) => <text key={k} x="160" y={(frase.length > 1 ? 40 : 53) + k * 16} textAnchor="middle" style={{ ...textStyle, fontSize: 13 }}>{l}</text>)}
     <rect x="28" y="86" width="112" height="70" rx="12" fill="var(--vs-paper)" stroke={selected === 0 ? 'var(--vs-burgundy)' : 'var(--vs-ink)'} strokeWidth="3" />
     <rect x="180" y="86" width="112" height="70" rx="12" fill="var(--vs-paper)" stroke={selected === 2 ? 'var(--vs-burgundy)' : 'var(--vs-ink)'} strokeWidth="3" />
     <text x="84" y="115" textAnchor="middle" style={{ ...textStyle, fontSize: 13 }}>{item.top[selected]}</text>
     <text x="84" y="140" textAnchor="middle" style={{ fill: 'var(--vs-ink-muted)', fontSize: 11 }}>{item.top[0] === item.top[selected] ? 'caso atual' : 'categoria'}</text>
-    <text x="236" y="115" textAnchor="middle" style={{ ...textStyle, fontSize: 12 }}>{item.bottom[selected]}</text>
+    {direita.map((l, k) => <text key={k} x="236" y={121 - (direita.length - 1) * 7 + k * 15} textAnchor="middle" style={{ ...textStyle, fontSize: 12 }}>{l}</text>)}
     <path d="M141 121H179" stroke="var(--vs-burgundy)" strokeWidth="5" markerEnd="url(#grammar-arrow)" />
-    <text x="160" y="218" textAnchor="middle" style={textStyle}>{item.caption}</text>
-    <text x="160" y="248" textAnchor="middle" style={{ fill: 'var(--vs-ink-muted)', fontSize: 12 }}>{item.top[selected]} · {item.bottom[selected]}</text>
+    {legenda.map((l, k) => <text key={k} x="160" y={200 + k * 18} textAnchor="middle" style={{ ...textStyle, fontSize: 14 }}>{l}</text>)}
   </>;
 }
 
 function RelationScene({ id, value }: { id: Extract<GrammarInstrumentId, 'pronoun-reference' | 'verbal-aspect' | 'ambiguity' | 'clause-relations'>; value: number }) {
   const selected = Math.round(value);
   if (id === 'pronoun-reference') return <><text x="160" y="53" textAnchor="middle" style={{...textStyle,fontSize:13}}>o referente precisa caber no contexto</text><rect x="28" y="88" width="112" height="72" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3"/><rect x="180" y="88" width="112" height="72" rx="12" fill="var(--vs-paper)" stroke="var(--vs-burgundy)" strokeWidth="3"/><text x="84" y="124" textAnchor="middle" style={textStyle}>{selected === 1 ? 'ideia anterior' : selected === 2 ? 'Ana · Bia' : 'Marina'}</text><text x="236" y="124" textAnchor="middle" style={{...textStyle,fontSize:22}}>{selected === 1 ? 'isso' : 'ela'}</text><path d="M145 124H175" stroke="var(--vs-burgundy)" strokeWidth="5" markerEnd="url(#grammar-arrow)"/><text x="160" y="218" textAnchor="middle" style={textStyle}>{selected === 2 ? 'dois referentes possíveis' : 'retomada recuperável'}</text><text x="160" y="252" textAnchor="middle" style={{fill:'var(--vs-ink-muted)',fontSize:12}}>{selected === 2 ? 'reescreva com o nome' : 'teste: quem / o quê?'}</text></>;
-  if (id === 'verbal-aspect') return <><text x="160" y="52" textAnchor="middle" style={{...textStyle,fontSize:13}}>a forma verbal escolhe o recorte da ação</text><path d="M38 155H282" stroke="var(--vs-ink)" strokeWidth="4"/><motion.path d={`M70 155H${[145,205,255][selected]}`} stroke="var(--vs-burgundy)" strokeWidth="9" strokeLinecap="round" initial={false} animate={{ pathLength: 1 }} transition={{duration:.25}}/><circle cx={[145,205,255][selected]} cy="155" r="15" fill="var(--vs-burgundy)"/><text x="84" y="116" textAnchor="middle" style={textStyle}>estudava</text><text x="160" y="116" textAnchor="middle" style={textStyle}>está estudando</text><text x="245" y="116" textAnchor="middle" style={textStyle}>estudou</text><text x="160" y="224" textAnchor="middle" style={textStyle}>{['duração / hábito', 'processo em curso', 'evento concluído'][selected]}</text></>;
+  if (id === 'verbal-aspect') return <><text x="160" y="52" textAnchor="middle" style={{...textStyle,fontSize:13}}>a forma verbal escolhe o recorte da ação</text><path d="M38 155H282" stroke="var(--vs-ink)" strokeWidth="4"/><motion.path d={`M70 155H${[145,205,255][selected]}`} stroke="var(--vs-burgundy)" strokeWidth="9" strokeLinecap="round" initial={false} animate={{ pathLength: 1 }} transition={{duration:.25}}/><circle cx={[145,205,255][selected]} cy="155" r="15" fill="var(--vs-burgundy)"/><text x="62" y="116" textAnchor="middle" style={{...textStyle,fontSize:12.5}}>estudava</text><text x="160" y="116" textAnchor="middle" style={{...textStyle,fontSize:12.5}}>está estudando</text><text x="260" y="116" textAnchor="middle" style={{...textStyle,fontSize:12.5}}>estudou</text><text x="160" y="224" textAnchor="middle" style={textStyle}>{['duração / hábito', 'processo em curso', 'evento concluído'][selected]}</text></>;
   if (id === 'ambiguity') return <><text x="160" y="53" textAnchor="middle" style={{...textStyle,fontSize:13}}>“Vi a aluna com o telescópio.”</text><rect x="28" y="100" width="108" height="66" rx="12" fill="var(--vs-paper)" stroke={selected === 1 ? 'var(--vs-burgundy)' : 'var(--vs-ink)'} strokeWidth="3"/><rect x="184" y="100" width="108" height="66" rx="12" fill="var(--vs-paper)" stroke={selected === 2 ? 'var(--vs-burgundy)' : 'var(--vs-ink)'} strokeWidth="3"/><text x="82" y="138" textAnchor="middle" style={textStyle}>observador</text><text x="238" y="138" textAnchor="middle" style={textStyle}>aluna</text><path d={selected === 0 ? 'M112 198Q160 165 208 198M208 198Q160 230 112 198' : selected === 1 ? 'M84 168V212H160' : 'M238 168V212H160'} fill="none" stroke="var(--vs-burgundy)" strokeWidth="5"/><text x="160" y="252" textAnchor="middle" style={textStyle}>{['duas leituras em disputa', 'telescópio: observador', 'telescópio: aluna'][selected]}</text></>;
   return <><text x="160" y="55" textAnchor="middle" style={{...textStyle,fontSize:13}}>a seta muda com o conectivo</text><rect x="24" y="102" width="100" height="58" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3"/><rect x="196" y="102" width="100" height="58" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3"/><text x="74" y="136" textAnchor="middle" style={textStyle}>oração A</text><text x="246" y="136" textAnchor="middle" style={textStyle}>oração B</text><path d="M129 130H190" stroke="var(--vs-burgundy)" strokeWidth="5" markerEnd="url(#grammar-arrow)"/><text x="160" y="94" textAnchor="middle" style={{fill:'var(--vs-burgundy)',fontWeight:800}}>{['e', 'mas', 'portanto'][selected]}</text><text x="160" y="220" textAnchor="middle" style={textStyle}>{['soma', 'contraste', 'consequência'][selected]}</text><text x="160" y="248" textAnchor="middle" style={{fill:'var(--vs-ink-muted)',fontSize:12}}>não é só troca de palavra</text></>;
 }

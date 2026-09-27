@@ -8,6 +8,14 @@ import type { BoardProps } from '../visual-boards/types';
 const ink = { fontWeight: 800, fill: 'var(--vs-ink)' } as const;
 const accent = { fontWeight: 800, fill: 'var(--vs-burgundy)' } as const;
 
+function quebrarLinha(texto: string, max: number) {
+  return texto.split(' ').reduce<string[]>((acc, w) => {
+    const u = acc[acc.length - 1];
+    if (u !== undefined && `${u} ${w}`.length <= max) acc[acc.length - 1] = `${u} ${w}`; else acc.push(w);
+    return acc;
+  }, []);
+}
+
 function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: number }) {
   const state = englishInstrumentState(id, selected);
   if (id === 'poetry-reading') return <>
@@ -34,11 +42,13 @@ function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: num
   }
 
   if (id === 'modal-certainty') {
-    const positions = [75, 160, 245];
+    // Três rótulos a 85 de distância no tamanho padrão se tocavam a 390 px
+    // (auditoria 35): mais afastados e com tamanho explícito.
+    const positions = [66, 160, 254];
     return <>
-      <text x="160" y="47" textAnchor="middle" style={{...ink,fontSize:13}}>“The quake {selected === 0 ? 'may' : selected === 1 ? 'will likely' : 'will'} disrupt services.”</text><path d="M55 155H265" stroke="var(--vs-ink)" strokeWidth="8" strokeLinecap="round" />
+      <text x="160" y="47" textAnchor="middle" style={{...ink,fontSize:13}}>“The quake {selected === 0 ? 'may' : selected === 1 ? 'will likely' : 'will'} disrupt services.”</text><path d="M46 155H274" stroke="var(--vs-ink)" strokeWidth="8" strokeLinecap="round" />
       <circle cx={positions[selected]} cy="155" r="18" fill="var(--vs-burgundy)" />
-      <text x="75" y="205" textAnchor="middle" style={ink}>possível</text><text x="160" y="205" textAnchor="middle" style={ink}>esperado</text><text x="245" y="205" textAnchor="middle" style={ink}>categórico</text>
+      <text x="66" y="205" textAnchor="middle" style={{...ink,fontSize:13}}>possível</text><text x="160" y="205" textAnchor="middle" style={{...ink,fontSize:13}}>esperado</text><text x="254" y="205" textAnchor="middle" style={{...ink,fontSize:13}}>categórico</text>
       <text x="160" y="93" textAnchor="middle" style={accent}>{state.example}</text>
       <text x="160" y="255" textAnchor="middle" style={ink}>{state.reading}</text>
     </>;
@@ -99,7 +109,8 @@ function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: num
   </>;
 
   if (id === 'comparison-signals') return <>
-    <text x="160" y="38" textAnchor="middle" style={{...ink,fontSize:11.5}}>{state.example}</text>
+    {/* O exemplo numa linha só saía do quadro em "viruses" (auditoria 35). */}
+    {quebrarLinha(state.example, 44).map((l, k, all) => <text key={k} x="160" y={(all.length > 1 ? 30 : 38) + k * 15} textAnchor="middle" style={{...ink,fontSize:11.5}}>{l}</text>)}
     <rect x="35" y="90" width="98" height="75" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
     <rect x="187" y="90" width="98" height="75" rx="12" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
     <text x="84" y="133" textAnchor="middle" style={ink}>bacteria</text>
@@ -108,7 +119,7 @@ function EnglishScene({ id, selected }: { id: EnglishInstrumentId; selected: num
     {selected === 1 && <path d="M137 127H181" stroke="var(--vs-burgundy)" strokeWidth="6" />}
     {selected === 2 && <path d="M160 82V173" stroke="var(--vs-burgundy)" strokeWidth="6" strokeDasharray="4 7" />}
     <text x="160" y="205" textAnchor="middle" style={accent}>{state.label}</text>
-    <text x="160" y="235" textAnchor="middle" style={ink}>{state.reading}</text>
+    {quebrarLinha(state.reading, 34).map((l, k) => <text key={k} x="160" y={232 + k * 18} textAnchor="middle" style={ink}>{l}</text>)}
   </>;
 
   // stance-language
