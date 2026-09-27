@@ -5,32 +5,39 @@ import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
+import { CHEMISTRY_MECHANISMS } from './ChemistryMechanisms';
 
-function ChemistryDiagram({ config, value }: { config: ChemistryConfig; value: number }) {
+function ChemistryDiagram({ id, config, value }: { id: ChemistryId; config: ChemistryConfig; value: number }) {
   const reduced = useReducedMotion();
   const fraction = (value - config.min) / (config.max - config.min);
   const emphasis = 'var(--vs-burgundy)';
   const muted = 'var(--vs-ink-muted)';
   const ink = 'var(--vs-ink)';
   const transition = reduced ? { duration: 0 } : { duration: 0.38, ease: 'easeOut' as const };
+  const Mecanismo = CHEMISTRY_MECHANISMS[id];
+  if (Mecanismo) return <svg className="vs-plane" viewBox="0 0 320 270" role="img" aria-label={`${config.title}: ${config.control} ${value} ${config.unit}`}>
+    <Mecanismo value={value} t={transition} />
+  </svg>;
   return <svg className="vs-plane" viewBox="0 0 320 270" role="img" aria-label={`${config.title}: ${config.control} ${value} ${config.unit}`}>
     {config.title === 'Filtração por tamanho' && <g data-detail="filtration-apparatus">
       <path d="M68 36H252M94 36l43 75v93h46v-93l43-75" fill="none" stroke={ink} strokeWidth="4" strokeLinejoin="round" />
       <path d="M110 73h100l-18 38h-64Z" fill="var(--vs-paper)" stroke={ink} strokeWidth="3" />
       <path d="M127 111h66" stroke={emphasis} strokeWidth="5" strokeDasharray="3 4" />
       <path d="M138 204h44l-6 37h-32Z" fill="var(--vs-paper)" stroke={ink} strokeWidth="3" />
+      {/* Ao atravessar, a partícula desce para dentro da haste (x 137–183):
+          antes ela descia na mesma vertical e aparecia fora do vidro. Os nomes
+          ficam numa legenda acima da borda porque, escritos sobre as
+          partículas, "areia argila soluto" se encostavam. */}
       {[{ x: 132, r: 10, name: 'areia' }, { x: 160, r: 5, name: 'argila' }, { x: 190, r: 3, name: 'soluto' }].map(({ x, r, name }, i) => {
         const crosses = (name === 'areia' ? value > 8 : name === 'argila' ? value > 2 : true);
-        return <g key={name}><motion.circle cx={x} cy={76 + i * 8} r={r} fill={name === 'areia' ? emphasis : muted} animate={{ cy: crosses ? 181 + i * 12 : 98 + i * 4, opacity: crosses ? .8 : 1 }} transition={transition} /><text x={x} y="56" textAnchor="middle" fill={ink} fontSize="10">{name}</text></g>;
+        const fill = name === 'areia' ? emphasis : muted;
+        return <g key={name}>
+          <motion.circle r={r} fill={fill} initial={{ cx: x, cy: 76 + i * 8 }} animate={{ cx: crosses ? 148 + i * 12 : x, cy: crosses ? 181 + i * 12 : 98 + i * 4, opacity: crosses ? .8 : 1 }} transition={transition} />
+          <circle cx={84 + i * 66} cy="17" r={Math.min(r, 6)} fill={fill} /><text x={94 + i * 66} y="21" fill={ink} fontSize="11">{name}</text>
+        </g>;
       })}
       <text x="70" y="248" fill={ink} fontSize="12" fontWeight="700">resíduo</text><text x="207" y="248" fill={ink} fontSize="12" fontWeight="700">filtrado</text>
     </g>}
-    {config.diagram === 'particles' && <>
-      <motion.rect x="35" y="45" height="170" rx="12" fill="none" stroke={ink} strokeWidth="4" animate={{ width: config.title.includes('Seringa') ? 150 + 110 * fraction : 250 }} transition={transition} />
-      {Array.from({ length: 12 }, (_, i) => <motion.circle key={i} cx={74 + (i % 4) * 54} cy={78 + Math.floor(i / 4) * 52} r="7" fill={emphasis} animate={{ x: (i % 2 ? 1 : -1) * fraction * 12, y: (i % 3 - 1) * fraction * 9, opacity: config.title.includes('Da massa') ? (i < Math.ceil((value / 18) / 10 * 12) ? 1 : .16) : 1 }} transition={transition} />)}
-      <motion.path d="M0 45v170" fill="none" stroke={emphasis} strokeWidth="5" animate={{ x: config.title.includes('Seringa') ? 185 + 110 * fraction : 285 }} transition={transition} />
-      <text x="160" y="242" textAnchor="middle" fill={ink} fontSize="13">{config.title.includes('Da massa') ? 'pontos ilustram proporção de mols' : config.title.includes('Seringa') ? 'amostra fixa · expansão' : 'amostra fixa · choques mais energéticos'}</text>
-    </>}
     {config.title === 'Carbonato e acidez' && <>
       <path d="M62 203l37-110 61 27 62-27 36 110Z" fill="none" stroke={ink} strokeWidth="4" />
       <text x="160" y="172" textAnchor="middle" fill={ink} fontSize="22" fontWeight="800">CaCO₃</text>
@@ -42,13 +49,6 @@ function ChemistryDiagram({ config, value }: { config: ChemistryConfig; value: n
       <path d="M111 133h98" stroke={emphasis} strokeWidth="7" strokeDasharray="5 3" />
       {[80, 115, 155, 195, 235].map((x, i) => <motion.circle key={x} cx={x} cy={78 + (i % 2) * 20} r={i % 2 ? 5 : 11} fill={i % 2 ? muted : emphasis} animate={{ y: i % 2 ? 45 * fraction : 10 * fraction }} transition={transition} />)}
       <path d="M118 238h84" stroke={muted} strokeWidth="4" />
-    </>}
-    {config.diagram === 'equation' && <>
-      <rect x="22" y="60" width="105" height="128" rx="12" fill="none" stroke={ink} strokeWidth="3" />
-      <rect x="194" y="60" width="105" height="128" rx="12" fill="none" stroke={emphasis} strokeWidth="3" />
-      <path d="M139 123h42m-12-11 12 11-12 11" stroke={emphasis} strokeWidth="5" fill="none" />
-      {[0, 1, 2, 3].map((i) => <motion.circle key={i} cx={48 + (i % 2) * 53} cy={94 + Math.floor(i / 2) * 62} r="8" fill={muted} animate={{ opacity: fraction >= i / 4 ? 1 : .22 }} transition={transition} />)}
-      {[0, 1, 2, 3].map((i) => <motion.circle key={i} cx={218 + (i % 2) * 53} cy={94 + Math.floor(i / 2) * 62} r="8" fill={emphasis} animate={{ opacity: fraction >= i / 4 ? 1 : .22 }} transition={transition} />)}
     </>}
     {config.title === 'Grau de polimerização' && <>
       {Array.from({ length: value }, (_, i) => <g key={i}><rect x={12 + i * 296 / value} y="105" width={290 / value} height="58" rx="4" fill="none" stroke={emphasis} strokeWidth="2" /><text x={12 + (i + .5) * 296 / value} y="139" textAnchor="middle" fill={ink} fontSize={value > 8 ? 8 : 11} fontWeight="800">C₂</text></g>)}
@@ -78,15 +78,8 @@ function ChemistryDiagram({ config, value }: { config: ChemistryConfig; value: n
     {config.title === 'Escala de pKa' && <>
       <path d="M35 152h250m-8-8 8 8-8 8" stroke={ink} strokeWidth="4" fill="none" />
       {[1, 3, 5, 7].map(v => <g key={v}><path d={`M${35 + (v - 1) / 6 * 245} 143v18`} stroke={muted} strokeWidth="2" /><text x={35 + (v - 1) / 6 * 245} y="183" textAnchor="middle" fill={ink}>{v}</text></g>)}
-      <motion.circle cy="152" r="12" fill={emphasis} animate={{ cx: 35 + fraction * 245 }} transition={transition} />
+      <motion.circle cy="152" r="12" fill={emphasis} initial={{ cx: 35 + fraction * 245 }} animate={{ cx: 35 + fraction * 245 }} transition={transition} />
       <text x="160" y="75" textAnchor="middle" fill={ink} fontSize="16">menor pKa → ácido mais forte</text>
-    </>}
-    {config.diagram === 'equilibrium' && config.title !== 'Escala de pKa' && <>
-      <circle cx="80" cy="136" r="39" fill="none" stroke={ink} strokeWidth="4" />
-      <circle cx="240" cy="136" r="39" fill="none" stroke={emphasis} strokeWidth="4" />
-      <motion.path d="M126 109h70m-14-10 14 10-14 10" stroke={emphasis} strokeWidth="5" fill="none" animate={{ opacity: .35 + .65 * fraction }} transition={transition} />
-      <motion.path d="M194 160h-70m14-10-14 10 14 10" stroke={ink} strokeWidth="5" fill="none" animate={{ opacity: 1 - .65 * fraction }} transition={transition} />
-      <text x="80" y="143" textAnchor="middle" fill={ink} fontWeight="800">reagentes</text><text x="240" y="143" textAnchor="middle" fill={ink} fontWeight="800">produtos</text>
     </>}
     {config.diagram === 'energy' && <path d="M40 200l80-30 70-95 90 60" fill="none" stroke={emphasis} strokeWidth="5" />}
   </svg>;
@@ -104,7 +97,7 @@ export function chemistryInstrument(id: ChemistryId) {
       kicker="Laboratório de Química" title={config.title} subtitle={config.question}
       condition={{ label: result.label, value: result.value }} ariaLabel={`Instrumento de Química: ${props.map.title}`} emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
-        <ChemistryDiagram config={config} value={value} />
+        <ChemistryDiagram id={id} config={config} value={value} />
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <label htmlFor={`chem-${id}`}><strong>{config.control}</strong><span>{config.question}</span><b>{value} {config.unit}</b></label>
           <input id={`chem-${id}`} type="range" min={config.min} max={config.max} step={config.step} value={value} onChange={event => setValue(Number(event.target.value))} />

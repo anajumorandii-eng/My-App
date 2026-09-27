@@ -3,7 +3,7 @@ import { describe, expect, it } from 'vitest';
 import { fireEvent, render, screen } from '@testing-library/react';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import { buildVisualMap } from '../../lib/visualStudy';
-import { gasPressure, limitingProduct, weakAcidPH } from '../../lib/chemistryInstrumentLab';
+import { gasPressure, limitingProduct, weakAcidIonized, weakAcidPH } from '../../lib/chemistryInstrumentLab';
 import { findInstrument } from './registry';
 
 const ids = [
@@ -54,5 +54,47 @@ describe('instrumentos de Química', () => {
     const Component = findInstrument(chapter)!.Component;
     render(<Component map={buildVisualMap(chapter)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
     expect(document.querySelector('[data-detail="filtration-apparatus"]')).toBeInTheDocument();
+  });
+
+  it('dez capítulos que dividiam três desenhos genéricos desenham o próprio mecanismo', () => {
+    // Antes: a mesma caixa de bolinhas para gás, lei dos gases e mol; duas
+    // caixas para balanceamento, estequiometria e combustão; dois círculos
+    // para ésteres, biodiesel, quociente e ácido fraco.
+    const esperado: Record<string, string> = {
+      'summary-quimica-o-estado-gasoso': 'rigid-gas',
+      'summary-quimica-estudo-dos-gases-ii': 'gas-syringe',
+      'summary-quimica-massa-atomica-mol-e-massa-molar': 'mass-to-mole',
+      'summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes': 'balanced-molecules',
+      'summary-quimica-calculos-estequiometricos': 'limiting-reagent',
+      'summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos': 'methane-combustion',
+      'summary-quimica-acidos-graxos-e-esterificacao': 'esterification',
+      'summary-quimica-transesterificacao-alcoolise': 'transesterification',
+      'summary-quimica-deslocamento-de-equilibrio': 'reaction-quotient',
+      'summary-quimica-equilibrios-ionicos': 'weak-acid-dilution',
+    };
+    for (const [id, detalhe] of Object.entries(esperado)) {
+      const chapter = interactiveSummaries.find(s => s.id === id)!;
+      const Component = findInstrument(chapter)!.Component;
+      const view = render(<Component map={buildVisualMap(chapter)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
+      expect(document.querySelector(`[data-detail="${detalhe}"]`), id).toBeInTheDocument();
+      view.unmount();
+    }
+  });
+
+  it('o reagente limitante desenhado é o da conta', () => {
+    const chapter = interactiveSummaries.find(s => s.id === 'summary-quimica-calculos-estequiometricos')!;
+    const Component = findInstrument(chapter)!.Component;
+    render(<Component map={buildVisualMap(chapter)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '6' } });
+    expect(screen.getByText('o O₂ limita')).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '4' } });
+    expect(screen.getByText('proporção exata 2 : 1')).toBeInTheDocument();
+  });
+
+  it('diluir o ácido fraco baixa [H⁺] e sobe a fração ionizada', () => {
+    const ka = 1.8e-5;
+    const [concentrado, diluido] = [0.2, 0.01];
+    expect(weakAcidIonized(diluido, ka)).toBeLessThan(weakAcidIonized(concentrado, ka));
+    expect(weakAcidIonized(diluido, ka) / diluido).toBeGreaterThan(weakAcidIonized(concentrado, ka) / concentrado);
   });
 });

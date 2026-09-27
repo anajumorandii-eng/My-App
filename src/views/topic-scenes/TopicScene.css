@@ -76,6 +76,8 @@
 .tc-pillar { fill: color-mix(in srgb, var(--vs-blue) 12%, transparent); stroke: var(--vs-blue); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
 .tc-pillar-foco { fill: color-mix(in srgb, var(--vs-blue) 26%, transparent); stroke-width: 3; }
 .tc-label { font-family: 'Caveat', 'Kalam', 'Comic Sans MS', cursive; font-size: 18px; fill: currentColor; font-weight: 600; letter-spacing: 0.02em; }
+.tc-grade-polo { font: 600 13px/1 system-ui, sans-serif; fill: var(--vs-dim); }
+.tc-grade-nome { font: 700 11px/1 system-ui, sans-serif; fill: var(--vs-burgundy); letter-spacing: .08em; text-transform: uppercase; }
 
 .tc-choices { display: flex; flex-wrap: wrap; gap: 0.5rem; margin-top: 0.5rem; }
 .tc-choices button,

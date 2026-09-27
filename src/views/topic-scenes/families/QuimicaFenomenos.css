@@ -1,0 +1,106 @@
+/* Cenas de fenômeno químico. Só variáveis do tema: o escuro sai do mesmo
+   código, sem segunda paleta para desalinhar. */
+.qf-figure { min-width: 0; overflow-x: auto; overflow-y: hidden; margin: .5rem 0 .25rem; }
+.qf-figure:focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 2px; }
+.qf-svg { width: 100%; height: auto; display: block; overflow: visible; }
+.qf-pan-hint { display: none; }
+@media (max-width: 660px) {
+  /* .qf-scene na frente: `.tc-scene svg` (max-width 100%) vencia por especificidade. */
+  .qf-scene .qf-svg { width: 640px; max-width: none; }
+  .qf-pan-hint { display: block; margin: .3rem 0 .75rem; color: var(--vs-dim); font: 600 .75rem/1.4 system-ui, sans-serif; }
+}
+.qf-nota { margin: .5rem 0 0; color: var(--vs-dim); font: .72rem/1.35 system-ui, sans-serif; }
+
+.qf-rotulo { fill: var(--vs-dim); font: 600 11px/1 system-ui, sans-serif; }
+.qf-rotulo--forte { fill: var(--vs-ink); font-weight: 800; }
+.qf-mini { fill: var(--vs-dim); font: 500 10px/1 system-ui, sans-serif; }
+.qf-texto { fill: var(--vs-ink); font: 600 13px/1 system-ui, sans-serif; }
+.qf-texto--forte { fill: var(--vs-burgundy); font: 700 17px/1 'Kalam', 'Newsreader', Georgia, serif; }
+.qf-formula { fill: var(--vs-dim); font: 700 12px/1 ui-monospace, monospace; }
+.qf-formula--ativa { fill: var(--vs-burgundy); }
+
+.qf-celula { fill: color-mix(in srgb, var(--vs-paper-strong) 80%, var(--vs-line)); stroke: var(--vs-line); stroke-width: 1; }
+.qf-celula--acesa { fill: color-mix(in srgb, var(--vs-burgundy) 55%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 1.5; }
+.qf-nucleo { fill: var(--vs-ink); }
+.qf-camada { fill: none; stroke: var(--vs-dim); stroke-width: 1.2; stroke-dasharray: 3 3; }
+.qf-eletron { fill: var(--vs-blue); }
+.qf-eletron--novo { fill: var(--vs-burgundy); }
+.qf-trilha { fill: none; stroke: var(--vs-burgundy); stroke-width: 1.3; stroke-dasharray: 3 3; }
+
+.qf-fonte { fill: color-mix(in srgb, var(--vs-amber) 22%, var(--vs-paper-strong)); stroke: var(--vs-amber); stroke-width: 2; }
+.qf-barreira { fill: color-mix(in srgb, var(--vs-dim) 25%, var(--vs-paper-strong)); stroke: var(--vs-dim); stroke-width: 1; }
+.qf-barreira--30 { fill: color-mix(in srgb, var(--vs-ink) 45%, var(--vs-paper-strong)); }
+.qf-feixe { fill: none; stroke-width: 3; stroke-linecap: round; }
+.qf-feixe--fundo { opacity: .22; }
+.qf-feixe--alfa { stroke: var(--vs-burgundy); stroke-width: 5; }
+.qf-feixe--beta { stroke: var(--vs-blue); }
+.qf-feixe--gama { stroke: var(--vs-amber); stroke-width: 2.2; }
+.qf-particula { fill: var(--vs-ink); }
+
+.qf-recipiente { fill: color-mix(in srgb, var(--vs-paper-strong) 90%, transparent); stroke: var(--vs-dim); stroke-width: 2; }
+.qf-recipiente--ativo { stroke: var(--vs-blue); stroke-width: 3; }
+.qf-forca { stroke: var(--vs-blue); stroke-width: 2; opacity: .55; }
+.qf-molecula { fill: color-mix(in srgb, var(--vs-blue) 70%, var(--vs-paper-strong)); stroke: var(--vs-ink); stroke-width: 1; }
+
+.qf-quadro { fill: color-mix(in srgb, var(--vs-paper-strong) 88%, transparent); stroke: var(--vs-line); stroke-width: 1.2; }
+.qf-quadro--ativo { stroke: var(--vs-burgundy); stroke-width: 2.4; }
+.qf-vidro { fill: none; stroke: var(--vs-ink); stroke-width: 2; stroke-linejoin: round; }
+.qf-agua { fill: none; stroke: var(--vs-blue); stroke-width: 1.5; stroke-dasharray: 5 3; }
+.qf-ion { stroke-width: 1.5; }
+.qf-ion--cation { fill: color-mix(in srgb, var(--vs-burgundy) 22%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); }
+.qf-ion--anion { fill: color-mix(in srgb, var(--vs-blue) 22%, var(--vs-paper-strong)); stroke: var(--vs-blue); }
+.qf-ion--neutro { fill: color-mix(in srgb, var(--vs-dim) 18%, var(--vs-paper-strong)); stroke: var(--vs-dim); }
+.qf-ion--o { fill: color-mix(in srgb, var(--vs-burgundy) 35%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 2.5; }
+.qf-ion-texto { fill: var(--vs-ink); font: 700 10px/1 system-ui, sans-serif; }
+.qf-ligacao { stroke: var(--vs-ink); stroke-width: 3; }
+
+.qf-chamine { fill: none; stroke: var(--vs-ink); stroke-width: 3; stroke-linejoin: round; }
+.qf-rastro { fill: none; stroke: var(--vs-dim); stroke-width: 2; stroke-dasharray: 2 5; stroke-linecap: round; opacity: .5; }
+.qf-rastro-ativo { fill: none; stroke: var(--vs-burgundy); stroke-width: 3; stroke-linecap: round; }
+.qf-terra { fill: color-mix(in srgb, var(--vs-green) 40%, var(--vs-blue)); stroke: var(--vs-ink); stroke-width: 1; }
+.qf-calor { fill: none; stroke: var(--vs-amber); stroke-width: 2.5; stroke-linecap: round; }
+.qf-hemacia { fill: color-mix(in srgb, var(--vs-burgundy) 70%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); }
+.qf-hemacia-centro { fill: color-mix(in srgb, var(--vs-burgundy) 35%, var(--vs-paper-strong)); }
+.qf-fuligem { fill: var(--vs-ink); opacity: .75; }
+.qf-nuvem { fill: color-mix(in srgb, var(--vs-dim) 30%, var(--vs-paper-strong)); stroke: var(--vs-dim); stroke-width: 1.5; }
+.qf-gota { stroke: var(--vs-amber); stroke-width: 2.5; stroke-linecap: round; }
+
+.qf-termometro { fill: color-mix(in srgb, var(--vs-paper-strong) 80%, transparent); stroke: var(--vs-ink); stroke-width: 1.5; }
+.qf-bulbo { fill: var(--vs-blue); }
+.qf-bulbo--solucao { fill: var(--vs-burgundy); }
+.qf-marca { stroke: var(--vs-burgundy); stroke-width: 2.5; }
+.qf-vapor { fill: var(--vs-blue); opacity: .7; }
+.qf-soluto { fill: var(--vs-burgundy); }
+.qf-membrana { stroke: var(--vs-amber); stroke-width: 3; stroke-dasharray: 4 3; }
+.qf-embolo { fill: var(--vs-dim); }
+.qf-seta-forca { stroke: var(--vs-burgundy); stroke-width: 2.5; fill: none; }
+.qf-seta-bloqueada { stroke: var(--vs-blue); stroke-width: 2.5; }
+.qf-ponta { fill: var(--vs-burgundy); }
+.qf-ponta-azul { fill: var(--vs-blue); }
+.qf-bloqueio { stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linecap: round; }
+
+.qf-eixo { stroke: var(--vs-ink); stroke-width: 1.5; }
+.qf-coluna { fill: color-mix(in srgb, var(--vs-dim) 25%, var(--vs-paper-strong)); stroke: var(--vs-dim); }
+.qf-coluna--ativa { fill: color-mix(in srgb, var(--vs-burgundy) 45%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 2; }
+.qf-molecula-apolar { fill: color-mix(in srgb, var(--vs-dim) 20%, var(--vs-paper-strong)); stroke: var(--vs-dim); stroke-width: 1.5; }
+.qf-molecula-polar { fill: color-mix(in srgb, var(--vs-blue) 18%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 1.5; }
+.qf-interacao { stroke: var(--vs-burgundy); stroke-dasharray: 2 3; stroke-linecap: round; }
+.qf-interacao--1 { stroke-width: 1; opacity: .6; }
+.qf-interacao--2 { stroke-width: 2; }
+.qf-interacao--3 { stroke-width: 3.2; }
+.qf-curva { fill: none; stroke: var(--vs-dim); stroke-width: 2; }
+.qf-curva--ativa { stroke: var(--vs-burgundy); stroke-width: 3.2; }
+.qf-ponto { fill: var(--vs-burgundy); }
+.qf-dipolo { stroke: var(--vs-blue); stroke-width: 1.8; }
+.qf-dipolo--forte { stroke-width: 3; }
+.qf-dipolo--resultante { stroke: var(--vs-burgundy); stroke-width: 3.2; }
+.qf-lago { fill: color-mix(in srgb, var(--vs-blue) 16%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 1.5; }
+.qf-sol { fill: var(--vs-amber); }
+.qf-raio { stroke: var(--vs-amber); stroke-width: 2; stroke-linecap: round; }
+.qf-algas { fill: none; stroke: var(--vs-green); stroke-width: 7; stroke-linecap: round; }
+.qf-bolha { fill: none; stroke: var(--vs-blue); stroke-width: 1.8; }
+.qf-materia { fill: none; stroke: var(--vs-dim); stroke-width: 3; }
+.qf-bacteria { fill: var(--vs-amber); }
+.qf-peixe { fill: color-mix(in srgb, var(--vs-blue) 55%, var(--vs-paper-strong)); stroke: var(--vs-ink); stroke-width: 1; }
+.qf-peixe--morto { fill: color-mix(in srgb, var(--vs-dim) 45%, var(--vs-paper-strong)); }
+.qf-olho { fill: var(--vs-ink); }
