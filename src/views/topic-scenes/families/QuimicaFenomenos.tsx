@@ -283,6 +283,155 @@ function EfeitosColigativos({ ativo, t }: Cena) {
   </g>;
 }
 
+// ---------------------------------------------------------------------------
+// Interações intermoleculares: três pares de moléculas com a interação
+// desenhada, na ordem que a citação dá. Nenhum valor de ponto de ebulição —
+// a citação dá a ordem, não o número —, então as colunas são só posição.
+const INTERACOES: Record<string, { x: number; nivel: number; forca: string }> = {
+  'Forças de London': { x: 80, nivel: 1, forca: 'mais fracas' },
+  'Dipolo-dipolo': { x: 240, nivel: 2, forca: 'intermediárias' },
+  'Ligações de hidrogênio': { x: 400, nivel: 3, forca: 'mais fortes' },
+};
+
+function Interacoes({ ativo, t }: Cena) {
+  return <g>
+    {Object.entries(INTERACOES).map(([nome, it]) => {
+      const ligado = nome === ativo;
+      const { x } = it;
+      return <motion.g key={nome} initial={false} animate={FOCO(ligado)} transition={t}>
+        {nome === 'Forças de London' && <>
+          <ellipse cx={x - 30} cy="96" rx="24" ry="15" className="qf-molecula-apolar" /><ellipse cx={x + 30} cy="96" rx="24" ry="15" className="qf-molecula-apolar" />
+          <text x={x - 44} y="100" className="qf-mini">δ−</text><text x={x - 20} y="100" className="qf-mini">δ+</text>
+          <text x={x + 16} y="100" className="qf-mini">δ−</text><text x={x + 40} y="100" className="qf-mini">δ+</text>
+          <line x1={x - 4} y1="96" x2={x + 4} y2="96" className="qf-interacao qf-interacao--1" />
+          <text x={x} y="130" textAnchor="middle" className="qf-mini">dipolos momentâneos</text>
+        </>}
+        {nome === 'Dipolo-dipolo' && <>
+          {[-32, 32].map((d) => <g key={d}><rect x={x + d - 22} y="84" width="44" height="24" rx="12" className="qf-molecula-polar" />
+            <text x={x + d - 12} y="100" textAnchor="middle" className="qf-rotulo">δ+</text><text x={x + d + 12} y="100" textAnchor="middle" className="qf-rotulo">δ−</text></g>)}
+          <line x1={x - 8} y1="96" x2={x + 8} y2="96" className="qf-interacao qf-interacao--2" />
+          <text x={x} y="130" textAnchor="middle" className="qf-mini">dipolos permanentes</text>
+        </>}
+        {nome === 'Ligações de hidrogênio' && <>
+          <circle cx={x - 38} cy="96" r="13" className="qf-ion qf-ion--o" /><text x={x - 38} y="100" textAnchor="middle" className="qf-ion-texto">X</text>
+          <line x1={x - 25} y1="96" x2={x - 13} y2="96" className="qf-ligacao" />
+          <circle cx={x - 7} cy="96" r="7" className="qf-ion qf-ion--neutro" /><text x={x - 7} y="99" textAnchor="middle" className="qf-ion-texto">H</text>
+          <line x1={x + 1} y1="96" x2={x + 22} y2="96" className="qf-interacao qf-interacao--3" />
+          <circle cx={x + 36} cy="96" r="13" className="qf-ion qf-ion--o" /><text x={x + 36} y="100" textAnchor="middle" className="qf-ion-texto">X</text>
+          <text x={x} y="130" textAnchor="middle" className="qf-mini">H entre dois átomos δ−</text>
+        </>}
+        <rect x={x - 14} y={250 - it.nivel * 20} width="28" height={it.nivel * 20} rx="3" className={ligado ? 'qf-coluna qf-coluna--ativa' : 'qf-coluna'} />
+        <text x={x} y="170" textAnchor="middle" className={ligado ? 'qf-rotulo qf-rotulo--forte' : 'qf-rotulo'}>{nome}</text>
+        <text x={x} y="270" textAnchor="middle" className="qf-mini">{it.forca}</text>
+      </motion.g>;
+    })}
+    <line x1="30" y1="250" x2="450" y2="250" className="qf-eixo" />
+    <text x="240" y="292" textAnchor="middle" className="qf-mini">ponto de ebulição, em ordem (sem escala)</text>
+  </g>;
+}
+
+// ---------------------------------------------------------------------------
+// Cinética: a velocidade em função da concentração para as três ordens, com
+// as marcas do que a citação diz — dobrar a concentração mantém, dobra ou
+// quadruplica a velocidade.
+const ORDENS: Record<string, { n: number; fator: string }> = { 'Ordem zero': { n: 0, fator: '× 1' }, 'Ordem um': { n: 1, fator: '× 2' }, 'Ordem dois': { n: 2, fator: '× 4' } };
+
+function Cinetica({ ativo, t }: Cena) {
+  const px = (c: number) => 70 + c * 160;
+  const py = (v: number) => 250 - v * 50;
+  const curva = (n: number) => Array.from({ length: 41 }, (_, i) => { const c = (i / 40) * 2; return `${i ? 'L' : 'M'}${px(c).toFixed(1)} ${py(c ** n).toFixed(1)}`; }).join('');
+  const { n, fator } = ORDENS[ativo];
+  return <g>
+    <line x1="70" y1="250" x2="400" y2="250" className="qf-eixo" /><line x1="70" y1="250" x2="70" y2="36" className="qf-eixo" />
+    <text x="406" y="254" className="qf-rotulo">[reagente]</text>
+    <text x="62" y="44" textAnchor="end" className="qf-rotulo">v</text>
+    {[1, 2].map((c) => <g key={c}><line x1={px(c)} y1="246" x2={px(c)} y2="254" className="qf-eixo" /><text x={px(c)} y="270" textAnchor="middle" className="qf-mini">{c === 1 ? 'c' : '2c'}</text></g>)}
+    {Object.entries(ORDENS).map(([nome, o]) => <motion.path key={nome} d={curva(o.n)} className={nome === ativo ? 'qf-curva qf-curva--ativa' : 'qf-curva'} initial={false} animate={{ opacity: nome === ativo ? 1 : 0.25 }} transition={t} />)}
+    <motion.circle r="6" className="qf-ponto" initial={false} animate={{ cx: px(1), cy: py(1) }} transition={t} />
+    <motion.circle r="6" className="qf-ponto" initial={false} animate={{ cx: px(2), cy: py(2 ** n) }} transition={t} />
+    <motion.path className="qf-trilha" initial={false} animate={{ d: `M${px(1)} ${py(1)}L${px(2)} ${py(1)}L${px(2)} ${py(2 ** n)}` }} transition={t} />
+    <text x={px(2) + 12} y={py((1 + 2 ** n) / 2) + 4} className="qf-texto qf-texto--forte">{fator}</text>
+    <text x="240" y="292" textAnchor="middle" className="qf-mini">dobrar a concentração: a velocidade fica {n === 0 ? 'igual' : n === 1 ? 'o dobro' : 'quatro vezes maior'}</text>
+  </g>;
+}
+
+// ---------------------------------------------------------------------------
+// Polaridade: as duas condições juntas. Sem ligação polar não há dipolo; com
+// ligações polares, a geometria decide se os dipolos se somam ou se cancelam.
+// Átomos genéricos (A, X, Y): a citação trata do critério, não de uma molécula.
+function Dipolo({ x1, y1, x2, y2, forte }: { x1: number; y1: number; x2: number; y2: number; forte: boolean }) {
+  return <line x1={x1} y1={y1} x2={x2} y2={y2} className={forte ? 'qf-dipolo qf-dipolo--forte' : 'qf-dipolo'} markerEnd="url(#qf-ponta-dipolo)" />;
+}
+
+function Polaridade({ ativo }: Cena) {
+  const ligacoes = ativo === 'Ligações polares';
+  const geometria = ativo === 'Geometria molecular';
+  return <g>
+    <defs><marker id="qf-ponta-dipolo" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0L10 5L0 10Z" className="qf-ponta-azul" /></marker></defs>
+    {/* 1 — sem ligação polar */}
+    <g>
+      <line x1="58" y1="110" x2="102" y2="110" className="qf-ligacao" />
+      <circle cx="50" cy="110" r="14" className="qf-ion qf-ion--neutro" /><text x="50" y="114" textAnchor="middle" className="qf-ion-texto">A</text>
+      <circle cx="110" cy="110" r="14" className="qf-ion qf-ion--neutro" /><text x="110" y="114" textAnchor="middle" className="qf-ion-texto">A</text>
+      <text x="80" y="160" textAnchor="middle" className={ligacoes ? 'qf-rotulo qf-rotulo--forte' : 'qf-rotulo'}>ligação apolar</text>
+      <text x="80" y="176" textAnchor="middle" className="qf-mini">sem dipolo</text>
+    </g>
+    {/* 2 — polares, geometria linear: cancelam */}
+    <g>
+      <line x1="186" y1="110" x2="294" y2="110" className="qf-ligacao" />
+      <circle cx="180" cy="110" r="13" className="qf-ion qf-ion--o" /><text x="180" y="114" textAnchor="middle" className="qf-ion-texto">X</text>
+      <circle cx="240" cy="110" r="13" className="qf-ion qf-ion--neutro" /><text x="240" y="114" textAnchor="middle" className="qf-ion-texto">Y</text>
+      <circle cx="300" cy="110" r="13" className="qf-ion qf-ion--o" /><text x="300" y="114" textAnchor="middle" className="qf-ion-texto">X</text>
+      <Dipolo x1={228} y1={88} x2={196} y2={88} forte={ligacoes} /><Dipolo x1={252} y1={88} x2={284} y2={88} forte={ligacoes} />
+      <text x="240" y="150" textAnchor="middle" className={geometria ? 'qf-rotulo qf-rotulo--forte' : 'qf-rotulo'}>linear: os dipolos se cancelam</text>
+      <text x="240" y="166" textAnchor="middle" className="qf-mini">apolar, com ligações polares</text>
+    </g>
+    {/* 3 — polares, geometria angular: somam */}
+    <g>
+      <line x1="388" y1="100" x2="358" y2="136" className="qf-ligacao" /><line x1="388" y1="100" x2="418" y2="136" className="qf-ligacao" />
+      <circle cx="388" cy="96" r="13" className="qf-ion qf-ion--o" /><text x="388" y="100" textAnchor="middle" className="qf-ion-texto">X</text>
+      <circle cx="354" cy="140" r="10" className="qf-ion qf-ion--neutro" /><text x="354" y="143" textAnchor="middle" className="qf-ion-texto">Y</text>
+      <circle cx="422" cy="140" r="10" className="qf-ion qf-ion--neutro" /><text x="422" y="143" textAnchor="middle" className="qf-ion-texto">Y</text>
+      <Dipolo x1={344} y1={124} x2={364} y2={100} forte={ligacoes} /><Dipolo x1={432} y1={124} x2={412} y2={100} forte={ligacoes} />
+      {geometria && <line x1="388" y1="176" x2="388" y2="118" className="qf-dipolo qf-dipolo--resultante" markerEnd="url(#qf-ponta-dipolo)" />}
+      <text x="388" y="200" textAnchor="middle" className={geometria ? 'qf-rotulo qf-rotulo--forte' : 'qf-rotulo'}>angular: os dipolos se somam</text>
+      <text x="388" y="216" textAnchor="middle" className="qf-mini">polar</text>
+    </g>
+    <text x="240" y="264" textAnchor="middle" className="qf-texto">polar = ligação polar E dipolos que não se cancelam</text>
+  </g>;
+}
+
+// ---------------------------------------------------------------------------
+// Química ambiental: o mesmo lago em três etapas. A luz é barrada pelas algas,
+// o oxigênio dissolvido some com a decomposição, e os peixes morrem sem que
+// nada tóxico tenha sido desenhado.
+const ETAPA: Record<string, number> = { 'Excesso de nutrientes': 0, 'Decomposição bacteriana': 1, 'Mortandade por asfixia': 2 };
+
+function Peixe({ x, y, morto }: { x: number; y: number; morto: boolean }) {
+  return <g transform={`translate(${x} ${y}) ${morto ? 'rotate(180)' : ''}`}><path d="M-14 0q14-12 28 0q-14 12-28 0ZM14 0l10-7v14Z" className={morto ? 'qf-peixe qf-peixe--morto' : 'qf-peixe'} /><circle cx="-7" cy="-2" r="1.6" className="qf-olho" /></g>;
+}
+
+function QuimicaAmbiental({ ativo, t }: Cena) {
+  const e = ETAPA[ativo];
+  const oxigenio = e === 0 ? 8 : e === 1 ? 3 : 0;
+  return <g>
+    <path d="M20 90H460V270H20Z" className="qf-lago" />
+    <circle cx="410" cy="34" r="16" className="qf-sol" />
+    {[360, 395, 430].map((x) => <line key={x} x1={x + 10} y1="52" x2={x - 10} y2="84" className="qf-raio" />)}
+    <path d="M20 90q30-10 60 0t60 0t60 0t60 0t60 0t60 0t60 0" className="qf-algas" />
+    <text x="30" y="80" className="qf-rotulo qf-rotulo--forte">algas e cianobactérias: a luz não entra</text>
+    {Array.from({ length: 8 }, (_, i) => <motion.circle key={i} cx={60 + i * 48} cy={130 + (i % 3) * 22} r="5" className="qf-bolha" initial={false} animate={{ opacity: i < oxigenio ? 1 : 0.08 }} transition={t} />)}
+    <text x="440" y="120" textAnchor="end" className="qf-mini">O₂ dissolvido: {oxigenio === 8 ? 'suficiente' : oxigenio ? 'caindo' : 'insuficiente'}</text>
+    <motion.g initial={false} animate={{ opacity: e >= 1 ? 1 : 0.2 }} transition={t}>
+      {[80, 150, 230, 310, 380].map((x) => <g key={x}><path d={`M${x - 16} 262q16-14 32 0`} className="qf-materia" /><circle cx={x} cy="252" r="3" className="qf-bacteria" /><circle cx={x + 8} cy="256" r="3" className="qf-bacteria" /></g>)}
+      <text x="240" y="244" textAnchor="middle" className="qf-mini">bactérias decompõem a matéria morta e consomem o O₂</text>
+    </motion.g>
+    <Peixe x={150} y={e === 2 ? 104 : 186} morto={e === 2} />
+    <Peixe x={260} y={e === 2 ? 106 : 206} morto={e === 2} />
+    {e === 2 && <text x="240" y="160" textAnchor="middle" className="qf-texto qf-texto--forte">asfixia, sem substância tóxica</text>}
+  </g>;
+}
+
 export const QUIMICA_FENOMENO_CENAS: Record<string, { cena: React.ComponentType<Cena>; rotulos: string[]; titulo: string }> = {
   'summary-quimica-organizacao-da-tabela-periodica-dos-elementos': { cena: TabelaPeriodica, rotulos: Object.keys(COLUNA), titulo: 'famílias da tabela' },
   'summary-quimica-radioatividade-o-estudo-das-radiacoes': { cena: Radioatividade, rotulos: Object.keys(FEIXES), titulo: 'poder de penetração' },
@@ -290,6 +439,10 @@ export const QUIMICA_FENOMENO_CENAS: Record<string, { cena: React.ComponentType<
   'summary-quimica-quimica-inorganica': { cena: FuncoesInorganicas, rotulos: ['Ácidos', 'Bases', 'Sais', 'Óxidos'], titulo: 'o que define cada função' },
   'summary-quimica-combustiveis-fosseis': { cena: CombustiveisFosseis, rotulos: Object.keys(DESTINOS), titulo: 'produtos da queima' },
   'summary-quimica-efeitos-coligativos': { cena: EfeitosColigativos, rotulos: ['Tonoscopia', 'Ebulioscopia', 'Crioscopia', 'Osmometria'], titulo: 'solvente puro × solução' },
+  'summary-quimica-interacoes-intermoleculares': { cena: Interacoes, rotulos: Object.keys(INTERACOES), titulo: 'forças entre moléculas' },
+  'summary-quimica-cinetica-quimica': { cena: Cinetica, rotulos: Object.keys(ORDENS), titulo: 'ordem de reação' },
+  'summary-quimica-polaridade-das-ligacoes-e-das-moleculas': { cena: Polaridade, rotulos: ['Ligações polares', 'Geometria molecular'], titulo: 'dipolos e geometria' },
+  'summary-quimica-quimica-ambiental': { cena: QuimicaAmbiental, rotulos: Object.keys(ETAPA), titulo: 'eutrofização' },
 };
 
 export const QUIMICA_FENOMENO_IDS = new Set(Object.keys(QUIMICA_FENOMENO_CENAS));

@@ -78,3 +78,29 @@
 .qf-ponta { fill: var(--vs-burgundy); }
 .qf-ponta-azul { fill: var(--vs-blue); }
 .qf-bloqueio { stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linecap: round; }
+
+.qf-eixo { stroke: var(--vs-ink); stroke-width: 1.5; }
+.qf-coluna { fill: color-mix(in srgb, var(--vs-dim) 25%, var(--vs-paper-strong)); stroke: var(--vs-dim); }
+.qf-coluna--ativa { fill: color-mix(in srgb, var(--vs-burgundy) 45%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 2; }
+.qf-molecula-apolar { fill: color-mix(in srgb, var(--vs-dim) 20%, var(--vs-paper-strong)); stroke: var(--vs-dim); stroke-width: 1.5; }
+.qf-molecula-polar { fill: color-mix(in srgb, var(--vs-blue) 18%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 1.5; }
+.qf-interacao { stroke: var(--vs-burgundy); stroke-dasharray: 2 3; stroke-linecap: round; }
+.qf-interacao--1 { stroke-width: 1; opacity: .6; }
+.qf-interacao--2 { stroke-width: 2; }
+.qf-interacao--3 { stroke-width: 3.2; }
+.qf-curva { fill: none; stroke: var(--vs-dim); stroke-width: 2; }
+.qf-curva--ativa { stroke: var(--vs-burgundy); stroke-width: 3.2; }
+.qf-ponto { fill: var(--vs-burgundy); }
+.qf-dipolo { stroke: var(--vs-blue); stroke-width: 1.8; }
+.qf-dipolo--forte { stroke-width: 3; }
+.qf-dipolo--resultante { stroke: var(--vs-burgundy); stroke-width: 3.2; }
+.qf-lago { fill: color-mix(in srgb, var(--vs-blue) 16%, var(--vs-paper-strong)); stroke: var(--vs-blue); stroke-width: 1.5; }
+.qf-sol { fill: var(--vs-amber); }
+.qf-raio { stroke: var(--vs-amber); stroke-width: 2; stroke-linecap: round; }
+.qf-algas { fill: none; stroke: var(--vs-green); stroke-width: 7; stroke-linecap: round; }
+.qf-bolha { fill: none; stroke: var(--vs-blue); stroke-width: 1.8; }
+.qf-materia { fill: none; stroke: var(--vs-dim); stroke-width: 3; }
+.qf-bacteria { fill: var(--vs-amber); }
+.qf-peixe { fill: color-mix(in srgb, var(--vs-blue) 55%, var(--vs-paper-strong)); stroke: var(--vs-ink); stroke-width: 1; }
+.qf-peixe--morto { fill: color-mix(in srgb, var(--vs-dim) 45%, var(--vs-paper-strong)); }
+.qf-olho { fill: var(--vs-ink); }

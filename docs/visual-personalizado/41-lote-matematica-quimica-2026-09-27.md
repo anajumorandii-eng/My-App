@@ -114,10 +114,46 @@ A conferência achou dois defeitos, corrigidos:
 Na varredura final de Química (47 capítulos, 1440 claro e 390 escuro), nenhum
 achado.
 
+### Lote 5 e Química Ambiental — escala abstrata e cadeia sem desenho
+
+Quatro capítulos entram na família `QuimicaFenomenos`, com os mesmos itens e
+citações de antes:
+
+| Capítulo | Antes | Agora |
+| --- | --- | --- |
+| Interações intermoleculares | Régua com marcador subindo degraus | Os três pares de moléculas com a interação desenhada (tracejado cada vez mais forte). As colunas de ponto de ebulição mostram só a ordem, porque a citação não dá valores. |
+| Cinética química | Régua de "ordem de reação" | Velocidade × concentração para as três ordens; dobrar a concentração marca × 1, × 2 e × 4. |
+| Polaridade | Critérios em texto | Ligação apolar, dipolos que se cancelam na geometria linear e dipolos que se somam na angular, com a resultante. |
+| Química ambiental | Cadeia de caixas | O mesmo lago em três etapas: algas barram a luz, as bactérias consomem o O₂ dissolvido e os peixes morrem sem nada tóxico no desenho. |
+
+Os átomos A, X e Y são genéricos: a citação trata do critério, não de uma
+molécula. A conferência achou três colisões, todas corrigidas:
+
+- "[reagente]" encostava no "2c";
+- a legenda da molécula angular saía pela direita;
+- a coluna mais alta subia até o nome da interação.
+
+### Correção transversal encontrada de passagem
+
+A varredura de Sociologia, rodada para garantir que a nova grade de eixos não
+quebrasse os dois capítulos que a usam, achou 18 combinações com defeito. Os
+dois capítulos da grade estavam limpos; os achados vinham da
+`ContrasteDePosicoes`, família genérica, e são os dois defeitos transversais que
+a auditoria já apontava:
+
+- o retângulo animava `y` e `height` sem valor inicial, com erro de console em
+  nove capítulos;
+- os rótulos longos das posições se sobrepunham ("Relativismo metodológico" ×
+  "Relativismo moral radical").
+
+Agora o rótulo quebra em até três linhas na largura da coluna. Depois disso,
+Filosofia não tem nenhum achado, e em Sociologia restam 2, ambos do experimento
+interativo de solidariedade (`rx` sem valor inicial), que fica para o lote de
+Sociologia.
+
 ## Pendente em Química
 
-- Lote 5 — três capítulos com escala abstrata sem molécula: interações
-  intermoleculares, cinética e polaridade.
 - A mini-escala de pH da prancha de ácidos e bases, que a auditoria chamou de
   ilegível, não foi localizada nesta conferência. Falta confirmar se ela ainda
   existe.
+- Aprovação editorial de todas as cenas acima.
