@@ -3,24 +3,8 @@ import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { useNavigate, useSearchParams } from 'react-router-dom';
 import { ArrowLeft, Compass, HelpCircle, RotateCcw, Search, Undo2, Waypoints, X } from 'lucide-react';
 import { interactiveSummaries } from '../data/interactiveSummaries';
-import {
-  FisicaIcon, AtualidadesIcon, BiologiaIcon, GeografiaIcon, HistoriaIcon,
-  InglesIcon, RedacaoIcon, GramaticaIcon, LiteraturaIcon, EntendimentoIcon,
-  MatematicaIcon, QuimicaIcon, FilosofiaIcon, SociologiaIcon
-} from '../components/subject-icons/SubjectIcons';
-import { GenerativeTopicIcon } from '../components/subject-icons/GenerativeTopicIcon';
+import { useMateriaLembrada } from '../hooks/useMateriaLembrada';
 
-function SubjectIcon({ subject, ...props }: { subject: string } & React.SVGProps<SVGSVGElement>) {
-  const Icon = {
-    'Física': FisicaIcon, 'Matemática': MatematicaIcon, 'Biologia': BiologiaIcon,
-    'Química': QuimicaIcon, 'História': HistoriaIcon, 'Geografia': GeografiaIcon,
-    'Língua Inglesa': InglesIcon, 'Gramática': GramaticaIcon,
-    'Entendimento de Texto': EntendimentoIcon, 'Literatura': LiteraturaIcon,
-    'Redação': RedacaoIcon, 'Atualidades': AtualidadesIcon,
-    'Filosofia': FilosofiaIcon, 'Sociologia': SociologiaIcon
-  }[subject] ?? MatematicaIcon;
-  return <Icon {...props} />;
-}
 import { evaluateRetrievalAnswer } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
@@ -113,7 +97,7 @@ function StateBadge({ state }: { state: NodeState }) {
 
 function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
   const [query, setQuery] = useState('');
-  const [subject, setSubject] = useState('');
+  const [subject, setSubject] = useMateriaLembrada('crivo_materia_visual');
   const [limit, setLimit] = useState(60);
   const subjects = useMemo(() => [...new Set(interactiveSummaries.map((item) => item.subject))].sort(), []);
   const list = useMemo(() => {
@@ -175,11 +159,11 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
                 onClick={() => onOpen(item.id)}
                 className="w-full rounded-2xl border border-zinc-200 bg-white p-4 text-left transition hover:border-indigo-400 dark:border-zinc-800 dark:bg-zinc-900"
               >
+                  {/* O quadradinho com o ícone da matéria e o do tópico ficava em
+                      animação contínua em cada card, e a lista inteira se mexia
+                      enquanto a Ana Júlia procurava um capítulo. Saiu dos cards;
+                      o movimento continua só dentro do mapa. */}
                   <div className="flex items-start gap-4">
-                    <div className="relative shrink-0 w-12 h-12 rounded-xl bg-zinc-100/50 p-2 dark:bg-zinc-800/50">
-                      <SubjectIcon subject={item.subject} strokeWidth={1.5} className="absolute inset-2 text-zinc-400/50" />
-                      <GenerativeTopicIcon topic={item.topic} strokeWidth={1.5} className="absolute right-0 bottom-0 w-8 h-8 text-indigo-500" />
-                    </div>
                     <div>
                       <span className="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
                         {item.subject} • {item.topic}
