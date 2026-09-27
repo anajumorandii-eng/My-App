@@ -33,7 +33,9 @@ describe('instrumentos de Gramática', () => {
     const Component = grammarInstrument('comma-scope');
     render(<Component {...props('summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula')} />);
     fireEvent.change(screen.getByRole('slider'), { target: { value: '1' } });
-    expect(screen.getByText('todos os alunos')).toBeInTheDocument();
+    // O alcance aparece na leitura e, desde que a legenda quebra em duas
+    // linhas, também sozinho na cena.
+    expect(screen.getAllByText('todos os alunos').length).toBeGreaterThan(0);
     expect(screen.getAllByText('Os alunos, que estudaram, passaram.').length).toBeGreaterThan(0);
   });
   it('distingue crase de artigo feminino sem preposição', () => {

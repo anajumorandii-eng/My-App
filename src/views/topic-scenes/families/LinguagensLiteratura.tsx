@@ -52,20 +52,113 @@ function Vanguardas({ active }: { active: number }) {
   return <svg viewBox="0 0 580 190" role="img" aria-label="Cinco procedimentos visuais das vanguardas europeias" data-literature-artifact="avant-garde">{labels.map((name, i) => { const x = 24 + i * 108; return <g key={name} opacity={active === i ? 1 : .42}><rect x={x} y="24" width="92" height="128" rx="12" fill="var(--vs-paper)" stroke={active === i ? 'var(--vs-burgundy)' : 'var(--vs-ink-muted)'} strokeWidth={active === i ? 4 : 2}/>{i === 0 && <><path d={`M${x+18} 108h52l-17-32h20l-36-38`} fill="none" stroke="var(--vs-burgundy)" strokeWidth="5"/><path d={`M${x+16} 123h59`} stroke="var(--vs-ink)" strokeWidth="3"/></>}{i === 1 && <><path d={`M${x+18} 48l42-12 17 35-33 17-26-18z`} fill="color-mix(in srgb,var(--vs-burgundy) 26%,var(--vs-paper))" stroke="var(--vs-ink)" strokeWidth="3"/><path d={`M${x+18} 110l58-23M${x+44} 39v49`} stroke="var(--vs-burgundy)" strokeWidth="3"/></>}{i === 2 && <><path d={`M${x+26} 112c-12-39 15-69 42-63 22 4 17 32 1 39 22 11 5 41-13 31-13 13-26 4-30-7Z`} fill="color-mix(in srgb,var(--vs-burgundy) 35%,var(--vs-paper))" stroke="var(--vs-ink)" strokeWidth="3"/><circle cx={x+47} cy="76" r="4" style={paper}/></>}{i === 3 && <><path d={`M${x+20} 48l55 67M${x+75} 48l-55 67`} stroke="var(--vs-burgundy)" strokeWidth="6"/><text x={x+47} y="91" textAnchor="middle" style={{...ink,fontSize:27}}>?</text></>}{i === 4 && <><path d={`M${x+18} 93c21-45 40 26 58-29`} fill="none" stroke="var(--vs-burgundy)" strokeWidth="5"/><circle cx={x+68} cy="55" r="16" fill="color-mix(in srgb,var(--vs-burgundy) 26%,var(--vs-paper))" stroke="var(--vs-ink)" strokeWidth="2"/></>}<Label x={x+46} y={138} accent={active===i}>{name}</Label></g>; })}</svg>;
 }
 
-function Landscape({ active, chapterId }: { active: number; chapterId: string }) {
-  const contemporary = chapterId.includes('contemporanea');
-  return <svg viewBox="0 0 580 190" role="img" aria-label={contemporary ? 'Poema contemporâneo entre voz, rede e publicação' : 'Paisagem social e forma literária'} data-literature-artifact={contemporary ? 'contemporary-literature' : 'social-landscape'}>
-    <path d="M25 150C90 87 144 113 205 150s123 48 182-6 112-31 167 6" fill="none" stroke="var(--vs-ink)" strokeWidth="4"/>
-    {contemporary ? <><rect x="40" y="45" width="116" height="80" rx="13" style={paper} stroke="var(--vs-ink)" strokeWidth="3"/><path d="M82 105v-37m-19 37h38" stroke="var(--vs-burgundy)" strokeWidth="5"/><circle cx="82" cy="56" r="9" fill="var(--vs-burgundy)"/><rect x="232" y="32" width="100" height="122" rx="15" style={paper} stroke="var(--vs-burgundy)" strokeWidth="4"/><path d="M250 58h63M250 79h45M250 100h56M250 121h34" stroke="var(--vs-ink-muted)" strokeWidth="4"/><path d="M390 123c36-59 83-59 122 0" fill="none" stroke="var(--vs-burgundy)" strokeWidth="5"/><circle cx="450" cy="77" r="22" fill="color-mix(in srgb,var(--vs-burgundy) 20%,var(--vs-paper))" stroke="var(--vs-ink)" strokeWidth="3"/></> : <><path d="M62 135l52-84 57 84" fill="color-mix(in srgb,var(--vs-burgundy) 18%,var(--vs-paper))" stroke="var(--vs-ink)" strokeWidth="3"/><path d="M215 136h125" stroke="var(--vs-ink-muted)" strokeWidth="3"/><path d="M242 136V68h55v68" style={paper} stroke="var(--vs-ink)" strokeWidth="3"/><path d="M390 122h132" stroke="var(--vs-burgundy)" strokeWidth="5"/><path d="M406 122V88m26 34V71m26 51V92m26 30V59" stroke="var(--vs-ink)" strokeWidth="4"/></>}<circle cx={[82,282,460][active % 3]} cy="164" r="9" fill="var(--vs-burgundy)"/><Label x={290} y={181} accent>{contemporary ? 'voz · circulação · forma' : 'paisagem · conflito · linguagem'}</Label>
+// A antiga `Landscape` servia quatro capítulos com dois desenhos: montanha,
+// porta e cerca para o Romance de 30 *e* para a poesia de 1960-1980;
+// megafone e folha para a poesia *e* para a prosa contemporâneas. O
+// empréstimo que a régua proíbe (auditoria 35). Cada capítulo tem agora a
+// própria cena, tirada dos seus itens; o quadro aceso é o do item escolhido.
+const Painel = ({ x, w, ativo, titulo, children }: { x: number; w: number; ativo: boolean; titulo: string; children: React.ReactNode }) =>
+  <motion.g initial={false} animate={{ opacity: ativo ? 1 : 0.4 }}>
+    <rect x={x} y="14" width={w} height="150" rx="14" style={paper} stroke={ativo ? 'var(--vs-burgundy)' : 'var(--vs-ink-muted)'} strokeWidth={ativo ? 3.5 : 2} />
+    {children}
+    <Label x={x + w / 2} y={184} accent={ativo}>{titulo}</Label>
+  </motion.g>;
+const traco = { fill: 'none', stroke: 'var(--vs-ink)', strokeWidth: 3, strokeLinecap: 'round' as const, strokeLinejoin: 'round' as const };
+const tracoV = { ...traco, stroke: 'var(--vs-burgundy)' };
+
+function Romance30({ active }: { active: number }) {
+  return <svg viewBox="0 0 580 196" role="img" aria-label="O interior como cenário pitoresco ou como condição que determina a vida" data-literature-artifact="romance-de-30">
+    <Painel x={20} w={260} ativo={active === 0} titulo="cenário pitoresco">
+      {/* Moldura de cartão-postal: o interior visto de fora, para ser admirado. */}
+      <rect x="44" y="30" width="212" height="118" rx="4" fill="none" stroke="var(--vs-ink-muted)" strokeWidth="2" strokeDasharray="6 5" />
+      <circle cx="210" cy="60" r="16" fill="color-mix(in srgb,var(--vs-burgundy) 25%,var(--vs-paper))" stroke="var(--vs-burgundy)" strokeWidth="2.5" />
+      <path d="M60 130c30-30 60-30 90 0s60 30 90 0" {...traco} />
+      <path d="M100 130V78M100 78c-18-4-26 4-30 12M100 78c16-8 28-2 32 6M100 78c-6-14 0-20 8-24" {...traco} />
+    </Painel>
+    <Painel x={300} w={260} ativo={active === 1} titulo="condição que determina a vida">
+      <circle cx="510" cy="48" r="18" style={wine} opacity=".8" />
+      <path d="M320 132h220" {...traco} />
+      {[340, 380, 420, 460, 500].map((x) => <path key={x} d={`M${x} 132l6-10 8 6 6-8`} stroke="var(--vs-ink-muted)" strokeWidth="2" fill="none" />)}
+      {[360, 392, 420].map((x, k) => <g key={x}><circle cx={x} cy={88 + k * 2} r="7" {...traco} /><path d={`M${x} ${95 + k * 2}v18l-6 14M${x} ${113 + k * 2}l6 14`} {...traco} /></g>)}
+      <path d="M452 132V96h-8M452 104h8" {...traco} />
+      <text x={430} y={58} textAnchor="middle" style={{ ...muted, fontSize: 12, fontWeight: 700 }}>fome · exploração</text>
+    </Painel>
   </svg>;
 }
+
+function Poesia6080({ active }: { active: number }) {
+  return <svg viewBox="0 0 580 196" role="img" aria-label="Concretismo e poema-processo, a passagem de Ferreira Gullar e o lirismo do cotidiano de Adélia Prado" data-literature-artifact="poesia-60-80">
+    <Painel x={12} w={176} ativo={active === 0} titulo="concretismo · processo">
+      {['P', 'O', 'E', 'M', 'A'].map((l, k) => <text key={k} x={40 + k * 26} y={60 + (k % 2) * 30} style={{ ...ink, fontSize: 22, fontWeight: 900 }}>{l}</text>)}
+      <path d="M40 120h120M40 132h80" stroke="var(--vs-ink-muted)" strokeWidth="3" strokeDasharray="10 6" />
+    </Painel>
+    <Painel x={202} w={176} ativo={active === 1} titulo="Gullar: Poema Sujo">
+      {/* Do concretismo ao Poema Sujo, escrito no exílio: a grade vira página longa. */}
+      {[0, 1, 2].map((r) => [0, 1, 2].map((c) => <rect key={`${r}${c}`} x={220 + c * 14} y={52 + r * 14} width="10" height="10" style={muted} />))}
+      <path d="M270 74h20" {...tracoV} /><path d="M284 68l8 6-8 6" {...tracoV} />
+      <rect x="300" y="34" width="60" height="112" rx="3" style={paper} stroke="var(--vs-ink)" strokeWidth="2.5" />
+      {Array.from({ length: 8 }, (_, k) => <path key={k} d={`M308 ${48 + k * 12}h${44 - (k % 3) * 8}`} stroke="var(--vs-ink-muted)" strokeWidth="2" />)}
+    </Painel>
+    <Painel x={392} w={176} ativo={active === 2} titulo="Adélia: cotidiano e corpo">
+      <path d="M420 70h40v34a16 16 0 0 1-16 16h-8a16 16 0 0 1-16-16Z" {...traco} /><path d="M460 78c12 0 12 20 0 20" {...traco} />
+      <path d="M430 60c0-8 6-8 6-16M446 60c0-8 6-8 6-16" stroke="var(--vs-ink-muted)" strokeWidth="2" fill="none" />
+      <path d="M520 130c-18-12-24-30-12-36 6-3 12 2 12 2s6-5 12-2c12 6 6 24-12 36Z" style={{ fill: 'color-mix(in srgb,var(--vs-burgundy) 30%,var(--vs-paper))' }} stroke="var(--vs-burgundy)" strokeWidth="2.5" />
+    </Painel>
+  </svg>;
+}
+
+function PoesiaContemporanea({ active }: { active: number }) {
+  return <svg viewBox="0 0 580 196" role="img" aria-label="Poesia sem escola dominante, slam e circulação digital" data-literature-artifact="poesia-contemporanea">
+    <Painel x={12} w={176} ativo={active === 0} titulo="sem centro">
+      {/* Vozes do mesmo tamanho e nenhuma no meio: não há hierarquia. */}
+      {[[50, 50], [100, 40], [150, 56], [60, 110], [110, 118], [156, 104]].map(([x, y], k) => <circle key={k} cx={x} cy={y} r="14" fill="none" stroke="var(--vs-ink)" strokeWidth="2.5" />)}
+      <circle cx="100" cy="80" r="8" fill="none" stroke="var(--vs-ink-muted)" strokeWidth="2" strokeDasharray="3 3" />
+    </Painel>
+    <Painel x={202} w={176} ativo={active === 1} titulo="slam: dito em voz alta">
+      <rect x="276" y="40" width="28" height="44" rx="14" {...traco} /><path d="M268 70c0 20 44 20 44 0M290 90v20M278 110h24" {...traco} />
+      {[230, 350].map((x) => <path key={x} d={`M${x} 60c${x < 290 ? '-10 10 -10 30 0 40' : '10 10 10 30 0 40'}`} {...tracoV} />)}
+      {[232, 262, 318, 348].map((x) => <circle key={x} cx={x} cy={140} r="7" style={muted} />)}
+    </Painel>
+    <Painel x={392} w={176} ativo={active === 2} titulo="sem intermediário">
+      <rect x="420" y="34" width="46" height="84" rx="8" {...traco} /><path d="M432 50h22M432 62h22M432 74h14" stroke="var(--vs-ink-muted)" strokeWidth="2" />
+      <path d="M470 76h40" {...tracoV} /><path d="M502 68l10 8-10 8" {...tracoV} />
+      <rect x="500" y="108" width="50" height="30" rx="4" fill="none" stroke="var(--vs-ink-muted)" strokeWidth="2" strokeDasharray="4 3" />
+      <path d="M498 106l54 34" stroke="var(--vs-burgundy)" strokeWidth="2.5" />
+      <text x={525} y={154} textAnchor="middle" style={{ ...muted, fontSize: 11, fontWeight: 700 }}>editora</text>
+    </Painel>
+  </svg>;
+}
+
+function ProsaContemporanea({ active }: { active: number }) {
+  return <svg viewBox="0 0 580 196" role="img" aria-label="Realismo, autoficção e fragmentação; hibridação com jornalismo e ensaio; linguagens digitais" data-literature-artifact="prosa-contemporanea">
+    <Painel x={12} w={176} ativo={active === 0} titulo="fragmento e autoficção">
+      {[[36, 36, 50, 34], [96, 44, 56, 28], [44, 82, 40, 40], [98, 84, 62, 36]].map(([x, y, w, h], k) => <rect key={k} x={x} y={y} width={w} height={h} rx="3" style={paper} stroke="var(--vs-ink)" strokeWidth="2.5" transform={`rotate(${[-4, 3, 5, -3][k]} ${x + w / 2} ${y + h / 2})`} />)}
+      <text x={100} y={146} textAnchor="middle" style={{ ...wine, fontSize: 14, fontWeight: 900 }}>“eu”</text>
+    </Painel>
+    <Painel x={202} w={176} ativo={active === 1} titulo="jornalismo + ensaio">
+      <rect x="220" y="36" width="70" height="96" rx="3" style={paper} stroke="var(--vs-ink)" strokeWidth="2.5" /><path d="M228 48h54" stroke="var(--vs-ink)" strokeWidth="6" />
+      {[0, 1, 2, 3, 4].map((k) => <path key={k} d={`M228 ${64 + k * 12}h24M258 ${64 + k * 12}h24`} stroke="var(--vs-ink-muted)" strokeWidth="2" />)}
+      <rect x="290" y="36" width="70" height="96" rx="3" style={{ fill: 'color-mix(in srgb,var(--vs-burgundy) 12%,var(--vs-paper))' }} stroke="var(--vs-burgundy)" strokeWidth="2.5" />
+      {[0, 1, 2, 3, 4, 5].map((k) => <path key={k} d={`M298 ${50 + k * 12}h${50 - (k % 2) * 10}`} stroke="var(--vs-ink-muted)" strokeWidth="2" />)}
+    </Painel>
+    <Painel x={392} w={176} ativo={active === 2} titulo="linguagens digitais">
+      <path d="M414 44h70a8 8 0 0 1 8 8v16a8 8 0 0 1-8 8h-50l-12 10V76h-8a8 8 0 0 1-8-8V52a8 8 0 0 1 8-8Z" {...traco} />
+      <path d="M548 94h-70a8 8 0 0 0-8 8v16a8 8 0 0 0 8 8h50l12 10v-10h8a8 8 0 0 0 8-8v-16a8 8 0 0 0-8-8Z" {...tracoV} />
+      <path d="M428 60h46M490 110h40" stroke="var(--vs-ink-muted)" strokeWidth="2" />
+    </Painel>
+  </svg>;
+}
+
 
 function Art({ entry, active }: { entry: SceneEntry; active: number }) {
   if (entry.chapterId.includes('romantica-prosa')) return <RomanticProse active={active}/>;
   if (entry.chapterId.includes('fernando-pessoa')) return <Pessoa active={active}/>;
   if (entry.chapterId.includes('trovadorismo')) return <Trovadorismo active={active}/>;
   if (entry.chapterId.includes('vanguardas')) return <Vanguardas active={active}/>;
-  return <Landscape active={active} chapterId={entry.chapterId}/>;
+  if (entry.chapterId.includes('segunda-geracao-modernista-prosa')) return <Romance30 active={active}/>;
+  if (entry.chapterId.includes('1960-1980')) return <Poesia6080 active={active}/>;
+  if (entry.chapterId.includes('poesia-brasileira-contemporanea')) return <PoesiaContemporanea active={active}/>;
+  return <ProsaContemporanea active={active}/>;
 }
 
 export function LinguagensLiteratura({ entry }: { entry: SceneEntry }) {

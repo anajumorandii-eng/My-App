@@ -16,13 +16,47 @@ import './LiteraryAuthorInstrument.css';
  * marca essa diferença de leitura, e cada fileira cabe um rótulo mais longo
  * do que um cartão de eixo horizontal permitiria.
  */
-const ROW_ICON: Record<'Trajetória' | 'Técnica' | 'Obras', string> = {
-  // Uma seta de trajetória, uma engrenagem simplificada (técnica) e um livro
-  // aberto (obras) — motivos neutros, não uma cena que pertença a um autor
-  // específico, para não repetir texto já dado pelo rótulo ao lado.
-  Trajetória: 'M6 18L16 8M16 8H8M16 8V16',
-  Técnica: 'M12 4V7M12 17V20M4 12H7M17 12H20M6.5 6.5L8.6 8.6M15.4 15.4L17.5 17.5M6.5 17.5L8.6 15.4M15.4 8.6L17.5 6.5M12 8.5A3.5 3.5 0 1 0 12 15.5A3.5 3.5 0 1 0 12 8.5Z',
-  Obras: 'M4 6C4 5 5 4.5 8 4.5C10.5 4.5 12 5.5 12 5.5C12 5.5 13.5 4.5 16 4.5C19 4.5 20 5 20 6V17C20 16 19 15.5 16 15.5C13.5 15.5 12 16.5 12 16.5C12 16.5 10.5 15.5 8 15.5C5 15.5 4 16 4 17V6Z M12 5.5V16.5',
+// Auditoria 35: a ficha de Clarice e a de Machado eram visualmente idênticas
+// — seta, engrenagem e livro para qualquer autor. Cada fileira ganha agora o
+// emblema da própria nota do lab: a virada de 1881 de Machado, a pedra no
+// meio do caminho de Drummond, as sete sílabas da redondilha de João Cabral,
+// a estrela de Macabéa. O desenho não diz nada que a nota não diga.
+const f = { fill: 'none' } as const;
+const cheio = { fill: 'currentColor', fillOpacity: 0.25 } as const;
+const txt = (x: number, y: number, t: string, size = 9) => <text x={x} y={y} textAnchor="middle" fontSize={size} fontWeight="800" fill="currentColor" stroke="none">{t}</text>;
+const AUTHOR_ICONS: Record<LiteraryAuthorId, [React.ReactNode, React.ReactNode, React.ReactNode]> = {
+  'machado-de-assis': [
+    <><rect x="-20" y="-10" width="18" height="20" rx="2" {...f} /><rect x="2" y="-10" width="18" height="20" rx="2" {...cheio} />{txt(0, 22, '1881')}</>,
+    <><path d="M-18-14h36v22H-4l-8 8v-8h-6Z" {...f} />{txt(0, 2, '?', 14)}</>,
+    <><circle r="16" {...f} /><circle cx="-6" cy="-4" r="2" {...cheio} /><circle cx="6" cy="-4" r="2" {...cheio} /><path d="M-7 6c5 3 10 1 13-4" {...f} /></>,
+  ],
+  'graciliano-ramos': [
+    <path d="M-18-8h14M-18 0h10M-18 8h16M4-8h14M4 0h8" {...f} />,
+    <><circle cx="10" cy="-6" r="5" {...f} /><path d="M10-1v12M4 4h12" {...f} /><path d="M-20-16h14v10h-6l-4 4v-4h-4Z" {...f} /><path d="M-6-6L4-4" {...f} strokeDasharray="2 3" /></>,
+    <><path d="M-18 6l10-10 10 10v12h-20Z" {...f} /><path d="M6 18V6M12 18V6M18 18V6M4 10h16" {...f} /></>,
+  ],
+  'carlos-drummond': [
+    <path d="M-20 14h12v-10h12v-10h12v-10" {...f} />,
+    <><path d="M-18-10h36M-18-2h36M-18 6h36M-18 14h36" {...f} /><path d="M-18-10h10M-18 6h10" strokeWidth="4" {...f} /></>,
+    // "No meio do caminho tinha uma pedra".
+    <><path d="M-22 14C-8 6 8 6 22 14" {...f} /><path d="M-6 8c0-8 4-12 8-12s6 6 6 12Z" {...cheio} /></>,
+  ],
+  'joao-cabral': [
+    <><path d="M-18 16L-18-16 14 16Z" {...f} /><path d="M-12 10L-12-2 0 10Z" {...f} /></>,
+    <>{Array.from({ length: 7 }, (_, k) => <circle key={k} cx={-18 + k * 6} cy="0" r="2.4" {...cheio} />)}{txt(0, 16, '7 sílabas')}</>,
+    <><path d="M-22 6c6-6 12 6 18 0s12-6 18 0 8 4 8 4" {...f} /><path d="M-4-6c0-8 4-10 8-10s6 4 6 10Z" {...cheio} /></>,
+  ],
+  'clarice-lispector': [
+    <><path d="M-16 0c8-10 24-10 32 0" {...f} /><path d="M-16 0c8 6 24 6 32 0" {...f} />{[-40, -90, -140].map((a) => <path key={a} d={`M${(14 * Math.cos((a * Math.PI) / 180)).toFixed(1)} ${(-6 + 14 * Math.sin((a * Math.PI) / 180)).toFixed(1)}l${(5 * Math.cos((a * Math.PI) / 180)).toFixed(1)} ${(5 * Math.sin((a * Math.PI) / 180)).toFixed(1)}`} {...f} />)}</>,
+    <><path d="M-20-6h10M-6-6h6M6-2h14M-20 6h8M-6 8h4" {...f} />{txt(12, 12, '?', 13)}</>,
+    // A Hora da Estrela.
+    <path d="M0-16l4 10h11l-9 7 3 11-9-7-9 7 3-11-9-7h11Z" {...cheio} />,
+  ],
+  'guimaraes-rosa': [
+    <><rect x="-20" y="-8" width="16" height="16" rx="2" {...f} /><rect x="4" y="-8" width="16" height="16" rx="2" {...cheio} /><path d="M-4 0h8" {...f} />{txt(0, 20, 'neologismo', 8)}</>,
+    <><circle cx="-10" cy="-6" r="5" {...f} /><path d="M-10-1v14M-16 4h12" {...f} /><circle cx="12" cy="-6" r="5" {...f} strokeDasharray="2 2" /><path d="M12-1v14M6 4h12" {...f} strokeDasharray="2 2" /></>,
+    <><path d="M-20 16C-10 10-14 0-4-2s10-10 22-16" {...f} /><path d="M-22 4c10 2 20 8 26 16" {...f} strokeDasharray="3 3" /></>,
+  ],
 };
 
 function AuthorScene({ id, index }: { id: LiteraryAuthorId; index: number }) {
@@ -36,11 +70,12 @@ function AuthorScene({ id, index }: { id: LiteraryAuthorId; index: number }) {
       const active = itemIndex === index;
       return <motion.g key={item.label} initial={false} animate={{ opacity: active ? 1 : .6, scale: active ? 1.02 : 1 }} transition={{ duration: reduced ? 0 : .25 }} style={{ transformOrigin: `170px ${y + 37}px` }}>
         <rect x="22" y={y} width="296" height="70" rx="10" fill={active ? 'color-mix(in srgb,var(--vs-burgundy) 20%,var(--vs-paper))' : 'var(--vs-paper)'} stroke={active ? 'var(--vs-burgundy)' : 'var(--vs-dim)'} strokeWidth="3" />
-        <g transform={`translate(38, ${y + 25})`} stroke={active ? 'var(--vs-burgundy)' : 'var(--vs-dim)'} strokeWidth="1.8" fill="none" strokeLinecap="round" strokeLinejoin="round">
-          <path d={ROW_ICON[item.label]} />
+        <g transform={`translate(54, ${y + 35})`} stroke={active ? 'var(--vs-burgundy)' : 'var(--vs-dim)'} strokeWidth="2.2" fill="none" strokeLinecap="round" strokeLinejoin="round" style={{ color: active ? 'var(--vs-burgundy)' : 'var(--vs-dim)' }}>
+          {AUTHOR_ICONS[id][itemIndex]}
         </g>
-        <text x="70" y={y + 26} fill="var(--vs-ink)" fontSize="13" fontWeight="800">{item.label}</text>
-        <text x="70" y={y + 44} fill="var(--vs-dim)" fontSize="10">{item.note}</text>
+        {/* A nota tinha 10 de fonte, ~10,6 px efetivos no celular (auditoria 35). */}
+        <text x="90" y={y + 30} fill="var(--vs-ink)" fontSize="15" fontWeight="800">{item.label}</text>
+        <text x="90" y={y + 50} fill="var(--vs-dim)" fontSize="13">{item.note}</text>
       </motion.g>;
     })}
   </svg>;

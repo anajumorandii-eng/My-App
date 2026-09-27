@@ -1,4 +1,4 @@
-import React, { useId, useState } from 'react';
+import React, { useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { LITERARY_TRAITS, type LiteraryTraitId } from '../../lib/literaryTraitLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
@@ -6,6 +6,7 @@ import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import './LiteraryTraitInstrument.css';
+import { LITERARY_FACET_ICONS } from './LiteraryFacetIcons';
 
 /**
  * Três facetas em cartões ao longo de um eixo — mesmo esquema de
@@ -30,36 +31,34 @@ function wrapText(text: string, maxCharsPerLine = 17): [string, string] {
   return [first || words[0], words.slice(first ? i : 1).join(' ')];
 }
 
+// Cada faceta tem desenho próprio (LiteraryFacetIcons). O texto subiu de 9,5
+// para 13,5: no quadro de 460 exibido em ~360 px, a nota caía para ~7 px
+// efetivos (auditoria 35).
 function TraitScene({ id, index }: { id: LiteraryTraitId; index: number }) {
   const config = LITERARY_TRAITS[id];
   const reduced = useReducedMotion();
-  const marker = useId().replace(/:/g, '');
-  const positions = [95, 230, 365] as const;
+  const icones = LITERARY_FACET_ICONS[id];
+  const positions = [80, 230, 380] as const;
   return <svg className="vs-plane" viewBox="0 0 460 280" role="img" aria-label={`${config.title}: ${config.cases[index].label} em foco`} data-literary-trait={id}>
-    <defs><marker id={marker} markerWidth="7" markerHeight="7" refX="6" refY="3.5" orient="auto"><path d="M0 0L7 3.5 0 7Z" fill="var(--vs-dim)" /></marker></defs>
-    <path d="M55 200H405" stroke="var(--vs-line)" strokeWidth="3" />
-    <path d="M55 200H385" stroke="var(--vs-dim)" strokeWidth="2" markerEnd={`url(#${marker})`} />
     {config.cases.map((item, itemIndex) => {
       const x = positions[itemIndex];
       const active = itemIndex === index;
-      const [labelLine1, labelLine2] = wrapText(item.label);
-      const [noteLine1, noteLine2] = wrapText(item.note);
-      return <motion.g key={item.label} initial={false} animate={{ scale: active ? 1.05 : 1, opacity: active ? 1 : .6 }} transition={{ duration: reduced ? 0 : .25 }} style={{ transformOrigin: `${x}px 200px` }}>
-        <line x1={x} y1="200" x2={x} y2="163" stroke={active ? 'var(--vs-burgundy)' : 'var(--vs-dim)'} strokeWidth="4" />
-        <rect x={x - 65} y="40" width="130" height="123" rx="9" fill={active ? 'color-mix(in srgb,var(--vs-burgundy) 22%,var(--vs-paper))' : 'var(--vs-paper)'} stroke={active ? 'var(--vs-burgundy)' : 'var(--vs-dim)'} strokeWidth="3" />
-        <text x={x} y="66" textAnchor="middle" fill="var(--vs-ink)" fontSize="11.5" fontWeight="800">{labelLine1}</text>
-        {labelLine2 && <text x={x} y="80" textAnchor="middle" fill="var(--vs-ink)" fontSize="11.5" fontWeight="800">{labelLine2}</text>}
-        <line x1={x - 40} y1="92" x2={x + 40} y2="92" stroke="var(--vs-line)" strokeWidth="1.5" />
-        <text x={x} y="112" textAnchor="middle" fill="var(--vs-dim)" fontSize="9.5">{noteLine1}</text>
-        {noteLine2 && <text x={x} y="126" textAnchor="middle" fill="var(--vs-dim)" fontSize="9.5">{noteLine2}</text>}
-        <circle cx={x} cy="200" r="7" fill={active ? 'var(--vs-burgundy)' : 'var(--vs-paper)'} stroke={active ? 'var(--vs-burgundy)' : 'var(--vs-ink)'} strokeWidth="3" />
+      const [labelLine1, labelLine2] = wrapText(item.label, 16);
+      const [noteLine1, noteLine2] = wrapText(item.note, 19);
+      const cor = active ? 'var(--vs-burgundy)' : 'var(--vs-dim)';
+      return <motion.g key={item.label} initial={false} animate={{ opacity: active ? 1 : .55 }} transition={{ duration: reduced ? 0 : .25 }}>
+        <rect x={x - 66} y="24" width="132" height="120" rx="12" fill={active ? 'color-mix(in srgb,var(--vs-burgundy) 12%,var(--vs-paper))' : 'var(--vs-paper)'} stroke={cor} strokeWidth={active ? 3 : 1.5} />
+        <g transform={`translate(${x} 84)`} stroke={cor} strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round" style={{ color: cor }}>{icones[itemIndex]}</g>
+        <text x={x} y="170" textAnchor="middle" fill="var(--vs-ink)" fontSize="14" fontWeight="800">{labelLine1}</text>
+        {labelLine2 && <text x={x} y="187" textAnchor="middle" fill="var(--vs-ink)" fontSize="14" fontWeight="800">{labelLine2}</text>}
+        <text x={x} y={labelLine2 ? 212 : 196} textAnchor="middle" fill="var(--vs-dim)" fontSize="13">{noteLine1}</text>
+        {noteLine2 && <text x={x} y={labelLine2 ? 228 : 212} textAnchor="middle" fill="var(--vs-dim)" fontSize="13">{noteLine2}</text>}
       </motion.g>;
     })}
     {/* `config.relation` já aparece por extenso no painel de equação abaixo do
         `BoardShell`; imprimi-la aqui também vazaria (mesmo problema já
-        registrado em `HistoryPhaseInstrument.tsx`), então a cena mostra só o
-        rótulo curto do caso selecionado. */}
-    <text x="230" y="260" textAnchor="middle" fill="var(--vs-dim)" fontSize="11">{config.cases[index].label}</text>
+        registrado em `HistoryPhaseInstrument.tsx`). */}
+    <text x="230" y="264" textAnchor="middle" fill="var(--vs-burgundy)" fontSize="14" fontWeight="800">{config.cases[index].label}</text>
   </svg>;
 }
 
