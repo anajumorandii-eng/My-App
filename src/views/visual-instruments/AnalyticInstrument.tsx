@@ -4,7 +4,7 @@ import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from '../visual-boards/types';
 import {
-  CONFIGS, escreverReta, num, projecaoNaReta,
+  CONFIGS, baricentro, escreverReta, num, pontoMedio, projecaoNaReta,
   type AnalyticConfig, type ConfigId, type Ponto, type Reta,
 } from '../../lib/analyticPlane';
 
@@ -140,11 +140,48 @@ function PlanoAnalitico({
         <path className="vs-analytic-drop" d={`M${ox} ${oy} L${tx(ponto.x)} ${ty(ponto.y)}`} />
       )}
 
+      {config.triangulo && config.fixo && (
+        <polygon
+          className="vs-analytic-triangle"
+          points={[config.fixo, ...(config.outros ?? []).map((o) => o.p), ponto].map((q) => `${tx(q.x)},${ty(q.y)}`).join(' ')}
+        />
+      )}
+
+      {config.medianas && config.fixo && config.outros?.[0] && (() => {
+        const vs = [config.fixo, config.outros[0].p, ponto];
+        const g = baricentro(vs[0], vs[1], vs[2]);
+        return (
+          <g className="vs-analytic-medians">
+            {vs.map((v, i) => {
+              const m = pontoMedio(vs[(i + 1) % 3], vs[(i + 2) % 3]);
+              return (
+                <g key={i}>
+                  <path d={`M${tx(v.x)} ${ty(v.y)} L${tx(m.x)} ${ty(m.y)}`} />
+                  <circle className="vs-analytic-midpoint" cx={tx(m.x)} cy={ty(m.y)} r="3" />
+                </g>
+              );
+            })}
+            <circle className="vs-analytic-centroid" cx={tx(g.x)} cy={ty(g.y)} r="4.5" />
+          </g>
+        );
+      })()}
+
+      {config.outros?.map((o) => (
+        <g className="vs-analytic-fixed" key={o.rotulo}>
+          <circle cx={tx(o.p.x)} cy={ty(o.p.y)} r="5" />
+          <text x={tx(o.p.x) + (o.p.x >= 0 ? 10 : -10)} y={ty(o.p.y) + 4} textAnchor={o.p.x >= 0 ? 'start' : 'end'}>{o.rotulo}</text>
+        </g>
+      ))}
+
       {config.fixo && (
         <g className="vs-analytic-fixed">
           <circle cx={tx(config.fixo.x)} cy={ty(config.fixo.y)} r="5" />
           <text x={tx(config.fixo.x) - 10} y={ty(config.fixo.y) + 4} textAnchor="end">A</text>
-          <path className="vs-analytic-segment" d={`M${tx(config.fixo.x)} ${ty(config.fixo.y)} L${tx(ponto.x)} ${ty(ponto.y)}`} />
+          {/* No triângulo com medianas nenhum lado é especial; destacar AC em
+              vinho sugeria que era. */}
+          {!config.medianas && (
+            <path className="vs-analytic-segment" d={`M${tx(config.fixo.x)} ${ty(config.fixo.y)} L${tx(ponto.x)} ${ty(ponto.y)}`} />
+          )}
         </g>
       )}
 

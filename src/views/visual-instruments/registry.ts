@@ -208,8 +208,8 @@ export const INSTRUMENTS: InstrumentEntry[] = [
 
   // Geometria analítica: aqui a manipulação é arrastar um ponto, não mover um
   // parâmetro — a diferença sai do conteúdo, não de preferência de interface.
-  analitico('geometria-analitica', ['introdução à geometria analítica'], 'dois-pontos'),
-  analitico('ponto-medio', ['ponto médio'], 'dois-pontos'),
+  analitico('geometria-analitica', ['introdução à geometria analítica'], 'alinhamento'),
+  analitico('ponto-medio', ['ponto médio'], 'baricentro'),
   analitico('reta-analitica', ['estudo analítico da reta'], 'dois-pontos'),
   analitico('distancia-ponto-reta', ['distância entre um ponto e uma reta'], 'ponto-reta'),
   analitico('circunferencia', ['equação da circunferência'], 'circunferencia'),

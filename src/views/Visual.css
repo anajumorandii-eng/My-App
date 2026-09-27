@@ -1807,6 +1807,10 @@
   stroke-dasharray: 5 4;
 }
 .vs-analytic-segment { fill: none; stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-analytic-triangle { fill: color-mix(in srgb, var(--vs-blue) 12%, transparent); stroke: var(--vs-blue); stroke-width: 1.2; }
+.vs-analytic-medians path { stroke: var(--vs-amber); stroke-width: 1.3; stroke-dasharray: 4 3; fill: none; }
+.vs-analytic-midpoint { fill: var(--vs-amber); }
+.vs-analytic-centroid { fill: var(--vs-burgundy); stroke: var(--vs-paper-strong); stroke-width: 1.5; }
 .vs-analytic-fixed circle { fill: var(--vs-dim); }
 .vs-analytic-fixed text,
 .vs-analytic-point text {
