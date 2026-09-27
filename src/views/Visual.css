@@ -2185,3 +2185,59 @@
   .vs-inspector-shell { bottom: calc(100px + env(safe-area-inset-bottom)); width: calc(100vw - 16px); }
   .vs-inspector { max-height: min(52dvh, 440px); }
 }
+
+/* -------------------------------------------------------------------------
+   Composição com a cena como protagonista (27/09/2026)
+
+   A referência aprovada põe a figura no centro e grande, com os blocos de
+   conteúdo ao redor. A grade antiga fazia o contrário: três colunas com a cena
+   espremida entre os dois cartões. No iPad a prancha tinha ~790 px, e o
+   instrumento ficava numa faixa de 280 px, com o desenho de 320 × 300
+   encolhido e muito papel vazio em volta. A Ana Júlia viu isso e achou feio.
+
+   Acima de 620 px a cena ocupa a primeira linha inteira, e os dois cartões
+   ficam lado a lado embaixo. No instrumento, o desenho vai à esquerda e
+   controles e leituras à direita. Abaixo de 620 px nada muda: o celular já
+   empilhava tudo.
+   ------------------------------------------------------------------------- */
+@media (min-width: 621px) {
+  .vs-board-body {
+    grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+    grid-template-areas: "cena cena" "esq dir";
+    align-items: stretch;
+    gap: 20px;
+  }
+  .vs-board-body > .vs-piston-wrap { grid-area: cena; min-height: 0; }
+  .vs-board-body > .vs-concept-card--expansion { grid-area: esq; }
+  .vs-board-body > .vs-concept-card--compression { grid-area: dir; grid-column: auto; }
+  .vs-board-body .vs-piston { width: min(100%, 560px); }
+
+  .vs-instrument {
+    width: 100%;
+    display: grid;
+    grid-template-columns: minmax(0, 1.4fr) minmax(220px, 1fr);
+    column-gap: 22px;
+    row-gap: 12px;
+    align-items: start;
+  }
+  .vs-instrument > .vs-plane { grid-column: 1; grid-row: 1 / span 6; }
+  .vs-instrument > :not(.vs-plane) { grid-column: 2; }
+}
+
+/* Kit de ilustração dos instrumentos (illustrationKit.tsx). A anotação usa a
+   Kalam da referência aprovada; o marca-texto é amarelo no papel e âmbar
+   apagado na lousa, onde o amarelo claro estourava atrás do texto claro. */
+.crivo-visual { --vs-marker: #f3d774; --vs-shadow: rgba(40, 30, 20, .16); --vs-kit-acc: var(--vs-burgundy); }
+/* O vinho do papel (#852636) some na lousa: nota e resultado ficavam no
+   limite da leitura no iPad escuro. Na lousa o destaque clareia. */
+.dark .crivo-visual { --vs-marker: #6e5520; --vs-shadow: rgba(0, 0, 0, .3); --vs-kit-acc: #ec8fa2; }
+.vs-kit-marca { fill: var(--vs-marker); opacity: .75; }
+.dark .vs-kit-marca { opacity: .6; }
+.vs-kit-sombra { fill: var(--vs-shadow); }
+.vs-kit-nota path { fill: none; stroke-width: 1.6; stroke-linecap: round; stroke-linejoin: round; }
+.vs-kit-nota text { font-family: "Kalam", "Newsreader", Georgia, serif; font-weight: 700; stroke: none; }
+.vs-kit-nota--acc path { stroke: var(--vs-kit-acc); } .vs-kit-nota--acc text { fill: var(--vs-kit-acc); }
+.vs-kit-nota--azul path { stroke: var(--vs-blue); } .vs-kit-nota--azul text { fill: var(--vs-blue); }
+.vs-kit-nota--ambar path { stroke: var(--vs-amber); } .vs-kit-nota--ambar text { fill: var(--vs-amber); }
+.vs-kit-nota--verde path { stroke: var(--vs-green); } .vs-kit-nota--verde text { fill: var(--vs-green); }
+.vs-kit-nota--tinta path { stroke: var(--vs-ink); } .vs-kit-nota--tinta text { fill: var(--vs-ink); }

@@ -4,6 +4,7 @@ import type { DynamicsId } from '../../lib/dynamicsLab';
 import type { VectorId } from '../../lib/vectorsLab';
 import type { OrbitalId } from '../../lib/orbitalLab';
 import type { EnergyId } from '../../lib/energyLab';
+import { Marca, Nota, Rotulo as RotuloKit, useKit } from './illustrationKit';
 
 // Auditoria 37: dinâmica, vetores, órbitas e energia desenhavam uma cena só
 // por instrumento — uma caixa com três setas, um triângulo, um círculo dentro
@@ -282,18 +283,43 @@ export function OrbitalCena({ id, v }: { id: OrbitalId; v: number }) {
       <Rotulo x={20} y={288} ancora="start">a resultante das forças reais aponta para o centro</Rotulo>
     </g>;
   }
+  return <OrbitaCena v={v} reduzir={!!reduzir} />;
+}
+
+/**
+ * Órbitas. O traçado continua saindo de `trajetoria` — é a conta que decide
+ * "cai" ou "orbita" —, mas a cena ganhou corpo: o planeta tinha contorno e
+ * preenchimento chapado, o satélite era uma bolinha, e as duas setas não
+ * diziam o que eram. A referência aprovada rotula o achado com seta à mão, e
+ * aqui o achado é que a gravidade aponta para o centro enquanto v aponta para
+ * o lado: é a soma das duas que curva a queda.
+ */
+function OrbitaCena({ v, reduzir }: { v: number; reduzir: boolean }) {
+  const kit = useKit();
   const traj = trajetoria(v);
-  const orbita = id === 'orbitas';
-  return <g data-phys={id}><Pontas />
-    <circle cx={PLANETA.x} cy={PLANETA.y} r={PLANETA.r} fill={`color-mix(in srgb, ${blue} 28%, ${paper})`} stroke={ink} strokeWidth="2.5" />
-    <motion.path key={v} d={traj.d} fill="none" stroke={traj.caiu ? amber : accent} strokeWidth="2.5" initial={reduzir ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.2, ease: 'easeOut' }} />
-    <circle cx={PLANETA.x} cy={PLANETA.y - traj.r0} r="7" fill={accent} />
-    <Seta x1={PLANETA.x} y1={PLANETA.y - traj.r0} x2={PLANETA.x + 7 + v * 6} y2={PLANETA.y - traj.r0} cor={blue} />
-    <Seta x1={PLANETA.x} y1={PLANETA.y - traj.r0 + 8} x2={PLANETA.x} y2={PLANETA.y - traj.r0 + 30} cor={accent} largura={3} />
-    <Rotulo x={PLANETA.x + 12 + v * 6} y={PLANETA.y - traj.r0 - 6} ancora="start" cor={blue} peso={700}>v</Rotulo>
-    <Rotulo x={20} y={24} ancora="start" cor={traj.caiu ? amber : accent} peso={700}>{traj.caiu ? 'cai: a queda alcança o planeta' : v === 4 ? (orbita ? 'órbita circular: Fg = Fc' : 'órbita circular') : 'órbita elíptica'}</Rotulo>
-    <Rotulo x={20} y={40} ancora="start">{orbita ? 'o satélite cai o tempo todo, mas a Terra se curva' : 'a mesma força que puxa a maçã curva a órbita'}</Rotulo>
-    <Rotulo x={20} y={56} ancora="start">{orbita ? 'na mesma medida' : ''}</Rotulo>
+  const sat = { x: PLANETA.x, y: PLANETA.y - traj.r0 };
+  // Estrelas fixas: posições tiradas de uma sequência determinística, para o
+  // desenho não mudar a cada render nem entre servidor e teste.
+  const estrelas = Array.from({ length: 22 }, (_, k) => [(k * 97) % 300 + 10, (k * 53) % 280 + 10, k % 3 ? 0.8 : 1.4]);
+  const leitura = traj.caiu ? 'cai: a queda alcança o planeta' : v === 4 ? 'órbita circular: Fg = Fc' : 'órbita elíptica';
+  return <g data-phys="orbitas">
+    <kit.Defs /><Pontas />
+    {estrelas.map(([x, y, r], k) => Math.hypot(x - PLANETA.x, y - PLANETA.y) > PLANETA.r + 14 && <circle key={k} cx={x} cy={y} r={r} fill="var(--vs-dim)" opacity=".55" />)}
+    <circle cx={PLANETA.x} cy={PLANETA.y} r={PLANETA.r + 4} fill="none" stroke={blue} strokeWidth="4" opacity=".3" />
+    <circle cx={PLANETA.x} cy={PLANETA.y} r={PLANETA.r} fill={kit.esfera('azul')} />
+    <path d={`M${PLANETA.x - 26} ${PLANETA.y - 18}q10 -12 22 -4t14 12q-8 10 -20 6t-16 -14z M${PLANETA.x + 6} ${PLANETA.y + 10}q14 -6 24 4t-4 18q-12 2 -18 -8z`} fill={`color-mix(in srgb, var(--vs-green) 70%, ${paper})`} opacity=".8" />
+    <motion.path key={v} d={traj.d} fill="none" stroke={traj.caiu ? amber : 'var(--vs-kit-acc, var(--vs-burgundy))'} strokeWidth="3" strokeDasharray="1 0" initial={reduzir ? false : { pathLength: 0 }} animate={{ pathLength: 1 }} transition={{ duration: 1.2, ease: 'easeOut' }} />
+    <Seta x1={sat.x} y1={sat.y} x2={sat.x + 10 + v * 7} y2={sat.y} cor={blue} largura={3.5} />
+    <Seta x1={sat.x} y1={sat.y + 10} x2={sat.x} y2={sat.y + 34} cor={accent} largura={3.5} />
+    <g>
+      <rect x={sat.x - 21} y={sat.y - 4} width="13" height="8" fill={kit.metal} stroke={ink} strokeWidth="1" />
+      <rect x={sat.x + 8} y={sat.y - 4} width="13" height="8" fill={kit.metal} stroke={ink} strokeWidth="1" />
+      <circle cx={sat.x} cy={sat.y} r="7" fill={kit.esfera('ambar')} stroke={ink} strokeWidth="1" />
+    </g>
+    <Nota de={[sat.x + 12 + v * 7, sat.y]} em={[308, 30]} ancora="end" tom="azul" texto="v: para o lado" curva={-1} />
+    <Nota de={[sat.x - 3, sat.y + 28]} em={[12, 96]} ancora="start" texto={['gravidade:', 'para o centro']} curva={1} />
+    <Marca x={16} y={268} w={Math.min(290, leitura.length * 8)} h={20} />
+    <RotuloKit x={22} y={283} ancora="start" tam={13} tom={traj.caiu ? 'ambar' : 'acc'}>{leitura}</RotuloKit>
   </g>;
 }
 

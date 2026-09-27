@@ -1,0 +1,142 @@
+# Piloto de estética — cinco instrumentos de Física (27/09/2026)
+
+Registro exigido pela regra de entrega do padrão visual
+(`docs/visual/PADRAO-VISUAL-OBRIGATORIO.md`).
+
+## Origem
+
+A Ana Júlia mandou cinco capturas do iPad, todas no tema escuro:
+
+- interferência de ondas;
+- defeito de massa;
+- reflexão em cordas;
+- órbitas;
+- polias.
+
+O comentário foi: "o maior problema é que agora você tem que arrumar a
+estética, porque a estética está feia".
+
+As capturas mostravam três defeitos diferentes:
+
+1. **Texto borrado no escuro.** Os rótulos da reflexão em cordas saíam como
+   manchas.
+2. **Cena miúda.** A cena ficava pequena dentro de uma caixa escura grande.
+3. **Desenho pobre.** O traço era chapado sobre fundo vazio: um círculo com
+   contorno como planeta, um disco com duas bolinhas como núcleo, e uma senoide
+   de 17 pontos que saía em zigue-zague.
+
+Este lote corrige os três nos cinco capítulos. Serve de piloto: o estilo só se
+estende às outras pranchas depois da aprovação dela.
+
+## 1. Texto borrado
+
+`PhysicsRemainingInstrument.tsx` estilizava 54 rótulos com o objeto `ink`, que
+é o estilo de *linha* (`stroke` 3, `fill: none`). Como estilo inline, ele vence
+o reset global de `Visual.css`
+(`:where(.crivo-visual) svg text:not([stroke])`). O seletor olha o *atributo*
+`stroke`, não o estilo.
+
+Resultado: letra sem preenchimento e com contorno grosso. No papel claro isso
+passava por negrito; na lousa, virava mancha.
+
+Os rótulos agora usam `txt` (preenchimento, sem contorno). Uma varredura em
+todos os arquivos de `src/views` procurou `<text>` com objeto de estilo que
+traga `stroke`. Este era o único arquivo.
+
+A checagem de contorno nos 613 capítulos, no tema escuro e no tamanho do iPad
+(`halo.mjs`), achou 14 capítulos na primeira passada, todos deste arquivo.
+Depois da correção, a segunda passada está registrada no PR.
+
+## 2. Composição
+
+No iPad, a grade antiga de três colunas espremia a cena em cerca de 280 px
+entre os dois cartões.
+
+Agora, acima de 620 px:
+
+- a cena ocupa a largura toda no alto, como a figura central da referência;
+- os cartões ficam lado a lado embaixo;
+- dentro do instrumento, a cena fica à esquerda e o cursor e as leituras à
+  direita.
+
+## 3. Desenho: `illustrationKit.tsx`
+
+As cenas repetiam à mão o mesmo gradiente, a mesma seta e a mesma legenda, cada
+uma um pouco diferente. O kit reúne essas peças:
+
+| Peça | O que faz |
+| --- | --- |
+| `useKit()` | Gradientes de esfera (luz no alto à esquerda), metal e vidro. Os ids saem de `useId`, para duas pranchas na mesma página não disputarem o mesmo `url(#…)`. |
+| `Nota` | Anotação manuscrita (Kalam) com seta curva e ponta desenhada à mão. A seta sai do ponto do texto mais próximo do alvo. |
+| `Marca` | Marca-texto amarelo, de borda irregular, atrás do resultado. |
+| `Sombra` | Sombra pousada no chão. |
+| `Rotulo` | Rótulo impresso, com `stroke="none"` explícito. |
+| `senoide` | Onda amostrada em 96 passos. |
+
+Na lousa, o vinho do papel (#852636) ficava no limite da leitura. Um token novo,
+`--vs-kit-acc`, clareia o destaque só no tema escuro, sem mexer no vinho dos
+cartões.
+
+## As cinco cenas
+
+| Capítulo | Antes | Agora |
+| --- | --- | --- |
+| Interferência | Três curvas de 17 pontos no mesmo eixo, um novelo. | Três faixas: onda 1 + onda 2 = soma. Uma linha tracejada passa pela crista da onda 1 e atravessa as três. A soma é preenchida e a nota diz o que aconteceu ("crista + vale: anula"). |
+| Defeito de massa | Disco, duas bolinhas, seta. | Balança: núcleons separados de um lado, o núcleo formado do outro. A inclinação cresce com Δm e a energia sai em fótons do lado mais leve. É a definição do resumo — soma dos núcleons isolados menos a massa do núcleo — desenhada como comparação. |
+| Reflexão em cordas | Ida e volta no mesmo eixo; a extremidade era um traço. | Ida e volta em faixas separadas. A extremidade é o objeto: parede com a corda amarrada, ou anel que desliza na haste. As notas dizem por que o pulso volta invertido ou não. |
+| Órbitas | Planeta com contorno, satélite-bolinha, setas sem nome. | Planeta com volume e atmosfera, satélite com painéis, céu com estrelas. As notas dizem "gravidade: para o centro" e "v: para o lado". O traçado continua saindo de `trajetoria`. |
+| Polias | Dois círculos e duas retas; a correia não abraçava nada. | A correia é tangente de verdade às duas polias. Os raios de cada polia giram no seu ω (parados com movimento reduzido), e o arco âmbar tem o comprimento de ω. |
+
+Todo número desenhado vem da mesma conta que produz a leitura do instrumento:
+
+- Aᵣ = 2A·|cos(Δφ/2)|;
+- a energia vem de `MECHANICS_FINAL['mass-energy'].readouts`;
+- ω₂ = ω₁R₁/R₂;
+- a órbita vem de `trajetoria`, que o teste já amarra à leitura "cai" ou
+  "orbita".
+
+## Rótulos e conteúdo
+
+As notas repetem o que o lab e o resumo já dizem. Não trazem fato novo:
+
+- "crista com crista reforça; crista com vale… anula" (insight de
+  `wavesLab`);
+- "a massa total final menor corresponde à energia liberada" (insight de
+  `mechanicsFinalLab`);
+- "a corda fixa impõe deslocamento nulo; a livre não" (pergunta de
+  `physicsRemainingLab`);
+- "a gravidade fornece a força centrípeta" (insight de `orbitalLab`);
+- "a correia impõe o mesmo deslocamento linear nas bordas" (insight de
+  `physicsRemainingLab`).
+
+Dois pontos de escolha do desenho, não do resumo:
+
+- A balança leva seis núcleons, três prótons e três nêutrons. A contagem é do
+  desenho, não de um núcleo específico, e o código diz isso.
+- Os continentes do planeta são manchas genéricas.
+
+## Como foi conferido
+
+- **Capturas.** Só a cena, no iPad (1194×834), claro e escuro, com o cursor no
+  mínimo, no meio e no máximo (`cenas-cursor-grade.png`). A prancha inteira
+  também foi capturada no iPad, claro e escuro (`*-ipad-*.png`).
+- **O que a captura achou e foi corrigido:**
+  - "crista + crista: reforça", "sem defeito: equilíbrio", "volta como vale" e
+    as duas notas da órbita saíam do quadro;
+  - "núcleons separados" era cortado à esquerda;
+  - os fótons do Δm máximo encostavam na borda;
+  - a seta da nota dava a volta por fora do texto quando o alvo ficava do outro
+    lado. Foi corrigido no kit, então vale para todas as notas.
+- **Medição** (`instr.mjs`): texto sobre texto e texto fora do quadro, em cada
+  posição do cursor, em 1440 claro e 390 escuro. Achou "onda 2" encostado no
+  "+", que foi corrigido. Depois disso, nenhum achado nos cinco capítulos.
+- **Checagens:** `npm run lint` limpo; `npm test` verde (711 node:test e 737
+  vitest).
+
+## Pendente
+
+- **Aprovação da Ana Júlia** do estilo deste piloto, antes de estendê-lo às
+  outras pranchas.
+- No ambiente remoto a Kalam não carrega, porque `fonts.googleapis.com` é
+  bloqueado. As capturas mostram as notas no serif de fallback. No aparelho
+  dela, elas saem manuscritas.
