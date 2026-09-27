@@ -158,3 +158,53 @@ cursor estão em `screenshots/lote-biologia-2026-09-27/instrumentos/`.
 ## Pendente
 
 - **Aprovação editorial** de todas as cenas acima.
+
+## Revisão — 18 instrumentos que ficaram de fora
+
+Depois da entrega, a Ana Júlia apontou que várias pranchas de Biologia
+continuavam péssimas, e tinha razão. Este lote fechou só os capítulos que a
+auditoria 39 mandou redesenhar. A auditoria deu os demais instrumentos de
+`BiologyRemainingInstrument` e `BiologyInstrument` como aceitáveis, porque
+cada id tinha um `case` próprio. Eu não conferi esses capítulos na tela.
+
+A captura das 72 pranchas mostrou 18 desenhos de uma forma só. Alguns
+exemplos:
+
+- duas ovais para os procariotos;
+- uma elipse para o plano corporal;
+- o mesmo besouro para insetos e aracnídeos;
+- um "X" para a não disjunção;
+- um círculo com linhas cruzadas para o citoesqueleto.
+
+Todos foram refeitos. Cada um desenha o objeto do capítulo e move a peça do
+mecanismo: os três filamentos do citoesqueleto; a proteína do RER ao Golgi;
+os gametas n + 1 e n − 1 conforme a anáfase em que a separação falha; poros,
+ósculo e coanócitos contra o cnidócito; os três planos corporais em corte;
+inseto, crustáceo, miriápode e aracnídeo com tagmas, antenas e patas
+contados; tubarão contra peixe ósseo, com opérculo e bexiga natatória; o
+ovário que vira fruto; transformação, transdução e conjugação; o caule em
+corte com xilema para dentro e floema para fora; raiz, caule e folha; a
+inversão térmica que prende o poluente; o solo com POPs sendo degradados; a
+escada de DNA com as pontes de hidrogênio contadas; os homólogos com
+crossing-over e a barra de recombinantes; o O₂ do alvéolo ao capilar; a
+auxina no lado sombreado.
+
+A revisão também achou três defeitos que não eram só de desenho:
+
+- **Citoplasma I e II estavam trocados.** O instrumento de citoesqueleto
+  estava no capítulo I, que trata de RER e síntese. A rota de secreção estava
+  no II, que é onde o citoesqueleto aparece. Cada capítulo mostrava o assunto
+  do outro, e o registro foi corrigido.
+- **Insetos e aracnídeos liam "3% relativo" e "4% relativo".** O número de
+  pares de patas caía na leitura genérica de porcentagem. O controle passou
+  a ser o grupo, com leitura própria.
+- **Cursores sem significado.** O citoesqueleto tinha "Organização relativa
+  50%" e a poluição do ar, "Emissão relativa". Viraram o filamento em foco e
+  a condição do ar: dispersão normal ou inversão térmica, o mecanismo que o
+  resumo descreve.
+
+Conferência: o cursor foi percorrido de ponta a ponta nos 18, em 1440 claro e
+390 escuro. A captura achou colisões de texto com desenho, todas
+corrigidas: a legenda do RNA, a da auxina, a dos tecidos e a da flor. Na
+varredura de Biologia, nenhum dos 72 capítulos tem achado. As capturas estão
+em `screenshots/lote-biologia-2026-09-27/revisao/`.

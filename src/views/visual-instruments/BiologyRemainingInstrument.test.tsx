@@ -15,8 +15,10 @@ const EXPECTED: Record<keyof typeof BIOLOGY_REMAINING, string> = {
   'air-pollution': 'Poluição do Ar',
   'climate-pops': 'Poluição: Aquecimento Global, POPs e Biorremediação',
   inorganic: 'Composição Química Celular: Compostos Inorgânicos',
-  'cytoplasm-one': 'Citoplasma: Estrutura e Componentes I',
-  'cytoplasm-two': 'Citoplasma: Estrutura e Componentes II',
+  // Trocados em 27/09: o citoesqueleto está no resumo II; a rota de secreção
+  // (RER, Golgi), no I. Cada capítulo mostrava o assunto do outro.
+  'cytoplasm-one': 'Citoplasma: Estrutura e Componentes II',
+  'cytoplasm-two': 'Citoplasma: Estrutura e Componentes I',
   nucleus: 'Núcleo Celular',
   'chromosome-mutations': 'Mutações Cromossômicas e Gametogênese',
   biotechnology: 'Biotecnologia',
@@ -64,13 +66,15 @@ describe('mecanismos de Biologia', () => {
   });
   it('distingue dispersão no ar de transformação de contaminantes por biorremediação', () => {
     const air = render(React.createElement(biologyRemainingInstrument('air-pollution'), props(EXPECTED['air-pollution'])));
-    expect(air.container.querySelector('[data-bio-system="air-dispersion"]')).not.toBeNull();
+    // Desde 27/09 a cena mostra a inversão térmica, que o resumo descreve como
+    // o que prende a dispersão; a leitura inicial é a dispersão normal.
+    expect(air.container.querySelector('[data-bio-system="thermal-inversion"]')).not.toBeNull();
     expect(air.container.textContent).toContain('dispersão');
     air.unmount();
 
     const climate = render(React.createElement(biologyRemainingInstrument('climate-pops'), props(EXPECTED['climate-pops'])));
     expect(climate.container.querySelector('[data-bio-system="bioremediation"]')).not.toBeNull();
-    expect(climate.container.textContent).toContain('microrganismos');
+    expect(climate.container.textContent).toContain('bactérias, fungos, plantas');
     climate.unmount();
   });
 });
