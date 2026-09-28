@@ -147,10 +147,10 @@ export default function AgendaView() {
     if (field === 'localDate') setLocalDate(value as string);
   };
 
-  if (loading) return <p role="status">Carregando agenda…</p>;
+  if (loading) return <div className="ni-main"><p role="status">Carregando agenda…</p></div>;
 
   return (
-    <div className="space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
+    <div className="ni-main space-y-6 animate-in fade-in slide-in-from-bottom-4 duration-500">
       <header>
         <div className="flex items-center gap-2 mb-1.5">
           <span className="w-2 h-2 rounded-full bg-ember-500 shadow-[0_0_8px_var(--color-ember-500)]" />

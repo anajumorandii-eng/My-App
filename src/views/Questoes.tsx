@@ -451,7 +451,7 @@ export default function Questoes() {
       {!isPersisted && (
         <p className="flex items-start text-xs text-[var(--dim)] mb-2">
           <CloudOff className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0" />
-          Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+          Modo demonstração — conecte sua conta Google em "Conexões" para salvar seu progresso de verdade.
         </p>
       )}
       {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}

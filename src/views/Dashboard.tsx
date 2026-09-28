@@ -365,7 +365,7 @@ export default function Dashboard() {
                 {!isPersisted && (
                   <p>
                     <CloudOff aria-hidden="true" />
-                    Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+                    Modo demonstração — conecte sua conta Google em "Conexões" para salvar seu progresso de verdade.
                   </p>
                 )}
                 {failureWarnings.map((warning) => (

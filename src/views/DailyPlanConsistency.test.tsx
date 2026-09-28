@@ -302,10 +302,32 @@ describe('daily plan consistency across views', () => {
     expect(screen.queryByText(/tempo livre entre agora e 22h/i)).not.toBeInTheDocument();
     expect(screen.getByText('Google Calendar não está conectado.')).toBeInTheDocument();
     expect(screen.getByText('A disponibilidade semanal está degradada.')).toBeInTheDocument();
-    const waitingList = screen.getByRole('heading', { name: 'Fila de Espera' }).closest('section');
+    const waitingList = screen.getByRole('heading', { name: /^Fila de espera/ }).closest('section');
     expect(waitingList).not.toBeNull();
     expect(within(waitingList!).getByText('Fisiologia Renal')).toBeInTheDocument();
     expect(within(waitingList!).queryByText(FIRST_TOPIC)).not.toBeInTheDocument();
+    // O tipo da ação saía em inglês ("Theory", "review") de type.replace('_', ' ').
+    expect(within(waitingList!).getByText('Biologia · Revisão')).toBeInTheDocument();
+    expect(screen.getByText('Teoria')).toBeInTheDocument();
+    expect(screen.queryByText(/^(theory|practice|review|error analysis)$/i)).not.toBeInTheDocument();
+  });
+
+  it('Plano não anuncia minutos planejados antes de o plano carregar', () => {
+    currentPlan = loadingPlan;
+    dailyPlanHook.mockImplementation(() => loadingPlan);
+    renderView(<Plano />);
+    expect(screen.queryByText(/min planejados hoje/)).not.toBeInTheDocument();
+  });
+
+  it('Plano mostra as primeiras da fila de espera e abre o resto a pedido', () => {
+    const fila = Array.from({ length: 12 }, (_, i): StudyAction => ({ ...waitingAction, id: `fila-${i}`, topicName: `Tópico da fila ${i + 1}` }));
+    currentPlan = { ...sharedPlan, prioritizedActions: [...sharedPlan.prioritizedActions.slice(0, -1), ...fila] };
+    renderView(<Plano />);
+
+    const waitingList = screen.getByRole('heading', { name: /^Fila de espera/ }).closest('section')!;
+    expect(within(waitingList).getAllByText(/^Tópico da fila/)).toHaveLength(8);
+    fireEvent.click(within(waitingList).getByRole('button', { name: 'Mostrar todas (12)' }));
+    expect(within(waitingList).getAllByText(/^Tópico da fila/)).toHaveLength(12);
   });
 
   it('Sessão caps its timer at the allocated interval instead of using the estimate', () => {

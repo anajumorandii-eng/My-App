@@ -1,4 +1,4 @@
-import React, { useMemo } from 'react';
+import React, { useMemo, useState } from 'react';
 import { AlertTriangle, CalendarClock, Clock, CloudOff, Flag, Map } from 'lucide-react';
 import { formatIsoTimeInSaoPaulo, todayInSaoPaulo } from '../features/availability/time';
 import { useDailyPlan } from '../hooks/useDailyPlan';
@@ -9,13 +9,17 @@ import { daysUntil } from '../data/examCalendar';
 import { Panel } from '../components/ui/Panel';
 import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
+import { STUDY_ACTION_TYPE_LABELS } from '../lib/studyActionLabels';
 
 function formatDatePtBr(iso: string): string {
   const [, month, day] = iso.split('-');
   return `${day}/${month}`;
 }
 
-const PLANO_PALETTE = PALETTES.Matemática;
+// A fila chegava a mais de cem itens numa lista só, e a tela virava rolagem
+// sem fim abaixo do plano do dia. Os primeiros já dizem o que vem a seguir;
+// o resto fica a um toque.
+const FILA_VISIVEL = 8;
 
 export default function Plano() {
   const { goals } = useStudentGoals();
@@ -34,16 +38,15 @@ export default function Plano() {
   const unallocatedActions = prioritizedActions.filter(({ id }) => !allocatedIds.has(id));
   const effectiveMinutes = availability?.totalMinutes ?? 0;
   const totalPlannedMinutes = allocatedActions.reduce((total, action) => total + action.allocatedMinutes, 0);
+  const [filaAberta, setFilaAberta] = useState(false);
+  const filaVisivel = filaAberta ? unallocatedActions : unallocatedActions.slice(0, FILA_VISIVEL);
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': PLANO_PALETTE.primary, '--primary-ink': PLANO_PALETTE.readable,
-        '--secondary': PLANO_PALETTE.secondary,
-        '--wash': PLANO_PALETTE.wash,
-      } as React.CSSProperties}
-    >
+    // A tela fixava a paleta de Matemática no próprio contêiner, e a variável
+    // declarada aqui vencia a do ambiente: breadcrumb, disponibilidade e botões
+    // saíam azuis num plano que não é de matéria nenhuma. A cor vem do app;
+    // cada ação do plano continua com a cor da sua matéria.
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>DECISÃO</span>
@@ -65,19 +68,21 @@ export default function Plano() {
           <p>Roteiro dinâmico calibrado pelo seu domínio atual e pelas janelas de disponibilidade de hoje.</p>
         </div>
         <div className="ni-state">
-          <i /> Fase {phase.label} · Crivo Scheduler
+          {/* Enquanto o plano carrega, allocatedActions vem vazio e o selo diria
+              "0 min planejados" de um plano que ainda nem chegou. */}
+          <i /> Fase {phase.label}{!loading && ` · ${totalPlannedMinutes} min planejados hoje`}
         </div>
       </div>
 
       {!isPersisted && (
         <p className="flex items-start text-xs text-[var(--dim)] mb-2">
           <CloudOff className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0" />
-          Modo demonstração — conecte sua conta Google em "Perfil" para salvar seu progresso.
+          Modo demonstração — conecte sua conta Google em "Conexões" para salvar seu progresso.
         </p>
       )}
 
       {/* Phase banner */}
-      <Panel subject="Matemática" className="ni-panel p-5 mb-4">
+      <Panel className="ni-panel p-5 mb-4">
         <div className="flex items-center min-w-0">
           <Flag className="w-5 h-5 mr-3 subject-text shrink-0" />
           <div className="min-w-0">
@@ -85,7 +90,7 @@ export default function Plano() {
               Fase atual: <b>{phase.label}</b>
               {nextMilestone && (
                 <span className="font-normal text-[var(--dim)] ml-2">
-                  — {nextMilestone.board} em {daysUntil(nextMilestone.date)} dias ({formatDatePtBr(nextMilestone.date)})
+                  {'— '}{nextMilestone.board} em {daysUntil(nextMilestone.date)} dias ({formatDatePtBr(nextMilestone.date)})
                 </span>
               )}
             </p>
@@ -95,7 +100,7 @@ export default function Plano() {
       </Panel>
 
       {/* Availability panel */}
-      <Panel subject="Matemática" className="ni-panel p-5 mb-4 space-y-4">
+      <Panel className="ni-panel p-5 mb-4 space-y-4">
         <div className="flex items-center justify-between gap-4">
           <div>
             <p className="text-xs font-medium flex items-center text-[var(--dim)]">
@@ -174,13 +179,14 @@ export default function Plano() {
                     {index + 1}
                   </div>
                   <div className="min-w-0">
-                    <h4 className="font-display font-medium text-sm text-[var(--text)] truncate">{action.topicName}</h4>
-                    <div className="flex items-center text-[11px] text-[var(--dim)] mt-0.5 space-x-2 font-mono">
-                      <span className="capitalize">{action.type.replace('_', ' ')}</span>
-                      <span>•</span>
-                      <span>{action.subject}</span>
-                      <span>•</span>
-                      <span>{formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</span>
+                    <h4 className="font-display font-medium text-sm text-[var(--text)]">{action.topicName}</h4>
+                    {/* No celular o nome cortava em "Óptica Instrumental e da ..." e o
+                        horário quebrava no meio ("14:40–" / "15:25"): o nome
+                        agora quebra linha e cada metadado fica inteiro. */}
+                    <div className="flex flex-wrap items-center text-[11px] text-[var(--dim)] mt-0.5 gap-x-2 font-mono whitespace-nowrap">
+                      <span>{STUDY_ACTION_TYPE_LABELS[action.type]}</span>
+                      <span><span aria-hidden="true">• </span>{action.subject}</span>
+                      <span><span aria-hidden="true">• </span>{formatIsoTimeInSaoPaulo(action.intervalStart)}–{formatIsoTimeInSaoPaulo(action.intervalEnd)}</span>
                     </div>
                   </div>
                 </div>
@@ -205,9 +211,11 @@ export default function Plano() {
       {/* Unallocated waitlist queue */}
       {unallocatedActions.length > 0 && (
         <section>
-          <h2 className="font-display font-medium text-base text-[var(--text)] mb-3">Fila de Espera</h2>
-          <Panel subject="Matemática" className="ni-panel divide-y divide-[var(--line)] overflow-hidden">
-            {unallocatedActions.map((action) => {
+          <h2 className="font-display font-medium text-base text-[var(--text)] mb-3">
+            Fila de espera <span className="font-mono text-xs text-[var(--dim)] ml-1">{unallocatedActions.length}</span>
+          </h2>
+          <Panel className="ni-panel divide-y divide-[var(--line)] overflow-hidden">
+            {filaVisivel.map((action) => {
               const pal = PALETTES[action.subject] ?? PALETTES.Matemática;
               const SubIcon = SUBJECT_ICONS[action.subject] ?? Map;
               return (
@@ -221,7 +229,7 @@ export default function Plano() {
                     </span>
                     <div className="min-w-0">
                       <p className="font-medium text-xs text-[var(--text)] truncate">{action.topicName}</p>
-                      <p className="text-[11px] text-[var(--dim)]">{action.subject} · {action.type.replace('_', ' ')}</p>
+                      <p className="text-[11px] text-[var(--dim)]">{action.subject} · {STUDY_ACTION_TYPE_LABELS[action.type]}</p>
                     </div>
                   </div>
                   <span className="text-[11px] font-mono text-[var(--dim)] shrink-0 ml-4">{action.estimatedMinutes} min estimados</span>
@@ -229,6 +237,16 @@ export default function Plano() {
               );
             })}
           </Panel>
+          {unallocatedActions.length > FILA_VISIVEL && (
+            <button
+              type="button"
+              onClick={() => setFilaAberta((aberta) => !aberta)}
+              aria-expanded={filaAberta}
+              className="mt-3 text-xs font-medium subject-text hover:underline"
+            >
+              {filaAberta ? 'Mostrar só as próximas' : `Mostrar todas (${unallocatedActions.length})`}
+            </button>
+          )}
         </section>
       )}
     </div>

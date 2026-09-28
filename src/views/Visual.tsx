@@ -347,7 +347,7 @@ export default function Visual() {
   if (!summaryId || !map || !summary) {
     if (summaryId && !summary) {
       return (
-        <div className="crivo-visual space-y-5">
+        <div className="ni-main crivo-visual space-y-5">
           <button onClick={() => setSearchParams({})} className="inline-flex items-center text-sm font-medium text-indigo-700 dark:text-indigo-300">
             <ArrowLeft className="mr-2 h-4 w-4" />Voltar ao Visual
           </button>
@@ -359,7 +359,7 @@ export default function Visual() {
       );
     }
     return (
-      <div className="crivo-visual crivo-visual--tech">
+      <div className="ni-main crivo-visual crivo-visual--tech">
         <VisualLibrary onOpen={(id) => setSearchParams({ summary: id })} preferencias={preferencias} />
       </div>
     );
@@ -426,7 +426,9 @@ export default function Visual() {
 
   return (
     <MolduraTecnologicaContext.Provider value={tecnologico}>
-    <div className={`crivo-visual pb-16${tecnologico ? ' crivo-visual--tech' : ''}`}>
+    {/* ni-main dá as margens que toda tela tem: sem ele o Visual encostava na
+        barra lateral e na borda direita do iPad. */}
+    <div className={`ni-main crivo-visual${tecnologico ? ' crivo-visual--tech' : ''}`}>
       <header className="vs-topic-bar">
         <button onClick={() => setSearchParams({})} className="vs-back-button" aria-label="Voltar à biblioteca visual">
           <ArrowLeft aria-hidden="true" />
