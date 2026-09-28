@@ -68,7 +68,9 @@ export default function Plano() {
           <p>Roteiro dinâmico calibrado pelo seu domínio atual e pelas janelas de disponibilidade de hoje.</p>
         </div>
         <div className="ni-state">
-          <i /> Fase {phase.label} · {totalPlannedMinutes} min planejados hoje
+          {/* Enquanto o plano carrega, allocatedActions vem vazio e o selo diria
+              "0 min planejados" de um plano que ainda nem chegou. */}
+          <i /> Fase {phase.label}{!loading && ` · ${totalPlannedMinutes} min planejados hoje`}
         </div>
       </div>
 

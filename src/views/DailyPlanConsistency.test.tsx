@@ -312,6 +312,13 @@ describe('daily plan consistency across views', () => {
     expect(screen.queryByText(/^(theory|practice|review|error analysis)$/i)).not.toBeInTheDocument();
   });
 
+  it('Plano não anuncia minutos planejados antes de o plano carregar', () => {
+    currentPlan = loadingPlan;
+    dailyPlanHook.mockImplementation(() => loadingPlan);
+    renderView(<Plano />);
+    expect(screen.queryByText(/min planejados hoje/)).not.toBeInTheDocument();
+  });
+
   it('Plano mostra as primeiras da fila de espera e abre o resto a pedido', () => {
     const fila = Array.from({ length: 12 }, (_, i): StudyAction => ({ ...waitingAction, id: `fila-${i}`, topicName: `Tópico da fila ${i + 1}` }));
     currentPlan = { ...sharedPlan, prioritizedActions: [...sharedPlan.prioritizedActions.slice(0, -1), ...fila] };
