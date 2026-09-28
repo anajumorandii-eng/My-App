@@ -16,7 +16,6 @@ import { focusEnter } from '../../../design-system/motion/variants';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
 import { useDecisionChoreography } from '../motion/useDecisionChoreography';
 import { cn } from '../../../lib/cn';
-import { SubjectEvidence } from './SubjectEvidence';
 
 export interface TodayFocusProps {
   /** Allocated, not merely ranked: the focus card states *when* today's
@@ -112,7 +111,6 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             className="crivo-decision-explanation"
           />
         </div>
-        <SubjectEvidence subject={action.subject} topic={action.topicName} subdued={explanationOpen} />
         <div className="ni-metrics" aria-label="Sinais da decisão">
           <div className="ni-metric"><small>Domínio</small><b>{masteryPercent}%</b><i><span style={{ width: `${masteryPercent}%` }} /></i></div>
           <div className="ni-metric"><small>Confiança</small><b>{confidencePercent}%</b></div>
@@ -127,8 +125,8 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             minutes={action.allocatedMinutes}
           />
         </div>
-        <div className="crivo-observatorio-visual-support" aria-hidden="true">
-          <CrivoCore size={190} scale="hero" decorative state={coreState} subject={action.subject} previousSubject={previousSubject} topicId={action.topicId} />
+        <div className={cn('crivo-observatorio-visual-support', explanationOpen && 'crivo-observatorio-visual-support--explaining')} aria-hidden="true">
+          <CrivoCore size="fill" scale="hero" decorative state={coreState} subject={action.subject} previousSubject={previousSubject} topicId={action.topicId} />
           <DecisionFactorField factors={action.factors} phase={phase} />
         </div>
         <AnimatePresence initial={false}>{showAdaptiveUpdate && <AdaptiveUpdate key={action.id} className="crivo-adaptive-update" />}</AnimatePresence>

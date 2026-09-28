@@ -412,7 +412,7 @@
    não tem itálico, o navegador inclinava a letra à força. */
 :root[data-ambiente="tecnologico"] .ni-production-app :is(h1, h2, h3, h4, span.block) { font-style: normal; }
 :root[data-ambiente="tecnologico"] .ni-production-app h1 { letter-spacing: -.04em; }
-:root[data-ambiente="tecnologico"] .ni-production-app :is(.ni-subjects button, .ni-subjects span, .subject-dossier__pending b, .crivo-observatorio-trajectory h3, .ni-trilho-trajectory h3, .ni-foco-support h3, .ni-production-mobile strong) {
+:root[data-ambiente="tecnologico"] .ni-production-app :is(.ni-subjects button, .ni-subjects span, .crivo-observatorio-trajectory h3, .ni-trilho-trajectory h3, .ni-foco-support h3, .ni-production-mobile strong) {
   font-family: "Space Grotesk", Inter, system-ui, sans-serif;
 }
 :root[data-ambiente="tecnologico"] .ni-production-app button:where(:not([class*="mono"])),
@@ -459,19 +459,14 @@
 :root[data-ambiente="tecnologico"] .ni-production-app [data-testid="subject-atmosphere-fallback"] { opacity: .12; }
 
 /* --- Hoje ----------------------------------------------------------------- */
-/* A imagem do tópico começava em 40% do cartão e cobria "Discordo" (e, no
-   celular, "Por que isso?"). Ela vai para a direita, e os botões ficam na
-   frente com fundo de vidro legível. */
-:root[data-ambiente="tecnologico"] .ni-production-app .subject-dossier { left: 54%; }
+/* Os botões ficam na frente do Núcleo, com fundo de vidro legível: a ficha
+   que ocupava esse lugar cobria "Discordo" (e, no celular, "Por que isso?"). */
 :root[data-ambiente="tecnologico"] .ni-production-app :is(.crivo-observatorio-cta, .crivo-observatorio-explanation) { position: relative; z-index: 5; }
 :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-explanation button {
   border-radius: 10px;
   background: color-mix(in srgb, var(--amb-fundo) 70%, transparent);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-}
-@media (max-width: 560px) {
-  :root[data-ambiente="tecnologico"] .ni-production-app .subject-dossier { left: 34%; top: 250px; opacity: .55; }
 }
 /* Abas de matéria: com treze matérias, "Atualidades" caía sozinha numa
    segunda linha. Uma fileira só, que rola de lado, como já era no celular. */
