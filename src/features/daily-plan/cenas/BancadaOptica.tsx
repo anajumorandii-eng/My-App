@@ -35,7 +35,7 @@ const PAPEIS: { valor: Papel; nome: string }[] = [
   { valor: 'liso', nome: 'Liso' },
 ];
 
-export default function BancadaOptica() {
+export default function BancadaOptica({ reserva }: { reserva: React.ReactNode }) {
   const reduzido = useReducedMotion() ?? false;
   const cores = useCoresDaCena();
   const [p, setP] = useState<number>(reduzido ? P_INICIAL : P_MAX);
@@ -50,15 +50,24 @@ export default function BancadaOptica() {
   opcoesRef.current = opcoes;
   const pRef = useRef(p);
   pRef.current = p;
+  // A entrada de cena chama setP a cada quadro por 1,8 s; sem cancelar no
+  // primeiro gesto, ela sobrescrevia a distância que a estudante acabara de
+  // escolher no controle ou no arraste.
+  const entrada = useRef(0);
+  const escolherP = (valor: number) => {
+    cancelAnimationFrame(entrada.current);
+    setP(valor);
+  };
 
   useEffect(() => {
     const el = palco.current;
     if (!el) return;
     try {
-      bancada.current = montarBancada(el, rotulos.current, opcoesRef.current, pRef.current, setP);
+      bancada.current = montarBancada(el, rotulos.current, opcoesRef.current, pRef.current, escolherP);
     } catch {
       // WebGL anunciado mas indisponível na hora (contexto perdido, limite de
-      // contextos): a leitura e o controle continuam funcionando sem a cena.
+      // contextos): volta ao Núcleo do Crivo, como o aparelho sem WebGL. Só
+      // esconder os rótulos deixava um palco vazio com controles soltos.
       setFalhou(true);
     }
     return () => { bancada.current?.destruir(); bancada.current = null; };
@@ -73,15 +82,14 @@ export default function BancadaOptica() {
   // forma no anteparo enquanto ele anda.
   useEffect(() => {
     if (reduzido) return;
-    let quadro = 0;
     const inicio = performance.now();
     const passo = (agora: number) => {
       const t = Math.min((agora - inicio) / 1800, 1);
       setP(P_MAX + (P_INICIAL - P_MAX) * (1 - (1 - t) ** 3));
-      if (t < 1) quadro = requestAnimationFrame(passo);
+      if (t < 1) entrada.current = requestAnimationFrame(passo);
     };
-    quadro = requestAnimationFrame(passo);
-    return () => cancelAnimationFrame(quadro);
+    entrada.current = requestAnimationFrame(passo);
+    return () => cancelAnimationFrame(entrada.current);
   }, [reduzido]);
 
   const ajustar = (mudanca: Partial<PreferenciasDaCena>) => {
@@ -97,19 +105,17 @@ export default function BancadaOptica() {
   const descricao = `Bancada óptica: objeto a ${fmt(p * CM)} cm de uma lente convergente de foco ${FOCO * CM} cm; imagem ${natureza}, a ${fmt(imagem.pLinha * CM)} cm da lente.`;
   const guardar = (id: IdRotulo) => (el: HTMLSpanElement | null) => { rotulos.current[id] = el; };
 
+  if (falhou) return <>{reserva}</>;
+
   return (
     <figure className="crivo-cena crivo-cena--optica" aria-label={descricao}>
       <div ref={palco} className="crivo-cena__palco" aria-hidden="true">
-        {!falhou && (
-          <>
             <span ref={guardar('F')} className="crivo-cena__rotulo">F</span>
             <span ref={guardar('F2')} className="crivo-cena__rotulo">F′</span>
             <span ref={guardar('objeto')} className="crivo-cena__rotulo crivo-cena__rotulo--forte">objeto</span>
             <span ref={guardar('imagem')} className="crivo-cena__rotulo crivo-cena__rotulo--forte">imagem {imagem.real ? 'real' : 'virtual'}, {imagem.invertida ? 'invertida' : 'direita'}</span>
             <span ref={guardar('cotaP')} className="crivo-cena__rotulo crivo-cena__rotulo--cota">p = {fmt(p * CM)} cm</span>
             <span ref={guardar('cotaPl')} className="crivo-cena__rotulo crivo-cena__rotulo--cota">p′ = {fmt(imagem.pLinha * CM)} cm</span>
-          </>
-        )}
       </div>
       <figcaption className="crivo-cena__painel">
         <label className="crivo-cena__controle">
@@ -120,7 +126,7 @@ export default function BancadaOptica() {
             max={P_MAX * CM}
             step={1}
             value={Math.round(p * CM)}
-            onChange={(e) => setP(Number(e.target.value) / CM)}
+            onChange={(e) => escolherP(Number(e.target.value) / CM)}
           />
         </label>
         <p className="crivo-cena__leitura">

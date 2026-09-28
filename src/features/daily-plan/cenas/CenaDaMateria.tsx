@@ -8,7 +8,9 @@ import React, { Suspense, lazy, useMemo, type ComponentType, type LazyExoticComp
  * carregam sob demanda: o three.js só baixa quando o Hoje mostra uma matéria
  * que tem cena, e não pesa nas outras telas.
  */
-const CENAS: Record<string, LazyExoticComponent<ComponentType>> = {
+// A cena recebe a reserva para voltar a ela se o WebGL falhar depois da sonda:
+// a sonda só cria um contexto de teste, e o de verdade ainda pode ser negado.
+const CENAS: Record<string, LazyExoticComponent<ComponentType<{ reserva: React.ReactNode }>>> = {
   Física: lazy(() => import('./BancadaOptica')),
 };
 
@@ -31,7 +33,7 @@ export function CenaDaMateria({ materia, reserva }: { materia: string; reserva: 
   if (!Cena || !webgl) return <>{reserva}</>;
   return (
     <Suspense fallback={reserva}>
-      <Cena />
+      <Cena reserva={reserva} />
     </Suspense>
   );
 }

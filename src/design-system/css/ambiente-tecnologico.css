@@ -672,6 +672,10 @@
   }
   :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) { min-height: 0; }
   .crivo-cena__palco { flex: none; height: 255px; min-height: 0; }
+  /* A classe da cena entra antes de a cena existir: enquanto o pedaço 3D baixa,
+     sem WebGL ou se o contexto for negado, quem aparece é o Núcleo do Crivo,
+     que é absoluto. Com altura automática o bloco colapsava e a reserva sumia. */
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena:not(:has(.crivo-cena)) { height: 300px; }
   :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) .ni-metrics { position: relative; inset: auto; margin-top: 18px; }
 }
 @media (max-width: 560px) {
