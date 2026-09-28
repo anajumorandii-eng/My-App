@@ -519,3 +519,12 @@
   }
   :root[data-ambiente="tecnologico"] .ni-production-app .ni-top { height: 65px; min-height: 65px; box-sizing: border-box; }
 }
+
+/* --- Avisos em âmbar no tema claro ----------------------------------------
+   22 avisos do app (Plano, Agenda, Questões, Resumos…) usam text-amber-300,
+   escrito para fundo escuro: no marfim do claro, "Google Calendar não está
+   conectado." ficava amarelo-claro sobre creme, quase ilegível. O token
+   --status-warning já troca de tom com o tema; aqui o âmbar passa a segui-lo
+   no claro, em vez de corrigir tela por tela e esquecer a próxima. */
+:root:not(.dark) .text-amber-300 { color: var(--status-warning); }
+:root:not(.dark) .text-amber-400 { color: var(--status-warning); }

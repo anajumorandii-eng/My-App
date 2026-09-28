@@ -18,6 +18,7 @@ import { CrivoCore, type CrivoCoreState } from '../components/CrivoCore';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
 import { useReducedMotion } from 'motion/react';
 import { PALETTES, SUBJECT_ICONS } from '../prototypes/NucleoInstrumentalPrototype';
+import { STUDY_ACTION_TYPE_LABELS } from '../lib/studyActionLabels';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -390,7 +391,7 @@ export default function Sessao() {
         {!isPersisted && (
           <p>
             <CloudOff className="w-3.5 h-3.5 mr-1.5" />
-            Modo demonstração — conecte sua conta Google em "Conexões Google" para salvar seu progresso de verdade.
+            Modo demonstração — conecte sua conta Google em "Conexões" para salvar seu progresso de verdade.
           </p>
         )}
       </div>
@@ -451,9 +452,9 @@ export default function Sessao() {
             <>
               <div className="w-full flex items-start justify-between gap-4">
                 <div className="min-w-0 text-left">
-                  <p className="ni-session-active-subject text-sm font-medium text-text-secondary mb-1 capitalize">
+                  <p className="ni-session-active-subject text-sm font-medium text-text-secondary mb-1">
                     {ActiveSubjectIcon && <ActiveSubjectIcon aria-hidden="true" />}
-                    {selectedAction.type.replace('_', ' ')} • {selectedAction.subject}
+                    {STUDY_ACTION_TYPE_LABELS[selectedAction.type]} • {selectedAction.subject}
                   </p>
                   <h2 className="text-2xl font-display font-semibold text-text-primary mb-4">{selectedAction.topicName}</h2>
                 </div>
