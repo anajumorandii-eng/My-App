@@ -2796,3 +2796,269 @@
   letter-spacing: .16em;
   text-transform: uppercase;
 }
+
+/* --- Tipografia única na tela tecnológica --------------------------------- */
+/* Com a moldura em todos os capítulos, sobravam títulos em Newsreader e
+   rótulos em Kalam nas cenas que não usam o kit ("Um endereço sobre a
+   esfera"). Um só par de famílias na tela: Space Grotesk para ler, JetBrains
+   Mono para dado. O texto SVG com fonte inline não é alcançado, de propósito:
+   quem declarou fonte no próprio elemento tinha razão para isso. */
+.crivo-visual--tech :is(h1, h2, h3, h4, h5, strong, b, figcaption, legend) { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
+.crivo-visual--tech svg text:not(.vs-kit-mono) { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
+.crivo-visual--tech :is(.vs-hand-note, .vs-scene-note text, .vs-plane-note text, .vs-concept-label, .vs-note-title) { font-family: "JetBrains Mono", ui-monospace, monospace; font-style: normal; }
+.crivo-visual--tech :is(code, kbd, samp) { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+/* --- Ações do topo: Buscar e Personalizar -------------------------------- */
+.vs-topic-acoes { display: flex; align-items: center; gap: 8px; }
+.vs-acao-topo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--amb-linha, var(--vs-line));
+  border-radius: 12px;
+  background: var(--amb-vidro, transparent);
+  color: var(--amb-texto, var(--vs-ink));
+  font: 600 .82rem/1 "Space Grotesk", Inter, system-ui, sans-serif;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.vs-acao-topo:hover,
+.vs-acao-topo[aria-expanded="true"] {
+  border-color: color-mix(in srgb, var(--amb-a, var(--vs-burgundy)) 60%, transparent);
+  box-shadow: 0 0 22px -8px var(--amb-a, var(--vs-burgundy));
+}
+.vs-acao-topo svg { width: 16px; height: 16px; color: var(--amb-a, var(--vs-burgundy)); }
+.vs-acao-topo kbd,
+.vs-busca kbd {
+  padding: 2px 6px;
+  border: 1px solid var(--amb-linha, var(--vs-line));
+  border-radius: 6px;
+  color: var(--amb-dim, var(--vs-dim));
+  font: 600 .66rem/1.2 "JetBrains Mono", ui-monospace, monospace;
+}
+@media (max-width: 620px) {
+  .vs-acao-topo span, .vs-acao-topo kbd { display: none; }
+  .vs-acao-topo { width: 38px; padding: 0; justify-content: center; }
+}
+
+/* --- Painel Personalizar -------------------------------------------------- */
+.vs-personalizar { position: relative; }
+.vs-personalizar-painel {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(360px, calc(100vw - 32px));
+  max-height: min(70vh, 620px);
+  overflow: auto;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--amb-linha, var(--vs-line));
+  border-radius: 18px;
+  background: var(--amb-vidro-forte, var(--vs-paper));
+  color: var(--amb-texto, var(--vs-ink));
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, .6), 0 0 0 1px rgba(255, 255, 255, .04) inset;
+  animation: vs-painel-abre .22s cubic-bezier(.2, .8, .2, 1);
+}
+@keyframes vs-painel-abre { from { opacity: 0; transform: translateY(-6px) scale(.98); } }
+.vs-personalizar-cabeca { display: flex; align-items: center; justify-content: space-between; }
+.vs-personalizar-cabeca strong { font: 700 1.05rem/1 "Space Grotesk", Inter, sans-serif; }
+.vs-personalizar-fechar { display: grid; place-items: center; width: 30px; height: 30px; border: 0; border-radius: 8px; background: transparent; color: var(--amb-dim, var(--vs-dim)); cursor: pointer; }
+.vs-personalizar-fechar svg { width: 16px; height: 16px; }
+.vs-personalizar-painel fieldset { margin: 0; padding: 0; border: 0; display: grid; gap: 8px; }
+.vs-personalizar-painel legend { margin-bottom: 8px; color: var(--amb-a, var(--vs-burgundy)); font: 700 .64rem/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .18em; text-transform: uppercase; }
+.vs-personalizar-cores,
+.vs-personalizar-opcoes { display: grid; gap: 6px; }
+.vs-personalizar-cores { grid-template-columns: 1fr 1fr; }
+.vs-personalizar-painel button[aria-pressed] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid var(--amb-linha, var(--vs-line));
+  border-radius: 12px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease;
+}
+.vs-personalizar-painel button[aria-pressed="true"] {
+  border-color: var(--amb-a, var(--vs-burgundy));
+  background: color-mix(in srgb, var(--amb-a, var(--vs-burgundy)) 12%, transparent);
+  box-shadow: 0 0 18px -8px var(--amb-a, var(--vs-burgundy));
+}
+.vs-personalizar-painel button b { display: block; font: 600 .84rem/1.2 "Space Grotesk", Inter, sans-serif; }
+.vs-personalizar-painel button small { display: block; margin-top: 2px; color: var(--amb-dim, var(--vs-dim)); font-size: .7rem; line-height: 1.3; }
+.vs-personalizar-opcoes button[aria-pressed] { display: block; }
+.vs-personalizar-amostra {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, var(--amb-a, #22d3ee), var(--amb-b, #a78bfa), var(--amb-c, #f472b6), var(--amb-a, #22d3ee));
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .08), 0 0 14px -4px var(--amb-a, #22d3ee);
+}
+.vs-personalizar-segmento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.vs-personalizar-segmento button[aria-pressed] { flex-direction: column; justify-content: center; gap: 6px; font: 600 .78rem/1 "Space Grotesk", Inter, sans-serif; }
+.vs-personalizar-fundo { width: 100%; height: 26px; border-radius: 7px; border: 1px solid var(--amb-linha, var(--vs-line)); }
+.vs-personalizar-fundo--aurora { background: radial-gradient(60% 90% at 20% 0%, color-mix(in srgb, var(--amb-b, #a78bfa) 60%, transparent), transparent), radial-gradient(60% 90% at 90% 30%, color-mix(in srgb, var(--amb-a, #22d3ee) 55%, transparent), transparent), var(--amb-fundo, #05070d); }
+.vs-personalizar-fundo--grade { background: linear-gradient(color-mix(in srgb, var(--amb-a, #22d3ee) 30%, transparent) 1px, transparent 1px) 0 0 / 8px 8px, linear-gradient(90deg, color-mix(in srgb, var(--amb-a, #22d3ee) 30%, transparent) 1px, transparent 1px) 0 0 / 8px 8px, var(--amb-fundo, #05070d); }
+.vs-personalizar-fundo--liso { background: var(--amb-fundo, #05070d); }
+
+/* --- Busca rápida (⌘K) ---------------------------------------------------- */
+.vs-busca-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: start center;
+  padding: max(10vh, 70px) 16px 16px;
+  background: rgba(2, 4, 12, .55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  animation: vs-busca-fundo .18s ease;
+}
+@keyframes vs-busca-fundo { from { opacity: 0; } }
+.vs-busca {
+  width: min(620px, 100%);
+  overflow: hidden;
+  border: 1px solid var(--amb-linha, rgba(148, 163, 184, .2));
+  border-radius: 20px;
+  background: var(--amb-vidro-forte, rgba(10, 15, 30, .9));
+  color: var(--amb-texto, #e9eef8);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  backdrop-filter: blur(24px) saturate(150%);
+  box-shadow: 0 40px 120px -30px rgba(0, 0, 0, .8), 0 0 60px -30px var(--amb-a, #22d3ee);
+  animation: vs-painel-abre .24s cubic-bezier(.2, .8, .2, 1);
+}
+.vs-busca-campo { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--amb-linha, rgba(148, 163, 184, .2)); }
+.vs-busca-campo svg { width: 20px; height: 20px; color: var(--amb-a, #22d3ee); flex: none; }
+.vs-busca-campo input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: inherit; font: 500 1.08rem/1.3 "Space Grotesk", Inter, sans-serif; }
+.vs-busca-campo input::placeholder { color: var(--amb-dim, #93a0b8); }
+.vs-busca ul { max-height: min(52vh, 460px); overflow: auto; margin: 0; padding: 6px; list-style: none; }
+.vs-busca li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.vs-busca li[aria-selected="true"] { background: color-mix(in srgb, var(--amb-a, #22d3ee) 12%, transparent); box-shadow: inset 2px 0 var(--amb-a, #22d3ee); }
+.vs-busca-ponto { flex: none; width: 10px; height: 10px; border-radius: 50%; }
+.vs-busca-texto { flex: 1; min-width: 0; display: grid; }
+.vs-busca-texto small { color: var(--amb-dim, #93a0b8); font: 600 .62rem/1.3 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .14em; text-transform: uppercase; }
+.vs-busca-texto b { overflow: hidden; font: 600 .96rem/1.3 "Space Grotesk", Inter, sans-serif; text-overflow: ellipsis; white-space: nowrap; }
+.vs-busca-enter { width: 16px; height: 16px; color: var(--amb-a, #22d3ee); }
+.vs-busca-grupo { display: flex; align-items: center; gap: 6px; margin: 10px 18px 0; color: var(--amb-dim, #93a0b8); font: 700 .62rem/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .16em; text-transform: uppercase; }
+.vs-busca-grupo svg { width: 12px; height: 12px; }
+.vs-busca-vazio { margin: 0; padding: 22px 18px; color: var(--amb-dim, #93a0b8); font-size: .88rem; }
+.vs-busca-rodape { display: flex; align-items: center; gap: 6px; margin: 0; padding: 10px 18px; border-top: 1px solid var(--amb-linha, rgba(148, 163, 184, .2)); color: var(--amb-dim, #93a0b8); font-size: .72rem; }
+.vs-busca-rodape kbd + kbd { margin-left: -2px; }
+@media (prefers-reduced-motion: reduce) {
+  .vs-busca-fundo, .vs-busca, .vs-personalizar-painel { animation: none; }
+}
+
+/* --- Biblioteca ------------------------------------------------------------ */
+.crivo-visual--tech .vs-lib-header {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--amb-linha);
+  background:
+    radial-gradient(60% 80% at 0% 0%, color-mix(in srgb, var(--amb-b) 30%, transparent), transparent 70%),
+    radial-gradient(50% 70% at 100% 10%, color-mix(in srgb, var(--amb-a) 24%, transparent), transparent 70%),
+    var(--amb-vidro-forte) !important;
+  color: var(--amb-texto) !important;
+}
+.crivo-visual--tech .vs-lib-header h1 { font-size: clamp(1.8rem, 4.2vw, 3rem); letter-spacing: -.04em; }
+.crivo-visual--tech .vs-lib-header p { color: var(--amb-dim) !important; }
+.crivo-visual--tech .vs-lib-header > span { background: color-mix(in srgb, var(--amb-a) 16%, transparent) !important; color: var(--amb-a); font-family: "JetBrains Mono", ui-monospace, monospace; }
+.vs-lib-acoes { position: absolute; top: 18px; right: 18px; display: flex; gap: 8px; }
+.crivo-visual--tech .vs-lib-filtros span { color: var(--amb-dim) !important; font-family: "JetBrains Mono", ui-monospace, monospace; font-size: .7rem; letter-spacing: .12em; text-transform: uppercase; }
+.crivo-visual--tech .vs-lib-filtros :is(select, input) {
+  border-color: var(--amb-linha) !important;
+  background: var(--amb-vidro) !important;
+  color: var(--amb-texto);
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+}
+.crivo-visual--tech .vs-lib-filtros :is(select, input):focus { outline: none; border-color: var(--amb-a) !important; box-shadow: 0 0 0 3px color-mix(in srgb, var(--amb-a) 25%, transparent); }
+.crivo-visual--tech .vs-lib-card {
+  position: relative;
+  overflow: hidden;
+  border-color: var(--amb-linha) !important;
+  background: var(--amb-vidro) !important;
+  color: var(--amb-texto);
+  -webkit-backdrop-filter: blur(14px);
+  backdrop-filter: blur(14px);
+  transition: transform .2s ease, border-color .2s ease, box-shadow .2s ease;
+}
+/* Cada cartão acende na cor do próprio capítulo: a mesma do ambiente que abre. */
+.crivo-visual--tech .vs-lib-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 auto 0 0;
+  width: 3px;
+  background: var(--card-cor);
+  box-shadow: 0 0 14px var(--card-cor);
+}
+.crivo-visual--tech .vs-lib-card:hover {
+  transform: translateY(-2px);
+  border-color: color-mix(in srgb, var(--card-cor) 60%, transparent) !important;
+  box-shadow: 0 20px 40px -24px var(--card-cor);
+}
+.crivo-visual--tech .vs-lib-card-materia { color: var(--card-cor) !important; font-family: "JetBrains Mono", ui-monospace, monospace; letter-spacing: .1em; }
+.crivo-visual--tech .vs-lib-card .text-zinc-500 { color: var(--amb-dim); }
+
+/* --- Efeitos e fundo escolhidos no Personalizar ---------------------------- */
+:root[data-efeitos="suave"] .vs-tech-particulas,
+:root[data-efeitos="minimo"] .vs-tech-particulas { display: none; }
+:root[data-efeitos="suave"] .vs-study-board--tech .vs-concept-card,
+:root[data-efeitos="minimo"] .vs-study-board--tech .vs-concept-card { transform: none; }
+:root[data-efeitos="suave"] .vs-study-board--tech::before,
+:root[data-efeitos="minimo"] .vs-study-board--tech::before { display: none; }
+:root[data-efeitos="minimo"] .crivo-visual--tech *,
+:root[data-efeitos="minimo"] .crivo-visual--tech *::before,
+:root[data-efeitos="minimo"] .crivo-visual--tech *::after,
+:root[data-efeitos="minimo"] .vs-study-board--tech { animation: none !important; transition: none !important; }
+:root[data-fundo="grade"] .ni-production-app,
+:root[data-fundo="grade"] .ni-production-app.is-light {
+  background:
+    linear-gradient(color-mix(in srgb, var(--amb-a) 9%, transparent) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, color-mix(in srgb, var(--amb-a) 9%, transparent) 1px, transparent 1px) 0 0 / 32px 32px,
+    var(--amb-fundo);
+}
+:root[data-fundo="liso"] .ni-production-app,
+:root[data-fundo="liso"] .ni-production-app.is-light { background: var(--amb-fundo); }
+:root[data-fundo="liso"] .vs-study-board--tech { background: var(--t-fundo); animation: none; }
+:root[data-fundo="grade"] .vs-study-board--tech {
+  background:
+    linear-gradient(color-mix(in srgb, var(--t-a) 8%, transparent) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, color-mix(in srgb, var(--t-a) 8%, transparent) 1px, transparent 1px) 0 0 / 24px 24px,
+    var(--t-fundo);
+  animation: none;
+}
+/* O tema claro do layout pinta todo input de papel (#fffdf8); na busca isso
+   virava uma faixa amarelada dentro do vidro. */
+.vs-busca-campo input,
+.ni-production-app.is-light .vs-busca-campo input { border: 0; background: transparent; color: inherit; }
+/* Famílias de cena e experimento que declaram Newsreader na própria regra,
+   com especificidade maior que a regra geral acima: sem esta lista, a
+   pergunta das cenas ("Que visões de mundo… Pessoa criou…") seguia em serif
+   dentro da tela tecnológica. */
+.crivo-visual--tech { --font-editorial: "Space Grotesk"; }
+.crivo-visual--tech :is(.topic-studio h4, .tc-scene > header h4, .tc-scene > header small, .ts-equation, .ts-sentence, .ts-letter p, .ta-folio, .ta-heading strong, .ta-seal, .vs-geography-flow li strong),
+.crivo-visual--tech :is(.enzyme-board, .fungi-board) .vs-board-head h2 {
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  letter-spacing: -.02em;
+}
+.crivo-visual--tech .qf-texto--forte { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }

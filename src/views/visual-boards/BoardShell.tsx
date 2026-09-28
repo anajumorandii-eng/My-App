@@ -245,7 +245,12 @@ function iconeDoEstagio(rotulo: string) {
 }
 
 function prefereMenosMovimento() {
-  return typeof window === 'undefined' || !window.matchMedia || window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  if (typeof window === 'undefined' || !window.matchMedia) return true;
+  // O painel Personalizar também desliga o movimento: fora de "completo", o
+  // campo de partículas fica parado e o valor não embaralha.
+  const efeitos = document.documentElement.dataset.efeitos;
+  if (efeitos && efeitos !== 'completo') return true;
+  return window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 }
 
 /**

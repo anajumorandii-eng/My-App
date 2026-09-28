@@ -1,7 +1,7 @@
 import test from 'node:test';
 import assert from 'node:assert/strict';
 import { interactiveSummaries } from '../data/interactiveSummaries';
-import { CAPITULOS_TECNOLOGICOS, PALETAS_MATERIA, ambienteDoCapitulo, normalizar, rgbDe } from './visualAmbiente';
+import { CAPITULOS_TECNOLOGICOS, PALETAS_FIXAS, PALETAS_MATERIA, ambienteDaMateria, ambienteDoCapitulo, normalizar, rgbDe } from './visualAmbiente';
 
 const capitulo = (id: string) => {
   const achado = interactiveSummaries.find((item) => item.id === id);
@@ -37,6 +37,21 @@ test('acento e caixa não mudam a regra', () => {
 });
 
 test('toda paleta é hex válido, porque o canvas das partículas converte a cor', () => {
-  for (const paleta of Object.values(PALETAS_MATERIA)) for (const cor of Object.values(paleta)) assert.match(cor, /^#[0-9a-f]{6}$/);
+  for (const paleta of [...Object.values(PALETAS_MATERIA), ...Object.values(PALETAS_FIXAS)]) for (const cor of Object.values(paleta)) assert.match(cor, /^#[0-9a-f]{6}$/);
   assert.equal(rgbDe('#22d3ee'), '34, 211, 238');
+});
+
+test('a escolha da estudante vence a cor automática, e "só a matéria" ignora o conteúdo', () => {
+  const orbitas = { id: 'summary-fisica-orbitas', subject: 'Física', topic: 'Órbitas' };
+  assert.equal(ambienteDoCapitulo(orbitas, 'Solar').nome, 'Solar');
+  assert.equal(ambienteDoCapitulo(orbitas, 'materia').nome, 'Física');
+  assert.equal(ambienteDoCapitulo(orbitas).nome, 'espaço');
+  assert.equal(ambienteDaMateria('').nome, 'padrão');
+  assert.equal(ambienteDaMateria('Biologia').nome, 'Biologia');
+});
+
+test('regra de conteúdo não atravessa matéria', () => {
+  // "Dinâmica" de populações é Biologia, não a mecânica da Física.
+  assert.equal(ambienteDoCapitulo({ id: 'x', subject: 'Biologia', topic: 'Dinâmica de populações' }).nome, 'Biologia');
+  assert.equal(ambienteDoCapitulo({ id: 'x', subject: 'Física', topic: 'Dinâmica' }).nome, 'mecânica');
 });
