@@ -2397,8 +2397,16 @@
   color: var(--t-a);
   font: 700 1.25rem/1.1 "JetBrains Mono", ui-monospace, monospace;
   font-variant-numeric: tabular-nums;
-  /* "27 × 10¹⁰ J" quebrava em duas linhas no mostrador de 150 px. */
+  /* "27 × 10¹⁰ J" quebrava em duas linhas no mostrador de 150 px. Só o
+     valor curto fica numa linha: em alguns capítulos a condição é uma frase
+     ("microfilamentos de actina: contração…") e, sem quebra, esticava a
+     prancha a 714 px no celular. */
   white-space: nowrap;
+}
+/* data-frase: mais de 18 caracteres, uma frase e não um número. */
+.vs-study-board--tech .vs-q-callout[data-frase] strong {
+  white-space: normal;
+  overflow-wrap: anywhere;
   text-shadow: 0 0 18px color-mix(in srgb, var(--t-a) 60%, transparent);
 }
 /* O pincel vira feixe de luz que percorre a linha. */
@@ -2604,6 +2612,8 @@
     padding: 8px 14px;
   }
   .vs-study-board--tech .vs-q-callout strong { margin-top: 0; font-size: 1.05rem; white-space: nowrap; }
+  .vs-study-board--tech .vs-q-callout[data-frase] { display: grid; max-width: 100%; }
+  .vs-study-board--tech .vs-q-callout[data-frase] strong { white-space: normal; }
 }
 
 /* --- O Visual em volta da prancha ---------------------------------------- */
@@ -2692,7 +2702,11 @@
    quem declarou fonte no próprio elemento tinha razão para isso. */
 .crivo-visual--tech :is(h1, h2, h3, h4, h5, strong, b, figcaption, legend) { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
 .crivo-visual--tech svg text:not(.vs-kit-mono) { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
-.crivo-visual--tech :is(.vs-hand-note, .vs-scene-note text, .vs-plane-note text, .vs-concept-label, .vs-note-title) { font-family: "JetBrains Mono", ui-monospace, monospace; font-style: normal; }
+/* Anotações de cena ficam em fonte proporcional: foram posicionadas para a
+   Kalam, e em monoespaçada ("quanto mais alto, mais frio", "a hierarquia não
+   é fixa") saíam do quadro da cena. Monoespaçada só em rótulo curto. */
+.crivo-visual--tech :is(.vs-scene-note text, .vs-plane-note text) { font-family: "Space Grotesk", Inter, system-ui, sans-serif; font-style: normal; }
+.crivo-visual--tech :is(.vs-hand-note, .vs-concept-label, .vs-note-title) { font-family: "JetBrains Mono", ui-monospace, monospace; font-style: normal; }
 .crivo-visual--tech :is(code, kbd, samp) { font-family: "JetBrains Mono", ui-monospace, monospace; }
 
 /* --- Biblioteca ------------------------------------------------------------ */
@@ -2757,3 +2771,13 @@
   letter-spacing: -.02em;
 }
 .crivo-visual--tech .qf-texto--forte { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
+
+/* A barra do capítulo empurrava a página para o lado no celular (até 744 px
+   em "Citoplasma: estrutura e componentes II"). O contêiner da tela é uma
+   grade sem coluna declarada: a coluna implícita cresce até o conteúdo mais
+   largo, e a trilha "matéria / tópico" em monoespaçada não quebrava. A
+   coluna agora não passa da tela, e o texto longo vira reticências. */
+.crivo-visual { grid-template-columns: minmax(0, 1fr); }
+.vs-topic-bar { max-width: 100%; min-width: 0; }
+.vs-topic-identity > span,
+.vs-topic-identity > strong { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
