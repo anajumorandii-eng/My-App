@@ -1,25 +1,10 @@
 import { AiGenerationError } from './errors';
-import { AiGenerationRequest, AiProvider, AiProviderResult, AiStream, AiTask } from './types';
-
-const DEFAULT_DEEP_MODEL = 'juju-deep-v1';
-const DEFAULT_FAST_MODEL = 'juju-fast-v1';
-
-const DEEP_TASKS = new Set<AiTask>([
-  'socratic',
-  'content-explanation',
-  'answer-correction',
-  'error-hypothesis',
-  'question-explanation',
-  'backlog-exercise',
-  'backlog-correction',
-  'discursive-feedback',
-]);
+import { AiGenerationRequest, AiProvider, AiProviderResult, AiStream } from './types';
 
 export interface OmniRouteOptions {
   baseUrl: string | undefined;
   apiKey: string | undefined;
-  deepModel?: string;
-  fastModel?: string;
+  model: string | undefined;
   fetch?: typeof fetch;
 }
 
@@ -64,69 +49,32 @@ function normalizedBaseUrl(value: string | undefined): string {
   return (value ?? '').trim().replace(/\/+$/, '');
 }
 
-export function selectOmniRouteModel(
-  task: AiTask,
-  deepModel = DEFAULT_DEEP_MODEL,
-  fastModel = DEFAULT_FAST_MODEL,
-): string {
-  return DEEP_TASKS.has(task) ? deepModel : fastModel;
-}
-
 export class OmniRouteProvider implements AiProvider {
   readonly name = 'omniroute';
-  readonly model = 'task-aware';
+  readonly model: string;
   readonly isConfigured: boolean;
 
   private readonly baseUrl: string;
   private readonly apiKey: string;
-  private readonly deepModel: string;
-  private readonly fastModel: string;
   private readonly fetchFn: typeof fetch;
 
   constructor(options: OmniRouteOptions) {
     this.baseUrl = normalizedBaseUrl(options.baseUrl);
     this.apiKey = options.apiKey?.trim() ?? '';
-    this.deepModel = options.deepModel?.trim() || DEFAULT_DEEP_MODEL;
-    this.fastModel = options.fastModel?.trim() || DEFAULT_FAST_MODEL;
+    this.model = options.model?.trim() ?? '';
     this.fetchFn = options.fetch ?? fetch;
-    this.isConfigured = Boolean(this.baseUrl && this.apiKey);
+    this.isConfigured = Boolean(this.baseUrl && this.apiKey && this.model);
   }
 
-  modelForTask(task: AiTask): string {
-    return selectOmniRouteModel(task, this.deepModel, this.fastModel);
-  }
-
-  async generate({ task, prompt, signal }: AiGenerationRequest): Promise<AiProviderResult> {
+  async generate({ prompt, signal }: AiGenerationRequest): Promise<AiProviderResult> {
     if (!this.isConfigured) throw new Error('OmniRoute API not configured.');
-
-    const primaryModel = this.modelForTask(task);
-    try {
-      return await this.complete(primaryModel, prompt, signal);
-    } catch (error) {
-      if (primaryModel === this.fastModel || signal?.aborted) throw error;
-      const fallback = await this.complete(this.fastModel, prompt, signal);
-      return { ...fallback, fallback: true };
-    }
+    return this.complete(this.model, prompt, signal);
   }
 
-  /**
-   * Mesma seleção de modelo e mesmo fallback do generate(), mas o fallback só
-   * vale antes do primeiro pedaço de texto: depois que a aluna já começou a
-   * ler, recomeçar com outro modelo trocaria a resposta debaixo dos olhos dela.
-   */
-  async *generateStream({ task, prompt, signal }: AiGenerationRequest): AiStream {
+  /** Gera texto em fluxo com o único modelo configurado. */
+  async *generateStream({ prompt, signal }: AiGenerationRequest): AiStream {
     if (!this.isConfigured) throw new Error('OmniRoute API not configured.');
-
-    const primaryModel = this.modelForTask(task);
-    let emitiu = false;
-
-    try {
-      return yield* this.streamComplete(primaryModel, prompt, signal, () => { emitiu = true; });
-    } catch (error) {
-      if (emitiu || primaryModel === this.fastModel || signal?.aborted) throw error;
-      const fallback = yield* this.streamComplete(this.fastModel, prompt, signal);
-      return { ...fallback, fallback: true };
-    }
+    return yield* this.streamComplete(this.model, prompt, signal);
   }
 
   private async *streamComplete(model: string, prompt: string, signal?: AbortSignal, onDelta?: () => void): AiStream {
