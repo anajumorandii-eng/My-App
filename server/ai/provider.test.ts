@@ -9,11 +9,12 @@ test('seleciona o OmniRoute explicitamente', () => {
     AI_PROVIDER: 'omniroute',
     OMNIROUTE_API_KEY: 'secret-test-key',
     OMNIROUTE_BASE_URL: 'https://omniroute.test/v1',
-    AI_DEEP_MODEL: 'juju-deep-v1',
+    AI_MODEL: 'modelo-crivo',
   });
 
   assert.ok(provider instanceof OmniRouteProvider);
   assert.equal(provider.isConfigured, true);
+  assert.equal(provider.model, 'modelo-crivo');
 });
 
 test('preserva Gemini como fallback compatível', () => {
@@ -27,6 +28,7 @@ test('aceita a configuração do proxy Tailscale', () => {
     OMNIROUTE_API_KEY: 'secret-test-key',
     OMNIROUTE_BASE_URL: 'https://omniroute.test/v1',
     OMNIROUTE_PROXY_URL: 'http://localhost:1055',
+    AI_MODEL: 'modelo-crivo',
   });
 
   assert.ok(provider instanceof OmniRouteProvider);
