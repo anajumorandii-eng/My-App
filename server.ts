@@ -69,8 +69,7 @@ app.use(cookieParser());
 
 // Provider-neutral AI layer. Set AI_PROVIDER=omniroute to migrate without
 // changing the public API routes; Gemini remains available as a fallback.
-// Secrets stay server-side and task routing is resolved by OmniRoute between
-// the JUJU fast and deep combos.
+// Secrets stay server-side; all text tasks use the single configured OmniRoute model.
 const aiProvider = createAiProvider();
 const aiService = new AiService(aiProvider, parseAiTimeout(process.env.AI_TIMEOUT_MS));
 const dailyQuotaStore = process.env.AI_QUOTA_STORE === 'firestore'
