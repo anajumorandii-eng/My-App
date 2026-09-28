@@ -14,6 +14,7 @@ import { Skeleton } from './ui/Skeleton';
 import { AmbienteProvider, useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
 import { BotaoBuscar, BuscaRapida } from '../views/visual-boards/BuscaRapida';
 import { PainelPersonalizar } from '../views/visual-boards/PainelPersonalizar';
+import { FundoCaderno } from './FundoCaderno';
 
 const PATH_BY_SCREEN: Record<string, string> = {
   hoje: '/', diagnostico: '/diagnostico', plano: '/plano', agenda: '/agenda', 'reta-final': '/reta-final', recuperacao: '/recuperacao',
@@ -118,6 +119,7 @@ function LayoutComAmbiente() {
 
   return (
     <div className={cn('ni-prototype ni-production-app', !isDark && 'is-light')} style={{ '--primary': palette.primary, '--primary-ink': palette.readable, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties} data-family={palette.family}>
+      {ambienteApp?.preferencias.fundo === 'caderno' && <FundoCaderno materia={ambienteApp.sobreposto?.materia} />}
       <header className="ni-production-mobile lg:hidden">
         <IconButton aria-label="Abrir menu" onClick={() => setMenuOpen(true)}><Menu className="h-5 w-5" aria-hidden="true" /></IconButton>
         <strong>Crivo</strong>

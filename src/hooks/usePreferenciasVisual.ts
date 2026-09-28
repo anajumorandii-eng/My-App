@@ -14,7 +14,14 @@ import { PALETAS_FIXAS, type ModoCor } from '../lib/visualAmbiente';
  * privada) a tela abre no padrão e a escolha vale só nesta visita.
  */
 export type Efeitos = 'completo' | 'suave' | 'minimo';
-export type Fundo = 'aurora' | 'grade' | 'liso';
+/**
+ * `caderno` é papel envelhecido com os rabiscos da matéria; `papel`, o mesmo
+ * papel sem rabiscos. Caderno é o padrão desde que a Ana Júlia pediu o fundo da
+ * bancada óptica na tela inteira; quem já tinha escolhido outro fica com ele.
+ */
+export type Fundo = 'caderno' | 'papel' | 'aurora' | 'grade' | 'liso';
+
+const FUNDOS: readonly Fundo[] = ['caderno', 'papel', 'aurora', 'grade', 'liso'];
 
 export interface PreferenciasVisual {
   cor: ModoCor;
@@ -22,7 +29,7 @@ export interface PreferenciasVisual {
   fundo: Fundo;
 }
 
-export const PREFERENCIAS_PADRAO: PreferenciasVisual = { cor: 'automatica', efeitos: 'completo', fundo: 'aurora' };
+export const PREFERENCIAS_PADRAO: PreferenciasVisual = { cor: 'automatica', efeitos: 'completo', fundo: 'caderno' };
 
 const CHAVE = 'crivo_visual_preferencias';
 
@@ -32,7 +39,7 @@ export function lerPreferencias(bruto: string | null): PreferenciasVisual {
     const dado = JSON.parse(bruto ?? '{}') as Partial<PreferenciasVisual>;
     const cor = dado.cor === 'automatica' || dado.cor === 'materia' || (typeof dado.cor === 'string' && dado.cor in PALETAS_FIXAS) ? dado.cor : PREFERENCIAS_PADRAO.cor;
     const efeitos = dado.efeitos === 'suave' || dado.efeitos === 'minimo' || dado.efeitos === 'completo' ? dado.efeitos : PREFERENCIAS_PADRAO.efeitos;
-    const fundo = dado.fundo === 'grade' || dado.fundo === 'liso' || dado.fundo === 'aurora' ? dado.fundo : PREFERENCIAS_PADRAO.fundo;
+    const fundo = FUNDOS.includes(dado.fundo as Fundo) ? (dado.fundo as Fundo) : PREFERENCIAS_PADRAO.fundo;
     return { cor, efeitos, fundo };
   } catch {
     return PREFERENCIAS_PADRAO;

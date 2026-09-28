@@ -350,7 +350,11 @@ export function montarBancada(
   let p = pInicial;
 
   const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 1.5));
+  // Até 2×: o iPhone tem tela 3× e, com o teto antigo de 1,5×, a cena era
+  // desenhada com metade dos pixels e esticada — o traço a tinta e o anel de
+  // latão saíam serrilhados. 3× custaria mais que o dobro de 2× num palco que
+  // ocupa só a coluna do cartão.
+  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
   renderer.shadowMap.enabled = true;
   renderer.shadowMap.type = THREE.VSMShadowMap;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
@@ -368,7 +372,12 @@ export function montarBancada(
   scene.environment = ambiente;
   scene.environmentIntensity = 0.45;
 
-  const composer = new EffectComposer(renderer);
+  // O antialiasing do WebGLRenderer só vale para o que ele desenha direto na
+  // tela; com pós-processamento, a cena vai para um alvo intermediário sem
+  // amostragem e as arestas voltavam serrilhadas. O alvo com 4 amostras (MSAA)
+  // devolve o antialiasing às linhas finas: contorno, raios e cotas.
+  const alvo = new THREE.WebGLRenderTarget(1, 1, { type: THREE.HalfFloatType, samples: 4 });
+  const composer = new EffectComposer(renderer, alvo);
   composer.addPass(new RenderPass(scene, camera));
   // Brilho só no escuro: no claro o creme passa do limiar e a cena inteira
   // estouraria. Limiar alto: brilham seta, raios e focos, que são luz; o latão
@@ -626,7 +635,7 @@ export function montarBancada(
   }
 
   // ---- Câmera e rótulos ----
-  const alvo = new THREE.Vector3(-1.3, 1.9, 0);
+  const foco3d = new THREE.Vector3(-1.3, 1.9, 0);
   function posicionarCamera(t: number) {
     // Baixa, na diagonal do trilho: a caixa de luz em primeiro plano, a lente
     // no meio e o anteparo ao fundo. De frente, a bancada inteira cabia na
@@ -638,8 +647,8 @@ export function montarBancada(
     // retrato a câmera chegava perto demais e cortava a frente do trilho.
     const d = THREE.MathUtils.clamp(Math.max(6.0 / (Math.tan(meia) * (w / h)), 3.3 / Math.tan(meia)), 9, 20);
     const tt = opcoes.movimento ? t : 0, ang = -0.66 + Math.sin(tt * 0.1) * 0.08;
-    camera.position.set(alvo.x + Math.sin(ang) * d, alvo.y + d * (0.14 + Math.sin(tt * 0.07) * 0.012), Math.cos(ang) * d);
-    camera.lookAt(alvo);
+    camera.position.set(foco3d.x + Math.sin(ang) * d, foco3d.y + d * (0.14 + Math.sin(tt * 0.07) * 0.012), Math.cos(ang) * d);
+    camera.lookAt(foco3d);
     // Atualizada aqui, antes de projetar os rótulos: sem isso eles saíam na
     // posição do quadro anterior, e sob demanda ficavam fora da cena.
     camera.updateMatrixWorld();
