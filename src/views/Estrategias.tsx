@@ -19,7 +19,6 @@ const TABS: { id: Tab; label: string }[] = [
   { id: 'segunda-fase', label: '2ª Fase (Discursiva)' },
 ];
 
-const ESTRATEGIA_PALETTE = PALETTES.Filosofia;
 
 export default function Estrategias() {
   const [tab, setTab] = useState<Tab>('metodo');
@@ -27,14 +26,7 @@ export default function Estrategias() {
   const [expandedProtocol, setExpandedProtocol] = useState<string | null>(null);
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': ESTRATEGIA_PALETTE.primary, '--primary-ink': ESTRATEGIA_PALETTE.readable,
-        '--secondary': ESTRATEGIA_PALETTE.secondary,
-        '--wash': ESTRATEGIA_PALETTE.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>ANÁLISE</span>
@@ -55,9 +47,7 @@ export default function Estrategias() {
           <h1>Onde cada ponto da prova mora.</h1>
           <p>Como pensar diante de uma questão: o método geral, nuances por matéria, estilo de banca e protocolos discursivos.</p>
         </div>
-        <div className="ni-state">
-          <i /> heurísticas ativas · Crivo Tático
-        </div>
+        {/* O selo dizia "heurísticas ativas · Crivo Tático": nome interno, sem dado nenhum por trás. */}
       </div>
 
       {/* Tab filter bar */}
@@ -70,7 +60,7 @@ export default function Estrategias() {
               onClick={() => setTab(t.id)}
               style={
                 active
-                  ? { backgroundColor: ESTRATEGIA_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >
@@ -91,7 +81,7 @@ export default function Estrategias() {
               <Panel key={s.step} subject="Filosofia" interactive className="ni-panel p-4 flex items-start gap-3">
                 <span
                   className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
-                  style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: PALETTE_INK }}
+                  style={{ backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' }}
                 >
                   {s.step}
                 </span>
@@ -212,7 +202,7 @@ export default function Estrategias() {
                         <div key={step.letter} className="flex items-start gap-3">
                           <span
                             className="w-6 h-6 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
-                            style={{ backgroundColor: ESTRATEGIA_PALETTE.primary, color: PALETTE_INK }}
+                            style={{ backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' }}
                           >
                             {step.letter}
                           </span>

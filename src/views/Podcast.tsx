@@ -41,7 +41,6 @@ const VOICE_OPTIONS: { value: string; label: string }[] = [
 const DEFAULT_VOICE = 'Charon';
 
 const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in window;
-const PODCAST_PALETTE = PALETTES.História;
 
 export default function Podcast() {
   const { profile, updateProfile } = useUserProfile();
@@ -63,6 +62,10 @@ export default function Podcast() {
     () => orderByDurationPreference(episodes, durationPreference),
     [episodes, durationPreference]
   );
+  // Os 87 episódios abriam de uma vez (8 mil pixels). A ordem já reflete a
+  // faixa de duração escolhida; o resto fica a um toque.
+  const [visiveis, setVisiveis] = useState(12);
+  useEffect(() => { setVisiveis(12); }, [orderedEpisodes]);
 
   const matchingCount = useMemo(
     () => (durationPreference ? episodes.filter((e) => bucketOf(e.durationMinutes) === durationPreference).length : 0),
@@ -170,17 +173,10 @@ export default function Podcast() {
   };
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': PODCAST_PALETTE.primary, '--primary-ink': PODCAST_PALETTE.readable,
-        '--secondary': PODCAST_PALETTE.secondary,
-        '--wash': PODCAST_PALETTE.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
-        <span>LIBRARY</span>
+        <span>Biblioteca</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
           <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
@@ -199,7 +195,7 @@ export default function Podcast() {
           <p>Resumos narrados com voz neural de alta fidelidade — perfeito para assimilar e revisar no trajeto.</p>
         </div>
         <div className="ni-state">
-          <i /> {orderedEpisodes.length} episódios · Crivo Audio
+          <i /> {orderedEpisodes.length} episódios
         </div>
       </div>
 
@@ -227,7 +223,7 @@ export default function Podcast() {
                   onClick={() => setVoiceName(value)}
                   style={
                     active
-                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                      ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                       : undefined
                   }
                 >
@@ -252,7 +248,7 @@ export default function Podcast() {
                   onClick={() => setDurationPreference(value)}
                   style={
                     active
-                      ? { backgroundColor: PODCAST_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                      ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                       : undefined
                   }
                 >
@@ -271,7 +267,7 @@ export default function Podcast() {
 
       {/* Episode list */}
       <div className="space-y-3">
-        {orderedEpisodes.map((episode) => {
+        {orderedEpisodes.slice(0, visiveis).map((episode) => {
           const isPlaying = playingId === episode.id;
           const isLoadingAudio = loadingId === episode.id;
           const isGenerating = generatingId === episode.id;
@@ -355,6 +351,15 @@ export default function Podcast() {
             </Panel>
           );
         })}
+        {orderedEpisodes.length > visiveis && (
+          <button
+            type="button"
+            onClick={() => setVisiveis((n) => n + 12)}
+            className="w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-4 py-2.5 text-sm font-medium text-[var(--text)] hover:border-[var(--primary)]"
+          >
+            Mostrar mais {Math.min(12, orderedEpisodes.length - visiveis)} de {orderedEpisodes.length - visiveis} restantes
+          </button>
+        )}
       </div>
     </div>
   );

@@ -10,7 +10,6 @@ import {
 } from '../lib/googleConnection';
 import { isoToLocalDate } from '../features/availability/time';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 
 export default function Conexoes() {
   // Dois estados diferentes, que antes viviam colapsados num só: estar logada
@@ -131,17 +130,9 @@ export default function Conexoes() {
     }
   };
 
-  const currentPalette = PALETTES.Filosofia;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
-        '--secondary': currentPalette.secondary,
-        '--wash': currentPalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>FERRAMENTAS</span>

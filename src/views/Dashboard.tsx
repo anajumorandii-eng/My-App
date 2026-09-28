@@ -252,17 +252,11 @@ export default function Dashboard() {
     );
   }
 
-  const palette = PALETTES[primary?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
 
   return (
       <main
         className="ni-main crivo-observatorio-home"
         data-geometry="organic"
-        style={{
-          '--primary': palette.primary, '--primary-ink': palette.readable,
-          '--secondary': palette.secondary,
-          '--wash': palette.wash,
-        } as React.CSSProperties}
       >
         <div className="ni-route">
           <span>DECISÃO</span>

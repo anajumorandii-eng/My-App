@@ -467,17 +467,9 @@ export default function Recuperacao() {
     setExpandedId(null);
   };
 
-  const basePalette = PALETTES.Matemática;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': basePalette.primary, '--primary-ink': basePalette.readable,
-        '--secondary': basePalette.secondary,
-        '--wash': basePalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>DECISÃO</span>
@@ -519,7 +511,7 @@ export default function Recuperacao() {
           onClick={() => setShowAddForm((v) => !v)}
           style={
             showAddForm
-              ? { backgroundColor: basePalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+              ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
               : undefined
           }
         >
@@ -530,7 +522,7 @@ export default function Recuperacao() {
           onClick={() => setShowTracks((v) => !v)}
           style={
             showTracks
-              ? { backgroundColor: basePalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+              ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
               : undefined
           }
         >

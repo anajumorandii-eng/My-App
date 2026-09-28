@@ -1,4 +1,4 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { TopicMastery } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
@@ -13,6 +13,8 @@ import SummaryReviewsPanel from '../components/SummaryReviewsPanel';
 import { Panel } from '../components/ui/Panel';
 import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria } from '../lib/visualAmbiente';
 
 type SelfRating = 'fraco' | 'mediano' | 'forte';
 
@@ -28,6 +30,15 @@ export default function Revisoes() {
   const [tips, setTips] = useState<Record<string, string>>({});
   const [loadingTipFor, setLoadingTipFor] = useState<string | null>(null);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
+  // A fila chegava a 105 cartões numa página de 24 mil pixels. Ela já vem
+  // ordenada por urgência: as primeiras dizem o que fazer agora.
+  const [visiveis, setVisiveis] = useState(10);
+  useEffect(() => { setVisiveis(10); }, [subjectFilter]);
+  // A cor da tela segue a matéria em foco pelo ambiente do app, em vez da
+  // paleta que antes ficava fixa no contêiner e vencia o ambiente.
+  const materiaDoAmbiente = subjectFilter !== 'Todas' ? subjectFilter : null;
+  const ambiente = useMemo(() => (materiaDoAmbiente ? ambienteDaMateria(materiaDoAmbiente) : null), [materiaDoAmbiente]);
+  useAmbienteDaTela(ambiente);
 
   const queue = useMemo(() => {
     return masteryState
@@ -77,21 +88,13 @@ export default function Revisoes() {
     }
   };
 
-  const currentPalette = PALETTES[subjectFilter] ?? PALETTES.Matemática;
   const FirstIcon = SUBJECT_ICONS[queue[0]?.topic?.subject ?? 'Matemática'] ?? Repeat;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
-        '--secondary': currentPalette.secondary,
-        '--wash': currentPalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
-        <span>PRACTICE</span>
+        <span>Estudar</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
           <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
@@ -129,16 +132,17 @@ export default function Revisoes() {
           const Icon = SUBJECT_ICONS[subj] ?? Repeat;
           const subPalette = PALETTES[subj] ?? PALETTES.Matemática;
           return (
+            // O estado ativo vem do design system (.ni-subjects button.active),
+            // como nas Questões: o estilo inline pintava a aba com a paleta da
+            // matéria, e "Todas", que não é matéria, caía no azul de Matemática.
             <button
               key={subj}
               onClick={() => setSubjectFilter(subj)}
-              style={
-                active
-                  ? { backgroundColor: subPalette.primary, color: PALETTE_INK, display: 'inline-flex', alignItems: 'center', gap: '6px', borderRadius: '4px', padding: '2px 8px' }
-                  : { display: 'inline-flex', alignItems: 'center', gap: '6px' }
-              }
+              className={active ? 'active' : ''}
+              aria-pressed={active}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
             >
-              {subj !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? PALETTE_INK : subPalette.primary }} />}
+              {subj !== 'Todas' && <Icon className="w-3 h-3" style={{ color: subPalette.primary }} />}
               <span>{subj}</span>
             </button>
           );
@@ -168,7 +172,7 @@ export default function Revisoes() {
 
       {/* Reviews queue */}
       <div className="space-y-3 mt-4">
-        {filteredQueue.map(({ mastery, topic, urgency }) => {
+        {filteredQueue.slice(0, visiveis).map(({ mastery, topic, urgency }) => {
           const tip = tips[mastery.topicId];
           const isLoadingTip = loadingTipFor === mastery.topicId;
           const subPalette = PALETTES[topic!.subject] ?? PALETTES.Matemática;
@@ -198,13 +202,16 @@ export default function Revisoes() {
                   </div>
                 </div>
                 <div className="flex items-center shrink-0 ml-4 gap-3">
-                  <div className="hidden sm:flex items-center w-28">
+                  {/* A barra não dizia o que media: ao lado de "Domínio: 20%", um
+                      "100%" solto parecia outro domínio. É a urgência da revisão. */}
+                  <div className="hidden sm:flex items-center w-40" title="Urgência da revisão">
+                    <span className="text-[10px] font-mono uppercase tracking-wide text-[var(--dim)] mr-2">Urgência</span>
                     <div className="w-full h-1.5 bg-[var(--surface2)] rounded-full overflow-hidden mr-2">
                       <div
                         className="h-full rounded-full"
                         style={{
                           width: `${urgency}%`,
-                          backgroundColor: urgency > 70 ? '#e08391' : urgency > 40 ? '#efbf61' : '#86dca5',
+                          backgroundColor: urgency > 70 ? 'var(--status-error)' : urgency > 40 ? 'var(--status-warning)' : 'var(--status-success)',
                         }}
                       />
                     </div>
@@ -251,6 +258,15 @@ export default function Revisoes() {
             </Panel>
           );
         })}
+        {filteredQueue.length > visiveis && (
+          <button
+            type="button"
+            onClick={() => setVisiveis((n) => n + 10)}
+            className="w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-4 py-2.5 text-sm font-medium text-[var(--text)] hover:border-[var(--primary)]"
+          >
+            Mostrar mais {Math.min(10, filteredQueue.length - visiveis)} de {filteredQueue.length - visiveis} restantes
+          </button>
+        )}
       </div>
     </div>
   );

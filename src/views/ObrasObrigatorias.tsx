@@ -11,7 +11,6 @@ import {
   startFlashcardSessionSnapshot,
 } from '../lib/flashcardSessionFlow';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 function toSessionCard(card: WorkFlashcard): SessionCard {
@@ -74,21 +73,13 @@ export default function ObrasObrigatorias() {
     setSessionCards((snapshot) => clearFlashcardSessionSnapshot(snapshot));
   };
 
-  const currentPalette = PALETTES.Literatura;
   const LitIcon = SUBJECT_ICONS['Literatura'] ?? BookOpen;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
-        '--secondary': currentPalette.secondary,
-        '--wash': currentPalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
-        <span>LIBRARY</span>
+        <span>Biblioteca</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
           <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">

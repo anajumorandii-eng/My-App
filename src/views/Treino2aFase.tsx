@@ -24,6 +24,8 @@ import {
 import { Panel } from '../components/ui/Panel';
 import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria } from '../lib/visualAmbiente';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -83,6 +85,11 @@ export default function Treino2aFase() {
   );
 
   const question = pool.length > 0 ? pool[index % pool.length] : null;
+  // A cor da tela segue a matéria em foco pelo ambiente do app, em vez da
+  // paleta que antes ficava fixa no contêiner e vencia o ambiente.
+  const materiaDoAmbiente = question?.subject ?? null;
+  const ambiente = useMemo(() => (materiaDoAmbiente ? ambienteDaMateria(materiaDoAmbiente) : null), [materiaDoAmbiente]);
+  useAmbienteDaTela(ambiente);
 
   const [answer, setAnswer] = useState('');
   const [revealed, setRevealed] = useState(false);
@@ -163,21 +170,13 @@ export default function Treino2aFase() {
   };
 
   const attemptCountForQuestion = question ? attempts.filter((a) => a.questionId === question.id).length : 0;
-  const currentPalette = PALETTES[question?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
   const SubjIcon = SUBJECT_ICONS[question?.subject ?? 'Matemática'] ?? ClipboardEdit;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
-        '--secondary': currentPalette.secondary,
-        '--wash': currentPalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
-        <span>PRACTICE</span>
+        <span>Estudar</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
           <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
@@ -196,7 +195,7 @@ export default function Treino2aFase() {
           <p>Questões abertas com rubrica analítica — treine a argumentação e o rigor exigidos na segunda fase.</p>
         </div>
         <div className="ni-state">
-          <i /> {pool.length} questões disponíveis · Crivo Discursivo
+          <i /> {pool.length} questões disponíveis
         </div>
       </div>
 
@@ -223,7 +222,7 @@ export default function Treino2aFase() {
                 }}
                 style={
                   active
-                    ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                    ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                     : undefined
                 }
               >
@@ -242,13 +241,13 @@ export default function Treino2aFase() {
               <button
                 key={s}
                 onClick={() => { changeFilter(setSubjectFilter, s); changeFilter(setTopicFilter, 'Todos'); }}
-                style={
-                  active
-                    ? { backgroundColor: subPal.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px', display: 'inline-flex', alignItems: 'center', gap: '5px' }
-                    : { display: 'inline-flex', alignItems: 'center', gap: '5px' }
-                }
+                // Estado ativo pelo design system, como nas Questões e nas
+                // Revisões: "Todas", que não é matéria, caía no azul de Matemática.
+                className={active ? 'active' : ''}
+                aria-pressed={active}
+                style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}
               >
-                {s !== 'Todas' && <Icon className="w-3 h-3" style={{ color: active ? PALETTE_INK : subPal.primary }} />}
+                {s !== 'Todas' && <Icon className="w-3 h-3" style={{ color: subPal.primary }} />}
                 <span>{s}</span>
               </button>
             );
@@ -264,7 +263,7 @@ export default function Treino2aFase() {
                 onClick={() => changeFilter(setTopicFilter, t)}
                 style={
                   active
-                    ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                    ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                     : undefined
                 }
               >
@@ -293,7 +292,7 @@ export default function Treino2aFase() {
             <div className="flex items-center gap-2 flex-wrap">
               <span
                 className="text-[10px] font-mono font-semibold px-2.5 py-1 rounded-full"
-                style={{ backgroundColor: currentPalette.primary, color: PALETTE_INK }}
+                style={{ backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' }}
               >
                 {question.board} {question.year}
               </span>
@@ -346,7 +345,7 @@ export default function Treino2aFase() {
                     <div key={step.letter} className="flex items-start text-xs">
                       <span
                         className="w-5 h-5 rounded-full flex items-center justify-center mr-2 shrink-0 font-bold text-[10px] font-mono"
-                        style={{ backgroundColor: currentPalette.primary, color: PALETTE_INK }}
+                        style={{ backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' }}
                       >
                         {step.letter}
                       </span>
@@ -461,7 +460,7 @@ export default function Treino2aFase() {
                       onClick={() => rate(r.value)}
                       disabled={rating !== null}
                       className="px-3 py-2 rounded-lg text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] hover:border-[var(--primary)] text-[var(--text)] transition-colors disabled:opacity-60"
-                      style={rating === r.value ? { backgroundColor: currentPalette.primary, color: PALETTE_INK } : undefined}
+                      style={rating === r.value ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' } : undefined}
                     >
                       {r.label}
                     </button>

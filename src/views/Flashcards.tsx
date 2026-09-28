@@ -27,7 +27,6 @@ import FlashcardSession, { SessionCard } from '../components/FlashcardSession';
 import { getMotionConfigForSubject } from '../design-system/crivoMotionPresets';
 import { motion } from 'motion/react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 // Contagens conhecidas de antemão (conteúdo estático) — evita ter que
@@ -298,7 +297,7 @@ export default function Flashcards() {
     <div className="ni-main">
       {/* Breadcrumb Route */}
       <div className="ni-route">
-        <span>PRACTICE</span>
+        <span>Estudar</span>
         <i />
         <span>REPETIÇÃO ESPAÇADA</span>
         {navigation.subject && (
@@ -314,9 +313,7 @@ export default function Flashcards() {
           <h1>Recuperação ativa com ritmo de fixação.</h1>
           <p>Repetição espaçada por cartão — cada conceito se ajusta em tempo real pelo seu domínio.</p>
         </div>
-        <div className="ni-state">
-          <i /> baralhos integrados · Crivo
-        </div>
+        {/* O selo dizia "baralhos integrados · Crivo": nome interno, sem dado nenhum por trás. */}
       </div>
 
       {!isPersisted && (

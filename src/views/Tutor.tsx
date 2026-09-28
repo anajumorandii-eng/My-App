@@ -9,8 +9,9 @@ import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, Calenda
 import { useUserMastery } from '../hooks/useUserMastery';
 import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria } from '../lib/visualAmbiente';
 
 const DISCURSIVE_BOARDS = ['Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp'];
 
@@ -613,21 +614,18 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
 export default function Tutor() {
   const [mode, setMode] = useState<Mode>('duvida');
   const picker = useTopicPicker();
-  const currentPalette = PALETTES[picker.topic.subject] ?? PALETTES.Filosofia;
   const SubIcon = SUBJECT_ICONS[picker.topic.subject] ?? Brain;
+  // A cor da tela segue a matéria em foco pelo ambiente do app, em vez da
+  // paleta que antes ficava fixa no contêiner e vencia o ambiente.
+  const materiaDoAmbiente = picker.topic.subject;
+  const ambiente = useMemo(() => (materiaDoAmbiente ? ambienteDaMateria(materiaDoAmbiente) : null), [materiaDoAmbiente]);
+  useAmbienteDaTela(ambiente);
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
-        '--secondary': currentPalette.secondary,
-        '--wash': currentPalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
-        <span>LIBRARY</span>
+        <span>Biblioteca</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
           <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
@@ -646,7 +644,7 @@ export default function Tutor() {
           <p>IA socrática que guia sem dar a resposta — o entendimento vem do seu próprio percurso.</p>
         </div>
         <div className="ni-state">
-          <i /> Crivo Socrático · {picker.topic.subject}
+          <i /> {picker.topic.subject} · {picker.topic.name}
         </div>
       </div>
 
@@ -660,7 +658,7 @@ export default function Tutor() {
               onClick={() => setMode(m.value)}
               style={
                 active
-                  ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >

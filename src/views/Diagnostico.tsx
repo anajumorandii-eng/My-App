@@ -27,6 +27,8 @@ import { CrivoCore, CrivoCoreState } from '../components/CrivoCore';
 import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 import { cn } from '../lib/cn';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria } from '../lib/visualAmbiente';
 
 const STATE_BASE_LEVEL: Record<number, number> = { 0: 8, 1: 28, 2: 50, 3: 72, 4: 92 };
 
@@ -426,7 +428,11 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
   };
 
   const currentSubject = topic?.subject ?? subjectFilter;
-  const currentPalette = PALETTES[currentSubject] ?? PALETTES.Matemática;
+  // A cor da tela segue a matéria em foco pelo ambiente do app, em vez da
+  // paleta que antes ficava fixa no contêiner e vencia o ambiente.
+  const materiaDoAmbiente = currentSubject;
+  const ambiente = useMemo(() => (materiaDoAmbiente ? ambienteDaMateria(materiaDoAmbiente) : null), [materiaDoAmbiente]);
+  useAmbienteDaTela(ambiente);
   const SubIcon = SUBJECT_ICONS[currentSubject] ?? Stethoscope;
 
   const coreState: CrivoCoreState | null = !topic
@@ -440,14 +446,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
           : 'idle';
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
-        '--secondary': currentPalette.secondary,
-        '--wash': currentPalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>DECISÃO</span>
@@ -469,7 +468,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
           <p>Avaliação calibrada que afina o motor de recomendação — feita uma vez, atualizada a qualquer momento.</p>
         </div>
         <div className="ni-state">
-          <i /> {mockTopics.length} tópicos monitorados · Crivo Diagnostic
+          <i /> {mockTopics.length} tópicos no diagnóstico
         </div>
       </div>
 
@@ -586,7 +585,7 @@ function DiagnosticoContent({ mockQuestions, questionsSyncError }: { mockQuestio
               <label
                 key={n}
                 className="flex items-start gap-3 rounded-xl border border-[var(--line)] p-3 cursor-pointer transition-colors hover:bg-[var(--surface2)]"
-                style={selfState === n ? { borderColor: currentPalette.primary, backgroundColor: 'var(--surface2)' } : undefined}
+                style={selfState === n ? { borderColor: 'var(--primary)', backgroundColor: 'var(--surface2)' } : undefined}
               >
                 <input
                   type="radio"
