@@ -24,7 +24,7 @@ describe('AmbienteProvider', () => {
   it('sem tela pedindo nada, o app inteiro fica no ambiente padrão', () => {
     render(<AmbienteProvider><Tela ambiente={null} /></AmbienteProvider>);
     expect(document.documentElement.dataset.ambiente).toBe('tecnologico');
-    expect(document.documentElement.dataset.ambienteNome).toBe('padrão');
+    expect(document.documentElement.dataset.ambienteNome).toBe('Crivo');
   });
 
   it('a tela com conteúdo pede a cor dele e, ao sair, o app volta ao padrão', () => {
@@ -33,7 +33,7 @@ describe('AmbienteProvider', () => {
     rerender(<AmbienteProvider><Tela ambiente={null} /></AmbienteProvider>);
     // Um escritor só: antes, a limpeza do Visual apagava o ambiente do app.
     expect(document.documentElement.dataset.ambiente).toBe('tecnologico');
-    expect(document.documentElement.dataset.ambienteNome).toBe('padrão');
+    expect(document.documentElement.dataset.ambienteNome).toBe('Crivo');
   });
 
   it('a paleta escolhida no Personalizar vale fora das telas de conteúdo', () => {

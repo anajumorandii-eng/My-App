@@ -37,7 +37,13 @@ export interface Ambiente {
   nome: string;
 }
 
-const BASE: Paleta = { a: '#a78bfa', b: '#22d3ee', c: '#f472b6', fundo: '#06070f' };
+/**
+ * A paleta do Crivo, tirada do ícone: cobre do astrolábio, vinho e floresta do
+ * fundo. É a cor padrão (telas sem matéria, "Todas" na biblioteca), e a
+ * aurora de toda tela usa o vinho e a floresta como base fixa (CSS).
+ */
+export const PALETA_CRIVO: Paleta = { a: '#e2a261', b: '#e0485c', c: '#3fae7a', fundo: '#070a08' };
+const BASE: Paleta = PALETA_CRIVO;
 
 export const PALETAS_MATERIA: Record<string, Paleta> = {
   'Física': { a: '#22d3ee', b: '#a78bfa', c: '#f472b6', fundo: '#05070d' },
@@ -82,6 +88,7 @@ export function normalizar(texto: string) {
  * nomes são do que a cor lembra, não da matéria: servem a qualquer capítulo.
  */
 export const PALETAS_FIXAS: Record<string, Paleta> = {
+  'Crivo': PALETA_CRIVO,
   'Neon': { a: '#22d3ee', b: '#a78bfa', c: '#f472b6', fundo: '#05070d' },
   'Aurora': { a: '#f472b6', b: '#a78bfa', c: '#22d3ee', fundo: '#0b0610' },
   'Solar': { a: '#fbbf24', b: '#fb923c', c: '#f472b6', fundo: '#0d0906' },
@@ -99,13 +106,13 @@ export function ambienteDoCapitulo({ id, subject, topic }: { id: string; subject
   if (modo in PALETAS_FIXAS) return { paleta: PALETAS_FIXAS[modo], origem: 'escolha', nome: modo };
   if (modo === 'materia') {
     const daMateria = PALETAS_MATERIA[subject];
-    return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'padrão' };
+    return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'Crivo' };
   }
   const alvo = normalizar(`${topic} ${id}`);
   const regra = REGRAS_CONTEUDO.find((item) => item.materias.includes(subject) && item.termos.test(alvo));
   if (regra) return { paleta: regra.paleta, origem: 'conteudo', nome: regra.nome };
   const daMateria = PALETAS_MATERIA[subject];
-  return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'padrão' };
+  return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'Crivo' };
 }
 
 /**
@@ -139,5 +146,5 @@ export function rgbDe(hex: string) {
 export function ambienteDaMateria(subject: string, modo: ModoCor = 'automatica'): Ambiente {
   if (modo in PALETAS_FIXAS) return { paleta: PALETAS_FIXAS[modo], origem: 'escolha', nome: modo };
   const daMateria = PALETAS_MATERIA[subject];
-  return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'padrão' };
+  return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'Crivo' };
 }

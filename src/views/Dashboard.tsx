@@ -1,4 +1,6 @@
 import React, { useMemo, useState } from 'react';
+import { currentStudyPhase } from '../lib/studyPhase';
+import { upcomingMilestones } from '../lib/studyRoadmap';
 import { useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
@@ -109,6 +111,11 @@ export default function Dashboard() {
   } = useDailyPlan(todayInSaoPaulo());
   const { mastery } = useUserMastery();
   const { goals } = useStudentGoals();
+  // Metas sem bancas (documento antigo, ou ainda carregando) não podem
+  // derrubar o Hoje inteiro: sem elas o selo só não mostra a contagem.
+  const temBancas = Array.isArray(goals?.boardWeights);
+  const phase = useMemo(() => (temBancas ? currentStudyPhase(goals) : null), [goals, temBancas]);
+  const nextExam = useMemo(() => (temBancas ? upcomingMilestones(goals)[0] : undefined), [goals, temBancas]);
 
   const availableMinutes = availability?.totalMinutes ?? 0;
   const masteryOrigin = deriveMasteryOrigin(mastery, isPersisted);
@@ -271,7 +278,9 @@ export default function Dashboard() {
             <h1>Sua trajetória, em decisões realizáveis.</h1>
             <p>O plano se reorganiza à medida que suas evidências mudam.</p>
           </div>
-          <div className="ni-state"><i /> perfil {palette.family} · foco ativo</div>
+          {/* Era "perfil wave · foco ativo": o nome interno da família de cor da
+              paleta, em inglês, sem sentido para quem estuda. */}
+          {phase && <div className="ni-state"><i /> {phase.label}{nextExam ? ` · ${nextExam.board} em ${daysUntil(nextExam.date)} dias` : ''}</div>}
         </div>
         <div className="ni-subjects" aria-label="Matérias">
             {SUBJECT_OPTIONS.map((subj) => {
@@ -316,6 +325,9 @@ export default function Dashboard() {
               onDisagree={handleDisagree}
               onOpenQuestions={() => navigate('/questoes')}
               onOpenReview={() => navigate('/revisoes')}
+              availableMinutes={availableMinutes}
+              plannedCount={dailyPlan.length}
+              waitingCount={canWait.length}
             />
 
             {hasDecisionContext && (

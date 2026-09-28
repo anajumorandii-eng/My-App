@@ -28,7 +28,7 @@ test('o conteúdo de cada capítulo do piloto escolhe a sua cor', () => {
 
 test('sem regra de conteúdo, vale a paleta da matéria; sem matéria conhecida, a padrão', () => {
   assert.deepEqual(ambienteDoCapitulo({ id: 'x', subject: 'Física', topic: 'Análise dimensional' }), { paleta: PALETAS_MATERIA['Física'], origem: 'materia', nome: 'Física' });
-  assert.equal(ambienteDoCapitulo({ id: 'x', subject: 'Redação', topic: 'Coesão' }).nome, 'padrão');
+  assert.equal(ambienteDoCapitulo({ id: 'x', subject: 'Redação', topic: 'Coesão' }).nome, 'Crivo');
 });
 
 test('acento e caixa não mudam a regra', () => {
@@ -46,7 +46,7 @@ test('a escolha da estudante vence a cor automática, e "só a matéria" ignora 
   assert.equal(ambienteDoCapitulo(orbitas, 'Solar').nome, 'Solar');
   assert.equal(ambienteDoCapitulo(orbitas, 'materia').nome, 'Física');
   assert.equal(ambienteDoCapitulo(orbitas).nome, 'espaço');
-  assert.equal(ambienteDaMateria('').nome, 'padrão');
+  assert.equal(ambienteDaMateria('').nome, 'Crivo');
   assert.equal(ambienteDaMateria('Biologia').nome, 'Biologia');
 });
 

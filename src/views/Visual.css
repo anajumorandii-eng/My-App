@@ -2252,7 +2252,7 @@
   --vs-kit-vermelho: #fb7185; --vs-kit-verde: #34d399;
   --vs-kit-ceu: #040712;
   --vs-kit-vidro: rgba(148, 163, 184, .07);
-  --vs-kit-vidro-forte: rgba(10, 15, 30, .82);
+  --vs-kit-vidro-forte: rgba(12, 14, 12, .84);
   --vs-kit-contorno: #02040a;
 }
 .vs-kit-grade { stroke: color-mix(in srgb, var(--vs-kit-ciano) 16%, transparent); stroke-width: .6; }
@@ -2284,11 +2284,13 @@
   --t-a: var(--amb-a, var(--vs-kit-ciano));
   --t-b: var(--amb-b, var(--vs-kit-roxo));
   --t-c: var(--amb-c, var(--vs-kit-acc));
-  --t-fundo: var(--amb-fundo, #f6f8fc);
+  --t-fundo: var(--amb-fundo, #f8f3ea);
+  /* A diagonal vinho → floresta do ícone do Crivo fica em toda prancha; a
+     cor do capítulo (--t-a) entra por cima como destaque. */
   background:
-    radial-gradient(60% 45% at 12% 0%, color-mix(in srgb, var(--t-b) 16%, transparent), transparent 70%),
+    radial-gradient(60% 50% at 0% 0%, color-mix(in srgb, var(--marca-vinho, #8e1b2b) 14%, transparent), transparent 70%),
+    radial-gradient(60% 55% at 100% 100%, color-mix(in srgb, var(--marca-floresta, #155c3c) 14%, transparent), transparent 70%),
     radial-gradient(50% 40% at 95% 12%, color-mix(in srgb, var(--t-a) 16%, transparent), transparent 70%),
-    radial-gradient(60% 50% at 60% 100%, color-mix(in srgb, var(--t-c) 10%, transparent), transparent 70%),
     var(--t-fundo);
   background-size: 140% 140%;
   animation: vs-aurora 22s ease-in-out infinite alternate;
@@ -2298,15 +2300,15 @@
   --vs-ink: #e9eef8;
   --vs-dim: #93a0b8;
   --vs-ink-muted: #93a0b8;
-  --vs-paper: #0a0f1c;
-  --vs-paper-strong: #0d1324;
+  --vs-paper: #0d0f0c;
+  --vs-paper-strong: #121410;
   --vs-line: rgba(148, 163, 184, .14);
   --vs-tech-borda: rgba(148, 163, 184, .14);
-  --t-fundo: var(--amb-fundo, #05070d);
+  --t-fundo: var(--amb-fundo, #070a08);
   background:
-    radial-gradient(60% 45% at 12% 0%, color-mix(in srgb, var(--t-b) 32%, transparent), transparent 70%),
-    radial-gradient(50% 40% at 95% 12%, color-mix(in srgb, var(--t-a) 22%, transparent), transparent 70%),
-    radial-gradient(60% 50% at 60% 100%, color-mix(in srgb, var(--t-c) 14%, transparent), transparent 70%),
+    radial-gradient(60% 50% at 0% 0%, color-mix(in srgb, var(--marca-vinho, #a3192f) 32%, transparent), transparent 70%),
+    radial-gradient(60% 55% at 100% 100%, color-mix(in srgb, var(--marca-floresta, #0f6b43) 30%, transparent), transparent 70%),
+    radial-gradient(50% 40% at 95% 12%, color-mix(in srgb, var(--t-a) 20%, transparent), transparent 70%),
     var(--t-fundo);
   background-size: 140% 140%;
   box-shadow: 0 40px 120px -40px rgba(0, 0, 0, .8);

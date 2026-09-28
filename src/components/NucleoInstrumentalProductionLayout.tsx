@@ -151,7 +151,6 @@ function LayoutComAmbiente() {
               return <NavLink key={key} to={target} className={active ? 'active' : undefined}>{label}</NavLink>;
             })}
           </nav>
-          <span className="ni-prototype-badge">DADOS REAIS · {screen.kind.toUpperCase()}</span>
           {acoesDoTopo(false)}
           <button className="ni-theme-toggle" onClick={toggleTheme} aria-label={isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'}>{isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}<span>{isDark ? 'claro' : 'escuro'}</span></button>
           <div className="ni-avatar" aria-label="Perfil">AJ</div>

@@ -18,35 +18,47 @@
    que o neon puro some no vidro branco.
    ========================================================================== */
 :root[data-ambiente="tecnologico"] {
-  --amb-a: color-mix(in oklab, var(--amb-a-neon) 68%, #0b1020);
-  --amb-b: color-mix(in oklab, var(--amb-b-neon) 68%, #0b1020);
-  --amb-c: color-mix(in oklab, var(--amb-c-neon) 68%, #0b1020);
-  --amb-fundo: color-mix(in srgb, var(--amb-a-neon) 6%, #f6f8fc);
-  --amb-texto: #0b1020;
-  --amb-dim: #5b6478;
-  --amb-linha: rgba(15, 23, 42, .1);
-  --amb-vidro: rgba(255, 255, 255, .6);
-  --amb-vidro-forte: rgba(255, 255, 255, .88);
+  /* Identidade do Crivo, tirada do ícone: vinho no canto de cima, floresta no
+     de baixo, cobre no astrolábio. A Ana Júlia pediu para não perder "as
+     cores da logo": elas são a base fixa da aurora em toda tela, e a cor da
+     matéria ou do conteúdo entra como destaque por cima, não no lugar. */
+  --marca-vinho: #8e1b2b;
+  --marca-floresta: #155c3c;
+  --marca-cobre: #b8783e;
+  --amb-a: color-mix(in oklab, var(--amb-a-neon) 68%, #1a1210);
+  --amb-b: color-mix(in oklab, var(--amb-b-neon) 68%, #1a1210);
+  --amb-c: color-mix(in oklab, var(--amb-c-neon) 68%, #1a1210);
+  /* Marfim quente, o papel original do app, em vez do branco-azulado. */
+  --amb-fundo: color-mix(in srgb, var(--amb-a-neon) 4%, #f8f3ea);
+  --amb-texto: #1d1714;
+  --amb-dim: #6b6058;
+  --amb-linha: rgba(60, 40, 30, .12);
+  --amb-vidro: rgba(255, 252, 246, .62);
+  --amb-vidro-forte: rgba(255, 252, 246, .9);
   --amb-aurora:
-    radial-gradient(55% 45% at 0% 0%, color-mix(in srgb, var(--amb-b) 14%, transparent), transparent 70%),
-    radial-gradient(50% 45% at 100% 20%, color-mix(in srgb, var(--amb-a) 14%, transparent), transparent 70%),
-    radial-gradient(60% 50% at 50% 100%, color-mix(in srgb, var(--amb-c) 9%, transparent), transparent 70%),
+    radial-gradient(55% 50% at 0% 0%, color-mix(in srgb, var(--marca-vinho) 14%, transparent), transparent 70%),
+    radial-gradient(55% 55% at 100% 100%, color-mix(in srgb, var(--marca-floresta) 14%, transparent), transparent 70%),
+    radial-gradient(45% 40% at 90% 10%, color-mix(in srgb, var(--amb-a) 12%, transparent), transparent 70%),
     var(--amb-fundo);
 }
 :root.dark[data-ambiente="tecnologico"] {
+  --marca-vinho: #a3192f;
+  --marca-floresta: #0f6b43;
+  --marca-cobre: #e2a261;
   --amb-a: var(--amb-a-neon);
   --amb-b: var(--amb-b-neon);
   --amb-c: var(--amb-c-neon);
-  --amb-fundo: var(--amb-fundo-escuro);
-  --amb-texto: #e9eef8;
-  --amb-dim: #93a0b8;
-  --amb-linha: rgba(148, 163, 184, .14);
-  --amb-vidro: rgba(148, 163, 184, .07);
-  --amb-vidro-forte: rgba(8, 12, 24, .84);
+  /* Preto-esverdeado do ícone; a matéria só tinge levemente. */
+  --amb-fundo: color-mix(in srgb, var(--amb-fundo-escuro) 35%, #070a08);
+  --amb-texto: #f1ebe2;
+  --amb-dim: #a99f93;
+  --amb-linha: rgba(226, 190, 150, .13);
+  --amb-vidro: rgba(226, 200, 170, .06);
+  --amb-vidro-forte: rgba(12, 14, 12, .86);
   --amb-aurora:
-    radial-gradient(55% 45% at 0% 0%, color-mix(in srgb, var(--amb-b) 24%, transparent), transparent 70%),
-    radial-gradient(50% 45% at 100% 20%, color-mix(in srgb, var(--amb-a) 16%, transparent), transparent 70%),
-    radial-gradient(60% 50% at 50% 100%, color-mix(in srgb, var(--amb-c) 10%, transparent), transparent 70%),
+    radial-gradient(55% 50% at 0% 0%, color-mix(in srgb, var(--marca-vinho) 34%, transparent), transparent 70%),
+    radial-gradient(55% 55% at 100% 100%, color-mix(in srgb, var(--marca-floresta) 34%, transparent), transparent 70%),
+    radial-gradient(45% 40% at 92% 8%, color-mix(in srgb, var(--amb-a) 14%, transparent), transparent 70%),
     var(--amb-fundo);
 }
 :root[data-ambiente="tecnologico"],
@@ -246,7 +258,7 @@
   overflow: hidden;
   border: 1px solid var(--amb-linha, rgba(148, 163, 184, .2));
   border-radius: 20px;
-  background: var(--amb-vidro-forte, rgba(10, 15, 30, .9));
+  background: var(--amb-vidro-forte, rgba(12, 14, 12, .9));
   color: var(--amb-texto, #e9eef8);
   -webkit-backdrop-filter: blur(24px) saturate(150%);
   backdrop-filter: blur(24px) saturate(150%);
@@ -325,10 +337,10 @@
 :root[data-ambiente="tecnologico"] {
   --background-base: var(--amb-fundo);
   --background-subtle: color-mix(in srgb, var(--amb-a) 5%, var(--amb-fundo));
-  --surface-default: rgba(255, 255, 255, .78);
+  --surface-default: rgba(255, 252, 246, .8);
   --surface-secondary: color-mix(in srgb, var(--amb-a) 6%, rgba(255, 255, 255, .7));
-  --surface-elevated: rgba(255, 255, 255, .9);
-  --surface-strong: color-mix(in srgb, var(--amb-a) 12%, #eef1f7);
+  --surface-elevated: rgba(255, 252, 246, .92);
+  --surface-strong: color-mix(in srgb, var(--amb-a) 12%, #efe8dc);
   --text-primary: var(--amb-texto);
   --text-secondary: var(--amb-dim);
   --text-muted: color-mix(in srgb, var(--amb-dim) 80%, transparent);
@@ -345,11 +357,11 @@
   --shadow-soft-lg-value: 0 30px 70px -34px rgba(15, 23, 42, .45);
 }
 :root.dark[data-ambiente="tecnologico"] {
-  --surface-default: rgba(15, 22, 40, .72);
-  --surface-secondary: color-mix(in srgb, var(--amb-a) 7%, rgba(12, 18, 34, .72));
-  --surface-elevated: rgba(20, 28, 50, .82);
-  --surface-strong: color-mix(in srgb, var(--amb-a) 14%, #121a30);
-  --text-inverse: #05070d;
+  --surface-default: rgba(20, 22, 19, .74);
+  --surface-secondary: color-mix(in srgb, var(--amb-a) 7%, rgba(16, 18, 15, .74));
+  --surface-elevated: rgba(26, 27, 23, .84);
+  --surface-strong: color-mix(in srgb, var(--amb-a) 14%, #1a1b17);
+  --text-inverse: #070a08;
   --shadow-soft-md-value: 0 16px 40px -20px rgba(0, 0, 0, .7);
   --shadow-soft-lg-value: 0 30px 80px -30px rgba(0, 0, 0, .8);
 }
@@ -437,3 +449,36 @@
    app aparecerem. O canvas dela continua desenhando por cima. */
 :root[data-ambiente="tecnologico"] .ni-production-app [data-testid="subject-atmosphere"] { background: transparent !important; }
 :root[data-ambiente="tecnologico"] .ni-production-app [data-testid="subject-atmosphere-fallback"] { opacity: .12; }
+
+/* --- Hoje ----------------------------------------------------------------- */
+/* A imagem do tópico começava em 40% do cartão e cobria "Discordo" (e, no
+   celular, "Por que isso?"). Ela vai para a direita, e os botões ficam na
+   frente com fundo de vidro legível. */
+:root[data-ambiente="tecnologico"] .ni-production-app .subject-dossier { left: 54%; }
+:root[data-ambiente="tecnologico"] .ni-production-app :is(.crivo-observatorio-cta, .crivo-observatorio-explanation) { position: relative; z-index: 5; }
+:root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-explanation button {
+  border-radius: 10px;
+  background: color-mix(in srgb, var(--amb-fundo) 70%, transparent);
+  -webkit-backdrop-filter: blur(8px);
+  backdrop-filter: blur(8px);
+}
+@media (max-width: 560px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app .subject-dossier { left: 34%; top: 250px; opacity: .55; }
+}
+/* Abas de matéria: com treze matérias, "Atualidades" caía sozinha numa
+   segunda linha. Uma fileira só, que rola de lado, como já era no celular. */
+:root[data-ambiente="tecnologico"] .ni-production-app .ni-subjects {
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  scrollbar-width: none;
+  -webkit-mask-image: linear-gradient(90deg, #000 92%, transparent);
+  mask-image: linear-gradient(90deg, #000 92%, transparent);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app .ni-subjects::-webkit-scrollbar { display: none; }
+:root[data-ambiente="tecnologico"] .ni-production-app .ni-subjects button { flex: none; }
+/* O cartão da decisão tinha altura mínima de 540 px, pensada para a
+   ilustração antiga: no iPad sobrava um vão vazio entre os botões e os
+   sinais. */
+@media (min-width: 901px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app :is(.crivo-observatorio-decision-copy, .crivo-observatorio-trajectory) { min-height: 440px; }
+}

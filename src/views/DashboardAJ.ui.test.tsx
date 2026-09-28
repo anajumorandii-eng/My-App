@@ -54,7 +54,10 @@ vi.mock('../lib/userData', () => ({
   getStudentGoals: vi.fn(() => Promise.resolve({ boards: [], customExams: [] })),
 }));
 vi.mock('../lib/reviewUrgency', () => ({ pendingReviewCount: () => 2 }));
-vi.mock('../data/examCalendar', () => ({ nextExams: () => [], daysUntil: () => 0 }));
+// O Hoje passou a mostrar a fase e a próxima prova (studyPhase/studyRoadmap),
+// que usam o resto do calendário: o mock mantém o módulo real e só fixa as
+// duas funções que o teste já controlava.
+vi.mock('../data/examCalendar', async (importOriginal) => ({ ...(await importOriginal<typeof import('../data/examCalendar')>()), nextExams: () => [], daysUntil: () => 0 }));
 
 describe('AJ Hoje', () => {
   beforeEach(() => mocks.addPlanFeedback.mockClear());
