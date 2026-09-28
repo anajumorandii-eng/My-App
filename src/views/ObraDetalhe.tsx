@@ -6,7 +6,6 @@ import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, ReadingProgress }
 import { getLiteraryWorkBySlug, getEditions, getExamRequirements, getWorkUnits } from '../lib/literaryCatalog';
 import { getReadingProgress, saveReadingProgress } from '../lib/literaryData';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type TabId = 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 'fontes';
@@ -19,7 +18,6 @@ const TABS: { id: TabId; label: string }[] = [
   { id: 'fontes', label: 'Fontes' },
 ];
 
-const LIT_PALETTE = PALETTES.Literatura;
 
 function ContentPendingState({ label }: { label: string }) {
   return (
@@ -103,17 +101,10 @@ export default function ObraDetalhe() {
   const completedCount = units.filter((u) => progressByUnit.get(u.id)?.status === 'completed').length;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': LIT_PALETTE.primary, '--primary-ink': LIT_PALETTE.readable,
-        '--secondary': LIT_PALETTE.secondary,
-        '--wash': LIT_PALETTE.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Breadcrumb */}
       <div className="ni-route">
-        <span>LIBRARY</span>
+        <span>Biblioteca</span>
         <i />
         <Link to="/obras" style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
           <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
@@ -144,7 +135,7 @@ export default function ObraDetalhe() {
             <span
               key={r.id}
               className="text-[10px] font-mono px-2.5 py-1 rounded-full"
-              style={{ backgroundColor: LIT_PALETTE.primary, color: PALETTE_INK }}
+              style={{ backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' }}
             >
               {r.board} {r.examCycle}
             </span>
@@ -162,7 +153,7 @@ export default function ObraDetalhe() {
               onClick={() => setTab(t.id)}
               className={active ? 'subject-text' : undefined}
               style={active
-                ? { borderBottom: `2px solid ${LIT_PALETTE.primary}`, paddingBottom: '6px', marginBottom: '-1px' }
+                ? { borderBottom: '2px solid var(--primary)', paddingBottom: '6px', marginBottom: '-1px' }
                 : { color: 'var(--dim)', paddingBottom: '6px', marginBottom: '-1px', borderBottom: '2px solid transparent' }}
             >
               {t.label}

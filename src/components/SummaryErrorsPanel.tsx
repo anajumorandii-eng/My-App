@@ -13,7 +13,7 @@ export default function SummaryErrorsPanel({ progress, summaries }: { progress: 
 
   return <section aria-labelledby="summary-errors-title" className="space-y-4">
     <div className="flex flex-col sm:flex-row sm:items-end sm:justify-between gap-3">
-      <div><p className="text-xs font-bold uppercase tracking-wide text-indigo-600">Recuperação ativa</p><h2 id="summary-errors-title" className="text-xl font-bold mt-1">Erros dos resumos</h2><p className="text-sm text-zinc-500 mt-1">Uma entrada por pergunta, com todas as tentativas preservadas.</p></div>
+      <div><p className="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-300">Recuperação ativa</p><h2 id="summary-errors-title" className="text-xl font-bold mt-1">Erros dos resumos</h2><p className="text-sm text-zinc-500 mt-1">Uma entrada por pergunta, com todas as tentativas preservadas.</p></div>
       <label className="text-sm"><span className="sr-only">Filtrar erros dos resumos</span><select aria-label="Filtrar erros dos resumos" value={filter} onChange={(event) => setFilter(event.target.value as ErrorFilter)} className="rounded-lg border border-zinc-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 px-3 py-2"><option value="ativos">Ativos</option><option value="resolvidos">Resolvidos</option><option value="todos">Todos</option></select></label>
     </div>
     {filtered.length === 0 && <div role="status" className="rounded-xl border border-dashed border-zinc-300 dark:border-zinc-700 p-8 text-center text-zinc-500">Nenhum erro de resumo neste filtro.</div>}

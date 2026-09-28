@@ -11,7 +11,6 @@ import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
 import type { StudyStatus, SummaryDepth } from '../types/summary';
-import { PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 

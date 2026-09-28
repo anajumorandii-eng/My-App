@@ -27,7 +27,6 @@ import { Panel } from '../components/ui/Panel';
 import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
-const EVO_PALETTE = PALETTES.Matemática;
 
 function ChartTooltip({ active, payload }: any) {
   if (!active || !payload?.length) return null;
@@ -108,14 +107,7 @@ export default function Evolucao() {
   };
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': EVO_PALETTE.primary, '--primary-ink': EVO_PALETTE.readable,
-        '--secondary': EVO_PALETTE.secondary,
-        '--wash': EVO_PALETTE.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>ANÁLISE</span>
@@ -137,7 +129,7 @@ export default function Evolucao() {
           <p>Métricas de consistência, velocidade e domínio por matéria conectadas ao motor de eficiência.</p>
         </div>
         <div className="ni-state">
-          <i /> domínio geral: {overallAverage}% · Crivo Telemetria
+          <i /> domínio geral: {overallAverage}%
         </div>
       </div>
 

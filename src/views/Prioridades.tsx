@@ -5,6 +5,8 @@ import { Target, ChevronDown, BookOpen, AlertTriangle } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
 import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria } from '../lib/visualAmbiente';
 
 export default function Prioridades() {
   const subjects = useMemo(() => examPriorities.map((s) => s.subject), []);
@@ -19,16 +21,14 @@ export default function Prioridades() {
   const paletteKey = activeSubject === 'Língua Portuguesa' ? 'Português' : activeSubject;
   const currentPalette = PALETTES[paletteKey] ?? PALETTES.Matemática;
   const SubjIcon = SUBJECT_ICONS[paletteKey] ?? Target;
+  // A cor da tela segue a matéria em foco pelo ambiente do app, em vez da
+  // paleta que antes ficava fixa no contêiner e vencia o ambiente.
+  const materiaDoAmbiente = paletteKey;
+  const ambiente = useMemo(() => (materiaDoAmbiente ? ambienteDaMateria(materiaDoAmbiente) : null), [materiaDoAmbiente]);
+  useAmbienteDaTela(ambiente);
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
-        '--secondary': currentPalette.secondary,
-        '--wash': currentPalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>ANÁLISE</span>

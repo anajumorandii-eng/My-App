@@ -7,7 +7,6 @@ import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 
 const ACTIVE_IN_ENGINE = new Set(['method_spaced_repetition', 'method_interleaving']);
 
@@ -58,17 +57,9 @@ export default function Laboratorio() {
     }
   };
 
-  const currentPalette = PALETTES.Química;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
-        '--secondary': currentPalette.secondary,
-        '--wash': currentPalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>FERRAMENTAS</span>
@@ -102,7 +93,7 @@ export default function Laboratorio() {
           onClick={() => setCategoryFilter('all')}
           style={
             categoryFilter === 'all'
-              ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+              ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
               : undefined
           }
         >
@@ -117,7 +108,7 @@ export default function Laboratorio() {
               onClick={() => setCategoryFilter(value)}
               style={
                 active
-                  ? { backgroundColor: currentPalette.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >

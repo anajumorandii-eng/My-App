@@ -12,7 +12,6 @@ import { aiErrorMessage, requestAiText } from '../lib/aiClient';
 import { AnswerCorrection, parseAnswerCorrection } from '../lib/tutorContracts';
 import { AiText } from '../components/AiText';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type Tab = 'pratica' | 'estrutura' | 'bancas' | 'erros' | 'checklist';
@@ -26,7 +25,6 @@ const TABS: { id: Tab; label: string }[] = [
 ];
 
 const PART_ORDER: Array<'Introdução' | 'Desenvolvimento' | 'Conclusão'> = ['Introdução', 'Desenvolvimento', 'Conclusão'];
-const REDACAO_PALETTE = PALETTES.Português;
 
 export default function Redacao() {
   const [tab, setTab] = useState<Tab>('pratica');
@@ -70,14 +68,7 @@ export default function Redacao() {
   const PenIcon = SUBJECT_ICONS['Português'] ?? PenLine;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': REDACAO_PALETTE.primary, '--primary-ink': REDACAO_PALETTE.readable,
-        '--secondary': REDACAO_PALETTE.secondary,
-        '--wash': REDACAO_PALETTE.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>REDAÇÃO</span>
@@ -99,7 +90,7 @@ export default function Redacao() {
           <p>Estrutura de texto, proposta de intervenção, repertório produtivo e análise de critérios específicos por vestibular.</p>
         </div>
         <div className="ni-state">
-          <i /> ateliê de escrita · Crivo Redação
+          <i /> critérios de {essayBoardProfiles.length} bancas
         </div>
       </div>
 
@@ -113,7 +104,7 @@ export default function Redacao() {
               onClick={() => setTab(t.id)}
               style={
                 active
-                  ? { backgroundColor: REDACAO_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                   : undefined
               }
             >
@@ -251,7 +242,7 @@ export default function Redacao() {
                 <Panel key={el.letter} subject="Português" interactive className="ni-panel p-4 flex items-start gap-3">
                   <span
                     className="w-7 h-7 rounded-full flex items-center justify-center shrink-0 font-bold text-xs font-mono"
-                    style={{ backgroundColor: REDACAO_PALETTE.primary, color: PALETTE_INK }}
+                    style={{ backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' }}
                   >
                     {el.letter}
                   </span>
@@ -309,7 +300,7 @@ export default function Redacao() {
                   <span
                     key={i}
                     className="text-[11px] font-mono px-2.5 py-1 rounded-full"
-                    style={{ backgroundColor: REDACAO_PALETTE.primary, color: PALETTE_INK }}
+                    style={{ backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' }}
                   >
                     {phrase}
                   </span>

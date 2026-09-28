@@ -4,12 +4,10 @@ import { BookOpen, Loader2, Search } from 'lucide-react';
 import { LiteraryWork, ExamBoard, ExamRequirement } from '../types/literaryWorks';
 import { getLiteraryWorks, getAllExamRequirements } from '../lib/literaryCatalog';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
 type BoardFilter = 'todas' | ExamBoard;
 
-const LIT_PALETTE = PALETTES.Literatura;
 
 export default function Obras() {
   const [works, setWorks] = useState<LiteraryWork[] | null>(null);
@@ -44,17 +42,10 @@ export default function Obras() {
   const LitIcon = SUBJECT_ICONS['Literatura'] ?? BookOpen;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': LIT_PALETTE.primary, '--primary-ink': LIT_PALETTE.readable,
-        '--secondary': LIT_PALETTE.secondary,
-        '--wash': LIT_PALETTE.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Breadcrumb */}
       <div className="ni-route">
-        <span>LIBRARY</span>
+        <span>Biblioteca</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
           <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
@@ -73,7 +64,7 @@ export default function Obras() {
           <p>Leitura guiada, análise analítica e treino de prova para FUVEST e Unicamp/Comvest.</p>
         </div>
         <div className="ni-state">
-          <i /> perfil {LIT_PALETTE.family} · catálogo ativo
+          <i /> {works === null ? 'carregando catálogo' : `${works.length} ${works.length === 1 ? 'obra' : 'obras'} no catálogo`}
         </div>
       </div>
 
@@ -96,7 +87,7 @@ export default function Obras() {
               onClick={() => setBoardFilter(b)}
               style={
                 active
-                  ? { backgroundColor: LIT_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                  ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                   : { display: 'inline-flex', alignItems: 'center' }
               }
             >
@@ -121,7 +112,9 @@ export default function Obras() {
       {/* Empty */}
       {works && filtered.length === 0 && (
         <div className="text-center py-16 text-[var(--dim)]">
-          Nenhuma obra encontrada com esse filtro.
+          {/* Com o catálogo vazio, culpar o filtro mandava a estudante mexer num
+              filtro que não tinha nada a ver com o problema. */}
+          {works.length === 0 ? 'O catálogo de obras ainda está vazio.' : 'Nenhuma obra encontrada com esse filtro.'}
         </div>
       )}
 
@@ -143,7 +136,7 @@ export default function Obras() {
                         <span
                           key={r.id}
                           className="text-[10px] font-mono px-2 py-0.5 rounded-full"
-                          style={{ backgroundColor: LIT_PALETTE.primary, color: PALETTE_INK }}
+                          style={{ backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' }}
                         >
                           {r.board}
                         </span>

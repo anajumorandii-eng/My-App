@@ -4,10 +4,8 @@ import { buildRoadmap, upcomingMilestones } from '../lib/studyRoadmap';
 import { daysUntil } from '../data/examCalendar';
 import { Flag, CalendarClock, Clock } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
-const RETAFINAL_PALETTE = PALETTES.História;
 
 function formatDatePtBr(iso: string): string {
   const [, m, d] = iso.split('-');
@@ -39,14 +37,7 @@ export default function RetaFinal() {
   );
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': RETAFINAL_PALETTE.primary, '--primary-ink': RETAFINAL_PALETTE.readable,
-        '--secondary': RETAFINAL_PALETTE.secondary,
-        '--wash': RETAFINAL_PALETTE.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>DECISÃO</span>
@@ -68,7 +59,7 @@ export default function RetaFinal() {
           <p>Roteiro semana a semana até seus vestibulares — integrando novos tópicos e revisão estratégica.</p>
         </div>
         <div className="ni-state">
-          <i /> {totalNetHours}h líquidas estimadas · Crivo Roteiro
+          <i /> {totalNetHours}h líquidas estimadas
         </div>
       </div>
 
@@ -121,7 +112,7 @@ export default function RetaFinal() {
                   <span className="text-xs font-semibold text-[var(--text)] font-mono">{formatRange(week.weekStart, week.weekEnd)}</span>
                   <span
                     className="text-[10px] font-mono font-medium px-2 py-0.5 rounded-full"
-                    style={{ backgroundColor: RETAFINAL_PALETTE.primary, color: PALETTE_INK }}
+                    style={{ backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' }}
                   >
                     {week.phase.label}
                   </span>

@@ -2760,6 +2760,9 @@
   box-shadow: 0 20px 40px -24px var(--card-cor);
 }
 .crivo-visual--tech .vs-lib-card-materia { color: var(--card-cor) !important; font-family: "JetBrains Mono", ui-monospace, monospace; letter-spacing: .1em; }
+/* No claro, a cor viva da matéria sobre o cartão creme dava 1,8:1 a 2,1:1
+   (medido no navegador; mínimo 4,5:1). O tom escurecido guarda a matéria. */
+:root:not(.dark) .crivo-visual--tech .vs-lib-card-materia { color: color-mix(in oklab, var(--card-cor) 50%, #140d0a) !important; }
 .crivo-visual--tech .vs-lib-card .text-zinc-500 { color: var(--amb-dim); }
 
 /* Famílias de cena e experimento que declaram Newsreader na própria regra,

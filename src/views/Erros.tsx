@@ -20,7 +20,6 @@ const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
   ainda_dificil: 'Ainda difícil',
 };
 
-const ERROR_PALETTE = PALETTES.História;
 
 export default function Erros() {
   const { user, isConnected } = useAuth();
@@ -130,14 +129,7 @@ export default function Erros() {
     updateLog({ ...log, outcomeRating });
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': ERROR_PALETTE.primary, '--primary-ink': ERROR_PALETTE.readable,
-        '--secondary': ERROR_PALETTE.secondary,
-        '--wash': ERROR_PALETTE.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>ANÁLISE</span>
@@ -159,7 +151,7 @@ export default function Erros() {
           <p>Diagnóstico por tipo de erro, causa raiz e intervenção — cada registro vira insumo para o motor de repetição.</p>
         </div>
         <div className="ni-state">
-          <i /> {logs.length} erros mapeados · Crivo Cognitivo
+          <i /> {logs.length} {logs.length === 1 ? 'erro registrado' : 'erros registrados'}
         </div>
       </div>
 
@@ -178,7 +170,7 @@ export default function Erros() {
             onClick={() => setTypeFilter('all')}
             style={
               typeFilter === 'all'
-                ? { backgroundColor: ERROR_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                 : undefined
             }
           >
@@ -194,7 +186,7 @@ export default function Erros() {
                 onClick={() => setTypeFilter(value as ErrorLog['type'])}
                 style={
                   active
-                    ? { backgroundColor: ERROR_PALETTE.primary, color: PALETTE_INK, borderRadius: '4px', padding: '2px 8px' }
+                    ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
                     : undefined
                 }
               >

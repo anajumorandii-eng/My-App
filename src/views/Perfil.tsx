@@ -19,7 +19,6 @@ import {
   X,
 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
-import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 
 const KNOWN_EXAMS = ['ENEM', 'FUVEST', 'UNICAMP', 'UNESP', 'FAMERP', 'UNIFESP'];
 const KNOWN_UNIVERSITIES = ['USP', 'UNICAMP', 'UNESP', 'FAMERP', 'UNIFESP'];
@@ -161,17 +160,9 @@ export default function Perfil() {
     });
   };
 
-  const currentPalette = PALETTES.Matemática;
 
   return (
-    <div
-      className="ni-main"
-      style={{
-        '--primary': currentPalette.primary, '--primary-ink': currentPalette.readable,
-        '--secondary': currentPalette.secondary,
-        '--wash': currentPalette.wash,
-      } as React.CSSProperties}
-    >
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>CONTA</span>
