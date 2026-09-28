@@ -59,10 +59,10 @@ export default defineConfig(() => ({
             return 'markdown';
           }
 
-          // three.js e o react-three-fiber só servem às cenas 3D do Hoje, que
-          // carregam sob demanda. No vendor eles levavam o pacote de 494 kB a
+          // O three.js só serve às cenas 3D do Hoje, que
+          // carregam sob demanda. No vendor ele levava o pacote de 494 kB a
           // 1.425 kB, baixado em toda abertura do app, com cena ou sem.
-          if (id.includes('/three/') || id.includes('@react-three') || id.includes('its-fine') || id.includes('react-reconciler') || id.includes('zustand') || id.includes('suspend-react')) {
+          if (id.includes('/three/')) {
             return 'cena-3d';
           }
 

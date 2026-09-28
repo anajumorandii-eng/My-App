@@ -606,16 +606,24 @@
    da direita do cartão; abaixo de 900 px, um bloco depois dos botões. */
 :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-nucleo { position: absolute; inset: 0; }
 .crivo-cena { position: relative; display: flex; flex-direction: column; height: 100%; margin: 0; }
-.crivo-cena__palco { position: relative; flex: 1; min-height: 0; overflow: hidden; border-radius: 14px; }
+/* Altura mínima própria: com "Personalizar cena" aberto, o painel crescia e
+   o palco, sendo o que sobrava, sumia no celular. */
+.crivo-cena__palco { position: relative; flex: 1; min-height: 240px; overflow: hidden; border-radius: 14px; }
 .crivo-cena__palco canvas { display: block; }
+/* Rótulos à mão, na tinta da cena: o motor põe --tinta-cena e --papel-cena no
+   palco, porque a tinta é a do papel da cena (sépia no claro, creme no escuro),
+   não a do tema do app. */
 .crivo-cena__rotulo {
   position: absolute; left: 0; top: 0; pointer-events: none; white-space: nowrap; will-change: transform;
-  color: var(--amb-dim, #8a8f86); font: 600 10px/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .06em;
+  color: var(--tinta-cena, #e9d2a6); font: 400 14px/1 Kalam, "Comic Neue", cursive;
+  text-shadow: 0 1px 8px color-mix(in srgb, var(--papel-cena, #120c07) 80%, transparent);
 }
-.crivo-cena__rotulo--forte {
-  padding: 3px 7px; border: 1px solid var(--amb-linha, rgba(255,255,255,.14)); border-radius: 999px;
-  background: color-mix(in srgb, var(--amb-fundo, #070a08) 72%, transparent);
-  color: var(--amb-texto, #f3efe6); font-size: 9px; text-transform: uppercase; letter-spacing: .12em;
+.crivo-cena__rotulo--forte { font-weight: 700; font-size: 15px; }
+.crivo-cena__rotulo--cota { font-size: 13px; }
+@media (max-width: 560px) {
+  .crivo-cena__rotulo { font-size: 12px; }
+  .crivo-cena__rotulo--forte { font-size: 13px; }
+  .crivo-cena__rotulo--cota { font-size: 11px; }
 }
 .crivo-cena__painel { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; padding: 10px 2px 0; }
 .crivo-cena__controle { display: flex; align-items: center; gap: 8px; color: var(--amb-dim, #8a8f86); font: 500 11px/1.2 Inter, system-ui, sans-serif; }
@@ -623,6 +631,30 @@
 .crivo-cena__leitura { margin: 0; color: var(--amb-dim, #8a8f86); font: 11px/1.45 "JetBrains Mono", ui-monospace, monospace; text-align: right; }
 .crivo-cena__leitura b { color: var(--amb-texto, #f3efe6); font-weight: 600; }
 .crivo-cena__leitura span { display: block; color: var(--amb-a, #e2a261); }
+/* Personalizar: um <details>, que abre por teclado sem código. Abre embaixo do
+   botão, e não por cima da cena: flutuando, ele cobria justamente o fundo e o
+   papel que a estudante estava escolhendo. */
+.crivo-cena__ajustes { flex-basis: 100%; }
+.crivo-cena__ajustes summary {
+  display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
+  color: var(--amb-dim, #8a8f86); font: 500 11px/1.2 Inter, system-ui, sans-serif;
+  padding: 6px 10px; border: 1px solid var(--amb-linha, rgba(255,255,255,.14)); border-radius: 999px;
+}
+.crivo-cena__ajustes summary::-webkit-details-marker { display: none; }
+.crivo-cena__ajustes summary svg { width: 13px; height: 13px; }
+.crivo-cena__ajustes[open] summary { color: var(--amb-texto, #f3efe6); border-color: var(--amb-a, #e2a261); }
+.crivo-cena__ajustes summary:focus-visible, .crivo-cena__ajustes button:focus-visible { outline: 2px solid var(--amb-a, #e2a261); outline-offset: 2px; }
+.crivo-cena__ajustes-corpo {
+  display: grid; gap: 10px; margin-top: 8px; padding: 12px;
+  border: 1px solid var(--amb-linha, rgba(255,255,255,.14)); border-radius: 12px;
+}
+.crivo-cena__ajustes fieldset { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; border: 0; }
+.crivo-cena__ajustes legend { width: 100%; margin-bottom: 4px; color: var(--amb-dim, #8a8f86); font: 500 11px/1.2 Inter, system-ui, sans-serif; }
+.crivo-cena__ajustes button {
+  font: 500 12px/1.2 Inter, system-ui, sans-serif; color: var(--amb-texto, #f3efe6); background: transparent; cursor: pointer;
+  border: 1px solid var(--amb-linha, rgba(255,255,255,.14)); border-radius: 999px; padding: 6px 11px;
+}
+.crivo-cena__ajustes button[aria-pressed="true"] { border-color: var(--amb-a, #e2a261); background: color-mix(in srgb, var(--amb-a, #e2a261) 16%, transparent); }
 
 @media (min-width: 901px) {
   :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) {
@@ -636,13 +668,14 @@
 }
 @media (max-width: 900px) {
   :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena {
-    position: relative; top: auto; right: auto; width: 100%; height: 340px; aspect-ratio: auto; margin-top: 18px; transform: none; pointer-events: auto;
+    position: relative; top: auto; right: auto; width: 100%; height: auto; aspect-ratio: auto; margin-top: 18px; transform: none; pointer-events: auto;
   }
   :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) { min-height: 0; }
+  .crivo-cena__palco { flex: none; height: 255px; min-height: 0; }
   :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) .ni-metrics { position: relative; inset: auto; margin-top: 18px; }
 }
 @media (max-width: 560px) {
-  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena { height: 300px; }
+  .crivo-cena__palco { flex: none; height: 215px; min-height: 0; }
   .crivo-cena__painel { justify-content: flex-start; }
   .crivo-cena__leitura { text-align: left; }
 }
