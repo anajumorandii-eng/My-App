@@ -27,7 +27,7 @@ test('o conteúdo de cada capítulo do piloto escolhe a sua cor', () => {
 });
 
 test('sem regra de conteúdo, vale a paleta da matéria; sem matéria conhecida, a padrão', () => {
-  assert.deepEqual(ambienteDoCapitulo({ id: 'x', subject: 'Física', topic: 'Análise dimensional' }), { paleta: PALETAS_MATERIA['Física'], origem: 'materia', nome: 'Física' });
+  assert.deepEqual(ambienteDoCapitulo({ id: 'x', subject: 'Física', topic: 'Análise dimensional' }), { paleta: PALETAS_MATERIA['Física'], origem: 'materia', nome: 'Física', materia: 'Física' });
   assert.equal(ambienteDoCapitulo({ id: 'x', subject: 'Redação', topic: 'Coesão' }).nome, 'Crivo');
 });
 
@@ -54,4 +54,15 @@ test('regra de conteúdo não atravessa matéria', () => {
   // "Dinâmica" de populações é Biologia, não a mecânica da Física.
   assert.equal(ambienteDoCapitulo({ id: 'x', subject: 'Biologia', topic: 'Dinâmica de populações' }).nome, 'Biologia');
   assert.equal(ambienteDoCapitulo({ id: 'x', subject: 'Física', topic: 'Dinâmica' }).nome, 'mecânica');
+});
+
+test('a preferência de cor entra por cima do automático sem apagá-lo', async () => {
+  const { aplicarPreferenciaDeCor } = await import('./visualAmbiente');
+  const orbitas = ambienteDoCapitulo({ id: 'summary-fisica-orbitas', subject: 'Física', topic: 'Órbitas' });
+  // Com paleta fixa, a tela ainda sabe o que "Automática" escolheria.
+  assert.equal(aplicarPreferenciaDeCor(orbitas, 'Floresta').nome, 'Floresta');
+  assert.equal(orbitas.nome, 'espaço');
+  // "Só a matéria" volta à matéria do capítulo, sem a regra de conteúdo.
+  assert.equal(aplicarPreferenciaDeCor(orbitas, 'materia').nome, 'Física');
+  assert.equal(aplicarPreferenciaDeCor(null, 'automatica').nome, 'Crivo');
 });

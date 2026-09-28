@@ -12,9 +12,12 @@ function Tela({ ambiente }: { ambiente: typeof orbitas | null }) {
   return null;
 }
 
-let mudar: ((m: { cor: 'Solar' }) => void) | undefined;
+let mudar: ((m: { cor: 'Solar' | 'Floresta' }) => void) | undefined;
+let automatico: string | undefined;
 function Espiao() {
-  mudar = useAmbienteApp()?.mudarPreferencias;
+  const app = useAmbienteApp();
+  mudar = app?.mudarPreferencias;
+  automatico = app?.sobreposto?.nome;
   return null;
 }
 
@@ -40,5 +43,14 @@ describe('AmbienteProvider', () => {
     render(<AmbienteProvider><Espiao /><Tela ambiente={null} /></AmbienteProvider>);
     act(() => mudar?.({ cor: 'Solar' }));
     expect(document.documentElement.dataset.ambienteNome).toBe('Solar');
+  });
+
+  it('com paleta fixa, a tela aplica a escolha mas o painel ainda vê o automático', () => {
+    render(<AmbienteProvider><Espiao /><Tela ambiente={orbitas} /></AmbienteProvider>);
+    act(() => mudar?.({ cor: 'Floresta' }));
+    expect(document.documentElement.dataset.ambienteNome).toBe('Floresta');
+    // Era o defeito apontado na revisão: o "Automática" do painel mostrava a
+    // Floresta como se viesse da matéria.
+    expect(automatico).toBe('espaço');
   });
 });

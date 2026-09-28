@@ -108,7 +108,7 @@ function VisualLibrary({ onOpen, preferencias }: {
   const [subject, setSubject] = useMateriaLembrada('crivo_materia_visual');
   // A biblioteca também veste a tela: a cor da matéria filtrada, ou a padrão
   // em "Todas". Sem isso, sair de um capítulo apagava o ambiente de uma vez.
-  const ambiente = useMemo(() => ambienteDaMateria(subject, preferencias.cor), [subject, preferencias.cor]);
+  const ambiente = useMemo(() => ambienteDaMateria(subject), [subject]);
   useAmbienteDaTela(ambiente, preferencias);
   const [limit, setLimit] = useState(60);
   const subjects = useMemo(() => [...new Set(interactiveSummaries.map((item) => item.subject))].sort(), []);
@@ -304,7 +304,7 @@ export default function Visual() {
   // tecnológica, o ambiente (matéria + conteúdo) veste também o topo, o trilho
   // e a barra de baixo. Precisa vir antes dos `return` antecipados — é hook.
   const tecnologico = summary ? usaMolduraTecnologica(summary.id) : false;
-  const ambiente = useMemo(() => (summary && tecnologico ? ambienteDoCapitulo(summary, preferencias.cor) : null), [summary, tecnologico, preferencias.cor]);
+  const ambiente = useMemo(() => (summary && tecnologico ? ambienteDoCapitulo(summary) : null), [summary, tecnologico]);
   useAmbienteDaTela(ambiente, preferencias);
   useEffect(() => { if (summary) registrarRecente(summary.id); }, [summary]);
 

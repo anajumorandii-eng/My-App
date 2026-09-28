@@ -67,7 +67,13 @@ export default function NucleoInstrumentalProductionLayout() {
 }
 
 /** Telas que a busca rápida encontra pelo nome. */
-const TELAS_DA_BUSCA = SCREENS.map((item) => ({ rotulo: item.label, destino: PATH_BY_SCREEN[item.key] })).filter((tela) => Boolean(tela.destino));
+// Os nomes do menu de cima também valem: "Análises" é o nome visível da tela
+// que em SCREENS se chama "Evolução", e a busca não a achava pelo nome que a
+// estudante vê.
+const TELAS_DA_BUSCA = [
+  ...SCREENS.map((item) => ({ rotulo: item.label, destino: PATH_BY_SCREEN[item.key] })),
+  ...TOP_LEVEL.map(([key, label]) => ({ rotulo: label, destino: PATH_BY_SCREEN[key] })),
+].filter((tela, indice, todas) => Boolean(tela.destino) && todas.findIndex((outra) => outra.rotulo === tela.rotulo) === indice);
 
 function LayoutComAmbiente() {
   const { isDark, toggleTheme } = useTheme();

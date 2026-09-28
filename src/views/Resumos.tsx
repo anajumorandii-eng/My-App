@@ -5,7 +5,6 @@ import { interactiveSummaries } from '../data/interactiveSummaries';
 import { evaluateRetrievalAnswer, filterSummaries, getReadingProgress } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
 import { useMateriaLembrada } from '../hooks/useMateriaLembrada';
-import { useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria, ambienteDoCapitulo } from '../lib/visualAmbiente';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
@@ -42,8 +41,7 @@ export default function Resumos() {
   const summary = interactiveSummaries.find((item) => item.id === selectedId);
   // A tela veste a cor do conteúdo, como no Visual: o capítulo aberto, ou a
   // matéria filtrada na lista. A escolha do Personalizar continua valendo.
-  const corEscolhida = useAmbienteApp()?.preferencias.cor ?? 'automatica';
-  const ambiente = useMemo(() => (summary ? ambienteDoCapitulo(summary, corEscolhida) : subject ? ambienteDaMateria(subject, corEscolhida) : null), [summary, subject, corEscolhida]);
+  const ambiente = useMemo(() => (summary ? ambienteDoCapitulo(summary) : subject ? ambienteDaMateria(subject) : null), [summary, subject]);
   useAmbienteDaTela(ambiente);
   const subjects = [...new Set(interactiveSummaries.map((item) => item.subject))];
   const boards = [...new Set(interactiveSummaries.flatMap((item) => item.boards.map((b) => b.board)))];

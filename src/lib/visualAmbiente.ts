@@ -35,6 +35,9 @@ export interface Ambiente {
   origem: 'materia' | 'conteudo' | 'escolha';
   /** Nome curto da regra, da matéria ou da paleta escolhida. */
   nome: string;
+  /** Matéria de onde o ambiente saiu, quando há uma: o modo "só a matéria"
+   * do Personalizar precisa dela para refazer a cor sem a regra de conteúdo. */
+  materia?: string;
 }
 
 /**
@@ -106,13 +109,13 @@ export function ambienteDoCapitulo({ id, subject, topic }: { id: string; subject
   if (modo in PALETAS_FIXAS) return { paleta: PALETAS_FIXAS[modo], origem: 'escolha', nome: modo };
   if (modo === 'materia') {
     const daMateria = PALETAS_MATERIA[subject];
-    return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'Crivo' };
+    return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'Crivo', materia: subject || undefined };
   }
   const alvo = normalizar(`${topic} ${id}`);
   const regra = REGRAS_CONTEUDO.find((item) => item.materias.includes(subject) && item.termos.test(alvo));
-  if (regra) return { paleta: regra.paleta, origem: 'conteudo', nome: regra.nome };
+  if (regra) return { paleta: regra.paleta, origem: 'conteudo', nome: regra.nome, materia: subject };
   const daMateria = PALETAS_MATERIA[subject];
-  return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'Crivo' };
+  return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'Crivo', materia: subject || undefined };
 }
 
 /**
@@ -146,5 +149,18 @@ export function rgbDe(hex: string) {
 export function ambienteDaMateria(subject: string, modo: ModoCor = 'automatica'): Ambiente {
   if (modo in PALETAS_FIXAS) return { paleta: PALETAS_FIXAS[modo], origem: 'escolha', nome: modo };
   const daMateria = PALETAS_MATERIA[subject];
-  return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'Crivo' };
+  return { paleta: daMateria ?? BASE, origem: 'materia', nome: daMateria ? subject : 'Crivo', materia: subject || undefined };
+}
+
+/**
+ * Aplica a escolha de cor do Personalizar sobre o ambiente automático que uma
+ * tela pediu. As telas sempre pedem o automático; é aqui que a preferência
+ * entra, e por isso o painel consegue mostrar o que "Automática" escolheria
+ * mesmo com uma paleta fixa ativa.
+ */
+export function aplicarPreferenciaDeCor(automatico: Ambiente | null, modo: ModoCor): Ambiente {
+  if (modo in PALETAS_FIXAS) return { paleta: PALETAS_FIXAS[modo], origem: 'escolha', nome: modo };
+  if (!automatico) return ambienteDaMateria('', modo);
+  if (modo === 'materia') return ambienteDaMateria(automatico.materia ?? '', 'materia');
+  return automatico;
 }

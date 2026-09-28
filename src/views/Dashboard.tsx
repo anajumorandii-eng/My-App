@@ -1,7 +1,6 @@
 import React, { useMemo, useState } from 'react';
 import { currentStudyPhase } from '../lib/studyPhase';
 import { upcomingMilestones } from '../lib/studyRoadmap';
-import { useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
 import { useNavigate } from 'react-router-dom';
@@ -185,8 +184,7 @@ export default function Dashboard() {
 
   // A tela veste a cor da matéria da decisão em destaque (ou da aba escolhida):
   // o Hoje também é "adaptável pela matéria e pelo conteúdo".
-  const corEscolhida = useAmbienteApp()?.preferencias.cor ?? 'automatica';
-  const ambiente = useMemo(() => (primary?.subject ? ambienteDaMateria(primary.subject, corEscolhida) : null), [primary?.subject, corEscolhida]);
+  const ambiente = useMemo(() => (primary?.subject ? ambienteDaMateria(primary.subject) : null), [primary?.subject]);
   useAmbienteDaTela(ambiente);
 
   const secondary = dailyPlan.slice(1);

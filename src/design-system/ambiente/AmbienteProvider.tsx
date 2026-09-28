@@ -1,5 +1,5 @@
 import React, { createContext, useCallback, useContext, useEffect, useMemo, useState } from 'react';
-import { ambienteDaMateria, rgbDe, type Ambiente } from '../../lib/visualAmbiente';
+import { aplicarPreferenciaDeCor, rgbDe, type Ambiente } from '../../lib/visualAmbiente';
 import { usePreferenciasVisual, type PreferenciasVisual } from '../../hooks/usePreferenciasVisual';
 
 /**
@@ -18,7 +18,7 @@ import { usePreferenciasVisual, type PreferenciasVisual } from '../../hooks/useP
 interface AmbienteApp {
   preferencias: PreferenciasVisual;
   mudarPreferencias: (mudanca: Partial<PreferenciasVisual>) => void;
-  /** O ambiente que uma tela pediu, se algum. */
+  /** O ambiente automático que uma tela pediu, se algum (sem a escolha de cor). */
   sobreposto: Ambiente | null;
   registrar: (ambiente: Ambiente | null) => void;
 }
@@ -54,7 +54,9 @@ export function AmbienteProvider({ children }: { children: React.ReactNode }) {
   const [preferencias, mudarPreferencias] = usePreferenciasVisual();
   const [sobreposto, setSobreposto] = useState<Ambiente | null>(null);
   const registrar = useCallback((ambiente: Ambiente | null) => setSobreposto(ambiente), []);
-  const efetivo = useMemo(() => sobreposto ?? ambienteDaMateria('', preferencias.cor), [sobreposto, preferencias.cor]);
+  // As telas pedem sempre o ambiente automático; a escolha do Personalizar
+  // entra aqui, uma vez só.
+  const efetivo = useMemo(() => aplicarPreferenciaDeCor(sobreposto, preferencias.cor), [sobreposto, preferencias.cor]);
 
   useEffect(() => aplicarAmbiente(efetivo, preferencias), [efetivo, preferencias]);
 

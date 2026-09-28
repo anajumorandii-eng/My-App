@@ -1,5 +1,4 @@
 import React, { useMemo, useState } from 'react';
-import { useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
 import { useAuth } from '../context/AuthContext';
@@ -83,8 +82,7 @@ export default function Questoes() {
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
   // A matéria filtrada dá a cor da tela, como nos Resumos e no Visual.
-  const corEscolhida = useAmbienteApp()?.preferencias.cor ?? 'automatica';
-  const ambiente = useMemo(() => (subjectFilter !== 'Todas' ? ambienteDaMateria(subjectFilter, corEscolhida) : null), [subjectFilter, corEscolhida]);
+  const ambiente = useMemo(() => (subjectFilter !== 'Todas' ? ambienteDaMateria(subjectFilter) : null), [subjectFilter]);
   useAmbienteDaTela(ambiente);
   const [topicFilter, setTopicFilter] = useState<string>(ALL);
   const [subtopicFilter, setSubtopicFilter] = useState<string>(ALL);
