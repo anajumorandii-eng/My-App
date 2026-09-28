@@ -29,15 +29,17 @@ export const MEDIDAS = {
 
 export type Papel = 'milimetrado' | 'pautado' | 'liso';
 
-/** O que a estudante pode ajustar na cena. Fica no aparelho: é conforto de leitura, não dado de estudo. */
+/**
+ * O que a estudante pode ajustar na cena. Fica no aparelho: é conforto de
+ * leitura, não dado de estudo. Os rabiscos, o carimbo e o travelling saíram
+ * junto com o fundo próprio e o movimento da cena; os rabiscos agora são do
+ * fundo da tela inteira (Personalizar do topo).
+ */
 export interface PreferenciasDaCena {
-  rabiscos: boolean;
-  carimbo: boolean;
   papel: Papel;
-  movimento: boolean;
 }
 
-export const PREFERENCIAS_PADRAO: PreferenciasDaCena = { rabiscos: true, carimbo: true, papel: 'milimetrado', movimento: true };
+export const PREFERENCIAS_PADRAO: PreferenciasDaCena = { papel: 'milimetrado' };
 
 export const CHAVE_PREFERENCIAS = 'crivo-cena-preferencias';
 
@@ -53,12 +55,6 @@ export function lerPreferencias(bruto: string | null | undefined): PreferenciasD
     return { ...PREFERENCIAS_PADRAO };
   }
   if (!dado || typeof dado !== 'object') return { ...PREFERENCIAS_PADRAO };
-  const d = dado as Record<string, unknown>;
-  const bool = (chave: keyof PreferenciasDaCena) => (typeof d[chave] === 'boolean' ? (d[chave] as boolean) : (PREFERENCIAS_PADRAO[chave] as boolean));
-  return {
-    rabiscos: bool('rabiscos'),
-    carimbo: bool('carimbo'),
-    papel: PAPEIS.includes(d.papel as Papel) ? (d.papel as Papel) : PREFERENCIAS_PADRAO.papel,
-    movimento: bool('movimento'),
-  };
+  const papel = (dado as Record<string, unknown>).papel;
+  return { papel: PAPEIS.includes(papel as Papel) ? (papel as Papel) : PREFERENCIAS_PADRAO.papel };
 }

@@ -20,14 +20,17 @@ describe('BancadaOptica', () => {
     expect(screen.queryByRole('slider')).toBeNull();
   });
 
-  it('o controle ganha da entrada de cena: a animação para no primeiro gesto', () => {
+  it('parada: nada muda sozinho, só o controle move o objeto', () => {
     vi.useFakeTimers({ toFake: ['requestAnimationFrame', 'cancelAnimationFrame', 'performance'] });
-    montarBancada.mockReturnValue({ definirP: vi.fn(), configurar: vi.fn(), destruir: vi.fn() });
+    const definirP = vi.fn();
+    montarBancada.mockReturnValue({ definirP, configurar: vi.fn(), destruir: vi.fn() });
     render(<BancadaOptica reserva={reserva} />);
-    act(() => { vi.advanceTimersByTime(200); });
     const controle = screen.getByRole('slider') as HTMLInputElement;
-    fireEvent.change(controle, { target: { value: '38' } });
     act(() => { vi.advanceTimersByTime(3000); });
+    // A versão com entrada animada começava em 40 cm e deslizava até 25.
+    expect(controle.value).toBe('25');
+    fireEvent.change(controle, { target: { value: '38' } });
     expect(controle.value).toBe('38');
+    expect(definirP).toHaveBeenLastCalledWith(38 / 5);
   });
 });

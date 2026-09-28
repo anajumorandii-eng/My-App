@@ -1,5 +1,4 @@
 import React, { useEffect, useRef, useState } from 'react';
-import { useReducedMotion } from 'motion/react';
 import { SlidersHorizontal } from 'lucide-react';
 import { imagemDaLente, naturezaDaImagem } from '../../../lib/lenteDelgada';
 import { CHAVE_PREFERENCIAS, MEDIDAS, lerPreferencias, type Papel, type PreferenciasDaCena } from '../../../lib/bancadaOptica';
@@ -16,6 +15,9 @@ import { montarBancada, type Bancada, type IdRotulo } from './motorBancadaOptica
  *
  * O desenho mora em motorBancadaOptica.ts; aqui ficam o estado, os rótulos em
  * HTML (fonte do app e leitor de tela) e a personalização.
+ *
+ * Sem entrada animada: o objeto já aparece na posição inicial. A Ana Júlia
+ * pediu a cena parada, mudando só pelo gesto dela.
  */
 
 const { cmPorUnidade: CM, foco: FOCO, pMin: P_MIN, pMax: P_MAX, pInicial: P_INICIAL } = MEDIDAS;
@@ -36,34 +38,24 @@ const PAPEIS: { valor: Papel; nome: string }[] = [
 ];
 
 export default function BancadaOptica({ reserva }: { reserva: React.ReactNode }) {
-  const reduzido = useReducedMotion() ?? false;
   const cores = useCoresDaCena();
-  const [p, setP] = useState<number>(reduzido ? P_INICIAL : P_MAX);
+  const [p, setP] = useState<number>(P_INICIAL);
   const [preferencias, setPreferencias] = useState(lerDoAparelho);
   const [falhou, setFalhou] = useState(false);
   const palco = useRef<HTMLDivElement>(null);
   const bancada = useRef<Bancada | null>(null);
   const rotulos = useRef<Partial<Record<IdRotulo, HTMLSpanElement | null>>>({});
-  const movimento = !reduzido && preferencias.movimento;
-  const opcoes = { acento: cores.acento, escuro: cores.escuro, preferencias, movimento };
+  const opcoes = { acento: cores.acento, escuro: cores.escuro, preferencias };
   const opcoesRef = useRef(opcoes);
   opcoesRef.current = opcoes;
   const pRef = useRef(p);
   pRef.current = p;
-  // A entrada de cena chama setP a cada quadro por 1,8 s; sem cancelar no
-  // primeiro gesto, ela sobrescrevia a distância que a estudante acabara de
-  // escolher no controle ou no arraste.
-  const entrada = useRef(0);
-  const escolherP = (valor: number) => {
-    cancelAnimationFrame(entrada.current);
-    setP(valor);
-  };
 
   useEffect(() => {
     const el = palco.current;
     if (!el) return;
     try {
-      bancada.current = montarBancada(el, rotulos.current, opcoesRef.current, pRef.current, escolherP);
+      bancada.current = montarBancada(el, rotulos.current, opcoesRef.current, pRef.current, setP);
     } catch {
       // WebGL anunciado mas indisponível na hora (contexto perdido, limite de
       // contextos): volta ao Núcleo do Crivo, como o aparelho sem WebGL. Só
@@ -75,22 +67,8 @@ export default function BancadaOptica({ reserva }: { reserva: React.ReactNode })
 
   useEffect(() => { bancada.current?.definirP(p); }, [p]);
   useEffect(() => {
-    bancada.current?.configurar({ acento: cores.acento, escuro: cores.escuro, preferencias, movimento });
-  }, [cores.acento, cores.escuro, preferencias, movimento]);
-
-  // Entrada de cena: o objeto desliza até a posição inicial e a imagem se
-  // forma no anteparo enquanto ele anda.
-  useEffect(() => {
-    if (reduzido) return;
-    const inicio = performance.now();
-    const passo = (agora: number) => {
-      const t = Math.min((agora - inicio) / 1800, 1);
-      setP(P_MAX + (P_INICIAL - P_MAX) * (1 - (1 - t) ** 3));
-      if (t < 1) entrada.current = requestAnimationFrame(passo);
-    };
-    entrada.current = requestAnimationFrame(passo);
-    return () => cancelAnimationFrame(entrada.current);
-  }, [reduzido]);
+    bancada.current?.configurar({ acento: cores.acento, escuro: cores.escuro, preferencias });
+  }, [cores.acento, cores.escuro, preferencias]);
 
   const ajustar = (mudanca: Partial<PreferenciasDaCena>) => {
     setPreferencias((antes) => {
@@ -126,7 +104,7 @@ export default function BancadaOptica({ reserva }: { reserva: React.ReactNode })
             max={P_MAX * CM}
             step={1}
             value={Math.round(p * CM)}
-            onChange={(e) => escolherP(Number(e.target.value) / CM)}
+            onChange={(e) => setP(Number(e.target.value) / CM)}
           />
         </label>
         <p className="crivo-cena__leitura">
@@ -140,24 +118,11 @@ export default function BancadaOptica({ reserva }: { reserva: React.ReactNode })
           </summary>
           <div className="crivo-cena__ajustes-corpo">
             <fieldset>
-              <legend>Fundo</legend>
-              <button type="button" aria-pressed={preferencias.rabiscos} onClick={() => ajustar({ rabiscos: !preferencias.rabiscos })}>Rabiscos de estudo</button>
-              <button type="button" aria-pressed={preferencias.carimbo} onClick={() => ajustar({ carimbo: !preferencias.carimbo })}>Carimbo da matéria</button>
-            </fieldset>
-            <fieldset>
               <legend>Papel da mesa</legend>
               {PAPEIS.map(({ valor, nome }) => (
                 <button key={valor} type="button" aria-pressed={preferencias.papel === valor} onClick={() => ajustar({ papel: valor })}>{nome}</button>
               ))}
             </fieldset>
-            {/* Com movimento reduzido no aparelho, a câmera fica parada de
-                qualquer jeito; oferecer o botão seria prometer o que não acontece. */}
-            {!reduzido && (
-              <fieldset>
-                <legend>Câmera</legend>
-                <button type="button" aria-pressed={preferencias.movimento} onClick={() => ajustar({ movimento: !preferencias.movimento })}>Travelling lento</button>
-              </fieldset>
-            )}
           </div>
         </details>
       </figcaption>

@@ -39,7 +39,13 @@ export function lerPreferencias(bruto: string | null): PreferenciasVisual {
     const dado = JSON.parse(bruto ?? '{}') as Partial<PreferenciasVisual>;
     const cor = dado.cor === 'automatica' || dado.cor === 'materia' || (typeof dado.cor === 'string' && dado.cor in PALETAS_FIXAS) ? dado.cor : PREFERENCIAS_PADRAO.cor;
     const efeitos = dado.efeitos === 'suave' || dado.efeitos === 'minimo' || dado.efeitos === 'completo' ? dado.efeitos : PREFERENCIAS_PADRAO.efeitos;
-    const fundo = FUNDOS.includes(dado.fundo as Fundo) ? (dado.fundo as Fundo) : PREFERENCIAS_PADRAO.fundo;
+    // "Aurora" era o padrão, e o armazenamento grava o objeto inteiro a cada
+    // mudança de cor ou efeito: quase toda chave antiga diz "aurora" sem que
+    // ninguém tenha escolhido. Foi o que aconteceu no iPad da Ana Júlia, e o
+    // caderno não apareceu. Chave sem a marca `fundoRevisto` passa ao caderno
+    // uma vez; depois dela, a escolha é respeitada.
+    const escolhido = FUNDOS.includes(dado.fundo as Fundo) ? (dado.fundo as Fundo) : PREFERENCIAS_PADRAO.fundo;
+    const fundo = escolhido === 'aurora' && !(dado as { fundoRevisto?: boolean }).fundoRevisto ? 'caderno' : escolhido;
     return { cor, efeitos, fundo };
   } catch {
     return PREFERENCIAS_PADRAO;
@@ -53,7 +59,7 @@ export function usePreferenciasVisual(): [PreferenciasVisual, (mudanca: Partial<
   const mudar = useCallback((mudanca: Partial<PreferenciasVisual>) => {
     setPreferencias((atual) => {
       const nova = { ...atual, ...mudanca };
-      try { localStorage.setItem(CHAVE, JSON.stringify(nova)); } catch { /* sem armazenamento: vale só nesta visita */ }
+      try { localStorage.setItem(CHAVE, JSON.stringify({ ...nova, fundoRevisto: true })); } catch { /* sem armazenamento: vale só nesta visita */ }
       return nova;
     });
   }, []);

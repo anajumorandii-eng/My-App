@@ -1,10 +1,5 @@
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
-import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
-import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
-import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
-import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js';
-import { ShaderPass } from 'three/examples/jsm/postprocessing/ShaderPass.js';
 import { RoundedBoxGeometry } from 'three/examples/jsm/geometries/RoundedBoxGeometry.js';
 import { imagemDaLente, raiosNotaveis } from '../../../lib/lenteDelgada';
 import { MEDIDAS, type PreferenciasDaCena } from '../../../lib/bancadaOptica';
@@ -18,6 +13,13 @@ import { escurecer, clarear } from './coresDaCena';
  * peça em JSX era duplicar a cena com chance de divergir dela; aqui está o
  * mesmo código do artefato, com a física vinda de lenteDelgada.ts. O React
  * (BancadaOptica.tsx) só controla p, tema e preferências.
+ *
+ * **Parada e sem fundo próprio.** A Ana Júlia viu a primeira versão no iPad e
+ * pediu "integração verdadeira": nada se mexendo sozinho (travelling, poeira,
+ * pulsos) e nenhuma borda de imagem — a cena fundida ao cartão, com leve
+ * transparência. Por isso o canvas é transparente, sem céu nem névoa, a mesa
+ * some num degradê e a moldura se dissolve por máscara no CSS. Só o gesto da
+ * estudante (arrastar, o controle) muda a cena, e ela só redesenha então.
  */
 
 const { cmPorUnidade: CM, foco: F, alturaObjeto: H, eixo: EIXO, raioLente: R, pMin: PMIN, pMax: PMAX, trilhoInicio: TI, trilhoFim: TF } = MEDIDAS;
@@ -29,8 +31,6 @@ export interface OpcoesBancada {
   acento: string;
   escuro: boolean;
   preferencias: PreferenciasDaCena;
-  /** Falso com movimento reduzido: câmera parada e cena desenhada sob demanda. */
-  movimento: boolean;
 }
 
 export interface Bancada {
@@ -48,20 +48,20 @@ type Trio = [number, number, number];
 // lâmpada laranja, anteparo bege e trilho preto: cinco famílias sem relação.
 const BASE = {
   escuro: {
-    e: true, ceu: ['#3a141a', '#2a1a0e', '#0f2016'], horizonte: '#16120b', mesa: '#2a1f13', grade: 'rgba(233,210,166,.2)', manchas: 'rgba(0,0,0,.25)',
+    e: true, mesa: '#2a1f13', grade: 'rgba(233,210,166,.2)', manchas: 'rgba(0,0,0,.25)',
     escuroMetal: '#2c2016', aco: '#d8c7a8', latao: '#c99552', objeto: '#ffb45e',
     anteparo: '#b8a484', eixo: '#9c8a6c', marca: '#e3cfa8', regua: '#241a10', ceuLuz: '#ffdcb0', chao: '#140d07',
-    chave: '#ffe4c0', recorte: '#e0485c', recorteForca: 1.5, preenchimento: '#3fae7a', bloom: 0.72,
+    chave: '#ffe4c0', recorte: '#e0485c', recorteForca: 1.5, preenchimento: '#3fae7a',
     tinta: '#e9d2a6', tintaOpacidade: 0.38, papel: '#120c07', vidro: '#eaf6f4',
-    vinheta: 0.62, sombra: [0.0, 0.03, 0.015] as Trio, luz: [1.05, 0.97, 0.86] as Trio, poca: 'rgba(255,200,130,.13)',
+    poca: 'rgba(255,200,130,.13)',
   },
   claro: {
-    e: false, ceu: ['#f4e8cf', '#ead9b6', '#d9c49a'], horizonte: '#e6d5b2', mesa: '#e8d8b6', grade: 'rgba(92,60,30,.3)', manchas: 'rgba(120,80,30,.10)',
+    e: false, mesa: '#e8d8b6', grade: 'rgba(92,60,30,.3)', manchas: 'rgba(120,80,30,.10)',
     escuroMetal: '#3b2c20', aco: '#b7a78c', latao: '#a8773a', objeto: '#c0621a',
     anteparo: '#f6ecd6', eixo: '#8a7458', marca: '#f1e3c6', regua: '#3b2c20', ceuLuz: '#fff6e2', chao: '#cdb68c',
-    chave: '#fff3dc', recorte: '#fff0d8', recorteForca: 0.5, preenchimento: '#e9d7b0', bloom: 0,
+    chave: '#fff3dc', recorte: '#fff0d8', recorteForca: 0.5, preenchimento: '#e9d7b0',
     tinta: '#4a2f1c', tintaOpacidade: 0.5, papel: '#f4e8cf', vidro: '#f4f8f2',
-    vinheta: 0.34, sombra: [0.03, 0.015, 0.0] as Trio, luz: [1.0, 0.97, 0.9] as Trio, poca: 'rgba(255,248,230,.5)',
+    poca: 'rgba(255,248,230,.5)',
   },
 };
 
@@ -91,110 +91,6 @@ function papel(g: CanvasRenderingContext2D, w: number, h: number, c: Paleta, fib
     gr.addColorStop(0, c.manchas); gr.addColorStop(1, 'rgba(0,0,0,0)');
     g.fillStyle = gr; g.fillRect(x - r, y - r, r * 2, r * 2);
   }
-}
-
-/**
- * Unidade de desenho do fundo. Pela altura, o traço não estica no celular;
- * mas na coluna quase quadrada do cartão no iPad, a unidade pela altura
- * deixava as três fórmulas largas demais e uma encavalava na outra. Abaixo da
- * proporção 1,4 quem manda é a largura.
- */
-function unidade(w: number, h: number) {
-  return Math.min(h / 100, w / 140);
-}
-
-/**
- * Rabiscos de estudo: o caderno de óptica atrás da bancada. Tudo é conteúdo da
- * matéria — fórmulas e esquemas corretos —, em tinta fraca, na faixa de cima,
- * onde o fundo aparece acima do horizonte. As linhas de dioptria e o espelho
- * côncavo foram desenhados e saíram: caíam atrás do feixe e sujavam a leitura
- * dos raios.
- */
-function rabiscar(g: CanvasRenderingContext2D, w: number, h: number, c: Paleta) {
-  const u = unidade(w, h);
-  const tinta = (a: number) => (c.e ? `rgba(233,210,166,${a})` : `rgba(74,47,28,${a})`);
-  g.lineCap = 'round'; g.lineJoin = 'round';
-  const texto = (t: string, x: number, y: number, tam: number, rot = 0, a = 0.34) => {
-    g.save(); g.translate(x, y); g.rotate(rot); g.fillStyle = tinta(a);
-    g.font = `400 ${tam * u}px Kalam, cursive`; g.fillText(t, 0, 0); g.restore();
-  };
-  const traco = (a = 0.3, l = 0.28) => { g.strokeStyle = tinta(a); g.lineWidth = l * u; };
-  texto('1/f = 1/p + 1/p′', w * 0.05, 11 * u, 5.4, -0.05);
-  texto('A = i/o = −p′/p', w * 0.62, 10 * u, 4.6, 0.04);
-  texto('n₁ · sen θ₁ = n₂ · sen θ₂', w * 0.3, 4.5 * u, 3.4, -0.02, 0.28);
-  { // lente com raios convergindo no foco
-    const x = w * 0.2, y = 22 * u, a = 7 * u; traco(0.32);
-    g.beginPath(); g.moveTo(x - 16 * u, y); g.lineTo(x + 18 * u, y); g.stroke();
-    g.beginPath(); g.ellipse(x, y, 1.6 * u, a, 0, 0, Math.PI * 2); g.stroke();
-    for (const k of [-0.7, 0, 0.7]) {
-      g.beginPath(); g.moveTo(x - 14 * u, y + k * a); g.lineTo(x, y + k * a); g.lineTo(x + 10 * u, y); g.stroke();
-    }
-    g.fillStyle = tinta(0.4); g.beginPath(); g.arc(x + 10 * u, y, 0.6 * u, 0, Math.PI * 2); g.fill();
-    texto('F′', x + 9 * u, y + 4 * u, 3, 0, 0.36);
-  }
-  { // prisma separando a luz
-    const x = w * 0.5, y = 25 * u, l = 8 * u; traco(0.3);
-    g.beginPath(); g.moveTo(x, y - l); g.lineTo(x + l * 0.9, y + l * 0.55); g.lineTo(x - l * 0.9, y + l * 0.55); g.closePath(); g.stroke();
-    g.beginPath(); g.moveTo(x - 16 * u, y + 2 * u); g.lineTo(x - 3 * u, y); g.stroke();
-    [-1, 0, 1].forEach((k, i) => { g.setLineDash(i === 1 ? [] : [1 * u, 1 * u]); g.beginPath(); g.moveTo(x + 2.5 * u, y + 1 * u); g.lineTo(x + 15 * u, y + (4 + k * 2.2) * u); g.stroke(); });
-    g.setLineDash([]);
-    texto('dispersão', x + 12 * u, y + 11 * u, 2.8, 0.08, 0.3);
-  }
-  { // olho com o cristalino
-    const x = w * 0.86, y = 23 * u, r = 5.5 * u; traco(0.3);
-    g.beginPath(); g.arc(x, y, r, 0, Math.PI * 2); g.stroke();
-    g.beginPath(); g.ellipse(x - r * 0.72, y, 0.9 * u, 2.4 * u, 0, 0, Math.PI * 2); g.stroke();
-    g.beginPath(); g.moveTo(x - 14 * u, y - 2.5 * u); g.lineTo(x - r * 0.72, y - 0.5 * u); g.lineTo(x + r, y + 0.4 * u); g.stroke();
-    g.beginPath(); g.moveTo(x - 14 * u, y + 2.5 * u); g.lineTo(x - r * 0.72, y + 0.5 * u); g.lineTo(x + r, y - 0.4 * u); g.stroke();
-    texto('retina', x + r + 1 * u, y + 1 * u, 2.6, 0, 0.3);
-  }
-  { // mancha de xícara: papel usado de verdade
-    const x = w * 0.03, y = 4 * u, r = 7 * u;
-    g.strokeStyle = c.e ? 'rgba(120,80,40,.22)' : 'rgba(120,80,30,.16)'; g.lineWidth = 1.1 * u;
-    g.beginPath(); g.arc(x, y, r, 0.2, Math.PI * 1.85); g.stroke();
-    g.lineWidth = 0.4 * u; g.beginPath(); g.arc(x + 0.6 * u, y + 0.3 * u, r * 0.93, 0.5, Math.PI * 1.5); g.stroke();
-  }
-}
-
-/** Carimbo circular da matéria, em vinho, como nos arquivos antigos. */
-function carimbar(g: CanvasRenderingContext2D, h: number, w: number, c: Paleta) {
-  // No canto de cima, acima da faixa dos rótulos: no meio do fundo, no palco
-  // largo do iPad em retrato, ele ficava atrás de "imagem real, invertida".
-  const u = unidade(w, h), r = 5.5 * u;
-  g.save(); g.translate(w * 0.9, 9 * u); g.rotate(-0.18);
-  const cor = c.e ? 'rgba(224,72,92,.42)' : 'rgba(122,36,51,.38)';
-  g.strokeStyle = cor; g.fillStyle = cor;
-  g.lineWidth = 0.5 * u; g.beginPath(); g.arc(0, 0, r, 0, Math.PI * 2); g.stroke();
-  g.lineWidth = 0.22 * u; g.beginPath(); g.arc(0, 0, r * 0.78, 0, Math.PI * 2); g.stroke();
-  g.font = `700 ${1.7 * u}px "Space Grotesk", sans-serif`; g.textAlign = 'center';
-  const arco = 'CRIVO · FÍSICA · ÓPTICA · ';
-  for (let i = 0; i < arco.length; i += 1) {
-    const a = (i / arco.length) * Math.PI * 2 - Math.PI / 2;
-    g.save(); g.rotate(a + Math.PI / 2); g.fillText(arco[i], 0, -r * 0.86); g.restore();
-  }
-  g.font = `700 ${2.8 * u}px Kalam, cursive`; g.fillText('lentes', 0, 1 * u);
-  g.restore();
-}
-
-function texturaCeu(c: Paleta, pref: PreferenciasDaCena, aspecto: number) {
-  // Diagonal da logo: vinho no alto à esquerda, âmbar no meio, floresta
-  // embaixo à direita; o horizonte, que é a cor da névoa, fecha no chão. O
-  // canvas segue a proporção do palco: numa textura fixa, as letras dos
-  // rabiscos esticariam no celular.
-  const w = 1600, h = Math.round(w / THREE.MathUtils.clamp(aspecto, 0.5, 4));
-  const cv = document.createElement('canvas'); cv.width = w; cv.height = h;
-  const g = cv.getContext('2d')!;
-  const grad = g.createLinearGradient(0, 0, w, h);
-  grad.addColorStop(0, c.ceu[0]); grad.addColorStop(0.5, c.ceu[1]); grad.addColorStop(1, c.ceu[2]);
-  g.fillStyle = grad; g.fillRect(0, 0, w, h);
-  const base = g.createLinearGradient(0, h * 0.55, 0, h);
-  base.addColorStop(0, 'rgba(0,0,0,0)'); base.addColorStop(1, c.horizonte);
-  g.fillStyle = base; g.fillRect(0, 0, w, h);
-  papel(g, w, h, c, 3200);
-  if (pref.rabiscos) rabiscar(g, w, h, c);
-  if (pref.carimbo) carimbar(g, h, w, c);
-  const t = new THREE.CanvasTexture(cv); t.colorSpace = THREE.SRGBColorSpace;
-  return t;
 }
 
 function texturaMesa(c: Paleta, pref: PreferenciasDaCena) {
@@ -332,8 +228,9 @@ function descartar(obj: THREE.Object3D) {
     const mats = Array.isArray(m.material) ? m.material : m.material ? [m.material] : [];
     for (const x of mats) {
       // O halo é compartilhado entre montagens e sai só no destruir().
-      const mapa = (x as THREE.MeshBasicMaterial).map;
+      const { map: mapa, alphaMap } = x as THREE.MeshStandardMaterial;
       if (mapa && !mapa.userData.compartilhada) mapa.dispose();
+      alphaMap?.dispose();
       x.dispose();
     }
   });
@@ -349,7 +246,10 @@ export function montarBancada(
   let opcoes = opcoesIniciais;
   let p = pInicial;
 
-  const renderer = new THREE.WebGLRenderer({ antialias: true, powerPreference: 'high-performance' });
+  // Canvas transparente: o cartão aparece por trás da cena, e a borda se
+  // dissolve por máscara no CSS em vez de terminar num retângulo.
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+  renderer.setClearColor(0x000000, 0);
   // Até 2×: o iPhone tem tela 3× e, com o teto antigo de 1,5×, a cena era
   // desenhada com metade dos pixels e esticada — o traço a tinta e o anel de
   // latão saíam serrilhados. 3× custaria mais que o dobro de 2× num palco que
@@ -372,41 +272,10 @@ export function montarBancada(
   scene.environment = ambiente;
   scene.environmentIntensity = 0.45;
 
-  // O antialiasing do WebGLRenderer só vale para o que ele desenha direto na
-  // tela; com pós-processamento, a cena vai para um alvo intermediário sem
-  // amostragem e as arestas voltavam serrilhadas. O alvo com 4 amostras (MSAA)
-  // devolve o antialiasing às linhas finas: contorno, raios e cotas.
-  const alvo = new THREE.WebGLRenderTarget(1, 1, { type: THREE.HalfFloatType, samples: 4 });
-  const composer = new EffectComposer(renderer, alvo);
-  composer.addPass(new RenderPass(scene, camera));
-  // Brilho só no escuro: no claro o creme passa do limiar e a cena inteira
-  // estouraria. Limiar alto: brilham seta, raios e focos, que são luz; o latão
-  // e o anteparo, que só refletem, ficam de fora. A profundidade de campo
-  // (BokehPass) foi testada e saiu: serrilhava as bordas do anteparo.
-  const bloom = new UnrealBloomPass(new THREE.Vector2(256, 256), 0.55, 0.4, 0.92);
-  composer.addPass(bloom);
-  composer.addPass(new OutputPass());
-  // Vinheta, grão de filme e correção de cor dividida, depois da conversão de
-  // cor: o acabamento de câmera que tira da cena a cara de render limpo, e
-  // amarra peças de materiais diferentes na mesma família de cor.
-  const cinema = new ShaderPass({
-    uniforms: { tDiffuse: { value: null }, uTempo: { value: 0 }, uVinheta: { value: 0.5 }, uGrao: { value: 0.03 }, uSombra: { value: new THREE.Vector3() }, uLuz: { value: new THREE.Vector3(1, 1, 1) } },
-    vertexShader: 'varying vec2 vUv; void main(){ vUv = uv; gl_Position = projectionMatrix * modelViewMatrix * vec4(position, 1.0); }',
-    fragmentShader: `uniform sampler2D tDiffuse; uniform float uTempo, uVinheta, uGrao; uniform vec3 uSombra, uLuz; varying vec2 vUv;
-      float h(vec2 p){ return fract(sin(dot(p, vec2(12.9898, 78.233))) * 43758.5453); }
-      void main(){
-        vec4 c = texture2D(tDiffuse, vUv);
-        float lum = dot(c.rgb, vec3(0.299, 0.587, 0.114));
-        c.rgb += uSombra * (1.0 - lum);
-        c.rgb *= mix(vec3(1.0), uLuz, lum);
-        vec2 d = (vUv - 0.5) * vec2(1.0, 0.85);
-        c.rgb *= mix(1.0 - uVinheta, 1.0, smoothstep(0.78, 0.18, length(d)));
-        c.rgb += (h(vUv * 1200.0 + uTempo) - 0.5) * uGrao;
-        gl_FragColor = c;
-      }`,
-  });
-  composer.addPass(cinema);
-
+  // Sem pós-processamento: o brilho, a vinheta e o grão pintavam um retângulo
+  // opaco (a vinheta escurecia a borda do quadro, o grão cobria o transparente)
+  // e tiravam o antialiasing nativo, que só vale no desenho direto na tela.
+  // O brilho das fontes de luz fica com os halos.
   const halo = texturaHalo(); halo.userData.compartilhada = true;
   const escovado = texturaEscovada(); escovado.userData.compartilhada = true;
   const brilhoHalo = (pos: Trio, cor: string, escala: number, opacidade: number) => {
@@ -434,7 +303,11 @@ export function montarBancada(
 
   function construirFixo(c: Paleta) {
     const g = new THREE.Group();
-    g.add(malha(new THREE.PlaneGeometry(80, 40), std('#ffffff', 0, 0.85, { map: texturaMesa(c, opcoes.preferencias) }), [0, -0.28, 0], [-Math.PI / 2, 0, 0]));
+    // A folha da mesa some num degradê oval em volta da bancada. Num plano sem
+    // fim, com o canvas transparente, a mesa terminava numa linha reta no
+    // horizonte — a borda de imagem que a Ana Júlia não queria.
+    const folha = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.85, map: texturaMesa(c, opcoes.preferencias), alphaMap: texturaRadial('#ffffff', '#000000'), transparent: true, depthWrite: false });
+    g.add(malha(new THREE.PlaneGeometry(28, 13), folha, [-1, -0.28, 0.6], [-Math.PI / 2, 0, 0]));
     // Poça de luz sob a bancada e sombra de contato do trilho: sem elas a
     // bancada parecia flutuar sobre um chão uniforme.
     const poca = new THREE.Mesh(new THREE.PlaneGeometry(26, 12), new THREE.MeshBasicMaterial({ map: texturaRadial(c.poca, 'rgba(255,255,255,0)'), transparent: true, depthWrite: false, toneMapped: false }));
@@ -478,9 +351,8 @@ export function montarBancada(
     return g;
   }
 
-  type Movel = THREE.Group & { userData: { animar?: (t: number) => void } };
-  function construirMovel(c: Paleta): Movel {
-    const g = new THREE.Group() as Movel;
+  function construirMovel(c: Paleta) {
+    const g = new THREE.Group();
     const im = imagemDaLente(p, F)!;
     // Caixa de luz: a lâmpada fica recuada e a seta, num porta-slide à frente,
     // exatamente em x = -p. Colada na face da caixa, a seta ficava escondida
@@ -521,41 +393,9 @@ export function montarBancada(
     const feixe = new THREE.BufferGeometry(); feixe.setAttribute('position', new THREE.Float32BufferAttribute(pos, 3));
     g.add(new THREE.Mesh(feixe, new THREE.MeshBasicMaterial({ color: c.raio, transparent: true, opacity: c.e ? 0.045 : 0.07, side: THREE.DoubleSide, depthWrite: false, blending: c.e ? THREE.AdditiveBlending : THREE.NormalBlending, toneMapped: false })));
 
-    // Poeira parada dentro dos dois cones, que só se acende porque a luz passa
-    // por ela, e pulsos correndo do objeto à imagem: o sentido da luz.
-    const pontos: number[] = [], fases: number[] = [];
-    for (const [apice, qtd] of [[v(rs[0][0]), 260], [v(rs[0][2]), 180]] as const) for (let i = 0; i < qtd; i += 1) {
-      const a = Math.random() * Math.PI * 2, rr = Math.sqrt(Math.random()) * R * 0.9, t = Math.pow(Math.random(), 0.8);
-      const q = apice.clone().lerp(new THREE.Vector3(0, EIXO + Math.cos(a) * rr, Math.sin(a) * rr), t);
-      pontos.push(q.x, q.y, q.z); fases.push(Math.random() * 6.28);
-    }
-    const poeiraGeo = new THREE.BufferGeometry();
-    poeiraGeo.setAttribute('position', new THREE.Float32BufferAttribute(pontos, 3));
-    g.add(new THREE.Points(poeiraGeo, new THREE.PointsMaterial({ size: 0.05, map: halo, color: c.e ? c.nucleo : c.raio, transparent: true, opacity: c.e ? 0.55 : 0.35, depthWrite: false, blending: c.e ? THREE.AdditiveBlending : THREE.NormalBlending, toneMapped: false })));
-    const base0 = Float32Array.from(pontos);
-    const pulsos = rs.flatMap((r, i) => {
-      const tr = [v(r[0]), v(r[1]), v(r[2])];
-      const l1 = tr[0].distanceTo(tr[1]), total = l1 + tr[1].distanceTo(tr[2]);
-      return [0, 1].map((k) => {
-        const sp = brilhoHalo([0, 0, 0], c.e ? '#ffffff' : c.raio, 0.34, c.e ? 0.95 : 0.8);
-        g.add(sp);
-        return { sp, tr, l1, total, desloc: k / 2 + i / 6 };
-      });
-    });
-    g.userData.animar = (tempo: number) => {
-      const arr = poeiraGeo.attributes.position.array as Float32Array;
-      for (let i = 0; i < fases.length; i += 1) {
-        arr[i * 3 + 1] = base0[i * 3 + 1] + Math.sin(tempo * 0.6 + fases[i]) * 0.035;
-        arr[i * 3 + 2] = base0[i * 3 + 2] + Math.cos(tempo * 0.45 + fases[i]) * 0.035;
-      }
-      poeiraGeo.attributes.position.needsUpdate = true;
-      for (const pu of pulsos) {
-        const d = (((tempo * 0.55) / 3 + pu.desloc) % 1) * pu.total;
-        if (d < pu.l1) pu.sp.position.lerpVectors(pu.tr[0], pu.tr[1], d / pu.l1);
-        else pu.sp.position.lerpVectors(pu.tr[1], pu.tr[2], (d - pu.l1) / (pu.total - pu.l1));
-      }
-    };
-    g.userData.animar(0);
+    // A poeira no feixe e os pulsos correndo pelos raios saíram: eram
+    // movimento sozinho, e a poeira, sorteada a cada remontagem, piscava
+    // enquanto se arrastava o objeto.
 
     // Cotas de desenho técnico no chão, à frente do trilho: p do objeto à
     // lente e p′ da lente à imagem, com traços de chamada e setas nas pontas.
@@ -586,18 +426,9 @@ export function montarBancada(
   }
 
   let fixo: THREE.Group | null = null;
-  let movel: Movel | null = null;
+  let movel: THREE.Group | null = null;
   let luzes: THREE.Group | null = null;
-  let aspectoDoFundo = 0;
   let sujo = true;
-
-  function trocarFundo() {
-    const c = paleta(opcoes);
-    aspectoDoFundo = palco.clientWidth / Math.max(palco.clientHeight, 1);
-    (scene.background as THREE.Texture | null)?.dispose?.();
-    scene.background = texturaCeu(c, opcoes.preferencias, aspectoDoFundo);
-    sujo = true;
-  }
 
   function montarMovel() {
     if (movel) { scene.remove(movel); descartar(movel); }
@@ -608,8 +439,6 @@ export function montarBancada(
   function montarTudo() {
     const c = paleta(opcoes);
     for (const o of [fixo, luzes]) if (o) { scene.remove(o); descartar(o); }
-    trocarFundo();
-    scene.fog = new THREE.Fog(c.horizonte, 13, 30);
     luzes = new THREE.Group();
     luzes.add(new THREE.HemisphereLight(c.ceuLuz, c.chao, c.e ? 0.3 : 0.75));
     const chave = new THREE.DirectionalLight(c.chave, c.e ? 1.3 : 1.8);
@@ -626,28 +455,22 @@ export function montarBancada(
     palco.style.setProperty('--tinta-cena', c.tinta);
     palco.style.setProperty('--papel-cena', c.papel);
     montarMovel();
-    bloom.enabled = c.e;
-    bloom.strength = c.bloom;
-    cinema.uniforms.uVinheta.value = c.vinheta;
-    cinema.uniforms.uGrao.value = c.e ? 0.03 : 0.016;
-    cinema.uniforms.uSombra.value.set(...c.sombra);
-    cinema.uniforms.uLuz.value.set(...c.luz);
   }
 
   // ---- Câmera e rótulos ----
   const foco3d = new THREE.Vector3(-1.3, 1.9, 0);
-  function posicionarCamera(t: number) {
+  function posicionarCamera() {
     // Baixa, na diagonal do trilho: a caixa de luz em primeiro plano, a lente
     // no meio e o anteparo ao fundo. De frente, a bancada inteira cabia na
     // coluna mas virava um risco fino. A distância acompanha a proporção da
-    // coluna, do iPad ao celular, e o travelling é lento como numa vitrine.
+    // coluna, do iPad ao celular. Parada: o travelling saiu a pedido da Ana Júlia.
     const w = palco.clientWidth, h = Math.max(palco.clientHeight, 1), meia = THREE.MathUtils.degToRad(camera.fov / 2);
     // Duas contas: a largura (bancada inteira na coluna) e a altura (do chão
     // ao topo do anteparo). Só com a da largura, no palco largo do iPad em
     // retrato a câmera chegava perto demais e cortava a frente do trilho.
     const d = THREE.MathUtils.clamp(Math.max(6.0 / (Math.tan(meia) * (w / h)), 3.3 / Math.tan(meia)), 9, 20);
-    const tt = opcoes.movimento ? t : 0, ang = -0.66 + Math.sin(tt * 0.1) * 0.08;
-    camera.position.set(foco3d.x + Math.sin(ang) * d, foco3d.y + d * (0.14 + Math.sin(tt * 0.07) * 0.012), Math.cos(ang) * d);
+    const ang = -0.66;
+    camera.position.set(foco3d.x + Math.sin(ang) * d, foco3d.y + d * 0.14, Math.cos(ang) * d);
     camera.lookAt(foco3d);
     // Atualizada aqui, antes de projetar os rótulos: sem isso eles saíam na
     // posição do quadro anterior, e sob demanda ficavam fora da cena.
@@ -680,29 +503,23 @@ export function montarBancada(
   function redimensionar() {
     const w = palco.clientWidth, h = palco.clientHeight;
     if (!w || !h) return;
-    if (fixo && Math.abs(w / h - aspectoDoFundo) > 0.15) trocarFundo();
     renderer.setSize(w, h, false);
     tela.style.width = '100%'; tela.style.height = '100%';
-    composer.setPixelRatio(renderer.getPixelRatio());
-    composer.setSize(w, h);
     camera.aspect = w / h; camera.updateProjectionMatrix();
     sujo = true;
   }
 
   // ---- Laço ----
-  // Fora da tela, parado; com movimento reduzido, desenha só quando algo muda.
+  // Nada se mexe sozinho: a cena só redesenha quando algo muda (arraste,
+  // controle, tema, tamanho), e nunca fora da tela.
   let visivel = true;
   let quadro = 0;
-  function laco(agora: number) {
+  function laco() {
     quadro = requestAnimationFrame(laco);
-    if (!visivel || document.hidden) return;
-    if (!opcoes.movimento && !sujo) return;
-    const t = agora / 1000;
-    posicionarCamera(t);
-    if (opcoes.movimento) movel?.userData.animar?.(t);
-    cinema.uniforms.uTempo.value = opcoes.movimento ? t % 100 : 0;
+    if (!visivel || document.hidden || !sujo) return;
+    posicionarCamera();
     posicionarRotulos();
-    composer.render();
+    renderer.render(scene, camera);
     sujo = false;
   }
 
@@ -746,10 +563,10 @@ export function montarBancada(
   redimensionar();
   quadro = requestAnimationFrame(laco);
 
-  // Rabiscos e carimbo são desenhados no canvas com Kalam e Space Grotesk: o
-  // primeiro fundo pode sair na letra do sistema se a fonte ainda não chegou.
+  // Os números da régua são desenhados no canvas em JetBrains Mono: se a fonte
+  // ainda não chegou, a primeira régua sai na letra do sistema.
   let vivo = true;
-  document.fonts?.ready.then(() => { if (vivo) trocarFundo(); }).catch(() => {});
+  document.fonts?.ready.then(() => { if (vivo) montarTudo(); }).catch(() => {});
 
   return {
     definirP(novo) {
@@ -762,9 +579,7 @@ export function montarBancada(
       const antes = opcoes;
       opcoes = novas;
       if (antes.acento !== novas.acento || antes.escuro !== novas.escuro
-        || antes.preferencias.papel !== novas.preferencias.papel
-        || antes.preferencias.rabiscos !== novas.preferencias.rabiscos
-        || antes.preferencias.carimbo !== novas.preferencias.carimbo) montarTudo();
+        || antes.preferencias.papel !== novas.preferencias.papel) montarTudo();
       sujo = true;
     },
     destruir() {
@@ -777,9 +592,7 @@ export function montarBancada(
       tela.removeEventListener('pointerup', soltar);
       tela.removeEventListener('pointercancel', soltar);
       for (const o of [fixo, movel, luzes]) if (o) descartar(o);
-      (scene.background as THREE.Texture | null)?.dispose?.();
       halo.dispose(); escovado.dispose(); ambiente.dispose(); pmrem.dispose();
-      composer.dispose();
       renderer.dispose();
       renderer.forceContextLoss();
       tela.remove();

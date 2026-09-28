@@ -32,11 +32,12 @@ test('o anel da lente fica acima do trilho', () => {
   assert.ok(eixo - raioLente - 0.13 > 0.41);
 });
 
-test('preferências: armazenamento vazio, quebrado ou parcial volta ao padrão campo a campo', () => {
+test('preferências: armazenamento vazio, quebrado ou inválido volta ao padrão', () => {
   assert.deepEqual(lerPreferencias(null), PREFERENCIAS_PADRAO);
   assert.deepEqual(lerPreferencias('{quebrado'), PREFERENCIAS_PADRAO);
   assert.deepEqual(lerPreferencias('"texto"'), PREFERENCIAS_PADRAO);
-  assert.deepEqual(lerPreferencias(JSON.stringify({ papel: 'pautado', rabiscos: false })), { ...PREFERENCIAS_PADRAO, papel: 'pautado', rabiscos: false });
+  assert.deepEqual(lerPreferencias(JSON.stringify({ papel: 'pautado' })), { papel: 'pautado' });
   assert.equal(lerPreferencias(JSON.stringify({ papel: 'quadriculado' })).papel, 'milimetrado');
-  assert.equal(lerPreferencias(JSON.stringify({ movimento: 'sim' })).movimento, true);
+  // Chave gravada antes, com rabiscos, carimbo e movimento: o papel continua valendo.
+  assert.deepEqual(lerPreferencias(JSON.stringify({ rabiscos: false, carimbo: true, papel: 'liso', movimento: false })), { papel: 'liso' });
 });

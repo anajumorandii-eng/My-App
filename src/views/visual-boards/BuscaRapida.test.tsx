@@ -39,5 +39,9 @@ describe('preferências do Visual', () => {
     expect(lerPreferencias('{"cor":"Arco-íris","efeitos":"turbo","fundo":"xadrez"}')).toEqual(PREFERENCIAS_PADRAO);
     expect(lerPreferencias('{quebrado')).toEqual(PREFERENCIAS_PADRAO);
     expect(lerPreferencias('{"cor":"Solar","efeitos":"suave","fundo":"grade"}')).toEqual({ cor: 'Solar', efeitos: 'suave', fundo: 'grade' });
+    // "Aurora" gravado antes do caderno era o padrão antigo, não escolha: passa ao caderno.
+    expect(lerPreferencias('{"cor":"automatica","efeitos":"completo","fundo":"aurora"}').fundo).toBe('caderno');
+    // Escolhido depois do caderno existir, fica.
+    expect(lerPreferencias('{"cor":"automatica","efeitos":"completo","fundo":"aurora","fundoRevisto":true}').fundo).toBe('aurora');
   });
 });
