@@ -598,3 +598,51 @@
   --color-indigo-900: color-mix(in oklab, var(--amb-a-neon) 32%, #0b1020);
   --color-indigo-950: color-mix(in oklab, var(--amb-a-neon) 22%, #0b1020);
 }
+
+/* --- Cena 3D da matéria no cartão do Hoje --------------------------------
+   A cena é interativa (arrastar o objeto, controle de distância) e precisa de
+   espaço próprio: posta atrás dos botões, como a ficha antiga, o objeto
+   ficava embaixo de "Por que isso?". No iPad e no computador ela vira a coluna
+   da direita do cartão; abaixo de 900 px, um bloco depois dos botões. */
+:root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-nucleo { position: absolute; inset: 0; }
+.crivo-cena { position: relative; display: flex; flex-direction: column; height: 100%; margin: 0; }
+.crivo-cena__palco { position: relative; flex: 1; min-height: 0; overflow: hidden; border-radius: 14px; }
+.crivo-cena__palco canvas { display: block; }
+.crivo-cena__rotulo {
+  position: absolute; left: 0; top: 0; pointer-events: none; white-space: nowrap; will-change: transform;
+  color: var(--amb-dim, #8a8f86); font: 600 10px/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .06em;
+}
+.crivo-cena__rotulo--forte {
+  padding: 3px 7px; border: 1px solid var(--amb-linha, rgba(255,255,255,.14)); border-radius: 999px;
+  background: color-mix(in srgb, var(--amb-fundo, #070a08) 72%, transparent);
+  color: var(--amb-texto, #f3efe6); font-size: 9px; text-transform: uppercase; letter-spacing: .12em;
+}
+.crivo-cena__painel { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; padding: 10px 2px 0; }
+.crivo-cena__controle { display: flex; align-items: center; gap: 8px; color: var(--amb-dim, #8a8f86); font: 500 11px/1.2 Inter, system-ui, sans-serif; }
+.crivo-cena__controle input { width: 150px; accent-color: var(--amb-a, #e2a261); }
+.crivo-cena__leitura { margin: 0; color: var(--amb-dim, #8a8f86); font: 11px/1.45 "JetBrains Mono", ui-monospace, monospace; text-align: right; }
+.crivo-cena__leitura b { color: var(--amb-texto, #f3efe6); font-weight: 600; }
+.crivo-cena__leitura span { display: block; color: var(--amb-a, #e2a261); }
+
+@media (min-width: 901px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) {
+    display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); column-gap: 22px; align-content: start;
+  }
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) > :not(.crivo-observatorio-visual-support--cena) { grid-column: 1; }
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena {
+    position: relative; grid-column: 2; grid-row: 1 / span 8; top: auto; right: auto; width: auto; aspect-ratio: auto;
+    min-height: 360px; margin-bottom: 76px; transform: none; pointer-events: auto;
+  }
+}
+@media (max-width: 900px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena {
+    position: relative; top: auto; right: auto; width: 100%; height: 340px; aspect-ratio: auto; margin-top: 18px; transform: none; pointer-events: auto;
+  }
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) { min-height: 0; }
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) .ni-metrics { position: relative; inset: auto; margin-top: 18px; }
+}
+@media (max-width: 560px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena { height: 300px; }
+  .crivo-cena__painel { justify-content: flex-start; }
+  .crivo-cena__leitura { text-align: left; }
+}

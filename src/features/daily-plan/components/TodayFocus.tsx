@@ -11,6 +11,7 @@ import { DecisionExplanation } from './DecisionExplanation';
 import { DisagreeControl, FeedbackStatus } from './DisagreeControl';
 import { AdaptiveUpdate } from './AdaptiveUpdate';
 import { DecisionFactorField } from './DecisionFactorField';
+import { CenaDaMateria, temCena } from '../cenas/CenaDaMateria';
 import { DecisionSignalStrip } from './DecisionSignalStrip';
 import { focusEnter } from '../../../design-system/motion/variants';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
@@ -111,6 +112,18 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             className="crivo-decision-explanation"
           />
         </div>
+        {/* Antes das métricas: no celular a cena vem logo depois dos botões. */}
+        <div className={cn('crivo-observatorio-visual-support', explanationOpen && 'crivo-observatorio-visual-support--explaining', temCena(action.subject) && 'crivo-observatorio-visual-support--cena')}>
+          <CenaDaMateria
+            materia={action.subject}
+            reserva={(
+              <div className="crivo-observatorio-nucleo" aria-hidden="true">
+                <CrivoCore size="fill" scale="hero" decorative state={coreState} subject={action.subject} previousSubject={previousSubject} topicId={action.topicId} />
+              </div>
+            )}
+          />
+          <DecisionFactorField factors={action.factors} phase={phase} />
+        </div>
         <div className="ni-metrics" aria-label="Sinais da decisão">
           <div className="ni-metric"><small>Domínio</small><b>{masteryPercent}%</b><i><span style={{ width: `${masteryPercent}%` }} /></i></div>
           <div className="ni-metric"><small>Confiança</small><b>{confidencePercent}%</b></div>
@@ -124,10 +137,6 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
             urgency={Math.round(reviewUrgency)}
             minutes={action.allocatedMinutes}
           />
-        </div>
-        <div className={cn('crivo-observatorio-visual-support', explanationOpen && 'crivo-observatorio-visual-support--explaining')} aria-hidden="true">
-          <CrivoCore size="fill" scale="hero" decorative state={coreState} subject={action.subject} previousSubject={previousSubject} topicId={action.topicId} />
-          <DecisionFactorField factors={action.factors} phase={phase} />
         </div>
         <AnimatePresence initial={false}>{showAdaptiveUpdate && <AdaptiveUpdate key={action.id} className="crivo-adaptive-update" />}</AnimatePresence>
         {disagreeOpen && (

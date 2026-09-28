@@ -17,6 +17,7 @@ import {
   BellOff,
   Target,
   X,
+  type LucideIcon,
 } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
 
@@ -29,7 +30,7 @@ const PHASE_OPTIONS: { value: BoardWeight['phaseFocus']; label: string }[] = [
   { value: 'ambas', label: 'Ambas' },
 ];
 
-const ENERGY_OPTIONS: { value: 'low' | 'medium' | 'high'; label: string; icon: React.ElementType }[] = [
+const ENERGY_OPTIONS: { value: 'low' | 'medium' | 'high'; label: string; icon: LucideIcon }[] = [
   { value: 'low', label: 'Baixa', icon: BatteryLow },
   { value: 'medium', label: 'Média', icon: Battery },
   { value: 'high', label: 'Alta', icon: BatteryFull },
