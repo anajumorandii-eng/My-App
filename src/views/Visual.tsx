@@ -23,9 +23,9 @@ import { VisualJourney } from './VisualJourney';
 import { MOTION_DURATION } from '../design-system/motion/tokens';
 import { MolduraTecnologicaContext, useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria, ambienteDoCapitulo, usaMolduraTecnologica } from '../lib/visualAmbiente';
-import { usePreferenciasVisual, type PreferenciasVisual } from '../hooks/usePreferenciasVisual';
-import { PainelPersonalizar } from './visual-boards/PainelPersonalizar';
-import { BuscaRapida, registrarRecente } from './visual-boards/BuscaRapida';
+import { PREFERENCIAS_PADRAO, type PreferenciasVisual } from '../hooks/usePreferenciasVisual';
+import { useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
+import { registrarRecente } from './visual-boards/BuscaRapida';
 import './Visual.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
@@ -100,11 +100,9 @@ function StateBadge({ state }: { state: NodeState }) {
 
 
 
-function VisualLibrary({ onOpen, preferencias, onMudarPreferencias, onBuscar }: {
+function VisualLibrary({ onOpen, preferencias }: {
   onOpen: (id: string) => void;
   preferencias: PreferenciasVisual;
-  onMudarPreferencias: (mudanca: Partial<PreferenciasVisual>) => void;
-  onBuscar: () => void;
 }) {
   const [query, setQuery] = useState('');
   const [subject, setSubject] = useMateriaLembrada('crivo_materia_visual');
@@ -124,10 +122,6 @@ function VisualLibrary({ onOpen, preferencias, onMudarPreferencias, onBuscar }: 
   return (
     <div className="space-y-5">
       <header className="vs-lib-header rounded-3xl bg-zinc-950 text-white p-6 sm:p-8">
-        <div className="vs-lib-acoes">
-          <BotaoBuscar onBuscar={onBuscar} />
-          <PainelPersonalizar preferencias={preferencias} onMudar={onMudarPreferencias} ambienteAutomatico={null} />
-        </div>
         <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-widest">
           <Waypoints className="mr-2 h-3.5 w-3.5" aria-hidden="true" />Visual
         </span>
@@ -202,17 +196,6 @@ function VisualLibrary({ onOpen, preferencias, onMudarPreferencias, onBuscar }: 
   );
 }
 
-
-/** Botão da busca rápida, com o atalho à vista para quem usa teclado. */
-function BotaoBuscar({ onBuscar }: { onBuscar: () => void }) {
-  return (
-    <button type="button" className="vs-acao-topo" onClick={onBuscar} aria-keyshortcuts="Meta+K Control+K">
-      <Search aria-hidden="true" />
-      <span>Buscar</span>
-      <kbd aria-hidden="true">⌘K</kbd>
-    </button>
-  );
-}
 
 function Inspector({
   map, summary, nodeId, answers, onOpenSummary, onDisagree, disagreed, onClose, onModeChange,
@@ -307,8 +290,8 @@ export default function Visual() {
   const [showWhyHidden, setShowWhyHidden] = useState(false);
   const selectionTriggerRef = useRef<HTMLElement | null>(null);
 
-  const [preferencias, mudarPreferencias] = usePreferenciasVisual();
-  const [buscaAberta, setBuscaAberta] = useState(false);
+  // Preferências do Personalizar, que agora mora no topo do app (layout).
+  const preferencias = useAmbienteApp()?.preferencias ?? PREFERENCIAS_PADRAO;
   const summary = summaryId ? interactiveSummaries.find((item) => item.id === summaryId) : undefined;
   const map = useMemo(() => (summary ? buildVisualMap(summary) : null), [summary]);
   const itemProgress = summary ? progress[summary.id] : undefined;
@@ -322,19 +305,8 @@ export default function Visual() {
   // e a barra de baixo. Precisa vir antes dos `return` antecipados — é hook.
   const tecnologico = summary ? usaMolduraTecnologica(summary.id) : false;
   const ambiente = useMemo(() => (summary && tecnologico ? ambienteDoCapitulo(summary, preferencias.cor) : null), [summary, tecnologico, preferencias.cor]);
-  const ambienteAutomatico = useMemo(() => (summary ? ambienteDoCapitulo(summary) : null), [summary]);
   useAmbienteDaTela(ambiente, preferencias);
-
-  // ⌘K / Ctrl+K abre a busca rápida de qualquer ponto do Visual.
-  useEffect(() => {
-    const atalho = (evento: KeyboardEvent) => {
-      if ((evento.metaKey || evento.ctrlKey) && evento.key.toLowerCase() === 'k') { evento.preventDefault(); setBuscaAberta(true); }
-    };
-    window.addEventListener('keydown', atalho);
-    return () => window.removeEventListener('keydown', atalho);
-  }, []);
   useEffect(() => { if (summary) registrarRecente(summary.id); }, [summary]);
-  const busca = <BuscaRapida aberta={buscaAberta} onFechar={() => setBuscaAberta(false)} onAbrir={(id) => setSearchParams({ summary: id })} />;
 
   const hidden = useMemo(() => (map ? chooseHiddenRelations(map, answers) : []), [map, answers]);
   const intervention = useMemo(() => (map ? minimalIntervention(map, answers) : null), [map, answers]);
@@ -388,8 +360,7 @@ export default function Visual() {
     }
     return (
       <div className="crivo-visual crivo-visual--tech">
-        <VisualLibrary onOpen={(id) => setSearchParams({ summary: id })} preferencias={preferencias} onMudarPreferencias={mudarPreferencias} onBuscar={() => setBuscaAberta(true)} />
-        {busca}
+        <VisualLibrary onOpen={(id) => setSearchParams({ summary: id })} preferencias={preferencias} />
       </div>
     );
   }
@@ -464,12 +435,7 @@ export default function Visual() {
           <span>{summary.subject} / {summary.topic}</span>
           <strong>{summary.title}</strong>
         </div>
-        <div className="vs-topic-acoes">
-          <BotaoBuscar onBuscar={() => setBuscaAberta(true)} />
-          <PainelPersonalizar preferencias={preferencias} onMudar={mudarPreferencias} ambienteAutomatico={ambienteAutomatico} />
-        </div>
       </header>
-      {busca}
 
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
 

@@ -1,0 +1,439 @@
+/* ==========================================================================
+   Ambiente tecnológico do app inteiro.
+
+   Nasceu dentro do Visual (Visual.css) e saiu de lá quando o estilo foi para
+   o resto do app: aquele arquivo só carrega com a tela do Visual, e o topo,
+   o trilho, a barra de baixo, a busca rápida e o Personalizar agora valem em
+   qualquer tela. O ambiente é aplicado pelo AmbienteProvider do layout
+   (`data-ambiente` e as cores no <html>).
+   ========================================================================== */
+/* ==========================================================================
+   Ambiente da tela inteira. `useAmbienteDaTela` põe `data-ambiente` e as cores
+   neon do capítulo no <html>; aqui elas viram o tema da tela — o Visual em
+   volta da prancha e também o topo, o trilho lateral e a barra de baixo, que
+   são do layout e ficam fora do Visual. Sem isso a prancha acendia violeta e
+   ciano dentro de uma moldura creme e verde (a quebra que a Ana Júlia apontou).
+
+   No escuro as cores são o neon da paleta; no claro, o mesmo tom escurecido,
+   que o neon puro some no vidro branco.
+   ========================================================================== */
+:root[data-ambiente="tecnologico"] {
+  --amb-a: color-mix(in oklab, var(--amb-a-neon) 68%, #0b1020);
+  --amb-b: color-mix(in oklab, var(--amb-b-neon) 68%, #0b1020);
+  --amb-c: color-mix(in oklab, var(--amb-c-neon) 68%, #0b1020);
+  --amb-fundo: color-mix(in srgb, var(--amb-a-neon) 6%, #f6f8fc);
+  --amb-texto: #0b1020;
+  --amb-dim: #5b6478;
+  --amb-linha: rgba(15, 23, 42, .1);
+  --amb-vidro: rgba(255, 255, 255, .6);
+  --amb-vidro-forte: rgba(255, 255, 255, .88);
+  --amb-aurora:
+    radial-gradient(55% 45% at 0% 0%, color-mix(in srgb, var(--amb-b) 14%, transparent), transparent 70%),
+    radial-gradient(50% 45% at 100% 20%, color-mix(in srgb, var(--amb-a) 14%, transparent), transparent 70%),
+    radial-gradient(60% 50% at 50% 100%, color-mix(in srgb, var(--amb-c) 9%, transparent), transparent 70%),
+    var(--amb-fundo);
+}
+:root.dark[data-ambiente="tecnologico"] {
+  --amb-a: var(--amb-a-neon);
+  --amb-b: var(--amb-b-neon);
+  --amb-c: var(--amb-c-neon);
+  --amb-fundo: var(--amb-fundo-escuro);
+  --amb-texto: #e9eef8;
+  --amb-dim: #93a0b8;
+  --amb-linha: rgba(148, 163, 184, .14);
+  --amb-vidro: rgba(148, 163, 184, .07);
+  --amb-vidro-forte: rgba(8, 12, 24, .84);
+  --amb-aurora:
+    radial-gradient(55% 45% at 0% 0%, color-mix(in srgb, var(--amb-b) 24%, transparent), transparent 70%),
+    radial-gradient(50% 45% at 100% 20%, color-mix(in srgb, var(--amb-a) 16%, transparent), transparent 70%),
+    radial-gradient(60% 50% at 50% 100%, color-mix(in srgb, var(--amb-c) 10%, transparent), transparent 70%),
+    var(--amb-fundo);
+}
+:root[data-ambiente="tecnologico"],
+:root[data-ambiente="tecnologico"] body { background: var(--amb-fundo); }
+
+/* --- Layout: fundo, topo, trilho e barra de baixo ------------------------- */
+:root[data-ambiente="tecnologico"] .ni-production-app,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light {
+  --primary: var(--amb-a) !important;
+  --secondary: var(--amb-a) !important;
+  --wash: color-mix(in srgb, var(--amb-a) 18%, transparent) !important;
+  --text: var(--amb-texto);
+  --dim: var(--amb-dim);
+  --faint: var(--amb-dim);
+  --line: var(--amb-linha);
+  --surface: var(--amb-vidro-forte);
+  --surface2: var(--amb-vidro);
+  --ink: var(--amb-fundo);
+  background: var(--amb-aurora);
+  background-attachment: fixed;
+  color: var(--amb-texto);
+  transition: background .6s ease;
+}
+:root[data-ambiente="tecnologico"] .ni-top,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-top,
+:root[data-ambiente="tecnologico"] .ni-production-mobile,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-production-mobile {
+  border-bottom-color: var(--amb-linha);
+  background: var(--amb-vidro-forte);
+  -webkit-backdrop-filter: blur(18px) saturate(140%);
+  backdrop-filter: blur(18px) saturate(140%);
+}
+:root[data-ambiente="tecnologico"] .ni-top strong,
+:root[data-ambiente="tecnologico"] .ni-production-mobile strong {
+  color: var(--amb-texto);
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+  letter-spacing: -.03em;
+}
+:root[data-ambiente="tecnologico"] .ni-top nav a { color: var(--amb-dim); }
+:root[data-ambiente="tecnologico"] .ni-top nav a.active,
+:root[data-ambiente="tecnologico"] .ni-top nav a:hover { color: var(--amb-texto); }
+:root[data-ambiente="tecnologico"] .ni-top nav a.active::after { background: linear-gradient(90deg, var(--amb-b), var(--amb-a)); box-shadow: 0 0 10px var(--amb-a); }
+:root[data-ambiente="tecnologico"] .ni-prototype-badge { color: var(--amb-dim); font-family: "JetBrains Mono", ui-monospace, monospace; }
+:root[data-ambiente="tecnologico"] .ni-theme-toggle,
+:root[data-ambiente="tecnologico"] .ni-avatar { border-color: var(--amb-linha); background: var(--amb-vidro); color: var(--amb-texto); }
+:root[data-ambiente="tecnologico"] .ni-rail,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail {
+  border-right-color: var(--amb-linha);
+  background: var(--amb-vidro-forte);
+  -webkit-backdrop-filter: blur(18px);
+  backdrop-filter: blur(18px);
+}
+:root[data-ambiente="tecnologico"] .ni-rail .ni-icon-depth,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail .ni-icon-depth,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail-scroll a,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail-scroll a b { color: var(--amb-dim); }
+:root[data-ambiente="tecnologico"] .ni-rail-scroll a.active,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail-scroll a.active {
+  background: color-mix(in srgb, var(--amb-a) 14%, transparent);
+  box-shadow: inset 2px 0 var(--amb-a);
+}
+:root[data-ambiente="tecnologico"] .ni-rail-scroll a.active .ni-icon-depth,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-rail-scroll a.active .ni-icon-depth {
+  color: var(--amb-a);
+  filter: drop-shadow(0 0 7px color-mix(in srgb, var(--amb-a) 60%, transparent));
+}
+:root[data-ambiente="tecnologico"] .crivo-mobile-toolbar__surface {
+  border-color: var(--amb-linha) !important;
+  background: var(--amb-vidro-forte) !important;
+}
+:root[data-ambiente="tecnologico"] .crivo-mobile-toolbar__item { color: var(--amb-dim) !important; }
+:root[data-ambiente="tecnologico"] .crivo-mobile-toolbar__item.is-active { color: var(--amb-a) !important; }
+
+
+/* --- Ações do topo: Buscar e Personalizar -------------------------------- */
+.vs-topic-acoes { display: flex; align-items: center; gap: 8px; }
+.vs-acao-topo {
+  display: inline-flex;
+  align-items: center;
+  gap: 7px;
+  min-height: 38px;
+  padding: 0 12px;
+  border: 1px solid var(--amb-linha, var(--vs-line));
+  border-radius: 12px;
+  background: var(--amb-vidro, transparent);
+  color: var(--amb-texto, var(--vs-ink));
+  font: 600 .82rem/1 "Space Grotesk", Inter, system-ui, sans-serif;
+  cursor: pointer;
+  -webkit-backdrop-filter: blur(12px);
+  backdrop-filter: blur(12px);
+  transition: border-color .2s ease, box-shadow .2s ease;
+}
+.vs-acao-topo:hover,
+.vs-acao-topo[aria-expanded="true"] {
+  border-color: color-mix(in srgb, var(--amb-a, var(--vs-burgundy)) 60%, transparent);
+  box-shadow: 0 0 22px -8px var(--amb-a, var(--vs-burgundy));
+}
+.vs-acao-topo svg { width: 16px; height: 16px; color: var(--amb-a, var(--vs-burgundy)); }
+.vs-acao-topo kbd,
+.vs-busca kbd {
+  padding: 2px 6px;
+  border: 1px solid var(--amb-linha, var(--vs-line));
+  border-radius: 6px;
+  color: var(--amb-dim, var(--vs-dim));
+  font: 600 .66rem/1.2 "JetBrains Mono", ui-monospace, monospace;
+}
+@media (max-width: 620px) {
+  .vs-acao-topo span, .vs-acao-topo kbd { display: none; }
+  .vs-acao-topo { width: 38px; padding: 0; justify-content: center; }
+}
+
+/* --- Painel Personalizar -------------------------------------------------- */
+.vs-personalizar { position: relative; }
+.vs-personalizar-painel {
+  position: absolute;
+  z-index: 40;
+  top: calc(100% + 10px);
+  right: 0;
+  width: min(360px, calc(100vw - 32px));
+  max-height: min(70vh, 620px);
+  overflow: auto;
+  display: grid;
+  gap: 16px;
+  padding: 16px;
+  border: 1px solid var(--amb-linha, var(--vs-line));
+  border-radius: 18px;
+  background: var(--amb-vidro-forte, var(--vs-paper));
+  color: var(--amb-texto, var(--vs-ink));
+  -webkit-backdrop-filter: blur(22px) saturate(150%);
+  backdrop-filter: blur(22px) saturate(150%);
+  box-shadow: 0 30px 80px -30px rgba(0, 0, 0, .6), 0 0 0 1px rgba(255, 255, 255, .04) inset;
+  animation: vs-painel-abre .22s cubic-bezier(.2, .8, .2, 1);
+}
+@keyframes vs-painel-abre { from { opacity: 0; transform: translateY(-6px) scale(.98); } }
+.vs-personalizar-cabeca { display: flex; align-items: center; justify-content: space-between; }
+.vs-personalizar-cabeca strong { font: 700 1.05rem/1 "Space Grotesk", Inter, sans-serif; }
+.vs-personalizar-fechar { display: grid; place-items: center; width: 30px; height: 30px; border: 0; border-radius: 8px; background: transparent; color: var(--amb-dim, var(--vs-dim)); cursor: pointer; }
+.vs-personalizar-fechar svg { width: 16px; height: 16px; }
+.vs-personalizar-painel fieldset { margin: 0; padding: 0; border: 0; display: grid; gap: 8px; }
+.vs-personalizar-painel legend { margin-bottom: 8px; color: var(--amb-a, var(--vs-burgundy)); font: 700 .64rem/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .18em; text-transform: uppercase; }
+.vs-personalizar-cores,
+.vs-personalizar-opcoes { display: grid; gap: 6px; }
+.vs-personalizar-cores { grid-template-columns: 1fr 1fr; }
+.vs-personalizar-painel button[aria-pressed] {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  min-height: 44px;
+  padding: 8px 10px;
+  border: 1px solid var(--amb-linha, var(--vs-line));
+  border-radius: 12px;
+  background: transparent;
+  color: inherit;
+  text-align: left;
+  cursor: pointer;
+  transition: border-color .2s ease, background .2s ease;
+}
+.vs-personalizar-painel button[aria-pressed="true"] {
+  border-color: var(--amb-a, var(--vs-burgundy));
+  background: color-mix(in srgb, var(--amb-a, var(--vs-burgundy)) 12%, transparent);
+  box-shadow: 0 0 18px -8px var(--amb-a, var(--vs-burgundy));
+}
+.vs-personalizar-painel button b { display: block; font: 600 .84rem/1.2 "Space Grotesk", Inter, sans-serif; }
+.vs-personalizar-painel button small { display: block; margin-top: 2px; color: var(--amb-dim, var(--vs-dim)); font-size: .7rem; line-height: 1.3; }
+.vs-personalizar-opcoes button[aria-pressed] { display: block; }
+.vs-personalizar-amostra {
+  flex: none;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: conic-gradient(from 90deg, var(--amb-a, #22d3ee), var(--amb-b, #a78bfa), var(--amb-c, #f472b6), var(--amb-a, #22d3ee));
+  box-shadow: 0 0 0 2px rgba(255, 255, 255, .08), 0 0 14px -4px var(--amb-a, #22d3ee);
+}
+.vs-personalizar-segmento { display: grid; grid-template-columns: repeat(3, 1fr); gap: 6px; }
+.vs-personalizar-segmento button[aria-pressed] { flex-direction: column; justify-content: center; gap: 6px; font: 600 .78rem/1 "Space Grotesk", Inter, sans-serif; }
+.vs-personalizar-fundo { width: 100%; height: 26px; border-radius: 7px; border: 1px solid var(--amb-linha, var(--vs-line)); }
+.vs-personalizar-fundo--aurora { background: radial-gradient(60% 90% at 20% 0%, color-mix(in srgb, var(--amb-b, #a78bfa) 60%, transparent), transparent), radial-gradient(60% 90% at 90% 30%, color-mix(in srgb, var(--amb-a, #22d3ee) 55%, transparent), transparent), var(--amb-fundo, #05070d); }
+.vs-personalizar-fundo--grade { background: linear-gradient(color-mix(in srgb, var(--amb-a, #22d3ee) 30%, transparent) 1px, transparent 1px) 0 0 / 8px 8px, linear-gradient(90deg, color-mix(in srgb, var(--amb-a, #22d3ee) 30%, transparent) 1px, transparent 1px) 0 0 / 8px 8px, var(--amb-fundo, #05070d); }
+.vs-personalizar-fundo--liso { background: var(--amb-fundo, #05070d); }
+
+/* --- Busca rápida (⌘K) ---------------------------------------------------- */
+.vs-busca-fundo {
+  position: fixed;
+  inset: 0;
+  z-index: 60;
+  display: grid;
+  place-items: start center;
+  padding: max(10vh, 70px) 16px 16px;
+  background: rgba(2, 4, 12, .55);
+  -webkit-backdrop-filter: blur(6px);
+  backdrop-filter: blur(6px);
+  animation: vs-busca-fundo .18s ease;
+}
+@keyframes vs-busca-fundo { from { opacity: 0; } }
+.vs-busca {
+  width: min(620px, 100%);
+  overflow: hidden;
+  border: 1px solid var(--amb-linha, rgba(148, 163, 184, .2));
+  border-radius: 20px;
+  background: var(--amb-vidro-forte, rgba(10, 15, 30, .9));
+  color: var(--amb-texto, #e9eef8);
+  -webkit-backdrop-filter: blur(24px) saturate(150%);
+  backdrop-filter: blur(24px) saturate(150%);
+  box-shadow: 0 40px 120px -30px rgba(0, 0, 0, .8), 0 0 60px -30px var(--amb-a, #22d3ee);
+  animation: vs-painel-abre .24s cubic-bezier(.2, .8, .2, 1);
+}
+.vs-busca-campo { display: flex; align-items: center; gap: 12px; padding: 16px 18px; border-bottom: 1px solid var(--amb-linha, rgba(148, 163, 184, .2)); }
+.vs-busca-campo svg { width: 20px; height: 20px; color: var(--amb-a, #22d3ee); flex: none; }
+.vs-busca-campo input { flex: 1; min-width: 0; border: 0; outline: 0; background: transparent; color: inherit; font: 500 1.08rem/1.3 "Space Grotesk", Inter, sans-serif; }
+.vs-busca-campo input::placeholder { color: var(--amb-dim, #93a0b8); }
+.vs-busca ul { max-height: min(52vh, 460px); overflow: auto; margin: 0; padding: 6px; list-style: none; }
+.vs-busca li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 12px;
+  border-radius: 12px;
+  cursor: pointer;
+}
+.vs-busca li[aria-selected="true"] { background: color-mix(in srgb, var(--amb-a, #22d3ee) 12%, transparent); box-shadow: inset 2px 0 var(--amb-a, #22d3ee); }
+.vs-busca-ponto { flex: none; width: 10px; height: 10px; border-radius: 50%; }
+.vs-busca-texto { flex: 1; min-width: 0; display: grid; }
+.vs-busca-texto small { color: var(--amb-dim, #93a0b8); font: 600 .62rem/1.3 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .14em; text-transform: uppercase; }
+.vs-busca-texto b { overflow: hidden; font: 600 .96rem/1.3 "Space Grotesk", Inter, sans-serif; text-overflow: ellipsis; white-space: nowrap; }
+.vs-busca-enter { width: 16px; height: 16px; color: var(--amb-a, #22d3ee); }
+.vs-busca-grupo { display: flex; align-items: center; gap: 6px; margin: 10px 18px 0; color: var(--amb-dim, #93a0b8); font: 700 .62rem/1 "JetBrains Mono", ui-monospace, monospace; letter-spacing: .16em; text-transform: uppercase; }
+.vs-busca-grupo svg { width: 12px; height: 12px; }
+.vs-busca-vazio { margin: 0; padding: 22px 18px; color: var(--amb-dim, #93a0b8); font-size: .88rem; }
+.vs-busca-rodape { display: flex; align-items: center; gap: 6px; margin: 0; padding: 10px 18px; border-top: 1px solid var(--amb-linha, rgba(148, 163, 184, .2)); color: var(--amb-dim, #93a0b8); font-size: .72rem; }
+.vs-busca-rodape kbd + kbd { margin-left: -2px; }
+@media (prefers-reduced-motion: reduce) {
+  .vs-busca-fundo, .vs-busca, .vs-personalizar-painel { animation: none; }
+}
+
+
+/* --- Efeitos e fundo escolhidos no Personalizar ---------------------------- */
+:root[data-efeitos="suave"] .vs-tech-particulas,
+:root[data-efeitos="minimo"] .vs-tech-particulas { display: none; }
+:root[data-efeitos="suave"] .vs-study-board--tech .vs-concept-card,
+:root[data-efeitos="minimo"] .vs-study-board--tech .vs-concept-card { transform: none; }
+:root[data-efeitos="suave"] .vs-study-board--tech::before,
+:root[data-efeitos="minimo"] .vs-study-board--tech::before { display: none; }
+:root[data-efeitos="minimo"] .crivo-visual--tech *,
+:root[data-efeitos="minimo"] .crivo-visual--tech *::before,
+:root[data-efeitos="minimo"] .crivo-visual--tech *::after,
+:root[data-efeitos="minimo"] .vs-study-board--tech { animation: none !important; transition: none !important; }
+:root[data-fundo="grade"] .ni-production-app,
+:root[data-fundo="grade"] .ni-production-app.is-light {
+  background:
+    linear-gradient(color-mix(in srgb, var(--amb-a) 9%, transparent) 1px, transparent 1px) 0 0 / 32px 32px,
+    linear-gradient(90deg, color-mix(in srgb, var(--amb-a) 9%, transparent) 1px, transparent 1px) 0 0 / 32px 32px,
+    var(--amb-fundo);
+}
+:root[data-fundo="liso"] .ni-production-app,
+:root[data-fundo="liso"] .ni-production-app.is-light { background: var(--amb-fundo); }
+:root[data-fundo="liso"] .vs-study-board--tech { background: var(--t-fundo); animation: none; }
+:root[data-fundo="grade"] .vs-study-board--tech {
+  background:
+    linear-gradient(color-mix(in srgb, var(--t-a) 8%, transparent) 1px, transparent 1px) 0 0 / 24px 24px,
+    linear-gradient(90deg, color-mix(in srgb, var(--t-a) 8%, transparent) 1px, transparent 1px) 0 0 / 24px 24px,
+    var(--t-fundo);
+  animation: none;
+}
+/* O tema claro do layout pinta todo input de papel (#fffdf8); na busca isso
+   virava uma faixa amarelada dentro do vidro. */
+.vs-busca-campo input,
+.ni-production-app.is-light .vs-busca-campo input { border: 0; background: transparent; color: inherit; }
+
+/* --- Tokens semânticos do app ------------------------------------------- */
+/* As telas (Hoje, Plano, Resumos, Questões, Caderno…) leem --surface-*,
+   --text-*, --border-subtle e --action-primary pelo Tailwind. Redefinidos
+   aqui, o app inteiro veste o ambiente sem mexer em cada tela.
+
+   O botão de ação usa o tom da paleta escurecido: o neon puro (ciano, âmbar)
+   com texto branco por cima não passa em contraste. */
+:root[data-ambiente="tecnologico"] {
+  --background-base: var(--amb-fundo);
+  --background-subtle: color-mix(in srgb, var(--amb-a) 5%, var(--amb-fundo));
+  --surface-default: rgba(255, 255, 255, .78);
+  --surface-secondary: color-mix(in srgb, var(--amb-a) 6%, rgba(255, 255, 255, .7));
+  --surface-elevated: rgba(255, 255, 255, .9);
+  --surface-strong: color-mix(in srgb, var(--amb-a) 12%, #eef1f7);
+  --text-primary: var(--amb-texto);
+  --text-secondary: var(--amb-dim);
+  --text-muted: color-mix(in srgb, var(--amb-dim) 80%, transparent);
+  --text-inverse: #ffffff;
+  --border-subtle: var(--amb-linha);
+  --focus-ring: var(--amb-a);
+  --navigation-background: var(--amb-vidro-forte);
+  --navigation-selected: color-mix(in srgb, var(--amb-a) 16%, transparent);
+  --action-primary: color-mix(in oklab, var(--amb-a-neon) 62%, #0b1020);
+  --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 52%, #0b1020);
+  --action-primary-pressed: color-mix(in oklab, var(--amb-a-neon) 44%, #0b1020);
+  --font-display: "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
+  --shadow-soft-md-value: 0 16px 40px -24px rgba(15, 23, 42, .35);
+  --shadow-soft-lg-value: 0 30px 70px -34px rgba(15, 23, 42, .45);
+}
+:root.dark[data-ambiente="tecnologico"] {
+  --surface-default: rgba(15, 22, 40, .72);
+  --surface-secondary: color-mix(in srgb, var(--amb-a) 7%, rgba(12, 18, 34, .72));
+  --surface-elevated: rgba(20, 28, 50, .82);
+  --surface-strong: color-mix(in srgb, var(--amb-a) 14%, #121a30);
+  --text-inverse: #05070d;
+  --shadow-soft-md-value: 0 16px 40px -20px rgba(0, 0, 0, .7);
+  --shadow-soft-lg-value: 0 30px 80px -30px rgba(0, 0, 0, .8);
+}
+/* Painéis e cartões do design system viram vidro. Os gradientes creme e verde
+   do .ni-panel eram fixos no CSS, não token — por isso a regra explícita. */
+:root[data-ambiente="tecnologico"] .ni-production-app :is(.ni-panel, .rounded-card),
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light :is(.ni-panel, .rounded-card) {
+  border-color: var(--amb-linha);
+  background: var(--surface-default);
+  -webkit-backdrop-filter: blur(16px) saturate(140%);
+  backdrop-filter: blur(16px) saturate(140%);
+  box-shadow: 0 1px 0 rgba(255, 255, 255, .05) inset, var(--shadow-soft-md-value);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app :is(h1, h2, h3) { font-family: "Space Grotesk", Inter, system-ui, sans-serif; letter-spacing: -.025em; }
+:root[data-ambiente="tecnologico"] .ni-production-app :is(input, textarea, select),
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light :is(input, textarea, select) {
+  border-color: var(--amb-linha);
+  background: var(--surface-default);
+  color: var(--amb-texto);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app :is(input, textarea, select):focus-visible {
+  outline: none;
+  border-color: var(--amb-a);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--amb-a) 25%, transparent);
+}
+:root[data-ambiente="tecnologico"] ::selection { background: color-mix(in srgb, var(--amb-a) 35%, transparent); }
+
+/* --- Ações no topo do app ------------------------------------------------ */
+.ni-acoes-topo { display: flex; align-items: center; gap: 8px; margin-left: auto; }
+.ni-top .ni-acoes-topo + .ni-theme-toggle { margin-left: 0; }
+.ni-production-mobile .ni-acoes-topo { margin-left: auto; margin-right: 6px; gap: 6px; }
+.ni-production-mobile .ni-acoes-topo .vs-acao-topo { width: 38px; padding: 0; justify-content: center; }
+.ni-production-mobile .ni-acoes-topo .vs-acao-topo span,
+.ni-production-mobile .ni-acoes-topo .vs-acao-topo kbd { display: none; }
+.vs-busca-ponto--tela { border-radius: 3px; background: var(--amb-b, #a78bfa); box-shadow: 0 0 10px var(--amb-b, #a78bfa); }
+
+/* --- Resíduos do estilo editorial nas telas ------------------------------ */
+/* Levantados no navegador em 18 rotas (elementos com texto em serif ou
+   itálico). O título-herói era itálico em Newsreader; em Space Grotesk, que
+   não tem itálico, o navegador inclinava a letra à força. */
+:root[data-ambiente="tecnologico"] .ni-production-app :is(h1, h2, h3, h4, span.block) { font-style: normal; }
+:root[data-ambiente="tecnologico"] .ni-production-app h1 { letter-spacing: -.04em; }
+:root[data-ambiente="tecnologico"] .ni-production-app :is(.ni-subjects button, .ni-subjects span, .subject-dossier__pending b, .crivo-observatorio-trajectory h3, .ni-trilho-trajectory h3, .ni-foco-support h3, .ni-production-mobile strong) {
+  font-family: "Space Grotesk", Inter, system-ui, sans-serif;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app button:where(:not([class*="mono"])),
+:root[data-ambiente="tecnologico"] .ni-production-app [role="tab"] { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
+/* Enunciado de questão é leitura longa: Inter, não a display. */
+:root[data-ambiente="tecnologico"] .ni-production-app p.whitespace-pre-line { font-family: Inter, system-ui, sans-serif; }
+:root[data-ambiente="tecnologico"] .ni-production-app .ni-timer { font-family: "JetBrains Mono", ui-monospace, monospace; }
+
+/* Botão principal (.ni-primary) e aba de matéria ativa: o dourado era fixo no
+   CSS, não token, e ficava igual em qualquer matéria. */
+:root[data-ambiente="tecnologico"] .ni-production-app .ni-primary {
+  background: linear-gradient(120deg, var(--amb-b), var(--amb-a));
+  color: #fff;
+  box-shadow: 0 14px 32px -14px var(--amb-a), inset 0 1px rgba(255, 255, 255, .35);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app .ni-subjects button.active {
+  border-color: color-mix(in srgb, var(--amb-a) 70%, transparent);
+  background: color-mix(in srgb, var(--amb-a) 14%, transparent);
+}
+/* A regra de input do ambiente pinta borda e fundo; dentro da busca rápida o
+   campo é o próprio vidro do diálogo. Mesma especificidade + vem depois. */
+:root[data-ambiente="tecnologico"] .ni-production-app .vs-busca-campo input,
+:root[data-ambiente="tecnologico"] .ni-production-app.is-light .vs-busca-campo input { border: 0; background: transparent; box-shadow: none; }
+/* Cabeçalho do capítulo nos Resumos: era uma placa preta fixa. */
+:root[data-ambiente="tecnologico"] .ni-production-app .crivo-hero-capitulo {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--amb-linha);
+  background:
+    radial-gradient(60% 90% at 0% 0%, color-mix(in srgb, var(--amb-b) 26%, transparent), transparent 70%),
+    radial-gradient(50% 80% at 100% 0%, color-mix(in srgb, var(--amb-a) 22%, transparent), transparent 70%),
+    var(--surface-elevated) !important;
+  color: var(--amb-texto) !important;
+  -webkit-backdrop-filter: blur(16px);
+  backdrop-filter: blur(16px);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app .crivo-hero-capitulo :is(p, span):not([class*="bg-"]) { color: var(--amb-dim); }
+:root[data-ambiente="tecnologico"] .ni-production-app .crivo-hero-capitulo h1 { color: var(--amb-texto); }
+
+/* A "atmosfera" de matéria dos Resumos pinta um fundo próprio (creme no
+   claro); no ambiente, ela fica transparente e deixa o vidro e a aurora do
+   app aparecerem. O canvas dela continua desenhando por cima. */
+:root[data-ambiente="tecnologico"] .ni-production-app [data-testid="subject-atmosphere"] { background: transparent !important; }
+:root[data-ambiente="tecnologico"] .ni-production-app [data-testid="subject-atmosphere-fallback"] { opacity: .12; }

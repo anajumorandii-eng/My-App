@@ -1,4 +1,7 @@
 import React, { useMemo, useState } from 'react';
+import { useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria } from '../lib/visualAmbiente';
 import { useNavigate } from 'react-router-dom';
 import { motion, useReducedMotion } from 'motion/react';
 import { BookOpen, CalendarClock, CheckCircle2, CloudOff, History, Stethoscope, WifiOff } from 'lucide-react';
@@ -172,6 +175,12 @@ export default function Dashboard() {
       intervalEnd: (candidateAction as any).intervalEnd ?? new Date(Date.now() + 35 * 60000).toISOString(),
     };
   }, [candidateAction]);
+
+  // A tela veste a cor da matéria da decisão em destaque (ou da aba escolhida):
+  // o Hoje também é "adaptável pela matéria e pelo conteúdo".
+  const corEscolhida = useAmbienteApp()?.preferencias.cor ?? 'automatica';
+  const ambiente = useMemo(() => (primary?.subject ? ambienteDaMateria(primary.subject, corEscolhida) : null), [primary?.subject, corEscolhida]);
+  useAmbienteDaTela(ambiente);
 
   const secondary = dailyPlan.slice(1);
 

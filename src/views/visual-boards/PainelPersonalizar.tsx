@@ -61,6 +61,9 @@ export function PainelPersonalizar({ preferencias, onMudar, ambienteAutomatico }
         ref={botao}
         type="button"
         className="vs-acao-topo"
+        // O texto some no celular (só o ícone cabe); sem este rótulo o botão
+        // ficava sem nome para leitor de tela.
+        aria-label="Personalizar"
         aria-expanded={aberto}
         aria-controls={idPainel}
         onClick={() => setAberto((valor) => !valor)}

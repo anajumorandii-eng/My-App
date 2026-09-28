@@ -11,6 +11,9 @@ import { cn } from '../lib/cn';
 import { PALETTES, SCREENS } from '../prototypes/NucleoInstrumentalPrototype';
 import { ErrorBoundary } from './ErrorBoundary';
 import { Skeleton } from './ui/Skeleton';
+import { AmbienteProvider, useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
+import { BotaoBuscar, BuscaRapida } from '../views/visual-boards/BuscaRapida';
+import { PainelPersonalizar } from '../views/visual-boards/PainelPersonalizar';
 
 const PATH_BY_SCREEN: Record<string, string> = {
   hoje: '/', diagnostico: '/diagnostico', plano: '/plano', agenda: '/agenda', 'reta-final': '/reta-final', recuperacao: '/recuperacao',
@@ -54,8 +57,22 @@ function RouteBoundary({ pathname, children }: { pathname: string; children: Rea
   );
 }
 
+/**
+ * O ambiente tecnológico (cor, vidro, efeitos) vale para o app inteiro, e o
+ * provider fica acima do layout para que o topo — Buscar e Personalizar — e as
+ * telas compartilhem as mesmas preferências.
+ */
 export default function NucleoInstrumentalProductionLayout() {
+  return <AmbienteProvider><LayoutComAmbiente /></AmbienteProvider>;
+}
+
+/** Telas que a busca rápida encontra pelo nome. */
+const TELAS_DA_BUSCA = SCREENS.map((item) => ({ rotulo: item.label, destino: PATH_BY_SCREEN[item.key] })).filter((tela) => Boolean(tela.destino));
+
+function LayoutComAmbiente() {
   const { isDark, toggleTheme } = useTheme();
+  const ambienteApp = useAmbienteApp();
+  const [buscaAberta, setBuscaAberta] = useState(false);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [railExpanded, setRailExpanded] = useState(() =>
@@ -78,12 +95,27 @@ export default function NucleoInstrumentalProductionLayout() {
     return () => media.removeEventListener('change', sync);
   }, []);
   const closeOnboarding = () => { setShowOnboarding(false); localStorage.setItem('juju_onboarding', 'true'); };
+  // ⌘K / Ctrl+K abre a busca rápida em qualquer tela.
+  useEffect(() => {
+    const atalho = (evento: KeyboardEvent) => {
+      if ((evento.metaKey || evento.ctrlKey) && evento.key.toLowerCase() === 'k') { evento.preventDefault(); setBuscaAberta(true); }
+    };
+    window.addEventListener('keydown', atalho);
+    return () => window.removeEventListener('keydown', atalho);
+  }, []);
+  const acoesDoTopo = (compacto: boolean) => ambienteApp && (
+    <div className="ni-acoes-topo">
+      <BotaoBuscar onBuscar={() => setBuscaAberta(true)} compacto={compacto} />
+      <PainelPersonalizar preferencias={ambienteApp.preferencias} onMudar={ambienteApp.mudarPreferencias} ambienteAutomatico={ambienteApp.sobreposto} />
+    </div>
+  );
 
   return (
     <div className={cn('ni-prototype ni-production-app', !isDark && 'is-light')} style={{ '--primary': palette.primary, '--primary-ink': palette.readable, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties} data-family={palette.family}>
       <header className="ni-production-mobile lg:hidden">
         <IconButton aria-label="Abrir menu" onClick={() => setMenuOpen(true)}><Menu className="h-5 w-5" aria-hidden="true" /></IconButton>
         <strong>Crivo</strong>
+        {acoesDoTopo(true)}
         <button type="button" onClick={toggleTheme} aria-label={isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'}>{isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}</button>
       </header>
       {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" onClick={() => setMenuOpen(false)} />}
@@ -120,6 +152,7 @@ export default function NucleoInstrumentalProductionLayout() {
             })}
           </nav>
           <span className="ni-prototype-badge">DADOS REAIS · {screen.kind.toUpperCase()}</span>
+          {acoesDoTopo(false)}
           <button className="ni-theme-toggle" onClick={toggleTheme} aria-label={isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'}>{isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}<span>{isDark ? 'claro' : 'escuro'}</span></button>
           <div className="ni-avatar" aria-label="Perfil">AJ</div>
         </header>
@@ -134,6 +167,13 @@ export default function NucleoInstrumentalProductionLayout() {
         </main>
       </div>
       <BottomNav />
+      <BuscaRapida
+        aberta={buscaAberta}
+        onFechar={() => setBuscaAberta(false)}
+        onAbrir={(id) => navigate(`/visual?summary=${encodeURIComponent(id)}`)}
+        telas={TELAS_DA_BUSCA}
+        onIrParaTela={(destino) => navigate(destino)}
+      />
       <OnboardingModal open={showOnboarding} onClose={closeOnboarding} onStartDiagnostic={() => { closeOnboarding(); navigate('/diagnostico'); }} />
     </div>
   );
