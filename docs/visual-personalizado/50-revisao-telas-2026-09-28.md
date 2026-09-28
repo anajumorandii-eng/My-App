@@ -56,7 +56,48 @@ próxima tela com o mesmo defeito.
 Capturas em `screenshots/revisao-telas-2026-09-28/`: `plano-antes-1194-escuro.png`
 e `plano-depois-*`.
 
+## Estudar (Sessão)
+
+| Antes | Problema | Agora |
+| --- | --- | --- |
+| "PRACTICE · FÍSICA · SESSÃO EM FOCO" | Breadcrumb em inglês; sem bloco aberto, caía em "MATEMÁTICA". | "Estudar · Física · Sessão em foco"; sem bloco, a matéria some do caminho. |
+| Aba "Física" marcada com Biologia na lista | Sem filtro, a aba acesa era a matéria do bloco aberto, e a lista mostrava todas. | "Todas" marcada quando não há filtro; só o filtro acende uma matéria. |
+| Paleta fixa no contêiner | A tela pintava a paleta da matéria por cima do ambiente (mesmo defeito do Plano). | A cor vem do ambiente, registrado pela matéria do bloco aberto, como no Hoje. |
+| Iniciar, Reiniciar e Concluir passando da borda do cartão no iPad | Três botões numa fileira sem quebra. | Quebram linha e ficam centrados. |
+| Abas em pílula com o texto encostado na borda | O CSS de produção zerava o respiro lateral, herança da aba sublinhada. | 12 px de cada lado; vale para todas as telas com abas de matéria. |
+
+## Questões
+
+| Antes | Problema | Agora |
+| --- | --- | --- |
+| "PRACTICE · QUESTÕES" | Inglês. | "Estudar · Questões". |
+| "perfil organic · treino ativo" | Nome interno, em inglês, da família de cor (o mesmo "perfil wave" que saiu do Hoje). | "N respostas neste treino", contado do histórico da sessão. |
+| "Qual é o próximo passo do raciocínio?" em toda questão | Título fixo que não descrevia a questão aberta. | "Escolha uma alternativa." |
+| Alternativas em monoespaçada de 10 px | O enunciado saía em 17 px; as alternativas, metade da leitura, quase ilegíveis. | Inter de 14 px. |
+| Acerto e erro em `#86dca5` e `#e08391` | Verde e rosa claros, pensados para o escuro; no claro, sem contraste. | Tokens `--status-success` e `--status-error`, que trocam com o tema. |
+| Diagnóstico do erro invisível no claro | `text-amber-100`/`200`, com e sem opacidade, sobre creme: o convite a relatar o raciocínio e o botão "Descobrir o motivo com o CRIVO" sumiam. Aparece em 20 lugares do app. | No claro, esses tons seguem `--status-warning`, como o âmbar 300 da rodada do Plano. |
+| Título aparecendo atrás das abas e do cabeçalho ao rolar, no celular | A faixa de matérias usa `--background`, que o ambiente não define, e ficava transparente; o cabeçalho usava o vidro dos cartões (86%). | Fundo do ambiente a 98% na faixa e 96% no cabeçalho. |
+| "Telemetria de Treino", "Taxa de Precisão", "Próxima Questão", "Reiniciar Treino" | Caixa alta de título em inglês, não em português. | "Este treino", "Taxa de acerto", "Próxima questão", "Reiniciar treino". |
+
+Domínio do tópico e próxima revisão, no painel lateral, já vinham do registro
+de domínio (comentário no código), e continuam como estão.
+
+## Conferência desta parte
+
+- Estudar e Questões no iPad e no celular, claro e escuro, com as fontes reais,
+  incluindo a questão respondida e a tela rolada no celular. Nenhuma rolagem
+  lateral. Os erros de console nas capturas são do Firestore e do certificado
+  do proxy deste ambiente, não do app.
+- Hoje conferido de novo, por causa do respiro das abas.
+- **Testes:** `Sessao.test.tsx` confere que "Todas" fica marcada sem filtro, e
+  não a matéria do bloco aberto.
+- `npm run lint` limpo; `npm test` verde (719 node:test e 752 vitest);
+  `npm run build` sem erro.
+
+Capturas: `estudar-antes-*`, `estudar-depois-*`, `questoes-antes-*`,
+`questoes-depois-*`, `questoes-respondida-1194-claro.png` e
+`questoes-rolagem-390-claro.png`.
+
 ## Próximo
 
-Estudar e Questões, com a mesma régua: nada de dado inventado, tudo em
-português, cor vinda do ambiente e conferência em iPad e celular.
+Resumos, com a mesma régua.

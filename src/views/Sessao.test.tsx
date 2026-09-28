@@ -136,6 +136,10 @@ describe('Sessao', () => {
     renderSessao();
 
     expect(screen.getAllByRole('button', { name: /física|matemática|biologia|química|história|geografia|português|literatura|redação|atualidades/i })).toHaveLength(10);
+    // Sem filtro, "Todas" fica marcada, e não a matéria do bloco aberto: a lista
+    // mostra blocos de todas as matérias.
+    expect(screen.getByRole('button', { name: 'Todas' })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByRole('button', { name: 'Física' })).toHaveAttribute('aria-pressed', 'false');
     const history = screen.getByRole('button', { name: 'História' });
     expect(history).toBeEnabled();
     fireEvent.click(history);
