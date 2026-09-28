@@ -482,3 +482,40 @@
 @media (min-width: 901px) {
   :root[data-ambiente="tecnologico"] .ni-production-app :is(.crivo-observatorio-decision-copy, .crivo-observatorio-trajectory) { min-height: 440px; }
 }
+
+/* --- Junção da barra lateral com a barra de cima -------------------------- */
+/* A Ana Júlia apontou a emenda no iPad. Havia três defeitos juntos:
+   - a barra lateral tinha 68 px e a coluna da grade 72: pela fresta de 4 px
+     aparecia a aurora vinho, uma faixa vertical;
+   - a lateral e a barra de cima eram duas peças de vidro separadas, cada uma
+     com a sua borda, que não se encontravam;
+   - o ícone ficava solto no alto, desalinhado da barra do "Crivo".
+   Agora a lateral ocupa a coluna inteira, e o ícone mora num bloco da altura
+   exata da barra de cima, com a mesma linha embaixo: a linha horizontal
+   atravessa da lateral para a barra sem quebra, como uma peça só em L. */
+@media (min-width: 901px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app .ni-rail:not(.is-expanded) { width: 72px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app .ni-rail {
+    padding-top: 0;
+    border-right: 1px solid var(--amb-linha);
+  }
+  :root[data-ambiente="tecnologico"] .ni-production-app .ni-rail .ni-mark {
+    flex: none;
+    display: grid;
+    place-items: center;
+    width: calc(100% + 24px);
+    height: 65px;
+    margin: 0 -12px 10px;
+    border: 0;
+    border-bottom: 1px solid var(--amb-linha);
+    border-radius: 0;
+    background: transparent;
+  }
+  :root[data-ambiente="tecnologico"] .ni-production-app .ni-rail .ni-mark img {
+    width: 36px;
+    height: 36px;
+    border-radius: 10px;
+    box-shadow: 0 0 0 1px color-mix(in srgb, var(--marca-cobre) 40%, transparent), 0 6px 18px -8px var(--marca-cobre);
+  }
+  :root[data-ambiente="tecnologico"] .ni-production-app .ni-top { height: 65px; min-height: 65px; box-sizing: border-box; }
+}
