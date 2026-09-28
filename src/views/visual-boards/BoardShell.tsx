@@ -128,7 +128,7 @@ export default function BoardShell({
           <h2>{title}</h2>
           <p>{subtitle}</p>
         </div>
-        <div className="vs-q-callout" data-long={condition.value.length > 6 || undefined} aria-label={`${condition.label} ${condition.value}`}>
+        <div className="vs-q-callout" data-long={condition.value.length > 6 || undefined} data-frase={condition.value.length > 18 || undefined} aria-label={`${condition.label} ${condition.value}`}>
           <span>{condition.label}</span>
           <strong>{tecnologico ? <Embaralhado valor={condition.value} /> : condition.value}</strong>
         </div>

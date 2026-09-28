@@ -60,7 +60,33 @@ export function buscarCapitulos(consulta: string, limite = 8) {
  * Sem texto, mostra os capítulos abertos por último. Cada resultado traz o
  * ponto na cor do próprio capítulo — a mesma do ambiente que vai abrir.
  */
-export function BuscaRapida({ aberta, onFechar, onAbrir }: { aberta: boolean; onFechar: () => void; onAbrir: (id: string) => void }) {
+export interface AtalhoTela { rotulo: string; destino: string }
+
+/** Telas do app cujo nome casa com a busca: "caderno" leva ao Caderno de Erros. */
+export function buscarTelas(consulta: string, telas: AtalhoTela[], limite = 3) {
+  const termos = normalizar(consulta).split(/\s+/).filter(Boolean);
+  if (!termos.length) return [];
+  return telas.filter((tela) => termos.every((termo) => normalizar(tela.rotulo).includes(termo))).slice(0, limite);
+}
+
+/** Botão da busca rápida, com o atalho à vista para quem usa teclado. */
+export function BotaoBuscar({ onBuscar, compacto }: { onBuscar: () => void; compacto?: boolean }) {
+  return (
+    <button type="button" className={`vs-acao-topo${compacto ? ' vs-acao-topo--compacto' : ''}`} onClick={onBuscar} aria-label={compacto ? 'Buscar' : undefined} aria-keyshortcuts="Meta+K Control+K">
+      <Search aria-hidden="true" />
+      {!compacto && <><span>Buscar</span><kbd aria-hidden="true">⌘K</kbd></>}
+    </button>
+  );
+}
+
+export function BuscaRapida({ aberta, onFechar, onAbrir, telas = [], onIrParaTela }: {
+  aberta: boolean;
+  onFechar: () => void;
+  onAbrir: (id: string) => void;
+  /** Telas do app que a busca também encontra. */
+  telas?: AtalhoTela[];
+  onIrParaTela?: (destino: string) => void;
+}) {
   const [consulta, setConsulta] = useState('');
   const [ativo, setAtivo] = useState(0);
   const campo = useRef<HTMLInputElement>(null);
@@ -72,6 +98,7 @@ export function BuscaRapida({ aberta, onFechar, onAbrir }: { aberta: boolean; on
     return () => window.clearTimeout(id);
   }, [aberta]);
 
+  const telasAchadas = useMemo(() => (consulta.trim() ? buscarTelas(consulta, telas) : []), [consulta, telas]);
   const resultados = useMemo(() => {
     if (consulta.trim()) return buscarCapitulos(consulta);
     const recentes = lerRecentes();
@@ -81,13 +108,24 @@ export function BuscaRapida({ aberta, onFechar, onAbrir }: { aberta: boolean; on
 
   if (!aberta) return null;
 
+  // Uma lista só para o teclado: primeiro as telas, depois os capítulos.
+  const itens: ({ tipo: 'tela'; tela: AtalhoTela } | { tipo: 'capitulo'; capitulo: (typeof resultados)[number] })[] = [
+    ...telasAchadas.map((tela) => ({ tipo: 'tela' as const, tela })),
+    ...resultados.map((capitulo) => ({ tipo: 'capitulo' as const, capitulo })),
+  ];
   const abrir = (id: string) => { onAbrir(id); onFechar(); };
+  const escolher = (indice: number) => {
+    const item = itens[indice];
+    if (!item) return;
+    if (item.tipo === 'tela') { onIrParaTela?.(item.tela.destino); onFechar(); } else abrir(item.capitulo.id);
+  };
   const tecla = (evento: React.KeyboardEvent) => {
     if (evento.key === 'Escape') { evento.preventDefault(); onFechar(); }
-    else if (evento.key === 'ArrowDown') { evento.preventDefault(); setAtivo((i) => Math.min(i + 1, resultados.length - 1)); }
+    else if (evento.key === 'ArrowDown') { evento.preventDefault(); setAtivo((i) => Math.min(i + 1, itens.length - 1)); }
     else if (evento.key === 'ArrowUp') { evento.preventDefault(); setAtivo((i) => Math.max(i - 1, 0)); }
-    else if (evento.key === 'Enter' && resultados[ativo]) { evento.preventDefault(); abrir(resultados[ativo].id); }
+    else if (evento.key === 'Enter' && itens[ativo]) { evento.preventDefault(); escolher(ativo); }
   };
+  const idItem = (indice: number) => { const item = itens[indice]; return item ? (item.tipo === 'tela' ? `vs-busca-tela-${indice}` : `vs-busca-${item.capitulo.id}`) : undefined; };
 
   return (
     <div className="vs-busca-fundo" onPointerDown={(evento) => { if (evento.target === evento.currentTarget) onFechar(); }}>
@@ -98,21 +136,28 @@ export function BuscaRapida({ aberta, onFechar, onAbrir }: { aberta: boolean; on
             ref={campo}
             value={consulta}
             onChange={(evento) => { setConsulta(evento.target.value); setAtivo(0); }}
-            placeholder="Buscar capítulo — órbitas, mitose, crase…"
+            placeholder="Buscar capítulo ou tela — órbitas, mitose, caderno…"
             aria-label="Buscar capítulo"
             role="combobox"
-            aria-expanded={resultados.length > 0}
+            aria-expanded={itens.length > 0}
             aria-controls="vs-busca-lista"
-            aria-activedescendant={resultados[ativo] ? `vs-busca-${resultados[ativo].id}` : undefined}
+            aria-activedescendant={idItem(ativo)}
           />
           <kbd>Esc</kbd>
         </label>
         {!consulta.trim() && resultados.length > 0 && <p className="vs-busca-grupo"><Clock aria-hidden="true" /> Abertos por último</p>}
-        <ul id="vs-busca-lista" role="listbox" aria-label="Capítulos">
-          {resultados.map((item, indice) => (
+        <ul id="vs-busca-lista" role="listbox" aria-label="Resultados">
+          {telasAchadas.map((tela, indice) => (
+            <li key={tela.destino} id={idItem(indice)} role="option" aria-selected={indice === ativo} onPointerEnter={() => setAtivo(indice)} onClick={() => escolher(indice)}>
+              <span className="vs-busca-ponto vs-busca-ponto--tela" aria-hidden="true" />
+              <span className="vs-busca-texto"><small>Tela</small><b>{tela.rotulo}</b></span>
+              {indice === ativo && <CornerDownLeft className="vs-busca-enter" aria-hidden="true" />}
+            </li>
+          ))}
+          {resultados.map((item, posicao) => { const indice = telasAchadas.length + posicao; return (
             <li
               key={item.id}
-              id={`vs-busca-${item.id}`}
+              id={idItem(indice)}
               role="option"
               aria-selected={indice === ativo}
               onPointerEnter={() => setAtivo(indice)}
@@ -125,9 +170,9 @@ export function BuscaRapida({ aberta, onFechar, onAbrir }: { aberta: boolean; on
               </span>
               {indice === ativo && <CornerDownLeft className="vs-busca-enter" aria-hidden="true" />}
             </li>
-          ))}
+          ); })}
         </ul>
-        {consulta.trim() && resultados.length === 0 && <p className="vs-busca-vazio" role="status">Nenhum capítulo com esses termos.</p>}
+        {consulta.trim() && itens.length === 0 && <p className="vs-busca-vazio" role="status">Nada encontrado com esses termos.</p>}
         {!consulta.trim() && resultados.length === 0 && <p className="vs-busca-vazio">Digite para buscar entre os {interactiveSummaries.length} capítulos.</p>}
         <p className="vs-busca-rodape"><kbd>↑</kbd><kbd>↓</kbd> navegar <kbd>↵</kbd> abrir <kbd>Esc</kbd> fechar</p>
       </div>

@@ -288,7 +288,7 @@ export function PoriferoCnidario({ value }: Sel) {
       <path d="M212 236V128q0-12 18-12h20q18 0 18 12v108" fill="none" stroke={ink} strokeWidth="1.5" strokeDasharray="4 3" />
       {[-30, -12, 12, 30].map((dx) => <path key={dx} d={`M${240 + dx * 0.6} 104q${dx} -30 ${dx * 1.4} -64`} stroke={ink} strokeWidth="2.5" fill="none" />)}
       <circle cx="290" cy="62" r="7" fill={paper} stroke={accent} strokeWidth="2" /><path d="M296 58l14-8" stroke={accent} strokeWidth="2" />
-      <Rotulo x={296} y={86} cor={accent}>cnidócito</Rotulo><Rotulo x={240} y={176} cor={dim}>cavidade</Rotulo>
+      <Rotulo x={316} y={86} cor={accent} ancora="end">cnidócito</Rotulo><Rotulo x={240} y={176} cor={dim}>cavidade</Rotulo>
       <Rotulo x={240} y={262} cor={ink} peso={700}>cnidário</Rotulo><Rotulo x={240} y={278}>tecidos verdadeiros</Rotulo>
     </Foco>
   </g>;

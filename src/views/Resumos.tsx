@@ -5,6 +5,8 @@ import { interactiveSummaries } from '../data/interactiveSummaries';
 import { evaluateRetrievalAnswer, filterSummaries, getReadingProgress } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
 import { useMateriaLembrada } from '../hooks/useMateriaLembrada';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria, ambienteDoCapitulo } from '../lib/visualAmbiente';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { SubjectAtmosphere } from '../features/daily-plan/components/SubjectAtmosphere';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
@@ -37,6 +39,10 @@ export default function Resumos() {
   useEffect(() => { localStorage.setItem('juju_summary_mode', mode); }, [mode]);
   const filtered = useMemo(() => filterSummaries(onlyDeep ? interactiveSummaries.filter(s => s.contentStatus === 'aprofundado') : interactiveSummaries, { query, subject, board, phase, status }, progress), [query, subject, board, phase, status, progress, onlyDeep]);
   const summary = interactiveSummaries.find((item) => item.id === selectedId);
+  // A tela veste a cor do conteúdo, como no Visual: o capítulo aberto, ou a
+  // matéria filtrada na lista. A escolha do Personalizar continua valendo.
+  const ambiente = useMemo(() => (summary ? ambienteDoCapitulo(summary) : subject ? ambienteDaMateria(subject) : null), [summary, subject]);
+  useAmbienteDaTela(ambiente);
   const subjects = [...new Set(interactiveSummaries.map((item) => item.subject))];
   const boards = [...new Set(interactiveSummaries.flatMap((item) => item.boards.map((b) => b.board)))];
   useEffect(() => { if (requestedSummaryId) setSelectedId(requestedSummaryId); }, [requestedSummaryId]);
@@ -63,7 +69,7 @@ export default function Resumos() {
           <button onClick={() => { setSearchParams({}); setSelectedId(null); }} className="inline-flex items-center text-sm font-medium text-indigo-700 dark:text-indigo-300 hover:underline"><ArrowLeft className="w-4 h-4 mr-2"/>Voltar à biblioteca</button>
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
       {requestedQuestionId && !summary.retrieval.some((item) => item.id === requestedQuestionId) && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-950/20 p-3 text-sm text-amber-900 dark:text-amber-200">A pergunta indicada não está mais disponível. O restante do resumo continua acessível.</div>}
-      <header className="rounded-3xl bg-zinc-950 text-white p-6 sm:p-8">
+      <header className="crivo-hero-capitulo rounded-3xl bg-zinc-950 text-white p-6 sm:p-8">
         <div className="flex flex-wrap gap-2 mb-4"><span className="rounded-full bg-indigo-500 px-3 py-1 text-xs font-bold">Prioridade Fuvest</span><span className="rounded-full bg-white/10 px-3 py-1 text-xs">{summary.subject} · {summary.topic}</span>{summary.currentAffairs && <span className="rounded-full bg-emerald-500/20 px-3 py-1 text-xs text-emerald-200">Verificado até {summary.currentAffairs.verifiedAt.split('-').reverse().join('/')}</span>}</div>
         <p className="mb-2 text-sm">{summary.contentStatus === 'aprofundado' ? 'Capítulo aprofundado · exemplos resolvidos e prática' : summary.contentStatus === 'roteiro' ? 'Roteiro inicial · aprofundamento pendente' : 'Material de estudo'}</p><h1 className="text-2xl sm:text-4xl font-bold tracking-tight">{summary.title}</h1><p className="mt-3 max-w-3xl text-zinc-300">{summary.overview}</p>
         <div className="mt-6 h-2 rounded-full bg-white/15" aria-label={`Progresso de leitura: ${getReadingProgress(summary, itemProgress)}%`}><div className="h-2 rounded-full bg-indigo-400" style={{ width: `${getReadingProgress(summary, itemProgress)}%` }}/></div>

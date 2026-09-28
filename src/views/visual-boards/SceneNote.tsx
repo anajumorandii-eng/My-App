@@ -16,8 +16,12 @@ import React from 'react';
  */
 const LARGURA = 320;
 const ALTURA = 330;
-/** Largura média do glifo da Kalam em 11px — o bastante para o clamp. */
-const GLIFO = 4.7;
+/**
+ * Largura média do glifo em 11px — o bastante para o clamp. Era 4,7, medida
+ * da Kalam; a tela tecnológica escreve as notas em Space Grotesk, mais larga,
+ * e "3 escolhas, depois 2" passava da borda da cena de contagem.
+ */
+const GLIFO = 6;
 
 export function SceneNote({
   text, at, to, align,

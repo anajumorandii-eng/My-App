@@ -16,7 +16,6 @@ import { focusEnter } from '../../../design-system/motion/variants';
 import { usePreviousFeedback } from '../../../hooks/usePreviousFeedback';
 import { useDecisionChoreography } from '../motion/useDecisionChoreography';
 import { cn } from '../../../lib/cn';
-import { ObservatoryTrajectoryChart } from '../../../prototypes/NucleoInstrumentalPrototype';
 import { SubjectEvidence } from './SubjectEvidence';
 
 export interface TodayFocusProps {
@@ -35,9 +34,21 @@ export interface TodayFocusProps {
   onDisagree: (reason: DisagreeReason) => void;
   onOpenQuestions?: () => void;
   onOpenReview?: () => void;
+  /** Minutos livres na agenda de hoje. Zero quando não há janela configurada. */
+  availableMinutes?: number;
+  /** Quantas ações o alocador pôs no dia. */
+  plannedCount?: number;
+  /** Quantas ficaram na fila de espera. */
+  waitingCount?: number;
 }
 
-export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdaptiveUpdate, previousSubject, userId, feedbackStatus, onDisagree, onOpenQuestions, onOpenReview }: TodayFocusProps) {
+/** "1h30", "45 min". */
+function formatarMinutos(total: number) {
+  const h = Math.floor(total / 60), m = total % 60;
+  return h ? `${h}h${m ? String(m).padStart(2, '0') : ''}` : `${m} min`;
+}
+
+export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdaptiveUpdate, previousSubject, userId, feedbackStatus, onDisagree, onOpenQuestions, onOpenReview, availableMinutes = 0, plannedCount = 0, waitingCount = 0 }: TodayFocusProps) {
   const [disagreeOpen, setDisagreeOpen] = useState(false);
   const [explanationOpen, setExplanationOpen] = useState(false);
   const [isMaximized, setIsMaximized] = useState(false);
@@ -131,15 +142,19 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
         )}
       </div>
 
+      {/* Este painel dizia "Você está em ritmo." sobre um gráfico desenhado à mão
+          (a curva era fixa no código e o leitor de tela anunciava "cresce de 42
+          para 74"), e marcava "Próximo bloco às 23:11" mesmo sem janela na
+          agenda — a hora era só "agora". Repetia também domínio, incerteza e
+          tempo, que o cartão ao lado já mostra. Agora só diz o que a agenda
+          e o plano de hoje sabem. */}
       <div className="ni-panel ni-trajectory crivo-observatorio-trajectory">
-        <span className="ni-kicker">Trajetória semanal</span>
-        <h3>Você está em ritmo.</h3>
-        <ObservatoryTrajectoryChart />
-        <p><span>Próximo bloco</span> às {formatIsoTimeInSaoPaulo(action.intervalStart)}</p>
+        <span className="ni-kicker">Hoje na agenda</span>
+        <h3>{availableMinutes > 0 ? `${formatarMinutos(availableMinutes)} livres hoje.` : 'Sem janela na agenda hoje.'}</h3>
         <ul>
-          <li>Domínio do tópico <b>{masteryPercent}%</b></li>
-          <li>Incerteza atual <b>{100 - confidencePercent}%</b></li>
-          <li>Sessão recomendada <b>{action.allocatedMinutes} min</b></li>
+          <li>Próximo bloco <b>{availableMinutes > 0 ? `às ${formatIsoTimeInSaoPaulo(action.intervalStart)}` : '—'}</b></li>
+          <li>Ações no plano de hoje <b>{plannedCount}</b></li>
+          <li>Na fila de espera <b>{waitingCount}</b></li>
         </ul>
       </div>
     </motion.section>
@@ -151,13 +166,13 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       </button>
       <button type="button" className="ni-panel ni-mini" onClick={onOpenQuestions ?? onStart}>
         <span className="ni-icon-depth"><Library aria-hidden="true" /></span>
-        <h3>Testar representação</h3>
-        <p>Instrumentos para ler {action.topicName}.</p>
+        <h3>Treinar em questões</h3>
+        <p>Banco de questões para aplicar o que estudou.</p>
       </button>
       <button type="button" className="ni-panel ni-mini" onClick={onOpenReview ?? onStart}>
         <span className="ni-icon-depth"><ArrowRight aria-hidden="true" /></span>
-        <h3>Validar resultado</h3>
-        <p>Proteja a próxima janela de estudo.</p>
+        <h3>Revisar o que venceu</h3>
+        <p>Revisões espaçadas marcadas para hoje.</p>
       </button>
     </section>
     </>

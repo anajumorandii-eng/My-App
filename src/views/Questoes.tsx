@@ -1,4 +1,6 @@
 import React, { useMemo, useState } from 'react';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria } from '../lib/visualAmbiente';
 import { useAuth } from '../context/AuthContext';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useQuestions } from '../hooks/useQuestions';
@@ -79,6 +81,9 @@ export default function Questoes() {
   const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions();
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
+  // A matéria filtrada dá a cor da tela, como nos Resumos e no Visual.
+  const ambiente = useMemo(() => (subjectFilter !== 'Todas' ? ambienteDaMateria(subjectFilter) : null), [subjectFilter]);
+  useAmbienteDaTela(ambiente);
   const [topicFilter, setTopicFilter] = useState<string>(ALL);
   const [subtopicFilter, setSubtopicFilter] = useState<string>(ALL);
   const [onlyRealExams, setOnlyRealExams] = useState(false);

@@ -343,7 +343,7 @@ function Navigations({ active, t }: { active: number; t: SceneTransition }) {
       <path d="M548 128h14v10h-14zM566 124h14v14h-14z" className="hg-spice" />
       <circle cx="555" cy="127" r="3" className="hg-spice-dot" /><circle cx="573" cy="122" r="3" className="hg-spice-dot" />
       <path d={NAV_ROUTE} className="hg-profit" transform="translate(6 -6)" />
-      <text x="482" y="110" className="hg-hand-small">especiarias: prioridade</text>
+      <text x="612" y="110" textAnchor="end" className="hg-hand-small">especiarias: prioridade</text>
     </motion.g>
 
     <motion.g initial={false} animate={{ opacity: on(2) ? 1 : 0.15 }} transition={paced(t, 0.4, 0.3)}>
