@@ -22,6 +22,9 @@ export interface CoresDaCena {
   anteparo: string;
   ceu: string;
   chao: string;
+  /** Estúdio: fundo curvo, mesa e névoa. A cena tem cenário próprio, como uma vitrine dentro do cartão. */
+  fundo: string;
+  mesa: string;
   /** Multiplicador da emissão. No claro, emissão alta devolve ao acento escurecido o brilho que tirava o contraste. */
   brilho: number;
   escuro: boolean;
@@ -55,9 +58,11 @@ function ler(): CoresDaCena {
     aco: '#c8ccd0',
     metalEscuro: escuro ? '#23262a' : '#2e3136',
     vidro: '#dff2ff',
-    anteparo: escuro ? '#d9d3c7' : '#f4efe5',
+    anteparo: escuro ? '#a7a39b' : '#f4efe5',
     ceu: escuro ? '#cfd8ff' : '#ffffff',
     chao: escuro ? '#1a1410' : '#d8cdbd',
+    fundo: escuro ? '#080a09' : '#efe8dc',
+    mesa: escuro ? '#0e1010' : '#ddd3c3',
     brilho: escuro ? 1 : 0.38,
     escuro,
   };

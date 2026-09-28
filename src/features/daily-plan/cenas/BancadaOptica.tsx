@@ -3,6 +3,10 @@ import { Canvas, useFrame, useThree, type ThreeEvent } from '@react-three/fiber'
 import { useReducedMotion } from 'motion/react';
 import * as THREE from 'three';
 import { RoomEnvironment } from 'three/examples/jsm/environments/RoomEnvironment.js';
+import { EffectComposer } from 'three/examples/jsm/postprocessing/EffectComposer.js';
+import { RenderPass } from 'three/examples/jsm/postprocessing/RenderPass.js';
+import { UnrealBloomPass } from 'three/examples/jsm/postprocessing/UnrealBloomPass.js';
+import { OutputPass } from 'three/examples/jsm/postprocessing/OutputPass.js';
 import { imagemDaLente, naturezaDaImagem, raiosNotaveis, type Ponto } from '../../../lib/lenteDelgada';
 import { useCoresDaCena, type CoresDaCena } from './coresDaCena';
 
@@ -14,6 +18,9 @@ import { useCoresDaCena, type CoresDaCena } from './coresDaCena';
  * Arrastar o objeto pelo trilho, ou usar o controle abaixo da cena, move a
  * imagem como numa bancada de verdade.
  *
+ * O objeto é o de uma bancada real: uma caixa de luz com a seta recortada na
+ * face, e a imagem é essa seta projetada no anteparo.
+ *
  * Escala: 1 unidade da cena = 5 cm. Foco de 10 cm.
  */
 
@@ -21,11 +28,15 @@ const CM_POR_UNIDADE = 5;
 const FOCO = 2;
 const ALTURA_OBJETO = 1.1;
 const EIXO = 1.35;
+const RAIO_LENTE = 1.05;
 const P_MIN = 3.2;
 const P_MAX = 8;
 const P_INICIAL = 5;
+const TRILHO_INICIO = -9.6;
+const TRILHO_FIM = 7.6;
 
 const fmt = (valor: number) => valor.toLocaleString('pt-BR', { maximumFractionDigits: 1 });
+const noEixo = (ponto: Ponto) => new THREE.Vector3(ponto.x, EIXO + ponto.y, 0);
 
 function Ambiente() {
   const { gl, scene } = useThree();
@@ -35,33 +46,48 @@ function Ambiente() {
     const pmrem = new THREE.PMREMGenerator(gl);
     const ambiente = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
     scene.environment = ambiente;
+    scene.environmentIntensity = 0.45;
     return () => { scene.environment = null; ambiente.dispose(); pmrem.dispose(); };
   }, [gl, scene]);
   return null;
 }
 
-/** Cilindro entre dois pontos: é assim que os raios e o eixo viram volume. */
-function Segmento({ de, ate, raio, cor, opacidade = 1, brilho = 2 }: { de: THREE.Vector3; ate: THREE.Vector3; raio: number; cor: string; opacidade?: number; brilho?: number }) {
-  const { posicao, quaternion, comprimento } = useMemo(() => {
-    const direcao = new THREE.Vector3().subVectors(ate, de);
-    return {
-      posicao: new THREE.Vector3().addVectors(de, ate).multiplyScalar(0.5),
-      quaternion: new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), direcao.clone().normalize()),
-      comprimento: direcao.length(),
-    };
-  }, [de, ate]);
-  return (
-    <mesh position={posicao} quaternion={quaternion}>
-      <cylinderGeometry args={[raio, raio, comprimento, 10, 1, true]} />
-      {/* Sem iluminação: o raio é a própria luz. Com material iluminado, a luz
-          da cena somava à cor e o raio escurecido para o tema claro voltava a
-          ficar ciano-claro sobre o creme. */}
-      <meshBasicMaterial color={new THREE.Color(cor).multiplyScalar(Math.min(brilho, 1.6))} transparent={opacidade < 1} opacity={opacidade} depthWrite={opacidade >= 1} toneMapped={false} />
-    </mesh>
-  );
+/**
+ * Brilho das fontes de luz, como a câmera do vídeo de referência.
+ *
+ * Só no escuro: no claro, o fundo creme passa do limiar de luminância e a cena
+ * inteira estouraria. A profundidade de campo (BokehPass) foi testada e saiu:
+ * serrilhava as bordas do anteparo e custava uma passada inteira a mais.
+ */
+function PosProcesso({ cores }: { cores: CoresDaCena }) {
+  const { gl, scene, camera, size } = useThree();
+  const cadeia = useMemo(() => {
+    const composer = new EffectComposer(gl);
+    composer.addPass(new RenderPass(scene, camera));
+    // Limiar alto: brilham a seta, os raios e os focos, que são luz; o latão
+    // e o anteparo, que só refletem, ficam de fora.
+    const brilho = new UnrealBloomPass(new THREE.Vector2(256, 256), 0.55, 0.4, 0.92);
+    composer.addPass(brilho);
+    composer.addPass(new OutputPass());
+    return { composer, brilho };
+  }, [gl, scene, camera]);
+
+  useEffect(() => {
+    cadeia.composer.setPixelRatio(gl.getPixelRatio());
+    cadeia.composer.setSize(size.width, size.height);
+  }, [cadeia, gl, size]);
+  useEffect(() => {
+    cadeia.brilho.enabled = cores.escuro;
+  }, [cadeia, cores.escuro]);
+  useEffect(() => () => cadeia.composer.dispose(), [cadeia]);
+
+  useFrame(() => {
+    cadeia.composer.render();
+  }, 1);
+  return null;
 }
 
-/** Textura de halo radial, gerada uma vez: faz as fontes de luz "vazarem" sem pós-processamento. */
+/** Textura de halo radial, gerada uma vez: o brilho em volta das fontes de luz. */
 let texturaHalo: THREE.Texture | null = null;
 function halo() {
   if (texturaHalo) return texturaHalo;
@@ -87,19 +113,78 @@ function Halo({ posicao, cor, escala, opacidade = 0.8 }: { posicao: [number, num
   );
 }
 
-const noEixo = (ponto: Ponto) => new THREE.Vector3(ponto.x, EIXO + ponto.y, 0);
+/** Cilindro entre dois pontos: é assim que os raios e o eixo viram volume. */
+function Segmento({ de, ate, raio, cor, opacidade = 1, brilho = 1 }: { de: THREE.Vector3; ate: THREE.Vector3; raio: number; cor: string; opacidade?: number; brilho?: number }) {
+  const { posicao, quaternion, comprimento } = useMemo(() => {
+    const direcao = new THREE.Vector3().subVectors(ate, de);
+    return {
+      posicao: new THREE.Vector3().addVectors(de, ate).multiplyScalar(0.5),
+      quaternion: new THREE.Quaternion().setFromUnitVectors(new THREE.Vector3(0, 1, 0), direcao.clone().normalize()),
+      comprimento: direcao.length(),
+    };
+  }, [de, ate]);
+  const cor3 = useMemo(() => new THREE.Color(cor).multiplyScalar(brilho), [cor, brilho]);
+  return (
+    <mesh position={posicao} quaternion={quaternion}>
+      <cylinderGeometry args={[raio, raio, comprimento, 10, 1, true]} />
+      {/* Sem iluminação: o raio é a própria luz. Com material iluminado, a luz
+          da cena somava à cor e o raio escurecido para o tema claro voltava a
+          ficar claro sobre o creme. */}
+      <meshBasicMaterial color={cor3} transparent={opacidade < 1} opacity={opacidade} depthWrite={opacidade >= 1} toneMapped={false} />
+    </mesh>
+  );
+}
+
+/**
+ * O feixe inteiro, não só os três raios: um cone de luz do topo do objeto até
+ * a borda da lente, e outro da lente até o topo da imagem. É o que se vê numa
+ * sala escura com fumaça, e o que dá corpo à convergência.
+ */
+function Feixe({ de, ate, cores }: { de: THREE.Vector3; ate: THREE.Vector3; cores: CoresDaCena }) {
+  const geometria = useMemo(() => {
+    const segmentos = 48;
+    const posicoes: number[] = [];
+    const disco = (i: number) => {
+      const a = (i / segmentos) * Math.PI * 2;
+      return [0, EIXO + Math.cos(a) * RAIO_LENTE * 0.96, Math.sin(a) * RAIO_LENTE * 0.96];
+    };
+    for (const apice of [de, ate]) {
+      for (let i = 0; i < segmentos; i += 1) {
+        posicoes.push(apice.x, apice.y, apice.z, ...disco(i), ...disco(i + 1));
+      }
+    }
+    const g = new THREE.BufferGeometry();
+    g.setAttribute('position', new THREE.Float32BufferAttribute(posicoes, 3));
+    return g;
+  }, [de, ate]);
+  useEffect(() => () => geometria.dispose(), [geometria]);
+  return (
+    <mesh geometry={geometria}>
+      <meshBasicMaterial
+        color={cores.raio}
+        transparent
+        opacity={cores.escuro ? 0.045 : 0.07}
+        side={THREE.DoubleSide}
+        depthWrite={false}
+        blending={cores.escuro ? THREE.AdditiveBlending : THREE.NormalBlending}
+        toneMapped={false}
+      />
+    </mesh>
+  );
+}
 
 function Raios({ p, cores }: { p: number; cores: CoresDaCena }) {
   const raios = useMemo(() => raiosNotaveis(p, FOCO, ALTURA_OBJETO), [p]);
   return (
     <group>
+      <Feixe de={noEixo(raios[0][0])} ate={noEixo(raios[0][2])} cores={cores} />
       {raios.map((raio, i) => raio.slice(1).map((ponto, j) => {
         const de = noEixo(raio[j]);
         const ate = noEixo(ponto);
         return (
           <group key={`${i}-${j}`}>
-            <Segmento de={de} ate={ate} raio={0.014} cor={cores.raioNucleo} brilho={3 * cores.brilho} />
-            <Segmento de={de} ate={ate} raio={0.055} cor={cores.raio} opacidade={0.22} brilho={2.2 * cores.brilho} />
+            <Segmento de={de} ate={ate} raio={0.012} cor={cores.raioNucleo} brilho={cores.escuro ? 1.25 : 1} />
+            <Segmento de={de} ate={ate} raio={0.045} cor={cores.raio} opacidade={0.22} brilho={cores.escuro ? 1.3 : 1} />
           </group>
         );
       }))}
@@ -107,39 +192,102 @@ function Raios({ p, cores }: { p: number; cores: CoresDaCena }) {
   );
 }
 
-function Seta({ altura, cor, invertida = false, brilho = 1 }: { altura: number; cor: string; invertida?: boolean; brilho?: number }) {
-  const sinal = invertida ? -1 : 1;
-  const haste = Math.max(altura - 0.22, 0.05);
+/** Contorno de seta em 2D: a máscara da caixa de luz e a imagem no anteparo. */
+function formaDeSeta(altura: number) {
+  const haste = 0.07, larguraPonta = 0.26, ponta = 0.3;
+  const s = new THREE.Shape();
+  s.moveTo(-haste / 2, 0);
+  s.lineTo(haste / 2, 0);
+  s.lineTo(haste / 2, altura - ponta);
+  s.lineTo(larguraPonta / 2, altura - ponta);
+  s.lineTo(0, altura);
+  s.lineTo(-larguraPonta / 2, altura - ponta);
+  s.lineTo(-haste / 2, altura - ponta);
+  s.closePath();
+  return s;
+}
+
+function SetaLuminosa({ altura, cor, intensidade }: { altura: number; cor: string; intensidade: number }) {
+  const geometria = useMemo(() => new THREE.ShapeGeometry(formaDeSeta(altura)), [altura]);
+  useEffect(() => () => geometria.dispose(), [geometria]);
+  const cor3 = useMemo(() => new THREE.Color(cor).multiplyScalar(intensidade), [cor, intensidade]);
   return (
-    <group>
-      <mesh position={[0, sinal * haste / 2, 0]}>
-        <cylinderGeometry args={[0.035, 0.035, haste, 12]} />
-        <meshStandardMaterial color={cor} emissive={cor} emissiveIntensity={2.4 * brilho} toneMapped={false} />
+    <mesh geometry={geometria}>
+      <meshBasicMaterial color={cor3} toneMapped={false} side={THREE.DoubleSide} />
+    </mesh>
+  );
+}
+
+/** Botão serrilhado de aperto, dos carros e da lente. Facetado de propósito: é o serrilhado. */
+function Botao({ posicao, raio = 0.08, cores }: { posicao: [number, number, number]; raio?: number; cores: CoresDaCena }) {
+  return (
+    <group position={posicao} rotation={[Math.PI / 2, 0, 0]}>
+      <mesh castShadow>
+        <cylinderGeometry args={[raio, raio, 0.09, 18]} />
+        <meshStandardMaterial color={cores.metalEscuro} metalness={0.6} roughness={0.45} flatShading />
       </mesh>
-      <mesh position={[0, sinal * (haste + 0.11), 0]} rotation={[invertida ? Math.PI : 0, 0, 0]}>
-        <coneGeometry args={[0.1, 0.22, 16]} />
-        <meshStandardMaterial color={cor} emissive={cor} emissiveIntensity={2.4 * brilho} toneMapped={false} />
+      <mesh position={[0, 0.05, 0]}>
+        <cylinderGeometry args={[raio * 0.55, raio * 0.55, 0.02, 24]} />
+        <meshStandardMaterial color={cores.latao} metalness={1} roughness={0.25} />
       </mesh>
     </group>
   );
 }
 
-/** Carro que desliza no trilho, com a haste até o eixo óptico. */
+/** Carro que desliza no trilho, com trava serrilhada e a haste até a peça. */
 function Carro({ x, altura, cores }: { x: number; altura: number; cores: CoresDaCena }) {
   return (
     <group position={[x, 0, 0]}>
-      <mesh position={[0, 0.2, 0]} castShadow receiveShadow>
-        <boxGeometry args={[0.5, 0.2, 1.05]} />
-        <meshStandardMaterial color={cores.metalEscuro} metalness={0.7} roughness={0.35} />
+      <mesh position={[0, 0.3, 0]} castShadow receiveShadow>
+        <boxGeometry args={[0.62, 0.22, 1.12]} />
+        <meshStandardMaterial color={cores.metalEscuro} metalness={0.75} roughness={0.32} />
       </mesh>
-      <mesh position={[0, 0.2, 0.56]} rotation={[Math.PI / 2, 0, 0]}>
-        <cylinderGeometry args={[0.07, 0.07, 0.1, 16]} />
-        <meshStandardMaterial color={cores.latao} metalness={1} roughness={0.25} />
+      <mesh position={[0, 0.3, 0]}>
+        <boxGeometry args={[0.64, 0.03, 1.14]} />
+        <meshStandardMaterial color={cores.aco} metalness={1} roughness={0.25} />
       </mesh>
-      <mesh position={[0, 0.3 + altura / 2, 0]} castShadow>
-        <cylinderGeometry args={[0.045, 0.045, altura, 16]} />
+      <Botao posicao={[0, 0.3, 0.62]} cores={cores} />
+      <mesh position={[0, 0.41 + altura / 2, 0]} castShadow>
+        <cylinderGeometry args={[0.05, 0.05, altura, 20]} />
+        <meshStandardMaterial color={cores.aco} metalness={1} roughness={0.15} />
+      </mesh>
+      <mesh position={[0, 0.44, 0]}>
+        <cylinderGeometry args={[0.09, 0.11, 0.06, 20]} />
         <meshStandardMaterial color={cores.aco} metalness={1} roughness={0.2} />
       </mesh>
+    </group>
+  );
+}
+
+/** O objeto: caixa de luz com a seta recortada na face voltada para a lente. */
+function CaixaDeLuz({ p, cores }: { p: number; cores: CoresDaCena }) {
+  const altura = ALTURA_OBJETO + 0.55;
+  const baseCaixa = EIXO - 0.35;
+  return (
+    <group position={[-p, 0, 0]}>
+      <Carro x={0} altura={baseCaixa - 0.44} cores={cores} />
+      <group position={[-0.24, baseCaixa + altura / 2, 0]}>
+        <mesh castShadow receiveShadow>
+          <boxGeometry args={[0.46, altura, 0.8]} />
+          <meshStandardMaterial color={cores.metalEscuro} metalness={0.55} roughness={0.4} />
+        </mesh>
+        {/* Aletas de ventilação no topo, como numa lâmpada de bancada. */}
+        {[-0.2, -0.07, 0.06, 0.19].map((z) => (
+          <mesh key={z} position={[0, altura / 2 + 0.03, z * 0.8]}>
+            <boxGeometry args={[0.36, 0.06, 0.04]} />
+            <meshStandardMaterial color={cores.aco} metalness={0.9} roughness={0.3} />
+          </mesh>
+        ))}
+        <mesh position={[0.235, 0, 0]}>
+          <boxGeometry args={[0.02, altura - 0.12, 0.7]} />
+          <meshStandardMaterial color="#0d0f10" metalness={0.2} roughness={0.6} />
+        </mesh>
+      </group>
+      <group position={[0.012, EIXO, 0]} rotation={[0, Math.PI / 2, 0]}>
+        <SetaLuminosa altura={ALTURA_OBJETO} cor={cores.objeto} intensidade={cores.escuro ? 2.2 : 1.3} />
+      </group>
+      <Halo posicao={[0.05, EIXO + ALTURA_OBJETO * 0.55, 0]} cor={cores.objeto} escala={1.6} opacidade={cores.escuro ? 0.4 : 0.25} />
+      <pointLight position={[0.4, EIXO + ALTURA_OBJETO * 0.6, 0]} color={cores.objeto} intensity={cores.escuro ? 6 : 3} distance={5} decay={2} />
     </group>
   );
 }
@@ -147,92 +295,176 @@ function Carro({ x, altura, cores }: { x: number; altura: number; cores: CoresDa
 function Lente({ cores }: { cores: CoresDaCena }) {
   const geometria = useMemo(() => {
     // Perfil biconvexo girado em torno do eixo: mais grossa no centro, fina na borda.
-    const raio = 1.05, espessura = 0.2, passos = 24;
+    const espessura = 0.2, passos = 28;
     const pontos: THREE.Vector2[] = [];
     for (let i = 0; i <= passos; i += 1) {
-      const r = (raio * i) / passos;
-      pontos.push(new THREE.Vector2(r, -espessura * (1 - (r / raio) ** 2) - 0.01));
+      const r = (RAIO_LENTE * i) / passos;
+      pontos.push(new THREE.Vector2(r, -espessura * (1 - (r / RAIO_LENTE) ** 2) - 0.01));
     }
     for (let i = passos; i >= 0; i -= 1) {
-      const r = (raio * i) / passos;
-      pontos.push(new THREE.Vector2(r, espessura * (1 - (r / raio) ** 2) + 0.01));
+      const r = (RAIO_LENTE * i) / passos;
+      pontos.push(new THREE.Vector2(r, espessura * (1 - (r / RAIO_LENTE) ** 2) + 0.01));
     }
-    const lathe = new THREE.LatheGeometry(pontos, 64);
+    const lathe = new THREE.LatheGeometry(pontos, 72);
     lathe.rotateZ(-Math.PI / 2);
     return lathe;
   }, []);
   return (
-    <group position={[0, EIXO, 0]}>
-      <mesh geometry={geometria} castShadow>
-        <meshPhysicalMaterial color={cores.vidro} transmission={1} thickness={0.6} roughness={0.03} ior={1.52} clearcoat={1} clearcoatRoughness={0.05} attenuationColor={cores.vidro} attenuationDistance={3} />
-      </mesh>
-      <mesh rotation={[0, Math.PI / 2, 0]} castShadow>
-        <torusGeometry args={[1.1, 0.075, 20, 72]} />
-        <meshStandardMaterial color={cores.latao} metalness={1} roughness={0.28} />
-      </mesh>
-      {[0, 1, 2, 3].map((i) => (
-        <mesh key={i} position={[0, Math.cos((i * Math.PI) / 2) * 1.1, Math.sin((i * Math.PI) / 2) * 1.1]} rotation={[0, 0, Math.PI / 2]}>
-          <cylinderGeometry args={[0.05, 0.05, 0.2, 12]} />
-          <meshStandardMaterial color={cores.latao} metalness={1} roughness={0.2} />
+    <group>
+      <Carro x={0} altura={EIXO - RAIO_LENTE - 0.55} cores={cores} />
+      <group position={[0, EIXO, 0]}>
+        <mesh geometry={geometria} castShadow>
+          <meshPhysicalMaterial
+            color={cores.vidro}
+            transmission={1}
+            thickness={0.7}
+            roughness={0.02}
+            ior={1.52}
+            dispersion={4}
+            clearcoat={1}
+            clearcoatRoughness={0.03}
+            iridescence={0.25}
+            iridescenceIOR={1.3}
+            attenuationColor={cores.vidro}
+            attenuationDistance={3}
+          />
         </mesh>
-      ))}
-    </group>
-  );
-}
-
-function Anteparo({ pLinha, aumento, cores }: { pLinha: number; aumento: number; cores: CoresDaCena }) {
-  return (
-    <group position={[pLinha, 0, 0]}>
-      <mesh position={[0.04, EIXO, 0]} castShadow receiveShadow>
-        <boxGeometry args={[0.05, 2.5, 2.1]} />
-        <meshStandardMaterial color={cores.anteparo} roughness={0.85} metalness={0} />
-      </mesh>
-      {/* Moldura em quatro barras. Um box em wireframe mostrava as diagonais
-          dos triângulos, e o anteparo parecia rachado. */}
-      {[[0, 1.3, 0, 2.24, 0.07], [0, -1.3, 0, 2.24, 0.07], [0, 0, 1.08, 0.07, 2.6], [0, 0, -1.08, 0.07, 2.6]].map(([_, y, z, largura, altura], i) => (
-        <mesh key={i} position={[0.04, EIXO + y, z]} castShadow>
-          <boxGeometry args={[0.09, altura, largura]} />
-          <meshStandardMaterial color={cores.metalEscuro} metalness={0.7} roughness={0.35} />
+        {/* Anel duplo de latão, com a borda serrilhada de ajuste. */}
+        <mesh rotation={[0, Math.PI / 2, 0]} castShadow>
+          <torusGeometry args={[RAIO_LENTE + 0.06, 0.07, 24, 96]} />
+          <meshStandardMaterial color={cores.latao} metalness={1} roughness={0.22} />
         </mesh>
-      ))}
-      <group position={[-0.01, EIXO, 0]}>
-        <Seta altura={Math.abs(aumento) * ALTURA_OBJETO} cor={cores.imagem} invertida brilho={cores.brilho} />
-        <Halo posicao={[-0.05, aumento * ALTURA_OBJETO, 0]} cor={cores.imagem} escala={0.9} opacidade={cores.escuro ? 0.85 : 0.45} />
+        <mesh rotation={[0, 0, Math.PI / 2]} castShadow>
+          <cylinderGeometry args={[RAIO_LENTE + 0.13, RAIO_LENTE + 0.13, 0.12, 96, 1, true]} />
+          <meshStandardMaterial color={cores.latao} metalness={1} roughness={0.35} flatShading side={THREE.DoubleSide} />
+        </mesh>
+        {[0, 1, 2, 3, 4, 5].map((i) => (
+          <mesh key={i} position={[0.07, Math.cos((i * Math.PI) / 3) * (RAIO_LENTE + 0.13), Math.sin((i * Math.PI) / 3) * (RAIO_LENTE + 0.13)]} rotation={[0, 0, Math.PI / 2]}>
+            <cylinderGeometry args={[0.028, 0.028, 0.05, 12]} />
+            <meshStandardMaterial color={cores.aco} metalness={1} roughness={0.15} />
+          </mesh>
+        ))}
+        {/* Garfo que segura o anel, até a haste do carro. */}
+        <mesh position={[0, -RAIO_LENTE - 0.25, 0]} castShadow>
+          <boxGeometry args={[0.14, 0.3, 0.26]} />
+          <meshStandardMaterial color={cores.latao} metalness={1} roughness={0.3} />
+        </mesh>
       </group>
     </group>
   );
 }
 
-function Trilho({ cores }: { cores: CoresDaCena }) {
-  const marcas = useRef<THREE.InstancedMesh>(null);
-  const inicio = -9, fim = 7.5;
-  const total = Math.round((fim - inicio) / 0.2) + 1;
-  useEffect(() => {
-    const malha = marcas.current;
-    if (!malha) return;
-    const m = new THREE.Matrix4();
-    for (let i = 0; i < total; i += 1) {
-      const x = inicio + i * 0.2;
-      const longa = Math.abs(x - Math.round(x)) < 1e-6;
-      m.compose(new THREE.Vector3(x, 0.101, 0.42), new THREE.Quaternion(), new THREE.Vector3(1, 1, longa ? 1.8 : 1));
-      malha.setMatrixAt(i, m);
+function Anteparo({ pLinha, aumento, cores }: { pLinha: number; aumento: number; cores: CoresDaCena }) {
+  const alturaImagem = Math.abs(aumento) * ALTURA_OBJETO;
+  return (
+    <group position={[pLinha, 0, 0]}>
+      <Carro x={0} altura={EIXO - 1.5} cores={cores} />
+      <mesh position={[0.05, EIXO, 0]} castShadow receiveShadow>
+        <boxGeometry args={[0.04, 2.7, 2.3]} />
+        <meshStandardMaterial color={cores.anteparo} roughness={0.95} metalness={0} />
+      </mesh>
+      {/* Moldura em quatro barras. Um box em wireframe mostrava as diagonais
+          dos triângulos, e o anteparo parecia rachado. */}
+      {([[1.39, 2.46, 0.08], [-1.39, 2.46, 0.08]] as const).map(([y, largura, altura], i) => (
+        <mesh key={i} position={[0.06, EIXO + y, 0]} castShadow>
+          <boxGeometry args={[0.1, altura, largura]} />
+          <meshStandardMaterial color={cores.metalEscuro} metalness={0.7} roughness={0.35} />
+        </mesh>
+      ))}
+      {[1.19, -1.19].map((z) => (
+        <mesh key={z} position={[0.06, EIXO, z]} castShadow>
+          <boxGeometry args={[0.1, 2.86, 0.08]} />
+          <meshStandardMaterial color={cores.metalEscuro} metalness={0.7} roughness={0.35} />
+        </mesh>
+      ))}
+      {/* A imagem: a seta da caixa de luz, invertida e na escala do aumento. */}
+      <group position={[0.025, EIXO, 0]} rotation={[Math.PI, Math.PI / 2, 0]}>
+        <SetaLuminosa altura={alturaImagem} cor={cores.imagem} intensidade={cores.escuro ? 1.8 : 1} />
+      </group>
+      <Halo posicao={[0, EIXO - alturaImagem * 0.55, 0]} cor={cores.imagem} escala={1.2 + alturaImagem} opacidade={cores.escuro ? 0.5 : 0.25} />
+    </group>
+  );
+}
+
+/** Régua gravada no trilho: um traço por centímetro, número a cada 10. */
+function useTexturaDaRegua(cores: CoresDaCena) {
+  return useMemo(() => {
+    const cm = (TRILHO_FIM - TRILHO_INICIO) * CM_POR_UNIDADE;
+    const pxPorCm = 24;
+    const canvas = document.createElement('canvas');
+    canvas.width = Math.ceil(cm * pxPorCm);
+    canvas.height = 64;
+    const ctx = canvas.getContext('2d')!;
+    ctx.fillStyle = cores.escuro ? '#1d2022' : '#2a2d31';
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+    ctx.fillStyle = cores.marca;
+    ctx.font = '600 22px "JetBrains Mono", ui-monospace, monospace';
+    ctx.textAlign = 'center';
+    for (let i = 0; i <= cm; i += 1) {
+      const x = i * pxPorCm;
+      const altura = i % 10 === 0 ? 30 : i % 5 === 0 ? 20 : 11;
+      ctx.fillRect(x - 1, 0, 2, altura);
+      if (i % 10 === 0 && i > 0 && i < cm) ctx.fillText(String(i), x, 58);
     }
-    malha.instanceMatrix.needsUpdate = true;
-  }, [total]);
+    const textura = new THREE.CanvasTexture(canvas);
+    textura.anisotropy = 8;
+    textura.colorSpace = THREE.SRGBColorSpace;
+    return textura;
+  }, [cores.escuro, cores.marca]);
+}
+
+function Trilho({ cores }: { cores: CoresDaCena }) {
+  const regua = useTexturaDaRegua(cores);
+  const perfil = useMemo(() => {
+    // Perfil em cauda de andorinha, extrudado ao longo do trilho.
+    const s = new THREE.Shape();
+    s.moveTo(-0.5, -0.12);
+    s.lineTo(0.5, -0.12);
+    s.lineTo(0.5, 0.04);
+    s.lineTo(0.3, 0.19);
+    s.lineTo(-0.3, 0.19);
+    s.lineTo(-0.5, 0.04);
+    s.closePath();
+    const g = new THREE.ExtrudeGeometry(s, { depth: TRILHO_FIM - TRILHO_INICIO, bevelEnabled: true, bevelSize: 0.015, bevelThickness: 0.015, bevelSegments: 2 });
+    g.rotateY(Math.PI / 2);
+    g.translate(TRILHO_INICIO, 0, 0);
+    return g;
+  }, []);
+  useEffect(() => () => perfil.dispose(), [perfil]);
+  const comprimento = TRILHO_FIM - TRILHO_INICIO;
   return (
     <group>
-      <mesh position={[(inicio + fim) / 2, 0, 0]} receiveShadow castShadow>
-        <boxGeometry args={[fim - inicio, 0.2, 0.95]} />
-        <meshStandardMaterial color={cores.metalEscuro} metalness={0.65} roughness={0.42} />
+      <mesh geometry={perfil} receiveShadow castShadow>
+        <meshStandardMaterial color={cores.metalEscuro} metalness={0.8} roughness={0.3} />
       </mesh>
-      <mesh position={[(inicio + fim) / 2, 0.105, 0]}>
-        <boxGeometry args={[fim - inicio, 0.012, 0.28]} />
-        <meshStandardMaterial color={cores.aco} metalness={1} roughness={0.3} />
+      <mesh position={[(TRILHO_INICIO + TRILHO_FIM) / 2, 0.195, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+        <planeGeometry args={[comprimento, 0.6]} />
+        <meshStandardMaterial color={cores.aco} metalness={1} roughness={0.28} />
       </mesh>
-      <instancedMesh ref={marcas} args={[undefined, undefined, total]}>
-        <boxGeometry args={[0.012, 0.004, 0.06]} />
-        <meshBasicMaterial color={cores.marca} />
-      </instancedMesh>
+      {/* Régua na face inclinada voltada para a câmera. */}
+      <mesh position={[(TRILHO_INICIO + TRILHO_FIM) / 2, 0.115, 0.4]} rotation={[-Math.atan2(0.15, 0.2), 0, 0]}>
+        <planeGeometry args={[comprimento, 0.24]} />
+        <meshStandardMaterial map={regua} metalness={0.3} roughness={0.5} />
+      </mesh>
+      {[TRILHO_INICIO + 0.4, TRILHO_FIM - 0.4].map((x) => (
+        <mesh key={x} position={[x, -0.2, 0]} castShadow>
+          <boxGeometry args={[0.5, 0.16, 1.5]} />
+          <meshStandardMaterial color={cores.metalEscuro} metalness={0.6} roughness={0.4} />
+        </mesh>
+      ))}
+    </group>
+  );
+}
+
+function Estudio({ cores }: { cores: CoresDaCena }) {
+  return (
+    <group>
+      {/* Mesa de estúdio, lisa e um pouco reflexiva; a névoa da cena apaga o
+          horizonte e a bancada fica isolada, como numa foto de produto. */}
+      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.28, 0]} receiveShadow>
+        <planeGeometry args={[80, 40]} />
+        <meshStandardMaterial color={cores.mesa} roughness={0.7} metalness={0} />
+      </mesh>
     </group>
   );
 }
@@ -240,13 +472,15 @@ function Trilho({ cores }: { cores: CoresDaCena }) {
 function EixoEFocos({ cores }: { cores: CoresDaCena }) {
   return (
     <group>
-      <Segmento de={new THREE.Vector3(-8.8, EIXO, 0)} ate={new THREE.Vector3(7.3, EIXO, 0)} raio={0.006} cor={cores.eixo} opacidade={0.5} brilho={1} />
-      {[-FOCO, FOCO].map((x) => <Halo key={`h${x}`} posicao={[x, EIXO, 0]} cor={cores.raio} escala={0.55} opacidade={cores.escuro ? 0.8 : 0.4} />)}
+      <Segmento de={new THREE.Vector3(TRILHO_INICIO + 0.6, EIXO, 0)} ate={new THREE.Vector3(TRILHO_FIM - 0.3, EIXO, 0)} raio={0.005} cor={cores.eixo} opacidade={0.45} />
       {[-FOCO, FOCO].map((x) => (
-        <mesh key={x} position={[x, EIXO, 0]}>
-          <sphereGeometry args={[0.06, 20, 20]} />
-          <meshStandardMaterial color={cores.raio} emissive={cores.raio} emissiveIntensity={3 * cores.brilho} toneMapped={false} />
-        </mesh>
+        <group key={x} position={[x, EIXO, 0]}>
+          <mesh>
+            <sphereGeometry args={[0.055, 20, 20]} />
+            <meshBasicMaterial color={new THREE.Color(cores.raio).multiplyScalar(cores.escuro ? 1.6 : 1)} toneMapped={false} />
+          </mesh>
+          <Halo posicao={[0, 0, 0]} cor={cores.raio} escala={0.5} opacidade={cores.escuro ? 0.7 : 0.35} />
+        </group>
       ))}
     </group>
   );
@@ -282,16 +516,16 @@ function Rotulos({ alvos }: { alvos: { ref: React.RefObject<HTMLSpanElement | nu
 
 function Camera({ movimento }: { movimento: boolean }) {
   const { camera, size } = useThree();
-  const alvo = useMemo(() => new THREE.Vector3(-1.0, 1.3, 0), []);
+  const alvo = useMemo(() => new THREE.Vector3(-1.5, 1.25, 0), []);
   useFrame(({ clock }) => {
-    // Câmera baixa, na diagonal do trilho: o objeto grande em primeiro plano,
+    // Câmera baixa, na diagonal do trilho: a caixa de luz em primeiro plano,
     // a lente no meio e o anteparo ao fundo. De frente, a bancada inteira
     // cabia na coluna mas virava um risco fino; a profundidade é que dá escala.
     // A distância acompanha a proporção da coluna (iPad e celular diferem).
     const perspectiva = camera as THREE.PerspectiveCamera;
     const meiaAbertura = THREE.MathUtils.degToRad(perspectiva.fov / 2);
     const aspecto = size.width / Math.max(size.height, 1);
-    const distancia = THREE.MathUtils.clamp(4.9 / (Math.tan(meiaAbertura) * aspecto), 8, 18);
+    const distancia = THREE.MathUtils.clamp(5.6 / (Math.tan(meiaAbertura) * aspecto), 9, 19);
     // Um travelling lento, como na apresentação de um produto. Parado para
     // quem pede movimento reduzido.
     const t = movimento ? clock.getElapsedTime() : 0;
@@ -302,12 +536,14 @@ function Camera({ movimento }: { movimento: boolean }) {
   return null;
 }
 
+type AlvoDeRotulo = { ref: React.RefObject<HTMLSpanElement | null>; ponto: () => THREE.Vector3 };
+
 function Cena({ p, onP, cores, movimento, rotulos }: {
   p: number;
   onP: (p: number) => void;
   cores: CoresDaCena;
   movimento: boolean;
-  rotulos: { ref: React.RefObject<HTMLSpanElement | null>; ponto: () => THREE.Vector3 }[];
+  rotulos: AlvoDeRotulo[];
 }) {
   const imagem = imagemDaLente(p, FOCO)!;
   const arrastando = useRef(false);
@@ -317,18 +553,26 @@ function Cena({ p, onP, cores, movimento, rotulos }: {
     if (!arrastando.current) return;
     if (evento.ray.intersectPlane(planoArraste, ponto)) onP(THREE.MathUtils.clamp(-ponto.x, P_MIN, P_MAX));
   };
+  const { scene } = useThree();
+  useEffect(() => {
+    scene.background = new THREE.Color(cores.fundo);
+    scene.fog = new THREE.Fog(cores.fundo, 14, 30);
+  }, [scene, cores.fundo]);
   return (
     <>
       <Ambiente />
       <Camera movimento={movimento} />
       <Rotulos alvos={rotulos} />
-      <hemisphereLight args={[cores.ceu, cores.chao, 0.55]} />
-      <directionalLight position={[-4, 9, 6]} intensity={1.6} castShadow shadow-mapSize={[1024, 1024]} shadow-camera-left={-10} shadow-camera-right={10} shadow-camera-top={6} shadow-camera-bottom={-4} />
-      <pointLight position={[-p, EIXO + ALTURA_OBJETO, 0.3]} color={cores.objeto} intensity={4} distance={4} />
+      <PosProcesso cores={cores} />
+      <hemisphereLight args={[cores.ceu, cores.chao, cores.escuro ? 0.22 : 0.7]} />
+      <directionalLight position={[-3, 10, 7]} intensity={cores.escuro ? 1.3 : 1.8} castShadow shadow-mapSize={[1024, 1024]} shadow-bias={-0.0004} shadow-camera-left={-11} shadow-camera-right={11} shadow-camera-top={7} shadow-camera-bottom={-5} />
+      {/* Luz de recorte por trás, que desenha a silhueta do latão e do vidro.
+          Branca: na cor do acento ela tingia o chão inteiro. */}
+      <directionalLight position={[6, 5, -8]} intensity={cores.escuro ? 0.9 : 0.5} />
 
+      <Estudio cores={cores} />
       <Trilho cores={cores} />
       <EixoEFocos cores={cores} />
-      <Carro x={0} altura={EIXO - 1.2} cores={cores} />
       <Lente cores={cores} />
 
       <group
@@ -336,18 +580,14 @@ function Cena({ p, onP, cores, movimento, rotulos }: {
         onPointerUp={() => { arrastando.current = false; }}
         onPointerMove={mover}
       >
-        <Carro x={-p} altura={EIXO - 0.3} cores={cores} />
-        <group position={[-p, EIXO, 0]}>
-          <Seta altura={ALTURA_OBJETO} cor={cores.objeto} brilho={cores.brilho} />
-          <Halo posicao={[0, ALTURA_OBJETO, 0]} cor={cores.objeto} escala={1.1} opacidade={cores.escuro ? 0.9 : 0.5} />
-          {/* Área de toque maior que a seta fina, para o dedo achar o objeto. */}
-          <mesh>
-            <boxGeometry args={[0.9, 3, 1.4]} />
-            <meshBasicMaterial transparent opacity={0} depthWrite={false} />
-          </mesh>
-        </group>
+        <CaixaDeLuz p={p} cores={cores} />
+        {/* Área de toque maior que a caixa, para o dedo achar o objeto. */}
+        <mesh position={[-p - 0.2, EIXO, 0]}>
+          <boxGeometry args={[1.2, 3.2, 1.6]} />
+          <meshBasicMaterial transparent opacity={0} depthWrite={false} />
+        </mesh>
       </group>
-      {/* Plano invisível que recebe o arraste quando o ponteiro sai da seta. */}
+      {/* Plano invisível que recebe o arraste quando o ponteiro sai da caixa. */}
       <mesh position={[-1, EIXO, 0]} onPointerMove={mover} onPointerUp={() => { arrastando.current = false; }}>
         <planeGeometry args={[40, 20]} />
         <meshBasicMaterial transparent opacity={0} depthWrite={false} />
@@ -355,12 +595,6 @@ function Cena({ p, onP, cores, movimento, rotulos }: {
 
       <Raios p={p} cores={cores} />
       <Anteparo pLinha={imagem.pLinha} aumento={imagem.aumento} cores={cores} />
-      <Carro x={imagem.pLinha} altura={EIXO - 1.2} cores={cores} />
-
-      <mesh rotation={[-Math.PI / 2, 0, 0]} position={[0, -0.1, 0]} receiveShadow>
-        <planeGeometry args={[40, 20]} />
-        <shadowMaterial opacity={0.28} />
-      </mesh>
     </>
   );
 }
@@ -404,13 +638,13 @@ export default function BancadaOptica() {
   }, []);
 
   const imagem = imagemDaLente(p, FOCO)!;
-  const rotulos = useMemo(() => [
+  const rotulos = useMemo<AlvoDeRotulo[]>(() => [
     { ref: rotuloF, ponto: () => new THREE.Vector3(-FOCO, EIXO - 0.25, 0) },
     { ref: rotuloF2, ponto: () => new THREE.Vector3(FOCO, EIXO - 0.25, 0) },
-    { ref: rotuloObjeto, ponto: () => new THREE.Vector3(-pRef.current, EIXO + ALTURA_OBJETO + 0.35, 0) },
+    { ref: rotuloObjeto, ponto: () => new THREE.Vector3(-pRef.current - 0.3, EIXO + ALTURA_OBJETO + 0.75, 0) },
     { ref: rotuloImagem, ponto: () => {
       const im = imagemDaLente(pRef.current, FOCO)!;
-      return new THREE.Vector3(im.pLinha, EIXO + 1.55, 0);
+      return new THREE.Vector3(im.pLinha, EIXO + 1.7, 0);
     } },
   ], []);
 
@@ -421,8 +655,8 @@ export default function BancadaOptica() {
       <div className="crivo-cena__palco" aria-hidden="true">
         <Canvas
           shadows
-          dpr={[1, 1.75]}
-          gl={{ antialias: true, alpha: true }}
+          dpr={[1, 1.5]}
+          gl={{ antialias: true, alpha: false, powerPreference: 'high-performance' }}
           camera={{ fov: 28, near: 0.1, far: 160, position: [-4, 6, 24] }}
           frameloop={visivel ? (reduzido ? 'demand' : 'always') : 'never'}
           style={{ touchAction: 'pan-y' }}
