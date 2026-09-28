@@ -362,6 +362,14 @@
   --surface-elevated: rgba(26, 27, 23, .84);
   --surface-strong: color-mix(in srgb, var(--amb-a) 14%, #1a1b17);
   --text-inverse: #070a08;
+  /* O :root.dark do index.css fixava --action-primary no vinho burgundy-600 e
+     vencia a cor do ambiente; com o --text-inverse escuro acima, "Iniciar",
+     "Enviar para correção" e todo botão principal saíam em 3,0:1 (mínimo
+     4,5:1). No escuro o botão usa o tom vivo da paleta, onde o texto escuro dá
+     cerca de 9:1 — e acompanha a matéria, como no claro. */
+  --action-primary: var(--amb-a-neon);
+  --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 86%, #ffffff);
+  --action-primary-pressed: color-mix(in oklab, var(--amb-a-neon) 80%, #000000);
   --shadow-soft-md-value: 0 16px 40px -20px rgba(0, 0, 0, .7);
   --shadow-soft-lg-value: 0 30px 80px -30px rgba(0, 0, 0, .8);
 }

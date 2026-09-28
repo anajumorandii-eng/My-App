@@ -98,6 +98,52 @@ Capturas: `estudar-antes-*`, `estudar-depois-*`, `questoes-antes-*`,
 `questoes-depois-*`, `questoes-respondida-1194-claro.png` e
 `questoes-rolagem-390-claro.png`.
 
-## Próximo
+## Resumos
 
-Resumos, com a mesma régua.
+### Biblioteca
+
+| Antes | Problema | Agora |
+| --- | --- | --- |
+| Página de 141.593 px no iPad e 324.801 px no celular | Os 613 capítulos desenhados de uma vez, cada cartão com o primeiro parágrafo inteiro (602 caracteres em média, até 1.262). | Lotes de 24, com "Mostrar mais"; o parágrafo fica em três linhas. A página inicial tem 3.831 px no iPad. Filtro e busca continuam valendo para o catálogo inteiro. |
+| "LIBRARY · LITERATURA" | Inglês, e "Literatura" fixa com o filtro em "Todas". | "Biblioteca · <disciplina filtrada ou Todas as disciplinas> · Resumos interativos". |
+| "perfil type · local" | Nome interno da família de cor. | "613 capítulos · progresso neste aparelho" (ou "sincronizado"), com o total do filtro. |
+| Paleta de Literatura fixa no contêiner | Vencia o ambiente, que já segue a disciplina filtrada. | Removida. |
+| "Fuvest · 1ª e 2ª fases" escrito à mão em todo cartão | O texto era constante, não dado. Hoje é verdade para os 613 (conferido), mas deixaria de ser no primeiro capítulo diferente. | Lido de `item.boards`. Virou selo em tom da paleta com texto do tema: a pílula sólida com texto escuro tinha contraste fraco no claro. |
+| Conteúdo do cartão descolado do topo | Botão centraliza o conteúdo por padrão; cartões de alturas diferentes ficavam desalinhados. | Coluna alinhada ao topo; estado e leitura presos ao pé do cartão. |
+
+### Capítulo aberto
+
+| Antes | Problema | Agora |
+| --- | --- | --- |
+| Encostado na lateral e na borda direita | Sem `.ni-main`, como o Visual e a Agenda antes da rodada da junção. | Com a margem das outras telas. |
+| Índigo e violeta fixos | "Prioridade Fuvest", "Voltar à biblioteca", modo ativo, pré-requisitos, "Recuperação ativa" e "Enviar para correção" em cores fora da identidade do Crivo, iguais em qualquer matéria. | Tokens do ambiente (`--primary`, `--surface`, `--line`, `action-primary`), que seguem o capítulo aberto. |
+
+### Botão principal no escuro (o app inteiro)
+
+Medido no navegador: no escuro, o `:root.dark` do `index.css` fixava o botão
+principal no vinho `burgundy-600` e vencia a cor do ambiente, enquanto o
+ambiente pinta o texto do botão de escuro. "Iniciar", "Enviar para correção" e
+"Prioridade Fuvest" saíam em **3,0:1** (o mínimo é 4,5:1).
+
+O texto escuro é de propósito — o mesmo token serve para texto sobre fundo
+claro no tema escuro —, então quem mudou foi o botão: no escuro ele usa o tom
+vivo da paleta. Agora dá **8,8:1** nos Resumos e **11:1** no "Iniciar" da
+Sessão, e acompanha a matéria, como no claro.
+
+## Conferência dos Resumos
+
+- Biblioteca e capítulo no iPad e no celular, claro e escuro, com as fontes
+  reais. Contraste do botão principal medido no navegador em quatro telas.
+- **Testes:** `Resumos.ui.test.tsx` ganhou o caso dos lotes (24, depois 48, e o
+  total no selo). O teste que restaura filtros pela URL agora pagina até o
+  capítulo esperado, que continua no resultado do filtro.
+- `npm run lint` limpo; `npm test` verde (719 node:test e 753 vitest);
+  `npm run build` sem erro.
+
+Capturas: `resumos-antes-1194-escuro-topo.png` (recorte do topo; a página
+inteira não cabe numa imagem), `resumos-depois-*`,
+`capitulo-antes-1194-claro.png` e `capitulo-depois-*`.
+
+## Fim da ordem combinada
+
+Hoje, Plano, Estudar, Questões e Resumos revisados.

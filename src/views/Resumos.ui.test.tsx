@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
@@ -45,8 +45,24 @@ describe('restauração do contexto do resumo', () => {
     expect(screen.getByLabelText('Filtrar por disciplina')).toHaveValue('Geografia');
     expect(screen.getByLabelText('Filtrar por banca')).toHaveValue('Unesp/Vunesp');
     expect(screen.getByLabelText('Filtrar por fase')).toHaveValue('segunda');
+    // A biblioteca mostra os cartões em lotes: o capítulo pode estar além do
+    // primeiro, mas precisa estar no resultado do filtro restaurado.
+    let mais = screen.queryByRole('button', { name: /^Mostrar mais/ });
+    while (!screen.queryByRole('heading', { name: 'Transição e bônus demográfico' }) && mais) {
+      fireEvent.click(mais);
+      mais = screen.queryByRole('button', { name: /^Mostrar mais/ });
+    }
     expect(screen.getByRole('heading', { name: 'Transição e bônus demográfico' })).toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: /Calor, temperatura/ })).not.toBeInTheDocument();
+  });
+
+  it('mostra a biblioteca em lotes, com o total no selo e o resto a um toque', () => {
+    render(<MemoryRouter initialEntries={['/resumos']}><Resumos/></MemoryRouter>);
+    const total = interactiveSummaries.length;
+    expect(screen.getByText(new RegExp(`${total} capítulos`))).toBeInTheDocument();
+    expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(24);
+    fireEvent.click(screen.getByRole('button', { name: `Mostrar mais 24 de ${total - 24} restantes` }));
+    expect(screen.getAllByRole('heading', { level: 2 })).toHaveLength(48);
   });
 
   it.each(['História', 'Língua Inglesa', 'Redação', 'Gramática', 'Literatura', 'Entendimento de Texto', 'Matemática', 'Química'])(
