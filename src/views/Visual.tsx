@@ -21,6 +21,11 @@ import { VisualArtifact } from './VisualArtifact';
 import { ConceptChain } from './ConceptChain';
 import { VisualJourney } from './VisualJourney';
 import { MOTION_DURATION } from '../design-system/motion/tokens';
+import { MolduraTecnologicaContext, useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria, ambienteDoCapitulo, usaMolduraTecnologica } from '../lib/visualAmbiente';
+import { usePreferenciasVisual, type PreferenciasVisual } from '../hooks/usePreferenciasVisual';
+import { PainelPersonalizar } from './visual-boards/PainelPersonalizar';
+import { BuscaRapida, registrarRecente } from './visual-boards/BuscaRapida';
 import './Visual.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
@@ -95,9 +100,18 @@ function StateBadge({ state }: { state: NodeState }) {
 
 
 
-function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
+function VisualLibrary({ onOpen, preferencias, onMudarPreferencias, onBuscar }: {
+  onOpen: (id: string) => void;
+  preferencias: PreferenciasVisual;
+  onMudarPreferencias: (mudanca: Partial<PreferenciasVisual>) => void;
+  onBuscar: () => void;
+}) {
   const [query, setQuery] = useState('');
   const [subject, setSubject] = useMateriaLembrada('crivo_materia_visual');
+  // A biblioteca também veste a tela: a cor da matéria filtrada, ou a padrão
+  // em "Todas". Sem isso, sair de um capítulo apagava o ambiente de uma vez.
+  const ambiente = useMemo(() => ambienteDaMateria(subject, preferencias.cor), [subject, preferencias.cor]);
+  useAmbienteDaTela(ambiente, preferencias);
   const [limit, setLimit] = useState(60);
   const subjects = useMemo(() => [...new Set(interactiveSummaries.map((item) => item.subject))].sort(), []);
   const list = useMemo(() => {
@@ -109,7 +123,11 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
 
   return (
     <div className="space-y-5">
-      <header className="rounded-3xl bg-zinc-950 text-white p-6 sm:p-8">
+      <header className="vs-lib-header rounded-3xl bg-zinc-950 text-white p-6 sm:p-8">
+        <div className="vs-lib-acoes">
+          <BotaoBuscar onBuscar={onBuscar} />
+          <PainelPersonalizar preferencias={preferencias} onMudar={onMudarPreferencias} ambienteAutomatico={null} />
+        </div>
         <span className="inline-flex items-center rounded-full bg-white/10 px-3 py-1 text-xs font-bold uppercase tracking-widest">
           <Waypoints className="mr-2 h-3.5 w-3.5" aria-hidden="true" />Visual
         </span>
@@ -121,7 +139,7 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
       </header>
 
       {/* Mais de sessenta tópicos não cabem em fileira de chips: campo agrupado. */}
-      <div className="grid gap-3 sm:grid-cols-[220px_1fr]">
+      <div className="vs-lib-filtros grid gap-3 sm:grid-cols-[220px_1fr]">
         <label className="text-sm">
           <span className="mb-1 block font-semibold text-zinc-600 dark:text-zinc-400">Disciplina</span>
           <select
@@ -157,7 +175,8 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
             <li key={item.id}>
               <button
                 onClick={() => onOpen(item.id)}
-                className="w-full rounded-2xl border border-zinc-200 bg-white p-4 text-left transition hover:border-indigo-400 dark:border-zinc-800 dark:bg-zinc-900"
+                className="vs-lib-card w-full rounded-2xl border border-zinc-200 bg-white p-4 text-left transition hover:border-indigo-400 dark:border-zinc-800 dark:bg-zinc-900"
+                style={{ '--card-cor': ambienteDoCapitulo(item, preferencias.cor).paleta.a } as React.CSSProperties}
               >
                   {/* O quadradinho com o ícone da matéria e o do tópico ficava em
                       animação contínua em cada card, e a lista inteira se mexia
@@ -165,7 +184,7 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
                       o movimento continua só dentro do mapa. */}
                   <div className="flex items-start gap-4">
                     <div>
-                      <span className="text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
+                      <span className="vs-lib-card-materia text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
                         {item.subject} • {item.topic}
                       </span>
                       <span className="mt-1 block font-bold">{item.title}</span>
@@ -183,6 +202,17 @@ function VisualLibrary({ onOpen }: { onOpen: (id: string) => void }) {
   );
 }
 
+
+/** Botão da busca rápida, com o atalho à vista para quem usa teclado. */
+function BotaoBuscar({ onBuscar }: { onBuscar: () => void }) {
+  return (
+    <button type="button" className="vs-acao-topo" onClick={onBuscar} aria-keyshortcuts="Meta+K Control+K">
+      <Search aria-hidden="true" />
+      <span>Buscar</span>
+      <kbd aria-hidden="true">⌘K</kbd>
+    </button>
+  );
+}
 
 function Inspector({
   map, summary, nodeId, answers, onOpenSummary, onDisagree, disagreed, onClose, onModeChange,
@@ -277,6 +307,8 @@ export default function Visual() {
   const [showWhyHidden, setShowWhyHidden] = useState(false);
   const selectionTriggerRef = useRef<HTMLElement | null>(null);
 
+  const [preferencias, mudarPreferencias] = usePreferenciasVisual();
+  const [buscaAberta, setBuscaAberta] = useState(false);
   const summary = summaryId ? interactiveSummaries.find((item) => item.id === summaryId) : undefined;
   const map = useMemo(() => (summary ? buildVisualMap(summary) : null), [summary]);
   const itemProgress = summary ? progress[summary.id] : undefined;
@@ -284,6 +316,25 @@ export default function Visual() {
     () => (itemProgress?.answers ?? []).filter((attempt) => attempt.questionId === map?.questionId),
     [itemProgress, map],
   );
+
+  // A tela inteira acompanha a prancha: quando o capítulo usa a moldura
+  // tecnológica, o ambiente (matéria + conteúdo) veste também o topo, o trilho
+  // e a barra de baixo. Precisa vir antes dos `return` antecipados — é hook.
+  const tecnologico = summary ? usaMolduraTecnologica(summary.id) : false;
+  const ambiente = useMemo(() => (summary && tecnologico ? ambienteDoCapitulo(summary, preferencias.cor) : null), [summary, tecnologico, preferencias.cor]);
+  const ambienteAutomatico = useMemo(() => (summary ? ambienteDoCapitulo(summary) : null), [summary]);
+  useAmbienteDaTela(ambiente, preferencias);
+
+  // ⌘K / Ctrl+K abre a busca rápida de qualquer ponto do Visual.
+  useEffect(() => {
+    const atalho = (evento: KeyboardEvent) => {
+      if ((evento.metaKey || evento.ctrlKey) && evento.key.toLowerCase() === 'k') { evento.preventDefault(); setBuscaAberta(true); }
+    };
+    window.addEventListener('keydown', atalho);
+    return () => window.removeEventListener('keydown', atalho);
+  }, []);
+  useEffect(() => { if (summary) registrarRecente(summary.id); }, [summary]);
+  const busca = <BuscaRapida aberta={buscaAberta} onFechar={() => setBuscaAberta(false)} onAbrir={(id) => setSearchParams({ summary: id })} />;
 
   const hidden = useMemo(() => (map ? chooseHiddenRelations(map, answers) : []), [map, answers]);
   const intervention = useMemo(() => (map ? minimalIntervention(map, answers) : null), [map, answers]);
@@ -335,7 +386,12 @@ export default function Visual() {
         </div>
       );
     }
-    return <div className="crivo-visual"><VisualLibrary onOpen={(id) => setSearchParams({ summary: id })} /></div>;
+    return (
+      <div className="crivo-visual crivo-visual--tech">
+        <VisualLibrary onOpen={(id) => setSearchParams({ summary: id })} preferencias={preferencias} onMudarPreferencias={mudarPreferencias} onBuscar={() => setBuscaAberta(true)} />
+        {busca}
+      </div>
+    );
   }
 
 
@@ -398,7 +454,8 @@ export default function Visual() {
   };
 
   return (
-    <div className="crivo-visual pb-16">
+    <MolduraTecnologicaContext.Provider value={tecnologico}>
+    <div className={`crivo-visual pb-16${tecnologico ? ' crivo-visual--tech' : ''}`}>
       <header className="vs-topic-bar">
         <button onClick={() => setSearchParams({})} className="vs-back-button" aria-label="Voltar à biblioteca visual">
           <ArrowLeft aria-hidden="true" />
@@ -407,8 +464,12 @@ export default function Visual() {
           <span>{summary.subject} / {summary.topic}</span>
           <strong>{summary.title}</strong>
         </div>
-        <span className="vs-hand-note" aria-hidden="true">Explore. Conecte.<br />Compreenda de verdade.</span>
+        <div className="vs-topic-acoes">
+          <BotaoBuscar onBuscar={() => setBuscaAberta(true)} />
+          <PainelPersonalizar preferencias={preferencias} onMudar={mudarPreferencias} ambienteAutomatico={ambienteAutomatico} />
+        </div>
       </header>
+      {busca}
 
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
 
@@ -732,5 +793,6 @@ export default function Visual() {
         ) : null}
       </div>
     </div>
+    </MolduraTecnologicaContext.Provider>
   );
 }

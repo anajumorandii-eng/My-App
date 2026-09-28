@@ -18,8 +18,9 @@ export function Plant({ x, y, size = 1, canopy = false }: { x: number; y: number
   </g>;
 }
 
-export function Fish({ x, y, size = 1 }: { x: number; y: number; size?: number }) {
-  return <g transform={`translate(${x} ${y}) scale(${size})`}><path d="M-34 0Q-10-24 24-9L44-26 40 0 44 26 23 9Q-9 24-34 0Z" fill="var(--eco-fish)" stroke="var(--eco-deep)" strokeWidth="1.5"/><path d="M-5-15 4-27 15-13M-4 15 7 24 17 12M-15-11Q-7 0-15 11" fill="none" stroke="var(--eco-deep)" strokeWidth="1.5"/><circle cx="-23" cy="-2" r="2.5" fill="var(--eco-deep)"/></g>;
+/** A cabeça fica à esquerda; `flip` vira o peixe para a direita. */
+export function Fish({ x, y, size = 1, flip = false }: { x: number; y: number; size?: number; flip?: boolean }) {
+  return <g transform={`translate(${x} ${y}) scale(${flip ? -size : size} ${size})`}><path d="M-34 0Q-10-24 24-9L44-26 40 0 44 26 23 9Q-9 24-34 0Z" fill="var(--eco-fish)" stroke="var(--eco-deep)" strokeWidth="1.5"/><path d="M-5-15 4-27 15-13M-4 15 7 24 17 12M-15-11Q-7 0-15 11" fill="none" stroke="var(--eco-deep)" strokeWidth="1.5"/><circle cx="-23" cy="-2" r="2.5" fill="var(--eco-deep)"/></g>;
 }
 
 export function Flow({ d, active, replay = 0 }: { d: string; active: boolean; replay?: number }) {

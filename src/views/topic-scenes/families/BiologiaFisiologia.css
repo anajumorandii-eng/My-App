@@ -1,7 +1,12 @@
 .bp-scene { gap: 1rem; }
 .bp-board { min-width: 0; padding: .55rem; border: 1px solid color-mix(in srgb, var(--vs-blue) 28%, transparent); border-radius: 16px; background: radial-gradient(circle at 20% 20%, color-mix(in srgb, var(--vs-blue) 8%, transparent), transparent 42%), color-mix(in srgb, var(--vs-paper-strong) 94%, var(--vs-blue)); overflow: hidden; }
 .bp-board svg { display: block; color: var(--vs-ink); }
-.bp-board text { fill: var(--vs-dim); font: 700 15px/1.2 'Kalam', 'Caveat', cursive; }
+/* O texto mora dentro do grupo do órgão, e o grupo tem traço de 3 px: sem
+   `stroke: none`, cada letra herdava o contorno e, no iPad em tema escuro,
+   "boca · amilase" virava um borrão ilegível. A ponta de seta do `marker`
+   não herda cor e saía preta sobre o fundo escuro. */
+.bp-board text { fill: var(--vs-dim); stroke: none; font: 700 15px/1.2 'Kalam', 'Caveat', cursive; }
+.bp-board marker path { fill: var(--vs-amber); stroke: none; }
 .bp-board .bp-small { font: 700 12px/1.2 system-ui, sans-serif; }
 .bp-body { fill: none; stroke: color-mix(in srgb, var(--vs-ink) 24%, transparent); stroke-width: 2; stroke-dasharray: 7 5; }
 .bp-organ, .bp-nephron, .bp-reflex-node, .bp-reflex-path, .bp-cord, .bp-muscle, .bp-gland-node, .bp-channel, .bp-vesicles, .bp-receptors, .bp-cleanup { fill: color-mix(in srgb, var(--vs-blue) 8%, var(--vs-paper-strong)); stroke: color-mix(in srgb, var(--vs-blue) 54%, var(--vs-ink)); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; transition: opacity .2s ease, filter .2s ease; }
