@@ -362,6 +362,14 @@
   --surface-elevated: rgba(26, 27, 23, .84);
   --surface-strong: color-mix(in srgb, var(--amb-a) 14%, #1a1b17);
   --text-inverse: #070a08;
+  /* O :root.dark do index.css fixava --action-primary no vinho burgundy-600 e
+     vencia a cor do ambiente; com o --text-inverse escuro acima, "Iniciar",
+     "Enviar para correção" e todo botão principal saíam em 3,0:1 (mínimo
+     4,5:1). No escuro o botão usa o tom vivo da paleta, onde o texto escuro dá
+     cerca de 9:1 — e acompanha a matéria, como no claro. */
+  --action-primary: var(--amb-a-neon);
+  --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 86%, #ffffff);
+  --action-primary-pressed: color-mix(in oklab, var(--amb-a-neon) 80%, #000000);
   --shadow-soft-md-value: 0 16px 40px -20px rgba(0, 0, 0, .7);
   --shadow-soft-lg-value: 0 30px 80px -30px rgba(0, 0, 0, .8);
 }
@@ -475,7 +483,13 @@
   mask-image: linear-gradient(90deg, #000 92%, transparent);
 }
 :root[data-ambiente="tecnologico"] .ni-production-app .ni-subjects::-webkit-scrollbar { display: none; }
-:root[data-ambiente="tecnologico"] .ni-production-app .ni-subjects button { flex: none; }
+:root[data-ambiente="tecnologico"] .ni-production-app .ni-subjects button {
+  flex: none;
+  /* O CSS de produção zerava o respiro lateral (padding: 2px 0), herança de
+     quando a aba era só texto sublinhado. Em pílula, o texto encostava na
+     borda: "Todas" virava uma cápsula estreita. */
+  padding-inline: 12px;
+}
 /* O cartão da decisão tinha altura mínima de 540 px, pensada para a
    ilustração antiga: no iPad sobrava um vão vazio entre os botões e os
    sinais. */
@@ -528,3 +542,40 @@
    no claro, em vez de corrigir tela por tela e esquecer a próxima. */
 :root:not(.dark) .text-amber-300 { color: var(--status-warning); }
 :root:not(.dark) .text-amber-400 { color: var(--status-warning); }
+/* Os tons ainda mais claros (100 e 200, com e sem opacidade) aparecem em 20
+   lugares, entre eles o diagnóstico de erro das Questões: no claro, o convite
+   "Se lembrar, escreva o que passou pela sua cabeça" e o botão "Descobrir o
+   motivo com o CRIVO" sumiam no creme. A opacidade da classe some junto, e é
+   de propósito: ela existia para suavizar o âmbar sobre fundo escuro. */
+:root:not(.dark) :is(.text-amber-100, .text-amber-200, [class*="text-amber-100/"], [class*="text-amber-200/"]) {
+  color: var(--status-warning);
+}
+:root:not(.dark) [class*="placeholder:text-amber-200"]::placeholder { color: color-mix(in srgb, var(--status-warning) 55%, transparent); }
+
+/* --- Alternativas de questão ------------------------------------------------
+   O .ni-options veio do protótipo com fonte monoespaçada de 10 px: o enunciado
+   saía em Inter de 17 px e as alternativas, que são a outra metade da leitura,
+   num corpo quase ilegível no iPad. Leitura longa vai em Inter, como o
+   enunciado. */
+:root[data-ambiente="tecnologico"] .ni-production-app .ni-options button {
+  padding: 12px 14px;
+  font: 400 14px/1.45 Inter, system-ui, sans-serif;
+}
+
+/* --- Faixa de matérias grudada no topo, no celular -------------------------
+   Abaixo de 900 px a fileira de matérias fica sticky, com fundo
+   color-mix(var(--background) 94%). O ambiente não define --background: o
+   fundo virava transparente, e o título "Escolha uma alternativa." das
+   Questões aparecia atrás das abas ao rolar. */
+@media (max-width: 900px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app .ni-subjects {
+    background: color-mix(in srgb, var(--amb-fundo) 98%, transparent);
+    box-shadow: 0 10px 20px color-mix(in srgb, var(--amb-fundo) 72%, transparent);
+  }
+  /* O cabeçalho do celular usava o vidro dos cartões (86%): título grande
+     rolando por baixo continuava legível através dele. */
+  :root[data-ambiente="tecnologico"] .ni-production-app .ni-production-mobile,
+  :root[data-ambiente="tecnologico"] .ni-production-app.is-light .ni-production-mobile {
+    background: color-mix(in srgb, var(--amb-fundo) 96%, transparent);
+  }
+}

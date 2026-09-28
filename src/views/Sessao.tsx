@@ -17,7 +17,9 @@ import { EmptyState } from '../components/ui/EmptyState';
 import { CrivoCore, type CrivoCoreState } from '../components/CrivoCore';
 import { getSubjectProfile } from '../design-system/crivoSubjects';
 import { useReducedMotion } from 'motion/react';
-import { PALETTES, SUBJECT_ICONS } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from '../prototypes/NucleoInstrumentalPrototype';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria } from '../lib/visualAmbiente';
 import { STUDY_ACTION_TYPE_LABELS } from '../lib/studyActionLabels';
 
 function formatTime(totalSeconds: number) {
@@ -347,19 +349,23 @@ export default function Sessao() {
     && !dailyPlan.some((action) => action.topicId === requestedTopicId);
 
   const activeProfile = selectedAction ? getSubjectProfile(selectedAction.subject) : null;
-  const palette = PALETTES[selectedAction?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
+  // A cor da sessão é a da matéria do bloco aberto, pelo ambiente do app,
+  // como no Hoje. Antes a tela fixava a paleta no próprio contêiner, e a
+  // variável vencia a do ambiente: sem bloco, o fallback era Matemática.
+  const ambiente = useMemo(() => (selectedAction?.subject ? ambienteDaMateria(selectedAction.subject) : null), [selectedAction?.subject]);
+  useAmbienteDaTela(ambiente);
   const ActiveSubjectIcon = SUBJECT_ICONS[selectedAction?.subject ?? 'Matemática'];
   const visiblePlan = subjectFilter
     ? dailyPlan.filter((action) => action.subject === subjectFilter)
     : dailyPlan;
 
   return (
-    <div
-      className="ni-main ni-session-production"
-      data-geometry={activeProfile?.fieldType}
-      style={{ '--primary': palette.primary, '--primary-ink': palette.readable, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties}
-    >
-      <div className="ni-route"><span>PRACTICE</span><i /><span>{selectedAction?.subject ?? 'MATEMÁTICA'}</span><i /><b>Sessão em foco</b></div>
+    <div className="ni-main ni-session-production" data-geometry={activeProfile?.fieldType}>
+      <div className="ni-route">
+        <span>Estudar</span><i />
+        {selectedAction && <><span>{selectedAction.subject}</span><i /></>}
+        <b>Sessão em foco</b>
+      </div>
       <div className="ni-title">
         <div>
           <h1>Sessão de Estudo</h1>
@@ -367,13 +373,24 @@ export default function Sessao() {
         </div>
         <div className="ni-state"><span>{`${availability?.totalMinutes ?? 0} min`}</span> efetivos hoje <i aria-hidden="true" /></div>
       </div>
+      {/* A aba acesa era a do filtro ou, sem filtro, a matéria do bloco aberto:
+          "Física" aparecia marcada enquanto a lista mostrava Biologia junto.
+          Agora só o filtro acende a aba, e "Todas" diz quando não há filtro. */}
       <div className="ni-subjects" aria-label="Blocos por matéria">
+        <button
+          type="button"
+          className={subjectFilter === null ? 'active' : ''}
+          aria-pressed={subjectFilter === null}
+          onClick={() => setSubjectFilter(null)}
+        >
+          Todas
+        </button>
         {SUBJECT_OPTIONS.map((subject) => (
           <button
             type="button"
             key={subject}
-            className={subject === (subjectFilter ?? selectedAction?.subject) ? 'active' : ''}
-            aria-pressed={subject === (subjectFilter ?? selectedAction?.subject)}
+            className={subject === subjectFilter ? 'active' : ''}
+            aria-pressed={subject === subjectFilter}
             onClick={() => selectSubject(subject)}
           >
             {(() => {
@@ -566,7 +583,9 @@ export default function Sessao() {
                   {isVerified && <p className="text-sm text-status-success mb-4">Checagem registrada; o plano foi recalculado com essa evidência.</p>}
                   {syncError && <p className="text-sm text-status-error mb-4">{syncError}</p>}
 
-                  <div className="flex items-center gap-3">
+                  {/* Três botões lado a lado passavam da largura do cartão no
+                      iPad; agora quebram linha e ficam centrados. */}
+                  <div className="flex flex-wrap items-center justify-center gap-3 max-w-full">
                     <Button
                       onClick={() => {
                         const nextRunning = !isRunning;

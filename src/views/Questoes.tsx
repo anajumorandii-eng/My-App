@@ -390,7 +390,6 @@ export default function Questoes() {
     }
   };
 
-  const palette = PALETTES[question?.subject ?? 'Matemática'] ?? PALETTES.Matemática;
   const precisionPercent = history.length > 0 ? `${Math.round((correctCount / history.length) * 100)}%` : '—';
 
   // O painel afirma que cada acerto estende o ciclo de revisão do tópico. Isso
@@ -408,28 +407,20 @@ export default function Questoes() {
   })();
 
   return (
-    <div
-      className="ni-main"
-      style={
-        {
-          '--primary': palette.primary, '--primary-ink': palette.readable,
-          '--secondary': palette.secondary,
-          '--wash': palette.wash,
-        } as React.CSSProperties
-      }
-    >
+    // A tela fixava no contêiner a paleta da matéria da questão, e a variável
+    // vencia a do ambiente, que já segue o filtro de matéria (useAmbienteDaTela
+    // acima). Em "Todas", cada questão trocava a cor da página inteira.
+    <div className="ni-main">
       {/* Route Breadcrumb */}
       <div className="ni-route">
-        <span>PRACTICE</span>
+        <span>Estudar</span>
         <i />
         <span>QUESTÕES</span>
         {question && (
           <>
             <i />
             <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-              <span className="w-6 h-6 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
-                {React.createElement(SUBJECT_ICONS[question.subject] ?? BookOpen, { className: 'w-3 h-3' })}
-              </span>
+              {React.createElement(SUBJECT_ICONS[question.subject] ?? BookOpen, { className: 'w-3 h-3' })}
               {(question?.subject ?? 'GERAL').toUpperCase()}
             </span>
           </>
@@ -444,7 +435,9 @@ export default function Questoes() {
           <p>Cada resposta atualiza a leitura do seu domínio e calibra a repetição espaçada.</p>
         </div>
         <div className="ni-state">
-          <i /> perfil {palette.family} · treino ativo
+          {/* Dizia "perfil organic · treino ativo": nome interno, em inglês, da
+              família de cor da paleta. */}
+          <i /> {history.length === 1 ? '1 resposta' : `${history.length} respostas`} neste treino
         </div>
       </div>
 
@@ -547,7 +540,9 @@ export default function Questoes() {
               </span>
             </div>
 
-            <h2>Qual é o próximo passo do raciocínio?</h2>
+            {/* O título era "Qual é o próximo passo do raciocínio?" em toda
+                questão, inclusive nas que não pedem raciocínio em etapas. */}
+            <h2>Escolha uma alternativa.</h2>
             <p>O feedback e a justificativa só aparecem após a sua tentativa.</p>
 
             <div className="ni-question"><QuestionStatement question={question} /></div>
@@ -559,9 +554,9 @@ export default function Questoes() {
                 let styleExtra: React.CSSProperties = { textAlign: 'left', display: 'flex', alignItems: 'center', gap: '10px' };
                 if (answered) {
                   if (isCorrectOption) {
-                    styleExtra = { ...styleExtra, borderColor: '#86dca5', color: '#86dca5', background: 'rgba(134,220,165,0.1)' };
+                    styleExtra = { ...styleExtra, borderColor: 'var(--status-success)', color: 'var(--status-success)', background: 'color-mix(in srgb, var(--status-success) 10%, transparent)' };
                   } else if (isSelected && !isCorrectOption) {
-                    styleExtra = { ...styleExtra, borderColor: '#e08391', color: '#e08391', background: 'rgba(224,131,145,0.1)' };
+                    styleExtra = { ...styleExtra, borderColor: 'var(--status-error)', color: 'var(--status-error)', background: 'color-mix(in srgb, var(--status-error) 10%, transparent)' };
                   }
                 }
                 return (
@@ -589,13 +584,13 @@ export default function Questoes() {
                   className="ni-primary w-full"
                 >
                   <ArrowRight className="w-4 h-4 mr-2" />
-                  Próxima Questão
+                  Próxima questão
                 </Button>
 
                 {/* Explanation & Diagnosis */}
                 <div className="p-4 rounded-xl border border-[var(--line)] bg-[var(--surface2)]/40 text-left space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="ni-kicker" style={{ margin: 0 }}>Gabarito & Justificativa</span>
+                    <span className="ni-kicker" style={{ margin: 0 }}>Gabarito e justificativa</span>
                     {!isCorrect && !question.originalPages?.length && (
                       <button onClick={fetchDeepExplanation} className="ni-link text-xs">
                         <Sparkles className="w-3.5 h-3.5 inline mr-1" />
@@ -735,18 +730,18 @@ export default function Questoes() {
 
           {/* Right Session Side Panel */}
           <Panel subject={question.subject} interactive className="ni-panel ni-session-side">
-            <span className="ni-kicker">Telemetria de Treino</span>
+            <span className="ni-kicker">Este treino</span>
             <div className="ni-timer" style={{ fontSize: '36px' }}>
               {correctCount} / {history.length}
             </div>
 
             <Metric
-              label="Taxa de Precisão"
+              label="Taxa de acerto"
               value={precisionPercent}
               bar
               fill={history.length > 0 ? correctCount / history.length : 0}
             />
-            <Metric label="Filtro Ativo" value={subjectFilter} />
+            <Metric label="Filtro ativo" value={subjectFilter} />
             <Metric
               label="Domínio deste tópico"
               value={masteryPercent}
@@ -769,7 +764,7 @@ export default function Questoes() {
             <div className="mt-6 pt-3 border-t border-[var(--line)] flex items-center justify-between text-xs text-[var(--dim)]">
               <button onClick={resetSession} className="flex items-center gap-1.5 hover:text-[var(--text)]">
                 <RotateCcw className="w-3.5 h-3.5" />
-                Reiniciar Treino
+                Reiniciar treino
               </button>
               <span>{pool.length} questões disponíveis</span>
             </div>
