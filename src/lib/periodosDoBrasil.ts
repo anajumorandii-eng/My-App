@@ -27,8 +27,13 @@ export interface Periodo {
   marcos: Marco[];
 }
 
-/** Ano de referência para o período que não terminou. */
-export const ANO_ATUAL = 2026;
+/**
+ * Ano de referência para o período que não terminou, lido do relógio: fixo
+ * no ano do commit, a Nova República pararia em 2026 enquanto a tela diz
+ * "hoje". Nunca abaixo de 2026: um relógio atrasado poria o fim do período
+ * antes do seu último marco.
+ */
+export const ANO_ATUAL = Math.max(2026, new Date().getFullYear());
 
 export const PERIODOS: Periodo[] = [
   {

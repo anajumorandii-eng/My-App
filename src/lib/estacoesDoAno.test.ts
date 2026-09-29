@@ -40,6 +40,11 @@ test('escrita de datas e horas', () => {
   assert.equal(escreverDia(1), '1 jan');
   assert.equal(escreverDia(365), '31 dez');
   assert.equal(diaDoAno(new Date(2026, 8, 29)), 272);
+  // Ano bissexto: 29/2 conta como 28/2, e o resto do ano não anda um dia.
+  assert.equal(diaDoAno(new Date(2028, 1, 29)), 59);
+  assert.equal(escreverDia(diaDoAno(new Date(2028, 2, 1))), '1 mar');
+  assert.equal(diaDoAno(new Date(2028, 11, 30)), 364);
+  assert.equal(diaDoAno(new Date(2028, 11, 31)), 365);
   assert.equal(escreverHoras(13.42), '13 h 25 min');
   assert.equal(escreverHoras(11.999), '12 h 00 min');
 });

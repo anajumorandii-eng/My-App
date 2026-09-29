@@ -67,10 +67,15 @@ export function escreverDia(dia: number) {
   return `31 dez`;
 }
 
+/**
+ * Dia no ano de 365 dias que o resto do módulo usa. Em ano bissexto, contar
+ * os dias de verdade empurrava tudo depois de 28/2 um dia à frente (29/2
+ * saía como 1º de março) e juntava 30 e 31/12 no dia 365; 29/2 conta como 28/2.
+ */
 export function diaDoAno(data: Date) {
-  const inicio = Date.UTC(data.getFullYear(), 0, 1);
-  const hoje = Date.UTC(data.getFullYear(), data.getMonth(), data.getDate());
-  return Math.min(365, Math.floor((hoje - inicio) / 86_400_000) + 1);
+  const mes = data.getMonth();
+  const dia = mes === 1 ? Math.min(data.getDate(), 28) : data.getDate();
+  return (Date.UTC(2025, mes, dia) - Date.UTC(2025, 0, 1)) / 86_400_000 + 1;
 }
 
 /** "13 h 25 min". */

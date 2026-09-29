@@ -27,5 +27,6 @@ test('periodoDoAno: o ano de virada já é do período novo', () => {
   assert.equal(periodoDoAno(1822).id, 'imperio');
   assert.equal(periodoDoAno(1821).id, 'colonia');
   assert.equal(periodoDoAno(1937).id, 'era-vargas');
-  assert.equal(periodoDoAno(2026).id, 'nova-republica');
+  assert.equal(periodoDoAno(ANO_ATUAL - 1).id, 'nova-republica');
+  assert.ok(ANO_ATUAL >= new Date().getFullYear());
 });
