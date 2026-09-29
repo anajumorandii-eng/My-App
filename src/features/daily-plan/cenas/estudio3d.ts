@@ -184,6 +184,8 @@ export interface Estudio {
   remontar(): void;
   /** Refaz tudo, fixo inclusive (mudou uma preferência que o fixo usa). */
   remontarTudo(): void;
+  /** Só redesenha: a peça foi mexida no lugar (girar a molécula), sem refazer. */
+  redesenhar(): void;
   configurar(cores: OpcoesDeCor): void;
   destruir(): void;
 }
@@ -302,6 +304,7 @@ export function criarEstudio<Id extends string>(
     tela,
     remontar,
     remontarTudo: montarTudo,
+    redesenhar() { sujo = true; },
     configurar(novas) {
       const mudou = novas.acento !== cores.acento || novas.escuro !== cores.escuro;
       cores = novas;

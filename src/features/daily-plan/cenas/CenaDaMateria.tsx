@@ -19,6 +19,7 @@ type Cena = LazyExoticComponent<ComponentType<{ reserva: React.ReactNode }>>;
 
 const BANCADA_OPTICA: Cena = lazy(() => import('./BancadaOptica'));
 const DUPLA_HELICE: Cena = lazy(() => import('./DuplaHelice'));
+const GEOMETRIA_MOLECULAR: Cena = lazy(() => import('./GeometriaMolecular'));
 
 export const CENAS_POR_TOPICO: Record<string, Cena> = {
   // Lentes, focos e imagem: o objeto das duas óticas.
@@ -26,6 +27,8 @@ export const CENAS_POR_TOPICO: Record<string, Cena> = {
   fis_optica_instrumental: BANCADA_OPTICA,
   // Ácidos nucleicos, pareamento e o códon que o molde forma.
   bio_codigo_genetico_sintese: DUPLA_HELICE,
+  // A forma da molécula no espaço: é o próprio assunto do tópico.
+  qui_polaridade_geometria: GEOMETRIA_MOLECULAR,
 };
 
 export function temCena(topicId: string | undefined) {

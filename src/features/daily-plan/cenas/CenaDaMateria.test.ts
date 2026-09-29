@@ -16,6 +16,13 @@ describe('registro de cenas por tópico', () => {
     expect(temCena(undefined)).toBe(false);
   });
 
+  it('molécula de Química só no tópico de geometria molecular', () => {
+    expect(temCena('qui_polaridade_geometria')).toBe(true);
+    // Soluções e Estequiometria não têm a forma da molécula como assunto.
+    expect(temCena('qui_solucoes')).toBe(false);
+    expect(temCena('qui_estequiometria')).toBe(false);
+  });
+
   it('cena de Biologia só no tópico dos ácidos nucleicos', () => {
     expect(temCena('bio_codigo_genetico_sintese')).toBe(true);
     expect(temCena('bio_ecologia')).toBe(false);
