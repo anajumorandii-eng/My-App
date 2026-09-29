@@ -5,12 +5,12 @@ import { useUserMastery } from '../hooks/useUserMastery';
 import { useStudyMethods } from '../hooks/useStudyMethods';
 import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
-import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2 } from 'lucide-react';
+import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2, type LucideIcon } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
 
 const ACTIVE_IN_ENGINE = new Set(['method_spaced_repetition', 'method_interleaving']);
 
-const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: React.ElementType }> = {
+const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: LucideIcon }> = {
   aquisicao: { label: 'Aquisição', icon: Brain },
   retencao: { label: 'Retenção', icon: RepeatIcon },
   aplicacao: { label: 'Aplicação', icon: Target },

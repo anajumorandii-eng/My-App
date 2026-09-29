@@ -238,6 +238,9 @@
 .vs-personalizar-fundo--aurora { background: radial-gradient(60% 90% at 20% 0%, color-mix(in srgb, var(--amb-b, #a78bfa) 60%, transparent), transparent), radial-gradient(60% 90% at 90% 30%, color-mix(in srgb, var(--amb-a, #22d3ee) 55%, transparent), transparent), var(--amb-fundo, #05070d); }
 .vs-personalizar-fundo--grade { background: linear-gradient(color-mix(in srgb, var(--amb-a, #22d3ee) 30%, transparent) 1px, transparent 1px) 0 0 / 8px 8px, linear-gradient(90deg, color-mix(in srgb, var(--amb-a, #22d3ee) 30%, transparent) 1px, transparent 1px) 0 0 / 8px 8px, var(--amb-fundo, #05070d); }
 .vs-personalizar-fundo--liso { background: var(--amb-fundo, #05070d); }
+.vs-personalizar-fundo--caderno,
+.vs-personalizar-fundo--papel { background: var(--papel-fibras), var(--papel-base); }
+.vs-personalizar-fundo--caderno { background: linear-gradient(-6deg, transparent 44%, color-mix(in srgb, var(--papel-tinta) 45%, transparent) 45% 48%, transparent 49%) 0 0 / 22px 26px, var(--papel-fibras), var(--papel-base); }
 
 /* --- Busca rápida (⌘K) ---------------------------------------------------- */
 .vs-busca-fundo {
@@ -293,6 +296,58 @@
   .vs-busca-fundo, .vs-busca, .vs-personalizar-painel { animation: none; }
 }
 
+
+/* --- Fundo de caderno: papel envelhecido da tela inteira -------------------
+   O papel da bancada óptica do Hoje, estendido ao app a pedido da Ana Júlia:
+   no escuro, a diagonal da logo (vinho, âmbar, floresta); no claro, creme e
+   sépia. As fibras são ruído fractal num SVG de 220 px repetido, desenhado uma
+   vez pelo navegador. Os rabiscos da matéria vêm de FundoCaderno.tsx, numa
+   camada fixa entre este papel e o conteúdo; em "papel", ficam de fora. */
+:root[data-ambiente="tecnologico"] {
+  --papel-fibras: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='220' height='220'%3E%3Cfilter id='f'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='3' stitchTiles='stitch'/%3E%3CfeColorMatrix values='0 0 0 0 .45 0 0 0 0 .32 0 0 0 0 .18 0 0 0 .09 0'/%3E%3C/filter%3E%3Crect width='100%' height='100%' filter='url(%23f)'/%3E%3C/svg%3E");
+  --papel-tinta: #4a2f1c;
+  --papel-base:
+    radial-gradient(40% 35% at 18% 22%, rgba(150, 100, 40, .10), transparent 70%),
+    radial-gradient(35% 30% at 78% 70%, rgba(120, 80, 30, .09), transparent 70%),
+    radial-gradient(45% 40% at 92% 8%, color-mix(in srgb, var(--amb-a) 10%, transparent), transparent 70%),
+    linear-gradient(135deg, #f4e8cf 0%, #ecdcbc 55%, #e2cfa9 100%);
+}
+:root.dark[data-ambiente="tecnologico"] {
+  --papel-tinta: #e9d2a6;
+  --papel-base:
+    radial-gradient(55% 50% at 0% 0%, color-mix(in srgb, var(--marca-vinho) 42%, transparent), transparent 70%),
+    radial-gradient(55% 55% at 100% 100%, color-mix(in srgb, var(--marca-floresta) 38%, transparent), transparent 70%),
+    radial-gradient(45% 40% at 92% 8%, color-mix(in srgb, var(--amb-a) 12%, transparent), transparent 70%),
+    linear-gradient(135deg, #22130f 0%, #1b140b 50%, #0d1710 100%);
+}
+:root[data-fundo="caderno"] .ni-production-app,
+:root[data-fundo="caderno"] .ni-production-app.is-light,
+:root[data-fundo="papel"] .ni-production-app,
+:root[data-fundo="papel"] .ni-production-app.is-light {
+  background: var(--papel-fibras), var(--papel-base);
+  background-attachment: fixed;
+}
+/* O caderno fica fixo atrás do conteúdo: z-index negativo dentro do app, que
+   isola o próprio empilhamento para ele não descer abaixo do papel. */
+:root[data-ambiente="tecnologico"] .ni-production-app { isolation: isolate; }
+.crivo-caderno { position: fixed; inset: 0; z-index: -1; pointer-events: none; color: var(--papel-tinta); }
+.crivo-caderno svg { display: block; }
+.crivo-caderno__anotacao { fill: currentColor; opacity: .16; font: 400 22px/1 Kalam, "Comic Neue", cursive; }
+.crivo-caderno__esboco { fill: none; stroke: currentColor; stroke-width: 1.3; stroke-linecap: round; stroke-linejoin: round; opacity: .15; }
+.crivo-caderno__esboco text { fill: currentColor; stroke: none; font: 400 13px Kalam, cursive; }
+.crivo-caderno__esboco .crivo-caderno__grande { font-size: 90px; }
+.crivo-caderno__esboco .crivo-caderno__cheio { fill: currentColor; }
+/* O ícone da matéria na cor dela: é o que diz de quem é o caderno. */
+.crivo-caderno__icone { color: var(--amb-a); opacity: .3; }
+:root.dark .crivo-caderno__anotacao { opacity: .15; }
+:root.dark .crivo-caderno__esboco { opacity: .12; }
+/* No celular o conteúdo ocupa quase a tela toda e o esboço grande passava
+   atrás do subtítulo; mais fraco, continua papel sem disputar a leitura. */
+@media (max-width: 560px) {
+  .crivo-caderno__anotacao, :root.dark .crivo-caderno__anotacao { opacity: .09; }
+  .crivo-caderno__esboco, :root.dark .crivo-caderno__esboco { opacity: .08; }
+  .crivo-caderno__icone { opacity: .16; }
+}
 
 /* --- Efeitos e fundo escolhidos no Personalizar ---------------------------- */
 :root[data-efeitos="suave"] .vs-tech-particulas,
@@ -412,7 +467,7 @@
    não tem itálico, o navegador inclinava a letra à força. */
 :root[data-ambiente="tecnologico"] .ni-production-app :is(h1, h2, h3, h4, span.block) { font-style: normal; }
 :root[data-ambiente="tecnologico"] .ni-production-app h1 { letter-spacing: -.04em; }
-:root[data-ambiente="tecnologico"] .ni-production-app :is(.ni-subjects button, .ni-subjects span, .subject-dossier__pending b, .crivo-observatorio-trajectory h3, .ni-trilho-trajectory h3, .ni-foco-support h3, .ni-production-mobile strong) {
+:root[data-ambiente="tecnologico"] .ni-production-app :is(.ni-subjects button, .ni-subjects span, .crivo-observatorio-trajectory h3, .ni-trilho-trajectory h3, .ni-foco-support h3, .ni-production-mobile strong) {
   font-family: "Space Grotesk", Inter, system-ui, sans-serif;
 }
 :root[data-ambiente="tecnologico"] .ni-production-app button:where(:not([class*="mono"])),
@@ -459,19 +514,14 @@
 :root[data-ambiente="tecnologico"] .ni-production-app [data-testid="subject-atmosphere-fallback"] { opacity: .12; }
 
 /* --- Hoje ----------------------------------------------------------------- */
-/* A imagem do tópico começava em 40% do cartão e cobria "Discordo" (e, no
-   celular, "Por que isso?"). Ela vai para a direita, e os botões ficam na
-   frente com fundo de vidro legível. */
-:root[data-ambiente="tecnologico"] .ni-production-app .subject-dossier { left: 54%; }
+/* Os botões ficam na frente do Núcleo, com fundo de vidro legível: a ficha
+   que ocupava esse lugar cobria "Discordo" (e, no celular, "Por que isso?"). */
 :root[data-ambiente="tecnologico"] .ni-production-app :is(.crivo-observatorio-cta, .crivo-observatorio-explanation) { position: relative; z-index: 5; }
 :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-explanation button {
   border-radius: 10px;
   background: color-mix(in srgb, var(--amb-fundo) 70%, transparent);
   -webkit-backdrop-filter: blur(8px);
   backdrop-filter: blur(8px);
-}
-@media (max-width: 560px) {
-  :root[data-ambiente="tecnologico"] .ni-production-app .subject-dossier { left: 34%; top: 250px; opacity: .55; }
 }
 /* Abas de matéria: com treze matérias, "Atualidades" caía sozinha numa
    segunda linha. Uma fileira só, que rola de lado, como já era no celular. */
@@ -602,4 +652,100 @@
   --color-indigo-800: color-mix(in oklab, var(--amb-a-neon) 42%, #0b1020);
   --color-indigo-900: color-mix(in oklab, var(--amb-a-neon) 32%, #0b1020);
   --color-indigo-950: color-mix(in oklab, var(--amb-a-neon) 22%, #0b1020);
+}
+
+/* --- Cena 3D da matéria no cartão do Hoje --------------------------------
+   A cena é interativa (arrastar o objeto, controle de distância) e precisa de
+   espaço próprio: posta atrás dos botões, como a ficha antiga, o objeto
+   ficava embaixo de "Por que isso?". No iPad e no computador ela vira a coluna
+   da direita do cartão; abaixo de 900 px, um bloco depois dos botões. */
+:root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-nucleo { position: absolute; inset: 0; }
+.crivo-cena { position: relative; display: flex; flex-direction: column; height: 100%; margin: 0; }
+/* Altura mínima própria: com "Personalizar cena" aberto, o painel crescia e
+   o palco, sendo o que sobrava, sumia no celular. */
+.crivo-cena__palco { position: relative; flex: 1; min-height: 240px; }
+/* Sem moldura: o canvas é transparente e a borda se dissolve no cartão. Duas
+   máscaras cruzadas (horizontal e vertical) em vez de uma radial, que comia
+   os cantos da bancada. A Ana Júlia viu a primeira versão, com fundo próprio e
+   canto arredondado, e disse que parecia uma imagem colada no cartão. */
+.crivo-cena__palco canvas {
+  -webkit-mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent), linear-gradient(180deg, transparent, #000 8%, #000 86%, transparent);
+  -webkit-mask-composite: source-in;
+  mask-image: linear-gradient(90deg, transparent, #000 9%, #000 91%, transparent), linear-gradient(180deg, transparent, #000 8%, #000 86%, transparent);
+  mask-composite: intersect;
+  opacity: .96;
+}
+.crivo-cena__palco canvas { display: block; }
+/* Rótulos à mão, na tinta da cena: o motor põe --tinta-cena e --papel-cena no
+   palco, porque a tinta é a do papel da cena (sépia no claro, creme no escuro),
+   não a do tema do app. */
+.crivo-cena__rotulo {
+  position: absolute; left: 0; top: 0; pointer-events: none; white-space: nowrap; will-change: transform;
+  color: var(--tinta-cena, #e9d2a6); font: 400 14px/1 Kalam, "Comic Neue", cursive;
+  text-shadow: 0 1px 8px color-mix(in srgb, var(--papel-cena, #120c07) 80%, transparent);
+}
+.crivo-cena__rotulo--forte { font-weight: 700; font-size: 15px; }
+.crivo-cena__rotulo--cota { font-size: 13px; }
+@media (max-width: 560px) {
+  .crivo-cena__rotulo { font-size: 12px; }
+  .crivo-cena__rotulo--forte { font-size: 13px; }
+  .crivo-cena__rotulo--cota { font-size: 11px; }
+}
+.crivo-cena__painel { display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 6px 16px; padding: 10px 2px 0; }
+.crivo-cena__controle { display: flex; align-items: center; gap: 8px; color: var(--amb-dim, #8a8f86); font: 500 11px/1.2 Inter, system-ui, sans-serif; }
+.crivo-cena__controle input { width: 150px; accent-color: var(--amb-a, #e2a261); }
+.crivo-cena__leitura { margin: 0; color: var(--amb-dim, #8a8f86); font: 11px/1.45 "JetBrains Mono", ui-monospace, monospace; text-align: right; }
+.crivo-cena__leitura b { color: var(--amb-texto, #f3efe6); font-weight: 600; }
+.crivo-cena__leitura span { display: block; color: var(--amb-a, #e2a261); }
+/* Personalizar: um <details>, que abre por teclado sem código. Abre embaixo do
+   botão, e não por cima da cena: flutuando, ele cobria justamente o fundo e o
+   papel que a estudante estava escolhendo. */
+.crivo-cena__ajustes { flex-basis: 100%; }
+.crivo-cena__ajustes summary {
+  display: inline-flex; align-items: center; gap: 6px; cursor: pointer; list-style: none;
+  color: var(--amb-dim, #8a8f86); font: 500 11px/1.2 Inter, system-ui, sans-serif;
+  padding: 6px 10px; border: 1px solid var(--amb-linha, rgba(255,255,255,.14)); border-radius: 999px;
+}
+.crivo-cena__ajustes summary::-webkit-details-marker { display: none; }
+.crivo-cena__ajustes summary svg { width: 13px; height: 13px; }
+.crivo-cena__ajustes[open] summary { color: var(--amb-texto, #f3efe6); border-color: var(--amb-a, #e2a261); }
+.crivo-cena__ajustes summary:focus-visible, .crivo-cena__ajustes button:focus-visible { outline: 2px solid var(--amb-a, #e2a261); outline-offset: 2px; }
+.crivo-cena__ajustes-corpo {
+  display: grid; gap: 10px; margin-top: 8px; padding: 12px;
+  border: 1px solid var(--amb-linha, rgba(255,255,255,.14)); border-radius: 12px;
+}
+.crivo-cena__ajustes fieldset { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; border: 0; }
+.crivo-cena__ajustes legend { width: 100%; margin-bottom: 4px; color: var(--amb-dim, #8a8f86); font: 500 11px/1.2 Inter, system-ui, sans-serif; }
+.crivo-cena__ajustes button {
+  font: 500 12px/1.2 Inter, system-ui, sans-serif; color: var(--amb-texto, #f3efe6); background: transparent; cursor: pointer;
+  border: 1px solid var(--amb-linha, rgba(255,255,255,.14)); border-radius: 999px; padding: 6px 11px;
+}
+.crivo-cena__ajustes button[aria-pressed="true"] { border-color: var(--amb-a, #e2a261); background: color-mix(in srgb, var(--amb-a, #e2a261) 16%, transparent); }
+
+@media (min-width: 901px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) {
+    display: grid; grid-template-columns: minmax(0, .82fr) minmax(0, 1.18fr); column-gap: 22px; align-content: start;
+  }
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) > :not(.crivo-observatorio-visual-support--cena) { grid-column: 1; }
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena {
+    position: relative; grid-column: 2; grid-row: 1 / span 8; top: auto; right: auto; width: auto; aspect-ratio: auto;
+    min-height: 360px; margin-bottom: 76px; transform: none; pointer-events: auto;
+  }
+}
+@media (max-width: 900px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena {
+    position: relative; top: auto; right: auto; width: 100%; height: auto; aspect-ratio: auto; margin-top: 18px; transform: none; pointer-events: auto;
+  }
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) { min-height: 0; }
+  .crivo-cena__palco { flex: none; height: 255px; min-height: 0; }
+  /* A classe da cena entra antes de a cena existir: enquanto o pedaço 3D baixa,
+     sem WebGL ou se o contexto for negado, quem aparece é o Núcleo do Crivo,
+     que é absoluto. Com altura automática o bloco colapsava e a reserva sumia. */
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena:not(:has(.crivo-cena)) { height: 300px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) .ni-metrics { position: relative; inset: auto; margin-top: 18px; }
+}
+@media (max-width: 560px) {
+  .crivo-cena__palco { flex: none; height: 215px; min-height: 0; }
+  .crivo-cena__painel { justify-content: flex-start; }
+  .crivo-cena__leitura { text-align: left; }
 }

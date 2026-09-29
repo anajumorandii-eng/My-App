@@ -59,6 +59,13 @@ export default defineConfig(() => ({
             return 'markdown';
           }
 
+          // O three.js só serve às cenas 3D do Hoje, que
+          // carregam sob demanda. No vendor ele levava o pacote de 494 kB a
+          // 1.425 kB, baixado em toda abertura do app, com cena ou sem.
+          if (id.includes('/three/')) {
+            return 'cena-3d';
+          }
+
           if (id.includes('recharts') || id.includes('d3-')) {
             return 'charts';
           }

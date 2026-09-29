@@ -10,6 +10,8 @@ const EFEITOS: { valor: Efeitos; rotulo: string; detalhe: string }[] = [
 ];
 
 const FUNDOS: { valor: Fundo; rotulo: string }[] = [
+  { valor: 'caderno', rotulo: 'Caderno' },
+  { valor: 'papel', rotulo: 'Papel' },
   { valor: 'aurora', rotulo: 'Aurora' },
   { valor: 'grade', rotulo: 'Grade' },
   { valor: 'liso', rotulo: 'Liso' },

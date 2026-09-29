@@ -51,6 +51,7 @@ import './design-system/css/nucleo-instrumental-rail.css';
 import './design-system/css/nucleo-instrumental-cores.css';
 import './design-system/css/nucleo-instrumental-brand.css';
 import './design-system/css/ambiente-tecnologico.css';
+import './design-system/css/caderno.css';
 
 function RouteFallback() {
   return (

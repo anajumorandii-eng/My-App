@@ -1,0 +1,175 @@
+/* --- Caderno: a interface inteira em papel e tinta --------------------------
+   A primeira versão do fundo de caderno punha papel envelhecido atrás de uma
+   interface de vidro e néon. A Ana Júlia recusou: "eu quero que se funda ao
+   aplicativo, que faça parte de cada uma das telas". Papel de parede atrás de
+   vidro não é integração — são duas linguagens empilhadas.
+
+   Aqui a própria interface passa a falar a língua do caderno:
+   - cartões são folhas (papel opaco, fibra, borda a tinta, a folha de baixo
+     aparecendo), não vidro desfocado;
+   - o botão principal é carimbo de tinta na cor da matéria, não o degradê
+     roxo-ciano;
+   - a aba ativa é sublinhada a tinta, como se marca um caderno;
+   - rótulos pequenos (a rota no alto de cada tela) em letra à mão;
+   - barras de cima, lateral e de baixo em papel, sem desfoque.
+
+   Vale nos fundos "Caderno" e "Papel". Aurora, Grade e Liso continuam na
+   linguagem de vidro: quem escolheu um deles escolheu aquela aparência. */
+
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) {
+  --folha: #fbf6ea;
+  --folha-sombra: rgba(92, 62, 30, .16);
+  --tinta: #2e1f14;
+  --amb-texto: #2e1f14;
+  --amb-dim: #6f5b46;
+  --amb-linha: rgba(74, 47, 28, .2);
+  --amb-vidro: rgba(251, 246, 234, .7);
+  --amb-vidro-forte: rgba(248, 241, 226, .97);
+  --surface-default: var(--folha);
+  --surface-secondary: color-mix(in srgb, var(--amb-a) 6%, var(--folha));
+  --surface-elevated: var(--folha);
+  --surface-strong: color-mix(in srgb, var(--amb-a) 10%, #efe4cc);
+  --navigation-background: var(--amb-vidro-forte);
+  /* Tinta da matéria: o acento escurecido até virar tinta legível no papel. */
+  --tinta-materia: color-mix(in oklab, var(--amb-a-neon) 58%, #2e1f14);
+  --action-primary: var(--tinta-materia);
+  --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 48%, #2e1f14);
+  --action-primary-pressed: color-mix(in oklab, var(--amb-a-neon) 40%, #2e1f14);
+  --text-inverse: #fdf7ea;
+  --shadow-soft-md-value: 0 10px 24px -16px rgba(74, 47, 28, .35);
+  --shadow-soft-lg-value: 0 18px 40px -24px rgba(74, 47, 28, .4);
+}
+:root.dark[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) {
+  /* Papel escuro, não preto: o mesmo caderno visto à luz baixa, com tinta
+     creme — a mesma tinta dos rótulos da bancada óptica. */
+  --folha: #1e1812;
+  --folha-sombra: rgba(0, 0, 0, .45);
+  --tinta: #efe2c9;
+  --amb-texto: #efe2c9;
+  --amb-dim: #b4a287;
+  --amb-linha: rgba(233, 210, 166, .17);
+  --amb-vidro: rgba(30, 24, 18, .7);
+  --amb-vidro-forte: rgba(22, 17, 12, .97);
+  --surface-default: var(--folha);
+  --surface-secondary: color-mix(in srgb, var(--amb-a) 7%, var(--folha));
+  --surface-elevated: #221b14;
+  --surface-strong: color-mix(in srgb, var(--amb-a) 12%, #251d15);
+  --tinta-materia: var(--amb-a-neon);
+  /* O botão de ação das telas (Iniciar, Enviar…) é preenchido pelo token: no
+     acento vivo ele saía como bloco néon. Misturado ao sépia escuro, vira tinta
+     da matéria, com letra creme (cerca de 5:1). */
+  --action-primary: color-mix(in oklab, var(--amb-a-neon) 45%, #3a2c1e);
+  --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 52%, #3a2c1e);
+  --action-primary-pressed: color-mix(in oklab, var(--amb-a-neon) 38%, #3a2c1e);
+  --text-inverse: #fdf7ea;
+  --shadow-soft-md-value: 0 12px 26px -16px rgba(0, 0, 0, .6);
+  --shadow-soft-lg-value: 0 20px 44px -24px rgba(0, 0, 0, .7);
+}
+
+/* Folhas. A borda a tinta e, deslocada, a folha de baixo: é o que separa uma
+   folha de um vidro. Sem desfoque — papel não é translúcido. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app :is(.ni-panel, .rounded-card),
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app.is-light :is(.ni-panel, .rounded-card) {
+  border: 1px solid var(--amb-linha);
+  border-radius: 12px;
+  background: var(--papel-fibras), var(--folha);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+  box-shadow:
+    4px 5px 0 -1px color-mix(in srgb, var(--folha) 88%, var(--tinta)),
+    4px 5px 0 0 var(--amb-linha),
+    var(--shadow-soft-md-value);
+}
+
+/* Barras: papel opaco com a linha de tinta, sem o vidro. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) :is(.ni-top, .ni-production-mobile, .ni-rail),
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app.is-light :is(.ni-top, .ni-production-mobile, .ni-rail) {
+  background: var(--papel-fibras), var(--amb-vidro-forte);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .crivo-mobile-toolbar__surface {
+  background: var(--papel-fibras), var(--amb-vidro-forte) !important;
+  -webkit-backdrop-filter: none !important;
+  backdrop-filter: none !important;
+}
+
+/* Botão principal: carimbo de tinta na cor da matéria. O degradê roxo-ciano
+   era o único elemento néon que sobrava sobre o papel. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-primary {
+  border: 1px solid color-mix(in srgb, var(--tinta-materia) 70%, var(--tinta));
+  border-radius: 10px;
+  background: var(--tinta-materia);
+  color: var(--text-inverse);
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--tinta) 22%, transparent);
+}
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-primary:hover { background: var(--action-primary-hover); }
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-primary:active { transform: translate(2px, 2px); box-shadow: 1px 1px 0 color-mix(in srgb, var(--tinta) 22%, transparent); }
+
+/* Botões secundários do cartão do Hoje ("Por que isso?", "Discordo"): papel
+   com traço, não vidro sobre a ilustração. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .crivo-observatorio-explanation button {
+  border: 1px solid var(--amb-linha);
+  background: var(--folha);
+  -webkit-backdrop-filter: none;
+  backdrop-filter: none;
+}
+
+/* Abas de matéria: a ativa sublinhada a tinta na cor dela, como se marca a
+   página do caderno; as outras sem caixa. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-subjects button {
+  border-color: transparent;
+  border-radius: 0;
+  background: transparent;
+}
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-subjects button.active {
+  border-color: transparent;
+  background: transparent;
+  color: var(--tinta);
+  box-shadow: inset 0 -2px 0 var(--tinta-materia);
+}
+
+/* Rota no alto de cada tela ("Decisão · Física · Óptica"): letra à mão, a
+   mesma dos rótulos da bancada. É a anotação no canto da folha. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app :is(.ni-route, .ni-kicker) {
+  color: var(--tinta-materia);
+  font: 400 15px/1.2 Kalam, "Comic Neue", cursive;
+  letter-spacing: 0;
+  /* Parte da rota vem em maiúsculas no próprio texto ("DECISÃO"); à mão, a
+     mistura de caixa alta com caixa baixa parecia erro. Tudo minúsculo, com
+     a primeira letra da anotação em maiúscula. */
+  text-transform: lowercase;
+}
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app :is(.ni-route, .ni-kicker)::first-letter { text-transform: uppercase; }
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-route i { background: var(--tinta-materia); box-shadow: none; }
+
+/* Métrica e barra de progresso a tinta. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-metric > i span { background: var(--tinta-materia); }
+
+/* Campos de formulário: folha com traço, sem o brilho de foco néon. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app :is(input, textarea, select):focus-visible {
+  border-color: var(--tinta-materia);
+  box-shadow: 0 0 0 2px color-mix(in srgb, var(--tinta-materia) 22%, transparent);
+}
+
+/* No escuro, o carimbo cheio no acento vivo virava um bloco néon sobre o papel
+   escuro. Carimbo de contorno: tinta da matéria no traço e na letra, a folha
+   levemente tingida por dentro. */
+:root.dark[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-primary {
+  border: 1.5px solid var(--tinta-materia);
+  background: color-mix(in srgb, var(--tinta-materia) 16%, var(--folha));
+  color: color-mix(in srgb, var(--tinta-materia) 55%, #fff6e6);
+  box-shadow: 3px 3px 0 color-mix(in srgb, var(--tinta-materia) 30%, transparent);
+}
+:root.dark[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-primary:hover {
+  background: color-mix(in srgb, var(--tinta-materia) 26%, var(--folha));
+}
+
+/* No celular a fileira de matérias gruda no topo com fundo próprio; ele lia a
+   cor da aurora e ficava uma faixa preta (ou creme-esverdeada) sobre o papel. */
+@media (max-width: 900px) {
+  :root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-subjects {
+    background: var(--papel-fibras), var(--amb-vidro-forte);
+    box-shadow: 0 1px 0 var(--amb-linha), 0 10px 18px -12px var(--folha-sombra);
+  }
+}

@@ -5,7 +5,7 @@ import { Topic } from '../types';
 import { aiErrorMessage, requestAiText, requestAiTextStream } from '../lib/aiClient';
 import { parseContentExplanation, parseAnswerCorrection, ContentExplanation, AnswerCorrection } from '../lib/tutorContracts';
 import { AiText } from '../components/AiText';
-import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, CalendarClock, PencilLine, Lightbulb, Target, School, AlertTriangle, HelpCircle, RotateCcw } from 'lucide-react';
+import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, CalendarClock, PencilLine, Lightbulb, Target, School, AlertTriangle, HelpCircle, RotateCcw, type LucideIcon } from 'lucide-react';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
 import { Panel } from '../components/ui/Panel';
@@ -17,7 +17,7 @@ const DISCURSIVE_BOARDS = ['Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp'];
 
 type Mode = 'duvida' | 'explicar' | 'corrigir' | 'questao' | 'revisao';
 
-const MODES: { value: Mode; label: string; hint: string; icon: React.ElementType }[] = [
+const MODES: { value: Mode; label: string; hint: string; icon: LucideIcon }[] = [
   { value: 'duvida', label: 'Tirar dúvida', hint: 'A IA não entrega a resposta pronta — te guia até você chegar nela.', icon: Sparkles },
   { value: 'explicar', label: 'Explicar conteúdo', hint: 'Explicação direta e completa de um tópico.', icon: BookOpenText },
   { value: 'corrigir', label: 'Corrigir resposta', hint: 'Cole uma questão e sua resposta para correção detalhada.', icon: ClipboardCheck },
