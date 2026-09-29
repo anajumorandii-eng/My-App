@@ -6,9 +6,10 @@ describe('registro de cenas por matéria', () => {
     // Por tópico, só a aba de Física mostrava cena: "Evolução" e
     // "Estequiometria" não são DNA nem molécula. A Ana Júlia escolheu o
     // laboratório fixo da matéria.
-    expect(Object.keys(CENAS_POR_MATERIA).sort()).toEqual(['Biologia', 'Física', 'Química']);
+    expect(Object.keys(CENAS_POR_MATERIA).sort()).toEqual(['Biologia', 'Física', 'Matemática', 'Química']);
     expect(temCena('Biologia')).toBe(true);
     expect(temCena('Química')).toBe(true);
+    expect(temCena('Matemática')).toBe(true);
   });
 
   it('matéria sem laboratório fica com o Núcleo', () => {
