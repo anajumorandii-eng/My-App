@@ -190,6 +190,49 @@ export interface Estudio {
   destruir(): void;
 }
 
+/**
+ * Um renderizador só para todas as cenas, reaproveitado de uma aba à outra.
+ *
+ * A Ana Júlia gravou o iPad travando ao trocar de aba. Medido: cada troca
+ * criava um contexto WebGL novo e recompilava do zero todos os programas de
+ * sombreamento da cena — a segunda visita a uma aba bloqueava a tela de 4 a
+ * 8 segundos. Com um contexto só, o three.js guarda os programas já
+ * compilados, e só uma cena aparece por vez no cartão do Hoje.
+ */
+let compartilhado: { renderer: THREE.WebGLRenderer; ambiente: THREE.Texture } | null = null;
+
+function rendererCompartilhado() {
+  if (compartilhado) return compartilhado;
+  // Canvas transparente: o cartão aparece por trás da cena, e a borda se
+  // dissolve por máscara no CSS em vez de terminar num retângulo.
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+  renderer.setClearColor(0x000000, 0);
+  renderer.shadowMap.enabled = true;
+  // PCF suave no lugar de VSM: o VSM desfocava o mapa de sombra em várias
+  // passadas a cada desenho, e a sombra suave não precisa disso.
+  renderer.shadowMap.type = THREE.PCFSoftShadowMap;
+  // A sombra só muda quando a cena muda (gesto, tema): o estúdio pede a
+  // atualização em cada remontagem, e girar a molécula não refaz o mapa.
+  renderer.shadowMap.autoUpdate = false;
+  renderer.toneMapping = THREE.ACESFilmicToneMapping;
+  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  // Reflexos de estúdio para vidro e metal; sem eles ficam cinza e chapados.
+  const pmrem = new THREE.PMREMGenerator(renderer);
+  const ambiente = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
+  pmrem.dispose();
+  compartilhado = { renderer, ambiente };
+  return compartilhado;
+}
+
+/**
+ * Densidade de pixels da cena: até 2× (com 1,5× o iPhone de tela 3× mostrava
+ * a cena serrilhada), mas sem passar de ~1.600 pixels de largura desenhada —
+ * no iPad em paisagem a coluna larga a 2× passava de 2.000 pixels por quadro.
+ */
+function densidade(largura: number) {
+  return Math.max(1, Math.min(window.devicePixelRatio || 1, 2, 1600 / Math.max(largura, 1)));
+}
+
 export function criarEstudio<Id extends string>(
   palco: HTMLElement,
   elementos: Partial<Record<Id, HTMLElement | null>>,
@@ -198,25 +241,14 @@ export function criarEstudio<Id extends string>(
 ): Estudio {
   let cores = coresIniciais;
 
-  // Canvas transparente: o cartão aparece por trás da cena, e a borda se
-  // dissolve por máscara no CSS em vez de terminar num retângulo. Até 2× de
-  // densidade: com 1,5× o iPhone (3×) mostrava a cena serrilhada.
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
-  renderer.setClearColor(0x000000, 0);
-  renderer.setPixelRatio(Math.min(window.devicePixelRatio || 1, 2));
-  renderer.shadowMap.enabled = true;
-  renderer.shadowMap.type = THREE.VSMShadowMap;
-  renderer.toneMapping = THREE.ACESFilmicToneMapping;
-  renderer.outputColorSpace = THREE.SRGBColorSpace;
+  const { renderer, ambiente } = rendererCompartilhado();
   const tela = renderer.domElement;
   tela.style.touchAction = 'pan-y';
+  tela.style.cursor = '';
   palco.prepend(tela);
 
   const scene = new THREE.Scene();
   const camera = new THREE.PerspectiveCamera(32, 1, 0.1, 160);
-  // Reflexos de estúdio para vidro e metal; sem eles ficam cinza e chapados.
-  const pmrem = new THREE.PMREMGenerator(renderer);
-  const ambiente = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
   scene.environment = ambiente;
   scene.environmentIntensity = 0.45;
 
@@ -224,14 +256,18 @@ export function criarEstudio<Id extends string>(
   let pecas: THREE.Object3D | null = null;
   let luzes: THREE.Group | null = null;
   let sujo = true;
+  let sombraVelha = true;
 
   function remontar() {
+    if (!pronto) return;
     const c = paletaDeEstudio(cores);
     if (pecas) { scene.remove(pecas); descartar(pecas); }
     pecas = config.movel(c); tracar(pecas, c); scene.add(pecas);
+    sombraVelha = true;
     sujo = true;
   }
   function montarTudo() {
+    if (!pronto) return;
     const c = paletaDeEstudio(cores);
     for (const o of [luzes, fixo]) if (o) { scene.remove(o); descartar(o); }
     fixo = config.fixo ? config.fixo(c) : null;
@@ -274,6 +310,7 @@ export function criarEstudio<Id extends string>(
   function redimensionar() {
     const w = palco.clientWidth, h = palco.clientHeight;
     if (!w || !h) return;
+    renderer.setPixelRatio(densidade(w));
     renderer.setSize(w, h, false);
     tela.style.width = '100%'; tela.style.height = '100%';
     camera.aspect = w / h; camera.updateProjectionMatrix();
@@ -292,6 +329,7 @@ export function criarEstudio<Id extends string>(
     // ficavam na posição do quadro anterior.
     camera.updateMatrixWorld();
     posicionarRotulos();
+    if (sombraVelha) { renderer.shadowMap.needsUpdate = true; sombraVelha = false; }
     renderer.render(scene, camera);
     sujo = false;
   }
@@ -303,14 +341,25 @@ export function criarEstudio<Id extends string>(
     : null;
   observadorVisivel?.observe(palco);
 
-  montarTudo();
+  // A cena é montada no quadro seguinte ao toque na aba: montada ali mesmo,
+  // a aba só mudava de cor depois de a cena inteira estar pronta, e o toque
+  // parecia não pegar. Até lá, remontar() e configurar() só guardam estado.
+  let pronto = false;
   redimensionar();
-  quadro = requestAnimationFrame(laco);
+  quadro = requestAnimationFrame(() => {
+    pronto = true;
+    montarTudo();
+    quadro = requestAnimationFrame(laco);
+  });
 
   // Números e letras desenhados em canvas usam as fontes do app: se a fonte
   // ainda não chegou, o primeiro desenho sai na letra do sistema.
   let vivo = true;
-  document.fonts?.ready.then(() => { if (vivo) montarTudo(); }).catch(() => {});
+  // Só refaz se a fonte ainda não tinha chegado: refazer sempre dobrava o
+  // custo de abrir a aba.
+  if (document.fonts && document.fonts.status !== 'loaded') {
+    document.fonts.ready.then(() => { if (vivo) montarTudo(); }).catch(() => {});
+  }
 
   return {
     camera,
@@ -330,10 +379,10 @@ export function criarEstudio<Id extends string>(
       observadorTamanho.disconnect();
       observadorVisivel?.disconnect();
       for (const o of [fixo, pecas, luzes]) if (o) descartar(o);
-      ambiente.dispose(); pmrem.dispose();
-      renderer.dispose();
-      renderer.forceContextLoss();
-      tela.remove();
+      // O renderizador e o ambiente ficam para a próxima cena: é o contexto
+      // compartilhado que evita recompilar tudo na troca de aba.
+      renderer.renderLists.dispose();
+      if (tela.parentElement === palco) tela.remove();
     },
   };
 }
