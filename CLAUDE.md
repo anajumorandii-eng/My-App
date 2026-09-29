@@ -441,6 +441,13 @@ gaveta) e 560px. A folga inferior de `.ni-production-main` precisa acompanhar a
 altura real da barra fixa mais `env(safe-area-inset-bottom)`, senão o último
 cartão fica por baixo dela no retrato.
 
+Nos fundos "Caderno" (padrão) e "Papel", `src/design-system/css/caderno.css`
+troca a linguagem de vidro e néon pela de caderno: cartão é folha, botão é
+carimbo de tinta, aba ativa é sublinhado. Ao criar componente novo, use
+`.ni-panel` e os tokens (`--surface-*`, `--action-primary`), não cor fixa: é
+por eles que o caderno chega à tela. Papel atrás de vidro foi recusado pela Ana
+Júlia como "não integrado".
+
 Listas longas de filtro viram campos agrupados, não fileiras de chips: em
 "Todas", os tópicos são mais de sessenta e transbordam a tela.
 
