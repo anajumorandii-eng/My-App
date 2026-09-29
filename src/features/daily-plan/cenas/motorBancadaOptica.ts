@@ -137,6 +137,20 @@ function seta(altura: number) {
   return new THREE.ShapeGeometry(s);
 }
 
+/**
+ * Texturas desenhadas em canvas, guardadas entre uma abertura da aba e a
+ * outra. A régua (mais de 2.000 pixels de largura), o papel da mesa com as
+ * fibras e o metal escovado eram redesenhados a cada visita à aba de Física,
+ * e a abertura dela era a mais lenta das quatro. Ficam marcadas como
+ * compartilhadas para `descartar` não as apagar.
+ */
+const texturasGuardadas = new Map<string, THREE.Texture>();
+function guardada(chave: string, fazer: () => THREE.Texture) {
+  let t = texturasGuardadas.get(chave);
+  if (!t) { t = fazer(); t.userData.compartilhada = true; texturasGuardadas.set(chave, t); }
+  return t;
+}
+
 export function montarBancada(
   palco: HTMLElement,
   rotulos: Partial<Record<IdRotulo, HTMLElement | null>>,
@@ -151,8 +165,8 @@ export function montarBancada(
 
   // O brilho das fontes de luz fica com os halos: o pós-processamento saiu
   // porque pintava um retângulo opaco sobre o canvas transparente.
-  const halo = texturaHalo(); halo.userData.compartilhada = true;
-  const escovado = texturaEscovada(); escovado.userData.compartilhada = true;
+  const halo = guardada('halo', texturaHalo);
+  const escovado = guardada('escovado', texturaEscovada);
   const brilhoHalo = (pos: Trio, cor: string, escala: number, opacidade: number) => {
     const s = new THREE.Sprite(new THREE.SpriteMaterial({ map: halo, color: cor, transparent: true, opacity: opacidade, depthWrite: false, blending: THREE.AdditiveBlending, toneMapped: false }));
     s.position.set(...pos); s.scale.set(escala, escala, 1);
@@ -181,7 +195,7 @@ export function montarBancada(
     // A folha da mesa some num degradê oval em volta da bancada. Num plano sem
     // fim, com o canvas transparente, a mesa terminava numa linha reta no
     // horizonte — a borda de imagem que a Ana Júlia não queria.
-    const folha = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.85, map: texturaMesa(c, preferencias), alphaMap: texturaRadial('#ffffff', '#000000'), transparent: true, depthWrite: false });
+    const folha = new THREE.MeshStandardMaterial({ color: '#ffffff', roughness: 0.85, map: guardada(`mesa-${c.e}-${preferencias.papel}`, () => texturaMesa(c, preferencias)), alphaMap: texturaRadial('#ffffff', '#000000'), transparent: true, depthWrite: false });
     g.add(malha(new THREE.PlaneGeometry(28, 13), folha, [-1, -0.28, 0.6], [-Math.PI / 2, 0, 0]));
     // Poça de luz sob a bancada e sombra de contato do trilho: sem elas a
     // bancada parecia flutuar sobre um chão uniforme.
@@ -197,7 +211,7 @@ export function montarBancada(
     perfil.rotateY(Math.PI / 2); perfil.translate(TI, 0, 0);
     g.add(malha(perfil, std(c.escuroMetal, 0.8, 0.3)));
     g.add(malha(new THREE.PlaneGeometry(TF - TI, 0.6), std(c.aco, 0.6, 0.62, { roughnessMap: escovado, bumpMap: escovado, bumpScale: 0.6 }), [(TI + TF) / 2, 0.195, 0], [-Math.PI / 2, 0, 0], false));
-    g.add(malha(new THREE.PlaneGeometry(TF - TI, 0.25), std('#ffffff', 0.3, 0.5, { map: texturaRegua(c) }), [(TI + TF) / 2, 0.115, 0.4], [-Math.atan2(0.2, 0.15), 0, 0], false));
+    g.add(malha(new THREE.PlaneGeometry(TF - TI, 0.25), std('#ffffff', 0.3, 0.5, { map: guardada(`regua-${c.e}`, () => texturaRegua(c)) }), [(TI + TF) / 2, 0.115, 0.4], [-Math.atan2(0.2, 0.15), 0, 0], false));
     for (const x of [TI + 0.4, TF - 0.4]) g.add(malha(new THREE.BoxGeometry(0.5, 0.16, 1.5), std(c.escuroMetal, 0.6, 0.4), [x, -0.2, 0]));
     // Eixo óptico e focos.
     g.add(segmento(new THREE.Vector3(TI + 0.6, EIXO, 0), new THREE.Vector3(TF - 0.3, EIXO, 0), 0.005, c.eixo, 1, 0.45));
@@ -211,7 +225,14 @@ export function montarBancada(
     for (let i = n; i >= 0; i -= 1) { const r = (R * i) / n; pts.push(new THREE.Vector2(r, esp * (1 - (r / R) ** 2) + 0.01)); }
     const lathe = new THREE.LatheGeometry(pts, 72); lathe.rotateZ(-Math.PI / 2);
     const lente = new THREE.Group(); lente.position.y = EIXO;
-    lente.add(malha(lathe, new THREE.MeshPhysicalMaterial({ color: c.vidro, transmission: 1, thickness: 0.8, roughness: 0.02, ior: 1.52, dispersion: 4, clearcoat: 1, clearcoatRoughness: 0.03, iridescence: 0.25, iridescenceIOR: 1.3, attenuationColor: new THREE.Color(c.vidro), attenuationDistance: 3 })));
+    // Vidro transparente com reflexo, sem transmissão física: a transmissão
+    // desenhava a cena inteira uma segunda vez a cada quadro e tinha o
+    // programa mais pesado de compilar — era a aba de Física que travava o
+    // iPad. O reflexo do ambiente e o brilho do verniz seguram a leitura de
+    // vidro.
+    const vidro = new THREE.MeshPhysicalMaterial({ color: c.vidro, transparent: true, opacity: c.e ? 0.32 : 0.42, roughness: 0.04, metalness: 0, clearcoat: 1, clearcoatRoughness: 0.03, envMapIntensity: 1.4, depthWrite: false });
+    const corpo = malha(lathe, vidro); corpo.castShadow = false;
+    lente.add(corpo);
     lente.add(malha(new THREE.TorusGeometry(R + 0.06, 0.07, 24, 96), std(c.latao, 1, 0.22), [0, 0, 0], [0, Math.PI / 2, 0]));
     lente.add(malha(new THREE.CylinderGeometry(R + 0.13, R + 0.13, 0.12, 96, 1, true), std(c.latao, 1, 0.35, { flatShading: true, side: THREE.DoubleSide }), [0, 0, 0], [0, 0, Math.PI / 2]));
     for (let i = 0; i < 6; i += 1) {
@@ -382,7 +403,6 @@ export function montarBancada(
       tela.removeEventListener('pointerup', soltar);
       tela.removeEventListener('pointercancel', soltar);
       estudio.destruir();
-      halo.dispose(); escovado.dispose();
     },
   };
 }
