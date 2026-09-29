@@ -246,14 +246,27 @@ export function criarEstudio<Id extends string>(
   const tmp = new THREE.Vector3();
   function posicionarRotulos() {
     const w = palco.clientWidth, h = palco.clientHeight;
+    // Caixas já postas neste desenho, na ordem de `config.rotulos`: quem vem
+    // antes tem prioridade e fica no ponto; quem colide desce até ficar livre.
+    // Com a molécula girando, o ângulo caía sobre o rótulo de um átomo
+    // ("109,5°H" no metano) — um ponto fixo na cena não garante espaço livre
+    // na tela.
+    const postas: { x0: number; x1: number; y0: number; y1: number }[] = [];
     for (const id of Object.keys(config.rotulos) as Id[]) {
       const el = elementos[id];
-      if (!el) continue;
+      if (!el || !el.textContent) continue;
       tmp.copy(config.rotulos[id]()).project(camera);
       // Preso dentro da cena: perto da borda o rótulo saía pela metade.
-      const meia = el.offsetWidth / 2 + 4;
+      const larg = el.offsetWidth, alt = el.offsetHeight;
+      const meia = larg / 2 + 4;
       const x = THREE.MathUtils.clamp(((tmp.x + 1) / 2) * w, meia, Math.max(meia, w - meia));
-      const y = Math.max(((1 - tmp.y) / 2) * h, el.offsetHeight + 4);
+      let y = Math.max(((1 - tmp.y) / 2) * h, alt + 4);
+      for (let tentativa = 0; tentativa < 8; tentativa += 1) {
+        const choque = postas.find((c) => x - larg / 2 < c.x1 && x + larg / 2 > c.x0 && y - alt < c.y1 && y > c.y0);
+        if (!choque) break;
+        y = choque.y1 + alt + 2;
+      }
+      postas.push({ x0: x - larg / 2, x1: x + larg / 2, y0: y - alt, y1: y });
       el.style.transform = `translate(-50%, -100%) translate(${x}px, ${y}px)`;
     }
   }

@@ -54,4 +54,12 @@ caderno.
 - **Rótulo do átomo central.** Em cima do átomo, o rótulo caía sobre o par
   livre da amônia. Foi para o lado.
 
+- **Rótulos se atropelando no giro.** Apontado na revisão automática do PR:
+  girando, o ângulo caía sobre o rótulo de um átomo ("109,5°H" no metano). A
+  causa é que um ponto fixo na cena não garante espaço livre na tela. O estúdio
+  agora põe os rótulos na ordem configurada, e quem colide com um já posto
+  desce até ficar livre. A medição foi de 80 quadros (cinco moléculas × oito
+  giros, no celular e no iPad): 13 com colisão antes da correção, nenhum
+  depois. A correção vale para todas as cenas.
+
 Capturas `molecula-*` em `screenshots/cenas-3d-2026-09-29/`.
