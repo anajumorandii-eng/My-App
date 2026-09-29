@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useMemo, type ComponentType, type LazyExoticComponent } from 'react';
+import React, { Suspense, lazy, useEffect, type ComponentType, type LazyExoticComponent } from 'react';
 
 /**
  * Cena 3D da matéria no cartão da decisão do Hoje.
@@ -21,40 +21,88 @@ import React, { Suspense, lazy, useMemo, type ComponentType, type LazyExoticComp
  */
 type Cena = LazyExoticComponent<ComponentType<{ reserva: React.ReactNode }>>;
 
+type Carga = () => Promise<{ default: ComponentType<{ reserva: React.ReactNode }> }>;
+
+const CARGAS = {
+  Física: () => import('./BancadaOptica'),
+  Biologia: () => import('./DuplaHelice'),
+  Química: () => import('./GeometriaMolecular'),
+  Matemática: () => import('./SolidosGeometricos'),
+  História: () => import('./LinhaDoTempo'),
+  Geografia: () => import('./EstacoesDoAno'),
+  Português: () => import('./AnaliseSintatica'),
+  Literatura: () => import('./Escansao'),
+  Redação: () => import('./CompetenciasEnem'),
+  Filosofia: () => import('./Caverna'),
+  Sociologia: () => import('./Desigualdade'),
+  Atualidades: () => import('./EfeitoEstufa'),
+} satisfies Record<string, Carga>;
+
 export const CENAS_POR_MATERIA: Record<string, Cena> = {
-  Física: lazy(() => import('./BancadaOptica')),
-  Biologia: lazy(() => import('./DuplaHelice')),
-  Química: lazy(() => import('./GeometriaMolecular')),
-  Matemática: lazy(() => import('./SolidosGeometricos')),
-  História: lazy(() => import('./LinhaDoTempo')),
-  Geografia: lazy(() => import('./EstacoesDoAno')),
-  Português: lazy(() => import('./AnaliseSintatica')),
-  Literatura: lazy(() => import('./Escansao')),
-  Redação: lazy(() => import('./CompetenciasEnem')),
-  Filosofia: lazy(() => import('./Caverna')),
-  Sociologia: lazy(() => import('./Desigualdade')),
-  Atualidades: lazy(() => import('./EfeitoEstufa')),
+  Física: lazy(CARGAS.Física),
+  Biologia: lazy(CARGAS.Biologia),
+  Química: lazy(CARGAS.Química),
+  Matemática: lazy(CARGAS.Matemática),
+  História: lazy(CARGAS.História),
+  Geografia: lazy(CARGAS.Geografia),
+  Português: lazy(CARGAS.Português),
+  Literatura: lazy(CARGAS.Literatura),
+  Redação: lazy(CARGAS.Redação),
+  Filosofia: lazy(CARGAS.Filosofia),
+  Sociologia: lazy(CARGAS.Sociologia),
+  Atualidades: lazy(CARGAS.Atualidades),
 };
 
 export function temCena(materia: string | undefined) {
   return !!materia && materia in CENAS_POR_MATERIA;
 }
 
+/**
+ * Baixa, numa pausa, o código das outras cenas. Sem isso a primeira visita a
+ * cada aba esperava a rede e mostrava a reserva no meio-tempo.
+ */
+let preCarregado = false;
+function preCarregarCenas() {
+  if (preCarregado) return;
+  preCarregado = true;
+  const agendar = window.requestIdleCallback ?? ((f: () => void) => window.setTimeout(f, 1500));
+  agendar(() => { for (const carga of Object.values(CARGAS)) carga().catch(() => {}); });
+}
+
+/**
+ * A sonda cria um contexto WebGL de teste. Criada a cada troca de aba, ela
+ * custava um contexto novo por toque (medido: `getContext` entre as funções
+ * mais caras da troca). A resposta não muda durante a página, então fica
+ * guardada, e o contexto de teste é liberado logo.
+ */
+let webglDisponivel: boolean | undefined;
 function suportaWebGL() {
+  if (webglDisponivel !== undefined) return webglDisponivel;
+  webglDisponivel = sondarWebGL();
+  return webglDisponivel;
+}
+
+function sondarWebGL() {
   try {
     const canvas = document.createElement('canvas');
-    return !!(canvas.getContext('webgl2') || canvas.getContext('webgl'));
+    const gl = (canvas.getContext('webgl2') || canvas.getContext('webgl')) as WebGLRenderingContext | null;
+    gl?.getExtension('WEBGL_lose_context')?.loseContext();
+    return !!gl;
   } catch {
     return false;
   }
 }
 
 export function CenaDaMateria({ materia, reserva }: { materia: string | undefined; reserva: React.ReactNode }) {
-  const webgl = useMemo(suportaWebGL, []);
+  const webgl = suportaWebGL();
+  useEffect(() => { if (webgl) preCarregarCenas(); }, [webgl]);
   const Cena = materia ? CENAS_POR_MATERIA[materia] : undefined;
   if (!Cena || !webgl) return <>{reserva}</>;
   return (
-    <Suspense fallback={reserva}>
+    // Enquanto o código da cena chega, um palco vazio do mesmo tamanho — não a
+    // reserva: o Núcleo montava inteiro (canvas, medição, laço de animação)
+    // só para ser trocado pela cena um instante depois, a cada primeira visita.
+    <Suspense fallback={<div className="crivo-cena" aria-hidden="true"><div className="crivo-cena__palco" /></div>}>
       <p className="crivo-cena__laboratorio">Laboratório de {materia}</p>
       <Cena reserva={reserva} />
     </Suspense>

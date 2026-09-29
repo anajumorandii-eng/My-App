@@ -180,6 +180,19 @@ export function tracar(grupo: THREE.Object3D, c: PaletaDeEstudio) {
   for (const m of alvos) m.add(new THREE.LineSegments(new THREE.EdgesGeometry(m.geometry, 35), mat));
 }
 
+/**
+ * Libera geometria, textura e mapa de sombra — mas não o material.
+ *
+ * `material.dispose()` faz o three.js apagar o programa de sombreamento quando
+ * ninguém mais o usa, e as cenas refazem as peças a cada gesto e a cada aba:
+ * o programa era apagado e recompilado de novo logo em seguida. Medido na
+ * segunda volta pelas doze abas, 8 s de 19 s ocupados eram
+ * `getProgramInfoLog`, a espera da compilação — o travamento que a Ana Júlia
+ * continuou vendo no iPad mesmo com o renderizador compartilhado. Sem o
+ * dispose, o material vai embora com o coletor de lixo e o programa fica no
+ * cache, pronto para o próximo material igual. São poucas variantes (padrão,
+ * básico, linha, sprite, com e sem textura), então o cache não cresce.
+ */
 export function descartar(obj: THREE.Object3D) {
   obj.traverse((o) => {
     const m = o as THREE.Mesh;
@@ -190,8 +203,11 @@ export function descartar(obj: THREE.Object3D) {
       const { map: mapa, alphaMap } = x as THREE.MeshStandardMaterial;
       if (mapa && !mapa.userData.compartilhada) mapa.dispose();
       alphaMap?.dispose();
-      x.dispose();
     }
+    // Cada montagem cria a luz de novo, com um mapa de sombra novo na GPU; o
+    // antigo ficava para trás a cada troca de aba.
+    const luz = o as THREE.DirectionalLight;
+    if (luz.isDirectionalLight) luz.dispose();
   });
 }
 
@@ -266,6 +282,10 @@ function rendererCompartilhado() {
   renderer.shadowMap.autoUpdate = false;
   renderer.toneMapping = THREE.ACESFilmicToneMapping;
   renderer.outputColorSpace = THREE.SRGBColorSpace;
+  // A conferência de erro de shader pede o log do programa logo após compilar,
+  // e isso obriga a esperar a compilação terminar ali mesmo. As cenas usam só
+  // os materiais prontos do three.js, sem shader próprio a depurar.
+  renderer.debug.checkShaderErrors = false;
   // Reflexos de estúdio para vidro e metal; sem eles ficam cinza e chapados.
   const pmrem = new THREE.PMREMGenerator(renderer);
   const ambiente = pmrem.fromScene(new RoomEnvironment(), 0.04).texture;
@@ -281,6 +301,55 @@ function rendererCompartilhado() {
  */
 function densidade(largura: number) {
   return Math.max(1, Math.min(window.devicePixelRatio || 1, 2, 1600 / Math.max(largura, 1)));
+}
+
+let aquecido = false;
+
+/**
+ * Compila, uma vez por página e numa pausa do app, os programas de todas as
+ * variantes de material que as doze cenas usam. Sem isso a primeira visita a
+ * cada aba compilava os dela na hora do toque (200 a 900 ms medidos com a CPU
+ * quatro vezes mais lenta, como a de um iPad). O programa depende do tipo de
+ * material, de ter textura, transparência, cor por vértice e mapeamento de
+ * tons — não da cor —, então uma peça de cada variante basta. Os materiais
+ * não são descartados, para o programa continuar no cache.
+ */
+function aquecerProgramas(renderer: THREE.WebGLRenderer, scene: THREE.Scene, camera: THREE.Camera) {
+  if (aquecido) return;
+  aquecido = true;
+  const tex = new THREE.DataTexture(new Uint8Array([255, 255, 255, 255]), 1, 1);
+  tex.needsUpdate = true;
+  const geo = new THREE.BoxGeometry(0.01, 0.01, 0.01);
+  geo.setAttribute('color', new THREE.Float32BufferAttribute(new Array(geo.attributes.position.count * 3).fill(1), 3));
+  const pts = new THREE.BufferGeometry().setFromPoints([new THREE.Vector3(), new THREE.Vector3(0, 0.01, 0)]);
+  const pecas: (() => THREE.Object3D)[] = [
+    () => new THREE.Mesh(geo, std('#ffffff')),
+    () => new THREE.Mesh(geo, std('#ffffff', 0, 0.5, { transparent: true, opacity: 0.5 })),
+    () => new THREE.Mesh(geo, std('#ffffff', 0, 0.5, { map: tex })),
+    () => new THREE.Mesh(geo, new THREE.MeshStandardMaterial({ map: tex, alphaMap: tex, transparent: true, depthWrite: false })),
+    () => new THREE.Mesh(geo, new THREE.MeshPhysicalMaterial({ transparent: true, opacity: 0.4, clearcoat: 1, depthWrite: false })),
+    () => new THREE.Mesh(geo, basic('#ffffff')),
+    () => new THREE.Mesh(geo, basic('#ffffff', 1, { transparent: true, opacity: 0.5, depthWrite: false })),
+    () => new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ vertexColors: true, toneMapped: false })),
+    () => new THREE.Mesh(geo, new THREE.MeshBasicMaterial({ map: tex, toneMapped: false, transparent: true, depthWrite: false })),
+    () => new THREE.Line(pts, new THREE.LineBasicMaterial({ color: '#ffffff' })),
+    () => new THREE.Line(pts, new THREE.LineBasicMaterial({ color: '#ffffff', transparent: true, opacity: 0.5 })),
+    () => new THREE.Sprite(new THREE.SpriteMaterial({ map: tex, depthWrite: false })),
+  ];
+  // Um material por pausa. Compilados todos juntos, eles viravam um bloco
+  // de trabalho que caía em cima do próximo toque: o ócio do navegador pode
+  // demorar segundos a chegar, e chegou justo na troca de aba seguinte.
+  const agendar = (f: () => void) => (window.requestIdleCallback ? window.requestIdleCallback(f) : window.setTimeout(f, 200));
+  const proxima = (i: number) => agendar(() => {
+    if (i >= pecas.length) { geo.dispose(); pts.dispose(); tex.dispose(); return; }
+    const peca = pecas[i]();
+    // Compila com as luzes da cena já montada: o número de luzes e de sombras
+    // também entra no programa. Nada é desenhado; a peça sai logo em seguida.
+    scene.add(peca);
+    try { renderer.compile(peca, camera, scene); } finally { scene.remove(peca); }
+    proxima(i + 1);
+  });
+  proxima(0);
 }
 
 export function criarEstudio<Id extends string>(
@@ -307,6 +376,20 @@ export function criarEstudio<Id extends string>(
   let luzes: THREE.Group | null = null;
   let sujo = true;
   let sombraVelha = true;
+  let pronto = false;
+  let vivo = true;
+  let visivel = true;
+  let pedido = 0;
+
+  /**
+   * Pede um quadro, e só um, quando algo mudou. Antes um laço de
+   * requestAnimationFrame rodava sem parar e só desistia de desenhar: com a
+   * tela parada, o iPad acordava 60 vezes por segundo para nada.
+   */
+  function marcar() {
+    sujo = true;
+    if (pronto && vivo && !pedido) pedido = requestAnimationFrame(desenhar);
+  }
 
   function remontar() {
     if (!pronto) return;
@@ -314,7 +397,7 @@ export function criarEstudio<Id extends string>(
     if (pecas) { scene.remove(pecas); descartar(pecas); }
     pecas = config.movel(c); tracar(pecas, c); scene.add(pecas);
     sombraVelha = true;
-    sujo = true;
+    marcar();
   }
   function montarTudo() {
     if (!pronto) return;
@@ -364,15 +447,13 @@ export function criarEstudio<Id extends string>(
     renderer.setSize(w, h, false);
     tela.style.width = '100%'; tela.style.height = '100%';
     camera.aspect = w / h; camera.updateProjectionMatrix();
-    sujo = true;
+    marcar();
   }
 
   // Nada se mexe sozinho: a cena só redesenha quando algo muda (gesto,
   // controle, tema, tamanho), e nunca fora da tela.
-  let visivel = true;
-  let quadro = 0;
-  function laco() {
-    quadro = requestAnimationFrame(laco);
+  function desenhar() {
+    pedido = 0;
     if (!visivel || document.hidden || !sujo) return;
     config.enquadrar(camera, palco.clientWidth, Math.max(palco.clientHeight, 1));
     // Atualizada antes de projetar os rótulos: sem isso, sob demanda, eles
@@ -387,24 +468,25 @@ export function criarEstudio<Id extends string>(
   const observadorTamanho = new ResizeObserver(redimensionar);
   observadorTamanho.observe(palco);
   const observadorVisivel = typeof IntersectionObserver !== 'undefined'
-    ? new IntersectionObserver(([e]) => { visivel = e.isIntersecting; sujo = true; })
+    ? new IntersectionObserver(([e]) => { visivel = e.isIntersecting; if (visivel) marcar(); })
     : null;
   observadorVisivel?.observe(palco);
+  const aoVoltar = () => { if (!document.hidden) marcar(); };
+  document.addEventListener('visibilitychange', aoVoltar);
 
   // A cena é montada no quadro seguinte ao toque na aba: montada ali mesmo,
   // a aba só mudava de cor depois de a cena inteira estar pronta, e o toque
   // parecia não pegar. Até lá, remontar() e configurar() só guardam estado.
-  let pronto = false;
   redimensionar();
-  quadro = requestAnimationFrame(() => {
+  let inicio = requestAnimationFrame(() => {
+    inicio = 0;
     pronto = true;
     montarTudo();
-    quadro = requestAnimationFrame(laco);
+    aquecerProgramas(renderer, scene, camera);
   });
 
   // Números e letras desenhados em canvas usam as fontes do app: se a fonte
   // ainda não chegou, o primeiro desenho sai na letra do sistema.
-  let vivo = true;
   // Só refaz se a fonte ainda não tinha chegado: refazer sempre dobrava o
   // custo de abrir a aba.
   if (document.fonts && document.fonts.status !== 'loaded') {
@@ -416,16 +498,18 @@ export function criarEstudio<Id extends string>(
     tela,
     remontar,
     remontarTudo: montarTudo,
-    redesenhar() { sujo = true; },
+    redesenhar: marcar,
     configurar(novas) {
       const mudou = novas.acento !== cores.acento || novas.escuro !== cores.escuro;
       cores = novas;
       if (mudou) montarTudo();
-      sujo = true;
+      marcar();
     },
     destruir() {
       vivo = false;
-      cancelAnimationFrame(quadro);
+      cancelAnimationFrame(inicio);
+      cancelAnimationFrame(pedido);
+      document.removeEventListener('visibilitychange', aoVoltar);
       observadorTamanho.disconnect();
       observadorVisivel?.disconnect();
       for (const o of [fixo, pecas, luzes]) if (o) descartar(o);
