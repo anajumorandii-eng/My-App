@@ -113,9 +113,9 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
           />
         </div>
         {/* Antes das métricas: no celular a cena vem logo depois dos botões. */}
-        <div className={cn('crivo-observatorio-visual-support', explanationOpen && 'crivo-observatorio-visual-support--explaining', temCena(action.topicId) && 'crivo-observatorio-visual-support--cena')}>
+        <div className={cn('crivo-observatorio-visual-support', explanationOpen && 'crivo-observatorio-visual-support--explaining', temCena(action.subject) && 'crivo-observatorio-visual-support--cena')}>
           <CenaDaMateria
-            topicId={action.topicId}
+            materia={action.subject}
             reserva={(
               <div className="crivo-observatorio-nucleo" aria-hidden="true">
                 <CrivoCore size="fill" scale="hero" decorative state={coreState} subject={action.subject} previousSubject={previousSubject} topicId={action.topicId} />

@@ -14,7 +14,9 @@ import { montarHelice, type Helice, type IdRotulo } from './motorDuplaHelice';
  */
 export default function DuplaHelice({ reserva }: { reserva: React.ReactNode }) {
   const cores = useCoresDaCena();
-  const [indice, setIndice] = useState(0);
+  // Abre no par 5 (G–C, 3 pontes, códon CCG), no meio da hélice. No par 1 o
+  // anel de foco ficava na ponta da fita, em cima do rótulo "3′ molde".
+  const [indice, setIndice] = useState(4);
   const [falhou, setFalhou] = useState(false);
   const palco = useRef<HTMLDivElement>(null);
   const helice = useRef<Helice | null>(null);

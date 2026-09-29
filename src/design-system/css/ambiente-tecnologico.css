@@ -697,6 +697,12 @@
 .crivo-cena__leitura { margin: 0; color: var(--amb-dim, #8a8f86); font: 11px/1.45 "JetBrains Mono", ui-monospace, monospace; text-align: right; }
 .crivo-cena__leitura b { color: var(--amb-texto, #f3efe6); font-weight: 600; }
 .crivo-cena__leitura span { display: block; color: var(--amb-a, #e2a261); }
+/* "Laboratório de <matéria>": a cena é da matéria, não do tópico do dia, e
+   diz isso. À mão, no canto da folha, na tinta da matéria. */
+.crivo-cena__laboratorio {
+  position: absolute; top: 2px; left: 4px; z-index: 2; margin: 0; pointer-events: none;
+  color: var(--tinta-materia, var(--amb-a, #e2a261)); font: 400 15px/1 Kalam, "Comic Neue", cursive;
+}
 /* Rótulo sem texto (ligante que a molécula não tem) não ocupa lugar na cena. */
 .crivo-cena__rotulo:empty { display: none; }
 .crivo-cena__escolha { display: flex; flex-wrap: wrap; gap: 6px; }
