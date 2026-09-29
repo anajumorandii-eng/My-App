@@ -76,8 +76,11 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       data-confirmation-key={confirmationKey}
       data-motion-active={!reducedMotion && (phase === 'forming' || phase === 'recomposing') ? 'true' : undefined}
       aria-labelledby={`decision-${action.id}`}
-      className={cn("ni-grid ni-grid--hero crivo-observatorio-decision transition-all duration-300", isMaximized && "crivo-observatorio-decision--maximized scale-[1.02] shadow-2xl z-10")}
-      layout={!reducedMotion}
+      // Sem `layout`: o cartão não muda de lugar, só de conteúdo, e a animação
+      // de layout media a árvore inteira a cada troca de aba (measureScroll e
+      // getBoundingClientRect, ~200 ms por toque com a CPU do iPad). Pelo mesmo
+      // motivo a transição é só do que a maximização anima, não `all`.
+      className={cn("ni-grid ni-grid--hero crivo-observatorio-decision transition-[transform,box-shadow] duration-300", isMaximized && "crivo-observatorio-decision--maximized scale-[1.02] shadow-2xl z-10")}
       initial={reducedMotion ? false : 'hidden'}
       animate="visible"
       variants={focusEnter}
