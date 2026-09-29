@@ -25,6 +25,7 @@ export const CENAS_POR_MATERIA: Record<string, Cena> = {
   Física: lazy(() => import('./BancadaOptica')),
   Biologia: lazy(() => import('./DuplaHelice')),
   Química: lazy(() => import('./GeometriaMolecular')),
+  Matemática: lazy(() => import('./SolidosGeometricos')),
 };
 
 export function temCena(materia: string | undefined) {
