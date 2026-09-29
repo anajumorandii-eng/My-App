@@ -26,6 +26,14 @@ export const CENAS_POR_MATERIA: Record<string, Cena> = {
   Biologia: lazy(() => import('./DuplaHelice')),
   Química: lazy(() => import('./GeometriaMolecular')),
   Matemática: lazy(() => import('./SolidosGeometricos')),
+  História: lazy(() => import('./LinhaDoTempo')),
+  Geografia: lazy(() => import('./EstacoesDoAno')),
+  Português: lazy(() => import('./AnaliseSintatica')),
+  Literatura: lazy(() => import('./Escansao')),
+  Redação: lazy(() => import('./CompetenciasEnem')),
+  Filosofia: lazy(() => import('./Caverna')),
+  Sociologia: lazy(() => import('./Desigualdade')),
+  Atualidades: lazy(() => import('./EfeitoEstufa')),
 };
 
 export function temCena(materia: string | undefined) {
