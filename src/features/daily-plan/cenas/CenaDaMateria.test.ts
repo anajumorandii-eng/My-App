@@ -1,19 +1,23 @@
 import { describe, expect, it } from 'vitest';
 import { CENAS_POR_MATERIA, temCena } from './CenaDaMateria';
 
+/** As doze abas do Hoje, na ordem em que aparecem. */
+const ABAS_DO_HOJE = [
+  'Física', 'Matemática', 'Biologia', 'Química', 'História', 'Geografia',
+  'Português', 'Literatura', 'Redação', 'Filosofia', 'Sociologia', 'Atualidades',
+];
+
 describe('registro de cenas por matéria', () => {
-  it('toda matéria com laboratório tem cena, qualquer que seja o tópico do dia', () => {
+  it('toda aba do Hoje tem laboratório, qualquer que seja o tópico do dia', () => {
     // Por tópico, só a aba de Física mostrava cena: "Evolução" e
     // "Estequiometria" não são DNA nem molécula. A Ana Júlia escolheu o
-    // laboratório fixo da matéria.
-    expect(Object.keys(CENAS_POR_MATERIA).sort()).toEqual(['Biologia', 'Física', 'Matemática', 'Química']);
-    expect(temCena('Biologia')).toBe(true);
-    expect(temCena('Química')).toBe(true);
-    expect(temCena('Matemática')).toBe(true);
+    // laboratório fixo da matéria, e depois pediu o das outras oito.
+    expect(Object.keys(CENAS_POR_MATERIA).sort()).toEqual([...ABAS_DO_HOJE].sort());
+    for (const m of ABAS_DO_HOJE) expect(temCena(m), m).toBe(true);
   });
 
-  it('matéria sem laboratório fica com o Núcleo', () => {
-    expect(temCena('História')).toBe(false);
+  it('matéria fora das abas fica com o Núcleo', () => {
+    expect(temCena('Inglês')).toBe(false);
     expect(temCena(undefined)).toBe(false);
   });
 });

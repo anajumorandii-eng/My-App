@@ -110,6 +110,56 @@ export function texturaMilimetrada(c: PaletaDeEstudio, repeticao: [number, numbe
   return t;
 }
 
+export interface OpcoesDeTexto {
+  /** Proporção largura/altura da face, para a letra não sair esticada. */
+  proporcao: number;
+  cor: string;
+  /** Sem fundo, a tinta fica sobre a face iluminada do bloco, e o bloco
+   * continua com a luz e a sombra da cena. */
+  fundo?: string;
+  /** Linha menor abaixo da principal (posição da sílaba, ano). */
+  legenda?: string;
+  fonte?: string;
+}
+
+/**
+ * Texto a tinta numa face de bloco (palavra, sílaba). Em canvas, e não em
+ * rótulo HTML: com dez sílabas lado a lado, os rótulos disputavam o mesmo
+ * espaço e o de cima empurrava o de baixo para fora do bloco.
+ */
+export function texturaDeTexto(texto: string, { proporcao, cor, fundo, legenda, fonte = 'Newsreader, Georgia, serif' }: OpcoesDeTexto) {
+  const alt = 160, larg = Math.round(alt * proporcao);
+  const cv = document.createElement('canvas'); cv.width = larg; cv.height = alt;
+  const g = cv.getContext('2d')!;
+  if (fundo) { g.fillStyle = fundo; g.fillRect(0, 0, larg, alt); }
+  g.fillStyle = cor; g.textAlign = 'center'; g.textBaseline = 'middle';
+  let tam = legenda ? 72 : 84;
+  g.font = `600 ${tam}px ${fonte}`;
+  // Reduz até caber com folga: palavra longa em bloco estreito vazava da face.
+  while (tam > 24 && g.measureText(texto).width > larg * 0.86) { tam -= 4; g.font = `600 ${tam}px ${fonte}`; }
+  g.fillText(texto, larg / 2, legenda ? alt * 0.42 : alt / 2);
+  if (legenda) {
+    g.globalAlpha = 0.7; g.font = `500 34px Inter, system-ui, sans-serif`;
+    g.fillText(legenda, larg / 2, alt * 0.82);
+  }
+  const t = new THREE.CanvasTexture(cv); t.colorSpace = THREE.SRGBColorSpace; t.anisotropy = 8;
+  return t;
+}
+
+/** Plano com o texto, colado na frente de um bloco de largura `l` e altura `a`. */
+export function faceDeTexto(texto: string, l: number, a: number, opcoes: Omit<OpcoesDeTexto, 'proporcao'>) {
+  const mat = new THREE.MeshBasicMaterial({ map: texturaDeTexto(texto, { ...opcoes, proporcao: l / a }), toneMapped: false, transparent: true, depthWrite: false });
+  const m = new THREE.Mesh(new THREE.PlaneGeometry(l, a), mat);
+  m.userData.semContorno = true;
+  return m;
+}
+
+/** Traço a tinta entre pontos (régua, cota, raio). */
+export function traco(pontos: THREE.Vector3[], cor: string, opacidade = 1) {
+  const mat = new THREE.LineBasicMaterial({ color: cor, transparent: opacidade < 1, opacity: opacidade });
+  return new THREE.Line(new THREE.BufferGeometry().setFromPoints(pontos), mat);
+}
+
 /**
  * Contorno a tinta nas arestas das peças sólidas: o traço das fichas
  * desenhadas à mão, agora seguindo o volume. Vidro, luz e chão ficam de fora —
