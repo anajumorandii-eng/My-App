@@ -1,21 +1,35 @@
 import React, { Suspense, lazy, useMemo, type ComponentType, type LazyExoticComponent } from 'react';
 
 /**
- * Cena 3D da matéria no cartão da decisão do Hoje.
+ * Cena 3D do tópico no cartão da decisão do Hoje.
  *
- * Cada matéria ganha a sua cena à medida que é desenhada; quem ainda não tem,
- * ou o aparelho sem WebGL, fica com o Núcleo do Crivo (o `reserva`). As cenas
- * carregam sob demanda: o three.js só baixa quando o Hoje mostra uma matéria
- * que tem cena, e não pesa nas outras telas.
+ * O registro é por tópico, não por matéria. Pela matéria, a bancada óptica
+ * aparecia em qualquer decisão de Física — "Circuitos Elétricos" abriria uma
+ * lente, o mesmo erro de emprestar ilustração de outro assunto que a regra do
+ * Visual proíbe (`ap_mat_fuvest_110`, prancha necessária). A cena só entra
+ * onde o objeto dela é o assunto do tópico; o resto fica com o Núcleo do
+ * Crivo (o `reserva`), assim como o aparelho sem WebGL.
+ *
+ * As cenas carregam sob demanda: o three.js só baixa quando o Hoje mostra um
+ * tópico que tem cena. Cada uma recebe a reserva para voltar a ela se o WebGL
+ * falhar depois da sonda: a sonda só cria um contexto de teste, e o de
+ * verdade ainda pode ser negado.
  */
-// A cena recebe a reserva para voltar a ela se o WebGL falhar depois da sonda:
-// a sonda só cria um contexto de teste, e o de verdade ainda pode ser negado.
-const CENAS: Record<string, LazyExoticComponent<ComponentType<{ reserva: React.ReactNode }>>> = {
-  Física: lazy(() => import('./BancadaOptica')),
+type Cena = LazyExoticComponent<ComponentType<{ reserva: React.ReactNode }>>;
+
+const BANCADA_OPTICA: Cena = lazy(() => import('./BancadaOptica'));
+const DUPLA_HELICE: Cena = lazy(() => import('./DuplaHelice'));
+
+export const CENAS_POR_TOPICO: Record<string, Cena> = {
+  // Lentes, focos e imagem: o objeto das duas óticas.
+  fis_optica_geometrica: BANCADA_OPTICA,
+  fis_optica_instrumental: BANCADA_OPTICA,
+  // Ácidos nucleicos, pareamento e o códon que o molde forma.
+  bio_codigo_genetico_sintese: DUPLA_HELICE,
 };
 
-export function temCena(materia: string) {
-  return materia in CENAS;
+export function temCena(topicId: string | undefined) {
+  return !!topicId && topicId in CENAS_POR_TOPICO;
 }
 
 function suportaWebGL() {
@@ -27,9 +41,9 @@ function suportaWebGL() {
   }
 }
 
-export function CenaDaMateria({ materia, reserva }: { materia: string; reserva: React.ReactNode }) {
+export function CenaDaMateria({ topicId, reserva }: { topicId: string | undefined; reserva: React.ReactNode }) {
   const webgl = useMemo(suportaWebGL, []);
-  const Cena = CENAS[materia];
+  const Cena = topicId ? CENAS_POR_TOPICO[topicId] : undefined;
   if (!Cena || !webgl) return <>{reserva}</>;
   return (
     <Suspense fallback={reserva}>
