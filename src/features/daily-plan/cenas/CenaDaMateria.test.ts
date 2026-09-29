@@ -1,23 +1,18 @@
 import { describe, expect, it } from 'vitest';
-import { mockTopics } from '../../../data/mockData';
-import { CENAS_POR_TOPICO, temCena } from './CenaDaMateria';
+import { CENAS_POR_MATERIA, temCena } from './CenaDaMateria';
 
-describe('registro de cenas por tópico', () => {
-  it('só aponta para tópicos que existem', () => {
-    const ids = new Set(mockTopics.map((t) => t.id));
-    for (const id of Object.keys(CENAS_POR_TOPICO)) expect(ids.has(id), id).toBe(true);
+describe('registro de cenas por matéria', () => {
+  it('toda matéria com laboratório tem cena, qualquer que seja o tópico do dia', () => {
+    // Por tópico, só a aba de Física mostrava cena: "Evolução" e
+    // "Estequiometria" não são DNA nem molécula. A Ana Júlia escolheu o
+    // laboratório fixo da matéria.
+    expect(Object.keys(CENAS_POR_MATERIA).sort()).toEqual(['Biologia', 'Física', 'Química']);
+    expect(temCena('Biologia')).toBe(true);
+    expect(temCena('Química')).toBe(true);
   });
 
-  it('não empresta a bancada óptica a outro assunto da Física', () => {
-    // Registrada por matéria, a lente abriria em "Circuitos Elétricos".
-    expect(temCena('fis_optica_geometrica')).toBe(true);
-    expect(temCena('fis_circuitos')).toBe(false);
-    expect(temCena('fis_termodinamica_gases')).toBe(false);
+  it('matéria sem laboratório fica com o Núcleo', () => {
+    expect(temCena('História')).toBe(false);
     expect(temCena(undefined)).toBe(false);
-  });
-
-  it('cena de Biologia só no tópico dos ácidos nucleicos', () => {
-    expect(temCena('bio_codigo_genetico_sintese')).toBe(true);
-    expect(temCena('bio_ecologia')).toBe(false);
   });
 });
