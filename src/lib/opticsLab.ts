@@ -42,8 +42,9 @@ export const OPTICS: Record<OpticsId, OpticsConfig> = {
     insight: 'fora do foco os raios se encontram e a imagem é real; dentro dele, os prolongamentos se encontram e ela é virtual.',
     readouts: p => {
       const image = sphericalImageDistance(p);
-      if (image === null) return [{ label: 'Imagem', value: 'no infinito', pivot: true }];
-      return [{ label: 'Foco f', value: '30 cm' }, { label: 'p′', value: `${comma(image)} cm`, pivot: true }, { label: 'Natureza', value: image > 0 ? 'real e invertida' : 'virtual e direita' }];
+      if (image === null) return [{ label: 'Foco f', value: '30 cm' }, { label: 'Imagem', value: 'no infinito', pivot: true }, { label: 'Raios refletidos', value: 'paralelos' }];
+      const amplification = -image / p;
+      return [{ label: 'Foco f', value: '30 cm' }, { label: 'p′', value: `${comma(image)} cm`, pivot: true }, { label: 'Natureza', value: image > 0 ? 'real e invertida' : 'virtual e direita' }, { label: 'Ampliação A', value: `${amplification > 0 ? '+' : '−'}${comma(Math.abs(amplification), 2)}` }];
     },
   },
   refraction: {

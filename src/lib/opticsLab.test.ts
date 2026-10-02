@@ -3,6 +3,12 @@ import { describe, it } from 'node:test';
 import { angleOfRefraction, OPTICS, sphericalImageDistance } from './opticsLab';
 
 describe('laboratório de óptica', () => {
+  it('expõe a ampliação algébrica da imagem real e virtual', () => {
+    for (const [p, expected] of [[60, '−1'], [90, '−0,5'], [20, '+3']]) {
+      assert.equal(OPTICS['spherical-mirror'].readouts(Number(p)).find(item => item.label === 'Ampliação A')?.value, expected);
+    }
+  });
+
   it('conserva o ângulo no espelho plano', () => {
     assert.equal(OPTICS['plane-mirror'].readouts(45)[1].value, '45°');
   });
