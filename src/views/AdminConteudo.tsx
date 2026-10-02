@@ -209,7 +209,7 @@ export default function AdminConteudo() {
     </header>
     {error && <div className="p-4 rounded-xl bg-rose-50 text-rose-700 border border-rose-200">{error}</div>}
 
-    <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
+    <section className="min-w-0 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
       <h2 className="font-semibold flex items-center mb-1"><Database className="w-5 h-5 mr-2" />Migração inicial</h2>
       <p className="text-sm text-zinc-500 mb-4">
         {questions.length} questões, {studyMethods.length} métodos, {episodes.length} episódios já no Firestore.
@@ -219,12 +219,12 @@ export default function AdminConteudo() {
       </button>
     </section>
 
-    <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
+    <section className="min-w-0 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
       <h2 className="font-semibold flex items-center mb-4"><HelpCircle className="w-5 h-5 mr-2" />Questões ({questions.length})</h2>
       <div className="flex flex-wrap gap-2 mb-3">
         <input value={questionSearch} onChange={(e) => setQuestionSearch(e.target.value)} placeholder="Buscar no enunciado..."
-          className="border rounded-lg px-2 py-1.5 text-sm dark:bg-zinc-800 flex-1 min-w-[200px]" />
-        <select value={questionSubjectFilter} onChange={(e) => setQuestionSubjectFilter(e.target.value)} className="border rounded-lg px-2 py-1.5 text-sm dark:bg-zinc-800">
+          className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 text-sm dark:bg-zinc-800 flex-1 basis-[200px]" />
+        <select aria-label="Filtrar questões por matéria" value={questionSubjectFilter} onChange={(e) => setQuestionSubjectFilter(e.target.value)} className="min-w-0 max-w-full border rounded-lg px-2 py-1.5 text-sm dark:bg-zinc-800">
           {subjects.map((s) => <option key={s} value={s}>{s}</option>)}
         </select>
       </div>
@@ -249,27 +249,27 @@ export default function AdminConteudo() {
       {editingQuestion && (
         <p className="text-xs text-indigo-500 mb-2">Editando questão — as alterações substituem a questão selecionada.</p>
       )}
-      <form key={editingQuestion?.id ?? 'new-question'} onSubmit={(e) => { e.preventDefault(); handleSubmitQuestion(e.currentTarget); }} className="grid sm:grid-cols-2 gap-2 text-sm">
-        <select name="topicId" required defaultValue={editingQuestion?.topicId} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2">
+      <form key={editingQuestion?.id ?? 'new-question'} onSubmit={(e) => { e.preventDefault(); handleSubmitQuestion(e.currentTarget); }} className="grid min-w-0 grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <select aria-label="Tópico da questão" name="topicId" required defaultValue={editingQuestion?.topicId} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2">
           {mockTopics.map((t) => <option key={t.id} value={t.id}>{t.subject} — {t.name}</option>)}
         </select>
-        <input name="subject" placeholder="Matéria (ex.: Biologia)" required defaultValue={editingQuestion?.subject} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <select name="difficulty" required defaultValue={editingQuestion?.difficulty} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
+        <input name="subject" placeholder="Matéria (ex.: Biologia)" required defaultValue={editingQuestion?.subject} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <select aria-label="Dificuldade da questão" name="difficulty" required defaultValue={editingQuestion?.difficulty} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
           <option value="easy">easy</option>
           <option value="medium">medium</option>
           <option value="hard">hard</option>
         </select>
-        <textarea name="prompt" placeholder="Enunciado" required defaultValue={editingQuestion?.prompt} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
+        <textarea name="prompt" placeholder="Enunciado" required defaultValue={editingQuestion?.prompt} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
         {[1, 2, 3, 4].map((n) => (
           <input key={n} name={`option${n}`} placeholder={`Alternativa ${n}${n > 2 ? ' (opcional)' : ''}`} required={n <= 2}
-            defaultValue={editingQuestion?.options[n - 1]?.text} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+            defaultValue={editingQuestion?.options[n - 1]?.text} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
         ))}
-        <select name="correctOption" required defaultValue={editingQuestionCorrectPosition} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
+        <select aria-label="Alternativa correta da questão" name="correctOption" required defaultValue={editingQuestionCorrectPosition} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
           <option value="">Alternativa correta...</option>
           {[1, 2, 3, 4].map((n) => <option key={n} value={n}>Alternativa {n}</option>)}
         </select>
-        <input name="chapter" placeholder="Capítulo (opcional)" defaultValue={editingQuestion?.chapter} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <textarea name="explanation" placeholder="Explicação da resposta" required defaultValue={editingQuestion?.explanation} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
+        <input name="chapter" placeholder="Capítulo (opcional)" defaultValue={editingQuestion?.chapter} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <textarea name="explanation" placeholder="Explicação da resposta" required defaultValue={editingQuestion?.explanation} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
         <div className="sm:col-span-2 flex gap-2">
           <button disabled={busy} className="flex-1 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">
             {editingQuestion ? 'Salvar alterações' : 'Cadastrar questão'}
@@ -281,7 +281,7 @@ export default function AdminConteudo() {
       </form>
     </section>
 
-    <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
+    <section className="min-w-0 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
       <h2 className="font-semibold flex items-center mb-4"><FlaskConical className="w-5 h-5 mr-2" />Métodos de estudo ({studyMethods.length})</h2>
       <ul className="text-sm space-y-1 max-h-48 overflow-y-auto mb-4">
         {studyMethods.map((m) => (
@@ -297,17 +297,17 @@ export default function AdminConteudo() {
       {editingMethod && (
         <p className="text-xs text-indigo-500 mb-2">Editando método — as alterações substituem o método selecionado.</p>
       )}
-      <form key={editingMethod?.id ?? 'new-method'} onSubmit={(e) => { e.preventDefault(); handleSubmitStudyMethod(e.currentTarget); }} className="grid sm:grid-cols-2 gap-2 text-sm">
-        <input name="name" placeholder="Nome do método" required defaultValue={editingMethod?.name} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <select name="category" required defaultValue={editingMethod?.category} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
+      <form key={editingMethod?.id ?? 'new-method'} onSubmit={(e) => { e.preventDefault(); handleSubmitStudyMethod(e.currentTarget); }} className="grid min-w-0 grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <input name="name" placeholder="Nome do método" required defaultValue={editingMethod?.name} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <select aria-label="Categoria do método de estudo" name="category" required defaultValue={editingMethod?.category} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800">
           <option value="aquisicao">aquisição</option>
           <option value="retencao">retenção</option>
           <option value="aplicacao">aplicação</option>
           <option value="foco">foco</option>
         </select>
-        <textarea name="summary" placeholder="Resumo" required defaultValue={editingMethod?.summary} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
-        <textarea name="steps" placeholder="Passos (um por linha)" required defaultValue={editingMethod?.steps.join('\n')} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={3} />
-        <input name="bestFor" placeholder="Bom para (separado por vírgula)" required defaultValue={editingMethod?.bestFor.join(', ')} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" />
+        <textarea name="summary" placeholder="Resumo" required defaultValue={editingMethod?.summary} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={2} />
+        <textarea name="steps" placeholder="Passos (um por linha)" required defaultValue={editingMethod?.steps.join('\n')} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={3} />
+        <input name="bestFor" placeholder="Bom para (separado por vírgula)" required defaultValue={editingMethod?.bestFor.join(', ')} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" />
         <div className="sm:col-span-2 flex gap-2">
           <button disabled={busy} className="flex-1 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">
             {editingMethod ? 'Salvar alterações' : 'Cadastrar método'}
@@ -319,7 +319,7 @@ export default function AdminConteudo() {
       </form>
     </section>
 
-    <section className="bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
+    <section className="min-w-0 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
       <h2 className="font-semibold flex items-center mb-4"><Headphones className="w-5 h-5 mr-2" />Episódios de podcast ({episodes.length})</h2>
       <ul className="text-sm space-y-1 max-h-48 overflow-y-auto mb-4">
         {episodes.map((ep) => (
@@ -335,14 +335,14 @@ export default function AdminConteudo() {
       {editingEpisode && (
         <p className="text-xs text-indigo-500 mb-2">Editando episódio — as alterações substituem o episódio selecionado.</p>
       )}
-      <form key={editingEpisode?.id ?? 'new-episode'} onSubmit={(e) => { e.preventDefault(); handleSubmitEpisode(e.currentTarget); }} className="grid sm:grid-cols-2 gap-2 text-sm">
-        <select name="topicId" required defaultValue={editingEpisode?.topicId} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2">
+      <form key={editingEpisode?.id ?? 'new-episode'} onSubmit={(e) => { e.preventDefault(); handleSubmitEpisode(e.currentTarget); }} className="grid min-w-0 grid-cols-1 sm:grid-cols-2 gap-2 text-sm">
+        <select aria-label="Tópico do episódio" name="topicId" required defaultValue={editingEpisode?.topicId} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2">
           {mockTopics.map((t) => <option key={t.id} value={t.id}>{t.subject} — {t.name}</option>)}
         </select>
-        <input name="title" placeholder="Título" required defaultValue={editingEpisode?.title} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <input name="subject" placeholder="Matéria" required defaultValue={editingEpisode?.subject} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <input name="durationMinutes" type="number" min={1} placeholder="Duração (min)" required defaultValue={editingEpisode?.durationMinutes} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
-        <textarea name="script" placeholder="Roteiro narrado" required defaultValue={editingEpisode?.script} className="border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={4} />
+        <input name="title" placeholder="Título" required defaultValue={editingEpisode?.title} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <input name="subject" placeholder="Matéria" required defaultValue={editingEpisode?.subject} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <input name="durationMinutes" type="number" min={1} placeholder="Duração (min)" required defaultValue={editingEpisode?.durationMinutes} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800" />
+        <textarea name="script" placeholder="Roteiro narrado" required defaultValue={editingEpisode?.script} className="min-w-0 w-full max-w-full border rounded-lg px-2 py-1.5 dark:bg-zinc-800 sm:col-span-2" rows={4} />
         <div className="sm:col-span-2 flex gap-2">
           <button disabled={busy} className="flex-1 bg-indigo-600 text-white rounded-lg px-3 py-1.5 disabled:opacity-50">
             {editingEpisode ? 'Salvar alterações' : 'Cadastrar episódio'}

@@ -369,6 +369,7 @@ export default function Treino2aFase() {
             </div>
             <div className="flex items-center gap-2">
               <button
+                aria-label={isRunning ? 'Pausar cronômetro da questão' : 'Iniciar cronômetro da questão'}
                 onClick={() => setIsRunning((r) => !r)}
                 disabled={secondsLeft === 0}
                 className="flex items-center px-3 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
@@ -376,6 +377,7 @@ export default function Treino2aFase() {
                 {isRunning ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
               </button>
               <button
+                aria-label="Reiniciar cronômetro da questão"
                 onClick={() => { setIsRunning(false); setSecondsLeft(question.suggestedMinutes * 60); }}
                 className="flex items-center px-2.5 py-1.5 border border-[var(--line)] rounded-lg text-xs text-[var(--dim)] hover:text-[var(--text)] transition-colors"
               >

@@ -63,6 +63,7 @@ function TopicSelect({
   return (
     <div className="flex items-center gap-2 flex-wrap">
       <select
+        aria-label="Tópico para o tutor"
         value={topicId}
         onChange={(e) => onChange(e.target.value)}
         className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
@@ -78,6 +79,7 @@ function TopicSelect({
       </select>
       {!!topic.chapters?.length && (
         <select
+          aria-label={`Capítulo específico de ${topic.name} (opcional)`}
           value={subtopic}
           onChange={(e) => setSubtopic(e.target.value)}
           className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
@@ -324,8 +326,9 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
         />
       </div>
       <div>
-        <label className="text-xs text-[var(--dim)] mb-1 block">Banca para critério analítico (opcional)</label>
+        <label htmlFor="tutor-correction-board" className="text-xs text-[var(--dim)] mb-1 block">Banca para critério analítico (opcional)</label>
         <select
+          id="tutor-correction-board"
           value={board}
           onChange={(e) => setBoard(e.target.value)}
           className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
@@ -415,6 +418,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
         </label>
         {isDiscursive && (
           <select
+            aria-label="Banca da questão discursiva"
             value={board}
             onChange={(e) => setBoard(e.target.value)}
             className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
@@ -600,6 +604,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
           />
           <button
             type="submit"
+            aria-label="Enviar mensagem ao tutor"
             disabled={isLoading || !input.trim()}
             className="absolute right-1.5 w-8 h-8 rounded-lg bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 flex items-center justify-center transition-opacity"
           >
