@@ -17,7 +17,7 @@ const cases = [
   ['fisica-ondulatoria-ondas-eletromagneticas', 'Onda eletromagnética'],
   ['fisica-ondulatoria-som-e-suas-propriedades', 'Som longitudinal'],
   ['quimica-termoquimica-i', 'Perfil exotérmico'],
-  ['quimica-termoquimica-ii', 'Lei de Hess'],
+  ['quimica-termoquimica-ii', 'energia livre de Gibbs'],
   ['quimica-evolucao-dos-modelos-atomicos', 'Experimento de Rutherford'],
   ['biologia-coracao-e-vasos-sanguineos', 'Circulação humana'],
 ] as const;
@@ -31,6 +31,14 @@ describe('expansão de mecanismos por capítulo', () => {
     const Component = board.Component;
     render(<Component map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={vi.fn()} hiddenEdgeIds={[]} mode="explorar" />);
     expect(screen.getByRole('img', { name: new RegExp(name) })).toBeInTheDocument();
+    if (suffix === 'quimica-termoquimica-ii') {
+      expect(screen.getAllByText('ΔG = ΔH − TΔS').length).toBeGreaterThan(0);
+      expect(screen.getByText('ΔG = 0 · equilíbrio')).toBeInTheDocument();
+      expect(screen.getByText('Espontaneidade não é velocidade')).toBeInTheDocument();
+      expect(screen.queryByRole('button', { name: 'Reproduzir movimento' })).toBeNull();
+      expect(screen.queryByRole('slider')).toBeNull();
+      return;
+    }
     fireEvent.click(screen.getByRole('button', { name: 'Reproduzir movimento' }));
     expect(screen.getByRole('slider', { name: /Fração de um período|Percurso|Avanço|Demonstração/ })).toHaveValue('1');
     expect(screen.queryByRole('button', { name: 'Pausar movimento' })).toBeNull();

@@ -1342,6 +1342,8 @@
 .vs-blood-type { fill: var(--vs-burgundy); font: 700 1rem/1 "Newsreader", Georgia, serif; }
 .dark .vs-blood-type { fill: #d88598; }
 .vs-rbc ellipse { fill: color-mix(in srgb, var(--vs-burgundy) 40%, transparent); stroke: var(--vs-burgundy); stroke-width: 2.2; }
+.vs-immunity-scene .vs-rbc { fill: color-mix(in srgb, var(--vs-burgundy) 22%, transparent); stroke: var(--vs-burgundy); stroke-width: 2; }
+.vs-immunity-scene .vs-plasma { fill: color-mix(in srgb, var(--vs-amber) 16%, transparent); stroke: var(--vs-amber); stroke-width: 2; }
 .vs-rbc-dimple { fill: color-mix(in srgb, var(--vs-burgundy) 22%, transparent) !important; }
 .dark .vs-rbc ellipse { stroke: #d88598; }
 .vs-antigen line { stroke: var(--vs-ink); stroke-width: 2; }

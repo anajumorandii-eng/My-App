@@ -13,8 +13,8 @@ import type { BoardProps } from './types';
  * 2×2 (um par) e o de 4×4 (dois pares), onde o 9:3:3:1 aparece como contagem
  * das casas, e não como número a decorar.
  */
-function PunnettScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }) {
-  const diHibrido = emphasis === 'direita';
+function PunnettScene({ emphasis, interaction = false, startDihybrid = false }: { emphasis: 'esquerda' | 'direita' | 'nenhum'; interaction?: boolean; startDihybrid?: boolean }) {
+  const diHibrido = interaction || startDihybrid || emphasis === 'direita';
 
   const cel = diHibrido ? 52 : 92;
   const gametas = diHibrido ? ['AB', 'Ab', 'aB', 'ab'] : ['A', 'a'];
@@ -28,13 +28,14 @@ function PunnettScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum
     const dom1 = par.includes('A');
     if (!diHibrido) return dom1 ? 'dom' : 'rec';
     const dom2 = par.includes('B');
+    if (interaction) return dom1 && dom2 ? 'dom' : 'rec';
     return dom1 && dom2 ? 'dom' : dom1 ? 'p1' : dom2 ? 'p2' : 'rec';
   };
 
   return (
     <svg className="vs-piston vs-scene" viewBox="0 0 320 330" role="img" data-emphasis={emphasis}
       aria-label={diHibrido
-        ? 'Quadro de Punnett 4 por 4 para dois pares de alelos, com a proporção 9:3:3:1'
+        ? interaction ? 'Quadro de Punnett 4 por 4 para genes complementares, com nove células pigmentadas e sete sem pigmento' : 'Quadro de Punnett 4 por 4 para dois pares de alelos, com a proporção 9:3:3:1'
         : 'Quadro de Punnett 2 por 2 para um par de alelos, com a proporção 3:1'}>
       {gametas.map((g, i) => (
         <text key={`c${i}`} className="vs-gamete" x={x0 + i * cel + cel / 2} y={y0 - 10} textAnchor="middle">{g}</text>
@@ -56,7 +57,7 @@ function PunnettScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum
         }))}
 
       <text className="vs-scene-caption" x="160" y={diHibrido ? 306 : 300} textAnchor="middle">
-        {diHibrido ? '9 : 3 : 3 : 1 — contando as casas' : '3 dominantes : 1 recessivo'}
+        {interaction ? '9 A_B_ pigmentadas : 7 sem pigmento' : diHibrido ? '9 : 3 : 3 : 1 — contando as casas' : '3 dominantes : 1 recessivo'}
       </text>
     </svg>
   );
@@ -64,34 +65,26 @@ function PunnettScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum
 
 export default function MendelBoard(props: BoardProps) {
   const par = boardPair(props);
+  const interaction = props.map.summaryId === 'summary-biologia-segunda-lei-de-mendel-e-interacao-genica';
+  const secondLaw = props.map.summaryId === 'summary-biologia-segunda-lei-de-mendel';
   return (
     <BoardShell
-      title="As leis de Mendel"
-      subtitle="A segunda lei não é sobre dois caracteres — é sobre independência."
-      condition={{ label: 'cruzamento', value: 'Aa × Aa' }}
-      ariaLabel="Prancha ilustrada das leis de Mendel com quadro de Punnett"
-      scene={<PunnettScene emphasis={par.emphasis} />}
+      title={interaction ? 'Interação gênica: uma via, dois genes' : 'As leis de Mendel'}
+      subtitle={interaction ? 'A segregação continua mendeliana; o produto final depende dos dois loci.' : 'A segunda lei não é sobre dois caracteres — é sobre independência.'}
+      condition={{ label: 'cruzamento', value: interaction || secondLaw ? 'AaBb × AaBb' : 'Aa × Aa' }}
+      ariaLabel={interaction ? 'Prancha de interação gênica complementar com proporção nove para sete' : 'Prancha ilustrada das leis de Mendel com quadro de Punnett'}
+      scene={<PunnettScene emphasis={par.emphasis} interaction={interaction} startDihybrid={secondLaw} />}
       sceneNotes={{ up: 'um par ↑', down: '↓ dois pares' }}
       emphasis={par.emphasis}
-      left={{
-        label: 'Primeira lei',
-        headline: 'Cada par de alelos se separa.',
-        detail: 'Na formação dos gametas, os dois alelos de um gene vão para células diferentes. Aa × Aa dá 3 dominantes para 1 recessivo.',
-        formula: '3 : 1 (fenótipo) · 1 : 2 : 1 (genótipo)',
-      }}
-      right={{
-        label: 'Segunda lei',
-        headline: 'Pares diferentes se separam independentemente.',
-        detail: 'Só vale se os genes estiverem em cromossomos diferentes. Genes ligados no mesmo cromossomo tendem a ir juntos e quebram a proporção.',
-        formula: '9 : 3 : 3 : 1',
-      }}
+      left={interaction ? { label: 'Gene A · primeira etapa', headline: 'A_ produz o intermediário.', detail: 'Sem ao menos um alelo A funcional, a via é interrompida antes do intermediário e o organismo fica sem pigmento.', formula: 'precursor —A→ intermediário' } : { label: 'Primeira lei', headline: 'Cada par de alelos se separa.', detail: 'Na formação dos gametas, os dois alelos de um gene vão para células diferentes. Aa × Aa dá 3 dominantes para 1 recessivo.', formula: '3 : 1 (fenótipo) · 1 : 2 : 1 (genótipo)' }}
+      right={interaction ? { label: 'Gene B · segunda etapa', headline: 'B_ converte o intermediário.', detail: 'Só A_B_ completa as duas etapas e produz pigmento. A_bb, aaB_ e aabb convergem no mesmo fenótipo sem pigmento.', formula: 'intermediário —B→ pigmento' } : { label: 'Segunda lei', headline: 'Pares diferentes se separam independentemente.', detail: 'Só vale se os genes estiverem em cromossomos diferentes. Genes ligados no mesmo cromossomo tendem a ir juntos e quebram a proporção.', formula: '9 : 3 : 3 : 1' }}
       leftState={par.leftState}
       rightState={par.rightState}
       leftSelected={par.leftSelected}
       rightSelected={par.rightSelected}
       onSelectLeft={par.selectLeft}
       onSelectRight={par.selectRight}
-      equation={{ label: 'Proporção', general: '(3:1)', condition: 'ao quadrado', reduced: '9:3:3:1' }}
+      equation={interaction ? { label: 'Epistasia recessiva dupla', general: '9 A_B_', condition: '+ 7 bloqueadas', reduced: '9 : 7' } : { label: 'Proporção', general: '(3:1)', condition: 'ao quadrado', reduced: '9:3:3:1' }}
       supports={
         <>
           <section className="vs-formula-note">
