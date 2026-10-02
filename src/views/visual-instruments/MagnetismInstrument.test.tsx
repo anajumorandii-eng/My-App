@@ -23,3 +23,48 @@ describe('instrumento de magnetismo', () => {
     fireEvent.change(screen.getByRole('slider'), { target: { value: '0' } }); expect(screen.getAllByText('0 N').length).toBeGreaterThan(0);
   });
 });
+
+
+describe('geometria da carga positiva em B uniforme', () => {
+  it('mostra projeções da hélice, círculo perpendicular e reta paralela com vetores coerentes', () => {
+    const Component = magnetismInstrument('carga-em-b');
+    const { container } = render(<Component {...props('summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme')} />);
+    const slider = screen.getByRole('slider');
+    const scene = () => container.querySelector('[data-charge-motion]')!;
+    const circle = () => container.querySelector('[data-orbit]')!;
+    expect(scene()).toHaveAttribute('data-charge-motion', 'helix');
+    expect(screen.getByText(/projeções da hélice/i)).toBeInTheDocument();
+    expect(Number(circle().getAttribute('r'))).toBeCloseTo(42 * Math.sin(Math.PI / 3));
+    const velocity = container.querySelector('[data-vector="velocity-perpendicular"]')!;
+    const force = container.querySelector('[data-vector="force"]')!;
+    expect(velocity.getAttribute('y1')).toBe(velocity.getAttribute('y2'));
+    expect(force.getAttribute('x1')).toBe(force.getAttribute('x2'));
+    expect(Number(force.getAttribute('y2'))).toBeLessThan(Number(force.getAttribute('y1')));
+    fireEvent.change(slider, { target: { value: '0' } });
+    expect(scene()).toHaveAttribute('data-charge-motion', 'straight');
+    expect(container.querySelector('[data-orbit]')).toBeNull();
+    expect(container.querySelector('[data-vector="force"]')).toBeNull();
+    expect(container.querySelector('[data-vector="velocity-perpendicular"]')).toBeNull();
+    expect(screen.getAllByText('0 N').length).toBeGreaterThan(0);
+    fireEvent.change(slider, { target: { value: '10' } });
+    expect(scene()).toHaveAttribute('data-charge-motion', 'helix');
+    expect(Number(circle().getAttribute('r'))).toBeCloseTo(42 * Math.sin(Math.PI / 18));
+    const shortForce = container.querySelector('[data-vector="force"]')!;
+    const forceHead = shortForce.nextElementSibling!;
+    const headBaseY = Number(forceHead.getAttribute('d')!.match(/^M[\d.]+ ([\d.]+)/)![1]);
+    expect(headBaseY).toBeLessThan(Number(shortForce.getAttribute('y1')));
+    const forceLength = 32 * Math.sin(Math.PI / 18);
+    expect(Number(forceHead.getAttribute('data-size'))).toBeLessThanOrEqual(forceLength * .4);
+    const perpendicularLabel = screen.getByText('v⊥');
+    const forceLabel = screen.getByText('F');
+    expect(Math.abs(Number(perpendicularLabel.getAttribute('y')) - Number(forceLabel.getAttribute('y')))).toBeGreaterThanOrEqual(18);
+    fireEvent.change(slider, { target: { value: '20' } });
+    expect(Number(circle().getAttribute('r'))).toBeCloseTo(42 * Math.sin(Math.PI / 9));
+    expect(Math.abs(Number(perpendicularLabel.getAttribute('y')) - Number(forceLabel.getAttribute('y')))).toBeGreaterThanOrEqual(18);
+    fireEvent.change(slider, { target: { value: '90' } });
+    expect(scene()).toHaveAttribute('data-charge-motion', 'circle');
+    expect(circle()).toHaveAttribute('r', '42');
+    expect(container.querySelector('[data-vector="velocity-parallel"]')).toBeNull();
+    expect(screen.getAllByText('0,6 N').length).toBeGreaterThan(0);
+  });
+});

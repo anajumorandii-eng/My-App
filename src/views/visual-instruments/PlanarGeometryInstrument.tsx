@@ -16,19 +16,35 @@ function polygonPoints(sides: number, cx: number, cy: number, radius: number, ro
 }
 
 function Scene({ id, value }: { id: PlanarConfigId; value: number }) {
-  if (id === 'fundamentos') return <>
-    <path className="vs-planar-main" d="M28 82 H292 M28 218 H292 M72 270 L236 28" />
-    <path className="vs-planar-accent" d="M153 82 A32 32 0 0 1 171 55 M137 218 A31 31 0 0 0 154 242" />
-    <text x="185" y="66">α = {value}°</text><text x="105" y="248">alterno = {value}°</text>
-    <text x="224" y="145">paralelas</text>
-  </>;
-  if (id === 'angulos-triangulo') {
-    const topX = 60 + value * 1.4;
+  if (id === 'fundamentos') {
+    const radians = value * Math.PI / 180;
+    const dx = Math.cos(radians); const dy = -Math.sin(radians);
+    const upperX = 160 + 40 / Math.tan(radians);
+    const lowerX = 160 - 40 / Math.tan(radians);
     return <>
-      <polygon className="vs-planar-fill" points={`34,242 286,242 ${topX},48`} />
-      <path className="vs-planar-main" d={`M34 242 L286 242 L${topX} 48 Z M286 242 H314`} />
-      <text x="43" y="232">A {value}°</text><text x="250" y="232">B 40°</text>
-      <text x={topX} y="36" textAnchor="middle">C {180 - value - 40}°</text>
+      <path className="vs-planar-main" d="M20 110 H300 M20 190 H300" />
+      <line data-geometry="transversal" className="vs-planar-main" x1={160 - 140 * dx} y1={150 - 140 * dy} x2={160 + 140 * dx} y2={150 + 140 * dy} />
+      <path data-angle={value} className="vs-planar-accent" d={`M${upperX - 22} 110 A22 22 0 0 0 ${upperX - 22 * dx} ${110 - 22 * dy}`} />
+      <path data-angle={value} className="vs-planar-accent" d={`M${lowerX + 22} 190 A22 22 0 0 0 ${lowerX + 22 * dx} ${190 + 22 * dy}`} />
+      <text x="160" y="38" textAnchor="middle">α = {value}°</text>
+      <text x="160" y="270" textAnchor="middle">alterno = {value}°</text>
+      <text x="22" y="150">paralelas</text>
+    </>;
+  }
+  if (id === 'angulos-triangulo') {
+    // A lei dos senos fixa B em 40° mesmo quando A é obtuso.
+    const radians = Math.PI / 180;
+    const side = 180 * Math.sin(40 * radians) / Math.sin((140 - value) * radians);
+    const rawX = side * Math.cos(value * radians); const height = side * Math.sin(value * radians);
+    const minX = Math.min(0, rawX); const width = Math.max(180, rawX) - minX;
+    const scale = Math.min(232 / width, 172 / height);
+    const left = (320 - width * scale) / 2 - minX * scale;
+    const ax = left; const bx = left + 180 * scale;
+    const cx = left + rawX * scale; const cy = 238 - height * scale;
+    return <>
+      <polygon data-geometry="angle-triangle" className="vs-planar-fill" points={`${ax},238 ${bx},238 ${cx},${cy}`} />
+      <text x={ax} y="264" textAnchor="middle">A {value}°</text><text x={bx} y="264" textAnchor="middle">B 40°</text>
+      <text x={cx} y={cy - 18} textAnchor="middle">C {140 - value}°</text>
     </>;
   }
   if (id === 'angulos-poligono') {
@@ -42,13 +58,17 @@ function Scene({ id, value }: { id: PlanarConfigId; value: number }) {
   }
   if (id === 'angulos-circunferencia') {
     const end = polar(160, 150, 104, value); const start = polar(160, 150, 104, 0);
+    // O ponto médio do arco complementar nunca pertence ao arco interceptado.
+    const vertex = polar(160, 150, 104, (value + 360) / 2);
     return <>
       <circle className="vs-planar-fill" cx="160" cy="150" r="104" />
-      <path className="vs-planar-accent" d={`M160 150 L${start[0]} ${start[1]} M160 150 L${end[0]} ${end[1]} M${start[0]} ${start[1]} L${end[0]} ${end[1]}`} />
-      <path className="vs-planar-guide" d={`M160 254 L${start[0]} ${start[1]} M160 254 L${end[0]} ${end[1]}`} />
+      <path className="vs-planar-main" d={`M${start[0]} ${start[1]} L160 150 L${end[0]} ${end[1]}`} />
+      <path data-geometry="selected-arc" className="vs-planar-accent" d={`M${start[0]} ${start[1]} A104 104 0 ${value > 180 ? 1 : 0} 1 ${end[0]} ${end[1]}`} />
+      <polyline data-geometry="inscribed-rays" className="vs-planar-guide" points={`${start.join(',')} ${vertex.join(',')} ${end.join(',')}`} />
+      <circle className="vs-planar-point" cx={vertex[0]} cy={vertex[1]} r="5" />
       <circle className="vs-planar-point" cx="160" cy="150" r="5" />
-      <text x="160" y="143" textAnchor="middle">central {value}°</text>
-      <text x="160" y="283" textAnchor="middle">inscrito {value / 2}°</text>
+      <text x="160" y="28" textAnchor="middle">central {value}°</text>
+      <text x="160" y="282" textAnchor="middle">inscrito {value / 2}°</text>
     </>;
   }
   if (id === 'congruencia') return <>
@@ -83,13 +103,12 @@ function Scene({ id, value }: { id: PlanarConfigId; value: number }) {
     <text x="160" y="294" textAnchor="middle">mesma razão {value.toFixed(2).replace('.', ',')}</text>
   </>;
   }
-  const scale = Math.min(value, 1.6);
-  const halfBase = 44 * scale;
-  const apexY = 236 - 104 * scale;
+  const source = [[-24, 0], [24, 0], [-7, -64]];
+  const points = (cx: number, k: number) => source.map(([x, y]) => `${cx + x * k},${236 + y * k}`).join(' ');
   return <>
-    <polygon className="vs-planar-fill" points="24,236 112,236 56,132" />
-    <polygon className="vs-planar-fill vs-planar-copy" points={`${220 - halfBase},236 ${220 + halfBase},236 208,${apexY}`} />
-    <text x="68" y="260" textAnchor="middle">figura 1</text><text x="226" y="260" textAnchor="middle">figura 2 · k={value.toFixed(2).replace('.', ',')}</text>
+    <polygon data-geometry="similarity-source" className="vs-planar-fill" points={points(65, 1)} />
+    <polygon data-geometry="similarity-copy" className="vs-planar-fill vs-planar-copy" points={points(222, value)} />
+    <text x="65" y="266" textAnchor="middle">figura 1</text><text x="222" y="266" textAnchor="middle">figura 2 · k={String(value).replace('.', ',')}</text>
   </>;
 }
 
@@ -128,7 +147,7 @@ export function planarGeometryInstrument(id: PlanarConfigId) {
       ariaLabel={`Instrumento de geometria plana: ${props.map.title}`}
       emphasis={pair.emphasis}
       scene={<div className="vs-instrument vs-planar-instrument">
-        <svg className="vs-plane vs-planar" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value} /></svg>
+        <svg className="vs-plane vs-planar" viewBox="0 0 320 300" data-scene={id} role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value} /></svg>
         <p className="vs-instrument-dica">mexa no controle e acompanhe a invariável geométrica</p>
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <label htmlFor={`planar-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{String(value).replace('.', ',')}</b></label>

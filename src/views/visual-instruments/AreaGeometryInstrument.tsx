@@ -13,14 +13,16 @@ const polar = (cx: number, cy: number, radius: number, degrees: number) => {
 
 function AreaScene({ id, value }: { id: AreaConfigId; value: number }) {
   if (id === 'triangulo-retangulo') {
-    const foot = 48 + (value / 25) * 224;
+    const scale = 224 / 25;
+    const foot = 48 + value * scale;
+    const apexY = 244 - Math.sqrt(value * (25 - value)) * scale;
     return <>
-      <polygon className="vs-area-fill" points={`48,244 272,244 ${foot},62`} />
-      <line className="vs-area-guide" x1={foot} y1="62" x2={foot} y2="244" />
+      <polygon className="vs-area-fill vs-area-triangle" points={`48,244 272,244 ${foot},${apexY}`} />
+      <line className="vs-area-guide" x1={foot} y1={apexY} x2={foot} y2="244" />
       <path className="vs-area-right" d={`M${foot} 230 h14 v14`} />
       <text x={(48 + foot) / 2} y="263" textAnchor="middle">m = {value}</text>
       <text x={(foot + 272) / 2} y="263" textAnchor="middle">n = {25 - value}</text>
-      <text x={foot + 10} y="145">h² = m·n</text>
+      <text className="vs-area-height-label" x="160" y="100" textAnchor="middle">h² = m·n</text>
     </>;
   }
   if (id === 'geometria-metrica') {
@@ -36,20 +38,23 @@ function AreaScene({ id, value }: { id: AreaConfigId; value: number }) {
     </>;
   }
   if (id === 'areas-poligonos') {
-    const sides = Math.round(value); const points = Array.from({ length: sides }, (_, index) => polar(160, 150, 102, index * 360 / sides));
+    const sides = Math.round(value);
+    const radius = 4 / (2 * Math.sin(Math.PI / sides)) * 14;
+    const points = Array.from({ length: sides }, (_, index) => polar(160, 150, radius, index * 360 / sides));
     return <>
-      <polygon className="vs-area-fill" points={points.map((point) => point.join(',')).join(' ')} />
+      <polygon className="vs-area-fill vs-area-polygon" points={points.map((point) => point.join(',')).join(' ')} />
       {points.map((point, index) => <line key={index} className="vs-area-guide" x1="160" y1="150" x2={point[0]} y2={point[1]} />)}
       <circle className="vs-area-point" cx="160" cy="150" r="4" />
       <text x="160" y="154" textAnchor="middle">{sides} triângulos</text>
+      <text x="160" y="265" textAnchor="middle">lado = 4 cm</text>
       <text x="160" y="286" textAnchor="middle">A = perímetro · apótema / 2</text>
     </>;
   }
   if (id === 'area-circulo') {
-    const inner = value * 10;
+    const inner = value * 10.6;
     return <>
-      <circle className="vs-area-fill" cx="160" cy="150" r="106" />
-      <circle className="vs-area-hole" cx="160" cy="150" r={inner} />
+      <circle className="vs-area-fill vs-area-outer-circle" cx="160" cy="150" r="106" />
+      <circle className="vs-area-hole vs-area-inner-circle" cx="160" cy="150" r={inner} />
       <line className="vs-area-guide" x1="160" y1="150" x2="266" y2="150" />
       <line className="vs-area-accent" x1="160" y1="150" x2={160 + inner} y2="150" />
       <text x="214" y="140">R = 10</text><text x={160 + inner / 2} y="175" textAnchor="middle">r = {value}</text>
@@ -57,18 +62,18 @@ function AreaScene({ id, value }: { id: AreaConfigId; value: number }) {
     </>;
   }
   if (id === 'razoes-areas') {
-    const scale = Math.min(value, 2.2);
+    const scale = value;
     return <>
-      <polygon className="vs-area-fill" points="28,238 108,238 68,158" />
-      <polygon className="vs-area-copy" points={`${218 - 40 * scale},238 ${218 + 40 * scale},238 218,${238 - 80 * scale}`} />
+      <polygon className="vs-area-fill vs-area-reference" points="48,238 88,238 68,198" />
+      <polygon className="vs-area-copy vs-area-scaled" points={`${218 - 20 * scale},238 ${218 + 20 * scale},238 218,${238 - 40 * scale}`} />
       <text x="68" y="263" textAnchor="middle">A₁</text><text x="218" y="263" textAnchor="middle">A₂ = k²·A₁</text>
-      <text x="160" y="40" textAnchor="middle">k = {String(value).replace('.', ',')}</text>
+      <text x="160" y="40" textAnchor="middle">k = {value.toLocaleString('pt-BR', { maximumFractionDigits: 2 })}</text>
     </>;
   }
-  const radius = value * 8;
+  const radius = value * 11.8;
   return <>
-    <rect className="vs-area-fill" x="42" y="58" width="236" height="184" rx="3" />
-    <circle className="vs-area-hole" cx="160" cy="150" r={radius} />
+    <rect className="vs-area-fill vs-area-terrain" x="42" y="61.5" width="236" height="177" />
+    <circle className="vs-area-hole vs-area-opening" cx="160" cy="150" r={radius} />
     <line className="vs-area-accent" x1="160" y1="150" x2={160 + radius} y2="150" />
     <text x="160" y="43" textAnchor="middle">região útil = retângulo − abertura</text>
     <text x={160 + radius / 2} y="141" textAnchor="middle">r = {value}</text>
@@ -107,10 +112,10 @@ export function areaGeometryInstrument(id: AreaConfigId) {
       ariaLabel={`Instrumento de áreas e medidas: ${props.map.title}`}
       emphasis={pair.emphasis}
       scene={<div className="vs-instrument vs-area-instrument">
-        <svg className="vs-plane vs-area-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><AreaScene id={id} value={value} /></svg>
+        <svg data-area-config={id} className="vs-plane vs-area-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><AreaScene id={id} value={value} /></svg>
         <p className="vs-instrument-dica">mexa na medida e observe o que é preservado, somado ou retirado</p>
         <div className="vs-plane-controls"><div className="vs-plane-control">
-          <label htmlFor={`area-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{String(value).replace('.', ',')}</b></label>
+          <label htmlFor={`area-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value.toLocaleString('pt-BR', { maximumFractionDigits: 2 })}</b></label>
           <input id={`area-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={(event) => setValue(Number(event.target.value))} />
         </div></div>
         <dl className="vs-plane-readouts">{readouts.map((item) => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl>

@@ -153,3 +153,7 @@ A estudante autorizou nesta etapa publicar em outra branch e abrir PR automatica
 ## Terceiro lote visual por PR — 02/10/2026
 
 A PR #242 foi incorporada em 02/10/2026; a nova base é `cfd4e13e`. O fluxo autorizado de branch e PR continua em `fix/matematica-sistemas-determinantes`: Sistemas agora representa as duas equações que se encontram em `(6,4)`; Determinantes mostra o paralelogramo das colunas da matriz, área e orientação, inclusive o caso singular `c = 10/3`. O [registro do terceiro lote](visual-integral-2026-10-02/terceiro-lote/README.md) reúne regressões, capturas e limites. Estas alterações serão propostas por PR; não representam merge automático nem aprovação editorial dos outros capítulos.
+
+## Quarto lote visual ampliado por PR — 02/10/2026
+
+A PR #243 foi incorporada em 02/10/2026. A estudante pediu mais correções por passo, para reduzir o tempo total; agrupar achados independentes e validar o lote em conjunto, mantendo branch e PR automáticas. A branch `fix/diagramas-geometria-fisica`, baseada em `1d22bc89`, reúne 11 capítulos: quatro de ângulos/semelhança, cinco de áreas/medidas e dois de Física (carga em B e trabalho do gás). O [registro do quarto lote](visual-integral-2026-10-02/quarto-lote/README.md) documenta relações, capturas, regressões e limites. É uma proposta por PR, sem merge automático. Não executar TypeScript junto ao navegador nesta infraestrutura: a combinação pode atingir o limite de memória e interromper verificações. Os demais achados e a aprovação editorial integral continuam pendentes.
