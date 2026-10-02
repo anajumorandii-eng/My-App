@@ -149,3 +149,7 @@ O primeiro CI remoto detectou uma incompatibilidade de `npm ci` (npm 10) com o s
 ## Segundo lote visual por PR — 02/10/2026
 
 A estudante autorizou nesta etapa publicar em outra branch e abrir PR automaticamente, em vez de enviar diretamente à `main`. A branch `fix/optica-espelhos-visao`, baseada em `05412f4b`, corrige o espelho côncavo (equação de Gauss, ampliação, foco e raios paralelos) e a prancha de miopia/hipermetropia efetivamente usada pelo capítulo (comparação sem/com correção, lentes externas e raios completos). O [registro do segundo lote](visual-integral-2026-10-02/segundo-lote/README.md) inclui capturas, regressões, modelos e limites. Estas mudanças são uma proposta para integração por PR; não estão incorporadas à `main` por este registro. Os demais achados do inventário permanecem pendentes.
+
+## Terceiro lote visual por PR — 02/10/2026
+
+A PR #242 foi incorporada em 02/10/2026; a nova base é `cfd4e13e`. O fluxo autorizado de branch e PR continua em `fix/matematica-sistemas-determinantes`: Sistemas agora representa as duas equações que se encontram em `(6,4)`; Determinantes mostra o paralelogramo das colunas da matriz, área e orientação, inclusive o caso singular `c = 10/3`. O [registro do terceiro lote](visual-integral-2026-10-02/terceiro-lote/README.md) reúne regressões, capturas e limites. Estas alterações serão propostas por PR; não representam merge automático nem aprovação editorial dos outros capítulos.
