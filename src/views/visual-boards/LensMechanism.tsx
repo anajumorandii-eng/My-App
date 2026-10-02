@@ -35,7 +35,7 @@ export default function LensMechanism() {
       <path d="M25 205H500" className="mf-axis" />
       <path d={focal>0?'M260 80Q290 205 260 330Q230 205 260 80Z':'M240 80Q265 205 240 330H280Q255 205 280 80Z'} fill="color-mix(in srgb,var(--mf-blue) 12%,var(--vs-paper))" stroke="var(--mf-blue)" strokeWidth="2" />
       {[-2,-1,1,2].map(n => <g key={n}><circle cx={260 + n * 70} cy="205" r="3" fill="var(--vs-ink)" /><text x={260 + n * 70} y="231" textAnchor="middle">{Math.abs(n) === 2 ? '2F' : 'F'}{(focal>0 ? n>0 : n<0) ? '′' : ''}</text></g>)}
-      <path d={`M${r.objectX} 205V167m-5 7 5-7 5 7`} stroke="var(--mf-green)" strokeWidth="3" fill="none" /><text x={r.objectX} y="150" textAnchor="middle">objeto</text>
+      <path d={`M${r.objectX} 205V167m-5 7 5-7 5 7`} stroke="var(--mf-green)" strokeWidth="3" fill="none" /><text x={r.objectX} y="130" textAnchor="middle">objeto</text>
       <g aria-label="Raios reais seguem para a direita" fill="none" strokeWidth="2">
         <path d={r.parallel} stroke="var(--mf-gold)" pathLength="1" strokeDasharray="1" strokeDashoffset={1 - Math.min(1, .15 + reveal * 1.7)} />
         <path d={r.central} stroke="var(--mf-blue)" pathLength="1" strokeDasharray="1" strokeDashoffset={1 - Math.max(.15, (reveal - .35) / .65)} />

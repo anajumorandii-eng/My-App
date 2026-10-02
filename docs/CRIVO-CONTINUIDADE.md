@@ -96,3 +96,44 @@ Detalhes, evidências e próximos pontos: [reconstrucao-motion-2026-09-23.md](vi
 Trabalho retomado em `C:\Users\Ana Julia\Documents\CRIVO\My-App`, com Git independente e origem preservada. A main `d641b5b`, incluindo as correções da outra frente Motion, foi incorporada. Sete cenas pendentes recuperadas e revisadas: três de ondas/som, duas de termoquímica, modelos atômicos e circulação. O inventário registra 22 em validação, 591 sem revisão e zero aprovados.
 
 Plano, critérios e fila completa de IDs: [plano-finalizacao-613.md](visual-personalizado/plano-finalizacao-613.md). Evidências e limites: [expansao-motion-2026-09-25.md](visual-personalizado/expansao-motion-2026-09-25.md). Esta retomada permanece local, sem publicação.
+
+## Auditoria geral de retomada — 01/10/2026
+
+- Estado auditado: `6cbc94cdb46048d00947db136ae529e1c6ef41af`, confirmado com `origin/main`. Última mudança funcional: `f9f0883cc4bf6efe4b6dcdc28301f216534411a1` (#241).
+- Relatório: [ANALISE-GERAL-2026-10-01.md](ANALISE-GERAL-2026-10-01.md). Nenhuma funcionalidade alterada; sem commit, push ou publicação nesta rodada.
+- TypeScript, build e 1.534 testes aprovados (776 Node + 758 Vitest). CI e status Vercel da última alteração funcional aprovados.
+- 28 telas abertas em Chromium desktop; seis em 390 px; nenhuma exceção de página ou rolagem horizontal nessas aberturas. Amostra visual não equivale à aprovação dos 613 capítulos ou à validação das integrações autenticadas.
+- Matriz atual: 613 representações, zero lacunas; inventário de qualidade: 534 não revisados, 79 em validação e zero aprovações formalmente registradas. Resumos: 435 de 612 na revisão editorial 2; 177 restantes. Questões: 2.887, das quais 90 de Fuvest 2025 com texto de marcador.
+- Prioridades: revisar inicialização de usuário novo com `mockMastery` persistido; triar 12 ocorrências de dependências (6 altas, 6 moderadas); reduzir chunks inicial/Visual; concluir revisão visual e conteúdo. Nietzsche ainda usa a família genérica criticada em setembro.
+- As filas antigas deste documento são históricas. Retomar pela análise atual e por deltas do GitHub. Conversas da conta anterior não foram recuperadas; exigências que só existam nelas permanecem desconhecidas.
+
+## Primeira etapa da retomada — 01/10/2026
+
+- Mudanças locais em `main`, sobre `6cbc94cdb46048d00947db136ae529e1c6ef41af`. Relatório: [RETOMADA-PROGRESSO-CARREGAMENTO-2026-10-01.md](RETOMADA-PROGRESSO-CARREGAMENTO-2026-10-01.md).
+- Contas novas começam com domínio sem evidência e backlog vazio, inclusive nos caminhos de atualização e recuperação. Registros existentes são preservados; nenhuma limpeza ou migração de dados reais foi executada.
+- O domínio carregado é isolado por UID; leituras e ações antigas não contaminam a conta atual. Falha de leitura deixa o estado vazio e bloqueia atualização; demonstração permanece disponível sem login.
+- Busca global carrega o corpus de 613 capítulos somente ao abrir. Bundle principal: 3.801,04 kB → 66,48 kB (gzip 1.122,26 → 23,01 kB); isso não mede todo o tráfego inicial nem desempenho no iPad.
+- TypeScript, build, 779 testes Node e 760 testes Vitest aprovados. Chromium confirmou download sob demanda, busca por mitose, teclado, fechamento durante download lento, navegação para Caderno e celular claro/escuro com movimento reduzido.
+- Próximo: conferir a sessão real Google/Firebase e a origem de eventuais exemplos antigos; atualizar dependências com revisão do gRPC fixado pelo cliente Firestore; medir desempenho no aparelho real. Sem publicação nesta etapa.
+
+## Dependências e histórico — 01/10/2026
+
+- A consulta autorizada ao histórico do Crivo foi concluída somente em leitura. A estudante confirmou que o domínio baixo corresponde ao início do uso; isso não justifica recalcular ou limpar seu progresso. Dados e credenciais dessa consulta ficam fora do repositório público.
+- Dependências atualizadas dentro das versões principais existentes. Firebase 12.19.0, Firebase Admin 14.5.0, Undici 7.30.0 e jsdom 30.1.1; overrides restritos de gRPC para Firestore e uuid para gaxios 6. Relatório e limites: [ATUALIZACAO-DEPENDENCIAS-2026-10-01.md](ATUALIZACAO-DEPENDENCIAS-2026-10-01.md).
+- Auditoria npm passou de 12 dependências afetadas para zero vulnerabilidades conhecidas na data. Instalação limpa, TypeScript, build, integração Auth/Firestore em emuladores no Node 22 e HTTP/multipart locais aprovados. Busca e dez aberturas de telas em desktop/celular sem exceções ou transbordamento.
+- Suíte completa após as atualizações: 779 testes Node e 760 testes Vitest aprovados (1.539 no total), com zero falhas.
+- Próximas prioridades de produto: revisão visual/pedagógica do inventário, enunciados de Fuvest 2025 e revisão editorial dos resumos. As alterações seguem locais, sem publicação.
+
+## Conteúdo e conferência de Ciências — 01/10/2026
+
+- Recuperados os 90 enunciados da prova V1 da Fuvest 2025. Alternativas textuais de 88 questões restauradas; 60 e 69 mantêm alternativas gráficas na página original. Os textos-base de 13 questões e as notas de apoio foram preservados. As 2.797 outras questões, imagens, IDs e comentários não mudaram; os 90 gabaritos foram conferidos sem alterações.
+- Receita em `scripts/recuperar-fuvest-2025.py`, com hash obrigatório do PDF. PDF e intermediários fora do Git. Se reutilizar o importador antigo de páginas, rodar a recuperação depois; a suíte agora recusa os antigos marcadores.
+- Revisados osmose e estudo gráfico de lentes: 36 estados em 390/768/1440, claro/escuro e movimento reduzido. Corrigida a colisão entre “objeto” e “imagem” na lente divergente. Teclado, animação finita e alternância dos modos conferidos em desktop.
+- Inventário: 532 sem revisão, 81 em validação, zero aprovados. Os dois novos registros são validação técnica; aprovação editorial continua pendente. Não declarar concluídas Ciências ou as 613 representações.
+- Suíte: 782 testes Node e 760 Vitest aprovados, além dos testes específicos de mecanismos/inventário. Evidências e limites: [REVISAO-CONTEUDO-CIENCIAS-2026-10-01.md](REVISAO-CONTEUDO-CIENCIAS-2026-10-01.md). Alterações locais, sem publicação ou escrita no histórico real.
+
+### Revisão visual integral — 02/10/2026 (UTC)
+
+Relatório canônico: `docs/REVISAO-VISUAL-INTEGRAL-2026-10-02.md`; inventário em `docs/visual-integral-2026-10-02/capitulos.json` e `.csv`. Revisão da build local, sem login ou alteração de progresso: 613 capítulos/3.678 configurações, 28 telas/224 configurações, capturas e fonte confrontadas. Recomendações do mecanismo central: 315 preservar, 170 ajustar, 128 redesenhar; nenhuma aprovação editorial foi promovida.
+
+Priorizar fidelidade de diagramas de Física/Matemática e associações de conteúdo; depois painel Personalizar fora da borda móvel, overflows em Independência/Competências/Admin Conteúdo, nomes acessíveis, foco da busca e contraste. Os 128 redesenhos incluem mecanismos genéricos sem explicação do assunto: não equivalem a 128 bugs de execução. Diagnóstico/persistência, todas as animações/combinações e telas dependentes de conteúdo autenticado não receberam certificação integral. Evidências completas e galeria local: `/workspace/crivo-visual-review-2026-10-02/`; imagens selecionadas sem material privado no diretório do relatório. Nenhum código do app foi alterado neste pedido de revisão.

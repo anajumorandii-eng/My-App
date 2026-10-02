@@ -39,6 +39,15 @@ const roundNotes = 'Redesenhada em 25/09 pela régua aprovada: cena própria com
 const notes26 = roundNotes.replace('25/09', '26/09');
 
 export const visualQualityReviews: QualityReview[] = [
+  ...[
+    { chapterId: 'summary-biologia-membranas-celulares', mechanism: 'membrana seletiva e osmose em células animal e vegetal', relation: 'água entra ou sai conforme tonicidade; parede limita expansão e plasmólise retrai o protoplasto' },
+    { chapterId: 'summary-fisica-lentes-esfericas-estudo-grafico', mechanism: 'traçado de raios em lentes delgadas convergentes e divergentes', relation: 'raios reais e prolongamentos virtuais determinam imagem; objeto no foco não tem imagem finita' },
+  ].map((review): QualityReview => ({
+    ...review, status: 'em-validacao',
+    evidencePaths: [390, 768, 1440].flatMap(width => ['light', 'dark'].map(theme =>
+      `docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/${review.chapterId.replace('summary-', '')}-${width}-${theme}.png`)),
+    notes: 'Revisão técnica em 01/10: três estados por capítulo, 390/768/1440 px, claro/escuro e movimento reduzido no navegador. Sem overflow, SVG não finito ou colisão entre objeto/imagem após correção dos rótulos. Capturas mostram plasmólise e lente divergente. As capturas não equivalem à aprovação editorial do capítulo completo.',
+  })),
   ...mechanismExpansion.map(([chapterId, mechanism, relation]): QualityReview => ({
     chapterId, mechanism, relation, status: 'em-validacao',
     evidencePaths: ['390', '1440'].flatMap(width => ['light', 'dark'].map(theme =>

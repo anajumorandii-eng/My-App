@@ -1,0 +1,24 @@
+[
+  {
+    "chapter": "biologia-membranas-celulares",
+    "keyboard": true,
+    "finiteAnimation": true,
+    "modes": [
+      "explorar",
+      "testar",
+      "reconstruir",
+      "explorar"
+    ]
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "keyboard": true,
+    "finiteAnimation": true,
+    "modes": [
+      "explorar",
+      "testar",
+      "reconstruir",
+      "explorar"
+    ]
+  }
+]

@@ -1,0 +1,362 @@
+[
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 390,
+    "theme": "light",
+    "state": "Hipotônico",
+    "text": "Meio externo hipotônico: água entra. A célula animal aumenta; a vegetal fica túrgida, contida pela parede.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 390,
+    "theme": "light",
+    "state": "Isotônico",
+    "text": "Meio isotônico: não há fluxo líquido de água; as trocas continuam nos dois sentidos. A célula vegetal pode permanecer flácida.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 390,
+    "theme": "light",
+    "state": "Hipertônico",
+    "text": "Meio externo hipertônico: água sai. A célula animal encolhe; o protoplasto vegetal se retrai, afastando-se da parede (plasmólise).",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 390,
+    "theme": "light",
+    "state": "Em F",
+    "text": "p = 70; f = 70. Sem imagem a distância finita.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 390,
+    "theme": "light",
+    "state": "Entre F e a lente",
+    "text": "p = 42; f = 70. p′ = -105. Imagem virtual e direita, 2,5× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 390,
+    "theme": "light",
+    "state": "Divergente",
+    "text": "p = 42; f = -70. p′ = -26,3. Imagem virtual e direita, 0,6× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 390,
+    "theme": "dark",
+    "state": "Hipotônico",
+    "text": "Meio externo hipotônico: água entra. A célula animal aumenta; a vegetal fica túrgida, contida pela parede.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 390,
+    "theme": "dark",
+    "state": "Isotônico",
+    "text": "Meio isotônico: não há fluxo líquido de água; as trocas continuam nos dois sentidos. A célula vegetal pode permanecer flácida.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 390,
+    "theme": "dark",
+    "state": "Hipertônico",
+    "text": "Meio externo hipertônico: água sai. A célula animal encolhe; o protoplasto vegetal se retrai, afastando-se da parede (plasmólise).",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 390,
+    "theme": "dark",
+    "state": "Em F",
+    "text": "p = 70; f = 70. Sem imagem a distância finita.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 390,
+    "theme": "dark",
+    "state": "Entre F e a lente",
+    "text": "p = 42; f = 70. p′ = -105. Imagem virtual e direita, 2,5× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 390,
+    "theme": "dark",
+    "state": "Divergente",
+    "text": "p = 42; f = -70. p′ = -26,3. Imagem virtual e direita, 0,6× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 768,
+    "theme": "light",
+    "state": "Hipotônico",
+    "text": "Meio externo hipotônico: água entra. A célula animal aumenta; a vegetal fica túrgida, contida pela parede.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 768,
+    "theme": "light",
+    "state": "Isotônico",
+    "text": "Meio isotônico: não há fluxo líquido de água; as trocas continuam nos dois sentidos. A célula vegetal pode permanecer flácida.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 768,
+    "theme": "light",
+    "state": "Hipertônico",
+    "text": "Meio externo hipertônico: água sai. A célula animal encolhe; o protoplasto vegetal se retrai, afastando-se da parede (plasmólise).",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 768,
+    "theme": "light",
+    "state": "Em F",
+    "text": "p = 70; f = 70. Sem imagem a distância finita.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 768,
+    "theme": "light",
+    "state": "Entre F e a lente",
+    "text": "p = 42; f = 70. p′ = -105. Imagem virtual e direita, 2,5× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 768,
+    "theme": "light",
+    "state": "Divergente",
+    "text": "p = 42; f = -70. p′ = -26,3. Imagem virtual e direita, 0,6× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 768,
+    "theme": "dark",
+    "state": "Hipotônico",
+    "text": "Meio externo hipotônico: água entra. A célula animal aumenta; a vegetal fica túrgida, contida pela parede.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 768,
+    "theme": "dark",
+    "state": "Isotônico",
+    "text": "Meio isotônico: não há fluxo líquido de água; as trocas continuam nos dois sentidos. A célula vegetal pode permanecer flácida.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 768,
+    "theme": "dark",
+    "state": "Hipertônico",
+    "text": "Meio externo hipertônico: água sai. A célula animal encolhe; o protoplasto vegetal se retrai, afastando-se da parede (plasmólise).",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 768,
+    "theme": "dark",
+    "state": "Em F",
+    "text": "p = 70; f = 70. Sem imagem a distância finita.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 768,
+    "theme": "dark",
+    "state": "Entre F e a lente",
+    "text": "p = 42; f = 70. p′ = -105. Imagem virtual e direita, 2,5× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 768,
+    "theme": "dark",
+    "state": "Divergente",
+    "text": "p = 42; f = -70. p′ = -26,3. Imagem virtual e direita, 0,6× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 1440,
+    "theme": "light",
+    "state": "Hipotônico",
+    "text": "Meio externo hipotônico: água entra. A célula animal aumenta; a vegetal fica túrgida, contida pela parede.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 1440,
+    "theme": "light",
+    "state": "Isotônico",
+    "text": "Meio isotônico: não há fluxo líquido de água; as trocas continuam nos dois sentidos. A célula vegetal pode permanecer flácida.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 1440,
+    "theme": "light",
+    "state": "Hipertônico",
+    "text": "Meio externo hipertônico: água sai. A célula animal encolhe; o protoplasto vegetal se retrai, afastando-se da parede (plasmólise).",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 1440,
+    "theme": "light",
+    "state": "Em F",
+    "text": "p = 70; f = 70. Sem imagem a distância finita.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 1440,
+    "theme": "light",
+    "state": "Entre F e a lente",
+    "text": "p = 42; f = 70. p′ = -105. Imagem virtual e direita, 2,5× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 1440,
+    "theme": "light",
+    "state": "Divergente",
+    "text": "p = 42; f = -70. p′ = -26,3. Imagem virtual e direita, 0,6× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 1440,
+    "theme": "dark",
+    "state": "Hipotônico",
+    "text": "Meio externo hipotônico: água entra. A célula animal aumenta; a vegetal fica túrgida, contida pela parede.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 1440,
+    "theme": "dark",
+    "state": "Isotônico",
+    "text": "Meio isotônico: não há fluxo líquido de água; as trocas continuam nos dois sentidos. A célula vegetal pode permanecer flácida.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "biologia-membranas-celulares",
+    "width": 1440,
+    "theme": "dark",
+    "state": "Hipertônico",
+    "text": "Meio externo hipertônico: água sai. A célula animal encolhe; o protoplasto vegetal se retrai, afastando-se da parede (plasmólise).",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 1440,
+    "theme": "dark",
+    "state": "Em F",
+    "text": "p = 70; f = 70. Sem imagem a distância finita.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 1440,
+    "theme": "dark",
+    "state": "Entre F e a lente",
+    "text": "p = 42; f = 70. p′ = -105. Imagem virtual e direita, 2,5× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  },
+  {
+    "chapter": "fisica-lentes-esfericas-estudo-grafico",
+    "width": 1440,
+    "theme": "dark",
+    "state": "Divergente",
+    "text": "p = 42; f = -70. p′ = -26,3. Imagem virtual e direita, 0,6× o tamanho do objeto.",
+    "overflow": false,
+    "collisions": false,
+    "errors": []
+  }
+]

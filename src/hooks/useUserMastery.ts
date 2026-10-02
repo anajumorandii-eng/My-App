@@ -10,6 +10,7 @@ export function useUserMastery() {
   const [loading, setLoading] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
   const [usingFallback, setUsingFallback] = useState(false);
+  const [loadedUid, setLoadedUid] = useState<string | null>(null);
   const [pendingWrites, setPendingWrites] = useState(0);
   const pendingWritesRef = useRef(0);
   const localRevision = useRef(0);
@@ -24,10 +25,14 @@ export function useUserMastery() {
   useEffect(() => {
     pendingWritesRef.current = 0;
     setPendingWrites(0);
+    setSyncError(null);
     if (!user) {
       setMastery(mockMastery);
       setSyncError(null);
       setPendingWrites(0);
+      setLoadedUid(null);
+      setUsingFallback(false);
+      setLoading(false);
       return;
     }
 
@@ -38,12 +43,17 @@ export function useUserMastery() {
         if (!cancelled) {
           setMastery(data);
           setUsingFallback(false);
+          setLoadedUid(user.uid);
         }
       })
       .catch((error) => {
         console.error('Failed to load user mastery:', error);
-        if (!cancelled) setSyncError('Não foi possível carregar seu progresso salvo. Mostrando dados de demonstração.');
-        if (!cancelled) setUsingFallback(true);
+        if (!cancelled) {
+          setMastery([]);
+          setLoadedUid(user.uid);
+          setSyncError('Não foi possível carregar seu progresso salvo. Recarregue a página para tentar novamente.');
+          setUsingFallback(true);
+        }
       })
       .finally(() => {
         if (!cancelled) setLoading(false);
@@ -56,6 +66,9 @@ export function useUserMastery() {
 
   const updateMastery = useCallback(
     (updater: (prev: TopicMastery[]) => TopicMastery[]): Promise<boolean> => {
+      // Sem leitura confirmada, uma ação não pode usar a demonstração ou
+      // o estado da conta anterior como se fosse o progresso desta conta.
+      if (user && (activeUid.current !== user.uid || loadedUid !== user.uid || loading || usingFallback)) return Promise.resolve(false);
       setMastery((prev) => updater(prev));
       if (!user) return Promise.resolve(true);
 
@@ -101,20 +114,25 @@ export function useUserMastery() {
           }
         });
     },
-    [user]
+    [user, loadedUid, loading, usingFallback]
   );
 
   const acceptCommittedMastery = useCallback((uid: string, committed: TopicMastery[]) => {
     if (activeUid.current !== uid) return false;
     localRevision.current += 1;
     setMastery(committed);
+    setLoadedUid(uid);
+    setUsingFallback(false);
     setSyncError(null);
     return true;
   }, []);
 
-    // "Dados salvos" e "estou logada" não são a mesma coisa: quando a leitura do
-  // Firestore falha, a tela continua mostrando os dados de demonstração, e com
-  // isPersisted={!!user} o aviso de "Modo demonstração" ficava escondido
-  // justamente aí — a aluna via números inventados sem nada dizendo isso.
-return { mastery, updateMastery, acceptCommittedMastery, loading, syncError, syncing: pendingWrites > 0, isPersisted: !!user && !usingFallback };
+  const waitingForAccount = !!user && loadedUid !== user.uid;
+  return {
+    mastery: user ? (waitingForAccount ? [] : mastery) : (loadedUid === null ? mastery : mockMastery),
+    updateMastery, acceptCommittedMastery,
+    loading: loading || waitingForAccount, syncError,
+    syncing: pendingWrites > 0,
+    isPersisted: !!user && !waitingForAccount && !loading && !usingFallback,
+  };
 }

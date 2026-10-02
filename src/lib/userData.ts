@@ -2,7 +2,7 @@ import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, limit, runTra
 import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem, StudentGoals, PlanFeedback, StudySessionRecord, RecoveryEvidence } from '../types';
 import type { SummaryProgressMap } from '../types/summary';
-import { mockMastery, mockProfile, mockBacklog, mockTopics, mockStudentGoals } from '../data/mockData';
+import { mockProfile, mockTopics, mockStudentGoals } from '../data/mockData';
 import { remapLegacyTopicId } from '../data/legacyTopics';
 import { SPLIT_TOPIC_PARENTS } from '../data/topicSplits';
 import { applyRecoveryEvidence, preserveLegacyMasteryRows, RecoveryEvidenceResult } from './recoveryEvidence';
@@ -69,21 +69,19 @@ function reconcileMastery(saved: TopicMastery[]): TopicMastery[] {
 
 export async function getUserMastery(uid: string): Promise<TopicMastery[]> {
   const ref = doc(db, 'users', uid, 'data', 'mastery');
-  const snap = await getDoc(ref);
-  if (snap.exists()) {
-    const saved = (snap.data().items as TopicMastery[]) ?? [];
+  // A leitura e a reconciliação são atômicas: outra aba pode terminar um
+  // diagnóstico enquanto esta abre, e esse resultado não pode ser sobrescrito.
+  return runTransaction(db, async (transaction) => {
+    const snap = await transaction.get(ref);
+    const saved = snap.exists() ? ((snap.data().items as TopicMastery[]) ?? []) : [];
     const reconciled = reconcileMastery(saved);
-    const changed = reconciled.length !== saved.length
+    const changed = !snap.exists() || reconciled.length !== saved.length
       || reconciled.some((item, i) => item.topicId !== saved[i]?.topicId);
     if (changed) {
-      await setDoc(ref, { items: reconciled, updatedAt: serverTimestamp() }, { merge: true });
+      transaction.set(ref, { items: reconciled, updatedAt: serverTimestamp() }, { merge: true });
     }
     return reconciled;
-  }
-  // First time this user shows up: seed with the demo dataset so the
-  // app isn't empty, then every change from here on is their own.
-  await setDoc(ref, { items: mockMastery, updatedAt: serverTimestamp() });
-  return mockMastery;
+  });
 }
 
 export async function saveUserMastery(uid: string, items: TopicMastery[]): Promise<void> {
@@ -102,7 +100,7 @@ export async function updateUserMastery(
   const ref = doc(db, 'users', uid, 'data', 'mastery');
   return runTransaction(db, async (transaction) => {
     const snap = await transaction.get(ref);
-    const saved = snap.exists() ? ((snap.data().items as TopicMastery[]) ?? []) : mockMastery;
+    const saved = snap.exists() ? ((snap.data().items as TopicMastery[]) ?? []) : [];
     const current = reconcileMastery(saved);
     const next = updater(current);
     transaction.set(ref, { items: next, updatedAt: serverTimestamp() }, { merge: true });
@@ -197,8 +195,9 @@ export async function getUserBacklog(uid: string): Promise<BacklogItem[]> {
     }
     return items;
   }
-  await setDoc(ref, { items: mockBacklog, updatedAt: serverTimestamp() });
-  return mockBacklog;
+  // Sem atraso registrado, não há documento a criar. Assim uma leitura
+  // inicial não apaga um atraso que outra aba acabou de cadastrar.
+  return [];
 }
 
 export async function saveUserBacklog(uid: string, items: BacklogItem[]): Promise<void> {
@@ -213,7 +212,7 @@ export async function updateUserBacklog(
   const ref = doc(db, 'users', uid, 'data', 'backlog');
   return runTransaction(db, async (transaction) => {
     const snap = await transaction.get(ref);
-    const saved = snap.exists() ? ((snap.data().items as BacklogItem[]) ?? []) : mockBacklog;
+    const saved = snap.exists() ? ((snap.data().items as BacklogItem[]) ?? []) : [];
     const current = reconcileBacklog(saved).items;
     const next = updater(current);
     transaction.set(ref, { items: next, updatedAt: serverTimestamp() }, { merge: true });
@@ -237,10 +236,10 @@ export async function recordUserRecoveryEvidence(
     ]);
     const savedBacklog = backlogSnap.exists()
       ? ((backlogSnap.data().items as BacklogItem[]) ?? [])
-      : mockBacklog;
+      : [];
     const savedMastery = masterySnap.exists()
       ? ((masterySnap.data().items as TopicMastery[]) ?? [])
-      : mockMastery;
+      : [];
     if (evidenceSnap.exists()) {
       return { backlog: savedBacklog, mastery: savedMastery, applied: false };
     }

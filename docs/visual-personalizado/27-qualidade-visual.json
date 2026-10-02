@@ -239,11 +239,18 @@
     "title": "Membranas Celulares",
     "primary": "board",
     "artifact": "membrana",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "membrana seletiva e osmose em células animal e vegetal",
+    "relation": "água entra ou sai conforme tonicidade; parede limita expansão e plasmólise retrai o protoplasto",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/biologia-membranas-celulares-390-light.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/biologia-membranas-celulares-390-dark.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/biologia-membranas-celulares-768-light.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/biologia-membranas-celulares-768-dark.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/biologia-membranas-celulares-1440-light.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/biologia-membranas-celulares-1440-dark.png"
+    ],
+    "notes": "Revisão técnica em 01/10: três estados por capítulo, 390/768/1440 px, claro/escuro e movimento reduzido no navegador. Sem overflow, SVG não finito ou colisão entre objeto/imagem após correção dos rótulos. Capturas mostram plasmólise e lente divergente. As capturas não equivalem à aprovação editorial do capítulo completo."
   },
   {
     "id": "summary-biologia-citoplasma-estrutura-e-componentes-i",
@@ -1713,11 +1720,18 @@
     "title": "Lentes Esféricas: Estudo Gráfico",
     "primary": "board",
     "artifact": "lentes",
-    "status": "nao-revisado",
-    "mechanism": "",
-    "relation": "",
-    "evidencePaths": [],
-    "notes": ""
+    "status": "em-validacao",
+    "mechanism": "traçado de raios em lentes delgadas convergentes e divergentes",
+    "relation": "raios reais e prolongamentos virtuais determinam imagem; objeto no foco não tem imagem finita",
+    "evidencePaths": [
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/fisica-lentes-esfericas-estudo-grafico-390-light.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/fisica-lentes-esfericas-estudo-grafico-390-dark.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/fisica-lentes-esfericas-estudo-grafico-768-light.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/fisica-lentes-esfericas-estudo-grafico-768-dark.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/fisica-lentes-esfericas-estudo-grafico-1440-light.png",
+      "docs/visual-personalizado/screenshots/revisao-ciencias-2026-10-01/fisica-lentes-esfericas-estudo-grafico-1440-dark.png"
+    ],
+    "notes": "Revisão técnica em 01/10: três estados por capítulo, 390/768/1440 px, claro/escuro e movimento reduzido no navegador. Sem overflow, SVG não finito ou colisão entre objeto/imagem após correção dos rótulos. Capturas mostram plasmólise e lente divergente. As capturas não equivalem à aprovação editorial do capítulo completo."
   },
   {
     "id": "summary-fisica-estudo-analitico-das-lentes-esfericas",

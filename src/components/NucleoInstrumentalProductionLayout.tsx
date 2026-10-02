@@ -1,4 +1,4 @@
-import React, { Suspense, useEffect, useMemo, useState } from 'react';
+import React, { Suspense, lazy, useEffect, useMemo, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
@@ -12,7 +12,11 @@ import { PALETTES, SCREENS } from '../prototypes/NucleoInstrumentalPrototype';
 import { ErrorBoundary } from './ErrorBoundary';
 import { Skeleton } from './ui/Skeleton';
 import { AmbienteProvider, useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
-import { BotaoBuscar, BuscaRapida } from '../views/visual-boards/BuscaRapida';
+import { BotaoBuscar } from './BotaoBuscar';
+
+// A busca usa o texto completo dos 613 capítulos. Baixá-lo para um botão
+// fechado atrasava toda abertura do app, mesmo sem consultar um resumo.
+const BuscaRapida = lazy(() => import('../views/visual-boards/BuscaRapida'));
 import { PainelPersonalizar } from '../views/visual-boards/PainelPersonalizar';
 import { FundoCaderno } from './FundoCaderno';
 
@@ -174,13 +178,20 @@ function LayoutComAmbiente() {
         </main>
       </div>
       <BottomNav />
-      <BuscaRapida
+      {buscaAberta && <Suspense fallback={
+        <div className="vs-busca-fundo" role="dialog" aria-modal="true" aria-label="Busca rápida" onKeyDown={(event) => { if (event.key === 'Escape') setBuscaAberta(false); }}>
+          <div className="vs-busca">
+            <p role="status">Carregando busca…</p>
+            <button type="button" autoFocus onClick={() => setBuscaAberta(false)}>Fechar busca</button>
+          </div>
+        </div>
+      }><BuscaRapida
         aberta={buscaAberta}
         onFechar={() => setBuscaAberta(false)}
         onAbrir={(id) => navigate(`/visual?summary=${encodeURIComponent(id)}`)}
         telas={TELAS_DA_BUSCA}
         onIrParaTela={(destino) => navigate(destino)}
-      />
+      /></Suspense>}
       <OnboardingModal open={showOnboarding} onClose={closeOnboarding} onStartDiagnostic={() => { closeOnboarding(); navigate('/diagnostico'); }} />
     </div>
   );
