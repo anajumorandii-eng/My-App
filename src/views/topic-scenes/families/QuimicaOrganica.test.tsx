@@ -56,6 +56,14 @@ describe('QuimicaOrganica', () => {
     expect(geometrica).toHaveTextContent('CH₃');
   });
 
+  it('mantém H e Br inteiros dentro do viewBox no produto de adição', () => {
+    const reactions: SceneEntry = { chapterId: 'summary-quimica-interpretando-reacoes-organicas', family: 'tipologia', question: 'Como interpretar?', items: [{ label: 'Adição', claim: 'abre a ligação pi', section: 'Reações', quote: 'duas ligações simples surgem' }] };
+    const { container } = render(<QuimicaOrganica entry={reactions} />);
+    const bromine = [...container.querySelectorAll('text')].find((node) => node.textContent === 'Br')!;
+    expect(Number(bromine.getAttribute('x'))).toBeLessThanOrEqual(208);
+    expect(bromine).toHaveAttribute('text-anchor', 'middle');
+  });
+
   it('é usada pela cena real tanto em nomenclatura quanto na oxidação de álcoois', () => {
     const rendered = render(<TopicScene summaryId="summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados" />);
     expect(rendered.container.querySelector('.tc-organic-scene')).toBeInTheDocument();

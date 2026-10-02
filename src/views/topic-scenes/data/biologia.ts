@@ -128,7 +128,7 @@ export const biologia: SceneEntry[] = [
 {
   chapterId: "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios",
   family: "tipologia",
-  question: "Como se classificam os carboidratos e os polissacarídeos?",
+  question: "Como carboidratos e lipídios relacionam estrutura e função?",
   items: [
     {
       label: "Monossacarídeos",
@@ -149,10 +149,10 @@ export const biologia: SceneEntry[] = [
       quote: "o amido é o polissacarídeo das plantas, armazenado em amiloplastos de raízes, caules e sementes, e o glicogênio é o dos animais e fungos, estocado sobretudo no fígado e no músculo esquelético",
     },
     {
-      label: "Polissacarídeos estruturais",
-      claim: "Celulose na parede vegetal e quitina no exoesqueleto de artrópodes, ambas com ligação beta que enzimas humanas não digerem.",
-      section: "Reserva e estrutura",
-      quote: "a celulose forma a parede das células vegetais e é o composto orgânico mais abundante da biosfera; a quitina forma o exoesqueleto dos artrópodes e a parede celular dos fungos",
+      label: "Lipídios: reserva e membrana",
+      claim: "Triglicerídeos armazenam energia; fosfolipídios anfipáticos formam a bicamada, com cabeças polares voltadas para a água e caudas apolares protegidas dela.",
+      section: "Lipídios",
+      quote: "Os fosfolipídios, anfipáticos, compõem todas as membranas biológicas",
     },
   ],
 },

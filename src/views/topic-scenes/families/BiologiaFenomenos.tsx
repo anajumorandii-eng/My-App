@@ -48,8 +48,9 @@ const hexagono = (cx: number, cy: number, r = 11) => Array.from({ length: 6 }, (
 const Anel = ({ x, y }: { x: number; y: number }) => <polygon points={hexagono(x, y)} className="bf-anel" />;
 
 // ---------------------------------------------------------------------------
-// Carboidratos: um anel, dois anéis ligados soltando água, cadeia ramificada
-// de reserva e cadeias retas e paralelas de estrutura.
+// Carboidratos e lipídios: os três primeiros quadros distinguem tamanho e
+// função dos glicídios; o último contrapõe a reserva apolar à cabeça anfipática
+// que permite ao fosfolipídio organizar a membrana.
 function Carboidratos({ ativo, t }: Cena) {
   return <Quadros ativo={ativo} t={t} quadros={[
     { nome: 'Monossacarídeos', x: 12, y: 10, w: 222, h: 136, legenda: 'glicose, frutose, galactose', desenho: <>
@@ -66,9 +67,12 @@ function Carboidratos({ ativo, t }: Cena) {
       {[0, 1].map((i) => <Anel key={`r${i}`} x={92 + i * 26} y={246} />)}<line x1={92} y1={225} x2={92} y2={235} className="bf-ligacao" />
       <text x={140} y={250} className="qf-mini">ligação α</text>
     </> },
-    { nome: 'Polissacarídeos estruturais', x: 246, y: 154, w: 222, h: 136, legenda: 'celulose · quitina', desenho: <>
-      {[0, 1, 2].map((fila) => [0, 1, 2, 3, 4].map((i) => <Anel key={`${fila}-${i}`} x={274 + i * 26} y={196 + fila * 24} />))}
-      <text x={440} y={220} textAnchor="end" className="qf-mini">ligação β</text>
+    { nome: 'Lipídios: reserva e membrana', x: 246, y: 154, w: 222, h: 136, legenda: 'triglicerídeo · fosfolipídio', desenho: <>
+      <circle cx="294" cy="202" r="12" className="bf-anel" />
+      {[0, 1].map((i) => <path key={i} d={`M${288 + i * 12} 214v38`} className="bf-ligacao" />)}
+      <text x="294" y="270" textAnchor="middle" className="qf-mini">cabeça polar + caudas apolares</text>
+      <path d="M382 196v55m0-45 42-18m-42 38 42-4m-42 19 42 12" className="bf-ligacao" />
+      <text x="427" y="270" textAnchor="end" className="qf-mini">glicerol + 3 ácidos graxos</text>
     </> },
   ]} />;
 }
@@ -596,7 +600,7 @@ function EvolucaoHistorica({ ativo, t }: Cena) {
 }
 
 export const BIOLOGIA_FENOMENO_CENAS: Record<string, CenaFenomeno> = {
-  'summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios': { cena: Carboidratos, rotulos: ['Monossacarídeos', 'Dissacarídeos', 'Polissacarídeos de reserva', 'Polissacarídeos estruturais'], titulo: 'carboidratos' },
+  'summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios': { cena: Carboidratos, rotulos: ['Monossacarídeos', 'Dissacarídeos', 'Polissacarídeos de reserva', 'Lipídios: reserva e membrana'], titulo: 'carboidratos e lipídios' },
   'summary-biologia-heranca-sexual': { cena: HerancaSexual, rotulos: Object.keys(HERANCA), titulo: 'herança e cromossomos sexuais' },
   'summary-biologia-mecanismos-da-evolucao-biologica': { cena: Evolucao, rotulos: ['Mutação', 'Recombinação', 'Seleção natural', 'Deriva genética', 'Migração', 'Isolamento reprodutivo'], titulo: 'fatores evolutivos' },
   'summary-biologia-biomas-brasileiros': { cena: Biomas, rotulos: ['Amazônia', 'Cerrado', 'Mata Atlântica', 'Caatinga', 'Pampa', 'Pantanal'], titulo: 'biomas' },
