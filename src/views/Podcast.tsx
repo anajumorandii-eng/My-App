@@ -287,6 +287,7 @@ export default function Podcast() {
               <div className="flex items-center justify-between">
                 <div className="flex items-center min-w-0">
                   <button
+                    aria-label={`${isLoadingAudio ? 'Carregando áudio do' : isPlaying ? 'Parar' : 'Reproduzir'} episódio ${episode.title}`}
                     onClick={() => play(episode.id, activeScript)}
                     disabled={isLoadingAudio}
                     className="w-10 h-10 rounded-full flex items-center justify-center mr-3.5 shrink-0 transition-colors"

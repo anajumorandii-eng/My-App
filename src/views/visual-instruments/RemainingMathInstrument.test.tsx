@@ -1,10 +1,22 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
-import { interactiveSummaries } from '../../data/interactiveSummaries';
-import { buildVisualMap } from '../../lib/visualStudy';
-import { remainingMathInstrument } from './RemainingMathInstrument';
-import type { RemainingId } from '../../lib/remainingMath';
+import {render,fireEvent,cleanup,screen} from '@testing-library/react';
+import {afterEach,expect,it,describe,vi} from 'vitest';
+import {interactiveSummaries} from '../../data/interactiveSummaries';
+import {buildVisualMap} from '../../lib/visualStudy';
+import {remainingMathInstrument} from './RemainingMathInstrument';
+import {REMAINING,type RemainingId} from '../../lib/remainingMath';
+afterEach(cleanup);
+function scene(id:RemainingId){const C=remainingMathInstrument(id);const view=render(<C map={buildVisualMap(interactiveSummaries.find(x=>x.id===ids.find(([config])=>config===id)![1])!)} states={{}} selectedId={null} onSelect={()=>{}} hiddenEdgeIds={[]} mode="explorar"/>);return {root:view.container,set:(v:number)=>fireEvent.change(view.getByRole('slider'),{target:{value:String(v)}}),get:(s:string)=>view.container.querySelector(s)!};}
+const n=(el:Element,a:string)=>Number(el.getAttribute(a));
+it('identificadores acompanham cada pessoa no grupo',()=>{const s=scene('grupo');for(const g of s.root.querySelectorAll('svg g')){const c=g.querySelector('circle'),t=g.querySelector('text');if(c&&t)expect(n(t,'y')-n(c,'cy')).toBe(5);}});
+it.each(['prob','eventos'] as const)('%s elimina overlap quando interseção é zero',id=>{const s=scene(id);s.set(id==='prob'?0:1);const [a,b]=s.root.querySelectorAll('svg circle');expect(Math.abs(n(a,'cx')-n(b,'cx'))).toBeGreaterThanOrEqual(n(a,'r')+n(b,'r'));s.set(id==='prob'?3:2);const [c,d]=s.root.querySelectorAll('svg circle');expect(Math.abs(n(c,'cx')-n(d,'cx'))).toBeLessThan(n(c,'r')+n(d,'r'));if(id==='eventos')expect(s.root.querySelector('svg')!.textContent).toContain('0,25');});
+it('raio escala circuncírculo e mantém vértices inscritos',()=>{const s=scene('trig-poligonos');for(const v of [1,5,8]){s.set(v);const c=s.get('[data-geometry="circumcircle"]');expect(n(c,'r')).toBe(v*12);const pts=s.get('[data-geometry="inscribed-triangle"]').getAttribute('points')!.split(' ').map(x=>x.split(',').map(Number));for(const [x,y] of pts)expect(Math.hypot(x-n(c,'cx'),y-n(c,'cy'))).toBeCloseTo(v*12);}});
+it('inclinação do triângulo coincide com tangente em todos os ângulos',()=>{const s=scene('trig-outras');for(const v of [15,45,75]){s.set(v);const pts=s.get('[data-geometry="tangent-triangle"]').getAttribute('points')!.split(' ').map(x=>x.split(',').map(Number));expect((pts[1][1]-pts[2][1])/(pts[1][0]-pts[0][0])).toBeCloseTo(Math.tan(v*Math.PI/180));}});
+it('retas espaciais mudam de geometria e indicam profundidade das reversas',()=>{const s=scene('espaco');const shapes=[];for(const v of [1,2,3]){s.set(v);shapes.push(s.get('[data-geometry="space-lines"]').innerHTML);}expect(new Set(shapes).size).toBe(3);expect(s.root.querySelector('[data-depth="different-planes"]')).not.toBeNull();});
+it('cortes passam pelas folhas corretas e parábola acompanha geratriz',()=>{const s=scene('conicas');s.set(1);let p=s.get('[data-geometry="cut-plane"]');expect(n(p,'y1')).toBeLessThan(150);expect(n(p,'y2')).toBeGreaterThan(150);s.set(2);p=s.get('[data-geometry="cut-plane"]');expect((n(p,'x2')-n(p,'x1'))/(n(p,'y2')-n(p,'y1'))).toBeCloseTo(95/118);s.set(3);p=s.get('[data-geometry="cut-plane"]');expect(n(p,'y1')).toBe(n(p,'y2'));expect(n(p,'y1')).toBeLessThan(150);});
+it('quantidade de imagens alcançadas acompanha o controle',()=>{const s=scene('bijeção');for(const v of [2,3,4]){s.set(v);expect(new Set(Array.from(s.root.querySelectorAll('[data-target]')).map(x=>x.getAttribute('data-target'))).size).toBe(v);}});
+it.each(Object.keys(REMAINING) as RemainingId[])('%s mantém rótulos legíveis e valores coerentes',id=>{const s=scene(id);const c=REMAINING[id];for(const v of [c.control.min,c.control.initial,c.control.max]){s.set(v);for(const t of s.root.querySelectorAll('svg text')){expect(Number(t.getAttribute('font-size')??(t as SVGElement).style.fontSize.replace('px',''))).toBeGreaterThanOrEqual(13);expect(n(t,'y')).toBeLessThanOrEqual(290);}for(const r of c.readouts(v))expect(s.root.textContent).toContain(r.value);}});
+
 const ids: Array<[RemainingId, string]> = [['fila','summary-matematica-o-problema-da-fila'],['grupo','summary-matematica-o-problema-do-grupo'],['prob','summary-matematica-operacoes-com-probabilidades'],['eventos','summary-matematica-eventos-disjuntos-e-eventos-independentes'],['estatistica','summary-matematica-estatistica-descritiva'],['trig-poligonos','summary-matematica-relacoes-trigonometricas-em-poligonos'],['trig-outras','summary-matematica-outras-razoes-trigonometricas'],['espaco','summary-matematica-o-universo-tridimensional'],['conicas','summary-matematica-introducao-ao-estudo-analitico-das-conicas'],['composicao','summary-matematica-composicao-de-funcoes'],['bijeção','summary-matematica-funcoes-bijetoras']];
 describe('instrumentos finais de matemática',()=>it('renderiza as onze configurações',()=>{for(const[id,summaryId]of ids){const C=remainingMathInstrument(id);const summary=interactiveSummaries.find(x=>x.id===summaryId)!;const view=render(<C map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={vi.fn()} hiddenEdgeIds={[]} mode="explorar"/>);expect(screen.getByRole('img')).toBeInTheDocument();view.unmount()}}));
 
@@ -15,3 +27,10 @@ describe('pranchas matemáticas estruturais',()=>it('desenha o objeto matemátic
     expect(document.querySelector(`[data-detail="${detail}"]`)).toBeInTheDocument();view.unmount();
   }
 }));
+
+it('B está contido em A quando os três resultados de B estão na interseção',()=>{const s=scene('prob');s.set(3);const [a,b]=s.root.querySelectorAll('svg circle');expect(Math.hypot(n(a,'cx')-n(b,'cx'),n(a,'cy')-n(b,'cy'))+n(b,'r')).toBeLessThanOrEqual(n(a,'r'));});
+it('dez resultados equiprováveis ocupam regiões que reproduzem 4 em A, 3 em B e a interseção escolhida',()=>{const s=scene('prob');for(const v of [0,1,2,3]){s.set(v);const [a,b]=s.root.querySelectorAll('svg circle');const tokens=Array.from(s.root.querySelectorAll('[data-outcome]'));expect(tokens).toHaveLength(10);expect(new Set(tokens.map(x=>x.textContent)).size).toBe(10);const inside=(t:Element,c:Element)=>Math.hypot(n(t,'x')-n(c,'cx'),n(t,'y')-5-n(c,'cy'))<n(c,'r');expect(tokens.filter(t=>inside(t,a))).toHaveLength(4);expect(tokens.filter(t=>inside(t,b))).toHaveLength(3);expect(tokens.filter(t=>inside(t,a)&&inside(t,b))).toHaveLength(v);expect(tokens.filter(t=>!inside(t,a)&&!inside(t,b))).toHaveLength(3+v);}});
+
+it('ambas as extremidades das retas reversas ficam em seus planos projetados',()=>{const s=scene('espaco');s.set(3);const g=s.get('[data-geometry="space-lines"]');const paths=Array.from(g.querySelectorAll('path'));const planes=paths.slice(0,2),lines=paths.slice(-2);const numbers=(el:Element)=>el.getAttribute('d')!.match(/-?\d+(?:\.\d+)?/g)!.map(Number);for(let i=0;i<2;i++){const p=numbers(planes[i]);const line=numbers(lines[i]);for(let j=0;j<4;j+=2){const signs=[];for(let k=0;k<p.length;k+=2){const next=(k+2)%p.length;signs.push((p[next]-p[k])*(line[j+1]-p[k+1])-(p[next+1]-p[k+1])*(line[j]-p[k]));}expect(signs.every(x=>x>=0)||signs.every(x=>x<=0)).toBe(true);}}});
+
+it('cada numeral preserva margem de cinco pixels das bordas dos eventos',()=>{const s=scene('prob');for(const v of [0,1,2,3]){s.set(v);const circles=Array.from(s.root.querySelectorAll('svg circle'));for(const token of s.root.querySelectorAll('[data-outcome]'))for(const c of circles){const d=Math.hypot(n(token,'x')-n(c,'cx'),n(token,'y')-5-n(c,'cy'));expect(Math.abs(d-n(c,'r'))).toBeGreaterThanOrEqual(5);}}});

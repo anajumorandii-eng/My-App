@@ -4,7 +4,7 @@ import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from '../visual-boards/types';
 import {
-  CONFIGS, baricentro, escreverReta, num, pontoMedio, projecaoNaReta,
+  CONFIGS, afastarDosEixos, baricentro, escreverReta, num, pontoMedio, projecaoNaReta,
   type AnalyticConfig, type ConfigId, type Ponto, type Reta,
 } from '../../lib/analyticPlane';
 
@@ -188,13 +188,32 @@ function PlanoAnalitico({
       {config.annotations(ponto).map((m) => {
         const ax = tx(m.x);
         const ay = ty(m.y);
-        const largura = m.text.length * 4.6;
-        const lx = Math.min(LARGURA - 4 - largura / 2, Math.max(4 + largura / 2, tx(m.x + m.dx)));
-        const ly = Math.min(ALTURA - 6, Math.max(12, ty(m.y + m.dy)));
+        const reposicionar = ['circunferencia', 'ponto-reta', 'complexo'].includes(config.id);
+        const largura = m.text.length * (reposicionar ? 5.8 : 4.6);
+        const deslocamento = reposicionar ? afastarDosEixos(m.text, m.x, m.y, alcance, [[m.dx, m.dy]], [ponto, ...(config.fixo ? [config.fixo] : []), ...(config.outros ?? []).map(o => o.p)]) : m;
+        let lx = Math.min(LARGURA - 8 - largura / 2, Math.max(8 + largura / 2, tx(m.x + deslocamento.dx)));
+        let ly = Math.min(ALTURA - 8, Math.max(16, ty(m.y + deslocamento.dy)));
+        // O clamp da moldura pode devolver uma nota à faixa das graduações.
+        if (reposicionar && lx + largura / 2 > ox - 26 && lx - largura / 2 < ox + 8) {
+          lx = lx >= ox ? ox + 12 + largura / 2 : ox - 30 - largura / 2;
+        }
+        if (reposicionar && ly > oy - 3 && ly < oy + 29) ly = oy - 8;
+        if (reposicionar) {
+          // Avaliar depois do clamp e da proteção dos eixos: mover só x pode
+          // devolver a frase ao ponto e ao nome que o helper já tinha evitado.
+          const px = tx(ponto.x), py = ty(ponto.y);
+          const ocupaPonto = (baseline: number) => lx + largura / 2 > px - 17 && lx - largura / 2 < px + 28 && baseline + 4 > py - 23 && baseline - 14 < py + 17;
+          if (ocupaPonto(ly)) {
+            const candidatos = [py - 30, py + 36, 24, ALTURA - 20]
+              .filter(y => y >= 16 && y <= ALTURA - 8 && !(y > oy - 3 && y < oy + 29) && !ocupaPonto(y));
+            candidatos.sort((a, b) => Math.abs(a - ly) - Math.abs(b - ly));
+            ly = candidatos[0] ?? ly;
+          }
+        }
         const cx = (ax + lx) / 2 + (ay - ly) * 0.22;
         const cy = (ay + ly) / 2 + (lx - ax) * 0.22;
         return (
-          <g className="vs-plane-note" key={m.text}>
+          <g className="vs-plane-note" key={m.text} data-analytic-note={m.text}>
             <path className="vs-plane-arrow" d={`M${lx.toFixed(1)} ${(ly < ay ? ly + 4 : ly - 9).toFixed(1)} Q${cx.toFixed(1)} ${cy.toFixed(1)} ${ax.toFixed(1)} ${ay.toFixed(1)}`} />
             <text x={lx.toFixed(1)} y={ly.toFixed(1)} textAnchor="middle">{m.text}</text>
           </g>
@@ -247,6 +266,7 @@ export function analyticInstrument(configId: ConfigId) {
         </label>
         <input
           id={`${config.id}-${chave}`}
+          data-analytic-control={chave}
           type="range"
           min={-config.alcance}
           max={config.alcance}
@@ -262,7 +282,7 @@ export function analyticInstrument(configId: ConfigId) {
         kicker="Prancha manipulável"
         title={config.name}
         subtitle={config.question}
-        condition={{ label: config.rotulo, value: `(${num(ponto.x)}; ${num(ponto.y)})` }}
+        condition={{ label: config.rotulo, value: `(${ponto.x.toFixed(1).replace('.', ',').replace('-', '−')}; ${ponto.y.toFixed(1).replace('.', ',').replace('-', '−')})` }}
         ariaLabel={`Prancha manipulável de geometria analítica: ${props.map.title}`}
         emphasis={par.emphasis}
         scene={
