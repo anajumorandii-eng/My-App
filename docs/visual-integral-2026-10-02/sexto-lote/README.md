@@ -20,6 +20,34 @@ Data: 02/10/2026 (UTC). Este lote parte do estado posterior à incorporação da
 - O teste de Química Orgânica verifica posição e âncora do bromo.
 - TypeScript, build e as suítes completas Node/Vitest foram executados antes do commit.
 
-## Limitações da evidência visual
+## Revisão em navegador real e reparos
 
-O contêiner desta execução não contém Chromium em `/opt/pw-browsers`, nos caches do usuário nem no sistema. Por isso não foi possível produzir capturas novas ou certificar navegador real, temas, larguras e movimento reduzido nesta rodada. A validação de DOM/SVG e o build não substituem aprovação visual/editorial. Os seis registros permanecem em validação até inspeção em navegador real; nenhum outro capítulo é promovido a aprovado.
+A revisão seguinte utilizou o Chromium já instalado no ambiente cloud e encontrou quatro bloqueios que os testes iniciais não cobriam:
+
+- Gibbs usava variáveis `--mf-*` e estilos com escopo de `MechanismFrame`, ausentes na nova cena. Eixos, reta e ponto de equilíbrio agora usam as cores da própria prancha. Os rótulos também foram afastados da reta.
+- Imunologia aplicava classes de grupos a formas individuais, deixando círculos pretos e conectores sem traço. As formas da cena agora recebem estilos próprios, e os conectores usam a cor da prancha.
+- As duas legendas de lipídios colidiam e invadiam o quadro vizinho. Cada molécula agora tem três linhas curtas, separadas e contidas no quadro.
+- `MechanismExpansion.test.tsx` ainda esperava Hess e controles de movimento no capítulo II. Agora valida a fórmula de Gibbs, equilíbrio, distinção entre espontaneidade e velocidade e ausência de controles na cena estática; as demais cenas continuam testando movimento.
+
+`tests/e2e/science-review.spec.ts` verifica traços visíveis, preenchimentos das células, troca entre vacina e soro, ausência de colisão das legendas e contenção no quadro. São 24 casos: três cenas × duas larguras (390 e 1440 px) × dois temas × duas preferências de movimento. Os testes de regressão foram observados falhando antes dos reparos.
+
+Para executar com o Chromium do sistema, sem baixar navegadores:
+
+```bash
+PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH=/usr/bin/chromium npx playwright test tests/e2e/science-review.spec.ts --project=desktop
+```
+
+O caminho é opcional. Sem ele, o projeto desktop continua usando o navegador padrão do Playwright. Com Chromium do sistema, a gravação de vídeo fica desligada para não exigir o ffmpeg privado do Playwright; traces continuam disponíveis. A suíte define suas próprias larguras, mesmo quando executada no projeto desktop.
+
+## Capturas após os reparos
+
+Seis capturas em `revisao-navegador/` registram as três cenas corrigidas em 390 px/tema claro e 1440 px/tema escuro, com movimento reduzido. O estado de lipídios está selecionado e, no celular, a figura foi deslizada para mostrar esse quadro. A rolagem interna é parte da interface; não foi removida para a captura.
+
+- [Gibbs — celular claro](revisao-navegador/quimica-termoquimica-ii-390-light.png)
+- [Gibbs — desktop escuro](revisao-navegador/quimica-termoquimica-ii-1440-dark.png)
+- [Imunologia — celular claro](revisao-navegador/biologia-sangue-e-imunologia-390-light.png)
+- [Imunologia — desktop escuro](revisao-navegador/biologia-sangue-e-imunologia-1440-dark.png)
+- [Lipídios — celular claro](revisao-navegador/biologia-composicao-quimica-celular-carboidratos-e-lipidios-390-light.png)
+- [Lipídios — desktop escuro](revisao-navegador/biologia-composicao-quimica-celular-carboidratos-e-lipidios-1440-dark.png)
+
+Esta revisão valida os reparos técnicos do lote. Não altera estados de aprovação editorial de outros capítulos nem certifica toda a aplicação em todos os navegadores. Nenhum login, UID, histórico real, chave de persistência ou dado do Firestore foi alterado.

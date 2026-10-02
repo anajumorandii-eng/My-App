@@ -22,7 +22,17 @@ export default defineConfig({
     timeout: 120_000,
   },
   projects: [
-    { name: 'desktop', use: { ...devices['Desktop Chrome'], viewport: { width: 1440, height: 900 } } },
+    { name: 'desktop', use: {
+      ...devices['Desktop Chrome'],
+      viewport: { width: 1440, height: 900 },
+      // Permite usar o Chromium já fornecido pelo ambiente cloud.
+      ...(process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH ? {
+        launchOptions: { executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH, args: ['--no-sandbox'] },
+        // O Chromium do sistema não inclui o ffmpeg privado do Playwright.
+        // Traces continuam disponíveis; vídeo é opcional neste modo.
+        video: 'off' as const,
+      } : {}),
+    } },
     { name: 'mobile', use: { ...devices['iPhone 13'], viewport: { width: 390, height: 844 } } },
   ],
 });

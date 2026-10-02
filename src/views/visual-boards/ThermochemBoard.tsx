@@ -7,16 +7,16 @@ import ThermochemMechanism from './ThermochemMechanism';
 function GibbsScene() {
   return <svg className="vs-piston vs-scene" viewBox="0 0 320 330" role="img" aria-label="Balanço de energia livre de Gibbs: entalpia menos temperatura vezes entropia determina a espontaneidade">
     <text x="160" y="42" textAnchor="middle" className="vs-scene-caption">ΔG = ΔH − TΔS</text>
-    <path d="M42 168H278M160 62V276" className="mf-axis" />
+    <path d="M42 168H278M160 62V276" fill="none" stroke="var(--vs-ink)" strokeWidth="1.5" />
     <text x="267" y="190" className="vs-part-sub">T aumenta</text>
     <text x="18" y="72" className="vs-part-sub">ΔG</text>
-    <path d="M58 90L262 250" fill="none" stroke="var(--mf-blue)" strokeWidth="4" />
-    <circle cx="157" cy="168" r="7" fill="var(--mf-gold)" stroke="var(--vs-ink)" />
+    <path d="M58 90L262 250" fill="none" stroke="var(--vs-blue)" strokeWidth="4" />
+    <circle cx="157" cy="168" r="7" fill="var(--vs-amber)" stroke="var(--vs-ink)" />
     <text x="170" y="153" className="vs-part-label">ΔG = 0 · equilíbrio</text>
-    <text x="74" y="116" className="vs-part-label">ΔG &gt; 0</text>
-    <text x="204" y="230" className="vs-part-label">ΔG &lt; 0</text>
-    <text x="74" y="134" className="vs-part-sub">não espontânea</text>
-    <text x="204" y="248" className="vs-part-sub">espontânea</text>
+    <text x="74" y="65" className="vs-part-label">ΔG &gt; 0</text>
+    <text x="204" y="268" className="vs-part-label">ΔG &lt; 0</text>
+    <text x="74" y="80" className="vs-part-sub">não espontânea</text>
+    <text x="204" y="284" className="vs-part-sub">espontânea</text>
     <text x="160" y="304" textAnchor="middle" className="vs-scene-caption">para ΔS &gt; 0, elevar T favorece a espontaneidade</text>
   </svg>;
 }

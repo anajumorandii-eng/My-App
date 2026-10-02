@@ -67,12 +67,16 @@ function Carboidratos({ ativo, t }: Cena) {
       {[0, 1].map((i) => <Anel key={`r${i}`} x={92 + i * 26} y={246} />)}<line x1={92} y1={225} x2={92} y2={235} className="bf-ligacao" />
       <text x={140} y={250} className="qf-mini">ligação α</text>
     </> },
-    { nome: 'Lipídios: reserva e membrana', x: 246, y: 154, w: 222, h: 136, legenda: 'triglicerídeo · fosfolipídio', desenho: <>
-      <circle cx="294" cy="202" r="12" className="bf-anel" />
-      {[0, 1].map((i) => <path key={i} d={`M${288 + i * 12} 214v38`} className="bf-ligacao" />)}
-      <text x="294" y="270" textAnchor="middle" className="qf-mini">cabeça polar + caudas apolares</text>
-      <path d="M382 196v55m0-45 42-18m-42 38 42-4m-42 19 42 12" className="bf-ligacao" />
-      <text x="427" y="270" textAnchor="end" className="qf-mini">glicerol + 3 ácidos graxos</text>
+    { nome: 'Lipídios: reserva e membrana', x: 246, y: 154, w: 222, h: 136, desenho: <>
+      <circle cx="302" cy="202" r="12" className="bf-anel" />
+      {[0, 1].map((i) => <path key={i} d={`M${296 + i * 12} 214v28`} className="bf-ligacao" />)}
+      <text x="302" y="256" textAnchor="middle" className="qf-mini">fosfolipídio</text>
+      <text x="302" y="269" textAnchor="middle" className="qf-mini">cabeça polar</text>
+      <text x="302" y="282" textAnchor="middle" className="qf-mini">2 caudas apolares</text>
+      <path d="M382 196v46m0-36 42-18m-42 28 42-4m-42 19 42 11" fill="none" className="bf-ligacao" />
+      <text x="408" y="256" textAnchor="middle" className="qf-mini">triglicerídeo</text>
+      <text x="408" y="269" textAnchor="middle" className="qf-mini">glicerol + 3</text>
+      <text x="408" y="282" textAnchor="middle" className="qf-mini">ácidos graxos</text>
     </> },
   ]} />;
 }
