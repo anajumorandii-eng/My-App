@@ -3,8 +3,51 @@ import { fireEvent, render, screen } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { BuscaRapida, buscarCapitulos, registrarRecente } from './BuscaRapida';
 import { lerPreferencias, PREFERENCIAS_PADRAO } from '../../hooks/usePreferenciasVisual';
+import userEvent from '@testing-library/user-event';
 
 describe('busca rápida', () => {
+  it('mantém Tab e Shift+Tab dentro do diálogo', async () => {
+    const user = userEvent.setup();
+    render(<><button>Anterior</button><BuscaRapida aberta onFechar={vi.fn()} onAbrir={vi.fn()} /><button>Próximo</button></>);
+    const campo = screen.getByRole('combobox');
+    campo.focus();
+    await user.tab();
+    expect(campo).toHaveFocus();
+    await user.tab({ shift: true });
+    expect(campo).toHaveFocus();
+  });
+
+  it('Esc fecha mesmo após perda de foco e a desmontagem devolve o foco à origem', async () => {
+    const user = userEvent.setup();
+    const onFechar = vi.fn();
+    const origin = document.createElement('button');
+    document.body.append(origin);
+    origin.focus();
+    const view = render(<BuscaRapida aberta onFechar={onFechar} onAbrir={vi.fn()} />);
+    try {
+      await screen.findByRole('combobox');
+      origin.focus();
+      await user.keyboard('{Escape}');
+      expect(onFechar).toHaveBeenCalledTimes(1);
+      screen.getByRole('combobox').focus();
+      view.unmount();
+      expect(origin).toHaveFocus();
+    } finally { view.unmount(); origin.remove(); }
+  });
+
+  it('devolve o foco ao botão original quando a busca veio de um carregamento intermediário', () => {
+    const origin = document.createElement('button');
+    const loading = document.createElement('button');
+    document.body.append(origin, loading);
+    loading.focus();
+    const view = render(<BuscaRapida aberta onFechar={vi.fn()} onAbrir={vi.fn()} focoDeRetorno={{ current: origin }} />);
+    try {
+      screen.getByRole('combobox').focus();
+      view.unmount();
+      expect(origin).toHaveFocus();
+    } finally { view.unmount(); origin.remove(); loading.remove(); }
+  });
+
   it('acha o capítulo pelo texto, não só pelo título: "mitose" leva a Divisão Celular', () => {
     const topicos = buscarCapitulos('mitose').map((item) => item.topic);
     expect(topicos).toContain('Divisão Celular');

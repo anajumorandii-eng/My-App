@@ -71,24 +71,50 @@ export function buscarTelas(consulta: string, telas: AtalhoTela[], limite = 3) {
 
 export { BotaoBuscar } from '../../components/BotaoBuscar';
 
-export function BuscaRapida({ aberta, onFechar, onAbrir, telas = [], onIrParaTela }: {
+export function BuscaRapida({ aberta, onFechar, onAbrir, telas = [], onIrParaTela, focoDeRetorno }: {
   aberta: boolean;
   onFechar: () => void;
   onAbrir: (id: string) => void;
   /** Telas do app que a busca também encontra. */
   telas?: AtalhoTela[];
   onIrParaTela?: (destino: string) => void;
+  focoDeRetorno?: React.RefObject<HTMLElement | null>;
 }) {
   const [consulta, setConsulta] = useState('');
   const [ativo, setAtivo] = useState(0);
   const campo = useRef<HTMLInputElement>(null);
+  const dialogo = useRef<HTMLDivElement>(null);
+  const fechar = useRef(onFechar);
+  fechar.current = onFechar;
 
   useEffect(() => {
     if (!aberta) return;
+    const origem = focoDeRetorno?.current ?? document.activeElement;
     setConsulta(''); setAtivo(0);
     const id = window.setTimeout(() => campo.current?.focus(), 0);
-    return () => window.clearTimeout(id);
-  }, [aberta]);
+    const teclado = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        fechar.current();
+      } else if (event.key === 'Tab') {
+        const controles = Array.from(dialogo.current?.querySelectorAll<HTMLElement>('input, button, select, textarea, a[href], [tabindex]') ?? [])
+          .filter((element) => element.tabIndex >= 0 && !element.matches(':disabled, [hidden]'));
+        const primeiro = controles[0];
+        const ultimo = controles.at(-1);
+        const foco = document.activeElement;
+        if (!dialogo.current?.contains(foco) || (event.shiftKey ? foco === primeiro : foco === ultimo)) {
+          event.preventDefault();
+          (event.shiftKey ? ultimo : primeiro)?.focus();
+        }
+      }
+    };
+    window.addEventListener('keydown', teclado);
+    return () => {
+      window.clearTimeout(id);
+      window.removeEventListener('keydown', teclado);
+      if (origem instanceof HTMLElement && origem.isConnected) origem.focus();
+    };
+  }, [aberta, focoDeRetorno]);
 
   const telasAchadas = useMemo(() => (consulta.trim() ? buscarTelas(consulta, telas) : []), [consulta, telas]);
   const resultados = useMemo(() => {
@@ -112,8 +138,7 @@ export function BuscaRapida({ aberta, onFechar, onAbrir, telas = [], onIrParaTel
     if (item.tipo === 'tela') { onIrParaTela?.(item.tela.destino); onFechar(); } else abrir(item.capitulo.id);
   };
   const tecla = (evento: React.KeyboardEvent) => {
-    if (evento.key === 'Escape') { evento.preventDefault(); onFechar(); }
-    else if (evento.key === 'ArrowDown') { evento.preventDefault(); setAtivo((i) => Math.min(i + 1, itens.length - 1)); }
+    if (evento.key === 'ArrowDown') { evento.preventDefault(); setAtivo((i) => Math.max(0, Math.min(i + 1, itens.length - 1))); }
     else if (evento.key === 'ArrowUp') { evento.preventDefault(); setAtivo((i) => Math.max(i - 1, 0)); }
     else if (evento.key === 'Enter' && itens[ativo]) { evento.preventDefault(); escolher(ativo); }
   };
@@ -121,7 +146,7 @@ export function BuscaRapida({ aberta, onFechar, onAbrir, telas = [], onIrParaTel
 
   return (
     <div className="vs-busca-fundo" onPointerDown={(evento) => { if (evento.target === evento.currentTarget) onFechar(); }}>
-      <div className="vs-busca" role="dialog" aria-modal="true" aria-label="Buscar capítulo" onKeyDown={tecla}>
+      <div ref={dialogo} className="vs-busca" role="dialog" aria-modal="true" aria-label="Buscar capítulo" onKeyDown={tecla}>
         <label className="vs-busca-campo">
           <Search aria-hidden="true" />
           <input

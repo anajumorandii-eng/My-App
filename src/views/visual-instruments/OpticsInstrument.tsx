@@ -10,9 +10,9 @@ const rayStyle = { fill: 'none', stroke: 'var(--vs-burgundy)', strokeWidth: 3 } 
 
 function PlaneMirror({ incidence }: { incidence: number }) {
   const radians = incidence * Math.PI / 180;
-  const dx = Math.sin(radians) * 95;
-  const dy = Math.cos(radians) * 95;
-  return <><line x1="160" y1="26" x2="160" y2="274" stroke="var(--vs-ink)" strokeWidth="6" /><line x1="36" y1="150" x2="284" y2="150" stroke="var(--vs-ink)" strokeDasharray="5 5" /><path d={`M${160 - dx} ${150 - dy} L160 150 L${160 + dx} ${150 - dy}`} style={rayStyle} /><text x="165" y="42" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>espelho</text><text x="170" y="145" style={{ fill: 'var(--vs-ink)' }}>normal</text><text x="74" y="96" style={{ fill: 'var(--vs-ink)' }}>i = {incidence}°</text><text x="210" y="96" style={{ fill: 'var(--vs-ink)' }}>r = {incidence}°</text></>;
+  const dx = Math.cos(radians) * 95;
+  const dy = Math.sin(radians) * 95;
+  return <><line x1="160" y1="26" x2="160" y2="274" stroke="var(--vs-ink)" strokeWidth="6" /><line x1="36" y1="150" x2="284" y2="150" stroke="var(--vs-ink)" strokeDasharray="5 5" /><path d={`M${160 - dx} ${150 - dy} L160 150 L${160 - dx} ${150 + dy}`} style={rayStyle} /><text x="165" y="42" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>espelho</text><text x="170" y="145" style={{ fill: 'var(--vs-ink)' }}>normal</text><text x="42" y="48" style={{ fill: 'var(--vs-ink)' }}>i = {incidence}°</text><text x="42" y="268" style={{ fill: 'var(--vs-ink)' }}>r = {incidence}°</text></>;
 }
 
 function SphericalMirror({ p }: { p: number }) {
@@ -25,9 +25,9 @@ function SphericalMirror({ p }: { p: number }) {
 
 function Refraction({ incidence }: { incidence: number }) {
   const refraction = angleOfRefraction(incidence);
-  const toPoint = (angle: number, length: number, below = false) => [160 + Math.sin(angle * Math.PI / 180) * length, 150 + (below ? 1 : -1) * Math.cos(angle * Math.PI / 180) * length];
+  const toPoint = (angle: number, length: number, below = false) => [160 + (below ? 1 : -1) * Math.sin(angle * Math.PI / 180) * length, 150 + (below ? 1 : -1) * Math.cos(angle * Math.PI / 180) * length];
   const [ix, iy] = toPoint(incidence, 118); const [rx, ry] = toPoint(refraction, 118, true);
-  return <><rect x="24" y="150" width="272" height="126" fill="color-mix(in srgb, var(--vs-burgundy) 15%, transparent)" /><line x1="160" y1="28" x2="160" y2="274" stroke="var(--vs-ink)" strokeDasharray="5 5" /><line x1="24" y1="150" x2="296" y2="150" stroke="var(--vs-ink)" strokeWidth="3" /><path d={`M${ix} ${iy} L160 150 L${rx} ${ry}`} style={rayStyle} /><text x="42" y="135" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>ar · n = 1,0</text><text x="42" y="258" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>vidro · n = 1,5</text><text x="205" y="112" style={{ fill: 'var(--vs-ink)' }}>i = {incidence}°</text><text x="205" y="206" style={{ fill: 'var(--vs-ink)' }}>r = {refraction.toFixed(1).replace('.', ',')}°</text></>;
+  return <><rect x="24" y="150" width="272" height="126" fill="color-mix(in srgb, var(--vs-burgundy) 15%, transparent)" /><line x1="160" y1="28" x2="160" y2="274" stroke="var(--vs-ink)" strokeDasharray="5 5" /><line x1="24" y1="150" x2="296" y2="150" stroke="var(--vs-ink)" strokeWidth="3" /><path d={`M${ix} ${iy} L160 150 L${rx} ${ry}`} style={rayStyle} /><text x="210" y="135" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>ar · n = 1,0</text><text x="42" y="258" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>vidro · n = 1,5</text><text x="42" y="48" style={{ fill: 'var(--vs-ink)' }}>i = {incidence}°</text><text x="205" y="174" style={{ fill: 'var(--vs-ink)' }}>r = {refraction.toFixed(1).replace('.', ',')}°</text></>;
 }
 
 function Vision({ power }: { power: number }) {

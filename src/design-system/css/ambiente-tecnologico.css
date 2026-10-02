@@ -193,6 +193,16 @@
   animation: vs-painel-abre .22s cubic-bezier(.2, .8, .2, 1);
 }
 @keyframes vs-painel-abre { from { opacity: 0; transform: translateY(-6px) scale(.98); } }
+@media (max-width: 560px) {
+  .vs-personalizar-painel {
+    position: fixed;
+    top: 64px;
+    left: 16px;
+    right: 16px;
+    width: auto;
+    max-height: min(70dvh, calc(100dvh - 80px));
+  }
+}
 .vs-personalizar-cabeca { display: flex; align-items: center; justify-content: space-between; }
 .vs-personalizar-cabeca strong { font: 700 1.05rem/1 "Space Grotesk", Inter, sans-serif; }
 .vs-personalizar-fechar { display: grid; place-items: center; width: 30px; height: 30px; border: 0; border-radius: 8px; background: transparent; color: var(--amb-dim, var(--vs-dim)); cursor: pointer; }

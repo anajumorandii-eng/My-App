@@ -45,3 +45,9 @@ As verificações de SDK usam dados sintéticos em emuladores locais. Não valid
 A estudante confirmou que o domínio baixo corresponde ao início do uso. Não recalcular, limpar ou migrar seu histórico com base nessa observação. A consulta autorizada ao histórico foi somente leitura.
 
 As mudanças permanecem locais, sem publicação. Próximas prioridades: revisão das representações visuais e seus critérios de qualidade; recuperação fiel dos enunciados pendentes de Fuvest 2025; continuação editorial dos resumos. A matriz de presença não equivale à aprovação pedagógica das representações.
+
+## Compatibilidade da instalação no CI — 02/10/2026
+
+A publicação inicial revelou uma diferença entre npm 11 local e npm 10 do CI/Docker: `npm ci` com npm 10 rejeitava o lockfile como se faltasse uuid 9, apesar do override `gaxios@6` selecionar uuid 11 no npm 11. O problema foi reproduzido em diretório isolado. O seletor de override passou de `gaxios@6` para `gaxios`, mantendo uuid 11.1.1 e o lockfile existente. Atualmente só gaxios 6 declara uuid; gaxios 7 não declara essa dependência, portanto a árvore de versões permanece igual. Reavaliar a regra ao atualizar gaxios.
+
+A mesma instalação que falhava antes da mudança foi aceita pelo npm 10 após a correção. As instalações limpas de desenvolvimento e produção (`--omit=dev`) são verificadas separadamente, sem reutilizar `node_modules` do projeto. O restante das verificações anteriores continua com seus limites originais.

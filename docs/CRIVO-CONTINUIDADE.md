@@ -137,3 +137,11 @@ Plano, critérios e fila completa de IDs: [plano-finalizacao-613.md](visual-pers
 Relatório canônico: `docs/REVISAO-VISUAL-INTEGRAL-2026-10-02.md`; inventário em `docs/visual-integral-2026-10-02/capitulos.json` e `.csv`. Revisão da build local, sem login ou alteração de progresso: 613 capítulos/3.678 configurações, 28 telas/224 configurações, capturas e fonte confrontadas. Recomendações do mecanismo central: 315 preservar, 170 ajustar, 128 redesenhar; nenhuma aprovação editorial foi promovida.
 
 Priorizar fidelidade de diagramas de Física/Matemática e associações de conteúdo; depois painel Personalizar fora da borda móvel, overflows em Independência/Competências/Admin Conteúdo, nomes acessíveis, foco da busca e contraste. Os 128 redesenhos incluem mecanismos genéricos sem explicação do assunto: não equivalem a 128 bugs de execução. Diagnóstico/persistência, todas as animações/combinações e telas dependentes de conteúdo autenticado não receberam certificação integral. Evidências completas e galeria local: `/workspace/crivo-visual-review-2026-10-02/`; imagens selecionadas sem material privado no diretório do relatório. Nenhum código do app foi alterado neste pedido de revisão.
+
+## Publicação e primeiro lote visual — 02/10/2026
+
+O trabalho anterior, as dependências, a recuperação de Fuvest 2025 e os relatórios de revisão integral foram publicados em `main` no commit `b22f4439`. A execução começou por quatro achados confirmados: reflexão plana, refração, limites do painel Personalizar no celular e gerenciamento de foco da busca, incluindo o carregamento sob demanda.
+
+O [registro do primeiro lote](visual-integral-2026-10-02/primeiro-lote/README.md) reúne comportamento corrigido, capturas, regressões e limites. Validação final: 1.551 testes gerais, lint, build, 48 verificações de geometria no navegador e nove testes de navegação na build de produção aprovados. Os demais achados da revisão integral continuam pendentes; não tratar a presença de uma prancha ou este lote como aprovação editorial geral.
+
+O primeiro CI remoto detectou uma incompatibilidade de `npm ci` (npm 10) com o seletor de override de gaxios. A regra foi corrigida sem trocar as versões do lockfile e verificada em instalações limpas completas e de produção. Ver [compatibilidade de dependências](ATUALIZACAO-DEPENDENCIAS-2026-10-01.md).

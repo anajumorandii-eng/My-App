@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, useMemo, useState } from 'react';
+import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
@@ -84,6 +84,16 @@ function LayoutComAmbiente() {
   const { isDark, toggleTheme } = useTheme();
   const ambienteApp = useAmbienteApp();
   const [buscaAberta, setBuscaAberta] = useState(false);
+  const focoDeRetorno = useRef<HTMLElement | null>(null);
+  const abrirBusca = useCallback(() => {
+    if (buscaAberta) return;
+    focoDeRetorno.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    setBuscaAberta(true);
+  }, [buscaAberta]);
+  const fecharBusca = useCallback(() => {
+    setBuscaAberta(false);
+    focoDeRetorno.current?.focus();
+  }, []);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [railExpanded, setRailExpanded] = useState(() =>
@@ -109,14 +119,14 @@ function LayoutComAmbiente() {
   // ⌘K / Ctrl+K abre a busca rápida em qualquer tela.
   useEffect(() => {
     const atalho = (evento: KeyboardEvent) => {
-      if ((evento.metaKey || evento.ctrlKey) && evento.key.toLowerCase() === 'k') { evento.preventDefault(); setBuscaAberta(true); }
+      if ((evento.metaKey || evento.ctrlKey) && evento.key.toLowerCase() === 'k') { evento.preventDefault(); abrirBusca(); }
     };
     window.addEventListener('keydown', atalho);
     return () => window.removeEventListener('keydown', atalho);
-  }, []);
+  }, [abrirBusca]);
   const acoesDoTopo = (compacto: boolean) => ambienteApp && (
     <div className="ni-acoes-topo">
-      <BotaoBuscar onBuscar={() => setBuscaAberta(true)} compacto={compacto} />
+      <BotaoBuscar onBuscar={abrirBusca} compacto={compacto} />
       <PainelPersonalizar preferencias={ambienteApp.preferencias} onMudar={ambienteApp.mudarPreferencias} ambienteAutomatico={ambienteApp.sobreposto} />
     </div>
   );
@@ -179,15 +189,19 @@ function LayoutComAmbiente() {
       </div>
       <BottomNav />
       {buscaAberta && <Suspense fallback={
-        <div className="vs-busca-fundo" role="dialog" aria-modal="true" aria-label="Busca rápida" onKeyDown={(event) => { if (event.key === 'Escape') setBuscaAberta(false); }}>
+        <div className="vs-busca-fundo" role="dialog" aria-modal="true" aria-label="Busca rápida" onKeyDown={(event) => {
+          if (event.key === 'Escape') { event.preventDefault(); fecharBusca(); }
+          if (event.key === 'Tab') { event.preventDefault(); event.currentTarget.querySelector('button')?.focus(); }
+        }}>
           <div className="vs-busca">
             <p role="status">Carregando busca…</p>
-            <button type="button" autoFocus onClick={() => setBuscaAberta(false)}>Fechar busca</button>
+            <button type="button" autoFocus onClick={fecharBusca}>Fechar busca</button>
           </div>
         </div>
       }><BuscaRapida
         aberta={buscaAberta}
-        onFechar={() => setBuscaAberta(false)}
+        onFechar={fecharBusca}
+        focoDeRetorno={focoDeRetorno}
         onAbrir={(id) => navigate(`/visual?summary=${encodeURIComponent(id)}`)}
         telas={TELAS_DA_BUSCA}
         onIrParaTela={(destino) => navigate(destino)}
