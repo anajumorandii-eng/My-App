@@ -44,3 +44,13 @@ test('terreno 20 por 15 desconta piscina de raio 3', () => {
   const values = AREA_CONFIGS['areas-compostas'].readouts(3);
   assert.deepEqual(values.map((item) => item.value), ['300 m²', '28,27 m²', '271,73 m²']);
 });
+
+
+test('passo da razão linear alcança 4/3 inicial e ambos os extremos', () => {
+  const { min, max, step, initial } = AREA_CONFIGS['razoes-areas'].control;
+  assert.equal(step, 1 / 6);
+  for (const value of [min, initial, max]) {
+    const steps = (value - min) / step;
+    assert.ok(Math.abs(steps - Math.round(steps)) < 1e-10, `${value} deve ser alcançável pelo passo`);
+  }
+});

@@ -33,3 +33,31 @@ describe('instrumento de termodinâmica', () => {
     expect(screen.getAllByText('5 J').length).toBeGreaterThan(0);
   });
 });
+
+
+it('mostra área isobárica até o eixo V, volumes positivos e sinal do trabalho', () => {
+  const Component = thermoInstrument('gas-work');
+  const { container } = render(<Component {...props('summary-fisica-trabalho-da-forca-de-pressao-do-gas')} />);
+  const slider = screen.getByRole('slider');
+  for (const delta of [4, -4, 0, 8]) {
+    fireEvent.change(slider, { target: { value: String(delta) } });
+    const scene = container.querySelector('[data-gas-work]')!;
+    expect(scene).toHaveAttribute('data-initial-volume', '5');
+    expect(scene).toHaveAttribute('data-final-volume', String(5 + delta));
+    expect(scene).toHaveAttribute('data-work-sign', delta === 0 ? 'zero' : delta > 0 ? 'positive' : 'negative');
+    const curve = container.querySelector('[data-isobar]')!;
+    expect(curve.getAttribute('y1')).toBe(curve.getAttribute('y2'));
+    expect(curve).toHaveAttribute('y1', '110');
+    const area = container.querySelector('[data-work-area]')!;
+    expect(Number(area.getAttribute('y')) + Number(area.getAttribute('height'))).toBe(230);
+    expect(Number(area.getAttribute('width'))).toBe(16 * Math.abs(delta));
+    expect(Number(area.getAttribute('x'))).toBe(Math.min(125, 45 + 16 * (5 + delta)));
+    expect(Number(area.getAttribute('x'))).toBeGreaterThan(45);
+    const direction = container.querySelector('[data-volume-direction]');
+    if (delta === 0) expect(direction).toBeNull();
+    else expect(Math.sign(Number(direction!.getAttribute('x2')) - Number(direction!.getAttribute('x1')))).toBe(Math.sign(delta));
+    expect(screen.getAllByText(`${3 * delta} J`).length).toBeGreaterThan(0);
+  }
+  expect(screen.getByText('V (L)')).toBeInTheDocument();
+  expect(screen.getByText('P (kPa)')).toBeInTheDocument();
+});
