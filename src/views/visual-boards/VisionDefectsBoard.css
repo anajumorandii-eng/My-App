@@ -1,0 +1,7 @@
+.vs-vision-diagram { width: 100%; }
+.vs-vision-diagram .vs-scene { width: 100%; max-width: 650px; aspect-ratio: 650 / 330; }
+.vs-vision-controls { display: flex; flex-wrap: wrap; justify-content: center; gap: 8px; margin-bottom: 14px; }
+.vs-vision-controls button { min-height: 44px; padding: 8px 14px; border: 1px solid var(--vs-ink); border-radius: 8px; background: var(--vs-paper); color: var(--vs-ink); font: inherit; font-weight: 700; cursor: pointer; }
+.vs-vision-controls button[aria-pressed="true"] { border-color: var(--vs-burgundy); box-shadow: inset 0 -3px var(--vs-burgundy); }
+.vs-vision-controls button:focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 3px; }
+.vs-vision-key { margin: 8px 0 0; color: var(--vs-ink); font-size: .8rem; line-height: 1.5; }

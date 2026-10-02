@@ -2,7 +2,8 @@ import React, { useState } from 'react';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
-import { angleOfRefraction, OPTICS, sphericalImageDistance, type OpticsId } from '../../lib/opticsLab';
+import { angleOfRefraction, OPTICS, type OpticsId } from '../../lib/opticsLab';
+import ConcaveMirrorScene from './ConcaveMirrorScene';
 import type { BoardProps } from '../visual-boards/types';
 
 function short(text?: string) { const first = text?.trim().split(/(?<=[.!?])\s/)[0] ?? ''; return first.length > 180 ? `${first.slice(0, 176)}…` : first; }
@@ -13,14 +14,6 @@ function PlaneMirror({ incidence }: { incidence: number }) {
   const dx = Math.cos(radians) * 95;
   const dy = Math.sin(radians) * 95;
   return <><line x1="160" y1="26" x2="160" y2="274" stroke="var(--vs-ink)" strokeWidth="6" /><line x1="36" y1="150" x2="284" y2="150" stroke="var(--vs-ink)" strokeDasharray="5 5" /><path d={`M${160 - dx} ${150 - dy} L160 150 L${160 - dx} ${150 + dy}`} style={rayStyle} /><text x="165" y="42" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>espelho</text><text x="170" y="145" style={{ fill: 'var(--vs-ink)' }}>normal</text><text x="42" y="48" style={{ fill: 'var(--vs-ink)' }}>i = {incidence}°</text><text x="42" y="268" style={{ fill: 'var(--vs-ink)' }}>r = {incidence}°</text></>;
-}
-
-function SphericalMirror({ p }: { p: number }) {
-  const distance = sphericalImageDistance(p);
-  const objectX = 270 - p * 2;
-  const imageX = distance === null ? 18 : Math.max(24, Math.min(306, 270 - distance * 2));
-  const imageH = distance !== null && distance > 0 ? 48 : -35;
-  return <><path d="M270 38 Q218 150 270 262" fill="none" stroke="var(--vs-ink)" strokeWidth="7" /><line x1="25" y1="150" x2="283" y2="150" stroke="var(--vs-ink)" strokeDasharray="5 5" /><circle cx="240" cy="150" r="4" fill="var(--vs-burgundy)" /><text x="240" y="174" textAnchor="middle" style={{ fill: 'var(--vs-ink)', fontWeight: 800 }}>F</text><path d={`M${objectX} 150 V${104} m-7 10 l7 -10 l7 10`} stroke="var(--vs-burgundy)" strokeWidth="3" fill="none" /><text x={objectX} y="188" textAnchor="middle" style={{ fill: 'var(--vs-ink)' }}>objeto</text>{distance !== null && <><path d={`M${objectX} 104 L270 104 L${imageX} ${150 - imageH}`} style={rayStyle} /><path d={`M${imageX} 150 V${150 - imageH} m-7 ${imageH > 0 ? -10 : 10} l7 ${imageH > 0 ? 10 : -10} l7 ${imageH > 0 ? -10 : 10}`} stroke="var(--vs-burgundy)" strokeWidth="3" fill="none" /><text x={imageX} y="278" textAnchor="middle" style={{ fill: 'var(--vs-ink)' }}>{distance > 0 ? 'imagem real' : 'imagem virtual'}</text></>}</>;
 }
 
 function Refraction({ incidence }: { incidence: number }) {
@@ -38,7 +31,7 @@ function Vision({ power }: { power: number }) {
 
 function Scene({ id, value }: { id: OpticsId; value: number }) {
   if (id === 'plane-mirror') return <PlaneMirror incidence={value} />;
-  if (id === 'spherical-mirror') return <SphericalMirror p={value} />;
+  if (id === 'spherical-mirror') return <ConcaveMirrorScene p={value} />;
   if (id === 'refraction') return <Refraction incidence={value} />;
   return <Vision power={value} />;
 }

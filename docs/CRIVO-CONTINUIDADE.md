@@ -145,3 +145,7 @@ O trabalho anterior, as dependências, a recuperação de Fuvest 2025 e os relat
 O [registro do primeiro lote](visual-integral-2026-10-02/primeiro-lote/README.md) reúne comportamento corrigido, capturas, regressões e limites. Validação final: 1.551 testes gerais, lint, build, 48 verificações de geometria no navegador e nove testes de navegação na build de produção aprovados. Os demais achados da revisão integral continuam pendentes; não tratar a presença de uma prancha ou este lote como aprovação editorial geral.
 
 O primeiro CI remoto detectou uma incompatibilidade de `npm ci` (npm 10) com o seletor de override de gaxios. A regra foi corrigida sem trocar as versões do lockfile e verificada em instalações limpas completas e de produção. Ver [compatibilidade de dependências](ATUALIZACAO-DEPENDENCIAS-2026-10-01.md).
+
+## Segundo lote visual por PR — 02/10/2026
+
+A estudante autorizou nesta etapa publicar em outra branch e abrir PR automaticamente, em vez de enviar diretamente à `main`. A branch `fix/optica-espelhos-visao`, baseada em `05412f4b`, corrige o espelho côncavo (equação de Gauss, ampliação, foco e raios paralelos) e a prancha de miopia/hipermetropia efetivamente usada pelo capítulo (comparação sem/com correção, lentes externas e raios completos). O [registro do segundo lote](visual-integral-2026-10-02/segundo-lote/README.md) inclui capturas, regressões, modelos e limites. Estas mudanças são uma proposta para integração por PR; não estão incorporadas à `main` por este registro. Os demais achados do inventário permanecem pendentes.
