@@ -54,3 +54,18 @@ test('nova tentativa reutiliza falas concluídas antes da falha', async () => {
   await service.synthesize('Host1: Uma explicação.\nHost2: Outra explicação.', 'Kore', options);
   assert.equal(calls, 3);
 });
+
+test('catálogo fica limitado a três vozes femininas e três masculinas HD', async () => {
+  const selected = ['Kore', 'Aoede', 'Leda', 'Puck', 'Charon', 'Orus'];
+  const service = new CloudTtsService({ client: { listVoices: async () => ({ voices: [
+    ...selected.map((name, index) => ({ name: `pt-BR-Chirp3-HD-${name}`, languageCodes: ['pt-BR'], ssmlGender: index < 3 ? 'FEMALE' : 'MALE' })),
+    { name: 'pt-BR-Chirp3-HD-Achernar', languageCodes: ['pt-BR'], ssmlGender: 'FEMALE' },
+    { name: 'pt-BR-Neural2-A', languageCodes: ['pt-BR'], ssmlGender: 'FEMALE' },
+    { name: 'pt-BR-Standard-B', languageCodes: ['pt-BR'], ssmlGender: 'MALE' },
+  ] }), synthesize: async () => ({}) } });
+  const voices = await service.getVoices();
+  assert.equal(voices.length, 6);
+  assert.equal(voices.filter(v => v.gender === 'FEMALE').length, 3);
+  assert.equal(voices.filter(v => v.gender === 'MALE').length, 3);
+  await assert.rejects(service.resolveVoice('pt-BR-Neural2-A'));
+});

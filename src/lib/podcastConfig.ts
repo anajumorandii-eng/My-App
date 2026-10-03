@@ -34,7 +34,20 @@ export interface PodcastSpeechOptions {
 }
 
 export interface PodcastVoiceOption { value: string; label: string; gender?: string; }
-export function resolvePodcastVoice(value: string, voices: PodcastVoiceOption[]): string {
+export function resolvePodcastVoice(value: string, voices: PodcastVoiceOption[], fallback = 'Kore'): string {
   const shortName = /^pt-BR-Chirp3-HD-([A-Za-z]+)$/.exec(value)?.[1];
-  return voices.find(voice => voice.value === value)?.value ?? voices.find(voice => voice.value === shortName)?.value ?? voices.find(voice => voice.value.endsWith(`Chirp3-HD-${value}`))?.value ?? value;
+  return voices.find(voice => voice.value === value)?.value ?? voices.find(voice => voice.value === shortName)?.value ?? voices.find(voice => voice.value.endsWith(`Chirp3-HD-${value}`))?.value ?? voices.find(voice => voice.value === fallback || voice.value.endsWith(`Chirp3-HD-${fallback}`))?.value ?? voices[0]?.value ?? value;
+}
+
+export function resolvePodcastVoices(voiceName: string, secondVoice: string, voices: PodcastVoiceOption[]): { voiceName: string; secondVoice: string } {
+  const resolved = { voiceName: resolvePodcastVoice(voiceName, voices), secondVoice: resolvePodcastVoice(secondVoice, voices, 'Puck') };
+  const available = (value: string) => voices.some(voice => voice.value === value || voice.value === /^pt-BR-Chirp3-HD-([A-Za-z]+)$/.exec(value)?.[1] || voice.value.endsWith(`Chirp3-HD-${value}`));
+  if (resolved.voiceName === resolved.secondVoice) {
+    // Ao remover uma voz antiga, preserve a participante que ainda existe e
+    // adapte a outra sem transformar o diálogo em duas vozes iguais.
+    const alternative = voices.find(voice => voice.value !== resolved.voiceName)?.value;
+    if (alternative && !available(secondVoice)) resolved.secondVoice = alternative;
+    else if (alternative && !available(voiceName)) resolved.voiceName = alternative;
+  }
+  return resolved;
 }
