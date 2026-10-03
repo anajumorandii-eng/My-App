@@ -33,17 +33,18 @@ pode chegar a um commit, nem como texto nem como pixel.
 em mensagem de commit, título ou corpo de PR, comentário de código ou qualquer
 outro artefato que vá para o repositório. Isso vale só para a conversa.
 
-**Desenvolva e faça commits somente na branch `main`.** Esta é uma decisão
-explícita da Ana Júlia em 14/09/2026 e substitui o fluxo anterior pela branch
-`claude/app-updates-mgyedd`. Antes de editar, atualize e audite `origin/main`;
-ela é a fonte do estado absoluto do aplicativo. Não crie branch de
-funcionalidade nem envie commits para outra branch sem uma nova instrução
-explícita da Ana Júlia.
+**Trabalhe em branches e abra PR automaticamente.** A instrução posterior da
+Ana Júlia, reafirmada em 03/10/2026, autoriza publicar alterações em outra
+branch e abrir PR sem pedir confirmação novamente. Ela substitui a decisão
+de trabalhar somente na `main` de 14/09/2026. Não faça merge automático.
+Antes de editar, atualize e audite `origin/main` e confira PRs abertas para
+não repetir nem sobrescrever trabalho recente. Preserve alterações locais.
 
 ```bash
 git fetch origin main
 git switch main
 git pull --ff-only origin main
+git switch -c fix/nome-da-correcao
 ```
 
 **Antes de todo push:** `npm run lint` limpo e `npm test` verde.
@@ -111,9 +112,11 @@ recorte, então o enunciado declara o fato e o comentário ensina o método sem
 inventar a equação que falta. Inventar conteúdo para tapar buraco é pior que o
 buraco.
 
-Lacuna conhecida: as 90 questões `fuvest_2025_q*` ainda têm enunciado e
-alternativas de marcador ("Leia a questão e suas alternativas na página
-original"), com imagens em `public/question-media/fuvest-2025/`.
+As 90 questões `fuvest_2025_q*` tiveram seus enunciados restaurados em
+01/10/2026; 88 possuem alternativas textuais e as questões 60 e 69 preservam
+as alternativas gráficas na página original. Não repetir a recuperação nem
+substituir alternativas gráficas por conteúdo inventado. Referência:
+`docs/REVISAO-CONTEUDO-CIENCIAS-2026-10-01.md`.
 
 ## Resumos profundos
 

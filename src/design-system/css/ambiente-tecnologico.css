@@ -585,7 +585,7 @@
     border-radius: 0;
     background: transparent;
   }
-  :root[data-ambiente="tecnologico"] .ni-production-app .ni-rail .ni-mark img {
+  :root[data-ambiente="tecnologico"] .ni-production-app .ni-rail .ni-mark :is(img, .ni-brand-fallback) {
     width: 36px;
     height: 36px;
     border-radius: 10px;

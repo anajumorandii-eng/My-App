@@ -107,7 +107,9 @@
 .ni-rail .ni-rail-scroll button.active .ni-icon-depth { color: #ffe0a0; filter: drop-shadow(0 0 8px rgba(229, 177, 91, .45)); }
 .ni-rail .ni-mark { border: 0; background: transparent; box-shadow: none; color: #f0c87e; }
 .ni-rail .ni-mark img,
-.ni-mobile-mark img { display: block; width: 100%; height: 100%; border-radius: 10px; object-fit: cover; }
+.ni-rail .ni-mark .ni-brand-fallback,
+.ni-mobile-mark img,
+.ni-mobile-mark .ni-brand-fallback { display: block; width: 100%; height: 100%; border-radius: 10px; object-fit: cover; }
 .ni-production-app .ni-rail-scroll { flex: 1 1 auto; min-height: 0; overflow-x: hidden; overflow-y: auto; overscroll-behavior: contain; scrollbar-width: thin; scrollbar-color: rgba(224, 179, 109, .45) transparent; }
 .ni-production-app .ni-rail-scroll::-webkit-scrollbar { width: 5px; }
 .ni-production-app .ni-rail-scroll::-webkit-scrollbar-thumb { border-radius: 999px; background: rgba(224, 179, 109, .45); }
@@ -211,6 +213,18 @@
 .ni-production-view { min-height: calc(100vh - 65px); }
 .ni-production-mobile { display: none; }
 .ni-production-close { display: none; }
+
+/* A lateral expandia, mas a grade continuava reservando só 72 px. A coluna
+   acompanha a largura real do trilho, inclusive durante sua transição. */
+@media (min-width: 901px) {
+  .ni-production-app { grid-template-columns: max-content minmax(0, 1fr); }
+}
+/* No iPad menor, as mesmas rotas continuam na lateral. O topo prioriza
+   Busca, Personalizar e tema, que antes saíam da tela com o trilho aberto. */
+@media (min-width: 901px) and (max-width: 1200px) {
+  .ni-production-app .ni-top { gap: 16px; padding-inline: 20px; }
+  .ni-production-app .ni-top nav { display: none; }
+}
 
 /* Mobile's primary navigation is an instrument rail, not a floating app dock. */
 .crivo-mobile-toolbar { display: none; }

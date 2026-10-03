@@ -161,3 +161,9 @@ A PR #243 foi incorporada em 02/10/2026. A estudante pediu mais correções por 
 ## Quinto lote visual ampliado por PR — 02/10/2026
 
 A PR #244 foi incorporada em 02/10/2026; base atual `b61b0518`. Mantido o pedido de lotes maiores e PR automática na branch `fix/matematica-probabilidades-sequencias`: 13 capítulos de probabilidades, trigonometria, geometria espacial, funções, sequências e anotações analíticas, mais acesso aos controles de Podcast, Treino da 2ª Fase, Tutor, Redação e Administração de Conteúdo. O [registro do quinto lote](visual-integral-2026-10-02/quinto-lote/README.md) reúne modelos, capturas, regressões e limites. Nenhum histórico real ou conteúdo autenticado foi alterado. Esta etapa é uma proposta por PR; não realizar merge automático nem considerar concluídos os outros achados do inventário.
+
+## Conferência de atualizações e navegação do iPad — 03/10/2026
+
+A estudante enviou capturas de sobreposição da lateral e autorizou corrigir e prosseguir após conferir as atualizações. Base atual conferida: `25cafa0d`. As PRs #247 e #248 já foram incorporadas, com checks aprovados; #249 estava aberta, também com checks aprovados. Não repetir o sexto lote científico nem sobrescrever a proposta de Mendel/Gibbs. O próximo lote de mecanismos recomendado segue em Física (Lenz, Doppler e telescópio), após consultar o estado efetivo.
+
+Na branch `fix/ipad-navigation-layout`, a coluna da grade acompanha o trilho expandido, a marca tem alternativa SVG em falha de carregamento e a gaveta ganhou entrada/contenção/restauração de foco, Escape e limpeza ao mudar para paisagem desktop. Evidências, limites e regressões: [navegação do iPad](visual-integral-2026-10-03/navegacao-ipad/README.md). Publicação por PR autorizada, sem merge automático. Histórico e chaves de persistência preservados.
