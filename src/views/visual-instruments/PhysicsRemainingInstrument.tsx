@@ -1,3 +1,4 @@
+import { LunetaScene } from './LunetaScene';
 import React, { useState } from 'react';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
@@ -257,16 +258,7 @@ function Scene({ id, value }: { id: PhysicsRemainingId; value: number }) {
       <text x="160" y="292" textAnchor="middle" style={{...txt,fontSize:13}}>raios tangentes delimitam a umbra</text>
     </g>;
   }
-  if (id === 'optical-instruments') {
-    const ratio = value / 8; const tube = 165 + Math.min(value / 20, 80);
-    return <g data-physics-system="optical-instruments">
-      <path d="M22 150H298" stroke="var(--vs-ink-muted)" strokeWidth="2" strokeDasharray="5 5"/><path d={`M71 90Q42 150 71 210M${tube} 91Q${tube+22} 150 ${tube} 209`} {...wine}/>
-      <path d={`M28 91L71 130L${tube} 150M28 209L71 170L${tube} 150M${tube} 150L284 91M${tube} 150L284 209`} stroke="var(--vs-blue)" strokeWidth="3" fill="none"/>
-      <path d={`M${tube+34} 112Q${tube+13} 150 ${tube+34} 188`} stroke="var(--vs-ink)" strokeWidth="5" fill="none"/><path d={`M${tube+78} 112Q${tube+99} 150 ${tube+78} 188`} stroke="var(--vs-ink)" strokeWidth="5" fill="none"/>
-      <text x="70" y="237" textAnchor="middle" style={txt}>objetiva</text><text x={tube+56} y="237" textAnchor="middle" style={txt}>ocular</text><text x="161" y="75" textAnchor="middle" style={{...txt,fontSize:12}}>imagem real intermediária</text>
-      <text x="161" y="283" textAnchor="middle" style={{...txt,fontSize:13}}>luneta: A = {decimal(ratio)}×</text>
-    </g>;
-  }
+  if (id === 'optical-instruments') return <LunetaScene focal={value} />;
   if (id === 'wave-basics') {
     const wavelength = 52 + value * 17;
     const wave = Array.from({ length: 160 }, (_, n) => { const x = 25 + n * 1.7; return `${n ? 'L' : 'M'} ${x} ${150 - 37 * Math.sin((x - 25) * 2 * Math.PI / wavelength)}`; }).join(' ');

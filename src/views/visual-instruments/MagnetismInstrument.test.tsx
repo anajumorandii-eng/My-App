@@ -68,3 +68,25 @@ describe('geometria da carga positiva em B uniforme', () => {
     expect(screen.getAllByText('0,6 N').length).toBeGreaterThan(0);
   });
 });
+
+it('inverte corrente e campo com movimento e remove indução em repouso', () => {
+  const Component = magnetismInstrument('lenz');
+  const { container } = render(<Component {...props('summary-fisica-inducao-eletromagnetica-lei-de-lenz')} />);
+  expect(container.querySelector('[data-lenz-mode="retreat"]')).toBeInTheDocument();
+  expect(screen.getByRole('slider')).toHaveAttribute('min', '0.1');
+  expect(screen.getByRole('slider')).toHaveAttribute('max', '2');
+  expect(screen.getByRole('slider')).toHaveAttribute('step', '0.1');
+  expect(screen.getByRole('img')).toHaveAccessibleName(/horário.*ímã/i);
+  const initial = container.querySelector('[data-vector="induced-field"]')?.getAttribute('x2');
+  fireEvent.change(screen.getByRole('combobox', { name: /movimento do ímã/i }), { target: { value: 'approach' } });
+  expect(screen.getByRole('img')).toHaveAccessibleName(/anti-horário/i);
+  expect(container.querySelector('[data-vector="induced-field"]')?.getAttribute('x2')).not.toBe(initial);
+  const size = container.querySelector('[data-vector="induced-field"]')?.getAttribute('x2');
+  fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
+  expect(container.querySelector('[data-vector="induced-field"]')?.getAttribute('x2')).not.toBe(size);
+  fireEvent.change(screen.getByRole('combobox'), { target: { value: 'stationary' } });
+  expect(container.querySelector('[data-vector="induced-field"]')).toBeNull();
+  expect(container.querySelector('[data-current-arrow]')).toBeNull();
+  expect(screen.getAllByText('0 V').length).toBeGreaterThan(0);
+  expect(container.querySelector('[data-vector="external-field"]')).toBeInTheDocument();
+});

@@ -1,3 +1,4 @@
+import { lunetaGeometry } from './lunetaGeometry';
 export type PhysicsRemainingId =
   | 'echo' | 'diffraction' | 'tube-harmonics' | 'quantum-photon'
   | 'circular-motion' | 'electric-field-map' | 'electric-meters' | 'generator'
@@ -113,12 +114,12 @@ export const PHYSICS_REMAINING: Record<PhysicsRemainingId, PhysicsRemainingConfi
     readouts: distance => [{ label: 'Distância fonte–tela', value: `${distance} m` }, { label: 'Raio da sombra (R = 0,3 m; d = 2 m)', value: `${decimal(.3 * distance / 2)} m`, pivot: true }],
   },
   'optical-instruments': {
-    id: 'optical-instruments', name: 'Objetiva forma a imagem; ocular a amplia uma segunda vez',
-    question: 'Compare o par de lentes: na luneta, a razão entre focais define o aumento angular.',
+    id: 'optical-instruments', name: 'Luneta: a objetiva forma a imagem e a ocular colima os raios',
+    question: 'Ajuste a objetiva de uma luneta astronômica de Kepler em foco no infinito. A ocular tem focal de 8 mm.',
     control: { label: 'fₒ', description: 'focal da objetiva da luneta, em mm', min: 400, max: 1600, step: 200, initial: 1200 },
-    formula: 'A_luneta = f_objetiva/f_ocular',
-    insight: 'a objetiva recebe o objeto e forma a primeira imagem real; a ocular a usa como objeto de uma lupa. A imagem final costuma ficar invertida.',
-    readouts: focal => [{ label: 'Focal da objetiva', value: `${focal} mm` }, { label: 'Aumento (ocular de 8 mm)', value: `${decimal(focal / 8)}×`, pivot: true }, { label: 'Tubo em foco no infinito', value: `${focal + 8} mm` }],
+    formula: 'M = −fₒ/fₑ • L = fₒ + fₑ',
+    insight: 'a objetiva reúne raios paralelos de um ponto distante em uma imagem real no foco comum. A ocular faz os raios saírem paralelos; o sinal negativo de M indica inversão angular. Modelo paraxial de lentes finas, apenas da luneta.',
+    readouts: focal => { const model = lunetaGeometry(focal); return [{ label: 'Focal da objetiva', value: `${model.objectiveFocal} mm` }, { label: 'Aumento (ocular de 8 mm)', value: `${decimal(Math.abs(model.magnification))}×`, pivot: true }, { label: 'Tubo em foco no infinito', value: `${model.length} mm` }, { label: 'M angular (imagem invertida)', value: `${model.magnification}` }]; },
   },
   'wave-basics': {
     id: 'wave-basics', name: 'A fonte fixa f; o meio ajusta a velocidade e o comprimento de onda',
