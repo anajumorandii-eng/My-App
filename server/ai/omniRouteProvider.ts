@@ -1,3 +1,4 @@
+import { setTimeout as delay } from 'node:timers/promises';
 import { AiGenerationError } from './errors';
 import { AiGenerationRequest, AiProvider, AiProviderResult, AiStream, AiTask } from './types';
 
@@ -31,6 +32,7 @@ interface ChatCompletionResponse {
 }
 
 interface ChatCompletionChunk {
+  error?: unknown;
   choices?: Array<{ delta?: { content?: unknown } }>;
   usage?: ChatCompletionUsage;
 }
@@ -129,8 +131,18 @@ export class OmniRouteProvider implements AiProvider {
     }
   }
 
+  private async fetchWithRetry(url: string, init: RequestInit): Promise<Response> {
+    const response = await this.fetchFn(url, init);
+    if (![500, 502, 503, 504].includes(response.status) || init.signal?.aborted) return response;
+    // O serviço pode falhar antes de abrir o fluxo. Uma nova tentativa só
+    // acontece antes de emitir texto, sem repetir uma explicação já iniciada.
+    await response.body?.cancel();
+    await delay(250, undefined, { signal: init.signal ?? undefined });
+    return this.fetchFn(url, init);
+  }
+
   private async *streamComplete(model: string, prompt: string, signal?: AbortSignal, onDelta?: () => void): AiStream {
-    const response = await this.fetchFn(`${this.baseUrl}/chat/completions`, {
+    const response = await this.fetchWithRetry(`${this.baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${this.apiKey}`,
@@ -167,17 +179,18 @@ export class OmniRouteProvider implements AiProvider {
         while (!frame.done) {
           const dado = frame.value;
           if (dado !== '[DONE]') {
-            try {
-              const chunk = JSON.parse(dado) as ChatCompletionChunk;
-              if (chunk.usage) usage = chunk.usage;
-              const delta = chunk.choices?.[0]?.delta?.content;
-              if (typeof delta === 'string' && delta.length > 0) {
-                texto += delta;
-                onDelta?.();
-                yield delta;
-              }
-            } catch {
-              // Frame malformado no meio do fluxo não invalida o que já veio.
+            let chunk: ChatCompletionChunk | undefined;
+            try { chunk = JSON.parse(dado) as ChatCompletionChunk; }
+            catch { /* Um frame malformado não invalida os outros frames. */ }
+            // HTTP 200 também pode carregar uma falha no SSE. Ignorá-la
+            // permitiria salvar uma explicação interrompida como completa.
+            if (chunk?.error) throw new AiGenerationError('OmniRoute encerrou a geração com erro do serviço.');
+            if (chunk?.usage) usage = chunk.usage;
+            const delta = chunk?.choices?.[0]?.delta?.content;
+            if (typeof delta === 'string' && delta.length > 0) {
+              texto += delta;
+              onDelta?.();
+              yield delta;
             }
           }
           frame = frames.next();
@@ -193,7 +206,7 @@ export class OmniRouteProvider implements AiProvider {
   }
 
   private async complete(model: string, prompt: string, signal?: AbortSignal): Promise<AiProviderResult> {
-    const response = await this.fetchFn(`${this.baseUrl}/chat/completions`, {
+    const response = await this.fetchWithRetry(`${this.baseUrl}/chat/completions`, {
       method: 'POST',
       headers: {
         Authorization: `Bearer ${this.apiKey}`,

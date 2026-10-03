@@ -51,7 +51,7 @@ test('usa o combo fast como fallback quando o deep falha', async () => {
   });
 
   const result = await provider.generate({ task: 'socratic', prompt: 'prompt' });
-  assert.deepEqual(models, ['juju-deep-v1', 'juju-fast-v1']);
+  assert.deepEqual(models, ['juju-deep-v1', 'juju-deep-v1', 'juju-fast-v1']);
   assert.equal(typeof result === 'string' ? false : result.fallback, true);
 });
 
@@ -155,7 +155,7 @@ test('cai no combo fast quando o deep falha antes do primeiro pedaço', async ()
   });
 
   const { deltas, result } = await collect(provider.generateStream({ task: 'socratic', prompt: 'p' }));
-  assert.deepEqual(modelos, ['juju-deep-v1', 'juju-fast-v1']);
+  assert.deepEqual(modelos, ['juju-deep-v1', 'juju-deep-v1', 'juju-fast-v1']);
   assert.deepEqual(deltas, ['do fast']);
   assert.equal(result.fallback, true);
 });
@@ -187,4 +187,30 @@ test('não troca de modelo depois que a aluna já começou a ler', async () => {
   assert.equal((await stream.next()).value, 'comecei');
   await assert.rejects(() => stream.next());
   assert.equal(chamadas, 1, 'não deve tentar o fast depois de já ter emitido');
+});
+
+test('recupera erro temporário de streaming antes de emitir texto, sem trocar de rota', async () => {
+  let calls = 0;
+  const provider = new OmniRouteProvider({ baseUrl: 'https://omniroute.example/v1', apiKey: 'test-secret', deepModel: 'shared-route', fastModel: 'shared-route', fetch: async () => ++calls === 1 ? new Response('Internal Server Error', { status: 500 }) : new Response('data: {"choices":[{"delta":{"content":"Explicação real"}}]}\n\ndata: [DONE]\n\n', { headers: { 'Content-Type': 'text/event-stream' } }) });
+  const stream = provider.generateStream({ task: 'podcast-script', prompt: 'Explique osmose.' });
+  const result = await stream.next();
+  assert.equal(result.value, 'Explicação real');
+  assert.equal(calls, 2);
+  await stream.return({ text: '', model: 'shared-route' });
+});
+
+test('limita falhas temporárias a duas chamadas e não repete falha de autenticação', async () => {
+  for (const [status, expectedCalls] of [[500, 2], [401, 1]]) {
+    let calls = 0;
+    const provider = new OmniRouteProvider({ baseUrl: 'https://omniroute.example/v1', apiKey: 'test-secret', fetch: async () => { calls++; return new Response('{}', { status }); } });
+    await assert.rejects(provider.generate({ task: 'podcast-script', prompt: 'Explique osmose.' }));
+    assert.equal(calls, expectedCalls);
+  }
+});
+
+test('erro recebido dentro do fluxo invalida o roteiro parcial', async () => {
+  const provider = new OmniRouteProvider({ baseUrl: 'https://omniroute.example/v1', apiKey: 'test-secret', fetch: async () => new Response('data: {"choices":[{"delta":{"content":"Início do roteiro"}}]}\n\ndata: {"error":{"type":"server_error","code":"bad_gateway"}}\n\ndata: [DONE]\n\n') });
+  const stream = provider.generateStream({ task: 'podcast-script', prompt: 'Explique osmose.' });
+  assert.equal((await stream.next()).value, 'Início do roteiro');
+  await assert.rejects(stream.next(), /encerrou a geração com erro/);
 });

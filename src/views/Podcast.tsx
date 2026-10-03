@@ -9,7 +9,7 @@ import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
 import { usePersonalPodcasts } from '../hooks/usePersonalPodcasts';
 import { usePodcastVoices } from '../hooks/usePodcastVoices';
 import { useAuth } from '../context/AuthContext';
-import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, resolvePodcastVoice, type PodcastSettings } from '../lib/podcastConfig';
+import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, resolvePodcastVoices, type PodcastSettings } from '../lib/podcastConfig';
 import { splitPodcastScript } from '../lib/podcastChunks';
 import { summaryCurriculum } from '../data/summaryCurriculum';
 import type { PodcastEpisode } from '../types';
@@ -28,7 +28,7 @@ export default function Podcast() {
   const accountRef = useRef(user?.uid); accountRef.current = user?.uid;
   const { voices, loading: voicesLoading, error: voicesError, retry: retryVoices } = usePodcastVoices();
   const savedSettings: PodcastSettings = { ...DEFAULT_PODCAST_SETTINGS, ...(profile.podcastVoiceName ? { voiceName: profile.podcastVoiceName } : {}), ...profile.podcastSettings };
-  const settings: PodcastSettings = { ...savedSettings, voiceName: resolvePodcastVoice(savedSettings.voiceName, voices), secondVoice: resolvePodcastVoice(savedSettings.secondVoice, voices) };
+  const settings: PodcastSettings = { ...savedSettings, ...resolvePodcastVoices(savedSettings.voiceName, savedSettings.secondVoice, voices) };
   const [title, setTitle] = useState('');
   const [subject, setSubject] = useState('Biologia');
   const [focus, setFocus] = useState('');
@@ -118,7 +118,7 @@ export default function Podcast() {
     controller.current?.abort(); controller.current = new AbortController();
     audioRef.current?.pause(); setPlayingId(null); setActive(episode); setError(null); setAudioUrl(null); setLoadingId(episode.id); setProgress('Preparando as vozes…');
     const savedConfiguration = 'settings' in episode ? (episode as PersonalPodcast).settings : { ...settings, speakers: 1 as const };
-    const configuration = { ...savedConfiguration, voiceName: resolvePodcastVoice(savedConfiguration.voiceName, voices), secondVoice: resolvePodcastVoice(savedConfiguration.secondVoice, voices) };
+    const configuration = { ...savedConfiguration, ...resolvePodcastVoices(savedConfiguration.voiceName, savedConfiguration.secondVoice, voices) };
     const key = JSON.stringify([episode.id, configuration, episode.script]);
     try {
       let url = cache.current.get(key);
