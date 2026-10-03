@@ -162,8 +162,17 @@ A PR #243 foi incorporada em 02/10/2026. A estudante pediu mais correções por 
 
 A PR #244 foi incorporada em 02/10/2026; base atual `b61b0518`. Mantido o pedido de lotes maiores e PR automática na branch `fix/matematica-probabilidades-sequencias`: 13 capítulos de probabilidades, trigonometria, geometria espacial, funções, sequências e anotações analíticas, mais acesso aos controles de Podcast, Treino da 2ª Fase, Tutor, Redação e Administração de Conteúdo. O [registro do quinto lote](visual-integral-2026-10-02/quinto-lote/README.md) reúne modelos, capturas, regressões e limites. Nenhum histórico real ou conteúdo autenticado foi alterado. Esta etapa é uma proposta por PR; não realizar merge automático nem considerar concluídos os outros achados do inventário.
 
+## Retomada após a integração da PR #247
+
+- Base de trabalho: `25cafa0dc60895e29cbe4727c118f9179f0d13aa`, após a integração das PRs #247 (pranchas científicas) e #248 (reprodução de podcasts). O CI e o deploy da PR #247 foram confirmados verdes.
+- Três apontamentos da revisão de #247 foram reproduzidos e corrigidos: seleção da Primeira Lei no capítulo da Segunda Lei; origem de temperatura de Gibbs à esquerda do equilíbrio, com intercepto positivo; apoio de Termoquímica I separado do conteúdo de Gibbs.
+- Quatro regressões de componente e oito cenários de interação no Chromium ampliam a cobertura existente. Capturas e reprodução: [complemento do sexto lote](visual-integral-2026-10-02/sexto-lote/README.md#ajustes-após-a-revisão-da-pr-247).
+- A correção de podcasts já incorporada em #248 foi preservada. Esta rodada não altera autenticação, histórico real, Firestore ou aprovação editorial de outros capítulos.
+
+- Validação da retomada: 806 testes Node e 895 testes Vitest passaram; 32 cenários Chromium e oito rechecagens de Gibbs passaram. Um timeout de `pairContract.test.tsx` observado durante execução concorrente não se repetiu isoladamente nem na suíte completa sem Chromium em paralelo. O limite original de 15 segundos foi preservado.
+
 ## Conferência de atualizações e navegação do iPad — 03/10/2026
 
-A estudante enviou capturas de sobreposição da lateral e autorizou corrigir e prosseguir após conferir as atualizações. Base atual conferida: `25cafa0d`. As PRs #247 e #248 já foram incorporadas, com checks aprovados; #249 estava aberta, também com checks aprovados. Não repetir o sexto lote científico nem sobrescrever a proposta de Mendel/Gibbs. O próximo lote de mecanismos recomendado segue em Física (Lenz, Doppler e telescópio), após consultar o estado efetivo.
+A estudante enviou capturas de sobreposição da lateral e autorizou corrigir e prosseguir após conferir as atualizações. Base atual conferida: `f89ab5af`, incluindo o merge da PR #249 (`ee1a6e6f`) e a atualização automática de continuidade. As PRs #247, #248 e #249 já foram incorporadas. A branch da PR #250 foi atualizada sobre essa main, preservando as correções de Mendel/Gibbs e os dois registros de continuidade. Não repetir o sexto lote científico nem as correções já integradas. O próximo lote de mecanismos recomendado segue em Física (Lenz, Doppler e telescópio), após consultar o estado efetivo.
 
 Na branch `fix/ipad-navigation-layout`, a coluna da grade acompanha o trilho expandido, a marca tem alternativa SVG em falha de carregamento e a gaveta ganhou entrada/contenção/restauração de foco, Escape e limpeza ao mudar para paisagem desktop. Evidências, limites e regressões: [navegação do iPad](visual-integral-2026-10-03/navegacao-ipad/README.md). Publicação por PR autorizada, sem merge automático. Histórico e chaves de persistência preservados.
