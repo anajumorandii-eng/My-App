@@ -1,4 +1,6 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
+import { flushSync } from 'react-dom';
+import { preparePodcastPlayback } from '../lib/podcastPlayback';
 import { Headphones, Sparkles, Play, Square, Loader2, BookOpen, X } from 'lucide-react';
 import { requestAiTextStream } from '../lib/aiClient';
 import { synthesizePodcastAudio, podcastAudioErrorMessage } from '../lib/podcastAudio';
@@ -43,6 +45,7 @@ export default function Podcast() {
   const [loadingId, setLoadingId] = useState<string | null>(null);
   const [progress, setProgress] = useState('');
   const [audioUrl, setAudioUrl] = useState<string | null>(null);
+  const [playbackNotice, setPlaybackNotice] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
   const cache = useRef(new Map<string, string>());
   const audioTask = useRef(0);
@@ -59,7 +62,7 @@ export default function Podcast() {
   useEffect(() => {
     audioTask.current++; generationTask.current++; controller.current?.abort(); audioRef.current?.pause();
     setActive(null); setAudioUrl(null); setPlayingId(null); setLoadingId(null); setGenerating(false); setDraft(''); setError(null);
-    setTitle(''); setFocus(''); setSourceText(''); setSelected([]);
+    setPlaybackNotice(null); setTitle(''); setFocus(''); setSourceText(''); setSelected([]);
     cache.current.forEach(url => URL.revokeObjectURL(url)); cache.current.clear();
   }, [user?.uid]);
   const sourceChoices = useMemo(() => topics.filter(t => t.subject === subject && t.title.toLocaleLowerCase('pt-BR').includes(query.toLocaleLowerCase('pt-BR'))), [subject, query]);
@@ -69,6 +72,7 @@ export default function Podcast() {
   const sameVoice = settings.speakers === 2 && settings.voiceName === settings.secondVoice;
 
   const generate = async () => {
+    setPlaybackNotice(null);
     const task = ++generationTask.current;
     const owner = accountRef.current;
     const snapshot = { ...settings };
@@ -106,7 +110,10 @@ export default function Podcast() {
   };
 
   const play = async (episode: PodcastEpisode | PersonalPodcast) => {
+    if (generating) return;
     if (playingId === episode.id) { audioRef.current?.pause(); setPlayingId(null); return; }
+    preparePodcastPlayback(audioRef.current);
+    setPlaybackNotice(null);
     const task = ++audioTask.current;
     controller.current?.abort(); controller.current = new AbortController();
     audioRef.current?.pause(); setPlayingId(null); setActive(episode); setError(null); setAudioUrl(null); setLoadingId(episode.id); setProgress('Preparando as vozes…');
@@ -122,10 +129,17 @@ export default function Podcast() {
         if (cache.current.size > 6) { const first = cache.current.entries().next().value!; URL.revokeObjectURL(first[1]); cache.current.delete(first[0]); }
       }
       if (task !== audioTask.current) return;
-      setAudioUrl(url);
+      // O src precisa estar no DOM antes do play; duas atualizações independentes
+      // (React e audio.src) podiam interromper o carregamento da mesma faixa.
+      flushSync(() => setAudioUrl(url));
       const audio = audioRef.current;
-      if (audio) { audio.src = url; await audio.play(); if (task === audioTask.current) setPlayingId(episode.id); }
-    } catch (e) { if (task === audioTask.current) setError(podcastAudioErrorMessage(e)); }
+      if (audio) { preparePodcastPlayback(audio); await audio.play(); if (task === audioTask.current) setPlayingId(episode.id); }
+    } catch (e) {
+      if (task === audioTask.current) {
+        if (e instanceof DOMException && e.name === 'NotAllowedError' && cache.current.has(key)) setPlaybackNotice('Áudio pronto. Toque no play para ouvir.');
+        else setError(podcastAudioErrorMessage(e));
+      }
+    }
     finally { if (task === audioTask.current) { setLoadingId(null); setProgress(''); } }
   };
 
@@ -170,7 +184,8 @@ export default function Podcast() {
     </div>
     {generating && <section role="status" className="ni-panel p-5 mb-5"><h2 className="text-sm font-semibold mb-3">Construindo sua explicação…</h2><p className="text-xs text-[var(--dim)] mb-3">Este é um rascunho. A reprodução fica disponível quando o roteiro estiver completo.</p><p className="text-sm whitespace-pre-wrap leading-6 max-h-52 overflow-y-auto">{draft || 'Organizando os conceitos e as fontes.'}</p></section>}
     {loadingId && <div role="status" className="ni-panel p-4 mb-4 flex items-center gap-3 text-sm"><Loader2 size={18} className="animate-spin shrink-0" /><span className="flex-1">{progress}</span><button type="button" onClick={() => { audioTask.current++; controller.current?.abort(); setLoadingId(null); setProgress(''); }} className="underline">Cancelar</button></div>}
-    <PodcastPlayer episode={active} audioUrl={audioUrl} audioRef={audioRef} onEnded={() => setPlayingId(null)} onPlay={() => setPlayingId(active?.id ?? null)} onPause={() => setPlayingId(null)} onError={() => { setPlayingId(null); setError('O navegador não conseguiu reproduzir o áudio. Tente novamente.'); }} />
+    {playbackNotice && <p role="status" className="ni-panel p-4 mb-4 text-sm">{playbackNotice}</p>}
+    <PodcastPlayer episode={active} audioUrl={audioUrl} audioRef={audioRef} audioLoading={Boolean(loadingId && loadingId === active?.id)} requestDisabled={generating} onRequestAudio={() => { if (active) void play(active); }} onEnded={() => setPlayingId(null)} onPlay={() => { setPlaybackNotice(null); setPlayingId(active?.id ?? null); }} onPause={() => setPlayingId(null)} onError={() => { setPlayingId(null); setError('O navegador não conseguiu reproduzir o áudio. Tente novamente.'); }} />
     <section className="mb-7">{pendingCount > 0 && <p role="status" className="text-xs text-[var(--dim)] mb-3">{pendingCount} episódio(s) aguardando sincronização. Você já pode ouvir ou baixar o roteiro.</p>}{personalError && <button type="button" onClick={retrySaves} className="text-sm underline mb-3">Tentar salvar novamente</button>}<h2 className="text-lg font-semibold mb-2">Seus podcasts</h2><p className="text-xs text-[var(--dim)] mb-4">{user ? 'Roteiros e configurações salvos na sua conta.' : 'Conecte sua conta para gerar e guardar seus episódios.'} O áudio pode ser baixado após gerar.</p>{personal.length ? <div className="space-y-3">{rows(personal)}</div> : <div className="rounded-xl border border-dashed border-[var(--line)] p-6 text-sm text-[var(--dim)]">Escolha um tema e crie seu primeiro episódio acima para ouvir aqui.</div>}{hasMore && <button type="button" disabled={personalLoading} onClick={loadMore} className="w-full mt-3 border border-[var(--line)] rounded-xl p-3 text-sm disabled:opacity-50">{personalLoading ? 'Carregando…' : 'Carregar podcasts anteriores'}</button>}</section>
     <section><h2 className="text-lg font-semibold mb-2">Ideias da biblioteca</h2><p className="text-xs text-[var(--dim)] mb-4">Use um roteiro de referência como ponto de partida e personalize a explicação.</p><label className="block mb-4"><span className="sr-only">Buscar na biblioteca de podcasts</span><input className={podcastInputClass} value={libraryQuery} onChange={e => { setLibraryQuery(e.target.value); setVisible(8); }} placeholder="Busque tema ou matéria…" /></label><div className="space-y-3">{rows(filteredCatalog.slice(0, visible), true)}</div>{!filteredCatalog.length && <p className="text-sm text-[var(--dim)]">Nenhum roteiro encontrado.</p>}{filteredCatalog.length > visible && <button type="button" onClick={() => setVisible(n => n + 8)} className="w-full mt-3 border border-[var(--line)] rounded-xl p-3 text-sm">Mostrar mais roteiros</button>}</section>
   </div>;
