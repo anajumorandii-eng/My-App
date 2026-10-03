@@ -10,3 +10,12 @@ test('correia troca velocidade angular quando muda o raio', () => assert.equal(P
 test('gerador diminui a tensão terminal quando fornece corrente', () => assert.equal(PHYSICS_REMAINING.generator.readouts(3)[1].value, '18 V'));
 test('receptor separa potência útil da perda interna', () => assert.equal(PHYSICS_REMAINING.receiver.readouts(5)[2].value, '50 W'));
 test('onda em corda fixa volta invertida', () => assert.equal(PHYSICS_REMAINING['rope-boundary'].readouts(0)[1].value, 'invertido'));
+
+test('luneta declara inversão angular e conserva focais e comprimento físicos', () => {
+  const config = PHYSICS_REMAINING['optical-instruments'];
+  assert.match(config.formula, /−/);
+  for (const focal of [400, 1200, 1600]) {
+    assert.equal(config.readouts(focal)[1].value, `${focal / 8}×`);
+    assert.equal(config.readouts(focal)[2].value, `${focal + 8} mm`);
+  }
+});

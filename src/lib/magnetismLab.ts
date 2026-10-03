@@ -3,6 +3,25 @@ export interface MagnetismReadout { label: string; value: string; pivot?: boolea
 export interface MagnetismConfig { id: MagnetismId; name: string; question: string; control: { label: string; description: string; min: number; max: number; step: number; initial: number }; formula: string; insight: string; readouts(value: number): MagnetismReadout[] }
 const decimal = (n: number) => String(Math.round(n * 100) / 100).replace('.', ',');
 
+export type LenzMode = 'approach' | 'retreat' | 'stationary';
+// A normal positiva aponta do ímã à bobina (direita); a corrente positiva
+// seria horária para quem observa da posição do ímã.
+export function lenzModel(mode: LenzMode, time: number) {
+  const deltaFlux = mode === 'approach' ? .2 : mode === 'retreat' ? -.2 : 0;
+  const emf = deltaFlux === 0 ? 0 : -10 * deltaFlux / time;
+  return { deltaFlux, emf, frontPole: mode === 'approach' ? 'N' : mode === 'retreat' ? 'S' : null,
+    current: mode === 'approach' ? 'anti-horário' : mode === 'retreat' ? 'horário' : 'sem corrente' };
+}
+export function lenzReadouts(mode: LenzMode, time: number): MagnetismReadout[] {
+  const model = lenzModel(mode, time);
+  return [
+    { label: 'Fluxo externo por espira', value: mode === 'approach' ? '0 → 0,20 Wb' : mode === 'retreat' ? '0,20 Wb → 0' : '0,20 Wb constante' },
+    { label: 'FEM induzida', value: `${decimal(Math.abs(model.emf))} V`, pivot: true },
+    { label: 'Variação ΔΦ', value: `${model.deltaFlux > 0 ? '+' : ''}${decimal(model.deltaFlux)} Wb` },
+    { label: 'Corrente vista do ímã', value: model.current },
+  ];
+}
+
 export const MAGNETISM: Record<MagnetismId, MagnetismConfig> = {
   'fio-espira': {
     id: 'fio-espira', name: 'Corrente cria campo circular ao redor do fio', question: 'Mude a corrente em um fio retilíneo; a distância de observação fica em 2 cm.',
@@ -23,10 +42,10 @@ export const MAGNETISM: Record<MagnetismId, MagnetismConfig> = {
     readouts: (i) => [{ label: 'Sentido das correntes', value: 'igual → atração' }, { label: 'F/L relativo', value: `${decimal(i * i / 4)} u.a.`, pivot: true }],
   },
   lenz: {
-    id: 'lenz', name: 'Uma espira responde à variação do fluxo', question: 'Mude o tempo em que um fluxo de 0,20 Wb desaparece numa bobina de 10 espiras.',
+    id: 'lenz', name: 'Uma espira responde à variação do fluxo', question: 'Escolha o movimento do ímã e o tempo da variação de fluxo numa bobina de 10 espiras.',
     control: { label: 'Δt', description: 'tempo de variação em s', min: .1, max: 2, step: .1, initial: .5 }, formula: '|ε| = N|ΔΦ|/Δt',
     insight: 'pela Lei de Lenz, a corrente induzida cria um campo que se opõe à mudança do fluxo, exigindo trabalho para a alteração.',
-    readouts: (time) => [{ label: 'Fluxo', value: '0,20 Wb → 0' }, { label: 'FEM induzida', value: `${decimal(2 / time)} V`, pivot: true }],
+    readouts: (time) => lenzReadouts('retreat', time),
   },
   gerador: {
     id: 'gerador', name: 'Uma espira girando converte trabalho em eletricidade', question: 'Mude a velocidade angular de uma bobina em campo uniforme.',
