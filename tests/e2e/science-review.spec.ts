@@ -26,14 +26,36 @@ for (const width of [390, 1440]) {
             expect(style.stroke).not.toBe('none');
             expect(style.fill).toBe('none');
           }
-          const labelsCrossingCurve = await scene.locator('text').evaluateAll((labels) => labels.filter((label) => {
-            const b = (label as SVGTextElement).getBBox();
-            const left = Math.max(58, b.x), right = Math.min(262, b.x + b.width);
-            if (left > right) return false;
-            const y = (x: number) => 90 + (x - 58) * 160 / 204;
-            return y(left) <= b.y + b.height && y(right) >= b.y;
-          }).map((label) => label.textContent));
+          const labelsCrossingCurve = await scene.evaluate((svg) => {
+            const curve = svg.querySelectorAll('path')[1];
+            const length = curve.getTotalLength();
+            return [...svg.querySelectorAll('text')].filter((label) => {
+              const b = label.getBBox();
+              for (let distance = 0; distance <= length; distance += 1) {
+                const point = curve.getPointAtLength(distance);
+                if (point.x >= b.x && point.x <= b.x + b.width && point.y >= b.y && point.y <= b.y + b.height) return true;
+              }
+              return false;
+            }).map((label) => label.textContent);
+          });
           expect(labelsCrossingCurve).toEqual([]);
+        });
+
+        test('Mendel alterna para Primeira Lei e restaura o padrão ao fechar', async ({ page }) => {
+          await page.goto('/visual?summary=summary-biologia-segunda-lei-de-mendel');
+          const scene = page.locator('.vs-study-board svg[role="img"]');
+          await expect(scene).toHaveAttribute('aria-label', /4 por 4.*9:3:3:1/);
+          await page.getByRole('button', { name: /^Primeira lei/ }).click();
+          await expect(scene).toHaveAttribute('aria-label', /2 por 2.*3:1/);
+          await expect(scene.locator('.vs-punnett-cell')).toHaveCount(4);
+          await expect(page.getByLabel('cruzamento Aa × Aa', { exact: true })).toBeVisible();
+          await page.getByRole('button', { name: 'Fechar inspetor', exact: true }).click();
+          await expect(scene).toHaveAttribute('aria-label', /4 por 4.*9:3:3:1/);
+          await page.getByRole('button', { name: /^Segunda lei/ }).click();
+          await expect(scene.locator('.vs-punnett-cell')).toHaveCount(16);
+          await expect(page.getByLabel('cruzamento AaBb × AaBb', { exact: true })).toBeVisible();
+          await page.getByRole('button', { name: 'Fechar inspetor', exact: true }).click();
+          await expect(scene).toHaveAttribute('aria-label', /4 por 4.*9:3:3:1/);
         });
 
         test('vacina e soro mantêm células e conectores legíveis', async ({ page }) => {

@@ -51,3 +51,23 @@ Seis capturas em `revisao-navegador/` registram as três cenas corrigidas em 390
 - [Lipídios — desktop escuro](revisao-navegador/biologia-composicao-quimica-celular-carboidratos-e-lipidios-1440-dark.png)
 
 Esta revisão valida os reparos técnicos do lote. Não altera estados de aprovação editorial de outros capítulos nem certifica toda a aplicação em todos os navegadores. Nenhum login, UID, histórico real, chave de persistência ou dado do Firestore foi alterado.
+
+## Ajustes após a revisão da PR #247
+
+A PR #247 foi incorporada com CI e deploy verdes. A revisão automática identificou três comportamentos não cobertos na primeira rodada; os três foram reproduzidos por testes antes das correções:
+
+- No capítulo da Segunda Lei, selecionar a Primeira Lei agora mostra `Aa × Aa`, quatro células e 3:1. Selecionar a Segunda Lei ou limpar a seleção restaura `AaBb × AaBb`, dezesseis células e 9:3:3:1. A interação complementar continua dihíbrida ao selecionar qualquer etapa da via.
+- O gráfico de Gibbs agora inicia em `T = 0 K`, com intercepto `ΔH > 0`; a reta cruza `ΔG = 0` em uma temperatura positiva. O marcador está sobre a reta, à direita da origem. A parte não espontânea já não representa temperaturas absolutas negativas.
+- O apoio de Termoquímica I volta a separar entalpia de energia de ativação. O texto sobre Gibbs e velocidade fica restrito a Termoquímica II.
+
+Quatro casos de componente verificam a alternância de Mendel, a estabilidade da interação complementar, a geometria física do gráfico e a separação do apoio dos capítulos. No navegador, a suíte passa a ter 32 casos: os 24 anteriores mais oito verificações da alternância de Mendel. O teste de colisão da reta de Gibbs consulta a geometria efetiva do SVG, sem duplicar suas coordenadas.
+
+Novas evidências, com movimento reduzido:
+
+- [Gibbs com origem de temperatura — celular claro](ajustes-pos-revisao/gibbs-390-light.png)
+- [Gibbs com origem de temperatura — desktop escuro](ajustes-pos-revisao/gibbs-1440-dark.png)
+- [Primeira Lei selecionada — desktop escuro](ajustes-pos-revisao/mendel-primeira-lei-1440-dark.png)
+
+As capturas da seção anterior registram a versão da PR #247; as deste complemento registram os ajustes posteriores. Não houve alteração de autenticação, persistência ou dados reais.
+
+Validação do complemento: 806 testes Node, 895 testes Vitest e 32 cenários Chromium passaram. Oito cenários de Gibbs foram rechecados com servidor reiniciado. O timeout de `pairContract.test.tsx` na execução concorrente foi investigado: o teste passou isoladamente em cerca de seis segundos e na suíte completa sem Chromium em paralelo, sem mudar seu limite de 15 segundos.

@@ -39,4 +39,48 @@ describe('lote científico de Biologia e Química', () => {
     expect(screen.getAllByText(/ΔG = ΔH − TΔS/i).length).toBeGreaterThan(0);
     expect(screen.queryByText(/Lei de Hess/i)).not.toBeInTheDocument();
   });
+  it('acompanha a seleção da Primeira Lei e retorna ao padrão dihíbrido ao limpar', () => {
+    const base = props('summary-biologia-segunda-lei-de-mendel');
+    const { rerender } = render(<MendelBoard {...base} selectedId={base.map.nodes[1].id} />);
+    expect(screen.getByRole('img', { name: /2 por 2.*3:1/i })).toBeInTheDocument();
+    expect(screen.getByLabelText('cruzamento Aa × Aa')).toBeInTheDocument();
+    rerender(<MendelBoard {...base} selectedId={base.map.nodes[2].id} />);
+    expect(screen.getByRole('img', { name: /4 por 4.*9:3:3:1/i })).toBeInTheDocument();
+    expect(screen.getByLabelText('cruzamento AaBb × AaBb')).toBeInTheDocument();
+    rerender(<MendelBoard {...base} />);
+    expect(screen.getByRole('img', { name: /4 por 4.*9:3:3:1/i })).toBeInTheDocument();
+  });
+
+  it('mantém a interação complementar dihíbrida ao selecionar qualquer etapa', () => {
+    const base = props('summary-biologia-segunda-lei-de-mendel-e-interacao-genica');
+    const { rerender } = render(<MendelBoard {...base} selectedId={base.map.nodes[1].id} />);
+    expect(screen.getByRole('img', { name: /genes complementares.*nove.*sete/i })).toBeInTheDocument();
+    rerender(<MendelBoard {...base} selectedId={base.map.nodes[2].id} />);
+    expect(screen.getByRole('img', { name: /genes complementares.*nove.*sete/i })).toBeInTheDocument();
+  });
+
+  it('mostra equilíbrio de Gibbs em T positivo e intercepto de entalpia positivo', () => {
+    render(<ThermochemBoard {...props('summary-quimica-termoquimica-ii')} />);
+    const svg = screen.getByRole('img', { name: /energia livre de Gibbs/i });
+    const axes = svg.querySelector('path[stroke="var(--vs-ink)"]')!.getAttribute('d')!.match(/-?\d+(?:\.\d+)?/g)!.map(Number);
+    const curve = svg.querySelector('path[stroke="var(--vs-blue)"]')!.getAttribute('d')!.match(/-?\d+(?:\.\d+)?/g)!.map(Number);
+    const equilibrium = svg.querySelector('circle')!;
+    const x = Number(equilibrium.getAttribute('cx'));
+    const y = Number(equilibrium.getAttribute('cy'));
+    expect(x).toBeGreaterThan(axes[3]);
+    expect(y).toBe(axes[1]);
+    expect(curve[0]).toBe(axes[3]);
+    expect(curve[1]).toBeLessThan(axes[1]);
+    expect(curve[3]).toBeGreaterThan(axes[1]);
+    expect(curve[1] + (x - curve[0]) * (curve[3] - curve[1]) / (curve[2] - curve[0])).toBeCloseTo(y);
+    expect(screen.getByText('T = 0 K')).toBeInTheDocument();
+  });
+
+  it('preserva o apoio de entalpia e ativação em Termoquímica I', () => {
+    render(<ThermochemBoard {...props('summary-quimica-termoquimica-i')} />);
+    expect(screen.getByText('ΔH não é energia de ativação')).toBeInTheDocument();
+    expect(screen.queryByText('Espontaneidade não é velocidade')).not.toBeInTheDocument();
+    expect(screen.queryByText(/ΔG informa a tendência/)).not.toBeInTheDocument();
+  });
+
 });
