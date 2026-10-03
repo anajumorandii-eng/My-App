@@ -56,3 +56,58 @@ it('permite gerar apenas pelo tema sem exigir material ou instruções', async (
   await waitFor(() => expect(requestAiTextStream).toHaveBeenCalled());
   expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({ title: 'Osmose', sourceText: '', focus: '' });
 });
+
+it('o player gera o áudio do roteiro pronto antes de disponibilizar os controles de reprodução', async () => {
+  render(<Podcast />);
+  fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Osmose com som' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
+  await screen.findByRole('heading', { name: 'Osmose com som', level: 2 });
+  expect(screen.getByLabelText('Áudio de Osmose com som')).not.toHaveAttribute('controls');
+  fireEvent.click(screen.getByRole('button', { name: 'Gerar áudio e ouvir' }));
+  await waitFor(() => expect(synthesizePodcastAudio).toHaveBeenCalled());
+  await waitFor(() => expect(screen.getByLabelText('Áudio de Osmose com som')).toHaveAttribute('src', 'blob:podcast'));
+  expect(screen.getByLabelText('Áudio de Osmose com som')).toHaveAttribute('controls');
+});
+it('prévia bloqueada por política de autoplay mantém o áudio pronto para um toque no play', async () => {
+  vi.mocked(HTMLMediaElement.prototype.play).mockRejectedValueOnce(new DOMException('Requires a user gesture', 'NotAllowedError'));
+  render(<Podcast />);
+  fireEvent.click(screen.getByRole('button', { name: 'Ouvir voz da pessoa 1' }));
+  await waitFor(() => expect(synthesizePodcastAudio).toHaveBeenCalled());
+  await waitFor(() => expect(screen.getByLabelText(/Áudio de Amostra/)).toHaveAttribute('src', 'blob:podcast'));
+  expect(screen.queryByRole('alert')).not.toBeInTheDocument();
+  expect(screen.getByRole('status')).toHaveTextContent('Áudio pronto. Toque no play para ouvir.');
+});
+
+it('a prévia prepara a sessão de mídia e remove mudo ou volume zero antes de tocar', async () => {
+  const descriptor = Object.getOwnPropertyDescriptor(navigator, 'audioSession');
+  const session = { type: 'ambient' };
+  Object.defineProperty(navigator, 'audioSession', { configurable: true, value: session });
+  try {
+    render(<Podcast />);
+    const audio = screen.getByLabelText('Áudio de podcast') as HTMLAudioElement;
+    audio.muted = true; audio.volume = 0;
+    fireEvent.click(screen.getByRole('button', { name: 'Ouvir voz da pessoa 1' }));
+    await waitFor(() => expect(audio).toHaveAttribute('src', 'blob:podcast'));
+    expect(audio.muted).toBe(false);
+    expect(audio.volume).toBe(1);
+    expect(session.type).toBe('playback');
+    expect(HTMLMediaElement.prototype.play).toHaveBeenCalled();
+  } finally {
+    if (descriptor) Object.defineProperty(navigator, 'audioSession', descriptor);
+    else Reflect.deleteProperty(navigator, 'audioSession');
+  }
+});
+
+it('não inicia áudio do episódio anterior enquanto cria um novo roteiro', async () => {
+  render(<Podcast />);
+  fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Primeiro episódio' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
+  await screen.findByRole('heading', { name: 'Primeiro episódio', level: 2 });
+  vi.mocked(requestAiTextStream).mockImplementation(() => new Promise(() => {}));
+  fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Novo episódio' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
+  const listen = screen.getByRole('button', { name: 'Gerar áudio e ouvir' });
+  expect(listen).toBeDisabled();
+  fireEvent.click(listen);
+  expect(synthesizePodcastAudio).not.toHaveBeenCalled();
+});
