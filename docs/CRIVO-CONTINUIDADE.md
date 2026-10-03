@@ -161,3 +161,12 @@ A PR #243 foi incorporada em 02/10/2026. A estudante pediu mais correções por 
 ## Quinto lote visual ampliado por PR — 02/10/2026
 
 A PR #244 foi incorporada em 02/10/2026; base atual `b61b0518`. Mantido o pedido de lotes maiores e PR automática na branch `fix/matematica-probabilidades-sequencias`: 13 capítulos de probabilidades, trigonometria, geometria espacial, funções, sequências e anotações analíticas, mais acesso aos controles de Podcast, Treino da 2ª Fase, Tutor, Redação e Administração de Conteúdo. O [registro do quinto lote](visual-integral-2026-10-02/quinto-lote/README.md) reúne modelos, capturas, regressões e limites. Nenhum histórico real ou conteúdo autenticado foi alterado. Esta etapa é uma proposta por PR; não realizar merge automático nem considerar concluídos os outros achados do inventário.
+
+## Retomada após a integração da PR #247
+
+- Base de trabalho: `25cafa0dc60895e29cbe4727c118f9179f0d13aa`, após a integração das PRs #247 (pranchas científicas) e #248 (reprodução de podcasts). O CI e o deploy da PR #247 foram confirmados verdes.
+- Três apontamentos da revisão de #247 foram reproduzidos e corrigidos: seleção da Primeira Lei no capítulo da Segunda Lei; origem de temperatura de Gibbs à esquerda do equilíbrio, com intercepto positivo; apoio de Termoquímica I separado do conteúdo de Gibbs.
+- Quatro regressões de componente e oito cenários de interação no Chromium ampliam a cobertura existente. Capturas e reprodução: [complemento do sexto lote](visual-integral-2026-10-02/sexto-lote/README.md#ajustes-após-a-revisão-da-pr-247).
+- A correção de podcasts já incorporada em #248 foi preservada. Esta rodada não altera autenticação, histórico real, Firestore ou aprovação editorial de outros capítulos.
+
+- Validação da retomada: 806 testes Node e 895 testes Vitest passaram; 32 cenários Chromium e oito rechecagens de Gibbs passaram. Um timeout de `pairContract.test.tsx` observado durante execução concorrente não se repetiu isoladamente nem na suíte completa sem Chromium em paralelo. O limite original de 15 segundos foi preservado.

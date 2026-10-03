@@ -67,13 +67,15 @@ export default function MendelBoard(props: BoardProps) {
   const par = boardPair(props);
   const interaction = props.map.summaryId === 'summary-biologia-segunda-lei-de-mendel-e-interacao-genica';
   const secondLaw = props.map.summaryId === 'summary-biologia-segunda-lei-de-mendel';
+  const defaultDihybrid = secondLaw && par.emphasis === 'nenhum';
+  const diHibrido = interaction || defaultDihybrid || par.emphasis === 'direita';
   return (
     <BoardShell
       title={interaction ? 'Interação gênica: uma via, dois genes' : 'As leis de Mendel'}
       subtitle={interaction ? 'A segregação continua mendeliana; o produto final depende dos dois loci.' : 'A segunda lei não é sobre dois caracteres — é sobre independência.'}
-      condition={{ label: 'cruzamento', value: interaction || secondLaw ? 'AaBb × AaBb' : 'Aa × Aa' }}
+      condition={{ label: 'cruzamento', value: diHibrido ? 'AaBb × AaBb' : 'Aa × Aa' }}
       ariaLabel={interaction ? 'Prancha de interação gênica complementar com proporção nove para sete' : 'Prancha ilustrada das leis de Mendel com quadro de Punnett'}
-      scene={<PunnettScene emphasis={par.emphasis} interaction={interaction} startDihybrid={secondLaw} />}
+      scene={<PunnettScene emphasis={par.emphasis} interaction={interaction} startDihybrid={defaultDihybrid} />}
       sceneNotes={{ up: 'um par ↑', down: '↓ dois pares' }}
       emphasis={par.emphasis}
       left={interaction ? { label: 'Gene A · primeira etapa', headline: 'A_ produz o intermediário.', detail: 'Sem ao menos um alelo A funcional, a via é interrompida antes do intermediário e o organismo fica sem pigmento.', formula: 'precursor —A→ intermediário' } : { label: 'Primeira lei', headline: 'Cada par de alelos se separa.', detail: 'Na formação dos gametas, os dois alelos de um gene vão para células diferentes. Aa × Aa dá 3 dominantes para 1 recessivo.', formula: '3 : 1 (fenótipo) · 1 : 2 : 1 (genótipo)' }}
