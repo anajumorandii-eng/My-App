@@ -170,3 +170,9 @@ A PR #244 foi incorporada em 02/10/2026; base atual `b61b0518`. Mantido o pedido
 - A correção de podcasts já incorporada em #248 foi preservada. Esta rodada não altera autenticação, histórico real, Firestore ou aprovação editorial de outros capítulos.
 
 - Validação da retomada: 806 testes Node e 895 testes Vitest passaram; 32 cenários Chromium e oito rechecagens de Gibbs passaram. Um timeout de `pairContract.test.tsx` observado durante execução concorrente não se repetiu isoladamente nem na suíte completa sem Chromium em paralelo. O limite original de 15 segundos foi preservado.
+
+## Conferência de atualizações e navegação do iPad — 03/10/2026
+
+A estudante enviou capturas de sobreposição da lateral e autorizou corrigir e prosseguir após conferir as atualizações. Base atual conferida: `f89ab5af`, incluindo o merge da PR #249 (`ee1a6e6f`) e a atualização automática de continuidade. As PRs #247, #248 e #249 já foram incorporadas. A branch da PR #250 foi atualizada sobre essa main, preservando as correções de Mendel/Gibbs e os dois registros de continuidade. Não repetir o sexto lote científico nem as correções já integradas. O próximo lote de mecanismos recomendado segue em Física (Lenz, Doppler e telescópio), após consultar o estado efetivo.
+
+Na branch `fix/ipad-navigation-layout`, a coluna da grade acompanha o trilho expandido, a marca tem alternativa SVG em falha de carregamento e a gaveta ganhou entrada/contenção/restauração de foco, Escape e limpeza ao mudar para paisagem desktop. Evidências, limites e regressões: [navegação do iPad](visual-integral-2026-10-03/navegacao-ipad/README.md). Publicação por PR autorizada, sem merge automático. Histórico e chaves de persistência preservados.

@@ -19,6 +19,7 @@ import { BotaoBuscar } from './BotaoBuscar';
 const BuscaRapida = lazy(() => import('../views/visual-boards/BuscaRapida'));
 import { PainelPersonalizar } from '../views/visual-boards/PainelPersonalizar';
 import { FundoCaderno } from './FundoCaderno';
+import { CrivoAppMark } from './CrivoAppMark';
 
 const PATH_BY_SCREEN: Record<string, string> = {
   hoje: '/', diagnostico: '/diagnostico', plano: '/plano', agenda: '/agenda', 'reta-final': '/reta-final', recuperacao: '/recuperacao',
@@ -96,6 +97,7 @@ function LayoutComAmbiente() {
   }, []);
   const [showOnboarding, setShowOnboarding] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
+  const railRef = useRef<HTMLElement | null>(null);
   const [railExpanded, setRailExpanded] = useState(() =>
     typeof window !== 'undefined' && window.localStorage.getItem('crivo_rail_expanded') === 'true',
   );
@@ -111,10 +113,42 @@ function LayoutComAmbiente() {
   useEffect(() => { localStorage.setItem('crivo_rail_expanded', String(railExpanded)); }, [railExpanded]);
   useEffect(() => {
     const media = window.matchMedia('(max-width: 900px)');
-    const sync = () => setIsMobile(media.matches);
+    const sync = () => {
+      setIsMobile(media.matches);
+      if (!media.matches) setMenuOpen(false);
+    };
     sync(); media.addEventListener('change', sync);
     return () => media.removeEventListener('change', sync);
   }, []);
+  useEffect(() => {
+    if (!menuOpen || !isMobile) return;
+    const previousFocus = document.activeElement instanceof HTMLElement ? document.activeElement : null;
+    const previousOverflow = document.body.style.overflow;
+    document.body.style.overflow = 'hidden';
+    const focusable = () => Array.from(railRef.current?.querySelectorAll<HTMLElement>('button, a[href]') ?? [])
+      .filter(element => element.getClientRects().length > 0);
+    focusable()[0]?.focus();
+    const onKeyDown = (event: KeyboardEvent) => {
+      if (event.key === 'Escape') {
+        event.preventDefault();
+        setMenuOpen(false);
+      } else if (event.key === 'Tab') {
+        const elements = focusable();
+        const first = elements[0], last = elements[elements.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault(); last?.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault(); first?.focus();
+        }
+      }
+    };
+    document.addEventListener('keydown', onKeyDown);
+    return () => {
+      document.body.style.overflow = previousOverflow;
+      document.removeEventListener('keydown', onKeyDown);
+      if (previousFocus?.getClientRects().length) previousFocus.focus();
+    };
+  }, [menuOpen, isMobile]);
   const closeOnboarding = () => { setShowOnboarding(false); localStorage.setItem('juju_onboarding', 'true'); };
   // ⌘K / Ctrl+K abre a busca rápida em qualquer tela.
   useEffect(() => {
@@ -134,16 +168,16 @@ function LayoutComAmbiente() {
   return (
     <div className={cn('ni-prototype ni-production-app', !isDark && 'is-light')} style={{ '--primary': palette.primary, '--primary-ink': palette.readable, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties} data-family={palette.family}>
       {ambienteApp?.preferencias.fundo === 'caderno' && <FundoCaderno materia={ambienteApp.sobreposto?.materia} />}
-      <header className="ni-production-mobile lg:hidden">
+      <header className="ni-production-mobile lg:hidden" inert={isMobile && menuOpen}>
         <IconButton aria-label="Abrir menu" onClick={() => setMenuOpen(true)}><Menu className="h-5 w-5" aria-hidden="true" /></IconButton>
         <strong>Crivo</strong>
         {acoesDoTopo(true)}
         <button type="button" onClick={toggleTheme} aria-label={isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'}>{isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}</button>
       </header>
-      {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" onClick={() => setMenuOpen(false)} />}
+      {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" tabIndex={-1} onClick={() => setMenuOpen(false)} />}
 
-      <aside className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')} aria-hidden={isMobile && !menuOpen ? true : undefined} inert={isMobile && !menuOpen}>
-        <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><img src="/icon-192.png?v=3" alt="" /></button>
+      <aside ref={railRef} role={isMobile && menuOpen ? 'dialog' : undefined} aria-modal={isMobile && menuOpen ? true : undefined} aria-label={isMobile && menuOpen ? 'Menu de navegação' : undefined} className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')} aria-hidden={isMobile && !menuOpen ? true : undefined} inert={isMobile && !menuOpen}>
+        <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><CrivoAppMark /></button>
         {menuOpen && <button className="ni-production-close" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>}
         <nav className="ni-rail-scroll" aria-label="Todas as telas do app">
           {SCREENS.map((item) => {
@@ -163,9 +197,9 @@ function LayoutComAmbiente() {
         </button>
       </aside>
 
-      <div className="ni-page">
+      <div className="ni-page" inert={isMobile && menuOpen}>
         <header className="ni-top">
-          <div className="ni-mobile-mark"><img src="/icon-192.png?v=3" alt="" /></div><strong>Crivo</strong>
+          <div className="ni-mobile-mark"><CrivoAppMark /></div><strong>Crivo</strong>
           <nav aria-label="Áreas principais">
             {TOP_LEVEL.map(([key, label]) => {
               const target = PATH_BY_SCREEN[key];
