@@ -22,8 +22,8 @@ it('gera usando escolhas de duração, foco e material; mantém a configuração
   render(<Podcast />);
   fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Osmose do zero' } });
   fireEvent.change(screen.getByLabelText('Duração aproximada em minutos'), { target: { value: '12' } });
-  fireEvent.change(screen.getByLabelText('Seu material de estudo'), { target: { value: 'A membrana é seletiva.' } });
-  fireEvent.change(screen.getByLabelText('O que você quer aprender?'), { target: { value: 'Explique osmose com exemplos' } });
+  fireEvent.change(screen.getByLabelText('Seu material de estudo (opcional)'), { target: { value: 'A membrana é seletiva.' } });
+  fireEvent.change(screen.getByLabelText('O que você quer aprender? (opcional)'), { target: { value: 'Explique osmose com exemplos' } });
   fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
   await waitFor(() => expect(requestAiTextStream).toHaveBeenCalled());
   expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({ speakers: 2, durationMinutes: 12, sourceText: expect.stringContaining('membrana é seletiva'), focus: 'Explique osmose com exemplos' });
@@ -46,4 +46,13 @@ it('uma pessoa oculta a segunda voz e vozes iguais impedem gerar diálogo', () =
   expect(screen.getByRole('button', { name: 'Gerar meu podcast' })).toBeDisabled();
   fireEvent.click(screen.getByRole('button', { name: 'Uma pessoa' }));
   expect(screen.queryByLabelText('Voz da pessoa 2')).not.toBeInTheDocument();
+});
+
+it('permite gerar apenas pelo tema sem exigir material ou instruções', async () => {
+  render(<Podcast />);
+  fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Osmose' } });
+  expect(screen.getByText('Você pode gerar o episódio só com o tema. Resumos e materiais são opcionais; se quiser, use-os para direcionar a explicação.')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
+  await waitFor(() => expect(requestAiTextStream).toHaveBeenCalled());
+  expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({ title: 'Osmose', sourceText: '', focus: '' });
 });
