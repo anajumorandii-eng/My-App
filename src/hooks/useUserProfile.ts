@@ -9,10 +9,14 @@ export function useUserProfile() {
   const [profile, setProfile] = useState<UserProfile>(mockProfile);
   const [loading, setLoading] = useState(false);
   const [syncError, setSyncError] = useState<string | null>(null);
+  const [loadedUid, setLoadedUid] = useState<string | null>(null);
   const [usingFallback, setUsingFallback] = useState(false);
 
   useEffect(() => {
     if (!user) {
+      setLoading(false);
+      setUsingFallback(false);
+      setLoadedUid(null);
       setProfile(mockProfile);
       setSyncError(null);
       return;
@@ -20,22 +24,22 @@ export function useUserProfile() {
     let cancelled = false;
     setLoading(true);
     getUserProfile(user.uid)
-      .then((data) => { if (!cancelled) { setProfile(data); setUsingFallback(false); } })
+      .then((data) => { if (!cancelled) { setProfile(data); setLoadedUid(user.uid); setUsingFallback(false); } })
       .catch((error) => {
         console.error('Failed to load user profile:', error);
         if (!cancelled) setSyncError('Não foi possível carregar seu perfil salvo. Mostrando dados de demonstração.');
-        if (!cancelled) setUsingFallback(true);
+        if (!cancelled) { setUsingFallback(true); setLoadedUid(user.uid); }
       })
       .finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; };
   }, [user]);
 
   const updateProfile = useCallback(
-    (updater: (prev: UserProfile) => UserProfile) => {
+    (updater: (prev: UserProfile) => UserProfile, fields?: readonly (keyof UserProfile)[]) => {
       setProfile((prev) => {
         const next = updater(prev);
         if (user) {
-          saveUserProfile(user.uid, next)
+          saveUserProfile(user.uid, fields ? Object.fromEntries(fields.map(field => [field, next[field]])) : next, Boolean(fields))
             .then(() => setSyncError(null))
             .catch((error) => {
               console.error('Failed to save user profile:', error);
@@ -52,5 +56,5 @@ export function useUserProfile() {
   // Firestore falha, a tela continua mostrando os dados de demonstração, e com
   // isPersisted={!!user} o aviso de "Modo demonstração" ficava escondido
   // justamente aí — a aluna via números inventados sem nada dizendo isso.
-return { profile, updateProfile, loading, syncError, isPersisted: !!user && !usingFallback };
+return { profile, updateProfile, loading, syncError, isPersisted: !!user && loadedUid === user.uid && !usingFallback };
 }

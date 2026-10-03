@@ -27,6 +27,7 @@ import { createPushRouter, createReviewReminderRouter } from './server/push/rout
 import { configureWebPush, loadVapidConfig } from './server/push/webPush';
 import { createPodcastAudioRouter } from './server/podcast/routes';
 import { GeminiTtsService } from './server/podcast/ttsService';
+import { CloudTtsService } from './server/podcast/cloudTtsService';
 import { buildCalendarEventsQuery } from './serverCalendar';
 
 const app = express();
@@ -88,26 +89,13 @@ const apostilaReferences = process.env.AI_APOSTILA_REFERENCES === 'firestore'
   ? new FirestoreApostilaReferenceStore(getFirestore(getFirebaseAdminApp()))
   : undefined;
 
-// Narração do podcast com voz natural. Depende de GEMINI_API_KEY
-// ESPECIFICAMENTE, e não da chave que a camada de texto estiver usando: a
-// camada de texto é neutra de provedor (AI_PROVIDER=omniroute usa
-// OMNIROUTE_API_KEY), enquanto a síntese de voz é ligada direto na Gemini.
-// Nessa combinação o "Gerar IA" funciona e a narração não, o que parecia
-// contradição sem explicação.
-const podcastTtsService = new GeminiTtsService(process.env.GEMINI_API_KEY, process.env.GEMINI_TTS_MODEL);
-// Registrado no arranque, junto dos outros diagnósticos de configuração.
-// Antes, a única pista de que a chave faltava era a estudante apertar play e
-// ouvir a voz do navegador — o log de boot torna isso visível sem depender de
-// alguém reproduzir o problema.
-console.info(JSON.stringify({
-  event: 'podcast_tts_config',
-  configured: podcastTtsService.isConfigured,
-  model: process.env.GEMINI_TTS_MODEL || 'padrão do código',
-  aiProvider: process.env.AI_PROVIDER?.trim().toLowerCase() || 'gemini',
-  ...(podcastTtsService.isConfigured ? {} : {
-    reason: 'GEMINI_API_KEY ausente — a narração vai responder 503 e o app cai na voz do navegador',
-  }),
-}));
+// A síntese usa a identidade da conta de serviço no Cloud Run.
+const podcastProvider = process.env.PODCAST_TTS_PROVIDER?.trim() || 'google-cloud';
+if (!['google-cloud', 'gemini'].includes(podcastProvider)) throw new Error('PODCAST_TTS_PROVIDER inválido.');
+const podcastTtsService = podcastProvider === 'google-cloud'
+  ? new CloudTtsService({ projectId: process.env.GOOGLE_CLOUD_PROJECT || process.env.FIREBASE_PROJECT_ID })
+  : new GeminiTtsService(process.env.GEMINI_API_KEY, process.env.GEMINI_TTS_MODEL);
+console.info(JSON.stringify({ event: 'podcast_tts_config', provider: podcastProvider, authentication: podcastProvider === 'google-cloud' ? 'managed-identity' : 'api-key', configured: podcastTtsService.isConfigured, readiness: 'confirmed-on-first-request' }));
 
 // Web Push for review reminders. Both routers still mount even when VAPID
 // isn't configured yet; they just respond 503 until the keys are set.
@@ -246,7 +234,8 @@ app.get('/api/drive/files', firebaseAuthMiddleware(), createAiRateLimit(), async
 app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics, apostilaReferences));
 // Shares the AI rate limit and daily quota store so narrated playback counts
 // against the same per-user budget as every other AI feature in the app.
-app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createPodcastAudioRouter(podcastTtsService));
+const podcastDailyLimit = createAiDailyLimit({ store: dailyQuotaStore });
+app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), (req, res, next) => req.method === 'POST' ? podcastDailyLimit(req, res, next) : next(), createPodcastAudioRouter(podcastTtsService));
 app.use('/api/admin', adminAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
 // Painel /admin/conteudo: questões, métodos de estudo e episódios de
 // podcast, antes hardcoded em src/data/mockData.ts, agora administráveis

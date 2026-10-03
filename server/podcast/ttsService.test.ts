@@ -1,5 +1,7 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
+import { getStorage } from 'firebase-admin/storage';
+import { getFirebaseAdminApp } from '../auth/firebaseAuth';
 import { GeminiTtsService, pcmToWav, sampleRateFromMimeType } from './ttsService';
 
 test('gera um cabeçalho RIFF/WAVE válido de 44 bytes com os campos corretos', () => {
@@ -78,4 +80,26 @@ test('uma entrada maior que o limite inteiro ainda é guardada', () => {
   });
   interno.rememberInMemory('gigante', Buffer.alloc(80 * 1024 * 1024));
   assert.ok(interno.cache.has('gigante'), 'sem isso ela seria gravada e removida no mesmo passo');
+});
+
+test('síntese usa duas vozes e separa o cache por configuração', async (t) => {
+  t.mock.method(getStorage(getFirebaseAdminApp()), 'bucket', () => ({ file: () => ({ exists: async () => [false], save: async () => {} }) }) as any);
+  const service = new GeminiTtsService('test-key');
+  const requests: any[] = [];
+  const client = (service as unknown as { client: { models: { generateContent: Function } } }).client;
+  client.models.generateContent = async (request: unknown) => {
+    requests.push(request);
+    return { candidates: [{ content: { parts: [{ inlineData: { data: Buffer.from([0, 0]).toString('base64'), mimeType: 'audio/L16;rate=24000' } }] } }] };
+  };
+  const text = `Host1: ${Date.now()} O que é osmose?\nHost2: Vamos explicar.`;
+  await service.synthesize(text, 'Kore', { speakers: 2, secondVoice: 'Puck', pace: 'tranquilo', tone: 'acolhedor' });
+  await service.synthesize(text, 'Kore', { speakers: 2, secondVoice: 'Puck', pace: 'tranquilo', tone: 'acolhedor' });
+  assert.equal(requests.length, 1);
+  assert.deepEqual(requests[0].config.speechConfig.multiSpeakerVoiceConfig.speakerVoiceConfigs, [
+    { speaker: 'Host1', voiceConfig: { prebuiltVoiceConfig: { voiceName: 'Kore' } } },
+    { speaker: 'Host2', voiceConfig: { prebuiltVoiceConfig: { voiceName: 'Puck' } } },
+  ]);
+  assert.match(requests[0].contents, /tranquilo/);
+  await service.synthesize(text, 'Kore', { speakers: 2, secondVoice: 'Aoede', pace: 'tranquilo', tone: 'acolhedor' });
+  assert.equal(requests.length, 2);
 });

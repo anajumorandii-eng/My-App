@@ -1,3 +1,4 @@
+import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, PODCAST_LEVELS, PODCAST_PACES, PODCAST_TONES, PODCAST_HOST_STYLES } from '../../src/lib/podcastConfig';
 import { AiValidationError } from './errors';
 import { AiTask } from './types';
 
@@ -170,12 +171,32 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         modelAnswer: requiredStringArray(payload, 'modelAnswer'),
         studentAnswer: requiredString(payload, 'studentAnswer', MAX_LONG_TEXT),
       };
-    case 'podcast-script':
+    case 'podcast-script': {
+      const defaults = DEFAULT_PODCAST_SETTINGS;
+      const choice = (field: string, choices: object, fallback: string) => {
+        if (payload[field] === undefined) return fallback;
+        if (typeof payload[field] !== 'string' || !Object.hasOwn(choices, payload[field] as string)) throw new AiValidationError(`Configuração inválida: ${field}.`);
+        return payload[field];
+      };
+      const speakers = payload.speakers === undefined ? 1 : requiredNumber(payload, 'speakers', 1, 2);
+      const durationMinutes = payload.durationMinutes === undefined ? 5 : requiredNumber(payload, 'durationMinutes', 2, 15);
+      if (!Number.isInteger(speakers) || !Number.isInteger(durationMinutes)) throw new AiValidationError('Participantes e duração devem ser inteiros.');
       return {
+        speakers, durationMinutes,
+        format: choice('format', PODCAST_FORMATS, defaults.format),
+        level: choice('level', PODCAST_LEVELS, defaults.level),
+        pace: choice('pace', PODCAST_PACES, defaults.pace),
+        tone: choice('tone', PODCAST_TONES, defaults.tone),
+        hostStyle: choice('hostStyle', PODCAST_HOST_STYLES, defaults.hostStyle),
+        cohostStyle: choice('cohostStyle', PODCAST_HOST_STYLES, defaults.cohostStyle),
+        focus: optionalString(payload, 'focus', 2000),
+        sourceText: optionalString(payload, 'sourceText', 12000),
+        exam: optionalString(payload, 'exam', 100) ?? 'Geral',
         title: requiredString(payload, 'title'),
         subject: requiredString(payload, 'subject'),
-        topic: requiredString(payload, 'topic'),
+        topic: requiredString(payload, 'topic', 1200),
       };
+    }
     case 'progress-insight':
       return {
         topics: serializableValue(payload, 'topics'),

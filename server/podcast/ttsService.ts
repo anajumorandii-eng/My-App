@@ -1,3 +1,4 @@
+import type { PodcastSpeechOptions } from '../../src/lib/podcastConfig';
 import { createHash } from 'node:crypto';
 import { GoogleGenAI } from '@google/genai';
 import { readCachedAudio, writeCachedAudio } from './podcastStorage';
@@ -65,10 +66,10 @@ export class GeminiTtsService {
     this.model = model;
   }
 
-  async synthesize(text: string, voiceName: string): Promise<TtsResult> {
+  async synthesize(text: string, voiceName: string, options?: PodcastSpeechOptions): Promise<TtsResult> {
     if (!this.client) throw new Error('Gemini TTS not configured.');
 
-    const cacheKey = createHash('sha256').update(`${this.model}\0${voiceName}\0${text}`).digest('hex');
+    const cacheKey = createHash('sha256').update(`${this.model}\0${voiceName}\0${JSON.stringify(options ?? null)}\0${text}`).digest('hex');
     const cached = this.cache.get(cacheKey);
     if (cached) return { buffer: cached, mimeType: 'audio/wav' };
 
@@ -83,10 +84,15 @@ export class GeminiTtsService {
 
     const response = await this.client.models.generateContent({
       model: this.model,
-      contents: text,
+      contents: options ? `Leia em português brasileiro, em ritmo ${options.pace} e tom ${options.tone}, com entonação natural. Leia apenas as falas, sem pronunciar os rótulos Host1 e Host2.\n${text}` : text,
       config: {
         responseModalities: ['audio'],
-        speechConfig: { voiceConfig: { prebuiltVoiceConfig: { voiceName } } },
+        speechConfig: options?.speakers === 2
+          ? { multiSpeakerVoiceConfig: { speakerVoiceConfigs: [
+              { speaker: 'Host1', voiceConfig: { prebuiltVoiceConfig: { voiceName } } },
+              { speaker: 'Host2', voiceConfig: { prebuiltVoiceConfig: { voiceName: options.secondVoice } } },
+            ] } }
+          : { voiceConfig: { prebuiltVoiceConfig: { voiceName } } },
       },
     });
 

@@ -118,9 +118,9 @@ export async function getUserProfile(uid: string): Promise<UserProfile> {
   return mockProfile;
 }
 
-export async function saveUserProfile(uid: string, profile: UserProfile): Promise<void> {
+export async function saveUserProfile(uid: string, profile: Partial<UserProfile>, merge = false): Promise<void> {
   const ref = doc(db, 'users', uid, 'data', 'profile');
-  await setDoc(ref, profile);
+  await setDoc(ref, profile, { merge });
 }
 
 export async function getUserErrorLogs(uid: string): Promise<ErrorLog[]> {

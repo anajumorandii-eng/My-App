@@ -124,3 +124,37 @@ test('falha na síntese vira 502 sem repassar a mensagem interna do provedor', a
     assert.doesNotMatch(corpo, /sk-segredo|quota/);
   });
 });
+
+test('rejeita diálogo com vozes iguais e configurações malformadas', async (t) => {
+  silenciarLogs(t);
+  const tts = fakeTts();
+  await withPodcast(tts, async baseUrl => {
+    for (const options of [null, { speakers: 3 }, { speakers: 2, secondVoice: 'Kore', pace: 'natural', tone: 'acolhedor' }, { speakers: 2, secondVoice: 'Puck', pace: ['natural'], tone: 'acolhedor' }]) {
+      const res = await sendJson(baseUrl, 'POST', '/api/podcast-audio', { text: 'Host1: Olá.\nHost2: Vamos estudar.', voiceName: 'Kore', options });
+      assert.equal(res.status, 400);
+    }
+    assert.equal(tts.calls.length, 0);
+  });
+});
+
+test('encaminha as configurações validadas para a síntese', async (t) => {
+  silenciarLogs(t);
+  const seen: unknown[] = [];
+  const service = { isConfigured: true, synthesize: async (...args: unknown[]) => { seen.push(args); return { buffer: Buffer.from('audio'), mimeType: 'audio/wav' }; } } as unknown as GeminiTtsService;
+  const options = { speakers: 2, secondVoice: 'Puck', pace: 'natural', tone: 'acolhedor' };
+  await withApp(app => { app.use('/api/podcast-audio', createPodcastAudioRouter(service)); }, async baseUrl => {
+    assert.equal((await sendJson(baseUrl, 'POST', '/api/podcast-audio', { text: 'Host1: Olá.\nHost2: Exemplo.', voiceName: 'Kore', options })).status, 200);
+    assert.deepEqual((seen[0] as unknown[]).slice(0, 3), ['Host1: Olá.\nHost2: Exemplo.', 'Kore', options]);
+    assert.ok((seen[0] as unknown[])[3] instanceof AbortSignal);
+  });
+});
+
+test('uma pessoa ignora a voz secundária antiga de outro provedor', async (t) => {
+  silenciarLogs(t);
+  await withPodcast(fakeTts(), async (baseUrl) => {
+    const res = await sendJson(baseUrl, 'POST', '/api/podcast-audio', {
+      text: 'Olá', voiceName: 'Kore', options: { speakers: 1, secondVoice: 'pt-BR-Chirp3-HD-Leda', pace: 'natural', tone: 'acolhedor' },
+    });
+    assert.equal(res.status, 200);
+  });
+});

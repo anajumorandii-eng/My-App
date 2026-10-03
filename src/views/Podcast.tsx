@@ -1,367 +1,177 @@
 import React, { useEffect, useMemo, useRef, useState } from 'react';
-import { mockTopics } from '../data/mockData';
+import { Headphones, Sparkles, Play, Square, Loader2, BookOpen, X } from 'lucide-react';
 import { requestAiTextStream } from '../lib/aiClient';
 import { synthesizePodcastAudio, podcastAudioErrorMessage } from '../lib/podcastAudio';
 import { useUserProfile } from '../hooks/useUserProfile';
 import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
-import { PodcastEpisode, UserProfile } from '../types';
-import { Headphones, Play, Square, Volume2, Sparkles, Clock, Mic, Loader2 } from 'lucide-react';
-import { Panel } from '../components/ui/Panel';
-import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
-import { SUBJECT_ICONS } from './Dashboard';
+import { usePersonalPodcasts } from '../hooks/usePersonalPodcasts';
+import { usePodcastVoices } from '../hooks/usePodcastVoices';
+import { useAuth } from '../context/AuthContext';
+import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, resolvePodcastVoice, type PodcastSettings } from '../lib/podcastConfig';
+import { splitPodcastScript } from '../lib/podcastChunks';
+import { summaryCurriculum } from '../data/summaryCurriculum';
+import type { PodcastEpisode } from '../types';
+import type { PersonalPodcast } from '../features/podcast/types';
+import { PodcastSettingsPanel, PodcastSelect, podcastInputClass } from '../features/podcast/PodcastSettingsPanel';
+import { PodcastPlayer, downloadPodcastText } from '../features/podcast/PodcastPlayer';
 
-type DurationBucket = 'curto' | 'medio' | 'longo';
-
-const DURATION_BUCKETS: { value: DurationBucket; label: string; test: (minutes: number) => boolean }[] = [
-  { value: 'curto', label: 'Curtos (até 5 min)', test: (m) => m <= 5 },
-  { value: 'medio', label: 'Médios (6 min)', test: (m) => m === 6 },
-  { value: 'longo', label: 'Longos (7+ min)', test: (m) => m >= 7 },
-];
-
-function bucketOf(minutes: number): DurationBucket {
-  return DURATION_BUCKETS.find((b) => b.test(minutes))?.value ?? 'medio';
-}
-
-function orderByDurationPreference(
-  episodes: PodcastEpisode[],
-  preference: UserProfile['podcastDurationPreference']
-): PodcastEpisode[] {
-  if (!preference) return episodes;
-  const matching = episodes.filter((e) => bucketOf(e.durationMinutes) === preference);
-  const rest = episodes.filter((e) => bucketOf(e.durationMinutes) !== preference);
-  return [...matching, ...rest];
-}
-
-const VOICE_OPTIONS: { value: string; label: string }[] = [
-  { value: 'Charon', label: 'Charon (informativa)' },
-  { value: 'Kore', label: 'Kore (firme)' },
-  { value: 'Aoede', label: 'Aoede (leve)' },
-  { value: 'Puck', label: 'Puck (animada)' },
-];
-const DEFAULT_VOICE = 'Charon';
-
-const speechSupported = typeof window !== 'undefined' && 'speechSynthesis' in window;
+const topics = summaryCurriculum.flatMap(subject => subject.topics);
+const subjects = [...new Set(topics.map(t => t.subject))];
 
 export default function Podcast() {
-  const { profile, updateProfile } = useUserProfile();
-  // Vem do Firestore, com o conjunto local como fallback — ver usePodcastEpisodes.
-  const { episodes, syncError: episodesSyncError } = usePodcastEpisodes();
+  const { profile, updateProfile, syncError: profileError, loading: profileLoading, isPersisted: profilePersisted } = useUserProfile();
+  const { episodes: catalog, syncError: catalogError } = usePodcastEpisodes();
+  const { episodes: personal, saveEpisode, syncError: personalError, pendingCount, hasMore, loading: personalLoading, loadMore, retrySaves } = usePersonalPodcasts();
+  const { user } = useAuth();
+  const accountRef = useRef(user?.uid); accountRef.current = user?.uid;
+  const { voices, loading: voicesLoading, error: voicesError, retry: retryVoices } = usePodcastVoices();
+  const savedSettings: PodcastSettings = { ...DEFAULT_PODCAST_SETTINGS, ...(profile.podcastVoiceName ? { voiceName: profile.podcastVoiceName } : {}), ...profile.podcastSettings };
+  const settings: PodcastSettings = { ...savedSettings, voiceName: resolvePodcastVoice(savedSettings.voiceName, voices), secondVoice: resolvePodcastVoice(savedSettings.secondVoice, voices) };
+  const [title, setTitle] = useState('');
+  const [subject, setSubject] = useState('Biologia');
+  const [focus, setFocus] = useState('');
+  const [sourceText, setSourceText] = useState('');
+  const [selected, setSelected] = useState<string[]>([]);
+  const [query, setQuery] = useState('');
+  const [libraryQuery, setLibraryQuery] = useState('');
+  const [visible, setVisible] = useState(8);
+  const [generating, setGenerating] = useState(false);
+  const [draft, setDraft] = useState('');
+  const [error, setError] = useState<string | null>(null);
+  const [active, setActive] = useState<PodcastEpisode | null>(null);
   const [playingId, setPlayingId] = useState<string | null>(null);
   const [loadingId, setLoadingId] = useState<string | null>(null);
-  const [notice, setNotice] = useState<string | null>(null);
-  const [aiScripts, setAiScripts] = useState<Record<string, string>>({});
-  const [generatingId, setGeneratingId] = useState<string | null>(null);
-
+  const [progress, setProgress] = useState('');
+  const [audioUrl, setAudioUrl] = useState<string | null>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null);
-  const audioCacheRef = useRef<Map<string, string>>(new Map());
+  const cache = useRef(new Map<string, string>());
+  const audioTask = useRef(0);
+  const generationTask = useRef(0);
+  const controller = useRef<AbortController | null>(null);
 
-  const durationPreference = profile.podcastDurationPreference ?? null;
-  const voiceName = profile.podcastVoiceName || DEFAULT_VOICE;
-
-  const orderedEpisodes = useMemo(
-    () => orderByDurationPreference(episodes, durationPreference),
-    [episodes, durationPreference]
-  );
-  // Os 87 episódios abriam de uma vez (8 mil pixels). A ordem já reflete a
-  // faixa de duração escolhida; o resto fica a um toque.
-  const [visiveis, setVisiveis] = useState(12);
-  useEffect(() => { setVisiveis(12); }, [orderedEpisodes]);
-
-  const matchingCount = useMemo(
-    () => (durationPreference ? episodes.filter((e) => bucketOf(e.durationMinutes) === durationPreference).length : 0),
-    [episodes, durationPreference]
-  );
-
-  const setDurationPreference = (value: DurationBucket | null) => {
-    updateProfile((prev) => ({
-      ...prev,
-      podcastDurationPreference: prev.podcastDurationPreference === value ? null : value,
-    }));
+  const change = <K extends keyof PodcastSettings>(key: K, value: PodcastSettings[K]) => {
+    updateProfile(prev => ({ ...prev, podcastSettings: { ...DEFAULT_PODCAST_SETTINGS, ...(prev.podcastVoiceName ? { voiceName: prev.podcastVoiceName } : {}), ...prev.podcastSettings, [key]: value } }), ['podcastSettings']);
   };
-
-  const setVoiceName = (value: string) => {
-    updateProfile((prev) => ({ ...prev, podcastVoiceName: value }));
-    setNotice(null);
-  };
-
   useEffect(() => {
-    audioRef.current = new Audio();
-    const cache = audioCacheRef.current;
-    return () => {
-      audioRef.current?.pause();
-      cache.forEach((url) => URL.revokeObjectURL(url));
-      if (speechSupported) window.speechSynthesis.cancel();
-    };
+    const urls = cache.current;
+    return () => { audioTask.current++; generationTask.current++; controller.current?.abort(); audioRef.current?.pause(); urls.forEach(url => URL.revokeObjectURL(url)); };
   }, []);
+  useEffect(() => {
+    audioTask.current++; generationTask.current++; controller.current?.abort(); audioRef.current?.pause();
+    setActive(null); setAudioUrl(null); setPlayingId(null); setLoadingId(null); setGenerating(false); setDraft(''); setError(null);
+    setTitle(''); setFocus(''); setSourceText(''); setSelected([]);
+    cache.current.forEach(url => URL.revokeObjectURL(url)); cache.current.clear();
+  }, [user?.uid]);
+  const sourceChoices = useMemo(() => topics.filter(t => t.subject === subject && t.title.toLocaleLowerCase('pt-BR').includes(query.toLocaleLowerCase('pt-BR'))), [subject, query]);
+  const filteredCatalog = catalog.filter(ep => `${ep.title} ${ep.subject}`.toLocaleLowerCase('pt-BR').includes(libraryQuery.toLocaleLowerCase('pt-BR')));
+  const preferencesBlocked = Boolean(profileLoading || (user && !profilePersisted));
+  const voicesBlocked = voicesLoading || !voices.length || !voices.some(v => v.value === settings.voiceName) || (settings.speakers === 2 && !voices.some(v => v.value === settings.secondVoice));
+  const sameVoice = settings.speakers === 2 && settings.voiceName === settings.secondVoice;
 
-  const stopAll = () => {
-    if (speechSupported) window.speechSynthesis.cancel();
-    audioRef.current?.pause();
-    setPlayingId(null);
-  };
-
-  const playWithBrowserVoice = (episodeId: string, script: string): boolean => {
-    if (!speechSupported) return false;
-    window.speechSynthesis.cancel();
-    const utterance = new SpeechSynthesisUtterance(script);
-    utterance.lang = 'pt-BR';
-    utterance.rate = 0.95;
-    const ptVoice = window.speechSynthesis.getVoices().find((v) => v.lang?.toLowerCase().startsWith('pt'));
-    if (ptVoice) utterance.voice = ptVoice;
-    utterance.onend = () => setPlayingId(null);
-    utterance.onerror = () => setPlayingId(null);
-    setPlayingId(episodeId);
-    window.speechSynthesis.speak(utterance);
-    return true;
-  };
-
-  const playObjectUrl = (episodeId: string, url: string) => {
-    const audio = audioRef.current;
-    if (!audio) return;
-    audio.src = url;
-    audio.onended = () => setPlayingId(null);
-    audio.onerror = () => setPlayingId(null);
-    audio.play().then(() => setPlayingId(episodeId)).catch(() => setPlayingId(null));
-  };
-
-  const play = async (episodeId: string, script: string) => {
-    if (playingId === episodeId) {
-      stopAll();
-      return;
-    }
-    stopAll();
-
-    const cacheKey = `${episodeId}::${voiceName}::${script}`;
-    const cachedUrl = audioCacheRef.current.get(cacheKey);
-    if (cachedUrl) {
-      playObjectUrl(episodeId, cachedUrl);
-      return;
-    }
-
-    setLoadingId(episodeId);
+  const generate = async () => {
+    const task = ++generationTask.current;
+    const owner = accountRef.current;
+    const snapshot = { ...settings };
+    const sourceIds = [...selected];
+    const inputTitle = title.trim(); const inputFocus = focus.trim(); const inputSubject = subject;
+    audioTask.current++; controller.current?.abort(); audioRef.current?.pause(); setLoadingId(null); setProgress(''); setPlayingId(null);
+    setGenerating(true); setError(null); setDraft('');
     try {
-      const blob = await synthesizePodcastAudio(script, voiceName);
-      const url = URL.createObjectURL(blob);
-      audioCacheRef.current.set(cacheKey, url);
-      setNotice(null);
-      playObjectUrl(episodeId, url);
-    } catch (error) {
-      console.error('Failed to synthesize podcast audio:', error);
-      const message = podcastAudioErrorMessage(error);
-      const fellBack = playWithBrowserVoice(episodeId, script);
-      setNotice(fellBack ? `${message} Tocando com a voz do navegador enquanto isso.` : message);
-    } finally {
-      setLoadingId(null);
-    }
+      const sources: string[] = []; const labels: string[] = [];
+      if (sourceIds.length) {
+        const { default: chapters } = await import('../data/deepSummaryContent.json');
+        for (const id of sourceIds) {
+          const topic = topics.find(t => t.id === id)!;
+          const chapter = chapters.find(c => c.subject === topic.subject && c.topic === topic.title);
+          if (!chapter) throw new Error(`O resumo de ${topic.title} não está disponível como fonte. Escolha outro ou cole seu material.`);
+          sources.push(`Resumo CRIVO — ${topic.title}\n${chapter.sections.map(s => `${s.title}\n${s.content}`).join('\n\n')}`);
+          labels.push(`Resumo CRIVO: ${topic.title}`);
+        }
+      }
+      if (sourceText.trim()) { sources.push(`Material da estudante\n${sourceText.trim()}`); labels.push('Material da estudante'); }
+      const material = sources.join('\n\n');
+      if (material.length > 12000) throw new Error('Os materiais somam mais de 12.000 caracteres. Selecione menos resumos ou reduza o texto para este episódio.');
+      const result = await requestAiTextStream('podcast-script', {
+        title: inputTitle, subject: inputSubject, topic: sourceIds.map(id => topics.find(t => t.id === id)?.title).join(', ') || inputTitle,
+        ...snapshot, focus: inputFocus, sourceText: material,
+      }, delta => { if (task === generationTask.current) setDraft(old => old + delta); });
+      if (task !== generationTask.current || owner !== accountRef.current) return;
+      splitPodcastScript(result.text, snapshot.speakers === 2);
+      const episode: PersonalPodcast = { id: crypto.randomUUID(), topicId: sourceIds[0] ?? 'personalizado', title: inputTitle, subject: inputSubject, durationMinutes: snapshot.durationMinutes, script: result.text, settings: snapshot, createdAt: new Date().toISOString(), sourceLabels: labels, focus: inputFocus };
+      saveEpisode(episode);
+      if (task === generationTask.current) { setActive(episode); setAudioUrl(null); audioRef.current?.pause(); setPlayingId(null); }
+    } catch (e) {
+      if (task === generationTask.current) setError(e instanceof Error ? e.message : 'Não foi possível criar o episódio. Tente novamente.');
+    } finally { if (task === generationTask.current) { setGenerating(false); setDraft(''); } }
   };
 
-  const generateScript = async (episodeId: string, title: string, subject: string, topicId: string) => {
-    const topicName = mockTopics.find((t) => t.id === topicId)?.name ?? subject;
-    setGeneratingId(episodeId);
+  const play = async (episode: PodcastEpisode | PersonalPodcast) => {
+    if (playingId === episode.id) { audioRef.current?.pause(); setPlayingId(null); return; }
+    const task = ++audioTask.current;
+    controller.current?.abort(); controller.current = new AbortController();
+    audioRef.current?.pause(); setPlayingId(null); setActive(episode); setError(null); setAudioUrl(null); setLoadingId(episode.id); setProgress('Preparando as vozes…');
+    const savedConfiguration = 'settings' in episode ? (episode as PersonalPodcast).settings : { ...settings, speakers: 1 as const };
+    const configuration = { ...savedConfiguration, voiceName: resolvePodcastVoice(savedConfiguration.voiceName, voices), secondVoice: resolvePodcastVoice(savedConfiguration.secondVoice, voices) };
+    const key = JSON.stringify([episode.id, configuration, episode.script]);
     try {
-      let acumulado = '';
-      const data = await requestAiTextStream('podcast-script', { title, subject, topic: topicName }, (delta) => {
-        acumulado += delta;
-        setAiScripts((prev) => ({ ...prev, [episodeId]: acumulado }));
-      });
-      setAiScripts((prev) => ({ ...prev, [episodeId]: data.text }));
-    } catch (error) {
-      console.error('Failed to generate podcast script:', error);
-    } finally {
-      setGeneratingId(null);
-    }
+      let url = cache.current.get(key);
+      if (!url) {
+        const blob = await synthesizePodcastAudio(episode.script, configuration.voiceName, configuration, { signal: controller.current.signal, onProgress: (done, total) => { if (task === audioTask.current) setProgress(`Gerando áudio: ${done} de ${total} trechos`); } });
+        if (task !== audioTask.current) return;
+        url = URL.createObjectURL(blob); cache.current.set(key, url);
+        if (cache.current.size > 6) { const first = cache.current.entries().next().value!; URL.revokeObjectURL(first[1]); cache.current.delete(first[0]); }
+      }
+      if (task !== audioTask.current) return;
+      setAudioUrl(url);
+      const audio = audioRef.current;
+      if (audio) { audio.src = url; await audio.play(); if (task === audioTask.current) setPlayingId(episode.id); }
+    } catch (e) { if (task === audioTask.current) setError(podcastAudioErrorMessage(e)); }
+    finally { if (task === audioTask.current) { setLoadingId(null); setProgress(''); } }
   };
 
-  return (
-    <div className="ni-main">
-      {/* Route Breadcrumb */}
-      <div className="ni-route">
-        <span>Biblioteca</span>
-        <i />
-        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
-            <Headphones className="w-3 h-3" />
-          </span>
-          ÁUDIO NEURAL
-        </span>
-        <i />
-        <b>PODCAST CRIVO</b>
-      </div>
+  const previewVoice = (voice: string) => {
+    const preview: PersonalPodcast = { id: `voice-preview-${voice}`, title: `Amostra · ${voices.find(v => v.value === voice)?.label ?? voice}`, subject, topicId: 'amostra', script: 'Se a água atravessa a membrana, por que a célula nem sempre aumenta de tamanho? Vamos entender a osmose com um exemplo, passo a passo.', durationMinutes: 1, settings: { ...settings, speakers: 1, voiceName: voice }, createdAt: new Date().toISOString(), sourceLabels: ['Amostra de voz do CRIVO'], focus: '' };
+    void play(preview);
+  };
 
-      {/* Main Title */}
-      <div className="ni-title">
-        <div>
-          <h1>Atualidades em áudio, no seu ritmo.</h1>
-          <p>Resumos narrados com voz neural de alta fidelidade — perfeito para assimilar e revisar no trajeto.</p>
-        </div>
-        <div className="ni-state">
-          <i /> {orderedEpisodes.length} episódios
-        </div>
-      </div>
+  const rows = (episodes: PodcastEpisode[], legacy = false) => episodes.map(episode => {
+    const isLoading = loadingId === episode.id; const isPlaying = playingId === episode.id;
+    const saved = 'settings' in episode ? episode as PersonalPodcast : null;
+    return <article key={episode.id} className="ni-panel p-4 flex flex-wrap items-center gap-3">
+      <button type="button" aria-label={`${isLoading ? 'Carregando áudio do' : isPlaying ? 'Parar' : 'Reproduzir'} episódio ${episode.title}`} disabled={isLoading || generating} onClick={() => play(episode)} className="w-11 h-11 shrink-0 rounded-full bg-[var(--surface2)] flex items-center justify-center border border-[var(--line)]">{isLoading ? <Loader2 size={18} className="animate-spin" /> : isPlaying ? <Square size={16} /> : <Play size={18} />}</button>
+      <div className="flex-1 min-w-[140px]"><h3 className="text-sm font-semibold break-words">{episode.title}</h3><p className="text-xs text-[var(--dim)] mt-1">{episode.subject}{saved ? ` · ${saved.settings.speakers} pessoas · ~${saved.durationMinutes} min · ${PODCAST_FORMATS[saved.settings.format]}` : ' · roteiro de referência'}</p></div>
+      {saved && <button type="button" disabled={generating || voicesBlocked || sameVoice} onClick={() => play({ ...saved, settings: { ...saved.settings, voiceName: settings.voiceName, secondVoice: settings.secondVoice } })} className="text-xs border border-[var(--line)] rounded-xl px-3 py-2">Usar vozes do painel</button>}
+      {legacy ? <button type="button" disabled={generating} onClick={() => { setTitle(episode.title); setSubject(episode.subject); setSourceText(episode.script.slice(0, 12000)); setSelected([]); window.scrollTo({ top: 0, behavior: 'smooth' }); }} className="text-xs border border-[var(--line)] rounded-xl px-3 py-2">Personalizar</button> : <button type="button" onClick={() => downloadPodcastText(episode)} className="text-xs border border-[var(--line)] rounded-xl px-3 py-2">Baixar roteiro</button>}
+    </article>;
+  });
 
-      {episodesSyncError && <p className="text-xs text-rose-500 mb-2">{episodesSyncError}</p>}
-
-      {notice && (
-        <div className="p-3 mb-4 rounded-xl bg-amber-500/10 text-amber-300 border border-amber-500/20 text-xs">
-          {notice}
-        </div>
-      )}
-
-      {/* Settings Panel */}
-      <Panel subject="História" className="ni-panel p-5 mb-4 space-y-4">
-        <div>
-          <div className="flex items-center text-xs font-mono uppercase tracking-wider text-[var(--dim)] mb-2">
-            <Mic className="w-3.5 h-3.5 mr-1.5 subject-text" />
-            Voz do narrador
-          </div>
-          <div className="ni-subjects" style={{ margin: 0 }}>
-            {VOICE_OPTIONS.map(({ value, label }) => {
-              const active = voiceName === value;
-              return (
-                <button
-                  key={value}
-                  onClick={() => setVoiceName(value)}
-                  style={
-                    active
-                      ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
-                      : undefined
-                  }
-                >
-                  {label}
-                </button>
-              );
-            })}
-          </div>
-        </div>
-
-        <div className="border-t border-[var(--line)] pt-3">
-          <div className="flex items-center text-xs font-medium text-[var(--dim)] mb-2">
-            <Clock className="w-3.5 h-3.5 mr-1.5 subject-text" />
-            Duração preferida
-          </div>
-          <div className="ni-subjects" style={{ margin: 0 }}>
-            {DURATION_BUCKETS.map(({ value, label }) => {
-              const active = durationPreference === value;
-              return (
-                <button
-                  key={value}
-                  onClick={() => setDurationPreference(value)}
-                  style={
-                    active
-                      ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)', borderRadius: '4px', padding: '2px 8px' }
-                      : undefined
-                  }
-                >
-                  {label}
-                </button>
-              );
-            })}
-          </div>
-          <p className="text-[11px] text-[var(--dim)] mt-2">
-            {durationPreference
-              ? `Priorizando ${matchingCount} de ${episodes.length} episódios na faixa selecionada.`
-              : 'Mostrando episódios na ordem cronológica.'}
-          </p>
-        </div>
-      </Panel>
-
-      {/* Episode list */}
-      <div className="space-y-3">
-        {orderedEpisodes.slice(0, visiveis).map((episode) => {
-          const isPlaying = playingId === episode.id;
-          const isLoadingAudio = loadingId === episode.id;
-          const isGenerating = generatingId === episode.id;
-          const aiScript = aiScripts[episode.id];
-          const activeScript = aiScript ?? episode.script;
-          const matchesPreference = durationPreference !== null && bucketOf(episode.durationMinutes) === durationPreference;
-          const subPal = PALETTES[episode.subject] ?? PALETTES.Matemática;
-          const SubIcon = SUBJECT_ICONS[episode.subject] ?? Headphones;
-
-          return (
-            <Panel
-              key={episode.id}
-              subject={episode.subject}
-              interactive
-              className="ni-panel p-4 transition-colors"
-            >
-              <div className="flex items-center justify-between">
-                <div className="flex items-center min-w-0">
-                  <button
-                    aria-label={`${isLoadingAudio ? 'Carregando áudio do' : isPlaying ? 'Parar' : 'Reproduzir'} episódio ${episode.title}`}
-                    onClick={() => play(episode.id, activeScript)}
-                    disabled={isLoadingAudio}
-                    className="w-10 h-10 rounded-full flex items-center justify-center mr-3.5 shrink-0 transition-colors"
-                    style={{
-                      backgroundColor: isPlaying ? subPal.primary : 'var(--surface2)',
-                      color: isPlaying ? PALETTE_INK : 'var(--text)',
-                    }}
-                  >
-                    {isLoadingAudio ? (
-                      <Loader2 className="w-4 h-4 animate-spin" />
-                    ) : isPlaying ? (
-                      <Square className="w-4 h-4" />
-                    ) : (
-                      <Play className="w-4 h-4 ml-0.5" />
-                    )}
-                  </button>
-                  <div className="min-w-0">
-                    <h4 className="font-display font-medium text-sm text-[var(--text)] truncate flex items-center">
-                      {episode.title}
-                      {isPlaying && <Volume2 className="w-3.5 h-3.5 ml-2 subject-text animate-pulse shrink-0" />}
-                    </h4>
-                    <div className="flex items-center text-[11px] text-[var(--dim)] mt-0.5 space-x-2 font-mono">
-                      <span
-                        className="text-[10px] px-2 py-0.5 rounded-full flex items-center gap-1 font-semibold"
-                        style={{ backgroundColor: subPal.primary, color: PALETTE_INK }}
-                      >
-                        <SubIcon className="w-2.5 h-2.5" />
-                        {episode.subject}
-                      </span>
-                      <span>•</span>
-                      <span>{episode.durationMinutes} min</span>
-                      {matchesPreference && (
-                        <>
-                          <span>•</span>
-                          <span className="flex items-center subject-text">
-                            <Clock className="w-3 h-3 mr-1" />
-                            Faixa preferida
-                          </span>
-                        </>
-                      )}
-                      {aiScript && (
-                        <>
-                          <span>•</span>
-                          <span className="flex items-center subject-text">
-                            <Sparkles className="w-3 h-3 mr-1" />
-                            IA
-                          </span>
-                        </>
-                      )}
-                    </div>
-                  </div>
-                </div>
-                <button
-                  onClick={() => generateScript(episode.id, episode.title, episode.subject, episode.topicId)}
-                  disabled={isGenerating}
-                  className="shrink-0 ml-3 flex items-center px-2.5 py-1 text-xs font-mono subject-text border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
-                >
-                  <Sparkles className={`w-3 h-3 mr-1 ${isGenerating ? 'animate-pulse' : ''}`} />
-                  {isGenerating ? 'Gerando...' : aiScript ? 'Regerar' : 'Gerar IA'}
-                </button>
-              </div>
-            </Panel>
-          );
-        })}
-        {orderedEpisodes.length > visiveis && (
-          <button
-            type="button"
-            onClick={() => setVisiveis((n) => n + 12)}
-            className="w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-4 py-2.5 text-sm font-medium text-[var(--text)] hover:border-[var(--primary)]"
-          >
-            Mostrar mais {Math.min(12, orderedEpisodes.length - visiveis)} de {orderedEpisodes.length - visiveis} restantes
-          </button>
-        )}
-      </div>
+  return <div className="ni-main">
+    <div className="ni-route"><span>Biblioteca</span><i /><b>PODCAST CRIVO</b></div>
+    <div className="ni-title"><div><h1>Um podcast do seu jeito.</h1><p>Escolha o que estudar, quem explica e como a conversa acontece.</p></div><Headphones size={30} className="text-[var(--primary)] shrink-0" /></div>
+    {(error || profileError || personalError || catalogError) && <div role="alert" className="rounded-xl border border-rose-500/30 bg-rose-500/10 p-3 mb-4 text-sm text-[var(--text)]">{error || profileError || personalError || catalogError}</div>}
+    <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 mb-6">
+      <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating} className="space-y-5 min-w-0"><legend className="flex items-center gap-2 text-base font-semibold mb-4"><BookOpen size={18} /> 1. O que vamos estudar?</legend>
+        <label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">Título do episódio</span><input className={podcastInputClass} value={title} maxLength={300} onChange={e => setTitle(e.target.value)} placeholder="Ex.: Osmose sem decorar fórmulas" /></label>
+        <PodcastSelect label="Matéria do episódio" value={subject} choices={Object.fromEntries(subjects.map(v => [v, v]))} onChange={setSubject} />
+        <div className="space-y-2"><label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">Buscar nos resumos do CRIVO</span><input className={podcastInputClass} value={query} onChange={e => setQuery(e.target.value)} placeholder="Busque um capítulo…" /></label><select aria-label="Adicionar resumo como fonte" className={podcastInputClass} value="" disabled={selected.length >= 3} onChange={e => { const id = e.target.value; if (!id || selected.includes(id)) return; setSelected(old => [...old, id]); if (!title.trim()) setTitle(topics.find(t => t.id === id)?.title ?? ''); }}><option value="">Escolha até 3 resumos como fontes</option>{sourceChoices.filter(t => !selected.includes(t.id)).map(t => <option key={t.id} value={t.id}>{t.title}</option>)}</select>{selected.map(id => <div key={id} className="flex justify-between items-center gap-2 rounded-xl bg-[var(--surface2)] p-2.5 text-xs"><span>{topics.find(t => t.id === id)?.title}</span><button type="button" aria-label={`Remover fonte ${topics.find(t => t.id === id)?.title}`} onClick={() => setSelected(old => old.filter(v => v !== id))}><X size={16} /></button></div>)}</div>
+        <label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">Seu material de estudo</span><textarea aria-label="Seu material de estudo" rows={5} className={podcastInputClass} value={sourceText} maxLength={12000} onChange={e => setSourceText(e.target.value)} placeholder="Cole suas anotações ou um trecho do material que quer transformar em áudio." /><span className="block text-[11px] text-[var(--dim)]">{sourceText.length.toLocaleString('pt-BR')} / 12.000 caracteres · limite total com os resumos selecionados</span></label>
+        <label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">O que você quer aprender?</span><textarea rows={3} className={podcastInputClass} value={focus} maxLength={2000} onChange={e => setFocus(e.target.value)} placeholder="Ex.: Compare osmose e difusão, explique com exemplos e me faça perguntas no final." /></label>
+        {!selected.length && !sourceText.trim() && <p className="text-xs text-[var(--dim)]">Sem fontes selecionadas, o episódio explica conceitos gerais do tema. Adicione material para uma conversa baseada no que você está estudando.</p>}
+      </fieldset></section>
+      <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating || preferencesBlocked} className="min-w-0"><legend className="text-base font-semibold mb-5">2. Monte sua experiência</legend><PodcastSettingsPanel settings={settings} change={change} voiceOptions={voices} onPreview={previewVoice} previewLoading={Boolean(loadingId)} /></fieldset>
+        {preferencesBlocked && <p className="text-xs text-[var(--dim)] mt-4">{profileLoading ? 'Carregando suas preferências…' : 'As preferências precisam ser carregadas antes de criar o episódio. Reabra a aba para tentar novamente.'}</p>}
+        {voicesLoading && <p role="status" className="text-xs text-[var(--dim)] mt-4">Consultando vozes em português…</p>}
+        {voicesError && <p role="alert" className="text-xs mt-4">{voicesError} <button type="button" onClick={retryVoices} className="underline">Tentar consultar novamente</button></p>}
+        {!user && !voices.length && <p className="text-xs text-[var(--dim)] mt-4">Conecte sua conta para consultar e experimentar as vozes disponíveis.</p>}
+        {sameVoice && <p className="text-sm text-rose-500 mt-4">Escolha vozes diferentes para as duas pessoas.</p>}
+        <button type="button" disabled={generating || preferencesBlocked || voicesBlocked || !title.trim() || sameVoice} onClick={generate} className="w-full flex justify-center items-center gap-2 mt-6 rounded-xl bg-[var(--primary)] text-[var(--ink-on-primary)] px-4 py-3.5 font-semibold text-sm disabled:opacity-50">{generating ? <Loader2 size={17} className="animate-spin" /> : <Sparkles size={17} />}{generating ? 'Criando seu roteiro…' : 'Gerar meu podcast'}</button>
+        <p className="text-xs text-[var(--dim)] mt-3">Primeiro criamos o roteiro; ao reproduzir, geramos o áudio com as vozes escolhidas. Suas preferências ficam no perfil quando você está conectada.</p>
+      </section>
     </div>
-  );
+    {generating && <section role="status" className="ni-panel p-5 mb-5"><h2 className="text-sm font-semibold mb-3">Construindo sua explicação…</h2><p className="text-xs text-[var(--dim)] mb-3">Este é um rascunho. A reprodução fica disponível quando o roteiro estiver completo.</p><p className="text-sm whitespace-pre-wrap leading-6 max-h-52 overflow-y-auto">{draft || 'Organizando os conceitos e as fontes.'}</p></section>}
+    {loadingId && <div role="status" className="ni-panel p-4 mb-4 flex items-center gap-3 text-sm"><Loader2 size={18} className="animate-spin shrink-0" /><span className="flex-1">{progress}</span><button type="button" onClick={() => { audioTask.current++; controller.current?.abort(); setLoadingId(null); setProgress(''); }} className="underline">Cancelar</button></div>}
+    <PodcastPlayer episode={active} audioUrl={audioUrl} audioRef={audioRef} onEnded={() => setPlayingId(null)} onPlay={() => setPlayingId(active?.id ?? null)} onPause={() => setPlayingId(null)} onError={() => { setPlayingId(null); setError('O navegador não conseguiu reproduzir o áudio. Tente novamente.'); }} />
+    <section className="mb-7">{pendingCount > 0 && <p role="status" className="text-xs text-[var(--dim)] mb-3">{pendingCount} episódio(s) aguardando sincronização. Você já pode ouvir ou baixar o roteiro.</p>}{personalError && <button type="button" onClick={retrySaves} className="text-sm underline mb-3">Tentar salvar novamente</button>}<h2 className="text-lg font-semibold mb-2">Seus podcasts</h2><p className="text-xs text-[var(--dim)] mb-4">{user ? 'Roteiros e configurações salvos na sua conta.' : 'Conecte sua conta para gerar e guardar seus episódios.'} O áudio pode ser baixado após gerar.</p>{personal.length ? <div className="space-y-3">{rows(personal)}</div> : <div className="rounded-xl border border-dashed border-[var(--line)] p-6 text-sm text-[var(--dim)]">Seu primeiro episódio começa com um tema e uma dúvida. Crie acima para ouvir aqui.</div>}{hasMore && <button type="button" disabled={personalLoading} onClick={loadMore} className="w-full mt-3 border border-[var(--line)] rounded-xl p-3 text-sm disabled:opacity-50">{personalLoading ? 'Carregando…' : 'Carregar podcasts anteriores'}</button>}</section>
+    <section><h2 className="text-lg font-semibold mb-2">Ideias da biblioteca</h2><p className="text-xs text-[var(--dim)] mb-4">Use um roteiro de referência como ponto de partida e personalize a explicação.</p><label className="block mb-4"><span className="sr-only">Buscar na biblioteca de podcasts</span><input className={podcastInputClass} value={libraryQuery} onChange={e => { setLibraryQuery(e.target.value); setVisible(8); }} placeholder="Busque tema ou matéria…" /></label><div className="space-y-3">{rows(filteredCatalog.slice(0, visible), true)}</div>{!filteredCatalog.length && <p className="text-sm text-[var(--dim)]">Nenhum roteiro encontrado.</p>}{filteredCatalog.length > visible && <button type="button" onClick={() => setVisible(n => n + 8)} className="w-full mt-3 border border-[var(--line)] rounded-xl p-3 text-sm">Mostrar mais roteiros</button>}</section>
+  </div>;
 }

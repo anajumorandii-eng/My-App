@@ -1,0 +1,23 @@
+{
+  "browser": "Chromium",
+  "errors": [],
+  "noOverlay": true,
+  "checks": [
+    "geração sem catálogo bloqueada",
+    "uma pessoa oculta segunda voz",
+    "duração 12 minutos",
+    "formato perguntas",
+    "material próprio",
+    "orientação de autenticação visível",
+    "tema claro/escuro"
+  ],
+  "mobile": {
+    "width": 390,
+    "scrollWidth": 390
+  },
+  "tablet": {
+    "width": 834,
+    "scrollWidth": 834
+  },
+  "homeLoaded": true
+}

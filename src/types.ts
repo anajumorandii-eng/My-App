@@ -1,3 +1,4 @@
+import type { PodcastSettings } from './lib/podcastConfig';
 export interface Topic {
   id: string;
   name: string;
@@ -45,6 +46,7 @@ export interface UserProfile {
   podcastDurationPreference?: 'curto' | 'medio' | 'longo' | null;
   // Optional: which Gemini TTS voice narrates podcast episodes. Absent/null falls back to the default voice.
   podcastVoiceName?: string | null;
+  podcastSettings?: PodcastSettings;
 }
 
 // A menor ação capaz de testar ou corrigir a lacuna diagnosticada — em
