@@ -14,8 +14,7 @@ export function createAiProvider(env: NodeJS.ProcessEnv = process.env): AiProvid
     return new OmniRouteProvider({
       baseUrl: env.OMNIROUTE_BASE_URL,
       apiKey: env.OMNIROUTE_API_KEY,
-      deepModel: env.AI_DEEP_MODEL,
-      fastModel: env.AI_FAST_MODEL,
+      model: env.AI_MODEL,
     });
   }
 
