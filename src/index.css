@@ -105,7 +105,11 @@
   --text-primary: var(--warm-50);
   --text-secondary: var(--warm-300);
   --text-muted: var(--ink-400);
-  --text-inverse: var(--ink-950);
+  /* Era ink-950: sobre o burgundy-600 do botão principal dava 2,7:1. Dentro do
+     layout o ambiente tecnológico redefine os dois tokens, mas a tela de erro
+     do ErrorBoundary da raiz fica fora dele e mostrava "Tentar de novo" assim.
+     warm-50 dá 6,2:1 no repouso e mais no hover e no pressionado. */
+  --text-inverse: var(--warm-50);
 
   --navigation-background: var(--forest-950);
   --navigation-selected: var(--forest-700);
