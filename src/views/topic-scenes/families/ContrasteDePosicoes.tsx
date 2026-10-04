@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
 import '../TopicScene.css';
+import {contrastPlateFor} from '../contrast-plates';
+import {ContrastComposition} from '../contrast-plates/ContrastComposition';
 
 /** Respostas rivais à mesma pergunta. O movimento mostra o peso migrando de
  *  uma posição para a outra — é a comparação, não uma entrada decorativa. */
@@ -22,6 +24,11 @@ function linhas(rotulo: string, n: number): string[] {
 }
 
 export function ContrasteDePosicoes({ entry }: { entry: SceneEntry }) {
+  const plate=contrastPlateFor(entry.chapterId);
+  return plate?<ContrastComposition key={entry.chapterId} entry={entry} plate={plate}/>:<LegacyContrast key={entry.chapterId} entry={entry}/>;
+}
+
+function LegacyContrast({entry}:{entry:SceneEntry}) {
   const [escolhida, setEscolhida] = useState<number | null>(null);
   const [trecho, setTrecho] = useState(false);
   const transition = useSceneMotion();

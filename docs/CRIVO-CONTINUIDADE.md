@@ -226,3 +226,13 @@ Os 29 registros aprofundados passam a revisão 2: 145 seções, práticas/pegadi
 A fila validada desta proposta contém 93 achados tratados, 205 pendentes, 315 mecanismos preservados e 148 resumos ainda sem revisão 2. Não há promoção de aprovação editorial integral. Conferir a integração desta branch e o delta de main antes de repetir LG2; o próximo escopo planejado é C/H1, com 24 comparações de Filosofia/Sociologia e oito aprofundamentos sociológicos. Publicação automática autorizada; merge permanece com a responsável.
 
 Validação geral final de B: TypeScript/build passaram; 870 testes Node + 1.001 Vitest (1.871) passaram, com 154 arquivos de interface e sem falhas. Matrizes de cobertura/qualidade sincronizadas; estados de aprovação preservados. Testes, build e navegador foram executados em sequência.
+
+## Entrega C — 24 pranchas de Filosofia/Sociologia — 04/10/2026
+
+Base conferida: `120c7b9dfb6d22e71bf3d499b60319ae57c81d62`, com a Entrega B integrada em #256 e a correção de contraste de #257 preservada. A branch `fix/entrega-c-filosofia-sociologia` refaz 16 pranchas filosóficas e oito sociológicas com situações, objetos e relações próprios. A seleção destaca uma leitura sem apagar as demais; teclado, rolagem interna e movimento reduzido foram verificados.
+
+Os oito resumos sociológicos passam à revisão 2, com 40 seções aprofundadas, seis pegadinhas e dois problemas resolvidos por capítulo. Duas falhas concretas em Kant e Rawls passam à revisão 3; os outros 602 registros editoriais permanecem iguais à base. IDs, chaves de progresso e tentativas anteriores estão preservados.
+
+[Registro técnico e galeria](visual-integral-2026-10-04/entrega-c/README.md): Chromium passou nas 12 configurações de largura/tema/movimento, com 1.656 estados SVG e 48 aberturas de Testar/Reconstruir. A repetição final de mais-valia passou em 72 estados adicionais. Foram inspecionadas 96 capturas finais; 36 acompanham a proposta. TypeScript/build passaram e a suíte geral final passou em 885 testes Node + 1.031 Vitest (1.916), sem falhas.
+
+A fila validada contém 117 achados tratados, 181 pendentes e 315 mecanismos preservados, em dez lotes restantes. Restam 140 aprofundamentos editoriais; 470 registros estão na revisão 2 e dois na revisão 3. A aprovação editorial formal permanece aberta. Conferir a integração desta proposta e o delta de main antes de repetir H1; os próximos lotes estão no plano ampliado, começando por F2/F3. Publicação automática autorizada; merge permanece com a responsável.

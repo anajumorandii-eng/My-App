@@ -1,0 +1,26 @@
+.cp-composition { min-width:0; padding:clamp(.75rem,2vw,1.5rem); background:var(--vs-paper-strong); color:var(--vs-ink); }
+.cp-composition figure { margin:0; min-width:0; display:grid; gap:.65rem; }
+.cp-context { margin:0; font:400 1rem/1.6 var(--font-editorial,Newsreader),Georgia,serif; overflow-wrap:anywhere; }
+.cp-drawing-window { max-width:100%; min-width:0; overflow-x:auto; overscroll-behavior-inline:contain; border:1px solid color-mix(in srgb,var(--vs-blue) 32%,transparent); border-radius:5px 11px 7px 4px; background:linear-gradient(transparent 31px,color-mix(in srgb,var(--vs-blue) 5%,transparent) 32px); background-size:100% 32px; }
+.cp-drawing-window:focus-visible { outline:3px solid var(--vs-blue); outline-offset:3px; }
+.cp-drawing-window svg { display:block; min-width:640px; width:100%; height:auto; overflow:hidden; color:var(--vs-blue); fill:none; stroke:currentColor; stroke-width:2; }
+.cp-drawing-window :is(path,rect,circle,ellipse,line,polyline,polygon) { stroke-linecap:round; stroke-linejoin:round; }
+.cp-drawing-window .cp-fill { fill:currentColor; }
+.cp-drawing-window .cp-wash { fill:color-mix(in srgb,var(--vs-blue) 12%,transparent); }
+.cp-drawing-window .cp-accent { stroke:var(--vs-burgundy); }
+.cp-drawing-window .cp-text { fill:var(--vs-ink); stroke:none; font-family:Kalam,Caveat,cursive; font-weight:400; }
+.cp-drawing-window .cp-text--accent { fill:var(--vs-burgundy); font-weight:700; }
+.cp-mark { transition:color .25s ease; color:var(--vs-blue); }
+.cp-mark[data-active='true'] { color:var(--vs-burgundy); }
+.cp-mark[data-active='true'] :is(path,rect,circle,ellipse,line,polyline,polygon) { stroke-width:3; }
+.cp-mark[data-active='true'] .cp-text { fill:var(--vs-burgundy); }
+.cp-arrow,.cp-arrow-head { fill:none; stroke:var(--vs-burgundy); }
+.cp-annotation { color:var(--vs-burgundy); font:400 1.25rem/1.45 Kalam,Caveat,cursive; overflow-wrap:anywhere; }
+.cp-pan-hint { margin:0; color:var(--vs-dim); font:400 .85rem/1.45 system-ui,sans-serif; }
+.cp-reading { margin:0; padding:.85rem 1rem; border-left:3px solid var(--vs-burgundy); background:color-mix(in srgb,var(--vs-burgundy) 7%,transparent); color:var(--vs-ink); font:400 1rem/1.6 system-ui,sans-serif; overflow-wrap:anywhere; }
+.cp-claim { display:block; margin-top:.5rem; font-size:.9rem; color:var(--vs-dim); }
+@media(prefers-reduced-motion:reduce){ .cp-mark { transition:none; } }
+/* As notas e relações desenhadas conservam a escrita manual neste lote. */
+.crivo-visual--tech .cp-composition .cp-annotation,
+.crivo-visual--tech .cp-composition .cp-drawing-window .cp-text,
+.crivo-visual--tech .tc-scene.cp-composition > header h4 { font-family:Kalam,Caveat,cursive; }

@@ -4689,7 +4689,7 @@
       },
       {
         "title": "Síntese entre racionalismo e empirismo",
-        "content": "A Crítica opera, assim, como síntese que supera a oposição entre racionalismo e empirismo, incorporando o que cada um tinha de correto. Contra o racionalismo dogmático, Kant concede ao empirismo que todo conhecimento começa com a experiência: sem material sensível, o entendimento opera no vazio. Contra o empirismo cético, concede ao racionalismo que nem todo conhecimento deriva da experiência: há formas e categorias a priori que a própria experiência pressupõe e não poderia fornecer. A fórmula que sintetiza a posição é conhecida: intuições sem conceitos são cegas, conceitos sem intuições são vazios. É por isso que Kant pode responder a Hume: a causalidade não é hábito psicológico projetado, mas categoria a priori do entendimento, condição de possibilidade de qualquer experiência objetiva — sem ela não haveria sequer sucessão ordenada de eventos a observar. O preço dessa resposta é que a causalidade vale necessariamente para os fenômenos, e apenas para eles, jamais para as coisas em si."
+        "content": "A Crítica opera, assim, como síntese que supera a oposição entre racionalismo e empirismo, incorporando o que cada um tinha de correto. Contra o racionalismo dogmático, Kant concede ao empirismo que todo conhecimento começa com a experiência: sem material sensível, o entendimento opera no vazio. Contra o empirismo cético, concede ao racionalismo que nem todo conhecimento deriva da experiência: há formas e categorias a priori que a própria experiência pressupõe e não poderia fornecer. A fórmula que sintetiza a posição é conhecida: intuições sem conceitos são cegas, conceitos sem intuições são vazios. É por isso que Kant pode responder a Hume: a causalidade não é hábito psicológico projetado, mas categoria a priori do entendimento, condição de possibilidade de qualquer experiência objetiva — ela permite distinguir uma ordem objetiva de acontecimentos de uma mera sequência subjetiva de percepções. O preço dessa resposta é que a causalidade vale necessariamente para os fenômenos, e apenas para eles, jamais para as coisas em si."
       },
       {
         "title": "Pegadinhas frequentes",
@@ -4729,7 +4729,7 @@
         ]
       ]
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Filosofia",
@@ -5633,7 +5633,7 @@
     "sections": [
       {
         "title": "Concepções de justiça",
-        "content": "As concepções de justiça na filosofia política se dividem em famílias teóricas com critérios distintos de avaliação. As teorias procedimentais, entre as quais o contratualismo rawlsiano é o exemplo mais influente, julgam a justiça de uma distribuição pelo procedimento que a gerou: se o processo de escolha das regras foi imparcial e justo (como no véu da ignorância), o resultado distributivo dele decorrente é justo, independentemente de qual seja seu conteúdo específico. As teorias de resultado, ao contrário, avaliam diretamente o padrão distributivo final, comparando-o a um critério substantivo desejável — igualdade estrita, necessidade, ou mérito — independentemente do processo histórico que produziu essa distribuição. Robert Nozick, em contraposição a ambas, defende uma teoria histórica de titularidades: uma distribuição é justa se resultou de aquisições originais legítimas seguidas de transferências voluntárias legítimas (trocas, doações, heranças), não importando o padrão final resultante, ainda que ele seja bastante desigual, desde que cada etapa histórica da cadeia tenha sido justa."
+        "content": "As concepções de justiça na filosofia política se dividem em famílias teóricas com critérios distintos de avaliação. O contratualismo de Rawls usa uma escolha imparcial de princípios, figurada pelo véu da ignorância. Isso não legitima qualquer distribuição: liberdades básicas iguais, igualdade equitativa de oportunidades e princípio da diferença limitam as instituições e os resultados admissíveis. A imparcialidade da escolha e o conteúdo dos princípios precisam ser considerados juntos. As teorias de resultado, ao contrário, avaliam diretamente o padrão distributivo final, comparando-o a um critério substantivo desejável — igualdade estrita, necessidade, ou mérito — independentemente do processo histórico que produziu essa distribuição. Robert Nozick, em contraposição a ambas, defende uma teoria histórica de titularidades: uma distribuição é justa se resultou de aquisições originais legítimas seguidas de transferências voluntárias legítimas (trocas, doações, heranças), não importando o padrão final resultante, ainda que ele seja bastante desigual, desde que cada etapa histórica da cadeia tenha sido justa."
       },
       {
         "title": "Rawls e a posição original",
@@ -5681,7 +5681,7 @@
         ]
       ]
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Filosofia",
@@ -31434,23 +31434,23 @@
     "sections": [
       {
         "title": "Classe e posição estrutural",
-        "content": "Classe social, na análise marxista, define-se pela posição nas relações de produção: possuir ou não meios de produção e comprar ou vender força de trabalho. Esse critério explica interesses estruturalmente opostos, ainda que muitas pessoas não se reconheçam como membros de uma classe."
+        "content": "Classe social, na análise marxista, define-se pela posição nas relações de produção: possuir ou não meios de produção e comprar ou vender força de trabalho. Renda ajuda a descrever condições de vida, mas não substitui esse critério. Um empregado com salário elevado continua dependendo da venda de sua força de trabalho; um proprietário pode receber renda do controle da produção. A realidade inclui posições intermediárias e arranjos complexos, que exigem investigação, em vez de encaixe automático por aparência. O conflito nasce de interesses estruturalmente opostos sobre jornada, salário e apropriação do excedente. Exploração, nesse quadro, não significa apenas maus-tratos: refere-se à apropriação de mais-valor produzido pelo trabalho assalariado. Duas pessoas podem ter relação cordial e permanecer em posições antagônicas na produção. A luta de classes inclui disputas por direitos e controle do trabalho, além de confrontos abertos. Sua existência não depende de cada participante conhecer a teoria ou se declarar membro de uma classe."
       },
       {
         "title": "Consciência e organização",
-        "content": "A passagem da classe em si à classe para si depende de experiência compartilhada, organização e formação política. Sindicatos, partidos e movimentos operam nessa construção, enquanto a ideologia dominante, a fragmentação do trabalho e a concorrência entre trabalhadores atuam no sentido contrário."
+        "content": "Compartilhar uma posição na produção não produz automaticamente ação coletiva. A distinção entre classe em si e classe para si ajuda a separar condições objetivas e formação de consciência e organização política. Trabalhadores dispersos podem enfrentar o mesmo problema de jornada, mas interpretar a dificuldade como fracasso pessoal ou competir por vagas. Quando reconhecem interesses comuns, formulam reivindicações e constroem formas de organização, há uma transformação na capacidade de agir. Sindicatos, associações, partidos e movimentos podem mediar esse processo; não garantem, por si, unidade permanente. Diferenças de contrato, raça, gênero e ocupação, repressão e ideias dominantes afetam a construção da solidariedade. A consciência não deve ser entendida como descoberta de uma essência mental igual em todos os trabalhadores. É uma elaboração histórica, sujeita a disputas e mudanças. Uma greve ilustra a organização de interesses, mas nem toda mobilização social se explica exclusivamente por classe ou representa toda uma classe."
       },
       {
         "title": "Leituras contemporâneas",
-        "content": "Autores posteriores refinaram a análise: Weber acrescentou status e poder como dimensões distintas da classe; Bourdieu propôs capitais econômico, cultural e social, mostrando que a posição depende de múltiplos recursos; e estudos atuais discutem a interseção entre classe, raça e gênero na explicação das desigualdades."
+        "content": "Weber e Bourdieu oferecem quadros próprios para investigar estratificação, sem apenas adicionar detalhes à teoria de Marx. Weber distingue classe, relacionada às oportunidades econômicas no mercado, status, ligado a prestígio e estilos de vida, e partido, associado à organização e disputa de poder. Essas dimensões podem não coincidir: alguém com grande reconhecimento cultural pode ter baixa renda, enquanto riqueza não assegura prestígio em todos os grupos. Bourdieu analisa a distribuição de capitais econômico, cultural e social em campos e posições sociais. Capital cultural envolve escolaridade, repertórios e domínio de códigos valorizados; capital social se refere a recursos associados a redes de relações. Diplomas e contatos podem abrir oportunidades, mas seu valor depende do contexto e não elimina desigualdades de origem. Recursos podem se converter uns nos outros sob certas condições. Investigar classe, raça e gênero em conjunto permite entender barreiras sobrepostas, evitando substituir toda desigualdade por uma única variável."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Definir classe por faixa de renda, e não por posição na produção, é o erro mais frequente. Outro deslize é supor que a ausência de consciência de classe refuta sua existência objetiva. E tratar as contribuições de Weber e Bourdieu como simples correções, quando propõem quadros teóricos próprios."
+        "content": "1) “Classe é somente faixa de renda.” Correção: em Marx, o critério central é a posição nas relações de produção. 2) “Sem consciência de classe, não existe classe.” Correção: condições estruturais e reconhecimento político são dimensões distintas. 3) “Exploração significa apenas salário baixo ou violência.” Correção: a análise marxista examina a apropriação do excedente, mesmo sob contrato legal. 4) “Toda pessoa rica possui alto status e poder político.” Correção: em Weber, dimensões de estratificação podem não coincidir. 5) “Capital cultural é talento natural.” Correção: repertórios, diplomas e códigos valorizados são adquiridos em condições sociais desiguais. 6) “Weber e Bourdieu corrigem Marx usando o mesmo conceito de classe.” Correção: constroem perspectivas e conceitos próprios. Na resolução, indique qual autor e qual critério estão sendo usados. Comparar abordagens não exige convertê-las numa classificação única nem negar as relações entre recursos econômicos, reconhecimento e oportunidades."
       },
       {
         "title": "Pratique e confira",
-        "content": "Como Weber amplia a análise de estratificação em relação a Marx? Responda antes de conferir: mantém a dimensão econômica de classe, mas acrescenta o status, ligado a prestígio e estilo de vida, e o partido, ligado ao poder, tratando-as como dimensões que podem não coincidir. Agora explique o conceito de capital cultural em Bourdieu: recursos como escolaridade, repertório e domínio de códigos valorizados, que se convertem em vantagem social."
+        "content": "Problema 1: uma pesquisadora respeitada recebe pouco, um empresário acumula patrimônio e um dirigente influencia decisões públicas. Como Weber evita reduzir as três posições a uma lista por renda? Responda antes de conferir. Solução: distingue classe econômica, status e partido ou poder organizado. As dimensões podem não coincidir: prestígio, recursos e influência não ocupam necessariamente a mesma ordem. Isso amplia a análise de estratificação por um quadro próprio. Problema 2: dois candidatos com escolaridade formal semelhante enfrentam uma entrevista que valoriza repertório artístico e modos de falar aprendidos em famílias diferentes. Que conceito de Bourdieu ajuda a analisar a vantagem? Solução: capital cultural, composto por conhecimentos e códigos socialmente valorizados, adquiridos e reconhecidos em condições desiguais. Se a contratação depende de contatos, investigue também capital social. Para conferir sua resposta, explicite o recurso, como foi adquirido e em qual situação se transforma em vantagem."
       }
     ],
     "recall": {
@@ -31481,7 +31481,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -31709,23 +31710,23 @@
     "sections": [
       {
         "title": "O conceito de cultura",
-        "content": "Na antropologia, cultura é o conjunto de significados, práticas, saberes, valores e formas de organização aprendidos e compartilhados socialmente. Não é sinônimo de erudição nem se distribui em graus de superioridade: toda sociedade humana tem cultura, e todas são igualmente complexas em seus próprios termos."
+        "content": "Na antropologia, cultura é o conjunto de significados, práticas, saberes, valores e formas de organização aprendidos e compartilhados socialmente. Não é sinônimo de erudição, escolaridade ou consumo de arte consagrada: cozinhar, cuidar, celebrar, falar e organizar parentesco também envolvem cultura. Toda sociedade humana produz significados, embora seus integrantes não pensem nem ajam de modo uniforme. A aprendizagem ocorre na convivência e nas instituições, atravessada por relações de poder e disputas. Um gesto de respeito pode ter sentidos diferentes conforme o contexto; sua forma visível não informa sozinha o que significa para os participantes. Culturas mudam, entram em contato e incorporam elementos de outras, sem perder necessariamente toda referência própria. Reconhecer diferença cultural impede ordenar sociedades numa escala de superioridade baseada no gosto do observador. Isso não obriga a afirmar que todas tenham as mesmas técnicas ou trajetórias: exige separar diferenças históricas de um julgamento sobre o valor humano de seus membros."
       },
       {
         "title": "Etnocentrismo",
-        "content": "Etnocentrismo é julgar outras culturas a partir dos valores da própria, tomando os próprios costumes como padrão do que é natural e correto. Suas manifestações vão de reações espontâneas de estranhamento a justificativas de colonização, racismo e violência, quando a diferença é convertida em inferioridade."
+        "content": "Etnocentrismo é julgar outras culturas a partir dos valores da própria, tomando os próprios costumes como padrão do que é natural e correto. O mecanismo transforma uma preferência aprendida em medida universal. Imagine um visitante que considera inferior uma forma de comer porque não usa os utensílios de sua casa: antes de perguntar como o alimento é preparado e compartilhado, ele classifica a diferença como falta. Uma surpresa inicial não equivale automaticamente a discriminação, mas pode alimentar hierarquias quando não é examinada. Discursos coloniais utilizaram essa passagem da diferença à inferioridade para justificar dominação e violência. O etnocentrismo não pertence exclusivamente a um povo e pode aparecer em instituições ou nas relações cotidianas. Criticá-lo exige observar quais critérios foram escolhidos e por quem. Conhecer outro costume não garante superar preconceitos: a compreensão precisa confrontar classificações que tratam o modo de vida do observador como única forma legítima de existência."
       },
       {
         "title": "Estranhamento e desnaturalização",
-        "content": "O antídoto metodológico é o exercício de estranhar o familiar e familiarizar o estranho: perceber que os próprios costumes também são arbitrários e que os alheios têm lógica interna. Isso não obriga a aceitar qualquer prática, mas exige compreender antes de julgar, distinguindo descrição e avaliação."
+        "content": "Estranhar o familiar e familiarizar o estranho são operações complementares. A primeira pergunta por que nossos costumes parecem óbvios; a segunda busca compreender os sentidos de práticas alheias em seu contexto. Ao estudar uma festa desconhecida, observe quem participa, quais relações são celebradas e como os próprios participantes explicam os gestos. Depois examine sua própria festa: horários, roupas e alimentos também foram aprendidos, não são padrões necessários para toda humanidade. Perceber a arbitrariedade de convenções não significa que sejam sem sentido; significa que poderiam assumir outras formas históricas. Compreender exige escuta e comparação, evitando tratar um grupo como bloco sem conflitos internos. Isso não obriga a aceitar qualquer prática, mas exige compreender antes de julgar, distinguindo descrição e avaliação. É possível investigar uma tradição e discutir seus efeitos sobre direitos, ouvindo inclusive integrantes que a contestam. O método impede tanto a condenação automática do diferente quanto sua idealização."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Confundir cultura com refinamento artístico é o erro mais frequente. Outro deslize é supor que reconhecer etnocentrismo obriga a suspender qualquer juízo moral. E tratar as culturas como blocos fechados e homogêneos, ignorando conflitos internos e mudanças ao longo do tempo."
+        "content": "1) “Um povo sem museus não tem cultura.” Correção: toda sociedade produz significados e práticas; erudição é apenas uma forma cultural. 2) “O costume diferente é naturalmente inferior.” Correção: esse juízo usa os padrões do observador como medida universal. 3) “Cultura determina cada indivíduo da mesma maneira.” Correção: aprendizagens compartilhadas convivem com posições, conflitos e escolhas diversas. 4) “Compreender uma prática exige aprová-la.” Correção: descrição e avaliação são operações distintas, que podem dialogar. 5) “Culturas são blocos puros e imóveis.” Correção: contatos, mudanças e disputas fazem parte da vida cultural. 6) “Estranhar o familiar é rejeitar todos os próprios costumes.” Correção: é examinar como foram construídos e que sentidos e efeitos têm. Diante de uma comparação, localize o critério de julgamento. A ausência de uma prática valorizada pelo observador não prova ausência de cultura nem autoriza uma escala de dignidade entre grupos humanos."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que dizer que um povo não tem cultura é erro conceitual? Responda antes de conferir: toda sociedade humana produz significados, normas e práticas compartilhadas, de modo que a ausência de cultura é impossível; o que existe é diferença cultural. Agora explique o exercício de estranhar o familiar: perceber a arbitrariedade dos próprios costumes, que parecem naturais apenas por serem habituais."
+        "content": "Problema 1: um visitante afirma que uma comunidade “não tem cultura” porque não conhece a música que ele considera importante. Por que a conclusão é conceitualmente errada? Responda antes de conferir. Solução: toda sociedade produz significados e práticas compartilhadas; o que existe é diferença cultural, não ausência. O visitante converteu seu repertório em medida universal e não investigou os sentidos das práticas locais. Problema 2: estudantes comparam uma celebração distante com uma festa que frequentam desde crianças. Como estranhar o familiar? Solução: perguntar por que roupas, horários e gestos da própria festa parecem naturais, como foram aprendidos e como mudaram. Assim percebem a arbitrariedade dos próprios costumes, sem concluir que sejam inúteis. Em seguida, podem compreender a lógica da outra celebração a partir dos participantes. Para conferir sua resposta, separe o que observou, o significado atribuído no contexto e o julgamento que precisa justificar."
       }
     ],
     "recall": {
@@ -31756,7 +31757,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -31819,27 +31821,27 @@
     "sections": [
       {
         "title": "Herança histórica",
-        "content": "O Brasil foi o último país das Américas a abolir a escravidão, em 1888, sem nenhuma política de reparação, acesso à terra, educação ou emprego para os libertos. Somaram-se políticas de branqueamento e incentivo à imigração europeia, que estruturaram desvantagens duradouras para a população negra."
+        "content": "O Brasil foi o último país das Américas a abolir a escravidão, em 1888. O fim jurídico da propriedade de pessoas foi uma conquista histórica, construída também pela resistência e organização negras, mas não veio acompanhado de uma política nacional ampla de reparação, terra e inclusão para a população liberta. A exclusão acumulada de educação, patrimônio e trabalho protegido não desapareceu com a lei. Em diferentes contextos, políticas de incentivo à imigração europeia e ideologias de branqueamento favoreceram novos padrões de hierarquia racial. Essas relações não tornam a população negra passiva: associações, mobilizações e projetos de vida enfrentaram barreiras e disputaram direitos. Para entender persistência da desigualdade, conecte heranças históricas a mecanismos posteriores de acesso a moradia, escola, renda e poder. Não basta atribuir toda diferença atual a uma causa remota sem investigar sua reprodução. A abolição encerrou a escravidão legal; transformar condições sociais desiguais exigia medidas e conflitos que continuaram depois dela."
       },
       {
         "title": "O mito da democracia racial",
-        "content": "A ideia de que o Brasil teria harmonia racial por causa da miscigenação foi difundida como identidade nacional, mas encobre desigualdades sistemáticas. Pesquisas de Florestan Fernandes, Clóvis Moura, Lélia Gonzalez e outros mostraram que o racismo brasileiro opera de forma difusa, sem leis segregacionistas explícitas, mas com efeitos concretos."
+        "content": "A ideia de que o Brasil teria harmonia racial por causa da miscigenação foi difundida como identidade nacional, mas encobre desigualdades sistemáticas. Mistura de origens, convivência e vínculos pessoais não demonstram igualdade de oportunidades nem ausência de discriminação. Pesquisas de Florestan Fernandes, Clóvis Moura, Lélia Gonzalez e outros, em perspectivas distintas, contestaram explicações que apagavam hierarquias e experiências da população negra. Racismo estrutural descreve a reprodução de desigualdades raciais nas relações e instituições, inclusive sem intenção explícita de cada indivíduo. Uma regra de contratação aparentemente neutra pode valorizar redes historicamente inacessíveis a certos grupos, mantendo barreiras. Isso não torna todo resultado individual prova suficiente de racismo: é preciso investigar processos e padrões. Racismo institucional focaliza práticas e funcionamento de instituições; preconceito e discriminação também podem ocorrer nas interações. Não são fenômenos excludentes. A ausência de um regime legal segregacionista não demonstra harmonia racial."
       },
       {
         "title": "Indicadores e políticas",
-        "content": "Dados oficiais mostram diferenças persistentes entre negros e brancos em renda, escolaridade, moradia, saúde, exposição à violência letal e ocupação de cargos de decisão. Entre as respostas estão as cotas raciais em universidades e concursos, a criminalização do racismo e políticas de promoção da igualdade racial."
+        "content": "Indicadores de renda, escolaridade, moradia, saúde, violência e presença em cargos de decisão permitem examinar desigualdades raciais. É preciso identificar fonte, período, categorias e população comparada antes de interpretar um número. Nas estatísticas brasileiras, a categoria população negra frequentemente reúne pessoas pretas e pardas, conforme o recorte adotado. Diferenças médias não descrevem cada trajetória e, isoladamente, não identificam todo o mecanismo causal. Comparar pessoas com escolaridade ou faixa de renda semelhante ajuda a investigar dimensões que uma explicação apenas por classe deixaria de lado, sem eliminar a relação entre raça e classe. Políticas de cotas, combate à discriminação e promoção da igualdade racial respondem a barreiras distintas. Avaliar resultados exige examinar acesso, permanência e implementação, além da existência da lei. Os movimentos negros contribuíram para tornar essas questões públicas e disputar medidas institucionais. Não use um caso de ascensão individual como prova de que oportunidades já são iguais para todos."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Confundir ausência de leis segregacionistas com ausência de racismo é o erro central do tópico. Outro deslize é tratar desigualdade racial como consequência apenas de desigualdade de classe, ignorando dados que mostram diferenças entre pessoas de mesma faixa de renda. E confundir racismo estrutural com intenção individual."
+        "content": "1) “Miscigenação prova igualdade racial.” Correção: convivência não elimina hierarquias de acesso a recursos e direitos. 2) “Sem leis segregacionistas, não há racismo.” Correção: instituições e práticas podem produzir desigualdades sem segregação legal explícita. 3) “Tudo se explica por classe.” Correção: raça e classe se articulam; comparações dentro de faixas de renda ajudam a investigar barreiras raciais. 4) “Racismo estrutural exige intenção de cada pessoa.” Correção: mecanismos sociais podem reproduzir desvantagens sem intenção individual consciente. 5) “A abolição não teve importância.” Correção: encerrou a escravidão legal; a ausência de inclusão ampla limitou a transformação das condições sociais. 6) “Um caso bem-sucedido refuta o padrão.” Correção: trajetórias individuais não substituem a análise das oportunidades e dos indicadores. Compare processos e evidências, evitando tanto negar a desigualdade quanto tratar toda pessoa de um grupo como se tivesse uma experiência única."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que se fala em racismo estrutural? Responda antes de conferir: porque as desvantagens se reproduzem por meio de instituições, práticas e mecanismos sociais, independentemente da intenção consciente de cada indivíduo, aparecendo sistematicamente nos indicadores. Agora explique por que a abolição não reduziu a desigualdade: não houve reparação, acesso à terra, educação nem inserção no mercado de trabalho."
+        "content": "Problema 1: uma instituição seleciona por indicação de redes profissionais historicamente restritas, e certos grupos permanecem sub-representados mesmo sem declaração racista. Por que investigar racismo estrutural? Responda antes de conferir. Solução: desvantagens podem se reproduzir por instituições e práticas, independentemente da intenção consciente de cada indivíduo. É necessário observar o acesso às redes, os critérios e os padrões de seleção; o conceito não dispensa evidência. Problema 2: por que a abolição não eliminou a desigualdade racial? Solução: o fim da escravidão legal não foi acompanhado de uma política nacional ampla de reparação, acesso à terra e educação ou inclusão econômica dos libertos. Desvantagens acumuladas se combinaram com barreiras posteriores. Isso reconhece a importância da liberdade jurídica e da resistência negra, sem confundi-las com igualdade material automática. Para conferir, ligue herança histórica e mecanismo atual, evitando explicar tudo por intenção pessoal ou por uma data isolada."
       }
     ],
     "recall": {
-      "prompt": "Por que se fala em racismo estrutural? Por que a abolição não reduziu a desigualdade racial?",
+      "prompt": "Por que se fala em racismo estrutural? Por que a abolição não eliminou a desigualdade racial?",
       "elements": [
         [
           "as desvantagens se reproduzem por instituicoes e praticas",
@@ -31858,15 +31860,18 @@
           ]
         ],
         [
-          "nao houve reparacao, terra nem educacao",
+          "a abolição não foi acompanhada de política nacional ampla de inclusão e reparação",
           [
+            "politica",
+            "inclusao",
             "reparacao",
             "terra",
             "educacao"
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -31929,23 +31934,23 @@
     "sections": [
       {
         "title": "Do artesanato à manufatura",
-        "content": "A divisão do trabalho separa tarefas antes reunidas num mesmo trabalhador. Na manufatura, o processo é fragmentado, aumentando a produtividade e reduzindo a autonomia de quem executa. Adam Smith celebrou o ganho de produtividade com o exemplo da fábrica de alfinetes; Marx apontou o efeito de esvaziamento do trabalho."
+        "content": "A divisão social do trabalho distribui atividades e funções entre pessoas e grupos na sociedade; a divisão técnica fragmenta tarefas dentro de um processo produtivo. As duas podem se relacionar, mas não são idênticas. Um artesão que acompanha várias etapas da fabricação tem uma relação diferente com o produto daquela de um trabalhador encarregado apenas de uma operação repetida. Na manufatura, a reunião de trabalhadores sob uma direção e a especialização de tarefas ampliam a produtividade e alteram o controle do processo. Adam Smith destacou ganhos com o exemplo dos alfinetes: especialização, economia de tempo e ferramentas elevavam a produção. Isso não prova que produtividade aumente automaticamente salários ou autonomia. Marx analisou como a fragmentação, sob relações capitalistas, subordina o trabalho e pode esvaziar o domínio sobre seu resultado. A diferença não está em afirmar que toda cooperação é boa ou ruim, mas em perguntar como tarefas, propriedade e decisões são organizadas e quem se apropria dos ganhos."
       },
       {
         "title": "Taylorismo e fordismo",
-        "content": "O taylorismo introduziu o estudo de tempos e movimentos, separando concepção e execução e retirando do trabalhador o controle do próprio ritmo. O fordismo acrescentou a linha de montagem, a padronização e a produção em massa, com salários que permitiam consumir o que se produzia, articulando produção e mercado consumidor."
+        "content": "O taylorismo sistematiza a organização gerencial do trabalho por estudos de tempos e movimentos, separando concepção e execução e retirando do trabalhador o controle do próprio ritmo. A gerência define procedimentos e mede o desempenho, reduzindo espaços para decidir como executar a tarefa. O fordismo articula linha de montagem, padronização de produtos e produção em massa; a esteira coordena operações e impõe o ritmo de deslocamento. Políticas salariais e expansão do consumo participaram de experiências fordistas, mas não asseguraram salários altos ou inclusão universal em todo país. O objetivo econômico era elevar produção e controlar custos, também enfrentando rotatividade e conflitos. Imagine uma montagem de bicicletas: cada pessoa recebe uma etapa prescrita e precisa acompanhar a linha. Mesmo que o volume cresça, a autonomia pode diminuir. Taylorismo e fordismo podem se combinar, mas são conceitos distintos: o primeiro focaliza gestão científica das tarefas; o segundo amplia a organização produtiva e sua articulação com o consumo."
       },
       {
         "title": "Duas leituras",
-        "content": "Durkheim vê na divisão do trabalho a fonte da solidariedade orgânica e da coesão nas sociedades modernas, com a anomia como patologia possível. Marx vê nela, sob o capitalismo, um mecanismo de alienação e de aumento da exploração. As duas leituras descrevem o mesmo processo com avaliações opostas."
+        "content": "Durkheim e Marx formulam problemas diferentes sobre a divisão do trabalho, não apenas avaliações opostas de uma mesma cena. Durkheim vê na especialização uma base da solidariedade orgânica: pessoas com funções diferentes dependem umas das outras. Essa interdependência precisa de regulação e integração; formas anômicas ou impostas podem produzir conflitos, portanto a divisão não garante coesão por si só. Marx investiga a divisão sob relações capitalistas, a propriedade e o controle do trabalho. Fragmentação e comando externo podem reforçar alienação e exploração, separando quem produz do domínio sobre o processo e sobre o produto. Numa fábrica, Durkheim permite perguntar como regras coordenam funções; Marx, quem controla a produção e se apropria do excedente. Reconhecer cooperação não exclui investigar exploração, e constatar conflito não elimina interdependência. Para comparar, identifique o mecanismo teórico e as condições de cada análise. Nenhum dos autores se reduz a elogiar ou rejeitar toda especialização."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Confundir divisão social do trabalho, entre grupos e funções na sociedade, com divisão técnica, dentro de um processo produtivo. Outro deslize é atribuir a Durkheim a crítica marxista da alienação. E supor que taylorismo e fordismo são a mesma coisa, quando o segundo acrescenta linha de montagem e política salarial."
+        "content": "1) “Divisão social e técnica são sinônimos.” Correção: uma distribui funções na sociedade; a outra fragmenta um processo de produção. 2) “Produtividade maior garante melhores salários.” Correção: distribuição dos ganhos depende de relações econômicas e políticas. 3) “Taylorismo é simplesmente usar uma esteira.” Correção: seu núcleo está na gestão de tempos, movimentos e separação entre concepção e execução. 4) “Fordismo e taylorismo são idênticos.” Correção: a linha de montagem e a produção em massa ampliam a organização fordista, que pode incorporar métodos tayloristas. 5) “Durkheim diz que toda divisão produz harmonia.” Correção: regulação e condições de integração importam; anomia e divisão imposta são problemas. 6) “Marx critica toda cooperação entre pessoas.” Correção: sua análise focaliza relações capitalistas, controle e apropriação do excedente. Em cada exemplo, separe especialização, comando e distribuição dos resultados antes de associar a situação a um autor."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que taylorismo e fordismo reduzem a autonomia do trabalhador? Responda antes de conferir: separam concepção e execução, padronizam tarefas e definem externamente o ritmo, transferindo o controle do processo para a gerência. Agora compare Durkheim e Marx quanto à divisão do trabalho: coesão pela interdependência num, alienação e exploração no outro."
+        "content": "Problema 1: numa linha de montagem, a gerência decide procedimentos e a esteira determina quando cada peça chega. Por que a autonomia diminui mesmo com aumento da produção? Responda antes de conferir. Solução: concepção e execução são separadas, e o controle do ritmo passa à gerência e ao sistema produtivo. Quem executa uma etapa perde poder de decidir o conjunto; produzir mais não prova ter mais controle. Problema 2: diferentes equipes dependem umas das outras, mas discutem regras e apropriação dos resultados. Como comparar Durkheim e Marx? Solução: Durkheim investiga solidariedade orgânica e condições de regulação da interdependência; Marx examina alienação e exploração sob propriedade e controle capitalistas. Dizer apenas “coesão versus alienação” recupera a diferença central, mas uma boa resposta explicita as condições de cada mecanismo. Para conferir, indique quem decide o trabalho, como funções se articulam e como os resultados são distribuídos, sem transformar autores em rótulos de aprovação ou rejeição."
       }
     ],
     "recall": {
@@ -31976,7 +31981,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -32369,23 +32375,23 @@
     "sections": [
       {
         "title": "Relativismo cultural",
-        "content": "O relativismo metodológico propõe compreender práticas culturais a partir da lógica interna de cada sociedade, e não pelos padrões do observador. É ferramenta de pesquisa que combate o etnocentrismo. Distingue-se do relativismo moral radical, que sustenta que nenhum juízo entre culturas é possível, posição criticada por inviabilizar a defesa de direitos."
+        "content": "O relativismo metodológico propõe compreender práticas culturais a partir da lógica interna de cada sociedade, e não pelos padrões do observador. É ferramenta de pesquisa que combate o etnocentrismo: suspende o juízo prévio para investigar sentidos, relações e condições históricas. Ao estudar uma cerimônia, perguntar aos participantes sobre suas regras produz uma compreensão diferente de classificá-la imediatamente como atraso. Essa suspensão não equivale a abdicar de qualquer avaliação moral. Distingue-se do relativismo moral radical, entendido aqui como a tese de que nenhum juízo entre culturas é possível, posição criticada por dificultar a defesa de direitos universais. As discussões filosóficas sobre relativismo têm variantes; a distinção do capítulo separa uma operação de pesquisa de uma tese normativa forte. Compreender uma prática também exige reconhecer conflitos dentro do grupo e ouvir quem a contesta. Respeitar contexto não torna tradição um argumento suficiente para silenciar danos ou impedir debate sobre direitos."
       },
       {
         "title": "Multiculturalismo",
-        "content": "O multiculturalismo é um conjunto de políticas e concepções que reconhecem a pluralidade cultural dentro de um mesmo Estado, com medidas de valorização de línguas, memórias e direitos de grupos minorizados. É criticado tanto por quem o considera insuficiente diante das desigualdades materiais quanto por quem teme fragmentação social."
+        "content": "Multiculturalismo designa concepções e políticas que reconhecem a pluralidade cultural dentro de um mesmo Estado. Pode envolver línguas, memórias, currículos, participação e direitos de grupos minorizados, ultrapassando a tolerância privada. Se uma escola admite alunos de origens diversas, mas ensina uma única trajetória histórica como a experiência de todos, a presença de diversidade não garante reconhecimento. Uma política curricular pode rever essa exclusão e ampliar quem aparece como sujeito da história. O debate envolve diferentes projetos: reconhecimento simbólico pode ser insuficiente sem acesso a renda, moradia e poder de decisão; também se discute como evitar que políticas fixem identidades como blocos homogêneos. Reconhecer diferenças e redistribuir recursos são objetivos relacionados, não alternativas obrigatórias. A diversidade não elimina direitos comuns, e direitos comuns não exigem apagar todas as diferenças. Avaliar uma política demanda examinar quem participa de sua formulação e quais barreiras concretas procura enfrentar."
       },
       {
         "title": "O debate brasileiro",
-        "content": "No Brasil, o tema aparece em políticas de cotas, na Lei 10.639 sobre ensino de história e cultura afro-brasileira e africana, na demarcação de terras indígenas e quilombolas e no reconhecimento de patrimônios imateriais. O debate opõe a crítica ao mito da democracia racial e as leituras que resistem a políticas específicas."
+        "content": "No Brasil, a discussão envolve o enfrentamento do mito da democracia racial e o reconhecimento de histórias e direitos antes marginalizados. A Lei 10.639/2003 tornou obrigatório o ensino de história e cultura afro-brasileira e africana no ensino fundamental e médio, em escolas públicas e privadas. A Lei 11.645/2008 incluiu também a história e cultura indígenas. O objetivo não se resume a uma comemoração anual: exige integrar trajetórias, conhecimentos e conflitos ao currículo. Reconhecimento de patrimônios imateriais e direitos territoriais de povos indígenas e comunidades quilombolas também tornam visível a relação entre cultura, memória e condições materiais de existência. Cotas enfrentam barreiras de acesso, articulando reconhecimento e desigualdade; não são apenas celebrações da diferença. Essas medidas têm fundamentos jurídicos e mecanismos distintos, portanto não devem ser tratadas como uma única política. Investigar seus efeitos exige observar implementação, participação dos grupos envolvidos e mudanças nas oportunidades, além do texto legal."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Confundir relativismo metodológico com aceitação de qualquer prática é o deslize mais comum. Outro é tratar multiculturalismo como simples tolerância passiva, quando envolve políticas ativas. E supor que reconhecer diversidade cultural elimina a necessidade de políticas de redistribuição econômica."
+        "content": "1) “Relativismo metodológico aceita tudo.” Correção: suspende o juízo inicial para compreender; avaliação de efeitos e direitos continua possível. 2) “Compreender e justificar são a mesma coisa.” Correção: explicar sentidos não demonstra que uma prática deva ser mantida. 3) “Multiculturalismo é tolerância passiva.” Correção: pode exigir políticas ativas de reconhecimento e participação. 4) “Reconhecer diferenças resolve a pobreza.” Correção: desigualdades materiais também demandam redistribuição e acesso a recursos. 5) “Cada cultura tem uma voz única.” Correção: há conflitos internos, mudanças e posições diversas, inclusive sobre tradições. 6) “A Lei 10.639/2003 já incluía o ensino indígena.” Correção: ela trata de história e cultura afro-brasileira e africana; a Lei 11.645/2008 acrescentou a temática indígena. Nas alternativas, distinga método de pesquisa, argumento moral e desenho de política. Um direito comum pode ser defendido sem transformar a experiência de um único grupo em padrão universal de cultura."
       },
       {
         "title": "Pratique e confira",
-        "content": "Como o relativismo metodológico difere do relativismo moral radical? Responda antes de conferir: o primeiro é ferramenta de compreensão que suspende o juízo prévio para entender a lógica interna de uma prática; o segundo afirma que nenhum juízo é possível, o que impede sustentar direitos universais. Agora cite uma política multicultural brasileira: a lei que torna obrigatório o ensino de história e cultura afro-brasileira e africana."
+        "content": "Problema 1: uma pesquisadora entrevista participantes de uma tradição antes de discutir seus efeitos sobre direitos. Ela está obrigada a aprovar a prática? Responda antes de conferir. Solução: não. O relativismo metodológico suspende o juízo prévio para compreender a lógica interna, mas permite avaliação fundamentada. Na formulação radical tratada aqui, nenhum juízo entre culturas seria possível, dificultando sustentar direitos universais. Problema 2: uma escola inclui histórias africanas e afro-brasileiras em diferentes atividades do currículo, em vez de limitar o tema a uma festa. Qual política brasileira fundamenta essa mudança e qual seu sentido? Solução: a Lei 10.639/2003 torna esse ensino obrigatório e enfrenta a invisibilidade de trajetórias e contribuições. A temática indígena foi incluída pela Lei 11.645/2008. Para conferir, explique o mecanismo de reconhecimento e não apenas cite o número da lei. A execução deve dialogar com formação docente e condições materiais, pois anúncio de diversidade não garante transformação."
       }
     ],
     "recall": {
@@ -32416,7 +32422,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -32424,23 +32431,23 @@
     "sections": [
       {
         "title": "Duas revoluções",
-        "content": "A sociologia nasce no século XIX como resposta às transformações provocadas pela Revolução Industrial e pela Revolução Francesa. A primeira criou fábricas, cidades inchadas, proletariado e novas formas de miséria; a segunda dissolveu a ordem estamental e colocou em questão a legitimidade do poder, obrigando a pensar a sociedade como objeto próprio."
+        "content": "A sociologia se constituiu no século XIX, quando mudanças econômicas e políticas tornaram a própria ordem social um problema de investigação. A Revolução Industrial ampliou o trabalho assalariado, a concentração fabril e o crescimento das cidades: vínculos comunitários se alteravam, enquanto riqueza e pobreza se produziam no mesmo processo. A Revolução Francesa contestou privilégios estamentais e a legitimidade do poder fundada na tradição, colocando direitos e soberania popular em debate. As duas revoluções não aconteceram de um único modo em todos os países, nem criaram a reflexão sobre a sociedade do nada; forneceram questões e condições históricas para uma disciplina própria. Imagine uma cidade que recebe uma fábrica: jornadas, moradias e conflitos deixam de ser explicados apenas pelos costumes locais. Investigar como instituições e relações sociais organizam essas mudanças exige conceitos e evidências. A ciência busca explicações; propor reformas é uma possível aplicação, com escolhas políticas que precisam ser explicitadas."
       },
       {
         "title": "Positivismo e ordem",
-        "content": "Comte cunhou o termo sociologia e propôs a física social, aplicando à sociedade o método das ciências naturais, com observação e busca de leis. Sua lei dos três estados descreve a passagem do teológico ao metafísico e ao positivo, e sua preocupação central é conciliar ordem e progresso diante da instabilidade pós-revolucionária."
+        "content": "Auguste Comte empregou o termo sociologia e defendeu o estudo positivo da sociedade, preocupado com a relação entre ordem e progresso após as revoluções. A expressão física social indicava a ambição de observar fenômenos e estabelecer regularidades, em vez de explicar tudo por causas sobrenaturais. Na lei dos três estados, o teológico recorre a agentes divinos, o metafísico a entidades abstratas e o positivo busca relações observáveis entre fenômenos. Essa sequência é uma tese de Comte sobre a história do conhecimento, não uma escala comprovada que autorize chamar povos atuais de inferiores. Tampouco o método sociológico posterior se reduz a copiar experimentos das ciências naturais. No exemplo da cidade industrial, uma leitura positivista procura condições de estabilidade e organização; isso orienta quais problemas seleciona. Separar a contribuição histórica de Comte das abordagens de Durkheim, Marx e Weber evita reuni-los sob uma teoria única. A institucionalização da disciplina resultou de debates, pesquisas e disputas sobre seus métodos."
       },
       {
         "title": "Os clássicos",
-        "content": "Durkheim, Marx e Weber deram à disciplina três matrizes distintas: o fato social e a coesão, em Durkheim; as relações de produção e a luta de classes, em Marx; e a ação social dotada de sentido e os processos de racionalização, em Weber. As três continuam sendo o eixo do ensino de sociologia no Brasil."
+        "content": "Durkheim, Marx e Weber permitem investigar uma mesma fábrica por perguntas diferentes. Durkheim toma os fatos sociais como objeto: normas e instituições exteriores aos indivíduos exercem coerção e ajudam a explicar coesão e crise. Pergunta, por exemplo, como regras profissionais organizam a cooperação. Marx examina as relações de produção: quem possui os meios de produção, quem vende força de trabalho e como a apropriação do excedente gera conflito de classes. Weber investiga a ação social dotada de sentido, orientada pela conduta de outros; procura compreender motivos e relacioná-los causalmente ao curso da ação. Uma greve pode, assim, ser estudada pelas normas coletivas, pelo conflito entre capital e trabalho ou pelos sentidos que orientam participantes. Essas perspectivas não são opiniões intercambiáveis nem se distinguem apenas por aprovação ou rejeição da fábrica. Cada uma constrói conceitos e explicações próprias. Racionalização, em Weber, envolve formas calculáveis de organização e dominação, sem significar que toda ação humana seja racional."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que a sociologia surgiu para resolver problemas sociais confunde ciência com intervenção: ela busca explicá-los, e o uso prático é outra questão. Outro deslize é tratar Comte como equivalente aos três clássicos. E supor que os clássicos concordavam entre si, quando divergem quanto ao objeto e ao método."
+        "content": "1) “A sociologia inventou o estudo da sociedade.” Correção: há reflexões anteriores; a novidade é a constituição histórica de uma disciplina e de métodos próprios. 2) “As revoluções explicam tudo automaticamente.” Correção: são condições históricas, mediadas por debates intelectuais e instituições. 3) “Sua função é resolver qualquer problema social.” Correção: explicar e intervir são operações distintas, embora possam se relacionar. 4) “Comte representa todas as teorias clássicas.” Correção: Durkheim, Marx e Weber divergem em objeto e método. 5) “Lei dos três estados é fato científico indiscutível.” Correção: é uma tese positivista, sujeita à crítica histórica e metodológica. 6) “Weber analisa apenas interesses individuais isolados.” Correção: a ação é social quando orientada por outros e pode envolver valores, afetos e tradições. Ao comparar alternativas, identifique a pergunta e o conceito: fato social, relações de produção e ação social não são três nomes para uma mesma causa universal."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que as duas revoluções são condição do surgimento da sociologia? Responda antes de conferir: elas desorganizaram a ordem tradicional e criaram fenômenos novos, como o proletariado urbano e a legitimidade fundada no povo, exigindo uma explicação própria da vida social. Agora diga qual o objeto de estudo de cada clássico: fato social, relações de produção e ação social dotada de sentido."
+        "content": "Problema 1: uma cidade recebe fábricas, trabalhadores migram e antigas hierarquias políticas são contestadas. Por que esse cenário ajuda a explicar o surgimento da sociologia? Responda antes de conferir. Solução: transformações industriais e políticas desorganizaram a ordem tradicional e criaram fenômenos como proletariado urbano, novos conflitos e debates sobre legitimidade. Isso exigiu explicações históricas e sistemáticas da vida social; não significa que toda mudança só possa ocorrer nesses dois eventos. Problema 2: uma greve é estudada pelas regras coletivas, pela propriedade da fábrica e pelos motivos dos participantes. Associe cada recorte a um clássico. Solução: regras exteriores e coercitivas remetem ao fato social de Durkheim; relações de produção e antagonismos de classe, a Marx; sentidos da ação orientada por outros, a Weber. Justifique a associação pela operação analítica, não apenas pelo nome. Para recuperar o argumento sem consultar o texto, conecte mudança histórica, problema social e construção de um objeto de pesquisa."
       }
     ],
     "recall": {
@@ -32471,7 +32478,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -32644,23 +32652,23 @@
     "sections": [
       {
         "title": "O que é senso comum",
-        "content": "O senso comum é o conjunto de explicações espontâneas sobre a vida social, aprendidas na convivência e aceitas sem exame. Não é ignorância nem falsidade automática: orienta a vida cotidiana e frequentemente funciona. O problema surge quando é tomado como explicação suficiente, sem verificação e sem exame das próprias premissas."
+        "content": "O senso comum reúne explicações, julgamentos e saberes aprendidos na convivência, geralmente aceitos sem uma investigação sistemática. Não é sinônimo de ignorância: pode orientar decisões úteis, transmitir experiências e identificar problemas reais. Uma família pode saber quais trajetos costumam atrasar antes de existir um estudo de transporte. O limite aparece quando um conhecimento situado vira regra universal sem exame. “Quem chega tarde não se esforça”, por exemplo, ignora distância, horários, responsabilidades domésticas e oferta de ônibus. A sociologia não precisa provar que cada crença cotidiana é falsa; precisa perguntar como foi produzida e que evidência sustenta sua generalização. O próprio senso comum é objeto de estudo, pois expressa valores, posições sociais e disputas de interpretação. Uma explicação pode coincidir com dados de pesquisa, mas essa coincidência não torna equivalente o modo de validar o conhecimento. Experiência pessoal é ponto de partida possível, não amostra suficiente de toda uma sociedade."
       },
       {
         "title": "A ruptura epistemológica",
-        "content": "A sociologia se constitui pela ruptura com as pré-noções: exige definir conceitos com rigor, formular hipóteses, coletar dados e submeter conclusões à crítica. Onde o senso comum generaliza a partir de casos próximos, a pesquisa busca representatividade, controla vieses e explicita o método, permitindo que outros contestem os resultados."
+        "content": "A ruptura epistemológica consiste em examinar pré-noções em vez de incorporá-las como explicações prontas. Começa pela definição dos conceitos: se o problema é atraso escolar, é preciso distinguir frequência, minutos de atraso e abandono. Depois se formulam hipóteses, escolhem fontes e procedimentos, coletam-se dados e confrontam-se explicações alternativas. Comparar estudantes de diferentes bairros pode mostrar relações entre transporte e pontualidade, mas exige atenção à seleção da amostra e a outros fatores, como turno ou jornada de trabalho. Pesquisa quantitativa não é a única via: entrevistas e observação também produzem evidências, com critérios explícitos de coleta e interpretação. Nenhum procedimento dispensa crítica; números podem reproduzir classificações equivocadas, e relatos precisam ser contextualizados. O resultado deve permitir que outros compreendam como a conclusão foi construída e a contestem. Romper com o senso comum significa mudar o modo de investigar e validar, não garantir neutralidade perfeita nem certeza definitiva."
       },
       {
         "title": "Estranhar o familiar",
-        "content": "Uma das operações centrais da disciplina é desnaturalizar o que parece óbvio, perguntando por que determinada prática existe e a quem beneficia. Isso vale para desigualdades tratadas como naturais, papéis de gênero, hierarquias raciais e formas de organização do trabalho apresentadas como se fossem inevitáveis."
+        "content": "Estranhar o familiar é perguntar como uma prática considerada natural se tornou habitual, quem a sustenta e quais alternativas já existiram. Desnaturalizar não é negar todo aspecto biológico da vida humana, mas investigar quando diferenças sociais são apresentadas como inevitáveis. Se uma escola espera que mães acompanhem tarefas e raramente chama pais, pode-se estudar como regras, horários de trabalho e expectativas de gênero distribuem o cuidado. O fato de essa rotina ser comum não demonstra que seja universal nem determinada pela natureza. A investigação compara épocas e grupos, escuta participantes e relaciona escolhas às condições que as tornam possíveis. Essa operação também alcança formas de consumo, hierarquias raciais e organização do trabalho. Perguntar a quem uma regra beneficia abre uma hipótese, mas não permite inventar intenção consciente para todos os envolvidos. Instituições podem reproduzir desigualdades sem um plano único. Mostrar a construção social e histórica de uma prática permite explicar sua persistência e seus conflitos."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Tratar o senso comum como simples erro a ser descartado ignora que ele é objeto legítimo de estudo e faz parte da vida social. Outro deslize é supor que a sociologia produz certezas definitivas. E confundir opinião pessoal fundamentada em experiência com conhecimento sistemático baseado em pesquisa."
+        "content": "1) “Senso comum é sempre falso.” Correção: pode funcionar no cotidiano; o limite é a generalização sem validação sistemática. 2) “Minha experiência representa a população.” Correção: casos próximos precisam ser confrontados com outras experiências e com critérios de seleção. 3) “Só números são científicos.” Correção: métodos qualitativos também exigem rigor, registro e justificativa. 4) “Uma associação demonstra a causa.” Correção: hipóteses concorrentes e fatores intermediários devem ser examinados. 5) “Desnaturalizar é dizer que tudo muda por vontade individual.” Correção: a construção histórica envolve relações e instituições que condicionam a ação. 6) “A sociologia elimina qualquer viés de modo definitivo.” Correção: explicitar método, posição e limites permite crítica e revisão, sem produzir infalibilidade. Em uma questão, procure como a afirmação foi sustentada. Linguagem difícil, opinião enfática ou uma tabela isolada não substituem definição conceitual e análise das evidências."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que o senso comum não é simplesmente falso? Responda antes de conferir: ele organiza a experiência cotidiana e frequentemente funciona na prática; a diferença está no modo de produção e validação do conhecimento, não necessariamente no conteúdo de cada afirmação. Agora explique o que significa desnaturalizar: mostrar que o que parece natural e inevitável é construção social e histórica."
+        "content": "Problema 1: uma pessoa afirma que todos os desempregados recusam trabalho porque conhece um vizinho nessa situação. Explique o limite sem tratar seu relato como mentira. Responda antes de conferir. Solução: a experiência pode ser verdadeira e organizar o cotidiano, mas não representa automaticamente a população. A sociologia define desemprego, compara grupos e investiga ofertas, qualificações e condições de acesso; a diferença está no método de produção e validação do conhecimento. Problema 2: uma divisão de tarefas domésticas é chamada de “natural” por existir há décadas. Como desnaturalizá-la? Solução: comparar épocas e grupos, examinar normas e condições de trabalho e ouvir quem realiza as tarefas. Isso mostra a construção social e histórica da distribuição, sem afirmar que costumes sejam facilmente abandonados. Ao recuperar o raciocínio, diga qual generalização foi feita, que evidência falta e que comparação poderia testá-la. Criticar uma pré-noção exige construir uma explicação verificável."
       }
     ],
     "recall": {
@@ -32691,7 +32699,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -32809,23 +32818,23 @@
     "sections": [
       {
         "title": "Do fordismo à acumulação flexível",
-        "content": "A crise dos anos 1970 levou à reorganização produtiva: produção flexível, just in time, terceirização, subcontratação e deslocamento de plantas para regiões de menor custo. O trabalhador polivalente substitui o especializado em tarefa única, e a estabilidade do emprego cede lugar a vínculos mais instáveis."
+        "content": "A crise econômica dos anos 1970 contribuiu para reorganizações produtivas associadas à acumulação flexível: ajuste de volumes e produtos, terceirização, subcontratação e deslocamento de atividades. O just in time busca reduzir estoques articulando produção e demanda, mas depende de coordenação e torna interrupções na cadeia relevantes. A exigência de polivalência muda qualificações e pode ampliar tarefas sem necessariamente ampliar autonomia. Essas formas não substituíram o fordismo de maneira uniforme: modelos e vínculos coexistem em países, setores e empresas. Num mesmo produto, pode haver uma fábrica padronizada, fornecedores flexíveis e serviços terceirizados. Flexibilidade para a empresa pode significar adaptação rápida; para quem trabalha, pode significar renda e horários incertos. A transferência de risco ocorre quando oscilações da demanda passam a afetar mais diretamente remuneração e segurança. Identificar quem decide a mudança e quem arca com seus custos evita chamar toda inovação organizacional de liberdade."
       },
       {
         "title": "Reestruturação e desemprego",
-        "content": "A automação, a informatização e depois a robótica e a inteligência artificial alteraram a composição do emprego, eliminando postos repetitivos e criando outros que exigem qualificações distintas. O debate opõe quem prevê desemprego tecnológico massivo e quem aponta a criação de novas ocupações e a mudança de perfil."
+        "content": "Automação e informatização alteram tarefas, qualificações e a composição do emprego. Algumas operações podem ser substituídas por máquinas, enquanto manutenção, programação e serviços novos demandam trabalho. Criar ocupações, porém, não garante que sejam suficientes, estejam no mesmo lugar ou absorvam as pessoas dispensadas: qualificações, acesso à formação e condições econômicas importam. O debate entre desemprego tecnológico e novas ocupações não se resolve observando uma máquina isolada. É preciso examinar escala, ritmo da mudança, distribuição dos ganhos de produtividade, demanda e políticas de proteção e qualificação. Uma loja que automatiza caixas pode reduzir postos e contratar suporte técnico; o saldo e o destino dos antigos trabalhadores exigem dados. Tecnologia não determina sozinha um futuro universal, mas também não é neutra em seus efeitos concretos: sua aplicação resulta de decisões e relações de poder. Distinguir tarefa, ocupação e saldo total de empregos impede concluir que todo posto será extinto ou que toda perda será compensada."
       },
       {
         "title": "Novas formas de vínculo",
-        "content": "Cresceram o trabalho por projeto, o home office, o empreendedorismo por necessidade e o trabalho mediado por plataformas digitais. A distinção entre tempo de trabalho e tempo livre se dissolve, e a proteção social construída em torno do emprego formal perde alcance, exigindo repensar direitos e financiamento da seguridade."
+        "content": "Trabalho remoto, por projeto e mediado por plataformas reúne situações distintas: o formato digital não informa, por si, a existência de vínculo empregatício ou proteção social. Há emprego formal à distância e há prestação autônoma com renda variável. Nas plataformas, algoritmos podem distribuir tarefas, avaliar desempenho e restringir acesso ao trabalho; a possibilidade de escolher horários pode coexistir com forte controle sobre remuneração e oportunidades. Custos de equipamento, deslocamento e espera podem recair sobre quem trabalha. Empreendedorismo por necessidade descreve uma resposta à falta de alternativas, sem equivaler automaticamente à escolha de autonomia. A proteção social organizada sobretudo em torno do emprego formal estável tem alcance limitado diante de vínculos descontínuos ou sem contribuição regular, embora existam outras formas de cobertura. Discutir direitos e financiamento exige identificar quem suporta riscos e como se garante acesso à seguridade. Nem terceirização é sinônimo de informalidade, nem trabalho remoto elimina controle."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Tratar flexibilidade como sinônimo automático de liberdade ignora que ela frequentemente transfere riscos ao trabalhador. Outro deslize é supor que tecnologia por si só determina o desemprego, sem considerar decisões econômicas e políticas. E confundir terceirização com informalidade, que são fenômenos distintos."
+        "content": "1) “Flexibilidade sempre aumenta a liberdade.” Correção: pode transferir riscos e custos ao trabalhador, mesmo permitindo algum ajuste de horários. 2) “Automação elimina todo emprego.” Correção: substitui tarefas e cria demandas; o saldo depende de condições econômicas e institucionais. 3) “Novas ocupações absorvem todos os dispensados.” Correção: quantidade, localização e qualificação podem impedir essa passagem. 4) “Terceirização é informalidade.” Correção: a contratação por outra empresa pode ser formal; é preciso examinar vínculo e proteção. 5) “Trabalhar por aplicativo significa ausência de comando.” Correção: avaliações, distribuição de tarefas e regras de acesso podem exercer controle algorítmico. 6) “O fordismo desapareceu em todos os setores.” Correção: formas produtivas e contratos coexistem. Ao analisar uma mudança, pergunte quais tarefas se alteraram, quem decide, quem assume os custos e quais direitos acompanham o vínculo. Um rótulo tecnológico sozinho não demonstra autonomia nem proteção."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a acumulação flexível transfere riscos ao trabalhador? Responda antes de conferir: com vínculos instáveis, terceirização e remuneração variável, oscilações da demanda deixam de ser absorvidas pela empresa e passam a recair sobre a renda e a segurança de quem trabalha. Agora explique por que a proteção social perde alcance: ela foi construída em torno do emprego formal estável, que deixou de ser a norma."
+        "content": "Problema 1: uma prestadora recebe apenas por serviço, arca com equipamento e perde renda quando a demanda cai. Como a flexibilização transfere riscos? Responda antes de conferir. Solução: vínculos instáveis e remuneração variável fazem oscilações da demanda recair sobre a renda e a segurança de quem trabalha, em vez de serem absorvidas integralmente pela empresa. É preciso verificar o contrato e o controle efetivo, sem supor que toda flexibilidade seja igual. Problema 2: por que a proteção social pode perder alcance com vínculos descontínuos? Solução: parte importante dos direitos e da seguridade foi organizada em torno do emprego formal e da contribuição regular. Interrupções e vínculos sem cobertura dificultam acesso e financiamento, exigindo respostas institucionais. Isso não significa ausência de qualquer política social nem desaparecimento do emprego formal. Para conferir, ligue remuneração, risco e proteção, e explique por que novas ocupações tecnológicas não garantem automaticamente oportunidades equivalentes para quem perdeu o posto."
       }
     ],
     "recall": {
@@ -32856,7 +32865,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",

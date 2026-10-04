@@ -70,11 +70,13 @@
 
 **Interfaces:** manter o tipo/configuração de cena já consumido por `topic-scenes/registry`; produzir comparações concretas para os 16 IDs Filosofia e oito Sociologia H1. Não mudar `BoardShell` ou a família de Física acidentalmente.
 
-- [ ] **Step 1: Listar os 24 IDs e a relação específica que cada oposição precisa ensinar.** Dois pilares com rótulos trocados não encerram essa tarefa.
-- [ ] **Step 2: Escrever regressões por situação/decisão e observar as falhas.** Cada configuração precisa de exemplo próprio, transformação visível e consequência da escolha; seleção deve manter o outro lado legível.
-- [ ] **Step 3: Implementar a composição compartilhada com dados próprios por capítulo.** Nenhuma regra de “mais alto = melhor” se o conteúdo compara posições sem hierarquia.
-- [ ] **Step 4: Aprofundar os oito textos de Sociologia H1 e verificar recall/versão isolada.** Os 16 textos filosóficos já têm revisão 2; ajustar apenas se houver falha concreta identificada, sem reescrita automática.
-- [ ] **Step 5: Verificar a matriz dos 24 IDs, revisar as relações/contraprovas e publicar PR automática.** Conferir nomes, contraste, seleção e condição estática/reduzida.
+- [x] **Step 1: Listar os 24 IDs e a relação específica que cada oposição precisa ensinar.** Dois pilares com rótulos trocados não encerram essa tarefa.
+- [x] **Step 2: Escrever regressões por situação/decisão e observar as falhas.** Cada configuração precisa de exemplo próprio, transformação visível e consequência da escolha; seleção deve manter o outro lado legível.
+- [x] **Step 3: Implementar a composição compartilhada com dados próprios por capítulo.** Nenhuma regra de “mais alto = melhor” se o conteúdo compara posições sem hierarquia.
+- [x] **Step 4: Aprofundar os oito textos de Sociologia H1 e verificar recall/versão isolada.** Os 16 textos filosóficos já têm revisão 2; ajustar apenas se houver falha concreta identificada, sem reescrita automática.
+- [x] **Step 5: Verificar a matriz dos 24 IDs, revisar as relações/contraprovas e publicar PR automática.** Conferir nomes, contraste, seleção e condição estática/reduzida.
+
+Registro da entrega C: [manifesto, validação e galeria](../../visual-integral-2026-10-04/entrega-c/README.md). Os 24 capítulos passaram em 12 configurações; 1.916 testes gerais passaram. Oito resumos sociológicos foram aprofundados e duas falhas filosóficas concretas corrigidas. Publicação na branch `fix/entrega-c-filosofia-sociologia`, sem merge automático.
 
 ## Demais lotes
 
