@@ -15,3 +15,8 @@
   .independence-board__event text,.independence-board__track text,.independence-board__war text { font-size:16px; }
   .independence-board__event text:first-of-type,.independence-board__track text+text { font-size:14px; }
 }
+
+/* A cena larga contribui apenas para a rolagem interna, inclusive em flex/grid. */
+.independence-board { min-width:0; width:100%; max-width:100%; box-sizing:border-box; contain:inline-size; }
+.independence-board__head > div,.independence-board__viewport,.independence-board__cards,.independence-board__cards button { min-width:0; }
+.independence-board__viewport { width:100%; box-sizing:border-box; }

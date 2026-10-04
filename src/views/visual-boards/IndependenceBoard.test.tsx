@@ -16,3 +16,13 @@ describe('IndependenceBoard', () => {
     expect(onSelect).toHaveBeenCalledWith(map.nodes[1].id);
   });
 });
+
+it('permite percorrer a cronologia nos dois sentidos pelo teclado',()=>{
+ const summary=interactiveSummaries.find(item=>item.id==='summary-historia-a-independencia-do-brasil')!;
+ render(<IndependenceBoard map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={vi.fn()} hiddenEdgeIds={[]} mode="explorar"/>);
+ const region=screen.getByRole('region',{name:'Percorrer a prancha da Independência'});
+ const scrollBy=vi.fn();Object.defineProperty(region,'scrollBy',{value:scrollBy});
+ expect(region).toHaveAttribute('tabindex','0');
+ fireEvent.keyDown(region,{key:'ArrowRight'});fireEvent.keyDown(region,{key:'ArrowLeft'});
+ expect(scrollBy.mock.calls.map(([options])=>options.left)).toEqual([160,-160]);
+});

@@ -34,7 +34,7 @@
 **Files:** fontes de cada ID listadas em `FILA-VISUAL-2026-10-03.json`, filtradas por `batch` F1/M1/HG1. Arquivos principais:
 
 - F1/circuitos: `src/views/visual-instruments/ElectricInstrument.tsx`, `src/lib/electricLab.ts`, respectivos testes.
-- F1/eletrostática: `ElectrostaticsInstrument.tsx`, `src/lib/electrostaticsLab.ts`, respectivos testes; delta específico de eletrização em `topic-scenes/data/fisica.ts` pelo integrador.
+- F1/eletrostática: `ElectrostaticsInstrument.tsx`, `src/lib/electrostaticsLab.ts`, respectivos testes; eletrização no renderer `topic-scenes/families/FisicaMecanismos.tsx/.css` (os dados já descreviam os mecanismos corretamente).
 - F1/magnetismo e curvas: `MagnetismInstrument.tsx`, `PhysicsRemainingInstrument.tsx`, labs/testes correspondentes. Nenhuma alteração nos modos corrigidos de Lenz/luneta.
 - M1: `MatrixInstrument.tsx`, `CartesianInstrument.tsx`, testes de instrumentos.
 - HG1: `IndependenceBoard.css`, `EngenhoScene.tsx/.css`, `MiningColonyScene.tsx/.css`; título em `src/data/expandedInteractiveSummaries.ts` pelo integrador.
@@ -42,14 +42,14 @@
 
 **Interfaces:** consumir `BoardProps` e os adaptadores/labs existentes sem mudar o contrato de `BoardShell`. Produzir cenas para os mesmos IDs/controles; novos helpers físicos devem ficar ao lado do lab da família. Mudanças nos arquivos centrais são deltas entregues ao integrador.
 
-- [ ] **Step 1: Conferir os 25 IDs e os achados no delta atual de main.** Usar os três filtros de lote; nenhum dos nove casos de Física já tratados pode reaparecer como tarefa deste grupo.
-- [ ] **Step 2: Registrar os estados e regressões do mecanismo antes de editar.** Circuitos: ΔQ=0/8/16 C em 2 s → i=0/4/8 A; i=0/3/8 A sob 12 V → P=0/36/96 W; R=1/4/12 Ω → i=12/3/1 A; nó I=2/7/12 A → saída variável=0/5/10 A; capacitor U=0/6/12 V → Q=0/12/24 μC e energia=0/36/144 μJ. Verificar seção/sentidos de corrente, conversão energética, entrada/saída no nó e sinais/campo entre placas, não só os números. Eletrostática/magnetismo: vetores, cargas, sentidos e ponto de operação conforme cada achado e controle existente.
-- [ ] **Step 3: Observar as regressões falharem no teste dirigido da própria frente.** Os casos de força/campo zero, sinais opostos, leitura móvel e escala entram nos testes do responsável que altera o desenho.
-- [ ] **Step 4: Implementar as cenas dos 17 casos F1 em três frentes de arquivos distintos.** Conservar fórmulas/intervalos; distinguir lei dos nós e lei das malhas. Novas escolhas físicas precisam de hipótese explícita e geometria rastreável.
-- [ ] **Step 5: Corrigir M1.** Soma deve mostrar operador `+`; produto deve desenhar `[5,7]` verticalmente como coluna. Nos dois capítulos afins, separar a anotação de raiz das graduações mantendo o ponto correto no eixo x.
-- [ ] **Step 6: Corrigir HG1.** Conter a prancha de Independência em 390/834/1366 sem overflow externo, preservando acesso por teclado; recompor rótulos de Engenho/Mineração sem corte; título demográfico deve corresponder ao conteúdo aplicado, com o ID preservado.
-- [ ] **Step 7: Verificar testes dirigidos e revisar a integração dos 25 IDs.** Não aceitar melhora de uma amostra como prova dos demais; listar quais estados foram efetivamente exercitados.
-- [ ] **Step 8: Executar validação de lote e publicar PR automática.** Sequência comum abaixo, com cenas estáticas/reduzidas, extremos e controles de teclado. Atualizar a fila somente para achados comprovadamente tratados.
+- [x] **Step 1: Conferir os 25 IDs e os achados no delta atual de main.** Usar os três filtros de lote; nenhum dos nove casos de Física já tratados pode reaparecer como tarefa deste grupo.
+- [x] **Step 2: Registrar os estados e regressões do mecanismo antes de editar.** Circuitos: ΔQ=0/8/16 C em 2 s → i=0/4/8 A; i=0/3/8 A sob 12 V → P=0/36/96 W; R=1/4/12 Ω → i=12/3/1 A; nó I=2/7/12 A → saída variável=0/5/10 A; capacitor U=0/6/12 V → Q=0/12/24 μC e energia=0/36/144 μJ. Verificar seção/sentidos de corrente, conversão energética, entrada/saída no nó e sinais/campo entre placas, não só os números. Eletrostática/magnetismo: vetores, cargas, sentidos e ponto de operação conforme cada achado e controle existente.
+- [x] **Step 3: Observar as regressões falharem no teste dirigido da própria frente.** Os casos de força/campo zero, sinais opostos, leitura móvel e escala entram nos testes do responsável que altera o desenho.
+- [x] **Step 4: Implementar as cenas dos 17 casos F1 em três frentes de arquivos distintos.** Conservar fórmulas/intervalos; distinguir lei dos nós e lei das malhas. Novas escolhas físicas precisam de hipótese explícita e geometria rastreável.
+- [x] **Step 5: Corrigir M1.** Soma deve mostrar operador `+`; produto deve desenhar `[5,7]` verticalmente como coluna. Nos dois capítulos afins, separar a anotação de raiz das graduações mantendo o ponto correto no eixo x.
+- [x] **Step 6: Corrigir HG1.** Conter a prancha de Independência em 390/834/1366 sem overflow externo, preservando acesso por teclado; recompor rótulos de Engenho/Mineração sem corte; título demográfico deve corresponder ao conteúdo aplicado, com o ID preservado.
+- [x] **Step 7: Verificar testes dirigidos e revisar a integração dos 25 IDs.** Não aceitar melhora de uma amostra como prova dos demais; listar quais estados foram efetivamente exercitados.
+- [x] **Step 8: Executar validação de lote e publicar PR automática.** Sequência comum abaixo, com cenas estáticas/reduzidas, extremos e controles de teclado. Atualizar a fila somente para achados comprovadamente tratados.
 
 ## Task 2: Entrega B — LG2, 29 capítulos e 29 resumos
 

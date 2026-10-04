@@ -230,23 +230,36 @@ function Scene({ id, value }: { id: PhysicsRemainingId; value: number }) {
   }
   if (id === 'generator' || id === 'receiver') {
     const generator = id === 'generator'; const voltage = generator ? 24 - 2 * value : 100 + 2 * value;
-    const y = 236 - Math.min(value * (generator ? 13 : 9), 150);
+    const x = 45 + value * (generator ? 20 : 24);
+    const y = generator ? 58 + value * 13 : 214 - value * 15.6;
     return <g data-physics-system={id}>
-      <path d="M45 236H286M45 38V236" {...ink}/><path d={generator ? "M45 58L285 214" : "M45 214L285 58"} {...wine}/><path d={`M45 ${y}L${45+value*20} ${y}`} stroke="var(--vs-blue)" strokeWidth="6"/>
-      <circle cx={45+value*20} cy={y} r="7" fill="var(--vs-blue)"/><text x="28" y="55" textAnchor="end" style={txt}>{generator ? 'U' : 'U'}</text><text x="286" y="260" textAnchor="end" style={txt}>i</text>
-      <text x="57" y="64" style={{...txt,fontSize:12}}>{generator ? 'ε = 24 V' : 'ε’ = 100 V'}</text><text x="270" y="221" textAnchor="end" style={{...txt,fontSize:12}}>{generator ? 'curto' : 'r’ i'}</text>
-      <rect x="68" y="78" width="146" height="58" rx="10" fill="color-mix(in srgb,var(--vs-blue) 12%,transparent)" stroke="var(--vs-ink-muted)" strokeWidth="2"/>
-      <text x="141" y="102" textAnchor="middle" style={txt}>{generator ? 'fonte entrega ao circuito' : 'motor recebe do circuito'}</text><text x="141" y="123" textAnchor="middle" style={{...txt,fontSize:12}}>{generator ? `U = ${voltage} V` : `U = ${voltage} V`}</text>
-      <text x="164" y="282" textAnchor="middle" style={{...txt,fontSize:13}}>{generator ? 'U = ε − ri' : 'U = ε’ + r’i'}</text>
+      <path data-current-axis="true" d="M45 214H286" {...ink}/><path d="M45 38V214" {...ink}/><path d={generator ? "M45 58L285 214" : "M45 214L285 58"} {...wine}/>
+      <path d={`M45 ${y}H${x}V214`} stroke="var(--vs-blue)" strokeWidth="1.5" strokeDasharray="4 4" fill="none"/>
+      <circle data-operating-point="true" cx={x} cy={y} r="6" fill="var(--vs-blue)"/>
+      <text x="28" y="55" textAnchor="end" style={txt}>U</text><text x="286" y="237" textAnchor="end" style={txt}>i</text><text x="160" y="252" textAnchor="middle" style={{...txt,fontSize:11}}>{generator ? 'escala U: 0–24 V · i: 0–12 A' : 'escala U: 100–120 V · i: 0–10 A'}</text>
+      <text x="65" y="25" style={{...txt,fontSize:12}}>{generator ? 'fonte entrega energia' : 'motor recebe energia'}</text>
+      <text x="52" y="277" style={{...txt,fontSize:12}}>i = {value} A · U = {voltage} V</text>
+      <text x="164" y="298" textAnchor="middle" style={{...txt,fontSize:12}}>{generator ? 'U = 24 − 2i · curto: i = 12 A' : 'U = 100 + 2i · ε’ = 100 V'}</text>
     </g>;
   }
   if (id === 'magnet-field') {
     const transform = `rotate(${value} 160 158)`;
-    return <g data-physics-system="magnet-field">
-      <g transform={transform}><rect x="76" y="135" width="168" height="46" rx="7" fill="var(--vs-burgundy)" {...ink}/><path d="M160 135v46" stroke="white" strokeWidth="3"/><text x="112" y="164" textAnchor="middle" fill="white" fontWeight="800">N</text><text x="207" y="164" textAnchor="middle" fill="white" fontWeight="800">S</text>
-      {[28,52,76].map(offset => <path key={offset} d={`M78 ${150-offset}C124 ${58-offset/4} 196 ${58-offset/4} 242 ${150-offset}M78 ${150+offset}C124 ${242+offset/4} 196 ${242+offset/4} 242 ${150+offset}`} stroke="var(--vs-blue)" strokeWidth="2" fill="none" opacity=".8"/>)}</g>
-      <circle cx="264" cy="77" r="25" fill="color-mix(in srgb,var(--vs-blue) 13%,transparent)" {...ink}/><path d="M264 96V58" {...wine}/><path d="M258 65l6-12 6 12" fill="var(--vs-burgundy)"/><text x="264" y="118" textAnchor="middle" style={{...txt,fontSize:11}}>bússola</text>
-      <text x="160" y="284" textAnchor="middle" style={{...txt,fontSize:13}}>fora: N → S • dentro: S → N</text>
+    return <g data-physics-system="magnet-field" style={{fontSize:11}}>
+      <g transform={transform}>
+      <rect x="76" y="135" width="168" height="46" rx="7" {...ink} fill="var(--vs-burgundy)"/><path d="M160 135v46" stroke="#111111" strokeWidth="3"/>
+      <text x="95" y="164" fill="#111111" fontWeight="800">N</text><text x="222" y="164" fill="#111111" fontWeight="800">S</text>
+      <path d="M78 134C80 55 240 55 242 134M78 182C80 236 240 236 242 182" stroke="var(--vs-blue)" strokeWidth="2" fill="none"/>
+      <path data-magnet-field="external" d="M144 78H176m-8-6 8 6-8 6M144 222H176m-8-6 8 6-8 6" {...wine}/>
+      <path data-magnet-field="internal" d="M204 158H116m8-6-8 6 8 6" stroke="#111111" strokeWidth="2" fill="none"/>
+      </g>
+      <g data-compass="true" transform={transform}><circle cx="160" cy="78" r="13" fill="var(--vs-surface, white)" {...ink}/><path d="M151 78H170m-6-4 6 4-6 4" {...wine}/></g>
+      <text x="219" y="63" style={{...txt,fontSize:9}}>bússola: N segue B</text>
+      <text x="160" y="24" textAnchor="middle" style={txt}>Fora: N → S · dentro: S → N</text>
+      <text x="160" y="46" textAnchor="middle" style={{...txt,fontSize:11}}>Linhas fechadas · setas indicam B</text>
+      <g data-earth-field="true"><circle cx="54" cy="270" r="18" {...ink}/><path d="M54 283V257m-5 7 5-7 5 7" {...wine}/></g>
+      <text x="83" y="260" style={{...txt,fontSize:10}}>Terra: N geográfico ≈ S magnético</text>
+      <text x="83" y="278" style={{...txt,fontSize:10}}>B entra perto do norte geográfico</text>
+      <text x="83" y="294" style={{...txt,fontSize:10}}>B sai perto do sul geográfico</text>
     </g>;
   }
   if (id === 'geometric-optics') {

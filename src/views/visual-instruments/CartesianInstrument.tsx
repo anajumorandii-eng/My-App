@@ -170,12 +170,17 @@ function PlanoCartesiano({
         const ay = paraTelaY(nota.y);
         if (!Number.isFinite(ax) || !Number.isFinite(ay)) return null;
         const larguraTexto = nota.text.length * 4.6;
-        const bruto = paraTelaX(nota.x + nota.dx);
+        // A raiz se afasta horizontalmente das graduações do eixo y.
+        const raizAfim = family.id === 'afim' && nota.text === 'raiz';
+        const bruto = paraTelaX(nota.x + (raizAfim ? (nota.x <= 0 ? -1.4 : 1.4) : nota.dx));
         const lx = Math.min(
           LARGURA - MARGEM.direita - larguraTexto / 2,
           Math.max(MARGEM.esquerda + larguraTexto / 2, bruto),
         );
-        const ly = Math.min(ALTURA - MARGEM.base - 6, Math.max(MARGEM.topo + 10, paraTelaY(nota.y + nota.dy)));
+        // A nota do intercepto usa b + 1,6; a raiz ocupa a outra faixa
+        // vertical para as duas chamadas não se fundirem em inclinações extremas.
+        const dy = raizAfim ? (b + 1.6 >= 0 ? -Math.abs(nota.dy) : Math.abs(nota.dy)) : nota.dy;
+        const ly = Math.min(ALTURA - MARGEM.base - 6, Math.max(MARGEM.topo + 10, paraTelaY(nota.y + dy)));
         // Controle da curva deslocado na perpendicular, senão a "seta" sai reta.
         const cx = (ax + lx) / 2 + (ay - ly) * 0.22;
         const cy = (ay + ly) / 2 + (lx - ax) * 0.22;

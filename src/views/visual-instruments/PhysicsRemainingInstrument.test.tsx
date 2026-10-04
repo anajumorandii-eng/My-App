@@ -79,3 +79,51 @@ describe('instrumento de ondas e física moderna', () => {
     expect(lowerY).toBeGreaterThan(150);
   });
 });
+
+it('mantém ponto de operação sobre a curva U(i) nos dois extremos', () => {
+  for (const [id, chapter, maximum] of [['generator', 'geradores', 12], ['receiver', 'receptores', 10]] as const) {
+    const Component = physicsRemainingInstrument(id);
+    const { container, unmount } = render(<Component {...props(`summary-fisica-${chapter}`)} />);
+    for (const current of [0, maximum]) {
+      fireEvent.change(screen.getByRole('slider'), { target: { value: String(current) } });
+      const point = container.querySelector('[data-operating-point]')!;
+      expect(point).not.toBeNull();
+      const actual = Number(screen.getByRole('slider').getAttribute('value'));
+      expect(Number(point.getAttribute('cx'))).toBeCloseTo(45 + actual * (240 / maximum));
+      expect(Number(point.getAttribute('cy'))).toBeCloseTo(id === 'generator' ? 58 + actual * 13 : 214 - actual * 15.6);
+    }
+    unmount();
+  }
+});
+it('orienta campo externo e interno e identifica polos terrestres', () => {
+  const Component = physicsRemainingInstrument('magnet-field');
+  const { container } = render(<Component {...props('summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre')} />);
+  expect(container.querySelector('[data-magnet-field="external"]')).toBeInTheDocument();
+  expect(container.querySelector('[data-magnet-field="internal"]')).toHaveAttribute('d', 'M204 158H116m8-6-8 6 8 6');
+  expect(screen.getByText(/N geográfico ≈ S magnético/i)).toBeInTheDocument();
+  expect(container.querySelector('[data-earth-field]')).toBeInTheDocument();
+});
+it('preserva bússola apontando ao longo de B ao orientar ímã', () => {
+ const Component = physicsRemainingInstrument('magnet-field');
+ const {container} = render(<Component {...props('summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre')} />);
+ expect(container.querySelector('[data-compass]')).toBeInTheDocument();
+ fireEvent.change(screen.getByRole('slider'), {target:{value:'30'}});
+ expect(container.querySelector('[data-compass]')).toHaveAttribute('transform', 'rotate(30 160 158)');
+});
+it('alinha curto-circuito ao eixo U=0 e explicita escala truncada do receptor', () => {
+ for (const [id, chapter] of [['generator','geradores'],['receiver','receptores']] as const) {
+  const Component = physicsRemainingInstrument(id);
+  const {container,unmount} = render(<Component {...props(`summary-fisica-${chapter}`)} />);
+  if(id === 'generator') expect(container.querySelector('[data-current-axis]')).toHaveAttribute('d','M45 214H286');
+  else expect(screen.getByText(/escala U: 100–120 V/i)).toBeInTheDocument();
+  unmount();
+ }
+});
+
+it('mantém polos e vetor interno legíveis sobre o corpo preenchido do ímã', () => {
+ const Component=physicsRemainingInstrument('magnet-field');
+ const {container}=render(<Component {...props('summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre')} />);
+ const body=container.querySelector('[data-physics-system="magnet-field"] rect')!;
+ expect(body.getAttribute('fill')).not.toBe('none');
+ expect(body.getAttribute('fill')).toBe('var(--vs-burgundy)');
+});

@@ -40,3 +40,18 @@ it('permite demonstrar a matriz singular sem erro numérico de arredondamento',(
  expect(screen.getAllByText('não').length).toBeGreaterThan(0);
  expect(screen.getAllByText('colinear').length).toBeGreaterThan(0);
 });
+
+it('representa soma entre matrizes e multiplicação por uma coluna vertical',()=>{
+ const Sum=matrixInstrument('matrizes');const sum=render(<Sum {...props('summary-matematica-tabelas-e-matrizes')}/>);
+ expect(sum.container.querySelector('svg')!.textContent).toContain('+');
+ expect(sum.container.querySelector('[data-matrix-operation="addition"]')).toHaveTextContent('+');
+ sum.unmount();
+ const Product=matrixInstrument('produto');const product=render(<Product {...props('summary-matematica-tabelas-e-matrizes')}/>);
+ const column=product.container.querySelector('[data-matrix-column]')!;
+ const entries=column.querySelectorAll('text');
+ expect(entries).toHaveLength(2);
+ expect(entries[0].getAttribute('x')).toBe(entries[1].getAttribute('x'));
+ expect(Number(entries[1].getAttribute('y'))).toBeGreaterThan(Number(entries[0].getAttribute('y')));
+ fireEvent.change(screen.getByRole('slider'),{target:{value:'3'}});
+ expect(screen.getAllByText('3 × 5 + 2 × 7 = 29').length).toBeGreaterThan(0);
+});

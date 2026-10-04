@@ -31,9 +31,9 @@ export function MiningColonyScene({ selected }: { selected: number }) {
       <path d="M112 136l48-32 48 32Z" className="mc-roof" />
       <rect x="118" y="134" width="84" height="70" className="mc-wall" />
       <path d="M150 204v-24a10 10 0 0 1 20 0v24Z" className="mc-wall-dark" />
-      <rect x="126" y="152" width="17" height="15" rx="2" className="mc-furnace" />
-      <rect x="123" y="139" width="74" height="11" rx="2" className="mc-plate-bg" />
-      <text x="160" y="147.5" textAnchor="middle" className="mc-plate">CASA DE FUNDIÇÃO</text>
+      <rect x="126" y="169" width="17" height="15" rx="2" className="mc-furnace" />
+      <rect x="123" y="139" width="74" height="27" rx="2" className="mc-plate-bg" />
+      <text x="160" y="150" textAnchor="middle" className="mc-plate"><tspan x="160">CASA DE</tspan><tspan x="160" dy="12">FUNDIÇÃO</tspan></text>
       <motion.g initial={false} animate={{ opacity: fundicao ? 0.85 : 0 }} transition={t(0.5, 0.6)}>
         <circle cx="176" cy="88" r="6" className="mc-smoke" /><circle cx="182" cy="74" r="8" className="mc-smoke" /><circle cx="177" cy="58" r="9.5" className="mc-smoke" />
       </motion.g>
@@ -70,7 +70,7 @@ export function MiningColonyScene({ selected }: { selected: number }) {
         <path d={`M${226 + (k % 2) * 30} ${204 - Math.floor(k / 2) * 12}h18l3 9h-24Z`} className="mc-bar" />
         <circle cx={238 + (k % 2) * 30} cy={208.5 - Math.floor(k / 2) * 12} r="3" className="mc-seal" />
       </motion.g>)}
-      <text x="226" y="226" className="mc-small">barras seladas</text><text x="226" y="237" className="mc-small">circulam</text>
+      <text x="226" y="226" className="mc-small">barras seladas</text><text x="226" y="240" className="mc-small">circulam</text>
       <path d="M90 222C120 242 200 244 222 238" className="mc-illegal" />
       <path d="M150 234l8 8M158 234l-8 8" className="mc-cross" />
       <text x="96" y="250" className="mc-small mc-warn">pó sem selo: ilegal</text>
@@ -83,7 +83,7 @@ export function MiningColonyScene({ selected }: { selected: number }) {
       <motion.rect x="280" y="154" height="16" className="mc-quota-gap" initial={false}
         animate={{ width: derrama ? 30 : 0 }} transition={t(0.6, 1.6)} />
       <text x="226" y="149" className="mc-small">cota anual</text>
-      <text x="226" y="183" className="mc-small mc-warn">diferença cobrada</text><text x="226" y="194" className="mc-small mc-warn">de todos</text>
+      <text x="226" y="183" className="mc-small mc-warn">diferença</text><text x="226" y="197" className="mc-small mc-warn">cobrada de todos</text>
       {[[22, 150], [52, 160], [86, 150]].map(([x, y], k) => <g key={k}>
         <path d={`M${x} ${y + 26}v-16l12-9 12 9v16Z`} className="mc-village" />
         <motion.circle r="4" className="mc-coin" initial={false}

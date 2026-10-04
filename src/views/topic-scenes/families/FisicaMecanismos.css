@@ -21,3 +21,14 @@
 .dark .pm-gas-line { stroke: #8bb8ad; }.dark .pm-gas-line--active { stroke: #e39cac; }
 .dark .pm-source-label { fill: #183c37; }
 @media(max-width:560px){.pm-scene{padding:.8rem}.pm-options button{flex:1 1 40%}}
+
+/* A eletrização usa composição mais alta para manter a leitura em 390px. */
+.pm-charging .pm-heading, .pm-charging .pm-label, .pm-charging .pm-equation { font-size: 26px; }
+.pm-charging .pm-small { font-size: 24px; }
+.pm-charging .pm-electron { font-size: 28px; fill: #713b51; }
+
+/* O fundo dos corpos acompanha o tema para conservar o contraste dos sinais. */
+.dark .pm-charging .pm-charge-body { fill: #314b50; stroke: #90b4aa; }
+.dark .pm-charging .pm-electron { fill: #e9b2bc; }
+.dark .pm-charging .pm-arrow { stroke: #e9b2bc; }
+.dark .pm-charging marker path { fill: #e9b2bc; }

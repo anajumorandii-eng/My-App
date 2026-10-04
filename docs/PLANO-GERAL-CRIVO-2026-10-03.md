@@ -1,19 +1,21 @@
 # Crivo: fila completa e execução em lotes maiores
 
-Estado de referência: main `42589657df0d802c60e19c38383682a6e49573f9`, em 03/10/2026. A PR #252 já foi incorporada, assim como #242–#245 e #247–#251. Não repetir esses reparos. A PR #246 (guia de troca de conta) e os rascunhos #234/#222 são trabalhos separados; não integrar automaticamente.
+Estado de referência: main `af401453397d773ddf8ff5ae65df1e3f1559afc6`, em 03/10/2026. A PR #252 já foi incorporada, assim como #242–#245 e #247–#251. Não repetir esses reparos. A PR #246 (guia de troca de conta) e os rascunhos #234/#222 são trabalhos separados; não integrar automaticamente.
 
 A execução anterior ficou fragmentada em lotes pequenos para o tamanho da fila. A nova unidade de entrega será uma família de problemas, com arquivos sob responsabilidade explícita e validação conjunta. A auditoria existente foi reconciliada por ID com as correções documentadas; não foram repetidas as 613 aberturas de tela.
+
+A Entrega A foi implementada e validada nesta branch: [evidências dos 25 capítulos](visual-integral-2026-10-03/entrega-a/README.md). Os números abaixo incluem a proposta, ainda sujeita à revisão e ao merge. A tabela de lotes mantém o escopo original; F1/M1/HG1 estão tratados, e os outros lotes somam 234 IDs.
 
 ## Quanto falta
 
 | Matéria | Capítulos no catálogo | Achados tratados depois da auditoria | Capítulos ainda na fila | Resumos sem revisão editorial 2 |
 | --- | ---: | ---: | ---: | ---: |
-| Física | 85 | 9 | 38 | 0 |
-| Matemática | 83 | 24 | 4 | 0 |
+| Física | 85 | 26 | 21 | 0 |
+| Matemática | 83 | 28 | 0 | 0 |
 | Biologia | 72 | 4 | 0 | 0 |
 | Química | 48 | 2 | 0 | 0 |
-| História | 49 | 0 | 3 | 0 |
-| Geografia | 63 | 0 | 1 | 0 |
+| História | 49 | 3 | 0 | 0 |
+| Geografia | 63 | 1 | 0 | 0 |
 | Filosofia | 35 | 0 | 35 | 0 |
 | Sociologia | 27 | 0 | 27 | 27 |
 | Redação | 58 | 0 | 58 | 58 |
@@ -22,13 +24,13 @@ A execução anterior ficou fragmentada em lotes pequenos para o tamanho da fila
 | Literatura | 37 | 0 | 37 | 37 |
 | Entendimento de Texto | 12 | 0 | 12 | 12 |
 | Atualidades | 1 | 0 | 1 | — |
-| **Total** | **613** | **39** | **259** | **177** |
+| **Total** | **613** | **64** | **234** | **177** |
 
-Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 259 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 35 de Filosofia.
+Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 234 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 35 de Filosofia.
 
 Os 177 resumos pendentes estão nos 612 registros de `deepSummaryContent.json`; COP30 é o capítulo adicional do catálogo. Eles foram vinculados aos IDs e aos mesmos lotes visuais para executar conteúdo e representação juntos. Os 435 registros com `rev: 2` não precisam ser reescritos indiscriminadamente. O inventário formal de qualidade continua separado: 532 sem revisão formal, 81 em validação, nenhuma aprovação registrada.
 
-Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 259 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 177 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
+Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 234 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 177 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
 
 ## Lotes definidos
 
@@ -49,7 +51,7 @@ Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planil
 | R2 | 15 | Projeto/gênero/introdução/conclusão, competências e modelos de texto; incluir contenção móvel de Competências. |
 | R3 | 27 | Coletânea, argumento, dados, coesão, intervenção, direitos e revisão; mostrar operações em texto próprio e detalhamento da intervenção. |
 | A1 | 1 | COP30: atores, contexto de Belém, decisões e limites com fontes datadas. Pode integrar uma entrega maior de Humanas. |
-| **Total** | **259** | Cada ID pendente pertence a exatamente um lote. |
+| **Total original** | **259** | F1/M1/HG1 entregues: 25; fila restante: 234. |
 
 A profundidade dos 27 textos de Sociologia acompanha H1/H2/H3, conforme os IDs vinculados na fila. Os lotes pequenos M1/HG1/A1 serão integrados a entregas maiores; não devem gerar novas rodadas de quatro ou de um capítulo por padrão.
 
