@@ -1,0 +1,84 @@
+.se-illustration { --se-ink:#493e34; --se-paper:#faf4e7; --se-red:#973c42; --se-blue:#376f7c; --se-green:#728660; --se-stone:#ded7c1; --se-earth:#c99b72; --se-light:#f2c36c; }
+.se-illustration path,.se-illustration rect,.se-illustration circle { stroke-linecap:round; stroke-linejoin:round; }
+.se-paper { fill:var(--se-paper); stroke:#cebea1; stroke-width:1.2; }
+.se-grain { fill:none; stroke:var(--se-earth); stroke-width:.5; opacity:.2; }
+.se-title { fill:var(--se-ink); font-family:'Kalam',cursive; font-size:23px; font-weight:700; }
+.se-title-mark { fill:none; stroke:var(--se-red); stroke-width:3; opacity:.6; }
+.se-hand { fill:var(--se-ink); font-family:'Kalam',cursive; font-size:13px; }
+.se-label { fill:var(--se-ink); font-family:'Kalam',cursive; font-size:15px; font-weight:700; }
+.se-small { fill:var(--se-ink); font-family:Inter,sans-serif; font-size:10.5px; }
+.se-caption { fill:var(--se-ink); font-size:8px; opacity:.8; }
+.se-pointer { fill:none; stroke:var(--se-red); stroke-width:1.4; }
+.se-flow { fill:none; stroke:var(--se-red); stroke-width:2.5; }
+.se-arrow-tip { fill:var(--se-red); }
+.se-detail { fill:none; stroke:var(--se-ink); stroke-width:1.1; }
+.se-ground { fill:none; stroke:var(--se-earth); stroke-width:3; }
+.se-shadow { fill:var(--se-ink); opacity:.14; }
+.se-stone { fill:var(--se-stone); stroke:var(--se-ink); stroke-width:1.3; }
+.se-stone-side { fill:var(--se-earth); stroke:var(--se-ink); stroke-width:1.2; }
+.se-window { fill:#a1c3c8; stroke:var(--se-ink); stroke-width:1; }
+.se-door { fill:#766357; stroke:var(--se-ink); stroke-width:1; }
+.se-house { fill:#dcbb94; stroke:var(--se-ink); stroke-width:1.3; }
+.se-roof { fill:#a96a55; stroke:var(--se-ink); stroke-width:1.5; }
+.se-limb { fill:none; stroke:var(--se-ink); stroke-width:3; }
+.se-coat { fill:var(--se-blue); stroke:var(--se-ink); stroke-width:1.3; }
+.se-skin { fill:#dcb38c; stroke:var(--se-ink); stroke-width:1; }
+.se-hair { fill:none; stroke:var(--se-ink); stroke-width:2.3; }
+.se-hat { fill:#d8b375; stroke:var(--se-ink); stroke-width:2; }
+.se-factory { fill:#c38b72; stroke:var(--se-ink); stroke-width:1.5; }
+.se-brick { fill:#bc9272; stroke:var(--se-ink); stroke-width:1.6; }
+.se-smoke { fill:none; stroke:var(--se-ink); stroke-width:7; opacity:.17; }
+.se-field { fill:#d7c887; stroke:#887548; stroke-width:1.4; }
+.se-furrow { fill:none; stroke:#9d8153; stroke-width:1.2; }
+.se-crop { fill:none; stroke:var(--se-green); stroke-width:1.7; }
+.se-machine { fill:#d5af60; stroke:var(--se-ink); stroke-width:1.5; }
+.se-wheel { fill:#494745; stroke:#d8cfb9; stroke-width:1; }
+.se-container { fill:#a3aca0; stroke:var(--se-ink); stroke-width:1.4; }
+.se-hull { fill:var(--se-blue); stroke:var(--se-ink); stroke-width:1.6; }
+.se-water-line { fill:none; stroke:var(--se-blue); stroke-width:1.6; }
+.se-chip { fill:#738b83; stroke:var(--se-ink); stroke-width:1.7; }
+.se-circuit { fill:#b8cbbb; stroke:var(--se-ink); stroke-width:1; }
+.se-metal-line { fill:none; stroke:#9d8d68; stroke-width:3; }
+.se-tree { fill:var(--se-green); stroke:#4d654c; stroke-width:1.5; }
+.se-wood-line { fill:none; stroke:var(--se-earth); stroke-width:3; }
+.se-earth { fill:var(--se-earth); stroke:var(--se-ink); stroke-width:1.3; }
+.se-road { fill:none; stroke:#7b7970; stroke-width:20; }
+.se-road-mark { fill:none; stroke:#f4deac; stroke-width:1.6; stroke-dasharray:9 9; }
+.se-red-line { fill:none; stroke:var(--se-red); stroke-width:2.7; }
+.se-blue-line { fill:none; stroke:var(--se-blue); stroke-width:2.7; }
+.se-pipe { fill:none; stroke:var(--se-blue); stroke-width:4; }
+.se-pipe-missing { fill:none; stroke:var(--se-earth); stroke-width:2; stroke-dasharray:4 5; }
+.se-hills { fill:#c1c39b; stroke:#858762; stroke-width:1.5; }
+.se-dry { fill:#ddc79e; stroke:var(--se-earth); stroke-width:1; }
+.se-barrier,.se-fence { fill:none; stroke:var(--se-red); stroke-width:3; }
+.se-rail { fill:none; stroke:var(--se-ink); stroke-width:2.2; }
+.se-water { fill:#afced1; stroke:var(--se-blue); stroke-width:1; }
+.se-crane { fill:none; stroke:var(--se-earth); stroke-width:4; }
+.se-silo { fill:#d1cdc1; stroke:var(--se-ink); stroke-width:1.4; }
+.se-divider { fill:none; stroke:var(--se-earth); stroke-width:1; stroke-dasharray:4 5; }
+.se-conveyor { fill:#bbb8a7; stroke:var(--se-ink); stroke-width:1.5; }
+.se-robot { fill:none; stroke:var(--se-blue); stroke-width:7; }
+.se-sand { fill:none; stroke:#e8cfa6; stroke-width:11; }
+.se-parasol { fill:#cd8f79; stroke:var(--se-ink); stroke-width:1.5; }
+.se-world-west { fill:#d6e2df; stroke:var(--se-blue); stroke-width:1; }
+.se-world-east { fill:#e7ccc4; stroke:var(--se-red); stroke-width:1; }
+.se-phone { fill:#555b59; stroke:var(--se-ink); stroke-width:2; }
+.se-cable { fill:none; stroke:var(--se-blue); stroke-width:4; }
+.se-server { fill:#78978d; stroke:var(--se-ink); stroke-width:1.6; }
+.se-light { fill:var(--se-light); }
+.se-table { fill:#a38265; stroke:var(--se-ink); stroke-width:1.4; }
+.se-table-top { fill:#d5bd94; stroke:var(--se-ink); stroke-width:1.4; }
+.se-paper-sheet { fill:var(--se-paper); stroke:var(--se-ink); stroke-width:1.2; }
+.se-coin { fill:var(--se-light); stroke:#a08035; stroke-width:2; }
+.se-euro { fill:var(--se-ink); font-family:serif; font-size:35px; }
+.se-mineral { fill:#a29188; stroke:var(--se-ink); stroke-width:1.3; }
+.se-soil { fill:#b08a60; stroke:var(--se-earth); stroke-width:1; }
+.se-lime { fill:none; stroke:#e1d6b4; stroke-width:3; }
+.se-flag { fill:var(--se-red); stroke:var(--se-ink); stroke-width:1.2; }
+.dark .se-illustration { --se-ink:#eee4d1; --se-paper:#263432; --se-red:#efabb2; --se-blue:#94c4d0; --se-green:#8eaa7f; --se-stone:#657a70; --se-earth:#c4a581; }
+.dark .se-house { fill:#917657; }.dark .se-roof { fill:#9c7363; }.dark .se-window { fill:#72a1ac; }
+.dark .se-world-west { fill:#344e51; }.dark .se-world-east { fill:#55413f; }
+.dark .se-small,.dark .se-hand,.dark .se-label,.dark .se-title,.dark .se-caption { fill:var(--se-ink); }
+@media(prefers-reduced-motion:reduce) { .se-illustration * { animation:none!important; transition:none!important; } }
+.dark .se-euro { fill:#263432; }
+.se-illustration .se-caption { font-size:10px; }

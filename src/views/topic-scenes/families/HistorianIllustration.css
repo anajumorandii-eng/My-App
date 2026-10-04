@@ -1,0 +1,44 @@
+.hi-plate { --hi-paper:#fff8e9; --hi-ink:#3d4038; --hi-muted:#786d5c; --hi-earth:#b99167; --hi-stone:#d7c9ac; --hi-sea:#c2dada; --hi-land:#bac598; --hi-wine:#823c51; --hi-green:#738875; --hi-dark:#64665a; }
+.hg-figure > .hi-plate { width:100%; min-width:740px; max-width:none; }
+.hi-illustration text { fill:var(--hi-ink); }
+.hi-background,.hi-paper { fill:var(--hi-paper); stroke:var(--hi-muted); stroke-width:1.2; }
+.hi-background { stroke-opacity:.45; }
+.hi-grain { stroke:var(--hi-earth); stroke-width:.8; opacity:.15; }
+.hi-title-rule { fill:none; stroke:var(--hi-earth); stroke-width:10; opacity:.24; stroke-linecap:round; }
+.hi-illustration .hi-title { font:700 25px 'Kalam',Georgia,serif; fill:var(--hi-wine); }
+.hi-illustration .hi-note { font:500 18px 'Kalam',Georgia,serif; fill:var(--hi-wine); }
+.hi-illustration .hi-label { font:600 16px Georgia,serif; }
+.hi-illustration .hi-small { font:500 16px system-ui,sans-serif; }
+.hi-illustration .hi-doc-title { font:600 16px Georgia,serif; }
+.hi-ink,.hi-fine,.hi-fold,.hi-hair,.hi-pointer,.hi-water,.hi-boundary { fill:none; stroke:var(--hi-ink); stroke-width:1.6; stroke-linecap:round; stroke-linejoin:round; }
+.hi-fine { stroke:var(--hi-muted); stroke-width:1; }
+.hi-hair { stroke:var(--hi-dark); stroke-width:2.3; }
+.hi-fold { stroke:var(--hi-paper); opacity:.6; }
+.hi-pointer { stroke:var(--hi-wine); stroke-width:1.6; }
+.hi-link { fill:none; stroke:var(--hi-wine); stroke-width:2.5; stroke-linecap:round; stroke-dasharray:6 3; }
+.hi-boundary { stroke:var(--hi-wine); stroke-width:2; stroke-dasharray:5 3; }
+.hi-stone,.hi-earth,.hi-gold,.hi-green,.hi-cloth,.hi-land,.hi-sea,.hi-mountains,.hi-field,.hi-dark { stroke:var(--hi-ink); stroke-width:1.4; stroke-linejoin:round; }
+.hi-stone { fill:var(--hi-stone); }
+.hi-earth,.hi-cloth { fill:var(--hi-earth); }
+.hi-gold { fill:#b99751; }
+.hi-green,.hi-cloth-soldier { fill:var(--hi-green); }
+.hi-land,.hi-field { fill:var(--hi-land); }
+.hi-sea { fill:var(--hi-sea); stroke-opacity:.4; }
+.hi-mountains { fill:var(--hi-stone); stroke:var(--hi-muted); }
+.hi-dark { fill:var(--hi-dark); }
+.hi-cloth-ancient,.hi-cloth-clergy { fill:var(--hi-paper); }
+.hi-cloth-royal { fill:var(--hi-wine); }
+.hi-cloth-merchant { fill:#638b99; }
+.hi-cloth-worker { fill:var(--hi-earth); }
+.hi-skin { fill:#c6a47c; stroke:#715941; stroke-width:1.3; }
+.hi-window { fill:var(--hi-sea); stroke:var(--hi-muted); stroke-width:1; }
+.hi-shadow { fill:var(--hi-ink); opacity:.1; }
+.hi-wood { fill:none; stroke:var(--hi-earth); stroke-width:6; stroke-linecap:round; stroke-linejoin:round; }
+.hi-water { stroke:#698d99; }
+.hi-river { stroke-width:9; }
+.hi-wheat { fill:none; stroke:#8a8048; stroke-width:2.5; stroke-linecap:round; }
+.hi-smoke { fill:none; stroke:var(--hi-muted); stroke-width:15; opacity:.23; stroke-linecap:round; }
+.hi-seal,.hi-flag { fill:var(--hi-wine); stroke:var(--hi-wine); stroke-width:1.7; }
+.hi-selection-rule { fill:none; stroke:var(--hi-wine); stroke-width:1.8; opacity:.5; }
+.dark .hi-plate, [data-theme='dark'] .hi-plate { --hi-paper:#222b2c; --hi-ink:#eee6d3; --hi-muted:#b4ad95; --hi-earth:#8d745b; --hi-stone:#6d7267; --hi-sea:#365b64; --hi-land:#637953; --hi-wine:#e0a0a7; --hi-green:#749480; --hi-dark:#353e3c; }
+@media(prefers-reduced-motion:reduce) { .hi-plate * { animation:none!important; transition:none!important; } }

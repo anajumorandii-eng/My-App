@@ -7,6 +7,32 @@ import { geografia } from '../data/geografia';
 import { HistoriaGeografia } from './HistoriaGeografia';
 
 describe('pranchas de História e Geografia', () => {
+  it('integra estamentos, disputa de representação e mudanças de regime na prancha francesa', () => {
+    const entry = historia.find(item => item.chapterId === 'summary-historia-revolucao-francesa')!;
+    render(<HistoriaGeografia entry={entry} />);
+    const diagram = screen.getByRole('img', { name: /Revolução Francesa.*Terror/i });
+    expect(diagram).toHaveTextContent('Clero');
+    expect(diagram).toHaveTextContent('Nobreza');
+    expect(diagram).toHaveTextContent('Terceiro Estado');
+    expect(diagram).toHaveTextContent('privilégios fiscais');
+    expect(diagram).toHaveTextContent('Constituição · 1791');
+    expect(diagram).toHaveTextContent('República · 1792');
+    expect(diagram).toHaveTextContent('igualdade jurídica');
+  });
+
+  it('mostra aquecimento, condensação e os dois lados do relevo na prancha climática', () => {
+    const entry = geografia.find(item => item.chapterId === 'summary-geografia-dinamica-climatica')!;
+    render(<HistoriaGeografia entry={entry} />);
+    const diagram = screen.getByRole('img', { name: /Chuva convectiva.*orográfica.*frontal/i });
+    expect(diagram).toHaveTextContent('superfície aquece o ar');
+    expect(diagram).toHaveTextContent('expande e esfria');
+    expect(diagram).toHaveTextContent('condensação');
+    expect(diagram).toHaveTextContent('barlavento');
+    expect(diagram).toHaveTextContent('sotavento');
+    expect(diagram).toHaveTextContent('massa fria');
+    expect(diagram).toHaveTextContent('massa quente');
+  });
+
   it('separa a cronologia da Revolução Francesa das pressões que levaram ao Terror', async () => {
     const user = userEvent.setup();
     const entry = historia.find(item => item.chapterId === 'summary-historia-revolucao-francesa')!;

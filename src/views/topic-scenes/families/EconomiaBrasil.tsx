@@ -1,4 +1,5 @@
 import React from 'react';
+import { SocioEconomicIllustration } from './SocioEconomicIllustration';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { BRAZIL } from './GeografiaFisica';
@@ -60,7 +61,9 @@ export function NewIndustrialGeography({ active }: Scene) {
     { at: [200, 280], label: 'reparar e reusar', lx: 200, ly: 312, anchor: 'middle' },
     { at: [142, 222], label: 'resíduo → insumo', lx: 124, ly: 226, anchor: 'end' },
   ] as const;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Nova geografia industrial: deslocalização da manufatura, cluster com transbordamento de conhecimento e economia circular; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Nova geografia industrial: deslocalização da manufatura, cluster com transbordamento de conhecimento e economia circular; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="industry" active={active} />
+    <g transform="translate(0 376)">
     <ArrowHead id="eb-head-ind" />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">INDÚSTRIA II · A PRODUÇÃO SE REORGANIZA</text>
@@ -185,6 +188,7 @@ export function NewIndustrialGeography({ active }: Scene) {
     </Stage>
 
     <text x="30" y="342" className="bi-foot">Esquemático, sem escala.</text>
+    </g>
   </svg>;
 }
 
@@ -210,7 +214,9 @@ export function Geoeconomics({ active }: Scene) {
     return [300 + 58 * Math.cos(a), 150 + 58 * Math.sin(a)] as const;
   });
   const cut = ring[2];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Geoeconomia: chips contra terras-raras, tarifas de 2018, sanções de 2022 e desdolarização; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Geoeconomia: chips contra terras-raras, tarifas de 2018, sanções de 2022 e desdolarização; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="geoeconomics" active={active} />
+    <g transform="translate(0 376)">
     <ArrowHead id="eb-head-geo" />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">GEOECONOMIA · PRESSÃO SEM FORÇA MILITAR</text>
@@ -321,6 +327,7 @@ export function Geoeconomics({ active }: Scene) {
       <text x="48" y="312" className="bi-small">{b}</text>
     </motion.g>)}
     <text x="30" y="340" className="bi-foot">Esquemático: posições, setas e barra não medem valores.</text>
+    </g>
   </svg>;
 }
 
@@ -352,7 +359,9 @@ export function AgrarianSpace({ active }: Scene) {
     'Reforma agrária: prevista na Constituição, aplicada de forma limitada e descontínua.',
   ];
   const [csx, csy] = geo(222, 262);
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Espaço agrário brasileiro: latifúndio e agricultura familiar, correção do solo do Cerrado, fronteira no Matopiba e conflitos pela terra; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Espaço agrário brasileiro: latifúndio e agricultura familiar, correção do solo do Cerrado, fronteira no Matopiba e conflitos pela terra; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="agrarian" active={active} />
+    <g transform="translate(0 376)">
     <ArrowHead id="eb-head-agr" />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">O ESPAÇO AGRÁRIO BRASILEIRO</text>
@@ -508,6 +517,7 @@ export function AgrarianSpace({ active }: Scene) {
 
     {feet.map((line, k) => <motion.text key={line} x="30" y="332" className="bi-foot" initial={false}
       animate={{ opacity: active === k ? 1 : 0 }} transition={p(0.4)}>{line}</motion.text>)}
+    </g>
   </svg>;
 }
 
@@ -528,7 +538,9 @@ export function IndustrialDeconcentration({ active }: Scene) {
     { at: geo(341, 138), label: 'PE', lx: -12 },
     { at: geo(222, 290), label: 'Sul', lx: -12 },
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Espaço industrial brasileiro II: desconcentração a partir da RMSP, guerra fiscal do ICMS e desindustrialização precoce; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Espaço industrial brasileiro II: desconcentração a partir da RMSP, guerra fiscal do ICMS e desindustrialização precoce; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="deconcentration" active={active} />
+    <g transform="translate(0 376)">
     <ArrowHead id="eb-head-bri" />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">O ESPAÇO INDUSTRIAL BRASILEIRO II</text>
@@ -619,6 +631,7 @@ export function IndustrialDeconcentration({ active }: Scene) {
       Curvas esquemáticas: cai a participação no PIB, não o volume produzido.</motion.text>
     <motion.text x="30" y="336" className="bi-foot" initial={false} animate={{ opacity: active === 2 ? 0 : 1 }} transition={p(0.4)}>
       Esquemático, sem escala: setas mostram direção, não volume.</motion.text>
+    </g>
   </svg>;
 }
 

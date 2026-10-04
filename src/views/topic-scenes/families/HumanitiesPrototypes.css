@@ -1,0 +1,74 @@
+.ha-illustrated { --ha-ink:#333d3c; --ha-muted:#5e6258; --ha-paper:#fff9eb; --ha-wine:#83354a; --ha-gold:#b77d2c; --ha-blue:#477f90; --ha-earth:#b8885e; --ha-green:#739575; }
+.hg-figure > .ha-illustrated { width:100%; min-width:740px; max-width:none; }
+.ha-illustrated text { fill:var(--ha-ink); font-family:Georgia,serif; }
+.ha-paper { fill:var(--ha-paper); stroke:#bbac90; stroke-width:1.5; }
+.ha-paper-grain { fill:none; stroke:var(--ha-earth); opacity:.1; stroke-width:.6; }
+.ha-hatching { fill:none; stroke:var(--ha-ink); opacity:.13; }
+.ha-illustrated .ha-title { font:700 36px 'Kalam','Caveat',cursive; fill:var(--ha-wine); }
+.ha-title-stroke { stroke:#d5ae68; opacity:.4; stroke-width:13; stroke-linecap:round; fill:none; }
+.ha-title-stroke--pale { stroke-width:22; opacity:.2; }
+.ha-illustrated .ha-hand { font:600 24px 'Kalam','Caveat',cursive; fill:var(--ha-wine); }
+.ha-illustrated .ha-kicker { font:800 19px system-ui,sans-serif; fill:var(--ha-wine); letter-spacing:.1em; }
+.ha-illustrated .ha-label { font:700 20px Georgia,serif; }
+.ha-illustrated .ha-small { font:500 18px system-ui,sans-serif; }
+.ha-illustrated .ha-section-title { font:700 22px Georgia,serif; fill:var(--ha-wine); }
+.ha-ink,.ha-wood-line,.ha-gold-line,.ha-document-line,.ha-note-pointer,.ha-bracket { fill:none; stroke:var(--ha-ink); stroke-width:2; stroke-linecap:round; stroke-linejoin:round; }
+.ha-wood-line { stroke:#80634b; stroke-width:3; }
+.ha-gold-line { stroke:var(--ha-gold); stroke-width:2; }
+.ha-document-line { stroke:var(--ha-muted); stroke-width:1.5; opacity:.6; }
+.ha-note-pointer { stroke:var(--ha-wine); stroke-width:1.5; }
+.ha-bracket { stroke:var(--ha-wine); }
+.ha-link,.ha-air-arrow,.ha-heat-arrow { fill:none; stroke:var(--ha-blue); stroke-width:3; stroke-linecap:round; }
+.ha-heat-arrow { stroke:var(--ha-wine); }
+.ha-arrow-tip { fill:var(--ha-ink); }
+.ha-object-shadow { fill:var(--ha-ink); opacity:.1; }
+.ha-face { fill:#cbab85; stroke:#725640; stroke-width:1.5; }
+.ha-clothes { stroke:var(--ha-ink); stroke-width:1.5; fill:#a88960; }
+.ha-clothes--clergy { fill:#ead8b4; }
+.ha-clothes--noble { fill:#79505d; }
+.ha-clothes--merchant { fill:#597781; }
+.ha-clothes--worker { fill:#b19a75; }
+.ha-hair { stroke:#695342; stroke-width:3; fill:none; }
+.ha-vestment { fill:#dbc386; stroke:#97713b; stroke-width:1.5; }
+.ha-straw { fill:#ccab68; stroke:#796442; stroke-width:1.5; }
+.ha-apron { fill:#e3d4b5; stroke:var(--ha-muted); stroke-width:1; }
+.ha-document,.ha-inset-paper { fill:#f6edda; stroke:#baa990; stroke-width:1.5; }
+.ha-stone { fill:#d6c7aa; stroke:#7f7767; stroke-width:2; }
+.ha-stone-roof { fill:#c2ad8a; stroke:#7f7767; stroke-width:2; }
+.ha-column { fill:#e5d8bf; stroke:#8a816e; stroke-width:1.5; }
+.ha-assembly-interior { fill:#80735d; stroke:var(--ha-ink); stroke-width:1.5; }
+.ha-coat-mini { fill:#a2775f; stroke:#5b5146; stroke-width:.7; }
+.ha-underline { stroke:var(--ha-wine); stroke-width:2; fill:none; }
+.ha-fortress { fill:#c1b9a3; stroke:#716d5d; stroke-width:2.5; }
+.ha-stone-seams { stroke:#8c8977; stroke-width:1; fill:none; }
+.ha-door { fill:#6c6351; stroke:#504838; stroke-width:1.5; }
+.ha-flag-line { stroke:#8e4251; stroke-width:2.5; fill:#dca083; }
+.ha-timeline { stroke:var(--ha-muted); stroke-width:2; }
+.ha-stop { fill:var(--ha-paper); stroke:var(--ha-muted); stroke-width:2; }
+.ha-stop-selected { fill:var(--ha-wine); stroke:var(--ha-wine); stroke-width:3; }
+.ha-atmosphere { fill:#e8eee8; stroke:#b3c2bc; stroke-width:1.5; }
+.ha-atmosphere--active { stroke:var(--ha-blue); stroke-width:2.5; }
+.ha-land { fill:#b9b58b; stroke:#8b8968; stroke-width:1.5; }
+.ha-land-contour { fill:none; stroke:#8b926e; stroke-width:1.5; }
+.ha-earth-layer { fill:none; stroke:var(--ha-earth); stroke-width:6; opacity:.6; }
+.ha-sea { fill:#a6c7ca; stroke:var(--ha-blue); stroke-width:1; }
+.ha-water-line { fill:none; stroke:#5c8c97; stroke-width:1.5; }
+.ha-tree-trunk { stroke:#7d6948; stroke-width:2; fill:none; }
+.ha-tree-leaf { fill:#82a079; stroke:#5b7c60; stroke-width:1; }
+.ha-dry-tree { fill:#aaa371; stroke:#7e835c; stroke-width:1; }
+.ha-cloud { fill:#fcfaf0; stroke:#8ba6a9; stroke-width:1.8; }
+.ha-cloud-shadow { fill:none; stroke:#b2c6c6; stroke-width:3; }
+.ha-rain { fill:none; stroke:#568caa; stroke-width:2.5; }
+.ha-sun { fill:#ecc25f; stroke:#c59834; stroke-width:2; }
+.ha-sun-ray { stroke:#d7ab4c; stroke-width:2.5; }
+.ha-cold-air { fill:#a1bcc6; stroke:#7193a6; stroke-width:1.5; opacity:.85; }
+.dark .ha-illustrated { --ha-ink:#e8e5d3; --ha-muted:#bec8b9; --ha-paper:#223332; --ha-wine:#efa7b3; --ha-gold:#d8b065; --ha-blue:#94c2ca; --ha-earth:#b79b76; }
+.dark .ha-document,.dark .ha-inset-paper { fill:#2e403c; stroke:#8b9b85; }
+.dark .ha-atmosphere { fill:#293f43; stroke:#658382; }
+.dark .ha-atmosphere--active { stroke:#accdc8; }
+.dark .ha-land { fill:#687b60; stroke:#9baf86; }
+.dark .ha-assembly-interior { fill:#263633; }
+.dark .ha-stone,.dark .ha-stone-roof,.dark .ha-column,.dark .ha-fortress { fill:#6a7569; stroke:#b1bbaa; }
+.dark .ha-cloud { fill:#8eaaa8; stroke:#c4d5c9; }
+.dark .ha-rain { stroke:#a4d8ed; }
+.ha-air-parcel { fill:var(--ha-wine); stroke:var(--ha-paper); stroke-width:1.5; }

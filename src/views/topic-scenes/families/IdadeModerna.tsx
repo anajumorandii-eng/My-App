@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { Arrow, ArrowHead, Person, type Scene } from './cenaKit';
 import './IdadeModerna.css';
+import { HistorianIllustration } from './HistorianIllustration';
 
 function usePaced() {
   const t = useSceneMotion();
@@ -38,7 +39,9 @@ export function FirstGlobalization({ active }: Scene) {
     { title: ['TRABALHO', 'COMPULSÓRIO'], lines: ['em larga escala:', 'é o que viabiliza', 'economicamente', 'a exploração colonial', 'primeiro, indígenas', 'escravizados'] },
     { title: ['TRÁFICO', 'TRANSATLÂNTICO'], lines: ['depois, majoritariamente,', 'africanos escravizados', 'sustentam plantations', 'de açúcar e mineração', 'abolição gradual,', 'só no século XIX'] },
   ][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`A Primeira Globalização em camadas: doutrina mercantilista, pacto colonial, trabalho compulsório e tráfico transatlântico no mapa do Atlântico; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`A Primeira Globalização em camadas: doutrina mercantilista, pacto colonial, trabalho compulsório e tráfico transatlântico no mapa do Atlântico; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="FirstGlobalization" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="im-head-glob" />
     <text x="30" y="40" className="bi-kicker">MERCANTILISMO · SÉC. XVI–XVIII</text>
@@ -157,6 +160,7 @@ export function FirstGlobalization({ active }: Scene) {
       </g>;
     })}
     <text x="30" y="342" className="bi-foot">Contornos esquemáticos, sem escala; cada camada condiciona a seguinte.</text>
+    </g>
   </svg>;
 }
 
@@ -173,7 +177,9 @@ export function SpanishCastes({ active }: Scene) {
     { x: 100, y: 142, w: 220, h: 58, label: 'criollos' },
     { x: 150, y: 78, w: 120, h: 58, label: 'peninsulares' },
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`América Espanhola: pirâmide de castas dos grupos subordinados aos criollos e aos peninsulares, com os cargos mais altos travados para os criollos; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`América Espanhola: pirâmide de castas dos grupos subordinados aos criollos e aos peninsulares, com os cargos mais altos travados para os criollos; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="SpanishCastes" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="im-head-casta" />
     <text x="30" y="40" className="bi-kicker">AMÉRICA ESPANHOLA · CASTAS</text>
@@ -267,6 +273,7 @@ export function SpanishCastes({ active }: Scene) {
     </motion.g>
     <text x="30" y="306" className="bi-small">origem étnica + local de nascimento → lugar na hierarquia</text>
     <text x="30" y="342" className="bi-foot">Esquema da hierarquia jurídica; a altura dos degraus não mede população.</text>
+    </g>
   </svg>;
 }
 
@@ -286,7 +293,9 @@ export function ReformationDialectic({ active }: Scene) {
   const still = p(1).duration === 0;
   const dim = (k: number) => ({ opacity: k === active || (active === 2 && k < 2) ? 1 : 0.5 });
   const notes = ['pagar para reduzir o purgatório', 'salvação pela fé, sem intermediário pago', 'nem a Igreja de antes, nem a simples recusa'];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Reforma Religiosa em três tempos: venda de indulgências, crítica luterana de 1517 e Concílio de Trento, que mantém dogmas e corrige abusos; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Reforma Religiosa em três tempos: venda de indulgências, crítica luterana de 1517 e Concílio de Trento, que mantém dogmas e corrige abusos; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="ReformationDialectic" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="im-head-ref" />
     <text x="30" y="40" className="bi-kicker">REFORMA E CONTRARREFORMA · SÉC. XVI</text>
@@ -366,6 +375,7 @@ export function ReformationDialectic({ active }: Scene) {
         <text x={y === 1540 ? x + 8 : y === 1545 ? x - 8 : x} y="334" textAnchor={y === 1540 ? 'end' : y === 1545 ? 'start' : 'middle'} className="bi-tiny">{l}</text>
       </g>;
     })}
+    </g>
   </svg>;
 }
 
@@ -377,7 +387,9 @@ export function AbsolutismPaths({ active }: Scene) {
   const p = usePaced();
   const still = p(1).duration === 0;
   const on = (k: number) => active === k || active === 2;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Absolutismo: o direito divino de Bossuet e o contrato de Hobbes partem de bases diferentes e chegam ao mesmo poder absoluto; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Absolutismo: o direito divino de Bossuet e o contrato de Hobbes partem de bases diferentes e chegam ao mesmo poder absoluto; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="AbsolutismPaths" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="im-head-abs" />
     <text x="30" y="40" className="bi-kicker">ABSOLUTISMO · DUAS JUSTIFICATIVAS</text>
@@ -446,6 +458,7 @@ export function AbsolutismPaths({ active }: Scene) {
     </motion.text>
     {active === 2 && <motion.text x="310" y="318" textAnchor="middle" className="bi-hand-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 1.4)}>mesma conclusão</motion.text>}
     <text x="30" y="342" className="bi-foot">Esquema das duas teorias; o trono é metáfora do poder centralizado.</text>
+    </g>
   </svg>;
 }
 
@@ -472,7 +485,9 @@ export function EnlightenmentLamp({ active }: Scene) {
   ][active];
   // A pena percorre as quatro linhas da folha; sob movimento reduzido fica no fim da última.
   const quill = { x: [468, 504, 468, 504, 468, 504, 468, 490], y: [126, 126, 138, 138, 150, 150, 162, 162] };
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Iluminismo: da mesma base racionalista saem a separação dos poderes de Montesquieu, a soberania popular de Rousseau e a liberdade de expressão de Voltaire; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Iluminismo: da mesma base racionalista saem a separação dos poderes de Montesquieu, a soberania popular de Rousseau e a liberdade de expressão de Voltaire; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="EnlightenmentLamp" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <defs><marker id="im-head-ilu" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="im-up-head" /></marker></defs>
     <text x="30" y="40" className="bi-kicker">ILUMINISMO · SÉCULO XVIII</text>
@@ -544,6 +559,7 @@ export function EnlightenmentLamp({ active }: Scene) {
       <text x={active === 2 ? 590 : 30} y="276" textAnchor={active === 2 ? 'end' : 'start'} className="bi-hand-sm">{notes[1]}</text>
     </motion.g>
     <text x="30" y="342" className="bi-foot">Esquema das propostas; a lamparina é metáfora da base racionalista comum.</text>
+    </g>
   </svg>;
 }
 

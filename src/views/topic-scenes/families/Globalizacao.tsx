@@ -1,4 +1,5 @@
 import React from 'react';
+import { SocioEconomicIllustration } from './SocioEconomicIllustration';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { ArrowHead, Person, type Scene } from './cenaKit';
@@ -112,7 +113,9 @@ function SmartphoneChain({ active }: Scene) {
   const p = usePaced();
   const broken = active === 1;
   const seg = (i: number) => `M${STATIONS[i].x + 36} ${SY}C${STATIONS[i].x + 60} ${SY - 18} ${STATIONS[i + 1].x - 60} ${SY - 18} ${STATIONS[i + 1].x - 36} ${SY}`;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Cadeia global de valor do smartphone: design nos EUA, semicondutores em Taiwan e Coreia do Sul, montagem na China ou no Vietnã, distribuição no mundo; o gargalo da pandemia, o dilema custo e resiliência e a reconfiguração; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Cadeia global de valor do smartphone: design nos EUA, semicondutores em Taiwan e Coreia do Sul, montagem na China ou no Vietnã, distribuição no mundo; a escassez global de chips em 2020–2022, o dilema custo e resiliência e a reconfiguração; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="smartphone" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">CADEIA GLOBAL DE VALOR</text>
     <rect x="22" y="54" width="576" height="164" rx="14" className="gz-sea" />
@@ -187,7 +190,7 @@ function SmartphoneChain({ active }: Scene) {
         <g transform="translate(70 294)"><Chip s={0.8} /></g>
         <path d="M58 282l24 24M82 282l-24 24" className="bi-cross" />
         <text x="104" y="282" className="bi-small bi-strong">escassez de semicondutores</text>
-        <text x="104" y="298" className="bi-small">originada principalmente em Taiwan</text>
+        <text x="104" y="298" className="bi-small">choques globais de oferta e demanda</text>
         {[0, 1, 2, 3].map(k => <motion.g key={k} initial={{ opacity: 1 }} animate={{ opacity: 0.55 }} transition={p(0.5, 0.6 + k * 0.15)}>
           <Factory x={372 + k * 56} y={306} s={0.95} off />
           <path d={`M${366 + k * 56} 262v10M${372 + k * 56} 262v10`} className="gz-pause" />
@@ -230,6 +233,7 @@ function SmartphoneChain({ active }: Scene) {
       </g>}
     </motion.g>
     <text x="310" y="344" textAnchor="middle" className="bi-foot">{active === 3 ? 'reconfiguração, mais que reversão · mapa esquemático, sem escala' : 'mapa esquemático, sem escala'}</text>
+    </g>
   </svg>;
 }
 
@@ -258,7 +262,9 @@ function NetworkMap({ active }: Scene) {
     {[90, 150, 210, 270].map(y => <path key={y} d={`M24 ${y}H596`} />)}
     {[110, 210, 310, 410, 510].map(x => <path key={x} d={`M${x} 56V300`} />)}
   </g>;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Geografia das redes: nós e vazios, a hierarquia das cidades globais, os cabos submarinos e a localização dos data centers; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Geografia das redes: nós e vazios, a hierarquia das cidades globais, os cabos submarinos e a localização dos data centers; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="networks" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">{['NÓS E VAZIOS', 'CIDADES GLOBAIS', 'O FUNDO DO MAR', 'ONDE FICAM OS DATA CENTERS'][active]}</text>
     <ArrowHead id="gz-head-net" />
@@ -383,6 +389,7 @@ function NetworkMap({ active }: Scene) {
       <text x="566" y="316" textAnchor="end" className="bi-tiny">não só onde há mais usuários</text>
       <text x="566" y="330" textAnchor="end" className="bi-tiny">lógica diferente da indústria</text>
     </g>}
+    </g>
   </svg>;
 }
 
@@ -401,7 +408,9 @@ function Multilateral({ active }: Scene) {
   const p = usePaced();
   const atTable = active === 1;
   const soloX = 150;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Unilateralismo e multilateralismo: um país que age sozinho, o mesmo país à mesa com outros, as instituições do pós-guerra e o problema transfronteiriço que ninguém resolve sozinho; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Unilateralismo e multilateralismo: um país que age sozinho, o mesmo país à mesa com outros, as instituições do pós-guerra e o problema transfronteiriço que ninguém resolve sozinho; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="diplomacy" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">{['UNILATERALISMO', 'MULTILATERALISMO', 'INSTITUIÇÕES DO PÓS-1945', 'PROBLEMAS SEM FRONTEIRA'][active]}</text>
     <ArrowHead id="gz-head-multi" />
@@ -499,6 +508,7 @@ function Multilateral({ active }: Scene) {
       <text x="420" y="160" textAnchor="end" className="bi-hand">nenhum país resolve sozinho</text>
       <text x="420" y="178" textAnchor="end" className="bi-tiny">o problema não respeita fronteiras</text>
     </g>}
+    </g>
   </svg>;
 }
 
@@ -517,7 +527,9 @@ function Ring({ cx, cy, r, n, className }: { cx: number; cy: number; r: number; 
 function EuropeanUnion({ active }: Scene) {
   const p = usePaced();
   const lit = active === 3 ? [3, 4] : [active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`União Europeia: CECA de 1951, Tratado de Maastricht de 1992, o euro e a crise de 2010, refugiados a partir de 2015 e o Brexit em 2020; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`União Europeia: CECA de 1951, Tratado de Maastricht de 1992, o euro em recorte histórico de 2023–2025 e a crise de 2010, refugiados a partir de 2015 e o Brexit em 2020; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="europe" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">{['CARVÃO E AÇO', 'ALÉM DO COMÉRCIO', 'UMA MOEDA, SEM CÂMBIO PRÓPRIO', 'ONDE A INTEGRAÇÃO RANGE'][active]}</text>
     <ArrowHead id="gz-head-ue" />
@@ -598,7 +610,7 @@ function EuropeanUnion({ active }: Scene) {
     </g>}
 
     {active === 2 && <g>
-      <text x="150" y="72" textAnchor="middle" className="bi-panel-title">20 DOS 27 USAM O EURO</text>
+      <text x="150" y="72" textAnchor="middle" className="bi-panel-title">20 DOS 27 USAVAM O EURO</text>
       {Array.from({ length: 27 }, (_, k) => {
         const euro = k < 20;
         const x = 70 + (k % 9) * 20; const y = 100 + Math.floor(k / 9) * 24;
@@ -607,6 +619,7 @@ function EuropeanUnion({ active }: Scene) {
           {euro && <text x={x} y={y + 3.4} textAnchor="middle" className="gz-coin-text">€</text>}
         </motion.g>;
       })}
+      <text x="150" y="166" textAnchor="middle" className="bi-tiny">recorte histórico: 2023–2025</text>
       <text x="150" y="182" textAnchor="middle" className="bi-small">sem custo de conversão entre eles</text>
       <text x="150" y="206" textAnchor="middle" className="bi-small">mas nenhum ajusta o câmbio sozinho</text>
       <path d="M300 64V280" className="gz-divider" />
@@ -660,6 +673,7 @@ function EuropeanUnion({ active }: Scene) {
       <text x="580" y="140" textAnchor="end" className="bi-small bi-strong">Reino Unido</text>
       <text x="440" y="262" textAnchor="middle" className="bi-hand-sm">a primeira saída desde a fundação</text>
     </g>}
+    </g>
   </svg>;
 }
 

@@ -1,0 +1,22 @@
+.gi-plate{--gi-paper:#fff9ec;--gi-ink:#38423a;--gi-muted:#626553;--gi-earth:#d7bd91;--gi-land:#b7be8c;--gi-wine:#883a4b;--gi-blue:#527e8b;--gi-stone:#e1d2b3;--gi-leaf:#7d9d73;--gi-gold:#d4b363;--gi-sea:#bdd4d6;--gi-roof:#9d7360;--gi-snow:#faf8eb;--gi-conflict:#c28b79;--gi-border:#7a6550;--gi-person:#9c7a62;}
+.hg-figure>.gi-plate{width:100%;min-width:740px;max-width:none;}
+.gi-plate>text,.gi-plate>g text{fill:var(--gi-ink);font-family:Georgia,serif;}
+.gi-plate .gi-title{font:700 34px 'Kalam',cursive;fill:var(--gi-wine);}
+.gi-plate .gi-hand{font:600 22px 'Kalam',cursive;fill:var(--gi-wine);}
+.gi-plate .gi-thesis{font-size:20px;}
+.gi-plate .gi-label{font:700 19px Georgia,serif;}
+.gi-plate .gi-small{font:500 17px system-ui,sans-serif;fill:var(--gi-muted);}
+.gi-plate .gi-section{font:700 23px Georgia,serif;fill:var(--gi-wine);}
+.gi-plate .gi-foot{font:500 14px system-ui,sans-serif;fill:var(--gi-muted);}
+.gi-paper{fill:var(--gi-paper);stroke:var(--gi-earth);stroke-width:1.5;}
+.gi-grain{fill:none;stroke:var(--gi-earth);stroke-width:.7;opacity:.19;}
+.gi-underline{fill:none;stroke:var(--gi-gold);stroke-width:12;opacity:.36;stroke-linecap:round;}
+.gi-divider{stroke:var(--gi-earth);stroke-width:1.5;}
+.gi-land,.gi-earth,.gi-stone,.gi-roof,.gi-leaf,.gi-mountain,.gi-sea,.gi-slab,.gi-basin,.gi-person,.gi-field,.gi-ore,.gi-screen,.gi-sun,.gi-cloud,.gi-gold,.gi-conflict,.gi-occupied,.gi-blue-region{stroke:var(--gi-ink);stroke-width:1.5;stroke-linejoin:round;}
+.gi-land{fill:var(--gi-land);}.gi-earth,.gi-mountain{fill:var(--gi-earth);}.gi-stone{fill:var(--gi-stone);}.gi-roof{fill:var(--gi-roof);}.gi-leaf,.gi-field{fill:var(--gi-leaf);}.gi-sea{fill:var(--gi-sea);stroke:var(--gi-blue);}.gi-slab,.gi-ore{fill:var(--gi-roof);}.gi-basin{fill:var(--gi-gold);}.gi-person{fill:var(--gi-person);}.gi-screen,.gi-blue-region{fill:var(--gi-sea);}.gi-sun,.gi-gold{fill:var(--gi-gold);}.gi-cloud{fill:var(--gi-snow);stroke:var(--gi-blue);}.gi-conflict{fill:var(--gi-conflict);}.gi-occupied{fill:var(--gi-gold);stroke-dasharray:4 3;}
+.gi-fine,.gi-ink,.gi-wood,.gi-stratum,.gi-pointer,.gi-water-line,.gi-mountain-line,.gi-smoke{fill:none;stroke:var(--gi-ink);stroke-width:1.5;stroke-linecap:round;stroke-linejoin:round;}
+.gi-wood{stroke:var(--gi-roof);stroke-width:3;}.gi-water-line{stroke:var(--gi-blue);stroke-width:2;}.gi-stratum{stroke:var(--gi-roof);stroke-width:3;}.gi-pointer{stroke:var(--gi-wine);stroke-width:1.5;}.gi-mountain-line{stroke:var(--gi-roof);stroke-width:8;}.gi-snow{fill:var(--gi-snow);stroke:var(--gi-snow);stroke-width:3;}.gi-smoke{stroke:var(--gi-muted);stroke-width:7;opacity:.3;}.gi-river{fill:none;stroke:var(--gi-blue);stroke-width:6;stroke-linecap:round;}.gi-border{fill:none;stroke:var(--gi-border);stroke-width:1.6;stroke-dasharray:5 3;}.gi-grid{fill:none;stroke:var(--gi-blue);stroke-width:.8;opacity:.13;}.gi-route{fill:none;stroke:var(--gi-blue);stroke-width:3;stroke-linecap:round;}.gi-route-hot{stroke:var(--gi-wine);}.gi-tip{fill:var(--gi-ink);}
+.dark .gi-plate{--gi-paper:#253533;--gi-ink:#ebe5d4;--gi-muted:#c1c8b8;--gi-earth:#98876a;--gi-land:#74836a;--gi-wine:#efadb6;--gi-blue:#a8cbd1;--gi-stone:#7b8475;--gi-leaf:#7fa080;--gi-gold:#b9a06b;--gi-sea:#47696f;--gi-roof:#a78876;--gi-snow:#dce0d1;--gi-conflict:#ae7f77;--gi-border:#e1c7aa;--gi-person:#c9a183;}
+@media(prefers-reduced-motion:reduce){.gi-plate *{animation:none!important;transition:none!important;}}
+
+.hg-figure .gi-plate > .gi-analytical{width:746px;height:433px;min-width:0;max-width:none;}

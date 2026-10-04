@@ -1,3 +1,4 @@
+import { GeopoliticalPlate } from './GeopoliticalIllustration';
 import React from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -76,7 +77,7 @@ const NODES = [
 const EDGES = [[0, 1], [0, 2], [0, 3], [1, 4], [1, 5], [2, 6], [2, 7], [3, 8], [3, 9]] as const;
 const T_TICKS: [number, string, string][] = [[90, '2001', '11 de setembro'], [200, '2003', 'Iraque'], [350, 'anos 2010', 'Estado Islâmico'], [520, 'hoje', 'células e lobos solitários']];
 
-export function TerrorNetwork({ active }: Scene) {
+function TerrorNetworkDetail({ active }: Scene) {
   const p = usePaced();
   const net = active === 1 || active === 2;
   const cells = active === 2;
@@ -215,7 +216,7 @@ const CAPTION = [
   ['laicidade formal ≠ laicidade substantiva', 'sem religião oficial não quer dizer religião longe da política'],
 ];
 
-export function ReligionsMap({ active }: Scene) {
+function ReligionsMapDetail({ active }: Scene) {
   const p = usePaced();
   const zoom = active >= 2;
   const christ = active === 0;
@@ -237,15 +238,15 @@ export function ReligionsMap({ active }: Scene) {
       <Arrow d="M354 138Q370 110 390 108" on={islam} p={p} head="gp-r-head" delay={0.4} />
       <Arrow d="M356 152Q412 212 470 190" on={islam} p={p} head="gp-r-head" delay={0.6} />
       <motion.circle cx="418" cy="146" r="17" className="gp-ring" initial={false} animate={{ opacity: islam ? 1 : 0 }} transition={p(0.5, islam ? 1 : 0)} />
-      <motion.g initial={false} animate={{ opacity: christ ? 1 : 0 }} transition={p(0.4, christ ? 0.3 : 0)}>
+      {christ && <motion.g initial={false} animate={{ opacity: christ ? 1 : 0 }} transition={p(0.4, christ ? 0.3 : 0)}>
         <circle cx={J[0]} cy={J[1]} r="5" className="gp-origin" />
         <text x="352" y="128" className="bi-small bi-strong">Oriente Médio · origem</text>
         <text x="306" y="86" textAnchor="middle" className="bi-tiny">Império Romano</text>
         <text x="214" y="130" textAnchor="middle" className="bi-tiny">colonização</text>
         <text x="160" y="186" textAnchor="middle" className="bi-small bi-strong">Américas</text>
         <text x="316" y="206" textAnchor="middle" className="bi-tiny">África</text>
-      </motion.g>
-      <motion.g initial={false} animate={{ opacity: islam ? 1 : 0 }} transition={p(0.4, islam ? 0.3 : 0)}>
+      </motion.g>}
+      {islam && <motion.g initial={false} animate={{ opacity: islam ? 1 : 0 }} transition={p(0.4, islam ? 0.3 : 0)}>
         <circle cx="349.6" cy="144.7" r="5" className="gp-origin" />
         <text x="342" y="170" textAnchor="end" className="bi-small bi-strong">Arábia · origem</text>
         <text x="288" y="122" textAnchor="end" className="bi-tiny">Norte da África</text>
@@ -254,7 +255,7 @@ export function ReligionsMap({ active }: Scene) {
         <text x="440" y="152" className="bi-tiny">fica na Índia</text>
         <text x="482" y="222" textAnchor="middle" className="bi-small bi-strong">Indonésia</text>
         <text x="482" y="236" textAnchor="middle" className="bi-tiny">mais muçulmanos</text>
-      </motion.g>
+      </motion.g>}
     </motion.g></g>
 
     <motion.g initial={false} animate={{ opacity: active === 2 ? 1 : 0, scale: active === 2 ? 1 : 0.85 }} transition={p(0.6, active === 2 ? 0.7 : 0)} style={{ transformBox: 'view-box', transformOrigin: `${J[0]}px ${J[1]}px` }}>
@@ -325,7 +326,7 @@ function Ballot({ x, y, on, p, delay }: { x: number; y: number; on: boolean; p: 
 // redesenhadas no século XX, a Ucrânia de 2014 a 2022, a reação de Finlândia
 // e Suécia (o efeito oposto ao objetivo que a Rússia declarou) e os dois
 // referendos que o resumo contrapõe — com aval de Londres e sem aval de Madri.
-export function EuropeTensions({ active }: Scene) {
+function EuropeTensionsDetail({ active }: Scene) {
   const p = usePaced();
   const on = (k: number) => active === k;
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Tensões geopolíticas na Europa: fronteiras do século XX, Ucrânia de 2014 a 2022, Finlândia e Suécia na Otan e referendos da Escócia e da Catalunha; recorte ${active + 1} em foco`}>
@@ -467,7 +468,7 @@ const LA_PRODUCTS = [
 const MERCOSUL = [[213.6, 178], [192, 208.8], [197.4, 235.4], [173, 245.6]] as const;
 const PACIFICO = [[73.2, 80], [148.8, 131.8], [143.4, 172.4], [156.9, 228.4]] as const;
 
-export function LatinAmericaExports({ active }: Scene) {
+function LatinAmericaExportsDetail({ active }: Scene) {
   const p = usePaced();
   const on = (k: number) => active === k;
   return <svg viewBox="0 0 620 360" role="img" aria-label={`América Latina: pauta primário-exportadora da colônia às independências, substituição de importações de 1930 a 1970, Mercosul e Aliança do Pacífico, e a China como novo parceiro; recorte ${active + 1} em foco`}>
@@ -597,7 +598,7 @@ const BLOBS = [
 const ROUTE_PTS = [[[169, 189], [150, 194], [133, 200]], [[169, 189], [196, 192], [224, 200]], [[182, 224], [196, 234], [210, 244]]];
 const ROUTES = ROUTE_PTS.map(pts => `M${pts.map(q => q.join(' ')).join('L')}`);
 
-export function AfricaToday({ active }: Scene) {
+function AfricaTodayDetail({ active }: Scene) {
   const p = usePaced();
   const on = (k: number) => active === k;
   return <svg viewBox="0 0 620 360" role="img" aria-label={`África no mundo atual: fronteiras da Conferência de Berlim cortando grupos, diversidade de trajetórias, empréstimos chineses garantidos por recursos e maldição dos recursos; recorte ${active + 1} em foco`}>
@@ -722,3 +723,23 @@ export const HEADERS_LOTE11: Record<string, string> = {
   'summary-geografia-geopolitica-e-geoeconomia-da-america-latina': 'pauta exportadora e blocos',
   'summary-geografia-africa-no-mundo-atual': 'herança colonial e recursos',
 };
+
+export function TerrorNetwork(props: Scene) {
+  return <GeopoliticalPlate kind="terror" active={props.active} detail={TerrorNetworkDetail(props)} />;
+}
+
+export function ReligionsMap(props: Scene) {
+  return <GeopoliticalPlate kind="religion" active={props.active} detail={ReligionsMapDetail(props)} />;
+}
+
+export function EuropeTensions(props: Scene) {
+  return <GeopoliticalPlate kind="europe" active={props.active} detail={EuropeTensionsDetail(props)} />;
+}
+
+export function LatinAmericaExports(props: Scene) {
+  return <GeopoliticalPlate kind="latin" active={props.active} detail={LatinAmericaExportsDetail(props)} />;
+}
+
+export function AfricaToday(props: Scene) {
+  return <GeopoliticalPlate kind="africa" active={props.active} detail={AfricaTodayDetail(props)} />;
+}

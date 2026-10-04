@@ -1,3 +1,4 @@
+import { GeopoliticalPlate } from './GeopoliticalIllustration';
 import React from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -122,7 +123,7 @@ const STEPS = [
   { label: 'IA · veículos elétricos', icon: <g><path d="M-13 4v-5l4-6h14l6 6h2v5Z" className="om-icon-fill" /><circle cx="-7" cy="5" r="3" className="om-icon-wheel" /><circle cx="8" cy="5" r="3" className="om-icon-wheel" /><path d="M1 -12l-4 7h4l-2 6 6-8h-4l2-5Z" className="om-bolt" /></g> },
 ];
 
-export function AsiaAscent({ active }: Scene) {
+function AsiaAscentDetail({ active }: Scene) {
   const p = usePaced();
   const fade = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.45, active === k ? 0.1 : 0) });
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Geoeconomia da Ásia: a China sobe na cadeia de valor desde 1978, projeta o Cinturão e Rota, convive com focos de tensão e divide a produção no China plus one; recorte ${active + 1} em foco`}>
@@ -375,7 +376,7 @@ const JORDAN: LL[] = [[35.65, 33.2], [35.6, 32.8], [35.57, 32.3], [35.55, 31.75]
 
 const ME_PANEL_X = 358;
 
-export function MiddleEastMap({ active }: Scene) {
+function MiddleEastMapDetail({ active }: Scene) {
   const p = usePaced();
   const fade = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.45, active === k ? 0.1 : 0) });
   const [hx, hy] = PM(56.45, 26.55);
@@ -477,9 +478,9 @@ export function MiddleEastMap({ active }: Scene) {
         </motion.g>;
       })}
       <Place P={PM} ll={[40, 38.9]} text="GAP" className="om-place om-strong" />
-      <Place P={PM} ll={[44.2, 31.2]} text="Eufrates" className="om-river-label" anchor="end" />
+      <Place P={PM} ll={[44.2, 29.6]} text="Eufrates" className="om-river-label" anchor="middle" />
       <Place P={PM} ll={[44.9, 34.6]} text="Tigre" className="om-river-label" anchor="start" />
-      <Place P={PM} ll={[35.95, 32.1]} text="Jordão" className="om-river-label" anchor="start" />
+      <Place P={PM} ll={[35.4, 30.5]} text="Jordão" className="om-river-label" anchor="end" />
       <Drop x={PM(35.25, 31.9)[0] - 2} y={PM(35.25, 31.9)[1] + 16} s={0.9} className="om-water" />
     </motion.g>
 
@@ -581,7 +582,7 @@ const PAL_BORDERS: LL[][] = [
 const SETTLEMENTS: LL[] = [[35.25, 32.36], [35.1, 32.3], [35.45, 32.3], [35.35, 32.44], [35.47, 31.92], [35.4, 31.72], [35.12, 31.62], [35.28, 31.55], [35.2, 31.45], [35.4, 31.48], [35.47, 32.12]];
 const PAL_STOPS = [{ x: 246, year: '1917' }, { x: 352, year: '1947' }, { x: 458, year: '1948 · 1967' }, { x: 566, year: 'hoje' }];
 
-export function PalestineTimeline({ active }: Scene) {
+function PalestineTimelineDetail({ active }: Scene) {
   const p = usePaced();
   const fade = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.45, active === k ? 0.1 : 0) });
   const [jx, jy] = PP(35.22, 31.78);
@@ -772,7 +773,7 @@ const FATES = [
 ];
 const AW_PANEL = 380;
 
-export function ArabConflicts({ active }: Scene) {
+function ArabConflictsDetail({ active }: Scene) {
   const p = usePaced();
   const fade = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.45, active === k ? 0.1 : 0) });
   const [syx, syy] = PW(38.3, 35.1);
@@ -921,7 +922,7 @@ export function ArabConflicts({ active }: Scene) {
         <text x={AW_PANEL + 44} y={105 + k * 48} className="bi-small bi-strong">{a as string}</text>
         <text x={AW_PANEL + 44} y={119 + k * 48} className="bi-tiny">{b as string}</text>
       </motion.g>)}
-      <text x={AW_PANEL + 8} y="306" className="bi-hand-sm">mesmos gatilhos, países</text>
+      <text x={AW_PANEL + 8} y="299" className="bi-hand-sm">mesmos gatilhos, países</text>
       <text x={AW_PANEL + 8} y="320" className="bi-hand-sm">diferentes</text>
     </motion.g>
     <motion.g {...fade(1)}>
@@ -993,3 +994,19 @@ export const HEADERS_LOTE12: Record<string, string> = {
   'summary-geografia-questao-palestina': 'território e tempo',
   'summary-geografia-conflitos-no-mundo-arabe': 'desfechos e atores',
 };
+
+export function AsiaAscent(props: Scene) {
+  return <GeopoliticalPlate kind="asia" active={props.active} detail={AsiaAscentDetail(props)} />;
+}
+
+export function MiddleEastMap(props: Scene) {
+  return <GeopoliticalPlate kind="middle" active={props.active} detail={MiddleEastMapDetail(props)} />;
+}
+
+export function PalestineTimeline(props: Scene) {
+  return <GeopoliticalPlate kind="palestine" active={props.active} detail={PalestineTimelineDetail(props)} />;
+}
+
+export function ArabConflicts(props: Scene) {
+  return <GeopoliticalPlate kind="arab" active={props.active} detail={ArabConflictsDetail(props)} />;
+}

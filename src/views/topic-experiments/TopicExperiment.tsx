@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import { MOTION_DURATION, MOTION_EASE } from '../../design-system/motion/tokens';
 import { topicExperiments } from './catalog';
 import './TopicExperiment.css';
+import { ExceptionalSceneWindow } from '../visual-instruments/ExceptionalHumanitiesIllustration';
 
 
 function useInkMotion() {
@@ -41,9 +42,18 @@ function Coordinates() {
   const parallel = `M${cx - radius} ${y}H${cx + radius}`;
   const hemisphere = `${latitude < 0 ? 'Sul' : latitude > 0 ? 'Norte' : 'no Equador'}`;
   return <Studio title="Um endereço sobre a esfera" note="Mova as coordenadas. A latitude parte do Equador; a longitude, de Greenwich.">
-    <svg className="ts-coord" viewBox="0 0 480 456" role="img" aria-label={`Ponto a ${Math.abs(latitude)} graus ${latitude < 0 ? 'sul' : 'norte'} e ${Math.abs(longitude)} graus ${longitude < 0 ? 'oeste' : 'leste'}; 1 grau de latitude vale cerca de 111 km e 1 grau de longitude, nesta latitude, cerca de ${kmLongitude} km`}>
-      <defs><radialGradient id={id} cx="32%" cy="24%"><stop stopColor="var(--vs-paper-strong)"/><stop offset="1" stopColor="var(--vs-blue)" stopOpacity=".2"/></radialGradient></defs>
+    <ExceptionalSceneWindow label="Percorrer o globo e a comparação dos graus" coordinate><svg className="ts-coord" viewBox="0 0 480 456" role="img" aria-label={`Ponto a ${Math.abs(latitude)} graus ${latitude < 0 ? 'sul' : 'norte'} e ${Math.abs(longitude)} graus ${longitude < 0 ? 'oeste' : 'leste'}; 1 grau de latitude vale cerca de 111 km e 1 grau de longitude, nesta latitude, cerca de ${kmLongitude} km`}>
+      <defs><clipPath id={`${id}-globe`}><circle cx={cx} cy={cy} r={R}/></clipPath><radialGradient id={id} cx="32%" cy="24%"><stop stopColor="var(--vs-paper-strong)"/><stop offset="1" stopColor="var(--vs-blue)" stopOpacity=".2"/></radialGradient></defs>
       <circle cx={cx} cy={cy} r={R} fill={`url(#${id})`} stroke="currentColor" strokeWidth="1.5"/>
+      <g clipPath={`url(#${id}-globe)`} fill="color-mix(in srgb,var(--vs-green) 24%,var(--vs-paper))" stroke="var(--vs-green)" strokeWidth="1.2">
+        {/* Contornos esquemáticos para orientar a leitura, sem função cartográfica. */}
+        <path d="M221 73l21-14 29 4 13-12 31 5 21 22 35 5 18 32-21 13-29-9-20 16-16-7-13-22-18-5-15 11-13-8 5-19-21-6Z"/>
+        <path d="M241 130l23-9 27 15 18 32-11 24-11 11-8 34-17 15-11-28-10-20-6-29-15-22Z"/>
+        <path d="M153 85l23-16 21 3 10 19-12 15-15-1-14 22-14-12-18-3Z"/>
+        <path d="M148 143l23 5 18 25-9 31-13 21-7 29-10-24-11-18 3-24-11-23Z"/>
+        <path d="M319 245l24-7 26 9 5 15-20 13-30-5Z"/>
+        <path d="M164 282q71-13 146-1l25 17-123 16Z"/>
+      </g>
       {[0.28, 0.58, 0.85].map(k => <ellipse key={k} cx={cx} cy={cy} rx={R * k} ry={R} className="ts-guide"/>)}
       {[-60, -30, 30, 60].map(lat => { const py = cy - R * Math.sin(lat * r); const half = R * Math.cos(lat * r); return <path key={lat} d={`M${cx - half} ${py}H${cx + half}`} className="ts-guide"/>; })}
       <path d={`M${cx - R - 14} ${cy}H${cx + R}M${cx} ${cy - R}V${cy + R + 12}`} className="ts-reference"/>
@@ -63,6 +73,12 @@ function Coordinates() {
         <text x="38" y="6" className="ts-coord-cardinal">L</text>
         <text x="-38" y="6" textAnchor="end" className="ts-coord-cardinal">O</text>
       </g>
+      <path d="M385 179Q369 182 355 190" fill="none" stroke="var(--vs-burgundy)" strokeWidth="1.5" strokeDasharray="3 3"/>
+      <text x="382" y="169" fill="var(--vs-burgundy)" fontFamily="Kalam, cursive" fontSize="15">um lugar,</text>
+      <text x="382" y="198" fill="var(--vs-burgundy)" fontFamily="Kalam, cursive" fontSize="15">dois ângulos</text>
+      <path d="M41 250Q115 303 240 294" fill="none" stroke="var(--vs-burgundy)" strokeWidth="1.5" strokeDasharray="3 3"/>
+      <text x="24" y="231" fill="var(--vs-burgundy)" fontFamily="Kalam, cursive" fontSize="15">meridianos</text>
+      <text x="24" y="260" fill="var(--vs-burgundy)" fontFamily="Kalam, cursive" fontSize="15">convergem</text>
       <text x="24" y="58" className="ts-coord-note">hemisfério</text>
       <text x="24" y="80" className="ts-coord-label">{latitude === 0 ? 'no Equador' : hemisphere}</text>
       <text x="24" y="102" className="ts-coord-label">{longitude === 0 ? 'em Greenwich' : longitude < 0 ? 'Oeste' : 'Leste'}</text>
@@ -78,7 +94,7 @@ function Coordinates() {
       <text x={168 + bar + 10} y="392" className="ts-coord-value">{kmLongitude} km</text>
       <text x="24" y="426" className="ts-coord-note">o grau de latitude não encolhe;</text>
       <text x="24" y="446" className="ts-coord-note">o de longitude encolhe até zero nos polos</text>
-    </svg>
+    </svg></ExceptionalSceneWindow>
     <div className="ts-sliders">
       <label>Latitude: {Math.abs(latitude)}° {latitude < 0 ? 'S' : latitude > 0 ? 'N' : ''}<input type="range" min="-80" max="80" value={latitude} onChange={e=>setLatitude(Number(e.target.value))}/></label>
       <label>Longitude: {Math.abs(longitude)}° {longitude < 0 ? 'O' : longitude > 0 ? 'L' : ''}<input type="range" min="-90" max="90" value={longitude} onChange={e=>setLongitude(Number(e.target.value))}/></label>

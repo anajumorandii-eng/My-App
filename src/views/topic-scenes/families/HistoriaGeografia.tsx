@@ -3,6 +3,8 @@ import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
 import './HistoriaGeografia.css';
+import { FrenchRevolutionPlate, ClimatePlate } from './HumanitiesPrototypes';
+import { HumanitiesCorePlate } from './HumanitiesCorePlate';
 import './GeografiaFisica.css';
 import { ClimateMap, DomainsMap, EarthSeasons, ReliefProfile, RockCycle, SoilProfiles } from './GeografiaFisica';
 import './BrasilImperio.css';
@@ -110,53 +112,8 @@ function paced(t: SceneTransition, duration: number, delay = 0) {
   return t.duration === 0 ? t : { ...t, duration, delay };
 }
 
-function FrenchRevolution({ active, t }: { active: number; t: SceneTransition }) {
-  const stops = [88, 235, 382, 529];
-  const labels = [
-    ['crise fiscal', '1789'],
-    ['Assembleia', 'jun. 1789'],
-    ['Bastilha', 'jul. 1789'],
-    ['Terror', '1793–94'],
-  ];
-  // Ícones desenhados para cada elo: déficit, juramento da Assembleia,
-  // fortaleza e guilhotina. O elo ativo acende; os anteriores ficam acesos
-  // porque a cadeia é cumulativa — o Terror não se explica sem os três antes.
-  const icons = [
-    <g key="fiscal"><path d="M-20 22h40M-16 22V12h9v10M-3 22V4h9v18M10 22V-4h9v26" className="hg-icon-coin" /><path d="M-24 -18l14 12 10-7 22 18" className="hg-icon-down" /><path d="M16 1l6 4-1-7" className="hg-icon-down" /></g>,
-    <g key="assembleia"><path d="M-24 -6L0 -22L24 -6Z" className="hg-icon-roof" /><path d="M-20 -6h40v4h-40zM-16 -2v22M-6 -2v22M6 -2v22M16 -2v22M-22 20h44" className="hg-icon-stone" /></g>,
-    <g key="bastilha"><path d="M-22 22V-8h-4v-8h7v5h5v-5h6v5h5v-5h6v5h5v-5h7v8h-4v30Z" className="hg-icon-stone" /><path d="M-6 22v-12a6 6 0 0 1 12 0v12" className="hg-icon-door" /><path d="M-15 -2h5v6h-5zM10 -2h5v6h-5z" className="hg-icon-door" /></g>,
-    <g key="terror"><path d="M-14 24V-20M14 24V-20M-18 -20h36M-20 24h40" className="hg-icon-wood" /><path d="M-12 -14h24l-24 12Z" className="hg-icon-blade" /></g>,
-  ];
-  const progress = active / 3;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Revolução Francesa: crise fiscal, Assembleia Nacional, Bastilha e Terror; etapa ${active + 1} destacada`}>
-    <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
-    <text x="30" y="43" className="hg-kicker">FRANÇA · 1789–1794</text>
-    <text x="590" y="43" textAnchor="end" className="hg-hand">elo a elo</text>
-    {stops.map((x, i) => <motion.g key={`icon-${x}`} className="hg-icon" initial={false}
-      animate={{ opacity: i <= active ? 1 : 0.35, y: i === active ? -4 : 0 }} transition={paced(t, 0.5, i === active ? 0.35 : 0)}>
-      <g transform={`translate(${x} 112)`}>{icons[i]}</g>
-    </motion.g>)}
-    <path d="M88 180H529" className="hg-timeline" />
-    <motion.path d="M88 180H529" className="hg-timeline-progress" initial={false} animate={{ pathLength: Math.max(progress, 0.001) }} transition={paced(t, 0.9)} />
-    {stops.map((x, i) => <g key={x} className={i === active ? 'hg-stop hg-stop-active' : i < active ? 'hg-stop hg-stop-past' : 'hg-stop'}>
-      <circle cx={x} cy="180" r="21" />
-      <text x={x} y="186" textAnchor="middle" className="hg-number">{i + 1}</text>
-      <text x={x} y="224" textAnchor="middle" className="hg-date">{labels[i][1]}</text>
-      <text x={x} y="246" textAnchor="middle" className="hg-label">{labels[i][0]}</text>
-    </g>)}
-    <motion.g initial={false} animate={{ x: stops[active] - stops[0] }} transition={paced(t, 0.9)}>
-      <circle cx="88" cy="180" r="30" className="hg-cockade-ring" />
-    </motion.g>
-    <motion.g initial={false} animate={{ opacity: active >= 1 ? 1 : 0.25 }} transition={paced(t, 0.4, 0.5)}>
-      <path d="M88 262V274H235V262" className="hg-bracket" />
-      <text x="161" y="293" textAnchor="middle" className="hg-annotation">conflito fiscal e político</text>
-    </motion.g>
-    <motion.g initial={false} animate={{ opacity: active >= 3 ? 1 : 0.25 }} transition={paced(t, 0.4, 0.6)}>
-      <path d="M382 262V274H529V262" className="hg-bracket hg-bracket-late" />
-      <text x="455" y="293" textAnchor="middle" className="hg-annotation">radicalização, sem causa única</text>
-    </motion.g>
-    <text x="30" y="332" className="hg-footnote">guerra externa + desconfiança interna → contexto do Terror</text>
-  </svg>;
+function FrenchRevolution({ active }: { active: number; t: SceneTransition }) {
+  return <FrenchRevolutionPlate active={active}/>;
 }
 
 function ProjectionComparison({ active, t }: { active: number; t: SceneTransition }) {
@@ -167,7 +124,7 @@ function ProjectionComparison({ active, t }: { active: number; t: SceneTransitio
   // latitude; na equivalente achata sem mudar de área (π·11·5,8 ≈ π·8²).
   const conformal = [[118, 12], [141, 8.5], [166, 6], [191, 8.5], [214, 12]];
   const equalArea = [[130, 11, 5.8], [166, 8, 8], [202, 11, 5.8]];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Propriedades cartográficas comparadas: conforme preserva forma local, equivalente preserva área, equidistante preserva distâncias desde um centro; ${titles[active].toLowerCase()} selecionada`}>
+  return <HumanitiesCorePlate kind="projection" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Propriedades cartográficas comparadas: conforme preserva forma local, equivalente preserva área, equidistante preserva distâncias desde um centro; ${titles[active].toLowerCase()} selecionada`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
     <text x="30" y="39" className="hg-kicker">A ESCOLHA DA PROJEÇÃO MUDA O QUE SE PRESERVA</text>
     {centers.map((x, i) => <g key={x} className={active === i ? 'hg-projection hg-projection-active' : 'hg-projection'}>
@@ -205,7 +162,7 @@ function ProjectionComparison({ active, t }: { active: number; t: SceneTransitio
     </g>)}
     <text x="30" y="324" className="hg-footnote">Círculos: o mesmo círculo do globo, redesenhado por cada projeção.</text>
     <text x="30" y="342" className="hg-footnote">Esquemas de propriedades; não são mapas para medir lugares.</text>
-  </svg>;
+  </svg>}</HumanitiesCorePlate>;
 }
 
 function IndustrialRevolution({ active, t }: { active: number; t: SceneTransition }) {
@@ -213,7 +170,7 @@ function IndustrialRevolution({ active, t }: { active: number; t: SceneTransitio
   // relação que o capítulo ensina (cercamento → mão de obra disponível), e
   // por isso o movimento só acontece a partir do segundo recorte.
   const workers = [60, 90, 120];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Revolução Industrial: cercamentos geram trabalho assalariado e capital; condições fabris documentadas e pressão social contribuem para leis fabris; recorte ${active + 1} destacado`}>
+  return <HumanitiesCorePlate kind="industry" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Revolução Industrial: cercamentos geram trabalho assalariado e capital; condições fabris documentadas e pressão social contribuem para leis fabris; recorte ${active + 1} destacado`}>
     <defs><marker id="hg-arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4 0 8Z" className="hg-arrowhead" /></marker></defs>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
     <text x="28" y="39" className="hg-kicker">INGLATERRA · TRABALHO, FÁBRICA E REFORMA</text>
@@ -261,51 +218,11 @@ function IndustrialRevolution({ active, t }: { active: number; t: SceneTransitio
     <path d="M416 289H586" className="hg-bracket" />
     <text x="500" y="307" textAnchor="middle" className="hg-small">documentação + pressão social</text>
     <text x="28" y="337" className="hg-footnote">A reforma levou décadas; a lei não surgiu automaticamente da fábrica.</text>
-  </svg>;
+  </svg>}</HumanitiesCorePlate>;
 }
 
-function RainMechanisms({ active, t }: { active: number; t: SceneTransition }) {
-  const centers = [108, 310, 512];
-  const titles = ['CONVECTIVA', 'OROGRÁFICA', 'FRONTAL'];
-  // A parcela de ar percorre o caminho que a obriga a subir; só ao chegar lá
-  // em cima a nuvem se fecha e a chuva cai. A ordem — subir, esfriar,
-  // condensar — é o conteúdo, então a nuvem espera a parcela.
-  const paths = [
-    (x: number) => ({ cx: [x, x, x], cy: [228, 180, 140] }),
-    (x: number) => ({ cx: [x - 74, x - 46, x - 28], cy: [218, 178, 132] }),
-    (x: number) => ({ cx: [x - 60, x - 16, x + 10], cy: [205, 172, 140] }),
-  ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Chuva convectiva por ar aquecido, orográfica por relevo e frontal pelo encontro de massas de ar; ${titles[active].toLowerCase()} selecionada`}>
-    <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
-    <text x="28" y="39" className="hg-kicker">TRÊS CAMINHOS PARA O AR ÚMIDO SUBIR</text>
-    {centers.map((x, i) => {
-      const on = active === i;
-      const route = paths[i](x);
-      const cloud = paced(t, 0.5, on ? 1.1 : 0);
-      return <g key={x} className={on ? 'hg-projection hg-projection-active' : 'hg-projection'}>
-        <rect x={x - 91} y="55" width="182" height="255" rx="13" className="hg-panel" />
-        <text x={x} y="82" textAnchor="middle" className="hg-panel-title">{titles[i]}</text>
-        {i === 2 && <path d={`M${x - 72} 237 L${x - 72} 222 q34 -2 64 -44 q30 -38 72 -44 V237Z`} className="hg-cold-air" />}
-        <path d={`M${x - 72} 237H${x + 72}`} className="hg-ground-line" />
-        {i === 0 && <path d={`M${x - 44} 231q-4-6 0-12t0-12m25 24q-4-6 0-12t0-12m25 24q-4-6 0-12t0-12`} className="hg-heat" />}
-        {i === 1 && <><path d={`M${x - 67} 237l65-98 64 98Z`} className="hg-mountain" /><path d={`M${x - 14} 157l12-18 12 18-6-2-6 4-6-4Z`} className="hg-snow" />
-          <text x={x - 84} y="260" className="hg-small">barlavento</text><text x={x + 30} y="256" className="hg-small">sotavento</text><text x={x + 30} y="268" className="hg-small">seco</text></>}
-        {i === 2 && <><text x={x + 26} y="222" className="hg-small">ar frio</text><text x={x - 84} y="150" className="hg-small hg-warm-label">ar quente</text></>}
-        <path d={`M${route.cx[0]} ${route.cy[0]} L${route.cx[1]} ${route.cy[1]} L${route.cx[2]} ${route.cy[2]}`} className="hg-route" />
-        <motion.circle r="6" className={i === 2 ? 'hg-parcel hg-parcel-warm' : 'hg-parcel'} initial={false}
-          animate={on && t.duration !== 0 ? { cx: route.cx, cy: route.cy } : { cx: route.cx[2], cy: route.cy[2] }}
-          transition={paced(t, 1.1)} />
-        <motion.path d={`M${route.cx[2] - 30} ${route.cy[2] - 8}q-5-17 14-20 11-14 26-3 19-3 24 16 14 9 2 21h-58q-16-3-8-14Z`}
-          className="hg-cloud" initial={false} animate={{ opacity: on ? 1 : 0.7, scale: on ? 1 : 0.92 }} transition={cloud}
-          style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />
-        <motion.g initial={false} animate={{ opacity: on ? 1 : 0.5, y: on ? 4 : 0 }} transition={paced(t, 0.5, on ? 1.5 : 0)}>
-          <path d={`M${route.cx[2] - 16} ${route.cy[2] + 20}l-4 12m18-12-4 12m18-12-4 12`} className="hg-rain" />
-        </motion.g>
-        <text x={x} y="287" textAnchor="middle" className="hg-preserve">{['aquecimento', 'barreira do relevo', 'massas em encontro'][i]}</text>
-      </g>;
-    })}
-    <text x="28" y="335" className="hg-footnote">A causa da ascensão distingue os tipos; eles podem ocorrer em regiões diferentes.</text>
-  </svg>;
+function RainMechanisms({ active }: { active: number; t: SceneTransition }) {
+  return <ClimatePlate active={active}/>;
 }
 
 
@@ -321,7 +238,7 @@ function Navigations({ active, t }: { active: number; t: SceneTransition }) {
   const on = (i: number) => active >= i;
   const route = [255.8, 225.2, 210.8, 225.2, 272, 326, 362, 405.2, 441.2, 459.2, 498.8, 562.9];
   const routeY = [52.7, 105.6, 163.2, 228, 292.8, 325.2, 328.8, 307.2, 264, 206.4, 170.4, 151.5];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Grandes Navegações: tecnologia náutica, rota do Cabo até a Índia, pau-brasil por escambo e colonização após ameaças de invasão; elo ${active + 1} destacado`}>
+  return <HumanitiesCorePlate kind="navigation" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Grandes Navegações: tecnologia náutica, rota do Cabo até a Índia, pau-brasil por escambo e colonização após ameaças de invasão; elo ${active + 1} destacado`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-sea" />
     <text x="30" y="36" className="hg-kicker">PORTUGAL · XV–XVI</text>
     <text x="590" y="36" textAnchor="end" className="hg-hand">elo a elo</text>
@@ -362,7 +279,7 @@ function Navigations({ active, t }: { active: number; t: SceneTransition }) {
       <text x="190" y="296" className="hg-hand-small">ameaças → colonização, 1530</text>
     </motion.g>
     <text x="30" y="344" className="hg-footnote">Contornos simplificados; rota esquemática.</text>
-  </svg>;
+  </svg>}</HumanitiesCorePlate>;
 }
 
 function Colonization({ active, t }: { active: number; t: SceneTransition }) {
@@ -375,7 +292,7 @@ function Colonization({ active, t }: { active: number; t: SceneTransition }) {
     { label: 'epidemias', x: 450 },
     { label: 'oposição jesuíta', x: 510 },
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Montagem da colonização: resistência indígena, epidemias e oposição jesuíta só juntas explicam a passagem ao tráfico transatlântico; fator ${active + 1} destacado`}>
+  return <HumanitiesCorePlate kind="colonization" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Montagem da colonização: resistência indígena, epidemias e oposição jesuíta só juntas explicam a passagem ao tráfico transatlântico; fator ${active + 1} destacado`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
     <text x="30" y="40" className="hg-kicker">MÃO DE OBRA NA COLÔNIA · SÉCULO XVI</text>
     <path d="M296 300h48l-24-86Z" className="hg-pivot" />
@@ -383,10 +300,6 @@ function Colonization({ active, t }: { active: number; t: SceneTransition }) {
       <path d="M130 214H510" className="hg-beam" />
       <path d="M150 214l-30 50h100l-30-50M490 214l-30 50h100l-30-50" className="hg-rope" />
       <path d="M110 264h120a60 14 0 0 1-120 0ZM410 264h120a60 14 0 0 1-120 0Z" className="hg-pan" />
-      <text x="170" y="300" textAnchor="middle" className="hg-label">escravização</text>
-      <text x="170" y="316" textAnchor="middle" className="hg-label">indígena</text>
-      <text x="470" y="300" textAnchor="middle" className="hg-label">tráfico transatlântico</text>
-      <text x="470" y="316" textAnchor="middle" className="hg-label">de africanos</text>
       {factors.map((f, k) => {
         const present = all || active === k;
         return <motion.g key={f.label} initial={false} animate={{ y: present ? 0 : -118, opacity: present ? 1 : 0.35 }} transition={paced(t, 0.6, all ? k * 0.2 : 0)}>
@@ -397,12 +310,16 @@ function Colonization({ active, t }: { active: number; t: SceneTransition }) {
         </motion.g>;
       })}
     </motion.g>
+      <text x="170" y="300" textAnchor="middle" className="hg-label">escravização</text>
+      <text x="170" y="316" textAnchor="middle" className="hg-label">indígena</text>
+      <text x="470" y="300" textAnchor="middle" className="hg-label">tráfico transatlântico</text>
+      <text x="470" y="316" textAnchor="middle" className="hg-label">de africanos</text>
     {factors.map((f, k) => <text key={f.label} x={f.x} y={160 + (k % 2) * 16} textAnchor="middle" className={all || active === k ? 'hg-factor hg-factor-on' : 'hg-factor'}>{f.label}</text>)}
     <motion.text x="320" y="90" textAnchor="middle" className="hg-hand" initial={false} animate={{ opacity: 1 }} key={all ? 'all' : 'one'} transition={paced(t, 0.4, 0.8)}>
       {all ? 'juntos, inclinam a balança' : 'sozinho, não basta'}
     </motion.text>
     <text x="30" y="344" className="hg-footnote">Metáfora: sem peso medido.</text>
-  </svg>;
+  </svg>}</HumanitiesCorePlate>;
 }
 
 function ColonialRevolts({ active, t }: { active: number; t: SceneTransition }) {
@@ -413,7 +330,7 @@ function ColonialRevolts({ active, t }: { active: number; t: SceneTransition }) 
   // em Minas; artesão, soldado, escravizado e liberto na Bahia.
   const elite = [120, 150, 180];
   const popular = [[404, 'artesão'], [448, 'soldado'], [492, 'escravizado'], [536, 'liberto']] as const;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Crise do antigo sistema colonial: Inconfidência Mineira (1789) e Conjuração Baiana (1798) com composição e pautas diferentes contra o mesmo pacto colonial; recorte ${active + 1} destacado`}>
+  return <HumanitiesCorePlate kind="revolts" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Crise do antigo sistema colonial: Inconfidência Mineira (1789) e Conjuração Baiana (1798) com composição e pautas diferentes contra o mesmo pacto colonial; recorte ${active + 1} destacado`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
     <text x="30" y="40" className="hg-kicker">O PACTO COLONIAL CONTESTADO</text>
     <g>
@@ -456,7 +373,7 @@ function ColonialRevolts({ active, t }: { active: number; t: SceneTransition }) 
     <motion.text x="310" y="232" textAnchor="middle" className="hg-hand-small" initial={false} animate={{ opacity: both ? 1 : 0 }} transition={paced(t, 0.4, 1.1)}>mesmo</motion.text>
     <motion.text x="310" y="250" textAnchor="middle" className="hg-hand-small" initial={false} animate={{ opacity: both ? 1 : 0 }} transition={paced(t, 0.4, 1.1)}>descontentamento</motion.text>
     <text x="30" y="336" className="hg-footnote">Composição e motivação diferentes; o mesmo alvo: o pacto colonial.</text>
-  </svg>;
+  </svg>}</HumanitiesCorePlate>;
 }
 
 export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {

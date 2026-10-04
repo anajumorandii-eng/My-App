@@ -1,4 +1,5 @@
 import React from 'react';
+import { SocioEconomicIllustration } from './SocioEconomicIllustration';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { ArrowHead, Person, type Scene } from './cenaKit';
@@ -76,7 +77,9 @@ export function DemographicTransition({ active }: Scene) {
     ['a natalidade também cai', 'urbanização, mulher no mercado de trabalho,', 'contraceptivos, custo de criar filhos na cidade'],
     ['as duas baixas e estáveis', 'crescimento vegetativo perto de zero', 'ou negativo: Europa hoje e, cada vez mais, o Brasil'],
   ][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Transição demográfica em quatro fases: curvas de natalidade e mortalidade e a pirâmide etária que muda de forma; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Transição demográfica em quatro fases: curvas de natalidade e mortalidade e a pirâmide etária que muda de forma; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="population" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">TRANSIÇÃO DEMOGRÁFICA</text>
     <defs><clipPath id="po-dd-reveal">
@@ -142,6 +145,7 @@ export function DemographicTransition({ active }: Scene) {
       </g>}
     </motion.g>
     <text x="590" y="40" textAnchor="end" className="bi-tiny">curvas e pirâmides esquemáticas, sem escala</text>
+    </g>
   </svg>;
 }
 
@@ -174,7 +178,9 @@ export function LaborSectors({ active }: Scene) {
     ['países industrializados: no secundário', 'durante a fase de industrialização', ''],
     ['economias maduras terciarizam', 'serviços: a maior fatia do emprego e do PIB', 'Brasil: mais de 70% no terciário — desindustrialização precoce'],
   ][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Setores da economia: a mão de obra passa do primário ao secundário e ao terciário ao longo do desenvolvimento; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Setores da economia: a mão de obra passa do primário ao secundário e ao terciário ao longo do desenvolvimento; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="labor" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">SETORES DA ECONOMIA · TERCIARIZAÇÃO</text>
     <ArrowHead id="po-head-sector" />
@@ -231,6 +237,7 @@ export function LaborSectors({ active }: Scene) {
       {note[2] && <text x="30" y="323" className="bi-small bi-strong">{note[2]}</text>}
     </motion.g>
     <text x="590" y="344" textAnchor="end" className="bi-foot">Bonecos mostram a tendência, não proporções medidas.</text>
+    </g>
   </svg>;
 }
 
@@ -277,7 +284,9 @@ const bez = (a: [number, number], b: [number, number], t: number): [number, numb
 
 export function UrbanHierarchy({ active }: Scene) {
   const p = usePaced();
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Hierarquia urbana brasileira: centros locais, centros sub-regionais, metrópoles regionais e metrópole nacional, com os fluxos subindo ao nível em foco; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Hierarquia urbana brasileira: centros locais, centros sub-regionais, metrópoles regionais e metrópole nacional, com os fluxos subindo ao nível em foco; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="hierarchy" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">HIERARQUIA URBANA · BRASIL</text>
     <text x="590" y="40" textAnchor="end" className="bi-tiny">esquema, sem escala</text>
@@ -329,6 +338,7 @@ export function UrbanHierarchy({ active }: Scene) {
     </g>)}
 
     <text x="30" y="336" className="bi-hand-sm">a hierarquia não é fixa: cidades do agronegócio ganharam funções de centro regional</text>
+    </g>
   </svg>;
 }
 
@@ -345,7 +355,9 @@ export function UrbanSegregation({ active }: Scene) {
   ][active];
   const hand = ['cada renda ocupa um pedaço da cidade', 'espoliação urbana: o mais pobre paga em tempo e custo', 'onde o serviço público falta, a vulnerabilidade cresce'][active];
   const shacks = [[76, 181, 'po-shack-a'], [108, 193, 'po-shack-b'], [136, 212, 'po-shack-c'], [162, 236, 'po-shack-a'], [186, 258, 'po-shack-b']] as const;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Segregação socioespacial em corte: periferia na encosta e centro com infraestrutura; emprego, educação e violência dependem do lugar; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Segregação socioespacial em corte: periferia na encosta e centro com infraestrutura; emprego, educação e violência dependem do lugar; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="segregation" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">SEGREGAÇÃO SOCIOESPACIAL</text>
     <text x="590" y="40" textAnchor="end" className="bi-tiny">corte esquemático</text>
@@ -429,6 +441,7 @@ export function UrbanSegregation({ active }: Scene) {
 
     <text x="30" y="326" className="bi-hand-sm">{hand}</text>
     <text x="30" y="342" className="bi-foot">Nem sempre centro rico, periferia pobre: há condomínios de alta renda na periferia.</text>
+    </g>
   </svg>;
 }
 
@@ -471,7 +484,9 @@ export function MigrationForces({ active }: Scene) {
       <text x={x} y={y + 30} textAnchor="middle" className="bi-tiny">{b.label}</text>
     </motion.g>;
   };
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Mobilidade populacional: fatores de expulsão na origem e de atração no destino, que em geral agem combinados; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Mobilidade populacional: fatores de expulsão na origem e de atração no destino, que em geral agem combinados; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="migration" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">MIGRAÇÃO · EXPULSÃO E ATRAÇÃO</text>
     <defs>
@@ -510,6 +525,7 @@ export function MigrationForces({ active }: Scene) {
       {note.slice(1).map((l, j) => l && <text key={l} x="315" y={214 + j * 16} textAnchor="middle" className="bi-small">{l}</text>)}
     </motion.g>
     <text x="30" y="340" className="bi-foot">Ravenstein (séc. XIX): teoria clássica de expulsão e atração.</text>
+    </g>
   </svg>;
 }
 
@@ -526,7 +542,9 @@ export function TransportModes({ active }: Scene) {
     { title: 'Hidroviário e aéreo', lines: [['hidroviário:', 'b'], ['o mais barato por tonelada'], ['em grandes distâncias;'], ['depende de rios navegáveis'], ['ou do litoral; mais lento'], [''], ['aéreo:', 'b'], ['o mais caro de todos:'], ['cargas de alto valor'], ['e baixo peso']] },
 ][active];
   const lane = (k: number) => ({ opacity: active === k ? 1 : 0.42 });
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Redes de transportes: rodoviário, ferroviário, hidroviário e aéreo, cada um com sua vocação de distância e carga; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Redes de transportes: rodoviário, ferroviário, hidroviário e aéreo, cada um com sua vocação de distância e carga; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="transport" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">MODAIS E VOCAÇÕES</text>
 
@@ -588,6 +606,7 @@ export function TransportModes({ active }: Scene) {
       <text x="414" y="82" className="bi-label bi-on">{card.title}</text>
       {card.lines.map(([l, b], j) => l && <text key={j} x="414" y={106 + j * 18} className={b ? 'bi-small bi-strong' : 'bi-small'}>{l}</text>)}
     </motion.g>
+    </g>
   </svg>;
 }
 

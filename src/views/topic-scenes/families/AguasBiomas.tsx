@@ -1,3 +1,4 @@
+import { GeoIllustration } from './GeoIllustration';
 import React from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -214,9 +215,12 @@ export function WorldWaters({ active }: Scene) {
   const p = usePaced(); const s = useFrom();
   const kicker = ['EXTENSÃO NÃO É VAZÃO', 'O NILO NO DESERTO', 'O RIO QUE CRUZA FRONTEIRAS', 'ESTRESSE HÍDRICO'][active];
   const Vignette = [LengthVsFlow, NileValley, Upstream, WaterStress][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Hidrogeografia mundial: o Nilo mais extenso e a Amazônica com mais vazão, a faixa estreita do vale do Nilo, barragens nas cabeceiras do Mekong e estresse hídrico abaixo de mil metros cúbicos por habitante; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Hidrogeografia mundial: o Nilo mais extenso e a Amazônica com mais vazão, a faixa estreita do vale do Nilo, barragens nas cabeceiras do Mekong e estresse hídrico abaixo de mil metros cúbicos por habitante; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="WorldWaters" active={active} />
+    <g transform="translate(0 390)">
     <Frame kicker={`HIDROGEOGRAFIA MUNDIAL · ${kicker}`} />
     <motion.g key={active} initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.4)}><Vignette /></motion.g>
+  </g>
   </svg>;
 }
 
@@ -366,12 +370,15 @@ function Transposition() {
 export function BrazilBasins({ active }: Scene) {
   const p = usePaced(); const s = useFrom();
   const Panel = [AmazonRoad, DamStairs, DryRiver, Transposition][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Hidrogeografia do Brasil: rios da Amazônia como estrada, escada de usinas no Paraná até Itaipu, rios intermitentes do semiárido e transposição do São Francisco; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Hidrogeografia do Brasil: rios da Amazônia como estrada, escada de usinas no Paraná até Itaipu, rios intermitentes do semiárido e transposição do São Francisco; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="BrazilBasins" active={active} />
+    <g transform="translate(0 390)">
     <Frame kicker="HIDROGEOGRAFIA DO BRASIL · BACIAS E USOS" />
     <BrazilRivers active={active} />
     <rect x="346" y="54" width="252" height="278" rx="14" className="bi-panel" />
     <motion.g key={active} initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.4)}><Panel /></motion.g>
     <text x="30" y="344" className="bi-foot">Mapa esquemático; rios, usinas e barras fora de escala.</text>
+  </g>
   </svg>;
 }
 
@@ -523,7 +530,9 @@ export function BiomesProfile({ active }: Scene) {
   const p = usePaced(); const s = useFrom();
   const Stage = [Strata, AtlanticFragments, CerradoFire, CaatingaCycle][active];
   const b = BIOMES[active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Biogeografia do Brasil I: estratos da Amazônia, fragmentos da Mata Atlântica, raízes e casca do Cerrado contra o fogo e a Caatinga entre a seca e a chuva; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Biogeografia do Brasil I: estratos da Amazônia, fragmentos da Mata Atlântica, raízes e casca do Cerrado contra o fogo e a Caatinga entre a seca e a chuva; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="BiomesProfile" active={active} />
+    <g transform="translate(0 390)">
     <Frame kicker="BIOGEOGRAFIA DO BRASIL · PERFIS" />
     <defs><clipPath id="ab-clip-bio1"><rect x="22" y="52" width="382" height="244" rx="12" /></clipPath></defs>
     <rect x="22" y="52" width="382" height="244" rx="12" className="ab-stage" />
@@ -550,6 +559,7 @@ export function BiomesProfile({ active }: Scene) {
         <text x={x + 28} y="328" className={active === k ? 'ab-chip-text ab-chip-text-on' : 'ab-chip-text'}>{label}</text>
       </g>;
     })}
+  </g>
   </svg>;
 }
 
@@ -714,7 +724,9 @@ export function WetlandsCoast({ active }: Scene) {
   const p = usePaced(); const s = useFrom();
   const Stage = [FloodPulse, PampaField, Mangrove, PantanalFire][active];
   const place = PLACES[active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Biogeografia do Brasil II: pulso de inundação do Pantanal, campo nativo do Pampa diante da soja, manguezal como berçário e incêndios agravados no Pantanal; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Biogeografia do Brasil II: pulso de inundação do Pantanal, campo nativo do Pampa diante da soja, manguezal como berçário e incêndios agravados no Pantanal; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="WetlandsCoast" active={active} />
+    <g transform="translate(0 390)">
     <Frame kicker="BIOGEOGRAFIA DO BRASIL · ÁGUA E LITORAL" />
     <MiniMap active={active} />
     <rect x="22" y="236" width="180" height="96" rx="12" className="bi-panel" />
@@ -727,6 +739,7 @@ export function WetlandsCoast({ active }: Scene) {
     <motion.g key={active} clipPath="url(#ab-clip-bio2)" initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.4)}><Stage /></motion.g>
     <rect x="214" y="52" width="384" height="280" rx="12" className="ab-stage-edge" />
     <text x="30" y="346" className="bi-foot">Mapa e perfis esquemáticos, sem escala.</text>
+  </g>
   </svg>;
 }
 

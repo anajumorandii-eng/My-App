@@ -1,3 +1,4 @@
+import { GeopoliticalPlate } from './GeopoliticalIllustration';
 import React from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -42,7 +43,7 @@ const CLIMATE_CHIPS = [
   { x: 508, w: 80, label: 'relevo', icon: 'M-9 7l6-8 3 3 3-5 6 10Z' },
 ];
 
-export function ClimateFactors({ active }: Scene) {
+function ClimateFactorsDetail({ active }: Scene) {
   const p = usePaced();
   const lit = [[0], [1], [2, 3], [0, 1, 2, 3, 4]][active] ?? [];
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.2 : 0) });
@@ -140,7 +141,7 @@ const CARDS = [
   { x: 410, title: 'Crátons', lines: ['formados há bilhões de anos', 'estáveis e muito erodidos'], idx: 0 },
 ];
 
-export function StructureBlock({ active }: Scene) {
+function StructureBlockDetail({ active }: Scene) {
   const p = usePaced();
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.3 : 0) });
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Estruturas do relevo em bloco da América do Sul: dobras modernas nos Andes, bacia sedimentar amazônica e cráton do Escudo Brasileiro; recorte ${active + 1} em foco`}>
@@ -250,7 +251,7 @@ function BiomeIcon({ k }: { k: number }) {
   </g>;
 }
 
-export function BiomeBelt({ active }: Scene) {
+function BiomeBeltDetail({ active }: Scene) {
   const p = usePaced();
   const on = (k: number) => (active === 0 && k === 0) || (active === 1 && k === 2) || (active === 2 && k >= 3);
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.3 : 0) });
@@ -297,7 +298,7 @@ export function BiomeBelt({ active }: Scene) {
         transition={p(0.5, on(k) && active === 2 ? 0.4 + (k - 3) * 0.35 : 0)}>
         <g transform={`translate(${b.x} 222)`}><BiomeIcon k={k} /></g>
       </motion.g>
-      {b.name.map((line, i) => <text key={line} x={b.x} y={238 + i * 12} textAnchor="middle" className={on(k) ? 'bi-small bi-strong gm-on' : 'bi-tiny'}>{line}</text>)}
+      {b.name.map((line, i) => <text key={line} x={b.x} y={238 + i * 17} textAnchor="middle" className={on(k) ? 'bi-small bi-strong gm-on' : 'bi-tiny'}>{line}</text>)}
     </g>)}
 
     <path d="M60 266H564" className="gm-axis" />
@@ -345,7 +346,7 @@ function Gauge({ x, y, value, label, sub, on, p }: { x: number; y: number; value
   </g>;
 }
 
-export function NileBasin({ active }: Scene) {
+function NileBasinDetail({ active }: Scene) {
   const p = usePaced();
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.2 : 0) });
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Nilo de montante a jusante: barragem etíope sem acordo, tensão diplomática, dependência do Egito e risco de escalada; recorte ${active + 1} em foco`}>
@@ -453,7 +454,7 @@ export function NileBasin({ active }: Scene) {
 // Paisagem e correntes: a mesma paisagem nos três recortes, porque é isso que
 // as correntes disputam — não o que se vê, mas o que explica. Só muda a seta
 // entre meio e sociedade, e o que a corrente acrescenta ao desenho.
-export function ThreeReadings({ active }: Scene) {
+function ThreeReadingsDetail({ active }: Scene) {
   const p = usePaced();
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.2 : 0) });
   const titles = ['DETERMINISMO', 'POSSIBILISMO', 'GEOGRAFIA CRÍTICA'];
@@ -568,3 +569,23 @@ export const HEADERS_LOTE9: Record<string, string> = {
   'summary-geografia-geopolitica-dos-recursos-hidricos': 'montante e jusante',
   'summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica': 'correntes em contraste',
 };
+
+export function ClimateFactors(props: Scene) {
+  return <GeopoliticalPlate kind="climate" active={props.active} detail={ClimateFactorsDetail(props)} />;
+}
+
+export function StructureBlock(props: Scene) {
+  return <GeopoliticalPlate kind="structure" active={props.active} detail={StructureBlockDetail(props)} />;
+}
+
+export function BiomeBelt(props: Scene) {
+  return <GeopoliticalPlate kind="biome" active={props.active} detail={BiomeBeltDetail(props)} />;
+}
+
+export function NileBasin(props: Scene) {
+  return <GeopoliticalPlate kind="nile" active={props.active} detail={NileBasinDetail(props)} />;
+}
+
+export function ThreeReadings(props: Scene) {
+  return <GeopoliticalPlate kind="readings" active={props.active} detail={ThreeReadingsDetail(props)} />;
+}

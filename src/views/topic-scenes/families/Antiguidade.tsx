@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { Arrow, ArrowHead, Person, type Scene } from './cenaKit';
 import './Antiguidade.css';
+import { HistorianIllustration } from './HistorianIllustration';
 
 function usePaced() {
   const t = useSceneMotion();
@@ -44,7 +45,9 @@ export function GreekPoleis({ active }: Scene) {
   const p = usePaced();
   const crowd = Array.from({ length: 12 }, (_, k) => k);
   const citizens = [2, 7, 10];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Mundo grego: mapa esquemático das póleis, cidadania restrita de Atenas, sociedade militar de Esparta e a cultura helênica comum; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Mundo grego: mapa esquemático das póleis, cidadania restrita de Atenas, sociedade militar de Esparta e a cultura helênica comum; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="GreekPoleis" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">GRÉCIA ANTIGA · MOSAICO DE PÓLEIS</text>
 
@@ -136,6 +139,7 @@ export function GreekPoleis({ active }: Scene) {
     </motion.g>
     <ArrowHead id="an-head-gr" />
     <text x="30" y="342" className="bi-foot">Mapa esquemático, sem escala; figuras de Atenas ilustrativas, sem contagem.</text>
+    </g>
   </svg>;
 }
 
@@ -160,7 +164,9 @@ export function RomanPower({ active }: Scene) {
     { x: 262, text: '509 a.C. · República', anchor: 'middle', dot: 262, on: active === 0 },
     { x: 530, text: '27 a.C. · Império', anchor: 'middle', dot: 530, on: active === 2 },
   ] as const;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Roma: poder repartido na República, disputado nas guerras civis e concentrado em Augusto; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Roma: poder repartido na República, disputado nas guerras civis e concentrado em Augusto; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="RomanPower" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ROMA · DA REPÚBLICA AO IMPÉRIO</text>
 
@@ -221,6 +227,7 @@ export function RomanPower({ active }: Scene) {
       <text x={w.anchor === 'start' ? 36 : w.x} y="330" textAnchor={w.anchor} className={w.on ? 'bi-tiny bi-strong' : 'bi-tiny'}>{w.text}</text>
     </g>)}
     <text x="30" y="346" className="bi-foot">Fichas de poder e linha do tempo esquemáticas, fora de escala.</text>
+    </g>
   </svg>;
 }
 
@@ -240,7 +247,9 @@ export function FeudalBonds({ active }: Scene) {
   const left = active !== 1;
   const right = active !== 0;
   const duties = ['corveia: trabalho grátis no domínio', 'parte da própria colheita', 'taxas pelo moinho e pelo forno'];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Feudalismo: senhorio com as obrigações do servo e rede de suserania e vassalagem entre nobres; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Feudalismo: senhorio com as obrigações do servo e rede de suserania e vassalagem entre nobres; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="FeudalBonds" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">EUROPA FEUDAL · DOIS VÍNCULOS</text>
     <ArrowHead id="an-head-fe" />
@@ -326,6 +335,7 @@ export function FeudalBonds({ active }: Scene) {
       <path d="M308 182h12M308 190h12M318 176l-8 20" className="an-badge-icon" />
     </motion.g>
     <text x="30" y="342" className="bi-foot">Senhorio e rede esquemáticos; o feudalismo variou por região.</text>
+    </g>
   </svg>;
 }
 
@@ -345,7 +355,9 @@ export function BlackDeath({ active }: Scene) {
     ['escassez súbita de mão de obra', 'eleva a barganha de quem ficou'],
     ['camponeses exigem e às vezes obtêm', 'melhores condições e remuneração'],
   ][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Baixa Idade Média: Peste Negra, escassez de mão de obra e abalo do trabalho servil; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Baixa Idade Média: Peste Negra, escassez de mão de obra e abalo do trabalho servil; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="BlackDeath" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">SÉCULO XIV · A PESTE E O TRABALHO</text>
     <ArrowHead id="an-head-bd" />
@@ -374,8 +386,7 @@ export function BlackDeath({ active }: Scene) {
       </g>;
     })}
     <text x="40" y="244" className="bi-small bi-strong">entre um terço e metade da população morre</text>
-    <motion.text x="40" y="268" className="bi-hand-sm" initial={false} animate={{ opacity: active === 0 ? 1 : 0 }} transition={p(0.4, 1.4)}>o comércio também espalhou a doença</motion.text>
-    <motion.text x="40" y="268" className="bi-hand-sm" initial={false} animate={{ opacity: active === 0 ? 0 : 1 }} transition={p(0.4, 0.8)}>quem sobreviveu vale mais</motion.text>
+    <text x="40" y="268" className="bi-hand-sm">{active === 0 ? 'o comércio também espalhou a doença' : 'quem sobreviveu vale mais'}</text>
 
     <rect x="334" y="52" width="262" height="210" rx="14" className="bi-panel" />
     <motion.g key={`t-${active}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 0.1)}>
@@ -415,6 +426,7 @@ export function BlackDeath({ active }: Scene) {
       animate={{ opacity: active === 0 ? 1 : 0.55 }} transition={p(0.4)} />
     <text x={yr(1349)} y="324" textAnchor="middle" className={active === 0 ? 'bi-tiny bi-strong' : 'bi-tiny'}>Peste Negra · 1347–1351</text>
     <text x="30" y="342" className="bi-foot">Doze figuras ilustrativas: 4 a 6 mortas = um terço a metade. Balança esquemática.</text>
+    </g>
   </svg>;
 }
 
@@ -433,7 +445,9 @@ export function RenaissanceChain({ active }: Scene) {
     <g key="human"><circle cx="0" cy="0" r="18" className="bi-icon" /><circle cx="0" cy="-9" r="3.5" className="bi-icon" /><path d="M0 -5v12M-12 -2h24M0 7l-7 10M0 7l7 10" className="bi-icon" /></g>,
     <g key="art"><path d="M-14 16l12-32 12 32M-2 -16v32" className="bi-icon" /><rect x="-14" y="-12" width="24" height="18" rx="1.5" className="bi-canvas" /><path d="M-10 2l6-8 4 4 6-8" className="bi-paint" /></g>,
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Renascimento: da riqueza comercial ao mecenato, ao humanismo e à arte; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Renascimento: da riqueza comercial ao mecenato, ao humanismo e à arte; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="RenaissanceChain" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">RENASCIMENTO · DA RIQUEZA À OBRA</text>
     <ArrowHead id="an-head-rn" />
@@ -528,6 +542,7 @@ export function RenaissanceChain({ active }: Scene) {
       </g>}
     </motion.g>
     <text x="30" y="342" className="bi-foot">Cadeia esquemática: cada elo é condição do seguinte, não causa única.</text>
+    </g>
   </svg>;
 }
 
