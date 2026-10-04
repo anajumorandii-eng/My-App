@@ -386,8 +386,7 @@ export function BlackDeath({ active }: Scene) {
       </g>;
     })}
     <text x="40" y="244" className="bi-small bi-strong">entre um terço e metade da população morre</text>
-    <motion.text x="40" y="268" className="bi-hand-sm" initial={false} animate={{ opacity: active === 0 ? 1 : 0 }} transition={p(0.4, 1.4)}>o comércio também espalhou a doença</motion.text>
-    <motion.text x="40" y="268" className="bi-hand-sm" initial={false} animate={{ opacity: active === 0 ? 0 : 1 }} transition={p(0.4, 0.8)}>quem sobreviveu vale mais</motion.text>
+    <text x="40" y="268" className="bi-hand-sm">{active === 0 ? 'o comércio também espalhou a doença' : 'quem sobreviveu vale mais'}</text>
 
     <rect x="334" y="52" width="262" height="210" rx="14" className="bi-panel" />
     <motion.g key={`t-${active}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 0.1)}>

@@ -300,10 +300,6 @@ function Colonization({ active, t }: { active: number; t: SceneTransition }) {
       <path d="M130 214H510" className="hg-beam" />
       <path d="M150 214l-30 50h100l-30-50M490 214l-30 50h100l-30-50" className="hg-rope" />
       <path d="M110 264h120a60 14 0 0 1-120 0ZM410 264h120a60 14 0 0 1-120 0Z" className="hg-pan" />
-      <text x="170" y="300" textAnchor="middle" className="hg-label">escravização</text>
-      <text x="170" y="316" textAnchor="middle" className="hg-label">indígena</text>
-      <text x="470" y="300" textAnchor="middle" className="hg-label">tráfico transatlântico</text>
-      <text x="470" y="316" textAnchor="middle" className="hg-label">de africanos</text>
       {factors.map((f, k) => {
         const present = all || active === k;
         return <motion.g key={f.label} initial={false} animate={{ y: present ? 0 : -118, opacity: present ? 1 : 0.35 }} transition={paced(t, 0.6, all ? k * 0.2 : 0)}>
@@ -314,6 +310,10 @@ function Colonization({ active, t }: { active: number; t: SceneTransition }) {
         </motion.g>;
       })}
     </motion.g>
+      <text x="170" y="300" textAnchor="middle" className="hg-label">escravização</text>
+      <text x="170" y="316" textAnchor="middle" className="hg-label">indígena</text>
+      <text x="470" y="300" textAnchor="middle" className="hg-label">tráfico transatlântico</text>
+      <text x="470" y="316" textAnchor="middle" className="hg-label">de africanos</text>
     {factors.map((f, k) => <text key={f.label} x={f.x} y={160 + (k % 2) * 16} textAnchor="middle" className={all || active === k ? 'hg-factor hg-factor-on' : 'hg-factor'}>{f.label}</text>)}
     <motion.text x="320" y="90" textAnchor="middle" className="hg-hand" initial={false} animate={{ opacity: 1 }} key={all ? 'all' : 'one'} transition={paced(t, 0.4, 0.8)}>
       {all ? 'juntos, inclinam a balança' : 'sozinho, não basta'}

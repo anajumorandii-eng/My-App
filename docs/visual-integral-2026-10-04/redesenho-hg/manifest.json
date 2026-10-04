@@ -7,7 +7,7 @@
     "Geografia": 63
   },
   "direction": "Ilustração autoral detalhada por capítulo, notas manuscritas e relações integradas",
-  "status": "implementado_em_validacao",
+  "status": "verificado_tecnicamente",
   "preserves": [
     "chapterIds",
     "deepSummaryContent",
@@ -801,5 +801,24 @@
       "representation": "scene",
       "artifact": "escala-de-graus"
     }
-  ]
+  ],
+  "verification": {
+    "browserEvidence": "browser-evidence.json",
+    "configurations": 12,
+    "states": 5988,
+    "widths": [
+      390,
+      834,
+      1366
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "motion": [
+      "reduce",
+      "no-preference"
+    ],
+    "method": "Matriz integral e repetição dirigida após correções; aprovação editorial do catálogo permanece aberta."
+  }
 }

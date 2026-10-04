@@ -43,7 +43,10 @@ for (const width of [390,834,1366]) for (const theme of ['light','dark']) for (c
       await expect(svg).toBeVisible();
       await page.evaluate(() => document.fonts.ready);
       const handwritten=svg.locator('.ha-hand, .hi-note, .gfi-note, .se-hand, .gi-hand, .brp-hand, .ehi-note').first();
-      if(await handwritten.count()) expect.soft(await handwritten.evaluate(e=>getComputedStyle(e).fontFamily), `${chapter.id}: fonte das anotações`).toContain('Kalam');
+      if(await handwritten.count()) await expect.soft.poll(
+        () => handwritten.evaluate(e=>e.isConnected ? getComputedStyle(e).fontFamily : ''),
+        {message:`${chapter.id}: fonte das anotações`},
+      ).toContain('Kalam');
       const capture = async (state: string) => {
         if(['summary-historia-revolucao-francesa','summary-geografia-dinamica-climatica'].includes(chapter.id) && reducedMotion==='reduce' && ((width===390 && theme==='light') || (width===1366 && theme==='dark'))) {
           await svg.evaluate(el=>el.scrollIntoView({block:'center'}));
@@ -72,11 +75,41 @@ for (const width of [390,834,1366]) for (const theme of ['light','dark']) for (c
             const x=a.getBoundingClientRect(),y=b.getBoundingClientRect();
             return Math.min(x.right,y.right)-Math.max(x.left,y.left)>1 && Math.min(x.bottom,y.bottom)-Math.max(x.top,y.top)>1;
           }).map(b=>[a.textContent,b.textContent]));
+          // SVG text boxes include the font's full ascender/descender even
+          // for short glyphs. Compare painted glyph bounds so handwritten
+          // lines are checked for actual overlap rather than empty leading.
+          const ctx=document.createElement('canvas').getContext('2d')!;
+          const inkBounds=(e:SVGTextElement)=>{
+            const rootFont=getComputedStyle(e).font;
+            const glyphs:{value:string;font:string}[]=[];
+            const walker=document.createTreeWalker(e,NodeFilter.SHOW_TEXT);
+            while(walker.nextNode()) {
+              const node=walker.currentNode,font=getComputedStyle(node.parentElement!).font;
+              for(const value of (node.textContent??'').replace(/\s+/g,' ')) {
+                if(value===' ' && (!glyphs.length || glyphs[glyphs.length-1].value===' ')) continue;
+                glyphs.push({value,font});
+              }
+            }
+            while(glyphs.at(-1)?.value===' ') glyphs.pop();
+            if(glyphs.length!==e.getNumberOfChars()) return e.getBoundingClientRect();
+            const matrix=e.getScreenCTM()!;
+            const points:DOMPoint[]=[];
+            for(let i=0;i<e.getNumberOfChars();i++){
+              ctx.font=glyphs[i]?.font??rootFont;
+              const m=ctx.measureText(glyphs[i]?.value??'M'),p=e.getStartPositionOfChar(i);
+              if(!m.actualBoundingBoxAscent&&!m.actualBoundingBoxDescent) continue;
+              const x=p.x-m.actualBoundingBoxLeft,y=p.y-m.actualBoundingBoxAscent;
+              const right=p.x+m.actualBoundingBoxRight,bottom=p.y+m.actualBoundingBoxDescent;
+              points.push(new DOMPoint(x,y).matrixTransform(matrix),new DOMPoint(right,y).matrixTransform(matrix),new DOMPoint(x,bottom).matrixTransform(matrix),new DOMPoint(right,bottom).matrixTransform(matrix));
+            }
+            return {left:Math.min(...points.map(p=>p.x)),right:Math.max(...points.map(p=>p.x)),top:Math.min(...points.map(p=>p.y)),bottom:Math.max(...points.map(p=>p.y))};
+          };
           const visible = text.filter(e => { let node: Element | null = e; while(node && node !== root){ if(Number(getComputedStyle(node).opacity)<.05) return false; node=node.parentElement; } return true; });
-          const allCollisions=visible.flatMap((a,i)=>visible.slice(i+1).filter(b=>{
-            const x=a.getBoundingClientRect(),y=b.getBoundingClientRect();
+          const painted=visible.map(e=>({text:e.textContent,box:inkBounds(e)}));
+          const allCollisions=painted.flatMap((a,i)=>painted.slice(i+1).filter(b=>{
+            const x=a.box,y=b.box;
             return Math.min(x.right,y.right)-Math.max(x.left,y.left)>1 && Math.min(x.bottom,y.bottom)-Math.max(x.top,y.top)>1;
-          }).map(b=>[a.textContent,b.textContent]));
+          }).map(b=>[a.text,b.text]));
           return {clipped,collisions,allCollisions};
         });
         expect.soft(issues, `${chapter.id} ${state}`).toEqual({clipped:[],collisions:[],allCollisions:[]});

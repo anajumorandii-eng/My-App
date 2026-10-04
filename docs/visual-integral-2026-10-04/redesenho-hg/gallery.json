@@ -1,0 +1,186 @@
+{
+  "viewport": {
+    "width": 1366,
+    "height": 2000
+  },
+  "theme": "light",
+  "motion": "reduce",
+  "purpose": "Capturas completas para leitura da composição. A matriz de responsividade usa as três larguras e altura de 1000px.",
+  "chapters": [
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "title": "Coordenadas Geográficas",
+      "file": "capturas/summary-geografia-coordenadas-geograficas.png"
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "title": "Movimentos da Terra",
+      "file": "capturas/summary-geografia-movimentos-da-terra.png"
+    },
+    {
+      "id": "summary-geografia-sistema-de-fusos-horarios",
+      "title": "Sistema de Fusos Horários",
+      "file": "capturas/summary-geografia-sistema-de-fusos-horarios.png"
+    },
+    {
+      "id": "summary-geografia-projecoes-cartograficas",
+      "title": "Projeções Cartográficas",
+      "file": "capturas/summary-geografia-projecoes-cartograficas.png"
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "title": "Dinâmica Climática",
+      "file": "capturas/summary-geografia-dinamica-climatica.png"
+    },
+    {
+      "id": "summary-geografia-clima-mundial",
+      "title": "Clima Mundial",
+      "file": "capturas/summary-geografia-clima-mundial.png"
+    },
+    {
+      "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
+      "title": "Desafios Ambientais do Século XXI",
+      "file": "capturas/summary-geografia-desafios-ambientais-do-seculo-xxi.png"
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-mundial",
+      "title": "Hidrogeografia Mundial",
+      "file": "capturas/summary-geografia-hidrogeografia-mundial.png"
+    },
+    {
+      "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
+      "title": "Do Mundo Bipolar ao Multipolar",
+      "file": "capturas/summary-geografia-do-mundo-bipolar-ao-multipolar.png"
+    },
+    {
+      "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
+      "title": "Globalização e Processos Econômicos Atuais",
+      "file": "capturas/summary-geografia-globalizacao-e-processos-economicos-atuais.png"
+    },
+    {
+      "id": "summary-geografia-mobilidade-populacional",
+      "title": "Mobilidade Populacional",
+      "file": "capturas/summary-geografia-mobilidade-populacional.png"
+    },
+    {
+      "id": "summary-geografia-industria-ii",
+      "title": "Indústria II",
+      "file": "capturas/summary-geografia-industria-ii.png"
+    },
+    {
+      "id": "summary-geografia-terrorismo-internacional",
+      "title": "Terrorismo Internacional",
+      "file": "capturas/summary-geografia-terrorismo-internacional.png"
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
+      "title": "Geopolítica e Geoeconomia da Ásia",
+      "file": "capturas/summary-geografia-geopolitica-e-geoeconomia-da-asia.png"
+    },
+    {
+      "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+      "title": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+      "file": "capturas/summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil.png"
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "title": "Energia Elétrica no Brasil",
+      "file": "capturas/summary-geografia-energia-eletrica-no-brasil.png"
+    },
+    {
+      "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+      "title": "Estrutura Étnica e Fluxos Migratórios",
+      "file": "capturas/summary-geografia-estrutura-etnica-e-fluxos-migratorios.png"
+    },
+    {
+      "id": "summary-geografia-os-fluxos-do-comercio-externo",
+      "title": "Os Fluxos do Comércio Externo",
+      "file": "capturas/summary-geografia-os-fluxos-do-comercio-externo.png"
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "title": "Introdução à História e Primeiras Civilizações",
+      "file": "capturas/summary-historia-introducao-a-historia-e-primeiras-civilizacoes.png"
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-grego",
+      "title": "Antiguidade Clássica: o Mundo Grego",
+      "file": "capturas/summary-historia-antiguidade-classica-o-mundo-grego.png"
+    },
+    {
+      "id": "summary-historia-a-primeira-globalizacao",
+      "title": "A Primeira Globalização",
+      "file": "capturas/summary-historia-a-primeira-globalizacao.png"
+    },
+    {
+      "id": "summary-historia-revolucao-industrial",
+      "title": "Revolução Industrial",
+      "file": "capturas/summary-historia-revolucao-industrial.png"
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "title": "Revolução Francesa",
+      "file": "capturas/summary-historia-revolucao-francesa.png"
+    },
+    {
+      "id": "summary-historia-europa-no-seculo-xix",
+      "title": "Europa no Século XIX",
+      "file": "capturas/summary-historia-europa-no-seculo-xix.png"
+    },
+    {
+      "id": "summary-historia-a-historia-e-o-brasil",
+      "title": "A História e o Brasil",
+      "file": "capturas/summary-historia-a-historia-e-o-brasil.png"
+    },
+    {
+      "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+      "title": "Grandes Navegações e Conquista Colonial",
+      "file": "capturas/summary-historia-grandes-navegacoes-e-conquista-colonial.png"
+    },
+    {
+      "id": "summary-historia-a-montagem-da-colonizacao",
+      "title": "A Montagem da Colonização",
+      "file": "capturas/summary-historia-a-montagem-da-colonizacao.png"
+    },
+    {
+      "id": "summary-historia-dinamica-interna-da-colonizacao",
+      "title": "Dinâmica Interna da Colonização",
+      "file": "capturas/summary-historia-dinamica-interna-da-colonizacao.png"
+    },
+    {
+      "id": "summary-historia-a-interiorizacao-da-colonizacao",
+      "title": "A Interiorização da Colonização",
+      "file": "capturas/summary-historia-a-interiorizacao-da-colonizacao.png"
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "title": "A Mineração no Brasil Colonial",
+      "file": "capturas/summary-historia-a-mineracao-no-brasil-colonial.png"
+    },
+    {
+      "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+      "title": "A Crise do Antigo Sistema Colonial",
+      "file": "capturas/summary-historia-a-crise-do-antigo-sistema-colonial.png"
+    },
+    {
+      "id": "summary-historia-a-independencia-do-brasil",
+      "title": "A Independência do Brasil",
+      "file": "capturas/summary-historia-a-independencia-do-brasil.png"
+    },
+    {
+      "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+      "title": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "file": "capturas/summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro.png"
+    },
+    {
+      "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+      "title": "Brasil Império: Segundo Reinado (1840-1889)",
+      "file": "capturas/summary-historia-brasil-imperio-segundo-reinado-1840-1889.png"
+    },
+    {
+      "id": "geo-bonus-demografico",
+      "title": "Estrutura Ativa da População",
+      "file": "capturas/geo-bonus-demografico.png"
+    }
+  ]
+}
