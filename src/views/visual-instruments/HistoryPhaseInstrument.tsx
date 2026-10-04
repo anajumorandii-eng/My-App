@@ -76,6 +76,7 @@ export function historyPhaseInstrument(id: HistoryPhaseId) {
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
     return <BoardShell
+      sceneFirst={id === 'dinamica-interna-colonizacao'}
       kicker="Linha do tempo comparada"
       title={config.title}
       subtitle={config.question}

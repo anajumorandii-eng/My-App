@@ -2705,7 +2705,7 @@
    Mono para dado. O texto SVG com fonte inline não é alcançado, de propósito:
    quem declarou fonte no próprio elemento tinha razão para isso. */
 .crivo-visual--tech :is(h1, h2, h3, h4, h5, strong, b, figcaption, legend) { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
-.crivo-visual--tech svg text:not(.vs-kit-mono) { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
+.crivo-visual--tech svg:not(.ha-illustrated, .hi-plate, .geo-authored-scene, .se-economic-board, .gi-plate, .brasil-plate, .ehi-illustration, .ts-coord) text:not(.vs-kit-mono) { font-family: "Space Grotesk", Inter, system-ui, sans-serif; }
 /* Anotações de cena ficam em fonte proporcional: foram posicionadas para a
    Kalam, e em monoespaçada ("quanto mais alto, mais frio", "a hierarquia não
    é fixa") saíam do quadro da cena. Monoespaçada só em rótulo curto. */
@@ -2788,3 +2788,6 @@
 .vs-topic-bar { max-width: 100%; min-width: 0; }
 .vs-topic-identity > span,
 .vs-topic-identity > strong { display: block; min-width: 0; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+
+/* As anotações autorais de História e Geografia conservam a escrita à mão. */
+.crivo-visual--tech .ehi-drawing .ehi-note { font-family: Kalam, cursive; }

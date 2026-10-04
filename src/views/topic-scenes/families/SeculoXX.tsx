@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { Arrow, ArrowHead, Person, type Scene } from './cenaKit';
 import './SeculoXX.css';
+import { HistorianIllustration } from './HistorianIllustration';
 
 function usePaced() {
   const t = useSceneMotion();
@@ -33,7 +34,9 @@ export function WorkerRoads({ active }: Scene) {
     ['reformas por dentro do', 'sistema parlamentar'],
     ['a mesma classe,', 'duas estratégias'],
   ][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Europa no século XIX: do operariado industrial saem o caminho da revolução, de Marx e Engels, e o da reforma gradual, da social-democracia; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Europa no século XIX: do operariado industrial saem o caminho da revolução, de Marx e Engels, e o da reforma gradual, da social-democracia; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="WorkerRoads" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">EUROPA NO SÉCULO XIX · MOVIMENTO OPERÁRIO</text>
 
@@ -101,6 +104,7 @@ export function WorkerRoads({ active }: Scene) {
       <text x={Y19(y as number) + (dx as number)} y={ty as number} textAnchor={anchor as 'start' | 'middle' | 'end'}
         className={y === 1848 && active === 0 ? 'bi-tiny bi-strong' : 'bi-tiny'}>{text}</text>
     </g>)}
+    </g>
   </svg>;
 }
 
@@ -121,7 +125,9 @@ export function ColonialRule({ active }: Scene) {
     { c: 250, name: 'Reino Unido', mid: 'chefia local mantida', type: 'Indireta', note: 'delega: custa menos', on: active !== 0 },
   ];
   const hand = ['a metrópole governa direto', 'o chefe local serve à metrópole', 'dois tipos, o mesmo imperialismo'][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Imperialismo: dominação direta francesa e dominação indireta britânica, com a partilha da África na Conferência de Berlim; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Imperialismo: dominação direta francesa e dominação indireta britânica, com a partilha da África na Conferência de Berlim; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="ColonialRule" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">IMPERIALISMO · 1870–1914</text>
     <ArrowHead id="sx-head-imp" />
@@ -170,6 +176,7 @@ export function ColonialRule({ active }: Scene) {
     <text x="350" y="264" className="bi-small">partilha só entre europeus</text>
     <text x="350" y="282" className="bi-small">fronteiras ignoram etnias e línguas</text>
     <text x="30" y="342" className="bi-foot">Contorno esquemático da África; linhas de fronteira ilustrativas.</text>
+    </g>
   </svg>;
 }
 
@@ -193,7 +200,9 @@ export function AllianceFuse({ active }: Scene) {
   const p = usePaced();
   const fire = active === 2;
   const tension = [0.55, 0.9, 1][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Primeira Guerra Mundial: alianças rígidas, pressão acumulada de nacionalismo e corrida armamentista, e Sarajevo como estopim; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Primeira Guerra Mundial: alianças rígidas, pressão acumulada de nacionalismo e corrida armamentista, e Sarajevo como estopim; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="AllianceFuse" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">PRIMEIRA GUERRA MUNDIAL · 1914–1918</text>
     {TIES.map((t, k) => <motion.path key={t.d} d={t.d} className={t.bloc === 'a' ? 'sx-tie-a' : 'sx-tie-e'} initial={false}
@@ -250,7 +259,7 @@ export function AllianceFuse({ active }: Scene) {
       <text x="400" y="160" className="bi-small bi-strong">crise balcânica regional</text>
       <text x="400" y="176" className="bi-small">vira guerra continental</text>
       <text x="400" y="212" className="bi-hand">estopim, não</text>
-      <text x="400" y="232" className="bi-hand">causa suficiente</text>
+      <text x="400" y="240" className="bi-hand">causa suficiente</text>
     </motion.g>
     <text x="400" y="264" className="bi-tiny">tensão estrutural</text>
     <rect x="400" y="272" width="178" height="12" rx="6" className="bi-gauge" />
@@ -261,6 +270,7 @@ export function AllianceFuse({ active }: Scene) {
     <circle cx="150" cy="314" r="6" className="sx-node-e" />
     <text x="162" y="318" className="bi-tiny">Tríplice Entente</text>
     <text x="30" y="342" className="bi-foot">Posições esquemáticas, não um mapa; barra de tensão ilustrativa.</text>
+    </g>
   </svg>;
 }
 
@@ -282,7 +292,9 @@ const STONES = [
 
 export function InterwarChain({ active }: Scene) {
   const p = usePaced();
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Período entreguerras: Crise de 1929, ascensão dos totalitarismos e fracasso do apaziguamento até a guerra de 1939; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Período entreguerras: Crise de 1929, ascensão dos totalitarismos e fracasso do apaziguamento até a guerra de 1939; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="InterwarChain" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ENTREGUERRAS · 1918–1939</text>
     <ArrowHead id="sx-head-int" />
@@ -378,6 +390,7 @@ export function InterwarChain({ active }: Scene) {
     })}
     <text x={Y20(1920)} y="336" textAnchor="middle" className="bi-tiny">Liga das Nações</text>
     <text x={Y20(1924)} y="336" textAnchor="middle" className="bi-tiny">Lênin morre</text>
+    </g>
   </svg>;
 }
 
@@ -395,7 +408,9 @@ export function DemocracyCracks({ active }: Scene) {
   const p = usePaced();
   const all = active === 3;
   const lit = (k: number) => all || active === k;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Nazismo na Alemanha: hiperinflação, Grande Depressão e fragilidade institucional só em combinação levam a 1933; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Nazismo na Alemanha: hiperinflação, Grande Depressão e fragilidade institucional só em combinação levam a 1933; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="DemocracyCracks" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ALEMANHA · BASES DA ASCENSÃO NAZISTA</text>
     <ArrowHead id="sx-head-naz" />
@@ -466,6 +481,7 @@ export function DemocracyCracks({ active }: Scene) {
     </motion.g>
     <text x="30" y="316" className="bi-small">pano de fundo: Tratado de Versalhes (1919) e ressentimento nacionalista</text>
     <text x="30" y="342" className="bi-foot">Rachaduras ilustrativas: mostram combinação, não medem o peso de cada fator.</text>
+    </g>
   </svg>;
 }
 
@@ -479,7 +495,9 @@ export function Decolonization({ active }: Scene) {
   const aOn = active !== 1;
   const bOn = active !== 0;
   const hand = [['negociada, mas partida', 'em dois Estados'], ['guerra longa, porque a', 'França não aceitava perder'], ['postura da metrópole +', 'condições da colônia']][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Descolonização afro-asiática: trajetória negociada da Índia em 1947 e guerra de libertação da Argélia até 1962; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Descolonização afro-asiática: trajetória negociada da Índia em 1947 e guerra de libertação da Argélia até 1962; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="Decolonization" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">DESCOLONIZAÇÃO AFRO-ASIÁTICA</text>
     <ArrowHead id="sx-head-dec" />
@@ -554,6 +572,7 @@ export function Decolonization({ active }: Scene) {
       <text x={[110, 260, 460][k]} y="318" className="bi-tiny">{h}</text>
     </g>)}
     <text x="30" y="342" className="bi-foot">Trilhas esquemáticas, sem escala de tempo.</text>
+    </g>
   </svg>;
 }
 
@@ -576,7 +595,9 @@ export function ColdWarEnd({ active }: Scene) {
     { c: 375, title: 'Cascata', date: '1989', cap: ['a mesma sinalização', 'derruba um após outro'] },
     { c: 520, title: 'Dissolução', date: 'dez. 1991', cap: ['Rússia, sob Yeltsin,', 'herda o assento na ONU'] },
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Fim da Guerra Fria: reformas de Gorbachev, não intervenção soviética, queda em cascata dos regimes do Leste em 1989 e dissolução da URSS em 1991; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Fim da Guerra Fria: reformas de Gorbachev, não intervenção soviética, queda em cascata dos regimes do Leste em 1989 e dissolução da URSS em 1991; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="ColdWarEnd" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">O FIM DA GUERRA FRIA · 1985–1991</text>
     <ArrowHead id="sx-head-gf" />
@@ -650,6 +671,7 @@ export function ColdWarEnd({ active }: Scene) {
       </g>;
     })}
     <text x={(Y90(1956) + Y90(1968)) / 2} y="338" textAnchor="middle" className="bi-tiny">intervenções soviéticas</text>
+    </g>
   </svg>;
 }
 

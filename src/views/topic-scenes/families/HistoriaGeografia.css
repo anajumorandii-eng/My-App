@@ -158,3 +158,5 @@
 .dark .hg-small { fill: #e0e1d3; }
 .dark .hg-factory { fill: #36595a; }.dark .hg-document { fill: #35505a; }
 @media (max-width: 660px) { .hg-scene { padding: .75rem; }.hg-figure svg { width: 620px; max-width: none; }.hg-pan-hint { display: block; margin: .3rem 0 .75rem; color: var(--vs-dim); font: 600 .75rem/1.4 system-ui, sans-serif; }.hg-controls button { flex: 1 1 42%; } }
+/* A prancha mantém a escrita legível; o recorte estreito usa a região de pan por teclado. */
+.hg-figure > svg { width:100%; min-width:740px; max-width:none; }

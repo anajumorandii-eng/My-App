@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'motion/react';
 import { NODE_STATE_LABEL, type NodeState } from '../../lib/visualStudy';
 import type { BoardProps } from './types';
 import './IndependenceBoard.css';
+import ExceptionalHumanitiesIllustration from '../visual-instruments/ExceptionalHumanitiesIllustration';
 
 type Focus = 'processo' | 'guerras' | 'continuidades' | 'nenhum';
 
@@ -33,6 +34,7 @@ export default function IndependenceBoard({ map, states, selectedId, onSelect }:
       <div className="independence-board__seal"><span>1821–1823</span><strong>ruptura política</strong></div>
     </header>
 
+    <ExceptionalHumanitiesIllustration kind="independence" index={focus === 'guerras' ? 1 : focus === 'continuidades' ? 2 : 0} ariaLabel="Paisagem da Independência: palácio, Cortes, participação popular nas guerras e continuidade do trabalho escravizado"/>
     <p className="independence-board__hint">Percorra a prancha na horizontal para acompanhar 1821–1823. Com o foco na prancha, use as setas do teclado.</p>
     <div className="independence-board__viewport" tabIndex={0} role="region" aria-label="Percorrer a prancha da Independência" onKeyDown={event => {
       if (event.key === 'ArrowLeft' || event.key === 'ArrowRight') {

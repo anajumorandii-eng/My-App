@@ -1,3 +1,4 @@
+import { GeoIllustration } from './GeoIllustration';
 import React from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -77,7 +78,9 @@ export function TimeZones({ active }: Scene) {
   const [bx, by] = tzPoint(-45, TZ.R - 14);
   const [tx, ty] = tzPoint(135, TZ.R - 14);
   const [lx, ly] = tzPoint(0, TZ.R - 14);
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Fusos horários vistos do Polo Norte: 24 fusos de 15 graus, destino menos origem, voo São Paulo–Londres e Linha Internacional de Data; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Fusos horários vistos do Polo Norte: 24 fusos de 15 graus, destino menos origem, voo São Paulo–Londres e Linha Internacional de Data; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="TimeZones" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">FUSOS · VISTA DO POLO NORTE</text>
 
@@ -198,6 +201,7 @@ export function TimeZones({ active }: Scene) {
 
 
     <text x="30" y="340" className="bi-foot">Esquema fora de escala: fusos teóricos de 15°, sem os desvios políticos da linha real.</text>
+  </g>
   </svg>;
 }
 
@@ -254,7 +258,9 @@ export function MapScale({ active }: Scene) {
   const profY = (h: number) => 266 - h * 1.25;
   const pts: [number, number][] = [[50, 6], [HILL[4].cx - HILL[4].rx, 20], [HILL[3].cx - HILL[3].rx, 40], [HILL[2].cx - HILL[2].rx, 60], [HILL[1].cx - HILL[1].rx, 80], [HILL[0].cx - HILL[0].rx, 100], [124, 108], [HILL[0].cx + HILL[0].rx, 100], [HILL[1].cx + HILL[1].rx, 80], [HILL[2].cx + HILL[2].rx, 60], [HILL[3].cx + HILL[3].rx, 40], [HILL[4].cx + HILL[4].rx, 20], [300, 10]];
   const profile = pts.map(([x, h], k) => `${k ? 'L' : 'M'}${prof(x).toFixed(1)} ${profY(h).toFixed(1)}`).join('');
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Linguagem cartográfica: régua de 8 centímetros a 1:50.000, escala gráfica na cópia ampliada, escala grande e pequena, curvas de nível em perfil; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Linguagem cartográfica: régua de 8 centímetros a 1:50.000, escala gráfica na cópia ampliada, escala grande e pequena, curvas de nível em perfil; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="MapScale" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ESCALA · DO MAPA AO TERRENO</text>
     <MapSheet active={active} p={p} />
@@ -327,6 +333,7 @@ export function MapScale({ active }: Scene) {
 
 
     <text x="30" y="340" className="bi-foot">Folha, morro e cidades são esquemáticos; os números vêm dos exemplos do resumo.</text>
+  </g>
   </svg>;
 }
 
@@ -385,7 +392,9 @@ export function DigitalMapping({ active }: Scene) {
   </g>;
   const [hx, hy] = layerPt(x0, 268, 0.72, 0.42);
   const coarse = 4, fine = 10;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Cartografia digital: camadas do SIG cruzadas, sensoriamento remoto e GPS, resolução e revisita, da detecção à fiscalização; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Cartografia digital: camadas do SIG cruzadas, sensoriamento remoto e GPS, resolução e revisita, da detecção à fiscalização; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="DigitalMapping" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">CARTOGRAFIA DIGITAL · MESMO TERRITÓRIO</text>
     <path d="M40 92Q310 44 580 92" className="ct-orbit" />
@@ -486,6 +495,7 @@ export function DigitalMapping({ active }: Scene) {
 
 
     <text x="30" y="344" className="bi-foot">Território, camadas e pixels são esquemáticos.</text>
+  </g>
   </svg>;
 }
 
@@ -512,7 +522,9 @@ export function MapElements({ active }: Scene) {
     ['orientação', 'onde fica o norte'],
     ['fonte e data', 'origem e atualidade'],
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Representações gráficas: elementos do mapa, generalização por escala, anamorfose por população e gráfico sem forma de território; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Representações gráficas: elementos do mapa, generalização por escala, anamorfose por população e gráfico sem forma de território; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="MapElements" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">REPRESENTAR É ESCOLHER</text>
 
@@ -620,6 +632,7 @@ export function MapElements({ active }: Scene) {
 
 
     <text x="30" y="344" className="bi-foot">{active >= 2 ? 'Tamanhos esquemáticos: o resumo dá o sentido da mudança, não os números.' : 'Mapas e costas esquemáticos.'}</text>
+  </g>
   </svg>;
 }
 
@@ -639,7 +652,9 @@ const TABLE = { base: 'M232 258C290 258 320 260 350 260C380 260 420 262 470 266'
 export function SurfaceWater({ active }: Scene) {
   const p = usePaced();
   const sunk = active === 3;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Água na superfície terrestre: 97% nos oceanos, bacia atravessando fronteira, aquífero livre e confinado, superexplotação e subsidência; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Água na superfície terrestre: 97% nos oceanos, bacia atravessando fronteira, aquífero livre e confinado, superexplotação e subsidência; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="SurfaceWater" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ÁGUA · DO CUME AO OCEANO</text>
     <defs>
@@ -750,6 +765,7 @@ export function SurfaceWater({ active }: Scene) {
 
 
     <text x="30" y="344" className="bi-foot">Corte esquemático, sem escala; as proporções dentro dos 3% são ilustrativas.</text>
+  </g>
   </svg>;
 }
 

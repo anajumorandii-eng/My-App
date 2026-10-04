@@ -7,6 +7,7 @@ import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import { InteriorizationScene } from './InteriorizationScene';
 import { MiningColonyScene } from './MiningColonyScene';
+import { ExceptionalSceneWindow } from './ExceptionalHumanitiesIllustration';
 
 const ink = { fontWeight: 800, fill: 'var(--vs-ink)' } as const;
 
@@ -47,12 +48,12 @@ function HistoryScene({ id, selected }: { id: HistoryInstrumentId; selected: num
 
   if (id === 'interiorization') return <>
     <InteriorizationScene selected={selected} />
-    <text x="160" y="290" textAnchor="middle" style={{ ...ink, fontSize: 13 }}>{historyInstrumentState(id, selected).evidence}</text>
+    <text x="160" y="218" textAnchor="middle" style={{ ...ink, fontSize: 13 }}>{historyInstrumentState(id, selected).evidence}</text>
   </>;
 
   return <>
     <MiningColonyScene selected={selected} />
-    <text x="160" y="290" textAnchor="middle" style={{ ...ink, fontSize: 13 }}>{historyInstrumentState(id, selected).relation}</text>
+    <text x="160" y="218" textAnchor="middle" style={{ ...ink, fontSize: 13 }}>{historyInstrumentState(id, selected).relation}</text>
   </>;
 }
 
@@ -65,6 +66,7 @@ export function historyInstrument(id: HistoryInstrumentId) {
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
     return <BoardShell
+      sceneFirst={id === 'interiorization' || id === 'mining-colony'}
       kicker="Ateliê de relações históricas"
       title={config.name}
       subtitle={config.question}
@@ -72,9 +74,9 @@ export function historyInstrument(id: HistoryInstrumentId) {
       ariaLabel={`Instrumento histórico: ${props.map.title}`}
       emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
-        <svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${state.label}: ${state.focus}`}>
-          <HistoryScene id={id} selected={selected} />
-        </svg>
+        {id === 'interiorization' || id === 'mining-colony' ? <ExceptionalSceneWindow label={`Percorrer a figura: ${config.name}`}>
+          <svg className="vs-plane ehi-illustration" viewBox="0 0 320 230" role="img" aria-label={`${config.name}; ${state.label}: ${state.focus}`}><HistoryScene id={id} selected={selected}/></svg>
+        </ExceptionalSceneWindow> : <svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${state.label}: ${state.focus}`}><HistoryScene id={id} selected={selected}/></svg>}
         <p className="vs-instrument-dica">mude o recorte para comparar as relações</p>
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <label htmlFor={`history-${id}`}><strong>{config.controlLabel}</strong><span>{config.controlDescription}</span><b>{state.label}</b></label>

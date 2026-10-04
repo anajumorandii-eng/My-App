@@ -1,4 +1,5 @@
 import React from 'react';
+import { SocioEconomicIllustration } from './SocioEconomicIllustration';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { BRAZIL } from './GeografiaFisica';
@@ -64,7 +65,9 @@ export function AgricultureSystems({ active }: Scene) {
     { x: 500, top: 'mercado', bottom: 'formal', icon: <path d="M-11 7v-11h22v11ZM-13 -4l13-8 13 8M-4 7v-6h8v6" className="bi-icon" /> },
     { x: 566, top: 'commodities', bottom: 'mundiais', icon: <g><circle r="9" className="bi-icon" /><path d="M-9 0h18M0 -9c-5 4-5 14 0 18M0 -9c5 4 5 14 0 18" className="bi-icon" /></g> },
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Produção agrícola mundial: subsistência, larga escala e sistemas intermediários comparados por mecanização, escala e destino da colheita; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Produção agrícola mundial: subsistência, larga escala e sistemas intermediários comparados por mecanização, escala e destino da colheita; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="agriculture" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">SISTEMAS AGRÍCOLAS</text>
     <rect x="30" y="56" width="346" height="220" rx="14" className="bi-panel" />
@@ -141,7 +144,7 @@ export function AgricultureSystems({ active }: Scene) {
       <text x="326" y="194" textAnchor="middle" className="bi-hand-sm">mercado formal</text>
     </g>}
 
-    <rect x="392" y="56" width="204" height="220" rx="14" className="bi-panel" />
+    <rect x="392" y="56" width="204" height="230" rx="14" className="bi-panel" />
     <text x="406" y="80" className="bi-panel-title">O QUE OS SEPARA</text>
     {[['mecanização', sys.mech, 106], ['escala', sys.scale, 156]].map(([name, range, y]) => {
       const [a, b] = range as number[];
@@ -161,8 +164,8 @@ export function AgricultureSystems({ active }: Scene) {
       <motion.circle cx={d.x} cy="228" r="15" initial={false} animate={{ scale: sys.dest === k ? 1.1 : 1 }} transition={p(0.4, 0.3)}
         className={sys.dest === k ? 'eg-dest-on' : 'eg-dest'} style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />
       <g transform={`translate(${d.x} 229)`}>{d.icon}</g>
-      <text x={d.x} y="256" textAnchor="middle" className={sys.dest === k ? 'bi-tiny bi-strong' : 'bi-tiny'}>{d.top}</text>
-      <text x={d.x} y="267" textAnchor="middle" className="bi-tiny">{d.bottom}</text>
+      <text x={d.x} y="258" textAnchor="middle" className={sys.dest === k ? 'bi-tiny bi-strong' : 'bi-tiny'}>{d.top}</text>
+      <text x={d.x} y="275" textAnchor="middle" className="bi-tiny">{d.bottom}</text>
     </g>)}
 
     <path d="M60 296H560" className="eg-spectrum" />
@@ -172,6 +175,7 @@ export function AgricultureSystems({ active }: Scene) {
         className={active === k ? 'bi-small bi-strong bi-on' : 'bi-small'}>{label as string}</text>)}
     <text x="30" y="342" className="bi-foot">Esquema ilustrativo, sem escala.</text>
     <text x="590" y="342" textAnchor="end" className="bi-hand-sm">coexistem: não é escada evolutiva</text>
+    </g>
   </svg>;
 }
 
@@ -197,7 +201,9 @@ export function ProductionModels({ active }: Scene) {
   const p = usePaced();
   const m = MODELS[active];
   const stops = [90, 230, 370, 510];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Modelos produtivos: taylorismo, fordismo e toyotismo na mesma esteira, e a coexistência deles hoje; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Modelos produtivos: taylorismo, fordismo e toyotismo na mesma esteira, e a coexistência deles hoje; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="production" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="eg-head-ford" />
     <text x="30" y="40" className="bi-kicker">CHÃO DE FÁBRICA · MODELOS PRODUTIVOS</text>
@@ -294,6 +300,7 @@ export function ProductionModels({ active }: Scene) {
       <text x={stops[k]} y="321" textAnchor="middle" className={k === active ? 'bi-small bi-strong bi-on' : 'bi-small'}>{name}</text>
     </g>)}
     <text x="30" y="343" className="bi-foot">Ordem dos modelos; a linha não tem escala de tempo.</text>
+    </g>
   </svg>;
 }
 
@@ -308,7 +315,9 @@ export function IndustrialSaoPaulo({ active }: Scene) {
   const p = usePaced();
   const [sx, sy] = toMapSP(SP[0], SP[1]);
   const cluster = [[-14, -12], [12, -16], [-20, 8], [16, 8], [0, -26], [26, -4]];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Espaço industrial brasileiro: capital do café, ferrovia e porto fundam a indústria de São Paulo, e a aglomeração se retroalimenta; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Espaço industrial brasileiro: capital do café, ferrovia e porto fundam a indústria de São Paulo, e a aglomeração se retroalimenta; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="sao-paulo" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="eg-head-sp" />
     <text x="30" y="40" className="bi-kicker">SÃO PAULO · POLO INDUSTRIAL</text>
@@ -393,6 +402,7 @@ export function IndustrialSaoPaulo({ active }: Scene) {
       </g>}
     </motion.g>
     <text x="30" y="346" className="bi-foot">Contorno simplificado; posição e barra aproximadas.</text>
+    </g>
   </svg>;
 }
 
@@ -416,7 +426,9 @@ const PLACES: { name: string; at: readonly [number, number]; type: number; dx: n
 export function TourismTerritories({ active }: Scene) {
   const p = usePaced();
   const towers = [[314, 36], [338, 52], [362, 44], [386, 60], [410, 40], [434, 56], [458, 48], [482, 62], [506, 44], [530, 34], [554, 50]];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Geografia do turismo: sol e praia, cultural e ecoturismo, negócios e eventos no mapa do Brasil e no padrão de ocupação de cada tipo; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Geografia do turismo: sol e praia, cultural e ecoturismo, negócios e eventos no mapa do Brasil e no padrão de ocupação de cada tipo; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="tourism" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">TURISMO · TIPOS E TERRITÓRIOS</text>
     <path d={BRAZIL} transform="translate(14 44) scale(.74)" className="bi-land" />
@@ -516,6 +528,7 @@ export function TourismTerritories({ active }: Scene) {
     </motion.g>
     <text x="30" y="322" className="bi-small"><tspan className="bi-strong">cada tipo, um padrão de ocupação:</tspan> sem hierarquia entre eles</text>
     <text x="30" y="342" className="bi-foot">Contorno simplificado; posições aproximadas; prédios ilustrativos.</text>
+    </g>
   </svg>;
 }
 
@@ -542,7 +555,9 @@ export function BlocIntegration({ active }: Scene) {
     { x: 286, on: active >= 2, icon: <g><path d="M-7 -3h14v10h-14Z" className="eg-crate" /><path d="M-3 -3v-3h6v3M-7 1h14" className="bi-icon" /></g> },
   ];
   const coinShapes = ['M0 -4l4 7h-8Z', 'M-3.5 -3.5h7v7h-7Z', 'M0 -4.5l4.5 4.5-4.5 4.5-4.5-4.5Z'];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Blocos econômicos: zona de livre comércio, união aduaneira, mercado comum e união econômica e monetária, cada grau acrescentando um compromisso ao anterior; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Blocos econômicos: zona de livre comércio, união aduaneira, mercado comum e união econômica e monetária, cada grau acrescentando um compromisso ao anterior; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="blocs" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">BLOCOS ECONÔMICOS · GRAUS DE INTEGRAÇÃO</text>
 
@@ -598,6 +613,7 @@ export function BlocIntegration({ active }: Scene) {
     <text x="360" y="298" className="bi-hand-sm">moeda comum só no último degrau</text>
     <text x="30" y="320" className="bi-small">Todos os graus eliminam a tarifa entre os membros; muda o que vem junto.</text>
     <text x="30" y="342" className="bi-foot">*Mercosul: união aduaneira formal, com falhas na prática. Esquema, sem escala.</text>
+    </g>
   </svg>;
 }
 
@@ -621,7 +637,9 @@ function Sack({ x, y }: { x: number; y: number }) {
 export function TermsOfTrade({ active }: Scene) {
   const p = usePaced();
   const sacks = [[250, 144], [272, 144], [228, 144], [261, 128], [239, 128], [250, 112]];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Desigualdades globais: deterioração dos termos de troca, industrialização por substituição de importações e parques fabris pouco competitivos; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Desigualdades globais: deterioração dos termos de troca, industrialização por substituição de importações e parques fabris pouco competitivos; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="trade" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="eg-head-tt" />
     <text x="30" y="40" className="bi-kicker">CENTRO E PERIFERIA · PREBISCH E CEPAL</text>
@@ -704,6 +722,7 @@ export function TermsOfTrade({ active }: Scene) {
       </g>;
     })}
     <text x="30" y="340" className="bi-foot">Quantidades ilustrativas, sem escala. A base industrial criada não foi perdida.</text>
+    </g>
   </svg>;
 }
 
@@ -731,7 +750,9 @@ export function WorldOrder({ active }: Scene) {
     { title: 'FIM DA BIPOLARIDADE', lines: ['1989: cai o Muro de', 'Berlim, colapso do bloco', 'socialista europeu', 'dez. 1991: dissolução', 'formal da União', 'Soviética'] },
     { title: 'MOMENTO UNIPOLAR', lines: ['EUA: única superpotência', 'militar e econômica', 'por cerca de duas', 'décadas', 'depois: China, UE, Rússia,', 'Índia, Brasil… (multipolar)'] },
   ][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Do mundo bipolar ao multipolar: economia soviética sufocada, reformas de Gorbachev, queda do Muro e dissolução da URSS, momento unipolar americano; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Do mundo bipolar ao multipolar: economia soviética sufocada, reformas de Gorbachev, queda do Muro e dissolução da URSS, momento unipolar americano; recorte ${active + 1} em foco`}>
+    <SocioEconomicIllustration kind="world-order" active={active} />
+    <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ORDEM MUNDIAL · 1947 EM DIANTE</text>
 
@@ -809,6 +830,7 @@ export function WorldOrder({ active }: Scene) {
     </g>)}
     <text x={(yearX(1980) + yearX(1990)) / 2 - 16} y="318" textAnchor="middle" className="bi-tiny">anos 1980</text>
     <text x="30" y="342" className="bi-foot">Polos e tamanhos são esquema; a faixa unipolar cobre “cerca de duas décadas”.</text>
+    </g>
   </svg>;
 }
 

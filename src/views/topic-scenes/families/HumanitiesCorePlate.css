@@ -1,0 +1,16 @@
+.hc-plate .hc-roof { fill:#a06e51; stroke:var(--ha-ink); stroke-width:1.5; }
+.hc-plate .hc-window { fill:#8ca7a7; stroke:var(--ha-ink); stroke-width:1.5; }
+.hc-plate .hc-hull { fill:#946e4d; stroke:var(--ha-ink); stroke-width:2; }
+.hc-plate .hc-sail { fill:#f2e5c7; stroke:#877b60; stroke-width:1.5; }
+.hc-plate .hc-rigging { fill:none; stroke:#8e7e63; stroke-width:1; }
+.hc-plate .hc-cross { stroke:#9b4851; stroke-width:4; fill:none; }
+.hc-plate .hc-astrolabe { fill:#d7bb74; stroke:#917540; stroke-width:2; }
+.hc-plate .hc-brick { fill:#b18a6e; stroke:var(--ha-ink); stroke-width:2; }
+.hc-plate .hc-smoke { stroke:#97a097; stroke-width:12; stroke-linecap:round; fill:none; opacity:.4; }
+.hc-plate .hc-boiler { fill:#899695; stroke:var(--ha-ink); stroke-width:2; }
+.hc-plate .hc-wheel { fill:#bcb5a0; stroke:var(--ha-ink); stroke-width:2; }
+.hc-plate .hc-grid { fill:none; stroke:#728f93; stroke-width:1.5; }
+.dark .hc-plate .hc-roof { fill:#7c6558; }
+.dark .hc-plate .hc-sail { fill:#bcb397; }
+.dark .hc-plate .hc-grid { stroke:#b2c5c5; }
+.hg-figure .hc-plate > svg { width:740px; height:430px; max-width:none; }

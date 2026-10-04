@@ -1,3 +1,4 @@
+import { GeoIllustration } from './GeoIllustration';
 import React from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -149,7 +150,9 @@ export function GlobalCommons({ active }: Scene) {
     'Moedas e nuvem: metáfora da assimetria, sem valor medido.',
     'Áreas esquemáticas, sem escala: mostram quem acumulou mais.',
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Desafios ambientais do século XXI: efeitos regionais desiguais, serviços ecológicos perdidos, tragédia dos comuns e responsabilidade histórica; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Desafios ambientais do século XXI: efeitos regionais desiguais, serviços ecológicos perdidos, tragédia dos comuns e responsabilidade histórica; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="GlobalCommons" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">DESAFIOS AMBIENTAIS · SÉCULO XXI</text>
     <Steps n={4} active={active} />
@@ -270,6 +273,7 @@ export function GlobalCommons({ active }: Scene) {
     </motion.g>}
 
     <text x="30" y="336" className="bi-foot">{feet[active]}</text>
+  </g>
   </svg>;
 }
 
@@ -292,7 +296,9 @@ export function EnvironmentalPower({ active }: Scene) {
     'Rio esquemático: a largura do traço indica vazão, sem medida.',
     'Vista polar esquemática, sem escala; o recuo do gelo é ilustrativo.',
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Geopolítica ambiental: Amazônia como sumidouro e alvo de pressão, Kyoto e Paris, a barragem etíope no Nilo e o degelo do Ártico; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Geopolítica ambiental: Amazônia como sumidouro e alvo de pressão, Kyoto e Paris, a barragem etíope no Nilo e o degelo do Ártico; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="EnvironmentalPower" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">MEIO AMBIENTE COMO PODER</text>
     <Steps n={4} active={active} />
@@ -410,6 +416,7 @@ export function EnvironmentalPower({ active }: Scene) {
     </motion.g>}
 
     <text x="30" y="336" className="bi-foot">{feet[active]}</text>
+  </g>
   </svg>;
 }
 
@@ -427,7 +434,9 @@ export function EnvironmentalLaw({ active }: Scene) {
     'Esquema do fluxo de monitoramento; posições ilustrativas.',
     'Curva esquemática: mostra oscilação entre governos, sem valores.',
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Políticas ambientais brasileiras: APP, Reserva Legal por bioma, Prodes e Deter orientando o Ibama, e lei robusta com fiscalização limitada; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Políticas ambientais brasileiras: APP, Reserva Legal por bioma, Prodes e Deter orientando o Ibama, e lei robusta com fiscalização limitada; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="EnvironmentalLaw" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">POLÍTICA AMBIENTAL BRASILEIRA</text>
     <Steps n={4} active={active} />
@@ -521,6 +530,7 @@ export function EnvironmentalLaw({ active }: Scene) {
     </motion.g>}
 
     <text x="30" y="336" className="bi-foot">{feet[active]}</text>
+  </g>
   </svg>;
 }
 
@@ -535,7 +545,9 @@ export function EnergyMatrix({ active }: Scene) {
     'Curvas ilustrativas de um dia, sem valores.',
     'Balança como metáfora: indica peso relativo, sem medida.',
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Matriz energética: a elétrica dentro da energética, mais de 80% fóssil no mundo, fontes intermitentes e despacháveis, e a transição que muda o poder; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Matriz energética: a elétrica dentro da energética, mais de 80% fóssil no mundo, fontes intermitentes e despacháveis, e a transição que muda o poder; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="EnergyMatrix" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">MATRIZ ENERGÉTICA</text>
     <Steps n={4} active={active} />
@@ -653,6 +665,7 @@ export function EnergyMatrix({ active }: Scene) {
     </motion.g>}
 
     <text x="30" y="336" className="bi-foot">{feet[active]}</text>
+  </g>
   </svg>;
 }
 
@@ -676,7 +689,9 @@ export function WorldElectricity({ active }: Scene) {
     'Sequência esquemática da decisão alemã, sem escala.',
     'Crescimento ilustrativo: as duas fileiras sobem juntas, sem medida.',
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Energia elétrica no mundo: geração mundial por fonte, França nuclear, Alemanha após Fukushima e China expandindo renováveis e carvão; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Energia elétrica no mundo: geração mundial por fonte, França nuclear, Alemanha após Fukushima e China expandindo renováveis e carvão; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="WorldElectricity" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ELETRICIDADE NO MUNDO</text>
     <Steps n={4} active={active} />
@@ -771,6 +786,7 @@ export function WorldElectricity({ active }: Scene) {
     </motion.g>}
 
     <text x="30" y="336" className="bi-foot">{feet[active]}</text>
+  </g>
   </svg>;
 }
 
@@ -787,7 +803,9 @@ export function MineralGeography({ active }: Scene) {
     'Corte esquemático de uma barragem de rejeitos, sem escala.',
     'Percurso esquemático do mercúrio, sem medida.',
   ];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Produção mineral: ferro no Quadrilátero e em Carajás, minerais críticos para baterias, barragem de alteamento a montante e mercúrio do garimpo; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Produção mineral: ferro no Quadrilátero e em Carajás, minerais críticos para baterias, barragem de alteamento a montante e mercúrio do garimpo; recorte ${active + 1} em foco`}>
+    <GeoIllustration kind="MineralGeography" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">PRODUÇÃO MINERAL</text>
     <Steps n={4} active={active} />
@@ -898,6 +916,7 @@ export function MineralGeography({ active }: Scene) {
     </motion.g>}
 
     <text x="30" y="336" className="bi-foot">{feet[active]}</text>
+  </g>
   </svg>;
 }
 

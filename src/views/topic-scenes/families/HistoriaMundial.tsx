@@ -4,6 +4,7 @@ import { useSceneMotion } from '../useSceneMotion';
 import { BRAZIL } from './GeografiaFisica';
 import { Arrow, ArrowHead, Person, type Scene } from './cenaKit';
 import './HistoriaMundial.css';
+import { HistorianIllustration } from './HistorianIllustration';
 
 function usePaced() {
   const t = useSceneMotion();
@@ -44,7 +45,9 @@ const NILE = 'M456 312C450 294 466 282 458 264S466 250 462 244';
 export function FirstCities({ active }: Scene) {
   const p = usePaced();
   const sacks = active >= 1 ? 6 : 2;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Primeiras civilizações: de nômades a aldeias agrícolas e a cidades graças ao excedente, e a comparação entre as cidades-Estado do Tigre e Eufrates e o Estado centralizado do Nilo; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Primeiras civilizações: de nômades a aldeias agrícolas e a cidades graças ao excedente, e a comparação entre as cidades-Estado do Tigre e Eufrates e o Estado centralizado do Nilo; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="FirstCities" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="hm-fc-head" />
     <text x="30" y="40" className="bi-kicker">REVOLUÇÃO AGRÍCOLA · A PARTIR DE c. 10.000 a.C.</text>
@@ -168,6 +171,7 @@ export function FirstCities({ active }: Scene) {
     </Layer>
 
     <text x="30" y="342" className="bi-foot">Lente do historiador: tudo chega por vestígios interpretados — reconstrução parcial.</text>
+    </g>
   </svg>;
 }
 
@@ -199,7 +203,9 @@ export function AmericasNineteenth({ active }: Scene) {
     { title: 'GUERRA CIVIL', lines: ['1861–1865', 'Norte industrializado ×', 'Sul agrário e escravista', 'vence o Norte'], hand: 'fim da escravidão', note: 'governo federal mais forte' },
     { title: 'NEOCOLONIALISMO', lines: ['saem: café, açúcar,', 'minérios, carne', 'entram: empréstimos,', 'ferrovias e portos'], hand: 'dependência sem colônia', note: 'sobretudo capital britânico' },
   ][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`América no século XIX: fragmentação da América hispânica, expansão dos Estados Unidos para o oeste, Guerra Civil e neocolonialismo britânico; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`América no século XIX: fragmentação da América hispânica, expansão dos Estados Unidos para o oeste, Guerra Civil e neocolonialismo britânico; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="AmericasNineteenth" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="hm-am-head" />
     <defs><clipPath id="hm-us-clip"><path d={US_OUTLINE} /></clipPath></defs>
@@ -276,6 +282,7 @@ export function AmericasNineteenth({ active }: Scene) {
     <text x="496" y="262" textAnchor="middle" className="bi-tiny">{panel.note}</text>
 
     <text x="496" y="316" textAnchor="middle" className="bi-foot">Mapa esquemático, sem escala.</text>
+    </g>
   </svg>;
 }
 
@@ -290,7 +297,9 @@ export function CenturyRevolutions({ active }: Scene) {
   const p = usePaced();
   const lit = (k: number) => active === k || (active === 3 && k > 0);
   const events: [number, string, number][] = [[1910, '1910', 0], [1917, '1917', 1], [1938, '1938 · petróleo', 0], [1949, '1949', 2]];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Grandes revoluções do século XX em ordem: México 1910, Rússia 1917, China 1949, com a base social de cada uma; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Grandes revoluções do século XX em ordem: México 1910, Rússia 1917, China 1949, com a base social de cada uma; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="CenturyRevolutions" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="hm-rv-head" />
     <text x="30" y="40" className="bi-kicker">REVOLUÇÕES DO SÉCULO XX</text>
@@ -380,6 +389,7 @@ export function CenturyRevolutions({ active }: Scene) {
     <Layer on={active !== 3} p={p}>
       <text x="30" y="342" className="bi-foot">Figuras esquemáticas; a ordem da linha é a das datas.</text>
     </Layer>
+    </g>
   </svg>;
 }
 
@@ -394,7 +404,9 @@ export function WorldWarTwo({ active }: Scene) {
   const p = usePaced();
   const europe = active <= 1;
   const marks: [number, string, number][] = [[1939.7, 'Polônia', 0], [1940.4, 'França', 0], [1941.5, 'Barbarossa', 1], [1942.9, 'Stalingrado', 1], [1941.95, 'Pearl Harbor', 2], [1945.6, 'Hiroshima e Nagasaki', 2]];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Segunda Guerra Mundial: blitzkrieg de 1939 a 1940, Frente Oriental até Stalingrado, Pacífico de Pearl Harbor a Hiroshima e Nagasaki, e o mundo bipolar de 1945; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Segunda Guerra Mundial: blitzkrieg de 1939 a 1940, Frente Oriental até Stalingrado, Pacífico de Pearl Harbor a Hiroshima e Nagasaki, e o mundo bipolar de 1945; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="WorldWarTwo" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="hm-ww-head" />
     <ArrowHead id="hm-ww-head2" />
@@ -493,6 +505,7 @@ export function WorldWarTwo({ active }: Scene) {
       <text x="212" y="272" textAnchor="middle" className="bi-small bi-strong">70 a 85 milhões de mortos</text>
     </Layer>
     <text x="30" y="342" className="bi-foot">Mapas esquemáticos, sem escala.</text>
+    </g>
   </svg>;
 }
 
@@ -506,7 +519,9 @@ const CY = (y: number) => 40 + (y - 1947) * (540 / 44);
 export function ColdWar({ active }: Scene) {
   const p = usePaced();
   const ticks: [number, string, number][] = [[1949, 'Otan', 0], [1955, 'Varsóvia', 0], [1961, 'Muro', 0], [1950, 'Coreia', 1], [1962, 'Cuba', 1], [1957, 'Sputnik', 2], [1969, 'Apollo 11', 2], [1955.4, 'Bandung', 3]];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Guerra Fria: Estados Unidos e União Soviética, Otan e Pacto de Varsóvia, guerras por procuração, corrida espacial e os não alinhados de Bandung; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Guerra Fria: Estados Unidos e União Soviética, Otan e Pacto de Varsóvia, guerras por procuração, corrida espacial e os não alinhados de Bandung; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="ColdWar" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="hm-cw-head" />
     <text x="30" y="40" className="bi-kicker">GUERRA FRIA · 1947–1991</text>
@@ -602,6 +617,7 @@ export function ColdWar({ active }: Scene) {
       {ticks.filter(t => t[2] === k).map(([y, label]) => <text key={label} x={CY(y)} y="322" textAnchor="middle" className="bi-tiny bi-strong">{`${label} ${Math.floor(y)}`}</text>)}
     </Layer>)}
     <text x="30" y="342" className="bi-foot">Os polos nunca se tocam: a disputa passa por terceiros.</text>
+    </g>
   </svg>;
 }
 
@@ -626,7 +642,9 @@ export function LatinAmericaTwentieth({ active }: Scene) {
   const p = usePaced();
   const map = (x: number, y: number) => [40 + 0.56 * x, 40 + 0.56 * y];
   const dictatorship = active >= 1;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`América Latina no século XX: populismos de Vargas, Perón e Cárdenas, ditaduras no Brasil, na Argentina, no Chile e no Uruguai, Operação Condor e as duas saídas da redemocratização; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`América Latina no século XX: populismos de Vargas, Perón e Cárdenas, ditaduras no Brasil, na Argentina, no Chile e no Uruguai, Operação Condor e as duas saídas da redemocratização; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="LatinAmericaTwentieth" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">AMÉRICA LATINA · 1930–1990</text>
 
@@ -701,6 +719,7 @@ export function LatinAmericaTwentieth({ active }: Scene) {
     </Layer>
 
     <text x="30" y="342" className="bi-foot">Mapa esquemático; as barras usam as datas do resumo.</text>
+    </g>
   </svg>;
 }
 
@@ -730,7 +749,9 @@ export function ColonialDisputes({ active }: Scene) {
     { title: 'PERNAMBUCO', date: 'desde 1630 · Nassau 1637–44', lines: ['Recife: obras, ciência', 'e pintura', 'tolerância religiosa', 'quase duas décadas e meia'], hand: 'Recife floresce' },
     { title: 'EXPULSÃO · 1654', date: 'Insurreição desde 1645', lines: ['Henrique Dias', 'Filipe Camarão', 'Companhia em desgaste', 'açúcar vai ao Caribe'], hand: 'nasce um concorrente' },
   ][active];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Disputas europeias no Brasil colonial: França Antártica na Guanabara, invasão holandesa da Bahia, Pernambuco sob Nassau e a expulsão de 1654 com o açúcar indo ao Caribe; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Disputas europeias no Brasil colonial: França Antártica na Guanabara, invasão holandesa da Bahia, Pernambuco sob Nassau e a expulsão de 1654 com o açúcar indo ao Caribe; recorte ${active + 1} em foco`}>
+    <HistorianIllustration kind="ColonialDisputes" active={active} />
+    <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <ArrowHead id="hm-cd-head" />
     <text x="30" y="40" className="bi-kicker">LITORAL DISPUTADO · SÉCULOS XVI E XVII</text>
@@ -797,6 +818,7 @@ export function ColonialDisputes({ active }: Scene) {
       className={active === k ? 'hm-span-on' : 'hm-span'} initial={false} animate={{ opacity: active === k ? 1 : 0.5 }} transition={p(0.4)} />)}
     {[1550, 1600, 1650].map(y => <text key={y} x={DY(y)} y="292" textAnchor="middle" className="bi-tiny">{y}</text>)}
     <text x="30" y="344" className="bi-foot">Mapa esquemático; cada faixa da linha é um período do resumo.</text>
+    </g>
   </svg>;
 }
 

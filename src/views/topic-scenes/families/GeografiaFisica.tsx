@@ -1,3 +1,4 @@
+import { GeoIllustration } from './GeoIllustration';
 import React from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -43,7 +44,9 @@ export function EarthSeasons({ active }: Scene) {
     </g>
   </g>;
   const orbit = Array.from({ length: 9 }, (_, k) => Math.PI - (k * Math.PI) / 8);
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Movimentos da Terra: eixo inclinado 23,5 graus, hemisférios alternam, incidência direta e estações opostas; elo ${active + 1} destacado`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Movimentos da Terra: eixo inclinado 23,5 graus, hemisférios alternam, incidência direta e estações opostas; elo ${active + 1} destacado`}>
+    <GeoIllustration kind="EarthSeasons" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="gf-night-sky" />
     <text x="30" y="40" className="gf-kicker gf-kicker-light">TRANSLAÇÃO · FORA DE ESCALA</text>
     <ellipse cx="250" cy="196" rx="180" ry="64" className="gf-orbit" />
@@ -52,14 +55,14 @@ export function EarthSeasons({ active }: Scene) {
     <text x="250" y="200" textAnchor="middle" className="gf-sun-label">Sol</text>
 
     <motion.g initial={false} animate={{ opacity: active === 1 ? 0.35 : 1 }} transition={p(0.4)}>
-      {earth(70, true, 'jun')}
-      {earth(430, false, 'dez')}
+      {active !== 1 && earth(70, true, 'jun')}
+      {active !== 1 && earth(430, false, 'dez')}
     </motion.g>
     <motion.g initial={false} animate={{ opacity: active === 0 ? 1 : 0 }} transition={p(0.4)}>
       <path d="M70 150V242" className="gf-ref" />
       <path d="M70 160A36 36 0 0 1 84.4 163" className="gf-arc" />
       <text x="62" y="150" textAnchor="end" className="gf-hand">23,5°</text>
-      <text x="430" y="120" textAnchor="middle" className="gf-hand">o eixo aponta sempre</text>
+      <text x="430" y="112" textAnchor="middle" className="gf-hand">o eixo aponta sempre</text>
       <text x="430" y="138" textAnchor="middle" className="gf-hand">para o mesmo lado</text>
     </motion.g>
     {active === 1 && <motion.g initial={{ x: -180, y: 0 }}
@@ -86,12 +89,15 @@ export function EarthSeasons({ active }: Scene) {
       <text x="430" y="296" textAnchor="middle" className="gf-small-light">inverno no Norte</text>
     </motion.g>
     <text x="30" y="336" className="gf-foot-light">A distância ao Sol varia pouco (periélio e afélio); o que muda é a inclinação dos raios.</text>
+  </g>
   </svg>;
 }
 
 export function ReliefProfile({ active }: Scene) {
   const p = usePaced();
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Relevo brasileiro em perfil: planaltos antigos e erodidos, planícies de sedimentos recentes e depressões rebaixadas pela erosão; ${['planaltos', 'planícies', 'depressões'][active]} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Relevo brasileiro em perfil: planaltos antigos e erodidos, planícies de sedimentos recentes e depressões rebaixadas pela erosão; ${['planaltos', 'planícies', 'depressões'][active]} em foco`}>
+    <GeoIllustration kind="ReliefProfile" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="gf-sky" />
     <text x="30" y="40" className="gf-kicker">PERFIL ESQUEMÁTICO · AB'SÁBER</text>
     <path d="M20 300V130Q60 112 100 116T170 128L200 206H290L310 150Q350 136 380 142T430 150L450 248H600V300Z" className="gf-rock" />
@@ -122,13 +128,16 @@ export function ReliefProfile({ active }: Scene) {
     <text x="245" y="184" textAnchor="middle" className={active === 2 ? 'gf-label gf-on' : 'gf-label'}>depressão</text>
     <text x="525" y="228" textAnchor="middle" className={active === 1 ? 'gf-label gf-on' : 'gf-label'}>planície</text>
     <text x="590" y="336" textAnchor="end" className="gf-foot">Alturas e distâncias fora de escala.</text>
+  </g>
   </svg>;
 }
 
 export function SoilProfiles({ active }: Scene) {
   const p = usePaced();
   const cols = [120, 310, 500];
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Perfis de solo: latossolo profundo e pobre, terra roxa fértil sobre basalto, solo raso do semiárido sujeito à salinização; ${['latossolo', 'terra roxa', 'semiárido'][active]} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Perfis de solo: latossolo profundo e pobre, terra roxa fértil sobre basalto, solo raso do semiárido sujeito à salinização; ${['latossolo', 'terra roxa', 'semiárido'][active]} em foco`}>
+    <GeoIllustration kind="SoilProfiles" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="gf-sky" />
     <text x="30" y="40" className="gf-kicker">TRÊS PERFIS · PROFUNDIDADE FORA DE ESCALA</text>
     {cols.map((x, i) => <motion.g key={x} initial={false} animate={{ opacity: active === i ? 1 : 0.55 }} transition={p(0.4)}>
@@ -174,6 +183,7 @@ export function SoilProfiles({ active }: Scene) {
       <motion.path d="M430 108h140v6H430Z" className="gf-salt" initial={false} animate={{ scaleX: active === 2 ? 1 : 0 }} transition={p(0.9, 1)} style={{ transformBox: 'fill-box', transformOrigin: 'left' }} />
       <text x="500" y="340" textAnchor="middle" className="gf-hand-sm">irrigação sem manejo: sal na superfície</text>
     </motion.g>
+  </g>
   </svg>;
 }
 
@@ -189,7 +199,9 @@ export function ClimateMap({ active }: Scene) {
   const clip = 'gf-clip-clima';
   const zone = (d: string, cls: string, on: boolean) => <motion.path d={d} className={cls} clipPath={`url(#${clip})`} initial={false}
     animate={{ opacity: on ? 1 : 0.35 }} transition={p(0.5)} />;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Climas do Brasil: equatorial na Amazônia, tropical e semiárido, subtropical no Sul; ${['equatorial', 'tropical e semiárido', 'subtropical'][active]} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Climas do Brasil: equatorial na Amazônia, tropical e semiárido, subtropical no Sul; ${['equatorial', 'tropical e semiárido', 'subtropical'][active]} em foco`}>
+    <GeoIllustration kind="ClimateMap" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="gf-sky" />
     <BrazilBase id={clip} />
     {zone(BRAZIL, 'gf-z-tropical', active === 1)}
@@ -233,6 +245,7 @@ export function ClimateMap({ active }: Scene) {
       <text x="502" y="242" textAnchor="middle" className="gf-small">regularmente frio</text>
     </motion.g>
     <text x="600" y="336" textAnchor="end" className="gf-foot">Limites aproximados: climas mudam em faixas.</text>
+  </g>
   </svg>;
 }
 
@@ -242,7 +255,9 @@ export function DomainsMap({ active }: Scene) {
   const focus = ['amazonico', 'cerrado', 'caatinga'] as const;
   const region = (d: string, cls: string, idx: number) => <motion.path d={d} className={cls} clipPath={`url(#${clip})`} initial={false}
     animate={{ opacity: idx < 0 ? 0.5 : active === idx ? 1 : 0.4 }} transition={p(0.5)} />;
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Domínios morfoclimáticos de Ab'Sáber: ${['Amazônico', 'Cerrado', 'Caatinga'][active]} em foco, entre seis domínios e faixas de transição`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Domínios morfoclimáticos de Ab'Sáber: ${['Amazônico', 'Cerrado', 'Caatinga'][active]} em foco, entre seis domínios e faixas de transição`}>
+    <GeoIllustration kind="DomainsMap" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="gf-sky" />
     <BrazilBase id={clip} />
     {region(ZONE.amazonico, 'gf-d-amazonico', 0)}
@@ -287,12 +302,15 @@ export function DomainsMap({ active }: Scene) {
       </g>}
     </motion.g>
     <text x="600" y="336" textAnchor="end" className="gf-foot">Limites aproximados; entre domínios há faixas de transição.</text>
+  </g>
   </svg>;
 }
 
 export function RockCycle({ active }: Scene) {
   const p = usePaced();
-  return <svg viewBox="0 0 620 360" role="img" aria-label={`Rochas por origem: ígneas do magma, sedimentares de sedimentos compactados com fósseis, metamórficas por calor e pressão; ${['ígneas', 'sedimentares', 'metamórficas'][active]} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Rochas por origem: ígneas do magma, sedimentares de sedimentos compactados com fósseis, metamórficas por calor e pressão; ${['ígneas', 'sedimentares', 'metamórficas'][active]} em foco`}>
+    <GeoIllustration kind="RockCycle" active={active} />
+    <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="gf-sky" />
     <text x="30" y="40" className="gf-kicker">CORTE ESQUEMÁTICO · O CICLO DAS ROCHAS</text>
     <path d="M8 150H60L120 76L180 150H340Q380 158 420 156H612V352H8Z" className="gf-crust" />
@@ -337,5 +355,6 @@ export function RockCycle({ active }: Scene) {
       <text x="600" y="334" textAnchor="end" className="gf-small-light">calor e pressão, sem fundir (mármore, gnaisse)</text>
     </motion.g>
     <text x="490" y="236" textAnchor="middle" className="gf-small-light">rochas em profundidade</text>
+  </g>
   </svg>;
 }

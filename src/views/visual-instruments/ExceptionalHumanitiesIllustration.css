@@ -1,0 +1,43 @@
+.ehi-illustration { width: 100%; height: auto; max-width: none; }
+.ehi-drawing { color: var(--vs-ink); }
+.ehi-drawing text { fill: var(--vs-ink); font: 14px Inter, sans-serif; }
+.ehi-drawing .ehi-heading { font: 700 24px Newsreader, Georgia, serif; }
+.ehi-drawing .ehi-note { font: 17px Kalam, cursive; fill: var(--vs-burgundy); }
+.ehi-paper { fill: var(--vs-paper); stroke: var(--vs-line); }
+.ehi-terrain,.ehi-leaf { fill: color-mix(in srgb, var(--vs-green) 24%, var(--vs-paper)); stroke: var(--vs-green); stroke-width: 1.3; }
+.ehi-map { fill: color-mix(in srgb, var(--vs-green) 17%, var(--vs-paper)); stroke: var(--vs-ink); stroke-width: 2; }
+.ehi-building { fill: var(--vs-paper-strong); stroke: var(--vs-ink); stroke-width: 1.8; }
+.ehi-roof { fill: color-mix(in srgb,var(--vs-burgundy) 48%,var(--vs-paper)); stroke: var(--vs-burgundy); stroke-width: 2; }
+.ehi-line,.ehi-cable { fill: none; stroke: var(--vs-ink); stroke-width: 2; stroke-linecap: round; stroke-linejoin: round; }
+.ehi-cable { stroke-width: 3; }
+.ehi-window,.ehi-person { fill: var(--vs-ink); }
+.ehi-windowline { fill:none; stroke: var(--vs-amber); stroke-width: 5; }
+.ehi-gold { fill: color-mix(in srgb,var(--vs-amber) 65%,var(--vs-paper)); stroke: var(--vs-ink); stroke-width: 1.4; }
+.ehi-water { fill: color-mix(in srgb,var(--vs-blue) 19%,var(--vs-paper)); }
+.ehi-waterline { fill:none; stroke: var(--vs-blue); stroke-width: 2; }
+.ehi-river { fill:none; stroke: var(--vs-blue); stroke-width: 16; }
+.ehi-route { fill:none; stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linecap:round; }
+.ehi-annotation { fill:none; stroke: var(--vs-burgundy); stroke-width: 1.5; stroke-dasharray: 4 3; }
+.ehi-dot { fill: var(--vs-burgundy); }
+.ehi-road { fill:none; stroke: var(--vs-ink-muted); stroke-width: 8; }
+.ehi-ship { fill: color-mix(in srgb,var(--vs-blue) 42%,var(--vs-paper)); stroke: var(--vs-ink); stroke-width: 2; }
+.ehi-blade { fill:none; stroke: var(--vs-blue); stroke-width: 5; stroke-linecap:round; }
+.ehi-crop { fill:none; stroke: var(--vs-green); stroke-width: 2.5; }
+.ehi-fossil { fill: var(--vs-ink-muted); stroke: var(--vs-ink); }
+.ehi-boundary { fill:none; stroke: var(--vs-burgundy); stroke-width: 1.5; stroke-dasharray: 6 5; }
+@media(max-width:600px) { .ehi-drawing text { font-size:16px; } .ehi-drawing .ehi-note { font-size:18px; } }
+/* These authored landscapes need the full scene width; controls follow them. */
+.vs-instrument:has(> .ehi-illustration) { width:100%; display:flex; flex-direction:column; align-items:stretch; }
+.vs-instrument:has(> .ehi-illustration) > .vs-plane { width:100%; }
+@media(min-width:621px) { .vs-piston:has(.ehi-illustration) { width:100%; max-width:none; } }
+.ehi-window-wrap { min-width:0; width:100%; max-width:100%; box-sizing:border-box; contain:inline-size; }
+.ehi-scroll-window { min-width:0; width:100%; max-width:100%; overflow-x:auto; overscroll-behavior-x:contain; touch-action:pan-x pan-y; border-radius:12px; }
+.ehi-scroll-window > svg.ehi-illustration { width:100%; min-width:740px; max-width:none; }
+.topic-studio .ehi-scroll-window > svg.ts-coord { width:100%; min-width:620px; max-width:none; margin:0; overflow:hidden; }
+.ehi-scroll-window:focus-visible { outline:3px solid var(--vs-blue); outline-offset:-3px; }
+.ehi-pan-hint { font-size:.85rem; color:var(--vs-ink-muted); line-height:1.5; margin:0 0 8px; }
+.ehi-pan-buttons { display:flex; flex-wrap:wrap; gap:8px; margin-top:8px; }
+.ehi-pan-buttons button { min-height:44px; padding:8px 14px; border:1px solid var(--vs-line); border-radius:8px; color:var(--vs-ink); background:var(--vs-paper); cursor:pointer; }
+.ehi-pan-buttons button:focus-visible { outline:3px solid var(--vs-blue); outline-offset:2px; }
+.vs-instrument:has(> .ehi-window-wrap) { width:100%; display:flex; flex-direction:column; align-items:stretch; min-width:0; }
+@media(min-width:621px) { .vs-piston:has(.ehi-window-wrap) { width:100%; max-width:none; } }
