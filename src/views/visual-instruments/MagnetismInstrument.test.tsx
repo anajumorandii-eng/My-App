@@ -16,7 +16,7 @@ describe('instrumento de magnetismo', () => {
       ['lenz', 'summary-fisica-inducao-eletromagnetica-lei-de-lenz'],
       ['gerador', 'summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores'],
     ];
-    for (const [id, summaryId] of chapters) { const Component = magnetismInstrument(id); const view = render(<Component {...props(summaryId)} />); expect(screen.getByRole('img')).toBeInTheDocument(); expect(screen.getByRole('slider')).toHaveAttribute('type', 'range'); view.unmount(); }
+    for (const [id, summaryId] of chapters) { const Component = magnetismInstrument(id); const view = render(<Component {...props(summaryId)} />); expect(screen.getByRole('img')).toBeInTheDocument(); expect(screen.getByRole('slider', { name: new RegExp(id === 'gerador' ? 'velocidade angular' : id === 'lenz' ? 'tempo de variação' : id === 'carga-em-b' ? 'ângulo entre' : 'corrente') })).toHaveAttribute('type', 'range'); view.unmount(); }
   });
   it('atualiza a força quando o ângulo entre velocidade e campo muda', () => {
     const Component = magnetismInstrument('carga-em-b'); render(<Component {...props('summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme')} />);
@@ -89,4 +89,53 @@ it('inverte corrente e campo com movimento e remove indução em repouso', () =>
   expect(container.querySelector('[data-current-arrow]')).toBeNull();
   expect(screen.getAllByText('0 V').length).toBeGreaterThan(0);
   expect(container.querySelector('[data-vector="external-field"]')).toBeInTheDocument();
+});
+
+it('explicita fio visto de frente e mão direita e mostra a espira separadamente', () => {
+  const Component = magnetismInstrument('fio-espira');
+  const { container } = render(<Component {...props('summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes')} />);
+  expect(screen.getByText(/corrente saindo do plano/i)).toBeInTheDocument();
+  expect(container.querySelector('[data-field-direction="counterclockwise"]')).toBeInTheDocument();
+  expect(container.querySelector('[data-coil-field="outward"]')).toBeInTheDocument();
+  fireEvent.change(screen.getByRole('slider'), { target: { value: '0' } });
+  expect(container.querySelector('[data-field-direction]')).toBeNull();
+});
+it('mostra forças iguais e opostas em cada fio e remove as forças sem corrente', () => {
+  const Component = magnetismInstrument('fios-paralelos');
+  const { container } = render(<Component {...props('summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas')} />);
+  expect(container.querySelector('[data-force="left"]')).toHaveAttribute('d', 'M105 150H145m-8-6 8 6-8 6');
+  expect(container.querySelector('[data-force="right"]')).toHaveAttribute('d', 'M215 150H175m8-6-8 6 8 6');
+  fireEvent.change(screen.getByRole('slider'), { target: { value: '0' } });
+  expect(container.querySelector('[data-force]')).toBeNull();
+  expect(container.querySelector('[data-current-arrow]')).toBeNull();
+});
+it('varia fase do gerador com fluxo, FEM e corrente invertendo a cada meia volta', () => {
+  const Component = magnetismInstrument('gerador');
+  const { container } = render(<Component {...props('summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores')} />);
+  expect(container.querySelector('[data-vector="generator-field"]')).toBeInTheDocument();
+  const phase = screen.getByRole('slider', { name: /fase/i });
+  fireEvent.change(phase, { target: { value: '90' } });
+  expect(container.querySelector('[data-generator-emf]')).toHaveAttribute('data-generator-emf', '4');
+  expect(container.querySelector('[data-generator-current]')).toHaveAttribute('data-generator-current', 'positive');
+  fireEvent.change(phase, { target: { value: '270' } });
+  expect(container.querySelector('[data-generator-emf]')).toHaveAttribute('data-generator-emf', '-4');
+  expect(container.querySelector('[data-generator-current]')).toHaveAttribute('data-generator-current', 'negative');
+});
+it('projeta a espira de perfil para normal paralela ao campo e declara o circuito externo', () => {
+  const Component = magnetismInstrument('gerador');
+  const { container } = render(<Component {...props('summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores')} />);
+  fireEvent.change(screen.getByRole('slider', { name: /fase/i }), { target: { value: '0' } });
+  expect(container.querySelector('ellipse')).toHaveAttribute('rx', '3');
+  expect(screen.getByText(/N = 1.*BA = 0,4/i)).toBeInTheDocument();
+  expect(screen.getByText(/corrente no circuito externo/i)).toBeInTheDocument();
+  expect(container.querySelector('[data-generator-current]')).toBeNull();
+});
+
+it('fio sem corrente não conserva símbolo de corrente saindo do plano', () => {
+ const Component=magnetismInstrument('fio-espira');
+ render(<Component {...props('summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes')} />);
+ fireEvent.change(screen.getByRole('slider'),{target:{value:'0'}});
+ expect(screen.getByRole('img')).not.toHaveTextContent('corrente saindo do plano');
+ const dots=Array.from(screen.getByRole('img').querySelectorAll('circle')).filter(c=>c.getAttribute('cx')==='90'&&c.getAttribute('r')==='4');
+ expect(dots).toHaveLength(0);
 });

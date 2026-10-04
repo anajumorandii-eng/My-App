@@ -2,9 +2,9 @@
 .mc-hill-back { fill: #d8cba7; }
 .mc-hill { fill: #e6dcc0; }
 .mc-river { fill: #8fc0cc; }
-.mc-small { fill: #5a5952; font: 600 9px system-ui, sans-serif; }
-.mc-tiny { fill: #5a4a2c; font: 700 8px system-ui, sans-serif; }
-.mc-label { fill: #2c2a24; font: 700 10px system-ui, sans-serif; }
+.mc-small { fill: #5a5952; font: 600 11px system-ui, sans-serif; }
+.mc-tiny { fill: #5a4a2c; font: 700 12px system-ui, sans-serif; }
+.mc-label { fill: #2c2a24; font: 700 12px system-ui, sans-serif; }
 .mc-warn { fill: #a8432a; }
 .mc-hand { fill: #a8432a; font: 700 13px Kalam, 'Segoe Print', cursive; }
 .mc-hand-arrow { fill: none; stroke: #a8432a; stroke-width: 1.6; }
@@ -19,7 +19,7 @@
 .mc-furnace { fill: #7c6a4f; transition: fill .4s; }
 .mc-house-on .mc-furnace { fill: #f08a2c; }
 .mc-plate-bg { fill: #fbf7ee; }
-.mc-plate { fill: #2c2a24; font: 800 6.5px system-ui, sans-serif; letter-spacing: .08em; }
+.mc-plate { fill: #2c2a24; font: 800 12.5px system-ui, sans-serif; letter-spacing: .02em; }
 .mc-smoke { fill: #bdb2a1; }
 .mc-chest { fill: #9b6a3f; }
 .mc-chest-band { fill: #6e4526; }
@@ -48,3 +48,5 @@
 .dark .mc-quota { stroke: #efe8d8; }
 .dark .mc-village { fill: #4a5d58; stroke: #d3ddcf; }
 .dark .mc-sun { opacity: .18; }
+
+.dark .mc-tiny { fill:#efe8d8; }

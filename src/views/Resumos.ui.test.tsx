@@ -48,11 +48,11 @@ describe('restauração do contexto do resumo', () => {
     // A biblioteca mostra os cartões em lotes: o capítulo pode estar além do
     // primeiro, mas precisa estar no resultado do filtro restaurado.
     let mais = screen.queryByRole('button', { name: /^Mostrar mais/ });
-    while (!screen.queryByRole('heading', { name: 'Transição e bônus demográfico' }) && mais) {
+    while (!screen.queryByRole('heading', { name: 'Estrutura Ativa da População' }) && mais) {
       fireEvent.click(mais);
       mais = screen.queryByRole('button', { name: /^Mostrar mais/ });
     }
-    expect(screen.getByRole('heading', { name: 'Transição e bônus demográfico' })).toBeInTheDocument();
+    expect(screen.getByRole('heading', { name: 'Estrutura Ativa da População' })).toBeInTheDocument();
     expect(screen.queryByRole('heading', { name: /Calor, temperatura/ })).not.toBeInTheDocument();
   });
 

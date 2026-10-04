@@ -57,13 +57,39 @@ function Gases({ focus }: { focus: number }) {
 }
 
 function Charging({ focus }: { focus: number }) {
-  const gap=focus===2;
-  return <><text x="29" y="47" className="pm-heading">redistribuição de elétrons</text>
-    <circle cx="190" cy="166" r="74" className="pm-charge-body"/><circle cx="430" cy="166" r="74" className="pm-charge-body"/>
-    {[-1,0,1].map((n)=><g key={n}><text x={155+n*28} y={151+n%2*37} className="pm-electron">{focus===0?'+':'−'}</text><text x={394+n*29} y={151+n%2*37} className="pm-electron">{focus===2&&n<1?'+':'−'}</text></g>)}
-    {focus<2?<Arrow x1={268} y1={165} x2={353} y2={165} label="elétrons"/>:<><path d="M266 90v155m87-155v155" className="pm-no-touch"/><text x="311" y="75" textAnchor="middle" className="pm-label">sem contato</text></>}
-    <text x="26" y="294" className="pm-equation">{['Atrito: cargas finais opostas.','Contato: elétrons fluem até o mesmo potencial.','Indução: cargas se separam; carga total permanece zero.'][focus]}</text>
-    {gap&&<text x="29" y="328" className="pm-small">A polarização desenhada não inclui aterramento.</text>}</>;
+  if (focus===0) return <g data-charging="friction">
+    <text x="29" y="45" className="pm-heading">Atrito · dois materiais</text>
+    <text x="29" y="78" className="pm-small">Inicialmente neutros</text>
+    <Arrow x1={135} y1={120} x2={285} y2={120} label="esfregar"/>
+    <rect x="85" y="145" width="240" height="64" rx="8" className="pm-charge-body"/>
+    <rect x="270" y="209" width="260" height="64" rx="8" className="pm-charge-body"/>
+    <text x="105" y="185" className="pm-label">material A → +Q</text><text x="320" y="250" className="pm-label">material B → −Q</text>
+    <g data-transfer="electrons"><Arrow x1={295} y1={190} x2={295} y2={234} label="e⁻" labelDx={55}/></g>
+    <text x="29" y="319" className="pm-equation">A perde elétrons; B recebe elétrons.</text>
+    <text x="29" y="355" className="pm-equation">Cargas finais: +Q e −Q · total zero.</text>
+    <text x="29" y="406" className="pm-small"><tspan x="29">Materiais distintos em contato</tspan><tspan x="29" dy="32">e movimento.</tspan></text>
+  </g>;
+  if (focus===1) return <g data-charging="contact">
+    <text x="29" y="45" className="pm-heading">Contato · condutores idênticos</text>
+    <text x="29" y="85" className="pm-small">Antes: eletrizado e neutro</text>
+    <circle cx="235" cy="175" r="65" className="pm-charge-body"/><circle cx="365" cy="175" r="65" className="pm-charge-body"/>
+    <text x="235" y="156" textAnchor="middle" className="pm-label">−Q</text><text x="365" y="156" textAnchor="middle" className="pm-label">0</text>
+    <g data-transfer="electrons"><Arrow x1={258} y1={204} x2={342} y2={204} label="e⁻"/></g>
+    <text x="29" y="291" className="pm-equation"><tspan x="29">Depois: −Q/2 em cada esfera</tspan><tspan x="29" dy="34">· mesmo potencial.</tspan></text>
+    <text x="29" y="369" className="pm-equation"><tspan x="29">Elétrons atravessam a região</tspan><tspan x="29" dy="34">de contato.</tspan></text>
+    <text x="29" y="450" className="pm-small">Sistema isolado · carga total conservada.</text>
+  </g>;
+  return <g data-charging="induction">
+    <text x="29" y="45" className="pm-heading">Indução · polarização</text>
+    <text x="29" y="78" className="pm-small">Sem aterramento</text>
+    <circle cx="150" cy="190" r="58" className="pm-charge-body"/><circle cx="435" cy="190" r="78" className="pm-charge-body"/>
+    <text x="150" y="198" textAnchor="middle" className="pm-electron">−Q</text>
+    {[0,1,2].map(n=><g key={n}><text data-induced-sign="+" x="390" y={152+n*38} className="pm-electron">+</text><text data-induced-sign="−" x="465" y={152+n*38} className="pm-electron">−</text></g>)}
+    <text x="290" y="115" textAnchor="middle" className="pm-label">sem contato</text>
+    <Arrow x1={410} y1={310} x2={470} y2={310} label="e⁻ no condutor"/>
+    <text x="29" y="354" className="pm-equation">Indução: carga total permanece zero.</text>
+    <text x="29" y="404" className="pm-small"><tspan x="29">Elétrons se afastam do indutor negativo.</tspan><tspan x="29" dy="32">Não há transferência entre corpos.</tspan></text>
+  </g>;
 }
 
 export function FisicaMecanismos({ entry }: { entry: SceneEntry }) {
@@ -73,9 +99,9 @@ export function FisicaMecanismos({ entry }: { entry: SceneEntry }) {
   const kind=entry.chapterId;
   return <section className="tc-scene pm-scene" aria-label={entry.question}>
     <header><small>CRIVO · laboratório de mecanismos</small><h4>{entry.question}</h4></header>
-    <svg viewBox="0 0 620 360" role="img" aria-label={`${entry.question} Selecionado: ${item.label}`}>
+    <svg className={kind===IDS.charging ? 'pm-charging' : undefined} viewBox={kind===IDS.charging ? '0 0 620 480' : '0 0 620 360'} role="img" aria-label={`${entry.question} Selecionado: ${item.label}`}>
       <defs><marker id="pm-arrow-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#a5455c"/></marker></defs>
-      <rect x="7" y="7" width="606" height="346" rx="16" className="pm-paper"/>
+      <rect x="7" y="7" width="606" height={kind===IDS.charging ? 466 : 346} rx="16" className="pm-paper"/>
       {kind===IDS.forces?<Forces focus={focus}/>:kind===IDS.collisions?<Collisions focus={focus}/>:kind===IDS.generation?<Generation focus={focus}/>:kind===IDS.gases?<Gases focus={focus}/>:<Charging focus={focus}/>}
     </svg>
     <div className="pm-options" aria-label="Escolha o mecanismo">

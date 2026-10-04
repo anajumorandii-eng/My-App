@@ -1,0 +1,843 @@
+{
+  "purpose": "Rechecagem dirigida do contraste após revisão das capturas",
+  "stats": {
+    "startTime": "2026-10-04T00:05:02.483Z",
+    "duration": 88932.877,
+    "expected": 12,
+    "skipped": 0,
+    "unexpected": 0,
+    "flaky": 0
+  },
+  "verifiedStates": 84,
+  "contrastMinimum": 4.5,
+  "configurations": [
+    {
+      "configuration": "entrega A 390px light reduce",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 390px light no-preference",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 390px dark reduce",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 390px dark no-preference",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 834px light reduce",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 834px light no-preference",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 834px dark reduce",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 834px dark no-preference",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 1366px light reduce",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 1366px light no-preference",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 1366px dark reduce",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    },
+    {
+      "configuration": "entrega A 1366px dark no-preference",
+      "states": 7,
+      "results": [
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-0",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-1",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+          "state": "mecanismo-2",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "inicial",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-min",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        },
+        {
+          "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+          "state": "controle-0-max",
+          "issues": {
+            "clipped": [],
+            "collisions": [],
+            "allCollisions": []
+          }
+        }
+      ]
+    }
+  ]
+}

@@ -34,3 +34,18 @@ describe('mecanismos específicos de Física', () => {
     expect(screen.getByRole('img')).toHaveTextContent('carga total permanece zero');
   });
 });
+
+it('distingue materiais em atrito, ponte de contato e polarização neutra', () => {
+  render(<FisicaMecanismos entry={entry('summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes')}/>);
+  const svg=screen.getByRole('img');
+  expect(svg).toHaveTextContent('material A');
+  expect(svg).toHaveTextContent('esfregar');
+  expect(svg.querySelector('[data-charging="friction"]')).not.toBeNull();
+  fireEvent.click(screen.getByRole('button', {name:'Contato'}));
+  expect(svg.querySelector('[data-charging="contact"]')).not.toBeNull();
+  expect(svg).toHaveTextContent('mesmo potencial');
+  fireEvent.click(screen.getByRole('button', {name:'Indução'}));
+  expect(svg.querySelectorAll('[data-induced-sign="+"]')).toHaveLength(3);
+  expect(svg.querySelectorAll('[data-induced-sign="−"]')).toHaveLength(3);
+  expect(svg.querySelector('[data-transfer]')).toBeNull();
+});

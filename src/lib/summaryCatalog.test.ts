@@ -88,3 +88,11 @@ test('publica os 11 tópicos de Ecologia do primeiro semestre uma única vez', (
   );
   assert.deepEqual(validateSummaryCatalog(interactiveSummaries, summaryMaterials), []);
 });
+
+test('estrutura ativa da população anuncia os setores que seu resumo e prancha explicam', () => {
+  const summary = interactiveSummaries.find(item => item.id === 'geo-bonus-demografico')!;
+  assert.equal(summary.title, 'Estrutura Ativa da População');
+  assert.equal(summary.topic, 'Estrutura Ativa da População');
+  assert.ok(summary.sections.some(section => /setor|setores/i.test(section.content)));
+  assert.equal(summary.id, 'geo-bonus-demografico');
+});

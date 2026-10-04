@@ -8,9 +8,9 @@
 .en-wall-low { fill: #e2d6bf; stroke: #7c6a4f; stroke-width: 1.4; }
 .en-window { fill: #6d8f95; }
 .en-door { fill: #6d6153; }
-.en-label { fill: #2c2a24; font: 800 10px system-ui, sans-serif; }
-.en-small { fill: #5a5952; font: 600 9.5px system-ui, sans-serif; }
-.en-hand { fill: #a8432a; font: 700 12px Kalam, 'Segoe Print', cursive; }
+.en-label { fill: #2c2a24; font: 800 18px system-ui, sans-serif; }
+.en-small { fill: #5a5952; font: 600 18px system-ui, sans-serif; }
+.en-hand { fill: #a8432a; font: 700 20px Kalam, 'Segoe Print', cursive; }
 .en-hier { fill: none; stroke: #a8432a; stroke-width: 2; stroke-dasharray: 4 4; }
 .en-mill { fill: #c9c2b2; stroke: #6d6559; stroke-width: 1.4; }
 .en-wheel { fill: none; stroke: #6d6559; stroke-width: 2.4; }
