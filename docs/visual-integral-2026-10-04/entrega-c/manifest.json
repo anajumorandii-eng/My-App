@@ -1,0 +1,152 @@
+{
+  "date": "2026-10-04",
+  "base": "120c7b9dfb6d22e71bf3d499b60319ae57c81d62",
+  "status": "validado",
+  "total": 24,
+  "chapters": [
+    {
+      "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+      "subject": "Filosofia",
+      "title": "Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes",
+      "capture": "capturas/01-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+      "subject": "Filosofia",
+      "title": "Heráclito e Parmênides: o Ser e o Devir",
+      "capture": "capturas/02-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+      "subject": "Filosofia",
+      "title": "Os Sofistas e a Crise da Verdade",
+      "capture": "capturas/03-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+      "subject": "Filosofia",
+      "title": "A Teoria das Ideias de Platão",
+      "capture": "capturas/04-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+      "subject": "Filosofia",
+      "title": "Política Aristotélica: o Homem como Animal Político",
+      "capture": "capturas/05-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-patristica-e-santo-agostinho",
+      "subject": "Filosofia",
+      "title": "Patrística e Santo Agostinho",
+      "capture": "capturas/06-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+      "subject": "Filosofia",
+      "title": "A Relação entre Fé e Razão",
+      "capture": "capturas/07-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+      "subject": "Filosofia",
+      "title": "Racionalismo Continental: Espinosa e Leibniz",
+      "capture": "capturas/08-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+      "subject": "Filosofia",
+      "title": "Empirismo Britânico: Locke, Berkeley e Hume",
+      "capture": "capturas/09-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+      "subject": "Filosofia",
+      "title": "O Ideal Iluminista de Razão e Progresso",
+      "capture": "capturas/10-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-a-critica-da-razao-pura",
+      "subject": "Filosofia",
+      "title": "A Crítica da Razão Pura",
+      "capture": "capturas/11-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-alienacao-e-mais-valia",
+      "subject": "Filosofia",
+      "title": "Alienação e Mais-Valia",
+      "capture": "capturas/12-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+      "subject": "Filosofia",
+      "title": "Foucault e as Relações de Poder",
+      "capture": "capturas/13-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-justica-e-direitos-humanos",
+      "subject": "Filosofia",
+      "title": "Justiça e Direitos Humanos",
+      "capture": "capturas/14-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-etica-aplicada-e-bioetica",
+      "subject": "Filosofia",
+      "title": "Ética Aplicada e Bioética",
+      "capture": "capturas/15-desktop-claro.png"
+    },
+    {
+      "id": "summary-filosofia-filosofia-politica-contemporanea",
+      "subject": "Filosofia",
+      "title": "Filosofia Política Contemporânea",
+      "capture": "capturas/16-desktop-claro.png"
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "subject": "Sociologia",
+      "title": "O Contexto Histórico do Surgimento da Sociologia",
+      "capture": "capturas/17-desktop-claro.png"
+    },
+    {
+      "id": "summary-sociologia-sociologia-e-senso-comum",
+      "subject": "Sociologia",
+      "title": "Sociologia e Senso Comum",
+      "capture": "capturas/18-desktop-claro.png"
+    },
+    {
+      "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+      "subject": "Sociologia",
+      "title": "A Luta de Classes na Análise Sociológica",
+      "capture": "capturas/19-desktop-claro.png"
+    },
+    {
+      "id": "summary-sociologia-cultura-e-etnocentrismo",
+      "subject": "Sociologia",
+      "title": "Cultura e Etnocentrismo",
+      "capture": "capturas/20-desktop-claro.png"
+    },
+    {
+      "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+      "subject": "Sociologia",
+      "title": "Multiculturalismo e Relativismo Cultural",
+      "capture": "capturas/21-desktop-claro.png"
+    },
+    {
+      "id": "summary-sociologia-desigualdade-racial-no-brasil",
+      "subject": "Sociologia",
+      "title": "Desigualdade Racial no Brasil",
+      "capture": "capturas/22-desktop-claro.png"
+    },
+    {
+      "id": "summary-sociologia-divisao-social-do-trabalho",
+      "subject": "Sociologia",
+      "title": "Divisão Social do Trabalho",
+      "capture": "capturas/23-desktop-claro.png"
+    },
+    {
+      "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+      "subject": "Sociologia",
+      "title": "Transformações no Mundo do Trabalho",
+      "capture": "capturas/24-desktop-claro.png"
+    }
+  ]
+}

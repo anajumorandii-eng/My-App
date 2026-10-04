@@ -142,9 +142,9 @@ export const sociologia: SceneEntry[] = [
     family: 'contraste-de-posicoes',
     question: 'Qual é o objeto próprio da sociologia, segundo os clássicos?',
     items: [
-      { label: 'Durkheim', claim: 'o objeto próprio é o fato social e a coesão', section: 'Os clássicos', quote: 'o fato social e a coesão, em Durkheim' },
-      { label: 'Marx', claim: 'o objeto próprio são as relações de produção e a luta de classes', section: 'Os clássicos', quote: 'as relações de produção e a luta de classes, em Marx' },
-      { label: 'Weber', claim: 'o objeto próprio é a ação social dotada de sentido e a racionalização', section: 'Os clássicos', quote: 'a ação social dotada de sentido e os processos de racionalização, em Weber' },
+      { label: 'Durkheim', claim: 'o objeto próprio é o fato social e a coesão', section: "Os clássicos", quote: "Durkheim toma os fatos sociais como objeto: normas e instituições exteriores aos indivíduos exercem coerção e ajudam a explicar coesão e crise." },
+      { label: 'Marx', claim: 'o objeto próprio são as relações de produção e a luta de classes', section: "Os clássicos", quote: "Marx examina as relações de produção: quem possui os meios de produção, quem vende força de trabalho e como a apropriação do excedente gera conflito de classes." },
+      { label: 'Weber', claim: 'o objeto próprio é a ação social dotada de sentido e a racionalização', section: "Os clássicos", quote: "Weber investiga a ação social dotada de sentido, orientada pela conduta de outros; procura compreender motivos e relacioná-los causalmente ao curso da ação." },
     ],
   },
   {
@@ -152,8 +152,8 @@ export const sociologia: SceneEntry[] = [
     family: 'contraste-de-posicoes',
     question: 'A vida social pode ser explicada pelo senso comum, ou exige a ruptura metódica da sociologia?',
     items: [
-      { label: 'Senso comum', claim: 'orienta a vida cotidiana e frequentemente funciona, sem exigir verificação', section: 'O que é senso comum', quote: 'Não é ignorância nem falsidade automática: orienta a vida cotidiana e frequentemente funciona.' },
-      { label: 'Sociologia', claim: 'exige romper com as pré-noções, definir conceitos com rigor e submeter conclusões à crítica', section: 'A ruptura epistemológica', quote: 'A sociologia se constitui pela ruptura com as pré-noções: exige definir conceitos com rigor, formular hipóteses, coletar dados e submeter conclusões à crítica.' },
+      { label: 'Senso comum', claim: 'orienta a vida cotidiana e frequentemente funciona, sem exigir verificação', section: "O que é senso comum", quote: "Não é sinônimo de ignorância: pode orientar decisões úteis, transmitir experiências e identificar problemas reais." },
+      { label: 'Sociologia', claim: 'exige romper com as pré-noções, definir conceitos com rigor e submeter conclusões à crítica', section: "A ruptura epistemológica", quote: "O resultado deve permitir que outros compreendam como a conclusão foi construída e a contestem." },
     ],
   },
   {
@@ -161,9 +161,9 @@ export const sociologia: SceneEntry[] = [
     family: 'contraste-de-posicoes',
     question: 'O que define a posição de alguém na estrutura social?',
     items: [
-      { label: 'Marx', claim: 'a posição nas relações de produção — possuir ou não meios de produção', section: 'Classe e posição estrutural', quote: 'Classe social, na análise marxista, define-se pela posição nas relações de produção: possuir ou não meios de produção e comprar ou vender força de trabalho.' },
-      { label: 'Weber', claim: 'classe econômica somada a status e poder, dimensões que podem não coincidir', section: 'Pratique e confira', quote: 'mantém a dimensão econômica de classe, mas acrescenta o status, ligado a prestígio e estilo de vida, e o partido, ligado ao poder, tratando-as como dimensões que podem não coincidir.' },
-      { label: 'Bourdieu', claim: 'capitais econômico, cultural e social, múltiplos recursos que definem a posição', section: 'Leituras contemporâneas', quote: 'Bourdieu propôs capitais econômico, cultural e social, mostrando que a posição depende de múltiplos recursos' },
+      { label: 'Marx', claim: 'a posição nas relações de produção — possuir ou não meios de produção', section: "Classe e posição estrutural", quote: "Classe social, na análise marxista, define-se pela posição nas relações de produção: possuir ou não meios de produção e comprar ou vender força de trabalho." },
+      { label: 'Weber', claim: 'classe econômica somada a status e poder, dimensões que podem não coincidir', section: "Leituras contemporâneas", quote: "Weber distingue classe, relacionada às oportunidades econômicas no mercado, status, ligado a prestígio e estilos de vida, e partido, associado à organização e disputa de poder." },
+      { label: 'Bourdieu', claim: 'capitais econômico, cultural e social, múltiplos recursos que definem a posição', section: "Leituras contemporâneas", quote: "Bourdieu analisa a distribuição de capitais econômico, cultural e social em campos e posições sociais." },
     ],
   },
   {
@@ -171,8 +171,8 @@ export const sociologia: SceneEntry[] = [
     family: 'contraste-de-posicoes',
     question: 'Como julgar outras culturas: pelo próprio padrão, ou compreendendo sua lógica interna?',
     items: [
-      { label: 'Etnocentrismo', claim: 'julga outras culturas a partir dos valores da própria, tomando os próprios costumes como padrão do correto', section: 'Etnocentrismo', quote: 'Etnocentrismo é julgar outras culturas a partir dos valores da própria, tomando os próprios costumes como padrão do que é natural e correto.' },
-      { label: 'Estranhamento', claim: 'estranha o familiar e familiariza o estranho, reconhecendo lógica interna em cada cultura', section: 'Estranhamento e desnaturalização', quote: 'O antídoto metodológico é o exercício de estranhar o familiar e familiarizar o estranho: perceber que os próprios costumes também são arbitrários e que os alheios têm lógica interna.' },
+      { label: 'Etnocentrismo', claim: 'julga outras culturas a partir dos valores da própria, tomando os próprios costumes como padrão do correto', section: "Etnocentrismo", quote: "Etnocentrismo é julgar outras culturas a partir dos valores da própria, tomando os próprios costumes como padrão do que é natural e correto." },
+      { label: 'Estranhamento', claim: 'estranha o familiar e familiariza o estranho, reconhecendo lógica interna em cada cultura', section: "Estranhamento e desnaturalização", quote: "Estranhar o familiar e familiarizar o estranho são operações complementares. A primeira pergunta por que nossos costumes parecem óbvios; a segunda busca compreender os sentidos de práticas alheias em seu contexto." },
     ],
   },
   {
@@ -180,8 +180,8 @@ export const sociologia: SceneEntry[] = [
     family: 'contraste-de-posicoes',
     question: 'O relativismo cultural é ferramenta de pesquisa, ou a tese de que nenhum juízo entre culturas é possível?',
     items: [
-      { label: 'Relativismo metodológico', claim: 'compreende práticas pela lógica interna de cada sociedade; é ferramenta de pesquisa contra o etnocentrismo', section: 'Relativismo cultural', quote: 'O relativismo metodológico propõe compreender práticas culturais a partir da lógica interna de cada sociedade, e não pelos padrões do observador. É ferramenta de pesquisa que combate o etnocentrismo.' },
-      { label: 'Relativismo moral radical', claim: 'sustenta que nenhum juízo entre culturas é possível, o que inviabiliza a defesa de direitos', section: 'Relativismo cultural', quote: 'Distingue-se do relativismo moral radical, que sustenta que nenhum juízo entre culturas é possível, posição criticada por inviabilizar a defesa de direitos.' },
+      { label: 'Relativismo metodológico', claim: 'compreende práticas pela lógica interna de cada sociedade; é ferramenta de pesquisa contra o etnocentrismo', section: "Relativismo cultural", quote: "O relativismo metodológico propõe compreender práticas culturais a partir da lógica interna de cada sociedade, e não pelos padrões do observador." },
+      { label: 'Relativismo moral radical', claim: 'sustenta que nenhum juízo entre culturas é possível, o que inviabiliza a defesa de direitos', section: "Relativismo cultural", quote: "Distingue-se do relativismo moral radical, entendido aqui como a tese de que nenhum juízo entre culturas é possível, posição criticada por dificultar a defesa de direitos universais." },
     ],
   },
   {
@@ -189,8 +189,8 @@ export const sociologia: SceneEntry[] = [
     family: 'contraste-de-posicoes',
     question: 'O Brasil vive uma democracia racial pela miscigenação, ou um racismo estrutural encoberto por esse mito?',
     items: [
-      { label: 'Mito da democracia racial', claim: 'o Brasil teria harmonia racial por causa da miscigenação', section: 'O mito da democracia racial', quote: 'A ideia de que o Brasil teria harmonia racial por causa da miscigenação foi difundida como identidade nacional, mas encobre desigualdades sistemáticas.' },
-      { label: 'Racismo estrutural', claim: 'opera de forma difusa, sem leis segregacionistas explícitas, mas com efeitos concretos', section: 'O mito da democracia racial', quote: 'Pesquisas de Florestan Fernandes, Clóvis Moura, Lélia Gonzalez e outros mostraram que o racismo brasileiro opera de forma difusa, sem leis segregacionistas explícitas, mas com efeitos concretos.' },
+      { label: 'Mito da democracia racial', claim: 'o Brasil teria harmonia racial por causa da miscigenação', section: "O mito da democracia racial", quote: "A ideia de que o Brasil teria harmonia racial por causa da miscigenação foi difundida como identidade nacional, mas encobre desigualdades sistemáticas." },
+      { label: 'Racismo estrutural', claim: 'opera de forma difusa, sem leis segregacionistas explícitas, mas com efeitos concretos', section: "O mito da democracia racial", quote: "Racismo estrutural descreve a reprodução de desigualdades raciais nas relações e instituições, inclusive sem intenção explícita de cada indivíduo." },
     ],
   },
   {
@@ -198,8 +198,8 @@ export const sociologia: SceneEntry[] = [
     family: 'contraste-de-posicoes',
     question: 'A divisão do trabalho gera coesão, ou alienação e exploração?',
     items: [
-      { label: 'Durkheim', claim: 'é fonte de solidariedade orgânica e coesão nas sociedades modernas', section: 'Duas leituras', quote: 'Durkheim vê na divisão do trabalho a fonte da solidariedade orgânica e da coesão nas sociedades modernas, com a anomia como patologia possível.' },
-      { label: 'Marx', claim: 'sob o capitalismo, é mecanismo de alienação e de aumento da exploração', section: 'Duas leituras', quote: 'Marx vê nela, sob o capitalismo, um mecanismo de alienação e de aumento da exploração.' },
+      { label: 'Durkheim', claim: 'é fonte de solidariedade orgânica e coesão nas sociedades modernas', section: "Duas leituras", quote: "Durkheim vê na especialização uma base da solidariedade orgânica: pessoas com funções diferentes dependem umas das outras." },
+      { label: 'Marx', claim: 'sob o capitalismo, é mecanismo de alienação e de aumento da exploração', section: "Duas leituras", quote: "Marx investiga a divisão sob relações capitalistas, a propriedade e o controle do trabalho. Fragmentação e comando externo podem reforçar alienação e exploração, separando quem produz do domínio sobre o processo e sobre o produto." },
     ],
   },
   {
@@ -207,8 +207,8 @@ export const sociologia: SceneEntry[] = [
     family: 'contraste-de-posicoes',
     question: 'A automação leva a desemprego tecnológico massivo, ou à criação de novas ocupações?',
     items: [
-      { label: 'Desemprego massivo', claim: 'a automação e a IA provocariam desemprego tecnológico massivo', section: 'Reestruturação e desemprego', quote: 'O debate opõe quem prevê desemprego tecnológico massivo e quem aponta a criação de novas ocupações e a mudança de perfil.' },
-      { label: 'Novas ocupações', claim: 'a automação cria novas ocupações e muda o perfil do emprego, sem gerar desemprego generalizado', section: 'Reestruturação e desemprego', quote: 'O debate opõe quem prevê desemprego tecnológico massivo e quem aponta a criação de novas ocupações e a mudança de perfil.' },
+      { label: 'Desemprego massivo', claim: 'a automação e a IA provocariam desemprego tecnológico massivo', section: "Reestruturação e desemprego", quote: "Algumas operações podem ser substituídas por máquinas, enquanto manutenção, programação e serviços novos demandam trabalho." },
+      { label: 'Novas ocupações', claim: 'a automação pode criar ocupações e mudar o perfil do emprego; o saldo e a absorção dependem das condições sociais', section: "Reestruturação e desemprego", quote: "Criar ocupações, porém, não garante que sejam suficientes, estejam no mesmo lugar ou absorvam as pessoas dispensadas: qualificações, acesso à formação e condições econômicas importam." },
     ],
   },
   // Task 4 — família cadeia-de-derivacao (4 capítulos)

@@ -78,7 +78,7 @@ export const filosofia: SceneEntry[] = [
     family: 'contraste-de-posicoes',
     question: 'O que torna justa uma distribuição: o procedimento que a gerou, o resultado final, ou a história das trocas?',
     items: [
-      { label: 'Teoria procedimental (Rawls)', claim: 'se o procedimento de escolha foi imparcial, o resultado distributivo é justo, seja ele qual for', section: 'Concepções de justiça', quote: 'o resultado distributivo dele decorrente é justo, independentemente de qual seja seu conteúdo específico' },
+      { label: 'Teoria procedimental (Rawls)', claim: 'a escolha imparcial dos princípios exige liberdades básicas iguais, oportunidades equitativas e limites às desigualdades', section: 'Concepções de justiça', quote: 'liberdades básicas iguais, igualdade equitativa de oportunidades e princípio da diferença limitam as instituições e os resultados admissíveis' },
       { label: 'Teoria histórica (Nozick)', claim: 'uma distribuição é justa se vem de aquisições e transferências voluntárias legítimas, não de um padrão final', section: 'Concepções de justiça', quote: 'uma distribuição é justa se resultou de aquisições originais legítimas seguidas de transferências voluntárias legítimas' },
       { label: 'Teorias de resultado', claim: 'a justiça se julga comparando o padrão distributivo final a um critério substantivo desejável', section: 'Concepções de justiça', quote: 'avaliam diretamente o padrão distributivo final, comparando-o a um critério substantivo desejável' },
     ],

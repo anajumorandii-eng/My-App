@@ -41,9 +41,10 @@ const expectedCsv = csvRows.map(row => row.map(cell).join(',')).join('\n') + '\n
 assert.equal(readFileSync(new URL('../docs/FILA-VISUAL-2026-10-03.csv', import.meta.url), 'utf8').replaceAll('\r\n', '\n'), expectedCsv, 'CSV diverge da fila JSON');
 console.log(`Fila íntegra: ${ids.size} IDs; ${counts.fila_a_revalidar} na fila, ${counts.achado_tratado} achados tratados, ${counts.preservar_mecanismo} mecanismos preservados; ${Object.keys(batches).length} lotes.`);
 const deep = read(queue.editorial.source);
-const pending = deep.filter(chapter => chapter.rev !== 2);
+const pending = deep.filter(chapter => (chapter.rev ?? 1) < 2);
 assert.equal(deep.length, queue.editorial.total);
-assert.equal(deep.length - pending.length, queue.editorial.revision2);
+assert.equal(deep.filter(chapter => chapter.rev === 2).length, queue.editorial.revision2);
+assert.equal(deep.filter(chapter => chapter.rev === 3).length, queue.editorial.revision3 ?? 0);
 assert.equal(pending.length, queue.editorial.pending);
 assert.equal(queue.editorial.chapters.length, pending.length);
 const editorialKeys = new Set();

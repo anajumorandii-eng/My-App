@@ -1,0 +1,641 @@
+[
+  {
+    "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-os-sofistas-e-a-crise-da-verdade-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-os-sofistas-e-a-crise-da-verdade-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-a-teoria-das-ideias-de-platao-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-a-teoria-das-ideias-de-platao-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-politica-aristotelica-o-homem-como-animal-politico-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-politica-aristotelica-o-homem-como-animal-politico-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-patristica-e-santo-agostinho",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-patristica-e-santo-agostinho-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-patristica-e-santo-agostinho",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-patristica-e-santo-agostinho-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-a-relacao-entre-fe-e-razao-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-a-relacao-entre-fe-e-razao-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-racionalismo-continental-espinosa-e-leibniz-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-racionalismo-continental-espinosa-e-leibniz-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-empirismo-britanico-locke-berkeley-e-hume-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-empirismo-britanico-locke-berkeley-e-hume-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-o-ideal-iluminista-de-razao-e-progresso-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-o-ideal-iluminista-de-razao-e-progresso-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-a-critica-da-razao-pura",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-a-critica-da-razao-pura-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-a-critica-da-razao-pura",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-a-critica-da-razao-pura-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-alienacao-e-mais-valia",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-alienacao-e-mais-valia-inicial.png",
+    "barGeometry": {
+      "widths": [
+        190.35723876953125,
+        190.3572998046875,
+        190.35723876953125,
+        285.53594970703125,
+        95.17861938476562,
+        285.5359191894531
+      ],
+      "absoluteRatio": 1.25,
+      "relativeNecessaryRatio": 0.5,
+      "relativeDayRatio": 1
+    }
+  },
+  {
+    "id": "summary-filosofia-alienacao-e-mais-valia",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-alienacao-e-mais-valia-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-foucault-e-as-relacoes-de-poder-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-foucault-e-as-relacoes-de-poder-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-justica-e-direitos-humanos",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-justica-e-direitos-humanos-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-justica-e-direitos-humanos",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-justica-e-direitos-humanos-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-etica-aplicada-e-bioetica",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-etica-aplicada-e-bioetica-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-etica-aplicada-e-bioetica",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-etica-aplicada-e-bioetica-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-filosofia-politica-contemporanea",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-filosofia-politica-contemporanea-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-filosofia-politica-contemporanea",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-filosofia-filosofia-politica-contemporanea-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-sociologia-sociologia-e-senso-comum",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-sociologia-e-senso-comum-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-sociologia-e-senso-comum",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-sociologia-e-senso-comum-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-a-luta-de-classes-na-analise-sociologica-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-a-luta-de-classes-na-analise-sociologica-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-sociologia-cultura-e-etnocentrismo",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-cultura-e-etnocentrismo-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-cultura-e-etnocentrismo",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-cultura-e-etnocentrismo-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-multiculturalismo-e-relativismo-cultural-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-multiculturalismo-e-relativismo-cultural-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-sociologia-desigualdade-racial-no-brasil",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-desigualdade-racial-no-brasil-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-desigualdade-racial-no-brasil",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-desigualdade-racial-no-brasil-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-sociologia-divisao-social-do-trabalho",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-divisao-social-do-trabalho-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-divisao-social-do-trabalho",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-divisao-social-do-trabalho-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-transformacoes-no-mundo-do-trabalho-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+    "width": 1366,
+    "theme": "light",
+    "file": "1366-light-summary-sociologia-transformacoes-no-mundo-do-trabalho-foco.png",
+    "state": "ultima posição"
+  },
+  {
+    "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-os-sofistas-e-a-crise-da-verdade-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-a-teoria-das-ideias-de-platao-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-politica-aristotelica-o-homem-como-animal-politico-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-patristica-e-santo-agostinho",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-patristica-e-santo-agostinho-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-a-relacao-entre-fe-e-razao-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-racionalismo-continental-espinosa-e-leibniz-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-empirismo-britanico-locke-berkeley-e-hume-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-o-ideal-iluminista-de-razao-e-progresso-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-a-critica-da-razao-pura",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-a-critica-da-razao-pura-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-alienacao-e-mais-valia",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-alienacao-e-mais-valia-inicial.png",
+    "barGeometry": {
+      "widths": [
+        190.35723876953125,
+        190.3572998046875,
+        190.35723876953125,
+        285.53594970703125,
+        95.17861938476562,
+        285.5359191894531
+      ],
+      "absoluteRatio": 1.25,
+      "relativeNecessaryRatio": 0.5,
+      "relativeDayRatio": 1
+    }
+  },
+  {
+    "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-foucault-e-as-relacoes-de-poder-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-justica-e-direitos-humanos",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-justica-e-direitos-humanos-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-etica-aplicada-e-bioetica",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-etica-aplicada-e-bioetica-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-filosofia-politica-contemporanea",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-filosofia-filosofia-politica-contemporanea-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-sociologia-e-senso-comum",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-sociologia-sociologia-e-senso-comum-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-sociologia-a-luta-de-classes-na-analise-sociologica-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-cultura-e-etnocentrismo",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-sociologia-cultura-e-etnocentrismo-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-sociologia-multiculturalismo-e-relativismo-cultural-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-desigualdade-racial-no-brasil",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-sociologia-desigualdade-racial-no-brasil-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-divisao-social-do-trabalho",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-sociologia-divisao-social-do-trabalho-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+    "width": 1366,
+    "theme": "dark",
+    "file": "1366-dark-summary-sociologia-transformacoes-no-mundo-do-trabalho-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-os-sofistas-e-a-crise-da-verdade-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-a-teoria-das-ideias-de-platao-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-politica-aristotelica-o-homem-como-animal-politico-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-patristica-e-santo-agostinho",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-patristica-e-santo-agostinho-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-a-relacao-entre-fe-e-razao-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-racionalismo-continental-espinosa-e-leibniz-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-empirismo-britanico-locke-berkeley-e-hume-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-o-ideal-iluminista-de-razao-e-progresso-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-a-critica-da-razao-pura",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-a-critica-da-razao-pura-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-alienacao-e-mais-valia",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-alienacao-e-mais-valia-inicial.png",
+    "barGeometry": {
+      "widths": [
+        148.20782470703125,
+        148.20782470703125,
+        148.20782470703125,
+        222.31170654296875,
+        74.10391235351562,
+        222.31173706054688
+      ],
+      "absoluteRatio": 1.25,
+      "relativeNecessaryRatio": 0.5,
+      "relativeDayRatio": 1
+    }
+  },
+  {
+    "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-foucault-e-as-relacoes-de-poder-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-justica-e-direitos-humanos",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-justica-e-direitos-humanos-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-etica-aplicada-e-bioetica",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-etica-aplicada-e-bioetica-inicial.png"
+  },
+  {
+    "id": "summary-filosofia-filosofia-politica-contemporanea",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-filosofia-filosofia-politica-contemporanea-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-sociologia-e-senso-comum",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-sociologia-sociologia-e-senso-comum-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-sociologia-a-luta-de-classes-na-analise-sociologica-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-cultura-e-etnocentrismo",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-sociologia-cultura-e-etnocentrismo-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-sociologia-multiculturalismo-e-relativismo-cultural-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-desigualdade-racial-no-brasil",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-sociologia-desigualdade-racial-no-brasil-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-divisao-social-do-trabalho",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-sociologia-divisao-social-do-trabalho-inicial.png"
+  },
+  {
+    "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+    "width": 390,
+    "theme": "light",
+    "file": "390-light-summary-sociologia-transformacoes-no-mundo-do-trabalho-inicial.png"
+  }
+]
