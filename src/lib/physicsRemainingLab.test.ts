@@ -19,3 +19,18 @@ test('luneta declara inversão angular e conserva focais e comprimento físicos'
     assert.equal(config.readouts(focal)[2].value, `${focal + 8} mm`);
   }
 });
+
+test('absorção discrimina coincidência exata de energia e fotoelétrico usa limiar', () => {
+  const config = PHYSICS_REMAINING['quantum-photon'];
+  for (let frequency = 3; frequency <= 12; frequency++) {
+    const readouts = config.readouts(frequency);
+    assert.equal(readouts.find(item => item.label === 'Absorção no átomo')?.value,
+      frequency === 6 ? 'E₀ → E₁: ΔE = hf' : frequency === 10 ? 'E₀ → E₂: ΔE = hf' : 'Sem absorção: hf ≠ ΔE');
+    assert.equal(readouts.find(item => item.label === 'Fotoelétrico: Kₘáx')?.value,
+      frequency >= 8 ? `${String(Math.round((0.4136 * frequency - 3) * 100) / 100).replace('.', ',')} eV` : 'Sem emissão: hf < φ');
+  }
+});
+
+test('difração não confunde saturação angular com primeiro mínimo inexistente', () => {
+  assert.equal(PHYSICS_REMAINING.diffraction.readouts(0.5)[1].value, 'Sem primeiro mínimo (a < λ)');
+});

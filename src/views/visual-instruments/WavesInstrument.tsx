@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import {PhysicsDrawingWindow} from '../visual-boards/PhysicsDrawingWindow';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
@@ -70,9 +71,49 @@ function InterferenceScene({ value }: { value: number }) {
   </g>;
 }
 
+function SoundIntensityScene({ distance }: { distance: number }) {
+  const power = 8, reference = 1e-12;
+  const area = 4 * Math.PI * distance * distance;
+  const intensity = power / area;
+  const level = (r: number) => 10 * Math.log10(power / (4 * Math.PI * r * r * reference));
+  const x = (r: number) => 45 + (r - 1) * 34;
+  const y = (db: number) => 265 - (db - 100) * 4;
+  const fmt = (n: number, digits = 1) => n.toLocaleString('pt-BR', { maximumFractionDigits: digits });
+  const points = Array.from({ length: 8 }, (_, i) => ({ r: i + 1, db: level(i + 1) }));
+  return <g data-waves="sound-intensity">
+    <text x="160" y="16" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">Fonte pontual isotrópica · sem absorção</text>
+    <circle data-sound-surface="true" data-area={area} cx="88" cy="95" r={distance * 8} fill="none" stroke="var(--vs-ink)" strokeWidth="1.8" />
+    <circle cx="88" cy="95" r={distance * 4} fill="none" stroke="var(--vs-burgundy)" strokeDasharray="3 3" />
+    <path d="M75 89h6l10-7v26l-10-7h-6Z" fill="var(--vs-burgundy)" />
+    <path d={`M88 95H${88 + distance * 8}l-5-3m5 3-5 3`} stroke="var(--vs-burgundy)" strokeWidth="2" fill="none" />
+    <circle cx={88 + distance * 8} cy="95" r="3.5" fill="var(--vs-ink)" />
+    <text x="88" y="177" textAnchor="middle" fill="var(--vs-ink)" fontSize="12">r = {distance} m</text>
+    <text x="178" y="49" fill="var(--vs-ink)" fontSize="12">P = 8 W</text>
+    <text x="178" y="71" fill="var(--vs-ink)" fontSize="11">A = 4πr²</text>
+    <text x="178" y="89" fill="var(--vs-ink)" fontSize="11">{fmt(area)} m²</text>
+    <text x="178" y="114" fill="var(--vs-ink)" fontSize="11">I = P/A</text>
+    <text x="178" y="132" fill="var(--vs-ink)" fontSize="11">{fmt(intensity, 4)} W/m²</text>
+    <text x="178" y="156" fill="var(--vs-ink)" fontSize="11">β = {fmt(level(distance))} dB</text>
+    <path d="M45 188V265H294" fill="none" stroke="var(--vs-ink)" strokeWidth="1.5" />
+    <text x="12" y="168" fill="var(--vs-ink)" fontSize="10">β (dB)</text>
+    {[100, 110, 120].map(db => <g key={db}>
+      <path d={`M42 ${y(db)}H286`} stroke="var(--vs-dim)" opacity=".35" strokeDasharray="2 4" />
+      <text x="37" y={y(db)+3} textAnchor="end" fill="var(--vs-ink)" fontSize="9">{db}</text>
+    </g>)}
+    <path d={Array.from({ length: 71 }, (_, i) => { const r=1+i/10; return `${i?'L':'M'}${x(r)} ${y(level(r))}`; }).join(' ')} fill="none" stroke="var(--vs-burgundy)" strokeWidth="2.5" />
+    {points.map(point => <g key={point.r}>
+      <circle data-sound-curve-point="true" data-db={point.db} cx={x(point.r)} cy={y(point.db)} r="2" fill="var(--vs-burgundy)" />
+      <text x={x(point.r)} y="278" textAnchor="middle" fill="var(--vs-ink)" fontSize="9">{point.r}</text>
+    </g>)}
+    <circle data-sound-level="true" data-intensity={intensity} data-db={level(distance)} cx={x(distance)} cy={y(level(distance))} r="4.5" fill="var(--vs-ink)" />
+    <text x="282" y="290" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">r (m)</text>
+    <text x="145" y="298" textAnchor="middle" fill="var(--vs-dim)" fontSize="9">β = 10 log₁₀(I/I₀) · I₀ = 10⁻¹² W/m²</text>
+  </g>;
+}
+
 function Scene({ id, value }: { id: WavesId; value: number }) {
   if (id === 'wave-equation') { const spacing = 200 / value; return <><path d={wave(32)} {...wine}/>{Array.from({ length: Math.max(1, Math.floor(value / 2)) }, (_, i) => <path key={i} d={`M${50 + i * spacing} 225h${spacing}`} {...ink}/>) }<text x="160" y="260" textAnchor="middle" style={{ fontWeight: 800, fill: 'var(--vs-ink)' }}>mais f → menor λ</text></>; }
-  if (id === 'sound-intensity') return <><circle cx="85" cy="150" r="14" fill="var(--vs-burgundy)"/><circle cx="85" cy="150" r={30 + value * 12} {...ink}/><circle cx="85" cy="150" r={15 + value * 6} {...wine}/><path d={`M85 150H${85 + 30 + value * 12}`} {...wine}/><circle cx={85 + 30 + value * 12} cy="150" r="7" fill="var(--vs-ink)"/><text x="160" y="270" textAnchor="middle" style={{ fontWeight: 800, fill: 'var(--vs-ink)' }}>a área cresce como r²</text></>;
+  if (id === 'sound-intensity') return <SoundIntensityScene distance={value} />;
   if (id === 'interference') return <InterferenceScene value={value} />;
   if (id === 'string-harmonics') { const nodes = Array.from({ length: value + 1 }, (_, i) => 35 + (250 * i) / value); const path = Array.from({ length: 81 }, (_, i) => { const x = 35 + i * 3.125; return `${i ? 'L' : 'M'} ${x} ${150 - 55 * Math.sin((i / 80) * Math.PI * value)}`; }).join(' '); return <><path d="M35 150H285" {...ink}/><path d={path} {...wine}/>{nodes.map(x => <circle key={x} cx={x} cy="150" r="6" fill="var(--vs-ink)"/>)}<text x="160" y="270" textAnchor="middle" style={{ fontWeight: 800, fill: 'var(--vs-ink)' }}>{value} ventre{value > 1 ? 's' : ''}; nós fixos</text></>; }
   const geometry = dopplerGeometry(value);
@@ -97,6 +138,6 @@ export function wavesInstrument(id: WavesId) {
   const config = WAVES[id];
   return function WavesBoard(props: BoardProps) {
     const [value, setValue] = useState(config.control.initial); const readouts = config.readouts(value); const pivot = readouts.find(item => item.pivot) ?? readouts[0]; const pair = boardPair(props); const first = props.map.nodes[1] ?? props.map.nodes[0]; const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
-    return <BoardShell kicker="Laboratório de ondulatória" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de ondulatória: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e relacione a forma da onda à leitura</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`waves-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`waves-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação ondulatória', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
+    return <BoardShell kicker="Laboratório de ondulatória" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de ondulatória: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><PhysicsDrawingWindow enabled={id==='sound-intensity'}><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg></PhysicsDrawingWindow><p className="vs-instrument-dica">mexa na grandeza e relacione a forma da onda à leitura</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`waves-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`waves-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação ondulatória', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
   };
 }

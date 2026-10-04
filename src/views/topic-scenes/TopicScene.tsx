@@ -1,4 +1,5 @@
 import React from 'react';
+import {PHYSICS_FIDELITY_TOPIC_IDS,PhysicsFidelityTopics} from './PhysicsFidelityTopics';
 import { sceneFor } from './sceneFor';
 import { ContrasteDePosicoes } from './families/ContrasteDePosicoes';
 import { EscalaDeGraus } from './families/EscalaDeGraus';
@@ -37,7 +38,9 @@ export function TopicScene({ summaryId }: { summaryId: string }) {
   const entry = sceneFor(summaryId);
   if (!entry) return null;
   const quimicaGeometrica = entry.chapterId === 'summary-quimica-geometria-molecular';
-  const Familia = ECOLOGY_CYCLE_IDS.has(entry.chapterId)
+  const Familia = PHYSICS_FIDELITY_TOPIC_IDS.has(entry.chapterId)
+    ? PhysicsFidelityTopics
+    : ECOLOGY_CYCLE_IDS.has(entry.chapterId)
     ? EcologyCycles
     : ECOLOGY_SYSTEM_IDS.has(entry.chapterId)
       ? EcologySystems

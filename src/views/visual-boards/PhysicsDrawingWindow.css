@@ -1,0 +1,6 @@
+.physics-drawing {min-width:0;max-width:100%;}
+.physics-drawing-window {min-width:0;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;}
+.physics-drawing-window > svg {display:block;min-width:450px;height:auto;}
+.physics-drawing-window:focus-visible {outline:3px solid var(--vs-blue);outline-offset:2px;}
+.physics-drawing-hint {margin:.5rem 0;color:var(--vs-dim);font:400 .85rem/1.5 system-ui,sans-serif;}
+.crivo-visual--tech .physics-drawing-window > svg text {font-family:Kalam,cursive;}

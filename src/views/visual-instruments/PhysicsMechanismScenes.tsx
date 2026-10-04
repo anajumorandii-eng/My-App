@@ -102,9 +102,11 @@ export function DinamicaCena({ id, v }: { id: DynamicsId; v: number }) {
       <Seta x1={200} y1={172} x2={200 - v * 5} y2={172} cor={accent} />
       <Rotulo x={78} y={122} cor={accent} peso={700}>T = {v} N →</Rotulo>
       <Rotulo x={228} y={122} cor={accent} peso={700}>← T = {v} N</Rotulo>
-      <Rotulo x={160} y={222} cor={ink} peso={700}>o mesmo fio puxa os dois blocos</Rotulo>
-      <Rotulo x={160} y={240}>com o mesmo módulo, em sentidos opostos</Rotulo>
-      <Rotulo x={160} y={276}>ação e reação agem em corpos diferentes</Rotulo>
+      <Rotulo x={160} y={222} cor={ink} peso={700}>Fio ideal: forças do fio sobre A e B</Rotulo>
+      <Rotulo x={160} y={240}>Pares: cada bloco age sobre o fio.</Rotulo>
+      <g data-third-law-pair="A-fio"><Seta x1={136} y1={260} x2={136-v*4} y2={260} cor={blue}/><Rotulo x={100} y={282}>A puxa o fio ←</Rotulo></g>
+      <g data-third-law-pair="B-fio"><Seta x1={185} y1={260} x2={185+v*4} y2={260} cor={blue}/><Rotulo x={229} y={282}>B puxa o fio →</Rotulo></g>
+      <Rotulo x={160} y={294}>Trações em A/B não formam um par.</Rotulo>
     </g>;
   }
   // Plano inclinado: P fixo de 10 N (60 px) e as duas componentes calculadas

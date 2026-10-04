@@ -236,3 +236,7 @@ Os oito resumos sociológicos passam à revisão 2, com 40 seções aprofundadas
 [Registro técnico e galeria](visual-integral-2026-10-04/entrega-c/README.md): Chromium passou nas 12 configurações de largura/tema/movimento, com 1.656 estados SVG e 48 aberturas de Testar/Reconstruir. A repetição final de mais-valia passou em 72 estados adicionais. Foram inspecionadas 96 capturas finais; 36 acompanham a proposta. TypeScript/build passaram e a suíte geral final passou em 885 testes Node + 1.031 Vitest (1.916), sem falhas.
 
 A fila validada contém 117 achados tratados, 181 pendentes e 315 mecanismos preservados, em dez lotes restantes. Restam 140 aprofundamentos editoriais; 470 registros estão na revisão 2 e dois na revisão 3. A aprovação editorial formal permanece aberta. Conferir a integração desta proposta e o delta de main antes de repetir H1; os próximos lotes estão no plano ampliado, começando por F2/F3. Publicação automática autorizada; merge permanece com a responsável.
+
+## Checkpoint remoto — Entrega D em andamento (4 de outubro de 2026)
+
+Branch `fix/entrega-d-fisica-f2-f3`: implementação dos 21 capítulos F2/F3 e testes salvos por solicitação da usuária antes da validação final. [Estado e passos de retomada](visual-integral-2026-10-04/entrega-d/RETOMADA.md). Manter rascunho, fila oficial inalterada e nenhum merge automático. Capturas preliminares documentam falhas anteriores às últimas correções, não aprovação.

@@ -61,3 +61,53 @@ it('mostra área isobárica até o eixo V, volumes positivos e sinal do trabalho
   expect(screen.getByText('V (L)')).toBeInTheDocument();
   expect(screen.getByText('P (kPa)')).toBeInTheDocument();
 });
+
+it('orienta calor para o gás e trabalho conforme expansão, compressão e W nulo', () => {
+  const Component = thermoInstrument('first-law');
+  const { container } = render(<Component {...props('summary-fisica-primeira-lei-da-termodinamica')} />);
+  for (const w of [-4, 0, 12, 16]) {
+    fireEvent.change(screen.getByRole('slider'), { target: { value: String(w) } });
+    const heat = container.querySelector('[data-energy-flow="heat"]')!;
+    expect(heat).not.toBeNull();
+    expect(Number(heat.getAttribute('x2'))).toBeGreaterThan(Number(heat.getAttribute('x1')));
+    expect(heat.getAttribute('marker-end')).toBeTruthy();
+    const work = container.querySelector('[data-energy-flow="work"]');
+    if (w === 0) expect(work).toBeNull();
+    else {
+      expect(work).not.toBeNull();
+      expect(Math.sign(Number(work!.getAttribute('x2')) - Number(work!.getAttribute('x1')))).toBe(Math.sign(w));
+      expect(work!.getAttribute('marker-end')).toBeTruthy();
+    }
+    expect(screen.getByText(`ΔU = ${12 - w} J`)).toBeInTheDocument();
+    expect(screen.getByText('W > 0: gás realiza · W < 0: gás recebe')).toBeInTheDocument();
+  }
+});
+
+it('liga fontes à máquina e mostra quatro etapas reversíveis com temperaturas absolutas coerentes', () => {
+  const Component = thermoInstrument('carnot');
+  const { container } = render(<Component {...props('summary-fisica-maquinas-termicas-e-ciclo-de-carnot')} />);
+  for (const qc of [1, 8, 18]) {
+    fireEvent.change(screen.getByRole('slider'), { target: { value: String(qc) } });
+    for (const name of ['hot', 'cold', 'work']) {
+      const flow = container.querySelector(`[data-carnot-flow="${name}"]`)!;
+      expect(flow).not.toBeNull();
+      expect(flow.getAttribute('marker-end')).toBeTruthy();
+      const a = name === 'work' ? 'x' : 'y';
+      expect(Number(flow.getAttribute(`${a}2`))).toBeGreaterThan(Number(flow.getAttribute(`${a}1`)));
+    }
+    expect(screen.getAllByText(`Tc = ${30 * qc} K`).length).toBeGreaterThan(0);
+    expect(screen.getAllByText('Th = 600 K').length).toBeGreaterThan(0);
+    const stages = container.querySelectorAll('[data-carnot-stage]');
+    expect(stages).toHaveLength(4);
+    expect(stages[0]).toHaveTextContent('isotérmica');
+    expect(stages[1]).toHaveTextContent('adiabática');
+    expect(stages[2]).toHaveTextContent('isotérmica');
+    expect(stages[3]).toHaveTextContent('adiabática');
+    const hot = container.querySelector('[data-ts-hot]')!;
+    const cold = container.querySelector('[data-ts-cold]')!;
+    expect(Number(hot.getAttribute('y1'))).toBe(Number(hot.getAttribute('y2')));
+    expect(Number(cold.getAttribute('y1'))).toBe(Number(cold.getAttribute('y2')));
+    expect(Number(cold.getAttribute('y1'))).toBeGreaterThan(Number(hot.getAttribute('y1')));
+    expect(screen.getByText(/Carnot ideal reversível/)).toBeInTheDocument();
+  }
+});

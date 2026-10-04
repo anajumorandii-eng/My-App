@@ -14,7 +14,7 @@ const IDS = {
 export const PHYSICS_MECHANISM_IDS = new Set<string>(Object.values(IDS));
 
 function Arrow({ x1, y1, x2, y2, label, active = true, labelDx = 0, labelDy = 0 }: { x1: number; y1: number; x2: number; y2: number; label: string; active?: boolean; labelDx?: number; labelDy?: number }) {
-  return <g opacity={active ? 1 : .27}><path d={`M${x1} ${y1}L${x2} ${y2}`} className="pm-arrow" markerEnd="url(#pm-arrow-head)"/><text x={(x1+x2)/2+labelDx} y={(y1+y2)/2-10+labelDy} textAnchor="middle" className="pm-label">{label}</text></g>;
+  return <g opacity={1} data-active={active}><path d={`M${x1} ${y1}L${x2} ${y2}`} className="pm-arrow" markerEnd="url(#pm-arrow-head)"/><text x={(x1+x2)/2+labelDx} y={(y1+y2)/2-10+labelDy} textAnchor="middle" className="pm-label">{label}</text></g>;
 }
 
 function Forces({ focus }: { focus: number }) {
@@ -22,7 +22,7 @@ function Forces({ focus }: { focus: number }) {
     <Arrow x1={305} y1={193} x2={305} y2={89} label="N" active={focus===1}/><Arrow x1={305} y1={207} x2={305} y2={312} label="P = mg" labelDx={75} labelDy={29} active={focus===0}/>
     <path d="M365 190H507" className="pm-rope"/><Arrow x1={374} y1={178} x2={506} y2={178} label="T" active={focus===2}/>
     <Arrow x1={235} y1={236} x2={112} y2={236} label="atrito" active={focus===3}/>
-    <g opacity={focus===4?1:.25}><path d="M70 186h34l12-16 16 32 16-32 16 32 16-32 16 32 13-16h31" className="pm-spring"/><Arrow x1={239} y1={147} x2={121} y2={147} label="F = kx"/></g>
+    <g opacity={1} data-active={focus===4}><path d="M70 186h34l12-16 16 32 16-32 16 32 16-32 16 32 13-16h31" className="pm-spring"/><Arrow x1={239} y1={147} x2={121} y2={147} label="F = kx"/></g>
     <text x="26" y="40" className="pm-heading">diagrama de corpo livre</text><text x="27" y="337" className="pm-small">As setas indicam direção e sentido; seu tamanho aqui não representa módulo.</text></>;
 }
 
@@ -39,11 +39,13 @@ function Collisions({ focus }: { focus: number }) {
 
 function Generation({ focus }: { focus: number }) {
   const solar = focus===3;
-  const source=[['queda','d’água'],['calor','→ vapor'],['vento'],['luz','solar'],['fissão','→ vapor']][focus] ?? ['fonte'];
   return <><text x="28" y="46" className="pm-heading">do recurso à corrente elétrica</text>
-    <circle cx="112" cy="163" r="57" className="pm-source"/><text x="112" y={source.length===1?168:154} textAnchor="middle" className="pm-source-label">{source.map((part,index)=><tspan key={part} x="112" dy={index?19:0}>{part}</tspan>)}</text>
+    {focus===0?<g data-generation="hydro"><path d="M32 110H131V163H163V220H32Z" className="pm-source"/><path d="M32 134H129M44 145q10-6 20 0t20 0t20 0" className="pm-axis"/><path d="M140 144V195H187" className="pm-rope"/><Arrow x1={155} y1={170} x2={155} y2={210} label="água" labelDx={-46}/><text x="32" y="260" className="pm-label">altura → movimento</text></g>
+    :focus===2?<g data-generation="wind"><path d="M103 160V235M103 160L76 112M103 160L153 148M103 160L83 205" className="pm-blades"/><Arrow x1={30} y1={100} x2={78} y2={100} label="vento"/><text x="30" y="260" className="pm-label">rotação pelo vento</text></g>
+    :solar?<g data-generation="photovoltaic"><circle cx="95" cy="127" r="26" className="pm-source"/><path d="M95 86V73M132 127h15M95 167v13M58 127H44" className="pm-axis"/><Arrow x1={111} y1={169} x2={202} y2={207} label="fótons"/><text x="34" y="260" className="pm-label">luz → cargas móveis</text></g>
+    :<g data-generation={focus===4?'fission-steam':'combustion-steam'}><rect x="34" y="122" width="120" height="90" rx="12" className="pm-source"/><path d="M154 145H189V115H228" className="pm-rope"/><path d="M52 174q12-15 24 0t24 0t24 0" className="pm-axis"/>{focus===4?<><circle cx="78" cy="149" r="12" className="pm-second"/><circle cx="112" cy="148" r="9" className="pm-second"/><text x="94" y="103" textAnchor="middle" className="pm-label">fissão controlada</text></>:<><path d="M66 196q-16 28 15 30q30-13 6-39q-6 24-21 9" className="pm-second"/><text x="94" y="103" textAnchor="middle" className="pm-label">combustão</text></>}<text x="210" y="93" textAnchor="middle" className="pm-label">vapor</text><text x="29" y="260" className="pm-label">calor → vapor → giro</text></g>}
     <Arrow x1={190} y1={162} x2={245} y2={162} label="converte"/>
-    {solar ? <><rect x="252" y="112" width="128" height="101" rx="7" className="pm-panel"/><path d="M252 145h128m-128 34h128m43-66v100m-85-100v100" className="pm-panel-grid"/><text x="316" y="244" textAnchor="middle" className="pm-label">células fotovoltaicas</text></> : <><circle cx="316" cy="162" r="48" className="pm-turbine"/><path d="M316 119v86m-43-43h86m-72-29l58 58m0-58l-58 58" className="pm-blades"/><text x="316" y="243" textAnchor="middle" className="pm-label">turbina + gerador</text></>}
+    {solar ? <><rect x="252" y="112" width="128" height="101" rx="7" className="pm-panel"/><path d="M252 145h128m-128 34h128m43-66v100m-85-100v100" className="pm-panel-grid"/><text x="316" y="244" textAnchor="middle" className="pm-label">células fotovoltaicas</text></> : <><circle cx="295" cy="162" r="32" className="pm-turbine"/><path d="M295 133v58m-29-29h58m-50-20l40 40m0-40l-40 40" className="pm-blades"/><path d="M327 162H358" className="pm-rope"/><rect x="356" y="145" width="29" height="35" className="pm-source"/><text x="316" y="243" textAnchor="middle" className="pm-label">turbina → gerador</text></>}
     <Arrow x1={386} y1={162} x2={448} y2={162} label="gera"/><path d="M466 173q19-57 37-17t40-4" className="pm-electric"/><text x="504" y="228" textAnchor="middle" className="pm-label">corrente</text>
     <text x="29" y="296" className="pm-equation">{solar?'Sem eixo giratório: efeito fotovoltaico.':'A fonte move a turbina.'}</text>
     {!solar&&<text x="29" y="322" className="pm-equation">O gerador converte movimento em eletricidade.</text>}</>;
@@ -99,11 +101,13 @@ export function FisicaMecanismos({ entry }: { entry: SceneEntry }) {
   const kind=entry.chapterId;
   return <section className="tc-scene pm-scene" aria-label={entry.question}>
     <header><small>CRIVO · laboratório de mecanismos</small><h4>{entry.question}</h4></header>
+    <div className={kind===IDS.forces||kind===IDS.generation?'pm-wide-window':undefined} tabIndex={kind===IDS.forces||kind===IDS.generation?0:undefined} role="region" aria-label="Desenho do mecanismo; use as setas para percorrer" onKeyDown={event=>{if(event.key==='ArrowRight'||event.key==='ArrowLeft'){event.preventDefault();event.currentTarget.scrollLeft+=event.key==='ArrowRight'?120:-120;}}}>
     <svg className={kind===IDS.charging ? 'pm-charging' : undefined} viewBox={kind===IDS.charging ? '0 0 620 480' : '0 0 620 360'} role="img" aria-label={`${entry.question} Selecionado: ${item.label}`}>
       <defs><marker id="pm-arrow-head" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto"><path d="M0 0 10 5 0 10Z" fill="#a5455c"/></marker></defs>
       <rect x="7" y="7" width="606" height={kind===IDS.charging ? 466 : 346} rx="16" className="pm-paper"/>
       {kind===IDS.forces?<Forces focus={focus}/>:kind===IDS.collisions?<Collisions focus={focus}/>:kind===IDS.generation?<Generation focus={focus}/>:kind===IDS.gases?<Gases focus={focus}/>:<Charging focus={focus}/>}
-    </svg>
+    </svg></div>
+    {(kind===IDS.forces||kind===IDS.generation)&&<p className="cp-pan-hint">Deslize o desenho; com teclado, use as setas.</p>}
     <div className="pm-options" aria-label="Escolha o mecanismo">
       {entry.items.map((candidate,index)=><motion.button key={candidate.label} type="button" aria-pressed={focus===index} onClick={()=>setFocus(index)} animate={{y:focus===index?-3:0}} transition={transition}>{candidate.label}</motion.button>)}
     </div>

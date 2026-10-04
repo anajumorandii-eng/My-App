@@ -1,5 +1,6 @@
 import { LunetaScene } from './LunetaScene';
 import React, { useState } from 'react';
+import {PhysicsDrawingWindow} from '../visual-boards/PhysicsDrawingWindow';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
@@ -142,6 +143,102 @@ function PulleysScene({ raio }: { raio: number }) {
   </g>;
 }
 
+function WavePhenomenaScene({ ratio, angle, forcing }: { ratio: number; angle: number; forcing: number }) {
+  const kit = useKit();
+  const reduced = useReducedMotion();
+  const transmission = Math.cos(angle * Math.PI / 180) ** 2;
+  const amplitude = 1 / Math.sqrt((1 - forcing ** 2) ** 2 + (0.2 * forcing) ** 2);
+  const response = Array.from({ length: 81 }, (_, i) => {
+    const r = 0.5 + i / 80;
+    const a = 1 / Math.sqrt((1 - r * r) ** 2 + (0.2 * r) ** 2);
+    return `${i ? 'L' : 'M'}${35 + i * 2.5} ${754 - a * 12}`;
+  }).join(' ');
+  const theta = ratio >= 1 ? Math.asin(1 / ratio) : Math.PI / 2;
+  const opening = 25 * ratio;
+  return <g>
+    <kit.Defs /><Papel kit={kit} />
+    <g data-physics-system="diffraction">
+      <Painel x={6} y={8} w={308} h={235} titulo="DIFRAÇÃO · FENDA ÚNICA" tom="laranja" />
+      {[36, 61, 86, 111].map(x => <path key={x} d={`M${x} 75V195`} stroke={cor('ciano')} strokeWidth="3" />)}
+      <path d={`M145 62V${135 - opening / 2}M145 ${135 + opening / 2}V207`} stroke="var(--vs-kit-contorno)" strokeWidth="10" />
+      <path d={`M145 62V${135 - opening / 2}M145 ${135 + opening / 2}V207`} stroke={cor('laranja')} strokeWidth="6" />
+      {[30, 57, 84, 112].map(r => <path key={r} d={`M${151 + r * Math.cos(theta)} ${135 - r * Math.sin(theta)}A${r} ${r} 0 0 1 ${151 + r * Math.cos(theta)} ${135 + r * Math.sin(theta)}`} fill="none" stroke={cor('ciano')} strokeWidth="2.5" />)}
+      {[-1, 1].map(sign => <path key={sign} d={`M151 135L${151 + 122 * Math.cos(theta)} ${135 + sign * 122 * Math.sin(theta)}`} {...wine} strokeDasharray="5 4" />)}
+      <path d="M154 135H291m-8-5 8 5-8 5" {...ink} strokeWidth="1.5" />
+      <Rotulo x={78} y={57} tam={11}>frentes planas →</Rotulo>
+      <Rotulo x={146} y={224} tam={12}>a = {decimal(ratio)} λ</Rotulo>
+      <Rotulo x={237} y={58} tam={11}>{ratio >= 1 ? `θ = ${decimal(theta * 180 / Math.PI)}°` : 'a < λ: sem mínimo'}</Rotulo>
+      <Rotulo x={235} y={220} tam={10}>ondas se espalham</Rotulo>
+    </g>
+    <g data-physics-system="polarization" transform="translate(0 252)">
+      <Painel x={6} y={8} w={308} h={235} titulo="POLARIZAÇÃO · ONDA TRANSVERSAL" tom="roxo" />
+      <path d="M23 118H294m-8-5 8 5-8 5" {...ink} strokeWidth="1.5" />
+      <Rotulo x={40} y={69} tam={10}>E varia</Rotulo>
+      <path d="M34 94v48m-16-24h32M24 103l20 30M24 133l20-30" stroke={cor('ciano')} strokeWidth="2" />
+      <ellipse cx="97" cy="118" rx="21" ry="47" fill={kit.esfera('roxo')} stroke="var(--vs-kit-contorno)" strokeWidth="2" />
+      {[-10, 0, 10].map(x => <path key={x} d={`M${97 + x} 87v62`} stroke="white" strokeWidth="1.5" />)}
+      <path d="M134 89v58m-5-50 5-8 5 8m-10 42 5 8 5-8" stroke={cor('ciano')} strokeWidth="3" />
+      <ellipse cx="195" cy="118" rx="30" ry="47" fill={kit.esfera('roxo')} stroke="var(--vs-kit-contorno)" strokeWidth="2" />
+      <motion.g initial={false} animate={{ rotate: angle }} style={{ originX: '195px', originY: '118px' }} transition={{ duration: reduced ? 0 : 0.2 }}>
+        {[-10, 0, 10].map(x => <path key={x} d={`M${195 + x} 86v64`} stroke="white" strokeWidth="2" />)}
+      </motion.g>
+      {transmission > 0.0001 ? <path d={`M259 ${118 - 30 * Math.sqrt(transmission)}v${60 * Math.sqrt(transmission)}`} stroke={cor('ciano')} strokeWidth="4" transform={`rotate(${angle} 259 118)`} /> : <path d="M249 108l20 20m-20 0 20-20" stroke={cor('vermelho')} strokeWidth="3" />}
+      <Rotulo x={97} y={183} tam={11}>polarizador</Rotulo><Rotulo x={195} y={183} tam={11}>analisador: {angle}°</Rotulo>
+      <Rotulo x={160} y={204} tam={12}>I / I₀ = cos²θ = {decimal(transmission * 100)}%</Rotulo>
+      <Rotulo x={160} y={227} tam={10}>I₀: após filtro 1 · eixos vistos de frente</Rotulo>
+    </g>
+    <g data-physics-system="resonance" transform="translate(0 502)">
+      <Painel x={6} y={8} w={308} h={291} titulo="RESSONÂNCIA · OSCILADOR FORÇADO" tom="verde" />
+      <path d="M30 59V130m-5-65 5-6 5 6" {...ink} /><path d={`M30 88h12l7-12 9 24 9-24 9 24 9-24 9 24 9-12H${105 + amplitude * 6}`} stroke={cor('sol')} strokeWidth="3" fill="none" />
+      <motion.rect initial={false} x={105} y="72" width="38" height="32" rx="5" fill={kit.esfera('ciano')} stroke="var(--vs-kit-contorno)" strokeWidth="2" animate={{ x: amplitude * 6 }} transition={{ duration: reduced ? 0 : 0.25 }} />
+      <path d="M30 117H172" {...ink} strokeWidth="2" />
+      <g data-resonance-drive="true"><path d="M202 88H280m-9-6 9 6-9 6" {...wine} /><Rotulo x={244} y={64} tam={11}>F₀ cos(2πft)</Rotulo></g>
+      <Rotulo x={160} y={145} tam={11}>f/f₀ = {decimal(forcing)} · A = {decimal(amplitude)} A₀</Rotulo>
+      <g transform="translate(0 -502)">
+        <path d="M35 684V754H257" {...ink} strokeWidth="1.5" /><path d={response} stroke={cor('verde')} strokeWidth="2.5" fill="none" />
+        <circle cx={35 + (forcing - 0.5) * 200} cy={754 - amplitude * 12} r="4.5" fill={cor('vermelho')} />
+        <Rotulo x={28} y={679} tam={10}>A/A₀</Rotulo><Rotulo x={279} y={764} tam={10}>f/f₀</Rotulo>
+        {[0.5, 1, 1.5].map(r => <g key={r}><path d={`M${35 + (r - 0.5) * 200} 751v6`} {...ink} strokeWidth="1" /><Rotulo x={35 + (r - 0.5) * 200} y={770} tam={9}>{decimal(r)}</Rotulo></g>)}
+        <Rotulo x={24} y={753} tam={9}>0</Rotulo><Rotulo x={24} y={697} tam={9}>5</Rotulo>
+      </g>
+      <Rotulo x={160} y={285} tam={10}>amortecimento: ζ = 0,1 · A₀ = F₀/k</Rotulo>
+    </g>
+  </g>;
+}
+
+function QuantumMechanismsScene({ frequency }: { frequency: number }) {
+  const kit = useKit();
+  const target = frequency === 6 ? 'E1' : frequency === 10 ? 'E2' : 'none';
+  const y = target === 'E1' ? 110 : target === 'E2' ? 70 : 150;
+  const energy = 0.4136 * frequency;
+  const emission = energy >= 3;
+  return <g data-physics-system="quantum-photon">
+    <kit.Defs /><Papel kit={kit} />
+    <g data-quantum-mechanism="absorption">
+      <Painel x={6} y={8} w={308} h={235} titulo="ÁTOMO · ABSORÇÃO DISCRETA" tom="roxo" />
+      <path d="M34 150H151M34 110H151M34 70H151" {...ink} strokeWidth="2" />
+      <Rotulo x={37} y={167} tam={10}>E₀ = 0</Rotulo><Rotulo x={92} y={102} tam={10}>E₁ = 6h·10¹⁴ Hz</Rotulo><Rotulo x={92} y={62} tam={10}>E₂ = 10h·10¹⁴ Hz</Rotulo>
+      <g data-quantum-transition={target}>{target !== 'none' && <path d={`M117 146V${y + 5}m-5 8 5-8 5 8`} stroke={cor('vermelho')} strokeWidth="3" fill="none" />}</g>
+      <circle data-bound-electron="true" cx="99" cy={y} r="6" fill={cor('ciano')} stroke="var(--vs-kit-contorno)" strokeWidth="1.5" />
+      <path d="M278 118q-8-16-16 0t-16 0t-16 0t-16 0h-35m9-5-9 5 9 5" stroke={cor('laranja')} strokeWidth="2.5" fill="none" />
+      <Rotulo x={232} y={76} tam={11}>fóton incidente</Rotulo><Rotulo x={232} y={94} tam={11}>hf = {decimal(energy)} eV</Rotulo>
+      <Rotulo x={160} y={194} tam={12}>{target === 'none' ? 'hf ≠ ΔE: elétron permanece em E₀' : `ΔE = hf: E₀ → ${target === 'E1' ? 'E₁' : 'E₂'}`}</Rotulo>
+      <Rotulo x={160} y={216} tam={10}>níveis sem escala · largura de linha desprezada</Rotulo>
+      <Rotulo x={160} y={233} tam={10}>cada ajuste começa em E₀; sem níveis intermediários</Rotulo>
+    </g>
+    <g data-quantum-mechanism="photoelectric" data-emission={String(emission)} transform="translate(0 252)">
+      <Painel x={6} y={8} w={308} h={246} titulo="METAL · EFEITO FOTOELÉTRICO" tom="laranja" />
+      <rect x="28" y="119" width="132" height="58" rx="4" fill={kit.metal} stroke="var(--vs-kit-contorno)" strokeWidth="2" />
+      {[51, 80, 109, 138].map(x => <circle key={x} cx={x} cy="145" r="5" fill={cor('ciano')} />)}
+      <path d="M29 55q10-10 15 3t15 3t15 3l16 23m-11-5 11 5-2-12" stroke={cor('laranja')} strokeWidth="2.5" fill="none" />
+      {emission ? <g><path d="M112 114L238 66m-12-1 12 1-9 8" stroke={cor('ciano')} strokeWidth="3" fill="none" /><circle cx="224" cy="71" r="6" fill={cor('ciano')} /><Rotulo x={218} y={103} tam={10}>elétron ejetado</Rotulo></g> : <Rotulo x={226} y={108} tam={11}>sem emissão</Rotulo>}
+      <Rotulo x={94} y={197} tam={12}>φ = 3 eV</Rotulo>
+      <Rotulo x={160} y={220} tam={12}>{emission ? `Kₘáx = hf − φ = ${decimal(energy - 3)} eV` : 'hf < φ: elétrons ficam no metal'}</Rotulo>
+      <Rotulo x={160} y={242} tam={10}>f aumenta Kₘáx; intensidade aumenta nº de fótons</Rotulo>
+    </g>
+  </g>;
+}
+
 function Scene({ id, value }: { id: PhysicsRemainingId; value: number }) {
   if (id === 'echo') {
     const wall = 110 + value * 135;
@@ -154,18 +251,6 @@ function Scene({ id, value }: { id: PhysicsRemainingId; value: number }) {
       <text x={(wall+75)/2} y="166" textAnchor="middle" style={{...txt,fontSize:12}}>ida</text><text x={(wall+75)/2} y="218" textAnchor="middle" style={{...txt,fontSize:12}}>volta</text>
       <path d={`M78 253H${wall-12}`} stroke="var(--vs-ink)" strokeWidth="2"/><path d={`M78 247v12M${wall-12} 247v12`} stroke="var(--vs-ink)" strokeWidth="2"/>
       <text x="160" y="283" textAnchor="middle" style={{...txt,fontSize:13}}>d = 340 · Δt / 2</text>
-    </g>;
-  }
-  if (id === 'diffraction') {
-    const spread = 18 + 78 / value;
-    return <g data-physics-system="diffraction">
-      <path d="M21 150H130" stroke="var(--vs-blue)" strokeWidth="12" opacity=".6"/><path d="M21 150H130" {...wine}/>
-      <path d="M146 34V126M146 174V266M174 34V126M174 174V266" stroke="var(--vs-ink)" strokeWidth="7"/>
-      <path d="M160 44v72M160 184v72" stroke="var(--vs-burgundy)" strokeWidth="3"/><text x="160" y="22" textAnchor="middle" style={txt}>fenda a</text>
-      {[1,.65,.35].map((f,n)=><path key={n} d={`M168 150Q230 ${150-spread*f} 298 ${150-spread*f}M168 150Q230 ${150+spread*f} 298 ${150+spread*f}`} stroke={n?'var(--vs-ink-muted)':'var(--vs-burgundy)'} strokeWidth={n?2:4} fill="none" opacity={n?.75:1}/>) }
-      <path d="M282 61V239" stroke="var(--vs-ink-muted)" strokeWidth="2" strokeDasharray="5 5"/><text x="289" y="279" textAnchor="end" style={{...txt,fontSize:12}}>anteparo</text>
-      <text x="80" y="133" textAnchor="middle" style={{...txt,fontSize:12}}>frente de onda</text><text x="232" y="150" textAnchor="middle" style={{...txt,fontSize:12}}>θ</text>
-      <text x="160" y="294" textAnchor="middle" style={{...txt,fontSize:13}}>sen θ ≈ λ/a</text>
     </g>;
   }
   if (id === 'tube-harmonics') {
@@ -286,26 +371,23 @@ function Scene({ id, value }: { id: PhysicsRemainingId; value: number }) {
     const nodes = Array.from({length:value+1},(_,n)=>35+n*(252/value));
     return <g data-physics-system="string-standing-wave"><path d="M26 71V229M294 71V229" stroke="var(--vs-ink)" strokeWidth="8"/><path d={profile(-1)} {...wine}/><path d={profile(1)} stroke="var(--vs-blue)" strokeWidth="3" fill="none"/>{nodes.map(x=><g key={x}><circle cx={x} cy="150" r="4" fill="var(--vs-ink)"/><path d={`M${x} 214v15`} stroke="var(--vs-ink-muted)" strokeWidth="1"/></g>)}<text x="35" y="254" style={txt}>nó</text><text x="160" y="110" textAnchor="middle" style={{...txt,fontSize:12}}>ventre</text><text x="160" y="284" textAnchor="middle" style={{...txt,fontSize:13}}>L = {value}λ/2 • {value} ventres</text></g>;
   }
-  const top = 191 - value * 9;
-  return <g data-physics-system="quantum-photon">
-    <rect x="44" y="38" width="104" height="198" rx="13" fill="color-mix(in srgb,var(--vs-blue) 12%,transparent)" stroke="var(--vs-ink)" strokeWidth="3"/>
-    <path d="M60 207H134M60 164H134M60 108H134" {...ink}/><text x="142" y="211" style={txt}>E₀</text><text x="142" y="168" style={txt}>E₁</text><text x="142" y="112" style={txt}>E₂</text>
-    <circle cx="97" cy="207" r="10" fill="var(--vs-blue)"/><path d={`M97 193V${top+15}`} {...wine}/><path d={`M88 ${top+28}l9-15 9 15`} fill="var(--vs-burgundy)"/>
-    <circle cx="97" cy={top+38} r="10" fill="var(--vs-burgundy)"/><path d="M190 91q30-34 58 0t58 0" stroke="var(--vs-burgundy)" strokeWidth="5" fill="none"/>
-    <path d="M190 121q30-34 58 0t58 0" stroke="var(--vs-blue)" strokeWidth="5" fill="none" opacity=".65"/><text x="248" y="63" textAnchor="middle" style={txt}>fótons incidentes</text>
-    <path d="M194 195h94" stroke="var(--vs-ink-muted)" strokeWidth="2"/><text x="241" y="215" textAnchor="middle" style={{...txt,fontSize:12}}>E = hf</text><text x="160" y="283" textAnchor="middle" style={{...txt,fontSize:13}}>frequência maior → salto possível maior</text>
-  </g>;
+  return <QuantumMechanismsScene frequency={value} />;
 }
 
 export function physicsRemainingInstrument(id: PhysicsRemainingId) {
   const config = PHYSICS_REMAINING[id];
   return function PhysicsRemainingBoard(props: BoardProps) {
     const [value, setValue] = useState(config.control.initial);
+    const [angle, setAngle] = useState(45);
+    const [forcing, setForcing] = useState(1);
     const readouts = config.readouts(value);
     const pivot = readouts.find(item => item.pivot) ?? readouts[0];
     const pair = boardPair(props);
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
-    return <BoardShell kicker="Laboratório de Física" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de física: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e acompanhe a condição física desenhada</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`physics-remaining-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`physics-remaining-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação física', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
+    return <BoardShell kicker="Laboratório de Física" title={config.name} subtitle={config.question} condition={{ label: 'Leitura', value: pivot.value }} ariaLabel={`Instrumento de física: ${props.map.title}`} emphasis={pair.emphasis} scene={<div className="vs-instrument"><PhysicsDrawingWindow enabled={id==='diffraction'||id==='quantum-photon'}><svg className="vs-plane" viewBox={`0 0 320 ${id === 'diffraction' ? 810 : id === 'quantum-photon' ? 520 : 300}`} role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}>{id === 'diffraction' ? <WavePhenomenaScene ratio={value} angle={angle} forcing={forcing} /> : <Scene id={id} value={value}/>}</svg></PhysicsDrawingWindow><p className="vs-instrument-dica">mexa na grandeza e acompanhe a condição física desenhada</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`physics-remaining-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`physics-remaining-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div>{id === 'diffraction' && <>
+      <div className="vs-plane-control"><label htmlFor="physics-analyzer"><strong>Ângulo do analisador</strong><span>θ em graus, entre os eixos dos polarizadores</span><b>{angle}°</b></label><input id="physics-analyzer" type="range" min={0} max={90} step={15} value={angle} onChange={event => setAngle(Number(event.target.value))} /></div>
+      <div className="vs-plane-control"><label htmlFor="physics-forcing"><strong>Frequência de excitação</strong><span>f/f₀: razão entre frequência externa e natural</span><b>{decimal(forcing)}</b></label><input id="physics-forcing" type="range" min={0.5} max={1.5} step={0.1} value={forcing} onChange={event => setForcing(Number(event.target.value))} /></div>
+    </>}</div><dl className="vs-plane-readouts">{readouts.map(item => <div key={item.label} data-pivot={item.pivot ? 'true' : undefined}><dt>{item.label}</dt><dd>{item.value}</dd></div>)}</dl></div>} left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação física', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight}/>;
   };
 }
