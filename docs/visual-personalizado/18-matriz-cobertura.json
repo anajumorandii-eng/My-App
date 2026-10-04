@@ -1,9 +1,9 @@
 {
   "total": 613,
   "counts": {
-    "experiment": 10,
+    "experiment": 8,
     "board": 43,
-    "instrument": 329,
+    "instrument": 331,
     "scene": 231,
     "fallback": 0
   },
@@ -68,9 +68,9 @@
       "subject": "Língua Inglesa",
       "chapters": 17,
       "counts": {
-        "experiment": 1,
+        "experiment": 0,
         "board": 0,
-        "instrument": 16,
+        "instrument": 17,
         "scene": 0,
         "fallback": 0
       }
@@ -112,9 +112,9 @@
       "subject": "Entendimento de Texto",
       "chapters": 12,
       "counts": {
-        "experiment": 1,
+        "experiment": 0,
         "board": 0,
-        "instrument": 11,
+        "instrument": 12,
         "scene": 0,
         "fallback": 0
       }
@@ -2611,8 +2611,8 @@
       "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
       "subject": "Língua Inglesa",
       "title": "Text Comprehension: Taxonomy and Terminology",
-      "primary": "experiment",
-      "artifact": "inference",
+      "primary": "instrument",
+      "artifact": "taxonomy",
       "ignored": []
     },
     {
@@ -3715,8 +3715,8 @@
       "id": "summary-entendimento-de-texto-fatores-de-textualidade",
       "subject": "Entendimento de Texto",
       "title": "Fatores de Textualidade",
-      "primary": "experiment",
-      "artifact": "cohesion",
+      "primary": "instrument",
+      "artifact": "textualidade",
       "ignored": []
     },
     {

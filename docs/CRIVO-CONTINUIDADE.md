@@ -212,4 +212,17 @@ Após a Entrega A (#254), a responsável reabriu o desenho dos 112 capítulos de
 
 [Registro técnico, manifesto por ID e galeria](visual-integral-2026-10-04/redesenho-hg/README.md): a matriz Chromium e a repetição dirigida cobrem 112 IDs, 12 configurações e 5.988 estados. Foram corrigidos cortes de legendas móveis e sobreposição durante troca de recorte. As composições dos 112 desenhos foram conferidas em capturas completas; 35 imagens representativas acompanham a proposta. A revisão independente conferiu recortes e marcos históricos. IDs, conteúdo aprofundado, diagnóstico e chaves de progresso estão preservados; aprovação editorial integral permanece aberta.
 
-A Entrega B de Inglês/Entendimento de Texto continua pausada e preservada no stash nomeado para sua pausa; não aplicar nem descartar durante esta entrega. Consultar a PR desta branch e o delta de `main` antes da retomada. Sem merge automático. Os resultados finais da suíte e os limites da verificação estão no registro técnico.
+O redesenho foi integrado em #255. A Entrega B foi retomada em worktree próprio a partir de `f9b7e12f`; o stash da pausa permanece como cópia preservada e não deve ser reaplicado indiscriminadamente. Sem merge automático. Os resultados finais da suíte e os limites da verificação estão no registro técnico.
+
+
+## Entrega B — 29 capítulos de leitura e seus resumos — 04/10/2026
+
+Base conferida: `f9b7e12f6ef69f1524a34358243856ab95d63b0e`, após #254/#255; #246/#234/#222 seguem separados. A branch `fix/entrega-b-ingles-entendimento` substitui exemplos transplantados entre assuntos por situações próprias em 17 capítulos de Inglês e 12 de Entendimento de Texto. Taxonomy e Textualidade usam seus instrumentos específicos; passagens originais, pistas, relações e achados manuscritos acompanham as mudanças de estado.
+
+Os 29 registros aprofundados passam a revisão 2: 145 seções, práticas/pegadinhas e recuperação alinhadas. Os outros 583 registros permaneceram iguais à base; IDs publicados, chaves de progresso e tentativas anteriores foram preservados. Revisões independentes corrigiram nove ambiguidades editoriais e três desencontros entre exemplo, seta e documento. A composição móvel e a grade do desktop foram corrigidas durante a conferência das capturas.
+
+[Registro técnico, resultados por estado e galeria](visual-integral-2026-10-04/entrega-b/README.md): Chromium cobre 29 IDs em 12 configurações, 1.944 estados SVG e 58 aberturas de Testar/Reconstruir, sem envio de respostas. 75 capturas estáticas foram inspecionadas e 31 acompanham a proposta. Duas interrupções de execução — carregamento inicial e medição durante transição — foram registradas e as configurações completas passaram na repetição, sem ampliação do limite de tempo.
+
+A fila validada desta proposta contém 93 achados tratados, 205 pendentes, 315 mecanismos preservados e 148 resumos ainda sem revisão 2. Não há promoção de aprovação editorial integral. Conferir a integração desta branch e o delta de main antes de repetir LG2; o próximo escopo planejado é C/H1, com 24 comparações de Filosofia/Sociologia e oito aprofundamentos sociológicos. Publicação automática autorizada; merge permanece com a responsável.
+
+Validação geral final de B: TypeScript/build passaram; 870 testes Node + 1.001 Vitest (1.871) passaram, com 154 arquivos de interface e sem falhas. Matrizes de cobertura/qualidade sincronizadas; estados de aprovação preservados. Testes, build e navegador foram executados em sequência.

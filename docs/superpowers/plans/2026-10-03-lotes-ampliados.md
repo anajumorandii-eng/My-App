@@ -57,12 +57,12 @@
 
 **Interfaces:** preservar `englishInstrument(id: EnglishInstrumentId)` e `readingInstrument(id: ReadingInstrumentId)` com `BoardProps`; produzir configurações/exemplos próprios dos mesmos 29 IDs. Conteúdo continua consumido por `applyDeepSummary(summary: InteractiveSummary): InteractiveSummary`.
 
-- [ ] **Step 1: Conferir os 29 IDs LG2 e vincular cada exemplo/estado ao resumo correspondente.** São 17 Inglês e 12 Entendimento, sem IDs de Literatura/Gramática neste grupo.
-- [ ] **Step 2: Criar regressões que recusem exemplos trocados.** Hurricanes/Stem Cells não podem explicar o capítulo por quake/aftershocks; Global Warming/Probiotics não por poor sleep/memory; Digital Technology não por pathogen; Taxonomy não por ônibus/Maya. Testar também uma decisão pertinente de cada uma das outras configurações.
-- [ ] **Step 3: Observar as falhas e implementar configuração temática por capítulo.** Manter estratégias linguísticas pertinentes; a evidência deve permitir inferência, referência, comparação e diagnóstico próprios do assunto. Usar exemplos originais; não apresentar uma relação científica não verificada como fato.
-- [ ] **Step 4: Aprofundar os 29 textos junto à configuração.** Cinco seções, 900–1.100 caracteres como objetivo editorial e mínimo 800 aceito pelo importador, mecanismo explicado, cinco/seis pegadinhas com correção, dois problemas de prática e recall alinhado; usar `scripts/aprofundar-resumo.py` e `rev: 2`. Não alterar capítulos fora do grupo.
-- [ ] **Step 5: Testar revisão isolada e modos Explorar/Testar/Reconstruir.** Preservar tentativas e chave de armazenamento; IDs editoriais novos somente nos 29 capítulos reescritos. Usar fixtures locais, sem enviar respostas na conta real.
-- [ ] **Step 6: Validar todos os 29 IDs na matriz do lote, revisar exemplos/textos e publicar PR automática.** A estrutura editorial e o mecanismo de cada família precisam de captura inspecionada; variantes precisam de verificações próprias.
+- [x] **Step 1: Conferir os 29 IDs LG2 e vincular cada exemplo/estado ao resumo correspondente.** São 17 Inglês e 12 Entendimento, sem IDs de Literatura/Gramática neste grupo.
+- [x] **Step 2: Criar regressões que recusem exemplos trocados.** Hurricanes/Stem Cells não podem explicar o capítulo por quake/aftershocks; Global Warming/Probiotics não por poor sleep/memory; Digital Technology não por pathogen; Taxonomy não por ônibus/Maya. Testar também uma decisão pertinente de cada uma das outras configurações.
+- [x] **Step 3: Observar as falhas e implementar configuração temática por capítulo.** Manter estratégias linguísticas pertinentes; a evidência deve permitir inferência, referência, comparação e diagnóstico próprios do assunto. Usar exemplos originais; não apresentar uma relação científica não verificada como fato.
+- [x] **Step 4: Aprofundar os 29 textos junto à configuração.** Cinco seções, 900–1.100 caracteres como objetivo editorial e mínimo 800 aceito pelo importador, mecanismo explicado, cinco/seis pegadinhas com correção, dois problemas de prática e recall alinhado; usar `scripts/aprofundar-resumo.py` e `rev: 2`. Não alterar capítulos fora do grupo.
+- [x] **Step 5: Testar revisão isolada e modos Explorar/Testar/Reconstruir.** Preservar tentativas e chave de armazenamento; IDs editoriais novos somente nos 29 capítulos reescritos. Usar fixtures locais, sem enviar respostas na conta real.
+- [x] **Step 6: Validar todos os 29 IDs na matriz do lote, revisar exemplos/textos e publicar PR automática.** A estrutura editorial e o mecanismo de cada família precisam de captura inspecionada; variantes precisam de verificações próprias.
 
 ## Task 3: Entrega C — H1, 24 capítulos
 

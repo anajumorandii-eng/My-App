@@ -412,29 +412,20 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   gramatical('oracoes-substantivas','orações substantivas','noun-clause'),
   gramatical('oracoes-adjetivas','orações adjetivas','adjective-clause'),
   gramatical('oracoes-adverbiais','orações adverbiais','adverbial-clause'),
+  ingles('taxonomy','text comprehension: taxonomy and terminology','taxonomy-hierarchy'),
   ingles('songs-poems','text comprehension: songs and poems','poetry-reading'),ingles('calories-energy','text comprehension: calories and energy','quantity-language'),ingles('earthquakes','text comprehension: earthquakes','modal-certainty'),ingles('greenhouse-gases','text comprehension: ecology (greenhouse gases)','cause-connectors'),ingles('human-brain','text comprehension: the human brain','research-claims'),
-  // Rodada de Língua Inglesa de 21/09/2026: os 11 capítulos restantes de
-  // "Text Comprehension" também são leitura em inglês, e o texto-fonte de cada
-  // um não está disponível aqui — só o título. Por isso cada instrumento trata
-  // da ESTRATÉGIA de leitura (que tipo de pista, de conector, de registro),
-  // nunca de um fato específico do texto-fonte que não dá para verificar.
-  // Furacão e célula-tronco reaproveitam a escala modal de earthquakes
-  // (previsão meteorológica e projeção médica usam a mesma gramática de
-  // cautela científica); poluição reaproveita o conector causal de
-  // greenhouse-gases; aquecimento global e probióticos reaproveitam a força
-  // de afirmação de human-brain — mesma economia do plano cartesiano de
-  // Matemática, que serve treze capítulos com sete famílias.
-  ingles('hurricanes','text comprehension: hurricanes','modal-certainty'),
-  ingles('pollution','text comprehension: pollution','cause-connectors'),
-  ingles('global-warming','text comprehension: global warming','research-claims'),
+  // Cada capítulo usa seu próprio trecho e mecanismo de leitura.
+  ingles('hurricanes','text comprehension: hurricanes','hurricane-forecast'),
+  ingles('pollution','text comprehension: pollution','pollution-connectors'),
+  ingles('global-warming','text comprehension: global warming','warming-evidence'),
   ingles('novels-short-stories','text comprehension: novels/short stories','narrative-inference'),
-  ingles('bacteria','text comprehension: bacteria','lexical-inference'),
+  ingles('bacteria','text comprehension: bacteria','bacteria-context'),
   ingles('viruses','text comprehension: viruses','comparison-signals'),
   ingles('discrimination-against-women','text comprehension: discrimination against women','stance-language'),
-  ingles('women-empowerment','text comprehension: women empowerment','stance-language'),
-  ingles('digital-technology','text comprehension: digital technology','lexical-inference'),
-  ingles('health-probiotics','text comprehension: health – probiotics','research-claims'),
-  ingles('stem-cells','text comprehension: stem cells','modal-certainty'),
+  ingles('women-empowerment','text comprehension: women empowerment','empowerment-language'),
+  ingles('digital-technology','text comprehension: digital technology','digital-conditions'),
+  ingles('health-probiotics','text comprehension: health – probiotics','probiotic-evidence'),
+  ingles('stem-cells','text comprehension: stem cells','stem-cell-trials'),
   redacao('dissertacao-mitos','a dissertação no vestibular: mitos e verdades','essay-myths'),redacao('avaliacao-dissertacao','o que se avalia na dissertação: competências e habilidades','evaluation'),redacao('organizacao-ideias','organizando as ideias: brainstorm e mind maps','idea-map'),redacao('repertorio','repertório: o diferencial de redações de sucesso','repertoire'),redacao('eixos-tematicos','qual será o tema deste ano: grandes eixos temáticos','theme-axes'),
   // Oficina de redação, rodada 1: cada entrada aponta para a decisão concreta
   // do capítulo. As famílias se repetem apenas quando a operação de escrita é
@@ -467,6 +458,7 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   redacao('dados-exemplos','recursos argumentativos: dados numéricos e exemplos','data-examples'),redacao('vozes-prestigiadas','recursos argumentativos: vozes prestigiadas','prestigious-voices'),redacao('ressalva','ressalvando o ponto de vista contrário','concession'),redacao('refutacao','refutando o ponto contrário','refutation'),redacao('interdiscursividade','recursos argumentativos: interdiscursividade e intertextualidade','intertextuality'),redacao('temas-analisados','recursos argumentativos: temas de redação já analisados','repertoire-bank'),redacao('fatos-atualidade','recursos argumentativos: fatos da atualidade','current-affairs'),redacao('multiplos-dominios','recursos argumentativos: múltiplos domínios do saber','domains'),
   redacao('conclusao-sintese','conclusão por síntese ou retomada da tese','conclusion-synthesis'),redacao('conclusao-foco','conclusão: sumarização, focalização e expressividade','conclusion-focus'),redacao('intervencao-atores','proposta de intervenção: atores sociais e cidadania','intervention-agents'),redacao('intervencao-viabilidade','proposta de intervenção: viabilização e inovação','intervention-feasibility'),redacao('intervencao-coerencia','proposta de intervenção: coerência argumentativa','intervention-coherence'),redacao('intervencao-direitos','proposta de intervenção: respeito aos direitos humanos','intervention-rights'),
   redacao('coesao-referencial','recursos de coesão referencial no texto dissertativo','reference-cohesion'),redacao('coesao-sequencial','recursos de coesão sequencial no texto dissertativo','sequential-cohesion'),redacao('coesao-problemas','coesão no texto dissertativo: análise de problemas','cohesion-diagnosis'),redacao('linguagem-clareza','recursos linguísticos: norma, clareza e expressividade','language-clarity'),redacao('direitos-1','os direitos humanos de 1ª geração: direitos individuais','rights-generations'),redacao('direitos-23','os direitos humanos de 2ª e 3ª geração: direitos sociais, coletivos e difusos','rights-social'),redacao('nota-mil','redações nota 1000: trunfos a inspirar','model-essay'),redacao('redacao-midia','redações na mídia: como aprimorar','media-revision'),
+  leitura('textualidade','fatores de textualidade','textuality'),
   leitura('niveis-leitura','os dois níveis da leitura','levels'),leitura('intertextualidade','intertextualidade e interdiscursividade','intertext'),leitura('generos','gêneros textuais','genres'),leitura('narrativos','gêneros narrativos e níveis de compreensão','narrative'),leitura('nao-verbais','gêneros não verbais: fundamentos de leitura','nonverbal'),leitura('funcoes','funções da linguagem','functions'),leitura('poetica','função poética e linguagem literária','poetic'),leitura('figuras','figuras de linguagem','figures'),leitura('distorcoes','modelos de leitura e distorções interpretativas','distortions'),leitura('comicos','leitura de textos cômicos','comic'),leitura('tdic','tecnologias digitais da informação e comunicação (tdic): impactos sociais','tdic'),
 
   // Literatura: 22 capítulos de estética/movimento/campo (três facetas

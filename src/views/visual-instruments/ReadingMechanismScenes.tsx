@@ -2,6 +2,8 @@ import React from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import type { ReadingInstrumentId } from '../../lib/readingInstrumentLab';
 import { accent, Caixa, dim, green, ink, paper, Pontas, Seta, T } from './sceneKit';
+import { READING_INSTRUMENTS, readingState } from '../../lib/readingInstrumentLab';
+import './ReadingInstrument.css';
 
 // Auditoria 34: os 11 capítulos de Entendimento de Texto tinham rótulos
 // certos, mas três formas genéricas para todos — fileira de caixas, degraus
@@ -20,6 +22,23 @@ function Pagina({ x, y, w, h, linhas = 7, marcas = [], cor = accent }: { x: numb
       const marcada = marcas.includes(k);
       return <path key={k} d={`M${x + 12} ${ly}h${lw}`} stroke={marcada ? cor : dim} strokeWidth={marcada ? 5 : 2} strokeLinecap="round" opacity={marcada ? 0.85 : 0.5} />;
     })}
+  </g>;
+}
+
+function Textualidade({ selected }: { selected: number }) {
+  const reduced=useReducedMotion();
+  return <g>
+    <rect x="30" y="55" width="78" height="146" rx="5" fill={paper} stroke={ink} strokeWidth="3" />
+    <circle cx="89" cy="130" r="3" fill={ink} />
+    <circle cx="69" cy="93" r="20" fill="none" stroke={accent} strokeWidth="3" />
+    <path d="M54 78L84 108" stroke={accent} strokeWidth="4" />
+    <T x={69} y={229} tam={12}>proíbe entrar</T>
+    <path d="M117 130H207" fill="none" stroke={selected===0?accent:green} strokeWidth="3" markerEnd={selected===0?'url(#wm-acc)':'url(#wm-ok)'} />
+    {!reduced && <motion.path key={selected} d="M117 130H207" fill="none" stroke={selected===0?accent:green} strokeWidth="5" initial={{pathLength:0}} animate={{pathLength:1}} transition={{duration:.45}} />}
+    <circle cx="254" cy="106" r="12" fill={paper} stroke={ink} strokeWidth="2" />
+    <path d="M254 118V156M254 133L237 143M254 133L269 143M254 156L241 179M254 156L269 179" stroke={ink} strokeWidth="3" fill="none" />
+    {selected===0 ? <path d="M226 181L279 213M226 213L279 181" stroke={accent} strokeWidth="4" /> : <path d="M226 195L241 210L279 181" fill="none" stroke={green} strokeWidth="4" />}
+    <T x={254} y={231} tam={12}>{selected===0?'autorizar contradiz':'aguardar é compatível'}</T>
   </g>;
 }
 
@@ -45,7 +64,7 @@ function Intertexto({ selected }: { selected: number }) {
     <Pagina x={20} y={70} w={110} h={140} linhas={6} marcas={[2]} cor={ink} />
     <T x={75} y={62} tam={11}>texto A</T>
     <Pagina x={190} y={70} w={110} h={140} linhas={6} marcas={[2]} cor={parodia ? accent : ink} />
-    <T x={245} y={62} tam={11}>texto B</T>
+    <T x={245} y={62} tam={11}>{parodia ? 'texto C' : 'texto B'}</T>
     {parodia
       ? <><path d="M120 116C150 80 170 160 200 116" stroke={accent} strokeWidth="3" fill="none" markerEnd="url(#wm-acc)" /><T x={160} y={232} cor={accent} tam={12}>a forma volta deslocada: humor ou crítica</T></>
       : <><Seta d="M120 116H200" cor="ok" larg={3} /><T x={160} y={106} cor={green} tam={16} peso={900}>“ ”</T><T x={160} y={232} cor={green} tam={12}>a fonte fica reconhecível</T></>}
@@ -94,18 +113,17 @@ function Narrativa({ selected }: { selected: number }) {
 function NaoVerbal({ selected }: { selected: number }) {
   const ausencia = selected === 1;
   return <g>
-    <rect x="60" y="60" width="200" height="150" fill={paper} stroke={ink} strokeWidth="3" />
-    {ausencia ? <>
-      {/* O corte deixa uma figura fora do quadro: o que falta também significa. */}
-      <circle cx="120" cy="140" r="22" fill={`color-mix(in srgb, ${dim} 25%, ${paper})`} stroke={dim} strokeWidth="2" />
-      <circle cx="262" cy="140" r="22" fill="none" stroke={accent} strokeWidth="2.5" strokeDasharray="5 4" />
-      <T x={290} y={186} ancora="end" cor={accent} tam={11}>fora de cena</T>
-    </> : <>
-      <circle cx="100" cy="170" r="12" fill={`color-mix(in srgb, ${dim} 25%, ${paper})`} stroke={dim} strokeWidth="2" />
-      <circle cx="220" cy="170" r="12" fill={`color-mix(in srgb, ${dim} 25%, ${paper})`} stroke={dim} strokeWidth="2" />
-      <circle cx="160" cy="124" r="36" fill={`color-mix(in srgb, ${accent} 30%, ${paper})`} stroke={accent} strokeWidth="3" />
-      <T x={160} y={80} cor={accent} tam={11}>centro, cor, escala</T>
-    </>}
+    <defs><clipPath id="reading-poster-crop"><rect x="38" y="58" width={ausencia ? 168 : 244} height="158" /></clipPath></defs>
+    <rect x="38" y="58" width={ausencia ? 168 : 244} height="158" fill={paper} stroke={accent} strokeWidth="3" />
+    <g clipPath="url(#reading-poster-crop)">
+      <path d="M38 198Q150 182 282 198V216H38Z" fill={`color-mix(in srgb, ${green} 22%, ${paper})`} />
+      <path d="M139 190V120M139 148L116 126M139 156L163 130" fill="none" stroke={ink} strokeWidth="7" />
+      <path d="M91 127Q69 102 93 85Q98 63 126 73Q151 58 170 80Q198 82 184 111Q189 137 160 140Q125 152 91 127Z" fill={`color-mix(in srgb, ${green} 32%, ${paper})`} stroke={green} strokeWidth="2" />
+      <circle cx="241" cy="158" r="10" fill={paper} stroke={ink} strokeWidth="2" />
+      <path d="M241 168V193M241 176L223 184M241 176L258 181M241 193L229 209M241 193L252 209" stroke={ink} strokeWidth="3" fill="none" />
+      <path d="M222 184L206 187L215 198L229 194Z" fill={accent} />
+    </g>
+    {ausencia && <><path d="M241 158v49" stroke={dim} strokeWidth="2" strokeDasharray="4 4" /><T x={259} y={253} cor={accent} tam={11}>cuidador fora</T></>}
     <T x={160} y={236} cor={dim} tam={12} peso={600}>{ausencia ? 'o corte seleciona o que se vê' : 'o olhar é conduzido primeiro aqui'}</T>
   </g>;
 }
@@ -153,11 +171,12 @@ function Figuras({ selected }: { selected: number }) {
   </g>;
   return <g>
     <path d="M40 74h120a10 10 0 0 1 10 10v36a10 10 0 0 1-10 10H86l-16 18v-18H40a10 10 0 0 1-10-10V84a10 10 0 0 1 10-10Z" fill={paper} stroke={ink} strokeWidth="2.5" />
-    <T x={100} y={108} tam={16} peso={900}>“que ótimo!”</T>
+    <T x={100} y={108} tam={14} peso={900}>“Que rapidez!”</T>
     <rect x="190" y="84" width="110" height="100" rx="8" fill={`color-mix(in srgb, ${dim} 14%, ${paper})`} stroke={accent} strokeWidth="2.5" />
-    <path d="M214 110q10-14 24-6q16-12 30 4q14 2 12 14h-68q-8-8 2-12Z" fill={paper} stroke={dim} strokeWidth="2" />
-    {[0, 1, 2, 3].map((k) => <path key={k} d={`M${218 + k * 16} 132l-6 16`} stroke={dim} strokeWidth="2" />)}
-    <T x={245} y={176} cor={accent} tam={11}>a situação</T>
+    <circle cx="245" cy="116" r="23" fill={paper} stroke={dim} strokeWidth="2" />
+    <path d="M245 99v17l16 8" fill="none" stroke={accent} strokeWidth="3" strokeLinecap="round" />
+    {[218, 244, 270].map(x => <g key={x}><circle cx={x} cy="150" r="4" fill={ink} /><path d={`M${x} 155v9m-5-5h10`} stroke={ink} strokeWidth="2" /></g>)}
+    <T x={245} y={178} cor={accent} tam={11}>2 horas na fila</T>
     <T x={170} y={124} cor={accent} tam={20} peso={900}>≠</T>
     <T x={160} y={218} cor={dim} tam={12} peso={600}>ironia: o contexto contraria o dito</T>
   </g>;
@@ -217,12 +236,53 @@ function Tdic({ selected }: { selected: number }) {
   </g>;
 }
 
-export function ReadingMechanismScene({ id, selected }: { id: ReadingInstrumentId; selected: number }) {
+function ReadingDiagram({ id, selected }: { id: ReadingInstrumentId; selected: number }) {
   const cenas: Record<ReadingInstrumentId, React.ReactNode> = {
+    textuality: <Textualidade selected={selected} />,
     levels: <Nivel selected={selected} />, intertext: <Intertexto selected={selected} />, genres: <Generos selected={selected} />,
     narrative: <Narrativa selected={selected} />, nonverbal: <NaoVerbal selected={selected} />, functions: <Funcoes selected={selected} />,
     poetic: <Poetica selected={selected} />, figures: <Figuras selected={selected} />, distortions: <Distorcoes selected={selected} />,
     comic: <Comico selected={selected} />, tdic: <Tdic selected={selected} />,
   };
   return <g><Pontas />{cenas[id]}</g>;
+}
+
+function Evidence({ text, clues }: { text: string; clues: string[] }) {
+  const parts: React.ReactNode[] = [];
+  let rest = text;
+  while (rest) {
+    const next = clues.map(clue => ({clue, at:rest.indexOf(clue)})).filter(match => match.at >= 0)
+      .sort((a,b) => a.at-b.at || b.clue.length-a.clue.length)[0];
+    if (!next) { parts.push(rest); break; }
+    if (next.at) parts.push(rest.slice(0,next.at));
+    parts.push(<mark key={parts.length}>{next.clue}</mark>);
+    rest=rest.slice(next.at+next.clue.length);
+  }
+  return <>{parts}</>;
+}
+
+export function ReadingMechanismScene({ id, selected }: { id: ReadingInstrumentId; selected: number }) {
+  const config=READING_INSTRUMENTS[id], state=readingState(id,selected);
+  const reduced=useReducedMotion();
+  return <figure className="reading-scene" data-motion={reduced ? 'reduced' : 'normal'}>
+    <div className="reading-documents">{config.documents.map(document => <article key={document.label}>
+      <h3>{document.label}</h3>
+      <blockquote>{document.lines.map((line,i) => <p key={i}><Evidence text={line} clues={state.evidence} /></p>)}</blockquote>
+    </article>)}</div>
+    {id==='distortions' && <p className={selected===0 ? 'reading-rejected' : 'reading-supported'}>
+      {selected===0 ? 'Todos aprendem melhor sozinhos.' : 'Alguns alunos desta turma leram melhor na condição descrita.'}
+    </p>}
+    <div className="reading-diagram-window" role="region" aria-label="Percorrer o esquema de leitura com as setas" tabIndex={0}
+      onKeyDown={event => {
+        if(event.key==='ArrowRight'||event.key==='ArrowLeft') {
+          event.preventDefault();event.currentTarget.scrollBy({left:event.key==='ArrowRight'?100:-100,behavior:'instant'});
+        }
+      }}>
+      <svg className="reading-diagram" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${state.label}: ${state.diagnosis}`}>
+        <ReadingDiagram id={id} selected={selected} />
+        <text x="160" y="278" textAnchor="middle" className="reading-diagram-caption">{state.label}</text>
+      </svg>
+    </div>
+    <figcaption><p className="reading-annotation">{state.annotation}</p><p className="reading-finding">{state.reading}</p></figcaption>
+  </figure>;
 }
