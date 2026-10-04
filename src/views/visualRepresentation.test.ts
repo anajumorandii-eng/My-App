@@ -7,6 +7,15 @@ import { findInstrument } from './visual-instruments/registry';
 import { resolveVisualRepresentation } from './visualRepresentation';
 
 describe('resolveVisualRepresentation', () => {
+  it.each([
+    ['summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology', 'taxonomy'],
+    ['summary-entendimento-de-texto-fatores-de-textualidade', 'textualidade'],
+  ])('abre o mecanismo específico de %s em vez do experimento antigo', (id, artifact) => {
+    const summary = interactiveSummaries.find(item => item.id === id)!;
+    expect(resolveVisualRepresentation(summary)).toBe('instrument');
+    expect(findInstrument(summary)?.id).toBe(artifact);
+  });
+
   it('prefere um experimento de capítulo exato a representações por palavra-chave', () => {
     const summary = interactiveSummaries.find((item) => item.id === 'bio-ecologia-introducao')!;
     expect(resolveVisualRepresentation(summary)).toBe('experiment');

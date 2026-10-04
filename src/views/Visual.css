@@ -2791,3 +2791,9 @@
 
 /* As anotações autorais de História e Geografia conservam a escrita à mão. */
 .crivo-visual--tech .ehi-drawing .ehi-note { font-family: Kalam, cursive; }
+
+/* A condição da prancha pode ocupar duas linhas em telas estreitas. */
+@media (max-width: 560px) {
+  .vs-study-board--scene-first.vs-study-board--tech .vs-q-callout { max-width:100%; min-width:0; flex-wrap:wrap; }
+  .vs-study-board--scene-first.vs-study-board--tech .vs-q-callout strong { white-space:normal; overflow-wrap:anywhere; }
+}

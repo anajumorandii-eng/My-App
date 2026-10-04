@@ -1,0 +1,20 @@
+.reading-instrument { width:100%; min-width:0; }
+.reading-scene { margin:0; min-width:0; padding:18px 16px; color:var(--vs-ink); background:var(--vs-paper-strong); border:1px solid var(--vs-line); border-radius:4px 15px 5px 9px; box-shadow:3px 4px 0 color-mix(in srgb,var(--vs-ink) 8%,transparent); }
+.reading-documents { display:grid; gap:18px; }
+.reading-documents article { min-width:0; }
+.reading-documents h3 { margin:0; font:800 12px/1.5 ui-monospace,monospace; color:var(--vs-burgundy); letter-spacing:.04em; }
+.reading-documents blockquote { margin:12px 0; padding-left:12px; border-left:3px solid var(--vs-burgundy); font:600 19px/1.5 Georgia,serif; overflow-wrap:anywhere; }
+.reading-documents blockquote p { margin:0 0 7px; }
+.reading-documents mark { color:var(--vs-ink); background:color-mix(in srgb,var(--vs-amber) 24%,transparent); text-decoration:underline; text-decoration-color:var(--vs-burgundy); text-underline-offset:4px; padding:1px 0; }
+.reading-diagram-window { width:100%; min-width:0; overflow-x:auto; contain:inline-size; overscroll-behavior-x:contain; }
+.reading-diagram-window:focus-visible { outline:3px solid var(--vs-burgundy); outline-offset:3px; }
+.reading-diagram { display:block; width:100%; min-width:360px; height:auto; }
+.reading-diagram-caption { fill:var(--vs-ink); font:800 14px Georgia,serif; }
+.reading-annotation { margin:16px 0 8px; font:700 18px/1.5 Kalam,cursive; color:var(--vs-burgundy); }
+.reading-finding { margin:0; padding-top:12px; border-top:1px dashed var(--vs-line); font-size:16px; line-height:1.5; }
+.reading-rejected,.reading-supported { padding:12px; border-left:3px solid var(--vs-burgundy); font-size:17px; line-height:1.5; }
+.reading-rejected { text-decoration:line-through; text-decoration-thickness:2px; }
+@media(min-width:621px) {
+  .vs-instrument.reading-instrument { grid-template-columns:minmax(0,1.35fr) minmax(220px,1fr); }
+  .vs-instrument.reading-instrument > .reading-scene { grid-column:1; grid-row:1 / span 6; }
+}

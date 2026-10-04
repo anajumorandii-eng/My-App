@@ -1,10 +1,10 @@
 # Crivo: fila completa e execução em lotes maiores
 
-Estado de referência: main `af401453397d773ddf8ff5ae65df1e3f1559afc6`, em 03/10/2026. A PR #252 já foi incorporada, assim como #242–#245 e #247–#251. Não repetir esses reparos. A PR #246 (guia de troca de conta) e os rascunhos #234/#222 são trabalhos separados; não integrar automaticamente.
+Estado de referência: main `f9b7e12f6ef69f1524a34358243856ab95d63b0e`, em 04/10/2026. As PRs #252, #254 e #255 já foram incorporadas, assim como #242–#245 e #247–#251. Não repetir esses reparos. A PR #246 (guia de troca de conta) e os rascunhos #234/#222 são trabalhos separados; não integrar automaticamente.
 
 A execução anterior ficou fragmentada em lotes pequenos para o tamanho da fila. A nova unidade de entrega será uma família de problemas, com arquivos sob responsabilidade explícita e validação conjunta. A auditoria existente foi reconciliada por ID com as correções documentadas; não foram repetidas as 613 aberturas de tela.
 
-A Entrega A foi implementada e validada nesta branch: [evidências dos 25 capítulos](visual-integral-2026-10-03/entrega-a/README.md). Os números abaixo incluem a proposta, ainda sujeita à revisão e ao merge. A tabela de lotes mantém o escopo original; F1/M1/HG1 estão tratados, e os outros lotes somam 234 IDs.
+A Entrega A foi integrada em #254: [evidências dos 25 capítulos](visual-integral-2026-10-03/entrega-a/README.md). A Entrega B foi implementada e validada nesta proposta: [29 capítulos e resumos](visual-integral-2026-10-04/entrega-b/README.md). A tabela de lotes mantém o escopo original; F1/M1/HG1/LG2 estão tratados, e os outros lotes somam 205 IDs. O redesenho dos 112 capítulos de História/Geografia foi integrado em #255.
 
 ## Quanto falta
 
@@ -20,17 +20,17 @@ A Entrega A foi implementada e validada nesta branch: [evidências dos 25 capít
 | Sociologia | 27 | 0 | 27 | 27 |
 | Redação | 58 | 0 | 58 | 58 |
 | Gramática | 26 | 0 | 26 | 26 |
-| Língua Inglesa | 17 | 0 | 17 | 17 |
+| Língua Inglesa | 17 | 17 | 0 | 0 |
 | Literatura | 37 | 0 | 37 | 37 |
-| Entendimento de Texto | 12 | 0 | 12 | 12 |
+| Entendimento de Texto | 12 | 12 | 0 | 0 |
 | Atualidades | 1 | 0 | 1 | — |
-| **Total** | **613** | **64** | **234** | **177** |
+| **Total** | **613** | **93** | **205** | **148** |
 
-Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 234 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 35 de Filosofia.
+Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 205 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 35 de Filosofia.
 
-Os 177 resumos pendentes estão nos 612 registros de `deepSummaryContent.json`; COP30 é o capítulo adicional do catálogo. Eles foram vinculados aos IDs e aos mesmos lotes visuais para executar conteúdo e representação juntos. Os 435 registros com `rev: 2` não precisam ser reescritos indiscriminadamente. O inventário formal de qualidade continua separado: 532 sem revisão formal, 81 em validação, nenhuma aprovação registrada.
+Os 148 resumos pendentes estão nos 612 registros de `deepSummaryContent.json`; COP30 é o capítulo adicional do catálogo. Eles foram vinculados aos IDs e aos mesmos lotes visuais para executar conteúdo e representação juntos. Os 464 registros com `rev: 2` não precisam ser reescritos indiscriminadamente. O inventário formal de qualidade continua separado: 532 sem revisão formal, 81 em validação, nenhuma aprovação registrada.
 
-Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 234 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 177 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
+Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 205 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 148 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
 
 ## Lotes definidos
 
@@ -51,14 +51,14 @@ Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planil
 | R2 | 15 | Projeto/gênero/introdução/conclusão, competências e modelos de texto; incluir contenção móvel de Competências. |
 | R3 | 27 | Coletânea, argumento, dados, coesão, intervenção, direitos e revisão; mostrar operações em texto próprio e detalhamento da intervenção. |
 | A1 | 1 | COP30: atores, contexto de Belém, decisões e limites com fontes datadas. Pode integrar uma entrega maior de Humanas. |
-| **Total original** | **259** | F1/M1/HG1 entregues: 25; fila restante: 234. |
+| **Total original** | **259** | F1/M1/HG1/LG2 entregues: 54; fila restante: 205. |
 
 A profundidade dos 27 textos de Sociologia acompanha H1/H2/H3, conforme os IDs vinculados na fila. Os lotes pequenos M1/HG1/A1 serão integrados a entregas maiores; não devem gerar novas rodadas de quatro ou de um capítulo por padrão.
 
 ## Primeiras entregas e paralelismo
 
 1. **Entrega A: 25 capítulos — F1 + M1 + HG1.** Corrigir eletricidade/magnetismo e fechar os achados menores de Matemática, História e Geografia na mesma rodada. Dividir F1 em circuitos, eletrostática e magnetismo; M1/HG1 têm arquivos próprios.
-2. **Entrega B: 29 capítulos — LG2.** Corrigir temas trocados de Inglês e ligar o aprofundamento aos mecanismos de leitura. Pode avançar junto à A em uma branch/worktree separada.
+2. **Entrega B: 29 capítulos — LG2.** Corrigir temas trocados de Inglês e ligar o aprofundamento aos mecanismos de leitura. Implementada e validada nesta proposta; conferir sua integração antes de repetir LG2.
 3. **Entrega C: 24 capítulos — H1.** Comparações conceituais com exemplos específicos. Começar quando houver capacidade livre, mantendo um responsável pela família e um integrador dos dados compartilhados.
 4. Depois: LG1/LG3, R1/R2/R3 e H2/H3, intercalados com F2/F3. Integrar A1 a Humanas. A ordem pode mudar por defeito confirmado ou pela rotina mais usada da estudante; registrar o delta, sem reiniciar a auditoria.
 
@@ -66,13 +66,13 @@ Cada entrega produz uma PR automaticamente; o merge fica com a responsável. As 
 
 ## História e Geografia: o que os números significam
 
-Há quatro achados específicos ainda na fila: Independência do Brasil, Dinâmica Interna da Colonização, Mineração no Brasil Colonial e `geo-bonus-demografico`. Os 108 outros mecanismos foram preservados na auditoria. Isso não encerra a revisão editorial dos 112 capítulos: recortes completos, tema escuro, anotações, seleção, relações do diagnóstico, exercícios e uso real ainda exigem validação de família. O título do caso demográfico deve seguir o conteúdo efetivo de estrutura/setores da população; preservar o ID e não inventar uma curva de bônus demográfico para justificar o nome antigo.
+Os quatro achados específicos da auditoria foram tratados na Entrega A (#254), com o ID demográfico preservado e título correspondente ao conteúdo efetivo. Depois, os 112 capítulos receberam o redesenho autoral aprovado em #255: [registro e galeria](visual-integral-2026-10-04/redesenho-hg/README.md). As capturas completas e a matriz Chromium estão documentadas. A classificação histórica dos outros 108 mecanismos permanece preservada; aprovação editorial integral, exercícios e uso autenticado continuam frentes separadas. Não repetir o redesenho nem os quatro reparos como pendências novas.
 
 ## Trabalho geral fora da contagem de capítulos
 
 - **Contraste/acessibilidade:** 44 combinações históricas distintas de rota/regra/alvo aguardam reprodução atual. Corrigir tokens/usos efetivos, com um responsável pelos estilos compartilhados, e reexecutar as rotas afetadas. Os 15 nomes de botão e nove nomes de select foram tratados no quinto lote; revalidar regressão, sem contabilizá-los como 24 novos reparos.
-- **Layout:** Independência, Competências e os rótulos históricos estão nos respectivos lotes. Personalizar, busca, Administração e navegação do iPad já têm reparos integrados; não repetir como pendências novas.
-- **Texto:** executar os 177 aprofundamentos em conjunto com suas cenas, mantendo exemplos originais e a revisão de seções/recall. Histórico de tentativas permanece; a revisão editorial muda apenas os IDs de seções dos capítulos efetivamente reescritos conforme o mecanismo já existente.
+- **Layout:** Independência e os rótulos históricos foram tratados; Competências permanece no lote R2. Personalizar, busca, Administração e navegação do iPad já têm reparos integrados; não repetir como pendências novas.
+- **Texto:** executar os 148 aprofundamentos em conjunto com suas cenas, mantendo exemplos originais e a revisão de seções/recall. Histórico de tentativas permanece; a revisão editorial muda apenas os IDs de seções dos capítulos efetivamente reescritos conforme o mecanismo já existente.
 - **Fluxos com dados reais:** conferir sincronização/isolamento por conta, diagnóstico, Testar/Reconstruir, Caderno de Erros e telas com catálogo remoto em cenários autorizados. Falta de login na auditoria não prova bug de produção. Não enviar formulários, gerar custo externo ou limpar dados para “validar” uma tela sem uma ação explicitamente autorizada.
 - **Desempenho e compatibilidade:** medir abertura de capítulos/busca e interação no iPad/Safari real; reduzir custos de chunks carregados quando a medição justificar. O carregamento inicial já foi melhorado; o aviso de chunks grandes continua. Não declarar compatibilidade Safari a partir de Chromium.
 - **Concluído nesta sequência:** atualizações de dependências, recuperação de Fuvest 2025, leitura autorizada do histórico sem reset, reparos de podcasts/vozes e os lotes científicos integrados. A qualidade editorial geral do banco de questões e de toda a aplicação não foi certificada por esses reparos.

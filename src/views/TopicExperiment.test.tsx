@@ -5,6 +5,8 @@ import { TopicExperiment } from './topic-experiments/TopicExperiment';
 import { topicExperiments } from './topic-experiments/catalog';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { atlasPassages } from '../lib/topicAtlas';
+import { buildVisualMap } from '../lib/visualStudy';
+import { findInstrument } from './visual-instruments/registry';
 
 describe('Personalização com vínculo explícito ao conteúdo', () => {
   it('preserva o texto de todas as etapas do catálogo ao segmentar a leitura', () => {
@@ -43,10 +45,13 @@ describe('Personalização com vínculo explícito ao conteúdo', () => {
     fireEvent.click(screen.getByRole('button', {name:'Examinar o critério de aceitação'}));
     expect(screen.getByRole('status')).toHaveTextContent('examinada, contestada e corrigida');
   });
-  it('modifica o exemplo e a explicação quando o conector muda de função', () => {
-    render(<TopicExperiment summaryId="summary-entendimento-de-texto-fatores-de-textualidade" />);
-    fireEvent.click(screen.getByRole('button',{name:'Contraste'}));
-    expect(screen.getByText('a partida continuou.')).toBeInTheDocument();
-    expect(screen.getByRole('status')).toHaveTextContent('contra uma expectativa');
+  it('altera a leitura de Textualidade quando o aviso recebe uma conclusão coerente', () => {
+    const summary = interactiveSummaries.find(item => item.id === 'summary-entendimento-de-texto-fatores-de-textualidade')!;
+    const Component = findInstrument(summary)!.Component;
+    const { container } = render(<Component map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
+    expect(container.querySelector('.reading-finding')).toHaveTextContent('Aviso coeso, mas incoerente: proibir não autoriza entrar.');
+    fireEvent.change(screen.getByRole('slider'), { target: { value: '1' } });
+    expect(container.querySelector('.reading-finding')).toHaveTextContent('Aviso coerente: a proibição justifica esperar fora.');
+    expect(container.querySelector('.reading-annotation')).toHaveTextContent('ação compatível com a primeira');
   });
 });
