@@ -1,0 +1,2796 @@
+[
+  {
+    "route": "/",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 12675,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1538,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-action-primary"
+            ],
+            "html": "<button class=\"spotlight inline-fle...\" aria-label=\"Começar\" tabindex=\"0\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #fdf7ea, background color: #43828b, font size: 8.3pt (11px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 73,
+    "screenshot": "hoje-light-390.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1811,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/plano",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1186,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 76
+  },
+  {
+    "route": "/agenda",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2207,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 11,
+    "screenshot": "agenda-light-390.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 853,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 67
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 894,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "section:nth-child(5) > .gap-2.items-center.flex > .font-bold.px-2.py-0\\.5"
+            ],
+            "html": "<span class=\"text-[10px] font-mono font-bold px-2 py-0.5 rounded-full\" style=\"background-color: var(--primary); color: var(--ink-on-primary);\">Fila A</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "section:nth-child(6) > .gap-2.items-center.flex > .font-bold.px-2.py-0\\.5"
+            ],
+            "html": "<span class=\"text-[10px] font-mono font-bold px-2 py-0.5 rounded-full\" style=\"background-color: var(--primary); color: var(--ink-on-primary);\">Fila B</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 23,
+    "screenshot": "recuperacao-light-390.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2864,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-action-primary"
+            ],
+            "html": "<button class=\"spotlight inline-fle...\" aria-pressed=\"false\" tabindex=\"0\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #fdf7ea, background color: #43828b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 44,
+    "screenshot": "sessao-light-390.png"
+  },
+  {
+    "route": "/questoes",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1243,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 53
+  },
+  {
+    "route": "/revisoes",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1542,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 111
+  },
+  {
+    "route": "/flashcards",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 718,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 41
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 920,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 142
+  },
+  {
+    "route": "/redacao",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 706,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 20
+  },
+  {
+    "route": "/erros",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1301,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".px-3\\.5"
+            ],
+            "html": "<button class=\"inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--ink-on-primary)] hover:opacity-90 transition-opacity\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 23,
+    "screenshot": "erros-light-390.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1235,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 182
+  },
+  {
+    "route": "/visual",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1462,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".vs-diagnostic-button"
+            ],
+            "html": "<button class=\"vs-diagnostic-button\">Mostrar mais capítulos</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #ffffff, background color: #9b6f46, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 194,
+    "screenshot": "visual-light-390.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 911,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 70
+  },
+  {
+    "route": "/tutor",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1097,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1127,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/estrategias",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 779,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 49
+  },
+  {
+    "route": "/evolucao",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1095,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/prioridades",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 951,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 50
+  },
+  {
+    "route": "/obras",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 890,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 16
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 702,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 305,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/conexoes",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 788,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 242,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".px-3\\.5"
+            ],
+            "html": "<button class=\"flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 15,
+    "screenshot": "conexoes-light-390.png"
+  },
+  {
+    "route": "/perfil",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 895,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(1)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">ENEM</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(2)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">FUVEST</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(3)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNICAMP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(4)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNESP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(5)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">FAMERP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(6)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNIFESP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(1)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">USP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(2)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNICAMP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(3)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNESP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".justify-center.py-2.rounded-xl:nth-child(2)"
+            ],
+            "html": "<button class=\"flex-1 flex items-center justify-center px-3 py-2 rounded-xl text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(1) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(2) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(3) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(4) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(5) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(6) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 62,
+    "screenshot": "perfil-light-390.png"
+  },
+  {
+    "route": "/admin",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 634,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 151,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 534,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-emerald-600"
+            ],
+            "html": "<button class=\"mb-4 bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50\">Semear as 18 obras do ciclo 2027 (Fase 0)</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.65 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 8,
+    "screenshot": "admin-obras-light-390.png"
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 745,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-emerald-600"
+            ],
+            "html": "<button class=\"bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50\">Semear/atualizar com o conjunto embutido no código (idempotente)</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.65 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 8,
+    "screenshot": "admin-conteudo-light-390.png"
+  },
+  {
+    "route": "/",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 12969,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1538,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-action-primary"
+            ],
+            "html": "<button class=\"spotlight inline-fle...\" aria-label=\"Começar\" tabindex=\"0\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #fdf7ea, background color: #43828b, font size: 8.3pt (11px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 78,
+    "screenshot": "hoje-light-1366.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2219,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 63
+  },
+  {
+    "route": "/plano",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 947,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 81
+  },
+  {
+    "route": "/agenda",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1004,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 16,
+    "screenshot": "agenda-light-1366.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1126,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 72
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1425,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "section:nth-child(5) > .gap-2.items-center.flex > .font-bold.px-2.py-0\\.5"
+            ],
+            "html": "<span class=\"text-[10px] font-mono font-bold px-2 py-0.5 rounded-full\" style=\"background-color: var(--primary); color: var(--ink-on-primary);\">Fila A</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "section:nth-child(6) > .gap-2.items-center.flex > .font-bold.px-2.py-0\\.5"
+            ],
+            "html": "<span class=\"text-[10px] font-mono font-bold px-2 py-0.5 rounded-full\" style=\"background-color: var(--primary); color: var(--ink-on-primary);\">Fila B</span>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 7.5pt (10px), font weight: bold). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 28,
+    "screenshot": "recuperacao-light-1366.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1328,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-action-primary"
+            ],
+            "html": "<button class=\"spotlight inline-fle...\" aria-pressed=\"false\" tabindex=\"0\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.09 (foreground color: #fdf7ea, background color: #43828b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 49,
+    "screenshot": "sessao-light-1366.png"
+  },
+  {
+    "route": "/questoes",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1276,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/revisoes",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1447,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 136
+  },
+  {
+    "route": "/flashcards",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 763,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 46
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1119,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 147
+  },
+  {
+    "route": "/redacao",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 726,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 25
+  },
+  {
+    "route": "/erros",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 841,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".px-3\\.5"
+            ],
+            "html": "<button class=\"inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--ink-on-primary)] hover:opacity-90 transition-opacity\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 28,
+    "screenshot": "erros-light-1366.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1018,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 187
+  },
+  {
+    "route": "/visual",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1643,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".vs-diagnostic-button"
+            ],
+            "html": "<button class=\"vs-diagnostic-button\">Mostrar mais capítulos</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 4.41 (foreground color: #ffffff, background color: #9b6f46, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 199,
+    "screenshot": "visual-light-1366.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1038,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 75
+  },
+  {
+    "route": "/tutor",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1212,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 24
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 752,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 48
+  },
+  {
+    "route": "/estrategias",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 651,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 54
+  },
+  {
+    "route": "/evolucao",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1231,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 24
+  },
+  {
+    "route": "/prioridades",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 982,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 55
+  },
+  {
+    "route": "/obras",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 664,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 21
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 809,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 870,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 48
+  },
+  {
+    "route": "/conexoes",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 716,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 406,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".px-3\\.5"
+            ],
+            "html": "<button class=\"flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 20,
+    "screenshot": "conexoes-light-1366.png"
+  },
+  {
+    "route": "/perfil",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 941,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(1)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">ENEM</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(2)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">FUVEST</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(3)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNICAMP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(4)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNESP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(5)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">FAMERP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(6)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNIFESP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(1)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">USP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(2)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNICAMP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > .flex-wrap.gap-1\\.5.flex > .rounded-full.px-3.bg-\\[var\\(--surface2\\)\\]:nth-child(3)"
+            ],
+            "html": "<button class=\"px-3 py-1 rounded-full text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">UNESP</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".justify-center.py-2.rounded-xl:nth-child(2)"
+            ],
+            "html": "<button class=\"flex-1 flex items-center justify-center px-3 py-2 rounded-xl text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 9.0pt (12px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(1) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(2) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(3) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(4) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(5) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".p-3.space-y-2.rounded-xl:nth-child(6) > .gap-1\\.5.flex > .bg-\\[var\\(--surface\\)\\].rounded-lg.flex-1:nth-child(3)"
+            ],
+            "html": "<button class=\"flex-1 py-1 rounded-lg text-[11px] font-semibold border border-[var(--line)] bg-[var(--surface)] text-[var(--text)] transition-colors\" style=\"background-color: var(--primary); color: var(--ink-on-primary); border-color: var(--primary);\">Ambas</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.74 (foreground color: #16211c, background color: #9b6f46, font size: 8.3pt (11px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 67,
+    "screenshot": "perfil-light-1366.png"
+  },
+  {
+    "route": "/admin",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 634,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 151,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 13
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 710,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-emerald-600"
+            ],
+            "html": "<button class=\"mb-4 bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50\">Semear as 18 obras do ciclo 2027 (Fase 0)</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.65 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 13,
+    "screenshot": "admin-obras-light-1366.png"
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 648,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-emerald-600"
+            ],
+            "html": "<button class=\"bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50\">Semear/atualizar com o conjunto embutido no código (idempotente)</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.65 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 13,
+    "screenshot": "admin-conteudo-light-1366.png"
+  },
+  {
+    "route": "/",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 12826,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1538,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 73,
+    "screenshot": "hoje-dark-390.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1488,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/plano",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 723,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 76
+  },
+  {
+    "route": "/agenda",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 835,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "div:nth-child(1) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(1) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço: 13:45–14:40</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".space-y-1 > li:nth-child(3)"
+            ],
+            "html": "<li>Deslocamento: 20:30–21:10</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço e transição: 13:45–14:40<span class=\"ml-2 text-amber-700 dark:text-amber-300\">Estimativa editável</span></li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço e transição: 13:45–14:40<span class=\"ml-2 text-amber-700 dark:text-amber-300\">Estimativa editável</span></li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(4) > article > .space-y-1 > li"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–17:35</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(5) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(5) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço e transição: 13:45–14:40<span class=\"ml-2 text-amber-700 dark:text-amber-300\">Estimativa editável</span></li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(6) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(6) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço e transição: 13:45–14:40<span class=\"ml-2 text-amber-700 dark:text-amber-300\">Estimativa editável</span></li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".space-y-4 > div:nth-child(1) > .text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Aplica-se somente ao dia escolhido e não altera a semana recorrente.</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".justify-between > div > .text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Para 2026-10-05</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 11,
+    "screenshot": "agenda-dark-390.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 743,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 67
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 712,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "recuperacao-dark-390.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1497,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 42
+  },
+  {
+    "route": "/questoes",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1082,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 53
+  },
+  {
+    "route": "/revisoes",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1240,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 111
+  },
+  {
+    "route": "/flashcards",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1390,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 41
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1294,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 142
+  },
+  {
+    "route": "/redacao",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1518,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 20
+  },
+  {
+    "route": "/erros",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1550,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "erros-dark-390.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1112,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 183
+  },
+  {
+    "route": "/visual",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1461,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".vs-diagnostic-button"
+            ],
+            "html": "<button class=\"vs-diagnostic-button\">Mostrar mais capítulos</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.19 (foreground color: #ffffff, background color: #e2a261, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 194,
+    "screenshot": "visual-dark-390.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 812,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 70
+  },
+  {
+    "route": "/tutor",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 639,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 800,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/estrategias",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 868,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 49
+  },
+  {
+    "route": "/evolucao",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1071,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/prioridades",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 667,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 50
+  },
+  {
+    "route": "/obras",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 765,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 16
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 717,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 305,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/conexoes",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 687,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 406,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 15
+  },
+  {
+    "route": "/perfil",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 645,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 62
+  },
+  {
+    "route": "/admin",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 751,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 151,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-white.dark\\:bg-zinc-900.rounded-2xl:nth-child(1) > .text-sm.text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Requisições</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white.dark\\:bg-zinc-900.rounded-2xl:nth-child(2) > .text-sm.text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Falhas</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white.dark\\:bg-zinc-900.rounded-2xl:nth-child(3) > .text-sm.text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Tokens</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white.dark\\:bg-zinc-900.rounded-2xl:nth-child(4) > .text-sm.text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Custo estimado</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 8,
+    "screenshot": "admin-dark-390.png"
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 651,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-emerald-600"
+            ],
+            "html": "<button class=\"mb-4 bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50\">Semear as 18 obras do ciclo 2027 (Fase 0)</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.65 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 8,
+    "screenshot": "admin-obras-dark-390.png"
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1401,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "section:nth-child(3) > p"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500 mb-4\">0 questões, 0 métodos, 0 episódios já no Firestore.</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-emerald-600"
+            ],
+            "html": "<button class=\"bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50\">Semear/atualizar com o conjunto embutido no código (idempotente)</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.65 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 8,
+    "screenshot": "admin-conteudo-dark-390.png"
+  },
+  {
+    "route": "/",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 6356,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1328,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 78,
+    "screenshot": "hoje-dark-1366.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1067,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 63
+  },
+  {
+    "route": "/plano",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 825,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 81
+  },
+  {
+    "route": "/agenda",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 617,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "div:nth-child(1) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(1) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço: 13:45–14:40</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".space-y-1 > li:nth-child(3)"
+            ],
+            "html": "<li>Deslocamento: 20:30–21:10</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(2) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço e transição: 13:45–14:40<span class=\"ml-2 text-amber-700 dark:text-amber-300\">Estimativa editável</span></li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(3) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço e transição: 13:45–14:40<span class=\"ml-2 text-amber-700 dark:text-amber-300\">Estimativa editável</span></li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(4) > article > .space-y-1 > li"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–17:35</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(5) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(5) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço e transição: 13:45–14:40<span class=\"ml-2 text-amber-700 dark:text-amber-300\">Estimativa editável</span></li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(6) > article > .space-y-1 > li:nth-child(1)"
+            ],
+            "html": "<li>Aulas no cursinho: 07:00–13:45</li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              "div:nth-child(6) > article > .space-y-1 > li:nth-child(2)"
+            ],
+            "html": "<li>Almoço e transição: 13:45–14:40<span class=\"ml-2 text-amber-700 dark:text-amber-300\">Estimativa editável</span></li>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".space-y-4 > div:nth-child(1) > .text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Aplica-se somente ao dia escolhido e não altera a semana recorrente.</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".justify-between > div > .text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Para 2026-10-05</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 16,
+    "screenshot": "agenda-dark-1366.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 591,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 72
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 735,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 28,
+    "screenshot": "recuperacao-dark-1366.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 897,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 47
+  },
+  {
+    "route": "/questoes",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 786,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/revisoes",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1003,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 136
+  },
+  {
+    "route": "/flashcards",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 521,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 46
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 677,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 147
+  },
+  {
+    "route": "/redacao",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 481,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 25
+  },
+  {
+    "route": "/erros",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 807,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 28,
+    "screenshot": "erros-dark-1366.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 713,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 188
+  },
+  {
+    "route": "/visual",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1165,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".vs-diagnostic-button"
+            ],
+            "html": "<button class=\"vs-diagnostic-button\">Mostrar mais capítulos</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 2.19 (foreground color: #ffffff, background color: #e2a261, font size: 12.0pt (16px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 199,
+    "screenshot": "visual-dark-1366.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 543,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 75
+  },
+  {
+    "route": "/tutor",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 835,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 24
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 574,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 48
+  },
+  {
+    "route": "/estrategias",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 564,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 54
+  },
+  {
+    "route": "/evolucao",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 709,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 24
+  },
+  {
+    "route": "/prioridades",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 759,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 55
+  },
+  {
+    "route": "/obras",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 475,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 21
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 683,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 870,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 48
+  },
+  {
+    "route": "/conexoes",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 505,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 406,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 20
+  },
+  {
+    "route": "/perfil",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1652,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 67
+  },
+  {
+    "route": "/admin",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 666,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 121,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-white.dark\\:bg-zinc-900.rounded-2xl:nth-child(1) > .text-sm.text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Requisições</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white.dark\\:bg-zinc-900.rounded-2xl:nth-child(2) > .text-sm.text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Falhas</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white.dark\\:bg-zinc-900.rounded-2xl:nth-child(3) > .text-sm.text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Tokens</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-white.dark\\:bg-zinc-900.rounded-2xl:nth-child(4) > .text-sm.text-zinc-500"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500\">Custo estimado</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 13,
+    "screenshot": "admin-dark-1366.png"
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 619,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              ".bg-emerald-600"
+            ],
+            "html": "<button class=\"mb-4 bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50\">Semear as 18 obras do ciclo 2027 (Fase 0)</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.65 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 13,
+    "screenshot": "admin-obras-dark-1366.png"
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 665,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "nodes": [
+          {
+            "target": [
+              "section:nth-child(3) > p"
+            ],
+            "html": "<p class=\"text-sm text-zinc-500 mb-4\">0 questões, 0 métodos, 0 episódios já no Firestore.</p>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.67 (foreground color: #71717b, background color: #18181b, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          },
+          {
+            "target": [
+              ".bg-emerald-600"
+            ],
+            "html": "<button class=\"bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50\">Semear/atualizar com o conjunto embutido no código (idempotente)</button>",
+            "summary": "Fix any of the following:\n  Element has insufficient color contrast of 3.65 (foreground color: #ffffff, background color: #009966, font size: 10.5pt (14px), font weight: normal). Expected contrast ratio of 4.5:1"
+          }
+        ]
+      }
+    ],
+    "incompleteContrast": 13,
+    "screenshot": "admin-conteudo-dark-1366.png"
+  }
+]

@@ -682,9 +682,9 @@
 }
 .vs-inspector-actions button:hover { border-color: var(--vs-burgundy); }
 .vs-diagnostic-button {
-  background: var(--vs-burgundy);
-  border-color: var(--vs-burgundy);
-  color: #fff;
+  background: var(--action-primary);
+  border-color: var(--action-primary);
+  color: var(--text-inverse);
 }
 .vs-disagree-note,
 .vs-callout {

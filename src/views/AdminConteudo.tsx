@@ -205,16 +205,16 @@ export default function AdminConteudo() {
   return <div className="space-y-8">
     <header>
       <h1 className="text-3xl font-bold flex items-center"><ShieldCheck className="w-7 h-7 mr-3 text-indigo-500" />Conteúdo — Administração</h1>
-      <p className="text-zinc-500 mt-2">Questões, métodos de estudo e episódios de podcast, administráveis sem deploy.</p>
+      <p className="text-zinc-600 dark:text-zinc-400 mt-2">Questões, métodos de estudo e episódios de podcast, administráveis sem deploy.</p>
     </header>
     {error && <div className="p-4 rounded-xl bg-rose-50 text-rose-700 border border-rose-200">{error}</div>}
 
     <section className="min-w-0 bg-white dark:bg-zinc-900 border border-zinc-200 dark:border-zinc-800 rounded-2xl p-5">
       <h2 className="font-semibold flex items-center mb-1"><Database className="w-5 h-5 mr-2" />Migração inicial</h2>
-      <p className="text-sm text-zinc-500 mb-4">
+      <p className="text-sm text-zinc-600 dark:text-zinc-400 mb-4">
         {questions.length} questões, {studyMethods.length} métodos, {episodes.length} episódios já no Firestore.
       </p>
-      <button disabled={busy} onClick={handleSeed} className="bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50">
+      <button disabled={busy} onClick={handleSeed} className="bg-action-primary text-text-inverse rounded-lg px-3 py-1.5 text-sm disabled:opacity-50">
         Semear/atualizar com o conjunto embutido no código (idempotente)
       </button>
     </section>

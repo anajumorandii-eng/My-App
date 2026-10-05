@@ -25,7 +25,11 @@ Os scripts de extração descartam questões quando texto, figura, fórmula ou r
 
 ## FATO DO PRODUTO — cobertura conhecida
 
-`CLAUDE.md` registra uma lacuna conhecida: questões `fuvest_2025_q*` que ainda dependem da página original para enunciado/alternativas completas.
+As 90 questões `fuvest_2025_q*` tiveram seus enunciados restaurados em
+01/10/2026. Há alternativas textuais em 88; as questões 60 e 69 mantêm
+alternativas gráficas na página original. Não repetir a recuperação nem
+inventar alternativas. Receita e limites em `docs/REVISAO-CONTEUDO-CIENCIAS-2026-10-01.md`.
+A qualidade editorial das 2.887 questões continua separada dessa recuperação.
 
 ## Métricas de qualidade recomendadas para acompanhar
 

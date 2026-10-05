@@ -205,7 +205,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       <button
         onClick={explain}
         disabled={loading}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+        className="px-4 py-2 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {loading ? 'Explicando...' : 'Explicar'}
       </button>
@@ -340,7 +340,7 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       <button
         onClick={correct}
         disabled={loading || !question.trim() || !answer.trim()}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+        className="px-4 py-2 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {loading ? 'Corrigindo...' : 'Corrigir resposta'}
       </button>
@@ -430,7 +430,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
       <button
         onClick={() => generate(false)}
         disabled={generating}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+        className="px-4 py-2 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {generating ? 'Gerando...' : 'Gerar questão'}
       </button>
@@ -453,7 +453,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
           <button
             onClick={correct}
             disabled={correcting || !answer.trim()}
-            className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+            className="px-4 py-2 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
           >
             {correcting ? 'Corrigindo...' : 'Corrigir resposta'}
           </button>
@@ -487,7 +487,7 @@ function RevisaoPanel() {
       </p>
       <button
         onClick={() => navigate('/revisoes')}
-        className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-lg text-xs font-semibold hover:opacity-90 transition-opacity"
+        className="px-4 py-2 bg-[var(--action-primary)] text-[var(--text-inverse)] rounded-lg text-xs font-semibold hover:bg-action-primary-hover transition-colors"
       >
         Ir para Revisões
       </button>
@@ -561,14 +561,14 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
             <div className={`flex max-w-[85%] ${msg.sender === 'user' ? 'flex-row-reverse' : 'flex-row'}`}>
               <div className={`w-7 h-7 rounded-full flex items-center justify-center shrink-0 ${
                 msg.sender === 'user'
-                  ? 'bg-[var(--primary)] text-[var(--ink-on-primary)] ml-2.5'
+                  ? 'bg-[var(--action-primary)] text-[var(--text-inverse)] ml-2.5'
                   : 'bg-[var(--surface2)] border border-[var(--line)] subject-text mr-2.5'
               }`}>
                 {msg.sender === 'user' ? <User className="w-3.5 h-3.5" /> : <Bot className="w-3.5 h-3.5" />}
               </div>
               <div className={`px-4 py-3 rounded-2xl text-xs leading-relaxed ${
                 msg.sender === 'user'
-                  ? 'bg-[var(--primary)] text-[var(--ink-on-primary)]'
+                  ? 'bg-[var(--action-primary)] text-[var(--text-inverse)]'
                   : 'bg-[var(--surface2)] text-[var(--text)] border border-[var(--line)]'
               }`}>
                 {msg.sender === 'user' ? <p className="whitespace-pre-wrap">{msg.text}</p> : <AiText text={msg.text} />}
@@ -606,7 +606,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
             type="submit"
             aria-label="Enviar mensagem ao tutor"
             disabled={isLoading || !input.trim()}
-            className="absolute right-1.5 w-8 h-8 rounded-lg bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 flex items-center justify-center transition-opacity"
+            className="absolute right-1.5 w-8 h-8 rounded-lg bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 flex items-center justify-center transition-opacity"
           >
             <Send className="w-3.5 h-3.5" />
           </button>
@@ -633,7 +633,7 @@ export default function Tutor() {
         <span>Biblioteca</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--action-primary)] text-[var(--text-inverse)]">
             <SubIcon className="w-3 h-3" />
           </span>
           SOCRÁTICO

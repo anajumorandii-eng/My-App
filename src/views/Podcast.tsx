@@ -178,7 +178,7 @@ export default function Podcast() {
         {voicesError && <p role="alert" className="text-xs mt-4">{voicesError} <button type="button" onClick={retryVoices} className="underline">Tentar consultar novamente</button></p>}
         {!user && !voices.length && <p className="text-xs text-[var(--dim)] mt-4">Conecte sua conta para consultar e experimentar as vozes disponíveis.</p>}
         {sameVoice && <p className="text-sm text-rose-500 mt-4">Escolha vozes diferentes para as duas pessoas.</p>}
-        <button type="button" disabled={generating || preferencesBlocked || voicesBlocked || !title.trim() || sameVoice} onClick={generate} className="w-full flex justify-center items-center gap-2 mt-6 rounded-xl bg-[var(--primary)] text-[var(--ink-on-primary)] px-4 py-3.5 font-semibold text-sm disabled:opacity-50">{generating ? <Loader2 size={17} className="animate-spin" /> : <Sparkles size={17} />}{generating ? 'Criando seu roteiro…' : 'Gerar meu podcast'}</button>
+        <button type="button" disabled={generating || preferencesBlocked || voicesBlocked || !title.trim() || sameVoice} onClick={generate} className="w-full flex justify-center items-center gap-2 mt-6 rounded-xl bg-[var(--action-primary)] text-[var(--text-inverse)] px-4 py-3.5 font-semibold text-sm disabled:opacity-50">{generating ? <Loader2 size={17} className="animate-spin" /> : <Sparkles size={17} />}{generating ? 'Criando seu roteiro…' : 'Gerar meu podcast'}</button>
         <p className="text-xs text-[var(--dim)] mt-3">Primeiro criamos o roteiro; ao reproduzir, geramos o áudio com as vozes escolhidas. Suas preferências ficam no perfil quando você está conectada.</p>
       </section>
     </div>

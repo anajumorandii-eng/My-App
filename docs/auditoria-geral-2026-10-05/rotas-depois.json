@@ -1,0 +1,2888 @@
+[
+  {
+    "route": "/",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 4313,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1538,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 73,
+    "screenshot": "hoje-light-390.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 3129,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/plano",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1800,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 76
+  },
+  {
+    "route": "/agenda",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1994,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 12,
+    "screenshot": "agenda-light-390.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1913,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 67
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1837,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "recuperacao-light-390.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2333,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 44
+  },
+  {
+    "route": "/questoes",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2620,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 53
+  },
+  {
+    "route": "/revisoes",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2605,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 111
+  },
+  {
+    "route": "/flashcards",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2080,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 41
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 3399,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 142
+  },
+  {
+    "route": "/redacao",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1457,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 20
+  },
+  {
+    "route": "/erros",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2280,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "erros-light-390.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 4592,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 182
+  },
+  {
+    "route": "/visual",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 3020,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 194,
+    "screenshot": "visual-light-390.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1387,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 70
+  },
+  {
+    "route": "/tutor",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1837,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2450,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/estrategias",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2002,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 49
+  },
+  {
+    "route": "/evolucao",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2307,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/prioridades",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2511,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 50
+  },
+  {
+    "route": "/obras",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2141,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 16
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2256,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 870,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/conexoes",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1575,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 406,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 15
+  },
+  {
+    "route": "/perfil",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1571,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 62
+  },
+  {
+    "route": "/admin",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2135,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 151,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 4462,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "light",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1798,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 4205,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1538,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 73,
+    "screenshot": "hoje-light-834.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 4127,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/plano",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 3083,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 76
+  },
+  {
+    "route": "/agenda",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2424,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 11,
+    "screenshot": "agenda-light-834.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2562,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 67
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 4408,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "recuperacao-light-834.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 3109,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 44
+  },
+  {
+    "route": "/questoes",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1828,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 53
+  },
+  {
+    "route": "/revisoes",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 3420,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 131
+  },
+  {
+    "route": "/flashcards",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1687,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 41
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2718,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 142
+  },
+  {
+    "route": "/redacao",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1799,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 20
+  },
+  {
+    "route": "/erros",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2152,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "erros-light-834.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2759,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 182
+  },
+  {
+    "route": "/visual",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2967,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 194,
+    "screenshot": "visual-light-834.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1880,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 70
+  },
+  {
+    "route": "/tutor",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1578,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1202,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/estrategias",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 862,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 49
+  },
+  {
+    "route": "/evolucao",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1310,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/prioridades",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1376,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 50
+  },
+  {
+    "route": "/obras",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1488,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 16
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 824,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 870,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/conexoes",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 608,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 406,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 15
+  },
+  {
+    "route": "/perfil",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1394,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 62
+  },
+  {
+    "route": "/admin",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 617,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 151,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 886,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "light",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 917,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 3032,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1538,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 78,
+    "screenshot": "hoje-light-1366.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 3161,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 63
+  },
+  {
+    "route": "/plano",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2595,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 81
+  },
+  {
+    "route": "/agenda",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2369,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 16,
+    "screenshot": "agenda-light-1366.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 911,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 72
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1114,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 28,
+    "screenshot": "recuperacao-light-1366.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1778,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 49
+  },
+  {
+    "route": "/questoes",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1528,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/revisoes",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1533,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 136
+  },
+  {
+    "route": "/flashcards",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 801,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 46
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1413,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 147
+  },
+  {
+    "route": "/redacao",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1023,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 25
+  },
+  {
+    "route": "/erros",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1554,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 28,
+    "screenshot": "erros-light-1366.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1634,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 187
+  },
+  {
+    "route": "/visual",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2477,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 199,
+    "screenshot": "visual-light-1366.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1043,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 75
+  },
+  {
+    "route": "/tutor",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2167,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 24
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1040,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 48
+  },
+  {
+    "route": "/estrategias",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1035,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 54
+  },
+  {
+    "route": "/evolucao",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1300,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 24
+  },
+  {
+    "route": "/prioridades",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 844,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 55
+  },
+  {
+    "route": "/obras",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 795,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 21
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1018,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 870,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 48
+  },
+  {
+    "route": "/conexoes",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1221,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 406,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 20
+  },
+  {
+    "route": "/perfil",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1670,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 67
+  },
+  {
+    "route": "/admin",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2279,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 151,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 13
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1139,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 13
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "light",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 845,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 13
+  },
+  {
+    "route": "/",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2814,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1538,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 73,
+    "screenshot": "hoje-dark-390.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 2591,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/plano",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 825,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 76
+  },
+  {
+    "route": "/agenda",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1574,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 11,
+    "screenshot": "agenda-dark-390.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1206,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 67
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 801,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "recuperacao-dark-390.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1339,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 42
+  },
+  {
+    "route": "/questoes",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1581,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 53
+  },
+  {
+    "route": "/revisoes",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1365,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 111
+  },
+  {
+    "route": "/flashcards",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1163,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 41
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1245,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 142
+  },
+  {
+    "route": "/redacao",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1029,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 20
+  },
+  {
+    "route": "/erros",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1287,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "erros-dark-390.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1531,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 183
+  },
+  {
+    "route": "/visual",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1716,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 194,
+    "screenshot": "visual-dark-390.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1204,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 70
+  },
+  {
+    "route": "/tutor",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 876,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 951,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/estrategias",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1133,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 49
+  },
+  {
+    "route": "/evolucao",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1188,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/prioridades",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1006,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 50
+  },
+  {
+    "route": "/obras",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 821,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 16
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 573,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 870,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/conexoes",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 500,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 406,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 15
+  },
+  {
+    "route": "/perfil",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 516,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 62
+  },
+  {
+    "route": "/admin",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 515,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 151,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 548,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "dark",
+    "width": 390,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 599,
+    "geometry": {
+      "documentWidth": 390,
+      "viewport": 390,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 10645,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1538,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 73,
+    "screenshot": "hoje-dark-834.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1282,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/plano",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 643,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 76
+  },
+  {
+    "route": "/agenda",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 662,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 11,
+    "screenshot": "agenda-dark-834.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 717,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 67
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 699,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "recuperacao-dark-834.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1079,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 42
+  },
+  {
+    "route": "/questoes",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 774,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 53
+  },
+  {
+    "route": "/revisoes",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1122,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 131
+  },
+  {
+    "route": "/flashcards",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1246,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 41
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1454,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 142
+  },
+  {
+    "route": "/redacao",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 797,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 20
+  },
+  {
+    "route": "/erros",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1138,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 23,
+    "screenshot": "erros-dark-834.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 886,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 183
+  },
+  {
+    "route": "/visual",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1602,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 194,
+    "screenshot": "visual-dark-834.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 578,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 70
+  },
+  {
+    "route": "/tutor",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 773,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 658,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/estrategias",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 681,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 49
+  },
+  {
+    "route": "/evolucao",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 631,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 19
+  },
+  {
+    "route": "/prioridades",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 722,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 50
+  },
+  {
+    "route": "/obras",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 579,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 16
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 652,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 870,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 43
+  },
+  {
+    "route": "/conexoes",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 659,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 406,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 15
+  },
+  {
+    "route": "/perfil",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 767,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 62
+  },
+  {
+    "route": "/admin",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 889,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 151,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 605,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "dark",
+    "width": 834,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 654,
+    "geometry": {
+      "documentWidth": 834,
+      "viewport": 834,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 8
+  },
+  {
+    "route": "/",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 13024,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1538,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 78,
+    "screenshot": "hoje-dark-1366.png"
+  },
+  {
+    "route": "/diagnostico",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1613,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1257,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 63
+  },
+  {
+    "route": "/plano",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 956,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1506,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 81
+  },
+  {
+    "route": "/agenda",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 672,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1634,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 17,
+    "screenshot": "agenda-dark-1366.png"
+  },
+  {
+    "route": "/reta-final",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 637,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1374,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 72
+  },
+  {
+    "route": "/recuperacao",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 603,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 711,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 28,
+    "screenshot": "recuperacao-dark-1366.png"
+  },
+  {
+    "route": "/sessao",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1126,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 720,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 47
+  },
+  {
+    "route": "/questoes",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 906,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4453,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 58
+  },
+  {
+    "route": "/revisoes",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1091,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 2415,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 136
+  },
+  {
+    "route": "/flashcards",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 835,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 503,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 46
+  },
+  {
+    "route": "/treino-2a-fase",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1042,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4263,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 147
+  },
+  {
+    "route": "/redacao",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 715,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 430,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 25
+  },
+  {
+    "route": "/erros",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 696,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 742,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 28,
+    "screenshot": "erros-dark-1366.png"
+  },
+  {
+    "route": "/resumos",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 605,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 14536,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 188
+  },
+  {
+    "route": "/visual",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1288,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 5608,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 199,
+    "screenshot": "visual-dark-1366.png"
+  },
+  {
+    "route": "/podcast",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 907,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 4926,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 75
+  },
+  {
+    "route": "/tutor",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1614,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 3419,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 24
+  },
+  {
+    "route": "/laboratorio",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 632,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1401,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 48
+  },
+  {
+    "route": "/estrategias",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 730,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 2162,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 54
+  },
+  {
+    "route": "/evolucao",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 1024,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 648,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 24
+  },
+  {
+    "route": "/prioridades",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 746,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 698,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 55
+  },
+  {
+    "route": "/obras",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 499,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 212,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 21
+  },
+  {
+    "route": "/obras-obrigatorias",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 811,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 870,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 48
+  },
+  {
+    "route": "/conexoes",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 555,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 406,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 20
+  },
+  {
+    "route": "/perfil",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 563,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 1216,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 67
+  },
+  {
+    "route": "/admin",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 531,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 151,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 13
+  },
+  {
+    "route": "/admin/obras",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 686,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 235,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 13
+  },
+  {
+    "route": "/admin/conteudo",
+    "theme": "dark",
+    "width": 1366,
+    "errors": [],
+    "failedRequests": [],
+    "httpErrors": [],
+    "openMs": 740,
+    "geometry": {
+      "documentWidth": 1366,
+      "viewport": 1366,
+      "mainTextLength": 8248,
+      "errorBoundary": false
+    },
+    "violations": [],
+    "incompleteContrast": 13
+  }
+]

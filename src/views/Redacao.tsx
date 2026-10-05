@@ -74,7 +74,7 @@ export default function Redacao() {
         <span>REDAÇÃO</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--action-primary)] text-[var(--text-inverse)]">
             <PenIcon className="w-3 h-3" />
           </span>
           ATELIÊ DE ESCRITA
@@ -159,7 +159,7 @@ export default function Redacao() {
               <button
                 onClick={correctEssay}
                 disabled={correcting || !theme.trim() || !draft.trim()}
-                className="flex items-center px-3.5 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+                className="flex items-center px-3.5 py-1.5 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
               >
                 <Sparkles className="w-3.5 h-3.5 mr-1.5" />
                 {correcting ? 'Corrigindo...' : 'Corrigir com IA'}

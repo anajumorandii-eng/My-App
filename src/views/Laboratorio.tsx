@@ -65,7 +65,7 @@ export default function Laboratorio() {
         <span>FERRAMENTAS</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--action-primary)] text-[var(--text-inverse)]">
             <FlaskConical className="w-3 h-3" />
           </span>
           CIÊNCIA DA APRENDIZAGEM
@@ -139,7 +139,7 @@ export default function Laboratorio() {
                 <div className="flex items-center min-w-0">
                   <span
                     className="w-7 h-7 rounded-lg flex items-center justify-center mr-3 shrink-0"
-                    style={{ backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)' }}
+                    style={{ backgroundColor: 'var(--action-primary)', color: 'var(--text-inverse)' }}
                   >
                     <Icon className="w-4 h-4" />
                   </span>

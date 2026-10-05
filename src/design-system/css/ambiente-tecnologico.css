@@ -414,8 +414,8 @@
   --focus-ring: var(--amb-a);
   --navigation-background: var(--amb-vidro-forte);
   --navigation-selected: color-mix(in srgb, var(--amb-a) 16%, transparent);
-  --action-primary: color-mix(in oklab, var(--amb-a-neon) 62%, #0b1020);
-  --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 52%, #0b1020);
+  --action-primary: color-mix(in oklab, var(--amb-a-neon) 52%, #0b1020);
+  --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 48%, #0b1020);
   --action-primary-pressed: color-mix(in oklab, var(--amb-a-neon) 44%, #0b1020);
   --font-display: "Space Grotesk", Inter, ui-sans-serif, system-ui, sans-serif;
   --shadow-soft-md-value: 0 16px 40px -24px rgba(15, 23, 42, .35);
