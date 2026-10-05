@@ -1,0 +1,116 @@
+{
+  "date": "2026-10-05",
+  "base": "683a573204f92adc247d1493caaa08ad9de9b799",
+  "delivery": "entrega-f",
+  "scope": "Fundamentos e primeiras escolas; oito dos 37 capítulos LG3. Restam 29 de Literatura.",
+  "status": "validado localmente em Chromium; proposta de revisão, sem aprovação editorial formal",
+  "chapters": [
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "subject": "Literatura",
+      "title": "A Arte e suas Linguagens"
+    },
+    {
+      "id": "summary-literatura-texto-literario-x-texto-nao-literario",
+      "subject": "Literatura",
+      "title": "Texto Literário x Texto não Literário"
+    },
+    {
+      "id": "summary-literatura-trovadorismo-e-humanismo",
+      "subject": "Literatura",
+      "title": "Trovadorismo e Humanismo"
+    },
+    {
+      "id": "summary-literatura-renascimento-e-camoes",
+      "subject": "Literatura",
+      "title": "Renascimento e Camões"
+    },
+    {
+      "id": "summary-literatura-brasil-primeiros-registros",
+      "subject": "Literatura",
+      "title": "Brasil: Primeiros Registros"
+    },
+    {
+      "id": "summary-literatura-a-estetica-barroca",
+      "subject": "Literatura",
+      "title": "A Estética Barroca"
+    },
+    {
+      "id": "summary-literatura-a-estetica-neoclassica",
+      "subject": "Literatura",
+      "title": "A Estética Neoclássica"
+    },
+    {
+      "id": "summary-literatura-elementos-da-narrativa",
+      "subject": "Literatura",
+      "title": "Elementos da Narrativa"
+    }
+  ],
+  "editorial": {
+    "sections": 40,
+    "revision": 2,
+    "minCharacters": 936,
+    "maxCharacters": 1096,
+    "trapsPerChapter": 6,
+    "workedProblemsPerChapter": 2
+  },
+  "browser": {
+    "engine": "Chromium",
+    "executable": "/usr/bin/chromium",
+    "widths": [
+      360,
+      390,
+      834,
+      1366
+    ],
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "motion": [
+      "reduce",
+      "no-preference"
+    ],
+    "plannedConfigurations": 128,
+    "configurations": 128,
+    "statesChecked": 480,
+    "modifiersChecked": 48,
+    "violations": 0,
+    "incompleteRuleEvaluations": 128,
+    "consoleErrors": 0,
+    "clippedText": 0,
+    "textCollisions": 0,
+    "reconstructionKeyboard": 128,
+    "inspector": 128,
+    "normalMotionObservedConfigurations": 64
+  },
+  "typography": {
+    "configurations": 32,
+    "statesChecked": 120,
+    "widthThemePairs": [
+      "390 light",
+      "1366 dark"
+    ],
+    "motion": [
+      "reduce",
+      "no-preference"
+    ],
+    "effectiveFamily": "Kalam",
+    "loadedWeight": "700",
+    "violations": 0,
+    "clippedText": 0,
+    "textCollisions": 0,
+    "scope": "Após correção localizada da fonte. Fluxos e mecanismos foram validados nas 128 configurações antes desse ajuste tipográfico; não houve mudança em lógica, estrutura ou dados."
+  },
+  "validation": {
+    "lint": "passed",
+    "build": "passed",
+    "nodeTests": 922,
+    "vitestTests": 1154,
+    "totalTests": 2076,
+    "nodeVersion": "24.19.0",
+    "npmVersion": "11.9.0",
+    "ciNodeVersion": "22",
+    "remoteCI": "consultar PR; validação local não presume CI concluído"
+  }
+}

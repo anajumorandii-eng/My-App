@@ -1,6 +1,32 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — auditoria e continuidade, 05/10/2026
+## Estado mais recente — Entrega F/Literatura, 05/10/2026
+
+Base: `683a573204f92adc247d1493caaa08ad9de9b799`. A PR #261 foi integrada;
+CI e preview aprovados. Não repetir o isolamento de progresso nem o contraste
+como reparos inéditos. A branch `fix/entrega-f-literatura` entrega oito
+fundamentos de LG3, com texto e operação autoral juntos; os outros 29 capítulos
+de Literatura continuam pendentes. Sem merge automático.
+
+Evidências e revisão: [Entrega F](visual-integral-2026-10-05/entrega-f/README.md).
+São 40 seções em revisão 2, 936–1.096 caracteres, seis armadilhas corrigidas e
+dois problemas resolvidos por capítulo. Só os oito capítulos mudaram de revisão;
+títulos e recalls foram preservados. Sem reset, migração ou escrita real.
+
+Matriz local: 128 configurações Chromium, em 360/390/834/1366, temas claro/escuro
+e movimento normal/reduzido, com operações, modificadores, pan por teclado,
+diagnóstico e Testar/Reconstruir. Contagem final de testes e limites no relatório.
+Safari/iPad físico e serviços autenticados reais não foram certificados.
+
+Fila na proposta: 172 achados tratados, 126 pendentes e 315 preservados.
+Conteúdo: 504 revisões 2, duas revisões 3, 106 pendentes (Literatura 29,
+Redação 58, Sociologia 19). Cobertura primária: 8 experimentos, 43 pranchas,
+332 instrumentos, 230 cenas, zero lacunas; aprovação formal não promovida.
+Próximo passo: conferir integração desta entrega e continuar LG3 nos 29
+capítulos restantes, depois Humanas/Redação conforme o plano. Não reabrir os
+oito fundamentos nem Gramática, Física ou História/Geografia sem novo achado.
+
+## Registro histórico — auditoria e continuidade, 05/10/2026
 
 Base auditada e confirmada com `origin/main`:
 `d7e895ba7853ffcb5e53adce1e16db7cade6326a`. A Entrega E/Gramática está

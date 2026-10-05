@@ -15,19 +15,19 @@ renomeadas.
 
 ## Estado atual e precedência — auditoria de 05/10/2026
 
-Base confirmada com `origin/main`: `d7e895ba7853ffcb5e53adce1e16db7cade6326a`.
-A Entrega E/Gramática foi integrada na PR #260. A fonte operacional é
+Base confirmada com `origin/main`: `683a573204f92adc247d1493caaa08ad9de9b799`.
+A Entrega E/Gramática foi integrada na PR #260; isolamento de Resumos e contraste na PR #261. A Entrega F propõe oito fundamentos de Literatura, com evidências em `docs/visual-integral-2026-10-05/entrega-f/README.md`. A fonte operacional é
 `docs/PLANO-GERAL-CRIVO-2026-10-03.md` + `docs/FILA-VISUAL-2026-10-03.json`;
 as filas históricas da continuidade não são tarefas novas.
 
-- 613 capítulos com representação: 8 experimentos, 43 pranchas, 331 instrumentos
-  e 231 cenas; zero lacunas. Isso mede presença, não aprovação editorial.
-- 612 resumos profundos: 496 em revisão 2, dois em revisão 3 e 114 em revisão 1
-  (Literatura 37, Redação 58, Sociologia 19).
-- Fila: 164 achados tratados, 134 pendentes, 315 mecanismos preservados.
+- 613 capítulos com representação: 8 experimentos, 43 pranchas, 332 instrumentos
+  e 230 cenas; zero lacunas. Isso mede presença, não aprovação editorial.
+- 612 resumos profundos: 504 em revisão 2, dois em revisão 3 e 106 em revisão 1
+  (Literatura 29, Redação 58, Sociologia 19).
+- Fila: 172 achados tratados, 126 pendentes, 315 mecanismos preservados.
 - Inventário formal: 532 não revisados, 81 em validação, zero aprovações
   registradas. Não promover aprovação por contagem ou teste automático.
-- Próxima entrega editorial/visual: LG3/Literatura (37), depois H2/H3,
+- Próxima entrega editorial/visual: LG3/Literatura (29 restantes), depois H2/H3,
   R1/R2/R3 e A1. Defeitos confirmados de persistência/acessibilidade podem
   receber prioridade, conforme o plano geral.
 - A personalização visual vigente abrange **todas as matérias**. O escopo antigo
@@ -176,9 +176,9 @@ revisão no id das seções (`-editorial-v${rev}-`). **É isso que impede o
 progresso de leitura dos 612 capítulos de zerar** a cada mudança de texto: só o
 capítulo que mudou volta a pedir leitura. Ao reescrever, sempre suba o `rev`.
 
-Estado confirmado: 498 de 612 com aprofundamento (496 em revisão 2 e dois
-em revisão 3). Restam Literatura (37), Redação (58) e Sociologia (19). Executar
-junto à fila visual por ID; LG3 é o próximo lote, sem repetir Gramática.
+Estado na proposta F: 506 de 612 com aprofundamento (504 em revisão 2 e dois
+em revisão 3). Restam Literatura (29), Redação (58) e Sociologia (19). Executar
+junto à fila visual por ID; LG3 continua; oito fundamentos estão na Entrega F. Reconciliar sua integração antes de repetir os capítulos. Não repetir Gramática.
 
 ## Visual
 

@@ -12,9 +12,11 @@ afterEach(cleanup);
 // evidência de uma relação e mostrava o enunciado de outra. Aqui o cartão
 // selecionado precisa trazer o rótulo do próprio nó que o selecionou.
 describe('contrato do par de cartões nos instrumentos', () => {
-  it('o cartão aceso mostra o nó que ele representa', () => {
+  // Um caso por matéria mantém a mesma cobertura sem submeter centenas de
+  // renderizações ao prazo de um único teste, e identifica a frente da falha.
+  it.each([...new Set(INSTRUMENTS.map(item => item.subject))])('%s: o cartão aceso mostra o nó que ele representa', subject => {
     const erros: string[] = [];
-    for (const item of INSTRUMENTS) {
+    for (const item of INSTRUMENTS.filter(item => item.subject === subject)) {
       const summary = interactiveSummaries.find((s) => findInstrument(s)?.id === item.id);
       if (!summary) continue;
       const map = buildVisualMap(summary);

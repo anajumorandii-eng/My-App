@@ -1,4 +1,5 @@
 import {GrammarVariationScene} from './GrammarVariationScene';
+import { LiteratureOperation } from '../visual-instruments/LiteratureFoundations';
 import React, { useState, useId } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { MOTION_DURATION, MOTION_EASE } from '../../design-system/motion/tokens';
@@ -236,15 +237,7 @@ function Inference() {
 
 
 function Literary() {
-  const [figurative,setFigurative]=useState(false);const transition=useInkMotion();
-  return <Studio title="A noite pode ter mãos?" note="Compare dois enunciados e observe a construção de sentido.">
-    <div className="ts-choices"><button type="button" aria-pressed={!figurative} onClick={()=>setFigurative(false)}>Enunciado informativo</button><button type="button" aria-pressed={figurative} onClick={()=>setFigurative(true)}>Construção poética</button></div>
-    <motion.div className="ts-letter" animate={{borderColor:figurative?'var(--vs-burgundy)':'var(--vs-line)'}} transition={transition}>
-      <p>{figurative?'A noite pousou suas mãos sobre a cidade.':'Anoiteceu na cidade.'}</p>
-    </motion.div>
-    <p className="ts-observation" role="status">{figurative?'“Mãos” e “pousou” personificam a noite: a expressão convida a construir uma imagem, além de informar que anoiteceu.':'O enunciado comunica diretamente um acontecimento. Nesta comparação, predomina a função informativa.'}</p>
-    <small>Exemplos originais. Linguagem figurada também ocorre fora da literatura; sua presença isolada não define um texto literário.</small>
-  </Studio>;
+  return <Studio title="O que muda quando o portão engole um adeus?" note="Compare a operação da linguagem e o pacto de leitura."><LiteratureOperation id="literary-text"/></Studio>;
 }
 
 
