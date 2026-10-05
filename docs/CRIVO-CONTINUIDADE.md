@@ -1,6 +1,21 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — Entrega I/Literatura de 45 a 1980, 05/10/2026
+## Estado mais recente — Entrega J/Literatura concluída, 05/10/2026
+
+A Entrega I foi integrada na PR #266. A branch
+`fix/entrega-j-literatura-final` trata os seis últimos capítulos LG3 (poesia
+e prosa contemporâneas, literatura lusófona, artes plásticas, teatro e
+cancioneiro). Com ela, os 37 capítulos de Literatura têm texto em revisão 2 e
+operação autoral própria. Sem merge automático.
+Evidências: [Entrega J](visual-integral-2026-10-05/entrega-j/README.md).
+
+Fila na proposta: 201 achados tratados, 97 pendentes e 315 preservados.
+Conteúdo: 533 revisões 2, duas revisões 3, 77 pendentes (Redação 58,
+Sociologia 19). Cobertura: 8 experimentos, 43 pranchas, 339 instrumentos,
+223 cenas, zero lacunas; aprovação formal não promovida.
+Próximo passo: H2/H3, R1/R2/R3 e A1, conforme o plano geral.
+
+## Registro — Entrega I/Literatura de 45 a 1980, 05/10/2026
 
 A Entrega H foi integrada na PR #264, e o teste instável do Plano diário que
 derrubou o CI da main depois dela foi corrigido na PR #265. A branch

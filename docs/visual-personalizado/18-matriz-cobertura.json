@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 8,
     "board": 43,
-    "instrument": 337,
-    "scene": 225,
+    "instrument": 339,
+    "scene": 223,
     "fallback": 0
   },
-  "contested": 69,
+  "contested": 71,
   "subjects": [
     {
       "subject": "Física",
@@ -103,8 +103,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 34,
-        "scene": 2,
+        "instrument": 36,
+        "scene": 0,
         "fallback": 0
       }
     },
@@ -3705,17 +3705,27 @@
       "id": "summary-literatura-poesia-brasileira-contemporanea",
       "subject": "Literatura",
       "title": "Poesia Brasileira Contemporânea",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "poetry-contemporary",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-literatura-prosa-brasileira-contemporanea",
       "subject": "Literatura",
       "title": "Prosa Brasileira Contemporânea",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "prose-contemporary",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-literatura-artes-plasticas-brasileiras",
