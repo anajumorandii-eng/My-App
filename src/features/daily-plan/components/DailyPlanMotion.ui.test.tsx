@@ -418,7 +418,13 @@ describe('TodayFocus explanation and feedback', () => {
     expect(disagree).toHaveClass('min-h-11');
 
     await user.click(disagree);
-    expect(screen.getByRole('group', { name: 'Discordância da recomendação' })).toBeVisible();
+    // O cartão entra animando a opacidade a partir de 0 (focusEnter). Logo após
+    // o clique ele costuma estar no meio da entrada (a sondagem leu 0,15), mas
+    // se o primeiro quadro atrasa ainda está em 0 e toBeVisible falha: o CI da
+    // main caiu assim com o mesmo código que passara na PR, e atrasar os
+    // quadros em 300 ms reproduz o erro. O teste é do controle, não da entrada
+    // do cartão, então a asserção espera a entrada terminar.
+    await waitFor(() => expect(screen.getByRole('group', { name: 'Discordância da recomendação' })).toBeVisible());
     for (const reason of screen.getAllByRole('button').filter((button) => button.closest('[aria-label="Motivo da discordância"]'))) {
       expect(reason).toHaveClass('min-h-11');
     }
