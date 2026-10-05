@@ -27,6 +27,19 @@ it('mhs liga F a x, velocidade aos extremos e energia ao equilíbrio',()=>{
   expect(container.querySelector('[data-vector="velocity"]')!==null).toBe(Math.abs(x)!==5);
  }
 });
+it('mola do MHS permanece entre a parede e a face do bloco em toda a faixa',()=>{
+ const {container}=setup('mhs','movimento-harmonico-simples-mhs');
+ for(const position of [-5,-4,0,5]){
+  fireEvent.change(screen.getByRole('slider'),{target:{value:String(position)}});
+  const spring=Array.from(container.querySelectorAll('[data-mhs-state] path')).find(path=>path.getAttribute('d')?.startsWith('M30 168'))!;
+  const points=Array.from(spring.getAttribute('d')!.matchAll(/[ML](-?[\d.]+)\s+(-?[\d.]+)/g),match=>Number(match[1]));
+  const blockLeft=160+position*19-17;
+  expect(Math.min(...points)).toBeGreaterThanOrEqual(30);
+  expect(Math.max(...points)).toBeLessThanOrEqual(blockLeft);
+  expect(points.at(-1)).toBe(blockLeft);
+  expect(points.every((x,index)=>index===0||x>=points[index-1])).toBe(true);
+ }
+});
 it('elevação mantém o corpo na mesma posição da cota h e peso vertical',()=>{
  const {container}=setup('potential-energy','trabalho-e-energia-o-teorema-da-energia-potencial');
  fireEvent.change(screen.getByRole('slider'),{target:{value:'10'}});

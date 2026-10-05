@@ -1,0 +1,45 @@
+{
+  "purpose": "Cache temporário exclusivo de captura, após HTTP 503 no ambiente. Famílias/pesos do aplicativo; nenhum binário incluído no repositório.",
+  "files": [
+    {
+      "path": "ofl/kalam/Kalam-Regular.ttf",
+      "blobSha": "0c956a29348e69bff24a1ae8952fd0b42569311c",
+      "url": "https://github.com/google/fonts/blob/main/ofl/kalam/Kalam-Regular.ttf"
+    },
+    {
+      "path": "ofl/kalam/Kalam-Bold.ttf",
+      "blobSha": "321272d977887fefb4911789a2691d3131d1bcf0",
+      "url": "https://github.com/google/fonts/blob/main/ofl/kalam/Kalam-Bold.ttf"
+    },
+    {
+      "path": "ofl/inter/Inter[opsz,wght].ttf",
+      "blobSha": "047c92f6e2212473dc436020afed689527076d44",
+      "url": "https://github.com/google/fonts/blob/main/ofl/inter/Inter[opsz,wght].ttf"
+    },
+    {
+      "path": "ofl/spacegrotesk/SpaceGrotesk[wght].ttf",
+      "blobSha": "a1b2e6c26093066510a31147e7aec9abdc8d6c5e",
+      "url": "https://github.com/google/fonts/blob/main/ofl/spacegrotesk/SpaceGrotesk[wght].ttf"
+    },
+    {
+      "path": "ofl/jetbrainsmono/JetBrainsMono[wght].ttf",
+      "blobSha": "aa310be8b717fe3774f9444dd89d5f4101cc6d10",
+      "url": "https://github.com/google/fonts/blob/main/ofl/jetbrainsmono/JetBrainsMono[wght].ttf"
+    },
+    {
+      "path": "ofl/newsreader/Newsreader[opsz,wght].ttf",
+      "blobSha": "ad4a9a8c44ec328c80b61c773f1ba02f6b5ed292",
+      "url": "https://github.com/google/fonts/blob/main/ofl/newsreader/Newsreader[opsz,wght].ttf"
+    },
+    {
+      "path": "ofl/newsreader/Newsreader-Italic[opsz,wght].ttf",
+      "blobSha": "d25879656a601d44c49836f9e773d100190c62e1",
+      "url": "https://github.com/google/fonts/blob/main/ofl/newsreader/Newsreader-Italic[opsz,wght].ttf"
+    },
+    {
+      "path": "ofl/caveat/Caveat[wght].ttf",
+      "blobSha": "f84acf2ce2d1b3329b194749530dbaec047e6df6",
+      "url": "https://github.com/google/fonts/blob/main/ofl/caveat/Caveat[wght].ttf"
+    }
+  ]
+}

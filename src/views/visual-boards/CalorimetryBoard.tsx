@@ -130,8 +130,7 @@ export default function CalorimetryBoard(props: BoardProps) {
       subtitle="Temperatura descreve o estado; calor atravessa a fronteira entre corpos."
       condition={{ label: 'no patamar', value: 'ΔT = 0' }}
       ariaLabel="Prancha ilustrada de calorimetria: calor sensível e calor latente"
-      scene={<div className="vs-instrument"><PhysicsDrawingWindow><TransferScene /><HeatingScene emphasis={par.emphasis} /></PhysicsDrawingWindow></div>}
-      sceneNotes={{ up: 'rampa ↑', down: '↓ patamar' }}
+      scene={<div className="vs-instrument vs-calor-scenes"><PhysicsDrawingWindow><TransferScene /><HeatingScene emphasis={par.emphasis} /></PhysicsDrawingWindow></div>}
       emphasis={par.emphasis}
       left={{
         label: 'Calor sensível',

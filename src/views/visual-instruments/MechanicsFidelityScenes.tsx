@@ -4,7 +4,7 @@ import type {MechanicsFinalId} from '../../lib/mechanicsFinalLab';
 
 const ink='var(--vs-ink)',blue='var(--vs-blue)',red='var(--vs-burgundy)',paper='var(--vs-paper-strong)';
 const f=(n:number)=>String(Math.round(n*10)/10).replace('.',',');
-function Label({x,y,children,color=ink}:{x:number;y:number;children:React.ReactNode;color?:string}){return <text x={x} y={y} textAnchor="middle" fill={color} stroke="none" fontSize="13" style={{fontFamily:'Kalam, cursive'}}>{children}</text>;}
+function Label({x,y,children,color=ink}:{x:number;y:number;children:React.ReactNode;color?:string}){return <text x={x} y={y} textAnchor="middle" fill={color} stroke="none" fontSize="13.5" style={{fontFamily:'Kalam, cursive'}}>{children}</text>;}
 function Arrow({x,y,dx,dy,kind}:{x:number;y:number;dx:number;dy:number;kind:string}){
  const id=useId();if(Math.hypot(dx,dy)<.01)return null;
  return <g data-force={kind.startsWith('velocity')?undefined:kind} data-vector={kind==='velocity'?'velocity':undefined}><defs><marker id={id} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke={red}/></marker></defs><path d={`M${x} ${y}l${dx} ${dy}`} fill="none" stroke={red} strokeWidth="2.5" markerEnd={`url(#${id})`}/></g>;
@@ -29,12 +29,12 @@ export function MechanicsFidelityScenes({id,value}:{id:MechanicsFinalId;value:nu
    <g data-vertical-location="bottom"><circle cx="160" cy="260" r="8" fill={paper} stroke={ink}/>
     <Arrow x={146} y={268} dx={0} dy={26} kind="weight"/>
     <Arrow x={174} y={250} dx={0} dy={-bottomN*1.2} kind="normal"/>
-    <Label x={100} y={290}>P = 10 N</Label><Label x={160} y={317}>fundo: N − mg = mv²/R</Label>
-    <Label x={160} y={337}>v = {f(bottomV)} m/s · N = {f(bottomN)} N</Label>
+    <Label x={100} y={290}>P = 10 N</Label><Label x={160} y={315}>fundo: N − mg = mv²/R</Label>
+    <Label x={160} y={340}>v = {f(bottomV)} m/s · N = {f(bottomN)} N</Label>
    </g>
-   <Label x={160} y={360}>{topN<0?'Contato no topo impossível; N física = 0.':'Topo: N + mg = mv²/R · contato mantido.'}</Label>
-   <Label x={160} y={379}>Mesmo E mecânica até a perda de contato.</Label>
-   <Label x={160} y={407}>Setas P/N: escalas distintas entre os recortes.</Label>
+   <Label x={160} y={365}>{topN<0?'Contato no topo impossível; N física = 0.':'Topo: N + mg = mv²/R · contato mantido.'}</Label>
+   <Label x={160} y={389}>Mesmo E mecânica até a perda de contato.</Label>
+   <Label x={160} y={413}>Setas P/N: escalas distintas entre os recortes.</Label>
   </g>;
  }
  if(id==='mhs'){
@@ -46,7 +46,7 @@ export function MechanicsFidelityScenes({id,value}:{id:MechanicsFinalId;value:nu
    <motion.g initial={false} animate={{x:x-160}} transition={transition}>
     <Block x={160} y={168}/>
    </motion.g>
-   <path d={`M30 168H40L${Array.from({length:12},(_,i)=>`${40+(x-57-40)*i/11} ${168+(i%2?8:-8)}`).join('L')}L${x-17} 168`} fill="none" stroke={blue} strokeWidth="2"/>
+   <path d={`M30 168H34L${Array.from({length:12},(_,i)=>`${34+(x-21-34)*i/11} ${168+(i%2?8:-8)}`).join('L')}L${x-17} 168`} fill="none" stroke={blue} strokeWidth="2"/>
    <Arrow x={x} y={124} dx={force*3} dy={0} kind="restoring"/>
    <Arrow x={x} y={212} dx={velocity*7} dy={0} kind="velocity"/>
    <Label x={160} y={83}>F = {force} N · sempre para x = 0</Label>

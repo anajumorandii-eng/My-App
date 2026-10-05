@@ -1,6 +1,13 @@
 .physics-drawing {min-width:0;max-width:100%;}
+/* O SVG largo rola na janela; não pode definir a largura mínima da prancha. */
+.vs-study-board:has(.physics-drawing) .vs-piston-wrap {min-width:0;grid-template-columns:minmax(0,1fr);}
 .physics-drawing-window {min-width:0;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;}
 .physics-drawing-window > svg {display:block;min-width:450px;height:auto;}
 .physics-drawing-window:focus-visible {outline:3px solid var(--vs-blue);outline-offset:2px;}
 .physics-drawing-hint {margin:.5rem 0;color:var(--vs-dim);font:400 .85rem/1.5 system-ui,sans-serif;}
 .crivo-visual--tech .physics-drawing-window > svg text {font-family:Kalam,cursive;}
+.vs-instrument.vs-calor-scenes {display:block;width:100%;}
+.vs-calor-scenes .physics-drawing-window > svg {max-width:560px;margin-inline:auto;}
+@media(min-width:621px) {
+ .vs-study-board .vs-instrument > .physics-drawing {grid-column:1;grid-row:1 / span 6;}
+}

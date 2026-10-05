@@ -1,16 +1,16 @@
 # Crivo: fila completa e execução em lotes maiores
 
-Estado de referência: main `120c7b9dfb6d22e71bf3d499b60319ae57c81d62`, em 04/10/2026. As PRs #252, #254, #255, #256 e #257 já foram incorporadas, assim como #242–#245 e #247–#251. Não repetir esses reparos. A PR #246 (guia de troca de conta) e os rascunhos #234/#222 são trabalhos separados; não integrar automaticamente.
+Estado de referência: main `7d169534ecbcf5448d2a0b34eb4085eade40e67b`, em 05/10/2026 UTC. As PRs #252, #254, #255, #256, #257 e #258 já foram incorporadas, assim como #242–#245 e #247–#251. Não repetir esses reparos. A PR #246 (guia de troca de conta) e os rascunhos #234/#222 são trabalhos separados; não integrar automaticamente.
 
 A execução anterior ficou fragmentada em lotes pequenos para o tamanho da fila. A nova unidade de entrega será uma família de problemas, com arquivos sob responsabilidade explícita e validação conjunta. A auditoria existente foi reconciliada por ID com as correções documentadas; não foram repetidas as 613 aberturas de tela.
 
-A Entrega A foi integrada em #254: [evidências dos 25 capítulos](visual-integral-2026-10-03/entrega-a/README.md). A Entrega B foi integrada em #256: [29 capítulos e resumos](visual-integral-2026-10-04/entrega-b/README.md). A Entrega C foi implementada e validada nesta proposta: [24 pranchas e oito resumos](visual-integral-2026-10-04/entrega-c/README.md). A tabela de lotes mantém o escopo original; F1/M1/HG1/LG2/H1 estão tratados, e os outros lotes somam 181 IDs. O redesenho dos 112 capítulos de História/Geografia foi integrado em #255.
+A Entrega A foi integrada em #254: [evidências dos 25 capítulos](visual-integral-2026-10-03/entrega-a/README.md). A Entrega B foi integrada em #256: [29 capítulos e resumos](visual-integral-2026-10-04/entrega-b/README.md). A Entrega C foi integrada em #258: [24 pranchas e oito resumos](visual-integral-2026-10-04/entrega-c/README.md). A tabela de lotes mantém o escopo original; F1/M1/HG1/LG2/H1 estão tratados. A Entrega D foi validada no PR #259: [21 capítulos F2/F3](visual-integral-2026-10-04/entrega-d/README.md). Nesta proposta, restam 160 IDs em oito lotes. O redesenho dos 112 capítulos de História/Geografia foi integrado em #255.
 
 ## Quanto falta
 
 | Matéria | Capítulos no catálogo | Achados tratados depois da auditoria | Capítulos ainda na fila | Resumos ainda sem aprofundamento |
 | --- | ---: | ---: | ---: | ---: |
-| Física | 85 | 26 | 21 | 0 |
+| Física | 85 | 47 | 0 | 0 |
 | Matemática | 83 | 28 | 0 | 0 |
 | Biologia | 72 | 4 | 0 | 0 |
 | Química | 48 | 2 | 0 | 0 |
@@ -24,13 +24,13 @@ A Entrega A foi integrada em #254: [evidências dos 25 capítulos](visual-integr
 | Literatura | 37 | 0 | 37 | 37 |
 | Entendimento de Texto | 12 | 12 | 0 | 0 |
 | Atualidades | 1 | 0 | 1 | — |
-| **Total** | **613** | **117** | **181** | **140** |
+| **Total** | **613** | **138** | **160** | **140** |
 
-Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 181 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 19 de Filosofia ainda na fila.
+Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 160 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 19 de Filosofia ainda na fila.
 
 Os 140 resumos pendentes estão nos 612 registros de `deepSummaryContent.json`; COP30 é o capítulo adicional do catálogo. Eles foram vinculados aos IDs e aos mesmos lotes visuais para executar conteúdo e representação juntos. Há 470 registros com `rev: 2` e dois com `rev: 3`; não precisam ser reescritos indiscriminadamente. As revisões 3 corrigem dois defeitos concretos de Kant/Rawls, com releitura isolada. O inventário formal de qualidade continua separado: 532 sem revisão formal, 81 em validação, nenhuma aprovação registrada.
 
-Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 181 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 140 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
+Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 160 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 140 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
 
 ## Lotes definidos
 
@@ -51,7 +51,7 @@ Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planil
 | R2 | 15 | Projeto/gênero/introdução/conclusão, competências e modelos de texto; incluir contenção móvel de Competências. |
 | R3 | 27 | Coletânea, argumento, dados, coesão, intervenção, direitos e revisão; mostrar operações em texto próprio e detalhamento da intervenção. |
 | A1 | 1 | COP30: atores, contexto de Belém, decisões e limites com fontes datadas. Pode integrar uma entrega maior de Humanas. |
-| **Total original** | **259** | F1/M1/HG1/LG2 entregues: 54; fila restante: 181. |
+| **Total original** | **259** | F1/M1/HG1/LG2/H1/F2/F3 entregues: 99; fila restante: 160. |
 
 A profundidade dos 27 textos de Sociologia acompanha H1/H2/H3, conforme os IDs vinculados na fila. Os lotes pequenos M1/HG1/A1 serão integrados a entregas maiores; não devem gerar novas rodadas de quatro ou de um capítulo por padrão.
 
@@ -60,7 +60,7 @@ A profundidade dos 27 textos de Sociologia acompanha H1/H2/H3, conforme os IDs v
 1. **Entrega A: 25 capítulos — F1 + M1 + HG1.** Corrigir eletricidade/magnetismo e fechar os achados menores de Matemática, História e Geografia na mesma rodada. Dividir F1 em circuitos, eletrostática e magnetismo; M1/HG1 têm arquivos próprios.
 2. **Entrega B: 29 capítulos — LG2.** Corrigir temas trocados de Inglês e ligar o aprofundamento aos mecanismos de leitura. Implementada e validada nesta proposta; conferir sua integração antes de repetir LG2.
 3. **Entrega C: 24 capítulos — H1, concluída nesta proposta.** Casos e relações próprias por capítulo, oito resumos de Sociologia aprofundados e dois defeitos filosóficos pontuais corrigidos. [Evidências](visual-integral-2026-10-04/entrega-c/README.md).
-4. Depois: LG1/LG3, R1/R2/R3 e H2/H3, intercalados com F2/F3. Integrar A1 a Humanas. A ordem pode mudar por defeito confirmado ou pela rotina mais usada da estudante; registrar o delta, sem reiniciar a auditoria.
+4. Depois: LG1/LG3, R1/R2/R3 e H2/H3, após F2/F3 validados na Entrega D. Integrar A1 a Humanas. A ordem pode mudar por defeito confirmado ou pela rotina mais usada da estudante; registrar o delta, sem reiniciar a auditoria.
 
 Cada entrega produz uma PR automaticamente; o merge fica com a responsável. As três primeiras entregas têm **78 capítulos de escopo**, não 78 correções já executadas nem uma promessa de conclusão numa única sessão.
 

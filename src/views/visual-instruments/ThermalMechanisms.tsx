@@ -6,7 +6,7 @@ export function FirstLawMechanism({ work }: { work: number }) {
   const marker = `thermal-${useId().replace(/:/g, '')}`;
   const reduced = useReducedMotion();
   const piston = work < 0 ? 186 : work === 0 ? 200 : 218;
-  return <g style={{ fontSize: 13, fill: 'var(--vs-ink)' }}>
+  return <g style={{ fontSize: 13.5, fill: 'var(--vs-ink)' }}>
     <defs><marker id={marker} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10z" fill="var(--vs-burgundy)" /></marker></defs>
     <text x="160" y="24" textAnchor="middle" fontWeight="800">gás em cilindro com pistão</text>
     <path d="M95 84V200H244V84" fill="var(--vs-paper)" stroke="var(--vs-ink)" strokeWidth="3" />
@@ -30,7 +30,7 @@ export function FirstLawMechanism({ work }: { work: number }) {
 export function CarnotMechanism({ rejected }: { rejected: number }) {
   const marker = `carnot-${useId().replace(/:/g, '')}`;
   const coldY = 416 - 126 * rejected / 20;
-  return <g style={{ fontSize: 13, fill: 'var(--vs-ink)' }}>
+  return <g style={{ fontSize: 13.5, fill: 'var(--vs-ink)' }}>
     <defs><marker id={marker} viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10z" fill="var(--vs-burgundy)" /></marker></defs>
     <rect x="65" y="15" width="190" height="40" rx="5" fill="var(--vs-paper)" stroke="var(--vs-burgundy)" strokeWidth="2" />
     <text x="160" y="40" textAnchor="middle" fontWeight="800">Th = 600 K</text>

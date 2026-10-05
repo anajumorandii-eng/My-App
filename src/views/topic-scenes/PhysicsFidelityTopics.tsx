@@ -60,7 +60,7 @@ function Expansion({focus}:{focus:number|null}){
    <A d="M597 391v-42"/><T x={627} y={371} size={18}>nível final</T>
    <T x={415} y={445} size={18}>γ aparente = γlíquido − γrecipiente</T>
   </g>
-  <T x={30} y={465} size={18}>Expansão exagerada no desenho; coeficientes positivos neste exemplo.</T>
+  <T x={30} y={472} size={14}>Expansão exagerada no desenho; coeficientes positivos neste exemplo.</T>
  </>;
 }
 

@@ -5,17 +5,22 @@
     "subject": "Física",
     "artifact": "calorimetria",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/visual-boards/CalorimetryBoard.tsx"
+      "src/views/visual-boards/CalorimetryBoard.tsx",
+      "src/views/visual-boards/PhysicsDrawingWindow.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "Curva de aquecimento distingue rampas e patamares, mas o capítulo centraliza temperatura versus calor, escalas e transferência. A prancha de calorimetria abre outro recorte; acrescentar mecanismos de condução/convecção/irradiação e distinção de grandezas."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-cinematica-escalar-conceitos-fundamentais",
@@ -23,17 +28,22 @@
     "subject": "Física",
     "artifact": "cinematica",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/visual-boards/KinematicsBoard.tsx"
+      "src/views/visual-boards/KinematicsBoard.tsx",
+      "src/views/visual-boards/KinematicsConceptBoard.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "O gráfico v×t tem eixos e área legíveis, mas substitui conceitos fundamentais de referencial, posição, deslocamento e distância por comparação MRU/MRUV; falta cena de referencial e percurso."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-aceleracao-vetorial",
@@ -41,17 +51,22 @@
     "subject": "Física",
     "artifact": "grade-de-eixos",
     "auditVerdict": "redesenhar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/topic-scenes/families/GradeDeEixos.tsx"
+      "src/views/topic-scenes/families/GradeDeEixos.tsx",
+      "src/views/topic-scenes/PhysicsFidelityTopics.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "Matriz MCU/MCUV/MRU/MRUV apenas classifica acelerações nulas ou não nulas; não mostra velocidade tangente, aceleração radial nem mudança de módulo, mecanismo central do capítulo."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-forca-e-seus-tipos",
@@ -59,8 +74,7 @@
     "subject": "Física",
     "artifact": "forcas-vetores",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/topic-scenes/data/fisica.ts"
     ],
@@ -69,7 +83,12 @@
         "code": "mechanism-fidelity",
         "description": "Corpo livre é específico, mas normal, tração, atrito e mola aparecem muito esmaecidos enquanto peso domina; seleção precisa preservar legibilidade do sistema de forças necessário à comparação."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-as-leis-de-newton",
@@ -77,8 +96,7 @@
     "subject": "Física",
     "artifact": "leis-newton",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/visual-boards/NewtonBoard.tsx"
     ],
@@ -87,7 +105,12 @@
         "code": "mechanism-fidelity",
         "description": "Mobile mostra síntese de três leis; desktop foi recortado no SVG auxiliar do carrinho, sem as relações da prancha central. Inspeção central desktop incompleta; revisar captura integral antes de aprovar."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
@@ -95,8 +118,7 @@
     "subject": "Física",
     "artifact": "corpos-interagindo",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/visual-instruments/PhysicsMechanismScenes.tsx"
     ],
@@ -105,7 +127,12 @@
         "code": "mechanism-fidelity",
         "description": "Dois blocos e fio mostram trações opostas, mas a frase ação e reação em corpos diferentes junto às duas trações sugere que elas formam o par de terceira lei. São forças do mesmo fio sobre corpos diferentes; seus pares atuam no fio."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
@@ -113,17 +140,22 @@
     "subject": "Física",
     "artifact": "plano-vertical",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/visual-instruments/MechanicsFinalInstrument.tsx"
+      "src/views/visual-instruments/MechanicsFinalInstrument.tsx",
+      "src/views/visual-instruments/MechanicsFidelityScenes.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "Círculo e mg+N no topo identificam o caso vertical, mas não comparam fundo e topo nem explicitam setas distintas do peso e normal; o critério N≥0 fica desconectado da configuração."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-movimento-harmonico-simples-mhs",
@@ -131,17 +163,22 @@
     "subject": "Física",
     "artifact": "mhs",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/visual-instruments/MechanicsFinalInstrument.tsx"
+      "src/views/visual-instruments/MechanicsFinalInstrument.tsx",
+      "src/views/visual-instruments/MechanicsFidelityScenes.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "Mola e bloco deslocado ilustram o objeto, porém não há força restauradora apontando para equilíbrio, velocidade ou extremos; a indicação equilíbrio x=0 não explica a causalidade do MHS."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
@@ -149,17 +186,22 @@
     "subject": "Física",
     "artifact": "energia-potencial",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/visual-instruments/MechanicsFinalInstrument.tsx"
+      "src/views/visual-instruments/MechanicsFinalInstrument.tsx",
+      "src/views/visual-instruments/MechanicsFidelityScenes.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "Rampa e altura h aparecem, mas bloco flutua à direita abaixo da rampa; não há posição inicial/final, peso ou conversão de energia que explique trabalho conservativo e energia potencial."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
@@ -167,17 +209,22 @@
     "subject": "Física",
     "artifact": "nao-conservativo",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/visual-instruments/MechanicsFinalInstrument.tsx"
+      "src/views/visual-instruments/MechanicsFinalInstrument.tsx",
+      "src/views/visual-instruments/MechanicsFidelityScenes.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "Atrito aparece como traço sem ponta sobre bloco parado; 12 J viram energia interna, mas não há deslocamento/força em oposição nem comparação visual com conservação de energia mecânica."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
@@ -185,8 +232,7 @@
     "subject": "Física",
     "artifact": "geracao-eletrica",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/topic-scenes/data/fisica.ts"
     ],
@@ -195,7 +241,12 @@
         "code": "mechanism-fidelity",
         "description": "Cadeia queda d’água→turbina/gerador→corrente é coerente para hidrelétrica, porém reduz objetos a círculos e exclui visualmente calor/vapor, reator e conversão fotovoltaica do capítulo; criar comparação de mecanismos."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-estatica",
@@ -203,8 +254,7 @@
     "subject": "Física",
     "artifact": "criterios-conjuntivos",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F2",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/topic-scenes/families/FisicaFenomenos.tsx"
     ],
@@ -213,7 +263,12 @@
         "code": "mechanism-fidelity",
         "description": "Translação tem forças legíveis; rotação e contraexemplo ficam tão esmaecidos que braços e torques perdem leitura no estado inicial. Preservar a comparação simultânea das duas condições de equilíbrio."
       }
-    ]
+    ],
+    "originalBatch": "F2",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
@@ -221,17 +276,22 @@
     "subject": "Física",
     "artifact": "cadeia-de-derivacao",
     "auditVerdict": "redesenhar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+      "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx",
+      "src/views/topic-scenes/PhysicsFidelityTopics.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "Três barras empilhadas com nomes Linear/Superficial/Volumétrica substituem dilatação real; nenhuma dimensão inicial/final, aquecimento ou recipiente explica expansão de sólidos/líquidos."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-primeira-lei-da-termodinamica",
@@ -239,17 +299,22 @@
     "subject": "Física",
     "artifact": "primeira-lei",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/visual-instruments/ThermoInstrument.tsx"
+      "src/views/visual-instruments/ThermoInstrument.tsx",
+      "src/views/visual-instruments/ThermalMechanisms.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "Círculo com ΔU e segmentos Q/W sem pontas não identifica entrada/saída de energia; é um balanço numérico sem mecanismo nem convenção visual dos sinais."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
@@ -257,17 +322,22 @@
     "subject": "Física",
     "artifact": "ciclo-carnot",
     "auditVerdict": "redesenhar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
-      "src/views/visual-instruments/ThermoInstrument.tsx"
+      "src/views/visual-instruments/ThermoInstrument.tsx",
+      "src/views/visual-instruments/ThermalMechanisms.tsx"
     ],
     "findings": [
       {
         "code": "mechanism-fidelity",
         "description": "Fontes quente/fria ligadas por segmento e W solto não mostram máquina, fluxos Qq/Qf, trabalho saindo ou etapas do ciclo de Carnot; o mecanismo térmico fica ausente."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-lentes-esfericas-estudo-grafico",
@@ -275,8 +345,7 @@
     "subject": "Física",
     "artifact": "lentes",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/visual-boards/LensMechanism.tsx"
     ],
@@ -285,7 +354,12 @@
         "code": "mechanism-fidelity",
         "description": "Estado inicial desenha só trechos curtos de raios perto do objeto e imagem muito esmaecida; mesmo em redução de movimento o encontro após a lente não fica completo sem ação no controle temporal."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
@@ -293,8 +367,7 @@
     "subject": "Física",
     "artifact": "lentes",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/visual-boards/LensPowerMechanism.tsx"
     ],
@@ -303,7 +376,12 @@
         "code": "mechanism-fidelity",
         "description": "Estado inicial reduzido mostra só lente equivalente e eixo, sem nenhum raio. clock.time=0 com strokeDashoffset=1 apaga todo traçado; a forma estática precisa explicar alteração do foco sem depender de reproduzir movimento."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
@@ -311,8 +389,7 @@
     "subject": "Física",
     "artifact": "ondulatoria",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/visual-boards/WaveMechanism.tsx"
     ],
@@ -321,7 +398,12 @@
         "code": "mechanism-fidelity",
         "description": "E e B usam projeção oblíqua calculada com o mesmo valor de fase, mas faltam eixos dos planos e indicação de perspectiva no desenho; a projeção pode sugerir defasagem ou campos coplanares. Acrescentar eixos para tornar perpendicularidade inequívoca."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-intensidade-sonora",
@@ -329,8 +411,7 @@
     "subject": "Física",
     "artifact": "intensidade-sonora",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/visual-instruments/WavesInstrument.tsx"
     ],
@@ -339,7 +420,12 @@
         "code": "mechanism-fidelity",
         "description": "Círculos e ponto a uma distância mostram expansão, mas não têm r, potência ou área e o gráfico de decibéis não aparece; relação I=P/A é deixada ao rodapé."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
@@ -347,8 +433,7 @@
     "subject": "Física",
     "artifact": "difracao-polarizacao",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/visual-instruments/PhysicsRemainingInstrument.tsx"
     ],
@@ -357,7 +442,12 @@
         "code": "mechanism-fidelity",
         "description": "Fenda, abertura e espalhamento com θ representam difração; polarização e ressonância do mesmo capítulo não têm representação, exigindo cenas próprias para cada mecanismo."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   },
   {
     "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
@@ -365,8 +455,7 @@
     "subject": "Física",
     "artifact": "fisica-quantica",
     "auditVerdict": "ajustar",
-    "status": "fila_a_revalidar",
-    "batch": "F3",
+    "status": "achado_tratado",
     "sourceFiles": [
       "src/views/visual-instruments/PhysicsRemainingInstrument.tsx"
     ],
@@ -375,6 +464,11 @@
         "code": "mechanism-fidelity",
         "description": "Níveis discretos e fóton são específicos, mas legenda frequência maior→salto possível maior sugere aumento contínuo do salto; absorção entre níveis exige energia exatamente correspondente. Identificar ΔE=hf e separar esse modelo do fotoelétrico."
       }
-    ]
+    ],
+    "originalBatch": "F3",
+    "resolution": {
+      "delivery": "entrega-d",
+      "evidence": "README.md"
+    }
   }
 ]

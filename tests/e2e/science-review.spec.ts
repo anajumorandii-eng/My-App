@@ -6,7 +6,7 @@ for (const width of [390, 1440]) {
   for (const theme of ['light', 'dark'] as const) {
     for (const reducedMotion of ['no-preference', 'reduce'] as const) {
       test.describe(`${width}px / ${theme} / ${reducedMotion}`, () => {
-        test.use({ viewport: { width, height: 1000 }, colorScheme: theme, reducedMotion });
+        test.use({ viewport: { width, height: 1000 }, colorScheme: theme, contextOptions: { reducedMotion } });
         test.beforeEach(async ({ page }) => {
           await page.addInitScript((theme) => {
             localStorage.setItem('juju_onboarding', 'true');

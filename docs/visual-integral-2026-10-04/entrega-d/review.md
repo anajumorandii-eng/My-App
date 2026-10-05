@@ -69,3 +69,9 @@ A validação de browser, inclusive tamanhos 360–390/tablet/desktop, temas, mo
 ## Correções posteriores à revisão
 
 I1: condição corrigida para “acelerando para cima”, com regressão observada falhar e depois passar. M1: string corrigida para `<`. M2: abertura alterada para `25×ratio`, na mesma escala das frentes incidentes (25). Conferência visual após estas alterações ainda pendente.
+
+## Revisão da retomada — 05/10/2026 UTC
+
+A nova revisão independente dos 21 mecanismos encontrou espiras do MHS atravessando a parede em x negativo (P2). Corrigido com regressão geométrica observada falhar e passar nos extremos −5/−4/0/+5. A revisão também pediu cobertura de todas as posições das lentes convergentes e energias quânticas 8/10; ambas foram acrescentadas ao navegador. Os achados físicos I1/M1/M2 anteriores permanecem corrigidos.
+
+O revisor fez leitura independente de produção/testes, sem executar suíte. A execução integrada, documentada no [resultado final](README.md), concluiu navegador, inspeção e 1.943 testes gerais. Os limites históricos acima descrevem o checkpoint; não substituem a evidência final consolidada.

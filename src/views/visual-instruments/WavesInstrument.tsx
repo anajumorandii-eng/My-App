@@ -106,7 +106,7 @@ function SoundIntensityScene({ distance }: { distance: number }) {
       <text x={x(point.r)} y="278" textAnchor="middle" fill="var(--vs-ink)" fontSize="9">{point.r}</text>
     </g>)}
     <circle data-sound-level="true" data-intensity={intensity} data-db={level(distance)} cx={x(distance)} cy={y(level(distance))} r="4.5" fill="var(--vs-ink)" />
-    <text x="282" y="290" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">r (m)</text>
+    <text x="285" y="258" textAnchor="middle" fill="var(--vs-ink)" fontSize="10">r (m)</text>
     <text x="145" y="298" textAnchor="middle" fill="var(--vs-dim)" fontSize="9">β = 10 log₁₀(I/I₀) · I₀ = 10⁻¹² W/m²</text>
   </g>;
 }

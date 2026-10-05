@@ -237,6 +237,8 @@ Os oito resumos sociológicos passam à revisão 2, com 40 seções aprofundadas
 
 A fila validada contém 117 achados tratados, 181 pendentes e 315 mecanismos preservados, em dez lotes restantes. Restam 140 aprofundamentos editoriais; 470 registros estão na revisão 2 e dois na revisão 3. A aprovação editorial formal permanece aberta. Conferir a integração desta proposta e o delta de main antes de repetir H1; os próximos lotes estão no plano ampliado, começando por F2/F3. Publicação automática autorizada; merge permanece com a responsável.
 
-## Checkpoint remoto — Entrega D em andamento (4 de outubro de 2026)
+## Entrega D — checkpoint retomado e validado (5 de outubro de 2026 UTC)
 
-Branch `fix/entrega-d-fisica-f2-f3`: implementação dos 21 capítulos F2/F3 e testes salvos por solicitação da usuária antes da validação final. [Estado e passos de retomada](visual-integral-2026-10-04/entrega-d/RETOMADA.md). Manter rascunho, fila oficial inalterada e nenhum merge automático. Capturas preliminares documentam falhas anteriores às últimas correções, não aprovação.
+O checkpoint `f3e519df` foi retomado no PR #259, branch `fix/entrega-d-fisica-f2-f3`, base main `7d169534`. Os 21 capítulos F2/F3 estão validados nesta proposta: [resultado e evidências](visual-integral-2026-10-04/entrega-d/README.md). Foram corrigidos contenção móvel, coluna desktop, mola comprimida, colisões e fonte em 360 px. TypeScript, build, 1.943 testes gerais e matrizes visual/qualidade passaram. Navegador: 14 configurações, 1.868 estados SVG, 192 idas e voltas por teclado e 63 capturas definitivas.
+
+A fila da branch contém 138 tratados, 160 pendentes e 315 preservados, mantendo 613 IDs e oito lotes: LG1, LG3, H2, H3, R1, R2, R3 e A1. Permanecem 140 resumos pendentes, 470 revisões 2 e duas revisões 3; nenhuma promoção editorial formal. Conferir a integração do PR e o delta de main antes de continuar; não repetir F2/F3. Manter o PR rascunho e nenhum merge automático. Capturas preliminares permanecem como histórico; as definitivas estão na galeria.

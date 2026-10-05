@@ -1,0 +1,70 @@
+{
+  "dateUTC": "2026-10-05",
+  "baseCommit": "7d169534ecbcf5448d2a0b34eb4085eade40e67b",
+  "checkpointCommit": "f3e519df6668f5823d704139bced1fb75111cd7f",
+  "checks": [
+    {
+      "command": "npm run lint",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run build",
+      "exitCode": 0
+    },
+    {
+      "command": "npm test",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run visual:matrix",
+      "exitCode": 0
+    },
+    {
+      "command": "npm run visual:quality",
+      "exitCode": 0
+    },
+    {
+      "command": "node scripts/validar-fila-visual.mjs",
+      "exitCode": 0
+    },
+    {
+      "command": "git diff --check",
+      "exitCode": 0
+    }
+  ],
+  "tests": {
+    "node": 888,
+    "vitest": 1055,
+    "total": 1943,
+    "visualMatrix": 13,
+    "visualQuality": 4
+  },
+  "browser": {
+    "configurations": 14,
+    "stateRecords": 1860,
+    "svgStates": 1868,
+    "faceRoundTrips": 192,
+    "captures": 63,
+    "evidence": "browser-evidence.json",
+    "captureEvidence": "capture-evidence.json"
+  },
+  "inspection": "21 mecanismos nos dois temas desktop e no celular claro; 63 capturas inspecionadas em folhas de contato. Desenhos largos têm pan interno indicado e testado por teclado.",
+  "queue": {
+    "total": 613,
+    "treated": 138,
+    "pending": 160,
+    "preserved": 315,
+    "remainingBatches": 8
+  },
+  "editorial": {
+    "pending": 140,
+    "rev2": 470,
+    "rev3": 2,
+    "formalApprovalPromoted": false
+  },
+  "limits": [
+    "Chromium e fixtures locais; Safari/iPad físico e fluxos autenticados não certificados.",
+    "Cache público das famílias do aplicativo utilizado apenas nas capturas após HTTP 503; nenhum binário versionado.",
+    "PR rascunho, sem merge automático."
+  ]
+}

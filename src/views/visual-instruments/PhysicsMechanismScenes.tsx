@@ -106,7 +106,7 @@ export function DinamicaCena({ id, v }: { id: DynamicsId; v: number }) {
       <Rotulo x={160} y={240}>Pares: cada bloco age sobre o fio.</Rotulo>
       <g data-third-law-pair="A-fio"><Seta x1={136} y1={260} x2={136-v*4} y2={260} cor={blue}/><Rotulo x={100} y={282}>A puxa o fio ←</Rotulo></g>
       <g data-third-law-pair="B-fio"><Seta x1={185} y1={260} x2={185+v*4} y2={260} cor={blue}/><Rotulo x={229} y={282}>B puxa o fio →</Rotulo></g>
-      <Rotulo x={160} y={294}>Trações em A/B não formam um par.</Rotulo>
+      <Rotulo x={160} y={302}>Trações em A/B não formam um par.</Rotulo>
     </g>;
   }
   // Plano inclinado: P fixo de 10 N (60 px) e as duas componentes calculadas
