@@ -3,7 +3,23 @@ import test from 'node:test';
 import { WAVES } from './wavesLab';
 
 test('equação da onda preserva a velocidade do meio', () => assert.equal(WAVES['wave-equation'].readouts(6)[1].value, '4 m'));
-test('intensidade sonora obedece ao inverso do quadrado da distância', () => assert.equal(WAVES['sound-intensity'].readouts(2)[1].value, '0,2 W/m²'));
+test('intensidade sonora obedece ao inverso do quadrado sem arredondar o extremo a zero', () => {
+  const parse = (value: string) => Number(value.split(' ')[0].replace(',', '.'));
+  for (const r of [1, 2, 4, 8]) {
+    const readings = WAVES['sound-intensity'].readouts(r);
+    assert.equal(readings[0].value, '8 W');
+    assert.equal(readings[1].label, 'Intensidade I');
+    assert.equal(readings[1].pivot, true);
+    const expected = 8 / (4 * Math.PI * r * r);
+    const displayed = parse(readings[1].value);
+    assert.ok(displayed > 0);
+    assert.ok(Math.abs(displayed - expected) <= .00005);
+    assert.ok(Math.abs(parse(readings[2].value) - 4 * Math.PI * r * r) <= .05);
+    assert.ok(Math.abs(parse(readings[3].value) - 10 * Math.log10(expected / 1e-12)) <= .05);
+  }
+  assert.equal(WAVES['sound-intensity'].readouts(2)[1].value, '0,1592 W/m²');
+  assert.equal(WAVES['sound-intensity'].readouts(8)[1].value, '0,0099 W/m²');
+});
 test('interferência destrutiva anula ondas de mesma amplitude', () => assert.equal(WAVES.interference.readouts(180)[1].value, '0 cm'));
 test('harmônico de corda cresce proporcionalmente a n', () => assert.equal(WAVES['string-harmonics'].readouts(4)[1].value, '16 Hz'));
 test('fonte que se aproxima aumenta a frequência percebida', () => assert.equal(WAVES.doppler.readouts(40)[1].value, '566,7 Hz'));

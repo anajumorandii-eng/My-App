@@ -1,0 +1,2982 @@
+[
+  {
+    "id": "fis-termologia-calor",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Calor e temperatura: condução no sólido, convecção em fluido e irradiação no vácuo",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      },
+      {
+        "label": "Curva de aquecimento da água: rampas de calor sensível separadas por dois patamares de calor latente, na fusão e na ebulição",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "Q",
+            "size": 8.821621621621622
+          },
+          {
+            "text": "T",
+            "size": 8.821621621621622
+          },
+          {
+            "text": "0°",
+            "size": 7.783783783783784
+          },
+          {
+            "text": "100°",
+            "size": 7.783783783783784
+          },
+          {
+            "text": "gelo",
+            "size": 8.043243243243243
+          },
+          {
+            "text": "água",
+            "size": 8.043243243243243
+          },
+          {
+            "text": "vapor",
+            "size": 8.043243243243243
+          },
+          {
+            "text": "fusão",
+            "size": 8.043243243243243
+          },
+          {
+            "text": "ebulição",
+            "size": 8.043243243243243
+          },
+          {
+            "text": "aqui T não sobe",
+            "size": 9.324324324324325
+          },
+          {
+            "text": "aqui T sobe",
+            "size": 9.324324324324325
+          },
+          {
+            "text": "na rampa: Q = m·c·ΔT",
+            "size": 8.562162162162164
+          },
+          {
+            "text": "a energia aumenta a agitação",
+            "size": 8.562162162162164
+          },
+          {
+            "text": "água pura a 1 atm · T em °C",
+            "size": 9.72972972972973
+          },
+          {
+            "text": "Q em escala esquemática; não comparar larguras",
+            "size": 9.72972972972973
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-cinematica-escalar-conceitos-fundamentais",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Percurso A B C: distância 8 metros e deslocamento positivo2 metros",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-cinematica-escalar-conceitos-fundamentais",
+    "state": "origin-shift",
+    "issues": [
+      {
+        "label": "Percurso A B C: distância 8 metros e deslocamento positivo2 metros",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-aceleracao-vetorial",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Que tipo de movimento resulta do cruzamento entre presença de aceleração tangencial e presença de aceleração centrípeta? — Todas as relações visíveis",
+        "clipped": [],
+        "collisions": [
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ],
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-aceleracao-vetorial",
+    "state": "choice-0",
+    "issues": [
+      {
+        "label": "Que tipo de movimento resulta do cruzamento entre presença de aceleração tangencial e presença de aceleração centrípeta? — Relação em foco: MRU",
+        "clipped": [],
+        "collisions": [
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ],
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-aceleracao-vetorial",
+    "state": "choice-1",
+    "issues": [
+      {
+        "label": "Que tipo de movimento resulta do cruzamento entre presença de aceleração tangencial e presença de aceleração centrípeta? — Relação em foco: MRUV",
+        "clipped": [],
+        "collisions": [
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ],
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-aceleracao-vetorial",
+    "state": "choice-2",
+    "issues": [
+      {
+        "label": "Que tipo de movimento resulta do cruzamento entre presença de aceleração tangencial e presença de aceleração centrípeta? — Relação em foco: MCU",
+        "clipped": [],
+        "collisions": [
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ],
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-aceleracao-vetorial",
+    "state": "choice-3",
+    "issues": [
+      {
+        "label": "Que tipo de movimento resulta do cruzamento entre presença de aceleração tangencial e presença de aceleração centrípeta? — Relação em foco: MCUV",
+        "clipped": [],
+        "collisions": [
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ],
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-aceleracao-vetorial",
+    "state": "keyboard-pan",
+    "issues": [
+      {
+        "label": "Que tipo de movimento resulta do cruzamento entre presença de aceleração tangencial e presença de aceleração centrípeta? — Relação em foco: MCUV",
+        "clipped": [],
+        "collisions": [
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ],
+          [
+            "aᶜ → centro",
+            "aᶜ = v²/R"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-forca-e-seus-tipos",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Em que tipos as forças mais cobradas em vestibular se classificam, conforme sua origem física? Selecionado: Peso",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-forca-e-seus-tipos",
+    "state": "choice-0",
+    "issues": [
+      {
+        "label": "Em que tipos as forças mais cobradas em vestibular se classificam, conforme sua origem física? Selecionado: Peso",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-forca-e-seus-tipos",
+    "state": "choice-1",
+    "issues": [
+      {
+        "label": "Em que tipos as forças mais cobradas em vestibular se classificam, conforme sua origem física? Selecionado: Normal",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-forca-e-seus-tipos",
+    "state": "choice-2",
+    "issues": [
+      {
+        "label": "Em que tipos as forças mais cobradas em vestibular se classificam, conforme sua origem física? Selecionado: Tração",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-forca-e-seus-tipos",
+    "state": "choice-3",
+    "issues": [
+      {
+        "label": "Em que tipos as forças mais cobradas em vestibular se classificam, conforme sua origem física? Selecionado: Atrito",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-forca-e-seus-tipos",
+    "state": "choice-4",
+    "issues": [
+      {
+        "label": "Em que tipos as forças mais cobradas em vestibular se classificam, conforme sua origem física? Selecionado: Elástica",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-forca-e-seus-tipos",
+    "state": "keyboard-pan",
+    "issues": [
+      {
+        "label": "Em que tipos as forças mais cobradas em vestibular se classificam, conforme sua origem física? Selecionado: Elástica",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-as-leis-de-newton",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Três leis de Newton dispostas ao redor de um corpo central: inércia sem força resultante, dinâmica com força e aceleração, ação e reação entre dois corpos",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "m",
+            "size": 9.75
+          },
+          {
+            "text": "1ª lei · inércia",
+            "size": 9
+          },
+          {
+            "text": "ΣF = 0",
+            "size": 8.25
+          },
+          {
+            "text": "F",
+            "size": 9
+          },
+          {
+            "text": "ΣF = m·a",
+            "size": 8.25
+          },
+          {
+            "text": "3ª lei",
+            "size": 9
+          },
+          {
+            "text": "ação = reação",
+            "size": 8.25
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Corpos interagindo trocam forças em pares; mesmo módulo",
+        "clipped": [
+          "Trações em A/B não formam um par."
+        ],
+        "collisions": [],
+        "small": [
+          {
+            "text": "fio",
+            "size": 10.24375
+          },
+          {
+            "text": "T = 6 N →",
+            "size": 10.24375
+          },
+          {
+            "text": "← T = 6 N",
+            "size": 10.24375
+          },
+          {
+            "text": "Fio ideal: forças do fio sobre A e B",
+            "size": 10.24375
+          },
+          {
+            "text": "Pares: cada bloco age sobre o fio.",
+            "size": 10.24375
+          },
+          {
+            "text": "A puxa o fio ←",
+            "size": 10.24375
+          },
+          {
+            "text": "B puxa o fio →",
+            "size": 10.24375
+          },
+          {
+            "text": "Trações em A/B não formam um par.",
+            "size": 10.24375
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Corpos interagindo trocam forças em pares; mesmo módulo",
+        "clipped": [
+          "Trações em A/B não formam um par."
+        ],
+        "collisions": [],
+        "small": [
+          {
+            "text": "fio",
+            "size": 10.24375
+          },
+          {
+            "text": "T = 0 N →",
+            "size": 10.24375
+          },
+          {
+            "text": "← T = 0 N",
+            "size": 10.24375
+          },
+          {
+            "text": "Fio ideal: forças do fio sobre A e B",
+            "size": 10.24375
+          },
+          {
+            "text": "Pares: cada bloco age sobre o fio.",
+            "size": 10.24375
+          },
+          {
+            "text": "A puxa o fio ←",
+            "size": 10.24375
+          },
+          {
+            "text": "B puxa o fio →",
+            "size": 10.24375
+          },
+          {
+            "text": "Trações em A/B não formam um par.",
+            "size": 10.24375
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Corpos interagindo trocam forças em pares; mesmo módulo",
+        "clipped": [
+          "Trações em A/B não formam um par."
+        ],
+        "collisions": [],
+        "small": [
+          {
+            "text": "fio",
+            "size": 10.24375
+          },
+          {
+            "text": "T = 12 N →",
+            "size": 10.24375
+          },
+          {
+            "text": "← T = 12 N",
+            "size": 10.24375
+          },
+          {
+            "text": "Fio ideal: forças do fio sobre A e B",
+            "size": 10.24375
+          },
+          {
+            "text": "Pares: cada bloco age sobre o fio.",
+            "size": 10.24375
+          },
+          {
+            "text": "A puxa o fio ←",
+            "size": 10.24375
+          },
+          {
+            "text": "B puxa o fio →",
+            "size": 10.24375
+          },
+          {
+            "text": "Trações em A/B não formam um par.",
+            "size": 10.24375
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+    "state": "slider-0-zero",
+    "issues": [
+      {
+        "label": "Corpos interagindo trocam forças em pares; mesmo módulo",
+        "clipped": [
+          "Trações em A/B não formam um par."
+        ],
+        "collisions": [],
+        "small": [
+          {
+            "text": "fio",
+            "size": 10.24375
+          },
+          {
+            "text": "T = 0 N →",
+            "size": 10.24375
+          },
+          {
+            "text": "← T = 0 N",
+            "size": 10.24375
+          },
+          {
+            "text": "Fio ideal: forças do fio sobre A e B",
+            "size": 10.24375
+          },
+          {
+            "text": "Pares: cada bloco age sobre o fio.",
+            "size": 10.24375
+          },
+          {
+            "text": "A puxa o fio ←",
+            "size": 10.24375
+          },
+          {
+            "text": "B puxa o fio →",
+            "size": 10.24375
+          },
+          {
+            "text": "Trações em A/B não formam um par.",
+            "size": 10.24375
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "No topo, peso e normal disputam a curva; Normal calculada: 6,3 N",
+        "clipped": [],
+        "collisions": [
+          [
+            "topo: v = 7 m/s",
+            "N = 6,3 N"
+          ],
+          [
+            "Mesmo E mecânica até a perda de contato.",
+            "Setas P/N: escalas distintas entre os recortes."
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "No topo, peso e normal disputam a curva; Normal calculada: -10 N",
+        "clipped": [],
+        "collisions": [
+          [
+            "topo: v = 0 m/s",
+            "N exigida < 0"
+          ],
+          [
+            "Mesmo E mecânica até a perda de contato.",
+            "Setas P/N: escalas distintas entre os recortes."
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "No topo, peso e normal disputam a curva; Normal calculada: 23,3 N",
+        "clipped": [],
+        "collisions": [
+          [
+            "topo: v = 10 m/s",
+            "N = 23,3 N"
+          ],
+          [
+            "Mesmo E mecânica até a perda de contato.",
+            "Setas P/N: escalas distintas entre os recortes."
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
+    "state": "slider-0-zero",
+    "issues": [
+      {
+        "label": "No topo, peso e normal disputam a curva; Normal calculada: -10 N",
+        "clipped": [],
+        "collisions": [
+          [
+            "topo: v = 0 m/s",
+            "N exigida < 0"
+          ],
+          [
+            "Mesmo E mecânica até a perda de contato.",
+            "Setas P/N: escalas distintas entre os recortes."
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-movimento-harmonico-simples-mhs",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "A mola puxa sempre de volta ao equilíbrio; Força restauradora: -12 N",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-movimento-harmonico-simples-mhs",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "A mola puxa sempre de volta ao equilíbrio; Força restauradora: 20 N",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-movimento-harmonico-simples-mhs",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "A mola puxa sempre de volta ao equilíbrio; Força restauradora: -20 N",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-movimento-harmonico-simples-mhs",
+    "state": "slider-0-zero",
+    "issues": [
+      {
+        "label": "A mola puxa sempre de volta ao equilíbrio; Força restauradora: 0 N",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Altura armazena energia gravitacional; Energia potencial: 80 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Altura armazena energia gravitacional; Energia potencial: 0 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Altura armazena energia gravitacional; Energia potencial: 200 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
+    "state": "slider-0-zero",
+    "issues": [
+      {
+        "label": "Altura armazena energia gravitacional; Energia potencial: 0 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Atrito retira energia mecânica do bloco; Variação de Emec: -12 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Atrito retira energia mecânica do bloco; Variação de Emec: 0 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Atrito retira energia mecânica do bloco; Variação de Emec: -40 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
+    "state": "slider-0-zero",
+    "issues": [
+      {
+        "label": "Atrito retira energia mecânica do bloco; Variação de Emec: 0 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Que fontes de geração elétrica compartilham o mesmo princípio final, e qual delas é a exceção? Selecionado: Hidrelétrica",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+    "state": "choice-0",
+    "issues": [
+      {
+        "label": "Que fontes de geração elétrica compartilham o mesmo princípio final, e qual delas é a exceção? Selecionado: Hidrelétrica",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+    "state": "choice-1",
+    "issues": [
+      {
+        "label": "Que fontes de geração elétrica compartilham o mesmo princípio final, e qual delas é a exceção? Selecionado: Termelétrica",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+    "state": "choice-2",
+    "issues": [
+      {
+        "label": "Que fontes de geração elétrica compartilham o mesmo princípio final, e qual delas é a exceção? Selecionado: Eólica",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+    "state": "choice-3",
+    "issues": [
+      {
+        "label": "Que fontes de geração elétrica compartilham o mesmo princípio final, e qual delas é a exceção? Selecionado: Solar fotovoltaica",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+    "state": "choice-4",
+    "issues": [
+      {
+        "label": "Que fontes de geração elétrica compartilham o mesmo princípio final, e qual delas é a exceção? Selecionado: Nuclear",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+    "state": "keyboard-pan",
+    "issues": [
+      {
+        "label": "Que fontes de geração elétrica compartilham o mesmo princípio final, e qual delas é a exceção? Selecionado: Nuclear",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-estatica",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Translação: a resultante de todas as forças que atuam sobre o corpo precisa ser nula",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-estatica",
+    "state": "choice-0",
+    "issues": [
+      {
+        "label": "Translação: a resultante de todas as forças que atuam sobre o corpo precisa ser nula",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-estatica",
+    "state": "choice-1",
+    "issues": [
+      {
+        "label": "Rotação: a resultante de todos os torques em relação a qualquer ponto também precisa ser nula",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-estatica",
+    "state": "choice-2",
+    "issues": [
+      {
+        "label": "Um critério só não basta: forças perfeitamente equilibradas ainda podem deixar o corpo girar, se estiverem aplicadas em pontos diferentes de forma a criar torque resultante",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-estatica",
+    "state": "keyboard-pan",
+    "issues": [
+      {
+        "label": "Um critério só não basta: forças perfeitamente equilibradas ainda podem deixar o corpo girar, se estiverem aplicadas em pontos diferentes de forma a criar torque resultante",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Como a dilatação superficial e a volumétrica se derivam diretamente da dilatação linear? — Todas as relações visíveis",
+        "clipped": [
+          "Expansão exagerada no desenho; coeficientes positivos neste exemplo."
+        ],
+        "collisions": [
+          [
+            "Sólido isotrópico",
+            "|αΔT| ≪ 1"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+    "state": "choice-0",
+    "issues": [
+      {
+        "label": "Como a dilatação superficial e a volumétrica se derivam diretamente da dilatação linear? — Relação em foco: Linear",
+        "clipped": [
+          "Expansão exagerada no desenho; coeficientes positivos neste exemplo."
+        ],
+        "collisions": [
+          [
+            "Sólido isotrópico",
+            "|αΔT| ≪ 1"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+    "state": "choice-1",
+    "issues": [
+      {
+        "label": "Como a dilatação superficial e a volumétrica se derivam diretamente da dilatação linear? — Relação em foco: Superficial",
+        "clipped": [
+          "Expansão exagerada no desenho; coeficientes positivos neste exemplo."
+        ],
+        "collisions": [
+          [
+            "Sólido isotrópico",
+            "|αΔT| ≪ 1"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+    "state": "choice-2",
+    "issues": [
+      {
+        "label": "Como a dilatação superficial e a volumétrica se derivam diretamente da dilatação linear? — Relação em foco: Volumétrica",
+        "clipped": [
+          "Expansão exagerada no desenho; coeficientes positivos neste exemplo."
+        ],
+        "collisions": [
+          [
+            "Sólido isotrópico",
+            "|αΔT| ≪ 1"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+    "state": "keyboard-pan",
+    "issues": [
+      {
+        "label": "Como a dilatação superficial e a volumétrica se derivam diretamente da dilatação linear? — Relação em foco: Volumétrica",
+        "clipped": [
+          "Expansão exagerada no desenho; coeficientes positivos neste exemplo."
+        ],
+        "collisions": [
+          [
+            "Sólido isotrópico",
+            "|αΔT| ≪ 1"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Calor e trabalho mudam a energia interna; ΔU: 7 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Calor e trabalho mudam a energia interna; ΔU: 16 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Calor e trabalho mudam a energia interna; ΔU: -4 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica",
+    "state": "slider-0-zero",
+    "issues": [
+      {
+        "label": "Calor e trabalho mudam a energia interna; ΔU: 12 J",
+        "clipped": [],
+        "collisions": [],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Máquina térmica transforma parte do calor em trabalho; Rendimento: 60%",
+        "clipped": [],
+        "collisions": [
+          [
+            "T(K)",
+            "600"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Máquina térmica transforma parte do calor em trabalho; Rendimento: 95%",
+        "clipped": [],
+        "collisions": [
+          [
+            "T(K)",
+            "600"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Máquina térmica transforma parte do calor em trabalho; Rendimento: 10%",
+        "clipped": [],
+        "collisions": [
+          [
+            "T(K)",
+            "600"
+          ]
+        ],
+        "small": []
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Lente convergente: imagem real e invertida, objeto a 175 unidades",
+        "clipped": [],
+        "collisions": [
+          [
+            "2F′",
+            "imagem"
+          ]
+        ],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Lente convergente: imagem real e invertida, objeto a 175 unidades",
+        "clipped": [],
+        "collisions": [
+          [
+            "2F′",
+            "imagem"
+          ]
+        ],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Lente convergente: imagem real e invertida, objeto a 175 unidades",
+        "clipped": [],
+        "collisions": [
+          [
+            "2F′",
+            "imagem"
+          ]
+        ],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "slider-0-zero",
+    "issues": [
+      {
+        "label": "Lente convergente: imagem real e invertida, objeto a 175 unidades",
+        "clipped": [],
+        "collisions": [
+          [
+            "2F′",
+            "imagem"
+          ]
+        ],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "choice-0",
+    "issues": [
+      {
+        "label": "Lente convergente: imagem real e invertida, objeto a 175 unidades",
+        "clipped": [],
+        "collisions": [
+          [
+            "2F′",
+            "imagem"
+          ]
+        ],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "choice-1",
+    "issues": [
+      {
+        "label": "Lente divergente: imagem virtual e direita, objeto a 175 unidades",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "choice-2",
+    "issues": [
+      {
+        "label": "Lente divergente: imagem virtual e direita, objeto a 175 unidades",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "choice-3",
+    "issues": [
+      {
+        "label": "Lente divergente: imagem virtual e direita, objeto a 140 unidades",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "choice-4",
+    "issues": [
+      {
+        "label": "Lente divergente: imagem virtual e direita, objeto a 105 unidades",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "choice-5",
+    "issues": [
+      {
+        "label": "Lente divergente: imagem virtual e direita, objeto a 70 unidades",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "state": "choice-6",
+    "issues": [
+      {
+        "label": "Lente divergente: imagem virtual e direita, objeto a 42 unidades",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "LENTES / SIGA OS RAIOS",
+            "size": 9.230681818181818
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 5 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = 0,2 m · foco real à direita",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 5 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = 0,2 m · foco real à direita",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência -0,63 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = -1,6 m · F′ fora da janela",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-1-min",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 5 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = 0,2 m · foco real à direita",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-1-max",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 2 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = 0,5 m · foco real à direita",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-2-min",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 0 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "V = 0: sem foco finito",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-2-max",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 10 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = 0,1 m · foco real à direita",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-2-zero",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 5 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = 0,2 m · foco real à direita",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-3-min",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 5 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = 0,2 m · foco real à direita",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-3-max",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 5 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = 0,2 m · foco real à direita",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "state": "slider-3-zero",
+    "issues": [
+      {
+        "label": "Lente equivalente com vergência 5 por metro",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "FABRICANTE / ASSOCIAÇÃO EM CONTATO",
+            "size": 9.230357142857143
+          },
+          {
+            "text": "f = 0,2 m · foco real à direita",
+            "size": 10.384151785714286
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Onda eletromagnética: campos E e B transversais à propagação",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DOIS CAMPOS TRANSVERSAIS",
+            "size": 9.230232558139535
+          },
+          {
+            "text": "y · E",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "z · B",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "perspectiva · E ⟂ B ⟂ x · em fase",
+            "size": 10.384011627906977
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Onda eletromagnética: campos E e B transversais à propagação",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DOIS CAMPOS TRANSVERSAIS",
+            "size": 9.230232558139535
+          },
+          {
+            "text": "y · E",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "z · B",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "perspectiva · E ⟂ B ⟂ x · em fase",
+            "size": 10.384011627906977
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Onda eletromagnética: campos E e B transversais à propagação",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DOIS CAMPOS TRANSVERSAIS",
+            "size": 9.230232558139535
+          },
+          {
+            "text": "y · E",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "z · B",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "perspectiva · E ⟂ B ⟂ x · em fase",
+            "size": 10.384011627906977
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "state": "slider-1-min",
+    "issues": [
+      {
+        "label": "Onda eletromagnética: campos E e B transversais à propagação",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DOIS CAMPOS TRANSVERSAIS",
+            "size": 9.230232558139535
+          },
+          {
+            "text": "y · E",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "z · B",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "perspectiva · E ⟂ B ⟂ x · em fase",
+            "size": 10.384011627906977
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "state": "slider-1-max",
+    "issues": [
+      {
+        "label": "Onda eletromagnética: campos E e B transversais à propagação",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DOIS CAMPOS TRANSVERSAIS",
+            "size": 9.230232558139535
+          },
+          {
+            "text": "y · E",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "z · B",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "perspectiva · E ⟂ B ⟂ x · em fase",
+            "size": 10.384011627906977
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "state": "slider-2-min",
+    "issues": [
+      {
+        "label": "Onda eletromagnética: campos E e B transversais à propagação",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DOIS CAMPOS TRANSVERSAIS",
+            "size": 9.230232558139535
+          },
+          {
+            "text": "y · E",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "z · B",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "perspectiva · E ⟂ B ⟂ x · em fase",
+            "size": 10.384011627906977
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "state": "slider-2-max",
+    "issues": [
+      {
+        "label": "Onda eletromagnética: campos E e B transversais à propagação",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DOIS CAMPOS TRANSVERSAIS",
+            "size": 9.230232558139535
+          },
+          {
+            "text": "y · E",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "z · B",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "perspectiva · E ⟂ B ⟂ x · em fase",
+            "size": 10.384011627906977
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "state": "slider-2-zero",
+    "issues": [
+      {
+        "label": "Onda eletromagnética: campos E e B transversais à propagação",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DOIS CAMPOS TRANSVERSAIS",
+            "size": 9.230232558139535
+          },
+          {
+            "text": "y · E",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "z · B",
+            "size": 10.384011627906977
+          },
+          {
+            "text": "perspectiva · E ⟂ B ⟂ x · em fase",
+            "size": 10.384011627906977
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-intensidade-sonora",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "A intensidade sonora se espalha pela área; Intensidade I: 0,1592 W/m²",
+        "clipped": [],
+        "collisions": [
+          [
+            "β (dB)",
+            "120"
+          ]
+        ],
+        "small": [
+          {
+            "text": "A = 4πr²",
+            "size": 10.24375
+          },
+          {
+            "text": "50,3 m²",
+            "size": 10.24375
+          },
+          {
+            "text": "I = P/A",
+            "size": 10.24375
+          },
+          {
+            "text": "0,1592 W/m²",
+            "size": 10.24375
+          },
+          {
+            "text": "β = 112 dB",
+            "size": 10.24375
+          },
+          {
+            "text": "β (dB)",
+            "size": 9.3125
+          },
+          {
+            "text": "100",
+            "size": 8.38125
+          },
+          {
+            "text": "110",
+            "size": 8.38125
+          },
+          {
+            "text": "120",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "2",
+            "size": 8.38125
+          },
+          {
+            "text": "3",
+            "size": 8.38125
+          },
+          {
+            "text": "4",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "6",
+            "size": 8.38125
+          },
+          {
+            "text": "7",
+            "size": 8.38125
+          },
+          {
+            "text": "8",
+            "size": 8.38125
+          },
+          {
+            "text": "r (m)",
+            "size": 9.3125
+          },
+          {
+            "text": "β = 10 log₁₀(I/I₀) · I₀ = 10⁻¹² W/m²",
+            "size": 8.38125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-intensidade-sonora",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "A intensidade sonora se espalha pela área; Intensidade I: 0,6366 W/m²",
+        "clipped": [],
+        "collisions": [
+          [
+            "β (dB)",
+            "120"
+          ]
+        ],
+        "small": [
+          {
+            "text": "A = 4πr²",
+            "size": 10.24375
+          },
+          {
+            "text": "12,6 m²",
+            "size": 10.24375
+          },
+          {
+            "text": "I = P/A",
+            "size": 10.24375
+          },
+          {
+            "text": "0,6366 W/m²",
+            "size": 10.24375
+          },
+          {
+            "text": "β = 118 dB",
+            "size": 10.24375
+          },
+          {
+            "text": "β (dB)",
+            "size": 9.3125
+          },
+          {
+            "text": "100",
+            "size": 8.38125
+          },
+          {
+            "text": "110",
+            "size": 8.38125
+          },
+          {
+            "text": "120",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "2",
+            "size": 8.38125
+          },
+          {
+            "text": "3",
+            "size": 8.38125
+          },
+          {
+            "text": "4",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "6",
+            "size": 8.38125
+          },
+          {
+            "text": "7",
+            "size": 8.38125
+          },
+          {
+            "text": "8",
+            "size": 8.38125
+          },
+          {
+            "text": "r (m)",
+            "size": 9.3125
+          },
+          {
+            "text": "β = 10 log₁₀(I/I₀) · I₀ = 10⁻¹² W/m²",
+            "size": 8.38125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-intensidade-sonora",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "A intensidade sonora se espalha pela área; Intensidade I: 0,0099 W/m²",
+        "clipped": [],
+        "collisions": [
+          [
+            "β (dB)",
+            "120"
+          ]
+        ],
+        "small": [
+          {
+            "text": "A = 4πr²",
+            "size": 10.24375
+          },
+          {
+            "text": "804,2 m²",
+            "size": 10.24375
+          },
+          {
+            "text": "I = P/A",
+            "size": 10.24375
+          },
+          {
+            "text": "0,0099 W/m²",
+            "size": 10.24375
+          },
+          {
+            "text": "β = 100 dB",
+            "size": 10.24375
+          },
+          {
+            "text": "β (dB)",
+            "size": 9.3125
+          },
+          {
+            "text": "100",
+            "size": 8.38125
+          },
+          {
+            "text": "110",
+            "size": 8.38125
+          },
+          {
+            "text": "120",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "2",
+            "size": 8.38125
+          },
+          {
+            "text": "3",
+            "size": 8.38125
+          },
+          {
+            "text": "4",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "6",
+            "size": 8.38125
+          },
+          {
+            "text": "7",
+            "size": 8.38125
+          },
+          {
+            "text": "8",
+            "size": 8.38125
+          },
+          {
+            "text": "r (m)",
+            "size": 9.3125
+          },
+          {
+            "text": "β = 10 log₁₀(I/I₀) · I₀ = 10⁻¹² W/m²",
+            "size": 8.38125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Difração, polarização e ressonância: três mecanismos; Primeiro mínimo de difração: 90°",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DIFRAÇÃO · FENDA ÚNICA",
+            "size": 8.846875
+          },
+          {
+            "text": "frentes planas →",
+            "size": 10.24375
+          },
+          {
+            "text": "θ = 90°",
+            "size": 10.24375
+          },
+          {
+            "text": "ondas se espalham",
+            "size": 9.3125
+          },
+          {
+            "text": "POLARIZAÇÃO · ONDA TRANSVERSAL",
+            "size": 8.846875
+          },
+          {
+            "text": "E varia",
+            "size": 9.3125
+          },
+          {
+            "text": "polarizador",
+            "size": 10.24375
+          },
+          {
+            "text": "analisador: 45°",
+            "size": 10.24375
+          },
+          {
+            "text": "I₀: após filtro 1 · eixos vistos de frente",
+            "size": 9.3125
+          },
+          {
+            "text": "RESSONÂNCIA · OSCILADOR FORÇADO",
+            "size": 8.846875
+          },
+          {
+            "text": "F₀ cos(2πft)",
+            "size": 10.24375
+          },
+          {
+            "text": "f/f₀ = 1 · A = 5 A₀",
+            "size": 10.24375
+          },
+          {
+            "text": "A/A₀",
+            "size": 9.3125
+          },
+          {
+            "text": "f/f₀",
+            "size": 9.3125
+          },
+          {
+            "text": "0,5",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "1,5",
+            "size": 8.38125
+          },
+          {
+            "text": "0",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "amortecimento: ζ = 0,1 · A₀ = F₀/k",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Difração, polarização e ressonância: três mecanismos; Primeiro mínimo de difração: Sem primeiro mínimo (a < λ)",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DIFRAÇÃO · FENDA ÚNICA",
+            "size": 8.846875
+          },
+          {
+            "text": "frentes planas →",
+            "size": 10.24375
+          },
+          {
+            "text": "a &lt; λ: sem mínimo",
+            "size": 10.24375
+          },
+          {
+            "text": "ondas se espalham",
+            "size": 9.3125
+          },
+          {
+            "text": "POLARIZAÇÃO · ONDA TRANSVERSAL",
+            "size": 8.846875
+          },
+          {
+            "text": "E varia",
+            "size": 9.3125
+          },
+          {
+            "text": "polarizador",
+            "size": 10.24375
+          },
+          {
+            "text": "analisador: 45°",
+            "size": 10.24375
+          },
+          {
+            "text": "I₀: após filtro 1 · eixos vistos de frente",
+            "size": 9.3125
+          },
+          {
+            "text": "RESSONÂNCIA · OSCILADOR FORÇADO",
+            "size": 8.846875
+          },
+          {
+            "text": "F₀ cos(2πft)",
+            "size": 10.24375
+          },
+          {
+            "text": "f/f₀ = 1 · A = 5 A₀",
+            "size": 10.24375
+          },
+          {
+            "text": "A/A₀",
+            "size": 9.3125
+          },
+          {
+            "text": "f/f₀",
+            "size": 9.3125
+          },
+          {
+            "text": "0,5",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "1,5",
+            "size": 8.38125
+          },
+          {
+            "text": "0",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "amortecimento: ζ = 0,1 · A₀ = F₀/k",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Difração, polarização e ressonância: três mecanismos; Primeiro mínimo de difração: 11,54°",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DIFRAÇÃO · FENDA ÚNICA",
+            "size": 8.846875
+          },
+          {
+            "text": "frentes planas →",
+            "size": 10.24375
+          },
+          {
+            "text": "θ = 11,54°",
+            "size": 10.24375
+          },
+          {
+            "text": "ondas se espalham",
+            "size": 9.3125
+          },
+          {
+            "text": "POLARIZAÇÃO · ONDA TRANSVERSAL",
+            "size": 8.846875
+          },
+          {
+            "text": "E varia",
+            "size": 9.3125
+          },
+          {
+            "text": "polarizador",
+            "size": 10.24375
+          },
+          {
+            "text": "analisador: 45°",
+            "size": 10.24375
+          },
+          {
+            "text": "I₀: após filtro 1 · eixos vistos de frente",
+            "size": 9.3125
+          },
+          {
+            "text": "RESSONÂNCIA · OSCILADOR FORÇADO",
+            "size": 8.846875
+          },
+          {
+            "text": "F₀ cos(2πft)",
+            "size": 10.24375
+          },
+          {
+            "text": "f/f₀ = 1 · A = 5 A₀",
+            "size": 10.24375
+          },
+          {
+            "text": "A/A₀",
+            "size": 9.3125
+          },
+          {
+            "text": "f/f₀",
+            "size": 9.3125
+          },
+          {
+            "text": "0,5",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "1,5",
+            "size": 8.38125
+          },
+          {
+            "text": "0",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "amortecimento: ζ = 0,1 · A₀ = F₀/k",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "state": "slider-1-min",
+    "issues": [
+      {
+        "label": "Difração, polarização e ressonância: três mecanismos; Primeiro mínimo de difração: 90°",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DIFRAÇÃO · FENDA ÚNICA",
+            "size": 8.846875
+          },
+          {
+            "text": "frentes planas →",
+            "size": 10.24375
+          },
+          {
+            "text": "θ = 90°",
+            "size": 10.24375
+          },
+          {
+            "text": "ondas se espalham",
+            "size": 9.3125
+          },
+          {
+            "text": "POLARIZAÇÃO · ONDA TRANSVERSAL",
+            "size": 8.846875
+          },
+          {
+            "text": "E varia",
+            "size": 9.3125
+          },
+          {
+            "text": "polarizador",
+            "size": 10.24375
+          },
+          {
+            "text": "analisador: 0°",
+            "size": 10.24375
+          },
+          {
+            "text": "I₀: após filtro 1 · eixos vistos de frente",
+            "size": 9.3125
+          },
+          {
+            "text": "RESSONÂNCIA · OSCILADOR FORÇADO",
+            "size": 8.846875
+          },
+          {
+            "text": "F₀ cos(2πft)",
+            "size": 10.24375
+          },
+          {
+            "text": "f/f₀ = 1 · A = 5 A₀",
+            "size": 10.24375
+          },
+          {
+            "text": "A/A₀",
+            "size": 9.3125
+          },
+          {
+            "text": "f/f₀",
+            "size": 9.3125
+          },
+          {
+            "text": "0,5",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "1,5",
+            "size": 8.38125
+          },
+          {
+            "text": "0",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "amortecimento: ζ = 0,1 · A₀ = F₀/k",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "state": "slider-1-max",
+    "issues": [
+      {
+        "label": "Difração, polarização e ressonância: três mecanismos; Primeiro mínimo de difração: 90°",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DIFRAÇÃO · FENDA ÚNICA",
+            "size": 8.846875
+          },
+          {
+            "text": "frentes planas →",
+            "size": 10.24375
+          },
+          {
+            "text": "θ = 90°",
+            "size": 10.24375
+          },
+          {
+            "text": "ondas se espalham",
+            "size": 9.3125
+          },
+          {
+            "text": "POLARIZAÇÃO · ONDA TRANSVERSAL",
+            "size": 8.846875
+          },
+          {
+            "text": "E varia",
+            "size": 9.3125
+          },
+          {
+            "text": "polarizador",
+            "size": 10.24375
+          },
+          {
+            "text": "analisador: 90°",
+            "size": 10.24375
+          },
+          {
+            "text": "I₀: após filtro 1 · eixos vistos de frente",
+            "size": 9.3125
+          },
+          {
+            "text": "RESSONÂNCIA · OSCILADOR FORÇADO",
+            "size": 8.846875
+          },
+          {
+            "text": "F₀ cos(2πft)",
+            "size": 10.24375
+          },
+          {
+            "text": "f/f₀ = 1 · A = 5 A₀",
+            "size": 10.24375
+          },
+          {
+            "text": "A/A₀",
+            "size": 9.3125
+          },
+          {
+            "text": "f/f₀",
+            "size": 9.3125
+          },
+          {
+            "text": "0,5",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "1,5",
+            "size": 8.38125
+          },
+          {
+            "text": "0",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "amortecimento: ζ = 0,1 · A₀ = F₀/k",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "state": "slider-1-zero",
+    "issues": [
+      {
+        "label": "Difração, polarização e ressonância: três mecanismos; Primeiro mínimo de difração: 90°",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DIFRAÇÃO · FENDA ÚNICA",
+            "size": 8.846875
+          },
+          {
+            "text": "frentes planas →",
+            "size": 10.24375
+          },
+          {
+            "text": "θ = 90°",
+            "size": 10.24375
+          },
+          {
+            "text": "ondas se espalham",
+            "size": 9.3125
+          },
+          {
+            "text": "POLARIZAÇÃO · ONDA TRANSVERSAL",
+            "size": 8.846875
+          },
+          {
+            "text": "E varia",
+            "size": 9.3125
+          },
+          {
+            "text": "polarizador",
+            "size": 10.24375
+          },
+          {
+            "text": "analisador: 0°",
+            "size": 10.24375
+          },
+          {
+            "text": "I₀: após filtro 1 · eixos vistos de frente",
+            "size": 9.3125
+          },
+          {
+            "text": "RESSONÂNCIA · OSCILADOR FORÇADO",
+            "size": 8.846875
+          },
+          {
+            "text": "F₀ cos(2πft)",
+            "size": 10.24375
+          },
+          {
+            "text": "f/f₀ = 1 · A = 5 A₀",
+            "size": 10.24375
+          },
+          {
+            "text": "A/A₀",
+            "size": 9.3125
+          },
+          {
+            "text": "f/f₀",
+            "size": 9.3125
+          },
+          {
+            "text": "0,5",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "1,5",
+            "size": 8.38125
+          },
+          {
+            "text": "0",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "amortecimento: ζ = 0,1 · A₀ = F₀/k",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "state": "slider-2-min",
+    "issues": [
+      {
+        "label": "Difração, polarização e ressonância: três mecanismos; Primeiro mínimo de difração: 90°",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DIFRAÇÃO · FENDA ÚNICA",
+            "size": 8.846875
+          },
+          {
+            "text": "frentes planas →",
+            "size": 10.24375
+          },
+          {
+            "text": "θ = 90°",
+            "size": 10.24375
+          },
+          {
+            "text": "ondas se espalham",
+            "size": 9.3125
+          },
+          {
+            "text": "POLARIZAÇÃO · ONDA TRANSVERSAL",
+            "size": 8.846875
+          },
+          {
+            "text": "E varia",
+            "size": 9.3125
+          },
+          {
+            "text": "polarizador",
+            "size": 10.24375
+          },
+          {
+            "text": "analisador: 45°",
+            "size": 10.24375
+          },
+          {
+            "text": "I₀: após filtro 1 · eixos vistos de frente",
+            "size": 9.3125
+          },
+          {
+            "text": "RESSONÂNCIA · OSCILADOR FORÇADO",
+            "size": 8.846875
+          },
+          {
+            "text": "F₀ cos(2πft)",
+            "size": 10.24375
+          },
+          {
+            "text": "f/f₀ = 0,5 · A = 1,32 A₀",
+            "size": 10.24375
+          },
+          {
+            "text": "A/A₀",
+            "size": 9.3125
+          },
+          {
+            "text": "f/f₀",
+            "size": 9.3125
+          },
+          {
+            "text": "0,5",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "1,5",
+            "size": 8.38125
+          },
+          {
+            "text": "0",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "amortecimento: ζ = 0,1 · A₀ = F₀/k",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "state": "slider-2-max",
+    "issues": [
+      {
+        "label": "Difração, polarização e ressonância: três mecanismos; Primeiro mínimo de difração: 90°",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "DIFRAÇÃO · FENDA ÚNICA",
+            "size": 8.846875
+          },
+          {
+            "text": "frentes planas →",
+            "size": 10.24375
+          },
+          {
+            "text": "θ = 90°",
+            "size": 10.24375
+          },
+          {
+            "text": "ondas se espalham",
+            "size": 9.3125
+          },
+          {
+            "text": "POLARIZAÇÃO · ONDA TRANSVERSAL",
+            "size": 8.846875
+          },
+          {
+            "text": "E varia",
+            "size": 9.3125
+          },
+          {
+            "text": "polarizador",
+            "size": 10.24375
+          },
+          {
+            "text": "analisador: 45°",
+            "size": 10.24375
+          },
+          {
+            "text": "I₀: após filtro 1 · eixos vistos de frente",
+            "size": 9.3125
+          },
+          {
+            "text": "RESSONÂNCIA · OSCILADOR FORÇADO",
+            "size": 8.846875
+          },
+          {
+            "text": "F₀ cos(2πft)",
+            "size": 10.24375
+          },
+          {
+            "text": "f/f₀ = 1,5 · A = 0,78 A₀",
+            "size": 10.24375
+          },
+          {
+            "text": "A/A₀",
+            "size": 9.3125
+          },
+          {
+            "text": "f/f₀",
+            "size": 9.3125
+          },
+          {
+            "text": "0,5",
+            "size": 8.38125
+          },
+          {
+            "text": "1",
+            "size": 8.38125
+          },
+          {
+            "text": "1,5",
+            "size": 8.38125
+          },
+          {
+            "text": "0",
+            "size": 8.38125
+          },
+          {
+            "text": "5",
+            "size": 8.38125
+          },
+          {
+            "text": "amortecimento: ζ = 0,1 · A₀ = F₀/k",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
+    "state": "initial",
+    "issues": [
+      {
+        "label": "Absorção exige ΔE = hf; fotoelétrico exige hf ≥ φ; Energia por fóton: 2,48 eV",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "ÁTOMO · ABSORÇÃO DISCRETA",
+            "size": 8.846875
+          },
+          {
+            "text": "E₀ = 0",
+            "size": 9.3125
+          },
+          {
+            "text": "E₁ = 6h·10¹⁴ Hz",
+            "size": 9.3125
+          },
+          {
+            "text": "E₂ = 10h·10¹⁴ Hz",
+            "size": 9.3125
+          },
+          {
+            "text": "fóton incidente",
+            "size": 10.24375
+          },
+          {
+            "text": "hf = 2,48 eV",
+            "size": 10.24375
+          },
+          {
+            "text": "níveis sem escala · largura de linha desprezada",
+            "size": 9.3125
+          },
+          {
+            "text": "cada ajuste começa em E₀; sem níveis intermediários",
+            "size": 9.3125
+          },
+          {
+            "text": "METAL · EFEITO FOTOELÉTRICO",
+            "size": 8.846875
+          },
+          {
+            "text": "sem emissão",
+            "size": 10.24375
+          },
+          {
+            "text": "f aumenta Kₘáx; intensidade aumenta nº de fótons",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
+    "state": "slider-0-min",
+    "issues": [
+      {
+        "label": "Absorção exige ΔE = hf; fotoelétrico exige hf ≥ φ; Energia por fóton: 1,24 eV",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "ÁTOMO · ABSORÇÃO DISCRETA",
+            "size": 8.846875
+          },
+          {
+            "text": "E₀ = 0",
+            "size": 9.3125
+          },
+          {
+            "text": "E₁ = 6h·10¹⁴ Hz",
+            "size": 9.3125
+          },
+          {
+            "text": "E₂ = 10h·10¹⁴ Hz",
+            "size": 9.3125
+          },
+          {
+            "text": "fóton incidente",
+            "size": 10.24375
+          },
+          {
+            "text": "hf = 1,24 eV",
+            "size": 10.24375
+          },
+          {
+            "text": "níveis sem escala · largura de linha desprezada",
+            "size": 9.3125
+          },
+          {
+            "text": "cada ajuste começa em E₀; sem níveis intermediários",
+            "size": 9.3125
+          },
+          {
+            "text": "METAL · EFEITO FOTOELÉTRICO",
+            "size": 8.846875
+          },
+          {
+            "text": "sem emissão",
+            "size": 10.24375
+          },
+          {
+            "text": "f aumenta Kₘáx; intensidade aumenta nº de fótons",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
+    "state": "slider-0-max",
+    "issues": [
+      {
+        "label": "Absorção exige ΔE = hf; fotoelétrico exige hf ≥ φ; Energia por fóton: 4,96 eV",
+        "clipped": [],
+        "collisions": [],
+        "small": [
+          {
+            "text": "ÁTOMO · ABSORÇÃO DISCRETA",
+            "size": 8.846875
+          },
+          {
+            "text": "E₀ = 0",
+            "size": 9.3125
+          },
+          {
+            "text": "E₁ = 6h·10¹⁴ Hz",
+            "size": 9.3125
+          },
+          {
+            "text": "E₂ = 10h·10¹⁴ Hz",
+            "size": 9.3125
+          },
+          {
+            "text": "fóton incidente",
+            "size": 10.24375
+          },
+          {
+            "text": "hf = 4,96 eV",
+            "size": 10.24375
+          },
+          {
+            "text": "níveis sem escala · largura de linha desprezada",
+            "size": 9.3125
+          },
+          {
+            "text": "cada ajuste começa em E₀; sem níveis intermediários",
+            "size": 9.3125
+          },
+          {
+            "text": "METAL · EFEITO FOTOELÉTRICO",
+            "size": 8.846875
+          },
+          {
+            "text": "elétron ejetado",
+            "size": 9.3125
+          },
+          {
+            "text": "f aumenta Kₘáx; intensidade aumenta nº de fótons",
+            "size": 9.3125
+          }
+        ]
+      }
+    ]
+  }
+]

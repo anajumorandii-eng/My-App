@@ -1,4 +1,5 @@
 import React from 'react';
+import {PhysicsDrawingWindow} from './PhysicsDrawingWindow';
 import BoardShell from './BoardShell';
 import { NewtonLab } from './MechanismLab';
 import { boardPair } from './pair';
@@ -71,7 +72,7 @@ export default function NewtonBoard(props: BoardProps) {
       subtitle="O movimento muda quando a força resultante deixa de ser nula."
       condition={{ label: 'ideia central', value: 'ΣF = m·a' }}
       ariaLabel="Prancha ilustrada das três leis de Newton"
-      scene={<NewtonRadial emphasis={pair.emphasis} />}
+      scene={<PhysicsDrawingWindow><NewtonRadial emphasis={pair.emphasis} /></PhysicsDrawingWindow>}
       emphasis={pair.emphasis}
       left={{
         label: '1ª Lei · inércia',
@@ -91,7 +92,7 @@ export default function NewtonBoard(props: BoardProps) {
       rightSelected={pair.rightSelected}
       onSelectLeft={pair.selectLeft}
       onSelectRight={pair.selectRight}
-      equation={{ label: 'No elevador', general: 'N − P = m·a', condition: 'subindo', reduced: 'N > P' }}
+      equation={{ label: 'No elevador', general: 'N − P = m·a', condition: 'acelerando para cima', reduced: 'N > P' }}
       supports={
         <>
           <NewtonLab />

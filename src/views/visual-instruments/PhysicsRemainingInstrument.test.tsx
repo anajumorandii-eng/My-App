@@ -27,7 +27,7 @@ describe('instrumento de ondas e física moderna', () => {
       ['rope-boundary', 'summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas'],
       ['string-standing-wave', 'summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria'],
     ];
-    for (const [id, chapter] of chapters) { const Component = physicsRemainingInstrument(id); const view = render(<Component {...props(chapter)} />); expect(screen.getByRole('img')).toBeInTheDocument(); expect(screen.getByRole('slider')).toHaveAttribute('type', 'range'); view.unmount(); }
+    for (const [id, chapter] of chapters) { const Component = physicsRemainingInstrument(id); const view = render(<Component {...props(chapter)} />); expect(screen.getByRole('img')).toBeInTheDocument(); expect(screen.getByRole('slider', { name: id === 'diffraction' ? /a\/λ/i : undefined })).toHaveAttribute('type', 'range'); view.unmount(); }
   });
 
   it('troca a regra visual entre ligação fixa e livre de uma corda', () => {
@@ -126,4 +126,42 @@ it('mantém polos e vetor interno legíveis sobre o corpo preenchido do ímã', 
  const body=container.querySelector('[data-physics-system="magnet-field"] rect')!;
  expect(body.getAttribute('fill')).not.toBe('none');
  expect(body.getAttribute('fill')).toBe('var(--vs-burgundy)');
+});
+
+it('mostra difração, polarizadores e oscilador forçado estaticamente e opera seus extremos', () => {
+  const Component = physicsRemainingInstrument('diffraction');
+  const { container } = render(<Component {...props('summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia')} />);
+  expect(container.querySelector('[data-physics-system="diffraction"]')).toBeInTheDocument();
+  expect(container.querySelector('[data-physics-system="polarization"]')).toBeInTheDocument();
+  expect(container.querySelector('[data-physics-system="resonance"]')).toBeInTheDocument();
+  const analyzer = screen.getByRole('slider', { name: /ângulo do analisador/i });
+  for (const [angle, intensity] of [[0, '100%'], [90, '0%']] as const) {
+    fireEvent.change(analyzer, { target: { value: String(angle) } });
+    expect(container.querySelector('[data-physics-system="polarization"]')).toHaveTextContent(intensity);
+  }
+  const forcing = screen.getByRole('slider', { name: /frequência de excitação/i });
+  fireEvent.change(forcing, { target: { value: '1' } });
+  expect(container.querySelector('[data-physics-system="resonance"]')).toHaveTextContent('5 A₀');
+  expect(container.querySelector('[data-physics-system="resonance"] [data-resonance-drive]')).toBeInTheDocument();
+  for (const ratio of [0.5, 1, 5]) {
+    fireEvent.change(screen.getByRole('slider', { name: /a\/λ/i }), { target: { value: String(ratio) } });
+    expect(container.querySelector('[data-physics-system="diffraction"]')?.innerHTML).not.toMatch(/NaN|Infinity/);
+  }
+});
+
+it('absorve somente fóton ressonante e separa emissão fotoelétrica de transição discreta', () => {
+  const Component = physicsRemainingInstrument('quantum-photon');
+  const { container } = render(<Component {...props('summary-fisica-nocoes-basicas-de-fisica-quantica')} />);
+  for (let frequency = 3; frequency <= 12; frequency++) {
+    fireEvent.change(screen.getByRole('slider'), { target: { value: String(frequency) } });
+    const absorption = container.querySelector('[data-quantum-mechanism="absorption"]')!;
+    expect(absorption).toBeInTheDocument();
+    expect(absorption.querySelector('[data-quantum-transition]')).toHaveAttribute('data-quantum-transition', frequency === 6 ? 'E1' : frequency === 10 ? 'E2' : 'none');
+    const electron = absorption.querySelector('[data-bound-electron]')!;
+    expect(electron).toHaveAttribute('cy', frequency === 6 ? '110' : frequency === 10 ? '70' : '150');
+    const photoelectric = container.querySelector('[data-quantum-mechanism="photoelectric"]')!;
+    expect(photoelectric).toHaveAttribute('data-emission', frequency >= 8 ? 'true' : 'false');
+    expect(photoelectric).toHaveTextContent('φ = 3 eV');
+  }
+  expect(container.textContent).not.toContain('frequência maior → salto possível maior');
 });

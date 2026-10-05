@@ -2,7 +2,7 @@ import React from 'react';
 import { motion } from 'motion/react';
 import type { SceneEntry } from '../types';
 import { useSceneMotion } from '../useSceneMotion';
-import { FenomenoFrame, FOCO, type Cena, type CenaFenomeno } from './FenomenoFrame';
+import { FenomenoFrame, type Cena, type CenaFenomeno } from './FenomenoFrame';
 import './FisicaFenomenos.css';
 
 // "Estática" caía em `criterios-conjuntivos`, que só mostra cartões de texto:
@@ -51,7 +51,7 @@ function Estatica({ ativo, t }: Cena) {
     <defs><Ponta id="ff-ponta" /><Ponta id="ff-ponta-peso" cls="ff-ponta-azul" /><Ponta id="ff-ponta-giro" /></defs>
     {quadros.map((q) => {
       const ligado = q.nome === ativo;
-      return <motion.g key={q.nome} initial={false} animate={FOCO(ligado)} transition={t}>
+      return <motion.g key={q.nome} initial={false} style={{opacity:1}} animate={{opacity:1}} transition={t}>
         <rect x={q.x} y={40} width={148} height={230} rx="10" className={ligado ? 'qf-quadro qf-quadro--ativo' : 'qf-quadro'} />
         {q.nome.split(' ').length > 2
           ? <><text x={q.x + 10} y={60} className="qf-rotulo qf-rotulo--forte">Um critério só</text><text x={q.x + 10} y={74} className="qf-rotulo qf-rotulo--forte">não basta</text></>

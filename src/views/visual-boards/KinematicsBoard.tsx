@@ -1,4 +1,5 @@
 import React from 'react';
+import KinematicsConceptBoard from './KinematicsConceptBoard';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
@@ -59,6 +60,7 @@ function KinematicsScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nen
 
 export default function KinematicsBoard(props: BoardProps) {
   const par = boardPair(props);
+  if(props.map.summaryId==='summary-fisica-cinematica-escalar-conceitos-fundamentais') return <KinematicsConceptBoard {...props}/>;
   return (
     <BoardShell
       title="Velocidade por tempo"
