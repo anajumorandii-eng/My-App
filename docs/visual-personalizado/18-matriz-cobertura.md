@@ -16,8 +16,8 @@ outro assunto. O detalhe capítulo a capítulo está em
 | --- | ---: | ---: |
 | Experimento exato | 8 | 1,3% |
 | Prancha autoral | 43 | 7,0% |
-| Instrumento | 336 | 54,8% |
-| Cena validada | 226 | 36,9% |
+| Instrumento | 337 | 55,0% |
+| Cena validada | 225 | 36,7% |
 | Lacuna honesta | 0 | 0,0% |
 | **Total** | **613** | |
 
@@ -33,7 +33,7 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Língua Inglesa | 17 | 0 | 0 | 17 | 0 | 0 |
 | Redação | 58 | 1 | 0 | 57 | 0 | 0 |
 | Gramática | 26 | 1 | 0 | 25 | 0 | 0 |
-| Literatura | 37 | 1 | 0 | 33 | 3 | 0 |
+| Literatura | 37 | 1 | 0 | 34 | 2 | 0 |
 | Entendimento de Texto | 12 | 0 | 0 | 12 | 0 | 0 |
 | Matemática | 83 | 1 | 11 | 71 | 0 | 0 |
 | Química | 48 | 0 | 7 | 23 | 18 | 0 |
@@ -42,7 +42,7 @@ outro assunto. O detalhe capítulo a capítulo está em
 
 ## Capítulos com mais de um candidato
 
-68 capítulos têm mais de um artefato registrado. A seleção continua exclusiva: vence o primeiro da ordem acima.
+69 capítulos têm mais de um artefato registrado. A seleção continua exclusiva: vence o primeiro da ordem acima.
 
 | Capítulo | Matéria | Vence | Perde |
 | --- | --- | --- | --- |
@@ -109,6 +109,7 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Vanguardas Artísticas | Literatura | Instrumento (vanguards) | Cena validada (tipologia) |
 | Fernando Pessoa | Literatura | Instrumento (fernando-pessoa) | Cena validada (tipologia) |
 | Segunda Geração Modernista: Prosa | Literatura | Instrumento (modernism-second-prose) | Cena validada (contraste-de-posicoes) |
+| Poesia Brasileira: 1960-1980 | Literatura | Instrumento (poetry-1960-1980) | Cena validada (tipologia) |
 | Evolução dos Modelos Atômicos | Química | Prancha autoral (modelos-atomicos) | Cena validada (cadeia-de-derivacao) |
 | Ligações Químicas e Alotropia | Química | Prancha autoral (ligacoes) | Cena validada (tipologia) |
 | Equações Iônicas e outras Teorias para Ácidos e Bases | Química | Prancha autoral (acido-base) | Cena validada (cadeia-de-derivacao) |

@@ -1,6 +1,21 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — Entrega H/Machado e Modernismo, 05/10/2026
+## Estado mais recente — Entrega I/Literatura de 45 a 1980, 05/10/2026
+
+A Entrega H foi integrada na PR #264, e o teste instável do Plano diário que
+derrubou o CI da main depois dela foi corrigido na PR #265. A branch
+`fix/entrega-i-literatura-45-80` trata sete capítulos LG3 (Graciliano, João
+Cabral, Clarice, Guimarães Rosa, Poesia Concreta, poesia e prosa de 1960-1980),
+com texto e operação autoral juntos. Sem merge automático.
+Evidências: [Entrega I](visual-integral-2026-10-05/entrega-i/README.md).
+
+Fila na proposta: 195 achados tratados, 103 pendentes e 315 preservados.
+Conteúdo: 527 revisões 2, duas revisões 3, 83 pendentes (Literatura 6,
+Redação 58, Sociologia 19). Cobertura: 8 experimentos, 43 pranchas, 337
+instrumentos, 225 cenas, zero lacunas; aprovação formal não promovida.
+Próximo passo: os 6 restantes de LG3, depois Humanas/Redação.
+
+## Registro — Entrega H/Machado e Modernismo, 05/10/2026
 
 A Entrega G foi integrada na PR #263. A branch
 `fix/entrega-h-literatura-modernismo` trata oito capítulos LG3 (Machado,

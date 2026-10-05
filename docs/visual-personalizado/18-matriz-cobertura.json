@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 8,
     "board": 43,
-    "instrument": 336,
-    "scene": 226,
+    "instrument": 337,
+    "scene": 225,
     "fallback": 0
   },
-  "contested": 68,
+  "contested": 69,
   "subjects": [
     {
       "subject": "Física",
@@ -103,8 +103,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 33,
-        "scene": 3,
+        "instrument": 34,
+        "scene": 2,
         "fallback": 0
       }
     },
@@ -3676,9 +3676,14 @@
       "id": "summary-literatura-poesia-brasileira-1960-1980",
       "subject": "Literatura",
       "title": "Poesia Brasileira: 1960-1980",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "poetry-1960-1980",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-literatura-prosa-brasileira-1960-1980",

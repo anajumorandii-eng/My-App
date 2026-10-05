@@ -33,6 +33,13 @@ const chapters = [
   ['summary-literatura-segunda-geracao-modernista-prosa', 'modernism-second-prose'],
   ['summary-literatura-fernando-pessoa', 'fernando-pessoa'],
   ['summary-literatura-carlos-drummond-de-andrade', 'carlos-drummond'],
+  ['summary-literatura-graciliano-ramos', 'graciliano-ramos'],
+  ['summary-literatura-joao-cabral-de-melo-neto', 'joao-cabral'],
+  ['summary-literatura-clarice-lispector', 'clarice-lispector'],
+  ['summary-literatura-guimaraes-rosa', 'guimaraes-rosa'],
+  ['summary-literatura-poesia-concreta', 'concrete-poetry'],
+  ['summary-literatura-poesia-brasileira-1960-1980', 'poetry-1960-1980'],
+  ['summary-literatura-prosa-brasileira-1960-1980', 'prose-1960-1980'],
 ].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
