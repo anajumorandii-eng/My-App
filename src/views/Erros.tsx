@@ -135,7 +135,7 @@ export default function Erros() {
         <span>ANÁLISE</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--action-primary)] text-[var(--text-inverse)]">
             <BookX className="w-3 h-3" />
           </span>
           DIAGNÓSTICO
@@ -198,7 +198,7 @@ export default function Erros() {
 
         <button
           onClick={() => setShowForm((s) => !s)}
-          className="inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--primary)] text-[var(--ink-on-primary)] hover:opacity-90 transition-opacity"
+          className="inline-flex items-center px-3.5 py-1.5 rounded-lg text-xs font-semibold bg-[var(--action-primary)] text-[var(--text-inverse)] hover:bg-action-primary-hover transition-colors"
         >
           <Plus className="w-3.5 h-3.5 mr-1.5" />
           Registrar erro
@@ -251,7 +251,7 @@ export default function Erros() {
             <button
               onClick={addLog}
               disabled={!form.notes.trim()}
-              className="px-4 py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+              className="px-4 py-2 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
             >
               Salvar Registro
             </button>

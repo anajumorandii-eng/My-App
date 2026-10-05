@@ -166,7 +166,7 @@ export default function AgendaView() {
       <section aria-labelledby="semana-recorrente" className="space-y-3">
         <div>
           <h2 id="semana-recorrente" className="text-xl font-semibold">Semana recorrente</h2>
-          <p className="text-sm text-zinc-500">Compromissos são apenas um resumo; edite as janelas de estudo.</p>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">Compromissos são apenas um resumo; edite as janelas de estudo.</p>
         </div>
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {WEEKDAYS.map(({ key, label }, index) => (
@@ -196,7 +196,7 @@ export default function AgendaView() {
       <section aria-labelledby="excecao-data" className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 space-y-4">
         <div>
           <h2 id="excecao-data" className="text-xl font-semibold">Exceção por data</h2>
-          <p className="text-sm text-zinc-500">Aplica-se somente ao dia escolhido e não altera a semana recorrente.</p>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">Aplica-se somente ao dia escolhido e não altera a semana recorrente.</p>
         </div>
         <div className="grid gap-3 sm:grid-cols-2 lg:grid-cols-4">
           <Field label="Data da exceção"><input aria-label="Data da exceção" type="date" value={exceptionForm.localDate} onChange={(event) => updateException('localDate', event.target.value)} className="field" /></Field>
@@ -224,7 +224,7 @@ export default function AgendaView() {
 
       <section aria-labelledby="disponibilidade-efetiva" className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 space-y-3">
         <div className="flex items-center justify-between gap-4">
-          <div><h2 id="disponibilidade-efetiva" className="text-xl font-semibold">Disponibilidade efetiva</h2><p className="text-sm text-zinc-500">Para {localDate}</p></div>
+          <div><h2 id="disponibilidade-efetiva" className="text-xl font-semibold">Disponibilidade efetiva</h2><p className="text-sm text-zinc-600 dark:text-zinc-400">Para {localDate}</p></div>
           <strong className="text-indigo-600 dark:text-indigo-400">{availability?.totalMinutes ?? 0} min</strong>
         </div>
         <p role="status" className="text-sm text-zinc-600 dark:text-zinc-400">Calendar: {availability?.warnings.some(({ code }) => code === 'calendar-disconnected') ? 'desconectado' : availability?.warnings.some(({ code }) => code === 'calendar-failed') ? 'falha na consulta' : availability?.status === 'ready' ? 'exceções aplicadas' : 'indisponível'}</p>
@@ -250,5 +250,5 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
 function WeekdayCard({ label, entries, onChange, onAdd, onRemove }: { label: string; entries: ScheduleEntry[]; onChange: (entryId: string, field: 'start' | 'end', value: string) => void; onAdd: () => void; onRemove: (entryId: string) => void }) {
   const studyEntries = entries.filter((entry) => entry.kind === 'study_window');
   const protectedEntries = entries.filter((entry) => entry.kind !== 'study_window');
-  return <article className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3 space-y-3"><h3 className="font-semibold">{label}</h3><ul className="text-sm text-zinc-500 space-y-1">{protectedEntries.map((entry) => <li key={entry.id}>{entry.label}: {entry.start}–{entry.end}{entry.isEstimate && <span className="ml-2 text-amber-700 dark:text-amber-300">Estimativa editável</span>}</li>)}</ul>{studyEntries.map((entry) => <div key={entry.id} className="grid grid-cols-2 gap-2"><Field label={`Início de ${label.toLowerCase()}`}><input aria-label={`Início de ${label.toLowerCase()}`} type="time" value={entry.start} onChange={(event) => onChange(entry.id, 'start', event.target.value)} className="field" /></Field><Field label={`Fim de ${label.toLowerCase()}`}><input aria-label={`Fim de ${label.toLowerCase()}`} type="time" value={entry.end} onChange={(event) => onChange(entry.id, 'end', event.target.value)} className="field" /></Field>{entry.isEstimate && <p className="col-span-2 text-xs text-amber-700 dark:text-amber-300">Estimativa editável</p>}<button type="button" onClick={() => onRemove(entry.id)} className="col-span-2 text-sm text-red-700 dark:text-red-400">Remover janela</button></div>)}{studyEntries.length === 0 && <button type="button" onClick={onAdd} className="text-sm text-indigo-700 dark:text-indigo-300">Adicionar janela</button>}</article>;
+  return <article className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3 space-y-3"><h3 className="font-semibold">{label}</h3><ul className="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">{protectedEntries.map((entry) => <li key={entry.id}>{entry.label}: {entry.start}–{entry.end}{entry.isEstimate && <span className="ml-2 text-amber-700 dark:text-amber-300">Estimativa editável</span>}</li>)}</ul>{studyEntries.map((entry) => <div key={entry.id} className="grid grid-cols-2 gap-2"><Field label={`Início de ${label.toLowerCase()}`}><input aria-label={`Início de ${label.toLowerCase()}`} type="time" value={entry.start} onChange={(event) => onChange(entry.id, 'start', event.target.value)} className="field" /></Field><Field label={`Fim de ${label.toLowerCase()}`}><input aria-label={`Fim de ${label.toLowerCase()}`} type="time" value={entry.end} onChange={(event) => onChange(entry.id, 'end', event.target.value)} className="field" /></Field>{entry.isEstimate && <p className="col-span-2 text-xs text-amber-700 dark:text-amber-300">Estimativa editável</p>}<button type="button" onClick={() => onRemove(entry.id)} className="col-span-2 text-sm text-red-700 dark:text-red-400">Remover janela</button></div>)}{studyEntries.length === 0 && <button type="button" onClick={onAdd} className="text-sm text-indigo-700 dark:text-indigo-300">Adicionar janela</button>}</article>;
 }

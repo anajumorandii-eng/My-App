@@ -200,7 +200,7 @@ export default function AdminObras() {
         <p className="text-sm text-zinc-500 mb-4">{Object.keys(editionCounts).length} de {works.length} obras com PDF/edição enviada.</p>
       )}
       {works.length === 0 && (
-        <button disabled={busy} onClick={handleSeed} className="mb-4 bg-emerald-600 text-white rounded-lg px-3 py-1.5 text-sm disabled:opacity-50">
+        <button disabled={busy} onClick={handleSeed} className="mb-4 bg-action-primary text-text-inverse rounded-lg px-3 py-1.5 text-sm disabled:opacity-50">
           Semear as 18 obras do ciclo 2027 (Fase 0)
         </button>
       )}
@@ -250,7 +250,7 @@ export default function AdminObras() {
                     <li key={i}>{c.order}. {c.title} — págs. {c.pdfStartPage}-{c.pdfEndPage} <em>({c.extractionConfidence})</em></li>
                   ))}
                 </ul>
-                <button disabled={busy} onClick={handleConfirmUnits} className="mt-1 bg-emerald-600 text-white rounded-lg px-3 py-1">Confirmar e salvar unidades</button>
+                <button disabled={busy} onClick={handleConfirmUnits} className="mt-1 bg-action-primary text-text-inverse rounded-lg px-3 py-1">Confirmar e salvar unidades</button>
               </div>
             )}
           </div>

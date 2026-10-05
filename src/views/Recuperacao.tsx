@@ -68,7 +68,7 @@ function ScorePicker({
             type="button"
             onClick={() => onChange(n)}
             className="w-8 h-8 rounded-lg text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] transition-colors"
-            style={value === n ? { backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)', borderColor: 'var(--primary)' } : undefined}
+            style={value === n ? { backgroundColor: 'var(--action-primary)', color: 'var(--text-inverse)', borderColor: 'var(--action-primary)' } : undefined}
           >
             {n}
           </button>
@@ -228,7 +228,7 @@ function SupportLevelContent({
           <button
             onClick={fetchCorrection}
             disabled={loadingCorrection || !studentAnswer.trim()}
-            className="w-full flex items-center justify-center py-2 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
+            className="w-full flex items-center justify-center py-2 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
           >
             <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingCorrection ? 'animate-pulse' : ''}`} />
             {loadingCorrection ? 'Corrigindo com IA...' : 'Corrigir com IA'}
@@ -253,7 +253,7 @@ function SupportLevelContent({
                   disabled={recordedOutcome !== null || savingOutcome || (!!pendingOutcome && pendingOutcome.outcome !== value)}
                   onClick={() => void submitOutcome(value)}
                   className="px-3 py-1.5 rounded-lg border border-[var(--line)] bg-[var(--surface2)] text-xs font-semibold text-[var(--text)] disabled:opacity-60 transition-colors"
-                  style={recordedOutcome === value ? { backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)', borderColor: 'var(--primary)' } : undefined}
+                  style={recordedOutcome === value ? { backgroundColor: 'var(--action-primary)', color: 'var(--text-inverse)', borderColor: 'var(--action-primary)' } : undefined}
                 >
                   {label}
                 </button>
@@ -475,7 +475,7 @@ export default function Recuperacao() {
         <span>DECISÃO</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--action-primary)] text-[var(--text-inverse)]">
             <ListTodo className="w-3 h-3" />
           </span>
           FILA PONTE
@@ -600,7 +600,7 @@ export default function Recuperacao() {
                   type="button"
                   onClick={() => setFormState(n)}
                   className="px-2.5 py-1.5 rounded-lg text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)]"
-                  style={formState === n ? { backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)', borderColor: 'var(--primary)' } : undefined}
+                  style={formState === n ? { backgroundColor: 'var(--action-primary)', color: 'var(--text-inverse)', borderColor: 'var(--action-primary)' } : undefined}
                 >
                   {n} — {STATE_LABELS[n]}
                 </button>
@@ -620,7 +620,7 @@ export default function Recuperacao() {
           <button
             onClick={addToBacklog}
             disabled={!formTopicId}
-            className="w-full py-2.5 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
+            className="w-full py-2.5 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-xl text-xs font-semibold transition-opacity"
           >
             Adicionar à fila PONTE
           </button>
@@ -639,7 +639,7 @@ export default function Recuperacao() {
               <div className="flex items-center gap-2">
                 <span
                   className="text-[10px] font-mono font-bold px-2 py-0.5 rounded-full"
-                  style={{ backgroundColor: 'var(--primary)', color: 'var(--ink-on-primary)' }}
+                  style={{ backgroundColor: 'var(--action-primary)', color: 'var(--text-inverse)' }}
                 >
                   Fila {q}
                 </span>
@@ -800,7 +800,7 @@ export default function Recuperacao() {
                             <button
                               onClick={() => void recordManualSuccess(item)}
                               disabled={manualSavingId === item.id}
-                              className="px-3 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-lg text-xs font-semibold hover:opacity-90 disabled:opacity-50"
+                              className="px-3 py-1.5 bg-[var(--action-primary)] text-[var(--text-inverse)] rounded-lg text-xs font-semibold hover:bg-action-primary-hover disabled:opacity-50"
                             >
                               <CheckCircle2 className="w-3.5 h-3.5 inline mr-1" />
                               {manualSavingId === item.id ? 'Salvando...' : 'Registrar sucesso'}

@@ -1,0 +1,21 @@
+{
+  "date_utc": "2026-10-05",
+  "base_commit": "d7e895ba7853ffcb5e53adce1e16db7cade6326a",
+  "branch": "fix/auditoria-continuidade-acessibilidade",
+  "routes_before": 112,
+  "routes_after": 168,
+  "contrast_targets_before": 44,
+  "violations_after": 0,
+  "interaction_configurations": 8,
+  "contrast_pairs": 180,
+  "minimum_action_contrast": 4.689454980013464,
+  "node_tests": 922,
+  "vitest_tests": 1122,
+  "remaining_visual_chapters": 134,
+  "remaining_editorial_chapters": 114,
+  "limits": [
+    "Estados públicos/demonstração",
+    "Resultados axe incompletos exigem avaliação humana",
+    "Sem certificação Safari/iPad físico ou integrações reais autenticadas"
+  ]
+}

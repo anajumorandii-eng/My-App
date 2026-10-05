@@ -23,6 +23,7 @@ podem desaparecer.
 | `/redacao` | Escrita, reescrita, rubrica, bancas e checklist | `essayModule`, contratos de correção do tutor |
 | `/erros` | Caderno de erros, intervenções e hipótese assistida por IA | `userData`, `errorLabels`, `aiClient` |
 | `/resumos` | Catálogo, filtros, leitura, recuperação ativa e progresso | `interactiveSummaries`, `summaryEngine`, `useSummaryProgress` |
+| `/visual` | Prancha por capítulo, Explorar/Testar/Reconstruir, diagnóstico, zoom e evidência compartilhada com Resumos/Caderno | `visualRepresentation`, `visualStudy`, `useSummaryProgress`, `BoardShell` |
 | `/podcast` | Episódios, preferência de duração e reprodução/síntese de áudio | `usePodcastEpisodes`, `podcastAudio` |
 | `/tutor` | Tutoria socrática, explicação, correção, geração e revisão ativa | `tutorContracts`, `aiClient`, domínio do estudante |
 | `/laboratorio` | Métodos de estudo, filtros, experimentos e exemplos por IA | `useStudyMethods`, `aiClient` |

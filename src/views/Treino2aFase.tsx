@@ -179,7 +179,7 @@ export default function Treino2aFase() {
         <span>Estudar</span>
         <i />
         <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
-          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--primary)] text-[var(--ink-on-primary)]">
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--action-primary)] text-[var(--text-inverse)]">
             <SubjIcon className="w-3 h-3" />
           </span>
           DISCURSIVAS
@@ -372,7 +372,7 @@ export default function Treino2aFase() {
                 aria-label={isRunning ? 'Pausar cronômetro da questão' : 'Iniciar cronômetro da questão'}
                 onClick={() => setIsRunning((r) => !r)}
                 disabled={secondsLeft === 0}
-                className="flex items-center px-3 py-1.5 bg-[var(--primary)] text-[var(--ink-on-primary)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
+                className="flex items-center px-3 py-1.5 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
               >
                 {isRunning ? <Pause className="w-3.5 h-3.5" /> : <Play className="w-3.5 h-3.5" />}
               </button>
@@ -472,7 +472,7 @@ export default function Treino2aFase() {
 
               <button
                 onClick={() => setIndex((i) => i + 1)}
-                className="w-full py-2.5 bg-[var(--primary)] text-[var(--ink-on-primary)] rounded-xl font-semibold text-xs hover:opacity-90 transition-opacity"
+                className="w-full py-2.5 bg-[var(--action-primary)] text-[var(--text-inverse)] rounded-xl font-semibold text-xs hover:bg-action-primary-hover transition-colors"
               >
                 Próxima questão
               </button>

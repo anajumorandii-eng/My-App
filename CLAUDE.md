@@ -13,6 +13,26 @@ nada visível, então **deixe como estão**. A lista antes citava três das seis
 que era pior que não citar nenhuma: dava a entender que as outras podiam ser
 renomeadas.
 
+## Estado atual e precedência — auditoria de 05/10/2026
+
+Base confirmada com `origin/main`: `d7e895ba7853ffcb5e53adce1e16db7cade6326a`.
+A Entrega E/Gramática foi integrada na PR #260. A fonte operacional é
+`docs/PLANO-GERAL-CRIVO-2026-10-03.md` + `docs/FILA-VISUAL-2026-10-03.json`;
+as filas históricas da continuidade não são tarefas novas.
+
+- 613 capítulos com representação: 8 experimentos, 43 pranchas, 331 instrumentos
+  e 231 cenas; zero lacunas. Isso mede presença, não aprovação editorial.
+- 612 resumos profundos: 496 em revisão 2, dois em revisão 3 e 114 em revisão 1
+  (Literatura 37, Redação 58, Sociologia 19).
+- Fila: 164 achados tratados, 134 pendentes, 315 mecanismos preservados.
+- Inventário formal: 532 não revisados, 81 em validação, zero aprovações
+  registradas. Não promover aprovação por contagem ou teste automático.
+- Próxima entrega editorial/visual: LG3/Literatura (37), depois H2/H3,
+  R1/R2/R3 e A1. Defeitos confirmados de persistência/acessibilidade podem
+  receber prioridade, conforme o plano geral.
+- A personalização visual vigente abrange **todas as matérias**. O escopo antigo
+  limitado a Ciências foi substituído; seus números abaixo são históricos.
+
 ## Regras que não se negociam
 
 **O repositório é público.** As apostilas em PDF trazem, no rodapé de cada
@@ -59,14 +79,16 @@ git switch -c fix/nome-da-correcao
 | `npm run build` | Build de produção do cliente e bundle do servidor |
 
 Para conferir mudança visual, use Playwright com o Chromium já instalado no
-ambiente — **não rode `playwright install`**:
+ambiente — **não rode `playwright install`**. Nesta auditoria, o executável é
+`/usr/bin/chromium`; se indisponível, procure o build em `/opt/pw-browsers/`:
+
 
 ```js
 chromium.launch({ executablePath: '/opt/pw-browsers/chromium-<build>/chrome-linux/chrome',
                   args: ['--no-sandbox'] })
 ```
 
-O número do build muda conforme o ambiente e pode não bater com o que o
+O caminho e o número do build mudam conforme o ambiente e podem não bater com o que o
 `@playwright/test` do projeto espera — confira com `ls /opt/pw-browsers/` e passe
 o caminho explicitamente, em vez de deixar o Playwright procurar sozinho.
 
@@ -81,8 +103,10 @@ retrato é 834×1112, em paisagem 1366×900.
   comandos obrigatórios **falham se passando por sucesso**: `npm run lint` morre
   com `MODULE_NOT_FOUND` em vez de erro de tipo, e `npm test` para em
   `tsx: not found` sem rodar um teste sequer.
-- `settings.json` registra esse hook e pré-aprova comandos de leitura (lint,
-  teste, build, `git status`, `diff`, `log`). Nada que escreva entra na lista.
+- `settings.json` registra esse hook e autoriza instalação local (`npm install`,
+  `npm ci`), lint/testes/build e leitura Git (`status`, `diff`, `log`, `show`).
+  Instalação e build escrevem arquivos locais; a lista não autoriza push ou
+  merge. O fluxo de branch/PR vem da instrução explícita registrada acima.
 - `skills/` tem as 36 skills do projeto no formato que o Claude Code lê. Elas
   vivem também em `.agents/skills/`, que é o formato do Codex, e
   `skills-lock.json` continua sendo a fonte da verdade — o README de
@@ -126,11 +150,10 @@ mescla esse conteúdo com o currículo de `src/data/summaryCurriculum.ts` e atri
 estágio pedagógico e profundidade a cada seção, na ordem
 `intuicao, conceito, aplicacao, estrategia, exercicio`.
 
-**Os arrays `stages` e `depths` têm 5 posições.** Um capítulo com mais de 5
-seções sairia com estágio `undefined`; mexer no número de seções exige mexer
-nesse mapeamento também. Hoje **um** capítulo tem 6 seções e 612 têm 5 — e
-nenhum nó ficou sem estágio, então o risco não se materializou. Mas teste que
-fixa "5 nós" em vez de contar os nós do capítulo quebra nesse um.
+**Os arrays `stages` e `depths` têm 5 posições.** Os 612 registros de
+`deepSummaryContent.json` têm cinco seções. O catálogo interativo tem 613 IDs,
+incluindo COP30 fora desse corpus. Ao alterar a quantidade de seções, conferir
+seu estágio no catálogo aplicado; testes devem contar os nós do capítulo.
 
 ### Aprofundamento em curso
 
@@ -153,9 +176,9 @@ revisão no id das seções (`-editorial-v${rev}-`). **É isso que impede o
 progresso de leitura dos 612 capítulos de zerar** a cada mudança de texto: só o
 capítulo que mudou volta a pedir leitura. Ao reescrever, sempre suba o `rev`.
 
-Estado: 435 de 612 aprofundados — Biologia, Química, Física, Matemática,
-Geografia, História e Filosofia inteiras concluídas. Os demais seguem em
-rodadas, matéria por matéria (próxima: Sociologia).
+Estado confirmado: 498 de 612 com aprofundamento (496 em revisão 2 e dois
+em revisão 3). Restam Literatura (37), Redação (58) e Sociologia (19). Executar
+junto à fila visual por ID; LG3 é o próximo lote, sem repetir Gramática.
 
 ## Visual
 
@@ -198,13 +221,16 @@ uma prancha pegasse o nó 3 e outra o último, o mesmo estado apareceria em
 posições diferentes e a leitura de cor deixaria de significar o mesmo entre
 capítulos.
 
-Alvo: **Biologia, Física, Química e Matemática** — 288 dos 613 capítulos de
-`interactiveSummaries` (os 612 de `deepSummaryContent.json` são outra contagem,
-não a mesma). As demais matérias ficam de fora por decisão da Ana Júlia, e a
-razão é boa: "Uso da Crase" não tem fenômeno a desenhar.
+Escopo vigente: **613 capítulos de todas as matérias**, com artefato fiel ao
+mecanismo específico. Literatura e Gramática pedem operações de leitura e
+transformações em exemplos próprios. A decisão antiga limitada aos 288
+capítulos de Ciências/Matemática foi superada pela expansão e pelos lotes
+atuais; não serve para recusar as outras matérias.
 
-Estado: 27 pranchas cobrindo 39 dos 288 capítulos, 14 delas com anotação
-manuscrita. **Todas usam o `BoardShell`** —
+Registro histórico desta arquitetura: 27 pranchas cobriam 39 dos 288
+capítulos então priorizados, 14 com anotação manuscrita. O inventário atual é
+a matriz gerada, com 43 capítulos cuja representação primária é prancha.
+**As pranchas desse registro usavam o `BoardShell`** —
 a `AdiabaticBoard` era a última que não usava, escrita antes da casca existir, e
 por isso não recebia nenhuma melhoria feita nela.
 
@@ -222,7 +248,9 @@ escopo, precisam de outra resposta que não seja cena autoral.
 `Visual.tsx` que, sem prancha, descartava mapa, três modos e diagnóstico junto
 com a ilustração — em 576 dos 613 capítulos a aba inteira virava um parágrafo
 explicando que não havia nada. Hoje a tela resolve a prancha
-(`findBoard` → `findInstrument` → aviso) e renderiza o resto sempre.
+por `resolveVisualRepresentation` e renderiza o resto sempre. O resolvedor
+vigente prioriza experimento exato, prancha, instrumento e cena; cenas autorais
+dos IDs de História/Geografia em `HG_AUTHORED_IDS` têm precedência explícita.
 
 ### Pranchas manipuláveis
 
@@ -294,12 +322,11 @@ Newsreader e Inter ao servidor de fontes: a família caía calada no serif. Mesm
 família de defeito do `.webp` transparente — declarado, aparentemente certo, sem
 efeito. Ao mexer em tipografia aqui, confira que a família está no `<link>`.
 
-**No ambiente remoto o `fonts.googleapis.com` é bloqueado.** Nenhuma das três
-fontes carrega, então captura de tela feita aqui mostra fallback do sistema, não
-a tipografia real. Pior: `document.fonts` fica vazio e `document.fonts.check()`
-devolve `true` para qualquer família — é uma checagem que passa sempre. Para
-validar uma fonte nova, faça `curl` na URL do `<link>` e confira o
-`font-family` na resposta.
+**Fontes precisam ser conferidas por ambiente.** Houve sessões remotas em que
+`fonts.googleapis.com` estava bloqueado e as capturas usavam fallback. Não
+presuma que isso ainda ocorre. Se `document.fonts` está vazio,
+`document.fonts.check()` pode devolver `true` sem comprovar o carregamento.
+Confira a requisição, os FontFace carregados e a fonte efetiva nas capturas.
 
 ### Cadeia de conceitos
 
@@ -448,8 +475,10 @@ Nos fundos "Caderno" (padrão) e "Papel", `src/design-system/css/caderno.css`
 troca a linguagem de vidro e néon pela de caderno: cartão é folha, botão é
 carimbo de tinta, aba ativa é sublinhado. Ao criar componente novo, use
 `.ni-panel` e os tokens (`--surface-*`, `--action-primary`), não cor fixa: é
-por eles que o caderno chega à tela. Papel atrás de vidro foi recusado pela Ana
-Júlia como "não integrado".
+por eles que o caderno chega à tela. Controles preenchidos usam o par
+`--action-primary` / `--text-inverse`; `--primary` é acento decorativo e não
+assegura contraste com uma tinta constante. Papel atrás de vidro foi recusado
+pela Ana Júlia como "não integrado".
 
 Listas longas de filtro viram campos agrupados, não fileiras de chips: em
 "Todas", os tópicos são mais de sessenta e transbordam a tela.

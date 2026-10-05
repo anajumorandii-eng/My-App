@@ -1,5 +1,34 @@
 # CRIVO — continuidade operacional
 
+## Estado mais recente — auditoria e continuidade, 05/10/2026
+
+Base auditada e confirmada com `origin/main`:
+`d7e895ba7853ffcb5e53adce1e16db7cade6326a`. A Entrega E/Gramática está
+integrada em #260. Relatório atual:
+[AUDITORIA-GERAL-2026-10-05.md](AUDITORIA-GERAL-2026-10-05.md).
+
+A proposta `fix/auditoria-continuidade-acessibilidade` isola o cache de
+Resumos por UID, mantém a chave legada, ignora retornos de contas antigas e
+evita gravação remota sem leitura confirmada. Oito regressões passaram.
+Também trata as 44 combinações de contraste reproduzidas em 11 rotas,
+usando pares de tokens de ação/texto e tons auxiliares por tema. Não houve
+reset, migração ou escrita no histórico real.
+
+Validação: TypeScript, build e 2.044 testes gerais (922 Node + 1.122 Vitest);
+matrizes visual/qualidade sem delta; fila íntegra. Chromium: 168 aberturas de
+28 rotas em 390/834/1366 claro/escuro, sem violações automáticas, exceções ou
+overflow. Oito cenários de interação em 360/834, normal/reduzido, e 180 pares
+de cores/estados com contraste mínimo 4,69:1. Capturas/resultados no relatório.
+Resultados axe incompletos, Safari/iPad físico e serviços autenticados reais
+continuam sem certificação integral. Health público respondeu 200/OAuth
+configurado; não comprova o login nem o SHA do Cloud Run.
+
+Fila preservada: 134 achados visuais, 114 aprofundamentos, 613 IDs. Próxima
+entrega editorial/visual: LG3/Literatura (37), depois Humanas e Redação.
+Conferir a integração desta proposta e o delta antes de retomar; não repetir
+Gramática, Física ou História/Geografia. Branch/PR automática permanece
+autorizada, sem merge automático. Os registros abaixo são históricos.
+
 Este arquivo é a fonte curta de contexto do projeto. Ele existe para que sessões futuras trabalhem por **delta**, consultando o GitHub, sem baixar nem reanalisar o aplicativo inteiro.
 
 ## Regra de trabalho

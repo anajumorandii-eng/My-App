@@ -32,7 +32,9 @@
   --navigation-background: var(--amb-vidro-forte);
   /* Tinta da matéria: o acento escurecido até virar tinta legível no papel. */
   --tinta-materia: color-mix(in oklab, var(--amb-a-neon) 58%, #2e1f14);
-  --action-primary: var(--tinta-materia);
+  /* O carimbo com texto creme ficou em 4,09:1 no acento ciano do Hoje.
+     A tinta de ação tem mistura própria; o acento da matéria é preservado. */
+  --action-primary: color-mix(in oklab, var(--amb-a-neon) 50%, #2e1f14);
   --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 48%, #2e1f14);
   --action-primary-pressed: color-mix(in oklab, var(--amb-a-neon) 40%, #2e1f14);
   --text-inverse: #fdf7ea;
@@ -59,7 +61,7 @@
      acento vivo ele saía como bloco néon. Misturado ao sépia escuro, vira tinta
      da matéria, com letra creme (cerca de 5:1). */
   --action-primary: color-mix(in oklab, var(--amb-a-neon) 45%, #3a2c1e);
-  --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 52%, #3a2c1e);
+  --action-primary-hover: color-mix(in oklab, var(--amb-a-neon) 42%, #3a2c1e);
   --action-primary-pressed: color-mix(in oklab, var(--amb-a-neon) 38%, #3a2c1e);
   --text-inverse: #fdf7ea;
   --shadow-soft-md-value: 0 12px 26px -16px rgba(0, 0, 0, .6);
@@ -99,7 +101,7 @@
 :root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app .ni-primary {
   border: 1px solid color-mix(in srgb, var(--tinta-materia) 70%, var(--tinta));
   border-radius: 10px;
-  background: var(--tinta-materia);
+  background: var(--action-primary);
   color: var(--text-inverse);
   box-shadow: 3px 3px 0 color-mix(in srgb, var(--tinta) 22%, transparent);
 }

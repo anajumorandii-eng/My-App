@@ -1,0 +1,3156 @@
+[
+  {
+    "theme": "light",
+    "width": 360,
+    "reducedMotion": "reduce",
+    "palettes": [
+      {
+        "background": "caderno",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.5576017411366205
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.5576017411366205
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.5576017411366205
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 4.901415066218169
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 4.901415066218169
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 4.901415066218169
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.158773848668921
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.158773848668921
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.158773848668921
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 4.705613043926193
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 4.705613043926193
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 4.705613043926193
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.139284212681311
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.139284212681311
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.139284212681311
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.998857213687969
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.998857213687969
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.998857213687969
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.5576017411366205
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.5576017411366205
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.5576017411366205
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 4.901415066218169
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 4.901415066218169
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 4.901415066218169
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.158773848668921
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.158773848668921
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.158773848668921
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 4.705613043926193
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 4.705613043926193
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 4.705613043926193
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.139284212681311
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.139284212681311
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.139284212681311
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.998857213687969
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.998857213687969
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.998857213687969
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.590363217784476
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.590363217784476
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.590363217784476
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.866149546982987
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.866149546982987
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.866149546982987
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.432415944452335
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.432415944452335
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.432415944452335
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.562038541942145
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.562038541942145
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.562038541942145
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.0633211025346245
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.0633211025346245
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.0633211025346245
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.302104221704205
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.302104221704205
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.302104221704205
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.590363217784476
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.590363217784476
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.590363217784476
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.866149546982987
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.866149546982987
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.866149546982987
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.432415944452335
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.432415944452335
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.432415944452335
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.562038541942145
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.562038541942145
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.562038541942145
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.0633211025346245
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.0633211025346245
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.0633211025346245
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.302104221704205
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.302104221704205
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.302104221704205
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.590363217784476
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.590363217784476
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.590363217784476
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.866149546982987
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.866149546982987
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.866149546982987
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.432415944452335
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.432415944452335
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.432415944452335
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.562038541942145
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.562038541942145
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.562038541942145
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.0633211025346245
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.0633211025346245
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.0633211025346245
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.302104221704205
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.302104221704205
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.302104221704205
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "localProgress": [
+      "bio-ecologia-introducao"
+    ],
+    "fonts": [
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "loaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      }
+    ],
+    "overflow": 0,
+    "screenshot": "resumos-light-360-reduce.png",
+    "passed": true
+  },
+  {
+    "theme": "light",
+    "width": 360,
+    "reducedMotion": "no-preference",
+    "palettes": [],
+    "errors": [],
+    "localProgress": [
+      "bio-ecologia-introducao"
+    ],
+    "fonts": [
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "loaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      }
+    ],
+    "overflow": 0,
+    "screenshot": "resumos-light-360-no-preference.png",
+    "passed": true
+  },
+  {
+    "theme": "light",
+    "width": 834,
+    "reducedMotion": "reduce",
+    "palettes": [],
+    "errors": [],
+    "localProgress": [
+      "bio-ecologia-introducao"
+    ],
+    "fonts": [
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "loaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      }
+    ],
+    "overflow": 0,
+    "screenshot": "resumos-light-834-reduce.png",
+    "passed": true
+  },
+  {
+    "theme": "light",
+    "width": 834,
+    "reducedMotion": "no-preference",
+    "palettes": [],
+    "errors": [],
+    "localProgress": [
+      "bio-ecologia-introducao"
+    ],
+    "fonts": [
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "loaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      }
+    ],
+    "overflow": 0,
+    "screenshot": "resumos-light-834-no-preference.png",
+    "passed": true
+  },
+  {
+    "theme": "dark",
+    "width": 360,
+    "reducedMotion": "reduce",
+    "palettes": [
+      {
+        "background": "caderno",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.467147096488316
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.467147096488316
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.467147096488316
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 4.92652354377619
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 4.92652354377619
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 4.92652354377619
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.035119622603751
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.035119622603751
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.035119622603751
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 4.689454980013464
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 4.689454980013464
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 4.689454980013464
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.078077602627695
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.078077602627695
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.078077602627695
+          }
+        ]
+      },
+      {
+        "background": "caderno",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.909529013682964
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.909529013682964
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.909529013682964
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.467147096488316
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.467147096488316
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.467147096488316
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 4.92652354377619
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 4.92652354377619
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 4.92652354377619
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 6.035119622603751
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 6.035119622603751
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 6.035119622603751
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 4.689454980013464
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 4.689454980013464
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 4.689454980013464
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.078077602627695
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.078077602627695
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.078077602627695
+          }
+        ]
+      },
+      {
+        "background": "papel",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 5.909529013682964
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 5.909529013682964
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 5.909529013682964
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 9.0671264789421
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 9.0671264789421
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 9.0671264789421
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 11.004549973825304
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 11.004549973825304
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 11.004549973825304
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.508851649153167
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.508851649153167
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.508851649153167
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 11.913024244627296
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 11.913024244627296
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 11.913024244627296
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 10.3448345253913
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 10.3448345253913
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 10.3448345253913
+          }
+        ]
+      },
+      {
+        "background": "aurora",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.822134848000778
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.822134848000778
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.822134848000778
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 9.0671264789421
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 9.0671264789421
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 9.0671264789421
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 11.004549973825304
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 11.004549973825304
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 11.004549973825304
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.508851649153167
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.508851649153167
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.508851649153167
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 11.913024244627296
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 11.913024244627296
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 11.913024244627296
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 10.3448345253913
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 10.3448345253913
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 10.3448345253913
+          }
+        ]
+      },
+      {
+        "background": "grade",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.822134848000778
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.822134848000778
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.822134848000778
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Crivo",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 9.0671264789421
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 9.0671264789421
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 9.0671264789421
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Neon",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 11.004549973825304
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 11.004549973825304
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 11.004549973825304
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Aurora",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.508851649153167
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.508851649153167
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.508851649153167
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Solar",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 11.913024244627296
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 11.913024244627296
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 11.913024244627296
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Floresta",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 10.3448345253913
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 10.3448345253913
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 10.3448345253913
+          }
+        ]
+      },
+      {
+        "background": "liso",
+        "palette": "Oceano",
+        "contrasts": [
+          {
+            "token": "--action-primary",
+            "ratio": 7.822134848000778
+          },
+          {
+            "token": "--action-primary-hover",
+            "ratio": 7.822134848000778
+          },
+          {
+            "token": "--action-primary-pressed",
+            "ratio": 7.822134848000778
+          }
+        ]
+      }
+    ],
+    "errors": [],
+    "localProgress": [
+      "bio-ecologia-introducao"
+    ],
+    "fonts": [
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "loaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      }
+    ],
+    "overflow": 0,
+    "screenshot": "resumos-dark-360-reduce.png",
+    "passed": true
+  },
+  {
+    "theme": "dark",
+    "width": 360,
+    "reducedMotion": "no-preference",
+    "palettes": [],
+    "errors": [],
+    "localProgress": [
+      "bio-ecologia-introducao"
+    ],
+    "fonts": [
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "loaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      }
+    ],
+    "overflow": 0,
+    "screenshot": "resumos-dark-360-no-preference.png",
+    "passed": true
+  },
+  {
+    "theme": "dark",
+    "width": 834,
+    "reducedMotion": "reduce",
+    "palettes": [],
+    "errors": [],
+    "localProgress": [
+      "bio-ecologia-introducao"
+    ],
+    "fonts": [
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "loaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      }
+    ],
+    "overflow": 0,
+    "screenshot": "resumos-dark-834-reduce.png",
+    "passed": true
+  },
+  {
+    "theme": "dark",
+    "width": 834,
+    "reducedMotion": "no-preference",
+    "palettes": [],
+    "errors": [],
+    "localProgress": [
+      "bio-ecologia-introducao"
+    ],
+    "fonts": [
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "unloaded"
+      },
+      {
+        "family": "Inter",
+        "status": "loaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "JetBrains Mono",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "loaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Kalam",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "unloaded"
+      },
+      {
+        "family": "Newsreader",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "unloaded"
+      },
+      {
+        "family": "Space Grotesk",
+        "status": "loaded"
+      }
+    ],
+    "overflow": 0,
+    "screenshot": "resumos-dark-834-no-preference.png",
+    "passed": true
+  }
+]
