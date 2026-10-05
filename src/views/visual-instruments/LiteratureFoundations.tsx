@@ -145,6 +145,72 @@ export const LITERATURE_FOUNDATIONS = {
       { label: 'Ruptura', section: 'Traços de linguagem', anchor: 'O doutor citou o latim e errou o caminho da estação', observation: 'Frase simples e ironia mostram a erudição inútil diante de um problema banal.', conclusion: 'Coloquialidade crítica contra o bacharelismo, como em Lima Barreto.' },
     ],
   },
+  'machado-de-assis': {
+    topic: 'Machado de Assis', question: 'O que a narrativa mostra, e o que o narrador conclui?', relation: 'fato narrado × interesse de quem narra → leitura crítica',
+    states: [
+      { label: 'Fato × dedução', section: 'O narrador machadiano', anchor: 'Ela sorriu; e eu, que conhecia aquele sorriso, soube tudo', observation: 'O único fato é o sorriso; “soube tudo” é conclusão de quem narra, apresentada como certeza.', conclusion: 'Narrador interessado não prova o que deduz; a traição de Capitu não é fato do enredo.' },
+      { label: 'Defunto autor', section: 'O narrador machadiano', anchor: 'morto, já não devo favores a ninguém', observation: 'A morte vira licença para dizer o que a vida social obrigava a calar.', conclusion: 'A liberdade de Brás é real, mas a vaidade continua: desconfie também dele.' },
+      { label: 'Ironia social', section: 'Temas e procedimentos', anchor: 'o senhor libertou o escravizado no testamento, depois de servido a vida inteira', observation: 'A generosidade chega quando já não custa nada: a ordem dos fatos desmonta o elogio.', conclusion: 'A ironia expõe a violência que o narrador naturaliza.' },
+    ],
+  },
+  vanguards: {
+    topic: 'Vanguardas Artísticas', question: 'Que procedimento organiza a obra?', relation: 'manifesto + procedimento → ruptura',
+    states: [
+      { label: 'Futurismo', section: 'Ruptura e manifestos', anchor: 'o motor ruge mais belo que a estátua', observation: 'A máquina moderna é posta acima do modelo clássico de beleza.', conclusion: 'Velocidade contra museu; o mesmo programa exaltou a guerra.' },
+      { label: 'Cubismo', section: 'As principais correntes', anchor: 'O rosto visto de frente e de perfil ao mesmo tempo', observation: 'Dois pontos de vista ocupam o mesmo plano.', conclusion: 'Simultaneidade, não desenho com cubos.' },
+      { label: 'Dadá × Surrealismo', section: 'As principais correntes', anchor: 'palavras sorteadas de um chapéu', observation: 'O acaso substitui a intenção do autor.', conclusion: 'No Dadá, o acaso nega a arte; no Surrealismo, procura o inconsciente.' },
+      { label: 'Apropriação', section: 'Impacto no Brasil', anchor: 'a locomotiva cubista passa entre bananeiras', observation: 'A técnica europeia passa a organizar uma paisagem brasileira.', conclusion: 'O modernismo brasileiro reelabora a vanguarda; não apenas copia.' },
+    ],
+  },
+  'modern-art-week': {
+    topic: 'Semana de Arte Moderna', question: 'Onde a Semana fica na linha do tempo?', relation: 'antes + evento + depois → marco, não origem',
+    states: [
+      { label: 'Recepção', section: 'O evento', anchor: 'o soneto de rima rica recebeu aplausos; o verso livre, vaias', observation: 'O público reconhece o padrão consagrado e reage ao que o rompe.', conclusion: 'A vaia prova que a ruptura foi percebida; o exemplo não relata um episódio documentado.' },
+      { label: 'Grupo heterogêneo', section: 'Participantes e obras', anchor: 'o mesmo palco reuniu quem queria ruptura total e quem queria só atualizar o gosto', observation: 'Acadêmicos e experimentadores dividem o evento.', conclusion: 'Ruptura estética, sem programa político ou artístico único.' },
+      { label: 'Marco', section: 'Legado', anchor: '1917, a exposição; 1922, a Semana; 1928, a Antropofagia', observation: 'A Semana fica no meio da sequência de polêmicas e obras.', conclusion: 'Catalisador e símbolo; não origem nem conclusão do modernismo.' },
+    ],
+  },
+  'modernism-first-generation': {
+    topic: 'Modernismo no Brasil: Primeira Geração', question: 'O que o texto recusa, devora ou mistura?', relation: 'ruptura + apropriação → país múltiplo',
+    states: [
+      { label: 'Poema-piada', section: 'A fase heroica', anchor: 'Comprei um relógio / para perder a hora', observation: 'O objeto que mede o tempo serve para desperdiçá-lo: humor por inversão.', conclusion: 'Brevidade e cotidiano são escolhas contra o padrão acadêmico.' },
+      { label: 'Antropofagia', section: 'Manifestos e grupos', anchor: 'comi o soneto inglês e devolvi uma modinha', observation: 'A forma estrangeira é devorada e volta como gênero popular brasileiro.', conclusion: 'Nem imitação nem recusa: digestão crítica.' },
+      { label: 'Sem nenhum caráter', section: 'Obras centrais', anchor: 'valente na briga, preguiçoso no trabalho, esperto no negócio', observation: 'Traços que não se harmonizam convivem na mesma personagem.', conclusion: 'Sem identidade fixa, não desonesto: alegoria de um país em formação.' },
+    ],
+  },
+  'modernism-second-generation': {
+    topic: 'Segunda Geração Modernista: Poesia', question: 'A liberdade de 22 serve a quê agora?', relation: 'forma livre mantida + tom grave → reflexão',
+    states: [
+      { label: 'Mudança de tom', section: 'Amadurecimento', anchor: 'o verso livre agora pesa o tempo', observation: 'O mesmo instrumento formal de 22 serve à meditação, não à piada.', conclusion: 'Mantém a liberdade, muda o tom.' },
+      { label: 'Musicalidade', section: 'Nomes centrais', anchor: 'passa a nuvem, passa o rio, passa o que eu fui', observation: 'A repetição de “passa” encadeia natureza e sujeito num ritmo de canção.', conclusion: 'A efemeridade é sentida pela forma, como na lírica de Cecília.' },
+      { label: 'Metalinguagem', section: 'Poesia e mundo', anchor: 'de que serve um verso quando a cidade arde?', observation: 'A pergunta põe a própria poesia em dúvida diante da destruição.', conclusion: 'Duvidar da função da poesia pode ser resposta ao contexto histórico.' },
+    ],
+  },
+  'modernism-second-prose': {
+    topic: 'Segunda Geração Modernista: Prosa', question: 'O meio é cenário, destino ou estrutura social?', relation: 'forma econômica + meio social → denúncia',
+    states: [
+      { label: 'Secura', section: 'Romance de 30', anchor: 'Saíram de madrugada. Às dez, a menina já não chorava.', observation: 'Frases curtas, cronologia linear e nenhum comentário: o leitor infere a exaustão.', conclusion: 'Menos experimentação visível, mais construção a serviço da denúncia.' },
+      { label: 'Decadência', section: 'Autores e obras', anchor: 'a usina engoliu o engenho do avô', observation: 'A modernização econômica absorve a ordem patriarcal antiga.', conclusion: 'Senhores perdem poder; trabalhadores continuam explorados.' },
+      { label: 'Meio social', section: 'Regionalismo crítico', anchor: 'a cacimba secou antes do gado', observation: 'A seca é causa material: falta água, morre o gado, vem a retirada.', conclusion: 'Estrutura social e histórica, não cenário pitoresco nem destino biológico.' },
+    ],
+  },
+  'fernando-pessoa': {
+    topic: 'Fernando Pessoa', question: 'Que visão de mundo fala neste verso?', relation: 'voz + concepção de mundo → heterônimo',
+    states: [
+      { label: 'Caeiro', section: 'Os três principais', anchor: 'A pedra é pedra, e basta-me vê-la', observation: 'O verso recusa atribuir sentido oculto às coisas.', conclusion: 'Sensação sem metafísica: pensar atrapalha ver.' },
+      { label: 'Reis', section: 'Os três principais', anchor: 'Colhe a hora calma, que o rio não volta', observation: 'Aconselha aproveitar o presente com serenidade diante do tempo.', conclusion: 'Ode clássica, epicurista e estoica, sem derramamento.' },
+      { label: 'Campos', section: 'Os três principais', anchor: 'Rodas, motores, tudo grita! — e depois, o quarto vazio', observation: 'A exclamação vertiginosa termina no vazio.', conclusion: 'Da euforia futurista ao tédio e à desilusão.' },
+      { label: 'Fingidor', section: 'A dor de pensar', anchor: 'a dor que eu escrevo já não é a que doeu', observation: 'Escrever transforma a dor vivida em dor construída pela linguagem.', conclusion: 'Fingir é elaborar, não mentir.' },
+    ],
+  },
+  'carlos-drummond': {
+    topic: 'Carlos Drummond de Andrade', question: 'Como o eu se relaciona com o mundo?', relation: 'banal + insistência + história → densidade',
+    states: [
+      { label: 'Gauche', section: 'Fases da obra', anchor: 'sentei na última fila da festa, de chapéu errado', observation: 'O sujeito se coloca à margem e fora do código social, com humor contido.', conclusion: 'A ironia protege e expõe um eu deslocado.' },
+      { label: 'História', section: 'Fases da obra', anchor: 'o jornal da manhã entrou no poema e não saiu', observation: 'O acontecimento coletivo invade a lírica e permanece.', conclusion: 'Fase social: o eu continua, atravessado pela história.' },
+      { label: 'Repetição', section: 'Temas centrais', anchor: 'tinha um muro, tinha um muro na volta da escola', observation: 'A insistência transforma um obstáculo banal em experiência de bloqueio.', conclusion: 'Repetição é construção, não falha; foi o que escandalizou a crítica.' },
+    ],
+  },
 } satisfies Record<string, Foundation>;
 export type LiteratureFoundationId = keyof typeof LITERATURE_FOUNDATIONS;
 
@@ -284,11 +350,78 @@ function PreModernism({ state }: { state: number }) {
   </Drawing>;
 }
 
+function Machado({ state }: { state: number }) {
+  const [split, setSplit] = useState(false);
+  const transition = useSceneMotion();
+  return <div>{state === 0 && <button type="button" className="lf-inline-control" aria-pressed={split} onClick={() => setSplit(!split)}>{split ? 'Juntar' : 'Separar'} fato e dedução</button>}<Drawing label={['O sorriso é fato; saber tudo é dedução do narrador', 'O defunto diz o que a vida obrigava a calar', 'A alforria chega depois de uma vida de serviço'][state]}>
+    {state === 0 && <><Box x={20} y={40} w={150} strong>Ela sorriu</Box><motion.g initial={false} animate={{ x: split ? 220 : 0 }} transition={transition}><Box x={180} y={40} w={150}>soube tudo</Box></motion.g><Line y={130}>{split ? 'fato observável | conclusão de quem narra' : 'a frase cola o fato à certeza'}</Line><Arrow d="M95 90v55m-8-10 8 10 8-10"/><Line x={20} y={220}>narrador interessado não é prova</Line></>}
+    {state === 1 && <><path d="M40 160V80q50-50 100 0v80z" fill={paper} stroke={ink} strokeWidth="3"/><Line x={60} y={130}>morto</Line><Arrow d="M150 120h120m-12-8 12 8-12 8"/><Box x={280} y={98} w={250} strong>sem dever favores</Box><Line x={20} y={220}>licença para ironizar, vaidade intacta</Line></>}
+    {state === 2 && <><Box x={20} y={40} w={230}>servido a vida inteira</Box><Arrow d="M255 62h60m-12-8 12 8-12 8"/><Box x={325} y={40} w={210} strong>libertou no testamento</Box><Line y={150}>a ordem dos fatos desmonta o elogio</Line><Line x={20} y={220}>ironia contra o privilégio</Line></>}
+  </Drawing></div>;
+}
+function Vanguards({ state }: { state: number }) {
+  return <Drawing label={['O motor vence a estátua', 'Um rosto de frente e de perfil no mesmo plano', 'Palavras saem de um chapéu por sorteio', 'Locomotiva geométrica entre bananeiras'][state]}>
+    {state === 0 && <><path d="M60 170V70q20-30 40 0v100z" fill={paper} stroke={ink} strokeWidth="2"/><Line x={45} y={190}>estátua</Line><circle cx="420" cy="120" r="45" fill="none" stroke={wine} strokeWidth="4"/><Line x={385} y={190}>motor</Line><Arrow d="M130 120h230m-12-8 12 8-12 8"/><Line x={20} y={222}>velocidade acima do modelo clássico</Line></>}
+    {state === 1 && <><circle cx="150" cy="110" r="60" fill={paper} stroke={ink} strokeWidth="3"/><path d="M150 50v120" stroke={ink} strokeWidth="2"/><path d="M150 80l40 25-40 10" fill="none" stroke={wine} strokeWidth="3"/><circle cx="125" cy="100" r="6" fill={ink}/><circle cx="170" cy="95" r="6" fill={ink}/><Arrow d="M220 110h90m-12-8 12 8-12 8"/><Line x={320} y={115}>frente + perfil</Line><Line x={20} y={220}>pontos de vista simultâneos</Line></>}
+    {state === 2 && <><path d="M60 140h120l-15-60h-90z" fill={paper} stroke={ink} strokeWidth="3"/>{['lua', 'garfo', 'azul'].map((w, i) => <Line key={w} x={220 + i * 100} y={60 + i * 30}>{w}</Line>)}<Arrow d="M180 100q60-60 140-40"/><Line y={178}>Dadá: nega a obra | Surreal: busca o inconsciente</Line><Line x={20} y={222}>mesmo acaso, funções diferentes</Line></>}
+    {state === 3 && <><rect x="40" y="100" width="120" height="50" fill={paper} stroke={wine} strokeWidth="3"/><path d="M160 115l40-15v50h-40" fill={paper} stroke={wine} strokeWidth="3"/>{[300, 380, 460].map(x => <path key={x} d={`M${x} 160V90m0 0q-35 10-40 40m40-40q35 10 40 40`} fill="none" stroke={ink} strokeWidth="3"/>)}<Arrow d="M210 125h70m-12-8 12 8-12 8"/><Line x={20} y={220}>técnica europeia, paisagem brasileira</Line></>}
+  </Drawing>;
+}
+function ArtWeek({ state }: { state: number }) {
+  return <Drawing label={['Aplausos para o soneto, vaias para o verso livre', 'Ruptura total e atualização do gosto no mesmo palco', 'A Semana entre 1917 e 1928'][state]}>
+    {state === 0 && <><Box x={20} y={40} w={200}>soneto de rima rica</Box><Line x={240} y={68}>→ aplausos</Line><Box x={20} y={120} w={200} strong>verso livre</Box><Line x={240} y={148}>→ vaias</Line><Arrow d="M380 145q60-40 0-80"/><Line x={20} y={220}>a vaia prova que a ruptura foi percebida</Line></>}
+    {state === 1 && <><path d="M20 160h520" stroke={ink} strokeWidth="4"/><Box x={40} y={80} w={200} strong>ruptura total</Box><Box x={320} y={80} w={200}>atualizar o gosto</Box><Arrow d="M245 102h70m-12-8 12 8-12 8m-58-8-12 8 12 8"/><Line x={20} y={220}>sem programa único</Line></>}
+    {state === 2 && <><path d="M40 110h480" stroke={ink} strokeWidth="3"/>{[[60, '1917', 'exposição'], [250, '1922', 'Semana'], [440, '1928', 'Antropofagia']].map(([x, y, l]) => <g key={y as string}><circle cx={x as number} cy="110" r={y === '1922' ? 12 : 8} fill={y === '1922' ? wine : ink}/><Line x={(x as number) - 22} y={85}>{y}</Line><Line x={(x as number) - 40} y={145}>{l}</Line></g>)}<Arrow d="M70 180h360m-12-8 12 8-12 8"/><Line x={20} y={225}>marco no meio, não origem</Line></>}
+  </Drawing>;
+}
+function FirstGeneration({ state }: { state: number }) {
+  return <Drawing label={['Relógio comprado para perder a hora', 'Soneto inglês devorado vira modinha', 'Traços contraditórios convivem no herói'][state]}>
+    {state === 0 && <><circle cx="90" cy="105" r="50" fill={paper} stroke={ink} strokeWidth="3"/><path d="M90 105V70m0 35l25 15" stroke={wine} strokeWidth="4"/><Line x={180} y={85}>Comprei um relógio</Line><Line x={180} y={125}>para perder a hora</Line><Arrow d="M350 135q40 30 0 55"/><Line x={20} y={220}>humor por inversão do objeto</Line></>}
+    {state === 1 && <><Box x={20} y={60} w={160}>soneto inglês</Box><circle cx="280" cy="82" r="40" fill={paper} stroke={wine} strokeWidth="3"/><Line x={250} y={88}>comer</Line><Box x={380} y={60} w={150} strong>modinha</Box><Arrow d="M185 82h50m-12-8 12 8-12 8M325 82h50m-12-8 12 8-12 8"/><Line x={20} y={220}>digestão crítica, não cópia</Line></>}
+    {state === 2 && <>{['valente', 'preguiçoso', 'esperto'].map((w, i) => <Box key={w} x={20 + i * 180} y={40} w={150}>{w}</Box>)}<Arrow d="M95 90l160 60m-14 0 14 0-6-13M275 90v55m-8-10 8 10 8-10M455 90l-160 60m14 0-14 0 6-13"/><Line x={190} y={180}>um só herói</Line><Line x={20} y={225}>sem identidade fixa</Line></>}
+  </Drawing>;
+}
+function SecondPoetry({ state }: { state: number }) {
+  return <Drawing label={['Verso livre usado para meditar sobre o tempo', 'Passa a nuvem, passa o rio, passa o sujeito', 'A poesia pergunta por si diante da cidade em chamas'][state]}>
+    {state === 0 && <><Line y={50}>1922: relógio → piada</Line><Line y={110}>1930-40: verso livre → tempo</Line><Arrow d="M120 60v30m-8-10 8 10 8-10"/><Line y={170}>mesma forma livre, outro tom</Line><Line x={20} y={220}>da irreverência à reflexão</Line></>}
+    {state === 1 && <>{['nuvem', 'rio', 'o que eu fui'].map((w, i) => <Line key={w} x={20 + i * 170} y={80 + i * 30}>passa {w}</Line>)}<Arrow d="M60 95q170 40 380 50"/><Line y={190}>a repetição leva a natureza até o sujeito</Line><Line x={20} y={228}>efemeridade feita de música</Line></>}
+    {state === 2 && <><path d="M380 170l20-60 15 30 15-45 20 75z" fill={wine}/><Line y={70}>de que serve um verso</Line><Line y={110}>quando a cidade arde?</Line><Arrow d="M250 100q60 0 120 40"/><Line y={180}>o poema duvida de si</Line><Line x={20} y={225}>metalinguagem como engajamento</Line></>}
+  </Drawing>;
+}
+function SecondProse({ state }: { state: number }) {
+  return <Drawing label={['Duas frases curtas sem comentário', 'A usina absorve o engenho', 'A cacimba seca antes do gado morrer'][state]}>
+    {state === 0 && <><Line y={60}>Saíram de madrugada.</Line><Line y={100}>Às dez, a menina já não chorava.</Line><Arrow d="M300 110q40 40 0 70"/><Line y={170}>o leitor infere a exaustão</Line><Line x={20} y={222}>secura: o silêncio do narrador pesa</Line></>}
+    {state === 1 && <><rect x="300" y="50" width="200" height="100" fill={paper} stroke={wine} strokeWidth="3"/><path d="M460 50V15h25v35" fill={paper} stroke={wine} strokeWidth="3"/><Line x={360} y={108}>usina</Line><Box x={20} y={80} w={150}>engenho do avô</Box><Arrow d="M290 100h-110m12-8-12 8 12 8"/><Line x={20} y={220}>modernização que absorve o patriarcado</Line></>}
+    {state === 2 && <><path d="M40 150q60-40 120 0" fill="none" stroke={ink} strokeWidth="3"/><Line x={50} y={185}>cacimba seca</Line><Arrow d="M175 140h100m-12-8 12 8-12 8"/><Line x={290} y={145}>gado → fome → retirada</Line><Line x={20} y={225}>estrutura social, não paisagem pitoresca</Line></>}
+  </Drawing>;
+}
+function Pessoa({ state }: { state: number }) {
+  const voices = ['Caeiro', 'Reis', 'Campos', 'ortônimo'];
+  const transition = useSceneMotion();
+  return <Drawing label={['Ver a pedra sem interpretar', 'Colher a hora calma diante do rio', 'Euforia das máquinas termina no quarto vazio', 'A dor escrita difere da dor vivida'][state]}>
+    {voices.map((voice, i) => <g key={voice}><circle cx={70 + i * 140} cy="40" r="22" fill={i === state ? wine : paper} stroke={ink} strokeWidth="2"/><text x={70 + i * 140} y="85" textAnchor="middle" fill={ink} fontSize="15">{voice}</text></g>)}
+    <motion.path initial={false} animate={{ d: `M${70 + state * 140} 95v30` }} transition={transition} stroke={wine} strokeWidth="3"/>
+    {state === 0 && <><Line y={150}>A pedra é pedra, e basta-me vê-la</Line><Arrow d="M20 165h300"/><Line x={20} y={225}>ver sem metafísica</Line></>}
+    {state === 1 && <><Line y={150}>Colhe a hora calma, que o rio não volta</Line><Arrow d="M20 165h330"/><Line x={20} y={225}>aceitação estoica do tempo</Line></>}
+    {state === 2 && <><Line y={150}>Rodas, motores, tudo grita! —</Line><Line y={185}>e depois, o quarto vazio</Line><Line x={20} y={225}>da euforia ao tédio</Line></>}
+    {state === 3 && <><Line y={150}>dor vivida → <tspan fill={wine} fontWeight="800">dor escrita</tspan></Line><Arrow d="M130 160h60"/><Line x={20} y={225}>fingir é elaborar, não mentir</Line></>}
+  </Drawing>;
+}
+function Drummond({ state }: { state: number }) {
+  return <Drawing label={['O sujeito sentado à margem da festa', 'O jornal entra no poema', 'O muro repetido vira bloqueio'][state]}>
+    {state === 0 && <>{[60, 140, 220, 300].map(x => <circle key={x} cx={x} cy="70" r="16" fill={ink}/>)}<circle cx="470" cy="150" r="16" fill={wine}/><path d="M450 132h40l-6-14h-28z" fill={wine}/><Arrow d="M330 80q100 10 125 50"/><Line x={20} y={225}>gauche: à margem, com ironia</Line></>}
+    {state === 1 && <><rect x="30" y="40" width="190" height="120" fill={paper} stroke={ink} strokeWidth="2"/><path d="M45 70h160M45 95h160M45 120h120" stroke={ink}/><Line x={60} y={185}>jornal</Line><Arrow d="M225 100h90m-12-8 12 8-12 8"/><Box x={325} y={78} w={190} strong>poema</Box><Line x={20} y={225}>a história atravessa o eu</Line></>}
+    {state === 2 && <>{[0, 1].map(i => <Line key={i} x={20 + i * 250} y={60}>tinha um muro,</Line>)}<path d="M40 100h480" stroke={wine} strokeWidth="10"/><Arrow d="M60 140h360m-12-8 12 8-12 8"/><Line y={180}>insistência dá peso ao banal</Line><Line x={20} y={225}>repetição como construção</Line></>}
+  </Drawing>;
+}
+
 const drawings: Record<LiteratureFoundationId, React.ComponentType<{ state: number }>> = {
   'art-languages': Art, 'literary-text': LiteraryText, 'narrative-elements': Narrative, 'medieval-voices': Medieval,
   'renaissance-camoes': Camoes, 'first-records': Records, baroque: Baroque, neoclassic: Neoclassic,
   'romantic-poetry': RomanticPoetry, 'romantic-prose': RomanticProse, realism: Realism, naturalism: Naturalism,
   'eca-de-queiros': Eca, parnassianism: Parnassian, symbolism: Symbolism, 'pre-modernism': PreModernism,
+  'machado-de-assis': Machado, vanguards: Vanguards, 'modern-art-week': ArtWeek, 'modernism-first-generation': FirstGeneration,
+  'modernism-second-generation': SecondPoetry, 'modernism-second-prose': SecondProse, 'fernando-pessoa': Pessoa, 'carlos-drummond': Drummond,
 };
 export function LiteratureOperation({ id }: { id: LiteratureFoundationId }) {
   const config = LITERATURE_FOUNDATIONS[id];

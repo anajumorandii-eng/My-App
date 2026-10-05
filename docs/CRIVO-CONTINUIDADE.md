@@ -1,6 +1,20 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — Entrega G/Literatura do século XIX, 05/10/2026
+## Estado mais recente — Entrega H/Machado e Modernismo, 05/10/2026
+
+A Entrega G foi integrada na PR #263. A branch
+`fix/entrega-h-literatura-modernismo` trata oito capítulos LG3 (Machado,
+Vanguardas, Semana de 22, primeira geração, segunda geração em poesia e prosa,
+Fernando Pessoa e Drummond), com texto e operação autoral juntos. Sem merge
+automático. Evidências: [Entrega H](visual-integral-2026-10-05/entrega-h/README.md).
+
+Fila na proposta: 188 achados tratados, 110 pendentes e 315 preservados.
+Conteúdo: 520 revisões 2, duas revisões 3, 90 pendentes (Literatura 13,
+Redação 58, Sociologia 19). Cobertura: 8 experimentos, 43 pranchas, 336
+instrumentos, 226 cenas, zero lacunas; aprovação formal não promovida.
+Próximo passo: os 13 restantes de LG3, depois Humanas/Redação.
+
+## Registro — Entrega G/Literatura do século XIX, 05/10/2026
 
 A Entrega F foi integrada na PR #262. A branch
 `fix/entrega-g-literatura-seculo-xix` trata oito capítulos LG3 (Romantismo

@@ -25,6 +25,14 @@ const chapters = [
   ['summary-literatura-parnasianismo', 'parnassianism'],
   ['summary-literatura-simbolismo', 'symbolism'],
   ['summary-literatura-pre-modernismo', 'pre-modernism'],
+  ['summary-literatura-machado-de-assis', 'machado-de-assis'],
+  ['summary-literatura-vanguardas-artisticas', 'vanguards'],
+  ['summary-literatura-semana-de-arte-moderna', 'modern-art-week'],
+  ['summary-literatura-modernismo-no-brasil-primeira-geracao', 'modernism-first-generation'],
+  ['summary-literatura-segunda-geracao-modernista-poesia', 'modernism-second-generation'],
+  ['summary-literatura-segunda-geracao-modernista-prosa', 'modernism-second-prose'],
+  ['summary-literatura-fernando-pessoa', 'fernando-pessoa'],
+  ['summary-literatura-carlos-drummond-de-andrade', 'carlos-drummond'],
 ].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
