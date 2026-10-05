@@ -79,6 +79,7 @@ import { literaryTraitInstrument } from './LiteraryTraitInstrument';
 import type { LiteraryTraitId } from '../../lib/literaryTraitLab';
 import { literaryAuthorInstrument } from './LiteraryAuthorInstrument';
 import type { LiteraryAuthorId } from '../../lib/literaryAuthorLab';
+import { LITERATURE_FOUNDATIONS, literatureFoundationInstrument, type LiteratureFoundationId } from './LiteratureFoundations';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -188,7 +189,7 @@ function leitura(id:string,topic:string,config:ReadingInstrumentId):InstrumentEn
  * famílias, porque a pergunta muda entre elas — ver comentário de
  * `literaryTraitLab.ts`/`literaryAuthorLab.ts` para a distinção.
  */
-function literario(id:string,topic:string,config:LiteraryTraitId):InstrumentEntry{return{id,subject:'Literatura',keywords:[topic],exactTopic:topic,Component:literaryTraitInstrument(config)}}
+function literario(id:string,topic:string,config:LiteraryTraitId):InstrumentEntry{return{id,subject:'Literatura',keywords:[topic],exactTopic:topic,Component:config in LITERATURE_FOUNDATIONS ? literatureFoundationInstrument(config as LiteratureFoundationId) : literaryTraitInstrument(config)}}
 function literarioAutor(id:string,topic:string,config:LiteraryAuthorId):InstrumentEntry{return{id,subject:'Literatura',keywords:[topic],exactTopic:topic,Component:literaryAuthorInstrument(config)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
@@ -461,10 +462,12 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   leitura('textualidade','fatores de textualidade','textuality'),
   leitura('niveis-leitura','os dois níveis da leitura','levels'),leitura('intertextualidade','intertextualidade e interdiscursividade','intertext'),leitura('generos','gêneros textuais','genres'),leitura('narrativos','gêneros narrativos e níveis de compreensão','narrative'),leitura('nao-verbais','gêneros não verbais: fundamentos de leitura','nonverbal'),leitura('funcoes','funções da linguagem','functions'),leitura('poetica','função poética e linguagem literária','poetic'),leitura('figuras','figuras de linguagem','figures'),leitura('distorcoes','modelos de leitura e distorções interpretativas','distortions'),leitura('comicos','leitura de textos cômicos','comic'),leitura('tdic','tecnologias digitais da informação e comunicação (tdic): impactos sociais','tdic'),
 
-  // Literatura: 22 capítulos de estética/movimento/campo (três facetas
-  // comparáveis por capítulo) e 6 de autor monográfico (trajetória, técnica,
-  // obras). Nenhum é cena autoral — fora do escopo de Literatura desta rodada.
+  // Literatura: estéticas/campos e autores. A Entrega F substitui as facetas
+  // dos fundamentos por operações em exemplos autorais, preservando IDs.
+  // Texto Literário usa o experimento prioritário; os demais capítulos
+  // seguem nas frentes LG3, sem ampliar casamentos por palavra incidental.
   literario('art-languages','a arte e suas linguagens','art-languages'),
+  { id: 'medieval-voices', subject: 'Literatura', keywords: ['trovadorismo e humanismo'], exactTopic: 'trovadorismo e humanismo', Component: literatureFoundationInstrument('medieval-voices') },
   literario('renaissance-camoes','renascimento e camões','renaissance-camoes'),
   literario('first-records','brasil: primeiros registros','first-records'),
   literario('baroque','a estética barroca','baroque'),

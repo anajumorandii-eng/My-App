@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 8,
     "board": 43,
-    "instrument": 331,
-    "scene": 231,
+    "instrument": 332,
+    "scene": 230,
     "fallback": 0
   },
-  "contested": 63,
+  "contested": 64,
   "subjects": [
     {
       "subject": "Física",
@@ -103,8 +103,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 28,
-        "scene": 8,
+        "instrument": 29,
+        "scene": 7,
         "fallback": 0
       }
     },
@@ -3435,9 +3435,14 @@
       "id": "summary-literatura-trovadorismo-e-humanismo",
       "subject": "Literatura",
       "title": "Trovadorismo e Humanismo",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "medieval-voices",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-literatura-renascimento-e-camoes",

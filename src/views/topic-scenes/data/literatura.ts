@@ -1,14 +1,10 @@
 import type { SceneEntry } from '../types';
 
-/** Capítulos de Literatura sem cena-âncora, com o motivo. A lista é lida pelo
- *  teste de completude: nenhum capítulo pode ficar fora das duas listas.
- *
- *  Estado ao fim da Task 1: `literatura` fica vazio de propósito — escrever as
- *  `SceneEntry` reais é trabalho da Task seguinte. A atribuição definitiva dos
- *  37 capítulos (famílias e lacunas) está em
- *  docs/visual-personalizado/11-familias-literatura.md; esta lista de lacunas
- *  já reflete essa leitura por completo, para que a próxima Task só precise
- *  escrever as 8 entradas com família, sem redecidir nada. */
+/** Entradas com lastro literal e capítulos sem SceneEntry, com seus motivos.
+ *  As duas listas cobrem os 37 IDs. Sem SceneEntry não significa ausência de
+ *  representação: experimento/instrumento podem vencer no resolvedor. A
+ *  atribuição histórica está em docs/visual-personalizado/11-familias-literatura.md;
+ *  o estado operacional vem da fila por ID e da matriz gerada. */
 export const literatura: SceneEntry[] = [
   {
     chapterId: 'summary-literatura-segunda-geracao-modernista-prosa',
@@ -106,15 +102,15 @@ export const literatura: SceneEntry[] = [
       },
       {
         label: 'Cantiga de escárnio',
-        claim: 'crítica indireta e ironia, sem identificar o alvo',
+        claim: 'ataque predominantemente indireto, com ironia e duplo sentido; o nome isolado não decide a classificação',
         section: 'Cantigas satíricas',
-        quote: 'cantiga de escárnio, com crítica indireta e ironia, sem identificar o alvo',
+        quote: 'Escárnio tende à crítica indireta, com ironia e duplo sentido',
       },
       {
         label: 'Cantiga de maldizer',
-        claim: 'crítica direta, com nome explícito e linguagem agressiva',
+        claim: 'ataque predominantemente explícito e agressivo; não exige uma regra absoluta sobre nomeação',
         section: 'Cantigas satíricas',
-        quote: 'cantiga de maldizer, com crítica direta, nome explícito e linguagem agressiva',
+        quote: 'maldizer tende ao ataque explícito e agressivo',
       },
     ],
   },

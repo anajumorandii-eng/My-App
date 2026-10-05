@@ -1,0 +1,31 @@
+.lf-operation { width: 100%; max-width: 100%; min-width: 0; contain: inline-size; color: var(--vs-ink); background: var(--vs-paper); padding: 18px; border: 1px solid var(--vs-ink-muted); border-radius: 16px; text-align: left; }
+.lf-manuscript { font: 24px/1.25 Kalam, cursive; color: var(--vs-burgundy); margin: 0 0 14px; }
+.lf-controls { display: flex; flex-wrap: wrap; gap: 8px; }
+.lf-controls button, .lf-inline-control, .lf-pan button { border: 1px solid var(--vs-ink-muted); border-radius: 8px; background: var(--vs-paper); color: var(--vs-ink); min-height: 44px; padding: 8px 12px; font: inherit; cursor: pointer; }
+.lf-controls button[aria-pressed="true"], .lf-inline-control[aria-pressed="true"] { border-color: var(--vs-burgundy); box-shadow: inset 0 0 0 1px var(--vs-burgundy); font-weight: 700; }
+.lf-operation :focus-visible { outline: 3px solid var(--vs-burgundy); outline-offset: 3px; }
+.lf-caption, .lf-pan { font-size: 14px; line-height: 1.5; }
+.lf-caption { margin: 12px 0; }
+.lf-drawing-window { max-width: 100%; min-width: 0; overflow-x: auto; border-block: 1px dashed var(--vs-ink-muted); padding: 12px 0; }
+.lf-drawing { display: block; width: 100%; min-width: 560px; height: auto; font-family: Inter, sans-serif; }
+.lf-drawing > text:last-child, .topic-studio .lf-drawing > text:last-child { font-family: Kalam, cursive; font-size: 19px; font-weight: 700; }
+.crivo-visual--tech .lf-operation svg.lf-drawing > text:last-child { font-family: Kalam, cursive; }
+.topic-studio .lf-drawing-window > svg.lf-drawing { max-width: none; margin: 0; }
+.topic-studio .lf-drawing text { font-family: Inter, sans-serif; font-size: 17px; font-weight: 400; }
+.topic-studio .lf-controls button[aria-pressed="true"], .topic-studio .lf-inline-control[aria-pressed="true"] { background: var(--vs-paper); color: var(--vs-ink); }
+.vs-main > div:has(.lf-operation), .vs-main > div:has(.lf-operation) > div { min-width: 0; max-width: 100%; }
+.vs-study-board:has(.lf-operation) .vs-piston-wrap { grid-template-columns: minmax(0, 1fr); min-width: 0; }
+.vs-viewport-conteudo:has(.lf-operation) { width: 100%; min-width: 0; max-width: 100%; }
+.lf-inline-control { margin: 0 12px 8px; }
+.lf-pan { display: flex; gap: 8px; align-items: center; margin-top: 8px; }
+.lf-pan span { flex: 1; }
+.lf-pan button { min-width: 44px; }
+.lf-reading { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.2fr); gap: 20px; padding-top: 18px; }
+.lf-reading blockquote { font: 23px/1.45 Newsreader, serif; margin: 0; overflow-wrap: anywhere; }
+.lf-reading cite { display: block; font: 14px/1.6 Inter, sans-serif; margin-top: 8px; }
+.lf-reading > div { border-left: 3px solid var(--vs-burgundy); padding-left: 14px; }
+.lf-reading strong { font-size: 18px; }
+.lf-reading p, .lf-context { font-size: 16px; line-height: 1.65; margin: 8px 0 0; }
+.lf-conclusion { font-weight: 600; }
+.lf-context { border-top: 1px dashed var(--vs-ink-muted); padding-top: 12px; margin-top: 18px; }
+@media (max-width: 600px) { .lf-operation { padding: 14px; } .lf-reading { grid-template-columns: minmax(0, 1fr); } .lf-reading blockquote { font-size: 21px; } .lf-manuscript { font-size: 22px; } }

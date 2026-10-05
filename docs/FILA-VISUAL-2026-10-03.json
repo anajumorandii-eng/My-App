@@ -1,13 +1,13 @@
 {
   "dateUTC": "2026-10-05",
-  "mainCommit": "abba293c6c671f7b21bf1b34d536300fa28ac9d3",
+  "mainCommit": "683a573204f92adc247d1493caaa08ad9de9b799",
   "sourceAudit": "docs/visual-integral-2026-10-02/capitulos.json",
-  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção.",
+  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; os outros 29 capítulos LG3 permanecem pendentes.",
   "editorialApproval": "Não promovida; manter e achado tratado não certificam capítulo completo.",
   "counts": {
-    "achado_tratado": 164,
+    "achado_tratado": 172,
     "preservar_mecanismo": 315,
-    "fila_a_revalidar": 134
+    "fila_a_revalidar": 126
   },
   "subjects": {
     "Física": {
@@ -85,8 +85,8 @@
     "Literatura": {
       "total": 37,
       "preservar_mecanismo": 0,
-      "achado_tratado": 0,
-      "fila_a_revalidar": 37
+      "achado_tratado": 8,
+      "fila_a_revalidar": 29
     },
     "Entendimento de Texto": {
       "total": 12,
@@ -102,7 +102,7 @@
     "R1": 16,
     "H3": 15,
     "H2": 23,
-    "LG3": 37
+    "LG3": 29
   },
   "chapters": [
     {
@@ -9529,22 +9529,24 @@
       "subject": "Literatura",
       "artifact": "art-languages",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryTraitInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central organiza três facetas em cartões com emblemas e legendas; selecionar a faceta muda foco e leitura auxiliar, mas não demonstra no objeto literário a construção, transformação ou efeito estudado. Em A Arte e suas Linguagens, o conteúdo apresenta O que é arte, As linguagens artísticas, Função social."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-f",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-f/README.md",
+        "description": "Fundamentos de Literatura: operação autoral e cinco textos aprofundados, com lastro. 128 configurações Chromium, temas, movimento, teclado, modos, geometria e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-texto-literario-x-texto-nao-literario",
@@ -9552,43 +9554,51 @@
       "subject": "Literatura",
       "artifact": "literary",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json",
+        "src/views/topic-experiments/TopicExperiment.tsx"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Texto Literário x Texto não Literário; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-f",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-f/README.md",
+        "description": "Fundamentos de Literatura: operação autoral e cinco textos aprofundados, com lastro. 128 configurações Chromium, temas, movimento, teclado, modos, geometria e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-trovadorismo-e-humanismo",
       "title": "Trovadorismo e Humanismo",
       "subject": "Literatura",
-      "artifact": "tipologia",
+      "artifact": "medieval-voices",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json",
+        "src/views/topic-scenes/data/literatura.ts"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Trovadorismo e Humanismo; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-f",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-f/README.md",
+        "description": "Fundamentos de Literatura: operação autoral e cinco textos aprofundados, com lastro. 128 configurações Chromium, temas, movimento, teclado, modos, geometria e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-renascimento-e-camoes",
@@ -9596,22 +9606,24 @@
       "subject": "Literatura",
       "artifact": "renaissance-camoes",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryTraitInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central organiza três facetas em cartões com emblemas e legendas; selecionar a faceta muda foco e leitura auxiliar, mas não demonstra no objeto literário a construção, transformação ou efeito estudado. Em Renascimento e Camões, o conteúdo apresenta Classicismo, Lírica camoniana, Os Lusíadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-f",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-f/README.md",
+        "description": "Fundamentos de Literatura: operação autoral e cinco textos aprofundados, com lastro. 128 configurações Chromium, temas, movimento, teclado, modos, geometria e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-brasil-primeiros-registros",
@@ -9619,22 +9631,24 @@
       "subject": "Literatura",
       "artifact": "first-records",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryTraitInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central organiza três facetas em cartões com emblemas e legendas; selecionar a faceta muda foco e leitura auxiliar, mas não demonstra no objeto literário a construção, transformação ou efeito estudado. Em Brasil: Primeiros Registros, o conteúdo apresenta Literatura de informação, O olhar do colonizador, Literatura jesuítica."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-f",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-f/README.md",
+        "description": "Fundamentos de Literatura: operação autoral e cinco textos aprofundados, com lastro. 128 configurações Chromium, temas, movimento, teclado, modos, geometria e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-a-estetica-barroca",
@@ -9642,22 +9656,24 @@
       "subject": "Literatura",
       "artifact": "baroque",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryTraitInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central organiza três facetas em cartões com emblemas e legendas; selecionar a faceta muda foco e leitura auxiliar, mas não demonstra no objeto literário a construção, transformação ou efeito estudado. Em A Estética Barroca, o conteúdo apresenta Contexto e tensão, Cultismo e conceptismo, No Brasil."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-f",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-f/README.md",
+        "description": "Fundamentos de Literatura: operação autoral e cinco textos aprofundados, com lastro. 128 configurações Chromium, temas, movimento, teclado, modos, geometria e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-a-estetica-neoclassica",
@@ -9665,22 +9681,24 @@
       "subject": "Literatura",
       "artifact": "neoclassic",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryTraitInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central organiza três facetas em cartões com emblemas e legendas; selecionar a faceta muda foco e leitura auxiliar, mas não demonstra no objeto literário a construção, transformação ou efeito estudado. Em A Estética Neoclássica, o conteúdo apresenta Arcadismo, Convenções pastoris, No Brasil."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-f",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-f/README.md",
+        "description": "Fundamentos de Literatura: operação autoral e cinco textos aprofundados, com lastro. 128 configurações Chromium, temas, movimento, teclado, modos, geometria e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-a-estetica-romantica-poesia",
@@ -9711,21 +9729,24 @@
       "subject": "Literatura",
       "artifact": "narrative-elements",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Elementos da Narrativa; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-f",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-f/README.md",
+        "description": "Fundamentos de Literatura: operação autoral e cinco textos aprofundados, com lastro. 128 configurações Chromium, temas, movimento, teclado, modos, geometria e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-a-estetica-romantica-prosa",
@@ -10646,32 +10667,14 @@
   "editorial": {
     "source": "src/data/deepSummaryContent.json",
     "total": 612,
-    "revision2": 496,
-    "pending": 114,
+    "revision2": 504,
+    "pending": 106,
     "counts": {
-      "Literatura": 37,
+      "Literatura": 29,
       "Redação": 58,
       "Sociologia": 19
     },
     "chapters": [
-      {
-        "subject": "Literatura",
-        "topic": "A Arte e suas Linguagens",
-        "id": "summary-literatura-a-arte-e-suas-linguagens",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "A Estética Barroca",
-        "id": "summary-literatura-a-estetica-barroca",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "A Estética Neoclássica",
-        "id": "summary-literatura-a-estetica-neoclassica",
-        "batch": "LG3"
-      },
       {
         "subject": "Literatura",
         "topic": "A Estética Realista",
@@ -10698,12 +10701,6 @@
       },
       {
         "subject": "Literatura",
-        "topic": "Brasil: Primeiros Registros",
-        "id": "summary-literatura-brasil-primeiros-registros",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
         "topic": "Cancioneiro Popular Brasileiro",
         "id": "summary-literatura-cancioneiro-popular-brasileiro",
         "batch": "LG3"
@@ -10718,12 +10715,6 @@
         "subject": "Literatura",
         "topic": "Clarice Lispector",
         "id": "summary-literatura-clarice-lispector",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "Elementos da Narrativa",
-        "id": "summary-literatura-elementos-da-narrativa",
         "batch": "LG3"
       },
       {
@@ -10824,12 +10815,6 @@
       },
       {
         "subject": "Literatura",
-        "topic": "Renascimento e Camões",
-        "id": "summary-literatura-renascimento-e-camoes",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
         "topic": "Segunda Geração Modernista: Poesia",
         "id": "summary-literatura-segunda-geracao-modernista-poesia",
         "batch": "LG3"
@@ -10856,18 +10841,6 @@
         "subject": "Literatura",
         "topic": "Teatro Brasileiro",
         "id": "summary-literatura-teatro-brasileiro",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "Texto Literário x Texto não Literário",
-        "id": "summary-literatura-texto-literario-x-texto-nao-literario",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "Trovadorismo e Humanismo",
-        "id": "summary-literatura-trovadorismo-e-humanismo",
         "batch": "LG3"
       },
       {
