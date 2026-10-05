@@ -279,8 +279,8 @@ function Symbolism({ state }: { state: number }) {
 function PreModernism({ state }: { state: number }) {
   return <Drawing label={['Mapa, data e cena unem ciência, história e literatura', 'Léxico técnico e solene descreve a caatinga', 'O doutor erudito erra um caminho banal'][state]}>
     {state === 0 && <><Box x={20} y={40} w={160}>mapa do clima</Box><Box x={200} y={40} w={160}>data da batalha</Box><Box x={380} y={40} w={160}>cena do cerco</Box><Line x={40} y={125}>ciência</Line><Line x={225} y={125}>história</Line><Line x={395} y={125}>literatura</Line><Arrow d="M100 140q180 50 360 0"/><Line x={20} y={220}>um relato híbrido</Line></>}
-    {state === 1 && <><Line y={60}>A caatinga impõe ao viajante</Line><Line y={100}>um <tspan fill={wine} fontWeight="800">léxico de botânico</tspan></Line><Line y={160}>sintaxe solene + termo técnico</Line><Line x={20} y={220}>herança acadêmica</Line></>}
-    {state === 2 && <><Line y={60}>O doutor citou o latim</Line><Line y={100}>e <tspan fill={wine} fontWeight="800">errou o caminho da estação</tspan></Line><Line y={160}>frase simples + ironia</Line><Line x={20} y={220}>ruptura: erudição inútil</Line></>}
+    {state === 1 && <><Line y={60}>A caatinga impõe ao viajante</Line><Line y={100}>um <tspan fill={wine} fontWeight="800">léxico de botânico</tspan></Line><Arrow d="M120 110v28m-8-10 8 10 8-10"/><Line y={160}>sintaxe solene + termo técnico</Line><Line x={20} y={220}>herança acadêmica</Line></>}
+    {state === 2 && <><Line y={60}>O doutor citou o latim</Line><Line y={100}>e <tspan fill={wine} fontWeight="800">errou o caminho da estação</tspan></Line><Arrow d="M60 110v28m-8-10 8 10 8-10"/><Line y={160}>frase simples + ironia</Line><Line x={20} y={220}>ruptura: erudição inútil</Line></>}
   </Drawing>;
 }
 
