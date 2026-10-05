@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 8,
     "board": 43,
-    "instrument": 332,
-    "scene": 230,
+    "instrument": 333,
+    "scene": 229,
     "fallback": 0
   },
-  "contested": 64,
+  "contested": 65,
   "subjects": [
     {
       "subject": "Física",
@@ -103,8 +103,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 29,
-        "scene": 7,
+        "instrument": 30,
+        "scene": 6,
         "fallback": 0
       }
     },
@@ -3496,9 +3496,14 @@
       "id": "summary-literatura-a-estetica-romantica-prosa",
       "subject": "Literatura",
       "title": "A Estética Romântica: Prosa",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "romantic-prose",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-literatura-a-estetica-realista",

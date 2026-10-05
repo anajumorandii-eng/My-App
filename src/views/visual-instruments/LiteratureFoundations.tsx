@@ -80,6 +80,71 @@ export const LITERATURE_FOUNDATIONS = {
       { label: 'Condição material', section: 'Convenções pastoris', anchor: 'o lavrador negocia a colheita para pagar a dívida', observation: 'Trabalho, troca e dívida explicitam relações ausentes do recorte pastoril.', conclusion: 'A comparação revela seleção, sem provar desconhecimento das dificuldades pelo poeta.' },
     ],
   },
+  'romantic-poetry': {
+    topic: 'A Estética Romântica: Poesia', question: 'Para quem a voz fala, e com que função?', relation: 'posição da voz + tema → função na geração',
+    states: [
+      { label: 'Fundar herói', section: 'As três gerações', anchor: 'o guerreiro jurou à mata uma lealdade sem mancha', observation: 'Juramento, honra e pureza transferem ao guerreiro o código do cavaleiro: a mata vira suserana.', conclusion: 'Idealização a serviço da nação; não é retrato etnográfico dos povos indígenas.' },
+      { label: 'Fugir para a noite', section: 'Traços gerais', anchor: 'a noite me promete o sono que a vida recusa', observation: 'A noite personificada oferece o repouso que a vida nega: a morte vira promessa.', conclusion: 'Pessimismo e escapismo centrados no eu marcam o mal do século.' },
+      { label: 'Interpelar a plateia', section: 'Da idealização à denúncia', anchor: 'vós que dormis, ouvi o porão que geme', observation: 'Apóstrofe e imperativo convocam um público que se omite; o porão ganha voz.', conclusion: 'A poesia condoreira denuncia; fala sobre os escravizados, sem anular a força abolicionista.' },
+    ],
+  },
+  'romantic-prose': {
+    topic: 'A Estética Romântica: Prosa', question: 'O enredo expõe uma convenção ou funda um símbolo?', relation: 'vertente + operação → projeto nacional',
+    states: [
+      { label: 'Expor o negócio', section: 'Romance urbano e indianista', anchor: 'O noivo aceitou o dote antes de aceitar a noiva', observation: 'A ordem dos objetos põe o dinheiro antes da pessoa.', conclusion: 'O romance urbano pode revelar a lógica mercantil do casamento, como em Senhora.' },
+      { label: 'Fundar a nação', section: 'Romance urbano e indianista', anchor: 'Da união do estrangeiro com a filha da floresta nasceu o primeiro filho da terra', observation: 'Um casal vira origem: o encontro amoroso narra a formação do povo.', conclusion: 'Alegoria de fundação; o símbolo também silencia a violência da conquista.' },
+      { label: 'Idealizar o interior', section: 'Regionalista e histórico', anchor: 'o vaqueiro conhece o rastro antes de conhecer a lei', observation: 'O saber da terra é oposto à norma urbana: o interior vira reserva de autenticidade.', conclusion: 'Regionalismo romântico é pitoresco e heroico, não estudo da miséria rural.' },
+      { label: 'Restaurar a ordem', section: 'Convenções e crítica', anchor: 'o arrependimento devolveu ao casal a honra perdida', observation: 'A falha moral é corrigida por virtude, e o conflito social se dissolve no íntimo.', conclusion: 'O final conciliador não apaga a crítica que o percurso já tornou visível.' },
+    ],
+  },
+  realism: {
+    topic: 'A Estética Realista', question: 'O que a descrição revela por trás da fachada?', relation: 'aparência social × motivação → análise',
+    states: [
+      { label: 'Fachada', section: 'Contexto e princípios', anchor: 'o casamento conservava a fachada que a família exigia', observation: 'A instituição aparece como aparência mantida por pressão social.', conclusion: 'O Realismo examina a distância entre o que se mostra e o que se vive; não prega moral.' },
+      { label: 'Ironia', section: 'Procedimentos', anchor: 'o comendador, sempre generoso em público, cobrava os juros com a mesma pontualidade da missa', observation: 'A pontualidade devota é transferida para a cobrança: elogio na superfície, acusação por dentro.', conclusion: 'Objetividade aparente não é neutralidade; a ironia é o comentário crítico.' },
+      { label: 'Deliberar', section: 'Realismo e Naturalismo', anchor: 'hesitou, calculou o escândalo e preferiu calar', observation: 'A personagem pesa consequências e escolhe: o silêncio nasce de cálculo social.', conclusion: 'Deliberação aponta Realismo; forças que dominam a conduta apontariam Naturalismo.' },
+    ],
+  },
+  naturalism: {
+    topic: 'Naturalismo', question: 'O que o romance tenta provar sobre a conduta?', relation: 'meio + raça + momento → conduta (tese da obra)',
+    states: [
+      { label: 'Tripé', section: 'Determinismo', anchor: 'o calor, a origem e a época explicavam, segundo o narrador, cada gesto', observation: 'Meio, origem e época agem juntos na explicação; “segundo o narrador” marca a tese.', conclusion: 'O determinismo é hipótese encenada pela obra, não fato comprovado.' },
+      { label: 'Meio que age', section: 'Procedimentos', anchor: 'o pátio acordava, fervia e engolia quem chegava', observation: 'Três verbos dão corpo ao espaço: o lugar age sobre as personagens.', conclusion: 'O ambiente vira personagem para demonstrar que o meio condiciona a conduta.' },
+      { label: 'Ler a tese', section: 'Limites e crítica', anchor: 'a tese do narrador não é prova sobre pessoas reais', observation: 'Denúncia da exploração e estereótipos raciais e de gênero convivem no mesmo romance.', conclusion: 'Separe o que a obra observa do modo como o determinismo interpreta.' },
+    ],
+  },
+  'eca-de-queiros': {
+    topic: 'Realismo Português: Eça de Queirós', question: 'Que objeto ou gesto desmente a personagem?', relation: 'discurso × gesto ou objeto → crítica',
+    states: [
+      { label: 'Interior', section: 'Procedimentos', anchor: 'a sala tinha mais retratos de antepassados do que livros abertos', observation: 'A contagem dos objetos revela valores: linhagem acima de conhecimento.', conclusion: 'A descrição de interiores funciona como índice de caráter, não como pausa.' },
+      { label: 'Gesto', section: 'Procedimentos', anchor: '— O país precisa de reformas — disse o conselheiro, ajeitando a gravata', observation: 'A fala solene é acompanhada por um gesto de vaidade que a esvazia.', conclusion: 'A ironia expõe a distância entre discurso e prática, sem sermão do narrador.' },
+      { label: 'Decadência', section: 'Obras centrais', anchor: 'a família guardava o brasão e adiava todos os projetos', observation: 'O passado é conservado como emblema enquanto o futuro nunca começa.', conclusion: 'Em Os Maias, o fracasso individual vira diagnóstico de uma elite.' },
+    ],
+  },
+  parnassianism: {
+    topic: 'Parnasianismo', question: 'O verso confessa ou lapida?', relation: 'recuo do eu + escolha exata → acabamento',
+    states: [
+      { label: 'Recuo do eu', section: 'Arte pela arte', anchor: 'A ânfora guarda a curva do silêncio', observation: 'O eu que chora sai do verso; o objeto e sua forma ocupam o centro.', conclusion: 'Impessoalidade desloca a emoção para a contemplação; não a elimina.' },
+      { label: 'Lapidar', section: 'Rigor formal', anchor: 'No mármore frio, a ânfora repousa', observation: 'Matéria, temperatura e postura substituem a avaliação genérica.', conclusion: 'A metáfora do ourives é trocar o vago pelo exato.' },
+      { label: 'Paródia', section: 'Nomes e recepção', anchor: 'a ânfora, coitada, cansou de rimar com nada', observation: 'Coloquialismo rebaixa o objeto nobre e mostra a rima como exercício vazio.', conclusion: 'A paródia modernista depende do prestígio do modelo que ataca.' },
+    ],
+  },
+  symbolism: {
+    topic: 'Simbolismo', question: 'O verso nomeia o estado ou o sugere?', relation: 'som + sentido cruzado + vagueza → sugestão',
+    states: [
+      { label: 'Sugerir', section: 'Reação ao materialismo', anchor: 'Algo de névoa chora no corredor', observation: '“Algo” e a névoa que chora tornam a tristeza difusa, sem sujeito definido.', conclusion: 'A imprecisão é escolha: sugerir abre ressonância que nomear fecharia.' },
+      { label: 'Sinestesia', section: 'Recursos', anchor: 'um perfume azul de sinos', observation: 'Olfato recebe cor e a cor parece soar: três sentidos se fundem.', conclusion: 'Sinestesia exige sentidos diferentes cruzados; não é qualquer metáfora.' },
+      { label: 'Música', section: 'Recursos', anchor: 'vagas vozes vão velando o vale', observation: 'A repetição do som de v cria um sopro contínuo ao longo do verso.', conclusion: 'A aliteração faz o som significar tanto quanto a imagem.' },
+    ],
+  },
+  'pre-modernism': {
+    topic: 'Pré-Modernismo', question: 'Que Brasil a obra mostra, e com que linguagem?', relation: 'realidade excluída + herança ou ruptura → ponte',
+    states: [
+      { label: 'Três registros', section: 'Autores e obras', anchor: 'o mapa do clima, a data da batalha e a cena do cerco', observation: 'Ciência, história e literatura convivem num só relato.', conclusion: 'Os Sertões é híbrido; lê-lo só como romance apaga a reportagem e o ensaio.' },
+      { label: 'Herança', section: 'Traços de linguagem', anchor: 'A caatinga impõe ao viajante um léxico de botânico', observation: 'Vocabulário técnico e sintaxe solene tratam o sertão como objeto de ciência.', conclusion: 'Linguagem ainda marcada pelo academicismo, como em Euclides.' },
+      { label: 'Ruptura', section: 'Traços de linguagem', anchor: 'O doutor citou o latim e errou o caminho da estação', observation: 'Frase simples e ironia mostram a erudição inútil diante de um problema banal.', conclusion: 'Coloquialidade crítica contra o bacharelismo, como em Lima Barreto.' },
+    ],
+  },
 } satisfies Record<string, Foundation>;
 export type LiteratureFoundationId = keyof typeof LITERATURE_FOUNDATIONS;
 
@@ -155,9 +220,75 @@ function Neoclassic({ state }: { state: number }) {
   </Drawing></div>;
 }
 
+function Box({ x, y, w, children, strong = false }: { x: number; y: number; w: number; children: React.ReactNode; strong?: boolean }) {
+  return <g><rect x={x} y={y} width={w} height="44" rx="7" fill={paper} stroke={strong ? wine : ink} strokeWidth={strong ? 3 : 1.5}/><text x={x + 12} y={y + 28} fill={ink} fontSize="16">{children}</text></g>;
+}
+function RomanticPoetry({ state }: { state: number }) {
+  return <Drawing label={['A mata recebe o juramento como suserana do guerreiro', 'A noite oferece ao eu a saída que a vida recusa', 'A voz convoca uma plateia e dá voz ao porão'][state]}>
+    {state === 0 && <><Box x={20} y={30} w={170}>mata = suserana</Box><Box x={20} y={120} w={170}>guerreiro = vassalo</Box><Arrow d="M195 142h120m-12-8 12 8-12 8"/><Box x={330} y={120} w={200} strong>herói da nação</Box><Line x={330} y={60}>honra + juramento</Line><Line x={20} y={220}>código do cavaleiro, não etnografia</Line></>}
+    {state === 1 && <><circle cx="80" cy="110" r="34" fill={paper} stroke={ink} strokeWidth="3"/><Line x={68} y={116}>eu</Line><Line x={330} y={60}>vida → recusa</Line><Arrow d="M118 110h200m-12-8 12 8-12 8"/><Box x={330} y={88} w={200} strong>noite → sono</Box><Line x={20} y={220}>a morte vira promessa de repouso</Line></>}
+    {state === 2 && <><Box x={20} y={90} w={100} strong>voz</Box><Arrow d="M125 112h110m-12-8 12 8-12 8"/><Box x={245} y={40} w={150}>vós: plateia</Box><Box x={245} y={140} w={150}>porão que geme</Box><Arrow d="M400 62h90v100h-85m12-8-12 8 12 8"/><Line x={20} y={220}>apóstrofe + imperativo = comício</Line></>}
+  </Drawing>;
+}
+function RomanticProse({ state }: { state: number }) {
+  const transition = useSceneMotion();
+  const [order, setOrder] = useState(true);
+  return <div>{state === 0 && <button type="button" className="lf-inline-control" aria-pressed={!order} onClick={() => setOrder(!order)}>{order ? 'Pôr a noiva antes do dote' : 'Voltar o dote para a frente'}</button>}<Drawing label={['O dote aparece antes da noiva', 'Um casal vira origem do povo', 'O saber da terra se opõe à lei urbana', 'O arrependimento restaura a ordem moral'][state]}>
+    {state === 0 && <><Line y={40}>O noivo aceitou</Line>{['o dote', 'a noiva'].map((label, index) => <motion.g key={label} initial={false} animate={{ x: (order ? index : 1 - index) * 200 }} transition={transition}><Box x={40} y={70} w={150} strong={label === 'o dote'}>{label}</Box></motion.g>)}<Line y={170}>{order ? 'dinheiro antes da pessoa' : 'afeto antes do negócio'}</Line><Line x={20} y={220}>{order ? 'a ordem expõe o casamento-transação' : 'a ordem romântica esperada'}</Line></>}
+    {state === 1 && <><Box x={20} y={40} w={150}>estrangeiro</Box><Box x={20} y={130} w={180}>filha da floresta</Box><Arrow d="M205 85q60 0 90 40m-14-3 14 3 1-14"/><Arrow d="M205 152q60 0 90-20m-12 10 12-10-14-2"/><Box x={300} y={90} w={225} strong>primeiro filho da terra</Box><Line x={20} y={220}>alegoria de fundação, não crônica</Line></>}
+    {state === 2 && <><Box x={20} y={50} w={190} strong>rastro (terra)</Box><Box x={330} y={50} w={190}>lei (cidade)</Box><Arrow d="M215 72h105m-12-8 12 8-12 8"/><Line y={150}>antes de… : o saber do interior vem primeiro</Line><Line x={20} y={215}>autenticidade idealizada, pitoresca</Line></>}
+    {state === 3 && <><Box x={20} y={40} w={140}>honra perdida</Box><Arrow d="M165 62h70m-12-8 12 8-12 8"/><Box x={240} y={40} w={150}>arrependimento</Box><Arrow d="M395 62h40m-12-8 12 8-12 8"/><Box x={440} y={40} w={100} strong>ordem</Box><Line y={150}>o conflito social se resolve no íntimo</Line><Line x={20} y={215}>desfecho concilia; a crítica já apareceu</Line></>}
+  </Drawing></div>;
+}
+function Realism({ state }: { state: number }) {
+  return <Drawing label={['A fachada do casamento esconde a pressão da família', 'O elogio público esconde a cobrança dos juros', 'A personagem calcula antes de calar'][state]}>
+    {state === 0 && <><rect x="40" y="30" width="200" height="140" fill={paper} stroke={ink} strokeWidth="3"/><path d="M40 30l100-25 100 25" fill="none" stroke={ink} strokeWidth="3"/><Line x={70} y={105}>fachada</Line><Arrow d="M245 100h90m-12-8 12 8-12 8"/><Box x={345} y={78} w={190} strong>exigência da família</Box><Line x={20} y={220}>o que se mostra ≠ o que se vive</Line></>}
+    {state === 1 && <><Box x={20} y={30} w={230}>generoso em público</Box><Box x={20} y={120} w={230} strong>cobrava os juros</Box><Line x={300} y={58}>pontualidade da missa</Line><Arrow d="M300 75Q280 120 258 140m4-13-4 13 13-3"/><Line x={20} y={220}>elogio por fora, acusação por dentro</Line></>}
+    {state === 2 && <>{['hesitou', 'calculou', 'calou'].map((label, index) => <Box key={label} x={20 + index * 180} y={70} w={150} strong={index === 1}>{label}</Box>)}<Arrow d="M172 92h26m-10-7 10 7-10 7M352 92h26m-10-7 10 7-10 7"/><Line y={170}>Naturalismo diria: calor, instinto, meio</Line><Line x={20} y={220}>consciência que delibera</Line></>}
+  </Drawing>;
+}
+function Naturalism({ state }: { state: number }) {
+  return <Drawing label={['Calor, origem e época convergem no gesto segundo o narrador', 'O pátio age sobre quem chega', 'A tese do narrador fica separada das pessoas reais'][state]}>
+    {state === 0 && <><Box x={20} y={20} w={130}>calor (meio)</Box><Box x={20} y={80} w={130}>origem</Box><Box x={20} y={140} w={130}>época</Box><Arrow d="M155 42l170 60m-14 1 14-1-9-11M155 102h165m-12-8 12 8-12 8M155 162l170-55m-13-4 13 4-9 10"/><Box x={335} y={80} w={110} strong>gesto</Box><Line x={20} y={225}>“segundo o narrador”: tese, não fato</Line></>}
+    {state === 1 && <><path d="M30 60h260v120H30z" fill={paper} stroke={ink} strokeWidth="3"/>{['acordava', 'fervia', 'engolia'].map((verb, index) => <Line key={verb} x={50} y={95 + index * 30}>{verb}</Line>)}<Arrow d="M295 120h120m-12-8 12 8-12 8"/><circle cx="450" cy="120" r="22" fill={wine}/><Line x={420} y={180}>quem chega</Line><Line x={20} y={225}>o espaço age: vira personagem</Line></>}
+    {state === 2 && <><Box x={20} y={40} w={240}>denúncia: exploração</Box><Box x={290} y={40} w={250}>estereótipo: raça, gênero</Box><path d="M280 30v120" stroke={wine} strokeWidth="3" strokeDasharray="6 6"/><Line y={150}>o mesmo romance faz as duas coisas</Line><Line x={20} y={220}>tese do narrador ≠ prova sobre pessoas</Line></>}
+  </Drawing>;
+}
+function Eca({ state }: { state: number }) {
+  return <Drawing label={['Mais retratos de antepassados do que livros abertos', 'A fala sobre reformas é esvaziada pelo gesto com a gravata', 'O brasão é guardado enquanto os projetos são adiados'][state]}>
+    {state === 0 && <>{[30, 100, 170, 240, 310].map(x => <rect key={x} x={x} y="40" width="50" height="64" fill={paper} stroke={ink} strokeWidth="2"/>)}<path d="M400 90h50l-25-14z" fill={wine}/><Line x={30} y={140}>5 retratos</Line><Line x={395} y={140}>1 livro</Line><Line x={20} y={220}>objetos medem valores: linhagem</Line></>}
+    {state === 1 && <><Box x={20} y={40} w={290}>“O país precisa de reformas”</Box><Box x={330} y={40} w={200} strong>ajeitando a gravata</Box><Arrow d="M430 90Q330 160 170 92m3 13-3-13 13 2"/><Line y={175}>o gesto desmente a fala</Line><Line x={20} y={220}>vaidade esvazia o discurso</Line></>}
+    {state === 2 && <><path d="M60 40h90v70q-45 40-90 0z" fill={paper} stroke={wine} strokeWidth="3"/><Line x={70} y={140}>brasão</Line>{[260, 350, 440].map(x => <rect key={x} x={x} y="60" width="70" height="44" rx="6" fill="none" stroke={ink} strokeDasharray="5 5"/>)}<Line x={265} y={140}>projetos adiados</Line><Line x={20} y={220}>passado guardado, futuro parado</Line></>}
+  </Drawing>;
+}
+function Parnassian({ state }: { state: number }) {
+  return <Drawing label={['O eu sai do verso e a ânfora ocupa o centro', 'A versão genérica é lapidada em imagem exata', 'A paródia rebaixa a ânfora com coloquialismo'][state]}>
+    {state === 0 && <><Line y={45}>Eu choro ao ver a ânfora partida</Line><path d="M20 40h50" stroke={wine} strokeWidth="3"/><Arrow d="M150 60v35m-8-10 8 10 8-10"/><Line y={130}>A ânfora guarda a curva do silêncio</Line><path d="M470 100q-30 40 0 80q30-40 0-80" fill="none" stroke={ink} strokeWidth="3"/><Line x={20} y={220}>o eu recua; o objeto ocupa o verso</Line></>}
+    {state === 1 && <><Line y={45}>A ânfora está ali, muito bonita</Line><Arrow d="M150 60v35m-8-10 8 10 8-10"/><Line y={130}>No <tspan fill={wine} fontWeight="800">mármore frio</tspan>, a ânfora <tspan fill={wine} fontWeight="800">repousa</tspan></Line><Line y={175}>matéria + temperatura + postura</Line><Line x={20} y={220}>ourives: trocar o vago pelo exato</Line></>}
+    {state === 2 && <><Line y={55}>a ânfora, <tspan fill={wine} fontWeight="800">coitada</tspan>, cansou de rimar com nada</Line><Arrow d="M140 70v40m-8-10 8 10 8-10"/><Line y={145}>objeto nobre + fala coloquial</Line><Line x={20} y={220}>a paródia precisa do modelo famoso</Line></>}
+  </Drawing>;
+}
+function Symbolism({ state }: { state: number }) {
+  const transition = useSceneMotion();
+  return <Drawing label={['A névoa chora sem sujeito definido', 'Perfume, cor e som se cruzam', 'O som de v se repete ao longo do verso'][state]}>
+    {state === 0 && <><Line y={45}>Estou triste no corredor escuro</Line><Line x={400} y={45}>→ nomeia</Line><motion.ellipse cx="200" cy="125" rx="170" ry="30" fill={wine} initial={false} animate={{ opacity: 0.18 }} transition={transition}/><Line y={130}>Algo de névoa chora no corredor</Line><Line x={400} y={170}>→ sugere</Line><Line x={20} y={220}>vagueza escolhida, não defeito</Line></>}
+    {state === 1 && <><Box x={20} y={40} w={140}>perfume</Box><Box x={200} y={40} w={140} strong>azul</Box><Box x={380} y={40} w={140}>sinos</Box><Line x={30} y={125}>olfato</Line><Line x={215} y={125}>visão</Line><Line x={390} y={125}>audição</Line><Arrow d="M90 140q180 60 360 0"/><Line x={20} y={220}>três sentidos fundidos</Line></>}
+    {state === 2 && <><Line y={70}>{['vagas', 'vozes', 'vão', 'velando', 'o', 'vale'].map(word => <tspan key={word} fill={word.startsWith('v') ? wine : ink} fontWeight={word.startsWith('v') ? 800 : 400}>{word} </tspan>)}</Line><path d="M20 110q40-25 80 0t80 0 80 0 80 0 80 0" fill="none" stroke={wine} strokeWidth="3"/><Line y={170}>som contínuo: o verso sopra</Line><Line x={20} y={220}>o som significa tanto quanto a imagem</Line></>}
+  </Drawing>;
+}
+function PreModernism({ state }: { state: number }) {
+  return <Drawing label={['Mapa, data e cena unem ciência, história e literatura', 'Léxico técnico e solene descreve a caatinga', 'O doutor erudito erra um caminho banal'][state]}>
+    {state === 0 && <><Box x={20} y={40} w={160}>mapa do clima</Box><Box x={200} y={40} w={160}>data da batalha</Box><Box x={380} y={40} w={160}>cena do cerco</Box><Line x={40} y={125}>ciência</Line><Line x={225} y={125}>história</Line><Line x={395} y={125}>literatura</Line><Arrow d="M100 140q180 50 360 0"/><Line x={20} y={220}>um relato híbrido</Line></>}
+    {state === 1 && <><Line y={60}>A caatinga impõe ao viajante</Line><Line y={100}>um <tspan fill={wine} fontWeight="800">léxico de botânico</tspan></Line><Line y={160}>sintaxe solene + termo técnico</Line><Line x={20} y={220}>herança acadêmica</Line></>}
+    {state === 2 && <><Line y={60}>O doutor citou o latim</Line><Line y={100}>e <tspan fill={wine} fontWeight="800">errou o caminho da estação</tspan></Line><Line y={160}>frase simples + ironia</Line><Line x={20} y={220}>ruptura: erudição inútil</Line></>}
+  </Drawing>;
+}
+
 const drawings: Record<LiteratureFoundationId, React.ComponentType<{ state: number }>> = {
   'art-languages': Art, 'literary-text': LiteraryText, 'narrative-elements': Narrative, 'medieval-voices': Medieval,
   'renaissance-camoes': Camoes, 'first-records': Records, baroque: Baroque, neoclassic: Neoclassic,
+  'romantic-poetry': RomanticPoetry, 'romantic-prose': RomanticProse, realism: Realism, naturalism: Naturalism,
+  'eca-de-queiros': Eca, parnassianism: Parnassian, symbolism: Symbolism, 'pre-modernism': PreModernism,
 };
 export function LiteratureOperation({ id }: { id: LiteratureFoundationId }) {
   const config = LITERATURE_FOUNDATIONS[id];

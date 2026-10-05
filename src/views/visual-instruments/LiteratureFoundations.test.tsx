@@ -95,7 +95,7 @@ describe('fundamentos de Literatura: operações sustentadas pelo capítulo', ()
     expect(region.scrollLeft).toBe(160);
   });
 
-  it('o lote tem oito capítulos revisados, cinco etapas, armadilhas corrigidas e dois problemas resolvidos', () => {
+  it('os lotes F e G têm dezesseis capítulos revisados, cinco etapas, armadilhas corrigidas e dois problemas resolvidos', () => {
     for (const config of Object.values(LITERATURE_FOUNDATIONS)) {
       const chapter = chapters.find(item => item.subject === 'Literatura' && item.topic === config.topic)!;
       expect(chapter.rev).toBe(2);

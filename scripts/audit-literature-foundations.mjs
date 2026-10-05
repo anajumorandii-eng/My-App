@@ -17,7 +17,15 @@ const chapters = [
   ['summary-literatura-brasil-primeiros-registros', 'first-records'],
   ['summary-literatura-a-estetica-barroca', 'baroque'],
   ['summary-literatura-a-estetica-neoclassica', 'neoclassic'],
-];
+  ['summary-literatura-a-estetica-romantica-poesia', 'romantic-poetry'],
+  ['summary-literatura-a-estetica-romantica-prosa', 'romantic-prose'],
+  ['summary-literatura-a-estetica-realista', 'realism'],
+  ['summary-literatura-naturalismo', 'naturalism'],
+  ['summary-literatura-realismo-portugues-eca-de-queiros', 'eca-de-queiros'],
+  ['summary-literatura-parnasianismo', 'parnassianism'],
+  ['summary-literatura-simbolismo', 'symbolism'],
+  ['summary-literatura-pre-modernismo', 'pre-modernism'],
+].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
 const results = process.env.CRIVO_AUDIT_RESUME === '1'
@@ -32,6 +40,10 @@ try {
       localStorage.setItem('crivo_theme', theme);
       localStorage.setItem('crivo_visual_preferencias', JSON.stringify({ cor: 'automatica', efeitos: 'completo', fundo: 'caderno', fundoRevisto: true }));
     }, theme);
+    // Em sessões remotas o Chromium não confia na CA do proxy e as fontes caem
+    // no fallback. O repasse pelo Node mantém a verificação TLS com a CA da
+    // sessão; sem ele a geometria e a tipografia medidas não seriam as reais.
+    if (process.env.CRIVO_AUDIT_FONT_RELAY === '1') await context.route(/fonts\.(googleapis|gstatic)\.com/, async route => route.fulfill({ response: await route.fetch() }));
     const page = await context.newPage();
     page.setDefaultTimeout(60_000);
     for (const [id, operation] of chapters) {
