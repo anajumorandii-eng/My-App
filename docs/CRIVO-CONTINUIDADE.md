@@ -1,6 +1,20 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — Entrega F/Literatura, 05/10/2026
+## Estado mais recente — Entrega G/Literatura do século XIX, 05/10/2026
+
+A Entrega F foi integrada na PR #262. A branch
+`fix/entrega-g-literatura-seculo-xix` trata oito capítulos LG3 (Romantismo
+poesia/prosa, Realismo, Naturalismo, Eça, Parnasianismo, Simbolismo,
+Pré-Modernismo), com texto e operação autoral juntos. Sem merge automático.
+Evidências: [Entrega G](visual-integral-2026-10-05/entrega-g/README.md).
+
+Fila na proposta: 180 achados tratados, 118 pendentes e 315 preservados.
+Conteúdo: 512 revisões 2, duas revisões 3, 98 pendentes (Literatura 21,
+Redação 58, Sociologia 19). Cobertura: 8 experimentos, 43 pranchas, 333
+instrumentos, 229 cenas, zero lacunas; aprovação formal não promovida.
+Próximo passo: LG3 do Modernismo em diante (21), depois Humanas/Redação.
+
+## Registro — Entrega F/Literatura, 05/10/2026
 
 Base: `683a573204f92adc247d1493caaa08ad9de9b799`. A PR #261 foi integrada;
 CI e preview aprovados. Não repetir o isolamento de progresso nem o contraste

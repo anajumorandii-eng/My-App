@@ -35,7 +35,7 @@ export const literatura: SceneEntry[] = [
         label: 'Urbano',
         claim: 'retrata a vida da corte e os costumes da elite carioca',
         section: 'Romance urbano e indianista',
-        quote: 'O romance urbano retrata a vida da corte e os costumes da elite carioca, como em Senhora e Lucíola, de José de Alencar.',
+        quote: 'O romance urbano retrata a vida da corte e os costumes da elite carioca, como em Senhora e Lucíola.',
       },
       {
         label: 'Indianista',

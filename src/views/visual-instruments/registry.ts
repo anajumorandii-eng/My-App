@@ -473,6 +473,7 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   literario('baroque','a estética barroca','baroque'),
   literario('neoclassic','a estética neoclássica','neoclassic'),
   literario('romantic-poetry','a estética romântica: poesia','romantic-poetry'),
+  { id: 'romantic-prose', subject: 'Literatura', keywords: ['a estética romântica: prosa'], exactTopic: 'a estética romântica: prosa', Component: literatureFoundationInstrument('romantic-prose') },
   literario('narrative-elements','elementos da narrativa','narrative-elements'),
   literario('realism','a estética realista','realism'),
   literario('naturalism','naturalismo','naturalism'),
