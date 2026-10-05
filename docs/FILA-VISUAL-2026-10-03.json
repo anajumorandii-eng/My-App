@@ -1,13 +1,13 @@
 {
   "dateUTC": "2026-10-05",
-  "mainCommit": "7d169534ecbcf5448d2a0b34eb4085eade40e67b",
+  "mainCommit": "abba293c6c671f7b21bf1b34d536300fa28ac9d3",
   "sourceAudit": "docs/visual-integral-2026-10-02/capitulos.json",
-  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos.",
+  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção.",
   "editorialApproval": "Não promovida; manter e achado tratado não certificam capítulo completo.",
   "counts": {
-    "fila_a_revalidar": 160,
+    "achado_tratado": 164,
     "preservar_mecanismo": 315,
-    "achado_tratado": 138
+    "fila_a_revalidar": 134
   },
   "subjects": {
     "Física": {
@@ -79,8 +79,8 @@
     "Gramática": {
       "total": 26,
       "preservar_mecanismo": 0,
-      "achado_tratado": 0,
-      "fila_a_revalidar": 26
+      "achado_tratado": 26,
+      "fila_a_revalidar": 0
     },
     "Literatura": {
       "total": 37,
@@ -102,7 +102,6 @@
     "R1": 16,
     "H3": 15,
     "H2": 23,
-    "LG1": 26,
     "LG3": 37
   },
   "chapters": [
@@ -8723,20 +8722,30 @@
       "subject": "Gramática",
       "artifact": "lingua-sistema",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Língua: um Sistema Complexo; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-variacao-linguistica",
@@ -8744,20 +8753,30 @@
       "subject": "Gramática",
       "artifact": "variation",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/topic-experiments/GrammarVariationScene.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json",
+        "src/views/topic-experiments/TopicExperiment.tsx"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Variação Linguística; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador",
@@ -8765,13 +8784,18 @@
       "subject": "Gramática",
       "artifact": "substantivo-visao-enunciador",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
@@ -8782,7 +8806,12 @@
           "code": "SIMPLIFICACAO_DO_ABSTRATO",
           "description": "O estado abstrato usa “só existe na ideia”; rever a formulação para qualidades, estados e ações dependentes de seres, evitando apresentar abstrato como meramente inexistente no mundo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos",
@@ -8790,20 +8819,30 @@
       "subject": "Gramática",
       "artifact": "tipos-de-texto",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal",
@@ -8811,20 +8850,30 @@
       "subject": "Gramática",
       "artifact": "sintagma-nominal",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Artigo, Numeral e Adjetivo no Sintagma Nominal; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-pronomes",
@@ -8832,20 +8881,30 @@
       "subject": "Gramática",
       "artifact": "pronomes",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Pronomes; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-verbo",
@@ -8853,20 +8912,30 @@
       "subject": "Gramática",
       "artifact": "verbo",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Verbo; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores",
@@ -8874,20 +8943,30 @@
       "subject": "Gramática",
       "artifact": "adverbio-circunstanciadores",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Advérbio e Locuções Adverbiais: Circunstanciadores; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-verbo-e-sintaxe-da-oracao",
@@ -8895,20 +8974,30 @@
       "subject": "Gramática",
       "artifact": "verbo-sintaxe-oracao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Verbo e Sintaxe da Oração; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-concordancia",
@@ -8916,20 +9005,30 @@
       "subject": "Gramática",
       "artifact": "concordancia",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Concordância; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-significados-implicitos",
@@ -8937,20 +9036,30 @@
       "subject": "Gramática",
       "artifact": "significados-implicitos",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Significados Implícitos; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-tipos-de-discurso",
@@ -8958,20 +9067,30 @@
       "subject": "Gramática",
       "artifact": "tipos-de-discurso",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Tipos de Discurso; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula",
@@ -8979,20 +9098,30 @@
       "subject": "Gramática",
       "artifact": "pontuacao-i",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Pontuação I: Princípios para o Uso da Vírgula; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao",
@@ -9000,20 +9129,30 @@
       "subject": "Gramática",
       "artifact": "pontuacao-ii",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
@@ -9021,20 +9160,30 @@
       "subject": "Gramática",
       "artifact": "lexico-em-contexto",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com O Léxico em Contexto: Variadas Possibilidades Semânticas; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe",
@@ -9042,20 +9191,30 @@
       "subject": "Gramática",
       "artifact": "ambiguidade",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Ambiguidade: Duplicidade no Léxico e na Sintaxe; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-mecanismo-de-regencia",
@@ -9063,20 +9222,30 @@
       "subject": "Gramática",
       "artifact": "mecanismo-regencia",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Mecanismo de Regência; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-crase",
@@ -9084,20 +9253,30 @@
       "subject": "Gramática",
       "artifact": "crase",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Crase; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-processos-de-formacao-de-palavras",
@@ -9105,20 +9284,30 @@
       "subject": "Gramática",
       "artifact": "formacao-palavras",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Processos de Formação de Palavras; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo",
@@ -9126,17 +9315,27 @@
       "subject": "Gramática",
       "artifact": "funcoes-sintaticas-nominais",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/visual-instruments/GrammarInstrument.tsx"
+        "src/views/visual-instruments/GrammarInstrument.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CONTEXTO_OU_RECORTE_DIVERGENTE",
           "description": "A cena e seus três estados priorizam sujeito, objeto direto e vocativo; o conteúdo central deste capítulo distingue adjunto adnominal, complemento nominal, aposto e vocativo. O recorte omite a relação nominal que o capítulo ensina."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-tipos-de-sujeito",
@@ -9144,20 +9343,30 @@
       "subject": "Gramática",
       "artifact": "tipos-de-sujeito",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Tipos de Sujeito; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-vozes-verbais",
@@ -9165,20 +9374,30 @@
       "subject": "Gramática",
       "artifact": "vozes-verbais",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Vozes Verbais; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-oracoes-substantivas",
@@ -9186,20 +9405,30 @@
       "subject": "Gramática",
       "artifact": "oracoes-substantivas",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Orações Substantivas; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-oracoes-adjetivas",
@@ -9207,20 +9436,30 @@
       "subject": "Gramática",
       "artifact": "oracoes-adjetivas",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Orações Adjetivas; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-oracoes-adverbiais",
@@ -9228,20 +9467,30 @@
       "subject": "Gramática",
       "artifact": "oracoes-adverbiais",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Orações Adverbiais; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-gramatica-oracoes-coordenadas",
@@ -9249,20 +9498,30 @@
       "subject": "Gramática",
       "artifact": "oracoes-coordenadas",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
         "src/lib/grammarInstrumentLab.ts",
         "src/views/visual-instruments/GrammarInstrument.tsx",
         "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visualRepresentation.ts",
+        "src/views/visual-instruments/GrammarDrawingWindow.tsx",
+        "src/views/visual-instruments/GrammarApplications.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Orações Coordenadas; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-e",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-e/README.md",
+        "description": "Prancha própria e texto rev2, mecanismos centrais do recall, revisão conceitual e regressões; revalidação em Chromium nos dois temas, movimento normal/reduzido, todos os estados e teclado. Sem promoção editorial formal."
+      }
     },
     {
       "id": "summary-literatura-a-arte-e-suas-linguagens",
@@ -10387,171 +10646,14 @@
   "editorial": {
     "source": "src/data/deepSummaryContent.json",
     "total": 612,
-    "revision2": 470,
-    "pending": 140,
+    "revision2": 496,
+    "pending": 114,
     "counts": {
-      "Gramática": 26,
       "Literatura": 37,
       "Redação": 58,
       "Sociologia": 19
     },
     "chapters": [
-      {
-        "subject": "Gramática",
-        "topic": "Advérbio e Locuções Adverbiais: Circunstanciadores",
-        "id": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
-        "id": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Artigo, Numeral e Adjetivo no Sintagma Nominal",
-        "id": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Concordância",
-        "id": "summary-gramatica-concordancia",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Crase",
-        "id": "summary-gramatica-crase",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Funções Sintáticas Nominais e Vocativo",
-        "id": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Língua: um Sistema Complexo",
-        "id": "summary-gramatica-lingua-um-sistema-complexo",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Mecanismo de Regência",
-        "id": "summary-gramatica-mecanismo-de-regencia",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
-        "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Orações Adjetivas",
-        "id": "summary-gramatica-oracoes-adjetivas",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Orações Adverbiais",
-        "id": "summary-gramatica-oracoes-adverbiais",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Orações Coordenadas",
-        "id": "summary-gramatica-oracoes-coordenadas",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Orações Substantivas",
-        "id": "summary-gramatica-oracoes-substantivas",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Pontuação I: Princípios para o Uso da Vírgula",
-        "id": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação",
-        "id": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Processos de Formação de Palavras",
-        "id": "summary-gramatica-processos-de-formacao-de-palavras",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Pronomes",
-        "id": "summary-gramatica-pronomes",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Significados Implícitos",
-        "id": "summary-gramatica-significados-implicitos",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Substantivo: os Nomes e a Visão do Enunciador",
-        "id": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Tipos de Discurso",
-        "id": "summary-gramatica-tipos-de-discurso",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Tipos de Sujeito",
-        "id": "summary-gramatica-tipos-de-sujeito",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos",
-        "id": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Variação Linguística",
-        "id": "summary-gramatica-variacao-linguistica",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Verbo",
-        "id": "summary-gramatica-verbo",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Verbo e Sintaxe da Oração",
-        "id": "summary-gramatica-verbo-e-sintaxe-da-oracao",
-        "batch": "LG1"
-      },
-      {
-        "subject": "Gramática",
-        "topic": "Vozes Verbais",
-        "id": "summary-gramatica-vozes-verbais",
-        "batch": "LG1"
-      },
       {
         "subject": "Literatura",
         "topic": "A Arte e suas Linguagens",
