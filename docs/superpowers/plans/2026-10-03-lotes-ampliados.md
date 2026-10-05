@@ -81,13 +81,16 @@ Registro da entrega C: [manifesto, validação e galeria](../../visual-integral-
 ## Demais lotes
 
 - [x] Executar F2 (11) e F3 (10) por modelos físicos, mantendo derivados/fontes/estados definidos antes da edição. Separar cenas físicas dos componentes genéricos compartilhados com Humanas quando necessário.
-- [ ] Executar LG1 (26) e LG3 (37), com aprofundamento dos mesmos textos. Gramática preserva transformações pertinentes; Literatura demonstra procedimento/narrador/forma em exemplos autorais.
+- [x] Executar LG1 (26), com aprofundamento dos mesmos textos. Gramática preserva transformações pertinentes e completa os mecanismos centrais dos recalls.
+- [ ] Executar LG3 (37), com aprofundamento dos mesmos textos. Literatura demonstra procedimento/narrador/forma em exemplos autorais.
 - [ ] Executar H2 (23) e H3 (15), com os 19 textos restantes de Sociologia vinculados no JSON. Representar retorno causal, critérios, meio-termo contextual e procedimentos próprios de Sócrates/Hegel/Nietzsche.
 - [ ] Executar R1 (16), R2 (15) e R3 (27), com seus 58 textos. Um responsável integra os arquivos de Writing; frentes não os editam simultaneamente.
 - [ ] Integrar A1/COP30 (1) a uma entrega maior, usando fatos e referências datados; não confundir hipótese com decisão oficial.
 - [ ] Executar a frente de contraste/layout/fluxos gerais definida no plano geral, sem somar ocorrências de acessibilidade como capítulos novos.
 
-Registro da Entrega D: [resultado, manifesto e galeria](../../visual-integral-2026-10-04/entrega-d/README.md). Os 21 capítulos foram validados em 14 configurações de navegador; 1.943 testes gerais passaram, com 192 idas e voltas de abas por teclado e 63 capturas. Fila da proposta: 138 tratados, 160 pendentes e 315 preservados. PR #259 permanece rascunho, sem merge automático.
+Registro da Entrega D: [resultado, manifesto e galeria](../../visual-integral-2026-10-04/entrega-d/README.md). Os 21 capítulos foram validados em 14 configurações de navegador; 1.943 testes gerais passaram, com 192 idas e voltas de abas por teclado e 63 capturas. Fila da proposta: 138 tratados, 160 pendentes e 315 preservados. PR #259 integrado em `abba293c`; não repetir F2/F3.
+
+Registro da Entrega E: [resultado, revisão e galeria](../../visual-integral-2026-10-05/entrega-e/README.md). Os 26 capítulos LG1 e textos foram conferidos em 14 configurações, 2.770 estados, 2.520 estados SVG e 78 capturas. Fila da proposta: 164 tratados, 134 pendentes e 315 preservados; 114 aprofundamentos editoriais restantes. Integração por PR, sem merge automático.
 
 ## Validação e integração comuns
 

@@ -1,0 +1,23 @@
+.vs-instrument.grammar-instrument {width:100%;min-width:0;display:flex;flex-direction:column;align-items:stretch;}
+.grammar-drawing-wrap {width:100%;min-width:0;max-width:100%;}
+.grammar-drawing-window {width:100%;min-width:0;max-width:100%;overflow-x:auto;overscroll-behavior-inline:contain;}
+.grammar-drawing-window > svg {display:block;width:760px;min-width:760px;max-width:none;height:auto;color:var(--vs-ink);}
+.crivo-visual--tech .grammar-drawing-window > svg text,.grammar-drawing-window > svg text {font-family:Kalam,cursive!important;}
+.grammar-drawing-window:focus-visible {outline:3px solid var(--vs-blue);outline-offset:-3px;}
+.grammar-pan-hint {font:400 .9rem/1.5 system-ui,sans-serif;color:var(--vs-dim);margin:0 0 .6rem;}
+.grammar-pan-buttons {display:flex;justify-content:space-between;gap:1rem;margin-top:.5rem;}
+.grammar-pan-buttons button {font:500 .9rem/1.5 system-ui,sans-serif;color:var(--vs-ink);background:var(--vs-paper);border:1px solid var(--vs-ink-muted);border-radius:8px;padding:.4rem .8rem;}
+.grammar-pan-buttons button:focus-visible {outline:3px solid var(--vs-blue);outline-offset:2px;}
+.vs-main > div:has(.grammar-board,.grammar-drawing-wrap),.vs-main > div:has(.grammar-board,.grammar-drawing-wrap) > div {min-width:0;max-width:100%;}
+.grammar-board .vs-study-board .vs-piston-wrap,.grammar-board .vs-study-board .vs-viewport,.grammar-board .vs-study-board .vs-viewport-janela {min-width:0;max-width:100%;width:100%;}
+.topic-studio .grammar-drawing-window > svg {width:760px;max-width:none;min-width:760px;margin:0;}
+.topic-studio .grammar-drawing-window > svg text {font-size:inherit;}
+.grammar-board .vs-study-board .vs-piston-wrap {grid-template-columns:minmax(0,1fr);}
+.vs-viewport-conteudo:has(.grammar-instrument) {min-width:0;max-width:100%;width:100%;}
+
+.grammar-board .vs-study-board .vs-equation-strip {min-width:0;max-width:100%;}
+.grammar-board .vs-study-board .vs-equation-strip strong {min-width:0;max-width:100%;white-space:normal;overflow-wrap:anywhere;}
+@media(max-width:620px){.grammar-drawing-window > svg,.topic-studio .grammar-drawing-window > svg {width:560px;min-width:560px;}}
+
+.grammar-board {width:100%;min-width:0;max-width:100%;}
+.grammar-board .vs-study-board {min-width:0;max-width:100%;}

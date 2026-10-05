@@ -1,3 +1,4 @@
+import {GrammarVariationScene} from './GrammarVariationScene';
 import React, { useState, useId } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { MOTION_DURATION, MOTION_EASE } from '../../design-system/motion/tokens';
@@ -198,12 +199,10 @@ function Cohesion() {
 
 
 function Variation() {
-  const [formal,setFormal]=useState(false); const transition=useInkMotion();
+  const [formal,setFormal]=useState(false);
   return <Studio title="A linguagem encontra a situação" note="A intenção é a mesma; interlocutor, contexto e registro orientam a escolha.">
     <div className="ts-choices"><button type="button" aria-pressed={!formal} onClick={()=>setFormal(false)}>Conversa entre amigos</button><button type="button" aria-pressed={formal} onClick={()=>setFormal(true)}>Solicitação institucional</button></div>
-    <motion.div className="ts-letter" animate={{borderRadius:formal?'2px 2px 2px 2px':'24px 24px 24px 2px'}} transition={transition}>
-      <small>{formal?'À secretaria':'Mensagem para uma amiga'}</small><p>{formal?'Poderia, por gentileza, encaminhar o documento?':'Me manda o documento, por favor?'}</p>
-    </motion.div>
+    <GrammarVariationScene formal={formal}/>
     <p className="ts-observation" role="status">{formal?'O pedido usa tratamento mais formal, adequado à situação institucional.':'O pedido usa um registro informal, adequado a uma relação de proximidade.'} Variação de registro não mede a inteligência nem o valor de quem fala.</p>
   </Studio>;
 }

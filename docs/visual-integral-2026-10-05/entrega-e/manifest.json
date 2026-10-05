@@ -1,0 +1,153 @@
+{
+  "date": "2026-10-05",
+  "base": "abba293c6c671f7b21bf1b34d536300fa28ac9d3",
+  "status": "validado em Chromium; proposta de integração",
+  "total": 26,
+  "chapters": [
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "subject": "Gramática",
+      "title": "Língua: um Sistema Complexo"
+    },
+    {
+      "id": "summary-gramatica-variacao-linguistica",
+      "subject": "Gramática",
+      "title": "Variação Linguística"
+    },
+    {
+      "id": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador",
+      "subject": "Gramática",
+      "title": "Substantivo: os Nomes e a Visão do Enunciador"
+    },
+    {
+      "id": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos",
+      "subject": "Gramática",
+      "title": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos"
+    },
+    {
+      "id": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal",
+      "subject": "Gramática",
+      "title": "Artigo, Numeral e Adjetivo no Sintagma Nominal"
+    },
+    {
+      "id": "summary-gramatica-pronomes",
+      "subject": "Gramática",
+      "title": "Pronomes"
+    },
+    {
+      "id": "summary-gramatica-verbo",
+      "subject": "Gramática",
+      "title": "Verbo"
+    },
+    {
+      "id": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores",
+      "subject": "Gramática",
+      "title": "Advérbio e Locuções Adverbiais: Circunstanciadores"
+    },
+    {
+      "id": "summary-gramatica-verbo-e-sintaxe-da-oracao",
+      "subject": "Gramática",
+      "title": "Verbo e Sintaxe da Oração"
+    },
+    {
+      "id": "summary-gramatica-concordancia",
+      "subject": "Gramática",
+      "title": "Concordância"
+    },
+    {
+      "id": "summary-gramatica-significados-implicitos",
+      "subject": "Gramática",
+      "title": "Significados Implícitos"
+    },
+    {
+      "id": "summary-gramatica-tipos-de-discurso",
+      "subject": "Gramática",
+      "title": "Tipos de Discurso"
+    },
+    {
+      "id": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula",
+      "subject": "Gramática",
+      "title": "Pontuação I: Princípios para o Uso da Vírgula"
+    },
+    {
+      "id": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao",
+      "subject": "Gramática",
+      "title": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação"
+    },
+    {
+      "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
+      "subject": "Gramática",
+      "title": "O Léxico em Contexto: Variadas Possibilidades Semânticas"
+    },
+    {
+      "id": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe",
+      "subject": "Gramática",
+      "title": "Ambiguidade: Duplicidade no Léxico e na Sintaxe"
+    },
+    {
+      "id": "summary-gramatica-mecanismo-de-regencia",
+      "subject": "Gramática",
+      "title": "Mecanismo de Regência"
+    },
+    {
+      "id": "summary-gramatica-crase",
+      "subject": "Gramática",
+      "title": "Crase"
+    },
+    {
+      "id": "summary-gramatica-processos-de-formacao-de-palavras",
+      "subject": "Gramática",
+      "title": "Processos de Formação de Palavras"
+    },
+    {
+      "id": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo",
+      "subject": "Gramática",
+      "title": "Funções Sintáticas Nominais e Vocativo"
+    },
+    {
+      "id": "summary-gramatica-tipos-de-sujeito",
+      "subject": "Gramática",
+      "title": "Tipos de Sujeito"
+    },
+    {
+      "id": "summary-gramatica-vozes-verbais",
+      "subject": "Gramática",
+      "title": "Vozes Verbais"
+    },
+    {
+      "id": "summary-gramatica-oracoes-substantivas",
+      "subject": "Gramática",
+      "title": "Orações Substantivas"
+    },
+    {
+      "id": "summary-gramatica-oracoes-adjetivas",
+      "subject": "Gramática",
+      "title": "Orações Adjetivas"
+    },
+    {
+      "id": "summary-gramatica-oracoes-adverbiais",
+      "subject": "Gramática",
+      "title": "Orações Adverbiais"
+    },
+    {
+      "id": "summary-gramatica-oracoes-coordenadas",
+      "subject": "Gramática",
+      "title": "Orações Coordenadas"
+    }
+  ],
+  "browser": {
+    "configurations": 14,
+    "states": 2770,
+    "svgStates": 2520
+  },
+  "validation": {
+    "lint": "passed",
+    "build": "passed",
+    "nodeTests": 922,
+    "vitestTests": 1114,
+    "totalTests": 2036,
+    "visualMatrixTests": 13,
+    "visualQualityTests": 4,
+    "queue": "passed"
+  }
+}

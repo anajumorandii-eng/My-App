@@ -48,22 +48,22 @@ describe('instrumentos de Gramática', () => {
   it('oferece laboratórios próprios para referência, aspecto, ambiguidade e conectivos', () => {
     const chapters: Array<[GrammarInstrumentId, string, string]> = [
       ['pronoun-reference', 'summary-gramatica-pronomes', 'referência ambígua'],
-      ['verbal-aspect', 'summary-gramatica-verbo', 'evento concluído'],
-      ['ambiguity', 'summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe', 'telescópio: aluna'],
+      ['verbal-aspect', 'summary-gramatica-verbo', 'concluído'],
+      ['ambiguity', 'summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe', 'a aluna porta o instrumento'],
       ['clause-relations', 'summary-gramatica-oracoes-coordenadas', 'consequência'],
     ];
     for (const [id, summaryId, expected] of chapters) {
       const Component = grammarInstrument(id);
       const view = render(<Component {...props(summaryId)} />);
       fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
-      expect(screen.getAllByText(expected).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(expected,{exact:false}).length).toBeGreaterThan(0);
       view.unmount();
     }
   });
 
   it('oferece laboratórios próprios para os 16 capítulos da rodada de maximização de cobertura', () => {
     const chapters: Array<[GrammarInstrumentId, string, string]> = [
-      ['language-system', 'summary-gramatica-lingua-um-sistema-complexo', 'ordem sintática'],
+      ['language-system', 'summary-gramatica-lingua-um-sistema-complexo', 'ordem dos termos'],
       ['noun-class', 'summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador', 'coletivo'],
       ['text-type', 'summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos', 'dissertativo'],
       ['adverb-circumstance', 'summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores', 'modo'],
@@ -77,7 +77,7 @@ describe('instrumentos de Gramática', () => {
       ['nominal-function', 'summary-gramatica-funcoes-sintaticas-nominais-e-vocativo', 'vocativo'],
       ['subject-type', 'summary-gramatica-tipos-de-sujeito', 'inexistente'],
       ['noun-clause', 'summary-gramatica-oracoes-substantivas', 'completiva nominal'],
-      ['adjective-clause', 'summary-gramatica-oracoes-adjetivas', 'locativa'],
+      ['adjective-clause', 'summary-gramatica-oracoes-adjetivas', 'restritiva com onde'],
       ['adverbial-clause', 'summary-gramatica-oracoes-adverbiais', 'concessiva'],
     ];
     for (const [id, summaryId, expected] of chapters) {
@@ -85,7 +85,7 @@ describe('instrumentos de Gramática', () => {
       const view = render(<Component {...props(summaryId)} />);
       fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
       expect(screen.getByRole('img')).toBeInTheDocument();
-      expect(screen.getAllByText(expected).length).toBeGreaterThan(0);
+      expect(screen.getAllByText(expected,{exact:false}).length).toBeGreaterThan(0);
       view.unmount();
     }
   });
