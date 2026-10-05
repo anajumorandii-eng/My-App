@@ -15,19 +15,19 @@ renomeadas.
 
 ## Estado atual e precedência — auditoria de 05/10/2026
 
-Base confirmada com `origin/main`: `f990e937fe8d90c66f44b838a5e1826cee8f3929`.
-A Entrega E/Gramática foi integrada na PR #260; isolamento de Resumos e contraste na PR #261. A Entrega F (oito fundamentos de Literatura) foi integrada na PR #262. A Entrega G propõe oito capítulos de Literatura do século XIX, com evidências em `docs/visual-integral-2026-10-05/entrega-g/README.md`. A fonte operacional é
+Base confirmada com `origin/main`: `fd4bc49b47112b8a3eeba7886b54060f306c4d5a`.
+A Entrega E/Gramática foi integrada na PR #260; isolamento de Resumos e contraste na PR #261. A Entrega F (oito fundamentos de Literatura) foi integrada na PR #262. A Entrega G (século XIX) foi integrada na PR #263. A Entrega H propõe Machado e o Modernismo até a geração de 30, com evidências em `docs/visual-integral-2026-10-05/entrega-h/README.md`. A fonte operacional é
 `docs/PLANO-GERAL-CRIVO-2026-10-03.md` + `docs/FILA-VISUAL-2026-10-03.json`;
 as filas históricas da continuidade não são tarefas novas.
 
-- 613 capítulos com representação: 8 experimentos, 43 pranchas, 333 instrumentos
-  e 229 cenas; zero lacunas. Isso mede presença, não aprovação editorial.
-- 612 resumos profundos: 512 em revisão 2, dois em revisão 3 e 98 em revisão 1
-  (Literatura 21, Redação 58, Sociologia 19).
-- Fila: 180 achados tratados, 118 pendentes, 315 mecanismos preservados.
+- 613 capítulos com representação: 8 experimentos, 43 pranchas, 336 instrumentos
+  e 226 cenas; zero lacunas. Isso mede presença, não aprovação editorial.
+- 612 resumos profundos: 520 em revisão 2, dois em revisão 3 e 90 em revisão 1
+  (Literatura 13, Redação 58, Sociologia 19).
+- Fila: 188 achados tratados, 110 pendentes, 315 mecanismos preservados.
 - Inventário formal: 532 não revisados, 81 em validação, zero aprovações
   registradas. Não promover aprovação por contagem ou teste automático.
-- Próxima entrega editorial/visual: LG3/Literatura (21 restantes, do Modernismo em diante), depois H2/H3,
+- Próxima entrega editorial/visual: LG3/Literatura (13 restantes: autores de 45 em diante, poesia concreta, 1960-1980, contemporâneos, lusófonos, artes plásticas, teatro e cancioneiro), depois H2/H3,
   R1/R2/R3 e A1. Defeitos confirmados de persistência/acessibilidade podem
   receber prioridade, conforme o plano geral.
 - A personalização visual vigente abrange **todas as matérias**. O escopo antigo
@@ -176,10 +176,10 @@ revisão no id das seções (`-editorial-v${rev}-`). **É isso que impede o
 progresso de leitura dos 612 capítulos de zerar** a cada mudança de texto: só o
 capítulo que mudou volta a pedir leitura. Ao reescrever, sempre suba o `rev`.
 
-Estado na proposta G: 514 de 612 com aprofundamento (512 em revisão 2 e dois
-em revisão 3). Restam Literatura (21), Redação (58) e Sociologia (19). Executar
-junto à fila visual por ID; LG3 continua; fundamentos (F, #262) e século XIX
-(G) já foram tratados. Reconciliar a integração de G antes de repetir os capítulos. Não repetir Gramática.
+Estado na proposta H: 522 de 612 com aprofundamento (520 em revisão 2 e dois
+em revisão 3). Restam Literatura (13), Redação (58) e Sociologia (19). Executar
+junto à fila visual por ID; LG3 continua; fundamentos (F, #262), século XIX
+(G, #263) e Machado/Modernismo até 30 (H) já foram tratados. Reconciliar a integração de H antes de repetir os capítulos. Não repetir Gramática.
 
 ## Visual
 

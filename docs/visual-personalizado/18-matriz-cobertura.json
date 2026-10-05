@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 8,
     "board": 43,
-    "instrument": 333,
-    "scene": 229,
+    "instrument": 336,
+    "scene": 226,
     "fallback": 0
   },
-  "contested": 65,
+  "contested": 68,
   "subjects": [
     {
       "subject": "Física",
@@ -103,8 +103,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 30,
-        "scene": 6,
+        "instrument": 33,
+        "scene": 3,
         "fallback": 0
       }
     },
@@ -3565,17 +3565,27 @@
       "id": "summary-literatura-vanguardas-artisticas",
       "subject": "Literatura",
       "title": "Vanguardas Artísticas",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "vanguards",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-literatura-fernando-pessoa",
       "subject": "Literatura",
       "title": "Fernando Pessoa",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "fernando-pessoa",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-literatura-semana-de-arte-moderna",
@@ -3597,9 +3607,14 @@
       "id": "summary-literatura-segunda-geracao-modernista-prosa",
       "subject": "Literatura",
       "title": "Segunda Geração Modernista: Prosa",
-      "primary": "scene",
-      "artifact": "contraste-de-posicoes",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "modernism-second-prose",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "contraste-de-posicoes"
+        }
+      ]
     },
     {
       "id": "summary-literatura-graciliano-ramos",
