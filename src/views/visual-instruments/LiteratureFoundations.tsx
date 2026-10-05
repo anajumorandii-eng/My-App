@@ -211,6 +211,62 @@ export const LITERATURE_FOUNDATIONS = {
       { label: 'Repetição', section: 'Temas centrais', anchor: 'tinha um muro, tinha um muro na volta da escola', observation: 'A insistência transforma um obstáculo banal em experiência de bloqueio.', conclusion: 'Repetição é construção, não falha; foi o que escandalizou a crítica.' },
     ],
   },
+  'graciliano-ramos': {
+    topic: 'Graciliano Ramos', question: 'O que a frase corta, e quem empresta a palavra?', relation: 'corte + narrador que empresta voz → privação visível',
+    states: [
+      { label: 'Cortar', section: 'A secura da linguagem', anchor: 'O sol queimava. A cachorra arquejava.', observation: 'Dois fatos, nenhum adjetivo: a dureza aparece pela relação entre calor e corpo.', conclusion: 'A secura é procedimento; a forma acompanha o mundo áspero.' },
+      { label: 'Emprestar a voz', section: 'Vidas Secas', anchor: 'ele queria dizer que a terra era injusta, mas só lhe vinha um grunhido', observation: 'A ideia existe e a fala falta; quem formula “injusta” é o narrador.', conclusion: 'A privação material vem junto com a privação verbal.' },
+      { label: 'Possuir', section: 'Outras obras', anchor: 'comprei a fazenda, comprei o silêncio da casa, e não soube comprar o resto', observation: 'A repetição de “comprei” mostra a lógica de posse aplicada a tudo.', conclusion: 'Em São Bernardo, a mentalidade de proprietário destrói os afetos.' },
+    ],
+  },
+  'joao-cabral': {
+    topic: 'João Cabral de Melo Neto', question: 'Como o poema é construído, e não inspirado?', relation: 'objeto concreto + medida → poema construído',
+    states: [
+      { label: 'Construir', section: 'O poeta engenheiro', anchor: 'a palavra posta como pedra sobre pedra', observation: 'Cada palavra é escolhida e assentada como material de obra.', conclusion: 'Rigor não é frieza: a emoção vira precisão.' },
+      { label: 'Redondilha', section: 'Morte e Vida Severina', anchor: 'Eu venho do sertão seco / atrás de um chão pra morar', observation: 'Sete sílabas poéticas até a última tônica, o metro do cordel.', conclusion: 'A forma aproxima o auto da tradição oral nordestina.' },
+      { label: 'Pedra', section: 'Outras obras', anchor: 'aprender da pedra a frase que não sobra', observation: 'A pedra ensina economia: dizer só o necessário.', conclusion: 'Lição ética e estética: não embelezar a miséria.' },
+    ],
+  },
+  'clarice-lispector': {
+    topic: 'Clarice Lispector', question: 'Que detalhe banal muda o olhar?', relation: 'detalhe banal → epifania → linguagem que falha',
+    states: [
+      { label: 'Epifania', section: 'Uma prosa introspectiva', anchor: 'Ao ver o ovo rachado na pia, ela entendeu que a casa inteira era frágil', observation: 'Um objeto doméstico desencadeia uma percepção maior que ele.', conclusion: 'O acontecimento é interno; a revelação pode inquietar.' },
+      { label: 'Narrador que hesita', section: 'Obras', anchor: 'quem conta a vida da moça hesita antes de cada frase', observation: 'A dúvida de quem narra entra na história.', conclusion: 'Em A Hora da Estrela, narrar Macabéa vira problema.' },
+      { label: 'Linguagem que falha', section: 'Linguagem', anchor: 'o que eu sinto não tem nome, e por isso escrevo', observation: 'A escrita nasce do que não se deixa nomear: paradoxo produtivo.', conclusion: 'A forma encena a insuficiência da linguagem.' },
+    ],
+  },
+  'guimaraes-rosa': {
+    topic: 'Guimarães Rosa', question: 'Que palavra foi inventada, e o que fica sem resposta?', relation: 'invenção + travessia + dúvida → sertão-mundo',
+    states: [
+      { label: 'Inventar', section: 'Invenção da linguagem', anchor: 'o rio desmanchava-se em vereda e saudadeava', observation: '“Saudadear” transforma sentimento em ação do rio.', conclusion: 'Soa oral, mas é língua literária inventada.' },
+      { label: 'Ambiguidade', section: 'Grande Sertão: Veredas', anchor: 'se o trato foi feito, só a noite sabe', observation: 'O pacto é deslocado para um lugar sem testemunha.', conclusion: 'A dúvida sobre o pacto é tema, não falha de enredo.' },
+      { label: 'Travessia', section: 'Contos e temas', anchor: 'o menino atravessou o rio e voltou outro', observation: 'Deslocamento físico e transformação interior na mesma frase.', conclusion: 'O sertão é lugar e também imagem do mundo.' },
+    ],
+  },
+  'concrete-poetry': {
+    topic: 'Poesia Concreta', question: 'Onde está o sentido: na palavra ou na página?', relation: 'espaço + decomposição + som → sintaxe espacial',
+    states: [
+      { label: 'Espaço', section: 'O projeto', anchor: 'o espaço em branco também fala', observation: 'O vazio separa, aproxima e cria ritmo visual.', conclusion: 'Fim do verso: a página inteira é unidade.' },
+      { label: 'Decompor', section: 'Procedimentos', anchor: 'mar dentro de amar, amar dentro de amargo', observation: 'Cada palavra contém a anterior; letras somadas criam sentido.', conclusion: 'Sintaxe espacial: a posição substitui o conectivo.' },
+      { label: 'Comunicar', section: 'Contexto e desdobramentos', anchor: 'a placa de trânsito e o poema usam o mesmo alfabeto', observation: 'O poema aposta na rapidez do cartaz e do sinal urbano.', conclusion: 'Diálogo com design e publicidade; crítica de formalismo à parte.' },
+    ],
+  },
+  'poetry-1960-1980': {
+    topic: 'Poesia Brasileira: 1960-1980', question: 'Como dizer sob vigilância?', relation: 'censura + metáfora + cotidiano → resistência plural',
+    states: [
+      { label: 'Metáfora', section: 'Contexto de censura', anchor: 'o jardim tem ordem de não florir', observation: 'A proibição é deslocada para a natureza, sem nomear o censor.', conclusion: 'Dizer sem dizer exige decifração do leitor.' },
+      { label: 'Marginal', section: 'Poesia marginal', anchor: 'acordei / o ônibus não / passou de novo', observation: 'Brevidade, quebra no meio da frase e assunto banal.', conclusion: 'Simplicidade escolhida, contra a solenidade e o mercado.' },
+      { label: 'Corpo e casa', section: 'Outras vertentes', anchor: 'a fruta madura no quintal também é corpo', observation: 'Cotidiano doméstico e experiência física juntos.', conclusion: 'O período não se resume à marginalidade.' },
+    ],
+  },
+  'prose-1960-1980': {
+    topic: 'Prosa Brasileira: 1960-1980', question: 'Que estratégia torna dizível o que se calava?', relation: 'censura → alegoria, voz brutal ou testemunho',
+    states: [
+      { label: 'Alegoria', section: 'Ficção e ditadura', anchor: 'os mortos da cidade levantaram para cobrar o que os vivos calaram', observation: 'O impossível diz o que o medo cala.', conclusion: 'O fantástico fala da realidade de forma indireta.' },
+      { label: 'Voz do agressor', section: 'Conto urbano e violência', anchor: 'eu não odiava ninguém; só tinha a arma e a pressa', observation: 'Quem agride narra sem remorso: a violência vira dado banal.', conclusion: 'Diagnóstico da desumanização, não celebração.' },
+      { label: 'Testemunho', section: 'Memória e testemunho', anchor: 'conto o que vi na cela para que não digam que não houve', observation: 'Narrar é registrar o que poderia ser negado.', conclusion: 'Pacto de prova, diferente da autobiografia.' },
+    ],
+  },
 } satisfies Record<string, Foundation>;
 export type LiteratureFoundationId = keyof typeof LITERATURE_FOUNDATIONS;
 
@@ -415,6 +471,58 @@ function Drummond({ state }: { state: number }) {
   </Drawing>;
 }
 
+function Graciliano({ state }: { state: number }) {
+  const [cut, setCut] = useState(false);
+  const transition = useSceneMotion();
+  return <div>{state === 0 && <button type="button" className="lf-inline-control" aria-pressed={cut} onClick={() => setCut(!cut)}>{cut ? 'Repor' : 'Cortar'} os adjetivos</button>}<Drawing label={['Adjetivos cortados deixam dois fatos', 'A ideia de injustiça não chega à fala', 'Comprar repetido até o que não se compra'][state]}>
+    {state === 0 && <><Line y={50}>O sol <motion.tspan initial={false} animate={{ opacity: cut ? 0.15 : 1 }} transition={transition} fill={wine}>terrível e implacável </motion.tspan>queimava.</Line><Line y={95}>A cachorra arquejava.</Line><Arrow d="M60 110v40m-8-10 8 10 8-10"/><Line y={180}>calor + corpo: a relação fala sozinha</Line><Line x={20} y={222}>secura como procedimento</Line></>}
+    {state === 1 && <><Box x={20} y={40} w={200} strong>terra injusta (ideia)</Box><Arrow d="M225 62h80m-12-8 12 8-12 8"/><Box x={315} y={40} w={150}>grunhido</Box><Line y={140}>quem nomeia “injusta” é o narrador</Line><Line x={20} y={222}>privação material e verbal</Line></>}
+    {state === 2 && <>{['fazenda', 'silêncio', 'o resto?'].map((w, i) => <Box key={w} x={20 + i * 180} y={50} w={150} strong={i === 2}>{i < 2 ? `comprei ${w}` : w}</Box>)}<Arrow d="M95 100q180 60 360 0"/><Line x={20} y={222}>a posse não alcança o afeto</Line></>}
+  </Drawing></div>;
+}
+function Cabral({ state }: { state: number }) {
+  return <Drawing label={['Palavras assentadas como pedras', 'Sete sílabas poéticas por verso', 'A pedra ensina a frase sem sobra'][state]}>
+    {state === 0 && <>{[0, 1, 2].map(r => [0, 1, 2].map(c => <rect key={`${r}${c}`} x={40 + c * 90 + (r % 2) * 45} y={150 - r * 40} width="85" height="36" fill={paper} stroke={r === 2 && c === 1 ? wine : ink} strokeWidth="2"/>))}<Arrow d="M380 100h80"/><Line x={390} y={80}>palavra</Line><Line x={20} y={222}>construção, não inspiração</Line></>}
+    {state === 1 && <><Line y={50}>Eu venho do sertão seco</Line>{[1, 2, 3, 4, 5, 6, 7].map(n => <g key={n}><circle cx={20 + n * 50} cy="100" r="16" fill={n === 7 ? wine : paper} stroke={ink}/><text x={20 + n * 50} y="106" textAnchor="middle" fill={n === 7 ? paper : ink} fontSize="15">{n}</text></g>)}<Arrow d="M70 130h300"/><Line y={175}>até a última tônica: redondilha maior</Line><Line x={20} y={222}>o metro do cordel</Line></>}
+    {state === 2 && <><path d="M60 160l30-70h80l30 70z" fill={paper} stroke={ink} strokeWidth="3"/><Line x={90} y={190}>pedra</Line><Arrow d="M210 130h90m-12-8 12 8-12 8"/><Box x={310} y={108} w={210} strong>frase que não sobra</Box><Line x={20} y={222}>economia ética e estética</Line></>}
+  </Drawing>;
+}
+function Clarice({ state }: { state: number }) {
+  return <Drawing label={['O ovo rachado revela a fragilidade da casa', 'O narrador hesita antes de cada frase', 'Escrever a partir do que não tem nome'][state]}>
+    {state === 0 && <><ellipse cx="90" cy="110" rx="40" ry="52" fill={paper} stroke={ink} strokeWidth="3"/><path d="M60 100l18 12 12-14 14 16" fill="none" stroke={wine} strokeWidth="3"/><Arrow d="M140 110h110m-12-8 12 8-12 8"/><path d="M300 150V80l70-40 70 40v70z" fill="none" stroke={ink} strokeWidth="3" strokeDasharray="6 5"/><Line x={20} y={222}>detalhe banal → percepção inteira</Line></>}
+    {state === 1 && <><Line y={60}>quem conta …</Line><Line x={160} y={60}>hesita …</Line><Line x={290} y={60}>adia …</Line><Arrow d="M40 80q200 80 400 0"/><Line y={170}>a dúvida de narrar entra na história</Line><Line x={20} y={222}>narrar o outro é problema</Line></>}
+    {state === 2 && <><Box x={20} y={50} w={200}>sinto: sem nome</Box><Arrow d="M225 72h80m-12-8 12 8-12 8"/><Box x={315} y={50} w={150} strong>escrevo</Box><Line y={150}>a falha da palavra move o texto</Line><Line x={20} y={222}>paradoxo produtivo</Line></>}
+  </Drawing>;
+}
+function Rosa({ state }: { state: number }) {
+  return <Drawing label={['Saudade vira verbo do rio', 'O pacto fica sem testemunha', 'Atravessar o rio e voltar outro'][state]}>
+    {state === 0 && <><Box x={20} y={50} w={130}>saudade</Box><Arrow d="M155 72h80m-12-8 12 8-12 8"/><Box x={245} y={50} w={160} strong>saudadear</Box><path d="M20 160q60-30 120 0t120 0 120 0" fill="none" stroke={ink} strokeWidth="3"/><Line x={20} y={222}>parece oral, é invenção</Line></>}
+    {state === 1 && <><circle cx="280" cy="110" r="70" fill={ink} opacity="0.85"/><Line x={235} y={116}>?</Line><Line y={60}>trato feito?</Line><Arrow d="M130 70q80 0 100 30"/><Line x={20} y={222}>a dúvida é o tema</Line></>}
+    {state === 2 && <><path d="M240 30v170M300 30v170" stroke={ink} strokeWidth="3"/><circle cx="120" cy="110" r="18" fill={ink}/><circle cx="430" cy="110" r="18" fill={wine}/><Arrow d="M145 110h260m-12-8 12 8-12 8"/><Line x={90} y={160}>menino</Line><Line x={410} y={160}>outro</Line><Line x={20} y={222}>travessia física e interior</Line></>}
+  </Drawing>;
+}
+function Concrete({ state }: { state: number }) {
+  return <Drawing label={['O espaço em branco organiza as palavras', 'Mar dentro de amar dentro de amargo', 'Placa e poema com o mesmo alfabeto'][state]}>
+    {state === 0 && <><text x={60} y={60} fill={ink} fontSize="22">luz</text><text x={300} y={60} fill={ink} fontSize="22">luz</text><text x={180} y={130} fill={wine} fontSize="22">sombra</text><rect x="100" y="70" width="190" height="40" fill="none" stroke={wine} strokeDasharray="5 5"/><Arrow d="M300 140h120"/><Line x={20} y={222}>o vazio também significa</Line></>}
+    {state === 1 && <>{['  mar', ' amar', ' amargo'].map((w, i) => <text key={w} x={150} y={60 + i * 45} fill={ink} fontSize="24" fontFamily="monospace" xmlSpace="preserve">{w}</text>)}<Arrow d="M330 50v95m-8-10 8 10 8-10"/><Line x={350} y={105}>raiz comum</Line><Line x={20} y={222}>posição no lugar do conectivo</Line></>}
+    {state === 2 && <><rect x="40" y="50" width="140" height="80" rx="6" fill={wine}/><text x={60} y="100" fill={paper} fontSize="22">PARE</text><Arrow d="M190 90h110m-12-8 12 8-12 8"/><Box x={310} y={68} w={200}>poema-cartaz</Box><Line x={20} y={222}>comunicação rápida como modelo</Line></>}
+  </Drawing>;
+}
+function Poetry6080({ state }: { state: number }) {
+  return <Drawing label={['O jardim proibido de florir', 'Três versos curtos sobre o ônibus', 'Fruta, quintal e corpo'][state]}>
+    {state === 0 && <>{[80, 160, 240].map(x => <path key={x} d={`M${x} 170v-60m0 0q-15-20 0-35q15 15 0 35`} fill="none" stroke={ink} strokeWidth="3"/>)}<Box x={320} y={60} w={200} strong>ordem: não florir</Box><Arrow d="M315 100q-40 20-60 30"/><Line x={20} y={222}>a censura sem nome próprio</Line></>}
+    {state === 1 && <><Line y={50}>acordei</Line><Line y={90}>o ônibus não</Line><Line y={130}>passou de novo</Line><Arrow d="M150 82q40 0 60 10"/><Line x={230} y={95}>quebra: suspense mínimo</Line><Line x={20} y={222}>cotidiano como poema</Line></>}
+    {state === 2 && <><circle cx="100" cy="100" r="40" fill={wine}/><path d="M100 60v-20" stroke={ink} strokeWidth="3"/><Arrow d="M150 100h90m-12-8 12 8-12 8"/><Box x={250} y={78} w={160}>corpo</Box><Line y={170}>casa + desejo + fé</Line><Line x={20} y={222}>outras vozes do período</Line></>}
+  </Drawing>;
+}
+function Prose6080({ state }: { state: number }) {
+  return <Drawing label={['Mortos se levantam e falam', 'O agressor narra sem remorso', 'O relato registra o que poderia ser negado'][state]}>
+    {state === 0 && <>{[60, 130, 200].map(x => <path key={x} d={`M${x} 170v-70q25-30 50 0v70`} fill={paper} stroke={ink} strokeWidth="2"/>)}<Arrow d="M270 120h80m-12-8 12 8-12 8"/><Box x={360} y={98} w={160} strong>dizem o calado</Box><Line x={20} y={222}>o impossível torna dizível</Line></>}
+    {state === 1 && <><Box x={20} y={50} w={250}>eu não odiava ninguém</Box><Box x={290} y={50} w={240} strong>só a arma e a pressa</Box><Arrow d="M150 100v40m-8-10 8 10 8-10"/><Line y={175}>a voz fria expõe a banalização</Line><Line x={20} y={222}>diagnóstico, não elogio</Line></>}
+    {state === 2 && <><rect x="40" y="40" width="120" height="130" fill="none" stroke={ink} strokeWidth="3"/>{[60, 90, 120].map(x => <path key={x} d={`M${x} 40v130`} stroke={ink} strokeWidth="3"/>)}<Arrow d="M170 105h100m-12-8 12 8-12 8"/><Box x={280} y={83} w={220} strong>relato como prova</Box><Line x={20} y={222}>pacto de testemunho</Line></>}
+  </Drawing>;
+}
+
 const drawings: Record<LiteratureFoundationId, React.ComponentType<{ state: number }>> = {
   'art-languages': Art, 'literary-text': LiteraryText, 'narrative-elements': Narrative, 'medieval-voices': Medieval,
   'renaissance-camoes': Camoes, 'first-records': Records, baroque: Baroque, neoclassic: Neoclassic,
@@ -422,6 +530,8 @@ const drawings: Record<LiteratureFoundationId, React.ComponentType<{ state: numb
   'eca-de-queiros': Eca, parnassianism: Parnassian, symbolism: Symbolism, 'pre-modernism': PreModernism,
   'machado-de-assis': Machado, vanguards: Vanguards, 'modern-art-week': ArtWeek, 'modernism-first-generation': FirstGeneration,
   'modernism-second-generation': SecondPoetry, 'modernism-second-prose': SecondProse, 'fernando-pessoa': Pessoa, 'carlos-drummond': Drummond,
+  'graciliano-ramos': Graciliano, 'joao-cabral': Cabral, 'clarice-lispector': Clarice, 'guimaraes-rosa': Rosa,
+  'concrete-poetry': Concrete, 'poetry-1960-1980': Poetry6080, 'prose-1960-1980': Prose6080,
 };
 export function LiteratureOperation({ id }: { id: LiteratureFoundationId }) {
   const config = LITERATURE_FOUNDATIONS[id];

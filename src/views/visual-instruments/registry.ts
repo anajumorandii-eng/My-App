@@ -488,17 +488,18 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   { id: 'vanguards', subject: 'Literatura', keywords: ['vanguardas artísticas'], exactTopic: 'vanguardas artísticas', Component: literatureFoundationInstrument('vanguards') },
   { id: 'fernando-pessoa', subject: 'Literatura', keywords: ['fernando pessoa'], exactTopic: 'fernando pessoa', Component: literatureFoundationInstrument('fernando-pessoa') },
   literario('concrete-poetry','poesia concreta','concrete-poetry'),
+  { id: 'poetry-1960-1980', subject: 'Literatura', keywords: ['poesia brasileira: 1960-1980'], exactTopic: 'poesia brasileira: 1960-1980', Component: literatureFoundationInstrument('poetry-1960-1980') },
   literario('prose-1960-1980','prosa brasileira: 1960-1980','prose-1960-1980'),
   literario('lusophone-contemporary','literatura lusófona contemporânea','lusophone-contemporary'),
   literario('brazilian-visual-arts','artes plásticas brasileiras','brazilian-visual-arts'),
   literario('brazilian-theater','teatro brasileiro','brazilian-theater'),
   literario('popular-songbook','cancioneiro popular brasileiro','popular-songbook'),
   { id: 'machado-de-assis', subject: 'Literatura', keywords: ['machado de assis'], exactTopic: 'machado de assis', Component: literatureFoundationInstrument('machado-de-assis') },
-  literarioAutor('graciliano-ramos','graciliano ramos','graciliano-ramos'),
+  { id: 'graciliano-ramos', subject: 'Literatura', keywords: ['graciliano ramos'], exactTopic: 'graciliano ramos', Component: literatureFoundationInstrument('graciliano-ramos') },
   { id: 'carlos-drummond', subject: 'Literatura', keywords: ['carlos drummond de andrade'], exactTopic: 'carlos drummond de andrade', Component: literatureFoundationInstrument('carlos-drummond') },
-  literarioAutor('joao-cabral','joão cabral de melo neto','joao-cabral'),
-  literarioAutor('clarice-lispector','clarice lispector','clarice-lispector'),
-  literarioAutor('guimaraes-rosa','guimarães rosa','guimaraes-rosa'),
+  { id: 'joao-cabral', subject: 'Literatura', keywords: ['joão cabral de melo neto'], exactTopic: 'joão cabral de melo neto', Component: literatureFoundationInstrument('joao-cabral') },
+  { id: 'clarice-lispector', subject: 'Literatura', keywords: ['clarice lispector'], exactTopic: 'clarice lispector', Component: literatureFoundationInstrument('clarice-lispector') },
+  { id: 'guimaraes-rosa', subject: 'Literatura', keywords: ['guimarães rosa'], exactTopic: 'guimarães rosa', Component: literatureFoundationInstrument('guimaraes-rosa') },
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

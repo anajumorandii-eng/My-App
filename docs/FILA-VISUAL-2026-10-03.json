@@ -2,12 +2,12 @@
   "dateUTC": "2026-10-05",
   "mainCommit": "683a573204f92adc247d1493caaa08ad9de9b799",
   "sourceAudit": "docs/visual-integral-2026-10-02/capitulos.json",
-  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; 13 capítulos LG3 permanecem pendentes.",
+  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; integrada na PR #264. Entrega I: Graciliano, Cabral, Clarice, Rosa, Poesia Concreta e 1960-1980, sete capítulos LG3 revalidados em build local; 6 capítulos LG3 permanecem pendentes.",
   "editorialApproval": "Não promovida; manter e achado tratado não certificam capítulo completo.",
   "counts": {
-    "achado_tratado": 188,
+    "achado_tratado": 195,
     "preservar_mecanismo": 315,
-    "fila_a_revalidar": 110
+    "fila_a_revalidar": 103
   },
   "subjects": {
     "Física": {
@@ -85,8 +85,8 @@
     "Literatura": {
       "total": 37,
       "preservar_mecanismo": 0,
-      "achado_tratado": 24,
-      "fila_a_revalidar": 13
+      "achado_tratado": 31,
+      "fila_a_revalidar": 6
     },
     "Entendimento de Texto": {
       "total": 12,
@@ -102,7 +102,7 @@
     "R1": 16,
     "H3": 15,
     "H2": 23,
-    "LG3": 13
+    "LG3": 6
   },
   "chapters": [
     {
@@ -10081,22 +10081,24 @@
       "subject": "Literatura",
       "artifact": "graciliano-ramos",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryAuthorInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central resume o autor em três fileiras Trajetória/Técnica/Obras com emblemas, sem mostrar num trecho como a técnica altera voz, construção ou interpretação. Em Graciliano Ramos, o conteúdo apresenta A secura da linguagem, Vidas Secas, Outras obras."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-i",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-i/README.md",
+        "description": "Autores de 45 e literatura de 1950-1980: operação autoral e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-segunda-geracao-modernista-poesia",
@@ -10154,22 +10156,24 @@
       "subject": "Literatura",
       "artifact": "joao-cabral",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryAuthorInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central resume o autor em três fileiras Trajetória/Técnica/Obras com emblemas, sem mostrar num trecho como a técnica altera voz, construção ou interpretação. Em João Cabral de Melo Neto, o conteúdo apresenta O poeta engenheiro, Morte e Vida Severina, Outras obras."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-i",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-i/README.md",
+        "description": "Autores de 45 e literatura de 1950-1980: operação autoral e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-poesia-concreta",
@@ -10177,21 +10181,24 @@
       "subject": "Literatura",
       "artifact": "concrete-poetry",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Poesia Concreta; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-i",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-i/README.md",
+        "description": "Autores de 45 e literatura de 1950-1980: operação autoral e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-clarice-lispector",
@@ -10199,22 +10206,24 @@
       "subject": "Literatura",
       "artifact": "clarice-lispector",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryAuthorInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central resume o autor em três fileiras Trajetória/Técnica/Obras com emblemas, sem mostrar num trecho como a técnica altera voz, construção ou interpretação. Em Clarice Lispector, o conteúdo apresenta Uma prosa introspectiva, Obras, Linguagem."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-i",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-i/README.md",
+        "description": "Autores de 45 e literatura de 1950-1980: operação autoral e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-guimaraes-rosa",
@@ -10222,44 +10231,49 @@
       "subject": "Literatura",
       "artifact": "guimaraes-rosa",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryAuthorInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central resume o autor em três fileiras Trajetória/Técnica/Obras com emblemas, sem mostrar num trecho como a técnica altera voz, construção ou interpretação. Em Guimarães Rosa, o conteúdo apresenta Invenção da linguagem, Grande Sertão: Veredas, Contos e temas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-i",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-i/README.md",
+        "description": "Autores de 45 e literatura de 1950-1980: operação autoral e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-poesia-brasileira-1960-1980",
       "title": "Poesia Brasileira: 1960-1980",
       "subject": "Literatura",
-      "artifact": "tipologia",
+      "artifact": "poetry-1960-1980",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "AJUSTE_EDITORIAL",
           "description": "O mecanismo/recorte tem relação identificável com Poesia Brasileira: 1960-1980; preservar a operação e reforçar a composição editorial com anotações, hierarquia e relações visuais integradas. Na captura central atual predominam linhas simples, caixas/ícones e tipografia uniforme, abaixo da riqueza autoral das referências aprovadas."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-i",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-i/README.md",
+        "description": "Autores de 45 e literatura de 1950-1980: operação autoral e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-prosa-brasileira-1960-1980",
@@ -10267,22 +10281,24 @@
       "subject": "Literatura",
       "artifact": "prose-1960-1980",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "LG3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/literaryAuthorLab.ts",
-        "src/lib/literaryTraitLab.ts",
-        "src/views/topic-scenes/data/literatura.ts",
-        "src/views/visual-instruments/LiteraryTraitInstrument.tsx",
-        "src/views/visual-instruments/registry.ts",
-        "src/views/visualRepresentation.ts"
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.css",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "CATALOGO_DE_FACETAS_SEM_DEMONSTRACAO",
           "description": "A cena central organiza três facetas em cartões com emblemas e legendas; selecionar a faceta muda foco e leitura auxiliar, mas não demonstra no objeto literário a construção, transformação ou efeito estudado. Em Prosa Brasileira: 1960-1980, o conteúdo apresenta Ficção e ditadura, Conto urbano e violência, Memória e testemunho."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-i",
+        "evidence": "docs/visual-integral-2026-10-05/entrega-i/README.md",
+        "description": "Autores de 45 e literatura de 1950-1980: operação autoral e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-literatura-literatura-lusofona-contemporanea",
@@ -10704,10 +10720,10 @@
   "editorial": {
     "source": "src/data/deepSummaryContent.json",
     "total": 612,
-    "revision2": 520,
-    "pending": 90,
+    "revision2": 527,
+    "pending": 83,
     "counts": {
-      "Literatura": 13,
+      "Literatura": 6,
       "Redação": 58,
       "Sociologia": 19
     },
@@ -10726,30 +10742,6 @@
       },
       {
         "subject": "Literatura",
-        "topic": "Clarice Lispector",
-        "id": "summary-literatura-clarice-lispector",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "Graciliano Ramos",
-        "id": "summary-literatura-graciliano-ramos",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "Guimarães Rosa",
-        "id": "summary-literatura-guimaraes-rosa",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "João Cabral de Melo Neto",
-        "id": "summary-literatura-joao-cabral-de-melo-neto",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
         "topic": "Literatura Lusófona Contemporânea",
         "id": "summary-literatura-literatura-lusofona-contemporanea",
         "batch": "LG3"
@@ -10762,26 +10754,8 @@
       },
       {
         "subject": "Literatura",
-        "topic": "Poesia Brasileira: 1960-1980",
-        "id": "summary-literatura-poesia-brasileira-1960-1980",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "Poesia Concreta",
-        "id": "summary-literatura-poesia-concreta",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
         "topic": "Prosa Brasileira Contemporânea",
         "id": "summary-literatura-prosa-brasileira-contemporanea",
-        "batch": "LG3"
-      },
-      {
-        "subject": "Literatura",
-        "topic": "Prosa Brasileira: 1960-1980",
-        "id": "summary-literatura-prosa-brasileira-1960-1980",
         "batch": "LG3"
       },
       {
