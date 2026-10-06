@@ -1,6 +1,21 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — Entrega K/Sociologia H3, 06/10/2026
+## Estado mais recente — Entrega L/Filosofia, 06/10/2026
+
+A Entrega K foi integrada na PR #268. A branch `fix/entrega-l-filosofia-h3`
+trata os 19 capítulos de Filosofia (oito do H3 e onze do H2) com oficinas de
+argumento (`PhilosophyOperations.tsx`) ancoradas em frases literais dos textos
+rev 2, que já estavam aprofundados. O experimento Mito/Logos passa a usar a
+oficina. Sem merge automático. Evidências:
+[Entrega L](visual-integral-2026-10-06/entrega-l/README.md).
+
+Fila na proposta: 227 achados tratados, 71 pendentes e 315 preservados.
+Conteúdo inalterado: 540 revisões 2, duas revisões 3, 70 pendentes (Redação 58,
+Sociologia 12). Cobertura: 8 experimentos, 43 pranchas, 363 instrumentos,
+199 cenas, zero lacunas; aprovação formal não promovida.
+Próximo passo: os 12 de Sociologia do H2, que encerram Humanas.
+
+## Registro — Entrega K/Sociologia H3, 06/10/2026
 
 A Entrega J foi integrada na PR #267; Literatura está concluída. A branch
 `fix/entrega-k-sociologia-h3` trata os sete capítulos de Sociologia do H3

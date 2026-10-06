@@ -61,6 +61,17 @@ const chapters = [
   ['summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica', 'cartesian-doubt'],
   ['summary-filosofia-hegel-e-a-dialetica', 'hegel-dialectic'],
   ['summary-filosofia-nietzsche-e-a-critica-aos-valores-morais', 'nietzsche-genealogy'],
+  ['summary-filosofia-logica-e-metafisica-aristotelicas', 'aristotle-logic'],
+  ['summary-filosofia-escolastica-e-santo-tomas-de-aquino', 'aquinas-synthesis'],
+  ['summary-filosofia-a-critica-de-hume-a-causalidade', 'hume-causation'],
+  ['summary-filosofia-hobbes-e-o-estado-de-natureza', 'hobbes-state'],
+  ['summary-filosofia-locke-e-os-direitos-naturais', 'locke-rights'],
+  ['summary-filosofia-rousseau-e-a-vontade-geral', 'rousseau-general-will'],
+  ['summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico', 'kant-duty'],
+  ['summary-filosofia-o-materialismo-historico', 'historical-materialism'],
+  ['summary-filosofia-a-luta-de-classes-na-filosofia-marxista', 'class-struggle'],
+  ['summary-filosofia-o-existencialismo-de-sartre', 'sartre-freedom'],
+  ['summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural', 'frankfurt-culture'],
 ].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });

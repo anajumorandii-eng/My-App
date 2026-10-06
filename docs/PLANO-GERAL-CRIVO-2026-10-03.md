@@ -16,7 +16,7 @@ A Entrega A foi integrada em #254: [evidências dos 25 capítulos](visual-integr
 | Química | 48 | 2 | 0 | 0 |
 | História | 49 | 3 | 0 | 0 |
 | Geografia | 63 | 1 | 0 | 0 |
-| Filosofia | 35 | 16 | 19 | 0 |
+| Filosofia | 35 | 35 | 0 | 0 |
 | Sociologia | 27 | 15 | 12 | 12 |
 | Redação | 58 | 0 | 58 | 58 |
 | Gramática | 26 | 26 | 0 | 0 |
@@ -24,13 +24,13 @@ A Entrega A foi integrada em #254: [evidências dos 25 capítulos](visual-integr
 | Literatura | 37 | 37 | 0 | 0 |
 | Entendimento de Texto | 12 | 12 | 0 | 0 |
 | Atualidades | 1 | 0 | 1 | — |
-| **Total** | **613** | **208** | **90** | **70** |
+| **Total** | **613** | **227** | **71** | **70** |
 
-Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 90 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 19 de Filosofia ainda na fila.
+Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 71 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 12 de Sociologia do H2 ainda na fila.
 
 Os 70 resumos pendentes estão nos 612 registros de `deepSummaryContent.json`; COP30 é o capítulo adicional do catálogo. Eles foram vinculados aos IDs e aos mesmos lotes visuais para executar conteúdo e representação juntos. Há 540 registros com `rev: 2` e dois com `rev: 3`; não precisam ser reescritos indiscriminadamente. As revisões 3 corrigem dois defeitos concretos de Kant/Rawls, com releitura isolada. O inventário formal de qualidade continua separado: 532 sem revisão formal, 81 em validação, nenhuma aprovação registrada.
 
-Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 134 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 114 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
+Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 71 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 114 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
 
 ## Lotes definidos
 
@@ -45,8 +45,8 @@ Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planil
 | LG2 | 29 | Inglês + Entendimento de Texto: exemplos do próprio assunto, operações de leitura/evidência e aprofundamento dos 29 textos. |
 | LG3 | 37 | Escopo original; oito fundamentos na Entrega F (#262) oito do século XIX na Entrega G (#263) oito de Machado ao Modernismo de 30 na Entrega H (#264) sete de 45 a 1980 na Entrega I (#266) e os seis finais na Entrega J; nenhum restante na proposta. Literatura: demonstrar procedimentos em exemplos autorais; substituir fichas genéricas quando inadequadas; aprofundar os 37 textos. |
 | H1 | 24 | Filosofia/Sociologia: comparação de posições com situações próprias, na família de contraste. |
-| H2 | 23 | Causalidade, camadas e tipologias: relações concretas, retorno materialista quando pertinente e classificações com critérios. |
-| H3 | 15 | Sete de Sociologia tratados na Entrega K; restam 8 de Filosofia. Escalas/critérios/eixos e casos próprios: meio-termo, diálogo/aporia, dialética, genealogia, mito/logos e Solidariedade. |
+| H2 | 23 | Onze de Filosofia tratados na Entrega L; restam 12 de Sociologia. Causalidade, camadas e tipologias: relações concretas, retorno materialista quando pertinente e classificações com critérios. |
+| H3 | 15 | Sete de Sociologia na Entrega K (#268) e oito de Filosofia na Entrega L; nenhum restante na proposta. Escalas/critérios/eixos e casos próprios: meio-termo, diálogo/aporia, dialética, genealogia, mito/logos e Solidariedade. |
 | R1 | 16 | Oito pares de repertório/análise: referência, tese e consequência específicas; aprofundamento junto à cena. |
 | R2 | 15 | Projeto/gênero/introdução/conclusão, competências e modelos de texto; incluir contenção móvel de Competências. |
 | R3 | 27 | Coletânea, argumento, dados, coesão, intervenção, direitos e revisão; mostrar operações em texto próprio e detalhamento da intervenção. |
