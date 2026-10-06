@@ -4,6 +4,7 @@ import type { WorkDossier } from '../types/literaryWorks';
 // obra precisa dele. Lista explícita, e não glob, para que o node:test
 // consiga importar este módulo sem o Vite.
 const LOADERS: Record<string, () => Promise<{ default: unknown }>> = {
+  'no-seu-pescoco': () => import('../data/obras/dossies/no-seu-pescoco.json'),
   'funerais-da-mamae-grande': () => import('../data/obras/dossies/funerais-da-mamae-grande.json'),
   'caminho-de-pedras': () => import('../data/obras/dossies/caminho-de-pedras.json'),
   'paixao-segundo-gh': () => import('../data/obras/dossies/paixao-segundo-gh.json'),
