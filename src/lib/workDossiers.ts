@@ -9,6 +9,7 @@ const LOADERS: Record<string, () => Promise<{ default: unknown }>> = {
   geografia: () => import('../data/obras/dossies/geografia.json'),
   'balada-de-amor-ao-vento': () => import('../data/obras/dossies/balada-de-amor-ao-vento.json'),
   'cancao-para-ninar-menino-grande': () => import('../data/obras/dossies/cancao-para-ninar-menino-grande.json'),
+  'visao-das-plantas': () => import('../data/obras/dossies/visao-das-plantas.json'),
   'memorias-de-martha': () => import('../data/obras/dossies/memorias-de-martha.json'),
   nebulosas: () => import('../data/obras/dossies/nebulosas.json'),
   'opusculo-humanitario': () => import('../data/obras/dossies/opusculo-humanitario.json'),

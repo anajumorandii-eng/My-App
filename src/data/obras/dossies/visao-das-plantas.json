@@ -1,0 +1,519 @@
+{
+  "workId": "visao-das-plantas",
+  "slug": "visao-das-plantas",
+  "edition": {
+    "label": "Djaimilia Pereira de Almeida, A Visão das Plantas. São Paulo: Todavia, 2021, e-book",
+    "pdfPageCount": 82,
+    "note": "Obra protegida por direito autoral. As partes são uma divisão editorial; as páginas são as do PDF usado. Só citações curtas e análise original."
+  },
+  "units": [
+    {
+      "id": "parte-01",
+      "order": 1,
+      "type": "fragment",
+      "title": "1 — O regresso",
+      "pdfStartPage": 21,
+      "pdfEndPage": 22,
+      "opening": "Noite abençoada. Acordou em casa",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Depois de uma vida no mar, o velho capitão Celestino volta à casa materna, numa vila da costa portuguesa. A casa, fechada e tomada pelo pó, pelas plantas e pelo caruncho, é descrita como um fóssil que a Natureza come aos poucos.",
+        "observe": [
+          "A casa é personificada: tem 'olhos fechados', barba de hera, mortos que dão licença.",
+          "Logo no início aparece a ideia de que a Natureza 'come' o que é humano."
+        ]
+      }
+    },
+    {
+      "id": "parte-02",
+      "order": 2,
+      "type": "fragment",
+      "title": "2 — O jardim",
+      "pdfStartPage": 23,
+      "pdfEndPage": 25,
+      "opening": "Livrou-se da mobília carunchosa",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Celestino queima as roupas das mulheres da família, sem drama, e se dedica a recuperar o quintal abandonado. Planta rosas, cravos, camélias, cactos e hortaliças. O padre Alfredo visita-o com intenção de levá-lo à confissão, mas é calado pelo perfume do jardim.",
+        "observe": [
+          "A rotina do jardineiro é descrita com precisão de manual, em contraste com o passado violento.",
+          "O padre vem 'ver o que havia atrás das sebes': o jardim é também esconderijo."
+        ]
+      }
+    },
+    {
+      "id": "parte-03",
+      "order": 3,
+      "type": "fragment",
+      "title": "3 — Os rumores",
+      "pdfStartPage": 26,
+      "pdfEndPage": 27,
+      "opening": "Nas manhãs nubladas, gostava de sair",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Na vila, correm histórias sobre o pirata de pala no olho. Celestino ergue um espantalho com os reposteiros da sala, que alimenta os boatos de que adora o diabo. Três crianças, Raul, Pedro e Luzia, espiam o quintal e encontram doces deixados para elas. O padre conclui que ali vive apenas um homem a preparar o próprio enterro.",
+        "observe": [
+          "Os boatos aparecem em frases soltas, sem marcação, como vozes da vila.",
+          "A ironia: o povo inventa crimes, mas os crimes reais são piores e ninguém os conhece."
+        ]
+      }
+    },
+    {
+      "id": "parte-04",
+      "order": 4,
+      "type": "fragment",
+      "title": "4 — Histórias para as crianças",
+      "pdfStartPage": 28,
+      "pdfEndPage": 31,
+      "opening": "Vinde a mim, meninos, não tenhais medo",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Celestino conta às crianças sua infância e suas viagens: matou os holandeses que o socorreram e deixou a sobrinha deles, uma menina, amarrada e vendada no mato. Enumera mortes e termina lembrando o leite da mãe. Em seguida, fala longamente dos seus cravos, como se fossem filhos.",
+        "observe": [
+          "A fala imita a de Cristo ('Vinde a mim') e mistura confissão, bravata e cantiga de embalar.",
+          "O carinho pelos cravos tem um fundo de posse: 'haviam de me querer fugir, que as arrancava logo da terra'."
+        ]
+      }
+    },
+    {
+      "id": "parte-05",
+      "order": 5,
+      "type": "fragment",
+      "title": "5 — O caderno",
+      "pdfStartPage": 32,
+      "pdfEndPage": 34,
+      "opening": "Sangue, luz. Um ratinho",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Fragmentos do caderno do capitão: notas de jardinagem, lembranças do mar, pensamentos violentos e a expressão repetida 'sangue e luz'. Numa noite de vento, Celestino sente que as árvores e o seu coração batem no mesmo ritmo e que o jardim é seu.",
+        "observe": [
+          "Os fragmentos curtos, separados por travessões, mostram a mente desordenada do capitão.",
+          "'Sangue e luz' funciona como sinal de crise, talvez da doença, talvez da memória."
+        ]
+      }
+    },
+    {
+      "id": "parte-06",
+      "order": 6,
+      "type": "fragment",
+      "title": "6 — A visão das plantas",
+      "pdfStartPage": 35,
+      "pdfEndPage": 36,
+      "opening": "As plantas viam o jardineiro como as plantas vêem",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "O narrador adota o ponto de vista das plantas: elas não agradecem, não julgam e não se importam com quem as rega. Nesse capítulo se narra o crime mais grave: a revolta de escravizados sufocada com cal no porão do navio.",
+        "observe": [
+          "É o trecho que dá título ao livro: a indiferença das plantas espelha a indiferença do capitão.",
+          "A atrocidade é contada no meio da reflexão sobre o jardim, sem destaque, o que aumenta o choque."
+        ]
+      }
+    },
+    {
+      "id": "parte-07",
+      "order": 7,
+      "type": "fragment",
+      "title": "7 — Amar sem memória",
+      "pdfStartPage": 37,
+      "pdfEndPage": 40,
+      "opening": "Ajoelhado diante dos cravos",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Celestino vive anônimo na vila e conversa com o padre sem se confessar ('Deus é como o caroço do pêssego'). O narrador pergunta se é possível amar sem memória e sugere que as plantas ocupam o lugar dos mortos que ele fez. Para quem passa na rua, o jardim evoca a vida que não viveram.",
+        "observe": [
+          "A recusa da confissão é constante; o capitão não se arrepende.",
+          "A ambiguidade entre bondade e 'máquina perfeitamente diabólica' é central."
+        ]
+      }
+    },
+    {
+      "id": "parte-08",
+      "order": 8,
+      "type": "fragment",
+      "title": "8 — A floresta e a menina",
+      "pdfStartPage": 41,
+      "pdfEndPage": 45,
+      "opening": "Se lhes fazemos perguntas, as árvores",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Recordação da travessia de uma floresta africana, 'dentro do estômago de Deus'. A história do camiseiro de mogno brasileiro, feito para a mãe dele, liga a madeira à vida do filho. No presente, as crianças vêm ver os morcegos; à noite, a menina holandesa aparece pela primeira vez nas chamas da lareira.",
+        "observe": [
+          "A madeira do camiseiro conta a história do filho que a mãe não conhece.",
+          "A primeira aparição da menina é o início dos 'fantasmas' que acompanham a velhice do capitão."
+        ]
+      }
+    },
+    {
+      "id": "parte-09",
+      "order": 9,
+      "type": "fragment",
+      "title": "9 — A cova",
+      "pdfStartPage": 46,
+      "pdfEndPage": 49,
+      "opening": "Perdia a noção das horas",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Celestino aprende a fazer queijo e broa, embebeda-se, atira-se ao ribeiro e ouve um choro de criança. Depois, cava no quintal uma cova cada vez mais funda, num transe, até desmaiar sob as estrelas.",
+        "observe": [
+          "A cena da cova é ambígua: sepultura, busca de tesouro, loucura.",
+          "'Debaixo da terra, não parecia haver um segredo': a terra não confessa nem acusa."
+        ]
+      }
+    },
+    {
+      "id": "parte-10",
+      "order": 10,
+      "type": "fragment",
+      "title": "10 — A velhice",
+      "pdfStartPage": 50,
+      "pdfEndPage": 54,
+      "opening": "Na manhã seguinte, acordou mais velho",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Celestino corta a barba, deixa de usar a pala, adoece, recusa a confissão. Perde-se na festa de São João. Mostra às crianças as tatuagens e repete a lista de mortes, mas o espanto delas o constrange. Percebe que o jardim o 'enjaulara'.",
+        "observe": [
+          "O corte da barba marca o fim do 'último momento ao leme'.",
+          "A inversão: o jardineiro que queria dominar o jardim tornou-se escravo dele."
+        ]
+      }
+    },
+    {
+      "id": "parte-11",
+      "order": 11,
+      "type": "fragment",
+      "title": "11 — A velha negra e a menina",
+      "pdfStartPage": 55,
+      "pdfEndPage": 60,
+      "opening": "As encostas vigiavam-no do nascer do dia",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Sonâmbulo, Celestino recebe visitas noturnas: uma velha negra, uma das escravizadas que ele mandou ao mar, prepara-lhe comida e cuida dele; a menina holandesa, de olhos vendados, dorme ao lado dele. Uma planta sai da sua boca e cobre a casa. A velha negra é apresentada como a morte, paciente.",
+        "observe": [
+          "Os fantasmas são vítimas que cuidam do carrasco — sem vingança e sem perdão.",
+          "A venda da menina nunca é desatada: 'o que se ata em vida na morte não se desata'."
+        ]
+      }
+    },
+    {
+      "id": "parte-12",
+      "order": 12,
+      "type": "fragment",
+      "title": "12 — A morte do capitão",
+      "pdfStartPage": 61,
+      "pdfEndPage": 64,
+      "opening": "Manteve-se sentado no quintal, ansioso",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Uma gata dá cria e vai embora. Celestino lembra os corpos jogados ao mar e espalha farinha sobre as flores, numa dança dos mortos. Manuel o leva à praia; ele vê a menina holandesa saindo das águas. Morre numa noite de inverno, 'sem uma dúvida na consciência tranquila'. O padre benze o corpo e cobiça o jardim.",
+        "observe": [
+          "A última frase do romance retoma, com ironia, a frase de Raul Brandão citada na epígrafe.",
+          "O padre, que queria a confissão, termina invejando o jardim."
+        ]
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**A Visão das Plantas** (2019) é uma novela da escritora portuguesa nascida em Angola Djaimilia Pereira de Almeida (1982). Parte de um parágrafo de *Os Pescadores*, de Raul Brandão, citado na epígrafe: o capitão Celestino, antigo pirata e traficante de escravizados, termina a vida cultivando um quintal 'sem uma dúvida na consciência tranquila'.\n\n**Como ler:** o texto não tem capítulos numerados; é feito de blocos curtos, alguns em prosa narrativa, outros como anotações soltas do caderno do capitão. Este dossiê divide a obra em doze partes, pela sequência dos acontecimentos: o regresso, o jardim, os rumores, as histórias às crianças, os fantasmas e a morte.\n\n**Pergunta central:** o jardim redime o capitão? O livro não responde. Mostra o cuidado minucioso com as flores ao lado de crimes atrozes contados sem arrependimento, e põe as plantas como testemunhas indiferentes.\n\n**Língua:** a edição brasileira (Todavia) respeita a grafia de Portugal anterior ao Acordo (vêem, reflectia, facto)."
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-fome-da-natureza",
+        "ev-solidao-musica",
+        "ev-flores-do-sepulcro",
+        "ev-loucura-remedio",
+        "ev-sono-dos-justos",
+        "ev-visao-das-plantas",
+        "ev-escravos",
+        "ev-planta-no-peito",
+        "ev-ser-ninguem",
+        "ev-amar-sem-memoria",
+        "ev-estomago-de-deus",
+        "ev-escravizar",
+        "ev-amizade-com-a-morte",
+        "ev-paciencia-da-morte",
+        "ev-jardineiro-do-jardineiro",
+        "ev-consciencia-tranquila",
+        "ev-maos-pias"
+      ],
+      "sourceRefs": [],
+      "markdown": "## Reescrever Raul Brandão\n\nA epígrafe cita *Os Pescadores* (1923): o capitão Celestino, que sufocou com cal uma revolta de escravizados no porão, 'acabou assim a vida mondando e podando, sem uma dúvida na consciência tranquila'. Djaimilia expande esse parágrafo e repete a frase final na última página. O que em Brandão era uma curiosidade pitoresca vira pergunta moral: como alguém assim morre em paz?\n\n## O jardim e a culpa\n\nCelestino cuida das flores 'como filhas', com 'mãos delicadas de mulher'. O narrador sugere que o jardim pode ser expiação — as flores seriam os mortos —, mas também recusa essa leitura: o capitão nunca se confessa, nunca se arrepende, e o amor pelas plantas tem algo de posse ('haviam de me querer fugir, que as arrancava logo da terra'). A ambiguidade é o centro da obra.\n\n## A visão das plantas\n\nO título vem da parte em que o narrador assume o ponto de vista das plantas: elas não agradecem, não julgam, 'tanto lhes fazia serem cuidadas por um assassino'. A indiferença da Natureza espelha a indiferença do capitão: 'no lugar do coração, o corsário tinha uma planta'. A pergunta sobre justiça fica com o leitor.\n\n## Memória, esquecimento e fantasmas\n\nA velhice traz o esquecimento, que funciona como absolvição involuntária. Mas as vítimas voltam: a menina holandesa que ele deixou vendada no mato e a velha negra jogada ao mar aparecem para cuidar dele — sem vingança. A velha negra é a figura da morte, paciente. A cena é perturbadora porque as vítimas fazem o trabalho do afeto que o carrasco nunca fez.\n\n## Tráfico e silêncio\n\nO massacre no porão é narrado de passagem, dentro da reflexão sobre as plantas. O romance mostra como a sociedade portuguesa — a vila, o padre, o próprio Brandão — transformou o tráfico atlântico em lenda de pescadores. O padre, que buscava a confissão, termina cobiçando o jardim.\n\n## Forma\n\nProsa densa e poética, com descrições sensoriais (cheiros, cores, texturas das plantas), alternada com fragmentos de caderno que imitam a mente do capitão. O tempo avança sem marcas claras; os fantasmas misturam passado e presente.\n\n## Pontos de prova\n\n- Relacionar a obra com o texto de Raul Brandão (intertextualidade).\n- Discutir a ambiguidade moral do capitão e a ausência de arrependimento.\n- Interpretar o título e o ponto de vista das plantas.\n- Analisar a memória do colonialismo e do tráfico de escravizados.\n- Comentar a função das figuras da velha negra e da menina holandesa."
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Edição usada:** Djaimilia Pereira de Almeida, *A Visão das Plantas*. São Paulo: Todavia, 1ª edição, 2021, e-book (edição original: Relógio D'Água, 2019). As páginas citadas são as do PDF usado, com 82 páginas; o texto vai da p. 21 à p. 64, depois da epígrafe de Raul Brandão (p. 18-19).\n\n**Partes:** a obra não tem capítulos numerados. A divisão em doze partes deste dossiê é editorial, feita pela sequência dos acontecimentos, e cada parte começa num bloco de texto conferido na página.\n\n**Procedência do arquivo:** o PDF do Drive é uma cópia distribuída pela equipe eLivros, não um arquivo da editora. Antes de publicar, convém conferir as citações num exemplar da Todavia.\n\n**Direitos:** obra protegida por direito autoral (© Djaimilia Pereira de Almeida / Relógio D'Água). Este dossiê traz só análise original e citações curtas, com página.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica:** nenhuma fonte crítica foi lida para este dossiê. A leitura é feita diretamente do texto e precisa de revisão editorial antes de ser publicada."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-fome-da-natureza",
+      "unitId": "parte-01",
+      "location": "parte 1, p. 21",
+      "quote": "Era a fome da Natureza que a comia aos poucos",
+      "context": "Descrição da casa abandonada.",
+      "formalDevice": "Personificação da Natureza.",
+      "effect": "Apresenta a Natureza como força que devora o humano.",
+      "wholeRelation": "Volta no fim, quando o capitão imagina as plantas cobrindo seu cadáver.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-solidao-musica",
+      "unitId": "parte-02",
+      "location": "parte 2, p. 23",
+      "quote": "A solidão era música para os seus ouvidos.",
+      "context": "Celestino se instala sozinho na casa.",
+      "formalDevice": "Metáfora sinestésica.",
+      "effect": "Mostra o isolamento como escolha.",
+      "wholeRelation": "A solidão será depois povoada pelos fantasmas das vítimas.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-flores-do-sepulcro",
+      "unitId": "parte-03",
+      "location": "parte 3, p. 27",
+      "quote": "O homem previdente que ali vivia só plantava as flores do seu sepulcro.",
+      "context": "Conclusão do padre Alfredo após a visita.",
+      "formalDevice": "Metáfora; ironia.",
+      "effect": "O padre interpreta o jardim como preparação para a morte.",
+      "wholeRelation": "O narrador depois sugere outra leitura: as flores são os mortos que ele fez.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-loucura-remedio",
+      "unitId": "parte-03",
+      "location": "parte 3, p. 27",
+      "quote": "A loucura é o mais santo dos remédios.",
+      "context": "Comentário do narrador sobre o capitão confuso.",
+      "formalDevice": "Sentença paradoxal.",
+      "effect": "Insinua que a demência poupa Celestino da culpa.",
+      "wholeRelation": "O esquecimento progressivo do capitão é o caminho para a 'consciência tranquila' final.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-sono-dos-justos",
+      "unitId": "parte-04",
+      "location": "parte 4, p. 28",
+      "quote": "Vinde a mim, meninos, a mim que degolei gargantas e durmo o sono dos justos.",
+      "context": "Celestino conta histórias às crianças.",
+      "formalDevice": "Paródia de fala bíblica; antítese.",
+      "effect": "Choca ao juntar a ternura da cena e a confissão de crimes.",
+      "wholeRelation": "A mesma fala se repete quase igual na parte 10.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-visao-das-plantas",
+      "unitId": "parte-06",
+      "location": "parte 6, p. 35",
+      "quote": "As plantas viam o jardineiro como as plantas vêem.",
+      "context": "Abertura da parte que dá título ao livro.",
+      "formalDevice": "Tautologia deliberada.",
+      "effect": "Afirma que o olhar das plantas não é humano nem moral.",
+      "wholeRelation": "Base da pergunta central: o jardim redime ou apenas ignora?",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-escravos",
+      "unitId": "parte-06",
+      "location": "parte 6, p. 35",
+      "quote": "Nenhuma flor lamentava a morte dos escravos que Celestino sufocara em mar alto.",
+      "context": "Logo antes do relato do massacre no porão.",
+      "formalDevice": "Negação; foco narrativo das plantas.",
+      "effect": "Revela o crime pela indiferença das flores.",
+      "wholeRelation": "Liga o romance à história do tráfico atlântico de escravizados.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-planta-no-peito",
+      "unitId": "parte-06",
+      "location": "parte 6, p. 36",
+      "quote": "Atrás das costelas, no lugar do coração, o corsário tinha uma planta.",
+      "context": "Fim da parte narrada do ponto de vista das plantas.",
+      "formalDevice": "Metáfora corporal.",
+      "effect": "Sugere que Celestino é tão indiferente quanto as plantas.",
+      "wholeRelation": "Antecipa a planta que sai de sua boca na parte 11.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-ser-ninguem",
+      "unitId": "parte-07",
+      "location": "parte 7, p. 37",
+      "quote": "Não havia consolo maior do que o de ser ninguém onde havia sido alguém.",
+      "context": "Celestino passeia anônimo pela vila.",
+      "formalDevice": "Antítese ninguém x alguém.",
+      "effect": "O anonimato aparece como alívio, não como castigo.",
+      "wholeRelation": "O esquecimento da vila completa o esquecimento do próprio capitão.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-amar-sem-memoria",
+      "unitId": "parte-07",
+      "location": "parte 7, p. 39",
+      "quote": "Capitão Celestino amava as flores, se é possível amar sem guardar memória.",
+      "context": "Reflexão do narrador sobre o jardineiro.",
+      "formalDevice": "Condicional que põe em dúvida a afirmação.",
+      "effect": "Questiona se o cuidado com o jardim é amor ou mecanismo.",
+      "wholeRelation": "Central para discutir culpa, memória e redenção.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-estomago-de-deus",
+      "unitId": "parte-08",
+      "location": "parte 8, p. 41",
+      "quote": "Ninguém sabia onde estava, caminhando dentro do estômago de Deus: a floresta.",
+      "context": "Lembrança da travessia da floresta africana.",
+      "formalDevice": "Metáfora.",
+      "effect": "A floresta aparece como corpo vivo que poderia engoli-lo.",
+      "wholeRelation": "Retoma a 'fome da Natureza' do início.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-escravizar",
+      "unitId": "parte-10",
+      "location": "parte 10, p. 54",
+      "quote": "Supremo castigo: deixara-se escravizar, ao julgar erguer com as suas mãos um pequeno mundo",
+      "context": "Celestino percebe que vive para o jardim.",
+      "formalDevice": "Ironia: o traficante de escravizados se diz 'escravizado'.",
+      "effect": "Inverte a relação entre dono e jardim.",
+      "wholeRelation": "Prepara a fase final, em que 'o jardim se tornara jardineiro do jardineiro'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-amizade-com-a-morte",
+      "unitId": "parte-11",
+      "location": "parte 11, p. 58",
+      "quote": "Foi assim que o capitão fez amizade com a morte sem saber que o fazia",
+      "context": "A velha negra cuida do capitão.",
+      "formalDevice": "Personificação da morte na figura da vítima.",
+      "effect": "A vítima acompanha o carrasco até a morte, sem vingança.",
+      "wholeRelation": "Sustenta a leitura de que não há julgamento nem perdão explícitos.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-paciencia-da-morte",
+      "unitId": "parte-11",
+      "location": "parte 11, p. 59",
+      "quote": "A morte, quando quer, tem toda a paciência do mundo.",
+      "context": "Fim da longa cena no bosque.",
+      "formalDevice": "Sentença conclusiva.",
+      "effect": "Dá à morte o papel de cuidadora paciente.",
+      "wholeRelation": "A morte demora: o capitão vive o suficiente para esquecer.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-jardineiro-do-jardineiro",
+      "unitId": "parte-12",
+      "location": "parte 12, p. 63",
+      "quote": "o jardim se tornara jardineiro do jardineiro.",
+      "context": "Celestino perde a capacidade de cuidar das plantas.",
+      "formalDevice": "Quiasmo.",
+      "effect": "Completa a inversão de papéis entre homem e jardim.",
+      "wholeRelation": "Fecha o tema da posse e da dependência.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-consciencia-tranquila",
+      "unitId": "parte-12",
+      "location": "parte 12, p. 64",
+      "quote": "acabou os seus dias, sem uma dúvida na consciência tranquila.",
+      "context": "Morte do capitão.",
+      "formalDevice": "Intertextualidade com a epígrafe de Raul Brandão.",
+      "effect": "A frase de Brandão é repetida, mas agora pesa com tudo o que o leitor sabe.",
+      "wholeRelation": "O romance reescreve um parágrafo de Os pescadores e expõe o que ele calava.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-maos-pias",
+      "unitId": "parte-12",
+      "location": "parte 12, p. 64",
+      "quote": "Nas suas mãos pias, todas as plantas morriam.",
+      "context": "O padre Alfredo deixa a casa do morto.",
+      "formalDevice": "Ironia final.",
+      "effect": "Quem queria salvar a alma do capitão não sabe cuidar da vida.",
+      "wholeRelation": "Último comentário sobre religião e hipocrisia.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    }
+  ]
+}
