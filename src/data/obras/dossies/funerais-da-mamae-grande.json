@@ -1,0 +1,484 @@
+{
+  "workId": "funerais-da-mamae-grande",
+  "slug": "funerais-da-mamae-grande",
+  "edition": {
+    "label": "Gabriel García Márquez. Os funerais da Mamãe Grande. Tradução Édson Braga. Record, e-book 2019; folha de rosto com 15ª edição 2014.",
+    "pdfPageCount": 85,
+    "note": "Oito contos no PDF8–72, títulos em página própria. Ficha digital2019 e folha impressa2014 preservadas sem fundi-las. Procedência de site de download indicada p3. Colofão, ligações e catálogo após p72 excluídos do corpus. Leitura e conferência textual não certificam autorização ou ausência de marca gráfica. Pesquisa acadêmica e cotejo de provas oficiais pendentes."
+  },
+  "units": [
+    {
+      "id": "a-sesta-da-terca-feira",
+      "order": 1,
+      "type": "story",
+      "title": "A sesta da terça-feira",
+      "opening": "A sesta da terça-feira",
+      "pdfStartPage": 8,
+      "pdfEndPage": 12,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Uma mãe e sua filha chegam de trem para visitar o túmulo de Carlos Centeno, morto quando tentava abrir a porta de Rebeca. O padre questiona a educação do filho; a mãe responde com a pobreza, o boxe e uma ética de não tirar o alimento dos outros. Sai com a filha para enfrentar os moradores curiosos.",
+        "observe": [
+          "1. Localização: conto 1 de oito, PDF 8-12.",
+          "2. Síntese factual: Uma mãe e sua filha chegam de trem para visitar o túmulo de Carlos Centeno, morto quando tentava abrir a porta de Rebeca. O padre questiona a educação do filho; a mãe responde com a pobreza, o boxe e uma ética de não tirar o alimento dos outros. Sai com a filha para enfrentar os moradores curiosos.",
+          "3. Função no conjunto: Abre a coletânea por uma visita funerária pobre e discreta; o último conto ampliará o rito ao espetáculo nacional.",
+          "4. Voz e perspectiva: Terceira pessoa, aproximada dos gestos da mãe e da menina; a identidade do morto é revelada depois da viagem. O recuo narrativo até o disparo de Rebeca não é testemunho da mãe.",
+          "5. Procedimento e mecanismo: Retardo da identificação, contraste entre fala calma e curiosidade coletiva, descrição do calor e do corpo castigado pelo boxe. A dignidade nasce de gestos e contenção, sem apagar a tentativa de roubo.",
+          "6. Tensão: Direito ao luto versus classificação pública do morto como ladrão.",
+          "7. Figuras: Mãe, menina, padre e Rebeca ocupam posições diferentes: a mãe conhece o filho, o padre controla a chave, a coletividade espera do lado de fora.",
+          "8. Motivos: Chaves e limiares regulam acesso; flores e fome ligam luto a trabalho e cuidado.",
+          "9. História formalizada: O vagão de terceira classe e as instalações da companhia bananeira tornam a desigualdade visível antes de qualquer explicação histórica.",
+          "10. Diálogo crítico: nenhuma fonte acadêmica foi efetivamente lida nesta retomada; os nexos acima são síntese fundamentada no texto, não consenso crítico.",
+          "11. Passagem-âncora: p. 12; A mãe responde ao padre, que lhe pergunta se tentou encaminhar o filho.",
+          "12. FUVEST, transferência: relacione o procedimento ao conjunto e elimine a alternativa que confunde voz com posição da obra. Pergunta formal: Como o retardo da identificação muda a primeira impressão da viagem?",
+          "13. Unicamp: decomponha fonte, operação, núcleo formal e tensão antes de responder. Use o detalhe de p. 12 para explicar: Como a última saída permite ler dignidade sem negar o roubo?",
+          "14. Erro de leitura a evitar: A bondade é fala da mãe, não absolvição judicial nem juízo unívoco do narrador.",
+          "15. Recuperação sem consulta — literal: Por que mãe e filha pedem a chave do cemitério? Formal: Como o retardo da identificação muda a primeira impressão da viagem? Interpretativa: Como a última saída permite ler dignidade sem negar o roubo?"
+        ]
+      }
+    },
+    {
+      "id": "um-dia-desses",
+      "order": 2,
+      "type": "story",
+      "title": "Um dia desses",
+      "opening": "Um dia desses",
+      "pdfStartPage": 13,
+      "pdfEndPage": 15,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Aurélio Escovar, dentista sem diploma, recusa o alcaide; a ameaça de tiro encontra um revólver na gaveta. Ao ver o sofrimento, aceita tratá-lo. Extrai o siso sem anestesia por causa do abscesso e invoca vinte mortos. A pergunta sobre a conta recebe a equivalência entre pessoa e município.",
+        "observe": [
+          "1. Localização: conto 2 de oito, PDF 13-15.",
+          "2. Síntese factual: Aurélio Escovar, dentista sem diploma, recusa o alcaide; a ameaça de tiro encontra um revólver na gaveta. Ao ver o sofrimento, aceita tratá-lo. Extrai o siso sem anestesia por causa do abscesso e invoca vinte mortos. A pergunta sobre a conta recebe a equivalência entre pessoa e município.",
+          "3. Função no conjunto: Depois do controle religioso da chave, desloca o poder para a autoridade militar e o saber profissional do homem pobre.",
+          "4. Voz e perspectiva: Terceira pessoa com descrição da rotina e breves entradas na percepção do alcaide; o diálogo concentra a disputa.",
+          "5. Procedimento e mecanismo: Frases curtas, procedimentos técnicos lentos e elipse do passado político. A última réplica reduz a distância entre patrimônio público e interesse particular.",
+          "6. Tensão: Cuidado técnico e acusação política coexistem; inversão física temporária não equivale a deposição do governante.",
+          "7. Figuras: Dentista, filho intermediário e alcaide; o título político e a identificação como tenente aproximam governo e coerção.",
+          "8. Motivos: Instrumentos, armas, boca e lágrimas põem o poder em corpos vulneráveis.",
+          "9. História formalizada: A referência aos vinte mortos e a cobrança ao município inscrevem violência e apropriação pública no diálogo.",
+          "10. Diálogo crítico: nenhuma fonte acadêmica foi efetivamente lida nesta retomada; os nexos acima são síntese fundamentada no texto, não consenso crítico.",
+          "11. Passagem-âncora: p. 15; O dentista fala ao preparar a extração.",
+          "12. FUVEST, transferência: relacione o procedimento ao conjunto e elimine a alternativa que confunde voz com posição da obra. Pergunta formal: Como a resposta final sobre a conta condensa a relação público/privado?",
+          "13. Unicamp: decomponha fonte, operação, núcleo formal e tensão antes de responder. Use o detalhe de p. 15 para explicar: Por que a acusação política não elimina a dimensão do cuidado?",
+          "14. Erro de leitura a evitar: O abscesso é a justificativa enunciada para não usar anestesia; não o substitua por uma intenção vingativa inventada.",
+          "15. Recuperação sem consulta — literal: Quem pede para extrair o dente e quem executa o procedimento? Formal: Como a resposta final sobre a conta condensa a relação público/privado? Interpretativa: Por que a acusação política não elimina a dimensão do cuidado?"
+        ]
+      }
+    },
+    {
+      "id": "nesta-terra-nao-ha-ladroes",
+      "order": 3,
+      "type": "story",
+      "title": "Nesta terra não há ladrões",
+      "opening": "Nesta terra não há ladrões",
+      "pdfStartPage": 16,
+      "pdfEndPage": 32,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Dámaso rouba três bolas de bilhar e arruína o principal lazer do povoado. Um forasteiro negro é acusado e violentado; Ana acompanha as notícias e tenta impedir novos riscos. Dámaso agride a mulher grávida, volta bêbado para devolver as bolas e é surpreendido por Roque, que mantém a cobrança de duzentos pesos.",
+        "observe": [
+          "1. Localização: conto 3 de oito, PDF 16-32.",
+          "2. Síntese factual: Dámaso rouba três bolas de bilhar e arruína o principal lazer do povoado. Um forasteiro negro é acusado e violentado; Ana acompanha as notícias e tenta impedir novos riscos. Dámaso agride a mulher grávida, volta bêbado para devolver as bolas e é surpreendido por Roque, que mantém a cobrança de duzentos pesos.",
+          "3. Função no conjunto: Expande o par culpa/julgamento da abertura e demonstra como a comunidade fabrica inocência local e culpa do estrangeiro.",
+          "4. Voz e perspectiva: Terceira pessoa móvel entre Dámaso e Ana; o leitor sabe quem roubou enquanto a coletividade produz versões contraditórias.",
+          "5. Procedimento e mecanismo: Ironia do título, conhecimento desigual e cenas de transmissão de rumores. O encontro final converte a restituição em exposição, sem absolver o proprietário que reivindica dinheiro não confirmado pelo narrador.",
+          "6. Tensão: Restituir o objeto não repara a violência contra o acusado nem contra Ana.",
+          "7. Figuras: Dámaso é vaidoso, impulsivo e violento; Ana sustenta o lar e calcula riscos. O forasteiro tem nome apagado no relato da perseguição.",
+          "8. Motivos: Bolas, gato branco, bigode, dinheiro, cinema e sol; o lazer interrompido recebe imagens funerárias.",
+          "9. História formalizada: Racialização do suspeito e abuso policial aparecem em ações: agressão no cinema, chantagem à mulher que oferece álibi e transporte brutal.",
+          "10. Diálogo crítico: nenhuma fonte acadêmica foi efetivamente lida nesta retomada; os nexos acima são síntese fundamentada no texto, não consenso crítico.",
+          "11. Passagem-âncora: p. 19; Uma mulher atribui o crime a um forasteiro, perto de Ana, que sabe a verdade.",
+          "12. FUVEST, transferência: relacione o procedimento ao conjunto e elimine a alternativa que confunde voz com posição da obra. Pergunta formal: Por que o título é ironizado pela informação disponível ao leitor?",
+          "13. Unicamp: decomponha fonte, operação, núcleo formal e tensão antes de responder. Use o detalhe de p. 19 para explicar: Que danos a devolução não consegue desfazer?",
+          "14. Erro de leitura a evitar: Não converter Ana em narradora nem Dámaso em inocente porque tentou devolver as bolas.",
+          "15. Recuperação sem consulta — literal: O que foi efetivamente levado do salão? Formal: Por que o título é ironizado pela informação disponível ao leitor? Interpretativa: Que danos a devolução não consegue desfazer?"
+        ]
+      }
+    },
+    {
+      "id": "a-prodigiosa-tarde-de-baltazar",
+      "order": 4,
+      "type": "story",
+      "title": "A prodigiosa tarde de Baltazar",
+      "opening": "A prodigiosa tarde de Baltazar",
+      "pdfStartPage": 33,
+      "pdfEndPage": 38,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Baltazar termina uma gaiola encomendada pelo menino Pepe. Recusa vendê-la ao médico, mas o pai de Pepe, José Montiel, não aceita pagar. Baltazar a oferece ao menino, mente no bilhar que recebeu sessenta pesos e celebra até ficar sem dinheiro, empenhar o relógio e dormir na rua.",
+        "observe": [
+          "1. Localização: conto 4 de oito, PDF 33-38.",
+          "2. Síntese factual: Baltazar termina uma gaiola encomendada pelo menino Pepe. Recusa vendê-la ao médico, mas o pai de Pepe, José Montiel, não aceita pagar. Baltazar a oferece ao menino, mente no bilhar que recebeu sessenta pesos e celebra até ficar sem dinheiro, empenhar o relógio e dormir na rua.",
+          "3. Função no conjunto: Introduz Montiel ainda vivo; o conto seguinte desloca o foco para sua viúva e revela a origem violenta da riqueza.",
+          "4. Voz e perspectiva: Terceira pessoa acompanha Baltazar, Úrsula e visitantes; a avaliação do prodígio circula socialmente.",
+          "5. Procedimento e mecanismo: Contraste entre valor de uso, valor artístico e preço; o triunfo público depende de uma informação falsa, seguida por um anticlímax corporal.",
+          "6. Tensão: Autonomia do gesto de oferecer versus custo do trabalho e vulnerabilidade econômica do artesão.",
+          "7. Figuras: Úrsula mede trabalho e preço; médico deseja comprar; Pepe recebe; Montiel recusa perder o mando dentro de casa.",
+          "8. Motivos: Gaiola, canto, grades, relógio e sapatos: beleza e privação não se excluem.",
+          "9. História formalizada: Quem pode pagar pretende comandar; o artesão rompe momentaneamente a ordem doméstica, mas não adquire poder material.",
+          "10. Diálogo crítico: nenhuma fonte acadêmica foi efetivamente lida nesta retomada; os nexos acima são síntese fundamentada no texto, não consenso crítico.",
+          "11. Passagem-âncora: p. 37; Baltazar justifica a oferta da gaiola a Pepe diante de Montiel.",
+          "12. FUVEST, transferência: relacione o procedimento ao conjunto e elimine a alternativa que confunde voz com posição da obra. Pergunta formal: Como a celebração é desmentida pelo final?",
+          "13. Unicamp: decomponha fonte, operação, núcleo formal e tensão antes de responder. Use o detalhe de p. 37 para explicar: Como reconhecer a força da dádiva sem apagar seu custo?",
+          "14. Erro de leitura a evitar: O conto não informa uma venda bem-sucedida; os sessenta pesos são a versão que Baltazar apresenta no bilhar.",
+          "15. Recuperação sem consulta — literal: Quem encomenda a gaiola e quem recusa pagar? Formal: Como a celebração é desmentida pelo final? Interpretativa: Como reconhecer a força da dádiva sem apagar seu custo?"
+        ]
+      }
+    },
+    {
+      "id": "a-viuva-montiel",
+      "order": 5,
+      "type": "story",
+      "title": "A viúva Montiel",
+      "opening": "A viúva Montiel",
+      "pdfStartPage": 39,
+      "pdfEndPage": 43,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "José Montiel morre; a viúva espera homenagens que não chegam e os filhos no exterior não voltam. O relato recua à aliança com o alcaide que matou pobres e expulsou ricos, cujas terras Montiel comprou. A ruína e o isolamento crescem; a viúva sonha com a Mamãe Grande ao perguntar quando morrerá.",
+        "observe": [
+          "1. Localização: conto 5 de oito, PDF 39-43.",
+          "2. Síntese factual: José Montiel morre; a viúva espera homenagens que não chegam e os filhos no exterior não voltam. O relato recua à aliança com o alcaide que matou pobres e expulsou ricos, cujas terras Montiel comprou. A ruína e o isolamento crescem; a viúva sonha com a Mamãe Grande ao perguntar quando morrerá.",
+          "3. Função no conjunto: Reinterpreta Montiel do conto anterior e prepara a presença da Mamãe Grande antes do conto-título.",
+          "4. Voz e perspectiva: Terceira pessoa alterna percepção da viúva e informação que a contradiz. A lucidez localizada sobre o mundo malfeito não a torna plenamente consciente de como a família enriqueceu.",
+          "5. Procedimento e mecanismo: Ironia entre santo doméstico e tirano público; analepses explicam a riqueza depois do funeral esvaziado. Cartas europeias contrapõem civilização declarada e violência que financiou a partida.",
+          "6. Tensão: Luto sincero e desconhecimento interessado da violência convivem.",
+          "7. Figuras: Viúva, Montiel, Carmichael, alcaide e filhos; o administrador persiste, mas não restitui clientela nem afeto.",
+          "8. Motivos: Chuva, guarda-chuva, unhas roídas, caixão e mercadorias apodrecidas marcam perdas diferentes.",
+          "9. História formalizada: A separação dos adversários entre pobres executados e ricos expulsos vincula classificação social, terror e acumulação.",
+          "10. Diálogo crítico: nenhuma fonte acadêmica foi efetivamente lida nesta retomada; os nexos acima são síntese fundamentada no texto, não consenso crítico.",
+          "11. Passagem-âncora: p. 41; A viúva lamenta isolamento e herança incompreensível.",
+          "12. FUVEST, transferência: relacione o procedimento ao conjunto e elimine a alternativa que confunde voz com posição da obra. Pergunta formal: Como a analepse sobre Montiel altera a leitura do enterro?",
+          "13. Unicamp: decomponha fonte, operação, núcleo formal e tensão antes de responder. Use o detalhe de p. 41 para explicar: Como ler luto e cumplicidade sem reduzir a viúva a um rótulo?",
+          "14. Erro de leitura a evitar: A fala não autoriza tratá-la como porta-voz de toda a denúncia, pois ela vê como caridade as compras forçadas do marido.",
+          "15. Recuperação sem consulta — literal: Por que os filhos não retornam? Formal: Como a analepse sobre Montiel altera a leitura do enterro? Interpretativa: Como ler luto e cumplicidade sem reduzir a viúva a um rótulo?"
+        ]
+      }
+    },
+    {
+      "id": "um-dia-depois-do-sabado",
+      "order": 6,
+      "type": "story",
+      "title": "Um dia depois do sábado",
+      "opening": "Um dia depois do sábado",
+      "pdfStartPage": 44,
+      "pdfEndPage": 57,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Pássaros rompem telas e morrem nas casas. Rebeca se irrita com a perda material; o padre Antonio Isabel busca interpretações religiosas. Um rapaz perde o trem, os documentos da aposentadoria da mãe e chega à missa. O sermão sobre o Judeu Errante reconquista o público; o padre recolhe esmolas e as destina a um chapéu para o rapaz.",
+        "observe": [
+          "1. Localização: conto 6 de oito, PDF 44-57.",
+          "2. Síntese factual: Pássaros rompem telas e morrem nas casas. Rebeca se irrita com a perda material; o padre Antonio Isabel busca interpretações religiosas. Um rapaz perde o trem, os documentos da aposentadoria da mãe e chega à missa. O sermão sobre o Judeu Errante reconquista o público; o padre recolhe esmolas e as destina a um chapéu para o rapaz.",
+          "3. Função no conjunto: Conecta personagens e território anteriores; a referência explícita ao Hotel Macondo fixa o lugar sem exigir leitura externa.",
+          "4. Voz e perspectiva: Terceira pessoa com focalização alternada em Rebeca, padre e rapaz; o leitor conhece os desencontros que as personagens não integram.",
+          "5. Procedimento e mecanismo: Montagem de perspectivas e retardo das conexões; memórias e associações do padre formam explicações que o relato não confirma como causa da morte das aves.",
+          "6. Tensão: Necessidade de explicar o insólito, retorno da autoridade religiosa e gesto caritativo final não coincidem inteiramente.",
+          "7. Figuras: Rebeca defende as telas; padre oscila entre lucidez e confusão; rapaz sente fome e vergonha. Argénida e a jovem do hotel transmitem relatos.",
+          "8. Motivos: Pássaros, telas, calor, trem, chapéu e sermão relacionam corpo, abrigo e autoridade.",
+          "9. História formalizada: O texto recorda o massacre dos trabalhadores e o fim dos trens carregados de bananas; essa história entra como memória da estação esvaziada.",
+          "10. Diálogo crítico: nenhuma fonte acadêmica foi efetivamente lida nesta retomada; os nexos acima são síntese fundamentada no texto, não consenso crítico.",
+          "11. Passagem-âncora: p. 51; O rapaz faminto chega ao hotel, cujo letreiro não lê.",
+          "12. FUVEST, transferência: relacione o procedimento ao conjunto e elimine a alternativa que confunde voz com posição da obra. Pergunta formal: Como a mudança de focalização complica a explicação dos pássaros?",
+          "13. Unicamp: decomponha fonte, operação, núcleo formal e tensão antes de responder. Use o detalhe de p. 51 para explicar: Por que o gesto de comprar um chapéu impede uma leitura puramente cínica do padre?",
+          "14. Erro de leitura a evitar: O Judeu Errante é explicação do padre, não presença fisicamente comprovada por um narrador neutro.",
+          "15. Recuperação sem consulta — literal: O que o rapaz deixa no trem? Formal: Como a mudança de focalização complica a explicação dos pássaros? Interpretativa: Por que o gesto de comprar um chapéu impede uma leitura puramente cínica do padre?"
+        ]
+      }
+    },
+    {
+      "id": "as-rosas-artificiais",
+      "order": 7,
+      "type": "story",
+      "title": "As rosas artificiais",
+      "opening": "As rosas artificiais",
+      "pdfStartPage": 58,
+      "pdfEndPage": 62,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Mina sai para a missa apesar das mangas úmidas e retorna chorando. Esconde e descarta cartas; conta a Trinidad que alguém foi embora. A avó cega relaciona horários, ruídos, respiração e idas ao banheiro. O diálogo chega a uma vulgaridade inédita de Mina; a avó assume ironicamente estar louca.",
+        "observe": [
+          "1. Localização: conto 7 de oito, PDF 58-62.",
+          "2. Síntese factual: Mina sai para a missa apesar das mangas úmidas e retorna chorando. Esconde e descarta cartas; conta a Trinidad que alguém foi embora. A avó cega relaciona horários, ruídos, respiração e idas ao banheiro. O diálogo chega a uma vulgaridade inédita de Mina; a avó assume ironicamente estar louca.",
+          "3. Função no conjunto: Retoma trabalho manual e objetos como instrumentos do conhecimento, em escala íntima, antes do espetáculo público final.",
+          "4. Voz e perspectiva: Terceira pessoa retém o conteúdo das cartas e a identidade de quem partiu; a avó conhece por indícios, não pela visão.",
+          "5. Procedimento e mecanismo: Elipse da experiência íntima, diálogo indiciário e inversão ver/entender. Não preencher o silêncio com uma história amorosa detalhada não escrita.",
+          "6. Tensão: Controle familiar e religioso versus proteção de uma intimidade ferida.",
+          "7. Figuras: Mina fabrica rosas; Trinidad compartilha um segredo; avó escuta e infere; mãe obtém apenas explicações parciais.",
+          "8. Motivos: Mangas, rosas naturais/artificiais, chaves, cartas e reservado: objetos ligam trabalho, segredo e norma.",
+          "9. História formalizada: A obrigação de mangas para a comunhão e o trabalho para entregar rosas na Páscoa relacionam religião, corpo e renda.",
+          "10. Diálogo crítico: nenhuma fonte acadêmica foi efetivamente lida nesta retomada; os nexos acima são síntese fundamentada no texto, não consenso crítico.",
+          "11. Passagem-âncora: p. 61; A avó aconselha Mina ao conversar sobre seu segredo.",
+          "12. FUVEST, transferência: relacione o procedimento ao conjunto e elimine a alternativa que confunde voz com posição da obra. Pergunta formal: Como a avó reconhece o segredo sem enxergá-lo?",
+          "13. Unicamp: decomponha fonte, operação, núcleo formal e tensão antes de responder. Use o detalhe de p. 61 para explicar: O que a elipse preserva da experiência de Mina?",
+          "14. Erro de leitura a evitar: Cegueira física não equivale a ignorância; o leitor tampouco recebe tudo o que deseja saber.",
+          "15. Recuperação sem consulta — literal: Onde Mina descarta as cartas? Formal: Como a avó reconhece o segredo sem enxergá-lo? Interpretativa: O que a elipse preserva da experiência de Mina?"
+        ]
+      }
+    },
+    {
+      "id": "os-funerais-da-mamae-grande",
+      "order": 8,
+      "type": "story",
+      "title": "Os funerais da Mamãe Grande",
+      "opening": "Os funerais da Mamãe Grande",
+      "pdfStartPage": 63,
+      "pdfEndPage": 72,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A soberana de Macondo agoniza, dita bens físicos e morais e morre. A notícia mobiliza imprensa, governo, clero, mercados e multidões. Discussões jurídicas atrasam o enterro. Enquanto autoridades desfilam, os herdeiros desmontam a casa. O contador chama atenção para o lixo que será varrido e para a necessidade de transmitir a história.",
+        "observe": [
+          "1. Localização: conto 8 de oito, PDF 63-72.",
+          "2. Síntese factual: A soberana de Macondo agoniza, dita bens físicos e morais e morre. A notícia mobiliza imprensa, governo, clero, mercados e multidões. Discussões jurídicas atrasam o enterro. Enquanto autoridades desfilam, os herdeiros desmontam a casa. O contador chama atenção para o lixo que será varrido e para a necessidade de transmitir a história.",
+          "3. Função no conjunto: Fecha e amplia os funerais pequenos da coletânea: o rito agrega terra, eleições, religião, imprensa e memória.",
+          "4. Voz e perspectiva: Voz que interpela incrédulos e assume posição de contador/crônica; descreve o poder com linguagem solene que se rompe por imagens corporais e comentário irônico.",
+          "5. Procedimento e mecanismo: Enumeração, anáfora, hipérbole e paródia das fórmulas jurídicas. O patrimônio invisível transforma abstrações republicanas em bens privados; o arroto destrói a dignidade verbal da lista.",
+          "6. Tensão: Fim de uma proprietária versus continuidade dos interesses e fabricação pública da grandeza.",
+          "7. Figuras: Mamãe Grande, Nicanor, sobrinhos, padre, presidente, papa e multidão; as funções institucionais multiplicam a autoridade sem eliminar fome, calor e comércio.",
+          "8. Motivos: Cadeira, cadeado, testamento, retrato jovem, formol, urubus e lixo; o corpo mortal contrasta com a lenda.",
+          "9. História formalizada: Arrendamento de famílias, fraude eleitoral e monopólio médico mostram a apropriação privada de meios de vida e instituições.",
+          "10. Diálogo crítico: nenhuma fonte acadêmica foi efetivamente lida nesta retomada; os nexos acima são síntese fundamentada no texto, não consenso crítico.",
+          "11. Passagem-âncora: p. 72; O contador justifica narrar depois do enterro, antes da limpeza das ruas.",
+          "12. FUVEST, transferência: relacione o procedimento ao conjunto e elimine a alternativa que confunde voz com posição da obra. Pergunta formal: Como a enumeração e o arroto mudam o efeito do discurso solene?",
+          "13. Unicamp: decomponha fonte, operação, núcleo formal e tensão antes de responder. Use o detalhe de p. 72 para explicar: Por que a morte não deve ser confundida automaticamente com libertação política?",
+          "14. Erro de leitura a evitar: O horizonte de uma nova época no final não comprova democratização histórica efetiva; a divisão da casa mostra interesses dos sucessores.",
+          "15. Recuperação sem consulta — literal: Quais duas classes de bens são ditadas no testamento? Formal: Como a enumeração e o arroto mudam o efeito do discurso solene? Interpretativa: Por que a morte não deve ser confundida automaticamente com libertação política?"
+        ]
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "funerais-da-mamae-grande-comece_aqui",
+      "moduleType": "comece_aqui",
+      "markdown": "## Oito contos, vozes diferentes\n\nLeia toda a coleção em vez de tomar seu título como nome de um único enredo. A edição de referência é Record, tradução Édson Braga, ficha de e-book 2019 com indicação impressa2014. Corpus PDF8–72. Conhecer o desfecho não dispensa explicar como uma voz organiza o julgamento. O dossiê é síntese textual em revisão, com pesquisa crítica e procedência editorial pendentes.",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "version": 1,
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "funerais-da-mamae-grande-analise_integral",
+      "moduleType": "analise_integral",
+      "markdown": "## 0. Edição e auditoria\n\nGabriel García Márquez, tradução Édson Braga, Record. O PDF tem 85 páginas: p. 5 menciona15ª edição2014; a ficha do e-book p. 6 identifica1ª edição digital2019 e copyright original1962. As duas datas referem-se a camadas editoriais distintas. O corpus está em8–72; p. 3 tem procedência de site de download; p. 4 catálogo do autor; p. 7 sumário; p. 73 colofão, p. 74 ligações e76–85 catálogo comercial. Não são contos. Conferência textual não prova procedência autorizada nem ausência de marca gráfica.\n\n## 1. Como ler\n\nPrimeiro mapear oito títulos e localizar quem sabe o quê. Depois refazer os pares mãe/padre, profissional/autoridade, artesão/cliente e intimidade/comunidade. A terceira leitura testa a hipótese de que objetos banais tornam relações de poder legíveis, confrontando-a com gestos de cuidado que impedem julgamento simplista.\n\n## 2. Visão geral\n\nColetânea de oito contos; sua unidade é montagem e recorrência, não um único enredo. A tese de leitura proposta relaciona desigualdade, trabalho, luto e controle da informação. É síntese do texto, não declaração de intenção de García Márquez.\n\n## 3. Publicação e recepção\n\nO arquivo permite conferir copyright original1962 e a tradução/edição digital. Não foi consultada pesquisa de recepção; não atribuir ao público de1962 uma reação presumida. A inserção em2027 vem do catálogo oficial já registrado no aplicativo, não do sumário do PDF.\n\n## 4. Contexto formalizado\n\nEm A viúva Montiel, pobres são assassinados e ricos expulsos para que Montiel compre terras; em Um dia depois do sábado, o massacre e o fim dos trens de bananas entram na lembrança do padre; no último conto, documentos eleitorais falsos e arrendamentos tornam concreta a dominação. Sem pesquisa histórica adicional, não nomear um evento externo como equivalência automática.\n\n## 5. Arquitetura\n\nA visita pobre ao cemitério abre; os funerais nacionais fecham. O tamanho dos contos e o ritmo variam: extração dentária concentrada, restituição prolongada, montagem de perspectivas e crônica hiperbólica. A prodigiosa tarde precede A viúva e faz a fortuna de Montiel aparecer primeiro como posição de compra e depois como produto de terror.\n\n## 6. Conto por conto\n\nOs oito guias individualizados distinguem fatos, voz, recurso, mecanismo, tensão, motivo e função na montagem. Consulte os cartões-âncora para provar uma relação em vez de resumir todas as cenas. O reaparecimento de nomes produz ecos; não resolve sozinho uma cronologia linear.\n\n## 7. Conteúdo essencial\n\nVisita funerária, extração, roubo e devolução, oferta da gaiola, viuvez e ruína, aves mortas e sermão, segredo familiar, funeral de uma soberana. Esta sequência é um mapa de entrada; o problema literário é como cada história administra julgamento, informação e autoridade.\n\n## 8. Voz e focalização\n\nTerceira pessoa não significa onisciência uniforme. Nesta terra permite conhecer a culpa que a comunidade ignora. As rosas retém o conteúdo do segredo. Um dia depois muda de perspectivas e separa fenômeno de explicação. O conto final interpela o ouvinte e assume um contador que quer preceder os historiadores.\n\n## 9. Sistema de figuras\n\nAs mulheres não formam um tipo único: mãe de Centeno sustenta o direito ao luto; Ana sustenta trabalho e cálculo; viúva oscila entre percepção e autoengano; Mina protege intimidade; Mamãe Grande domina propriedade e instituições. Identifique a ação particular antes de usar categorias de gênero.\n\n## 10. Tempo e espaço\n\nHora da sesta, calor e estação modulam circulação; não são cenário gratuito. O recuo à morte de Centeno interrompe a viagem presente. A vida política de Montiel explica retrospectivamente sua ausência de prestígio. O último conto combina retrospecto da agonia, demora burocrática e promessa de limpeza no dia seguinte.\n\n## 11. Linguagem e estilo\n\nEconomia do diálogo em Um dia desses concentra antagonismo; a última réplica sobre a conta conserva mando. No funeral final, listas e anáforas dão tamanho verbal ao domínio; seu contato com arroto, excremento e formol rebaixa a solenidade. São efeitos diferentes, apesar do eixo político compartilhado.\n\n## 12. Gênero e ruptura\n\nCada conto tem autonomia e desfecho próprio; a coletânea agrega diferenças formais. O último mistura crônica oral, elogio funerário e discurso jurídico em chave paródica. Tratar todos os oito como exemplos indiferenciados de realismo mágico deixa de explicar a contenção e a elipse dos outros textos.\n\n## 13. Temas como tensões\n\nDignidade versus estigma; assistência versus coerção; restituição versus dano irreparável; valor artístico versus preço; luto versus violência que financiou a herança; explicação religiosa versus indeterminação; intimidade versus vigilância; mortalidade versus lenda.\n\n## 14. Motivos\n\nChaves e telas regulam acesso físico e conhecimento. Calor pesa de modo desigual: quem visita, quem espera e quem governa não dispõe do mesmo abrigo. Flores mortas, gaiola, rosas artificiais e pássaros deslocam relações entre trabalho, vida e perda; nenhuma imagem recebe um significado fixo universal.\n\n## 15. Diálogo cultural\n\nAureliano Buendía reaparece em referências a guerra e memória; o Hotel Macondo nomeia o território. O relato menciona Sófocles, Apocalipse e Judeu Errante dentro do repertório do padre. Localizar uma alusão não autoriza importar para estes contos toda a história de outro romance nem validar a explicação religiosa como fato.\n\n## 16. Leituras especializadas\n\nA pesquisa acadêmica permanece pendente. Não há tese externa a reproduzir ou controvérsia documentada a simular. As hipóteses deste dossiê derivam de detalhes do PDF e precisam de cotejo crítico antes de se apresentar um estado da questão.\n\n## 17. Estado da questão\n\nLacuna explícita: sem leitura de estudos acadêmicos, não afirmar consenso, periodização estilística definitiva ou mudança de recepção. Perguntas para pesquisa: que efeito tem a mudança de voz no conto final e como a montagem dos funerais altera o julgamento do poder?\n\n## 18. Close readings\n\n1) p12: a resposta da mãe compete com o vocabulário moral do padre; a distinção de vozes evita absolvição automática. 2) p15: acusação e conta condensam violência e público/privado. 3) p19: saber do leitor desmente a inocência coletiva. 4) p. 37–38: dádiva vira vitória pública fictícia e custo real. 5) p. 61: ouvir permite conhecer sem revelar o segredo ao leitor. 6) p. 68: direitos viram bens e o corpo interrompe o inventário solene.\n\n## 19. FUVEST, primeira fase\n\nTreino de transferência: a obra é da lista Unicamp2027, não da FUVEST2027. Num excerto da extração, descarte a alternativa que reduz toda ausência de anestesia à vingança; num excerto da viúva, separe sua crença da informação que a contradiz. Uma afirmação verdadeira sobre um tema pode não responder ao recurso do trecho.\n\n## 20. FUVEST, segunda fase\n\nFORMA: foco no verbo e quantidade; observação de uma marca; recurso relevante; mecanismo explicado; articulação ao conjunto. Exemplo de operação, sem gabarito de questão: ligar a mudança de escala funerária a uma diferença na voz que apresenta o rito. Não inventar distribuição atual de questões ou espelho oficial.\n\n## 21. Unicamp, primeira fase\n\nIntegre trecho e posição na coletânea. Compare uma fala direta com um inventário do último conto, verificando o modo de representar a autoridade. Não extrapole a ausência de nome do suspeito para uma biografia inventada. Não use uma explicação do padre como comprovação autoral da causa das aves mortas.\n\n## 22. Unicamp, segunda fase\n\nFONTE: localizar objeto e voz; separar verbos dos subitens; nomear núcleo formal; delimitar tensão; explicar relação. Em uma comparação, use duas evidências e diga por que a contenção de um diálogo e a abundância de uma lista geram efeitos diferentes. Fonte não é pretexto para recontar toda a trama.\n\n## 23. Comparações controladas\n\nDentro do livro: abertura/final pelo rito funerário; gaiola/rosas pelo trabalho manual; dentista/Montiel pela apropriação do poder. Com Morangos mofados, compare a construção pública do julgamento em Aqueles dois e Nesta terra: demissão produzida por cartas anônimas versus suspeita sustentada pela origem do forasteiro. A aproximação depende desses procedimentos, não da frase genérica sobre sociedade. Para comparação com outras obras, retornar a seus dossiês e verificar a segunda passagem antes de concluir.\n\n## 24. Leituras simplificadoras\n\nNão confundir coleção com conto-título; nem fala de personagem com posição narrativa; nem dádiva com venda; nem devolução com reparação; nem cegueira com ignorância; nem fim de uma soberana com democracia comprovada. Um dia depois não apresenta explicação única ratificada para a mortandade.\n\n## 25. Resolver\n\nLer verbo e recorte; localizar situação e voz; escolher um detalhe; explicar o mecanismo; testar alcance contra o desfecho; excluir interpretação que apaga uma contradição. Em discursiva, uma frase por unidade solicitada, com evidência suficiente e sem história externa usada como resposta pronta.\n\n## 26. Memorizar\n\nReconstruir oito títulos e ligar um objeto a cada conto: flores, dente, bolas, gaiola, cofre, aves, cartas, testamento. Depois, para cada objeto, lembrar voz, conflito e efeito; uma lista de objetos sem relações não comprova compreensão.\n\n## 27. Perguntas ao professor\n\n1. Como a identidade retardada da mãe altera a empatia? Discuta o antes e o depois da revelação. 2. Que informação o leitor possui e o povo ignora no roubo? Distinga dois regimes de julgamento. 3. O que o custo da dádiva muda na avaliação de Baltazar? Preserve triunfo e perda. 4. O padre é somente ridículo? Considere seu gesto final. 5. Que continuidade o herdeiro introduz no fim da soberana? Distinga a promessa e a divisão material.\n\n## 28. Questões autorais, sem gabarito\n\n1. Explique como a resposta da mãe ao padre desloca o critério de julgamento de Carlos Centeno. 2. Relacione a pergunta sobre a conta em Um dia desses à posição do alcaide no conto. 3. Compare o saber do leitor e o rumor público em Nesta terra não há ladrões. 4. Em dois subitens: a) identifique o papel das mangas em As rosas artificiais; b) explique por que a avó sabe mais do que a justificativa de Mina admite. 5. Compare a figuração do poder no diálogo do dentista e no inventário de bens morais da Mamãe Grande, usando um recurso de cada texto. Responda antes de construir uma resposta-modelo; os guias são material de leitura, não rubrica oficial.\n\n## 29. Bibliografia e limites\n\nFonte primária: arquivo fornecido de Os funerais da Mamãe Grande, Record, tradução Édson Braga, ficha digital2019; leitura textual integral dos oito contos p8–72. Metadados p. 5–6; sumário p. 7. Fontes críticas: nenhuma lida nesta retomada. A habilidade oferece método de leitura e não constitui bibliografia acadêmica da obra. Fonte oficial do ciclo registrada no catálogo; cotejo de provas e respostas esperadas ainda pendente.\n\n## 30. Cola de prova\n\nOito contos e montagem de diferenças; política inscrita em objetos, falas, olhares e herança. Retardo, ironia, focalização móvel e elipse predominam em procedimentos diversos; o último conto amplia a voz e parodia solenidades. Compare pequeno e grande funeral. Erro decisivo: explicar todos os textos com um único rótulo.\n\n## 31. Revisão ativa\n\n24h: oito títulos, uma cena e uma pergunta literal/formal/interpretativa por conto. 7d: trecho novo e comparação de dois procedimentos. 30d: mini-simulado autoral, separado por banca e fase. Pré-prova: mapa de uma página com seis passagens-âncora e três confusões. Registre no caderno o primeiro erro: L1 leitura, E1 evidência, F1 forma, M1 mecanismo, A1 articulação, C1 comando, G1 generalização ou H1 contexto; refaça o argumento sem consultar. Este é um roteiro, não agendamento automático do aplicativo.",
+      "evidenceRefs": [
+        "a-sesta-da-terca-feira-ancora",
+        "um-dia-desses-ancora",
+        "nesta-terra-nao-ha-ladroes-ancora",
+        "a-prodigiosa-tarde-de-baltazar-ancora",
+        "a-viuva-montiel-ancora",
+        "um-dia-depois-do-sabado-ancora",
+        "as-rosas-artificiais-ancora",
+        "os-funerais-da-mamae-grande-ancora",
+        "patrimonio-invisivel"
+      ],
+      "sourceRefs": [],
+      "version": 1,
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "funerais-da-mamae-grande-critica_debate",
+      "moduleType": "critica_debate",
+      "markdown": "## Hipóteses de leitura, com limites\n\nA leitura centrada na denúncia do poder encontra provas no alcaide, em Montiel e nos bens morais. Seu limite é apagar cuidado, segredo e luto que não se reduzem a funções de denúncia. Uma leitura da circulação da informação integra rumor, cartas e voz do contador; seu limite é explicar violência material apenas como discurso. São duas hipóteses próprias confrontadas com a obra, não divergência atribuída a críticos que não foram lidos. Pesquisa acadêmica efetiva continua pendente.",
+      "evidenceRefs": [
+        "patrimonio-invisivel",
+        "nesta-terra-nao-ha-ladroes-ancora"
+      ],
+      "sourceRefs": [],
+      "version": 1,
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "funerais-da-mamae-grande-fuvest",
+      "moduleType": "fuvest",
+      "markdown": "## 19. FUVEST, primeira fase\n\nTreino de transferência: a obra é da lista Unicamp2027, não da FUVEST2027. Num excerto da extração, descarte a alternativa que reduz toda ausência de anestesia à vingança; num excerto da viúva, separe sua crença da informação que a contradiz. Uma afirmação verdadeira sobre um tema pode não responder ao recurso do trecho.\n\n## 20. FUVEST, segunda fase\n\nFORMA: foco no verbo e quantidade; observação de uma marca; recurso relevante; mecanismo explicado; articulação ao conjunto. Exemplo de operação, sem gabarito de questão: ligar a mudança de escala funerária a uma diferença na voz que apresenta o rito. Não inventar distribuição atual de questões ou espelho oficial.",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "version": 1,
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "funerais-da-mamae-grande-unicamp",
+      "moduleType": "unicamp",
+      "markdown": "## 21. Unicamp, primeira fase\n\nIntegre trecho e posição na coletânea. Compare uma fala direta com um inventário do último conto, verificando o modo de representar a autoridade. Não extrapole a ausência de nome do suspeito para uma biografia inventada. Não use uma explicação do padre como comprovação autoral da causa das aves mortas.\n\n## 22. Unicamp, segunda fase\n\nFONTE: localizar objeto e voz; separar verbos dos subitens; nomear núcleo formal; delimitar tensão; explicar relação. Em uma comparação, use duas evidências e diga por que a contenção de um diálogo e a abundância de uma lista geram efeitos diferentes. Fonte não é pretexto para recontar toda a trama.",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "version": 1,
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "funerais-da-mamae-grande-questoes",
+      "moduleType": "questoes",
+      "markdown": "## 28. Questões autorais, sem gabarito\n\n1. Explique como a resposta da mãe ao padre desloca o critério de julgamento de Carlos Centeno. 2. Relacione a pergunta sobre a conta em Um dia desses à posição do alcaide no conto. 3. Compare o saber do leitor e o rumor público em Nesta terra não há ladrões. 4. Em dois subitens: a) identifique o papel das mangas em As rosas artificiais; b) explique por que a avó sabe mais do que a justificativa de Mina admite. 5. Compare a figuração do poder no diálogo do dentista e no inventário de bens morais da Mamãe Grande, usando um recurso de cada texto. Responda antes de construir uma resposta-modelo; os guias são material de leitura, não rubrica oficial.",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "version": 1,
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "funerais-da-mamae-grande-revisao_ativa",
+      "moduleType": "revisao_ativa",
+      "markdown": "## 26. Memorizar\n\nReconstruir oito títulos e ligar um objeto a cada conto: flores, dente, bolas, gaiola, cofre, aves, cartas, testamento. Depois, para cada objeto, lembrar voz, conflito e efeito; uma lista de objetos sem relações não comprova compreensão.\n\n## 31. Revisão ativa\n\n24h: oito títulos, uma cena e uma pergunta literal/formal/interpretativa por conto. 7d: trecho novo e comparação de dois procedimentos. 30d: mini-simulado autoral, separado por banca e fase. Pré-prova: mapa de uma página com seis passagens-âncora e três confusões. Registre no caderno o primeiro erro: L1 leitura, E1 evidência, F1 forma, M1 mecanismo, A1 articulação, C1 comando, G1 generalização ou H1 contexto; refaça o argumento sem consultar. Este é um roteiro, não agendamento automático do aplicativo.",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "version": 1,
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "funerais-da-mamae-grande-fontes",
+      "moduleType": "fontes",
+      "markdown": "## Fonte primária efetivamente consultada\n\nGabriel García Márquez, tradução Édson Braga, Record. O PDF tem 85 páginas: p. 5 menciona15ª edição2014; a ficha do e-book p. 6 identifica1ª edição digital2019 e copyright original1962. As duas datas referem-se a camadas editoriais distintas. O corpus está em8–72; p. 3 tem procedência de site de download; p. 4 catálogo do autor; p. 7 sumário; p. 73 colofão, p. 74 ligações e76–85 catálogo comercial. Não são contos. Conferência textual não prova procedência autorizada nem ausência de marca gráfica.\n\nLeitura textual integral dos oito contos, incluindo recuperação de trechos cuja saída de leitura inicial havia sido truncada. A página impressa do e-book não é universal: toda localização aqui usa o número do PDF. Não foram usados catálogo comercial nem páginas de divulgação como se fossem obra. Não há prefácio crítico incorporado.\n\nFonte primária: arquivo fornecido de Os funerais da Mamãe Grande, Record, tradução Édson Braga, ficha digital2019; leitura textual integral dos oito contos p8–72. Metadados p. 5–6; sumário p. 7. Fontes críticas: nenhuma lida nesta retomada. A habilidade oferece método de leitura e não constitui bibliografia acadêmica da obra. Fonte oficial do ciclo registrada no catálogo; cotejo de provas e respostas esperadas ainda pendente.\n\nProcedência de download declarada; antes de publicação, cotejar com exemplar autorizado. A ausência de dado pessoal na camada textual não comprova ausência de marca de água em imagem. Nenhuma reprodução de página será versionada. Questões são autorais, não previsão de incidência ou prova oficial.",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "version": 1,
+      "editorialStatus": "needs_review"
+    }
+  ],
+  "evidence": [
+    {
+      "id": "a-sesta-da-terca-feira-ancora",
+      "unitId": "a-sesta-da-terca-feira",
+      "location": "A sesta da terça-feira, p. 12",
+      "quote": "Era um homem muito bom.",
+      "context": "A mãe responde ao padre, que lhe pergunta se tentou encaminhar o filho.",
+      "formalDevice": "Retardo da identificação, contraste entre fala calma e curiosidade coletiva, descrição do calor e do corpo castigado pelo boxe. A dignidade nasce de gestos e contenção, sem apagar a tentativa de roubo.",
+      "effect": "Direito ao luto versus classificação pública do morto como ladrão.",
+      "wholeRelation": "Abre a coletânea por uma visita funerária pobre e discreta; o último conto ampliará o rito ao espetáculo nacional.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "um-dia-desses-ancora",
+      "unitId": "um-dia-desses",
+      "location": "Um dia desses, p. 15",
+      "quote": "O senhor vai nos pagar agora vinte mortos, tenente.",
+      "context": "O dentista fala ao preparar a extração.",
+      "formalDevice": "Frases curtas, procedimentos técnicos lentos e elipse do passado político. A última réplica reduz a distância entre patrimônio público e interesse particular.",
+      "effect": "Cuidado técnico e acusação política coexistem; inversão física temporária não equivale a deposição do governante.",
+      "wholeRelation": "Depois do controle religioso da chave, desloca o poder para a autoridade militar e o saber profissional do homem pobre.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "nesta-terra-nao-ha-ladroes-ancora",
+      "unitId": "nesta-terra-nao-ha-ladroes",
+      "location": "Nesta terra não há ladrões, p. 19",
+      "quote": "Nesta terra não há ladrões. Todo mundo conhece todo mundo.",
+      "context": "Uma mulher atribui o crime a um forasteiro, perto de Ana, que sabe a verdade.",
+      "formalDevice": "Ironia do título, conhecimento desigual e cenas de transmissão de rumores. O encontro final converte a restituição em exposição, sem absolver o proprietário que reivindica dinheiro não confirmado pelo narrador.",
+      "effect": "Restituir o objeto não repara a violência contra o acusado nem contra Ana.",
+      "wholeRelation": "Expande o par culpa/julgamento da abertura e demonstra como a comunidade fabrica inocência local e culpa do estrangeiro.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "a-prodigiosa-tarde-de-baltazar-ancora",
+      "unitId": "a-prodigiosa-tarde-de-baltazar",
+      "location": "A prodigiosa tarde de Baltazar, p. 37",
+      "quote": "Afinal de contas, eu a fiz para isso.",
+      "context": "Baltazar justifica a oferta da gaiola a Pepe diante de Montiel.",
+      "formalDevice": "Contraste entre valor de uso, valor artístico e preço; o triunfo público depende de uma informação falsa, seguida por um anticlímax corporal.",
+      "effect": "Autonomia do gesto de oferecer versus custo do trabalho e vulnerabilidade econômica do artesão.",
+      "wholeRelation": "Introduz Montiel ainda vivo; o conto seguinte desloca o foco para sua viúva e revela a origem violenta da riqueza.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "a-viuva-montiel-ancora",
+      "unitId": "a-viuva-montiel",
+      "location": "A viúva Montiel, p. 41",
+      "quote": "O mundo está malfeito",
+      "context": "A viúva lamenta isolamento e herança incompreensível.",
+      "formalDevice": "Ironia entre santo doméstico e tirano público; analepses explicam a riqueza depois do funeral esvaziado. Cartas europeias contrapõem civilização declarada e violência que financiou a partida.",
+      "effect": "Luto sincero e desconhecimento interessado da violência convivem.",
+      "wholeRelation": "Reinterpreta Montiel do conto anterior e prepara a presença da Mamãe Grande antes do conto-título.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "um-dia-depois-do-sabado-ancora",
+      "unitId": "um-dia-depois-do-sabado",
+      "location": "Um dia depois do sábado, p. 51",
+      "quote": "Hotel Macondo",
+      "context": "O rapaz faminto chega ao hotel, cujo letreiro não lê.",
+      "formalDevice": "Montagem de perspectivas e retardo das conexões; memórias e associações do padre formam explicações que o relato não confirma como causa da morte das aves.",
+      "effect": "Necessidade de explicar o insólito, retorno da autoridade religiosa e gesto caritativo final não coincidem inteiramente.",
+      "wholeRelation": "Conecta personagens e território anteriores; a referência explícita ao Hotel Macondo fixa o lugar sem exigir leitura externa.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "as-rosas-artificiais-ancora",
+      "unitId": "as-rosas-artificiais",
+      "location": "As rosas artificiais, p. 61",
+      "quote": "Se você quer ser feliz, não se confesse com estranhos.",
+      "context": "A avó aconselha Mina ao conversar sobre seu segredo.",
+      "formalDevice": "Elipse da experiência íntima, diálogo indiciário e inversão ver/entender. Não preencher o silêncio com uma história amorosa detalhada não escrita.",
+      "effect": "Controle familiar e religioso versus proteção de uma intimidade ferida.",
+      "wholeRelation": "Retoma trabalho manual e objetos como instrumentos do conhecimento, em escala íntima, antes do espetáculo público final.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "os-funerais-da-mamae-grande-ancora",
+      "unitId": "os-funerais-da-mamae-grande",
+      "location": "Os funerais da Mamãe Grande, p. 72",
+      "quote": "lição e escarmento das gerações futuras",
+      "context": "O contador justifica narrar depois do enterro, antes da limpeza das ruas.",
+      "formalDevice": "Enumeração, anáfora, hipérbole e paródia das fórmulas jurídicas. O patrimônio invisível transforma abstrações republicanas em bens privados; o arroto destrói a dignidade verbal da lista.",
+      "effect": "Fim de uma proprietária versus continuidade dos interesses e fabricação pública da grandeza.",
+      "wholeRelation": "Fecha e amplia os funerais pequenos da coletânea: o rito agrega terra, eleições, religião, imprensa e memória.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "patrimonio-invisivel",
+      "unitId": "os-funerais-da-mamae-grande",
+      "location": "Os funerais da Mamãe Grande, p. 68",
+      "quote": "a soberania nacional, os partidos tradicionais, os direitos do homem, as liberdades do cidadão",
+      "context": "Entre bens morais, a moribunda enumera direitos e instituições.",
+      "formalDevice": "Enumeração de abstrações tratadas como propriedade transmissível.",
+      "effect": "A linguagem de liberdade revela a captura privada das instituições.",
+      "wholeRelation": "Amplia o contraste entre autoridade formal e coerção material presente nos outros contos.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    }
+  ]
+}

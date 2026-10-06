@@ -1,0 +1,651 @@
+{
+  "workId": "balada-de-amor-ao-vento",
+  "slug": "balada-de-amor-ao-vento",
+  "edition": {
+    "label": "Paulina Chiziane, Balada de Amor ao Vento. 2ª ed. Lisboa: Editorial Caminho, 2003",
+    "pdfPageCount": 76,
+    "note": "Obra protegida por direito autoral. As páginas são as do PDF usado; o dossiê usa só citações curtas e análise original."
+  },
+  "units": [
+    {
+      "id": "cap-01",
+      "order": 1,
+      "type": "chapter",
+      "title": "1 — O primeiro amor",
+      "pdfStartPage": 7,
+      "pdfEndPage": 10,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Sarnau, já velha, vivendo na Mafalala (subúrbio de Lourenço Marques), relembra Mambone, às margens do rio Save. Na festa de circuncisão, apaixona-se por Mwando, rapaz do colégio dos padres que quer ser sacerdote; ela o conquista à beira do rio.",
+        "observe": [
+          "A narradora fala a ouvintes ('digo-vos') e apresenta sua história como comum: 'Há muitas mulheres que vivem assim'.",
+          "A imagem da mulher como terra e melão, com 'centro vermelho', abre o tema do corpo feminino que suporta os golpes."
+        ]
+      }
+    },
+    {
+      "id": "cap-02",
+      "order": 2,
+      "type": "chapter",
+      "title": "2 — Mwando nasce para o amor",
+      "pdfStartPage": 11,
+      "pdfEndPage": 14,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Em terceira pessoa, o narrador mostra Mwando dividido entre a vocação e a paixão. O padre Ferreira descobre a carta de amor e o expulsa do colégio. Sarnau e Mwando se unem à beira do Save; ela perde a virgindade e pede que ele agradeça à sua defunta protetora.",
+        "observe": [
+          "A história de Adão e Eva é reescrita em chave moçambicana, com a serpente e a maçã.",
+          "A hipocrisia do padre (a cozinheira não é punida) é registrada com ironia."
+        ]
+      }
+    },
+    {
+      "id": "cap-03",
+      "order": 3,
+      "type": "chapter",
+      "title": "3 — O abandono",
+      "pdfStartPage": 15,
+      "pdfEndPage": 18,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Mwando passa a evitar Sarnau e revela que vai casar com a moça escolhida pelos pais; como cristão, recusa a poligamia. Grávida, Sarnau tenta se afogar, é salva por um pescador e perde a criança. A curandeira prevê que ela morrerá do outro lado do mar.",
+        "observe": [
+          "O cristianismo de Mwando serve para recusar a responsabilidade com Sarnau.",
+          "A tentativa de suicídio e o aborto espontâneo fecham a primeira fase do romance."
+        ]
+      }
+    },
+    {
+      "id": "cap-04",
+      "order": 4,
+      "type": "chapter",
+      "title": "4 — O lobolo",
+      "pdfStartPage": 19,
+      "pdfEndPage": 22,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A rainha escolhe Sarnau para esposa de Nguila, herdeiro do trono, e a família recebe um lobolo de trinta e seis vacas. Sarnau sente-se vendida, mas também triunfante. O padre Ferreira oficia um casamento cristão.",
+        "observe": [
+          "O ritual do lobolo é descrito em detalhe, com as falas da família e a aceitação da noiva.",
+          "Sarnau defende outra ideia de beleza: as mãos calosas e os pés rachados da mulher do campo."
+        ]
+      }
+    },
+    {
+      "id": "cap-05",
+      "order": 5,
+      "type": "chapter",
+      "title": "5 — O casamento",
+      "pdfStartPage": 23,
+      "pdfEndPage": 25,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Enquanto se prepara o casamento, as mulheres da família aconselham submissão total ao marido. Na festa, a velha tia entrega a Sarnau um pilão: 'o lar é um pilão e a mulher o cereal'. A mãe diz que ela parte 'para a escravatura'.",
+        "observe": [
+          "Os conselhos aparecem como vozes que atravessam o pensamento de Sarnau, sem marcação de diálogo.",
+          "A comparação do casamento com a escravidão e o cadafalso é feita pelas próprias mulheres."
+        ]
+      }
+    },
+    {
+      "id": "cap-06",
+      "order": 6,
+      "type": "chapter",
+      "title": "6 — A primeira esposa",
+      "pdfStartPage": 26,
+      "pdfEndPage": 30,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Sarnau desfruta o luxo da casa real e sonha ser rainha. Visita uma das sogras, que fala de feitiços. Ao voltar, encontra Nguila com outra mulher na sua cama; obrigada a aquecer o banho deles, é espancada e perde um dente. A rainha a consola. Grávida, recupera o favor do marido por pouco tempo.",
+        "observe": [
+          "O sonho em que vê a aldeia real como 'pocilga' revela a crítica da narradora à poligamia da corte.",
+          "A violência doméstica é apresentada como 'disciplina' pelo marido."
+        ]
+      }
+    },
+    {
+      "id": "cap-07",
+      "order": 7,
+      "type": "chapter",
+      "title": "7 — A história de Mwando",
+      "pdfStartPage": 31,
+      "pdfEndPage": 36,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Em terceira pessoa, o capítulo conta o casamento de Mwando com a bela Sumbi, que se recusa a trabalhar como manda a tradição. O conselho da aldeia o julga por se deixar dominar por uma mulher. O filho morre e Sumbi o abandona por um homem rico. Desesperado, Mwando arranca um girassol e depois 'ressuscita' a si mesmo.",
+        "observe": [
+          "O capítulo mostra como a comunidade vigia também os homens que fogem do padrão.",
+          "O lobolo pago em prestações expõe a dimensão econômica do casamento."
+        ]
+      }
+    },
+    {
+      "id": "cap-08",
+      "order": 8,
+      "type": "chapter",
+      "title": "8 — Rainha sem amor",
+      "pdfStartPage": 37,
+      "pdfEndPage": 42,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Anos depois, mãe de gêmeas, Sarnau é esquecida por Nguila, que prefere Phati, a quinta esposa. Relembra a morte do rei e da rainha e a violência que se seguiu. Na praia, reencontra Mwando, pobre e humilde, e corre atrás dele.",
+        "observe": [
+          "O título de rainha não traz poder: 'De que vale usar braceletes de ouro [...] quando nem sequer tenho ar para respirar?'.",
+          "A sucessão do rei é narrada como luta de poder, com suicídios e assassinatos."
+        ]
+      }
+    },
+    {
+      "id": "cap-09",
+      "order": 9,
+      "type": "chapter",
+      "title": "9 — O dilema",
+      "pdfStartPage": 43,
+      "pdfEndPage": 44,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Sarnau descreve sua paixão e discute com a própria consciência: o marido a despreza, e ela 'procura a vida', não o prazer. Encontra Mwando na caverna dos fantasmas.",
+        "observe": [
+          "O diálogo com a consciência é um dos trechos centrais para discutir adultério e poligamia.",
+          "A comparação com os que comeram carne humana mostra a paixão como vício sem volta."
+        ]
+      }
+    },
+    {
+      "id": "cap-10",
+      "order": 10,
+      "type": "chapter",
+      "title": "10 — O filho do adultério",
+      "pdfStartPage": 45,
+      "pdfEndPage": 46,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Grávida de Mwando, Sarnau recorre a uma curandeira para atrair Nguila e disfarçar a paternidade. Nguila passa a tratá-la com carinho. Mwando quer fugir com ela e com o filho.",
+        "observe": [
+          "A narradora atribui ao 'destino', ao amor e à poligamia a culpa do que vive.",
+          "A ironia trágica: o herdeiro do trono será filho de outro homem."
+        ]
+      }
+    },
+    {
+      "id": "cap-11",
+      "order": 11,
+      "type": "chapter",
+      "title": "11 — Kenguelekezê",
+      "pdfStartPage": 47,
+      "pdfEndPage": 48,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "O parto é difícil; Phati é acusada de feitiço e espancada. O menino nasce claro como Mwando, mas todos atribuem a cor à rivalidade com Phati. Nguila celebra o herdeiro. Sarnau decide não fugir.",
+        "observe": [
+          "O ritual de apresentação do bebê à lua dá título ao capítulo.",
+          "As crenças sobre o ventre feminino ajudam a esconder a verdade."
+        ]
+      }
+    },
+    {
+      "id": "cap-12",
+      "order": 12,
+      "type": "chapter",
+      "title": "12 — A fuga",
+      "pdfStartPage": 49,
+      "pdfEndPage": 52,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Na caverna, Mwando promete levá-la para a cidade, onde 'cada homem só tem uma mulher'. Sarnau decide ficar pelos filhos, mas Phati os viu e conta tudo a Nguila, que ameaça a prova do wanga. Sarnau foge de barco com Mwando, deixando os filhos.",
+        "observe": [
+          "A promessa de Mwando idealiza a cidade e a monogamia.",
+          "O dilema entre amor e filhos é formulado em perguntas sem resposta."
+        ]
+      }
+    },
+    {
+      "id": "cap-13",
+      "order": 13,
+      "type": "chapter",
+      "title": "13 — Vilanculos",
+      "pdfStartPage": 53,
+      "pdfEndPage": 54,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Em Vilanculos, Sarnau vive escondida numa barraca de caniço enquanto Mwando pesca. Ela vive o casamento monogâmico como felicidade, mas sente a falta dos filhos.",
+        "observe": [
+          "O tom lírico e sensual contrasta com o medo de ser descoberta.",
+          "Sarnau se lembra de que terá de devolver as trinta e seis vacas do lobolo."
+        ]
+      }
+    },
+    {
+      "id": "cap-14",
+      "order": 14,
+      "type": "chapter",
+      "title": "14 — Mwando abandona Sarnau",
+      "pdfStartPage": 55,
+      "pdfEndPage": 58,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Mwando sabe por Nhambi, seu irmão de circuncisão, que o rei mandou matá-lo, que Phati foi executada e que sua família corre perigo. Ele abandona Sarnau, chamando-a de 'camponesa rústica', e a derruba com um golpe.",
+        "observe": [
+          "Nhambi despreza o arrependimento masculino: a cena expõe o código de honra da comunidade.",
+          "O abandono repete, de forma mais violenta, o do capítulo 3."
+        ]
+      }
+    },
+    {
+      "id": "cap-15",
+      "order": 15,
+      "type": "chapter",
+      "title": "15 — O navio para Angola",
+      "pdfStartPage": 59,
+      "pdfEndPage": 61,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Mwando aparece entre os deportados num navio que parte da baía do Espírito Santo para Angola. Conta que foi preso por um sipaio por causa de uma mulher e por não ter a caderneta de indígena em ordem.",
+        "observe": [
+          "O romance passa da violência doméstica à violência colonial.",
+          "Os capatazes negros que maltratam os negros ilustram a frase 'O escravo liberto torna-se tirano'."
+        ]
+      }
+    },
+    {
+      "id": "cap-16",
+      "order": 16,
+      "type": "chapter",
+      "title": "16 — A destronca",
+      "pdfStartPage": 62,
+      "pdfEndPage": 63,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Os condenados abrem a floresta angolana para plantar café. Muitos morrem na primeira noite. A floresta vira roça.",
+        "observe": [
+          "A destruição da floresta é narrada com simpatia pela natureza e crítica ao homem 'senhor do mundo'.",
+          "A riqueza colonial nasce do suor e do sangue dos condenados."
+        ]
+      }
+    },
+    {
+      "id": "cap-17",
+      "order": 17,
+      "type": "chapter",
+      "title": "17 — O padre Moçambique",
+      "pdfStartPage": 64,
+      "pdfEndPage": 67,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Nas roças, os mortos se acumulam. Mwando torna-se o 'padre Moçambique', que reza missas e funerais e prega resignação, útil aos colonos. Depois de quinze anos, volta a Mambone, sabe que Sarnau vive em Lourenço Marques e parte para procurá-la.",
+        "observe": [
+          "A realização tardia da vocação religiosa é irônica: a Igreja serve para pacificar revoltas.",
+          "O funeral junta catolicismo e ritos angolanos (o curandeiro Januário)."
+        ]
+      }
+    },
+    {
+      "id": "cap-18",
+      "order": 18,
+      "type": "chapter",
+      "title": "18 — O mercado da Mafalala",
+      "pdfStartPage": 68,
+      "pdfEndPage": 70,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Sarnau vende legumes no mercado da Mafalala. Conta a miséria depois do abandono, a filha de Mwando que deu o nome de Phati para salvá-la de um espírito, e o filho João, cujo pai também a abandonou. Compara poligamia e monogamia.",
+        "observe": [
+          "A reconciliação com a memória de Phati inverte a rivalidade do passado.",
+          "A conclusão é amarga: 'a vida da mulher é sempre dura' em qualquer sistema."
+        ]
+      }
+    },
+    {
+      "id": "cap-19",
+      "order": 19,
+      "type": "chapter",
+      "title": "19 — Paga-me",
+      "pdfStartPage": 71,
+      "pdfEndPage": 74,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Na chuva, Mwando reencontra Sarnau e pede perdão. Ela exige pagamento: conta que se prostituiu para devolver o lobolo e evitar vinte e quatro divórcios em cadeia. Revela que ele tem dois filhos. Ela recusa e foge.",
+        "observe": [
+          "O 'preço da honra' transforma o lobolo em argumento da própria mulher.",
+          "'Cantei para ti baladas de amor ao vento' explica o título."
+        ]
+      }
+    },
+    {
+      "id": "cap-20",
+      "order": 20,
+      "type": "chapter",
+      "title": "20 — A escuridão da paz",
+      "pdfStartPage": 75,
+      "pdfEndPage": 76,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Mwando bate à porta; os filhos o recebem como pai. Sarnau, vencida pela presença das crianças, apaga o candeeiro e aceita recomeçar com ele.",
+        "observe": [
+          "O final é ambíguo: reconciliação e derrota ao mesmo tempo.",
+          "A repetição de 'escuridão da paz' liga este capítulo ao fim do capítulo 18."
+        ]
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Balada de Amor ao Vento** (1990) é o primeiro romance da moçambicana Paulina Chiziane (1955), considerado o primeiro romance publicado por uma mulher em Moçambique. Em 20 capítulos, Sarnau, já velha e vendendo legumes no mercado da Mafalala, em Lourenço Marques (atual Maputo), conta sua vida: o amor por Mwando em Mambone, às margens do rio Save; o casamento por lobolo com Nguila, herdeiro do trono; a vida de primeira esposa numa família polígama; a fuga com Mwando; o abandono; a miséria na cidade.\n\n**Como ler:** a maior parte é narrada por Sarnau em primeira pessoa, dirigindo-se aos ouvintes. Alguns capítulos (2, 7, 14 a 17) passam à terceira pessoa para contar a vida de Mwando, inclusive a deportação para Angola.\n\n**Vocabulário útil:** lobolo (compensação matrimonial paga à família da noiva), capulana (tecido usado como saia), machamba (roça), muzimos (espíritos dos antepassados), nhamussoros (adivinhos), sura (bebida da palmeira), wanga (bebida usada como prova), sipaio (policial africano a serviço da administração colonial).\n\n**Atenção:** a edição é portuguesa (Editorial Caminho), com a ortografia de Portugal anterior ao Acordo (facto, acção, baptizar)."
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-muitas-mulheres",
+        "ev-sou-cristao",
+        "ev-feira",
+        "ev-pilao",
+        "ev-poder-vinho",
+        "ev-sorrisos-lagrimas",
+        "ev-dominar-mulher",
+        "ev-auto-ressurreicao",
+        "ev-procuro-vida",
+        "ev-nao-inventei",
+        "ev-rainha-de-que",
+        "ev-escravo-tirano",
+        "ev-verde-dinheiro",
+        "ev-sofrimento-recompensa",
+        "ev-vida-da-mulher",
+        "ev-vinte-e-quatro",
+        "ev-baladas",
+        "ev-enterrei-o-passado"
+      ],
+      "sourceRefs": [],
+      "markdown": "## Narradora e oralidade\n\nSarnau conta a história como quem fala a ouvintes ('digo-vos', 'não imaginam vocês'). O texto incorpora provérbios, cantos, rituais e fórmulas da tradição oral. A voz da narradora mistura humor, lirismo e dor, e muitas vezes deixa ecoar dentro de si as falas das mulheres mais velhas.\n\n## Lobolo e poligamia\n\nO romance mostra o lobolo em detalhe: o casamento é uma troca entre famílias, medida em vacas. Sarnau percebe-se 'à venda', mas também se orgulha do preço alto. A poligamia da corte é descrita sem idealização — rivalidade, feitiço, violência e abandono —, mas a narradora também reconhece que nela 'não há filhos bastardos'. A conclusão é que 'a vida da mulher é sempre dura' em qualquer sistema.\n\n## Tradição, cristianismo e colonialismo\n\nO cristianismo aparece como força ambígua: o padre Ferreira oficia casamentos, mas é hipócrita; Mwando usa a fé para abandonar Sarnau e, mais tarde, vira o 'padre Moçambique' que prega resignação útil aos colonos. A deportação para Angola, a caderneta de indígena e o trabalho forçado nas roças situam o romance no colonialismo português.\n\n## Violência contra a mulher\n\nO casamento é comparado à escravidão pelas próprias mulheres da família. Sarnau é espancada pelo marido, que chama a agressão de 'disciplina'. Depois, abandonada por Mwando, passa pela prostituição e pela doença. O corpo da mulher aparece como terra que suporta os golpes, na imagem do melão com 'centro vermelho' do primeiro capítulo.\n\n## O preço da honra\n\nNo reencontro final, Sarnau inverte a lógica do lobolo: exige que Mwando 'pague'. Ela devolveu sozinha as trinta e seis vacas para evitar 'vinte e quatro divórcios' em cadeia. A cobrança é ao mesmo tempo ironia, dignidade e ferida. O título vem da sua fala: 'Cantei para ti baladas de amor ao vento'.\n\n## Final\n\nMwando volta, os filhos o recebem e Sarnau, 'vencida', aceita-o. O fim não é celebração: é escolha cansada, feita pelos filhos e pela solidão, na 'escuridão da paz'.\n\n## Pontos de prova\n\n- Explicar o lobolo e a poligamia como instituições sociais e econômicas.\n- Analisar o foco narrativo e a oralidade.\n- Relacionar cristianismo, tradição e colonialismo.\n- Discutir a condição feminina e a violência doméstica.\n- Interpretar o título e o final."
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Edição usada:** Paulina Chiziane, *Balada de Amor ao Vento*. 2ª edição. Lisboa: Editorial Caminho, 2003 (impressão de 2007). As páginas citadas são as do PDF usado, com 76 páginas; o romance vai da p. 7 à p. 76.\n\n**Procedência do arquivo:** o PDF do Drive é uma digitalização de terceiros, não um arquivo da editora. Antes de publicar, convém conferir as citações num exemplar.\n\n**Direitos:** obra protegida por direito autoral (© Paulina Chiziane / Editorial Caminho). Este dossiê traz só análise original e citações curtas, com página.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica:** nenhuma fonte crítica foi lida para este dossiê. A leitura é feita diretamente do texto e precisa de revisão editorial antes de ser publicada."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-muitas-mulheres",
+      "unitId": "cap-01",
+      "location": "capítulo 1, p. 7",
+      "quote": "Há muitas mulheres que vivem assim.",
+      "context": "Sarnau apresenta a história que vai contar.",
+      "formalDevice": "Frase curta e generalizante.",
+      "effect": "Transforma a história pessoal em representativa.",
+      "wholeRelation": "Sustenta a leitura do romance como denúncia da condição feminina.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-sou-cristao",
+      "unitId": "cap-03",
+      "location": "capítulo 3, p. 16",
+      "quote": "Eu sou cristão e não aceito a poligamia.",
+      "context": "Mwando rompe com Sarnau grávida.",
+      "formalDevice": "Discurso direto; ironia situacional.",
+      "effect": "A recusa da poligamia serve para justificar o abandono.",
+      "wholeRelation": "O cristianismo de Mwando volta, também com ironia, quando ele vira 'padre Moçambique'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-feira",
+      "unitId": "cap-04",
+      "location": "capítulo 4, p. 20",
+      "quote": "meu Deus isto é uma feira, eu estou à venda.",
+      "context": "Cerimônia do lobolo.",
+      "formalDevice": "Metáfora comercial na voz da noiva.",
+      "effect": "Revela a percepção de Sarnau sobre a dimensão econômica do casamento.",
+      "wholeRelation": "No fim, Sarnau usa a mesma lógica para exigir 'o preço da minha honra'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-pilao",
+      "unitId": "cap-05",
+      "location": "capítulo 5, p. 24",
+      "quote": "Sarnau, o lar é um pilão e a mulher o cereal.",
+      "context": "A velha tia entrega o pilão à noiva.",
+      "formalDevice": "Metáfora em forma de provérbio.",
+      "effect": "Sintetiza a ideia de que o casamento tritura a mulher.",
+      "wholeRelation": "O pilão reaparece no parto, quando o colocam sobre o corpo de Sarnau.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-poder-vinho",
+      "unitId": "cap-06",
+      "location": "capítulo 6, p. 26",
+      "quote": "O poder é como o vinho.",
+      "context": "Sarnau se deslumbra com a vida de primeira esposa.",
+      "formalDevice": "Comparação, seguida de gradação (confunde, agrada, embriaga).",
+      "effect": "Mostra a narradora seduzida pelo poder que depois a aprisiona.",
+      "wholeRelation": "Contraste com o capítulo 8, em que os braceletes de ouro já não lhe interessam.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-sorrisos-lagrimas",
+      "unitId": "cap-06",
+      "location": "capítulo 6, p. 29",
+      "quote": "Sarnau, nem todos os sorrisos são alegrias, nem todas as lágrimas são tristezas.",
+      "context": "Sarnau encontra o marido com outra mulher na sua cama.",
+      "formalDevice": "Paralelismo e antítese; repetição de uma fala da mãe.",
+      "effect": "A sabedoria materna vira consolo amargo.",
+      "wholeRelation": "As vozes das mulheres mais velhas reaparecem no pensamento de Sarnau ao longo do livro.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-dominar-mulher",
+      "unitId": "cap-07",
+      "location": "capítulo 7, p. 33",
+      "quote": "Homem que se deixa dominar por uma mulher, não merece a dignidade de ser chamado homem",
+      "context": "O conselho da aldeia julga Mwando.",
+      "formalDevice": "Discurso indireto livre que reproduz a voz coletiva.",
+      "effect": "Mostra que a norma de gênero também pune os homens.",
+      "wholeRelation": "Explica a vergonha de Mwando e, em parte, sua violência posterior.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-auto-ressurreicao",
+      "unitId": "cap-07",
+      "location": "capítulo 7, p. 36",
+      "quote": "Descobriu que o ser humano tem várias mortes em vida, possuindo também poderes de autoressurreição.",
+      "context": "Mwando se recupera depois do abandono de Sumbi.",
+      "formalDevice": "Reflexão do narrador; paradoxo.",
+      "effect": "Introduz a ideia de recomeço, que atravessa a vida dos dois protagonistas.",
+      "wholeRelation": "Sarnau também 'morre' e recomeça várias vezes: no Save, no casamento, na Mafalala.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-procuro-vida",
+      "unitId": "cap-09",
+      "location": "capítulo 9, p. 43",
+      "quote": "As adúlteras procuram o prazer e eu procuro a vida.",
+      "context": "Diálogo de Sarnau com a consciência.",
+      "formalDevice": "Antítese prazer x vida.",
+      "effect": "Justifica o adultério como necessidade e não como luxúria.",
+      "wholeRelation": "Central para discutir o julgamento moral sobre a mulher no romance.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-nao-inventei",
+      "unitId": "cap-10",
+      "location": "capítulo 10, p. 45",
+      "quote": "mas não fui eu quem inventou o amor e a poligamia.",
+      "context": "Sarnau, grávida de Mwando, esconde a paternidade.",
+      "formalDevice": "Frase defensiva que nomeia as duas instituições.",
+      "effect": "Desloca a culpa do indivíduo para as estruturas.",
+      "wholeRelation": "O romance não absolve Sarnau, mas mostra as forças que a cercam.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-rainha-de-que",
+      "unitId": "cap-12",
+      "location": "capítulo 12, p. 49",
+      "quote": "Aqui chamam-te rainha, mas rainha de quê?",
+      "context": "Mwando convida Sarnau a fugir.",
+      "formalDevice": "Pergunta retórica.",
+      "effect": "Desmonta o título de rainha.",
+      "wholeRelation": "A promessa da cidade monogâmica será desmentida pelo abandono.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-escravo-tirano",
+      "unitId": "cap-15",
+      "location": "capítulo 15, p. 60",
+      "quote": "O escravo liberto torna-se tirano.",
+      "context": "Capatazes negros tratam os deportados com violência.",
+      "formalDevice": "Sentença proverbial do narrador.",
+      "effect": "Generaliza a lógica da opressão além da raça.",
+      "wholeRelation": "Liga a violência colonial à violência do poder em Mambone.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-verde-dinheiro",
+      "unitId": "cap-16",
+      "location": "capítulo 16, p. 63",
+      "quote": "verde-sangue, verde-dinheiro, regado com o suor dos condenados.",
+      "context": "A floresta angolana vira cafezal.",
+      "formalDevice": "Neologismos compostos e gradação.",
+      "effect": "Denuncia a origem da riqueza colonial.",
+      "wholeRelation": "Contrasta com o 'verde verdadeiro' do primeiro amor no Save.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-sofrimento-recompensa",
+      "unitId": "cap-17",
+      "location": "capítulo 17, p. 65",
+      "quote": "com a doutrina do sofrimento na terra e recompensa no céu.",
+      "context": "Os colonos aproveitam o 'padre Moçambique'.",
+      "formalDevice": "Antítese terra x céu.",
+      "effect": "Expõe o uso da religião para conter revoltas.",
+      "wholeRelation": "Retoma a crítica ao cristianismo, presente desde o colégio dos padres.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-vida-da-mulher",
+      "unitId": "cap-18",
+      "location": "capítulo 18, p. 70",
+      "quote": "Com a poligamia, com a monogamia ou mesmo solitária, a vida da mulher é sempre dura.",
+      "context": "Sarnau compara os modos de vida que conheceu.",
+      "formalDevice": "Enumeração e conclusão generalizante.",
+      "effect": "Recusa idealizar qualquer modelo.",
+      "wholeRelation": "Síntese da reflexão do romance sobre casamento.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-vinte-e-quatro",
+      "unitId": "cap-19",
+      "location": "capítulo 19, p. 73",
+      "quote": "Só as vacas do meu lobolo fizeram outros vinte e quatro lobolos.",
+      "context": "Sarnau explica a Mwando o 'preço da sua honra'.",
+      "formalDevice": "Raciocínio encadeado, quase aritmético.",
+      "effect": "Mostra o lobolo como rede econômica que liga muitas famílias.",
+      "wholeRelation": "Explica por que Sarnau precisou devolver o gado e por que exige pagamento.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-baladas",
+      "unitId": "cap-19",
+      "location": "capítulo 19, p. 74",
+      "quote": "Cantei para ti baladas de amor ao vento.",
+      "context": "Sarnau se despede de Mwando.",
+      "formalDevice": "Metáfora que retoma o título.",
+      "effect": "O amor aparece como canto sem destinatário, levado pelo vento.",
+      "wholeRelation": "Explica o título do romance.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-enterrei-o-passado",
+      "unitId": "cap-20",
+      "location": "capítulo 20, p. 76",
+      "quote": "Enterrei o passado.",
+      "context": "Sarnau aceita Mwando na última cena.",
+      "formalDevice": "Frase curta e definitiva.",
+      "effect": "Fecha o romance com uma decisão ambígua: perdão e cansaço.",
+      "wholeRelation": "Retoma a 'escuridão da paz' do fim do capítulo 18.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    }
+  ]
+}

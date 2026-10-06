@@ -1,0 +1,892 @@
+{
+  "workId": "paixao-segundo-gh",
+  "slug": "paixao-segundo-gh",
+  "edition": {
+    "label": "Clarice Lispector, A Paixão segundo G.H. Rio de Janeiro: Rocco, edição digital de 2020",
+    "pdfPageCount": 122,
+    "note": "Obra protegida por direito autoral. As páginas são as do PDF usado (conversão de ePub por terceiros); o dossiê usa só citações curtas e análise original."
+  },
+  "units": [
+    {
+      "id": "secao-01",
+      "order": 1,
+      "type": "fragment",
+      "title": "1 — A perda da terceira perna",
+      "pdfStartPage": 13,
+      "pdfEndPage": 19,
+      "opening": "estou procurando, estou procurando. Estou tentando entender",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "No dia seguinte à experiência, a narradora tenta entender o que viveu. Diz ter perdido uma 'terceira perna' que a mantinha estável e hesita entre dar forma ao vivido ou aceitar a desorganização. Para conseguir falar, inventa uma mão que segura a sua.",
+        "observe": [
+          "A narração começa depois dos fatos: o livro é o esforço de relatar algo que não cabe em palavras.",
+          "A 'mão' inventada cria um interlocutor (o 'tu') que acompanha o relato até o fim."
+        ]
+      }
+    },
+    {
+      "id": "secao-02",
+      "order": 2,
+      "type": "fragment",
+      "title": "2 — Quem era G.H.",
+      "pdfStartPage": 20,
+      "pdfEndPage": 25,
+      "opening": "que um mundo todo vivo tem a força de um Inferno. Ontem de manhã",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Volta à manhã anterior: na cobertura, à mesa do café, G.H. faz bolinhas de miolo de pão. Descreve a si mesma como escultora amadora, financeiramente independente, sem marido nem filhos, que vive 'entre aspas' e se reconhece pelas iniciais nas valises.",
+        "observe": [
+          "As iniciais G.H. resumem uma identidade feita da imagem que os outros têm dela.",
+          "Só as fotografias revelam 'um silêncio' que ela não alcança."
+        ]
+      }
+    },
+    {
+      "id": "secao-03",
+      "order": 3,
+      "type": "fragment",
+      "title": "3 — A decisão de arrumar",
+      "pdfStartPage": 26,
+      "pdfEndPage": 28,
+      "opening": "eu saberei se foi a falha necessária. Levantei-me",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Sem empregada, G.H. decide arrumar o apartamento a partir do quarto de serviço. Na área interna, fuma olhando os treze andares e joga o cigarro, gesto proibido pelo condomínio.",
+        "observe": [
+          "Arrumar é apresentado como sua 'única vocação verdadeira' — ordenar é criar e entender.",
+          "A área interna do edifício já é vista como canyon e ruína, antecipando o deserto."
+        ]
+      }
+    },
+    {
+      "id": "secao-04",
+      "order": 4,
+      "type": "fragment",
+      "title": "4 — O quarto de Janair",
+      "pdfStartPage": 29,
+      "pdfEndPage": 34,
+      "opening": "pois dirigi-me ao corredor escuro",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Em vez de um depósito sujo, G.H. encontra o quarto limpo, branco e seco, como um minarete. Na parede, Janair desenhou a carvão um homem, uma mulher e um cão nus. G.H. percebe que nunca viu a empregada e sente o ódio indiferente dela; deseja destruir o quarto.",
+        "observe": [
+          "O mural é lido como 'escrita' e julgamento da patroa por quem ela nunca enxergou.",
+          "A descrição de Janair revela a invisibilidade social da empregada negra na casa da classe média."
+        ]
+      }
+    },
+    {
+      "id": "secao-05",
+      "order": 5,
+      "type": "fragment",
+      "title": "5 — A barata no guarda-roupa",
+      "pdfStartPage": 35,
+      "pdfEndPage": 37,
+      "opening": "antes de entender, meu coração embranqueceu",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Ao abrir o guarda-roupa, G.H. vê uma barata velha. Relembra a antiguidade das baratas e a pobreza da infância. Tenta sair, tropeça e fica encurralada entre a cama e o armário.",
+        "observe": [
+          "A barata é imediatamente associada ao tempo pré-histórico e à resistência da vida.",
+          "A memória da infância pobre (percevejos, goteiras) contradiz a vida 'em semiluxo' da narradora."
+        ]
+      }
+    },
+    {
+      "id": "secao-06",
+      "order": 6,
+      "type": "fragment",
+      "title": "6 — O golpe",
+      "pdfStartPage": 38,
+      "pdfEndPage": 40,
+      "opening": "então que a barata começou a emergir do fundo",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Tomada de um prazer de matar que nunca sentira, G.H. fecha a porta do armário sobre a barata. O golpe não a mata: a barata fica presa pela cintura, viva, e G.H. vê sua 'cara'.",
+        "observe": [
+          "O ato de violência é narrado como descoberta de um instinto e de uma potência.",
+          "O momento decisivo é ver: depois de ver o rosto da barata, ela não consegue dar o segundo golpe."
+        ]
+      }
+    },
+    {
+      "id": "secao-07",
+      "order": 7,
+      "type": "fragment",
+      "title": "7 — A vida me olhando",
+      "pdfStartPage": 41,
+      "pdfEndPage": 43,
+      "opening": "Perdoa eu te dar isto, mão que seguro",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Diante da barata, G.H. sente que vê 'a vida' e reconhece nela a raiz da própria identidade. Começa a abandonar a esperança e a entrar no quarto como num deserto.",
+        "observe": [
+          "A repulsa vira identificação: ela passa 'para o lado' da barata.",
+          "O quarto passa a chamá-la de 'ela': a identidade pessoal se apaga."
+        ]
+      }
+    },
+    {
+      "id": "secao-08",
+      "order": 8,
+      "type": "fragment",
+      "title": "8 — A massa branca",
+      "pdfStartPage": 44,
+      "pdfEndPage": 46,
+      "opening": "Foi então – foi então que lentamente como de uma bisnaga",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A massa branca começa a sair da barata. G.H. contém o grito, sente-se fora da civilização e recua até caber no desenho da mulher na parede.",
+        "observe": [
+          "O grito reprimido liga a experiência ao controle social sobre a mulher que 'sai dos regulamentos'.",
+          "O desenho na parede passa a ser lido como sua própria imagem pré-histórica."
+        ]
+      }
+    },
+    {
+      "id": "secao-09",
+      "order": 9,
+      "type": "fragment",
+      "title": "9 — O desmoronamento",
+      "pdfStartPage": 47,
+      "pdfEndPage": 49,
+      "opening": "Vê, meu amor, vê como por medo já estou organizando",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. imagina a vida antiga como um edifício que desaba e conclui que o mundo não é humano. Compara-se a uma mulher que larga o bordado e começa a engatinhar.",
+        "observe": [
+          "A metáfora arquitetônica liga a cobertura onde vive à 'superestrutura' de sua identidade.",
+          "Loucura é definida como algo que 'volta', não que chega."
+        ]
+      }
+    },
+    {
+      "id": "secao-10",
+      "order": 10,
+      "type": "fragment",
+      "title": "10 — O imundo",
+      "pdfStartPage": 50,
+      "pdfEndPage": 52,
+      "opening": "tocar no que é imundo. E tão imundo estava eu",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. relê as proibições bíblicas dos animais imundos e sente o pedido de socorro como último apego à civilização. Senta-se na cama diante da barata.",
+        "observe": [
+          "A intertextualidade com o Levítico aparece citada entre aspas.",
+          "A alegria 'sem esperança' é o que mais assusta a narradora."
+        ]
+      }
+    },
+    {
+      "id": "secao-11",
+      "order": 11,
+      "type": "fragment",
+      "title": "11 — Os olhos da barata",
+      "pdfStartPage": 53,
+      "pdfEndPage": 54,
+      "opening": "de novo, mais um milímetro grosso de matéria branca",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. e a barata se olham; os olhos dela são comparados a ovários. A narradora percebe que, pela primeira vez, a vida lhe acontece de dia, no 'já'.",
+        "observe": [
+          "A comparação com ovários introduz o tema da fertilidade e da maternidade negada.",
+          "O tempo presente ('o já') passa a ser o centro da experiência."
+        ]
+      }
+    },
+    {
+      "id": "secao-12",
+      "order": 12,
+      "type": "fragment",
+      "title": "12 — Onze horas no Brasil",
+      "pdfStartPage": 55,
+      "pdfEndPage": 57,
+      "opening": "meu amor, sucumbi. E tornou-se um agora. Era finalmente agora",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. sucumbe ao presente: 'São onze horas da manhã no Brasil.' Entra 'no núcleo' e recusa a transcendência; lembra-se de um homem que amou e do sal das lágrimas dele.",
+        "observe": [
+          "A frase sobre as onze horas é célebre pela concretude do agora.",
+          "O 'oratório' sem palavras e a recusa de transcender preparam o tema do neutro."
+        ]
+      }
+    },
+    {
+      "id": "secao-13",
+      "order": 13,
+      "type": "fragment",
+      "title": "13 — O neutro e o insosso",
+      "pdfStartPage": 58,
+      "pdfEndPage": 60,
+      "opening": "o que eu estava vendo era ainda anterior ao humano",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Os olhos da barata não têm sal: são insossos. G.H. chama esse sem-gosto de 'neutro' e se desprende da moralidade, recusando-se a 'fazer' algo pela barata.",
+        "observe": [
+          "A oposição entre sal (sentimento, palavra) e insosso (a coisa em si) organiza o capítulo.",
+          "A crítica da moral como 'sentir o que se deveria sentir' é central para prova."
+        ]
+      }
+    },
+    {
+      "id": "secao-14",
+      "order": 14,
+      "type": "fragment",
+      "title": "14 — A gravidez e o aborto",
+      "pdfStartPage": 61,
+      "pdfEndPage": 63,
+      "opening": "Através de um dia eu ter beijado o resíduo insípido",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "O quarto torna-se familiar. G.H. lembra a gravidez e o aborto que fez, caminhando pelas ruas 'resolvendo o resolvido'. Chama pela mãe e sente que quebrou um invólucro.",
+        "observe": [
+          "A memória do aborto é narrada como conhecimento da 'vida neutra' dentro do corpo.",
+          "As invocações à mãe parodiam a Ave-Maria ('bendita sois entre as baratas')."
+        ]
+      }
+    },
+    {
+      "id": "secao-15",
+      "order": 15,
+      "type": "fragment",
+      "title": "15 — Dentro do quarto",
+      "pdfStartPage": 64,
+      "pdfEndPage": 65,
+      "opening": "mesmo o medo mais, nem mesmo o susto mais",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Já sem pedir socorro, G.H. tem medo da própria falta de medo. Reflete sobre a lei que ignora e sobre o pecado original, e admite medo da 'face de Deus'.",
+        "observe": [
+          "A desculpa 'sou mulher' é recusada: 'não é só mulher que tem medo de ver'.",
+          "Ela suspeita ter inventado tudo — inclusive a vida anterior."
+        ]
+      }
+    },
+    {
+      "id": "secao-16",
+      "order": 16,
+      "type": "fragment",
+      "title": "16 — O inexpressivo",
+      "pdfStartPage": 66,
+      "pdfEndPage": 67,
+      "opening": "Vou agora te contar como entrei no inexpressivo",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. fala do que há 'entre o número um e o número dois', o silêncio que é a respiração do mundo. Diz que o inexpressivo é demoníaco para quem não tem esperança.",
+        "observe": [
+          "O inexpressivo é o tema que liga a experiência às fotografias do início.",
+          "A narradora pede ao interlocutor só companhia, não compreensão."
+        ]
+      }
+    },
+    {
+      "id": "secao-17",
+      "order": 17,
+      "type": "fragment",
+      "title": "17 — O gosto do nada",
+      "pdfStartPage": 68,
+      "pdfEndPage": 69,
+      "opening": "pré-humana divina é de uma atualidade que queima",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A experiência vira 'alegria de sabá': gozar a coisa de que as coisas são feitas. G.H. sente o 'gosto do nada', adormece no colchão e, ao acordar, vai à janela.",
+        "observe": [
+          "A imagem do sabá liga a experiência à magia negra e ao proibido.",
+          "O 'gosto do nada' é comparado ao maná e ao leite materno."
+        ]
+      }
+    },
+    {
+      "id": "secao-18",
+      "order": 18,
+      "type": "fragment",
+      "title": "18 — A cidade como deserto",
+      "pdfStartPage": 70,
+      "pdfEndPage": 73,
+      "opening": "Daquele quarto escavado na rocha de um edifício",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Da janela, G.H. vê o Rio de Janeiro como paisagem arqueológica — Ásia Menor, deserto, favela, 'seiscentos mil mendigos' — e imagina escavações. Conclui que o erro é seu caminho para a verdade.",
+        "observe": [
+          "A cidade moderna é vista como ruína futura: tempo histórico e tempo geológico se misturam.",
+          "A favela e os mendigos aparecem no panorama, mas como parte de uma visão distanciada."
+        ]
+      }
+    },
+    {
+      "id": "secao-19",
+      "order": 19,
+      "type": "fragment",
+      "title": "19 — O amor de duas baratas",
+      "pdfStartPage": 74,
+      "pdfEndPage": 76,
+      "opening": "Não, em tudo isso eu não estivera enlouquecida",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Voltando à barata, G.H. imagina o amor de duas baratas no deserto da Líbia e compara-o ao amor humano, noturno e úmido. Diz que foi desenhada na parede por 'uma negra africana'.",
+        "observe": [
+          "Ela reconhece que a barata é comível, como um crustáceo — antecipação do ato final.",
+          "O mural de Janair é reinterpretado como origem da narradora."
+        ]
+      }
+    },
+    {
+      "id": "secao-20",
+      "order": 20,
+      "type": "fragment",
+      "title": "20 — Os intervalos do amor",
+      "pdfStartPage": 77,
+      "pdfEndPage": 78,
+      "opening": "Vou te dizer o que eu nunca te disse antes",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. declara amor ao homem do passado e diz que o amor existia sobretudo nos 'intervalos' em que nada acontecia. Conclui: comeu a vida e foi comida por ela.",
+        "observe": [
+          "O 'neutro do amor' reinterpreta a relação passada.",
+          "A frase 'meu reino é deste mundo' inverte a palavra de Cristo."
+        ]
+      }
+    },
+    {
+      "id": "secao-21",
+      "order": 21,
+      "type": "fragment",
+      "title": "21 — O inferno sem punição",
+      "pdfStartPage": 79,
+      "pdfEndPage": 81,
+      "opening": "O inferno é a boca que morde",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. define o inferno como gozo da dor sem punição. Deseja ter tido filhos e percebe a indiferença do Deus. Solta a mão imaginária para seguir sozinha.",
+        "observe": [
+          "O inferno é descrito como alegria, não como tortura.",
+          "A falta de filhos volta como 'vício negado'."
+        ]
+      }
+    },
+    {
+      "id": "secao-22",
+      "order": 22,
+      "type": "fragment",
+      "title": "22 — O cavalo do sabá",
+      "pdfStartPage": 82,
+      "pdfEndPage": 83,
+      "opening": "Eu estava em pleno seio de uma indiferença",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. entende que Deus a queria como igual, mas ela caiu na tentação de ver e de sentir prazer. A tentação é narrada como cavalgada noturna num sabá.",
+        "observe": [
+          "A sequência do ginete e dos tambores é um dos trechos mais líricos do livro.",
+          "Comer 'direto na fonte' é a tentação; o castigo é não parar de comer."
+        ]
+      }
+    },
+    {
+      "id": "secao-23",
+      "order": 23,
+      "type": "fragment",
+      "title": "23 — O soluço e o amor neutro",
+      "pdfStartPage": 84,
+      "pdfEndPage": 86,
+      "opening": "Não seria esta, embora muito mais do que esta, a tentação",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. fala de uma santidade leiga. Do gozo nasce um soluço; ela oferece o inferno a Deus e o deserto vira esboço de paraíso. Entende o que viveu como 'amor neutro'.",
+        "observe": [
+          "A virada do inferno para o paraíso acontece no mesmo lugar: 'aquele mesmo deserto'.",
+          "A frase 'sexo é o susto de uma criança' desloca o pecado para o amor."
+        ]
+      }
+    },
+    {
+      "id": "secao-24",
+      "order": 24,
+      "type": "fragment",
+      "title": "24 — O pedaço de coisa",
+      "pdfStartPage": 87,
+      "pdfEndPage": 89,
+      "opening": "Não. Eu não te contei tudo",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "O tesouro buscado é 'um pedaço de coisa': ferro, vidro, cal, barata. G.H. encontra não a resposta, mas o próprio enigma, e se vê como germe.",
+        "observe": [
+          "A busca mística termina num objeto banal — e essa banalidade é o segredo.",
+          "A explicação de um enigma é 'a repetição do enigma'."
+        ]
+      }
+    },
+    {
+      "id": "secao-25",
+      "order": 25,
+      "type": "fragment",
+      "title": "25 — O tédio e o atonal",
+      "pdfStartPage": 90,
+      "pdfEndPage": 91,
+      "opening": "Ah, então era por isso que eu sempre havia tido",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "O tédio é reinterpretado como contato com o atonal, o inexpressivo. A arte boa toca o inexpressivo; G.H. confessa saudade do inferno.",
+        "observe": [
+          "A reflexão estética (arte expressiva x inexpressiva) é útil para relacionar o livro ao modernismo.",
+          "O paraíso 'não tem gosto humano'."
+        ]
+      }
+    },
+    {
+      "id": "secao-26",
+      "order": 26,
+      "type": "fragment",
+      "title": "26 — Estado de graça",
+      "pdfStartPage": 92,
+      "pdfEndPage": 94,
+      "opening": "Dá-me de novo a tua mão",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A verdade não pode ser má; todos estão em estado de graça. G.H. conclui que a esperança era adiamento e que 'o Deus é hoje'.",
+        "observe": [
+          "A crítica à esperança como adiamento do presente é tese central.",
+          "'Seu reino já começou' reinterpreta a promessa religiosa como presente."
+        ]
+      }
+    },
+    {
+      "id": "secao-27",
+      "order": 27,
+      "type": "fragment",
+      "title": "27 — A carência",
+      "pdfStartPage": 95,
+      "pdfEndPage": 96,
+      "opening": "Não é para nós que o leite da vaca brota",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. propõe uma 'intertroca' com Deus: só temos dele o que nossa carência pede. Carência e necessidade passam a ser a medida de cada um.",
+        "observe": [
+          "O texto usa parênteses para comentários quase teológicos.",
+          "'Bem-aventurados os pobres de espírito' é reescrito como elogio da carência."
+        ]
+      }
+    },
+    {
+      "id": "secao-28",
+      "order": 28,
+      "type": "fragment",
+      "title": "28 — A delicadeza das coisas",
+      "pdfStartPage": 97,
+      "pdfEndPage": 99,
+      "opening": "Que é um gosto quase nulo",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "As coisas são delicadas demais para a 'pata humana'. G.H. lembra o homem amado consertando uma tomada e um feriado de tédio feliz; despede-se da beleza.",
+        "observe": [
+          "A cena do feriado é uma das poucas memórias concretas da relação amorosa.",
+          "A 'moral que prescinde da beleza' é formulada aqui."
+        ]
+      }
+    },
+    {
+      "id": "secao-29",
+      "order": 29,
+      "type": "fragment",
+      "title": "29 — Deus não é bonito",
+      "pdfStartPage": 100,
+      "pdfEndPage": 102,
+      "opening": "Aguenta eu te dizer que Deus não é bonito",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Deus não é bonito porque não é conclusão. G.H. admite que vivia num sistema e anuncia, entre parênteses, que à noite vai jantar e dançar no Top-Bambino.",
+        "observe": [
+          "O parêntese sobre o Top-Bambino traz de volta, com ironia, a vida social da narradora.",
+          "'Vida e amores de G.H.' resume a vida anterior como enredo convencional."
+        ]
+      }
+    },
+    {
+      "id": "secao-30",
+      "order": 30,
+      "type": "fragment",
+      "title": "30 — Comer a barata",
+      "pdfStartPage": 103,
+      "pdfEndPage": 105,
+      "opening": "Não contei que, ali sentada e imóvel",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. conclui que a redenção estaria na própria coisa: botar na boca a massa branca. Vomita, avança e, numa vertigem, come. Depois cospe com fúria.",
+        "observe": [
+          "O ato é narrado em elipse: ela só sabe que 'alguma coisa se tinha feito'.",
+          "O vômito anterior a deixa 'simples como uma menina'."
+        ]
+      }
+    },
+    {
+      "id": "secao-31",
+      "order": 31,
+      "type": "fragment",
+      "title": "31 — O ato que não era preciso",
+      "pdfStartPage": 106,
+      "pdfEndPage": 107,
+      "opening": "Mas beijar um leproso não é bondade sequer",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. reflete sobre o santo e conclui que não precisava ter comido: queria um 'máximo'. A lei é que a barata seja amada por outra barata, e a mulher, pelo homem. Agora ela é quem dá a mão.",
+        "observe": [
+          "A crítica ao 'acréscimo' alcança o próprio gesto heroico.",
+          "A inversão da mão marca o fim do pedido de socorro."
+        ]
+      }
+    },
+    {
+      "id": "secao-32",
+      "order": 32,
+      "type": "fragment",
+      "title": "32 — Paixão e despersonalização",
+      "pdfStartPage": 108,
+      "pdfEndPage": 111,
+      "opening": "O que estou sentindo agora é uma alegria",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Falta só 'o golpe da graça — que se chama paixão'. G.H. defende a despersonalização e a 'deseroização': a linguagem fracassa, e é no fracasso que se chega ao indizível.",
+        "observe": [
+          "A condição humana é comparada à paixão de Cristo, o que explica o título.",
+          "A reflexão sobre linguagem é essencial para questões discursivas."
+        ]
+      }
+    },
+    {
+      "id": "secao-33",
+      "order": 33,
+      "type": "fragment",
+      "title": "33 — Desistência e confiança",
+      "pdfStartPage": 112,
+      "pdfEndPage": 113,
+      "opening": "Desisto, e terei sido a pessoa humana",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "G.H. desiste, sente confiança e um 'batismo' pelo mundo. Realizou o ato ínfimo, não o máximo. Termina com 'A vida se me é' e 'E então adoro.'",
+        "observe": [
+          "O final é uma adoração sem objeto definido.",
+          "Os travessões finais espelham os do início: o livro se fecha como abriu."
+        ]
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**A Paixão segundo G.H.** (1964) é um romance de Clarice Lispector (1920-1977). Quase nada acontece no enredo: numa manhã no Rio de Janeiro, G.H., escultora amadora que mora numa cobertura, decide arrumar o quarto da empregada que se despediu, Janair. Lá encontra um desenho a carvão na parede e uma barata no guarda-roupa. Esmaga a barata pela metade, olha para ela durante horas e, no fim, põe na boca a massa branca que sai do inseto.\n\n**Como ler:** o livro é um monólogo em primeira pessoa, narrado no dia seguinte, dirigido a um 'tu' cuja mão a narradora imagina segurar. São 33 seções; a última frase de cada uma é repetida no início da seguinte, e o livro abre e fecha com travessões. Não procure ação: acompanhe a transformação da narradora — da identidade organizada à 'despersonalização'.\n\n**Palavras-chave:** terceira perna, aspas, neutro, inexpressivo, insosso, esperança, carência, acréscimo, deseroização, desistência.\n\n**Atenção:** Janair e o mural são decisivos. A experiência metafísica começa num quarto de empregada que a patroa nunca tinha olhado."
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-terceira-perna",
+        "ev-valises",
+        "ev-aspas",
+        "ev-mural-escrita",
+        "ev-invisivel",
+        "ev-coracao-embranqueceu",
+        "ev-vida-me-olhando",
+        "ev-mundo-nao-humano",
+        "ev-imundo",
+        "ev-onze-horas",
+        "ev-neutro",
+        "ev-aborto",
+        "ev-pedaco-de-coisa",
+        "ev-deus-e-hoje",
+        "ev-antipecado",
+        "ev-paixao-de-cristo",
+        "ev-desistencia",
+        "ev-vida-se-me-e"
+      ],
+      "sourceRefs": [],
+      "markdown": "## Enredo mínimo, monólogo máximo\n\nA ação cabe numa manhã: entrar no quarto, ver a barata, fechar a porta do armário, olhar, comer. O resto é reflexão. O romance radicaliza o fluxo de consciência e a narrativa introspectiva de Clarice; por isso é lido como romance de experiência interior, próximo do relato místico.\n\n## Identidade organizada e sua perda\n\nAntes, G.H. era 'G.H. até nas valises': uma imagem para os outros, vivida 'entre aspas'. A experiência destrói essa construção — a 'terceira perna'. A narradora tenta não substituí-la por outra verdade pronta e chega à 'despersonalização' e à 'deseroização' (seções 32 e 33).\n\n## Janair: a outra que a patroa não via\n\nO quarto de serviço, limpo e seco, e o mural do homem, da mulher e do cão funcionam como julgamento silencioso. G.H. descobre que nunca enxergou a empregada, 'uma invisível'. A leitura social do livro parte daqui: a revelação metafísica só acontece quando a patroa entra no espaço da empregada negra.\n\n## A barata e o neutro\n\nA barata é vida anterior ao humano. Seus olhos 'insossos' levam G.H. ao conceito de 'neutro': a vida sem sal, sem sentimento, sem palavra. Daí a crítica à esperança como adiamento do presente ('o Deus é hoje') e à beleza como 'acréscimo'.\n\n## Linguagem religiosa invertida\n\nO livro dialoga com a Bíblia (animais imundos, Apocalipse, Ave-Maria parodiada, a paixão de Cristo). Comer a massa da barata é chamado de 'antipecado'. O título une essas camadas: 'paixão' é sofrimento, experiência amorosa e via-crúcis. Mas a própria narradora relativiza o clímax: não precisava ter comido, pois buscava um 'máximo'.\n\n## Linguagem que fracassa\n\nA narradora repete que viver 'não é relatável'. A forma do livro — seções encadeadas, frases que se corrigem, sintaxe torcida ('a vida se me é') — encena esse fracasso. O indizível só chega 'através do fracasso de minha linguagem'.\n\n## Pontos de prova\n\n- Explicar o foco narrativo e o interlocutor ('tu', a mão inventada).\n- Relacionar a experiência com Janair à questão de classe e raça.\n- Interpretar o neutro, o inexpressivo e a crítica à esperança.\n- Analisar a intertextualidade bíblica e o sentido do título.\n- Comentar a forma: encadeamento das seções e travessões."
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Edição usada:** Clarice Lispector, *A Paixão segundo G.H.* Rio de Janeiro: Rocco, edição digital de outubro de 2020. As páginas citadas são as do PDF usado para este dossiê, com 122 páginas; o romance vai da p. 13 à p. 113.\n\n**Procedência do arquivo:** o PDF disponível no Drive é uma conversão de ePub feita por terceiros, não um arquivo da editora. Antes de publicar, convém conferir as citações num exemplar da Rocco: a paginação deste dossiê vale só para esse PDF.\n\n**Direitos:** obra protegida por direito autoral (© Paulo Gurgel Valente). Este dossiê traz só análise original e citações curtas, com página. O posfácio de Luiz Fernando Carvalho, presente na edição, não foi usado.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica:** nenhuma fonte crítica foi lida para este dossiê. A leitura é feita diretamente do texto e precisa de revisão editorial antes de ser publicada."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-terceira-perna",
+      "unitId": "secao-01",
+      "location": "seção 1, p. 13",
+      "quote": "Essa terceira perna eu perdi. E voltei a ser uma pessoa que nunca fui.",
+      "context": "Abertura: a narradora tenta entender o que viveu na véspera.",
+      "formalDevice": "Metáfora da terceira perna; paradoxo ('voltei a ser uma pessoa que nunca fui').",
+      "effect": "Apresenta a experiência como perda de uma estabilidade inútil, não como ganho.",
+      "wholeRelation": "Toda a narrativa é o esforço de não criar uma nova 'terceira perna' — uma verdade pronta.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-valises",
+      "unitId": "secao-02",
+      "location": "seção 2, p. 21",
+      "quote": "É suficiente ver no couro de minhas valises as iniciais G.H., e eis-me.",
+      "context": "G.H. descreve a identidade que tinha antes da experiência.",
+      "formalDevice": "Sinédoque: as iniciais na bagagem resumem a pessoa.",
+      "effect": "Mostra uma identidade feita de sinais externos e reconhecimento social.",
+      "wholeRelation": "No quarto de Janair, as malas aparecem com um 'G.H.' quase apagado sob a poeira.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-aspas",
+      "unitId": "secao-02",
+      "location": "seção 2, p. 24",
+      "quote": "quanto a mim mesma, sempre conservei uma aspa à esquerda e outra à direita de mim.",
+      "context": "G.H. fala da casa e de si como citações do mundo.",
+      "formalDevice": "Metáfora tipográfica.",
+      "effect": "Revela uma vida vivida à distância, como citação de si mesma.",
+      "wholeRelation": "O quarto da empregada é descrito como 'violentação das minhas aspas'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-mural-escrita",
+      "unitId": "secao-04",
+      "location": "seção 4, p. 30",
+      "quote": "O desenho não era um ornamento: era uma escrita.",
+      "context": "G.H. encontra na parede o desenho a carvão de Janair.",
+      "formalDevice": "Antítese entre ornamento e escrita.",
+      "effect": "Dá ao desenho da empregada o estatuto de mensagem e julgamento.",
+      "wholeRelation": "O mural volta quando G.H. se reconhece na mulher desenhada e quando diz ter sido desenhada por 'uma negra africana'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-invisivel",
+      "unitId": "secao-04",
+      "location": "seção 4, p. 31",
+      "quote": "arrepiei-me ao descobrir que até agora eu não havia percebido que aquela mulher era uma invisível.",
+      "context": "G.H. tenta lembrar o rosto de Janair.",
+      "formalDevice": "Autorrevelação em discurso reflexivo.",
+      "effect": "Expõe a invisibilidade social da empregada doméstica negra.",
+      "wholeRelation": "Liga a experiência metafísica a uma relação concreta de classe e raça — ponto frequente em prova.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-coracao-embranqueceu",
+      "unitId": "secao-04",
+      "location": "seção 4, p. 34",
+      "quote": "Então, antes de entender, meu coração embranqueceu como cabelos embranquecem.",
+      "context": "Primeiro contato com a barata no guarda-roupa.",
+      "formalDevice": "Comparação inesperada entre coração e cabelos.",
+      "effect": "Registra o susto como acontecimento físico, antes do pensamento.",
+      "wholeRelation": "A frase fecha um trecho e abre o seguinte: o livro encadeia as seções repetindo a última linha.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-vida-me-olhando",
+      "unitId": "secao-07",
+      "location": "seção 7, p. 41",
+      "quote": "o que eu via era a vida me olhando.",
+      "context": "G.H. olha a barata presa pela porta do armário.",
+      "formalDevice": "Inversão do olhar: o objeto passa a olhar o sujeito.",
+      "effect": "A barata deixa de ser inseto e vira a própria vida em estado bruto.",
+      "wholeRelation": "Organiza a identificação entre G.H. e a barata que atravessa o livro.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-mundo-nao-humano",
+      "unitId": "secao-09",
+      "location": "seção 9, p. 48",
+      "quote": "a pior descoberta foi a de que o mundo não é humano, e de que não somos humanos.",
+      "context": "G.H. reflete sobre o desmoronamento de sua 'civilização'.",
+      "formalDevice": "Afirmação paradoxal em paralelismo.",
+      "effect": "Formula a tese do inumano como fundo da vida.",
+      "wholeRelation": "Prepara o elogio final do 'não humano', que não é o 'desumano'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-imundo",
+      "unitId": "secao-09",
+      "location": "seção 9, p. 49",
+      "quote": "Eu fizera o ato proibido de tocar no que é imundo.",
+      "context": "G.H. lembra as proibições bíblicas.",
+      "formalDevice": "Intertextualidade com o Levítico.",
+      "effect": "Dá dimensão religiosa à experiência.",
+      "wholeRelation": "Antecipa o ato final de comer a massa da barata, chamado de 'antipecado'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-onze-horas",
+      "unitId": "secao-12",
+      "location": "seção 12, p. 55",
+      "quote": "São onze horas da manhã no Brasil. É agora.",
+      "context": "G.H. sucumbe ao instante presente.",
+      "formalDevice": "Frase curta, referência concreta de tempo e lugar.",
+      "effect": "Ancora a experiência mística num momento banal e localizado.",
+      "wholeRelation": "O presente sem esperança é o centro da tese do livro.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-neutro",
+      "unitId": "secao-13",
+      "location": "seção 13, p. 58",
+      "quote": "E o neutro era a vida que eu antes chamava de o nada.",
+      "context": "G.H. percebe que os olhos da barata não têm sal.",
+      "formalDevice": "Redefinição de conceito.",
+      "effect": "Nomeia o 'neutro', palavra-chave da obra.",
+      "wholeRelation": "O neutro reaparece no amor, em Deus e no final.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-aborto",
+      "unitId": "secao-14",
+      "location": "seção 14, p. 62",
+      "quote": "e viver, doutor, me era o lado avesso de um crime.",
+      "context": "G.H. lembra as horas que antecederam o aborto.",
+      "formalDevice": "Vocativo a um interlocutor ('doutor') e paradoxo.",
+      "effect": "A memória mais íntima da narradora surge ligada à vida neutra que se move no corpo.",
+      "wholeRelation": "Conecta a experiência com a barata a temas de maternidade e corpo feminino.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-pedaco-de-coisa",
+      "unitId": "secao-24",
+      "location": "seção 24, p. 87",
+      "quote": "e a joia do mundo é um pedaço opaco de coisa.",
+      "context": "G.H. descreve o 'tesouro' encontrado no fim da busca.",
+      "formalDevice": "Antítese entre joia e coisa opaca.",
+      "effect": "Desmonta a expectativa de revelação grandiosa.",
+      "wholeRelation": "Resume a busca: o segredo é a própria matéria.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-deus-e-hoje",
+      "unitId": "secao-26",
+      "location": "seção 26, p. 93",
+      "quote": "Mas o Deus é hoje: seu reino já começou.",
+      "context": "G.H. critica a esperança como adiamento.",
+      "formalDevice": "Reformulação da linguagem religiosa no presente.",
+      "effect": "Transforma a promessa do futuro em exigência do agora.",
+      "wholeRelation": "Sustenta a recusa da esperança e a aceitação da carência.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-antipecado",
+      "unitId": "secao-30",
+      "location": "seção 30, p. 104",
+      "quote": "comer a massa da barata é o antipecado, pecado seria a minha pureza fácil.",
+      "context": "G.H. decide comer a massa branca.",
+      "formalDevice": "Neologismo e inversão de valores.",
+      "effect": "Torna o ato repugnante um gesto de conhecimento.",
+      "wholeRelation": "Depois, ela conclui que o ato era um 'acréscimo' — o livro relativiza o próprio clímax.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-paixao-de-cristo",
+      "unitId": "secao-32",
+      "location": "seção 32, p. 110",
+      "quote": "A condição humana é a paixão de Cristo.",
+      "context": "Reflexão sobre a despersonalização.",
+      "formalDevice": "Sentença definitória; alusão religiosa.",
+      "effect": "Explica o título: a paixão é a condição humana assumida.",
+      "wholeRelation": "Liga a via-crúcis à 'trajetória' da linguagem que fracassa.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-desistencia",
+      "unitId": "secao-32",
+      "location": "seção 32, p. 111",
+      "quote": "A desistência é uma revelação.",
+      "context": "Fecho da reflexão sobre linguagem e fracasso.",
+      "formalDevice": "Frase curta que também abre a seção seguinte.",
+      "effect": "Apresenta a desistência como escolha, não como derrota.",
+      "wholeRelation": "Prepara o final de confiança e adoração.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-vida-se-me-e",
+      "unitId": "secao-33",
+      "location": "seção 33, p. 113",
+      "quote": "A vida se me é, e eu não entendo o que digo. E então adoro.",
+      "context": "Últimas linhas do romance.",
+      "formalDevice": "Construção sintática irregular ('se me é').",
+      "effect": "A língua se dobra para dizer o que não cabe na gramática.",
+      "wholeRelation": "Fecha o livro com adoração sem objeto, seguida de travessões como na abertura.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    }
+  ]
+}

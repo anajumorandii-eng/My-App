@@ -1,0 +1,418 @@
+{
+  "workId": "geografia",
+  "slug": "geografia",
+  "edition": {
+    "label": "Sophia de Mello Breyner Andresen, O Cristo Cigano e Geografia. São Paulo: Companhia das Letras, e-book",
+    "pdfPageCount": 93,
+    "note": "Só Geografia (p. 24-91) é analisado; O Cristo Cigano fica fora da lista de 2027. Obra protegida: só citações curtas e análise original."
+  },
+  "units": [
+    {
+      "id": "parte-1",
+      "order": 1,
+      "type": "part",
+      "title": "I — Ingrina",
+      "pdfStartPage": 24,
+      "pdfEndPage": 29,
+      "opening": "I . ingrina",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Abertura solar, ligada à costa do Algarve: luz, cal, mar e orégão. Os poemas apresentam o mundo como recomeço e a palavra como ato de nomear e criar. 'Mundo nomeado ou descoberta das ilhas' liga o gesto dos navegadores ao do poeta.",
+        "observe": [
+          "A geografia aqui é concreta (Ingrina, a cidade de pedra e cal, a capela no promontório) e ao mesmo tempo mítica.",
+          "Observe o vocabulário recorrente: luz, cal, mar, pedra — ele volta em todo o livro."
+        ]
+      }
+    },
+    {
+      "id": "parte-2",
+      "order": 2,
+      "type": "part",
+      "title": "II — Procelária",
+      "pdfStartPage": 30,
+      "pdfEndPage": 38,
+      "opening": "II . procelária",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A parte política do livro. A procelária, ave que voa na tempestade, é imagem de quem 'vive e canta no mau tempo'. Seguem poemas contra a corrupção da cidade, a pobreza, a guerra aérea e o assassinato de García Lorca.",
+        "observe": [
+          "Escritos sob a ditadura salazarista, os poemas denunciam sem nomear diretamente o regime.",
+          "'Esta gente' opõe o povo humilhado aos predadores (abutre, cobra, porco, milhafre)."
+        ]
+      }
+    },
+    {
+      "id": "parte-3",
+      "order": 3,
+      "type": "part",
+      "title": "III — A noite e a casa",
+      "pdfStartPage": 39,
+      "pdfEndPage": 46,
+      "opening": "III . a noite e a casa",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Poemas breves de interior: a casa à noite, a vela, a música, o silêncio. A atenção concentrada transforma o espaço doméstico em lugar de revelação.",
+        "observe": [
+          "A casa é espaço de escuta e espera, não de refúgio sentimental.",
+          "O silêncio aparece como presença ativa ('navegação antiquíssima e solene')."
+        ]
+      }
+    },
+    {
+      "id": "parte-4",
+      "order": 4,
+      "type": "part",
+      "title": "IV — Dual",
+      "pdfStartPage": 47,
+      "pdfEndPage": 66,
+      "opening": "IV . dual",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A parte mais longa, sobre amor, ausência, tempo e memória. Alterna poemas de perda ('De um amor morto', 'O vazio desenhava desde sempre') com imagens de deserto, casa, espelho e quarto.",
+        "observe": [
+          "A ausência é tratada como forma ('a ardente perfeição da tua ausência').",
+          "O título 'Dual' aponta para a divisão interior (eu e o cavalo de mim mesma em 'No deserto')."
+        ]
+      }
+    },
+    {
+      "id": "parte-5",
+      "order": 5,
+      "type": "part",
+      "title": "V — Mediterrâneo",
+      "pdfStartPage": 67,
+      "pdfEndPage": 80,
+      "opening": "V. mediterrâneo",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Viagem pela Grécia e pela Itália: Acaia, Corinto, Sunion, Epidauro, Vila Adriana, Pompeia, Ítaca. O mundo grego é a medida da clareza e da justiça, mas o livro registra também o 'crepúsculo dos deuses' e o vazio que separa o homem das coisas.",
+        "observe": [
+          "A Grécia funciona como ideal de luz, nudez e medida — a 'poesia do exterior'.",
+          "'Crepúsculo dos deuses' mostra a perda dessa unidade com o mundo."
+        ]
+      }
+    },
+    {
+      "id": "parte-6",
+      "order": 6,
+      "type": "part",
+      "title": "VI — Brasil ou do outro lado do mar",
+      "pdfStartPage": 81,
+      "pdfEndPage": 85,
+      "opening": "VI . brasil ou do outro lado do mar",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "O Brasil visto de Portugal: o descobrimento, Manuel Bandeira, Brasília e o português falado no Brasil. A arquitetura de Brasília é lida pela chave grega da ordem e da clareza.",
+        "observe": [
+          "'Descobrimento' adota a perspectiva dos navegadores; vale ler criticamente a imagem dos indígenas 'recém-criados'.",
+          "A homenagem a Bandeira e a Helena Lanari mostra a língua portuguesa como espaço comum dos dois lados do mar."
+        ]
+      }
+    },
+    {
+      "id": "parte-7",
+      "order": 7,
+      "type": "part",
+      "title": "VII — No poema",
+      "pdfStartPage": 86,
+      "pdfEndPage": 91,
+      "opening": "VII . no poema",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Poemas sobre a própria poesia: a 'poesia de inverno' de um tempo sem deuses, a escrita, a transparência e uma poética final em que o mundo é a biografia da poeta.",
+        "observe": [
+          "'Poesia de inverno' critica uma poesia envergonhada das palavras e da beleza.",
+          "O último 'Poema' resume a poética do livro: atenção voltada para fora, Deus buscado no real."
+        ]
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Geografia** (1967) é um livro de poemas da portuguesa Sophia de Mello Breyner Andresen (1919-2004), Prêmio Camões em 1999. Está dividido em sete partes: Ingrina, Procelária, A noite e a casa, Dual, Mediterrâneo, Brasil ou do outro lado do mar, e No poema.\n\n**Escopo da Fuvest:** só *Geografia*. A edição da Companhia das Letras traz no mesmo volume *O Cristo Cigano* (1961), que **não** faz parte da lista e fica fora deste dossiê.\n\n**Como ler:** siga o título. Os poemas mapeiam lugares (o Algarve, a Grécia, o Brasil), mas também uma geografia interior (a casa, a noite, o amor perdido) e uma geografia política (a cidade corrompida, o povo humilhado, Lorca assassinado). O mar, a luz, a cal e a pedra atravessam o livro inteiro.\n\n**Língua:** o texto segue a ortografia de Portugal (reflectido, facto, nocturno). As citações deste dossiê mantêm essa grafia."
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-recomeco",
+        "ev-mundo-nomeado",
+        "ev-procelaria",
+        "ev-cidade-dos-outros",
+        "ev-esta-gente",
+        "ev-lorca",
+        "ev-escuto",
+        "ev-amor-morto",
+        "ev-ausencia",
+        "ev-epidauro",
+        "ev-crepusculo",
+        "ev-descobrimento",
+        "ev-brasilia",
+        "ev-portugues-do-brasil",
+        "ev-rio-sagrado",
+        "ev-biografia"
+      ],
+      "sourceRefs": [],
+      "markdown": "## Poesia do exterior\n\nSophia defende uma poesia voltada para fora: 'O meu interior é uma atenção voltada para fora', diz o último poema. O mundo concreto — mar, sol, vento, pedra — é a matéria e a identidade da poeta. Por isso as imagens são nítidas e materiais, e o eu lírico raramente fala de sentimentos em abstrato.\n\n## Nomear é criar\n\n'Mundo nomeado ou descoberta das ilhas' iguala o gesto dos navegadores, que dão nome à costa, ao do poeta. A palavra justa faz as coisas 'responderem'. No fim do livro, 'Poesia de inverno' denuncia o contrário: um tempo sem deuses em que as palavras ficam 'envergonhadas' e o rio, sem sagrado, 'nem sequer é rio'.\n\n## A parte política\n\nEscrito durante a ditadura salazarista, o livro tem uma parte de denúncia: a procelária que canta 'no mau tempo', a cidade em que 'o mal procura o mal', o povo de rosto 'desenhado por paciência e fome', a guerra aérea e o túmulo de Lorca. A resistência aparece por imagens, não por panfleto.\n\n## A Grécia como medida\n\nEm 'Mediterrâneo', a Grécia é o lugar da luz, da nudez e da justiça: 'o país do exterior'. Mas a parte também narra o 'crepúsculo dos deuses', quando 'se abriu o vazio que nos separa das coisas'. O ideal clássico é ao mesmo tempo modelo e perda.\n\n## Brasil\n\nA parte VI olha o Brasil de Portugal: o descobrimento (pela perspectiva dos navegadores, o que pede leitura crítica), a memória de Manuel Bandeira, Brasília como cidade grega e 'pitagórica', e o português do Brasil, em que 'as palavras recuperam sua substância total'.\n\n## Ausência e tempo\n\nEm 'Dual', a ausência ganha forma: 'a ardente perfeição da tua ausência'. O amor morto é 'apenas um facto que a eternidade ignora'. A casa, o espelho e a noite são espaços de espera e de memória.\n\n## Pontos de prova\n\n- Explicar o título e a relação entre espaço exterior e interior.\n- Analisar a dimensão política sob o salazarismo.\n- Interpretar a presença da Grécia e do mar.\n- Comparar a visão do Brasil com a tradição literária brasileira.\n- Comentar a ortografia europeia e a variação linguística."
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Edição usada:** Sophia de Mello Breyner Andresen, *Geografia*, no volume *O Cristo Cigano e Geografia*. São Paulo: Companhia das Letras, e-book, com texto estabelecido a partir da *Obra poética* (Assírio & Alvim, 2015). As páginas citadas são as do PDF usado, com 93 páginas; *Geografia* vai da p. 24 à p. 91.\n\n**Fora do escopo:** *O Cristo Cigano* (p. 9-22 do mesmo PDF) não integra a lista da Fuvest para 2027 e não é analisado aqui.\n\n**Procedência do arquivo:** o PDF do Drive é uma cópia distribuída pela equipe eLivros, não um arquivo da editora. Antes de publicar, convém conferir as citações num exemplar da Companhia das Letras.\n\n**Direitos:** obra protegida por direito autoral (© herdeiros de Sophia de Mello Breyner Andresen). Este dossiê traz só análise original e citações curtas, com página.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027.\n\n**Crítica:** nenhuma fonte crítica foi lida para este dossiê. A leitura é feita diretamente do texto e precisa de revisão editorial antes de ser publicada."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-recomeco",
+      "unitId": "parte-1",
+      "location": "“Ingrina”, parte I, p. 25",
+      "quote": "E sobre a areia sobre a cal e sobre a pedra escrevo: nesta manhã eu recomeço o mundo.",
+      "context": "Poema em prosa que abre o livro.",
+      "formalDevice": "Enumeração de matérias (areia, cal, pedra) e verbo no presente.",
+      "effect": "Escrever é apresentado como gesto de recomeçar o mundo.",
+      "wholeRelation": "Define o tom inaugural e solar do livro, que será posto à prova nas partes políticas e de perda.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-mundo-nomeado",
+      "unitId": "parte-1",
+      "location": "“Mundo nomeado ou descoberta das ilhas”, parte I, p. 28",
+      "quote": "E as coisas mergulhadas no sem-nome Da sua própria ausência regressadas Uma por uma ao seu nome respondiam Como sendo criadas",
+      "context": "Os navegadores dão nome às baías e promontórios.",
+      "formalDevice": "Personificação das coisas que 'respondem' ao nome.",
+      "effect": "Iguala o ato de nomear ao de criar.",
+      "wholeRelation": "A poética do nome volta no fim do livro, em 'Poesia de inverno', quando as palavras perdem sua força.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-procelaria",
+      "unitId": "parte-2",
+      "location": "“Procelária”, parte II, p. 31",
+      "quote": "Mas faz da insegurança sua força E do risco de morrer seu alimento Por isso me parece imagem justa Para quem vive e canta no mau tempo",
+      "context": "A ave que voa na tempestade.",
+      "formalDevice": "Alegoria; o poema explica a própria imagem no fim.",
+      "effect": "A procelária é emblema do poeta que resiste em tempo hostil.",
+      "wholeRelation": "Dá título à parte política e sugere o contexto da ditadura.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-cidade-dos-outros",
+      "unitId": "parte-2",
+      "location": "“Cidade dos outros”, parte II, p. 32",
+      "quote": "O mal procura o mal e ambos se entendem Compram e vendem",
+      "context": "Retrato da desonestidade que 'cobre a cidade'.",
+      "formalDevice": "Paralelismo e verbos do comércio.",
+      "effect": "A corrupção aparece como rede silenciosa de interesses.",
+      "wholeRelation": "Contrasta com a cidade 'de pedra e cal' da parte I.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-esta-gente",
+      "unitId": "parte-2",
+      "location": "“Esta gente”, parte II, p. 34",
+      "quote": "É a gente em quem Um país ocupado Escreve o seu nome",
+      "context": "O povo de rosto 'desenhado por paciência e fome'.",
+      "formalDevice": "Metáfora do país 'ocupado' que escreve no corpo do povo.",
+      "effect": "Denuncia a opressão e liga o canto à luta.",
+      "wholeRelation": "Retoma o tema da escrita e do nome em chave política.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-lorca",
+      "unitId": "parte-2",
+      "location": "“Túmulo de Lorca”, parte II, p. 37",
+      "quote": "Em ti choramos os outros mortos todos Os que foram fuzilados em vigílias sem data",
+      "context": "Homenagem a Federico García Lorca, poeta assassinado na Guerra Civil Espanhola.",
+      "formalDevice": "Apóstrofe ao poeta morto; ampliação para todos os fuzilados.",
+      "effect": "A morte de Lorca vira símbolo das vítimas anônimas das ditaduras.",
+      "wholeRelation": "Liga o livro ao contexto ibérico de repressão.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-escuto",
+      "unitId": "parte-3",
+      "location": "“Escuto”, parte III, p. 41",
+      "quote": "Apenas sei que caminho como quem É olhado amado e conhecido E por isso em cada gesto ponho Solenidade e risco",
+      "context": "A poeta escuta sem saber se ouve silêncio ou deus.",
+      "formalDevice": "Comparação e conclusão ética ('por isso').",
+      "effect": "A dúvida metafísica se resolve numa conduta de atenção.",
+      "wholeRelation": "Antecipa o 'Poema' final, em que Deus é procurado no mundo.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-amor-morto",
+      "unitId": "parte-4",
+      "location": "“De um amor morto”, parte IV, p. 50",
+      "quote": "Pois um amor morto não deixa Em nós seu retrato De infinita demora É apenas um facto Que a eternidade ignora",
+      "context": "Reflexão sobre o fim de um amor.",
+      "formalDevice": "Antítese entre retrato e facto; tom seco.",
+      "effect": "Recusa a idealização da memória amorosa.",
+      "wholeRelation": "Em 'Dual', a ausência é tema central.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-ausencia",
+      "unitId": "parte-4",
+      "location": "“O vazio desenhava desde sempre”, parte IV, p. 52",
+      "quote": "Todas as coisas serviram para nos ensinar A ardente perfeição da tua ausência",
+      "context": "Poema breve sobre o rosto ausente.",
+      "formalDevice": "Oxímoro ('ardente perfeição da ausência').",
+      "effect": "A falta ganha forma e intensidade.",
+      "wholeRelation": "Diálogo com 'Um poeta clássico', que 'fará da ausência uma parte do seu jogo'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-epidauro",
+      "unitId": "parte-5",
+      "location": "“Epidauro”, parte V, p. 72",
+      "quote": "Eis o país do exterior onde cada coisa é: trazida à luz trazida à liberdade da luz trazida ao espanto da luz",
+      "context": "Na Grécia, a poeta encontra o 'país do exterior'.",
+      "formalDevice": "Gradação e repetição de 'trazida à luz'.",
+      "effect": "A Grécia é o lugar onde as coisas se mostram por inteiro.",
+      "wholeRelation": "Opõe a luz grega ao labirinto do Minotauro, imagem do que devora a vida.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-crepusculo",
+      "unitId": "parte-5",
+      "location": "“Crepúsculo dos deuses”, parte V, p. 77",
+      "quote": "Eis que se abriu o vazio que nos separa das coisas",
+      "context": "Fim da idade de ouro grega.",
+      "formalDevice": "Frase-síntese depois da celebração.",
+      "effect": "Registra a perda da unidade entre o homem e o mundo.",
+      "wholeRelation": "Prepara a 'poesia de inverno', 'poesia do tempo sem deuses'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-descobrimento",
+      "unitId": "parte-6",
+      "location": "“Descobrimento”, parte VI, p. 82",
+      "quote": "E um povo De homens recém-criados ainda cor de barro Ainda nus ainda deslumbrados",
+      "context": "Chegada dos navegadores ao Brasil.",
+      "formalDevice": "Imagem de criação adâmica ('cor de barro').",
+      "effect": "Celebra o encontro com olhar maravilhado.",
+      "wholeRelation": "Pede leitura crítica: a perspectiva é a do colonizador, e os indígenas aparecem como natureza recém-criada.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-brasilia",
+      "unitId": "parte-6",
+      "location": "“Brasília”, parte VI, p. 84",
+      "quote": "O Brasil emergiu do barroco e encontrou o seu número",
+      "context": "Homenagem à cidade de Lúcio Costa e Niemeyer.",
+      "formalDevice": "Metáfora matemática ('número'), com eco de Pitágoras.",
+      "effect": "Lê Brasília como ordem clássica.",
+      "wholeRelation": "Liga o Brasil à chave grega da parte V.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-portugues-do-brasil",
+      "unitId": "parte-6",
+      "location": "“Poema de Helena Lanari”, parte VI, p. 85",
+      "quote": "Gosto de ouvir o português do Brasil Onde as palavras recuperam sua substância total",
+      "context": "Elogio da pronúncia brasileira.",
+      "formalDevice": "Declaração direta, seguida de comparações concretas.",
+      "effect": "A língua comum aparece como matéria sensível.",
+      "wholeRelation": "Bom ponto para discutir variação linguística entre Portugal e Brasil.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-rio-sagrado",
+      "unitId": "parte-7",
+      "location": "“Poesia de inverno”, parte VII, p. 88",
+      "quote": "Pois o rio já não é sagrado e por isso nem sequer é rio",
+      "context": "Crítica à poesia de um tempo sem deuses.",
+      "formalDevice": "Raciocínio paradoxal.",
+      "effect": "Sem sagrado, as coisas perdem até o nome.",
+      "wholeRelation": "Retoma, em negativo, 'Mundo nomeado' da parte I.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-biografia",
+      "unitId": "parte-7",
+      "location": "“Poema”, parte VII, p. 91",
+      "quote": "A terra o sol o vento o mar São minha biografia e são meu rosto",
+      "context": "Poema final do livro.",
+      "formalDevice": "Enumeração de elementos naturais como identidade.",
+      "effect": "A identidade da poeta é o mundo exterior.",
+      "wholeRelation": "Síntese da poética: atenção 'voltada para fora'.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    }
+  ]
+}

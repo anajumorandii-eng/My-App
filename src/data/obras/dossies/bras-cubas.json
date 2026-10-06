@@ -1,0 +1,3550 @@
+{
+ "workId": "bras-cubas",
+ "slug": "bras-cubas",
+ "edition": {
+  "label": "Machado de Assis, Memórias póstumas de Brás Cubas. Brasília: Câmara dos Deputados, Edições Câmara, 2018 (Série Prazer de Ler n. 13), PDF da versão EPUB",
+  "pdfPageCount": 134,
+  "note": "Páginas do PDF. Romance em domínio público (1881, segundo a nota da edição, p. 133). Camada textual integral lida; dedicatória, rabiscos de XXVII e epitáfio de CXXV só em imagem. Sem colação com edição crítica nem crítica acadêmica incorporada. Todo o material depende de revisão editorial."
+ },
+ "units": [
+  {
+   "id": "ao-leitor",
+   "order": 1,
+   "type": "part",
+   "title": "Ao leitor",
+   "opening": "Ao leitor Que Stendhal",
+   "pdfStartPage": 8,
+   "pdfEndPage": 8,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Prólogo assinado por Brás Cubas, dentro da ficção: o defunto prevê poucos leitores, filia a forma livre a Sterne e Xavier de Maistre, admite \"rabugens de pessimismo\" e recusa explicar o processo de composição.",
+    "observe": [
+     "Forma: prólogo que declara fugir do prólogo; a obra é dita feita \"com a pena da galhofa e a tinta da melancolia\".",
+     "Função: estabelece o pacto com um leitor provocado e antecipa a mistura de riso e desencanto.",
+     "Voz: é Brás, não Machado, quem assina; não confundir com a Apresentação editorial da p. 6.",
+     "Perguntas de verificação: Quantos leitores ele espera? / Que dupla ferramenta de escrita declara? / Por que evita explicar o método?"
+    ]
+   }
+  },
+  {
+   "id": "cap-i",
+   "order": 2,
+   "type": "chapter",
+   "title": "I — Óbito do autor",
+   "opening": "CAPÍTULO I Óbito do autor",
+   "pdfStartPage": 9,
+   "pdfEndPage": 10,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás escolhe começar pela morte de 1869; revela a fortuna, os onze amigos e o elogio de um beneficiário.",
+    "observe": [
+     "Forma: Inversão entre autor defunto e defunto autor; discurso fúnebre desmentido pelas apólices.",
+     "Função no livro: A abertura instala o narrador que organiza e avalia a própria vida, encerrada em CLX.",
+     "Tensão: Glória versus interesse; morto rico, pouco acompanhado. A fala pública depende de benefícios.",
+     "Perguntas de verificação: Por que começa pelo óbito? / Como as apólices alteram o elogio? / A morte garante sinceridade desinteressada?"
+    ]
+   }
+  },
+  {
+   "id": "cap-ii",
+   "order": 3,
+   "type": "chapter",
+   "title": "II — O emplasto",
+   "opening": "CAPÍTULO II O emplasto",
+   "pdfStartPage": 10,
+   "pdfEndPage": 10,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O emplasto promete aliviar a melancolia, mas o motivo confessado é divulgar o nome de Brás.",
+    "observe": [
+     "Forma: Personificação acrobática da ideia e imagem da medalha com duas faces.",
+     "Função no livro: Expõe o projeto retomado em CLX e a distância entre justificativa pública e desejo particular.",
+     "Tensão: Filantropia versus nomeada; governo, lucro e publicidade sustentam a invenção.",
+     "Perguntas de verificação: Qual é o objetivo declarado do medicamento? / O que faz a medalha de duas faces? / A confissão elimina a vaidade?"
+    ]
+   }
+  },
+  {
+   "id": "cap-iii",
+   "order": 4,
+   "type": "chapter",
+   "title": "III — Genealogia",
+   "opening": "CAPÍTULO III Genealogia",
+   "pdfStartPage": 10,
+   "pdfEndPage": 11,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "A família oculta o tanoeiro Damião e inventa uma origem heroica para o sobrenome Cubas.",
+    "observe": [
+     "Forma: Genealogia paródica: a falsificação frustrada cede ao trocadilho.",
+     "Função no livro: Prepara a importância social do nome e a ruína dos sonhos paternos em XLIV.",
+     "Tensão: Origem artesanal versus nobreza imaginada; prestígio precisa apagar o trabalho.",
+     "Perguntas de verificação: Que ofício teve Damião? / Como o sobrenome vira prova de heroísmo? / Por que a família seleciona os antepassados?"
+    ]
+   }
+  },
+  {
+   "id": "cap-iv",
+   "order": 5,
+   "type": "chapter",
+   "title": "IV — A ideia fixa",
+   "opening": "CAPÍTULO IV A ideia fixa",
+   "pdfStartPage": 11,
+   "pdfEndPage": 12,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás divaga sobre ideias fixas e versões da história antes de voltar ao emplasto.",
+    "observe": [
+     "Forma: Digressão erudita e comparação interrompida; interpelação do leitor impaciente.",
+     "Função no livro: Demonstra a composição variável que LXXI transformará em discussão explícita do livro.",
+     "Tensão: Firmeza do projeto versus mobilidade dos juízos; bandeiras públicas abrigam interesses privados.",
+     "Perguntas de verificação: Que ideia continua fixa? / Por que as comparações são corrigidas? / Que distância há entre erudição e prova?"
+    ]
+   }
+  },
+  {
+   "id": "cap-v",
+   "order": 6,
+   "type": "chapter",
+   "title": "V — Em que aparece a orelha de uma senhora",
+   "opening": "CAPÍTULO V Em que aparece a orelha de uma senhora",
+   "pdfStartPage": 12,
+   "pdfEndPage": 12,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Obcecado pelo remédio, Brás negligencia a doença; reaparece a amante anônima do primeiro capítulo.",
+    "observe": [
+     "Forma: Causalidade contestável e revelação adiada por uma imagem parcial da mulher.",
+     "Função no livro: Liga a abertura fúnebre ao amor passado e prepara a nomeação de Virgília.",
+     "Tensão: Grande empreendimento versus contingência do corpo; o brilho almejado desvia do cuidado.",
+     "Perguntas de verificação: Que cuidado ele adiou? / Como o título retarda a identificação? / A invenção matou-o em sentido literal?"
+    ]
+   }
+  },
+  {
+   "id": "cap-vi",
+   "order": 7,
+   "type": "chapter",
+   "title": "VI — Chimène, qui l’eût dit? Rodrigue, qui l’eût cru?",
+   "opening": "CAPÍTULO VI Chimène, qui l’eût dit? Rodrigue, qui l’eût cru?",
+   "pdfStartPage": 12,
+   "pdfEndPage": 15,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Virgília visita o enfermo, depois volta com Nhonhô; censura outro adultério sem denunciar o próprio.",
+    "observe": [
+     "Forma: Evocação da juventude seguida de retorno ao presente; contraste entre aparência e passado.",
+     "Função no livro: Abre a memória do caso amoroso e conduz ao delírio de VII.",
+     "Tensão: Decoro versus experiência clandestina; a maternidade protege a imagem pública.",
+     "Perguntas de verificação: Quem é Nhonhô? / Como o presente interrompe a evocação? / O discurso moral de Virgília prova inocência?"
+    ]
+   }
+  },
+  {
+   "id": "cap-vii",
+   "order": 8,
+   "type": "chapter",
+   "title": "VII — O delírio",
+   "opening": "CAPÍTULO VII O delírio",
+   "pdfStartPage": 15,
+   "pdfEndPage": 19,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "No delírio, um hipopótamo leva Brás à origem dos séculos; Pandora mostra a luta universal; o animal acaba reconhecido como Sultão.",
+    "observe": [
+     "Forma: Alegoria, diálogo filosófico e aceleração panorâmica, encerrados por redução ao gato real.",
+     "Função no livro: Antecipa egoísmo, sofrimento e esperança, retomados e tensionados pelo Humanitismo e pelo final.",
+     "Tensão: Desejo de viver versus indiferença da Natureza; progresso não elimina a miséria.",
+     "Perguntas de verificação: Que animal encerra a visão? / Como a velocidade altera a percepção? / Podemos tomar Pandora como voz direta de Machado?"
+    ]
+   }
+  },
+  {
+   "id": "cap-viii",
+   "order": 9,
+   "type": "chapter",
+   "title": "VIII — Razão contra Sandice",
+   "opening": "CAPÍTULO VIII Razão contra Sandice",
+   "pdfStartPage": 19,
+   "pdfEndPage": 19,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "A Razão expulsa a Sandice do cérebro, apesar de seu pedido para resolver vida e morte.",
+    "observe": [
+     "Forma: Personificação dramática e metáfora da casa disputada.",
+     "Função no livro: Encerra o delírio sem resolver seus problemas, permitindo a transição biográfica.",
+     "Tensão: Razão proprietária versus hóspede insistente; o poder de expulsar não equivale a explicar.",
+     "Perguntas de verificação: Que mistérios a Sandice quer resolver? / O que faz a metáfora da casa? / O retorno racional refuta o delírio?"
+    ]
+   }
+  },
+  {
+   "id": "cap-ix",
+   "order": 10,
+   "type": "chapter",
+   "title": "IX — Transição",
+   "opening": "CAPÍTULO IX Transição",
+   "pdfStartPage": 19,
+   "pdfEndPage": 20,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás encadeia delírio, Virgília, juventude e infância para chegar ao nascimento de 1805.",
+    "observe": [
+     "Forma: Metanarração que exibe a costura enquanto proclama não haver juntura.",
+     "Função no livro: É a dobradiça da morte inicial para a infância; método flexível substitui cronologia direta.",
+     "Tensão: Ordem versus liberdade de montagem; o narrador decide o ritmo do leitor.",
+     "Perguntas de verificação: A que data chega a transição? / Como o texto mostra a própria costura? / A ligação é causal ou associativa?"
+    ]
+   }
+  },
+  {
+   "id": "cap-x",
+   "order": 11,
+   "type": "chapter",
+   "title": "X — Naquele dia",
+   "opening": "CAPÍTULO X Naquele dia",
+   "pdfStartPage": 20,
+   "pdfEndPage": 21,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O nascimento faz de Brás o herói doméstico; os tios projetam cargos e os pais exibem sua esperteza.",
+    "observe": [
+     "Forma: Memória de segunda mão, enumeração cerimonial e nomes extensos dos padrinhos.",
+     "Função no livro: Introduz a fabricação familiar do futuro brilhante e a educação de XI.",
+     "Tensão: Afeto versus exibição; prestígio é anunciado antes de qualquer mérito.",
+     "Perguntas de verificação: Quem recebe o recém-nascido? / Por que ele declara ouvir relatos posteriores? / O reconhecimento doméstico já produz uma posição social?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xi",
+   "order": 12,
+   "type": "chapter",
+   "title": "XI — O menino é pai do homem",
+   "opening": "CAPÍTULO XI O menino é pai do homem",
+   "pdfStartPage": 21,
+   "pdfEndPage": 23,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O menino agride uma escravizada e monta Prudêncio; o pai repreende em público e aprova em particular.",
+    "observe": [
+     "Forma: Contraste entre oração e maldade; metáfora final da flor nascida do estrume doméstico.",
+     "Função no livro: Dá a matriz da dominação reiterada em LXVIII e da moral ajustável do adulto.",
+     "Tensão: Educação versus indulgência; escravidão e autoridade paterna naturalizam o capricho.",
+     "Perguntas de verificação: Como Prudêncio é tratado? / O que opõe repreensão pública e beijos privados? / O menino apenas antecipa ou aprende o egoísmo?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xii",
+   "order": 13,
+   "type": "chapter",
+   "title": "XII — Um episódio de 1814",
+   "opening": "CAPÍTULO XII Um episódio de 1814",
+   "pdfStartPage": 23,
+   "pdfEndPage": 26,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "No jantar pela queda de Napoleão, Brás quer compota; vinga-se revelando o beijo de Vilaça em Eusébia.",
+    "observe": [
+     "Forma: Contraponto entre festa política, desejos pequenos e comércio de africanos; cena do beijo escandida pelo grito.",
+     "Função no livro: Explica a origem de Eugênia e exemplifica o espadim privado superior à espada pública.",
+     "Tensão: Grande história versus interesse doméstico; luxo e tráfico coexistem na conversa.",
+     "Perguntas de verificação: Por que Brás denuncia o beijo? / Como o banquete mistura política e apetites? / O grito é denúncia moral ou vingança?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xiii",
+   "order": 14,
+   "type": "chapter",
+   "title": "XIII — Um salto",
+   "opening": "CAPÍTULO XIII Um salto",
+   "pdfStartPage": 26,
+   "pdfEndPage": 27,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás salta os anos escolares, recorda Ludgero Barata e Quincas Borba, e avança a 1822.",
+    "observe": [
+     "Forma: Elipse anunciada e homenagem ambivalente ao mestre; oposição entre independência e cativeiro pessoal.",
+     "Função no livro: Introduz Quincas e prepara a paixão por Marcela.",
+     "Tensão: Aprendizagem versus crueldade; o professor trabalha sem receber reconhecimento do aluno.",
+     "Perguntas de verificação: Que brincadeira Quincas fazia ao mestre? / Como o salto comprime o tempo? / Que ironia liga 1822 à prisão amorosa?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xiv",
+   "order": 15,
+   "type": "chapter",
+   "title": "XIV — Primeiro beijo",
+   "opening": "CAPÍTULO XIV Primeiro beijo",
+   "pdfStartPage": 27,
+   "pdfEndPage": 28,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Aos dezessete anos, Brás encontra Marcela nas festas da Independência e a beija depois de uma ceia.",
+    "observe": [
+     "Forma: Paródia do corcel romântico, voz vacilante sobre castidade e narrativa de conquista.",
+     "Função no livro: Inicia o primeiro ciclo amoroso, materialmente explicado em XV–XVII.",
+     "Tensão: Audácia versus pudor declarado; riqueza e gênero condicionam o acesso à festa.",
+     "Perguntas de verificação: Onde ele vê Marcela pela primeira vez? / Como a imagem do corcel comenta as escolas literárias? / A pose de conquistador é estável?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xv",
+   "order": 16,
+   "type": "chapter",
+   "title": "XV — Marcela",
+   "opening": "CAPÍTULO XV Marcela",
+   "pdfStartPage": 28,
+   "pdfEndPage": 29,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás substitui Xavier e sustenta a ligação com presentes e dívidas; Marcela recusa em palavras e aceita nas ações.",
+    "observe": [
+     "Forma: Vocabulário imperial da paixão, diálogos contraditórios e imagens míticas da sedução.",
+     "Função no livro: Fornece a duração material que XVII reduzirá a meses e contos.",
+     "Tensão: Afeto versus pagamento; herança antecipada financia o capricho.",
+     "Perguntas de verificação: Como ele obtém dinheiro após a restrição paterna? / O que faz a passagem de consulado a império? / O texto obriga a escolher entre dinheiro e afeto?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xvi",
+   "order": 17,
+   "type": "chapter",
+   "title": "XVI — Uma reflexão imoral",
+   "opening": "CAPÍTULO XVI Uma reflexão imoral",
+   "pdfStartPage": 29,
+   "pdfEndPage": 30,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O narrador corrige a expressão de que Marcela morria por Xavier: ela vivia; chama os joalheiros a julgar a gramática.",
+    "observe": [
+     "Forma: Correção semântica que se converte em comentário comercial do amor.",
+     "Função no livro: Suspende a frase para que XVII lhe dê o complemento célebre.",
+     "Tensão: Morrer de amor versus viver de joias; a linguagem sentimental pode esconder transações.",
+     "Perguntas de verificação: Que verbo é corrigido? / Por que os joalheiros julgam a frase? / O raciocínio é moral neutra ou provocação?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xvii",
+   "order": 18,
+   "type": "chapter",
+   "title": "XVII — Do trapézio e outras coisas",
+   "opening": "CAPÍTULO XVII Do trapézio e outras coisas",
+   "pdfStartPage": 30,
+   "pdfEndPage": 32,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "A ligação dura quinze meses e onze contos; o pai impõe Coimbra; Brás tenta levar Marcela oferecendo diamantes.",
+    "observe": [
+     "Forma: Zeugma que coordena duração e preço; retorno do trapézio como engenho de desejos.",
+     "Função no livro: Fecha a economia do primeiro amor e aproxima sedução e invenção do emplasto.",
+     "Tensão: Declaração apaixonada versus compra da adesão; poder paterno controla dinheiro e viagem.",
+     "Perguntas de verificação: Qual é o custo da ligação? / O que une meses e contos na frase? / Por que o pente altera a resposta de Marcela?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xviii",
+   "order": 19,
+   "type": "chapter",
+   "title": "XVIII — Visão do corredor",
+   "opening": "CAPÍTULO XVIII Visão do corredor",
+   "pdfStartPage": 32,
+   "pdfEndPage": 32,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás imagina o engano de um apaixonado das Mil e uma Noites; pai e tio o levam à polícia e ao navio.",
+    "observe": [
+     "Forma: Superposição de ficção oriental e captura real no corredor.",
+     "Função no livro: Transforma o plano de viagem a dois em afastamento imposto.",
+     "Tensão: Posse amorosa versus disciplina familiar; polícia executa a vontade paterna.",
+     "Perguntas de verificação: Quem o retira do corredor? / Como Bagdá se mistura ao Rio? / A ideia de suicídio mantém ou rompe o capricho?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xix",
+   "order": 20,
+   "type": "chapter",
+   "title": "XIX — A bordo",
+   "opening": "CAPÍTULO XIX A bordo",
+   "pdfStartPage": 32,
+   "pdfEndPage": 34,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O capitão vigia Brás, recita versos e perde Leocádia; a morte temida por Brás afasta seu projeto suicida.",
+    "observe": [
+     "Forma: Contraste entre tempestade sentimental e marítima; vaidade poética atravessa o luto.",
+     "Função no livro: Oferece uma morte anterior à da mãe e mostra a sobrevivência dos interesses.",
+     "Tensão: Sofrimento versus exibição; o capitão ama a esposa e a própria poesia.",
+     "Perguntas de verificação: Que efeito têm os poemas no projeto de Brás? / Como o luto muda durante a recitação? / Sentimento e vaidade são incompatíveis?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xx",
+   "order": 21,
+   "type": "chapter",
+   "title": "XX — Bacharelo-me",
+   "opening": "CAPÍTULO XX Bacharelo-me",
+   "pdfStartPage": 34,
+   "pdfEndPage": 35,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás troca Marcela pela ambição, estuda mediocremente e obtém o diploma de Coimbra.",
+    "observe": [
+     "Forma: Contraste entre pergaminho e ciência real; metáfora do diploma como alforria.",
+     "Função no livro: Completa a formação ornamental confessada em XXIV.",
+     "Tensão: Título versus saber; o bacharel herdeiro tem acesso a posição sem estudo profundo.",
+     "Perguntas de verificação: Como ele avalia os estudos? / O que significa a alforria do diploma? / A ambição é por uma atividade ou por uma preeminência?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxi",
+   "order": 22,
+   "type": "chapter",
+   "title": "XXI — O almocreve",
+   "opening": "CAPÍTULO XXI O almocreve",
+   "pdfStartPage": 35,
+   "pdfEndPage": 36,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Um almocreve salva Brás do jumento; a gratificação pensada cai de ouro a prata e depois lhe parece excessiva.",
+    "observe": [
+     "Forma: Gradação descendente e argumentação que apaga o mérito do salvador.",
+     "Função no livro: Exemplifica a fabricação de desculpas que voltará nas janelas e em D. Plácida.",
+     "Tensão: Dívida de vida versus avareza; a pobreza do outro serve de justificativa à redução.",
+     "Perguntas de verificação: Que moeda foi efetivamente entregue? / Como o raciocínio diminui a recompensa? / Por que chamar o homem de instrumento da Providência favorece Brás?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxii",
+   "order": 23,
+   "type": "chapter",
+   "title": "XXII — Volta ao Rio",
+   "opening": "CAPÍTULO XXII Volta ao Rio",
+   "pdfStartPage": 36,
+   "pdfEndPage": 37,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "A ameaça de morte da mãe faz Brás deixar a Europa; ele recusa transformar as memórias em diário de viagem.",
+    "observe": [
+     "Forma: Elipse seletiva e comentário dos formatos de livro e de público.",
+     "Função no livro: Reconduz o percurso europeu ao núcleo doméstico de XXIII.",
+     "Tensão: Substância da vida versus relato turístico; o narrador calcula atenção e elegância editorial.",
+     "Perguntas de verificação: Que notícia provoca a volta? / Por que a viagem não é narrada inteira? / Quem define o que conta como substância?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxiii",
+   "order": 24,
+   "type": "chapter",
+   "title": "XXIII — Triste, mas curto",
+   "opening": "CAPÍTULO XXIII Triste, mas curto",
+   "pdfStartPage": 37,
+   "pdfEndPage": 38,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás volta ao Rio e assiste à longa agonia da mãe, que lhe torna a morte concreta.",
+    "observe": [
+     "Forma: Contraste entre mortes retóricas de homens antigos e dor sem aparelho filosófico.",
+     "Função no livro: Rompe a formação superficial e motiva o retiro na Tijuca.",
+     "Tensão: Virtude da mãe versus crueldade indiferente do cancro; afeto não compra proteção.",
+     "Perguntas de verificação: Qual doença mata a mãe? / Como a enumeração de mortes antigas é contrariada? / Por que o narrador pode dizer que vê a morte pela primeira vez após XIX?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxiv",
+   "order": 25,
+   "type": "chapter",
+   "title": "XXIV — Curto, mas alegre",
+   "opening": "CAPÍTULO XXIV Curto, mas alegre",
+   "pdfStartPage": 38,
+   "pdfEndPage": 38,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás admite ter recolhido só a ornamentação dos saberes; proclama a liberdade de confessar depois da morte.",
+    "observe": [
+     "Forma: Antítese entre plateia dos vivos e desdém dos finados; inversão dos títulos de XXIII e XXIV.",
+     "Função no livro: Formula a justificativa de sinceridade que o restante do livro permite testar.",
+     "Tensão: Franqueza versus pose; opinião e interesses governavam o bacharel.",
+     "Perguntas de verificação: Que parte dos estudos ele guardou? / Como o título desloca a tristeza anterior? / A declaração de liberdade prova ausência de interesse narrativo?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxv",
+   "order": 26,
+   "type": "chapter",
+   "title": "XXV — Na Tijuca",
+   "opening": "CAPÍTULO XXV Na Tijuca",
+   "pdfStartPage": 38,
+   "pdfEndPage": 40,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás se retira na Tijuca com Prudêncio, desfruta a tristeza, mas se cansa; decide visitar Eusébia por sua ajuda à mãe.",
+    "observe": [
+     "Forma: Oxímoro da volúpia do aborrecimento; luto e roupas são guardados no mesmo baú.",
+     "Função no livro: Prepara o encontro com Eugênia e a rápida troca da hipocondria por ambição.",
+     "Tensão: Recolhimento versus bulício; tempo livre e propriedade tornam possível cultivar o tédio.",
+     "Perguntas de verificação: Por que a visita é devida a Eusébia? / Que efeito tem pôr meditações e camisas no baú? / A tristeza precisa ser falsa para ser prazerosa?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxvi",
+   "order": 27,
+   "type": "chapter",
+   "title": "XXVI — O autor hesita",
+   "opening": "CAPÍTULO XXVI O autor hesita",
+   "pdfStartPage": 40,
+   "pdfEndPage": 42,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O pai oferece casamento e candidatura; Brás hesita e rabisca palavras que o levam ao nome de Virgílio.",
+    "observe": [
+     "Forma: Conversa interrompida por desenhos verbais; na p. 42 a disposição visual faz parte da leitura.",
+     "Função no livro: Converte a indecisão em encontro verbal com o nome da futura amante.",
+     "Tensão: Luto versus projeto familiar; casamento e mandato são caminhos ligados de prestígio.",
+     "Perguntas de verificação: Quais são os dois projetos? / Como virumque leva a Virgílio? / A associação casual substitui uma decisão consciente?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxvii",
+   "order": 28,
+   "type": "chapter",
+   "title": "XXVII — Virgília?",
+   "opening": "CAPÍTULO XXVII Virgília?",
+   "pdfStartPage": 42,
+   "pdfEndPage": 43,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás identifica a jovem Virgília como a visitante de 1869 e explica sua teoria das edições humanas.",
+    "observe": [
+     "Forma: Prolepse, retrato anti-idealizante e metáfora do homem como errata pensante.",
+     "Função no livro: Liga as fases da amante e admite revisão contínua das impressões.",
+     "Tensão: Verdade retrospectiva versus instabilidade; memória reavalia a beleza e o caráter.",
+     "Perguntas de verificação: Que visita futura identifica a moça? / Como funciona a errata pensante? / A última edição é uma verdade definitiva ou mais uma imagem do narrador?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxviii",
+   "order": 29,
+   "type": "chapter",
+   "title": "XXVIII — Contanto que...",
+   "opening": "CAPÍTULO XXVIII Contanto que...",
+   "pdfStartPage": 43,
+   "pdfEndPage": 44,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás aceita examinar candidatura e casamento separadamente; o pai exige que não se deixe obscuro.",
+    "observe": [
+     "Forma: Repetição dialogada de condições e retorno do chocalho infantil.",
+     "Função no livro: Reconduz a hipocondria ao amor da nomeada e ao emplasto.",
+     "Tensão: Autonomia versus pressão; a opinião dos outros é convertida em medida de valor.",
+     "Perguntas de verificação: Qual condição Brás impõe? / Por que volta o chocalho? / Como o pai liga o sucesso individual ao sobrenome?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxix",
+   "order": 30,
+   "type": "chapter",
+   "title": "XXIX — A visita",
+   "opening": "CAPÍTULO XXIX A visita",
+   "pdfStartPage": 44,
+   "pdfEndPage": 44,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás aceita os planos, mas antes visita Eusébia, que o acolhe e pergunta por seus namoros.",
+    "observe": [
+     "Forma: Suspensão do projeto social por uma visita; recordação do beijo de 1814.",
+     "Função no livro: Prepara a entrada de Eugênia sem apagar a origem do constrangimento.",
+     "Tensão: Gratidão versus distância social; o pai torce o nariz para a visita.",
+     "Perguntas de verificação: Que visita adia a descida? / Como a lembrança de 1814 interfere na conversa? / O gesto paterno permite inferir desagrado sem inventar a causa exata?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxx",
+   "order": 31,
+   "type": "chapter",
+   "title": "XXX — A flor da moita",
+   "opening": "CAPÍTULO XXX A flor da moita",
+   "pdfStartPage": 44,
+   "pdfEndPage": 46,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Eugênia é apresentada; Eusébia se assusta com uma borboleta preta; Brás ridiculariza a superstição e espera ser admirado.",
+    "observe": [
+     "Forma: Duplo motivo da flor e da borboleta; autodescrição de superioridade desmentida pelo desejo de aprovação.",
+     "Função no livro: Introduz a jovem e prepara a borboleta morta de XXXI.",
+     "Tensão: Dignidade versus expectativa masculina; a filha não devolve o olhar esperado.",
+     "Perguntas de verificação: Quantos anos tem Eugênia? / Como a borboleta liga interior e exterior? / Que limite impõe a ausência de olhar para trás?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxxi",
+   "order": 32,
+   "type": "chapter",
+   "title": "XXXI — A borboleta preta",
+   "opening": "CAPÍTULO XXXI A borboleta preta",
+   "pdfStartPage": 46,
+   "pdfEndPage": 47,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás mata uma borboleta, sente incômodo e se consola culpando sua cor; imagina sua submissão a um criador.",
+    "observe": [
+     "Forma: Fábula antropomórfica e desculpas contraditórias sobre borboletas azuis.",
+     "Função no livro: Antecede a rejeição de Eugênia e expõe a violência da superioridade.",
+     "Tensão: Piedade versus capricho; diferença corporal serve de justificativa ao dano.",
+     "Perguntas de verificação: Como ele mata a borboleta? / Por que a hipótese de cor muda duas vezes? / O remorso leva a reparar ou apenas a justificar?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxxii",
+   "order": 33,
+   "type": "chapter",
+   "title": "XXXII — Coxa de nascença",
+   "opening": "CAPÍTULO XXXII Coxa de nascença",
+   "pdfStartPage": 47,
+   "pdfEndPage": 48,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "No jantar, Brás percebe que Eugênia manca; ela declara com franqueza que é de nascença.",
+    "observe": [
+     "Forma: Contraste entre descrição idealizante do corpo e insistência na perna; olhar dito são.",
+     "Função no livro: Confronta o preconceito de Brás com a autonomia verbal da moça.",
+     "Tensão: Beleza e dignidade versus avaliação corporal; a diferença é filtrada pelo pretendente.",
+     "Perguntas de verificação: Como Eugênia explica a perna? / O que contrapõe olhar e coxeadura? / Por que não chamar a deficiência de falha moral?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxxiii",
+   "order": 34,
+   "type": "chapter",
+   "title": "XXXIII — Bem-aventurados os que não descem",
+   "opening": "CAPÍTULO XXXIII Bem-aventurados os que não descem",
+   "pdfStartPage": 48,
+   "pdfEndPage": 49,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás adia a descida, recebe o primeiro beijo de Eugênia e pensa na origem do nascimento dela.",
+    "observe": [
+     "Forma: Quiasmo interrogativo entre beleza e deficiência; paródia de bem-aventurança e retorno da borboleta.",
+     "Função no livro: Aprofunda a aproximação já ameaçada pela rejeição.",
+     "Tensão: Desejo versus casamento; origem ilegítima e corpo pesam no julgamento.",
+     "Perguntas de verificação: Por que ele deixa de descer? / Como a frase bíblica é reescrita? / O beijo consentido lhe garante intenção de compromisso?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxxiv",
+   "order": 35,
+   "type": "chapter",
+   "title": "XXXIV — A uma alma sensível",
+   "opening": "CAPÍTULO XXXIV A uma alma sensível",
+   "pdfStartPage": 49,
+   "pdfEndPage": 49,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás interpela uma leitora sensível que o julgaria cínico e exige que retire a acusação.",
+    "observe": [
+     "Forma: Cérebro comparado a palco de todos os gêneros; leitor construído como adversário.",
+     "Função no livro: Desvia a atenção da jovem para a defesa do narrador.",
+     "Tensão: Pluralidade humana versus responsabilidade; quem domina a fala controla o julgamento.",
+     "Perguntas de verificação: Que acusação ele antecipa? / Como o palco serve à defesa? / Admitir pensamentos contraditórios absolve a conduta?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxxv",
+   "order": 36,
+   "type": "chapter",
+   "title": "XXXV — O caminho de damasco",
+   "opening": "CAPÍTULO XXXV O caminho de damasco",
+   "pdfStartPage": 49,
+   "pdfEndPage": 49,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás decide descer; Eugênia reconhece a fuga de um casamento que ele considera ridículo e rejeita seus juramentos.",
+    "observe": [
+     "Forma: Paródia da conversão de Damasco; fala firme da jovem atravessa as hipérboles frias.",
+     "Função no livro: Encerra a relação retomada no cortiço em CLVIII.",
+     "Tensão: Piedade alegada versus preconceito; carreira e noiva funcionam como pretextos.",
+     "Perguntas de verificação: Eugênia acredita nos juramentos? / Como a conversão é invertida? / A moça apenas sofre ou também interpreta e decide?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxxvi",
+   "order": 37,
+   "type": "chapter",
+   "title": "XXXVI — A propósito de botas",
+   "opening": "CAPÍTULO XXXVI A propósito de botas",
+   "pdfStartPage": 49,
+   "pdfEndPage": 50,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Descalçar botas apertadas alivia Brás; ele compara esse prazer ao esquecimento rápido de Eugênia.",
+    "observe": [
+     "Forma: Analogia corporal que transforma rejeição em teoria da felicidade.",
+     "Função no livro: Resume a autoabsolvição e antecipa a dor persistente da jovem.",
+     "Tensão: Alívio do privilegiado versus sofrimento da abandonada; conforto encobre desigualdade.",
+     "Perguntas de verificação: Quanto dura sua preocupação? / Como as botas organizam a comparação? / A fórmula universal distribui igualmente a felicidade?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxxvii",
+   "order": 38,
+   "type": "chapter",
+   "title": "XXXVII — Enfim!",
+   "opening": "CAPÍTULO XXXVII Enfim!",
+   "pdfStartPage": 50,
+   "pdfEndPage": 50,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás conhece Virgília na casa do conselheiro Dutra; o casamento favoreceria sua candidatura.",
+    "observe": [
+     "Forma: Metáforas elogiosas do pai e remissão explícita ao retrato de XXVII.",
+     "Função no livro: Retoma o projeto interrompido pela passagem na Tijuca.",
+     "Tensão: Atração versus cálculo; parentesco daria acesso político.",
+     "Perguntas de verificação: Que apoio Dutra promete? / O que faz a expressão das duas Virgílias? / O encontro amoroso é separável da candidatura?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxxviii",
+   "order": 39,
+   "type": "chapter",
+   "title": "XXXVIII — A quarta edição",
+   "opening": "CAPÍTULO XXXVIII A quarta edição",
+   "pdfStartPage": 50,
+   "pdfEndPage": 52,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Um vidro quebrado de relógio leva Brás à loja de Marcela, marcada pelas bexigas; ela solicita proteção e clientes.",
+    "observe": [
+     "Forma: Metáfora editorial da quarta edição e retrato de decadência filtrado pela repulsa.",
+     "Função no livro: Reabre o passado no momento da promessa de casamento.",
+     "Tensão: Memória versus aparência presente; comércio e antigas relações sustentam a sobrevivência.",
+     "Perguntas de verificação: Por que ele entra na loja? / Como a quarta edição altera seu olhar? / A hipótese de cobiça esgota Marcela?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xxxix",
+   "order": 40,
+   "type": "chapter",
+   "title": "XXXIX — O vizinho",
+   "opening": "CAPÍTULO XXXIX O vizinho",
+   "pdfStartPage": 52,
+   "pdfEndPage": 52,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O relojoeiro vizinho traz Maricota, que quer oferecer orações a Santa Marcela; ela demonstra alegria.",
+    "observe": [
+     "Forma: Cena dialogada e mudança de expressão que contrasta com o julgamento anterior.",
+     "Função no livro: Interrompe o retrato unicamente avaro da antiga amante.",
+     "Tensão: Degradação percebida versus afeto cotidiano; vizinhança produz reconhecimento.",
+     "Perguntas de verificação: Que nome Maricota dá a Marcela? / O que muda na voz da mulher? / Como a cena limita a leitura de XXXVIII?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xl",
+   "order": 41,
+   "type": "chapter",
+   "title": "XL — Na sege",
+   "opening": "CAPÍTULO XL Na sege",
+   "pdfStartPage": 52,
+   "pdfEndPage": 53,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Na sege, Brás se sente entre passado e presente; acredita que o carro não anda, mas já chegou a Dutra.",
+    "observe": [
+     "Forma: Descompasso entre movimento exterior e tempo interior; relógio reaparece como gatilho.",
+     "Função no livro: Transporta a lembrança de Marcela à alucinação sobre Virgília.",
+     "Tensão: Desejo de futuro versus retorno do passado; o herdeiro viaja enquanto o criado conduz.",
+     "Perguntas de verificação: Onde a sege já está? / Como o narrador separa tempo psíquico e percurso? / Que sentido tem o passado que lacera e beija?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xli",
+   "order": 42,
+   "type": "chapter",
+   "title": "XLI — A alucinação",
+   "opening": "CAPÍTULO XLI A alucinação",
+   "pdfStartPage": 53,
+   "pdfEndPage": 54,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás vê no rosto de Virgília os sinais de bexigas de Marcela; a visão passa, mas a moça conserva o despeito pelo atraso.",
+    "observe": [
+     "Forma: Alucinação por sobreposição de rostos e passagem à análise do gesto.",
+     "Função no livro: Mostra o passado contaminando uma relação nova.",
+     "Tensão: Beleza ideal versus imagem da decadência; o julgamento do homem fere a mulher.",
+     "Perguntas de verificação: Que sinais ele imagina? / Como se verifica que não eram reais? / Por que a reação de Virgília não é só vaidade?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xlii",
+   "order": 43,
+   "type": "chapter",
+   "title": "XLII — Que escapou a Aristóteles",
+   "opening": "CAPÍTULO XLII Que escapou a Aristóteles",
+   "pdfStartPage": 54,
+   "pdfEndPage": 54,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás compara Marcela, ele próprio e Virgília a bolas que transmitem um impulso.",
+    "observe": [
+     "Forma: Analogia mecânica e pretensão cômica de superar Aristóteles.",
+     "Função no livro: Nomeia a circulação do aborrecimento vista em XXXVIII–XLI.",
+     "Tensão: Explicação universal versus responsabilidade particular; diferenças sociais são aproximadas pela transmissão.",
+     "Perguntas de verificação: Quem é a primeira bola? / Como a analogia encadeia os três? / A explicação física pode absolver Brás?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xliii",
+   "order": 44,
+   "type": "chapter",
+   "title": "XLIII — Marquesa, porque eu serei marquês",
+   "opening": "CAPÍTULO XLIII Marquesa, porque eu serei marquês",
+   "pdfStartPage": 54,
+   "pdfEndPage": 54,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Lobo Neves toma a candidatura e a preferência de Virgília ao prometer torná-la marquesa.",
+    "observe": [
+     "Forma: Diálogo de promessas e contraste figurado entre águia e pavão.",
+     "Função no livro: Estabelece o rival político que será marido e anfitrião do amante.",
+     "Tensão: Afeto versus título; casamento e ascensão pública se articulam.",
+     "Perguntas de verificação: O que Lobo promete? / Como águia e pavão distribuem as posições? / A escolha pode ser reduzida a atração física?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xliv",
+   "order": 45,
+   "type": "chapter",
+   "title": "XLIV — Um Cubas!",
+   "opening": "CAPÍTULO XLIV Um Cubas!",
+   "pdfStartPage": 54,
+   "pdfEndPage": 55,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O pai repete o nome dos Cubas, definha após a derrota dos planos e morre meses depois.",
+    "observe": [
+     "Forma: Refrão do sobrenome e correção da hipótese causal da morte.",
+     "Função no livro: Fecha a genealogia imaginária de III e conduz à partilha.",
+     "Tensão: Grandeza familiar versus fracasso; a visita do ministro ainda o anima.",
+     "Perguntas de verificação: Quanto tempo decorre até a morte? / O que produz a repetição do sobrenome? / Por que distinguir agravamento e causa exclusiva?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xlv",
+   "order": 46,
+   "type": "chapter",
+   "title": "XLV — Notas",
+   "opening": "CAPÍTULO XLV Notas",
+   "pdfStartPage": 55,
+   "pdfEndPage": 55,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás enumera o funeral do pai e diz que são notas para um capítulo que não escreve.",
+    "observe": [
+     "Forma: Inventário sem desenvolvimento causal; negativa performativa de escrever.",
+     "Função no livro: Faz o leitor experimentar o capítulo recusado e prepara o luto convertido em disputa.",
+     "Tensão: Dor versus rito; trabalhadores e objetos compõem a cerimônia.",
+     "Perguntas de verificação: Que cerimônia a lista recompõe? / Como negar o capítulo acaba escrevendo-o? / A secura significa necessariamente ausência de dor?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xlvi",
+   "order": 47,
+   "type": "chapter",
+   "title": "XLVI — A herança",
+   "opening": "CAPÍTULO XLVI A herança",
+   "pdfStartPage": 55,
+   "pdfEndPage": 57,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Sabina, Cotrim e Brás disputam imóveis, prata, sege e pessoas escravizadas; ficam brigados.",
+    "observe": [
+     "Forma: Diálogo de cálculo, revelação da alforria de Prudêncio e imagem de pão e manteiga.",
+     "Função no livro: Contrasta cerimônia familiar e interesses materiais; prepara LXXXI.",
+     "Tensão: Luto versus propriedade; seres humanos entram na contabilidade da herança.",
+     "Perguntas de verificação: Quem fora libertado? / Como a prata e os escravizados aparecem na mesma discussão? / A briga elimina o afeto entre irmãos?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xlvii",
+   "order": 48,
+   "type": "chapter",
+   "title": "XLVII — O recluso",
+   "opening": "CAPÍTULO XLVII O recluso",
+   "pdfStartPage": 57,
+   "pdfEndPage": 57,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás se recolhe até 1842, publica política e versos e recorda relações por iniciais.",
+    "observe": [
+     "Forma: Elipse de anos, apagamento nominal das mulheres e observação da ponta do nariz.",
+     "Função no livro: Forma a transição ao retorno de Virgília e ao tema da autorreferência.",
+     "Tensão: Ambição versus apatia; a fortuna permite escrever e esperar posições.",
+     "Perguntas de verificação: Como as mulheres são identificadas? / Que efeito produz o salto de anos? / Por que chamar as outras pessoas de modos da afeição interior é problemático?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xlviii",
+   "order": 49,
+   "type": "chapter",
+   "title": "XLVIII — Um primo de Virgília",
+   "opening": "CAPÍTULO XLVIII Um primo de Virgília",
+   "pdfStartPage": 57,
+   "pdfEndPage": 59,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Luís Dutra busca aprovação literária; Brás evita comentar os escritos para desanimá-lo.",
+    "observe": [
+     "Forma: Desvio reiterado de assunto e revelação final da intenção hostil.",
+     "Função no livro: Concretiza o egoísmo que XLIX elevará a teoria.",
+     "Tensão: Talento alheio versus desejo de superioridade; aprovação circula como poder cultural.",
+     "Perguntas de verificação: O que Dutra procura? / Como a conversa impede a resposta? / Brás reconhece a superioridade dos versos e age coerentemente com isso?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xlix",
+   "order": 50,
+   "type": "chapter",
+   "title": "XLIX — A ponta do nariz",
+   "opening": "CAPÍTULO XLIX A ponta do nariz",
+   "pdfStartPage": 59,
+   "pdfEndPage": 60,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás teoriza a contemplação do próprio nariz e imagina um chapeleiro invejoso de um rival.",
+    "observe": [
+     "Forma: Paródia filosófica com faquir e Pangloss; exemplo mercantil.",
+     "Função no livro: Explica retrospectivamente seu silêncio com Dutra e sua competição política.",
+     "Tensão: Equilíbrio coletivo versus subordinação ao indivíduo; concorrência é chamada de lei universal.",
+     "Perguntas de verificação: Quais duas forças ele propõe? / Como o exemplo do chapeleiro funciona? / A teoria descreve ou justifica o egoísmo?"
+    ]
+   }
+  },
+  {
+   "id": "cap-l",
+   "order": 51,
+   "type": "chapter",
+   "title": "L — Virgília casada",
+   "opening": "CAPÍTULO L Virgília casada",
+   "pdfStartPage": 60,
+   "pdfEndPage": 60,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Virgília retorna casada; Brás a reencontra em bailes e a valsa estreita a intimidade.",
+    "observe": [
+     "Forma: Progressão dos encontros e alusão ao livro que perdeu Francesca, substituído pela dança.",
+     "Função no livro: Inicia o adultério e mantém a confiança cortês do marido.",
+     "Tensão: Prazer versus decoro; a sociabilidade pública dá acesso ao segredo.",
+     "Perguntas de verificação: Que prática aproxima os dois? / Como a alusão desloca livro para valsa? / A admiração do marido pelo escritor ajuda o caso?"
+    ]
+   }
+  },
+  {
+   "id": "cap-li",
+   "order": 52,
+   "type": "chapter",
+   "title": "LI — É minha!",
+   "opening": "CAPÍTULO LI É minha!",
+   "pdfStartPage": 60,
+   "pdfEndPage": 61,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás chama Virgília de sua, acha uma moeda e a restitui; formula a equivalência das janelas para aliviar a consciência.",
+    "observe": [
+     "Forma: Repetição da expressão possessiva e alegoria da ventilação moral.",
+     "Função no livro: Funda a compensação que retorna em CV e contrasta com os cinco contos.",
+     "Tensão: Posse versus justiça; um gesto visível compensa interiormente uma infração.",
+     "Perguntas de verificação: O que ele restitui? / Como a mesma posse nomeia mulher e moeda? / Uma boa ação desfaz outra conduta?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lii",
+   "order": 53,
+   "type": "chapter",
+   "title": "LII — O embrulho misterioso",
+   "opening": "CAPÍTULO LII O embrulho misterioso",
+   "pdfStartPage": 61,
+   "pdfEndPage": 63,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás encontra cinco contos na praia, esconde-os e deposita-os enquanto recebe elogios pela meia dobra.",
+    "observe": [
+     "Forma: Suspense do embrulho e encadeamento de desculpas providenciais.",
+     "Função no livro: Contradiz a restituição anterior e fornece o dinheiro destinado a D. Plácida.",
+     "Tensão: Escrúpulo versus valor do achado; reputação honesta protege a apropriação.",
+     "Perguntas de verificação: Onde acaba o dinheiro? / Como mudam as justificativas entre meia dobra e cinco contos? / A promessa de doação equivale a restituição?"
+    ]
+   }
+  },
+  {
+   "id": "cap-liii",
+   "order": 54,
+   "type": "chapter",
+   "title": "LIII — .........",
+   "opening": "CAPÍTULO LIII .........",
+   "pdfStartPage": 63,
+   "pdfEndPage": 63,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O amor cresce rapidamente e o beijo no portão abre uma vida de delícias, medo e saciedade.",
+    "observe": [
+     "Forma: Título pontilhado, metáfora vegetal e enumeração de contrários.",
+     "Função no livro: Concentra a trajetória amorosa antes do diálogo sem palavras.",
+     "Tensão: Expansão do desejo versus desgaste; hipocrisia sustenta paixão clandestina.",
+     "Perguntas de verificação: Onde ocorre o beijo? / Como a lista de contrários antecipa o futuro? / O título pontilhado apaga ou estimula a leitura?"
+    ]
+   }
+  },
+  {
+   "id": "cap-liv",
+   "order": 55,
+   "type": "chapter",
+   "title": "LIV — A pêndula",
+   "opening": "CAPÍTULO LIV A pêndula",
+   "pdfStartPage": 63,
+   "pdfEndPage": 64,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O relógio costuma lembrar a perda de vida; após o beijo, Brás ouve tempo ganho e imagina os pensamentos dos amantes juntos.",
+    "observe": [
+     "Forma: Reinterpretação do tique-taque e personificação dos pensamentos.",
+     "Função no livro: Prepara o diálogo gráfico de LV; tempo depende da situação afetiva.",
+     "Tensão: Finitude versus prazer; o encontro imaginado atravessa a distância doméstica.",
+     "Perguntas de verificação: Que sensação muda nessa noite? / Como os dois sacos representam o tempo? / Por que ele dá corda ao relógio que o aflige?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lv",
+   "order": 56,
+   "type": "chapter",
+   "title": "LV — O velho diálogo de Adão e Eva",
+   "opening": "CAPÍTULO LV O velho diálogo de Adão e Eva",
+   "pdfStartPage": 64,
+   "pdfEndPage": 64,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Nomes dos amantes e sinais de pontuação compõem um diálogo sem palavras.",
+    "observe": [
+     "Forma: Elipse verbal radical, alternância de turnos, perguntas e exclamações.",
+     "Função no livro: Materializa a intimidade preparada por LIV e quebra a narração usual.",
+     "Tensão: Comunicação versus ausência de frase; convenções de leitura fazem o leitor participar.",
+     "Perguntas de verificação: Que nomes marcam os turnos? / Como a pontuação sugere a conversa? / Por que não preencher os pontos com falas inventadas?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lvi",
+   "order": 57,
+   "type": "chapter",
+   "title": "LVI — O momento oportuno",
+   "opening": "CAPÍTULO LVI O momento oportuno",
+   "pdfStartPage": 64,
+   "pdfEndPage": 65,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás pergunta por que o amor não ocorreu antes e conclui que agora ele é oportuno; Virgília recusa outro galanteador.",
+    "observe": [
+     "Forma: Pergunta duplicada e oposição lexical entre importuno e oportuno.",
+     "Função no livro: Explica o deslocamento do projeto matrimonial ao adultério.",
+     "Tensão: Identidade dos sujeitos versus mudança da ocasião; desejo depende de circunstâncias.",
+     "Perguntas de verificação: Que queixa de Virgília desencadeia a conclusão? / Como o jogo lexical sustenta a explicação? / Ela é uma lei comprovada ou teoria do narrador?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lvii",
+   "order": 58,
+   "type": "chapter",
+   "title": "LVII — Destino",
+   "opening": "CAPÍTULO LVII Destino",
+   "pdfStartPage": 65,
+   "pdfEndPage": 65,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Os amantes atribuem a ligação ao destino e à vontade do céu; Brás descreve a religiosidade discreta de Virgília.",
+    "observe": [
+     "Forma: Alusão a Dante, metáfora da camisa de flanela e atribuição transcendental.",
+     "Função no livro: Mostra outra linguagem usada para legitimar a aventura.",
+     "Tensão: Remorso versus fatalidade; devoção coexistindo com medo e dissimulação.",
+     "Perguntas de verificação: Como Virgília justifica o amor? / O que sugere a camisa de flanela? / Destino elimina escolha e responsabilidade?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lviii",
+   "order": 59,
+   "type": "chapter",
+   "title": "LVIII — Confidência",
+   "opening": "CAPÍTULO LVIII Confidência",
+   "pdfStartPage": 65,
+   "pdfEndPage": 66,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Lobo Neves confessa decepções políticas e falta de glória, mas logo se mostra jovial a visitantes.",
+    "observe": [
+     "Forma: Metáfora da política como teatro; contraste entre confidência e apresentação pública.",
+     "Função no livro: Complexifica o rival e prepara a ambição renovada de Brás.",
+     "Tensão: Desgosto íntimo versus máscara social; política é campo de competição e ingratidão.",
+     "Perguntas de verificação: O que falta a Lobo? / Como muda ao chegarem os políticos? / A mudança prova que o sofrimento era fingido?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lix",
+   "order": 60,
+   "type": "chapter",
+   "title": "LIX — Um encontro",
+   "opening": "CAPÍTULO LIX Um encontro",
+   "pdfStartPage": 66,
+   "pdfEndPage": 68,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Ver um antigo colega ministro estimula a ambição de Brás; no Passeio Público ele reencontra Quincas mendigo.",
+    "observe": [
+     "Forma: Justaposição de ascensão e queda; descrição minuciosa da roupa e oferta da nota menos limpa.",
+     "Função no livro: Reintroduz o amigo e opõe futuros desiguais dos colegas.",
+     "Tensão: Prestígio versus miséria; a recomendação de trabalhar parte de um herdeiro ocioso.",
+     "Perguntas de verificação: Onde Quincas diz morar? / Como os encontros contrapõem destinos? / A oferta de trabalho é só auxílio desinteressado?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lx",
+   "order": 61,
+   "type": "chapter",
+   "title": "LX — O abraço",
+   "opening": "CAPÍTULO LX O abraço",
+   "pdfStartPage": 68,
+   "pdfEndPage": 69,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas examina as joias, recusa buscar auxílio na casa de Brás e o abraça; depois se descobre o furto do relógio.",
+    "observe": [
+     "Forma: Desfecho retrospectivo que transforma o abraço em ato ambíguo.",
+     "Função no livro: Liga o reencontro à restituição futura de XCI.",
+     "Tensão: Gratidão versus apropriação; a miséria fere a exigência de dignidade do benfeitor.",
+     "Perguntas de verificação: Que objeto desaparece? / Como o final reinterpreta o abraço? / Que limite tem desejar uma miséria digna?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxi",
+   "order": 62,
+   "type": "chapter",
+   "title": "LXI — Um projeto",
+   "opening": "CAPÍTULO LXI Um projeto",
+   "pdfStartPage": 69,
+   "pdfEndPage": 69,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás janta triste, volta ao Passeio e planeja regenerar Quincas, mas não o encontra.",
+    "observe": [
+     "Forma: Movimento entre abatimento e admiração de si pelo projeto beneficente.",
+     "Função no livro: Exibe o auxílio ainda imaginado, logo abandonado em LXII.",
+     "Tensão: Solidariedade versus prêmio subjetivo; querer salvar o outro melhora a autoimagem.",
+     "Perguntas de verificação: Ele encontra Quincas novamente? / Como o projeto muda seu estado de ânimo? / A satisfação depende de ter ajudado alguém?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxii",
+   "order": 63,
+   "type": "chapter",
+   "title": "LXII — O travesseiro",
+   "opening": "CAPÍTULO LXII O travesseiro",
+   "pdfStartPage": 69,
+   "pdfEndPage": 69,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Virgília faz Brás esquecer Quincas em cinco minutos; ele a chama de travesseiro do espírito.",
+    "observe": [
+     "Forma: Metáfora material de conforto e interpelação ao sofrimento afastado.",
+     "Função no livro: Desfaz o projeto de LXI e expõe a função utilitária atribuída à amante.",
+     "Tensão: Afeto versus anestesia; conforto privado exclui a miséria externa.",
+     "Perguntas de verificação: Quanto demora o esquecimento? / Como a metáfora define Virgília? / Ela existe apenas para o consolo de Brás ou essa é sua perspectiva?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxiii",
+   "order": 64,
+   "type": "chapter",
+   "title": "LXIII — Fujamos!",
+   "opening": "CAPÍTULO LXIII Fujamos!",
+   "pdfStartPage": 69,
+   "pdfEndPage": 71,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Temendo a descoberta, Virgília conta um sonho; Brás propõe fuga, mas dissimula quando chega Lobo com planos de ópera.",
+    "observe": [
+     "Forma: Fantasia de mundo exclusivo interrompida pela cena doméstica; contraste entre ameaça e cordialidade.",
+     "Função no livro: Abre a negociação da casa clandestina.",
+     "Tensão: Paixão absoluta versus vínculos; o filho e o marido frustram a posse exclusiva.",
+     "Perguntas de verificação: Quem interrompe a proposta? / Como a fantasia é desmentida pela chegada? / Por que a felicidade doméstica irrita Brás?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxiv",
+   "order": 65,
+   "type": "chapter",
+   "title": "LXIV — A transação",
+   "opening": "CAPÍTULO LXIV A transação",
+   "pdfStartPage": 71,
+   "pdfEndPage": 72,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Depois do ciúme, os amantes se reconciliam; Virgília propõe uma casa secreta sem fuga, pois não abandona o filho.",
+    "observe": [
+     "Forma: Diálogo de acusação e acordo; mudança da alternativa de fugir para transacionar.",
+     "Função no livro: Define a solução que LXVII concretiza.",
+     "Tensão: Exclusividade versus maternidade e consideração; desejo busca acomodação social.",
+     "Perguntas de verificação: Por que Virgília não foge? / Como a casinha responde à proposta anterior? / O acordo é desistência do amor ou outra organização dele?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxv",
+   "order": 66,
+   "type": "chapter",
+   "title": "LXV — Olheiros e escutas",
+   "opening": "CAPÍTULO LXV Olheiros e escutas",
+   "pdfStartPage": 72,
+   "pdfEndPage": 73,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "A baronesa visita Virgília; Brás descreve uma rede de olhares, parentes e criados que pode denunciá-los.",
+    "observe": [
+     "Forma: Metáfora da floresta de olheiros e das cobras que nela resvalam.",
+     "Função no livro: Torna a casa clandestina necessária e explica novas cautelas.",
+     "Tensão: Intimidade versus vigilância; até elogiar Dutra vira instrumento de proteção.",
+     "Perguntas de verificação: Como Brás passa a tratar Dutra? / O que produzem as metáforas animais? / A vigilância está restrita aos iguais sociais?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxvi",
+   "order": 67,
+   "type": "chapter",
+   "title": "LXVI — As pernas",
+   "opening": "CAPÍTULO LXVI As pernas",
+   "pdfStartPage": 73,
+   "pdfEndPage": 74,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Enquanto pensa nos observadores, as pernas levam Brás ao hotel onde costuma jantar.",
+    "observe": [
+     "Forma: Personificação do corpo e divisão da consciência entre desejo e hábito.",
+     "Função no livro: Interrompe a tensão com uma pequena teoria do movimento automático.",
+     "Tensão: Vontade declarada versus automatismo; o serviço do corpo libera a cabeça para a amante.",
+     "Perguntas de verificação: A que lugar chega sem deliberar? / Como as pernas conversam? / O capítulo apenas distrai ou problematiza a agência?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxvii",
+   "order": 68,
+   "type": "chapter",
+   "title": "LXVII — A casinha",
+   "opening": "CAPÍTULO LXVII A casinha",
+   "pdfStartPage": 74,
+   "pdfEndPage": 76,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Após um bilhete alarmado, Virgília recusa fugir; Brás aluga a casa da Gamboa, que será guardada por D. Plácida.",
+    "observe": [
+     "Forma: Espaço idealizado como infinito por exclusão dos contrários.",
+     "Função no livro: Estabelece o centro do adultério e a futura dependência da caseira.",
+     "Tensão: Amor versus reputação; posse privada exige trabalho e silêncio de uma agregada.",
+     "Perguntas de verificação: Quem ficará na casa? / Como o infinito é construído por exclusão? / A aparente autonomia depende de outros?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxviii",
+   "order": 69,
+   "type": "chapter",
+   "title": "LXVIII — O vergalho",
+   "opening": "CAPÍTULO LXVIII O vergalho",
+   "pdfStartPage": 76,
+   "pdfEndPage": 77,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "No Valongo, Prudêncio liberto açoita seu escravo e obedece a Brás; o narrador chama a transmissão das pancadas de sutileza.",
+    "observe": [
+     "Forma: Repetição da ordem usada na infância e metáfora financeira dos juros da violência.",
+     "Função no livro: Reabre XI, desmentindo a ideia de libertação como ruptura completa da hierarquia.",
+     "Tensão: Alforria versus permanência da dominação; o ex-senhor continua reconhecido como autoridade.",
+     "Perguntas de verificação: Como Prudêncio responde ao pedido de Brás? / O que muda e permanece na ordem cala a boca? / Por que a análise do narrador soa gaiata diante da violência?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxix",
+   "order": 70,
+   "type": "chapter",
+   "title": "LXIX — Um grão de sandice",
+   "opening": "CAPÍTULO LXIX Um grão de sandice",
+   "pdfStartPage": 77,
+   "pdfEndPage": 77,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O caso de Prudêncio leva Brás a Romualdo, que se diz Tamerlão por ter tomado tártaro; depois retorna à Gamboa.",
+    "observe": [
+     "Forma: Trocadilho de falsa causalidade e comentário sobre a perda de graça no papel.",
+     "Função no livro: Desvia do vergalho para uma história de loucura e abandona ambos os personagens.",
+     "Tensão: Tragédia social versus anedota; o narrador decide o que deixar para trás.",
+     "Perguntas de verificação: Que palavra sustenta a explicação de Romualdo? / Como o desvio encerra o tema de Prudêncio? / O humor pode também encobrir a violência anterior?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxx",
+   "order": 71,
+   "type": "chapter",
+   "title": "LXX — D. Plácida",
+   "opening": "CAPÍTULO LXX D. Plácida",
+   "pdfStartPage": 77,
+   "pdfEndPage": 78,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "D. Plácida aceita guardar a casa com resistência; Brás inventa uma novela justificadora e lhe dá cinco contos.",
+    "observe": [
+     "Forma: Relato da capitulação moral e ficção dentro da ficção.",
+     "Função no livro: Une a apropriação de LII ao financiamento da cumplicidade.",
+     "Tensão: Probidade versus necessidade; gratidão e pecúlio vencem o nojo.",
+     "Perguntas de verificação: De onde vêm os cinco contos? / Como a novela ajuda a aceitação? / O pagamento torna livre a escolha da caseira?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxi",
+   "order": 72,
+   "type": "chapter",
+   "title": "LXXI — O senão do livro",
+   "opening": "CAPÍTULO LXXI O senão do livro",
+   "pdfStartPage": 78,
+   "pdfEndPage": 78,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás acusa o leitor de ser o maior defeito do livro por exigir narração direta e estilo regular.",
+    "observe": [
+     "Forma: Metanarração agressiva e comparação do estilo ao andar de ébrios.",
+     "Função no livro: Explica a montagem digressiva já praticada e dramatiza a disputa pelo ritmo.",
+     "Tensão: Liberdade formal versus expectativa; o narrador responsabiliza o público pela frustração.",
+     "Perguntas de verificação: Que leitura o leitor deseja? / Como o andar dos ébrios descreve a composição? / O ataque dispensa a avaliação do próprio narrador?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxii",
+   "order": 73,
+   "type": "chapter",
+   "title": "LXXII — O bibliômano",
+   "opening": "CAPÍTULO LXXII O bibliômano",
+   "pdfStartPage": 78,
+   "pdfEndPage": 79,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás imagina um bibliômano futuro que compra um exemplar único e procura um despropósito sem o achar.",
+    "observe": [
+     "Forma: Prolepse da recepção, caricatura da leitura microscópica e repetição de único.",
+     "Função no livro: Testa o valor de posse do livro contra o valor de sentido.",
+     "Tensão: Leitura versus fetiche; raridade mercantil e erudição podem substituir compreensão.",
+     "Perguntas de verificação: O que torna o volume precioso? / Como a busca microscópica é caricaturada? / Amar o exemplar equivale a entender a obra?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxiii",
+   "order": 74,
+   "type": "chapter",
+   "title": "LXXIII — O luncheon",
+   "opening": "CAPÍTULO LXXIII O luncheon",
+   "pdfStartPage": 79,
+   "pdfEndPage": 79,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás compara o estilo às refeições interrompidas por carícias e arrufos; D. Plácida recusa sentar com os amantes.",
+    "observe": [
+     "Forma: Analogia entre discurso amoroso e narração, com método personificado na caseira.",
+     "Função no livro: Religa as digressões ao cotidiano da Gamboa.",
+     "Tensão: Intimidade versus serviço; a mesa comum preserva posições desiguais.",
+     "Perguntas de verificação: Quem não aceita comer à mesa? / Como as interrupções aproximam forma e amor? / O carinho dissolve a hierarquia da casa?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxiv",
+   "order": 75,
+   "type": "chapter",
+   "title": "LXXIV — História de D. Plácida",
+   "opening": "CAPÍTULO LXXIV História de D. Plácida",
+   "pdfStartPage": 79,
+   "pdfEndPage": 80,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "D. Plácida conta sua vida de trabalho, viuvez e cuidado da mãe e da filha que foge; teme a mendicidade.",
+    "observe": [
+     "Forma: Narrativa encaixada e marcas físicas do trabalho nas mãos.",
+     "Função no livro: Dá densidade própria à mulher reduzida a função e prepara LXXV–LXXVI.",
+     "Tensão: Probidade versus sobrevivência; trabalho feminino não assegura velhice digna.",
+     "Perguntas de verificação: De quem ela sustentava a vida quando ficou viúva? / Como as mãos tornam a história visível? / Por que a necessidade não pode ser reduzida a falta de esforço?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxv",
+   "order": 76,
+   "type": "chapter",
+   "title": "LXXV — Comigo",
+   "opening": "CAPÍTULO LXXV Comigo",
+   "pdfStartPage": 80,
+   "pdfEndPage": 81,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás imagina os pais de D. Plácida explicando que a chamaram à vida para trabalhar e sofrer até morrer.",
+    "observe": [
+     "Forma: Diálogo hipotético do nascimento e acumulação de tarefas.",
+     "Função no livro: Transforma a história particular em problema da transmissão da miséria, retomado em CLX.",
+     "Tensão: Nascimento versus destino de penúria; os trabalhos aparecem como ciclo.",
+     "Perguntas de verificação: Qual pergunta faria a recém-nascida? / Como a enumeração fecha o futuro? / O problema é exclusivamente universal ou tem forma social específica?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxvi",
+   "order": 77,
+   "type": "chapter",
+   "title": "LXXVI — O estrume",
+   "opening": "CAPÍTULO LXXVI O estrume",
+   "pdfStartPage": 81,
+   "pdfEndPage": 81,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "A consciência acusa Brás de corromper a caseira; ele alega ter garantido sua velhice e chama o vício de estrume da virtude.",
+    "observe": [
+     "Forma: Diálogo interior e metáfora fertilizante de compensação.",
+     "Função no livro: Retoma a autoabsolvição de LI; será contrariada pela ruína de D. Plácida.",
+     "Tensão: Proteção versus exploração; dinheiro e fascinação compram colaboração.",
+     "Perguntas de verificação: Que acusação recebe Brás? / Como o estrume transforma vício em causa de virtude? / A explicação posterior da miséria confirma essa garantia?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxvii",
+   "order": 78,
+   "type": "chapter",
+   "title": "LXXVII — Entrevista",
+   "opening": "CAPÍTULO LXXVII Entrevista",
+   "pdfStartPage": 81,
+   "pdfEndPage": 82,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Os encontros ganham regularidade; Brás falta por ciúme e Virgília dissipa a acusação com riso e carinho.",
+    "observe": [
+     "Forma: Contraste entre tremor inicial e período cronométrico; comédia da reconciliação.",
+     "Função no livro: Marca o hábito no amor sem afirmar queda imediata de intensidade.",
+     "Tensão: Posse ciumenta versus sociabilidade; ela ainda aprecia admiração alheia.",
+     "Perguntas de verificação: Por que Brás não vai tomar chá? / O que sugere a linguagem cronométrica? / O costume implica necessariamente falta de amor?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxviii",
+   "order": 79,
+   "type": "chapter",
+   "title": "LXXVIII — A presidência",
+   "opening": "CAPÍTULO LXXVIII A presidência",
+   "pdfStartPage": 82,
+   "pdfEndPage": 83,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Lobo aceita uma presidência; Virgília sofre; Brás transfere a ela a responsabilidade pela continuidade do caso e sai.",
+    "observe": [
+     "Forma: Intimação sentimental e retirada deliberada do apoio.",
+     "Função no livro: Leva ao compromisso egoísta de LXXIX e à solução administrativa de LXXX.",
+     "Tensão: Amor versus responsabilidade; ele exige sacrifício sem definir o próprio.",
+     "Perguntas de verificação: A quem ele entrega a solução? / Como o abandono funciona como pressão? / A fala apaixonada basta para comprovar solidariedade?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxix",
+   "order": 80,
+   "type": "chapter",
+   "title": "LXXIX — Compromisso",
+   "opening": "CAPÍTULO LXXIX Compromisso",
+   "pdfStartPage": 83,
+   "pdfEndPage": 83,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás vacila entre consolar e aguardar; decide visitar Virgília diante do marido e admite que a piedade podia ser egoísmo.",
+    "observe": [
+     "Forma: Correção retrospectiva da motivação e negociação de forças internas.",
+     "Função no livro: Expõe o compromisso antes do convite inesperado do marido.",
+     "Tensão: Piedade versus autopreservação; consolo evita assumir risco equivalente.",
+     "Perguntas de verificação: Onde ele decide visitá-la? / Como a narração revê o nome da piedade? / Confessar a burla modifica o ato passado?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxx",
+   "order": 81,
+   "type": "chapter",
+   "title": "LXXX — De secretário",
+   "opening": "CAPÍTULO LXXX De secretário",
+   "pdfStartPage": 83,
+   "pdfEndPage": 84,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Lobo convida Brás para secretário; Virgília pede silenciosamente que aceite; ele vê uma solução administrativa.",
+    "observe": [
+     "Forma: Ironia dramática e triângulo amoroso descrito por cargos.",
+     "Função no livro: Acomoda Estado e Gamboa antes do impedimento numérico.",
+     "Tensão: Confiança política versus adultério; um cargo viabiliza intimidade clandestina.",
+     "Perguntas de verificação: Quem oferece o posto? / Como os cargos reorganizam o triângulo? / Podemos afirmar que Lobo já conhece tudo nessa cena?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxxi",
+   "order": 82,
+   "type": "chapter",
+   "title": "LXXXI — A reconciliação",
+   "opening": "CAPÍTULO LXXXI A reconciliação",
+   "pdfStartPage": 84,
+   "pdfEndPage": 85,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Sabina propõe paz, traz Sara e Cotrim; a família se reconcilia e desaconselha a viagem ao Norte.",
+    "observe": [
+     "Forma: Cena de recuperação afetiva da infância, interrompida por reservas e gestos.",
+     "Função no livro: Restaura o núcleo familiar que proporá o casamento com Nhã-loló.",
+     "Tensão: Afeto versus planos; elogios pressionam Brás a permanecer na corte.",
+     "Perguntas de verificação: Quem acompanha Sabina? / Como a infância reaparece na cena? / O carinho impede que haja cálculo na reconciliação?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxxii",
+   "order": 83,
+   "type": "chapter",
+   "title": "LXXXII — Questão de botânica",
+   "opening": "CAPÍTULO LXXXII Questão de botânica",
+   "pdfStartPage": 85,
+   "pdfEndPage": 86,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás anuncia a viagem como plano político; gracejos sobre Virgílio e Virgília deixam claro que o caso é público.",
+    "observe": [
+     "Forma: Trocadilho erudito e metáfora do sorriso que desabotoa em flor.",
+     "Função no livro: Dissipa sua ilusão de sigilo e prepara a advertência de Cotrim.",
+     "Tensão: Vexame versus vaidade; a transgressão conhecida também lhe dá prestígio.",
+     "Perguntas de verificação: Que alusão faz Garcez? / Como o sorriso passa de botão a flor? / Por que Brás aceita o comentário que antes o irritaria?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxxiii",
+   "order": 84,
+   "type": "chapter",
+   "title": "LXXXIII — 13",
+   "opening": "CAPÍTULO LXXXIII 13",
+   "pdfStartPage": 86,
+   "pdfEndPage": 87,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Cotrim alerta para o escândalo provincial; Lobo recusa a presidência porque o decreto é datado de 13.",
+    "observe": [
+     "Forma: Contraste entre cálculo social e superstição; título reduzido ao algarismo.",
+     "Função no livro: Evita a separação e prepara a inversão para 31.",
+     "Tensão: Ambição versus terror; o espaço provincial tornaria o adultério mais visível.",
+     "Perguntas de verificação: Que motivo Lobo alega em privado? / Como 13 substitui o conflito anterior? / A superstição deixa de ser sincera por ser conveniente aos amantes?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxxiv",
+   "order": 85,
+   "type": "chapter",
+   "title": "LXXXIV — O conflito",
+   "opening": "CAPÍTULO LXXXIV O conflito",
+   "pdfStartPage": 87,
+   "pdfEndPage": 88,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás celebra o 13; Lobo oscila entre superstição e arrependimento; o ministro interpreta a recusa como manobra e ele passa à oposição.",
+    "observe": [
+     "Forma: Duas interpretações do mesmo gesto e comparação entre superstições caras e baratas.",
+     "Função no livro: Mostra consequências públicas de um receio íntimo, retomadas em C.",
+     "Tensão: Crença versus cálculo; instituições leem politicamente um ato privado.",
+     "Perguntas de verificação: Por que o ministro se irrita? / Como a comparação com D. Plácida mede o custo? / A razão privada esgota os efeitos da recusa?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxxv",
+   "order": 86,
+   "type": "chapter",
+   "title": "LXXXV — O cimo da montanha",
+   "opening": "CAPÍTULO LXXXV O cimo da montanha",
+   "pdfStartPage": 88,
+   "pdfEndPage": 88,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "A ameaça evitada intensifica o amor; depois do cimo, os amantes começam a descer.",
+    "observe": [
+     "Forma: Metáfora da montanha e repetição do verbo de declínio; alusão a Scheherazade.",
+     "Função no livro: Marca um máximo afetivo e anuncia o desgaste.",
+     "Tensão: Renovação versus saciedade; risco acrescenta valor ao prazer.",
+     "Perguntas de verificação: Que acontecimento aviva o amor? / Como a montanha desenha a trajetória? / A descida significa término imediato?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxxvi",
+   "order": 87,
+   "type": "chapter",
+   "title": "LXXXVI — O mistério",
+   "opening": "CAPÍTULO LXXXVI O mistério",
+   "pdfStartPage": 88,
+   "pdfEndPage": 88,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás percebe mudança em Virgília; ela lhe revela algo que o faz beijá-la com gravidade e receber um gesto maternal.",
+    "observe": [
+     "Forma: Elipse da informação e suspensão do sentido para o leitor.",
+     "Função no livro: Prepara a revelação da gestação em XC.",
+     "Tensão: Mistério versus reconhecimento; expectativa paterna aparece por gestos.",
+     "Perguntas de verificação: Que gesto Virgília faz com a cabeça de Brás? / Como a elipse cria a pergunta? / Que evidência posterior autoriza decifrar o mistério?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxxvii",
+   "order": 88,
+   "type": "chapter",
+   "title": "LXXXVII — Geologia",
+   "opening": "CAPÍTULO LXXXVII Geologia",
+   "pdfStartPage": 88,
+   "pdfEndPage": 89,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "A morte de Viegas desperta expectativas; Brás atribui camadas de caráter a Lobo e lembra Jacó, probo que mente socialmente.",
+    "observe": [
+     "Forma: Geologia moral e exemplo de quatro mentiras pequenas; correção do nome lembrado.",
+     "Função no livro: Recusa um rival inteiramente vil e complica a verdade social.",
+     "Tensão: Probidade versus conveniência; as camadas mudam com as relações.",
+     "Perguntas de verificação: Que núcleo Brás reconhece em Lobo? / Como a geologia organiza o caráter? / Mentiras de cortesia equivalem a toda forma de fraude?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxxviii",
+   "order": 89,
+   "type": "chapter",
+   "title": "LXXXVIII — O enfermo",
+   "opening": "CAPÍTULO LXXXVIII O enfermo",
+   "pdfStartPage": 89,
+   "pdfEndPage": 90,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Virgília cuida de Viegas esperando um legado; Brás apresenta sua adulação como algo naturalmente feminino.",
+    "observe": [
+     "Forma: Descrição reiterada de cuidados e generalização interessada sobre gênero.",
+     "Função no livro: Prepara a negociação da morte e a ausência de legado.",
+     "Tensão: Afeto versus herança; o papel de enfermeira disfarça interesse econômico.",
+     "Perguntas de verificação: Que presente o velho dá a Nhonhô? / Como os cuidados são narrados? / A legitimidade da adulação feminina é dado neutro ou juízo de Brás?"
+    ]
+   }
+  },
+  {
+   "id": "cap-lxxxix",
+   "order": 90,
+   "type": "chapter",
+   "title": "LXXXIX — In extremis",
+   "opening": "CAPÍTULO LXXXIX In extremis",
+   "pdfStartPage": 90,
+   "pdfEndPage": 91,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Viegas insiste no preço de quarenta contos para uma casa até a tosse final; o comprador ia ceder, mas chega tarde.",
+    "observe": [
+     "Forma: Fala quebrada em sílabas e contraste entre agonia e cálculo.",
+     "Função no livro: Leva ao testamento sem lembrança para Virgília.",
+     "Tensão: Morte versus avareza; o mercado continua no leito do moribundo.",
+     "Perguntas de verificação: Que preço Viegas exige? / Como as sílabas finais materializam a agonia? / O humor impede perceber a crueldade da cena?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xc",
+   "order": 91,
+   "type": "chapter",
+   "title": "XC — O velho colóquio de Adão e Caim",
+   "opening": "CAPÍTULO XC O velho colóquio de Adão e Caim",
+   "pdfStartPage": 91,
+   "pdfEndPage": 92,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Sem legado, Virgília se irrita; Brás revela a gravidez e imagina o embrião em todas as idades, inclusive como deputado.",
+    "observe": [
+     "Forma: Colóquio sem palavras e montagem acelerada de futuros incompatíveis.",
+     "Função no livro: Resolve LXXXVI e prepara o desmoronamento de XCV e a negativa final.",
+     "Tensão: Paternidade versus projeção; o filho reproduziria as ambições paternas.",
+     "Perguntas de verificação: Que mistério é desfeito? / Como as idades se sucedem no pensamento? / Brás reconhece a obscuridade da paternidade?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xci",
+   "order": 92,
+   "type": "chapter",
+   "title": "XCI — Uma carta extraordinária",
+   "opening": "CAPÍTULO XCI Uma carta extraordinária",
+   "pdfStartPage": 92,
+   "pdfEndPage": 93,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas restitui outro relógio, anuncia prosperidade e o Humanitismo, chamado a assegurar felicidade.",
+    "observe": [
+     "Forma: Carta encaixada, eufemismo do furto como empréstimo e promessas absolutas.",
+     "Função no livro: Reintroduz o amigo como filósofo e prepara CXVII.",
+     "Tensão: Regeneração versus aparência; dinheiro restaura a dignidade reconhecida pelo outro.",
+     "Perguntas de verificação: O relógio é o mesmo? / Como a carta renomeia o furto? / A lucidez da carta comprova a verdade da filosofia?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xcii",
+   "order": 93,
+   "type": "chapter",
+   "title": "XCII — Um homem extraordinário",
+   "opening": "CAPÍTULO XCII Um homem extraordinário",
+   "pdfStartPage": 93,
+   "pdfEndPage": 93,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Damasceno traz o convite de Cotrim e discorre sobre revolução, tráfico, ingleses e ópera.",
+    "observe": [
+     "Forma: Monólogo associativo e contradições entre patriotismo e interesses.",
+     "Função no livro: Apresenta o pai de Nhã-loló e o ambiente de sua candidatura conjugal.",
+     "Tensão: Grandeza patriótica versus confusão; o tráfico é defendido dentro do entusiasmo nacional.",
+     "Perguntas de verificação: Que atividade ele quer desenvolver? / Como os assuntos se atropelam? / Por que não converter seu patriotismo em virtude simples?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xciii",
+   "order": 94,
+   "type": "chapter",
+   "title": "XCIII — O jantar",
+   "opening": "CAPÍTULO XCIII O jantar",
+   "pdfStartPage": 93,
+   "pdfEndPage": 94,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "No jantar, Nhã-loló olha Brás e canta; Sabina a recomenda como noiva e insiste no casamento.",
+    "observe": [
+     "Forma: Retrato centrado no olhar e diálogo que converte encontro em candidatura.",
+     "Função no livro: Abre o novo plano matrimonial durante o adultério.",
+     "Tensão: Atração versus aliança familiar; elegância funciona como requisito de corte.",
+     "Perguntas de verificação: Quem apresenta a noiva possível? / Como o olhar orienta a cena? / A sugestão autoriza concluir que toda reconciliação foi falsa?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xciv",
+   "order": 95,
+   "type": "chapter",
+   "title": "XCIV — A causa secreta",
+   "opening": "CAPÍTULO XCIV A causa secreta",
+   "pdfStartPage": 94,
+   "pdfEndPage": 94,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Virgília não gosta de ouvir falar no filho; Brás testa hipóteses e decide que ela teme o parto e o vexame da gravidez.",
+    "observe": [
+     "Forma: Sucessão de conjecturas corrigidas e ironia final do sorriso incrédulo.",
+     "Função no livro: Contrapõe fantasia paterna e experiência corporal da gestante.",
+     "Tensão: Sacralização pelo homem versus dor da mulher; hábitos elegantes também pesam.",
+     "Perguntas de verificação: Que medo anterior é lembrado? / Como ele corrige suas hipóteses? / O relato dá acesso direto e completo à mente de Virgília?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xcv",
+   "order": 96,
+   "type": "chapter",
+   "title": "XCV — Flores de antanho",
+   "opening": "CAPÍTULO XCV Flores de antanho",
+   "pdfStartPage": 94,
+   "pdfEndPage": 95,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Lobo informa a perda do embrião; Brás olha as laranjeiras sem flores e suas quimeras paternais desabam.",
+    "observe": [
+     "Forma: Imagem vegetal e pergunta intertextual sobre flores passadas.",
+     "Função no livro: Frustra XC e fornece um precedente ao não ter filhos de CLX.",
+     "Tensão: Projeto de descendência versus perda; marido e amante partilham uma notícia desigual.",
+     "Perguntas de verificação: Quem traz a notícia? / Como as laranjeiras representam a perda? / A negativa final apaga essa experiência de expectativa?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xcvi",
+   "order": 97,
+   "type": "chapter",
+   "title": "XCVI — A carta anônima",
+   "opening": "CAPÍTULO XCVI A carta anônima",
+   "pdfStartPage": 95,
+   "pdfEndPage": 95,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Uma carta anônima denuncia o caso; Virgília nega e promete afastar Brás, que estranha sua calma.",
+    "observe": [
+     "Forma: Documento acusatório e relato dialogado da dissimulação.",
+     "Função no livro: Aumenta o perigo e altera a relação do amante com a casa do marido.",
+     "Tensão: Conservação da família versus descoberta; opinião pública torna-se ameaça.",
+     "Perguntas de verificação: O que a carta deixa de mencionar? / Como Virgília desloca a acusação a outros pretendentes? / A calma prova ausência de amor?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xcvii",
+   "order": 98,
+   "type": "chapter",
+   "title": "XCVII — Entre a boca e a testa",
+   "opening": "CAPÍTULO XCVII Entre a boca e a testa",
+   "pdfStartPage": 95,
+   "pdfEndPage": 96,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás pede que o leitor examine o intervalo entre seu beijo na testa e o recuo de Virgília.",
+    "observe": [
+     "Forma: Expansão de um gesto mínimo em espaço interpretativo; hipóteses paralelas.",
+     "Função no livro: Mantém em aberto o desgaste que a cena de XCVI insinuou.",
+     "Tensão: Desejo versus ressentimento ou saciedade; sinais corporais não têm leitura única.",
+     "Perguntas de verificação: Que gesto produz a análise? / Como um intervalo breve comporta várias causas? / Por que preservar a alternativa em vez de escolher sem prova?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xcviii",
+   "order": 99,
+   "type": "chapter",
+   "title": "XCVIII — Suprimido",
+   "opening": "CAPÍTULO XCVIII Suprimido",
+   "pdfStartPage": 96,
+   "pdfEndPage": 96,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás se reconcilia com o perigo e observa Nhã-loló no teatro; promete suprimir o capítulo que mantém escrito.",
+    "observe": [
+     "Forma: Negativa performativa e combinação de anjo e besta; digressão sobre vestuário.",
+     "Função no livro: Liga as candidaturas afetivas e expõe o desejo que a castidade verbal encobre.",
+     "Tensão: Pudor versus exposição; elegância requer gastos e atrai o pretendente.",
+     "Perguntas de verificação: Quem ele visita no camarote? / Como a supressão expõe o que diz calar? / O rótulo casto elimina a erotização?"
+    ]
+   }
+  },
+  {
+   "id": "cap-xcix",
+   "order": 100,
+   "type": "chapter",
+   "title": "XCIX — Na plateia",
+   "opening": "CAPÍTULO XCIX Na plateia",
+   "pdfStartPage": 96,
+   "pdfEndPage": 97,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Lobo alterna frieza pública e afabilidade a sós; Brás nada ouve da peça e pensa em ascensão.",
+    "observe": [
+     "Forma: Contraste de situações e alheamento ostentado da multidão.",
+     "Função no livro: Abre a nova necessidade de agir politicamente, sem explicar definitivamente Lobo.",
+     "Tensão: Desejo de aplauso versus desdém; ambição e amor concorrem com o espetáculo.",
+     "Perguntas de verificação: Que lugar reúne os dois a sós? / Como o silêncio do espectador produz a cena interior? / É possível explicar Lobo com certeza apenas por esse encontro?"
+    ]
+   }
+  },
+  {
+   "id": "cap-c",
+   "order": 101,
+   "type": "chapter",
+   "title": "C — O caso provável",
+   "opening": "CAPÍTULO C O caso provável",
+   "pdfStartPage": 97,
+   "pdfEndPage": 98,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás propõe ação recíproca entre vida pública e privada: a recusa do 13 levou à dissidência; outra consequência é adiada.",
+    "observe": [
+     "Forma: Analogia com marés e anúncio de aplicação incompleta.",
+     "Função no livro: Oferece a ponte interpretativa para a reconciliação ministerial e futura partida.",
+     "Tensão: Lei geral versus caso provável; atos particulares modificam posições políticas.",
+     "Perguntas de verificação: Qual efeito teve o decreto de 13? / Como as marés representam reciprocidade? / Por que ele distingue probabilidade e certeza?"
+    ]
+   }
+  },
+  {
+   "id": "cap-ci",
+   "order": 102,
+   "type": "chapter",
+   "title": "CI — A revolução dálmata",
+   "opening": "CAPÍTULO CI A revolução dálmata",
+   "pdfStartPage": 98,
+   "pdfEndPage": 98,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Virgília anuncia a volta de Lobo ao ministério; Brás recorda um conde rival afastado por uma revolução distante, que ele abençoara.",
+    "observe": [
+     "Forma: Contraste entre horror coletivo e alívio privado; distância geográfica usada como desculpa.",
+     "Função no livro: Retoma o espadim de XII e mostra interesses íntimos diante da história.",
+     "Tensão: Piedade pública versus vantagem; títulos de nobreza continuam atraindo Virgília.",
+     "Perguntas de verificação: O que a revolução remove para Brás? / Como a distância reduz sua preocupação? / O relato permite tratar a Dalmácia como dado histórico verificado?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cii",
+   "order": 103,
+   "type": "chapter",
+   "title": "CII — De repouso",
+   "opening": "CAPÍTULO CII De repouso",
+   "pdfStartPage": 98,
+   "pdfEndPage": 98,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás anuncia uma ação baixa, mas adia contá-la nesta página.",
+    "observe": [
+     "Forma: Reticência e pausa metanarrativa declarada como repouso do vexame.",
+     "Função no livro: Prepara a falta ao encontro em CIII.",
+     "Tensão: Confissão versus adiamento; vergonha administra o ritmo e a exposição.",
+     "Perguntas de verificação: Que tipo de ação ele anuncia? / Como o adiamento cria expectativa? / Adiar a culpa equivale a negá-la?"
+    ]
+   }
+  },
+  {
+   "id": "cap-ciii",
+   "order": 104,
+   "type": "chapter",
+   "title": "CIII — Distração",
+   "opening": "CAPÍTULO CIII Distração",
+   "pdfStartPage": 98,
+   "pdfEndPage": 100,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás chega uma hora tarde; D. Plácida o repreende e tenta manter o amor; a reconciliação se cruza com uma mosca e uma formiga.",
+    "observe": [
+     "Forma: Narrativa do atraso, comentário sobre gestos evasivos e cena animal intercalada.",
+     "Função no livro: Mostra desgaste, trabalho da confidente e combate mínimo antes do risco de CIV.",
+     "Tensão: Cuidado versus distração; D. Plácida gasta esforço para conservar uma vida alheia.",
+     "Perguntas de verificação: Quanto ele se atrasa? / Como os insetos interferem na discussão? / O cuidado breve pelos insetos compensa a negligência com as pessoas?"
+    ]
+   }
+  },
+  {
+   "id": "cap-civ",
+   "order": 105,
+   "type": "chapter",
+   "title": "CIV — Era ele!",
+   "opening": "CAPÍTULO CIV Era ele!",
+   "pdfStartPage": 100,
+   "pdfEndPage": 100,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Lobo chega à casa; Virgília esconde Brás e D. Plácida improvisa a recepção; ele vê pelo buraco da fechadura.",
+    "observe": [
+     "Forma: Restrição visual e diálogo de representação dentro do segredo.",
+     "Função no livro: É o momento máximo da ameaça de descoberta, sem explosão de sangue.",
+     "Tensão: Terror versus controle; a caseira participa corporalmente da proteção.",
+     "Perguntas de verificação: Onde Brás se esconde? / Que limite impõe o buraco da fechadura? / O silêncio de Lobo permite saber exatamente o que viu?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cv",
+   "order": 106,
+   "type": "chapter",
+   "title": "CV — Equivalência das janelas",
+   "opening": "CAPÍTULO CV Equivalência das janelas",
+   "pdfStartPage": 100,
+   "pdfEndPage": 101,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Depois da saída, Brás diz que irá arrancar Virgília ao marido; D. Plácida o detém; ele entende o gesto como ventilação moral.",
+    "observe": [
+     "Forma: Retorno explícito da lei das janelas e motivação retrospectiva contraditória.",
+     "Função no livro: Reaplica LI a uma iniciativa sem consequência.",
+     "Tensão: Heroísmo anunciado versus segurança; o gesto beneficia a consciência do próprio homem.",
+     "Perguntas de verificação: Quem impede a saída? / Como a lei anterior reinterpreta a bravata? / A intenção é comprovável pelas palavras posteriores?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cvi",
+   "order": 107,
+   "type": "chapter",
+   "title": "CVI — Jogo perigoso",
+   "opening": "CAPÍTULO CVI Jogo perigoso",
+   "pdfStartPage": 101,
+   "pdfEndPage": 101,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás imagina violências possíveis de Lobo; D. Plácida vai investigar; ele considera um casamento seguro.",
+    "observe": [
+     "Forma: Interrogações em série e substituição de cenários ameaçadores por fantasia doméstica.",
+     "Função no livro: Prepara o bilhete e a atração renovada pelo casamento.",
+     "Tensão: Risco da amante versus autopreservação; a velha assume a tarefa arriscada.",
+     "Perguntas de verificação: Quem vai à casa de Lobo? / Como a sequência de perguntas expressa incerteza? / O sonho matrimonial deriva necessariamente de arrependimento moral?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cvii",
+   "order": 108,
+   "type": "chapter",
+   "title": "CVII — Bilhete",
+   "opening": "CAPÍTULO CVII Bilhete",
+   "pdfStartPage": 101,
+   "pdfEndPage": 101,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Um bilhete informa que Lobo suspeita, se mantém sério e sorri para o filho; recomenda cautela.",
+    "observe": [
+     "Forma: Voz epistolar sem comentário imediato, frases breves e notícia incompleta.",
+     "Função no livro: Suspende a perspectiva de Brás e fornece a fonte analisada em CVIII.",
+     "Tensão: Perigo versus contenção; o filho continua centro da atenção do marido.",
+     "Perguntas de verificação: Para quem ele sorri? / Como o bilhete limita suas próprias certezas? / Ausência de violência confirma ausência de suspeita?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cviii",
+   "order": 109,
+   "type": "chapter",
+   "title": "CVIII — Que se não entende",
+   "opening": "CAPÍTULO CVIII Que se não entende",
+   "pdfStartPage": 101,
+   "pdfEndPage": 103,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás convida a interpretar o bilhete, mas não consegue nomear a própria comoção entre medo, dó, vaidade e amor.",
+    "observe": [
+     "Forma: Paradoxos sucessivos e recusa de análise total.",
+     "Função no livro: Torna a ambiguidade afetiva um problema formal, antes da chegada do filósofo.",
+     "Tensão: Confissão versus desconhecimento; a franqueza admite limites.",
+     "Perguntas de verificação: Quantas vezes ele diz ter relido? / Como as negações complicam cada sentimento? / Por que não aceitar sua autoanálise sem provas?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cix",
+   "order": 110,
+   "type": "chapter",
+   "title": "CIX — O filósofo",
+   "opening": "CAPÍTULO CIX O filósofo",
+   "pdfStartPage": 103,
+   "pdfEndPage": 104,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas chega próspero, critica a frugalidade e conta sua queda gradual; Brás se sente dividido entre narrativas.",
+    "observe": [
+     "Forma: Descrição negada enquanto praticada e comparação do espírito com peteca.",
+     "Função no livro: Reapresenta a filosofia como promessa de acomodação e consolo.",
+     "Tensão: Sistema explicativo versus complexidade; herança muda a aparência da dignidade.",
+     "Perguntas de verificação: De onde vem a fortuna de Quincas? / Como a peteca figura as preocupações? / A recuperação financeira prova recuperação de verdade?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cx",
+   "order": 111,
+   "type": "chapter",
+   "title": "CX — 31",
+   "opening": "CAPÍTULO CX 31",
+   "pdfStartPage": 104,
+   "pdfEndPage": 104,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Lobo recebe nova presidência, agora em decreto de 31; não há recusa.",
+    "observe": [
+     "Forma: Microcapítulo e transposição do número 13 em 31.",
+     "Função no livro: Resolve o impedimento anterior e precipita a separação.",
+     "Tensão: Ambição versus crença; a mesma matéria numérica muda de valor pela ordem.",
+     "Perguntas de verificação: Qual data elimina o medo? / Como a brevidade dá relevo ao acaso? / Que crítica à causalidade a inversão permite?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxi",
+   "order": 112,
+   "type": "chapter",
+   "title": "CXI — O muro",
+   "opening": "CAPÍTULO CXI O muro",
+   "pdfStartPage": 104,
+   "pdfEndPage": 105,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás toma um bilhete antigo como convite atual para saltar um muro; considera-o absurdo, mas descobre que já obedecera antes.",
+    "observe": [
+     "Forma: Erro temporal de leitura e repetição da sensação esquisita.",
+     "Função no livro: Evidencia a mudança do desejo na iminência da partida.",
+     "Tensão: Coragem passada versus repulsa presente; o risco perde atração com o hábito.",
+     "Perguntas de verificação: Por que o bilhete parece novo? / Como a releitura altera o julgamento? / O muro mudou ou mudou o leitor do bilhete?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxii",
+   "order": 113,
+   "type": "chapter",
+   "title": "CXII — A opinião",
+   "opening": "CAPÍTULO CXII A opinião",
+   "pdfStartPage": 105,
+   "pdfEndPage": 106,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás supõe que Lobo teme a opinião mais que a lei, e por isso mantém a família e dissimula.",
+    "observe": [
+     "Forma: Conjecturas marcadas e personificação de um tribunal invisível.",
+     "Função no livro: Explica sem confirmar a tolerância do rival e prepara CXIII.",
+     "Tensão: Honra doméstica versus exposição; opinião pública pune revelar tanto quanto transgredir.",
+     "Perguntas de verificação: Que temor Brás atribui a Lobo? / Como o tribunal invisível atua? / Por que a explicação deve continuar hipótese?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxiii",
+   "order": 114,
+   "type": "chapter",
+   "title": "CXIII — A solda",
+   "opening": "CAPÍTULO CXIII A solda",
+   "pdfStartPage": 106,
+   "pdfEndPage": 106,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás resume que a opinião solda as instituições domésticas e políticas e elogia a maioria.",
+    "observe": [
+     "Forma: Máxima generalizante e ironia do elogio ao maior número.",
+     "Função no livro: Condensa a análise de CXII, preservando o problema de sua certeza.",
+     "Tensão: Estabilidade versus ocultamento; unidade familiar depende da aparência.",
+     "Perguntas de verificação: O que a opinião une? / Como a solda converte pressão em benefício? / O elogio da maioria é voz transparente de Machado?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxiv",
+   "order": 115,
+   "type": "chapter",
+   "title": "CXIV — Fim de um diálogo",
+   "opening": "CAPÍTULO CXIV Fim de um diálogo",
+   "pdfStartPage": 106,
+   "pdfEndPage": 106,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Os amantes se despedem em diálogo; Virgília pede visitas a D. Plácida e prevê retorno breve.",
+    "observe": [
+     "Forma: Diálogo sem descrição, despedida afetada pelo olhar externo.",
+     "Função no livro: Encerra a convivência regular e deixa a caseira como vínculo.",
+     "Tensão: Saudade versus vigilância; eles se separam porque são observados.",
+     "Perguntas de verificação: Quem recebe futura correspondência? / Como a fala sobre o sofá impõe o fim? / A despedida sustenta um final melodramático?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxv",
+   "order": 116,
+   "type": "chapter",
+   "title": "CXV — O almoço",
+   "opening": "CAPÍTULO CXV O almoço",
+   "pdfStartPage": 106,
+   "pdfEndPage": 107,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás sente alívio e saudade, almoça deliciosamente e rejeita o desespero romanesco.",
+    "observe": [
+     "Forma: Contraste entre expectativa do leitor e corpo alimentado; funeral figurado dos amores.",
+     "Função no livro: Fecha o ciclo da Gamboa e abre novas ocupações.",
+     "Tensão: Dor versus prazer; consumo sofisticado amortece a perda.",
+     "Perguntas de verificação: Ele deixa de almoçar? / Como distingue romanesco e biográfico? / Alívio anula a saudade?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxvi",
+   "order": 117,
+   "type": "chapter",
+   "title": "CXVI — Filosofia das folhas velhas",
+   "opening": "CAPÍTULO CXVI Filosofia das folhas velhas",
+   "pdfStartPage": 107,
+   "pdfEndPage": 107,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Após a partida, Brás passa dias na rede, acompanha mortes e relê cartas antigas para reconstruir a juventude.",
+    "observe": [
+     "Forma: Comparações burocráticas das mortes e montagem documental da lembrança.",
+     "Função no livro: Retoma a solidão e a revisão de edições pessoais.",
+     "Tensão: Memória versus indiferença; mortes familiares tornam-se operações de rotina.",
+     "Perguntas de verificação: Que documentos ele relê? / Como o correio figura os enterros? / A nostalgia preserva as pessoas ou a imagem de si?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxvii",
+   "order": 118,
+   "type": "chapter",
+   "title": "CXVII — O Humanitismo",
+   "opening": "CAPÍTULO CXVII O Humanitismo",
+   "pdfStartPage": 107,
+   "pdfEndPage": 109,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas expõe Humanitas, afirma a virtude da inveja e a ilusão da dor enquanto come frango resultante de muitos trabalhos.",
+    "observe": [
+     "Forma: Sistema totalizante parodiado e contraste entre discurso sobre fome e refeição.",
+     "Função no livro: Formaliza a doutrina que legitima competição, violência e prazer.",
+     "Tensão: Universalidade versus vantagem individual; africano escravizado e trabalhadores são meios do apetite.",
+     "Perguntas de verificação: Quais fases são nomeadas? / Como o frango desmente a abstração? / Negar a dor elimina seus efeitos concretos?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxviii",
+   "order": 119,
+   "type": "chapter",
+   "title": "CXVIII — A terceira força",
+   "opening": "CAPÍTULO CXVIII A terceira força",
+   "pdfStartPage": 109,
+   "pdfEndPage": 110,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás nomeia a terceira força que o chama à atividade: a necessidade de público e aplauso.",
+    "observe": [
+     "Forma: Breve enumeração de impulsos e retorno hipotético do emplasto.",
+     "Função no livro: Liga casamento e filosofia à antiga nomeada de II.",
+     "Tensão: Sociabilidade versus solidão; a atividade desejada precisa produzir visibilidade.",
+     "Perguntas de verificação: Qual é a terceira força? / Como o emplasto reaparece como hipótese? / O desejo de fazer algo já define utilidade social?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxix",
+   "order": 120,
+   "type": "chapter",
+   "title": "CXIX — Parêntesis",
+   "opening": "CAPÍTULO CXIX Parêntesis",
+   "pdfStartPage": 110,
+   "pdfEndPage": 110,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás insere seis máximas e as chama bocejos de enfado, aptas a discursos sem assunto.",
+    "observe": [
+     "Forma: Aforismos entre parênteses, antíteses e perspectiva de classe no cocheiro e joalheiro.",
+     "Função no livro: Concentra em fragmentos o tempo, a distinção e o egoísmo.",
+     "Tensão: Sabedoria versus vacuidade; luxo depende de diferenciação e etnocentrismo.",
+     "Perguntas de verificação: Que prazer diminuiria se todos tivessem carruagem? / Como os parênteses isolam as máximas? / A frase do joalheiro é crítica neutra de costumes?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxx",
+   "order": 121,
+   "type": "chapter",
+   "title": "CXX — Compelle intrare",
+   "opening": "CAPÍTULO CXX Compelle intrare",
+   "pdfStartPage": 110,
+   "pdfEndPage": 110,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Sabina insiste no casamento; Brás deseja filhos; Quincas interpreta a paternidade como ritual de Humanitas.",
+    "observe": [
+     "Forma: Apropriação do compelle intrare bíblico e repetição de sem filhos.",
+     "Função no livro: Reabre a descendência perdida, preparando a negativa de CLX.",
+     "Tensão: Solidão versus reprodução; pressão familiar recebe legitimação filosófica.",
+     "Perguntas de verificação: A quem Brás pede conselho? / Como a fórmula religiosa é reutilizada? / O casamento é pensado somente como amor por Nhã-loló?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxi",
+   "order": 122,
+   "type": "chapter",
+   "title": "CXXI — Morro abaixo",
+   "opening": "CAPÍTULO CXXI Morro abaixo",
+   "pdfStartPage": 110,
+   "pdfEndPage": 112,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás se aproxima do casamento; na descida da missa, Damasceno para numa rinha e Nhã-loló conduz o pretendente adiante; eles se beijam.",
+    "observe": [
+     "Forma: Descida espacial transformada em rejuvenescimento e aplicação amorosa de Humanitas.",
+     "Função no livro: Avança a candidatura conjugal e prepara o vexame de classe de CXXII.",
+     "Tensão: Paixão versus distância social; o comportamento do pai ameaça a ascensão da filha.",
+     "Perguntas de verificação: O que retém Damasceno? / Como a descida faz cair os anos? / Por que o beijo não apaga o vexame?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxii",
+   "order": 123,
+   "type": "chapter",
+   "title": "CXXII — Uma intenção mui fina",
+   "opening": "CAPÍTULO CXXII Uma intenção mui fina",
+   "pdfStartPage": 112,
+   "pdfEndPage": 112,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Nhã-loló se envergonha da rinha do pai; Brás interpreta seu esforço de elegância como separação entre a própria causa e a família.",
+    "observe": [
+     "Forma: Focalização conjectural e metáfora da flor a arrancar do pântano.",
+     "Função no livro: Define o casamento como resgate e afinidade social imaginados pelo pretendente.",
+     "Tensão: Ascensão versus origem; a jovem adapta gestos ao mundo de Brás.",
+     "Perguntas de verificação: O que ela procura disfarçar? / Como flor e pântano hierarquizam a família? / A interpretação do narrador equivale à intenção comprovada da moça?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxiii",
+   "order": 124,
+   "type": "chapter",
+   "title": "CXXIII — O verdadeiro Cotrim",
+   "opening": "CAPÍTULO CXXIII O verdadeiro Cotrim",
+   "pdfStartPage": 112,
+   "pdfEndPage": 113,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Cotrim recusa aconselhar o casamento; Brás o defende de avareza e brutalidade, admitindo tráfico e escravos ensanguentados.",
+    "observe": [
+     "Forma: Elogio contraditório e enumeração de virtudes privadas que não refutam a violência pública.",
+     "Função no livro: Dá material para avaliar a moral do próprio narrador e os negócios de CXLVIII.",
+     "Tensão: Honra versus barbárie; caridade anunciada, afeto familiar e tortura convivem.",
+     "Perguntas de verificação: Qual fato fundamenta a acusação de bárbaro? / Como a defesa acaba documentando a violência? / Afeto aos filhos prova bondade universal?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxiv",
+   "order": 125,
+   "type": "chapter",
+   "title": "CXXIV — Vá de intermédio",
+   "opening": "CAPÍTULO CXXIV Vá de intermédio",
+   "pdfStartPage": 113,
+   "pdfEndPage": 114,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás insere um capítulo entre o retrato de Cotrim e o epitáfio para poupar o leitor do abalo.",
+    "observe": [
+     "Forma: Intermédio metanarrativo e imagem da ponte entre vida e morte.",
+     "Função no livro: Prepara a morte de Nhã-loló tornando visível a administração do efeito literário.",
+     "Tensão: Realidade abrupta versus conforto do livro; o narrador calcula a recepção.",
+     "Perguntas de verificação: Que duas unidades ele diz separar? / Como o intervalo regula o efeito? / Mediar o choque equivale a eliminar a morte?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxv",
+   "order": 126,
+   "type": "chapter",
+   "title": "CXXV — Epitáfio",
+   "opening": "CAPÍTULO CXXV Epitáfio",
+   "pdfStartPage": 114,
+   "pdfEndPage": 114,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Um epitáfio registra Eulália Damascena de Brito, morta aos dezenove anos, e pede oração.",
+    "observe": [
+     "Forma: Capítulo gráfico substitui a narrativa da morte; texto confirmado visualmente na p. 114 e ausente da extração.",
+     "Função no livro: Encerra bruscamente o projeto matrimonial; CXXVI explica a epidemia.",
+     "Tensão: Vida projetada versus inscrição funerária; a jovem passa do olhar amoroso a registro público.",
+     "Perguntas de verificação: Que idade consta da inscrição? / Como o epitáfio substitui cenas da doença? / A falta de relato permite concluir que o acontecimento foi irrelevante?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxvi",
+   "order": 127,
+   "type": "chapter",
+   "title": "CXXVI — Desconsolação",
+   "opening": "CAPÍTULO CXXVI Desconsolação",
+   "pdfStartPage": 114,
+   "pdfEndPage": 115,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás informa que Nhã-loló morreu na primeira entrada da febre amarela; Quincas defende a utilidade das epidemias; Damasceno lamenta os poucos presentes.",
+    "observe": [
+     "Forma: Contraste entre perda individual e abstração filosófica, seguido de contagem dos convites.",
+     "Função no livro: Frustra novamente a descendência e prepara a discussão da formalidade.",
+     "Tensão: Dor versus explicação otimista; sobrevivência e reconhecimento social tornam-se consolos.",
+     "Perguntas de verificação: Quantos convites Damasceno enviara? / Como a doutrina contrasta com o luto? / Sua tristeza pelos ausentes torna falso o amor à filha?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxvii",
+   "order": 128,
+   "type": "chapter",
+   "title": "CXXVII — Formalidade",
+   "opening": "CAPÍTULO CXXVII Formalidade",
+   "pdfStartPage": 115,
+   "pdfEndPage": 115,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás aproxima o desejo de presença formal no enterro ao véu de damas turcas e celebra a Formalidade.",
+    "observe": [
+     "Forma: Analogia cultural e personificação; inversão da relação entre letra e espírito.",
+     "Função no livro: Transforma o caso de Damasceno em princípio da aparência social.",
+     "Tensão: Rito versus sentimento; a indiferença que cumprimenta consola mais que estima sem gesto.",
+     "Perguntas de verificação: Que função tem o véu na comparação? / Como a formalidade pode ocultar e divulgar? / Valor social do rito elimina a hipocrisia?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxviii",
+   "order": 129,
+   "type": "chapter",
+   "title": "CXXVIII — Na Câmara",
+   "opening": "CAPÍTULO CXXVIII Na Câmara",
+   "pdfStartPage": 115,
+   "pdfEndPage": 116,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás é deputado; observa a gravura turca, conversas e desenhos enquanto Lobo discursa; admite ambição de ministro.",
+    "observe": [
+     "Forma: Montagem da cena parlamentar e correção da obrigação de ter remorso.",
+     "Função no livro: Realiza uma posição almejada sem tornar realizado o projeto ministerial.",
+     "Tensão: Mandato versus atenção pública; carreira aparece envolvida em distração e desejo.",
+     "Perguntas de verificação: Quem está na tribuna? / Como as atividades paralelas esvaziam a solenidade? / Ser deputado encerra o desejo de posição superior?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxix",
+   "order": 130,
+   "type": "chapter",
+   "title": "CXXIX — Sem remorsos",
+   "opening": "CAPÍTULO CXXIX Sem remorsos",
+   "pdfStartPage": 116,
+   "pdfEndPage": 116,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás declara não ter remorsos e contrapõe Aquiles e Lady Macbeth; prefere reputação heroica ao sofrimento da culpa.",
+    "observe": [
+     "Forma: Experimento químico imaginado e intertextos usados como comparação de vantagens.",
+     "Função no livro: Explicita o limite da confissão e prepara a instrução de intercalar CXXX.",
+     "Tensão: Violência gloriosa versus culpa; prestígio literário pesa no julgamento.",
+     "Perguntas de verificação: Qual figura ele preferiria ser? / Como a química imaginária trata o remorso? / Citar exemplos trágicos prova que sente culpa?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxx",
+   "order": 131,
+   "type": "chapter",
+   "title": "CXXX — Para intercalar no cap. CXXIX",
+   "opening": "CAPÍTULO CXXX Para intercalar no cap. CXXIX",
+   "pdfStartPage": 116,
+   "pdfEndPage": 116,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Em 1855, Brás reencontra Virgília num baile, admira sua beleza outoniça e manda inserir esse encontro dentro do capítulo anterior.",
+    "observe": [
+     "Forma: Montagem declarada por instrução editorial e comunicação por subentendidos.",
+     "Função no livro: Faz a memória amorosa atravessar a negativa de remorso.",
+     "Tensão: Passado versus envelhecimento; beleza persiste com outra tonalidade.",
+     "Perguntas de verificação: Em que ano ocorre o baile? / O que muda quando obedecemos à ordem de inserção? / A admiração implica retomada comprovada do caso?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxxi",
+   "order": 132,
+   "type": "chapter",
+   "title": "CXXXI — De uma calúnia",
+   "opening": "CAPÍTULO CXXXI De uma calúnia",
+   "pdfStartPage": 116,
+   "pdfEndPage": 117,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Um oficial provoca Brás sobre Virgília; ele aceita a alusão e generaliza que homens revelam aventuras por vaidade enquanto mulheres dissimulam.",
+    "observe": [
+     "Forma: Diálogo malicioso seguido de retificação de um estereótipo com outro discurso de gênero.",
+     "Função no livro: Mostra o interesse oculto que CXXXIII explicará.",
+     "Tensão: Sigilo versus prestígio masculino; a infração distribui riscos de modo desigual.",
+     "Perguntas de verificação: Quem provoca a confissão? / Como Brás passa do caso à regra geral? / A regra sobre mulheres é descrição imparcial?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxxii",
+   "order": 133,
+   "type": "chapter",
+   "title": "CXXXII — Que não é sério",
+   "opening": "CAPÍTULO CXXXII Que não é sério",
+   "pdfStartPage": 117,
+   "pdfEndPage": 117,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Um dito sobre cachorrinhos liga a metáfora anterior a uma expressão popular de arrufo; Brás nega ser sério.",
+    "observe": [
+     "Forma: Digressão breve, associação verbal e rebaixamento do tom.",
+     "Função no livro: Mantém o encadeamento do capítulo anterior antes da explicação filosófica.",
+     "Tensão: Erudição versus conversa comum; a seriedade depende da classificação do narrador.",
+     "Perguntas de verificação: Que expressão popular ele recorda? / Como a metáfora produz a digressão? / Dizer que não é sério retira todo efeito interpretativo?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxxiii",
+   "order": 134,
+   "type": "chapter",
+   "title": "CXXXIII — O princípio de Helvetius",
+   "opening": "CAPÍTULO CXXXIII O princípio de Helvetius",
+   "pdfStartPage": 117,
+   "pdfEndPage": 117,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás explica a indiscrição pelo interesse imediato de se engrandecer, mais forte que o cálculo de evitar escândalo.",
+    "observe": [
+     "Forma: Distinção entre interesse aparente e recôndito; argumentação em dois tempos.",
+     "Função no livro: Relê CXXXI sem atribuir a confissão a falta de motivo.",
+     "Tensão: Segurança versus desvanecimento; competir por reputação vence a prudência.",
+     "Perguntas de verificação: Quais dois interesses são distinguidos? / Como o tempo do efeito os hierarquiza? / A ação imprudente pode continuar interessada?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxxiv",
+   "order": 135,
+   "type": "chapter",
+   "title": "CXXXIV — Cinquenta anos",
+   "opening": "CAPÍTULO CXXXIV Cinquenta anos",
+   "pdfStartPage": 117,
+   "pdfEndPage": 118,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "A descida de Virgília faz Brás pensar em seus cinquenta anos; dança para remoçar, mas encontra a idade no carro.",
+    "observe": [
+     "Forma: Idade personificada e revelação de que a juventude emprestada estava nos outros.",
+     "Função no livro: Abre o tema do esquecimento e a tentativa de nova atuação pública.",
+     "Tensão: Rejuvenescimento social versus fadiga; o baile oferece ilusão transitória.",
+     "Perguntas de verificação: Onde os cinquenta anos o esperam? / Como a personificação desmonta a dança? / O envelhecimento é só cronológico ou também experiência narrada?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxxv",
+   "order": 136,
+   "type": "chapter",
+   "title": "CXXXV — Oblivion",
+   "opening": "CAPÍTULO CXXXV Oblivion",
+   "pdfStartPage": 118,
+   "pdfEndPage": 118,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás imagina leitoras abandonando o livro e celebra Oblivion, que retira antigas damas do triunfo.",
+    "observe": [
+     "Forma: Personificação do esquecimento e mudança da cena amorosa à sucessão social.",
+     "Função no livro: Generaliza a perda da juventude e da consideração.",
+     "Tensão: Prestígio versus substituição; novos participantes tomam o lugar dos antigos.",
+     "Perguntas de verificação: Que papel tem Oblivion? / Como a imagem do carro organiza o esquecimento? / A lucidez impede Brás de desejar aplauso?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxxvi",
+   "order": 137,
+   "type": "chapter",
+   "title": "CXXXVI — Inutilidade",
+   "opening": "CAPÍTULO CXXXVI Inutilidade",
+   "pdfStartPage": 118,
+   "pdfEndPage": 119,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás suspeita ter escrito um capítulo inútil.",
+    "observe": [
+     "Forma: Microcapítulo de uma frase e avaliação da unidade anterior.",
+     "Função no livro: Cria a suspensão que CXXXVII imediatamente contestará.",
+     "Tensão: Utilidade versus capricho; o narrador pode julgar e revisar o próprio livro.",
+     "Perguntas de verificação: Que capítulo está sob julgamento? / O que produz a brevidade? / A declaração autoriza o leitor a ignorar CXXXV?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxxvii",
+   "order": 138,
+   "type": "chapter",
+   "title": "CXXXVII — A barretina",
+   "opening": "CAPÍTULO CXXXVII A barretina",
+   "pdfStartPage": 119,
+   "pdfEndPage": 120,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas estimula a luta; Brás discursa sobre diminuir a barretina, recebe elogios de forma e recua quando julgam seu gesto oposição.",
+    "observe": [
+     "Forma: Amplificação eloquente de objeto reduzido e contraste entre forma e efeito político.",
+     "Função no livro: Materializa a ambição ministerial antes do capítulo silencioso do fracasso.",
+     "Tensão: Brilho retórico versus convicção; a carreira depende de posição diante do gabinete.",
+     "Perguntas de verificação: Qual uniforme ele quer alterar? / Como argumentos históricos ampliam o objeto? / O recuo preserva a proposta ou revela seu limite?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxxviii",
+   "order": 139,
+   "type": "chapter",
+   "title": "CXXXVIII — A um crítico",
+   "opening": "CAPÍTULO CXXXVIII A um crítico",
+   "pdfStartPage": 120,
+   "pdfEndPage": 120,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás explica ao crítico que o estilo acompanha a sensação de cada idade narrada; a morte não o envelhece.",
+    "observe": [
+     "Forma: Carta metacrítica e separação de tempo da escrita e tempo da vida.",
+     "Função no livro: Ajuda a interpretar CXXXIV sem tomar todas as mudanças de tom por cronologia de redação.",
+     "Tensão: Finitude representada versus condição póstuma; a escrita reencena a experiência.",
+     "Perguntas de verificação: Que erro do crítico é prevenido? / Como a distinção dos tempos resolve a frase? / O esclarecimento garante transparência em toda a narrativa?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxxxix",
+   "order": 140,
+   "type": "chapter",
+   "title": "CXXXIX — De como não fui ministro d’Estado",
+   "opening": "CAPÍTULO CXXXIX De como não fui ministro d’Estado",
+   "pdfStartPage": 120,
+   "pdfEndPage": 121,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O título anuncia como Brás não foi ministro; o corpo do capítulo é pontilhado.",
+    "observe": [
+     "Forma: Silêncio tipográfico e contraste entre promessa causal do título e ausência verbal.",
+     "Função no livro: Expõe o fracasso que CXL comenta sem oferecer episódio ministerial completo.",
+     "Tensão: Ambição versus vazio; o cargo esperado não se converte em história de conquista.",
+     "Perguntas de verificação: Que fracasso é nomeado? / Como os pontos cumprem uma função narrativa? / Por que não preencher o silêncio com causas inventadas?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxl",
+   "order": 141,
+   "type": "chapter",
+   "title": "CXL — Que explica o anterior",
+   "opening": "CAPÍTULO CXL Que explica o anterior",
+   "pdfStartPage": 121,
+   "pdfEndPage": 121,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás perdeu a cadeira de deputado e se desespera; Quincas distingue capricho e paixão de poder; o conforto privado não o consola.",
+    "observe": [
+     "Forma: Explicação do silêncio e repetição de possessivos em objetos confortáveis.",
+     "Função no livro: Fecha a carreira parlamentar e prepara o jornal de oposição.",
+     "Tensão: Propriedade abundante versus posição negada; desejar a cadeira alheia excede o bem-estar.",
+     "Perguntas de verificação: Que cadeira efetivamente perde? / Como os possessivos organizam a frustração? / Não ser ministro significa nunca ter sido deputado?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxli",
+   "order": 142,
+   "type": "chapter",
+   "title": "CXLI — Os cães",
+   "opening": "CAPÍTULO CXLI Os cães",
+   "pdfStartPage": 121,
+   "pdfEndPage": 122,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas recomenda um jornal; os dois assistem a cães disputando um osso sem carne e o filósofo exalta a luta.",
+    "observe": [
+     "Forma: Cena animal apresentada como demonstração de doutrina.",
+     "Função no livro: Liga a competição por poder à naturalização da fome, depois aplicada a D. Plácida.",
+     "Tensão: Luta glorificada versus privação; o vencido continua faminto.",
+     "Perguntas de verificação: O que motiva a briga? / Por que importa não haver carne no osso? / A alegria do observador comprova a felicidade dos contendores?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxlii",
+   "order": 143,
+   "type": "chapter",
+   "title": "CXLII — O pedido secreto",
+   "opening": "CAPÍTULO CXLII O pedido secreto",
+   "pdfStartPage": 122,
+   "pdfEndPage": 123,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás questiona a disputa humana de comida com cães; recebe bilhete de Virgília pedindo ajuda à caseira; Quincas transforma a consciência da fome em superioridade.",
+    "observe": [
+     "Forma: Discurso filosófico interrompido por urgência concreta; reescrita de Pascal.",
+     "Função no livro: Confronta o sistema universal com D. Plácida em necessidade.",
+     "Tensão: Superioridade cognitiva versus sofrimento; a letra disfarçada de Virgília conserva o sigilo.",
+     "Perguntas de verificação: Que ajuda o bilhete pede? / Como a fome modifica a fórmula de Pascal? / Consciência da privação é solução para ela?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxliii",
+   "order": 144,
+   "type": "chapter",
+   "title": "CXLIII — Não vou",
+   "opening": "CAPÍTULO CXLIII Não vou",
+   "pdfStartPage": 123,
+   "pdfEndPage": 123,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás se irrita com o pedido, acusa D. Plácida de desperdiçar o dinheiro sem saber o destino dele e decide não ir.",
+    "observe": [
+     "Forma: Monólogo de desculpas, perguntas e afirmação curta final.",
+     "Função no livro: Expõe a falha da proteção prometida e prepara a decisão por cortesia.",
+     "Tensão: Generosidade alegada versus maçada; a distância social torna a visita incômoda.",
+     "Perguntas de verificação: Que destino imagina para os cinco contos? / Como a especulação vira acusação? / O narrador sabe o fato ou o inventa como hipótese conveniente?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxliv",
+   "order": 145,
+   "type": "chapter",
+   "title": "CXLIV — Utilidade relativa",
+   "opening": "CAPÍTULO CXLIV Utilidade relativa",
+   "pdfStartPage": 123,
+   "pdfEndPage": 124,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Por cortesia a Virgília, Brás visita a caseira e a leva à Misericórdia; ela morre; ele reduz a utilidade de sua vida à manutenção do caso.",
+    "observe": [
+     "Forma: Correção da notícia da morte e retorno ao nascimento de LXXV.",
+     "Função no livro: Fecha a história de D. Plácida contrapondo sua vida ao interesse de Brás.",
+     "Tensão: Vida trabalhadora versus função para os amantes; favor não garante sobrevivência digna.",
+     "Perguntas de verificação: Por que ele finalmente vai? / Como a utilidade relativa redefine toda a vida dela? / É possível aceitar essa medida sem adotar a perspectiva do beneficiário?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxlv",
+   "order": 146,
+   "type": "chapter",
+   "title": "CXLV — Simples repetição",
+   "opening": "CAPÍTULO CXLV Simples repetição",
+   "pdfStartPage": 124,
+   "pdfEndPage": 124,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Um carteiro se casa com D. Plácida, vende as apólices e foge; Brás compara o caso à briga de cães.",
+    "observe": [
+     "Forma: Relato comprimido e negativa de relevância repetida.",
+     "Função no livro: Esclarece a perda do pecúlio e desmonta a suposição de festas em CXLIII.",
+     "Tensão: Confiança versus exploração; a competição atinge a velha fora da proteção dos amantes.",
+     "Perguntas de verificação: Quem leva o dinheiro? / Como a repetição reduz a singularidade? / Saber o destino dos contos altera o julgamento anterior?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxlvi",
+   "order": 147,
+   "type": "chapter",
+   "title": "CXLVI — O programa",
+   "opening": "CAPÍTULO CXLVI O programa",
+   "pdfStartPage": 124,
+   "pdfEndPage": 124,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás redige um programa oposicionista baseado no Humanitismo, sem revelar a obra inédita; Quincas exige reconhecimento reservado.",
+    "observe": [
+     "Forma: Manifesto de promessas gerais com ameaça local ao ministério.",
+     "Função no livro: Faz a doutrina entrar na ação política e prepara a oposição de Cotrim.",
+     "Tensão: Cura da sociedade versus substituição de poder; autoria filosófica também reivindica crédito.",
+     "Perguntas de verificação: Que documento Quincas exige? / Como a ameaça final limita a universalidade do programa? / Aplicar Humanitas à política elimina o interesse de Brás?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxlvii",
+   "order": 148,
+   "type": "chapter",
+   "title": "CXLVII — O desatino",
+   "opening": "CAPÍTULO CXLVII O desatino",
+   "pdfStartPage": 124,
+   "pdfEndPage": 125,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas engrandece a notícia do jornal; Cotrim e Sabina tentam impedir a publicação alegando risco à carreira.",
+    "observe": [
+     "Forma: Elogio inserido na publicidade e diálogos de pressão familiar.",
+     "Função no livro: Torna visível a ruptura que CXLVIII levará aos jornais.",
+     "Tensão: Autonomia versus conveniência; possíveis vagas parlamentares funcionam como argumento.",
+     "Perguntas de verificação: Que alternativa Cotrim deixa entrever? / Como o elogio modifica a notícia? / A oposição familiar é prova suficiente de puro afeto?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxlviii",
+   "order": 149,
+   "type": "chapter",
+   "title": "CXLVIII — O problema insolúvel",
+   "opening": "CAPÍTULO CXLVIII O problema insolúvel",
+   "pdfStartPage": 125,
+   "pdfEndPage": 126,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Cotrim publica repúdio ao jornal; Brás chama a atitude de mistério embora mencione fornecimentos lucrativos que obtivera para o cunhado.",
+    "observe": [
+     "Forma: Ironia por justaposição de pergunta sem resposta e dado esclarecedor.",
+     "Função no livro: Reabre a moral comercial de CXXIII dentro da disputa política.",
+     "Tensão: Parentesco versus contrato; vínculos com o governo dão peso material à prudência.",
+     "Perguntas de verificação: Que negócios Brás facilitara? / Como o leitor pode relacionar dados que o narrador separa? / A hipótese econômica é demonstração exclusiva da motivação de Cotrim?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cxlix",
+   "order": 150,
+   "type": "chapter",
+   "title": "CXLIX — Teoria do benefício",
+   "opening": "CAPÍTULO CXLIX Teoria do benefício",
+   "pdfStartPage": 126,
+   "pdfEndPage": 127,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas explica o benefício como fonte de prazer e superioridade do benfeitor, negando a obrigação duradoura de gratidão.",
+    "observe": [
+     "Forma: Teoria acompanhada por imagens de roupa, espelho e burros que se coçam.",
+     "Função no livro: Retoma o prazer de salvar Quincas e a moral da compensação.",
+     "Tensão: Auxílio versus distinção; quem dá confirma a própria capacidade e posição.",
+     "Perguntas de verificação: Quem obteria maior prazer? / Como o espelho figura a consciência? / A teoria resolve o negócio de Cotrim ou desloca a pergunta?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cl",
+   "order": 151,
+   "type": "chapter",
+   "title": "CL — Rotação e translação",
+   "opening": "CAPÍTULO CL Rotação e translação",
+   "pdfStartPage": 127,
+   "pdfEndPage": 128,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O jornal morre após poucos meses; Lobo morre perto do ministério; Brás admite alívio e vê Virgília chorar sinceramente.",
+    "observe": [
+     "Forma: Analogia de ciclos e movimentos astronômicos; repetição da verdade do choro.",
+     "Função no livro: Cruza fim de empresa, vida e rivalidade e prepara CLII.",
+     "Tensão: Inveja versus luto; a morte desfaz carreiras sem simplificar afetos.",
+     "Perguntas de verificação: Que empresa termina primeiro? / Como rotação e translação aproximam escalas distintas? / O adultério anterior torna o luto impossível?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cli",
+   "order": 152,
+   "type": "chapter",
+   "title": "CLI — Filosofia dos epitáfios",
+   "opening": "CAPÍTULO CLI Filosofia dos epitáfios",
+   "pdfStartPage": 128,
+   "pdfEndPage": 128,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "No cemitério, Brás medita que epitáfios tentam arrancar à morte uma sobra da pessoa; a vala comum sugere anonimato.",
+    "observe": [
+     "Forma: Reflexão condensada sobre escrita funerária e egoísmo piedoso.",
+     "Função no livro: Relê o epitáfio de Nhã-loló e o próprio livro como inscrição de memória.",
+     "Tensão: Lembrança versus podridão anônima; o direito à marca da pessoa é desigual.",
+     "Perguntas de verificação: Que perda a vala comum acrescenta? / Como o farrapo da sombra explica o epitáfio? / A memória consola só o morto ou sobretudo os vivos?"
+    ]
+   }
+  },
+  {
+   "id": "cap-clii",
+   "order": 153,
+   "type": "chapter",
+   "title": "CLII — A moeda de Vespasiano",
+   "opening": "CAPÍTULO CLII A moeda de Vespasiano",
+   "pdfStartPage": 128,
+   "pdfEndPage": 128,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás admite que Virgília traiu e chorou o marido com sinceridade; compara a dor à moeda de Vespasiano.",
+    "observe": [
+     "Forma: Paradoxo afetivo e metáfora monetária da dor sem cheiro de origem.",
+     "Função no livro: Impede reduzir Virgília a fingimento moral uniforme.",
+     "Tensão: Juízo moral versus experiência; a Natureza recebe lágrimas sem julgar sua causa.",
+     "Perguntas de verificação: Quais duas sinceridades coexistem? / Como a moeda reorganiza a interpretação? / Coexistência de afetos equivale a absolvição moral total?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cliii",
+   "order": 154,
+   "type": "chapter",
+   "title": "CLIII — O alienista",
+   "opening": "CAPÍTULO CLIII O alienista",
+   "pdfStartPage": 128,
+   "pdfEndPage": 129,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Uma fantasia de ser nababo leva Quincas a supor Brás louco; o alienista afirma seu juízo e recomenda cuidar do próprio filósofo.",
+    "observe": [
+     "Forma: Inversão diagnóstica, conjecturas de identidade e diálogo hesitante.",
+     "Função no livro: Prepara a abordagem da ilusão comum e o fim de Quincas.",
+     "Tensão: Razão versus suspeita; uma autoridade de diagnóstico pode contrariar a autoridade filosófica.",
+     "Perguntas de verificação: Quem pede o exame? / Como a suspeita muda de sujeito? / A loucura deve servir como refutação simples de toda ideia de Quincas?"
+    ]
+   }
+  },
+  {
+   "id": "cap-cliv",
+   "order": 155,
+   "type": "chapter",
+   "title": "CLIV — Os navios do Pireu",
+   "opening": "CAPITULO CLIV Os navios do Pireu",
+   "pdfStartPage": 129,
+   "pdfEndPage": 130,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "O alienista conta a ilusão do dono imaginário dos navios do Pireu e atribui ao criado felicidade semelhante ao mostrar a sala rica.",
+    "observe": [
+     "Forma: Exemplo antigo aplicado à cena cotidiana observável.",
+     "Função no livro: Universaliza pequenas fantasias antes da explicação concorrente de CLVI.",
+     "Tensão: Posse imaginada versus posição real; a exibição doméstica beneficia o orgulho.",
+     "Perguntas de verificação: Que gesto do criado fundamenta a interpretação? / Como o exemplo antigo ilumina o presente? / O diagnóstico do exemplo elimina diferenças entre amo e criado?"
+    ]
+   }
+  },
+  {
+   "id": "cap-clv",
+   "order": 156,
+   "type": "chapter",
+   "title": "CLV — Reflexão cordial",
+   "opening": "CAPÍTULO CLV Reflexão cordial",
+   "pdfStartPage": 130,
+   "pdfEndPage": 130,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás relativiza a condição de Quincas como questão de grau, mas decide que precisa cuidar dele.",
+    "observe": [
+     "Forma: Microcapítulo de raciocínio e resolução, entre duas teorias da ilusão.",
+     "Função no livro: Faz a ponte da explicação do alienista à intervenção do filósofo.",
+     "Tensão: Relativização versus cuidado; reconhecer continuidade não retira a necessidade de amparo.",
+     "Perguntas de verificação: Que cuidado ele considera justo? / Como a escala de mais e menos modifica o diagnóstico? / Chamar a diferença de grau torna-a sem consequência?"
+    ]
+   }
+  },
+  {
+   "id": "cap-clvi",
+   "order": 157,
+   "type": "chapter",
+   "title": "CLVI — Orgulho da servilidade",
+   "opening": "CAPÍTULO CLVI Orgulho da servilidade",
+   "pdfStartPage": 130,
+   "pdfEndPage": 130,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas rejeita a metáfora do ateniense: o criado exibe orgulho de servir um amo distinto; cita cocheiros e empregados de hotel.",
+    "observe": [
+     "Forma: Contraposição de interpretações e elevação irônica da servilidade a sentimento nobre.",
+     "Função no livro: Reinscreve a cena na hierarquia social e no Humanitismo.",
+     "Tensão: Orgulho versus submissão; status do patrão é apropriado como distinção do servidor.",
+     "Perguntas de verificação: O que o criado quer mostrar, segundo Quincas? / Como a explicação difere da posse imaginária? / Enobrecer a servilidade desfaz sua desigualdade?"
+    ]
+   }
+  },
+  {
+   "id": "cap-clvii",
+   "order": 158,
+   "type": "chapter",
+   "title": "CLVII — Fase brilhante",
+   "opening": "CAPÍTULO CLVII Fase brilhante",
+   "pdfStartPage": 130,
+   "pdfEndPage": 131,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás abraça Quincas, depois atua numa Ordem Terceira; chama a fase de brilhante e diz calar serviços enquanto descreve a recompensa íntima.",
+    "observe": [
+     "Forma: Modéstia contraditória, negação performativa e teoria do prêmio subjetivo.",
+     "Função no livro: Retoma a filantropia de II e o benefício de CXLIX.",
+     "Tensão: Serviço versus excelente ideia de si; religião e caridade dão nova ocupação ao ocioso.",
+     "Perguntas de verificação: Que organização ele integra? / Como o silêncio declarado se converte em relato? / O prazer do benfeitor exclui toda melhora para o auxiliado?"
+    ]
+   }
+  },
+  {
+   "id": "cap-clviii",
+   "order": 159,
+   "type": "chapter",
+   "title": "CLVIII — Dois encontros",
+   "opening": "CAPÍTULO CLVIII Dois encontros",
+   "pdfStartPage": 131,
+   "pdfEndPage": 131,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás deixa a Ordem após um donativo que lhe rende retrato; encontra Eugênia no cortiço e vê Marcela morrer no hospital.",
+    "observe": [
+     "Forma: Dois reencontros condensados e contraste entre caridade e dignidade recusante.",
+     "Função no livro: Reabre os primeiros amores sem lhes dar destino de compensação romântica.",
+     "Tensão: Proteção versus orgulho; o retrato premia o doador enquanto antigas mulheres vivem miséria.",
+     "Perguntas de verificação: Como Eugênia reage? / Por que os dois encontros são justapostos? / A hipótese de que recusaria esmola equivale a fala literal dela?"
+    ]
+   }
+  },
+  {
+   "id": "cap-clix",
+   "order": 160,
+   "type": "chapter",
+   "title": "CLIX — A semidemência",
+   "opening": "CAPÍTULO CLIX A semidemência",
+   "pdfStartPage": 131,
+   "pdfEndPage": 132,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Quincas regressa demente, queimara o manuscrito e sabe de sua condição; morre repetindo que a dor é ilusão.",
+    "observe": [
+     "Forma: Imagem da lamparina de razão entre trevas e contraste entre doutrina e agonia.",
+     "Função no livro: Fecha o filósofo antes de a narrativa retornar ao emplasto.",
+     "Tensão: Negação da dor versus sofrimento vivido; consciência residual intensifica o horror.",
+     "Perguntas de verificação: Que destino tem o manuscrito? / Como a lamparina caracteriza a semidemência? / O sofrimento pode coexistir com a convicção de que é ilusório?"
+    ]
+   }
+  },
+  {
+   "id": "cap-clx",
+   "order": 161,
+   "type": "chapter",
+   "title": "CLX — Das negativas",
+   "opening": "CAPÍTULO CLX Das negativas",
+   "pdfStartPage": 132,
+   "pdfEndPage": 132,
+   "guide": {
+    "editorialStatus": "needs_review",
+    "summary": "Brás liga o fim ao começo, enumera fracassos e privilégios e declara saldo por não transmitir a miséria a filhos.",
+    "observe": [
+     "Forma: Balanço contábil, série de negativas e correção do saldo aparentemente nulo.",
+     "Função no livro: Fecha a circularidade do emplasto e tensiona os antigos projetos paternos.",
+     "Tensão: Pessimismo universal versus vida privilegiada; não trabalhar pelo pão integra a boa fortuna.",
+     "Perguntas de verificação: Que negativa encerra o livro? / Como o balanço produz a mudança de saldo? / Não transmitir a miséria apaga a participação na miséria dos outros?"
+    ]
+   }
+  }
+ ],
+ "modules": [
+  {
+   "id": "comece-aqui",
+   "moduleType": "comece_aqui",
+   "version": 1,
+   "editorialStatus": "needs_review",
+   "evidenceRefs": [
+    "ev-defunto-autor",
+    "ev-pena-galhofa",
+    "ev-negativa"
+   ],
+   "sourceRefs": [],
+   "markdown": "**Memórias póstumas de Brás Cubas** é narrado por um defunto rico que conta a própria vida a partir da morte, em 160 capítulos curtos. O enredo é simples — infância mimada, amores, um adultério longo, ambições frustradas —, mas o interesse está em como Brás conta: digressões, provocações ao leitor, filosofias paródicas e um balanço final de \"negativas\".\n\n**Por que importa para a Unicamp.** É a obra mais canônica da lista e a que mais exige distinguir narrador de autor. A banca pode cobrar o narrador póstumo, a ironia, a relação entre forma digressiva e crítica social, e as figuras que trabalham e servem (Prudêncio, D. Plácida) ao redor de quem nunca trabalhou.\n\n**Como ler.** Marque, a cada capítulo, o que Brás diz de si e o que o próprio texto mostra. Este material está em revisão editorial e ainda não incorpora crítica especializada."
+  },
+  {
+   "id": "analise-integral",
+   "moduleType": "analise_integral",
+   "version": 1,
+   "editorialStatus": "needs_review",
+   "evidenceRefs": [
+    "ev-almocreve",
+    "ev-barretina",
+    "ev-borboleta",
+    "ev-coxa",
+    "ev-defeito-leitor",
+    "ev-defunto-autor",
+    "ev-dor-ilusao",
+    "ev-egoismo",
+    "ev-emplasto-nome",
+    "ev-eugenia",
+    "ev-humanitas",
+    "ev-janelas",
+    "ev-marcela",
+    "ev-medalha",
+    "ev-menino-pai",
+    "ev-negativa",
+    "ev-pao",
+    "ev-pena-galhofa",
+    "ev-placida",
+    "ev-prudencio-cavalo",
+    "ev-prudencio-escravo",
+    "ev-vergalho",
+    "ev-vespasiano"
+   ],
+   "sourceRefs": [],
+   "markdown": "## 0. Ficha da edição e auditoria\n\nMachado de Assis, *Memórias póstumas de Brás Cubas*. Brasília: Câmara dos Deputados, Edições Câmara, 2018, Série Prazer de Ler n. 13, versão EPUB convertida em PDF de 134 páginas (ficha catalográfica, p. 4). As páginas citadas são do arquivo. As p. 9–132 contêm os capítulos I–CLX; p. 6 traz Apresentação editorial; p. 8, o prólogo \"Ao leitor\" assinado por Brás; p. 133–134, notas editoriais. A dedicatória (p. 7), a disposição gráfica de XXVII (p. 42) e o epitáfio de CXXV (p. 114) não estão na camada de texto: foram vistos em imagem, mas nenhum cartão depende deles. O cabeçalho de CLIV vem grafado \"CAPITULO\", sem acento, e a abertura da unidade segue a edição. Sem colação com a primeira edição ou edição crítica.\n\n## 1. Como ler\n\nLeia com duas réguas. A primeira é o que acontece (enredo curto e banal); a segunda é como o defunto conta, comenta e se desculpa. Em cada capítulo, pergunte: que juízo Brás faz de si, e que fato do próprio texto o desmente ou complica? Os capítulos são curtos e muitos são só uma reflexão; não pule os de digressão, porque é neles que o narrador se expõe.\n\n## 2. Visão geral\n\nUm defunto rico conta a própria vida a partir da morte: infância mimada, amores (Marcela, Virgília), ambições de fama (o emplasto, a política) e a amizade com o filósofo Quincas Borba. O livro termina num balanço de negativas. A tensão central está entre a liberdade de quem não deve mais nada à opinião e a vaidade que continua organizando a narração.\n\n## 3. Publicação e recepção\n\nA nota editorial do volume situa o romance em 1881 e o apresenta como início da fase madura do autor (p. 133–134); é informação da edição, não pesquisa deste dossiê. Publicação anterior em periódico, recepção crítica e variantes não foram verificadas em fonte.\n\n## 4. Contexto histórico-social formalizado\n\nO contexto que importa está dentro do texto: escravidão doméstica (Prudêncio em XI e LXVIII), dependência de agregados e pobres livres (D. Plácida, Eugênia), patrimônio herdado e ociosidade (CLX), política parlamentar como carreira de prestígio (a barretina, CXXXVII). O livro não explica esse mundo: mostra como um membro da elite o narra com naturalidade.\n\n## 5. Arquitetura\n\nPrólogo \"Ao leitor\" e 160 capítulos, muitos de uma página ou menos. A narração começa pelo óbito (I), recua ao delírio (VII) e à infância (X em diante) e volta à morte em CLX, que liga o fim ao emplasto do começo. Há capítulos experimentais: LIII e LV com linhas pontilhadas; CXXV feito só de epitáfio; CXXX \"para intercalar\" em outro.\n\n## 6. Leitura por unidade\n\nO guia de cada capítulo traz síntese, forma, função, tensão e perguntas de verificação. Blocos de leitura:\n\n- **I–IX:** abertura póstuma: óbito, emplasto, genealogia, Virgília à cabeceira, delírio com Pandora.\n- **X–XXV:** infância de \"menino diabo\", Prudêncio, Marcela, Coimbra, morte da mãe e retiro na Tijuca.\n- **XXVI–LII:** Eugênia e a borboleta preta, o noivado político frustrado com Virgília, morte do pai e herança.\n- **LIII–CXIV:** o adultério com Virgília, a casinha da Gamboa e D. Plácida, Prudêncio e o vergalho, Lobo Neves e a separação.\n- **CXV–CXLIX:** Quincas Borba e o Humanitismo, Nhã-loló e o epitáfio, a Câmara, a barretina, o fracasso ministerial e o jornal.\n- **CL–CLX:** mortes de Lobo Neves, Marcela e Quincas Borba, reencontro com Eugênia e o capítulo das negativas.\n\n## 7. Conteúdo essencial\n\nBrás nasce em família rica, é criado sem limites, gasta com Marcela, forma-se em Coimbra, perde a mãe, conhece Eugênia e a despreza, perde Virgília para Lobo Neves, herda, torna-se amante de Virgília casada (com a mediação de D. Plácida), reencontra Quincas Borba, perde a noiva Nhã-loló para a febre amarela, chega a deputado mas não a ministro, funda e perde um jornal, faz caridade e morre de uma doença que negligenciou enquanto preparava o emplasto (V).\n\n## 8. Voz e focalização\n\nNarrador em primeira pessoa, retrospectivo e póstumo: \"eu não sou propriamente um autor defunto, mas um defunto autor\" (cap. I, p. 9). A franqueza é limitada pelo interesse em parecer bem. O leitor é interpelado e até culpado: \"o maior defeito deste livro és tu, leitor\" (cap. LXXI, p. 78). O erro comum aqui seria tratar Brás como porta-voz de Machado; o livro julga o narrador pelo que ele mesmo conta.\n\n## 9. Sistema de personagens\n\nBrás no centro; Virgília (amor, cálculo e luto sincero); Lobo Neves (ambição política e escrúpulo supersticioso); Quincas Borba (do colega mendigo ao filósofo do Humanitismo); D. Plácida e Prudêncio (os que trabalham e servem); Eugênia e Marcela (mulheres que o narrador avalia e descarta); o pai (projeto de nome e carreira). As figuras pobres têm pouco espaço, mas os fatos que as cercam desmentem as justificativas do narrador.\n\n## 10. Tempo e espaço\n\nRio de Janeiro do século XIX, com Coimbra e Lisboa na juventude, a Tijuca no retiro, a casinha da Gamboa no adultério. O tempo da narração é posterior à morte de 1869 (I); o tempo da história é recontado fora de ordem e acelerado ou parado conforme o interesse do defunto.\n\n## 11. Linguagem, estilo e forma\n\nCapítulos curtos, digressões, apóstrofes ao leitor, paródia de sistemas filosóficos, metáforas contábeis. O próprio narrador define a escrita \"com a pena da galhofa e a tinta da melancolia\" (Ao leitor, p. 8). O detalhe formal que muda a interpretação é a contabilidade: Marcela amou \"durante quinze meses e onze contos de réis\" (cap. XVII, p. 30), Prudêncio paga \"com alto juro\" (cap. LXVIII, p. 77), o livro fecha num \"saldo\" (CLX).\n\n## 12. Gênero, tradição e rupturas\n\nRomance de memórias que parodia a autobiografia e o romance de enredo. O narrador se filia a Sterne e Xavier de Maistre (\"Ao leitor\", p. 8); a nota do volume fala em tradição \"luciânica\" (p. 134), atribuição da edição, não deste dossiê. Ruptura com o romance romântico: o amor é narrado pelo cálculo, e o narrador não é confiável.\n\n## 13. Temas como tensões\n\n- Glória × interesse: o emplasto tem \"duas faces, como as medalhas\" (cap. II, p. 10).\n- Liberdade formal × controle do leitor: o morto diz tudo, mas escolhe como dizer.\n- Escravidão × naturalização: o menino que monta Prudêncio (cap. XI, p. 21) e o liberto que açoita outro (cap. LXVIII, p. 76).\n- Moral × compensação: a lei das janelas (cap. LI, p. 61).\n- Filosofia × corpo: o Humanitismo nega a dor (cap. CXVII, p. 108; cap. CLIX, p. 132).\n- Privilégio × pessimismo: o saldo final (cap. CLX, p. 132).\n\n## 14. Motivos recorrentes\n\nMedalha de duas faces, contas e dívidas, janelas, borboleta preta, vergalho, emplasto, epitáfios, cães (CXLI), a pergunta pela cor (a borboleta \"não era ela azul\", cap. XXXI, p. 46).\n\n## 15. Intertextualidade e cultura\n\nCitações de Stendhal, Sterne, Xavier de Maistre (p. 8), máxima do \"menino é pai do homem\" (cap. XI, p. 21), Pangloss e Voltaire na morte de Quincas (CLIX), a moeda de Vespasiano (CLII), o Gênesis invertido no \"suor do meu rosto\" (cap. CLX, p. 132). As fontes dessas alusões não foram conferidas fora do texto.\n\n## 16. Leituras críticas especializadas\n\nNenhuma fonte crítica foi lida para este dossiê. Não há crítico citado. Leitura pendente: ao menos uma tese, dois estudos acadêmicos e um estudo de referência sobre o narrador e a sociedade escravista, a serem citados com página quando lidos.\n\n## 17. Estado da questão\n\nNão estabelecido. Qualquer afirmação de consenso crítico fica suspensa até a pesquisa acima.\n\n## 18. Cinco close readings\n\n1. **Abertura (I, p. 9):** o quiasmo autor defunto / defunto autor funda a liberdade e a irresponsabilidade da voz.\n2. **Emplasto (II, p. 10):** a medalha separa o rosto público do privado; o nome do remédio é o nome de Brás.\n3. **Prudêncio (XI, p. 21; LXVIII, p. 76–77):** a mesma violência aparece duas vezes, com papéis trocados, e o narrador a converte em piada sobre juros.\n4. **D. Plácida (LXXIV, p. 80):** o trabalho que \"queimando os dedos ao fogão\" sustenta o amor clandestino dos ricos.\n5. **Negativas (CLX, p. 132):** a \"boa fortuna de não comprar o pão com o suor do meu rosto\" precede o saldo: \"Não tive filhos\".\n\n## 19. FUVEST — primeira fase\n\nA obra é exigida pela Unicamp em 2027; o módulo FUVEST é treino de transferência, não indicação de lista. Em objetivas, reconhecer o narrador não confiável e a ironia por contraste entre o que Brás diz e o que o texto mostra.\n\n## 20. FUVEST — segunda fase\n\nExplicar o efeito de um procedimento (quiasmo, apóstrofe, metáfora contábil) com evidência e mecanismo, sem atribuir a Machado as opiniões de Brás.\n\n## 21. UNICAMP — primeira fase\n\nRelacionar trecho e obra: localizar o capítulo, identificar o recurso e eliminar alternativas que leem o narrador como moralmente exemplar ou como simples porta-voz do autor. Nenhuma prova oficial foi consultada para este dossiê.\n\n## 22. UNICAMP — segunda fase\n\nResponder em partes, cada uma com evidência localizada: por exemplo, comparar o vergalho (LXVIII) com a lei das janelas (LI, retomada em CV) para mostrar o mecanismo de compensação.\n\n## 23. Comparações\n\nCom *Vida e morte de M. J. Gonzaga de Sá* (mesma lista): biógrafo que se retrata ao retratar o outro, frente a um defunto que só se retrata. Com *Memórias de Martha* (Fuvest): narradora retrospectiva que julga o passado, mas a partir da pobreza, não da herança. Comparações propostas pelo dossiê, sem fonte crítica.\n\n## 24. Pegadinhas\n\n- O emplasto não mata Brás: ele apanha um golpe de ar enquanto prepara a invenção e não se trata (V); o remédio é que \"morreu comigo\" (CLX).\n- A Apresentação da p. 6 é da editora; \"Ao leitor\" é de Brás.\n- O Humanitismo é de Quincas Borba; Brás o expõe e o usa, sem ser seu autor.\n- Prudêncio é liberto quando açoita outro homem; a cena não prova que a alforria acabou a violência.\n- Virgília chora o marido com sinceridade (CLII); não reduzir a personagem a fingimento.\n\n## 25. Estratégia de resolução\n\nPara cada trecho: 1) quem fala e de quando; 2) o que o trecho afirma; 3) que fato do livro tensiona a afirmação; 4) que recurso produz o efeito; 5) como isso se liga ao balanço de CLX.\n\n## 26. Memorização inteligente\n\nSeis âncoras em ordem: emplasto (II) → Prudêncio (XI) → Virgília (LIII em diante) → D. Plácida (LXX–LXXIV) → Humanitismo (CXVII) → negativas (CLX). Associe cada uma a uma conta: fama, violência, amor, trabalho, filosofia, saldo.\n\n## 27. Perguntas para o professor\n\n1. O narrador é punido pelo livro ou apenas exposto?\n2. O pessimismo final é do livro ou só de Brás?\n3. Que peso dar aos capítulos pontilhados (LIII, LV)?\n\n## 28. Questões autorais\n\nVer o módulo de questões: cinco questões, sem gabarito exposto.\n\n## 29. Matriz bibliográfica\n\nFonte primária: edição Câmara 2018, lida integralmente. Fonte oficial de lista: notícia Unicamp/Comvest de 25/03/2025, consultada na retomada anterior. Crítica: nenhuma lida. Provas: nenhuma consultada.\n\n## 30. Cola de prova\n\nDefunto autor; medalha de duas faces; menino é pai do homem; Prudêncio duas vezes; lei das janelas; D. Plácida trabalha; Humanitas nega a dor; saldo das negativas.\n\n## 31. Plano de revisão\n\n24 h: mapa dos seis blocos e as seis âncoras. 7 dias: reler os cinco close readings e escrever uma resposta de 8 linhas. 30 dias: resolver as cinco questões e corrigir com o texto. Pré-prova: explicar oralmente, em três minutos, como o balanço de CLX reorganiza o livro.\n"
+  },
+  {
+   "id": "critica-debate",
+   "moduleType": "critica_debate",
+   "version": 1,
+   "editorialStatus": "needs_review",
+   "evidenceRefs": [
+    "ev-janelas",
+    "ev-pao",
+    "ev-negativa"
+   ],
+   "sourceRefs": [],
+   "markdown": "**Camadas de evidência.** Os cartões trazem palavras localizadas no PDF; os guias e módulos são síntese própria. Nenhuma fonte acadêmica foi lida: não há crítico citado nem consenso declarado.\n\n**Hipóteses em confronto.** A franqueza póstuma pode ser lida como liberdade total, mas o narrador continua administrando a própria imagem (o emplasto, a lei das janelas). O pessimismo final pode ser lido como verdade do livro ou como mais uma pose de quem teve \"a boa fortuna de não comprar o pão com o suor do meu rosto\". Teste cada leitura no fato que a contraria.\n\n**Limites.** A crítica sobre narrador e sociedade escravista é extensa e não foi consultada; nenhum nome de crítico é usado aqui para não atribuir leitura não feita. Pesquisa pendente registrada em Fontes."
+  },
+  {
+   "id": "fuvest",
+   "moduleType": "fuvest",
+   "version": 1,
+   "editorialStatus": "needs_review",
+   "evidenceRefs": [
+    "ev-defunto-autor",
+    "ev-medalha",
+    "ev-defeito-leitor"
+   ],
+   "sourceRefs": [],
+   "markdown": "**Transferência de leitura para a FUVEST; a obra não está na lista FUVEST 2027.**\n\nNa objetiva, atribua a frase (Brás narrador, Brás personagem, outra personagem, nota editorial) antes de julgar. Distratores comuns: tomar a opinião de Brás como tese de Machado; confundir a Apresentação editorial com o prólogo \"Ao leitor\".\n\nNa discursiva, explique o efeito de um recurso com evidência: o quiasmo de I, a medalha de II, a apóstrofe de LXXI. Nenhum levantamento de incidência foi feito.",
+   "board": "FUVEST"
+  },
+  {
+   "id": "unicamp",
+   "moduleType": "unicamp",
+   "version": 1,
+   "editorialStatus": "needs_review",
+   "evidenceRefs": [
+    "ev-prudencio-cavalo",
+    "ev-vergalho",
+    "ev-janelas",
+    "ev-almocreve"
+   ],
+   "sourceRefs": [],
+   "markdown": "**Treino para a Unicamp/Comvest; não é questão oficial nem resposta esperada.**\n\nNa objetiva, relacione o trecho ao conjunto: o vergalho (LXVIII) só ganha sentido com o menino que monta Prudêncio (XI). Elimine alternativas que tratam a alforria como fim da violência ou Brás como narrador confiável.\n\nNa discursiva, separe as partes do comando e dê a cada uma evidência e mecanismo. Exemplo de articulação: a lei das janelas (LI, retomada em CV) formaliza a compensação moral que o narrador já praticara com o almocreve (XXI). Nenhuma prova anterior foi consultada."
+  },
+  {
+   "id": "questoes",
+   "moduleType": "questoes",
+   "version": 1,
+   "editorialStatus": "needs_review",
+   "evidenceRefs": [
+    "ev-defunto-autor",
+    "ev-medalha",
+    "ev-prudencio-cavalo",
+    "ev-vergalho",
+    "ev-prudencio-escravo",
+    "ev-janelas",
+    "ev-almocreve",
+    "ev-pao",
+    "ev-negativa",
+    "ev-placida"
+   ],
+   "sourceRefs": [],
+   "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. UNICAMP, objetiva, média.** Em \"eu não sou propriamente um autor defunto, mas um defunto autor\" (cap. I, p. 9), a inversão dos termos:\nA) indica que Brás publicou livros em vida e os revisou depois de morto.\nB) estabelece que a escrita começa depois da morte, o que autoriza a forma livre da narração.\nC) prova que o narrador é imparcial, já que nada mais o liga à sociedade.\nD) identifica o narrador com Machado de Assis.\nE) anuncia uma narração em ordem cronológica rigorosa.\n\n**2. UNICAMP, objetiva, difícil.** A comparação da ideia do emplasto com uma medalha de \"duas faces\" (cap. II, p. 10) permite afirmar que:\nA) o remédio tinha eficácia comprovada e apenas foi mal divulgado.\nB) a filantropia declarada convive com o desejo de fama que o narrador admite.\nC) o narrador desiste do emplasto por escrúpulo moral.\nD) a ideia foi de Quincas Borba e apropriada por Brás.\nE) o emplasto é uma alegoria da escravidão.\n\n**3. UNICAMP, discursiva, difícil.** Compare a cena em que o menino Brás monta Prudêncio (cap. XI, p. 21) com a cena do vergalho (cap. LXVIII, p. 76). a) Indique o que muda na posição de Prudêncio. b) Explique como o comentário de Brás sobre \"juro\" (cap. LXVIII, p. 77) afeta a interpretação da violência.\n\n**4. UNICAMP, discursiva, muito difícil.** Relacione a \"lei da equivalência das janelas\" (cap. LI, p. 61) ao episódio do almocreve (cap. XXI, p. 36). Mostre como os dois trechos constroem um mesmo mecanismo moral e por que ele interessa à caracterização do narrador.\n\n**5. Comparação interna, muito difícil.** No capítulo final, Brás menciona a \"boa fortuna\" de não trabalhar pelo pão (cap. CLX, p. 132) e encerra com \"Não tive filhos\" (cap. CLX, p. 132). Explique por que a história de D. Plácida (cap. LXXIV, p. 80) torna esse saldo menos universal do que o narrador sugere."
+  },
+  {
+   "id": "revisao-ativa",
+   "moduleType": "revisao_ativa",
+   "version": 1,
+   "editorialStatus": "needs_review",
+   "evidenceRefs": [
+    "ev-negativa",
+    "ev-eugenia",
+    "ev-vespasiano"
+   ],
+   "sourceRefs": [],
+   "markdown": "Reconstrua sem consulta: os seis blocos do livro, as seis âncoras (emplasto, Prudêncio, Virgília, D. Plácida, Humanitismo, negativas) e as mortes que fecham o livro (Lobo Neves, Marcela, Quincas Borba, o próprio Brás). Depois confira com o mapa de capítulos.\n\n**Factual:** de que Brás morre? Quem é Nhonhô? O que acontece com Eugênia?\n\n**Formal:** como funcionam os capítulos pontilhados? Por que o livro tem um prólogo assinado pelo narrador?\n\n**Interpretativo:** o saldo de CLX é um juízo sobre a vida humana ou sobre a vida de Brás? Justifique com dois capítulos.\n\n**24 horas:** mapa e microperguntas. **7 dias:** um trecho novo e um contraste interno. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos com evidência, forma e efeito."
+  },
+  {
+   "id": "fontes",
+   "moduleType": "fontes",
+   "version": 1,
+   "editorialStatus": "needs_review",
+   "evidenceRefs": [
+    "ev-pena-galhofa"
+   ],
+   "sourceRefs": [],
+   "markdown": "**Fonte primária e leitura efetiva:** Machado de Assis, *Memórias póstumas de Brás Cubas*. Brasília: Câmara dos Deputados, Edições Câmara, 2018, Série Prazer de Ler n. 13 (ficha, p. 4). PDF de 134 páginas, lido integralmente em lotes; mapa e notas dos 160 capítulos em `docs/obras-2027/leitura-bras-cubas.md` e `docs/obras-2027/rascunhos/bras-cubas-notas-1-160.txt`. A paginação é a do arquivo.\n\n**Paratextos:** Apresentação da editora (p. 6), dedicatória (p. 7, só em imagem), \"Ao leitor\" assinado por Brás (p. 8, parte da ficção), notas \"Sobre a obra\" e \"Sobre o autor\" (p. 133–134, da edição). As notas finais são citadas apenas como informação da edição.\n\n**Limites da extração:** dedicatória (p. 7), disposição gráfica de XXVII (p. 42) e epitáfio de CXXV (p. 114) só existem como imagem; vistos visualmente na retomada anterior, nenhum cartão depende deles. O cabeçalho de CLIV vem grafado \"CAPITULO\", sem acento, e a abertura da unidade segue a edição. Sem colação com primeira edição ou edição crítica; sem inspeção visual de todas as páginas nem verificação de marca d'água em imagem.\n\n**Guias por capítulo:** cinco componentes por capítulo (síntese, forma, função, tensão, perguntas), proporcionais a capítulos que muitas vezes têm menos de uma página; os quinze componentes por unidade da habilidade foram aplicados nos módulos de análise, não em cada capítulo.\n\n**Lista oficial:** obra exigida pela Unicamp/Comvest para 2027, confirmada na notícia de 25/03/2025 (https://www.unicamp.br/noticias/2025/03/25/comvest-divulga-listas-de-livros-para-os-vestibulares-2027-2028-e-2029/).\n\n**Pendências acadêmicas:** nenhuma crítica, tese, estudo ou prova foi lido. Metas registradas: uma fonte oficial adicional, duas teses ou dissertações, três estudos e um estudo de referência, além de provas das duas bancas. SourceRefs permanece vazio; todo o conteúdo é síntese própria em needs_review."
+  }
+ ],
+ "evidence": [
+  {
+   "id": "ev-pena-galhofa",
+   "unitId": "ao-leitor",
+   "location": "Ao leitor, p. 8",
+   "quote": "Escrevia-a com a pena da galhofa e a tinta da melancolia",
+   "context": "Ao leitor, assinado por Brás.",
+   "formalDevice": "Metáfora dupla (pena/tinta) e antítese riso/melancolia.",
+   "effect": "Define o tom do livro como mistura instável de humor e desencanto.",
+   "wholeRelation": "Prepara as digressões cômicas que terminam no balanço negativo de CLX.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-defunto-autor",
+   "unitId": "cap-i",
+   "location": "cap. I, p. 9",
+   "quote": "eu não sou propriamente um autor defunto, mas um defunto autor, para quem a campa foi outro berço",
+   "context": "Brás explica por que começa pela morte.",
+   "formalDevice": "Quiasmo (autor defunto / defunto autor) e paradoxo campa/berço.",
+   "effect": "Institui o narrador póstumo, que escreve depois de tudo e sem compromisso com a opinião.",
+   "wholeRelation": "Sustenta a liberdade formal e a franqueza interessada do livro inteiro.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-medalha",
+   "unitId": "cap-ii",
+   "location": "cap. II, p. 10",
+   "quote": "Assim, a minha ideia trazia duas faces, como as medalhas, uma virada para o público, outra para mim.",
+   "context": "Brás expõe a ideia do emplasto.",
+   "formalDevice": "Comparação com a medalha de duas faces.",
+   "effect": "Separa a justificativa pública (filantropia) do desejo privado (nomeada).",
+   "wholeRelation": "O emplasto volta em CLX como primeira negativa.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-emplasto-nome",
+   "unitId": "cap-ii",
+   "location": "cap. II, p. 10",
+   "quote": "estas três palavras: emplasto Brás Cubas",
+   "context": "Confissão do motivo real da invenção.",
+   "formalDevice": "Destaque do próprio nome como marca comercial.",
+   "effect": "Mostra que o projeto científico é projeto de fama.",
+   "wholeRelation": "Liga o desejo de nomeada à genealogia inventada de III.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-egoismo",
+   "unitId": "cap-vii",
+   "location": "cap. VII, p. 17",
+   "quote": "Egoísmo, dizes tu? Sim, egoísmo, não tenho outra lei.",
+   "context": "Fala de Natureza/Pandora no delírio.",
+   "formalDevice": "Alegoria e diálogo filosófico.",
+   "effect": "Expõe uma visão da natureza como luta e conservação.",
+   "wholeRelation": "Antecipa, em chave mítica, a lógica que o Humanitismo apresentará como doutrina.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-menino-pai",
+   "unitId": "cap-xi",
+   "location": "cap. XI, p. 21",
+   "quote": "Um poeta dizia que o menino é pai do homem.",
+   "context": "Abertura das lembranças de infância.",
+   "formalDevice": "Citação de máxima alheia, sem nome do poeta.",
+   "effect": "Propõe ler o adulto pelo menino mimado e cruel.",
+   "wholeRelation": "Prepara a cena de Prudêncio e o vergalho de LXVIII.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-prudencio-cavalo",
+   "unitId": "cap-xi",
+   "location": "cap. XI, p. 21",
+   "quote": "Prudêncio, um moleque de casa, era o meu cavalo de todos os dias",
+   "context": "O menino Brás monta o escravizado como cavalo.",
+   "formalDevice": "Metáfora literalizada pela cena (cordel, varinha, fustigar).",
+   "effect": "Mostra a violência escravista naturalizada no brinquedo da criança senhorial.",
+   "wholeRelation": "Retorna invertida quando Prudêncio, liberto, castiga outro homem em LXVIII.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-marcela",
+   "unitId": "cap-xvii",
+   "location": "cap. XVII, p. 30",
+   "quote": "Marcela amou-me durante quinze meses e onze contos de réis; nada menos.",
+   "context": "Brás resume a relação com Marcela.",
+   "formalDevice": "Zeugma: tempo e dinheiro como medidas do mesmo amor.",
+   "effect": "Reduz o afeto a contabilidade com humor cínico.",
+   "wholeRelation": "Antecipa a lógica de balanço que fecha o livro.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-almocreve",
+   "unitId": "cap-xxi",
+   "location": "cap. XXI, p. 36",
+   "quote": "chamei-me pródigo, lancei o cruzado à conta das minhas dissipações antigas",
+   "context": "Depois de ser salvo pelo almocreve, Brás se arrepende de lhe ter dado um cruzado.",
+   "formalDevice": "Raciocínio que diminui o mérito alheio até justificar a mesquinharia.",
+   "effect": "A gratidão é recalculada a favor de quem deve.",
+   "wholeRelation": "Exemplo de como o narrador reduz dívidas morais, retomado na lei das janelas.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-borboleta",
+   "unitId": "cap-xxxi",
+   "location": "cap. XXXI, p. 46",
+   "quote": "Também por que diabo não era ela azul?",
+   "context": "Brás mata a borboleta preta que entrou no quarto.",
+   "formalDevice": "Pergunta retórica e falsa profundidade filosófica.",
+   "effect": "A crueldade gratuita é absorvida por uma piada sobre a cor.",
+   "wholeRelation": "Cerca o episódio de Eugênia, a \"flor da moita\", com imagens de inferioridade atribuída.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-coxa",
+   "unitId": "cap-xxxiii",
+   "location": "cap. XXXIII, p. 48",
+   "quote": "Por que bonita, se coxa? por que coxa, se bonita?",
+   "context": "Brás pensa em Eugênia depois de descobrir a deficiência.",
+   "formalDevice": "Quiasmo.",
+   "effect": "O defeito físico vira pretexto para desqualificar a moça pobre.",
+   "wholeRelation": "Eugênia reaparece em CLVIII, na miséria, recusando a esmola com dignidade.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-vergalho",
+   "unitId": "cap-lxviii",
+   "location": "cap. LXVIII, p. 76",
+   "quote": "Toma, diabo! dizia ele; toma mais perdão, bêbado!",
+   "context": "Brás vê Prudêncio, liberto, açoitando o próprio escravo.",
+   "formalDevice": "Fala direta violenta e retomada das palavras da infância.",
+   "effect": "A violência recebida é transferida, não abolida pela alforria.",
+   "wholeRelation": "Fecha o arco aberto em XI e expõe a escravidão como sistema.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-prudencio-escravo",
+   "unitId": "cap-lxviii",
+   "location": "cap. LXVIII, p. 77",
+   "quote": "comprou um escravo, e ia-lhe pagando, com alto juro, as quantias que de mim recebera",
+   "context": "Comentário de Brás sobre a cena do vergalho.",
+   "formalDevice": "Metáfora financeira (juro) para a violência.",
+   "effect": "O narrador transforma a cena em teoria da compensação, eximindo-se.",
+   "wholeRelation": "Liga violência, dívida e dinheiro, como em Marcela e no almocreve.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-defeito-leitor",
+   "unitId": "cap-lxxi",
+   "location": "cap. LXXI, p. 78",
+   "quote": "o maior defeito deste livro és tu, leitor",
+   "context": "Capítulo O senão do livro.",
+   "formalDevice": "Apóstrofe ao leitor e inversão de responsabilidade.",
+   "effect": "Transfere ao leitor apressado a culpa pela forma digressiva.",
+   "wholeRelation": "Torna a leitura parte do jogo do livro.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-placida",
+   "unitId": "cap-lxxiv",
+   "location": "cap. LXXIV, p. 80",
+   "quote": "Trabalhava muito, queimando os dedos ao fogão, e os olhos ao candeeiro, para comer e não cair.",
+   "context": "História de D. Plácida, contada a Brás.",
+   "formalDevice": "Paralelismo e concretude do trabalho no corpo.",
+   "effect": "Mostra o trabalho feminino pobre que sustenta o adultério dos ricos.",
+   "wholeRelation": "Contrasta com CLX: Brás nunca comprou o pão com o próprio suor.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-janelas",
+   "unitId": "cap-li",
+   "location": "cap. LI, p. 61",
+   "quote": "o modo de compensar uma janela fechada é abrir outra, a fim de que a moral possa arejar continuamente a consciência",
+   "context": "Depois de devolver uma moeda de ouro achada na rua, Brás formula uma lei; o capítulo CV a retoma.",
+   "formalDevice": "Falsa lei filosófica com metáfora doméstica.",
+   "effect": "Cria um sistema de compensações que absolve a consciência.",
+   "wholeRelation": "Formaliza o mecanismo moral visto no almocreve e no vergalho.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-humanitas",
+   "unitId": "cap-cxvii",
+   "location": "cap. CXVII, p. 108",
+   "quote": "o princípio das coisas, não é outro senão o mesmo homem repartido por todos os homens",
+   "context": "Quincas Borba expõe o Humanitismo.",
+   "formalDevice": "Paródia de sistema filosófico.",
+   "effect": "A doutrina transforma a luta e a desigualdade em harmonia universal.",
+   "wholeRelation": "Termina em CLIX com o filósofo demente negando a dor.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-barretina",
+   "unitId": "cap-cxxxvii",
+   "location": "cap. CXXXVII, p. 119",
+   "quote": "perguntar modestamente ao ministro se não julgava útil diminuir a barretina da guarda nacional",
+   "context": "Brás, deputado, faz seu discurso.",
+   "formalDevice": "Desproporção entre solenidade e assunto.",
+   "effect": "Ridiculariza a política como palco de vaidade inofensiva.",
+   "wholeRelation": "Conduz a CXXXIX, em que não chega a ministro.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-vespasiano",
+   "unitId": "cap-clii",
+   "location": "cap. CLII, p. 128",
+   "quote": "Virgília traíra o marido, com sinceridade, e agora chorava-o com sinceridade.",
+   "context": "Enterro de Lobo Neves.",
+   "formalDevice": "Paralelismo e paradoxo.",
+   "effect": "Impede reduzir Virgília a fingimento; duas sinceridades coexistem.",
+   "wholeRelation": "Liga-se à metáfora da moeda de Vespasiano: a dor não cheira à origem.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-eugenia",
+   "unitId": "cap-clviii",
+   "location": "cap. CLVIII, p. 131",
+   "quote": "Ergueu logo a cabeça, e fitou-me com muita dignidade.",
+   "context": "Brás reencontra Eugênia num cortiço, ao distribuir esmolas.",
+   "formalDevice": "Gesto mínimo narrado de fora.",
+   "effect": "A moça desprezada recusa a caridade e a posição de inferior.",
+   "wholeRelation": "Responde, sem palavras, ao \"Por que bonita, se coxa?\" de XXXIII.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-dor-ilusao",
+   "unitId": "cap-clix",
+   "location": "cap. CLIX, p. 132",
+   "quote": "jurando e repetindo sempre que a dor era uma ilusão",
+   "context": "Morte de Quincas Borba.",
+   "formalDevice": "Contraste entre doutrina e agonia.",
+   "effect": "O sistema que nega a dor fracassa diante do corpo que sofre.",
+   "wholeRelation": "Encerra o arco do Humanitismo.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-pao",
+   "unitId": "cap-clx",
+   "location": "cap. CLX, p. 132",
+   "quote": "coube-me a boa fortuna de não comprar o pão com o suor do meu rosto",
+   "context": "Capítulo final, Das negativas.",
+   "formalDevice": "Alusão bíblica invertida.",
+   "effect": "O narrador conta o privilégio de classe como sorte.",
+   "wholeRelation": "Liga o balanço final às vidas de D. Plácida e Prudêncio.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  },
+  {
+   "id": "ev-negativa",
+   "unitId": "cap-clx",
+   "location": "cap. CLX, p. 132",
+   "quote": "Não tive filhos, não transmiti a nenhuma criatura o legado da nossa miséria.",
+   "context": "Última frase do livro.",
+   "formalDevice": "Fecho em forma de saldo contábil; paralelismo negativo.",
+   "effect": "Generaliza a miséria humana a partir de uma vida privilegiada.",
+   "wholeRelation": "Fecha a circularidade aberta no óbito de I.",
+   "examPotential": [
+    "UNICAMP"
+   ],
+   "evidenceLayer": "textual_evidence",
+   "editorialStatus": "needs_review"
+  }
+ ]
+}

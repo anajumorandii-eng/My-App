@@ -1,8 +1,10 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { Link, useParams } from 'react-router-dom';
+import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { BookOpen, Loader2, CheckCircle2, Circle, Construction } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
-import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, ReadingProgress } from '../types/literaryWorks';
+import { LiteraryWork, WorkEdition, ExamRequirement, WorkUnit, ReadingProgress, WorkDossier, EditorialStatus, ContentModuleType } from '../types/literaryWorks';
+import { loadWorkDossier, visibleDossier } from '../lib/workDossiers';
+import AiTextRenderer from '../components/AiTextRenderer';
 import { getLiteraryWorkBySlug, getEditions, getExamRequirements, getWorkUnits } from '../lib/literaryCatalog';
 import { getReadingProgress, saveReadingProgress } from '../lib/literaryData';
 import { Panel } from '../components/ui/Panel';
@@ -18,6 +20,13 @@ const TABS: { id: TabId; label: string }[] = [
   { id: 'fontes', label: 'Fontes' },
 ];
 
+
+/** Em revisão, todo bloco ainda não publicado leva o selo: é o que separa o
+ *  que a aluna verá do que só a revisão enxerga. */
+function ReviewBadge({ status }: { status: EditorialStatus }) {
+  if (status === 'published') return null;
+  return <span className="inline-block text-[10px] font-mono uppercase tracking-wide px-2 py-0.5 rounded-full border border-[var(--line)] text-[var(--dim)]">em revisão</span>;
+}
 
 function ContentPendingState({ label }: { label: string }) {
   return (
@@ -38,6 +47,25 @@ export default function ObraDetalhe() {
   const [progress, setProgress] = useState<ReadingProgress[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [tab, setTab] = useState<TabId>('comece_aqui');
+  const [searchParams] = useSearchParams();
+  const review = searchParams.get('revisao') === '1';
+  const [rawDossier, setRawDossier] = useState<WorkDossier | null>(null);
+
+  useEffect(() => {
+    if (!workSlug) return;
+    loadWorkDossier(workSlug)
+      .then(setRawDossier)
+      .catch((error) => console.error('Failed to load dossier:', error));
+  }, [workSlug]);
+
+  const dossier = useMemo(() => (rawDossier ? visibleDossier(rawDossier, review) : null), [rawDossier, review]);
+  const moduleOf = (type: ContentModuleType) => dossier?.modules.find((m) => m.moduleType === type);
+  // As unidades confirmadas no Firestore têm precedência; sem elas, a leitura
+  // guiada usa os capítulos do dossiê, que já trazem páginas conferidas.
+  const readingUnits: (WorkUnit | (WorkDossier['units'][number] & { workId: string }))[] = units.length > 0
+    ? units
+    : (dossier?.units ?? []).map((u) => ({ ...u, workId: dossier!.workId }));
+  const guideOf = (unitId: string) => dossier?.units.find((u) => u.id === unitId)?.guide;
 
   useEffect(() => {
     if (!workSlug) return;
@@ -65,7 +93,7 @@ export default function ObraDetalhe() {
   const edition = editions[0];
   const LitIcon = SUBJECT_ICONS['Literatura'] ?? BookOpen;
 
-  function toggleUnitDone(unit: WorkUnit) {
+  function toggleUnitDone(unit: { id: string }) {
     if (!user || !work) return;
     const current = progressByUnit.get(unit.id);
     const next: ReadingProgress = {
@@ -98,7 +126,7 @@ export default function ObraDetalhe() {
     );
   }
 
-  const completedCount = units.filter((u) => progressByUnit.get(u.id)?.status === 'completed').length;
+  const completedCount = readingUnits.filter((u) => progressByUnit.get(u.id)?.status === 'completed').length;
 
   return (
     <div className="ni-main">
@@ -127,6 +155,12 @@ export default function ObraDetalhe() {
           {requirements.map((r) => r.board).join(' · ')} · ciclo 2027
         </div>
       </div>
+
+      {review && (
+        <p role="status" className="ni-panel p-3 text-xs text-[var(--text)]">
+          Modo revisão: blocos marcados como “em revisão” ainda não aparecem para a estudante.
+        </p>
+      )}
 
       {/* Banca badges */}
       {requirements.length > 0 && (
@@ -177,6 +211,12 @@ export default function ObraDetalhe() {
           ) : (
             <p className="text-sm text-[var(--dim)]">O material-fonte desta obra ainda está sendo processado.</p>
           )}
+          {moduleOf('comece_aqui') && (
+            <div className="pt-2 border-t border-[var(--line)] space-y-2">
+              <ReviewBadge status={moduleOf('comece_aqui')!.editorialStatus} />
+              <AiTextRenderer text={moduleOf('comece_aqui')!.markdown} className="text-sm text-[var(--text)]" />
+            </div>
+          )}
           {requirements.some((r) => r.requiredScope !== 'obra completa') && (
             <p className="subject-text text-sm">
               <b>Atenção ao recorte exigido:</b> {requirements.find((r) => r.requiredScope !== 'obra completa')?.requiredScope}
@@ -186,39 +226,81 @@ export default function ObraDetalhe() {
       )}
 
       {tab === 'leitura_guiada' && (
-        units.length === 0 ? (
+        readingUnits.length === 0 ? (
           <ContentPendingState label="A divisão em capítulos/unidades de leitura" />
         ) : (
           <Panel subject="Literatura" className="ni-panel overflow-hidden">
             <div className="p-4 border-b border-[var(--line)] text-sm text-[var(--dim)]">
-              {completedCount} de {units.length} unidades concluídas
+              {completedCount} de {readingUnits.length} unidades concluídas
             </div>
-            {units.map((u) => {
+            {readingUnits.map((u) => {
               const done = progressByUnit.get(u.id)?.status === 'completed';
+              const guide = guideOf(u.id);
               return (
-                <button
-                  key={u.id}
-                  onClick={() => toggleUnitDone(u)}
-                  disabled={!user}
-                  className="w-full flex items-center justify-between p-4 text-left border-b border-[var(--line)] last:border-0 disabled:opacity-60 hover:bg-[var(--surface2)] transition-colors"
-                >
-                  <span className="flex items-center text-sm text-[var(--text)]">
-                    {done
-                      ? <CheckCircle2 className="subject-text w-4 h-4 mr-2 shrink-0" />
-                      : <Circle className="w-4 h-4 mr-2 text-[var(--dim)] shrink-0" />}
-                    {u.order}. {u.title}
-                  </span>
-                  <span className="text-xs text-[var(--dim)]">págs. {u.pdfStartPage}–{u.pdfEndPage}</span>
-                </button>
+                <div key={u.id} className="border-b border-[var(--line)] last:border-0">
+                  <button
+                    onClick={() => toggleUnitDone(u)}
+                    disabled={!user}
+                    aria-pressed={done}
+                    className="w-full flex items-center justify-between p-4 text-left disabled:opacity-60 hover:bg-[var(--surface2)] transition-colors"
+                  >
+                    <span className="flex items-center text-sm text-[var(--text)]">
+                      {done
+                        ? <CheckCircle2 className="subject-text w-4 h-4 mr-2 shrink-0" />
+                        : <Circle className="w-4 h-4 mr-2 text-[var(--dim)] shrink-0" />}
+                      {u.order}. {u.title}
+                    </span>
+                    <span className="text-xs text-[var(--dim)] shrink-0 ml-3">págs. {u.pdfStartPage}–{u.pdfEndPage}</span>
+                  </button>
+                  {guide && (
+                    <div className="px-4 pb-4 pl-10 space-y-2 text-sm text-[var(--text)]">
+                      <ReviewBadge status={guide.editorialStatus} />
+                      <p className="leading-relaxed">{guide.summary}</p>
+                      <ul className="list-disc pl-5 space-y-1 text-[var(--dim)]">
+                        {guide.observe.map((item) => <li key={item}>{item}</li>)}
+                      </ul>
+                    </div>
+                  )}
+                </div>
               );
             })}
           </Panel>
         )
       )}
 
-      {tab === 'analise' && <ContentPendingState label="A análise integral" />}
-      {tab === 'passagens_chave' && <ContentPendingState label="O mapeamento de passagens-chave" />}
-      {tab === 'fontes' && <ContentPendingState label="A bibliografia comentada" />}
+      {tab === 'analise' && (moduleOf('analise_integral') ? (
+        <Panel subject="Literatura" className="ni-panel p-6 space-y-3">
+          <ReviewBadge status={moduleOf('analise_integral')!.editorialStatus} />
+          <AiTextRenderer text={moduleOf('analise_integral')!.markdown} className="text-sm text-[var(--text)]" />
+        </Panel>
+      ) : <ContentPendingState label="A análise integral" />)}
+
+      {tab === 'passagens_chave' && (dossier && dossier.evidence.length > 0 ? (
+        <div className="grid gap-3">
+          {dossier.evidence.map((card) => (
+            <Panel key={card.id} subject="Literatura" className="ni-panel p-5 space-y-3">
+              <div className="flex flex-wrap items-center gap-2">
+                <span className="text-[11px] font-mono text-[var(--dim)]">{card.location}</span>
+                <ReviewBadge status={card.editorialStatus} />
+              </div>
+              <blockquote className="border-l-2 border-[var(--primary)] pl-3 italic text-sm text-[var(--text)]">“{card.quote}”</blockquote>
+              <dl className="grid gap-2 text-sm text-[var(--text)]">
+                <div><dt className="font-semibold">Contexto</dt><dd className="text-[var(--dim)]">{card.context}</dd></div>
+                <div><dt className="font-semibold">Recurso</dt><dd className="text-[var(--dim)]">{card.formalDevice}</dd></div>
+                <div><dt className="font-semibold">Efeito</dt><dd className="text-[var(--dim)]">{card.effect}</dd></div>
+                <div><dt className="font-semibold">Relação com a obra</dt><dd className="text-[var(--dim)]">{card.wholeRelation}</dd></div>
+              </dl>
+            </Panel>
+          ))}
+        </div>
+      ) : <ContentPendingState label="O mapeamento de passagens-chave" />)}
+
+      {tab === 'fontes' && (moduleOf('fontes') ? (
+        <Panel subject="Literatura" className="ni-panel p-6 space-y-3">
+          <ReviewBadge status={moduleOf('fontes')!.editorialStatus} />
+          <AiTextRenderer text={moduleOf('fontes')!.markdown} className="text-sm text-[var(--text)]" />
+        </Panel>
+      ) : <ContentPendingState label="A bibliografia comentada" />)}
     </div>
   );
 }
