@@ -5,6 +5,8 @@ import type { WorkDossier } from '../types/literaryWorks';
 // consiga importar este módulo sem o Vite.
 const LOADERS: Record<string, () => Promise<{ default: unknown }>> = {
   'caminho-de-pedras': () => import('../data/obras/dossies/caminho-de-pedras.json'),
+  'paixao-segundo-gh': () => import('../data/obras/dossies/paixao-segundo-gh.json'),
+  geografia: () => import('../data/obras/dossies/geografia.json'),
   'memorias-de-martha': () => import('../data/obras/dossies/memorias-de-martha.json'),
   nebulosas: () => import('../data/obras/dossies/nebulosas.json'),
   'opusculo-humanitario': () => import('../data/obras/dossies/opusculo-humanitario.json'),
