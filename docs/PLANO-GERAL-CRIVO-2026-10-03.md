@@ -18,19 +18,19 @@ A Entrega A foi integrada em #254: [evidências dos 25 capítulos](visual-integr
 | Geografia | 63 | 1 | 0 | 0 |
 | Filosofia | 35 | 35 | 0 | 0 |
 | Sociologia | 27 | 27 | 0 | 0 |
-| Redação | 58 | 0 | 58 | 58 |
+| Redação | 58 | 16 | 42 | 42 |
 | Gramática | 26 | 26 | 0 | 0 |
 | Língua Inglesa | 17 | 17 | 0 | 0 |
 | Literatura | 37 | 37 | 0 | 0 |
 | Entendimento de Texto | 12 | 12 | 0 | 0 |
 | Atualidades | 1 | 0 | 1 | — |
-| **Total** | **613** | **239** | **59** | **58** |
+| **Total** | **613** | **255** | **43** | **42** |
 
-Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 59 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 58 de Redação ainda na fila.
+Os outros **315 capítulos tinham recomendação de preservar o mecanismo central**. Nenhuma destas categorias significa aprovação editorial integral: “tratado” refere-se ao achado registrado, e a fila contém recomendações que precisam ser reproduzidas antes da correção. Não são 43 bugs recém-reproduzidos. Um capítulo pode ter texto aprofundado e ainda precisar de representação visual, como os 42 de Redação ainda na fila.
 
-Os 58 resumos pendentes estão nos 612 registros de `deepSummaryContent.json`; COP30 é o capítulo adicional do catálogo. Eles foram vinculados aos IDs e aos mesmos lotes visuais para executar conteúdo e representação juntos. Há 552 registros com `rev: 2` e dois com `rev: 3`; não precisam ser reescritos indiscriminadamente. As revisões 3 corrigem dois defeitos concretos de Kant/Rawls, com releitura isolada. O inventário formal de qualidade continua separado: 532 sem revisão formal, 81 em validação, nenhuma aprovação registrada.
+Os 42 resumos pendentes estão nos 612 registros de `deepSummaryContent.json`; COP30 é o capítulo adicional do catálogo. Eles foram vinculados aos IDs e aos mesmos lotes visuais para executar conteúdo e representação juntos. Há 568 registros com `rev: 2` e dois com `rev: 3`; não precisam ser reescritos indiscriminadamente. As revisões 3 corrigem dois defeitos concretos de Kant/Rawls, com releitura isolada. O inventário formal de qualidade continua separado: 532 sem revisão formal, 81 em validação, nenhuma aprovação registrada.
 
-Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 59 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 114 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
+Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planilha dos 43 pendentes](FILA-VISUAL-2026-10-03.csv), [auditoria histórica](REVISAO-VISUAL-INTEGRAL-2026-10-02.md). A fila guarda ID, matéria, lote, arquivos, achados e evidência de resolução; o JSON também vincula os 114 resumos pendentes. Verificar integridade com `node scripts/validar-fila-visual.mjs`.
 
 ## Lotes definidos
 
@@ -47,7 +47,7 @@ Fontes consultáveis: [fila completa JSON](FILA-VISUAL-2026-10-03.json), [planil
 | H1 | 24 | Filosofia/Sociologia: comparação de posições com situações próprias, na família de contraste. |
 | H2 | 23 | Onze de Filosofia na Entrega L (#269) e doze de Sociologia na Entrega N; nenhum restante na proposta. Causalidade, camadas e tipologias: relações concretas, retorno materialista quando pertinente e classificações com critérios. |
 | H3 | 15 | Sete de Sociologia na Entrega K (#268) e oito de Filosofia na Entrega L (#269); nenhum restante na proposta. Escalas/critérios/eixos e casos próprios: meio-termo, diálogo/aporia, dialética, genealogia, mito/logos e Solidariedade. |
-| R1 | 16 | Oito pares de repertório/análise: referência, tese e consequência específicas; aprofundamento junto à cena. |
+| R1 — tratado na Entrega O | 16 | Oito pares de repertório/análise: referência, tese e consequência específicas; aprofundamento junto à cena. |
 | R2 | 15 | Projeto/gênero/introdução/conclusão, competências e modelos de texto; incluir contenção móvel de Competências. |
 | R3 | 27 | Coletânea, argumento, dados, coesão, intervenção, direitos e revisão; mostrar operações em texto próprio e detalhamento da intervenção. |
 | A1 | 1 | COP30: atores, contexto de Belém, decisões e limites com fontes datadas. Pode integrar uma entrega maior de Humanas. |

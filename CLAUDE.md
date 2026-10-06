@@ -16,19 +16,19 @@ renomeadas.
 ## Estado atual e precedência — auditoria de 05/10/2026
 
 Base confirmada com `origin/main`: `4c6227f6998157275b7d7fd5db0b64a988e4dac5`.
-A Entrega E/Gramática foi integrada na PR #260; isolamento de Resumos e contraste na PR #261. A Entrega F (oito fundamentos de Literatura) foi integrada na PR #262. A Entrega G (século XIX) foi integrada na PR #263. A Entrega H (Machado e Modernismo até 30) foi integrada na PR #264. A Entrega I (45-1980) foi integrada na PR #266. A Entrega J (Literatura final) foi integrada na PR #267. A Entrega K (Sociologia do H3) foi integrada na PR #268. A Entrega L (19 de Filosofia) está na PR #269. A Entrega N propõe os 12 de Sociologia do H2, que encerram Humanas, com evidências em `docs/visual-integral-2026-10-06/entrega-n/README.md`. A fonte operacional é
+A Entrega E/Gramática foi integrada na PR #260; isolamento de Resumos e contraste na PR #261. A Entrega F (oito fundamentos de Literatura) foi integrada na PR #262. A Entrega G (século XIX) foi integrada na PR #263. A Entrega H (Machado e Modernismo até 30) foi integrada na PR #264. A Entrega I (45-1980) foi integrada na PR #266. A Entrega J (Literatura final) foi integrada na PR #267. A Entrega K (Sociologia do H3) foi integrada na PR #268. As Entregas L (19 de Filosofia) e N (12 de Sociologia do H2), que encerram Humanas, estão juntas na PR #269. A Entrega O propõe os 16 capítulos R1 de Redação, com evidências em `docs/visual-integral-2026-10-06/entrega-o/README.md`. A fonte operacional é
 `docs/PLANO-GERAL-CRIVO-2026-10-03.md` + `docs/FILA-VISUAL-2026-10-03.json`;
 as filas históricas da continuidade não são tarefas novas.
 
 - 613 capítulos com representação: 8 experimentos, 43 pranchas, 375 instrumentos
   e 187 cenas; zero lacunas. Isso mede presença, não aprovação editorial.
-- 612 resumos profundos: 552 em revisão 2, dois em revisão 3 e 58 em revisão 1
-  (todos de Redação).
-- Fila: 239 achados tratados, 59 pendentes, 315 mecanismos preservados.
+- 612 resumos profundos: 568 em revisão 2, dois em revisão 3 e 42 em revisão 1
+  (todos de Redação, R2 e R3).
+- Fila: 255 achados tratados, 43 pendentes, 315 mecanismos preservados.
 - Inventário formal: 532 não revisados, 81 em validação, zero aprovações
   registradas. Não promover aprovação por contagem ou teste automático.
-- Humanas (H1, H2, H3) sem pendências na proposta. Próxima entrega
-  editorial/visual: R1/R2/R3 (Redação, 58) e A1. Defeitos confirmados de persistência/acessibilidade podem
+- Humanas (H1, H2, H3) sem pendências na proposta. R1 tratado na proposta O. Próxima
+  entrega editorial/visual: R2/R3 (Redação, 42) e A1. Defeitos confirmados de persistência/acessibilidade podem
   receber prioridade, conforme o plano geral.
 - A personalização visual vigente abrange **todas as matérias**. O escopo antigo
   limitado a Ciências foi substituído; seus números abaixo são históricos.
@@ -176,8 +176,8 @@ revisão no id das seções (`-editorial-v${rev}-`). **É isso que impede o
 progresso de leitura dos 612 capítulos de zerar** a cada mudança de texto: só o
 capítulo que mudou volta a pedir leitura. Ao reescrever, sempre suba o `rev`.
 
-Estado na proposta N: 554 de 612 com aprofundamento (552 em revisão 2 e dois
-em revisão 3). Resta Redação (58); Literatura (37), Filosofia (35) e Sociologia (27) foram tratadas. Executar
+Estado na proposta O: 570 de 612 com aprofundamento (568 em revisão 2 e dois
+em revisão 3). Resta Redação (42, R2 e R3), depois dos 16 de R1; Literatura (37), Filosofia (35) e Sociologia (27) foram tratadas. Executar
 junto à fila visual por ID; LG3 continua; fundamentos (F, #262), século XIX
 (G, #263) Machado/Modernismo até 30 (H, #264), 45-1980 (I, #266) e os finais (J, #267) já foram tratados. Reconciliar a integração de K antes de repetir os capítulos. Não repetir Gramática.
 

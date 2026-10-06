@@ -84,6 +84,22 @@ const chapters = [
   ['summary-sociologia-democracia-e-participacao-politica', 'democracy-forms'],
   ['summary-sociologia-globalizacao-economica-e-cultural', 'globalization-flows'],
   ['summary-sociologia-o-estado-nacao-na-era-global', 'nation-state'],
+  ['summary-redacao-incrementando-o-repertorio-meio-ambiente', 'rep-environment'],
+  ['summary-redacao-analisando-tema-de-redacao-meio-ambiente', 'theme-environment'],
+  ['summary-redacao-incrementando-o-repertorio-educacao-e-trabalho', 'rep-work'],
+  ['summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho', 'theme-work'],
+  ['summary-redacao-incrementando-o-repertorio-temas-abstratos', 'rep-abstract'],
+  ['summary-redacao-analisando-tema-abstrato-de-redacao', 'theme-abstract'],
+  ['summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade', 'rep-body'],
+  ['summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade', 'theme-body'],
+  ['summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao', 'rep-violence'],
+  ['summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao', 'theme-violence'],
+  ['summary-redacao-incrementando-o-repertorio-cidadania-e-poder', 'rep-citizenship'],
+  ['summary-redacao-analisando-tema-de-redacao-cidadania-e-poder', 'theme-citizenship'],
+  ['summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais', 'rep-culture'],
+  ['summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais', 'theme-culture'],
+  ['summary-redacao-incrementando-o-repertorio-midia-e-sociedade', 'rep-media'],
+  ['summary-redacao-analisando-tema-de-redacao-midia-e-sociedade', 'theme-media'],
 ].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });

@@ -2,12 +2,12 @@
   "dateUTC": "2026-10-05",
   "mainCommit": "683a573204f92adc247d1493caaa08ad9de9b799",
   "sourceAudit": "docs/visual-integral-2026-10-02/capitulos.json",
-  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; integrada na PR #264. Entrega I: Graciliano, Cabral, Clarice, Rosa, Poesia Concreta e 1960-1980, sete capítulos LG3 revalidados em build local; integrada na PR #266. Entrega J: os seis capítulos LG3 finais (contemporâneos, lusófonos, artes, teatro e canção) revalidados em build local; integrada na PR #267; LG3 sem pendências. Entrega K: os sete capítulos de Sociologia do H3, com texto e operação autoral, revalidados em build local. Entrega L: os dezenove capítulos de Filosofia (oito do H3 e onze do H2), com oficina de argumento ancorada no texto rev 2, revalidados em build local. Entrega N: os doze capítulos de Sociologia do H2, com texto rev 2 e oficina autoral, revalidados em build local; Humanas sem pendências.",
+  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; integrada na PR #264. Entrega I: Graciliano, Cabral, Clarice, Rosa, Poesia Concreta e 1960-1980, sete capítulos LG3 revalidados em build local; integrada na PR #266. Entrega J: os seis capítulos LG3 finais (contemporâneos, lusófonos, artes, teatro e canção) revalidados em build local; integrada na PR #267; LG3 sem pendências. Entrega K: os sete capítulos de Sociologia do H3, com texto e operação autoral, revalidados em build local. Entrega L: os dezenove capítulos de Filosofia (oito do H3 e onze do H2), com oficina de argumento ancorada no texto rev 2, revalidados em build local. Entrega N: os doze capítulos de Sociologia do H2, com texto rev 2 e oficina autoral, revalidados em build local; Humanas sem pendências. Entrega O: os dezesseis capítulos R1 de Redação (repertório e análise de tema), com texto rev 2 e oficina própria, revalidados em build local.",
   "editorialApproval": "Não promovida; manter e achado tratado não certificam capítulo completo.",
   "counts": {
-    "achado_tratado": 239,
+    "achado_tratado": 255,
     "preservar_mecanismo": 315,
-    "fila_a_revalidar": 59
+    "fila_a_revalidar": 43
   },
   "subjects": {
     "Física": {
@@ -55,8 +55,8 @@
     "Redação": {
       "total": 58,
       "preservar_mecanismo": 0,
-      "achado_tratado": 0,
-      "fila_a_revalidar": 58
+      "achado_tratado": 16,
+      "fila_a_revalidar": 42
     },
     "Filosofia": {
       "total": 35,
@@ -98,8 +98,7 @@
   "batchCounts": {
     "A1": 1,
     "R2": 15,
-    "R3": 27,
-    "R1": 16
+    "R3": 27
   },
   "chapters": [
     {
@@ -6148,19 +6147,24 @@
       "subject": "Redação",
       "artifact": "rep-meio-ambiente",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Incrementando o Repertório: Meio Ambiente, a fonte desenvolve Conceitos-chave; Marcos e dados; Recortes prováveis: Para temas ambientais, valem conceitos como desenvolvimento sustentável, externalidade negativa, tragédia dos comuns, justiça ambiental, pegada ecológica, responsabilidades comuns porém diferenciadas e economia circular. Cada um permite analisar o problema por um ângulo distinto . O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-meio-ambiente",
@@ -6168,19 +6172,24 @@
       "subject": "Redação",
       "artifact": "tema-meio-ambiente",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Analisando Tema de Redação: Meio Ambiente, a fonte desenvolve Lendo a proposta; Montando os argumentos; Intervenção: Diante de uma proposta ambiental, identifique se o recorte é o problema, a solução ou o conflito entre interesses. Um tema sobre descarte de eletrônicos pede análise de consumo, obsolescência e logística reversa; um tema sobre crise hídrica pede gestão, desigualdade de acesso e u. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho",
@@ -6188,19 +6197,24 @@
       "subject": "Redação",
       "artifact": "rep-educacao-trabalho",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Incrementando o Repertório: Educação e Trabalho, a fonte desenvolve Conceitos-chave; Dados e marcos; Recortes prováveis: São úteis capital cultural de Bourdieu, para explicar como a origem social afeta o desempenho escolar; meritocracia e sua crítica; educação bancária e educação libertadora, de Paulo Freire; qualificação e requalificação profissional; e informalidade e precarização, para conectar . O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho",
@@ -6208,19 +6222,24 @@
       "subject": "Redação",
       "artifact": "tema-educacao-trabalho",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Analisando Tema de Redação: Educação e Trabalho, a fonte desenvolve Delimitando o problema; Estrutura de argumentos; Intervenção: Num tema sobre evasão escolar, o problema não é a escola em geral, e sim os fatores que levam à saída antes da conclusão: necessidade de trabalhar, gravidez, distância, violência, desinteresse ligado a currículo, e falhas na permanência. Nomear o fator escolhido é o que dá foco a. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-temas-abstratos",
@@ -6228,19 +6247,24 @@
       "subject": "Redação",
       "artifact": "rep-abstratos",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Incrementando o Repertório: Temas Abstratos, a fonte desenvolve O que são temas abstratos; Repertório filosófico e literário; Como concretizar: São propostas centradas em conceitos, e não em problemas concretos imediatos: o valor do tempo, os limites da liberdade, o sentido do trabalho, a busca pela felicidade, o papel do erro. Exigem definição conceitual e uso de exemplos concretos para ancorar a discussão sem perder a . O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-analisando-tema-abstrato-de-redacao",
@@ -6248,19 +6272,24 @@
       "subject": "Redação",
       "artifact": "tema-abstrato",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Analisando Tema Abstrato de Redação, a fonte desenvolve Lendo a proposta; Estruturando; Conclusão: Em temas abstratos, o enunciado costuma trazer um conceito e um verbo que orienta a discussão, como analisar os limites, discutir a importância, avaliar os desafios. Esse verbo define a operação exigida, e ignorá-lo produz texto que trata do conceito sem responder ao que foi pedi. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade",
@@ -6268,19 +6297,24 @@
       "subject": "Redação",
       "artifact": "rep-corpo-saude",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Incrementando o Repertório: Corpo, Saúde e Sexualidade, a fonte desenvolve Conceitos-chave; Dados e marcos; Recortes prováveis: Rendem bem os conceitos de determinantes sociais da saúde, biopoder e disciplina em Foucault, padrão estético e indústria cultural, saúde como direito na Constituição de 1988, integralidade do SUS, tabu e silenciamento, e a distinção entre sexo, gênero e orientação sexual, freque. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade",
@@ -6288,19 +6322,24 @@
       "subject": "Redação",
       "artifact": "tema-corpo-saude",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Analisando Tema de Redação: Corpo, Saúde e Sexualidade, a fonte desenvolve Delimitação sensível; Argumentos possíveis; Intervenção: Temas dessa área exigem cuidado com generalizações e com afirmações que possam ferir direitos. O texto deve tratar de estruturas sociais, políticas públicas e representações culturais, evitando julgamento moral de indivíduos e evitando qualquer proposta que viole os direitos huma. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao",
@@ -6308,19 +6347,24 @@
       "subject": "Redação",
       "artifact": "rep-violencia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Incrementando o Repertório: Violência, Leis e Punição, a fonte desenvolve Conceitos-chave; Dados e marcos; Recortes prováveis: São produtivos os conceitos de violência estrutural, seletividade penal, encarceramento em massa, função da pena entre retribuição e ressocialização, cultura da violência, e a distinção entre segurança pública e política de segurança, que separa reação imediata de estratégia de l. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao",
@@ -6328,19 +6372,24 @@
       "subject": "Redação",
       "artifact": "tema-violencia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Analisando Tema de Redação: Violência, Leis e Punição, a fonte desenvolve Delimitação; Argumentos possíveis; Intervenção: Num tema sobre violência contra a mulher, o recorte pode estar na subnotificação, na rede de atendimento, na cultura machista ou na efetividade das medidas protetivas. Escolher um eixo e sustentá-lo é mais produtivo que tentar cobrir todos, o que produz texto superficial e repeti. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder",
@@ -6348,19 +6397,24 @@
       "subject": "Redação",
       "artifact": "rep-cidadania",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Incrementando o Repertório: Cidadania e Poder, a fonte desenvolve Conceitos-chave; Marcos institucionais; Recortes prováveis: São úteis as gerações de direitos de Marshall, cidadania regulada de José Murilo de Carvalho, esfera pública de Habermas, democracia representativa e participativa, contrato social em Rousseau e Locke, e a distinção entre igualdade formal e material, essencial para discutir polít. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder",
@@ -6368,19 +6422,24 @@
       "subject": "Redação",
       "artifact": "tema-cidadania",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Analisando Tema de Redação: Cidadania e Poder, a fonte desenvolve Delimitação; Argumentos possíveis; Intervenção: Num tema sobre participação política juvenil, o recorte pode estar no desinteresse, na desinformação, na ausência de canais acessíveis ou na descrença nas instituições. Identificar o fator central orienta a escolha dos argumentos e evita que o texto trate genericamente de polític. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais",
@@ -6388,19 +6447,24 @@
       "subject": "Redação",
       "artifact": "rep-arte-cultura",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Incrementando o Repertório: Arte, Cultura e Relações Sociais, a fonte desenvolve Conceitos-chave; Marcos e políticas; Recortes prováveis: São produtivos indústria cultural de Adorno e Horkheimer, capital cultural de Bourdieu, patrimônio material e imaterial, apropriação cultural, hibridismo, memória e esquecimento, e a distinção entre cultura erudita, popular e de massa, que costuma ser cobrada em recortes sobre ac. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais",
@@ -6408,19 +6472,24 @@
       "subject": "Redação",
       "artifact": "tema-arte-cultura",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Analisando o Tema de Redação: Arte, Cultura e Relações Sociais, a fonte desenvolve Delimitação; Argumentos possíveis; Intervenção: Num tema sobre acesso a bens culturais, o recorte pode estar na distribuição desigual de equipamentos, no custo, na formação escolar, no transporte ou na representatividade dos acervos. Escolher um eixo e sustentá-lo com dados e conceitos evita o texto genérico sobre a importânci. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade",
@@ -6428,19 +6497,24 @@
       "subject": "Redação",
       "artifact": "rep-midia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Incrementando o Repertório: Mídia e Sociedade, a fonte desenvolve Conceitos-chave; Marcos e dados; Recortes prováveis: Rendem indústria cultural, esfera pública, agenda-setting, bolha e câmara de eco, economia da atenção, desinformação e pós-verdade, além da distinção entre liberdade de expressão e responsabilidade sobre conteúdo, tema central nos debates sobre regulação de plataformas.. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade",
@@ -6448,19 +6522,24 @@
       "subject": "Redação",
       "artifact": "tema-midia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "R1",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/lib/writingInstrumentLab.ts",
-        "src/views/visual-instruments/WritingInstrument.tsx",
-        "src/views/visual-instruments/WritingMechanismScenes.tsx"
+        "src/views/visual-instruments/WritingOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "DECISAO_TEXTUAL",
           "description": "A cena reutiliza LENTE→TESE ou EIXO→TESE e troca o pequeno ícone de domínio. Para Analisando Tema de Redação: Mídia e Sociedade, a fonte desenvolve Delimitação; Argumentos possíveis; Intervenção: Num tema sobre desinformação, o recorte pode estar na velocidade de circulação, na ausência de educação midiática, no modelo de negócio das plataformas ou nos efeitos sobre saúde e eleições. Definir o eixo permite argumentar com profundidade em vez de listar problemas.. O tema específico não organiza o desenho e a decisão textual fica em rótulo/comentário. Mostrar exemplo de tese, referência, causa ou intervenção desse domínio e seu vínculo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-o",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-o/README.md",
+        "description": "Redação R1: texto rev 2 com casos e propostas autorais, e oficina com dados do próprio capítulo (conceito escolhido, lei × prática, recorte e os cinco elementos da intervenção). Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao",
@@ -10961,10 +11040,10 @@
   "editorial": {
     "source": "src/data/deepSummaryContent.json",
     "total": 612,
-    "revision2": 552,
-    "pending": 58,
+    "revision2": 568,
+    "pending": 42,
     "counts": {
-      "Redação": 58
+      "Redação": 42
     },
     "chapters": [
       {
@@ -10972,54 +11051,6 @@
         "topic": "A Dissertação no Vestibular: Mitos e Verdades",
         "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
         "batch": "R2"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Analisando Tema Abstrato de Redação",
-        "id": "summary-redacao-analisando-tema-abstrato-de-redacao",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Analisando Tema de Redação: Cidadania e Poder",
-        "id": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Analisando Tema de Redação: Corpo, Saúde e Sexualidade",
-        "id": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Analisando Tema de Redação: Educação e Trabalho",
-        "id": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Analisando Tema de Redação: Meio Ambiente",
-        "id": "summary-redacao-analisando-tema-de-redacao-meio-ambiente",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Analisando Tema de Redação: Mídia e Sociedade",
-        "id": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Analisando Tema de Redação: Violência, Leis e Punição",
-        "id": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",
-        "id": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais",
-        "batch": "R1"
       },
       {
         "subject": "Redação",
@@ -11080,54 +11111,6 @@
         "topic": "Gêneros e sua Relação com a Estrutura do Texto",
         "id": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto",
         "batch": "R2"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Incrementando o Repertório: Arte, Cultura e Relações Sociais",
-        "id": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Incrementando o Repertório: Cidadania e Poder",
-        "id": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Incrementando o Repertório: Corpo, Saúde e Sexualidade",
-        "id": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Incrementando o Repertório: Educação e Trabalho",
-        "id": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Incrementando o Repertório: Meio Ambiente",
-        "id": "summary-redacao-incrementando-o-repertorio-meio-ambiente",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Incrementando o Repertório: Mídia e Sociedade",
-        "id": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Incrementando o Repertório: Temas Abstratos",
-        "id": "summary-redacao-incrementando-o-repertorio-temas-abstratos",
-        "batch": "R1"
-      },
-      {
-        "subject": "Redação",
-        "topic": "Incrementando o Repertório: Violência, Leis e Punição",
-        "id": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao",
-        "batch": "R1"
       },
       {
         "subject": "Redação",
