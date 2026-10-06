@@ -93,4 +93,27 @@ describe('ObraDetalhe com dossiê', () => {
     expect(screen.getByText('cap. I, p. 8')).toBeInTheDocument();
     expect(screen.getAllByText('em revisão').length).toBeGreaterThan(0);
   });
+
+  // Gonzaga traz os oito tipos de módulo; antes, questões, revisão ativa,
+  // bancas e crítica ficavam no JSON sem nenhuma aba que os mostrasse.
+  it('em revisão, mostra bancas, questões, revisão ativa e crítica de um dossiê completo', async () => {
+    renderAt('/obras/gonzaga-de-sa?revisao=1');
+    await screen.findByText(/Modo revisão/);
+    fireEvent.click(screen.getByRole('button', { name: 'Análise' }));
+    expect(await screen.findByText('Crítica e debate')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Bancas' }));
+    expect(screen.getByText('FUVEST')).toBeInTheDocument();
+    expect(screen.getByText('Unicamp')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Questões' }));
+    expect(screen.getByText(/Questões autorais/)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Revisão ativa' }));
+    expect(screen.getByText(/24 horas:/)).toBeInTheDocument();
+  });
+
+  it('dossiê sem módulo de questões mostra o aviso de pendência, não uma aba vazia', async () => {
+    renderAt('/obras/memorias-de-martha?revisao=1');
+    await screen.findByText(/Modo revisão/);
+    fireEvent.click(screen.getByRole('button', { name: 'Questões' }));
+    expect(screen.getByText(/O banco de questões autorais ainda está em elaboração/)).toBeInTheDocument();
+  });
 });
