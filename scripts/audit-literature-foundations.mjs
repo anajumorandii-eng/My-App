@@ -53,6 +53,14 @@ const chapters = [
   ['summary-sociologia-classes-sociais-e-mobilidade-social', 'mobility-grid'],
   ['summary-sociologia-cidadania-e-direitos', 'citizenship-rights'],
   ['summary-sociologia-a-sociedade-da-informacao', 'information-society'],
+  ['summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos', 'myth-logos'],
+  ['summary-filosofia-o-metodo-socratico-e-a-maieutica', 'socratic-method'],
+  ['summary-filosofia-o-mito-da-caverna', 'cave'],
+  ['summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento', 'divided-line'],
+  ['summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo', 'golden-mean'],
+  ['summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica', 'cartesian-doubt'],
+  ['summary-filosofia-hegel-e-a-dialetica', 'hegel-dialectic'],
+  ['summary-filosofia-nietzsche-e-a-critica-aos-valores-morais', 'nietzsche-genealogy'],
 ].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
@@ -123,7 +131,7 @@ try {
           result.normalMotionObserved = result.states.some(state => state.motionObserved);
           expect(result.normalMotionObserved).toBe(true);
         }
-        for (const modifier of ['Começar pela devolução', 'Ler em ordem direta', 'Cortar acréscimo redundante']) {
+        for (const modifier of ['Começar pela devolução', 'Ler em ordem direta', 'Cortar acréscimo redundante', 'Ver como pedestre']) {
           await controls.first().click();
           await page.waitForTimeout(reducedMotion === 'reduce' ? 60 : 650);
           const button = scene.getByRole('button', { name: modifier, exact: true });

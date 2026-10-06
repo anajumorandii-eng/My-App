@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 8,
     "board": 43,
-    "instrument": 345,
-    "scene": 217,
+    "instrument": 363,
+    "scene": 199,
     "fallback": 0
   },
-  "contested": 77,
+  "contested": 95,
   "subjects": [
     {
       "subject": "Física",
@@ -147,8 +147,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 0,
-        "scene": 34,
+        "instrument": 18,
+        "scene": 16,
         "fallback": 0
       }
     },
@@ -4964,9 +4964,14 @@
       "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
       "subject": "Filosofia",
       "title": "O Método Socrático e a Maiêutica",
-      "primary": "scene",
-      "artifact": "movimento-dialetico",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "socratic-method",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "movimento-dialetico"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
@@ -4980,33 +4985,53 @@
       "id": "summary-filosofia-o-mito-da-caverna",
       "subject": "Filosofia",
       "title": "O Mito da Caverna",
-      "primary": "scene",
-      "artifact": "escala-de-graus",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "cave",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento",
       "subject": "Filosofia",
       "title": "A Alegoria da Linha Dividida e o Conhecimento",
-      "primary": "scene",
-      "artifact": "escala-de-graus",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "divided-line",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-logica-e-metafisica-aristotelicas",
       "subject": "Filosofia",
       "title": "Lógica e Metafísica Aristotélicas",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "aristotle-logic",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo",
       "subject": "Filosofia",
       "title": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
-      "primary": "scene",
-      "artifact": "escala-de-graus",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "golden-mean",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
@@ -5028,9 +5053,14 @@
       "id": "summary-filosofia-escolastica-e-santo-tomas-de-aquino",
       "subject": "Filosofia",
       "title": "Escolástica e Santo Tomás de Aquino",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "aquinas-synthesis",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
@@ -5044,9 +5074,14 @@
       "id": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica",
       "subject": "Filosofia",
       "title": "Descartes e o Método: a Dúvida Hiperbólica",
-      "primary": "scene",
-      "artifact": "escala-de-graus",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "cartesian-doubt",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
@@ -5068,33 +5103,53 @@
       "id": "summary-filosofia-a-critica-de-hume-a-causalidade",
       "subject": "Filosofia",
       "title": "A Crítica de Hume à Causalidade",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "hume-causation",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-hobbes-e-o-estado-de-natureza",
       "subject": "Filosofia",
       "title": "Hobbes e o Estado de Natureza",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "hobbes-state",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-locke-e-os-direitos-naturais",
       "subject": "Filosofia",
       "title": "Locke e os Direitos Naturais",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "locke-rights",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-rousseau-e-a-vontade-geral",
       "subject": "Filosofia",
       "title": "Rousseau e a Vontade Geral",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "rousseau-general-will",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
@@ -5116,25 +5171,40 @@
       "id": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico",
       "subject": "Filosofia",
       "title": "A Ética Kantiana e o Imperativo Categórico",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "kant-duty",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-hegel-e-a-dialetica",
       "subject": "Filosofia",
       "title": "Hegel e a Dialética",
-      "primary": "scene",
-      "artifact": "movimento-dialetico",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "hegel-dialectic",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "movimento-dialetico"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-o-materialismo-historico",
       "subject": "Filosofia",
       "title": "O Materialismo Histórico",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "historical-materialism",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-alienacao-e-mais-valia",
@@ -5148,33 +5218,53 @@
       "id": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista",
       "subject": "Filosofia",
       "title": "A Luta de Classes na Filosofia Marxista",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "class-struggle",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais",
       "subject": "Filosofia",
       "title": "Nietzsche e a Crítica aos Valores Morais",
-      "primary": "scene",
-      "artifact": "movimento-dialetico",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "nietzsche-genealogy",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "movimento-dialetico"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-o-existencialismo-de-sartre",
       "subject": "Filosofia",
       "title": "O Existencialismo de Sartre",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "sartre-freedom",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural",
       "subject": "Filosofia",
       "title": "A Escola de Frankfurt e a Indústria Cultural",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "frankfurt-culture",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",

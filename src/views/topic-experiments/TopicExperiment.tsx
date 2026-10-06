@@ -1,6 +1,7 @@
 import {GrammarVariationScene} from './GrammarVariationScene';
 import { LiteratureOperation } from '../visual-instruments/LiteratureFoundations';
 import { SociologyOperation } from '../visual-instruments/SociologyOperations';
+import { PhilosophyOperation } from '../visual-instruments/PhilosophyOperations';
 import React, { useState, useId } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { MOTION_DURATION, MOTION_EASE } from '../../design-system/motion/tokens';
@@ -154,24 +155,10 @@ function Ecology() {
 
 
 function Myth() {
-  const [mode,setMode]=useState(0); const transition=useInkMotion();
-  const [inspect,setInspect]=useState(false);
-  return <Studio title="O mesmo fenômeno, outro critério" note="Compare o que sustenta uma explicação mítica e uma investigação racional.">
-    <div className="ts-choices"><button type="button" aria-pressed={mode===0} onClick={()=>{setMode(0);setInspect(false);}}>Mito</button><button type="button" aria-pressed={mode===1} onClick={()=>{setMode(1);setInspect(false);}}>Logos</button></div>
-    <svg viewBox="0 0 480 240" role="img" aria-label={mode===0?'Explicação apoiada na tradição':'Explicação aberta à argumentação'}>
-      <path d="M202 80q-30-45-60-10q-45-10-42 30h145q14-30-16-35q-15-5-27 15" fill="none" stroke="currentColor" strokeWidth="2"/>
-      <path d="M184 104l-22 42h23l-17 33 52-53h-28l17-22" fill="var(--vs-amber)"/>
-      <motion.path animate={{pathLength:inspect?1:0,opacity:inspect?1:0}} transition={transition} d="M245 110Q310 94 353 139" className="ts-reference"/>
-      <text x="279" y="76">{mode===0?'Quem conta?':'Como justificar?'}</text>
-      <text x="275" y="169">{mode===0?'tradição':'argumentação'}</text>
-      <text x="275" y="201">{mode===0?'autoridade':'contestação'}</text>
-    </svg>
-    <p className="ts-observation">{mode===0?'“O raio expressa a ira de Zeus.” A narrativa mobiliza uma vontade divina e a autoridade da tradição.':'“Que causas naturais explicam o raio?” A pergunta busca uma explicação discutível e justificável por argumentos.'}</p>
-    <button type="button" onClick={()=>setInspect(v=>!v)} aria-expanded={inspect}>Examinar o critério de aceitação</button>
-    {inspect&&<p role="status">{mode===0?'A aceitação se apoia na tradição que transmite a narrativa.':'A explicação pode ser examinada, contestada e corrigida.'} Essa comparação é de critérios, não uma cronologia em que o mito desaparece.</p>}
-  </Studio>;
+  // A auditoria pediu a justificativa racional no próprio desenho, e não só a
+  // troca das palavras sobre o raio: a oficina mostra objeção e correção.
+  return <Studio title="O mesmo fenômeno, outro critério" note="Compare o que sustenta uma explicação mítica e uma investigação racional."><PhilosophyOperation id="myth-logos"/></Studio>;
 }
-
 
 function Solidarity() {
   // A versão anterior só trocava círculos por quadrados; a auditoria pediu os
