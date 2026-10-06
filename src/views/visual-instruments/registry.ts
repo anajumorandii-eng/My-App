@@ -73,6 +73,7 @@ import { englishInstrument } from './EnglishInstrument';
 import type { EnglishInstrumentId } from '../../lib/englishInstrumentLab';
 import { writingInstrument } from './WritingInstrument';
 import type { WritingInstrumentId } from '../../lib/writingInstrumentLab';
+import { writingOperationInstrument, type WritingOperationId } from './WritingOperations';
 import { readingInstrument } from './ReadingInstrument';
 import type { ReadingInstrumentId } from '../../lib/readingInstrumentLab';
 import { literaryTraitInstrument } from './LiteraryTraitInstrument';
@@ -183,6 +184,7 @@ function historicoFase(id:string,topic:string,config:HistoryPhaseId):InstrumentE
 function gramatical(id:string,topic:string,config:GrammarInstrumentId):InstrumentEntry{return{id,subject:'Gramática',keywords:[topic],exactTopic:topic,Component:grammarInstrument(config)}}
 function ingles(id:string,topic:string,config:EnglishInstrumentId):InstrumentEntry{return{id,subject:'Língua Inglesa',keywords:[topic],exactTopic:topic,Component:englishInstrument(config)}}
 function redacao(id:string,topic:string,config:WritingInstrumentId):InstrumentEntry{return{id,subject:'Redação',keywords:[topic],exactTopic:topic,Component:writingInstrument(config)}}
+function escrita(id:string,topic:string,op:WritingOperationId):InstrumentEntry{return{id,subject:'Redação',keywords:[topic],exactTopic:topic,Component:writingOperationInstrument(op)}}
 function leitura(id:string,topic:string,config:ReadingInstrumentId):InstrumentEntry{return{id,subject:'Entendimento de Texto',keywords:[topic],exactTopic:topic,Component:readingInstrument(config)}}
 /**
  * Literatura, rodada de cobertura pedida pela Ana Júlia: capítulos sem objeto
@@ -444,22 +446,22 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   redacao('coletanea-sentidos-ii','lendo a coletânea: a apreensão de sentidos ii','source-visual'),
   redacao('coletanea-autoria-i','lendo a coletânea: a compreensão e o texto autoral i','source-authorship'),
   redacao('coletanea-autoria-ii','lendo a coletânea: a compreensão e o texto autoral ii','source-dialogue'),
-  redacao('rep-meio-ambiente','incrementando o repertório: meio ambiente','repertoire-environment'),
-  redacao('tema-meio-ambiente','analisando tema de redação: meio ambiente','theme-environment'),
-  redacao('rep-educacao-trabalho','incrementando o repertório: educação e trabalho','repertoire-work'),
-  redacao('tema-educacao-trabalho','analisando tema de redação: educação e trabalho','theme-work'),
-  redacao('rep-abstratos','incrementando o repertório: temas abstratos','repertoire-abstract'),
-  redacao('tema-abstrato','analisando tema abstrato de redação','theme-abstract'),
-  redacao('rep-corpo-saude','incrementando o repertório: corpo, saúde e sexualidade','repertoire-body'),
-  redacao('tema-corpo-saude','analisando tema de redação: corpo, saúde e sexualidade','theme-body'),
-  redacao('rep-violencia','incrementando o repertório: violência, leis e punição','repertoire-violence'),
-  redacao('tema-violencia','analisando tema de redação: violência, leis e punição','theme-violence'),
-  redacao('rep-cidadania','incrementando o repertório: cidadania e poder','repertoire-citizenship'),
-  redacao('tema-cidadania','analisando tema de redação: cidadania e poder','theme-citizenship'),
-  redacao('rep-arte-cultura','incrementando o repertório: arte, cultura e relações sociais','repertoire-culture'),
-  redacao('tema-arte-cultura','analisando o tema de redação: arte, cultura e relações sociais','theme-culture'),
-  redacao('rep-midia','incrementando o repertório: mídia e sociedade','repertoire-media'),
-  redacao('tema-midia','analisando tema de redação: mídia e sociedade','theme-media'),
+  escrita('rep-meio-ambiente','incrementando o repertório: meio ambiente','rep-environment'),
+  escrita('tema-meio-ambiente','analisando tema de redação: meio ambiente','theme-environment'),
+  escrita('rep-educacao-trabalho','incrementando o repertório: educação e trabalho','rep-work'),
+  escrita('tema-educacao-trabalho','analisando tema de redação: educação e trabalho','theme-work'),
+  escrita('rep-abstratos','incrementando o repertório: temas abstratos','rep-abstract'),
+  escrita('tema-abstrato','analisando tema abstrato de redação','theme-abstract'),
+  escrita('rep-corpo-saude','incrementando o repertório: corpo, saúde e sexualidade','rep-body'),
+  escrita('tema-corpo-saude','analisando tema de redação: corpo, saúde e sexualidade','theme-body'),
+  escrita('rep-violencia','incrementando o repertório: violência, leis e punição','rep-violence'),
+  escrita('tema-violencia','analisando tema de redação: violência, leis e punição','theme-violence'),
+  escrita('rep-cidadania','incrementando o repertório: cidadania e poder','rep-citizenship'),
+  escrita('tema-cidadania','analisando tema de redação: cidadania e poder','theme-citizenship'),
+  escrita('rep-arte-cultura','incrementando o repertório: arte, cultura e relações sociais','rep-culture'),
+  escrita('tema-arte-cultura','analisando o tema de redação: arte, cultura e relações sociais','theme-culture'),
+  escrita('rep-midia','incrementando o repertório: mídia e sociedade','rep-media'),
+  escrita('tema-midia','analisando tema de redação: mídia e sociedade','theme-media'),
   redacao('intro-tese','parágrafo de introdução: delimitando a opinião','intro-thesis'),redacao('intro-contexto','parágrafo de introdução: como contextualizar','intro-context'),redacao('auditorio','argumentação: auditório particular e universal','audience'),redacao('quase-logica','argumentação quase-lógica e efeito de verdade','quasi-logic'),redacao('coerencia-interna','argumentação e coerência interna','internal-coherence'),redacao('coerencia-externa','argumentação e coerência externa','external-coherence'),
   redacao('dados-exemplos','recursos argumentativos: dados numéricos e exemplos','data-examples'),redacao('vozes-prestigiadas','recursos argumentativos: vozes prestigiadas','prestigious-voices'),redacao('ressalva','ressalvando o ponto de vista contrário','concession'),redacao('refutacao','refutando o ponto contrário','refutation'),redacao('interdiscursividade','recursos argumentativos: interdiscursividade e intertextualidade','intertextuality'),redacao('temas-analisados','recursos argumentativos: temas de redação já analisados','repertoire-bank'),redacao('fatos-atualidade','recursos argumentativos: fatos da atualidade','current-affairs'),redacao('multiplos-dominios','recursos argumentativos: múltiplos domínios do saber','domains'),
   redacao('conclusao-sintese','conclusão por síntese ou retomada da tese','conclusion-synthesis'),redacao('conclusao-foco','conclusão: sumarização, focalização e expressividade','conclusion-focus'),redacao('intervencao-atores','proposta de intervenção: atores sociais e cidadania','intervention-agents'),redacao('intervencao-viabilidade','proposta de intervenção: viabilização e inovação','intervention-feasibility'),redacao('intervencao-coerencia','proposta de intervenção: coerência argumentativa','intervention-coherence'),redacao('intervencao-direitos','proposta de intervenção: respeito aos direitos humanos','intervention-rights'),

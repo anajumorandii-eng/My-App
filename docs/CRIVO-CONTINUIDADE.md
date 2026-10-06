@@ -1,6 +1,22 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — Entrega N/Sociologia H2, 06/10/2026
+## Estado mais recente — Entrega O/Redação R1, 06/10/2026
+
+As Entregas L e N foram integradas juntas na PR #269 (a #270 entrou pela
+branch de L). A branch `fix/entrega-o-redacao-r1` trata os 16
+capítulos R1 de Redação: texto aprofundado para rev 2 e oficinas em
+`WritingOperations.tsx`, com cenas montadas a partir de dados do capítulo
+(conceito escolhido, lei × prática, palavras do recorte, cinco elementos da
+intervenção como condições). O texto de Cidadania e Poder deixou de atribuir
+a cidadania regulada a José Murilo de Carvalho. As configurações antigas de
+`writingInstrumentLab.ts` para esses 16 ficaram sem uso no registro. Sem
+merge automático. Evidências: [Entrega O](visual-integral-2026-10-06/entrega-o/README.md).
+
+Fila na proposta: 255 achados tratados, 43 pendentes e 315 preservados.
+Conteúdo: 568 revisões 2, duas revisões 3, 42 pendentes (Redação R2 e R3).
+Próximo passo: R2 (15), R3 (27) e A1 (COP30).
+
+## Registro — Entrega N/Sociologia H2, 06/10/2026
 
 A Entrega L (19 de Filosofia) está na PR #269. A branch
 `fix/entrega-n-sociologia-h2`, empilhada sobre L, trata os 12 capítulos de
