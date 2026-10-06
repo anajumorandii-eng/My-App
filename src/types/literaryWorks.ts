@@ -208,3 +208,29 @@ export interface ReadingProgress {
   completedAt?: string; // ISO Date
   notes?: string;
 }
+
+// Dossiê versionado no repositório (src/data/obras/dossies), enquanto esta
+// sessão de autoria não tem acesso ao Firestore. Segue a mesma regra do
+// ContentModule: nasce 'needs_review' e só chega à aluna como 'published'.
+export interface DossierUnitGuide {
+  editorialStatus: EditorialStatus;
+  summary: string;
+  observe: string[];
+}
+
+export interface DossierUnit extends Omit<WorkUnit, 'workId' | 'requiredByExam' | 'extractionConfidence'> {
+  guide: DossierUnitGuide;
+}
+
+export interface DossierEvidence extends Omit<EvidenceCard, 'workId'> {
+  quote: string; // trecho curto, conferido contra a página indicada em location
+}
+
+export interface WorkDossier {
+  workId: string;
+  slug: string;
+  edition: { label: string; pdfPageCount: number; note: string };
+  units: DossierUnit[];
+  modules: Omit<ContentModule, 'workId'>[];
+  evidence: DossierEvidence[];
+}
