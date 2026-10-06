@@ -16,8 +16,8 @@ outro assunto. O detalhe capítulo a capítulo está em
 | --- | ---: | ---: |
 | Experimento exato | 8 | 1,3% |
 | Prancha autoral | 43 | 7,0% |
-| Instrumento | 339 | 55,3% |
-| Cena validada | 223 | 36,4% |
+| Instrumento | 345 | 56,3% |
+| Cena validada | 217 | 35,4% |
 | Lacuna honesta | 0 | 0,0% |
 | **Total** | **613** | |
 
@@ -38,11 +38,11 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Matemática | 83 | 1 | 11 | 71 | 0 | 0 |
 | Química | 48 | 0 | 7 | 23 | 18 | 0 |
 | Filosofia | 35 | 1 | 0 | 0 | 34 | 0 |
-| Sociologia | 27 | 1 | 0 | 0 | 26 | 0 |
+| Sociologia | 27 | 1 | 0 | 6 | 20 | 0 |
 
 ## Capítulos com mais de um candidato
 
-71 capítulos têm mais de um artefato registrado. A seleção continua exclusiva: vence o primeiro da ordem acima.
+77 capítulos têm mais de um artefato registrado. A seleção continua exclusiva: vence o primeiro da ordem acima.
 
 | Capítulo | Matéria | Vence | Perde |
 | --- | --- | --- | --- |
@@ -117,3 +117,9 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Equações Iônicas e outras Teorias para Ácidos e Bases | Química | Prancha autoral (acido-base) | Cena validada (cadeia-de-derivacao) |
 | Dispersões | Química | Prancha autoral (dispersoes) | Cena validada (tipologia) |
 | Termoquímica II | Química | Prancha autoral (termoquimica) | Cena validada (grade-de-eixos) |
+| O que é o Fato Social | Sociologia | Instrumento (social-fact) | Cena validada (criterios-conjuntivos) |
+| Anomia e Coesão Social | Sociologia | Instrumento (anomie-grid) | Cena validada (grade-de-eixos) |
+| Identidade e Diferença | Sociologia | Instrumento (identity-difference) | Cena validada (criterios-conjuntivos) |
+| Classes Sociais e Mobilidade Social | Sociologia | Instrumento (mobility-grid) | Cena validada (grade-de-eixos) |
+| Cidadania e Direitos | Sociologia | Instrumento (citizenship-rights) | Cena validada (escala-de-graus) |
+| A Sociedade da Informação | Sociologia | Instrumento (information-society) | Cena validada (criterios-conjuntivos) |

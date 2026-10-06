@@ -7,8 +7,8 @@ import type { BoardProps } from '../visual-boards/types';
 import { useSceneMotion } from '../topic-scenes/useSceneMotion';
 import './LiteratureFoundations.css';
 
-type ReadingState = { label: string; section: string; anchor: string; observation: string; conclusion: string };
-type Foundation = { topic: string; question: string; relation: string; states: ReadingState[] };
+export type ReadingState = { label: string; section: string; anchor: string; observation: string; conclusion: string };
+export type Foundation = { topic: string; question: string; relation: string; states: ReadingState[] };
 export const LITERATURE_FOUNDATIONS = {
   'art-languages': {
     topic: 'A Arte e suas Linguagens', question: 'Como o material muda a experiência e o sentido?', relation: 'material + organização + contexto → experiência',
@@ -319,14 +319,14 @@ export const LITERATURE_FOUNDATIONS = {
 export type LiteratureFoundationId = keyof typeof LITERATURE_FOUNDATIONS;
 
 const ink = 'var(--vs-ink)', wine = 'var(--vs-burgundy)', paper = 'var(--vs-paper)';
-function Arrow({ d, active = true }: { d: string; active?: boolean }) {
+export function Arrow({ d, active = true }: { d: string; active?: boolean }) {
   const transition = useSceneMotion();
   return <motion.path key={d} d={d} fill="none" stroke={wine} strokeWidth="3" initial={transition.duration === 0 ? false : { pathLength: 0 }} animate={{ pathLength: active ? 1 : 0 }} transition={transition} />;
 }
-function Drawing({ label, children }: { label: string; children: React.ReactNode }) {
+export function Drawing({ label, children }: { label: string; children: React.ReactNode }) {
   return <svg viewBox="0 0 560 240" role="img" aria-label={label} className="lf-drawing">{children}</svg>;
 }
-function Line({ x = 20, y, children }: { x?: number; y: number; children: React.ReactNode }) {
+export function Line({ x = 20, y, children }: { x?: number; y: number; children: React.ReactNode }) {
   return <text x={x} y={y} fill={ink} fontSize="17">{children}</text>;
 }
 function Art({ state }: { state: number }) {
@@ -390,7 +390,7 @@ function Neoclassic({ state }: { state: number }) {
   </Drawing></div>;
 }
 
-function Box({ x, y, w, children, strong = false }: { x: number; y: number; w: number; children: React.ReactNode; strong?: boolean }) {
+export function Box({ x, y, w, children, strong = false }: { x: number; y: number; w: number; children: React.ReactNode; strong?: boolean }) {
   return <g><rect x={x} y={y} width={w} height="44" rx="7" fill={paper} stroke={strong ? wine : ink} strokeWidth={strong ? 3 : 1.5}/><text x={x + 12} y={y + 28} fill={ink} fontSize="16">{children}</text></g>;
 }
 function RomanticPoetry({ state }: { state: number }) {
@@ -626,17 +626,19 @@ const drawings: Record<LiteratureFoundationId, React.ComponentType<{ state: numb
   'poetry-contemporary': PoetryNow, 'prose-contemporary': ProseNow, 'lusophone-contemporary': Lusophone, 'brazilian-visual-arts': VisualArts,
   'brazilian-theater': Theater, 'popular-songbook': Songbook,
 };
-export function LiteratureOperation({ id }: { id: LiteratureFoundationId }) {
-  const config = LITERATURE_FOUNDATIONS[id];
+type WorkshopProps = { id: string; config: Foundation; Scene: React.ComponentType<{ state: number }>; manuscript: string; caption: string; literature?: boolean; extra?: React.ReactNode };
+/** A mesma oficina serve Literatura e Sociologia: só mudam a frase de abertura
+ *  e o aviso sobre os exemplos. `data-literature-operation` fica só na
+ *  Literatura porque os testes e o roteiro da Entrega F o usam como contrato. */
+export function OperationWorkshop({ id, config, Scene, manuscript, caption, literature = false, extra }: WorkshopProps) {
   const [index, setIndex] = useState(0);
   const selected = config.states[index];
-  const Scene = drawings[id];
   const drawing = React.useRef<HTMLDivElement>(null);
   const pan = (amount: number) => { if (drawing.current) drawing.current.scrollLeft += amount; };
-  return <section className="lf-operation" data-literature-operation={id} aria-label={config.question}>
-    <p className="lf-manuscript">Leia a operação, não apenas o nome da escola.</p>
+  return <section className="lf-operation" data-operation={id} data-literature-operation={literature ? id : undefined} aria-label={config.question}>
+    <p className="lf-manuscript">{manuscript}</p>
     <div className="lf-controls" role="group" aria-label={`Operações de ${config.topic}`}>{config.states.map((state, i) => <button type="button" key={state.label} aria-pressed={index === i} onClick={() => setIndex(i)}>{state.label}</button>)}</div>
-    <p className="lf-caption">Exemplos didáticos autorais. Não são versos ou cenas dos autores estudados.</p>
+    <p className="lf-caption">{caption}</p>
     <div className="lf-drawing-window" ref={drawing} tabIndex={0} role="region" aria-label={`Percorrer demonstração de ${config.topic}`} onKeyDown={event => {
       if (event.target !== event.currentTarget) return;
       if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); pan(event.key === 'ArrowRight' ? 160 : -160); }
@@ -644,8 +646,14 @@ export function LiteratureOperation({ id }: { id: LiteratureFoundationId }) {
     }}><Scene state={index}/></div>
     <div className="lf-pan"><span>Deslize a prancha; com teclado, use as setas.</span><button type="button" aria-label="Percorrer demonstração para a esquerda" onClick={() => pan(-160)}>←</button><button type="button" aria-label="Percorrer demonstração para a direita" onClick={() => pan(160)}>→</button></div>
     <div className="lf-reading" role="status" aria-live="polite"><blockquote>“{selected.anchor}”<cite>{selected.section}</cite></blockquote><div><strong>{selected.label}</strong><p>{selected.observation}</p><p className="lf-conclusion">{selected.conclusion}</p></div></div>
-    {id === 'art-languages' && <p className="lf-context">Contexto: critérios de beleza mudam. No retrato oficial, tamanho e luz podem legitimar poder. Avaliar a obra só pela proporção naturalista atual pode ser anacrônico; explicar seu contexto não obriga a aceitar a hierarquia.</p>}
+    {extra}
   </section>;
+}
+export function LiteratureOperation({ id }: { id: LiteratureFoundationId }) {
+  return <OperationWorkshop id={id} config={LITERATURE_FOUNDATIONS[id]} Scene={drawings[id]} literature
+    manuscript="Leia a operação, não apenas o nome da escola."
+    caption="Exemplos didáticos autorais. Não são versos ou cenas dos autores estudados."
+    extra={id === 'art-languages' && <p className="lf-context">Contexto: critérios de beleza mudam. No retrato oficial, tamanho e luz podem legitimar poder. Avaliar a obra só pela proporção naturalista atual pode ser anacrônico; explicar seu contexto não obriga a aceitar a hierarquia.</p>}/>;
 }
 export function literatureFoundationInstrument(id: LiteratureFoundationId) {
   const config = LITERATURE_FOUNDATIONS[id];

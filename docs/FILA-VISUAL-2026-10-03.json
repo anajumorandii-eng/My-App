@@ -2,12 +2,12 @@
   "dateUTC": "2026-10-05",
   "mainCommit": "683a573204f92adc247d1493caaa08ad9de9b799",
   "sourceAudit": "docs/visual-integral-2026-10-02/capitulos.json",
-  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; integrada na PR #264. Entrega I: Graciliano, Cabral, Clarice, Rosa, Poesia Concreta e 1960-1980, sete capítulos LG3 revalidados em build local; integrada na PR #266. Entrega J: os seis capítulos LG3 finais (contemporâneos, lusófonos, artes, teatro e canção) revalidados em build local; LG3 sem pendências na proposta.",
+  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; integrada na PR #264. Entrega I: Graciliano, Cabral, Clarice, Rosa, Poesia Concreta e 1960-1980, sete capítulos LG3 revalidados em build local; integrada na PR #266. Entrega J: os seis capítulos LG3 finais (contemporâneos, lusófonos, artes, teatro e canção) revalidados em build local; integrada na PR #267; LG3 sem pendências. Entrega K: os sete capítulos de Sociologia do H3, com texto e operação autoral, revalidados em build local.",
   "editorialApproval": "Não promovida; manter e achado tratado não certificam capítulo completo.",
   "counts": {
-    "achado_tratado": 201,
+    "achado_tratado": 208,
     "preservar_mecanismo": 315,
-    "fila_a_revalidar": 97
+    "fila_a_revalidar": 90
   },
   "subjects": {
     "Física": {
@@ -67,8 +67,8 @@
     "Sociologia": {
       "total": 27,
       "preservar_mecanismo": 0,
-      "achado_tratado": 8,
-      "fila_a_revalidar": 19
+      "achado_tratado": 15,
+      "fila_a_revalidar": 12
     },
     "Língua Inglesa": {
       "total": 17,
@@ -100,7 +100,7 @@
     "R2": 15,
     "R3": 27,
     "R1": 16,
-    "H3": 15,
+    "H3": 8,
     "H2": 23
   },
   "chapters": [
@@ -7796,20 +7796,26 @@
       "id": "summary-sociologia-o-que-e-o-fato-social",
       "title": "O que é o Fato Social",
       "subject": "Sociologia",
-      "artifact": "criterios-conjuntivos",
+      "artifact": "social-fact",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CriteriosConjuntivos.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Os cartões Exterioridade / Coercitividade / Generalidade e a reunião de condições têm relação com As três características; Tratar como coisa; Normal e patológico; falta um caso concreto visual no qual marcar ou retirar uma condição altere a situação, em vez de somente mudar checklist e texto de veredito. Fonte: existe antes e independentemente do indivíduo; impõe-se ao indivíduo e a transgressão gera sanção."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-k",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-k/README.md",
+        "description": "Sociologia H3: casos autorais com condições manipuláveis e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-sociologia-e-senso-comum",
@@ -7841,10 +7847,12 @@
       "subject": "Sociologia",
       "artifact": "solidarity",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-experiments/TopicExperiment.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
@@ -7855,26 +7863,37 @@
           "code": "SVG_ATTRIBUTE_UNDEFINED",
           "description": "Console do navegador registra rect rx=\"undefined\" durante a visita. A fonte usa motion.rect com rx só em animate, sem valor inicial. A figura foi capturada, mas a renderização não é limpa; fornecer atributo rx válido no quadro inicial e verificar a alternância."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-k",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-k/README.md",
+        "description": "Sociologia H3: casos autorais com condições manipuláveis e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-anomia-e-coesao-social",
       "title": "Anomia e Coesão Social",
       "subject": "Sociologia",
-      "artifact": "grade-de-eixos",
+      "artifact": "anomie-grid",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/GradeDeEixos.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A grade cruza categorias Egoísta / Altruísta / Anômico / Fatalista com eixos legíveis e fonte correspondente. Preservar o cruzamento e acrescentar exemplos visuais vinculados a O conceito de anomia; O estudo sobre o suicídio; Coesão e instituições, evitando limitar o capítulo a nomes de células."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-k",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-k/README.md",
+        "description": "Sociologia H3: casos autorais com condições manipuláveis e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
@@ -8042,20 +8061,26 @@
       "id": "summary-sociologia-identidade-e-diferenca",
       "title": "Identidade e Diferença",
       "subject": "Sociologia",
-      "artifact": "criterios-conjuntivos",
+      "artifact": "identity-difference",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CriteriosConjuntivos.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Os cartões Reconhecimento / Redistribuição e a reunião de condições têm relação com Identidade como construção; Identidades coletivas; Diferença e desigualdade; falta um caso concreto visual no qual marcar ou retirar uma condição altere a situação, em vez de somente mudar checklist e texto de veredito. Fonte: reconhecer identidades é necessário, mas sozinho não basta; enfrentar as desigualdades materiais também é necessário."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-k",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-k/README.md",
+        "description": "Sociologia H3: casos autorais com condições manipuláveis e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
@@ -8085,20 +8110,26 @@
       "id": "summary-sociologia-classes-sociais-e-mobilidade-social",
       "title": "Classes Sociais e Mobilidade Social",
       "subject": "Sociologia",
-      "artifact": "grade-de-eixos",
+      "artifact": "mobility-grid",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/GradeDeEixos.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A grade cruza categorias Vertical intra / Vertical inter / Horizontal intra / Horizontal inter com eixos legíveis e fonte correspondente. Preservar o cruzamento e acrescentar exemplos visuais vinculados a Estratificação; Tipos de mobilidade; Barreiras à mobilidade, evitando limitar o capítulo a nomes de células."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-k",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-k/README.md",
+        "description": "Sociologia H3: casos autorais com condições manipuláveis e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-desigualdade-racial-no-brasil",
@@ -8233,20 +8264,26 @@
       "id": "summary-sociologia-cidadania-e-direitos",
       "title": "Cidadania e Direitos",
       "subject": "Sociologia",
-      "artifact": "escala-de-graus",
+      "artifact": "citizenship-rights",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/EscalaDeGraus.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Degraus Civis / Políticos / Sociais / Difusos e digitais comunicam ordem, mas não exibem os objetos e distinções do capítulo (ligados à liberdade individual e à propriedade; ligados à participação e ao voto). Incorporar exemplos e relações à escala; não depender exclusivamente do comentário fora do desenho."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-k",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-k/README.md",
+        "description": "Sociologia H3: casos autorais com condições manipuláveis e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-democracia-e-participacao-politica",
@@ -8309,20 +8346,26 @@
       "id": "summary-sociologia-a-sociedade-da-informacao",
       "title": "A Sociedade da Informação",
       "subject": "Sociologia",
-      "artifact": "criterios-conjuntivos",
+      "artifact": "information-society",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CriteriosConjuntivos.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Os cartões Conexão / Qualidade / Uso crítico e a reunião de condições têm relação com Características; Desigualdade digital; Dados, algoritmos e poder; falta um caso concreto visual no qual marcar ou retirar uma condição altere a situação, em vez de somente mudar checklist e texto de veredito. Fonte: disponibilidade de conexão e dispositivos; qualidade do acesso."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-k",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-k/README.md",
+        "description": "Sociologia H3: casos autorais com condições manipuláveis e cinco textos aprofundados, com lastro literal. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
@@ -10733,11 +10776,11 @@
   "editorial": {
     "source": "src/data/deepSummaryContent.json",
     "total": 612,
-    "revision2": 533,
-    "pending": 77,
+    "revision2": 540,
+    "pending": 70,
     "counts": {
       "Redação": 58,
-      "Sociologia": 19
+      "Sociologia": 12
     },
     "chapters": [
       {
@@ -11090,30 +11133,6 @@
       },
       {
         "subject": "Sociologia",
-        "topic": "A Sociedade da Informação",
-        "id": "summary-sociologia-a-sociedade-da-informacao",
-        "batch": "H3"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Anomia e Coesão Social",
-        "id": "summary-sociologia-anomia-e-coesao-social",
-        "batch": "H3"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Cidadania e Direitos",
-        "id": "summary-sociologia-cidadania-e-direitos",
-        "batch": "H3"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Classes Sociais e Mobilidade Social",
-        "id": "summary-sociologia-classes-sociais-e-mobilidade-social",
-        "batch": "H3"
-      },
-      {
-        "subject": "Sociologia",
         "topic": "Democracia e Participação Política",
         "id": "summary-sociologia-democracia-e-participacao-politica",
         "batch": "H2"
@@ -11144,12 +11163,6 @@
       },
       {
         "subject": "Sociologia",
-        "topic": "Identidade e Diferença",
-        "id": "summary-sociologia-identidade-e-diferenca",
-        "batch": "H3"
-      },
-      {
-        "subject": "Sociologia",
         "topic": "Ideologia e Alienação",
         "id": "summary-sociologia-ideologia-e-alienacao",
         "batch": "H2"
@@ -11174,21 +11187,9 @@
       },
       {
         "subject": "Sociologia",
-        "topic": "O que é o Fato Social",
-        "id": "summary-sociologia-o-que-e-o-fato-social",
-        "batch": "H3"
-      },
-      {
-        "subject": "Sociologia",
         "topic": "Precarização e Uberização do Trabalho",
         "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
         "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Solidariedade Mecânica e Solidariedade Orgânica",
-        "id": "summary-sociologia-solidariedade-mecanica-e-solidariedade-organica",
-        "batch": "H3"
       },
       {
         "subject": "Sociologia",

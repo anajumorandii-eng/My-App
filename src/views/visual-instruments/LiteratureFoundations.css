@@ -29,3 +29,6 @@
 .lf-conclusion { font-weight: 600; }
 .lf-context { border-top: 1px dashed var(--vs-ink-muted); padding-top: 12px; margin-top: 18px; }
 @media (max-width: 600px) { .lf-operation { padding: 14px; } .lf-reading { grid-template-columns: minmax(0, 1fr); } .lf-reading blockquote { font-size: 21px; } .lf-manuscript { font-size: 22px; } }
+.lf-conditions { display: flex; flex-wrap: wrap; gap: 8px; align-items: center; margin: 0 12px 8px; }
+.lf-conditions .lf-inline-control { margin: 0; }
+.lf-verdict { flex-basis: 100%; margin: 4px 0 0; font-size: 15px; line-height: 1.5; font-weight: 600; }

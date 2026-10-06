@@ -31735,23 +31735,23 @@
     "sections": [
       {
         "title": "Características",
-        "content": "A sociedade da informação organiza-se em torno da produção, circulação e processamento de dados. Informação e conhecimento tornam-se recursos econômicos centrais, redes digitais estruturam trabalho, consumo e sociabilidade, e a velocidade de circulação altera a experiência de tempo e espaço descrita por autores como Castells."
+        "content": "A sociedade da informação organiza-se em torno da produção, circulação e processamento de dados. Informação e conhecimento tornam-se recursos econômicos centrais, redes digitais estruturam trabalho, consumo e sociabilidade, e a velocidade de circulação altera a experiência de tempo e espaço descrita por autores como Manuel Castells, em A Sociedade em Rede, de 1996. Para ele, a rede é a forma de organização dominante: fluxos de capital, informação e imagens conectam lugares distantes em tempo real.\n\nNo caso autoral “a notícia rodou o país antes de o jornal da noite começar”, a circulação em rede supera o ritmo dos meios tradicionais: o fato chega ao público por compartilhamentos, sem esperar a edição do telejornal. Isso muda a relação com o tempo, que se torna instantâneo, e com o espaço, que perde peso. Também muda o trabalho, com plataformas e serviços remotos. Ao analisar, identifique o que circula, por qual rede e que efeito a velocidade produz sobre a forma de agir e de se informar."
       },
       {
         "title": "Desigualdade digital",
-        "content": "O acesso é desigual em várias camadas: disponibilidade de conexão e dispositivos, qualidade do acesso e capacidade de uso crítico. A exclusão digital reproduz e amplia desigualdades preexistentes, afetando escolarização, acesso a serviços públicos e oportunidades de trabalho, tema evidenciado durante o ensino remoto na pandemia."
+        "content": "O acesso é desigual em várias camadas: disponibilidade de conexão e dispositivos, qualidade do acesso e capacidade de uso crítico. A exclusão digital reproduz e amplia desigualdades preexistentes, afetando escolarização, acesso a serviços públicos e oportunidades de trabalho, tema evidenciado durante o ensino remoto na pandemia, quando muitos estudantes ficaram sem aula por falta de equipamento.\n\nNo caso autoral “tinha internet, mas um único celular para três irmãos em aula remota”, a primeira camada existe, a conexão, mas falha a segunda: dispositivo e qualidade de acesso são insuficientes para três aulas simultâneas. Retire a conexão, e a exclusão é total; acrescente um computador por aluno, mas sem orientação para avaliar fontes, e falta a terceira camada, o uso crítico. Só a reunião das três condições produz inclusão digital efetiva. Por isso políticas que distribuem chips de internet sem equipamentos ou formação resolvem só parte do problema. Ao responder, verifique cada camada no caso apresentado."
       },
       {
         "title": "Dados, algoritmos e poder",
-        "content": "Plataformas coletam dados em escala e organizam a visibilidade por algoritmos, com efeitos sobre consumo, opinião pública e processos eleitorais. Surgem questões sobre privacidade, transparência de critérios, moderação de conteúdo, desinformação e concentração de poder em poucas empresas, com regulação ainda em construção."
+        "content": "Plataformas coletam dados em escala e organizam a visibilidade por algoritmos, com efeitos sobre consumo, opinião pública e processos eleitorais. Surgem questões sobre privacidade, transparência de critérios, moderação de conteúdo, desinformação e concentração de poder em poucas empresas, com regulação ainda em construção. No Brasil, a Lei Geral de Proteção de Dados, de 2018, estabelece regras para coleta e uso de dados pessoais.\n\nNo caso autoral “o feed mostrou primeiro o que mais prendia, não o que era mais verdadeiro”, o critério do algoritmo é o engajamento, e não a qualidade da informação. Isso favorece conteúdos que provocam emoção forte, inclusive desinformação, e pode formar bolhas, em que cada usuário vê sobretudo o que confirma suas opiniões. A pesquisadora Shoshana Zuboff chamou de capitalismo de vigilância o modelo que transforma dados de comportamento em mercadoria. Algoritmos não são neutros: incorporam critérios de quem os projeta e vieses dos dados de treinamento. Ao analisar, pergunte qual critério ordena o que se vê."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Supor que acesso à internet resolve a exclusão digital ignora as camadas de qualidade e de uso crítico. Outro deslize é tratar algoritmos como neutros, quando incorporam critérios e vieses. E confundir informação com conhecimento, já que o volume de dados não produz automaticamente compreensão."
+        "content": "1. “Acesso à internet resolve a exclusão digital”: faltam as camadas de qualidade do acesso e de uso crítico.\n2. “Algoritmos são neutros”: incorporam critérios e vieses de quem projeta e dos dados usados.\n3. “Informação é o mesmo que conhecimento”: volume de dados não produz automaticamente compreensão.\n4. “Mais conexão sempre amplia a democracia”: bolhas, desinformação e concentração de poder podem prejudicá-la.\n5. “Dados pessoais não têm valor econômico”: são insumo central de plataformas e da publicidade direcionada.\n6. “Exclusão digital é problema individual”: reproduz desigualdades de renda, território e escolarização. Na resposta, verifique as três camadas de acesso no caso e identifique o critério que organiza a visibilidade da informação. Lembre ainda que a velocidade de circulação não garante verificação: checar a fonte, a data e o autor continua sendo parte do uso crítico, e a LGPD trata da proteção dos dados pessoais coletados."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a exclusão digital não se resolve apenas com acesso? Responda antes de conferir: além de conexão e dispositivo, é preciso qualidade de acesso e competências para buscar, avaliar e usar informação criticamente, o que depende de escolarização e apoio. Agora explique por que algoritmos não são neutros: eles embutem critérios de seleção definidos por quem os projeta e pelos dados que os treinam."
+        "content": "Problema 1. Por que a exclusão digital não se resolve apenas com acesso? Use o caso autoral “tinha internet, mas um único celular para três irmãos em aula remota”. Resolução: além de conexão, é preciso dispositivo e qualidade de acesso, e competências para buscar, avaliar e usar informação criticamente, o que depende de escolarização e apoio. No caso, a conexão existe, mas o dispositivo compartilhado impede o uso adequado. Só as três camadas juntas produzem inclusão efetiva.\n\nProblema 2. Explique por que algoritmos não são neutros, com o caso autoral “o feed mostrou primeiro o que mais prendia, não o que era mais verdadeiro”. Resolução: eles embutem critérios de seleção definidos por quem os projeta e pelos dados que os treinam. No caso, o critério é o engajamento, que favorece conteúdos emocionais e pode promover desinformação e bolhas. Isso tem efeitos sobre opinião pública e eleições, o que motiva debates sobre transparência, regulação e proteção de dados, como a LGPD."
       }
     ],
     "recall": {
@@ -31782,7 +31782,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -31790,23 +31791,23 @@
     "sections": [
       {
         "title": "O conceito de anomia",
-        "content": "Anomia é a ausência ou o enfraquecimento das normas capazes de orientar a conduta. Ocorre sobretudo em períodos de transformação rápida, quando as regras antigas perdem eficácia e as novas ainda não se consolidaram, deixando indivíduos sem referências para regular desejos e expectativas."
+        "content": "Anomia é a ausência ou o enfraquecimento das normas capazes de orientar a conduta. Ocorre sobretudo em períodos de transformação rápida, quando as regras antigas perdem eficácia e as novas ainda não se consolidaram, deixando indivíduos sem referências para regular desejos e expectativas. O termo vem do grego, sem lei, mas em Durkheim não significa ausência de leis escritas: significa falta de regulação moral eficaz.\n\nNo caso autoral “a fábrica fechou, o bairro mudou e as regras antigas já não diziam o que esperar”, a crise econômica desorganiza as expectativas: a carreira previsível, os horários e as relações de vizinhança perdem sentido, e nada novo ocupa o lugar. Durkheim observou que crises, tanto de queda quanto de prosperidade súbita, desregulam os desejos: quem enriquece de repente também perde limites. Robert Merton retomou o conceito para descrever a distância entre metas valorizadas, como sucesso econômico, e meios legítimos para alcançá-las. Ao analisar, identifique a norma que perdeu eficácia e a expectativa que ficou sem regulação."
       },
       {
         "title": "O estudo sobre o suicídio",
-        "content": "Durkheim mostra que o suicídio, aparentemente ato individual, varia sistematicamente conforme o grau de integração e regulação social. Distingue o egoísta, por integração insuficiente; o altruísta, por integração excessiva; o anômico, por falta de regulação; e o fatalista, por regulação opressiva, provando a existência de causas sociais."
+        "content": "Durkheim, em O Suicídio, de 1897, mostra que o suicídio, aparentemente ato individual, varia sistematicamente conforme o grau de integração e regulação social. Distingue o egoísta, por integração insuficiente; o altruísta, por integração excessiva; o anômico, por falta de regulação; e o fatalista, por regulação opressiva, provando a existência de causas sociais. As taxas variavam por religião, estado civil e período econômico de forma estável.\n\nO esquema pode ser lido com o caso autoral “duas variáveis: quanto o grupo integra e quanto o grupo regula”. Integração é o grau de pertencimento e de vínculos; regulação é o grau de limites impostos aos desejos. Cada variável tem dois extremos patológicos, o que gera quatro tipos. Durkheim comparou, por exemplo, protestantes e católicos, observando taxas maiores entre os primeiros, a quem atribuía menor integração religiosa. O ponto central não é o drama individual, mas a regularidade estatística: se um ato íntimo segue padrões coletivos, existem causas sociais. Ao responder, nomeie a variável e o extremo de cada tipo."
       },
       {
         "title": "Coesão e instituições",
-        "content": "A coesão depende de instituições capazes de integrar e regular: família, escola, associações profissionais, religião e Estado. Durkheim atribui à educação papel central na formação moral e propunha corporações profissionais como instância intermediária entre indivíduo e Estado nas sociedades industriais."
+        "content": "A coesão depende de instituições capazes de integrar e regular: família, escola, associações profissionais, religião e Estado. Durkheim atribui à educação papel central na formação moral, transmitindo valores comuns às novas gerações, e propunha corporações profissionais como instância intermediária entre indivíduo e Estado nas sociedades industriais. Elas regulariam salários, condutas e expectativas de cada ofício, reduzindo a anomia econômica.\n\nNo caso autoral “a associação de bairro voltou a reunir quem tinha perdido o emprego”, uma instituição intermediária recria vínculos e referências que a crise havia desfeito: integra quem estava isolado e oferece regras de convivência e projetos comuns. É exatamente o papel que Durkheim esperava dos grupos profissionais. Instituições não garantem coesão automaticamente; podem integrar demais, sufocando o indivíduo, ou regular de forma opressiva. O equilíbrio entre os extremos é o que sustenta a coesão saudável. Ao analisar uma situação social, identifique quais instituições falham, quais se fortalecem e que tipo de vínculo cada uma produz."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Confundir anomia com desordem generalizada ou caos é impreciso: trata-se especificamente da falta de normas reguladoras eficazes. Outro deslize é reduzir o estudo do suicídio a estatísticas, ignorando sua função de provar a existência de fatos sociais. E supor que integração excessiva seria sempre positiva."
+        "content": "1. “Anomia é caos ou desordem generalizada”: é especificamente a falta de normas reguladoras eficazes para orientar desejos e expectativas.\n2. “O estudo do suicídio é só estatística”: sua função é provar a existência de causas sociais para um ato aparentemente íntimo.\n3. “Integração excessiva é sempre positiva”: o tipo altruísta mostra que o excesso também é patológico.\n4. “Anomia só ocorre em crises de pobreza”: prosperidade súbita também desregula os desejos.\n5. “Egoísta e anômico são a mesma coisa”: o egoísta deriva de pouca integração; o anômico, de pouca regulação.\n6. “Instituições sempre produzem coesão saudável”: podem integrar ou regular em excesso, como no tipo fatalista. Na resposta, nomeie a variável, integração ou regulação, e o extremo envolvido, e relacione-os a uma instituição concreta. Lembre que Merton retomou a anomia como distância entre metas valorizadas e meios legítimos, e que o tema cobrado é sempre a relação entre norma e expectativa."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que o estudo do suicídio é decisivo na obra de Durkheim? Responda antes de conferir: ao mostrar que um ato aparentemente íntimo varia conforme integração e regulação sociais, ele demonstra que existem causas propriamente sociais, sustentando a autonomia da sociologia. Agora explique a anomia: enfraquecimento das normas capazes de orientar e limitar condutas e expectativas."
+        "content": "Problema 1. Por que o estudo do suicídio é decisivo na obra de Durkheim? Use o caso autoral “duas variáveis: quanto o grupo integra e quanto o grupo regula”. Resolução: ao mostrar que um ato aparentemente íntimo varia de forma estável conforme integração e regulação sociais, ele demonstra que existem causas propriamente sociais, sustentando a autonomia da sociologia. As duas variáveis, cada uma com dois extremos patológicos, produzem os quatro tipos: egoísta, altruísta, anômico e fatalista.\n\nProblema 2. Explique a anomia e o papel das instituições, com os casos autorais “a fábrica fechou, o bairro mudou e as regras antigas já não diziam o que esperar” e “a associação de bairro voltou a reunir quem tinha perdido o emprego”. Resolução: anomia é o enfraquecimento das normas capazes de orientar e limitar condutas e expectativas, típico de mudanças rápidas como o fechamento da fábrica. Instituições intermediárias, como a associação de bairro ou as corporações propostas por Durkheim, recriam vínculos e regras, reduzindo a anomia ao integrar e regular."
       }
     ],
     "recall": {
@@ -31837,7 +31838,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -31845,23 +31847,23 @@
     "sections": [
       {
         "title": "As três gerações",
-        "content": "Marshall distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência. Acrescentam-se depois direitos difusos, como ambiente e patrimônio, e direitos ligados a tecnologia e informação."
+        "content": "T. H. Marshall, em Cidadania, Classe Social e Status, de 1950, distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência. Na Inglaterra, segundo ele, os civis se consolidaram no século XVIII, os políticos no XIX e os sociais no XX. Acrescentam-se depois direitos difusos, como ambiente e patrimônio, e direitos ligados a tecnologia e informação.\n\nNo caso autoral “falar sem censura, votar no prefeito, matricular o filho na escola pública”, cada ação corresponde a uma dimensão: a liberdade de expressão é direito civil, o voto é direito político, a escola pública é direito social. A cidadania plena reúne as três, e a ausência de uma delas limita as demais: sem educação, por exemplo, a participação política tende a ser mais desigual. Os direitos difusos pertencem a todos sem titular individual definido, como o ar limpo. Ao responder, classifique cada direito pela sua finalidade, e não pela ordem de conquista."
       },
       {
         "title": "O caso brasileiro",
-        "content": "No Brasil, a sequência foi distinta da inglesa: direitos sociais foram concedidos antes da ampliação plena dos direitos políticos, sobretudo na Era Vargas, o que Carvalho descreveu como cidadania regulada, vinculada à carteira de trabalho e à profissão reconhecida, e não à condição de cidadão."
+        "content": "No Brasil, a sequência foi distinta da inglesa: direitos sociais foram concedidos antes da ampliação plena dos direitos políticos, sobretudo na Era Vargas, com a CLT de 1943, o salário mínimo e a previdência, num período sem eleições livres. José Murilo de Carvalho, em Cidadania no Brasil, descreveu essa inversão; Wanderley Guilherme dos Santos chamou de cidadania regulada a vinculação de direitos à carteira de trabalho e à profissão reconhecida, e não à condição de cidadão.\n\nNo caso autoral “com carteira assinada, tinha aposentadoria; sem ela, não tinha”, o acesso a direitos dependia do vínculo formal de trabalho reconhecido pelo Estado. Trabalhadores rurais, domésticos e informais ficaram de fora por décadas. Carvalho argumenta que a ordem invertida favoreceu uma relação paternalista com o Estado, visto como doador de benefícios, mais do que como garantidor de direitos. A Constituição de 1988, chamada de Cidadã, universalizou direitos como saúde, com o SUS. Ao responder, compare as sequências e explique o efeito político da inversão."
       },
       {
         "title": "Efetivação",
-        "content": "Ter direitos previstos em lei não garante acesso: dependem de instituições, orçamento, informação e capacidade de reivindicação. Por isso o estudo da cidadania distingue direito formal de direito efetivo, e examina como desigualdades de classe, raça, gênero e território afetam quem consegue de fato exercer o que a lei assegura."
+        "content": "Ter direitos previstos em lei não garante acesso: dependem de instituições, orçamento, informação e capacidade de reivindicação. Por isso o estudo da cidadania distingue direito formal de direito efetivo, e examina como desigualdades de classe, raça, gênero e território afetam quem consegue de fato exercer o que a lei assegura. A Constituição prevê saúde e educação para todos, mas filas, distâncias e falta de vagas mostram a distância entre texto e realidade.\n\nNo caso autoral “a lei garante a vaga, mas a escola mais próxima fica a duas horas”, o direito formal existe, mas o acesso efetivo é bloqueado pela distância e pela falta de transporte. Retire a escola próxima e o direito permanece no papel; acrescente transporte gratuito e ele se aproxima da realidade. Movimentos sociais, Defensoria Pública, Ministério Público e conselhos participativos são canais para converter direito formal em efetivo. Ao analisar uma política pública, pergunte quem consegue, na prática, usar o direito previsto, e que obstáculos materiais ou institucionais impedem os demais."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Tratar cidadania apenas como direito de votar reduz o conceito à dimensão política. Outro deslize é supor que a ordem de conquista dos direitos foi a mesma em todos os países. E confundir cidadania com nacionalidade, quando a primeira envolve o conjunto de direitos e deveres exercidos na vida pública."
+        "content": "1. “Cidadania é só votar”: reduz o conceito à dimensão política; inclui direitos civis e sociais.\n2. “A ordem de conquista foi igual em todos os países”: no Brasil, direitos sociais vieram antes da ampliação plena dos políticos.\n3. “Cidadania é o mesmo que nacionalidade”: envolve o conjunto de direitos e deveres exercidos na vida pública.\n4. “Direito previsto em lei é direito garantido”: o direito efetivo depende de instituições, orçamento e acesso.\n5. “Cidadania regulada valia para todos os trabalhadores”: excluía rurais, domésticos e informais.\n6. “Direitos difusos têm titular individual”: pertencem a todos, como o meio ambiente equilibrado. Na resposta, classifique o direito pela finalidade e verifique se ele é apenas formal ou efetivamente acessível no caso apresentado. Lembre que cidadania também envolve deveres, como respeitar leis e participar da vida pública, e que a Constituição de 1988 ampliou direitos sociais universais, como a saúde pelo SUS."
       },
       {
         "title": "Pratique e confira",
-        "content": "O que significa cidadania regulada no Brasil? Responda antes de conferir: os direitos sociais eram vinculados à ocupação formal reconhecida pelo Estado, de modo que era cidadão pleno quem tinha carteira assinada em profissão regulamentada, e não todo habitante. Agora diferencie direito formal de efetivo: um está previsto em lei, o outro é efetivamente acessível na prática."
+        "content": "Problema 1. O que significa cidadania regulada no Brasil? Use o caso autoral “com carteira assinada, tinha aposentadoria; sem ela, não tinha”. Resolução: os direitos sociais eram vinculados à ocupação formal reconhecida pelo Estado, de modo que era cidadão pleno quem tinha carteira assinada em profissão regulamentada, e não todo habitante. Isso excluiu trabalhadores rurais, domésticos e informais. A concessão desses direitos na Era Vargas, antes da ampliação plena dos políticos, invertiu a sequência descrita por Marshall.\n\nProblema 2. Diferencie direito formal de efetivo, com o caso autoral “a lei garante a vaga, mas a escola mais próxima fica a duas horas”. Resolução: o direito formal está previsto em lei; o efetivo é acessível na prática. No caso, a vaga existe no papel, mas a distância impede o uso real. A efetivação depende de instituições, orçamento, transporte e capacidade de reivindicação, e desigualdades de classe, raça e território determinam quem consegue exercer o direito."
       }
     ],
     "recall": {
@@ -31892,7 +31894,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -31900,23 +31903,23 @@
     "sections": [
       {
         "title": "Estratificação",
-        "content": "Estratificação social é a distribuição desigual de recursos, prestígio e poder entre posições sociais. As principais abordagens são a marxista, centrada na posição nas relações de produção; a weberiana, que soma classe, status e partido; e a de Bourdieu, que trabalha com capitais econômico, cultural, social e simbólico."
+        "content": "Estratificação social é a distribuição desigual de recursos, prestígio e poder entre posições sociais. As principais abordagens são a marxista, centrada na posição nas relações de produção, como burguesia e proletariado; a weberiana, que soma classe, ligada ao mercado, status, ligado ao prestígio, e partido, ligado ao poder político; e a de Bourdieu, que trabalha com capitais econômico, cultural, social e simbólico, transmitidos e convertidos entre gerações.\n\nPense numa médica de família pobre e num herdeiro de fazenda que abandonou os estudos. Para Marx, o herdeiro é proprietário e a médica, assalariada ou profissional liberal; para Weber, a médica tem alto status; para Bourdieu, ela acumulou capital cultural e o herdeiro, capital econômico. Cada abordagem ilumina uma dimensão diferente da desigualdade. Ao responder, identifique qual critério está em jogo: propriedade, mercado, prestígio, poder ou capitais. A estratificação não é soma de casos individuais, mas uma estrutura de posições que se reproduz ao longo do tempo."
       },
       {
         "title": "Tipos de mobilidade",
-        "content": "A mobilidade pode ser vertical, quando há mudança de posição na hierarquia, ou horizontal, quando se muda de ocupação sem alterar o estrato. Pode ser intrageracional, ao longo da vida de uma pessoa, ou intergeracional, comparando a posição de filhos e pais, medida mais usada para avaliar abertura de uma sociedade."
+        "content": "A mobilidade pode ser vertical, quando há mudança de posição na hierarquia, ou horizontal, quando se muda de ocupação sem alterar o estrato. Pode ser intrageracional, ao longo da vida de uma pessoa, ou intergeracional, comparando a posição de filhos e pais, medida mais usada para avaliar abertura de uma sociedade. Os dois eixos se cruzam e geram quatro combinações.\n\nCompare casos autorais. Em “a filha do porteiro tornou-se engenheira”, há mobilidade vertical ascendente e intergeracional: a comparação é entre gerações e a posição sobe. Em “o vendedor de sapatos passou a vender celulares, com o mesmo salário”, há mobilidade horizontal e intrageracional: a mesma pessoa muda de ocupação sem mudar de estrato. Também existe mobilidade descendente. Estudos distinguem ainda mobilidade estrutural, causada por mudanças na economia que criam ou extinguem posições, e mobilidade de circulação, que mede a troca real de posições entre grupos. Ao classificar, responda às duas perguntas: houve mudança de estrato? Compara-se uma vida ou duas gerações?"
       },
       {
         "title": "Barreiras à mobilidade",
-        "content": "No Brasil, a mobilidade é limitada por desigualdade de renda, qualidade desigual da educação, redes de contato desiguais e discriminação racial e de gênero. A herança de capital cultural e econômico faz com que a origem familiar continue sendo forte preditor do destino social, mesmo com expansão da escolaridade."
+        "content": "No Brasil, a mobilidade é limitada por desigualdade de renda, qualidade desigual da educação, redes de contato desiguais e discriminação racial e de gênero. A herança de capital cultural e econômico faz com que a origem familiar continue sendo forte preditor do destino social, mesmo com expansão da escolaridade. Pesquisas mostram que a chance de um filho de família pobre chegar ao topo é muito menor que a de quem nasce em família rica.\n\nNo caso autoral “um caso de ascensão em cem não mostra a regra dos noventa e nove”, a história excepcional, muitas vezes usada para defender a meritocracia, não descreve o padrão da população. Mobilidade se mede estatisticamente: é preciso olhar quantos subiram, quantos permaneceram e quantos desceram. Além disso, quando todos ganham mais escolaridade, os diplomas perdem valor relativo, e as distâncias entre grupos podem se manter. Bourdieu chamou isso de reprodução: a escola, ao valorizar o capital cultural das classes dominantes, tende a converter herança em mérito aparente. Ao responder, diferencie trajetória individual de padrão coletivo."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Supor que casos individuais de ascensão provam que a sociedade é aberta é generalização indevida: mobilidade se mede por padrões estatísticos, não por exceções. Outro deslize é confundir mobilidade horizontal com ascensão. E ignorar que expansão da escolaridade sem redução de desigualdade pode manter as distâncias relativas."
+        "content": "1. “Casos individuais de ascensão provam que a sociedade é aberta”: mobilidade se mede por padrões estatísticos, não por exceções.\n2. “Mobilidade horizontal é ascensão”: muda a ocupação sem mudar o estrato.\n3. “Mais escolaridade elimina a desigualdade”: a expansão sem redução da desigualdade pode manter as distâncias relativas.\n4. “Marx, Weber e Bourdieu dizem a mesma coisa”: usam critérios diferentes, como propriedade, mercado e status, ou capitais.\n5. “Intergeracional é ao longo da vida de uma pessoa”: compara filhos e pais; a trajetória de uma pessoa é intrageracional.\n6. “Toda mobilidade resulta de esforço individual”: há mobilidade estrutural, causada por mudanças na economia. Na resposta, classifique o caso pelos dois eixos, vertical ou horizontal e intra ou intergeracional, e diferencie trajetória de padrão. Lembre que a mobilidade descendente também existe e que crises econômicas podem empurrar grupos inteiros para baixo, sem relação com o esforço individual."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que histórias individuais de ascensão não provam que a sociedade é meritocrática? Responda antes de conferir: a avaliação exige dados sobre padrões de mobilidade da população, e exceções podem coexistir com forte reprodução das posições de origem. Agora diferencie mobilidade intergeracional de intrageracional: uma compara filhos e pais, a outra acompanha a trajetória de uma mesma pessoa."
+        "content": "Problema 1. Por que histórias individuais de ascensão não provam que a sociedade é meritocrática? Use o caso autoral “um caso de ascensão em cem não mostra a regra dos noventa e nove”. Resolução: a avaliação exige dados sobre padrões de mobilidade da população, e exceções podem coexistir com forte reprodução das posições de origem. A herança de capital econômico e cultural, as redes de contato e a discriminação limitam as chances da maioria. A meritocracia pressupõe igualdade de condições, que os dados não confirmam.\n\nProblema 2. Classifique os casos autorais “a filha do porteiro tornou-se engenheira” e “o vendedor de sapatos passou a vender celulares, com o mesmo salário” e diferencie mobilidade intergeracional de intrageracional. Resolução: o primeiro é mobilidade vertical ascendente e intergeracional, porque compara a filha com o pai e há mudança de estrato. O segundo é horizontal e intrageracional, porque acompanha a mesma pessoa e não há mudança de estrato. Uma compara filhos e pais; a outra acompanha a trajetória de uma mesma pessoa."
       }
     ],
     "recall": {
@@ -31947,7 +31950,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -32400,23 +32404,23 @@
     "sections": [
       {
         "title": "Identidade como construção",
-        "content": "Identidade não é essência fixa herdada, mas construção social e relacional: define-se em relação ao que se considera diferente. Ela é múltipla, já que a mesma pessoa é atravessada por marcadores de classe, gênero, raça, geração e território, e é dinâmica, transformando-se ao longo da vida e da história."
+        "content": "Identidade não é essência fixa herdada, mas construção social e relacional: define-se em relação ao que se considera diferente. Ela é múltipla, já que a mesma pessoa é atravessada por marcadores de classe, gênero, raça, geração e território, e é dinâmica, transformando-se ao longo da vida e da história. Autores como Stuart Hall descrevem identidades contemporâneas como fragmentadas e em deslocamento, sobretudo com a globalização e as migrações.\n\nNo caso autoral “ela só se disse paulista quando se mudou para Recife”, a identidade regional não era tema enquanto todos ao redor compartilhavam a mesma origem; tornou-se visível no contato com o diferente. É isso que significa dizer que a identidade é relacional: ela se marca pelo que não se é. A mesma pessoa pode acionar identidades diferentes conforme a situação, como estudante, filha, nordestina adotiva ou torcedora. Ao analisar, identifique em relação a quem a identidade se define e em que contexto ela se torna relevante, sem tratá-la como característica natural que sempre esteve lá."
       },
       {
         "title": "Identidades coletivas",
-        "content": "Grupos constroem identidades a partir de memória, língua, território, religião ou experiência de discriminação compartilhada. Essas identidades podem ser mobilizadas politicamente para reivindicar direitos e reconhecimento, e são frequentemente disputadas: quem define quem pertence ao grupo é, em si, uma questão de poder."
+        "content": "Grupos constroem identidades a partir de memória, língua, território, religião ou experiência de discriminação compartilhada. Essas identidades podem ser mobilizadas politicamente para reivindicar direitos e reconhecimento, e são frequentemente disputadas: quem define quem pertence ao grupo é, em si, uma questão de poder. Movimentos negros, indígenas e feministas usaram identidades coletivas para conquistar políticas públicas, como cotas.\n\nPense numa comunidade quilombola que reivindica a titulação de seu território. A identidade quilombola, reconhecida pela Constituição de 1988, articula memória da resistência à escravidão, vínculo com a terra e organização coletiva. Ela não é apenas sentimento: tem efeitos jurídicos, porque dá acesso a direitos. Por isso também é contestada por quem disputa as mesmas terras. Ao estudar identidades coletivas, observe três elementos: o que une o grupo, que reivindicação a identidade sustenta e quem tem poder para reconhecê-la ou negá-la. Isso evita tanto tratá-las como invenções arbitrárias quanto como essências imutáveis."
       },
       {
         "title": "Diferença e desigualdade",
-        "content": "Diferença não implica desigualdade, mas frequentemente é convertida nela quando marcadores identitários são usados para justificar hierarquias e exclusão. Por isso o debate sobre reconhecimento se articula ao de redistribuição: reconhecer identidades sem enfrentar desigualdades materiais deixa a questão pela metade."
+        "content": "Diferença não implica desigualdade, mas frequentemente é convertida nela quando marcadores identitários são usados para justificar hierarquias e exclusão. Por isso o debate sobre reconhecimento se articula ao de redistribuição, como propôs a filósofa Nancy Fraser: reconhecer identidades sem enfrentar desigualdades materiais deixa a questão pela metade, e redistribuir sem reconhecer pode ignorar formas de desrespeito.\n\nCompare dois casos autorais. Em “o sotaque era só diferença até virar motivo para recusar a vaga”, a diferença se converte em desigualdade quando passa a decidir o acesso a uma oportunidade. Em “a escola celebrou a cultura do bairro e manteve a sala sem laboratório”, há reconhecimento simbólico, mas a desigualdade material permanece. Retirar qualquer uma das duas condições, reconhecimento ou redistribuição, deixa a injustiça incompleta. Ao responder, mostre em que momento a diferença vira critério de hierarquia e explique por que as duas dimensões precisam caminhar juntas para que haja justiça."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Tratar identidade como característica natural e imutável ignora seu caráter histórico e relacional. Outro deslize é reduzir identidade a escolha individual livre, quando ela é constrangida por classificações sociais. E confundir defesa da diferença com relativismo que legitima violações de direitos."
+        "content": "1. “Identidade é natural e imutável”: é histórica, relacional e muda ao longo da vida e dos contextos.\n2. “Identidade é escolha individual livre”: é constrangida por classificações sociais e por quem tem poder de nomear.\n3. “Defender a diferença é relativismo total”: reconhecer diferenças não legitima violações de direitos humanos.\n4. “Diferença é o mesmo que desigualdade”: a diferença vira desigualdade quando passa a justificar hierarquia e exclusão.\n5. “Reconhecimento basta”: sem redistribuição, desigualdades materiais permanecem.\n6. “Identidades coletivas são invenções sem efeito”: têm efeitos políticos e jurídicos, como no reconhecimento de territórios quilombolas. Na resposta, use um caso concreto para mostrar quando a diferença vira desigualdade e quais condições, simbólicas e materiais, precisam mudar. Lembre ainda que interseccionalidade descreve a sobreposição de marcadores, como raça, gênero e classe, que produz experiências específicas de desigualdade."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a identidade é relacional? Responda antes de conferir: ela se constitui na comparação com o outro, marcando o que se é a partir do que não se é, o que faz da diferença um componente interno da própria identidade. Agora explique a relação entre reconhecimento e redistribuição: reconhecer identidades é insuficiente se as desigualdades materiais permanecem intocadas."
+        "content": "Problema 1. Por que a identidade é relacional? Use o caso autoral “ela só se disse paulista quando se mudou para Recife”. Resolução: ela se constitui na comparação com o outro, marcando o que se é a partir do que não se é, o que faz da diferença um componente interno da própria identidade. A identidade regional só se tornou relevante no contato com outro contexto. Por isso ela é também situacional e múltipla, acionada conforme a relação em que a pessoa está.\n\nProblema 2. Explique a relação entre reconhecimento e redistribuição, com os casos autorais “o sotaque era só diferença até virar motivo para recusar a vaga” e “a escola celebrou a cultura do bairro e manteve a sala sem laboratório”. Resolução: o primeiro mostra a diferença convertida em desigualdade de acesso; o segundo, reconhecimento simbólico sem mudança material. Reconhecer identidades é insuficiente se as desigualdades materiais permanecem intocadas, e redistribuir sem reconhecer pode manter formas de desrespeito. A justiça exige as duas dimensões, como argumenta Nancy Fraser."
       }
     ],
     "recall": {
@@ -32447,7 +32451,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -32787,23 +32792,23 @@
     "sections": [
       {
         "title": "As três características",
-        "content": "Durkheim define fato social por três traços: exterioridade, pois existe antes e independentemente do indivíduo; coercitividade, pois se impõe e a transgressão gera sanção; e generalidade, pois é comum ao grupo. Língua, moeda, moda, leis e formas de cumprimentar são exemplos típicos desse tipo de fenômeno."
+        "content": "Durkheim, em As Regras do Método Sociológico, de 1895, define fato social por três traços: exterioridade, pois existe antes e independentemente do indivíduo; coercitividade, pois se impõe e a transgressão gera sanção; e generalidade, pois é comum ao grupo. Língua, moeda, moda, leis e formas de cumprimentar são exemplos típicos desse tipo de fenômeno. Os três traços funcionam juntos: um fenômeno que tenha só um deles não basta.\n\nNo caso autoral “o uniforme da escola existia antes de Lia chegar e a advertência veio quando ela o deixou em casa”, aparecem os três traços. O uniforme já existia antes dela, portanto é exterior; a advertência mostra coerção; e todos os alunos o usam, o que indica generalidade. Agora retire uma condição: se só Lia usasse um boné azul às sextas, sem regra nem sanção, haveria apenas um hábito individual. A sanção pode ser formal, como advertência ou multa, ou difusa, como riso e reprovação. Ao classificar, verifique os três traços no caso, e não apenas se o fenômeno é comum."
       },
       {
         "title": "Tratar como coisa",
-        "content": "A regra metodológica central é tratar os fatos sociais como coisas, isto é, estudá-los com objetividade, sem partir de noções prévias e sem reduzi-los a motivações individuais. O sociólogo deve afastar as pré-noções do senso comum e explicar o social pelo social, e não por causas psicológicas ou biológicas."
+        "content": "A regra metodológica central é tratar os fatos sociais como coisas, isto é, estudá-los com objetividade, sem partir de noções prévias e sem reduzi-los a motivações individuais. O sociólogo deve afastar as pré-noções do senso comum e explicar o social pelo social, e não por causas psicológicas ou biológicas. Tratar como coisa não significa dizer que pessoas são objetos, mas que os fatos sociais têm realidade própria e podem ser observados de fora.\n\nPense na taxa de casamentos de uma cidade. Explicá-la pelo humor de cada noivo seria reduzir o social ao individual. Durkheim pediria indicadores observáveis, como idade média, renda, religião e leis, e compararia grupos e períodos. Essa postura sustentou a afirmação da sociologia como ciência autônoma, com objeto e método próprios, distinta da psicologia e da filosofia social. Também explica a preferência dele por dados estatísticos e comparações históricas. Ao responder questões, lembre que a recusa da pré-noção é passo metodológico: o pesquisador suspende o que acha que sabe para observar o fenômeno como ele se apresenta."
       },
       {
         "title": "Normal e patológico",
-        "content": "Durkheim distingue o normal, o que é generalizado em determinado tipo de sociedade, do patológico, que é a exceção ou o excesso. Nessa chave, mesmo o crime é normal, por existir em todas as sociedades, e cumpre a função de reafirmar a consciência coletiva quando é punido; patológica seria sua ausência ou seu excesso extremo."
+        "content": "Durkheim distingue o normal, o que é generalizado em determinado tipo de sociedade, do patológico, que é a exceção ou o excesso. Nessa chave, mesmo o crime é normal, por existir em todas as sociedades, e cumpre a função de reafirmar a consciência coletiva quando é punido; patológica seria sua ausência ou seu excesso extremo. A normalidade é sempre relativa a um tipo social e a uma fase de desenvolvimento, e não um padrão universal.\n\nNo caso autoral “toda sociedade registrada teve algum tipo de transgressão punida”, a regularidade do fenômeno indica normalidade sociológica. Quando a transgressão é punida, o grupo reafirma publicamente o que considera valor, fortalecendo a coesão. Durkheim chega a dizer que o crime pode antecipar mudanças morais, como no caso de Sócrates, condenado por ideias que depois foram valorizadas. Uma sociedade sem nenhum desvio exigiria controle tão absoluto que seria ela mesma patológica. Essa análise é funcional e não moral: dizer que algo é normal não é dizer que é bom. Explique sempre o critério usado, generalidade no tipo social."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Entender exterioridade como algo que existe fora das pessoas em sentido físico é impreciso: significa que independe da vontade individual. Outro deslize é ler a tese sobre o crime como aprovação moral, quando é análise funcional. E confundir tratar como coisa com desumanizar o objeto de estudo."
+        "content": "1. “Exterioridade significa algo físico fora das pessoas”: significa que o fato independe da vontade individual e existe antes dela.\n2. “Durkheim aprova o crime ao chamá-lo de normal”: é análise funcional; normal quer dizer generalizado no tipo social, não desejável.\n3. “Tratar como coisa é desumanizar”: é regra de objetividade, que afasta pré-noções e observa o fato como realidade própria.\n4. “Basta ser comum para ser fato social”: os três traços, exterioridade, coerção e generalidade, precisam estar presentes.\n5. “Coerção é só punição legal”: pode ser sanção difusa, como riso, isolamento ou reprovação.\n6. “Fato social se explica por motivos individuais”: Durkheim exige explicar o social pelo social, com causas coletivas. Na resposta, aplique os três traços a um caso concreto e mostre o que acontece quando um deles falta, em vez de apenas listar as definições. Lembre também que normal e patológico dependem do tipo de sociedade e da fase em que ela está."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a língua é um fato social exemplar? Responda antes de conferir: existe antes de o indivíduo nascer, impõe-se a ele com regras que não escolheu, e é compartilhada por todo o grupo, reunindo exterioridade, coerção e generalidade. Agora explique por que Durkheim considera o crime um fenômeno normal: ele existe em todas as sociedades e reforça a consciência coletiva ao ser punido."
+        "content": "Problema 1. Por que a língua é um fato social exemplar? Resolução: existe antes de o indivíduo nascer, impõe-se a ele com regras que não escolheu, e quem as desrespeita enfrenta correção ou estranhamento; além disso, é compartilhada por todo o grupo, reunindo exterioridade, coerção e generalidade. Compare com o caso autoral “o uniforme da escola existia antes de Lia chegar e a advertência veio quando ela o deixou em casa”, que reúne os mesmos três traços em escala menor.\n\nProblema 2. Explique por que Durkheim considera o crime um fenômeno normal e por que isso não é aprovação. Resolução: o crime existe em todas as sociedades conhecidas, o que o torna normal pelo critério da generalidade, e cumpre função ao reforçar a consciência coletiva quando é punido. Patológico seria sua ausência total, que exigiria controle absoluto, ou seu excesso extremo. A análise é funcional: descreve o papel do fenômeno na coesão, sem julgá-lo moralmente desejável. Confundir normal com bom é o erro que a questão costuma testar."
       }
     ],
     "recall": {
@@ -32834,7 +32839,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
@@ -32953,23 +32959,23 @@
     "sections": [
       {
         "title": "Duas formas de coesão",
-        "content": "Durkheim distingue dois tipos de solidariedade. A mecânica predomina em sociedades simples, com pouca divisão do trabalho: os indivíduos se parecem, compartilham crenças e a consciência coletiva é forte. A orgânica predomina em sociedades complexas: os indivíduos se diferenciam e se tornam interdependentes justamente por serem distintos."
+        "content": "Durkheim, em Da Divisão do Trabalho Social, de 1893, distingue dois tipos de solidariedade. A mecânica predomina em sociedades simples, com pouca divisão do trabalho: os indivíduos se parecem, compartilham crenças e a consciência coletiva é forte. A orgânica predomina em sociedades complexas: os indivíduos se diferenciam e se tornam interdependentes justamente por serem distintos. Os nomes vêm de analogias: a mecânica une partes iguais, como moléculas de um corpo inorgânico; a orgânica une órgãos diferentes, como num ser vivo.\n\nNo caso autoral “na aldeia, todos plantam, rezam e festejam do mesmo jeito”, a coesão vem da semelhança: cada um faz o que todos fazem, e a ofensa a uma crença é sentida pelo grupo inteiro. A individualidade tem pouco espaço, e a consciência coletiva ocupa quase toda a consciência individual. Já numa cidade grande as pessoas pensam e vivem de modos diferentes e, ainda assim, permanecem ligadas. Para classificar, pergunte o que une: a semelhança ou a dependência mútua."
       },
       {
         "title": "Divisão do trabalho",
-        "content": "A passagem de um tipo a outro é explicada pelo aumento da densidade social e da divisão do trabalho. Quanto mais especializadas as funções, maior a interdependência: ninguém produz sozinho o que consome. A divisão do trabalho, para Durkheim, tem função moral, pois é ela que produz a coesão nas sociedades modernas."
+        "content": "A passagem de um tipo a outro é explicada pelo aumento da densidade social, isto é, do volume de população e da frequência de interações, e pela divisão do trabalho. Quanto mais especializadas as funções, maior a interdependência: ninguém produz sozinho o que consome. A divisão do trabalho, para Durkheim, tem função moral, pois é ela que produz a coesão nas sociedades modernas, e não apenas eficiência econômica, como em Adam Smith.\n\nNo caso autoral “o pão da padaria depende do moinho, do caminhoneiro e da eletricista”, um produto cotidiano revela uma cadeia de funções distintas. A padeira não sabe moer trigo, dirigir o caminhão nem consertar o forno; depende de quem sabe. É essa complementaridade que mantém as pessoas ligadas, mesmo sem crenças comuns. Durkheim também analisa formas anormais da divisão do trabalho, como a anômica, quando falta regulação entre funções, e a forçada, quando as pessoas ocupam posições sem escolha. Ao analisar, mostre a cadeia de dependências e explique por que a diferença, e não a semelhança, produz o vínculo."
       },
       {
         "title": "Direito como indicador",
-        "content": "O tipo de direito revela o tipo de solidariedade. Na mecânica predomina o direito repressivo, voltado à punição de quem ofende a consciência coletiva. Na orgânica predomina o direito restitutivo, voltado a restabelecer relações e reparar danos, como nos contratos, o que evidencia a mudança no modo de manter a coesão."
+        "content": "O tipo de direito revela o tipo de solidariedade. Na mecânica predomina o direito repressivo, voltado à punição de quem ofende a consciência coletiva. Na orgânica predomina o direito restitutivo, voltado a restabelecer relações e reparar danos, como nos contratos, o que evidencia a mudança no modo de manter a coesão. Durkheim usou o direito como indicador observável porque a solidariedade, em si, não se mede diretamente.\n\nCompare no caso autoral “quem quebra o tabu é expulso; quem quebra o contrato paga o conserto”. No primeiro caso, a violação atinge sentimentos compartilhados, e a resposta é castigo exemplar que reafirma a crença do grupo. No segundo, o dano é a uma relação entre partes, e a resposta é restituir a situação anterior, sem vingança coletiva. Direito civil, comercial e trabalhista crescem nas sociedades modernas; o penal tem peso maior nas tradicionais. Isso não significa que sociedades modernas não punam: trata-se de predominância. Ao responder, use o direito como evidência da forma de coesão."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Associar mecânica a máquina e moderno é o erro mais comum: mecânica é a das sociedades tradicionais e orgânica a das modernas. Outro deslize é supor que a solidariedade orgânica elimina conflitos. E esquecer que, para Durkheim, a divisão do trabalho tem função moral, e não apenas econômica."
+        "content": "1. “Mecânica é a das sociedades modernas, por lembrar máquinas”: mecânica é a das sociedades tradicionais; orgânica, a das modernas.\n2. “A solidariedade orgânica elimina conflitos”: interdependência não garante harmonia; há formas anormais, como a anômica e a forçada.\n3. “A divisão do trabalho só tem função econômica”: para Durkheim, tem função moral, de produzir coesão.\n4. “Sociedades modernas não usam direito repressivo”: usam, mas predomina o restitutivo.\n5. “Na orgânica, a consciência coletiva desaparece”: ela se enfraquece e se torna mais abstrata, abrindo espaço à individualidade.\n6. “Solidariedade é sentimento de bondade”: é o vínculo que mantém a coesão social, por semelhança ou por interdependência. Na resposta, use um caso concreto e o tipo de direito como indicadores, em vez de apenas repetir os nomes das duas formas. Lembre que as duas formas podem coexistir numa mesma sociedade; o que muda é qual delas predomina na manutenção da coesão."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que a solidariedade orgânica nasce da diferença? Responda antes de conferir: com a especialização, cada um depende do trabalho dos outros para sobreviver, e é essa complementaridade, e não a semelhança, que mantém a coesão. Agora relacione tipo de direito e tipo de solidariedade: repressivo na mecânica, restitutivo na orgânica."
+        "content": "Problema 1. Por que a solidariedade orgânica nasce da diferença? Use o caso autoral “o pão da padaria depende do moinho, do caminhoneiro e da eletricista”. Resolução: com a especialização, cada um depende do trabalho dos outros para sobreviver, e é essa complementaridade, e não a semelhança, que mantém a coesão. A padeira, o moleiro e a eletricista fazem coisas diferentes e, justamente por isso, precisam uns dos outros. O aumento da densidade social explica a expansão dessa divisão.\n\nProblema 2. Relacione tipo de direito e tipo de solidariedade, analisando o caso autoral “quem quebra o tabu é expulso; quem quebra o contrato paga o conserto”. Resolução: na solidariedade mecânica predomina o direito repressivo, que pune a ofensa à consciência coletiva, como na expulsão de quem quebra o tabu. Na orgânica predomina o direito restitutivo, que repara a relação entre as partes, como no conserto pago após a quebra do contrato. Durkheim usa o direito como indicador observável de uma forma de coesão que não se vê diretamente."
       }
     ],
     "recall": {
@@ -33000,7 +33006,8 @@
           ]
         ]
       ]
-    }
+    },
+    "rev": 2
   },
   {
     "subject": "Sociologia",
