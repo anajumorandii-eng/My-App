@@ -55,6 +55,11 @@ describe('dossiês das obras: integridade', () => {
       // Nenhuma fonte crítica foi lida; sourceRefs só entra com CriticalSource real.
       expect(module.sourceRefs).toEqual([]);
     }
+    // Cada aba da tela lê um tipo de módulo: catorze dossiês chegaram a ter
+    // só três, e as abas de bancas, questões e revisão ficavam pendentes.
+    expect(dossier.modules.map((m) => m.moduleType)).toEqual([
+      'comece_aqui', 'analise_integral', 'critica_debate', 'fuvest', 'unicamp', 'questoes', 'revisao_ativa', 'fontes',
+    ]);
   });
 
   it('a estudante só recebe o que foi publicado', () => {
@@ -110,10 +115,11 @@ describe('ObraDetalhe com dossiê', () => {
     expect(screen.getByText(/24 horas:/)).toBeInTheDocument();
   });
 
-  it('dossiê sem módulo de questões mostra o aviso de pendência, não uma aba vazia', async () => {
-    renderAt('/obras/memorias-de-martha?revisao=1');
-    await screen.findByText(/Modo revisão/);
-    fireEvent.click(screen.getByRole('button', { name: 'Questões' }));
+  // Sem modo revisão, nenhum módulo em needs_review chega à tela: a aba
+  // precisa mostrar o aviso de pendência, não ficar vazia.
+  it('sem módulo publicado de questões, mostra o aviso de pendência, não uma aba vazia', async () => {
+    renderAt('/obras/memorias-de-martha');
+    fireEvent.click(await screen.findByRole('button', { name: 'Questões' }));
     expect(screen.getByText(/O banco de questões autorais ainda está em elaboração/)).toBeInTheDocument();
   });
 });

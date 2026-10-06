@@ -10,20 +10,20 @@ na página declarada — **não** é aprovação editorial.
 
 | Obra | Banca | Unid. | Cartões | Módulos | Leitura do primário | Origem do dossiê |
 | --- | --- | --- | --- | --- | --- | --- |
-| Opúsculo humanitário | FUVEST | 7 | 12 | 3 | integral (PR #272); conferida aqui | #272 + correção LXI (59e50383) |
-| Nebulosas | FUVEST | 4 | 9 | 3 | PR #272; conferida aqui | #272 |
-| Memórias de Martha | FUVEST | 12 | 9 | 3 | PR #272; conferida aqui | #272 |
-| Caminho de pedras | FUVEST | 27 | 14 | 3 | PR #272; conferida aqui | #272 |
-| A paixão segundo G.H. | FUVEST | 33 | 18 | 3 | PR #272; conferida aqui | #272 |
-| Geografia | FUVEST | 7 | 16 | 3 | PR #272; conferida aqui | #272 |
-| Balada de amor ao vento | FUVEST | 20 | 18 | 3 | PR #272; conferida aqui | #272 |
-| Canção para ninar menino grande | FUVEST | 16 | 16 | 3 | PR #272; conferida aqui | #272 |
-| A visão das plantas | FUVEST | 12 | 17 | 3 | PR #272; conferida aqui | #272 |
-| Canções escolhidas (14 letras) | Unicamp | 14 | 16 | 3 | integral (14 p.) | 007cea4b |
-| Prosas seguidas de Odes mínimas | Unicamp | 33 | 24 | 3 | integral (58 p.) | 84b3cd88 |
-| A vida não é útil | Unicamp | 5 | 21 | 3 | integral (p. 9-44 + paratextos) | eafb40d5 |
-| Olhos d'água | Unicamp | 15 | 25 | 3 | integral (p. 11-71) | 7e1bd121 |
-| Morangos mofados (6 contos) | Unicamp | 6 | 17 | 3 | só os 6 contos exigidos | 7b478fba |
+| Opúsculo humanitário | FUVEST | 7 | 12 | 8 | integral (PR #272); conferida aqui | #272 + correção LXI (59e50383) |
+| Nebulosas | FUVEST | 4 | 9 | 8 | PR #272; conferida aqui | #272 |
+| Memórias de Martha | FUVEST | 12 | 9 | 8 | PR #272; conferida aqui | #272 |
+| Caminho de pedras | FUVEST | 27 | 14 | 8 | PR #272; conferida aqui | #272 |
+| A paixão segundo G.H. | FUVEST | 33 | 18 | 8 | PR #272; conferida aqui | #272 |
+| Geografia | FUVEST | 7 | 16 | 8 | PR #272; conferida aqui | #272 |
+| Balada de amor ao vento | FUVEST | 20 | 18 | 8 | PR #272; conferida aqui | #272 |
+| Canção para ninar menino grande | FUVEST | 16 | 16 | 8 | PR #272; conferida aqui | #272 |
+| A visão das plantas | FUVEST | 12 | 17 | 8 | PR #272; conferida aqui | #272 |
+| Canções escolhidas (14 letras) | Unicamp | 14 | 16 | 8 | integral (14 p.) | 007cea4b |
+| Prosas seguidas de Odes mínimas | Unicamp | 33 | 24 | 8 | integral (58 p.) | 84b3cd88 |
+| A vida não é útil | Unicamp | 5 | 21 | 8 | integral (p. 9-44 + paratextos) | eafb40d5 |
+| Olhos d'água | Unicamp | 15 | 25 | 8 | integral (p. 11-71) | 7e1bd121 |
+| Morangos mofados (6 contos) | Unicamp | 6 | 17 | 8 | só os 6 contos exigidos | 7b478fba |
 | Os funerais da Mamãe Grande | Unicamp | 8 | 9 | 8 | integral (85 p.) | c96b68b5 |
 | No seu pescoço | Unicamp | 12 | 13 | 8 | integral (136 p.) | e26bc47c |
 | Vida e morte de M. J. Gonzaga de Sá | Unicamp | 14 | 20 | 8 | integral (92 p.) | 1b45e551 |
@@ -72,10 +72,12 @@ daquelas obras foi feita na sessão da #272, não refeita nesta branch.
    editora). Marca em imagem não foi verificada.
 3. **Procedência:** vários PDFs vêm de sites de download; paginação é do
    arquivo, não universal. Conferir em exemplar antes de publicar.
-4. **Padrão heterogêneo:** os 9 dossiês da FUVEST e 5 da Unicamp (Canções,
-   Prosas, Krenak, Olhos d'água, Morangos) têm 3 módulos; Funerais, No seu
-   pescoço, Gonzaga e Brás Cubas têm 8 (com análise 0–31, questões e
-   revisão ativa). Uniformizar é trabalho editorial pendente.
+4. **Padrão de módulos:** os 18 dossiês têm os oito módulos (comece aqui,
+   análise, crítica e debate, FUVEST, Unicamp, questões, revisão ativa,
+   fontes). Nos 14 que tinham três, os cinco novos foram montados a partir
+   dos cartões já conferidos, sem leitura ou fonte nova; o módulo da banca
+   que não exige a obra é treino de transferência. O teste de integridade
+   exige os oito tipos.
 5. **Interface:** `ObraDetalhe` agora tem as abas Bancas, Questões e Revisão
    ativa, e a crítica entra no fim da aba Análise. Dossiês sem esses módulos
    mostram o aviso de "em elaboração". Como tudo segue `needs_review`, a
