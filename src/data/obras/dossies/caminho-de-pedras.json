@@ -1,0 +1,699 @@
+{
+  "workId": "caminho-de-pedras",
+  "slug": "caminho-de-pedras",
+  "edition": {
+    "label": "Rachel de Queiroz, Caminho de Pedras. Rio de Janeiro: José Olympio (Record), e-book",
+    "pdfPageCount": 102,
+    "note": "Obra protegida por direito autoral. As páginas citadas são as do PDF dessa edição; o dossiê usa só citações curtas e análise original."
+  },
+  "units": [
+    {
+      "id": "cap-01",
+      "order": 1,
+      "type": "chapter",
+      "title": "1 — Roberto chega a Fortaleza",
+      "pdfStartPage": 9,
+      "pdfEndPage": 11,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Roberto volta a Fortaleza depois de dez anos no Rio, jornalista pobre e militante, com uma carta da organização. No café, encontra o pedreiro que vira sem trabalho no Rio; o homem lê com dificuldade, promete levá-lo aos companheiros e some sem dizer o nome.",
+        "observe": [
+          "A cidade natal aparece estranha e sem memória: Roberto chega como forasteiro na própria terra.",
+          "O primeiro contato com o operário já mostra a distância — Roberto evita oferecer ajuda na leitura para não despertar desconfiança."
+        ]
+      }
+    },
+    {
+      "id": "cap-02",
+      "order": 2,
+      "type": "chapter",
+      "title": "2 — A reunião na salinha",
+      "pdfStartPage": 12,
+      "pdfEndPage": 15,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Na casa pobre de Rufino, oito homens recebem Roberto. Luís, Vinte-e-Um e os demais operários desconfiam do 'pequeno-burguês' vindo do Rio; Rufino interrompe a briga e exige trabalho. Roberto sai da reunião humilhado, tratado como impostor.",
+        "observe": [
+          "O conflito entre intelectuais e operários, que organiza o romance inteiro, é armado já na primeira reunião.",
+          "A ironia de Filipe ('é o mesmo que o pecado original') expõe o determinismo de classe dos companheiros."
+        ]
+      }
+    },
+    {
+      "id": "cap-03",
+      "order": 3,
+      "type": "chapter",
+      "title": "3 — Filipe",
+      "pdfStartPage": 16,
+      "pdfEndPage": 17,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Filipe, guarda-livros magro e calmo, aproxima-se de Roberto na saída. Militante metódico, mora 'nas areias', o bairro pobre sem calçamento, onde a mãe tem uma bodega.",
+        "observe": [
+          "Filipe é o contraponto de Roberto: revolucionário 'cientificamente', sem pudores nem ingenuidades.",
+          "A frase sobre ter subido a intelectual entre os operários inverte o caminho de Roberto, que desceu."
+        ]
+      }
+    },
+    {
+      "id": "cap-04",
+      "order": 4,
+      "type": "chapter",
+      "title": "4 — A rua das areias e Angelita",
+      "pdfStartPage": 18,
+      "pdfEndPage": 20,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Filipe volta à Rua da Leopoldina: o Capitão Nonato namora a mulher do faroleiro, Dona Leonília comenta o jogo do bicho. Encontra Angelita, costureira de paramentos de igreja, que aceita entrar na organização sem hesitar, ao contrário do marido, Assis, escaldado pela cadeia.",
+        "observe": [
+          "A rua é um microcosmo: adultério tolerado do capitão de polícia, pequeno comércio, miséria.",
+          "As mãos picadas de agulha de Angelita, costurando roupa de padre por mil e quinhentos a peça, concentram exploração e ironia."
+        ]
+      }
+    },
+    {
+      "id": "cap-05",
+      "order": 5,
+      "type": "chapter",
+      "title": "5 — Noemi na Fotografia",
+      "pdfStartPage": 21,
+      "pdfEndPage": 23,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Roberto conhece Noemi, retocadora de fotografias no estúdio de Seu Benevides, casada com João Jaques e mãe de um menino, o Guri. O capítulo acompanha o trabalho dela de corrigir rostos nas chapas e o olhar abusivo do patrão sobre as clientes jovens.",
+        "observe": [
+          "O ofício de Noemi — embelezar retratos alheios — é imagem de uma vida de aparências corrigidas.",
+          "O 'golpe de vista' de Seu Benevides mostra o assédio aceito como 'jeito de artista'."
+        ]
+      }
+    },
+    {
+      "id": "cap-06",
+      "order": 6,
+      "type": "chapter",
+      "title": "6 — A rodinha da praça",
+      "pdfStartPage": 24,
+      "pdfEndPage": 26,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Na praça, a 'rodinha' de intelectuais — Samuel, Nascimento, Paulino, Filipe e Roberto — discute mulheres. Nascimento fala da mulher como presa tomada ao burguês; Filipe responde que, no futuro, elas virão por desejo próprio.",
+        "observe": [
+          "A discussão revela que a revolução prometida por esses homens ainda pensa a mulher como objeto de posse.",
+          "O silêncio final — 'um homem e uma mulher; mais nada' — antecipa o drama de Roberto e Noemi."
+        ]
+      }
+    },
+    {
+      "id": "cap-07",
+      "order": 7,
+      "type": "chapter",
+      "title": "7 — Jantar em casa de João Jaques; Angelita e Assis",
+      "pdfStartPage": 27,
+      "pdfEndPage": 34,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Roberto observa a cidade do bonde, encontra João Jaques no café e é levado para jantar: conhece o Guri e a vida doméstica de Noemi. Em paralelo, Angelita conta ao marido que voltou à organização; Assis, que se diz 'traidor', recusa e se fecha.",
+        "observe": [
+          "O capítulo monta dois casais em espelho: em ambos, a mulher avança na militância e o marido recua.",
+          "A casa de Noemi é descrita como cena de paz que Roberto, apaixonado, já vê como encenação ('se fantasia de matrona')."
+        ]
+      }
+    },
+    {
+      "id": "cap-08",
+      "order": 8,
+      "type": "chapter",
+      "title": "8 — 'Gravatas' e 'tamancos'",
+      "pdfStartPage": 35,
+      "pdfEndPage": 39,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A organização se divide entre operários ('tamancos') e intelectuais ('gravatas'). Numa reunião, Roberto é acusado de descuidar das tarefas por frequentar Noemi. Na volta, Filipe pondera que os operários têm razão em parte; sozinho, admite que foi a ternura, e não a lógica, que o levou à revolução.",
+        "observe": [
+          "O narrador comenta com ironia: a simplicidade afetada dos intelectuais é 'artifício de requintados'.",
+          "O monólogo de Filipe desmonta o discurso do 'socialismo científico' pelo lado afetivo."
+        ]
+      }
+    },
+    {
+      "id": "cap-09",
+      "order": 9,
+      "type": "chapter",
+      "title": "9 — O curso e a primeira briga",
+      "pdfStartPage": 40,
+      "pdfEndPage": 44,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Noemi, sonolenta no retoque, relembra a noite anterior: voltou do curso político com Roberto e Filipe sentindo-se livre pela primeira vez, e encontrou João Jaques bebendo, enciumado, pedindo que abandonasse a organização. No dia seguinte, no café, Roberto se declara de modo indireto.",
+        "observe": [
+          "A libertação de Noemi é narrada como reaparecimento de desejos antigos que lhe ensinaram a chamar de pecado.",
+          "A frase de Roberto — 'Decerto porque é seu filho' — transforma o afeto pelo Guri em declaração."
+        ]
+      }
+    },
+    {
+      "id": "cap-10",
+      "order": 10,
+      "type": "chapter",
+      "title": "10 — A doença de Noemi",
+      "pdfStartPage": 45,
+      "pdfEndPage": 47,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Roberto encontra Noemi de cama depois de uma 'complicação' tratada às escondidas por uma mulher — o texto sugere uma gravidez interrompida, sem nomeá-la. Diante do marido, ele percebe que a ama e que não tem direito de tocá-la.",
+        "observe": [
+          "O narrador não diz o que houve; a elipse respeita o silêncio social sobre o corpo da mulher.",
+          "A cena coloca Noemi imóvel entre dois homens 'prontos a disputá-la': o corpo dela vira território."
+        ]
+      }
+    },
+    {
+      "id": "cap-11",
+      "order": 11,
+      "type": "chapter",
+      "title": "11 — Convalescença e suspeita",
+      "pdfStartPage": 48,
+      "pdfEndPage": 50,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Noemi volta ao trabalho; Roberto a pressiona e sai irritado. Filipe, enciumado sem admitir, insinua que Roberto simula complicações para seduzir mulheres.",
+        "observe": [
+          "O ponto de vista de Filipe mostra como o desejo dele também se mistura à militância.",
+          "Filipe compara os olhos de Noemi e de Angelita: a narração deixa ver o que ele sente sem que ele o diga."
+        ]
+      }
+    },
+    {
+      "id": "cap-12",
+      "order": 12,
+      "type": "chapter",
+      "title": "12 — O comício",
+      "pdfStartPage": 51,
+      "pdfEndPage": 53,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "No comício da praça da estação, discursam Vinte-e-Um, um velho operário cristão, um intelectual 'marxista puro' e a mulher do padeiro preso. A cavalaria dispersa a multidão; Roberto e Samuel são presos e um negro anônimo fica caído, ferido na cabeça.",
+        "observe": [
+          "A sequência de discursos é uma galeria de vozes do movimento, cada uma com sua retórica.",
+          "O apelo da mulher do padeiro, que abandona a fala decorada, é o momento mais verdadeiro e o que a repressão interrompe."
+        ]
+      }
+    },
+    {
+      "id": "cap-13",
+      "order": 13,
+      "type": "chapter",
+      "title": "13 — João Jaques e a prisão",
+      "pdfStartPage": 54,
+      "pdfEndPage": 55,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "João Jaques critica o comício como provocação; Noemi o acusa de covardia. A briga desliza para o ciúme declarado de Roberto.",
+        "observe": [
+          "A crítica política de João Jaques e o ciúme ficam indistinguíveis — o romance não deixa separar uma coisa da outra.",
+          "Noemi defende os presos e o homem morto contra o marido que 'ficou em casa'."
+        ]
+      }
+    },
+    {
+      "id": "cap-14",
+      "order": 14,
+      "type": "chapter",
+      "title": "14 — Roberto solto; a confissão",
+      "pdfStartPage": 56,
+      "pdfEndPage": 59,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Filipe anuncia a Noemi que Roberto foi solto. À noite, Roberto a visita e os dois admitem o amor sem arrebatamento; ele exige que ela conte tudo ao marido. João Jaques chega à porta; Noemi não consegue falar.",
+        "observe": [
+          "A confissão é narrada como constatação melancólica, não como êxtase — 'Deve ser assim que se comete um crime'.",
+          "Roberto exige franqueza imediata; a lealdade dele é também uma forma de pressão."
+        ]
+      }
+    },
+    {
+      "id": "cap-15",
+      "order": 15,
+      "type": "chapter",
+      "title": "15 — A manhã da cobra",
+      "pdfStartPage": 60,
+      "pdfEndPage": 61,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Na manhã seguinte, o Guri mata uma cobra no quintal e pai e mãe riem juntos. A paz doméstica faz Noemi adiar a conversa: a noite anterior parece coisa de romance.",
+        "observe": [
+          "A força do hábito e da rotina é apresentada como obstáculo concreto à decisão.",
+          "A brincadeira da 'princesa encantada' ecoa, em tom infantil, o triângulo dos adultos."
+        ]
+      }
+    },
+    {
+      "id": "cap-16",
+      "order": 16,
+      "type": "chapter",
+      "title": "16 — No quarto de Roberto",
+      "pdfStartPage": 62,
+      "pdfEndPage": 65,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Roberto, ressentido, dá a aula do curso como máquina. Na saída, Noemi chora e explica que não consegue ferir João Jaques; ele a leva ao seu quarto na pensão. Ela recua; ele a acusa. Sozinha, Noemi pensa que o amor virou luta e desconfiança.",
+        "observe": [
+          "Noemi formula o dilema moral: buscar a própria felicidade 'pisando em tudo' lhe parece egoísmo.",
+          "O amor é descrito como vontade de posse e fiscalização, não como libertação."
+        ]
+      }
+    },
+    {
+      "id": "cap-17",
+      "order": 17,
+      "type": "chapter",
+      "title": "17 — O delegado do Rio",
+      "pdfStartPage": 66,
+      "pdfEndPage": 68,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Um delegado vindo do Rio tenta resolver as brigas internas. Filipe conta a traição da faroleira ao Capitão Nonato. No jantar, João Jaques se fecha e, inconscientemente, disputa o filho com Roberto; Noemi adormece cantando para o Guri.",
+        "observe": [
+          "O caso da faroleira funciona como comentário cômico sobre o adultério, que na rua das areias não chega a ser tragédia.",
+          "A disputa pelo Guri começa em gestos mínimos, antes de virar briga aberta."
+        ]
+      }
+    },
+    {
+      "id": "cap-18",
+      "order": 18,
+      "type": "chapter",
+      "title": "18 — Dois homens em dois dias",
+      "pdfStartPage": 69,
+      "pdfEndPage": 70,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Noemi está na cama de Roberto depois do amor; lembra que na véspera cedeu também ao marido, numa última tentativa dele de reaver a mulher. A realização do amor lhe parece falhar.",
+        "observe": [
+          "O capítulo recusa a idealização: 'O êxtase, ora. Palavras.'",
+          "O corpo de Noemi aparece como o que resta da relação com João Jaques — e como o que Roberto 'marca' como posse."
+        ]
+      }
+    },
+    {
+      "id": "cap-19",
+      "order": 19,
+      "type": "chapter",
+      "title": "19 — A disputa pelo filho",
+      "pdfStartPage": 71,
+      "pdfEndPage": 73,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Roberto conta a João Jaques que ama Noemi. O marido anuncia que embarca no dia seguinte e leva o Guri. Noemi argumenta que sustenta a casa tanto quanto ele e põe o filho, aos prantos, no meio da briga; João Jaques sai batendo a porta.",
+        "observe": [
+          "A discussão sobre a guarda expõe a lei e o costume a favor do pai ('não vou deixar meu filho aqui para um sujeito estranho sustentar').",
+          "João Jaques desmente o que defendia antes sobre maternidade; Noemi cobra a coerência."
+        ]
+      }
+    },
+    {
+      "id": "cap-20",
+      "order": 20,
+      "type": "chapter",
+      "title": "20 — A partida de João Jaques",
+      "pdfStartPage": 74,
+      "pdfEndPage": 75,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "João Jaques embarca sozinho para o Rio. Noemi, em monólogo interior, sente culpa, saudade e piedade do marido, como se tivesse enviuvado.",
+        "observe": [
+          "O capítulo passa ao discurso indireto livre e depois à fala direta de Noemi ao ausente.",
+          "A saudade de João Jaques convive com a escolha por Roberto: o romance não transforma a separação em vitória."
+        ]
+      }
+    },
+    {
+      "id": "cap-21",
+      "order": 21,
+      "type": "chapter",
+      "title": "21 — O escândalo e a demissão",
+      "pdfStartPage": 76,
+      "pdfEndPage": 79,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Os companheiros condenam Noemi; Guiomar a evita com curiosidade mórbida. Noemi, Roberto e o Guri passam a viver juntos. Seu Benevides a demite alegando a reclamação da freguesia.",
+        "observe": [
+          "A organização, que se dizia livre de preconceitos, repete o 'terror do adultério'.",
+          "A demissão mostra o custo econômico da escolha: Noemi passa a depender de Roberto."
+        ]
+      }
+    },
+    {
+      "id": "cap-22",
+      "order": 22,
+      "type": "chapter",
+      "title": "22 — A carta ao Guri",
+      "pdfStartPage": 80,
+      "pdfEndPage": 83,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Noemi pede emprego a Filipe. Em casa, chega uma carta de João Jaques ao filho; a alegria do Guri constrange os três adultos à mesa.",
+        "observe": [
+          "Roberto, agora 'o companheiro', se pergunta se tinha direito ao lugar do outro.",
+          "A carta é o passado reivindicando o presente pela voz da criança."
+        ]
+      }
+    },
+    {
+      "id": "cap-23",
+      "order": 23,
+      "type": "chapter",
+      "title": "23 — A morte de Mendonça",
+      "pdfStartPage": 84,
+      "pdfEndPage": 86,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Sem emprego, Noemi ajuda Angelita nas costuras. Visita com Roberto o militante Mendonça, tísico, que morre cinco dias depois. Assustada com a morte, Noemi conta a Roberto sua infância no Acre.",
+        "observe": [
+          "A doença do trabalhador, descrita nas mãos, é a face material da luta.",
+          "A cena noturna termina com o Guri na cama da mãe e Roberto expulso para a rede."
+        ]
+      }
+    },
+    {
+      "id": "cap-24",
+      "order": 24,
+      "type": "chapter",
+      "title": "24 — Filipe parte",
+      "pdfStartPage": 87,
+      "pdfEndPage": 88,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Roberto convence Filipe a ir para Russas, no interior, porque está marcado pela polícia. Filipe percebe que estava criando raízes junto a Angelita e aos filhos dela, e decide seguir 'como um parafuso'.",
+        "observe": [
+          "A imagem do parafuso resume o ideal de militância sem afetos — e o medo de Filipe de amar.",
+          "Filipe se reconhece prestes a repetir os vínculos de Roberto e João Jaques."
+        ]
+      }
+    },
+    {
+      "id": "cap-25",
+      "order": 25,
+      "type": "chapter",
+      "title": "25 — A morte do Guri",
+      "pdfStartPage": 89,
+      "pdfEndPage": 94,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "O Guri adoece com febre. O médico, simpatizante, é vago; o menino tem convulsões e morre. Noemi o veste sozinha. A narração reflete sobre a dor dos outros, que logo incomoda.",
+        "observe": [
+          "A morte é narrada sem ênfase, e o narrador comenta essa sobriedade: 'A morte é silenciosa e modesta.'",
+          "A espera de Noemi pela palavra do médico mostra a impotência diante do saber técnico."
+        ]
+      }
+    },
+    {
+      "id": "cap-26",
+      "order": 26,
+      "type": "chapter",
+      "title": "26 — O corpo vivo",
+      "pdfStartPage": 95,
+      "pdfEndPage": 97,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Filipe vem se despedir e leva Noemi à casa de Angelita. A visão das crianças vivas a enlouquece; em casa, ela contempla o próprio corpo jovem e intacto e se revolta contra ele, até cair em pranto.",
+        "observe": [
+          "O sorriso parado de Noemi assusta Filipe mais que o choro.",
+          "O corpo 'insolente de juventude' contrasta com a destruição interior; a cena retoma o tema do corpo da mulher."
+        ]
+      }
+    },
+    {
+      "id": "cap-27",
+      "order": 27,
+      "type": "chapter",
+      "title": "27 — Um ano depois",
+      "pdfStartPage": 98,
+      "pdfEndPage": 100,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Grávida de Roberto, Noemi sobe a ladeira do Gasômetro. Lembra a noite em que foi presa com ele distribuindo boletins; ela foi solta, ele mandado para uma colônia no Sul. Sozinha, costurando para viver, fala com o filho que vai nascer.",
+        "observe": [
+          "O letreiro 'Liberdade para...' apagado no muro é imagem do movimento disperso.",
+          "O romance fecha com Noemi chamando o filho de 'companheiro': a palavra da militância passa para o vínculo com a criança."
+        ]
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Caminho de Pedras** (1937) é o terceiro romance de Rachel de Queiroz (1910-2003). Em 27 capítulos curtos, acompanha a reorganização de um grupo comunista clandestino em Fortaleza, nos anos 1930, e o caso de amor entre Roberto, jornalista vindo do Rio para fundar a célula, e Noemi, retocadora de fotografias, casada com João Jaques e mãe do Guri.\n\n**Como ler:** siga duas linhas ao mesmo tempo. A política — a briga entre operários ('tamancos') e intelectuais ('gravatas'), o comício, as prisões — e a privada — o triângulo amoroso, a disputa pelo filho, a perda do emprego. O romance mostra que uma não se separa da outra: a organização que promete libertação julga Noemi pelo adultério.\n\n**Personagens para fixar:** Roberto; Noemi; João Jaques; o Guri; Filipe, guarda-livros e militante metódico; Angelita, costureira, e o marido Assis; os operários Rufino, Luís de Souza e Vinte-e-Um; a 'rodinha' (Samuel, Nascimento, Paulino); Seu Benevides e Guiomar, da Fotografia.\n\n**Atenção:** a narração em terceira pessoa muda o foco entre Roberto, Noemi e Filipe, e usa muito o discurso indireto livre. Pergunte sempre de quem é o pensamento num trecho."
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-porto-de-passagem",
+        "ev-burgues-nasce",
+        "ev-maos-assim",
+        "ev-vida-particular",
+        "ev-impulso-sentimental",
+        "ev-nada-era-pecado",
+        "ev-comete-um-crime",
+        "ev-filho-meu",
+        "ev-terror-adulterio",
+        "ev-freguesia",
+        "ev-parafuso",
+        "ev-morte-modesta",
+        "ev-liberdade-para",
+        "ev-mais-devagar"
+      ],
+      "sourceRefs": [],
+      "markdown": "## Romance social de 30 e romance de mulher\n\nO livro pertence ao ciclo do romance de 30, mas desloca o foco: em vez da seca ou do latifúndio, a cidade, a militância urbana e a vida de uma mulher. Rachel de Queiroz escreve 'de dentro' do movimento e, por isso mesmo, sem idealizá-lo. O grupo é pequeno, pobre, dividido por desconfianças de classe (cap. 2 e 8) e vigiado pela polícia (cap. 12, 27).\n\n## Gravatas e tamancos\n\nA tensão entre operários e intelectuais estrutura a primeira metade. Os operários repetem que 'um burguês nasce e morre burguês'; os intelectuais afetam simplicidade, o que o narrador chama de 'artifício de requintados'. Filipe, o mais racional, admite sozinho que entrou na luta por ternura (cap. 8). O romance não toma partido de um lado: mostra que todos carregam a formação de onde vieram.\n\n## O privado é político\n\nRufino declara que 'revolucionário de verdade não tem vida particular'. O livro inteiro desmente a regra. O amor de Noemi e Roberto nasce no curso político e é condenado pelos próprios companheiros, em quem 'ainda era muito vivo o terror do adultério' (cap. 21). A demissão por Seu Benevides mostra que o julgamento moral tem efeito econômico concreto.\n\n## Noemi: liberdade e custo\n\nA trajetória de Noemi vai da embriaguez da descoberta ('Nada era pecado', cap. 9) à constatação de que o amor também é posse e fiscalização (cap. 16 e 18). Ela perde sucessivamente o marido, o emprego, o filho, o companheiro preso e os amigos. O romance não pune Noemi como castigo moral; mostra o preço que a sociedade, inclusive a militante, cobra de uma mulher que escolhe.\n\n## O Guri\n\nO filho organiza o triângulo: é por ele que Noemi hesita, é por ele que João Jaques ameaça, é ele que torna Roberto 'o outro' à mesa (cap. 22). Sua morte (cap. 25) é narrada com contenção deliberada — 'A morte é silenciosa e modesta' — e desfaz o centro afetivo do livro.\n\n## Final em aberto\n\nUm ano depois, Noemi, grávida, sobe a ladeira sozinha. O letreiro 'Liberdade para...' está apagado; Roberto foi mandado para uma colônia; o grupo se dispersou. A última fala — 'Mais devagar, companheiro!' — transfere a palavra da militância para a criança. É um final de resistência cansada, sem triunfo e sem renúncia.\n\n## Pontos de prova\n\n- Relacionar o romance ao contexto dos anos 1930 e à repressão ao movimento comunista.\n- Discutir a condição feminina: trabalho, casamento, guarda dos filhos, julgamento moral.\n- Analisar o foco narrativo móvel e o discurso indireto livre.\n- Comparar a militância idealizada com a prática mostrada no livro."
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Edição usada:** Rachel de Queiroz, *Caminho de Pedras*. Rio de Janeiro: José Olympio, e-book (Distribuidora Record). As páginas citadas são as do PDF dessa edição, com 102 páginas; o texto vai da p. 9 à p. 100.\n\n**Direitos:** obra protegida por direito autoral (© herdeiros de Rachel de Queiroz). Este dossiê traz apenas análise original e citações curtas, com página, para estudo.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica:** nenhuma fonte crítica foi lida para este dossiê. A leitura é feita diretamente do texto e precisa de revisão editorial antes de ser publicada."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-porto-de-passagem",
+      "unitId": "cap-01",
+      "location": "capítulo 1, p. 9",
+      "quote": "Tudo era estranho, alheio, como num porto de passagem.",
+      "context": "Roberto, no café, tenta reconhecer a Fortaleza de dez anos antes.",
+      "formalDevice": "Comparação com o porto: lugar de trânsito, sem vínculo.",
+      "effect": "Marca Roberto como deslocado já na chegada; o 'pertencimento' que ele buscará na organização nunca se completa.",
+      "wholeRelation": "No fim, todos se dispersam: a cidade volta a ser lugar de passagem.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-burgues-nasce",
+      "unitId": "cap-02",
+      "location": "capítulo 2, p. 14",
+      "quote": "— Um burguês nasce e morre burguês!",
+      "context": "Na primeira reunião, operários desconfiam de Roberto por ter estudado.",
+      "formalDevice": "Fala em bordão, sem sujeito definido, no meio do tumulto.",
+      "effect": "Mostra o determinismo de classe que os operários aplicam aos intelectuais.",
+      "wholeRelation": "Arma o conflito entre 'tamancos' e 'gravatas' que divide a organização.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-maos-assim",
+      "unitId": "cap-04",
+      "location": "capítulo 4, p. 20",
+      "quote": "— Ora, diz que o mundo do futuro há de ser feito com as mãos assim...",
+      "context": "Filipe consola Angelita ao ver os dedos picados de agulha.",
+      "formalDevice": "Brincadeira que transforma o sinal da exploração em promessa.",
+      "effect": "A promessa soa ao mesmo tempo terna e frágil: o futuro é dito, não visto.",
+      "wholeRelation": "Angelita adoece de tanto costurar; o futuro prometido não chega para ela.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-vida-particular",
+      "unitId": "cap-08",
+      "location": "capítulo 8, p. 36",
+      "quote": "Revolucionário de verdade não tem vida particular.",
+      "context": "Rufino responde a Roberto, acusado de frequentar Noemi.",
+      "formalDevice": "Sentença categórica, em tom de regra.",
+      "effect": "Expõe a exigência de que o militante abandone o privado.",
+      "wholeRelation": "O romance inteiro testa essa regra: o amor de Roberto e Noemi é o 'particular' que a organização condena.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-impulso-sentimental",
+      "unitId": "cap-08",
+      "location": "capítulo 8, p. 39",
+      "quote": "Foi ternura, foi desgosto, foi o impulso sentimental — que eles agora desprezavam tanto.",
+      "context": "Filipe, sozinho no quarto, revê por que entrou na militância.",
+      "formalDevice": "Enumeração em gradação, encerrada por um comentário amargo.",
+      "effect": "Desmonta a pose de racionalidade 'científica' do grupo.",
+      "wholeRelation": "Filipe, que parece o mais frio, é quem mais teme os afetos — por isso foge para Russas.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-nada-era-pecado",
+      "unitId": "cap-09",
+      "location": "capítulo 9, p. 41",
+      "quote": "Podia pensar tudo, desejar tudo. Nada era proibido. Nada era pecado. Sentia-se livre.",
+      "context": "Noemi volta do curso político ao lado de Roberto e Filipe.",
+      "formalDevice": "Frases curtas em série, com anáfora ('Nada era').",
+      "effect": "O ritmo encena a embriaguez da libertação.",
+      "wholeRelation": "A liberdade sentida ali vai se chocar com o casamento, o filho e o julgamento dos companheiros.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-comete-um-crime",
+      "unitId": "cap-14",
+      "location": "capítulo 14, p. 57",
+      "quote": "Deve ser assim que se comete um crime: com essa força invencível arrastando, fazendo agir, e essa lucidez melancólica e impotente constatando.",
+      "context": "Noemi e Roberto admitem o amor, sem beijos nem arrebatamento.",
+      "formalDevice": "Comparação com o crime; antítese entre força que arrasta e lucidez que só observa.",
+      "effect": "Apresenta o amor como fatalidade consciente, não como escolha romântica.",
+      "wholeRelation": "Antecipa a culpa que Noemi sentirá com a partida de João Jaques e a morte do Guri.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-filho-meu",
+      "unitId": "cap-19",
+      "location": "capítulo 19, p. 72",
+      "quote": "Mas ninguém no mundo pode me convencer de que o meu filho não é meu.",
+      "context": "Noemi e João Jaques disputam a guarda do Guri.",
+      "formalDevice": "Afirmação enfática, com repetição do possessivo.",
+      "effect": "A maternidade aparece como direito que a mulher precisa defender contra a lei e o costume.",
+      "wholeRelation": "A disputa torna mais dura a morte do menino, que encerra o triângulo de modo trágico.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-terror-adulterio",
+      "unitId": "cap-21",
+      "location": "capítulo 21, p. 76",
+      "quote": "Ainda era muito vivo, em todos, o terror do adultério.",
+      "context": "Os companheiros comentam a separação de Noemi.",
+      "formalDevice": "Comentário do narrador em discurso generalizante.",
+      "effect": "Mostra que o grupo revolucionário mantém a moral que diz combater.",
+      "wholeRelation": "Liga a esfera privada à política: a crítica de Rachel de Queiroz atinge também a esquerda.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-freguesia",
+      "unitId": "cap-21",
+      "location": "capítulo 21, p. 78",
+      "quote": "Enfim, numa casa de negócios, quem manda é a freguesia.",
+      "context": "Seu Benevides demite Noemi.",
+      "formalDevice": "Discurso indireto livre que imita a fala hesitante do patrão.",
+      "effect": "A moral das 'famílias' vira argumento comercial.",
+      "wholeRelation": "A demissão força Noemi a depender de Roberto, invertendo o que ela dissera a João Jaques sobre ganhar o próprio sustento.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-parafuso",
+      "unitId": "cap-24",
+      "location": "capítulo 24, p. 88",
+      "quote": "Não, sempre parafuso, furando para diante, trabalhando.",
+      "context": "Filipe decide partir para Russas.",
+      "formalDevice": "Metáfora do parafuso, que só avança girando sobre si.",
+      "effect": "Resume o ideal de militância sem desvios afetivos.",
+      "wholeRelation": "A notícia final de que Filipe está doente em Russas põe em dúvida esse ideal.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-morte-modesta",
+      "unitId": "cap-25",
+      "location": "capítulo 25, p. 93",
+      "quote": "A morte é silenciosa e modesta. Os vivos é que a cobrem de gritos, de aglomeração, de ritos.",
+      "context": "Logo após a morte do Guri.",
+      "formalDevice": "Personificação da morte e antítese entre ela e os vivos.",
+      "effect": "A narração se recusa ao melodrama no momento mais trágico.",
+      "wholeRelation": "Explica a contenção de Noemi, que só desaba no capítulo seguinte.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-liberdade-para",
+      "unitId": "cap-27",
+      "location": "capítulo 27, p. 98",
+      "quote": "“Liberdade para...” Liberdade para quem? O nome não se lia mais.",
+      "context": "Um ano depois, Noemi vê no muro o letreiro escrito por Roberto.",
+      "formalDevice": "Inscrição apagada usada como símbolo; pergunta retórica.",
+      "effect": "Sugere a dispersão e o apagamento do movimento.",
+      "wholeRelation": "Fecha o arco político do romance com a imagem de uma reivindicação sem destinatário.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-mais-devagar",
+      "unitId": "cap-27",
+      "location": "capítulo 27, p. 100",
+      "quote": "— Mais devagar, companheiro!",
+      "context": "Noemi, grávida, sobe a ladeira e fala com o filho de Roberto.",
+      "formalDevice": "Vocativo militante aplicado à criança por nascer.",
+      "effect": "Final em tom baixo, entre esperança e cansaço.",
+      "wholeRelation": "Transfere a palavra 'companheiro' da organização para a maternidade, que atravessou todo o livro.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    }
+  ]
+}
