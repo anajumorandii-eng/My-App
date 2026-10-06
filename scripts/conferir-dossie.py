@@ -56,6 +56,35 @@ def carregar_paginas(slug: str) -> dict[int, str]:
     return paginas
 
 
+def conferir_aspas(dossie: dict, paginas: dict[int, str]) -> list[str]:
+    """Cartão não é o único lugar com citação: as análises também citam entre
+    aspas curvas, e essas nunca passavam por conferência. Aspas seguidas de
+    "p. N" precisam estar naquela página; sem página, em algum lugar do livro.
+    " / " marca quebra de verso; trecho com reticências descreve um padrão
+    (“Por mais que… / Existe…”) e fica de fora, assim como título de uma ou
+    duas palavras."""
+    textos = [m['markdown'] for m in dossie['modules']]
+    for unidade in dossie['units']:
+        textos += [unidade['guide']['summary'], *unidade['guide']['observe']]
+    for cartao in dossie['evidence']:
+        textos += [cartao[k] for k in ('context', 'formalDevice', 'effect', 'wholeRelation')]
+    livro = ' '.join(paginas.values())
+    erros = []
+    for texto in textos:
+        for achado in re.finditer(r'“([^”]{8,})”', texto):
+            trecho = normalizar(achado.group(1).replace(' / ', ' ')).rstrip('.,;!?…')
+            if '…' in trecho or len(trecho.split()) < 3:
+                continue
+            faixa = re.search(r'p\. (\d+)(?:-(\d+))?', texto[achado.end():achado.end() + 60])
+            if faixa:
+                inicio, fim = int(faixa.group(1)), int(faixa.group(2) or faixa.group(1))
+                if trecho not in ' '.join(paginas.get(p, '') for p in range(inicio, fim + 1)):
+                    erros.append(f'aspas “{trecho[:60]}” não estão em p. {inicio}-{fim}')
+            elif trecho not in livro:
+                erros.append(f'aspas “{trecho[:60]}” não estão no livro')
+    return erros
+
+
 def conferir(slug: str) -> list[str]:
     dossie = json.loads((DOSSIES / f'{slug}.json').read_text(encoding='utf-8'))
     paginas = carregar_paginas(slug)
@@ -71,6 +100,7 @@ def conferir(slug: str) -> list[str]:
         if normalizar(cartao['quote']) not in texto:
             onde = [p for p, t in paginas.items() if normalizar(cartao['quote'])[:30] in t]
             erros.append(f'{cartao["id"]}: citação não está em {cartao["location"]} (início achado em {onde or "nenhuma página"})')
+    erros += conferir_aspas(dossie, paginas)
     for unidade in dossie['units']:
         # Romance tem capítulo em romano no título; livro de poemas declara em
         # 'opening' o texto que abre a página, porque a parte nem sempre
