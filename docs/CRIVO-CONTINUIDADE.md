@@ -2,8 +2,8 @@
 
 ## Estado mais recente — Entrega O/Redação R1, 06/10/2026
 
-As Entregas L e N estão juntas na PR #269 (a #270 foi integrada na branch de
-L). A branch `fix/entrega-o-redacao-r1`, empilhada sobre ela, trata os 16
+As Entregas L e N foram integradas juntas na PR #269 (a #270 entrou pela
+branch de L). A branch `fix/entrega-o-redacao-r1` trata os 16
 capítulos R1 de Redação: texto aprofundado para rev 2 e oficinas em
 `WritingOperations.tsx`, com cenas montadas a partir de dados do capítulo
 (conceito escolhido, lei × prática, palavras do recorte, cinco elementos da

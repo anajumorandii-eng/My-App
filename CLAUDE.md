@@ -16,7 +16,7 @@ renomeadas.
 ## Estado atual e precedência — auditoria de 05/10/2026
 
 Base confirmada com `origin/main`: `4c6227f6998157275b7d7fd5db0b64a988e4dac5`.
-A Entrega E/Gramática foi integrada na PR #260; isolamento de Resumos e contraste na PR #261. A Entrega F (oito fundamentos de Literatura) foi integrada na PR #262. A Entrega G (século XIX) foi integrada na PR #263. A Entrega H (Machado e Modernismo até 30) foi integrada na PR #264. A Entrega I (45-1980) foi integrada na PR #266. A Entrega J (Literatura final) foi integrada na PR #267. A Entrega K (Sociologia do H3) foi integrada na PR #268. As Entregas L (19 de Filosofia) e N (12 de Sociologia do H2), que encerram Humanas, estão juntas na PR #269. A Entrega O propõe os 16 capítulos R1 de Redação, com evidências em `docs/visual-integral-2026-10-06/entrega-o/README.md`. A fonte operacional é
+A Entrega E/Gramática foi integrada na PR #260; isolamento de Resumos e contraste na PR #261. A Entrega F (oito fundamentos de Literatura) foi integrada na PR #262. A Entrega G (século XIX) foi integrada na PR #263. A Entrega H (Machado e Modernismo até 30) foi integrada na PR #264. A Entrega I (45-1980) foi integrada na PR #266. A Entrega J (Literatura final) foi integrada na PR #267. A Entrega K (Sociologia do H3) foi integrada na PR #268. As Entregas L (19 de Filosofia) e N (12 de Sociologia do H2), que encerram Humanas, foram integradas juntas na PR #269. A Entrega O propõe os 16 capítulos R1 de Redação, com evidências em `docs/visual-integral-2026-10-06/entrega-o/README.md`. A fonte operacional é
 `docs/PLANO-GERAL-CRIVO-2026-10-03.md` + `docs/FILA-VISUAL-2026-10-03.json`;
 as filas históricas da continuidade não são tarefas novas.
 
