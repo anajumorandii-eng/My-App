@@ -27,11 +27,11 @@
       "guide": { "editorialStatus": "needs_review",
         "summary": "A autora aponta outra causa do atraso: um clero ignorante e de má conduta, que não ensina o catecismo e tolera irreverência nas igrejas. Compara com o clero francês e com o recolhimento que viu nos templos ingleses.",
         "observe": ["A crítica é feita de dentro da fé: a religião é base da educação feminina, por isso o clero que falha é culpado.", "As citações de viajantes estrangeiros reforçam o argumento, mas a autora diz que dói ouvi-las de fora."] } },
-    { "id": "indigenas", "order": 6, "type": "part", "title": "LVIII–LX — a mulher indígena", "opening": "LVIII Indígenas do Brasil", "pdfStartPage": 146, "pdfEndPage": 158,
+    { "id": "indigenas", "order": 6, "type": "part", "title": "LVIII–LXI — a mulher e os povos indígenas", "opening": "LVIII Indígenas do Brasil", "pdfStartPage": 146, "pdfEndPage": 159,
       "guide": { "editorialStatus": "needs_review",
         "summary": "A autora denuncia a violência contra os povos indígenas — escravização, extermínio, roubo de mulheres e filhos — e exalta a mulher indígena como mãe, esposa, amante e guerreira, citando Paraguaçu, Moema e a esposa de Camarão. Cita versos do próprio poema “A lágrima de um Caeté” e o relato de Teófilo Ottoni sobre o Mucuri.",
         "observe": ["A defesa é sincera e dura, mas ainda idealizante: a indígena é elogiada sobretudo como modelo de virtudes domésticas.", "Compare com a forma como a autora trata as africanas no bloco anterior: as hierarquias raciais da época aparecem no próprio texto."] } },
-    { "id": "conclusao", "order": 7, "type": "part", "title": "LXI–LXII — conclusão", "opening": "LXI Não comentamos", "pdfStartPage": 155, "pdfEndPage": 162,
+    { "id": "conclusao", "order": 7, "type": "part", "title": "LXII — conclusão", "opening": "LXII Por mais rigorosas", "pdfStartPage": 159, "pdfEndPage": 162,
       "guide": { "editorialStatus": "needs_review",
         "summary": "Depois de lembrar que a mulher já influencia os homens e o destino dos povos, a autora conclui que é ela quem mais precisa de boa educação. Pede aos pais livros de moral e de história em vez de romances, e encerra com nova apóstrofe: “Educai para isto a mulher, e com ela marchai avante na imensa via do progresso”.",
         "observe": ["O final retoma a abertura (“Pais, governo, povos do Brasil!”): o livro fecha o círculo do apelo público.", "O argumento final é estratégico: educar a mulher interessa à nação, não só a ela."] } }

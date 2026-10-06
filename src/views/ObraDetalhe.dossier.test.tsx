@@ -33,6 +33,10 @@ describe('dossiês das obras: integridade', () => {
       // uma página começam na mesma página do PDF que o anterior. Voltar
       // para trás, não.
       if (index > 0) expect(unit.pdfStartPage).toBeGreaterThanOrEqual(dossier.units[index - 1].pdfStartPage);
+      // A parte anterior pode terminar na página em que esta começa, nunca
+      // depois: o Opúsculo dava a LVIII–LX até a p. 158 e a "conclusão" desde
+      // a p. 155, e o cap. LXI, ainda sobre os indígenas, caía nas duas.
+      if (index > 0) expect(dossier.units[index - 1].pdfEndPage, unit.id).toBeLessThanOrEqual(unit.pdfStartPage);
       expect(STATUSES).toContain(unit.guide.editorialStatus);
     });
     for (const card of dossier.evidence) {
