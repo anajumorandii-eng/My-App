@@ -23,7 +23,7 @@ Não foi feita colação com primeira edição ou edição crítica; a leitura i
 
 A abertura inverte nascimento e morte; a franqueza do defunto continua atravessada pelo controle do leitor. A genealogia, o diploma e o emplasto ligam nomeada à aparência. A infância com Prudêncio volta no vergalho; a alforria não elimina a autoridade do ex-senhor. O almocreve, as duas quantias achadas e a lei das janelas mostram redução ou compensação das dívidas morais. O trabalho de D. Plácida suporta o amor clandestino; sua morte contraria a segurança alegada por Brás. Virgília não é redutível à amante infiel: maternidade, cálculo e luto sincero convivem. O Humanitismo generaliza a vantagem do forte enquanto a fome e a dor persistem no corpo. A negativa de não transmitir a miséria precisa ser cotejada com a antiga vontade de ter filhos e com a boa fortuna de nunca trabalhar pelo pão.
 
-Rascunho de análises autorais dos capítulos 1–160 preservado em rascunhos/bras-cubas-notas-1-160.txt. Não é texto integral da obra. As 160 notas de capítulos estão preservadas. Ainda falta gerar o JSON no contrato WorkDossier, com oito módulos, análise integral 0–31, questões sem gabarito e cartões curtos conferidos. O arquivo JSON definitivo ainda não foi escrito; não registrar o loader antes de sua validação.
+Rascunho de análises autorais dos capítulos 1–160 preservado em rascunhos/bras-cubas-notas-1-160.txt. Não é texto integral da obra. As 160 notas de capítulos estão preservadas. JSON escrito, conferido e registrado no loader no commit 1118209f (161 unidades, 23 cartões, oito módulos). Durante a conferência: a lei das janelas é formulada em LI (p. 61), e o cabeçalho de CLIV vem grafado "CAPITULO".
 
 ## Pesquisa e confiabilidade
 

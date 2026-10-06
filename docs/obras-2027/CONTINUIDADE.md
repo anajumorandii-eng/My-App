@@ -133,3 +133,8 @@ O ZIP e a habilidade extraída também foram copiados para `/workspace/artifacts
 ### Verificações do checkpoint
 
 Após registrar os três novos loaders: `npm run lint` passou; `npm run build` passou (aviso de tamanho de chunks). A etapa `test:node` da execução completa passou, 922 testes, zero falhas. A etapa Vitest também passou: 175 arquivos, 1.358 testes, zero falhas. `npm test` completo terminou com saída 0: 2.280 testes ao todo. Logs locais: `/tmp/obras-checkpoint-{lint,build,npm-test}.log`. Resultado final conferido. Lint, testes completos e build passaram antes do push do checkpoint. PR ainda não aberta; Brás Cubas e o registro de cobertura ainda pendentes.
+
+
+## Fechamento — 06/10/2026
+
+Brás Cubas escrito e integrado (1118209f), conferido com `conferir bras-cubas`. Cobertura e limitações por obra em `COBERTURA.md`. Restam só as lacunas listadas ali (pesquisa acadêmica, marca d'água em imagem, uniformização dos módulos, exibição dos módulos extras na interface). Verificações finais e PR registradas no corpo da PR.

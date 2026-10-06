@@ -1,0 +1,85 @@
+# Obras 2027 — cobertura e limitações (06/10/2026)
+
+Registro por obra do que foi lido, conferido e escrito nesta branch
+(`claude/focused-volta-bnzw7d`, base `fix/obras-obrigatorias`). Todo o
+conteúdo está em `needs_review`; nenhum dossiê tem `sourceRefs`. Conferência
+literal (`scripts/conferir-dossie.py conferir`) prova que as citações estão
+na página declarada — **não** é aprovação editorial.
+
+## Quadro geral
+
+| Obra | Banca | Unid. | Cartões | Módulos | Leitura do primário | Origem do dossiê |
+| --- | --- | --- | --- | --- | --- | --- |
+| Opúsculo humanitário | FUVEST | 7 | 12 | 3 | integral (PR #272); conferida aqui | #272 + correção LXI (59e50383) |
+| Nebulosas | FUVEST | 4 | 9 | 3 | PR #272; conferida aqui | #272 |
+| Memórias de Martha | FUVEST | 12 | 9 | 3 | PR #272; conferida aqui | #272 |
+| Caminho de pedras | FUVEST | 27 | 14 | 3 | PR #272; conferida aqui | #272 |
+| A paixão segundo G.H. | FUVEST | 33 | 18 | 3 | PR #272; conferida aqui | #272 |
+| Geografia | FUVEST | 7 | 16 | 3 | PR #272; conferida aqui | #272 |
+| Balada de amor ao vento | FUVEST | 20 | 18 | 3 | PR #272; conferida aqui | #272 |
+| Canção para ninar menino grande | FUVEST | 16 | 16 | 3 | PR #272; conferida aqui | #272 |
+| A visão das plantas | FUVEST | 12 | 17 | 3 | PR #272; conferida aqui | #272 |
+| Canções escolhidas (14 letras) | Unicamp | 14 | 16 | 3 | integral (14 p.) | 007cea4b |
+| Prosas seguidas de Odes mínimas | Unicamp | 33 | 24 | 3 | integral (58 p.) | 84b3cd88 |
+| A vida não é útil | Unicamp | 5 | 21 | 3 | integral (p. 9-44 + paratextos) | eafb40d5 |
+| Olhos d'água | Unicamp | 15 | 25 | 3 | integral (p. 11-71) | 7e1bd121 |
+| Morangos mofados (6 contos) | Unicamp | 6 | 17 | 3 | só os 6 contos exigidos | 7b478fba |
+| Os funerais da Mamãe Grande | Unicamp | 8 | 9 | 8 | integral (85 p.) | c96b68b5 |
+| No seu pescoço | Unicamp | 12 | 13 | 8 | integral (136 p.) | e26bc47c |
+| Vida e morte de M. J. Gonzaga de Sá | Unicamp | 14 | 20 | 8 | integral (92 p.) | 1b45e551 |
+| Memórias póstumas de Brás Cubas | Unicamp | 161 | 23 | 8 | integral (134 p.); notas dos 160 cap. | 1118209f |
+
+"Conferida aqui" significa: citações e aberturas dos dossiês da #272 batem
+com os PDFs que chegaram na main (`origin/main` 5b891a6d); a leitura integral
+daquelas obras foi feita na sessão da #272, não refeita nesta branch.
+
+## Limitações por obra
+
+- **Opúsculo, Nebulosas, Memórias de Martha, Caminho de pedras, G.H., Geografia,
+  Balada, Canção, Visão das plantas** — limitações registradas no módulo
+  Fontes de cada dossiê (prefácios e notas das edições não usados; Geografia
+  vem de cópia eLivros e exclui *O Cristo Cigano*). Sem crítica acadêmica.
+- **Canções escolhidas** — transcrição sem editora, data nem parceiros;
+  "estrela do noite" e o verso "Não tem órgão oficial…" (p. 12) duvidosos.
+  Parcerias, datas e censura não afirmadas.
+- **Prosas seguidas de Odes mínimas** — títulos de "Um empregado" (p. 19) e
+  "À bengala" (p. 42) fora do lugar no PDF; ligadura "fi" quebrada em duas
+  odes. Identificação de Oswald em "Prosa para Miramar" é inferência.
+- **A vida não é útil** — PDF de site de download (p. 2); títulos em páginas
+  de imagem; paginação a conferir em exemplar.
+- **Olhos d'água** — cópia de site de download (p. 3, 72); prefácio e
+  introdução da edição não usados; "escrevivência" mencionada como conceito
+  externo não conferido.
+- **Morangos mofados** — só os seis contos; PDF com avisos de digitalização;
+  editora não identificada; título "O dia que Júpiter…" diverge do catálogo
+  ("O dia em que…") e precisa ser conferido na lista da Comvest.
+- **Funerais, No seu pescoço, Gonzaga de Sá** — ver
+  `leitura-funerais-da-mamae-grande.md`, `leitura-no-seu-pescoco.md` e
+  `leitura-gonzaga-de-sa.md` e o Fontes de cada dossiê.
+- **Brás Cubas** — edição Câmara 2018 (EPUB em PDF). Dedicatória (p. 7),
+  rabiscos de XXVII (p. 42) e epitáfio de CXXV (p. 114) só em imagem;
+  nenhum cartão depende deles. Cabeçalho de CLIV grafado "CAPITULO". Guias
+  com cinco componentes por capítulo, proporcionais a capítulos curtos. Sem
+  colação com edição crítica. Detalhes em `leitura-bras-cubas.md`.
+
+## Lacunas que valem para todas as obras
+
+1. **Pesquisa acadêmica:** nenhuma tese, artigo, ensaio crítico ou prova
+   oficial foi lido nesta branch. Metadados do Crossref, citados na
+   continuidade, não são leitura. A meta da habilidade (fonte oficial, teses,
+   estudos e provas das bancas) segue aberta para todas as 18 obras.
+2. **Marca d'água:** só a camada de texto dos PDFs foi varrida (só e-mails de
+   editora). Marca em imagem não foi verificada.
+3. **Procedência:** vários PDFs vêm de sites de download; paginação é do
+   arquivo, não universal. Conferir em exemplar antes de publicar.
+4. **Padrão heterogêneo:** os 9 dossiês da FUVEST e 5 da Unicamp (Canções,
+   Prosas, Krenak, Olhos d'água, Morangos) têm 3 módulos; Funerais, No seu
+   pescoço, Gonzaga e Brás Cubas têm 8 (com análise 0–31, questões e
+   revisão ativa). Uniformizar é trabalho editorial pendente.
+5. **Interface:** `src/views/ObraDetalhe.tsx` exibe só `comece_aqui`,
+   `analise_integral` e `fontes`. Os módulos `critica_debate`, `fuvest`,
+   `unicamp`, `questoes` e `revisao_ativa` estão nos dados mas não aparecem
+   na tela. Não alterado nesta branch.
+6. **Funcionalidades do checkpoint perdido** (gabarito após tentativa,
+   histórico, revisão ativa funcional, navegação, catálogo 2027) não existem
+   neste repositório e não foram implementadas.
