@@ -6,6 +6,7 @@ import type { WorkDossier } from '../types/literaryWorks';
 const LOADERS: Record<string, () => Promise<{ default: unknown }>> = {
   'memorias-de-martha': () => import('../data/obras/dossies/memorias-de-martha.json'),
   nebulosas: () => import('../data/obras/dossies/nebulosas.json'),
+  'opusculo-humanitario': () => import('../data/obras/dossies/opusculo-humanitario.json'),
 };
 
 export const DOSSIER_SLUGS = Object.keys(LOADERS);

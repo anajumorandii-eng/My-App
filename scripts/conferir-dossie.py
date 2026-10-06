@@ -75,8 +75,16 @@ def conferir(slug: str) -> list[str]:
         # Romance tem capítulo em romano no título; livro de poemas declara em
         # 'opening' o texto que abre a página, porque a parte nem sempre
         # começa com o próprio nome.
-        abertura = normalizar(unidade['opening']) if unidade.get('opening') else normalizar(unidade['title'].split(' ')[0]) + ' '
-        if not paginas.get(unidade['pdfStartPage'], '').startswith(abertura):
+        pagina = paginas.get(unidade['pdfStartPage'], '')
+        if unidade.get('opening'):
+            # Ensaio e livro de poemas: a seção pode começar no meio da página,
+            # então basta que o texto de abertura esteja nela.
+            abertura = normalizar(unidade['opening'])
+            confere = abertura in pagina
+        else:
+            abertura = normalizar(unidade['title'].split(' ')[0]) + ' '
+            confere = pagina.startswith(abertura)
+        if not confere:
             erros.append(f'{unidade["id"]}: página {unidade["pdfStartPage"]} não abre com "{abertura}"')
     return erros
 
