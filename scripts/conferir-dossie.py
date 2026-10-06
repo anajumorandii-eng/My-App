@@ -72,8 +72,11 @@ def conferir(slug: str) -> list[str]:
             onde = [p for p, t in paginas.items() if normalizar(cartao['quote'])[:30] in t]
             erros.append(f'{cartao["id"]}: citação não está em {cartao["location"]} (início achado em {onde or "nenhuma página"})')
     for unidade in dossie['units']:
-        abertura = unidade['title'].split(' ')[0].lower()
-        if not paginas.get(unidade['pdfStartPage'], '').startswith(abertura + ' '):
+        # Romance tem capítulo em romano no título; livro de poemas declara em
+        # 'opening' o texto que abre a página, porque a parte nem sempre
+        # começa com o próprio nome.
+        abertura = normalizar(unidade['opening']) if unidade.get('opening') else normalizar(unidade['title'].split(' ')[0]) + ' '
+        if not paginas.get(unidade['pdfStartPage'], '').startswith(abertura):
             erros.append(f'{unidade["id"]}: página {unidade["pdfStartPage"]} não abre com "{abertura}"')
     return erros
 
