@@ -55,6 +55,11 @@ describe('dossiês das obras: integridade', () => {
       // Nenhuma fonte crítica foi lida; sourceRefs só entra com CriticalSource real.
       expect(module.sourceRefs).toEqual([]);
     }
+    // Cada aba da tela lê um tipo de módulo: catorze dossiês chegaram a ter
+    // só três, e as abas de bancas, questões e revisão ficavam pendentes.
+    expect(dossier.modules.map((m) => m.moduleType)).toEqual([
+      'comece_aqui', 'analise_integral', 'critica_debate', 'fuvest', 'unicamp', 'questoes', 'revisao_ativa', 'fontes',
+    ]);
   });
 
   it('a estudante só recebe o que foi publicado', () => {
