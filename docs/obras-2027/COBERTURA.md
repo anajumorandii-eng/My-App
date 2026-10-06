@@ -1,8 +1,9 @@
 # Obras 2027 — cobertura e limitações (06/10/2026)
 
 Registro por obra do que foi lido, conferido e escrito nesta branch
-(`claude/focused-volta-bnzw7d`, base `fix/obras-obrigatorias`). Todo o
-conteúdo está em `needs_review`; nenhum dossiê tem `sourceRefs`. Conferência
+(`claude/focused-volta-bnzw7d`, base `fix/obras-obrigatorias`). Os 17 dossiês ainda não revisados seguem em `needs_review` e sem fontes
+críticas. A primeira publicação de Brás Cubas está registrada em
+`PUBLICACAO-BRAS-CUBAS.md`, com fontes e recortes efetivamente consultados. Conferência
 literal (`scripts/conferir-dossie.py conferir`) prova que as citações estão
 na página declarada — **não** é aprovação editorial.
 
@@ -57,17 +58,19 @@ daquelas obras foi feita na sessão da #272, não refeita nesta branch.
   `leitura-funerais-da-mamae-grande.md`, `leitura-no-seu-pescoco.md` e
   `leitura-gonzaga-de-sa.md` e o Fontes de cada dossiê.
 - **Brás Cubas** — edição Câmara 2018 (EPUB em PDF). Dedicatória (p. 7),
-  rabiscos de XXVII (p. 42) e epitáfio de CXXV (p. 114) só em imagem;
+  rabiscos de XXVI (p. 42) e epitáfio de CXXV (p. 114) só em imagem;
   nenhum cartão depende deles. Cabeçalho de CLIV grafado "CAPITULO". Guias
-  com cinco componentes por capítulo, proporcionais a capítulos curtos. Sem
+  com cinco componentes por capítulo, proporcionais a capítulos curtos. Com crítica incorporada na primeira publicação; sem
   colação com edição crítica. Detalhes em `leitura-bras-cubas.md`.
 
 ## Lacunas que valem para todas as obras
 
-1. **Pesquisa acadêmica:** nenhuma tese, artigo, ensaio crítico ou prova
-   oficial foi lido nesta branch. Metadados do Crossref, citados na
+1. **Pesquisa acadêmica:** nos 17 dossiês sem publicação, nenhuma tese, artigo, ensaio crítico ou prova
+   oficial foi incorporado. Brás Cubas tem consulta crítica e oficial delimitada,
+   registrada na matriz de publicação. Metadados do Crossref, citados na
    continuidade, não são leitura. A meta da habilidade (fonte oficial, teses,
-   estudos e provas das bancas) segue aberta para todas as 18 obras.
+   estudos e provas das bancas) continua aberta para os demais 17 dossiês; em Brás Cubas,
+   leituras longas e aprofundamento dos guias ainda têm limites explícitos.
 2. **Marca d'água:** só a camada de texto dos PDFs foi varrida (só e-mails de
    editora). Marca em imagem não foi verificada.
 3. **Procedência:** vários PDFs vêm de sites de download; paginação é do
@@ -87,3 +90,7 @@ daquelas obras foi feita na sessão da #272, não refeita nesta branch.
 6. **Funcionalidades do checkpoint perdido** (gabarito após tentativa,
    histórico, revisão ativa funcional, navegação, catálogo 2027) não existem
    neste repositório e não foram implementadas.
+
+## Primeira publicação editorial
+
+Brás Cubas: 161 guias compactos, 23 cartões e oito módulos revisados, com 11 fontes rastreáveis. As demais obras continuam em revisão. A publicação não certifica os quinze componentes avançados por capítulo; os guias têm cinco componentes e o recorte é descrito à estudante em Fontes. Ver `PUBLICACAO-BRAS-CUBAS.md` e `pesquisa-bras-cubas-publicacao.md`.

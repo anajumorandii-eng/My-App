@@ -233,4 +233,5 @@ export interface WorkDossier {
   units: DossierUnit[];
   modules: Omit<ContentModule, 'workId'>[];
   evidence: DossierEvidence[];
+  sources?: CriticalSource[];
 }

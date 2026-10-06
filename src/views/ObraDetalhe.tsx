@@ -224,6 +224,12 @@ export default function ObraDetalhe() {
                 {edition.integrityStatus === 'verified' ? 'material conferido' : 'em processo de auditoria — pode ter ajustes pendentes'}
               </p>
             </>
+          ) : dossier && moduleOf('comece_aqui') ? (
+            <>
+              <p className="text-sm text-[var(--text)]"><b>Edição do dossiê:</b> {dossier.edition.label}</p>
+              <p className="text-sm text-[var(--text)]"><b>Páginas do arquivo de referência:</b> {dossier.edition.pdfPageCount}</p>
+              <p className="text-sm text-[var(--dim)]">As citações usam a paginação desta edição; ela pode diferir da do seu exemplar.</p>
+            </>
           ) : (
             <p className="text-sm text-[var(--dim)]">O material-fonte desta obra ainda está sendo processado.</p>
           )}

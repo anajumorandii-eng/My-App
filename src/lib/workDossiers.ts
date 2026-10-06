@@ -35,10 +35,13 @@ export async function loadWorkDossier(slug: string): Promise<WorkDossier | null>
  *  tudo, e a tela marca cada bloco ainda não publicado. */
 export function visibleDossier(dossier: WorkDossier, review: boolean): WorkDossier {
   if (review) return dossier;
+  const modules = dossier.modules.filter((module) => module.editorialStatus === 'published');
+  const sourceIds = new Set(modules.flatMap((module) => module.sourceRefs));
   return {
     ...dossier,
     units: dossier.units.filter((unit) => unit.guide.editorialStatus === 'published'),
-    modules: dossier.modules.filter((module) => module.editorialStatus === 'published'),
+    modules,
     evidence: dossier.evidence.filter((card) => card.editorialStatus === 'published'),
+    ...(dossier.sources ? { sources: dossier.sources.filter((source) => sourceIds.has(source.id)) } : {}),
   };
 }
