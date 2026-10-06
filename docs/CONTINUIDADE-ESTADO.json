@@ -2,10 +2,22 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "df448039a4364351a5bb6a662578a44745469f49",
-  "generated_at_utc": "2026-10-06T16:48:08Z",
+  "source_commit": "15483acce5d8ebf088fa9d3a4fd895efbe1d5b34",
+  "generated_at_utc": "2026-10-06T16:55:28Z",
   "changed_files": [
-    "\"obras-brutos/A paixa\\314\\203o segundo G. H. - Clarice Lispector.pdf\""
+    "\"obras-brutos/A Vida Na\\314\\203o e\\314\\201 U\\314\\201til - Ailton Krenak.pdf\"",
+    "\"obras-brutos/A visa\\314\\203o das plantas - Djaimilia Pereira de Almeida.pdf\"",
+    "obras-brutos/Balada de Amor ao Vento.pdf",
+    "obras-brutos/Caminho de pedras - Rachel de Queiroz.pdf",
+    "\"obras-brutos/Canc\\314\\247a\\314\\203o para ninar menino grande - Conceic\\314\\247a\\314\\203o Evaristo.pdf\"",
+    "obras-brutos/Geografia e o Cristo Cigano.pdf",
+    "\"obras-brutos/Memo\\314\\201rias Po\\314\\201stumas de Bra\\314\\201s Cubas - Machado de Assis.pdf\"",
+    "\"obras-brutos/Memo\\314\\201rias de Martha \\342\\200\\223 Ju\\314\\201lia Lopes de Almeida.pdf\"",
+    "obras-brutos/Morangos Mofados - Caio Fernando Abreu.pdf",
+    "\"obras-brutos/Nebulosas - Narcisa Ama\\314\\201lia.pdf\"",
+    "\"obras-brutos/No Seu Pescoc\\314\\247o - Chimamanda Ngozi Adichie.pdf\"",
+    "\"obras-brutos/Opu\\314\\201sculo Humanita\\314\\201rio - Ni\\314\\201sia Floresta.pdf\"",
+    "\"obras-brutos/Os funerais da mama\\314\\203e grande grande - Gabriel Garci\\314\\201a.pdf\""
   ],
   "next_session": {
     "mode": "delta-only",
