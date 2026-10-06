@@ -29,7 +29,10 @@ describe('dossiês das obras: integridade', () => {
       expect(unit.order).toBe(index + 1);
       expect(unit.pdfStartPage).toBeLessThanOrEqual(unit.pdfEndPage);
       expect(unit.pdfEndPage).toBeLessThanOrEqual(dossier.edition.pdfPageCount);
-      if (index > 0) expect(unit.pdfStartPage).toBeGreaterThan(dossier.units[index - 1].pdfStartPage);
+      // Igual é permitido: em Canção para Ninar Menino Grande, capítulos de
+      // uma página começam na mesma página do PDF que o anterior. Voltar
+      // para trás, não.
+      if (index > 0) expect(unit.pdfStartPage).toBeGreaterThanOrEqual(dossier.units[index - 1].pdfStartPage);
       expect(STATUSES).toContain(unit.guide.editorialStatus);
     });
     for (const card of dossier.evidence) {

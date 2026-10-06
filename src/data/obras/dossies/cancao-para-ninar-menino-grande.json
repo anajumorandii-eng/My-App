@@ -1,0 +1,571 @@
+{
+  "workId": "cancao-para-ninar-menino-grande",
+  "slug": "cancao-para-ninar-menino-grande",
+  "edition": {
+    "label": "Conceição Evaristo, Canção para Ninar Menino Grande. 2ª ed. Rio de Janeiro: Pallas, 2022, e-book",
+    "pdfPageCount": 65,
+    "note": "Obra protegida por direito autoral. As páginas são as do PDF usado; o dossiê usa só citações curtas e análise original."
+  },
+  "units": [
+    {
+      "id": "cap-01",
+      "order": 1,
+      "type": "chapter",
+      "title": "1 — A dor de Juventina",
+      "pdfStartPage": 8,
+      "pdfEndPage": 9,
+      "opening": "QUANDO Juventina, meio sufocada",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A narradora, que pertence a uma 'confraria' de mulheres, vê a amiga Juventina sentir uma dor no peito e recuperar-se cantando a 'Canção para ninar menino grande'. A dor, Juventina explica depois, é 'dor de amor'.",
+        "observe": [
+          "A narradora participa da história como ouvinte e amiga, não como observadora neutra.",
+          "A canção que dá título ao livro aparece já na primeira cena."
+        ]
+      }
+    },
+    {
+      "id": "cap-02",
+      "order": 2,
+      "type": "chapter",
+      "title": "2 — Fio Jasmim, Neide e Angelina",
+      "pdfStartPage": 9,
+      "pdfEndPage": 21,
+      "opening": "FIO JASMIM estava com quarenta e quatro anos",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Apresenta Fio Jasmim, maquinista ferroviário casado com Pérola Maria e pai de oito filhos, e as mulheres que ele cruzou. Conta as histórias de Neide Paranhos da Silva, que escolhe ter um filho dele sem se casar, e de Angelina Devaneia da Cruz, enfermeira que o toma pelo noivo esperado e se mata ao descobrir o engano. Aparece a lembrança de infância: a professora não deixou o menino negro ser o príncipe da Cinderela.",
+        "observe": [
+          "A lembrança do 'Príncipe Negro' recusado na escola é a ferida que explica parte do comportamento de Fio.",
+          "Neide e Angelina são opostas: uma decide sobre o próprio corpo, a outra deposita a vida na espera de um homem."
+        ]
+      }
+    },
+    {
+      "id": "cap-03",
+      "order": 3,
+      "type": "chapter",
+      "title": "3 — Aurora",
+      "pdfStartPage": 21,
+      "pdfEndPage": 26,
+      "opening": "AURORA CORREA LIBERTO, essa",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Aurora, considerada 'sem juízo', toma banho nua no Rio Naipã sob o olhar dos homens. Com a ajuda da tia Prudência, aprende a se defender de quem a ataca. Com Fio Jasmim, escolhe partilhar o rio; os dois descobrem que têm a 'moleira aberta'. Por causa dela, Fio perde a hora do trem pela única vez.",
+        "observe": [
+          "A cena do rio inverte o olhar: o espetáculo são também os homens que olham.",
+          "A tia Prudência desloca a culpa da moça nua para os homens sem 'juízo'."
+        ]
+      }
+    },
+    {
+      "id": "cap-04",
+      "order": 4,
+      "type": "chapter",
+      "title": "4 — Antonieta Véritas",
+      "pdfStartPage": 26,
+      "pdfEndPage": 29,
+      "opening": "ANTONIETAVÉRITAS DASILVA era conhecidíssima",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Em Remanso Velho, Antonieta, mulher independente e mãe de três filhos, é objeto da fantasia dos homens da cidade. Recebe Fio Jasmim em casa e, na segunda visita, se entrega a ele. Anos depois, compra uma casa em Chegada Feliz e diz que o caçula, Jasminzinho, é filho dele.",
+        "observe": [
+          "Antonieta sonha com um homem que adivinhe os desejos dela — o contrário do que Fio oferece.",
+          "A fala dos homens no botequim mostra a mulher como 'lugar-corpo' imaginado."
+        ]
+      }
+    },
+    {
+      "id": "cap-05",
+      "order": 5,
+      "type": "chapter",
+      "title": "5 — Dolores dos Santos",
+      "pdfStartPage": 29,
+      "pdfEndPage": 38,
+      "opening": "DOLORES DOS SANTOS, nascida e criada",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Dolores, herdeira de uma joalheria em Ardência Antiga, sabe ler pedras preciosas mas desconfia dos homens. Fio diz comprar uma joia para a 'irmã', Pérola Maria. Ela se entrega, engravida de gêmeas, Rubia e Safira, e, ao receber uma foto anônima de Fio com a família, planeja matar Pérola. Desiste ao ver na foto o rosto de todas as mulheres.",
+        "observe": [
+          "A metáfora da lupa: Dolores vê a alma das pedras, não a dos homens.",
+          "A desistência da vingança é o momento de solidariedade entre mulheres que organiza o livro."
+        ]
+      }
+    },
+    {
+      "id": "cap-06",
+      "order": 6,
+      "type": "chapter",
+      "title": "6 — Dalva Ruiva",
+      "pdfStartPage": 38,
+      "pdfEndPage": 44,
+      "opening": "DALVA AMORATO entrou na vida",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Dalva, de origem pobre, casou adolescente com um rapaz que ela ajudou a formar médico e que depois a impediu de estudar. Deixa o marido com os filhos, sustenta os estudos de Farmácia vendendo o próprio corpo e se forma. Escolhe ter três filhos com Fio Jasmim para que tenham a pele negra do pai.",
+        "observe": [
+          "A trajetória de Dalva expõe como o casamento interrompe o projeto de estudo da mulher.",
+          "Ela vê em Fio o 'príncipe negro' que a professora negou ao menino."
+        ]
+      }
+    },
+    {
+      "id": "cap-07",
+      "order": 7,
+      "type": "chapter",
+      "title": "7 — Tina e o menino grande",
+      "pdfStartPage": 44,
+      "pdfEndPage": 48,
+      "opening": "QUANDOTina conheceu Fio Jasmim",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Tina tem dezessete anos quando cruza com Fio, vizinho de sua prima. A mãe lhe ensinou que os homens 'não passavam de meninos grandes'. O capítulo apresenta Pérola Maria, cujo prazer é parir, e a formação de Fio pelo pai, Máximo Jasmim, para quem ser homem era ter várias mulheres.",
+        "observe": [
+          "A expressão 'meninos grandes' explica o título.",
+          "A masculinidade de Fio é apresentada como herança aprendida com o pai."
+        ]
+      }
+    },
+    {
+      "id": "cap-08",
+      "order": 8,
+      "type": "chapter",
+      "title": "8 — A paixão de Tina",
+      "pdfStartPage": 48,
+      "pdfEndPage": 50,
+      "opening": "JUVENTINA MARIA PERPÉTUA, Tina em tempos passados",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Tina se apaixona e passa a frequentar a casa da prima para ver Fio. Recebe dele uma margarida e um telefone. O capítulo recua à infância dela, sem pai, e ao único encontro com o homem que se apresentou como seu pai.",
+        "observe": [
+          "A ausência paterna se repete em várias mulheres do livro (Dolores, Tina, os filhos de Fio).",
+          "O tio Antônio Pedro Miango, que apontava lápis, é o pai possível que ela conheceu."
+        ]
+      }
+    },
+    {
+      "id": "cap-09",
+      "order": 9,
+      "type": "chapter",
+      "title": "9 — Amou sozinha",
+      "pdfStartPage": 50,
+      "pdfEndPage": 50,
+      "opening": "INDEPENDENTEMENTE DAAFIRMATIVA",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A narradora define o amor de Tina: um amor sem retorno, que ela construiu sozinha por quase duas décadas. Revela que a preservação da virgindade de Tina era parte do jogo de prazer de Fio.",
+        "observe": [
+          "O narrador desmonta a imagem de respeito que Fio fazia de si.",
+          "A repetição 'Amou sozinha. Amou só.' condensa o capítulo."
+        ]
+      }
+    },
+    {
+      "id": "cap-10",
+      "order": 10,
+      "type": "chapter",
+      "title": "10 — Eleonora no bar",
+      "pdfStartPage": 50,
+      "pdfEndPage": 52,
+      "opening": "ELEONORA DISTINTA DE SÁ, em um dia de pouca sorte",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Eleonora perde o encontro com uma amiga e bebe sozinha num bar. Fio Jasmim se aproxima para seduzi-la, mas cai em pranto. Os dois passam a ser amigos e cúmplices na solidão.",
+        "observe": [
+          "Pela primeira vez Fio procura uma mulher para pedir amparo, não para conquistá-la.",
+          "O choro de Fio rompe a regra de que 'homem não chora'."
+        ]
+      }
+    },
+    {
+      "id": "cap-11",
+      "order": 11,
+      "type": "chapter",
+      "title": "11 — O que Fio pensa de si",
+      "pdfStartPage": 52,
+      "pdfEndPage": 53,
+      "opening": "FIO JASMIM, depois que se entendera por gente",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Fio se vê como bom marido e bom pai, segue os conselhos do pai e acha que respeita Tina. Num reencontro depois de seis meses, Tina canta para ele a 'Canção para ninar menino grande'.",
+        "observe": [
+          "O ponto de vista de Fio é apresentado com ironia: ele se julga 'perfeito'.",
+          "A canção nasce da ausência dele."
+        ]
+      }
+    },
+    {
+      "id": "cap-12",
+      "order": 12,
+      "type": "chapter",
+      "title": "12 — A história de Eleonora",
+      "pdfStartPage": 53,
+      "pdfEndPage": 54,
+      "opening": "ELEONORA DISTINTA DE SÁ, de certa forma",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Eleonora foi expulsa de casa aos dezessete anos por amar outra moça, Nina. Herdou os bens de uma senhora que a acolheu e procura Nina desde então. Acolhe Fio em sua casa sem medo, como irmão.",
+        "observe": [
+          "O capítulo traz o amor entre mulheres e a violência familiar contra ele.",
+          "Eleonora revê a ideia de que o mundo deveria ser dividido entre homens e mulheres."
+        ]
+      }
+    },
+    {
+      "id": "cap-13",
+      "order": 13,
+      "type": "chapter",
+      "title": "13 — Como as histórias chegaram",
+      "pdfStartPage": 54,
+      "pdfEndPage": 54,
+      "opening": "MEDIDA QUE Juventina Maria Perpétua ia me contando",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A narradora se pergunta como Tina sabia de tantos detalhes da vida de Fio e descobre que Eleonora foi uma das fontes. Fio, que nunca prestara atenção à dor alheia, começa a percebê-la.",
+        "observe": [
+          "O capítulo expõe a construção do relato: quem contou o quê a quem.",
+          "A dor do menino que não pôde ser príncipe reaparece como a única ferida reconhecida por Fio."
+        ]
+      }
+    },
+    {
+      "id": "cap-14",
+      "order": 14,
+      "type": "chapter",
+      "title": "14 — O vazio de Fio",
+      "pdfStartPage": 54,
+      "pdfEndPage": 56,
+      "opening": "QUANDO FIO JASMIM escutou",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Ouvindo Eleonora falar de amor por outra mulher, Fio pela primeira vez se pergunta se as mulheres que passaram por sua vida foram felizes — e se ele é. Percebe um vazio que o sexo não preenche.",
+        "observe": [
+          "A sequência de perguntas retoma todas as mulheres dos capítulos anteriores.",
+          "'Era preciso encontros' resume a mudança de Fio."
+        ]
+      }
+    },
+    {
+      "id": "cap-15",
+      "order": 15,
+      "type": "chapter",
+      "title": "15 — Tina parte",
+      "pdfStartPage": 56,
+      "pdfEndPage": 57,
+      "opening": "JUVENTINA MARIA PERPÉTUA resolveu deixar",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Depois de trinta e cinco anos, Tina, aposentada e compositora, deixa Fio para viajar e ouvir histórias de amor de outras mulheres. Fio não sabe o que fazer com as cartas e percebe que nunca deu nada a ela.",
+        "observe": [
+          "A partida é escolha de Tina, não abandono por falta de amor.",
+          "Fio descobre que ela 'se fez livre' — mais do que ele, viajante por profissão."
+        ]
+      }
+    },
+    {
+      "id": "cap-16",
+      "order": 16,
+      "type": "chapter",
+      "title": "16 — A confraria",
+      "pdfStartPage": 57,
+      "pdfEndPage": 59,
+      "opening": "E ASSIM NÓS SEGUIMOS",
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Eleonora traz as últimas notícias de Fio: com ela, ele aprendeu a chorar, e guarda a partitura da canção numa caixa de camisa do pai. A narradora conta que segue Tina com Eleonora na confraria de mulheres. Fecha o livro uma nota de escrita assinada por Conceição Evaristo, que discute ficção e verdade.",
+        "observe": [
+          "A confraria transforma a solidão de cada mulher em escuta coletiva.",
+          "A nota final liga o romance à noção de escrevivência."
+        ]
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Canção para Ninar Menino Grande** (2018; 2ª edição revista e ampliada em 2022) é um romance de Conceição Evaristo (1946). Uma narradora que pertence a uma 'confraria' de mulheres reconta a história que a amiga Juventina (Tina) lhe contou: a de Fio Jasmim, maquinista negro que atravessa o Brasil de trem e acumula mulheres pelas cidades por onde passa.\n\n**Como ler:** o livro tem 16 capítulos curtos. Quase todos começam com o nome de uma mulher em caixa alta — Neide, Angelina, Aurora, Antonieta, Dolores, Dalva, Tina, Eleonora —, e cada um conta como ela cruzou o caminho de Fio. O centro não é Fio: são elas. Pérola Maria, a esposa, quase não fala; Tina, a amante de trinta e cinco anos, compôs a canção do título.\n\n**Molduras:** antes do primeiro capítulo, a 2ª edição traz um texto da narradora ('Das minúcias ao engrandecimento') explicando que acrescentou histórias que faltavam; depois do último, uma nota assinada pela autora. Os dois falam de escrevivência — escrever a partir da vida própria e da vida da 'minha gente'.\n\n**Atenção:** as cidades têm nomes simbólicos (Vale dos Laranjais, Alma das Flores, Ardência Antiga, Chegada Feliz). Vale relacionar o nome ao destino de cada mulher."
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-dor-de-amor",
+        "ev-homem-branco",
+        "ev-esposa-de-ninguem",
+        "ev-existencia-dele",
+        "ev-nudez-do-rio",
+        "ev-se-matar-tambem",
+        "ev-melanina",
+        "ev-meninos-grandes",
+        "ev-varias-mulheres",
+        "ev-amou-so",
+        "ev-alem-do-corpo",
+        "ev-encontros",
+        "ev-se-fez-livre",
+        "ev-dores-dos-homens",
+        "ev-confraria",
+        "ev-cancao-minha"
+      ],
+      "sourceRefs": [],
+      "markdown": "## Narradora e escrevivência\n\nA narradora não é onisciente: ela ouve Tina, desconfia da própria escuta, junta pedaços e admite que 'muitas partes parecem ser ficção'. Esse modo de contar, a partir da escuta e da vivência coletiva de mulheres negras, é o que Conceição Evaristo chama de escrevivência. A narradora até diz que 'pode' ter sido uma das mulheres de Fio.\n\n## Fio Jasmim, o 'menino grande'\n\nFio é maquinista, casado, pai de muitos filhos, e acumula amantes. O romance explica sem desculpar: a masculinidade dele é aprendida com o pai ('ser homem era ter várias mulheres') e com os colegas de trabalho, e se alimenta de uma ferida racial — na escola, a professora escolheu um menino loiro para ser o príncipe da Cinderela. A mãe de Tina define os homens como 'meninos grandes'; a canção do título é para ninar Fio.\n\n## As mulheres\n\nCada capítulo é um retrato com escolha própria: Neide quer um filho, não um marido; Angelina vive à espera do noivo e morre; Aurora defende a nudez no rio; Antonieta sonha com um homem que adivinhe seus desejos; Dolores desiste da vingança ao reconhecer em Pérola todas as mulheres; Dalva estuda e escolhe dar aos filhos a pele negra do pai; Eleonora ama outra mulher. Juntas, mostram formas diferentes de lidar com o amor, o corpo, a maternidade e a solidão.\n\n## Corpo, raça e desejo\n\nO livro fala abertamente de desejo feminino e de corpo, sem moralismo. A questão racial aparece no 'Príncipe Negro', na escolha de Dalva, na história do sobrenome 'Paranhos da Silva' e nas mulheres negras que cozinharam 'desde a escravidão'.\n\n## A transformação de Fio\n\nO encontro com Eleonora muda Fio: pela primeira vez ele procura uma mulher para pedir amparo, chora diante de alguém e se pergunta se as mulheres que conheceu foram felizes. A conclusão 'Era preciso encontros' opõe encontro a conquista.\n\n## Final coletivo\n\nTina deixa Fio depois de trinta e cinco anos — não por falta de amor, mas para entender o amor ouvindo outras mulheres. O livro termina no 'nós' da confraria: 'Todas nós estamos sós, mas a nossa confraria não nos deixa sentirmos sozinhas'.\n\n## Pontos de prova\n\n- Explicar o conceito de escrevivência e o papel da narradora.\n- Analisar a construção da masculinidade de Fio Jasmim.\n- Comparar as trajetórias das mulheres.\n- Discutir raça, gênero e desejo.\n- Interpretar o título e o final."
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [],
+      "sourceRefs": [],
+      "markdown": "**Edição usada:** Conceição Evaristo, *Canção para Ninar Menino Grande*. 2ª edição. Rio de Janeiro: Pallas, 2022, e-book. As páginas citadas são as do PDF usado, com 65 páginas; o romance vai da p. 8 à p. 59, depois do texto de abertura da 2ª edição (p. 7-8).\n\n**Procedência do arquivo:** o PDF do Drive é uma conversão do e-book por terceiros, não um arquivo da editora. Antes de publicar, convém conferir as citações num exemplar da Pallas.\n\n**Capítulos:** o texto extraído não traz os números dos capítulos. As 16 aberturas foram localizadas pelo nome em caixa alta que inicia cada uma, e a contagem coincide com o sumário da edição. Mesmo assim, a divisão precisa ser conferida na revisão.\n\n**Direitos:** obra protegida por direito autoral (© Conceição Evaristo). Este dossiê traz só análise original e citações curtas, com página.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica:** nenhuma fonte crítica foi lida para este dossiê. A leitura é feita diretamente do texto e precisa de revisão editorial antes de ser publicada."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-dor-de-amor",
+      "unitId": "cap-01",
+      "location": "capítulo 1, p. 9",
+      "quote": "Era dor sim, a maior. E só Juventina sabia qual.",
+      "context": "A narradora entende a dor no peito da amiga.",
+      "formalDevice": "Frase curta, com revelação adiada.",
+      "effect": "Introduz o mistério que o livro vai desfiar.",
+      "wholeRelation": "A 'dor de amor' de Tina é o fio que liga todas as histórias.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-homem-branco",
+      "unitId": "cap-02",
+      "location": "capítulo 2, p. 13",
+      "quote": "Eram iguais, ele e o homem branco, assim pensava Fio Jasmim...",
+      "context": "Fio lembra o dia em que a professora escolheu um menino loiro para ser o príncipe.",
+      "formalDevice": "Discurso indireto livre e reticências irônicas.",
+      "effect": "Mostra a conquista de mulheres como compensação de uma humilhação racial.",
+      "wholeRelation": "Explica o 'Príncipe Negro', imagem retomada por Dalva e pela narradora.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-esposa-de-ninguem",
+      "unitId": "cap-02",
+      "location": "capítulo 2, p. 15",
+      "quote": "Poderia até ter filhos, mas não queria ser esposa de ninguém.",
+      "context": "Neide decide sobre o namoro com Fio.",
+      "formalDevice": "Antítese entre ter filhos e ser esposa.",
+      "effect": "Neide separa maternidade de casamento por escolha própria.",
+      "wholeRelation": "Contrasta com Angelina, que vive à espera do noivo.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-existencia-dele",
+      "unitId": "cap-02",
+      "location": "capítulo 2, p. 19",
+      "quote": "A existência dele comprovava a existência dela.",
+      "context": "Angelina recebe Fio como o noivo esperado.",
+      "formalDevice": "Paralelismo.",
+      "effect": "Mostra a mulher que se reconhece só pela presença do homem.",
+      "wholeRelation": "A descoberta do engano leva Angelina à morte.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-nudez-do-rio",
+      "unitId": "cap-03",
+      "location": "capítulo 3, p. 23",
+      "quote": "Estava nua nas águas do rio e para o rio era a sua nudez.",
+      "context": "Aurora se defende do homem que a ataca.",
+      "formalDevice": "Repetição e inversão sintática.",
+      "effect": "Afirma o direito da mulher ao próprio corpo.",
+      "wholeRelation": "Retoma a lição da tia Prudência: a falta de juízo é dos homens.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-se-matar-tambem",
+      "unitId": "cap-05",
+      "location": "capítulo 5, p. 38",
+      "quote": "E foi então que Dolores dos Santos entendeu que matar aquela mulher seria se matar também.",
+      "context": "Dolores desiste de matar Pérola Maria.",
+      "formalDevice": "Paradoxo.",
+      "effect": "Transforma rivalidade em identificação entre mulheres.",
+      "wholeRelation": "Antecipa a confraria do final.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-melanina",
+      "unitId": "cap-06",
+      "location": "capítulo 6, p. 43",
+      "quote": "queria que seus filhos perdessem a alvura que a pele dela continha, e se enegrecessem com a melanina do pai.",
+      "context": "Dalva escolhe ter filhos com Fio.",
+      "formalDevice": "Oposição entre alvura e enegrecer.",
+      "effect": "Inverte a lógica do branqueamento.",
+      "wholeRelation": "Liga-se ao 'Príncipe Negro' recusado na escola.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-meninos-grandes",
+      "unitId": "cap-07",
+      "location": "capítulo 7, p. 44",
+      "quote": "E completava a fala dizendo que eles não passavam de meninos grandes",
+      "context": "A mãe de Tina fala dos homens.",
+      "formalDevice": "Metáfora retomada no título.",
+      "effect": "Apresenta o homem como criança dependente das mulheres.",
+      "wholeRelation": "Explica o título: a canção é para ninar Fio.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-varias-mulheres",
+      "unitId": "cap-07",
+      "location": "capítulo 7, p. 46",
+      "quote": "Aprendera com ele que ser homem era ter várias mulheres.",
+      "context": "Formação de Fio pelo pai, Máximo Jasmim.",
+      "formalDevice": "Definição em discurso indireto.",
+      "effect": "Mostra a masculinidade como aprendizado social.",
+      "wholeRelation": "Contraponto à lição que Fio aprende depois com Eleonora.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-amou-so",
+      "unitId": "cap-09",
+      "location": "capítulo 9, p. 50",
+      "quote": "Amou sozinha. Amou só.",
+      "context": "A narradora define o amor de Tina.",
+      "formalDevice": "Repetição com variação.",
+      "effect": "Condensa um amor sem retorno.",
+      "wholeRelation": "Prepara a partida de Tina como escolha.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-alem-do-corpo",
+      "unitId": "cap-12",
+      "location": "capítulo 12, p. 54",
+      "quote": "Fio Jasmim, pela primeira vez na vida, talvez tenha percebido que o mais sagrado de uma mulher pode se encontrar para além de seu corpo.",
+      "context": "Fio dorme na casa de Eleonora sem tocá-la.",
+      "formalDevice": "Modalização ('talvez') do narrador.",
+      "effect": "Marca a primeira mudança de Fio.",
+      "wholeRelation": "Prepara as perguntas sobre felicidade do capítulo seguinte.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-encontros",
+      "unitId": "cap-14",
+      "location": "capítulo 14, p. 55",
+      "quote": "Era preciso encontros.",
+      "context": "Fio reflete depois de ouvir Eleonora.",
+      "formalDevice": "Frase curta e conclusiva.",
+      "effect": "Opõe encontro a conquista.",
+      "wholeRelation": "Resume a lição que Fio tira das mulheres.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-se-fez-livre",
+      "unitId": "cap-15",
+      "location": "capítulo 15, p. 57",
+      "quote": "Depois de tantos anos, Fio Jasmim havia descoberto que Tina era uma mulher que se fez livre.",
+      "context": "Tina parte sem avisar.",
+      "formalDevice": "Construção 'se fez livre'.",
+      "effect": "A liberdade aparece como conquista da mulher.",
+      "wholeRelation": "Inverte a imagem inicial de Tina passiva.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-dores-dos-homens",
+      "unitId": "cap-16",
+      "location": "capítulo 16, p. 58",
+      "quote": "Dores não vazam dos olhos dos homens.",
+      "context": "Retrato de Fio diante das perdas.",
+      "formalDevice": "Sentença generalizante, depois desmentida.",
+      "effect": "Mostra a norma que proíbe o choro masculino.",
+      "wholeRelation": "Eleonora ensina a Fio que ele pode chorar.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-confraria",
+      "unitId": "cap-16",
+      "location": "capítulo 16, p. 59",
+      "quote": "Todas nós estamos sós, mas a nossa confraria não nos deixa sentirmos sozinhas.",
+      "context": "A narradora fala do grupo de mulheres.",
+      "formalDevice": "Antítese entre estar só e sentir-se sozinha.",
+      "effect": "Apresenta a escuta coletiva como resposta à solidão.",
+      "wholeRelation": "Fecha a narrativa no 'nós' das mulheres.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-cancao-minha",
+      "unitId": "cap-16",
+      "location": "capítulo 16, p. 59",
+      "quote": "Só escrevo o que creio, vem daí a minha invenção, pois a canção é minha também.",
+      "context": "Nota final assinada pela autora.",
+      "formalDevice": "Metalinguagem.",
+      "effect": "Une ficção, escuta e autoria.",
+      "wholeRelation": "Liga o romance ao conceito de escrevivência.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    }
+  ]
+}
