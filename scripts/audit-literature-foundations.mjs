@@ -46,6 +46,13 @@ const chapters = [
   ['summary-literatura-artes-plasticas-brasileiras', 'brazilian-visual-arts'],
   ['summary-literatura-teatro-brasileiro', 'brazilian-theater'],
   ['summary-literatura-cancioneiro-popular-brasileiro', 'popular-songbook'],
+  ['summary-sociologia-o-que-e-o-fato-social', 'social-fact'],
+  ['summary-sociologia-solidariedade-mecanica-e-solidariedade-organica', 'solidarity-types'],
+  ['summary-sociologia-anomia-e-coesao-social', 'anomie-grid'],
+  ['summary-sociologia-identidade-e-diferenca', 'identity-difference'],
+  ['summary-sociologia-classes-sociais-e-mobilidade-social', 'mobility-grid'],
+  ['summary-sociologia-cidadania-e-direitos', 'citizenship-rights'],
+  ['summary-sociologia-a-sociedade-da-informacao', 'information-society'],
 ].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
@@ -77,7 +84,7 @@ try {
       try {
         if (page.url() === 'about:blank') await page.goto(`${base}/visual?summary=${id}`, { waitUntil: 'load' });
         else await page.evaluate(url => { window.history.pushState(null, '', url); window.dispatchEvent(new PopStateEvent('popstate')); }, `/visual?summary=${id}`);
-        const scene = page.locator(`[data-literature-operation="${operation}"]`);
+        const scene = page.locator(`[data-operation="${operation}"]`);
         await expect(scene).toBeVisible({ timeout: 60_000 });
         await page.evaluate(() => document.fonts.ready);
         const controls = scene.locator('.lf-controls button');

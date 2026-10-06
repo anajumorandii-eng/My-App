@@ -81,9 +81,9 @@ export const sociologia: SceneEntry[] = [
     family: 'criterios-conjuntivos',
     question: 'Quando um fenômeno é um fato social, no sentido de Durkheim?',
     items: [
-      { label: 'Exterioridade', claim: 'existe antes e independentemente do indivíduo', section: 'As três características', quote: 'Durkheim define fato social por três traços: exterioridade, pois existe antes e independentemente do indivíduo; coercitividade, pois se impõe e a transgressão gera sanção; e generalidade, pois é comum ao grupo.' },
-      { label: 'Coercitividade', claim: 'impõe-se ao indivíduo e a transgressão gera sanção', section: 'As três características', quote: 'Durkheim define fato social por três traços: exterioridade, pois existe antes e independentemente do indivíduo; coercitividade, pois se impõe e a transgressão gera sanção; e generalidade, pois é comum ao grupo.' },
-      { label: 'Generalidade', claim: 'é comum ao grupo', section: 'As três características', quote: 'Durkheim define fato social por três traços: exterioridade, pois existe antes e independentemente do indivíduo; coercitividade, pois se impõe e a transgressão gera sanção; e generalidade, pois é comum ao grupo.' },
+      { label: 'Exterioridade', claim: 'existe antes e independentemente do indivíduo', section: 'As três características', quote: 'define fato social por três traços: exterioridade, pois existe antes e independentemente do indivíduo; coercitividade, pois se impõe e a transgressão gera sanção; e generalidade, pois é comum ao grupo.' },
+      { label: 'Coercitividade', claim: 'impõe-se ao indivíduo e a transgressão gera sanção', section: 'As três características', quote: 'define fato social por três traços: exterioridade, pois existe antes e independentemente do indivíduo; coercitividade, pois se impõe e a transgressão gera sanção; e generalidade, pois é comum ao grupo.' },
+      { label: 'Generalidade', claim: 'é comum ao grupo', section: 'As três características', quote: 'define fato social por três traços: exterioridade, pois existe antes e independentemente do indivíduo; coercitividade, pois se impõe e a transgressão gera sanção; e generalidade, pois é comum ao grupo.' },
     ],
   },
   {
@@ -102,7 +102,7 @@ export const sociologia: SceneEntry[] = [
     question: 'O que é preciso para que a questão da identidade seja de fato enfrentada?',
     items: [
       { label: 'Reconhecimento', claim: 'reconhecer identidades é necessário, mas sozinho não basta', section: 'Diferença e desigualdade', quote: 'reconhecer identidades sem enfrentar desigualdades materiais deixa a questão pela metade' },
-      { label: 'Redistribuição', claim: 'enfrentar as desigualdades materiais também é necessário', section: 'Pratique e confira', quote: 'reconhecer identidades é insuficiente se as desigualdades materiais permanecem intocadas' },
+      { label: 'Redistribuição', claim: 'enfrentar as desigualdades materiais também é necessário', section: 'Pratique e confira', quote: 'Reconhecer identidades é insuficiente se as desigualdades materiais permanecem intocadas' },
     ],
   },
   // Task 3 — família grade-de-eixos (2 capítulos)
@@ -278,9 +278,9 @@ export const sociologia: SceneEntry[] = [
     question: 'Em que ordem histórica Marshall situa os direitos de cidadania?',
     eixo: 'da ordem histórica de conquista dos direitos, não de um valor crescente',
     items: [
-      { label: 'Civis', claim: 'ligados à liberdade individual e à propriedade', section: 'As três gerações', quote: 'Marshall distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência.' },
-      { label: 'Políticos', claim: 'ligados à participação e ao voto', section: 'As três gerações', quote: 'Marshall distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência.' },
-      { label: 'Sociais', claim: 'ligados a educação, saúde, trabalho e previdência', section: 'As três gerações', quote: 'Marshall distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência.' },
+      { label: 'Civis', claim: 'ligados à liberdade individual e à propriedade', section: 'As três gerações', quote: 'distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência.' },
+      { label: 'Políticos', claim: 'ligados à participação e ao voto', section: 'As três gerações', quote: 'distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência.' },
+      { label: 'Sociais', claim: 'ligados a educação, saúde, trabalho e previdência', section: 'As três gerações', quote: 'distingue direitos civis, ligados à liberdade individual e à propriedade; políticos, ligados à participação e ao voto; e sociais, ligados a educação, saúde, trabalho e previdência.' },
       { label: 'Difusos e digitais', claim: 'acrescentam-se depois direitos como ambiente, patrimônio, tecnologia e informação', section: 'As três gerações', quote: 'Acrescentam-se depois direitos difusos, como ambiente e patrimônio, e direitos ligados a tecnologia e informação.' },
     ],
   },

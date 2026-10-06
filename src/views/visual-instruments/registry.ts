@@ -80,6 +80,7 @@ import type { LiteraryTraitId } from '../../lib/literaryTraitLab';
 import { literaryAuthorInstrument } from './LiteraryAuthorInstrument';
 import type { LiteraryAuthorId } from '../../lib/literaryAuthorLab';
 import { LITERATURE_FOUNDATIONS, literatureFoundationInstrument, type LiteratureFoundationId } from './LiteratureFoundations';
+import { sociologyInstrument, type SociologyOperationId } from './SociologyOperations';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -191,6 +192,8 @@ function leitura(id:string,topic:string,config:ReadingInstrumentId):InstrumentEn
  */
 function literario(id:string,topic:string,config:LiteraryTraitId):InstrumentEntry{return{id,subject:'Literatura',keywords:[topic],exactTopic:topic,Component:config in LITERATURE_FOUNDATIONS ? literatureFoundationInstrument(config as LiteratureFoundationId) : literaryTraitInstrument(config)}}
 function literarioAutor(id:string,topic:string,config:LiteraryAuthorId):InstrumentEntry{return{id,subject:'Literatura',keywords:[topic],exactTopic:topic,Component:literaryAuthorInstrument(config)}}
+
+function sociologia(id:SociologyOperationId,topic:string):InstrumentEntry{return{id,subject:'Sociologia',keywords:[topic],exactTopic:topic,Component:sociologyInstrument(id)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
   plano('funcoes-introducao', ['introdução às funções'], 'afim'),
@@ -502,6 +505,14 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   { id: 'joao-cabral', subject: 'Literatura', keywords: ['joão cabral de melo neto'], exactTopic: 'joão cabral de melo neto', Component: literatureFoundationInstrument('joao-cabral') },
   { id: 'clarice-lispector', subject: 'Literatura', keywords: ['clarice lispector'], exactTopic: 'clarice lispector', Component: literatureFoundationInstrument('clarice-lispector') },
   { id: 'guimaraes-rosa', subject: 'Literatura', keywords: ['guimarães rosa'], exactTopic: 'guimarães rosa', Component: literatureFoundationInstrument('guimaraes-rosa') },
+  // Sociologia H3: o caso autoral em que o conceito opera. Solidariedade fica
+  // no experimento prioritário, que já mostra a mesma oficina.
+  sociologia('social-fact','o que é o fato social'),
+  sociologia('anomie-grid','anomia e coesão social'),
+  sociologia('identity-difference','identidade e diferença'),
+  sociologia('mobility-grid','classes sociais e mobilidade social'),
+  sociologia('citizenship-rights','cidadania e direitos'),
+  sociologia('information-society','a sociedade da informação'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

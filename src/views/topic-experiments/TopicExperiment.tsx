@@ -1,5 +1,6 @@
 import {GrammarVariationScene} from './GrammarVariationScene';
 import { LiteratureOperation } from '../visual-instruments/LiteratureFoundations';
+import { SociologyOperation } from '../visual-instruments/SociologyOperations';
 import React, { useState, useId } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { MOTION_DURATION, MOTION_EASE } from '../../design-system/motion/tokens';
@@ -173,18 +174,9 @@ function Myth() {
 
 
 function Solidarity() {
-  const [organic,setOrganic]=useState(false);const transition=useInkMotion();
-  return <Studio title="O que mantém o grupo unido?" note="Em Durkheim, semelhança e interdependência sustentam formas diferentes de solidariedade.">
-    <div className="ts-choices"><button type="button" aria-pressed={!organic} onClick={()=>setOrganic(false)}>Mecânica</button><button type="button" aria-pressed={organic} onClick={()=>setOrganic(true)}>Orgânica</button></div>
-    <svg viewBox="0 0 480 230" role="img" aria-label={organic?'Funções especializadas ligadas pela interdependência':'Membros com práticas e crenças semelhantes'}>
-      <motion.path d="M95 96H240H385" animate={{pathLength:organic?1:0,opacity:organic?1:0}} transition={transition} className="ts-reference"/>
-      {['Produção','Transporte','Cuidado'].map((label,i)=><g key={label} transform={`translate(${95+i*145},96)`}>
-        <motion.rect x="-45" y="-43" width="90" height="86" animate={{rx:organic?i*12:43}} transition={transition} fill="var(--vs-paper-strong)" stroke="var(--vs-green)" strokeWidth="2"/>
-        <text textAnchor="middle" y="7">{organic?['P','T','C'][i]:'≃'}</text><text textAnchor="middle" y="78">{organic?label:'Semelhança'}</text>
-      </g>)}
-    </svg>
-    <p className="ts-observation" role="status">{organic?'Funções diferentes aumentam a dependência recíproca. A divisão social do trabalho pode produzir solidariedade orgânica.':'Práticas e crenças comuns reforçam a consciência coletiva. A coesão se apoia principalmente na semelhança.'}</p><small>Exemplos esquemáticos. “Mecânica” e “orgânica” não indicam máquinas nem organismos biológicos.</small>
-  </Studio>;
+  // A versão anterior só trocava círculos por quadrados; a auditoria pediu os
+  // indicadores de direito e funções concretas. A oficina mostra os três.
+  return <Studio title="O que mantém o grupo unido?" note="Em Durkheim, semelhança e interdependência sustentam formas diferentes de solidariedade."><SociologyOperation id="solidarity-types"/></Studio>;
 }
 
 

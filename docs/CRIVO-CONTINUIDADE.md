@@ -1,6 +1,21 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — Entrega J/Literatura concluída, 05/10/2026
+## Estado mais recente — Entrega K/Sociologia H3, 06/10/2026
+
+A Entrega J foi integrada na PR #267; Literatura está concluída. A branch
+`fix/entrega-k-sociologia-h3` trata os sete capítulos de Sociologia do H3
+(fato social, solidariedade, anomia, identidade, mobilidade, cidadania e
+sociedade da informação), com texto em revisão 2 e caso autoral. A oficina da
+Literatura foi generalizada (`OperationWorkshop`) para servir à Sociologia.
+Sem merge automático. Evidências: [Entrega K](visual-integral-2026-10-06/entrega-k/README.md).
+
+Fila na proposta: 208 achados tratados, 90 pendentes e 315 preservados.
+Conteúdo: 540 revisões 2, duas revisões 3, 70 pendentes (Redação 58,
+Sociologia 12). Cobertura: 8 experimentos, 43 pranchas, 345 instrumentos,
+217 cenas, zero lacunas; aprovação formal não promovida.
+Próximo passo: H2 (11 Filosofia + 12 Sociologia) e 8 de Filosofia do H3.
+
+## Registro — Entrega J/Literatura concluída, 05/10/2026
 
 A Entrega I foi integrada na PR #266. A branch
 `fix/entrega-j-literatura-final` trata os seis últimos capítulos LG3 (poesia

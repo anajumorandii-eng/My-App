@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 8,
     "board": 43,
-    "instrument": 339,
-    "scene": 223,
+    "instrument": 345,
+    "scene": 217,
     "fallback": 0
   },
-  "contested": 71,
+  "contested": 77,
   "subjects": [
     {
       "subject": "Física",
@@ -158,8 +158,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 0,
-        "scene": 26,
+        "instrument": 6,
+        "scene": 20,
         "fallback": 0
       }
     }
@@ -5220,9 +5220,14 @@
       "id": "summary-sociologia-o-que-e-o-fato-social",
       "subject": "Sociologia",
       "title": "O que é o Fato Social",
-      "primary": "scene",
-      "artifact": "criterios-conjuntivos",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "social-fact",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "criterios-conjuntivos"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-sociologia-e-senso-comum",
@@ -5244,9 +5249,14 @@
       "id": "summary-sociologia-anomia-e-coesao-social",
       "subject": "Sociologia",
       "title": "Anomia e Coesão Social",
-      "primary": "scene",
-      "artifact": "grade-de-eixos",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "anomie-grid",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "grade-de-eixos"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
@@ -5316,9 +5326,14 @@
       "id": "summary-sociologia-identidade-e-diferenca",
       "subject": "Sociologia",
       "title": "Identidade e Diferença",
-      "primary": "scene",
-      "artifact": "criterios-conjuntivos",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "identity-difference",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "criterios-conjuntivos"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
@@ -5332,9 +5347,14 @@
       "id": "summary-sociologia-classes-sociais-e-mobilidade-social",
       "subject": "Sociologia",
       "title": "Classes Sociais e Mobilidade Social",
-      "primary": "scene",
-      "artifact": "grade-de-eixos",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "mobility-grid",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "grade-de-eixos"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-desigualdade-racial-no-brasil",
@@ -5388,9 +5408,14 @@
       "id": "summary-sociologia-cidadania-e-direitos",
       "subject": "Sociologia",
       "title": "Cidadania e Direitos",
-      "primary": "scene",
-      "artifact": "escala-de-graus",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "citizenship-rights",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-democracia-e-participacao-politica",
@@ -5420,9 +5445,14 @@
       "id": "summary-sociologia-a-sociedade-da-informacao",
       "subject": "Sociologia",
       "title": "A Sociedade da Informação",
-      "primary": "scene",
-      "artifact": "criterios-conjuntivos",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "information-society",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "criterios-conjuntivos"
+        }
+      ]
     }
   ]
 }
