@@ -72,6 +72,18 @@ const chapters = [
   ['summary-filosofia-a-luta-de-classes-na-filosofia-marxista', 'class-struggle'],
   ['summary-filosofia-o-existencialismo-de-sartre', 'sartre-freedom'],
   ['summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural', 'frankfurt-culture'],
+  ['summary-sociologia-educacao-e-socializacao-em-durkheim', 'education-socialization'],
+  ['summary-sociologia-modo-de-producao-e-estrutura-social', 'mode-of-production'],
+  ['summary-sociologia-ideologia-e-alienacao', 'ideology-alienation'],
+  ['summary-sociologia-tipos-de-acao-social', 'social-action-types'],
+  ['summary-sociologia-dominacao-e-poder-em-weber', 'weber-domination'],
+  ['summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo', 'protestant-ethic'],
+  ['summary-sociologia-desigualdade-de-genero', 'gender-inequality'],
+  ['summary-sociologia-precarizacao-e-uberizacao-do-trabalho', 'platform-work'],
+  ['summary-sociologia-movimentos-sociais-classicos-e-contemporaneos', 'social-movements'],
+  ['summary-sociologia-democracia-e-participacao-politica', 'democracy-forms'],
+  ['summary-sociologia-globalizacao-economica-e-cultural', 'globalization-flows'],
+  ['summary-sociologia-o-estado-nacao-na-era-global', 'nation-state'],
 ].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });

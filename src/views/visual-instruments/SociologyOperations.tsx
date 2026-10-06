@@ -296,7 +296,7 @@ function SocialActionTypes({ state }: { state: number }) {
       <Line x={20} y={222}>mesmo gesto, sentido diferente</Line></Drawing>}
   </Pick>;
   return <Drawing label={label}>
-    {state === 0 && <>{[140, 400].map(x => <g key={x}><path d={`M${x - 50} 90q50 -60 100 0z`} fill={paper} stroke={ink} strokeWidth="2"/><path d={`M${x} 90v60`} stroke={ink} strokeWidth="2"/></g>)}{[100, 200, 300, 420, 500].map(x => <path key={x} d={`M${x} 20v14`} stroke={ink}/>)}<Arrow d="M190 175h160"/><Line x={190} y={200}>sem orientação mútua</Line><Line x={20} y={222}>ação, mas não social</Line></>}
+    {state === 0 && <>{[140, 400].map(x => <g key={x}><path d={`M${x - 50} 90q50 -60 100 0z`} fill={paper} stroke={ink} strokeWidth="2"/><path d={`M${x} 90v60`} stroke={ink} strokeWidth="2"/></g>)}{[100, 200, 300, 420, 500].map(x => <path key={x} d={`M${x} 20v14`} stroke={ink}/>)}<Arrow d="M190 150h160"/><Line x={190} y={180}>sem orientação mútua</Line><Line x={20} y={222}>ação, mas não social</Line></>}
     {state === 2 && <><rect x="40" y="60" width="160" height="80" rx="40" fill={paper} stroke={ink} strokeWidth="3"/><Line x={70} y={107}>bolo</Line>{[['tradicional', 70], ['afetiva', 45], ['fins', 15]].map(([t, w], i) => <g key={t}><rect x="260" y={40 + i * 50} width={Number(w) * 3} height="30" fill={i === 0 ? wine : paper} stroke={ink}/><text x={270 + Number(w) * 3} y={61 + i * 50} fill={ink} fontSize="15">{t}</text></g>)}<Arrow d="M205 100h45"/><Line x={20} y={222}>régua que mede a mistura</Line></>}
   </Drawing>;
 }
@@ -383,7 +383,7 @@ function NationState({ state }: { state: number }) {
   return <Drawing label={['Escolhas do governo estreitadas por capital e FMI', 'Empresa pede socorro ao Estado', 'Fronteira fechada e vacina global'][state]}>
     {state === 0 && <><rect x="20" y="40" width="520" height="40" fill="none" stroke={ink} strokeDasharray="5 5"/><motion.rect initial={false} animate={{ width: 220 }} transition={transition} x="170" y="40" height="40" fill={paper} stroke={wine} strokeWidth="3"/><Line x={185} y={67}>escolhas</Line><Line x={20} y={125}>capital em horas</Line><Line x={340} y={125}>FMI</Line><Arrow d="M100 110l70 -25M380 110l-20 -25"/><Line x={20} y={222}>relativizada, não extinta</Line></>}
     {state === 1 && <><Box x={20} y={40} w={220}>“menos Estado”</Box><Box x={320} y={40} w={200} strong>socorro</Box><Arrow d="M245 62h70"/><Line x={330} y={120}>contratos, moeda</Line><Line x={330} y={150}>auxílio, crédito</Line><Line x={20} y={222}>o mercado depende dele</Line></>}
-    {state === 2 && <><path d="M280 30v150" stroke={wine} strokeWidth="5"/><Line x={290} y={50}>fronteira</Line>{[60, 140, 420, 500].map((x, i) => <circle key={x} cx={x} cy={90 + (i % 2) * 40} r="14" fill={paper} stroke={ink} strokeWidth="2"/>)}<Arrow d="M74 92q200 -60 332 0"/><Line x={20} y={200}>insumos de três continentes</Line><Line x={20} y={222}>escala de cada problema</Line></>}
+    {state === 2 && <><path d="M280 30v150" stroke={wine} strokeWidth="5"/><Line x={290} y={50}>fronteira</Line>{[60, 140, 420, 500].map((x, i) => <circle key={x} cx={x} cy={90 + (i % 2) * 40} r="14" fill={paper} stroke={ink} strokeWidth="2"/>)}<Arrow d="M74 92q200 -60 332 0"/><Line x={20} y={180}>insumos de três continentes</Line><Line x={20} y={222}>escala de cada problema</Line></>}
   </Drawing>;
 }
 
