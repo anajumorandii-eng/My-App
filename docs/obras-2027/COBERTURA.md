@@ -76,10 +76,12 @@ daquelas obras foi feita na sessão da #272, não refeita nesta branch.
    Prosas, Krenak, Olhos d'água, Morangos) têm 3 módulos; Funerais, No seu
    pescoço, Gonzaga e Brás Cubas têm 8 (com análise 0–31, questões e
    revisão ativa). Uniformizar é trabalho editorial pendente.
-5. **Interface:** `src/views/ObraDetalhe.tsx` exibe só `comece_aqui`,
-   `analise_integral` e `fontes`. Os módulos `critica_debate`, `fuvest`,
-   `unicamp`, `questoes` e `revisao_ativa` estão nos dados mas não aparecem
-   na tela. Não alterado nesta branch.
+5. **Interface:** `ObraDetalhe` agora tem as abas Bancas, Questões e Revisão
+   ativa, e a crítica entra no fim da aba Análise. Dossiês sem esses módulos
+   mostram o aviso de "em elaboração". Como tudo segue `needs_review`, a
+   estudante continua sem ver esses blocos; só o modo revisão (`?revisao=1`)
+   os mostra. Não houve conferência no navegador: o catálogo vem do
+   Firestore, inacessível sem login neste ambiente.
 6. **Funcionalidades do checkpoint perdido** (gabarito após tentativa,
    histórico, revisão ativa funcional, navegação, catálogo 2027) não existem
    neste repositório e não foram implementadas.

@@ -10,13 +10,16 @@ import { getReadingProgress, saveReadingProgress } from '../lib/literaryData';
 import { Panel } from '../components/ui/Panel';
 import { SUBJECT_ICONS } from './Dashboard';
 
-type TabId = 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 'fontes';
+type TabId = 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 'bancas' | 'questoes' | 'revisao' | 'fontes';
 
 const TABS: { id: TabId; label: string }[] = [
   { id: 'comece_aqui', label: 'Comece aqui' },
   { id: 'leitura_guiada', label: 'Leitura guiada' },
   { id: 'analise', label: 'Análise' },
   { id: 'passagens_chave', label: 'Passagens-chave' },
+  { id: 'bancas', label: 'Bancas' },
+  { id: 'questoes', label: 'Questões' },
+  { id: 'revisao', label: 'Revisão ativa' },
   { id: 'fontes', label: 'Fontes' },
 ];
 
@@ -26,6 +29,19 @@ const TABS: { id: TabId; label: string }[] = [
 function ReviewBadge({ status }: { status: EditorialStatus }) {
   if (status === 'published') return null;
   return <span className="inline-block text-[10px] font-mono uppercase tracking-wide px-2 py-0.5 rounded-full border border-[var(--line)] text-[var(--dim)]">em revisão</span>;
+}
+
+/** Um módulo do dossiê em Markdown, com o selo de revisão. Os dossiês mais
+ *  completos trazem oito tipos de módulo, mas a tela só lia três: questões,
+ *  revisão ativa, bancas e crítica ficavam nos dados sem nunca aparecer. */
+function ModuleBlock({ module, title }: { module: WorkDossier['modules'][number]; title?: string }) {
+  return (
+    <div className="space-y-2">
+      {title && <h2 className="text-sm font-semibold text-[var(--text)]">{title}</h2>}
+      <ReviewBadge status={module.editorialStatus} />
+      <AiTextRenderer text={module.markdown} className="text-sm text-[var(--text)]" />
+    </div>
+  );
 }
 
 function ContentPendingState({ label }: { label: string }) {
@@ -269,9 +285,13 @@ export default function ObraDetalhe() {
       )}
 
       {tab === 'analise' && (moduleOf('analise_integral') ? (
-        <Panel subject="Literatura" className="ni-panel p-6 space-y-3">
-          <ReviewBadge status={moduleOf('analise_integral')!.editorialStatus} />
-          <AiTextRenderer text={moduleOf('analise_integral')!.markdown} className="text-sm text-[var(--text)]" />
+        <Panel subject="Literatura" className="ni-panel p-6 space-y-6">
+          <ModuleBlock module={moduleOf('analise_integral')!} />
+          {moduleOf('critica_debate') && (
+            <div className="pt-4 border-t border-[var(--line)]">
+              <ModuleBlock module={moduleOf('critica_debate')!} title="Crítica e debate" />
+            </div>
+          )}
         </Panel>
       ) : <ContentPendingState label="A análise integral" />)}
 
@@ -294,6 +314,25 @@ export default function ObraDetalhe() {
           ))}
         </div>
       ) : <ContentPendingState label="O mapeamento de passagens-chave" />)}
+
+      {tab === 'bancas' && (moduleOf('fuvest') || moduleOf('unicamp') ? (
+        <Panel subject="Literatura" className="ni-panel p-6 space-y-6">
+          {moduleOf('fuvest') && <ModuleBlock module={moduleOf('fuvest')!} title="FUVEST" />}
+          {moduleOf('unicamp') && (
+            <div className={moduleOf('fuvest') ? 'pt-4 border-t border-[var(--line)]' : undefined}>
+              <ModuleBlock module={moduleOf('unicamp')!} title="Unicamp" />
+            </div>
+          )}
+        </Panel>
+      ) : <ContentPendingState label="A preparação por banca" />)}
+
+      {tab === 'questoes' && (moduleOf('questoes') ? (
+        <Panel subject="Literatura" className="ni-panel p-6"><ModuleBlock module={moduleOf('questoes')!} /></Panel>
+      ) : <ContentPendingState label="O banco de questões autorais" />)}
+
+      {tab === 'revisao' && (moduleOf('revisao_ativa') ? (
+        <Panel subject="Literatura" className="ni-panel p-6"><ModuleBlock module={moduleOf('revisao_ativa')!} /></Panel>
+      ) : <ContentPendingState label="O roteiro de revisão ativa" />)}
 
       {tab === 'fontes' && (moduleOf('fontes') ? (
         <Panel subject="Literatura" className="ni-panel p-6 space-y-3">
