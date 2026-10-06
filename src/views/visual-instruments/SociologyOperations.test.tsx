@@ -52,9 +52,12 @@ describe('Sociologia H3: o conceito aplicado a casos do próprio capítulo', () 
   });
 
   it('retirar um traço desfaz o fato social', () => {
-    render(<SociologyOperation id="social-fact"/>);
+    const view = render(<SociologyOperation id="social-fact"/>);
     expect(screen.getByText('Os três traços presentes: fato social.')).toBeInTheDocument();
+    const before = view.container.querySelector('svg')!.innerHTML;
     fireEvent.click(screen.getByRole('button', { name: 'Coerção' }));
+    // O veredito sozinho foi o defeito apontado: o desenho também precisa mudar.
+    expect(view.container.querySelector('svg')!.innerHTML).not.toBe(before);
     expect(screen.getByRole('button', { name: 'Coerção' })).toHaveAttribute('aria-pressed', 'false');
     expect(screen.getByText(/Falta coerção: não é fato social/)).toBeInTheDocument();
   });

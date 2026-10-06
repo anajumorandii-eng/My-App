@@ -74,21 +74,32 @@ export type SociologyOperationId = keyof typeof SOCIOLOGY_OPERATIONS;
 
 const ink = 'var(--vs-ink)', wine = 'var(--vs-burgundy)', paper = 'var(--vs-paper)';
 
-function Conditions({ names, verdict }: { names: string[]; verdict: (on: boolean[]) => string }) {
+/** Condições ligáveis. A auditoria recusou o checklist que só trocava o texto
+ *  do veredito: `children` recebe o estado e o desenho tem de mudar junto. */
+function Conditions({ names, verdict, children }: { names: string[]; verdict: (on: boolean[]) => string; children: (on: boolean[]) => React.ReactNode }) {
   const [on, setOn] = useState(names.map(() => true));
-  return <div className="lf-conditions" role="group" aria-label="Condições do caso">
-    {names.map((name, i) => <button key={name} type="button" className="lf-inline-control" aria-pressed={on[i]} onClick={() => setOn(on.map((v, j) => j === i ? !v : v))}>{name}</button>)}
-    <p className="lf-verdict" role="status">{verdict(on)}</p>
-  </div>;
+  return <>
+    <div className="lf-conditions" role="group" aria-label="Condições do caso">
+      {names.map((name, i) => <button key={name} type="button" className="lf-inline-control" aria-pressed={on[i]} onClick={() => setOn(on.map((v, j) => j === i ? !v : v))}>{name}</button>)}
+      <p className="lf-verdict" role="status">{verdict(on)}</p>
+    </div>
+    {children(on)}
+  </>;
+}
+/** Caixa que some para tracejado quando a condição é retirada. */
+function Toggle({ x, y, w, on, children }: { x: number; y: number; w: number; on: boolean; children: React.ReactNode }) {
+  return <g opacity={on ? 1 : 0.35}><rect x={x} y={y} width={w} height="44" rx="7" fill={paper} stroke={on ? ink : wine} strokeWidth={on ? 1.5 : 2.5} strokeDasharray={on ? undefined : '6 5'}/><text x={x + 12} y={y + 28} fill={ink} fontSize="16" textDecoration={on ? undefined : 'line-through'}>{children}</text></g>;
 }
 
 function SocialFact({ state }: { state: number }) {
-  return <div>{state === 0 && <Conditions names={['Exterioridade', 'Coerção', 'Generalidade']} verdict={on => on.every(Boolean) ? 'Os três traços presentes: fato social.' : `Falta ${['exterioridade', 'coerção', 'generalidade'].filter((_, i) => !on[i]).join(' e ')}: não é fato social, é outra coisa (hábito, gosto, escolha).`}/>}
-    <Drawing label={['Uniforme anterior, advertência e uso comum', 'Indicadores observáveis no lugar de motivos individuais', 'Transgressão punida em toda sociedade'][state]}>
-      {state === 0 && <><Box x={20} y={30} w={160}>antes de Lia</Box><Box x={200} y={30} w={160}>advertência</Box><Box x={380} y={30} w={160}>todos usam</Box><Arrow d="M100 80q180 70 360 0"/><Line y={170}>exterior · coercitivo · geral</Line><Line x={20} y={222}>os três juntos, não um só</Line></>}
-      {state === 1 && <><Box x={20} y={40} w={200}>humor de cada noivo</Box><path d="M20 62h200" stroke={wine} strokeWidth="3"/><Arrow d="M225 62h60m-12-8 12 8-12 8"/><Box x={295} y={40} w={230} strong>idade, renda, leis</Box><Line y={150}>comparar grupos e períodos</Line><Line x={20} y={222}>o social pelo social</Line></>}
-      {state === 2 && <>{[40, 140, 240, 340, 440].map(x => <g key={x}><rect x={x} y="60" width="70" height="50" fill={paper} stroke={ink}/><circle cx={x + 35} cy="85" r="8" fill={wine}/></g>)}<Arrow d="M40 140h470"/><Line y={180}>regular em todas: normal no tipo social</Line><Line x={20} y={222}>normal ≠ desejável</Line></>}
-    </Drawing></div>;
+  const label = ['Uniforme anterior, advertência e uso comum', 'Indicadores observáveis no lugar de motivos individuais', 'Transgressão punida em toda sociedade'][state];
+  if (state === 0) return <Conditions names={['Exterioridade', 'Coerção', 'Generalidade']} verdict={on => on.every(Boolean) ? 'Os três traços presentes: fato social.' : `Falta ${['exterioridade', 'coerção', 'generalidade'].filter((_, i) => !on[i]).join(' e ')}: não é fato social, é outra coisa (hábito, gosto, escolha).`}>
+    {on => <Drawing label={label}><Toggle x={20} y={30} w={160} on={on[0]}>antes de Lia</Toggle><Toggle x={200} y={30} w={160} on={on[1]}>advertência</Toggle><Toggle x={380} y={30} w={160} on={on[2]}>todos usam</Toggle><Arrow d="M100 80q180 70 360 0" active={on.every(Boolean)}/><Line y={170}>{on.every(Boolean) ? 'exterior · coercitivo · geral' : 'traço retirado: o caso muda de natureza'}</Line><Line x={20} y={222}>os três juntos, não um só</Line></Drawing>}
+  </Conditions>;
+  return <Drawing label={label}>
+    {state === 1 && <><Box x={20} y={40} w={200}>humor de cada noivo</Box><path d="M20 62h200" stroke={wine} strokeWidth="3"/><Arrow d="M225 62h60m-12-8 12 8-12 8"/><Box x={295} y={40} w={230} strong>idade, renda, leis</Box><Line y={150}>comparar grupos e períodos</Line><Line x={20} y={222}>o social pelo social</Line></>}
+    {state === 2 && <>{[40, 140, 240, 340, 440].map(x => <g key={x}><rect x={x} y="60" width="70" height="50" fill={paper} stroke={ink}/><circle cx={x + 35} cy="85" r="8" fill={wine}/></g>)}<Arrow d="M40 140h470"/><Line y={180}>regular em todas: normal no tipo social</Line><Line x={20} y={222}>normal ≠ desejável</Line></>}
+  </Drawing>;
 }
 function SolidarityTypes({ state }: { state: number }) {
   return <Drawing label={['Membros iguais em práticas e crenças', 'Cadeia de funções diferentes até o pão', 'Expulsão pelo tabu e conserto pelo contrato'][state]}>
@@ -106,12 +117,14 @@ function AnomieGrid({ state }: { state: number }) {
   </Drawing>;
 }
 function IdentityDifference({ state }: { state: number }) {
-  return <div>{state === 2 && <Conditions names={['Reconhecimento', 'Redistribuição']} verdict={on => on.every(Boolean) ? 'As duas dimensões presentes: a injustiça é enfrentada por inteiro.' : on[0] ? 'Só reconhecimento: a cultura é celebrada e a sala segue sem laboratório.' : on[1] ? 'Só redistribuição: o laboratório chega, mas o desrespeito à cultura do bairro permanece.' : 'Nenhuma dimensão: diferença e desigualdade seguem intactas.'}/>}
-    <Drawing label={['Paulista em Recife', 'Sotaque vira motivo de recusa', 'Cultura celebrada e sala sem laboratório'][state]}>
-      {state === 0 && <><Box x={20} y={60} w={140}>São Paulo</Box><Box x={380} y={60} w={140}>Recife</Box><Arrow d="M165 82h210m-12-8 12 8-12 8"/><Line x={200} y={140}>“sou paulista”</Line><Line x={20} y={222}>a identidade aparece no contraste</Line></>}
-      {state === 1 && <><Box x={20} y={50} w={150}>sotaque</Box><Arrow d="M175 72h80m-12-8 12 8-12 8"/><Box x={265} y={50} w={250} strong>vaga recusada</Box><Line y={150}>diferença usada como critério</Line><Line x={20} y={222}>diferença → desigualdade</Line></>}
-      {state === 2 && <><Box x={20} y={50} w={230}>festa da cultura</Box><Box x={290} y={50} w={230} strong>sala sem laboratório</Box><Arrow d="M135 110q140 50 270 0"/><Line y={180}>reconhecer + redistribuir</Line><Line x={20} y={222}>faltando um, fica pela metade</Line></>}
-    </Drawing></div>;
+  const label = ['Paulista em Recife', 'Sotaque vira motivo de recusa', 'Cultura celebrada e sala sem laboratório'][state];
+  if (state === 2) return <Conditions names={['Reconhecimento', 'Redistribuição']} verdict={on => on.every(Boolean) ? 'As duas dimensões presentes: a injustiça é enfrentada por inteiro.' : on[0] ? 'Só reconhecimento: a cultura é celebrada e a sala segue sem laboratório.' : on[1] ? 'Só redistribuição: o laboratório chega, mas o desrespeito à cultura do bairro permanece.' : 'Nenhuma dimensão: diferença e desigualdade seguem intactas.'}>
+    {on => <Drawing label={label}><Toggle x={20} y={50} w={230} on={on[0]}>festa da cultura</Toggle><Toggle x={290} y={50} w={230} on={on[1]}>{on[1] ? 'laboratório montado' : 'sala sem laboratório'}</Toggle><Arrow d="M135 110q140 50 270 0" active={on.every(Boolean)}/><Line y={180}>{on.every(Boolean) ? 'reconhecer + redistribuir' : 'uma dimensão faltando'}</Line><Line x={20} y={222}>faltando um, fica pela metade</Line></Drawing>}
+  </Conditions>;
+  return <Drawing label={label}>
+    {state === 0 && <><Box x={20} y={60} w={140}>São Paulo</Box><Box x={380} y={60} w={140}>Recife</Box><Arrow d="M165 82h210m-12-8 12 8-12 8"/><Line x={200} y={140}>“sou paulista”</Line><Line x={20} y={222}>a identidade aparece no contraste</Line></>}
+    {state === 1 && <><Box x={20} y={50} w={150}>sotaque</Box><Arrow d="M175 72h80m-12-8 12 8-12 8"/><Box x={265} y={50} w={250} strong>vaga recusada</Box><Line y={150}>diferença usada como critério</Line><Line x={20} y={222}>diferença → desigualdade</Line></>}
+  </Drawing>;
 }
 function MobilityGrid({ state }: { state: number }) {
   const transition = useSceneMotion();
@@ -133,12 +146,14 @@ function CitizenshipRights({ state }: { state: number }) {
   </Drawing>;
 }
 function InformationSociety({ state }: { state: number }) {
-  return <div>{state === 0 && <Conditions names={['Conexão', 'Dispositivo e qualidade', 'Uso crítico']} verdict={on => on.every(Boolean) ? 'As três camadas presentes: inclusão digital efetiva.' : !on[0] ? 'Sem conexão: exclusão total, as outras camadas nem chegam a contar.' : `Há conexão, mas falta ${['', 'dispositivo e qualidade', 'uso crítico'].filter((_, i) => i > 0 && !on[i]).join(' e ')}: a inclusão fica incompleta.`}/>}
-    <Drawing label={['Um celular para três irmãos com internet', 'Notícia circula antes do jornal da noite', 'Feed ordenado por engajamento'][state]}>
-      {state === 0 && <><rect x="40" y="50" width="60" height="100" rx="10" fill={paper} stroke={wine} strokeWidth="3"/>{[180, 270, 360].map(x => <circle key={x} cx={x} cy="100" r="22" fill={paper} stroke={ink} strokeWidth="2"/>)}<Arrow d="M105 100h50"/><Line x={150} y={170}>três aulas, um aparelho</Line><Line x={20} y={222}>conexão não basta</Line></>}
-      {state === 1 && <>{[[60, 60], [200, 140], [320, 50], [460, 130]].map(([x, y]) => <circle key={`${x}`} cx={x} cy={y} r="14" fill={wine}/>)}<Arrow d="M74 62L186 136M214 138L306 54M334 52L446 126"/><Line y={190}>antes do jornal da noite</Line><Line x={20} y={222}>circulação em rede</Line></>}
-      {state === 2 && <><Box x={20} y={30} w={260} strong>mais engajamento ↑</Box><Box x={20} y={90} w={260}>mais verdadeiro ↓</Box><Arrow d="M300 60q60 40 0 80"/><Line x={330} y={110}>critério oculto</Line><Line x={20} y={222}>algoritmo não é neutro</Line></>}
-    </Drawing></div>;
+  const label = ['Um celular para três irmãos com internet', 'Notícia circula antes do jornal da noite', 'Feed ordenado por engajamento'][state];
+  if (state === 0) return <Conditions names={['Conexão', 'Dispositivo e qualidade', 'Uso crítico']} verdict={on => on.every(Boolean) ? 'As três camadas presentes: inclusão digital efetiva.' : !on[0] ? 'Sem conexão: exclusão total, as outras camadas nem chegam a contar.' : `Há conexão, mas falta ${['', 'dispositivo e qualidade', 'uso crítico'].filter((_, i) => i > 0 && !on[i]).join(' e ')}: a inclusão fica incompleta.`}>
+    {on => <Drawing label={label}><Toggle x={20} y={40} w={150} on={on[0]}>conexão</Toggle><Toggle x={195} y={40} w={150} on={on[1]}>aparelho</Toggle><Toggle x={370} y={40} w={160} on={on[2]}>uso crítico</Toggle>{[120, 270, 420].map((x, i) => <circle key={x} cx={x} cy="140" r="20" fill={on.every(Boolean) || (on[0] && i === 0) ? wine : paper} stroke={ink} strokeWidth="2"/>)}<Arrow d="M95 95q180 40 360 0" active={on.every(Boolean)}/><Line x={20} y={222}>{on.every(Boolean) ? 'três camadas: inclusão' : 'camada faltando: exclusão'}</Line></Drawing>}
+  </Conditions>;
+  return <Drawing label={label}>
+    {state === 1 && <>{[[60, 60], [200, 140], [320, 50], [460, 130]].map(([x, y]) => <circle key={`${x}`} cx={x} cy={y} r="14" fill={wine}/>)}<Arrow d="M74 62L186 136M214 138L306 54M334 52L446 126"/><Line y={190}>antes do jornal da noite</Line><Line x={20} y={222}>circulação em rede</Line></>}
+    {state === 2 && <><Box x={20} y={30} w={260} strong>mais engajamento ↑</Box><Box x={20} y={90} w={260}>mais verdadeiro ↓</Box><Arrow d="M300 60q60 40 0 80"/><Line x={330} y={110}>critério oculto</Line><Line x={20} y={222}>algoritmo não é neutro</Line></>}
+  </Drawing>;
 }
 
 const drawings: Record<SociologyOperationId, React.ComponentType<{ state: number }>> = {
