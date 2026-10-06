@@ -40,6 +40,12 @@ const chapters = [
   ['summary-literatura-poesia-concreta', 'concrete-poetry'],
   ['summary-literatura-poesia-brasileira-1960-1980', 'poetry-1960-1980'],
   ['summary-literatura-prosa-brasileira-1960-1980', 'prose-1960-1980'],
+  ['summary-literatura-poesia-brasileira-contemporanea', 'poetry-contemporary'],
+  ['summary-literatura-prosa-brasileira-contemporanea', 'prose-contemporary'],
+  ['summary-literatura-literatura-lusofona-contemporanea', 'lusophone-contemporary'],
+  ['summary-literatura-artes-plasticas-brasileiras', 'brazilian-visual-arts'],
+  ['summary-literatura-teatro-brasileiro', 'brazilian-theater'],
+  ['summary-literatura-cancioneiro-popular-brasileiro', 'popular-songbook'],
 ].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });

@@ -267,6 +267,54 @@ export const LITERATURE_FOUNDATIONS = {
       { label: 'Testemunho', section: 'Memória e testemunho', anchor: 'conto o que vi na cela para que não digam que não houve', observation: 'Narrar é registrar o que poderia ser negado.', conclusion: 'Pacto de prova, diferente da autobiografia.' },
     ],
   },
+  'poetry-contemporary': {
+    topic: 'Poesia Brasileira Contemporânea', question: 'Sem escola dominante, o que organiza o poema?', relation: 'procedimento + voz + meio → leitura',
+    states: [
+      { label: 'Pluralidade', section: 'Pluralidade', anchor: 'um mesmo sarau tem soneto, poema visual e rap', observation: 'Formas de matrizes diferentes convivem sem hierarquia de escola.', conclusion: 'Leia o procedimento de cada poema, não um programa coletivo.' },
+      { label: 'Voz', section: 'Slam e oralidade', anchor: 'minha voz é o papel que ninguém rasga', observation: 'A fala assume a permanência que se atribuía à escrita.', conclusion: 'No slam, o corpo de quem diz é suporte do poema.' },
+      { label: 'Circulação', section: 'Circulação', anchor: 'o poema postado às duas da manhã tinha mil leitores ao meio-dia', observation: 'O poema chega ao público antes de editor ou crítico.', conclusion: 'Alcance e valor estético são critérios diferentes.' },
+    ],
+  },
+  'prose-contemporary': {
+    topic: 'Prosa Brasileira Contemporânea', question: 'De onde a voz narra, e que pacto propõe?', relation: 'ponto de vista interno + pacto → sentido',
+    states: [
+      { label: 'Narrar de dentro', section: 'Novas vozes e temas', anchor: 'quem morava na viela contou a viela', observation: 'O espaço é narrado por quem o habita, não por quem o observa de fora.', conclusion: 'Muda o ponto de vista, não só o tema.' },
+      { label: 'Escrevivência', section: 'Autores e obras', anchor: 'escrevo com a memória da minha avó e com a minha própria', observation: 'Experiência individual e memória coletiva se reúnem na escrita.', conclusion: 'Não é autobiografia: a ficção recria a partir da vivência.' },
+      { label: 'Autoficção', section: 'Formas', anchor: 'o narrador tem meu nome, mas inventei o que ele lembra', observation: 'Dados reais e invenção declarada no mesmo pacto.', conclusion: 'Pacto ficcional, diferente do pacto de veracidade.' },
+    ],
+  },
+  'lusophone-contemporary': {
+    topic: 'Literatura Lusófona Contemporânea', question: 'A mesma língua carrega que história?', relation: 'língua comum + contexto próprio → projetos distintos',
+    states: [
+      { label: 'Uma língua, histórias', section: 'Um campo plural', anchor: 'a mesma palavra muda de sotaque e de história em Luanda e em Lisboa', observation: 'Para um país foi língua do colonizador; para outro, de origem.', conclusion: 'Lusofonia é campo de relações, não bloco único.' },
+      { label: 'Inventar', section: 'África de língua portuguesa', anchor: 'a noite estava toda estrelinhada', observation: 'A palavra criada dá à noite uma afetividade que nenhuma existente daria.', conclusion: 'Procedimento próximo de Rosa, contexto moçambicano próprio.' },
+      { label: 'Alegoria', section: 'Portugal contemporâneo', anchor: 'a cidade cegou, disse o homem, e ninguém perguntou porquê, perguntaram só quem os guiaria', observation: 'Falas sem travessão e a busca de um guia no lugar da causa.', conclusion: 'Pontuação e alegoria produzem a reflexão sobre poder.' },
+    ],
+  },
+  'brazilian-visual-arts': {
+    topic: 'Artes Plásticas Brasileiras', question: 'O que a forma recusa, e o que pede do público?', relation: 'recursos visuais + projeto → sentido',
+    states: [
+      { label: 'Pose × cor', section: 'Do século XIX ao modernismo', anchor: 'o retrato oficial pede pose; o modernista pede cor e deformação', observation: 'Postura solene e proporção contra cor forte e forma simplificada.', conclusion: 'A deformação modernista recusa a imitação fiel.' },
+      { label: 'Desproporção', section: 'Tarsila e Portinari', anchor: 'pé enorme e cabeça mínima', observation: 'O corpo ligado à terra se agiganta; o intelecto encolhe.', conclusion: 'Em Abaporu, a forma é o argumento antropofágico.' },
+      { label: 'Participação', section: 'Neoconcretismo e contemporâneo', anchor: 'a obra só se completa quando alguém a dobra', observation: 'O objeto depende do gesto de quem interage.', conclusion: 'Neoconcretismo: obra como experiência do corpo.' },
+    ],
+  },
+  'brazilian-theater': {
+    topic: 'Teatro Brasileiro', question: 'Que relação a cena cria com quem assiste?', relation: 'tipo, plano ou participação → função da cena',
+    states: [
+      { label: 'Costumes', section: 'Formação', anchor: 'o noivo da roça confunde a modista com a dona da casa', observation: 'O humor nasce do choque entre o tipo caipira e os códigos da cidade.', conclusion: 'A comédia de costumes ri de tipos para criticar hábitos.' },
+      { label: 'Três planos', section: 'Nelson Rodrigues', anchor: 'no plano da memória ela casa; no da alucinação, foge; no da realidade, agoniza', observation: 'A mesma personagem existe em três camadas simultâneas.', conclusion: 'A estrutura em planos expressa a consciência fragmentada.' },
+      { label: 'Espect-ator', section: 'Teatro e política', anchor: 'o espectador sobe ao palco e muda o fim da cena', observation: 'A plateia deixa de assistir e passa a agir.', conclusion: 'Teatro do Oprimido: ensaio de transformação social.' },
+    ],
+  },
+  'popular-songbook': {
+    topic: 'Cancioneiro Popular Brasileiro', question: 'O que a música faz com a palavra?', relation: 'letra + melodia + contexto → sentido',
+    states: [
+      { label: 'Letra e melodia', section: 'Canção como texto', anchor: 'a palavra triste cai na nota mais alta', observation: 'O significado e a tensão melódica se somam.', conclusion: 'A letra sozinha perde camadas da canção.' },
+      { label: 'Momentos', section: 'Momentos e nomes', anchor: 'o morro, a praia, a guitarra elétrica e a periferia', observation: 'Quatro signos resumem samba, Bossa, Tropicália e rap/funk.', conclusion: 'Associe gênero, espaço social e momento histórico.' },
+      { label: 'Duplo sentido', section: 'Canção e censura', anchor: 'cálice / cale-se', observation: 'Sons quase iguais: imagem religiosa e ordem de silêncio.', conclusion: 'A homofonia diz a denúncia sob aparência sagrada.' },
+    ],
+  },
 } satisfies Record<string, Foundation>;
 export type LiteratureFoundationId = keyof typeof LITERATURE_FOUNDATIONS;
 
@@ -523,6 +571,49 @@ function Prose6080({ state }: { state: number }) {
   </Drawing>;
 }
 
+function PoetryNow({ state }: { state: number }) {
+  return <Drawing label={['Soneto, poema visual e rap no mesmo sarau', 'A voz como papel que não se rasga', 'Poema postado alcança mil leitores'][state]}>
+    {state === 0 && <>{['soneto', 'visual', 'rap'].map((w, i) => <Box key={w} x={20 + i * 180} y={60} w={150} strong={i === 1}>{w}</Box>)}<Arrow d="M95 115q180 50 360 0"/><Line y={190}>sem escola dominante</Line><Line x={20} y={222}>leia o procedimento de cada poema</Line></>}
+    {state === 1 && <><circle cx="90" cy="100" r="40" fill={paper} stroke={ink} strokeWidth="3"/><path d="M135 80q30 20 0 40M150 65q45 35 0 70" fill="none" stroke={wine} strokeWidth="3"/><Arrow d="M190 100h100m-12-8 12 8-12 8"/><Box x={300} y={78} w={200}>papel que não rasga</Box><Line x={20} y={222}>o corpo de quem diz é o suporte</Line></>}
+    {state === 2 && <><Line y={60}>02:00 postado</Line><Arrow d="M150 70q100 40 200 30"/><Box x={300} y={78} w={210} strong>12:00 · mil leitores</Box><Line y={170}>sem editor no meio do caminho</Line><Line x={20} y={222}>alcance ≠ valor estético</Line></>}
+  </Drawing>;
+}
+function ProseNow({ state }: { state: number }) {
+  return <Drawing label={['A viela contada por quem mora nela', 'Memória da avó e da narradora', 'Nome real, lembrança inventada'][state]}>
+    {state === 0 && <><path d="M120 40v150M220 40v150" stroke={ink} strokeWidth="3"/><circle cx="170" cy="120" r="16" fill={wine}/><Line x={250} y={80}>narrador de fora →</Line><Line x={250} y={130}>quem mora dentro ✓</Line><Arrow d="M240 125h-50m12-8-12 8 12 8"/><Line x={20} y={222}>muda o ponto de vista</Line></>}
+    {state === 1 && <><Box x={20} y={50} w={160}>memória da avó</Box><Box x={20} y={120} w={160}>memória própria</Box><Arrow d="M185 72q60 0 80 35M185 142q60 0 80-30"/><Box x={280} y={85} w={190} strong>escrevivência</Box><Line x={20} y={222}>vivência coletiva + invenção</Line></>}
+    {state === 2 && <><Box x={20} y={60} w={180}>nome real</Box><Line x={220} y={90}>+</Line><Box x={260} y={60} w={230} strong>lembrança inventada</Box><Arrow d="M255 115q-50 50-120 30"/><Line y={180}>pacto ficcional declarado</Line><Line x={20} y={222}>autoficção ≠ autobiografia</Line></>}
+  </Drawing>;
+}
+function Lusophone({ state }: { state: number }) {
+  return <Drawing label={['A mesma palavra em Luanda e em Lisboa', 'Estrelinhada como palavra inventada', 'Falas sem travessão e a busca de um guia'][state]}>
+    {state === 0 && <><Box x={20} y={60} w={140}>Luanda</Box><Box x={380} y={60} w={140}>Lisboa</Box><circle cx="270" cy="82" r="30" fill={wine}/><Line x={238} y={140}>palavra</Line><Arrow d="M165 82h70M305 82h70"/><Line x={20} y={222}>língua comum, histórias distintas</Line></>}
+    {state === 1 && <><Box x={20} y={60} w={110}>estrela</Box><Line x={145} y={90}>+</Line><Box x={170} y={60} w={110}>-inha</Box><Arrow d="M285 82h70m-12-8 12 8-12 8"/><Box x={365} y={60} w={160} strong>estrelinhada</Box><Line x={20} y={222}>invenção a partir da oralidade</Line></>}
+    {state === 2 && <><Line y={60}>a cidade cegou, disse o homem,</Line><Line y={100}>perguntaram só quem os guiaria</Line><Arrow d="M40 115q120 50 280 10"/><Line y={180}>vírgula no lugar do travessão</Line><Line x={20} y={222}>alegoria sobre poder</Line></>}
+  </Drawing>;
+}
+function VisualArts({ state }: { state: number }) {
+  return <Drawing label={['Retrato solene ao lado de figura colorida deformada', 'Figura de pé enorme e cabeça mínima', 'Placas articuladas que mudam com a mão'][state]}>
+    {state === 0 && <><rect x="40" y="30" width="130" height="160" fill={paper} stroke={ink} strokeWidth="3"/><circle cx="105" cy="80" r="22" fill="none" stroke={ink} strokeWidth="2"/><path d="M75 180v-60h60v60" fill="none" stroke={ink} strokeWidth="2"/><rect x="330" y="30" width="130" height="160" fill={wine}/><path d="M360 170q30-120 70-60" fill="none" stroke={paper} strokeWidth="6"/><Arrow d="M180 110h140m-12-8 12 8-12 8"/><Line x={20} y={222}>pose → cor e deformação</Line></>}
+    {state === 1 && <><ellipse cx="140" cy="180" rx="90" ry="22" fill={wine}/><path d="M140 160V70" stroke={ink} strokeWidth="14"/><circle cx="140" cy="60" r="8" fill={ink}/><circle cx="400" cy="60" r="28" fill="none" stroke={ink} strokeWidth="3"/><path d="M420 180v-80m0 30h-20m20-15h20" stroke={ink} strokeWidth="5"/><Arrow d="M240 120q60-30 110-10"/><Line x={20} y={222}>a desproporção é o argumento</Line></>}
+    {state === 2 && <><path d="M80 150l60-80 60 80z" fill={paper} stroke={ink} strokeWidth="3"/><path d="M140 70l60 30" stroke={wine} strokeWidth="4"/><circle cx="140" cy="70" r="6" fill={wine}/><Arrow d="M220 110h100m-12-8 12 8-12 8"/><Box x={330} y={88} w={190} strong>forma nova</Box><Line x={20} y={222}>a obra precisa do gesto</Line></>}
+  </Drawing>;
+}
+function Theater({ state }: { state: number }) {
+  return <Drawing label={['O caipira confunde a modista com a dona da casa', 'Memória, alucinação e realidade simultâneas', 'O espectador sobe ao palco'][state]}>
+    {state === 0 && <><Box x={20} y={60} w={160}>noivo da roça</Box><Arrow d="M185 82h80m-12-8 12 8-12 8"/><Box x={275} y={40} w={120}>modista</Box><Box x={275} y={100} w={160} strong>dona da casa?</Box><Line x={20} y={222}>tipo social + equívoco = sátira</Line></>}
+    {state === 1 && <>{['memória: casa', 'alucinação: foge', 'realidade: agoniza'].map((w, i) => <Box key={w} x={20 + i * 20} y={30 + i * 55} w={230} strong={i === 2}>{w}</Box>)}<Arrow d="M300 60v110"/><Line x={320} y={120}>ao mesmo tempo</Line><Line x={20} y={222}>consciência fragmentada no palco</Line></>}
+    {state === 2 && <><path d="M40 120h480" stroke={ink} strokeWidth="4"/><Line x={60} y={100}>palco</Line><Line x={60} y={160}>plateia</Line><circle cx="300" cy="160" r="14" fill={wine}/><Arrow d="M300 140v-50m-8 10 8-10 8 10"/><Line x={20} y={222}>espect-ator muda o fim</Line></>}
+  </Drawing>;
+}
+function Songbook({ state }: { state: number }) {
+  return <Drawing label={['A palavra triste no ponto mais alto da melodia', 'Morro, praia, guitarra elétrica e periferia', 'Cálice e cale-se soam quase iguais'][state]}>
+    {state === 0 && <><path d="M20 160q100-10 160-60t160-40 160 80" fill="none" stroke={ink} strokeWidth="3"/><circle cx="330" cy="60" r="10" fill={wine}/><Line x={300} y={40}>triste</Line><Arrow d="M300 70q-40 60-120 70"/><Line x={20} y={222}>letra + melodia = sentido</Line></>}
+    {state === 1 && <>{['morro', 'praia', 'guitarra', 'periferia'].map((w, i) => <Box key={w} x={20 + i * 130} y={60} w={115} strong={i === 3}>{w}</Box>)}<Arrow d="M75 115h390m-12-8 12 8-12 8"/><Line y={170}>samba · Bossa · Tropicália · rap/funk</Line><Line x={20} y={222}>gênero + espaço + época</Line></>}
+    {state === 2 && <><Box x={20} y={60} w={150}>cálice</Box><Box x={350} y={60} w={150} strong>cale-se</Box><path d="M180 82q85-40 165 0" fill="none" stroke={ink} strokeDasharray="5 5"/><Arrow d="M180 100q85 40 165 0"/><Line y={170}>sagrado na superfície, ordem por baixo</Line><Line x={20} y={222}>homofonia contra a censura</Line></>}
+  </Drawing>;
+}
+
 const drawings: Record<LiteratureFoundationId, React.ComponentType<{ state: number }>> = {
   'art-languages': Art, 'literary-text': LiteraryText, 'narrative-elements': Narrative, 'medieval-voices': Medieval,
   'renaissance-camoes': Camoes, 'first-records': Records, baroque: Baroque, neoclassic: Neoclassic,
@@ -532,6 +623,8 @@ const drawings: Record<LiteratureFoundationId, React.ComponentType<{ state: numb
   'modernism-second-generation': SecondPoetry, 'modernism-second-prose': SecondProse, 'fernando-pessoa': Pessoa, 'carlos-drummond': Drummond,
   'graciliano-ramos': Graciliano, 'joao-cabral': Cabral, 'clarice-lispector': Clarice, 'guimaraes-rosa': Rosa,
   'concrete-poetry': Concrete, 'poetry-1960-1980': Poetry6080, 'prose-1960-1980': Prose6080,
+  'poetry-contemporary': PoetryNow, 'prose-contemporary': ProseNow, 'lusophone-contemporary': Lusophone, 'brazilian-visual-arts': VisualArts,
+  'brazilian-theater': Theater, 'popular-songbook': Songbook,
 };
 export function LiteratureOperation({ id }: { id: LiteratureFoundationId }) {
   const config = LITERATURE_FOUNDATIONS[id];

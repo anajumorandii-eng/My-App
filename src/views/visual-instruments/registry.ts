@@ -490,6 +490,8 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   literario('concrete-poetry','poesia concreta','concrete-poetry'),
   { id: 'poetry-1960-1980', subject: 'Literatura', keywords: ['poesia brasileira: 1960-1980'], exactTopic: 'poesia brasileira: 1960-1980', Component: literatureFoundationInstrument('poetry-1960-1980') },
   literario('prose-1960-1980','prosa brasileira: 1960-1980','prose-1960-1980'),
+  { id: 'poetry-contemporary', subject: 'Literatura', keywords: ['poesia brasileira contemporânea'], exactTopic: 'poesia brasileira contemporânea', Component: literatureFoundationInstrument('poetry-contemporary') },
+  { id: 'prose-contemporary', subject: 'Literatura', keywords: ['prosa brasileira contemporânea'], exactTopic: 'prosa brasileira contemporânea', Component: literatureFoundationInstrument('prose-contemporary') },
   literario('lusophone-contemporary','literatura lusófona contemporânea','lusophone-contemporary'),
   literario('brazilian-visual-arts','artes plásticas brasileiras','brazilian-visual-arts'),
   literario('brazilian-theater','teatro brasileiro','brazilian-theater'),
