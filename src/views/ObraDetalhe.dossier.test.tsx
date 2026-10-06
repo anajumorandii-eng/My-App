@@ -110,10 +110,11 @@ describe('ObraDetalhe com dossiê', () => {
     expect(screen.getByText(/24 horas:/)).toBeInTheDocument();
   });
 
-  it('dossiê sem módulo de questões mostra o aviso de pendência, não uma aba vazia', async () => {
-    renderAt('/obras/memorias-de-martha?revisao=1');
-    await screen.findByText(/Modo revisão/);
-    fireEvent.click(screen.getByRole('button', { name: 'Questões' }));
+  // Sem modo revisão, nenhum módulo em needs_review chega à tela: a aba
+  // precisa mostrar o aviso de pendência, não ficar vazia.
+  it('sem módulo publicado de questões, mostra o aviso de pendência, não uma aba vazia', async () => {
+    renderAt('/obras/memorias-de-martha');
+    fireEvent.click(await screen.findByRole('button', { name: 'Questões' }));
     expect(screen.getByText(/O banco de questões autorais ainda está em elaboração/)).toBeInTheDocument();
   });
 });
