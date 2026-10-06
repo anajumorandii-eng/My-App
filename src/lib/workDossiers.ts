@@ -21,6 +21,7 @@ const LOADERS: Record<string, () => Promise<{ default: unknown }>> = {
   'a-vida-nao-e-util': () => import('../data/obras/dossies/a-vida-nao-e-util.json'),
   'prosas-seguidas-de-odes-minimas': () => import('../data/obras/dossies/prosas-seguidas-de-odes-minimas.json'),
   'cancoes-escolhidas-14-letras': () => import('../data/obras/dossies/cancoes-escolhidas-14-letras.json'),
+  'bras-cubas': () => import('../data/obras/dossies/bras-cubas.json'),
 };
 
 export const DOSSIER_SLUGS = Object.keys(LOADERS);
