@@ -53,6 +53,37 @@ const chapters = [
   ['summary-sociologia-classes-sociais-e-mobilidade-social', 'mobility-grid'],
   ['summary-sociologia-cidadania-e-direitos', 'citizenship-rights'],
   ['summary-sociologia-a-sociedade-da-informacao', 'information-society'],
+  ['summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos', 'myth-logos'],
+  ['summary-filosofia-o-metodo-socratico-e-a-maieutica', 'socratic-method'],
+  ['summary-filosofia-o-mito-da-caverna', 'cave'],
+  ['summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento', 'divided-line'],
+  ['summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo', 'golden-mean'],
+  ['summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica', 'cartesian-doubt'],
+  ['summary-filosofia-hegel-e-a-dialetica', 'hegel-dialectic'],
+  ['summary-filosofia-nietzsche-e-a-critica-aos-valores-morais', 'nietzsche-genealogy'],
+  ['summary-filosofia-logica-e-metafisica-aristotelicas', 'aristotle-logic'],
+  ['summary-filosofia-escolastica-e-santo-tomas-de-aquino', 'aquinas-synthesis'],
+  ['summary-filosofia-a-critica-de-hume-a-causalidade', 'hume-causation'],
+  ['summary-filosofia-hobbes-e-o-estado-de-natureza', 'hobbes-state'],
+  ['summary-filosofia-locke-e-os-direitos-naturais', 'locke-rights'],
+  ['summary-filosofia-rousseau-e-a-vontade-geral', 'rousseau-general-will'],
+  ['summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico', 'kant-duty'],
+  ['summary-filosofia-o-materialismo-historico', 'historical-materialism'],
+  ['summary-filosofia-a-luta-de-classes-na-filosofia-marxista', 'class-struggle'],
+  ['summary-filosofia-o-existencialismo-de-sartre', 'sartre-freedom'],
+  ['summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural', 'frankfurt-culture'],
+  ['summary-sociologia-educacao-e-socializacao-em-durkheim', 'education-socialization'],
+  ['summary-sociologia-modo-de-producao-e-estrutura-social', 'mode-of-production'],
+  ['summary-sociologia-ideologia-e-alienacao', 'ideology-alienation'],
+  ['summary-sociologia-tipos-de-acao-social', 'social-action-types'],
+  ['summary-sociologia-dominacao-e-poder-em-weber', 'weber-domination'],
+  ['summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo', 'protestant-ethic'],
+  ['summary-sociologia-desigualdade-de-genero', 'gender-inequality'],
+  ['summary-sociologia-precarizacao-e-uberizacao-do-trabalho', 'platform-work'],
+  ['summary-sociologia-movimentos-sociais-classicos-e-contemporaneos', 'social-movements'],
+  ['summary-sociologia-democracia-e-participacao-politica', 'democracy-forms'],
+  ['summary-sociologia-globalizacao-economica-e-cultural', 'globalization-flows'],
+  ['summary-sociologia-o-estado-nacao-na-era-global', 'nation-state'],
 ].filter(([, operation]) => !process.env.CRIVO_AUDIT_ONLY || process.env.CRIVO_AUDIT_ONLY.split(',').includes(operation));
 await fs.mkdir(path.join(output, 'capturas'), { recursive: true });
 const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/chromium', args: ['--no-sandbox'] });
@@ -123,7 +154,7 @@ try {
           result.normalMotionObserved = result.states.some(state => state.motionObserved);
           expect(result.normalMotionObserved).toBe(true);
         }
-        for (const modifier of ['Começar pela devolução', 'Ler em ordem direta', 'Cortar acréscimo redundante']) {
+        for (const modifier of ['Começar pela devolução', 'Ler em ordem direta', 'Cortar acréscimo redundante', 'Ver como pedestre']) {
           await controls.first().click();
           await page.waitForTimeout(reducedMotion === 'reduce' ? 60 : 650);
           const button = scene.getByRole('button', { name: modifier, exact: true });

@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 8,
     "board": 43,
-    "instrument": 345,
-    "scene": 217,
+    "instrument": 375,
+    "scene": 187,
     "fallback": 0
   },
-  "contested": 77,
+  "contested": 107,
   "subjects": [
     {
       "subject": "Física",
@@ -147,8 +147,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 0,
-        "scene": 34,
+        "instrument": 18,
+        "scene": 16,
         "fallback": 0
       }
     },
@@ -158,8 +158,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 6,
-        "scene": 20,
+        "instrument": 18,
+        "scene": 8,
         "fallback": 0
       }
     }
@@ -4964,9 +4964,14 @@
       "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
       "subject": "Filosofia",
       "title": "O Método Socrático e a Maiêutica",
-      "primary": "scene",
-      "artifact": "movimento-dialetico",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "socratic-method",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "movimento-dialetico"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
@@ -4980,33 +4985,53 @@
       "id": "summary-filosofia-o-mito-da-caverna",
       "subject": "Filosofia",
       "title": "O Mito da Caverna",
-      "primary": "scene",
-      "artifact": "escala-de-graus",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "cave",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento",
       "subject": "Filosofia",
       "title": "A Alegoria da Linha Dividida e o Conhecimento",
-      "primary": "scene",
-      "artifact": "escala-de-graus",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "divided-line",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-logica-e-metafisica-aristotelicas",
       "subject": "Filosofia",
       "title": "Lógica e Metafísica Aristotélicas",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "aristotle-logic",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo",
       "subject": "Filosofia",
       "title": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
-      "primary": "scene",
-      "artifact": "escala-de-graus",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "golden-mean",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
@@ -5028,9 +5053,14 @@
       "id": "summary-filosofia-escolastica-e-santo-tomas-de-aquino",
       "subject": "Filosofia",
       "title": "Escolástica e Santo Tomás de Aquino",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "aquinas-synthesis",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
@@ -5044,9 +5074,14 @@
       "id": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica",
       "subject": "Filosofia",
       "title": "Descartes e o Método: a Dúvida Hiperbólica",
-      "primary": "scene",
-      "artifact": "escala-de-graus",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "cartesian-doubt",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "escala-de-graus"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
@@ -5068,33 +5103,53 @@
       "id": "summary-filosofia-a-critica-de-hume-a-causalidade",
       "subject": "Filosofia",
       "title": "A Crítica de Hume à Causalidade",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "hume-causation",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-hobbes-e-o-estado-de-natureza",
       "subject": "Filosofia",
       "title": "Hobbes e o Estado de Natureza",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "hobbes-state",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-locke-e-os-direitos-naturais",
       "subject": "Filosofia",
       "title": "Locke e os Direitos Naturais",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "locke-rights",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-rousseau-e-a-vontade-geral",
       "subject": "Filosofia",
       "title": "Rousseau e a Vontade Geral",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "rousseau-general-will",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
@@ -5116,25 +5171,40 @@
       "id": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico",
       "subject": "Filosofia",
       "title": "A Ética Kantiana e o Imperativo Categórico",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "kant-duty",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-hegel-e-a-dialetica",
       "subject": "Filosofia",
       "title": "Hegel e a Dialética",
-      "primary": "scene",
-      "artifact": "movimento-dialetico",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "hegel-dialectic",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "movimento-dialetico"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-o-materialismo-historico",
       "subject": "Filosofia",
       "title": "O Materialismo Histórico",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "historical-materialism",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-alienacao-e-mais-valia",
@@ -5148,33 +5218,53 @@
       "id": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista",
       "subject": "Filosofia",
       "title": "A Luta de Classes na Filosofia Marxista",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "class-struggle",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais",
       "subject": "Filosofia",
       "title": "Nietzsche e a Crítica aos Valores Morais",
-      "primary": "scene",
-      "artifact": "movimento-dialetico",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "nietzsche-genealogy",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "movimento-dialetico"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-o-existencialismo-de-sartre",
       "subject": "Filosofia",
       "title": "O Existencialismo de Sartre",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "sartre-freedom",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural",
       "subject": "Filosofia",
       "title": "A Escola de Frankfurt e a Indústria Cultural",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "frankfurt-culture",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
@@ -5262,25 +5352,40 @@
       "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
       "subject": "Sociologia",
       "title": "Educação e Socialização em Durkheim",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "education-socialization",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
       "subject": "Sociologia",
       "title": "Modo de Produção e Estrutura Social",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "mode-of-production",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-ideologia-e-alienacao",
       "subject": "Sociologia",
       "title": "Ideologia e Alienação",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "ideology-alienation",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
@@ -5294,25 +5399,40 @@
       "id": "summary-sociologia-tipos-de-acao-social",
       "subject": "Sociologia",
       "title": "Tipos de Ação Social",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "social-action-types",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-dominacao-e-poder-em-weber",
       "subject": "Sociologia",
       "title": "Dominação e Poder em Weber",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "weber-domination",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
       "subject": "Sociologia",
       "title": "Ética Protestante e o Espírito do Capitalismo",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "protestant-ethic",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-cultura-e-etnocentrismo",
@@ -5368,9 +5488,14 @@
       "id": "summary-sociologia-desigualdade-de-genero",
       "subject": "Sociologia",
       "title": "Desigualdade de Gênero",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "gender-inequality",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-divisao-social-do-trabalho",
@@ -5392,17 +5517,27 @@
       "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
       "subject": "Sociologia",
       "title": "Precarização e Uberização do Trabalho",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "platform-work",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
       "subject": "Sociologia",
       "title": "Movimentos Sociais Clássicos e Contemporâneos",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "social-movements",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-cidadania-e-direitos",
@@ -5421,25 +5556,40 @@
       "id": "summary-sociologia-democracia-e-participacao-politica",
       "subject": "Sociologia",
       "title": "Democracia e Participação Política",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "democracy-forms",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-globalizacao-economica-e-cultural",
       "subject": "Sociologia",
       "title": "Globalização Econômica e Cultural",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "globalization-flows",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-o-estado-nacao-na-era-global",
       "subject": "Sociologia",
       "title": "O Estado-Nação na Era Global",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "nation-state",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-a-sociedade-da-informacao",

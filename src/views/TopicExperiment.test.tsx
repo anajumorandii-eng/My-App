@@ -38,12 +38,15 @@ describe('Personalização com vínculo explícito ao conteúdo', () => {
     expect(screen.getByRole('status')).toHaveTextContent('16 × 8 = 128');
     expect(screen.getByRole('img')).toHaveAccessibleName('4 fatores 2 mais 3 fatores 2: 7 fatores no produto');
   });
-  it('troca o critério filosófico e só revela sua análise mediante ação', () => {
-    render(<TopicExperiment summaryId="summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos" />);
-    expect(screen.queryByRole('status')).not.toBeInTheDocument();
+  // A Entrega L trocou o botão "Examinar o critério" pela oficina de argumento:
+  // a auditoria pedia a justificativa no desenho, e a leitura passa a seguir o
+  // estado escolhido, como nos demais capítulos de Humanas.
+  it('troca o critério filosófico e mostra a objeção no desenho', () => {
+    const { container } = render(<TopicExperiment summaryId="summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos" />);
+    expect(screen.getByRole('status')).toHaveTextContent('Não há porta para objeção');
     fireEvent.click(screen.getByRole('button', {name:'Logos'}));
-    fireEvent.click(screen.getByRole('button', {name:'Examinar o critério de aceitação'}));
-    expect(screen.getByRole('status')).toHaveTextContent('examinada, contestada e corrigida');
+    expect(screen.getByRole('status')).toHaveTextContent('exigência de justificar');
+    expect(container.querySelector('svg')!.textContent).toContain('objeção');
   });
   it('altera a leitura de Textualidade quando o aviso recebe uma conclusão coerente', () => {
     const summary = interactiveSummaries.find(item => item.id === 'summary-entendimento-de-texto-fatores-de-textualidade')!;

@@ -1,6 +1,37 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — Entrega K/Sociologia H3, 06/10/2026
+## Estado mais recente — Entrega N/Sociologia H2, 06/10/2026
+
+A Entrega L (19 de Filosofia) está na PR #269. A branch
+`fix/entrega-n-sociologia-h2`, empilhada sobre L, trata os 12 capítulos de
+Sociologia do H2: texto aprofundado para rev 2, com casos autorais, e oficinas
+em `SociologyOperations.tsx`. Nas tipologias o tipo escolhido redesenha o caso;
+nas cadeias, retirar um elo muda desenho e veredito. As citações de nove cenas
+antigas foram reancoradas no texto novo. Humanas fica sem pendências. Sem merge
+automático. Evidências: [Entrega N](visual-integral-2026-10-06/entrega-n/README.md).
+
+Fila na proposta: 239 achados tratados, 59 pendentes e 315 preservados.
+Conteúdo: 552 revisões 2, duas revisões 3, 58 pendentes (todos de Redação).
+Cobertura: 8 experimentos, 43 pranchas, 375 instrumentos, 187 cenas, zero
+lacunas; aprovação formal não promovida.
+Próximo passo: R1/R2/R3 (Redação) e A1 (COP30).
+
+## Registro — Entrega L/Filosofia, 06/10/2026
+
+A Entrega K foi integrada na PR #268. A branch `fix/entrega-l-filosofia-h3`
+trata os 19 capítulos de Filosofia (oito do H3 e onze do H2) com oficinas de
+argumento (`PhilosophyOperations.tsx`) ancoradas em frases literais dos textos
+rev 2, que já estavam aprofundados. O experimento Mito/Logos passa a usar a
+oficina. Sem merge automático. Evidências:
+[Entrega L](visual-integral-2026-10-06/entrega-l/README.md).
+
+Fila na proposta: 227 achados tratados, 71 pendentes e 315 preservados.
+Conteúdo inalterado: 540 revisões 2, duas revisões 3, 70 pendentes (Redação 58,
+Sociologia 12). Cobertura: 8 experimentos, 43 pranchas, 363 instrumentos,
+199 cenas, zero lacunas; aprovação formal não promovida.
+Próximo passo: os 12 de Sociologia do H2, que encerram Humanas.
+
+## Registro — Entrega K/Sociologia H3, 06/10/2026
 
 A Entrega J foi integrada na PR #267; Literatura está concluída. A branch
 `fix/entrega-k-sociologia-h3` trata os sete capítulos de Sociologia do H3

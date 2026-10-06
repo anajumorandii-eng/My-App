@@ -81,6 +81,7 @@ import { literaryAuthorInstrument } from './LiteraryAuthorInstrument';
 import type { LiteraryAuthorId } from '../../lib/literaryAuthorLab';
 import { LITERATURE_FOUNDATIONS, literatureFoundationInstrument, type LiteratureFoundationId } from './LiteratureFoundations';
 import { sociologyInstrument, type SociologyOperationId } from './SociologyOperations';
+import { philosophyInstrument, type PhilosophyOperationId } from './PhilosophyOperations';
 
 /**
  * Quais capítulos ganham prancha manipulável, e com que instrumento.
@@ -193,6 +194,7 @@ function leitura(id:string,topic:string,config:ReadingInstrumentId):InstrumentEn
 function literario(id:string,topic:string,config:LiteraryTraitId):InstrumentEntry{return{id,subject:'Literatura',keywords:[topic],exactTopic:topic,Component:config in LITERATURE_FOUNDATIONS ? literatureFoundationInstrument(config as LiteratureFoundationId) : literaryTraitInstrument(config)}}
 function literarioAutor(id:string,topic:string,config:LiteraryAuthorId):InstrumentEntry{return{id,subject:'Literatura',keywords:[topic],exactTopic:topic,Component:literaryAuthorInstrument(config)}}
 
+function filosofia(id:PhilosophyOperationId,topic:string):InstrumentEntry{return{id,subject:'Filosofia',keywords:[topic],exactTopic:topic,Component:philosophyInstrument(id)}}
 function sociologia(id:SociologyOperationId,topic:string):InstrumentEntry{return{id,subject:'Sociologia',keywords:[topic],exactTopic:topic,Component:sociologyInstrument(id)}}
 
 export const INSTRUMENTS: InstrumentEntry[] = [
@@ -513,6 +515,41 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   sociologia('mobility-grid','classes sociais e mobilidade social'),
   sociologia('citizenship-rights','cidadania e direitos'),
   sociologia('information-society','a sociedade da informação'),
+  // Sociologia H2: tipologias e cadeias que eram cartões de rótulo. O tipo
+  // escolhido ou o elo retirado redesenha o mesmo caso autoral do capítulo.
+  sociologia('education-socialization','educação e socialização em durkheim'),
+  sociologia('mode-of-production','modo de produção e estrutura social'),
+  sociologia('ideology-alienation','ideologia e alienação'),
+  sociologia('social-action-types','tipos de ação social'),
+  sociologia('weber-domination','dominação e poder em weber'),
+  sociologia('protestant-ethic','ética protestante e o espírito do capitalismo'),
+  sociologia('gender-inequality','desigualdade de gênero'),
+  sociologia('platform-work','precarização e uberização do trabalho'),
+  sociologia('social-movements','movimentos sociais clássicos e contemporâneos'),
+  sociologia('democracy-forms','democracia e participação política'),
+  sociologia('globalization-flows','globalização econômica e cultural'),
+  sociologia('nation-state','o estado-nação na era global'),
+  // Filosofia H3: o argumento desenhado. Mito e logos fica no experimento
+  // prioritário, que mostra a mesma oficina.
+  filosofia('socratic-method','o método socrático e a maiêutica'),
+  filosofia('cave','o mito da caverna'),
+  filosofia('divided-line','a alegoria da linha dividida e o conhecimento'),
+  filosofia('golden-mean','a ética a nicômaco e a doutrina do meio-termo'),
+  filosofia('cartesian-doubt','descartes e o método: a dúvida hiperbólica'),
+  filosofia('hegel-dialectic','hegel e a dialética'),
+  filosofia('nietzsche-genealogy','nietzsche e a crítica aos valores morais'),
+  // Filosofia H2: cadeias e camadas com o argumento visível.
+  filosofia('aristotle-logic','lógica e metafísica aristotélicas'),
+  filosofia('aquinas-synthesis','escolástica e santo tomás de aquino'),
+  filosofia('hume-causation','a crítica de hume à causalidade'),
+  filosofia('hobbes-state','hobbes e o estado de natureza'),
+  filosofia('locke-rights','locke e os direitos naturais'),
+  filosofia('rousseau-general-will','rousseau e a vontade geral'),
+  filosofia('kant-duty','a ética kantiana e o imperativo categórico'),
+  filosofia('historical-materialism','o materialismo histórico'),
+  filosofia('class-struggle','a luta de classes na filosofia marxista'),
+  filosofia('sartre-freedom','o existencialismo de sartre'),
+  filosofia('frankfurt-culture','a escola de frankfurt e a indústria cultural'),
 ];
 
 function chapterText(summary: Pick<InteractiveSummary, 'subject' | 'topic' | 'title'>): string {

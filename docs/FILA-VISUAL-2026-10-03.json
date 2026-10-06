@@ -2,12 +2,12 @@
   "dateUTC": "2026-10-05",
   "mainCommit": "683a573204f92adc247d1493caaa08ad9de9b799",
   "sourceAudit": "docs/visual-integral-2026-10-02/capitulos.json",
-  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; integrada na PR #264. Entrega I: Graciliano, Cabral, Clarice, Rosa, Poesia Concreta e 1960-1980, sete capítulos LG3 revalidados em build local; integrada na PR #266. Entrega J: os seis capítulos LG3 finais (contemporâneos, lusófonos, artes, teatro e canção) revalidados em build local; integrada na PR #267; LG3 sem pendências. Entrega K: os sete capítulos de Sociologia do H3, com texto e operação autoral, revalidados em build local.",
+  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; integrada na PR #264. Entrega I: Graciliano, Cabral, Clarice, Rosa, Poesia Concreta e 1960-1980, sete capítulos LG3 revalidados em build local; integrada na PR #266. Entrega J: os seis capítulos LG3 finais (contemporâneos, lusófonos, artes, teatro e canção) revalidados em build local; integrada na PR #267; LG3 sem pendências. Entrega K: os sete capítulos de Sociologia do H3, com texto e operação autoral, revalidados em build local. Entrega L: os dezenove capítulos de Filosofia (oito do H3 e onze do H2), com oficina de argumento ancorada no texto rev 2, revalidados em build local. Entrega N: os doze capítulos de Sociologia do H2, com texto rev 2 e oficina autoral, revalidados em build local; Humanas sem pendências.",
   "editorialApproval": "Não promovida; manter e achado tratado não certificam capítulo completo.",
   "counts": {
-    "achado_tratado": 208,
+    "achado_tratado": 239,
     "preservar_mecanismo": 315,
-    "fila_a_revalidar": 90
+    "fila_a_revalidar": 59
   },
   "subjects": {
     "Física": {
@@ -61,14 +61,14 @@
     "Filosofia": {
       "total": 35,
       "preservar_mecanismo": 0,
-      "achado_tratado": 16,
-      "fila_a_revalidar": 19
+      "achado_tratado": 35,
+      "fila_a_revalidar": 0
     },
     "Sociologia": {
       "total": 27,
       "preservar_mecanismo": 0,
-      "achado_tratado": 15,
-      "fila_a_revalidar": 12
+      "achado_tratado": 27,
+      "fila_a_revalidar": 0
     },
     "Língua Inglesa": {
       "total": 17,
@@ -99,9 +99,7 @@
     "A1": 1,
     "R2": 15,
     "R3": 27,
-    "R1": 16,
-    "H3": 8,
-    "H2": 23
+    "R1": 16
   },
   "chapters": [
     {
@@ -7030,17 +7028,24 @@
       "subject": "Filosofia",
       "artifact": "myth",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-experiments/TopicExperiment.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_ESPECIFICA",
           "description": "O raio é o mesmo objeto nos critérios mito/logos e os enunciados distinguem tradição/autoridade de argumentação/contestação. Mecanismo pertinente confirmado; aprofundar representação da justificativa racional no próprio desenho, hoje baseada principalmente na troca das palavras."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
@@ -7120,18 +7125,24 @@
       "subject": "Filosofia",
       "artifact": "movimento-dialetico",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/MovimentoDialetico.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Dois círculos Certeza / Aporia / Maiêutica trocam de posição; o terceiro rótulo só aparece embaixo. A fonte descreve o interlocutor começa seguro de que domina o conceito; perguntas revelam contradições e desfazem a falsa segurança. Trocar círculos não torna visível a contradição/produção de ideia ou genealogia: desenhar a transformação conceitual específica deste capítulo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
@@ -7163,18 +7174,24 @@
       "subject": "Filosofia",
       "artifact": "escala-de-graus",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/EscalaDeGraus.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Sombras/Fogo/Dia/Sol aparecem apenas como quatro degraus. Falta a relação prisioneiro–objetos–fogo–sombras e percurso de libertação que organiza a alegoria na fonte. Desenhar a caverna e as projeções, vinculando cada etapa à mudança de conhecimento."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento",
@@ -7182,18 +7199,24 @@
       "subject": "Filosofia",
       "artifact": "escala-de-graus",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/EscalaDeGraus.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Degraus Eikasia / Pistis / Dianoia / Noesis comunicam ordem, mas não exibem os objetos e distinções do capítulo (lida com sombras, reflexos e imagens — cópias de cópias, o grau mais baixo da linha; lida com os próprios objetos sensíveis — animais, plantas e artefatos — e não mais com suas imagens). Incorporar exemplos e relações à escala; não depender exclusivamente do comentário fora do desenho."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-logica-e-metafisica-aristotelicas",
@@ -7201,18 +7224,24 @@
       "subject": "Filosofia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Premissa maior / Premissa menor / Conclusão necessária / Validade ≠ verdade explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (liga o termo maior (mortal) a um termo médio (homem), estabelecendo a premissa geral do silogismo; liga o termo menor (Sócrates) ao mesmo termo médio, conectando o caso particular à premissa geral), além de avançar a seleção e mostrar prosa. A figura deve mostrar, respectivamente, premissas e conclusão ou eventos observados versus conexão necessária; a cadeia de nomes não permite testar essa distinção."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo",
@@ -7220,18 +7249,24 @@
       "subject": "Filosofia",
       "artifact": "escala-de-graus",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/EscalaDeGraus.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A escada Falta→Meio→Excesso sugere subida progressiva ao excesso. A fonte diz que coragem é virtude e covardia/temeridade são vícios opostos, e que o meio depende de prudência, não média automática. Usar uma régua bilateral com caso concreto e meio contextual."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
@@ -7287,18 +7322,24 @@
       "subject": "Filosofia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Aristóteles redescoberto / Fé e razão convergem / Duas verdades / Filosofia serva da teologia explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (o resgate das obras de Aristóteles no século XIII gera um problema teológico urgente: como incorporar um sistema racional pagão sem comprometer a verdade revelada; Tomás resolve a tensão sustentando que fé e razão, corretamente compreendidas, não podem se contradizer, pois ambas têm origem última em Deus), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
@@ -7330,18 +7371,24 @@
       "subject": "Filosofia",
       "artifact": "escala-de-graus",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/EscalaDeGraus.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Degraus Sentidos / Sonho / Gênio comunicam ordem, mas não exibem os objetos e distinções do capítulo (os sentidos enganam ocasionalmente, e quem já foi enganado uma vez tem razão para desconfiar de toda informação sensorial; não há critério seguro para distinguir vigília de sonho, de modo que toda experiência sensorial presente poderia ser ilusão onírica). Incorporar exemplos e relações à escala; não depender exclusivamente do comentário fora do desenho."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
@@ -7397,18 +7444,24 @@
       "subject": "Filosofia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Conjunção constante / Sem conexão necessária / Hábito / Indução sem fundamento explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (observamos contiguidade, sucessão e conjunção constante entre os eventos, mas nunca a força que ligaria um ao outro; não há impressão sensorial de necessidade alguma; a ideia de conexão causal necessária fica sem base empírica que a legitime), além de avançar a seleção e mostrar prosa. A figura deve mostrar, respectivamente, premissas e conclusão ou eventos observados versus conexão necessária; a cadeia de nomes não permite testar essa distinção."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-hobbes-e-o-estado-de-natureza",
@@ -7416,18 +7469,24 @@
       "subject": "Filosofia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Igualdade natural / Guerra de todos / Pacto entre súditos / Soberano absoluto explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (os indivíduos têm capacidades naturais aproximadamente iguais — mesmo o mais fraco pode matar o mais forte por astúcia ou aliança; dessa igualdade decorre a guerra de todos contra todos, condição em que a vida seria solitária, pobre, sórdida, brutal e curta), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-locke-e-os-direitos-naturais",
@@ -7435,18 +7494,24 @@
       "subject": "Filosofia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Lei natural / Governo fiduciário / Poder limitado / Direito de resistência explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (o estado de natureza é regido por uma lei natural acessível à razão, que proíbe prejudicar vida, liberdade, saúde ou bens de outrem; os direitos são anteriores a qualquer governo; o contrato não cria direitos, apenas protege de modo mais eficaz os que já existiam; o governo recebe poder condicionalmente, como um depositário de confiança), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-rousseau-e-a-vontade-geral",
@@ -7454,18 +7519,24 @@
       "subject": "Filosofia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Bondade natural / Propriedade corrompe / Alienação à vontade geral / Liberdade civil explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (o homem natural é solitário, autossuficiente e bom, guiado pelo amor de si e pela piedade, sentimentos pré-sociais que moderam o egoísmo antes de qualquer lei; a desigualdade e os vícios não são naturais, mas nascem quando alguém cerca um pedaço de terra e o declara seu, inaugurando a propriedade e a dependência mútua), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
@@ -7521,18 +7592,24 @@
       "subject": "Filosofia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Boa vontade / Agir por dever / Imperativo categórico / Autonomia explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (só a boa vontade é boa sem restrição, pois vale por querer o dever pelo próprio dever, não pelos resultados que produz; o valor moral de uma ação não está no resultado nem no sentimento que a acompanha, mas na máxima que a determina), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-hegel-e-a-dialetica",
@@ -7540,18 +7617,24 @@
       "subject": "Filosofia",
       "artifact": "movimento-dialetico",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/MovimentoDialetico.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Dois círculos Posição / Contradição / Superação trocam de posição; o terceiro rótulo só aparece embaixo. A fonte descreve uma posição inicial é examinada em profundidade; suas contradições internas geram a negação, não uma oposição arbitrária. Trocar círculos não torna visível a contradição/produção de ideia ou genealogia: desenhar a transformação conceitual específica deste capítulo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-o-materialismo-historico",
@@ -7559,18 +7642,24 @@
       "subject": "Filosofia",
       "artifact": "camadas-de-determinacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CamadasDeDeterminacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Camadas Infraestrutura / Direito e política / Formas de consciência / Efeito de retorno representam uma organização espacial pertinente, porém o único vínculo gráfico parte da base. Completar as relações específicas descritas em Inversão da dialética; Infraestrutura e superestrutura; Modos de produção, inclusive ação coletiva, mediação ou retorno quando a fonte os exige; forças produtivas e relações de produção formam a base material; erguem-se sobre a base e ajudam a legitimar suas relações."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-alienacao-e-mais-valia",
@@ -7602,18 +7691,24 @@
       "subject": "Filosofia",
       "artifact": "camadas-de-determinacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CamadasDeDeterminacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Camadas Relações de produção / Classe em si / Ideologia e Estado / Classe para si representam uma organização espacial pertinente, porém o único vínculo gráfico parte da base. Completar as relações específicas descritas em A tese central; Classe em si e para si; Ideologia e Estado, inclusive ação coletiva, mediação ou retorno quando a fonte os exige; definem grupos antagônicos conforme controlam ou não os meios de produção; existe objetivamente antes mesmo de reconhecer seus interesses comuns."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais",
@@ -7621,18 +7716,24 @@
       "subject": "Filosofia",
       "artifact": "movimento-dialetico",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H3",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/MovimentoDialetico.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Dois círculos Valor universal / Colapso niilista / Criação ativa trocam de posição; o terceiro rótulo só aparece embaixo. A fonte descreve a moral que chamamos de \"bons costumes\" parece nascer de reflexão neutra sobre o bem — aparência que a genealogia desmonta ao rastrear sua origem histórica; a crença que sustentava valores morais absolutos entra em colapso, abrindo o niilismo, o vazio de sentido diante da ausência de novos valores. Trocar círculos não torna visível a contradição/produção de ideia ou genealogia: desenhar a transformação conceitual específica deste capítulo."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-o-existencialismo-de-sartre",
@@ -7640,18 +7741,24 @@
       "subject": "Filosofia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Existência precede essência / Liberdade radical / Responsabilidade universal / Má-fé explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (sem Deus como artesão cósmico, o ser humano primeiro existe e só depois se define por suas escolhas; não há natureza humana fixa e prévia; porque nada determina previamente o que o ser humano é, cada indivíduo é inteiramente responsável por aquilo em que se torna), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural",
@@ -7659,18 +7766,24 @@
       "subject": "Filosofia",
       "artifact": "camadas-de-determinacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/filosofia.ts",
-        "src/views/topic-scenes/families/CamadasDeDeterminacao.tsx"
+        "src/views/visual-instruments/PhilosophyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Camadas Lógica do lucro / Padronização / Pseudoindividualização / Passividade representam uma organização espacial pertinente, porém o único vínculo gráfico parte da base. Completar as relações específicas descritas em Teoria crítica; Razão instrumental; Indústria cultural, inclusive ação coletiva, mediação ou retorno quando a fonte os exige; organiza a produção cultural como indústria planejada para consumo; obras aparentemente diferentes repetem a mesma fórmula."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-l",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-l/README.md",
+        "description": "Filosofia H2/H3: oficina de argumento com estados ancorados em frases literais do texto rev 2 e desenho que muda a cada estado. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
@@ -7901,18 +8014,24 @@
       "subject": "Sociologia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Transmissão de normas / Homogeneidade mínima / Coesão garantida explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (transmite normas, valores e conhecimentos necessários à vida coletiva; produz a homogeneidade mínima sem a qual a sociedade não se sustenta), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
@@ -7920,18 +8039,24 @@
       "subject": "Sociologia",
       "artifact": "camadas-de-determinacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CamadasDeDeterminacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Camadas Base econômica / Superestrutura representam uma organização espacial pertinente, porém o único vínculo gráfico parte da base. Completar as relações específicas descritas em O conceito; Base e superestrutura; Sucessão histórica, inclusive ação coletiva, mediação ou retorno quando a fonte os exige; condiciona a superestrutura jurídica, política e ideológica; atua de volta sobre a base, com autonomia relativa e efeitos próprios."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-ideologia-e-alienacao",
@@ -7939,18 +8064,24 @@
       "subject": "Sociologia",
       "artifact": "camadas-de-determinacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CamadasDeDeterminacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Camadas Trabalho social / Ideologia representam uma organização espacial pertinente, porém o único vínculo gráfico parte da base. Completar as relações específicas descritas em Ideologia; Alienação; Fetichismo da mercadoria, inclusive ação coletiva, mediação ou retorno quando a fonte os exige; produz o valor da mercadoria, ainda que essa origem fique oculta; apresenta interesses particulares de uma classe como se fossem universais e naturais."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
@@ -7982,18 +8113,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Racional c/ fins / Racional c/ valores / Afetiva / Tradicional; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de calcula meios adequados para objetivos escolhidos; age por convicção, independentemente das consequências. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-dominacao-e-poder-em-weber",
@@ -8001,18 +8138,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Tradicional / Carismática / Racional-legal; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de funda-se no costume e na santidade das tradições; funda-se em qualidades extraordinárias atribuídas ao líder. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
@@ -8020,18 +8163,24 @@
       "subject": "Sociologia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Angústia da salvação / Êxito como sinal de graça / Acumulação sistemática explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (a doutrina da predestinação gerava angústia sobre a salvação; o êxito no trabalho, lido como vocação, passou a ser sinal possível de graça, e a ascese desestimulava o consumo), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-cultura-e-etnocentrismo",
@@ -8161,18 +8310,24 @@
       "subject": "Sociologia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Distinguir sexo de gênero / Os papéis variam / Logo, são transformáveis explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (sexo remete a características biológicas e gênero a construções sociais de masculinidade e feminilidade; papéis considerados naturais variam entre sociedades e ao longo da história), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-divisao-social-do-trabalho",
@@ -8228,18 +8383,24 @@
       "subject": "Sociologia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Ritmo e preço definidos / Controle algorítmico / Subordinação explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (o trabalhador é classificado como parceiro autônomo, mas tem ritmo, preço e avaliação definidos pela plataforma; o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
@@ -8247,18 +8408,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Clássicos / Novos movimentos; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de organizavam-se em torno de trabalho, salário e condições de produção; articulam-se em torno de identidade, reconhecimento e qualidade de vida. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-cidadania-e-direitos",
@@ -8291,18 +8458,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Direta / Representativa / Participativa; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de é exercida em assembleia, possível em comunidades pequenas; delega a decisão a eleitos. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-globalizacao-economica-e-cultural",
@@ -8310,18 +8483,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Homogeneização / Hibridismo / Identidades locais; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de ocorre em certos consumos; reelabora localmente elementos externos. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-o-estado-nacao-na-era-global",
@@ -8329,18 +8508,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Soberania relativizada / Estado persiste / Nacionalismo; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de é relativizada por fluxos financeiros, acordos e organismos multilaterais; continua assegurando contratos, regulando mercados e respondendo a crises. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-a-sociedade-da-informacao",
@@ -10776,11 +10961,10 @@
   "editorial": {
     "source": "src/data/deepSummaryContent.json",
     "total": 612,
-    "revision2": 540,
-    "pending": 70,
+    "revision2": 552,
+    "pending": 58,
     "counts": {
-      "Redação": 58,
-      "Sociologia": 12
+      "Redação": 58
     },
     "chapters": [
       {
@@ -11130,78 +11314,6 @@
         "topic": "Tangenciamento e Fuga: a Fronteira do Tema",
         "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
         "batch": "R2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Democracia e Participação Política",
-        "id": "summary-sociologia-democracia-e-participacao-politica",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Desigualdade de Gênero",
-        "id": "summary-sociologia-desigualdade-de-genero",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Dominação e Poder em Weber",
-        "id": "summary-sociologia-dominacao-e-poder-em-weber",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Educação e Socialização em Durkheim",
-        "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Globalização Econômica e Cultural",
-        "id": "summary-sociologia-globalizacao-economica-e-cultural",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Ideologia e Alienação",
-        "id": "summary-sociologia-ideologia-e-alienacao",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Modo de Produção e Estrutura Social",
-        "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Movimentos Sociais Clássicos e Contemporâneos",
-        "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "O Estado-Nação na Era Global",
-        "id": "summary-sociologia-o-estado-nacao-na-era-global",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Precarização e Uberização do Trabalho",
-        "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Tipos de Ação Social",
-        "id": "summary-sociologia-tipos-de-acao-social",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Ética Protestante e o Espírito do Capitalismo",
-        "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
-        "batch": "H2"
       }
     ],
     "revision3": 2

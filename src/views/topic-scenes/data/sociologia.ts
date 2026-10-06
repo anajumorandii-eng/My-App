@@ -17,10 +17,10 @@ export const sociologia: SceneEntry[] = [
     question: 'Que tipo de sentido orienta uma ação social?',
     nota: 'São tipos ideais: na realidade, as ações costumam combinar mais de um tipo.',
     items: [
-      { label: 'Racional c/ fins', claim: 'calcula meios adequados para objetivos escolhidos', section: 'Os quatro tipos', quote: 'A ação racional com relação a fins calcula meios adequados para objetivos escolhidos.' },
-      { label: 'Racional c/ valores', claim: 'age por convicção, independentemente das consequências', section: 'Os quatro tipos', quote: 'A racional com relação a valores age por convicção, independentemente das consequências.' },
-      { label: 'Afetiva', claim: 'é movida por emoções', section: 'Os quatro tipos', quote: 'A afetiva é movida por emoções.' },
-      { label: 'Tradicional', claim: 'é guiada pelo costume', section: 'Os quatro tipos', quote: 'A tradicional é guiada pelo costume.' },
+      { label: 'Racional c/ fins', claim: 'calcula meios adequados para objetivos escolhidos', section: 'Os quatro tipos', quote: 'A ação racional com relação a fins calcula meios adequados para objetivos escolhidos e pesa consequências.' },
+      { label: 'Racional c/ valores', claim: 'age por convicção, independentemente das consequências', section: 'Os quatro tipos', quote: 'A racional com relação a valores age por convicção, independentemente das consequências, porque o valor em si — dever, honra, fé — é o que importa.' },
+      { label: 'Afetiva', claim: 'é movida por emoções', section: 'Os quatro tipos', quote: 'A afetiva é movida por emoções do momento.' },
+      { label: 'Tradicional', claim: 'é guiada pelo costume', section: 'Os quatro tipos', quote: 'A tradicional é guiada pelo costume arraigado, quase sem reflexão.' },
     ],
   },
   {
@@ -29,8 +29,8 @@ export const sociologia: SceneEntry[] = [
     question: 'Em que se funda a legitimidade de uma dominação?',
     nota: 'supor que os tipos aparecem puros na realidade, quando se combinam em casos concretos',
     items: [
-      { label: 'Tradicional', claim: 'funda-se no costume e na santidade das tradições', section: 'Os três tipos de dominação legítima', quote: 'A tradicional funda-se no costume e na santidade das tradições, como na autoridade patriarcal.' },
-      { label: 'Carismática', claim: 'funda-se em qualidades extraordinárias atribuídas ao líder', section: 'Os três tipos de dominação legítima', quote: 'A carismática funda-se em qualidades extraordinárias atribuídas ao líder, sendo instável e dependente do reconhecimento contínuo.' },
+      { label: 'Tradicional', claim: 'funda-se no costume e na santidade das tradições', section: 'Os três tipos de dominação legítima', quote: 'A dominação tradicional funda-se no costume e na santidade das tradições, como na autoridade patriarcal ou na do senhor de terras: obedece-se à pessoa designada pelo costume.' },
+      { label: 'Carismática', claim: 'funda-se em qualidades extraordinárias atribuídas ao líder', section: 'Os três tipos de dominação legítima', quote: 'A carismática funda-se em qualidades extraordinárias atribuídas ao líder — heroísmo, santidade, dom —, sendo instável e dependente do reconhecimento contínuo dos seguidores.' },
       { label: 'Racional-legal', claim: 'funda-se em regras impessoais e no cargo, não na pessoa', section: 'Os três tipos de dominação legítima', quote: 'A racional-legal funda-se em regras impessoais e no cargo, e não na pessoa que o ocupa.' },
     ],
   },
@@ -39,9 +39,9 @@ export const sociologia: SceneEntry[] = [
     family: 'tipologia',
     question: 'Como o poder de decidir é exercido?',
     items: [
-      { label: 'Direta', claim: 'é exercida em assembleia, possível em comunidades pequenas', section: 'Formas de democracia', quote: 'A democracia direta, exercida em assembleia, foi possível em comunidades pequenas.' },
-      { label: 'Representativa', claim: 'delega a decisão a eleitos', section: 'Formas de democracia', quote: 'A representativa delega a decisão a eleitos.' },
-      { label: 'Participativa', claim: 'combina representação com instrumentos de intervenção direta', section: 'Formas de democracia', quote: 'A participativa combina representação com instrumentos de intervenção direta, como plebiscito, referendo, iniciativa popular, conselhos setoriais, conferências e orçamento participativo.' },
+      { label: 'Direta', claim: 'é exercida em assembleia, possível em comunidades pequenas', section: 'Formas de democracia', quote: 'A democracia direta, exercida em assembleia de cidadãos, foi possível em comunidades pequenas, como a Atenas clássica, onde a cidadania excluía mulheres, estrangeiros e escravizados.' },
+      { label: 'Representativa', claim: 'delega a decisão a eleitos', section: 'Formas de democracia', quote: 'A representativa delega a decisão a eleitos, que respondem aos eleitores na eleição seguinte; ela permite governar milhões, mas afasta o cidadão da decisão cotidiana.' },
+      { label: 'Participativa', claim: 'combina representação com instrumentos de intervenção direta', section: 'Formas de democracia', quote: 'A participativa combina representação com instrumentos de intervenção direta, como plebiscito, referendo, iniciativa popular, conselhos setoriais, conferências e orçamento participativo, criado em Porto Alegre em 1989.' },
     ],
   },
   {
@@ -50,7 +50,7 @@ export const sociologia: SceneEntry[] = [
     question: 'Em torno de que pauta os movimentos sociais se organizam?',
     nota: 'supor que os novos movimentos substituíram os clássicos, quando coexistem e frequentemente se articulam',
     items: [
-      { label: 'Clássicos', claim: 'organizavam-se em torno de trabalho, salário e condições de produção', section: 'Movimentos clássicos e novos', quote: 'Os clássicos, sobretudo operários, organizavam-se em torno de trabalho, salário e condições de produção, com sindicatos e partidos como forma.' },
+      { label: 'Clássicos', claim: 'organizavam-se em torno de trabalho, salário e condições de produção', section: 'Movimentos clássicos e novos', quote: 'Os clássicos, sobretudo operários, organizavam-se em torno de trabalho, salário e condições de produção, com sindicatos e partidos como forma típica, base de classe e objetivo de transformação econômica.' },
       { label: 'Novos movimentos', claim: 'articulam-se em torno de identidade, reconhecimento e qualidade de vida', section: 'Movimentos clássicos e novos', quote: 'Os chamados novos movimentos sociais, a partir dos anos 1960, articulam-se em torno de identidade, reconhecimento e qualidade de vida: feminismo, movimento negro, LGBTQIA+, ambientalismo e movimentos urbanos.' },
     ],
   },
@@ -59,9 +59,9 @@ export const sociologia: SceneEntry[] = [
     family: 'tipologia',
     question: 'Como a globalização afeta a cultura?',
     items: [
-      { label: 'Homogeneização', claim: 'ocorre em certos consumos', section: 'Dimensão cultural', quote: 'As respostas variam: homogeneização em certos consumos, hibridismo com reelaboração local de elementos externos e reforço de identidades locais como reação, fenômeno visível em música, culinária e religiosidade.' },
-      { label: 'Hibridismo', claim: 'reelabora localmente elementos externos', section: 'Dimensão cultural', quote: 'As respostas variam: homogeneização em certos consumos, hibridismo com reelaboração local de elementos externos e reforço de identidades locais como reação, fenômeno visível em música, culinária e religiosidade.' },
-      { label: 'Identidades locais', claim: 'reforçam-se como reação à difusão global', section: 'Dimensão cultural', quote: 'As respostas variam: homogeneização em certos consumos, hibridismo com reelaboração local de elementos externos e reforço de identidades locais como reação, fenômeno visível em música, culinária e religiosidade.' },
+      { label: 'Homogeneização', claim: 'ocorre em certos consumos', section: 'Dimensão cultural', quote: 'Homogeneização: certos consumos se padronizam' },
+      { label: 'Hibridismo', claim: 'reelabora localmente elementos externos', section: 'Dimensão cultural', quote: 'Hibridismo: elementos externos são reelaborados localmente' },
+      { label: 'Identidades locais', claim: 'reforçam-se como reação à difusão global', section: 'Dimensão cultural', quote: 'Reforço de identidades locais: a cultura local é reafirmada como reação' },
     ],
   },
   {
@@ -70,9 +70,9 @@ export const sociologia: SceneEntry[] = [
     question: 'O que acontece com a soberania do Estado na era global?',
     nota: 'supor que nacionalismo e globalização são fenômenos sucessivos, quando coexistem e se alimentam mutuamente',
     items: [
-      { label: 'Soberania relativizada', claim: 'é relativizada por fluxos financeiros, acordos e organismos multilaterais', section: 'Soberania em questão', quote: 'A soberania estatal é relativizada por fluxos financeiros que ultrapassam fronteiras, acordos internacionais que limitam decisões nacionais, empresas transnacionais com poder econômico superior ao de muitos países e organismos multilaterais com regras vinculantes em comércio, propriedade intelectual e finanças.' },
-      { label: 'Estado persiste', claim: 'continua assegurando contratos, regulando mercados e respondendo a crises', section: 'Persistência do Estado', quote: 'Apesar disso, o Estado não desapareceu: é ele que assegura contratos, regula mercados, tributa, controla fronteiras, presta serviços e responde a crises, como ficou evidente em crises financeiras e na pandemia.' },
-      { label: 'Nacionalismo', claim: 'reage à percepção de perda de controle, em tensão permanente com a interdependência', section: 'Nacionalismos e tensões', quote: 'A percepção de perda de controle alimentou reações nacionalistas, protecionismo e políticas migratórias restritivas em vários países.' },
+      { label: 'Soberania relativizada', claim: 'é relativizada por fluxos financeiros, acordos e organismos multilaterais', section: 'Soberania em questão', quote: 'Essa soberania estatal é relativizada por fluxos financeiros que ultrapassam fronteiras, acordos internacionais que limitam decisões nacionais, empresas transnacionais com faturamento superior ao PIB de muitos países e organismos multilaterais com regras vinculantes em comércio, propriedade intelectual e finanças, como OMC e FMI.' },
+      { label: 'Estado persiste', claim: 'continua assegurando contratos, regulando mercados e respondendo a crises', section: 'Persistência do Estado', quote: 'Apesar disso, o Estado não desapareceu: é ele que assegura contratos, regula mercados, tributa, emite moeda, controla fronteiras, presta serviços e responde a crises.' },
+      { label: 'Nacionalismo', claim: 'reage à percepção de perda de controle, em tensão permanente com a interdependência', section: 'Nacionalismos e tensões', quote: 'A percepção de perda de controle alimentou reações nacionalistas, protecionismo e políticas migratórias restritivas em vários países: o Brexit, aprovado em referendo em 2016 com o lema “retomar o controle”, é exemplo central.' },
     ],
   },
   // Task 3 — família criterios-conjuntivos (3 capítulos)
@@ -217,8 +217,8 @@ export const sociologia: SceneEntry[] = [
     family: 'cadeia-de-derivacao',
     question: 'Como a doutrina calvinista da predestinação leva ao espírito do capitalismo?',
     items: [
-      { label: 'Angústia da salvação', claim: 'a doutrina da predestinação gerava angústia sobre a salvação', section: 'O mecanismo', quote: 'A doutrina da predestinação gerava angústia sobre a salvação.' },
-      { label: 'Êxito como sinal de graça', claim: 'o êxito no trabalho, lido como vocação, passou a ser sinal possível de graça, e a ascese desestimulava o consumo', section: 'O mecanismo', quote: 'O êxito no trabalho, entendido como vocação, passou a ser lido como possível sinal de graça, e a ascese intramundana desestimulava o consumo ostentatório.' },
+      { label: 'Angústia da salvação', claim: 'a doutrina da predestinação gerava angústia sobre a salvação', section: 'O mecanismo', quote: 'nada se pode fazer para mudar a escolha. Isso gerava angústia sobre a salvação' },
+      { label: 'Êxito como sinal de graça', claim: 'o êxito no trabalho, lido como vocação, passou a ser sinal possível de graça, e a ascese desestimulava o consumo', section: 'O mecanismo', quote: 'O êxito no trabalho, entendido como vocação (Beruf), passou a ser lido como possível sinal de graça — não causa da salvação, mas indício dela.' },
       { label: 'Acumulação sistemática', claim: 'o resultado foi acumulação sistemática, reinvestimento e disciplina, favoráveis ao capitalismo', section: 'O mecanismo', quote: 'O resultado prático foi acumulação sistemática, reinvestimento e disciplina, favoráveis ao desenvolvimento capitalista.' },
     ],
   },
@@ -238,8 +238,8 @@ export const sociologia: SceneEntry[] = [
     question: 'Por que a classificação do entregador de plataforma como autônomo é questionável?',
     items: [
       { label: 'Ritmo e preço definidos', claim: 'o trabalhador é classificado como parceiro autônomo, mas tem ritmo, preço e avaliação definidos pela plataforma', section: 'Uberização', quote: 'O trabalhador é classificado como parceiro autônomo, mas tem seu ritmo, preço e avaliação definidos pela plataforma, o que caracteriza controle sem os direitos correspondentes ao emprego.' },
-      { label: 'Controle algorítmico', claim: 'o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio', section: 'Pratique e confira', quote: 'o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio, o que configura subordinação, ainda que o horário seja escolhido pelo trabalhador.' },
-      { label: 'Subordinação', claim: 'isso configura subordinação, ainda que o horário seja escolhido pelo trabalhador', section: 'Pratique e confira', quote: 'o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio, o que configura subordinação, ainda que o horário seja escolhido pelo trabalhador.' },
+      { label: 'Controle algorítmico', claim: 'o algoritmo distribui tarefas, avalia e pune', section: 'Pratique e confira', quote: 'ritmo e preço são definidos pela plataforma; o algoritmo distribui tarefas, avalia e pune' },
+      { label: 'Subordinação', claim: 'a soma desses controles reproduz a subordinação de um emprego', section: 'Pratique e confira', quote: 'a soma reproduz a subordinação de um emprego' },
     ],
   },
   {
@@ -249,7 +249,7 @@ export const sociologia: SceneEntry[] = [
     items: [
       { label: 'Distinguir sexo de gênero', claim: 'sexo remete a características biológicas e gênero a construções sociais de masculinidade e feminilidade', section: 'Sexo e gênero', quote: 'A distinção entre sexo, referido a características biológicas, e gênero, referido a construções sociais de masculinidade e feminilidade, é o ponto de partida do campo.' },
       { label: 'Os papéis variam', claim: 'papéis considerados naturais variam entre sociedades e ao longo da história', section: 'Sexo e gênero', quote: 'Ela permite mostrar que papéis considerados naturais variam entre sociedades e ao longo da história, o que os revela como socialmente produzidos.' },
-      { label: 'Logo, são transformáveis', claim: 'variando entre culturas e épocas, são construções sociais e podem ser transformados', section: 'Pratique e confira', quote: 'ela permite mostrar que papéis atribuídos a homens e mulheres variam entre culturas e épocas, portanto são construções sociais e podem ser transformados' },
+      { label: 'Logo, são transformáveis', claim: 'variando entre culturas e épocas, são construções sociais e podem ser transformados', section: 'Pratique e confira', quote: 'A variação revela que o papel foi socialmente construído e, por isso, pode ser transformado por leis, educação e conflito social.' },
     ],
   },
   // Task 4 — família camadas-de-determinacao (2 capítulos)
