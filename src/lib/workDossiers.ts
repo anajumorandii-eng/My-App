@@ -13,6 +13,7 @@ const LOADERS: Record<string, () => Promise<{ default: unknown }>> = {
   'memorias-de-martha': () => import('../data/obras/dossies/memorias-de-martha.json'),
   nebulosas: () => import('../data/obras/dossies/nebulosas.json'),
   'opusculo-humanitario': () => import('../data/obras/dossies/opusculo-humanitario.json'),
+  'morangos-mofados': () => import('../data/obras/dossies/morangos-mofados.json'),
   'olhos-dagua': () => import('../data/obras/dossies/olhos-dagua.json'),
   'a-vida-nao-e-util': () => import('../data/obras/dossies/a-vida-nao-e-util.json'),
   'prosas-seguidas-de-odes-minimas': () => import('../data/obras/dossies/prosas-seguidas-de-odes-minimas.json'),
