@@ -14,7 +14,7 @@ afterEach(cleanup);
 const ids = Object.keys(SOCIOLOGY_OPERATIONS) as SociologyOperationId[];
 const summaryOf = (id: SociologyOperationId) => interactiveSummaries.find(item => item.subject === 'Sociologia' && item.topic === SOCIOLOGY_OPERATIONS[id].topic)!;
 
-describe('Sociologia H3: o conceito aplicado a casos do próprio capítulo', () => {
+describe('Sociologia H2 e H3: o conceito aplicado a casos do próprio capítulo', () => {
   it.each(ids)('%s abre a oficina própria e mantém o par dos nós 1 e 2', id => {
     const summary = summaryOf(id);
     if (id === 'solidarity-types') {
@@ -77,7 +77,42 @@ describe('Sociologia H3: o conceito aplicado a casos do próprio capítulo', () 
     expect(screen.getByText(/Só reconhecimento/)).toBeInTheDocument();
   });
 
-  it('o lote tem sete capítulos revisados no padrão do aprofundamento', () => {
+  it('o mesmo ato muda de tipo conforme o sentido visado', () => {
+    const view = render(<SociologyOperation id="social-action-types"/>);
+    fireEvent.click(screen.getByRole('button', { name: 'Mesmo ato' }));
+    const before = view.container.querySelector('svg')!.innerHTML;
+    expect(screen.getByText('racional a fins')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Tradicional' }));
+    // A tipologia que só listava cartões foi o achado: o caso precisa ser redesenhado.
+    expect(view.container.querySelector('svg')!.innerHTML).not.toBe(before);
+    expect(screen.getByRole('button', { name: 'Tradicional' })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByText('tradicional')).toBeInTheDocument();
+  });
+
+  it('sem ascese o lucro é gasto e a cadeia de Weber não fecha', () => {
+    const view = render(<SociologyOperation id="protestant-ethic"/>);
+    fireEvent.click(screen.getByRole('button', { name: 'Cadeia' }));
+    const before = view.container.querySelector('svg')!.innerHTML;
+    fireEvent.click(screen.getByRole('button', { name: 'Ascese' }));
+    expect(view.container.querySelector('svg')!.innerHTML).not.toBe(before);
+    expect(screen.getByText(/Sem ascese, o lucro é gasto/)).toBeInTheDocument();
+  });
+
+  it('urna sem informação plural é democracia apenas eleitoral', () => {
+    render(<SociologyOperation id="democracy-forms"/>);
+    fireEvent.click(screen.getByRole('button', { name: 'Condições' }));
+    fireEvent.click(screen.getByRole('button', { name: 'Informação plural' }));
+    expect(screen.getByText(/democracia apenas eleitoral/)).toBeInTheDocument();
+    expect(screen.getByText('só eleitoral')).toBeInTheDocument();
+  });
+
+  it('protesto sem organização não é movimento social', () => {
+    render(<SociologyOperation id="social-movements"/>);
+    fireEvent.click(screen.getByRole('button', { name: 'Organização' }));
+    expect(screen.getByText(/Falta organização: mobilização pontual/)).toBeInTheDocument();
+  });
+
+  it('os dezenove capítulos estão revisados no padrão do aprofundamento', () => {
     for (const config of Object.values(SOCIOLOGY_OPERATIONS)) {
       const chapter = chapters.find(item => item.subject === 'Sociologia' && item.topic === config.topic)!;
       expect(chapter.rev).toBe(2);

@@ -515,6 +515,20 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   sociologia('mobility-grid','classes sociais e mobilidade social'),
   sociologia('citizenship-rights','cidadania e direitos'),
   sociologia('information-society','a sociedade da informação'),
+  // Sociologia H2: tipologias e cadeias que eram cartões de rótulo. O tipo
+  // escolhido ou o elo retirado redesenha o mesmo caso autoral do capítulo.
+  sociologia('education-socialization','educação e socialização em durkheim'),
+  sociologia('mode-of-production','modo de produção e estrutura social'),
+  sociologia('ideology-alienation','ideologia e alienação'),
+  sociologia('social-action-types','tipos de ação social'),
+  sociologia('weber-domination','dominação e poder em weber'),
+  sociologia('protestant-ethic','ética protestante e o espírito do capitalismo'),
+  sociologia('gender-inequality','desigualdade de gênero'),
+  sociologia('platform-work','precarização e uberização do trabalho'),
+  sociologia('social-movements','movimentos sociais clássicos e contemporâneos'),
+  sociologia('democracy-forms','democracia e participação política'),
+  sociologia('globalization-flows','globalização econômica e cultural'),
+  sociologia('nation-state','o estado-nação na era global'),
   // Filosofia H3: o argumento desenhado. Mito e logos fica no experimento
   // prioritário, que mostra a mesma oficina.
   filosofia('socratic-method','o método socrático e a maiêutica'),

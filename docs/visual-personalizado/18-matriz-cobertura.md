@@ -16,8 +16,8 @@ outro assunto. O detalhe capítulo a capítulo está em
 | --- | ---: | ---: |
 | Experimento exato | 8 | 1,3% |
 | Prancha autoral | 43 | 7,0% |
-| Instrumento | 363 | 59,2% |
-| Cena validada | 199 | 32,5% |
+| Instrumento | 375 | 61,2% |
+| Cena validada | 187 | 30,5% |
 | Lacuna honesta | 0 | 0,0% |
 | **Total** | **613** | |
 
@@ -38,11 +38,11 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Matemática | 83 | 1 | 11 | 71 | 0 | 0 |
 | Química | 48 | 0 | 7 | 23 | 18 | 0 |
 | Filosofia | 35 | 1 | 0 | 18 | 16 | 0 |
-| Sociologia | 27 | 1 | 0 | 6 | 20 | 0 |
+| Sociologia | 27 | 1 | 0 | 18 | 8 | 0 |
 
 ## Capítulos com mais de um candidato
 
-95 capítulos têm mais de um artefato registrado. A seleção continua exclusiva: vence o primeiro da ordem acima.
+107 capítulos têm mais de um artefato registrado. A seleção continua exclusiva: vence o primeiro da ordem acima.
 
 | Capítulo | Matéria | Vence | Perde |
 | --- | --- | --- | --- |
@@ -137,7 +137,19 @@ outro assunto. O detalhe capítulo a capítulo está em
 | A Escola de Frankfurt e a Indústria Cultural | Filosofia | Instrumento (frankfurt-culture) | Cena validada (camadas-de-determinacao) |
 | O que é o Fato Social | Sociologia | Instrumento (social-fact) | Cena validada (criterios-conjuntivos) |
 | Anomia e Coesão Social | Sociologia | Instrumento (anomie-grid) | Cena validada (grade-de-eixos) |
+| Educação e Socialização em Durkheim | Sociologia | Instrumento (education-socialization) | Cena validada (cadeia-de-derivacao) |
+| Modo de Produção e Estrutura Social | Sociologia | Instrumento (mode-of-production) | Cena validada (camadas-de-determinacao) |
+| Ideologia e Alienação | Sociologia | Instrumento (ideology-alienation) | Cena validada (camadas-de-determinacao) |
+| Tipos de Ação Social | Sociologia | Instrumento (social-action-types) | Cena validada (tipologia) |
+| Dominação e Poder em Weber | Sociologia | Instrumento (weber-domination) | Cena validada (tipologia) |
+| Ética Protestante e o Espírito do Capitalismo | Sociologia | Instrumento (protestant-ethic) | Cena validada (cadeia-de-derivacao) |
 | Identidade e Diferença | Sociologia | Instrumento (identity-difference) | Cena validada (criterios-conjuntivos) |
 | Classes Sociais e Mobilidade Social | Sociologia | Instrumento (mobility-grid) | Cena validada (grade-de-eixos) |
+| Desigualdade de Gênero | Sociologia | Instrumento (gender-inequality) | Cena validada (cadeia-de-derivacao) |
+| Precarização e Uberização do Trabalho | Sociologia | Instrumento (platform-work) | Cena validada (cadeia-de-derivacao) |
+| Movimentos Sociais Clássicos e Contemporâneos | Sociologia | Instrumento (social-movements) | Cena validada (tipologia) |
 | Cidadania e Direitos | Sociologia | Instrumento (citizenship-rights) | Cena validada (escala-de-graus) |
+| Democracia e Participação Política | Sociologia | Instrumento (democracy-forms) | Cena validada (tipologia) |
+| Globalização Econômica e Cultural | Sociologia | Instrumento (globalization-flows) | Cena validada (tipologia) |
+| O Estado-Nação na Era Global | Sociologia | Instrumento (nation-state) | Cena validada (tipologia) |
 | A Sociedade da Informação | Sociologia | Instrumento (information-society) | Cena validada (criterios-conjuntivos) |
