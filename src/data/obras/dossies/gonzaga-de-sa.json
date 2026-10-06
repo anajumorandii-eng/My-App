@@ -1,0 +1,879 @@
+{
+  "workId": "gonzaga-de-sa",
+  "slug": "gonzaga-de-sa",
+  "edition": {
+    "label": "Lima Barreto, Vida e morte de M. J. Gonzaga de Sá — Revista do Brasil, São Paulo, 1919; exportação Wikisource 10/12/2025",
+    "pdfPageCount": 92,
+    "note": "Páginas do PDF. Camada textual integral lida; grafias mistas e erros de transcrição. Capítulo II sem cabeçalho no corpo; título confirmado no índice e no sumário Wikisource. Advertência e Explicação necessária analisadas como molduras ficcionais. Sem cotejo integral do fac-símile nem crítica acadêmica incorporada. Todo o material depende de revisão editorial."
+  },
+  "units": [
+    {
+      "id": "advertencia",
+      "order": 1,
+      "type": "fragment",
+      "title": "Advertência",
+      "opening": "ADVERTENCIA",
+      "pdfStartPage": 5,
+      "pdfEndPage": 5,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Uma voz assinada Lima Barreto apresenta o manuscrito de Augusto Machado e questiona sua classificação como biografia: faltam datas e informações, enquanto o biógrafo aparece em excesso. A advertência integra o jogo ficcional de autoria; não é um prefácio crítico externo.",
+        "observe": [
+          "Localização: moldura anterior à fala de Augusto; p. 5, depois da folha de rosto e das epígrafes.",
+          "Síntese factual: o apresentador recebe, revisa e decide publicar um manuscrito atribuído a um antigo colega de escola e de ofício.",
+          "Função: instala o problema do gênero antes que o leitor conheça Gonzaga; a biografia promete conhecer outro, mas revela também quem escreve.",
+          "Voz: a assinatura Lima Barreto representa aqui uma instância de editor dentro da ficção. Não torna Augusto Machado uma pessoa histórica identificada.",
+          "Forma: a cortesia elogiosa convive com a enumeração dos defeitos; a aprovação contém uma ressalva que orienta a leitura.",
+          "Tensão: mérito literário versus exatidão documental; a ausência de datas deixa de ser mero defeito quando produz uma forma de memória.",
+          "Figuras: Augusto é apresentado primeiro como colega e aspirante a escritor; Gonzaga ainda aparece apenas como objeto do manuscrito.",
+          "Motivos: publicação, obscuridade e exposição do eu antecipam as dificuldades de circulação intelectual dos capítulos II e VII.",
+          "Relação social: a proximidade de escola e ofício sustenta o circuito de reconhecimento entre homens ligados ao funcionalismo.",
+          "Diálogo crítico: não foi lida crítica acadêmica sobre esta moldura; a hipótese de efeito metabiográfico é síntese própria sustentada pelo contraste entre gênero e execução.",
+          "Passagem-chave: a censura à presença excessiva de Machado (p. 5) deve ser testada no autorretrato da paisagem (I) e nas angústias do teatro (XI).",
+          "FUVEST, treino: distinguir autor empírico e editor ficcional; explicar por que o anúncio de insuficiência documental modifica a expectativa sobre a narrativa.",
+          "UNICAMP, treino: relacionar esta apresentação à Explicação necessária; comparar o critério do editor com a justificativa irônica do biógrafo.",
+          "Erro comum: tratar a Advertência como testemunho histórico comprovando que Augusto escreveu o romance e Lima apenas o publicou.",
+          "Micro-revisão: quem entrega o manuscrito? Que ressalva altera o pacto de leitura? Por que a presença do biógrafo também pode produzir valor literário?"
+        ]
+      }
+    },
+    {
+      "id": "explicacao",
+      "order": 2,
+      "type": "fragment",
+      "title": "Explicação necessária",
+      "opening": "EXPLICAÇÃO NECESSARIA",
+      "pdfStartPage": 6,
+      "pdfEndPage": 7,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Augusto Machado justifica a biografia de um funcionário modesto pela divisão do trabalho: se há biógrafo dos ministros, também deve haver dos amanuenses. O elogio de autoridades e a modéstia exagerada constroem uma paródia da legitimidade científica e literária.",
+        "observe": [
+          "Localização: segunda moldura, p. 6–7; assinatura Augusto Machado e data 8-10-1906, anterior à Advertência datada de abril de 1918.",
+          "Síntese: Augusto contrapõe sua monografia às biografias de ministros de Pelino Guedes e explica sua suposta falta de formação literária.",
+          "Função: troca a vida prestigiosa por uma vida obscura e estabelece a ironia como meio de discutir quem merece representação.",
+          "Voz: o eu é Augusto, não Lima Barreto; a autobiografia jocosa anuncia a mistura entre biógrafo e biografado.",
+          "Forma: negações enfáticas, falsa modéstia e vocabulário científico transformam uma escolha literária em descoberta universal deliberadamente desproporcional.",
+          "Tensão: reivindicação de legitimidade versus recusa ostensiva de ambição; a insistência em negar propósito revolucionário não elimina o efeito crítico da escolha.",
+          "Figuras: Pelino e Licínio aparecem filtrados pela sátira de Augusto, não como retratos históricos verificados neste dossiê.",
+          "Motivos: divisão do trabalho, leis, títulos e relatórios retornam na Secretaria dos Cultos e na caricatura de Beldroegas.",
+          "Social: o protocolo hierárquico da biografia dos poderosos é deslocado para o trabalho dos subordinados ministeriais.",
+          "Diálogo crítico: nenhuma crítica especializada foi lida; a leitura da ironia deve ser demonstrada pela desproporção entre argumento científico e projeto literário.",
+          "Passagem-chave: biógrafos de ministros e de amanuenses, p. 6; o pareamento produz igualdade de direito narrativo mantendo visível a desigualdade social.",
+          "FUVEST, treino: identificar a falsa impessoalidade e evitar alternativa que tome todas as negativas como declaração literal de neutralidade.",
+          "UNICAMP, treino: relacionar título do paratexto, assinatura e linguagem científica; analisar como uma explicação também encena a autoridade que critica.",
+          "Erro: converter a ironia em programa político unívoco; há crítica textual, mas não se deve inventar um manifesto do autor.",
+          "Micro-revisão: qual modelo Augusto invoca? Como a divisão do trabalho é parodiada? Que diferença faz biografar um amanuense?"
+        ]
+      }
+    },
+    {
+      "id": "cap-i",
+      "order": 3,
+      "type": "chapter",
+      "title": "I — O inventor e a aeronave",
+      "opening": "I O inventor e a aeronave",
+      "pdfStartPage": 8,
+      "pdfEndPage": 16,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Augusto conhece Gonzaga na Secretaria dos Cultos, recorda uma caminhada e conta sua morte ao colher uma flor. Em seguida transcreve uma pequena narrativa deixada por Gonzaga: um inventor prepara meticulosamente a aeronave, mas ela não sobe. A biografia começa pelo fim e oferece uma interpretação falível do manuscrito.",
+        "observe": [
+          "Localização: primeiro capítulo, p. 8–16; reúne encontro burocrático, paisagem, morte e narrativa encaixada.",
+          "Síntese: uma discussão de salvas eclesiásticas apresenta Gonzaga; o passeio culmina na queda fatal; o papel herdado conta o fracasso do inventor.",
+          "Função: antecipar a morte retira do suspense o centro da obra; importa reconstruir os gestos e a experiência que a vida oficial não explica.",
+          "Voz: Augusto narra, Gonzaga fala e depois assume a autoria do conto transcrito; a explicação do acaso pertence ao biógrafo.",
+          "Forma: sátira numérica das salvas, descrição lírica do mar e conto técnico coexistem; o contraste impede reduzir o romance a registro linear de fatos.",
+          "Tensão: cálculo e vontade não dominam o acaso; a metáfora do inventor é hipótese de leitura do narrador, não confissão inequívoca de Gonzaga.",
+          "Figuras: o funcionário percebe o ridículo institucional e cultiva uma delicadeza discreta; Augusto expõe sua ambição de ser diretor e sua formação afetiva.",
+          "Motivos: voo, morte, flor, mar e leitura; os pombos e a lembrança infantil de querer voar retomarão a aeronave.",
+          "Social: ministérios mobilizam erudição e cálculo para administrar prestígio clerical; sua atividade é desproporcional à relevância do problema.",
+          "Diálogo crítico: nenhuma leitura acadêmica incorporada; hipótese própria: a aeronave liga potência intelectual e impossibilidade de realização, sem abolir a contingência.",
+          "Passagens: p. 14, a morte ao oferecer a flor; p. 15, a máquina não sobe; p. 16, interpretação de Augusto sobre o acaso.",
+          "FUVEST, treino: explicar o efeito da antecipação do desfecho e reconhecer quem interpreta o documento encontrado.",
+          "UNICAMP, treino: articular narrativa encaixada e vida de Gonzaga por duas marcas; justificar também por que a correspondência não é identidade comprovada.",
+          "Erro: afirmar que Gonzaga construiu uma aeronave real; Augusto declara que não o imaginava envolvido em balões e publica uma narrativa.",
+          "Micro-revisão: em que repartição se conhecem? Como o conto muda de tom no final? A leitura do acaso explica tudo sobre Gonzaga?"
+        ]
+      }
+    },
+    {
+      "id": "cap-ii",
+      "order": 4,
+      "type": "chapter",
+      "title": "II — Primeiras informações",
+      "opening": "Manuel Joaquim Gonzaga de Sá era bacharel",
+      "pdfStartPage": 17,
+      "pdfEndPage": 20,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "O capítulo apresenta a instrução, a origem familiar e o percurso funcional de Gonzaga. Augusto contrasta sua curiosidade persistente com o desgaste de outros funcionários instruídos, cuja capacidade se perde num meio incapaz de valorizá-la. O cabeçalho II está ausente do corpo extraído; o título aparece no índice.",
+        "observe": [
+          "Localização: p. 17–20, após a morte antecipada; o título é recuperado do índice p. 91, e a abertura real da p. 17 é o nome completo de Gonzaga.",
+          "Síntese: bacharel em letras pelo Colégio D. Pedro II, filho de general, Gonzaga recusa o percurso de formação profissional e mantém leituras após os sessenta.",
+          "Função: reconstrói retrospectivamente a vida intelectual e insere o caso individual num conjunto de talentos sem reconhecimento.",
+          "Voz: Augusto reúne observação e informações recebidas; o retrato passa de hipótese sobre criação literária a conclusão sobre curiosidade desinteressada.",
+          "Forma: digressão sobre outro escriturário introduz uma pequena biografia paralela; a memória do colega fica reduzida à boa letra.",
+          "Tensão: o emprego sustenta a inteligência materialmente, mas o ambiente pode embotá-la; Gonzaga resiste sem converter estudo em glória.",
+          "Figuras: a formação erudita não coincide com o título profissional valorizado; o funcionário que domina línguas antigas torna-se contraste de destino.",
+          "Motivos: revistas, obscuridade, notoriedade, estudo e glória; o circuito de pequenas publicações volta no capítulo VII.",
+          "Social: a valorização restrita de médicos, advogados e engenheiros torna invisíveis outras aptidões; o funcionalismo serve de abrigo e de desgaste.",
+          "Diálogo crítico: a leitura do emprego como contradição é síntese própria; não atribuir a uma tese ou escola crítica sem fonte lida.",
+          "Passagens: p. 18, o elogio póstumo da letra; p. 19, a hipótese de ausência de destinatário para a glória; o croquis explicita a construção gradual do retrato.",
+          "FUVEST, treino: identificar a ironia de elogiar a caligrafia em vez dos conhecimentos e ligar o episódio ao projeto de biografia dos obscuros.",
+          "UNICAMP, treino: comparar a instrução de Gonzaga com a de Beldroegas; mostrar diferença entre leitura aberta e saber limitado à rotina.",
+          "Erro: chamar Gonzaga de ignorante por não ser doutor; bacharel em letras e formação profissional são coisas distintas no texto.",
+          "Micro-revisão: qual sua formação? Para que serve a biografia paralela? O emprego protege ou sufoca a inteligência? Explique os dois lados."
+        ]
+      }
+    },
+    {
+      "id": "cap-iii",
+      "order": 5,
+      "type": "chapter",
+      "title": "III — Emblemas públicos",
+      "opening": "III Emblemas publicos",
+      "pdfStartPage": 21,
+      "pdfEndPage": 23,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Gonzaga critica as armas públicas e comenta a antiga moldura marítima do chafariz de mestre Valentim. No Correio, interpreta ironicamente os valores dos selos com efígies de homens célebres como se correspondessem ao valor das próprias pessoas. A memória nacional aparece materializada em signos banais.",
+        "observe": [
+          "Localização: p. 21–23, uma boutade anunciada no fim de II; passa do jardim do Paço às mesas do Correio.",
+          "Síntese: o diálogo sobre heráldica é interrompido por considerações sobre exploração das mulheres; no dia seguinte a conversa continua pelos selos.",
+          "Função: deslocar a história dos grandes para objetos cotidianos e mostrar a capacidade de Gonzaga de interrogar a aparência pública do prestígio.",
+          "Voz: as avaliações estéticas e monetárias são falas de Gonzaga; Augusto concorda, mas também participa do comentário sobre homens e mulheres.",
+          "Forma: o valor de franquia postal é lido literalmente como destino do retratado; a transferência semântica cria humor e rebaixa a celebridade.",
+          "Tensão: os emblemas querem monumentalizar a nação, mas podem exibir pobreza imaginativa e hierarquias arbitrárias.",
+          "Figuras: o observador transforma o ato burocrático de postar cartas em discussão histórica; Augusto é interlocutor e testemunha.",
+          "Motivos: imagem pública, dinheiro, memória e paisagem; o chafariz perde beleza quando o mar deixa de funcionar como moldura.",
+          "Social: colecionar nomes ilustres não garante entendimento histórico; a distribuição de efígies também participa da representação oficial da República.",
+          "Diálogo crítico: sem crítica documentada; hipótese própria: comparar a biografia monetizada dos selos à recusa da vida oficial no capítulo I.",
+          "Passagem-chave: p. 23, a ideia de um Plutarco postal; os preços não são uma classificação histórica objetiva do valor dos homenageados.",
+          "FUVEST, treino: reconhecer o procedimento irônico, em vez de escolher uma alternativa que descreva os preços como julgamento sério do narrador.",
+          "UNICAMP, treino: comparar selo e chafariz enquanto suportes de memória; explicar como entorno e circulação interferem no sentido.",
+          "Erro: tomar a preferência de Gonzaga por certos símbolos coloniais como aprovação integral da sociedade colonial.",
+          "Micro-revisão: onde continuam a conversa? Que troca de sentidos produz a graça dos selos? Por que memória pública e valor de pessoa não coincidem?"
+        ]
+      }
+    },
+    {
+      "id": "cap-iv",
+      "order": 6,
+      "type": "chapter",
+      "title": "IV — Petrópolis",
+      "opening": "IV Petropolis",
+      "pdfStartPage": 24,
+      "pdfEndPage": 27,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "A crítica à pretensão aristocrática conduz Gonzaga e Augusto para o Engenho da Penha, em vez da sociedade petropolitana. No caminho, jornais mundanos são satirizados, e o canal, as mangueiras e as ruínas suscitam recordações da formação da cidade. Petrópolis funciona como polo social recusado, não como destino efetivo do passeio.",
+        "observe": [
+          "Localização: p. 24–27; depois dos emblemas oficiais, o foco passa à fabricação social da distinção.",
+          "Síntese: os amigos viajam para Bom Sucesso e caminham ao canal; Gonzaga comenta casamento, linhagem, mundanismo e antigos caminhos comerciais.",
+          "Função: ligar pertencimento urbano à memória de populações diversas e pôr em conflito tal vínculo com os círculos de riqueza e arrivismo.",
+          "Voz: a afirmação de ser o Rio pertence a Gonzaga; a visão final das canoas de Estácio é uma imaginação de Augusto.",
+          "Forma: sátira das notícias de quem sobe e desce transforma o deslocamento na serra em medida vazia de prestígio; a descrição final recompõe o passado.",
+          "Tensão: Gonzaga rejeita superstição de sangue, mas usa a própria ascendência para afirmar autoridade; observar o movimento sem apagar sua contradição.",
+          "Figuras: a linhagem Sá é invocada contra outras pretensões; a rapariga que guia bois insere trabalho vivo na paisagem observada.",
+          "Motivos: subida, descida, linhagem, ruína e circulação marítima; os lugares guardam usos econômicos que o presente esqueceu.",
+          "Social: riqueza recente e diplomas não equivalem a nobreza; o cronista mundano reproduz distinções que o diálogo ridiculariza.",
+          "Diálogo crítico: sem tese acadêmica incorporada; a leitura de um pertencimento plural precisa ser confrontada com a hostilidade aos recém-chegados em XI.",
+          "Passagens: p. 25, a identificação com as populações do Rio; p. 26–27, a ruína comercial e a evocação da morte de Estácio.",
+          "FUVEST, treino: evitar a confusão entre título e local do passeio; explicar a ironia da fantasia de casamentos em pijama.",
+          "UNICAMP, treino: contrastar notícia mundana e memória reconstruída a partir de vestígios; indicar o tipo de história que cada uma torna visível.",
+          "Erro: afirmar que o capítulo retrata uma visita a Petrópolis; o grupo tomado como alvo vai no trem, mas os amigos descem em Bom Sucesso.",
+          "Micro-revisão: para onde vão? Como o jornal é satirizado? Que passado uma ruína permite imaginar?"
+        ]
+      }
+    },
+    {
+      "id": "cap-v",
+      "order": 7,
+      "type": "chapter",
+      "title": "V — O Passeiador",
+      "opening": "V O Passeiador",
+      "pdfStartPage": 28,
+      "pdfEndPage": 30,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Augusto descreve as caminhadas de Gonzaga em busca das casas e marcas de sua infância. O desaparecimento de um casebre provoca sofrimento; em diálogo, Gonzaga interpreta a forma urbana por topografia, história e transportes. A cidade é arquivo afetivo e social, não mero cenário.",
+        "observe": [
+          "Localização: p. 28–30; generaliza a prática do passeio apresentada nos capítulos anteriores.",
+          "Síntese: Augusto segue o amigo e compreende sua busca por lugares antigos; a crítica à dispersão do Rio desencadeia uma interpretação da configuração da cidade.",
+          "Função: tornar o caminhar um método de memória e de conhecimento; mostrar como a forma urbana liga a experiência individual à história coletiva.",
+          "Voz: Augusto qualifica a memória do amigo como relativamente exata e criadora; a longa exposição geográfica pertence a Gonzaga.",
+          "Forma: metáforas geológicas de camadas e depósitos organizam épocas sociais; o bonde mistura a distribuição de bairros e grupos.",
+          "Tensão: preservar a singularidade não é impedir todo melhoramento; Gonzaga admite túneis e aperfeiçoamento da viação para reduzir distâncias.",
+          "Figuras: Gonzaga é historiador oral e afetivo; Augusto oferece a objeção que provoca a demonstração, sem ser um interlocutor neutro.",
+          "Motivos: casa, telhado, saudade, morro e bonde; o casebre demolido mostra o custo íntimo do desaparecimento material.",
+          "Social: tráfico de escravos, Independência, lavras de Minas e Corte aparecem sedimentados nas formas e nos usos do espaço.",
+          "Diálogo crítico: não há leitura acadêmica documentada; a hipótese de cidade-arquivo deve conservar a avaliação parcial do observador sobre os subúrbios.",
+          "Passagens: p. 28, a casa demolida e a história oral; p. 30, a mistura das estratificações urbanas por transportes e instituições.",
+          "FUVEST, treino: explicar uma metáfora espacial e ligá-la à reconstrução do tempo, sem tratá-la como ornamentação.",
+          "UNICAMP, treino: analisar a relação entre descrição e argumento; comparar a cidade plural com o arruamento suburbano descrito em IX.",
+          "Erro: declarar que Gonzaga rejeita qualquer modernização; o texto distingue uniformização da cidade e melhoria da circulação.",
+          "Micro-revisão: por que visita casas antigas? Qual o efeito das imagens geológicas? A cidade pode mudar e conservar singularidade?"
+        ]
+      }
+    },
+    {
+      "id": "cap-vi",
+      "order": 8,
+      "type": "chapter",
+      "title": "VI — O Barão, as Costureiras e outras cousas",
+      "opening": "VI O Barão, as Costureiras e outras cousas",
+      "pdfStartPage": 31,
+      "pdfEndPage": 36,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Uma conversa sobre a influência do Barão do Rio Branco passa à roupa e ao papel social das costureiras. Depois de uma meditação satírica sobre a aparência das elites, Gonzaga critica generalizações sobre felicidade e raça: classes e médias não esgotam o sofrimento singular.",
+        "observe": [
+          "Localização: p. 31–36, conversa no Campo de Santana seguida de caminhada à livraria.",
+          "Síntese: a sátira ao ministro e ao poeta conduz ao vestuário; a felicidade de uma rica senhora e o orgulho de um operário viram exemplos contra médias sentimentais.",
+          "Função: expor a fabricação material da grandeza social e formular um limite ao conhecimento que substitui indivíduos por classes abstratas.",
+          "Voz: Augusto amplia o tema das costureiras com entusiasmo; Gonzaga ironiza a pretensão da análise e depois retoma seriamente o problema das abstrações.",
+          "Forma: diálogos encadeados, fórmulas de aparência matemática e exemplos grotescos desmontam a solenidade política e científica.",
+          "Tensão: criticar grupos sociais não autoriza deduzir mecanicamente a felicidade de cada pessoa; o texto preserva diferenças entre situação e experiência.",
+          "Figuras: a costureira, agente ignorada do luxo, torna visível o trabalho que sustenta o aspecto superior das elites; Belasman e Felismino são exemplos argumentativos.",
+          "Motivos: roupa, grandeza, médias, ciência e simpatia; a cena transforma a visualidade social em problema do conhecimento.",
+          "Social: vestidos e títulos contribuem para a respeitabilidade dirigente; a crítica ao Barão contesta uso do Tesouro e apagamento de colaboradores.",
+          "Diálogo crítico: nenhuma crítica lida; leitura própria: a objeção à média afetiva não nega a desigualdade material e deve ser testada nas cenas de humilhação de IX–XI.",
+          "Passagens: p. 33, trabalho das costureiras; p. 35, felicidade singular e debate dos universais; não converter exemplos inventados pelo falante em estatísticas.",
+          "FUVEST, treino: identificar quem conduz cada etapa da conversa e explicar por que uma abstração pode ser útil num domínio e enganosa em outro.",
+          "UNICAMP, treino: comparar roupa e título como formas de distinção; relacionar a crítica às médias com o enterro de um indivíduo obscuro.",
+          "Erro: tomar a linguagem sobre mulheres como posição autoral transparente; há vozes, preconceitos e ironias a analisar, não a subscrever.",
+          "Micro-revisão: que trabalho sustenta o luxo? Como o exemplo de felicidade enfrenta uma média? A crítica das abstrações elimina a crítica de classe?"
+        ]
+      }
+    },
+    {
+      "id": "cap-vii",
+      "order": 9,
+      "type": "chapter",
+      "title": "VII — Pleno contacto",
+      "opening": "VII Pleno contacto",
+      "pdfStartPage": 37,
+      "pdfEndPage": 44,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "O primeiro encontro na repartição é retomado para aprofundar a amizade. Augusto visita a casa de Gonzaga, tenta decifrar seus desenhos de rostos e conhece Inácio. A leitura de revistas suburbanas leva a uma crítica da publicidade intelectual dominada por empresas e prestígios.",
+        "observe": [
+          "Localização: p. 37–44; recuo ao encontro burocrático, seguido pela primeira visita íntima à casa.",
+          "Síntese: observação da dupla atitude de Gonzaga, hipóteses sobre sua mágoa, relato de acidente ferroviário, entrada de Escolástica e discussão de revistas obscuras.",
+          "Função: ampliar o contato para além da pessoa pública sem resolver o segredo; ligar amizade privada a redes marginalizadas de criação.",
+          "Voz: Augusto reconhece que suas hipóteses sobre o sofrimento do amigo não o satisfazem; a dúvida delimita o alcance da biografia.",
+          "Forma: aposento descrito por livros, aves de bronze e reproduções artísticas; esses objetos reaparecem como testemunhas personificadas da crise em XI.",
+          "Tensão: falar e estudar não bastam para publicar; os grandes jornais oferecem visibilidade mediante adaptação ao público e aos poderosos.",
+          "Figuras: Inácio, liberto na pia e irmão de leite, é amado por Gonzaga, mas permanece servidor; a gratidão não apaga a hierarquia da relação.",
+          "Motivos: desenhos de rostos, aves, livros, revista suburbana e trem; o acidente contrasta o projeto humano com a máquina que ameaça seu criador.",
+          "Social: a Pesquisa de Cascadura desloca a inovação intelectual para fora das vitrines centrais; a capital não monopoliza o talento.",
+          "Diálogo crítico: sem crítica especializada lida; a relação ambivalente com Inácio é hipótese textual apoiada na oscilação entre admiração e avaliação subalterna.",
+          "Passagens: p. 38, hipóteses inconclusivas; p. 41, vínculo com Inácio; p. 43, os filtros empresariais da publicação.",
+          "FUVEST, treino: analisar o limite do conhecimento do narrador e o contraste entre funcionário formal e interlocutor livre.",
+          "UNICAMP, treino: relacionar espaço doméstico e vida intelectual; comparar Pesquisa e grandes revistas sem tomar seu sumário ficcional como bibliografia existente.",
+          "Erro: usar artigos da revista Pesquisa como fontes acadêmicas reais; são objetos representados no romance, sem consulta externa.",
+          "Micro-revisão: que gesto Augusto não decifra? Como Inácio se vincula à casa? Por que visibilidade e qualidade intelectual não coincidem?"
+        ]
+      }
+    },
+    {
+      "id": "cap-viii",
+      "order": 10,
+      "type": "chapter",
+      "title": "VIII — O Jantar",
+      "opening": "VIII O Jantar",
+      "pdfStartPage": 45,
+      "pdfEndPage": 51,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "No jantar, retratos familiares, móveis e uma palmeira abrem a memória da casa. A leitura de uma notícia sobre zebus satiriza a solenidade jornalística; as lembranças musicais de Escolástica e Gonzaga evocam o teatro do Império. Augusto sai enraizado numa tradição que também contém crimes e erros.",
+        "observe": [
+          "Localização: p. 45–51; continuação direta da visita, concluída pelo retorno de Augusto à cidade.",
+          "Síntese: antepassados, preservação da casa, chegada dos zebus, infância de Gonzaga, futuro de Aleixo e lembranças de concertos compõem o jantar.",
+          "Função: mostrar que herança cultural e experiência histórica não equivalem a inocência; a tradição dá raiz e também veneno.",
+          "Voz: Escolástica conserva a memória afetiva das apresentações; Gonzaga a contextualiza; Augusto interpreta o que acaba de ouvir.",
+          "Forma: interrupções na leitura do jornal desmontam o tom épico da recepção de animais; descrição animada de árvore e piano acompanha a memória.",
+          "Tensão: o acolhimento doméstico coexiste com a evocação da violência patriarcal nos retratos e da produção social da aristocracia.",
+          "Figuras: Escolástica surge como cuidadora que criou Gonzaga; sua lembrança de ter querido voar aproxima o amigo do inventor sem provar autobiografia do conto.",
+          "Motivos: voo, palmeira, retratos, música, luzes e raiz; a árvore ganha orgulho pela resistência aos obstáculos, sugerindo uma analogia humana.",
+          "Social: Gonzaga interpreta a ópera como tentativa de reunir e polir uma elite; o relato não autoriza considerar esse processo moralmente redentor.",
+          "Diálogo crítico: nenhuma fonte acadêmica incorporada; hipótese própria: as lembranças do teatro preparando XI fazem da cena atual um teste da memória idealizada.",
+          "Passagens: p. 48, vontade infantil de voar; p. 51, Augusto reconhece erros e crimes dos antepassados junto às virtudes.",
+          "FUVEST, treino: explicar como a imagem da raiz e do veneno impede uma leitura apenas nostálgica.",
+          "UNICAMP, treino: comparar memória musical afetiva e explicação social do Lírico; apontar diferenças entre as perspectivas.",
+          "Erro: concluir que a casa antiga preserva uma ordem inteiramente justa; o narrador reconhece explicitamente seus crimes.",
+          "Micro-revisão: o que o jornal celebra? Como o voo infantil retoma I? Por que o passado oferece raiz e veneno?"
+        ]
+      }
+    },
+    {
+      "id": "cap-ix",
+      "order": 11,
+      "type": "chapter",
+      "title": "IX — O Padrinho",
+      "opening": "IX O Padrinho",
+      "pdfStartPage": 52,
+      "pdfEndPage": 63,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Augusto medita sobre mulheres estrangeiras e conversa com amigos num café. Gonzaga chega com a notícia da morte de Romualdo e pede ajuda para o enterro. No velório, o desejo por Alcmena, a crítica ao racismo e a preocupação com Aleixo entrelaçam vida, morte e exclusão social.",
+        "observe": [
+          "Localização: p. 52–63; do café central ao trem suburbano e ao velório de Romualdo.",
+          "Síntese: a chegada de Gonzaga interrompe os debates; a viagem expõe um pretenso sábio racista; no velório Augusto conversa e flerta com Alcmena, depois contempla Aleixo.",
+          "Função: colocar a morte de um trabalhador no centro da biografia e converter a simpatia intelectual em cuidado concreto com o filho órfão.",
+          "Voz: Augusto narra desejo e remorso; Alcmena formula observações sobre felicidade e memória; Gonzaga argumenta contra teorias raciais.",
+          "Forma: mulheres estrangeiras comparadas a frotas coloniais, trabalhadores a bois de carga; as analogias aproximam circulação de riqueza e esforço invisível.",
+          "Tensão: reflexão sobre a morte estimula o apego à vida; cultura aumenta a consciência da desigualdade sem garantir meios de superá-la.",
+          "Figuras: Romualdo é servente da Secretaria; Gabriela administra o velório; Alcmena pensa além da fantasia do narrador; Aleixo chora e busca o padrinho.",
+          "Motivos: trem, calor humano, desejo, raça, infância e consciência; o abraço do menino troca teoria abstrata por vínculo afetivo.",
+          "Social: o interlocutor racista erra uma explicação elementar sobre fios elétricos; a ironia desfaz sua pretensão de autoridade intelectual sobre outras pessoas.",
+          "Diálogo crítico: sem estudo acadêmico lido; leitura própria: a convivência do velório enfrenta a separação racial teoricamente imposta, mas as vozes ainda usam categorias hierárquicas.",
+          "Passagens: p. 56, pseudociência racial e ignorância; p. 61, felicidade pensada por Alcmena; p. 63, previsão dos obstáculos que Aleixo enfrentará.",
+          "FUVEST, treino: diferenciar desejo de Augusto, fala de Alcmena e teoria de Gonzaga; mostrar por que a cena não opõe simplesmente razão e emoção.",
+          "UNICAMP, treino: relacionar o exemplo ferroviário ao argumento antirracista; comparar o lugar de Aleixo na cena e no final da obra.",
+          "Erro: dizer que o velório é de Gonzaga; o morto é Romualdo, cuja perda transforma o amigo e o cuidado com Aleixo.",
+          "Micro-revisão: quem morre aqui? Como o diálogo desautoriza o racismo? Que risco o narrador prevê para a inteligência de Aleixo?"
+        ]
+      }
+    },
+    {
+      "id": "cap-x",
+      "order": 12,
+      "type": "chapter",
+      "title": "X — O enterro",
+      "opening": "X O enterro",
+      "pdfStartPage": 64,
+      "pdfEndPage": 71,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "No enterro de Romualdo, o dia luminoso contrasta com o rito e a indiferença social. Depois, Gonzaga oscila entre desespero, defesa da violência, confiança na doçura e dúvida sobre a consciência. Reconhece que a morte do compadre desencadeou sua explosão e decide educar Aleixo.",
+        "observe": [
+          "Localização: p. 64–71, dia seguinte ao velório; enterro, passeio, refeição e despedida.",
+          "Síntese: o cortejo chega ao Caju; os amigos caminham pela praia e pelo Passeio Público; Gonzaga altera o tom e termina assumindo a educação do afilhado.",
+          "Função: confrontar universalidade da morte e desigualdade das vidas; tornar observável a instabilidade afetiva que a biografia tenta compreender.",
+          "Voz: Augusto registra a própria indiferença e faz novas hipóteses sobre Gonzaga; este explica posteriormente a violência de suas palavras pelo luto.",
+          "Forma: luz, movimento e alegria externa contrastam com o caixão; pausas, perguntas e mudanças bruscas de afirmação dramatizam o pensamento.",
+          "Tensão: consciência permite compreender injustiças e também sofre por elas; o desejo de extingui-la não se estabiliza como solução.",
+          "Figuras: a memória de Romualdo expõe disciplina militar, subalternidade e medo; o cuidado com Aleixo oferece ação concreta onde a teoria vacila.",
+          "Motivos: morte, beleza indiferente, desenho na areia, bondade, violência e dúvida; a mudança de registro não é desvio a apagar.",
+          "Social: o casamento de pessoas pobres recebe chacota de autoridades; o direito proclamado não se cumpre igualmente na prática.",
+          "Diálogo crítico: nenhuma crítica documentada; a oscilação entre gesto solidário e retórica desesperada sustenta uma interpretação própria de personagem contraditória.",
+          "Passagens: p. 69, defesa da força seguida da doçura; p. 70, explicação pelo luto; p. 71, decisão de educar Aleixo.",
+          "FUVEST, treino: relacionar duas falas contraditórias ao contexto do luto e evitar eleger uma delas como doutrina integral da obra.",
+          "UNICAMP, treino: explicar a função do contraste luminoso e relacioná-lo à indiferença social, sem supor que a natureza seja personagem maligna.",
+          "Erro: apresentar a proposta de morte coletiva como recomendação do dossiê ou tese final do autor; é fala desesperada depois deslocada pela cena.",
+          "Micro-revisão: a quem pertence o enterro? Que frase de Gonzaga corrige sua retórica de força? Por que cuidar do menino altera a discussão?"
+        ]
+      }
+    },
+    {
+      "id": "cap-xi",
+      "order": 13,
+      "type": "chapter",
+      "title": "XI — Era feriado nacional...",
+      "opening": "XI Era feriado nacional...",
+      "pdfStartPage": 72,
+      "pdfEndPage": 84,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Augusto observa uma parada, encontra Beldroegas e visita Gonzaga, que revela a crise de sua vida intelectual isolada. À noite vão ao Lírico: o luxo de perto se mostra precário, e os frequentadores são ligados a práticas de enriquecimento. Augusto percebe a contradição entre nostalgia da antiga elite e permanência da exploração.",
+        "observe": [
+          "Localização: p. 72–84; capítulo mais longo, com parada, encontro de rua, crise doméstica e teatro.",
+          "Síntese: festejos cívicos desencadeiam perguntas sobre resignação; Beldroegas só entende leis escritas; Gonzaga se revolta e leva Augusto ao espetáculo.",
+          "Função: expor juntos os mecanismos militares, administrativos e mundanos de autoridade, intensificando a crise antes dos últimos encontros.",
+          "Voz: Augusto se analisa e percebe uma contradição do amigo; as acusações sobre frequentadores são atribuídas ao diálogo e não verificadas como história externa.",
+          "Forma: caricatura de Beldroegas, personificação dos objetos do gabinete e desmonte visual do teatro; proximidade muda a percepção do brilho.",
+          "Tensão: instrução não dá a Augusto pertencimento pleno; a elite o intimida sem ofensa explícita, mostrando força social além das palavras.",
+          "Figuras: Beldroegas admite que a aposentadoria favorece sua promoção; Gonzaga lamenta esterilidade; Pilar aparece segura em contraste com inquietudes das elites.",
+          "Motivos: títulos, ordem, lei, luxo, voo frustrado, estéril e pertencimento; a figura desenhada continua sem explicação definitiva.",
+          "Social: festa pública e privilégios particulares se cruzam; a comparação das gerações mostra tanto mudança de dirigentes quanto continuidade de práticas.",
+          "Diálogo crítico: sem crítica acadêmica incorporada; a nostalgia conservadora é hipótese parcial que precisa conviver com denúncia da exploração e crítica do racismo.",
+          "Passagens: p. 74, a lei segundo Beldroegas; p. 76, esterilidade; p. 80, interior pobre do teatro; p. 83, contradição reconhecida por Augusto.",
+          "FUVEST, treino: explicar o antes e depois da visão do teatro e a diferença entre uma fala de personagem e sua avaliação narrativa.",
+          "UNICAMP, treino: comparar o Lírico lembrado em VIII e o observado em XI; demonstrar a tensão entre afinidade com os antigos e permanência da brutalidade.",
+          "Erro: resolver a contradição alegando superioridade absoluta da monarquia; Augusto identifica que a crítica do amigo oscila.",
+          "Micro-revisão: o que Beldroegas chama de lei? Como a proximidade altera o luxo? Qual contradição Augusto nota no amigo?"
+        ]
+      }
+    },
+    {
+      "id": "cap-xii",
+      "order": 14,
+      "type": "chapter",
+      "title": "XII — Últimos encontros",
+      "opening": "XII Ultimos encontros",
+      "pdfStartPage": 85,
+      "pdfEndPage": 90,
+      "guide": {
+        "editorialStatus": "needs_review",
+        "summary": "Augusto conversa com Aleixo e percebe sua inteligência. A preocupação de Gonzaga com a educação do menino acompanha seu declínio; o narrador admite desconhecer lembranças íntimas que talvez tenham ressurgido. O final retoma a morte com a flor e atribui à formação um valor coletivo possível, embora também amplie o sofrimento.",
+        "observe": [
+          "Localização: p. 85–90; manhã após o teatro e síntese das visitas posteriores; retorno à morte já narrada em I.",
+          "Síntese: raciocínio de Aleixo sobre América e Brasil, jornais franceses atrasados, cuidado crescente do padrinho e educação completada por Escolástica.",
+          "Função: deslocar o legado dos livros herdados para o destino do menino; fechar sem dissipar o segredo psicológico nem a tensão entre estudo e dor.",
+          "Voz: Augusto limita a hipótese de que Aleixo desencadeou lembranças; não encontrou nos papéis indícios capazes de explicar o íntimo de Gonzaga.",
+          "Forma: perguntas pedagógicas, retomada da flor e interrogações finais; uma expectativa coletiva sucede o lamento individual sem abolir o custo.",
+          "Tensão: educar amplia análise e inadaptação ao meio; ainda assim o sofrimento pode produzir obras e benefícios para outros, possibilidade e não garantia.",
+          "Figuras: Aleixo argumenta em vez de repetir uma resposta; Escolástica conclui o cuidado; Augusto reconhece aptidões pedagógicas limitadas.",
+          "Motivos: infância, consciência, amor, legado, flor e sacrifício; o ciclo da vida oferece uma abertura que a morte do amigo não encerra.",
+          "Social: a perda do gosto de estudar pode ter causas externas e não uma incapacidade inata da criança; a pergunta recoloca os obstáculos sociais.",
+          "Diálogo crítico: nenhuma crítica lida; leitura própria: a conclusão não é otimismo pleno nem condenação da escola, pois conserva risco e horizonte de solidariedade.",
+          "Passagens: p. 86, raciocínio do menino; p. 88, falta de indícios do segredo; p. 89–90, benefícios coletivos possíveis e sacrifícios.",
+          "FUVEST, treino: explicar a circularidade entre I e XII e o que muda quando a morte reaparece depois do cuidado com Aleixo.",
+          "UNICAMP, treino: relacionar a leitura escolar à previsão feita no velório; distinguir capacidade demonstrada de futuro apenas imaginado.",
+          "Erro: afirmar que Aleixo se tornou um grande escritor; o texto apresenta uma possibilidade e diz que a tia completou a educação, sem narrar essa carreira.",
+          "Micro-revisão: como Aleixo justifica a resposta? Quem conclui sua educação? Por que o final valoriza o estudo apesar de seu custo?"
+        ]
+      }
+    }
+  ],
+  "modules": [
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-moldura",
+        "ev-flor",
+        "ev-segredo"
+      ],
+      "sourceRefs": [],
+      "markdown": "Este romance de Lima Barreto se apresenta como a biografia de Gonzaga escrita por Augusto Machado. Comece pelas duas molduras: elas avisam que o livro excede a vida oficial e também retrata quem escreve.\n\nA morte está no capítulo I: a questão não é descobrir o desfecho, mas compreender como a inteligência, a amizade, o passeio e a solidariedade se relacionam com uma vida obscura. Não confunda a vida do escritor com a posição das vozes ficcionais.\n\nLeia marcando quatro campos: quem fala; o que aconteceu; como a forma altera o sentido; o que continua apenas hipótese. Siga três fios: cidade como memória; cultura e reconhecimento; cuidado com os outros. Este material permanece em revisão editorial e não possui pesquisa crítica especializada concluída."
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-moldura",
+        "ev-amanuenses",
+        "ev-cidade",
+        "ev-flor",
+        "ev-aeronave",
+        "ev-letra",
+        "ev-selos",
+        "ev-plural",
+        "ev-historiador",
+        "ev-media",
+        "ev-inacio",
+        "ev-ditadura",
+        "ev-veneno",
+        "ev-felicidade",
+        "ev-racismo",
+        "ev-docura",
+        "ev-esteril",
+        "ev-contradicao",
+        "ev-segredo",
+        "ev-final"
+      ],
+      "sourceRefs": [],
+      "markdown": "## 0. Ficha da edição e auditoria\n\nLima Barreto, Vida e morte de M. J. Gonzaga de Sá: folha de rosto com Edição da Revista do Brasil, São Paulo, 1919 (p. 4). PDF de 92 páginas exportado da Wikisource em 10/12/2025 (p. 3). Páginas do arquivo, não universais da obra. P. 1–2 sem texto extraído; p. 91 índice; p. 92 explicação da edição digital. Leitura da camada textual completa, sem comparação integral com fac-símile. O título do capítulo II falta no corpo extraído, mas consta no índice. Grafias alternam e há erros; não normalizar citações silenciosamente.\n\n## 1. Como ler\n\nLeia pela transformação da amizade, não por expectativa de descobrir como Gonzaga morrerá: isso já é narrado em I. Em cada passeio, diferencie o que Augusto vê, o que Gonzaga conta e o que um deles apenas conjectura. Marque mudanças de tom: o satírico pode revelar uma mágoa, e uma máxima severa pode ser corrigida pelo gesto de cuidado.\n\n## 2. Visão geral\n\nRomance construído como biografia ficcional de um funcionário obscuro, escrito por um jovem também funcionário. A tensão central é conhecer e representar uma vida cujas capacidades, dores e vínculos não cabem nos critérios oficiais de glória. A forma combina retrato, passeio urbano, diálogo filosófico e autorretrato do biógrafo.\n\n## 3. Publicação, circulação e recepção\n\nO testemunho bibliográfico verificável é a folha de rosto de 1919 e a referência editorial da página primária da Wikisource, consultada em 06/10/2026. A Advertência e a Explicação necessária possuem datas internas de 1918 e 1906; são dados da composição ficcional, não uma história editorial suficiente. Não foi feita pesquisa documental da recepção inicial ou de tiragem.\n\n## 4. Contexto histórico-social formalizado\n\nRepública, memória imperial, escravidão, títulos profissionais, vida ministerial e mercados da publicidade aparecem por práticas e cenas. A República chega ao funcionário como mudança de calendário (II); a relação com Inácio conserva afeto e desigualdade (VII); o Lírico converte riqueza e respeitabilidade em espetáculo (XI). Evite transformar cada fala histórica em opinião definitiva de Lima Barreto.\n\n## 5. Arquitetura\n\nDuas molduras: Advertência, p. 5, e Explicação necessária, p. 6–7. Doze capítulos: I 8–16; II 17–20; III 21–23; IV 24–27; V 28–30; VI 31–36; VII 37–44; VIII 45–51; IX 52–63; X 64–71; XI 72–84; XII 85–90. O fim da vida está no começo. O encerramento retorna à morte, mas se concentra no legado educativo e na possibilidade de benefício aos outros.\n\n## 6. Leitura por unidade\n\nOs quatorze guias deste dossiê analisam as duas molduras e os doze capítulos reais, com localização, síntese, função, voz, procedimentos, tensão, figuras, motivos, relações sociais, limites críticos, passagens, treino para cada banca, erro e recuperação ativa. I introduz morte e aeronave; II–VI expandem o retrato intelectual e urbano; VII–VIII aprofundam a casa e a tradição; IX–X põem Romualdo e o cuidado no centro; XI dramatiza a crise; XII abre o legado.\n\n## 7. Conteúdo essencial\n\nAugusto conhece Gonzaga em uma demanda ministerial absurda e desenvolve uma amizade feita de leituras, diálogos e caminhadas. A perda do compadre Romualdo coloca o afilhado Aleixo sob seu cuidado. O homem que recusara notoriedade passa a sentir o custo do isolamento. Ao morrer, deixa livros e papéis a Augusto; Escolástica conclui a educação do menino. O conteúdo causal não explica completamente seus segredos.\n\n## 8. Voz e focalização\n\nAugusto é narrador em primeira pessoa, testemunha e participante. Ele muda suas hipóteses sobre Gonzaga e não tem acesso garantido ao íntimo alheio. Em VII e XII, declara dúvidas e falta de provas. A Advertência instala uma voz editorial assinada Lima Barreto; a Explicação é de Augusto; o conto da aeronave é atribuído a Gonzaga. A autoria real do romance não suprime essa distribuição ficcional.\n\n## 9. Sistema de personagens\n\nGonzaga liga erudição, ironia, afeto e crise; Augusto transforma admiração em autorreflexão, preservando contradições. Romualdo apresenta uma vida subalterna cuja perda altera o padrinho; Aleixo combina inteligência demonstrada e destino social ameaçado. Escolástica cuida e completa a formação, embora Augusto por vezes a julgue incapaz de compreender reflexões. Inácio expõe a hierarquia doméstica persistente. Alcmena formula uma compreensão da felicidade que excede sua função de objeto do desejo. Beldroegas caricatura o saber que não conecta regra e vida.\n\n## 10. Tempo e espaço\n\nA cronologia da vida é subordinada à memória: morte antecipada, retorno ao primeiro encontro e episódios encadeados por associação. Passeio Público, Campo de Santana, casa, café, trem, subúrbio, cemitério e teatro organizam diferentes graus de convivência e distinção. A cidade conserva camadas históricas; ao demoli-las, também fere uma memória individual.\n\n## 11. Linguagem, estilo e forma\n\nO diálogo move a reflexão e preserva autoria das opiniões. A sátira cresce por desproporção: cálculo sofisticado para salvas, elogio de caligrafia para um erudito, teoria para regular o número de linhas de avisos. Descrições de céu e mar introduzem contrapontos afetivos; metáforas de geologia, voo, roupas e esterilidade articulam forma social e experiência. A brusca queda de ritmo no fim da aeronave desmonta a confiança do planejamento.\n\n## 12. Gênero, tradição e rupturas\n\nA promessa biográfica é contestada pela própria moldura: faltam datas e o escritor aparece demais. O romance não deve ser cobrado como certidão da vida de uma pessoa real. O alvo das biografias de ministros desloca-se para o amanuense. O documento encontrado e a citação de autores integram a ficção, sem fornecer automaticamente fontes reais para este dossiê.\n\n## 13. Temas como tensões\n\nIndependência intelectual versus isolamento; instrução versus sofrimento consciente; memória versus idealização; simpatia singular versus abstrações classificatórias; doçura versus violência; prestígio visível versus trabalho ignorado. Cada par tem cenas que resistem a uma resposta única: Gonzaga valoriza o conhecimento, mas lamenta esterilidade; prevê dor no estudo, mas assume a educação do afilhado.\n\n## 14. Motivos recorrentes\n\nVoo: aeronave frustrada (I), pombos (VII), desejo infantil (VIII). Casa e ruína: suportes de memória e perdas. Roupa: produção da aparência hierárquica (VI, IX, XI). Desenhos de rostos: vestígios sem decifração (VII, X, XI). Flor: gesto afetivo e morte (I, XII). Luzes: beleza compartilhável, brilho mundano e contraste com o funeral. Nenhum desses motivos recebe uma chave simbólica única comprovada.\n\n## 15. Intertextualidade e cultura\n\nVigny e Bourget na folha de rosto aproximam grandeza e ferida do silêncio. O retrato de Dante, Botticelli, referências a Renan, Barrès, Wells e leituras de revistas qualificam as bibliotecas ficcionais e o esforço de pensar. Não foram lidas essas obras nesta tarefa; só se analisou seu uso localizado no romance. Em IX a comunicação entre os amigos é comparada aos marcianos de Wells, dramatizando uma intimidade que parece dispensar palavras.\n\n## 16. Leituras críticas especializadas\n\nNenhuma tese, dissertação, artigo ou livro crítico foi lido e incorporado. Os enunciados interpretativos são síntese fundamentada na fonte primária, não consenso acadêmico. O dossiê mantém sourceRefs vazio e permanece needs_review; a pesquisa especializada requerida para um dossiê plenamente validado está pendente.\n\n## 17. Estado da questão\n\nSem levantamento acadêmico não é possível declarar consensos, escolas de leitura ou mudança histórica da recepção. Problemas formulados a partir do texto: até que ponto Augusto conhece Gonzaga? Como a crítica às classificações convive com marcas de elitismo e preconceito? Qual a relação entre nostalgia e continuidade da exploração? Essas perguntas são agenda de pesquisa, não debates atribuídos a críticos.\n\n## 18. Cinco close readings\n\n1) I, p. 15: “A machina não subiu.” O período mínimo concentra a negação depois de uma enumeração de trabalho, cálculo e expectativa; Augusto dá sua leitura do acaso na p. 16. 2) II, p. 18: “Coitado, diziam, tinha tão boa letra!” O elogio rebaixa o saber do morto ao atributo funcional que os colegas reconhecem. 3) VI, p. 35: a pergunta sobre média da felicidade põe em crise a transferência de cálculo numérico para a experiência afetiva. 4) X, p. 69: “Não; a maior força do mundo é a doçura.” A correção muda a posição dentro da mesma cena e impede fixar o discurso violento como conclusão. 5) XI, p. 83: Augusto reconhece contradição entre as falas do teatro e do café; esse comentário exige preservar a tensão. 6) XII, p. 88–90: ausência de indícios do segredo e hipótese de benefício coletivo limitam o saber biográfico e o futuro narrado.\n\n## 19. FUVEST — primeira fase\n\nTreino de transferência, não questão oficial nem registro de incidência. Identifique voz e situação antes de avaliar a alternativa. Distratores plausíveis: Gonzaga construiu uma aeronave; o velório de IX é seu; o título Petrópolis corresponde ao destino do passeio; o racismo do passageiro é endossado pela obra; o romance rejeita qualquer melhoria urbana. Corrija cada alternativa pelo dado preciso que ela troca ou extrapola.\n\n## 20. FUVEST — segunda fase\n\nTreine F.O.R.M.A.: foco no verbo, observação textual, recurso, mecanismo e articulação. Exemplo diferente das questões autorais: explique por que a obscuridade não equivale a incapacidade em II. Modelo: o escriturário detém saber erudito, mas os colegas lembram sua letra; a redução irônica mostra uma instituição que reconhece a utilidade mecânica e ignora outras capacidades. O episódio amplia o caso de Gonzaga para uma crítica do reconhecimento social.\n\n## 21. UNICAMP — primeira fase\n\nTreino de leitura integrada, sem afirmar que a obra pertence à lista FUVEST. Cruze a Advertência com uma página narrativa: a primeira anuncia presença excessiva do biógrafo, e I a realiza quando a paisagem o leva a examinar sua vida. Para imagens, descreva primeiro o que o material efetivamente fornece; não deduza o romance por símbolos genéricos de cidade ou avião.\n\n## 22. UNICAMP — segunda fase\n\nTreine F.O.N.T.E.: fonte, operação, núcleo formal, tensão e explicação. Modelo de operação diferente das questões autorais: relacione o espaço da casa às leituras de Gonzaga em VII. O gabinete reúne livros e objetos artísticos, mas o diálogo abre a inteligência para revistas suburbanas e jornais pequenos. O contraste entre interior erudito e circulação periférica impede restringir cultura ao circuito de grande prestígio. Separe itens e explique um mecanismo em cada resposta.\n\n## 23. Comparações\n\nPar interno documentado: teatro recordado em VIII versus teatro observado em XI; a emoção de uma memória se confronta com o exame de materiais pobres e dirigentes brutalizados. Outro par: aeronave de I versus educação em XII; um projeto fracassa e o outro tem realização parcial pela cuidadora. Comparação externa possível com Memórias póstumas de Brás Cubas: examinar morte inicial, digressão e posição social de quem narra, mediante consulta a trechos das duas obras; não afirmar equivalência ou diferença sem essa leitura conjunta.\n\n## 24. Pegadinhas\n\nAutor não é narrador; assinatura na Advertência não é prova de autenticidade histórica. O papel da aeronave é uma narrativa, não registro de construção. Romualdo morre em IX–X; Gonzaga morre em I e tem a morte retomada em XII. Petrópolis é alvo social, não destino final do passeio. O título de II depende do índice do arquivo. Aleixo demonstra inteligência, mas sua carreira futura não é narrada. Falas sobre mulheres, raças e classes exigem atribuição precisa e confronto com o conjunto.\n\n## 25. Estratégia de resolução\n\nMarque o comando e divida suas operações. Identifique capítulo e situação; distinga observação, fala, documento encaixado e conjectura. Localize um procedimento que explique o sentido solicitado. Teste a hipótese em outra cena e verifique contrapontos. Na discursiva, responda diretamente e demonstre; na objetiva, elimine a alternativa que transforma possibilidade em certeza ou troca a voz responsável.\n\n## 26. Memorização inteligente\n\nRecupere cinco âncoras: aeronave; escriturário lembrado pela letra; revistas obscuras; velório e racismo; Lírico e futuro de Aleixo. Ligue cada cena a voz, procedimento e tensão. Desenhe uma cadeia de relações: Gonzaga–Augusto, Gonzaga–Romualdo–Aleixo, Escolástica–educação, Inácio–casa. Anote o que permanece desconhecido para não preencher o vazio com uma história imaginada.\n\n## 27. Perguntas para o professor\n\n1. Como a biografia pode conhecer melhor o observador do que o observado? Discutir moldura e autorretrato. 2. O afeto com Inácio rompe a herança escravista? Confrontar proximidade e subordinação. 3. O que muda entre liberdade de estudar e sentimento de esterilidade? Examinar II e XI. 4. O luto explica sem esgotar a contradição de Gonzaga? Examinar X. 5. Em que sentido educar Aleixo é uma resposta à impossibilidade do voo? Discutir gesto efetivo e limites da analogia.\n\n## 28. Questões autorais\n\nCinco questões de treino estão no módulo Questões, com duas objetivas, duas discursivas e uma comparação interna. São originais, não questões oficiais. O gabarito fica reservado à etapa posterior à tentativa; este módulo não traz letras, espelho ou correção dessas perguntas.\n\n## 29. Matriz bibliográfica\n\nFonte principal: PDF Wikisource, p. 1–92 da camada textual, edição de referência Revista do Brasil 1919. Contribuição: permite leitura integral, mapa e citações; limites: ausência de cotejo integral com imagens e falhas de transcrição. Fonte externa efetivamente consultada: página de abertura e sumário da Wikisource, revisão oldid=440115, em 06/10/2026; confirma edição e doze capítulos, mas não é estudo crítico. Sua versão atual informa CC BY-SA 4.0, enquanto o PDF p. 92 menciona BY-SA 3.0/GNU FDL: preservar a distinção, sem deduzir uniformidade editorial. Nenhum material oficial de prova ou crítica acadêmica incorporado.\n\n## 30. Cola de prova\n\nBiografia ficcional de obscuro, narrada por Augusto. Duas molduras; doze capítulos; morte no começo e retorno no fim. Forma: diálogo, sátira, memória urbana, documento encaixado, conjecturas. Tensões: reconhecimento, pertencimento, consciência dolorosa, tradição ambivalente, cuidado. Observar Romualdo e Aleixo; preservar contradições; nunca confundir hipótese com fato ou personagem com autoria.\n\n## 31. Plano de revisão\n\n24 horas: reconstruir molduras e capítulos e responder às microperguntas sem consulta. Em 7 dias: reler uma cena de cada polo, sátira institucional, casa e funeral; produzir uma análise breve de trecho novo. Em 30 dias: mini-simulado com as duas formas de discursiva e revisão dos erros. Pré-prova: mapa de uma página, cinco âncoras e lista dos limites da narração. Registre erros de voz, evidência, forma e extrapolação; refaça somente os pontos frágeis."
+    },
+    {
+      "id": "critica-debate",
+      "moduleType": "critica_debate",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-aeronave",
+        "ev-inacio",
+        "ev-contradicao",
+        "ev-final"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Camadas de evidência.** Os cartões trazem palavras localizadas no PDF; os guias e módulos articulam uma síntese própria. Nenhuma fonte acadêmica foi lida: não há crítico citado, consenso declarado ou estado da questão concluído.\n\n**Hipóteses em confronto.** A obscuridade pode parecer liberdade para estudar (II), mas a crise de XI a converte em esterilidade. A cidade pode sustentar a singularidade do eu (I e V), enquanto sua organização e instituições fazem o indivíduo sentir-se sem lugar (X e XI). A instrução amplia sofrimento (IX e XII), mas a formação de Aleixo continua sendo um ato generoso. Teste cada leitura no polo que a contraria.\n\n**Limites.** A aproximação entre Gonzaga e o inventor é apresentada pelo narrador, não comprovada como confissão. A nostalgia dos antigos não elimina a denúncia da exploração: Augusto percebe a contradição em XI. O cuidado com Inácio não dissolve a hierarquia. Pesquisa pendente: estudos sobre biografia ficcional, pertencimento urbano, saber e racialização, confrontados com passagens e não apenas com títulos ou resumos."
+    },
+    {
+      "id": "fuvest",
+      "moduleType": "fuvest",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-letra",
+        "ev-amanuenses"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Transferência de leitura para a FUVEST; não material oficial nem confirmação de presença na lista.**\n\nNa objetiva, comece atribuindo a frase: narrador, personagem ou documento? Depois reconstrua a situação e o procedimento. O elogio à letra em II é armadilha útil: parece elogio, mas restringe a memória do intelectual à tarefa burocrática. Um distrator poderia trocar o efeito irônico por valorização completa da erudição.\n\nNa discursiva, use F.O.R.M.A. e respeite o recorte. Para explicar a crítica à administração em I, não basta falar em corrupção: demonstre como a acumulação de pareceres e cálculos trata um problema de honras com saber desproporcional. Para um comando de duas operações, forneça duas unidades claras, cada uma com evidência e mecanismo. Não há levantamento de incidência nem consulta a guia vigente nesta tarefa.",
+      "board": "FUVEST"
+    },
+    {
+      "id": "unicamp",
+      "moduleType": "unicamp",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-moldura",
+        "ev-cidade",
+        "ev-historiador"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Treino para a UNICAMP/Comvest; não questão oficial nem espelho.**\n\nNa objetiva, integre fonte e operação: a Advertência formula uma ressalva à biografia, e um trecho de I pode demonstrar o autorretrato de Augusto pela paisagem. Elimine alternativas que tratem a moldura ficcional como prova histórica ou deduzam intenção autoral sem marcas.\n\nNa discursiva, use F.O.N.T.E. e separe a) e b). Localize a fonte, nomeie o recurso, exponha a tensão e desenvolva a relação. Comparar a cidade de V com o teatro de XI exige mais que dizer que ambos criticam a sociedade: no primeiro caso, espaços armazenam memória; no segundo, a aproximação visual desfaz a impressão de brilho. Não foram consultados manual vigente, provas anteriores ou respostas esperadas; nenhum padrão de frequência é afirmado.",
+      "board": "UNICAMP"
+    },
+    {
+      "id": "questoes",
+      "moduleType": "questoes",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-moldura",
+        "ev-ditadura",
+        "ev-aeronave",
+        "ev-racismo",
+        "ev-contradicao"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Questões autorais — responda antes de consultar correção. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Na Advertência (p. 5), a presença excessiva de Machado em sua biografia sugere que o livro:\nA) constitui um relato documental que exclui o ponto de vista de quem escreve.\nB) altera o pacto biográfico ao fazer do observador também parte do retrato.\nC) foi escrito pelo personagem Gonzaga e apenas revisado por Augusto.\nD) contém exclusivamente dados oficiais da administração imperial.\nE) elimina a memória em favor de uma cronologia exata.\n\n**2. UNICAMP, objetiva, difícil.** Considere a notícia de zebus lida no jantar (VIII, p. 47) e a discussão sobre os filtros dos grandes jornais (VII, p. 43). A relação entre as cenas permite examinar:\nA) a equivalência comprovada entre visibilidade jornalística e qualidade intelectual.\nB) a oposição absoluta entre público rural culto e público urbano sem cultura.\nC) a imprensa como espelho neutro que reproduz todos os talentos indistintamente.\nD) a produção discursiva do prestígio e os limites da circulação de ideias novas.\nE) a impossibilidade de encontrar linguagem solene fora dos ministérios.\n\n**3. FUVEST, discursiva, difícil.** No capítulo I, a longa preparação do inventor é seguida por “A machina não subiu.” (p. 15). a) Explique como a diferença de extensão e ritmo participa do efeito do final. b) Relacione esse efeito à interpretação de Augusto na p. 16, distinguindo relato encaixado e hipótese do biógrafo.\n\n**4. UNICAMP, discursiva, muito difícil.** Releia a conversa sobre classificação racial no trem (IX, p. 56) e a cena final de educação de Aleixo (XII, p. 85–90). a) Identifique o contraste pelo qual o passageiro perde autoridade intelectual. b) Explique por que a inteligência demonstrada pelo menino não permite concluir que seu futuro social será livre de sofrimento.\n\n**5. Comparação interna, muito difícil.** Compare o Lírico lembrado no jantar (VIII, p. 50–51) e o visitado no feriado (XI, p. 79–83). Indique um ponto comum, uma diferença de perspectiva e um procedimento formal de cada apresentação. Explique por que a comparação exige conservar a contradição observada por Augusto."
+    },
+    {
+      "id": "revisao-ativa",
+      "moduleType": "revisao_ativa",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-segredo",
+        "ev-final",
+        "ev-esteril"
+      ],
+      "sourceRefs": [],
+      "markdown": "Reconstrua sem consulta: duas molduras, doze capítulos, cinco cenas-âncora e os vínculos entre Gonzaga, Augusto, Romualdo, Aleixo, Escolástica e Inácio. Depois confronte com o mapa e registre a primeira diferença.\n\n**Factual:** quem morre no velório? Quem conclui a educação? Qual o destino do passeio em IV?\n\n**Formal:** como a biografia inclui o eu de quem escreve? Como o fim da aeronave altera o ritmo? Como a visão próxima do teatro transforma o luxo?\n\n**Interpretativo:** o estudo só causa sofrimento? A cidade é apenas refúgio? O cuidado supera totalmente as hierarquias? Justifique os dois polos com cenas.\n\n**24 horas:** mapa e microperguntas. **7 dias:** leitura de trecho novo e contraste interno. **30 dias:** tentativa das cinco questões e revisão por dimensão. **Pré-prova:** explicação oral de três minutos usando evidência, forma e efeito, sem preencher o segredo de Gonzaga ou o futuro de Aleixo."
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 1,
+      "editorialStatus": "needs_review",
+      "evidenceRefs": [
+        "ev-moldura",
+        "ev-segredo"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Fonte primária e leitura efetiva:** Lima Barreto, Vida e morte de M. J. Gonzaga de Sá, Edição da Revista do Brasil, São Paulo, 1919, conforme folha de rosto p. 4. PDF exportado da Wikisource em 10/12/2025; 92 páginas da camada textual lidas integralmente em lotes de p. 1–12, 13–22, 23–32, 33–42, 43–52, 53–62, 63–72, 73–82 e 83–92. A paginação é a do arquivo.\n\n**Paratextos:** epígrafes de Vigny e Bourget (p. 4), Advertência assinada Lima Barreto (p. 5), Explicação necessária assinada Augusto (p. 6–7), índice (p. 91), nota da edição digital (p. 92). As duas molduras foram analisadas como componentes da ficção; não são prefácios críticos externos. A ausência de texto nas p. 1–2 não prova ausência de conteúdo gráfico.\n\n**Procedência externa conferida:** página de abertura e sumário da Wikisource, https://pt.wikisource.org/wiki/Vida_e_morte_de_M._J._Gonzaga_de_S%C3%A1_(1919), revisão oldid=440115, acesso em 06/10/2026. Leitura da página de metadados e sumário, não de um estudo crítico; confirma edição e título de II. A nota do PDF usa licenças BY-SA 3.0/GNU FDL, e a página atual informa BY-SA 4.0; são declarações de versões distintas, sem auditoria jurídica nesta tarefa.\n\n**Limites:** não houve cotejo integral com fac-símile. Grafias antigas e modernas alternam; há ruídos de transcrição, entre eles 1880 na Advertência e palavras aglutinadas. II começa na p. 17 sem seu cabeçalho, recuperado do índice. Escolástica aparece designada tia e também irmã em pontos do corpo; o dossiê preserva o vínculo de cuidado e registra a oscilação sem resolver por conjectura. Nenhuma fonte crítica, manual oficial ou prova foi lido nesta tarefa; estratégias são propostas de treino. SourceRefs permanece vazio. Todas as análises são sínteses próprias em needs_review; pesquisa acadêmica e validação editorial continuam pendentes."
+    }
+  ],
+  "evidence": [
+    {
+      "id": "ev-moldura",
+      "unitId": "advertencia",
+      "location": "Advertência, p. 5",
+      "quote": "Machado trata mais delle do que do seu heroe.",
+      "context": "O apresentador questiona a biografia.",
+      "formalDevice": "Moldura editorial ficcional.",
+      "effect": "Orienta o leitor para a presença do biógrafo.",
+      "wholeRelation": "O autorretrato de Augusto acompanha a vida de Gonzaga.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-amanuenses",
+      "unitId": "explicacao",
+      "location": "Explicação necessária, p. 6",
+      "quote": "São biographias de ministros, todas ellas, e eu entendi fazer as dos escribas ministeriaes.",
+      "context": "Augusto explica seu projeto.",
+      "formalDevice": "Pareamento irônico de gêneros biográficos.",
+      "effect": "Traz os subordinados para o centro da narrativa.",
+      "wholeRelation": "Prepara a importância de Gonzaga e Romualdo.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-cidade",
+      "unitId": "cap-i",
+      "location": "I — O inventor e a aeronave, p. 12",
+      "quote": "Vivo nella e ella vive em mim!",
+      "context": "Augusto se reconhece na paisagem carioca.",
+      "formalDevice": "Reciprocidade sintática.",
+      "effect": "Funde experiência pessoal e cidade.",
+      "wholeRelation": "O passeio produz memória e identidade.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-flor",
+      "unitId": "cap-i",
+      "location": "I — O inventor e a aeronave, p. 14",
+      "quote": "abaixou-se para colher uma flor que me offerecera, mas cahiu, e morreu.",
+      "context": "No jardim de sua casa, Gonzaga morre.",
+      "formalDevice": "Antecipação do desfecho e contraste de gestos.",
+      "effect": "A oferta afetiva é interrompida pela morte.",
+      "wholeRelation": "XII retoma a flor depois de mostrar o cuidado com Aleixo.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-aeronave",
+      "unitId": "cap-i",
+      "location": "I — O inventor e a aeronave, p. 15",
+      "quote": "A machina não subiu.",
+      "context": "Fim do conto deixado por Gonzaga.",
+      "formalDevice": "Frase breve depois de longa preparação.",
+      "effect": "Rompe a expectativa de triunfo técnico.",
+      "wholeRelation": "Augusto interpreta o fracasso pela contingência.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-letra",
+      "unitId": "cap-ii",
+      "location": "II — Primeiras informações, p. 18",
+      "quote": "Coitado, diziam, tinha tão boa letra!",
+      "context": "Colegas recordam um escriturário instruído.",
+      "formalDevice": "Redução irônica do elogio póstumo.",
+      "effect": "A caligrafia encobre a inteligência desperdiçada.",
+      "wholeRelation": "A obra representa o que o olhar oficial não reconhece.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-selos",
+      "unitId": "cap-iii",
+      "location": "III — Emblemas públicos, p. 23",
+      "quote": "Teríamos, assim, o Plutarco Brasileiro em franquias postais.",
+      "context": "Gonzaga imagina biografias nos selos.",
+      "formalDevice": "Transposição cômica de suporte e valor.",
+      "effect": "Rebaixa a monumentalidade da celebridade.",
+      "wholeRelation": "Dialoga com a escolha de biografar homens obscuros.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-plural",
+      "unitId": "cap-iv",
+      "location": "IV — Petrópolis, p. 25",
+      "quote": "Eu sou Sá, sou o Rio de Janeiro, com seus tamoios, seus negros, seus mulatos, seus cafuzos e seus “galegos” também...",
+      "context": "Gonzaga explica sua recusa da gente de Petrópolis.",
+      "formalDevice": "Enumeração e identificação pessoal com lugar.",
+      "effect": "Afirma um pertencimento composto por grupos diversos.",
+      "wholeRelation": "Confrontar com sua hostilidade às novas elites em XI.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-historiador",
+      "unitId": "cap-v",
+      "location": "V — O Passeiador, p. 28",
+      "quote": "Era um historiador artista",
+      "context": "Augusto descreve a memória oral do amigo.",
+      "formalDevice": "Caracterização do método de narrar o passado.",
+      "effect": "Distingue recriação de exatidão documental.",
+      "wholeRelation": "As ressalvas à biografia estendem-se à memória urbana.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-media",
+      "unitId": "cap-vi",
+      "location": "VI — O Barão, as Costureiras e outras cousas, p. 35",
+      "quote": "Há média possível para a felicidade das classes?",
+      "context": "Gonzaga compara senhora rica e operário orgulhoso do filho.",
+      "formalDevice": "Interrogação argumentativa.",
+      "effect": "Recusa reduzir experiência individual a abstração social.",
+      "wholeRelation": "O enterro de Romualdo realiza a atenção a uma vida singular.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-inacio",
+      "unitId": "cap-vii",
+      "location": "VII — Pleno contacto, p. 41",
+      "quote": "É um irmão de leite.",
+      "context": "Gonzaga apresenta a história de Inácio.",
+      "formalDevice": "Memória doméstica e qualificação afetiva.",
+      "effect": "Cria proximidade dentro de uma relação social desigual.",
+      "wholeRelation": "O afeto da casa convive com a herança da escravidão.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-ditadura",
+      "unitId": "cap-vii",
+      "location": "VII — Pleno contacto, p. 43",
+      "quote": "É uma ditadura.",
+      "context": "Gonzaga descreve a dependência da publicação em relação aos grandes jornais.",
+      "formalDevice": "Síntese enfática ao fim de uma cadeia de impedimentos.",
+      "effect": "Nomeia o controle da visibilidade intelectual.",
+      "wholeRelation": "Revistas obscuras oferecem um circuito alternativo.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-veneno",
+      "unitId": "cap-viii",
+      "location": "VIII — O Jantar, p. 51",
+      "quote": "senti que sorvera também uma gota de veneno.",
+      "context": "Augusto volta do jantar após ouvir a tradição familiar.",
+      "formalDevice": "Metáfora ambivalente de incorporação.",
+      "effect": "O enraizamento histórico tem custo e contradição.",
+      "wholeRelation": "Prepara o confronto com o Lírico em XI.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-felicidade",
+      "unitId": "cap-ix",
+      "location": "IX — O Padrinho, p. 61",
+      "quote": "Cada um sabe quando é feliz, e não pode dizer a ninguém, nem mesmo que queira...",
+      "context": "Alcmena fala no velório.",
+      "formalDevice": "Contraponto dialogado à reflexão de Augusto.",
+      "effect": "A experiência não se transfere plenamente por palavras.",
+      "wholeRelation": "Retoma o limite de medir sentimentos e conhecer outras vidas.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-racismo",
+      "unitId": "cap-ix",
+      "location": "IX — O Padrinho, p. 63",
+      "quote": "Nem o estudo lhe valeria, nem os livros, nem o valor",
+      "context": "Augusto imagina a discriminação que Aleixo enfrentará.",
+      "formalDevice": "Enumeração negativa e projeção de futuro.",
+      "effect": "Expõe o preconceito como barreira ao reconhecimento do talento.",
+      "wholeRelation": "O final não promete que a instrução eliminará a exclusão.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-docura",
+      "unitId": "cap-x",
+      "location": "X — O enterro, p. 69",
+      "quote": "Não; a maior força do mundo é a doçura.",
+      "context": "Gonzaga acaba de defender força e violência.",
+      "formalDevice": "Correção abrupta da própria fala.",
+      "effect": "Desestabiliza uma doutrina única de ação.",
+      "wholeRelation": "O cuidado com Aleixo oferece realização afetiva da solidariedade.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-esteril",
+      "unitId": "cap-xi",
+      "location": "XI — Era feriado nacional..., p. 76",
+      "quote": "Sou estéril e morro estéril...",
+      "context": "Gonzaga lamenta o isolamento de sua inteligência.",
+      "formalDevice": "Repetição e metáfora de esterilidade.",
+      "effect": "Transforma independência em sensação de perda.",
+      "wholeRelation": "A educação de Aleixo contrasta com esse julgamento absoluto.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-contradicao",
+      "unitId": "cap-xi",
+      "location": "XI — Era feriado nacional..., p. 83",
+      "quote": "havia uma certa contradição entre o que Gonzaga de Sá me dissera no teatro e o que observava agora.",
+      "context": "Augusto compara nostalgia dos antigos e denúncia da continuidade das elites.",
+      "formalDevice": "Comentário reflexivo do narrador.",
+      "effect": "Preserva a inconsequência do amigo em vez de harmonizá-la.",
+      "wholeRelation": "A biografia registra uma pessoa enigmática, não um porta-voz estável.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-segredo",
+      "unitId": "cap-xii",
+      "location": "XII — Últimos encontros, p. 88",
+      "quote": "não encontrei o mínimo indicio para descobri-las nos papéis que ele me legou",
+      "context": "Augusto considera lembranças íntimas de Gonzaga.",
+      "formalDevice": "Declaração de insuficiência documental.",
+      "effect": "Impede conclusão psicológica definitiva.",
+      "wholeRelation": "Retoma a advertência sobre os limites da biografia.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    },
+    {
+      "id": "ev-final",
+      "unitId": "cap-xii",
+      "location": "XII — Últimos encontros, p. 90",
+      "quote": "A felicidade final dos homens e o seu mútuo entendimento têm exigido até aqui maiores sacrifícios...",
+      "context": "Fecho após a discussão do custo e do possível benefício da educação.",
+      "formalDevice": "Generalização final em suspensão.",
+      "effect": "Abre horizonte coletivo sem narrar sucesso individual comprovado.",
+      "wholeRelation": "O cuidado com a geração seguinte sucede a morte do amigo.",
+      "examPotential": [
+        "FUVEST",
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "needs_review"
+    }
+  ]
+}
