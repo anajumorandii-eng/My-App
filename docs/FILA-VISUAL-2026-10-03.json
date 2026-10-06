@@ -2,12 +2,12 @@
   "dateUTC": "2026-10-05",
   "mainCommit": "683a573204f92adc247d1493caaa08ad9de9b799",
   "sourceAudit": "docs/visual-integral-2026-10-02/capitulos.json",
-  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; integrada na PR #264. Entrega I: Graciliano, Cabral, Clarice, Rosa, Poesia Concreta e 1960-1980, sete capítulos LG3 revalidados em build local; integrada na PR #266. Entrega J: os seis capítulos LG3 finais (contemporâneos, lusófonos, artes, teatro e canção) revalidados em build local; integrada na PR #267; LG3 sem pendências. Entrega K: os sete capítulos de Sociologia do H3, com texto e operação autoral, revalidados em build local. Entrega L: os dezenove capítulos de Filosofia (oito do H3 e onze do H2), com oficina de argumento ancorada no texto rev 2, revalidados em build local.",
+  "method": "Reconciliação por ID com a auditoria histórica e o delta de main; Entregas A, B, C e D validadas em build local para 25, 29, 24 e 21 IDs. Os achados restantes exigem revalidação; nenhuma nova certificação integral dos 613 capítulos. Entrega E: 26 capítulos LG1/Gramática e seus textos revalidados, com evidências de produção. Entrega F: oito fundamentos de LG3/Literatura, 40 seções e suas operações autorais revalidadas em build local; integrada na PR #262. Entrega G: oito capítulos LG3 do século XIX, 40 seções e operações autorais revalidadas em build local; integrada na PR #263. Entrega H: Machado e Modernismo até a geração de 30, oito capítulos LG3 revalidados em build local; integrada na PR #264. Entrega I: Graciliano, Cabral, Clarice, Rosa, Poesia Concreta e 1960-1980, sete capítulos LG3 revalidados em build local; integrada na PR #266. Entrega J: os seis capítulos LG3 finais (contemporâneos, lusófonos, artes, teatro e canção) revalidados em build local; integrada na PR #267; LG3 sem pendências. Entrega K: os sete capítulos de Sociologia do H3, com texto e operação autoral, revalidados em build local. Entrega L: os dezenove capítulos de Filosofia (oito do H3 e onze do H2), com oficina de argumento ancorada no texto rev 2, revalidados em build local. Entrega N: os doze capítulos de Sociologia do H2, com texto rev 2 e oficina autoral, revalidados em build local; Humanas sem pendências.",
   "editorialApproval": "Não promovida; manter e achado tratado não certificam capítulo completo.",
   "counts": {
-    "achado_tratado": 227,
+    "achado_tratado": 239,
     "preservar_mecanismo": 315,
-    "fila_a_revalidar": 71
+    "fila_a_revalidar": 59
   },
   "subjects": {
     "Física": {
@@ -67,8 +67,8 @@
     "Sociologia": {
       "total": 27,
       "preservar_mecanismo": 0,
-      "achado_tratado": 15,
-      "fila_a_revalidar": 12
+      "achado_tratado": 27,
+      "fila_a_revalidar": 0
     },
     "Língua Inglesa": {
       "total": 17,
@@ -99,8 +99,7 @@
     "A1": 1,
     "R2": 15,
     "R3": 27,
-    "R1": 16,
-    "H2": 12
+    "R1": 16
   },
   "chapters": [
     {
@@ -8015,18 +8014,24 @@
       "subject": "Sociologia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Transmissão de normas / Homogeneidade mínima / Coesão garantida explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (transmite normas, valores e conhecimentos necessários à vida coletiva; produz a homogeneidade mínima sem a qual a sociedade não se sustenta), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
@@ -8034,18 +8039,24 @@
       "subject": "Sociologia",
       "artifact": "camadas-de-determinacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CamadasDeDeterminacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Camadas Base econômica / Superestrutura representam uma organização espacial pertinente, porém o único vínculo gráfico parte da base. Completar as relações específicas descritas em O conceito; Base e superestrutura; Sucessão histórica, inclusive ação coletiva, mediação ou retorno quando a fonte os exige; condiciona a superestrutura jurídica, política e ideológica; atua de volta sobre a base, com autonomia relativa e efeitos próprios."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-ideologia-e-alienacao",
@@ -8053,18 +8064,24 @@
       "subject": "Sociologia",
       "artifact": "camadas-de-determinacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CamadasDeDeterminacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Camadas Trabalho social / Ideologia representam uma organização espacial pertinente, porém o único vínculo gráfico parte da base. Completar as relações específicas descritas em Ideologia; Alienação; Fetichismo da mercadoria, inclusive ação coletiva, mediação ou retorno quando a fonte os exige; produz o valor da mercadoria, ainda que essa origem fique oculta; apresenta interesses particulares de uma classe como se fossem universais e naturais."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
@@ -8096,18 +8113,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Racional c/ fins / Racional c/ valores / Afetiva / Tradicional; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de calcula meios adequados para objetivos escolhidos; age por convicção, independentemente das consequências. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-dominacao-e-poder-em-weber",
@@ -8115,18 +8138,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Tradicional / Carismática / Racional-legal; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de funda-se no costume e na santidade das tradições; funda-se em qualidades extraordinárias atribuídas ao líder. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
@@ -8134,18 +8163,24 @@
       "subject": "Sociologia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Angústia da salvação / Êxito como sinal de graça / Acumulação sistemática explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (a doutrina da predestinação gerava angústia sobre a salvação; o êxito no trabalho, lido como vocação, passou a ser sinal possível de graça, e a ascese desestimulava o consumo), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-cultura-e-etnocentrismo",
@@ -8275,18 +8310,24 @@
       "subject": "Sociologia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Distinguir sexo de gênero / Os papéis variam / Logo, são transformáveis explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (sexo remete a características biológicas e gênero a construções sociais de masculinidade e feminilidade; papéis considerados naturais variam entre sociedades e ao longo da história), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-divisao-social-do-trabalho",
@@ -8342,18 +8383,24 @@
       "subject": "Sociologia",
       "artifact": "cadeia-de-derivacao",
       "auditVerdict": "ajustar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/CadeiaDeDerivacao.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "A sequência Ritmo e preço definidos / Controle algorítmico / Subordinação explicita ordem, mas os retângulos mostram apenas rótulos, com os elos futuros muito esmaecidos. Tornar a ligação pedagógica visível com um exemplo do capítulo (o trabalhador é classificado como parceiro autônomo, mas tem ritmo, preço e avaliação definidos pela plataforma; o algoritmo define preço, distribuição de tarefas, avaliação e possibilidade de bloqueio), além de avançar a seleção e mostrar prosa."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
@@ -8361,18 +8408,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Clássicos / Novos movimentos; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de organizavam-se em torno de trabalho, salário e condições de produção; articulam-se em torno de identidade, reconhecimento e qualidade de vida. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-cidadania-e-direitos",
@@ -8405,18 +8458,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Direta / Representativa / Participativa; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de é exercida em assembleia, possível em comunidades pequenas; delega a decisão a eleitos. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-globalizacao-economica-e-cultural",
@@ -8424,18 +8483,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Homogeneização / Hibridismo / Identidades locais; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de ocorre em certos consumos; reelabora localmente elementos externos. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-o-estado-nacao-na-era-global",
@@ -8443,18 +8508,24 @@
       "subject": "Sociologia",
       "artifact": "tipologia",
       "auditVerdict": "redesenhar",
-      "status": "fila_a_revalidar",
-      "batch": "H2",
+      "status": "achado_tratado",
+      "batch": null,
       "sourceFiles": [
-        "src/views/topic-scenes/data/sociologia.ts",
-        "src/views/topic-scenes/families/Tipologia.tsx"
+        "src/views/visual-instruments/SociologyOperations.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.tsx",
+        "src/data/deepSummaryContent.json"
       ],
       "findings": [
         {
           "code": "REPRESENTACAO_MECANISMO",
           "description": "Cartões de texto apresentam Soberania relativizada / Estado persiste / Nacionalismo; a cena não contém ações, atores ou fluxos que mostrem a diferença entre os mecanismos. A fonte trata de é relativizada por fluxos financeiros, acordos e organismos multilaterais; continua assegurando contratos, regulando mercados e respondendo a crises. Transformar a classificação em comparação de situações concretas, preservando as ressalvas do texto."
         }
-      ]
+      ],
+      "resolution": {
+        "delivery": "entrega-n",
+        "evidence": "docs/visual-integral-2026-10-06/entrega-n/README.md",
+        "description": "Sociologia H2: texto rev 2 com casos autorais e oficina em que o tipo escolhido ou o elo retirado redesenha o caso. Conferência Chromium em larguras, temas, movimento e axe local. Aprovação editorial formal não promovida."
+      }
     },
     {
       "id": "summary-sociologia-a-sociedade-da-informacao",
@@ -10890,11 +10961,10 @@
   "editorial": {
     "source": "src/data/deepSummaryContent.json",
     "total": 612,
-    "revision2": 540,
-    "pending": 70,
+    "revision2": 552,
+    "pending": 58,
     "counts": {
-      "Redação": 58,
-      "Sociologia": 12
+      "Redação": 58
     },
     "chapters": [
       {
@@ -11244,78 +11314,6 @@
         "topic": "Tangenciamento e Fuga: a Fronteira do Tema",
         "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
         "batch": "R2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Democracia e Participação Política",
-        "id": "summary-sociologia-democracia-e-participacao-politica",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Desigualdade de Gênero",
-        "id": "summary-sociologia-desigualdade-de-genero",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Dominação e Poder em Weber",
-        "id": "summary-sociologia-dominacao-e-poder-em-weber",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Educação e Socialização em Durkheim",
-        "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Globalização Econômica e Cultural",
-        "id": "summary-sociologia-globalizacao-economica-e-cultural",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Ideologia e Alienação",
-        "id": "summary-sociologia-ideologia-e-alienacao",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Modo de Produção e Estrutura Social",
-        "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Movimentos Sociais Clássicos e Contemporâneos",
-        "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "O Estado-Nação na Era Global",
-        "id": "summary-sociologia-o-estado-nacao-na-era-global",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Precarização e Uberização do Trabalho",
-        "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Tipos de Ação Social",
-        "id": "summary-sociologia-tipos-de-acao-social",
-        "batch": "H2"
-      },
-      {
-        "subject": "Sociologia",
-        "topic": "Ética Protestante e o Espírito do Capitalismo",
-        "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
-        "batch": "H2"
       }
     ],
     "revision3": 2

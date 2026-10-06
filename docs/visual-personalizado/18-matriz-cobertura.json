@@ -3,11 +3,11 @@
   "counts": {
     "experiment": 8,
     "board": 43,
-    "instrument": 363,
-    "scene": 199,
+    "instrument": 375,
+    "scene": 187,
     "fallback": 0
   },
-  "contested": 95,
+  "contested": 107,
   "subjects": [
     {
       "subject": "Física",
@@ -158,8 +158,8 @@
       "counts": {
         "experiment": 1,
         "board": 0,
-        "instrument": 6,
-        "scene": 20,
+        "instrument": 18,
+        "scene": 8,
         "fallback": 0
       }
     }
@@ -5352,25 +5352,40 @@
       "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
       "subject": "Sociologia",
       "title": "Educação e Socialização em Durkheim",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "education-socialization",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
       "subject": "Sociologia",
       "title": "Modo de Produção e Estrutura Social",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "mode-of-production",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-ideologia-e-alienacao",
       "subject": "Sociologia",
       "title": "Ideologia e Alienação",
-      "primary": "scene",
-      "artifact": "camadas-de-determinacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "ideology-alienation",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "camadas-de-determinacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
@@ -5384,25 +5399,40 @@
       "id": "summary-sociologia-tipos-de-acao-social",
       "subject": "Sociologia",
       "title": "Tipos de Ação Social",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "social-action-types",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-dominacao-e-poder-em-weber",
       "subject": "Sociologia",
       "title": "Dominação e Poder em Weber",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "weber-domination",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
       "subject": "Sociologia",
       "title": "Ética Protestante e o Espírito do Capitalismo",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "protestant-ethic",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-cultura-e-etnocentrismo",
@@ -5458,9 +5488,14 @@
       "id": "summary-sociologia-desigualdade-de-genero",
       "subject": "Sociologia",
       "title": "Desigualdade de Gênero",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "gender-inequality",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-divisao-social-do-trabalho",
@@ -5482,17 +5517,27 @@
       "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
       "subject": "Sociologia",
       "title": "Precarização e Uberização do Trabalho",
-      "primary": "scene",
-      "artifact": "cadeia-de-derivacao",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "platform-work",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "cadeia-de-derivacao"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
       "subject": "Sociologia",
       "title": "Movimentos Sociais Clássicos e Contemporâneos",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "social-movements",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-cidadania-e-direitos",
@@ -5511,25 +5556,40 @@
       "id": "summary-sociologia-democracia-e-participacao-politica",
       "subject": "Sociologia",
       "title": "Democracia e Participação Política",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "democracy-forms",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-globalizacao-economica-e-cultural",
       "subject": "Sociologia",
       "title": "Globalização Econômica e Cultural",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "globalization-flows",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-o-estado-nacao-na-era-global",
       "subject": "Sociologia",
       "title": "O Estado-Nação na Era Global",
-      "primary": "scene",
-      "artifact": "tipologia",
-      "ignored": []
+      "primary": "instrument",
+      "artifact": "nation-state",
+      "ignored": [
+        {
+          "kind": "scene",
+          "id": "tipologia"
+        }
+      ]
     },
     {
       "id": "summary-sociologia-a-sociedade-da-informacao",
