@@ -3,6 +3,9 @@ import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { SAO_PAULO_TIME_ZONE, type DailyStudyAvailability } from '../features/availability/types';
 import type { TopicMastery, UserProfile } from '../types';
 
+const authState = vi.hoisted(() => ({ loading: false }));
+vi.mock('../context/AuthContext', () => ({ useAuth: () => authState }));
+
 const availabilityHook = vi.hoisted(() => vi.fn());
 const masteryHook = vi.hoisted(() => vi.fn());
 const profileHook = vi.hoisted(() => vi.fn());
@@ -47,6 +50,7 @@ const profile: UserProfile = {
 
 describe('useDailyPlan', () => {
   beforeEach(() => {
+    authState.loading = false;
     vi.useFakeTimers();
     vi.setSystemTime(NOW);
     availabilityHook.mockReturnValue({
@@ -119,4 +123,16 @@ describe('useDailyPlan', () => {
       },
     ]);
   });
+  it('waits for restored authentication before exposing a demo recommendation', () => {
+    authState.loading = true;
+    const { result, rerender } = renderHook(() => useDailyPlan(LOCAL_DATE));
+    expect(result.current.loading).toBe(true);
+    expect(result.current.prioritizedActions).toEqual([]);
+    expect(result.current.allocatedActions).toEqual([]);
+    authState.loading = false;
+    rerender();
+    expect(result.current.loading).toBe(false);
+    expect(result.current.prioritizedActions.length).toBeGreaterThan(0);
+  });
+
 });
