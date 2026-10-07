@@ -2,7 +2,7 @@
 
 Base: `origin/main` c107c2af, após integração de Brás Cubas pela PR #277. Branch de trabalho: `fix/publicar-demais-obras-2027`.
 
-## Escopo em andamento
+## Escopo incorporado
 
 Revisão individual das outras dezessete obras, preservando IDs de unidades, cartões e módulos. A publicação depende de avaliação literária, fontes efetivamente consultadas e correções incorporadas; a conferência automática de citações não constitui aprovação editorial.
 
@@ -21,9 +21,11 @@ FORMA e FONTE são instrumentos didáticos da habilidade, não rubricas oficiais
 
 A conferência literal passou para todos os dezoito dossiês antes da revisão desta série. Os arquivos primários e críticos estão em diretórios ignorados. Os testes de conteúdo em revisão passaram a usar cópias explicitamente pendentes, preservando a cobertura da retenção editorial depois da publicação das obras reais: 25 testes focados passaram.
 
-## Encerramento
+## Estado desta entrega
 
-Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezessete notas individuais e os patches privados estão preservados; nenhuma proposta foi aplicada aos dossiês. Ainda faltam revisões e decisões individuais, conferência antes de cada commit e validação no navegador. Lint, npm test completo e build passaram. O envio remoto foi retomado por instrução explícita da usuária; checkpoint em branch e PR em rascunho, sem merge. Não realizar merge automático.
+As dezessete obras receberam correções textuais, pesquisa documentada e decisão individual de primeira edição de estudo. Todos os módulos, guias e cartões revistos estão publicados nos JSONs. Houve um commit por obra, com conferência literal antes de cada commit; a conferência final das dezoito obras também passou. Os IDs foram preservados. Brás Cubas permanece como publicado na PR #277.
+
+A PR #278 tem base main. Não realizar merge automático. A publicação aqui significa conteúdo liberado nos dados da branch para a interface existente; integração na main e implantação do aplicativo dependem do processo de revisão e entrega do repositório.
 
 ## Execução por obra — retomada
 
@@ -46,3 +48,17 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | Os funerais da Mamãe Grande | Primeira edição de estudo aprovada: 8 módulos, 8 guias, 9 cartões. Conferência literal passou; IDs preservados. |
 | No seu pescoço | Primeira edição de estudo aprovada: 8 módulos, 12 guias, 13 cartões. Conferência literal passou; IDs preservados. |
 | Vida e morte de M. J. Gonzaga de Sá | Primeira edição de estudo aprovada: 8 módulos, 14 guias, 20 cartões. Conferência literal passou; IDs preservados. |
+
+## Revisão final e interface
+
+Revisão independente do conjunto: IDs conferidos contra origin/main; nenhum sourceRef inválido ou fonte órfã; exercícios examinados integralmente, sem gabarito explícito no módulo; nenhum PDF novo no diff. A revisão direcionada de análises, fontes e notas não encontrou defeito importante confirmado. Não constitui nova leitura integral das dezessete obras ou de toda a bibliografia externa.
+
+Chromium: dezoito obras em desktop 1365 × 900 e celular 390 × 844, modo normal, oito abas por obra: 36 combinações de rota/tela e 288 abas verificadas. Nenhum estado de conteúdo em elaboração ou erro JavaScript. Componente ObraDetalhe e JSONs reais; catálogo e autenticação simulados, sem escrita de progresso nem validação Firestore autenticada. Evidências privadas em `/workspace/artifacts/demais-obras-publicacao/resultado.json` e seis capturas de tela. Inspeção visual da aba Fontes de Gonzaga em celular confirmou leitura e quebra do texto dentro do painel.
+
+Lint passou. Build passou com aviso de tamanho de chunks já existente. A conferência literal final passou para as dezoito obras. Suíte completa passou: 922 testes Node e 1.363 Vitest, total 2.285, em 175 arquivos Vitest. Os avisos de scrollTo no ambiente DOM de testes não produziram falhas.
+
+## Entrega remota
+
+Destino: `origin/fix/publicar-demais-obras-2027`; PR https://github.com/anajumorandii-eng/My-App/pull/278, base main, aberta para revisão, sem merge automático. Dezessete commits individuais de obra e este registro final encerram a primeira edição compacta. Para disponibilidade no app de produção, ainda é necessária integração e implantação pelo fluxo do repositório.
+
+Estado de conteúdo: dezoito dossiês com 406 guias, 297 cartões e 144 módulos publicados. Nenhuma implementação de motor de questões ou alteração do catálogo Firestore foi feita nesta entrega.
