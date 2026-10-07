@@ -55,17 +55,22 @@ test('nova tentativa reutiliza falas concluídas antes da falha', async () => {
   assert.equal(calls, 3);
 });
 
-test('catálogo fica limitado a três vozes femininas e três masculinas HD', async () => {
+test('catálogo inclui todas as vozes brasileiras HD, Neural2, Wavenet e Standard', async () => {
   const selected = ['Kore', 'Aoede', 'Leda', 'Puck', 'Charon', 'Orus'];
   const service = new CloudTtsService({ client: { listVoices: async () => ({ voices: [
     ...selected.map((name, index) => ({ name: `pt-BR-Chirp3-HD-${name}`, languageCodes: ['pt-BR'], ssmlGender: index < 3 ? 'FEMALE' : 'MALE' })),
     { name: 'pt-BR-Chirp3-HD-Achernar', languageCodes: ['pt-BR'], ssmlGender: 'FEMALE' },
     { name: 'pt-BR-Neural2-A', languageCodes: ['pt-BR'], ssmlGender: 'FEMALE' },
     { name: 'pt-BR-Standard-B', languageCodes: ['pt-BR'], ssmlGender: 'MALE' },
+    { name: 'pt-BR-Wavenet-E', languageCodes: ['pt-BR'], ssmlGender: 'MALE' },
+    { name: 'en-US-Neural2-A', languageCodes: ['en-US'], ssmlGender: 'FEMALE' },
   ] }), synthesize: async () => ({}) } });
   const voices = await service.getVoices();
-  assert.equal(voices.length, 6);
-  assert.equal(voices.filter(v => v.gender === 'FEMALE').length, 3);
-  assert.equal(voices.filter(v => v.gender === 'MALE').length, 3);
-  await assert.rejects(service.resolveVoice('pt-BR-Neural2-A'));
+  assert.equal(voices.length, 10);
+  assert.equal(voices.filter(v => v.gender === 'FEMALE').length, 5);
+  assert.equal(voices.filter(v => v.gender === 'MALE').length, 5);
+  assert.ok(voices.every(v => v.value.startsWith('pt-BR-')));
+  for (const name of ['pt-BR-Chirp3-HD-Achernar', 'pt-BR-Neural2-A', 'pt-BR-Standard-B', 'pt-BR-Wavenet-E']) {
+    assert.equal(await service.resolveVoice(name), name);
+  }
 });

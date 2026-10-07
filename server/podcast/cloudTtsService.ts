@@ -19,14 +19,6 @@ export interface CloudTtsClient {
   synthesize(body: CloudRequest, signal?: AbortSignal): Promise<{ audioContent?: string | null }>;
 }
 interface AudioStore { read(key: string): Promise<Buffer | null>; write(key: string, buffer: Buffer): Promise<void>; }
-const STUDY_VOICES = [
-  { name: 'Kore', label: 'Kore · feminina' },
-  { name: 'Aoede', label: 'Aoede · feminina' },
-  { name: 'Leda', label: 'Leda · feminina' },
-  { name: 'Puck', label: 'Puck · masculina' },
-  { name: 'Charon', label: 'Charon · masculina' },
-  { name: 'Orus', label: 'Orus · masculina' },
-];
 
 export class PodcastTtsValidationError extends Error {}
 
@@ -55,10 +47,10 @@ export class CloudTtsService implements PodcastTtsService {
     if (this.voices.length && Date.now() < this.voicesExpiresAt) return this.voices;
     if (!this.voicesRequest) {
       this.voicesRequest = this.client.listVoices().then(result => {
-        const voices = STUDY_VOICES.flatMap(selected => {
-          const voice = result.voices?.find(v => v.name === `pt-BR-Chirp3-HD-${selected.name}` && v.languageCodes?.includes('pt-BR'));
-          return voice ? [{ value: voice.name!, label: selected.label, gender: voice.ssmlGender ?? undefined }] : [];
-        });
+        const voices = (result.voices ?? [])
+          .filter(voice => voice.name && voice.languageCodes?.includes('pt-BR'))
+          .map(voice => ({ value: voice.name!, label: voice.name!.replace(/^pt-BR-/, '').replace('Chirp3-HD-', 'Chirp HD · '), gender: voice.ssmlGender ?? undefined }))
+          .sort((a, b) => Number(b.value.includes('Chirp3-HD')) - Number(a.value.includes('Chirp3-HD')) || a.value.localeCompare(b.value));
         if (!voices.length) throw new Error('O serviço não retornou vozes em português brasileiro.');
         this.voices = voices; this.voicesExpiresAt = Date.now() + 300000; return voices;
       }).finally(() => { this.voicesRequest = null; });
