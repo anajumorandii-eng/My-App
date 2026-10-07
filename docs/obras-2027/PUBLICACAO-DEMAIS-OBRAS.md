@@ -32,3 +32,4 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | A visão das plantas | Primeira edição de estudo aprovada: 8 módulos, 12 guias, 17 cartões, três fontes críticas e três oficiais. Conferência literal passou; IDs preservados. |
 | Caminho de pedras | Primeira edição de estudo aprovada: 8 módulos, 27 guias, 14 cartões. Conferência literal passou; IDs preservados. |
 | Memórias de Martha | Primeira edição de estudo aprovada: 8 módulos, 12 guias, 9 cartões. Diagnóstico e variantes corrigidos; conferência literal passou; IDs preservados. |
+| Balada de amor ao vento | Primeira edição de estudo aprovada: 8 módulos, 20 guias, 18 cartões. Conferência literal passou; IDs preservados. |

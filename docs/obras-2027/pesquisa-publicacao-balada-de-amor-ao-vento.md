@@ -100,3 +100,16 @@ Kütter (2018, segmento final p. 207–216, leitura parcial) aproxima a trajetó
 ## Pendências da versão avançada
 
 Expandir a leitura por unidade nos quinze componentes, complementar a bibliografia com outros trabalhos independentes e comparar questões oficiais pertinentes sem inventar incidência. Referências mencionadas dentro dos estudos lidos, mas não abertas diretamente, não contam como novas fontes. A aprovação editorial da edição compacta depende da integração das correções, conferência literal e revisão final pelo integrador.
+
+
+## Validação da retomada para integração — 07/10/2026
+
+O JSON completo foi reaberto, sem alterar IDs, capítulos ou cartões. As correções acima foram convertidas em patch privado para o integrador; este registro não representa aprovação editorial automática nem nova leitura integral das obras. Releitura efetiva de conferência do primário: p. 7, 24, 32–33, 60, 65, 70, 73 e 75–76. Reabertura das fontes críticas nas seções usadas: Mutoba 2025, p. 10–20; Lara 2015, p. 72–82; Kütter 2018, PDF p. 12–21, equivalentes a p. 207–216. As leituras completas registradas anteriormente continuam identificadas como etapa anterior; a retomada valida os argumentos necessários para estes ajustes.
+
+Todos os campos propostos preservam o valor antigo exato para impedir aplicação silenciosa sobre conteúdo diferente. As alterações de guias usam os arrays completos, e as modificações de módulos usam Markdown completo; Fontes passa a declarar bibliografia, procedência e alcance da primeira edição compacta. O texto de análise distingue evidência primária, hipótese interpretativa e tese crítica documentada. Nenhum artigo é usado como prova de que o arquivo editorial foi cotejado independentemente.
+
+**Confirmação específica:** a p. 76 apresenta de modo explícito casa, negócio, dinheiro e a intenção de sustentar Mwando, junto à linguagem de guerra e derrota. A crítica de formação de Kütter foi mantida como hipótese que precisa desse contraponto. O início, p. 7, oferece autodescrição de envelhecimento, não idade exata. As normas do capítulo 7 foram atribuídas às vozes coletivas, sem justificar agressão ou universalizar etnografia.
+
+## Decisão da primeira edição de estudo
+
+Incorporados os estudos de provérbios, oralidade e formação feminina. O final preserva autonomia econômica e vulnerabilidade amorosa; não converte o romance em descrição etnográfica de toda Moçambique nem transforma vozes coletivas em posição da autora. Aprovados 8 módulos, 20 guias e 18 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.
