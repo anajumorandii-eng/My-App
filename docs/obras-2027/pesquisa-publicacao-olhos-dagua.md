@@ -89,3 +89,17 @@ Não foram lidas duas teses/dissertações. Os guias atuais são compactos e nã
   }
 ]
 ```
+
+
+## Validação para integração — retomada de 07/10/2026
+
+Os oito módulos, todos os guias e todos os cartões do JSON foram relidos por inteiro nesta retomada. Não se declara nova leitura integral da obra: preserva-se a leitura primária registrada no checkpoint e se relê o recorte necessário às correções. Foram relidas as p. 27–31 e 57–59 do PDF (idade na primeira gravidez, direção dos afetos e desigualdade no triângulo), além de trechos da montagem e do final nas p. 62–68. A conferência das fontes retomou Melo/Godoy p. 25–28 e Evaristo p. 17–21; a leitura mais ampla indicada na matriz pertence à pesquisa anterior. Bica permanece personagem-narradora, sem identificação biográfica com a autora. As propostas exatas estão no patch privado ignorado em `materiais-extraidos/publicacao-patches/olhos-dagua.json`, com valores antigos e novos para aplicação verificável. A conferência preliminar sobre uma cópia temporária usa o mesmo script literal do repositório, sem alterar o JSON público. Aprovação de status, inclusão das fontes oficiais, conferência final e commit ficam com a integração. O alcance continua sendo edição compacta de estudo, sem certificação de completude da habilidade avançada.
+
+
+## Localizador bibliográfico dos paratextos
+
+A ficha [Google Books, ISBN 9788534705974](https://books.google.com/books?vid=ISBN9788534705974) foi aberta: confirma *Olhos d'água*, Conceição Evaristo, Pallas Editora, 2016, 116 páginas e o ISBN da cópia. Esse endereço serve como localizador da edição para os registros Gomes e Werneck; a leitura do prefácio e da introdução foi realizada no PDF fornecido, não no catálogo on-line. A ficha não especifica a terceira reimpressão. O domínio da editora retornou 503 e a consulta ao Senado apresentou verificação de conexão, sem ficha legível; não foram inventados identificadores de produto ou registro.
+
+## Decisão da primeira edição de estudo
+
+Revistos os quinze contos, a assimetria de Kimbá, a idade de Natalina e a distinção entre Bica e a autora. Dois artigos e dois paratextos têm leitura documentada; os URLs dos paratextos são catálogos bibliográficos, com leitura no exemplar fornecido. Aprovados 8 módulos, 15 guias e 25 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.
