@@ -37,3 +37,4 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | Nebulosas | Primeira edição de estudo aprovada: 8 módulos, 4 guias, 9 cartões. Conferência literal passou; IDs preservados. |
 | Geografia | Primeira edição de estudo aprovada: 8 módulos, 7 guias, 16 cartões. Conferência literal passou; IDs preservados. |
 | A paixão segundo G.H. | Primeira edição de estudo aprovada: 8 módulos, 33 guias, 18 cartões. Conferência literal passou; IDs preservados. |
+| Canção para ninar menino grande | Primeira edição de estudo aprovada: 8 módulos, 16 guias, 16 cartões. Conferência literal passou; IDs preservados. |
