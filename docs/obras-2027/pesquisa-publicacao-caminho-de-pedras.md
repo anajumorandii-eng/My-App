@@ -82,3 +82,16 @@ Filipe escolhe a metáfora do parafuso para a marcha que não deveria olhar para
 ## Pendências da versão avançada
 
 Expandir a leitura por unidade nos quinze componentes, complementar a bibliografia com outros trabalhos independentes e comparar questões oficiais pertinentes sem inventar incidência. Referências mencionadas dentro dos estudos lidos, mas não abertas diretamente, não contam como novas fontes. A aprovação editorial da edição compacta depende da integração das correções, conferência literal e revisão final pelo integrador.
+
+
+## Validação da retomada para integração — 07/10/2026
+
+O JSON completo foi reaberto, sem alterar IDs, capítulos ou cartões. As correções acima foram convertidas em patch privado para o integrador; este registro não representa aprovação editorial automática nem nova leitura integral das obras. Releitura efetiva de conferência do primário: p. 25–26, 36, 39, 45, 53–55, 71–73, 76, 78, 88 e 100. Reabertura das fontes críticas nas seções usadas: Muraca 2012, PDF p. 2–7; Muraca 2016, PDF p. 3 e 7–10. As leituras completas registradas anteriormente continuam identificadas como etapa anterior; a retomada valida os argumentos necessários para estes ajustes.
+
+Todos os campos propostos preservam o valor antigo exato para impedir aplicação silenciosa sobre conteúdo diferente. As alterações de guias usam os arrays completos, e as modificações de módulos usam Markdown completo; Fontes passa a declarar bibliografia, procedência e alcance da primeira edição compacta. O texto de análise distingue evidência primária, hipótese interpretativa e tese crítica documentada. Nenhum artigo é usado como prova de que o arquivo editorial foi cotejado independentemente.
+
+**Confirmação específica:** no capítulo 13, p. 54, Noemi diz que viu o homem morrendo. Isso não comprova óbito posterior; o guia foi ajustado. A guarda do Guri é disputada pelo casal, sem legislação histórica externa lida. A questão discursiva foi delimitada ao conflito e ao julgamento moral, e a revisão ativa evita impor uma oposição entre castigo e preço social.
+
+## Decisão da primeira edição de estudo
+
+Incorporadas as correções verificadas e os parágrafos de forma, vozes, julgamento econômico e final. A crítica distingue os dois recortes de Muraca, sem contá-los como autores independentes. Não se transforma elipse em aborto comprovado nem fala do casal em regra legal. Aprovados 8 módulos, 27 guias e 14 cartões. Conferência literal passou antes do commit; IDs preservados. Alcance e bibliografia incompleta estão declarados em Fontes.

@@ -30,3 +30,4 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | Obra | Decisão e conferência |
 | --- | --- |
 | A visão das plantas | Primeira edição de estudo aprovada: 8 módulos, 12 guias, 17 cartões, três fontes críticas e três oficiais. Conferência literal passou; IDs preservados. |
+| Caminho de pedras | Primeira edição de estudo aprovada: 8 módulos, 27 guias, 14 cartões. Conferência literal passou; IDs preservados. |
