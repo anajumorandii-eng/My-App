@@ -5,7 +5,7 @@ import Podcast from './Podcast';
 import { requestAiTextStream } from '../lib/aiClient';
 import { synthesizePodcastAudio } from '../lib/podcastAudio';
 vi.mock('../hooks/useUserProfile', () => ({ useUserProfile: () => { const [profile, updateProfile] = useState({}); return { profile, updateProfile }; } }));
-vi.mock('../hooks/usePodcastVoices', () => ({ usePodcastVoices: () => ({ voices: [{ value: 'Kore', label: 'Kore' }, { value: 'Puck', label: 'Puck' }] }) }));
+vi.mock('../hooks/usePodcastVoices', () => ({ usePodcastVoices: () => ({ voices: ['Achernar', 'Enceladus', 'Aoede', 'Zubenelgenubi', 'Algenib', 'Kore', 'Puck'].map(name => ({ value: `pt-BR-Chirp3-HD-${name}`, label: name })).concat([{ value: 'pt-BR-Wavenet-D', label: 'Wavenet-D' }]) }) }));
 vi.mock('../hooks/usePodcastEpisodes', () => ({ usePodcastEpisodes: () => ({ episodes: [] }) }));
 vi.mock('../lib/aiClient', () => ({ requestAiTextStream: vi.fn() }));
 vi.mock('../lib/podcastAudio', () => ({ synthesizePodcastAudio: vi.fn(), podcastAudioErrorMessage: () => 'Voz natural indisponível' }));
@@ -29,7 +29,7 @@ it('gera usando escolhas de duração, foco e material; mantém a configuração
   expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({ speakers: 2, durationMinutes: 12, sourceText: expect.stringContaining('membrana é seletiva'), focus: 'Explique osmose com exemplos' });
   fireEvent.click(await screen.findByRole('button', { name: 'Reproduzir episódio Osmose do zero' }));
   await waitFor(() => expect(synthesizePodcastAudio).toHaveBeenCalled());
-  expect(vi.mocked(synthesizePodcastAudio).mock.calls[0][2]).toMatchObject({ speakers: 2, secondVoice: 'Puck' });
+  expect(vi.mocked(synthesizePodcastAudio).mock.calls[0][2]).toMatchObject({ speakers: 2, secondVoice: 'pt-BR-Chirp3-HD-Enceladus' });
   expect(await screen.findByLabelText('Velocidade de reprodução')).toBeInTheDocument();
 });
 it('mostra falha de geração sem disponibilizar roteiro incompleto', async () => {
@@ -42,7 +42,7 @@ it('mostra falha de geração sem disponibilizar roteiro incompleto', async () =
 });
 it('uma pessoa oculta a segunda voz e vozes iguais impedem gerar diálogo', () => {
   render(<Podcast />);
-  fireEvent.change(screen.getByLabelText('Voz da pessoa 2'), { target: { value: 'Kore' } });
+  fireEvent.change(screen.getByLabelText('Voz da pessoa 2'), { target: { value: 'pt-BR-Chirp3-HD-Achernar' } });
   expect(screen.getByRole('button', { name: 'Gerar meu podcast' })).toBeDisabled();
   fireEvent.click(screen.getByRole('button', { name: 'Uma pessoa' }));
   expect(screen.queryByLabelText('Voz da pessoa 2')).not.toBeInTheDocument();
@@ -110,4 +110,18 @@ it('não inicia áudio do episódio anterior enquanto cria um novo roteiro', asy
   expect(listen).toBeDisabled();
   fireEvent.click(listen);
   expect(synthesizePodcastAudio).not.toHaveBeenCalled();
+});
+
+it('mostra apenas as seis vozes escolhidas e inicia com Achernar e Enceladus', () => {
+  render(<Podcast />);
+  const first = screen.getByLabelText('Voz da pessoa 1') as HTMLSelectElement;
+  const second = screen.getByLabelText('Voz da pessoa 2') as HTMLSelectElement;
+  const expected = ['pt-BR-Chirp3-HD-Achernar', 'pt-BR-Chirp3-HD-Enceladus', 'pt-BR-Chirp3-HD-Aoede', 'pt-BR-Chirp3-HD-Zubenelgenubi', 'pt-BR-Wavenet-D', 'pt-BR-Chirp3-HD-Algenib'];
+  expect(Array.from(first.options, option => option.value)).toEqual(expected);
+  expect(Array.from(second.options, option => option.value)).toEqual(expected);
+  expect(first.value).toBe(expected[0]);
+  expect(second.value).toBe(expected[1]);
+  fireEvent.click(screen.getByRole('button', { name: 'Uma pessoa' }));
+  fireEvent.change(first, { target: { value: expected[2] } });
+  expect(first.value).toBe('pt-BR-Chirp3-HD-Aoede');
 });

@@ -4,6 +4,18 @@ export const PODCAST_VOICE_OPTIONS = [
   { value: 'Aoede', label: 'Aoede · leve' },
   { value: 'Puck', label: 'Puck · animada' },
 ] as const;
+export const PODCAST_SELECTED_VOICE_IDS = [
+  'pt-BR-Chirp3-HD-Achernar', 'pt-BR-Chirp3-HD-Enceladus',
+  'pt-BR-Chirp3-HD-Aoede', 'pt-BR-Chirp3-HD-Zubenelgenubi',
+  'pt-BR-Wavenet-D', 'pt-BR-Chirp3-HD-Algenib',
+] as const;
+
+export function selectedPodcastVoices(voices: PodcastVoiceOption[]): PodcastVoiceOption[] {
+  return PODCAST_SELECTED_VOICE_IDS.flatMap(id => {
+    const voice = voices.find(option => option.value === id);
+    return voice ? [voice] : [];
+  });
+}
 export const PODCAST_FORMATS = { conversa: 'Conversa e descobertas', aula: 'Aula explicada', revisao: 'Revisão para prova', perguntas: 'Perguntas e respostas' };
 export const PODCAST_LEVELS = { iniciante: 'Explique do zero', intermediario: 'Já conheço o básico', avancado: 'Quero aprofundar' };
 export const PODCAST_PACES = { tranquilo: 'Tranquilo, com pausas', natural: 'Natural', dinamico: 'Dinâmico' };
@@ -24,7 +36,7 @@ export interface PodcastSettings {
 }
 export const DEFAULT_PODCAST_SETTINGS: PodcastSettings = {
   speakers: 2, durationMinutes: 5, format: 'conversa', level: 'iniciante', pace: 'natural',
-  tone: 'acolhedor', hostStyle: 'professor', cohostStyle: 'curioso', voiceName: 'Kore', secondVoice: 'Puck', exam: 'Geral',
+  tone: 'acolhedor', hostStyle: 'professor', cohostStyle: 'curioso', voiceName: 'Achernar', secondVoice: 'Enceladus', exam: 'Geral',
 };
 export interface PodcastSpeechOptions {
   speakers: 1 | 2;
@@ -34,13 +46,13 @@ export interface PodcastSpeechOptions {
 }
 
 export interface PodcastVoiceOption { value: string; label: string; gender?: string; }
-export function resolvePodcastVoice(value: string, voices: PodcastVoiceOption[], fallback = 'Kore'): string {
+export function resolvePodcastVoice(value: string, voices: PodcastVoiceOption[], fallback = 'Achernar'): string {
   const shortName = /^pt-BR-Chirp3-HD-([A-Za-z]+)$/.exec(value)?.[1];
   return voices.find(voice => voice.value === value)?.value ?? voices.find(voice => voice.value === shortName)?.value ?? voices.find(voice => voice.value.endsWith(`Chirp3-HD-${value}`))?.value ?? voices.find(voice => voice.value === fallback || voice.value.endsWith(`Chirp3-HD-${fallback}`))?.value ?? voices[0]?.value ?? value;
 }
 
 export function resolvePodcastVoices(voiceName: string, secondVoice: string, voices: PodcastVoiceOption[]): { voiceName: string; secondVoice: string } {
-  const resolved = { voiceName: resolvePodcastVoice(voiceName, voices), secondVoice: resolvePodcastVoice(secondVoice, voices, 'Puck') };
+  const resolved = { voiceName: resolvePodcastVoice(voiceName, voices), secondVoice: resolvePodcastVoice(secondVoice, voices, 'Enceladus') };
   const available = (value: string) => voices.some(voice => voice.value === value || voice.value === /^pt-BR-Chirp3-HD-([A-Za-z]+)$/.exec(value)?.[1] || voice.value.endsWith(`Chirp3-HD-${value}`));
   if (resolved.voiceName === resolved.secondVoice) {
     // Ao remover uma voz antiga, preserve a participante que ainda existe e

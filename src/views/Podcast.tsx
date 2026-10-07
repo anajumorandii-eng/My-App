@@ -9,7 +9,7 @@ import { usePodcastEpisodes } from '../hooks/usePodcastEpisodes';
 import { usePersonalPodcasts } from '../hooks/usePersonalPodcasts';
 import { usePodcastVoices } from '../hooks/usePodcastVoices';
 import { useAuth } from '../context/AuthContext';
-import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, resolvePodcastVoices, type PodcastSettings } from '../lib/podcastConfig';
+import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, resolvePodcastVoices, selectedPodcastVoices, type PodcastSettings } from '../lib/podcastConfig';
 import { splitPodcastScript } from '../lib/podcastChunks';
 import { summaryCurriculum } from '../data/summaryCurriculum';
 import type { PodcastEpisode } from '../types';
@@ -27,8 +27,9 @@ export default function Podcast() {
   const { user } = useAuth();
   const accountRef = useRef(user?.uid); accountRef.current = user?.uid;
   const { voices, loading: voicesLoading, error: voicesError, retry: retryVoices } = usePodcastVoices();
+  const panelVoices = selectedPodcastVoices(voices);
   const savedSettings: PodcastSettings = { ...DEFAULT_PODCAST_SETTINGS, ...(profile.podcastVoiceName ? { voiceName: profile.podcastVoiceName } : {}), ...profile.podcastSettings };
-  const settings: PodcastSettings = { ...savedSettings, ...resolvePodcastVoices(savedSettings.voiceName, savedSettings.secondVoice, voices) };
+  const settings: PodcastSettings = { ...savedSettings, ...resolvePodcastVoices(savedSettings.voiceName, savedSettings.secondVoice, panelVoices) };
   const [title, setTitle] = useState('');
   const [subject, setSubject] = useState('Biologia');
   const [focus, setFocus] = useState('');
@@ -172,7 +173,7 @@ export default function Podcast() {
         <label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">O que você quer aprender? (opcional)</span><textarea rows={3} className={podcastInputClass} value={focus} maxLength={2000} onChange={e => setFocus(e.target.value)} placeholder="Ex.: Compare osmose e difusão, explique com exemplos e me faça perguntas no final." /></label>
         {!selected.length && !sourceText.trim() && <p className="text-xs text-[var(--dim)]">Você pode gerar o episódio só com o tema. Resumos e materiais são opcionais; se quiser, use-os para direcionar a explicação.</p>}
       </fieldset></section>
-      <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating || preferencesBlocked} className="min-w-0"><legend className="text-base font-semibold mb-5">2. Monte sua experiência</legend><PodcastSettingsPanel settings={settings} change={change} voiceOptions={voices} onPreview={previewVoice} previewLoading={Boolean(loadingId)} /></fieldset>
+      <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating || preferencesBlocked} className="min-w-0"><legend className="text-base font-semibold mb-5">2. Monte sua experiência</legend><PodcastSettingsPanel settings={settings} change={change} voiceOptions={panelVoices} onPreview={previewVoice} previewLoading={Boolean(loadingId)} /></fieldset>
         {preferencesBlocked && <p className="text-xs text-[var(--dim)] mt-4">{profileLoading ? 'Carregando suas preferências…' : 'As preferências precisam ser carregadas antes de criar o episódio. Reabra a aba para tentar novamente.'}</p>}
         {voicesLoading && <p role="status" className="text-xs text-[var(--dim)] mt-4">Consultando vozes em português…</p>}
         {voicesError && <p role="alert" className="text-xs mt-4">{voicesError} <button type="button" onClick={retryVoices} className="underline">Tentar consultar novamente</button></p>}
