@@ -5,7 +5,6 @@ import { AllocatedStudyAction, DisagreeReason } from '../../../types';
 import { formatIsoTimeInSaoPaulo } from '../../../features/availability/time';
 import { Button } from '../../../components/ui/Button';
 import { KineticText } from '../../../components/ui/KineticText';
-import { CrivoCore } from '../../../components/CrivoCore';
 import { getSubjectProfile, TYPOGRAPHY_PRESETS } from '../../../design-system/crivoSubjects';
 import { DecisionExplanation } from './DecisionExplanation';
 import { DisagreeControl, FeedbackStatus } from './DisagreeControl';
@@ -55,7 +54,7 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
   const previous = usePreviousFeedback(action.topicId, userId);
   const subjectProfile = getSubjectProfile(action.subject);
   const typographyPreset = TYPOGRAPHY_PRESETS[subjectProfile.tipografia];
-  const { coreState, phase, confirmationKey, reducedMotion } = useDecisionChoreography({
+  const { phase, confirmationKey, reducedMotion } = useDecisionChoreography({
     actionId: action.id,
     rankingChanged: showAdaptiveUpdate,
     feedbackStatus,
@@ -119,11 +118,9 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
         <div className={cn('crivo-observatorio-visual-support', explanationOpen && 'crivo-observatorio-visual-support--explaining', temCena(action.subject) && 'crivo-observatorio-visual-support--cena')}>
           <CenaDaMateria
             materia={action.subject}
-            reserva={(
-              <div className="crivo-observatorio-nucleo" aria-hidden="true">
-                <CrivoCore size="fill" scale="hero" decorative state={coreState} subject={action.subject} previousSubject={previousSubject} topicId={action.topicId} />
-              </div>
-            )}
+            // Sem laboratório ou WebGL, os fatores e sinais da decisão bastam.
+            // A reserva antiga recolocava o núcleo animado no Hoje, inclusive em Inglês.
+            reserva={null}
           />
           <DecisionFactorField factors={action.factors} phase={phase} />
         </div>

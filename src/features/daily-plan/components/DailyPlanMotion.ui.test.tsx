@@ -621,3 +621,16 @@ describe('TodayFocus explanation and feedback', () => {
     }).not.toThrow();
   });
 });
+
+
+describe('Hoje sem laboratório da matéria', () => {
+  it('preserva a recomendação de Inglês sem montar o núcleo antigo ou sondar WebGL', () => {
+    useReducedMotionMock.mockReturnValue(true);
+    const context = vi.spyOn(HTMLCanvasElement.prototype, 'getContext');
+    const { container } = renderTodayFocus({ action: { ...decisionAction, subject: 'Inglês', topicName: 'Compreensão de Texto em Inglês' } });
+    expect(screen.getByRole('heading', { name: 'Compreensão de Texto em Inglês' })).toBeVisible();
+    expect(screen.getByRole('button', { name: 'Começar' })).toBeVisible();
+    expect(container.querySelector('[data-testid="crivo-core"]')).toBeNull();
+    expect(context).not.toHaveBeenCalled();
+  });
+});

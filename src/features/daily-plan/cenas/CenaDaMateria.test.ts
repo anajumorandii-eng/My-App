@@ -16,7 +16,7 @@ describe('registro de cenas por matéria', () => {
     for (const m of ABAS_DO_HOJE) expect(temCena(m), m).toBe(true);
   });
 
-  it('matéria fora das abas fica com o Núcleo', () => {
+  it('matéria fora das abas usa a reserva da tela', () => {
     expect(temCena('Inglês')).toBe(false);
     expect(temCena(undefined)).toBe(false);
   });

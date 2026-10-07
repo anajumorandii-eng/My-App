@@ -251,7 +251,7 @@ describe('daily plan consistency across views', () => {
     const stage = screen.getByTestId('today-decision-stage');
     expect(within(stage).getByRole('heading', { name: FIRST_TOPIC })).toBeInTheDocument();
     expect(within(stage).getByRole('button', { name: 'Começar' })).toBeInTheDocument();
-    expect(within(stage).getByTestId('crivo-core')).toHaveAttribute('data-scale', 'hero');
+    expect(within(stage).queryByTestId('crivo-core')).not.toBeInTheDocument();
     const signals = within(stage).getByLabelText('Sinais usados na decisão');
     expect(signals.tagName).toBe('DL');
     for (const label of ['Domínio', 'Confiança', 'Urgência', 'Tempo']) {

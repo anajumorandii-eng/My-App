@@ -77,7 +77,7 @@ export default function NucleoInstrumentalProductionLayout() {
 // que em SCREENS se chama "Evolução", e a busca não a achava pelo nome que a
 // estudante vê.
 const TELAS_DA_BUSCA = [
-  ...SCREENS.map((item) => ({ rotulo: item.label, destino: PATH_BY_SCREEN[item.key] })),
+  ...SCREENS.filter((item) => item.key !== 'obra-detalhe').map((item) => ({ rotulo: item.label, destino: PATH_BY_SCREEN[item.key] })),
   ...TOP_LEVEL.map(([key, label]) => ({ rotulo: label, destino: PATH_BY_SCREEN[key] })),
 ].filter((tela, indice, todas) => Boolean(tela.destino) && todas.findIndex((outra) => outra.rotulo === tela.rotulo) === indice);
 
@@ -180,7 +180,7 @@ function LayoutComAmbiente() {
         <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><CrivoAppMark /></button>
         {menuOpen && <button className="ni-production-close" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>}
         <nav className="ni-rail-scroll" aria-label="Todas as telas do app">
-          {SCREENS.map((item) => {
+          {SCREENS.filter((item) => item.key !== 'obra-detalhe').map((item) => {
             const Icon = item.icon;
             const target = PATH_BY_SCREEN[item.key];
             return <NavLink key={item.key} to={target} end={target === '/'} className={item.key === screen.key ? 'active' : undefined} title={item.label}><span className="ni-icon-depth"><Icon aria-hidden="true" /></span>{(railExpanded || menuOpen) && <b>{item.label}</b>}</NavLink>;
