@@ -43,7 +43,7 @@ Data: 07/10/2026. Escopo: revisão de uma primeira edição compacta, não certi
     "pagesRead": "PDF p. 1–27, integral.",
     "centralThesis": "Subjetividade melancólica, natureza e crítica sociopolítica constituem dimensões interdependentes de um projeto poético.",
     "contribution": "Ajuda a cruzar o íntimo e o público em vez de tratar blocos temáticos como compartimentos estanques.",
-    "limitations": "Há imprecisões verificáveis: p. 9 chama Voto abertura da primeira parte e p. 19 chama Invocação abertura da segunda; no PDF primário Voto abre a segunda e Invocação está no interior dela. A descrição tripartida p. 8 não deve substituir o sumário da edição. O próprio PDF apresenta variante de DOI v0i63.15213 e lapsos bibliográficos; usar com confronto textual, não como autoridade infalível."
+    "limitations": "Há imprecisões verificáveis: p. 9 chama Voto abertura da primeira parte e p. 19 chama Invocação abertura da segunda; no PDF primário Voto abre a segunda e Invocação está no interior dela. A descrição tripartida p. 8 não deve substituir o sumário da edição. O próprio PDF apresenta variante de DOI v0i63.15213 e lapsos bibliográficos; usar com confronto textual, não como autoridade infalível. Em p. 14 altera para o feminino a concordância do anjo inspirador de Sadness; o primário usa o masculino. Não usar essa paráfrase como citação da obra."
   }
 ]
 ```
@@ -79,3 +79,14 @@ Em *O africano e o poeta* (p. 127–129), a alternância entre relato em primeir
 **Confronto e síntese.** A leitura social não precisa negar o repertório romântico; a tradição oferece justamente as imagens de voo, luz, algema e natureza que a poeta utiliza para construir reivindicações. O ângulo da recepção pergunta quem autoriza a voz; o ângulo político pergunta por quem essa voz fala. Nosso confronto textual mantém ambos: uma mulher reivindica reconhecimento e também constrói, por procedimentos literários, a fala de sujeitos escravizados.
 
 **Limites das fontes.** Os estudos não são intercambiáveis nem infalíveis. O artigo de 2026 descreve incorretamente alguns limites de parte; o sumário primário prevalece. A comunicação de 2003 e o artigo de 2017 incluem textos externos a *Nebulosas*. A primeira edição compacta tem quatro percursos, não 44 análises individuais completas, e ainda precisa ampliar discussão métrica e bibliografia de teses.
+
+
+## Conferência da retomada — 07/10/2026
+
+Confrontados o sumário (p. 4–5), os títulos de parte (p. 38, 42 e 107), Voto (p. 43), Fragmentos (p. 62), Invocação (p. 67–68), Vinte e cinco de março (p. 77–79), O africano e o poeta (p. 127–129) e Sadness (p. 130). Confirmadas três partes editoriais, quatro percursos didáticos, a presença de fala dramatizada do cativo e o anjo inspirador no masculino. O artigo de 2026 também altera essa concordância em p. 14; esse limite foi acrescentado à ficha da fonte. Não foi adotada nenhuma hipótese de correção de teísmo/ateísmo: a transcrição primária fornecida lê teísmo, e seria necessário confronto visual antes de emendar.
+
+Preparados patches privados com correções de campos completos, fichas das fontes realmente consultadas e acréscimos autorais para Análise e Crítica e debate. As prévias privadas passaram pelo conferidor literal existente, sem alteração ou enfraquecimento do script. A implementação, a aprovação editorial e a conferência antes do commit cabem à integração; esta nota não declara publicação concluída. Nenhum PDF ou texto integral foi acrescentado à documentação pública.
+
+## Decisão da primeira edição de estudo
+
+Corrigidos três partes editoriais versus quatro percursos e a fala dramatizada do escravizado. O debate confronta legitimação feminina, poesia pública e articulação entre melancolia e política; imprecisões das fontes não foram importadas. Não se afirma análise individual completa dos 44 poemas. Aprovados 8 módulos, 4 guias e 9 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.
