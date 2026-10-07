@@ -33,3 +33,4 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | Caminho de pedras | Primeira edição de estudo aprovada: 8 módulos, 27 guias, 14 cartões. Conferência literal passou; IDs preservados. |
 | Memórias de Martha | Primeira edição de estudo aprovada: 8 módulos, 12 guias, 9 cartões. Diagnóstico e variantes corrigidos; conferência literal passou; IDs preservados. |
 | Balada de amor ao vento | Primeira edição de estudo aprovada: 8 módulos, 20 guias, 18 cartões. Conferência literal passou; IDs preservados. |
+| Opúsculo humanitário | Primeira edição de estudo aprovada: 8 módulos, 7 guias, 12 cartões. Conferência literal passou; IDs preservados. |
