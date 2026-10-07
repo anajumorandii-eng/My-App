@@ -60,15 +60,18 @@ const provider = new GoogleAuthProvider();
 type ConnectedUserListener = (user: User | null) => void;
 const connectedUserListeners = new Set<ConnectedUserListener>();
 let connectedUser: User | null = null;
+let connectedUserResolved = false;
 
 const setConnectedUser = (user: User | null) => {
   connectedUser = user;
+  connectedUserResolved = true;
   connectedUserListeners.forEach((listener) => listener(user));
 };
 
 export const subscribeToConnectedUser = (listener: ConnectedUserListener) => {
   connectedUserListeners.add(listener);
-  listener(connectedUser);
+  // Initial null means restoration is pending, not a confirmed signed-out session.
+  if (connectedUserResolved) listener(connectedUser);
   return () => {
     connectedUserListeners.delete(listener);
   };
@@ -83,6 +86,9 @@ export const subscribeToConnectedUser = (listener: ConnectedUserListener) => {
 persistenceReady.then(() => {
   onAuthStateChanged(auth, (user) => {
     setConnectedUser(user);
+  }, (error) => {
+    console.error('Failed to restore authentication:', error);
+    setConnectedUser(null);
   });
 });
 

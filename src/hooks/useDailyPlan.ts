@@ -1,4 +1,5 @@
 import { useMemo } from 'react';
+import { useAuth } from '../context/AuthContext';
 import { mockTopics } from '../data/mockData';
 import { useDailyStudyAvailability } from '../features/availability/useDailyStudyAvailability';
 import type { AvailabilityWarning, DailyStudyAvailability } from '../features/availability/types';
@@ -21,15 +22,17 @@ export interface DailyPlanState {
 }
 
 export function useDailyPlan(localDate: string): DailyPlanState {
+  const { loading: authLoading } = useAuth();
   const availabilityState = useDailyStudyAvailability(localDate);
   const masteryState = useUserMastery();
   const profileState = useUserProfile();
   const goalsState = useStudentGoals();
   const { goals } = goalsState;
+  const loading = Boolean(authLoading || availabilityState.loading || masteryState.loading || profileState.loading || goalsState.loading);
 
   const prioritizedActions = useMemo(
-    () => EfficiencyEngine.rankStudyActions(masteryState.mastery, mockTopics, profileState.profile, goals),
-    [goals, masteryState.mastery, profileState.profile],
+    () => loading ? [] : EfficiencyEngine.rankStudyActions(masteryState.mastery, mockTopics, profileState.profile, goals),
+    [loading, goals, masteryState.mastery, profileState.profile],
   );
   const allocatedActions = useMemo(
     () => allocateStudyActions(prioritizedActions, availabilityState.availability?.intervals ?? []),
@@ -42,7 +45,7 @@ export function useDailyPlan(localDate: string): DailyPlanState {
     availability: availabilityState.availability,
     prioritizedActions,
     allocatedActions,
-    loading: availabilityState.loading || masteryState.loading || profileState.loading || goalsState.loading,
+    loading,
     warnings: availabilityState.availability?.warnings ?? [],
     isPersisted: masteryState.isPersisted && profileState.isPersisted && goalsState.isPersisted,
   };
