@@ -88,3 +88,16 @@ A mãe só interrompe o esforço quando a filha está amparada; o médico revela
 ## Pendências da versão avançada
 
 Expandir a leitura por unidade nos quinze componentes, complementar a bibliografia com outros trabalhos independentes e comparar questões oficiais pertinentes sem inventar incidência. Referências mencionadas dentro dos estudos lidos, mas não abertas diretamente, não contam como novas fontes. A aprovação editorial da edição compacta depende da integração das correções, conferência literal e revisão final pelo integrador.
+
+
+## Validação da retomada para integração — 07/10/2026
+
+O JSON completo foi reaberto, sem alterar IDs, capítulos ou cartões. As correções acima foram convertidas em patch privado para o integrador; este registro não representa aprovação editorial automática nem nova leitura integral das obras. Releitura efetiva de conferência do primário: p. 4, 8, 10–11, 17, 23, 30, 45, 49–52 e 54–55. Reabertura das fontes críticas nas seções usadas: Santos 2023, p. 150–152, 155 e 159–162; Souza 2026, páginas impressas 39–42, 52–58 e 69 (PDF p. 41–44, 54–60 e 71). As leituras completas registradas anteriormente continuam identificadas como etapa anterior; a retomada valida os argumentos necessários para estes ajustes.
+
+Todos os campos propostos preservam o valor antigo exato para impedir aplicação silenciosa sobre conteúdo diferente. As alterações de guias usam os arrays completos, e as modificações de módulos usam Markdown completo; Fontes passa a declarar bibliografia, procedência e alcance da primeira edição compacta. O texto de análise distingue evidência primária, hipótese interpretativa e tese crítica documentada. Nenhum artigo é usado como prova de que o arquivo editorial foi cotejado independentemente.
+
+**Confirmação específica:** a paginação da dissertação de Souza tem deslocamento de duas páginas: a impressa 39 é a página 41 do PDF. O registro para integração agora explicita os dois sistemas. A leitura das impressas 39–42 confirma as alterações folhetim/livro, inclusive a ausência do beijo no livro. O PDF usado do romance encerra em XII, no velório; apêndice e Cecília não foram acrescentados. A lesão cardíaca aparece em p. 54, e a vocação com desejo material em p. 17 não foi julgada moralmente inferior.
+
+## Decisão da primeira edição de estudo
+
+Aprovados oito módulos, doze guias e nove cartões após incorporação das correções e do debate entre Santos e Souza. Preservados IDs, o suicídio por veneno do pai e o diagnóstico cardíaco materno; não importados capítulos/apêndices de outras edições. O cartão de vocação e a questão objetiva usam a declaração inequívoca de desejo de palacete na p. 17, evitando apoiar o sentido numa sequência de negações da transcrição. A ambiguidade entre autonomia, segurança matrimonial e autoimagem permanece. Conferência literal passou antes do commit. Bibliografia parcial e escopo compacto estão declarados em Fontes.

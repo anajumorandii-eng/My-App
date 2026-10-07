@@ -7,122 +7,541 @@
     "note": "O romance está em domínio público (folhetim de 1888, livro de 1899). As páginas citadas são as do PDF dessa edição; as notas de vocabulário da edição são obra da editora e não são reproduzidas aqui."
   },
   "units": [
-    { "id": "cap-01", "order": 1, "type": "chapter", "title": "I — A morte do pai e o cortiço", "pdfStartPage": 4, "pdfEndPage": 9,
-      "guide": { "editorialStatus": "needs_review",
-        "summary": "Martha, já adulta, reconstrói a infância: a morte do pai, a mudança para um cortiço de São Cristóvão e a mãe viúva, engomadeira e tísica. Na casa da freguesa rica, a menina se vê ao lado de Lucinda diante de um grande espelho e recebe, como esmola, o vestido encarnado da outra.",
-        "observe": ["A narradora mistura a sensação da criança com o juízo da mulher que escreve anos depois.", "O espelho e o vestido encarnado são o primeiro registro da vergonha de classe, que vai voltar ao longo do livro."] } },
-    { "id": "cap-02", "order": 2, "type": "chapter", "title": "II — A escola e Matilde", "pdfStartPage": 10, "pdfEndPage": 14,
-      "guide": { "editorialStatus": "needs_review",
+    {
+      "id": "cap-01",
+      "order": 1,
+      "type": "chapter",
+      "title": "I — A morte do pai e o cortiço",
+      "pdfStartPage": 4,
+      "pdfEndPage": 9,
+      "guide": {
+        "editorialStatus": "published",
+        "summary": "Martha, já adulta, reconstrói a infância: a morte do pai, a mudança para um cortiço de São Cristóvão e a mãe viúva e engomadeira, inicialmente descrita como tísica por Martha. O diagnóstico cardíaco do desfecho impede tomar essa descrição como causa comprovada da morte. Na casa da freguesa rica, a menina se vê ao lado de Lucinda diante de um grande espelho e recebe, como esmola, o vestido encarnado da outra.",
+        "observe": [
+          "A narradora mistura a sensação da criança com o juízo da mulher que escreve anos depois.",
+          "O espelho e o vestido encarnado são o primeiro registro da vergonha de classe, que vai voltar ao longo do livro."
+        ]
+      }
+    },
+    {
+      "id": "cap-02",
+      "order": 2,
+      "type": "chapter",
+      "title": "II — A escola e Matilde",
+      "pdfStartPage": 10,
+      "pdfEndPage": 14,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Martha entra na escola pública, apoia-se em Matilde e a abandona quando a colega é acusada de roubo; troca-a por Clara Silvestre. Nas férias, assiste à embriaguez de Maneco, o filho da vizinha ilhoa, viciado em cachaça pelo vendeiro.",
-        "observe": ["O remorso tardio pelo abandono de Matilde é dito “no fim de trinta e tantos anos”: a culpa pertence ao presente da narração.", "O vestido que antes humilhava agora envaidece: a mesma peça muda de sentido conforme a posição social de quem a veste."] } },
-    { "id": "cap-03", "order": 3, "type": "chapter", "title": "III — Doença e o sonho de ser mestra", "pdfStartPage": 15, "pdfEndPage": 18,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O remorso tardio pelo abandono de Matilde é dito “no fim de trinta e tantos anos”: a culpa pertence ao presente da narração.",
+          "O vestido que antes humilhava agora envaidece: a mesma peça muda de sentido conforme a posição social de quem a veste."
+        ]
+      }
+    },
+    {
+      "id": "cap-03",
+      "order": 3,
+      "type": "chapter",
+      "title": "III — Doença e o sonho de ser mestra",
+      "pdfStartPage": 15,
+      "pdfEndPage": 18,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Depois de uma doença grave, Martha volta à escola, leva Rita para a matrícula e ouve uma adjunta falar do ordenado. Sonha ser mestra. A ilhoa agride o vendeiro que embebedou o filho e é presa; Carolina tem as pernas inchadas pela umidade.",
-        "observe": ["A vocação nasce misturada: “amor ao trabalho”, mas também inveja do luxo de Lucinda.", "Os vizinhos do cortiço adoecem do ambiente, mas a narradora os descreve com uma piedade distante."] } },
-    { "id": "cap-04", "order": 4, "type": "chapter", "title": "IV — O crime no cortiço e a história do pai", "pdfStartPage": 19, "pdfEndPage": 23,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A vocação nasce misturada: “amor ao trabalho”, mas também inveja do luxo de Lucinda.",
+          "A umidade e a precariedade da moradia compõem o ambiente de adoecimento; não explicam automaticamente todas as doenças. A narradora descreve os vizinhos com uma piedade distante."
+        ]
+      }
+    },
+    {
+      "id": "cap-04",
+      "order": 4,
+      "type": "chapter",
+      "title": "IV — O crime no cortiço e a história do pai",
+      "pdfStartPage": 19,
+      "pdfEndPage": 23,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O senhorio rebatiza o cortiço de “avenida”. Giovanni mata o companheiro Túlio para roubar suas economias, e a cena persegue Martha por meses. A mãe conta, enfim, que o pai, acusado de perder dinheiro dos patrões, matou-se com veneno.",
-        "observe": ["A revelação explica a queda da família: “A viúva de um ladrão” não podia ficar na mesma classe.", "O desejo de pagar a Braga & Torres a soma perdida transforma a pobreza em questão de honra."] } },
-    { "id": "cap-05", "order": 5, "type": "chapter", "title": "V — A morte de Maneco e o primeiro ordenado", "pdfStartPage": 24, "pdfEndPage": 27,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A revelação explica a queda da família: “A viúva de um ladrão” não podia ficar na mesma classe.",
+          "O desejo de pagar a Braga & Torres a soma perdida transforma a pobreza em questão de honra."
+        ]
+      }
+    },
+    {
+      "id": "cap-05",
+      "order": 5,
+      "type": "chapter",
+      "title": "V — A morte de Maneco e o primeiro ordenado",
+      "pdfStartPage": 24,
+      "pdfEndPage": 27,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Maneco morre consumido pelo álcool. No dia seguinte, Martha é nomeada na escola e passa a ganhar ordenado; com ele, mãe e filha decidem alugar um chalé. Na Escola Normal, um rapaz de olhos negros a observa e a segue até o portão do cortiço.",
-        "observe": ["Morte e ascensão aparecem lado a lado, em dias consecutivos.", "O final do capítulo desmonta o episódio: a narradora suspeita que o rapaz seguia a professora, e não ela."] } },
-    { "id": "cap-06", "order": 6, "type": "chapter", "title": "VI — O chalé e a soirée", "pdfStartPage": 28, "pdfEndPage": 32,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "Morte e ascensão aparecem lado a lado, em dias consecutivos.",
+          "O final do capítulo desmonta o episódio: a narradora suspeita que o rapaz seguia a professora, e não ela."
+        ]
+      }
+    },
+    {
+      "id": "cap-06",
+      "order": 6,
+      "type": "chapter",
+      "title": "VI — O chalé e a soirée",
+      "pdfStartPage": 28,
+      "pdfEndPage": 32,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Já no chalé, Martha vive o amor imaginado pelo rapaz que nunca reviu. Aos vinte anos é convidada para a reunião em casa da professora: diante do espelho do toucador, sente-se humilhada como na infância, dança mal uma quadrilha e esquece a mãe à espera no vestíbulo até as duas da manhã.",
-        "observe": ["“Amei o Amor”: a própria narradora reconhece que amava a hipótese de ser amada.", "O espelho volta, doze anos depois, com o mesmo efeito: a ascensão profissional não apagou a vergonha."] } },
-    { "id": "cap-07", "order": 7, "type": "chapter", "title": "VII — Palmeiras e Luiz", "pdfStartPage": 33, "pdfEndPage": 38,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "“Amei o Amor”: a própria narradora reconhece que amava a hipótese de ser amada.",
+          "O espelho volta, doze anos depois, com o mesmo efeito: a ascensão profissional não apagou a vergonha."
+        ]
+      }
+    },
+    {
+      "id": "cap-07",
+      "order": 7,
+      "type": "chapter",
+      "title": "VII — Palmeiras e Luiz",
+      "pdfStartPage": 33,
+      "pdfEndPage": 38,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Diagnosticada pelo médico com “histerismo”, Martha passa um mês com a professora e o marido em Palmeiras. Conhece Luiz, primo da mestra e estudante de medicina, que discursa sobre o castelo que faria se fosse rico e depois lhe fala de um lar honesto.",
-        "observe": ["O diagnóstico de histerismo e o conselho de casamento mostram como a doença feminina era lida pela época.", "O discurso extravagante de Luiz já denuncia o falso que Martha ainda não vê."] } },
-    { "id": "cap-08", "order": 8, "type": "chapter", "title": "VIII — A tempestade e o desengano", "pdfStartPage": 39, "pdfEndPage": 43,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O diagnóstico de histerismo e o conselho de casamento mostram como a doença feminina era lida pela época.",
+          "O discurso extravagante de Luiz já denuncia o falso que Martha ainda não vê."
+        ]
+      }
+    },
+    {
+      "id": "cap-08",
+      "order": 8,
+      "type": "chapter",
+      "title": "VIII — A tempestade e o desengano",
+      "pdfStartPage": 39,
+      "pdfEndPage": 43,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Durante uma tempestade, Luiz se impressiona com a filha de um paralítico norte-americano. Na manhã da partida, Martha o vê abraçado à moça no jardim do hotel e ouve, em inglês, a declaração que esperava para si. Volta para a mãe sem falar de Luiz.",
-        "observe": ["A natureza acompanha o estado da narradora: tempestade no medo, luz clara na esperança.", "A frase em inglês, que Martha só entende em parte, materializa a exclusão: o amor acontece numa língua que ela não domina."] } },
-    { "id": "cap-09", "order": 9, "type": "chapter", "title": "IX — Clara Silvestre e o concurso", "pdfStartPage": 44, "pdfEndPage": 48,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A natureza acompanha o estado da narradora: tempestade no medo, luz clara na esperança.",
+          "A frase em inglês, que Martha só entende em parte, materializa a exclusão: o amor acontece numa língua que ela não domina."
+        ]
+      }
+    },
+    {
+      "id": "cap-09",
+      "order": 9,
+      "type": "chapter",
+      "title": "IX — Clara Silvestre e o concurso",
+      "pdfStartPage": 44,
+      "pdfEndPage": 48,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Martha atravessa meses de crises nervosas. Num passeio ao Engenho Novo reencontra Clara Silvestre, agora luxuosa e cercada de rapazes, que diz não merecer sua amizade. Sabe que Luiz vai casar com Leonor e se prepara para o concurso de professoras.",
-        "observe": ["O destino de Clara é sugerido, nunca nomeado: o luxo, os rapazes e o “não mereço” bastam.", "O capítulo fecha com um elogio à mãe brasileira, que é também o elogio da própria mãe."] } },
-    { "id": "cap-10", "order": 10, "type": "chapter", "title": "X — A nomeação e o pedido", "pdfStartPage": 49, "pdfEndPage": 50,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O destino de Clara é sugerido, nunca nomeado: o luxo, os rapazes e o “não mereço” bastam.",
+          "O capítulo fecha com um elogio à mãe brasileira, que é também o elogio da própria mãe."
+        ]
+      }
+    },
+    {
+      "id": "cap-10",
+      "order": 10,
+      "type": "chapter",
+      "title": "X — A nomeação e o pedido",
+      "pdfStartPage": 49,
+      "pdfEndPage": 50,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Martha é aprovada e nomeada professora no dia do casamento de Luiz. O solicitador Miranda, vizinho e antigo freguês da mãe, pede sua mão depois de ler as cartas escritas em Palmeiras. Ela recusa, depois reflete e aceita.",
-        "observe": ["A independência conquistada (“não precisarei do apoio de ninguém”) cede diante da solidão prevista.", "Miranda se apaixona pelas cartas, isto é, pelo que Martha escreveu ao amar outro."] } },
-    { "id": "cap-11", "order": 11, "type": "chapter", "title": "XI — O noivo e os versos queimados", "pdfStartPage": 51, "pdfEndPage": 53,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A independência conquistada (“não precisarei do apoio de ninguém”) cede diante da solidão prevista.",
+          "Miranda se apaixona pelas cartas, isto é, pelo que Martha escreveu ao amar outro."
+        ]
+      }
+    },
+    {
+      "id": "cap-11",
+      "order": 11,
+      "type": "chapter",
+      "title": "XI — O noivo e os versos queimados",
+      "pdfStartPage": 51,
+      "pdfEndPage": 53,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Martha descreve Miranda, simples, gordo, de linguagem pouco cuidada, e ouve da mãe uma teoria sobre o casamento em que a mulher mais instruída deve disfarçar a diferença. Reencontra a ilhoa, cuja família foi destroçada. Na véspera do casamento, queima os papéis antigos, inclusive os versos de Luiz.",
-        "observe": ["A teoria da mãe propõe que a esposa superior se “nivele” ao marido: é a acomodação apresentada como sabedoria.", "Queimar os versos é o gesto que encerra a idealização romântica."] } },
-    { "id": "cap-12", "order": 12, "type": "chapter", "title": "XII — O casamento e a morte da mãe", "pdfStartPage": 54, "pdfEndPage": 55,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A teoria da mãe propõe que a esposa superior se “nivele” ao marido: é a acomodação apresentada como sabedoria.",
+          "Queimar os versos é o gesto que encerra a idealização romântica."
+        ]
+      }
+    },
+    {
+      "id": "cap-12",
+      "order": 12,
+      "type": "chapter",
+      "title": "XII — O casamento e a morte da mãe",
+      "pdfStartPage": 54,
+      "pdfEndPage": 55,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O casamento é sereno, sem paixão e sem brigas. No oitavo dia, a mãe sofre uma síncope; o médico diz que o coração estava arruinado havia anos. Ela morre pouco depois, e o livro termina com Martha velando o corpo.",
-        "observe": ["A mãe só para quando a filha está amparada: “toda a sua vida tinha sido só artifício, força de vontade”.", "O romance termina na morte, sem voltar ao presente da narradora."] } }
+        "observe": [
+          "A mãe só para quando a filha está amparada: “toda a sua vida tinha sido só artifício, força de vontade”.",
+          "O romance termina na morte, sem voltar ao presente da narradora."
+        ]
+      }
+    }
   ],
   "modules": [
-    { "id": "comece-aqui", "moduleType": "comece_aqui", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Memórias de Martha** é um romance curto, em doze capítulos, de Júlia Lopes de Almeida (1862-1934), publicado primeiro em folhetim e depois em livro. Martha, já madura, conta a própria formação: a infância pobre num cortiço de São Cristóvão, no Rio de Janeiro, a escola pública, o trabalho na própria escola e depois o cargo de professora, um amor frustrado e um casamento sem paixão.\n\n**Por que importa para a Fuvest.** O livro junta três assuntos que a banca costuma cobrar juntos: a condição da mulher no fim do século XIX, a educação e o trabalho como única saída para uma moça pobre, e um narrador que julga o próprio passado. É ainda uma obra de autoria feminina num período em que a crítica e as instituições literárias davam pouco espaço às escritoras.\n\n**Como ler.** Acompanhe dois tempos: o da menina, que sente, e o da mulher que escreve, que comenta e corrige. Marque as cenas que se repetem com outra roupa — o espelho, o vestido, a esmola — porque é nelas que o romance mostra o que muda e o que não muda na vida de Martha." },
-    { "id": "analise-integral", "moduleType": "analise_integral", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-espelho-infancia", "ev-espelho-soiree", "ev-remorso-matilde", "ev-viuva-ladrao", "ev-vocacao-inveja", "ev-amei-o-amor", "ev-vinganca", "ev-nivelar", "ev-artificio"], "sourceRefs": [],
-      "markdown": "## Narradora em dois tempos\n\nO romance é narrado em primeira pessoa por uma Martha adulta, que reconstrói a infância e a juventude. Essa distância permite o comentário retrospectivo: a narradora corrige o que a menina sentiu, assume culpas antigas e desconfia das próprias lembranças. O caso de Matilde, a colega abandonada depois da acusação de roubo, só ganha peso moral quando a narradora diz senti-lo, “no fim de trinta e tantos anos”, como uma nódoa na consciência (cap. II, p. 11). O mesmo recurso desmonta a cena do rapaz que a seguiu da Escola Normal: anos depois, ela suspeita que ele seguia a professora, e não ela (cap. V, p. 27).\n\n## Pobreza, vergonha e classe\n\nA queda da família tem uma causa precisa. O pai, acusado de perder dinheiro dos patrões, matou-se; a mãe passou a ser “a viúva de um ladrão”, e por isso desceu de classe (cap. IV, p. 23). A pobreza, aqui, não é só falta de dinheiro: é desonra, e é ela que explica a vergonha que Martha sente diante do portão do cortiço. As cenas repetidas medem essa vergonha. Diante do espelho da casa de Lucinda, a menina se descobre feia e pobre ao lado de outra menina da mesma idade (cap. I, p. 8); doze anos depois, já trabalhando e recebendo ordenado, o espelho do toucador produz exatamente o mesmo efeito (cap. VI, p. 30). A ascensão profissional não apagou a marca.\n\n## Trabalho e educação como saída\n\nA única porta aberta a uma moça pobre é a escola: ajudar a mestra, ser nomeada, frequentar a Escola Normal, prestar concurso e obter a cadeira de professora. O romance não idealiza essa escolha. A narradora admite que a vocação nasceu também da inveja do luxo de Lucinda (cap. III, p. 17), e que estudava por esforço, não por talento (cap. VI, p. 28-29). Mesmo assim, é o ordenado que tira mãe e filha do cortiço e é a nomeação que lhe dá, por um momento, a ideia de independência.\n\n## Amor romântico e acomodação\n\nMartha ama primeiro um desconhecido e depois Luiz, um estudante de medicina de discursos grandiosos que a abandona por outra. Ela mesma resume o engano: “amei o Amor” (cap. VI, p. 28). O casamento com Miranda vem depois dessas derrotas e é pensado como compensação: a narradora diz ter refletido que o casamento seria uma vingança contra os ultrajes que a imaginação sofrera (cap. X, p. 50). A mãe completa a lição com uma teoria do casamento em que a esposa mais instruída deve disfarçar a diferença e se nivelar ao marido (cap. XI, p. 51-52). O livro deixa o leitor decidir se isso é sabedoria ou renúncia.\n\n## A mãe\n\nA engomadeira tísica que trabalha da madrugada à noite é a figura moral do romance. Seu fim fecha o arco: assim que a filha está casada e amparada, ela deixa de lutar e morre; a narradora conclui que toda a sua vida tinha sido só artifício e força de vontade (cap. XII, p. 54). O sacrifício materno é exaltado, mas o livro também mostra seu custo.\n\n## O cortiço e os limites do olhar\n\nO cortiço é descrito com detalhes de miséria, doença e vício — o alcoolismo de Maneco, provocado pelo vendeiro, as pernas inchadas de Carolina pela umidade —, o que aproxima o livro do romance naturalista da época. Mas o olhar da narradora não é neutro: ela descreve vizinhos negros, mestiços e imigrantes com termos e juízos marcados pelo preconceito do período. Ler esses trechos criticamente faz parte da análise; eles mostram a hierarquia social que Martha teme e, ao mesmo tempo, reproduz." },
-    {"id": "critica-debate", "moduleType": "critica_debate", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-vinganca", "ev-nivelar"], "sourceRefs": [], "markdown": "**Camadas de evidência.** Os cartões trazem trechos localizados no PDF; guias e análise são síntese própria. Nenhuma fonte acadêmica foi lida.\n\n**Hipóteses em confronto.** O casamento com Miranda pode ser lido como acomodação ou como estratégia racional de sobrevivência — a narradora o chama de “vingança” (cap. X, p. 50). A teoria da mãe de que a esposa instruída deve “nivelar-se” ao marido (cap. XI, p. 51-52) pode ser lida como sabedoria da época ou como renúncia. O livro não decide.\n\n**Limites.** Os juízos preconceituosos da narradora sobre vizinhos negros, mestiços e imigrantes precisam ser lidos criticamente, não reproduzidos. Pesquisa pendente: estudos sobre a autora, o romance de formação feminino e o naturalismo, citados com página quando lidos."},
-    {"id": "fuvest", "moduleType": "fuvest", "board": "FUVEST", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-remorso-matilde", "ev-espelho-infancia", "ev-espelho-soiree"], "sourceRefs": [], "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nNa objetiva, separe a Martha menina da narradora adulta: o remorso por Matilde vem “no fim de trinta e tantos anos” (cap. II, p. 11). Distrator comum: tratar o romance como idealização do magistério.\n\nNa discursiva, use as cenas repetidas: o espelho na casa de Lucinda (cap. I, p. 8) e o espelho do toucador (“Como há doze anos, via-me humilhada, feia.”, cap. VI, p. 30). Mostre o que muda (posição social) e o que permanece (vergonha)."},
-    {"id": "unicamp", "moduleType": "unicamp", "board": "UNICAMP", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [], "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nBoa comparação com *Memórias póstumas de Brás Cubas*, da lista Unicamp: dois narradores retrospectivos que julgam o próprio passado, um a partir da pobreza e do trabalho, outro a partir da herança e do ócio."},
-    {"id": "questoes", "moduleType": "questoes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-vocacao-inveja", "ev-viuva-ladrao", "ev-espelho-infancia", "ev-espelho-soiree", "ev-nivelar", "ev-artificio"], "sourceRefs": [], "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “eu não queria ser mestra para não morar em um cortiço mal alumiado, infecto, úmido” (cap. III, p. 17), a narradora:\nA) idealiza a vocação do magistério.\nB) expõe um motivo pouco nobre da própria vocação.\nC) critica a mãe por não trabalhar.\nD) descreve a escola pública.\nE) rejeita a ideia de ser professora.\n\n**2. FUVEST, objetiva, difícil.** “A viúva de um ladrão não podia continuar na mesma classe de que a memória do marido a arrancara.” (cap. IV, p. 23) mostra que a queda da família é:\nA) só econômica.\nB) também desonra, o que explica a vergonha de Martha.\nC) causada pela doença da mãe.\nD) resultado do casamento com Miranda.\nE) inventada pela narradora.\n\n**3. FUVEST, discursiva, difícil.** a) Compare as duas cenas do espelho (cap. I, p. 8; cap. VI, p. 30). b) Explique o que a repetição revela sobre ascensão social e autoimagem.\n\n**4. Discursiva, muito difícil.** A mãe ensina que a esposa deve “disfarçar a diferença intelectual” (cap. XI, p. 51-52). Relacione a lição à trajetória de Martha como professora e à condição feminina no romance.\n\n**5. Comparação, muito difícil.** “É que toda a sua vida tinha sido só artifício, força de vontade, nada mais.” (cap. XII, p. 54). Por que o romance termina na morte da mãe e não no casamento?"},
-    {"id": "revisao-ativa", "moduleType": "revisao_ativa", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-viuva-ladrao", "ev-vinganca"], "sourceRefs": [], "markdown": "Reconstrua sem consulta: os doze capítulos em quatro blocos (infância e cortiço; escola e vocação; amores e Palmeiras; concurso, casamento e morte da mãe).\n\n**Factual:** como morreu o pai? Quem é Luiz? Por que Martha aceita Miranda?\n\n**Formal:** onde a narradora adulta intervém? Que cenas se repetem?\n\n**Interpretativo:** o casamento é derrota ou estratégia? Justifique com dois capítulos.\n\n**24 horas:** mapa e microperguntas. **7 dias:** um trecho novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos."},
-    { "id": "fontes", "moduleType": "fontes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Edição usada:** Júlia Lopes de Almeida, *Memórias de Martha*. São Paulo: Via Leitura (Edipro), 2024, e-book. As páginas citadas neste dossiê são as do PDF dessa edição.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica:** nenhuma fonte crítica foi lida para este dossiê. As análises são síntese fundamentada no próprio texto, e cada afirmação aponta o capítulo e a página que a sustentam. Fontes críticas só entram aqui depois de lidas, com a página consultada." }
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Memórias de Martha** é um romance curto, em doze capítulos, de Júlia Lopes de Almeida (1862-1934), publicado primeiro em folhetim e depois em livro. Martha, já madura, conta a própria formação: a infância pobre num cortiço de São Cristóvão, no Rio de Janeiro, a escola pública, o trabalho na própria escola e depois o cargo de professora, um amor frustrado e um casamento sem paixão.\n\n**Por que importa para a Fuvest.** Estes eixos permitem preparar uma leitura de excerto para a FUVEST: a condição da mulher no fim do século XIX, a educação e o trabalho como possibilidade de autonomia privilegiada na trajetória de Martha, e uma narradora que julga o próprio passado. Não se trata de levantamento de incidência de questões. É ainda uma obra de autoria feminina num período em que a crítica e as instituições literárias davam pouco espaço às escritoras.\n\n**Como ler.** Acompanhe dois tempos: o da menina, que sente, e o da mulher que escreve, que comenta e corrige. Marque as cenas que se repetem com outra roupa — o espelho, o vestido, a esmola — porque é nelas que o romance mostra o que muda e o que não muda na vida de Martha.",
+      "reviewedAt": "2026-10-07T04:54:57Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-memorias-de-martha"
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-espelho-infancia",
+        "ev-espelho-soiree",
+        "ev-remorso-matilde",
+        "ev-viuva-ladrao",
+        "ev-vocacao-inveja",
+        "ev-amei-o-amor",
+        "ev-vinganca",
+        "ev-nivelar",
+        "ev-artificio"
+      ],
+      "sourceRefs": [
+        "memorias-de-martha-santos-2023",
+        "memorias-de-martha-souza-2026"
+      ],
+      "markdown": "## Narradora em dois tempos\n\nO romance é narrado em primeira pessoa por uma Martha adulta, que reconstrói a infância e a juventude. Essa distância permite o comentário retrospectivo: a narradora corrige o que a menina sentiu, assume culpas antigas e desconfia das próprias lembranças. O caso de Matilde, a colega abandonada depois da acusação de roubo, só ganha peso moral quando a narradora diz senti-lo, “no fim de trinta e tantos anos”, como uma nódoa na consciência (cap. II, p. 11). O mesmo recurso desmonta a cena do rapaz que a seguiu da Escola Normal: anos depois, ela suspeita que ele seguia a professora, e não ela (cap. V, p. 27).\n\n## Pobreza, vergonha e classe\n\nA queda da família tem uma causa precisa. O pai, acusado de perder dinheiro dos patrões, matou-se; a mãe passou a ser “a viúva de um ladrão”, e por isso desceu de classe (cap. IV, p. 23). A pobreza, aqui, não é só falta de dinheiro: é desonra, e é ela que explica a vergonha que Martha sente diante do portão do cortiço. As cenas repetidas medem essa vergonha. Diante do espelho da casa de Lucinda, a menina se descobre feia e pobre ao lado de outra menina da mesma idade (cap. I, p. 8); doze anos depois, já trabalhando e recebendo ordenado, o espelho do toucador produz exatamente o mesmo efeito (cap. VI, p. 30). A ascensão profissional não apagou a marca.\n\n## Trabalho e educação como saída\n\nA escola organiza o caminho de mobilidade profissional de Martha: ajudar a mestra, ser nomeada, frequentar a Escola Normal, prestar concurso e obter a cadeira de professora. Esse percurso contrasta com o trabalho braçal da mãe, a exploração de Carolina e o destino sugerido de Clara; não esgota todas as formas de trabalho feminino no romance. O romance não idealiza essa escolha. A narradora admite que a vocação nasceu também da inveja do luxo de Lucinda (cap. III, p. 17), e que estudava por esforço, não por talento (cap. VI, p. 28-29). Mesmo assim, é o ordenado que tira mãe e filha do cortiço e é a nomeação que lhe dá, por um momento, a ideia de independência.\n\n## Amor romântico e acomodação\n\nMartha ama primeiro um desconhecido e depois Luiz, um estudante de medicina de discursos grandiosos que a abandona por outra. Ela mesma resume o engano: “amei o Amor” (cap. VI, p. 28). O casamento com Miranda vem depois dessas derrotas e é pensado como compensação: a narradora diz ter refletido que o casamento seria uma vingança contra os ultrajes que a imaginação sofrera (cap. X, p. 50). A mãe completa a lição com uma teoria do casamento em que a esposa mais instruída deve disfarçar a diferença e se nivelar ao marido (cap. XI, p. 51-52). O livro deixa o leitor decidir se isso é sabedoria ou renúncia.\n\n## A mãe\n\nA engomadeira, descrita inicialmente como tísica pela narradora, trabalha da madrugada à noite e é a figura moral do romance. O capítulo XII identifica uma lesão cardíaca antiga: não se deve explicar seu desfecho como tuberculose. Seu fim fecha o arco: assim que a filha está casada e amparada, ela deixa de lutar e morre; a narradora conclui que toda a sua vida tinha sido só artifício e força de vontade (cap. XII, p. 54). O sacrifício materno é exaltado, mas o livro também mostra seu custo.\n\n## O cortiço e os limites do olhar\n\nO cortiço é descrito com detalhes de miséria, doença e vício — o alcoolismo de Maneco, provocado pelo vendeiro, as pernas inchadas de Carolina pela umidade —, o que aproxima o livro do romance naturalista da época. Mas o olhar da narradora não é neutro: ela descreve vizinhos negros, mestiços e imigrantes com termos e juízos marcados pelo preconceito do período. Ler esses trechos criticamente faz parte da análise; eles mostram a hierarquia social que Martha teme e, ao mesmo tempo, reproduz.\n\n## Memória, autocrítica e persistência do preconceito\n\nA adulta que escreve não é uma voz transparente ou exterior às hierarquias. No abandono de Matilde, ela distingue a insensibilidade da criança do remorso que permanece trinta e tantos anos depois (cap. II, p. 11). Esse gesto de autocorreção não cancela os termos racializados e depreciativos da apresentação da colega. Ler criticamente a narradora exige observar as duas coisas: ela reconhece uma dívida moral e conserva marcas do modo social de distribuir valor. A memória reabre o julgamento de seus atos, sem assegurar que tenha superado todos os pressupostos com que os descreve.\n\n## Objetos mudam de função conforme a posição de quem olha\n\nO vestido recebido de Lucinda humilha Martha como esmola e depois a faz sentir-se superior às crianças do cortiço ao entrar na escola (cap. I–II, p. 8–10). A peça é a mesma, mas o lugar relativo de quem a veste mudou. Já o espelho da infância reaparece doze anos depois na festa da professora (cap. VI, p. 30). A renda e o tapete da sala foram feitos com a participação da própria Martha, mas ela não se reconhece como pertencente ao ambiente. A cena liga trabalho e exclusão: produzir objetos valorizados não equivale a desfrutar da posição social de seus proprietários. A repetição formal fornece uma medida precisa da ascensão incompleta.\n\n## Duas formas de dívida\n\nQuando a mãe revela o suicídio do pai, Martha imagina obter riqueza para devolver aos patrões o dinheiro roubado e reparar a desonra (cap. IV, p. 23). No desfecho, deseja remunerar com juros os sacrifícios maternos (cap. XII, p. 54). O vocabulário econômico aproxima reparação social e gratidão afetiva, mas as dívidas não se deixam quitar do mesmo modo. O cargo de professora abre uma renda; não recupera a memória pública do pai nem recompõe a saúde exaurida da mãe. A narrativa questiona a expectativa de que sucesso profissional possa compensar integralmente perdas passadas.\n\n## Cartas, casamento e limites da instrução\n\nMiranda se interessa pelas cartas escritas durante o amor de Martha por Luiz (cap. X, p. 49–50): uma linguagem dirigida a outra experiência produz um casamento sem aquela paixão. O contraste não torna Miranda vilão; sua delicadeza existe, mas não elimina a renúncia ao ideal de afinidade intelectual. A mãe recomenda à esposa instruída disfarçar a superioridade e nivelar-se ao marido (cap. XI, p. 51–52). A formação que permitia sair da dependência econômica volta a ser regulada na intimidade. Na própria p. 52, o relato da ilhoa sobre a exploração e as agressões sofridas por Carolina contrasta com a promessa abstrata de proteção matrimonial.\n\n## O fechamento desta edição\n\nA mãe só interrompe o esforço quando a filha está amparada; o médico revela uma lesão cardíaca antiga e espanta-se com a resistência do corpo (cap. XII, p. 54). O elogio moral materno converte essa resistência em grandeza, mas a cena também permite medir o custo do trabalho e do cuidado. O último quadro é Martha junto ao cadáver (p. 55), não a celebração do concurso ou do casamento. Essa ordem põe o vínculo materno no centro do balanço. Não afirmar que a narradora perdeu o emprego depois de casar: a obra não narra tal abandono. Também não importar para este PDF a filha Cecília e o apêndice presentes em outras edições.",
+      "reviewedAt": "2026-10-07T04:54:57Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-memorias-de-martha"
+    },
+    {
+      "id": "critica-debate",
+      "moduleType": "critica_debate",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-vinganca",
+        "ev-nivelar"
+      ],
+      "sourceRefs": [
+        "memorias-de-martha-santos-2023",
+        "memorias-de-martha-souza-2026"
+      ],
+      "markdown": "**Leitura crítica documentada.** Santos (2023, p. 150–152 e 159–162) entende a subversão possível como a coexistência de profissionalização feminina e concessão final ao matrimônio protetor. Souza (2026, p. 52–58 e 69) acentua o caráter parcial da ascensão e a pressão do modelo de feminilidade; em p. 39–42 demonstra que a história mudou entre folhetim e livro. As autoras convergem sobre a tensão entre avanço e acomodação, mas isso não resolve automaticamente a avaliação de cada cena.\n\n**Evidência textual.** Martha afirma independência profissional antes de aceitar Miranda (cap. X, p. 50) e registra a consideração intelectual que deveria disfarçar como esposa (cap. XI, p. 51–52). No entanto, a descrição do marido lhe reconhece lealdade e bondade; a mesma narração encerra no sofrimento pela morte da mãe. O casamento contém renúncia, busca de segurança e uma vida serena, sem que a conquista profissional seja declarada anulada.\n\n**Síntese própria.** Uma leitura forte acompanha os meios disponíveis e o preço de usá-los: trabalho, escola, auxílio da professora e casamento não exercem a mesma função. A hipótese de derrota ilumina a pressão sobre o desejo; a hipótese de estratégia mostra as condições concretas de sobrevivência. Nenhuma delas deve apagar a autoimagem ferida, a cumplicidade da narradora com hierarquias raciais ou a continuidade de seus recursos profissionais.\n\n**Controle das fontes.** Santos, p. 155, menciona febre amarela para a morte do pai; no PDF lido, a mãe revela suicídio por veneno (cap. IV, p. 23). Souza distingue a doença no folhetim da alteração em livro. A referência crítica não substitui o texto-base. Variantes, apêndice e filiação de Cecília pertencem às edições estudadas, não devem ser enxertados no desfecho de doze capítulos usado aqui.",
+      "reviewedAt": "2026-10-07T04:54:57Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-memorias-de-martha"
+    },
+    {
+      "id": "fuvest",
+      "moduleType": "fuvest",
+      "board": "FUVEST",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-remorso-matilde",
+        "ev-espelho-infancia",
+        "ev-espelho-soiree"
+      ],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027"
+      ],
+      "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nNa objetiva, separe a Martha menina da narradora adulta: o remorso por Matilde vem “no fim de trinta e tantos anos” (cap. II, p. 11). Distrator comum: tratar o romance como idealização do magistério.\n\nNa discursiva, use as cenas repetidas: o espelho na casa de Lucinda (cap. I, p. 8) e o espelho do toucador (“Como há doze anos, via-me humilhada, feia.”, cap. VI, p. 30). Mostre o que muda (posição social) e o que permanece (vergonha).\n\n**F.O.R.M.A., ferramenta didática autoral.** Na segunda fase: foco no verbo, recorte e quantidade; observação de uma passagem; recurso formal pertinente; mecanismo que produz o efeito; articulação ao conjunto ou à comparação pedida. Isso não é rubrica oficial de pontuação. Na primeira fase, teste cada alternativa contra a voz e as marcas do excerto, sem aceitar uma característica geral que não esteja nele.",
+      "reviewedAt": "2026-10-07T04:54:57Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-memorias-de-martha"
+    },
+    {
+      "id": "unicamp",
+      "moduleType": "unicamp",
+      "board": "UNICAMP",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nBoa comparação com *Memórias póstumas de Brás Cubas*, da lista Unicamp: dois narradores retrospectivos que julgam o próprio passado, um a partir da pobreza e do trabalho, outro a partir da herança e do ócio.\n\n**F.O.N.T.E., ferramenta didática autoral.** Na segunda fase: fonte localizada; operação de cada subitem; núcleo formal; tensão interpretativa; explicação articulada. Responda os verbos separadamente e ligue o efeito à evidência, sem apenas recontar a trama. Na primeira fase, compare a alternativa ao texto e ao paratexto fornecidos. O protocolo não é espelho oficial nem previsão de incidência.",
+      "reviewedAt": "2026-10-07T04:54:57Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-memorias-de-martha"
+    },
+    {
+      "id": "questoes",
+      "moduleType": "questoes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-vocacao-inveja",
+        "ev-viuva-ladrao",
+        "ev-espelho-infancia",
+        "ev-espelho-soiree",
+        "ev-nivelar",
+        "ev-artificio"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “Queria um palacete, com espelhos e móveis esquisitos” (cap. III, p. 17), a narradora:\n- A) idealiza a vocação do magistério.\n- B) expõe o desejo de luxo misturado ao projeto de trabalhar como professora.\n- C) critica a mãe por não trabalhar.\n- D) descreve a escola pública.\n- E) rejeita a ideia de ser professora.\n\n**2. FUVEST, objetiva, difícil.** “A viúva de um ladrão não podia continuar na mesma classe de que a memória do marido a arrancara.” (cap. IV, p. 23) mostra que a queda da família é:\n- A) só econômica.\n- B) também desonra, o que explica a vergonha de Martha.\n- C) causada pela doença da mãe.\n- D) resultado do casamento com Miranda.\n- E) inventada pela narradora.\n\n**3. FUVEST, discursiva, difícil.** a) Compare as duas cenas do espelho (cap. I, p. 8; cap. VI, p. 30). b) Explique o que a repetição revela sobre ascensão social e autoimagem.\n\n**4. Discursiva, muito difícil.** A mãe ensina que a esposa deve “disfarçar a diferença intelectual” (cap. XI, p. 51-52). Relacione a lição à trajetória de Martha como professora e à condição feminina no romance.\n\n**5. Comparação, muito difícil.** “É que toda a sua vida tinha sido só artifício, força de vontade, nada mais.” (cap. XII, p. 54). Por que o romance termina na morte da mãe e não no casamento?",
+      "reviewedAt": "2026-10-07T04:54:57Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-memorias-de-martha"
+    },
+    {
+      "id": "revisao-ativa",
+      "moduleType": "revisao_ativa",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-viuva-ladrao",
+        "ev-vinganca"
+      ],
+      "sourceRefs": [],
+      "markdown": "Reconstrua sem consulta: os doze capítulos em quatro blocos (infância e cortiço; escola e vocação; amores e Palmeiras; concurso, casamento e morte da mãe).\n\n**Factual:** como morreu o pai? Quem é Luiz? Por que Martha aceita Miranda?\n\n**Formal:** onde a narradora adulta intervém? Que cenas se repetem?\n\n**Interpretativo:** o casamento é derrota ou estratégia? Justifique com dois capítulos.\n\n**24 horas:** mapa e microperguntas. **7 dias:** um trecho novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos.",
+      "reviewedAt": "2026-10-07T04:54:57Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-memorias-de-martha"
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "memorias-de-martha-santos-2023",
+        "memorias-de-martha-souza-2026",
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Edição usada:** Júlia Lopes de Almeida, *Memórias de Martha*. São Paulo: Via Leitura (Edipro), 2024, e-book. As páginas citadas neste dossiê são as do PDF dessa edição.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica documentada:** Rosana Cássia dos Santos (Graphos, 2023, p. 149–163, artigo completo) examina a subversão possível pela educação e a concessão ao matrimônio. Letícia Dongo de Souza (USP, 2026, dissertação, leitura parcial nas páginas registradas) confronta folhetim e livro e investiga feminilidade, instrução e casamento. A tese de cada estudo, seu recorte e seu limite estão nos registros bibliográficos. A febre amarela atribuída ao pai por Santos não corresponde ao suicídio por veneno desta edição.\n\n**Controle editorial:** o arquivo de 60 páginas contém doze capítulos, p. 4–55, seguidos de notas. O capítulo XIII e o apêndice com Cecília mencionados por outras edições não estão neste PDF. O cotejo entre folhetim e livro é resultado da pesquisa de Souza, não nova comparação direta com todos os jornais. A lesão cardíaca da mãe é descrita no capítulo XII.\n\n**Alcance:** primeira edição compacta. Guias, cartões e síntese autoral foram revistos tomando o PDF como fonte primária; a retomada fez releitura localizada, apoiada na leitura integral anterior registrada. Não certifica quinze componentes por unidade nem toda a bibliografia da habilidade avançada.\n\n## Bibliografia comentada e leitura efetiva\n\n**SANTOS, Rosana Cássia dos. Júlia Lopes de Almeida: a subversão possível em Memórias de Marta. Graphos, v. 25, n. 1, p. 149–163, 2023.**\n\n[Consultar fonte](https://periodicos.ufpb.br/index.php/graphos/article/view/64663). Leitura efetiva: Artigo completo, p. 149–163.\n\n**Leitura documentada:** A educação e a profissionalização abrem fissuras no modelo feminino oitocentista, mas o desfecho matrimonial paga tributo à moral de segurança e amparo.\n\n**Contribuição:** Articula condição de produção feminina, ascensão, casamento e apagamento historiográfico; registra variantes e o apêndice com a filha Cecília em outra edição.\n\n**Limites:** A p. 155 atribui a morte do pai à febre amarela, informação incompatível com o suicídio por veneno revelado no capítulo IV da edição utilizada. Não importar essa afirmação. Referências à edição Mulheres 2007 e ao apêndice não comprovam presença no PDF Via Leitura, que encerra no velório.\n\n**SOUZA, Letícia Dongo de. Conservadorismo, feminilidade e vanguardismo nos Oitocentos: análise do romance Memórias de Martha, de Julia Lopes de Almeida. Dissertação (Mestrado em Literatura Brasileira), Universidade de São Paulo, 2026. Versão corrigida.**\n\n[Consultar fonte](https://teses.usp.br/teses/disponiveis/8/8149/tde-18092026-144628/). Leitura efetiva: Leitura parcial: resumo e introdução (registro anterior p. 8–10); seções nas páginas impressas 39–42 e 52–58, correspondentes ao PDF p. 41–44 e 54–60; consideração final na página impressa 69 (PDF p. 71). Esses segmentos foram reabertos na retomada; não é leitura integral da dissertação.\n\n**Leitura documentada:** A trajetória de ascensão pela educação oscila entre autonomia feminina e a conformação a papéis morais, maternos e matrimoniais; a autora compara folhetim e livro.\n\n**Contribuição:** O cotejo p. 39–42 confirma causas diferentes da morte do pai em folhetim e livro e a motivação distinta para aceitar o casamento; p. 52–58 contextualizam instrução e matrimônio sem idealizar libertação completa.\n\n**Limites:** Texto-base é o livro de 1899, com grafia histórica. A dissertação não autoriza acrescentar apêndice ausente da edição enviada nem resolve sozinha todos os problemas formais e raciais. Alguns juízos sobre beleza e emancipação são interpretação crítica, não caracterização neutra.\n\n**FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.**\n\n[Consultar fonte](https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/). Leitura efetiva: Corpo da notícia e listas anuais; conferência da lista de 2027.\n\n**Leitura documentada:** A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.\n\n**Contribuição:** Confirma a exigência oficial e distingue as listas dos diferentes anos.\n\n**Limites:** A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões.\n\n**FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.**\n\n[Consultar fonte](https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf). Leitura efetiva: PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.\n\n**Leitura documentada:** O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.\n\n**Contribuição:** Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.\n\n**Limites:** Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral.\n\n**Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.**\n\n[Consultar fonte](https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf). Leitura efetiva: PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.\n\n**Leitura documentada:** O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.\n\n**Contribuição:** Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.\n\n**Limites:** Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral.\n\n**Alcance desta publicação.** Primeira edição de estudo: texto primário, guias, passagens e síntese autoral revistos, com os recortes críticos acima. Não certifica a leitura integral dos estudos consultados parcialmente nem o aprofundamento integral da habilidade avançada. As unidades e agrupamentos seguem a edição e os limites declarados no percurso. A pesquisa não substitui a leitura da obra. As limitações do arquivo fornecido e da procedência permanecem válidas.",
+      "reviewedAt": "2026-10-07T04:54:57Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-memorias-de-martha"
+    }
   ],
   "evidence": [
-    { "id": "ev-espelho-infancia", "unitId": "cap-01", "location": "cap. I, p. 8", "quote": "Como me achei triste e feia ao lado daquela menina da minha idade!",
+    {
+      "id": "ev-espelho-infancia",
+      "unitId": "cap-01",
+      "location": "cap. I, p. 8",
+      "quote": "Como me achei triste e feia ao lado daquela menina da minha idade!",
       "context": "Na casa da freguesa rica, Lucinda leva Martha até um grande espelho, depois de lhe mostrar a boneca e o enxoval.",
       "formalDevice": "Contraste em paralelo: dois retratos, da menina rica e da pobre, descritos peça por peça.",
       "effect": "A diferença de classe vira imagem visível e corporal; a menina aprende a se ver pelos olhos de quem tem mais.",
       "wholeRelation": "Abre o motivo do espelho, que volta na soirée do capítulo VI para mostrar que a vergonha persiste mesmo depois da ascensão.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-espelho-soiree", "unitId": "cap-06", "location": "cap. VI, p. 30", "quote": "Como há doze anos, via-me humilhada, feia.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-espelho-soiree",
+      "unitId": "cap-06",
+      "location": "cap. VI, p. 30",
+      "quote": "Como há doze anos, via-me humilhada, feia.",
       "context": "Sozinha no toucador da casa da professora, Martha se olha no espelho e lembra de Lucinda.",
       "formalDevice": "Retomada explícita de uma cena anterior, com marcação do tempo decorrido.",
       "effect": "A repetição mostra que a mudança de posição social não alterou a autoimagem formada na infância.",
       "wholeRelation": "Fecha o par de espelhos e prepara a humilhação da quadrilha e o esquecimento da mãe no vestíbulo.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-remorso-matilde", "unitId": "cap-02", "location": "cap. II, p. 11", "quote": "no fim de trinta e tantos anos sinto na minha consciência como uma grande nódoa imperecível",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-remorso-matilde",
+      "unitId": "cap-02",
+      "location": "cap. II, p. 11",
+      "quote": "no fim de trinta e tantos anos sinto na minha consciência como uma grande nódoa imperecível",
       "context": "Depois de Matilde ser acusada de roubo, Martha a ignora como as outras e a vê ser expulsa da escola.",
       "formalDevice": "Intromissão da narradora adulta no relato da infância.",
       "effect": "Separa o tempo do fato do tempo da narração e dá ao episódio um peso moral que a menina não percebeu.",
       "wholeRelation": "Exemplifica o romance de memória: a narradora julga o próprio passado, inclusive suas pequenas covardias sociais.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-viuva-ladrao", "unitId": "cap-04", "location": "cap. IV, p. 23", "quote": "A viúva de um ladrão não podia continuar na mesma classe de que a memória do marido a arrancara.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-viuva-ladrao",
+      "unitId": "cap-04",
+      "location": "cap. IV, p. 23",
+      "quote": "A viúva de um ladrão não podia continuar na mesma classe de que a memória do marido a arrancara.",
       "context": "A mãe revela que o pai, acusado de perder dinheiro dos patrões, matou-se com veneno.",
       "formalDevice": "Raciocínio da narradora que liga a causa moral à consequência social.",
       "effect": "Mostra que a queda é também desonra, o que explica a vergonha de Martha diante do cortiço.",
       "wholeRelation": "Dá sentido à ambição de ascender e ao desejo de “pagar” a dívida do pai.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-vocacao-inveja", "unitId": "cap-03", "location": "cap. III, p. 17", "quote": "eu não queria ser mestra para não morar em um cortiço mal alumiado, infecto, úmido",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-vocacao-inveja",
+      "unitId": "cap-03",
+      "location": "cap. III, p. 17",
+      "quote": "Queria um palacete, com espelhos e móveis esquisitos",
       "context": "Martha sonha ser professora depois de ouvir uma adjunta falar do ordenado.",
-      "formalDevice": "Autocrítica da narradora, que expõe o motivo pouco nobre da própria vocação.",
-      "effect": "Impede a leitura idealizada do trabalho: a vocação nasce da necessidade e da inveja, não só do dever.",
+      "formalDevice": "Autocrítica retrospectiva que expõe a motivação material e o desejo de mobilidade social da narradora.",
+      "effect": "A declaração de desejo material liga o projeto profissional ao imaginário de luxo; a narradora explicita a mistura com inveja, sem tornar o trabalho moralmente menor.",
       "wholeRelation": "Liga a trajetória profissional ao tema da vergonha de classe que percorre o livro.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-amei-o-amor", "unitId": "cap-06", "location": "cap. VI, p. 28", "quote": "Amei o Amor, e vivi embalada nesse idílio",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-amei-o-amor",
+      "unitId": "cap-06",
+      "location": "cap. VI, p. 28",
+      "quote": "Amei o Amor, e vivi embalada nesse idílio",
       "context": "Martha comenta o amor pelo rapaz da Escola Normal, que nunca mais viu.",
       "formalDevice": "Personificação e repetição do termo (amar o Amor).",
       "effect": "A narradora reconhece que o objeto do afeto era a hipótese de ser amada, não o rapaz.",
       "wholeRelation": "Antecipa o engano com Luiz e o casamento posterior sem paixão.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-vinganca", "unitId": "cap-10", "location": "cap. X, p. 50", "quote": "refleti que o meu casamento seria uma vingança para os ultrajes que a minha imaginação de moça recebera sempre",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-vinganca",
+      "unitId": "cap-10",
+      "location": "cap. X, p. 50",
+      "quote": "refleti que o meu casamento seria uma vingança para os ultrajes que a minha imaginação de moça recebera sempre",
       "context": "Depois de recusar o pedido de Miranda, Martha pensa na velhice sozinha e muda de ideia.",
       "formalDevice": "Justificativa racional de uma decisão afetiva.",
       "effect": "Apresenta o casamento como compensação e acomodação, não como realização amorosa.",
       "wholeRelation": "Fecha o arco do amor romântico frustrado e prepara a vida conjugal serena e sem paixão do último capítulo.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-nivelar", "unitId": "cap-11", "location": "cap. XI, p. 51-52", "quote": "Cabe-lhe a ela então disfarçar a diferença intelectual que entre os dois existe e procurar nivelar-se com ele.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-nivelar",
+      "unitId": "cap-11",
+      "location": "cap. XI, p. 51-52",
+      "quote": "Cabe-lhe a ela então disfarçar a diferença intelectual que entre os dois existe e procurar nivelar-se com ele.",
       "context": "A mãe explica por que um marido menos instruído pode ser melhor para uma mulher inteligente.",
       "formalDevice": "Discurso doutrinário em voz de personagem, com tom de conselho.",
       "effect": "Mostra o modelo de casamento da época, em que a mulher superior se adapta para não ameaçar o marido.",
       "wholeRelation": "Permite discutir a condição feminina: a mesma educação que dá trabalho a Martha deve ser disfarçada no casamento.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-artificio", "unitId": "cap-12", "location": "cap. XII, p. 54", "quote": "É que toda a sua vida tinha sido só artifício, força de vontade, nada mais.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-artificio",
+      "unitId": "cap-12",
+      "location": "cap. XII, p. 54",
+      "quote": "É que toda a sua vida tinha sido só artifício, força de vontade, nada mais.",
       "context": "A mãe adoece logo depois do casamento da filha e morre.",
       "formalDevice": "Conclusão da narradora que reinterpreta toda a vida da personagem.",
       "effect": "Transforma o sacrifício materno em esforço que só se sustentava enquanto a filha dependia dele.",
       "wholeRelation": "Encerra o romance no centro afetivo do livro, a mãe, e não no casamento.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" }
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    }
+  ],
+  "sources": [
+    {
+      "id": "memorias-de-martha-santos-2023",
+      "citation": "SANTOS, Rosana Cássia dos. Júlia Lopes de Almeida: a subversão possível em Memórias de Marta. Graphos, v. 25, n. 1, p. 149–163, 2023.",
+      "type": "academic_article",
+      "institution": "Universidade Federal da Paraíba",
+      "year": 2023,
+      "url": "https://periodicos.ufpb.br/index.php/graphos/article/view/64663",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "Artigo completo, p. 149–163.",
+      "centralThesis": "A educação e a profissionalização abrem fissuras no modelo feminino oitocentista, mas o desfecho matrimonial paga tributo à moral de segurança e amparo.",
+      "contribution": "Articula condição de produção feminina, ascensão, casamento e apagamento historiográfico; registra variantes e o apêndice com a filha Cecília em outra edição.",
+      "limitations": "A p. 155 atribui a morte do pai à febre amarela, informação incompatível com o suicídio por veneno revelado no capítulo IV da edição utilizada. Não importar essa afirmação. Referências à edição Mulheres 2007 e ao apêndice não comprovam presença no PDF Via Leitura, que encerra no velório."
+    },
+    {
+      "id": "memorias-de-martha-souza-2026",
+      "citation": "SOUZA, Letícia Dongo de. Conservadorismo, feminilidade e vanguardismo nos Oitocentos: análise do romance Memórias de Martha, de Julia Lopes de Almeida. Dissertação (Mestrado em Literatura Brasileira), Universidade de São Paulo, 2026. Versão corrigida.",
+      "type": "thesis",
+      "institution": "Universidade de São Paulo",
+      "year": 2026,
+      "url": "https://teses.usp.br/teses/disponiveis/8/8149/tde-18092026-144628/",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "Leitura parcial: resumo e introdução (registro anterior p. 8–10); seções nas páginas impressas 39–42 e 52–58, correspondentes ao PDF p. 41–44 e 54–60; consideração final na página impressa 69 (PDF p. 71). Esses segmentos foram reabertos na retomada; não é leitura integral da dissertação.",
+      "centralThesis": "A trajetória de ascensão pela educação oscila entre autonomia feminina e a conformação a papéis morais, maternos e matrimoniais; a autora compara folhetim e livro.",
+      "contribution": "O cotejo p. 39–42 confirma causas diferentes da morte do pai em folhetim e livro e a motivação distinta para aceitar o casamento; p. 52–58 contextualizam instrução e matrimônio sem idealizar libertação completa.",
+      "limitations": "Texto-base é o livro de 1899, com grafia histórica. A dissertação não autoriza acrescentar apêndice ausente da edição enviada nem resolve sozinha todos os problemas formais e raciais. Alguns juízos sobre beleza e emancipação são interpretação crítica, não caracterização neutra."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-lista-2027",
+      "citation": "FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.",
+      "institution": "FUVEST / USP",
+      "year": 2023,
+      "url": "https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/",
+      "pagesRead": "Corpo da notícia e listas anuais; conferência da lista de 2027.",
+      "centralThesis": "A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.",
+      "contribution": "Confirma a exigência oficial e distingue as listas dos diferentes anos.",
+      "limitations": "A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-programa-2027",
+      "citation": "FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.",
+      "institution": "FUVEST / USP",
+      "year": 2026,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf",
+      "pagesRead": "PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.",
+      "centralThesis": "O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.",
+      "contribution": "Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.",
+      "limitations": "Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "comvest-programa-2027",
+      "citation": "Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.",
+      "institution": "Comvest / Unicamp",
+      "year": 2026,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "pagesRead": "PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.",
+      "centralThesis": "O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.",
+      "contribution": "Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.",
+      "limitations": "Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral."
+    }
   ]
 }
