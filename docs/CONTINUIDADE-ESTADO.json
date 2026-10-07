@@ -2,9 +2,12 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "a8acf633afa5fbbef5bd502acab2d7a53f780558",
-  "generated_at_utc": "2026-10-07T20:18:19Z",
-  "changed_files": [],
+  "source_commit": "62fd2e63821e86f05fd3dbc404cbd95964118f1e",
+  "generated_at_utc": "2026-10-07T20:34:45Z",
+  "changed_files": [
+    "server/podcast/cloudTtsService.test.ts",
+    "server/podcast/cloudTtsService.ts"
+  ],
   "next_session": {
     "mode": "delta-only",
     "instructions": "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
