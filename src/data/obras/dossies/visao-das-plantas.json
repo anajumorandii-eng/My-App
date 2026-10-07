@@ -16,7 +16,7 @@
       "pdfEndPage": 22,
       "opening": "Noite abençoada. Acordou em casa",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Depois de uma vida no mar, o velho capitão Celestino volta à casa materna, numa vila da costa portuguesa. A casa, fechada e tomada pelo pó, pelas plantas e pelo caruncho, é descrita como um fóssil que a Natureza come aos poucos.",
         "observe": [
           "A casa é personificada: tem 'olhos fechados', barba de hera, mortos que dão licença.",
@@ -33,7 +33,7 @@
       "pdfEndPage": 25,
       "opening": "Livrou-se da mobília carunchosa",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Celestino queima as roupas das mulheres da família, sem drama, e se dedica a recuperar o quintal abandonado. Planta rosas, cravos, camélias, cactos e hortaliças. O padre Alfredo visita-o com intenção de levá-lo à confissão, mas é calado pelo perfume do jardim.",
         "observe": [
           "A rotina do jardineiro é descrita com precisão de manual, em contraste com o passado violento.",
@@ -50,7 +50,7 @@
       "pdfEndPage": 27,
       "opening": "Nas manhãs nubladas, gostava de sair",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Na vila, correm histórias sobre o pirata de pala no olho. Celestino ergue um espantalho com os reposteiros da sala, que alimenta os boatos de que adora o diabo. Três crianças, Raul, Pedro e Luzia, espiam o quintal e encontram doces deixados para elas. O padre conclui que ali vive apenas um homem a preparar o próprio enterro.",
         "observe": [
           "Os boatos aparecem em frases soltas, sem marcação, como vozes da vila.",
@@ -67,7 +67,7 @@
       "pdfEndPage": 31,
       "opening": "Vinde a mim, meninos, não tenhais medo",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Celestino conta às crianças sua infância e suas viagens: matou os holandeses que o socorreram e deixou a sobrinha deles, uma menina, amarrada e vendada no mato. Enumera mortes e termina lembrando o leite da mãe. Em seguida, fala longamente dos seus cravos, como se fossem filhos.",
         "observe": [
           "A fala imita a de Cristo ('Vinde a mim') e mistura confissão, bravata e cantiga de embalar.",
@@ -84,7 +84,7 @@
       "pdfEndPage": 34,
       "opening": "Sangue, luz. Um ratinho",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Fragmentos do caderno do capitão: notas de jardinagem, lembranças do mar, pensamentos violentos e a expressão repetida 'sangue e luz'. Numa noite de vento, Celestino sente que as árvores e o seu coração batem no mesmo ritmo e que o jardim é seu.",
         "observe": [
           "Os fragmentos curtos, separados por travessões, mostram a mente desordenada do capitão.",
@@ -101,7 +101,7 @@
       "pdfEndPage": 36,
       "opening": "As plantas viam o jardineiro como as plantas vêem",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "O narrador adota o ponto de vista das plantas: elas não agradecem, não julgam e não se importam com quem as rega. Nesse capítulo se narra o crime mais grave: a revolta de escravizados sufocada com cal no porão do navio.",
         "observe": [
           "É o trecho que dá título ao livro: a indiferença das plantas espelha a indiferença do capitão.",
@@ -118,11 +118,11 @@
       "pdfEndPage": 40,
       "opening": "Ajoelhado diante dos cravos",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Celestino vive anônimo na vila e conversa com o padre sem se confessar ('Deus é como o caroço do pêssego'). O narrador pergunta se é possível amar sem memória e sugere que as plantas ocupam o lugar dos mortos que ele fez. Para quem passa na rua, o jardim evoca a vida que não viveram.",
         "observe": [
-          "A recusa da confissão é constante; o capitão não se arrepende.",
-          "A ambiguidade entre bondade e 'máquina perfeitamente diabólica' é central."
+          "A recusa de confessar-se é explícita; isso não prova ausência absoluta de conflito interior. O narrador levanta possibilidades concorrentes sobre amor, memória e bondade.",
+          "A ambiguidade entre cuidado e mecanismo de posse impede transformar o jardim em prova de redenção."
         ]
       }
     },
@@ -135,7 +135,7 @@
       "pdfEndPage": 45,
       "opening": "Se lhes fazemos perguntas, as árvores",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Recordação da travessia de uma floresta africana, 'dentro do estômago de Deus'. A história do camiseiro de mogno brasileiro, feito para a mãe dele, liga a madeira à vida do filho. No presente, as crianças vêm ver os morcegos; à noite, a menina holandesa aparece pela primeira vez nas chamas da lareira.",
         "observe": [
           "A madeira do camiseiro conta a história do filho que a mãe não conhece.",
@@ -152,11 +152,11 @@
       "pdfEndPage": 49,
       "opening": "Perdia a noção das horas",
       "guide": {
-        "editorialStatus": "needs_review",
-        "summary": "Celestino aprende a fazer queijo e broa, embebeda-se, atira-se ao ribeiro e ouve um choro de criança. Depois, cava no quintal uma cova cada vez mais funda, num transe, até desmaiar sob as estrelas.",
+        "editorialStatus": "published",
+        "summary": "Celestino aprende a fazer queijo e broa, embebeda-se, atira-se ao ribeiro e ouve um choro de criança. Uma suposta luz na terra provoca uma escavação narrada como transe até a noite; porém ele acorda minutos depois, ao meio-dia, com o jardim na mesma. A sequência revê o que parecia ação contínua como delírio (p. 48–49).",
         "observe": [
-          "A cena da cova é ambígua: sepultura, busca de tesouro, loucura.",
-          "'Debaixo da terra, não parecia haver um segredo': a terra não confessa nem acusa."
+          "A cena mistura busca de brilho, sepultura possível e desorientação. O narrador nega que ele cave a própria cova e desfaz a passagem objetiva até a noite quando retorna ao meio-dia.",
+          "A terra não revela um segredo; o leitor precisa separar a experiência do capitão da cronologia que o relato depois restitui."
         ]
       }
     },
@@ -169,7 +169,7 @@
       "pdfEndPage": 54,
       "opening": "Na manhã seguinte, acordou mais velho",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Celestino corta a barba, deixa de usar a pala, adoece, recusa a confissão. Perde-se na festa de São João. Mostra às crianças as tatuagens e repete a lista de mortes, mas o espanto delas o constrange. Percebe que o jardim o 'enjaulara'.",
         "observe": [
           "O corte da barba marca o fim do 'último momento ao leme'.",
@@ -186,10 +186,10 @@
       "pdfEndPage": 60,
       "opening": "As encostas vigiavam-no do nascer do dia",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Sonâmbulo, Celestino recebe visitas noturnas: uma velha negra, uma das escravizadas que ele mandou ao mar, prepara-lhe comida e cuida dele; a menina holandesa, de olhos vendados, dorme ao lado dele. Uma planta sai da sua boca e cobre a casa. A velha negra é apresentada como a morte, paciente.",
         "observe": [
-          "Os fantasmas são vítimas que cuidam do carrasco — sem vingança e sem perdão.",
+          "Os fantasmas são vítimas que cuidam do carrasco — sem uma declaração autônoma de perdão; o cuidado aparece pela experiência do capitão.",
           "A venda da menina nunca é desatada: 'o que se ata em vida na morte não se desata'."
         ]
       }
@@ -203,7 +203,7 @@
       "pdfEndPage": 64,
       "opening": "Manteve-se sentado no quintal, ansioso",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Uma gata dá cria e vai embora. Celestino lembra os corpos jogados ao mar e espalha farinha sobre as flores, numa dança dos mortos. Manuel o leva à praia; ele vê a menina holandesa saindo das águas. Morre numa noite de inverno, 'sem uma dúvida na consciência tranquila'. O padre benze o corpo e cobiça o jardim.",
         "observe": [
           "A última frase do romance retoma, com ironia, a frase de Raul Brandão citada na epígrafe.",
@@ -216,17 +216,23 @@
     {
       "id": "comece-aqui",
       "moduleType": "comece_aqui",
-      "version": 1,
-      "editorialStatus": "needs_review",
+      "version": 2,
+      "editorialStatus": "published",
       "evidenceRefs": [],
-      "sourceRefs": [],
-      "markdown": "**A Visão das Plantas** (2019) é uma novela da escritora portuguesa nascida em Angola Djaimilia Pereira de Almeida (1982). Parte de um parágrafo de *Os Pescadores*, de Raul Brandão, citado na epígrafe: o capitão Celestino, antigo pirata e traficante de escravizados, termina a vida cultivando um quintal 'sem uma dúvida na consciência tranquila'.\n\n**Como ler:** o texto não tem capítulos numerados; é feito de blocos curtos, alguns em prosa narrativa, outros como anotações soltas do caderno do capitão. Este dossiê divide a obra em doze partes, pela sequência dos acontecimentos: o regresso, o jardim, os rumores, as histórias às crianças, os fantasmas e a morte.\n\n**Pergunta central:** o jardim redime o capitão? O livro não responde. Mostra o cuidado minucioso com as flores ao lado de crimes atrozes contados sem arrependimento, e põe as plantas como testemunhas indiferentes.\n\n**Língua:** a edição brasileira (Todavia) respeita a grafia de Portugal anterior ao Acordo (vêem, reflectia, facto)."
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**A Visão das Plantas** (2019) é uma novela da escritora portuguesa nascida em Angola Djaimilia Pereira de Almeida (1982). Parte de um parágrafo de *Os Pescadores*, de Raul Brandão, citado na epígrafe: o capitão Celestino, antigo pirata e traficante de escravizados, termina a vida cultivando um quintal 'sem uma dúvida na consciência tranquila'.\n\n**Como ler:** o texto não tem capítulos numerados; é feito de blocos curtos, alguns em prosa narrativa, outros como anotações soltas do caderno do capitão. Este dossiê divide a obra em doze partes, pela sequência dos acontecimentos: o regresso, o jardim, os rumores, as histórias às crianças, os fantasmas e a morte.\n\n**Pergunta central:** o jardim redime o capitão? O livro não responde. Mostra o cuidado minucioso com as flores ao lado de crimes atrozes contados sem arrependimento, e põe as plantas como testemunhas indiferentes.\n\n**Língua:** a edição brasileira (Todavia) respeita a grafia de Portugal anterior ao Acordo (vêem, reflectia, facto).",
+      "reviewedAt": "2026-10-07T04:52:47Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-visao-das-plantas"
     },
     {
       "id": "analise-integral",
       "moduleType": "analise_integral",
-      "version": 1,
-      "editorialStatus": "needs_review",
+      "version": 2,
+      "editorialStatus": "published",
       "evidenceRefs": [
         "ev-fome-da-natureza",
         "ev-solidao-musica",
@@ -246,22 +252,118 @@
         "ev-consciencia-tranquila",
         "ev-maos-pias"
       ],
-      "sourceRefs": [],
-      "markdown": "## Reescrever Raul Brandão\n\nA epígrafe cita *Os Pescadores* (1923): o capitão Celestino, que sufocou com cal uma revolta de escravizados no porão, 'acabou assim a vida mondando e podando, sem uma dúvida na consciência tranquila'. Djaimilia expande esse parágrafo e repete a frase final na última página. O que em Brandão era uma curiosidade pitoresca vira pergunta moral: como alguém assim morre em paz?\n\n## O jardim e a culpa\n\nCelestino cuida das flores 'como filhas', com 'mãos delicadas de mulher'. O narrador sugere que o jardim pode ser expiação — as flores seriam os mortos —, mas também recusa essa leitura: o capitão nunca se confessa, nunca se arrepende, e o amor pelas plantas tem algo de posse ('haviam de me querer fugir, que as arrancava logo da terra'). A ambiguidade é o centro da obra.\n\n## A visão das plantas\n\nO título vem da parte em que o narrador assume o ponto de vista das plantas: elas não agradecem, não julgam, 'tanto lhes fazia serem cuidadas por um assassino'. A indiferença da Natureza espelha a indiferença do capitão: 'no lugar do coração, o corsário tinha uma planta'. A pergunta sobre justiça fica com o leitor.\n\n## Memória, esquecimento e fantasmas\n\nA velhice traz o esquecimento, que funciona como absolvição involuntária. Mas as vítimas voltam: a menina holandesa que ele deixou vendada no mato e a velha negra jogada ao mar aparecem para cuidar dele — sem vingança. A velha negra é a figura da morte, paciente. A cena é perturbadora porque as vítimas fazem o trabalho do afeto que o carrasco nunca fez.\n\n## Tráfico e silêncio\n\nO massacre no porão é narrado de passagem, dentro da reflexão sobre as plantas. O romance mostra como a sociedade portuguesa — a vila, o padre, o próprio Brandão — transformou o tráfico atlântico em lenda de pescadores. O padre, que buscava a confissão, termina cobiçando o jardim.\n\n## Forma\n\nProsa densa e poética, com descrições sensoriais (cheiros, cores, texturas das plantas), alternada com fragmentos de caderno que imitam a mente do capitão. O tempo avança sem marcas claras; os fantasmas misturam passado e presente.\n\n## Pontos de prova\n\n- Relacionar a obra com o texto de Raul Brandão (intertextualidade).\n- Discutir a ambiguidade moral do capitão e a ausência de arrependimento.\n- Interpretar o título e o ponto de vista das plantas.\n- Analisar a memória do colonialismo e do tráfico de escravizados.\n- Comentar a função das figuras da velha negra e da menina holandesa."
+      "sourceRefs": [
+        "visao-das-plantas-forli-ruckert",
+        "visao-das-plantas-fagundes",
+        "visao-das-plantas-biasio"
+      ],
+      "markdown": "## Reescrever Raul Brandão\n\nA epígrafe cita *Os Pescadores* (1923): o capitão Celestino, que sufocou com cal uma revolta de escravizados no porão, 'acabou assim a vida mondando e podando, sem uma dúvida na consciência tranquila'. Djaimilia expande esse parágrafo e repete a frase final na última página. A expansão transforma o peso do parágrafo de Brandão: a tranquilidade do capitão passa a ser confrontada com ações e perspectivas que a novela desenvolve.\n\n## O jardim e a culpa\n\nCelestino cuida das flores 'como filhas', com 'mãos delicadas de mulher'. O narrador sugere que o jardim pode ser expiação — as flores seriam os mortos —, mas também recusa essa leitura: o capitão recusa confessar-se, não há declaração inequívoca de arrependimento, e o amor pelas plantas tem algo de posse ('haviam de me querer fugir, que as arrancava logo da terra'). A ambiguidade é o centro da obra.\n\n## A visão das plantas\n\nO título vem da parte em que o narrador assume o ponto de vista das plantas: elas não agradecem, não julgam, 'tanto lhes fazia serem cuidadas por um assassino'. A indiferença da Natureza espelha a indiferença do capitão: 'no lugar do coração, o corsário tinha uma planta'. A pergunta sobre justiça fica com o leitor.\n\n## Memória, esquecimento e fantasmas\n\nA velhice traz perda de memória e desorientação; o alívio que isso pode produzir não equivale a absolvição ou reparação. Mas as vítimas voltam: a menina holandesa que ele deixou vendada no mato e a velha negra jogada ao mar aparecem para cuidar dele — sem vingança. A velha negra é a figura da morte, paciente. A cena é perturbadora porque as vítimas fazem o trabalho do afeto que o carrasco nunca fez.\n\n## Tráfico e silêncio\n\nO massacre no porão é narrado de passagem, dentro da reflexão sobre as plantas. O final mostra a transformação dos relatos violentos em cantigas de pescadores. A epígrafe de Brandão já menciona o massacre: a novela expande essa memória e altera seu peso, sem permitir concluir que o escritor o tivesse omitido. O padre, que buscava a confissão, termina cobiçando o jardim.\n\n## Forma\n\nProsa densa e poética, com descrições sensoriais (cheiros, cores, texturas das plantas), alternada com fragmentos de caderno que imitam a mente do capitão. O tempo avança sem marcas claras; os fantasmas misturam passado e presente.\n\n## Pontos de prova\n\n- Relacionar a obra com o texto de Raul Brandão (intertextualidade).\n- Discutir a ambiguidade moral do capitão e a ausência de arrependimento explicitamente declarado.\n- Interpretar o título e o ponto de vista das plantas.\n- Analisar a memória do colonialismo e do tráfico de escravizados.\n- Comentar a função das figuras da velha negra e da menina holandesa.\n\n## Quem vê e quem julga\n\n**Síntese autoral a partir do texto.** O narrador em terceira pessoa alterna a percepção do capitão, a curiosidade dos vizinhos e uma perspectiva vegetal construída pela linguagem. A abertura da parte 6 (p. 35–36) faz as plantas verem sem julgar: florescer ou murchar não responde à moral do jardineiro. Essa indiferença não determina o julgamento do narrador nem o do leitor. O massacre entra no mesmo bloco como relato concreto de cal, porão fechado e pedidos de socorro; a proximidade entre exuberância e morte impede que a beleza apague o crime. As falas da vila, por sua vez, misturam rumor e espetáculo (p. 26–27, 31). Nem tudo que se conta é prova, embora a transformação posterior dos crimes em cantigas participe do esquecimento (p. 64).\n\n## Cuidado, propriedade e a falha da expiação\n\nA dedicação às flores combina carinho com ameaça: na fala do capitão, uma planta que quisesse fugir seria arrancada (p. 29). Na parte 7, o narrador compara os mortos às flores e pergunta se é possível amar sem memória (p. 39). Há duas operações diferentes: cuidar de seres vivos e responsabilizar-se por quem foi morto. O texto não demonstra que a primeira realize a segunda. Quando o homem passa a depender do jardim (p. 54 e 63), a inversão retira sua autonomia, mas não devolve a vida às vítimas. Por isso, a metáfora da escravização do jardineiro não equivale historicamente à escravidão e ao massacre que ele praticou.\n\n## Um passado que retorna sem tribunal\n\nA cova mostra a precariedade de tomar a experiência como registro objetivo: uma escavação aparentemente prolongada até a noite se desfaz quando o capitão desperta ao meio-dia, com o jardim intacto (p. 48–49). A planta que sai de sua boca e ocupa a casa aproxima corpo, vegetação e sufocamento (p. 56–57). Essa relação formal admite a leitura de retorno do passado; não fornece um diagnóstico clínico. A velha negra e a menina reaparecem como cuidadoras (p. 58–60), mas o afeto que Celestino experimenta não é um depoimento autônomo de perdão. A menina permanece vendada: ele não pode restaurar o olhar que interrompeu. No fim, a consciência tranquila do morto e a cobiça do padre continuam em tensão com o que o leitor sabe (p. 64).",
+      "reviewedAt": "2026-10-07T04:52:47Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-visao-das-plantas"
     },
-    {"id": "critica-debate", "moduleType": "critica_debate", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-escravizar", "ev-consciencia-tranquila"], "sourceRefs": [], "markdown": "**Camadas de evidência.** Os cartões trazem trechos localizados no PDF; guias e análise são síntese própria. O posfácio da edição não foi usado, e nenhuma fonte acadêmica foi lida.\n\n**Hipóteses em confronto.** O jardim pode ser lido como expiação ou como continuação da posse: “Supremo castigo: deixara-se escravizar” (parte 10, p. 54). O fim em paz pode ser lido como injustiça que o livro denuncia ou como indiferença que ele apenas registra: “acabou os seus dias, sem uma dúvida na consciência tranquila.” (parte 12, p. 64).\n\n**Limites.** A relação com *Os Pescadores*, de Raul Brandão, está na epígrafe do próprio livro; o texto de Brandão não foi lido para este dossiê. Pesquisa pendente: estudos sobre a autora e a memória do tráfico na literatura portuguesa, citados com página quando lidos."},
-    {"id": "fuvest", "moduleType": "fuvest", "board": "FUVEST", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-escravos", "ev-planta-no-peito"], "sourceRefs": [], "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nNa objetiva, não confunda o ponto de vista das plantas com o do narrador ou do autor. Distrator comum: ler o jardim como redenção comprovada de Celestino.\n\nNa discursiva, explique a ambiguidade moral com evidência: as flores que não lamentam os escravizados (“Nenhuma flor lamentava a morte dos escravos que Celestino sufocara em mar alto.”, parte 6, p. 35) e o coração trocado por uma planta (p. 36)."},
-    {"id": "unicamp", "moduleType": "unicamp", "board": "UNICAMP", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-visao-das-plantas", "ev-jardineiro-do-jardineiro"], "sourceRefs": [], "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nPratique a relação entre título e trecho: “As plantas viam o jardineiro como as plantas vêem.” (parte 6, p. 35) e “o jardim se tornara jardineiro do jardineiro.” (parte 12, p. 63) mostram a inversão entre dono e jardim."},
-    {"id": "questoes", "moduleType": "questoes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-sono-dos-justos", "ev-amar-sem-memoria", "ev-escravos", "ev-amizade-com-a-morte", "ev-paciencia-da-morte", "ev-consciencia-tranquila", "ev-maos-pias"], "sourceRefs": [], "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “Vinde a mim, meninos, a mim que degolei gargantas e durmo o sono dos justos.” (parte 4, p. 28), o efeito decorre:\nA) da coerência entre ternura e inocência.\nB) do choque entre a cena de acolhimento e a confissão de crimes.\nC) da citação de um salmo sem ironia.\nD) da fala do padre.\nE) do arrependimento de Celestino.\n\n**2. FUVEST, objetiva, difícil.** “Capitão Celestino amava as flores, se é possível amar sem guardar memória.” (parte 7, p. 39) indica que:\nA) o amor pelas flores é comprovadamente expiação.\nB) o narrador põe em dúvida o próprio sentido do cuidado com o jardim.\nC) Celestino se lembra de todos os crimes.\nD) as flores retribuem o amor.\nE) o capitão é jardineiro profissional.\n\n**3. FUVEST, discursiva, difícil.** a) Explique como o crime do porão é revelado pela indiferença das flores (parte 6, p. 35). b) Por que essa forma indireta de narrar pesa mais que uma confissão?\n\n**4. Discursiva, muito difícil.** A velha negra e a menina acompanham Celestino até a morte (parte 11, p. 58-59). Discuta por que as vítimas cuidarem do carrasco é perturbador.\n\n**5. Comparação, muito difícil.** Compare a frase final sobre a “consciência tranquila” (parte 12, p. 64) com o padre que não sabe cuidar das plantas (“Nas suas mãos pias, todas as plantas morriam.”, p. 64). Que crítica à religião e à memória o final propõe?"},
-    {"id": "revisao-ativa", "moduleType": "revisao_ativa", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-escravos", "ev-jardineiro-do-jardineiro"], "sourceRefs": [], "markdown": "Reconstrua sem consulta: as doze partes (regresso, jardim, rumores, histórias às crianças, caderno, visão das plantas, amar sem memória, floresta, cova, velhice, a velha e a menina, morte) e as figuras de Celestino, o padre, a menina holandesa e a velha negra.\n\n**Factual:** o que Celestino fez no porão? Quem cobiça o jardim no fim?\n\n**Formal:** como o narrador assume o ponto de vista das plantas? Onde aparecem os fragmentos do caderno?\n\n**Interpretativo:** o jardim é expiação ou posse? Justifique com duas partes.\n\n**24 horas:** mapa. **7 dias:** um trecho novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos."},
+    {
+      "id": "critica-debate",
+      "moduleType": "critica_debate",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-escravizar",
+        "ev-consciencia-tranquila"
+      ],
+      "sourceRefs": [
+        "visao-das-plantas-forli-ruckert",
+        "visao-das-plantas-fagundes",
+        "visao-das-plantas-biasio"
+      ],
+      "markdown": "**Leituras documentadas e desacordo.** Forli e Rückert (2025, p. 383–393) leem a memória que retorna como manifestação de culpa e a acolhida pelas vítimas como desejo de absolvição imaginado pelo capitão. A imagem da mulher negra servindo ao homem também conserva, nessa leitura, uma estrutura colonial; o artigo não toma o conforto dele como justiça reparada. Fagundes (2022, p. 30–40) desloca a pergunta da redenção para a representação: as plantas dão forma e visibilidade ao passado, sem acusar ou perdoar. A planta que estrangula a garganta trabalha corporalmente a violência anterior, em vez de oferecer uma sentença. Biasio (2021, p. 143–146) privilegia a ecocrítica: o homem que dominava o jardim passa a depender dele, e as categorias humano e não humano deixam de coincidir com superioridade moral.\n\n**Síntese autoral e limites.** Essas abordagens convergem na crítica ao apagamento colonial, mas divergem sobre quanto o retorno do passado implica culpa e quanto a relação vegetal desloca o próprio modelo de julgamento. O relato permite investigar essas diferenças; não autoriza anunciar um arrependimento confirmado nem sua impossibilidade absoluta. Para comparar interpretações, use a recusa da confissão (p. 51), a pergunta sobre amor e memória (p. 39), a dependência do jardim (p. 54, 63) e a permanência da venda (p. 60). As páginas acima das fontes críticas são as impressas nos estudos; as da novela são as do PDF deste dossiê. A leitura de Fagundes e Biasio foi parcial, com o alcance registrado em Fontes.",
+      "reviewedAt": "2026-10-07T04:52:47Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-visao-das-plantas"
+    },
+    {
+      "id": "fuvest",
+      "moduleType": "fuvest",
+      "board": "FUVEST",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-escravos",
+        "ev-planta-no-peito"
+      ],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027"
+      ],
+      "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nNa objetiva, não confunda o ponto de vista das plantas com o do narrador ou do autor. Distrator comum: ler o jardim como redenção comprovada de Celestino.\n\nNa discursiva, explique a ambiguidade moral com evidência: as flores que não lamentam os escravizados (“Nenhuma flor lamentava a morte dos escravos que Celestino sufocara em mar alto.”, parte 6, p. 35) e o coração trocado por uma planta (p. 36).\n\n**F.O.R.M.A., ferramenta didática autoral.** Na segunda fase: foco no verbo, recorte e quantidade; observação de uma passagem; recurso formal pertinente; mecanismo que produz o efeito; articulação ao conjunto ou à comparação pedida. Isso não é rubrica oficial de pontuação. Na primeira fase, teste cada alternativa contra a voz e as marcas do excerto, sem aceitar uma característica geral que não esteja nele.",
+      "reviewedAt": "2026-10-07T04:52:47Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-visao-das-plantas"
+    },
+    {
+      "id": "unicamp",
+      "moduleType": "unicamp",
+      "board": "UNICAMP",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-visao-das-plantas",
+        "ev-jardineiro-do-jardineiro"
+      ],
+      "sourceRefs": [
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nPratique a relação entre título e trecho: “As plantas viam o jardineiro como as plantas vêem.” (parte 6, p. 35) e “o jardim se tornara jardineiro do jardineiro.” (parte 12, p. 63) mostram a inversão entre dono e jardim.\n\n**F.O.N.T.E., ferramenta didática autoral.** Na segunda fase: fonte localizada; operação de cada subitem; núcleo formal; tensão interpretativa; explicação articulada. Responda os verbos separadamente e ligue o efeito à evidência, sem apenas recontar a trama. Na primeira fase, compare a alternativa ao texto e ao paratexto fornecidos. O protocolo não é espelho oficial nem previsão de incidência.",
+      "reviewedAt": "2026-10-07T04:52:47Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-visao-das-plantas"
+    },
+    {
+      "id": "questoes",
+      "moduleType": "questoes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-sono-dos-justos",
+        "ev-amar-sem-memoria",
+        "ev-escravos",
+        "ev-amizade-com-a-morte",
+        "ev-paciencia-da-morte",
+        "ev-consciencia-tranquila",
+        "ev-maos-pias"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “Vinde a mim, meninos, a mim que degolei gargantas e durmo o sono dos justos.” (parte 4, p. 28), o efeito decorre:\n- A) da coerência entre ternura e inocência.\n- B) do choque entre a cena de acolhimento e a confissão de crimes.\n- C) da citação de um salmo sem ironia.\n- D) da fala do padre.\n- E) do arrependimento de Celestino.\n\n**2. FUVEST, objetiva, difícil.** “Capitão Celestino amava as flores, se é possível amar sem guardar memória.” (parte 7, p. 39) indica que:\n- A) o amor pelas flores é comprovadamente expiação.\n- B) o narrador põe em dúvida o próprio sentido do cuidado com o jardim.\n- C) Celestino se lembra de todos os crimes.\n- D) as flores retribuem o amor.\n- E) o capitão é jardineiro profissional.\n\n**3. FUVEST, discursiva, difícil.** a) Explique como o crime do porão é revelado pela indiferença das flores (parte 6, p. 35). b) Explique que efeito resulta de inserir o massacre na reflexão sobre as plantas, em vez de apresentá-lo como confissão do capitão.\n\n**4. Discursiva, muito difícil.** A velha negra e a menina acompanham Celestino até a morte (parte 11, p. 58-59). Discuta por que as vítimas cuidarem do carrasco é perturbador.\n\n**5. Comparação, muito difícil.** Compare a frase final sobre a “consciência tranquila” (parte 12, p. 64) com o padre que não sabe cuidar das plantas (“Nas suas mãos pias, todas as plantas morriam.”, p. 64). Que crítica à religião e à memória o final propõe?",
+      "reviewedAt": "2026-10-07T04:52:47Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-visao-das-plantas"
+    },
+    {
+      "id": "revisao-ativa",
+      "moduleType": "revisao_ativa",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-escravos",
+        "ev-jardineiro-do-jardineiro"
+      ],
+      "sourceRefs": [],
+      "markdown": "Reconstrua sem consulta: as doze partes (regresso, jardim, rumores, histórias às crianças, caderno, visão das plantas, amar sem memória, floresta, cova, velhice, a velha e a menina, morte) e as figuras de Celestino, o padre, a menina holandesa e a velha negra.\n\n**Factual:** o que Celestino fez no porão? Quem cobiça o jardim no fim?\n\n**Formal:** como o narrador assume o ponto de vista das plantas? Onde aparecem os fragmentos do caderno?\n\n**Interpretativo:** o jardim é expiação ou posse? Justifique com duas partes.\n\n**24 horas:** mapa. **7 dias:** um trecho novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos.",
+      "reviewedAt": "2026-10-07T04:52:47Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-visao-das-plantas"
+    },
     {
       "id": "fontes",
       "moduleType": "fontes",
-      "version": 1,
-      "editorialStatus": "needs_review",
+      "version": 2,
+      "editorialStatus": "published",
       "evidenceRefs": [],
-      "sourceRefs": [],
-      "markdown": "**Edição usada:** Djaimilia Pereira de Almeida, *A Visão das Plantas*. São Paulo: Todavia, 1ª edição, 2021, e-book (edição original: Relógio D'Água, 2019). As páginas citadas são as do PDF usado, com 82 páginas; o texto vai da p. 21 à p. 64, depois da epígrafe de Raul Brandão (p. 18-19).\n\n**Partes:** a obra não tem capítulos numerados. A divisão em doze partes deste dossiê é editorial, feita pela sequência dos acontecimentos, e cada parte começa num bloco de texto conferido na página.\n\n**Procedência do arquivo:** o PDF do Drive é uma cópia distribuída pela equipe eLivros, não um arquivo da editora. Antes de publicar, convém conferir as citações num exemplar da Todavia.\n\n**Direitos:** obra protegida por direito autoral (© Djaimilia Pereira de Almeida / Relógio D'Água). Este dossiê traz só análise original e citações curtas, com página.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica:** nenhuma fonte crítica foi lida para este dossiê. A leitura é feita diretamente do texto e precisa de revisão editorial antes de ser publicada."
+      "sourceRefs": [
+        "visao-das-plantas-forli-ruckert",
+        "visao-das-plantas-fagundes",
+        "visao-das-plantas-biasio",
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Edição usada:** Djaimilia Pereira de Almeida, *A Visão das Plantas*. São Paulo: Todavia, 1ª edição, 2021, e-book (edição original: Relógio D'Água, 2019). As páginas citadas são as do PDF usado, com 82 páginas; o texto vai da p. 21 à p. 64, depois da epígrafe de Raul Brandão (p. 18-19).\n\n**Partes:** a obra não tem capítulos numerados. A divisão em doze partes deste dossiê é editorial, feita pela sequência dos acontecimentos, e cada parte começa num bloco de texto conferido na página.\n\n**Procedência do arquivo:** o PDF do Drive é uma cópia distribuída pela equipe eLivros, não um arquivo da editora. As citações foram conferidas na cópia fornecida; não houve cotejo independente com um exemplar da editora.\n\n**Direitos:** obra protegida por direito autoral (© Djaimilia Pereira de Almeida / Relógio D'Água). Este dossiê traz só análise original e citações curtas, com página.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n## Bibliografia comentada e leitura efetiva\n\n**FORLI, Cristina Arena; RÜCKERT, Gustavo Henrique. O que fazer com o passado colonial? Uma reflexão sobre A visão das plantas, de Djaimilia Pereira de Almeida. Via Atlântica, v. 26, n. 1, p. 368–395, 2025.**\n\n[Consultar fonte](https://doi.org/10.11606/va.v26.n1.2025.210087). Leitura efetiva: p. 368–393 do artigo; não foi feita leitura das referências finais p. 394–395.\n\n**Leitura documentada:** A escrita diaspórica problematiza a memória colonial portuguesa; a culpa recalcada e a acolhida imaginada pelas vítimas expõem o desejo de absolvição de Celestino e o esquecimento coletivo.\n\n**Contribuição:** Distingue indiferença vegetal, julgamento da vila e fantasia de perdão; permite relacionar o cuidado da velha negra à imagem colonial da servidão materna, sem atribuir o perdão às vítimas como fato.\n\n**Limites:** Leitura pós-colonial e psicanalítica; a culpa é hipótese interpretativa, não confissão explícita. Usa paginação impressa diferente do PDF primário deste dossiê. Não foram lidos diretamente os livros teóricos citados pelo artigo.\n\n**FAGUNDES, Mônica Genelhu. Paisagem com a queda de Celestino: sobre A visão das plantas, de Djaimilia Pereira de Almeida. Metamorfoses, v. 19, n. 1, p. 13–42, 2022.**\n\n[Consultar fonte](https://doi.org/10.35520/metamorfoses.2022.v19n1a55387). Leitura efetiva: Seção analítica p. 30–40, além do desfecho p. 41 e referências p. 41–42; não foi lida integralmente a discussão inicial p. 13–29.\n\n**Leitura documentada:** A novela monta correspondências entre jardim, corpo e passado violento; a representação e o trabalho das formas substituem a expectativa de confissão, penitência e redenção.\n\n**Contribuição:** Explica o retorno do passado na planta que atravessa a garganta e a casa, e a inversão entre jardineiro e jardim sem concluir por absolvição. O comentário da cova aponta que a escavação é revista como delírio.\n\n**Limites:** Leitura parcial. As analogias com Ícaro, Bruegel e Didi-Huberman são propostas do estudo; não constituem identificação explícita feita pela narradora. Imagens e obras teóricas não foram examinadas independentemente.\n\n**BIASIO, Nicola. Diálogo da natureza e um pirata: a ecocrítica por uma perspectiva descolonizadora em A visão das plantas de Djaimilia Pereira de Almeida. Abril – Revista do NEPA/UFF, v. 13, n. 27, p. 137–149, 2021.**\n\n[Consultar fonte](https://doi.org/10.22409/abriluff.v13i27.50193). Leitura efetiva: p. 141–146: relação entre ecocrítica e pós-colonialismo e seção No jardim do capitão Celestino; resumo p. 137.\n\n**Leitura documentada:** A perspectiva vegetal desestabiliza as oposições natureza/cultura e humano/não humano, invertendo os poderes entre o antigo dominador e o jardim do qual depende.\n\n**Contribuição:** Mostra como a ambiguidade de cuidado e dominação organiza a personagem e como a indiferença vegetal desloca a leitura moral antropocêntrica.\n\n**Limites:** Leitura parcial. O estudo identifica metaforicamente as plantas com vítimas e amplia a visão vegetal à narração; o dossiê deve distinguir essas hipóteses da existência de um narrador em terceira pessoa. Usa edição portuguesa de 2019 com outras páginas.\n\n**FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.**\n\n[Consultar fonte](https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/). Leitura efetiva: Corpo da notícia e listas anuais; conferência da lista de 2027.\n\n**Leitura documentada:** A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.\n\n**Contribuição:** Confirma a exigência oficial e distingue as listas dos diferentes anos.\n\n**Limites:** A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões.\n\n**FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.**\n\n[Consultar fonte](https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf). Leitura efetiva: PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.\n\n**Leitura documentada:** O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.\n\n**Contribuição:** Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.\n\n**Limites:** Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral.\n\n**Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.**\n\n[Consultar fonte](https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf). Leitura efetiva: PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.\n\n**Leitura documentada:** O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.\n\n**Contribuição:** Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.\n\n**Limites:** Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral.\n\n**Alcance desta publicação.** Primeira edição de estudo: texto primário, guias, passagens e síntese autoral revistos, com os recortes críticos acima. Não certifica a leitura integral dos estudos consultados parcialmente nem o aprofundamento integral da habilidade avançada. As unidades e agrupamentos seguem a edição e os limites declarados no percurso. A pesquisa não substitui a leitura da obra. As limitações do arquivo fornecido e da procedência permanecem válidas.",
+      "reviewedAt": "2026-10-07T04:52:47Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-visao-das-plantas"
     }
   ],
   "evidence": [
@@ -278,7 +380,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-solidao-musica",
@@ -293,7 +395,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-flores-do-sepulcro",
@@ -308,22 +410,22 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-loucura-remedio",
       "unitId": "parte-03",
       "location": "parte 3, p. 27",
       "quote": "A loucura é o mais santo dos remédios.",
-      "context": "Comentário do narrador sobre o capitão confuso.",
+      "context": "Passagem da visita do padre Alfredo, organizada pelas conclusões dele sobre a velhice do capitão; a sentença não funciona como diagnóstico médico independente.",
       "formalDevice": "Sentença paradoxal.",
-      "effect": "Insinua que a demência poupa Celestino da culpa.",
-      "wholeRelation": "O esquecimento progressivo do capitão é o caminho para a 'consciência tranquila' final.",
+      "effect": "A frase pode sugerir que a desorientação poupa da culpa, mas está junto à perspectiva do padre e deve ser lida como formulação ambígua, não diagnóstico objetivo.",
+      "wholeRelation": "A perda de memória pode ajudar a ler a tranquilidade final, sem constituir diagnóstico nem explicar sozinha a relação entre cuidado e violência.",
       "examPotential": [
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-sono-dos-justos",
@@ -338,7 +440,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-visao-das-plantas",
@@ -353,7 +455,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-escravos",
@@ -368,7 +470,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-planta-no-peito",
@@ -383,7 +485,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-ser-ninguem",
@@ -398,7 +500,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-amar-sem-memoria",
@@ -413,7 +515,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-estomago-de-deus",
@@ -428,7 +530,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-escravizar",
@@ -443,7 +545,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-amizade-com-a-morte",
@@ -458,7 +560,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-paciencia-da-morte",
@@ -473,7 +575,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-jardineiro-do-jardineiro",
@@ -481,14 +583,14 @@
       "location": "parte 12, p. 63",
       "quote": "o jardim se tornara jardineiro do jardineiro.",
       "context": "Celestino perde a capacidade de cuidar das plantas.",
-      "formalDevice": "Quiasmo.",
+      "formalDevice": "Derivação lexical e inversão de agência: jardim, jardineiro e jardineiro do jardineiro.",
       "effect": "Completa a inversão de papéis entre homem e jardim.",
       "wholeRelation": "Fecha o tema da posse e da dependência.",
       "examPotential": [
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-consciencia-tranquila",
@@ -498,12 +600,12 @@
       "context": "Morte do capitão.",
       "formalDevice": "Intertextualidade com a epígrafe de Raul Brandão.",
       "effect": "A frase de Brandão é repetida, mas agora pesa com tudo o que o leitor sabe.",
-      "wholeRelation": "O romance reescreve um parágrafo de Os pescadores e expõe o que ele calava.",
+      "wholeRelation": "A novela expande um parágrafo de Os pescadores: o crime já estava na epígrafe, mas recebe outra duração e novas perspectivas.",
       "examPotential": [
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-maos-pias",
@@ -513,12 +615,92 @@
       "context": "O padre Alfredo deixa a casa do morto.",
       "formalDevice": "Ironia final.",
       "effect": "Quem queria salvar a alma do capitão não sabe cuidar da vida.",
-      "wholeRelation": "Último comentário sobre religião e hipocrisia.",
+      "wholeRelation": "O final confronta autoridade religiosa, cobiça e incapacidade de cuidar; não permite reduzir todas as ações do padre a hipocrisia.",
       "examPotential": [
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
+    }
+  ],
+  "sources": [
+    {
+      "id": "visao-das-plantas-forli-ruckert",
+      "citation": "FORLI, Cristina Arena; RÜCKERT, Gustavo Henrique. O que fazer com o passado colonial? Uma reflexão sobre A visão das plantas, de Djaimilia Pereira de Almeida. Via Atlântica, v. 26, n. 1, p. 368–395, 2025.",
+      "type": "academic_article",
+      "institution": "Universidade de São Paulo / Via Atlântica",
+      "year": 2025,
+      "url": "https://doi.org/10.11606/va.v26.n1.2025.210087",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 368–393 do artigo; não foi feita leitura das referências finais p. 394–395.",
+      "centralThesis": "A escrita diaspórica problematiza a memória colonial portuguesa; a culpa recalcada e a acolhida imaginada pelas vítimas expõem o desejo de absolvição de Celestino e o esquecimento coletivo.",
+      "contribution": "Distingue indiferença vegetal, julgamento da vila e fantasia de perdão; permite relacionar o cuidado da velha negra à imagem colonial da servidão materna, sem atribuir o perdão às vítimas como fato.",
+      "limitations": "Leitura pós-colonial e psicanalítica; a culpa é hipótese interpretativa, não confissão explícita. Usa paginação impressa diferente do PDF primário deste dossiê. Não foram lidos diretamente os livros teóricos citados pelo artigo."
+    },
+    {
+      "id": "visao-das-plantas-fagundes",
+      "citation": "FAGUNDES, Mônica Genelhu. Paisagem com a queda de Celestino: sobre A visão das plantas, de Djaimilia Pereira de Almeida. Metamorfoses, v. 19, n. 1, p. 13–42, 2022.",
+      "type": "academic_article",
+      "institution": "Universidade Federal do Rio de Janeiro / Metamorfoses",
+      "year": 2022,
+      "url": "https://doi.org/10.35520/metamorfoses.2022.v19n1a55387",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "Seção analítica p. 30–40, além do desfecho p. 41 e referências p. 41–42; não foi lida integralmente a discussão inicial p. 13–29.",
+      "centralThesis": "A novela monta correspondências entre jardim, corpo e passado violento; a representação e o trabalho das formas substituem a expectativa de confissão, penitência e redenção.",
+      "contribution": "Explica o retorno do passado na planta que atravessa a garganta e a casa, e a inversão entre jardineiro e jardim sem concluir por absolvição. O comentário da cova aponta que a escavação é revista como delírio.",
+      "limitations": "Leitura parcial. As analogias com Ícaro, Bruegel e Didi-Huberman são propostas do estudo; não constituem identificação explícita feita pela narradora. Imagens e obras teóricas não foram examinadas independentemente."
+    },
+    {
+      "id": "visao-das-plantas-biasio",
+      "citation": "BIASIO, Nicola. Diálogo da natureza e um pirata: a ecocrítica por uma perspectiva descolonizadora em A visão das plantas de Djaimilia Pereira de Almeida. Abril – Revista do NEPA/UFF, v. 13, n. 27, p. 137–149, 2021.",
+      "type": "academic_article",
+      "institution": "Universidade Federal Fluminense / Abril",
+      "year": 2021,
+      "url": "https://doi.org/10.22409/abriluff.v13i27.50193",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 141–146: relação entre ecocrítica e pós-colonialismo e seção No jardim do capitão Celestino; resumo p. 137.",
+      "centralThesis": "A perspectiva vegetal desestabiliza as oposições natureza/cultura e humano/não humano, invertendo os poderes entre o antigo dominador e o jardim do qual depende.",
+      "contribution": "Mostra como a ambiguidade de cuidado e dominação organiza a personagem e como a indiferença vegetal desloca a leitura moral antropocêntrica.",
+      "limitations": "Leitura parcial. O estudo identifica metaforicamente as plantas com vítimas e amplia a visão vegetal à narração; o dossiê deve distinguir essas hipóteses da existência de um narrador em terceira pessoa. Usa edição portuguesa de 2019 com outras páginas."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-lista-2027",
+      "citation": "FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.",
+      "institution": "FUVEST / USP",
+      "year": 2023,
+      "url": "https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/",
+      "pagesRead": "Corpo da notícia e listas anuais; conferência da lista de 2027.",
+      "centralThesis": "A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.",
+      "contribution": "Confirma a exigência oficial e distingue as listas dos diferentes anos.",
+      "limitations": "A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-programa-2027",
+      "citation": "FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.",
+      "institution": "FUVEST / USP",
+      "year": 2026,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf",
+      "pagesRead": "PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.",
+      "centralThesis": "O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.",
+      "contribution": "Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.",
+      "limitations": "Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "comvest-programa-2027",
+      "citation": "Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.",
+      "institution": "Comvest / Unicamp",
+      "year": 2026,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "pagesRead": "PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.",
+      "centralThesis": "O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.",
+      "contribution": "Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.",
+      "limitations": "Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral."
     }
   ]
 }

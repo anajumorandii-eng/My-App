@@ -87,3 +87,7 @@ A cova mostra a precariedade de tomar a experiência como registro objetivo: uma
 ## Pendências para a habilidade completa
 
 Não foram lidas duas teses sobre esta obra nem um estudo teórico de referência diretamente; não se afirma cumprir a meta bibliográfica da habilidade integral. Persistem o aprofundamento das quinze dimensões por bloco e o levantamento de provas por obra. Os artigos são mobilizados pelo que foi efetivamente lido e pelas divergências, sem consenso artificial.
+
+## Decisão da primeira edição de estudo
+
+Incorporadas as correções, o aprofundamento formal e o debate entre Forli/Rückert, Fagundes e Biasio. Publicados oito módulos, doze guias e dezessete cartões, após revisão textual e bibliográfica; preservados os IDs. Não se afirma arrependimento inequívoco, diagnóstico clínico ou perdão das vítimas. A epígrafe de Brandão já contém o massacre. As três fontes críticas têm alcance lido e limites; três fontes oficiais sustentam lista e treino. A conferência literal e os 25 testes focados passaram. O aprofundamento integral da habilidade permanece fora do alcance desta primeira edição, declarado em Fontes.
