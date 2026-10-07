@@ -27,10 +27,10 @@ Data: 07/10/2026. Escopo: revisão de uma primeira edição compacta, não certi
     "year": 2007,
     "url": "https://www.teses.usp.br/teses/disponiveis/8/8150/tde-07022008-112137/",
     "accessedAt": "2026-10-07",
-    "pagesRead": "p. 18–21 e 147–148 (também PDF p. 18–21 e 147–148); leitura parcial.",
+    "pagesRead": "p. 9–10, 18–21 e 147–148 (também PDF p. 9–10, 18–21 e 147–148); leitura parcial.",
     "centralThesis": "O quarto e a casa figuram operações de memória, introspecção e proteção, mas também aprisionamento e angústia.",
     "contribution": "Analisa Manuel Bandeira, No quarto e Ingrina; corrige a falsa exclusão do intimismo por uma poética atenta ao exterior.",
-    "limitations": "Recorte temático de diversos livros. A sugestão de encarceramento em No quarto é hipótese interpretativa, não evento biográfico comprovado."
+    "limitations": "Recorte temático de diversos livros. A sugestão de encarceramento em No quarto é hipótese interpretativa, não evento biográfico comprovado. O contexto de resistência a Salazar é retomado na introdução por meio de Carlos Reis, não de documento histórico primário consultado."
   }
 ]
 ```
@@ -71,3 +71,14 @@ O contraste entre luz natural e luz artificial não admite a fórmula de que tod
 **Tensão produtiva.** A poética da aliança convive com separação, ameaça e perda: o vazio entre sujeitos e coisas em *Crepúsculo dos deuses* (p. 77) encontra contraponto no recomeço de *Ingrina* (p. 25). A declaração final de atenção voltada para fora (p. 91) não autoriza apagar *Dual*, a ausência ou a memória de Bandeira. Ela descreve uma forma de construir o sujeito por encontros com o real.
 
 **Limites.** As duas dissertações foram lidas em seções, não integralmente, e estudam outros livros. A contextualização política geral de 1967 requer documento histórico específico se for detalhada; não atribuir automaticamente cada imagem a um episódio da ditadura. A edição compacta conserva guias por parte, sem análise individual completa de todos os poemas ou certificação bibliográfica integral da habilidade.
+
+
+## Conferência da retomada — 07/10/2026
+
+Relidos os poemas-âncora de exterioridade, intimismo e nomeação: Ingrina (p. 25), Mundo nomeado (p. 28), Os aviões (p. 35), Néon (p. 38), A noite e a casa/Espera (p. 45–46), No quarto (p. 56), Epidauro/Crepúsculo dos deuses (p. 72–77), Descobrimento/Manuel Bandeira (p. 82–83), Poema (p. 91), além dos créditos (p. 92–93). Azevedo (p. 9–10) foi consultado adicionalmente: a resistência a Salazar aparece por intermédio de Carlos Reis. Esse alcance foi registrado como mediação secundária, sem converter cada poema em alegoria de um fato biográfico.
+
+Preparados patches privados com correções de campos completos, fichas das fontes realmente consultadas e acréscimos autorais para Análise e Crítica e debate. As prévias privadas passaram pelo conferidor literal existente, sem alteração ou enfraquecimento do script. A implementação, a aprovação editorial e a conferência antes do commit cabem à integração; esta nota não declara publicação concluída. Nenhum PDF ou texto integral foi acrescentado à documentação pública.
+
+## Decisão da primeira edição de estudo
+
+Integradas leituras de nomeação e intimismo: atenção ao exterior não apaga casa, quarto, amor ou memória. Corrigida a identificação automática do sujeito lírico com a autora e preservada a diferença entre a parte Dual e o livro de 1972. O Cristo Cigano continua fora do corpus exigido. Aprovados 8 módulos, 7 guias e 16 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.

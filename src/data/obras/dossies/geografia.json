@@ -16,7 +16,7 @@
       "pdfEndPage": 29,
       "opening": "I . ingrina",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Abertura solar, ligada à costa do Algarve: luz, cal, mar e orégão. Os poemas apresentam o mundo como recomeço e a palavra como ato de nomear e criar. 'Mundo nomeado ou descoberta das ilhas' liga o gesto dos navegadores ao do poeta.",
         "observe": [
           "A geografia aqui é concreta (Ingrina, a cidade de pedra e cal, a capela no promontório) e ao mesmo tempo mítica.",
@@ -33,7 +33,7 @@
       "pdfEndPage": 38,
       "opening": "II . procelária",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "A parte política do livro. A procelária, ave que voa na tempestade, é imagem de quem 'vive e canta no mau tempo'. Seguem poemas contra a corrupção da cidade, a pobreza, a guerra aérea e o assassinato de García Lorca.",
         "observe": [
           "Escritos sob a ditadura salazarista, os poemas denunciam sem nomear diretamente o regime.",
@@ -50,11 +50,11 @@
       "pdfEndPage": 46,
       "opening": "III . a noite e a casa",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Poemas breves de interior: a casa à noite, a vela, a música, o silêncio. A atenção concentrada transforma o espaço doméstico em lugar de revelação.",
         "observe": [
-          "A casa é espaço de escuta e espera, não de refúgio sentimental.",
-          "O silêncio aparece como presença ativa ('navegação antiquíssima e solene')."
+          "A casa reúne escuta, memória e atenção; pode acolher e proteger, mas também expor vazio e ameaça, conforme o poema.",
+          "Em Espera (p. 46), a repetição de É então que organiza o surgimento da percepção; a mão sobre a mesa e o silêncio dão forma concreta à interioridade."
         ]
       }
     },
@@ -67,8 +67,8 @@
       "pdfEndPage": 66,
       "opening": "IV . dual",
       "guide": {
-        "editorialStatus": "needs_review",
-        "summary": "A parte mais longa, sobre amor, ausência, tempo e memória. Alterna poemas de perda ('De um amor morto', 'O vazio desenhava desde sempre') com imagens de deserto, casa, espelho e quarto.",
+        "editorialStatus": "published",
+        "summary": "A parte IV de Geografia (1967), a mais longa na paginação deste PDF, trata de amor, ausência, tempo e memória. O título desta parte não deve ser confundido com o livro Dual, publicado em 1972. Alterna poemas de perda ('De um amor morto', 'O vazio desenhava desde sempre') com imagens de deserto, casa, espelho e quarto.",
         "observe": [
           "A ausência é tratada como forma ('a ardente perfeição da tua ausência').",
           "O título 'Dual' aponta para a divisão interior (eu e o cavalo de mim mesma em 'No deserto')."
@@ -84,7 +84,7 @@
       "pdfEndPage": 80,
       "opening": "V. mediterrâneo",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Viagem pela Grécia e pela Itália: Acaia, Corinto, Sunion, Epidauro, Vila Adriana, Pompeia, Ítaca. O mundo grego é a medida da clareza e da justiça, mas o livro registra também o 'crepúsculo dos deuses' e o vazio que separa o homem das coisas.",
         "observe": [
           "A Grécia funciona como ideal de luz, nudez e medida — a 'poesia do exterior'.",
@@ -101,7 +101,7 @@
       "pdfEndPage": 85,
       "opening": "VI . brasil ou do outro lado do mar",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "O Brasil visto de Portugal: o descobrimento, Manuel Bandeira, Brasília e o português falado no Brasil. A arquitetura de Brasília é lida pela chave grega da ordem e da clareza.",
         "observe": [
           "'Descobrimento' adota a perspectiva dos navegadores; vale ler criticamente a imagem dos indígenas 'recém-criados'.",
@@ -118,7 +118,7 @@
       "pdfEndPage": 91,
       "opening": "VII . no poema",
       "guide": {
-        "editorialStatus": "needs_review",
+        "editorialStatus": "published",
         "summary": "Poemas sobre a própria poesia: a 'poesia de inverno' de um tempo sem deuses, a escrita, a transparência e uma poética final em que o mundo é a biografia da poeta.",
         "observe": [
           "'Poesia de inverno' critica uma poesia envergonhada das palavras e da beleza.",
@@ -131,17 +131,23 @@
     {
       "id": "comece-aqui",
       "moduleType": "comece_aqui",
-      "version": 1,
-      "editorialStatus": "needs_review",
+      "version": 2,
+      "editorialStatus": "published",
       "evidenceRefs": [],
-      "sourceRefs": [],
-      "markdown": "**Geografia** (1967) é um livro de poemas da portuguesa Sophia de Mello Breyner Andresen (1919-2004), Prêmio Camões em 1999. Está dividido em sete partes: Ingrina, Procelária, A noite e a casa, Dual, Mediterrâneo, Brasil ou do outro lado do mar, e No poema.\n\n**Escopo da Fuvest:** só *Geografia*. A edição da Companhia das Letras traz no mesmo volume *O Cristo Cigano* (1961), que **não** faz parte da lista e fica fora deste dossiê.\n\n**Como ler:** siga o título. Os poemas mapeiam lugares (o Algarve, a Grécia, o Brasil), mas também uma geografia interior (a casa, a noite, o amor perdido) e uma geografia política (a cidade corrompida, o povo humilhado, Lorca assassinado). O mar, a luz, a cal e a pedra atravessam o livro inteiro.\n\n**Língua:** o texto segue a ortografia de Portugal (reflectido, facto, nocturno). As citações deste dossiê mantêm essa grafia."
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Geografia** (1967) é um livro de poemas da portuguesa Sophia de Mello Breyner Andresen (1919-2004), Prêmio Camões em 1999. Está dividido em sete partes: Ingrina, Procelária, A noite e a casa, Dual, Mediterrâneo, Brasil ou do outro lado do mar, e No poema.\n\n**Escopo da Fuvest:** só *Geografia*. A edição da Companhia das Letras traz no mesmo volume *O Cristo Cigano* (1961), que **não** faz parte da lista e fica fora deste dossiê.\n\n**Como ler:** siga o título. Os poemas mapeiam lugares (o Algarve, a Grécia, o Brasil), mas também uma geografia interior (a casa, a noite, o amor perdido) e uma geografia política (a cidade corrompida, o povo humilhado, Lorca assassinado). O mar, a luz, a cal e a pedra atravessam o livro inteiro.\n\n**Língua:** o texto segue a ortografia de Portugal (reflectido, facto, nocturno). As citações deste dossiê mantêm essa grafia.",
+      "reviewedAt": "2026-10-07T04:56:44Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-geografia"
     },
     {
       "id": "analise-integral",
       "moduleType": "analise_integral",
-      "version": 1,
-      "editorialStatus": "needs_review",
+      "version": 2,
+      "editorialStatus": "published",
       "evidenceRefs": [
         "ev-recomeco",
         "ev-mundo-nomeado",
@@ -160,22 +166,118 @@
         "ev-rio-sagrado",
         "ev-biografia"
       ],
-      "sourceRefs": [],
-      "markdown": "## Poesia do exterior\n\nSophia defende uma poesia voltada para fora: 'O meu interior é uma atenção voltada para fora', diz o último poema. O mundo concreto — mar, sol, vento, pedra — é a matéria e a identidade da poeta. Por isso as imagens são nítidas e materiais, e o eu lírico raramente fala de sentimentos em abstrato.\n\n## Nomear é criar\n\n'Mundo nomeado ou descoberta das ilhas' iguala o gesto dos navegadores, que dão nome à costa, ao do poeta. A palavra justa faz as coisas 'responderem'. No fim do livro, 'Poesia de inverno' denuncia o contrário: um tempo sem deuses em que as palavras ficam 'envergonhadas' e o rio, sem sagrado, 'nem sequer é rio'.\n\n## A parte política\n\nEscrito durante a ditadura salazarista, o livro tem uma parte de denúncia: a procelária que canta 'no mau tempo', a cidade em que 'o mal procura o mal', o povo de rosto 'desenhado por paciência e fome', a guerra aérea e o túmulo de Lorca. A resistência aparece por imagens, não por panfleto.\n\n## A Grécia como medida\n\nEm 'Mediterrâneo', a Grécia é o lugar da luz, da nudez e da justiça: 'o país do exterior'. Mas a parte também narra o 'crepúsculo dos deuses', quando 'se abriu o vazio que nos separa das coisas'. O ideal clássico é ao mesmo tempo modelo e perda.\n\n## Brasil\n\nA parte VI olha o Brasil de Portugal: o descobrimento (pela perspectiva dos navegadores, o que pede leitura crítica), a memória de Manuel Bandeira, Brasília como cidade grega e 'pitagórica', e o português do Brasil, em que 'as palavras recuperam sua substância total'.\n\n## Ausência e tempo\n\nEm 'Dual', a ausência ganha forma: 'a ardente perfeição da tua ausência'. O amor morto é 'apenas um facto que a eternidade ignora'. A casa, o espelho e a noite são espaços de espera e de memória.\n\n## Pontos de prova\n\n- Explicar o título e a relação entre espaço exterior e interior.\n- Analisar a dimensão política sob o salazarismo.\n- Interpretar a presença da Grécia e do mar.\n- Comparar a visão do Brasil com a tradição literária brasileira.\n- Comentar a ortografia europeia e a variação linguística."
+      "sourceRefs": [
+        "geografia-almeida-1992",
+        "geografia-azevedo-2007"
+      ],
+      "markdown": "## Poesia do exterior\n\nO poema final define uma relação entre interior e mundo: 'O meu interior é uma atenção voltada para fora'. O mundo concreto — mar, sol, vento, pedra — organiza a identidade construída pelo sujeito lírico. Amor, perda e interioridade não desaparecem: são articulados por imagens, objetos, ritmos e espaços. O poema final não autoriza identificar literalmente autora empírica e voz, nem excluir o intimismo de Manuel Bandeira ou de No quarto.\n\n## Nomear é criar\n\n'Mundo nomeado ou descoberta das ilhas' iguala o gesto dos navegadores, que dão nome à costa, ao do poeta. A palavra justa faz as coisas 'responderem'. No fim do livro, 'Poesia de inverno' denuncia o contrário: um tempo sem deuses em que as palavras ficam 'envergonhadas' e o rio, sem sagrado, 'nem sequer é rio'.\n\n## A parte política\n\nEscrito durante a ditadura salazarista, o livro tem uma parte de denúncia: a procelária que canta 'no mau tempo', a cidade em que 'o mal procura o mal', o povo de rosto 'desenhado por paciência e fome', a guerra aérea e o túmulo de Lorca. A resistência aparece por imagens, não por panfleto.\n\n## A Grécia como medida\n\nEm 'Mediterrâneo', a Grécia é o lugar da luz, da nudez e da justiça: 'o país do exterior'. Mas a parte também narra o 'crepúsculo dos deuses', quando 'se abriu o vazio que nos separa das coisas'. O ideal clássico é ao mesmo tempo modelo e perda.\n\n## Brasil\n\nA parte VI olha o Brasil de Portugal: o descobrimento (pela perspectiva dos navegadores, o que pede leitura crítica), a memória de Manuel Bandeira, Brasília como cidade grega e 'pitagórica', e o português do Brasil, em que 'as palavras recuperam sua substância total'.\n\n## Ausência e tempo\n\nEm 'Dual', a ausência ganha forma: 'a ardente perfeição da tua ausência'. O amor morto é 'apenas um facto que a eternidade ignora'. A casa, o espelho e a noite são espaços de espera e de memória.\n\n## Pontos de prova\n\n- Explicar o título e a relação entre espaço exterior e interior.\n- Analisar a dimensão política sob o salazarismo.\n- Interpretar a presença da Grécia e do mar.\n- Comparar a visão do Brasil com a tradição literária brasileira.\n- Comentar a ortografia europeia e a variação linguística.\n\n### Geografia como relação, não inventário\n\nEm *Ingrina* (p. 25), o retorno ao lugar é uma recomposição da relação entre corpo, memória e mundo: passos que escutam o chão e roupa que serve figuram um acordo recuperado. Em *No quarto* (p. 56), a comparação com um vestido que não cresceu produz o inverso: a vida já não comporta quem a vive. O contraste atravessa partes diferentes e impede ler o título apenas como lista de cidades. Os lugares organizam possibilidades de habitar, pertencer ou perder a própria medida.\n\n### O exterior inclui a experiência íntima\n\n*A noite e a casa* (p. 45) reúne os espaços pelo silêncio, enquanto *Espera* (p. 46) torna a hora tardia condição para perceber mão, mesa e vazio. Em *Manuel Bandeira* (p. 83), recitar poemas na casa antiga associa leitura e memória, com a presença da avó e a saudade futura. A materialidade desses elementos não elimina a intimidade. O estudo de Azevedo (2007, p. 18–21) enfatiza justamente o abrigo e a introspecção; em sua leitura de *No quarto* (p. 147–148), o espaço fechado pode assumir sinal contrário, de limite e aprisionamento. Nossa síntese observa que a mesma casa não tem função fixa em todos os poemas.\n\n### Luz, ameaça e resposta ética\n\nO contraste entre luz natural e luz artificial não admite a fórmula de que toda claridade salva: *Néon* (p. 38) mostra luz crua que viola o interior, enquanto *Epidauro* (p. 72) apresenta a luz ligada à liberdade da voz e à destruição do Minotauro. Em *Os aviões* (p. 35), a primeira cena permite observar um avião como prodígio; a mudança de lugar revela a mesma tecnologia como morte e destruição. Esse deslocamento de perspectiva torna insuficiente a contemplação privada do mundo: ver deve incluir o dano sofrido por outros.\n\n### Nomeação, criação e limite histórico\n\n*Mundo nomeado ou descoberta das ilhas* (p. 28) apresenta coisas que respondem aos nomes como se fossem criadas. Almeida (1992, p. 29–35) descreve a palavra poética como recomposição de uma aliança, sem reduzi-la a cópia do visível. Isso explica a força criadora atribuída à nomeação, mas não resolve sozinho o ponto de vista de *Descobrimento* (p. 82): o plural da travessia e a imagem de homens recém-criados organizam um olhar dos navegadores. A leitura crítica pode reconhecer essa perspectiva e perguntar pelas vozes indígenas ausentes. Essa pergunta é síntese nossa, e não tese automaticamente atribuída à dissertação.",
+      "reviewedAt": "2026-10-07T04:56:44Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-geografia"
     },
-    {"id": "critica-debate", "moduleType": "critica_debate", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-procelaria", "ev-crepusculo", "ev-descobrimento"], "sourceRefs": [], "markdown": "**Camadas de evidência.** Os cartões trazem versos localizados no PDF; guias e análise são síntese própria. Nenhuma fonte acadêmica foi lida.\n\n**Hipóteses em confronto.** O livro pode ser lido como poesia da luz e da natureza ou como poesia política sob a ditadura salazarista: a procelária é “imagem justa / Para quem vive e canta no mau tempo” (“Procelária”, p. 31). A Grécia pode ser lida como ideal ou como perda — “Eis que se abriu o vazio que nos separa das coisas” (*Crepúsculo dos deuses*, p. 77). A parte VI pode ser lida como homenagem ao Brasil ou, criticamente, como olhar do navegador português sobre os povos encontrados (“Descobrimento”, p. 82).\n\n**Limites.** A relação com o salazarismo e com a biografia da autora não foi conferida em fonte. O PDF é cópia eLivros. Pesquisa pendente: estudos sobre Sophia, a poesia do exterior e o livro, citados com página quando lidos."},
-    {"id": "fuvest", "moduleType": "fuvest", "board": "FUVEST", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-biografia", "ev-mundo-nomeado", "ev-rio-sagrado"], "sourceRefs": [], "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nEscopo: só *Geografia*; *O Cristo Cigano* fica fora. Na objetiva, cuidado com a ortografia europeia (facto, reflectido): não é erro. Distrator comum: tratar o eu lírico como confessional e sentimental; a poética é voltada para fora (“A terra o sol o vento o mar São minha biografia e são meu rosto”, “Poema”, p. 91).\n\nNa discursiva, explique o nomear como criar (*Mundo nomeado ou descoberta das ilhas*, p. 28) e o seu avesso em *Poesia de inverno* (p. 88). Para a parte política, mostre a imagem antes do contexto."},
-    {"id": "unicamp", "moduleType": "unicamp", "board": "UNICAMP", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-portugues-do-brasil", "ev-brasilia"], "sourceRefs": [], "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nPratique a comparação entre partes: “Gosto de ouvir o português do Brasil” (*Poema de Helena Lanari*, p. 85) e “O Brasil emergiu do barroco e encontrou o seu número” (“Brasília”, p. 84) mostram dois modos de olhar o Brasil, pela língua e pela forma."},
-    {"id": "questoes", "moduleType": "questoes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-recomeco", "ev-rio-sagrado", "ev-mundo-nomeado", "ev-procelaria", "ev-esta-gente", "ev-epidauro", "ev-crepusculo", "ev-descobrimento"], "sourceRefs": [], "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “E sobre a areia sobre a cal e sobre a pedra escrevo: nesta manhã eu recomeço o mundo.” (“Ingrina”, p. 25), a escrita aparece como:\nA) registro nostálgico de um passado perdido.\nB) gesto inaugural que refaz o mundo pela palavra.\nC) denúncia direta da ditadura.\nD) diálogo com a amada ausente.\nE) descrição técnica da paisagem algarvia.\n\n**2. FUVEST, objetiva, difícil.** “Pois o rio já não é sagrado e por isso nem sequer é rio” (*Poesia de inverno*, p. 88) estabelece relação com *Mundo nomeado ou descoberta das ilhas* (p. 28) porque:\nA) ambos celebram o rio como fronteira.\nB) o primeiro mostra o avesso do segundo: sem sagrado, o nome perde a força de criar.\nC) ambos descrevem a viagem à Grécia.\nD) o segundo critica os navegadores e o primeiro os elogia.\nE) não há relação entre os poemas.\n\n**3. FUVEST, discursiva, difícil.** a) Explique a procelária como imagem do poeta (“Procelária”, p. 31). b) Relacione-a a “Esta gente” (p. 34), mostrando como a resistência aparece por imagem e não por panfleto.\n\n**4. Discursiva, muito difícil.** Compare “Eis o país do exterior onde cada coisa é” (“Epidauro”, p. 72) e “Eis que se abriu o vazio que nos separa das coisas” (*Crepúsculo dos deuses*, p. 77). Que tensão sobre a Grécia o livro constrói?\n\n**5. Comparação, muito difícil.** “Descobrimento” (p. 82) descreve um povo “ainda nus ainda deslumbrados”. Discuta o ponto de vista do poema e por que ele pede leitura crítica."},
-    {"id": "revisao-ativa", "moduleType": "revisao_ativa", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-lorca", "ev-brasilia"], "sourceRefs": [], "markdown": "Reconstrua sem consulta: as sete partes (Ingrina, Procelária, A noite e a casa, Dual, Mediterrâneo, Brasil, No poema) e um poema-âncora de cada.\n\n**Factual:** que livro do mesmo volume fica fora? Que cidade brasileira é lida como ordem clássica? A quem é o túmulo da parte II?\n\n**Formal:** como o livro usa a enumeração de matérias (mar, cal, pedra)? Por que a ortografia é europeia?\n\n**Interpretativo:** o livro é mais político ou mais lírico? Justifique com um poema de cada lado.\n\n**24 horas:** mapa das partes. **7 dias:** um poema novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos."},
+    {
+      "id": "critica-debate",
+      "moduleType": "critica_debate",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-procelaria",
+        "ev-crepusculo",
+        "ev-descobrimento"
+      ],
+      "sourceRefs": [
+        "geografia-almeida-1992",
+        "geografia-azevedo-2007"
+      ],
+      "markdown": "**Leituras documentadas.** Almeida (1992, p. 29–35) privilegia palavra, inteireza e busca de comunhão. Azevedo (2007, p. 18–21 e 147–148) privilegia casa, quarto, memória e condições de introspecção. Não são explicações que se excluem: o interior organiza a relação com o exterior e pode tanto favorecer a atenção quanto revelar uma vida insuficiente.\n\n**Tensão produtiva.** A poética da aliança convive com separação, ameaça e perda: o vazio entre sujeitos e coisas em *Crepúsculo dos deuses* (p. 77) encontra contraponto no recomeço de *Ingrina* (p. 25). A declaração final de atenção voltada para fora (p. 91) não autoriza apagar *Dual*, a ausência ou a memória de Bandeira. Ela descreve uma forma de construir o sujeito por encontros com o real.\n\n**Limites.** As duas dissertações foram lidas em seções, não integralmente, e estudam outros livros. A contextualização política geral de 1967 requer documento histórico específico se for detalhada; não atribuir automaticamente cada imagem a um episódio da ditadura. A edição compacta conserva guias por parte, sem análise individual completa de todos os poemas ou certificação bibliográfica integral da habilidade.",
+      "reviewedAt": "2026-10-07T04:56:44Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-geografia"
+    },
+    {
+      "id": "fuvest",
+      "moduleType": "fuvest",
+      "board": "FUVEST",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-biografia",
+        "ev-mundo-nomeado",
+        "ev-rio-sagrado"
+      ],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027"
+      ],
+      "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nEscopo: só *Geografia*; *O Cristo Cigano* fica fora. Na objetiva, cuidado com a ortografia europeia (facto, reflectido): não é erro. Distrator comum: concluir que a atenção ao exterior elimina toda experiência íntima; o poema final constrói a identidade do sujeito por sua relação com o mundo (“A terra o sol o vento o mar São minha biografia e são meu rosto”, “Poema”, p. 91).\n\nNa discursiva, explique o nomear como criar (*Mundo nomeado ou descoberta das ilhas*, p. 28) e o seu avesso em *Poesia de inverno* (p. 88). Para a parte política, mostre a imagem antes do contexto.\n\n**F.O.R.M.A., ferramenta didática autoral.** Na segunda fase: foco no verbo, recorte e quantidade; observação de uma passagem; recurso formal pertinente; mecanismo que produz o efeito; articulação ao conjunto ou à comparação pedida. Isso não é rubrica oficial de pontuação. Na primeira fase, teste cada alternativa contra a voz e as marcas do excerto, sem aceitar uma característica geral que não esteja nele.",
+      "reviewedAt": "2026-10-07T04:56:44Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-geografia"
+    },
+    {
+      "id": "unicamp",
+      "moduleType": "unicamp",
+      "board": "UNICAMP",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-portugues-do-brasil",
+        "ev-brasilia"
+      ],
+      "sourceRefs": [
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nPratique a comparação entre partes: “Gosto de ouvir o português do Brasil” (*Poema de Helena Lanari*, p. 85) e “O Brasil emergiu do barroco e encontrou o seu número” (“Brasília”, p. 84) mostram dois modos de olhar o Brasil, pela língua e pela forma.\n\n**F.O.N.T.E., ferramenta didática autoral.** Na segunda fase: fonte localizada; operação de cada subitem; núcleo formal; tensão interpretativa; explicação articulada. Responda os verbos separadamente e ligue o efeito à evidência, sem apenas recontar a trama. Na primeira fase, compare a alternativa ao texto e ao paratexto fornecidos. O protocolo não é espelho oficial nem previsão de incidência.",
+      "reviewedAt": "2026-10-07T04:56:44Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-geografia"
+    },
+    {
+      "id": "questoes",
+      "moduleType": "questoes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-recomeco",
+        "ev-rio-sagrado",
+        "ev-mundo-nomeado",
+        "ev-procelaria",
+        "ev-esta-gente",
+        "ev-epidauro",
+        "ev-crepusculo",
+        "ev-descobrimento"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “E sobre a areia sobre a cal e sobre a pedra escrevo: nesta manhã eu recomeço o mundo.” (“Ingrina”, p. 25), a escrita aparece como:\n- A) registro nostálgico de um passado perdido.\n- B) gesto inaugural que refaz o mundo pela palavra.\n- C) denúncia direta da ditadura.\n- D) diálogo com a amada ausente.\n- E) descrição técnica da paisagem algarvia.\n\n**2. FUVEST, objetiva, difícil.** “Pois o rio já não é sagrado e por isso nem sequer é rio” (*Poesia de inverno*, p. 88) estabelece relação com *Mundo nomeado ou descoberta das ilhas* (p. 28) porque:\n- A) ambos celebram o rio como fronteira.\n- B) o primeiro mostra o avesso do segundo: sem sagrado, o nome perde a força de criar.\n- C) ambos descrevem a viagem à Grécia.\n- D) o segundo critica os navegadores e o primeiro os elogia.\n- E) não há relação entre os poemas.\n\n**3. FUVEST, discursiva, difícil.** a) Explique a procelária como imagem do poeta (“Procelária”, p. 31). b) Relacione-a a “Esta gente” (p. 34), mostrando como a resistência aparece por imagem e não por panfleto.\n\n**4. Discursiva, muito difícil.** Compare “Eis o país do exterior onde cada coisa é” (“Epidauro”, p. 72) e “Eis que se abriu o vazio que nos separa das coisas” (*Crepúsculo dos deuses*, p. 77). Que tensão sobre a Grécia o livro constrói?\n\n**5. Comparação, muito difícil.** “Descobrimento” (p. 82) descreve um povo “ainda nus ainda deslumbrados”. Discuta o ponto de vista do poema e por que ele pede leitura crítica.",
+      "reviewedAt": "2026-10-07T04:56:44Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-geografia"
+    },
+    {
+      "id": "revisao-ativa",
+      "moduleType": "revisao_ativa",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-lorca",
+        "ev-brasilia"
+      ],
+      "sourceRefs": [],
+      "markdown": "Reconstrua sem consulta: as sete partes (Ingrina, Procelária, A noite e a casa, Dual, Mediterrâneo, Brasil, No poema) e um poema-âncora de cada.\n\n**Factual:** que livro do mesmo volume fica fora? Que cidade brasileira é lida como ordem clássica? A quem é o túmulo da parte II?\n\n**Formal:** como o livro usa a enumeração de matérias (mar, cal, pedra)? Por que a ortografia é europeia?\n\n**Interpretativo:** o livro é mais político ou mais lírico? Justifique com um poema de cada lado.\n\n**24 horas:** mapa das partes. **7 dias:** um poema novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos.",
+      "reviewedAt": "2026-10-07T04:56:44Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-geografia"
+    },
     {
       "id": "fontes",
       "moduleType": "fontes",
-      "version": 1,
-      "editorialStatus": "needs_review",
+      "version": 2,
+      "editorialStatus": "published",
       "evidenceRefs": [],
-      "sourceRefs": [],
-      "markdown": "**Edição usada:** Sophia de Mello Breyner Andresen, *Geografia*, no volume *O Cristo Cigano e Geografia*. São Paulo: Companhia das Letras, e-book, com texto estabelecido a partir da *Obra poética* (Assírio & Alvim, 2015). As páginas citadas são as do PDF usado, com 93 páginas; *Geografia* vai da p. 24 à p. 91.\n\n**Fora do escopo:** *O Cristo Cigano* (p. 9-22 do mesmo PDF) não integra a lista da Fuvest para 2027 e não é analisado aqui.\n\n**Procedência do arquivo:** o PDF do Drive é uma cópia distribuída pela equipe eLivros, não um arquivo da editora. Antes de publicar, convém conferir as citações num exemplar da Companhia das Letras.\n\n**Direitos:** obra protegida por direito autoral (© herdeiros de Sophia de Mello Breyner Andresen). Este dossiê traz só análise original e citações curtas, com página.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027.\n\n**Crítica:** nenhuma fonte crítica foi lida para este dossiê. A leitura é feita diretamente do texto e precisa de revisão editorial antes de ser publicada."
+      "sourceRefs": [
+        "geografia-almeida-1992",
+        "geografia-azevedo-2007",
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Edição usada:** Sophia de Mello Breyner Andresen, *Geografia*, no volume *O Cristo Cigano e Geografia*. São Paulo: Companhia das Letras, e-book, com texto estabelecido a partir da *Obra poética* (Assírio & Alvim, 2015). As páginas citadas são as do PDF usado, com 93 páginas; *Geografia* vai da p. 24 à p. 91.\n\n**Fora do escopo:** *O Cristo Cigano* (p. 9-22 do mesmo PDF) não integra a lista da Fuvest para 2027 e não é analisado aqui.\n\n**Procedência do arquivo:** o PDF do Drive é uma cópia distribuída pela equipe eLivros, não um arquivo da editora. As citações foram conferidas na cópia fornecida; não houve cotejo independente com exemplar da Companhia das Letras.\n\n**Direitos:** obra protegida por direito autoral (© herdeiros de Sophia de Mello Breyner Andresen). Este dossiê traz só análise original e citações curtas, com página.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027.\n\n**Pesquisa crítica consultada:** Almeida (1992, p. 29–35), seção sobre a palavra que nomeia, e Azevedo (2007, p. 9–10, 18–21 e 147–148), introdução e leituras da casa, de Manuel Bandeira, No quarto e Ingrina. Ambas as dissertações foram lidas parcialmente e abordam outros livros; a bibliografia comentada explicita o alcance. A hipótese de encarceramento em No quarto não é episódio biográfico comprovado. A introdução de Azevedo retoma a resistência de Sophia a Salazar por meio de Carlos Reis, consultado indiretamente.\n\n**Controle de edição:** as dissertações usam paginações próprias e citam textos externos. *Arte Poética II* não foi apresentada como integrante deste PDF: aqui Geografia termina em *Poema*, p. 91. A leitura da atenção ao exterior convive com intimismo, perda e memória; não são interpretações mutuamente excludentes.\n\n**Cobertura e limitações:** os sete guias correspondem às sete partes. A procedência eLivros continua registrada e não houve auditoria visual integral; a conferência literal não estabelece a autenticidade editorial da cópia. Esta edição compacta ainda não contém análise individual completa de cada poema ou toda a bibliografia exigida para um dossiê avançado.\n\n## Bibliografia comentada e leitura efetiva\n\n**ALMEIDA, Rosângela Fatima Silva de. A poesia de Sophia de Mello Breyner Andresen como re-nomeação das coisas. Dissertação (Mestrado), FFLCH-USP, 1992.**\n\n[Consultar fonte](https://www.teses.usp.br/teses/disponiveis/8/8150/tde-30012023-172005/). Leitura efetiva: p. 29–35 (PDF p. 30–36), seção 2.2 e subseções; leitura parcial.\n\n**Leitura documentada:** A palavra poética procura recompor a aliança entre sujeito e mundo, re-nomeando o real em vez de simplesmente copiá-lo.\n\n**Contribuição:** Fundamenta nomeação como gesto criador e exigência de atenção; contrapõe comunhão a ruptura.\n\n**Limites:** Estuda vários livros, não apenas Geografia. OCR da digitalização contém falhas; paráfrases foram limitadas aos trechos legíveis, sem transpor paginação do estudo para o PDF da obra.\n\n**AZEVEDO, Luiz Carlos de Moura. O quarto, figuração do intimismo na poesia de Sophia de Mello Breyner Andresen. Dissertação (Mestrado em Literatura Portuguesa), FFLCH-USP, 2007.**\n\n[Consultar fonte](https://www.teses.usp.br/teses/disponiveis/8/8150/tde-07022008-112137/). Leitura efetiva: p. 9–10, 18–21 e 147–148 (também PDF p. 9–10, 18–21 e 147–148); leitura parcial.\n\n**Leitura documentada:** O quarto e a casa figuram operações de memória, introspecção e proteção, mas também aprisionamento e angústia.\n\n**Contribuição:** Analisa Manuel Bandeira, No quarto e Ingrina; corrige a falsa exclusão do intimismo por uma poética atenta ao exterior.\n\n**Limites:** Recorte temático de diversos livros. A sugestão de encarceramento em No quarto é hipótese interpretativa, não evento biográfico comprovado. O contexto de resistência a Salazar é retomado na introdução por meio de Carlos Reis, não de documento histórico primário consultado.\n\n**FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.**\n\n[Consultar fonte](https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/). Leitura efetiva: Corpo da notícia e listas anuais; conferência da lista de 2027.\n\n**Leitura documentada:** A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.\n\n**Contribuição:** Confirma a exigência oficial e distingue as listas dos diferentes anos.\n\n**Limites:** A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões.\n\n**FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.**\n\n[Consultar fonte](https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf). Leitura efetiva: PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.\n\n**Leitura documentada:** O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.\n\n**Contribuição:** Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.\n\n**Limites:** Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral.\n\n**Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.**\n\n[Consultar fonte](https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf). Leitura efetiva: PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.\n\n**Leitura documentada:** O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.\n\n**Contribuição:** Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.\n\n**Limites:** Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral.\n\n**Alcance desta publicação.** Primeira edição de estudo: texto primário, guias, passagens e síntese autoral revistos, com os recortes críticos acima. Não certifica a leitura integral dos estudos consultados parcialmente nem o aprofundamento integral da habilidade avançada. As unidades e agrupamentos seguem a edição e os limites declarados no percurso. A pesquisa não substitui a leitura da obra. As limitações do arquivo fornecido e da procedência permanecem válidas.",
+      "reviewedAt": "2026-10-07T04:56:44Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-geografia"
     }
   ],
   "evidence": [
@@ -192,7 +294,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-mundo-nomeado",
@@ -207,7 +309,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-procelaria",
@@ -222,7 +324,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-cidade-dos-outros",
@@ -237,7 +339,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-esta-gente",
@@ -252,7 +354,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-lorca",
@@ -267,14 +369,14 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-escuto",
       "unitId": "parte-3",
       "location": "“Escuto”, parte III, p. 41",
       "quote": "Apenas sei que caminho como quem É olhado amado e conhecido E por isso em cada gesto ponho Solenidade e risco",
-      "context": "A poeta escuta sem saber se ouve silêncio ou deus.",
+      "context": "A voz lírica escuta sem decidir se ouve silêncio ou deus.",
       "formalDevice": "Comparação e conclusão ética ('por isso').",
       "effect": "A dúvida metafísica se resolve numa conduta de atenção.",
       "wholeRelation": "Antecipa o 'Poema' final, em que Deus é procurado no mundo.",
@@ -282,7 +384,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-amor-morto",
@@ -297,7 +399,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-ausencia",
@@ -305,21 +407,21 @@
       "location": "“O vazio desenhava desde sempre”, parte IV, p. 52",
       "quote": "Todas as coisas serviram para nos ensinar A ardente perfeição da tua ausência",
       "context": "Poema breve sobre o rosto ausente.",
-      "formalDevice": "Oxímoro ('ardente perfeição da ausência').",
+      "formalDevice": "Paradoxo e intensidade atribuída à ausência: o ardor qualifica aquilo que falta, tornando-o uma presença sensível.",
       "effect": "A falta ganha forma e intensidade.",
       "wholeRelation": "Diálogo com 'Um poeta clássico', que 'fará da ausência uma parte do seu jogo'.",
       "examPotential": [
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-epidauro",
       "unitId": "parte-5",
       "location": "“Epidauro”, parte V, p. 72",
       "quote": "Eis o país do exterior onde cada coisa é: trazida à luz trazida à liberdade da luz trazida ao espanto da luz",
-      "context": "Na Grécia, a poeta encontra o 'país do exterior'.",
+      "context": "Na paisagem grega, a voz lírica confronta a violência do Minotauro e projeta libertação no exterior luminoso de Epidauro.",
       "formalDevice": "Gradação e repetição de 'trazida à luz'.",
       "effect": "A Grécia é o lugar onde as coisas se mostram por inteiro.",
       "wholeRelation": "Opõe a luz grega ao labirinto do Minotauro, imagem do que devora a vida.",
@@ -327,7 +429,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-crepusculo",
@@ -342,7 +444,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-descobrimento",
@@ -357,7 +459,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-brasilia",
@@ -372,7 +474,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-portugues-do-brasil",
@@ -387,7 +489,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-rio-sagrado",
@@ -402,7 +504,7 @@
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
     },
     {
       "id": "ev-biografia",
@@ -411,13 +513,80 @@
       "quote": "A terra o sol o vento o mar São minha biografia e são meu rosto",
       "context": "Poema final do livro.",
       "formalDevice": "Enumeração de elementos naturais como identidade.",
-      "effect": "A identidade da poeta é o mundo exterior.",
+      "effect": "O sujeito lírico constrói sua identidade por relações com o mundo; os elementos enumerados formam uma biografia poética, sem identificação literal e automática com a autora empírica.",
       "wholeRelation": "Síntese da poética: atenção 'voltada para fora'.",
       "examPotential": [
         "FUVEST"
       ],
       "evidenceLayer": "textual_evidence",
-      "editorialStatus": "needs_review"
+      "editorialStatus": "published"
+    }
+  ],
+  "sources": [
+    {
+      "id": "geografia-almeida-1992",
+      "citation": "ALMEIDA, Rosângela Fatima Silva de. A poesia de Sophia de Mello Breyner Andresen como re-nomeação das coisas. Dissertação (Mestrado), FFLCH-USP, 1992.",
+      "type": "thesis",
+      "institution": "Universidade de São Paulo",
+      "year": 1992,
+      "url": "https://www.teses.usp.br/teses/disponiveis/8/8150/tde-30012023-172005/",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 29–35 (PDF p. 30–36), seção 2.2 e subseções; leitura parcial.",
+      "centralThesis": "A palavra poética procura recompor a aliança entre sujeito e mundo, re-nomeando o real em vez de simplesmente copiá-lo.",
+      "contribution": "Fundamenta nomeação como gesto criador e exigência de atenção; contrapõe comunhão a ruptura.",
+      "limitations": "Estuda vários livros, não apenas Geografia. OCR da digitalização contém falhas; paráfrases foram limitadas aos trechos legíveis, sem transpor paginação do estudo para o PDF da obra."
+    },
+    {
+      "id": "geografia-azevedo-2007",
+      "citation": "AZEVEDO, Luiz Carlos de Moura. O quarto, figuração do intimismo na poesia de Sophia de Mello Breyner Andresen. Dissertação (Mestrado em Literatura Portuguesa), FFLCH-USP, 2007.",
+      "type": "thesis",
+      "institution": "Universidade de São Paulo",
+      "year": 2007,
+      "url": "https://www.teses.usp.br/teses/disponiveis/8/8150/tde-07022008-112137/",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 9–10, 18–21 e 147–148 (também PDF p. 9–10, 18–21 e 147–148); leitura parcial.",
+      "centralThesis": "O quarto e a casa figuram operações de memória, introspecção e proteção, mas também aprisionamento e angústia.",
+      "contribution": "Analisa Manuel Bandeira, No quarto e Ingrina; corrige a falsa exclusão do intimismo por uma poética atenta ao exterior.",
+      "limitations": "Recorte temático de diversos livros. A sugestão de encarceramento em No quarto é hipótese interpretativa, não evento biográfico comprovado. O contexto de resistência a Salazar é retomado na introdução por meio de Carlos Reis, não de documento histórico primário consultado."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-lista-2027",
+      "citation": "FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.",
+      "institution": "FUVEST / USP",
+      "year": 2023,
+      "url": "https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/",
+      "pagesRead": "Corpo da notícia e listas anuais; conferência da lista de 2027.",
+      "centralThesis": "A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.",
+      "contribution": "Confirma a exigência oficial e distingue as listas dos diferentes anos.",
+      "limitations": "A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-programa-2027",
+      "citation": "FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.",
+      "institution": "FUVEST / USP",
+      "year": 2026,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf",
+      "pagesRead": "PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.",
+      "centralThesis": "O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.",
+      "contribution": "Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.",
+      "limitations": "Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "comvest-programa-2027",
+      "citation": "Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.",
+      "institution": "Comvest / Unicamp",
+      "year": 2026,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "pagesRead": "PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.",
+      "centralThesis": "O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.",
+      "contribution": "Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.",
+      "limitations": "Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral."
     }
   ]
 }
