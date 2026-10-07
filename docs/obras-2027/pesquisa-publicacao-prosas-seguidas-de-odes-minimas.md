@@ -81,3 +81,13 @@ A primeira edição compacta pode usar a pesquisa acima com as correções; ela 
   }
 ]
 ```
+
+## Retomada para integração editorial — 07/10/2026
+
+A fonte primária paginada foi relida inteira nesta retomada; a p. 5 do Programa Comvest 2027 foi reconferida diretamente. A pesquisa crítica anterior foi preservada, com releitura dos trechos relevantes dos estudos salvos, sem converter releitura parcial em nova leitura integral. O patch privado registra valores antigos exatos, correções por campo, bibliografia e novos aprofundamentos; não altera estados editoriais, IDs ou JSONs públicos automaticamente.
+
+As imagens das p. 13 e 37 do arquivo enviado foram reinspecionadas: confirmou-se o hibridismo de Um retrato e a disposição vertical de paina; a escada geométrica reproduzida no artigo não deve ser afirmada como idêntica neste e-book. Foram preparados quatro registros de fonte e doze correções por campo. As fontes indiretas e as metas de aprofundamento ainda pendentes continuam explicitadas.
+
+## Decisão da primeira edição de estudo
+
+Os 33 textos têm percurso revisto. Três artigos integrais sustentam forma, escala e memória; duas páginas foram inspecionadas visualmente. A diagramação de 1992 não foi transplantada para o e-book e a sentença final da ode permanece incerta. Aprovados 8 módulos, 33 guias e 24 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.
