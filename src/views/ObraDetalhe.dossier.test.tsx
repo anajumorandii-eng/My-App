@@ -4,9 +4,23 @@ import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import martha from '../data/obras/dossies/memorias-de-martha.json';
 import brasCubas from '../data/obras/dossies/bras-cubas.json';
+import gonzaga from '../data/obras/dossies/gonzaga-de-sa.json';
 import { DOSSIER_SLUGS, loadWorkDossier, visibleDossier } from '../lib/workDossiers';
 import type { WorkDossier } from '../types/literaryWorks';
 import ObraDetalhe from './ObraDetalhe';
+
+vi.mock('../lib/workDossiers', async importOriginal => {
+  const actual = await importOriginal<typeof import('../lib/workDossiers')>();
+  return {
+    ...actual,
+    loadWorkDossier: async (slug: string) => {
+      if (slug === 'fixture-martha' || slug === 'fixture-gonzaga') {
+        return draftDossier(slug === 'fixture-martha' ? martha : gonzaga);
+      }
+      return actual.loadWorkDossier(slug);
+    },
+  };
+});
 
 vi.mock('../context/AuthContext', () => ({ useAuth: () => ({ user: null }) }));
 vi.mock('../lib/literaryCatalog', () => ({
@@ -17,6 +31,16 @@ vi.mock('../lib/literaryCatalog', () => ({
 }));
 vi.mock('../lib/literaryData', () => ({ getReadingProgress: async () => [], saveReadingProgress: async () => {} }));
 afterEach(cleanup);
+
+// A retenção editorial deve continuar testável quando as obras reais forem
+// publicadas; o caso pendente usa uma cópia explicitamente em revisão.
+function draftDossier(source: unknown): WorkDossier {
+  const dossier = structuredClone(source) as WorkDossier;
+  dossier.modules.forEach(module => { module.editorialStatus = 'needs_review'; });
+  dossier.units.forEach(unit => { unit.guide.editorialStatus = 'needs_review'; });
+  dossier.evidence.forEach(card => { card.editorialStatus = 'needs_review'; });
+  return dossier;
+}
 
 const STATUSES = ['draft', 'needs_review', 'published', 'rejected'];
 
@@ -79,11 +103,11 @@ describe('dossiês das obras: integridade', () => {
   });
 
   it('a estudante só recebe o que foi publicado', () => {
-    const visible = visibleDossier(martha as WorkDossier, false);
+    const visible = visibleDossier(draftDossier(martha), false);
     expect(visible.modules).toEqual([]);
     expect(visible.units).toEqual([]);
     expect(visible.evidence).toEqual([]);
-    expect(visibleDossier(martha as WorkDossier, true).evidence.length).toBe(martha.evidence.length);
+    expect(visibleDossier(draftDossier(martha), true).evidence.length).toBe(martha.evidence.length);
   });
 
   it('fontes de módulos ainda em revisão não entram na bibliografia da estudante', () => {
@@ -134,14 +158,14 @@ describe('ObraDetalhe com dossiê', () => {
   });
 
   it('sem publicação, a estudante continua vendo o aviso de conteúdo pendente', async () => {
-    renderAt('/obras/memorias-de-martha');
+    renderAt('/obras/fixture-martha');
     fireEvent.click(await screen.findByRole('button', { name: 'Análise' }));
     expect(screen.getByText(/A análise integral ainda está em elaboração/)).toBeInTheDocument();
     expect(screen.queryByText('Modo revisão', { exact: false })).toBeNull();
   });
 
   it('em revisão, mostra análise, capítulos e passagens marcados como em revisão', async () => {
-    renderAt('/obras/memorias-de-martha?revisao=1');
+    renderAt('/obras/fixture-martha?revisao=1');
     expect(await screen.findByText(/Modo revisão/)).toBeInTheDocument();
     fireEvent.click(screen.getByRole('button', { name: 'Análise' }));
     expect(await screen.findByText('Narradora em dois tempos')).toBeInTheDocument();
@@ -155,7 +179,7 @@ describe('ObraDetalhe com dossiê', () => {
   // Gonzaga traz os oito tipos de módulo; antes, questões, revisão ativa,
   // bancas e crítica ficavam no JSON sem nenhuma aba que os mostrasse.
   it('em revisão, mostra bancas, questões, revisão ativa e crítica de um dossiê completo', async () => {
-    renderAt('/obras/gonzaga-de-sa?revisao=1');
+    renderAt('/obras/fixture-gonzaga?revisao=1');
     await screen.findByText(/Modo revisão/);
     fireEvent.click(screen.getByRole('button', { name: 'Análise' }));
     expect(await screen.findByText('Crítica e debate')).toBeInTheDocument();
@@ -171,7 +195,7 @@ describe('ObraDetalhe com dossiê', () => {
   // Sem modo revisão, nenhum módulo em needs_review chega à tela: a aba
   // precisa mostrar o aviso de pendência, não ficar vazia.
   it('sem módulo publicado de questões, mostra o aviso de pendência, não uma aba vazia', async () => {
-    renderAt('/obras/memorias-de-martha');
+    renderAt('/obras/fixture-martha');
     fireEvent.click(await screen.findByRole('button', { name: 'Questões' }));
     expect(screen.getByText(/O banco de questões autorais ainda está em elaboração/)).toBeInTheDocument();
   });

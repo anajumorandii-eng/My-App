@@ -4,123 +4,505 @@
   "edition": {
     "label": "Nísia Floresta, Opúsculo humanitário. Brasília: Senado Federal (Coleção Escritoras do Brasil), 2019",
     "pdfPageCount": 162,
-    "note": "O texto de 1853 está em domínio público. As páginas citadas são as do PDF dessa edição. O prefácio e as notas são da edição e não foram usados neste dossiê."
+    "note": "O texto de 1853 está em domínio público. As páginas citadas são as do PDF dessa edição. O prefácio editorial (p. 13–20) foi consultado na revisão como paratexto, sem tratar suas afirmações históricas como automaticamente comprovadas. Os sete percursos didáticos agrupam os 62 capítulos; não correspondem a sete partes autorais nem a 62 análises individuais completas."
   },
   "units": [
-    { "id": "historia", "order": 1, "type": "part", "title": "I–V — a mulher na história", "opening": "OPÚSCULO HUMANITÁRIO I Enquanto", "pdfStartPage": 21, "pdfEndPage": 31,
-      "guide": { "editorialStatus": "needs_review",
+    {
+      "id": "historia",
+      "order": 1,
+      "type": "part",
+      "title": "I–V — a mulher na história",
+      "opening": "OPÚSCULO HUMANITÁRIO I Enquanto",
+      "pdfStartPage": 21,
+      "pdfEndPage": 31,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O livro abre com uma apóstrofe aos “povos do Brasil” e ao governo que se diz liberal, e percorre a condição da mulher da Ásia antiga à Idade Média: Egito, Grécia, Roma, os bárbaros, as Cruzadas, a Inquisição. A tese aparece cedo: o lugar da mulher é o “barômetro” da civilização de um povo.",
-        "observe": ["A história serve de prova: onde a mulher foi mantida na ignorância, a civilização ficou incompleta.", "A autora recusa o “filosofismo dos socialistas” e põe o cristianismo como fundamento da dignidade feminina."] } },
-    { "id": "modelos", "order": 2, "type": "part", "title": "VI–XVI — Alemanha, Inglaterra, França e Estados Unidos", "opening": "VI Lancemos agora os olhos", "pdfStartPage": 31, "pdfEndPage": 54,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A história serve de prova: onde a mulher foi mantida na ignorância, a civilização ficou incompleta.",
+          "A autora recusa o “filosofismo dos socialistas” e põe o cristianismo como fundamento da dignidade feminina."
+        ]
+      }
+    },
+    {
+      "id": "modelos",
+      "order": 2,
+      "type": "part",
+      "title": "VI–XVI — Alemanha, Inglaterra, França e Estados Unidos",
+      "opening": "VI Lancemos agora os olhos",
+      "pdfStartPage": 31,
+      "pdfEndPage": 54,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "A autora compara a educação feminina nos países que considera modelos. Elogia a moral e a instrução das alemãs e das inglesas, o espírito das francesas e a independência das americanas, e critica Montesquieu e Rousseau por reduzirem a mulher ao agrado do homem. Fecha com Harriet Beecher Stowe e A cabana do Pai Tomás, livro que diz fazer corar os brasileiros pela escravidão.",
-        "observe": ["As comparações não são neutras: preparam o contraste com o Brasil, que vem a seguir.", "Repare na crítica direta a Rousseau: ela cita o trecho em que ele diz que a mulher é feita para agradar ao homem."] } },
-    { "id": "brasil-escola", "order": 3, "type": "part", "title": "XVII–XXXVIII — o Brasil: herança colonial, governo e escola", "opening": "XVII É tempo de voltarmos", "pdfStartPage": 54, "pdfEndPage": 93,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "As comparações não são neutras: preparam o contraste com o Brasil, que vem a seguir.",
+          "Repare na crítica direta a Rousseau: ela cita o trecho em que ele diz que a mulher é feita para agradar ao homem."
+        ]
+      }
+    },
+    {
+      "id": "brasil-escola",
+      "order": 3,
+      "type": "part",
+      "title": "XVII–XXXVIII — o Brasil: herança colonial, governo e escola",
+      "opening": "XVII É tempo de voltarmos",
+      "pdfStartPage": 54,
+      "pdfEndPage": 93,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Voltando ao Brasil, a autora acusa a herança portuguesa de desprezar a instrução feminina, descreve escolas de palmatória e mestras sem preparo e cita os números de 1852: 55.500 alunos nas aulas públicas, dos quais apenas 8.443 meninas. Lembra que, no Rio, só havia nove aulas de meninas, e cobra do parlamento uma reforma que nunca entra em pauta.",
-        "observe": ["Os dados oficiais tornam o argumento verificável: a desigualdade é medida, não só afirmada.", "Distingue instrução de educação: saber línguas e piano não é estar bem educada."] } },
-    { "id": "familia-escravidao", "order": 4, "type": "part", "title": "XXXIX–LIV — família, escravidão, costumes e classes", "opening": "XXXIX Falamos conscienciosamente", "pdfStartPage": 94, "pdfEndPage": 135,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "Os dados oficiais tornam o argumento verificável: a desigualdade é medida, não só afirmada.",
+          "Distingue instrução de educação: saber línguas e piano não é estar bem educada."
+        ]
+      }
+    },
+    {
+      "id": "familia-escravidao",
+      "order": 4,
+      "type": "part",
+      "title": "XXXIX–LIV — família, escravidão, costumes e classes",
+      "opening": "XXXIX Falamos conscienciosamente",
+      "pdfStartPage": 94,
+      "pdfEndPage": 137,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "A responsabilidade passa aos pais e, sobretudo, às mães. A autora prefere a educação feita em casa por mães instruídas, condena a ama de leite escravizada, o convívio das crianças com a violência contra escravizados, o espartilho que mata uma menina de seis anos e a educação de prendas para brilhar nos salões. Pede também trabalho e instrução para as mulheres pobres.",
-        "observe": ["A crítica à escravidão vem misturada a preconceito: as africanas aparecem como “desmoralizadas” e o leite delas como “impuro”. É preciso ler as duas coisas.", "O caso do espartilho funciona como exemplo extremo da educação voltada ao corpo e não ao espírito."] } },
-    { "id": "clero", "order": 5, "type": "part", "title": "LV–LVII — o clero", "opening": "LV Estamos certos", "pdfStartPage": 137, "pdfEndPage": 145,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "Em XLII (p. 102–103), a locução causal atribui a desmoralização ao cativeiro, e a autora denuncia o chicote e a venda da ama. O vocabulário de contágio e perigo moral continua hierarquizante; não confunda denúncia do sistema com igualdade plena de interlocução.",
+          "O caso do espartilho funciona como exemplo extremo da educação voltada ao corpo e não ao espírito.",
+          "LIV desenvolve a defesa do trabalho livre em p. 134–136 e termina com versos de Byron no início da p. 137, compartilhada com a abertura de LV."
+        ]
+      }
+    },
+    {
+      "id": "clero",
+      "order": 5,
+      "type": "part",
+      "title": "LV–LVII — o clero",
+      "opening": "LV Estamos certos",
+      "pdfStartPage": 137,
+      "pdfEndPage": 145,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "A autora aponta outra causa do atraso: um clero ignorante e de má conduta, que não ensina o catecismo e tolera irreverência nas igrejas. Compara com o clero francês e com o recolhimento que viu nos templos ingleses.",
-        "observe": ["A crítica é feita de dentro da fé: a religião é base da educação feminina, por isso o clero que falha é culpado.", "As citações de viajantes estrangeiros reforçam o argumento, mas a autora diz que dói ouvi-las de fora."] } },
-    { "id": "indigenas", "order": 6, "type": "part", "title": "LVIII–LXI — a mulher e os povos indígenas", "opening": "LVIII Indígenas do Brasil", "pdfStartPage": 146, "pdfEndPage": 159,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A crítica é feita de dentro da fé: a religião é base da educação feminina, por isso o clero que falha é culpado.",
+          "As citações de viajantes estrangeiros reforçam o argumento, mas a autora diz que dói ouvi-las de fora."
+        ]
+      }
+    },
+    {
+      "id": "indigenas",
+      "order": 6,
+      "type": "part",
+      "title": "LVIII–LXI — a mulher e os povos indígenas",
+      "opening": "LVIII Indígenas do Brasil",
+      "pdfStartPage": 146,
+      "pdfEndPage": 159,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "A autora denuncia a violência contra os povos indígenas — escravização, extermínio, roubo de mulheres e filhos — e exalta a mulher indígena como mãe, esposa, amante e guerreira, citando Paraguaçu, Moema e a esposa de Camarão. Cita versos do próprio poema “A lágrima de um Caeté” e o relato de Teófilo Ottoni sobre o Mucuri.",
-        "observe": ["A defesa é sincera e dura, mas ainda idealizante: a indígena é elogiada sobretudo como modelo de virtudes domésticas.", "Compare com a forma como a autora trata as africanas no bloco anterior: as hierarquias raciais da época aparecem no próprio texto."] } },
-    { "id": "conclusao", "order": 7, "type": "part", "title": "LXII — conclusão", "opening": "LXII Por mais rigorosas", "pdfStartPage": 159, "pdfEndPage": 162,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A defesa é sincera e dura, mas ainda idealizante: a indígena é elogiada sobretudo como modelo de virtudes domésticas.",
+          "Compare com a forma como a autora trata as africanas no bloco anterior: as hierarquias raciais da época aparecem no próprio texto."
+        ]
+      }
+    },
+    {
+      "id": "conclusao",
+      "order": 7,
+      "type": "part",
+      "title": "LXII — conclusão",
+      "opening": "LXII Por mais rigorosas",
+      "pdfStartPage": 159,
+      "pdfEndPage": 162,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Depois de lembrar que a mulher já influencia os homens e o destino dos povos, a autora conclui que é ela quem mais precisa de boa educação. Pede aos pais livros de moral e de história em vez de romances, e encerra com nova apóstrofe: “Educai para isto a mulher, e com ela marchai avante na imensa via do progresso”.",
-        "observe": ["O final retoma a abertura (“Pais, governo, povos do Brasil!”): o livro fecha o círculo do apelo público.", "O argumento final é estratégico: educar a mulher interessa à nação, não só a ela."] } }
+        "observe": [
+          "O final retoma a abertura (“Pais, governo, povos do Brasil!”): o livro fecha o círculo do apelo público.",
+          "O argumento final é estratégico: educar a mulher interessa à nação, não só a ela."
+        ]
+      }
+    }
   ],
   "modules": [
-    { "id": "comece-aqui", "moduleType": "comece_aqui", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Opúsculo humanitário** é um ensaio de Nísia Floresta (Dionísia Gonçalves Pinto, 1810-1885), publicado em 1853, em 62 capítulos curtos. É uma defesa da educação das mulheres brasileiras, escrita por uma educadora que dirigia colégio para meninas no Rio de Janeiro.\n\n**Por que importa para a Fuvest.** Não é ficção: é um texto argumentativo do século XIX. A banca pode cobrar a tese, as estratégias de convencimento (história, comparação entre países, estatística, apóstrofe) e, sobretudo, os limites do argumento — a autora critica a sociedade patriarcal e a escravidão, mas fala a partir da moral cristã, da elite letrada e dos preconceitos raciais da época.\n\n**Como ler.** Acompanhe a sequência do raciocínio: a história mostra que a condição feminina mede a civilização; os países modernos servem de modelo; o Brasil aparece atrasado por herança colonial, descaso do governo, má educação doméstica, escravidão e clero. Anote a quem a autora se dirige em cada parte — governo, pais, mães — porque o livro é, antes de tudo, um apelo." },
-    { "id": "analise-integral", "moduleType": "analise_integral", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-povos-do-brasil", "ev-barometro", "ev-inteligencia-sem-sexo", "ev-ignorante", "ev-estatistica", "ev-criada", "ev-boa-educacao", "ev-espartilho", "ev-chicote", "ev-aborigenes", "ev-boneca", "ev-marchai"], "sourceRefs": [],
-      "markdown": "## Tese e estratégia\n\nA tese é simples e repetida: a educação da mulher é o principal sinal da civilização de um povo. O texto abre com uma apóstrofe — “Povos do Brasil, que vos dizeis civilizados! Governo, que vos dizeis liberal!” (cap. I, p. 21) — e fecha com outra, mandando educar a mulher para marchar “na imensa via do progresso” (cap. LXII, p. 162). Entre as duas, a autora usa a história (o lugar da mulher como “barômetro” da civilização, cap. V, p. 28), a comparação com Alemanha, Inglaterra, França e Estados Unidos, e a estatística oficial de 1852, que mostra apenas 8.443 meninas entre 55.500 alunos das aulas públicas (cap. XXXVI, p. 88).\n\n## Contra a mulher feita para agradar\n\nO adversário teórico é a ideia de que a mulher existe para agradar ao homem. A autora cita Montesquieu e Rousseau para combatê-los e afirma que “a inteligência, que não tem sexo”, pode ser igualmente superior na mulher (cap. XXVII, p. 71). A frase de um presidente da província de Minas — ensinar às meninas só o que convém a quem será “criada de si e de seu marido” (p. 88) — resume o que ela quer derrubar. No fim, pede que as filhas aprendam que não foram criadas para ser “a boneca dos salões” (cap. LXII, p. 160).\n\n## Educação, governo e liberdade\n\nO argumento tem dimensão política: “Quanto mais ignorante é um povo, tanto mais fácil é a um governo absoluto exercer sobre ele o seu ilimitado poder” (cap. XXVI, p. 68). Educar a mulher é, portanto, parte do projeto de uma nação livre. Mas o texto não pede direitos políticos: a autora diz deixar a outros a defesa dos direitos do sexo e escolher outra tarefa, a da educação (cap. X, p. 41).\n\n## Instrução não é educação\n\nA autora distingue a instrução de vitrine — dança, piano, um pouco de francês, bordados para a sala — da educação que forma a razão e a moral (cap. XLVII, p. 115). O caso da menina de seis anos que morre apertada no espartilho, vítima da vaidade da mãe (cap. XLVI, p. 112), dramatiza essa crítica: uma educação voltada ao corpo pode literalmente matar.\n\n## Escravidão e povos indígenas: denúncia e limite\n\nO livro condena a escravidão e espera um futuro em que todo trabalho seja feito “por braços livres” (cap. LIV, p. 136); denuncia a escravização e o extermínio dos indígenas e afirma que as indígenas foram as primeiras vítimas dos “homens da civilização” (cap. LIX, p. 149). Ao mesmo tempo, descreve os escravizados como raça “desmoralizada pelo cativeiro e condenada à educação do chicote” (cap. XLII, p. 102) e trata as africanas como ameaça moral às crianças. Ler criticamente o Opúsculo é reconhecer as duas coisas: a coragem da denúncia e as hierarquias raciais e de classe que ela não questiona.\n\n## A moral cristã como fundamento\n\nTodo o projeto se apoia na religião: a educação feminina deve ser “religiosamente moral” e preparar boas filhas, esposas e mães. É uma defesa avançada para 1853 — a mulher pode e deve estudar, trabalhar e pensar — formulada dentro dos limites do papel doméstico que a própria autora valoriza." },
-    {"id": "critica-debate", "moduleType": "critica_debate", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-chicote", "ev-aborigenes"], "sourceRefs": [], "markdown": "**Camadas de evidência.** Os cartões trazem trechos localizados no PDF; guias e análise são síntese própria. O prefácio e as notas da edição não foram usados, e nenhuma fonte acadêmica foi lida.\n\n**Hipóteses em confronto.** O livro pode ser lido como feminismo pioneiro ou como reformismo moderado: pede educação, não direitos políticos. A denúncia da escravidão convive com a descrição dos escravizados como perigo moral — “desmoralizada pelo cativeiro e condenada à educação do chicote” (cap. XLII, p. 102). A defesa das indígenas (“as aborígenes do Brasil foram as primeiras vítimas imoladas à licença dos homens da civilização”, cap. LIX, p. 149) convive com sua idealização como modelo doméstico.\n\n**Limites.** Pesquisa pendente: estudos sobre a autora, a recepção do texto e a educação feminina no Império, citados com página quando lidos."},
-    {"id": "fuvest", "moduleType": "fuvest", "board": "FUVEST", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-barometro", "ev-estatistica", "ev-chicote"], "sourceRefs": [], "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nÉ ensaio, não ficção: a prova cobra tese, argumentos e estratégias. Na objetiva, identifique o tipo de argumento (histórico, comparativo, estatístico, de autoridade). Distrator comum: atribuir à autora a defesa do voto feminino, que o texto não faz.\n\nNa discursiva, explique a tese pelo “barômetro” (cap. V, p. 28) e pela estatística (“neste número apenas 8.443 alunas se compreendem!”, cap. XXXVI, p. 88), e mostre o limite do texto em relação à escravidão."},
-    {"id": "unicamp", "moduleType": "unicamp", "board": "UNICAMP", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [], "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nBoa comparação com *A vida não é útil*, de Krenak, da lista Unicamp: dois ensaios que acusam a ideia de “civilização” — um em nome da educação da mulher, outro em nome dos povos que a civilização exclui."},
-    {"id": "questoes", "moduleType": "questoes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-povos-do-brasil", "ev-inteligencia-sem-sexo", "ev-ignorante", "ev-criada", "ev-boneca", "ev-espartilho", "ev-chicote"], "sourceRefs": [], "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “Povos do Brasil, que vos dizeis civilizados! Governo, que vos dizeis liberal!” (cap. I, p. 21), a apóstrofe:\nA) elogia o governo imperial.\nB) acusa a contradição entre o discurso civilizado e liberal e a prática.\nC) dirige-se apenas às mulheres.\nD) pede o fim da monarquia.\nE) cita um autor estrangeiro.\n\n**2. FUVEST, objetiva, difícil.** A frase “E a inteligência, que não tem sexo, pode ser igualmente superior na mulher” (cap. XXVII, p. 71) serve para:\nA) negar diferenças físicas entre os sexos.\nB) separar força física de capacidade intelectual e desmontar o argumento biológico.\nC) defender o voto feminino.\nD) criticar as mulheres ignorantes.\nE) elogiar Rousseau.\n\n**3. FUVEST, discursiva, difícil.** a) Explique o argumento de que manter a mulher ignorante favorece o governo absoluto (cap. XXVI, p. 68). b) Relacione-o à frase da autoridade mineira sobre a mulher “criada de si e de seu marido” (cap. XXXVI, p. 88).\n\n**4. Discursiva, muito difícil.** Compare “a mulher não foi criada para ser a boneca dos salões” (cap. LXII, p. 160) e o caso do espartilho (cap. XLVI, p. 112). Que distinção entre instrução e educação o livro constrói?\n\n**5. Comparação, muito difícil.** Discuta o alcance e o limite da denúncia da escravidão no livro, a partir do trecho do cap. XLII (p. 102)."},
-    {"id": "revisao-ativa", "moduleType": "revisao_ativa", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-estatistica", "ev-marchai"], "sourceRefs": [], "markdown": "Reconstrua sem consulta: as sete partes (história; modelos estrangeiros; Brasil e escola; família e escravidão; clero; indígenas; conclusão) e um argumento de cada.\n\n**Factual:** quantas alunas havia nas aulas públicas? Que autores a autora combate? O que pede na conclusão?\n\n**Formal:** onde estão as apóstrofes? Que tipos de argumento o livro usa?\n\n**Interpretativo:** o texto é emancipador ou reformista? Justifique com dois capítulos.\n\n**24 horas:** mapa. **7 dias:** um trecho novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos."},
-    { "id": "fontes", "moduleType": "fontes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Edição usada:** Nísia Floresta, *Opúsculo humanitário*. Brasília: Senado Federal, Coleção Escritoras do Brasil, 2019. As páginas citadas neste dossiê são as do PDF dessa edição.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica:** o prefácio e as notas da edição não foram usados. As análises são síntese fundamentada no próprio texto, e cada afirmação aponta o capítulo e a página que a sustentam. Fontes críticas só entram aqui depois de lidas, com a página consultada." }
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Opúsculo humanitário** é um ensaio de Nísia Floresta (Dionísia Gonçalves Pinto, 1810-1885), publicado em 1853, em 62 capítulos curtos. É uma defesa da educação das mulheres brasileiras, escrita por uma educadora que dirigia colégio para meninas no Rio de Janeiro.\n\n**Por que importa para a Fuvest.** Não é ficção: é um texto argumentativo do século XIX. A banca pode cobrar a tese, as estratégias de convencimento (história, comparação entre países, estatística, apóstrofe) e, sobretudo, os limites do argumento — a autora critica a sociedade patriarcal e a escravidão, mas fala a partir da moral cristã, da elite letrada e dos preconceitos raciais da época.\n\n**Como ler.** Acompanhe a sequência do raciocínio: a história mostra que a condição feminina mede a civilização; os países modernos servem de modelo; o Brasil aparece atrasado por herança colonial, descaso do governo, má educação doméstica, escravidão e clero. Anote a quem a autora se dirige em cada percurso — governo, pais, mães — porque o livro é, antes de tudo, um apelo. Os sete percursos de Leitura guiada são agrupamentos didáticos dos 62 capítulos curtos, não partes criadas pela autora. Esta primeira edição compacta orienta a leitura integral, mas ainda não oferece análise individual aprofundada de cada capítulo.",
+      "reviewedAt": "2026-10-07T04:56:16Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-opusculo-humanitario"
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-povos-do-brasil",
+        "ev-barometro",
+        "ev-inteligencia-sem-sexo",
+        "ev-ignorante",
+        "ev-estatistica",
+        "ev-criada",
+        "ev-boa-educacao",
+        "ev-espartilho",
+        "ev-chicote",
+        "ev-aborigenes",
+        "ev-boneca",
+        "ev-marchai"
+      ],
+      "sourceRefs": [
+        "opusculo-oliveira-2024"
+      ],
+      "markdown": "## Tese e estratégia\n\nA tese é simples e repetida: a educação da mulher é o principal sinal da civilização de um povo. O texto abre com uma apóstrofe — “Povos do Brasil, que vos dizeis civilizados! Governo, que vos dizeis liberal!” (cap. I, p. 21) — e fecha com outra, mandando educar a mulher para marchar “na imensa via do progresso” (cap. LXII, p. 162). Entre as duas, a autora usa a história (o lugar da mulher como “barômetro” da civilização, cap. V, p. 28), a comparação com Alemanha, Inglaterra, França e Estados Unidos, e a estatística oficial de 1852, que mostra apenas 8.443 meninas entre 55.500 alunos das aulas públicas (cap. XXXVI, p. 88).\n\n## Contra a mulher feita para agradar\n\nO adversário teórico é a ideia de que a mulher existe para agradar ao homem. A autora cita Montesquieu e Rousseau para combatê-los e afirma que “a inteligência, que não tem sexo”, pode ser igualmente superior na mulher (cap. XXVII, p. 71). A frase de um presidente da província de Minas — ensinar às meninas só o que convém a quem será “criada de si e de seu marido” (p. 88) — resume o que ela quer derrubar. No fim, pede que as filhas aprendam que não foram criadas para ser “a boneca dos salões” (cap. LXII, p. 160).\n\n## Educação, governo e liberdade\n\nO argumento tem dimensão política: “Quanto mais ignorante é um povo, tanto mais fácil é a um governo absoluto exercer sobre ele o seu ilimitado poder” (cap. XXVI, p. 68). Educar a mulher é, portanto, parte do projeto de uma nação livre. O programa explícito deste Opúsculo prioriza a educação e deixa a defesa dos direitos do sexo a outros autores (cap. X, p. 41). Essa delimitação não torna sua intervenção educacional apolítica: o próprio argumento associa conhecimento, poder e liberdade, sem formular aqui uma reivindicação explícita de sufrágio.\n\n## Instrução não é educação\n\nA autora distingue a instrução de vitrine — dança, piano, um pouco de francês, bordados para a sala — da educação que forma a razão e a moral (cap. XLVII, p. 115). O caso da menina de seis anos que morre apertada no espartilho, vítima da vaidade da mãe (cap. XLVI, p. 112), dramatiza essa crítica: uma educação voltada ao corpo pode literalmente matar.\n\n## Escravidão e povos indígenas: denúncia e limite\n\nO livro condena a escravidão e espera um futuro em que todo trabalho seja feito “por braços livres” (cap. LIV, p. 136); denuncia a escravização e o extermínio dos indígenas e afirma que as indígenas foram as primeiras vítimas dos “homens da civilização” (cap. LIX, p. 149). Ao mesmo tempo, descreve os escravizados como raça “desmoralizada pelo cativeiro e condenada à educação do chicote” (cap. XLII, p. 102) e trata as africanas como ameaça moral às crianças. Ler criticamente o Opúsculo é reconhecer as duas coisas: a coragem da denúncia e as hierarquias raciais e de classe que ela não questiona.\n\n## A moral cristã como fundamento\n\nTodo o projeto se apoia na religião: a educação feminina deve ser “religiosamente moral” e preparar boas filhas, esposas e mães. É uma defesa avançada para 1853 — a mulher pode e deve estudar, trabalhar e pensar — formulada dentro dos limites do papel doméstico que a própria autora valoriza.\n\n### Um ensaio que encena interlocutores\n\nO texto não expõe uma tese a um leitor indiferenciado. Governo, pais, mães e autoridades aparecem como destinatários cuja responsabilidade muda ao longo da argumentação. A apóstrofe inicial interroga a distância entre declarar-se civilizado e educar meninas; a conclusão (LXII, p. 159–162) retorna aos pais e ao governo, convertendo diagnóstico em dever de ação. Imperativos e perguntas retóricas não são mero ornamento: produzem uma interpelação pública e tornam a desigualdade um problema que o destinatário precisa responder.\n\n### Citar não equivale a obedecer\n\nNo capítulo X (p. 40–41), nomes de grande prestígio são expostos à crítica: Montesquieu e Rousseau não garantem a verdade de suas opiniões sobre a mulher. A autora contrapõe outra autoridade e delimita sua própria tarefa. A lista de intelectuais funciona simultaneamente como demonstração de erudição e reorganização do debate, permitindo a uma educadora entrar num espaço que a exclui. Oliveira (2024, p. 60–66) interpreta a referência estrangeira como recurso retórico, condicionado pelo público leitor. Nossa síntese acrescenta: é preciso observar se o nome citado é usado para endossar, contestar ou estabelecer um contraste; chamar tudo de argumento de autoridade perde esse funcionamento.\n\n### Uma denúncia com hierarquias\n\nXLII (p. 102–103) reúne o sofrimento produzido pelo chicote e a acusação aos senhores, incluindo a venda da ama depois de seus serviços. O problema moral é fabricado pela relação escravista, não explicado apenas por uma suposta natureza dos escravizados. Ao mesmo tempo, o vocabulário de influência perniciosa e contágio põe as escravizadas como presença da qual crianças deveriam ser afastadas. No LIV (p. 134–136), o futuro de braços livres integra um projeto de trabalho e civilização cristã. A tensão não se resolve pela escolha de um rótulo: o texto denuncia o cativeiro e reorganiza a hierarquia social sem conceder aos sujeitos escravizados a mesma posição de interlocução que reserva às famílias letradas.\n\n### Educação como estratégia política\n\nA conclusão justifica a educação da mulher também por sua influência sobre homens e destinos públicos. O argumento transforma um papel doméstico aceito pelo leitor em fundamento para ampliar instrução e julgamento moral. Isso pode ser lido como limite do horizonte emancipador e como estratégia persuasiva eficaz naquele contexto. Nenhuma das duas hipóteses elimina a outra: pedir reforma educacional não equivale a reivindicar sufrágio, mas intervém na distribuição do conhecimento e na autoridade de quem o detém.",
+      "reviewedAt": "2026-10-07T04:56:16Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-opusculo-humanitario"
+    },
+    {
+      "id": "critica-debate",
+      "moduleType": "critica_debate",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-chicote",
+        "ev-aborigenes"
+      ],
+      "sourceRefs": [
+        "opusculo-oliveira-2024"
+      ],
+      "markdown": "**Leitura documentada.** Oliveira (2024, p. 53–66 e 113–117) lê o Opúsculo como produto literário e intervenção histórica: sua retórica considera um público letrado e procura participar das disputas sobre reformas educacionais. A pesquisadora distingue moderação e ausência de ação, observando a tensão entre a apologia doméstica e a entrada efetiva da educadora no debate público.\n\n**Duas hipóteses, sem falso consenso.** A leitura emancipadora encontra apoio na recusa da inferioridade intelectual e na reivindicação de estudo; a leitura reformista observa limites domésticos, religiosos e de classe. Nossa síntese mantém essa tensão, e não classifica a autora segundo uma definição contemporânea única de feminismo. A escolha programática pela educação deve ser analisada no texto específico, sem extrapolar para todo o pensamento ou toda a produção de Nísia.\n\n**Limites.** A dissertação foi consultada parcialmente; sua reconstrução de circulação e recepção não equivale a uma pesquisa própria nos jornais originais. O prefácio editorial foi lido como paratexto e contém dados a confirmar; não é consenso historiográfico. Esta publicação compacta ainda precisa de guias próprios para os 62 capítulos e ampliação bibliográfica para atender integralmente à habilidade.",
+      "reviewedAt": "2026-10-07T04:56:16Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-opusculo-humanitario"
+    },
+    {
+      "id": "fuvest",
+      "moduleType": "fuvest",
+      "board": "FUVEST",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-barometro",
+        "ev-estatistica",
+        "ev-chicote"
+      ],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027"
+      ],
+      "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nÉ ensaio, não ficção: a prova cobra tese, argumentos e estratégias. Na objetiva, identifique o tipo de argumento (histórico, comparativo, estatístico, de autoridade). Distrator comum: atribuir à autora a defesa do voto feminino, que o texto não faz.\n\nNa discursiva, explique a tese pelo “barômetro” (cap. V, p. 28) e pela estatística (“neste número apenas 8.443 alunas se compreendem!”, cap. XXXVI, p. 88), e mostre o limite do texto em relação à escravidão.\n\n**F.O.R.M.A., ferramenta didática autoral.** Na segunda fase: foco no verbo, recorte e quantidade; observação de uma passagem; recurso formal pertinente; mecanismo que produz o efeito; articulação ao conjunto ou à comparação pedida. Isso não é rubrica oficial de pontuação. Na primeira fase, teste cada alternativa contra a voz e as marcas do excerto, sem aceitar uma característica geral que não esteja nele.",
+      "reviewedAt": "2026-10-07T04:56:16Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-opusculo-humanitario"
+    },
+    {
+      "id": "unicamp",
+      "moduleType": "unicamp",
+      "board": "UNICAMP",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nBoa comparação com *A vida não é útil*, de Krenak, da lista Unicamp: dois ensaios que acusam a ideia de “civilização” — um em nome da educação da mulher, outro em nome dos povos que a civilização exclui.\n\n**F.O.N.T.E., ferramenta didática autoral.** Na segunda fase: fonte localizada; operação de cada subitem; núcleo formal; tensão interpretativa; explicação articulada. Responda os verbos separadamente e ligue o efeito à evidência, sem apenas recontar a trama. Na primeira fase, compare a alternativa ao texto e ao paratexto fornecidos. O protocolo não é espelho oficial nem previsão de incidência.",
+      "reviewedAt": "2026-10-07T04:56:16Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-opusculo-humanitario"
+    },
+    {
+      "id": "questoes",
+      "moduleType": "questoes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-povos-do-brasil",
+        "ev-inteligencia-sem-sexo",
+        "ev-ignorante",
+        "ev-criada",
+        "ev-boneca",
+        "ev-espartilho",
+        "ev-chicote"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “Povos do Brasil, que vos dizeis civilizados! Governo, que vos dizeis liberal!” (cap. I, p. 21), a apóstrofe:\n- A) elogia o governo imperial.\n- B) acusa a contradição entre o discurso civilizado e liberal e a prática.\n- C) dirige-se apenas às mulheres.\n- D) pede o fim da monarquia.\n- E) cita um autor estrangeiro.\n\n**2. FUVEST, objetiva, difícil.** A frase “E a inteligência, que não tem sexo, pode ser igualmente superior na mulher” (cap. XXVII, p. 71) serve para:\n- A) negar diferenças físicas entre os sexos.\n- B) separar força física de capacidade intelectual e desmontar o argumento biológico.\n- C) defender o voto feminino.\n- D) criticar as mulheres ignorantes.\n- E) elogiar Rousseau.\n\n**3. FUVEST, discursiva, difícil.** a) Explique o argumento de que manter a mulher ignorante favorece o governo absoluto (cap. XXVI, p. 68). b) Relacione-o à frase da autoridade mineira sobre a mulher “criada de si e de seu marido” (cap. XXXVI, p. 88).\n\n**4. Discursiva, muito difícil.** Compare “a mulher não foi criada para ser a boneca dos salões” (cap. LXII, p. 160) e o caso do espartilho (cap. XLVI, p. 112). Que distinção entre instrução e educação o livro constrói?\n\n**5. Comparação, muito difícil.** Discuta o alcance e o limite da denúncia da escravidão no livro, a partir do trecho do cap. XLII (p. 102).",
+      "reviewedAt": "2026-10-07T04:56:16Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-opusculo-humanitario"
+    },
+    {
+      "id": "revisao-ativa",
+      "moduleType": "revisao_ativa",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-estatistica",
+        "ev-marchai"
+      ],
+      "sourceRefs": [],
+      "markdown": "Reconstrua sem consulta: os sete percursos didáticos que agrupam 62 capítulos (história; modelos estrangeiros; Brasil e escola; família e escravidão; clero; indígenas; conclusão) e um argumento de cada.\n\n**Factual:** quantas alunas havia nas aulas públicas? Que autores a autora combate? O que pede na conclusão?\n\n**Formal:** onde estão as apóstrofes? Que tipos de argumento o livro usa?\n\n**Interpretativo:** o texto é emancipador ou reformista? Justifique com dois capítulos.\n\n**24 horas:** mapa. **7 dias:** um trecho novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos.",
+      "reviewedAt": "2026-10-07T04:56:16Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-opusculo-humanitario"
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "opusculo-oliveira-2024",
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Edição usada:** Nísia Floresta, *Opúsculo humanitário*. Brasília: Senado Federal, Coleção Escritoras do Brasil, 2019. As páginas citadas neste dossiê são as do PDF dessa edição.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Pesquisa crítica consultada:** Oliveira (2024), p. 53–66 e 113–117 da dissertação, lidas parcialmente. O estudo ajuda a analisar retórica, referências estrangeiras e alcance político da reforma educacional. As seções lidas não equivalem à dissertação inteira; a hipótese de contato de Nísia com manuais de retórica não foi convertida em fato. A bibliografia comentada registra a contribuição e o limite.\n\n**Paratexto e evidência:** o prefácio editorial (PDF p. 13–20) foi consultado na revisão; seus dados biográficos controvertidos não foram adotados automaticamente. As notas editoriais não são a voz de Nísia. Cartões contêm evidência primária; guias e análise distinguem leitura documentada e síntese interpretativa própria.\n\n**Cobertura e limite:** sete guias agrupam os 62 capítulos. LIV termina no início da p. 137, compartilhada com LV. Esta edição compacta não certifica a análise avançada de cada capítulo nem o cumprimento de toda a meta bibliográfica da habilidade.\n\n## Bibliografia comentada e leitura efetiva\n\n**OLIVEIRA, Larissa Karoline Campos. Uma verdade universalmente incontestável: literatura e educação no Opúsculo Humanitário (1853-1854) de Nísia Floresta. Dissertação (Mestrado em História Social), FFLCH-USP, 2024.**\n\n[Consultar fonte](https://www.teses.usp.br/teses/disponiveis/8/8138/tde-27112024-120826/). Leitura efetiva: p. 53–66 e 113–117 da dissertação (PDF p. 54–67 e 114–118); leitura parcial, não integral.\n\n**Leitura documentada:** A retórica e a recepção de escritoras estrangeiras permitem ler o Opúsculo como intervenção intelectual nas disputas sobre educação e gênero, condicionada pelo público letrado oitocentista.\n\n**Contribuição:** Mostra a função das autoridades estrangeiras e a estratégia de moderação; impede reduzir educação doméstica a ausência de ação política.\n\n**Limites:** Pesquisa histórica; seções lidas não equivalem à dissertação inteira. A hipótese de acesso da autora a manuais de retórica permanece hipótese, não fato comprovado.\n\n**FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.**\n\n[Consultar fonte](https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/). Leitura efetiva: Corpo da notícia e listas anuais; conferência da lista de 2027.\n\n**Leitura documentada:** A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.\n\n**Contribuição:** Confirma a exigência oficial e distingue as listas dos diferentes anos.\n\n**Limites:** A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões.\n\n**FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.**\n\n[Consultar fonte](https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf). Leitura efetiva: PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.\n\n**Leitura documentada:** O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.\n\n**Contribuição:** Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.\n\n**Limites:** Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral.\n\n**Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.**\n\n[Consultar fonte](https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf). Leitura efetiva: PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.\n\n**Leitura documentada:** O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.\n\n**Contribuição:** Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.\n\n**Limites:** Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral.\n\n**Alcance desta publicação.** Primeira edição de estudo: texto primário, guias, passagens e síntese autoral revistos, com os recortes críticos acima. Não certifica a leitura integral dos estudos consultados parcialmente nem o aprofundamento integral da habilidade avançada. As unidades e agrupamentos seguem a edição e os limites declarados no percurso. A pesquisa não substitui a leitura da obra. As limitações do arquivo fornecido e da procedência permanecem válidas.",
+      "reviewedAt": "2026-10-07T04:56:16Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-opusculo-humanitario"
+    }
   ],
   "evidence": [
-    { "id": "ev-povos-do-brasil", "unitId": "historia", "location": "cap. I, p. 21", "quote": "Povos do Brasil, que vos dizeis civilizados! Governo, que vos dizeis liberal!",
+    {
+      "id": "ev-povos-do-brasil",
+      "unitId": "historia",
+      "location": "cap. I, p. 21",
+      "quote": "Povos do Brasil, que vos dizeis civilizados! Governo, que vos dizeis liberal!",
       "context": "Abertura do livro, depois de lembrar que no mundo se fala em emancipação da mulher.",
       "formalDevice": "Apóstrofe e ironia: o interlocutor é chamado pelo que diz ser.",
       "effect": "Transforma o ensaio em apelo público e acusa a contradição entre o discurso liberal e a prática.",
       "wholeRelation": "A mesma apóstrofe volta no capítulo XVII e no fecho: é a moldura do livro.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-barometro", "unitId": "historia", "location": "cap. V, p. 28", "quote": "o lugar, que ela ocupa entre eles é o barômetro que indica os progressos de sua civilização",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-barometro",
+      "unitId": "historia",
+      "location": "cap. V, p. 28",
+      "quote": "o lugar, que ela ocupa entre eles é o barômetro que indica os progressos de sua civilização",
       "context": "Depois do percurso pela Antiguidade, a autora formula a tese geral.",
       "formalDevice": "Metáfora científica (barômetro) para uma tese moral e histórica.",
       "effect": "Dá à condição feminina o estatuto de medida objetiva do progresso de um povo.",
       "wholeRelation": "É a premissa que justifica a comparação entre países e o diagnóstico do Brasil.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-inteligencia-sem-sexo", "unitId": "brasil-escola", "location": "cap. XXVII, p. 71", "quote": "E a inteligência, que não tem sexo, pode ser igualmente superior na mulher",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-inteligencia-sem-sexo",
+      "unitId": "brasil-escola",
+      "location": "cap. XXVII, p. 71",
+      "quote": "E a inteligência, que não tem sexo, pode ser igualmente superior na mulher",
       "context": "Resposta aos que usam a fraqueza física como pretexto para afastar a mulher do estudo.",
       "formalDevice": "Refutação por contraexemplo (Voltaire, Racine, Pascal, de compleição delicada) seguida de máxima.",
       "effect": "Separa força física de capacidade intelectual e desmonta o argumento biológico.",
       "wholeRelation": "Sustenta toda a defesa da educação feminina contra Rousseau e Montesquieu.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-ignorante", "unitId": "brasil-escola", "location": "cap. XXVI, p. 68", "quote": "Quanto mais ignorante é um povo, tanto mais fácil é a um governo absoluto exercer sobre ele o seu ilimitado poder.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-ignorante",
+      "unitId": "brasil-escola",
+      "location": "cap. XXVI, p. 68",
+      "quote": "Quanto mais ignorante é um povo, tanto mais fácil é a um governo absoluto exercer sobre ele o seu ilimitado poder.",
       "context": "A autora explica por que muitos homens se opõem à instrução da mulher.",
       "formalDevice": "Máxima comparativa (quanto mais… tanto mais…).",
       "effect": "Liga a educação feminina à liberdade política: manter a mulher ignorante é forma de dominação.",
       "wholeRelation": "Dá ao livro uma dimensão política, além da moral e doméstica.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-estatistica", "unitId": "brasil-escola", "location": "cap. XXXVI, p. 88", "quote": "neste número apenas 8.443 alunas se compreendem!",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-estatistica",
+      "unitId": "brasil-escola",
+      "location": "cap. XXXVI, p. 88",
+      "quote": "neste número apenas 8.443 alunas se compreendem!",
       "context": "Comentário ao quadro oficial da instrução de 1852, com 55.500 alunos nas aulas públicas.",
       "formalDevice": "Uso de estatística oficial com exclamação.",
-      "effect": "Torna a desigualdade verificável e difícil de contestar.",
+      "effect": "Apresenta a desigualdade como proporção mensurável e dá força à cobrança pública; o dossiê confirma a presença dos números no texto, sem realizar auditoria própria dos registros de 1852.",
       "wholeRelation": "Mostra a variedade de provas do ensaio: história, comparação e dados.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-criada", "unitId": "brasil-escola", "location": "cap. XXXVI, p. 88", "quote": "deve-se ensinar às meninas tudo quanto convém que saiba uma mulher, que tem de ser criada de si e de seu marido",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-criada",
+      "unitId": "brasil-escola",
+      "location": "cap. XXXVI, p. 88",
+      "quote": "deve-se ensinar às meninas tudo quanto convém que saiba uma mulher, que tem de ser criada de si e de seu marido",
       "context": "Frase atribuída a um presidente da província de Minas sobre as cadeiras de ensino primário.",
       "formalDevice": "Citação do adversário, seguida de ironia.",
       "effect": "Expõe, nas palavras de uma autoridade, o modelo de educação que o livro combate.",
       "wholeRelation": "Resume a visão que a autora quer derrubar: a mulher como serviçal da casa.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-boa-educacao", "unitId": "familia-escravidao", "location": "cap. XLVII, p. 115", "quote": "Certo, o que se chama por via de regra no Brasil dar boa educação a uma menina?",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-boa-educacao",
+      "unitId": "familia-escravidao",
+      "location": "cap. XLVII, p. 115",
+      "quote": "Certo, o que se chama por via de regra no Brasil dar boa educação a uma menina?",
       "context": "Antes de enumerar dança, piano, francês e bordados como a educação de moda.",
       "formalDevice": "Pergunta retórica seguida de enumeração irônica.",
       "effect": "Desmascara a instrução de vitrine, voltada a brilhar nos salões.",
       "wholeRelation": "Concretiza a distinção entre instrução e educação, central no livro.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-espartilho", "unitId": "familia-escravidao", "location": "cap. XLVI, p. 112", "quote": "tinha expirado, vítima da vaidade de sua mãe!",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-espartilho",
+      "unitId": "familia-escravidao",
+      "location": "cap. XLVI, p. 112",
+      "quote": "tinha expirado, vítima da vaidade de sua mãe!",
       "context": "Relato da menina de seis anos que morre na escola, apertada no espartilho.",
       "formalDevice": "Narrativa exemplar (exemplum) com desfecho trágico.",
       "effect": "Dramatiza a crítica à educação voltada ao corpo e à aparência.",
       "wholeRelation": "Mostra a responsabilidade das mães, tema do bloco sobre família.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-chicote", "unitId": "familia-escravidao", "location": "cap. XLII, p. 102", "quote": "desmoralizada pelo cativeiro e condenada à educação do chicote",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-chicote",
+      "unitId": "familia-escravidao",
+      "location": "cap. XLII, p. 102",
+      "quote": "desmoralizada pelo cativeiro e condenada à educação do chicote",
       "context": "A autora descreve o convívio das meninas com os escravizados que servem a casa.",
       "formalDevice": "Adjetivação que atribui ao cativeiro a degradação moral do escravizado.",
       "effect": "Denuncia a violência da escravidão, mas trata os escravizados como perigo moral para as crianças brancas.",
       "wholeRelation": "Exemplo do limite do texto: a crítica à escravidão convive com preconceito racial.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-aborigenes", "unitId": "indigenas", "location": "cap. LIX, p. 149", "quote": "as aborígenes do Brasil foram as primeiras vítimas imoladas à licença dos homens da civilização",
-      "context": "Início da parte dedicada à mulher indígena.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-aborigenes",
+      "unitId": "indigenas",
+      "location": "cap. LIX, p. 149",
+      "quote": "as aborígenes do Brasil foram as primeiras vítimas imoladas à licença dos homens da civilização",
+      "context": "Capítulo LIX, no percurso dedicado à mulher e aos povos indígenas, iniciado em LVIII.",
       "formalDevice": "Inversão irônica: os “homens da civilização” são os agressores.",
       "effect": "Desmonta a oposição entre civilizado e selvagem que justificava a violência colonial.",
       "wholeRelation": "Amplia a defesa da mulher para além das brasileiras brancas da elite.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-boneca", "unitId": "conclusao", "location": "cap. LXII, p. 160", "quote": "a mulher não foi criada para ser a boneca dos salões",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-boneca",
+      "unitId": "conclusao",
+      "location": "cap. LXII, p. 160",
+      "quote": "a mulher não foi criada para ser a boneca dos salões",
       "context": "Conselho final aos pais sobre a educação das filhas.",
       "formalDevice": "Metáfora negativa (boneca) em fórmula de máxima.",
       "effect": "Sintetiza a recusa da mulher como ornamento.",
       "wholeRelation": "Retoma a crítica à instrução de vitrine e prepara o apelo final.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-marchai", "unitId": "conclusao", "location": "cap. LXII, p. 162", "quote": "Educai para isto a mulher, e com ela marchai avante na imensa via do progresso",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-marchai",
+      "unitId": "conclusao",
+      "location": "cap. LXII, p. 162",
+      "quote": "Educai para isto a mulher, e com ela marchai avante na imensa via do progresso",
       "context": "Última frase do livro, dirigida ao país.",
       "formalDevice": "Imperativo e metáfora do caminho.",
       "effect": "Encerra com um programa: a educação da mulher como condição do progresso nacional.",
       "wholeRelation": "Fecha o círculo aberto pela apóstrofe do capítulo I.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" }
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    }
+  ],
+  "sources": [
+    {
+      "id": "opusculo-oliveira-2024",
+      "citation": "OLIVEIRA, Larissa Karoline Campos. “Uma verdade universalmente incontestável”: literatura e educação no “Opúsculo Humanitário” (1853-1854) de Nísia Floresta. Dissertação (Mestrado em História Social), FFLCH-USP, 2024.",
+      "type": "thesis",
+      "institution": "Universidade de São Paulo",
+      "year": 2024,
+      "url": "https://www.teses.usp.br/teses/disponiveis/8/8138/tde-27112024-120826/",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 53–66 e 113–117 da dissertação (PDF p. 54–67 e 114–118); leitura parcial, não integral.",
+      "centralThesis": "A retórica e a recepção de escritoras estrangeiras permitem ler o Opúsculo como intervenção intelectual nas disputas sobre educação e gênero, condicionada pelo público letrado oitocentista.",
+      "contribution": "Mostra a função das autoridades estrangeiras e a estratégia de moderação; impede reduzir educação doméstica a ausência de ação política.",
+      "limitations": "Pesquisa histórica; seções lidas não equivalem à dissertação inteira. A hipótese de acesso da autora a manuais de retórica permanece hipótese, não fato comprovado."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-lista-2027",
+      "citation": "FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.",
+      "institution": "FUVEST / USP",
+      "year": 2023,
+      "url": "https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/",
+      "pagesRead": "Corpo da notícia e listas anuais; conferência da lista de 2027.",
+      "centralThesis": "A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.",
+      "contribution": "Confirma a exigência oficial e distingue as listas dos diferentes anos.",
+      "limitations": "A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-programa-2027",
+      "citation": "FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.",
+      "institution": "FUVEST / USP",
+      "year": 2026,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf",
+      "pagesRead": "PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.",
+      "centralThesis": "O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.",
+      "contribution": "Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.",
+      "limitations": "Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "comvest-programa-2027",
+      "citation": "Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.",
+      "institution": "Comvest / Unicamp",
+      "year": 2026,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "pagesRead": "PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.",
+      "centralThesis": "O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.",
+      "contribution": "Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.",
+      "limitations": "Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral."
+    }
   ]
 }

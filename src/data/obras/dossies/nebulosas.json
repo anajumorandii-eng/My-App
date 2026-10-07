@@ -4,93 +4,440 @@
   "edition": {
     "label": "Narcisa Amália, Nebulosas. São Paulo: Penguin-Companhia das Letras, 2024, e-book (org. Anna Faedrich)",
     "pdfPageCount": 194,
-    "note": "Os poemas estão em domínio público (1ª edição, Garnier, 1872). As páginas citadas são as do PDF dessa edição. A introdução, as notas e o glossário são da organizadora e da editora; não foram usados nem reproduzidos neste dossiê."
+    "note": "Os poemas estão em domínio público (1ª edição, Garnier, 1872). As páginas citadas são as do PDF desta edição. A introdução de Anna Faedrich foi consultada parcialmente na revisão como paratexto crítico; notas e glossário não receberam leitura sistemática. Há três partes editoriais e quatro percursos didáticos: dois percursos subdividem a Segunda parte. Não são 44 análises individuais completas."
   },
   "units": [
-    { "id": "abertura", "order": 1, "type": "poem", "title": "“Nebulosas” — o poema de abertura", "opening": "Nebulosas", "pdfStartPage": 39, "pdfEndPage": 41,
-      "guide": { "editorialStatus": "needs_review",
+    {
+      "id": "abertura",
+      "order": 1,
+      "type": "poem",
+      "title": "“Nebulosas” — o poema de abertura",
+      "opening": "Nebulosas",
+      "pdfStartPage": 39,
+      "pdfEndPage": 41,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O poema que dá nome ao livro compara as nebulosas do céu à origem da própria poesia. A voz lírica conta que, num momento de desalento, viu nelas um consolo, subiu às “azuis esferas” e voltou à terra com os versos que formam o livro.",
-        "observe": ["É um poema de abertura e de programa: explica de onde vêm os “tristes versos” e por que eles fogem das “pompas” do mundo.", "A imagem das nebulosas, luz difusa que a ciência explica e a multidão não vê, define o lugar que a poeta reivindica para si."] } },
-    { "id": "segunda-intima", "order": 2, "type": "part", "title": "Segunda parte — dor, saudade e vocação", "opening": "Segunda parte", "pdfStartPage": 42, "pdfEndPage": 72,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "É um poema de abertura e de programa: explica de onde vêm os “tristes versos” e por que eles fogem das “pompas” do mundo.",
+          "A imagem das nebulosas, luz difusa que a ciência explica e a multidão não vê, define o lugar que a poeta reivindica para si."
+        ]
+      }
+    },
+    {
+      "id": "segunda-intima",
+      "order": 2,
+      "type": "part",
+      "title": "Segunda parte — dor, saudade e vocação",
+      "opening": "Segunda parte",
+      "pdfStartPage": 42,
+      "pdfEndPage": 72,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "De “Voto” a “No ermo”, os poemas tratam da infância perdida, do amor frustrado, da tristeza e da morte desejada, à maneira da segunda geração romântica. No meio desse bloco, “Invocação” muda o tom: a poeta quer cantar a pátria e esbarra no fato de ser mulher.",
-        "observe": ["Repare como cada poema abre com epígrafe de autor consagrado (Álvares de Azevedo, Fagundes Varela, Gonçalves Dias): a poeta se coloca nessa linhagem.", "“Consolação” é uma resposta de outro poeta, Ezequiel Freire, ao poema “Agonia”: o livro inclui um diálogo, não só a voz da autora."] } },
-    { "id": "segunda-patria", "order": 3, "type": "part", "title": "Segunda parte — pátria, natureza e liberdade", "opening": "[18] O Itatiaia", "pdfStartPage": 73, "pdfEndPage": 106,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "Muitos poemas abrem com epígrafe de autor consagrado: Álvares de Azevedo em Voto, Fagundes Varela em Confidência e Gonçalves Dias em Aspiração. Isso constrói uma linhagem literária, mas não é regra de todos os poemas: Fragmentos (p. 62) não traz epígrafe.",
+          "“Consolação” é uma resposta de outro poeta, Ezequiel Freire, ao poema “Agonia”: o livro inclui um diálogo, não só a voz da autora."
+        ]
+      }
+    },
+    {
+      "id": "segunda-patria",
+      "order": 3,
+      "type": "part",
+      "title": "Segunda parte — pátria, natureza e liberdade",
+      "opening": "[18] O Itatiaia",
+      "pdfStartPage": 73,
+      "pdfEndPage": 106,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "De “O Itatiaia” a “Pesadelo”, entram a paisagem do Vale do Paraíba, as datas nacionais e a política. “Vinte e cinco de março” ataca a Constituição outorgada de 1824; “Sete de setembro” e “Miragem” dizem que a independência não acabou com a escravidão; “Pesadelo” percorre revoluções da história até pedir liberdade para o Brasil.",
-        "observe": ["A natureza grandiosa (o “brasílio Himalaia”) é usada como medida da liberdade que falta ao povo.", "A palavra “algema” e a imagem do pulso acorrentado ligam a crítica política à escravidão."] } },
-    { "id": "terceira", "order": 4, "type": "part", "title": "Terceira parte — homenagens, festas e escravidão", "opening": "Terceira parte", "pdfStartPage": 107, "pdfEndPage": 157,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A natureza grandiosa (o “brasílio Himalaia”) é usada como medida da liberdade que falta ao povo.",
+          "A palavra “algema” e a imagem do pulso acorrentado ligam a crítica política à escravidão."
+        ]
+      }
+    },
+    {
+      "id": "terceira",
+      "order": 4,
+      "type": "part",
+      "title": "Terceira parte — homenagens, festas e escravidão",
+      "opening": "Terceira parte",
+      "pdfStartPage": 107,
+      "pdfEndPage": 157,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "A terceira parte reúne poemas de circunstância (a Castro Alves, a Carlos Gomes), festas (São João, o baile), amizades e poemas de reflexão sobre a tristeza. Destacam-se “O africano e o poeta”, em que o escravizado fala, e a tradução de “Os dois troféus”, de Victor Hugo, que fecha o livro.",
-        "observe": ["Em “O africano e o poeta” a pergunta “Quem…?” se repete e a resposta é sempre “o poeta”: a poesia se apresenta como única escuta do sofrimento do cativo.", "“O baile” desmonta a festa: o salão vira “farsa universal” ao amanhecer."] } }
+        "observe": [
+          "Em “O africano e o poeta” a pergunta “Quem…?” se repete e a resposta é sempre “o poeta”: a poesia se apresenta como única escuta do sofrimento do cativo.",
+          "“O baile” desmonta a festa: o salão vira “farsa universal” ao amanhecer."
+        ]
+      }
+    }
   ],
   "modules": [
-    { "id": "comece-aqui", "moduleType": "comece_aqui", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Nebulosas** é o livro de poemas de Narcisa Amália (1852-1924), publicado em 1872 pela Garnier. Está dividido em um poema de abertura e duas partes extensas, mais uma terceira de homenagens e circunstância.\n\n**Por que importa para a Fuvest.** É uma obra romântica de autoria feminina que faz duas coisas que a banca gosta de cobrar juntas: usa as formas e temas da poesia romântica (melancolia, saudade, natureza, morte) e, ao mesmo tempo, entra na política — crítica à monarquia, defesa da liberdade, denúncia da escravidão. Além disso, a própria poeta tematiza a dificuldade de escrever sendo mulher.\n\n**Como ler.** Separe dois movimentos: o lirismo íntimo, de dor e saudade, e a poesia pública, de pátria e liberdade. Depois procure onde eles se cruzam — é ali que o livro fica mais interessante. Leia também as epígrafes: elas mostram com quem a poeta conversa." },
-    { "id": "analise-integral", "moduleType": "analise_integral", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-tristes-versos", "ev-frase-mulher", "ev-algema-1824", "ev-escravidao-erros", "ev-sempre-escrava", "ev-liberdade-tronos", "ev-africano", "ev-tristeza", "ev-farsa"], "sourceRefs": [],
-      "markdown": "## Um livro romântico\n\nA maior parte dos poemas segue o repertório do Romantismo: a dor sem causa definida, a saudade da infância, a natureza como refúgio, a morte desejada como descanso. As epígrafes deixam claro o diálogo com Álvares de Azevedo, Fagundes Varela, Gonçalves Dias e Castro Alves. A abertura funciona como programa: os versos nascem do desalento e fogem das pompas do mundo (“Nebulosas”, p. 41). Em “Sadness”, a musa não é a alegria, mas uma figura fria e triste que se chama Tristeza (p. 130).\n\n## A mulher que escreve\n\nO ponto mais citado do livro está em “Invocação”. A poeta quer cantar a pátria como os bardos, mas quando tenta voar, as rajadas lhe atiram a palavra “mulher” (p. 68). O verso transforma a condição de gênero em obstáculo concreto à criação: não é a falta de talento, é o lugar social que lhe negam. O poema dialoga com o de abertura, que já reivindicava um lugar à parte para a sua poesia.\n\n## Poesia pública: monarquia e liberdade\n\nEm “Vinte e cinco de março”, data da Constituição de 1824, outorgada pelo imperador, a voz lírica acusa o ato de ter recomposto a algema que a independência havia lançado ao chão (p. 78). “Sete de setembro” celebra a independência, mas diz que a escravidão não se limita à algema e que o país continua entregue à “escravidão dos erros” (p. 94-95). Em “Pesadelo”, depois de evocar revoltas da Grécia antiga à Revolução Francesa, a poeta acusa a pátria de dormir “sempre escrava” enquanto seus heróis eram exilados ou mortos (p. 105) e termina prevendo o dia em que o povo lançará ao pó “cetros e tronos” (p. 106) — uma imagem republicana.\n\n## Escravidão\n\nA escravidão aparece como metáfora política e como realidade. Em “O africano e o poeta”, o escravizado narra o sequestro, a travessia, o trabalho e o castigo; a cada estrofe pergunta quem o ouve, e a resposta é sempre o poeta (p. 127-129). Na festa de São João, a voz celebra uma mão feminina que liberta cativos (p. 119). O olhar é o do abolicionismo romântico: compadecido, mas ainda falando pelo escravizado.\n\n## Desencanto com a festa\n\n“O baile” mostra o salão iluminado e, ao final, a mesma sala vazia ao amanhecer. A conclusão é amarga: o presente é uma eterna farsa num palco do mundo (p. 132-133). O poema liga a melancolia romântica a uma crítica social da vida mundana." },
-    {"id": "critica-debate", "moduleType": "critica_debate", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-frase-mulher", "ev-africano"], "sourceRefs": [], "markdown": "**Camadas de evidência.** Os cartões trazem versos localizados no PDF; guias e análise são síntese própria. A introdução e as notas da organizadora da edição não foram usadas, e nenhuma fonte acadêmica foi lida.\n\n**Hipóteses em confronto.** O livro pode ser lido como romantismo convencional (dor, saudade, natureza) ou como intervenção de uma mulher na poesia pública: “Me arremessam a frase — mulher!…” (“Invocação”, p. 68). O abolicionismo pode ser lido como engajamento ou como fala que ainda representa o escravizado sem lhe dar voz própria (*O africano e o poeta*, p. 128).\n\n**Limites.** Pesquisa pendente: estudos sobre a autora, a recepção do livro e a poesia feminina do século XIX, citados com página quando lidos."},
-    {"id": "fuvest", "moduleType": "fuvest", "board": "FUVEST", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-tristeza", "ev-frase-mulher", "ev-algema-1824", "ev-escravidao-erros"], "sourceRefs": [], "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nNa objetiva, reconheça o repertório romântico e o desvio: a musa é “frio e triste” (“Sadness”, p. 130), e a condição de mulher é obstáculo concreto. Distrator comum: ler “Invocação” como confissão de falta de talento.\n\nNa discursiva, relacione a poesia pública às datas nacionais: *Vinte e cinco de março* (p. 78), *Sete de setembro* (p. 94-95), “Pesadelo” (p. 105-106). Mostre como a liberdade é cobrada da monarquia."},
-    {"id": "unicamp", "moduleType": "unicamp", "board": "UNICAMP", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-algema-1824", "ev-liberdade-tronos"], "sourceRefs": [], "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nPratique a leitura de imagem política: “Roubaste ao povo a palma do triunfo” (*Vinte e cinco de março*, p. 78) e “E arrojarás ao pó cetros e tronos” (“Pesadelo”, p. 106) — da acusação à profecia republicana."},
-    {"id": "questoes", "moduleType": "questoes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-tristes-versos", "ev-escravidao-erros", "ev-frase-mulher", "ev-africano", "ev-farsa", "ev-tristeza"], "sourceRefs": [], "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “Assim nasceram os meus tristes versos, Que do mundo falaz fogem às pompas!” (“Nebulosas”, p. 41), a poeta apresenta sua poesia como:\nA) celebração das festas da corte.\nB) fruto da dor e recusa da vaidade social.\nC) defesa da monarquia.\nD) canção de ninar.\nE) imitação de modelos europeus sem originalidade.\n\n**2. FUVEST, objetiva, difícil.** O verso “Mas não se cinge a escravidão à algema” (*Sete de setembro*, p. 94-95) indica que:\nA) a independência eliminou toda opressão.\nB) a escravidão também designa os erros e a submissão do país.\nC) a poeta defende a manutenção da escravidão.\nD) o poema celebra o imperador.\nE) a algema é só um ornamento retórico sem sentido político.\n\n**3. FUVEST, discursiva, difícil.** a) Explique a imagem final de “Invocação” (p. 68). b) Mostre como ela transforma a condição de gênero em obstáculo à criação.\n\n**4. Discursiva, muito difícil.** Em *O africano e o poeta* (p. 128), o cativo narra e o poeta responde. Discuta o alcance e o limite desse abolicionismo.\n\n**5. Comparação, muito difícil.** Compare “Presente — eterna farsa universal” (“O baile”, p. 133) com a melancolia de “Sadness” (p. 130). Como o desencanto pessoal vira crítica social?"},
-    {"id": "revisao-ativa", "moduleType": "revisao_ativa", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-algema-1824", "ev-frase-mulher"], "sourceRefs": [], "markdown": "Reconstrua sem consulta: o poema de abertura e os três blocos (dor, saudade e vocação; pátria, natureza e liberdade; homenagens, festas e escravidão), com um poema-âncora em cada.\n\n**Factual:** que data o poema *Vinte e cinco de março* discute? Em que poema a palavra “mulher” derruba a poeta?\n\n**Formal:** como as epígrafes situam o livro no Romantismo?\n\n**Interpretativo:** o livro é convencional ou de ruptura? Justifique com um poema de cada lado.\n\n**24 horas:** mapa. **7 dias:** um poema novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos."},
-    { "id": "fontes", "moduleType": "fontes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Edição usada:** Narcisa Amália, *Nebulosas*. São Paulo: Penguin-Companhia das Letras, 2024, e-book, organização de Anna Faedrich. As páginas citadas neste dossiê são as do PDF dessa edição.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Crítica:** a introdução e as notas da organizadora não foram usadas. As análises são síntese fundamentada nos próprios poemas, e cada afirmação aponta o poema e a página que a sustentam. Fontes críticas só entram aqui depois de lidas, com a página consultada." }
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Nebulosas** é o livro de poemas de Narcisa Amália (1852-1924), publicado em 1872 pela Garnier. A edição organiza três partes: Primeira parte, composta pelo poema *Nebulosas*; Segunda parte; Terceira parte. Os quatro guias do app são agrupamentos didáticos: o segundo e o terceiro subdividem a Segunda parte. Eles orientam a leitura do conjunto e não equivalem a 44 análises individuais aprofundadas.\n\n**Por que importa para a Fuvest.** É uma obra romântica de autoria feminina que permite relacionar duas dimensões na leitura de um excerto: usa as formas e temas da poesia romântica (melancolia, saudade, natureza, morte) e, ao mesmo tempo, entra na política — crítica à monarquia, defesa da liberdade, denúncia da escravidão. Além disso, a própria poeta tematiza a dificuldade de escrever sendo mulher.\n\n**Como ler.** Separe dois movimentos: o lirismo íntimo, de dor e saudade, e a poesia pública, de pátria e liberdade. Depois procure onde eles se cruzam — é ali que o livro fica mais interessante. Leia também as epígrafes: elas mostram com quem a poeta conversa.",
+      "reviewedAt": "2026-10-07T04:56:30Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-nebulosas"
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-tristes-versos",
+        "ev-frase-mulher",
+        "ev-algema-1824",
+        "ev-escravidao-erros",
+        "ev-sempre-escrava",
+        "ev-liberdade-tronos",
+        "ev-africano",
+        "ev-tristeza",
+        "ev-farsa"
+      ],
+      "sourceRefs": [
+        "nebulosas-faedrich-2017",
+        "nebulosas-barbosa-2003",
+        "nebulosas-secco-hergesel-2026"
+      ],
+      "markdown": "## Um livro romântico\n\nA maior parte dos poemas segue o repertório do Romantismo: a dor sem causa definida, a saudade da infância, a natureza como refúgio, a morte desejada como descanso. As epígrafes deixam claro o diálogo com Álvares de Azevedo, Fagundes Varela, Gonçalves Dias e Castro Alves. A abertura funciona como programa: os versos nascem do desalento e fogem das pompas do mundo (“Nebulosas”, p. 41). Em *Sadness*, o anjo inspirador é descrito no masculino como frio e triste e recebe o nome Tristeza (p. 130). A personificação faz da melancolia uma força criadora, articulada ao ato de escrever.\n\n## A mulher que escreve\n\nEm “Invocação”, a voz lírica quer cantar a pátria como os bardos, mas quando tenta voar, as rajadas lhe atiram a palavra “mulher” (p. 68). O verso transforma a condição de gênero em obstáculo concreto à criação: não é a falta de talento, é o lugar social que lhe negam. O poema dialoga com o de abertura, que já reivindicava um lugar à parte para a sua poesia.\n\n## Poesia pública: monarquia e liberdade\n\nEm “Vinte e cinco de março”, data da Constituição de 1824, outorgada pelo imperador, a voz lírica acusa o ato de ter recomposto a algema que a independência havia lançado ao chão (p. 78). “Sete de setembro” celebra a independência, mas diz que a escravidão não se limita à algema e que o país continua entregue à “escravidão dos erros” (p. 94-95). Em “Pesadelo”, depois de evocar revoltas da Grécia antiga à Revolução Francesa, a poeta acusa a pátria de dormir “sempre escrava” enquanto seus heróis eram exilados ou mortos (p. 105) e termina prevendo o dia em que o povo lançará ao pó “cetros e tronos” (p. 106) — uma imagem republicana.\n\n## Escravidão\n\nA escravidão aparece como metáfora política e como realidade. Em “O africano e o poeta”, o escravizado narra o sequestro, a travessia, o trabalho e o castigo; a cada estrofe pergunta quem o ouve, e a resposta é sempre o poeta (p. 127-129). Na festa de São João, a voz celebra uma mão feminina que liberta cativos (p. 119). O olhar é o do abolicionismo romântico: compadecido, mas ainda falando pelo escravizado.\n\n## Desencanto com a festa\n\n“O baile” mostra o salão iluminado e, ao final, a mesma sala vazia ao amanhecer. A conclusão é amarga: o presente é uma eterna farsa num palco do mundo (p. 132-133). O poema liga a melancolia romântica a uma crítica social da vida mundana.\n\n### A forma articula o íntimo e o público\n\nEm *Saudades* (p. 44–45), a memória sensorial da infância é interrompida pelo adversativo isolado: o retorno desejado torna-se impossibilidade. Não basta classificar o tema como saudade: a passagem entre lembrança e perda altera o andamento da voz. Em *Vinte e cinco de março* (p. 77–79), outra virada adversativa converte o vocabulário luminoso da promessa nacional em acusação à ordem política. Os dois poemas não tratam do mesmo objeto, mas organizam expectativas desfeitas por uma forma comparável. Nossa síntese aproxima esses mecanismos; não transforma a melancolia em simples sintoma biográfico nem todo poema em manifesto republicano.\n\n### Vocação e reconhecimento\n\n*Invocação* (p. 67–68) prepara a frustração por quatro estrofes de paisagem e simultaneidade, organizadas por repetições de “Quando”. A entrada de “Sinto” desloca o foco para uma experiência que não consegue participar da beleza descrita. O voo pretendido passa do cisne ao condor, figura de amplitude pública, mas o vento devolve a condição de mulher como impedimento. A fraqueza das asas não autoriza concluir falta natural de talento: o poema encena um reconhecimento recusado pela pátria, que acolhe os bardos e nega à voz feminina um mirto.\n\n### Fala construída e solidariedade\n\nEm *O africano e o poeta* (p. 127–129), a alternância entre relato em primeira pessoa e respostas recorrentes faz a violência aparecer como sequência: separação da terra natal, captura, travessia, trabalho, castigo e abandono. A pergunta renova a necessidade de um ouvinte, e a figura do poeta recebe a tarefa de sentir e conservar a memória. Essa voz dramatizada amplia o espaço de escuta do cativo, mas a autoridade moral do poeta continua sendo o centro que legitima a denúncia. O alcance abolicionista e a mediação romântica coexistem; um não apaga o outro.",
+      "reviewedAt": "2026-10-07T04:56:30Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-nebulosas"
+    },
+    {
+      "id": "critica-debate",
+      "moduleType": "critica_debate",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-frase-mulher",
+        "ev-africano"
+      ],
+      "sourceRefs": [
+        "nebulosas-faedrich-2017",
+        "nebulosas-barbosa-2003",
+        "nebulosas-secco-hergesel-2026"
+      ],
+      "markdown": "**Leitura documentada.** Faedrich (2017, p. 237–252) separa participação efetiva das escritoras e permanência no cânone: houve publicação e elogios, mas a legitimação continuou regulada por homens. Sua análise do prefácio e da recepção ilumina o problema de *Invocação*, sem provar que o eu lírico seja transcrição direta de um episódio pessoal. Barbosa (2003, p. 1–7) privilegia a função pública do poeta e os ideais de liberdade. Secco e Hergesel (2026) propõem ler melancolia, natureza e crítica social como dimensões interdependentes.\n\n**Confronto e síntese.** A leitura social não precisa negar o repertório romântico; a tradição oferece justamente as imagens de voo, luz, algema e natureza que a poeta utiliza para construir reivindicações. O ângulo da recepção pergunta quem autoriza a voz; o ângulo político pergunta por quem essa voz fala. Nosso confronto textual mantém ambos: uma mulher reivindica reconhecimento e também constrói, por procedimentos literários, a fala de sujeitos escravizados.\n\n**Limites das fontes.** Os estudos não são intercambiáveis nem infalíveis. O artigo de 2026 descreve incorretamente alguns limites de parte; o sumário primário prevalece. A comunicação de 2003 e o artigo de 2017 incluem textos externos a *Nebulosas*. A primeira edição compacta tem quatro percursos, não 44 análises individuais completas, e ainda precisa ampliar discussão métrica e bibliografia de teses.",
+      "reviewedAt": "2026-10-07T04:56:30Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-nebulosas"
+    },
+    {
+      "id": "fuvest",
+      "moduleType": "fuvest",
+      "board": "FUVEST",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-tristeza",
+        "ev-frase-mulher",
+        "ev-algema-1824",
+        "ev-escravidao-erros"
+      ],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027"
+      ],
+      "markdown": "**Preparação para a FUVEST; não é questão oficial nem levantamento de incidência.**\n\nNa objetiva, reconheça o repertório romântico e o desvio: o anjo inspirador é “frio e triste” (*Sadness*, p. 130), e a condição de mulher é obstáculo concreto. Distrator comum: ler “Invocação” como confissão de falta de talento.\n\nNa discursiva, relacione a poesia pública às datas nacionais: *Vinte e cinco de março* (p. 78), *Sete de setembro* (p. 94-95), “Pesadelo” (p. 105-106). Mostre como a liberdade é cobrada da monarquia.\n\n**F.O.R.M.A., ferramenta didática autoral.** Na segunda fase: foco no verbo, recorte e quantidade; observação de uma passagem; recurso formal pertinente; mecanismo que produz o efeito; articulação ao conjunto ou à comparação pedida. Isso não é rubrica oficial de pontuação. Na primeira fase, teste cada alternativa contra a voz e as marcas do excerto, sem aceitar uma característica geral que não esteja nele.",
+      "reviewedAt": "2026-10-07T04:56:30Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-nebulosas"
+    },
+    {
+      "id": "unicamp",
+      "moduleType": "unicamp",
+      "board": "UNICAMP",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-algema-1824",
+        "ev-liberdade-tronos"
+      ],
+      "sourceRefs": [
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Treino de transferência; a obra não está na lista da Unicamp para 2027.**\n\nPratique a leitura de imagem política: “Roubaste ao povo a palma do triunfo” (*Vinte e cinco de março*, p. 78) e “E arrojarás ao pó cetros e tronos” (“Pesadelo”, p. 106) — da acusação à profecia republicana.\n\n**F.O.N.T.E., ferramenta didática autoral.** Na segunda fase: fonte localizada; operação de cada subitem; núcleo formal; tensão interpretativa; explicação articulada. Responda os verbos separadamente e ligue o efeito à evidência, sem apenas recontar a trama. Na primeira fase, compare a alternativa ao texto e ao paratexto fornecidos. O protocolo não é espelho oficial nem previsão de incidência.",
+      "reviewedAt": "2026-10-07T04:56:30Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-nebulosas"
+    },
+    {
+      "id": "questoes",
+      "moduleType": "questoes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-tristes-versos",
+        "ev-escravidao-erros",
+        "ev-frase-mulher",
+        "ev-africano",
+        "ev-farsa",
+        "ev-tristeza"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. FUVEST, objetiva, média.** Em “Assim nasceram os meus tristes versos, Que do mundo falaz fogem às pompas!” (“Nebulosas”, p. 41), a poeta apresenta sua poesia como:\n- A) celebração das festas da corte.\n- B) fruto da dor e recusa da vaidade social.\n- C) defesa da monarquia.\n- D) canção de ninar.\n- E) imitação de modelos europeus sem originalidade.\n\n**2. FUVEST, objetiva, difícil.** O verso “Mas não se cinge a escravidão à algema” (*Sete de setembro*, p. 94-95) indica que:\n- A) a independência eliminou toda opressão.\n- B) a escravidão também designa os erros e a submissão do país.\n- C) a poeta defende a manutenção da escravidão.\n- D) o poema celebra o imperador.\n- E) a algema é só um ornamento retórico sem sentido político.\n\n**3. FUVEST, discursiva, difícil.** a) Explique a imagem final de “Invocação” (p. 68). b) Mostre como ela transforma a condição de gênero em obstáculo à criação.\n\n**4. Discursiva, muito difícil.** Em *O africano e o poeta* (p. 128), o cativo narra e o poeta responde. Discuta o alcance e o limite desse abolicionismo.\n\n**5. Comparação, muito difícil.** Compare “Presente — eterna farsa universal” (“O baile”, p. 133) com a melancolia de “Sadness” (p. 130). Como o desencanto pessoal vira crítica social?",
+      "reviewedAt": "2026-10-07T04:56:30Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-nebulosas"
+    },
+    {
+      "id": "revisao-ativa",
+      "moduleType": "revisao_ativa",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-algema-1824",
+        "ev-frase-mulher"
+      ],
+      "sourceRefs": [],
+      "markdown": "Reconstrua sem consulta: as três partes editoriais e os quatro percursos didáticos (poema de abertura; dor, saudade e vocação; pátria, natureza e liberdade; homenagens, festas e escravidão), com um poema-âncora em cada percurso. Explique por que dois desses percursos pertencem à mesma Segunda parte.\n\n**Factual:** que data o poema *Vinte e cinco de março* discute? Em que poema a palavra “mulher” derruba a poeta?\n\n**Formal:** como as epígrafes situam o livro no Romantismo?\n\n**Interpretativo:** o livro é convencional ou de ruptura? Justifique com um poema de cada lado.\n\n**24 horas:** mapa. **7 dias:** um poema novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos.",
+      "reviewedAt": "2026-10-07T04:56:30Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-nebulosas"
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "nebulosas-faedrich-2017",
+        "nebulosas-barbosa-2003",
+        "nebulosas-secco-hergesel-2026",
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Edição usada:** Narcisa Amália, *Nebulosas*. São Paulo: Penguin-Companhia das Letras, 2024, e-book, organização de Anna Faedrich. As páginas citadas neste dossiê são as do PDF dessa edição.\n\n**Lista oficial:** obra exigida pela Fuvest para o ciclo 2027, na íntegra.\n\n**Pesquisa crítica consultada:** Faedrich (2017, p. 237–252), sobre exclusão e legitimação de escritoras; Barbosa (2003, PDF p. 1–7, integral), sobre poesia pública e liberdade; Secco e Hergesel (2026, PDF p. 1–27, integral), sobre relações entre melancolia, natureza e crítica social. As contribuições e os limites estão na bibliografia comentada. Textos externos citados pelos pesquisadores, como *Perfil de escrava* e *Condolências*, não foram inseridos no corpus do livro.\n\n**Confronto das fontes:** o artigo de 2026 contém imprecisões na distribuição de partes: *Voto* abre a Segunda parte e *Invocação* está dentro dela, conforme sumário e corpo primários. Em *Sadness*, o anjo inspirador está no masculino. O texto primário prevalece sobre essas descrições críticas. A comunicação de 2003 e o artigo de 2017 usam também documentos externos ao livro; tais documentos não foram todos consultados diretamente.\n\n**Paratexto e cobertura:** a introdução da edição foi consultada em p. 13–16 e 19–32 como apoio, sem atribuir à autora a voz da organizadora. Esta edição compacta oferece quatro percursos para três partes editoriais, não 44 análises completas por poema. A ampliação da discussão métrica e da bibliografia de teses permanece necessária para o alcance integral da habilidade.\n\n## Bibliografia comentada e leitura efetiva\n\n**FAEDRICH, Anna. Narcisa Amália, poeta esquecida do século XIX. SOLETRAS, n. 34, p. 237–253, 2017. DOI: 10.12957/soletras.2017.30950.**\n\n[Consultar fonte](https://www.e-publicacoes.uerj.br/soletras/article/view/30950). Leitura efetiva: p. 237–252 (PDF p. 1–16), texto analítico e início das referências; página final de referências não utilizada.\n\n**Leitura documentada:** A exclusão das escritoras dos registros literários não deriva de ausência de produção: a entrada e a permanência no campo dependiam de mecanismos masculinos de legitimação.\n\n**Contribuição:** Relaciona domínio romântico, poesia política, prefácio de Póvoa e reconhecimento condicionado; fornece contraponto histórico a Invocação.\n\n**Limites:** Inclui poemas e documentos externos a Nebulosas; Perfil de escrava e cartas não devem ser introduzidos como poemas integrantes do livro. Fontes citadas pela autora são referências secundárias quando não consultadas diretamente.\n\n**BARBOSA, Gisele Oliveira Ayres. Aspectos sociais e políticos da poesia de Narcisa Amália. Anais do XXII Simpósio Nacional de História, ANPUH, João Pessoa, 2003.**\n\n[Consultar fonte](https://encontro2014.rj.anpuh.org/resources/anais/anpuhnacional/S.22/ANPUH.S22.274.pdf). Leitura efetiva: PDF p. 1–7, integral.\n\n**Leitura documentada:** A poesia de Narcisa funciona como intervenção social no contexto da crise monárquica, do abolicionismo e das reivindicações de liberdade.\n\n**Contribuição:** Conecta poemas cívicos, função do poeta e educação popular; permite ler algema como imagem material e política.\n\n**Limites:** Comunicação breve, com referências secundárias e textos fora do volume. A constituição outorgada e o projeto de 1823 precisam ser distinguidos; não transferir Condolências para o corpus exigido.\n\n**SECCO, Taís Siqueira; HERGESEL, João Paulo. La voz de Narcisa Amália: lirismo, naturaleza y crítica social en Nebulosas. Poligramas, n. 63, 2026. DOI registrado: 10.25100/poligramas.i63.15213.**\n\n[Consultar fonte](https://poligramas.univalle.edu.co/index.php/poligramas/article/download/15213/19769). Leitura efetiva: PDF p. 1–27, integral.\n\n**Leitura documentada:** Subjetividade melancólica, natureza e crítica sociopolítica constituem dimensões interdependentes de um projeto poético.\n\n**Contribuição:** Ajuda a cruzar o íntimo e o público em vez de tratar blocos temáticos como compartimentos estanques.\n\n**Limites:** Há imprecisões verificáveis: p. 9 chama Voto abertura da primeira parte e p. 19 chama Invocação abertura da segunda; no PDF primário Voto abre a segunda e Invocação está no interior dela. A descrição tripartida p. 8 não deve substituir o sumário da edição. O próprio PDF apresenta variante de DOI v0i63.15213 e lapsos bibliográficos; usar com confronto textual, não como autoridade infalível. Em p. 14 altera para o feminino a concordância do anjo inspirador de Sadness; o primário usa o masculino. Não usar essa paráfrase como citação da obra.\n\n**FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.**\n\n[Consultar fonte](https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/). Leitura efetiva: Corpo da notícia e listas anuais; conferência da lista de 2027.\n\n**Leitura documentada:** A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.\n\n**Contribuição:** Confirma a exigência oficial e distingue as listas dos diferentes anos.\n\n**Limites:** A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões.\n\n**FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.**\n\n[Consultar fonte](https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf). Leitura efetiva: PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.\n\n**Leitura documentada:** O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.\n\n**Contribuição:** Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.\n\n**Limites:** Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral.\n\n**Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.**\n\n[Consultar fonte](https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf). Leitura efetiva: PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.\n\n**Leitura documentada:** O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.\n\n**Contribuição:** Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.\n\n**Limites:** Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral.\n\n**Alcance desta publicação.** Primeira edição de estudo: texto primário, guias, passagens e síntese autoral revistos, com os recortes críticos acima. Não certifica a leitura integral dos estudos consultados parcialmente nem o aprofundamento integral da habilidade avançada. As unidades e agrupamentos seguem a edição e os limites declarados no percurso. A pesquisa não substitui a leitura da obra. As limitações do arquivo fornecido e da procedência permanecem válidas.",
+      "reviewedAt": "2026-10-07T04:56:30Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-nebulosas"
+    }
   ],
   "evidence": [
-    { "id": "ev-tristes-versos", "unitId": "abertura", "location": "“Nebulosas”, p. 41", "quote": "Assim nasceram os meus tristes versos, Que do mundo falaz fogem às pompas!",
+    {
+      "id": "ev-tristes-versos",
+      "unitId": "abertura",
+      "location": "“Nebulosas”, p. 41",
+      "quote": "Assim nasceram os meus tristes versos, Que do mundo falaz fogem às pompas!",
       "context": "Fim do poema de abertura: depois de subir às esferas e voltar à terra, a voz lírica explica a origem do livro.",
       "formalDevice": "Metapoesia: o poema comenta a origem e o lugar dos próprios versos.",
       "effect": "Apresenta a poesia como fruto da dor e como recusa do luxo e da vaidade social.",
       "wholeRelation": "Funciona como programa do livro: melancolia romântica e distância das “pompas” reaparecem em “O baile” e na crítica política.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-frase-mulher", "unitId": "segunda-intima", "location": "“Invocação”, p. 68", "quote": "Quando intento librar-me no espaço, As rajadas em tétrico abraço Me arremessam a frase — mulher!…",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-frase-mulher",
+      "unitId": "segunda-intima",
+      "location": "“Invocação”, p. 68",
+      "quote": "Quando intento librar-me no espaço, As rajadas em tétrico abraço Me arremessam a frase — mulher!…",
       "context": "A poeta deseja cantar a pátria como os bardos e descreve o impedimento que encontra.",
       "formalDevice": "Metáfora do voo interrompido e destaque gráfico da palavra final, isolada por travessão.",
       "effect": "A condição de mulher aparece como força externa que derruba a criação, não como limite de talento.",
       "wholeRelation": "Liga o lirismo íntimo à reflexão sobre a autoria feminina, central para ler o livro hoje.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-algema-1824", "unitId": "segunda-patria", "location": "“Vinte e cinco de março”, p. 78", "quote": "Roubaste ao povo a palma do triunfo, Recompuseste a algema ao pó lançada",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-algema-1824",
+      "unitId": "segunda-patria",
+      "location": "“Vinte e cinco de março”, p. 78",
+      "quote": "Roubaste ao povo a palma do triunfo, Recompuseste a algema ao pó lançada",
       "context": "O poema se dirige à data da Constituição de 1824, outorgada pelo imperador.",
       "formalDevice": "Apóstrofe à data personificada e imagem da algema.",
       "effect": "Converte um marco institucional em traição: a liberdade conquistada volta a ser aprisionada.",
       "wholeRelation": "Abre a série de poemas políticos que leem a história do Império como liberdade interrompida.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-escravidao-erros", "unitId": "segunda-patria", "location": "“Sete de setembro”, p. 94-95", "quote": "Mas não se cinge a escravidão à algema",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-escravidao-erros",
+      "unitId": "segunda-patria",
+      "location": "“Sete de setembro”, p. 94-95",
+      "quote": "Mas não se cinge a escravidão à algema",
       "context": "Depois de celebrar a independência, o poema avalia o presente do país.",
       "formalDevice": "Adversativa que vira o elogio em crítica.",
       "effect": "Distingue a independência formal da liberdade efetiva e amplia a ideia de escravidão para os “erros” do país.",
       "wholeRelation": "Mostra que a celebração patriótica do livro é sempre condicionada à crítica do presente.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-sempre-escrava", "unitId": "segunda-patria", "location": "“Pesadelo”, p. 105", "quote": "E dormiste sorrindo — sempre escrava!…",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-sempre-escrava",
+      "unitId": "segunda-patria",
+      "location": "“Pesadelo”, p. 105",
+      "quote": "E dormiste sorrindo — sempre escrava!…",
       "context": "A voz lírica acusa a pátria de assistir ao exílio dos que tentaram libertá-la.",
       "formalDevice": "Apóstrofe à pátria e paradoxo entre o sorriso e a escravidão.",
       "effect": "Culpa a passividade do país, que aceita a opressão sem reagir.",
       "wholeRelation": "Prepara o desfecho republicano do poema, que prevê a queda de “cetros e tronos”.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-liberdade-tronos", "unitId": "segunda-patria", "location": "“Pesadelo”, p. 106", "quote": "E arrojarás ao pó cetros e tronos, Bradando ao mundo inteiro — liberdade!",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-liberdade-tronos",
+      "unitId": "segunda-patria",
+      "location": "“Pesadelo”, p. 106",
+      "quote": "E arrojarás ao pó cetros e tronos, Bradando ao mundo inteiro — liberdade!",
       "context": "Último verso do poema, depois da série de revoluções históricas.",
       "formalDevice": "Futuro profético e enumeração de símbolos da monarquia.",
       "effect": "Projeta uma pátria republicana que derruba o trono em nome da liberdade.",
-      "wholeRelation": "Confirma o republicanismo do livro, raro em poesia de autoria feminina da época.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-africano", "unitId": "terceira", "location": "“O africano e o poeta”, p. 128", "quote": "Roubaram-me feros A férvidos braços; Em rígidos laços Sulquei vasto mar",
+      "wholeRelation": "Sustenta a leitura republicana do poema, em diálogo com a cobrança de liberdade ao longo do livro.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-africano",
+      "unitId": "terceira",
+      "location": "“O africano e o poeta”, p. 128",
+      "quote": "Roubaram-me feros A férvidos braços; Em rígidos laços Sulquei vasto mar",
       "context": "O escravizado narra a própria história: o sequestro na África e a travessia.",
       "formalDevice": "Eu lírico atribuído ao escravizado, em estrofes curtas que terminam em pergunta.",
-      "effect": "Dá voz ao cativo, mas a resposta “o poeta” mostra que é a poesia quem o representa.",
+      "effect": "Encena a fala em primeira pessoa do cativo; as perguntas e as respostas recorrentes atribuem ao poeta a escuta, a solidariedade e a conservação de sua memória. A fala dramatizada não é testemunho documental escrito por pessoa escravizada.",
       "wholeRelation": "Leva a crítica à escravidão do plano metafórico, dos poemas políticos, para a experiência concreta.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-tristeza", "unitId": "terceira", "location": "“Sadness”, p. 130", "quote": "Meu anjo inspirador é frio e triste",
-      "context": "Poema sobre a musa da autora.",
-      "formalDevice": "Negação dos atributos convencionais da musa, seguida da revelação do nome: Tristeza.",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-tristeza",
+      "unitId": "terceira",
+      "location": "“Sadness”, p. 130",
+      "quote": "Meu anjo inspirador é frio e triste",
+      "context": "A voz lírica apresenta seu anjo inspirador, personificação da Tristeza.",
+      "formalDevice": "Enumeração negativa de atributos luminosos e alegres, seguida da descrição do anjo no masculino e da revelação de seu nome: Tristeza.",
       "effect": "Assume a melancolia como fonte da criação.",
       "wholeRelation": "Retoma o programa do poema de abertura, em que os versos nascem do desalento.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-farsa", "unitId": "terceira", "location": "“O baile”, p. 133", "quote": "Presente — eterna farsa universal, suspensa Do mundo no proscênio!",
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-farsa",
+      "unitId": "terceira",
+      "location": "“O baile”, p. 133",
+      "quote": "Presente — eterna farsa universal, suspensa Do mundo no proscênio!",
       "context": "Fim do poema, quando o salão está vazio ao amanhecer.",
       "formalDevice": "Metáfora teatral (farsa, proscênio) em fecho sentencioso.",
       "effect": "Transforma o desencanto com a festa em juízo sobre a vida social como encenação.",
       "wholeRelation": "Conecta a melancolia íntima à recusa das “pompas” anunciada na abertura.",
-      "examPotential": ["FUVEST"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" }
+      "examPotential": [
+        "FUVEST"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    }
+  ],
+  "sources": [
+    {
+      "id": "nebulosas-faedrich-2017",
+      "citation": "FAEDRICH, Anna. Narcisa Amália, poeta esquecida do século XIX. SOLETRAS, n. 34, p. 237–253, 2017. DOI: 10.12957/soletras.2017.30950.",
+      "type": "academic_article",
+      "institution": "Universidade do Estado do Rio de Janeiro",
+      "year": 2017,
+      "url": "https://www.e-publicacoes.uerj.br/soletras/article/view/30950",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 237–252 (PDF p. 1–16), texto analítico e início das referências; página final de referências não utilizada.",
+      "centralThesis": "A exclusão das escritoras dos registros literários não deriva de ausência de produção: a entrada e a permanência no campo dependiam de mecanismos masculinos de legitimação.",
+      "contribution": "Relaciona domínio romântico, poesia política, prefácio de Póvoa e reconhecimento condicionado; fornece contraponto histórico a Invocação.",
+      "limitations": "Inclui poemas e documentos externos a Nebulosas; Perfil de escrava e cartas não devem ser introduzidos como poemas integrantes do livro. Fontes citadas pela autora são referências secundárias quando não consultadas diretamente."
+    },
+    {
+      "id": "nebulosas-barbosa-2003",
+      "citation": "BARBOSA, Gisele Oliveira Ayres. Aspectos sociais e políticos da poesia de Narcisa Amália. Anais do XXII Simpósio Nacional de História, ANPUH, João Pessoa, 2003.",
+      "type": "academic_article",
+      "institution": "ANPUH / Universidade Severino Sombra",
+      "year": 2003,
+      "url": "https://encontro2014.rj.anpuh.org/resources/anais/anpuhnacional/S.22/ANPUH.S22.274.pdf",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "PDF p. 1–7, integral.",
+      "centralThesis": "A poesia de Narcisa funciona como intervenção social no contexto da crise monárquica, do abolicionismo e das reivindicações de liberdade.",
+      "contribution": "Conecta poemas cívicos, função do poeta e educação popular; permite ler algema como imagem material e política.",
+      "limitations": "Comunicação breve, com referências secundárias e textos fora do volume. A constituição outorgada e o projeto de 1823 precisam ser distinguidos; não transferir Condolências para o corpus exigido."
+    },
+    {
+      "id": "nebulosas-secco-hergesel-2026",
+      "citation": "SECCO, Taís Siqueira; HERGESEL, João Paulo. La voz de Narcisa Amália: lirismo, naturaleza y crítica social en Nebulosas. Poligramas, n. 63, 2026. DOI registrado: 10.25100/poligramas.i63.15213.",
+      "type": "academic_article",
+      "institution": "Universidad del Valle / PUC-Campinas",
+      "year": 2026,
+      "url": "https://poligramas.univalle.edu.co/index.php/poligramas/article/download/15213/19769",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "PDF p. 1–27, integral.",
+      "centralThesis": "Subjetividade melancólica, natureza e crítica sociopolítica constituem dimensões interdependentes de um projeto poético.",
+      "contribution": "Ajuda a cruzar o íntimo e o público em vez de tratar blocos temáticos como compartimentos estanques.",
+      "limitations": "Há imprecisões verificáveis: p. 9 chama Voto abertura da primeira parte e p. 19 chama Invocação abertura da segunda; no PDF primário Voto abre a segunda e Invocação está no interior dela. A descrição tripartida p. 8 não deve substituir o sumário da edição. O próprio PDF apresenta variante de DOI v0i63.15213 e lapsos bibliográficos; usar com confronto textual, não como autoridade infalível. Em p. 14 altera para o feminino a concordância do anjo inspirador de Sadness; o primário usa o masculino. Não usar essa paráfrase como citação da obra."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-lista-2027",
+      "citation": "FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.",
+      "institution": "FUVEST / USP",
+      "year": 2023,
+      "url": "https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/",
+      "pagesRead": "Corpo da notícia e listas anuais; conferência da lista de 2027.",
+      "centralThesis": "A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.",
+      "contribution": "Confirma a exigência oficial e distingue as listas dos diferentes anos.",
+      "limitations": "A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-programa-2027",
+      "citation": "FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.",
+      "institution": "FUVEST / USP",
+      "year": 2026,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf",
+      "pagesRead": "PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.",
+      "centralThesis": "O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.",
+      "contribution": "Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.",
+      "limitations": "Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "comvest-programa-2027",
+      "citation": "Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.",
+      "institution": "Comvest / Unicamp",
+      "year": 2026,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "pagesRead": "PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.",
+      "centralThesis": "O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.",
+      "contribution": "Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.",
+      "limitations": "Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral."
+    }
   ]
 }

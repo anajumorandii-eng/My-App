@@ -4,133 +4,894 @@
   "edition": {
     "label": "Conceição Evaristo, Olhos d’água. Rio de Janeiro: Pallas / Fundação Biblioteca Nacional, 2016 (1ª ed., 3ª reimpr.), e-book",
     "pdfPageCount": 83,
-    "note": "Obra protegida: só citações curtas e análise original. As páginas citadas são as do PDF usado. O prefácio (Heloisa Toller Gomes) e a introdução (Jurema Werneck) são da edição e não foram usados; as p. 72-83 são propaganda e aviso do site de origem do arquivo."
+    "note": "Obra protegida: só citações curtas e análise original. As páginas citadas são as do PDF usado, não as da edição impressa. O prefácio de Heloisa Toller Gomes (p. 7–8) e a introdução de Jurema Werneck (p. 9–10) foram lidos como paratextos críticos, separados da voz dos contos. As p. 72–83 trazem avisos da procedência e material publicitário; não integram a narrativa. A cópia não foi cotejada integralmente com exemplar impresso da Pallas."
   },
   "units": [
-    { "id": "olhos-dagua", "order": 1, "type": "story", "title": "Olhos d’água", "opening": "Olhos d’água Uma noite, há anos", "pdfStartPage": 11, "pdfEndPage": 13,
-      "guide": { "editorialStatus": "needs_review",
+    {
+      "id": "olhos-dagua",
+      "order": 1,
+      "type": "story",
+      "title": "Olhos d’água",
+      "opening": "Olhos d’água Uma noite, há anos",
+      "pdfStartPage": 11,
+      "pdfEndPage": 13,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "A narradora acorda com uma pergunta que a acusa: de que cor eram os olhos da mãe? Lembra a infância pobre — a mãe que inventava brincadeiras para distrair a fome, as nuvens repartidas como algodão-doce, o medo do barraco cair na chuva — e volta à cidade natal para ver. Os olhos da mãe são cor de olhos d’água, águas de Oxum. No fim, a filha da narradora lhe faz a mesma pergunta.",
-        "observe": ["A pergunta “De que cor eram os olhos de minha mãe?” volta como refrão e organiza a memória.", "O final transmite a pergunta à geração seguinte: a ancestralidade é uma cadeia de olhares entre mulheres."] } },
-    { "id": "ana-davenga", "order": 2, "type": "story", "title": "Ana Davenga", "opening": "Ana Davenga As batidas na porta", "pdfStartPage": 14, "pdfEndPage": 19,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A pergunta “De que cor eram os olhos de minha mãe?” volta como refrão e organiza a memória.",
+          "O final transmite a pergunta à geração seguinte: a ancestralidade é uma cadeia de olhares entre mulheres."
+        ]
+      }
+    },
+    {
+      "id": "ana-davenga",
+      "order": 2,
+      "type": "story",
+      "title": "Ana Davenga",
+      "opening": "Ana Davenga As batidas na porta",
+      "pdfStartPage": 14,
+      "pdfEndPage": 19,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Ana espera, aflita, o companheiro Davenga, chefe de um grupo no morro; os outros homens e mulheres entram no barraco sem ele. Em flashback, o leitor conhece o assalto ao deputado, o encontro no samba, o choro de Davenga no gozo e o assassinato de Maria Agonia, que ele mandou matar. A reunião era uma festa surpresa pelo aniversário de Ana, o primeiro de sua vida. Na madrugada, a polícia invade o barraco e mata os dois; Ana estava grávida.",
-        "observe": ["O suspense (onde está Davenga?) é desfeito pela festa e logo depois pela morte: alegria e violência estão coladas.", "Davenga é cruel e terno ao mesmo tempo; o conto não o absolve nem o reduz a vilão."] } },
-    { "id": "duzu-querenca", "order": 3, "type": "story", "title": "Duzu-Querença", "opening": "Duzu-Querença Duzu lambeu os dedos", "pdfStartPage": 20, "pdfEndPage": 23,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O suspense (onde está Davenga?) é desfeito pela festa e logo depois pela morte: alegria e violência estão coladas.",
+          "Davenga é cruel e terno ao mesmo tempo; o conto não o absolve nem o reduz a vilão."
+        ]
+      }
+    },
+    {
+      "id": "duzu-querenca",
+      "order": 3,
+      "type": "story",
+      "title": "Duzu-Querença",
+      "opening": "Duzu-Querença Duzu lambeu os dedos",
+      "pdfStartPage": 20,
+      "pdfEndPage": 23,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Duzu, velha mendiga na escadaria da igreja, lembra a vinda para a cidade, ainda menina, prometida a uma senhora que lhe daria estudo e a pôs num prostíbulo. Teve nove filhos, perdeu o neto Tático, de treze anos, e passou a viver no delírio de voar. Morre no carnaval, com a fantasia de estrelas. A neta Querença, também de treze anos, herda os sonhos e decide reinventar a vida.",
-        "observe": ["O nome composto do título junta avó e neta: o conto passa de uma à outra.", "O delírio de Duzu não é só loucura: é a forma de “ludibriar a dor”, e é ele que a neta transforma em projeto."] } },
-    { "id": "maria", "order": 4, "type": "story", "title": "Maria", "opening": "Maria Maria estava parada", "pdfStartPage": 24, "pdfEndPage": 26,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O nome composto do título junta avó e neta: o conto passa de uma à outra.",
+          "O delírio de Duzu não é só loucura: é a forma de “ludibriar a dor”, e é ele que a neta transforma em projeto."
+        ]
+      }
+    },
+    {
+      "id": "maria",
+      "order": 4,
+      "type": "story",
+      "title": "Maria",
+      "opening": "Maria Maria estava parada",
+      "pdfStartPage": 24,
+      "pdfEndPage": 26,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Maria, empregada doméstica, volta para casa de ônibus com os restos da festa da patroa — um osso de pernil, frutas, um melão que os filhos nunca provaram. O pai de seu primeiro filho entra no ônibus, fala com ela em segredo e anuncia um assalto. Como ela não é roubada, os passageiros a acusam de cúmplice e a lincham até a morte.",
-        "observe": ["A “faca a laser” que cortou sua mão volta três vezes; no fim, “Estavam todos armados com facas a laser que cortam até a vida”.", "Os insultos (“negra safada”) mostram que o linchamento é racial e de gênero, não um mal-entendido."] } },
-    { "id": "quantos-filhos-natalina-teve", "order": 5, "type": "story", "title": "Quantos filhos Natalina teve?", "opening": "Quantos filhos Natalina teve?", "pdfStartPage": 27, "pdfEndPage": 31,
-      "guide": { "editorialStatus": "needs_review",
-        "summary": "Natalina está na quarta gravidez e no primeiro filho que quer. O primeiro, aos catorze anos, foi dado a uma enfermeira; o segundo ficou com o pai, Tonho; o terceiro foi gerado para a patroa estéril, com o patrão. O quarto vem de um estupro: sequestrada por homens que procuravam um irmão que ela não tem, Natalina matou o agressor com a arma dele. Esse filho será só seu.",
-        "observe": ["O título é uma pergunta que o conto responde de modo inesperado: quatro gestações, um filho.", "A figura de Sá Praxedes, a parteira que “comia crianças”, liga o medo infantil à questão do aborto e da maternidade imposta."] } },
-    { "id": "beijo-na-face", "order": 6, "type": "story", "title": "Beijo na face", "opening": "Beijo na face Salinda tombou", "pdfStartPage": 32, "pdfEndPage": 36,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A “faca a laser” que cortou sua mão volta três vezes; no fim, “Estavam todos armados com facas a laser que cortam até a vida”.",
+          "Os insultos (“negra safada”) mostram que o linchamento é racial e de gênero, não um mal-entendido."
+        ]
+      }
+    },
+    {
+      "id": "quantos-filhos-natalina-teve",
+      "order": 5,
+      "type": "story",
+      "title": "Quantos filhos Natalina teve?",
+      "opening": "Quantos filhos Natalina teve?",
+      "pdfStartPage": 27,
+      "pdfEndPage": 31,
+      "guide": {
+        "editorialStatus": "published",
+        "summary": "Natalina está na quarta gravidez e no primeiro filho que quer. Na primeira gravidez, ainda ia completar catorze anos quando tentou interrompê-la; foge de casa e, após o parto, entrega a criança a uma enfermeira; o segundo ficou com o pai, Tonho; o terceiro foi gerado para a patroa estéril, com o patrão. O quarto vem de um estupro: sequestrada por homens que procuravam um irmão que ela não tem, Natalina matou o agressor com a arma dele. Esse filho será só seu.",
+        "observe": [
+          "O título é uma pergunta que o conto responde de modo inesperado: quatro gestações, um filho.",
+          "A figura de Sá Praxedes, a parteira que “comia crianças”, liga o medo infantil à questão do aborto e da maternidade imposta."
+        ]
+      }
+    },
+    {
+      "id": "beijo-na-face",
+      "order": 6,
+      "type": "story",
+      "title": "Beijo na face",
+      "opening": "Beijo na face Salinda tombou",
+      "pdfStartPage": 32,
+      "pdfEndPage": 36,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Salinda, vigiada pelo marido ciumento que contratou detetive e usa os filhos como espiões, vive há quase um ano um amor secreto, protegido pela Tia Vandu em Chã de Alegria. O marido descobre e anuncia a guerra pela guarda dos filhos. Diante do espelho, Salinda vê o rosto da amada: duas mulheres negras, altas, de dreads.",
-        "observe": ["A identidade de quem ela ama só se revela no fim: o leitor percorre o conto sem saber que é uma mulher.", "A equilibrista do circo é imagem da própria Salinda, na corda bamba entre risco e liberdade."] } },
-    { "id": "luamanda", "order": 7, "type": "story", "title": "Luamanda", "opening": "Luamanda Luamanda consertou o vestido", "pdfStartPage": 37, "pdfEndPage": 40,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A identidade de quem ela ama só se revela no fim: o leitor percorre o conto sem saber que é uma mulher.",
+          "A equilibrista do circo é imagem da própria Salinda, na corda bamba entre risco e liberdade."
+        ]
+      }
+    },
+    {
+      "id": "luamanda",
+      "order": 7,
+      "type": "story",
+      "title": "Luamanda",
+      "opening": "Luamanda Luamanda consertou o vestido",
+      "pdfStartPage": 37,
+      "pdfEndPage": 40,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Perto dos cinquenta, Luamanda se prepara para um encontro e repassa os amores da vida: o primeiro, aos onze anos; a iniciação aos treze; o homem com quem teve cinco filhos; uma mulher; um jovem; um velho. Lembra também a violência de um ex-companheiro que a feriu na vagina. Cada lembrança termina numa pergunta sobre o amor.",
-        "observe": ["A estrutura é de inventário, pontuada por perguntas (“O amor dói?”, “O amor é terremoto?”).", "O corpo feminino maduro e desejante é o centro do conto, contra a ideia de que o desejo tem idade."] } },
-    { "id": "o-cooper-de-cida", "order": 8, "type": "story", "title": "O cooper de Cida", "opening": "O cooper de Cida O sol vinha nascendo", "pdfStartPage": 41, "pdfEndPage": 44,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A estrutura é de inventário, pontuada por perguntas (“O amor dói?”, “O amor é terremoto?”).",
+          "O corpo feminino maduro e desejante é o centro do conto, contra a ideia de que o desejo tem idade."
+        ]
+      }
+    },
+    {
+      "id": "o-cooper-de-cida",
+      "order": 8,
+      "type": "story",
+      "title": "O cooper de Cida",
+      "opening": "O cooper de Cida O sol vinha nascendo",
+      "pdfStartPage": 41,
+      "pdfEndPage": 44,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Cida, que veio do interior para o Rio e vive correndo — no cooper, no trabalho, nos amores, na missa pela metade —, desacelera numa manhã em Copacabana e vê o mar pela primeira vez. Pensa no tempo dos ricos e dos mendigos, falta ao trabalho e decide “dar um tempo para ela”.",
-        "observe": ["A pressa é construída pela forma: frases curtas e enumerações rápidas, que se alongam quando ela para.", "A expressão banal do fim (“dar um tempo”) ganha sentido literal e quase religioso."] } },
-    { "id": "zaita-esqueceu-de-guardar-os-brinquedos", "order": 9, "type": "story", "title": "Zaíta esqueceu de guardar os brinquedos", "opening": "Zaíta esqueceu de guardar os brinquedos", "pdfStartPage": 45, "pdfEndPage": 48,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A pressa é construída pela forma: frases curtas e enumerações rápidas, que se alongam quando ela para.",
+          "A expressão banal do fim (“dar um tempo”) ganha sentido literal e quase religioso."
+        ]
+      }
+    },
+    {
+      "id": "zaita-esqueceu-de-guardar-os-brinquedos",
+      "order": 9,
+      "type": "story",
+      "title": "Zaíta esqueceu de guardar os brinquedos",
+      "opening": "Zaíta esqueceu de guardar os brinquedos",
+      "pdfStartPage": 45,
+      "pdfEndPage": 48,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "A menina Zaíta procura a figurinha-flor que acha que a gêmea Naíta pegou e deixa os brinquedos espalhados. A mãe, Benícia, exausta, destrói de raiva a boneca negra. O irmão das meninas lidera um grupo armado no morro. Zaíta, procurando a irmã, atravessa um tiroteio e é morta. Naíta, ao encontrá-la, grita a frase do título.",
-        "observe": ["A frase final, uma bronca doméstica, ganha peso de luto: a infância é interrompida no meio da brincadeira.", "As balas são comparadas a flores malditas, retomando a figurinha-flor."] } },
-    { "id": "di-lixao", "order": 10, "type": "story", "title": "Di Lixão", "opening": "Di lixão Di Lixão abriu os olhos", "pdfStartPage": 49, "pdfEndPage": 51,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A frase final, uma bronca doméstica, ganha peso de luto: a infância é interrompida no meio da brincadeira.",
+          "As balas são comparadas a flores malditas, retomando a figurinha-flor."
+        ]
+      }
+    },
+    {
+      "id": "di-lixao",
+      "order": 10,
+      "type": "story",
+      "title": "Di Lixão",
+      "opening": "Di lixão Di Lixão abriu os olhos",
+      "pdfStartPage": 49,
+      "pdfEndPage": 51,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Di Lixão, quinze anos, morador de rua, acorda com um abscesso no dente, leva um chute do companheiro de marquise e lembra a mãe prostituta, assassinada, que ele diz não amar. Urina sangue, encolhe-se em posição de feto e morre. O rabecão recolhe o corpo às nove horas.",
-        "observe": ["A raiva contra a mãe esconde a falta dela: é dela que ele se lembra ao se encolher.", "O apelido, explicado só no fim, mostra como a cidade nomeia e descarta o menino."] } },
-    { "id": "lumbia", "order": 11, "type": "story", "title": "Lumbiá", "opening": "Lumbiá Lumbiá trocou rapidamente", "pdfStartPage": 52, "pdfEndPage": 54,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A raiva contra a mãe esconde a falta dela: é dela que ele se lembra ao se encolher.",
+          "O apelido, explicado só no fim, mostra como a cidade nomeia e descarta o menino."
+        ]
+      }
+    },
+    {
+      "id": "lumbia",
+      "order": 11,
+      "type": "story",
+      "title": "Lumbiá",
+      "opening": "Lumbiá Lumbiá trocou rapidamente",
+      "pdfStartPage": 52,
+      "pdfEndPage": 54,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Lumbiá vende flores e chicletes, sabe chorar para comover e, no Natal, só gosta do presépio, porque o Deus-menino é pobre como ele. Na antevéspera do Natal, entra escondido na loja do maior presépio da cidade, pega a imagem do Menino e foge; é atropelado e morre.",
-        "observe": ["O Deus-menino “só faltava ser negro como ele”: o menino se reconhece na imagem sagrada.", "O final em frases nominais curtas (“O sinal! O carro!”) imita a velocidade do acidente."] } },
-    { "id": "os-amores-de-kimba", "order": 12, "type": "story", "title": "Os amores de Kimbá", "opening": "Os amores de Kimbá Kimbá acordou", "pdfStartPage": 55, "pdfEndPage": 59,
-      "guide": { "editorialStatus": "needs_review",
-        "summary": "Zezinho, rebatizado Kimbá por um amigo rico, vive entre a favela da família e o mundo de Gustavo e Beth, com quem mantém um triângulo amoroso. Os três se apaixonam e não sabem o que fazer. Kimbá decide a morte: oferece veneno aos dois, bebe a sua dose e se deita entre eles.",
-        "observe": ["A narração passa pelos três pontos de vista (Kimbá, Beth, Gustavo), o que torna o triângulo simétrico.", "A dupla identidade (Zezinho/Kimbá) e a dupla vida (morro/apartamento) são o conflito central."] } },
-    { "id": "ei-ardoca", "order": 13, "type": "story", "title": "Ei, Ardoca", "opening": "Ei, Ardoca O barulhar seco", "pdfStartPage": 60, "pdfEndPage": 61,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O Deus-menino “só faltava ser negro como ele”: o menino se reconhece na imagem sagrada.",
+          "O final em frases nominais curtas (“O sinal! O carro!”) imita a velocidade do acidente."
+        ]
+      }
+    },
+    {
+      "id": "os-amores-de-kimba",
+      "order": 12,
+      "type": "story",
+      "title": "Os amores de Kimbá",
+      "opening": "Os amores de Kimbá Kimbá acordou",
+      "pdfStartPage": 55,
+      "pdfEndPage": 59,
+      "guide": {
+        "editorialStatus": "published",
+        "summary": "Zezinho, rebatizado Kimbá por Gustavo, um amigo rico, vive entre a favela da família e o mundo de Gustavo e Beth. Beth ama Kimbá, Kimbá ama Beth e Gustavo ama Kimbá; a intimidade sexual dos três não resolve essa assimetria nem a desigualdade de classe e raça. Após uma conversa conjunta, Kimbá decide a morte: oferece as doses aos dois, bebe a sua e se deita entre eles. A cena final realiza um pacto destrutivo, sem apresentá-lo como solução desejável.",
+        "observe": [
+          "A narração se aproxima de Kimbá, Beth e Gustavo, mas as perspectivas não tornam o triângulo simétrico: o desejo de cada um tem direção distinta, e dinheiro, fama e trabalho são distribuídos desigualmente.",
+          "A dupla identidade Zezinho/Kimbá e a circulação morro/apartamento articulam pertencimento racial e social. O novo nome, dado pelo amigo, não elimina o conflito de ser vários para corresponder aos outros."
+        ]
+      }
+    },
+    {
+      "id": "ei-ardoca",
+      "order": 13,
+      "type": "story",
+      "title": "Ei, Ardoca",
+      "opening": "Ei, Ardoca O barulhar seco",
+      "pdfStartPage": 60,
+      "pdfEndPage": 61,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Ardoca, que nasceu e cresceu no trem do subúrbio e nunca se acostumou a ele, entra num vagão e escorrega até o chão. Os passageiros o acham bêbado. Um homem o leva para a plataforma gritando “Ei, Ardoca!” e o assalta. Só no fim o leitor sabe que Ardoca tinha tomado veneno para morrer no trem.",
-        "observe": ["O título é a fala do falso amigo: o chamado afetuoso é a senha do roubo.", "A revelação final (o veneno) reorganiza o conto inteiro, como em “Os amores de Kimbá”."] } },
-    { "id": "a-gente-combinamos-de-nao-morrer", "order": 14, "type": "story", "title": "A gente combinamos de não morrer", "opening": "A gente combinamos de não morrer", "pdfStartPage": 62, "pdfEndPage": 68,
-      "guide": { "editorialStatus": "needs_review",
-        "summary": "Três vozes se alternam sem aviso: Dorvi, jovem do tráfico que vai matar quem o traiu e sabe que será morto; Bica, sua companheira, mãe de um bebê, que escreve; e Dona Esterlinda, mãe de Bica, que se refugia nas novelas e perdeu o filho Idago. O pacto dos meninos de “não morrer” vira às avessas. Bica conclui que não morrer nem sempre é viver, e escreve.",
-        "observe": ["A concordância “a gente combinamos” é registro coletivo e oral, não erro da autora.", "Bica, que escreve, funciona como figura da escritora dentro do livro; a frase “Escrever é uma maneira de sangrar” é citada por ela."] } },
-    { "id": "ayoluwa", "order": 15, "type": "story", "title": "Ayoluwa, a alegria do nosso povo", "opening": "Ayoluwa, a alegria do nosso povo", "pdfStartPage": 69, "pdfEndPage": 71,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O título é a fala do falso amigo: o chamado afetuoso é a senha do roubo.",
+          "A revelação final (o veneno) reorganiza o conto inteiro, como em “Os amores de Kimbá”."
+        ]
+      }
+    },
+    {
+      "id": "a-gente-combinamos-de-nao-morrer",
+      "order": 14,
+      "type": "story",
+      "title": "A gente combinamos de não morrer",
+      "opening": "A gente combinamos de não morrer",
+      "pdfStartPage": 62,
+      "pdfEndPage": 68,
+      "guide": {
+        "editorialStatus": "published",
+        "summary": "Três vozes de primeira pessoa se alternam, nem sempre identificadas por nome: Dorvi, jovem do tráfico que vai matar quem o traiu e sabe que será morto; Bica, sua companheira, mãe de um bebê, que escreve; e Dona Esterlinda, mãe de Bica, que se refugia nas novelas e perdeu o filho Idago. O pacto dos meninos de “não morrer” vira às avessas. Bica conclui que não morrer nem sempre é viver, e escreve.",
+        "observe": [
+          "A concordância “a gente combinamos” é registro coletivo e oral, não erro da autora.",
+          "Bica narra sua prática de escrita e pode ser interpretada como figura da elaboração literária. Essa função não a identifica biograficamente com Evaristo: personagem, narradora e autora são instâncias diferentes. As falas citadas e os travessões também participam da montagem."
+        ]
+      }
+    },
+    {
+      "id": "ayoluwa",
+      "order": 15,
+      "type": "story",
+      "title": "Ayoluwa, a alegria do nosso povo",
+      "opening": "Ayoluwa, a alegria do nosso povo",
+      "pdfStartPage": 69,
+      "pdfEndPage": 71,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Narrado por um “nós” coletivo, o conto descreve um povo em que tudo minguava: os velhos pediam a morte, os jovens se matavam, nenhuma criança nascia. Bamidele, a esperança, anuncia uma gravidez; a parteira Omolara a acolhe; nasce Ayoluwa, a alegria, e todos se sentem parindo. A vida recomeça, sem promessa de salvação.",
-        "observe": ["Cada personagem tem nome com significado declarado no texto (Bamidele, a esperança; Omolara, a que nasceu no tempo certo).", "O tom é de fábula ou mito, diferente dos contos urbanos anteriores, e fecha o livro com nascimento."] } }
+        "observe": [
+          "Cada personagem tem nome com significado declarado no texto (Bamidele, a esperança; Omolara, a que nasceu no tempo certo).",
+          "O tom é de fábula ou mito, diferente dos contos urbanos anteriores, e fecha o livro com nascimento."
+        ]
+      }
+    }
   ],
   "modules": [
-    { "id": "comece-aqui", "moduleType": "comece_aqui", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Olhos d’água** (2014) reúne quinze contos de Conceição Evaristo (nascida em 1946, em Belo Horizonte). Quase todos se passam entre pessoas negras e pobres de favelas, ruas e subúrbios: mães, filhas, avós, amantes, meninos de rua, jovens do tráfico, trabalhadores. A violência — policial, doméstica, sexual, racial — é constante, e muitos contos terminam em morte. Mas o livro abre com a busca da cor dos olhos da mãe e fecha com o nascimento de uma criança.\n\n**Por que importa para a Unicamp.** A banca pode cobrar a representação da mulher negra, a infância interrompida, a relação entre violência e afeto, e a linguagem: neologismos (gozo-pranto, coragemedo), repetições, oralidade (“a gente combinamos”). É também uma boa obra para comparar com *Canção para ninar menino grande*, da mesma autora, que está na lista da Fuvest.\n\n**Como ler.** Em cada conto, observe quem é o centro (quase sempre uma mulher ou uma criança), como o narrador se aproxima do pensamento da personagem, e o que acontece no último parágrafo — muitos contos guardam a revelação para a última linha." },
-    { "id": "analise-integral", "moduleType": "analise_integral", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-cor-olhos", "ev-filha-pergunta", "ev-gozo-dor", "ev-ana-morte", "ev-duzu-morte-vida", "ev-querenca", "ev-maria-vida", "ev-maria-recado", "ev-natalina-quarta", "ev-natalina-limites", "ev-direito-amar", "ev-duas-iguais", "ev-luamanda-dignidade", "ev-cida-tempo", "ev-zaita-balas", "ev-zaita-final", "ev-lixao-feto", "ev-lumbia-negro", "ev-kimba-ser", "ev-ardoca", "ev-nao-morrer", "ev-fios-ferro", "ev-sangrar", "ev-ayoluwa-cruz", "ev-ayoluwa-olho"], "sourceRefs": [],
-      "markdown": "## Moldura: da mãe à criança que nasce\n\nO livro abre com uma narradora que não se lembra da cor dos olhos da mãe e descobre que eram “cor de olhos d’água” (p. 13); no último parágrafo do conto, a própria filha lhe faz a pergunta. Fecha com “Ayoluwa, a alegria do nosso povo”, em que uma comunidade inteira, depois de muitas mortes, recebe uma criança. Entre essas duas pontas, os contos mostram mortes de mulheres, crianças e jovens. Uma leitura mais básica diria que o livro é pessimista. Uma leitura mais sofisticada nota a moldura: a dor está no meio, mas a transmissão entre gerações e o nascimento abrem e fecham o volume. O próprio fim do livro recusa a redenção fácil: Ayoluwa “veio não com a promessa da salvação, mas também não veio para morrer na cruz” (p. 71).\n\n## Mulheres no centro\n\nQuase todos os contos são centrados em mulheres negras, de idades diferentes: a menina (Zaíta), a adolescente (Natalina, Querença), a jovem (Ana Davenga, Cida), a madura (Luamanda, Salinda), a velha (Duzu). O conjunto mostra violências que se repetem — a polícia que mata Ana Davenga grávida (p. 19), o linchamento de Maria no ônibus (p. 26), o estupro de Natalina (p. 31), a ferida que um ex-companheiro faz em Luamanda (p. 39) — mas também desejo, escolha e invenção. Natalina decide quais filhos quer; Salinda ama uma mulher e enfrenta o marido; Luamanda não se envergonha do narcisismo, porque é com ele que “compunha e recompunha toda a sua dignidade” (p. 39); Cida para de correr e decide “dar um tempo para ela” (p. 44).\n\n## Afeto e violência no mesmo gesto\n\nO detalhe formal que muda a interpretação é a fusão de opostos em palavras compostas: “gozo-pranto”, “coragemedo”, “viver-morrer”. Em “Ana Davenga”, a frase “Era tudo tão doce, tão gozo, tão dor!” (p. 15) resume o casal. Os finais repetem essa fusão: a festa de aniversário termina em metralhada; a frase de bronca de Naíta (“Zaíta, você esqueceu de guardar os brinquedos!”, p. 48) vira lamento fúnebre; o chamado afetuoso “Ei, Ardoca!” é a senha do assalto (p. 61).\n\n## Infância interrompida\n\nZaíta, Di Lixão e Lumbiá morrem crianças. O narrador não comenta: descreve. Em “Zaíta…”, as balas “desabrochavam como flores malditas” (p. 48), retomando a figurinha-flor que a menina procurava. Di Lixão morre encolhido “até ganhar a posição de feto” (p. 49). Lumbiá ama o presépio porque o Deus-menino é pobre como ele e “só faltava ser negro como ele” (p. 53); morre atropelado com a imagem nos braços.\n\n## Vozes e linguagem\n\nA maior parte dos contos é narrada em terceira pessoa muito próxima da personagem, com discurso indireto livre: o pensamento dela entra na narração sem aspas (“Onde estava Davenga?”). “Olhos d’água” é em primeira pessoa; “Ayoluwa”, num “nós” coletivo. “A gente combinamos de não morrer” é o ponto alto da experimentação: três vozes — Dorvi, Bica e Dona Esterlinda — se alternam sem marcação, e o leitor descobre quem fala pelo conteúdo. O título usa concordância não padrão. O erro comum aqui seria chamar isso de *erro de português*: é a fala coletiva dos meninos, e a forma plural do verbo faz do pacto uma decisão de grupo.\n\n## Escrever para sangrar\n\nBica, que escreve desde pequena, cita o verso “Escrever é uma maneira de sangrar” e acrescenta: “e de muito sangrar, muito e muito...” (p. 68). Ela também diz que “não morrer, nem sempre é viver” (p. 68) e que a mãe “sempre costurou a vida com fios de ferro” (p. 68). Um crítico poderia interpretar Bica como figura da própria autora dentro do livro: a mulher negra que transforma em escrita a violência que a cerca. A autora chama esse projeto, em outros textos, de *escrevivência*; o termo não aparece neste volume e não foi conferido em fonte para este dossiê.\n\n## Religiosidade afro-brasileira e ancestralidade\n\nOxum (p. 13), as Yabás, os Orixás, os nomes africanos de “Ayoluwa” e o Erê de “Lumbiá” situam os contos numa tradição afro-brasileira. Em “Duzu-Querença”, a avó morre lembrando “Vó Alafaia, Vô Kiliã, Tia Bambene” (p. 23), e a neta herda os sonhos dela. No conto de Kimbá, a avó Lidumira é filha do Ventre Livre (p. 58): a história da escravidão está a duas gerações dos personagens.\n\n## A Unicamp poderia transformar essa leitura em uma questão discursiva assim\n\n*Em “A gente combinamos de não morrer”, Bica afirma que “não morrer, nem sempre é viver”. Explique a frase com base no pacto dos meninos e mostre como a forma do conto (alternância de vozes) contribui para esse sentido.*" },
-    {"id": "critica-debate", "moduleType": "critica_debate", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-ayoluwa-olho", "ev-nao-morrer"], "sourceRefs": [], "markdown": "**Camadas de evidência.** Os cartões trazem trechos localizados no PDF; guias e análise são síntese própria. O prefácio e a introdução da edição não foram usados. O conceito de escrevivência é mencionado como contexto, sem fonte conferida, e nenhuma fonte acadêmica foi lida.\n\n**Hipóteses em confronto.** O livro pode ser lido como registro de violências (mortes de Ana Davenga, Maria, Zaíta, Di Lixão, Lumbiá) ou como afirmação de vida, pela moldura que abre nos olhos da mãe e fecha num nascimento: “enquanto um olho chora, o outro espia o tempo procurando a solução” (p. 71). A concordância de “A gente combinamos de não morrer” pode ser lida como erro ou como marca de fala coletiva; a segunda leitura se apoia no conto.\n\n**Limites.** Pesquisa pendente: estudos sobre a autora, a escrevivência e o conto afro-brasileiro, citados com página quando lidos."},
-    {"id": "fuvest", "moduleType": "fuvest", "board": "FUVEST", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [], "markdown": "**Treino de transferência; a obra não está na lista FUVEST 2027, mas *Canção para ninar menino grande*, da mesma autora, está.**\n\nCompare a voz narrativa: escuta e invenção na *Canção*, discurso indireto livre e polifonia em *Olhos d’água*."},
-    {"id": "unicamp", "moduleType": "unicamp", "board": "UNICAMP", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-gozo-dor", "ev-zaita-final"], "sourceRefs": [], "markdown": "**Preparação para a Unicamp/Comvest; não é questão oficial nem resposta esperada.**\n\nNa objetiva, observe o último parágrafo de cada conto: muitos guardam a revelação para a última linha. Distrator comum: tratar a linguagem não padrão como descuido.\n\nNa discursiva, use a fusão de afeto e violência com evidência: “Era tudo tão doce, tão gozo, tão dor!” (p. 15) e o grito de Naíta (“Zaíta, você esqueceu de guardar os brinquedos!”, p. 48)."},
-    {"id": "questoes", "moduleType": "questoes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-cor-olhos", "ev-natalina-quarta", "ev-nao-morrer", "ev-maria-recado", "ev-ana-morte", "ev-ayoluwa-cruz"], "sourceRefs": [], "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. UNICAMP, objetiva, média.** Em “A cor dos olhos de minha mãe era cor de olhos d’água.” (p. 13), a resposta à pergunta que move o conto:\nA) identifica uma cor precisa.\nB) transforma a cor em imagem do pranto e da profundidade da mãe.\nC) revela que a narradora esqueceu a mãe.\nD) descreve uma doença.\nE) critica a mãe.\n\n**2. UNICAMP, objetiva, difícil.** Em “Era a sua quarta gravidez, e o seu primeiro filho.” (p. 27), o paradoxo:\nA) indica erro de contagem.\nB) separa gravidez de maternidade escolhida.\nC) refere-se a gêmeos.\nD) mostra que Natalina adotou uma criança.\nE) é dito pela parteira.\n\n**3. UNICAMP, discursiva, difícil.** a) Explique a frase “Eu sei que não morrer, nem sempre é viver.” (p. 68) a partir do pacto dos meninos. b) Mostre como a alternância de vozes do conto contribui para esse sentido.\n\n**4. Discursiva, muito difícil.** Compare a morte de Maria no ônibus (p. 26) com a de Ana Davenga (p. 19). Que violências diferentes cada conto expõe?\n\n**5. Comparação, muito difícil.** O livro abre com uma filha procurando a cor dos olhos da mãe e fecha com o nascimento de Ayoluwa. Interprete a moldura usando “ela veio não com a promessa da salvação, mas também não veio para morrer na cruz” (p. 71)."},
-    {"id": "revisao-ativa", "moduleType": "revisao_ativa", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-zaita-balas", "ev-ayoluwa-olho"], "sourceRefs": [], "markdown": "Reconstrua sem consulta: os quinze contos em três grupos (mulheres; crianças e meninos; vozes coletivas) e um desfecho-âncora de cada.\n\n**Factual:** como morre Zaíta? Quem são as três vozes de “A gente combinamos de não morrer”? Quem nasce no último conto?\n\n**Formal:** onde aparecem neologismos (gozo-pranto, coragemedo)? Que conto é narrado por um “nós”?\n\n**Interpretativo:** o livro é de morte ou de vida? Justifique com dois contos.\n\n**24 horas:** mapa. **7 dias:** um conto novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos."},
-    { "id": "fontes", "moduleType": "fontes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Edição usada:** Conceição Evaristo, *Olhos d’água*. Rio de Janeiro: Pallas / Fundação Biblioteca Nacional, 2016, 1ª ed., 3ª reimpr. (dados da ficha catalográfica, p. 4-5). As páginas citadas são as do PDF usado, com 83 páginas.\n\n**Procedência do arquivo:** o PDF é uma cópia distribuída por sites de download (aviso “Le Livros” na p. 3, “estradadoslivros” na p. 72), não um arquivo da editora; as p. 74-83 são propaganda de outros livros. Antes de publicar, conferir as citações num exemplar da Pallas.\n\n**Paratextos não usados:** o prefácio de Heloisa Toller Gomes (p. 7-8) e a introdução de Jurema Werneck (p. 9-10) são leituras críticas que acompanham a edição; não foram usados neste dossiê.\n\n**Grafias do PDF:** o título do décimo conto aparece como “Di lixão”, e o prefácio escreve “Quimbá” onde o conto escreve “Kimbá”. O dossiê segue os títulos dos próprios contos.\n\n**Lista oficial:** obra exigida pela Unicamp/Comvest para o ciclo 2027, na íntegra.\n\n**Crítica:** nenhuma fonte crítica foi lida. O conceito de escrevivência é mencionado como contexto, sem fonte conferida. As análises são síntese fundamentada no texto, com página." }
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Olhos d’água** (2014) reúne quinze contos de Conceição Evaristo (nascida em 1946, em Belo Horizonte). Quase todos se passam entre pessoas negras e pobres de favelas, ruas e subúrbios: mães, filhas, avós, amantes, meninos de rua, jovens do tráfico, trabalhadores. A violência — policial, doméstica, sexual, racial — é constante, e muitos contos terminam em morte. Mas o livro abre com a busca da cor dos olhos da mãe e fecha com o nascimento de uma criança.\n\n**Por que importa para a Unicamp.** A banca pode cobrar a representação da mulher negra, a infância interrompida, a relação entre violência e afeto, e a linguagem: neologismos (gozo-pranto, coragemedo), repetições, oralidade (“a gente combinamos”). É também uma boa obra para comparar com *Canção para ninar menino grande*, da mesma autora, que está na lista da Fuvest.\n\n**Como ler.** Em cada conto, observe quem é o centro (quase sempre uma mulher ou uma criança), como o narrador se aproxima do pensamento da personagem, e o que acontece no último parágrafo — muitos contos guardam a revelação para a última linha.",
+      "reviewedAt": "2026-10-07T05:03:23Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-olhos-dagua"
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-cor-olhos",
+        "ev-filha-pergunta",
+        "ev-gozo-dor",
+        "ev-ana-morte",
+        "ev-duzu-morte-vida",
+        "ev-querenca",
+        "ev-maria-vida",
+        "ev-maria-recado",
+        "ev-natalina-quarta",
+        "ev-natalina-limites",
+        "ev-direito-amar",
+        "ev-duas-iguais",
+        "ev-luamanda-dignidade",
+        "ev-cida-tempo",
+        "ev-zaita-balas",
+        "ev-zaita-final",
+        "ev-lixao-feto",
+        "ev-lumbia-negro",
+        "ev-kimba-ser",
+        "ev-ardoca",
+        "ev-nao-morrer",
+        "ev-fios-ferro",
+        "ev-sangrar",
+        "ev-ayoluwa-cruz",
+        "ev-ayoluwa-olho"
+      ],
+      "sourceRefs": [
+        "olhos-melo-godoy-2016",
+        "olhos-evaristo-2009",
+        "olhos-gomes-prefacio",
+        "olhos-werneck-introducao"
+      ],
+      "markdown": "## Moldura: da mãe à criança que nasce\n\nO livro abre com uma narradora que não se lembra da cor dos olhos da mãe e descobre que eram “cor de olhos d’água” (p. 13); no último parágrafo do conto, a própria filha lhe faz a pergunta. Fecha com “Ayoluwa, a alegria do nosso povo”, em que uma comunidade inteira, depois de muitas mortes, recebe uma criança. Entre essas duas pontas, os contos mostram mortes de mulheres, crianças e jovens. A recorrência das mortes convive com uma moldura de continuidade: a dor está no meio, mas a transmissão entre gerações e o nascimento abrem e fecham o volume. O próprio fim do livro recusa a redenção fácil: Ayoluwa “veio não com a promessa da salvação, mas também não veio para morrer na cruz” (p. 71).\n\n## Mulheres no centro\n\nQuase todos os contos são centrados em mulheres negras, de idades diferentes: a menina (Zaíta), a adolescente (Natalina, Querença), a jovem (Ana Davenga, Cida), a madura (Luamanda, Salinda), a velha (Duzu). O conjunto mostra violências que se repetem — a polícia que mata Ana Davenga grávida (p. 19), o linchamento de Maria no ônibus (p. 26), o estupro de Natalina (p. 31), a ferida que um ex-companheiro faz em Luamanda (p. 39) — mas também desejo, escolha e invenção. Natalina decide quais filhos quer; Salinda ama uma mulher e enfrenta o marido; Luamanda não se envergonha do narcisismo, porque é com ele que “compunha e recompunha toda a sua dignidade” (p. 39); Cida para de correr e decide “dar um tempo para ela” (p. 44).\n\n## Afeto e violência no mesmo gesto\n\nO detalhe formal que muda a interpretação é a fusão de opostos em palavras compostas: “gozo-pranto”, “coragemedo”, “viver-morrer”. Em “Ana Davenga”, a frase “Era tudo tão doce, tão gozo, tão dor!” (p. 15) resume o casal. Os finais repetem essa fusão: a festa de aniversário termina em metralhada; a frase de bronca de Naíta (“Zaíta, você esqueceu de guardar os brinquedos!”, p. 48) vira lamento fúnebre; o chamado afetuoso “Ei, Ardoca!” é a senha do assalto (p. 61).\n\n## Infância interrompida\n\nZaíta, Di Lixão e Lumbiá morrem crianças. As narrações aproximam o leitor das sensações e dos pensamentos dos meninos e recorrem a avaliações e imagens. A violência se torna sensível pela focalização e pela linguagem, sem uma moral explicativa padronizada. Em “Zaíta…”, as balas “desabrochavam como flores malditas” (p. 48), retomando a figurinha-flor que a menina procurava. Di Lixão morre encolhido “até ganhar a posição de feto” (p. 49). Lumbiá ama o presépio porque o Deus-menino é pobre como ele e “só faltava ser negro como ele” (p. 53); morre atropelado com a imagem nos braços.\n\n## Vozes e linguagem\n\nA maior parte dos contos é narrada em terceira pessoa muito próxima da personagem, com discurso indireto livre: o pensamento dela entra na narração sem aspas (“Onde estava Davenga?”). “Olhos d’água” é em primeira pessoa; “Ayoluwa”, num “nós” coletivo. “A gente combinamos de não morrer” é o ponto alto da experimentação: três vozes de primeira pessoa — Dorvi, Bica e Dona Esterlinda — se alternam sem identificação nominal constante. O conteúdo, os vínculos familiares, as escolhas sintáticas e algumas marcas de fala ajudam o leitor a reconstruir quem fala; isso não equivale à ausência absoluta de travessões ou de indicações narrativas. O título usa concordância não padrão. O erro comum aqui seria chamar isso de *erro de português*: é a fala coletiva dos meninos, e a forma plural do verbo faz do pacto uma decisão de grupo.\n\n## Escrever para sangrar\n\nBica, que escreve desde pequena, cita o verso “Escrever é uma maneira de sangrar” e acrescenta: “e de muito sangrar, muito e muito...” (p. 68). Ela também diz que “não morrer, nem sempre é viver” (p. 68) e que a mãe “sempre costurou a vida com fios de ferro” (p. 68). Como síntese interpretativa deste dossiê, Bica pode ser lida como figura da elaboração literária: escreve palavras, inventa combinações e deseja contagiar de esperança outras bocas. Isso não a identifica com a autora. Melo e Godoy (2016, p. 25–28 e 34–39) mobilizam a escrevivência para pensar memória, ancestralidade e subjetividades coletivas a partir do conto-título. Evaristo (2009, p. 18–24) discute a relação entre experiência negra feminina e invenção do ponto de vista, mas não oferece nesse artigo uma definição literal do termo. Essas duas leituras devem permanecer atribuídas a suas fontes.\n\n## Religiosidade afro-brasileira e ancestralidade\n\nOxum (p. 13), as Yabás, os Orixás, os nomes africanos de “Ayoluwa” e o Erê de “Lumbiá” situam os contos numa tradição afro-brasileira. Em “Duzu-Querença”, a avó morre lembrando “Vó Alafaia, Vô Kiliã, Tia Bambene” (p. 23), e a neta herda os sonhos dela. No conto de Kimbá, a avó Lidumira é filha do Ventre Livre (p. 58): a história da escravidão está a duas gerações dos personagens.\n\n## A Unicamp poderia transformar essa leitura em uma questão discursiva assim\n\n*Em “A gente combinamos de não morrer”, Bica afirma que “não morrer, nem sempre é viver”. Explique a frase com base no pacto dos meninos e mostre como a forma do conto (alternância de vozes) contribui para esse sentido.*\n\n## Focalização, assimetria e agência: síntese interpretativa\n\nA interioridade das personagens impede reduzir o conjunto a uma série de notícias sobre violência. Em *Maria* (PDF p. 24–26), o recado do pai ao filho reaparece no desfecho: o leitor conhece a ligação afetiva que os passageiros ignoram. A acusação coletiva transforma a ausência de roubo numa falsa prova de cumplicidade. O conto permite analisar o funcionamento dessa inferência racista e sua materialização no linchamento, sem confundir a acusação das personagens com a posição narrativa.\n\nEm *Quantos filhos Natalina teve?* (p. 27–31), o relato retorna da quarta gravidez às três anteriores. A organização retrospectiva faz a pergunta do título depender da perspectiva de Natalina. A personagem recusa a equação entre família, marido e felicidade que Tonho pressupõe; no episódio dos patrões, seu corpo ocupa o centro de uma transação assimétrica, mesmo quando não há pagamento. A quarta gravidez é assumida por decisão posterior à violência. Explicar essa distinção preserva a agência da personagem sem transformar o estupro em origem necessária ou benéfica da autonomia.\n\nEm *Os amores de Kimbá* (p. 55–59), a passagem entre três perspectivas expõe o desacordo: Beth e Gustavo disputam a centralidade de Kimbá, enquanto ele teme assumir seu sentimento pela mulher e avalia a proposta de abandonar o emprego e a favela. A mudança de focalização distribui informação, não igualdade. A possibilidade de acesso ao conforto convive com a dependência dos parceiros; a referência à avó filha do Ventre Livre insere esse conflito numa história familiar de trabalho racializado. O pacto final deve ser analisado como desenlace trágico construído pela narrativa, jamais como destino imposto a todos os amores dissidentes.\n\n## Montagem de vozes e continuidade entre gerações\n\nEm *A gente combinamos de não morrer* (p. 62–68), televisão, canção, fala familiar e primeira pessoa formam uma montagem. Dona Esterlinda distingue o mundo da novela da violência próxima; Bica critica a fuga oferecida pela tela, mas reconhece que a mãe conhece essa diferença. Esse reconhecimento evita tratar a mãe apenas como alienada. A passagem da arma e da ameaça para o leite que Bica compartilha com outras crianças põe em relação violência e cuidado coletivo. A escrita aparece junto à alimentação: falar, narrar e nutrir são possibilidades de relação sob condições de risco.\n\nA moldura do conto-título e de *Ayoluwa* (p. 11–13 e 69–71) não cancela os finais mortais. Ela faz a memória da mãe chegar à filha e situa o nascimento como tarefa de uma comunidade. A esperança final depende de persistir na procura de saídas, enquanto o luto continua. Essa é uma síntese própria apoiada nos contos; o ritornelo descrito por Melo e Godoy e a leitura de denúncia e celebração proposta por Gomes oferecem ferramentas distintas para sustentá-la, sem impor uma fórmula única às quinze histórias.",
+      "reviewedAt": "2026-10-07T05:03:23Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-olhos-dagua"
+    },
+    {
+      "id": "critica-debate",
+      "moduleType": "critica_debate",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-ayoluwa-olho",
+        "ev-nao-morrer"
+      ],
+      "sourceRefs": [
+        "olhos-melo-godoy-2016",
+        "olhos-evaristo-2009",
+        "olhos-gomes-prefacio",
+        "olhos-werneck-introducao"
+      ],
+      "markdown": "## Evidência textual, crítica documentada e interpretação\n\nOs cartões reproduzem trechos mínimos localizados no PDF. Os guias e as leituras comparativas são síntese interpretativa do dossiê. As fontes externas e os paratextos aparecem abaixo com autoria e recorte, sem assumir a voz dos narradores.\n\n## Repetição e subjetividade: Melo e Godoy\n\nHenrique Furtado de Melo e Maria Carolina de Godoy (2016, p. 25–28 e 34–39) leem a pergunta repetida do conto-título como **ritornelo**. A insistência reúne as lembranças e também desestabiliza a narradora, levando-a ao reencontro com a mãe. A pergunta final da filha permite pensar ancestralidade e produção coletiva de subjetividades. A abordagem é esquizoanalítica: ilumina uma operação formal do conto, sem demonstrar que todas as personagens sejam a mesma mulher ou que o livro inteiro tenha uma única voz.\n\n## Corpo vivido e ponto de vista: Evaristo\n\nEm *Literatura negra: uma poética de nossa afro-brasilidade* (2009, p. 18–24), Conceição Evaristo sustenta que a experiência de um corpo negro e feminino participa da invenção do ponto de vista e contesta estereótipos literários. É uma posição da escritora e pesquisadora, anterior ao volume. Ela ajuda a compreender a disputa pela representação das mulheres negras, mas não identifica a narradora de cada conto com a autora. O termo escrevivência é mobilizado pelo artigo de Melo e Godoy; não se atribui ao artigo de 2009 uma definição literal que não foi localizada nele.\n\n## Duas leituras da edição\n\nHeloisa Toller Gomes, no prefácio (PDF p. 7–8), enfatiza o equilíbrio entre denúncia e celebração e associa o estilhaçamento das vozes à precariedade das personagens. Jurema Werneck, na introdução (p. 9–10), enfatiza contar e nomear como ação política de apropriação e subversão. Elas convergem na ligação entre vida e palavra; a primeira privilegia a tessitura da ficção e a segunda a intervenção cultural. São leituras críticas da edição, não instruções que eliminem ambiguidades dos contos.\n\n## Síntese e limites\n\nA moldura olhos da mãe/nascimento de Ayoluwa sustenta ler continuidade da vida sem negar as mortes internas. Natalina, Salinda, Luamanda, Cida e Querença constroem escolhas diferentes sob coerções diferentes. Tratar todas apenas como vítimas apaga essas diferenças; tratar todas como heroínas invulneráveis apaga os custos e a violência. A leitura mais defensável precisa explicar a focalização, a imagem ou a montagem que o excerto efetivamente apresenta. A pesquisa não completa a matriz de teses e os quinze componentes de cada conto previstos pela habilidade avançada.",
+      "reviewedAt": "2026-10-07T05:03:23Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-olhos-dagua"
+    },
+    {
+      "id": "fuvest",
+      "moduleType": "fuvest",
+      "board": "FUVEST",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027"
+      ],
+      "markdown": "**Treino de transferência; a obra não está na lista FUVEST 2027, mas *Canção para ninar menino grande*, da mesma autora, está.**\n\nCompare a voz narrativa: escuta e invenção na *Canção*, discurso indireto livre e polifonia em *Olhos d’água*.\n\n**F.O.R.M.A., ferramenta didática autoral.** Na segunda fase: foco no verbo, recorte e quantidade; observação de uma passagem; recurso formal pertinente; mecanismo que produz o efeito; articulação ao conjunto ou à comparação pedida. Isso não é rubrica oficial de pontuação. Na primeira fase, teste cada alternativa contra a voz e as marcas do excerto, sem aceitar uma característica geral que não esteja nele.",
+      "reviewedAt": "2026-10-07T05:03:23Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-olhos-dagua"
+    },
+    {
+      "id": "unicamp",
+      "moduleType": "unicamp",
+      "board": "UNICAMP",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-gozo-dor",
+        "ev-zaita-final"
+      ],
+      "sourceRefs": [
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Preparação para a Unicamp/Comvest; não é questão oficial nem resposta esperada.**\n\nNa objetiva, observe o último parágrafo de cada conto: muitos guardam a revelação para a última linha. Distrator comum: tratar a linguagem não padrão como descuido.\n\nNa discursiva, use a fusão de afeto e violência com evidência: “Era tudo tão doce, tão gozo, tão dor!” (p. 15) e o grito de Naíta (“Zaíta, você esqueceu de guardar os brinquedos!”, p. 48).\n\n**F.O.N.T.E., ferramenta didática autoral.** Na segunda fase: fonte localizada; operação de cada subitem; núcleo formal; tensão interpretativa; explicação articulada. Responda os verbos separadamente e ligue o efeito à evidência, sem apenas recontar a trama. Na primeira fase, compare a alternativa ao texto e ao paratexto fornecidos. O protocolo não é espelho oficial nem previsão de incidência.",
+      "reviewedAt": "2026-10-07T05:03:23Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-olhos-dagua"
+    },
+    {
+      "id": "questoes",
+      "moduleType": "questoes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-cor-olhos",
+        "ev-natalina-quarta",
+        "ev-nao-morrer",
+        "ev-maria-recado",
+        "ev-ana-morte",
+        "ev-ayoluwa-cruz"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. UNICAMP, objetiva, média.** Em “A cor dos olhos de minha mãe era cor de olhos d’água.” (p. 13), a resposta à pergunta que move o conto:\n- A) identifica uma cor precisa.\n- B) transforma a cor em imagem do pranto e da profundidade da mãe.\n- C) revela que a narradora esqueceu a mãe.\n- D) descreve uma doença.\n- E) critica a mãe.\n\n**2. UNICAMP, objetiva, difícil.** Em “Era a sua quarta gravidez, e o seu primeiro filho.” (p. 27), o paradoxo:\n- A) indica erro de contagem.\n- B) separa gravidez de maternidade escolhida.\n- C) refere-se a gêmeos.\n- D) mostra que Natalina adotou uma criança.\n- E) é dito pela parteira.\n\n**3. UNICAMP, discursiva, difícil.** a) Explique a frase “Eu sei que não morrer, nem sempre é viver.” (p. 68) a partir do pacto dos meninos. b) Mostre como a alternância de vozes do conto contribui para esse sentido.\n\n**4. Discursiva, muito difícil.** Compare a morte de Maria no ônibus (p. 26) com a de Ana Davenga (p. 19). Que violências diferentes cada conto expõe?\n\n**5. Comparação, muito difícil.** O livro abre com uma filha procurando a cor dos olhos da mãe e fecha com o nascimento de Ayoluwa. Interprete a moldura usando “ela veio não com a promessa da salvação, mas também não veio para morrer na cruz” (p. 71).",
+      "reviewedAt": "2026-10-07T05:03:23Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-olhos-dagua"
+    },
+    {
+      "id": "revisao-ativa",
+      "moduleType": "revisao_ativa",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-zaita-balas",
+        "ev-ayoluwa-olho"
+      ],
+      "sourceRefs": [],
+      "markdown": "Reconstrua sem consulta: os quinze contos em três grupos (mulheres; crianças e meninos; vozes coletivas) e um desfecho-âncora de cada.\n\n**Factual:** como morre Zaíta? Quem são as três vozes de “A gente combinamos de não morrer”? Quem nasce no último conto?\n\n**Formal:** onde aparecem neologismos (gozo-pranto, coragemedo)? Que conto é narrado por um “nós”?\n\n**Interpretativo:** o livro é de morte ou de vida? Justifique com dois contos.\n\n**24 horas:** mapa. **7 dias:** um conto novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos.",
+      "reviewedAt": "2026-10-07T05:03:23Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-olhos-dagua"
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "olhos-melo-godoy-2016",
+        "olhos-evaristo-2009",
+        "olhos-gomes-prefacio",
+        "olhos-werneck-introducao",
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Edição usada:** Conceição Evaristo, *Olhos d’água*. Rio de Janeiro: Pallas / Fundação Biblioteca Nacional, 2016, 1ª ed., 3ª reimpr. (dados da ficha catalográfica, p. 4-5). As páginas citadas são as do PDF usado, com 83 páginas.\n\n**Procedência do arquivo:** o PDF é uma cópia distribuída por sites de download (aviso “Le Livros” na p. 3, “estradadoslivros” na p. 72), não um arquivo da editora; as p. 74-83 são propaganda de outros livros. As citações foram localizadas na camada de texto desta cópia; permanece pendente o cotejo integral com um exemplar da Pallas e a inspeção de eventuais diferenças editoriais ou marcas em imagem.\n\n**Paratextos críticos lidos:** o prefácio de Heloisa Toller Gomes (p. 7-8) e a introdução de Jurema Werneck (p. 9-10) são leituras críticas que acompanham a edição; foram lidos integralmente e são discutidos no módulo Crítica e debate, separados da voz dos contos.\n\n**Grafias do PDF:** o título do décimo conto aparece como “Di lixão”, e o prefácio escreve “Quimbá” onde o conto escreve “Kimbá”. O dossiê segue os títulos dos próprios contos.\n\n**Lista oficial:** obra exigida pela Unicamp/Comvest para o ciclo 2027, na íntegra.\n\n**Crítica documentada:** artigos de Melo e Godoy (2016) e de Evaristo (2009), além do prefácio de Gomes e da introdução de Werneck. Cada registro abaixo informa páginas efetivamente lidas, contribuição e limites. A escrevivência é tratada com a mediação teórica declarada, sem reduzir a ficção a autobiografia. As relações entre os contos e os exercícios são interpretação e elaboração autorais.\n\n**Alcance editorial:** edição de estudo compacta dos quinze contos. Não se declara completude da habilidade avançada: a matriz de duas teses, o aprofundamento de cada unidade em quinze componentes e o cotejo externo da edição permanecem por fazer.\n\n## Bibliografia comentada e leitura efetiva\n\n**MELO, Henrique Furtado de; GODOY, Maria Carolina de. Escrevivência e produção de subjetividades: reflexões em torno de Olhos d’água, de Conceição Evaristo. Signótica, v. 28, n. 1, p. 23–42, 2016. DOI: 10.5216/sig.v28i1.38912.**\n\n[Consultar fonte](https://revistas.ufg.br/sig/article/view/38912). Leitura efetiva: p. 23–41 (texto e referências; p. 42 sem texto extraído).\n\n**Leitura documentada:** A repetição interrogativa do conto-título funciona como ritornelo que reorganiza memória, ancestralidade e produção coletiva de subjetividades negras.\n\n**Contribuição:** Explica formalmente como a pergunta repetida desestabiliza e recompõe a narradora; permite fundamentar a escrevivência com a mediação teórica declarada.\n\n**Limites:** Recorte no conto-título, com esquizoanálise; não comprova a autobiografia de cada personagem nem substitui análise dos quinze contos. As falas de Evaristo citadas pelo artigo são fontes mediadas. O PDF possui DOI incompleto no cabeçalho; DOI confirmado no registro do periódico.\n\n**EVARISTO, Conceição. Literatura negra: uma poética de nossa afro-brasilidade. Scripta, v. 13, n. 25, p. 17–31, 2009.**\n\n[Consultar fonte](https://periodicos.pucminas.br/index.php/scripta/article/download/4365/4510). Leitura efetiva: p. 17–31, artigo integral.\n\n**Leitura documentada:** A experiência racial e de gênero do sujeito criador participa da construção do ponto de vista; a literatura negra contesta invisibilização e estereótipos.\n\n**Contribuição:** Fonte da própria escritora para distinguir corpo vivido, construção ficcional e modos de representar mulheres negras; também é o artigo usado no excerto da prova Unicamp 2026.\n\n**Limites:** Anterior ao volume Olhos d’água: não é análise dos quinze contos. O termo escrevivência não aparece no texto extraído; não atribuir ao artigo uma definição literal desse termo.\n\n**GOMES, Heloisa Toller. Prefácio. In: EVARISTO, Conceição. Olhos d’água. Rio de Janeiro: Pallas/Fundação Biblioteca Nacional, 2016, 1ª ed., 3ª reimpr.**\n\n[Consultar fonte](https://books.google.com/books?vid=ISBN9788534705974). Leitura efetiva: p. 7–8 do PDF fornecido, prefácio completo.\n\n**Leitura documentada:** Denúncia e celebração se equilibram por uma tessitura poética; a fragmentação das vozes em A gente combinamos de não morrer acompanha a precariedade das vidas.\n\n**Contribuição:** Fonte crítica da própria edição para forma narrativa, mulheres e comunidade; aproxima a metáfora dos fios de ferro do trabalho ficcional.\n\n**Limites:** Paginação da cópia convertida, não da edição impressa; prefácio não deve ser tratado como voz narrativa nem consenso obrigatório. A cópia traz Quimbá onde o conto escreve Kimbá. A URL leva à ficha bibliográfica do Google Books (Pallas, 2016, 116 páginas, ISBN 9788534705974), conferida nesta retomada; não comprova leitura on-line do prefácio ou da introdução. A leitura desses paratextos ocorreu no PDF fornecido. O catálogo não especifica a terceira reimpressão indicada na cópia.\n\n**WERNECK, Jurema. Introdução. In: EVARISTO, Conceição. Olhos d’água. Rio de Janeiro: Pallas/Fundação Biblioteca Nacional, 2016, 1ª ed., 3ª reimpr.**\n\n[Consultar fonte](https://books.google.com/books?vid=ISBN9788534705974). Leitura efetiva: p. 9–10 do PDF fornecido, introdução completa.\n\n**Leitura documentada:** Contar e nomear o mundo constituem uma ação de apropriação e subversão, figurada por Caliban, Iyalodê e Oxum.\n\n**Contribuição:** Contraponto ao registro exclusivo de vítimas: a palavra convoca presença e ação.\n\n**Limites:** Leitura político-cultural do paratexto; não autoriza identificar cada narradora com a autora nem apaga a especificidade formal de cada conto. Paginação da cópia convertida. A URL leva à ficha bibliográfica do Google Books (Pallas, 2016, 116 páginas, ISBN 9788534705974), conferida nesta retomada; não comprova leitura on-line do prefácio ou da introdução. A leitura desses paratextos ocorreu no PDF fornecido. O catálogo não especifica a terceira reimpressão indicada na cópia.\n\n**FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.**\n\n[Consultar fonte](https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/). Leitura efetiva: Corpo da notícia e listas anuais; conferência da lista de 2027.\n\n**Leitura documentada:** A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.\n\n**Contribuição:** Confirma a exigência oficial e distingue as listas dos diferentes anos.\n\n**Limites:** A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões.\n\n**FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.**\n\n[Consultar fonte](https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf). Leitura efetiva: PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.\n\n**Leitura documentada:** O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.\n\n**Contribuição:** Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.\n\n**Limites:** Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral.\n\n**Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.**\n\n[Consultar fonte](https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf). Leitura efetiva: PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.\n\n**Leitura documentada:** O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.\n\n**Contribuição:** Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.\n\n**Limites:** Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral.\n\n**Alcance desta publicação.** Primeira edição de estudo: texto primário, guias, passagens e síntese autoral revistos, com os recortes críticos acima. Não certifica a leitura integral dos estudos consultados parcialmente nem o aprofundamento integral da habilidade avançada. As unidades e agrupamentos seguem a edição e os limites declarados no percurso. A pesquisa não substitui a leitura da obra. As limitações do arquivo fornecido e da procedência permanecem válidas.",
+      "reviewedAt": "2026-10-07T05:03:23Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-olhos-dagua"
+    }
   ],
   "evidence": [
-    { "id": "ev-cor-olhos", "unitId": "olhos-dagua", "location": "“Olhos d’água”, p. 13", "quote": "A cor dos olhos de minha mãe era cor de olhos d’água.",
-      "context": "A narradora volta à cidade natal e vê a mãe chorando e sorrindo.", "formalDevice": "Resposta que repete a pergunta com uma imagem nova; aliteração.", "effect": "A cor não é uma cor: é o pranto, a água, a profundidade da mãe.", "wholeRelation": "Dá título ao livro e liga a mãe a Oxum, nas linhas seguintes.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-filha-pergunta", "unitId": "olhos-dagua", "location": "“Olhos d’água”, p. 13", "quote": "Mãe, qual é a cor tão úmida de seus olhos?",
-      "context": "Fala da filha da narradora, no último parágrafo.", "formalDevice": "Retomada da pergunta inicial por outra geração.", "effect": "A busca se transmite: a narradora agora é mãe e é olhada.", "wholeRelation": "Abre o tema da herança entre mulheres, que fecha o livro em “Ayoluwa”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-gozo-dor", "unitId": "ana-davenga", "location": "“Ana Davenga”, p. 15", "quote": "Era tudo tão doce, tão gozo, tão dor!",
-      "context": "Depois do sexo, Ana enxuga as lágrimas de Davenga, que chora no gozo.", "formalDevice": "Enumeração com substantivos usados como adjetivos.", "effect": "Prazer e dor ficam no mesmo plano.", "wholeRelation": "Antecipa o final, em que a festa vira morte.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-ana-morte", "unitId": "ana-davenga", "location": "“Ana Davenga”, p. 19", "quote": "que morrera ali na cama, metralhada, protegendo com as mãos um sonho de vida que ela trazia na barriga",
-      "context": "A polícia invade o barraco na madrugada depois da festa.", "formalDevice": "Contraste entre a violência (“metralhada”) e a imagem do “sonho de vida”.", "effect": "A morte atinge também o filho que ainda não nasceu.", "wholeRelation": "Mostra a violência policial que se repete em outros contos.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-duzu-morte-vida", "unitId": "duzu-querenca", "location": "“Duzu-Querença”, p. 22", "quote": "Habituou-se à morte como uma forma de vida.",
-      "context": "Resumo dos anos de Duzu nas zonas de prostituição.", "formalDevice": "Paradoxo.", "effect": "A violência vira cotidiano, quase natural.", "wholeRelation": "A neta Querença será quem recusa essa naturalização.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-querenca", "unitId": "duzu-querenca", "location": "“Duzu-Querença”, p. 23", "quote": "Era preciso reinventar a vida, encontrar novos caminhos.",
-      "context": "Querença, treze anos, vai ao velório da avó.", "formalDevice": "Discurso indireto livre.", "effect": "A herança da avó (o sonho, o voo) vira projeto.", "wholeRelation": "Mostra que o livro não termina na morte das personagens: há transmissão.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-maria-vida", "unitId": "maria", "location": "“Maria”, p. 25", "quote": "Maria estava com muito medo. Não dos assaltantes. Não da morte. Sim da vida.",
-      "context": "Durante o assalto no ônibus.", "formalDevice": "Gradação com negações e afirmação final.", "effect": "O medo não é do momento, mas do futuro dos filhos.", "wholeRelation": "Antecipa a ironia trágica: quem a mata são os passageiros.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-maria-recado", "unitId": "maria", "location": "“Maria”, p. 26", "quote": "Maria queria tanto dizer ao filho que o pai havia mandado um abraço, um beijo, um carinho.",
-      "context": "Última frase, depois do linchamento.", "formalDevice": "Repetição do recado do início.", "effect": "O conto termina no afeto que não chegou, não na violência.", "wholeRelation": "Exemplo dos finais que fundem ternura e morte.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-natalina-quarta", "unitId": "quantos-filhos-natalina-teve", "location": "“Quantos filhos Natalina teve?”, p. 27", "quote": "Era a sua quarta gravidez, e o seu primeiro filho.",
-      "context": "Abertura do conto.", "formalDevice": "Paradoxo que responde ao título.", "effect": "Separa gravidez de maternidade: filho é o que se escolhe.", "wholeRelation": "O conto inteiro explica a frase em quatro histórias.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-natalina-limites", "unitId": "quantos-filhos-natalina-teve", "location": "“Quantos filhos Natalina teve?”, p. 31", "quote": "Um filho que fora concebido nos frágeis limites da vida e da morte.",
-      "context": "Última frase: o filho do estupro, depois que Natalina matou o agressor.", "formalDevice": "Antítese vida/morte.", "effect": "O filho nasce da violência, mas é a escolha dela.", "wholeRelation": "Liga-se à fusão de opostos que atravessa o livro.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-direito-amar", "unitId": "beijo-na-face", "location": "“Beijo na face”, p. 32", "quote": "Não, não era a ostentação que aquele amor pedia. O amor pedia o direito de amar, somente.",
-      "context": "Salinda reflete sobre o amor vivido em segredo.", "formalDevice": "Personificação do amor.", "effect": "O amor proibido é apresentado como direito, não como transgressão.", "wholeRelation": "Só no fim se revela que é um amor entre duas mulheres.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-duas-iguais", "unitId": "beijo-na-face", "location": "“Beijo na face”, p. 35", "quote": "o nítido rosto da amiga surgiu para afirmar a força de um amor entre duas iguais",
-      "context": "Salinda se olha no espelho depois de o marido descobrir tudo.", "formalDevice": "Espelho que mostra a outra.", "effect": "A identidade da amada é revelada como reflexo e semelhança.", "wholeRelation": "Fecha o conto com afirmação, não com derrota.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-luamanda-dignidade", "unitId": "luamanda", "location": "“Luamanda”, p. 39", "quote": "Não, ela não se envergonhava de seu narcisismo. Era com ele que ela compunha e recompunha toda a sua dignidade.",
-      "context": "Luamanda se olha no espelho, avó e ainda desejante.", "formalDevice": "Reavaliação de um termo negativo (narcisismo).", "effect": "O amor a si mesma é forma de resistência.", "wholeRelation": "Dialoga com os espelhos de “Beijo na face” e “Olhos d’água”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-cida-tempo", "unitId": "o-cooper-de-cida", "location": "“O cooper de Cida”, p. 44", "quote": "Ela ia dar um tempo para ela.",
-      "context": "Última frase, depois de ver o mar e faltar ao trabalho.", "formalDevice": "Expressão coloquial com sentido literal renovado.", "effect": "A pausa vira escolha e libertação.", "wholeRelation": "É um dos poucos contos sem morte: a ruptura é com o ritmo, não com a vida.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-zaita-balas", "unitId": "zaita-esqueceu-de-guardar-os-brinquedos", "location": "“Zaíta esqueceu de guardar os brinquedos”, p. 48", "quote": "Balas, balas e balas desabrochavam como flores malditas, ervas daninhas suspensas no ar.",
-      "context": "O tiroteio em que Zaíta é morta.", "formalDevice": "Comparação e repetição.", "effect": "A violência é dita com a imagem da flor que a menina procurava.", "wholeRelation": "Fecha o fio da figurinha-flor.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-zaita-final", "unitId": "zaita-esqueceu-de-guardar-os-brinquedos", "location": "“Zaíta esqueceu de guardar os brinquedos”, p. 48", "quote": "Zaíta, você esqueceu de guardar os brinquedos!",
-      "context": "Grito de Naíta ao encontrar a irmã morta.", "formalDevice": "Frase cotidiana em situação trágica.", "effect": "A bronca infantil vira lamento; a criança não tem palavras para a morte.", "wholeRelation": "Retoma o título e dá ao conto um final de impacto.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-lixao-feto", "unitId": "di-lixao", "location": "“Di Lixão”, p. 49", "quote": "E foi se encolhendo, se enroscando até ganhar a posição de feto.",
-      "context": "Depois de levar um chute do companheiro de marquise.", "formalDevice": "Gradação de gerúndios.", "effect": "A regressão física sugere a falta da mãe e a infância roubada.", "wholeRelation": "A posição se repete na morte, no fim do conto.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-lumbia-negro", "unitId": "lumbia", "location": "“Lumbiá”, p. 53", "quote": "pobre, só faltava ser negro como ele",
-      "context": "Lumbiá explica por que gosta do presépio.", "formalDevice": "Identificação do menino com o Deus-menino.", "effect": "Aponta, por falta, a branquitude da imagem sagrada.", "wholeRelation": "Prepara o roubo da imagem e a morte do menino.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-kimba-ser", "unitId": "os-amores-de-kimba", "location": "“Os amores de Kimbá”, p. 56", "quote": "Seria tão bom se ele pudesse ser só ele. Mas o que era ser ele? Era ser o Zezinho? Era ser o Kimbá?",
-      "context": "Kimbá desce o morro rumo ao trabalho.", "formalDevice": "Perguntas em discurso indireto livre.", "effect": "Expõe a divisão de identidade entre o morro e o mundo dos ricos.", "wholeRelation": "O conflito sem saída leva ao pacto de morte do fim.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-ardoca", "unitId": "ei-ardoca", "location": "“Ei, Ardoca”, p. 61", "quote": "Ardoca não tinha mais nada, nem a vida.",
-      "context": "Depois de ser assaltado na plataforma por quem fingia socorrê-lo.", "formalDevice": "Gradação que termina na vida.", "effect": "Prepara a revelação de que ele tinha tomado veneno.", "wholeRelation": "Mais um final que reorganiza o conto.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-nao-morrer", "unitId": "a-gente-combinamos-de-nao-morrer", "location": "“A gente combinamos de não morrer”, p. 68", "quote": "Eu sei que não morrer, nem sempre é viver.",
-      "context": "Bica pensa no pacto dos meninos.", "formalDevice": "Aforismo.", "effect": "Distingue sobreviver de viver.", "wholeRelation": "É a reflexão central do conto mais experimental do livro.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-fios-ferro", "unitId": "a-gente-combinamos-de-nao-morrer", "location": "“A gente combinamos de não morrer”, p. 68", "quote": "Minha mãe sempre costurou a vida com fios de ferro.",
-      "context": "Bica comenta a mãe, que se refugia nas novelas.", "formalDevice": "Metáfora da costura.", "effect": "A força da mãe é dura e resistente, não frágil.", "wholeRelation": "Dialoga com as muitas mães do livro.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-sangrar", "unitId": "a-gente-combinamos-de-nao-morrer", "location": "“A gente combinamos de não morrer”, p. 68", "quote": "Acrescento: e de muito sangrar, muito e muito",
-      "context": "Bica cita o verso “Escrever é uma maneira de sangrar”.", "formalDevice": "Citação seguida de ampliação.", "effect": "A escrita é apresentada como dor e testemunho.", "wholeRelation": "Bica funciona como figura da escritora dentro do livro.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-ayoluwa-cruz", "unitId": "ayoluwa", "location": "“Ayoluwa, a alegria do nosso povo”, p. 71", "quote": "ela veio não com a promessa da salvação, mas também não veio para morrer na cruz",
-      "context": "O narrador coletivo explica o que mudou com o nascimento.", "formalDevice": "Dupla negação com referência cristã.", "effect": "Recusa tanto o messianismo quanto o sacrifício.", "wholeRelation": "Fecha o livro com esperança sem ilusão.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-ayoluwa-olho", "unitId": "ayoluwa", "location": "“Ayoluwa, a alegria do nosso povo”, p. 71", "quote": "enquanto um olho chora, o outro espia o tempo procurando a solução",
-      "context": "Última frase do livro.", "formalDevice": "Antítese entre os dois olhos.", "effect": "Une luto e busca ativa.", "wholeRelation": "Retoma os olhos do primeiro conto e fecha a moldura.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" }
+    {
+      "id": "ev-cor-olhos",
+      "unitId": "olhos-dagua",
+      "location": "“Olhos d’água”, p. 13",
+      "quote": "A cor dos olhos de minha mãe era cor de olhos d’água.",
+      "context": "A narradora volta à cidade natal e vê a mãe chorando e sorrindo.",
+      "formalDevice": "Repetição da expressão cor dos olhos e deslocamento de uma categoria visual para a imagem de água e lágrimas.",
+      "effect": "A cor não é uma cor: é o pranto, a água, a profundidade da mãe.",
+      "wholeRelation": "Dá título ao livro e liga a mãe a Oxum, nas linhas seguintes.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-filha-pergunta",
+      "unitId": "olhos-dagua",
+      "location": "“Olhos d’água”, p. 13",
+      "quote": "Mãe, qual é a cor tão úmida de seus olhos?",
+      "context": "Fala da filha da narradora, no último parágrafo.",
+      "formalDevice": "Retomada da pergunta inicial por outra geração.",
+      "effect": "A busca se transmite: a narradora agora é mãe e é olhada.",
+      "wholeRelation": "Abre o tema da herança entre mulheres, que fecha o livro em “Ayoluwa”.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-gozo-dor",
+      "unitId": "ana-davenga",
+      "location": "“Ana Davenga”, p. 15",
+      "quote": "Era tudo tão doce, tão gozo, tão dor!",
+      "context": "Depois do sexo, Ana enxuga as lágrimas de Davenga, que chora no gozo.",
+      "formalDevice": "Enumeração com substantivos usados como adjetivos.",
+      "effect": "Prazer e dor ficam no mesmo plano.",
+      "wholeRelation": "Antecipa o final, em que a festa vira morte.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-ana-morte",
+      "unitId": "ana-davenga",
+      "location": "“Ana Davenga”, p. 19",
+      "quote": "que morrera ali na cama, metralhada, protegendo com as mãos um sonho de vida que ela trazia na barriga",
+      "context": "A polícia invade o barraco na madrugada depois da festa.",
+      "formalDevice": "Contraste entre a violência (“metralhada”) e a imagem do “sonho de vida”.",
+      "effect": "A morte atinge também o filho que ainda não nasceu.",
+      "wholeRelation": "Mostra a violência policial que se repete em outros contos.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-duzu-morte-vida",
+      "unitId": "duzu-querenca",
+      "location": "“Duzu-Querença”, p. 22",
+      "quote": "Habituou-se à morte como uma forma de vida.",
+      "context": "Resumo dos anos de Duzu nas zonas de prostituição.",
+      "formalDevice": "Paradoxo.",
+      "effect": "A violência vira cotidiano, quase natural.",
+      "wholeRelation": "A neta Querença será quem recusa essa naturalização.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-querenca",
+      "unitId": "duzu-querenca",
+      "location": "“Duzu-Querença”, p. 23",
+      "quote": "Era preciso reinventar a vida, encontrar novos caminhos.",
+      "context": "Querença, treze anos, vai ao velório da avó.",
+      "formalDevice": "Discurso indireto livre.",
+      "effect": "A herança da avó (o sonho, o voo) vira projeto.",
+      "wholeRelation": "Mostra que o livro não termina na morte das personagens: há transmissão.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-maria-vida",
+      "unitId": "maria",
+      "location": "“Maria”, p. 25",
+      "quote": "Maria estava com muito medo. Não dos assaltantes. Não da morte. Sim da vida.",
+      "context": "Durante o assalto no ônibus.",
+      "formalDevice": "Gradação com negações e afirmação final.",
+      "effect": "O medo não é do momento, mas do futuro dos filhos.",
+      "wholeRelation": "Antecipa a ironia trágica: quem a mata são os passageiros.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-maria-recado",
+      "unitId": "maria",
+      "location": "“Maria”, p. 26",
+      "quote": "Maria queria tanto dizer ao filho que o pai havia mandado um abraço, um beijo, um carinho.",
+      "context": "Última frase, depois do linchamento.",
+      "formalDevice": "Repetição do recado do início.",
+      "effect": "O conto termina no afeto que não chegou, não na violência.",
+      "wholeRelation": "Exemplo dos finais que fundem ternura e morte.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-natalina-quarta",
+      "unitId": "quantos-filhos-natalina-teve",
+      "location": "“Quantos filhos Natalina teve?”, p. 27",
+      "quote": "Era a sua quarta gravidez, e o seu primeiro filho.",
+      "context": "Abertura do conto.",
+      "formalDevice": "Paradoxo que responde ao título.",
+      "effect": "Na perspectiva de Natalina, distingue as quatro gestações da maternidade que ela reconhece como sua; não estabelece uma definição universal de filho nem transforma a violência sofrida em experiência desejável.",
+      "wholeRelation": "O conto inteiro explica a frase em quatro histórias.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-natalina-limites",
+      "unitId": "quantos-filhos-natalina-teve",
+      "location": "“Quantos filhos Natalina teve?”, p. 31",
+      "quote": "Um filho que fora concebido nos frágeis limites da vida e da morte.",
+      "context": "Última frase: o filho do estupro, depois que Natalina matou o agressor.",
+      "formalDevice": "Antítese vida/morte.",
+      "effect": "O filho é concebido na violência; o conto focaliza a decisão posterior de Natalina de assumi-lo sem os vínculos de dívida que marcaram as gestações anteriores. Essa decisão particular não redime o estupro.",
+      "wholeRelation": "Liga-se à fusão de opostos que atravessa o livro.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-direito-amar",
+      "unitId": "beijo-na-face",
+      "location": "“Beijo na face”, p. 32",
+      "quote": "Não, não era a ostentação que aquele amor pedia. O amor pedia o direito de amar, somente.",
+      "context": "Salinda reflete sobre o amor vivido em segredo.",
+      "formalDevice": "Personificação do amor.",
+      "effect": "O amor proibido é apresentado como direito, não como transgressão.",
+      "wholeRelation": "Só no fim se revela que é um amor entre duas mulheres.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-duas-iguais",
+      "unitId": "beijo-na-face",
+      "location": "“Beijo na face”, p. 35",
+      "quote": "o nítido rosto da amiga surgiu para afirmar a força de um amor entre duas iguais",
+      "context": "Salinda se olha no espelho depois de o marido descobrir tudo.",
+      "formalDevice": "Espelho que mostra a outra.",
+      "effect": "A identidade da amada é revelada como reflexo e semelhança.",
+      "wholeRelation": "Fecha o conto com afirmação, não com derrota.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-luamanda-dignidade",
+      "unitId": "luamanda",
+      "location": "“Luamanda”, p. 39",
+      "quote": "Não, ela não se envergonhava de seu narcisismo. Era com ele que ela compunha e recompunha toda a sua dignidade.",
+      "context": "Luamanda se olha no espelho, avó e ainda desejante.",
+      "formalDevice": "Reavaliação de um termo negativo (narcisismo).",
+      "effect": "O amor a si mesma é forma de resistência.",
+      "wholeRelation": "Dialoga com os espelhos de “Beijo na face” e “Olhos d’água”.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-cida-tempo",
+      "unitId": "o-cooper-de-cida",
+      "location": "“O cooper de Cida”, p. 44",
+      "quote": "Ela ia dar um tempo para ela.",
+      "context": "Última frase, depois de ver o mar e faltar ao trabalho.",
+      "formalDevice": "Expressão coloquial com sentido literal renovado.",
+      "effect": "A pausa vira escolha e libertação.",
+      "wholeRelation": "É um dos poucos contos sem morte: a ruptura é com o ritmo, não com a vida.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-zaita-balas",
+      "unitId": "zaita-esqueceu-de-guardar-os-brinquedos",
+      "location": "“Zaíta esqueceu de guardar os brinquedos”, p. 48",
+      "quote": "Balas, balas e balas desabrochavam como flores malditas, ervas daninhas suspensas no ar.",
+      "context": "O tiroteio em que Zaíta é morta.",
+      "formalDevice": "Comparação e repetição.",
+      "effect": "A violência é dita com a imagem da flor que a menina procurava.",
+      "wholeRelation": "Fecha o fio da figurinha-flor.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-zaita-final",
+      "unitId": "zaita-esqueceu-de-guardar-os-brinquedos",
+      "location": "“Zaíta esqueceu de guardar os brinquedos”, p. 48",
+      "quote": "Zaíta, você esqueceu de guardar os brinquedos!",
+      "context": "Grito de Naíta ao encontrar a irmã morta.",
+      "formalDevice": "Frase cotidiana em situação trágica.",
+      "effect": "A bronca infantil vira lamento; a criança não tem palavras para a morte.",
+      "wholeRelation": "Retoma o título e dá ao conto um final de impacto.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-lixao-feto",
+      "unitId": "di-lixao",
+      "location": "“Di Lixão”, p. 49",
+      "quote": "E foi se encolhendo, se enroscando até ganhar a posição de feto.",
+      "context": "Depois de levar um chute do companheiro de marquise.",
+      "formalDevice": "Gradação de gerúndios.",
+      "effect": "A regressão física sugere a falta da mãe e a infância roubada.",
+      "wholeRelation": "A posição se repete na morte, no fim do conto.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-lumbia-negro",
+      "unitId": "lumbia",
+      "location": "“Lumbiá”, p. 53",
+      "quote": "pobre, só faltava ser negro como ele",
+      "context": "Lumbiá explica por que gosta do presépio.",
+      "formalDevice": "Identificação do menino com o Deus-menino.",
+      "effect": "Aponta, por falta, a branquitude da imagem sagrada.",
+      "wholeRelation": "Prepara o roubo da imagem e a morte do menino.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-kimba-ser",
+      "unitId": "os-amores-de-kimba",
+      "location": "“Os amores de Kimbá”, p. 56",
+      "quote": "Seria tão bom se ele pudesse ser só ele. Mas o que era ser ele? Era ser o Zezinho? Era ser o Kimbá?",
+      "context": "Kimbá desce o morro rumo ao trabalho.",
+      "formalDevice": "Perguntas em discurso indireto livre.",
+      "effect": "Expõe a divisão de identidade entre o morro e o mundo dos ricos.",
+      "wholeRelation": "A divisão entre pertencimentos se combina com afetos assimétricos e dependência material; a cena final encena um pacto destrutivo, sem fazer da morte uma saída necessária para esse conflito.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-ardoca",
+      "unitId": "ei-ardoca",
+      "location": "“Ei, Ardoca”, p. 61",
+      "quote": "Ardoca não tinha mais nada, nem a vida.",
+      "context": "Depois de ser assaltado na plataforma por quem fingia socorrê-lo.",
+      "formalDevice": "Gradação que termina na vida.",
+      "effect": "Prepara a revelação de que ele tinha tomado veneno.",
+      "wholeRelation": "Mais um final que reorganiza o conto.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-nao-morrer",
+      "unitId": "a-gente-combinamos-de-nao-morrer",
+      "location": "“A gente combinamos de não morrer”, p. 68",
+      "quote": "Eu sei que não morrer, nem sempre é viver.",
+      "context": "Bica pensa no pacto dos meninos.",
+      "formalDevice": "Aforismo.",
+      "effect": "Distingue sobreviver de viver.",
+      "wholeRelation": "É a reflexão central do conto mais experimental do livro.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-fios-ferro",
+      "unitId": "a-gente-combinamos-de-nao-morrer",
+      "location": "“A gente combinamos de não morrer”, p. 68",
+      "quote": "Minha mãe sempre costurou a vida com fios de ferro.",
+      "context": "Bica comenta a mãe, que se refugia nas novelas.",
+      "formalDevice": "Metáfora da costura.",
+      "effect": "A força da mãe é dura e resistente, não frágil.",
+      "wholeRelation": "Dialoga com as muitas mães do livro.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-sangrar",
+      "unitId": "a-gente-combinamos-de-nao-morrer",
+      "location": "“A gente combinamos de não morrer”, p. 68",
+      "quote": "Acrescento: e de muito sangrar, muito e muito",
+      "context": "Bica cita o verso “Escrever é uma maneira de sangrar”.",
+      "formalDevice": "Citação seguida de ampliação.",
+      "effect": "A escrita é apresentada como dor e testemunho.",
+      "wholeRelation": "A prática de Bica permite interpretar a escrita como elaboração de dor, invenção e compartilhamento de experiência; ela é uma personagem-narradora, sem identidade biográfica demonstrada com a autora.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-ayoluwa-cruz",
+      "unitId": "ayoluwa",
+      "location": "“Ayoluwa, a alegria do nosso povo”, p. 71",
+      "quote": "ela veio não com a promessa da salvação, mas também não veio para morrer na cruz",
+      "context": "O narrador coletivo explica o que mudou com o nascimento.",
+      "formalDevice": "Dupla negação com referência cristã.",
+      "effect": "Recusa tanto o messianismo quanto o sacrifício.",
+      "wholeRelation": "Fecha o livro com esperança sem ilusão.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-ayoluwa-olho",
+      "unitId": "ayoluwa",
+      "location": "“Ayoluwa, a alegria do nosso povo”, p. 71",
+      "quote": "enquanto um olho chora, o outro espia o tempo procurando a solução",
+      "context": "Última frase do livro.",
+      "formalDevice": "Antítese entre os dois olhos.",
+      "effect": "Une luto e busca ativa.",
+      "wholeRelation": "Retoma os olhos do primeiro conto e fecha a moldura.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    }
+  ],
+  "sources": [
+    {
+      "id": "olhos-melo-godoy-2016",
+      "citation": "MELO, Henrique Furtado de; GODOY, Maria Carolina de. Escrevivência e produção de subjetividades: reflexões em torno de Olhos d’água, de Conceição Evaristo. Signótica, v. 28, n. 1, p. 23–42, 2016. DOI: 10.5216/sig.v28i1.38912.",
+      "type": "academic_article",
+      "institution": "Universidade Federal de Goiás; autores vinculados à Universidade Estadual de Londrina",
+      "year": 2016,
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 23–41 (texto e referências; p. 42 sem texto extraído).",
+      "centralThesis": "A repetição interrogativa do conto-título funciona como ritornelo que reorganiza memória, ancestralidade e produção coletiva de subjetividades negras.",
+      "contribution": "Explica formalmente como a pergunta repetida desestabiliza e recompõe a narradora; permite fundamentar a escrevivência com a mediação teórica declarada.",
+      "limitations": "Recorte no conto-título, com esquizoanálise; não comprova a autobiografia de cada personagem nem substitui análise dos quinze contos. As falas de Evaristo citadas pelo artigo são fontes mediadas. O PDF possui DOI incompleto no cabeçalho; DOI confirmado no registro do periódico.",
+      "url": "https://revistas.ufg.br/sig/article/view/38912"
+    },
+    {
+      "id": "olhos-evaristo-2009",
+      "citation": "EVARISTO, Conceição. Literatura negra: uma poética de nossa afro-brasilidade. Scripta, v. 13, n. 25, p. 17–31, 2009.",
+      "type": "academic_article",
+      "institution": "PUC Minas (periódico); PUC-Rio (vínculo da autora no artigo)",
+      "year": 2009,
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 17–31, artigo integral.",
+      "centralThesis": "A experiência racial e de gênero do sujeito criador participa da construção do ponto de vista; a literatura negra contesta invisibilização e estereótipos.",
+      "contribution": "Fonte da própria escritora para distinguir corpo vivido, construção ficcional e modos de representar mulheres negras; também é o artigo usado no excerto da prova Unicamp 2026.",
+      "limitations": "Anterior ao volume Olhos d’água: não é análise dos quinze contos. O termo escrevivência não aparece no texto extraído; não atribuir ao artigo uma definição literal desse termo.",
+      "url": "https://periodicos.pucminas.br/index.php/scripta/article/download/4365/4510"
+    },
+    {
+      "id": "olhos-gomes-prefacio",
+      "citation": "GOMES, Heloisa Toller. Prefácio. In: EVARISTO, Conceição. Olhos d’água. Rio de Janeiro: Pallas/Fundação Biblioteca Nacional, 2016, 1ª ed., 3ª reimpr.",
+      "type": "book",
+      "institution": "Paratexto da edição Pallas/Fundação Biblioteca Nacional",
+      "year": 2016,
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 7–8 do PDF fornecido, prefácio completo.",
+      "centralThesis": "Denúncia e celebração se equilibram por uma tessitura poética; a fragmentação das vozes em A gente combinamos de não morrer acompanha a precariedade das vidas.",
+      "contribution": "Fonte crítica da própria edição para forma narrativa, mulheres e comunidade; aproxima a metáfora dos fios de ferro do trabalho ficcional.",
+      "limitations": "Paginação da cópia convertida, não da edição impressa; prefácio não deve ser tratado como voz narrativa nem consenso obrigatório. A cópia traz Quimbá onde o conto escreve Kimbá. A URL leva à ficha bibliográfica do Google Books (Pallas, 2016, 116 páginas, ISBN 9788534705974), conferida nesta retomada; não comprova leitura on-line do prefácio ou da introdução. A leitura desses paratextos ocorreu no PDF fornecido. O catálogo não especifica a terceira reimpressão indicada na cópia.",
+      "url": "https://books.google.com/books?vid=ISBN9788534705974"
+    },
+    {
+      "id": "olhos-werneck-introducao",
+      "citation": "WERNECK, Jurema. Introdução. In: EVARISTO, Conceição. Olhos d’água. Rio de Janeiro: Pallas/Fundação Biblioteca Nacional, 2016, 1ª ed., 3ª reimpr.",
+      "type": "book",
+      "institution": "Paratexto da edição Pallas/Fundação Biblioteca Nacional",
+      "year": 2016,
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 9–10 do PDF fornecido, introdução completa.",
+      "centralThesis": "Contar e nomear o mundo constituem uma ação de apropriação e subversão, figurada por Caliban, Iyalodê e Oxum.",
+      "contribution": "Contraponto ao registro exclusivo de vítimas: a palavra convoca presença e ação.",
+      "limitations": "Leitura político-cultural do paratexto; não autoriza identificar cada narradora com a autora nem apaga a especificidade formal de cada conto. Paginação da cópia convertida. A URL leva à ficha bibliográfica do Google Books (Pallas, 2016, 116 páginas, ISBN 9788534705974), conferida nesta retomada; não comprova leitura on-line do prefácio ou da introdução. A leitura desses paratextos ocorreu no PDF fornecido. O catálogo não especifica a terceira reimpressão indicada na cópia.",
+      "url": "https://books.google.com/books?vid=ISBN9788534705974"
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-lista-2027",
+      "citation": "FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.",
+      "institution": "FUVEST / USP",
+      "year": 2023,
+      "url": "https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/",
+      "pagesRead": "Corpo da notícia e listas anuais; conferência da lista de 2027.",
+      "centralThesis": "A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.",
+      "contribution": "Confirma a exigência oficial e distingue as listas dos diferentes anos.",
+      "limitations": "A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-programa-2027",
+      "citation": "FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.",
+      "institution": "FUVEST / USP",
+      "year": 2026,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf",
+      "pagesRead": "PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.",
+      "centralThesis": "O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.",
+      "contribution": "Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.",
+      "limitations": "Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "comvest-programa-2027",
+      "citation": "Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.",
+      "institution": "Comvest / Unicamp",
+      "year": 2026,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "pagesRead": "PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.",
+      "centralThesis": "O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.",
+      "contribution": "Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.",
+      "limitations": "Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral."
+    }
   ]
 }

@@ -1,13 +1,3 @@
-## Prompt de continuidade atualizado
+# Prompt de continuidade
 
-```text
-Retome as obras literárias no repositório My-App, branch claude/focused-volta-bnzw7d. Leia CLAUDE.md e docs/obras-2027/CONTINUIDADE.md, especialmente o último checkpoint, e confira git status e os commits antes de agir.
-
-Funerais da Mamãe Grande, No seu pescoço e Gonzaga de Sá já foram escritos, integrados ao loader e conferidos, cada um em um commit. Não refaça esses dossiês. Tudo continua needs_review; a conferência literal não é aprovação editorial.
-
-Comece por Memórias póstumas de Brás Cubas. A leitura integral das 134 páginas da edição Câmara 2018 já foi feita. Leia docs/obras-2027/leitura-bras-cubas.md e docs/obras-2027/rascunhos/bras-cubas-notas-1-160.txt: há mapa dos 160 capítulos, análises dos 160 capítulos, limites da extração e inspeção visual de passagens ausentes. Use as notas e escreva o JSON, sem inventar leitura ou crítica. Prepare os PDFs e textos paginados conforme CONTINUIDADE.md; não versione esses materiais nem faça merge de main.
-
-Use a habilidade fornecida no ZIP: obras-obrigatorias-fuvest-unicamp-avancada (referida antes como analise-literaria-fuvest-unicamp). O caminho local e seus requisitos estão no documento de continuidade. Registre Brás Cubas em src/lib/workDossiers.ts depois da validação. Um commit por obra; antes dele execute python3 scripts/conferir-dossie.py conferir bras-cubas. Preserve IDs e progresso existentes.
-
-Depois registre cobertura e limitações por obra, finalize pesquisa acadêmica rastreável necessária à revisão editorial sem atribuir fontes não lidas, e execute lint, npm test completo e npm run build. Confira as verificações já feitas no checkpoint; repita quando as mudanças novas justificarem. Faça push e abra PR com base fix/obras-obrigatorias, sem merge. As funcionalidades técnicas do antigo checkpoint não fazem parte desta retomada. Pode seguir automaticamente.
-```
+Retome My-App e verifique a PR #278, branch fix/publicar-demais-obras-2027, base main. Leia CLAUDE.md, o estado vigente no topo de docs/obras-2027/CONTINUIDADE.md e PUBLICACAO-DEMAIS-OBRAS.md. As dezoito obras já têm primeira edição compacta de estudo publicada nos dados: Brás Cubas foi integrado na #277 e as outras dezessete têm commits individuais na #278. Não recrie JSONs nem reaplique patches ou repita a fila histórica. Verifique integração e implantação antes de concluir que o conteúdo está disponível no app de produção. Não faça merge automático. Para aprofundar o conteúdo, use a habilidade literária do ZIP fornecido, as notas pesquisa-publicacao-*.md e os limites de Fontes de cada obra; a matriz avançada completa não está certificada. Preserve IDs e progresso; conferência literal antes de cada commit de obra. PDFs, extrações e imagens de páginas ficam privados. Questões Markdown não constituem motor de tentativa, gabarito posterior, histórico ou agendamento: essas funcionalidades exigem trabalho específico. Antes de cada push, lint e npm test; ao encerrar entrega, build, push obrigatório e atualização da PR. Pode seguir automaticamente no escopo autorizado, sem deixar checkpoint somente local.

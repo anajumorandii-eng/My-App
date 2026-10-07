@@ -1,3 +1,36 @@
+# Estado vigente — publicação das dezoito obras, 07/10/2026
+
+**Prevalece sobre o histórico abaixo.** Brás Cubas foi integrado à main na PR #277. As outras dezessete obras foram corrigidas e publicadas como primeira edição compacta de estudo na branch `fix/publicar-demais-obras-2027`, PR #278, base **main**, sem merge. Base da série: `origin/main` c107c2af. Não refazer os JSONs, não repetir as publicações nem usar a fila histórica como trabalho pendente.
+
+## Feito nesta retomada
+
+- Dezessete commits individuais de publicação, de 2abb5d33 (A visão das plantas) a b7f9dff3 (Gonzaga de Sá), com conferência literal antes de cada commit.
+- Fontes críticas reais com URL, páginas efetivamente lidas, contribuição e limites; fontes oficiais 2027 incorporadas. Diferenciadas evidência primária, crítica documentada e síntese autoral.
+- Módulos, guias e cartões revistos publicados; versões e registro de revisão atualizados. IDs e chaves de progresso preservados.
+- Correções factuais e interpretativas detalhadas em `PUBLICACAO-DEMAIS-OBRAS.md` e nas dezessete notas `pesquisa-publicacao-*.md`.
+- Conferência final das dezoito obras, lint, npm test completo (2.285 testes) e build passaram. Navegador: 288 abas, sem erro JavaScript, com simulações declaradas no relatório. Push para a branch remota e PR #278 aberta para revisão, base main, sem merge.
+
+## Alcance e próximo trabalho
+
+Esta entrega conclui a primeira edição de estudo das dezoito obras. A matriz avançada completa da habilidade não está certificada: bibliografia adicional, aprofundamento integral de cada unidade, cotejo independente de edições e levantamento amplo de provas continuam limitados conforme Fontes de cada obra.
+
+As questões são Markdown de estudo. Motor de tentativa, gabarito posterior, histórico e agendamento automático de revisão não foram implementados nesta entrega. A validação da interface usa componente e JSONs reais com autenticação e catálogo simulados; não comprova funcionamento Firestore autenticado em produção. Não executar seed de produção para contornar restrições de acesso.
+
+Antes de novo desenvolvimento, verificar se a PR #278 foi integrada e se houve implantação. O trabalho foi solicitado com **push obrigatório e sem merge automático**. Se a PR estiver aberta, revisar seu diff e verificações; não reabrir a antiga branch `claude/focused-volta-bnzw7d` como fila vigente.
+
+## Ambiente e habilidade
+
+Habilidade do ZIP fornecido: `/workspace/artifacts/obras-retomada/habilidade/SKILL.md`, nome interno `obras-obrigatorias-fuvest-unicamp-avancada`. Notas e bibliografia estão no git; material primário e crítico integral permanece privado em `materiais-extraidos/`. Nenhum PDF, extração integral ou imagem de página novo deve entrar no repositório público.
+
+PDFs em `materiais-extraidos/obras-pdf`, extrações paginadas em `materiais-extraidos/obras`, patches aplicados em `materiais-extraidos/publicacao-patches`. Para conferir: `python3 scripts/conferir-dossie.py conferir <slug>` ou sem slug para todas. Não reaplicar os patches: os valores antigos já foram substituídos.
+
+Backup privado anterior: `/workspace/artifacts/obras-retomada/checkpoint-demais-obras-2027.tar.gz`. Caso o ambiente seja perdido, recuperar PDFs autorizados de `origin/main:obras-brutos` seguindo o preparo histórico e baixar fontes críticas pelos URLs registrados. O backup anterior é checkpoint de pesquisa, não substitui os JSONs publicados do git.
+
+Chromium em `/usr/bin/chromium`. Harness privado `materiais-extraidos/bras-publicacao-preview.tsx` recebe `?obra=<slug>`; verificação em `conferir-navegador-publicacao.mjs`. Evidências locais em `/workspace/artifacts/demais-obras-publicacao/`.
+
+
+---
+
 # Estado posterior ao checkpoint — primeira publicação
 
 As PRs #273, #275 e #276 já foram integradas à main. A revisão para primeira publicação de Brás Cubas está em `fix/publicar-bras-cubas`, baseada em `origin/main` 69f7e1dc. Leia `PUBLICACAO-BRAS-CUBAS.md` e `pesquisa-bras-cubas-publicacao.md` antes do histórico abaixo. O JSON de Brás Cubas já existe; não o recriar. Outros 17 dossiês continuam em revisão.
