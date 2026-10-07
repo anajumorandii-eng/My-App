@@ -50,3 +50,12 @@ Uma resenha é base crítica efetivamente lida, não matriz avançada completa d
   }
 ]
 ```
+
+
+## Validação para integração — retomada de 07/10/2026
+
+Os oito módulos, todos os guias e todos os cartões do JSON foram relidos por inteiro nesta retomada. Não se declara nova leitura integral da obra: preserva-se a leitura primária registrada no checkpoint e se relê o recorte necessário às correções. Foram relidas as p. 34 e 42–44 do PDF: atribuição da imagem Terra-mãe ao autor, ressalva contra usá-la como explicação biomédica, contraste entre exclusão e escape, e reconhecimento da educação sobre gasto excessivo antes da crítica à sustentabilidade. A conferência das partes aproveitadas da resenha de Savi retomou seu argumento e a discussão final; a leitura integral de p. 1–8 permanece registrada na pesquisa anterior. As propostas exatas estão no patch privado ignorado em `materiais-extraidos/publicacao-patches/a-vida-nao-e-util.json`, com valores antigos e novos para aplicação verificável. A conferência preliminar sobre uma cópia temporária usa o mesmo script literal do repositório, sem alterar o JSON público. Aprovação de status, inclusão das fontes oficiais, conferência final e commit ficam com a integração. O alcance continua sendo edição compacta de estudo, sem certificação de completude da habilidade avançada.
+
+## Decisão da primeira edição de estudo
+
+A origem oral, o contexto de 2020 e a distinção entre exclusão e resistência foram revistos. A hipótese cosmológica permanece atribuída ao autor; uma resenha integral sustenta o debate sem simular a matriz avançada. Aprovados 8 módulos, 5 guias e 21 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.

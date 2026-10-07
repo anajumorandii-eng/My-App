@@ -39,3 +39,4 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | A paixão segundo G.H. | Primeira edição de estudo aprovada: 8 módulos, 33 guias, 18 cartões. Conferência literal passou; IDs preservados. |
 | Canção para ninar menino grande | Primeira edição de estudo aprovada: 8 módulos, 16 guias, 16 cartões. Conferência literal passou; IDs preservados. |
 | Morangos mofados — seis contos | Primeira edição de estudo aprovada: 8 módulos, 6 guias, 17 cartões. Conferência literal passou; IDs preservados. |
+| A vida não é útil | Primeira edição de estudo aprovada: 8 módulos, 5 guias, 21 cartões. Conferência literal passou; IDs preservados. |

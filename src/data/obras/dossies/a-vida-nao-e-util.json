@@ -7,82 +7,609 @@
     "note": "Obra protegida: só citações curtas e análise original. As páginas citadas são as do PDF usado; os títulos dos cinco textos estão em páginas de imagem, sem texto extraível, e cada unidade começa na primeira página de texto. As p. 52-60 são propaganda de outros livros e ficam fora do dossiê."
   },
   "units": [
-    { "id": "nao-se-come-dinheiro", "order": 1, "type": "article", "title": "Não se come dinheiro", "opening": "Quando falo de humanidade não estou falando só do Homo sapiens", "pdfStartPage": 9, "pdfEndPage": 13,
-      "guide": { "editorialStatus": "needs_review",
+    {
+      "id": "nao-se-come-dinheiro",
+      "order": 1,
+      "type": "article",
+      "title": "Não se come dinheiro",
+      "opening": "Quando falo de humanidade não estou falando só do Homo sapiens",
+      "pdfStartPage": 9,
+      "pdfEndPage": 13,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Krenak abre com a tese que atravessa o livro: o que chamamos de humanidade é um clube exclusivo que relega à “sub-humanidade” os povos indígenas, quilombolas, caiçaras e toda vida não humana. A pandemia, a concentração de riqueza nas corporações, o vício em modernidade, a teoria de Gaia, a mineração em Minas Gerais (Mariana, Brumadinho, o rio Doce) e a micropolítica das hortas urbanas aparecem como provas e saídas. Fecha com a vida como transcendência, sem definição de dicionário.",
-        "observe": ["O título vem de uma fala de Vernon Foster, ancião Lakota, citada no próprio texto: a sabedoria indígena de outro continente é chamada como aliada.", "Note o registro oral (“os caras”, “sei lá”, “estamos ferrados”): o texto foi montado a partir de lives e entrevistas, como informa a nota “Sobre este livro”."] } },
-    { "id": "sonhos-para-adiar-o-fim-do-mundo", "order": 2, "type": "article", "title": "Sonhos para adiar o fim do mundo", "opening": "Quando pergunto se somos mesmo uma humanidade", "pdfStartPage": 17, "pdfEndPage": 20,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O título vem de uma fala de Vernon Foster, ancião Lakota, citada no próprio texto: a sabedoria indígena de outro continente é chamada como aliada.",
+          "Note o registro oral (“os caras”, “sei lá”, “estamos ferrados”): o texto foi montado a partir de lives e entrevistas, como informa a nota “Sobre este livro”."
+        ]
+      }
+    },
+    {
+      "id": "sonhos-para-adiar-o-fim-do-mundo",
+      "order": 2,
+      "type": "article",
+      "title": "Sonhos para adiar o fim do mundo",
+      "opening": "Quando pergunto se somos mesmo uma humanidade",
+      "pdfStartPage": 17,
+      "pdfEndPage": 20,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O sonho como instituição: lugar de conhecimento, de afeto e de orientação para o dia. Krenak conta o sonho do pajé Xavante Sibupá, que previu a devastação do cerrado e do Xingu, e a história Krenak do Criador que, disfarçado de tamanduá, quase é comido e, perguntado sobre suas criaturas, responde “Mais ou menos”. Termina com a tradição de suspender o céu e com a ideia de que a crise pode ser uma transformação.",
-        "observe": ["A narrativa mítica funciona como argumento: a resposta “Mais ou menos” sustenta a tese de que a humanidade não tem garantia de dar certo.", "Repare na oposição entre caçadores e agricultores, que o autor usa para explicar diferentes modos de sonhar."] } },
-    { "id": "a-maquina-de-fazer-coisas", "order": 3, "type": "article", "title": "A máquina de fazer coisas", "opening": "As diferentes narrativas indígenas sobre a origem da vida", "pdfStartPage": 24, "pdfEndPage": 29,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A narrativa mítica funciona como argumento: a resposta “Mais ou menos” sustenta a tese de que a humanidade não tem garantia de dar certo.",
+          "Repare na oposição entre caçadores e agricultores, que o autor usa para explicar diferentes modos de sonhar."
+        ]
+      }
+    },
+    {
+      "id": "a-maquina-de-fazer-coisas",
+      "order": 3,
+      "type": "article",
+      "title": "A máquina de fazer coisas",
+      "opening": "As diferentes narrativas indígenas sobre a origem da vida",
+      "pdfStartPage": 24,
+      "pdfEndPage": 29,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Crítica à técnica e ao consumo: tudo o que a técnica deu foram brinquedos, e o capitalismo nos viciou no novo (o carro elétrico vira novo objeto de desejo). Krenak recusa a ideia de que os pobres destroem o meio ambiente, critica o “outro mundo” que seria só o mesmo capitalismo consertado e propõe outra ideia de tempo — a criação do mundo acontece a cada momento. A conclusão aposta nos povos que ficaram fora do consumo planetário.",
-        "observe": ["As referências são variadas (Gandhi, Milton Santos, Suely Rolnik, Davi Kopenawa, David Wallace-Wells): o ensaio é conversa com outros pensamentos, não tratado fechado.", "O próprio autor reconhece a contradição de falar numa live por um “aparelhinho” produzido pela civilização que critica."] } },
-    { "id": "o-amanha-nao-esta-a-venda", "order": 4, "type": "article", "title": "O amanhã não está à venda", "opening": "Parei de andar mundo afora", "pdfStartPage": 33, "pdfEndPage": 36,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "As referências são variadas (Gandhi, Milton Santos, Suely Rolnik, Davi Kopenawa, David Wallace-Wells): o ensaio é conversa com outros pensamentos, não tratado fechado.",
+          "O próprio autor reconhece a contradição de falar numa live por um “aparelhinho” produzido pela civilização que critica."
+        ]
+      }
+    },
+    {
+      "id": "o-amanha-nao-esta-a-venda",
+      "order": 4,
+      "type": "article",
+      "title": "O amanhã não está à venda",
+      "opening": "Parei de andar mundo afora",
+      "pdfStartPage": 33,
+      "pdfEndPage": 36,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Escrito do isolamento na aldeia Krenak, no médio rio Doce, no início da pandemia. O confinamento dos indígenas em reservas é antigo; o luto pelo rio, também. Krenak denuncia a necropolítica de quem diz que “alguns vão morrer”, recusa o antropocentrismo e lê a pandemia como a Terra pedindo silêncio à humanidade. Pede que não se volte à normalidade.",
-        "observe": ["O episódio dos engenheiros (“O mundo não pode parar”) é retomado pela realidade: o mundo parou.", "A imagem da Terra como mãe que pede “Filho, silêncio” transforma a pandemia em lição, não em castigo."] } },
-    { "id": "a-vida-nao-e-util", "order": 5, "type": "article", "title": "A vida não é útil", "opening": "Neste momento, estamos sendo desafiados por uma espécie de erosão da vida", "pdfStartPage": 40, "pdfEndPage": 44,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O episódio dos engenheiros (“O mundo não pode parar”) é retomado pela realidade: o mundo parou.",
+          "No contexto de 2020, Krenak interpreta a pandemia por meio da Terra-mãe que pede silêncio à humanidade: é uma construção cosmológica e argumentativa atribuída ao autor, não uma explicação biomédica."
+        ]
+      }
+    },
+    {
+      "id": "a-vida-nao-e-util",
+      "order": 5,
+      "type": "article",
+      "title": "A vida não é útil",
+      "opening": "Neste momento, estamos sendo desafiados por uma espécie de erosão da vida",
+      "pdfStartPage": 40,
+      "pdfEndPage": 44,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O texto que dá título ao livro: a vida não tem utilidade, é fruição, “dança cósmica”. Krenak critica a escola que forma operadores do mundo-mercadoria, chama a sustentabilidade de “vaidade pessoal” e de mentira bem embalada, e afirma que os povos originários não foram excluídos, mas escaparam. Os Krenak decidem ficar no lugar do desastre: quando aparecer um deserto, é preciso atravessá-lo.",
-        "observe": ["A anedota da moringa comida pelas formigas é uma alegoria doméstica do consumo do planeta.", "Contraste-chave do texto: pisar duro sobre a terra (os brancos) e pisar leve (os povos originários)."] } }
+        "observe": [
+          "A anedota da moringa comida pelas formigas é uma alegoria doméstica do consumo do planeta.",
+          "Contraste-chave do texto: pisar duro sobre a terra (os brancos) e pisar leve (os povos originários)."
+        ]
+      }
+    }
   ],
   "modules": [
-    { "id": "comece-aqui", "moduleType": "comece_aqui", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**A vida não é útil** (2020) reúne cinco textos de Ailton Krenak, pensador e liderança indígena nascido em 1953 no vale do rio Doce, em Minas Gerais. Os textos foram elaborados a partir de lives, falas e entrevistas, a maioria de 2020, durante a pandemia de covid-19 (a nota “Sobre este livro”, no fim do volume, indica a origem de cada um).\n\n**Os cinco textos:** “Não se come dinheiro”, “Sonhos para adiar o fim do mundo”, “A máquina de fazer coisas”, “O amanhã não está à venda” e “A vida não é útil”.\n\n**Por que importa para a Unicamp.** É um livro de ensaios, não de ficção: a banca cobra a tese, os argumentos e o modo de argumentar. A tese central é que a ideia de “humanidade” separou um grupo de humanos do resto da vida na Terra, e que esse descolamento está na raiz da crise ambiental e social. O modo de argumentar mistura memória pessoal, narrativas indígenas, citações (Drummond, Gilberto Gil, Caetano Veloso, Camus, Foucault, Davi Kopenawa) e linguagem falada.\n\n**Como ler.** Marque os pares de oposição que organizam o livro — humanidade e sub-humanidade, desenvolver e envolver, útil e fruição, pisar duro e pisar leve — e observe como cada texto volta a eles por outro caminho." },
-    { "id": "analise-integral", "moduleType": "analise_integral", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-praga", "ev-casta", "ev-envolver", "ev-ferrados", "ev-vida-transcendencia", "ev-constelacao", "ev-certificado", "ev-suspender-ceu", "ev-poder-natural", "ev-brinquedos", "ev-mundo-velho", "ev-mundo-parou", "ev-excluido", "ev-mae-silencio", "ev-navio", "ev-normalidade", "ev-sustentabilidade", "ev-utilidade", "ev-danca", "ev-poesia-vida", "ev-deserto"], "sourceRefs": [],
-      "markdown": "## A tese: a humanidade é um clube\n\nO livro começa questionando a palavra “humanidade”. Para Krenak, ela designa “uma casta” e deixa fora, como “sub-humanidade”, os povos indígenas, quilombolas, caiçaras e toda vida não humana (p. 9). Esse corte é a raiz do problema: o “caminho” do progresso avança largando no percurso o que não interessa. A mesma ideia volta em “O amanhã não está à venda”, agora em primeira pessoa: “Eu não me sinto parte dessa humanidade. Eu me sinto excluído dela.” (p. 34). Uma leitura mais básica veria aí só denúncia ambiental. Uma leitura mais sofisticada percebe que o livro critica uma categoria de pensamento: a separação entre “Terra” e “humanidade”, que Krenak recusa com a frase “Tudo é natureza” (p. 34).\n\n## Ensaio oral\n\nOs textos nasceram de conversas, e isso aparece na forma: frases curtas, perguntas, interjeições, humor e gíria (“estamos ferrados”, p. 13; “Vão logo, esqueçam a gente aqui!”, p. 10). O detalhe formal que muda a interpretação é este: a oralidade não é descuido, é coerente com a defesa de saberes transmitidos pela fala, pelo sonho contado de manhã aos convivas (p. 18) e pelas histórias dos mais velhos. O erro comum aqui seria tratar o livro como tratado científico e cobrar dele demonstração; ele argumenta por exemplo, narrativa e analogia.\n\n## Narrativas indígenas como argumento\n\nEm “Sonhos para adiar o fim do mundo”, o sonho do pajé Xavante Sibupá prevê a devastação que de fato ocorreu (p. 17-18), e a história Krenak do Criador disfarçado de tamanduá termina com Deus respondendo “Mais ou menos” sobre suas criaturas (p. 19). A conclusão é teórica: “Os seres humanos não têm certificado, podem dar errado.” (p. 19). A tradição de suspender o céu (p. 20) mostra outra relação entre corpo, comunidade e ciclos da Terra. Um crítico poderia interpretar isso como uma epistemologia: o conhecimento não vem só da ciência ocidental, mas também do sonho e da memória coletiva — e o livro reconhece pontos de contato, como a teoria de Gaia (p. 11).\n\n## Técnica, consumo e utilidade\n\n“A máquina de fazer coisas” resume a técnica moderna numa provocação: “tudo que a técnica nos deu foram brinquedos” (p. 26). O vício no novo faz até a solução (o carro elétrico) virar objeto de desejo. O “outro mundo” proposto por muitos seria só “Um mundo velho e canalha fantasiado de novo” (p. 28). “A vida não é útil” leva a crítica ao centro: a vida “não tem utilidade nenhuma” (p. 43), é fruição e dança cósmica; a escola, as religiões, as ideologias e até a sustentabilidade (“uma mentira bem embalada”, p. 42) serviriam para emoldurar uma vida útil.\n\n## Pandemia e necropolítica\n\n“O amanhã não está à venda” foi elaborado em abril de 2020 (p. 48). Os engenheiros que diziam que o mundo não pode parar são desmentidos pelos fatos: “E o mundo parou.” (p. 33). Krenak critica quem aceita que “alguns vão morrer” para manter a economia, com uma analogia simples: seria como dizer “que o navio importa mais que a tripulação” (p. 35). A Terra aparece como mãe que pede silêncio ao filho (p. 34), e o texto termina recusando a volta à normalidade (p. 36).\n\n## Ficar no desastre\n\nO livro fecha com a decisão dos Krenak de permanecer na margem do rio Doce atingido pela lama da mineração: “Quando aparecer um deserto, o atravesse.” (p. 44). E desfaz a leitura folclórica de quem acha bonita a frase “A Terra é nossa mãe”: “Isso não é poesia, é a nossa vida.” (p. 44). A Unicamp poderia transformar essa leitura em uma questão discursiva assim: *explique por que Krenak recusa que a frase “A Terra é nossa mãe” seja lida como poesia, relacionando a resposta à tese do livro sobre humanidade e natureza.*" },
-    {"id": "critica-debate", "moduleType": "critica_debate", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-excluido", "ev-sustentabilidade"], "sourceRefs": [], "markdown": "**Camadas de evidência.** Os cartões trazem trechos localizados no PDF; guias e análise são síntese própria. Os autores citados por Krenak (Foucault, Rolnik, Kopenawa, Wallace-Wells) aparecem como ele os cita, sem conferência das obras. Nenhuma fonte acadêmica sobre o livro foi lida.\n\n**Hipóteses em confronto.** O livro pode ser lido como denúncia ambiental ou como crítica a uma categoria de pensamento, a separação entre humanidade e natureza: “Eu não me sinto parte dessa humanidade. Eu me sinto excluído dela.” (p. 34). A crítica à sustentabilidade (“isso é uma mentira bem embalada”, p. 42) pode ser lida como radicalidade ou como recusa de soluções parciais.\n\n**Limites.** A oralidade e a origem em lives (nota da p. 48) pedem cuidado ao cobrar demonstração. Pesquisa pendente: estudos sobre o autor e o pensamento indígena contemporâneo, citados com página quando lidos."},
-    {"id": "fuvest", "moduleType": "fuvest", "board": "FUVEST", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [], "markdown": "**Treino de transferência; a obra não está na lista FUVEST 2027.**\n\nBoa comparação com o *Opúsculo humanitário* (FUVEST): dois ensaios que acusam a ideia de “civilização”. Treine identificar tese, argumento e recurso (analogia, narrativa mítica, trocadilho)."},
-    {"id": "unicamp", "moduleType": "unicamp", "board": "UNICAMP", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-poesia-vida", "ev-navio"], "sourceRefs": [], "markdown": "**Preparação para a Unicamp/Comvest; não é questão oficial nem resposta esperada.**\n\nNa objetiva, reconheça o gênero (ensaio oral) e os pares de oposição. Distrator comum: ler “A Terra é nossa mãe” como metáfora poética; o autor recusa essa leitura (“Isso não é poesia, é a nossa vida.”, p. 44).\n\nNa discursiva, explique uma analogia com seu efeito: “Dizer que a economia é mais importante é como dizer que o navio importa mais que a tripulação.” (p. 35)."},
-    {"id": "questoes", "moduleType": "questoes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-envolver", "ev-certificado", "ev-casta", "ev-excluido", "ev-utilidade", "ev-mundo-parou"], "sourceRefs": [], "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. UNICAMP, objetiva, média.** Em “Temos que parar de nos desenvolver e começar a nos envolver.” (p. 12), o recurso central é:\nA) a hipérbole.\nB) a paronomásia, que opõe progresso e pertencimento.\nC) a citação de um autor estrangeiro.\nD) a narrativa mítica.\nE) a estatística.\n\n**2. UNICAMP, objetiva, difícil.** A história do Criador transformado em tamanduá serve ao argumento de que:\nA) os humanos são predestinados a dar certo.\nB) “Os seres humanos não têm certificado, podem dar errado.” (p. 19).\nC) os Krenak descendem dos animais.\nD) a religião cristã é superior.\nE) a caça deve ser proibida.\n\n**3. UNICAMP, discursiva, difícil.** a) Explique o que o autor chama de “sub-humanidade” (p. 9). b) Mostre como essa ideia volta em *O amanhã não está à venda* (p. 34).\n\n**4. Discursiva, muito difícil.** Relacione “Isso partindo da ideia de que a vida é útil, mas a vida não tem utilidade nenhuma.” (p. 43) ao título do livro e à crítica à escola e à sustentabilidade.\n\n**5. Comparação, muito difícil.** Os engenheiros diziam que o mundo não pode parar; “E o mundo parou.” (p. 33). Explique como a pandemia funciona como argumento no livro."},
-    {"id": "revisao-ativa", "moduleType": "revisao_ativa", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-deserto", "ev-suspender-ceu"], "sourceRefs": [], "markdown": "Reconstrua sem consulta: os cinco textos e a ideia central de cada (humanidade e sub-humanidade; sonho; técnica e consumo; pandemia; utilidade e fruição).\n\n**Factual:** de que rio Krenak fala? O que a nota da p. 48 informa sobre a origem dos textos?\n\n**Formal:** que marcas de oralidade aparecem? Que narrativas indígenas funcionam como argumento?\n\n**Interpretativo:** o livro é pessimista ou esperançoso? Justifique com dois textos.\n\n**24 horas:** mapa. **7 dias:** um trecho novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos."},
-    { "id": "fontes", "moduleType": "fontes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Edição usada:** Ailton Krenak, *A vida não é útil*. São Paulo: Companhia das Letras, 2020, e-book. Pesquisa e organização de Rita Carelli (agradecimento na p. 45). As páginas citadas são as do PDF usado, com 60 páginas.\n\n**Procedência do arquivo:** a p. 2 traz a marca de um site de download (“Baixe Livros… Converted by convertEPub”), e as p. 52-60 são propaganda de outros livros. O texto é o da Companhia das Letras, mas a paginação é da conversão. Antes de publicar, conferir as citações num exemplar da editora.\n\n**O que o próprio livro informa:** a origem de cada texto em lives e entrevistas (p. 48), as referências citadas pelo autor (p. 46-47) e a nota biográfica (p. 49). Essas informações vêm do volume, não de pesquisa externa.\n\n**Lista oficial:** obra exigida pela Unicamp/Comvest para o ciclo 2027, na íntegra.\n\n**Crítica:** nenhuma fonte crítica sobre o livro foi lida. As análises são síntese fundamentada no texto, com página. Os autores citados por Krenak (Foucault, Rolnik, Kopenawa, Wallace-Wells) aparecem aqui como ele os cita, sem conferência das obras." }
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**A vida não é útil** (2020) reúne cinco textos de Ailton Krenak, pensador e liderança indígena nascido em 1953 no vale do rio Doce, em Minas Gerais. Os textos foram elaborados a partir de lives, falas e entrevistas, a maioria de 2020, durante a pandemia de covid-19 (a nota “Sobre este livro”, no fim do volume, indica a origem de cada um).\n\n**Os cinco textos:** “Não se come dinheiro”, “Sonhos para adiar o fim do mundo”, “A máquina de fazer coisas”, “O amanhã não está à venda” e “A vida não é útil”.\n\n**Por que importa para a Unicamp.** É um livro de ensaios, não de ficção: a banca cobra a tese, os argumentos e o modo de argumentar. A tese central é que a ideia de “humanidade” separou um grupo de humanos do resto da vida na Terra, e que esse descolamento está na raiz da crise ambiental e social. O modo de argumentar mistura memória pessoal, narrativas indígenas, citações (Drummond, Gilberto Gil, Caetano Veloso, Camus, Foucault, Davi Kopenawa) e linguagem falada.\n\n**Como ler.** Marque os pares de oposição que organizam o livro — humanidade e sub-humanidade, desenvolver e envolver, útil e fruição, pisar duro e pisar leve — e observe como cada texto volta a eles por outro caminho.",
+      "reviewedAt": "2026-10-07T05:03:15Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-a-vida-nao-e-util"
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-praga",
+        "ev-casta",
+        "ev-envolver",
+        "ev-ferrados",
+        "ev-vida-transcendencia",
+        "ev-constelacao",
+        "ev-certificado",
+        "ev-suspender-ceu",
+        "ev-poder-natural",
+        "ev-brinquedos",
+        "ev-mundo-velho",
+        "ev-mundo-parou",
+        "ev-excluido",
+        "ev-mae-silencio",
+        "ev-navio",
+        "ev-normalidade",
+        "ev-sustentabilidade",
+        "ev-utilidade",
+        "ev-danca",
+        "ev-poesia-vida",
+        "ev-deserto"
+      ],
+      "sourceRefs": [
+        "vida-savi-2021"
+      ],
+      "markdown": "## A tese: a humanidade é um clube\n\nO livro começa questionando a palavra “humanidade”. Para Krenak, ela designa “uma casta” e deixa fora, como “sub-humanidade”, os povos indígenas, quilombolas, caiçaras e toda vida não humana (p. 9). Esse corte é a raiz do problema: o “caminho” do progresso avança largando no percurso o que não interessa. A mesma ideia volta em “O amanhã não está à venda”, agora em primeira pessoa: “Eu não me sinto parte dessa humanidade. Eu me sinto excluído dela.” (p. 34). A denúncia ambiental envolve também a crítica de uma categoria de pensamento: a separação entre “Terra” e “humanidade”, que Krenak recusa com a frase “Tudo é natureza” (p. 34).\n\n## Ensaio oral\n\nOs textos nasceram de conversas, e isso aparece na forma: frases curtas, perguntas, interjeições, humor e gíria (“estamos ferrados”, p. 13; “Vão logo, esqueçam a gente aqui!”, p. 10). O detalhe formal que muda a interpretação é este: a oralidade não é descuido, é coerente com a defesa de saberes transmitidos pela fala, pelo sonho contado de manhã aos convivas (p. 18) e pelas histórias dos mais velhos. A origem oral altera a composição e os modos de argumentar, mas não dispensa rigor. Cabe reconstruir o nexo entre exemplo, narrativa, analogia e tese, sem exigir que o ensaio siga a estrutura de um tratado científico.\n\n## Narrativas indígenas como argumento\n\nEm “Sonhos para adiar o fim do mundo”, Krenak relata um sonho do pajé Xavante Sibupá associado à devastação posterior (p. 17-18), e a história Krenak do Criador disfarçado de tamanduá termina com Deus respondendo “Mais ou menos” sobre suas criaturas (p. 19). A conclusão é teórica: “Os seres humanos não têm certificado, podem dar errado.” (p. 19). A tradição de suspender o céu (p. 20) mostra outra relação entre corpo, comunidade e ciclos da Terra. Um crítico poderia interpretar isso como uma epistemologia: o conhecimento não vem só da ciência ocidental, mas também do sonho e da memória coletiva — e o livro reconhece pontos de contato, como a teoria de Gaia (p. 11).\n\n## Técnica, consumo e utilidade\n\n“A máquina de fazer coisas” resume a técnica moderna numa provocação: “tudo que a técnica nos deu foram brinquedos” (p. 26). O vício no novo faz até a solução (o carro elétrico) virar objeto de desejo. O “outro mundo” proposto por muitos seria só “Um mundo velho e canalha fantasiado de novo” (p. 28). “A vida não é útil” leva a crítica ao centro: a vida “não tem utilidade nenhuma” (p. 43), é fruição e dança cósmica; a escola, as religiões, as ideologias e até a sustentabilidade (“uma mentira bem embalada”, p. 42) serviriam para emoldurar uma vida útil.\n\n## Pandemia e necropolítica\n\n“O amanhã não está à venda” foi elaborado em abril de 2020 (p. 48). Os engenheiros que diziam que o mundo não pode parar são desmentidos pelos fatos: “E o mundo parou.” (p. 33). Krenak critica quem aceita que “alguns vão morrer” para manter a economia, com uma analogia simples: seria como dizer “que o navio importa mais que a tripulação” (p. 35). Krenak constrói a hipótese da Terra-mãe que pede silêncio ao filho (p. 34), uma interpretação cosmológica e política no contexto de 2020, sem função de explicação biomédica, e o texto termina recusando a volta à normalidade (p. 36).\n\n## Ficar no desastre\n\nO livro fecha com a decisão dos Krenak de permanecer na margem do rio Doce atingido pela lama da mineração: “Quando aparecer um deserto, o atravesse.” (p. 44). E desfaz a leitura folclórica de quem acha bonita a frase “A Terra é nossa mãe”: “Isso não é poesia, é a nossa vida.” (p. 44). A Unicamp poderia transformar essa leitura em uma questão discursiva assim: *explique por que Krenak recusa que a frase “A Terra é nossa mãe” seja lida como poesia, relacionando a resposta à tese do livro sobre humanidade e natureza.*\n\n## Da imagem ao argumento: síntese interpretativa\n\nO livro disputa os critérios pelos quais uma vida é reconhecida como valiosa. A metáfora do clube e a oposição humanidade/sub-humanidade (PDF p. 9 e 34) denunciam uma universalidade que seleciona seus participantes. O trocadilho entre desenvolver e envolver (p. 12) transforma essa crítica em alternativa relacional: o movimento não é avançar sobre um território, mas participar de vínculos já existentes. Nomear o recurso não basta; é preciso explicar a mudança de perspectiva que ele produz.\n\nEm *Sonhos para adiar o fim do mundo* (p. 17–20), contar sonhos aos convivas converte experiência em conexão e orientação compartilhada. A narrativa do Criador disfarçado de tamanduá põe em questão a garantia de sucesso da criatura humana. No relato de Krenak, a incerteza do humano não é só ameaça: permite perguntar como viver de outra maneira. A análise deve distinguir o conhecimento apresentado por essa tradição da pretensão de converter o relato numa demonstração científica de previsão.\n\n## Exclusão e resistência à captura\n\nEm *O amanhã não está à venda*, a primeira pessoa declara sentir-se excluída da humanidade dominante (p. 34). No ensaio final, os povos originários são apresentados como aqueles que escaparam do mundo utilitário (p. 43). As formulações não precisam ser harmonizadas mediante a supressão de uma delas: a primeira denuncia uma hierarquia que produz desigualdade; a segunda recusa que a incorporação completa a essa hierarquia seja o único horizonte desejável. A mudança de perspectiva permite reconhecer violência e resistência ao mesmo tempo.\n\nA crítica à sustentabilidade também requer recorte. O próprio texto concorda com a educação sobre o gasto excessivo (p. 42), mas contesta a promessa de que selos, consumo individual e soluções empresariais bastem para deter a destruição. Sua objeção mira a suficiência dessa embalagem mercadológica e a fantasia de salvação isolada. Não resulta daí que cuidado material, redução de desperdício ou responsabilidade cotidiana sejam sempre inúteis. Essa distinção é síntese própria apoiada no encadeamento do ensaio, sem amenizar a radicalidade do ataque ao mundo-mercadoria.\n\n## Contexto de 2020 e limite da leitura\n\nA pandemia desmente, na argumentação de Krenak, a suposta impossibilidade de interromper a atividade humana; a analogia entre navio e tripulação (p. 35) denuncia a inversão que faz a economia valer mais do que as pessoas. A hipótese da Terra-mãe que pede silêncio deve permanecer atribuída à construção cosmológica do autor. A afirmação de que o vírus atinge apenas humanos, presente na p. 34, pertence ao texto e a seu contexto de 2020; não é apresentada por este dossiê como conhecimento biomédico atual. O livro reivindica mudança de relação e de imaginação, e não uma teoria clínica da doença.\n\nA decisão de permanecer junto ao rio Doce afetado pela mineração (p. 42–44) dá lugar concreto à recusa da utilidade. O fim relata uma decisão coletiva situada, sem prometer restauração automática. O imperativo final pode ser interpretado como ética de enfrentamento da experiência do desastre, desde que não se apague o pertencimento territorial que o sustenta.",
+      "reviewedAt": "2026-10-07T05:03:15Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-a-vida-nao-e-util"
+    },
+    {
+      "id": "critica-debate",
+      "moduleType": "critica_debate",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-excluido",
+        "ev-sustentabilidade"
+      ],
+      "sourceRefs": [
+        "vida-savi-2021"
+      ],
+      "markdown": "## Camadas de evidência\n\nAs passagens dos cartões estão localizadas na cópia do livro. Os guias e a análise argumentativa são síntese própria. As obras citadas por Krenak — entre outras, as de Foucault, Rolnik, Kopenawa e Wallace-Wells — aparecem conforme a mediação do ensaísta; não foram conferidas integralmente e não contam como leituras críticas diretas deste dossiê.\n\n## Savi: ecocrítica e anti-instrumentalismo\n\nMelina Pereira Savi (2021, p. 1–6; referências e notas p. 7–8) lê os cinco ensaios em sequência. Sua resenha relaciona instrumentalismo, excepcionalismo humano e descarte: transformar a vida em recurso e atribuir superioridade a alguns humanos cria condições para a devastação. Sonho, afeto e arte aparecem como meios de imaginar e experimentar relações diferentes. A leitura ajuda a conectar a discussão da humanidade seletiva à crítica da utilidade, sem tratar o sonho como fuga da realidade.\n\n## Terra-mãe e deslocamento de perspectiva\n\nSavi observa que a associação entre mulher e natureza pode gerar ressalvas quando examinada por categorias do feminismo ocidental. Propõe, porém, compreender a imagem da Terra-mãe a partir da cosmologia em que Krenak a enuncia: trata-se de deslocar uma mentalidade hierárquica em direção à comunidade de humanos e não humanos. O argumento não exige aceitar toda imagem como explicação científica nem reunir todas as cosmologias indígenas sob uma teoria única. O limite da resenha está também em suas aproximações com Haraway, Latimer e Alaimo: as obras dessas pensadoras permanecem referências mediadas nesta revisão.\n\n## Debate construído a partir do texto\n\nA crítica à sustentabilidade pode parecer recusa de toda ação ambiental parcial. A p. 42, entretanto, reconhece a necessidade de educar sobre o gasto excessivo e contesta a salvação individual e a promessa mercadológica de uma solução suficiente. A síntese deste dossiê distingue responsabilidade material de garantia de salvação pelo consumo certificado. Da mesma forma, a oposição entre exclusão (p. 34) e escape (p. 43) permite pensar a resistência sem negar a coerção histórica.\n\n## Alcance\n\nUma resenha ecocrítica efetivamente lida sustenta uma leitura documentada, mas não constitui a matriz avançada completa de artigos e teses. A discussão acima separa a posição de Savi, os argumentos de Krenak e a síntese própria. Em prova, a força da resposta está em reconstruir o encadeamento do excerto — analogia, exemplo, pergunta e conclusão — em vez de apenas citar conceitos ou nomes.",
+      "reviewedAt": "2026-10-07T05:03:15Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-a-vida-nao-e-util"
+    },
+    {
+      "id": "fuvest",
+      "moduleType": "fuvest",
+      "board": "FUVEST",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027"
+      ],
+      "markdown": "**Treino de transferência; a obra não está na lista FUVEST 2027.**\n\nBoa comparação com o *Opúsculo humanitário* (FUVEST): dois ensaios que acusam a ideia de “civilização”. Treine identificar tese, argumento e recurso (analogia, narrativa mítica, trocadilho).\n\n**F.O.R.M.A., ferramenta didática autoral.** Na segunda fase: foco no verbo, recorte e quantidade; observação de uma passagem; recurso formal pertinente; mecanismo que produz o efeito; articulação ao conjunto ou à comparação pedida. Isso não é rubrica oficial de pontuação. Na primeira fase, teste cada alternativa contra a voz e as marcas do excerto, sem aceitar uma característica geral que não esteja nele.",
+      "reviewedAt": "2026-10-07T05:03:15Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-a-vida-nao-e-util"
+    },
+    {
+      "id": "unicamp",
+      "moduleType": "unicamp",
+      "board": "UNICAMP",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-poesia-vida",
+        "ev-navio"
+      ],
+      "sourceRefs": [
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Preparação para a Unicamp/Comvest; não é questão oficial nem resposta esperada.**\n\nNa objetiva, reconheça o gênero (ensaio oral) e os pares de oposição. Distrator comum: reduzir “A Terra é nossa mãe” a imagem bonita ou mero ornamento, apagando o vínculo vivido e cosmológico reivindicado por Krenak (“Isso não é poesia, é a nossa vida.”, p. 44). A análise das personificações e dos demais recursos figurativos continua pertinente, desde que explique seu funcionamento na argumentação.\n\nNa discursiva, explique uma analogia com seu efeito: “Dizer que a economia é mais importante é como dizer que o navio importa mais que a tripulação.” (p. 35).\n\n**F.O.N.T.E., ferramenta didática autoral.** Na segunda fase: fonte localizada; operação de cada subitem; núcleo formal; tensão interpretativa; explicação articulada. Responda os verbos separadamente e ligue o efeito à evidência, sem apenas recontar a trama. Na primeira fase, compare a alternativa ao texto e ao paratexto fornecidos. O protocolo não é espelho oficial nem previsão de incidência.",
+      "reviewedAt": "2026-10-07T05:03:15Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-a-vida-nao-e-util"
+    },
+    {
+      "id": "questoes",
+      "moduleType": "questoes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-envolver",
+        "ev-certificado",
+        "ev-casta",
+        "ev-excluido",
+        "ev-utilidade",
+        "ev-mundo-parou"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. UNICAMP, objetiva, média.** Em “Temos que parar de nos desenvolver e começar a nos envolver.” (p. 12), o recurso central é:\n- A) a hipérbole.\n- B) a paronomásia, que opõe progresso e pertencimento.\n- C) a citação de um autor estrangeiro.\n- D) a narrativa mítica.\n- E) a estatística.\n\n**2. UNICAMP, objetiva, difícil.** A história do Criador transformado em tamanduá serve ao argumento de que:\n- A) os humanos são predestinados a dar certo.\n- B) “Os seres humanos não têm certificado, podem dar errado.” (p. 19).\n- C) os Krenak descendem dos animais.\n- D) a religião cristã é superior.\n- E) a caça deve ser proibida.\n\n**3. UNICAMP, discursiva, difícil.** a) Explique o que o autor chama de “sub-humanidade” (p. 9). b) Mostre como essa ideia volta em *O amanhã não está à venda* (p. 34).\n\n**4. Discursiva, muito difícil.** Relacione “Isso partindo da ideia de que a vida é útil, mas a vida não tem utilidade nenhuma.” (p. 43) ao título do livro e à crítica à escola e à sustentabilidade.\n\n**5. Comparação, muito difícil.** Os engenheiros diziam que o mundo não pode parar; “E o mundo parou.” (p. 33). Explique como a pandemia funciona como argumento no livro.",
+      "reviewedAt": "2026-10-07T05:03:15Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-a-vida-nao-e-util"
+    },
+    {
+      "id": "revisao-ativa",
+      "moduleType": "revisao_ativa",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-deserto",
+        "ev-suspender-ceu"
+      ],
+      "sourceRefs": [],
+      "markdown": "Reconstrua sem consulta: os cinco textos e a ideia central de cada (humanidade e sub-humanidade; sonho; técnica e consumo; pandemia; utilidade e fruição).\n\n**Factual:** de que rio Krenak fala? O que a nota da p. 48 informa sobre a origem dos textos?\n\n**Formal:** que marcas de oralidade aparecem? Que narrativas indígenas funcionam como argumento?\n\n**Interpretativo:** o livro é pessimista ou esperançoso? Justifique com dois textos.\n\n**24 horas:** mapa. **7 dias:** um trecho novo. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos.",
+      "reviewedAt": "2026-10-07T05:03:15Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-a-vida-nao-e-util"
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "vida-savi-2021",
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Edição usada:** Ailton Krenak, *A vida não é útil*. São Paulo: Companhia das Letras, 2020, e-book. Pesquisa e organização de Rita Carelli (agradecimento na p. 45). As páginas citadas são as do PDF usado, com 60 páginas.\n\n**Procedência do arquivo:** a p. 2 traz a marca de um site de download (“Baixe Livros… Converted by convertEPub”), e as p. 52-60 são propaganda de outros livros. O texto é o da Companhia das Letras, mas a paginação é da conversão. As citações foram localizadas na camada de texto desta cópia; permanece pendente o cotejo integral com exemplar da editora e a inspeção de eventuais marcas em imagem. A procedência do arquivo não comprova autorização de distribuição.\n\n**O que o próprio livro informa:** a origem de cada texto em lives e entrevistas (p. 48), as referências citadas pelo autor (p. 46-47) e a nota biográfica (p. 49). Essas informações vêm do volume, não de pesquisa externa.\n\n**Lista oficial:** obra exigida pela Unicamp/Comvest para o ciclo 2027, na íntegra.\n\n**Crítica documentada:** resenha acadêmica de Melina Pereira Savi (2021), lida integralmente na pesquisa registrada, incluindo referências e notas editoriais. A autora propõe uma leitura ecocrítica dos cinco ensaios; o registro abaixo informa contribuição e limitações. Foucault, Rolnik, Kopenawa e Wallace-Wells continuam como referências mediadas por Krenak; Haraway, Latimer e Alaimo permanecem mediados por Savi.\n\n**Fonte oficial e recorte:** o Programa das Provas do Vestibular Unicamp 2027, p. 5, confirma a leitura integral. A questão 5 do primeiro dia da segunda fase de 2026 trata de excertos de Eliane Brum e do Portal Amazônia; não é uma questão de Krenak e não é usada como comprovação de cobrança deste livro.\n\n**Alcance editorial:** edição compacta de estudo dos cinco ensaios. Uma resenha lida não completa a matriz avançada de artigos e duas teses. Permanecem pendentes o aprofundamento de cada unidade em quinze componentes e o cotejo externo da edição. As ferramentas F.O.R.M.A. e F.O.N.T.E. e as questões são autorais, sem equivalência a rubricas oficiais.\n\n## Bibliografia comentada e leitura efetiva\n\n**SAVI, Melina Pereira. Para Ailton Krenak em A vida não é útil, somos a praga do planeta, mas podemos mudar. Anuário de Literatura, v. 26, p. 1–8, 2021. DOI: 10.5007/2175-7917.2021.e76799.**\n\n[Consultar fonte](https://periodicos.ufsc.br/index.php/literatura/article/view/76799). Leitura efetiva: p. 1–8, resenha integral, incluindo referências e notas editoriais.\n\n**Leitura documentada:** A crítica ao instrumentalismo e ao excepcionalismo humano exige repensar as relações entre humanos e não humanos; sonho, afeto e arte oferecem alternativas.\n\n**Contribuição:** Lê os cinco ensaios em sequência e mostra por que a imagem Terra-mãe exige deslocamento de perspectiva, em vez de mera classificação como ornamentação poética.\n\n**Limites:** É uma resenha ecocrítica, não um levantamento de todas as tradições indígenas. Haraway, Latimer e Alaimo são mobilizadas pela resenhista; suas obras não foram lidas diretamente. Paginação das citações do livro corresponde à edição impressa, distinta do PDF fornecido.\n\n**FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.**\n\n[Consultar fonte](https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/). Leitura efetiva: Corpo da notícia e listas anuais; conferência da lista de 2027.\n\n**Leitura documentada:** A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.\n\n**Contribuição:** Confirma a exigência oficial e distingue as listas dos diferentes anos.\n\n**Limites:** A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões.\n\n**FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.**\n\n[Consultar fonte](https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf). Leitura efetiva: PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.\n\n**Leitura documentada:** O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.\n\n**Contribuição:** Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.\n\n**Limites:** Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral.\n\n**Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.**\n\n[Consultar fonte](https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf). Leitura efetiva: PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.\n\n**Leitura documentada:** O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.\n\n**Contribuição:** Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.\n\n**Limites:** Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral.\n\n**Alcance desta publicação.** Primeira edição de estudo: texto primário, guias, passagens e síntese autoral revistos, com os recortes críticos acima. Não certifica a leitura integral dos estudos consultados parcialmente nem o aprofundamento integral da habilidade avançada. As unidades e agrupamentos seguem a edição e os limites declarados no percurso. A pesquisa não substitui a leitura da obra. As limitações do arquivo fornecido e da procedência permanecem válidas.",
+      "reviewedAt": "2026-10-07T05:03:15Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-a-vida-nao-e-util"
+    }
   ],
   "evidence": [
-    { "id": "ev-praga", "unitId": "nao-se-come-dinheiro", "location": "“Não se come dinheiro”, p. 9", "quote": "Somos a praga do planeta, uma espécie de ameba gigante.",
-      "context": "Depois de enumerar a matança de animais e de outros humanos.", "formalDevice": "Metáfora degradante aplicada à própria espécie.", "effect": "Inverte a autoimagem da humanidade como espécie superior.", "wholeRelation": "A imagem volta no terceiro texto: “Somos nós a praga que veio devorar o mundo” (p. 27).", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-casta", "unitId": "nao-se-come-dinheiro", "location": "“Não se come dinheiro”, p. 9", "quote": "É como se tivessem elegido uma casta, a humanidade, e todos que estão fora dela são a sub-humanidade.",
-      "context": "Krenak comenta o “clube exclusivo da humanidade” das declarações e instituições.", "formalDevice": "Analogia com a casta e oposição humanidade/sub-humanidade.", "effect": "Mostra a palavra “humanidade” como critério de exclusão.", "wholeRelation": "É a tese central do livro, retomada nos cinco textos.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-envolver", "unitId": "nao-se-come-dinheiro", "location": "“Não se come dinheiro”, p. 12", "quote": "Temos que parar de nos desenvolver e começar a nos envolver.",
-      "context": "Depois de descrever os trens da Vale passando perto da aldeia.", "formalDevice": "Paronomásia (desenvolver/envolver).", "effect": "Opõe a lógica do progresso à da relação e do pertencimento.", "wholeRelation": "Sintetiza em jogo de palavras a crítica ao desenvolvimento.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-ferrados", "unitId": "nao-se-come-dinheiro", "location": "“Não se come dinheiro”, p. 13", "quote": "O lugar onde estou é chamado de Quadrilátero Ferrífero. É de um mau gosto enorme dar um nome desses para um lugar. O que ele quer dizer? Que estamos ferrados.",
-      "context": "Reflexão sobre a mineração em Minas Gerais e as barragens de Mariana e Brumadinho.", "formalDevice": "Trocadilho em registro coloquial.", "effect": "O humor torna concreta a tragédia da mineração.", "wholeRelation": "Exemplo do ensaio oral, que argumenta também pelo riso.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-vida-transcendencia", "unitId": "nao-se-come-dinheiro", "location": "“Não se come dinheiro”, p. 13", "quote": "Vida é transcendência, está para além do dicionário, não tem uma definição.",
-      "context": "Fecho do primeiro texto, depois de olhar a montanha que guarda a aldeia.", "formalDevice": "Definição que recusa definir.", "effect": "Afasta a vida da linguagem técnica e da utilidade.", "wholeRelation": "Prepara o texto final, “A vida não é útil”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-constelacao", "unitId": "sonhos-para-adiar-o-fim-do-mundo", "location": "“Sonhos para adiar o fim do mundo”, p. 18", "quote": "Não conheço nenhum sujeito de nenhum povo nosso que saiu sozinho pelo mundo. Andamos em constelação.",
-      "context": "Sobre a perspectiva coletiva dos jovens indígenas que publicam e falam.", "formalDevice": "Metáfora astronômica.", "effect": "Opõe a identidade coletiva indígena ao individualismo.", "wholeRelation": "Liga-se à crítica do “eu” que se salva sozinho em “A vida não é útil”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-certificado", "unitId": "sonhos-para-adiar-o-fim-do-mundo", "location": "“Sonhos para adiar o fim do mundo”, p. 19", "quote": "A ideia dos Krenak sobre a criatura humana é precária. Os seres humanos não têm certificado, podem dar errado.",
-      "context": "Comentário da história do Criador que vira tamanduá.", "formalDevice": "Conclusão teórica tirada de uma narrativa mítica, em linguagem cotidiana (“certificado”).", "effect": "Transforma o mito em argumento contra a ideia de humanidade predestinada.", "wholeRelation": "Fundamenta a recusa da “qualidade humana especial” no mesmo texto.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-suspender-ceu", "unitId": "sonhos-para-adiar-o-fim-do-mundo", "location": "“Sonhos para adiar o fim do mundo”, p. 20", "quote": "Suspender o céu é ampliar os horizontes de todos, não só dos humanos.",
-      "context": "Explicação do ritual taru andé, feito na entrada da primavera.", "formalDevice": "Sentido literal e figurado de “ampliar horizontes”.", "effect": "O rito tem alcance cósmico e coletivo, inclusive não humano.", "wholeRelation": "Mostra a alternativa positiva que o livro opõe ao antropocentrismo.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-poder-natural", "unitId": "a-maquina-de-fazer-coisas", "location": "“A máquina de fazer coisas”, p. 25", "quote": "Nas tradições que eu compartilho, não existe poder sobrenatural. Todo poder é natural, e nós participamos dele.",
-      "context": "Sobre o momento em que os humanos passaram a se apropriar da técnica.", "formalDevice": "Negação de uma categoria (sobrenatural).", "effect": "Desfaz a oposição entre natureza e algo acima dela.", "wholeRelation": "Antecipa o “Tudo é natureza” de “O amanhã não está à venda”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-brinquedos", "unitId": "a-maquina-de-fazer-coisas", "location": "“A máquina de fazer coisas”, p. 26", "quote": "Pois a verdade é que tudo que a técnica nos deu foram brinquedos.",
-      "context": "Depois de imaginar a Terra dizendo que os humanos “piraram”.", "formalDevice": "Redução irônica (técnica = brinquedo).", "effect": "Retira da tecnologia o prestígio de conquista civilizatória.", "wholeRelation": "Liga-se à “infantilidade espiritual” e ao foguete dos bilionários.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-mundo-velho", "unitId": "a-maquina-de-fazer-coisas", "location": "“A máquina de fazer coisas”, p. 28", "quote": "Um mundo velho e canalha fantasiado de novo.",
-      "context": "Crítica à ideia de “outro mundo” como capitalismo consertado na oficina.", "formalDevice": "Metáfora do carro reformado e da fantasia.", "effect": "Nega que reformas dentro do mesmo sistema sejam mudança real.", "wholeRelation": "Prepara a recusa da “volta à normalidade” no texto seguinte.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-mundo-parou", "unitId": "o-amanha-nao-esta-a-venda", "location": "“O amanhã não está à venda”, p. 33", "quote": "Então um deles me disse: “Mas isso é impossível”. O mundo não pode parar. E o mundo parou.",
-      "context": "Engenheiros perguntam a Krenak como recuperar o rio Doce.", "formalDevice": "Ironia de situação; frases curtas em sequência.", "effect": "A pandemia desmente o argumento do impossível.", "wholeRelation": "Mostra que a crise abre a possibilidade que o sistema negava.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-excluido", "unitId": "o-amanha-nao-esta-a-venda", "location": "“O amanhã não está à venda”, p. 34", "quote": "Eu não me sinto parte dessa humanidade. Eu me sinto excluído dela.",
-      "context": "Depois de descrever o “clube seleto” e a “sub-humanidade” agarrada à Terra.", "formalDevice": "Declaração em primeira pessoa, com paralelismo.", "effect": "O argumento vira posição pessoal e política.", "wholeRelation": "Retoma a tese de “Não se come dinheiro”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-mae-silencio", "unitId": "o-amanha-nao-esta-a-venda", "location": "“O amanhã não está à venda”, p. 34", "quote": "O que estamos vivendo pode ser a obra de uma mãe amorosa que decidiu fazer o filho calar a boca pelo menos por um instante.",
-      "context": "Interpretação da pandemia.", "formalDevice": "Alegoria da Terra como mãe.", "effect": "A pandemia é lida como lição, não como castigo.", "wholeRelation": "Liga-se ao “A Terra é nossa mãe” do último texto, que Krenak diz não ser poesia.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-navio", "unitId": "o-amanha-nao-esta-a-venda", "location": "“O amanhã não está à venda”, p. 35", "quote": "Dizer que a economia é mais importante é como dizer que o navio importa mais que a tripulação.",
-      "context": "Resposta a quem defende manter a economia mesmo que “alguns vão morrer”.", "formalDevice": "Analogia.", "effect": "Torna evidente o absurdo de pôr a economia acima das vidas.", "wholeRelation": "Exemplo do argumento por analogia, típico do ensaio.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-normalidade", "unitId": "o-amanha-nao-esta-a-venda", "location": "“O amanhã não está à venda”, p. 36", "quote": "Tomara que não voltemos à normalidade, pois, se voltarmos, é porque não valeu nada a morte de milhares de pessoas no mundo inteiro.",
-      "context": "Depois de citar A peste, de Camus.", "formalDevice": "Desejo expresso (“Tomara”) contra o senso comum.", "effect": "Inverte o desejo geral de “voltar ao normal”.", "wholeRelation": "Fecha o texto que dá nome ao e-book original de abril de 2020 (p. 48).", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-sustentabilidade", "unitId": "a-vida-nao-e-util", "location": "“A vida não é útil”, p. 42", "quote": "isso é uma mentira bem embalada",
-      "context": "Sobre a ideia de que economizar água, comer orgânico e andar de bicicleta resolveria a crise.", "formalDevice": "Metáfora comercial (“embalada”).", "effect": "A crítica atinge também o discurso ambiental que o leitor talvez admire.", "wholeRelation": "Liga-se ao comentário sobre sustentabilidade como “vaidade pessoal” (p. 41).", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-utilidade", "unitId": "a-vida-nao-e-util", "location": "“A vida não é útil”, p. 43", "quote": "Isso partindo da ideia de que a vida é útil, mas a vida não tem utilidade nenhuma.",
-      "context": "Sobre as operações de resgate que querem devolver o corpo “operante”.", "formalDevice": "Negação enfática da premissa utilitária.", "effect": "Formula a tese que dá título ao livro.", "wholeRelation": "Responde ao “Não se come dinheiro”: o valor da vida não é econômico.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-danca", "unitId": "a-vida-nao-e-util", "location": "“A vida não é útil”, p. 43", "quote": "A vida é fruição, é uma dança, só que é uma dança cósmica, e a gente quer reduzi-la a uma coreografia ridícula e utilitária.",
-      "context": "Continuação da tese do título.", "formalDevice": "Oposição dança/coreografia.", "effect": "Contrasta a liberdade da fruição com o roteiro imposto.", "wholeRelation": "Volta no fim do texto: os brancos “repetem a dança” de pisar duro sobre a terra (p. 44).", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-poesia-vida", "unitId": "a-vida-nao-e-util", "location": "“A vida não é útil”, p. 44", "quote": "Isso não é poesia, é a nossa vida.",
-      "context": "Resposta a quem acha poética a frase “A Terra é nossa mãe”.", "formalDevice": "Negação do sentido figurado.", "effect": "Reivindica sentido literal para o que o branco lê como metáfora.", "wholeRelation": "Mostra o choque de epistemologias que atravessa o livro.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-deserto", "unitId": "a-vida-nao-e-util", "location": "“A vida não é útil”, p. 44", "quote": "Quando aparecer um deserto, o atravesse.",
-      "context": "Últimas palavras do livro, sobre a decisão dos Krenak de ficar no rio atingido.", "formalDevice": "Imperativo e imagem do deserto.", "effect": "Termina com uma ética de enfrentamento, não de fuga.", "wholeRelation": "Fecha o livro na experiência do desastre e do silêncio.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" }
+    {
+      "id": "ev-praga",
+      "unitId": "nao-se-come-dinheiro",
+      "location": "“Não se come dinheiro”, p. 9",
+      "quote": "Somos a praga do planeta, uma espécie de ameba gigante.",
+      "context": "Depois de enumerar a matança de animais e de outros humanos.",
+      "formalDevice": "Metáfora degradante aplicada à própria espécie.",
+      "effect": "Inverte a autoimagem da humanidade como espécie superior.",
+      "wholeRelation": "A imagem volta no terceiro texto: “Somos nós a praga que veio devorar o mundo” (p. 27).",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-casta",
+      "unitId": "nao-se-come-dinheiro",
+      "location": "“Não se come dinheiro”, p. 9",
+      "quote": "É como se tivessem elegido uma casta, a humanidade, e todos que estão fora dela são a sub-humanidade.",
+      "context": "Krenak comenta o “clube exclusivo da humanidade” das declarações e instituições.",
+      "formalDevice": "Analogia com a casta e oposição humanidade/sub-humanidade.",
+      "effect": "Mostra a palavra “humanidade” como critério de exclusão.",
+      "wholeRelation": "É a tese central do livro, retomada nos cinco textos.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-envolver",
+      "unitId": "nao-se-come-dinheiro",
+      "location": "“Não se come dinheiro”, p. 12",
+      "quote": "Temos que parar de nos desenvolver e começar a nos envolver.",
+      "context": "Depois de descrever os trens da Vale passando perto da aldeia.",
+      "formalDevice": "Paronomásia (desenvolver/envolver).",
+      "effect": "Opõe a lógica do progresso à da relação e do pertencimento.",
+      "wholeRelation": "Sintetiza em jogo de palavras a crítica ao desenvolvimento.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-ferrados",
+      "unitId": "nao-se-come-dinheiro",
+      "location": "“Não se come dinheiro”, p. 13",
+      "quote": "O lugar onde estou é chamado de Quadrilátero Ferrífero. É de um mau gosto enorme dar um nome desses para um lugar. O que ele quer dizer? Que estamos ferrados.",
+      "context": "Reflexão sobre a mineração em Minas Gerais e as barragens de Mariana e Brumadinho.",
+      "formalDevice": "Trocadilho em registro coloquial.",
+      "effect": "O humor torna concreta a tragédia da mineração.",
+      "wholeRelation": "Exemplo do ensaio oral, que argumenta também pelo riso.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-vida-transcendencia",
+      "unitId": "nao-se-come-dinheiro",
+      "location": "“Não se come dinheiro”, p. 13",
+      "quote": "Vida é transcendência, está para além do dicionário, não tem uma definição.",
+      "context": "Fecho do primeiro texto, depois de olhar a montanha que guarda a aldeia.",
+      "formalDevice": "Definição que recusa definir.",
+      "effect": "Afasta a vida da linguagem técnica e da utilidade.",
+      "wholeRelation": "Prepara o texto final, “A vida não é útil”.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-constelacao",
+      "unitId": "sonhos-para-adiar-o-fim-do-mundo",
+      "location": "“Sonhos para adiar o fim do mundo”, p. 18",
+      "quote": "Não conheço nenhum sujeito de nenhum povo nosso que saiu sozinho pelo mundo. Andamos em constelação.",
+      "context": "Sobre a perspectiva coletiva dos jovens indígenas que publicam e falam.",
+      "formalDevice": "Metáfora astronômica.",
+      "effect": "Opõe a identidade coletiva indígena ao individualismo.",
+      "wholeRelation": "Liga-se à crítica do “eu” que se salva sozinho em “A vida não é útil”.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-certificado",
+      "unitId": "sonhos-para-adiar-o-fim-do-mundo",
+      "location": "“Sonhos para adiar o fim do mundo”, p. 19",
+      "quote": "A ideia dos Krenak sobre a criatura humana é precária. Os seres humanos não têm certificado, podem dar errado.",
+      "context": "Comentário da história do Criador que vira tamanduá.",
+      "formalDevice": "Conclusão teórica tirada de uma narrativa mítica, em linguagem cotidiana (“certificado”).",
+      "effect": "Transforma o mito em argumento contra a ideia de humanidade predestinada.",
+      "wholeRelation": "Fundamenta a recusa da “qualidade humana especial” no mesmo texto.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-suspender-ceu",
+      "unitId": "sonhos-para-adiar-o-fim-do-mundo",
+      "location": "“Sonhos para adiar o fim do mundo”, p. 20",
+      "quote": "Suspender o céu é ampliar os horizontes de todos, não só dos humanos.",
+      "context": "Explicação do ritual taru andé, feito na entrada da primavera.",
+      "formalDevice": "Sentido literal e figurado de “ampliar horizontes”.",
+      "effect": "O rito tem alcance cósmico e coletivo, inclusive não humano.",
+      "wholeRelation": "Mostra a alternativa positiva que o livro opõe ao antropocentrismo.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-poder-natural",
+      "unitId": "a-maquina-de-fazer-coisas",
+      "location": "“A máquina de fazer coisas”, p. 25",
+      "quote": "Nas tradições que eu compartilho, não existe poder sobrenatural. Todo poder é natural, e nós participamos dele.",
+      "context": "Sobre o momento em que os humanos passaram a se apropriar da técnica.",
+      "formalDevice": "Negação de uma categoria (sobrenatural).",
+      "effect": "Desfaz a oposição entre natureza e algo acima dela.",
+      "wholeRelation": "Antecipa o “Tudo é natureza” de “O amanhã não está à venda”.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-brinquedos",
+      "unitId": "a-maquina-de-fazer-coisas",
+      "location": "“A máquina de fazer coisas”, p. 26",
+      "quote": "Pois a verdade é que tudo que a técnica nos deu foram brinquedos.",
+      "context": "Depois de imaginar a Terra dizendo que os humanos “piraram”.",
+      "formalDevice": "Redução irônica (técnica = brinquedo).",
+      "effect": "Retira da tecnologia o prestígio de conquista civilizatória.",
+      "wholeRelation": "Liga-se à “infantilidade espiritual” e ao foguete dos bilionários.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-mundo-velho",
+      "unitId": "a-maquina-de-fazer-coisas",
+      "location": "“A máquina de fazer coisas”, p. 28",
+      "quote": "Um mundo velho e canalha fantasiado de novo.",
+      "context": "Crítica à ideia de “outro mundo” como capitalismo consertado na oficina.",
+      "formalDevice": "Metáfora do carro reformado e da fantasia.",
+      "effect": "Nega que reformas dentro do mesmo sistema sejam mudança real.",
+      "wholeRelation": "Prepara a recusa da “volta à normalidade” no texto seguinte.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-mundo-parou",
+      "unitId": "o-amanha-nao-esta-a-venda",
+      "location": "“O amanhã não está à venda”, p. 33",
+      "quote": "Então um deles me disse: “Mas isso é impossível”. O mundo não pode parar. E o mundo parou.",
+      "context": "Engenheiros perguntam a Krenak como recuperar o rio Doce.",
+      "formalDevice": "Ironia de situação; frases curtas em sequência.",
+      "effect": "A pandemia desmente o argumento do impossível.",
+      "wholeRelation": "Mostra que a crise abre a possibilidade que o sistema negava.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-excluido",
+      "unitId": "o-amanha-nao-esta-a-venda",
+      "location": "“O amanhã não está à venda”, p. 34",
+      "quote": "Eu não me sinto parte dessa humanidade. Eu me sinto excluído dela.",
+      "context": "Depois de descrever o “clube seleto” e a “sub-humanidade” agarrada à Terra.",
+      "formalDevice": "Declaração em primeira pessoa, com paralelismo.",
+      "effect": "O argumento vira posição pessoal e política.",
+      "wholeRelation": "Retoma a exclusão denunciada em Não se come dinheiro. Contrasta com a formulação da p. 43, em que escapar do mundo utilitário valoriza a resistência: o texto muda a perspectiva sem negar a violência da exclusão.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-mae-silencio",
+      "unitId": "o-amanha-nao-esta-a-venda",
+      "location": "“O amanhã não está à venda”, p. 34",
+      "quote": "O que estamos vivendo pode ser a obra de uma mãe amorosa que decidiu fazer o filho calar a boca pelo menos por um instante.",
+      "context": "Construção argumentativa de Krenak sobre a pandemia no contexto de 2020, atribuída à perspectiva do autor, sem pretensão de explicação biomédica.",
+      "formalDevice": "Alegoria da Terra como mãe.",
+      "effect": "A hipótese da Terra-mãe transforma o recolhimento em ocasião de escuta e aprendizagem, na argumentação de Krenak; não estabelece uma causalidade científica para a doença.",
+      "wholeRelation": "Liga-se ao “A Terra é nossa mãe” do último texto, que Krenak diz não ser poesia.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-navio",
+      "unitId": "o-amanha-nao-esta-a-venda",
+      "location": "“O amanhã não está à venda”, p. 35",
+      "quote": "Dizer que a economia é mais importante é como dizer que o navio importa mais que a tripulação.",
+      "context": "Resposta a quem defende manter a economia mesmo que “alguns vão morrer”.",
+      "formalDevice": "Analogia.",
+      "effect": "Torna evidente o absurdo de pôr a economia acima das vidas.",
+      "wholeRelation": "Exemplo do argumento por analogia, típico do ensaio.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-normalidade",
+      "unitId": "o-amanha-nao-esta-a-venda",
+      "location": "“O amanhã não está à venda”, p. 36",
+      "quote": "Tomara que não voltemos à normalidade, pois, se voltarmos, é porque não valeu nada a morte de milhares de pessoas no mundo inteiro.",
+      "context": "Depois de citar A peste, de Camus.",
+      "formalDevice": "Desejo expresso (“Tomara”) contra o senso comum.",
+      "effect": "Inverte o desejo geral de “voltar ao normal”.",
+      "wholeRelation": "Fecha o texto que dá nome ao e-book original de abril de 2020 (p. 48).",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-sustentabilidade",
+      "unitId": "a-vida-nao-e-util",
+      "location": "“A vida não é útil”, p. 42",
+      "quote": "isso é uma mentira bem embalada",
+      "context": "Sobre a ideia de que economizar água, comer orgânico e andar de bicicleta resolveria a crise.",
+      "formalDevice": "Metáfora comercial (“embalada”).",
+      "effect": "A crítica atinge também o discurso ambiental que o leitor talvez admire.",
+      "wholeRelation": "Liga-se ao comentário sobre sustentabilidade como “vaidade pessoal” (p. 41).",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-utilidade",
+      "unitId": "a-vida-nao-e-util",
+      "location": "“A vida não é útil”, p. 43",
+      "quote": "Isso partindo da ideia de que a vida é útil, mas a vida não tem utilidade nenhuma.",
+      "context": "Sobre as operações de resgate que querem devolver o corpo “operante”.",
+      "formalDevice": "Negação enfática da premissa utilitária.",
+      "effect": "Formula a tese que dá título ao livro.",
+      "wholeRelation": "Responde ao “Não se come dinheiro”: o valor da vida não é econômico.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-danca",
+      "unitId": "a-vida-nao-e-util",
+      "location": "“A vida não é útil”, p. 43",
+      "quote": "A vida é fruição, é uma dança, só que é uma dança cósmica, e a gente quer reduzi-la a uma coreografia ridícula e utilitária.",
+      "context": "Continuação da tese do título.",
+      "formalDevice": "Oposição dança/coreografia.",
+      "effect": "Contrasta a liberdade da fruição com o roteiro imposto.",
+      "wholeRelation": "Volta no fim do texto: os brancos “repetem a dança” de pisar duro sobre a terra (p. 44).",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-poesia-vida",
+      "unitId": "a-vida-nao-e-util",
+      "location": "“A vida não é útil”, p. 44",
+      "quote": "Isso não é poesia, é a nossa vida.",
+      "context": "Resposta a quem acha poética a frase “A Terra é nossa mãe”.",
+      "formalDevice": "Correção da leitura do interlocutor que reduz o vínculo com a Terra a beleza poética; reivindicação de uma relação vivida e cosmológica.",
+      "effect": "Recusa tratar o pertencimento à Terra como mero ornamento. Isso não elimina o emprego de imagens e recursos figurativos nos ensaios; é preciso explicar seu valor argumentativo.",
+      "wholeRelation": "Mostra o choque de epistemologias que atravessa o livro.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-deserto",
+      "unitId": "a-vida-nao-e-util",
+      "location": "“A vida não é útil”, p. 44",
+      "quote": "Quando aparecer um deserto, o atravesse.",
+      "context": "Últimas palavras do livro, sobre a decisão dos Krenak de ficar no rio atingido.",
+      "formalDevice": "Imperativo e imagem do deserto.",
+      "effect": "Termina com uma ética de enfrentamento, não de fuga.",
+      "wholeRelation": "Fecha o livro na experiência do desastre e do silêncio.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    }
+  ],
+  "sources": [
+    {
+      "id": "vida-savi-2021",
+      "citation": "SAVI, Melina Pereira. Para Ailton Krenak em A vida não é útil, somos a praga do planeta, mas podemos mudar. Anuário de Literatura, v. 26, p. 1–8, 2021. DOI: 10.5007/2175-7917.2021.e76799.",
+      "type": "academic_article",
+      "institution": "Universidade Federal de Santa Catarina",
+      "year": 2021,
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 1–8, resenha integral, incluindo referências e notas editoriais.",
+      "centralThesis": "A crítica ao instrumentalismo e ao excepcionalismo humano exige repensar as relações entre humanos e não humanos; sonho, afeto e arte oferecem alternativas.",
+      "contribution": "Lê os cinco ensaios em sequência e mostra por que a imagem Terra-mãe exige deslocamento de perspectiva, em vez de mera classificação como ornamentação poética.",
+      "limitations": "É uma resenha ecocrítica, não um levantamento de todas as tradições indígenas. Haraway, Latimer e Alaimo são mobilizadas pela resenhista; suas obras não foram lidas diretamente. Paginação das citações do livro corresponde à edição impressa, distinta do PDF fornecido.",
+      "url": "https://periodicos.ufsc.br/index.php/literatura/article/view/76799"
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-lista-2027",
+      "citation": "FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.",
+      "institution": "FUVEST / USP",
+      "year": 2023,
+      "url": "https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/",
+      "pagesRead": "Corpo da notícia e listas anuais; conferência da lista de 2027.",
+      "centralThesis": "A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.",
+      "contribution": "Confirma a exigência oficial e distingue as listas dos diferentes anos.",
+      "limitations": "A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-programa-2027",
+      "citation": "FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.",
+      "institution": "FUVEST / USP",
+      "year": 2026,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf",
+      "pagesRead": "PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.",
+      "centralThesis": "O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.",
+      "contribution": "Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.",
+      "limitations": "Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "comvest-programa-2027",
+      "citation": "Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.",
+      "institution": "Comvest / Unicamp",
+      "year": 2026,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "pagesRead": "PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.",
+      "centralThesis": "O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.",
+      "contribution": "Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.",
+      "limitations": "Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral."
+    }
   ]
 }
