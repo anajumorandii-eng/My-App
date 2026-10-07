@@ -65,3 +65,13 @@ Síntese própria: Nkem anuncia uma decisão dentro do casamento; Chinaza retorn
 ## Alcance editorial
 
 Atualizar módulos 16, 17 e 29 e Fontes para retirar afirmação absoluta de nenhuma pesquisa, indicando recortes realmente lidos. Conservar limites de procedência, tradução e fac-símile. Fonte oficial Programa p. 4–5 confirma obra completa em 2027; estratégias das duas bancas continuam autorais. Publicação proposta é edição de estudo com leitura guiada existente e pesquisa delimitada, não estado da arte completo nem cumprimento automático das metas de duas teses, três artigos e estudo crítico de referência da habilidade. As questões autorais permanecem sem gabarito antes da tentativa.
+
+## Validação para integração — 2026-10-07
+
+Patch privado preparado para integrar cadastros reais, crítica em confronto e correções de declarações antigas de ausência de pesquisa. Preserva IDs, corpus e páginas; não altera o JSON público nem aprova status. O campo de diálogo crítico distingue as unidades diretamente tratadas nos recortes lidos das que permanecem síntese textual própria. Novamente confrontados: causalidade do abscesso e cobranças não confirmadas (Funerais), silêncio final e desigualdade afetiva (Adichie), narrador Augusto, relato do inventor, contradição histórica e futuro não narrado de Aleixo (Gonzaga).
+
+A revisão atual é delimitada; não corresponde a uma segunda leitura integral nem certificação bibliográfica avançada.
+
+## Decisão da primeira edição de estudo
+
+Doze contos revistos por voz, causalidade e finais abertos. Os recortes críticos do conto-título preservam a diferença entre inferência e fato: não há promessa explícita de retorno. Tradução e data da edição permanecem sem confirmação, declaradas em Fontes. Aprovados 8 módulos, 12 guias e 13 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.

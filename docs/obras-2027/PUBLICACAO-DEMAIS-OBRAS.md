@@ -44,3 +44,4 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | Canções escolhidas — catorze letras | Primeira edição de estudo aprovada: 8 módulos, 14 guias, 16 cartões. Conferência literal passou; IDs preservados. |
 | Prosas seguidas de Odes mínimas | Primeira edição de estudo aprovada: 8 módulos, 33 guias, 24 cartões. Conferência literal passou; IDs preservados. |
 | Os funerais da Mamãe Grande | Primeira edição de estudo aprovada: 8 módulos, 8 guias, 9 cartões. Conferência literal passou; IDs preservados. |
+| No seu pescoço | Primeira edição de estudo aprovada: 8 módulos, 12 guias, 13 cartões. Conferência literal passou; IDs preservados. |
