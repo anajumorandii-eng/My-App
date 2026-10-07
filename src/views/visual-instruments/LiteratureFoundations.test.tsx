@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import chapters from '../../data/deepSummaryContent.json';
@@ -14,7 +14,7 @@ afterEach(cleanup);
 const ids = Object.keys(LITERATURE_FOUNDATIONS) as LiteratureFoundationId[];
 
 describe('fundamentos de Literatura: operações sustentadas pelo capítulo', () => {
-  it.each(ids)('%s chega à operação própria e mantém os conceitos selecionáveis', id => {
+  it.each(ids)('%s chega à operação própria e mantém os conceitos selecionáveis', async id => {
     const config = LITERATURE_FOUNDATIONS[id];
     const summary = interactiveSummaries.find(item => item.subject === 'Literatura' && item.topic === config.topic)!;
     expect(visualCandidates(summary)[0]).toEqual(id === 'literary-text' ? { kind: 'experiment', id: 'literary' } : { kind: 'instrument', id });
@@ -29,7 +29,8 @@ describe('fundamentos de Literatura: operações sustentadas pelo capítulo', ()
     const map = buildVisualMap(summary);
     const onSelect = vi.fn();
     const view = render(<instrument.Component map={map} states={{}} selectedId={map.nodes[1].id} onSelect={onSelect} hiddenEdgeIds={[]} mode="explorar"/>);
-    expect(view.container.querySelector('[data-literature-operation]')?.getAttribute('data-literature-operation')).toBe(id);
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(view.container.querySelector('[data-literature-operation]')?.getAttribute('data-literature-operation')).toBe(id));
     const left = view.container.querySelector('.vs-concept-card--expansion')!;
     expect(left.textContent).toContain(map.nodes[1].label);
     fireEvent.click(left);

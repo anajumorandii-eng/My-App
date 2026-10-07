@@ -2,7 +2,6 @@ import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { authHeaders } from '../../lib/auth';
 import { resolveEffectiveStudyAvailability } from './availabilityEngine';
-import { getEffectiveStudyAvailability } from './availabilityService';
 import {
   deleteScheduleException as deleteStoredException,
   getOrCreateWeeklySchedule,
@@ -45,8 +44,11 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
   const scheduleRef = useRef<WeeklySchedule | undefined>(undefined);
   const exceptionRef = useRef<ScheduleException | undefined>(undefined);
 
+  const uid = user?.uid;
+
   useEffect(() => {
     let cancelled = false;
+    const controller = new AbortController();
     setLoading(true);
     setSyncError(null);
     setSchedule(undefined);
@@ -63,7 +65,7 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
         }
         return;
       }
-      if (!user) {
+      if (!uid) {
         const previewSchedule = createInitialWeeklySchedule(new Date().toISOString());
         const calendar: CalendarOverlayInput = { status: 'disconnected' };
         calendarRef.current = calendar;
@@ -76,16 +78,15 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
         return;
       }
 
-      const calendar = await loadCalendarOverlay(localDate, isConnected);
-      if (cancelled) return;
-      calendarRef.current = calendar;
       try {
-        const [resolved, loadedSchedule, loadedException] = await Promise.all([
-          getEffectiveStudyAvailability(user.uid, localDate, calendar),
-          getOrCreateWeeklySchedule(user.uid),
-          getScheduleException(user.uid, localDate),
+        const [calendar, loadedSchedule, loadedException] = await Promise.all([
+          loadCalendarOverlay(localDate, isConnected, controller),
+          getOrCreateWeeklySchedule(uid),
+          getScheduleException(uid, localDate),
         ]);
+        const resolved = resolveEffectiveStudyAvailability(loadedSchedule, loadedException, calendar, localDate);
         if (!cancelled) {
+          calendarRef.current = calendar;
           scheduleRef.current = loadedSchedule;
           exceptionRef.current = loadedException;
           setAvailability(resolved);
@@ -103,6 +104,7 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
           setSyncError(SCHEDULE_WARNING);
         }
       } finally {
+        controller.abort();
         if (!cancelled) setLoading(false);
       }
     };
@@ -110,8 +112,9 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
     void load();
     return () => {
       cancelled = true;
+      controller.abort();
     };
-  }, [isConnected, localDate, user]);
+  }, [isConnected, localDate, uid]);
 
   const updateResolvedState = useCallback((nextSchedule: WeeklySchedule, nextException: ScheduleException | undefined) => {
     scheduleRef.current = nextSchedule;
@@ -172,23 +175,36 @@ function isValidLocalDate(value: string): boolean {
   return date.getUTCFullYear() === year && date.getUTCMonth() === month - 1 && date.getUTCDate() === day;
 }
 
-async function loadCalendarOverlay(localDate: string, isConnected: boolean): Promise<CalendarOverlayInput> {
+async function loadCalendarOverlay(localDate: string, isConnected: boolean, controller: AbortController): Promise<CalendarOverlayInput> {
   if (!isConnected) return { status: 'disconnected' };
-
+  let timeout: ReturnType<typeof setTimeout> | undefined;
+  let onAbort: (() => void) | undefined;
   try {
-    const response = await fetch(`/api/calendar/events?date=${encodeURIComponent(localDate)}`, {
-      headers: await authHeaders(),
+    // Bound the whole operation, including token acquisition and body parsing.
+    // Abort alone cannot settle an unresponsive token provider or fetch mock.
+    const deadline = new Promise<never>((_, reject) => {
+      onAbort = () => reject(new Error('Calendar request cancelled'));
+      controller.signal.addEventListener('abort', onAbort, { once: true });
+      timeout = setTimeout(() => { controller.abort(); }, 5_000);
     });
-    // 409: a aluna está logada, mas ainda não autorizou (ou revogou) o acesso
-    // à agenda. É "desconectado", não falha — a tela oferece conectar em vez
-    // de avisar que algo deu errado.
-    if (response.status === 409) return { status: 'disconnected' };
-    if (!response.ok) throw new Error(`Calendar request failed: ${response.status}`);
-    const data: unknown = await response.json();
-    if (!isCalendarResponse(data)) throw new Error('Invalid Calendar response');
-    return { status: 'connected', events: data.events };
+    const request = (async (): Promise<CalendarOverlayInput> => {
+      const headers = await authHeaders();
+      if (controller.signal.aborted) throw new Error('Calendar request cancelled');
+      const response = await fetch(`/api/calendar/events?date=${encodeURIComponent(localDate)}`, {
+        headers, signal: controller.signal,
+      });
+      if (response.status === 409) return { status: 'disconnected' };
+      if (!response.ok) throw new Error(`Calendar request failed: ${response.status}`);
+      const data: unknown = await response.json();
+      if (!isCalendarResponse(data)) throw new Error('Invalid Calendar response');
+      return { status: 'connected', events: data.events };
+    })();
+    return await Promise.race([request, deadline]);
   } catch {
     return { status: 'failed', warning: CALENDAR_WARNING };
+  } finally {
+    if (timeout !== undefined) clearTimeout(timeout);
+    if (onAbort) controller.signal.removeEventListener('abort', onAbort);
   }
 }
 

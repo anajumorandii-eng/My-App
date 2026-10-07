@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import { buildVisualMap } from '../../lib/visualStudy';
@@ -14,7 +14,7 @@ const ids = Object.keys(PHILOSOPHY_OPERATIONS) as PhilosophyOperationId[];
 const summaryOf = (id: PhilosophyOperationId) => interactiveSummaries.find(item => item.subject === 'Filosofia' && item.topic === PHILOSOPHY_OPERATIONS[id].topic)!;
 
 describe('Filosofia: o argumento desenhado a partir do próprio resumo', () => {
-  it.each(ids)('%s abre a oficina própria e mantém o par dos nós 1 e 2', id => {
+  it.each(ids)('%s abre a oficina própria e mantém o par dos nós 1 e 2', async id => {
     const summary = summaryOf(id);
     if (id === 'myth-logos') {
       expect(visualCandidates(summary)[0]).toEqual({ kind: 'experiment', id: 'myth' });
@@ -28,7 +28,8 @@ describe('Filosofia: o argumento desenhado a partir do próprio resumo', () => {
     const map = buildVisualMap(summary);
     const onSelect = vi.fn();
     const view = render(<instrument.Component map={map} states={{}} selectedId={map.nodes[1].id} onSelect={onSelect} hiddenEdgeIds={[]} mode="explorar"/>);
-    expect(view.container.querySelector('[data-operation]')?.getAttribute('data-operation')).toBe(id);
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(view.container.querySelector('[data-operation]')?.getAttribute('data-operation')).toBe(id));
     const left = view.container.querySelector('.vs-concept-card--expansion')!;
     expect(left.textContent).toContain(map.nodes[1].label);
     fireEvent.click(left);

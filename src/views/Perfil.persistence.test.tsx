@@ -1,0 +1,30 @@
+import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
+import { afterEach, expect, it, vi } from 'vitest';
+import { mockProfile, mockStudentGoals } from '../data/mockData';
+const state = vi.hoisted(() => ({ save: vi.fn(), loading: false, error: null as string | null }));
+vi.mock('../hooks/useUserProfile', () => ({ useUserProfile: () => ({ profile: mockProfile, updateProfile: state.save, isPersisted: true, syncError: state.error, loading: state.loading }) }));
+vi.mock('../hooks/useStudentGoals', () => ({ useStudentGoals: () => ({ goals: mockStudentGoals, updateGoals: state.save, isPersisted: true, loading: false, syncError: null }) }));
+vi.mock('../context/AuthContext', () => ({ useAuth: () => ({ isConnected: true }) }));
+vi.mock('../lib/push', () => ({ isPushSupported: () => false, needsIosHomeScreenInstall: () => false }));
+import Perfil from './Perfil';
+afterEach(() => { cleanup(); state.loading = false; state.error = null; vi.resetAllMocks(); });
+it('only confirms a completed successful save', async () => {
+  let finish!: (saved: boolean) => void;
+  state.save.mockImplementation(() => new Promise(resolve => { finish = resolve; }));
+  render(<Perfil />);
+  fireEvent.change(screen.getByLabelText('Curso-alvo'), { target: { value: 'Outro curso' } });
+  fireEvent.blur(screen.getByLabelText('Curso-alvo'));
+  expect(screen.queryByText('Salvo automaticamente')).toBeNull();
+  finish(false);
+  await waitFor(() => expect(state.save).toHaveBeenCalledOnce());
+  expect(screen.queryByText('Salvo automaticamente')).toBeNull();
+  fireEvent.blur(screen.getByLabelText('Curso-alvo'));
+  finish(true);
+  await screen.findByText('Salvo automaticamente');
+});
+it('disables profile controls while loading and displays sync errors', () => {
+  state.loading = true; state.error = 'Falha ao carregar';
+  render(<Perfil />);
+  expect(screen.getByLabelText('Curso-alvo')).toBeDisabled();
+  expect(screen.getByRole('alert')).toHaveTextContent('Falha ao carregar');
+});

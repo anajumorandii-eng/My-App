@@ -1,4 +1,4 @@
-import { timingSafeEqual } from 'node:crypto';
+import { isValidSharedSecret } from '../http/sharedSecret';
 import { RequestHandler, Router } from 'express';
 import { Firestore } from 'firebase-admin/firestore';
 import { referenceDocId } from '../ai/apostilaReferenceStore';
@@ -28,14 +28,10 @@ interface IngestBody {
   knownTopics: { id: string; name: string }[];
 }
 
-function isValidSecret(provided: unknown, expected: string): boolean {
-  if (typeof provided !== 'string' || provided.length !== expected.length) return false;
-  return timingSafeEqual(Buffer.from(provided), Buffer.from(expected));
-}
 
 function requireIngestSecret(ingestSecret: string | undefined): RequestHandler {
   return (req, res, next) => {
-    if (!ingestSecret || !isValidSecret(req.headers['x-ingest-secret'], ingestSecret)) {
+    if (!ingestSecret || !isValidSharedSecret(req.headers['x-ingest-secret'], ingestSecret)) {
       return res.status(401).json({ error: 'Não autorizado.', code: 'INGEST_UNAUTHORIZED' });
     }
     next();
@@ -55,21 +51,26 @@ export function createApostilaIngestRouter(db: Firestore, ingestSecret: string |
     const written: string[] = [];
     const skipped: string[] = [];
 
-    for (const [topicId, chunks] of Object.entries(body.topics)) {
-      if (!chunks || chunks.length === 0) { skipped.push(topicId); continue; }
-      const topicName = nameById.get(topicId);
-      if (!topicName) { skipped.push(topicId); continue; }
+    try {
+      for (const [topicId, chunks] of Object.entries(body.topics)) {
+        if (!chunks || chunks.length === 0) { skipped.push(topicId); continue; }
+        const topicName = nameById.get(topicId);
+        if (!topicName) { skipped.push(topicId); continue; }
 
-      const combinedText = chunks.map((c) => c.text).join('\n\n').slice(0, MAX_STORED_CHARS);
-      const docId = referenceDocId(body.subject!, topicName);
-      await db.collection('apostilaReferencias').doc(docId).set({
-        subject: body.subject,
-        topicName,
-        chapters: chunks.map((c) => ({ title: c.chapter, volume: c.volume })),
-        text: combinedText,
-        updatedAt: new Date().toISOString(),
-      });
-      written.push(docId);
+        const combinedText = chunks.map((c) => c.text).join('\n\n').slice(0, MAX_STORED_CHARS);
+        const docId = referenceDocId(body.subject!, topicName);
+        await db.collection('apostilaReferencias').doc(docId).set({
+          subject: body.subject,
+          topicName,
+          chapters: chunks.map((c) => ({ title: c.chapter, volume: c.volume })),
+          text: combinedText,
+          updatedAt: new Date().toISOString(),
+        });
+        written.push(docId);
+      }
+    } catch (error) {
+      console.error('Failed to ingest apostila references:', error);
+      return res.status(503).json({ error: 'Não foi possível salvar as referências da apostila.', code: 'INGEST_UNAVAILABLE' });
     }
 
     res.json({ written, skipped });

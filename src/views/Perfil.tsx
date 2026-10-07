@@ -41,8 +41,8 @@ function toggleItem(list: string[], item: string): string[] {
 }
 
 export default function Perfil() {
-  const { profile, updateProfile, isPersisted, syncError } = useUserProfile();
-  const { goals, updateGoals } = useStudentGoals();
+  const { profile, updateProfile, isPersisted, syncError, loading: profileLoading } = useUserProfile();
+  const { goals, updateGoals, loading: goalsLoading, syncError: goalsError, isPersisted: goalsPersisted } = useStudentGoals();
   const { isConnected } = useAuth();
   const [courseDraft, setCourseDraft] = useState(profile.targetCourse);
   const [hoursDraft, setHoursDraft] = useState(profile.availableHoursPerWeek);
@@ -91,74 +91,67 @@ export default function Perfil() {
     }
   };
 
-  const flashSaved = () => {
+  const flashSaved = async (saved: Promise<boolean>) => {
+    if (!await saved) return false;
     setSavedFlash(true);
     setTimeout(() => setSavedFlash(false), 1500);
+    return true;
   };
 
   const commitCourse = () => {
     const trimmed = courseDraft.trim();
     if (trimmed && trimmed !== profile.targetCourse) {
-      updateProfile((prev) => ({ ...prev, targetCourse: trimmed }));
-      flashSaved();
+      void flashSaved(updateProfile((prev) => ({ ...prev, targetCourse: trimmed })));
     }
   };
 
   const commitHours = () => {
     if (hoursDraft !== profile.availableHoursPerWeek) {
-      updateProfile((prev) => ({ ...prev, availableHoursPerWeek: hoursDraft }));
-      flashSaved();
+      void flashSaved(updateProfile((prev) => ({ ...prev, availableHoursPerWeek: hoursDraft })));
     }
   };
 
   const toggleExam = (exam: string) => {
-    updateProfile((prev) => ({ ...prev, targetExams: toggleItem(prev.targetExams, exam) }));
-    flashSaved();
+    void flashSaved(updateProfile((prev) => ({ ...prev, targetExams: toggleItem(prev.targetExams, exam) })));
   };
 
   const toggleUniversity = (uni: string) => {
-    updateProfile((prev) => ({ ...prev, targetUniversities: toggleItem(prev.targetUniversities, uni) }));
-    flashSaved();
+    void flashSaved(updateProfile((prev) => ({ ...prev, targetUniversities: toggleItem(prev.targetUniversities, uni) })));
   };
 
   const setEnergy = (value: 'low' | 'medium' | 'high') => {
-    updateProfile((prev) => ({ ...prev, currentEnergyLevel: value }));
-    flashSaved();
+    void flashSaved(updateProfile((prev) => ({ ...prev, currentEnergyLevel: value })));
   };
 
   const commitPrimaryGoal = () => {
     const trimmed = primaryGoalDraft.trim();
     if (trimmed && trimmed !== goals.primaryGoal) {
-      updateGoals((prev) => ({ ...prev, primaryGoal: trimmed }));
-      flashSaved();
+      void flashSaved(updateGoals((prev) => ({ ...prev, primaryGoal: trimmed })));
     }
   };
 
   const addSecondaryGoal = () => {
     const trimmed = secondaryGoalDraft.trim();
     if (!trimmed) return;
-    updateGoals((prev) => ({ ...prev, secondaryGoals: [...prev.secondaryGoals, trimmed] }));
-    setSecondaryGoalDraft('');
-    flashSaved();
+    void flashSaved(updateGoals((prev) => ({ ...prev, secondaryGoals: [...prev.secondaryGoals, trimmed] }))).then(saved => { if (saved) setSecondaryGoalDraft(''); });
   };
 
   const removeSecondaryGoal = (goal: string) => {
-    updateGoals((prev) => ({ ...prev, secondaryGoals: prev.secondaryGoals.filter((g) => g !== goal) }));
-    flashSaved();
+    void flashSaved(updateGoals((prev) => ({ ...prev, secondaryGoals: prev.secondaryGoals.filter((g) => g !== goal) })));
   };
 
   const boardWeightFor = (board: string): BoardWeight =>
     goals.boardWeights.find((bw) => bw.board === board) ?? { board, weight: 0.5, phaseFocus: 'ambas' };
 
   const setBoardWeight = (board: string, patch: Partial<Pick<BoardWeight, 'weight' | 'phaseFocus'>>) => {
-    updateGoals((prev) => {
+    void flashSaved(updateGoals((prev) => {
       const existing = prev.boardWeights.find((bw) => bw.board === board);
       const nextEntry: BoardWeight = { ...(existing ?? { board, weight: 0.5, phaseFocus: 'ambas' }), ...patch };
       const boardWeights = existing
         ? prev.boardWeights.map((bw) => (bw.board === board ? nextEntry : bw))
         : [...prev.boardWeights, nextEntry];
       return { ...prev, boardWeights };
-    });
+    }));
   };
 
 
@@ -201,8 +194,10 @@ export default function Perfil() {
           Salvo automaticamente
         </p>
       )}
-      {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
+      {(syncError || goalsError) && <p role="alert" className="text-xs text-rose-500 mb-2">{syncError || goalsError}</p>}
+      {(profileLoading || goalsLoading) && <p role="status">Carregando preferências…</p>}
 
+      <fieldset disabled={profileLoading || goalsLoading || (isConnected && (!isPersisted || !goalsPersisted))} className="contents">
       {/* Personal Settings */}
       <Panel subject="Matemática" className="ni-panel p-6 space-y-5">
         <div>
@@ -398,6 +393,7 @@ export default function Perfil() {
         )}
       </Panel>
 
+      </fieldset>
       {/* Autonomy Index */}
       <Panel subject="Matemática" className="ni-panel p-6 space-y-3">
         <div className="flex items-center text-emerald-400 mb-1">

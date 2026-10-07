@@ -30,3 +30,19 @@ jobs:
 
       # Sem este passo uma quebra de build só aparecia no deploy.
       - run: npm run build
+
+      # Exercita a versão empacotada e o modo de toque com o Chrome do runner.
+      - name: Navegação e retomada no iPad
+        env:
+          NODE_ENV: production
+          PORT: '3003'
+          PLAYWRIGHT_BASE_URL: http://127.0.0.1:3003
+          PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH: /usr/bin/google-chrome
+          PLAYWRIGHT_OUTPUT_DIR: /tmp/crivo-e2e-artifacts
+          PLAYWRIGHT_HTML_OUTPUT_DIR: /tmp/crivo-e2e-report
+        run: |
+          npm start > /tmp/crivo-e2e-server.log 2>&1 &
+          server_pid=$!
+          trap 'kill "$server_pid"' EXIT
+          curl --fail --silent --retry 20 --retry-delay 1 --retry-all-errors --max-time 2 http://127.0.0.1:3003/api/health
+          npm run test:e2e:crivo -- --project=desktop --grep 'Hoje|reduced motion|theme keeps|Discordo|every production route|avoids expensive'

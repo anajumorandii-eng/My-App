@@ -44,6 +44,8 @@ vi.mock('../hooks/useUserProfile', () => ({
 }));
 vi.mock('../hooks/useDailyPlan', () => ({
   useDailyPlan: () => ({
+    mastery: [{ topicId: 'funcao-exponencial', level: 42, uncertainty: 0.4, lastReviewed: '2026-08-20', errorSignals: 3 }],
+    goals: { primaryGoal: 'Medicina', secondaryGoals: [], boardWeights: [] },
     availability: { totalMinutes: 90 },
     allocatedActions: mocks.dailyPlan,
   }),

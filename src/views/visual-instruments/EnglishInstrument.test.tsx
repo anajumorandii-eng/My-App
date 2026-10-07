@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import { ENGLISH_INSTRUMENTS, type EnglishInstrumentId } from '../../lib/englishInstrumentLab';
@@ -61,12 +61,14 @@ const THEMATIC_CHAPTERS: Array<[EnglishInstrumentId, string]> = [
 ].map(([id, chapter]) => [id, chapter.startsWith('summary-') ? chapter : `summary-lingua-inglesa-text-comprehension-${chapter}`]) as Array<[EnglishInstrumentId, string]>;
 
 describe('evidência e mecanismo dos 17 capítulos LG2', () => {
-  it.each(THEMATIC_CHAPTERS)('%s altera trecho, destaques, achado e cena em cada posição do controle', (id, chapter) => {
+  it.each(THEMATIC_CHAPTERS)('%s altera trecho, destaques, achado e cena em cada posição do controle', async (id, chapter) => {
     const summary=interactiveSummaries.find(item=>item.id===chapter)!;
     const entry=findInstrument(summary);
     expect(entry, `instrumento publicado de ${chapter}`).toBeDefined();
     const Component = entry!.Component;
     const view = render(<Component {...props(chapter)} />);
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(view.container.querySelector('[data-english-scene]')).not.toBeNull());
     const figure = view.container.querySelector('[data-english-scene]');
     expect(figure).not.toBeNull();
     for (const [index, state] of ENGLISH_INSTRUMENTS[id].states.entries()) {

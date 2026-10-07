@@ -1,6 +1,6 @@
 import React from 'react';
-import { render, screen, fireEvent } from '@testing-library/react';
-import { describe, it, expect } from 'vitest';
+import { act, render, screen, fireEvent, waitFor } from '@testing-library/react';
+import { describe, it, expect, vi } from 'vitest';
 import { TopicExperiment } from './topic-experiments/TopicExperiment';
 import { topicExperiments } from './topic-experiments/catalog';
 import { interactiveSummaries } from '../data/interactiveSummaries';
@@ -48,11 +48,12 @@ describe('Personalização com vínculo explícito ao conteúdo', () => {
     expect(screen.getByRole('status')).toHaveTextContent('exigência de justificar');
     expect(container.querySelector('svg')!.textContent).toContain('objeção');
   });
-  it('altera a leitura de Textualidade quando o aviso recebe uma conclusão coerente', () => {
+  it('altera a leitura de Textualidade quando o aviso recebe uma conclusão coerente', async () => {
     const summary = interactiveSummaries.find(item => item.id === 'summary-entendimento-de-texto-fatores-de-textualidade')!;
     const Component = findInstrument(summary)!.Component;
     const { container } = render(<Component map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
-    expect(container.querySelector('.reading-finding')).toHaveTextContent('Aviso coeso, mas incoerente: proibir não autoriza entrar.');
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(container.querySelector('.reading-finding')).toHaveTextContent('Aviso coeso, mas incoerente: proibir não autoriza entrar.'));
     fireEvent.change(screen.getByRole('slider'), { target: { value: '1' } });
     expect(container.querySelector('.reading-finding')).toHaveTextContent('Aviso coerente: a proibição justifica esperar fora.');
     expect(container.querySelector('.reading-annotation')).toHaveTextContent('ação compatível com a primeira');

@@ -7,8 +7,6 @@ import { useNavigate } from 'react-router-dom';
 import { motion, useReducedMotion } from 'motion/react';
 import { BookOpen, CalendarClock, CheckCircle2, CloudOff, History, Stethoscope, WifiOff } from 'lucide-react';
 import { useDailyPlan } from '../hooks/useDailyPlan';
-import { useUserMastery } from '../hooks/useUserMastery';
-import { useStudentGoals } from '../hooks/useStudentGoals';
 import { useAuth } from '../context/AuthContext';
 import { useAdaptiveRankingChange } from '../hooks/useAdaptiveRankingChange';
 import { todayInSaoPaulo } from '../features/availability/time';
@@ -102,14 +100,14 @@ export default function Dashboard() {
   const { user } = useAuth();
   const {
     availability,
+    mastery = [],
+    goals,
     prioritizedActions = [],
     allocatedActions: dailyPlan = [],
     loading = false,
     warnings = [],
     isPersisted = false,
   } = useDailyPlan(todayInSaoPaulo());
-  const { mastery } = useUserMastery();
-  const { goals } = useStudentGoals();
   // Metas sem bancas (documento antigo, ou ainda carregando) não podem
   // derrubar o Hoje inteiro: sem elas o selo só não mostra a contagem.
   const temBancas = Array.isArray(goals?.boardWeights);

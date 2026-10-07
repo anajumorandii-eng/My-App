@@ -101,7 +101,7 @@ describe('isolamento do progresso de Resumos', () => {
     expect(result.current.isCloudSynced).toBe(false);
     await act(async () => firstSave.resolve());
     await waitFor(() => expect(repository.save).toHaveBeenCalledTimes(2));
-    expect(Object.keys(repository.save.mock.calls[1][1])).toEqual(['one', 'two']);
+    expect(repository.save.mock.calls.map(call => call[1].chapterId)).toEqual(['one', 'two']);
     await waitFor(() => expect(result.current.isCloudSynced).toBe(true));
   });
 
@@ -155,4 +155,95 @@ describe('isolamento do progresso de Resumos', () => {
     expect(result.current.isCloudSynced).toBe(false);
     expect(JSON.parse(localStorage.getItem(key)!)).toEqual(progress('guest'));
   });
+});
+
+
+describe('replay do progresso offline', () => {
+  it('reaplica a alteração pendente sem apagar outras ações remotas no mesmo capítulo', async () => {
+    auth.user = { uid: 'A' };
+    repository.load.mockRejectedValueOnce(new Error('offline'));
+    localStorage.setItem(`${key}:A`, JSON.stringify(progress('chapter')));
+    const first = renderHook(() => useSummaryProgress());
+    await waitFor(() => expect(first.result.current.loading).toBe(false));
+    act(() => first.result.current.update('chapter', current => ({ ...current, important: false, readSectionIds: [...current.readSectionIds, 'offline'] })));
+    first.unmount();
+    repository.load.mockResolvedValue({ chapter: { ...progress('chapter').chapter, readSectionIds: ['remote'], status: 'dominado' } });
+    const second = renderHook(() => useSummaryProgress());
+    await waitFor(() => expect(second.result.current.loading).toBe(false));
+    expect(second.result.current.progress.chapter.important).toBe(false);
+    expect(second.result.current.progress.chapter.status).toBe('dominado');
+    expect(second.result.current.progress.chapter.readSectionIds).toEqual(['remote', 'offline']);
+    await waitFor(() => expect(repository.save).toHaveBeenCalledTimes(1));
+    await waitFor(() => expect(second.result.current.isCloudSynced).toBe(true));
+    expect(Object.keys(localStorage).filter(entry => entry.includes(':pending:'))).toEqual([]);
+  });
+});
+
+it('mantém operações posteriores pendentes quando a primeira gravação falha', async () => {
+  auth.user = { uid: 'A' };
+  repository.save.mockRejectedValueOnce(new Error('offline'));
+  const first = renderHook(() => useSummaryProgress());
+  await waitFor(() => expect(first.result.current.loading).toBe(false));
+  act(() => {
+    first.result.current.update('chapter', current => ({ ...current, important: true }));
+    first.result.current.update('chapter', current => ({ ...current, important: false }));
+  });
+  await waitFor(() => expect(first.result.current.syncError).not.toBeNull());
+  expect(repository.save).toHaveBeenCalledTimes(1);
+  expect(Object.keys(localStorage).filter(entry => entry.includes(':pending:'))).toHaveLength(2);
+  first.unmount();
+  const second = renderHook(() => useSummaryProgress());
+  await waitFor(() => expect(second.result.current.isCloudSynced).toBe(true));
+  expect(repository.save.mock.calls.slice(1).filter(call => !call[1].recoverIfMissing).map(call => call[1].fields.important)).toEqual([true, false]);
+  expect(second.result.current.progress.chapter.important).toBe(false);
+});
+
+it('recupera leitura e respostas do cache quando o capítulo ainda não existe na nuvem', async () => {
+  const attempt = { questionId: 'q', answer: 'old offline answer', matchedElements: [], firstMissingElement: null, date: '2026-10-01' };
+  const cached = { ...progress('chapter').chapter, answers: [attempt] };
+  localStorage.setItem(`${key}:A`, JSON.stringify({ chapter: cached }));
+  auth.user = { uid: 'A' };
+  let cloud: SummaryProgressMap = {};
+  repository.save.mockImplementation(async (_uid, change) => {
+    const { applySummaryChange } = await import('../lib/summarySync');
+    cloud = applySummaryChange(cloud, change);
+    return cloud;
+  });
+  const { result } = renderHook(() => useSummaryProgress());
+  await waitFor(() => expect(result.current.loading).toBe(false));
+  act(() => result.current.update('chapter', current => ({ ...current, important: false })));
+  await waitFor(() => expect(result.current.isCloudSynced).toBe(true));
+  expect(cloud.chapter.readSectionIds).toEqual(['section']);
+  expect(cloud.chapter.answers).toHaveLength(1);
+  expect(cloud.chapter.answers[0]).toMatchObject(attempt);
+  expect(result.current.progress.chapter.answers).toHaveLength(1);
+  expect(result.current.progress.chapter.answers[0]).toMatchObject(attempt);
+  expect(JSON.parse(localStorage.getItem(`${key}:A`)!).chapter.answers[0]).toMatchObject(attempt);
+});
+
+
+it('preserva diário danificado sem travar o carregamento nem atribuir sincronização', async () => {
+  auth.user = { uid: 'A' };
+  localStorage.setItem(`${key}:A:pending:broken`, JSON.stringify({ id: 'broken', addSections: null }));
+  localStorage.setItem(`${key}:A`, JSON.stringify(progress('cached')));
+  const { result } = renderHook(() => useSummaryProgress());
+  await waitFor(() => expect(result.current.loading).toBe(false));
+  expect(result.current.progress.cached).toBeDefined();
+  expect(result.current.syncError).not.toBeNull();
+  expect(result.current.isCloudSynced).toBe(false);
+  expect(repository.save).not.toHaveBeenCalled();
+  expect(localStorage.getItem(`${key}:A:pending:broken`)).not.toBeNull();
+});
+
+it('encerra carregamento com erro recuperável se a leitura do diário local é bloqueada', async () => {
+  auth.user = { uid: 'A' };
+  localStorage.setItem(`${key}:A`, JSON.stringify(progress('cached')));
+  const readKey = vi.spyOn(Storage.prototype, 'key').mockImplementation(() => { throw new Error('storage denied'); });
+  try {
+    const { result } = renderHook(() => useSummaryProgress());
+    await waitFor(() => expect(result.current.loading).toBe(false));
+    expect(result.current.progress.cached).toBeDefined();
+    expect(result.current.syncError).not.toBeNull();
+    expect(repository.save).not.toHaveBeenCalled();
+  } finally { readKey.mockRestore(); }
 });

@@ -2,6 +2,7 @@ import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, limit, runTra
 import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem, StudentGoals, PlanFeedback, StudySessionRecord, RecoveryEvidence } from '../types';
 import type { SummaryProgressMap } from '../types/summary';
+import { applySummaryChange, type SummaryChange } from './summarySync';
 import { mockProfile, mockTopics, mockStudentGoals } from '../data/mockData';
 import { remapLegacyTopicId } from '../data/legacyTopics';
 import { SPLIT_TOPIC_PARENTS } from '../data/topicSplits';
@@ -270,9 +271,9 @@ export async function getStudentGoals(uid: string): Promise<StudentGoals> {
   return mockStudentGoals;
 }
 
-export async function saveStudentGoals(uid: string, goals: StudentGoals): Promise<void> {
+export async function saveStudentGoals(uid: string, goals: Partial<StudentGoals>): Promise<void> {
   const ref = doc(db, 'users', uid, 'data', 'goals');
-  await setDoc(ref, goals);
+  await setDoc(ref, goals, { merge: true });
 }
 
 // Feedback estruturado de "Discordo" numa recomendação — só registrado, o
@@ -310,7 +311,21 @@ export async function getUserSummaryProgress(uid: string): Promise<SummaryProgre
   return snap.exists() ? ((snap.data().items as SummaryProgressMap) ?? {}) : {};
 }
 
-export async function saveUserSummaryProgress(uid: string, items: SummaryProgressMap): Promise<void> {
+export async function saveUserSummaryProgress(uid: string, change: SummaryChange): Promise<SummaryProgressMap> {
   const ref = doc(db, 'users', uid, 'data', 'summaryProgress');
-  await setDoc(ref, { items, updatedAt: new Date().toISOString() });
+  const receipt = doc(db, 'users', uid, 'summarySyncReceipts', change.id);
+  // A receipt makes a replay safe even when the transaction succeeded but the
+  // browser closed before removing its pending operation from localStorage.
+  return runTransaction(db, async transaction => {
+    const acknowledged = await transaction.get(receipt);
+    const snap = await transaction.get(ref);
+    const items = snap.exists() ? ((snap.data().items as SummaryProgressMap) ?? {}) : {};
+    if (acknowledged.exists()) return items;
+    // Retrieval snapshots contain optional undefined board/phase fields. The
+    // durable journal already uses JSON; make first writes match its replay.
+    const merged = JSON.parse(JSON.stringify(applySummaryChange(items, change))) as SummaryProgressMap;
+    transaction.set(ref, { items: merged, updatedAt: new Date().toISOString() }, { mergeFields: ['items', 'updatedAt'] });
+    transaction.set(receipt, { appliedAt: serverTimestamp() });
+    return merged;
+  });
 }

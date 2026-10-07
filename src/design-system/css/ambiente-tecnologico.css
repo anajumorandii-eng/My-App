@@ -773,3 +773,23 @@
   .crivo-cena__painel { justify-content: flex-start; }
   .crivo-cena__leitura { text-align: left; }
 }
+
+/* iPad and phones: avoid fractal noise and stacked backdrop surfaces during scroll. */
+@media (hover: none) and (pointer: coarse) {
+  :root[data-ambiente="tecnologico"] { --papel-fibras: none; --amb-vidro-forte: #fffaf1; }
+  :root.dark[data-ambiente="tecnologico"] { --amb-vidro-forte: #0c0e0c; }
+  :root[data-ambiente="tecnologico"] .ni-production-app,
+  :root[data-ambiente="tecnologico"] .ni-production-app.is-light,
+  :root[data-fundo="caderno"] .ni-production-app,
+  :root[data-fundo="caderno"] .ni-production-app.is-light,
+  :root[data-fundo="papel"] .ni-production-app,
+  :root[data-fundo="papel"] .ni-production-app.is-light {
+    background-attachment: scroll;
+  }
+  :root[data-ambiente="tecnologico"] .ni-production-app :is(.ni-panel, .rounded-card, .ni-top, .ni-rail),
+  :root[data-ambiente="tecnologico"] .ni-production-app.is-light :is(.ni-panel, .rounded-card, .ni-top, .ni-rail) {
+    -webkit-backdrop-filter: none;
+    backdrop-filter: none;
+    background: var(--surface);
+  }
+}

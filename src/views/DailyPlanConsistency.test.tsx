@@ -1,3 +1,4 @@
+import { mockStudentGoals } from '../data/mockData';
 import { cleanup, fireEvent, render, screen, within } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { MemoryRouter } from 'react-router-dom';
@@ -147,6 +148,7 @@ const prioritizedActions: StudyAction[] = [
 ];
 
 const sharedPlan: DailyPlanState = {
+  mastery: [], goals: mockStudentGoals,
   availability,
   prioritizedActions,
   allocatedActions,
@@ -156,6 +158,7 @@ const sharedPlan: DailyPlanState = {
 };
 
 const loadingPlan: DailyPlanState = {
+  mastery: [], goals: mockStudentGoals,
   availability: undefined,
   prioritizedActions: [],
   allocatedActions: [],
@@ -171,7 +174,7 @@ describe('daily plan consistency across views', () => {
     vi.useFakeTimers();
     vi.setSystemTime(new Date('2026-08-24T12:00:00.000Z'));
     currentPlan = sharedPlan;
-    dailyPlanHook.mockImplementation((localDate: string) => localDate === LOCAL_DATE ? currentPlan : loadingPlan);
+    dailyPlanHook.mockImplementation((localDate: string) => localDate === LOCAL_DATE ? { ...currentPlan, mastery: masteryHook().mastery, goals: goalsHook().goals } : loadingPlan);
     profileHook.mockReturnValue({
       profile: {
         targetCourse: 'Medicina',

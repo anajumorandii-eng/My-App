@@ -33,32 +33,33 @@ export function saoPauloDate(now: Date = new Date()): string {
   return SAO_PAULO_DATE.format(now);
 }
 
+export class MemoryDailyQuotaStore implements DailyQuotaStore {
+  private readonly counters = new Map<string, { date: string; count: number }>();
+
+  async consume(userId: string, date: string, maxRequests: number): Promise<DailyQuotaResult> {
+    const current = this.counters.get(userId);
+    const counter = !current || current.date !== date ? { date, count: 0 } : current;
+    counter.count += 1;
+    this.counters.set(userId, counter);
+    if (this.counters.size > 1_000) {
+      for (const [entryKey, value] of this.counters) {
+        if (value.date !== date) this.counters.delete(entryKey);
+      }
+    }
+    return { allowed: counter.count <= maxRequests, remaining: Math.max(0, maxRequests - counter.count) };
+  }
+}
+
 export function createAiDailyLimit(options?: { maxRequests?: number; store?: DailyQuotaStore }): RequestHandler {
   const maxRequests = options?.maxRequests ?? positiveInteger(process.env.AI_DAILY_LIMIT, DEFAULT_DAILY_MAX_REQUESTS);
-  const counters = new Map<string, { date: string; count: number }>();
+  const store = options?.store ?? new MemoryDailyQuotaStore();
 
   return async (_req, res, next) => {
     const userId = res.locals.userId as string;
     const date = saoPauloDate();
     let quota: DailyQuotaResult;
     try {
-      if (options?.store) {
-        quota = await options.store.consume(userId, date, maxRequests);
-      } else {
-        const current = counters.get(userId);
-        const counter = !current || current.date !== date ? { date, count: 0 } : current;
-        counter.count += 1;
-        counters.set(userId, counter);
-        quota = { allowed: counter.count <= maxRequests, remaining: Math.max(0, maxRequests - counter.count) };
-
-        // Mesma limpeza oportunista do limitador por janela abaixo: sem
-        // ela o mapa guardaria uma entrada por aluna por dia, pra sempre.
-        if (counters.size > 1_000) {
-          for (const [entryKey, value] of counters) {
-            if (value.date !== date) counters.delete(entryKey);
-          }
-        }
-      }
+      quota = await store.consume(userId, date, maxRequests);
     } catch (error) {
       console.error('AI daily quota store failed:', error);
       return res.status(503).json({ error: 'Não foi possível validar o limite de uso da IA.', code: 'AI_QUOTA_UNAVAILABLE' });
