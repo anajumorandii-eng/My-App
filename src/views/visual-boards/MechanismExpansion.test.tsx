@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import { buildVisualMap } from '../../lib/visualStudy';
@@ -23,14 +23,15 @@ const cases = [
 ] as const;
 
 describe('expansão de mecanismos por capítulo', () => {
-  it.each(cases)('mostra a cena específica em %s e mantém quadro final sem movimento', (suffix, name) => {
+  it.each(cases)('mostra a cena específica em %s e mantém quadro final sem movimento', async (suffix, name) => {
     const summary = interactiveSummaries.find(item => item.id === `summary-${suffix}`)!;
     expect(summary).toBeDefined();
     const board = findBoard(summary)!;
     expect(visualCandidates(summary)[0]).toEqual({ kind: 'board', id: board.id });
     const Component = board.Component;
     render(<Component map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={vi.fn()} hiddenEdgeIds={[]} mode="explorar" />);
-    expect(screen.getByRole('img', { name: new RegExp(name) })).toBeInTheDocument();
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(screen.getByRole('img', { name: new RegExp(name) })).toBeInTheDocument());
     if (suffix === 'quimica-termoquimica-ii') {
       expect(screen.getAllByText('ΔG = ΔH − TΔS').length).toBeGreaterThan(0);
       expect(screen.getByText('ΔG = 0 · equilíbrio')).toBeInTheDocument();

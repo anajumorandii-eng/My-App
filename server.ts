@@ -6,7 +6,7 @@ import { createServer as createViteServer } from 'vite';
 import cookieParser from 'cookie-parser';
 import { google } from 'googleapis';
 import { createAiProvider } from './server/ai/provider';
-import { createAiDailyLimit, createAiRateLimit } from './server/ai/rateLimit';
+import { createAiDailyLimit, createAiRateLimit, MemoryDailyQuotaStore } from './server/ai/rateLimit';
 import { createAiRouter } from './server/ai/routes';
 import { AiService, parseAiTimeout } from './server/ai/service';
 import { adminAuthMiddleware, firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './server/auth/firebaseAuth';
@@ -76,7 +76,7 @@ const aiProvider = createAiProvider();
 const aiService = new AiService(aiProvider, parseAiTimeout(process.env.AI_TIMEOUT_MS));
 const dailyQuotaStore = process.env.AI_QUOTA_STORE === 'firestore'
   ? new FirestoreDailyQuotaStore(getFirestore(getFirebaseAdminApp()))
-  : undefined;
+  : new MemoryDailyQuotaStore();
 const aiMetrics = process.env.AI_METRICS_STORE === 'firestore'
   ? new FirestoreAiMetricsRecorder(getFirestore(getFirebaseAdminApp()))
   : undefined;

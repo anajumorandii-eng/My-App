@@ -1,4 +1,4 @@
-import { timingSafeEqual } from 'node:crypto';
+import { isValidSharedSecret } from '../http/sharedSecret';
 import { Router, RequestHandler } from 'express';
 import { Firestore } from 'firebase-admin/firestore';
 import { FirestorePushSubscriptionStore, PushSubscriptionJson } from './subscriptionStore';
@@ -65,17 +65,13 @@ export function createPushRouter(db: Firestore, vapidPublicKey: string | undefin
   return router;
 }
 
-function isValidCronSecret(provided: unknown, expected: string): boolean {
-  if (typeof provided !== 'string' || provided.length !== expected.length) return false;
-  return timingSafeEqual(Buffer.from(provided), Buffer.from(expected));
-}
 
 export function createReviewReminderRouter(db: Firestore, vapid: VapidConfig | null, cronSecret: string | undefined): Router {
   const router = Router();
   const store = new FirestorePushSubscriptionStore(db);
 
   router.post('/send-review-reminders', async (req, res) => {
-    if (!cronSecret || !isValidCronSecret(req.headers['x-cron-secret'], cronSecret)) {
+    if (!cronSecret || !isValidSharedSecret(req.headers['x-cron-secret'], cronSecret)) {
       return res.status(401).json({ error: 'Não autorizado.', code: 'CRON_UNAUTHORIZED' });
     }
     if (!vapid) {
@@ -83,7 +79,13 @@ export function createReviewReminderRouter(db: Firestore, vapid: VapidConfig | n
     }
 
     const today = new Date().toISOString().slice(0, 10);
-    const subscriptions = await store.listAll();
+    let subscriptions: Awaited<ReturnType<typeof store.listAll>>;
+    try {
+      subscriptions = await store.listAll();
+    } catch (error) {
+      console.error('Failed to list push subscriptions:', error);
+      return res.status(503).json({ error: 'Não foi possível carregar as inscrições de notificação.', code: 'PUSH_REMINDERS_UNAVAILABLE' });
+    }
     let sent = 0;
     let skipped = 0;
     let failed = 0;

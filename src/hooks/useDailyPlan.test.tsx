@@ -75,6 +75,7 @@ describe('useDailyPlan', () => {
     });
     goalsHook.mockReturnValue({
       goals: { primaryGoal: 'Medicina', secondaryGoals: [], boardWeights: [] },
+      loading: false, isPersisted: true,
     });
   });
 
@@ -89,6 +90,8 @@ describe('useDailyPlan', () => {
     expect(first.result.current).toEqual(second.result.current);
     expect(first.result.current).toMatchObject({
       availability,
+      mastery,
+      goals: goalsHook().goals,
       loading: false,
       warnings: availability.warnings,
       isPersisted: true,

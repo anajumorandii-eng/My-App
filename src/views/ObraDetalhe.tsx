@@ -1,4 +1,4 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { BookOpen, Loader2, CheckCircle2, Circle, Construction } from 'lucide-react';
 import { useAuth } from '../context/AuthContext';
@@ -67,11 +67,22 @@ export default function ObraDetalhe() {
   const review = searchParams.get('revisao') === '1';
   const [rawDossier, setRawDossier] = useState<WorkDossier | null>(null);
 
+  const uid = user?.uid;
+  const [progressReady, setProgressReady] = useState(false);
+  const [saveError, setSaveError] = useState<string | null>(null);
+  const [savingUnits, setSavingUnits] = useState<Set<string>>(new Set());
+  const savingRef = useRef(new Set<string>());
+  const contextRef = useRef({ workSlug, uid });
+  contextRef.current = { workSlug, uid };
+
   useEffect(() => {
+    let cancelled = false;
+    setRawDossier(null);
     if (!workSlug) return;
     loadWorkDossier(workSlug)
-      .then(setRawDossier)
-      .catch((error) => console.error('Failed to load dossier:', error));
+      .then((value) => { if (!cancelled) setRawDossier(value); })
+      .catch((error) => { if (!cancelled) console.error('Failed to load dossier:', error); });
+    return () => { cancelled = true; };
   }, [workSlug]);
 
   const dossier = useMemo(() => (rawDossier ? visibleDossier(rawDossier, review) : null), [rawDossier, review]);
@@ -84,41 +95,89 @@ export default function ObraDetalhe() {
   const guideOf = (unitId: string) => dossier?.units.find((u) => u.id === unitId)?.guide;
 
   useEffect(() => {
-    if (!workSlug) return;
+    let cancelled = false;
+    setWork(undefined);
+    setLoadError(null);
+    setEditions([]);
+    setRequirements([]);
+    setUnits([]);
+    if (!workSlug) { setWork(null); return; }
     getLiteraryWorkBySlug(workSlug)
       .then(async (w) => {
+        if (cancelled) return;
         setWork(w);
         if (!w) return;
         const [eds, reqs, us] = await Promise.all([
-          getEditions(w.id),
-          getExamRequirements(w.id),
-          getWorkUnits(w.id),
+          getEditions(w.id), getExamRequirements(w.id), getWorkUnits(w.id),
         ]);
+        if (cancelled) return;
         setEditions(eds);
         setRequirements(reqs.filter((r) => r.active));
         setUnits(us);
-        if (user) setProgress(await getReadingProgress(user.uid, w.id));
       })
       .catch((error) => {
+        if (cancelled) return;
         console.error('Failed to load obra detail:', error);
         setLoadError('Não foi possível carregar essa obra. Tente recarregar a página.');
       });
-  }, [workSlug, user]);
+    return () => { cancelled = true; };
+  }, [workSlug, uid]);
+
+  useEffect(() => {
+    let cancelled = false;
+    setProgress([]);
+    setProgressReady(false);
+    setSaveError(null);
+    savingRef.current = new Set();
+    setSavingUnits(new Set());
+    if (!uid || !work || work.slug !== workSlug) return;
+    getReadingProgress(uid, work.id)
+      .then((value) => {
+        if (cancelled) return;
+        setProgress(value);
+        setProgressReady(true);
+      })
+      .catch((error) => {
+        if (cancelled) return;
+        console.error('Failed to load reading progress:', error);
+        setSaveError('Não foi possível carregar seu progresso. Tente recarregar a página.');
+      });
+    return () => { cancelled = true; };
+  }, [uid, work, workSlug]);
 
   const progressByUnit = useMemo(() => new Map(progress.map((p) => [p.unitId, p])), [progress]);
   const edition = editions[0];
   const LitIcon = SUBJECT_ICONS['Literatura'] ?? BookOpen;
 
-  function toggleUnitDone(unit: { id: string }) {
-    if (!user || !work) return;
+  async function toggleUnitDone(unit: { id: string }) {
+    if (!uid || !work || !progressReady || savingRef.current.has(unit.id)) return;
+    const context = contextRef.current;
+    const locks = savingRef.current;
     const current = progressByUnit.get(unit.id);
+    const done = current?.status === 'completed';
     const next: ReadingProgress = {
-      userId: user.uid, workId: work.id, unitId: unit.id,
-      status: current?.status === 'completed' ? 'not_started' : 'completed',
-      completedAt: current?.status === 'completed' ? undefined : new Date().toISOString(),
+      ...current,
+      userId: uid, workId: work.id, unitId: unit.id,
+      status: done ? 'not_started' : 'completed',
     };
+    if (done) delete next.completedAt;
+    else next.completedAt = new Date().toISOString();
+    locks.add(unit.id);
+    setSavingUnits(new Set(locks));
+    setSaveError(null);
     setProgress((prev) => [...prev.filter((p) => p.unitId !== unit.id), next]);
-    saveReadingProgress(user.uid, next).catch((error) => console.error('Failed to save reading progress:', error));
+    const active = () => contextRef.current.uid === context.uid && contextRef.current.workSlug === context.workSlug && savingRef.current === locks;
+    try {
+      await saveReadingProgress(uid, next);
+    } catch (error) {
+      if (!active()) return;
+      console.error('Failed to save reading progress:', error);
+      setProgress((prev) => [...prev.filter((p) => p.unitId !== unit.id), ...(current ? [current] : [])]);
+      setSaveError('Não foi possível salvar seu progresso. Tente novamente.');
+    } finally {
+      locks.delete(unit.id);
+      if (active()) setSavingUnits(new Set(locks));
+    }
   }
 
   if (work === undefined && !loadError) {
@@ -212,6 +271,7 @@ export default function ObraDetalhe() {
         })}
       </div>
 
+      {saveError && <p role="alert" className="ni-panel p-3 text-sm text-[var(--text)]">{saveError}</p>}
       {/* Tab content */}
       {tab === 'comece_aqui' && (
         <Panel subject="Literatura" className="ni-panel p-6 space-y-3">
@@ -262,7 +322,7 @@ export default function ObraDetalhe() {
                 <div key={u.id} className="border-b border-[var(--line)] last:border-0">
                   <button
                     onClick={() => toggleUnitDone(u)}
-                    disabled={!user}
+                    disabled={!uid || !progressReady || savingUnits.has(u.id)}
                     aria-pressed={done}
                     className="w-full flex items-center justify-between p-4 text-left disabled:opacity-60 hover:bg-[var(--surface2)] transition-colors"
                   >

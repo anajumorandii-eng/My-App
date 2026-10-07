@@ -15,7 +15,7 @@ it('só considera o perfil persistido após a leitura e salva apenas os campos s
   expect(result.current.isPersisted).toBe(false);
   await act(async () => { finish({ ...mockProfile, targetCourse: 'Meu curso' }); });
   await waitFor(() => expect(result.current.isPersisted).toBe(true));
-  act(() => result.current.updateProfile(prev => ({ ...prev, podcastSettings: DEFAULT_PODCAST_SETTINGS }), ['podcastSettings']));
+  await act(async () => { await result.current.updateProfile(prev => ({ ...prev, podcastSettings: DEFAULT_PODCAST_SETTINGS }), ['podcastSettings']); });
   expect(save).toHaveBeenLastCalledWith('ana', { podcastSettings: DEFAULT_PODCAST_SETTINGS }, true);
 });
 

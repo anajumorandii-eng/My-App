@@ -1,6 +1,6 @@
 import React from 'react';
-import { describe, expect, it } from 'vitest';
-import { fireEvent, render, screen } from '@testing-library/react';
+import { describe, expect, it, vi } from 'vitest';
+import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import { buildVisualMap } from '../../lib/visualStudy';
 import { gasPressure, limitingProduct, weakAcidIonized, weakAcidPH } from '../../lib/chemistryInstrumentLab';
@@ -35,12 +35,14 @@ describe('instrumentos de Química', () => {
     expect(weakAcidPH(.1, 1.8e-5)).toBeCloseTo(2.88, 1);
   });
 
-  it('a manipulação do gás muda a pressão visível e mantém o diagnóstico ligado ao capítulo', () => {
+  it('a manipulação do gás muda a pressão visível e mantém o diagnóstico ligado ao capítulo', async () => {
     const chapter = interactiveSummaries.find(s => s.id === ids[0])!;
     const Component = findInstrument(chapter)!.Component;
     const map = buildVisualMap(chapter);
     const selected: string[] = [];
     render(<Component map={map} states={{}} selectedId={null} onSelect={id => selected.push(id)} hiddenEdgeIds={[]} mode="explorar" />);
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(screen.queryByText('Carregando representação…')).not.toBeInTheDocument());
     expect(screen.getByLabelText('Pressão ideal 2,46 atm')).toBeInTheDocument();
     fireEvent.change(screen.getByRole('slider'), { target: { value: '500' } });
     expect(screen.getByLabelText('Pressão ideal 4,1 atm')).toBeInTheDocument();
@@ -49,14 +51,16 @@ describe('instrumentos de Química', () => {
     expect(selected.length).toBeGreaterThan(0);
   });
 
-  it('mostra funil, filtro, resíduo e filtrado no capítulo de separação', () => {
+  it('mostra funil, filtro, resíduo e filtrado no capítulo de separação', async () => {
     const chapter = interactiveSummaries.find(s => s.id === 'summary-quimica-separacao-de-misturas')!;
     const Component = findInstrument(chapter)!.Component;
     render(<Component map={buildVisualMap(chapter)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(screen.queryByText('Carregando representação…')).not.toBeInTheDocument());
     expect(document.querySelector('[data-detail="filtration-apparatus"]')).toBeInTheDocument();
   });
 
-  it('dez capítulos que dividiam três desenhos genéricos desenham o próprio mecanismo', () => {
+  it('dez capítulos que dividiam três desenhos genéricos desenham o próprio mecanismo', async () => {
     // Antes: a mesma caixa de bolinhas para gás, lei dos gases e mol; duas
     // caixas para balanceamento, estequiometria e combustão; dois círculos
     // para ésteres, biodiesel, quociente e ácido fraco.
@@ -76,15 +80,19 @@ describe('instrumentos de Química', () => {
       const chapter = interactiveSummaries.find(s => s.id === id)!;
       const Component = findInstrument(chapter)!.Component;
       const view = render(<Component map={buildVisualMap(chapter)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
+      await act(async () => { await vi.dynamicImportSettled(); });
+      await waitFor(() => expect(screen.queryByText('Carregando representação…')).not.toBeInTheDocument());
       expect(document.querySelector(`[data-detail="${detalhe}"]`), id).toBeInTheDocument();
       view.unmount();
     }
   });
 
-  it('o reagente limitante desenhado é o da conta', () => {
+  it('o reagente limitante desenhado é o da conta', async () => {
     const chapter = interactiveSummaries.find(s => s.id === 'summary-quimica-calculos-estequiometricos')!;
     const Component = findInstrument(chapter)!.Component;
     render(<Component map={buildVisualMap(chapter)} states={{}} selectedId={null} onSelect={() => {}} hiddenEdgeIds={[]} mode="explorar" />);
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(screen.queryByText('Carregando representação…')).not.toBeInTheDocument());
     fireEvent.change(screen.getByRole('slider'), { target: { value: '6' } });
     expect(screen.getByText('o O₂ limita')).toBeInTheDocument();
     fireEvent.change(screen.getByRole('slider'), { target: { value: '4' } });

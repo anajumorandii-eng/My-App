@@ -1,5 +1,5 @@
 
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { act, fireEvent, render, screen, within, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
@@ -176,14 +176,15 @@ describe('Visual aprovado', () => {
     }
   });
 
-  it('dá prancha manipulável ao capítulo cujo objeto é a curva', () => {
+  it('dá prancha manipulável ao capítulo cujo objeto é a curva', async () => {
     render(
       <MemoryRouter initialEntries={['/visual?summary=' + comInstrumento.id]}>
         <Visual />
       </MemoryRouter>,
     );
 
-    expect(screen.getByTestId('visual-study-board')).toBeInTheDocument();
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(screen.getByTestId('visual-study-board')).toBeInTheDocument());
     // Com o vértice em −3 e concavidade para cima, a parábola corta duas vezes.
     expect(screen.getByText('duas')).toBeInTheDocument();
 

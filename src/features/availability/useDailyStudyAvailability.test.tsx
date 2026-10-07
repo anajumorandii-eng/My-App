@@ -149,6 +149,7 @@ describe('useDailyStudyAvailability', () => {
     expect(result.current.availability).toMatchObject({ status: 'ready', warnings: [] });
     expect(fetch).toHaveBeenCalledWith('/api/calendar/events?date=2026-08-24', {
       headers: { Authorization: 'Bearer firebase-id-token' },
+      signal: expect.any(AbortSignal),
     });
   });
 
@@ -254,4 +255,30 @@ describe('useDailyStudyAvailability', () => {
     expect(result.current.schedule).toEqual(originalSchedule);
     expect(result.current.syncError).toMatch(/N\u00e3o foi poss\u00edvel salvar essa altera\u00e7\u00e3o/i);
   });
+
+it('lê a grade e a exceção uma única vez por carregamento', async () => {
+  auth.state = { user: { uid: 'user-1' }, isConnected: false };
+  repository.getOrCreateWeeklySchedule.mockResolvedValue(storedSchedule());
+  repository.getScheduleException.mockResolvedValue(undefined);
+  const { result } = renderHook(() => useDailyStudyAvailability(LOCAL_DATE));
+  await waitFor(() => expect(result.current.loading).toBe(false));
+  expect(repository.getOrCreateWeeklySchedule).toHaveBeenCalledTimes(1);
+  expect(repository.getScheduleException).toHaveBeenCalledTimes(1);
+});
+
+it('encerra a espera do calendário que não responde e apresenta aviso', async () => {
+  auth.state = { user: { uid: 'user-1' }, isConnected: true };
+  repository.getOrCreateWeeklySchedule.mockResolvedValue(storedSchedule());
+  repository.getScheduleException.mockResolvedValue(undefined);
+  vi.useFakeTimers();
+  vi.stubGlobal('fetch', vi.fn(() => new Promise(() => {})));
+  try {
+    const { result } = renderHook(() => useDailyStudyAvailability(LOCAL_DATE));
+    await act(async () => { await vi.advanceTimersByTimeAsync(6_000); });
+    expect(result.current.loading).toBe(false);
+    expect(result.current.syncError).toBe(CALENDAR_WARNING);
+    expect(result.current.availability?.status).toBe('degraded');
+  } finally { vi.useRealTimers(); vi.unstubAllGlobals(); }
+});
+
 });

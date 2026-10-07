@@ -1,5 +1,5 @@
 import React from 'react';
-import { cleanup, fireEvent, render, screen } from '@testing-library/react';
+import { act, cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import chapters from '../../data/deepSummaryContent.json';
@@ -14,7 +14,7 @@ const ids = Object.keys(WRITING_OPERATIONS) as WritingOperationId[];
 const summaryOf = (id: WritingOperationId) => interactiveSummaries.find(item => item.subject === 'Redação' && item.topic === WRITING_OPERATIONS[id].topic)!;
 
 describe('Redação R1: repertório e análise de tema com o caso do próprio capítulo', () => {
-  it.each(ids)('%s abre a oficina própria e mantém o par dos nós 1 e 2', id => {
+  it.each(ids)('%s abre a oficina própria e mantém o par dos nós 1 e 2', async id => {
     const summary = summaryOf(id);
     const candidate = visualCandidates(summary)[0];
     expect(candidate.kind).toBe('instrument');
@@ -22,7 +22,8 @@ describe('Redação R1: repertório e análise de tema com o caso do próprio ca
     const map = buildVisualMap(summary);
     const onSelect = vi.fn();
     const view = render(<instrument.Component map={map} states={{}} selectedId={map.nodes[1].id} onSelect={onSelect} hiddenEdgeIds={[]} mode="explorar"/>);
-    expect(view.container.querySelector('[data-operation]')?.getAttribute('data-operation')).toBe(id);
+    await act(async () => { await vi.dynamicImportSettled(); });
+    await waitFor(() => expect(view.container.querySelector('[data-operation]')?.getAttribute('data-operation')).toBe(id));
     const left = view.container.querySelector('.vs-concept-card--expansion')!;
     expect(left.textContent).toContain(map.nodes[1].label);
     fireEvent.click(left);

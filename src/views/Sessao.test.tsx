@@ -1,3 +1,4 @@
+import { mockStudentGoals } from '../data/mockData';
 import { act, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, describe, expect, it, vi } from 'vitest';
 import { flushSync } from 'react-dom';
@@ -55,7 +56,8 @@ function makeAction(overrides: Partial<AllocatedStudyAction>): AllocatedStudyAct
 
 function planWith(allocatedActions: AllocatedStudyAction[], loading = false): DailyPlanState {
   return {
-    availability: undefined,
+    mastery: [], goals: mockStudentGoals,
+  availability: undefined,
     prioritizedActions: allocatedActions,
     allocatedActions,
     loading,
