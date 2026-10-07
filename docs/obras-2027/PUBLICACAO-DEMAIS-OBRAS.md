@@ -23,4 +23,4 @@ A conferência literal passou para todos os dezoito dossiês antes da revisão d
 
 ## Encerramento
 
-Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezessete notas individuais e os patches privados estão preservados; nenhuma proposta foi aplicada aos dossiês. Ainda faltam revisões e decisões individuais, conferência antes de cada commit e validação no navegador. Lint e build do checkpoint passaram; suíte completa em execução antes do push. Não realizar merge automático.
+Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezessete notas individuais e os patches privados estão preservados; nenhuma proposta foi aplicada aos dossiês. Ainda faltam revisões e decisões individuais, conferência antes de cada commit e validação no navegador. Lint, npm test completo e build passaram. O envio remoto foi retomado por instrução explícita da usuária; checkpoint em branch e PR em rascunho, sem merge. Não realizar merge automático.

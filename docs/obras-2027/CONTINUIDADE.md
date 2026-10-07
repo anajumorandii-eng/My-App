@@ -12,7 +12,11 @@ O usuário pediu continuar as outras dezessete obras e depois interrompeu para *
 - Dezessete notas de pesquisa foram salvas, uma por obra; seis patches privados propostos também estão preservados. Pesquisa literária delegada conforme `.agents/skills/research/SKILL.md`; notas individuais `pesquisa-publicacao-<slug>.md` contêm achados, fontes efetivamente lidas, propostas de correção e pendências. Nenhuma correção dessas notas foi aplicada aos JSONs nesta sessão.
 - A habilidade usada é o ZIP fornecido: `/workspace/artifacts/obras-retomada/habilidade/SKILL.md`, nome interno `obras-obrigatorias-fuvest-unicamp-avancada`. Não está no catálogo instalado. O arquivo ZIP e seus quinze referenciais estão no backup privado.
 
-## Encerramento imediato solicitado
+## Retomada para envio ao remoto
+
+A instrução seguinte da usuária determinou publicar este checkpoint no repositório, nunca somente no workspace. A regra foi registrada em CLAUDE.md. Lint e npm test completo passaram na retomada; build havia passado no checkpoint. A branch de envio é `fix/publicar-demais-obras-2027`, com PR em rascunho e base main, sem merge. O registro de envio pendente abaixo descreve a interrupção anterior, não uma orientação para repetir salvamento local. As dezessete obras continuam em revisão e suas propostas ainda precisam ser incorporadas.
+
+## Encerramento imediato solicitado — histórico
 
 Checkpoint salvo localmente; **push e PR NÃO realizados**. Lint e build passaram, assim como a conferência literal e os 25 testes focados. Na interrupção, os 922 testes Node já passaram; Vitest completo ainda estava em execução, portanto não declarar `npm test` concluído. Antes de push, executar/concluir lint e npm test, conforme CLAUDE.md. Recuperar a branch pelo workspace ou pelo bundle privado se não existir no remoto.
 

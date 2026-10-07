@@ -69,6 +69,13 @@ git switch -c fix/nome-da-correcao
 
 **Antes de todo push:** `npm run lint` limpo e `npm test` verde.
 
+**Checkpoints também devem chegar ao remoto.** Instrução da Ana Júlia em
+07/10/2026: salvar somente no workspace não atende ao pedido de salvar o
+trabalho. Concluir as verificações obrigatórias, enviar a branch e abrir ou
+atualizar PR em rascunho quando a implementação estiver incompleta. Não
+encerrar como salvo apenas localmente; registrar qualquer bloqueio real de
+envio e o ponto exato de retomada. Nunca fazer merge automático.
+
 ## Comandos
 
 | Comando | O que faz |
