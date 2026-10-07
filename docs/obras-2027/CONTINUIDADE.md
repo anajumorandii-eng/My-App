@@ -1,3 +1,7 @@
+# Estado posterior ao checkpoint — primeira publicação
+
+As PRs #273, #275 e #276 já foram integradas à main. A revisão para primeira publicação de Brás Cubas está em `fix/publicar-bras-cubas`, baseada em `origin/main` 69f7e1dc. Leia `PUBLICACAO-BRAS-CUBAS.md` e `pesquisa-bras-cubas-publicacao.md` antes do histórico abaixo. O JSON de Brás Cubas já existe; não o recriar. Outros 17 dossiês continuam em revisão.
+
 # Obras 2027 — continuidade (06/10/2026)
 
 Branch: `claude/focused-volta-bnzw7d`, criada a partir da PR #272

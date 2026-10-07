@@ -3,6 +3,7 @@ import { MemoryRouter, Route, Routes } from 'react-router-dom';
 import { cleanup, fireEvent, render, screen } from '@testing-library/react';
 import { afterEach, describe, expect, it, vi } from 'vitest';
 import martha from '../data/obras/dossies/memorias-de-martha.json';
+import brasCubas from '../data/obras/dossies/bras-cubas.json';
 import { DOSSIER_SLUGS, loadWorkDossier, visibleDossier } from '../lib/workDossiers';
 import type { WorkDossier } from '../types/literaryWorks';
 import ObraDetalhe from './ObraDetalhe';
@@ -25,6 +26,14 @@ describe('dossiês das obras: integridade', () => {
     expect(dossier.slug).toBe(slug);
     const unitIds = new Set(dossier.units.map(u => u.id));
     const evidenceIds = new Set(dossier.evidence.map(e => e.id));
+    const sourceIds = new Set(dossier.sources?.map(source => source.id));
+    expect(sourceIds.size).toBe(dossier.sources?.length ?? 0);
+    for (const source of dossier.sources ?? []) {
+      expect(source.citation.trim().length).toBeGreaterThan(0);
+      expect(source.pagesRead.trim().length).toBeGreaterThan(0);
+      expect(source.limitations.trim().length).toBeGreaterThan(0);
+      expect(source.url).toMatch(/^https:\/\//);
+    }
     dossier.units.forEach((unit, index) => {
       expect(unit.order).toBe(index + 1);
       expect(unit.pdfStartPage).toBeLessThanOrEqual(unit.pdfEndPage);
@@ -52,8 +61,15 @@ describe('dossiês das obras: integridade', () => {
     for (const module of dossier.modules) {
       expect(STATUSES).toContain(module.editorialStatus);
       for (const ref of module.evidenceRefs) expect(evidenceIds.has(ref), ref).toBe(true);
-      // Nenhuma fonte crítica foi lida; sourceRefs só entra com CriticalSource real.
-      expect(module.sourceRefs).toEqual([]);
+      // Uma referência só entra depois de existir uma fonte rastreável, com
+      // o recorte efetivamente lido; os demais dossiês seguem sem crítica.
+      for (const ref of module.sourceRefs) expect(sourceIds.has(ref), ref).toBe(true);
+      if (module.editorialStatus === 'published') {
+        expect(module.reviewedAt).toMatch(/^\d{4}-\d{2}-\d{2}T/);
+        for (const ref of module.evidenceRefs) {
+          expect(dossier.evidence.find(card => card.id === ref)?.editorialStatus).toBe('published');
+        }
+      }
     }
     // Cada aba da tela lê um tipo de módulo: catorze dossiês chegaram a ter
     // só três, e as abas de bancas, questões e revisão ficavam pendentes.
@@ -69,6 +85,18 @@ describe('dossiês das obras: integridade', () => {
     expect(visible.evidence).toEqual([]);
     expect(visibleDossier(martha as WorkDossier, true).evidence.length).toBe(martha.evidence.length);
   });
+
+  it('fontes de módulos ainda em revisão não entram na bibliografia da estudante', () => {
+    const dossier = structuredClone(brasCubas) as WorkDossier;
+    dossier.modules.forEach(module => {
+      if (module.moduleType !== 'comece_aqui') module.editorialStatus = 'needs_review';
+    });
+    const visible = visibleDossier(dossier, false);
+    expect(visible.sources?.map(source => source.id)).toEqual([
+      'bras-comvest-lista-2027', 'bras-comvest-programa-2027',
+    ]);
+    expect(visibleDossier(dossier, true).sources).toHaveLength(11);
+  });
 });
 
 function renderAt(path: string) {
@@ -80,6 +108,31 @@ function renderAt(path: string) {
 }
 
 describe('ObraDetalhe com dossiê', () => {
+  it('Brás Cubas publicado mostra o percurso de estudo sem depender do modo revisão', async () => {
+    renderAt('/obras/bras-cubas');
+    await screen.findByText('Percurso de estudo.');
+    expect(screen.getByText(/Machado de Assis, Memórias póstumas de Brás Cubas\. Brasília/)).toBeInTheDocument();
+    expect(screen.getByText(/Páginas do arquivo de referência:/).parentElement).toHaveTextContent('134');
+    expect(screen.queryByText(/O material-fonte desta obra ainda está sendo processado/)).toBeNull();
+    expect(screen.queryByText(/Modo revisão/)).toBeNull();
+    fireEvent.click(screen.getByRole('button', { name: 'Análise' }));
+    expect(await screen.findByText('Voz, forma e classe: duas hipóteses')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Leitura guiada' }));
+    expect(screen.getByText('0 de 161 unidades concluídas')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Passagens-chave' }));
+    expect(screen.getByText('cap. I, p. 9')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Bancas' }));
+    expect(screen.getByText(/F.O.R.M.A./)).toBeInTheDocument();
+    expect(screen.getByText(/F.O.N.T.E./)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Questões' }));
+    expect(screen.getByText(/Não há gabarito neste módulo/)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Revisão ativa' }));
+    expect(screen.getByText('Verificação de precisão:')).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', { name: 'Fontes' }));
+    expect(screen.getByText('Bibliografia comentada e leitura efetiva')).toBeInTheDocument();
+    expect(screen.queryByText('em revisão', { exact: true })).toBeNull();
+  });
+
   it('sem publicação, a estudante continua vendo o aviso de conteúdo pendente', async () => {
     renderAt('/obras/memorias-de-martha');
     fireEvent.click(await screen.findByRole('button', { name: 'Análise' }));
