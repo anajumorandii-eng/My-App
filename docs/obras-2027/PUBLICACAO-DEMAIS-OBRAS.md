@@ -41,3 +41,4 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | Morangos mofados — seis contos | Primeira edição de estudo aprovada: 8 módulos, 6 guias, 17 cartões. Conferência literal passou; IDs preservados. |
 | A vida não é útil | Primeira edição de estudo aprovada: 8 módulos, 5 guias, 21 cartões. Conferência literal passou; IDs preservados. |
 | Olhos d'água | Primeira edição de estudo aprovada: 8 módulos, 15 guias, 25 cartões. Conferência literal passou; IDs preservados. |
+| Canções escolhidas — catorze letras | Primeira edição de estudo aprovada: 8 módulos, 14 guias, 16 cartões. Conferência literal passou; IDs preservados. |

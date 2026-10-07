@@ -72,3 +72,13 @@ Napolitano permite explicar que circulação social, shows e públicos também e
   }
 ]
 ```
+
+## Retomada para integração editorial — 07/10/2026
+
+A fonte primária paginada foi relida inteira nesta retomada; a p. 5 do Programa Comvest 2027 foi reconferida diretamente. A pesquisa crítica anterior foi preservada, com releitura dos trechos relevantes dos estudos salvos, sem converter releitura parcial em nova leitura integral. O patch privado registra valores antigos exatos, correções por campo, bibliografia e novos aprofundamentos; não altera estados editoriais, IDs ou JSONs públicos automaticamente.
+
+Foram preparados três registros de fonte e vinte e três correções por campo, incluindo parceiros oficiais, ordem própria da compilação, hipóteses de voz em Cordilheira, reversibilidade de Evangelho e ausência de prova de viagem autobiográfica ou superlativo de extensão. Os dois segmentos duvidosos continuam excluídos da argumentação, sem emenda por memória. A publicação compacta não equivale à certificação integral da transcrição.
+
+## Decisão da primeira edição de estudo
+
+Parceiros conferidos no programa oficial; ordem da compilação separada da seleção alfabética. Cordilheira conserva hipóteses concorrentes; segmentos duvidosos foram excluídos da interpretação. Pesquisa contextual não certifica censura específica nem análise de gravações. Aprovados 8 módulos, 14 guias e 16 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.

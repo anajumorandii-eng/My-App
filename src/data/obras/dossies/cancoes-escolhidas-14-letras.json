@@ -7,108 +7,717 @@
     "note": "Não é livro publicado: é uma compilação das 14 letras indicadas pela Comvest, sem editora, sem créditos de parceria e sem data. As páginas citadas são as desse PDF. Letras protegidas por direito autoral: só citações curtas e análise original. A transcrição tem pontos duvidosos, listados em Fontes."
   },
   "units": [
-    { "id": "viagem", "order": 1, "type": "song", "title": "Viagem", "opening": "Viagem Oh! Tristeza me desculpe", "pdfStartPage": 1, "pdfEndPage": 1,
-      "guide": { "editorialStatus": "needs_review",
+    {
+      "id": "viagem",
+      "order": 1,
+      "type": "song",
+      "title": "Viagem",
+      "opening": "Viagem Oh! Tristeza me desculpe",
+      "pdfStartPage": 1,
+      "pdfEndPage": 1,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O eu lírico se despede da tristeza e parte em viagem com a poesia, personificada como companheira. A viagem é toda imaginária: cavalo baio, garupa do vento, estrela da manhã, nuvem clara, colheita de flores nos “jardins do céu”. A letra termina com a promessa de volta “numa estrela guia”.",
-        "observe": ["A poesia é interlocutora (“minha poesia”), não tema: o eu fala com ela, convida, tranquiliza.", "Repare na abertura: a tristeza é dispensada com um pedido de desculpas, como quem sai de casa — a fuga é lírica, não real."] } },
-    { "id": "canto-das-tres-racas", "order": 2, "type": "song", "title": "Canto das Três Raças", "opening": "Canto Das Três Raças Paulo César Pinheiro Ninguém ouviu", "pdfStartPage": 1, "pdfEndPage": 2,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A poesia é interlocutora (“minha poesia”), não tema: o eu fala com ela, convida, tranquiliza.",
+          "Repare na abertura: a tristeza é dispensada com um pedido de desculpas, como quem sai de casa — a fuga é lírica, não real."
+        ]
+      }
+    },
+    {
+      "id": "canto-das-tres-racas",
+      "order": 2,
+      "type": "song",
+      "title": "Canto das Três Raças",
+      "opening": "Canto Das Três Raças Paulo César Pinheiro Ninguém ouviu",
+      "pdfStartPage": 1,
+      "pdfEndPage": 2,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Uma história do Brasil contada como história do canto: o índio levado ao cativeiro, o negro que canta revolta em Palmares, os inconfidentes que lutaram pela quebra das correntes. Nada adiantou; o povo, quando pode cantar, canta de dor. O canto do trabalhador, que devia ser de alegria, soa como soluço.",
-        "observe": ["O título promete a fábula das três raças formadoras, mas a letra a desmonta: em vez de mistura harmoniosa, uma sequência de derrotas.", "“Canto” tem dois sentidos que a letra explora: a canção e o canto (o lugar, o recanto) do Brasil."] } },
-    { "id": "estrela-da-terra", "order": 3, "type": "song", "title": "Estrela da Terra", "opening": "Estrela da Terra Paulo César Pinheiro Por mais que haja dor", "pdfStartPage": 2, "pdfEndPage": 3,
-      "guide": { "editorialStatus": "needs_review",
-        "summary": "Contra a dor, a treva e a covardia, o eu afirma uma luz que guia: a estrela do dia, da tarde, “do noite” (assim na transcrição) e, por fim, a estrela da terra, trazida por um cavaleiro de guerra que virá cantando no alto da serra, como em toda lenda. O tom é de profecia e de espera coletiva.",
-        "observe": ["A estrutura “Por mais que… / Existe…” se repete em cada estrofe: concessão seguida de afirmação, como num credo.", "A estrela muda de lugar — céu, boina do capitão, palma da mão, coração, sertão —: o sinal desce do céu para o corpo e para a terra."] } },
-    { "id": "mordaca", "order": 4, "type": "song", "title": "Mordaça", "opening": "Mordaça Paulo César Pinheiro Tudo o que mais nos uniu", "pdfStartPage": 3, "pdfEndPage": 4,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O título convoca a narrativa nacional das três raças formadoras, mas a letra encadeia cativeiro, Palmares, Inconfidência e sofrimento do trabalhador; inconfidentes não são uma terceira raça nomeada.",
+          "A leitura espacial de canto do Brasil é uma possibilidade interpretativa; o sentido musical é explicitamente desenvolvido na letra."
+        ]
+      }
+    },
+    {
+      "id": "estrela-da-terra",
+      "order": 3,
+      "type": "song",
+      "title": "Estrela da Terra",
+      "opening": "Estrela da Terra Paulo César Pinheiro Por mais que haja dor",
+      "pdfStartPage": 2,
+      "pdfEndPage": 3,
+      "guide": {
+        "editorialStatus": "published",
+        "summary": "Contra dor, treva e covardia, a voz afirma uma luz que guia: a sequência de estrelas se aproxima de mão, coração e sertão, até a chegada de um cavaleiro de guerra que virá cantando no alto da serra. Concessões repetidas e expectativa de renovação sustentam o tom profético; um segmento duvidoso da transcrição fica registrado em Fontes e não fundamenta a leitura.",
+        "observe": [
+          "A estrutura “Por mais que… / Existe…” se repete em cada estrofe: concessão seguida de afirmação, como num credo.",
+          "A estrela muda de lugar — céu, boina do capitão, palma da mão, coração, sertão —: o sinal desce do céu para o corpo e para a terra."
+        ]
+      }
+    },
+    {
+      "id": "mordaca",
+      "order": 4,
+      "type": "song",
+      "title": "Mordaça",
+      "opening": "Mordaça Paulo César Pinheiro Tudo o que mais nos uniu",
+      "pdfStartPage": 3,
+      "pdfEndPage": 4,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "A primeira metade enumera desfazimentos: o que uniu separou, o que se construiu desabou, a luta virou “impossível e passiva”. A segunda aposta na instabilidade do tempo: de repente o furor volta, o interior se revolta, e a felicidade pode amordaçar “essa dor secular”. Resistir ao inexorável é o que imortaliza.",
-        "observe": ["O título nomeia a mordaça, mas na letra quem é amordaçada é a dor: a imagem da censura é virada contra o sofrimento.", "As frases em paralelismo (“Tudo que… / Tudo que…”) produzem o efeito de desmoronamento em série."] } },
-    { "id": "na-volta-que-o-mundo-da", "order": 5, "type": "song", "title": "Na Volta que o Mundo Dá", "opening": "Na Volta Que o Mundo Dá Paulo César Pinheiro Um dia eu senti", "pdfStartPage": 4, "pdfEndPage": 5,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O título nomeia a mordaça, mas na letra quem é amordaçada é a dor: a imagem da censura é virada contra o sofrimento.",
+          "As frases em paralelismo (“Tudo que… / Tudo que…”) produzem o efeito de desmoronamento em série."
+        ]
+      }
+    },
+    {
+      "id": "na-volta-que-o-mundo-da",
+      "order": 5,
+      "type": "song",
+      "title": "Na Volta que o Mundo Dá",
+      "opening": "Na Volta Que o Mundo Dá Paulo César Pinheiro Um dia eu senti",
+      "pdfStartPage": 4,
+      "pdfEndPage": 5,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O eu narra a própria viagem: sai da beira do rio, embarca, conhece portos estrangeiros, moças e cordilheiras, até que “a terra parou de rodar”. Vem então um aperto sem nome — saudade, tristeza, tédio — e ele volta. A lição final é um paradoxo: quanto mais a gente se solta, mais fica no mesmo lugar.",
-        "observe": ["É uma letra narrativa, com começo, meio e fim, e moral no último verso.", "A enumeração dos sentimentos vem sempre com a dúvida (“não sei bem de quê”, “não sei bem por quê”): o mal-estar não tem objeto."] } },
-    { "id": "pesadelo", "order": 6, "type": "song", "title": "Pesadelo", "opening": "Pesadelo Paulo César Pinheiro Quando o muro separa", "pdfStartPage": 5, "pdfEndPage": 6,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "É uma letra narrativa, com começo, meio e fim, e moral no último verso.",
+          "A enumeração dos sentimentos vem sempre com a dúvida (“não sei bem de quê”, “não sei bem por quê”): o mal-estar não tem objeto."
+        ]
+      }
+    },
+    {
+      "id": "pesadelo",
+      "order": 6,
+      "type": "song",
+      "title": "Pesadelo",
+      "opening": "Pesadelo Paulo César Pinheiro Quando o muro separa",
+      "pdfStartPage": 5,
+      "pdfEndPage": 6,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Uma voz coletiva desafia um “você” que corta, prende e agarra: para cada gesto de repressão há uma resposta (“Você corta um verso, eu escrevo outro”). O refrão pergunta, provocador, que medo ele tem “de nós”. No fim, o muro cai e a ponte, guardiã da liberdade, abraça o dia de amanhã.",
-        "observe": ["Toda a letra se organiza em antíteses (muro/ponte, prende/escapa, vivo/morto, velho/moço).", "O pronome muda de “eu” para “nós”: a resistência individual vira coletiva."] } },
-    { "id": "vento-bravo", "order": 7, "type": "song", "title": "Vento Bravo", "opening": "Vento Bravo Paulo César Pinheiro Era um cerco bravo", "pdfStartPage": 6, "pdfEndPage": 7,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "Toda a letra se organiza em antíteses (muro/ponte, prende/escapa, vivo/morto, velho/moço).",
+          "O pronome muda de “eu” para “nós”: a resistência individual vira coletiva."
+        ]
+      }
+    },
+    {
+      "id": "vento-bravo",
+      "order": 7,
+      "type": "song",
+      "title": "Vento Bravo",
+      "opening": "Vento Bravo Paulo César Pinheiro Era um cerco bravo",
+      "pdfStartPage": 6,
+      "pdfEndPage": 7,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O passado escravista é descrito em imperfeito (“Era argola, ferro, chibata e pau”), sob “a lei da Coroa Imperial”; a calmaria é falsa. Do vendaval surge o vento bravo, sangue novo, grito no ar, correnteza que não vai se acalmar. A viração vem “sem raça e cor”, e anuncia uma mudança em que a palma verde se avermelha.",
-        "observe": ["O contraste de tempos verbais (era / surge, vem, vai) separa a opressão da revolta.", "O refrão repetido três vezes (“Que não vai se acalmar”) imita a insistência do vento."] } },
-    { "id": "evangelho", "order": 8, "type": "song", "title": "Evangelho", "opening": "Evangelho Paulo César Pinheiro Eta mundo", "pdfStartPage": 7, "pdfEndPage": 8,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O contraste de tempos verbais (era / surge, vem, vai) separa a opressão da revolta.",
+          "O refrão repetido três vezes (“Que não vai se acalmar”) imita a insistência do vento."
+        ]
+      }
+    },
+    {
+      "id": "evangelho",
+      "order": 8,
+      "type": "song",
+      "title": "Evangelho",
+      "opening": "Evangelho Paulo César Pinheiro Eta mundo",
+      "pdfStartPage": 7,
+      "pdfEndPage": 8,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Série de paradoxos sobre o mundo, a vida, o tempo e a morte: quanto mais se serve, mais se domina; quanto mais coração, mais cicatrizes; do bem nasce o mal, da felicidade o drama. O tempo devora, a mocidade some, e a morte alimenta “a roda viva”. Ainda assim, “É o fim mas pode ser o começo”.",
-        "observe": ["O título é irônico: o “evangelho” (boa-nova) anuncia más notícias.", "Cada estrofe abre com “Eta”, interjeição popular, que dá ao tom filosófico uma voz falada."] } },
-    { "id": "cordilheira", "order": 9, "type": "song", "title": "Cordilheira", "opening": "Cordilheira Paulo César Pinheiro Eu quero ter a sensação", "pdfStartPage": 8, "pdfEndPage": 9,
-      "guide": { "editorialStatus": "needs_review",
-        "summary": "Em anáfora (“Eu quero…”), a voz deseja a avalanche sobre flores rasteiras, a procissão dos suicidas, moços obrigados ao poder dos velhos, uma frase escrita a fogo pelo deus Marte, a juventude transformada num exército de aflitos e Jesus crucificado em cada poste. É uma voz de poder e de guerra, que fala com naturalidade da crueldade.",
-        "observe": ["Não confunda a voz da letra com a do compositor: o “eu” que quer ser cruel é uma construção, e o horror vem justamente de ele falar com calma.", "O bloco central desmonta as frases anteriores em gerúndios soltos (Desabando, Caminhando, Obrigando), como destroços."] } },
-    { "id": "desenredo", "order": 10, "type": "song", "title": "Desenredo", "opening": "Desenredo Paulo César Pinheiro", "pdfStartPage": 9, "pdfEndPage": 10,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O título pode contrastar boa-nova e sofrimento; o final admite também que o fim seja começo, mantendo a contradição aberta.",
+          "Cada estrofe abre com Eta, interjeição popular, que dá à reflexão uma voz falada."
+        ]
+      }
+    },
+    {
+      "id": "cordilheira",
+      "order": 9,
+      "type": "song",
+      "title": "Cordilheira",
+      "opening": "Cordilheira Paulo César Pinheiro Eu quero ter a sensação",
+      "pdfStartPage": 8,
+      "pdfEndPage": 9,
+      "guide": {
+        "editorialStatus": "published",
+        "summary": "A anáfora Eu quero acumula avalanches sobre flores, suicidas, jovens subordinados aos velhos e imagens de guerra e crucificação. A voz também deseja descobrir onde o mal nasce e destruir sua semente: sua busca de eliminar a violência passa por um desejo de crueldade, criando uma tensão interna.",
+        "observe": [
+          "Uma hipótese lê uma voz de poder expondo sua crueldade; outra observa o paradoxo de querer destruir o mal por um gesto cruel. Justifique pelo encadeamento das imagens, sem identificar automaticamente a voz com o compositor.",
+          "O bloco de gerúndios retoma fragmentos das imagens anteriores e faz a violência reaparecer como sequência de ações."
+        ]
+      }
+    },
+    {
+      "id": "desenredo",
+      "order": 10,
+      "type": "song",
+      "title": "Desenredo",
+      "opening": "Desenredo Paulo César Pinheiro",
+      "pdfStartPage": 9,
+      "pdfEndPage": 10,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "O andarilho vê, por toda terra, um mundo marcado “à ferro, fogo e desprezo”, em que a morte tece seu fio. Só se prende quando chega à amada, nas tramas do desejo. O refrão chama Minas e anuncia a partida. A letra é toda tecida: fio, novelo, trama, tranças, cordas do cabelo.",
-        "observe": ["O título joga com “enredo”: o eu se desenreda do mundo e se enreda na amada.", "Os versos em quiasmo (“O olhar que prende anda solto / O olhar que solta anda preso”) invertem os termos de propósito."] } },
-    { "id": "navio-fantasma", "order": 11, "type": "song", "title": "Navio Fantasma", "opening": "Navio Fantasma Paulo César Pinheiro", "pdfStartPage": 10, "pdfEndPage": 11,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "O título joga com “enredo”: o eu se desenreda do mundo e se enreda na amada.",
+          "Os versos em quiasmo (“O olhar que prende anda solto / O olhar que solta anda preso”) invertem os termos de propósito."
+        ]
+      }
+    },
+    {
+      "id": "navio-fantasma",
+      "order": 11,
+      "type": "song",
+      "title": "Navio Fantasma",
+      "opening": "Navio Fantasma Paulo César Pinheiro",
+      "pdfStartPage": 10,
+      "pdfEndPage": 11,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "Letra amorosa e noturna: o eu suporta o dia, condena-se à noite, acorda “sangrando canções de veneno”. O sol dos olhos da amada o mata, a lua dos dele a apavora. A imagem final define os dois: ela é a cidade perdida; ele, o navio fantasma.",
-        "observe": ["É a mais curta e regular das letras, em quadras rimadas.", "O mar aparece como “mistério que pasma”: a canção amorosa usa o mesmo léxico marítimo de “Na Volta que o Mundo Dá”, mas para o naufrágio."] } },
-    { "id": "o-dia-em-que-o-morro-descer", "order": 12, "type": "song", "title": "O Dia em que o Morro Descer e Não For Carnaval", "opening": "O Dia Em Que o Morro Descer e Não For Carnaval Paulo César Pinheiro", "pdfStartPage": 11, "pdfEndPage": 12,
-      "guide": { "editorialStatus": "needs_review",
+        "observe": [
+          "A transcrição permite reconhecer pares de rimas e quatro blocos de quatro versos, mas não prova regularidade métrica nem que seja a menor letra do corpus.",
+          "O léxico marítimo aproxima esta letra de Na Volta que o Mundo Dá; aqui ele organiza o desencontro amoroso, em vez da narrativa de partida e retorno."
+        ]
+      }
+    },
+    {
+      "id": "o-dia-em-que-o-morro-descer",
+      "order": 12,
+      "type": "song",
+      "title": "O Dia em que o Morro Descer e Não For Carnaval",
+      "opening": "O Dia Em Que o Morro Descer e Não For Carnaval Paulo César Pinheiro",
+      "pdfStartPage": 11,
+      "pdfEndPage": 12,
+      "guide": {
+        "editorialStatus": "published",
         "summary": "A letra imagina o desfile da revolta: o morro desce sem ser carnaval, e cada elemento da escola de samba vira arma — a ala é quadrilha, a evolução é guerrilha, a alegoria é arsenal, o enredo é “a cidade partida”. O povo de cortiço, alagado e favela mostra a miséria na passarela, sem a fantasia do jornal.",
-        "observe": ["Toda a imagem nasce de uma única metáfora estendida: o vocabulário do desfile é trocado, termo a termo, pelo da guerra.", "O aviso é político e direto: “melhor é o Poder devolver à esse povo a alegria”."] } },
-    { "id": "velho-arvoredo", "order": 13, "type": "song", "title": "Velho Arvoredo", "opening": "Velho Arvoredo Paulo César Pinheiro", "pdfStartPage": 12, "pdfEndPage": 13,
-      "guide": { "editorialStatus": "needs_review",
-        "summary": "O eu, abandonado, compara-se a um velho arvoredo que o vento não derrubou: tronco virado rochedo, pedra virada flor. Diz que superou, mas por fora cicatriza e por dentro sangra. Termina sozinho, como a árvore que “não serve ao tempo nem ao lenhador”.",
-        "observe": ["A árvore resiste, mas ficou inútil: a resistência aqui é também isolamento.", "A transcrição põe, logo depois do título, um verso (“Não tem órgão oficial…”) que parece pertencer à letra anterior; confira em Fontes."] } },
-    { "id": "vontade-de-chorar", "order": 14, "type": "song", "title": "Vontade de Chorar", "opening": "Vontade De Chorar Paulo César Pinheiro", "pdfStartPage": 13, "pdfEndPage": 14,
-      "guide": { "editorialStatus": "needs_review",
-        "summary": "Do amor restaram folhas sopradas pelo vento. O eu diz que todo verso triste que puser numa canção é o coração que chora, e que qualquer canção de amor lhe dá vontade de chorar. A seleção fecha no registro mais simples e confessional.",
-        "observe": ["É metalinguística: fala da própria canção como lugar da dor.", "Compare com “Viagem”, que abre a seleção mandando a tristeza embora: a última letra a recebe de volta."] } }
+        "observe": [
+          "Toda a imagem nasce de uma única metáfora estendida: o vocabulário do desfile é trocado, termo a termo, pelo da guerra.",
+          "O aviso é político e direto: “melhor é o Poder devolver à esse povo a alegria”."
+        ]
+      }
+    },
+    {
+      "id": "velho-arvoredo",
+      "order": 13,
+      "type": "song",
+      "title": "Velho Arvoredo",
+      "opening": "Velho Arvoredo Paulo César Pinheiro",
+      "pdfStartPage": 12,
+      "pdfEndPage": 13,
+      "guide": {
+        "editorialStatus": "published",
+        "summary": "A voz, reconstituindo esquecimento e sofrimento amoroso, compara-se a um velho arvoredo que o vento não derrubou: tronco virado rochedo, pedra virada flor. Diz que superou, mas por fora cicatriza e por dentro sangra. Termina sozinho, como a árvore que “não serve ao tempo nem ao lenhador”.",
+        "observe": [
+          "Resistência e fragilidade convivem na imagem da árvore: sua inutilidade é uma avaliação da voz, não uma propriedade objetiva demonstrada.",
+          "A transcrição põe após o título um fragmento de atribuição duvidosa; ele não fundamenta esta análise e permanece documentado em Fontes."
+        ]
+      }
+    },
+    {
+      "id": "vontade-de-chorar",
+      "order": 14,
+      "type": "song",
+      "title": "Vontade de Chorar",
+      "opening": "Vontade De Chorar Paulo César Pinheiro",
+      "pdfStartPage": 13,
+      "pdfEndPage": 14,
+      "guide": {
+        "editorialStatus": "published",
+        "summary": "Do amor restaram folhas sopradas pelo vento. O eu diz que todo verso triste que puser numa canção é o coração que chora, e que qualquer canção de amor lhe dá vontade de chorar. Na ordem da compilação enviada, esta letra encerra o conjunto num registro confessional.",
+        "observe": [
+          "É metalinguística: fala da canção como lugar da dor.",
+          "Compare com Viagem, que abre a compilação enviada dispensando a tristeza: o contraste nasce dessa ordem do arquivo, não de um plano composicional ou sequência oficial comprovados."
+        ]
+      }
+    }
   ],
   "modules": [
-    { "id": "comece-aqui", "moduleType": "comece_aqui", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Canções escolhidas** não é um livro: é uma seleção de 14 letras de canções de Paulo César Pinheiro, compositor carioca, feita pela Comvest para a Unicamp. As letras vão do lirismo amoroso (“Navio Fantasma”, “Vontade de Chorar”) à história do Brasil contada pelos vencidos (“Canto das Três Raças”, “Vento Bravo”) e à resistência contra a repressão (“Pesadelo”, “Mordaça”).\n\n**Por que importa para a Unicamp.** A banca pede que a letra seja lida como texto poético: metáfora, antítese, paralelismo, voz lírica, relação entre forma e crítica social. Ao mesmo tempo, é preciso lembrar que a letra nasceu para ser cantada, e que parte do sentido (melodia, interpretação, arranjo) não está no papel.\n\n**Como ler.** Para cada letra, pergunte: quem fala, para quem, e de onde? Há um “eu” amoroso, um “eu” que viaja, um “nós” que resiste e uma voz de poder que a canção expõe (“Cordilheira”). Depois procure a figura que organiza a letra inteira — a estrela, o vento, o muro e a ponte, o desfile transformado em guerra." },
-    { "id": "analise-integral", "moduleType": "analise_integral", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-viagem", "ev-tres-racas-canto", "ev-tres-racas-final", "ev-estrela-credo", "ev-mordaca", "ev-volta", "ev-pesadelo-verso", "ev-pesadelo-medo", "ev-vento-bravo", "ev-evangelho", "ev-cordilheira", "ev-desenredo", "ev-navio", "ev-morro", "ev-arvoredo", "ev-vontade"], "sourceRefs": [],
-      "markdown": "## Letra de canção como poema\n\nAs catorze letras usam os recursos que a prova cobra em poesia: anáfora (“Eu quero…”, em “Cordilheira”; “Por mais que…”, em “Estrela da Terra”), antítese (“Quando o muro separa uma ponte une”, em “Pesadelo”), quiasmo (“O olhar que prende anda solto / O olhar que solta anda preso”, em “Desenredo”), paradoxo (“Quanto mais a gente se solta / Mais fica no mesmo lugar”, em “Na Volta que o Mundo Dá”). Uma leitura mais básica para na identificação da figura; uma leitura mais sofisticada mostra o que ela faz: em “Pesadelo”, a antítese não é ornamento, é a forma do confronto entre quem reprime e quem resiste.\n\nO detalhe que muda a interpretação é lembrar que a letra é parte de uma canção. Refrões repetidos (“Que não vai se acalmar”, em “Vento Bravo”; “Olha aí”, em “Pesadelo”) ganham sentido na escuta. Esta seleção, porém, chegou como texto; este dossiê analisa só o que está escrito.\n\n## História do Brasil contada pelos vencidos\n\n“Canto das Três Raças” retoma a ideia das três raças formadoras do Brasil para desmontá-la. Em vez da mistura harmoniosa, a letra enfileira derrotas: o índio levado ao cativeiro, o negro em Palmares, os inconfidentes; “Nada adiantou” (p. 2). O povo, “Quando pode cantar, / Canta de dor” (p. 2). O último verso fecha o argumento: o canto que devia ser de alegria é um soluço. “Vento Bravo” faz o movimento oposto: descreve a escravidão em imperfeito, sob “a lei da Coroa Imperial”, e anuncia no presente e no futuro um vento que “não vai se acalmar” (p. 7). As duas letras leem a história do mesmo lado; uma lamenta, a outra promete revolta.\n\n## Repressão e resistência\n\nEm “Pesadelo”, um “você” corta, prende, agarra; a cada gesto responde um “eu” que vira “nós” (p. 6). O verso “Você corta um verso, eu escrevo outro” permite a leitura da censura sem precisar de dado externo: o próprio texto fala de corte de versos. O refrão desloca o medo: não é o “nós” que teme, é o poder (“Que medo você tem de nós”). “Mordaça” trabalha o desânimo — “Tudo que se construiu desabou” — e aposta na reviravolta do tempo; a felicidade é que deve amordaçar “essa dor secular” (p. 4).\n\n“Cordilheira” é a letra mais difícil, porque o “eu” é a voz que oprime. Ele quer ver “a procissão dos suicidas / Caminhando para a morte pelo bem de nossas vidas”, a juventude transformada num exército de aflitos, “um Jesus crucificado em cada poste” (p. 9). O erro comum aqui seria atribuir esse desejo ao compositor. A letra dá voz ao poder de guerra para expô-lo: a calma com que ele fala da crueldade (“Eu quero apenas ser cruel naturalmente”) é o que produz o horror.\n\n“O Dia em que o Morro Descer e Não For Carnaval” transforma o desfile em guerra, termo a termo: a ala é quadrilha, a evolução é guerrilha, a alegoria é arsenal, o enredo é “a cidade partida” (p. 12). A crítica é social e direta: o carnaval é o único momento em que o morro desce sem ameaça, e a letra imagina o dia em que isso deixar de ser verdade.\n\n## Esperança e profecia\n\n“Estrela da Terra” tem forma de credo: cada estrofe concede o pior (“Por mais que haja dor e agonia”) e afirma uma luz (“Existe uma luz que é meu guia”, p. 2). A estrela desce do céu para a boina do capitão, a palma da mão, o coração e o sertão, até a chegada de um cavaleiro de guerra, “Igual toda lenda se encerra” (p. 3). Um crítico poderia ler aí o imaginário messiânico do sertão; essa leitura é possível pelo texto, mas não está confirmada por fonte neste dossiê. “Evangelho” é o avesso: uma série de paradoxos em que o bem gera o mal e a morte alimenta “a roda viva”, com uma brecha — “É o fim mas pode ser o começo” (p. 8).\n\n## Lirismo amoroso, viagem e solidão\n\nA seleção abre e fecha com a tristeza. Em “Viagem”, o eu se desculpa com ela e parte com a poesia, personificada (“minha poesia”, p. 1). Em “Vontade de Chorar”, o fim do amor transforma qualquer canção em choro (p. 14). Entre as duas, “Na Volta que o Mundo Dá” narra a viagem real e o retorno por um mal-estar sem nome; “Navio Fantasma” e “Desenredo” fazem do amor um naufrágio e um enredamento; “Velho Arvoredo” faz da resistência ao abandono uma forma de isolamento. O mar, o vento, a estrela e o fio atravessam letras de temas diferentes e dão unidade à seleção.\n\n## A Unicamp poderia transformar essa leitura em uma questão discursiva assim\n\n*Compare o modo como “Canto das Três Raças” e “Vento Bravo” representam a escravidão, considerando o tempo verbal e o efeito do final de cada letra.* Uma boa resposta aponta a sequência de derrotas e o canto de dor na primeira, o imperfeito do cativeiro e o presente/futuro da revolta na segunda, e conclui que a mesma história recebe um desfecho de lamento numa e de promessa na outra." },
-    {"id": "critica-debate", "moduleType": "critica_debate", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-pesadelo-verso", "ev-cordilheira"], "sourceRefs": [], "markdown": "**Camadas de evidência.** Os cartões trazem versos localizados na transcrição; guias e análise são síntese própria. Nenhuma fonte acadêmica, discografia ou entrevista foi consultada; parcerias, datas e censura não são afirmadas.\n\n**Hipóteses em confronto.** As letras políticas podem ser lidas como denúncia histórica (*Canto das Três Raças*, *Vento Bravo*) ou como resistência à repressão (*Pesadelo*, *Mordaça*). A leitura em chave de censura se apoia no próprio texto — “Você corta um verso, eu escrevo outro” (*Pesadelo*, p. 6) —, mas não deve virar dado biográfico sem fonte. *Cordilheira* exige separar a voz da letra da opinião do compositor.\n\n**Limites.** A letra sem música perde parte do sentido (melodia, refrão cantado). Pesquisa pendente: estudos sobre a obra do compositor e a canção como poesia, citados com página quando lidos."},
-    {"id": "fuvest", "moduleType": "fuvest", "board": "FUVEST", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-desenredo", "ev-cordilheira"], "sourceRefs": [], "markdown": "**Treino de transferência; a seleção não está na lista FUVEST 2027.**\n\nUse as letras para treinar análise de poema: antítese (“Quando o muro separa uma ponte une”, em *Pesadelo*), quiasmo (*Desenredo*), anáfora (*Cordilheira*). Explique sempre o efeito, não só o nome da figura."},
-    {"id": "unicamp", "moduleType": "unicamp", "board": "UNICAMP", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-tres-racas-final", "ev-vento-bravo", "ev-cordilheira"], "sourceRefs": [], "markdown": "**Preparação para a Unicamp/Comvest; não é questão oficial nem resposta esperada.**\n\nNa objetiva, identifique a voz de cada letra antes de interpretar: eu amoroso, nós que resiste, voz de poder. Distrator comum: atribuir ao compositor o desejo de crueldade de *Cordilheira*.\n\nNa discursiva, compare duas letras com evidência: o lamento de *Canto das Três Raças* (“Esse canto que devia ser um canto de alegria Soa apenas como um soluçar de dor”, p. 2) e a promessa de *Vento Bravo* (“Era argola, ferro, chibata e pau”, p. 7). Mostre a diferença de tempo verbal e de desfecho."},
-    {"id": "questoes", "moduleType": "questoes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-pesadelo-medo", "ev-morro", "ev-cordilheira", "ev-viagem", "ev-vontade", "ev-tres-racas-canto", "ev-vento-bravo"], "sourceRefs": [], "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. UNICAMP, objetiva, média.** Em *Pesadelo*, o verso “Que medo você tem de nós, olha aí” (p. 6):\nA) mostra o eu lírico com medo da repressão.\nB) inverte o medo e transforma a resistência individual em coletiva.\nC) dirige-se à pessoa amada.\nD) descreve uma festa popular.\nE) elogia o poder estabelecido.\n\n**2. UNICAMP, objetiva, difícil.** Em *O Dia em que o Morro Descer e Não For Carnaval*, a sequência “cada uma ala da escola será uma quadrilha a evolução já vai ser de guerrilha e a alegoria um tremendo arsenal” (p. 12) constrói:\nA) uma celebração do desfile.\nB) uma metáfora estendida que troca o vocabulário do desfile pelo da guerra.\nC) uma crítica às escolas de samba.\nD) um elogio da polícia.\nE) uma lembrança de infância.\n\n**3. UNICAMP, discursiva, difícil.** a) Identifique quem fala em *Cordilheira* (p. 9). b) Explique por que a calma com que a voz deseja a crueldade produz o efeito crítico da letra.\n\n**4. Discursiva, muito difícil.** Compare a partida de *Viagem* (p. 1) com o fecho de *Vontade de Chorar* (“Todo verso triste que eu puser numa canção É o meu coração que chora”, p. 14). Que percurso a ordem da seleção sugere?\n\n**5. Comparação, muito difícil.** Relacione *Canto das Três Raças* (p. 1-2) e *Vento Bravo* (p. 6-7): mesma história, desfechos diferentes. Justifique com um verso de cada."},
-    {"id": "revisao-ativa", "moduleType": "revisao_ativa", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": ["ev-pesadelo-verso", "ev-morro"], "sourceRefs": [], "markdown": "Reconstrua sem consulta: as 14 letras em três grupos (amor e viagem; história e resistência; poder e cidade) e uma imagem-âncora de cada.\n\n**Factual:** em que letra o muro cai? Em qual o desfile vira guerra? Qual abre e qual fecha a seleção?\n\n**Formal:** que letra usa anáfora em “Eu quero”? Qual usa quiasmo?\n\n**Interpretativo:** a seleção é mais política ou mais lírica? Justifique com uma letra de cada lado.\n\n**24 horas:** mapa. **7 dias:** uma letra nova. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos."},
-    { "id": "fontes", "moduleType": "fontes", "version": 1, "editorialStatus": "needs_review", "evidenceRefs": [], "sourceRefs": [],
-      "markdown": "**Texto usado:** PDF de 14 páginas com as letras transcritas, sem editora, data ou créditos de parceria. As páginas citadas são as desse arquivo. O repositório também tem uma versão .docx do mesmo conjunto, não usada aqui.\n\n**Lista oficial:** seleção de 14 letras exigida pela Unicamp/Comvest para o ciclo 2027: Viagem, Canto das Três Raças, Estrela da Terra, Mordaça, Na Volta que o Mundo Dá, Pesadelo, Vento Bravo, Evangelho, Cordilheira, Desenredo, Navio Fantasma, O Dia em que o Morro Descer e Não For Carnaval, Velho Arvoredo e Vontade de Chorar. As 14 estão no arquivo, na mesma ordem.\n\n**Pontos duvidosos da transcrição (conferir em fonte autorizada antes de publicar):**\n- “Estrela da Terra”, p. 3: “É o raio da estrela do noite” — a concordância sugere erro de transcrição; mantido como está.\n- p. 12: o verso “Não tem órgão oficial, nem governo, nem Liga” vem logo depois do título “Velho Arvoredo”, mas pelo sentido parece fechar “O Dia em que o Morro Descer…”. Este dossiê não o atribui a nenhuma das duas.\n- “Viagem”, p. 1: única letra sem a linha de autoria depois do título.\n- Quebras de verso não aparecem no PDF; as citações seguem a ordem das palavras do arquivo.\n\n**Não conferido:** parceiros musicais de cada letra, datas de composição e gravação, intérpretes e eventual censura durante a ditadura. Nada disso está no arquivo, e nenhum dado desse tipo foi afirmado neste dossiê. A leitura política de “Pesadelo” e “Mordaça” se apoia só no próprio texto.\n\n**Crítica:** nenhuma fonte crítica foi lida. As análises são síntese fundamentada nas letras, com página." }
+    {
+      "id": "comece-aqui",
+      "moduleType": "comece_aqui",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "cancoes-comvest-2027",
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Canções escolhidas** não é um livro: é uma seleção de 14 letras de canções de Paulo César Pinheiro, compositor carioca, feita pela Comvest para a Unicamp. As letras vão do lirismo amoroso (“Navio Fantasma”, “Vontade de Chorar”) à história do Brasil contada pelos vencidos (“Canto das Três Raças”, “Vento Bravo”) e à resistência contra a repressão (“Pesadelo”, “Mordaça”).\n\n**Por que importa para a Unicamp.** A banca pede que a letra seja lida como texto poético: metáfora, antítese, paralelismo, voz lírica, relação entre forma e crítica social. Ao mesmo tempo, é preciso lembrar que a letra integra uma canção, e que parte do sentido (melodia, interpretação, arranjo) não está no papel.\n\n**Como ler.** Para cada letra, pergunte: quem fala, para quem, e de onde? Há um “eu” amoroso, um “eu” que viaja, um “nós” que resiste e uma voz que permite hipóteses sobre poder e crueldade (“Cordilheira”). Depois procure a figura que organiza a letra inteira — a estrela, o vento, o muro e a ponte, o desfile transformado em guerra.",
+      "reviewedAt": "2026-10-07T05:03:38Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-cancoes-escolhidas-14-letras"
+    },
+    {
+      "id": "analise-integral",
+      "moduleType": "analise_integral",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-viagem",
+        "ev-tres-racas-canto",
+        "ev-tres-racas-final",
+        "ev-estrela-credo",
+        "ev-mordaca",
+        "ev-volta",
+        "ev-pesadelo-verso",
+        "ev-pesadelo-medo",
+        "ev-vento-bravo",
+        "ev-evangelho",
+        "ev-cordilheira",
+        "ev-desenredo",
+        "ev-navio",
+        "ev-morro",
+        "ev-arvoredo",
+        "ev-vontade"
+      ],
+      "sourceRefs": [
+        "cancoes-napolitano-2004",
+        "cancoes-cravo-albin-pinheiro"
+      ],
+      "markdown": "## Letra de canção como poema\n\nAs catorze letras usam os recursos que a prova cobra em poesia: anáfora (“Eu quero…”, em “Cordilheira”; “Por mais que…”, em “Estrela da Terra”), antítese (“Quando o muro separa uma ponte une”, em “Pesadelo”), quiasmo (“O olhar que prende anda solto / O olhar que solta anda preso”, em “Desenredo”), paradoxo (“Quanto mais a gente se solta / Mais fica no mesmo lugar”, em “Na Volta que o Mundo Dá”). Identificar a figura exige explicar seu efeito: em “Pesadelo”, a antítese não é ornamento, é a forma do confronto entre quem reprime e quem resiste.\n\nO detalhe que muda a interpretação é lembrar que a letra é parte de uma canção. Refrões repetidos (“Que não vai se acalmar”, em “Vento Bravo”; “Olha aí”, em “Pesadelo”) ganham sentido na escuta. Esta seleção, porém, chegou como texto; este dossiê analisa só o que está escrito.\n\n## História do Brasil contada pelos vencidos\n\n“Canto das Três Raças” retoma a ideia das três raças formadoras do Brasil para desmontá-la. Em vez da mistura harmoniosa, a letra enfileira derrotas: o índio levado ao cativeiro, o negro em Palmares, os inconfidentes; “Nada adiantou” (p. 2). O povo, “Quando pode cantar, / Canta de dor” (p. 2). O último verso fecha o argumento: o canto que devia ser de alegria é um soluço. “Vento Bravo” faz o movimento oposto: descreve a escravidão em imperfeito, sob “a lei da Coroa Imperial”, e anuncia no presente e no futuro um vento que “não vai se acalmar” (p. 7). As duas letras leem a história do mesmo lado; uma lamenta, a outra promete revolta.\n\n## Repressão e resistência\n\nEm “Pesadelo”, um “você” corta, prende, agarra; a cada gesto responde um “eu” que vira “nós” (p. 6). O verso “Você corta um verso, eu escrevo outro” permite a leitura da censura sem precisar de dado externo: o próprio texto fala de corte de versos. O refrão desloca o medo: não é o “nós” que teme, é o poder (“Que medo você tem de nós”). “Mordaça” trabalha o desânimo — “Tudo que se construiu desabou” — e aposta na reviravolta do tempo; a felicidade é que deve amordaçar “essa dor secular” (p. 4).\n\n“Cordilheira” sustenta uma hipótese de voz opressiva, mas não se esgota nela. Ele quer ver “a procissão dos suicidas / Caminhando para a morte pelo bem de nossas vidas”, a juventude transformada num exército de aflitos, “um Jesus crucificado em cada poste” (p. 9). O erro comum aqui seria atribuir esse desejo ao compositor. A naturalização da crueldade pode expor a lógica do poder de guerra. Porém, a voz também quer descobrir onde o mal nasce e destruir sua semente (p. 9): tentar eliminar o mal pela crueldade instala um paradoxo, e impede reduzir a voz a uma personagem oficialmente identificada.\n\n“O Dia em que o Morro Descer e Não For Carnaval” transforma o desfile em guerra, termo a termo: a ala é quadrilha, a evolução é guerrilha, a alegoria é arsenal, o enredo é “a cidade partida” (p. 12). A crítica é social e direta: a condição de não ser carnaval desfaz a expectativa do espetáculo; o vocabulário festivo reorganizado como confronto torna visível a desigualdade. A letra não demonstra que o carnaval seja o único momento real de circulação do morro.\n\n## Esperança e profecia\n\n“Estrela da Terra” tem forma de credo: cada estrofe concede o pior (“Por mais que haja dor e agonia”) e afirma uma luz (“Existe uma luz que é meu guia”, p. 2). A estrela desce do céu para a boina do capitão, a palma da mão, o coração e o sertão, até a chegada de um cavaleiro de guerra, “Igual toda lenda se encerra” (p. 3). Um crítico poderia ler aí o imaginário messiânico do sertão; essa leitura é possível pelo texto, mas não está confirmada por fonte neste dossiê. “Evangelho” é o avesso: uma série de paradoxos em que o bem gera o mal e a morte alimenta “a roda viva”, com uma brecha — “É o fim mas pode ser o começo” (p. 8).\n\n## Lirismo amoroso, viagem e solidão\n\nA compilação enviada abre e fecha com a tristeza; a lista oficial da Comvest tem outra ordem, alfabética. Em “Viagem”, o eu se desculpa com ela e parte com a poesia, personificada (“minha poesia”, p. 1). Em “Vontade de Chorar”, o fim do amor transforma qualquer canção em choro (p. 14). Entre as duas, “Na Volta que o Mundo Dá” encena deslocamentos geográficos e o retorno por um mal-estar sem nome; “Navio Fantasma” e “Desenredo” fazem do amor um naufrágio e um enredamento; “Velho Arvoredo” articula sofrimento amoroso, resistência e isolamento. O mar, o vento, a estrela e o fio atravessam letras de temas diferentes e permitem comparar textos do corpus, sem comprovar projeto de álbum ou livro.\n\n## Voz, composição e circulação\n\n**Síntese textual:** a seleção permite acompanhar diferentes operações da imagem, sem pressupor um único eu. Na Volta que o Mundo Dá (p. 4–5) encadeia partida, enumeração de portos e regiões, mal-estar sem objeto e retorno; o paradoxo final desloca o problema da distância geográfica para a permanência subjetiva. Viagem (p. 1), por sua vez, transforma tristeza e poesia em interlocutoras e faz nuvem, vento e estrela sustentarem uma partida fantástica. Desenredo (p. 9–10) atravessa violência social e vínculo amoroso pelo mesmo campo de fio, trama e cabelo: a passagem entre mundo e desejo não apaga a violência vista pelo andarilho.\n\n**Apoio crítico delimitado:** Napolitano explica a vigilância da circulação cultural, não cada letra deste corpus. Para transferir o contexto à interpretação, comece pela marca localizada — pronomes, antíteses ou transformação do desfile em confronto — e só depois discuta repressão ou desigualdade. Canto das Três Raças associa episódios nacionais e sofrimento do trabalhador; não enumera três grupos raciais equivalentes nem faz dos inconfidentes uma raça.\n\n**Ordem editorial:** o contraste entre a tristeza dispensada na abertura e retomada no encerramento vale para a compilação enviada. A ordem oficial alfabética e os parceiros estão registrados em Fontes; nenhuma sequência de álbum foi examinada.",
+      "reviewedAt": "2026-10-07T05:03:38Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-cancoes-escolhidas-14-letras"
+    },
+    {
+      "id": "critica-debate",
+      "moduleType": "critica_debate",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-pesadelo-verso",
+        "ev-cordilheira"
+      ],
+      "sourceRefs": [
+        "cancoes-napolitano-2004",
+        "cancoes-cravo-albin-pinheiro"
+      ],
+      "markdown": "**Evidência textual.** Os cartões registram versos localizados na transcrição. Em Pesadelo (p. 5–6), paralelismo, antíteses e passagem de eu a nós sustentam uma leitura de resistência; Mordaça (p. 3–4) inverte a imagem do silenciamento contra a dor. A hipótese nasce das letras, não de uma biografia ou decisão censória supostas.\n\n**Leitura crítica documentada.** Marcos Napolitano, em *A MPB sob suspeita* (p. 103–109 e 115), mostra que a repressão vigiava artistas, espaços, shows e públicos, produzindo suspeita sobre a circulação social da música. Seu artigo desloca o foco da procura de uma mensagem secreta em cada imagem para as condições públicas da canção. Isso contextualiza a resistência, mas não comprova que estas duas letras sofreram uma decisão censória específica.\n\n**Referência histórica e oficial.** O Dicionário Cravo Albin documenta trajetória, parcerias e circulação discográfica de Pinheiro; é apoio de referência, não interpretação literária nem edição autenticada das letras. A Comvest confirma os 14 títulos e seus parceiros. Nenhuma dessas fontes atribui ao compositor cada posição da voz textual.\n\n**Síntese interpretativa.** As leituras política e lírica convivem no corpus. Muro e ponte organizam um antagonismo explícito em Pesadelo; já a viagem de Viagem põe a poesia no lugar de companheira, e o mar de Navio Fantasma organiza desencontro amoroso. Em Cordilheira, uma leitura de voz opressiva deve disputar espaço com o paradoxo de eliminar o mal por crueldade. Não existe chave histórica única que converta todas as imagens em mensagens de censura.\n\n**Limites.** Não se analisaram gravações, melodia, arranjos ou performances. Dois segmentos da transcrição seguem duvidosos e não fundamentam interpretações. Não foram lidas teses ou dissertações dedicadas às 14 letras: esta é uma edição de estudo compacta, sem certificação de transcrição integral autorizada ou de aprofundamento avançado completo.",
+      "reviewedAt": "2026-10-07T05:03:38Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-cancoes-escolhidas-14-letras"
+    },
+    {
+      "id": "fuvest",
+      "moduleType": "fuvest",
+      "board": "FUVEST",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-desenredo",
+        "ev-cordilheira"
+      ],
+      "sourceRefs": [
+        "fuvest-lista-2027",
+        "fuvest-programa-2027"
+      ],
+      "markdown": "**Treino de transferência; a seleção não está na lista FUVEST 2027.**\n\nUse as letras para treinar análise de poema: antítese (“Quando o muro separa uma ponte une”, em *Pesadelo*), quiasmo (*Desenredo*), anáfora (*Cordilheira*). Explique sempre o efeito, não só o nome da figura.\n\n**F.O.R.M.A., ferramenta didática autoral.** Na segunda fase: foco no verbo, recorte e quantidade; observação de uma passagem; recurso formal pertinente; mecanismo que produz o efeito; articulação ao conjunto ou à comparação pedida. Isso não é rubrica oficial de pontuação. Na primeira fase, teste cada alternativa contra a voz e as marcas do excerto, sem aceitar uma característica geral que não esteja nele.",
+      "reviewedAt": "2026-10-07T05:03:38Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-cancoes-escolhidas-14-letras"
+    },
+    {
+      "id": "unicamp",
+      "moduleType": "unicamp",
+      "board": "UNICAMP",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-tres-racas-final",
+        "ev-vento-bravo",
+        "ev-cordilheira"
+      ],
+      "sourceRefs": [
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Preparação para a Unicamp/Comvest; não é questão oficial nem resposta esperada.**\n\nNa objetiva, identifique a voz de cada letra antes de interpretar: eu amoroso, nós que resiste, posição ambígua diante de poder e crueldade. Distrator comum: atribuir ao compositor o desejo de crueldade de *Cordilheira*.\n\nNa discursiva, compare duas letras com evidência: o lamento de *Canto das Três Raças* (“Esse canto que devia ser um canto de alegria Soa apenas como um soluçar de dor”, p. 2) e a promessa de *Vento Bravo* (“Era argola, ferro, chibata e pau”, p. 7). Mostre a diferença de tempo verbal e de desfecho.\n\n**F.O.N.T.E., ferramenta didática autoral.** Na segunda fase: fonte localizada; operação de cada subitem; núcleo formal; tensão interpretativa; explicação articulada. Responda os verbos separadamente e ligue o efeito à evidência, sem apenas recontar a trama. Na primeira fase, compare a alternativa ao texto e ao paratexto fornecidos. O protocolo não é espelho oficial nem previsão de incidência.",
+      "reviewedAt": "2026-10-07T05:03:38Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-cancoes-escolhidas-14-letras"
+    },
+    {
+      "id": "questoes",
+      "moduleType": "questoes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-pesadelo-medo",
+        "ev-morro",
+        "ev-cordilheira",
+        "ev-viagem",
+        "ev-vontade",
+        "ev-tres-racas-canto",
+        "ev-vento-bravo"
+      ],
+      "sourceRefs": [],
+      "markdown": "**Questões autorais — responda antes de consultar o texto. Não há gabarito neste módulo.**\n\n**1. UNICAMP, objetiva, média.** Em *Pesadelo*, o verso “Que medo você tem de nós, olha aí” (p. 6):\n- A) mostra o eu lírico com medo da repressão.\n- B) inverte o medo e transforma a resistência individual em coletiva.\n- C) dirige-se à pessoa amada.\n- D) descreve uma festa popular.\n- E) elogia o poder estabelecido.\n\n**2. UNICAMP, objetiva, difícil.** Em *O Dia em que o Morro Descer e Não For Carnaval*, a sequência “cada uma ala da escola será uma quadrilha a evolução já vai ser de guerrilha e a alegoria um tremendo arsenal” (p. 12) constrói:\n- A) uma celebração do desfile.\n- B) uma metáfora estendida que troca o vocabulário do desfile pelo da guerra.\n- C) uma crítica às escolas de samba.\n- D) um elogio da polícia.\n- E) uma lembrança de infância.\n\n**3. UNICAMP, discursiva, difícil.** a) Construa uma hipótese sobre a posição da voz em *Cordilheira* (p. 9), com duas marcas textuais. b) Explique a tensão entre desejar a crueldade e destruir a origem do mal, distinguindo voz textual e compositor.\n\n**4. Discursiva, muito difícil.** Compare a partida de *Viagem* (p. 1) com o fecho de *Vontade de Chorar* (“Todo verso triste que eu puser numa canção É o meu coração que chora”, p. 14). Que contraste a ordem da compilação enviada permite construir? Por que isso não prova uma sequência composicional ou curatorial oficial?\n\n**5. Comparação, muito difícil.** Relacione *Canto das Três Raças* (p. 1-2) e *Vento Bravo* (p. 6-7): mesma história, desfechos diferentes. Justifique com um verso de cada.",
+      "reviewedAt": "2026-10-07T05:03:38Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-cancoes-escolhidas-14-letras"
+    },
+    {
+      "id": "revisao-ativa",
+      "moduleType": "revisao_ativa",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [
+        "ev-pesadelo-verso",
+        "ev-morro"
+      ],
+      "sourceRefs": [],
+      "markdown": "Reconstrua sem consulta: as 14 letras em três grupos (amor e viagem; história e resistência; poder e cidade) e uma imagem-âncora de cada.\n\n**Factual:** em que letra o muro cai? Em qual o desfile vira guerra? Qual abre e qual fecha a compilação enviada, que difere da ordem oficial?\n\n**Formal:** que letra usa anáfora em “Eu quero”? Qual usa quiasmo?\n\n**Interpretativo:** a seleção é mais política ou mais lírica? Justifique com uma letra de cada lado.\n\n**24 horas:** mapa. **7 dias:** uma letra nova. **30 dias:** as cinco questões. **Pré-prova:** explicação oral de três minutos.",
+      "reviewedAt": "2026-10-07T05:03:38Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-cancoes-escolhidas-14-letras"
+    },
+    {
+      "id": "fontes",
+      "moduleType": "fontes",
+      "version": 2,
+      "editorialStatus": "published",
+      "evidenceRefs": [],
+      "sourceRefs": [
+        "cancoes-comvest-2027",
+        "cancoes-napolitano-2004",
+        "cancoes-cravo-albin-pinheiro",
+        "fuvest-lista-2027",
+        "fuvest-programa-2027",
+        "comvest-programa-2027"
+      ],
+      "markdown": "**Fonte primária:** compilação de 14 páginas, sem editora, data ou créditos de parceria identificados. As páginas são as do PDF enviado; a versão DOCX não foi usada. O arquivo contém as 14 letras obrigatórias, em ordem própria. Não se trata de livro ou álbum cuja composição foi estabelecida pela pesquisa.\n\n**Corpus e parceiros:** Comvest, Programa das provas 2027, p. 5, consultado diretamente. Na ordem alfabética oficial:\n\n- Canto das três raças — com Mauro Duarte.\n- Cordilheira — com Sueli Costa.\n- Desenredo — com Dori Caymmi.\n- Estrela da terra — com Dori Caymmi.\n- Evangelho — com Dori Caymmi.\n- Mordaça — com Eduardo Gudin.\n- Na volta que o mundo dá — com Vicente Barreto.\n- Navio fantasma — com Francis Hime.\n- O dia em que o morro descer e não for carnaval — com Wilson das Neves.\n- Pesadelo — com Maurício Tapajós.\n- Velho arvoredo — com Hélio Delmiro.\n- Vento bravo — com Edu Lobo.\n- Viagem — com João de Aquino.\n- Vontade de chorar — com Ivor Lancelotti.\n\nA grafia Ivor Lancelotti é a da fonte oficial consultada. O programa não autentica os versos da compilação.\n\n**Limitações da transcrição:** Estrela da Terra (p. 3) traz concordância duvidosa em um verso sobre a estrela da noite; não foi encontrada fonte autorizada para emendá-lo, e o segmento não fundamenta esta análise. Na p. 12, um fragmento sobre órgão oficial, governo e Liga aparece após o cabeçalho Velho Arvoredo; sua atribuição permanece indeterminada e ele foi excluído dos cartões e das interpretações. Viagem é a única letra sem linha de autoria após o título. A linearização não preserva toda a versificação; não se afirma escansão ou regularidade métrica por esse arquivo.\n\n**Fontes críticas efetivamente usadas:** Napolitano, p. 103–109 e 115, sobre vigilância política da circulação da MPB; Dicionário Cravo Albin, seções biográfica e artística consultadas parcialmente, para parcerias e trajetória. Os registros abaixo delimitam leitura, contribuição e limites. Não se afirma censura específica destas canções a partir de contexto geral.\n\n**Alcance editorial:** guias para 14 letras, passagens curtas e análise textual corrigida. Gravações não foram analisadas; autenticidade integral da transcrição, bibliografia acadêmica dedicada ao corpus e aprofundamento de todas as unidades segundo a habilidade avançada seguem pendentes. A publicação desta edição compacta não certifica esses objetivos. Questões são autorais e os protocolos de estudo não constituem rubricas oficiais.\n\n## Bibliografia comentada e leitura efetiva\n\n**COMVEST. Vestibular Unicamp 2027: Programa das provas. 2026.**\n\n[Consultar fonte](https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf). Leitura efetiva: p. 5, tabela integral de obras, canções e parceiros.\n\n**Leitura documentada:** Delimita o corpus obrigatório de 14 canções e identifica suas parcerias.\n\n**Contribuição:** Permite corrigir a ausência de créditos sem supor que Pinheiro compôs sozinho letra e música.\n\n**Limites:** A ordem da lista é alfabética, diferente da transcrição; não autentica versos da compilação, datas ou histórias de censura.\n\n**NAPOLITANO, Marcos. A MPB sob suspeita: a censura musical vista pela ótica dos serviços de vigilância política (1968–1981). Revista Brasileira de História, v. 24, n. 47, p. 103–126, 2004. DOI: 10.1590/S0102-01882004000100005.**\n\n[Consultar fonte](https://www.scielo.br/pdf/rbh/v24n47/a05v2447.pdf). Leitura efetiva: Leitura parcial efetiva: p. 103–109 e 115; trechos de p. 118–126 vistos na extração, não usados para declarar leitura integral.\n\n**Leitura documentada:** Os serviços de vigilância produziam suspeita sobre artistas, públicos e espaços sociais da MPB; não se limitavam a verificar o conteúdo das letras.\n\n**Contribuição:** Distingue censura da obra de vigilância da circulação social; evita reduzir política a uma suposta chave secreta de cada metáfora. A p. 115 situa Maurício Tapajós na coordenação de show Gente segundo documento policial de 1977.\n\n**Limites:** Estudo contextual do campo MPB, não análise destas 14 letras. Não prova que Pesadelo ou Mordaça foram censuradas, nem identifica automaticamente o alvo de seus pronomes.\n\n**DICIONÁRIO CRAVO ALBIN DA MÚSICA POPULAR BRASILEIRA. Paulo César Pinheiro. Verbete eletrônico, s.d.**\n\n[Consultar fonte](https://dicionariompb.com.br/artista/paulo-cesar-pinheiro/). Leitura efetiva: Verbete sem paginação: Dados biográficos e Dados artísticos até a seção de 2014; lista Obras consultada nos itens relevantes. Leitura parcial, não de toda a página.\n\n**Leitura documentada:** Registro biográfico, discográfico e de parcerias do compositor e letrista.\n\n**Contribuição:** Confirma parceria Viagem/João de Aquino e registro de Pesadelo/Maurício Tapajós no LP autoral de 1974, além de Estrela da terra/Dori Caymmi e Canto das três raças/Mauro Duarte.\n\n**Limites:** Fonte de referência, não artigo de interpretação literária nem edição autorizada das letras; as datas do verbete não devem ser extrapoladas para composição de todas as canções. Classificado como book por ser obra de referência digital no esquema disponível.\n\n**FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.**\n\n[Consultar fonte](https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/). Leitura efetiva: Corpo da notícia e listas anuais; conferência da lista de 2027.\n\n**Leitura documentada:** A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.\n\n**Contribuição:** Confirma a exigência oficial e distingue as listas dos diferentes anos.\n\n**Limites:** A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões.\n\n**FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.**\n\n[Consultar fonte](https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf). Leitura efetiva: PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.\n\n**Leitura documentada:** O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.\n\n**Contribuição:** Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.\n\n**Limites:** Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral.\n\n**Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.**\n\n[Consultar fonte](https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf). Leitura efetiva: PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.\n\n**Leitura documentada:** O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.\n\n**Contribuição:** Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.\n\n**Limites:** Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral.\n\n**Alcance desta publicação.** Primeira edição de estudo: texto primário, guias, passagens e síntese autoral revistos, com os recortes críticos acima. Não certifica a leitura integral dos estudos consultados parcialmente nem o aprofundamento integral da habilidade avançada. As unidades e agrupamentos seguem a edição e os limites declarados no percurso. A pesquisa não substitui a leitura da obra. As limitações do arquivo fornecido e da procedência permanecem válidas.",
+      "reviewedAt": "2026-10-07T05:03:38Z",
+      "reviewedBy": "Revisão textual e bibliográfica registrada em pesquisa-publicacao-cancoes-escolhidas-14-letras"
+    }
   ],
   "evidence": [
-    { "id": "ev-viagem", "unitId": "viagem", "location": "“Viagem”, p. 1", "quote": "Oh! Tristeza me desculpe, estou de malas prontas Hoje a poesia veio ao meu encontro",
-      "context": "Versos de abertura da letra que abre a seleção.", "formalDevice": "Apóstrofe à tristeza personificada; a poesia também é personagem.", "effect": "A partida é um gesto lírico: o eu troca a companhia da tristeza pela da poesia.", "wholeRelation": "A tristeza mandada embora aqui volta na última letra, “Vontade de Chorar”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-tres-racas-canto", "unitId": "canto-das-tres-racas", "location": "“Canto das Três Raças”, p. 2", "quote": "Todo o povo dessa terra Quando pode cantar, Canta de dor.",
-      "context": "Depois de enumerar o índio, o negro em Palmares e os inconfidentes.", "formalDevice": "Generalização (“Todo o povo”) e restrição (“Quando pode cantar”).", "effect": "O canto, que seria expressão de alegria, vira registro do sofrimento histórico, e só quando é permitido.", "wholeRelation": "Resume a tese da letra e dialoga com a resistência ao silenciamento de “Pesadelo” e “Mordaça”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-tres-racas-final", "unitId": "canto-das-tres-racas", "location": "“Canto das Três Raças”, p. 2", "quote": "Esse canto que devia ser um canto de alegria Soa apenas como um soluçar de dor",
-      "context": "Últimos versos da letra.", "formalDevice": "Oposição entre o que devia ser e o que é; retorno do “soluçar de dor” do primeiro verso.", "effect": "Fecha a letra em círculo: começa e termina no soluço.", "wholeRelation": "Mostra que a história narrada não teve desfecho redentor, ao contrário de “Vento Bravo”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-estrela-credo", "unitId": "estrela-da-terra", "location": "“Estrela da Terra”, p. 2", "quote": "Por mais que haja dor e agonia Por mais que haja treva sombria Existe uma luz que é meu guia",
-      "context": "Primeira estrofe.", "formalDevice": "Anáfora concessiva (“Por mais que”) seguida de afirmação.", "effect": "Estrutura de credo: o sofrimento é admitido e superado pela fé numa luz.", "wholeRelation": "O mesmo molde se repete em toda a letra e prepara a profecia do cavaleiro de guerra.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-mordaca", "unitId": "mordaca", "location": "“Mordaça”, p. 4", "quote": "E a felicidade amordace essa dor secular",
-      "context": "Depois de admitir os desmoronamentos, a letra aposta na volta do furor e da força.", "formalDevice": "Inversão da imagem do título: a mordaça passa a calar a dor.", "effect": "A violência do silenciamento é desviada contra o sofrimento.", "wholeRelation": "Liga-se a “Pesadelo” e ao “Canto das Três Raças” pela ideia de uma dor que dura séculos.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-volta", "unitId": "na-volta-que-o-mundo-da", "location": "“Na Volta que o Mundo Dá”, p. 5", "quote": "Agora aprendi por que o mundo dá volta Quanto mais a gente se solta Mais fica no mesmo lugar",
-      "context": "Fecho da letra, depois da decisão de voltar para casa.", "formalDevice": "Paradoxo em forma de moral.", "effect": "A viagem pelo mundo termina em retorno: liberdade e permanência se confundem.", "wholeRelation": "Responde a “Viagem”: lá a partida é imaginária e feliz; aqui é real e termina em saudade.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-pesadelo-verso", "unitId": "pesadelo", "location": "“Pesadelo”, p. 6", "quote": "Você corta um verso, eu escrevo outro Você me prende vivo, eu escapo morto",
-      "context": "O eu responde, ação por ação, ao “você” que reprime.", "formalDevice": "Paralelismo antitético.", "effect": "Cada ato de repressão é anulado por um ato de resistência; cortar versos remete ao próprio ofício do letrista.", "wholeRelation": "Base textual para a leitura da censura, sem depender de informação externa.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-pesadelo-medo", "unitId": "pesadelo", "location": "“Pesadelo”, p. 6", "quote": "Que medo você tem de nós, olha aí",
-      "context": "Refrão.", "formalDevice": "Inversão do medo e passagem do “eu” para o “nós”.", "effect": "Quem teme é o poder; a resistência se torna coletiva e provocadora.", "wholeRelation": "Prepara o fecho com o muro caído e a ponte da liberdade.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-vento-bravo", "unitId": "vento-bravo", "location": "“Vento Bravo”, p. 7", "quote": "Era argola, ferro, chibata e pau Era a morte, o medo, o rancor e o mal",
-      "context": "Segunda estrofe, que descreve o regime escravista.", "formalDevice": "Enumeração de objetos de tortura e de sentimentos, em imperfeito.", "effect": "O passado escravista aparece como permanência pesada, antes da mudança anunciada.", "wholeRelation": "Contrasta com o presente e o futuro do vento que “não vai se acalmar”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-evangelho", "unitId": "evangelho", "location": "“Evangelho”, p. 8", "quote": "No amor é que a dor cria raízes De dentro do bem é que o mal trama Da felicidade cresce o drama",
-      "context": "Segunda estrofe.", "formalDevice": "Paradoxos encadeados com ênfase (“é que”).", "effect": "Cada valor positivo contém o seu contrário; o mundo é visto como armadilha.", "wholeRelation": "Torna irônico o título: a “boa-nova” é a descoberta da contradição.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-cordilheira", "unitId": "cordilheira", "location": "“Cordilheira”, p. 9", "quote": "Eu quero ver a procissão dos suicidas Caminhando para a morte pelo bem de nossas vidas",
-      "context": "Uma das séries em “Eu quero…”.", "formalDevice": "Anáfora e ironia: o “bem de nossas vidas” justifica a morte de outros.", "effect": "Expõe a lógica de quem manda jovens à morte em nome de um bem coletivo.", "wholeRelation": "Mostra que o “eu” desta letra é uma voz de poder, e não o compositor.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-desenredo", "unitId": "desenredo", "location": "“Desenredo”, p. 10", "quote": "O olhar que prende anda solto O olhar que solta anda preso",
-      "context": "Primeira estrofe, sobre o mundo visto pelo andarilho.", "formalDevice": "Quiasmo.", "effect": "A inversão dos termos encena um mundo em que as coisas estão ao avesso.", "wholeRelation": "Liga-se ao campo do fio e da trama, que dá título à letra.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-navio", "unitId": "navio-fantasma", "location": "“Navio Fantasma”, p. 11", "quote": "Tu és a cidade perdida E eu sou o navio fantasma.",
-      "context": "Verso final.", "formalDevice": "Metáfora dupla, com os dois termos do par amoroso.", "effect": "Define o amor como desencontro: a cidade sumiu e o navio vaga sem tripulação.", "wholeRelation": "Mostra o mar como imagem do naufrágio amoroso, em contraste com o mar da aventura de “Na Volta que o Mundo Dá”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-morro", "unitId": "o-dia-em-que-o-morro-descer", "location": "“O Dia em que o Morro Descer e Não For Carnaval”, p. 12", "quote": "cada uma ala da escola será uma quadrilha a evolução já vai ser de guerrilha e a alegoria um tremendo arsenal",
-      "context": "Segunda estrofe, que descreve o desfile como guerra.", "formalDevice": "Metáfora estendida: cada termo do desfile é trocado por um da guerra.", "effect": "A festa que concilia vira imagem da revolta da população pobre.", "wholeRelation": "Culmina em “a cidade partida”, núcleo social da letra.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-arvoredo", "unitId": "velho-arvoredo", "location": "“Velho Arvoredo”, p. 13", "quote": "Eu por fora estou cicatrizando E por dentro sangrando",
-      "context": "O eu diz que superou o abandono.", "formalDevice": "Antítese entre fora e dentro.", "effect": "Desmente a superação anunciada logo antes (“Já superei”).", "wholeRelation": "Prepara a imagem final da árvore que resiste, mas já não serve a nada.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" },
-    { "id": "ev-vontade", "unitId": "vontade-de-chorar", "location": "“Vontade de Chorar”, p. 14", "quote": "Todo verso triste que eu puser numa canção É o meu coração que chora",
-      "context": "Depois da partida da pessoa amada.", "formalDevice": "Metalinguagem.", "effect": "A canção se apresenta como expressão direta da dor de quem a escreve.", "wholeRelation": "Fecha a seleção no lirismo confessional e retoma, invertida, a despedida da tristeza em “Viagem”.", "examPotential": ["UNICAMP"], "evidenceLayer": "textual_evidence", "editorialStatus": "needs_review" }
+    {
+      "id": "ev-viagem",
+      "unitId": "viagem",
+      "location": "“Viagem”, p. 1",
+      "quote": "Oh! Tristeza me desculpe, estou de malas prontas Hoje a poesia veio ao meu encontro",
+      "context": "Versos de abertura da letra que abre a seleção.",
+      "formalDevice": "Apóstrofe à tristeza personificada; a poesia também é personagem.",
+      "effect": "A partida é um gesto lírico: o eu troca a companhia da tristeza pela da poesia.",
+      "wholeRelation": "Na ordem da compilação enviada, a tristeza dispensada nesta letra reaparece na última, Vontade de Chorar; isso não comprova plano composicional de álbum ou curadoria oficial.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-tres-racas-canto",
+      "unitId": "canto-das-tres-racas",
+      "location": "“Canto das Três Raças”, p. 2",
+      "quote": "Todo o povo dessa terra Quando pode cantar, Canta de dor.",
+      "context": "Depois de enumerar o índio, o negro em Palmares e os inconfidentes.",
+      "formalDevice": "Generalização (“Todo o povo”) e restrição (“Quando pode cantar”).",
+      "effect": "O canto, que seria expressão de alegria, vira registro do sofrimento histórico, e só quando é permitido.",
+      "wholeRelation": "Resume a tese da letra e dialoga com a resistência ao silenciamento de “Pesadelo” e “Mordaça”.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-tres-racas-final",
+      "unitId": "canto-das-tres-racas",
+      "location": "“Canto das Três Raças”, p. 2",
+      "quote": "Esse canto que devia ser um canto de alegria Soa apenas como um soluçar de dor",
+      "context": "Últimos versos da letra.",
+      "formalDevice": "Oposição entre o que devia ser e o que é; retorno do “soluçar de dor” do primeiro verso.",
+      "effect": "Fecha a letra em círculo: começa e termina no soluço.",
+      "wholeRelation": "Mostra que a história narrada não teve desfecho redentor, ao contrário de “Vento Bravo”.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-estrela-credo",
+      "unitId": "estrela-da-terra",
+      "location": "“Estrela da Terra”, p. 2",
+      "quote": "Por mais que haja dor e agonia Por mais que haja treva sombria Existe uma luz que é meu guia",
+      "context": "Primeira estrofe.",
+      "formalDevice": "Anáfora concessiva (“Por mais que”) seguida de afirmação.",
+      "effect": "Estrutura de credo: o sofrimento é admitido e superado pela fé numa luz.",
+      "wholeRelation": "O mesmo molde se repete em toda a letra e prepara a profecia do cavaleiro de guerra.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-mordaca",
+      "unitId": "mordaca",
+      "location": "“Mordaça”, p. 4",
+      "quote": "E a felicidade amordace essa dor secular",
+      "context": "Depois de admitir os desmoronamentos, a letra aposta na volta do furor e da força.",
+      "formalDevice": "Inversão da imagem do título: a mordaça passa a calar a dor.",
+      "effect": "A violência do silenciamento é desviada contra o sofrimento.",
+      "wholeRelation": "Liga-se a “Pesadelo” e ao “Canto das Três Raças” pela ideia de uma dor que dura séculos.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-volta",
+      "unitId": "na-volta-que-o-mundo-da",
+      "location": "“Na Volta que o Mundo Dá”, p. 5",
+      "quote": "Agora aprendi por que o mundo dá volta Quanto mais a gente se solta Mais fica no mesmo lugar",
+      "context": "Fecho da letra, depois da decisão de voltar para casa.",
+      "formalDevice": "Paradoxo em forma de moral.",
+      "effect": "A viagem pelo mundo termina em retorno: liberdade e permanência se confundem.",
+      "wholeRelation": "Permite comparar a viagem fantástica personificada de Viagem e a narrativa de deslocamentos e retorno desta letra; nenhuma das duas vozes deve ser tomada como relato autobiográfico comprovado.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-pesadelo-verso",
+      "unitId": "pesadelo",
+      "location": "“Pesadelo”, p. 6",
+      "quote": "Você corta um verso, eu escrevo outro Você me prende vivo, eu escapo morto",
+      "context": "O eu responde, ação por ação, ao “você” que reprime.",
+      "formalDevice": "Paralelismo antitético.",
+      "effect": "Cada ato de repressão é anulado por um ato de resistência; cortar versos remete ao próprio ofício do letrista.",
+      "wholeRelation": "Base textual para a leitura da censura, sem depender de informação externa.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-pesadelo-medo",
+      "unitId": "pesadelo",
+      "location": "“Pesadelo”, p. 6",
+      "quote": "Que medo você tem de nós, olha aí",
+      "context": "Refrão.",
+      "formalDevice": "Inversão do medo e passagem do “eu” para o “nós”.",
+      "effect": "Quem teme é o poder; a resistência se torna coletiva e provocadora.",
+      "wholeRelation": "Prepara o fecho com o muro caído e a ponte da liberdade.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-vento-bravo",
+      "unitId": "vento-bravo",
+      "location": "“Vento Bravo”, p. 7",
+      "quote": "Era argola, ferro, chibata e pau Era a morte, o medo, o rancor e o mal",
+      "context": "Segunda estrofe, que descreve o regime escravista.",
+      "formalDevice": "Enumeração de objetos de tortura e de sentimentos, em imperfeito.",
+      "effect": "O passado escravista aparece como permanência pesada, antes da mudança anunciada.",
+      "wholeRelation": "Contrasta com o presente e o futuro do vento que “não vai se acalmar”.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-evangelho",
+      "unitId": "evangelho",
+      "location": "“Evangelho”, p. 8",
+      "quote": "No amor é que a dor cria raízes De dentro do bem é que o mal trama Da felicidade cresce o drama",
+      "context": "Segunda estrofe.",
+      "formalDevice": "Paradoxos encadeados com ênfase (“é que”).",
+      "effect": "Cada valor positivo contém o seu contrário; o mundo é visto como armadilha.",
+      "wholeRelation": "Permite ler a tensão entre boa-nova e contradição; o final da letra admite que o fim seja começo, impedindo reduzir o título a uma ironia fechada.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-cordilheira",
+      "unitId": "cordilheira",
+      "location": "“Cordilheira”, p. 9",
+      "quote": "Eu quero ver a procissão dos suicidas Caminhando para a morte pelo bem de nossas vidas",
+      "context": "Uma das séries em “Eu quero…”.",
+      "formalDevice": "Anáfora e ironia: o “bem de nossas vidas” justifica a morte de outros.",
+      "effect": "Expõe a lógica de quem manda jovens à morte em nome de um bem coletivo.",
+      "wholeRelation": "Sustenta uma hipótese de voz que legitima o sacrifício alheio; deve ser confrontada com o desejo paradoxal de destruir a origem do mal por meio da crueldade. Voz textual e compositor são instâncias distintas.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-desenredo",
+      "unitId": "desenredo",
+      "location": "“Desenredo”, p. 10",
+      "quote": "O olhar que prende anda solto O olhar que solta anda preso",
+      "context": "Primeira estrofe, sobre o mundo visto pelo andarilho.",
+      "formalDevice": "Quiasmo.",
+      "effect": "A inversão dos termos encena um mundo em que as coisas estão ao avesso.",
+      "wholeRelation": "Liga-se ao campo do fio e da trama, que dá título à letra.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-navio",
+      "unitId": "navio-fantasma",
+      "location": "“Navio Fantasma”, p. 11",
+      "quote": "Tu és a cidade perdida E eu sou o navio fantasma.",
+      "context": "Verso final.",
+      "formalDevice": "Metáfora dupla, com os dois termos do par amoroso.",
+      "effect": "Define o amor como desencontro: a cidade sumiu e o navio vaga sem tripulação.",
+      "wholeRelation": "Mostra o mar como imagem do naufrágio amoroso, em contraste com o mar da aventura de “Na Volta que o Mundo Dá”.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-morro",
+      "unitId": "o-dia-em-que-o-morro-descer",
+      "location": "“O Dia em que o Morro Descer e Não For Carnaval”, p. 12",
+      "quote": "cada uma ala da escola será uma quadrilha a evolução já vai ser de guerrilha e a alegoria um tremendo arsenal",
+      "context": "Segunda estrofe, que descreve o desfile como guerra.",
+      "formalDevice": "Metáfora estendida: cada termo do desfile é trocado por um da guerra.",
+      "effect": "A festa que concilia vira imagem da revolta da população pobre.",
+      "wholeRelation": "Culmina em “a cidade partida”, núcleo social da letra.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-arvoredo",
+      "unitId": "velho-arvoredo",
+      "location": "“Velho Arvoredo”, p. 13",
+      "quote": "Eu por fora estou cicatrizando E por dentro sangrando",
+      "context": "A voz afirma ter superado o sofrimento amoroso.",
+      "formalDevice": "Antítese entre fora e dentro.",
+      "effect": "Desmente a superação anunciada logo antes (“Já superei”).",
+      "wholeRelation": "Prepara a árvore como comparação entre resistência e solidão; o juízo de inutilidade pertence à voz que se compara a ela.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    },
+    {
+      "id": "ev-vontade",
+      "unitId": "vontade-de-chorar",
+      "location": "“Vontade de Chorar”, p. 14",
+      "quote": "Todo verso triste que eu puser numa canção É o meu coração que chora",
+      "context": "Depois da partida da pessoa amada.",
+      "formalDevice": "Metalinguagem.",
+      "effect": "A canção se apresenta como expressão direta da dor de quem a escreve.",
+      "wholeRelation": "Encerra a compilação enviada no lirismo confessional e permite contrastar a tristeza com Viagem; a lista oficial adota outra ordem.",
+      "examPotential": [
+        "UNICAMP"
+      ],
+      "evidenceLayer": "textual_evidence",
+      "editorialStatus": "published"
+    }
+  ],
+  "sources": [
+    {
+      "id": "cancoes-comvest-2027",
+      "citation": "COMVEST. Vestibular Unicamp 2027: Programa das provas. 2026.",
+      "type": "official_material",
+      "institution": "Universidade Estadual de Campinas / Comvest",
+      "year": 2026,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "p. 5, tabela integral de obras, canções e parceiros.",
+      "centralThesis": "Delimita o corpus obrigatório de 14 canções e identifica suas parcerias.",
+      "contribution": "Permite corrigir a ausência de créditos sem supor que Pinheiro compôs sozinho letra e música.",
+      "limitations": "A ordem da lista é alfabética, diferente da transcrição; não autentica versos da compilação, datas ou histórias de censura."
+    },
+    {
+      "id": "cancoes-napolitano-2004",
+      "citation": "NAPOLITANO, Marcos. A MPB sob suspeita: a censura musical vista pela ótica dos serviços de vigilância política (1968–1981). Revista Brasileira de História, v. 24, n. 47, p. 103–126, 2004. DOI: 10.1590/S0102-01882004000100005.",
+      "type": "academic_article",
+      "institution": "Associação Nacional de História (periódico); Universidade Federal do Paraná (filiação do autor)",
+      "year": 2004,
+      "url": "https://www.scielo.br/pdf/rbh/v24n47/a05v2447.pdf",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "Leitura parcial efetiva: p. 103–109 e 115; trechos de p. 118–126 vistos na extração, não usados para declarar leitura integral.",
+      "centralThesis": "Os serviços de vigilância produziam suspeita sobre artistas, públicos e espaços sociais da MPB; não se limitavam a verificar o conteúdo das letras.",
+      "contribution": "Distingue censura da obra de vigilância da circulação social; evita reduzir política a uma suposta chave secreta de cada metáfora. A p. 115 situa Maurício Tapajós na coordenação de show Gente segundo documento policial de 1977.",
+      "limitations": "Estudo contextual do campo MPB, não análise destas 14 letras. Não prova que Pesadelo ou Mordaça foram censuradas, nem identifica automaticamente o alvo de seus pronomes."
+    },
+    {
+      "id": "cancoes-cravo-albin-pinheiro",
+      "citation": "DICIONÁRIO CRAVO ALBIN DA MÚSICA POPULAR BRASILEIRA. Paulo César Pinheiro. Verbete eletrônico, s.d.",
+      "type": "book",
+      "institution": "Instituto Cultural Cravo Albin",
+      "url": "https://dicionariompb.com.br/artista/paulo-cesar-pinheiro/",
+      "accessedAt": "2026-10-07",
+      "pagesRead": "Verbete sem paginação: Dados biográficos e Dados artísticos até a seção de 2014; lista Obras consultada nos itens relevantes. Leitura parcial, não de toda a página.",
+      "centralThesis": "Registro biográfico, discográfico e de parcerias do compositor e letrista.",
+      "contribution": "Confirma parceria Viagem/João de Aquino e registro de Pesadelo/Maurício Tapajós no LP autoral de 1974, além de Estrela da terra/Dori Caymmi e Canto das três raças/Mauro Duarte.",
+      "limitations": "Fonte de referência, não artigo de interpretação literária nem edição autorizada das letras; as datas do verbete não devem ser extrapoladas para composição de todas as canções. Classificado como book por ser obra de referência digital no esquema disponível."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-lista-2027",
+      "citation": "FUVEST. Renovação da lista de leituras obrigatórias para o vestibular 2026–2029. 22 nov. 2023.",
+      "institution": "FUVEST / USP",
+      "year": 2023,
+      "url": "https://www.fuvest.br/fuvest-renova-sua-lista-de-leituras-obrigatorias-para-o-vestibular-2026-2029/",
+      "pagesRead": "Corpo da notícia e listas anuais; conferência da lista de 2027.",
+      "centralThesis": "A renovação privilegia a autoria feminina em diferentes gêneros e contextos históricos; a seção 2027 relaciona nove obras.",
+      "contribution": "Confirma a exigência oficial e distingue as listas dos diferentes anos.",
+      "limitations": "A notícia é fonte da lista, não análise crítica das obras nem pesquisa de incidência das questões."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "fuvest-programa-2027",
+      "citation": "FUVEST. Programa do Vestibular 2027. Linguagens e suas Tecnologias.",
+      "institution": "FUVEST / USP",
+      "year": 2026,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf",
+      "pagesRead": "PDF p. 10–14; uso específico de Língua Portuguesa na p. 13–14.",
+      "centralThesis": "O programa exige análise linguística e estética, historicidade, intertextualidade, dimensões sociais e tensão entre manutenção da tradição e ruptura.",
+      "contribution": "Fundamenta o treino de relação entre procedimento formal e contexto; evita reduzir o estudo a resumo ou identificação de escola literária.",
+      "limitations": "Programa geral de habilidades, sem espelho de correção particular de cada obra; FORMA é ferramenta didática autoral."
+    },
+    {
+      "type": "official_material",
+      "accessedAt": "2026-10-07",
+      "id": "comvest-programa-2027",
+      "citation": "Comvest. Vestibular Unicamp 2027: programa das provas. Língua Portuguesa e Literaturas de Língua Portuguesa.",
+      "institution": "Comvest / Unicamp",
+      "year": 2026,
+      "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/07/Manual-Programa_provas_VU2027.pdf",
+      "pagesRead": "PDF p. 3–5: leitura e funcionamento da linguagem, prosa e poesia, relação de livros e recortes.",
+      "centralThesis": "O programa relaciona recursos de organização e expressão aos efeitos de leitura e às dimensões sociais, morais e políticas; explicita as obras e os textos exigidos.",
+      "contribution": "Orienta análise de fonte, forma e efeito e delimita o corpus oficial de 2027.",
+      "limitations": "Não é comentário crítico específico da obra nem rubrica de pontuação; FONTE é ferramenta didática autoral."
+    }
   ]
 }
