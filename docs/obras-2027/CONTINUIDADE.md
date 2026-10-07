@@ -1,3 +1,41 @@
+# Checkpoint vigente — demais obras, 07/10/2026
+
+**Prevalece sobre todo o histórico abaixo.** Brás Cubas foi integrado à `main` pela PR #277. Base atual `origin/main` c107c2af; branch de retomada `fix/publicar-demais-obras-2027`. A base da futura PR é **main**, não `fix/obras-obrigatorias`. Não refazer os dezoito JSONs nem a publicação de Brás Cubas.
+
+O usuário pediu continuar as outras dezessete obras e depois interrompeu para **salvar tudo porque o limite está acabando**. A publicação dessas dezessete NÃO foi aplicada: todos os seus blocos continuam em `needs_review`. Não promover por script sem avaliação.
+
+## Feito nesta retomada
+
+- Preparadas as extrações privadas das dezoito obras; conferência literal inicial passou para todas.
+- Fontes oficiais 2027 e prova Unicamp2026 consultadas, com recortes em `PUBLICACAO-DEMAIS-OBRAS.md`.
+- Commit 6e24a7cb: testes de retenção editorial usam cópias explicitamente em revisão de Martha/Gonzaga; assim continuam válidos quando as obras reais forem publicadas. 25 testes focados passaram.
+- Dezessete notas de pesquisa foram salvas, uma por obra; seis patches privados propostos também estão preservados. Pesquisa literária delegada conforme `.agents/skills/research/SKILL.md`; notas individuais `pesquisa-publicacao-<slug>.md` contêm achados, fontes efetivamente lidas, propostas de correção e pendências. Nenhuma correção dessas notas foi aplicada aos JSONs nesta sessão.
+- A habilidade usada é o ZIP fornecido: `/workspace/artifacts/obras-retomada/habilidade/SKILL.md`, nome interno `obras-obrigatorias-fuvest-unicamp-avancada`. Não está no catálogo instalado. O arquivo ZIP e seus quinze referenciais estão no backup privado.
+
+## Retomar daqui
+
+1. Atualizar/auditar `origin/main` e PRs; preservar esta branch/commits. Ler CLAUDE.md, esta seção, `PUBLICACAO-DEMAIS-OBRAS.md`, e notas de pesquisa individuais. Não tratar o histórico antigo como fila atual.
+2. Conferir cada proposta contra texto primário e fonte crítica. Pesquisa salva não equivale a aprovação. Completar recortes pendentes, sem contar metadados ou trechos não lidos.
+3. Corrigir as dezessete obras, começando por uma com relatório pronto (Visão das plantas ou ensaio/poesia). Incorporar registros CriticalSource reais e debate crítico; diferenciar crítica, texto e síntese autoral. Incrementar versões e registrar data/registro de revisão. Publicar apenas o escopo efetivamente revisto.
+4. Preservar IDs e progresso. Um commit por obra, com `python3 scripts/conferir-dossie.py conferir <slug>` antes de cada commit. Não enfraquecer a conferência.
+5. Melhorar os módulos específicos; não apenas mudar status. Corrigir afirmações antigas de pesquisa pendente depois de incorporá-la, mantendo limites de edição/procedência. Nos guias, não atribuir crítica individual a capítulo/conto que a fonte não trata.
+6. Validar navegação normal, sem `?revisao=1`, nas oito abas de todas as obras. Questões Markdown não são motor de tentativa/gabarito/histórico; isso não foi implementado.
+7. No fim: lint, npm test completo, build, conferência literal das dezoito, push e PR base main; sem merge.
+
+## Arquivos privados e ambiente
+
+`materiais-extraidos/obras-pdf` contém PDFs; `materiais-extraidos/obras` tem as extrações paginadas. Fontes críticas e oficiais estão em subpastas de `materiais-extraidos`, incluindo `critica-bras`, `critica-oficial-2027`; `oficiais-publicacao.json` tem três registros oficiais preparados, ainda não incorporados. Eventuais patches estão em `materiais-extraidos/publicacao-patches`, não aplicados. Nenhum PDF ou texto integral deve ir ao git público.
+
+Backup privado de ambiente/skill/fontes: `/workspace/artifacts/obras-retomada/checkpoint-demais-obras-2027.tar.gz`. Se não existir em nova sessão, pedir o backup ou recuperar PDFs de `origin/main:obras-brutos`, segundo preparo histórico; baixar fontes críticas novamente pelos URLs registrados. Os dados bibliográficos e notas de pesquisa estão no git.
+
+Chromium `/usr/bin/chromium`, não instalar navegador. Harness ignorado `materiais-extraidos/bras-publicacao-preview.tsx` agora aceita `?obra=<slug>` no HTML correspondente; mocks de catálogo/autenticação devem ser declarados nos resultados, nunca confundidos com validação Firestore autenticada. Nenhum seed de produção foi executado.
+
+## Prompt de continuidade
+
+> Retome My-App na branch fix/publicar-demais-obras-2027. Leia CLAUDE.md e o checkpoint vigente no topo de docs/obras-2027/CONTINUIDADE.md, PUBLICACAO-DEMAIS-OBRAS.md e as notas pesquisa-publicacao-*.md. Brás Cubas já foi integrado na PR #277; faltam revisar/corrigir/publicar as outras dezessete obras, cujos JSONs já existem em needs_review. Use a habilidade de obras do ZIP fornecido, preservando a distinção entre texto, crítica documentada e síntese autoral. Complete a pesquisa pendente e confronte as propostas salvas antes de aplicá-las; não libere por contagem ou simples troca de status. Preserve IDs/progresso; um commit por obra e scripts/conferir-dossie.py conferir <slug> antes de cada commit. Prepare fontes privadas como descrito no documento, sem commitar PDFs/extrações. Valide as oito abas no modo normal. Ao terminar, lint, npm test, build, push e PR com base main, sem merge. Pode seguir automaticamente.
+
+---
+
 # Estado posterior ao checkpoint — primeira publicação
 
 As PRs #273, #275 e #276 já foram integradas à main. A revisão para primeira publicação de Brás Cubas está em `fix/publicar-bras-cubas`, baseada em `origin/main` 69f7e1dc. Leia `PUBLICACAO-BRAS-CUBAS.md` e `pesquisa-bras-cubas-publicacao.md` antes do histórico abaixo. O JSON de Brás Cubas já existe; não o recriar. Outros 17 dossiês continuam em revisão.
