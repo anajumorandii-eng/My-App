@@ -1,4 +1,4 @@
-import React, { Suspense, lazy, useEffect, type ComponentType, type LazyExoticComponent } from 'react';
+import React, { Suspense, lazy, type ComponentType, type LazyExoticComponent } from 'react';
 
 /**
  * Cena 3D da matéria no cartão da decisão do Hoje.
@@ -12,7 +12,7 @@ import React, { Suspense, lazy, useEffect, type ComponentType, type LazyExoticCo
  * Para não parecer que a cena ilustra o tópico do dia quando não ilustra, ela
  * se apresenta como "Laboratório de <matéria>" (a regra de não emprestar
  * ilustração, do Visual, continua valendo lá: aqui a cena é da matéria, e diz
- * isso). Matéria sem cena, ou aparelho sem WebGL, fica com o Núcleo do Crivo.
+ * isso). Matéria sem cena, ou aparelho sem WebGL, usa a reserva oferecida pela tela.
  *
  * As cenas carregam sob demanda: o three.js só baixa quando o Hoje mostra uma
  * matéria que tem cena. Cada uma recebe a reserva para voltar a ela se o WebGL
@@ -58,18 +58,6 @@ export function temCena(materia: string | undefined) {
 }
 
 /**
- * Baixa, numa pausa, o código das outras cenas. Sem isso a primeira visita a
- * cada aba esperava a rede e mostrava a reserva no meio-tempo.
- */
-let preCarregado = false;
-function preCarregarCenas() {
-  if (preCarregado) return;
-  preCarregado = true;
-  const agendar = window.requestIdleCallback ?? ((f: () => void) => window.setTimeout(f, 1500));
-  agendar(() => { for (const carga of Object.values(CARGAS)) carga().catch(() => {}); });
-}
-
-/**
  * A sonda cria um contexto WebGL de teste. Criada a cada troca de aba, ela
  * custava um contexto novo por toque (medido: `getContext` entre as funções
  * mais caras da troca). A resposta não muda durante a página, então fica
@@ -94,10 +82,10 @@ function sondarWebGL() {
 }
 
 export function CenaDaMateria({ materia, reserva }: { materia: string | undefined; reserva: React.ReactNode }) {
-  const webgl = suportaWebGL();
-  useEffect(() => { if (webgl) preCarregarCenas(); }, [webgl]);
   const Cena = materia ? CENAS_POR_MATERIA[materia] : undefined;
-  if (!Cena || !webgl) return <>{reserva}</>;
+  // Não criar contexto de teste para matéria sem cena, nem baixar as outras
+  // onze cenas na abertura: o idle callback disparava todos os imports juntos.
+  if (!Cena || !suportaWebGL()) return <>{reserva}</>;
   return (
     // Enquanto o código da cena chega, um palco vazio do mesmo tamanho — não a
     // reserva: o Núcleo montava inteiro (canvas, medição, laço de animação)

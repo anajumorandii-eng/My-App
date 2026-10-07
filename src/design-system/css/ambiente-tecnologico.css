@@ -764,10 +764,8 @@
   }
   :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) { min-height: 0; }
   .crivo-cena__palco { flex: none; height: 255px; min-height: 0; }
-  /* A classe da cena entra antes de a cena existir: enquanto o pedaço 3D baixa,
-     sem WebGL ou se o contexto for negado, quem aparece é o Núcleo do Crivo,
-     que é absoluto. Com altura automática o bloco colapsava e a reserva sumia. */
-  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena:not(:has(.crivo-cena)) { height: 300px; }
+  /* Sem cena, a reserva do Hoje é vazia: não guardar 300px para o núcleo removido. */
+  :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-visual-support--cena:not(:has(.crivo-cena)) { min-height: 0; height: 0; margin-top: 0; }
   :root[data-ambiente="tecnologico"] .ni-production-app .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) .ni-metrics { position: relative; inset: auto; margin-top: 18px; }
 }
 @media (max-width: 560px) {
