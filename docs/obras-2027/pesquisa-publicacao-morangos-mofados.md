@@ -66,3 +66,12 @@ Duas teses/dissertações não foram lidas. Guias compactos não completam quinz
   }
 ]
 ```
+
+
+## Validação para integração — retomada de 07/10/2026
+
+Os oito módulos, todos os guias e todos os cartões do JSON foram relidos por inteiro nesta retomada. Não se declara nova leitura integral da obra: preserva-se a leitura primária registrada no checkpoint e se relê o recorte necessário às correções. Foram relidos os corpos de Além do ponto p. 24–25 e trechos de Aqueles dois p. 80, 82, 84–85. Além das correções já registradas, o resumo de Aqueles dois passa a distinguir cama e sofá (p. 84), em vez de afirmar duas camas. A conferência crítica retomou Xavier p. 211–216 e Silva p. 199–200 e 212–216; os escopos mais amplos na matriz pertencem à pesquisa anterior. Removida a resposta esperada apresentada antes de qualquer tentativa da questão autoral. As propostas exatas estão no patch privado ignorado em `materiais-extraidos/publicacao-patches/morangos-mofados.json`, com valores antigos e novos para aplicação verificável. A conferência preliminar sobre uma cópia temporária usa o mesmo script literal do repositório, sem alterar o JSON público. Aprovação de status, inclusão das fontes oficiais, conferência final e commit ficam com a integração. O alcance continua sendo edição compacta de estudo, sem certificação de completude da habilidade avançada.
+
+## Decisão da primeira edição de estudo
+
+Retirado o gabarito antecipado e corrigidas pontuação, cama/sofá e o custo da demissão. A hipótese de amizade/cuidado de Xavier é confrontada com a leitura homoerótica, sem fechar a nomeação do vínculo. Mantidos os seis contos oficiais e a divergência de título entre lista e PDF. Aprovados 8 módulos, 6 guias e 17 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.
