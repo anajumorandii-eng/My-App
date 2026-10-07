@@ -2,11 +2,12 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "62fd2e63821e86f05fd3dbc404cbd95964118f1e",
-  "generated_at_utc": "2026-10-07T20:34:45Z",
+  "source_commit": "6cd3b99d8b30327ba31cd8be70051cb6294c1468",
+  "generated_at_utc": "2026-10-07T21:33:21Z",
   "changed_files": [
-    "server/podcast/cloudTtsService.test.ts",
-    "server/podcast/cloudTtsService.ts"
+    "src/lib/podcastConfig.ts",
+    "src/views/Podcast.tsx",
+    "src/views/Podcast.ui.test.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
