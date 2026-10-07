@@ -45,3 +45,4 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | Prosas seguidas de Odes mínimas | Primeira edição de estudo aprovada: 8 módulos, 33 guias, 24 cartões. Conferência literal passou; IDs preservados. |
 | Os funerais da Mamãe Grande | Primeira edição de estudo aprovada: 8 módulos, 8 guias, 9 cartões. Conferência literal passou; IDs preservados. |
 | No seu pescoço | Primeira edição de estudo aprovada: 8 módulos, 12 guias, 13 cartões. Conferência literal passou; IDs preservados. |
+| Vida e morte de M. J. Gonzaga de Sá | Primeira edição de estudo aprovada: 8 módulos, 14 guias, 20 cartões. Conferência literal passou; IDs preservados. |

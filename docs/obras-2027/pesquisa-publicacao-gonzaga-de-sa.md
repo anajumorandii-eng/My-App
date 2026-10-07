@@ -91,3 +91,13 @@ Convergência: os dois recortes ajudam a ler o romance como composição de conf
 ## Alcance editorial
 
 Atualizar módulos 16, 17 e 29 e Fontes para retirar afirmação absoluta de nenhuma pesquisa, indicando recortes realmente lidos. Conservar limites de procedência, tradução e fac-símile. Fonte oficial Programa p. 4–5 confirma obra completa em 2027; estratégias das duas bancas continuam autorais. Publicação proposta é edição de estudo com leitura guiada existente e pesquisa delimitada, não estado da arte completo nem cumprimento automático das metas de duas teses, três artigos e estudo crítico de referência da habilidade. As questões autorais permanecem sem gabarito antes da tentativa.
+
+## Validação para integração — 2026-10-07
+
+Patch privado preparado para integrar cadastros reais, crítica em confronto e correções de declarações antigas de ausência de pesquisa. Preserva IDs, corpus e páginas; não altera o JSON público nem aprova status. O campo de diálogo crítico distingue as unidades diretamente tratadas nos recortes lidos das que permanecem síntese textual própria. Novamente confrontados: causalidade do abscesso e cobranças não confirmadas (Funerais), silêncio final e desigualdade afetiva (Adichie), narrador Augusto, relato do inventor, contradição histórica e futuro não narrado de Aleixo (Gonzaga).
+
+A revisão atual é delimitada; não corresponde a uma segunda leitura integral nem certificação bibliográfica avançada. O recorte de Moreira foi ampliado até p. 154 para incluir a sequência da sátira ao racismo pseudocientífico; não é leitura de toda a dissertação.
+
+## Decisão da primeira edição de estudo
+
+Duas molduras e doze capítulos revistos. Augusto permanece narrador; a aeronave pertence a relato encaixado. Um recorte de dissertação e um artigo foram confrontados com o primário; questão oficial de 2026 e sua resposta esperada foram consultadas, sem expor resolução das questões autorais. Aprovados 8 módulos, 14 guias e 20 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.
