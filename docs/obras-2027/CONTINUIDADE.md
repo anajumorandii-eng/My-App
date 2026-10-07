@@ -12,6 +12,10 @@ O usuário pediu continuar as outras dezessete obras e depois interrompeu para *
 - Dezessete notas de pesquisa foram salvas, uma por obra; seis patches privados propostos também estão preservados. Pesquisa literária delegada conforme `.agents/skills/research/SKILL.md`; notas individuais `pesquisa-publicacao-<slug>.md` contêm achados, fontes efetivamente lidas, propostas de correção e pendências. Nenhuma correção dessas notas foi aplicada aos JSONs nesta sessão.
 - A habilidade usada é o ZIP fornecido: `/workspace/artifacts/obras-retomada/habilidade/SKILL.md`, nome interno `obras-obrigatorias-fuvest-unicamp-avancada`. Não está no catálogo instalado. O arquivo ZIP e seus quinze referenciais estão no backup privado.
 
+## Encerramento imediato solicitado
+
+Checkpoint salvo localmente; **push e PR NÃO realizados**. Lint e build passaram, assim como a conferência literal e os 25 testes focados. Na interrupção, os 922 testes Node já passaram; Vitest completo ainda estava em execução, portanto não declarar `npm test` concluído. Antes de push, executar/concluir lint e npm test, conforme CLAUDE.md. Recuperar a branch pelo workspace ou pelo bundle privado se não existir no remoto.
+
 ## Retomar daqui
 
 1. Atualizar/auditar `origin/main` e PRs; preservar esta branch/commits. Ler CLAUDE.md, esta seção, `PUBLICACAO-DEMAIS-OBRAS.md`, e notas de pesquisa individuais. Não tratar o histórico antigo como fila atual.
