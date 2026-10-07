@@ -36,3 +36,4 @@ Trabalho interrompido a pedido da usuária para salvar o checkpoint. As dezesset
 | Opúsculo humanitário | Primeira edição de estudo aprovada: 8 módulos, 7 guias, 12 cartões. Conferência literal passou; IDs preservados. |
 | Nebulosas | Primeira edição de estudo aprovada: 8 módulos, 4 guias, 9 cartões. Conferência literal passou; IDs preservados. |
 | Geografia | Primeira edição de estudo aprovada: 8 módulos, 7 guias, 16 cartões. Conferência literal passou; IDs preservados. |
+| A paixão segundo G.H. | Primeira edição de estudo aprovada: 8 módulos, 33 guias, 18 cartões. Conferência literal passou; IDs preservados. |

@@ -24,7 +24,7 @@ A massa branca concentra repulsa, aproximação da matéria e inversão do imagi
 
 ## Debate proposto
 
-**Crítica documentada.** Monti, nas seções lidas da dissertação (p. 48–54 e 63–69), entende a autocorreção como ritmo binário: afirmar e negar mantém a busca em movimento e impede que uma formulação parcial vire verdade total. Seu alerta contra tomar o final como superação definitiva ajuda a ler o retorno à vida social sem declarar uma transformação consumada. Sintani (p. 84–88) se concentra na interlocução: o leitor implícito é posição estruturada pelo texto, não pessoa empírica idêntica à mão imaginada. O leitor participa das indeterminações dentro dos limites da linguagem da obra. Fonseca (p. 246–250 e 254–255) propõe a tomada de consciência feminina como processo mais longo do que o instante epifânico e a vincula à contestação das convenções.
+**Crítica documentada.** Monti, nas seções lidas da dissertação (páginas 48–54 e 63–69 do PDF; impressas 47–53 e 62–68), entende a autocorreção como ritmo binário: afirmar e negar mantém a busca em movimento e impede que uma formulação parcial vire verdade total. Seu alerta contra tomar o final como superação definitiva ajuda a ler o retorno à vida social sem declarar uma transformação consumada. Sintani (páginas 87–92 do PDF; impressas 83–88) se concentra na interlocução: o leitor implícito é posição estruturada pelo texto, não pessoa empírica idêntica à mão imaginada. O leitor participa das indeterminações dentro dos limites da linguagem da obra. Fonseca (p. 246–250 e 254–255) propõe a tomada de consciência feminina como processo mais longo do que o instante epifânico e a vincula à contestação das convenções.
 
 **Síntese autoral.** A tensão não se resolve escolhendo um rótulo místico ou social: a crise da linguagem está situada na cobertura e no quarto de uma trabalhadora negra, narrados pela patroa. A leitura emancipatória de Fonseca oferece uma possibilidade de mudança; Monti lembra que a oscilação não assegura progresso estável. Devemos perguntar o que efetivamente mudou na forma de narrar e que transformação permanece apenas hipótese. Não foram lidos diretamente os livros de Benedito Nunes citados nesses estudos; referências indiretas não passam por pesquisa primária da crítica.
 
@@ -40,7 +40,7 @@ A massa branca concentra repulsa, aproximação da matéria e inversão do imagi
     "year": 2006,
     "url": "https://doi.org/10.11606/D.8.2006.tde-24082007-144449",
     "accessedAt": "2026-10-07",
-    "pagesRead": "Capa, índice, resumo e introdução p. 1–6; seções p. 48–54 e 63–69; conclusão p. 106 e bibliografia p. 107. Leitura parcial.",
+    "pagesRead": "Capa, índice, resumo e introdução consultados no checkpoint anterior; páginas 48–54 e 63–69 do PDF conferidas novamente nesta revisão (paginação impressa 47–53 e 62–68). Conclusão e bibliografia consultadas anteriormente. Leitura parcial.",
     "centralThesis": "A afirmação seguida de negação constitui o ritmo do texto e sustenta duas liberdades não sintetizáveis: escolher e não precisar escolher.",
     "contribution": "Explica autocorreção, impossibilidade de encerrar o relato numa verdade única e limite da leitura do final como progresso definitivo.",
     "limitations": "Leitura parcial, concentrada em linguagem e liberdade. Não transforma G.H. em expressão direta das opiniões da autora; diferença de data entre capa e registro preservada."
@@ -53,7 +53,7 @@ A massa branca concentra repulsa, aproximação da matéria e inversão do imagi
     "year": 2011,
     "url": "https://doi.org/10.11606/D.8.2012.tde-17082012-095040",
     "accessedAt": "2026-10-07",
-    "pagesRead": "Capa, resumo, índice e introdução p. 1–3; capítulo 2, p. 84–88. Leitura parcial.",
+    "pagesRead": "Capa, resumo, índice e introdução consultados no checkpoint anterior; páginas 84–92 do PDF conferidas nesta revisão (paginação impressa 80–88), incluindo final do capítulo 1 e início do capítulo 2. Leitura parcial.",
     "centralThesis": "A estrutura do texto produz um leitor implícito que participa da experiência de alteridade mediante a interlocução e o preenchimento orientado de indeterminações.",
     "contribution": "Diferencia o interlocutor imaginário e a posição oferecida ao leitor; os vazios permitem pluralidade, mas não arbitrariedade.",
     "limitations": "Leitura parcial. A teoria de Iser foi conhecida por este estudo, não por leitura independente de seu livro. A análise dos demais capítulos da dissertação permanece pendente."
@@ -75,3 +75,18 @@ A massa branca concentra repulsa, aproximação da matéria e inversão do imagi
 ```
 
 Patch privado: materiais-extraidos/publicacao-patches/paixao-segundo-gh.json. Pendências: reler demais passagens para aprovação manual; três artigos relevantes de qualidade ainda não reunidos; livros de referência não lidos diretamente; quinze dimensões por seção continuam incompletas. Não certificar habilidade integral.
+
+
+## Validação de retomada — 7/10/2026
+
+O JSON completo foi relido nesta retomada; o primário foi confrontado nas páginas 13–15, 29–34 e 103–113 do PDF. Não houve nova leitura integral do romance: a cobertura restante depende da leitura anterior registrada na continuidade, da revisão dos guias e da conferência literal a executar antes do commit. Os IDs e limites de unidades permanecem intactos.
+
+O patch privado agora contém replacements completos e verificáveis: atribuição do suposto ódio e da censura de Janair à percepção de G.H.; caráter retrospectivo e elaborado do monólogo; preservação da elipse do ato na seção 30; retirada de frequência de prova não demonstrada; limite da interpretação do desfecho como superação definitiva. Os cartões também distinguem imagem da barata, atribuição de julgamento ao mural e reflexão da narradora de afirmações neutras do dossiê.
+
+As dissertações usam paginação de PDF diferente da impressa. Monti foi novamente consultado nas páginas 48–54 e 63–69 do PDF, correspondentes a 47–53 e 62–68 impressas. Sintani foi consultada nas páginas 84–92 do PDF, correspondentes a 80–88 impressas; o capítulo 2 começa na página 87 do PDF, impressa 83. A distinção entre leitor implícito e leitor empírico está desenvolvida nas páginas 89–92 do PDF, agora efetivamente lidas. As referências do patch explicitam essa diferença e substituem a indicação ambígua anterior. Fonseca foi confrontada nas páginas impressas 246–250 e 254–255, mantendo a leitura parcial registrada.
+
+A aproximação entre a proposta de transformação feminista em Fonseca e a recusa de superação estável em Monti é uma síntese comparativa do dossiê; os estudos não debatem diretamente entre si. Permanecem pendentes a leitura direta dos livros críticos de referência, o complemento da bibliografia e o aprofundamento integral exigido pela habilidade avançada. Publicar apenas como primeira edição de estudo, com esse alcance declarado.
+
+## Decisão da primeira edição de estudo
+
+Corrigidas a atribuição de ódio a Janair, a descrição do monólogo retrospectivo e a elipse do gesto extremo. O debate articula ritmo binário, leitor implícito e tomada de consciência, sem assegurar progresso definitivo ou falar em nome da empregada. Paginações das dissertações explicitadas. Aprovados 8 módulos, 33 guias e 18 cartões após revisão das propostas e controle de fontes. IDs preservados; conferência literal passou antes do commit. Escopo, procedência e recortes parciais estão declarados em Fontes; não é certificação do dossiê avançado integral.
