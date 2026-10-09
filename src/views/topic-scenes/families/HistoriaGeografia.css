@@ -34,7 +34,7 @@
 .hg-document-line { fill: none; stroke: #a2948b; stroke-width: 3; }
 .hg-process-active .hg-factory, .hg-process-active .hg-document { stroke: #934b57; stroke-width: 5; }
 .hg-process-active .hg-field { stroke: #934b57; stroke-width: 5; }
-.hg-arrow { stroke: #477981; stroke-width: 4; marker-end: url(#hg-arrowhead); }
+.hg-arrow { stroke: #477981; stroke-width: 4; }
 .hg-heat { stroke: #b66d48; stroke-width: 3; }
 .hg-ground-line { stroke: #7a8b73; stroke-width: 4; }
 .hg-cloud { fill: #e0ebeb; stroke: #6f9295; stroke-width: 2; }
@@ -160,3 +160,12 @@
 @media (max-width: 660px) { .hg-scene { padding: .75rem; }.hg-figure svg { width: 620px; max-width: none; }.hg-pan-hint { display: block; margin: .3rem 0 .75rem; color: var(--vs-dim); font: 600 .75rem/1.4 system-ui, sans-serif; }.hg-controls button { flex: 1 1 42%; } }
 /* A prancha mantém a escrita legível; o recorte estreito usa a região de pan por teclado. */
 .hg-figure > svg { width:100%; min-width:740px; max-width:none; }
+
+.hg-figure-group { min-width: 0; display: grid; gap: 14px; }
+.hg-figure-panel { min-width: 0; }
+.hg-figure-panel>h5 { margin: 0 0 8px; color: var(--vs-ink); font: 600 16px/1.4 Inter,system-ui,sans-serif; }
+@media(min-width:960px) {
+  .hg-figure-group--pair { grid-template-columns: minmax(0,1fr) minmax(0,1fr); align-items: start; }
+  .hg-figure-group--pair .hg-figure { border: 1px solid var(--vs-line); }
+  .hg-figure-group--pair .hg-figure>svg { min-width: 580px; }
+}

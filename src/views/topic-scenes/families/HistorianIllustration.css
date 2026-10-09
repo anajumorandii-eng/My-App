@@ -42,3 +42,7 @@
 .hi-selection-rule { fill:none; stroke:var(--hi-wine); stroke-width:1.8; opacity:.5; }
 .dark .hi-plate, [data-theme='dark'] .hi-plate { --hi-paper:#222b2c; --hi-ink:#eee6d3; --hi-muted:#b4ad95; --hi-earth:#8d745b; --hi-stone:#6d7267; --hi-sea:#365b64; --hi-land:#637953; --hi-wine:#e0a0a7; --hi-green:#749480; --hi-dark:#353e3c; }
 @media(prefers-reduced-motion:reduce) { .hi-plate * { animation:none!important; transition:none!important; } }
+
+.hi-plate .hi-illustration :is(.hi-stone,.hi-column) { fill: var(--plate-stone); }
+.hi-plate .hi-illustration :is(.hi-earth,.hi-wood-fill) { fill: var(--plate-earth); }
+.hi-plate .hi-illustration .hi-sea { fill: var(--plate-sea); }

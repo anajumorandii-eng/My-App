@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { Arrow, ArrowHead, Person, type Scene } from './cenaKit';
@@ -119,6 +119,7 @@ const AFRICA_D = `M${AFRICA.map(af).join('L')}Z`;
 const RULER: [number, number][][] = [[[-12, 22], [26, 22]], [[25, 34], [25, 20]], [[8, 22], [8, 8]], [[14, 4], [30, 4]], [[16, -6], [38, -6]], [[22, -18], [34, -18]], [[-2, 14], [14, 14]]];
 
 export function ColonialRule({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const cols = [
     { c: 100, name: 'França', mid: 'funcionário europeu', type: 'Direta', note: 'administra e impõe', on: active !== 1 },
@@ -130,7 +131,7 @@ export function ColonialRule({ active }: Scene) {
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">IMPERIALISMO · 1870–1914</text>
-    <ArrowHead id="sx-head-imp" />
+    <ArrowHead id={`${diagramId}-sx-head-imp`} />
     {cols.map((col, k) => <g key={col.name}>
       <motion.rect x={col.c - 68} y="50" width="136" height="258" rx="12" className="bi-band" initial={false}
         animate={{ opacity: col.on ? 1 : 0 }} transition={p(0.4)} />
@@ -150,8 +151,8 @@ export function ColonialRule({ active }: Scene) {
       </motion.g>
       <text x={col.c} y="202" textAnchor="middle" className="bi-tiny">{col.mid}</text>
       {[-24, 0, 24].map(dx => <Person key={dx} x={col.c + dx} y={226} s={0.66} coat={['bi-coat-plain', 'bi-coat-green', 'bi-coat-plain'][(dx + 24) / 24]} />)}
-      <Arrow d={`M${col.c + 30} 90C${col.c + 60} 104 ${col.c + 56} 136 ${col.c + 22} 150`} on={col.on} p={p} head="sx-head-imp" delay={0.2} />
-      <Arrow d={`M${col.c + 30} 176C${col.c + 64} 192 ${col.c + 64} 222 ${col.c + 38} 234`} on={col.on} p={p} head="sx-head-imp" delay={0.6} />
+      <Arrow d={`M${col.c + 30} 90C${col.c + 60} 104 ${col.c + 56} 136 ${col.c + 22} 150`} on={col.on} p={p} head={`${diagramId}-sx-head-imp`} delay={0.2} />
+      <Arrow d={`M${col.c + 30} 176C${col.c + 64} 192 ${col.c + 64} 222 ${col.c + 38} 234`} on={col.on} p={p} head={`${diagramId}-sx-head-imp`} delay={0.6} />
       <text x={col.c} y="286" textAnchor="middle" className={col.on ? 'bi-label bi-on' : 'bi-label'}>{col.type}</text>
       <text x={col.c} y="302" textAnchor="middle" className="bi-small">{col.note}</text>
       <text x={col.c} y="268" textAnchor="middle" className="bi-tiny">colonizados</text>
@@ -162,9 +163,9 @@ export function ColonialRule({ active }: Scene) {
         <motion.text key={active} x="175" y="326" textAnchor="middle" className="bi-hand-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 0.8)}>{hand}</motion.text>
 
     <rect x="334" y="50" width="262" height="248" rx="14" className="bi-panel" />
-    <clipPath id="sx-africa-clip"><path d={AFRICA_D} /></clipPath>
+    <clipPath id={`${diagramId}-sx-africa-clip`}><path d={AFRICA_D} /></clipPath>
     <path d={AFRICA_D} className="bi-land" />
-    <g clipPath="url(#sx-africa-clip)">
+    <g clipPath={`url(#${diagramId}-sx-africa-clip)`}>
       {RULER.map(([a, b], k) => <motion.path key={k} d={`M${af(a)}L${af(b)}`} className="sx-ruler" initial={false}
         animate={{ pathLength: 1, opacity: active === 2 ? 1 : 0.7 }} transition={p(0.5, 0.2 + k * 0.18)} />)}
     </g>
@@ -291,13 +292,14 @@ const STONES = [
 ];
 
 export function InterwarChain({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Período entreguerras: Crise de 1929, ascensão dos totalitarismos e fracasso do apaziguamento até a guerra de 1939; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="InterwarChain" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ENTREGUERRAS · 1918–1939</text>
-    <ArrowHead id="sx-head-int" />
+    <ArrowHead id={`${diagramId}-sx-head-int`} />
     {LINKS.map((l, k) => {
       const x = 30 + k * 146;
       const w = k === 3 ? 118 : 124;
@@ -306,7 +308,7 @@ export function InterwarChain({ active }: Scene) {
         <motion.rect x={x} y="52" width={w} height="26" rx="13" className={on ? 'sx-chip sx-chip-on' : 'sx-chip'} initial={false}
           animate={{ opacity: k <= active + (active === 2 ? 1 : 0) ? 1 : 0.45 }} transition={p(0.4)} />
         <text x={x + w / 2} y="69" textAnchor="middle" className={on ? 'sx-chip-text-on' : 'bi-small bi-strong'}>{l}</text>
-        {k < 3 && <path d={`M${x + w + 4} 65h12`} className="bi-arrow-static" markerEnd="url(#sx-head-int)" />}
+        {k < 3 && <path d={`M${x + w + 4} 65h12`} className="bi-arrow-static" markerEnd={`url(#${diagramId}-sx-head-int)`} />}
       </g>;
     })}
 
@@ -368,7 +370,7 @@ export function InterwarChain({ active }: Scene) {
         {s.sub && <text x={s.x} y="214" textAnchor="middle" className="bi-small bi-strong">{s.sub}</text>}
       </motion.g>)}
       {[['M120 150Q148 118 170 140', 0.4], ['M210 142Q236 112 262 138', 0.85], ['M318 142Q344 112 370 138', 1.3], ['M428 142Q468 108 502 140', 1.75]].map(([d, delay]) =>
-        <Arrow key={d as string} d={d as string} on={active === 2} p={p} head="sx-head-int" delay={delay as number} />)}
+        <Arrow key={d as string} d={d as string} on={active === 2} p={p} head={`${diagramId}-sx-head-int`} delay={delay as number} />)}
       <motion.g initial={false} animate={{ scale: active === 2 ? [0, 1.2, 1] : 0 }} transition={p(0.6, 2.2)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom' }}>
         <path transform="translate(530 160) scale(1.4)" d="M0 -30c12 10 18 19 18 28a18 18 0 0 1-36 0c0-9 6-15 11-20 0 7 3 12 7 12 0-9-3-14 0-20Z" className="bi-flame" />
       </motion.g>
@@ -405,6 +407,7 @@ const FACTORS = [
 ];
 
 export function DemocracyCracks({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const all = active === 3;
   const lit = (k: number) => all || active === k;
@@ -413,7 +416,7 @@ export function DemocracyCracks({ active }: Scene) {
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ALEMANHA · BASES DA ASCENSÃO NAZISTA</text>
-    <ArrowHead id="sx-head-naz" />
+    <ArrowHead id={`${diagramId}-sx-head-naz`} />
     {FACTORS.map((f, k) => <g key={f.title}>
       <motion.rect x="26" y={f.y} width="200" height="54" rx="10" className={lit(k) ? 'bi-block sx-block-on' : 'bi-block'} initial={false}
         animate={{ opacity: lit(k) ? 1 : 0.5 }} transition={p(0.4)} />
@@ -426,7 +429,7 @@ export function DemocracyCracks({ active }: Scene) {
       </g>
       <text x="76" y={f.y + 24} className={lit(k) ? 'bi-small bi-strong bi-on' : 'bi-small bi-strong'}>{f.title}</text>
       <text x="76" y={f.y + 40} className="bi-tiny">{f.sub}</text>
-      <Arrow d={`M228 ${f.y + 27}C244 ${f.y + 27} 242 ${150 + k * 30} 256 ${150 + k * 30}`} on={lit(k)} p={p} head="sx-head-naz" delay={0.3} />
+      <Arrow d={`M228 ${f.y + 27}C244 ${f.y + 27} 242 ${150 + k * 30} 256 ${150 + k * 30}`} on={lit(k)} p={p} head={`${diagramId}-sx-head-naz`} delay={0.3} />
     </g>)}
 
     <motion.g initial={false} animate={{ rotate: all ? -3 : 0, y: all ? 6 : 0 }} transition={p(0.8, 1.2)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom left' }}>
@@ -491,6 +494,7 @@ export function DemocracyCracks({ active }: Scene) {
 const STEPS = Array.from({ length: 8 }, (_, k) => 170 + k * 22);
 
 export function Decolonization({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const aOn = active !== 1;
   const bOn = active !== 0;
@@ -500,7 +504,7 @@ export function Decolonization({ active }: Scene) {
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">DESCOLONIZAÇÃO AFRO-ASIÁTICA</text>
-    <ArrowHead id="sx-head-dec" />
+    <ArrowHead id={`${diagramId}-sx-head-dec`} />
 
     <rect x="24" y="52" width="114" height="238" rx="12" className="bi-panel" />
     <text x="81" y="72" textAnchor="middle" className="bi-panel-title">PÓS-1945</text>
@@ -530,8 +534,8 @@ export function Decolonization({ active }: Scene) {
         animate={{ opacity: aOn ? 1 : 0.3 }} transition={p(0.2, aOn ? 0.2 + k * 0.12 : 0)} />)}
       <circle cx="344" cy="124" r="6" className="bi-seal" />
       <text x="344" y="150" textAnchor="middle" className="bi-date">1947</text>
-      <Arrow d="M352 120L416 100" on={aOn} p={p} head="sx-head-dec" delay={1.2} />
-      <Arrow d="M352 128L416 148" on={aOn} p={p} head="sx-head-dec" delay={1.2} />
+      <Arrow d="M352 120L416 100" on={aOn} p={p} head={`${diagramId}-sx-head-dec`} delay={1.2} />
+      <Arrow d="M352 128L416 148" on={aOn} p={p} head={`${diagramId}-sx-head-dec`} delay={1.2} />
       <text x="428" y="100" className="bi-small bi-strong">Índia</text>
       <text x="428" y="114" className="bi-tiny">maioria hindu</text>
       <text x="428" y="148" className="bi-small bi-strong">Paquistão</text>
@@ -587,6 +591,7 @@ const BRICKS: [number, number, number][] = [0, 1, 2, 3].flatMap(row => {
 });
 
 export function ColdWarEnd({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const done = (k: number) => k <= active;
   const stations = [
@@ -600,7 +605,7 @@ export function ColdWarEnd({ active }: Scene) {
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">O FIM DA GUERRA FRIA · 1985–1991</text>
-    <ArrowHead id="sx-head-gf" />
+    <ArrowHead id={`${diagramId}-sx-head-gf`} />
     {stations.map((s, k) => <g key={s.title}>
       <motion.rect x={s.c - 64} y="50" width="128" height="226" rx="12" className="bi-band" initial={false}
         animate={{ opacity: k === active ? 1 : 0 }} transition={p(0.4)} />
@@ -610,7 +615,7 @@ export function ColdWarEnd({ active }: Scene) {
         <text x={s.c} y="252" textAnchor="middle" className="bi-tiny">{s.cap[0]}</text>
         <text x={s.c} y="265" textAnchor="middle" className="bi-tiny">{s.cap[1]}</text>
       </motion.g>
-      {k < 3 && <Arrow d={['M134 190h26', 'M294 190h18', 'M444 190h22'][k]} on={done(k + 1)} p={p} head="sx-head-gf" delay={0.1} />}
+      {k < 3 && <Arrow d={['M134 190h26', 'M294 190h18', 'M444 190h22'][k]} on={done(k + 1)} p={p} head={`${diagramId}-sx-head-gf`} delay={0.1} />}
     </g>)}
 
     <motion.g initial={false} animate={{ opacity: done(0) ? 1 : 0.35 }} transition={p(0.4)}>

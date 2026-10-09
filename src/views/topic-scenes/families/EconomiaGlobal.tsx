@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { SocioEconomicIllustration } from './SocioEconomicIllustration';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -57,6 +57,7 @@ const AGRI = [
 ];
 
 export function AgricultureSystems({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const sys = AGRI[active];
   const track = (a: number) => 414 + 164 * a;
@@ -116,8 +117,8 @@ export function AgricultureSystems({ active }: Scene) {
         <path d="M296 170h36M296 190h36M296 208h36" className="eg-silo-band" />
       </g>
       <Globe x={206} y={146} r={17} />
-      <ArrowHead id="eg-head-agri" />
-      <Arrow d="M292 158C268 142 250 140 230 144" on p={p} head="eg-head-agri" delay={0.6} />
+      <ArrowHead id={`${diagramId}-eg-head-agri`} />
+      <Arrow d="M292 158C268 142 250 140 230 144" on p={p} head={`${diagramId}-eg-head-agri`} delay={0.6} />
       <text x="206" y="182" textAnchor="middle" className="bi-hand-sm">mercado mundial</text>
     </g>}
 
@@ -198,6 +199,7 @@ function Car({ x, y, done = true }: { x: number; y: number; done?: boolean }) {
 }
 
 export function ProductionModels({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const m = MODELS[active];
   const stops = [90, 230, 370, 510];
@@ -205,7 +207,7 @@ export function ProductionModels({ active }: Scene) {
     <SocioEconomicIllustration kind="production" active={active} />
     <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="eg-head-ford" />
+    <ArrowHead id={`${diagramId}-eg-head-ford`} />
     <text x="30" y="40" className="bi-kicker">CHÃO DE FÁBRICA · MODELOS PRODUTIVOS</text>
 
     <path d="M60 234v28M200 234v28M340 234v28" className="eg-leg" />
@@ -235,7 +237,7 @@ export function ProductionModels({ active }: Scene) {
         <Car x={230} y={222} done={false} />
         <Car x={330} y={222} />
       </motion.g>
-      <Arrow d="M334 196C330 104 120 100 98 158" on p={p} head="eg-head-ford" delay={1.2} />
+      <Arrow d="M334 196C330 104 120 100 98 158" on p={p} head={`${diagramId}-eg-head-ford`} delay={1.2} />
       <motion.g initial={{ scale: 0 }} animate={{ scale: 1 }} transition={p(0.4, 1.8)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }}>
         <Coin x={216} y={124} r={11} />
       </motion.g>
@@ -312,6 +314,7 @@ const SP = geo(-23.5, -46.6);
 const toMapSP = (x: number, y: number) => [24 + 0.66 * x, 50 + 0.66 * y] as const;
 
 export function IndustrialSaoPaulo({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const [sx, sy] = toMapSP(SP[0], SP[1]);
   const cluster = [[-14, -12], [12, -16], [-20, 8], [16, 8], [0, -26], [26, -4]];
@@ -319,7 +322,7 @@ export function IndustrialSaoPaulo({ active }: Scene) {
     <SocioEconomicIllustration kind="sao-paulo" active={active} />
     <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="eg-head-sp" />
+    <ArrowHead id={`${diagramId}-eg-head-sp`} />
     <text x="30" y="40" className="bi-kicker">SÃO PAULO · POLO INDUSTRIAL</text>
     <path d={BRAZIL} transform="translate(24 50) scale(.66)" className="bi-land" />
     {cluster.map(([dx, dy], k) => <motion.circle key={k} cx={sx + dx} cy={sy + dy} r="4.5" className="eg-city" initial={false}
@@ -339,7 +342,7 @@ export function IndustrialSaoPaulo({ active }: Scene) {
       </g>
       <text x="312" y="170" textAnchor="middle" className="bi-small bi-strong">café</text>
       <text x="312" y="184" textAnchor="middle" className="bi-tiny">exportado</text>
-      <Arrow d="M340 128H388" on={active === 0} p={p} head="eg-head-sp" delay={0.3} />
+      <Arrow d="M340 128H388" on={active === 0} p={p} head={`${diagramId}-eg-head-sp`} delay={0.3} />
       {[0, 1, 2, 3, 4].map(k => <motion.ellipse key={k} cx={424 + (k % 2) * 3} cy={150 - k * 7} rx="16" ry="5.5" className="eg-coin" initial={false}
         animate={{ y: active === 0 ? 0 : -12, opacity: active === 0 ? 1 : 0 }} transition={p(0.35, active === 0 ? 0.5 + k * 0.15 : 0)} />)}
       <motion.g initial={false} animate={{ scale: active === 0 ? 1 : 0 }} transition={p(0.4, active === 0 ? 1.3 : 0)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }}>
@@ -347,7 +350,7 @@ export function IndustrialSaoPaulo({ active }: Scene) {
       </motion.g>
       <text x="424" y="170" textAnchor="middle" className="bi-small bi-strong">capital</text>
       <text x="424" y="184" textAnchor="middle" className="bi-tiny">acumulado</text>
-      <Arrow d="M450 128H496" on={active === 0} p={p} head="eg-head-sp" delay={1.2} />
+      <Arrow d="M450 128H496" on={active === 0} p={p} head={`${diagramId}-eg-head-sp`} delay={1.2} />
       <Factory x={540} y={146} s={1.3} />
       <text x="540" y="170" textAnchor="middle" className="bi-small bi-strong">indústria</text>
       <text x="540" y="184" textAnchor="middle" className="bi-tiny">investimento</text>
@@ -372,9 +375,9 @@ export function IndustrialSaoPaulo({ active }: Scene) {
 
     <motion.g initial={false} animate={{ opacity: active === 1 ? 1 : 0 }} transition={p(0.4)}>
       <text x="278" y="80" className="bi-panel-title">EFEITO CUMULATIVO</text>
-      <Arrow d="M468 108C540 116 552 168 530 206" on={active === 1} p={p} head="eg-head-sp" delay={0.2} />
-      <Arrow d="M488 242C452 262 400 262 366 242" on={active === 1} p={p} head="eg-head-sp" delay={0.7} />
-      <Arrow d="M322 206C302 168 320 116 388 108" on={active === 1} p={p} head="eg-head-sp" delay={1.2} />
+      <Arrow d="M468 108C540 116 552 168 530 206" on={active === 1} p={p} head={`${diagramId}-eg-head-sp`} delay={0.2} />
+      <Arrow d="M488 242C452 262 400 262 366 242" on={active === 1} p={p} head={`${diagramId}-eg-head-sp`} delay={0.7} />
+      <Arrow d="M322 206C302 168 320 116 388 108" on={active === 1} p={p} head={`${diagramId}-eg-head-sp`} delay={1.2} />
       <text x="428" y="104" textAnchor="middle" className="bi-small bi-strong">indústrias</text>
       <text x="540" y="228" textAnchor="middle" className="bi-small bi-strong">fornecedores</text>
       <text x="540" y="243" textAnchor="middle" className="bi-small bi-strong">e serviços</text>
@@ -546,6 +549,7 @@ const STEPS = [
 const WALLS = [7, 15, 10];
 
 export function BlocIntegration({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const strips = [64, 130, 196];
   const flows = [
@@ -581,8 +585,8 @@ export function BlocIntegration({ active }: Scene) {
     <motion.path d="M112 100h12M112 140h12M112 180h12M112 220h12" className="eg-wall-brick" initial={false}
       animate={{ opacity: active >= 1 ? 1 : 0 }} transition={p(0.4, active >= 1 ? 0.7 : 0)} />
     <text x="34" y="282" className="bi-tiny bi-strong">{active >= 1 ? 'tarifa externa comum' : 'cada um, sua tarifa'}</text>
-    <ArrowHead id="eg-head-bloc" />
-    {['M80 138C92 124 96 110 104 100', 'M84 150H104', 'M80 162C92 180 96 200 104 222'].map(d => <path key={d} d={d} className="bi-arrow-static" markerEnd="url(#eg-head-bloc)" />)}
+    <ArrowHead id={`${diagramId}-eg-head-bloc`} />
+    {['M80 138C92 124 96 110 104 100', 'M84 150H104', 'M80 162C92 180 96 200 104 222'].map(d => <path key={d} d={d} className="bi-arrow-static" markerEnd={`url(#${diagramId}-eg-head-bloc)`} />)}
 
     {flows.map((f, k) => <motion.g key={f.x} initial={false} animate={{ opacity: f.on ? 1 : 0 }} transition={p(0.4, f.on && k > 0 && active === 2 ? 0.2 + k * 0.2 : 0)}>
       <path d={`M${f.x} 92V234`} className="eg-flow" strokeDasharray="2 5" />
@@ -635,13 +639,14 @@ function Sack({ x, y }: { x: number; y: number }) {
 }
 
 export function TermsOfTrade({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const sacks = [[250, 144], [272, 144], [228, 144], [261, 128], [239, 128], [250, 112]];
   return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Desigualdades globais: deterioração dos termos de troca, industrialização por substituição de importações e parques fabris pouco competitivos; recorte ${active + 1} em foco`}>
     <SocioEconomicIllustration kind="trade" active={active} />
     <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="eg-head-tt" />
+    <ArrowHead id={`${diagramId}-eg-head-tt`} />
     <text x="30" y="40" className="bi-kicker">CENTRO E PERIFERIA · PREBISCH E CEPAL</text>
 
     <g transform="translate(92 200)">
@@ -718,7 +723,7 @@ export function TermsOfTrade({ active }: Scene) {
         <motion.rect x={x} y="272" width="170" height="46" rx="10" className={cls} initial={false} animate={{ opacity: k <= active ? 1 : 0.5 }} transition={p(0.4)} />
         <text x={x + 85} y="291" textAnchor="middle" className={k === active ? 'bi-small bi-strong bi-on' : 'bi-small bi-strong'}>{c.title}</text>
         <text x={x + 85} y="307" textAnchor="middle" className="bi-tiny">{c.sub}</text>
-        {k < 2 && <Arrow d={`M${x + 172} 295H${x + 186}`} on={k < active} p={p} head="eg-head-tt" delay={0.2} />}
+        {k < 2 && <Arrow d={`M${x + 172} 295H${x + 186}`} on={k < active} p={p} head={`${diagramId}-eg-head-tt`} delay={0.2} />}
       </g>;
     })}
     <text x="30" y="340" className="bi-foot">Quantidades ilustrativas, sem escala. A base industrial criada não foi perdida.</text>

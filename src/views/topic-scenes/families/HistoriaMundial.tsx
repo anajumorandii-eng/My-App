@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { BRAZIL } from './GeografiaFisica';
@@ -43,13 +43,14 @@ const TRADES = [
 const NILE = 'M456 312C450 294 466 282 458 264S466 250 462 244';
 
 export function FirstCities({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const sacks = active >= 1 ? 6 : 2;
   return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Primeiras civilizações: de nômades a aldeias agrícolas e a cidades graças ao excedente, e a comparação entre as cidades-Estado do Tigre e Eufrates e o Estado centralizado do Nilo; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="FirstCities" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="hm-fc-head" />
+    <ArrowHead id={`${uid}-hm-fc-head`} />
     <text x="30" y="40" className="bi-kicker">REVOLUÇÃO AGRÍCOLA · A PARTIR DE c. 10.000 a.C.</text>
 
     {/* acampamento nômade */}
@@ -93,8 +94,8 @@ export function FirstCities({ active }: Scene) {
       <text x="508" y="180" textAnchor="middle" className="bi-tiny">quem não planta também come</text>
     </motion.g>
 
-    <Arrow d="M156 118C178 104 196 104 204 112" on p={p} head="hm-fc-head" />
-    <Arrow d="M372 112C400 98 424 98 442 108" on={active >= 1} p={p} head="hm-fc-head" delay={0.3} />
+    <Arrow d="M156 118C178 104 196 104 204 112" on p={p} head={`${uid}-hm-fc-head`} />
+    <Arrow d="M372 112C400 98 424 98 442 108" on={active >= 1} p={p} head={`${uid}-hm-fc-head`} delay={0.3} />
     <Layer on={active === 0} p={p} delay={0.4}>
       <text x="176" y="80" textAnchor="middle" className="bi-hand-sm">vários centros,</text>
       <text x="176" y="96" textAnchor="middle" className="bi-hand-sm">não um só</text>
@@ -196,6 +197,7 @@ const SA_PIECES = [
 const BRAZIL_SCHEMA = 'M306 208L338 214L360 234L352 258L332 282L310 290L292 272L280 264L284 250L268 240L268 228L300 224Z';
 
 export function AmericasNineteenth({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const panel = [
     { title: 'INDEPENDÊNCIAS', lines: ['guerras longas contra', 'a Espanha', 'elites regionais preferem', 'unidades menores'], hand: 'repúblicas, no plural', note: 'Brasil: continuidade dinástica' },
@@ -207,8 +209,8 @@ export function AmericasNineteenth({ active }: Scene) {
     <HistorianIllustration kind="AmericasNineteenth" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="hm-am-head" />
-    <defs><clipPath id="hm-us-clip"><path d={US_OUTLINE} /></clipPath></defs>
+    <ArrowHead id={`${uid}-hm-am-head`} />
+    <defs><clipPath id={`${uid}-hm-us-clip`}><path d={US_OUTLINE} /></clipPath></defs>
     <text x="30" y="40" className="bi-kicker">AMÉRICAS · SÉCULO XIX</text>
 
     <path d={CANADA} className="bi-land" />
@@ -216,7 +218,7 @@ export function AmericasNineteenth({ active }: Scene) {
     <path d="M48 170c10-6 22-6 30 0M60 190c10-6 22-6 30 0M326 300c10-6 22-6 30 0M338 316c10-6 22-6 30 0" className="hm-wave" />
     <text x="70" y="214" textAnchor="middle" className="hm-ocean">Pacífico</text>
     <text x="330" y="338" textAnchor="middle" className="hm-ocean">Atlântico</text>
-    <g clipPath="url(#hm-us-clip)">
+    <g clipPath={`url(#${uid}-hm-us-clip)`}>
       <rect x="252" y="90" width="80" height="70" className="hm-us" />
       <motion.rect x="190" y="90" width="62" height="70" className="hm-us" initial={false}
         animate={{ opacity: active >= 1 ? 1 : 0.18 }} transition={p(0.5, active === 1 ? 0.3 : 0)} />
@@ -266,8 +268,8 @@ export function AmericasNineteenth({ active }: Scene) {
       <path d="M356 108l5-7 5 3-1 7 6 5-2 9 5 7-9 3-8-2 2-7-5-4 4-7Z" className="hm-uk" />
       <path d="M346 118c3-4 8-3 8 1s-3 8-7 6-3-4-1-7Z" className="hm-uk" />
       <text x="358" y="152" textAnchor="middle" className="bi-tiny">Reino Unido</text>
-      <Arrow d="M346 240C362 216 364 190 360 160" on={active === 3} p={p} head="hm-am-head" delay={0.3} />
-      <motion.path d="M380 160C388 206 380 252 354 278" className="hm-return" markerEnd="url(#hm-am-head)" initial={false}
+      <Arrow d="M346 240C362 216 364 190 360 160" on={active === 3} p={p} head={`${uid}-hm-am-head`} delay={0.3} />
+      <motion.path d="M380 160C388 206 380 252 354 278" className="hm-return" markerEnd={`url(#${uid}-hm-am-head)`} initial={false}
         animate={{ pathLength: active === 3 ? 1 : 0 }} transition={p(0.8, 0.9)} />
       {[0, 1, 2].map(k => <motion.circle key={k} r="4" className="hm-cargo" initial={false}
         animate={active === 3 ? { cx: [348, 360], cy: [236 - k * 4, 168] } : { cx: 348, cy: 236 }}
@@ -294,6 +296,7 @@ export function AmericasNineteenth({ active }: Scene) {
 const RY = (y: number) => 60 + (y - 1905) * (500 / 45);
 
 export function CenturyRevolutions({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const lit = (k: number) => active === k || (active === 3 && k > 0);
   const events: [number, string, number][] = [[1910, '1910', 0], [1917, '1917', 1], [1938, '1938 · petróleo', 0], [1949, '1949', 2]];
@@ -301,7 +304,7 @@ export function CenturyRevolutions({ active }: Scene) {
     <HistorianIllustration kind="CenturyRevolutions" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="hm-rv-head" />
+    <ArrowHead id={`${uid}-hm-rv-head`} />
     <text x="30" y="40" className="bi-kicker">REVOLUÇÕES DO SÉCULO XX</text>
 
     <path d={`M${RY(1905)} 70H${RY(1950)}`} className="bi-axis" />
@@ -352,7 +355,7 @@ export function CenturyRevolutions({ active }: Scene) {
       <text x="234" y="164" className="bi-tiny">cai o czar Nicolau II</text>
       <text x="234" y="176" className="bi-tiny">governo provisório</text>
       <text x="234" y="188" className="bi-tiny">continua na guerra</text>
-      <Arrow d="M244 196v12" on={lit(1)} p={p} head="hm-rv-head" delay={0.6} />
+      <Arrow d="M244 196v12" on={lit(1)} p={p} head={`${uid}-hm-rv-head`} delay={0.6} />
       <text x="234" y="226" className="bi-small bi-strong">Outubro</text>
       <text x="234" y="240" className="bi-tiny">bolcheviques, com Lênin</text>
       <text x="234" y="258" className="bi-hand-sm">“pão, terra e paz”</text>
@@ -401,6 +404,7 @@ export function CenturyRevolutions({ active }: Scene) {
 const WY = (y: number) => 44 + (y - 1939) * (330 / 6.4);
 
 export function WorldWarTwo({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const europe = active <= 1;
   const marks: [number, string, number][] = [[1939.7, 'Polônia', 0], [1940.4, 'França', 0], [1941.5, 'Barbarossa', 1], [1942.9, 'Stalingrado', 1], [1941.95, 'Pearl Harbor', 2], [1945.6, 'Hiroshima e Nagasaki', 2]];
@@ -408,8 +412,8 @@ export function WorldWarTwo({ active }: Scene) {
     <HistorianIllustration kind="WorldWarTwo" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="hm-ww-head" />
-    <ArrowHead id="hm-ww-head2" />
+    <ArrowHead id={`${uid}-hm-ww-head`} />
+    <ArrowHead id={`${uid}-hm-ww-head2`} />
     <text x="30" y="40" className="bi-kicker">SEGUNDA GUERRA MUNDIAL · 1939–1945</text>
 
     {/* Europa */}
@@ -428,8 +432,8 @@ export function WorldWarTwo({ active }: Scene) {
       <circle cx="292" cy="196" r="5" className="hm-pin" />
       <text x="290" y="216" textAnchor="middle" className="bi-tiny">Stalingrado</text>
 
-      <Arrow d="M162 120C174 112 186 114 198 120" on={active === 0} p={p} head="hm-ww-head" delay={0.2} />
-      <Arrow d="M130 146C122 152 116 156 108 158" on={active === 0} p={p} head="hm-ww-head" delay={0.7} />
+      <Arrow d="M162 120C174 112 186 114 198 120" on={active === 0} p={p} head={`${uid}-hm-ww-head`} delay={0.2} />
+      <Arrow d="M130 146C122 152 116 156 108 158" on={active === 0} p={p} head={`${uid}-hm-ww-head`} delay={0.7} />
       {[0, 1].map(k => <motion.g key={k} initial={false}
         animate={active === 0 ? { x: k ? [0, -28] : [0, 26], opacity: [0, 1, 1] } : { x: 0, opacity: 0 }}
         transition={p(0.8, 0.3 + 0.5 * k)}>
@@ -442,8 +446,8 @@ export function WorldWarTwo({ active }: Scene) {
         <text x="96" y="240" textAnchor="middle" className="bi-hand-sm">motores, aviões</text>
       </Layer>
 
-      <Arrow d="M178 146C220 160 254 178 284 192" on={active === 1} p={p} head="hm-ww-head" delay={0.2} />
-      <motion.path d="M284 206C240 226 196 204 168 166" className="hm-return" markerEnd="url(#hm-ww-head2)" initial={false}
+      <Arrow d="M178 146C220 160 254 178 284 192" on={active === 1} p={p} head={`${uid}-hm-ww-head`} delay={0.2} />
+      <motion.path d="M284 206C240 226 196 204 168 166" className="hm-return" markerEnd={`url(#${uid}-hm-ww-head2)`} initial={false}
         animate={{ pathLength: active === 1 ? 1 : 0, opacity: active === 1 ? 1 : 0 }} transition={p(1, 1.1)} />
       <Layer on={active === 1} p={p} delay={0.3}>
         <text x="232" y="160" className="bi-tiny bi-strong">1941</text>
@@ -461,7 +465,7 @@ export function WorldWarTwo({ active }: Scene) {
       <text x="556" y="206" textAnchor="middle" className="bi-tiny">Pearl Harbor</text>
       {[[520, 150], [488, 130], [456, 142], [424, 118]].map(([x, y], k) => <motion.circle key={k} cx={x} cy={y} r="4" className="hm-isle" initial={false}
         animate={{ scale: active === 2 ? [1, 1.6, 1] : 1 }} transition={p(0.4, active === 2 ? 1.2 + 0.25 * k : 0)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />)}
-      <motion.path d="M398 104C440 86 520 110 544 164" className="hm-attack" markerEnd="url(#hm-ww-head)" initial={false}
+      <motion.path d="M398 104C440 86 520 110 544 164" className="hm-attack" markerEnd={`url(#${uid}-hm-ww-head)`} initial={false}
         animate={{ pathLength: active === 2 ? 1 : 0, opacity: active === 2 ? 1 : 0 }} transition={p(0.7, 0.2)} />
       <motion.path d="M550 170L520 150L488 130L456 142L424 118L402 114" className="hm-hop" initial={false}
         animate={{ pathLength: active === 2 ? 1 : 0, opacity: active === 2 ? 1 : 0 }} transition={p(1.3, 1.1)} />
@@ -517,13 +521,14 @@ export function WorldWarTwo({ active }: Scene) {
 const CY = (y: number) => 40 + (y - 1947) * (540 / 44);
 
 export function ColdWar({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const ticks: [number, string, number][] = [[1949, 'Otan', 0], [1955, 'Varsóvia', 0], [1961, 'Muro', 0], [1950, 'Coreia', 1], [1962, 'Cuba', 1], [1957, 'Sputnik', 2], [1969, 'Apollo 11', 2], [1955.4, 'Bandung', 3]];
   return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Guerra Fria: Estados Unidos e União Soviética, Otan e Pacto de Varsóvia, guerras por procuração, corrida espacial e os não alinhados de Bandung; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="ColdWar" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="hm-cw-head" />
+    <ArrowHead id={`${uid}-hm-cw-head`} />
     <text x="30" y="40" className="bi-kicker">GUERRA FRIA · 1947–1991</text>
 
     {/* os dois polos */}
@@ -550,7 +555,7 @@ export function ColdWar({ active }: Scene) {
         {[0, 1].map(c => <rect key={c} x={290 + c * 20 - (r % 2) * 10} y={176 - r * 12} width="20" height="12" className="hm-brick" />)}
       </motion.g>)}
       <text x="310" y="206" textAnchor="middle" className="bi-small bi-strong">Muro de Berlim · 1961</text>
-      <Arrow d="M180 110C260 88 360 88 440 110" on={active === 0} p={p} head="hm-cw-head" delay={1.1} />
+      <Arrow d="M180 110C260 88 360 88 440 110" on={active === 0} p={p} head={`${uid}-hm-cw-head`} delay={1.1} />
       <text x="310" y="84" textAnchor="middle" className="bi-hand-sm">Varsóvia responde à Otan</text>
     </Layer>
 
@@ -740,6 +745,7 @@ function Ship({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
 }
 
 export function ColonialDisputes({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const [sx, sy] = SITES[active];
   const focus = Math.min(active, 2);
@@ -753,7 +759,7 @@ export function ColonialDisputes({ active }: Scene) {
     <HistorianIllustration kind="ColonialDisputes" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="hm-cd-head" />
+    <ArrowHead id={`${uid}-hm-cd-head`} />
     <text x="30" y="40" className="bi-kicker">LITORAL DISPUTADO · SÉCULOS XVI E XVII</text>
 
     <g transform="translate(40 38) scale(.72)">
@@ -785,7 +791,7 @@ export function ColonialDisputes({ active }: Scene) {
       <text x={SITES[1][0] + 26} y={SITES[1][1] + 30} textAnchor="middle" className="bi-hand-sm">repelida</text>
     </Layer>
     <Layer on={active === 3} p={p} delay={0.3}>
-      <motion.path d={`M${SITES[2][0]} ${SITES[2][1] - 8}C${SITES[2][0] + 10} 60 200 44 104 58`} className="hm-sugar-route" markerEnd="url(#hm-cd-head)" initial={false}
+      <motion.path d={`M${SITES[2][0]} ${SITES[2][1] - 8}C${SITES[2][0] + 10} 60 200 44 104 58`} className="hm-sugar-route" markerEnd={`url(#${uid}-hm-cd-head)`} initial={false}
         animate={{ pathLength: active === 3 ? 1 : 0 }} transition={p(1.4, 0.8)} />
       <rect x="40" y="48" width="58" height="20" rx="6" className="hm-chip" />
       <text x="69" y="62" textAnchor="middle" className="hm-chip-text">Caribe</text>

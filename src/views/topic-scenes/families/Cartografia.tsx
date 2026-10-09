@@ -1,5 +1,5 @@
 import { GeoIllustration } from './GeoIllustration';
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { BRAZIL } from './GeografiaFisica';
@@ -73,6 +73,7 @@ function Plane({ x, y, rot = 0 }: { x: number; y: number; rot?: number }) {
 
 
 export function TimeZones({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const rim = [[0, 'UTC 0 · Greenwich'], [45, '+3'], [90, '+6'], [135, '+9'], [180, '±12'], [-45, '−3'], [-90, '−6']] as const;
   const [bx, by] = tzPoint(-45, TZ.R - 14);
@@ -106,8 +107,8 @@ export function TimeZones({ active }: Scene) {
       const c = Math.cos(tzAngle(lon));
       return <text key={label} x={x} y={y + 4} textAnchor={c > 0.3 ? 'start' : c < -0.3 ? 'end' : 'middle'} className={lon === 0 ? 'bi-tiny ct-strong' : 'bi-tiny'}>{label}</text>;
     })}
-    <path d={eastArc(-100, -60, TZ.R + 34)} className="ct-spin" markerEnd="url(#ct-tz-head)" />
-    <defs><marker id="ct-tz-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="ct-head" /></marker></defs>
+    <path d={eastArc(-100, -60, TZ.R + 34)} className="ct-spin" markerEnd={`url(#${uid}-ct-tz-head)`} />
+    <defs><marker id={`${uid}-ct-tz-head`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="ct-head" /></marker></defs>
 
 
     {/* Recorte 1: 360° ÷ 24 h */}
@@ -373,6 +374,7 @@ function Ground() {
 
 
 export function DigitalMapping({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const x0 = 70;
   const layers = [
@@ -476,7 +478,7 @@ export function DigitalMapping({ active }: Scene) {
       <path d="M288 120l6-10 6 10ZM294 138v2" className="ct-icon" /><path d="M294 126v8" className="ct-icon" />
       <circle cx="387" cy="129" r="8" className="ct-icon" /><path d="M393 135l8 8" className="ct-icon" />
       <path d="M480 138h20v-10h8l6 6v4h-34ZM486 142a3 3 0 1 0 0.1 0M506 142a3 3 0 1 0 0.1 0" className="ct-icon" />
-      {[[216, 272], [316, 368], [412, 472]].map(([a, b], k) => <motion.path key={a} d={`M${a} 132H${b}`} className="ct-flow" markerEnd="url(#ct-dg-head)" initial={false} animate={{ pathLength: active === 3 ? 1 : 0 }} transition={p(0.4, 0.3 + k * 0.4)} />)}
+      {[[216, 272], [316, 368], [412, 472]].map(([a, b], k) => <motion.path key={a} d={`M${a} 132H${b}`} className="ct-flow" markerEnd={`url(#${uid}-ct-dg-head)`} initial={false} animate={{ pathLength: active === 3 ? 1 : 0 }} transition={p(0.4, 0.3 + k * 0.4)} />)}
       <text x="244" y="152" textAnchor="middle" className="bi-tiny">em dias</text>
       <path d="M500 156L540 272" className="ct-leader" />
       <text x="548" y="236" textAnchor="end" className="bi-tiny">deslocamento até</text>
@@ -491,7 +493,7 @@ export function DigitalMapping({ active }: Scene) {
       </motion.g>
       <text x="310" y="252" textAnchor="middle" className="bi-hand-sm">detectar não é impedir</text>
     </motion.g>
-    <defs><marker id="ct-dg-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="ct-head" /></marker></defs>
+    <defs><marker id={`${uid}-ct-dg-head`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="ct-head" /></marker></defs>
 
 
     <text x="30" y="344" className="bi-foot">Território, camadas e pixels são esquemáticos.</text>
@@ -514,6 +516,7 @@ const COUNTRIES = [
 
 
 export function MapElements({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const elements = [
     ['título', 'tema e área'],
@@ -581,8 +584,8 @@ export function MapElements({ active }: Scene) {
       <rect x="258" y="118" width="16" height="16" className="ct-house-fill" />
       <path d="M432 240V96h72c4 40 4 90 0 144Z" className="ct-landmass" />
       <circle cx="462" cy="130" r="5" className="ct-town" />
-      {[0, 1].map(k => <path key={k} d={`M${204 + k * 196} 160h18`} className="ct-flow" markerEnd="url(#ct-rg-head)" />)}
-      <defs><marker id="ct-rg-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="ct-head" /></marker></defs>
+      {[0, 1].map(k => <path key={k} d={`M${204 + k * 196} 160h18`} className="ct-flow" markerEnd={`url(#${uid}-ct-rg-head)`} />)}
+      <defs><marker id={`${uid}-ct-rg-head`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="ct-head" /></marker></defs>
       <text x="115" y="272" textAnchor="middle" className="bi-small">ilhas, meandros, casas</text>
       <text x="311" y="272" textAnchor="middle" className="bi-small">agrupa e suaviza</text>
       <text x="507" y="272" textAnchor="middle" className="bi-small">omite o miúdo</text>
@@ -650,6 +653,7 @@ const TABLE = { base: 'M232 258C290 258 320 260 350 260C380 260 420 262 470 266'
 
 
 export function SurfaceWater({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const sunk = active === 3;
   return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Água na superfície terrestre: 97% nos oceanos, bacia atravessando fronteira, aquífero livre e confinado, superexplotação e subsidência; recorte ${active + 1} em foco`}>
@@ -658,15 +662,15 @@ export function SurfaceWater({ active }: Scene) {
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ÁGUA · DO CUME AO OCEANO</text>
     <defs>
-      <clipPath id="ct-land-clip"><path d={`${SURFACE}${PLAIN.flat}${SURFACE_END}`} /></clipPath>
-      <marker id="ct-w-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="ct-head" /></marker>
+      <clipPath id={`${uid}-ct-land-clip`}><path d={`${SURFACE}${PLAIN.flat}${SURFACE_END}`} /></clipPath>
+      <marker id={`${uid}-ct-w-head`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="ct-head" /></marker>
     </defs>
 
 
     <rect x="462" y="262" width="138" height="68" className="ct-ocean" />
     <path d="M470 262H600" className="ct-wave" />
     <motion.path d={`${SURFACE}${PLAIN.flat}${SURFACE_END}`} className="ct-soil" initial={false} animate={{ d: `${SURFACE}${sunk ? PLAIN.sunk : PLAIN.flat}${SURFACE_END}` }} transition={p(1.2, sunk ? 1.4 : 0)} />
-    <g clipPath="url(#ct-land-clip)">
+    <g clipPath={`url(#${uid}-ct-land-clip)`}>
       <motion.path d="M150 170L178 200L244 280L470 280L470 292L236 292L166 190Z" className="ct-clay" initial={false} animate={{ opacity: active === 2 ? 1 : 0.7 }} transition={p(0.4)} />
       <motion.path d="M140 176L166 190L236 292L470 292L470 322L224 322L132 186Z" className="ct-aquifer-deep" initial={false} animate={{ opacity: active === 2 || active === 0 ? 1 : 0.6 }} transition={p(0.4)} />
       <motion.path d="M232 244L470 262L470 280L244 280Z" className="ct-aquifer-free" initial={false} animate={{ opacity: active === 2 || active === 3 ? 1 : 0.6 }} transition={p(0.4)} />
@@ -707,8 +711,8 @@ export function SurfaceWater({ active }: Scene) {
       {[100, 112, 126, 138].map((x, k) => <motion.path key={x} d={`M${x} ${106 + (k % 2) * 6}v12`} className="ct-rain" initial={false} animate={{ y: active === 1 ? [0, 18, 36] : 0, opacity: active === 1 ? [1, 1, 0] : 0 }} transition={p(1, 0.2 + k * 0.1)} />)}
       <path d="M120 144V112" className="ct-divide" />
       <text x="152" y="92" className="bi-label">divisor de águas</text>
-      <path d="M114 138C104 146 90 158 80 176" className="ct-flow" markerEnd="url(#ct-w-head)" />
-      <path d="M126 138C136 146 146 158 156 174" className="ct-flow" markerEnd="url(#ct-w-head)" />
+      <path d="M114 138C104 146 90 158 80 176" className="ct-flow" markerEnd={`url(#${uid}-ct-w-head)`} />
+      <path d="M126 138C136 146 146 158 156 174" className="ct-flow" markerEnd={`url(#${uid}-ct-w-head)`} />
       <text x="36" y="196" className="bi-tiny">outra bacia</text>
       <path d="M300 96V252" className="ct-border" />
       <text x="292" y="110" textAnchor="end" className="bi-label">país A</text>
@@ -736,7 +740,7 @@ export function SurfaceWater({ active }: Scene) {
       <text x="30" y="80" className="bi-label">aquífero confinado</text>
       <text x="30" y="98" className="bi-small">protegido por camada impermeável,</text>
       <text x="30" y="114" className="bi-small">mas de recarga natural mais lenta</text>
-      <motion.path d="M168 186L196 226" className="ct-recharge" markerEnd="url(#ct-w-head)" initial={false} animate={{ pathLength: active === 2 ? 1 : 0 }} transition={p(2.4, 0.6)} />
+      <motion.path d="M168 186L196 226" className="ct-recharge" markerEnd={`url(#${uid}-ct-w-head)`} initial={false} animate={{ pathLength: active === 2 ? 1 : 0 }} transition={p(2.4, 0.6)} />
       <text x="206" y="200" className="bi-tiny">recarga</text>
       <text x="440" y="274" textAnchor="middle" className="bi-tiny ct-strong">livre</text>
       <text x="380" y="312" textAnchor="middle" className="bi-tiny ct-on-water">confinado</text>

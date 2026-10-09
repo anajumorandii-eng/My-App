@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { SocioEconomicIllustration } from './SocioEconomicIllustration';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -53,6 +53,7 @@ const ORBIT = Array.from({ length: 17 }, (_, k) => {
 });
 
 export function NewIndustrialGeography({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const hands = ['a etapa muda de país', 'a vizinhança ensina', 'o resíduo volta'];
   const loop = [
@@ -64,7 +65,7 @@ export function NewIndustrialGeography({ active }: Scene) {
   return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Nova geografia industrial: deslocalização da manufatura, cluster com transbordamento de conhecimento e economia circular; recorte ${active + 1} em foco`}>
     <SocioEconomicIllustration kind="industry" active={active} />
     <g transform="translate(0 376)">
-    <ArrowHead id="eb-head-ind" />
+    <ArrowHead id={`${diagramId}-eb-head-ind`} />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">INDÚSTRIA II · A PRODUÇÃO SE REORGANIZA</text>
     {hands.map((h, k) => <motion.text key={h} x="590" y="42" textAnchor="end" className="bi-hand" initial={false}
@@ -97,7 +98,7 @@ export function NewIndustrialGeography({ active }: Scene) {
         <Factory x={480} y={160} />
       </motion.g>
 
-      <path d="M420 234C384 262 300 262 252 232" className="eb-route" markerEnd="url(#eb-head-ind)" />
+      <path d="M420 234C384 262 300 262 252 232" className="eb-route" markerEnd={`url(#${diagramId}-eb-head-ind)`} />
       {[0, 1, 2].map(k => <motion.rect key={k} width="13" height="11" rx="2" className="eb-crate" initial={false}
         animate={active === 0 ? { x: [414, 336, 258], y: [228, 252, 230], opacity: [0, 1, 0] } : { x: 336, y: 252, opacity: 0 }}
         transition={p(1.4, 1.5 + k * 0.45)} />)}
@@ -163,8 +164,8 @@ export function NewIndustrialGeography({ active }: Scene) {
         <g transform={`translate(${x} 92)`}>{icon}</g>
         <text x={x} y="126" textAnchor="middle" className="bi-small">{label}</text>
       </g>)}
-      <path d="M200 92H290" className="bi-arrow-static" markerEnd="url(#eb-head-ind)" />
-      <path d="M360 92H450" className="bi-arrow-static" markerEnd="url(#eb-head-ind)" />
+      <path d="M200 92H290" className="bi-arrow-static" markerEnd={`url(#${diagramId}-eb-head-ind)`} />
+      <path d="M360 92H450" className="bi-arrow-static" markerEnd={`url(#${diagramId}-eb-head-ind)`} />
       <motion.path d="M470 74L512 112M512 74L470 112" className="bi-cross" initial={false}
         animate={{ pathLength: active === 2 ? 1 : 0 }} transition={p(0.6, 0.6)} />
 
@@ -202,6 +203,7 @@ function Node({ x, y, label, on }: { x: number; y: number; label: string; on: bo
 }
 
 export function Geoeconomics({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const panels = [
     ['CONTENÇÃO SEM GUERRA', 'EUA: conter o avanço tecnológico-militar chinês sem conflito armado.', 'China: já restringiu exportações de terras-raras como resposta.'],
@@ -217,7 +219,7 @@ export function Geoeconomics({ active }: Scene) {
   return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Geoeconomia: chips contra terras-raras, tarifas de 2018, sanções de 2022 e desdolarização; recorte ${active + 1} em foco`}>
     <SocioEconomicIllustration kind="geoeconomics" active={active} />
     <g transform="translate(0 376)">
-    <ArrowHead id="eb-head-geo" />
+    <ArrowHead id={`${diagramId}-eb-head-geo`} />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">GEOECONOMIA · PRESSÃO SEM FORÇA MILITAR</text>
 
@@ -250,7 +252,7 @@ export function Geoeconomics({ active }: Scene) {
 
     <Stage on={active === 1} p={p}>
       <text x="310" y="70" textAnchor="middle" className="bi-date">2018</text>
-      <path d="M470 126H150" className="eb-lane" markerEnd="url(#eb-head-geo)" />
+      <path d="M470 126H150" className="eb-lane" markerEnd={`url(#${diagramId}-eb-head-geo)`} />
       <g transform="translate(310 126)">
         <path d="M-15 -8V-34h30V-8M-19 -34h38l-19-12Z" className="eb-booth" />
         <text x="0" y="-16" textAnchor="middle" className="eb-booth-text">tarifa</text>
@@ -351,6 +353,7 @@ function MapLabel({ x, y, children, anchor = 'middle', on = true }: { x: number;
 // ------------------------------------------------------------ Espaço agrário
 
 export function AgrarianSpace({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const feet = [
     'Proporções ilustrativas, sem escala.',
@@ -362,7 +365,7 @@ export function AgrarianSpace({ active }: Scene) {
   return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Espaço agrário brasileiro: latifúndio e agricultura familiar, correção do solo do Cerrado, fronteira no Matopiba e conflitos pela terra; recorte ${active + 1} em foco`}>
     <SocioEconomicIllustration kind="agrarian" active={active} />
     <g transform="translate(0 376)">
-    <ArrowHead id="eb-head-agr" />
+    <ArrowHead id={`${diagramId}-eb-head-agr`} />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">O ESPAÇO AGRÁRIO BRASILEIRO</text>
 
@@ -371,9 +374,9 @@ export function AgrarianSpace({ active }: Scene) {
       <motion.path d={AMAZONIA} className="eb-amazon" initial={false} animate={{ opacity: active === 3 ? 1 : 0 }} transition={p(0.5)} />
       <motion.path d={CERRADO} className="eb-cerrado" initial={false} animate={{ opacity: active === 1 || active === 2 ? 1 : 0.18 }} transition={p(0.5)} />
       <motion.path d={MATOPIBA} className="eb-matopiba" initial={false} animate={{ opacity: active === 2 ? 1 : 0 }} transition={p(0.5, 0.9)} />
-      <motion.path d="M222 262C208 240 194 226 198 204" className="eb-front" markerEnd="url(#eb-head-agr)" initial={false}
+      <motion.path d="M222 262C208 240 194 226 198 204" className="eb-front" markerEnd={`url(#${diagramId}-eb-head-agr)`} initial={false}
         animate={{ pathLength: active === 2 ? 1 : 0, opacity: active === 2 ? 1 : 0 }} transition={p(0.8, 0.2)} />
-      <motion.path d="M206 192C216 168 230 150 242 138" className="eb-front" markerEnd="url(#eb-head-agr)" initial={false}
+      <motion.path d="M206 192C216 168 230 150 242 138" className="eb-front" markerEnd={`url(#${diagramId}-eb-head-agr)`} initial={false}
         animate={{ pathLength: active === 2 ? 1 : 0, opacity: active === 2 ? 1 : 0 }} transition={p(0.8, 0.9)} />
     </g>
 
@@ -424,7 +427,7 @@ export function AgrarianSpace({ active }: Scene) {
         <path d="M34 18V-10a8 8 0 0 1 16 0V18Z" className="eb-silo" />
       </g>
       <text x="394" y="198" textAnchor="middle" className="bi-small">soja · milho · carne</text>
-      <path d="M394 204v14" className="bi-arrow-static" markerEnd="url(#eb-head-agr)" />
+      <path d="M394 204v14" className="bi-arrow-static" markerEnd={`url(#${diagramId}-eb-head-agr)`} />
       <g transform="translate(394 238)">
         <path d="M-28 0h56l-8 12h-40Z" className="eb-hull" />
         <path d="M-18 -10h11v10h-11ZM-5 -10h11v10h-11ZM8 -16h11v16h-11Z" className="eb-container" />
@@ -510,8 +513,8 @@ export function AgrarianSpace({ active }: Scene) {
         <g transform={`translate(${x} 228)`}>{icon}</g>
         <text x={x} y="264" textAnchor="middle" className="bi-tiny">{label}</text>
       </motion.g>)}
-      <path d="M382 228h36" className="bi-arrow-static" markerEnd="url(#eb-head-agr)" />
-      <path d="M478 228h36" className="bi-arrow-static" markerEnd="url(#eb-head-agr)" />
+      <path d="M382 228h36" className="bi-arrow-static" markerEnd={`url(#${diagramId}-eb-head-agr)`} />
+      <path d="M478 228h36" className="bi-arrow-static" markerEnd={`url(#${diagramId}-eb-head-agr)`} />
       <text x="452" y="292" textAnchor="middle" className="bi-hand-sm">problema estrutural, não só histórico</text>
     </Stage>
 
@@ -524,6 +527,7 @@ export function AgrarianSpace({ active }: Scene) {
 // ------------------------------------------------------ Espaço industrial II
 
 export function IndustrialDeconcentration({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const [spx, spy] = geo(249, 257);
   const targets = [
@@ -541,7 +545,7 @@ export function IndustrialDeconcentration({ active }: Scene) {
   return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`Espaço industrial brasileiro II: desconcentração a partir da RMSP, guerra fiscal do ICMS e desindustrialização precoce; recorte ${active + 1} em foco`}>
     <SocioEconomicIllustration kind="deconcentration" active={active} />
     <g transform="translate(0 376)">
-    <ArrowHead id="eb-head-bri" />
+    <ArrowHead id={`${diagramId}-eb-head-bri`} />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">O ESPAÇO INDUSTRIAL BRASILEIRO II</text>
 
@@ -554,7 +558,7 @@ export function IndustrialDeconcentration({ active }: Scene) {
 
     <Stage on={active === 0} p={p}>
       {targets.map(({ at: [x, y], label, lx, ly, anchor }, k) => <g key={`${x}-${y}`}>
-        <motion.path d={`M${spx - 4} ${spy - 26}Q${(spx + x) / 2 - 10} ${(spy + y) / 2 - 16} ${x} ${y + 6}`} className="eb-spread" markerEnd="url(#eb-head-bri)"
+        <motion.path d={`M${spx - 4} ${spy - 26}Q${(spx + x) / 2 - 10} ${(spy + y) / 2 - 16} ${x} ${y + 6}`} className="eb-spread" markerEnd={`url(#${diagramId}-eb-head-bri)`}
           initial={false} animate={{ pathLength: active === 0 ? [0, 1] : 1 }} transition={p(0.6, 0.2 + k * 0.12)} />
         <motion.g initial={false} animate={{ opacity: active === 0 ? [0, 1] : 1 }} transition={p(0.4, 0.6 + k * 0.12)}>
           <Factory x={x} y={y - 4} s={0.42} />

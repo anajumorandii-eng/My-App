@@ -87,3 +87,8 @@
 .bf-placa--antibiotico { fill: color-mix(in srgb, var(--vs-amber) 14%, var(--vs-paper-strong)); }
 .bf-colonia { fill: var(--vs-blue); }
 .bf-colonia--r { fill: var(--vs-burgundy); }
+
+.biological-volume :is(.bf-celula,.bf-cromossomo,.bf-ventosa,.bf-coacervado) { fill: var(--bio-fluid); }
+.biological-volume :is(.bf-manto,.bf-segmento-verme,.bf-mamifero,.bf-capsidio) { fill: var(--bio-tissue); }
+.biological-volume :is(.bf-copa:not(.bf-copa--seca),.bf-anfibio,.bf-folha,.bf-folha-planta) { fill: var(--bio-plant); }
+.biological-volume :is(.bf-concha,.bf-equino,.bf-ovo,.bf-blastomero,.bf-aminoacido) { fill: var(--bio-shell); }

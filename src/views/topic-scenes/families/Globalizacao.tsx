@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { SocioEconomicIllustration } from './SocioEconomicIllustration';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -110,6 +110,7 @@ function StationIcon({ k }: { k: number }) {
 }
 
 function SmartphoneChain({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const broken = active === 1;
   const seg = (i: number) => `M${STATIONS[i].x + 36} ${SY}C${STATIONS[i].x + 60} ${SY - 18} ${STATIONS[i + 1].x - 60} ${SY - 18} ${STATIONS[i + 1].x - 36} ${SY}`;
@@ -120,11 +121,11 @@ function SmartphoneChain({ active }: Scene) {
     <text x="30" y="40" className="bi-kicker">CADEIA GLOBAL DE VALOR</text>
     <rect x="22" y="54" width="576" height="164" rx="14" className="gz-sea" />
     {[[60, 78], [170, 206], [300, 72], [446, 204], [566, 80]].map(([x, y]) => <path key={x} d={`M${x} ${y}q6-4 12 0t12 0`} className="gz-wave" />)}
-    <ArrowHead id="gz-head-chain" />
+    <ArrowHead id={`${diagramId}-gz-head-chain`} />
 
     {[0, 1, 2].map(i => {
       const dead = broken && i >= 1;
-      return <motion.path key={i} d={seg(i)} className={dead ? 'gz-route-off' : 'gz-route'} markerEnd={dead ? undefined : 'url(#gz-head-chain)'}
+      return <motion.path key={i} d={seg(i)} className={dead ? 'gz-route-off' : 'gz-route'} markerEnd={dead ? undefined : `url(#${diagramId}-gz-head-chain)`}
         initial={false} animate={{ opacity: dead ? 0.55 : 1 }} transition={p(0.5)} />;
     })}
 
@@ -160,7 +161,7 @@ function SmartphoneChain({ active }: Scene) {
     {active === 2 && <motion.g initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={p(0.6, 0.3)}>
       <circle cx="452" cy="80" r="17" className="gz-stamp-new" />
       <g transform="translate(452 80)"><Chip s={0.55} /></g>
-      <path d="M466 92C486 102 500 106 508 100" className="gz-route-new" markerEnd="url(#gz-head-chain)" />
+      <path d="M466 92C486 102 500 106 508 100" className="gz-route-new" markerEnd={`url(#${diagramId}-gz-head-chain)`} />
       <text x="476" y="70" className="bi-hand-sm">nearshoring</text>
       <text x="476" y="84" className="bi-tiny">mais perto do mercado</text>
       <path d={`M${STATIONS[1].x + 30} ${SY - 18}C300 60 380 58 434 76`} className="gz-route-new" />
@@ -257,6 +258,7 @@ function Flow({ a, c, b, p, delay = 0, n = 3 }: { a: [number, number]; c: [numbe
 }
 
 function NetworkMap({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const grid = <g className="gz-grid">
     {[90, 150, 210, 270].map(y => <path key={y} d={`M24 ${y}H596`} />)}
@@ -267,7 +269,7 @@ function NetworkMap({ active }: Scene) {
     <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">{['NÓS E VAZIOS', 'CIDADES GLOBAIS', 'O FUNDO DO MAR', 'ONDE FICAM OS DATA CENTERS'][active]}</text>
-    <ArrowHead id="gz-head-net" />
+    <ArrowHead id={`${diagramId}-gz-head-net`} />
 
     {active === 0 && <g>
       {grid}
@@ -405,6 +407,7 @@ function Table({ dim = false }: { dim?: boolean }) {
 }
 
 function Multilateral({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const atTable = active === 1;
   const soloX = 150;
@@ -413,7 +416,7 @@ function Multilateral({ active }: Scene) {
     <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">{['UNILATERALISMO', 'MULTILATERALISMO', 'INSTITUIÇÕES DO PÓS-1945', 'PROBLEMAS SEM FRONTEIRA'][active]}</text>
-    <ArrowHead id="gz-head-multi" />
+    <ArrowHead id={`${diagramId}-gz-head-multi`} />
 
     {active <= 1 && <g>
       <rect x="30" y="58" width="236" height="232" rx="14" className={active === 0 ? 'gz-zone-on' : 'gz-zone'} />
@@ -429,7 +432,7 @@ function Multilateral({ active }: Scene) {
         <text x={soloX + 16} y={169.5} textAnchor="middle" className="gz-badge-text">A</text>
       </motion.g>
       {active === 0 && <motion.g initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.5, 0.4)}>
-        <motion.path d="M168 232C200 236 226 222 240 204" className="bi-arrow" markerEnd="url(#gz-head-multi)" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.8, 0.6)} />
+        <motion.path d="M168 232C200 236 226 222 240 204" className="bi-arrow" markerEnd={`url(#${diagramId}-gz-head-multi)`} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.8, 0.6)} />
         <path d="M58 98h128a8 8 0 0 1 8 8v26a8 8 0 0 1-8 8h-78l-10 10v-10H58a8 8 0 0 1-8-8v-26a8 8 0 0 1 8-8Z" className="gz-bubble" />
         <text x="66" y="115" className="bi-tiny">interesse nacional</text>
         <text x="66" y="129" className="bi-tiny">considerado urgente</text>
@@ -440,7 +443,7 @@ function Multilateral({ active }: Scene) {
         <text x="443" y="258" textAnchor="middle" className="bi-small bi-strong">instituições, tratados, fóruns</text>
         <text x="443" y="274" textAnchor="middle" className="bi-tiny">consenso ou regras compartilhadas</text>
         <g opacity="0.35"><Person x={soloX} y={170} s={1} coat="gz-coat-ghost" /></g>
-        <path d="M176 196C236 170 316 172 366 190" className="gz-route-new" markerEnd="url(#gz-head-multi)" />
+        <path d="M176 196C236 170 316 172 366 190" className="gz-route-new" markerEnd={`url(#${diagramId}-gz-head-multi)`} />
         <text x="148" y="126" textAnchor="middle" className="bi-hand-sm">o mesmo país</text>
         <text x="148" y="143" textAnchor="middle" className="bi-hand-sm">faz os dois</text>
       </motion.g>}
@@ -525,6 +528,7 @@ function Ring({ cx, cy, r, n, className }: { cx: number; cy: number; r: number; 
 }
 
 function EuropeanUnion({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const lit = active === 3 ? [3, 4] : [active];
   return <svg viewBox="0 0 620 744" className="se-economic-board" role="img" aria-label={`União Europeia: CECA de 1951, Tratado de Maastricht de 1992, o euro em recorte histórico de 2023–2025 e a crise de 2010, refugiados a partir de 2015 e o Brexit em 2020; recorte ${active + 1} em foco`}>
@@ -532,7 +536,7 @@ function EuropeanUnion({ active }: Scene) {
     <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">{['CARVÃO E AÇO', 'ALÉM DO COMÉRCIO', 'UMA MOEDA, SEM CÂMBIO PRÓPRIO', 'ONDE A INTEGRAÇÃO RANGE'][active]}</text>
-    <ArrowHead id="gz-head-ue" />
+    <ArrowHead id={`${diagramId}-gz-head-ue`} />
 
     {/* Linha do tempo fixa, proporcional aos anos. */}
     <path d={`M${yx(1951) - 16} 304H${yx(2020) + 16}`} className="gz-timeline" />
@@ -651,8 +655,8 @@ function EuropeanUnion({ active }: Scene) {
       <text x="160" y="72" textAnchor="middle" className="bi-panel-title">A PARTIR DE 2015: REFUGIADOS</text>
       <text x="36" y="148" className="bi-tiny">refugiados sírios</text>
       {[0, 1, 2].map(k => <motion.path key={k} d={`M36 ${162 + k * 10}H112`} className="gz-flow-line" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.5, 0.1 + k * 0.1)} />)}
-      <motion.path d="M112 172C140 172 146 132 176 130" className="bi-arrow" markerEnd="url(#gz-head-ue)" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.6, 0.6)} />
-      <motion.path d="M112 172C140 172 146 222 168 224" className="bi-arrow" markerEnd="url(#gz-head-ue)" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.6, 0.6)} />
+      <motion.path d="M112 172C140 172 146 132 176 130" className="bi-arrow" markerEnd={`url(#${diagramId}-gz-head-ue)`} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.6, 0.6)} />
+      <motion.path d="M112 172C140 172 146 222 168 224" className="bi-arrow" markerEnd={`url(#${diagramId}-gz-head-ue)`} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.6, 0.6)} />
       {[206, 234, 262].map(x => <House key={x} x={x} y={138} />)}
       <text x="234" y="160" textAnchor="middle" className="bi-tiny">solidariedade,</text>
       <text x="234" y="173" textAnchor="middle" className="bi-tiny">distribuição partilhada</text>

@@ -1,14 +1,15 @@
+import { IllustrationMaterials, illustrationMaterialStyle } from './IllustrationMaterials';
 import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import './HumanitiesPrototypes.css';
 
 export function PlateDefs({ id }: { id: string }) {
-  return <defs>
+  return <><IllustrationMaterials id={id} palette="ha"/><defs>
     <pattern id={`${id}-paper`} width="34" height="34" patternUnits="userSpaceOnUse"><path d="M2 8h7m13 14h8M8 29h3" className="ha-paper-grain"/></pattern>
     <pattern id={`${id}-hatch`} width="7" height="7" patternUnits="userSpaceOnUse"><path d="M0 7 7 0" className="ha-hatching"/></pattern>
     <marker id={`${id}-arrow`} viewBox="0 0 10 10" refX="8" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0 9 5 0 10" className="ha-arrow-tip"/></marker>
-  </defs>;
+  </defs></>;
 }
 
 export function Person({ x, y, kind = 'worker' }: { x: number; y: number; kind?: 'clergy' | 'noble' | 'worker' | 'merchant' }) {
@@ -56,7 +57,7 @@ function Bastille() {
 export function FrenchRevolutionPlate({ active }: { active: number }) {
   const id=useId().replace(/:/g,'');
   const transition=useSceneMotion();
-  return <svg className="ha-illustrated ha-france" viewBox="0 0 780 690" role="img" aria-label={`Revolução Francesa: estamentos, representação política, direitos, República e Terror; etapa ${active+1} destacada`}>
+  return <svg style={illustrationMaterialStyle(id)} className="ha-illustrated ha-france" viewBox="0 0 780 690" role="img" aria-label={`Revolução Francesa: estamentos, representação política, direitos, República e Terror; etapa ${active+1} destacada`}>
     <PlateDefs id={id}/>
     <rect x="5" y="5" width="770" height="680" rx="9" className="ha-paper"/>
     <rect x="5" y="5" width="770" height="680" rx="9" fill={`url(#${id}-paper)`}/>
@@ -132,7 +133,7 @@ function Landscape({mountain=false}:{mountain?:boolean}) {
 export function ClimatePlate({ active }: { active: number }) {
   const id=useId().replace(/:/g,'');
   const transition=useSceneMotion();
-  return <svg className="ha-illustrated ha-climate" viewBox="0 0 780 950" role="img" aria-label={`Chuva convectiva, orográfica e frontal: corte ilustrado da ascensão, resfriamento e condensação do ar; ${['convectiva','orográfica','frontal'][active]} selecionada`}>
+  return <svg style={illustrationMaterialStyle(id)} className="ha-illustrated ha-climate" viewBox="0 0 780 950" role="img" aria-label={`Chuva convectiva, orográfica e frontal: corte ilustrado da ascensão, resfriamento e condensação do ar; ${['convectiva','orográfica','frontal'][active]} selecionada`}>
     <PlateDefs id={id}/><rect x="5" y="5" width="770" height="940" rx="9" className="ha-paper"/><rect x="5" y="5" width="770" height="940" fill={`url(#${id}-paper)`}/>
     <text x="32" y="51" className="ha-title">O caminho do ar até a chuva</text>
     <path d="M31 72Q360 80 721 70" className="ha-title-stroke"/>

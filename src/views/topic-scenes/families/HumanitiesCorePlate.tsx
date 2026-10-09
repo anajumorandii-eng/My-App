@@ -1,3 +1,4 @@
+import { illustrationMaterialStyle } from './IllustrationMaterials';
 import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -81,7 +82,7 @@ function Projection({active,id}:{active:number;id:string}) {
 export function HumanitiesCorePlate({kind,active,children}:{kind:CoreKind;active:number;children:React.ReactElement<React.SVGProps<SVGSVGElement>>}) {
  const id=useId().replace(/:/g,'');
  const Drawing={industry:Industry,navigation:Navigation,colonization:Colonization,revolts:Revolts,projection:Projection}[kind];
- return <svg className="ha-illustrated hc-plate" viewBox="0 0 780 860" role="img" aria-label={children.props['aria-label']}>
+ return <svg style={illustrationMaterialStyle(id)} className="ha-illustrated hc-plate" viewBox="0 0 780 860" role="img" aria-label={children.props['aria-label']}>
    <PlateDefs id={id}/><rect x="5" y="5" width="770" height="850" rx="9" className="ha-paper"/><rect x="5" y="5" width="770" height="850" fill={`url(#${id}-paper)`}/>
    <text x="32" y="53" className="ha-title">{{industry:'Terra, vapor e trabalho',navigation:'O oceano vira caminho',colonization:'O engenho e o mundo atlântico',revolts:'O pacto colonial em disputa',projection:'Do globo à folha'}[kind]}</text>
    <path d="M31 72Q305 81 745 69" className="ha-title-stroke"/>

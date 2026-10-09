@@ -1,5 +1,5 @@
 import { GeoIllustration } from './GeoIllustration';
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { BRAZIL } from './GeografiaFisica';
@@ -143,6 +143,7 @@ function Dam({ x, y, s = 1 }: { x: number; y: number; s?: number }) {
 // o mesmo aquecimento em efeitos diferentes; o terceiro é o coração do
 // capítulo — o custo sai de um país só e o benefício se reparte por todos.
 export function GlobalCommons({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const feet = [
     'Efeitos por região: esquema, sem escala nem mapa real.',
@@ -161,8 +162,8 @@ export function GlobalCommons({ active }: Scene) {
       <circle cx="310" cy="62" r="15" className="ae-sun" />
       <text x="310" y="67" textAnchor="middle" className="ae-sun-text">+°C</text>
       <text x="310" y="96" textAnchor="middle" className="bi-hand-sm">um aquecimento, efeitos diferentes</text>
-      {[[84, 146], [210, 168], [372, 164], [504, 150]].map(([x, y], k) => <motion.path key={x} d={`M${310 + (x - 310) * 0.2} 106Q${(x + 310) / 2} 110 ${x} ${y - 20}`} className="ae-spread" markerEnd="url(#ae-head-0)" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.7, 0.2 + k * 0.12)} />)}
-      <ArrowHead id="ae-head-0" />
+      {[[84, 146], [210, 168], [372, 164], [504, 150]].map(([x, y], k) => <motion.path key={x} d={`M${310 + (x - 310) * 0.2} 106Q${(x + 310) / 2} 110 ${x} ${y - 20}`} className="ae-spread" markerEnd={`url(#${diagramId}-ae-head-0)`} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.7, 0.2 + k * 0.12)} />)}
+      <ArrowHead id={`${diagramId}-ae-head-0`} />
 
       <path d="M30 262H590" className="ae-ground" />
       <path d="M36 262L84 152L136 262Z" className="ae-mountain" />
@@ -203,11 +204,11 @@ export function GlobalCommons({ active }: Scene) {
         <path d="M244 112l-4 78M258 112v88M272 112l4 78M234 132h48M236 152h44M238 172h40" className="ae-net" />
         <path d="M258 112V84" className="ae-rope" />
       </motion.g>
-      <path d="M60 222H226" className="ae-flow-thick" markerEnd="url(#ae-head-1)" />
+      <path d="M60 222H226" className="ae-flow-thick" markerEnd={`url(#${diagramId}-ae-head-1)`} />
       <text x="60" y="242" className="bi-small">retirada: além da reposição</text>
-      <path d="M250 262H200" className="ae-flow-thin" markerEnd="url(#ae-head-1)" />
+      <path d="M250 262H200" className="ae-flow-thin" markerEnd={`url(#${diagramId}-ae-head-1)`} />
       <text x="60" y="270" className="bi-tiny">reposição natural</text>
-      <ArrowHead id="ae-head-1" />
+      <ArrowHead id={`${diagramId}-ae-head-1`} />
 
       <rect x="318" y="62" width="272" height="228" rx="14" className="bi-panel" />
       <text x="334" y="86" className="bi-panel-title">SERVIÇOS QUE O ECOSSISTEMA DÁ</text>
@@ -235,10 +236,10 @@ export function GlobalCommons({ active }: Scene) {
       {[92, 214, 336, 458, 570].map((x, k) => <g key={x}>
         <path d={`M${x - 34} 250h68`} className="ae-ground" />
         <Chimney x={x - 6} y={250} smoke={k === 0 ? 0.25 : 1} p={p} delay={0.6} />
-        <motion.path d={`M${x} 110V${146}`} className="ae-benefit" markerEnd="url(#ae-head-2)" initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: 1 }} transition={p(0.5, 0.9 + k * 0.1)} />
+        <motion.path d={`M${x} 110V${146}`} className="ae-benefit" markerEnd={`url(#${diagramId}-ae-head-2)`} initial={{ pathLength: 0, opacity: 0 }} animate={{ pathLength: 1, opacity: 1 }} transition={p(0.5, 0.9 + k * 0.1)} />
         <text x={x} y="270" textAnchor="middle" className={k === 0 ? 'bi-small bi-strong' : 'bi-small'}>{k === 0 ? 'quem reduz' : 'país'}</text>
       </g>)}
-      <ArrowHead id="ae-head-2" />
+      <ArrowHead id={`${diagramId}-ae-head-2`} />
       {[0, 1, 2].map(k => <motion.g key={k} initial={{ y: -16, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={p(0.5, 0.3 + k * 0.15)}>
         <Coin x={138 + k * 16} y={226} r={7} />
       </motion.g>)}
@@ -267,8 +268,8 @@ export function GlobalCommons({ active }: Scene) {
       <text x="490" y="186" className="bi-tiny">em desenvolvimento:</text>
       <text x="490" y="200" className="bi-tiny">pedem espaço</text>
       <text x="490" y="214" className="bi-tiny">para crescer</text>
-      <motion.path d="M462 246v-14" className="ae-benefit" markerEnd="url(#ae-head-3)" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.6, 1.6)} />
-      <ArrowHead id="ae-head-3" />
+      <motion.path d="M462 246v-14" className="ae-benefit" markerEnd={`url(#${diagramId}-ae-head-3)`} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.6, 1.6)} />
+      <ArrowHead id={`${diagramId}-ae-head-3`} />
       <text x="505" y="270" textAnchor="middle" className="bi-hand-sm">justiça × urgência</text>
     </motion.g>}
 
@@ -287,6 +288,7 @@ function Factory2({ x, y }: { x: number; y: number }) {
 // a pressão que chega de fora; os dois tratados lado a lado; o rio que corre
 // de um soberano para outro; o gelo que recua e abre disputa.
 export function EnvironmentalPower({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const clip = 'ae-br-clip';
   const [fx, fy] = onMap(-4, -62);
@@ -313,9 +315,9 @@ export function EnvironmentalPower({ active }: Scene) {
       {[[-2, -66], [-6, -58], [-3, -54], [-8, -64], [-9, -56], [1, -60]].map(([la, lo]) => { const [x, y] = onMap(la, lo); return <Tree key={`${la}${lo}`} x={x} y={y + 8} s={0.62} />; })}
       {[-48, 0, 48].map((dx, k) => <motion.g key={dx} initial={{ opacity: 0, y: -18 }} animate={{ opacity: 1, y: 0 }} transition={p(0.9, 0.3 + k * 0.2)}>
         <text x={fx + dx} y="76" textAnchor="middle" className="ae-co2">CO₂</text>
-        <path d={`M${fx + dx} 82V${fy - 6}`} className="ae-sink" markerEnd="url(#ae-head-4)" />
+        <path d={`M${fx + dx} 82V${fy - 6}`} className="ae-sink" markerEnd={`url(#${diagramId}-ae-head-4)`} />
       </motion.g>)}
-      <ArrowHead id="ae-head-4" />
+      <ArrowHead id={`${diagramId}-ae-head-4`} />
       <text x="96" y="216" textAnchor="middle" className="bi-small bi-strong">sumidouro de carbono</text>
       <text x="96" y="230" textAnchor="middle" className="bi-tiny">o Brasil como guardião</text>
 
@@ -425,6 +427,7 @@ export function EnvironmentalPower({ active }: Scene) {
 // e o Ibama vai até ela — e a curva do último recorte oscila com a lei parada.
 const PLOT = { x: 34, y: 60, w: 256, h: 236 };
 export function EnvironmentalLaw({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const river = `M${PLOT.x} 150C90 140 120 196 170 206S250 240 ${PLOT.x + PLOT.w} 250`;
   const rl = [0.8, 0.35, 0.2];
@@ -441,9 +444,9 @@ export function EnvironmentalLaw({ active }: Scene) {
     <text x="30" y="40" className="bi-kicker">POLÍTICA AMBIENTAL BRASILEIRA</text>
     <Steps n={4} active={active} />
 
-    <defs><clipPath id="ae-plot-clip"><rect x={PLOT.x} y={PLOT.y} width={PLOT.w} height={PLOT.h} rx="10" /></clipPath></defs>
+    <defs><clipPath id={`${diagramId}-ae-plot-clip`}><rect x={PLOT.x} y={PLOT.y} width={PLOT.w} height={PLOT.h} rx="10" /></clipPath></defs>
     <rect x={PLOT.x} y={PLOT.y} width={PLOT.w} height={PLOT.h} rx="10" className="ae-plot" />
-    <g clipPath="url(#ae-plot-clip)">
+    <g clipPath={`url(#${diagramId}-ae-plot-clip)`}>
       {[0, 1, 2, 3, 4, 5, 6, 7].map(k => <Tree key={k} x={62 + (k % 4) * 30} y={94 + Math.floor(k / 4) * 28} s={0.6} />)}
       {[0, 1, 2, 3].map(k => <path key={k} d={`M${60 + k * 24} 262h16M${66 + k * 24} 276h16`} className="ae-pasture" />)}
       <ellipse cx="232" cy="106" rx="30" ry="22" className="ae-contour" />
@@ -509,8 +512,8 @@ export function EnvironmentalLaw({ active }: Scene) {
         <circle cx="-12" cy="6" r="4" className="ae-wheel" /><circle cx="4" cy="6" r="4" className="ae-wheel" />
       </g>
       <text x="530" y="298" textAnchor="end" className="bi-small bi-strong">Ibama</text>
-      <motion.path d="M536 266Q300 300 120 136" className="ae-route" markerEnd="url(#ae-head-5)" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(1.2, 1.8)} />
-      <ArrowHead id="ae-head-5" />
+      <motion.path d="M536 266Q300 300 120 136" className="ae-route" markerEnd={`url(#${diagramId}-ae-head-5)`} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(1.2, 1.8)} />
+      <ArrowHead id={`${diagramId}-ae-head-5`} />
     </motion.g>}
 
     {active === 3 && <motion.g key="tensao" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4)}>
@@ -538,6 +541,7 @@ export function EnvironmentalLaw({ active }: Scene) {
 // fatia fóssil de 0 a 100%; o resumo só diz "mais de 80%" para o mundo e não
 // dá número para o Brasil, então a cena marca o limiar citado e nada mais.
 export function EnergyMatrix({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const feet = [
     'Conjuntos esquemáticos: o tamanho dos círculos não mede participação.',
@@ -604,12 +608,12 @@ export function EnergyMatrix({ active }: Scene) {
         <g transform={`translate(64 ${y})`}>{icon}</g>
         <text x="90" y={y + 4} className="bi-small bi-strong">{label}</text>
         {uses.map((u, j) => <motion.g key={u} initial={{ opacity: 0, x: -10 }} animate={{ opacity: 1, x: 0 }} transition={p(0.5, 0.9 + k * 0.35 + j * 0.12)}>
-          {j === 0 && <path d={`M172 ${y}H258`} className="ae-link" markerEnd="url(#ae-head-6)" />}
+          {j === 0 && <path d={`M172 ${y}H258`} className="ae-link" markerEnd={`url(#${diagramId}-ae-head-6)`} />}
           <rect x={266 + j * 106} y={y - 13} width="98" height="24" rx="12" className="ae-use" />
           <text x={315 + j * 106} y={y + 3} textAnchor="middle" className="bi-tiny">{u}</text>
         </motion.g>)}
       </g>)}
-      <ArrowHead id="ae-head-6" />
+      <ArrowHead id={`${diagramId}-ae-head-6`} />
     </motion.g>}
 
     {active === 2 && <motion.g key="despacho" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4)}>
@@ -680,6 +684,7 @@ const WORLD = [
 ];
 const WORLD_TOTAL = WORLD.reduce((s, x) => s + x.w, 0);
 export function WorldElectricity({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   let acc = 30;
   const segs = WORLD.map(s => { const w = (s.w / WORLD_TOTAL) * 560; const seg = { ...s, x: acc, px: w }; acc += w; return seg; });
@@ -746,8 +751,8 @@ export function WorldElectricity({ active }: Scene) {
       <text x="46" y="210" className="bi-small bi-strong">Fukushima · 2011</text>
       <text x="46" y="225" className="bi-tiny">tsunami danifica o</text>
       <text x="46" y="238" className="bi-tiny">resfriamento do reator</text>
-      <motion.path d="M150 256h56" className="ae-link" markerEnd="url(#ae-head-7)" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.5, 0.3)} />
-      <ArrowHead id="ae-head-7" />
+      <motion.path d="M150 256h56" className="ae-link" markerEnd={`url(#${diagramId}-ae-head-7)`} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.5, 0.3)} />
+      <ArrowHead id={`${diagramId}-ae-head-7`} />
       <rect x="214" y="102" width="376" height="192" rx="14" className="bi-panel" />
       <text x="230" y="126" className="bi-panel-title">ALEMANHA · ENERGIEWENDE</text>
       {[256, 300].map((x, k) => <motion.g key={x} initial={{ opacity: 1 }} animate={{ opacity: 0.3 }} transition={p(0.6, 0.8 + k * 0.1)}>
@@ -794,6 +799,7 @@ export function WorldElectricity({ active }: Scene) {
 // A barragem a montante é desenhada no corte porque é o método, e não só a
 // data, que o capítulo cobra: cada alteamento se apoia no próprio rejeito.
 export function MineralGeography({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const [cx, cy] = onMap(-6, -50.2);
   const [qx, qy] = onMap(-20.2, -43.8);
@@ -825,8 +831,8 @@ export function MineralGeography({ active }: Scene) {
       <text x="334" y="86" className="bi-panel-title">ESCUDO BRASILEIRO · CORTE</text>
       {[0, 1, 2, 3, 4].map(k => <motion.rect key={k} x="344" y={236 - k * 24} width="220" height="20" rx="3" className={k % 2 === 0 ? 'ae-layer-iron' : 'ae-layer-rock'}
         initial={{ opacity: 0, x: -20 }} animate={{ opacity: 1, x: 0 }} transition={p(0.5, 0.4 + k * 0.25)} />)}
-      <path d="M334 250V132" className="ae-link" markerEnd="url(#ae-head-8)" />
-      <ArrowHead id="ae-head-8" />
+      <path d="M334 250V132" className="ae-link" markerEnd={`url(#${diagramId}-ae-head-8)`} />
+      <ArrowHead id={`${diagramId}-ae-head-8`} />
       <text x="344" y="276" className="bi-tiny">formações antigas; bilhões de anos</text>
       <text x="344" y="116" className="bi-tiny">concentração → teor de ferro elevado</text>
       <text x="30" y="316" className="bi-hand-sm">a geologia decide onde está o minério</text>
@@ -844,9 +850,9 @@ export function MineralGeography({ active }: Scene) {
         <text x="92" y={y} className="bi-small bi-strong">{a}</text>
         <text x="92" y={y + 15} className="bi-tiny">{b}</text>
         {c && <text x="92" y={y + 28} className="bi-tiny">{c}</text>}
-        <motion.path d={`M322 ${y + 5}C380 ${y + 5} 400 180 440 180`} className="ae-link" markerEnd="url(#ae-head-9)" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.7, 0.8 + k * 0.25)} />
+        <motion.path d={`M322 ${y + 5}C380 ${y + 5} 400 180 440 180`} className="ae-link" markerEnd={`url(#${diagramId}-ae-head-9)`} initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.7, 0.8 + k * 0.25)} />
       </motion.g>)}
-      <ArrowHead id="ae-head-9" />
+      <ArrowHead id={`${diagramId}-ae-head-9`} />
       <g transform="translate(486 180)">
         <rect x="-34" y="-50" width="68" height="100" rx="10" className="ae-battery" />
         <rect x="-12" y="-58" width="24" height="10" rx="3" className="ae-battery" />
@@ -866,8 +872,8 @@ export function MineralGeography({ active }: Scene) {
         initial={{ opacity: 0, y: -8 }} animate={{ opacity: 1, y: 0 }} transition={p(0.3, 0.2 + k * 0.2)} />)}
       <text x="176" y="112" className="bi-tiny">cada alteamento avança</text>
       <text x="176" y="126" className="bi-tiny">sobre o próprio rejeito</text>
-      <path d="M186 132L150 156" className="ae-link" markerEnd="url(#ae-head-10)" />
-      <ArrowHead id="ae-head-10" />
+      <path d="M186 132L150 156" className="ae-link" markerEnd={`url(#${diagramId}-ae-head-10)`} />
+      <ArrowHead id={`${diagramId}-ae-head-10`} />
       <motion.path d="M190 188l8 12-6 10 8 12" className="ae-crack" initial={{ pathLength: 0 }} animate={{ pathLength: 1 }} transition={p(0.3, 1)} />
       {[470, 500].map(x => <House key={x} x={x} y={252} s={0.9} />)}
       <motion.path d="M200 262C260 250 300 262 360 258S470 262 590 256V262H200Z" className="ae-mud" initial={{ scaleX: 0 }} animate={{ scaleX: 1 }} transition={p(0.9, 1.1)} style={{ transformBox: 'fill-box', transformOrigin: 'left' }} />

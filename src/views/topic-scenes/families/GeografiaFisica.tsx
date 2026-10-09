@@ -1,5 +1,5 @@
 import { GeoIllustration } from './GeoIllustration';
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 
@@ -196,7 +196,7 @@ function BrazilBase({ id }: { id: string }) {
 
 export function ClimateMap({ active }: Scene) {
   const p = usePaced();
-  const clip = 'gf-clip-clima';
+  const clip = useId().replace(/:/g, '') + '-clima';
   const zone = (d: string, cls: string, on: boolean) => <motion.path d={d} className={cls} clipPath={`url(#${clip})`} initial={false}
     animate={{ opacity: on ? 1 : 0.35 }} transition={p(0.5)} />;
   return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Climas do Brasil: equatorial na Amazônia, tropical e semiárido, subtropical no Sul; ${['equatorial', 'tropical e semiárido', 'subtropical'][active]} em foco`}>
@@ -251,7 +251,7 @@ export function ClimateMap({ active }: Scene) {
 
 export function DomainsMap({ active }: Scene) {
   const p = usePaced();
-  const clip = 'gf-clip-dominios';
+  const clip = useId().replace(/:/g, '') + '-dominios';
   const focus = ['amazonico', 'cerrado', 'caatinga'] as const;
   const region = (d: string, cls: string, idx: number) => <motion.path d={d} className={cls} clipPath={`url(#${clip})`} initial={false}
     animate={{ opacity: idx < 0 ? 0.5 : active === idx ? 1 : 0.4 }} transition={p(0.5)} />;

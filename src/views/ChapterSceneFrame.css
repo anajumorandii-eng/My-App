@@ -48,3 +48,29 @@
   .vs-chapter-scene .vs-chapter-scene-tools>.vs-object-icon { width: 64px; height: 64px; flex-basis: 64px; }
   .vs-chapter-scene .vs-chapter-scene-tools>div { flex-basis: calc(100% - 74px); }
 }
+
+/* A comparação preserva os controles e a escala de leitura: só distribui os
+   blocos em colunas quando há largura suficiente para as duas informações. */
+.vs-chapter-scene-tools button[aria-pressed="true"] { background: var(--hu-wash); border-color: var(--chapter-accent); }
+.vs-chapter-scene--comparison .vs-chapter-scene-tools { padding: 12px 16px; gap: 10px; }
+.vs-chapter-scene--comparison .vs-chapter-scene-tools>.vs-object-icon { width: 54px; height: 54px; flex-basis: 54px; }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene--comparison .tc-scene { padding: 16px; gap: 12px; }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene--comparison .tc-scene>header h4 { font-size: clamp(22px,2vw,28px); }
+@media(min-width:960px) {
+  .vs-chapter-scene--comparison :is(.bp-scene,.bp-process) { grid-template-columns: minmax(0,1.65fr) minmax(280px,1fr); align-items: start; }
+  .vs-chapter-scene--comparison :is(.bp-scene,.bp-process)>header { grid-column: 1 / -1; }
+  .vs-chapter-scene--comparison :is(.bp-board,.bp-process-figure) { grid-column: 1; grid-row: 2; }
+  .vs-chapter-scene--comparison :is(.bp-stepper,.bp-process-tabs) { grid-column: 1; grid-row: 3; }
+  .vs-chapter-scene--comparison :is(.bp-detail,.bp-process-detail) { grid-column: 2; grid-row: 2 / 4; grid-template-columns: 1fr; }
+  .vs-chapter-scene--comparison .bp-board svg { width: 100%; height: auto; }
+}
+@media(min-width:600px) {
+  .vs-chapter-scene--comparison .hu-comparison { grid-template-columns: minmax(0,1fr) minmax(0,1fr); gap: 10px; }
+  .vs-chapter-scene--comparison .hu-comparison article { padding: 12px; }
+}
+@media(max-width:660px) {
+  .vs-chapter-scene--comparison .vs-chapter-scene-tools button { width: auto; flex: 1 1 130px; }
+}
+@media(min-width:900px) {
+  .vs-chapter-scene--comparison[data-chapter-subject="Biologia"] .qf-figure { width: min(100%,820px); justify-self: center; }
+}

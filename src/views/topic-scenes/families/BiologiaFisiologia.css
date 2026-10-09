@@ -49,3 +49,10 @@
   .tc-scene .bp-board svg, .tc-scene .bp-process-figure svg { width: 760px; max-width: none; }
   .bp-pan-hint { display: block; margin: .3rem 0 .75rem; color: var(--vs-dim); font: 600 .75rem/1.4 system-ui, sans-serif; }
 }
+
+/* Luz e volume nos tecidos; vasos e setas conservam as cores funcionais. */
+.bp-board { --bp-tissue-light: #fae5d9; --bp-tissue-mid: #e5ada0; --bp-tissue-shade: #b76772; --bp-fluid-light: #e7eeea; --bp-fluid-shade: #95b7bc; }
+.dark .bp-board { --bp-tissue-light: #bc8c81; --bp-tissue-mid: #84535d; --bp-tissue-shade: #4c3546; --bp-fluid-light: #739b9d; --bp-fluid-shade: #334f5c; }
+.bp-board :is(.bp-organ,.bp-kidney,.bp-gland,.bp-gland-node,.bp-muscle) { fill: var(--bp-tissue-fill); }
+.bp-board :is(.bp-terminal,.bp-post,.bp-cord,.bp-reflex-node) { fill: var(--bp-fluid-fill); }
+.bp-board .bp-focus { stroke-width: 3.5; }

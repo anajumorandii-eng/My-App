@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useId, useState } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
@@ -166,12 +166,13 @@ function ProjectionComparison({ active, t }: { active: number; t: SceneTransitio
 }
 
 function IndustrialRevolution({ active, t }: { active: number; t: SceneTransition }) {
+  const uid = useId().replace(/:/g, '');
   // Três trabalhadores saem do campo cercado e entram na fábrica: é a
   // relação que o capítulo ensina (cercamento → mão de obra disponível), e
   // por isso o movimento só acontece a partir do segundo recorte.
   const workers = [60, 90, 120];
   return <HumanitiesCorePlate kind="industry" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Revolução Industrial: cercamentos geram trabalho assalariado e capital; condições fabris documentadas e pressão social contribuem para leis fabris; recorte ${active + 1} destacado`}>
-    <defs><marker id="hg-arrowhead" markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4 0 8Z" className="hg-arrowhead" /></marker></defs>
+    <defs><marker id={`${uid}-hg-arrowhead`} markerWidth="8" markerHeight="8" refX="7" refY="4" orient="auto"><path d="M0 0L8 4 0 8Z" className="hg-arrowhead" /></marker></defs>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
     <text x="28" y="39" className="hg-kicker">INGLATERRA · TRABALHO, FÁBRICA E REFORMA</text>
     <g className={active === 0 ? 'hg-process-active' : 'hg-process'}>
@@ -179,7 +180,7 @@ function IndustrialRevolution({ active, t }: { active: number; t: SceneTransitio
       <path d="M150 150V248M146 172h8M146 214h8" className="hg-fence" />
       <text x="90" y="277" textAnchor="middle" className="hg-label">cercamentos</text>
     </g>
-    <path d="M162 205H234" className="hg-arrow" />
+    <path d="M162 205H234" className="hg-arrow" markerEnd={`url(#${uid}-hg-arrowhead)`} />
     <text x="198" y="170" textAnchor="middle" className="hg-small">mão de obra</text>
     <text x="198" y="185" textAnchor="middle" className="hg-small">+ capital</text>
     <g className={active === 1 ? 'hg-process-active' : 'hg-process'}>
@@ -200,7 +201,7 @@ function IndustrialRevolution({ active, t }: { active: number; t: SceneTransitio
     <motion.g initial={false} animate={{ x: active >= 1 ? 96 : 0, opacity: active >= 1 ? 0 : 1 }} transition={paced(t, 1.1, 0.2)}>
       <circle cx="178" cy="226" r="7" className="hg-coin" /><text x="178" y="229.5" textAnchor="middle" className="hg-coin-mark">£</text>
     </motion.g>
-    <path d="M390 205H446" className="hg-arrow" />
+    <path d="M390 205H446" className="hg-arrow" markerEnd={`url(#${uid}-hg-arrowhead)`} />
     <text x="418" y="185" textAnchor="middle" className="hg-small">investigação</text>
     <g className={active === 2 ? 'hg-process-active' : 'hg-process'}>
       <path d="M458 118h109v132H458z" className="hg-document" />
@@ -380,45 +381,56 @@ export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
   const [active, setActive] = useState(0);
   const [comparing, setComparing] = useState(false);
   const [comparisonIndex, setComparisonIndex] = useState(1);
-  const [showComparison, setShowComparison] = useState(false);
+  const panelId = useId();
+  const locatePanel = (panel: number) => {
+    const element = document.getElementById(`${panelId}-${panel}`);
+    element?.focus();
+    element?.scrollIntoView?.({ block: 'nearest', inline: 'nearest' });
+  };
   const otherIndex = comparisonIndex === active ? (active + 1) % entry.items.length : comparisonIndex;
-  const displayed = comparing && showComparison ? otherIndex : active;
+  const displayed = active;
   const transition = useSceneMotion();
   const item = entry.items[active];
   const other = entry.items[otherIndex];
   const history = entry.chapterId.startsWith('summary-historia-');
+  const renderDrawing = (selected: number) => (SELF_PACED[entry.chapterId] ? React.createElement(SELF_PACED[entry.chapterId], { active: selected })
+        : FISICA[entry.chapterId] ? React.createElement(FISICA[entry.chapterId], { active: selected })
+        : entry.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial' ? <Navigations active={selected} t={transition} />
+        : entry.chapterId === 'summary-historia-a-montagem-da-colonizacao' ? <Colonization active={selected} t={transition} />
+        : entry.chapterId === 'summary-historia-a-crise-do-antigo-sistema-colonial' ? <ColonialRevolts active={selected} t={transition} />
+        : entry.chapterId === 'summary-historia-revolucao-francesa' ? <FrenchRevolution active={selected} t={transition} />
+        : entry.chapterId === 'summary-historia-revolucao-industrial' ? <IndustrialRevolution active={selected} t={transition} />
+          : entry.chapterId === 'summary-geografia-dinamica-climatica' ? <RainMechanisms active={selected} t={transition} />
+            : <ProjectionComparison active={selected} t={transition} />);
   return <section className="tc-scene hg-scene" aria-label={entry.question}>
     <header><small>CRIVO · {HEADERS[entry.chapterId] ?? (history ? 'cronologia e causalidade' : FISICA[entry.chapterId] || entry.chapterId === 'summary-geografia-dinamica-climatica' ? 'geografia física' : 'cartografia comparada')}</small><h4>{entry.question}</h4></header>
     <div className="hu-recortes" role="group" aria-label="Selecione um recorte da prancha">
-      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => { setActive(index); setShowComparison(false); }} initial={false} animate={{ y: active === index ? -2 : 0 }} transition={transition}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span>{candidate.label}</span></motion.button>)}
+      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => { setActive(index); }} initial={false} animate={{ y: active === index ? -2 : 0 }} transition={transition}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span>{candidate.label}</span></motion.button>)}
     </div>
-    <div className="hu-toolbar"><span>{comparing ? `Na prancha: ${entry.items[displayed].label}` : `${active + 1} de ${entry.items.length} recortes · ${item.label}`}</span>
-      {entry.items.length > 1 && <button type="button" className="hu-action" aria-pressed={comparing} onClick={() => { setComparing(!comparing); setShowComparison(false); }}>{comparing ? 'Fechar comparação' : 'Comparar recortes'}</button>}
+    <div className="hu-toolbar"><span>{comparing ? `A · ${item.label} / B · ${other.label}` : `${active + 1} de ${entry.items.length} recortes · ${item.label}`}</span>
+      {entry.items.length > 1 && <button type="button" className="hu-action" aria-pressed={comparing} onClick={() => { setComparing(!comparing); }}>{comparing ? 'Fechar comparação' : 'Comparar recortes'}</button>}
     </div>
-    <div className="hg-figure" role="region" tabIndex={0} aria-label="Prancha visual: deslize para ver a figura inteira; com teclado, use as setas" onKeyDown={event => {
+    <div className={`hg-figure-group${comparing ? ' hg-figure-group--pair' : ''}`}>
+      {(comparing ? [active, otherIndex] : [displayed]).map((selected, panel) => <div className="hg-figure-panel" key={panel}>
+        {comparing && <h5>{panel === 0 ? 'A' : 'B'} · {entry.items[selected].label}</h5>}
+    <div id={`${panelId}-${panel}`} className="hg-figure" role="region" tabIndex={0} aria-label={`${comparing ? `Painel ${panel === 0 ? 'A' : 'B'} · ${entry.items[selected].label}. ` : ''}Prancha visual: deslize para ver a figura inteira; com teclado, use as setas`} onKeyDown={event => {
       if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
       event.preventDefault();
       event.currentTarget.scrollLeft += event.key === 'ArrowRight' ? 120 : -120;
     }}>
-      {SELF_PACED[entry.chapterId] ? React.createElement(SELF_PACED[entry.chapterId], { active: displayed })
-        : FISICA[entry.chapterId] ? React.createElement(FISICA[entry.chapterId], { active: displayed })
-        : entry.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial' ? <Navigations active={displayed} t={transition} />
-        : entry.chapterId === 'summary-historia-a-montagem-da-colonizacao' ? <Colonization active={displayed} t={transition} />
-        : entry.chapterId === 'summary-historia-a-crise-do-antigo-sistema-colonial' ? <ColonialRevolts active={displayed} t={transition} />
-        : entry.chapterId === 'summary-historia-revolucao-francesa' ? <FrenchRevolution active={displayed} t={transition} />
-        : entry.chapterId === 'summary-historia-revolucao-industrial' ? <IndustrialRevolution active={displayed} t={transition} />
-          : entry.chapterId === 'summary-geografia-dinamica-climatica' ? <RainMechanisms active={displayed} t={transition} />
-            : <ProjectionComparison active={displayed} t={transition} />}
+      {renderDrawing(selected)}
+    </div>
+      </div>)}
     </div>
     <p className="hg-pan-hint">Deslize a prancha para ver toda a figura. Com teclado, use as setas.</p>
     {comparing ? <div className="hu-comparison" role="group" aria-label="Comparação entre recortes">
       <article><small>Recorte A · selecionado acima</small><h5>{item.label}</h5><p>{item.claim}</p>
-        <button type="button" className="hu-action" aria-pressed={!showComparison} onClick={() => setShowComparison(false)}>Ver A na prancha</button>
+        <button type="button" className="hu-action" onClick={() => locatePanel(0)}>Localizar painel A</button>
         <Source item={item} /></article>
-      <article><label>Recorte B<select aria-label="Recorte B" value={otherIndex} onChange={event => { setComparisonIndex(Number(event.target.value)); setShowComparison(true); }}>
+      <article><label>Recorte B<select aria-label="Recorte B" value={otherIndex} onChange={event => setComparisonIndex(Number(event.target.value))}>
         {entry.items.map((candidate, index) => index !== active && <option value={index} key={candidate.label}>{candidate.label}</option>)}
       </select></label><h5>{other.label}</h5><p>{other.claim}</p>
-        <button type="button" className="hu-action" aria-pressed={showComparison} onClick={() => setShowComparison(true)}>Ver B na prancha</button>
+        <button type="button" className="hu-action" onClick={() => locatePanel(1)}>Localizar painel B</button>
         <Source item={other} /></article>
     </div> : <div className="hg-detail" role="status" aria-live="polite"><strong>{item.label}</strong><p>{item.claim}</p><Source item={item} /></div>}
     {!history && entry.nota && <p className="hg-note">{entry.nota}</p>}

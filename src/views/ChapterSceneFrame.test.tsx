@@ -18,13 +18,13 @@ describe('exploração em foco', () => {
       const summary = screen.getByText('Fontes da cena');
       summary.focus();
       fireEvent.keyDown(document, { key: 'Tab' });
-      expect(toggle).toHaveFocus();
+      expect(screen.getByRole('button', { name: 'Comparar painéis' })).toHaveFocus();
       fireEvent.keyDown(document, { key: 'Tab', shiftKey: true });
       expect(summary).toHaveFocus();
       container.querySelector('details')!.open = true;
       screen.getByRole('button', { name: 'Abrir fonte' }).focus();
       fireEvent.keyDown(document, { key: 'Tab' });
-      expect(toggle).toHaveFocus();
+      expect(screen.getByRole('button', { name: 'Comparar painéis' })).toHaveFocus();
       fireEvent.keyDown(document, { key: 'Escape' });
     } finally { rects.mockRestore(); }
   });
@@ -45,6 +45,18 @@ describe('exploração em foco', () => {
     expect(screen.getByRole('button', { name: 'Explorar em foco' })).toHaveFocus();
     expect(outside.inert).toBe(false);
     expect(document.body.style.overflow).toBe(previousOverflow);
+  });
+  it('compara os painéis sem reiniciar medidas e reseta o layout ao trocar de capítulo', () => {
+    const { container, rerender } = render(<ChapterSceneFrame {...input}><Scene /></ChapterSceneFrame>);
+    const measure = screen.getByRole('textbox');
+    fireEvent.change(measure, { target: { value: '19' } });
+    fireEvent.click(screen.getByRole('button', { name: 'Comparar painéis' }));
+    expect(container.querySelector('.vs-chapter-scene')).toHaveClass('vs-chapter-scene--comparison');
+    expect(screen.getByRole('button', { name: 'Comparar painéis' })).toHaveAttribute('aria-pressed', 'true');
+    expect(screen.getByRole('textbox')).toBe(measure);
+    expect(measure).toHaveValue('19');
+    rerender(<ChapterSceneFrame {...input} chapterId="capitulo-b"><Scene /></ChapterSceneFrame>);
+    expect(screen.getByRole('button', { name: 'Comparar painéis' })).toHaveAttribute('aria-pressed', 'false');
   });
   it('libera a interface quando o capítulo muda durante o foco', () => {
     const { rerender } = render(<ChapterSceneFrame {...input}><Scene /></ChapterSceneFrame>);

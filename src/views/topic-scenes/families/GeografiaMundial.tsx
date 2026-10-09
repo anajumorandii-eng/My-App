@@ -1,5 +1,5 @@
 import { GeopoliticalPlate } from './GeopoliticalIllustration';
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { Arrow, ArrowHead, Person, type Scene } from './cenaKit';
@@ -44,11 +44,12 @@ const CLIMATE_CHIPS = [
 ];
 
 function ClimateFactorsDetail({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const lit = [[0], [1], [2, 3], [0, 1, 2, 3, 4]][active] ?? [];
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.2 : 0) });
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Fatores do clima em corte esquemático: latitude, altitude, continentalidade, correntes marítimas e relevo agindo juntos sobre o mesmo ponto; recorte ${active + 1} em foco`}>
-    <ArrowHead id="gm-clima-head" />
+    <ArrowHead id={`${uid}-gm-clima-head`} />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">FATORES DO CLIMA · CORTE SEM ESCALA</text>
 
@@ -59,9 +60,9 @@ function ClimateFactorsDetail({ active }: Scene) {
     {[522, 540].map(x => <path key={x} d={`M${x} 219v-12l7-6 7 6v12Z`} className="bi-house" />)}
 
     <motion.g initial={false} animate={{ opacity: active === 0 || active === 3 ? 1 : 0.4 }} transition={p(0.4)}>
-      <defs><clipPath id="gm-globe-clip"><circle cx="84" cy="108" r="36" /></clipPath></defs>
+      <defs><clipPath id={`${uid}-gm-globe-clip`}><circle cx="84" cy="108" r="36" /></clipPath></defs>
       <circle cx="84" cy="108" r="36" className="gm-globe" />
-      <g clipPath="url(#gm-globe-clip)">
+      <g clipPath={`url(#${uid}-gm-globe-clip)`}>
         <rect x="40" y="70" width="90" height="14" className="gm-cold-cap" />
         <rect x="40" y="132" width="90" height="14" className="gm-cold-cap" />
         <motion.rect x="40" width="90" className="gm-warm-band" initial={false}
@@ -88,7 +89,7 @@ function ClimateFactorsDetail({ active }: Scene) {
       <text x="420" y="114" className="bi-hand-sm">menos calor</text>
     </motion.g>
 
-    {[246, 258].map((y, k) => <motion.path key={y} d={`M${130 - k * 12} ${y}C100 ${y - 6} 60 ${y + 6} ${24 + k * 8} ${y}`} className="gm-current" markerEnd="url(#gm-clima-head)" initial={false}
+    {[246, 258].map((y, k) => <motion.path key={y} d={`M${130 - k * 12} ${y}C100 ${y - 6} 60 ${y + 6} ${24 + k * 8} ${y}`} className="gm-current" markerEnd={`url(#${uid}-gm-clima-head)`} initial={false}
       animate={{ pathLength: active === 2 ? [0, 1] : 1, opacity: active === 2 || active === 3 ? 1 : 0.35 }} transition={p(1, active === 2 ? k * 0.25 : 0)} />)}
     <text x="80" y="277" textAnchor="middle" className="gm-sea-text">corrente fria</text>
     <motion.g {...show(2)}>
@@ -105,7 +106,7 @@ function ClimateFactorsDetail({ active }: Scene) {
     </motion.g>
 
     <motion.g {...show(3)}>
-      <Arrow d="M160 198C230 188 262 150 300 104S410 64 468 170" on={active === 3} p={p} head="gm-clima-head" delay={0.2} />
+      <Arrow d="M160 198C230 188 262 150 300 104S410 64 468 170" on={active === 3} p={p} head={`${uid}-gm-clima-head`} delay={0.2} />
       <path d="M340 72a10 10 0 0 1 18-6a12 12 0 0 1 22 4a8 8 0 0 1 0 16h-38a8 8 0 0 1-2-14Z" className="gm-cloud" />
       {[348, 360, 372].map((x, k) => <motion.path key={x} d={`M${x} 94l-4 12`} className="gm-rain" initial={false}
         animate={active === 3 ? { y: [-8, 0], opacity: [0, 1] } : { y: 0, opacity: 0 }} transition={p(0.6, 0.6 + k * 0.15)} />)}
@@ -142,10 +143,11 @@ const CARDS = [
 ];
 
 function StructureBlockDetail({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.3 : 0) });
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Estruturas do relevo em bloco da América do Sul: dobras modernas nos Andes, bacia sedimentar amazônica e cráton do Escudo Brasileiro; recorte ${active + 1} em foco`}>
-    <ArrowHead id="gm-geo-head" />
+    <ArrowHead id={`${uid}-gm-geo-head`} />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">AMÉRICA DO SUL, OESTE → LESTE · SEM ESCALA</text>
 
@@ -171,9 +173,9 @@ function StructureBlockDetail({ active }: Scene) {
       <text x="495" y="116" textAnchor="middle" className="bi-hand-sm">erosão: relevo baixo</text>
     </motion.g>
 
-    <defs><clipPath id="gm-basin-clip"><path d="M262 198Q346 208 430 200Q396 262 318 256Q274 238 262 198Z" /></clipPath></defs>
+    <defs><clipPath id={`${uid}-gm-basin-clip`}><path d="M262 198Q346 208 430 200Q396 262 318 256Q274 238 262 198Z" /></clipPath></defs>
     <path d="M262 198Q346 208 430 200Q396 262 318 256Q274 238 262 198Z" className="gm-basin" />
-    {[0, 1, 2, 3].map(k => <motion.path clipPath="url(#gm-basin-clip)" key={k} d={`M${272 + k * 5} ${246 - k * 12}Q346 ${254 - k * 12} ${420 - k * 4} ${238 - k * 12}`} className={`gm-strata gm-strata-${k % 2}`}
+    {[0, 1, 2, 3].map(k => <motion.path clipPath={`url(#${uid}-gm-basin-clip)`} key={k} d={`M${272 + k * 5} ${246 - k * 12}Q346 ${254 - k * 12} ${420 - k * 4} ${238 - k * 12}`} className={`gm-strata gm-strata-${k % 2}`}
       initial={false} animate={{ pathLength: active === 1 ? [0, 1] : 1, opacity: active === 1 ? [0, 1] : 0.7 }} transition={p(0.6, active === 1 ? 0.3 + k * 0.35 : 0)} />)}
     <motion.g {...show(1)}>
       <path d="M300 172q10-7 20 0t20 0t20 0t20 0" className="gm-wave" />
@@ -188,7 +190,7 @@ function StructureBlockDetail({ active }: Scene) {
     <motion.path d="M198 200Q192 150 196 96" className="gm-magma" initial={false} animate={{ pathLength: active === 2 ? [0, 1] : 1, opacity: active === 2 ? 1 : 0.4 }} transition={p(1, 0.9)} />
     <motion.g {...show(2)}>
       <motion.g initial={false} animate={{ x: active === 2 ? [-14, 0] : 0 }} transition={p(1.2, 0.2)}>
-        <Arrow d="M140 243L196 264" on={active === 2} p={p} head="gm-geo-head" delay={0.2} />
+        <Arrow d="M140 243L196 264" on={active === 2} p={p} head={`${uid}-gm-geo-head`} delay={0.2} />
       </motion.g>
       {[0, 1, 2].map(k => <motion.circle key={k} r={5 + k * 2} className="gm-smoke" initial={false}
         animate={active === 2 ? { cx: [196, 204 + k * 12], cy: [88, 78 - k * 8], opacity: [0, 1] } : { cx: 196, cy: 80, opacity: 0 }} transition={p(0.8, 1.6 + k * 0.2)} />)}
@@ -252,18 +254,19 @@ function BiomeIcon({ k }: { k: number }) {
 }
 
 function BiomeBeltDetail({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const on = (k: number) => (active === 0 && k === 0) || (active === 1 && k === 2) || (active === 2 && k >= 3);
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.3 : 0) });
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Biomas por latitude do equador ao polo: floresta tropical sob a chuva da convergência, deserto sob o ar seco que desce perto de 30 graus, e de temperados a polares conforme a temperatura cai; recorte ${active + 1} em foco`}>
-    <ArrowHead id="gm-bio-head" />
+    <ArrowHead id={`${uid}-gm-bio-head`} />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">DO EQUADOR AO POLO · FAIXAS SEM ESCALA</text>
 
     <text x="152" y="72" textAnchor="middle" className={active === 1 ? 'bi-small bi-strong gm-on' : 'bi-small bi-strong'}>célula de Hadley</text>
-    <motion.path d="M76 150V94Q76 84 86 84H218Q228 84 228 94V186" className="gm-cell" markerEnd="url(#gm-bio-head)" initial={false}
+    <motion.path d="M76 150V94Q76 84 86 84H218Q228 84 228 94V186" className="gm-cell" markerEnd={`url(#${uid}-gm-bio-head)`} initial={false}
       animate={{ pathLength: active === 1 ? [0, 1] : 1, opacity: active === 2 ? 0.4 : 1 }} transition={p(1.8, 0.2)} />
-    <motion.path d="M214 208H128" className="gm-cell gm-cell-low" markerEnd="url(#gm-bio-head)" initial={false}
+    <motion.path d="M214 208H128" className="gm-cell gm-cell-low" markerEnd={`url(#${uid}-gm-bio-head)`} initial={false}
       animate={{ opacity: active === 2 ? 0.3 : 0.8 }} transition={p(0.4)} />
 
     <motion.g initial={false} animate={{ opacity: active === 2 ? 0.4 : 1 }} transition={p(0.4)}>
@@ -306,8 +309,8 @@ function BiomeBeltDetail({ active }: Scene) {
       <path d={`M${lat(d as number)} 262v8`} className="gm-axis" />
       <text x={lat(d as number)} y="282" textAnchor={d === 0 ? 'start' : d === 90 ? 'end' : 'middle'} className="bi-tiny" dx={d === 0 ? -4 : d === 90 ? 4 : 0}>{label}</text>
     </g>)}
-    <defs><linearGradient id="gm-temp" x1="0" x2="1"><stop offset="0" className="gm-stop-warm" /><stop offset=".5" className="gm-stop-mid" /><stop offset="1" className="gm-stop-cold" /></linearGradient></defs>
-    <rect x="60" y="292" width="504" height="10" rx="5" fill="url(#gm-temp)" />
+    <defs><linearGradient id={`${uid}-gm-temp`} x1="0" x2="1"><stop offset="0" className="gm-stop-warm" /><stop offset=".5" className="gm-stop-mid" /><stop offset="1" className="gm-stop-cold" /></linearGradient></defs>
+    <rect x="60" y="292" width="504" height="10" rx="5" fill={`url(#${uid}-gm-temp)`} />
     <motion.g initial={false} animate={{ x: active === 2 ? [0, 504] : active === 1 ? lat(30) - 60 : 0 }} transition={p(active === 2 ? 2 : 0.8, 0.3)}>
       <circle cx="60" cy="297" r="8" className="gm-marker" />
     </motion.g>
@@ -347,10 +350,11 @@ function Gauge({ x, y, value, label, sub, on, p }: { x: number; y: number; value
 }
 
 function NileBasinDetail({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.2 : 0) });
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Nilo de montante a jusante: barragem etíope sem acordo, tensão diplomática, dependência do Egito e risco de escalada; recorte ${active + 1} em foco`}>
-    <ArrowHead id="gm-nilo-head" />
+    <ArrowHead id={`${uid}-gm-nilo-head`} />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">NILO · MAPA ESQUEMÁTICO, SEM ESCALA</text>
 
@@ -380,7 +384,7 @@ function NileBasinDetail({ active }: Scene) {
     <text x="222" y="264" textAnchor="end" className="bi-tiny">Nilo Branco</text>
     <text x="266" y="252" textAnchor="end" className="bi-tiny">Nilo Azul</text>
 
-    <motion.path d="M284 196C270 132 200 100 134 94" className="gm-tension" markerEnd="url(#gm-nilo-head)" initial={false}
+    <motion.path d="M284 196C270 132 200 100 134 94" className="gm-tension" markerEnd={`url(#${uid}-gm-nilo-head)`} initial={false}
       animate={{ pathLength: active === 1 ? [0, 1] : active > 1 ? 1 : 0, opacity: active >= 1 ? 1 : 0 }} transition={p(1, 0.3)} />
     {[[240, 124], [192, 104]].map(([x, y], k) => <motion.path key={x} d={`M${x - 6} ${y - 8}l8 6-6 2 8 8`} className="gm-bolt" initial={false}
       animate={{ opacity: active >= 1 ? 1 : 0, scale: active === 1 ? [0, 1.3, 1] : 1 }} transition={p(0.5, active === 1 ? 1 + k * 0.2 : 0)}
@@ -417,9 +421,9 @@ function NileBasinDetail({ active }: Scene) {
     </motion.g>
     <motion.g {...show(2)}>
       <text x="382" y="78" className="bi-panel-title">3 · AMEAÇA EXISTENCIAL</text>
-      <defs><clipPath id="gm-drop-clip"><path d="M430 94c-18 24-28 40-28 56a28 28 0 0 0 56 0c0-16-10-32-28-56Z" /></clipPath></defs>
+      <defs><clipPath id={`${uid}-gm-drop-clip`}><path d="M430 94c-18 24-28 40-28 56a28 28 0 0 0 56 0c0-16-10-32-28-56Z" /></clipPath></defs>
       <path d="M430 94c-18 24-28 40-28 56a28 28 0 0 0 56 0c0-16-10-32-28-56Z" className="gm-drop" />
-      <g clipPath="url(#gm-drop-clip)">
+      <g clipPath={`url(#${uid}-gm-drop-clip)`}>
         <motion.rect x="400" y="104" width="60" height="74" className="gm-drop-fill" initial={false}
           animate={{ scaleY: active === 2 ? [0, 1] : 1 }} transition={p(1.4, 0.4)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom' }} />
       </g>
@@ -455,16 +459,17 @@ function NileBasinDetail({ active }: Scene) {
 // as correntes disputam — não o que se vê, mas o que explica. Só muda a seta
 // entre meio e sociedade, e o que a corrente acrescenta ao desenho.
 function ThreeReadingsDetail({ active }: Scene) {
+  const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const show = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.4, active === k ? 0.2 : 0) });
   const titles = ['DETERMINISMO', 'POSSIBILISMO', 'GEOGRAFIA CRÍTICA'];
   return <svg viewBox="0 0 620 360" role="img" aria-label={`A mesma paisagem lida por três correntes: determinismo, em que o meio decide; possibilismo, em que a sociedade escolhe; geografia crítica, em que poder e desigualdade organizam o espaço; recorte ${active + 1} em foco`}>
-    <ArrowHead id="gm-pais-head" />
+    <ArrowHead id={`${uid}-gm-pais-head`} />
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">UMA PAISAGEM, TRÊS LEITURAS</text>
 
-    <defs><clipPath id="gm-view-clip"><rect x="26" y="54" width="300" height="226" rx="14" /></clipPath></defs>
-    <g clipPath="url(#gm-view-clip)">
+    <defs><clipPath id={`${uid}-gm-view-clip`}><rect x="26" y="54" width="300" height="226" rx="14" /></clipPath></defs>
+    <g clipPath={`url(#${uid}-gm-view-clip)`}>
       <rect x="26" y="54" width="300" height="226" className="gm-view-sky" />
       <circle cx="270" cy="92" r="16" className="gm-sun" />
       <path d="M26 176L88 104L128 146L168 96L236 170L326 128V280H26Z" className="gm-hill-far" />
@@ -475,7 +480,7 @@ function ThreeReadingsDetail({ active }: Scene) {
     <rect x="26" y="54" width="300" height="226" rx="14" className="gm-view-frame" />
 
     <motion.g {...show(0)}>
-      <Arrow d="M160 104C168 140 176 160 178 188" on={active === 0} p={p} head="gm-pais-head" delay={0.3} />
+      <Arrow d="M160 104C168 140 176 160 178 188" on={active === 0} p={p} head={`${uid}-gm-pais-head`} delay={0.3} />
       {[190, 210, 230].map(x => <Person key={x} x={x} y={200} s={0.55} coat="bi-coat-plain" />)}
       <g transform="translate(96 150) rotate(-10)">
         <rect x="-50" y="-14" width="100" height="26" rx="4" className="bi-stamp" />
@@ -500,7 +505,7 @@ function ThreeReadingsDetail({ active }: Scene) {
       {[176, 196, 216, 236].map(y => <path key={y} d={`M164 ${y}h12`} className="gm-fence" />)}
       <path d="M92 196v-18l16-12 16 12v18Z" className="gm-big-house" />
       {[210, 234, 258, 282].map((x, k) => <path key={x} d={`M${x} ${226 + (k % 2) * 6}v-9l6-5 6 5v9Z`} className="bi-house" />)}
-      <motion.path d="M230 206C200 176 160 172 130 180" className="gm-flow" markerEnd="url(#gm-pais-head)" initial={false}
+      <motion.path d="M230 206C200 176 160 172 130 180" className="gm-flow" markerEnd={`url(#${uid}-gm-pais-head)`} initial={false}
         animate={{ pathLength: active === 2 ? [0, 1] : 1 }} transition={p(0.9, 0.5)} />
       {[0, 1, 2].map(k => <motion.circle key={k} r="3.5" className="gm-coin" initial={false}
         animate={active === 2 ? { cx: [226, 180, 136], cy: [202, 178, 182], opacity: [0, 1, 0] } : { cx: 136, cy: 182, opacity: 0 }}
@@ -521,22 +526,22 @@ function ThreeReadingsDetail({ active }: Scene) {
     </g>
     <text x="540" y="166" textAnchor="middle" className="bi-small bi-strong">sociedade</text>
     <motion.g {...show(0)}>
-      <Arrow d="M428 122H508" on={active === 0} p={p} head="gm-pais-head" delay={0.2} />
+      <Arrow d="M428 122H508" on={active === 0} p={p} head={`${uid}-gm-pais-head`} delay={0.2} />
       <text x="358" y="200" className="bi-small bi-strong">o meio decidiria o destino</text>
       <text x="358" y="214" className="bi-small">das sociedades</text>
       <text x="358" y="244" className="bi-hand-sm">simplifica relações complexas</text>
     </motion.g>
     <motion.g {...show(1)}>
-      <Arrow d="M512 134H430" on={active === 1} p={p} head="gm-pais-head" delay={0.2} />
+      <Arrow d="M512 134H430" on={active === 1} p={p} head={`${uid}-gm-pais-head`} delay={0.2} />
       <text x="470" y="126" textAnchor="middle" className="bi-tiny">escolhe</text>
       <text x="358" y="200" className="bi-small bi-strong">o meio oferece possibilidades;</text>
       <text x="358" y="214" className="bi-small">a sociedade explora ou não</text>
       <text x="358" y="244" className="bi-hand-sm">peso da ação humana e cultural</text>
     </motion.g>
     <motion.g {...show(2)}>
-      <motion.path d="M520 108C500 92 440 92 420 108" className="gm-flow" markerEnd="url(#gm-pais-head)" initial={false}
+      <motion.path d="M520 108C500 92 440 92 420 108" className="gm-flow" markerEnd={`url(#${uid}-gm-pais-head)`} initial={false}
         animate={{ pathLength: active === 2 ? [0, 1] : 1 }} transition={p(0.8, 0.3)} />
-      <motion.path d="M428 140C450 152 492 152 516 140" className="gm-flow" markerEnd="url(#gm-pais-head)" initial={false}
+      <motion.path d="M428 140C450 152 492 152 516 140" className="gm-flow" markerEnd={`url(#${uid}-gm-pais-head)`} initial={false}
         animate={{ pathLength: active === 2 ? [0, 1] : 1 }} transition={p(0.8, 0.6)} />
       <text x="358" y="200" className="bi-small bi-strong">poder, desigualdade e economia</text>
       <text x="358" y="214" className="bi-small">explicam a organização do espaço</text>

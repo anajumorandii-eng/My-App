@@ -1,5 +1,5 @@
 import { GeopoliticalPlate } from './GeopoliticalIllustration';
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { Person, type Scene } from './cenaKit';
@@ -124,21 +124,22 @@ const STEPS = [
 ];
 
 function AsiaAscentDetail({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const fade = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.45, active === k ? 0.1 : 0) });
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Geoeconomia da Ásia: a China sobe na cadeia de valor desde 1978, projeta o Cinturão e Rota, convive com focos de tensão e divide a produção no China plus one; recorte ${active + 1} em foco`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ÁSIA · DESDE 1978</text>
     <defs>
-      <clipPath id="om-asia-clip"><rect x="22" y="52" width="308" height="214" rx="12" /></clipPath>
-      <pattern id="om-asia-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v5" className="om-hatch-line" /></pattern>
-      <marker id="om-asia-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-route-head" /></marker>
+      <clipPath id={`${diagramId}-om-asia-clip`}><rect x="22" y="52" width="308" height="214" rx="12" /></clipPath>
+      <pattern id={`${diagramId}-om-asia-hatch`} width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v5" className="om-hatch-line" /></pattern>
+      <marker id={`${diagramId}-om-asia-head`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-route-head" /></marker>
     </defs>
     <rect x="22" y="52" width="308" height="214" rx="12" className="om-sea" />
-    <g clipPath="url(#om-asia-clip)">
+    <g clipPath={`url(#${diagramId}-om-asia-clip)`}>
       <path d={ASIA_LAND_D} className="om-land" />
       <motion.path d={CHINA_D} className="om-china" initial={false} animate={{ opacity: active === 2 ? 0.45 : 1 }} transition={p(0.4)} />
-      <motion.path d={KASHMIR_D} fill="url(#om-asia-hatch)" className="om-zone" initial={false} animate={{ opacity: active === 2 ? 1 : 0 }} transition={p(0.5, active === 2 ? 1 : 0)} />
+      <motion.path d={KASHMIR_D} fill={`url(#${diagramId}-om-asia-hatch)`} className="om-zone" initial={false} animate={{ opacity: active === 2 ? 1 : 0 }} transition={p(0.5, active === 2 ? 1 : 0)} />
     </g>
     <rect x="22" y="52" width="308" height="214" rx="12" className="om-frame" />
     <Place P={PA} ll={[103, 35]} text="CHINA" className="om-country" />
@@ -158,7 +159,7 @@ function AsiaAscentDetail({ active }: Scene) {
     {/* R2: rotas do Cinturão e Rota partem da China */}
     <motion.g {...fade(1)}>
       {BRI_ROUTES.map((r, k) => <g key={r.end}>
-        <motion.path d={r.d} className="om-route" markerEnd="url(#om-asia-head)" initial={false}
+        <motion.path d={r.d} className="om-route" markerEnd={`url(#${diagramId}-om-asia-head)`} initial={false}
           animate={{ pathLength: active === 1 ? 1 : 0 }} transition={p(1, active === 1 ? 0.2 + k * 0.3 : 0)} />
         <text x={r.at[0]} y={r.at[1]} textAnchor={r.anchor} className="om-place om-strong om-halo">{r.end}</text>
       </g>)}
@@ -196,7 +197,7 @@ function AsiaAscentDetail({ active }: Scene) {
         const [x0, y0] = PA(113.5, 26);
         const [x, y] = PA(lon, lat);
         return <g key={name}>
-          <motion.path d={`M${x0} ${y0 + 8}Q${(x0 + x) / 2 + 10} ${(y0 + y) / 2} ${x} ${y - 9}`} className="om-route" markerEnd="url(#om-asia-head)" initial={false}
+          <motion.path d={`M${x0} ${y0 + 8}Q${(x0 + x) / 2 + 10} ${(y0 + y) / 2} ${x} ${y - 9}`} className="om-route" markerEnd={`url(#${diagramId}-om-asia-head)`} initial={false}
             animate={{ pathLength: active === 3 ? 1 : 0 }} transition={p(0.7, active === 3 ? 0.2 + k * 0.25 : 0)} />
           <motion.g initial={false} animate={{ opacity: active === 3 ? 1 : 0, scale: active === 3 ? 1 : 0.5 }} transition={p(0.4, active === 3 ? 0.8 + k * 0.25 : 0)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom' }}>
             <Factory x={x} y={y} s={0.5} className="om-factory om-factory-new" />
@@ -259,8 +260,8 @@ function AsiaAscentDetail({ active }: Scene) {
       <rect x="512" y="180" width="70" height="44" rx="8" className="bi-block" />
       <text x="547" y="199" textAnchor="middle" className="bi-tiny">país</text>
       <text x="547" y="212" textAnchor="middle" className="bi-tiny">receptor</text>
-      <path d="M430 190h76" className="om-flow-line" markerEnd="url(#om-asia-head)" />
-      <path d="M508 216h-76" className="om-flow-line om-flow-back" markerEnd="url(#om-asia-head)" />
+      <path d="M430 190h76" className="om-flow-line" markerEnd={`url(#${diagramId}-om-asia-head)`} />
+      <path d="M508 216h-76" className="om-flow-line om-flow-back" markerEnd={`url(#${diagramId}-om-asia-head)`} />
       {[0, 1, 2].map(k => <motion.circle key={k} cy="190" r="4" className="om-coin" initial={false}
         animate={{ cx: active === 1 ? [436, 498] : 436, opacity: active === 1 ? [0, 1, 0] : 0 }} transition={p(1.1, active === 1 ? 0.6 + k * 0.35 : 0)} />)}
       <text x="468" y="182" textAnchor="middle" className="bi-tiny">financiamento</text>
@@ -377,6 +378,7 @@ const JORDAN: LL[] = [[35.65, 33.2], [35.6, 32.8], [35.57, 32.3], [35.55, 31.75]
 const ME_PANEL_X = 358;
 
 function MiddleEastMapDetail({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const fade = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.45, active === k ? 0.1 : 0) });
   const [hx, hy] = PM(56.45, 26.55);
@@ -389,17 +391,17 @@ function MiddleEastMapDetail({ active }: Scene) {
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ORIENTE MÉDIO · TRÊS CONTINENTES</text>
     <defs>
-      <clipPath id="om-me-clip"><rect x="22" y="52" width="324" height="258" rx="12" /></clipPath>
-      <pattern id="om-me-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v6" className="om-hatch-line" /></pattern>
-      <marker id="om-me-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-route-head" /></marker>
+      <clipPath id={`${diagramId}-om-me-clip`}><rect x="22" y="52" width="324" height="258" rx="12" /></clipPath>
+      <pattern id={`${diagramId}-om-me-hatch`} width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v6" className="om-hatch-line" /></pattern>
+      <marker id={`${diagramId}-om-me-head`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-route-head" /></marker>
     </defs>
-    <g clipPath="url(#om-me-clip)">
+    <g clipPath={`url(#${diagramId}-om-me-clip)`}>
       <rect x="22" y="52" width="324" height="258" className="om-land" />
       <path d={ME.seas} className="om-sea" />
       <path d={ME.islands} className="om-land" />
       <path d={ME.borders} className="om-border" />
       <path d={trace(PM, [[34.95, 29.5], [34.45, 28.05]], false)} className="om-strait" />
-      <motion.path d={ME.kurds} fill="url(#om-me-hatch)" className="om-zone" initial={false} animate={{ opacity: active === 1 ? 1 : 0 }} transition={p(0.6, active === 1 ? 0.5 : 0)} />
+      <motion.path d={ME.kurds} fill={`url(#${diagramId}-om-me-hatch)`} className="om-zone" initial={false} animate={{ opacity: active === 1 ? 1 : 0 }} transition={p(0.6, active === 1 ? 0.5 : 0)} />
       <motion.g initial={false} animate={{ opacity: active === 3 ? 1 : 0.55 }} transition={p(0.4)}>
         <path d={trace(PM, EUPHRATES, false)} className="om-river" />
         <path d={trace(PM, TIGRIS, false)} className="om-river" />
@@ -435,7 +437,7 @@ function MiddleEastMapDetail({ active }: Scene) {
         <path d="M-9 -2h14l4 3-3 3h-15Z" className="om-ship" /><path d="M-5 -2v-3h5v3" className="om-ship" />
       </motion.g>
       <Place P={PM} ll={[32, 29.8]} text="Suez" anchor="end" className="om-place om-strong" dy={4} />
-      <motion.path d={`M${suez.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join('L')}`} className="om-route" markerEnd="url(#om-me-head)" initial={false}
+      <motion.path d={`M${suez.map(([x, y]) => `${x.toFixed(1)} ${y.toFixed(1)}`).join('L')}`} className="om-route" markerEnd={`url(#${diagramId}-om-me-head)`} initial={false}
         animate={{ pathLength: active === 0 ? 1 : 0 }} transition={p(1.4, active === 0 ? 0.4 : 0)} />
     </motion.g>
 
@@ -513,7 +515,7 @@ function MiddleEastMapDetail({ active }: Scene) {
         </g>;
       })}
       <rect x={ME_PANEL_X + 8} y="184" width="222" height="104" rx="10" className="om-card" />
-      <rect x={ME_PANEL_X + 18} y="196" width="20" height="14" fill="url(#om-me-hatch)" className="om-zone" />
+      <rect x={ME_PANEL_X + 18} y="196" width="20" height="14" fill={`url(#${diagramId}-om-me-hatch)`} className="om-zone" />
       <text x={ME_PANEL_X + 46} y="208" className="bi-small bi-strong">curdos: um povo sem Estado</text>
       <text x={ME_PANEL_X + 18} y="230" className="bi-small">dezenas de milhões, divididos</text>
       <text x={ME_PANEL_X + 18} y="245" className="bi-small">entre Turquia, Iraque, Síria e Irã</text>
@@ -583,6 +585,7 @@ const SETTLEMENTS: LL[] = [[35.25, 32.36], [35.1, 32.3], [35.45, 32.3], [35.35, 
 const PAL_STOPS = [{ x: 246, year: '1917' }, { x: 352, year: '1947' }, { x: 458, year: '1948 · 1967' }, { x: 566, year: 'hoje' }];
 
 function PalestineTimelineDetail({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const fade = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.45, active === k ? 0.1 : 0) });
   const [jx, jy] = PP(35.22, 31.78);
@@ -592,11 +595,11 @@ function PalestineTimelineDetail({ active }: Scene) {
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">QUESTÃO PALESTINA · 1917 → HOJE</text>
     <defs>
-      <clipPath id="om-pal-clip"><rect x="22" y="52" width="174" height="236" rx="12" /></clipPath>
-      <pattern id="om-pal-hatch" width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v6" className="om-hatch-line" /></pattern>
-      <marker id="om-pal-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-route-head" /></marker>
+      <clipPath id={`${diagramId}-om-pal-clip`}><rect x="22" y="52" width="174" height="236" rx="12" /></clipPath>
+      <pattern id={`${diagramId}-om-pal-hatch`} width="6" height="6" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v6" className="om-hatch-line" /></pattern>
+      <marker id={`${diagramId}-om-pal-head`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-route-head" /></marker>
     </defs>
-    <g clipPath="url(#om-pal-clip)">
+    <g clipPath={`url(#${diagramId}-om-pal-clip)`}>
       <rect x="22" y="52" width="174" height="236" className="om-land" />
       <motion.rect x="22" y="52" width="174" height="236" className="om-mandate" initial={false} animate={{ opacity: active === 0 ? 1 : 0 }} transition={p(0.5)} />
       <path d={trace(PP, PAL_SEA)} className="om-sea" />
@@ -607,8 +610,8 @@ function PalestineTimelineDetail({ active }: Scene) {
       <path d={trace(PP, WEST_BANK)} className="om-territory" />
       <path d={trace(PP, GAZA)} className="om-territory" />
       <motion.g initial={false} animate={{ opacity: active >= 2 ? 1 : 0 }} transition={p(0.6, active === 2 ? 1.3 : 0)}>
-        <path d={trace(PP, WEST_BANK)} fill="url(#om-pal-hatch)" className="om-zone" />
-        <path d={trace(PP, GAZA)} fill="url(#om-pal-hatch)" className="om-zone" />
+        <path d={trace(PP, WEST_BANK)} fill={`url(#${diagramId}-om-pal-hatch)`} className="om-zone" />
+        <path d={trace(PP, GAZA)} fill={`url(#${diagramId}-om-pal-hatch)`} className="om-zone" />
       </motion.g>
     </g>
     <rect x="22" y="52" width="174" height="236" rx="12" className="om-frame" />
@@ -626,7 +629,7 @@ function PalestineTimelineDetail({ active }: Scene) {
     {/* mapa por recorte */}
     <motion.g {...fade(0)}>
       {[[36, 104, 90, 128], [30, 150, 78, 160]].map(([x1, y1, x2, y2], k) =>
-        <motion.path key={y1} d={`M${x1} ${y1}Q${(x1 + x2) / 2} ${Math.min(y1, y2) - 14} ${x2} ${y2}`} className="om-route" markerEnd="url(#om-pal-head)" initial={false}
+        <motion.path key={y1} d={`M${x1} ${y1}Q${(x1 + x2) / 2} ${Math.min(y1, y2) - 14} ${x2} ${y2}`} className="om-route" markerEnd={`url(#${diagramId}-om-pal-head)`} initial={false}
           animate={{ pathLength: active === 0 ? 1 : 0 }} transition={p(0.8, active === 0 ? 0.6 + k * 0.25 : 0)} />)}
       <text x="30" y="283" className="om-place om-strong om-halo">mandato britânico</text>
     </motion.g>
@@ -729,7 +732,7 @@ function PalestineTimelineDetail({ active }: Scene) {
       <text x="454" y="226" className="bi-tiny">palestinos a chamam</text>
       <path d="M228 236h350" className="om-rule" />
       <text x="228" y="256" className="bi-panel-title">1967 · GUERRA DOS SEIS DIAS</text>
-      <rect x="228" y="268" width="20" height="14" fill="url(#om-pal-hatch)" className="om-zone" />
+      <rect x="228" y="268" width="20" height="14" fill={`url(#${diagramId}-om-pal-hatch)`} className="om-zone" />
       <text x="256" y="279" className="bi-small">ocupação israelense da Cisjordânia, da</text>
       <text x="256" y="294" className="bi-small">Faixa de Gaza e de Jerusalém Oriental</text>
       <text x="228" y="316" className="bi-tiny">territórios que seguem no centro da disputa</text>
@@ -774,6 +777,7 @@ const FATES = [
 const AW_PANEL = 380;
 
 function ArabConflictsDetail({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const fade = (k: number) => ({ initial: false as const, animate: { opacity: active === k ? 1 : 0 }, transition: p(0.45, active === k ? 0.1 : 0) });
   const [syx, syy] = PW(38.3, 35.1);
@@ -790,18 +794,18 @@ function ArabConflictsDetail({ active }: Scene) {
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">MUNDO ÁRABE · DESDE 2010</text>
     <defs>
-      <clipPath id="om-aw-clip"><rect x="22" y="52" width="346" height="170" rx="12" /></clipPath>
-      <pattern id="om-aw-hatch" width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v5" className="om-hatch-line" /></pattern>
-      <marker id="om-aw-head" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-route-head" /></marker>
-      <marker id="om-aw-head-a" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-head-a" /></marker>
-      <marker id="om-aw-head-b" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-head-b" /></marker>
+      <clipPath id={`${diagramId}-om-aw-clip`}><rect x="22" y="52" width="346" height="170" rx="12" /></clipPath>
+      <pattern id={`${diagramId}-om-aw-hatch`} width="5" height="5" patternUnits="userSpaceOnUse" patternTransform="rotate(45)"><path d="M0 0v5" className="om-hatch-line" /></pattern>
+      <marker id={`${diagramId}-om-aw-head`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-route-head" /></marker>
+      <marker id={`${diagramId}-om-aw-head-a`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-head-a" /></marker>
+      <marker id={`${diagramId}-om-aw-head-b`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="om-head-b" /></marker>
     </defs>
-    <g clipPath="url(#om-aw-clip)">
+    <g clipPath={`url(#${diagramId}-om-aw-clip)`}>
       <rect x="22" y="52" width="346" height="170" className="om-land" />
       <path d={AW.seas} className="om-sea" />
       <path d={AW.islands} className="om-land" />
       <path d={AW.borders} className="om-border" />
-      <motion.path d={AW.kurds} fill="url(#om-aw-hatch)" className="om-zone" initial={false} animate={{ opacity: active === 2 ? 1 : 0 }} transition={p(0.5, active === 2 ? 0.9 : 0)} />
+      <motion.path d={AW.kurds} fill={`url(#${diagramId}-om-aw-hatch)`} className="om-zone" initial={false} animate={{ opacity: active === 2 ? 1 : 0 }} transition={p(0.5, active === 2 ? 0.9 : 0)} />
       {RULER_LINES.map((l, k) => <motion.path key={k} d={trace(PW, l, false)} className="om-ruler-line" initial={false}
         animate={{ pathLength: active === 3 ? 1 : 0, opacity: active === 3 ? 1 : 0 }} transition={p(0.6, active === 3 ? 0.2 + k * 0.2 : 0)} />)}
     </g>
@@ -860,7 +864,7 @@ function ArabConflictsDetail({ active }: Scene) {
       {supporters.map((s, k) => {
         const [fx, fy] = s.from;
         return <g key={s.name}>
-          <motion.path d={`M${fx} ${fy}Q${(fx + syx) / 2} ${(fy + syy) / 2 - 18} ${syx + (fx > syx ? 9 : -9)} ${syy + (fy > syy ? 6 : -6)}`} className={`om-proxy om-proxy-${s.side}`} markerEnd={`url(#om-aw-head-${s.side})`} initial={false}
+          <motion.path d={`M${fx} ${fy}Q${(fx + syx) / 2} ${(fy + syy) / 2 - 18} ${syx + (fx > syx ? 9 : -9)} ${syy + (fy > syy ? 6 : -6)}`} className={`om-proxy om-proxy-${s.side}`} markerEnd={`url(#${diagramId}-om-aw-head-${s.side})`} initial={false}
             animate={{ pathLength: active === 2 ? 1 : 0 }} transition={p(0.7, active === 2 ? 0.2 + k * 0.2 : 0)} />
           {s.label && <text x={s.label[0]} y={s.label[1]} textAnchor={s.label[2]} className="om-place om-strong om-halo">{s.name}</text>}
         </g>;
@@ -871,7 +875,7 @@ function ArabConflictsDetail({ active }: Scene) {
       <path d="M30 259h16" className="om-proxy om-proxy-b" />
       <text x="52" y="263" className="bi-small bi-strong">EUA, Turquia e países do Golfo:</text>
       <text x="52" y="276" className="bi-tiny">apoio a facções da oposição, em momentos diferentes</text>
-      <rect x="30" y="286" width="16" height="12" fill="url(#om-aw-hatch)" className="om-zone" />
+      <rect x="30" y="286" width="16" height="12" fill={`url(#${diagramId}-om-aw-hatch)`} className="om-zone" />
       <text x="52" y="296" className="bi-small">curdos buscam autonomia; a Turquia se opõe</text>
       <text x="30" y="318" className="bi-tiny">autodenominado Estado Islâmico: surgiu no vácuo da guerra</text>
     </motion.g>
