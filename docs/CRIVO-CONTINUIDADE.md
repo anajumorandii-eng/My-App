@@ -1,5 +1,34 @@
 # CRIVO — continuidade operacional
 
+## Auditoria automatizada executada no GitHub — 2026-10-09T22:01:37.193Z
+
+Fonte: `2b52cad5ff7d2db078c91b1da0bf94e35e95a0de`; execução 37994256267. Estado técnico: passed; 7356 de 7.356 resultados; 0 reprovações. [Relatório atual](verificacao-awesome-613-2026-10-09/README.md), [manifesto](verificacao-awesome-613-2026-10-09/execucao/manifesto.json) e [capturas para revisão](verificacao-awesome-613-2026-10-09/GALERIA.md).
+
+A execução remota contorna o bloqueio local. O código de produto permanece na base da main após #290; diferenças de branch nesta retomada são documentação e infraestrutura de auditoria. Aprovação estética/pedagógica não foi inferida dos testes. Os 81 estados em validação e os 532 não revisados do inventário formal foram preservados.
+
+Próximo passo: analisar os achados por ID e revisar as capturas com os critérios Awesome Design MD; depois concluir a revisão da PR #291. Não repetir a execução se o código não mudar e não houver falha ou dúvida nova. Não reaplicar #288/#289/#290. Sem merge automático.
+
+
+## Auditoria automatizada executada no GitHub — 2026-10-09T21:30:49.440Z
+
+Fonte: `6cbcecebded583bd09530744009c6d3c72e24794`; execução 37992764943. Estado técnico: incomplete; 0 de 7.356 resultados; 0 reprovações. [Relatório atual](verificacao-awesome-613-2026-10-09/README.md), [manifesto](verificacao-awesome-613-2026-10-09/execucao/manifesto.json) e [capturas para revisão](verificacao-awesome-613-2026-10-09/GALERIA.md).
+
+A execução remota contorna o bloqueio local. O código de produto permanece na base da main após #290; diferenças de branch nesta retomada são documentação e infraestrutura de auditoria. Aprovação estética/pedagógica não foi inferida dos testes. Os 81 estados em validação e os 532 não revisados do inventário formal foram preservados.
+
+Próximo passo: analisar os achados por ID e revisar as capturas com os critérios Awesome Design MD; depois concluir a revisão da PR #291. Não repetir a execução se o código não mudar e não houver falha ou dúvida nova. Não reaplicar #288/#289/#290. Sem merge automático.
+
+
+## Verificação estrutural dos 613 capítulos com Awesome Design MD — 09/10/2026
+
+Base confirmada: `0ea6bfd64e4e4631aaf24e546a0ba32aa29cb4cc` na `main`. A PR #290 já foi integrada em `0526aafc5f909e31047285678c8cb48cf9231ef6`; #288 e #289 também estão integradas. Não reaplicar esses trabalhos. O registro de “proposta mais recente” abaixo é histórico.
+
+A conferência pelo GitHub conciliou os 613 IDs/títulos, a matriz de representações e as associações aos 152 objetos, sem divergências estruturais. O inventário formal continua com 81 `em-validacao`, 532 `nao-revisado` e nenhuma aprovação. Isso não substitui as inspeções técnicas anteriores.
+
+[Relatório e critérios Awesome Design MD](verificacao-awesome-613-2026-10-09/README.md) e [resultado por capítulo](verificacao-awesome-613-2026-10-09/resultado-613.json). Referências selecionadas: Claude para hierarquia editorial e Miro para mapas/comparações, adaptadas à identidade existente do Crivo.
+
+**Verificação integral ainda pendente:** o ambiente falhou na inicialização (`snapshot_materialization_failed / gateway_unavailable`); nenhum navegador, lint, teste ou build novo foi executado nesta sessão. O CI anterior e o status de deploy foram consultados, sem nova inspeção da versão publicada. Retomar as verificações atuais de todos os 613 capítulos com ambiente funcional, saída nova vinculada ao SHA e cruzamento de largura/tema/movimento; os resultados antigos não são execuções novas. Manter esta proposta em rascunho até concluir; sem merge automático.
+
+
 ## Proposta mais recente — Biologia e comparação de painéis, 09/10/2026
 
 Prioridade confirmada: Biologia. A branch `redesign/ilustracoes-comparacao` parte de `2928b786`, após a integração das PRs #288 e #289. Revê as aberturas dos 184 capítulos de Biologia, Geografia e História; melhora materiais e desenhos biológicos, corrige a direção das trocas no nefron e permite comparar dois recortes em 103 capítulos de Geografia/História. O modo comparação compacta os painéis sem apagar controles. No desktop há painéis lado a lado; celular e tablet em retrato mantêm painéis empilhados e deslocamento das figuras quando necessário.
