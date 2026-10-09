@@ -1,0 +1,34 @@
+{
+  "lint": "aprovado",
+  "testes": {
+    "logica": 938,
+    "componentes": 1396,
+    "total": 2334,
+    "resultado": "todos aprovados"
+  },
+  "navegador": {
+    "larguras": [
+      390,
+      834,
+      1440
+    ],
+    "temas": [
+      "claro",
+      "escuro"
+    ],
+    "movimento": "reduzido",
+    "verificacoes": [
+      "expansão e compressão movimentam o pistão",
+      "rotação molecular conserva ângulo e polaridade",
+      "seleção de base conserva DNA, RNA e pontes de H entre vistas",
+      "sem overflow horizontal",
+      "sem erros de execução"
+    ]
+  },
+  "acessibilidade": {
+    "escopo": "aba Visual nos três capítulos, temas claro e escuro",
+    "violacoes": 0
+  },
+  "limite": "verificações funcionais não substituem aprovação pedagógica individual",
+  "build": "aprovado"
+}

@@ -182,3 +182,8 @@
   .crivo-visual--atlas .vs-object-icon { transform: none!important; }
   .crivo-visual--atlas *, .crivo-visual--atlas *::before,.crivo-visual--atlas *::after { animation-duration: 0s!important; transition-duration: 0s!important; }
 }
+
+/* Etiquetas de leitura precisam de contraste mesmo nas matérias de acento claro. */
+.crivo-visual.crivo-visual--atlas :is(.vs-chain-stage,.vs-journey .vs-board-kicker,.vs-journey-count,.vs-priority-kicker,.vs-priority-panel small) { color: var(--vs-burgundy); }
+.crivo-visual.crivo-visual--atlas .vs-journey-controls button:last-child { color: var(--vs-paper-strong); }
+.crivo-visual.crivo-visual--atlas .tc-scene>header>small { color: var(--vs-burgundy); }

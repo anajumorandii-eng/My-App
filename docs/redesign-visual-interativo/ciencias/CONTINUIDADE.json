@@ -1,0 +1,13 @@
+{
+  "branch": "design/visual-ciencias-profundidade",
+  "base": "381fff9e",
+  "ordem_atendida": ["Física", "Química", "Biologia"],
+  "capitulos": [
+    "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
+    "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+    "summary-biologia-acidos-nucleicos"
+  ],
+  "proxima_etapa": "Refinar as cenas restantes por mecanismo na mesma ordem, preservando dados, representações e evidências existentes.",
+  "limite": "Três cenas refinadas; não equivale a redesenho individual de todos os capítulos de Ciências.",
+  "persistencia": "Código, capturas e continuidade enviados em branch e PR no GitHub; sem merge automático."
+}

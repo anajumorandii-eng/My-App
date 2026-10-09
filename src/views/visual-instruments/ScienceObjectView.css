@@ -1,0 +1,30 @@
+.vs-science-card { margin-top: 20px; padding: 24px; border: 1px solid var(--vs-line); border-radius: 14px; background: var(--vs-paper-strong); color: var(--vs-ink); }
+.vs-science-card header small { color: var(--vs-burgundy); font-size: 10px; letter-spacing: .12em; }
+.vs-science-card h4 { margin: 8px 0 18px; font: 600 26px/1.15 Newsreader, Georgia, serif; }
+.vs-science-object { max-width: 440px; margin: auto; width: 100%; display: block; }
+.vs-science-ground { fill: var(--vs-ink); opacity: .08; }
+.vs-science-bond line { stroke: var(--vs-dim); stroke-width: 7; stroke-linecap: round; }
+.vs-science-bond.hydrogen line { stroke: var(--vs-blue); stroke-width: 1.5; stroke-dasharray: 3 4; }
+.vs-science-bond.backbone line { stroke: var(--vs-burgundy); stroke-width: 6; }
+.vs-science-atom text { fill: #fff; font: 700 13px Inter, sans-serif; }
+.vs-science-atom.free text { fill: #463a2c; font-size: 17px; }
+.vs-science-central-light { stop-color: #eeb2aa; } .vs-science-central-mid { stop-color: #a74b55; } .vs-science-central-dark { stop-color: #4e1b30; }
+.vs-science-ligand-light { stop-color: #c0e1e3; } .vs-science-ligand-mid { stop-color: #527c87; } .vs-science-ligand-dark { stop-color: #263d50; }
+.vs-science-free-light { stop-color: #fff5de; } .vs-science-free-mid { stop-color: #e3cfac; } .vs-science-free-dark { stop-color: #af9266; }
+.vs-science-backbone-light { stop-color: #e4dfb0; } .vs-science-backbone-mid { stop-color: #9b9272; } .vs-science-backbone-dark { stop-color: #5c5745; }
+.vs-science-choices { display: flex; flex-wrap: wrap; gap: 8px; }
+.vs-science-choices button { padding: 8px 12px; border: 1px solid var(--vs-line); border-radius: 8px; background: var(--vs-paper-strong); color: var(--vs-ink); font-size: 12px; }
+.vs-science-choices button[aria-pressed=true] { background: var(--vs-burgundy); color: var(--vs-paper-strong); }
+.vs-science-choices button:focus-visible { outline: 2px solid var(--vs-burgundy); outline-offset: 3px; }
+.vs-science-card input { width: 100%; accent-color: var(--vs-burgundy); }
+.vs-science-rotation { display: flex; justify-content: space-between; font-size: 12px; }
+.vs-science-reading { padding: 14px; background: var(--vs-paper); border-left: 2px solid var(--vs-burgundy); font-size: 13px; line-height: 1.6; }
+.vs-science-caption { font-size: 11px; line-height: 1.6; color: var(--vs-dim); margin: 12px 0; }
+.vs-nucleic-object { min-width: 0; }
+@media(max-width:560px) { .vs-science-card { padding: 16px; } }
+
+@media(min-width:900px) {
+  .crivo-visual--atlas .vs-nucleic-instrument>.vs-science-choices { grid-column: 1/-1; grid-row: 1; }
+  .crivo-visual--atlas .vs-nucleic-instrument>.vs-plane,
+  .crivo-visual--atlas .vs-nucleic-instrument>.vs-nucleic-object { grid-column: 1; grid-row: 2/span 6; }
+}

@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import type { BoardProps } from './types';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
@@ -21,6 +21,9 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
   // Curso do pistão dentro do cilindro (interno: y 70..290). Expansão sobe
   // porque o gás ganha volume; compressão desce. O repouso fica no meio para
   // que os dois sentidos tenham a mesma amplitude visível.
+  const uid = useId().replace(/:/g, '');
+  const metal = `url(#${uid}-metal)`, gas = `url(#${uid}-gas)`, glass = `url(#${uid}-glass)`;
+  const shadow = `url(#${uid}-shadow)`;
   const topoGas = emphasis === 'expansao' ? 110 : emphasis === 'compressao' ? 200 : 150;
   const alturaGas = 290 - topoGas;
 
@@ -33,11 +36,21 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
       aria-label="Cilindro termicamente isolado: o gás ocupa a parte de baixo e o pistão desliza no topo, sem troca de calor com o meio"
     >
       <defs>
-        <linearGradient id="metal-piston" x1="0" x2="1"><stop stopColor="#353b39" /><stop offset=".35" stopColor="#d9d7cc" /><stop offset=".58" stopColor="#6f7470" /><stop offset="1" stopColor="#222725" /></linearGradient>
-        <linearGradient id="gas-volume" x1="0" y1="0" x2="0" y2="1"><stop stopColor="#dff5ff" stopOpacity=".52" /><stop offset="1" stopColor="#75bce5" stopOpacity=".72" /></linearGradient>
-        <filter id="piston-shadow" x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" floodOpacity=".25" /></filter>
+        <linearGradient id={`${uid}-metal`} x1="0" x2="1"><stop stopColor="#353b39" /><stop offset=".35" stopColor="#d9d7cc" /><stop offset=".58" stopColor="#6f7470" /><stop offset="1" stopColor="#222725" /></linearGradient>
+        <linearGradient id={`${uid}-gas`} x1="0" y1="0" x2="0" y2="1"><stop stopColor="#dff5ff" stopOpacity=".52" /><stop offset="1" stopColor="#75bce5" stopOpacity=".72" /></linearGradient>
+        <filter id={`${uid}-shadow`} x="-30%" y="-30%" width="160%" height="170%"><feDropShadow dx="0" dy="5" stdDeviation="5" floodOpacity=".25" /></filter>
+        <linearGradient id={`${uid}-glass`}><stop stopColor="#9ec8d0" stopOpacity=".32" /><stop offset=".25" stopColor="#ffffff" stopOpacity=".14" /><stop offset=".72" stopColor="#cbe1e5" stopOpacity=".05" /><stop offset="1" stopColor="#507989" stopOpacity=".32" /></linearGradient>
+        <radialGradient id={`${uid}-particle`} cx="30%" cy="25%"><stop stopColor="#e8f8ff" /><stop offset=".42" stopColor="#7aafc9" /><stop offset="1" stopColor="#31596f" /></radialGradient>
       </defs>
       <ellipse className="vs-cylinder-shadow" cx="160" cy="309" rx="112" ry="12" />
+      <g className="vs-piston-casing" aria-hidden="true">
+        <path d="M52 74Q160 38 268 74V298Q160 338 52 298Z" fill="var(--vs-paper)" stroke="var(--vs-dim)" strokeWidth="2" />
+        <path d="M52 74V298Q63 307 70 307V78Z" fill="var(--vs-solid-metal, #b79868)" opacity=".65" />
+        <path d="M250 78V307Q262 306 268 298V74Z" fill="var(--vs-solid-metal, #b79868)" opacity=".65" />
+        <ellipse cx="160" cy="298" rx="108" ry="21" fill={metal} />
+        <ellipse cx="160" cy="74" rx="108" ry="20" fill={metal} />
+        <ellipse cx="160" cy="75" rx="90" ry="14" fill="var(--vs-paper)" stroke="var(--vs-dim)" strokeWidth="1.5" />
+      </g>
       <g className="vs-piston-wall">
         {/* Parede dupla: a faixa entre as duas linhas recebe as hachuras. */}
         <path d="M70 70 L70 290 L250 290 L250 70" />
@@ -58,7 +71,8 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
       </g>
 
       {/* O gás começa logo abaixo do pistão e vai até o fundo do cilindro. */}
-      <rect className="vs-piston-gas" x="70" y={topoGas} width="180" height={alturaGas} />
+      <rect className="vs-piston-gas" style={{ fill: gas }} x="70" y={topoGas} width="180" height={alturaGas} />
+      <ellipse cx="160" cy="289" rx="90" ry="12" fill={gas} />
       <ellipse className="vs-gas-surface" cx="160" cy={topoGas} rx="90" ry="10" />
 
       <g className="vs-piston-molecules" aria-hidden="true">
@@ -67,19 +81,21 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
           [118, 0.86], [172, 0.52], [212, 0.9], [88, 0.34],
         ].map(([x, f], i) => (
           <g key={i} transform={`translate(${x} ${topoGas + alturaGas * f})`}>
-            <circle r="5.5" /><circle className="vs-molecule-shine" cx="-1.6" cy="-1.8" r="1.4" />
+            <circle r="6" style={{ fill: `url(#${uid}-particle)`, opacity: 1 }} /><circle className="vs-molecule-shine" cx="-1.6" cy="-1.8" r="1.4" />
           </g>
         ))}
       </g>
 
+      <path d="M70 78V289Q160 315 250 289V78" fill={glass} stroke="var(--vs-blue)" strokeWidth="1" opacity=".75" />
+      <path d="M78 88V276" fill="none" stroke="#fff" strokeWidth="5" opacity=".55" />
       {/* Um só translate move placa, haste e punho: eles são peça única, e
           animar cada um daria descolamento no meio da transição. */}
       <g className="vs-piston-head" style={{ transform: `translateY(${topoGas - 150}px)` }}>
         <ellipse className="vs-piston-rim" cx="160" cy="142" rx="98" ry="14" />
-        <rect className="vs-piston-plate" x="66" y="134" width="188" height="16" rx="3" />
-        <ellipse className="vs-piston-face" cx="160" cy="134" rx="94" ry="12" />
-        <rect className="vs-piston-rod" x="150" y="76" width="20" height="60" rx="4" />
-        <rect className="vs-piston-cap" x="128" y="62" width="64" height="14" rx="5" />
+        <rect className="vs-piston-plate" style={{ fill: metal, filter: shadow }} x="66" y="134" width="188" height="16" rx="3" />
+        <ellipse className="vs-piston-face" style={{ fill: metal, filter: shadow }} cx="160" cy="134" rx="94" ry="12" />
+        <rect className="vs-piston-rod" style={{ fill: metal, filter: shadow }} x="150" y="76" width="20" height="60" rx="4" />
+        <rect className="vs-piston-cap" style={{ fill: metal, filter: shadow }} x="128" y="62" width="64" height="14" rx="5" />
       </g>
 
       {/* Q = 0 não é legenda solta: é a fronteira que as hachuras representam.

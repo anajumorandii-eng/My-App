@@ -32,3 +32,7 @@ Não há dependência nova, animação contínua nem WebGL. Gráficos bidimensio
 [Matemática](capturas/matematica.png) · [Celular](capturas/matematica-celular.png) · [Tema escuro](capturas/matematica-escuro.png) · [Física](capturas/fisica.png) · [Química](capturas/quimica.png) · [Biologia](capturas/biologia.png)
 
 Ordem de aplicação: Matemática → Física → Química → Biologia → demais matérias. A base compartilhada já atende essa sequência. Futuras cenas específicas devem manter o mecanismo fiel de cada tema, os artefatos SVG e a integração com as evidências existentes. O ponto de retomada dos refinamentos está em `CONTINUIDADE.json`.
+
+## Continuação em Ciências
+
+A entrega seguinte refina o pistão adiabático, adiciona modelos espaciais de cinco moléculas ao capítulo de polaridade e uma vista de dupla-hélice ao instrumento de ácidos nucleicos. Código, limites, capturas e continuidade estão em [Ciências](ciencias/README.md).
