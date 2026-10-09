@@ -9,3 +9,5 @@ A PR #292 corrige o título Geoeconomia Mundial sem alterar IDs; a atribuição 
 Os testes anteriores reproduziram três falhas de conteúdo e 32 de 78 casos de cabeçalhos.
 
 [Registro por ID e limites](revisao-501.json). As inspeções anteriores às correções não equivalem à aprovação de todos os estados das novas capturas. Os 81 estados em validação e 532 não revisados do inventário formal permanecem preservados. Dúvidas de contextualização e figuras pequenas estão registradas, sem converter hipóteses em erros confirmados.
+
+Os textos aprofundados de Relevo Brasileiro e Grandes Navegações recebem revisão 3 por mudança de conteúdo; somente esses capítulos voltam a solicitar leitura. A correção de título em Geoeconomia preserva a revisão 2, as seções e a recuperação existentes.

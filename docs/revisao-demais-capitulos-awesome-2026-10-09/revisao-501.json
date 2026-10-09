@@ -16,7 +16,7 @@
     {
       "id": "summary-geografia-relevo-brasileiro",
       "finding": "Atribuição da classificação incorreta",
-      "fix": "Jurandyr Ross"
+      "fix": "Jurandyr Ross no texto e na cena; critérios de erosão/deposição, estruturas geológicas e extensão das planícies amazônicas corrigidos; revisão editorial 3"
     },
     {
       "id": "summary-quimica-reacoes-de-substituicao",
@@ -36,7 +36,7 @@
     {
       "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
       "finding": "Rótulo Escola de Sagres não correspondia à evidência citada de investimento náutico",
-      "fix": "Tecnologia náutica"
+      "fix": "Tecnologia náutica na cena; texto distingue atividade documentada de escola formal controversa; revisão editorial 3"
     }
   ],
   "pending": [
