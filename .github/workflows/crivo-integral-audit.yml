@@ -9,6 +9,7 @@ on:
       - 'docs/inspecao-visual-613-2026-10-09/*.cjs'
       - 'src/**'
       - 'package*.json'
+      - 'public/questions.json'
 
 permissions:
   contents: read

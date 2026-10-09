@@ -9,6 +9,7 @@ on:
       - '.github/workflows/crivo-integral-audit.yml'
       - 'src/**'
       - 'package*.json'
+      - 'public/questions.json'
 
 permissions:
   contents: read
