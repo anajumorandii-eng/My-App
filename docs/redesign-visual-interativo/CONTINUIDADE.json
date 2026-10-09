@@ -16,5 +16,6 @@
   ],
   "proxima_etapa_de_refinamento": "Revisão pedagógica e visual das cenas específicas, na ordem das matérias, sem substituir mecanismos fiéis por efeitos decorativos.",
   "publicacao": "Código e evidências enviados em branch e PR no GitHub; sem merge automático.",
-  "continuacao_ciencias": "docs/redesign-visual-interativo/ciencias/CONTINUIDADE.json"
+  "continuacao_ciencias": "docs/redesign-visual-interativo/ciencias/CONTINUIDADE.json",
+  "continuacao_todos_capitulos": "docs/redesign-visual-interativo/todos-capitulos/CONTINUIDADE.json"
 }

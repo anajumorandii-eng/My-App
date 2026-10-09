@@ -46,7 +46,7 @@ export function ConceptChain({
       </header>
       <div className="vs-map-tree">
         <div className="vs-map-root">
-          <StudyObjectIcon subject={map.subject} topic={map.topic} />
+          <StudyObjectIcon subject={map.subject} topic={map.topic + ' ' + map.title} />
           <span>{map.subject}</span>
           <strong>{map.title}</strong>
           <small>{map.nodes.length} etapas conectadas</small>

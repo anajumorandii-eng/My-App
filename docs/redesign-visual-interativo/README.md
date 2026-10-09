@@ -36,3 +36,7 @@ Ordem de aplicação: Matemática → Física → Química → Biologia → dema
 ## Continuação em Ciências
 
 A entrega seguinte refina o pistão adiabático, adiciona modelos espaciais de cinco moléculas ao capítulo de polaridade e uma vista de dupla-hélice ao instrumento de ácidos nucleicos. Código, limites, capturas e continuidade estão em [Ciências](ciencias/README.md).
+
+## Aplicação ao currículo completo
+
+A composição editorial, os ícones por assunto e a exploração em foco chegam aos 613 capítulos das 14 matérias. Inventário, verificação capítulo a capítulo, capturas e limites em [Todos os capítulos](todos-capitulos/README.md).

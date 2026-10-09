@@ -1,0 +1,22 @@
+.vs-chapter-scene { min-width: 0; color: var(--vs-ink); }
+.vs-chapter-scene-tools { display: flex; gap: 14px; align-items: center; margin: 0 0 14px; padding: 14px 18px; background: var(--vs-paper-strong); border: 1px solid var(--vs-line); border-radius: 14px; box-shadow: 0 3px 0 color-mix(in srgb,var(--vs-metal) 18%, transparent); }
+.vs-chapter-scene-tools>.vs-object-icon { width: 58px; height: 58px; flex: 0 0 58px; }
+.vs-chapter-scene-tools>div { min-width: 0; flex: 1; }
+.vs-chapter-scene-tools small { color: var(--vs-dim); display: block; font: 500 10px/1.5 Inter,system-ui,sans-serif; letter-spacing: .08em; text-transform: uppercase; }
+.vs-chapter-scene-tools strong { display: block; margin-top: 5px; font: 500 20px/1.2 Newsreader,Georgia,serif; overflow-wrap: anywhere; }
+.vs-chapter-scene-tools button { display: flex; align-items: center; justify-content: center; gap: 7px; min-height: 44px; padding: 10px 12px; border: 1px solid var(--vs-line); border-radius: 8px; background: var(--vs-paper); color: var(--vs-burgundy); font-size: 12px; flex: 0 0 auto; }
+.vs-chapter-scene-tools button svg { width: 16px; height: 16px; }
+.vs-chapter-scene-tools button:focus-visible { outline: 2px solid var(--vs-burgundy); outline-offset: 3px; }
+.vs-chapter-scene-body { min-width: 0; }
+.vs-chapter-scene--focus { position: fixed; inset: 0; z-index: 2000; background: var(--vs-paper); padding: 18px max(18px,calc((100vw - 1400px)/2)); overflow: auto; overscroll-behavior: contain; }
+.vs-chapter-scene--focus>.vs-chapter-scene-tools { position: sticky; top: -18px; z-index: 5; border-radius: 0 0 14px 14px; }
+.vs-chapter-scene--focus .vs-chapter-scene-body { max-width: 1200px; margin: auto; padding-bottom: max(24px,env(safe-area-inset-bottom)); }
+@media(max-width:560px) {
+  .vs-chapter-scene-tools { padding: 12px; gap: 10px; flex-wrap: wrap; }
+  .vs-chapter-scene-tools>.vs-object-icon { width: 44px; height: 44px; flex-basis: 44px; }
+  .vs-chapter-scene-tools>div { flex-basis: calc(100% - 54px); }
+  .vs-chapter-scene-tools strong { font-size: 18px; }
+  .vs-chapter-scene-tools button { width: 100%; }
+  .vs-chapter-scene--focus { padding: 12px; }
+  .vs-chapter-scene--focus>.vs-chapter-scene-tools { top: -12px; }
+}

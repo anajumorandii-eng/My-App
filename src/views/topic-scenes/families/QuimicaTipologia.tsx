@@ -1,3 +1,4 @@
+import { MolecularObjectView } from '../../visual-instruments/ScienceObjectView';
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -35,7 +36,7 @@ export function QuimicaTipologia({ entry }: { entry: SceneEntry }) {
   const geometry = entry.chapterId === 'summary-quimica-geometria-molecular';
 
   return (
-    <section className="tc-scene tc-chem-scene" aria-label={entry.question}>
+    <>{geometry && <MolecularObjectView />}<section className="tc-scene tc-chem-scene" aria-label={entry.question}>
       <header>
         <small>CRIVO · modelo químico</small>
         <h4>{entry.question}</h4>
@@ -52,6 +53,6 @@ export function QuimicaTipologia({ entry }: { entry: SceneEntry }) {
         ))}
       </div>
       {item && <p className="tc-observation" role="status"><strong>{item.label}:</strong> {item.claim}</p>}
-    </section>
+    </section></>
   );
 }

@@ -1,4 +1,5 @@
 import React from 'react';
+import { ChapterSceneFrame } from './ChapterSceneFrame';
 import type { NodeState, VisualMap } from '../lib/visualStudy';
 import type { InteractiveSummary } from '../types/summary';
 import { TopicFallbackVisual } from './TopicFallbackVisual';
@@ -43,10 +44,12 @@ export function VisualArtifact({
 
   return (
     <div data-visual-representation={representation} data-study-artifact-mode={mode}>
+      <ChapterSceneFrame chapterId={summary.id} subject={summary.subject} title={summary.title} topic={summary.topic}>
       {Board && <Board map={map} states={states} selectedId={selectedId} onSelect={onSelect} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />}
       {representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id} />}
       {representation === 'scene' && <TopicScene key={`cena-${summary.id}`} summaryId={summary.id} />}
       {representation === 'fallback' && <TopicFallbackVisual summary={summary} activeIndex={activeIndex} onSelectStep={onSelectStep} />}
+      </ChapterSceneFrame>
     </div>
   );
 }

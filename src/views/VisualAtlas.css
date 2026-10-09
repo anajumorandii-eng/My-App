@@ -187,3 +187,48 @@
 .crivo-visual.crivo-visual--atlas :is(.vs-chain-stage,.vs-journey .vs-board-kicker,.vs-journey-count,.vs-priority-kicker,.vs-priority-panel small) { color: var(--vs-burgundy); }
 .crivo-visual.crivo-visual--atlas .vs-journey-controls button:last-child { color: var(--vs-paper-strong); }
 .crivo-visual.crivo-visual--atlas .tc-scene>header>small { color: var(--vs-burgundy); }
+
+/* Materiais comuns chegam às cenas existentes sem deformar seus gráficos ou escalas. */
+.crivo-visual.crivo-visual--atlas {
+  --vs-kit-acc: #852636; --vs-kit-azul: #476e82; --vs-kit-sol: #8f6525;
+  --vs-kit-roxo: #76546d; --vs-kit-laranja: #97532f; --vs-kit-ciano: #326c74;
+  --vs-kit-vermelho: #9a4549; --vs-kit-verde: #426f59;
+  --vs-kit-vidro: #fffdf8; --vs-kit-vidro-forte: #f2ebdf;
+  --vs-amber: #926a2d; --vs-green: #426f59;
+}
+.dark .crivo-visual.crivo-visual--atlas {
+  --vs-kit-acc: #e695a5; --vs-kit-azul: #98bdca; --vs-kit-sol: #dbbc88;
+  --vs-kit-roxo: #c3a1bc; --vs-kit-laranja: #deae8c; --vs-kit-ciano: #9dc5c3;
+  --vs-kit-vermelho: #e8a1a0; --vs-kit-verde: #a6c5af;
+  --vs-kit-vidro: #272c28; --vs-kit-vidro-forte: #343a33;
+  --vs-amber: #dbbc88; --vs-green: #a6c5af;
+}
+.crivo-visual.crivo-visual--atlas :is(.tc-scene,.te-scene,.ts-scene) { border-radius: 14px; border: 1px solid var(--vs-line); box-shadow: 0 3px 0 color-mix(in srgb,var(--vs-metal) 15%,transparent),0 8px 24px rgb(40 28 15 / .045); }
+.crivo-visual.crivo-visual--atlas .vs-kit-pulso { animation: none; }
+.crivo-visual.crivo-visual--atlas .vs-kit-grade { opacity: .25; }
+.crivo-visual.crivo-visual--atlas :is(.tc-choices button,.tc-quote-toggle) { font-family: Inter,system-ui,sans-serif; font-size: .875rem; border-width: 1px; border-radius: 8px; min-height: 44px; }
+.crivo-visual.crivo-visual--atlas .tc-choices button[aria-pressed=true] { color: var(--vs-paper-strong); background: var(--vs-burgundy); }
+
+/* Mantém a descrição legível mesmo em controles com rótulos extensos. */
+.crivo-visual.crivo-visual--atlas .vs-plane-control label {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: baseline;
+  gap: 4px 8px;
+}
+.crivo-visual.crivo-visual--atlas .vs-plane-control label strong {
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.crivo-visual.crivo-visual--atlas .vs-plane-control label span {
+  grid-column: 1 / -1;
+  grid-row: 2;
+  line-height: 1.5;
+}
+.crivo-visual.crivo-visual--atlas .vs-plane-control label b {
+  grid-column: 2;
+  grid-row: 1;
+  max-width: 110px;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
