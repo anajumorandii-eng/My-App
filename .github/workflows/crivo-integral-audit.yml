@@ -1,7 +1,9 @@
 name: Auditoria integral dos capítulos
 
 on:
-  pull_request:
+  push:
+    branches:
+      - 'docs/verificacao-integral-awesome-2026-10-09'
     paths:
       - '.github/workflows/crivo-integral-audit.yml'
       - 'docs/inspecao-visual-613-2026-10-09/*.cjs'
@@ -12,12 +14,12 @@ permissions:
   contents: read
 
 concurrency:
-  group: crivo-integral-${{ github.event.pull_request.number }}
+  group: crivo-integral-291
   cancel-in-progress: true
 
 jobs:
   catalogo:
-    if: github.head_ref == 'docs/verificacao-integral-awesome-2026-10-09'
+    if: github.ref_name == 'docs/verificacao-integral-awesome-2026-10-09'
     runs-on: ubuntu-latest
     timeout-minutes: 90
     strategy:
@@ -29,14 +31,14 @@ jobs:
     env:
       CRIVO_AUDIT_WIDTH: ${{ matrix.width }}
       CRIVO_AUDIT_THEME: ${{ matrix.theme }}
-      CRIVO_AUDIT_SHA: ${{ github.event.pull_request.head.sha }}
+      CRIVO_AUDIT_SHA: ${{ github.sha }}
       CRIVO_VISUAL_URL: http://127.0.0.1:3003
       CRIVO_VISUAL_AUDIT_DIR: work/auditoria-integral-${{ matrix.width }}-${{ matrix.theme }}
       PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH: /usr/bin/google-chrome
     steps:
       - uses: actions/checkout@v4
         with:
-          ref: ${{ github.event.pull_request.head.sha }}
+          ref: ${{ github.sha }}
       - uses: actions/setup-node@v4
         with:
           node-version: '22'
