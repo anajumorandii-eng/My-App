@@ -1,0 +1,51 @@
+{
+  "branch": "review/capitulos-mecanismos-individuais",
+  "base": "97653720",
+  "revisao_funcional": {
+    "capitulos": 613,
+    "verificacoes": 1226,
+    "controles_e_opcoes_exercitados": 2165,
+    "falhas_finais": [],
+    "larguras": [
+      1440,
+      360
+    ],
+    "capitulos_por_materia": {
+      "Matemática": 83,
+      "Física": 85,
+      "Química": 48,
+      "Biologia": 72,
+      "Atualidades": 1,
+      "Geografia": 63,
+      "História": 49,
+      "Língua Inglesa": 17,
+      "Redação": 58,
+      "Gramática": 26,
+      "Literatura": 37,
+      "Entendimento de Texto": 12,
+      "Filosofia": 35,
+      "Sociologia": 27
+    }
+  },
+  "correcoes_conceituais": 8,
+  "casos_responsividade": 48,
+  "acessibilidade": {
+    "checagens": 16,
+    "violacoes": 0
+  },
+  "fila_editorial_historica": "preservada; não encerrada por esta revisão técnica",
+  "inventario_formal": "aprovações não promovidas automaticamente",
+  "persistencia": "Código e evidências em branch e PR no GitHub; sem merge automático",
+  "verificacao_projeto": {
+    "lint": "passou",
+    "build": "passou",
+    "suite_completa": {
+      "comando": "npm test",
+      "resultado": "passou",
+      "testes_node": 943,
+      "testes_interface": 1402,
+      "total": 2345,
+      "arquivos_interface": 183
+    }
+  }
+}

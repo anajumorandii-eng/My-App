@@ -44,3 +44,28 @@ it.each<ConfigId>(['circunferencia','ponto-reta','complexo'])('%s mantém format
   expect(condition().textContent).toMatch(/\(−?\d+,\d; −?\d+,\d\)/);
  }
 });
+
+
+it('não desenha uma reta ou perpendicular inválida quando P coincide com A', () => {
+ const C=analyticInstrument('duas-retas'); const view=render(<C {...props()}/>);
+ const controls=Array.from(view.container.querySelectorAll('input[type="range"]'));
+ fireEvent.change(controls[0],{target:{value:'0'}});fireEvent.change(controls[1],{target:{value:'-3'}});
+ expect(view.container.querySelector('.vs-analytic-line--alt')).toBeNull();
+ expect(view.container.textContent).toContain('indefinida: falta uma segunda reta');
+ for(const path of view.container.querySelectorAll('svg path')) expect(path.getAttribute('d')).not.toMatch(/NaN|Infinity/);
+ fireEvent.change(controls[0],{target:{value:'1'}});
+ expect(view.container.querySelector('.vs-analytic-line--alt')).not.toBeNull();
+});
+
+
+it('oferece tangência exata sem classificar uma secante próxima como tangente', () => {
+ const C=analyticInstrument('reta-circunferencia');const view=render(<C {...props()}/>);
+ const controls=Array.from(view.container.querySelectorAll('input[type="range"]'));
+ for(const input of controls)fireEvent.change(input,{target:{value:'2.1'}});
+ expect(view.container.querySelector('.vs-plane-readouts [data-pivot] dd')).toHaveTextContent('secante');
+ fireEvent.click(view.getByRole('button',{name:'Tangente'}));
+ expect(view.container.querySelector('.vs-plane-readouts [data-pivot] dd')).toHaveTextContent('tangente');
+ expect(view.container).toHaveTextContent('x = y = 3/√2');
+ fireEvent.click(view.getByRole('button',{name:'Externa'}));
+ expect(view.container.querySelector('.vs-plane-readouts [data-pivot] dd')).toHaveTextContent('externa');
+});

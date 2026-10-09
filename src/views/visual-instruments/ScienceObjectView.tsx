@@ -1,15 +1,17 @@
 import React, { useId, useState } from 'react';
 import { MOLECULAS, ORDEM, ehPolar, momentoResultante, type IdMolecula } from '../../lib/geometriaMolecular';
-import { DNA_B, parNaPosicao } from '../../lib/duplaHelice';
+import { parNaPosicao, posicoesDoParVertical } from '../../lib/duplaHelice';
 import { basePair } from '../../lib/biologyInstrumentLab';
 import { rotateSpatialPoint, type SpatialPoint } from '../../lib/spatialSolid';
 import './ScienceObjectView.css';
 
 type Atom = { point: SpatialPoint; label: string; kind: 'central' | 'ligand' | 'free' | 'backbone'; radius: number };
+type Annotation = { point: SpatialPoint; text: string; dx: number; dy: number };
+
 type Bond = { from: SpatialPoint; to: SpatialPoint; kind?: 'hydrogen' | 'backbone'; count?: number };
 
 /** Ordenação em profundidade mantém ligações e átomos atrás ou à frente ao girar. */
-export function ScienceObjectDrawing({ atoms, bonds, yaw, description }: { atoms: Atom[]; bonds: Bond[]; yaw: number; description: string }) {
+export function ScienceObjectDrawing({ atoms, bonds, yaw, description, annotations = [] }: { atoms: Atom[]; bonds: Bond[]; yaw: number; description: string; annotations?: Annotation[] }) {
   const uid = useId().replace(/:/g, '');
   const project = (p: SpatialPoint) => {
     const [x, y, z] = rotateSpatialPoint(p, yaw, 12);
@@ -26,8 +28,11 @@ export function ScienceObjectDrawing({ atoms, bonds, yaw, description }: { atoms
       const ux = distance ? (b.x - a.x) / distance : 0, uy = distance ? (b.y - a.y) / distance : 0;
       const start = { x: a.x + ux * ra, y: a.y + uy * ra };
       const end = { x: b.x - ux * rb, y: b.y - uy * rb };
-      return { depth: (a.z + b.z) / 2, element: <g key={'bond-' + index} className={'vs-science-bond ' + (bond.kind ?? '')}>
-        {Array.from({ length: visible ? (bond.count ?? 1) : 0 }, (_, i) => <line key={i} x1={start.x} y1={start.y + (i - ((bond.count ?? 1) - 1) / 2) * 4} x2={end.x} y2={end.y + (i - ((bond.count ?? 1) - 1) / 2) * 4} />)}
+      return { depth: (a.z + b.z) / 2, element: <g key={'bond-' + index} className={'vs-science-bond ' + (bond.kind ?? '') + ((bond.count ?? 1) > 1 ? ' multiple' : '')}>
+        {Array.from({ length: visible ? (bond.count ?? 1) : 0 }, (_, i) => {
+          const offset = (i - ((bond.count ?? 1) - 1) / 2) * 5;
+          return <line key={i} x1={start.x - uy * offset} y1={start.y + ux * offset} x2={end.x - uy * offset} y2={end.y + ux * offset} />;
+        })}
       </g> };
     }),
     ...atoms.map((atom, index) => {
@@ -44,6 +49,7 @@ export function ScienceObjectDrawing({ atoms, bonds, yaw, description }: { atoms
     </radialGradient>)}</defs>
     <ellipse cx="160" cy="278" rx="92" ry="11" className="vs-science-ground" />
     {objects.map(object => object.element)}
+    {annotations.map((note, i) => { const p = project(note.point); return <text key={i} className="vs-science-direction" x={p.x + note.dx} y={p.y + note.dy} textAnchor="middle">{note.text}</text>; })}
   </svg>;
 }
 
@@ -55,7 +61,7 @@ export function MolecularObjectView() {
   const atoms: Atom[] = [{ point: [0, 0, 0], label: m.central, kind: 'central', radius: 24 },
     ...m.ligacoes.map(v => ({ point: position(v), label: m.ligante, kind: 'ligand' as const, radius: 18 })),
     ...m.paresLivres.map(v => ({ point: position(v), label: '••', kind: 'free' as const, radius: 20 }))];
-  const bonds: Bond[] = m.ligacoes.map(v => ({ from: [0, 0, 0], to: position(v) }));
+  const bonds: Bond[] = m.ligacoes.map(v => ({ from: [0, 0, 0], to: position(v), count: id === 'CO2' ? 2 : 1 }));
   const uid = useId();
   return <section className="vs-science-card" aria-label="Modelo molecular tridimensional">
     <header><small>QUÍMICA · MODELO ESPACIAL</small><h4>Gire para entender a geometria</h4></header>
@@ -66,7 +72,7 @@ export function MolecularObjectView() {
     <label className="vs-science-rotation" htmlFor={uid}>Girar a molécula <output>{yaw}°</output></label>
     <input id={uid} type="range" min="0" max="360" value={yaw} onChange={event => setYaw(Number(event.target.value))} />
     <p className="vs-science-reading" role="status" aria-label="Leitura molecular"><strong>{m.geometria} · {m.anguloGraus.toLocaleString('pt-BR')}° · {polar ? 'polar' : 'apolar'}</strong><br />{m.paresLigantes} ligantes · {m.paresNaoLigantes} pares livres. Soma dos vetores de ligação: {momentoResultante(m).toLocaleString('pt-BR', { maximumFractionDigits: 2 })}.</p>
-    <p className="vs-science-caption">Modelo esquemático: ligantes iguais têm o mesmo peso na soma. Esferas não estão em escala; a rotação conserva os ângulos. Os pares livres indicam regiões eletrônicas, não átomos.</p>
+    <p className="vs-science-caption">Modelo esquemático: ligantes iguais têm o mesmo peso na soma. Esferas não estão em escala; a rotação conserva os ângulos. Os pares livres indicam regiões eletrônicas, não átomos. {id === 'CO2' && 'No CO₂, O=C=O tem duas ligações duplas; cada dupla ocupa uma região de ligação.'}</p>
   </section>;
 }
 
@@ -76,10 +82,9 @@ export function NucleicObjectView({ value }: { value: number }) {
   const atoms: Atom[] = [], bonds: Bond[] = [];
   const tracks: [SpatialPoint[], SpatialPoint[]] = [[], []];
   for (let i = 0; i < 10; i++) {
-    const angle = i * 2 * Math.PI / DNA_B.paresPorVolta;
-    const y = (i - 4.5) * DNA_B.subidaPorParNm * 55;
-    const a: SpatialPoint = [Math.cos(angle) * 55, y, Math.sin(angle) * 55];
-    const b: SpatialPoint = [-a[0], y, -a[2]];
+    const positions = posicoesDoParVertical(i);
+    const a = positions.molde.map(n => n * 55) as SpatialPoint;
+    const b = positions.complementar.map(n => n * 55) as SpatialPoint;
     const pair = i === 5 ? selected : parNaPosicao(i);
     const template = 'template' in pair ? pair.template : pair.molde;
     const complementary = 'dna' in pair ? pair.dna : pair.complementar;
@@ -90,12 +95,15 @@ export function NucleicObjectView({ value }: { value: number }) {
     if (i > 0) tracks.forEach(track => bonds.push({ from: track[i - 1], to: track[i], kind: 'backbone' }));
   }
   return <div className="vs-nucleic-object">
-    <ScienceObjectDrawing atoms={atoms} bonds={bonds} yaw={yaw} description={`Dupla-hélice esquemática de DNA-B; par destacado ${selected.template}–${selected.dna}, ${selected.hydrogenBonds} pontes de hidrogênio. RNA transcrito: ${selected.rna}.`} />
+    <ScienceObjectDrawing atoms={atoms} bonds={bonds} yaw={yaw} annotations={[
+      { point: tracks[0][0], text: '3′', dx: 18, dy: 18 }, { point: tracks[0][9], text: '5′', dx: 18, dy: -12 },
+      { point: tracks[1][0], text: '5′', dx: -18, dy: 18 }, { point: tracks[1][9], text: '3′', dx: -18, dy: -12 },
+    ]} description={`Dupla-hélice esquemática destrogira de DNA-B; par destacado ${selected.template}–${selected.dna}, ${selected.hydrogenBonds} pontes de hidrogênio. RNA transcrito: ${selected.rna}. Fitas antiparalelas com extremidades 5′ e 3′ em sentidos opostos.`} />
     <div className="vs-science-choices" role="group" aria-label="Rotação do DNA">
       <button type="button" onClick={() => setYaw((yaw + 330) % 360)}>Girar −30°</button>
       <button type="button" onClick={() => setYaw((yaw + 30) % 360)}>Girar +30°</button>
       <button type="button" onClick={() => setYaw(25)}>Restaurar vista</button>
     </div>
-    <p className="vs-science-caption">DNA-B: aproximadamente 10 pares por volta. Sequência ilustrativa; o controle de base altera o par destacado. Traços entre bases representam pontes de H; as fitas são antiparalelas. Consulte “Pareamento” para comparar DNA e RNA.</p>
+    <p className="vs-science-caption">DNA-B: hélice destrogira, aproximadamente 10 pares por volta. Sequência ilustrativa; o controle de base altera o par destacado. Traços entre bases representam pontes de H; as fitas são antiparalelas. Consulte “Pareamento” para comparar DNA e RNA.</p>
   </div>;
 }

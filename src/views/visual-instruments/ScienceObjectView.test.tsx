@@ -32,6 +32,8 @@ describe('objetos de Ciências com profundidade', () => {
     render(<Component {...props('summary-biologia-acidos-nucleicos')} />);
     fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
     fireEvent.click(screen.getByRole('button', { name: 'Dupla-hélice 3D' }));
+    expect(screen.getByRole('img').querySelectorAll('.vs-science-direction')).toHaveLength(4);
+    expect(Array.from(screen.getByRole('img').querySelectorAll('.vs-science-direction')).map(e => e.textContent)).toEqual(['3′', '5′', '5′', '3′']);
     expect(screen.getByRole('img')).toHaveAccessibleName(/par destacado C–G, 3 pontes.*RNA transcrito: G/);
     const name = screen.getByRole('img').getAttribute('aria-label');
     const geometry = screen.getByRole('img').innerHTML;
@@ -41,6 +43,17 @@ describe('objetos de Ciências com profundidade', () => {
     fireEvent.click(screen.getByRole('button', { name: /^Pareamento$/ }));
     expect(screen.getByRole('slider')).toHaveValue('2');
     expect(screen.getByRole('img')).toHaveAccessibleName(/DNA complementar: G/);
+  });
+
+  it('CO₂ conserva as duas ligações duplas sem transformar regiões de ligação em ligantes extras', () => {
+    render(<MolecularObjectView />);
+    fireEvent.click(screen.getByRole('button', { name: 'CO₂' }));
+    expect(screen.getByRole('img').querySelectorAll('.vs-science-bond.multiple')).toHaveLength(2);
+    expect(screen.getByRole('img').querySelectorAll('.vs-science-bond line')).toHaveLength(4);
+    expect(screen.getByRole('status', { name: 'Leitura molecular' })).toHaveTextContent('2 ligantes');
+    fireEvent.click(screen.getByRole('button', { name: 'H₂O' }));
+    expect(screen.getByRole('img').querySelectorAll('.vs-science-bond.multiple')).toHaveLength(0);
+    expect(screen.getByRole('img').querySelectorAll('.vs-science-bond line')).toHaveLength(2);
   });
 
   it('isola os materiais SVG de duas instâncias do pistão sem IDs duplicados', () => {

@@ -72,9 +72,11 @@ test('reta e circunferência: a comparação d × r decide o número de pontos',
 test('módulo e argumento do complexo', () => {
   const { modulo, argumento } = moduloEArgumento({ x: 3, y: 4 });
   assert.equal(modulo, 5);
+  assert.ok(argumento !== null);
   assert.ok(Math.abs(argumento - 53.13) < 0.01, `esperava ~53,13°, veio ${argumento}`);
   // Abaixo do eixo real o argumento é medido no sentido positivo, não negativo.
-  assert.ok(moduloEArgumento({ x: 1, y: -1 }).argumento > 300);
+  const abaixo = moduloEArgumento({ x: 1, y: -1 }).argumento;
+  assert.ok(abaixo !== null && abaixo > 300);
 });
 
 test('a reta é escrita sem coeficiente 1 nem termo nulo', () => {
@@ -124,6 +126,7 @@ test('a reta que depende do ponto realmente passa por ele', () => {
     if (!c.retaDe) continue;
     for (const p of [c.inicial, { x: 1.5, y: -2 }, { x: -3, y: 4 }]) {
       const r = c.retaDe(p);
+      assert.ok(r, `${id}: pontos distintos precisam definir a reta`);
       assert.ok(
         Math.abs(r.a * p.x + r.b * p.y + r.c) < 1e-9,
         `${id}: a reta gerada não contém o ponto (${p.x}; ${p.y})`,
@@ -188,4 +191,43 @@ test('baricentro: CG é o dobro de GM em qualquer posição de C', () => {
   }
   // O exemplo do capítulo: A(0,0), B(6,0), C(3,9) dá G(3,3).
   assert.deepEqual(baricentro({ x: 0, y: 0 }, { x: 6, y: 0 }, { x: 3, y: 9 }), { x: 3, y: 3 });
+});
+
+
+test('um ponto repetido não define reta vertical nem segunda reta', () => {
+  const estudo = CONFIGS['dois-pontos'];
+  assert.match(estudo.readouts(estudo.fixo!).find(l => l.label === 'coeficiente angular')!.value, /coincidem/);
+  assert.match(estudo.annotations(estudo.fixo!)[0].text, /reta não definida/);
+  const relativas = CONFIGS['duas-retas'];
+  assert.equal(relativas.retaDe!(relativas.fixo!), null);
+  assert.match(relativas.readouts(relativas.fixo!).find(l => l.pivot)!.value, /indefinida/);
+  assert.equal(relativas.readouts(relativas.fixo!).find(l => l.label === 'ponto comum')!.value, 'não se aplica');
+  assert.match(relativas.annotations(relativas.fixo!)[0].text, /reta não definida/);
+  assert.equal(relativas.readouts({ x: 0, y: -2.9 }).find(l => l.pivot)!.value, 'concorrentes');
+});
+
+test('zero tem módulo zero e não possui argumento definido', () => {
+  assert.deepEqual(moduloEArgumento({ x: 0, y: 0 }), { modulo: 0, argumento: null });
+  assert.equal(CONFIGS.complexo.readouts({ x: 0, y: 0 }).find(l => l.label === 'argumento')!.value, 'indefinido para z = 0');
+  assert.equal(moduloEArgumento({ x: 0.1, y: 0 }).argumento, 0);
+});
+
+
+test('estar perto da circunferência não equivale a estar sobre ela', () => {
+ const circle = { cx: 0.5, cy: -0.5, r: 3 };
+ assert.equal(posicaoNoCirculo({ x: 3.4, y: -0.5 }, circle), 'dentro');
+ assert.equal(posicaoNoCirculo({ x: 3.6, y: -0.5 }, circle), 'fora');
+ assert.equal(posicaoNoCirculo({ x: 3.5, y: -0.5 }, circle), 'sobre');
+});
+
+test('retas próximas da tangência ainda podem cortar ou não tocar a circunferência', () => {
+ const circle = { cx: 0, cy: 0, r: 3 };
+ assert.equal(posicaoRetaCirculo({ a: 1, b: 1, c: -4.2 }, circle), 'secante');
+ assert.equal(posicaoRetaCirculo({ a: 1, b: 1, c: -4.4 }, circle), 'externa');
+ assert.equal(posicaoRetaCirculo({ a: 1, b: 1, c: -3 * Math.sqrt(2) }, circle), 'tangente');
+ for (const id of ['circunferencia', 'reta-circunferencia'] as const) for (const caso of CONFIGS[id].casos!) {
+   const reads = CONFIGS[id].readouts(caso.ponto);
+   assert.equal(reads.find(l => l.pivot)!.value, caso.label.toLowerCase());
+   if (id === 'reta-circunferencia') assert.equal(reads.find(l => l.label === 'comparação')!.value, caso.label === 'Tangente' ? 'd = r' : caso.label === 'Secante' ? 'd < r' : 'd > r');
+ }
 });
