@@ -1,6 +1,14 @@
 # CRIVO — continuidade operacional
 
-## Estado mais recente — Entrega O/Redação R1, 06/10/2026
+## Proposta mais recente — inspeção visual dos 613 capítulos, 09/10/2026
+
+O pedido atual é conferir todos os capítulos e corrigir os desvios do visual aprovado, com objetos em relevo relacionados ao assunto. A branch `redesign/inspecao-visual-613` parte de `ac108c60`; Geografia e História já foram integradas pela PR #288 e não devem ser reaplicadas.
+
+A proposta associa os 613 IDs a 152 modelos de objetos, unifica a apresentação das cenas, amplia os controles para toque e melhora a leitura de comparações de Biologia e Química. O percurso de conceitos passa a estar disponível em todas as matérias. Os mecanismos, os textos e os estados de aprovação pedagógica são preservados.
+
+Fonte atual desta entrega: [inspeção visual](inspecao-visual-613-2026-10-09/README.md), [inventário individual](inspecao-visual-613-2026-10-09/inventario-613.json) e [guia de continuidade](inspecao-visual-613-2026-10-09/CONTINUIDADE.md). Os registros abaixo são históricos e não devem substituir esse pedido. Sem merge automático.
+
+## Registro — Entrega O/Redação R1, 06/10/2026
 
 As Entregas L e N foram integradas juntas na PR #269 (a #270 entrou pela
 branch de L). A branch `fix/entrega-o-redacao-r1` trata os 16

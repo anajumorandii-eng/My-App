@@ -1,0 +1,80 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-09T17:42:49Z",
+  "source_commit": "a2d1e5978078c7ef2cdaa653059a089d98a71a93",
+  "base_commit": "ac108c60",
+  "capitulos": 613,
+  "materias": 14,
+  "modelos_de_objetos": 152,
+  "icones": "SVG estático com materiais, bisel e sombra; estética 3D",
+  "inspecao_visual": {
+    "folhas_de_contato_depois": 77,
+    "capturas_finais": 1226,
+    "renderizacoes_e_controles_verificados": 1226,
+    "falhas_finais": 0,
+    "desktop_claro": {
+      "largura": 1440,
+      "altura": 1100
+    },
+    "celular_escuro": {
+      "largura": 360,
+      "altura": 1100
+    },
+    "representacao_nativa_aguardada": true,
+    "rolagem_horizontal_da_pagina": 0,
+    "escopo": "abertura em foco e controles; não todas as combinações de parâmetros"
+  },
+  "tablet": {
+    "largura": 834,
+    "capitulos": 613,
+    "selecao_de_conceitos_por_teclado": 613,
+    "inspetor_acessivel": 613,
+    "falhas_finais": 0
+  },
+  "amostra_acessibilidade": {
+    "materias": 14,
+    "estados_de_foco_e_responsividade": 84,
+    "larguras": [
+      1440,
+      834,
+      360
+    ],
+    "temas": [
+      "light",
+      "dark"
+    ],
+    "verificacoes_axe": 28,
+    "violacoes_detectadas": 0,
+    "escopo_axe": ".crivo-visual"
+  },
+  "biblioteca": {
+    "filtros_de_materia_e_tema": 28,
+    "capitulos_por_tema": 613,
+    "objetos_corretos_em_todos_os_cartoes": true,
+    "rolagem_horizontal_da_pagina": false
+  },
+  "codigo": {
+    "lint": {
+      "comando": "npm run lint",
+      "exit_code": 0
+    },
+    "testes": {
+      "comando": "VITEST_MAX_WORKERS=2 npm test",
+      "exit_code": 0,
+      "node": 943,
+      "ui": 1409,
+      "arquivos_ui": 185,
+      "total": 2352
+    },
+    "build": {
+      "comando": "npm run build",
+      "exit_code": 0
+    }
+  },
+  "comparacao_antes": {
+    "capturas_utilizaveis": 1223,
+    "descartadas_por_carregamento": 3,
+    "todos_os_capitulos_descartados_recapturados_no_depois": true
+  },
+  "aprovacao_pedagogica": "Estados existentes preservados; inspeção visual não promove aprovação."
+}
