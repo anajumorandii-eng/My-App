@@ -394,7 +394,7 @@ export const mockTopics: Topic[] = [
       'Do Mundo Bipolar ao Multipolar', 'Globalização e Processos Econômicos Atuais', 'Geografia das Redes Mundiais',
       'Unilateralismo e Multilateralismo', 'Blocos Econômicos', 'União Europeia', 'Desigualdades Globais',
       'Mobilidade Populacional', 'Geografia do Turismo', 'Produção Agrícola Mundial', 'Indústria I', 'Indústria II',
-      'Gedeconomia Mundial',
+      'Geoeconomia Mundial',
     ],
   },
   {
