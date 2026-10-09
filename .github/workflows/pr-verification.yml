@@ -30,6 +30,8 @@ jobs:
       - run: npm ci
       - run: npm run lint
       - run: npm run test:vitest
+      - name: Continuidade do catálogo e conteúdo editorial
+        run: npx vitest run src/data/continuityGeography.test.ts
       - run: npm run visual:matrix
       - run: git diff --exit-code -- docs/visual-personalizado/18-matriz-cobertura.json docs/visual-personalizado/18-matriz-cobertura.md
       - run: npm run build

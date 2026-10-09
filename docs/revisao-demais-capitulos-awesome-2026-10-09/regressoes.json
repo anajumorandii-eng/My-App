@@ -1,0 +1,967 @@
+{
+  "schema_version": 1,
+  "after": {
+    "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+    "run_id": 38001813129,
+    "content_tests_passed": 10,
+    "header_cases": 78,
+    "header_failures": 0,
+    "header_rows": [
+      {
+        "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-historia-a-mineracao-no-brasil-colonial",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-pollution",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-literatura-literatura-lusofona-contemporanea",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+        "width": 360,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-historia-a-mineracao-no-brasil-colonial",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-pollution",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-literatura-literatura-lusofona-contemporanea",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+        "width": 360,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-historia-a-mineracao-no-brasil-colonial",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-pollution",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-literatura-literatura-lusofona-contemporanea",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+        "width": 834,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-historia-a-mineracao-no-brasil-colonial",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-pollution",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-literatura-literatura-lusofona-contemporanea",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+        "width": 834,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-historia-a-mineracao-no-brasil-colonial",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-pollution",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-literatura-literatura-lusofona-contemporanea",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+        "width": 1440,
+        "theme": "light",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-historia-a-mineracao-no-brasil-colonial",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-lingua-inglesa-text-comprehension-pollution",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-literatura-literatura-lusofona-contemporanea",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      },
+      {
+        "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+        "width": 1440,
+        "theme": "dark",
+        "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+        "metrics": {
+          "broken": [],
+          "clipped": [],
+          "pageOverflow": false
+        },
+        "passed": true
+      }
+    ]
+  },
+  "before": {
+    "initial": {
+      "source_commit": "a35b12f5ae2dc67a51b5b4af6ec2da57ff619023",
+      "run_id": 37999219469,
+      "content_failures": 3,
+      "header_cases": 78,
+      "header_failures": 32
+    },
+    "deep_summary_continuity": {
+      "source_commit": "5651b7be656d08bbea4074509d2603af51b3fc61",
+      "run_id": 38001274823,
+      "content_failures": 2
+    }
+  },
+  "limits": [
+    "Teste de cabeçalhos mede palavras e overflow em 13 IDs, três larguras e dois temas.",
+    "Conteúdo: testes de preservação de IDs, autoria do relevo, aromaticidade e continuidade entre texto e cena.",
+    "Não corresponde à aprovação pedagógica integral."
+  ]
+}

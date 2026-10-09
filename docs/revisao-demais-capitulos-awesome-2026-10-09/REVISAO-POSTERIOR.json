@@ -1,0 +1,400 @@
+{
+  "schema_version": 1,
+  "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+  "run_id": 38001813270,
+  "scope": "Abertura posterior às correções, amostra de 18 IDs em 360/escuro e 1440/claro; imagens com movimento reduzido.",
+  "criteria": [
+    "Cabeçalhos legíveis, palavras inteiras, hierarquia e distribuição da abertura.",
+    "Coerência dos rótulos e perguntas visíveis com as correções."
+  ],
+  "limits": [
+    "Não cobre todos os estados dos controles nem certificação pedagógica integral.",
+    "A abertura mostra os três cartões de substituição; a interação com o ramo aromático é coberta pelo teste DOM específico, além dos círculos visíveis no cartão inicial.",
+    "Não implica inspeção individual de todas as imagens da folha de contato."
+  ],
+  "chapters": [
+    {
+      "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+      "index": 41,
+      "sheet": "005",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/005.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/005.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/005.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/005.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Pseudocelomado inteiro abaixo do título no celular; cabeçalho completo no desktop."
+    },
+    {
+      "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+      "index": 47,
+      "sheet": "005",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/005.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/005.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/005.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/005.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Cartilaginoso inteiro; título e badge separados nos dois formatos."
+    },
+    {
+      "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+      "index": 68,
+      "sheet": "008",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/008.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/008.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/008.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/008.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Fecundação inteira; título quebra somente entre palavras."
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "index": 251,
+      "sheet": "031",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/031.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/031.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/031.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/031.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Quinto inteiro no celular, abaixo da introdução; desktop completo."
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+      "index": 272,
+      "sheet": "034",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/034.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/034.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/034.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/034.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Terremotos: previsão não é ocorrência com palavras inteiras; might inteiro no celular."
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-pollution",
+      "index": 275,
+      "sheet": "034",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/034.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/034.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/034.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/034.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Poluição: alcance e resposta inteiro; most e esquema organizados."
+    },
+    {
+      "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+      "index": 215,
+      "sheet": "026",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/026.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/026.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/026.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/026.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Fluxos e redes migratórias e Origem sem divisão interna de palavras."
+    },
+    {
+      "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+      "index": 207,
+      "sheet": "025",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/025.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/025.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/025.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/025.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Biocombustíveis inteiro no título; Fóssil inteiro abaixo da descrição móvel."
+    },
+    {
+      "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+      "index": 288,
+      "sheet": "036",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/036.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/036.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/036.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/036.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Gerar em uma linha, eliminando gera/r; título e hierarquia preservados."
+    },
+    {
+      "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+      "index": 293,
+      "sheet": "036",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/036.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/036.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/036.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/036.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Núcleo em uma linha, eliminando núcle/o; pergunta e seleção distinguíveis."
+    },
+    {
+      "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+      "index": 555,
+      "sheet": "069",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/069.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/069.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/069.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/069.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "O Método Socrático e a Maiêutica quebra entre palavras; Argumento desenhado inteiro abaixo da pergunta no celular, à direita no desktop. Prancha com navegação horizontal intencional."
+    },
+    {
+      "id": "summary-literatura-literatura-lusofona-contemporanea",
+      "index": 401,
+      "sheet": "050",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/050.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/050.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/050.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/050.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Literatura Lusófona Contemporânea com palavras inteiras, sem a isolado; badge separado."
+    },
+    {
+      "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+      "index": 607,
+      "sheet": "075",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/075.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/075.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/075.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/075.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Movimentos Sociais Clássicos e Contemporâneos inteiro, com quebras entre palavras. Casos autorais inteiro abaixo da pergunta no celular; controles organizados."
+    },
+    {
+      "id": "summary-geografia-gedeconomia-mundial",
+      "index": 186,
+      "sheet": "023",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/023.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/023.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/023.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/023.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Geoeconomia Mundial correto; pergunta e opções visíveis e organizadas."
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "index": 198,
+      "sheet": "024",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/024.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/024.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/024.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/024.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Jurandyr Ross na pergunta; Planaltos, Planícies e Depressões correspondentes visíveis."
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "index": 528,
+      "sheet": "066",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/066.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/066.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/066.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/066.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Cabeçalho íntegro; três cartões visíveis e estado Radicalar selecionado. Cartão eletrofílico exibe círculos internos em benzeno e produto com Br; diagramas empilhados no celular e lado a lado no desktop."
+    },
+    {
+      "id": "summary-geografia-dominios-morfoclimaticos",
+      "index": 205,
+      "sheet": "025",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/025.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/025.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/025.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/025.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Pergunta nomeia Amazônico, Cerrado e Caatinga, com três opções correspondentes."
+    },
+    {
+      "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+      "index": 246,
+      "sheet": "030",
+      "status": "no_visible_blocking_findings_in_opening",
+      "images": [
+        {
+          "view": "360-dark",
+          "path": "capturas/360-dark/030.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/360-dark/030.jpg",
+          "actually_viewed": true
+        },
+        {
+          "view": "1440-light",
+          "path": "capturas/1440-light/030.jpg",
+          "url": "https://github.com/anajumorandii-eng/My-App/blob/7e878095f18cb91ce9402b2abfa2e2c72c1be119/docs/revisao-demais-capitulos-awesome-2026-10-09/capturas/1440-light/030.jpg",
+          "actually_viewed": true
+        }
+      ],
+      "observation": "Tecnologia náutica inteiro, quebrando entre palavras no celular; coerente com pergunta e cena náutica."
+    }
+  ],
+  "capture_commit": "7e878095f18cb91ce9402b2abfa2e2c72c1be119",
+  "reviewed_at_utc": "2026-10-09 23:25:26 UTC",
+  "reviewed_ids": 18,
+  "reviewed_images": 28,
+  "findings": []
+}

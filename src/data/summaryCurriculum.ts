@@ -4,6 +4,8 @@ export interface CurriculumTopic {
   subject: string;
   track: string;
   semester?: 1 | 2;
+  /** Identidade estável das seções quando o título recebe uma correção editorial. */
+  sectionSlug?: string;
 }
 
 export interface CurriculumSubject {
@@ -210,7 +212,7 @@ export const summaryCurriculum: CurriculumSubject[] = [
       { id: "geografia-producao-agricola-mundial", title: "Produção Agrícola Mundial", subject: "Geografia", track: "Globalização e Geografia Econômica" },
       { id: "geografia-industria-i", title: "Indústria I", subject: "Geografia", track: "Globalização e Geografia Econômica" },
       { id: "geografia-industria-ii", title: "Indústria II", subject: "Geografia", track: "Globalização e Geografia Econômica" },
-      { id: "geografia-gedeconomia-mundial", title: "Gedeconomia Mundial", subject: "Geografia", track: "Globalização e Geografia Econômica" },
+      { id: "geografia-gedeconomia-mundial", title: "Geoeconomia Mundial", sectionSlug: "gedeconomia-mundial", subject: "Geografia", track: "Globalização e Geografia Econômica" },
       { id: "geografia-terrorismo-internacional", title: "Terrorismo Internacional", subject: "Geografia", track: "Geopolítica Regional Contemporânea" },
       { id: "geografia-geografia-das-religioes", title: "Geografia das Religiões", subject: "Geografia", track: "Geopolítica Regional Contemporânea" },
       { id: "geografia-tensoes-geopoliticas-na-europa", title: "Tensões Geopolíticas na Europa", subject: "Geografia", track: "Geopolítica Regional Contemporânea" },

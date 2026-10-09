@@ -43,7 +43,7 @@ export function buildSubjectSummaries(input: {
   }));
   const summaries: InteractiveSummary[] = topics.map((topic) => {
     const note = input.notes[topic.title];
-    const prefix = `${input.idPrefix}-${slug(topic.title)}`;
+    const prefix = `${input.idPrefix}-${topic.sectionSlug ?? slug(topic.title)}`;
     const titleKeywords = [...new Set(slug(topic.title).split('-').filter((word) => word.length >= 4))].slice(0, 4);
     return {
       id: `summary-${topic.id}`,

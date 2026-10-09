@@ -361,7 +361,7 @@ export const INSTRUMENTS: InstrumentEntry[] = [
   geograficoRestante('commons','desafios ambientais do século xxi','commons'),
   geograficoRestante('supply-chain','globalização e processos econômicos atuais','supply-chain'),
   geograficoRestante('technopole','indústria ii','technopole'),
-  geograficoRestante('geoeconomics','gedeconomia mundial','geoeconomics'),
+  geograficoRestante('geoeconomics','geoeconomia mundial','geoeconomics'),
   geograficoRestante('mining','produção mineral','mining'),
   geograficoRestante('agrarian','o espaço agrário brasileiro','agrarian'),
   geograficoContexto('governanca-ambiental','geopolítica ambiental','environmental-governance'),

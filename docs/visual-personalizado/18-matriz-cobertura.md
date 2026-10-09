@@ -71,7 +71,7 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Unilateralismo e Multilateralismo | Geografia | Cena validada (contraste-de-posicoes) | Instrumento (unilateralismo-multilateralismo) |
 | União Europeia | Geografia | Cena validada (cadeia-de-derivacao) | Instrumento (uniao-europeia) |
 | Indústria II | Geografia | Cena validada (cadeia-de-derivacao) | Instrumento (technopole) |
-| Gedeconomia Mundial | Geografia | Cena validada (tipologia) | Instrumento (geoeconomics) |
+| Geoeconomia Mundial | Geografia | Cena validada (tipologia) | Instrumento (geoeconomics) |
 | Terrorismo Internacional | Geografia | Cena validada (cadeia-de-derivacao) | Instrumento (terrorismo-internacional) |
 | Geografia das Religiões | Geografia | Cena validada (tipologia) | Instrumento (geografia-religioes) |
 | Tensões Geopolíticas na Europa | Geografia | Cena validada (cadeia-de-derivacao) | Instrumento (conflito-europa) |
