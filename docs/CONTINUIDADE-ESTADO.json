@@ -1,16 +1,12 @@
 {
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
-  "branch": "redesign/inspecao-visual-613",
-  "source_commit": "a2d1e5978078c7ef2cdaa653059a089d98a71a93",
-  "generated_at_utc": "2026-10-09T17:41:05Z",
-  "changed_files": [
-    "docs/inspecao-visual-613-2026-10-09",
-    "docs/CRIVO-CONTINUIDADE.md",
-    "docs/CONTINUIDADE-ESTADO.json"
-  ],
+  "branch": "main",
+  "source_commit": "def8b47e146415e6e1af61d29213f6eb278e74cf",
+  "generated_at_utc": "2026-10-09T17:56:40Z",
+  "changed_files": [],
   "next_session": {
     "mode": "delta-only",
-    "instructions": "Leia docs/inspecao-visual-613-2026-10-09/CONTINUIDADE.md, o README da mesma pasta e este arquivo; audite origin/main e a PR desta branch. Consulte apenas commits posteriores a source_commit. Não reaplique a PR #288 nem faça merge automático."
+    "instructions": "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
   }
 }
