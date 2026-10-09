@@ -1,0 +1,736 @@
+{
+  "records": [
+    {
+      "id": "fis-termologia-calor",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "fis-termologia-calor",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "fis-termologia-calor",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "atu-cop30-belem",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "atu-cop30-belem",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "atu-cop30-belem",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "theme": "light",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "theme": "light",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "theme": "light",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": true
+    },
+    {
+      "id": "fis-termologia-calor",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "fis-termologia-calor",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "fis-termologia-calor",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "atu-cop30-belem",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "atu-cop30-belem",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "atu-cop30-belem",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "theme": "dark",
+      "width": 1440,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "theme": "dark",
+      "width": 834,
+      "focusTrap": true,
+      "reducedMotion": false
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "theme": "dark",
+      "width": 360,
+      "focusTrap": true,
+      "reducedMotion": false
+    }
+  ],
+  "axe": [
+    {
+      "id": "fis-termologia-calor",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "atu-cop30-belem",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "theme": "light",
+      "violations": []
+    },
+    {
+      "id": "fis-termologia-calor",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "atu-cop30-belem",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "theme": "dark",
+      "violations": []
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "theme": "dark",
+      "violations": []
+    }
+  ],
+  "errors": [],
+  "assets": []
+}

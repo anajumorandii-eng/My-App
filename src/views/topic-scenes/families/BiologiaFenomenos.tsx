@@ -325,7 +325,7 @@ function Equinodermos({ ativo, t }: Cena) {
 // Processos em etapas (lote C da auditoria): o que já aconteceu fica aceso, a
 // etapa escolhida em destaque e as seguintes apagadas — a sequência se lê como
 // construção, não como lista.
-function progresso(i: number, atual: number) { return { opacity: i < atual ? 0.75 : i === atual ? 1 : 0.22 }; }
+function progresso(i: number, atual: number) { return { opacity: i < atual ? 0.75 : i === atual ? 1 : 0.82 }; }
 
 type Etapa = { rotulo: string; x: number; desenho: React.ReactNode };
 function Etapas({ ativo, t, etapas, largura = 110, legenda }: { ativo: string; t: Cena['t']; etapas: Etapa[]; largura?: number; legenda?: string }) {

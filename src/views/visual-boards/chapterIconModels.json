@@ -1,0 +1,3067 @@
+{
+  "fis-termologia-calor": {
+    "model": "thermometer",
+    "context": "spark",
+    "label": "Calor, temperatura e mudanças de estado"
+  },
+  "atu-cop30-belem": {
+    "model": "earth",
+    "context": "quote",
+    "label": "COP30 em Belém: avanços, limites e leitura de prova"
+  },
+  "bio-ecologia-introducao": {
+    "model": "earth",
+    "context": "none",
+    "label": "Introdução à Ecologia"
+  },
+  "bio-ecologia-dinamica-populacoes": {
+    "model": "fish",
+    "context": "chart",
+    "label": "Dinâmica de populações"
+  },
+  "bio-ecologia-invasoras-controle-biologico": {
+    "model": "fish",
+    "context": "none",
+    "label": "Espécies invasoras e controle biológico"
+  },
+  "bio-ecologia-sucessao": {
+    "model": "tree",
+    "context": "none",
+    "label": "Sucessão ecológica"
+  },
+  "bio-ecologia-ciclo-carbono": {
+    "model": "cycle",
+    "context": "arrow",
+    "label": "Ciclos biogeoquímicos: ciclo do carbono"
+  },
+  "bio-ecologia-ciclo-nitrogenio": {
+    "model": "cycle",
+    "context": "arrow",
+    "label": "Ciclo do nitrogênio"
+  },
+  "bio-ecologia-ciclo-hidrologico-poluicao-agua": {
+    "model": "cycle",
+    "context": "drop",
+    "label": "Ciclo hidrológico e poluição da água"
+  },
+  "bio-ecologia-eutrofizacao": {
+    "model": "water",
+    "context": "arrow",
+    "label": "Eutrofização e fluxo de energia"
+  },
+  "bio-ecologia-poluicao-ar": {
+    "model": "smoke",
+    "context": "none",
+    "label": "Poluição do ar"
+  },
+  "bio-ecologia-biomagnificacao": {
+    "model": "fish",
+    "context": "none",
+    "label": "Biomagnificação"
+  },
+  "bio-ecologia-aquecimento-global-pops-biorremediacao": {
+    "model": "smoke",
+    "context": "sun",
+    "label": "Aquecimento global, POPs e biorremediação"
+  },
+  "summary-biologia-origem-da-vida-e-as-primeiras-celulas": {
+    "model": "cell",
+    "context": "none",
+    "label": "Origem da Vida e as Primeiras Células"
+  },
+  "summary-biologia-composicao-quimica-celular-compostos-inorganicos": {
+    "model": "cell",
+    "context": "plus",
+    "label": "Composição Química Celular: Compostos Inorgânicos"
+  },
+  "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios": {
+    "model": "sugar",
+    "context": "plus",
+    "label": "Composição Química Celular: Carboidratos e Lipídios"
+  },
+  "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural": {
+    "model": "protein",
+    "context": "plus",
+    "label": "Composição Química Celular: Proteínas e sua Função Estrutural"
+  },
+  "summary-biologia-membranas-celulares": {
+    "model": "membrane",
+    "context": "none",
+    "label": "Membranas Celulares"
+  },
+  "summary-biologia-citoplasma-estrutura-e-componentes-i": {
+    "model": "cell",
+    "context": "none",
+    "label": "Citoplasma: Estrutura e Componentes I"
+  },
+  "summary-biologia-citoplasma-estrutura-e-componentes-ii": {
+    "model": "cell",
+    "context": "none",
+    "label": "Citoplasma: Estrutura e Componentes II"
+  },
+  "summary-biologia-nucleo-celular": {
+    "model": "nucleus",
+    "context": "none",
+    "label": "Núcleo Celular"
+  },
+  "summary-biologia-proteinas-enzimas": {
+    "model": "protein",
+    "context": "none",
+    "label": "Proteínas: Enzimas"
+  },
+  "summary-biologia-bioenergetica-fermentacao-e-respiracao": {
+    "model": "mitochondria",
+    "context": "drop",
+    "label": "Bioenergética: Fermentação e Respiração"
+  },
+  "summary-biologia-bioenergetica-fotossintese-e-quimiossintese": {
+    "model": "leaf",
+    "context": "sun",
+    "label": "Bioenergética: Fotossíntese e Quimiossíntese"
+  },
+  "summary-biologia-acidos-nucleicos": {
+    "model": "dna",
+    "context": "dna",
+    "label": "Ácidos Nucleicos"
+  },
+  "summary-biologia-divisao-celular": {
+    "model": "chromosome",
+    "context": "none",
+    "label": "Divisão Celular"
+  },
+  "summary-biologia-mutacoes-cromossomicas-e-gametogenese": {
+    "model": "chromosome",
+    "context": "dna",
+    "label": "Mutações Cromossômicas e Gametogênese"
+  },
+  "summary-biologia-biotecnologia": {
+    "model": "syringe",
+    "context": "none",
+    "label": "Biotecnologia"
+  },
+  "summary-biologia-introducao-a-genetica": {
+    "model": "chromosome",
+    "context": "dna",
+    "label": "Introdução à Genética"
+  },
+  "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos": {
+    "model": "blood",
+    "context": "dna",
+    "label": "Alelos Múltiplos e Herança dos Grupos Sanguíneos"
+  },
+  "summary-biologia-heranca-sexual": {
+    "model": "chromosome",
+    "context": "dna",
+    "label": "Herança Sexual"
+  },
+  "summary-biologia-segunda-lei-de-mendel": {
+    "model": "chromosome",
+    "context": "dna",
+    "label": "Segunda Lei de Mendel"
+  },
+  "summary-biologia-segunda-lei-de-mendel-e-interacao-genica": {
+    "model": "chromosome",
+    "context": "dna",
+    "label": "Segunda Lei de Mendel e Interação Gênica"
+  },
+  "summary-biologia-ligacao-genica": {
+    "model": "chromosome",
+    "context": "link",
+    "label": "Ligação Gênica"
+  },
+  "summary-biologia-mutacoes-genicas": {
+    "model": "dna",
+    "context": "dna",
+    "label": "Mutações Gênicas"
+  },
+  "summary-biologia-evolucao-biologica-construcao-historica": {
+    "model": "tree",
+    "context": "arrow",
+    "label": "Evolução Biológica: Construção Histórica"
+  },
+  "summary-biologia-mecanismos-da-evolucao-biologica": {
+    "model": "tree",
+    "context": "arrow",
+    "label": "Mecanismos da Evolução Biológica"
+  },
+  "summary-biologia-biomas-brasileiros": {
+    "model": "tree",
+    "context": "globe",
+    "label": "Biomas Brasileiros"
+  },
+  "summary-biologia-classificacao-biologica-nomenclatura-cientifica-e-nocoes-de-sistematica-filogenetica": {
+    "model": "tree",
+    "context": "dna",
+    "label": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética"
+  },
+  "summary-biologia-protozoarios-e-protozooses": {
+    "model": "amoeba",
+    "context": "none",
+    "label": "Protozoários e Protozooses"
+  },
+  "summary-biologia-poriferos-e-cnidarios": {
+    "model": "coral",
+    "context": "none",
+    "label": "Poríferos e Cnidários"
+  },
+  "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos": {
+    "model": "worm",
+    "context": "none",
+    "label": "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos"
+  },
+  "summary-biologia-moluscos": {
+    "model": "shell",
+    "context": "none",
+    "label": "Moluscos"
+  },
+  "summary-biologia-anelideos": {
+    "model": "worm",
+    "context": "none",
+    "label": "Anelídeos"
+  },
+  "summary-biologia-artropodes-insetos-crustaceos-e-miriapodes": {
+    "model": "butterfly",
+    "context": "none",
+    "label": "Artrópodes: Insetos, Crustáceos e Miriápodes"
+  },
+  "summary-biologia-artropodes-aracnideos": {
+    "model": "spider",
+    "context": "none",
+    "label": "Artrópodes: Aracnídeos"
+  },
+  "summary-biologia-equinodermos": {
+    "model": "starfish",
+    "context": "none",
+    "label": "Equinodermos"
+  },
+  "summary-biologia-introducao-aos-cordados-e-os-peixes": {
+    "model": "fish",
+    "context": "chart",
+    "label": "Introdução aos Cordados e os Peixes"
+  },
+  "summary-biologia-cordados-tetrapodes": {
+    "model": "frog",
+    "context": "chart",
+    "label": "Cordados Tetrápodes"
+  },
+  "summary-biologia-fungos": {
+    "model": "mushroom",
+    "context": "none",
+    "label": "Fungos"
+  },
+  "summary-biologia-algas": {
+    "model": "algae",
+    "context": "none",
+    "label": "Algas"
+  },
+  "summary-biologia-ciclos-de-vida": {
+    "model": "cycle",
+    "context": "arrow",
+    "label": "Ciclos de Vida"
+  },
+  "summary-biologia-plantas-terrestres-i-briofitas-e-pteridofitas": {
+    "model": "fern",
+    "context": "none",
+    "label": "Plantas Terrestres I: Briófitas e Pteridófitas"
+  },
+  "summary-biologia-plantas-terrestres-ii-gimnospermas-e-angiospermas": {
+    "model": "flower",
+    "context": "none",
+    "label": "Plantas Terrestres II: Gimnospermas e Angiospermas"
+  },
+  "summary-biologia-procariotos": {
+    "model": "microbe",
+    "context": "none",
+    "label": "Procariotos"
+  },
+  "summary-biologia-virus": {
+    "model": "virus",
+    "context": "none",
+    "label": "Vírus"
+  },
+  "summary-biologia-embriologia-animal": {
+    "model": "embryo",
+    "context": "none",
+    "label": "Embriologia Animal"
+  },
+  "summary-biologia-fisiologia-da-sustentacao-e-da-locomocao": {
+    "model": "bone",
+    "context": "none",
+    "label": "Fisiologia da Sustentação e da Locomoção"
+  },
+  "summary-biologia-fisiologia-da-digestao": {
+    "model": "stomach",
+    "context": "none",
+    "label": "Fisiologia da Digestão"
+  },
+  "summary-biologia-sangue-e-imunologia": {
+    "model": "blood",
+    "context": "drop",
+    "label": "Sangue e Imunologia"
+  },
+  "summary-biologia-coracao-e-vasos-sanguineos": {
+    "model": "heart",
+    "context": "none",
+    "label": "Coração e Vasos Sanguíneos"
+  },
+  "summary-biologia-fisiologia-da-respiracao": {
+    "model": "lungs",
+    "context": "drop",
+    "label": "Fisiologia da Respiração"
+  },
+  "summary-biologia-fisiologia-da-excrecao": {
+    "model": "kidney",
+    "context": "none",
+    "label": "Fisiologia da Excreção"
+  },
+  "summary-biologia-fisiologia-da-coordenacao-nervosa-i": {
+    "model": "neuron",
+    "context": "none",
+    "label": "Fisiologia da Coordenação Nervosa I"
+  },
+  "summary-biologia-coordenacao-nervosa-ii": {
+    "model": "neuron",
+    "context": "none",
+    "label": "Coordenação Nervosa II"
+  },
+  "summary-biologia-sistemas-sensoriais-visao-e-audicao": {
+    "model": "eye",
+    "context": "plus",
+    "label": "Sistemas Sensoriais: Visão e Audição"
+  },
+  "summary-biologia-coordenacao-endocrina-i": {
+    "model": "gland",
+    "context": "none",
+    "label": "Coordenação Endócrina I"
+  },
+  "summary-biologia-coordenacao-endocrina-ii": {
+    "model": "gland",
+    "context": "none",
+    "label": "Coordenação Endócrina II"
+  },
+  "summary-biologia-reproducao-humana-e-metodos-contraceptivos": {
+    "model": "embryo",
+    "context": "chart",
+    "label": "Reprodução Humana e Métodos Contraceptivos"
+  },
+  "summary-biologia-histologia-e-morfologia-vegetal": {
+    "model": "leaf",
+    "context": "none",
+    "label": "Histologia e Morfologia Vegetal"
+  },
+  "summary-biologia-morfofisiologia-vegetal-caules-e-folhas": {
+    "model": "fern",
+    "context": "link",
+    "label": "Morfofisiologia Vegetal: Caules e Folhas"
+  },
+  "summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua": {
+    "model": "water",
+    "context": "drop",
+    "label": "Traqueófitas: Transpiração e Reposição Rápida de Água"
+  },
+  "summary-biologia-fisiologia-vegetal-transporte-no-floema": {
+    "model": "leaf",
+    "context": "arrow",
+    "label": "Fisiologia Vegetal: Transporte no Floema"
+  },
+  "summary-biologia-fisiologia-vegetal-hormonios-vegetais": {
+    "model": "flower",
+    "context": "none",
+    "label": "Fisiologia Vegetal: Hormônios Vegetais"
+  },
+  "summary-fisica-cinematica-escalar-conceitos-fundamentais": {
+    "model": "cart",
+    "context": "none",
+    "label": "Cinemática Escalar. Conceitos Fundamentais"
+  },
+  "summary-fisica-movimento-uniforme": {
+    "model": "cart",
+    "context": "arrow",
+    "label": "Movimento Uniforme"
+  },
+  "summary-fisica-movimento-uniformemente-variado": {
+    "model": "cart",
+    "context": "arrow",
+    "label": "Movimento Uniformemente Variado"
+  },
+  "summary-fisica-o-movimento-circular": {
+    "model": "orbit",
+    "context": "arrow",
+    "label": "O Movimento Circular"
+  },
+  "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores": {
+    "model": "vector",
+    "context": "none",
+    "label": "Grandezas Físicas e Operações com Vetores"
+  },
+  "summary-fisica-velocidade-vetorial": {
+    "model": "vector",
+    "context": "arrow",
+    "label": "Velocidade Vetorial"
+  },
+  "summary-fisica-composicao-de-movimentos": {
+    "model": "vector",
+    "context": "arrow",
+    "label": "Composição de Movimentos"
+  },
+  "summary-fisica-aceleracao-vetorial": {
+    "model": "vector",
+    "context": "arrow",
+    "label": "Aceleração Vetorial"
+  },
+  "summary-fisica-forca-e-seus-tipos": {
+    "model": "pulley",
+    "context": "arrow",
+    "label": "Força e seus Tipos"
+  },
+  "summary-fisica-resultante-de-um-sistema-de-forcas": {
+    "model": "vector",
+    "context": "arrow",
+    "label": "Resultante de um Sistema de Forças"
+  },
+  "summary-fisica-as-leis-de-newton": {
+    "model": "pulley",
+    "context": "none",
+    "label": "As Leis de Newton"
+  },
+  "summary-fisica-a-forca-de-contato": {
+    "model": "pulley",
+    "context": "arrow",
+    "label": "A Força de Contato"
+  },
+  "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca": {
+    "model": "pulley",
+    "context": "arrow",
+    "label": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força"
+  },
+  "summary-fisica-plano-inclinado": {
+    "model": "ramp",
+    "context": "none",
+    "label": "Plano Inclinado"
+  },
+  "summary-fisica-leis-da-gravitacao": {
+    "model": "orbit",
+    "context": "none",
+    "label": "Leis da Gravitação"
+  },
+  "summary-fisica-dinamica-do-movimento-circular": {
+    "model": "orbit",
+    "context": "arrow",
+    "label": "Dinâmica do Movimento Circular"
+  },
+  "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical": {
+    "model": "pendulum",
+    "context": "arrow",
+    "label": "Analisando Movimentos Contidos em um Plano Vertical"
+  },
+  "summary-fisica-orbitas": {
+    "model": "orbit",
+    "context": "none",
+    "label": "Órbitas"
+  },
+  "summary-fisica-balistica": {
+    "model": "cart",
+    "context": "none",
+    "label": "Balística"
+  },
+  "summary-fisica-movimento-harmonico-simples-mhs": {
+    "model": "pendulum",
+    "context": "arrow",
+    "label": "Movimento Harmônico Simples (MHS)"
+  },
+  "summary-fisica-impulso-e-quantidade-de-movimento": {
+    "model": "collision",
+    "context": "arrow",
+    "label": "Impulso e Quantidade de Movimento"
+  },
+  "summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento": {
+    "model": "collision",
+    "context": "arrow",
+    "label": "Sistemas Isolados e a Conservação da Quantidade de Movimento"
+  },
+  "summary-fisica-colisoes": {
+    "model": "collision",
+    "context": "none",
+    "label": "Colisões"
+  },
+  "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca": {
+    "model": "energy",
+    "context": "arrow",
+    "label": "Trabalho e Energia: Trabalho de uma Força"
+  },
+  "summary-fisica-trabalho-e-energia-teorema-da-energia-cinetica": {
+    "model": "energy",
+    "context": "balance",
+    "label": "Trabalho e Energia: Teorema da Energia Cinética"
+  },
+  "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial": {
+    "model": "energy",
+    "context": "chart",
+    "label": "Trabalho e Energia: o Teorema da Energia Potencial"
+  },
+  "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos": {
+    "model": "energy",
+    "context": "plus",
+    "label": "Sistemas Conservativos e Sistemas Não Conservativos"
+  },
+  "summary-fisica-potencia-maquina-e-rendimento": {
+    "model": "gear",
+    "context": "chart",
+    "label": "Potência, Máquina e Rendimento"
+  },
+  "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares": {
+    "model": "generator",
+    "context": "drop",
+    "label": "A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares"
+  },
+  "summary-fisica-equivalencia-massa-energia": {
+    "model": "atom",
+    "context": "spark",
+    "label": "Equivalência Massa-Energia"
+  },
+  "summary-fisica-estatica": {
+    "model": "scales",
+    "context": "none",
+    "label": "Estática"
+  },
+  "summary-fisica-hidrostatica-densidade-e-pressao": {
+    "model": "water",
+    "context": "drop",
+    "label": "Hidrostática: Densidade e Pressão"
+  },
+  "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos": {
+    "model": "thermometer",
+    "context": "drop",
+    "label": "Dilatação ou Contração Térmica dos Sólidos e Líquidos"
+  },
+  "summary-fisica-calor-sensivel-e-calor-latente": {
+    "model": "thermometer",
+    "context": "spark",
+    "label": "Calor Sensível e Calor Latente"
+  },
+  "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas": {
+    "model": "piston",
+    "context": "drop",
+    "label": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas"
+  },
+  "summary-fisica-trabalho-da-forca-de-pressao-do-gas": {
+    "model": "piston",
+    "context": "arrow",
+    "label": "Trabalho da Força de Pressão do Gás"
+  },
+  "summary-fisica-primeira-lei-da-termodinamica": {
+    "model": "piston",
+    "context": "none",
+    "label": "Primeira Lei da Termodinâmica"
+  },
+  "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares": {
+    "model": "piston",
+    "context": "arrow",
+    "label": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares"
+  },
+  "summary-fisica-maquinas-termicas-e-ciclo-de-carnot": {
+    "model": "piston",
+    "context": "arrow",
+    "label": "Máquinas Térmicas e Ciclo de Carnot"
+  },
+  "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes": {
+    "model": "circuit",
+    "context": "spark",
+    "label": "Eletrostática: Processos de Eletrização e Aplicações"
+  },
+  "summary-fisica-forca-eletrica-lei-de-coulomb": {
+    "model": "circuit",
+    "context": "arrow",
+    "label": "Força Elétrica: Lei de Coulomb"
+  },
+  "summary-fisica-campo-eletrico": {
+    "model": "circuit",
+    "context": "spark",
+    "label": "Campo Elétrico"
+  },
+  "summary-fisica-energia-potencial-e-potencial-eletrico": {
+    "model": "circuit",
+    "context": "chart",
+    "label": "Energia Potencial e Potencial Elétrico"
+  },
+  "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais": {
+    "model": "circuit",
+    "context": "arrow",
+    "label": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais"
+  },
+  "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial": {
+    "model": "vector",
+    "context": "spark",
+    "label": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial"
+  },
+  "summary-fisica-dinamica-das-cargas-eletricas": {
+    "model": "circuit",
+    "context": "spark",
+    "label": "Dinâmica das Cargas Elétricas"
+  },
+  "summary-fisica-corrente-eletrica": {
+    "model": "circuit",
+    "context": "spark",
+    "label": "Corrente Elétrica"
+  },
+  "summary-fisica-potencia-eletrica": {
+    "model": "energy",
+    "context": "chart",
+    "label": "Potência Elétrica"
+  },
+  "summary-fisica-resistores": {
+    "model": "resistor",
+    "context": "none",
+    "label": "Resistores"
+  },
+  "summary-fisica-medidores-eletricos": {
+    "model": "meter",
+    "context": "spark",
+    "label": "Medidores Elétricos"
+  },
+  "summary-fisica-geradores": {
+    "model": "generator",
+    "context": "none",
+    "label": "Geradores"
+  },
+  "summary-fisica-receptores": {
+    "model": "generator",
+    "context": "none",
+    "label": "Receptores"
+  },
+  "summary-fisica-circuitos-de-malha-unica": {
+    "model": "circuit",
+    "context": "none",
+    "label": "Circuitos de Malha Única"
+  },
+  "summary-fisica-eletrodinamica-as-leis-de-kirchhoff": {
+    "model": "circuit",
+    "context": "none",
+    "label": "Eletrodinâmica: as Leis de Kirchhoff"
+  },
+  "summary-fisica-capacitores": {
+    "model": "capacitor",
+    "context": "none",
+    "label": "Capacitores"
+  },
+  "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre": {
+    "model": "magnet",
+    "context": "none",
+    "label": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre"
+  },
+  "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes": {
+    "model": "coil",
+    "context": "spark",
+    "label": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações"
+  },
+  "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme": {
+    "model": "magnet",
+    "context": "arrow",
+    "label": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme"
+  },
+  "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas": {
+    "model": "magnet",
+    "context": "arrow",
+    "label": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas"
+  },
+  "summary-fisica-inducao-eletromagnetica-lei-de-lenz": {
+    "model": "coil",
+    "context": "balance",
+    "label": "Indução Eletromagnética: Lei de Lenz"
+  },
+  "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores": {
+    "model": "generator",
+    "context": "balance",
+    "label": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores"
+  },
+  "summary-fisica-fundamentos-da-optica-geometrica": {
+    "model": "lens",
+    "context": "angle",
+    "label": "Fundamentos da Óptica Geométrica"
+  },
+  "summary-fisica-reflexao-em-superficies-planas": {
+    "model": "mirror",
+    "context": "none",
+    "label": "Reflexão em Superfícies Planas"
+  },
+  "summary-fisica-reflexao-em-superficies-esfericas": {
+    "model": "mirror",
+    "context": "none",
+    "label": "Reflexão em Superfícies Esféricas"
+  },
+  "summary-fisica-refracao-fundamentos-leis-e-aplicacoes": {
+    "model": "lens",
+    "context": "none",
+    "label": "Refração: Fundamentos, Leis e Aplicações"
+  },
+  "summary-fisica-lentes-esfericas-estudo-grafico": {
+    "model": "lens",
+    "context": "angle",
+    "label": "Lentes Esféricas: Estudo Gráfico"
+  },
+  "summary-fisica-estudo-analitico-das-lentes-esfericas": {
+    "model": "lens",
+    "context": "angle",
+    "label": "Estudo Analítico das Lentes Esféricas"
+  },
+  "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes": {
+    "model": "lens",
+    "context": "angle",
+    "label": "Equação do Fabricante de Lentes e Associação de Lentes"
+  },
+  "summary-fisica-optica-da-visao": {
+    "model": "eye",
+    "context": "angle",
+    "label": "Óptica da Visão"
+  },
+  "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas": {
+    "model": "telescope",
+    "context": "none",
+    "label": "Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas"
+  },
+  "summary-fisica-conceitos-basicos": {
+    "model": "wave",
+    "context": "none",
+    "label": "Conceitos Básicos"
+  },
+  "summary-fisica-equacao-fundamental-da-ondulatoria": {
+    "model": "wave",
+    "context": "none",
+    "label": "Equação Fundamental da Ondulatória"
+  },
+  "summary-fisica-ondulatoria-ondas-eletromagneticas": {
+    "model": "wave",
+    "context": "balance",
+    "label": "Ondulatória: Ondas Eletromagnéticas"
+  },
+  "summary-fisica-ondulatoria-som-e-suas-propriedades": {
+    "model": "speaker",
+    "context": "none",
+    "label": "Ondulatória: Som e suas Propriedades"
+  },
+  "summary-fisica-intensidade-sonora": {
+    "model": "speaker",
+    "context": "none",
+    "label": "Intensidade Sonora"
+  },
+  "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas": {
+    "model": "speaker",
+    "context": "none",
+    "label": "Reflexão, Eco, Reverberação e Refração de Ondas"
+  },
+  "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas": {
+    "model": "wave",
+    "context": "none",
+    "label": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas"
+  },
+  "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia": {
+    "model": "wave",
+    "context": "none",
+    "label": "Fenômenos Ondulatórios: Difração, Polarização e Ressonância"
+  },
+  "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento": {
+    "model": "wave",
+    "context": "chart",
+    "label": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento"
+  },
+  "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria": {
+    "model": "wave",
+    "context": "none",
+    "label": "Um Caso Particular de Interferência: Onda Estacionária"
+  },
+  "summary-fisica-ondas-estacionarias-em-cordas": {
+    "model": "wave",
+    "context": "none",
+    "label": "Ondas Estacionárias em Cordas"
+  },
+  "summary-fisica-ondas-estacionarias-em-tubos": {
+    "model": "wave",
+    "context": "none",
+    "label": "Ondas Estacionárias em Tubos"
+  },
+  "summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo": {
+    "model": "speaker",
+    "context": "chart",
+    "label": "Efeito Doppler: Descrição e Estudo Quantitativo"
+  },
+  "summary-fisica-nocoes-basicas-de-fisica-quantica": {
+    "model": "atom",
+    "context": "none",
+    "label": "Noções Básicas de Física Quântica"
+  },
+  "summary-geografia-coordenadas-geograficas": {
+    "model": "globe",
+    "context": "globe",
+    "label": "Coordenadas Geográficas"
+  },
+  "summary-geografia-movimentos-da-terra": {
+    "model": "earth",
+    "context": "arrow",
+    "label": "Movimentos da Terra"
+  },
+  "summary-geografia-sistema-de-fusos-horarios": {
+    "model": "globe",
+    "context": "plus",
+    "label": "Sistema de Fusos Horários"
+  },
+  "summary-geografia-linguagem-cartografica": {
+    "model": "map",
+    "context": "quote",
+    "label": "Linguagem Cartográfica"
+  },
+  "summary-geografia-projecoes-cartograficas": {
+    "model": "map",
+    "context": "none",
+    "label": "Projeções Cartográficas"
+  },
+  "summary-geografia-cartografia-digital": {
+    "model": "satellite",
+    "context": "none",
+    "label": "Cartografia Digital"
+  },
+  "summary-geografia-representacoes-graficas-e-cartograficas": {
+    "model": "histogram",
+    "context": "none",
+    "label": "Representações Gráficas e Cartográficas"
+  },
+  "summary-geografia-dinamica-climatica": {
+    "model": "storm",
+    "context": "sun",
+    "label": "Dinâmica Climática"
+  },
+  "summary-geografia-clima-mundial": {
+    "model": "storm",
+    "context": "sun",
+    "label": "Clima Mundial"
+  },
+  "summary-geografia-geomorfologia-mundial": {
+    "model": "mountain",
+    "context": "globe",
+    "label": "Geomorfologia Mundial"
+  },
+  "summary-geografia-biogeografia-mundial": {
+    "model": "tree",
+    "context": "globe",
+    "label": "Biogeografia Mundial"
+  },
+  "summary-geografia-agua-na-superficie-terrestre": {
+    "model": "water",
+    "context": "drop",
+    "label": "Água na Superfície Terrestre"
+  },
+  "summary-geografia-desafios-ambientais-do-seculo-xxi": {
+    "model": "leaf",
+    "context": "none",
+    "label": "Desafios Ambientais do Século XXI"
+  },
+  "summary-geografia-geopolitica-ambiental": {
+    "model": "globe",
+    "context": "none",
+    "label": "Geopolítica Ambiental"
+  },
+  "summary-geografia-geopolitica-dos-recursos-hidricos": {
+    "model": "water",
+    "context": "none",
+    "label": "Geopolítica dos Recursos Hídricos"
+  },
+  "summary-geografia-hidrogeografia-mundial": {
+    "model": "water",
+    "context": "drop",
+    "label": "Hidrogeografia Mundial"
+  },
+  "summary-geografia-do-mundo-bipolar-ao-multipolar": {
+    "model": "globe",
+    "context": "globe",
+    "label": "Do Mundo Bipolar ao Multipolar"
+  },
+  "summary-geografia-globalizacao-e-processos-economicos-atuais": {
+    "model": "network",
+    "context": "chart",
+    "label": "Globalização e Processos Econômicos Atuais"
+  },
+  "summary-geografia-geografia-das-redes-mundiais": {
+    "model": "network",
+    "context": "globe",
+    "label": "Geografia das Redes Mundiais"
+  },
+  "summary-geografia-unilateralismo-e-multilateralismo": {
+    "model": "globe",
+    "context": "none",
+    "label": "Unilateralismo e Multilateralismo"
+  },
+  "summary-geografia-blocos-economicos": {
+    "model": "globe",
+    "context": "chart",
+    "label": "Blocos Econômicos"
+  },
+  "summary-geografia-uniao-europeia": {
+    "model": "globe",
+    "context": "none",
+    "label": "União Europeia"
+  },
+  "summary-geografia-desigualdades-globais": {
+    "model": "histogram",
+    "context": "balance",
+    "label": "Desigualdades Globais"
+  },
+  "summary-geografia-mobilidade-populacional": {
+    "model": "people",
+    "context": "chart",
+    "label": "Mobilidade Populacional"
+  },
+  "summary-geografia-geografia-do-turismo": {
+    "model": "city",
+    "context": "globe",
+    "label": "Geografia do Turismo"
+  },
+  "summary-geografia-producao-agricola-mundial": {
+    "model": "crop",
+    "context": "chart",
+    "label": "Produção Agrícola Mundial"
+  },
+  "summary-geografia-industria-i": {
+    "model": "factory",
+    "context": "none",
+    "label": "Indústria I"
+  },
+  "summary-geografia-industria-ii": {
+    "model": "factory",
+    "context": "none",
+    "label": "Indústria II"
+  },
+  "summary-geografia-gedeconomia-mundial": {
+    "model": "globe",
+    "context": "chart",
+    "label": "Gedeconomia Mundial"
+  },
+  "summary-geografia-terrorismo-internacional": {
+    "model": "fort",
+    "context": "globe",
+    "label": "Terrorismo Internacional"
+  },
+  "summary-geografia-geografia-das-religioes": {
+    "model": "column",
+    "context": "globe",
+    "label": "Geografia das Religiões"
+  },
+  "summary-geografia-tensoes-geopoliticas-na-europa": {
+    "model": "globe",
+    "context": "none",
+    "label": "Tensões Geopolíticas na Europa"
+  },
+  "summary-geografia-geopolitica-e-geoeconomia-da-america-latina": {
+    "model": "globe",
+    "context": "chart",
+    "label": "Geopolítica e Geoeconomia da América Latina"
+  },
+  "summary-geografia-africa-no-mundo-atual": {
+    "model": "globe",
+    "context": "globe",
+    "label": "África no Mundo Atual"
+  },
+  "summary-geografia-geopolitica-e-geoeconomia-da-asia": {
+    "model": "globe",
+    "context": "chart",
+    "label": "Geopolítica e Geoeconomia da Ásia"
+  },
+  "summary-geografia-geografia-do-oriente-medio": {
+    "model": "globe",
+    "context": "globe",
+    "label": "Geografia do Oriente Médio"
+  },
+  "summary-geografia-questao-palestina": {
+    "model": "map",
+    "context": "none",
+    "label": "Questão Palestina"
+  },
+  "summary-geografia-conflitos-no-mundo-arabe": {
+    "model": "fort",
+    "context": "globe",
+    "label": "Conflitos no Mundo Árabe"
+  },
+  "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica": {
+    "model": "city",
+    "context": "globe",
+    "label": "Paisagem, Espaço Geográfico e Ciência Geográfica"
+  },
+  "summary-geografia-geologia-e-geomorfologia": {
+    "model": "mountain",
+    "context": "none",
+    "label": "Geologia e Geomorfologia"
+  },
+  "summary-geografia-relevo-brasileiro": {
+    "model": "mountain",
+    "context": "globe",
+    "label": "Relevo Brasileiro"
+  },
+  "summary-geografia-pedologia": {
+    "model": "soil",
+    "context": "none",
+    "label": "Pedologia"
+  },
+  "summary-geografia-climatologia-do-brasil": {
+    "model": "storm",
+    "context": "sun",
+    "label": "Climatologia do Brasil"
+  },
+  "summary-geografia-biogeografia-do-brasil-i": {
+    "model": "tree",
+    "context": "globe",
+    "label": "Biogeografia do Brasil I"
+  },
+  "summary-geografia-biogeografia-do-brasil-ii": {
+    "model": "tree",
+    "context": "globe",
+    "label": "Biogeografia do Brasil II"
+  },
+  "summary-geografia-politicas-ambientais-brasileiras": {
+    "model": "scroll",
+    "context": "globe",
+    "label": "Políticas Ambientais Brasileiras"
+  },
+  "summary-geografia-hidrogeografia-do-brasil": {
+    "model": "water",
+    "context": "drop",
+    "label": "Hidrogeografia do Brasil"
+  },
+  "summary-geografia-dominios-morfoclimaticos": {
+    "model": "tree",
+    "context": "sun",
+    "label": "Domínios Morfoclimáticos"
+  },
+  "summary-geografia-matriz-energetica": {
+    "model": "energy",
+    "context": "balance",
+    "label": "Matriz Energética"
+  },
+  "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil": {
+    "model": "smoke",
+    "context": "globe",
+    "label": "Combustíveis Fósseis e Biocombustíveis no Brasil"
+  },
+  "summary-geografia-energia-eletrica-no-mundo": {
+    "model": "energy",
+    "context": "globe",
+    "label": "Energia Elétrica no Mundo"
+  },
+  "summary-geografia-energia-eletrica-no-brasil": {
+    "model": "energy",
+    "context": "globe",
+    "label": "Energia Elétrica no Brasil"
+  },
+  "summary-geografia-producao-mineral": {
+    "model": "crystal",
+    "context": "chart",
+    "label": "Produção Mineral"
+  },
+  "summary-geografia-o-espaco-agrario-brasileiro": {
+    "model": "crop",
+    "context": "globe",
+    "label": "O Espaço Agrário Brasileiro"
+  },
+  "summary-geografia-o-espaco-industrial-brasileiro-i": {
+    "model": "factory",
+    "context": "globe",
+    "label": "O Espaço Industrial Brasileiro I"
+  },
+  "summary-geografia-o-espaco-industrial-brasileiro-ii": {
+    "model": "factory",
+    "context": "globe",
+    "label": "O Espaço Industrial Brasileiro II"
+  },
+  "summary-geografia-dinamica-demografica": {
+    "model": "histogram",
+    "context": "none",
+    "label": "Dinâmica Demográfica"
+  },
+  "summary-geografia-estrutura-etnica-e-fluxos-migratorios": {
+    "model": "people",
+    "context": "arrow",
+    "label": "Estrutura Étnica e Fluxos Migratórios"
+  },
+  "summary-geografia-o-espaco-urbano-i": {
+    "model": "city",
+    "context": "none",
+    "label": "O Espaço Urbano I"
+  },
+  "summary-geografia-o-espaco-urbano-ii": {
+    "model": "city",
+    "context": "none",
+    "label": "O Espaço Urbano II"
+  },
+  "summary-geografia-as-redes-de-transportes": {
+    "model": "train",
+    "context": "arrow",
+    "label": "As Redes de Transportes"
+  },
+  "summary-geografia-os-fluxos-do-comercio-externo": {
+    "model": "network",
+    "context": "arrow",
+    "label": "Os Fluxos do Comércio Externo"
+  },
+  "summary-historia-introducao-a-historia-e-primeiras-civilizacoes": {
+    "model": "column",
+    "context": "none",
+    "label": "Introdução à História e Primeiras Civilizações"
+  },
+  "summary-historia-antiguidade-classica-o-mundo-grego": {
+    "model": "column",
+    "context": "globe",
+    "label": "Antiguidade Clássica: o Mundo Grego"
+  },
+  "summary-historia-antiguidade-classica-o-mundo-romano": {
+    "model": "column",
+    "context": "globe",
+    "label": "Antiguidade Clássica: o Mundo Romano"
+  },
+  "summary-historia-alta-idade-media-e-feudalismo": {
+    "model": "crown",
+    "context": "none",
+    "label": "Alta Idade Média e Feudalismo"
+  },
+  "summary-historia-baixa-idade-media": {
+    "model": "city",
+    "context": "none",
+    "label": "Baixa Idade Média"
+  },
+  "summary-historia-a-primeira-globalizacao": {
+    "model": "ship",
+    "context": "globe",
+    "label": "A Primeira Globalização"
+  },
+  "summary-historia-america-espanhola": {
+    "model": "ship",
+    "context": "none",
+    "label": "América Espanhola"
+  },
+  "summary-historia-vida-urbana-e-renascimento-cultural": {
+    "model": "city",
+    "context": "people",
+    "label": "Vida Urbana e Renascimento Cultural"
+  },
+  "summary-historia-reforma-religiosa": {
+    "model": "book",
+    "context": "none",
+    "label": "Reforma Religiosa"
+  },
+  "summary-historia-absolutismo": {
+    "model": "crown",
+    "context": "none",
+    "label": "Absolutismo"
+  },
+  "summary-historia-revolucao-industrial": {
+    "model": "factory",
+    "context": "arrow",
+    "label": "Revolução Industrial"
+  },
+  "summary-historia-iluminismo": {
+    "model": "document",
+    "context": "none",
+    "label": "Iluminismo"
+  },
+  "summary-historia-revolucao-francesa": {
+    "model": "scroll",
+    "context": "arrow",
+    "label": "Revolução Francesa"
+  },
+  "summary-historia-america-no-seculo-xix": {
+    "model": "scroll",
+    "context": "none",
+    "label": "América no Século XIX"
+  },
+  "summary-historia-europa-no-seculo-xix": {
+    "model": "scroll",
+    "context": "none",
+    "label": "Europa no Século XIX"
+  },
+  "summary-historia-imperialismo-e-belle-epoque": {
+    "model": "crown",
+    "context": "none",
+    "label": "Imperialismo e Belle Époque"
+  },
+  "summary-historia-primeira-guerra-mundial-1914-1918": {
+    "model": "fort",
+    "context": "globe",
+    "label": "Primeira Guerra Mundial (1914-1918)"
+  },
+  "summary-historia-grandes-revolucoes-do-seculo-xx": {
+    "model": "scroll",
+    "context": "none",
+    "label": "Grandes Revoluções do Século XX"
+  },
+  "summary-historia-o-periodo-entreguerras-1918-1939": {
+    "model": "fort",
+    "context": "none",
+    "label": "O Período Entreguerras (1918-1939)"
+  },
+  "summary-historia-o-nazismo-na-alemanha": {
+    "model": "fort",
+    "context": "none",
+    "label": "O Nazismo na Alemanha"
+  },
+  "summary-historia-segunda-guerra-mundial-1939-1945": {
+    "model": "fort",
+    "context": "globe",
+    "label": "Segunda Guerra Mundial (1939-1945)"
+  },
+  "summary-historia-guerra-fria": {
+    "model": "globe",
+    "context": "none",
+    "label": "Guerra Fria"
+  },
+  "summary-historia-descolonizacao-afro-asiatica": {
+    "model": "globe",
+    "context": "none",
+    "label": "Descolonização Afro-Asiática"
+  },
+  "summary-historia-america-latina-no-seculo-xx": {
+    "model": "scroll",
+    "context": "none",
+    "label": "América Latina no Século XX"
+  },
+  "summary-historia-o-fim-da-guerra-fria": {
+    "model": "globe",
+    "context": "none",
+    "label": "O Fim da Guerra Fria"
+  },
+  "summary-historia-a-historia-e-o-brasil": {
+    "model": "document",
+    "context": "globe",
+    "label": "A História e o Brasil"
+  },
+  "summary-historia-grandes-navegacoes-e-conquista-colonial": {
+    "model": "ship",
+    "context": "none",
+    "label": "Grandes Navegações e Conquista Colonial"
+  },
+  "summary-historia-a-montagem-da-colonizacao": {
+    "model": "crop",
+    "context": "none",
+    "label": "A Montagem da Colonização"
+  },
+  "summary-historia-dinamica-interna-da-colonizacao": {
+    "model": "crop",
+    "context": "none",
+    "label": "Dinâmica Interna da Colonização"
+  },
+  "summary-historia-disputas-europeias-no-brasil-colonial": {
+    "model": "fort",
+    "context": "globe",
+    "label": "Disputas Europeias no Brasil Colonial"
+  },
+  "summary-historia-a-interiorizacao-da-colonizacao": {
+    "model": "map",
+    "context": "none",
+    "label": "A Interiorização da Colonização"
+  },
+  "summary-historia-a-mineracao-no-brasil-colonial": {
+    "model": "crystal",
+    "context": "globe",
+    "label": "A Mineração no Brasil Colonial"
+  },
+  "summary-historia-a-crise-do-antigo-sistema-colonial": {
+    "model": "ship",
+    "context": "plus",
+    "label": "A Crise do Antigo Sistema Colonial"
+  },
+  "summary-historia-a-independencia-do-brasil": {
+    "model": "scroll",
+    "context": "globe",
+    "label": "A Independência do Brasil"
+  },
+  "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro": {
+    "model": "crown",
+    "context": "globe",
+    "label": "Brasil Império: Formação do Estado Nacional Brasileiro"
+  },
+  "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840": {
+    "model": "crown",
+    "context": "globe",
+    "label": "Brasil Império: o Período Regencial (1831-1840)"
+  },
+  "summary-historia-brasil-imperio-segundo-reinado-1840-1889": {
+    "model": "crown",
+    "context": "globe",
+    "label": "Brasil Império: Segundo Reinado (1840-1889)"
+  },
+  "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado": {
+    "model": "crown",
+    "context": "globe",
+    "label": "Brasil Império: o Declínio do Segundo Reinado"
+  },
+  "summary-historia-a-republica-da-espada": {
+    "model": "fort",
+    "context": "none",
+    "label": "A República da Espada"
+  },
+  "summary-historia-ascensao-e-dominio-das-oligarquias": {
+    "model": "crop",
+    "context": "none",
+    "label": "Ascensão e Domínio das Oligarquias"
+  },
+  "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930": {
+    "model": "ballot",
+    "context": "none",
+    "label": "A Primeira República: o Declínio Oligárquico (1889-1930)"
+  },
+  "summary-historia-a-era-vargas": {
+    "model": "scroll",
+    "context": "none",
+    "label": "A Era Vargas"
+  },
+  "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937": {
+    "model": "scroll",
+    "context": "none",
+    "label": "A Era Vargas: o Governo Constitucional (1934-1937)"
+  },
+  "summary-historia-a-era-vargas-o-estado-novo": {
+    "model": "scroll",
+    "context": "none",
+    "label": "A Era Vargas: o Estado Novo"
+  },
+  "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria": {
+    "model": "globe",
+    "context": "balance",
+    "label": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria"
+  },
+  "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo": {
+    "model": "factory",
+    "context": "none",
+    "label": "República Liberal (1945-1964): Desenvolvimentismo e Populismo"
+  },
+  "summary-historia-regime-militar-1964-1985-i": {
+    "model": "fort",
+    "context": "none",
+    "label": "Regime Militar (1964-1985) I"
+  },
+  "summary-historia-regime-militar-1964-1985-ii": {
+    "model": "fort",
+    "context": "none",
+    "label": "Regime Militar (1964-1985) II"
+  },
+  "summary-historia-o-brasil-atual": {
+    "model": "ballot",
+    "context": "globe",
+    "label": "O Brasil Atual"
+  },
+  "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology": {
+    "model": "magnifier",
+    "context": "none",
+    "label": "Text Comprehension: Taxonomy and Terminology"
+  },
+  "summary-lingua-inglesa-text-comprehension-songs-and-poems": {
+    "model": "lyre",
+    "context": "none",
+    "label": "Text Comprehension: Songs and Poems"
+  },
+  "summary-lingua-inglesa-text-comprehension-calories-and-energy": {
+    "model": "thermometer",
+    "context": "spark",
+    "label": "Text Comprehension: Calories and Energy"
+  },
+  "summary-lingua-inglesa-text-comprehension-earthquakes": {
+    "model": "mountain",
+    "context": "none",
+    "label": "Text Comprehension: Earthquakes"
+  },
+  "summary-lingua-inglesa-text-comprehension-hurricanes": {
+    "model": "storm",
+    "context": "none",
+    "label": "Text Comprehension: Hurricanes"
+  },
+  "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases": {
+    "model": "earth",
+    "context": "drop",
+    "label": "Text Comprehension: Ecology (Greenhouse Gases)"
+  },
+  "summary-lingua-inglesa-text-comprehension-pollution": {
+    "model": "smoke",
+    "context": "none",
+    "label": "Text Comprehension: Pollution"
+  },
+  "summary-lingua-inglesa-text-comprehension-the-human-brain": {
+    "model": "neuron",
+    "context": "people",
+    "label": "Text Comprehension: The Human Brain"
+  },
+  "summary-lingua-inglesa-text-comprehension-global-warming": {
+    "model": "earth",
+    "context": "globe",
+    "label": "Text Comprehension: Global Warming"
+  },
+  "summary-lingua-inglesa-text-comprehension-novels-short-stories": {
+    "model": "quill",
+    "context": "none",
+    "label": "Text Comprehension: Novels/Short Stories"
+  },
+  "summary-lingua-inglesa-text-comprehension-bacteria": {
+    "model": "microbe",
+    "context": "none",
+    "label": "Text Comprehension: Bacteria"
+  },
+  "summary-lingua-inglesa-text-comprehension-viruses": {
+    "model": "virus",
+    "context": "none",
+    "label": "Text Comprehension: Viruses"
+  },
+  "summary-lingua-inglesa-text-comprehension-discrimination-against-women": {
+    "model": "people",
+    "context": "people",
+    "label": "Text Comprehension: Discrimination Against Women"
+  },
+  "summary-lingua-inglesa-text-comprehension-women-empowerment": {
+    "model": "people",
+    "context": "people",
+    "label": "Text Comprehension: Women Empowerment"
+  },
+  "summary-lingua-inglesa-text-comprehension-digital-technology": {
+    "model": "network",
+    "context": "none",
+    "label": "Text Comprehension: Digital Technology"
+  },
+  "summary-lingua-inglesa-text-comprehension-health-probiotics": {
+    "model": "stomach",
+    "context": "none",
+    "label": "Text Comprehension: Health – Probiotics"
+  },
+  "summary-lingua-inglesa-text-comprehension-stem-cells": {
+    "model": "cell",
+    "context": "none",
+    "label": "Text Comprehension: Stem Cells"
+  },
+  "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades": {
+    "model": "document",
+    "context": "question",
+    "label": "A Dissertação no Vestibular: Mitos e Verdades"
+  },
+  "summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades": {
+    "model": "checklist",
+    "context": "question",
+    "label": "O que se Avalia na Dissertação: Competências e Habilidades"
+  },
+  "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps": {
+    "model": "brain",
+    "context": "none",
+    "label": "Organizando as Ideias: Brainstorm e Mind Maps"
+  },
+  "summary-redacao-projeto-de-texto-em-favor-da-progressao-textual": {
+    "model": "bridge",
+    "context": "arrow",
+    "label": "Projeto de Texto em Favor da Progressão Textual"
+  },
+  "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso": {
+    "model": "book",
+    "context": "none",
+    "label": "Repertório: o Diferencial de Redações de Sucesso"
+  },
+  "summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos": {
+    "model": "target",
+    "context": "none",
+    "label": "Qual Será o Tema deste Ano: Grandes Eixos Temáticos"
+  },
+  "summary-redacao-diferentes-graus-de-adequacao-a-proposta": {
+    "model": "target",
+    "context": "none",
+    "label": "Diferentes Graus de Adequação à Proposta"
+  },
+  "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema": {
+    "model": "target",
+    "context": "minus",
+    "label": "Tangenciamento e Fuga: a Fronteira do Tema"
+  },
+  "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto": {
+    "model": "magnifier",
+    "context": "quote",
+    "label": "Gêneros e sua Relação com a Estrutura do Texto"
+  },
+  "summary-redacao-estrutura-classica-do-texto-dissertativo": {
+    "model": "document",
+    "context": "quote",
+    "label": "Estrutura Clássica do Texto Dissertativo"
+  },
+  "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i": {
+    "model": "sources",
+    "context": "quote",
+    "label": "Lendo a Coletânea: a Apreensão de Sentidos I"
+  },
+  "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii": {
+    "model": "sources",
+    "context": "quote",
+    "label": "Lendo a Coletânea: a Apreensão de Sentidos II"
+  },
+  "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i": {
+    "model": "sources",
+    "context": "quote",
+    "label": "Lendo a Coletânea: a Compreensão e o Texto Autoral I"
+  },
+  "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii": {
+    "model": "sources",
+    "context": "quote",
+    "label": "Lendo a Coletânea: a Compreensão e o Texto Autoral II"
+  },
+  "summary-redacao-incrementando-o-repertorio-meio-ambiente": {
+    "model": "leaf",
+    "context": "none",
+    "label": "Incrementando o Repertório: Meio Ambiente"
+  },
+  "summary-redacao-analisando-tema-de-redacao-meio-ambiente": {
+    "model": "leaf",
+    "context": "none",
+    "label": "Analisando Tema de Redação: Meio Ambiente"
+  },
+  "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho": {
+    "model": "book",
+    "context": "none",
+    "label": "Incrementando o Repertório: Educação e Trabalho"
+  },
+  "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho": {
+    "model": "book",
+    "context": "none",
+    "label": "Analisando Tema de Redação: Educação e Trabalho"
+  },
+  "summary-redacao-incrementando-o-repertorio-temas-abstratos": {
+    "model": "book",
+    "context": "none",
+    "label": "Incrementando o Repertório: Temas Abstratos"
+  },
+  "summary-redacao-analisando-tema-abstrato-de-redacao": {
+    "model": "target",
+    "context": "none",
+    "label": "Analisando Tema Abstrato de Redação"
+  },
+  "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade": {
+    "model": "heart",
+    "context": "none",
+    "label": "Incrementando o Repertório: Corpo, Saúde e Sexualidade"
+  },
+  "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade": {
+    "model": "heart",
+    "context": "none",
+    "label": "Analisando Tema de Redação: Corpo, Saúde e Sexualidade"
+  },
+  "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao": {
+    "model": "scales",
+    "context": "none",
+    "label": "Incrementando o Repertório: Violência, Leis e Punição"
+  },
+  "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao": {
+    "model": "scales",
+    "context": "none",
+    "label": "Analisando Tema de Redação: Violência, Leis e Punição"
+  },
+  "summary-redacao-incrementando-o-repertorio-cidadania-e-poder": {
+    "model": "people",
+    "context": "people",
+    "label": "Incrementando o Repertório: Cidadania e Poder"
+  },
+  "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder": {
+    "model": "people",
+    "context": "people",
+    "label": "Analisando Tema de Redação: Cidadania e Poder"
+  },
+  "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais": {
+    "model": "people",
+    "context": "people",
+    "label": "Incrementando o Repertório: Arte, Cultura e Relações Sociais"
+  },
+  "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais": {
+    "model": "people",
+    "context": "people",
+    "label": "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais"
+  },
+  "summary-redacao-incrementando-o-repertorio-midia-e-sociedade": {
+    "model": "network",
+    "context": "none",
+    "label": "Incrementando o Repertório: Mídia e Sociedade"
+  },
+  "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade": {
+    "model": "network",
+    "context": "none",
+    "label": "Analisando Tema de Redação: Mídia e Sociedade"
+  },
+  "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao": {
+    "model": "paragraph",
+    "context": "quote",
+    "label": "Parágrafo de Introdução: Delimitando a Opinião"
+  },
+  "summary-redacao-paragrafo-de-introducao-como-contextualizar": {
+    "model": "paragraph",
+    "context": "quote",
+    "label": "Parágrafo de Introdução: como Contextualizar"
+  },
+  "summary-redacao-argumentacao-auditorio-particular-e-universal": {
+    "model": "bridge",
+    "context": "none",
+    "label": "Argumentação: Auditório Particular e Universal"
+  },
+  "summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade": {
+    "model": "bridge",
+    "context": "question",
+    "label": "Argumentação Quase-Lógica e Efeito de Verdade"
+  },
+  "summary-redacao-argumentacao-e-coerencia-interna": {
+    "model": "bridge",
+    "context": "none",
+    "label": "Argumentação e Coerência Interna"
+  },
+  "summary-redacao-argumentacao-e-coerencia-externa": {
+    "model": "bridge",
+    "context": "none",
+    "label": "Argumentação e Coerência Externa"
+  },
+  "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos": {
+    "model": "histogram",
+    "context": "chart",
+    "label": "Recursos Argumentativos: Dados Numéricos e Exemplos"
+  },
+  "summary-redacao-recursos-argumentativos-vozes-prestigiadas": {
+    "model": "dialogue",
+    "context": "quote",
+    "label": "Recursos Argumentativos: Vozes Prestigiadas"
+  },
+  "summary-redacao-ressalvando-o-ponto-de-vista-contrario": {
+    "model": "bridge",
+    "context": "none",
+    "label": "Ressalvando o Ponto de Vista Contrário"
+  },
+  "summary-redacao-refutando-o-ponto-contrario": {
+    "model": "bridge",
+    "context": "minus",
+    "label": "Refutando o Ponto Contrário"
+  },
+  "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade": {
+    "model": "book",
+    "context": "quote",
+    "label": "Recursos Argumentativos: Interdiscursividade e Intertextualidade"
+  },
+  "summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados": {
+    "model": "target",
+    "context": "none",
+    "label": "Recursos Argumentativos: Temas de Redação já Analisados"
+  },
+  "summary-redacao-recursos-argumentativos-fatos-da-atualidade": {
+    "model": "network",
+    "context": "none",
+    "label": "Recursos Argumentativos: Fatos da Atualidade"
+  },
+  "summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber": {
+    "model": "book",
+    "context": "none",
+    "label": "Recursos Argumentativos: Múltiplos Domínios do Saber"
+  },
+  "summary-redacao-conclusao-por-sintese-ou-retomada-da-tese": {
+    "model": "checklist",
+    "context": "balance",
+    "label": "Conclusão por Síntese ou Retomada da Tese"
+  },
+  "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade": {
+    "model": "checklist",
+    "context": "balance",
+    "label": "Conclusão: Sumarização, Focalização e Expressividade"
+  },
+  "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania": {
+    "model": "intervention",
+    "context": "people",
+    "label": "Proposta de Intervenção: Atores Sociais e Cidadania"
+  },
+  "summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao": {
+    "model": "intervention",
+    "context": "none",
+    "label": "Proposta de Intervenção: Viabilização e Inovação"
+  },
+  "summary-redacao-proposta-de-intervencao-coerencia-argumentativa": {
+    "model": "intervention",
+    "context": "none",
+    "label": "Proposta de Intervenção: Coerência Argumentativa"
+  },
+  "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos": {
+    "model": "intervention",
+    "context": "balance",
+    "label": "Proposta de Intervenção: Respeito aos Direitos Humanos"
+  },
+  "summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo": {
+    "model": "bridge",
+    "context": "quote",
+    "label": "Recursos de Coesão Referencial no Texto Dissertativo"
+  },
+  "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo": {
+    "model": "bridge",
+    "context": "arrow",
+    "label": "Recursos de Coesão Sequencial no Texto Dissertativo"
+  },
+  "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas": {
+    "model": "bridge",
+    "context": "quote",
+    "label": "Coesão no Texto Dissertativo: Análise de Problemas"
+  },
+  "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade": {
+    "model": "document",
+    "context": "quote",
+    "label": "Recursos Linguísticos: Norma, Clareza e Expressividade"
+  },
+  "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais": {
+    "model": "scales",
+    "context": "balance",
+    "label": "Os Direitos Humanos de 1ª Geração: Direitos Individuais"
+  },
+  "summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos": {
+    "model": "scales",
+    "context": "balance",
+    "label": "Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos"
+  },
+  "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar": {
+    "model": "document",
+    "context": "none",
+    "label": "Redações Nota 1000: Trunfos a Inspirar"
+  },
+  "summary-redacao-redacoes-na-midia-como-aprimorar": {
+    "model": "network",
+    "context": "none",
+    "label": "Redações na Mídia: como Aprimorar"
+  },
+  "summary-gramatica-lingua-um-sistema-complexo": {
+    "model": "network",
+    "context": "link",
+    "label": "Língua: um Sistema Complexo"
+  },
+  "summary-gramatica-variacao-linguistica": {
+    "model": "dialogue",
+    "context": "people",
+    "label": "Variação Linguística"
+  },
+  "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador": {
+    "model": "letters",
+    "context": "quote",
+    "label": "Substantivo: os Nomes e a Visão do Enunciador"
+  },
+  "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos": {
+    "model": "document",
+    "context": "quote",
+    "label": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos"
+  },
+  "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal": {
+    "model": "attribute",
+    "context": "plus",
+    "label": "Artigo, Numeral e Adjetivo no Sintagma Nominal"
+  },
+  "summary-gramatica-pronomes": {
+    "model": "pronoun",
+    "context": "arrow",
+    "label": "Pronomes"
+  },
+  "summary-gramatica-verbo": {
+    "model": "clock",
+    "context": "arrow",
+    "label": "Verbo"
+  },
+  "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores": {
+    "model": "compass",
+    "context": "angle",
+    "label": "Advérbio e Locuções Adverbiais: Circunstanciadores"
+  },
+  "summary-gramatica-verbo-e-sintaxe-da-oracao": {
+    "model": "sentence",
+    "context": "link",
+    "label": "Verbo e Sintaxe da Oração"
+  },
+  "summary-gramatica-concordancia": {
+    "model": "agreement",
+    "context": "link",
+    "label": "Concordância"
+  },
+  "summary-gramatica-significados-implicitos": {
+    "model": "magnifier",
+    "context": "question",
+    "label": "Significados Implícitos"
+  },
+  "summary-gramatica-tipos-de-discurso": {
+    "model": "dialogue",
+    "context": "quote",
+    "label": "Tipos de Discurso"
+  },
+  "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula": {
+    "model": "comma",
+    "context": "none",
+    "label": "Pontuação I: Princípios para o Uso da Vírgula"
+  },
+  "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao": {
+    "model": "semicolon",
+    "context": "none",
+    "label": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação"
+  },
+  "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas": {
+    "model": "letters",
+    "context": "quote",
+    "label": "O Léxico em Contexto: Variadas Possibilidades Semânticas"
+  },
+  "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe": {
+    "model": "mirror",
+    "context": "question",
+    "label": "Ambiguidade: Duplicidade no Léxico e na Sintaxe"
+  },
+  "summary-gramatica-mecanismo-de-regencia": {
+    "model": "preposition",
+    "context": "link",
+    "label": "Mecanismo de Regência"
+  },
+  "summary-gramatica-crase": {
+    "model": "crase",
+    "context": "plus",
+    "label": "Crase"
+  },
+  "summary-gramatica-processos-de-formacao-de-palavras": {
+    "model": "word-roots",
+    "context": "plus",
+    "label": "Processos de Formação de Palavras"
+  },
+  "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo": {
+    "model": "subject",
+    "context": "link",
+    "label": "Funções Sintáticas Nominais e Vocativo"
+  },
+  "summary-gramatica-tipos-de-sujeito": {
+    "model": "groups",
+    "context": "question",
+    "label": "Tipos de Sujeito"
+  },
+  "summary-gramatica-vozes-verbais": {
+    "model": "voice",
+    "context": "arrow",
+    "label": "Vozes Verbais"
+  },
+  "summary-gramatica-oracoes-substantivas": {
+    "model": "subclause",
+    "context": "link",
+    "label": "Orações Substantivas"
+  },
+  "summary-gramatica-oracoes-adjetivas": {
+    "model": "attribute",
+    "context": "link",
+    "label": "Orações Adjetivas"
+  },
+  "summary-gramatica-oracoes-adverbiais": {
+    "model": "compass",
+    "context": "arrow",
+    "label": "Orações Adverbiais"
+  },
+  "summary-gramatica-oracoes-coordenadas": {
+    "model": "coordination",
+    "context": "link",
+    "label": "Orações Coordenadas"
+  },
+  "summary-literatura-a-arte-e-suas-linguagens": {
+    "model": "palette",
+    "context": "quote",
+    "label": "A Arte e suas Linguagens"
+  },
+  "summary-literatura-texto-literario-x-texto-nao-literario": {
+    "model": "document",
+    "context": "quote",
+    "label": "Texto Literário x Texto não Literário"
+  },
+  "summary-literatura-trovadorismo-e-humanismo": {
+    "model": "lyre",
+    "context": "people",
+    "label": "Trovadorismo e Humanismo"
+  },
+  "summary-literatura-renascimento-e-camoes": {
+    "model": "ship",
+    "context": "none",
+    "label": "Renascimento e Camões"
+  },
+  "summary-literatura-brasil-primeiros-registros": {
+    "model": "scroll",
+    "context": "globe",
+    "label": "Brasil: Primeiros Registros"
+  },
+  "summary-literatura-a-estetica-barroca": {
+    "model": "scales",
+    "context": "balance",
+    "label": "A Estética Barroca"
+  },
+  "summary-literatura-a-estetica-neoclassica": {
+    "model": "column",
+    "context": "balance",
+    "label": "A Estética Neoclássica"
+  },
+  "summary-literatura-a-estetica-romantica-poesia": {
+    "model": "heart",
+    "context": "quote",
+    "label": "A Estética Romântica: Poesia"
+  },
+  "summary-literatura-elementos-da-narrativa": {
+    "model": "sequence",
+    "context": "none",
+    "label": "Elementos da Narrativa"
+  },
+  "summary-literatura-a-estetica-romantica-prosa": {
+    "model": "quill",
+    "context": "balance",
+    "label": "A Estética Romântica: Prosa"
+  },
+  "summary-literatura-a-estetica-realista": {
+    "model": "mirror",
+    "context": "balance",
+    "label": "A Estética Realista"
+  },
+  "summary-literatura-machado-de-assis": {
+    "model": "mask",
+    "context": "none",
+    "label": "Machado de Assis"
+  },
+  "summary-literatura-naturalismo": {
+    "model": "magnifier",
+    "context": "none",
+    "label": "Naturalismo"
+  },
+  "summary-literatura-realismo-portugues-eca-de-queiros": {
+    "model": "city",
+    "context": "none",
+    "label": "Realismo Português: Eça de Queirós"
+  },
+  "summary-literatura-parnasianismo": {
+    "model": "column",
+    "context": "none",
+    "label": "Parnasianismo"
+  },
+  "summary-literatura-simbolismo": {
+    "model": "lyre",
+    "context": "none",
+    "label": "Simbolismo"
+  },
+  "summary-literatura-pre-modernismo": {
+    "model": "city",
+    "context": "none",
+    "label": "Pré-Modernismo"
+  },
+  "summary-literatura-vanguardas-artisticas": {
+    "model": "palette",
+    "context": "none",
+    "label": "Vanguardas Artísticas"
+  },
+  "summary-literatura-fernando-pessoa": {
+    "model": "groups",
+    "context": "none",
+    "label": "Fernando Pessoa"
+  },
+  "summary-literatura-semana-de-arte-moderna": {
+    "model": "palette",
+    "context": "none",
+    "label": "Semana de Arte Moderna"
+  },
+  "summary-literatura-modernismo-no-brasil-primeira-geracao": {
+    "model": "document",
+    "context": "globe",
+    "label": "Modernismo no Brasil: Primeira Geração"
+  },
+  "summary-literatura-segunda-geracao-modernista-prosa": {
+    "model": "tree",
+    "context": "none",
+    "label": "Segunda Geração Modernista: Prosa"
+  },
+  "summary-literatura-graciliano-ramos": {
+    "model": "mountain",
+    "context": "none",
+    "label": "Graciliano Ramos"
+  },
+  "summary-literatura-segunda-geracao-modernista-poesia": {
+    "model": "quill",
+    "context": "quote",
+    "label": "Segunda Geração Modernista: Poesia"
+  },
+  "summary-literatura-carlos-drummond-de-andrade": {
+    "model": "crystal",
+    "context": "none",
+    "label": "Carlos Drummond de Andrade"
+  },
+  "summary-literatura-joao-cabral-de-melo-neto": {
+    "model": "bridge",
+    "context": "none",
+    "label": "João Cabral de Melo Neto"
+  },
+  "summary-literatura-poesia-concreta": {
+    "model": "letters",
+    "context": "quote",
+    "label": "Poesia Concreta"
+  },
+  "summary-literatura-clarice-lispector": {
+    "model": "eye",
+    "context": "none",
+    "label": "Clarice Lispector"
+  },
+  "summary-literatura-guimaraes-rosa": {
+    "model": "tree",
+    "context": "none",
+    "label": "Guimarães Rosa"
+  },
+  "summary-literatura-poesia-brasileira-1960-1980": {
+    "model": "lyre",
+    "context": "globe",
+    "label": "Poesia Brasileira: 1960-1980"
+  },
+  "summary-literatura-prosa-brasileira-1960-1980": {
+    "model": "city",
+    "context": "globe",
+    "label": "Prosa Brasileira: 1960-1980"
+  },
+  "summary-literatura-literatura-lusofona-contemporanea": {
+    "model": "globe",
+    "context": "quote",
+    "label": "Literatura Lusófona Contemporânea"
+  },
+  "summary-literatura-poesia-brasileira-contemporanea": {
+    "model": "lyre",
+    "context": "globe",
+    "label": "Poesia Brasileira Contemporânea"
+  },
+  "summary-literatura-prosa-brasileira-contemporanea": {
+    "model": "quill",
+    "context": "globe",
+    "label": "Prosa Brasileira Contemporânea"
+  },
+  "summary-literatura-artes-plasticas-brasileiras": {
+    "model": "palette",
+    "context": "globe",
+    "label": "Artes Plásticas Brasileiras"
+  },
+  "summary-literatura-teatro-brasileiro": {
+    "model": "mask",
+    "context": "globe",
+    "label": "Teatro Brasileiro"
+  },
+  "summary-literatura-cancioneiro-popular-brasileiro": {
+    "model": "lyre",
+    "context": "chart",
+    "label": "Cancioneiro Popular Brasileiro"
+  },
+  "summary-entendimento-de-texto-fatores-de-textualidade": {
+    "model": "magnifier",
+    "context": "none",
+    "label": "Fatores de Textualidade"
+  },
+  "summary-entendimento-de-texto-os-dois-niveis-da-leitura": {
+    "model": "magnifier",
+    "context": "quote",
+    "label": "Os Dois Níveis da Leitura"
+  },
+  "summary-entendimento-de-texto-intertextualidade-e-interdiscursividade": {
+    "model": "book",
+    "context": "quote",
+    "label": "Intertextualidade e Interdiscursividade"
+  },
+  "summary-entendimento-de-texto-generos-textuais": {
+    "model": "magnifier",
+    "context": "people",
+    "label": "Gêneros Textuais"
+  },
+  "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao": {
+    "model": "magnifier",
+    "context": "people",
+    "label": "Gêneros Narrativos e Níveis de Compreensão"
+  },
+  "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura": {
+    "model": "magnifier",
+    "context": "quote",
+    "label": "Gêneros não Verbais: Fundamentos de Leitura"
+  },
+  "summary-entendimento-de-texto-funcoes-da-linguagem": {
+    "model": "letters",
+    "context": "quote",
+    "label": "Funções da Linguagem"
+  },
+  "summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria": {
+    "model": "lyre",
+    "context": "quote",
+    "label": "Função Poética e Linguagem Literária"
+  },
+  "summary-entendimento-de-texto-figuras-de-linguagem": {
+    "model": "letters",
+    "context": "quote",
+    "label": "Figuras de Linguagem"
+  },
+  "summary-entendimento-de-texto-modelos-de-leitura-e-distorcoes-interpretativas": {
+    "model": "magnifier",
+    "context": "quote",
+    "label": "Modelos de Leitura e Distorções Interpretativas"
+  },
+  "summary-entendimento-de-texto-leitura-de-textos-comicos": {
+    "model": "mask",
+    "context": "quote",
+    "label": "Leitura de Textos Cômicos"
+  },
+  "summary-entendimento-de-texto-tecnologias-digitais-da-informacao-e-comunicacao-tdic-impactos-sociais": {
+    "model": "network",
+    "context": "none",
+    "label": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais"
+  },
+  "summary-matematica-potencias-e-radicais": {
+    "model": "equation",
+    "context": "chart",
+    "label": "Potências e Radicais"
+  },
+  "summary-matematica-razao-e-proporcao": {
+    "model": "fraction",
+    "context": "balance",
+    "label": "Razão e Proporção"
+  },
+  "summary-matematica-porcentagem": {
+    "model": "percentage",
+    "context": "none",
+    "label": "Porcentagem"
+  },
+  "summary-matematica-o-sistema-de-numeracao-decimal": {
+    "model": "abacus",
+    "context": "plus",
+    "label": "O Sistema de Numeração Decimal"
+  },
+  "summary-matematica-introducao-a-teoria-dos-numeros-inteiros": {
+    "model": "abacus",
+    "context": "question",
+    "label": "Introdução à Teoria dos Números Inteiros"
+  },
+  "summary-matematica-introducao-as-sequencias": {
+    "model": "sequence",
+    "context": "none",
+    "label": "Introdução às Sequências"
+  },
+  "summary-matematica-progressao-aritmetica": {
+    "model": "sequence",
+    "context": "arrow",
+    "label": "Progressão Aritmética"
+  },
+  "summary-matematica-progressao-geometrica": {
+    "model": "sequence",
+    "context": "arrow",
+    "label": "Progressão Geométrica"
+  },
+  "summary-matematica-sequencias": {
+    "model": "sequence",
+    "context": "none",
+    "label": "Sequências"
+  },
+  "summary-matematica-sistemas-de-equacoes": {
+    "model": "matrix",
+    "context": "plus",
+    "label": "Sistemas de Equações"
+  },
+  "summary-matematica-tabelas-e-matrizes": {
+    "model": "matrix",
+    "context": "none",
+    "label": "Tabelas e Matrizes"
+  },
+  "summary-matematica-multiplicacao-de-matrizes": {
+    "model": "matrix",
+    "context": "none",
+    "label": "Multiplicação de Matrizes"
+  },
+  "summary-matematica-determinantes": {
+    "model": "matrix",
+    "context": "none",
+    "label": "Determinantes"
+  },
+  "summary-matematica-discussao-de-sistemas-lineares": {
+    "model": "matrix",
+    "context": "plus",
+    "label": "Discussão de Sistemas Lineares"
+  },
+  "summary-matematica-medias": {
+    "model": "histogram",
+    "context": "chart",
+    "label": "Médias"
+  },
+  "summary-matematica-introducao-as-tecnicas-de-contagem": {
+    "model": "dice",
+    "context": "none",
+    "label": "Introdução às Técnicas de Contagem"
+  },
+  "summary-matematica-o-problema-da-fila": {
+    "model": "queue",
+    "context": "question",
+    "label": "O Problema da Fila"
+  },
+  "summary-matematica-o-problema-do-grupo": {
+    "model": "groups",
+    "context": "plus",
+    "label": "O Problema do Grupo"
+  },
+  "summary-matematica-tecnicas-de-contagem": {
+    "model": "dice",
+    "context": "none",
+    "label": "Técnicas de Contagem"
+  },
+  "summary-matematica-operacoes-com-probabilidades": {
+    "model": "venn",
+    "context": "plus",
+    "label": "Operações com Probabilidades"
+  },
+  "summary-matematica-eventos-disjuntos-e-eventos-independentes": {
+    "model": "venn",
+    "context": "link",
+    "label": "Eventos Disjuntos e Eventos Independentes"
+  },
+  "summary-matematica-estatistica-descritiva": {
+    "model": "histogram",
+    "context": "chart",
+    "label": "Estatística Descritiva"
+  },
+  "summary-matematica-introducao-a-geometria-plana": {
+    "model": "polygon",
+    "context": "angle",
+    "label": "Introdução à Geometria Plana"
+  },
+  "summary-matematica-angulos-em-triangulos": {
+    "model": "triangle",
+    "context": "angle",
+    "label": "Ângulos em Triângulos"
+  },
+  "summary-matematica-angulos-em-poligonos": {
+    "model": "polygon",
+    "context": "angle",
+    "label": "Ângulos em Polígonos"
+  },
+  "summary-matematica-angulos-e-circunferencias": {
+    "model": "circle",
+    "context": "angle",
+    "label": "Ângulos e Circunferências"
+  },
+  "summary-matematica-simetrias-e-congruencias": {
+    "model": "symmetry",
+    "context": "none",
+    "label": "Simetrias e Congruências"
+  },
+  "summary-matematica-identificacao-de-simetrias-i": {
+    "model": "symmetry",
+    "context": "none",
+    "label": "Identificação de Simetrias I"
+  },
+  "summary-matematica-identificacao-de-simetrias-ii": {
+    "model": "symmetry",
+    "context": "none",
+    "label": "Identificação de Simetrias II"
+  },
+  "summary-matematica-a-geometria-da-proporcionalidade": {
+    "model": "fraction",
+    "context": "angle",
+    "label": "A Geometria da Proporcionalidade"
+  },
+  "summary-matematica-semelhanca-de-triangulos": {
+    "model": "triangle",
+    "context": "angle",
+    "label": "Semelhança de Triângulos"
+  },
+  "summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo": {
+    "model": "triangle",
+    "context": "angle",
+    "label": "O Ponto Médio e o Baricentro de um Triângulo"
+  },
+  "summary-matematica-triangulo-retangulo": {
+    "model": "triangle",
+    "context": "angle",
+    "label": "Triângulo Retângulo"
+  },
+  "summary-matematica-a-geometria-metrica-plana": {
+    "model": "polygon",
+    "context": "angle",
+    "label": "A Geometria Métrica Plana"
+  },
+  "summary-matematica-areas-de-poligonos": {
+    "model": "polygon",
+    "context": "angle",
+    "label": "Áreas de Polígonos"
+  },
+  "summary-matematica-area-do-circulo-e-de-suas-partes": {
+    "model": "circle",
+    "context": "none",
+    "label": "Área do Círculo e de suas Partes"
+  },
+  "summary-matematica-razoes-entre-areas-de-figuras-planas": {
+    "model": "polygon",
+    "context": "none",
+    "label": "Razões entre Áreas de Figuras Planas"
+  },
+  "summary-matematica-areas-de-figuras-planas": {
+    "model": "polygon",
+    "context": "none",
+    "label": "Áreas de Figuras Planas"
+  },
+  "summary-matematica-trigonometria-no-triangulo-retangulo": {
+    "model": "triangle",
+    "context": "angle",
+    "label": "Trigonometria no Triângulo Retângulo"
+  },
+  "summary-matematica-relacoes-trigonometricas-em-poligonos": {
+    "model": "polygon",
+    "context": "angle",
+    "label": "Relações Trigonométricas em Polígonos"
+  },
+  "summary-matematica-a-trigonometria-dos-numeros-reais": {
+    "model": "compass",
+    "context": "none",
+    "label": "A Trigonometria dos Números Reais"
+  },
+  "summary-matematica-outras-razoes-trigonometricas": {
+    "model": "compass",
+    "context": "none",
+    "label": "Outras Razões Trigonométricas"
+  },
+  "summary-matematica-a-relacao-fundamental-da-trigonometria": {
+    "model": "compass",
+    "context": "link",
+    "label": "A Relação Fundamental da Trigonometria"
+  },
+  "summary-matematica-transformacoes-trigonometricas": {
+    "model": "compass",
+    "context": "arrow",
+    "label": "Transformações Trigonométricas"
+  },
+  "summary-matematica-funcoes-trigonometricas": {
+    "model": "compass",
+    "context": "none",
+    "label": "Funções Trigonométricas"
+  },
+  "summary-matematica-o-universo-tridimensional": {
+    "model": "cube",
+    "context": "none",
+    "label": "O Universo Tridimensional"
+  },
+  "summary-matematica-cubos-e-paralelepipedos": {
+    "model": "cube",
+    "context": "none",
+    "label": "Cubos e Paralelepípedos"
+  },
+  "summary-matematica-prismas": {
+    "model": "prism",
+    "context": "none",
+    "label": "Prismas"
+  },
+  "summary-matematica-piramides": {
+    "model": "pyramid",
+    "context": "none",
+    "label": "Pirâmides"
+  },
+  "summary-matematica-solidos-de-revolucao": {
+    "model": "cylinder",
+    "context": "arrow",
+    "label": "Sólidos de Revolução"
+  },
+  "summary-matematica-razoes-entre-volumes-de-solidos": {
+    "model": "cube",
+    "context": "balance",
+    "label": "Razões entre Volumes de Sólidos"
+  },
+  "summary-matematica-introducao-a-geometria-analitica": {
+    "model": "coordinates",
+    "context": "angle",
+    "label": "Introdução à Geometria Analítica"
+  },
+  "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia": {
+    "model": "circle",
+    "context": "angle",
+    "label": "Lugar Geométrico e Equação da Circunferência"
+  },
+  "summary-matematica-estudo-analitico-da-reta": {
+    "model": "coordinates",
+    "context": "angle",
+    "label": "Estudo Analítico da Reta"
+  },
+  "summary-matematica-posicoes-relativas-entre-duas-retas": {
+    "model": "coordinates",
+    "context": "angle",
+    "label": "Posições Relativas entre Duas Retas"
+  },
+  "summary-matematica-distancia-entre-um-ponto-e-uma-reta": {
+    "model": "coordinates",
+    "context": "angle",
+    "label": "Distância entre um Ponto e uma Reta"
+  },
+  "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia": {
+    "model": "circle",
+    "context": "angle",
+    "label": "Posições Relativas entre uma Reta e uma Circunferência"
+  },
+  "summary-matematica-introducao-ao-estudo-analitico-das-conicas": {
+    "model": "conic",
+    "context": "none",
+    "label": "Introdução ao Estudo Analítico das Cônicas"
+  },
+  "summary-matematica-representacao-geometrica-de-inequacoes": {
+    "model": "coordinates",
+    "context": "angle",
+    "label": "Representação Geométrica de Inequações"
+  },
+  "summary-matematica-a-geometria-dos-numeros-complexos": {
+    "model": "complex",
+    "context": "angle",
+    "label": "A Geometria dos Números Complexos"
+  },
+  "summary-matematica-tecnicas-algebricas": {
+    "model": "equation",
+    "context": "none",
+    "label": "Técnicas Algébricas"
+  },
+  "summary-matematica-igualdades": {
+    "model": "equation",
+    "context": "balance",
+    "label": "Igualdades"
+  },
+  "summary-matematica-desigualdades": {
+    "model": "equation",
+    "context": "balance",
+    "label": "Desigualdades"
+  },
+  "summary-matematica-modelagem-algebrica-de-problemas-i": {
+    "model": "equation",
+    "context": "question",
+    "label": "Modelagem Algébrica de Problemas I"
+  },
+  "summary-matematica-equacoes-do-2-grau": {
+    "model": "parabola",
+    "context": "none",
+    "label": "Equações do 2º Grau"
+  },
+  "summary-matematica-modelagem-algebrica-de-problemas-ii": {
+    "model": "equation",
+    "context": "question",
+    "label": "Modelagem Algébrica de Problemas II"
+  },
+  "summary-matematica-introducao-as-funcoes": {
+    "model": "function",
+    "context": "none",
+    "label": "Introdução às Funções"
+  },
+  "summary-matematica-transformacoes-em-graficos-de-funcoes": {
+    "model": "function",
+    "context": "arrow",
+    "label": "Transformações em Gráficos de Funções"
+  },
+  "summary-matematica-composicao-de-funcoes": {
+    "model": "function",
+    "context": "plus",
+    "label": "Composição de Funções"
+  },
+  "summary-matematica-inversao-de-funcoes": {
+    "model": "function",
+    "context": "none",
+    "label": "Inversão de Funções"
+  },
+  "summary-matematica-funcoes-bijetoras": {
+    "model": "function",
+    "context": "none",
+    "label": "Funções Bijetoras"
+  },
+  "summary-matematica-funcao-constante-e-funcao-afim": {
+    "model": "function",
+    "context": "none",
+    "label": "Função Constante e Função Afim"
+  },
+  "summary-matematica-funcao-quadratica": {
+    "model": "parabola",
+    "context": "none",
+    "label": "Função Quadrática"
+  },
+  "summary-matematica-estudo-do-sinal-de-funcoes": {
+    "model": "function",
+    "context": "none",
+    "label": "Estudo do Sinal de Funções"
+  },
+  "summary-matematica-introducao-ao-modelo-exponencial": {
+    "model": "exponential",
+    "context": "none",
+    "label": "Introdução ao Modelo Exponencial"
+  },
+  "summary-matematica-introducao-aos-logaritmos": {
+    "model": "log",
+    "context": "none",
+    "label": "Introdução aos Logaritmos"
+  },
+  "summary-matematica-equacoes-e-funcoes-logaritmicas": {
+    "model": "log",
+    "context": "none",
+    "label": "Equações e Funções Logarítmicas"
+  },
+  "summary-matematica-modelagem-exponencial-de-problemas": {
+    "model": "exponential",
+    "context": "question",
+    "label": "Modelagem Exponencial de Problemas"
+  },
+  "summary-matematica-modulo-de-um-numero-real": {
+    "model": "absolute",
+    "context": "none",
+    "label": "Módulo de um Número Real"
+  },
+  "summary-matematica-numeros-complexos": {
+    "model": "complex",
+    "context": "none",
+    "label": "Números Complexos"
+  },
+  "summary-matematica-polinomios": {
+    "model": "equation",
+    "context": "none",
+    "label": "Polinômios"
+  },
+  "summary-matematica-equacoes-polinomiais": {
+    "model": "equation",
+    "context": "none",
+    "label": "Equações Polinomiais"
+  },
+  "summary-quimica-evolucao-dos-modelos-atomicos": {
+    "model": "atom",
+    "context": "arrow",
+    "label": "Evolução dos Modelos Atômicos"
+  },
+  "summary-quimica-organizacao-da-tabela-periodica-dos-elementos": {
+    "model": "periodic",
+    "context": "none",
+    "label": "Organização da Tabela Periódica dos Elementos"
+  },
+  "summary-quimica-radioatividade-o-estudo-das-radiacoes": {
+    "model": "atom",
+    "context": "spark",
+    "label": "Radioatividade: o Estudo das Radiações"
+  },
+  "summary-quimica-ligacoes-quimicas-e-alotropia": {
+    "model": "molecule",
+    "context": "spark",
+    "label": "Ligações Químicas e Alotropia"
+  },
+  "summary-quimica-geometria-molecular": {
+    "model": "molecule",
+    "context": "angle",
+    "label": "Geometria Molecular"
+  },
+  "summary-quimica-polaridade-das-ligacoes-e-das-moleculas": {
+    "model": "molecule",
+    "context": "none",
+    "label": "Polaridade das Ligações e das Moléculas"
+  },
+  "summary-quimica-interacoes-intermoleculares": {
+    "model": "molecule",
+    "context": "link",
+    "label": "Interações Intermoleculares"
+  },
+  "summary-quimica-composicao-da-materia-estados-fisicos": {
+    "model": "crystal",
+    "context": "plus",
+    "label": "Composição da Matéria: Estados Físicos"
+  },
+  "summary-quimica-o-estado-gasoso": {
+    "model": "gas",
+    "context": "none",
+    "label": "O Estado Gasoso"
+  },
+  "summary-quimica-estudo-dos-gases-ii": {
+    "model": "gas",
+    "context": "drop",
+    "label": "Estudo dos Gases II"
+  },
+  "summary-quimica-separacao-de-misturas": {
+    "model": "filter",
+    "context": "none",
+    "label": "Separação de Misturas"
+  },
+  "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes": {
+    "model": "flask",
+    "context": "arrow",
+    "label": "Transformações Físicas e Químicas e Balanceamento de Equações"
+  },
+  "summary-quimica-massa-atomica-mol-e-massa-molar": {
+    "model": "atom",
+    "context": "spark",
+    "label": "Massa Atômica, Mol e Massa Molar"
+  },
+  "summary-quimica-determinacao-de-formulas-quimicas": {
+    "model": "molecule",
+    "context": "spark",
+    "label": "Determinação de Fórmulas Químicas"
+  },
+  "summary-quimica-estequiometria-leis-ponderais": {
+    "model": "scales",
+    "context": "balance",
+    "label": "Estequiometria: Leis Ponderais"
+  },
+  "summary-quimica-calculos-estequiometricos": {
+    "model": "abacus",
+    "context": "balance",
+    "label": "Cálculos Estequiométricos"
+  },
+  "summary-quimica-quimica-inorganica": {
+    "model": "crystal",
+    "context": "spark",
+    "label": "Química Inorgânica"
+  },
+  "summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases": {
+    "model": "flask",
+    "context": "question",
+    "label": "Equações Iônicas e outras Teorias para Ácidos e Bases"
+  },
+  "summary-quimica-processos-de-oxirreducao": {
+    "model": "atom",
+    "context": "arrow",
+    "label": "Processos de Oxirredução"
+  },
+  "summary-quimica-quimica-ambiental": {
+    "model": "water",
+    "context": "spark",
+    "label": "Química Ambiental"
+  },
+  "summary-quimica-introducao-a-quimica-organica": {
+    "model": "chain",
+    "context": "spark",
+    "label": "Introdução à Química Orgânica"
+  },
+  "summary-quimica-nomenclatura-de-compostos-organicos": {
+    "model": "chain",
+    "context": "none",
+    "label": "Nomenclatura de Compostos Orgânicos"
+  },
+  "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados": {
+    "model": "chain",
+    "context": "none",
+    "label": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados"
+  },
+  "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades": {
+    "model": "chain",
+    "context": "none",
+    "label": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades"
+  },
+  "summary-quimica-isomeria": {
+    "model": "chain",
+    "context": "none",
+    "label": "Isomeria"
+  },
+  "summary-quimica-combustiveis-fosseis": {
+    "model": "smoke",
+    "context": "none",
+    "label": "Combustíveis Fósseis"
+  },
+  "summary-quimica-interpretando-reacoes-organicas": {
+    "model": "chain",
+    "context": "angle",
+    "label": "Interpretando Reações Orgânicas"
+  },
+  "summary-quimica-reacoes-de-substituicao": {
+    "model": "chain",
+    "context": "minus",
+    "label": "Reações de Substituição"
+  },
+  "summary-quimica-reacoes-de-adicao": {
+    "model": "chain",
+    "context": "plus",
+    "label": "Reações de Adição"
+  },
+  "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos": {
+    "model": "chain",
+    "context": "drop",
+    "label": "Reações de Oxidação em Hidrocarbonetos"
+  },
+  "summary-quimica-alcoois": {
+    "model": "chain",
+    "context": "none",
+    "label": "Álcoois"
+  },
+  "summary-quimica-acidos-graxos-e-esterificacao": {
+    "model": "chain",
+    "context": "none",
+    "label": "Ácidos Graxos e Esterificação"
+  },
+  "summary-quimica-transesterificacao-alcoolise": {
+    "model": "chain",
+    "context": "none",
+    "label": "Transesterificação (Alcoólise)"
+  },
+  "summary-quimica-acidez-e-basicidade-pka": {
+    "model": "drop",
+    "context": "none",
+    "label": "Acidez e Basicidade (pKa)"
+  },
+  "summary-quimica-polimeros": {
+    "model": "protein",
+    "context": "link",
+    "label": "Polímeros"
+  },
+  "summary-quimica-dispersoes": {
+    "model": "molecule",
+    "context": "drop",
+    "label": "Dispersões"
+  },
+  "summary-quimica-efeitos-coligativos": {
+    "model": "thermometer",
+    "context": "drop",
+    "label": "Efeitos Coligativos"
+  },
+  "summary-quimica-termoquimica-i": {
+    "model": "thermometer",
+    "context": "spark",
+    "label": "Termoquímica I"
+  },
+  "summary-quimica-termoquimica-ii": {
+    "model": "energy",
+    "context": "balance",
+    "label": "Termoquímica II"
+  },
+  "summary-quimica-cinetica-quimica": {
+    "model": "clock",
+    "context": "chart",
+    "label": "Cinética Química"
+  },
+  "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias": {
+    "model": "battery",
+    "context": "none",
+    "label": "Introdução ao Estudo das Pilhas e Baterias"
+  },
+  "summary-quimica-eletroquimica-de-processos-espontaneos": {
+    "model": "battery",
+    "context": "spark",
+    "label": "Eletroquímica de Processos Espontâneos"
+  },
+  "summary-quimica-eletroquimica-de-processos-nao-espontaneos": {
+    "model": "battery",
+    "context": "spark",
+    "label": "Eletroquímica de Processos não Espontâneos"
+  },
+  "summary-quimica-aspectos-quantitativos-da-eletroquimica-e-metalurgia": {
+    "model": "battery",
+    "context": "chart",
+    "label": "Aspectos Quantitativos da Eletroquímica e Metalurgia"
+  },
+  "summary-quimica-deslocamento-de-equilibrio": {
+    "model": "flask",
+    "context": "balance",
+    "label": "Deslocamento de Equilíbrio"
+  },
+  "summary-quimica-equilibrios-ionicos": {
+    "model": "drop",
+    "context": "balance",
+    "label": "Equilíbrios Iônicos"
+  },
+  "summary-quimica-equilibrios-ionicos-ii": {
+    "model": "drop",
+    "context": "question",
+    "label": "Equilíbrios Iônicos II"
+  },
+  "qui-equilibrio-acidificacao": {
+    "model": "crystal",
+    "context": "drop",
+    "label": "Equilíbrio químico, acidez e intemperismo"
+  },
+  "mat-probabilidade-contagem": {
+    "model": "dice",
+    "context": "plus",
+    "label": "Contagem sistemática e probabilidade"
+  },
+  "geo-bonus-demografico": {
+    "model": "people",
+    "context": "chart",
+    "label": "Estrutura Ativa da População"
+  },
+  "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos": {
+    "model": "dialogue",
+    "context": "question",
+    "label": "O Nascimento da Filosofia: do Mito ao Logos"
+  },
+  "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes": {
+    "model": "column",
+    "context": "question",
+    "label": "Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes"
+  },
+  "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir": {
+    "model": "dialectic",
+    "context": "none",
+    "label": "Heráclito e Parmênides: o Ser e o Devir"
+  },
+  "summary-filosofia-os-sofistas-e-a-crise-da-verdade": {
+    "model": "mirror",
+    "context": "question",
+    "label": "Os Sofistas e a Crise da Verdade"
+  },
+  "summary-filosofia-o-metodo-socratico-e-a-maieutica": {
+    "model": "dialogue",
+    "context": "question",
+    "label": "O Método Socrático e a Maiêutica"
+  },
+  "summary-filosofia-a-teoria-das-ideias-de-platao": {
+    "model": "brain",
+    "context": "question",
+    "label": "A Teoria das Ideias de Platão"
+  },
+  "summary-filosofia-o-mito-da-caverna": {
+    "model": "cave",
+    "context": "question",
+    "label": "O Mito da Caverna"
+  },
+  "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento": {
+    "model": "sequence",
+    "context": "none",
+    "label": "A Alegoria da Linha Dividida e o Conhecimento"
+  },
+  "summary-filosofia-logica-e-metafisica-aristotelicas": {
+    "model": "column",
+    "context": "none",
+    "label": "Lógica e Metafísica Aristotélicas"
+  },
+  "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo": {
+    "model": "scales",
+    "context": "balance",
+    "label": "A Ética a Nicômaco e a Doutrina do Meio-Termo"
+  },
+  "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico": {
+    "model": "column",
+    "context": "none",
+    "label": "Política Aristotélica: o Homem como Animal Político"
+  },
+  "summary-filosofia-patristica-e-santo-agostinho": {
+    "model": "scroll",
+    "context": "none",
+    "label": "Patrística e Santo Agostinho"
+  },
+  "summary-filosofia-escolastica-e-santo-tomas-de-aquino": {
+    "model": "scroll",
+    "context": "none",
+    "label": "Escolástica e Santo Tomás de Aquino"
+  },
+  "summary-filosofia-a-relacao-entre-fe-e-razao": {
+    "model": "scroll",
+    "context": "link",
+    "label": "A Relação entre Fé e Razão"
+  },
+  "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica": {
+    "model": "mirror",
+    "context": "question",
+    "label": "Descartes e o Método: a Dúvida Hiperbólica"
+  },
+  "summary-filosofia-racionalismo-continental-espinosa-e-leibniz": {
+    "model": "mirror",
+    "context": "none",
+    "label": "Racionalismo Continental: Espinosa e Leibniz"
+  },
+  "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume": {
+    "model": "eye",
+    "context": "none",
+    "label": "Empirismo Britânico: Locke, Berkeley e Hume"
+  },
+  "summary-filosofia-a-critica-de-hume-a-causalidade": {
+    "model": "dialectic",
+    "context": "question",
+    "label": "A Crítica de Hume à Causalidade"
+  },
+  "summary-filosofia-hobbes-e-o-estado-de-natureza": {
+    "model": "scales",
+    "context": "none",
+    "label": "Hobbes e o Estado de Natureza"
+  },
+  "summary-filosofia-locke-e-os-direitos-naturais": {
+    "model": "scroll",
+    "context": "balance",
+    "label": "Locke e os Direitos Naturais"
+  },
+  "summary-filosofia-rousseau-e-a-vontade-geral": {
+    "model": "dialogue",
+    "context": "none",
+    "label": "Rousseau e a Vontade Geral"
+  },
+  "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso": {
+    "model": "scroll",
+    "context": "none",
+    "label": "O Ideal Iluminista de Razão e Progresso"
+  },
+  "summary-filosofia-a-critica-da-razao-pura": {
+    "model": "dialogue",
+    "context": "question",
+    "label": "A Crítica da Razão Pura"
+  },
+  "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico": {
+    "model": "scales",
+    "context": "balance",
+    "label": "A Ética Kantiana e o Imperativo Categórico"
+  },
+  "summary-filosofia-hegel-e-a-dialetica": {
+    "model": "dialectic",
+    "context": "balance",
+    "label": "Hegel e a Dialética"
+  },
+  "summary-filosofia-o-materialismo-historico": {
+    "model": "factory",
+    "context": "none",
+    "label": "O Materialismo Histórico"
+  },
+  "summary-filosofia-alienacao-e-mais-valia": {
+    "model": "factory",
+    "context": "none",
+    "label": "Alienação e Mais-Valia"
+  },
+  "summary-filosofia-a-luta-de-classes-na-filosofia-marxista": {
+    "model": "people",
+    "context": "question",
+    "label": "A Luta de Classes na Filosofia Marxista"
+  },
+  "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais": {
+    "model": "scales",
+    "context": "question",
+    "label": "Nietzsche e a Crítica aos Valores Morais"
+  },
+  "summary-filosofia-o-existencialismo-de-sartre": {
+    "model": "mirror",
+    "context": "none",
+    "label": "O Existencialismo de Sartre"
+  },
+  "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural": {
+    "model": "factory",
+    "context": "people",
+    "label": "A Escola de Frankfurt e a Indústria Cultural"
+  },
+  "summary-filosofia-foucault-e-as-relacoes-de-poder": {
+    "model": "people",
+    "context": "none",
+    "label": "Foucault e as Relações de Poder"
+  },
+  "summary-filosofia-justica-e-direitos-humanos": {
+    "model": "scroll",
+    "context": "balance",
+    "label": "Justiça e Direitos Humanos"
+  },
+  "summary-filosofia-etica-aplicada-e-bioetica": {
+    "model": "scales",
+    "context": "balance",
+    "label": "Ética Aplicada e Bioética"
+  },
+  "summary-filosofia-filosofia-politica-contemporanea": {
+    "model": "dialogue",
+    "context": "question",
+    "label": "Filosofia Política Contemporânea"
+  },
+  "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia": {
+    "model": "factory",
+    "context": "quote",
+    "label": "O Contexto Histórico do Surgimento da Sociologia"
+  },
+  "summary-sociologia-o-que-e-o-fato-social": {
+    "model": "network",
+    "context": "people",
+    "label": "O que é o Fato Social"
+  },
+  "summary-sociologia-sociologia-e-senso-comum": {
+    "model": "magnifier",
+    "context": "question",
+    "label": "Sociologia e Senso Comum"
+  },
+  "summary-sociologia-solidariedade-mecanica-e-solidariedade-organica": {
+    "model": "gear",
+    "context": "link",
+    "label": "Solidariedade Mecânica e Solidariedade Orgânica"
+  },
+  "summary-sociologia-anomia-e-coesao-social": {
+    "model": "agreement",
+    "context": "minus",
+    "label": "Anomia e Coesão Social"
+  },
+  "summary-sociologia-educacao-e-socializacao-em-durkheim": {
+    "model": "book",
+    "context": "people",
+    "label": "Educação e Socialização em Durkheim"
+  },
+  "summary-sociologia-modo-de-producao-e-estrutura-social": {
+    "model": "factory",
+    "context": "chart",
+    "label": "Modo de Produção e Estrutura Social"
+  },
+  "summary-sociologia-ideologia-e-alienacao": {
+    "model": "mask",
+    "context": "question",
+    "label": "Ideologia e Alienação"
+  },
+  "summary-sociologia-a-luta-de-classes-na-analise-sociologica": {
+    "model": "scales",
+    "context": "people",
+    "label": "A Luta de Classes na Análise Sociológica"
+  },
+  "summary-sociologia-tipos-de-acao-social": {
+    "model": "dialogue",
+    "context": "people",
+    "label": "Tipos de Ação Social"
+  },
+  "summary-sociologia-dominacao-e-poder-em-weber": {
+    "model": "column",
+    "context": "people",
+    "label": "Dominação e Poder em Weber"
+  },
+  "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo": {
+    "model": "factory",
+    "context": "balance",
+    "label": "Ética Protestante e o Espírito do Capitalismo"
+  },
+  "summary-sociologia-cultura-e-etnocentrismo": {
+    "model": "compass",
+    "context": "people",
+    "label": "Cultura e Etnocentrismo"
+  },
+  "summary-sociologia-identidade-e-diferenca": {
+    "model": "mirror",
+    "context": "people",
+    "label": "Identidade e Diferença"
+  },
+  "summary-sociologia-multiculturalismo-e-relativismo-cultural": {
+    "model": "globe",
+    "context": "people",
+    "label": "Multiculturalismo e Relativismo Cultural"
+  },
+  "summary-sociologia-classes-sociais-e-mobilidade-social": {
+    "model": "sequence",
+    "context": "people",
+    "label": "Classes Sociais e Mobilidade Social"
+  },
+  "summary-sociologia-desigualdade-racial-no-brasil": {
+    "model": "scales",
+    "context": "globe",
+    "label": "Desigualdade Racial no Brasil"
+  },
+  "summary-sociologia-desigualdade-de-genero": {
+    "model": "scales",
+    "context": "people",
+    "label": "Desigualdade de Gênero"
+  },
+  "summary-sociologia-divisao-social-do-trabalho": {
+    "model": "factory",
+    "context": "people",
+    "label": "Divisão Social do Trabalho"
+  },
+  "summary-sociologia-transformacoes-no-mundo-do-trabalho": {
+    "model": "factory",
+    "context": "arrow",
+    "label": "Transformações no Mundo do Trabalho"
+  },
+  "summary-sociologia-precarizacao-e-uberizacao-do-trabalho": {
+    "model": "clock",
+    "context": "minus",
+    "label": "Precarização e Uberização do Trabalho"
+  },
+  "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos": {
+    "model": "groups",
+    "context": "arrow",
+    "label": "Movimentos Sociais Clássicos e Contemporâneos"
+  },
+  "summary-sociologia-cidadania-e-direitos": {
+    "model": "scroll",
+    "context": "balance",
+    "label": "Cidadania e Direitos"
+  },
+  "summary-sociologia-democracia-e-participacao-politica": {
+    "model": "ballot",
+    "context": "balance",
+    "label": "Democracia e Participação Política"
+  },
+  "summary-sociologia-globalizacao-economica-e-cultural": {
+    "model": "globe",
+    "context": "chart",
+    "label": "Globalização Econômica e Cultural"
+  },
+  "summary-sociologia-o-estado-nacao-na-era-global": {
+    "model": "globe",
+    "context": "balance",
+    "label": "O Estado-Nação na Era Global"
+  },
+  "summary-sociologia-a-sociedade-da-informacao": {
+    "model": "network",
+    "context": "none",
+    "label": "A Sociedade da Informação"
+  }
+}

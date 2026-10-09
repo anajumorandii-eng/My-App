@@ -1,6 +1,6 @@
 import React, { useEffect, useId, useRef, useState } from 'react';
 import { Maximize2, Minimize2 } from 'lucide-react';
-import { StudyObjectIcon } from './visual-boards/StudyObjectIcon';
+import { ChapterObjectIcon } from './visual-boards/ChapterObjectIcon';
 import './ChapterSceneFrame.css';
 
 /** A mesma cena fica no lugar ao ampliar: medidas, casos e evidências não são reiniciados. */
@@ -57,9 +57,9 @@ export function ChapterSceneFrame({ chapterId, subject, title, topic, children }
     };
   }, [focused]);
   return <div ref={root} className={`vs-chapter-scene${focused ? ' vs-chapter-scene--focus' : ''}`}
-    data-chapter-scene={chapterId} role={focused ? 'dialog' : undefined} aria-modal={focused || undefined} aria-labelledby={focused ? id : undefined}>
+    data-chapter-scene={chapterId} data-chapter-subject={subject} role={focused ? 'dialog' : undefined} aria-modal={focused || undefined} aria-labelledby={focused ? id : undefined}>
     <header className="vs-chapter-scene-tools">
-      <StudyObjectIcon subject={subject} topic={topic + ' ' + title} />
+      <ChapterObjectIcon chapterId={chapterId} />
       <div><small>{subject} · cena do capítulo</small><strong id={id}>{title}</strong></div>
       <button ref={toggle} type="button" onClick={() => setFocused(!focused)} aria-expanded={focused}>
         {focused ? <Minimize2 aria-hidden="true" /> : <Maximize2 aria-hidden="true" />}

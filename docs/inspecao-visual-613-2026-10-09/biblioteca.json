@@ -1,0 +1,170 @@
+[
+  {
+    "theme": "light",
+    "subject": "Física",
+    "chapters": 85,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Atualidades",
+    "chapters": 1,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Biologia",
+    "chapters": 72,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Geografia",
+    "chapters": 63,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "História",
+    "chapters": 49,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Língua Inglesa",
+    "chapters": 17,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Redação",
+    "chapters": 58,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Gramática",
+    "chapters": 26,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Literatura",
+    "chapters": 37,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Entendimento de Texto",
+    "chapters": 12,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Matemática",
+    "chapters": 83,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Química",
+    "chapters": 48,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Filosofia",
+    "chapters": 35,
+    "correctIcons": true
+  },
+  {
+    "theme": "light",
+    "subject": "Sociologia",
+    "chapters": 27,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Física",
+    "chapters": 85,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Atualidades",
+    "chapters": 1,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Biologia",
+    "chapters": 72,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Geografia",
+    "chapters": 63,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "História",
+    "chapters": 49,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Língua Inglesa",
+    "chapters": 17,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Redação",
+    "chapters": 58,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Gramática",
+    "chapters": 26,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Literatura",
+    "chapters": 37,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Entendimento de Texto",
+    "chapters": 12,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Matemática",
+    "chapters": 83,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Química",
+    "chapters": 48,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Filosofia",
+    "chapters": 35,
+    "correctIcons": true
+  },
+  {
+    "theme": "dark",
+    "subject": "Sociologia",
+    "chapters": 27,
+    "correctIcons": true
+  }
+]

@@ -5,12 +5,12 @@
    `stroke: none`, cada letra herdava o contorno e, no iPad em tema escuro,
    "boca · amilase" virava um borrão ilegível. A ponta de seta do `marker`
    não herda cor e saía preta sobre o fundo escuro. */
-.bp-board text { fill: var(--vs-dim); stroke: none; font: 700 15px/1.2 'Kalam', 'Caveat', cursive; }
+.bp-board text { fill: var(--vs-ink); stroke: none; font: 700 15px/1.2 'Kalam', 'Caveat', cursive; }
 .bp-board marker path { fill: var(--vs-amber); stroke: none; }
 .bp-board .bp-small { font: 700 12px/1.2 system-ui, sans-serif; }
 .bp-body { fill: none; stroke: color-mix(in srgb, var(--vs-ink) 24%, transparent); stroke-width: 2; stroke-dasharray: 7 5; }
 .bp-organ, .bp-nephron, .bp-reflex-node, .bp-reflex-path, .bp-cord, .bp-muscle, .bp-gland-node, .bp-channel, .bp-vesicles, .bp-receptors, .bp-cleanup { fill: color-mix(in srgb, var(--vs-blue) 8%, var(--vs-paper-strong)); stroke: color-mix(in srgb, var(--vs-blue) 54%, var(--vs-ink)); stroke-width: 3; stroke-linecap: round; stroke-linejoin: round; transition: opacity .2s ease, filter .2s ease; }
-.bp-organ:not(.bp-focus):not(.bp-done), .bp-nephron:not(.bp-focus):not(.bp-done), .bp-reflex-node:not(.bp-focus):not(.bp-done), .bp-reflex-path:not(.bp-focus):not(.bp-done), .bp-cord:not(.bp-focus):not(.bp-done), .bp-muscle:not(.bp-focus):not(.bp-done), .bp-gland-node:not(.bp-focus):not(.bp-done), .bp-channel:not(.bp-focus):not(.bp-done), .bp-vesicles:not(.bp-focus):not(.bp-done), .bp-receptors:not(.bp-focus):not(.bp-done), .bp-cleanup:not(.bp-focus):not(.bp-done) { opacity: .36; }
+.bp-organ:not(.bp-focus):not(.bp-done), .bp-nephron:not(.bp-focus):not(.bp-done), .bp-reflex-node:not(.bp-focus):not(.bp-done), .bp-reflex-path:not(.bp-focus):not(.bp-done), .bp-cord:not(.bp-focus):not(.bp-done), .bp-muscle:not(.bp-focus):not(.bp-done), .bp-gland-node:not(.bp-focus):not(.bp-done), .bp-channel:not(.bp-focus):not(.bp-done), .bp-vesicles:not(.bp-focus):not(.bp-done), .bp-receptors:not(.bp-focus):not(.bp-done), .bp-cleanup:not(.bp-focus):not(.bp-done) { opacity: .68; }
 .bp-focus { fill: color-mix(in srgb, var(--vs-burgundy) 22%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); filter: drop-shadow(0 3px 5px color-mix(in srgb, var(--vs-burgundy) 26%, transparent)); }
 .bp-done { opacity: .78; }
 .bp-gland, .bp-kidney { fill: color-mix(in srgb, var(--vs-burgundy) 17%, var(--vs-paper-strong)); stroke: var(--vs-burgundy); stroke-width: 2.5; stroke-linejoin: round; }

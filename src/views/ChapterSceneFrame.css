@@ -20,3 +20,31 @@
   .vs-chapter-scene--focus { padding: 12px; }
   .vs-chapter-scene--focus>.vs-chapter-scene-tools { top: -12px; }
 }
+
+/* A mesma direção aprovada em Humanas vale para a entrada de cada artefato. */
+.vs-chapter-scene { --chapter-accent: var(--vs-burgundy); --hu-accent: var(--chapter-accent); --hu-wash: color-mix(in srgb,var(--chapter-accent) 8%,var(--vs-paper-strong)); }
+.vs-chapter-scene:is([data-chapter-subject="Biologia"],[data-chapter-subject="Geografia"]) { --chapter-accent: var(--vs-green); }
+.vs-chapter-scene:is([data-chapter-subject="Física"],[data-chapter-subject="Matemática"]) { --chapter-accent: var(--vs-blue); }
+.vs-chapter-scene .vs-chapter-scene-tools { padding: 22px; border-radius: 20px; border-bottom: 3px solid var(--chapter-accent); background: linear-gradient(110deg,var(--hu-wash),var(--vs-paper-strong) 75%); box-shadow: 0 9px 24px color-mix(in srgb,var(--vs-metal) 10%,transparent); }
+.vs-chapter-scene .vs-chapter-scene-tools>.vs-object-icon { width: 80px; height: 80px; flex-basis: 80px; }
+.vs-chapter-scene .vs-chapter-scene-tools strong { font: 500 clamp(22px,2.1vw,32px)/1.18 Newsreader,Georgia,serif; letter-spacing: -.02em; }
+.vs-chapter-scene .vs-chapter-scene-tools small { color: var(--chapter-accent); }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene-body :is(button,select,summary) { min-height: 44px; }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene-body input[type="range"] { min-height: 44px; }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene-body .vs-solid-formas label { min-height: 44px; }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene-body .tc-organic-card { grid-template-columns: 1fr; }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene-body .tc-organic-card .tc-chem-visual svg { height: auto; max-height: 150px; }
+.vs-chapter-scene-body button { overflow-wrap: anywhere; }
+.vs-chapter-scene-body :is(button,select,summary,input):focus-visible { outline: 3px solid var(--chapter-accent); outline-offset: 3px; }
+.vs-chapter-scene-body :is(.tc-scene,.topic-studio,.enzyme-board,.fungi-board,.vs-heart-board,.grammar-board) { border: 1px solid var(--vs-line); border-radius: 20px; box-shadow: 0 5px 0 color-mix(in srgb,var(--vs-metal) 12%,transparent),0 18px 45px color-mix(in srgb,var(--vs-metal) 7%,transparent); }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene-body .tc-scene>header h4 { font: 500 clamp(25px,3vw,39px)/1.16 Newsreader,Georgia,serif; letter-spacing: -.02em; }
+.vs-chapter-scene-body .tc-scene>header small { color: var(--chapter-accent); font: 600 10px/1.6 Inter,system-ui,sans-serif; letter-spacing: .1em; }
+.vs-chapter-scene-body .tc-scene { padding: clamp(14px,2vw,28px); gap: 18px; }
+.vs-chapter-scene-body .tc-choices button { border-radius: 10px; box-shadow: 0 3px 0 color-mix(in srgb,var(--vs-metal) 12%,transparent); }
+.vs-chapter-scene-body .tc-choices button[aria-pressed="true"] { box-shadow: 0 3px 0 var(--chapter-accent); }
+.vs-chapter-object { flex-shrink: 0; }
+@media(max-width:660px) {
+  .vs-chapter-scene .vs-chapter-scene-tools { padding: 14px; flex-wrap: wrap; gap: 10px; }
+  .vs-chapter-scene .vs-chapter-scene-tools>.vs-object-icon { width: 64px; height: 64px; flex-basis: 64px; }
+  .vs-chapter-scene .vs-chapter-scene-tools>div { flex-basis: calc(100% - 74px); }
+}

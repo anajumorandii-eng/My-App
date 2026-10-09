@@ -13,7 +13,7 @@ const accent = 'var(--vs-burgundy)';
 const blue = 'var(--vs-blue)';
 const paper = 'var(--vs-paper-strong)';
 type Props = { value: number; ratio: number };
-const Rotulo = ({ x, y, children, cor = dim, ancora = 'middle', peso }: { x: number; y: number; children: React.ReactNode; cor?: string; ancora?: 'start' | 'middle' | 'end'; peso?: number }) =>
+const Rotulo = ({ x, y, children, cor = ink, ancora = 'middle', peso }: { x: number; y: number; children: React.ReactNode; cor?: string; ancora?: 'start' | 'middle' | 'end'; peso?: number }) =>
   <text x={x} y={y} textAnchor={ancora} fill={cor} fontSize="11" fontWeight={peso}>{children}</text>;
 const Ponta = ({ id, cor }: { id: string; cor: string }) => <defs><marker id={id} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M0 0L10 5L0 10Z" fill={cor} /></marker></defs>;
 
@@ -174,7 +174,7 @@ const ETAPAS_REPRO = [
 /** Útero, tubas e ovários: o cursor acende o lugar de cada etapa. */
 export function Reproducao({ value }: Props) {
   const etapa = Math.max(0, Math.min(2, Math.round(value)));
-  const aceso = (k: number) => ({ opacity: k === etapa ? 1 : 0.25 });
+  const aceso = (k: number) => ({ opacity: k === etapa ? 1 : 0.82 });
   return <g data-bio-system="reproductive-tract">
     <path d="M130 90q30 20 60 0v60q-6 40-30 44q-24-4-30-44Z" fill={paper} stroke={ink} strokeWidth="2.5" />
     <path d="M160 194v34" stroke={ink} strokeWidth="2.5" />
@@ -209,7 +209,7 @@ function Seta({ x1, y1, x2, y2, cor = ink, largura = 2.5 }: { x1: number; y1: nu
 const amber = 'var(--vs-amber)';
 type Sel = { value: number };
 const sel = (v: number, n: number) => Math.max(0, Math.min(n - 1, Math.round(v)));
-const Foco = ({ on, children }: { on: boolean; children: React.ReactNode }) => <motion.g initial={false} animate={{ opacity: on ? 1 : 0.28 }} transition={{ duration: 0.25 }}>{children}</motion.g>;
+const Foco = ({ on, children }: { on: boolean; children: React.ReactNode }) => <motion.g initial={false} animate={{ opacity: on ? 1 : 0.82 }} transition={{ duration: 0.25 }}>{children}</motion.g>;
 
 /** Citoesqueleto: os três filamentos na mesma célula; o escolhido acende. */
 export function Citoesqueleto({ value }: Sel) {
