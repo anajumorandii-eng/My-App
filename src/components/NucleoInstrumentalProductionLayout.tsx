@@ -30,6 +30,15 @@ const PATH_BY_SCREEN: Record<string, string> = {
   'admin-obras': '/admin/obras', 'admin-conteudo': '/admin/conteudo',
 };
 
+const NAVIGATION_GROUPS = [
+  { kind: 'decision', label: 'Planejar' },
+  { kind: 'practice', label: 'Praticar' },
+  { kind: 'library', label: 'Explorar' },
+  { kind: 'analysis', label: 'Acompanhar' },
+  { kind: 'account', label: 'Minha conta' },
+  { kind: 'admin', label: 'Administrar' },
+] as const;
+
 const TOP_LEVEL = [
   ['hoje', 'Hoje'], ['plano', 'Plano'], ['sessao', 'Estudar'], ['evolucao', 'Análises'], ['agenda', 'Agenda'],
 ] as const;
@@ -99,7 +108,7 @@ function LayoutComAmbiente() {
   const [menuOpen, setMenuOpen] = useState(false);
   const railRef = useRef<HTMLElement | null>(null);
   const [railExpanded, setRailExpanded] = useState(() =>
-    typeof window !== 'undefined' && window.localStorage.getItem('crivo_rail_expanded') === 'true',
+    typeof window !== 'undefined' && window.localStorage.getItem('crivo_rail_expanded') !== 'false',
   );
   const [isMobile, setIsMobile] = useState(() => typeof window !== 'undefined' && window.matchMedia('(max-width: 900px)').matches);
   const location = useLocation();
@@ -166,7 +175,8 @@ function LayoutComAmbiente() {
   );
 
   return (
-    <div className={cn('ni-prototype ni-production-app', !isDark && 'is-light')} style={{ '--primary': palette.primary, '--primary-ink': palette.readable, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties} data-family={palette.family}>
+    <div className={cn('ni-prototype ni-production-app crivo-editorial', !isDark && 'is-light')} style={{ '--primary': palette.primary, '--primary-ink': palette.readable, '--secondary': palette.secondary, '--wash': palette.wash } as React.CSSProperties} data-family={palette.family}>
+      <a className="crivo-skip-link" href="#crivo-conteudo">Pular para o conteúdo</a>
       {ambienteApp?.preferencias.fundo === 'caderno' && <FundoCaderno materia={ambienteApp.sobreposto?.materia} />}
       <header className="ni-production-mobile lg:hidden" inert={isMobile && menuOpen}>
         <IconButton aria-label="Abrir menu" onClick={() => setMenuOpen(true)}><Menu className="h-5 w-5" aria-hidden="true" /></IconButton>
@@ -177,14 +187,19 @@ function LayoutComAmbiente() {
       {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" tabIndex={-1} onClick={() => setMenuOpen(false)} />}
 
       <aside ref={railRef} role={isMobile && menuOpen ? 'dialog' : undefined} aria-modal={isMobile && menuOpen ? true : undefined} aria-label={isMobile && menuOpen ? 'Menu de navegação' : undefined} className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')} aria-hidden={isMobile && !menuOpen ? true : undefined} inert={isMobile && !menuOpen}>
-        <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><CrivoAppMark /></button>
+        <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><CrivoAppMark />{(railExpanded || menuOpen) && <span className="crivo-rail-wordmark">Crivo</span>}</button>
         {menuOpen && <button className="ni-production-close" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>}
         <nav className="ni-rail-scroll" aria-label="Todas as telas do app">
-          {SCREENS.filter((item) => item.key !== 'obra-detalhe').map((item) => {
-            const Icon = item.icon;
-            const target = PATH_BY_SCREEN[item.key];
-            return <NavLink key={item.key} to={target} end={target === '/'} className={item.key === screen.key ? 'active' : undefined} title={item.label}><span className="ni-icon-depth"><Icon aria-hidden="true" /></span>{(railExpanded || menuOpen) && <b>{item.label}</b>}</NavLink>;
-          })}
+          {NAVIGATION_GROUPS.map((group) => (
+            <div className="crivo-nav-group" role="group" aria-label={group.label} key={group.kind}>
+              {(railExpanded || menuOpen) && <p className="crivo-nav-group-label">{group.label}</p>}
+              {SCREENS.filter((item) => item.key !== 'obra-detalhe' && item.kind === group.kind).map((item) => {
+                const Icon = item.icon;
+                const target = PATH_BY_SCREEN[item.key];
+                return <NavLink key={item.key} to={target} end={target === '/'} className={item.key === screen.key ? 'active' : undefined} title={item.label}><span className="ni-icon-depth"><Icon aria-hidden="true" /></span>{(railExpanded || menuOpen) && <b>{item.label}</b>}</NavLink>;
+              })}
+            </div>
+          ))}
         </nav>
         <button
           className="ni-rail-toggle"
@@ -209,9 +224,9 @@ function LayoutComAmbiente() {
           </nav>
           {acoesDoTopo(false)}
           <button className="ni-theme-toggle" onClick={toggleTheme} aria-label={isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'}>{isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}<span>{isDark ? 'claro' : 'escuro'}</span></button>
-          <div className="ni-avatar" aria-label="Perfil">AJ</div>
+          <NavLink to="/perfil" className="ni-avatar" aria-label="Abrir perfil">AJ</NavLink>
         </header>
-        <main className="ni-production-main">
+        <main id="crivo-conteudo" tabIndex={-1} className="ni-production-main">
           <AnimatePresence mode="wait" initial={false}>
             <motion.div key={location.pathname} className="ni-production-view" initial={reducedMotion ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={reducedMotion ? undefined : { opacity: 0, y: -8 }} transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE }}>
               <RouteBoundary pathname={location.pathname}>

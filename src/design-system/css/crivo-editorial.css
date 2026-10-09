@@ -1,0 +1,275 @@
+/* The editorial layer shares the app's semantic tokens. Paper preferences stay
+   opaque; other backgrounds retain their selected atmosphere and subject color. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) {
+  --folha: #faf9f5;
+  --tinta: #252523;
+  --amb-texto: var(--tinta);
+  --amb-dim: #6c6a64;
+  --amb-linha: #e6dfd8;
+  --amb-vidro-forte: var(--folha);
+  --papel-base: #f4f1eb;
+  --papel-fibras: none;
+  --text-primary: var(--tinta);
+  --text-secondary: var(--amb-dim);
+  --text-muted: #706c64;
+  --surface-secondary: #f0ebe3;
+  --surface-strong: #e8e0d2;
+  --border-subtle: var(--amb-linha);
+  --action-primary: #852636;
+  --action-primary-hover: #6c1c27;
+  --action-primary-pressed: #54151d;
+  --text-inverse: #faf9f5;
+  --shadow-soft-md-value: 0 4px 16px rgba(37, 37, 35, .035);
+  --shadow-soft-lg-value: 0 12px 32px rgba(37, 37, 35, .06);
+}
+:root.dark[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) {
+  --folha: #23221f;
+  --tinta: #f3eee5;
+  --amb-dim: #b5afa4;
+  --amb-linha: #403d37;
+  --papel-base: #191917;
+  --text-muted: #b5afa4;
+  --surface-elevated: #292824;
+  --surface-secondary: #2d2b26;
+  --surface-strong: #38352f;
+  --action-primary: #852636;
+  --action-primary-hover: #962e40;
+  --action-primary-pressed: #6c1c27;
+  --shadow-soft-md-value: 0 4px 16px rgba(0, 0, 0, .1);
+  --shadow-soft-lg-value: 0 12px 32px rgba(0, 0, 0, .16);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial {
+  --editorial-line: var(--amb-linha);
+  --editorial-ink: var(--amb-texto);
+  --editorial-muted: var(--amb-dim);
+  color: var(--editorial-ink);
+}
+.ni-production-app.crivo-editorial .crivo-skip-link {
+  position: fixed; top: 12px; left: 12px; z-index: 100;
+  padding: 12px 20px; border-radius: 8px;
+  background: var(--action-primary); color: var(--text-inverse);
+  transform: translateY(-180%);
+}
+.ni-production-app.crivo-editorial .crivo-skip-link:focus { transform: none; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-main {
+  max-width: 1360px; padding: 34px 40px 64px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-top {
+  height: 76px; gap: 28px; padding-inline: 40px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-top > strong {
+  font: 500 29px/1 Newsreader, Georgia, serif; letter-spacing: -.04em;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-top nav { gap: 24px; font-size: 13px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-top nav a { padding-block: 8px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-top nav a.active::after {
+  height: 2px; bottom: -16px; background: var(--action-primary); border-radius: 2px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-avatar {
+  width: 36px; height: 36px; border-color: var(--editorial-line);
+  color: var(--editorial-ink); text-decoration: none; font: 500 11px Inter, sans-serif;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-theme-toggle {
+  min-height: 36px; font: 500 11px Inter, sans-serif; padding: 8px 12px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail {
+  padding: 24px 12px 14px; gap: 20px; border-right: 1px solid var(--editorial-line);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail.is-expanded { width: 224px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-mark { width: 36px; height: 36px; margin-inline: 4px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail-scroll { gap: 22px; padding: 0 0 12px; }
+.ni-production-app.crivo-editorial .crivo-nav-group { display: grid; gap: 2px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-nav-group-label {
+  margin: 0 0 8px; padding-inline: 12px; color: var(--editorial-muted);
+  font: 500 10px/1.4 Inter, sans-serif; letter-spacing: .12em; text-transform: uppercase;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail-scroll a,
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail.is-expanded .ni-rail-scroll a {
+  width: 100%; min-height: 40px; padding: 8px 10px; gap: 12px;
+  color: var(--editorial-muted); border-radius: 7px; background: transparent; box-shadow: none;
+  transition: color .16s ease, background-color .16s ease;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail-scroll a b {
+  color: inherit; font: 500 12px/1.4 Inter, sans-serif;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail-scroll a:hover {
+  color: var(--editorial-ink); background: color-mix(in srgb, var(--editorial-ink) 5%, transparent);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail-scroll a.active {
+  color: var(--editorial-ink); background: color-mix(in srgb, var(--editorial-ink) 7%, transparent);
+  box-shadow: inset 2px 0 var(--action-primary);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail .ni-icon-depth {
+  width: 20px; height: 20px; color: inherit; filter: none;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail .ni-icon-depth svg { width: 18px; height: 18px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-route {
+  font: 500 10px/1.5 Inter, sans-serif; letter-spacing: .08em; text-transform: uppercase;
+  color: var(--editorial-muted); gap: 8px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-route i { width: 3px; height: 3px; box-shadow: none; background: var(--editorial-muted); }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-title { align-items: center; gap: 24px; margin: 24px 0 0; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-title h1 {
+  color: var(--editorial-ink); font: 400 clamp(36px, 3.8vw, 54px)/1.08 Newsreader, Georgia, serif;
+  letter-spacing: -.04em; max-width: 760px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-title p { font-size: 13px; margin-top: 10px; color: var(--editorial-muted); }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-title .crivo-today-date {
+  margin: 0 0 9px; font: 500 11px/1.4 Inter, sans-serif; text-transform: capitalize;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-state {
+  font: 500 10px/1.5 Inter, sans-serif; white-space: normal; max-width: 230px;
+  padding: 9px 13px; color: var(--editorial-muted);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-state i { box-shadow: none; background: #488468; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-subjects {
+  gap: 0 20px; margin: 25px 0 24px; padding: 0 0 8px; border-bottom: 1px solid var(--editorial-line);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-subjects button {
+  min-height: 40px; font: 500 11px/1.4 Inter, sans-serif; color: var(--editorial-muted);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-subjects button.active {
+  color: var(--editorial-ink); box-shadow: inset 0 -2px 0 var(--action-primary); border-bottom-color: transparent;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-kicker {
+  color: var(--editorial-muted); font: 500 10px/1.5 Inter, sans-serif;
+  letter-spacing: .08em; text-transform: uppercase;
+}
+.ni-production-app.crivo-editorial .crivo-focus-dot { width: 6px; height: 6px; border-radius: 50%; background: #488468; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision { grid-template-columns: minmax(0, 1fr) 260px; gap: 20px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision-copy,
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) {
+  min-height: 420px; padding: 30px; column-gap: 24px;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 1fr);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-focus-content > h2 {
+  max-width: 100%; margin-top: 18px;
+  color: var(--editorial-ink); font: 400 clamp(30px, 3vw, 42px)/1.08 Newsreader, Georgia, serif; letter-spacing: -.035em;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-focus-content > p:not(.ni-kicker) {
+  max-width: 100%; color: var(--editorial-muted); font-size: 13px; line-height: 1.65; margin-top: 14px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-cta {
+  min-height: 46px; width: fit-content; max-width: 100%; margin-top: 22px; padding: 12px 18px;
+  font: 500 12px/1.4 Inter, sans-serif;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-explanation {
+  display: block; margin: 12px 0 0;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-explanation button { min-height: 40px; font-size: 11px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-visual-support--cena {
+  min-height: 280px; margin-bottom: 78px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision-copy .ni-metrics {
+  grid-column: 1 / -1; position: relative; inset: auto; margin: 24px 0 0; gap: 18px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-metric { border-color: var(--editorial-line); padding-top: 14px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-metric small {
+  font: 500 9px/1.5 Inter, sans-serif; letter-spacing: .08em; color: var(--editorial-muted);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-metric b { color: var(--editorial-ink); font: 400 22px/1.4 Newsreader, Georgia, serif; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-metric b.warn { color: var(--status-warning); }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-trajectory { min-height: 0; padding: 28px 24px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-trajectory h3 {
+  font: 400 33px/1.1 Newsreader, Georgia, serif; letter-spacing: -.03em; margin-top: 22px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-trajectory li {
+  padding-block: 14px; color: var(--editorial-muted); font-size: 11px; border-color: var(--editorial-line);
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-trajectory li b { color: var(--editorial-ink); }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-next-steps { gap: 16px; margin-top: 20px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial button.ni-mini { padding: 22px 24px; min-height: 146px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial button.ni-mini h3 { font: 500 16px/1.3 Inter, sans-serif; margin-block: 16px 8px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial button.ni-mini p { font-size: 12px; line-height: 1.6; color: var(--editorial-muted); }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial button.ni-mini .ni-icon-depth {
+  border: 0; background: transparent; box-shadow: none; color: var(--editorial-muted); width: 24px; height: 24px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial button.ni-mini .ni-icon-depth svg { width: 22px; height: 22px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .decision-sequence { padding-top: 28px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .decision-sequence-region h3,
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .decision-sequence-disclosure {
+  font: 500 11px/1.5 Inter, sans-serif; letter-spacing: .08em; color: var(--editorial-muted);
+}
+/* Adapt the kit's warm canvas and serif hierarchy to Crivo's established
+   burgundy action color. Subject laboratories keep their own accent tokens. */
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app.crivo-editorial :is(.ni-panel, .rounded-card),
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app.crivo-editorial.is-light :is(.ni-panel, .rounded-card) {
+  background: var(--surface-default); border-color: var(--editorial-line); border-radius: 12px;
+  box-shadow: var(--shadow-soft-md-value); backdrop-filter: none; -webkit-backdrop-filter: none;
+}
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app.crivo-editorial .ni-primary {
+  background: var(--action-primary); color: var(--text-inverse); border: 1px solid transparent;
+  border-radius: 8px; box-shadow: none;
+}
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app.crivo-editorial .ni-primary:hover { background: var(--action-primary-hover); }
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) .ni-production-app.crivo-editorial .ni-primary:active { background: var(--action-primary-pressed); transform: none; box-shadow: none; }
+.ni-production-app.crivo-editorial .crivo-caderno { opacity: .22; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial :is(a, button, input, textarea, select):focus-visible {
+  outline: 2px solid var(--focus-ring); outline-offset: 3px;
+}
+@media (min-width: 901px) and (max-width: 1200px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-top { padding-inline: 28px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-main { padding-inline: 28px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision { grid-template-columns: 1fr; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-trajectory ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+}
+@media (max-width: 900px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-main { padding: 24px 24px 40px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-production-main { padding-bottom: calc(100px + env(safe-area-inset-bottom)); }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-title { display: block; margin-top: 18px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-title h1 { font-size: 42px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-state { margin-top: 16px; max-width: none; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-subjects { margin: 22px -24px 20px; padding-inline: 24px; gap: 20px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-subjects button { min-height: 44px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision { grid-template-columns: 1fr; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision-copy,
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) { display: block; min-height: 0; padding: 28px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-focus-content > h2 { max-width: 100%; font-size: 36px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-visual-support--cena { min-height: 0; margin: 22px 0 0; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-metrics { grid-template-columns: repeat(4, minmax(0, 1fr)); }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-trajectory ul { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-next-steps { grid-template-columns: repeat(3, minmax(0, 1fr)); }
+}
+@media (max-width: 560px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-main { padding-inline: 18px; padding-top: 20px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-title h1 { font-size: 36px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-title > div > p:not(.crivo-today-date) { font-size: 12px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-subjects { margin-inline: -18px; padding-inline: 18px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision-copy,
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) { padding: 24px 20px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-focus-content > h2 { font-size: 32px; margin-top: 14px; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-trajectory ul { display: block; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-next-steps { grid-template-columns: 1fr; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial button.ni-mini { min-height: 0; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .ni-production-app.crivo-editorial *, .ni-production-app.crivo-editorial *::before, .ni-production-app.crivo-editorial *::after {
+    scroll-behavior: auto; transition-duration: 0s; animation-duration: 0s; animation-iteration-count: 1;
+  }
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail.is-expanded .ni-mark {
+  display: flex; align-items: center; gap: 12px; width: 100%; height: 40px; margin: 0; padding-inline: 10px;
+}
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail.is-expanded .ni-mark img { width: 36px; height: 36px; }
+.crivo-rail-wordmark { font: 500 28px/1 Newsreader, Georgia, serif; letter-spacing: -.04em; color: var(--editorial-ink); }
+@media (min-width: 901px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-visual-support--cena { grid-row: 1; margin-bottom: 0; }
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-decision-copy:has(.crivo-observatorio-visual-support--cena) > .ni-metrics { grid-column: 1 / -1; grid-row: 2; }
+}
+
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-focus-content { min-width: 0; align-self: start; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .ni-rail-scroll a.active .ni-icon-depth { color: inherit; filter: none; }
+@media (prefers-reduced-motion: reduce) {
+  .ni-production-app.crivo-editorial .crivo-observatorio-decision { transform: none !important; }
+}
+/* A fixed drawing viewport prevents the WebGL canvas's intrinsic height from
+   feeding back into the auto-sized grid row during ResizeObserver updates. */
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-observatorio-visual-support--cena { align-self: start; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-cena { height: auto; padding-top: 18px; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-cena__palco { flex: none; min-height: 0; height: 250px; }
+@media (max-width: 560px) {
+  :root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .crivo-cena__palco { height: 215px; }
+}
+:root[data-ambiente="tecnologico"]:is([data-fundo="caderno"], [data-fundo="papel"]) { --font-display: Newsreader, Georgia, serif; }
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial h1,
+:root[data-ambiente="tecnologico"] .ni-production-app.crivo-editorial .font-display { font-family: Newsreader, Georgia, serif; }

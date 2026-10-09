@@ -81,38 +81,40 @@ export function TodayFocus({ action, actionLabel, mainReason, onStart, showAdapt
       // motivo a transição é só do que a maximização anima, não `all`.
       className={cn("ni-grid ni-grid--hero crivo-observatorio-decision transition-[transform,box-shadow] duration-300", isMaximized && "crivo-observatorio-decision--maximized scale-[1.02] shadow-2xl z-10")}
       initial={reducedMotion ? false : 'hidden'}
-      animate="visible"
-      variants={focusEnter}
+      animate={reducedMotion ? { opacity: 1 } : 'visible'}
+      variants={reducedMotion ? undefined : focusEnter}
     >
       <div className={cn('ni-panel ni-decision crivo-observatorio-decision-copy', explanationOpen && 'crivo-observatorio-decision-copy--explaining')}>
-        <p className="ni-kicker">Decisão recomendada · 01</p>
-        <p className="sr-only">Hoje · decisão principal</p>
-        <h2 id={`decision-${action.id}`} aria-label={action.topicName}>
-          <KineticText
-            as="span"
-            runKey={action.id}
-            text={`${action.topicName} antes da prova.`}
-            className="block"
-            stagger={typographyPreset.stagger}
-            duration={typographyPreset.duration}
-            ease={typographyPreset.ease}
-          />
-        </h2>
-        <p>{mainReason}</p>
-        <Button onClick={onStart} aria-label="Começar" className="ni-primary crivo-observatorio-cta">
-          <PlayCircle className="w-4 h-4" aria-hidden="true" />
-          {actionLabel}
-        </Button>
-        <div className="crivo-observatorio-explanation">
-          <DecisionExplanation
-            mainReason=""
-            factors={action.factors}
-            snapshot={action.snapshot}
-            open={explanationOpen}
-            onOpenChange={setExplanationOpen}
-            onDisagree={() => setDisagreeOpen(true)}
-            className="crivo-decision-explanation"
-          />
+        <div className="crivo-focus-content">
+          <p className="ni-kicker"><span className="crivo-focus-dot" aria-hidden="true" />Seu próximo passo · {action.subject}</p>
+          <p className="sr-only">Hoje · decisão principal</p>
+          <h2 id={`decision-${action.id}`} aria-label={action.topicName}>
+            <KineticText
+              as="span"
+              runKey={action.id}
+              text={action.topicName}
+              className="block"
+              stagger={typographyPreset.stagger}
+              duration={typographyPreset.duration}
+              ease={typographyPreset.ease}
+            />
+          </h2>
+          <p>{mainReason}</p>
+          <Button onClick={onStart} aria-label="Começar" className="ni-primary crivo-observatorio-cta">
+            <PlayCircle className="w-4 h-4" aria-hidden="true" />
+            {actionLabel}
+          </Button>
+          <div className="crivo-observatorio-explanation">
+            <DecisionExplanation
+              mainReason=""
+              factors={action.factors}
+              snapshot={action.snapshot}
+              open={explanationOpen}
+              onOpenChange={setExplanationOpen}
+              onDisagree={() => setDisagreeOpen(true)}
+              className="crivo-decision-explanation"
+            />
+          </div>
         </div>
         {/* Antes das métricas: no celular a cena vem logo depois dos botões. */}
         <div className={cn('crivo-observatorio-visual-support', explanationOpen && 'crivo-observatorio-visual-support--explaining', temCena(action.subject) && 'crivo-observatorio-visual-support--cena')}>

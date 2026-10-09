@@ -252,7 +252,7 @@ export default function Dashboard() {
 
 
   return (
-      <main
+      <section
         className="ni-main crivo-observatorio-home"
         data-geometry="organic"
       >
@@ -265,8 +265,9 @@ export default function Dashboard() {
         </div>
         <div className="ni-title">
           <div>
-            <h1>Sua trajetória, em decisões realizáveis.</h1>
-            <p>O plano se reorganiza à medida que suas evidências mudam.</p>
+            <p className="crivo-today-date">{new Intl.DateTimeFormat('pt-BR', { weekday: 'long', day: 'numeric', month: 'long', timeZone: 'America/Sao_Paulo' }).format(new Date())}</p>
+            <h1>Seu estudo de hoje.</h1>
+            <p>Uma prioridade de cada vez. Comece pelo que faz diferença no seu plano.</p>
           </div>
           {/* Era "perfil wave · foco ativo": o nome interno da família de cor da
               paleta, em inglês, sem sentido para quem estuda. */}
@@ -404,6 +405,6 @@ export default function Dashboard() {
             )}
           </div>
         )}
-      </main>
+      </section>
   );
 }
