@@ -1,0 +1,71 @@
+{
+  "materias": [
+    {
+      "subject": "Física",
+      "mapa": true
+    },
+    {
+      "subject": "Atualidades",
+      "mapa": true
+    },
+    {
+      "subject": "Biologia",
+      "mapa": true
+    },
+    {
+      "subject": "Geografia",
+      "mapa": true
+    },
+    {
+      "subject": "História",
+      "mapa": true
+    },
+    {
+      "subject": "Língua Inglesa",
+      "mapa": true
+    },
+    {
+      "subject": "Redação",
+      "mapa": true
+    },
+    {
+      "subject": "Gramática",
+      "mapa": true
+    },
+    {
+      "subject": "Literatura",
+      "mapa": true
+    },
+    {
+      "subject": "Entendimento de Texto",
+      "mapa": true
+    },
+    {
+      "subject": "Matemática",
+      "mapa": true
+    },
+    {
+      "subject": "Química",
+      "mapa": true
+    },
+    {
+      "subject": "Filosofia",
+      "mapa": true
+    },
+    {
+      "subject": "Sociologia",
+      "mapa": true
+    }
+  ],
+  "larguras": [
+    1440,
+    390
+  ],
+  "personalizacao_persistida": true,
+  "temas": [
+    "light",
+    "dark"
+  ],
+  "acessibilidade_painel_violacoes": 0,
+  "movimento_reduzido": true
+}

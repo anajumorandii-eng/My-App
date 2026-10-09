@@ -60,6 +60,26 @@ export const CADERNOS: Record<string, CadernoDaMateria> = {
     anotacoes: ['tese → argumentos → proposta', 'agente · ação · meio · finalidade', 'além disso · portanto', 'repertório legitimado'],
     esbocos: ['pena', 'aspas'],
   },
+  Gramática: {
+    anotacoes: ['sujeito + predicado', 'concordância nominal e verbal', 'regência → complemento', 'a + a = à'],
+    esbocos: ['aspas', 'pena'],
+  },
+  'Entendimento de Texto': {
+    anotacoes: ['tema ≠ tese', 'inferir a partir das pistas', 'fato ≠ opinião', 'coesão → relações no texto'],
+    esbocos: ['livro', 'aspas'],
+  },
+  'Língua Inglesa': {
+    anotacoes: ['context → meaning', 'however → contrast', 'because → cause', 'scanning → specific information'],
+    esbocos: ['livro', 'aspas'],
+  },
+  Filosofia: {
+    anotacoes: ['ética → reflexão sobre a ação', 'lógica → validade do argumento', 'epistemologia → conhecimento', 'política → vida em sociedade'],
+    esbocos: ['coluna', 'livro'],
+  },
+  Sociologia: {
+    anotacoes: ['Durkheim → fato social', 'Weber → ação social', 'Marx → classes sociais', 'cultura ≠ natureza'],
+    esbocos: ['livro', 'globo'],
+  },
   Atualidades: {
     anotacoes: ['Acordo de Paris · 2015', 'Agenda 2030 · 17 ODS', 'COP30 · Belém', 'IDH'],
     esbocos: ['globo', 'linha-do-tempo'],

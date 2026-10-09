@@ -793,3 +793,43 @@
     background: var(--surface);
   }
 }
+
+/* Mapa de ideias do caderno: cartões em relevo e ramificações por matéria. */
+.crivo-caderno--mapa {
+  --mapa-cartao-luz: #fffdf7;
+  --mapa-cartao: #efe2cc;
+  --mapa-tinta: #704b38;
+  opacity: .42;
+  overflow: hidden;
+}
+.crivo-caderno__mapa { color: var(--mapa-tinta); }
+.crivo-caderno__ramo--vinho { color: #984756; }
+.crivo-caderno__ramo--azul { color: #537e92; }
+.crivo-caderno__ramo--verde { color: #618473; }
+.crivo-caderno__ramo--ouro { color: #ab8345; }
+.crivo-caderno__conexao { fill: none; stroke: currentColor; stroke-width: 1.7; opacity: .48; }
+.crivo-caderno__cartao, .crivo-caderno__raiz { stroke: currentColor; stroke-width: 1; stroke-opacity: .25; }
+.crivo-caderno__sombra { fill: #654b35; opacity: .09; }
+.crivo-caderno__numero { fill: currentColor; font: 500 11px Inter, sans-serif; letter-spacing: 2px; }
+.crivo-caderno__ideia { fill: var(--mapa-tinta); font: 400 15px Kalam, cursive; }
+.crivo-caderno__materia { fill: var(--mapa-tinta); font: 500 11px Inter, sans-serif; }
+.crivo-caderno--mapa .crivo-caderno__esboco { opacity: .2; }
+.crivo-caderno--mapa .vs-object-icon { width: 100%; height: 100%; }
+:root[data-efeitos="completo"] .crivo-caderno__conexao { animation: crivo-mapa-aparecer 850ms ease-out both; }
+@keyframes crivo-mapa-aparecer { from { stroke-dasharray: 1; stroke-dashoffset: 1; } to { stroke-dasharray: 1; stroke-dashoffset: 0; } }
+:root.dark .crivo-caderno--mapa { --mapa-cartao-luz: #373d37; --mapa-cartao: #242b27; --mapa-tinta: #d9cbb2; opacity: .4; }
+:root.dark .crivo-caderno__ramo--vinho { color: #cb8691; }
+:root.dark .crivo-caderno__ramo--azul { color: #92b8c8; }
+:root.dark .crivo-caderno__ramo--verde { color: #9cc0ab; }
+:root.dark .crivo-caderno__ramo--ouro { color: #d6b87f; }
+.vs-personalizar-fundo-ajuda { margin: 0 0 10px; font-size: .75rem; line-height: 1.5; color: var(--amb-dim, var(--vs-dim)); }
+.vs-personalizar-fundo--caderno { background: radial-gradient(circle at 50% 50%, #b5905d 0 3px, transparent 4px), linear-gradient(25deg, transparent 47%, #b5905d55 48% 51%, transparent 52%), var(--papel-base); }
+@media (max-width: 560px) { .crivo-caderno--mapa, :root.dark .crivo-caderno--mapa { opacity: .25; } }
+@media (prefers-reduced-motion: reduce) { :root[data-efeitos="completo"] .crivo-caderno__conexao { animation: none; } }
+.ni-production-app.crivo-editorial .crivo-caderno.crivo-caderno--mapa { opacity: .42; }
+:root.dark .ni-production-app.crivo-editorial .crivo-caderno.crivo-caderno--mapa { opacity: .4; }
+@media (max-width: 560px) {
+  .ni-production-app.crivo-editorial .crivo-caderno.crivo-caderno--mapa,
+  :root.dark .ni-production-app.crivo-editorial .crivo-caderno.crivo-caderno--mapa { opacity: .25; }
+}
+.vs-personalizar-painel :is(.vs-personalizar-opcoes, .vs-personalizar-cores) small { color: var(--amb-texto); opacity: 1; }

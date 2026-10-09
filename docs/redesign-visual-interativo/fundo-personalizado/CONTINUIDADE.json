@@ -1,0 +1,31 @@
+{
+  "branch": "design/fundo-mapas-personalizados",
+  "base": "b1bc452e",
+  "escopo": "Fundo Caderno global do aplicativo",
+  "materias": 14,
+  "anotacoes_por_materia": 4,
+  "referencia": "Quadro visual do Miro, adaptado pelo Design & Motion Kit",
+  "persistencia": "Preferências existentes preservadas; publicação em GitHub por PR, sem merge automático",
+  "limites": [
+    "Fundo decorativo, sem cliques nem informações de domínio",
+    "Mapas interativos de capítulo continuam responsáveis pela exploração funcional"
+  ],
+  "verificacao": {
+    "navegador": "14 matérias; 1440 e 390 px; temas claro e escuro",
+    "acessibilidade_painel": {
+      "checagens": 2,
+      "violacoes": 0
+    },
+    "persistencia_apos_recarga": "Papel mantido",
+    "movimento_reduzido": "Sem animação mesmo em Completo",
+    "lint": "aprovado",
+    "build": "aprovado",
+    "testes": {
+      "servidor_e_dados": 938,
+      "componentes": 1399,
+      "arquivos_componentes": 183,
+      "total": 2337,
+      "falhas": 0
+    }
+  }
+}

@@ -40,3 +40,7 @@ A entrega seguinte refina o pistão adiabático, adiciona modelos espaciais de c
 ## Aplicação ao currículo completo
 
 A composição editorial, os ícones por assunto e a exploração em foco chegam aos 613 capítulos das 14 matérias. Inventário, verificação capítulo a capítulo, capturas e limites em [Todos os capítulos](todos-capitulos/README.md).
+
+## Fundo personalizado
+
+A composição de caderno agora usa mapas de ideias e ícones com volume por matéria. Ver [direção, personalização, capturas e validação](fundo-personalizado/README.md).
