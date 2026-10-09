@@ -1,0 +1,6056 @@
+{
+  "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+  "reviewed_remaining": 501,
+  "views": [
+    "360-dark",
+    "1440-light"
+  ],
+  "scope": "Aberturas e exemplos visíveis nas folhas de contato; não todos os estados ou validação pedagógica integral.",
+  "criteria": "Awesome Design MD: Claude e Miro, adaptados à identidade do Crivo.",
+  "findings": [
+    {
+      "id": "summary-geografia-gedeconomia-mundial",
+      "finding": "Título incorreto",
+      "fix": "Geoeconomia Mundial; IDs preservados"
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "finding": "Atribuição da classificação incorreta",
+      "fix": "Jurandyr Ross"
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "finding": "Produto aromático sem círculo",
+      "fix": "Representação da aromaticidade restaurada"
+    },
+    {
+      "scope": "Cabeçalhos compartilhados",
+      "finding": "Palavras quebradas/cortadas",
+      "fix": "Largura flexível e quebra entre palavras"
+    }
+  ],
+  "pending": [
+    "Escola de Sagres: conferir contextualização histórica completa.",
+    "Domínios morfoclimáticos: conferir escopo dos exemplos apresentados.",
+    "Fórmulas/vetores pequenos: ampliar quando necessário.",
+    "Não há aprovação pedagógica ou estética formal automática."
+  ],
+  "clarifications": [
+    "Hipérbole: duas folhas refere-se ao cone; não confirmado como erro.",
+    "Logaritmos: restrição base diferente de 1 já consta no componente."
+  ],
+  "chapters": [
+    {
+      "id": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural",
+      "title": "Composição Química Celular: Proteínas e sua Função Estrutural",
+      "sheet": "002",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "title": "Membranas Celulares",
+      "sheet": "002",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-citoplasma-estrutura-e-componentes-i",
+      "title": "Citoplasma: Estrutura e Componentes I",
+      "sheet": "002",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-citoplasma-estrutura-e-componentes-ii",
+      "title": "Citoplasma: Estrutura e Componentes II",
+      "sheet": "002",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "title": "Núcleo Celular",
+      "sheet": "002",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-proteinas-enzimas",
+      "title": "Proteínas: Enzimas",
+      "sheet": "002",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-bioenergetica-fermentacao-e-respiracao",
+      "title": "Bioenergética: Fermentação e Respiração",
+      "sheet": "002",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-bioenergetica-fotossintese-e-quimiossintese",
+      "title": "Bioenergética: Fotossíntese e Quimiossíntese",
+      "sheet": "002",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "title": "Ácidos Nucleicos",
+      "sheet": "003",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-divisao-celular",
+      "title": "Divisão Celular",
+      "sheet": "003",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-mutacoes-cromossomicas-e-gametogenese",
+      "title": "Mutações Cromossômicas e Gametogênese",
+      "sheet": "003",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-biotecnologia",
+      "title": "Biotecnologia",
+      "sheet": "003",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-introducao-a-genetica",
+      "title": "Introdução à Genética",
+      "sheet": "003",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos",
+      "title": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+      "sheet": "003",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-heranca-sexual",
+      "title": "Herança Sexual",
+      "sheet": "003",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-segunda-lei-de-mendel",
+      "title": "Segunda Lei de Mendel",
+      "sheet": "003",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-segunda-lei-de-mendel-e-interacao-genica",
+      "title": "Segunda Lei de Mendel e Interação Gênica",
+      "sheet": "004",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-ligacao-genica",
+      "title": "Ligação Gênica",
+      "sheet": "004",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-mutacoes-genicas",
+      "title": "Mutações Gênicas",
+      "sheet": "004",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-evolucao-biologica-construcao-historica",
+      "title": "Evolução Biológica: Construção Histórica",
+      "sheet": "004",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-mecanismos-da-evolucao-biologica",
+      "title": "Mecanismos da Evolução Biológica",
+      "sheet": "004",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-biomas-brasileiros",
+      "title": "Biomas Brasileiros",
+      "sheet": "004",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-classificacao-biologica-nomenclatura-cientifica-e-nocoes-de-sistematica-filogenetica",
+      "title": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+      "sheet": "004",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-protozoarios-e-protozooses",
+      "title": "Protozoários e Protozooses",
+      "sheet": "004",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-poriferos-e-cnidarios",
+      "title": "Poríferos e Cnidários",
+      "sheet": "005",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+      "title": "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos",
+      "sheet": "005",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-moluscos",
+      "title": "Moluscos",
+      "sheet": "005",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-anelideos",
+      "title": "Anelídeos",
+      "sheet": "005",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-artropodes-insetos-crustaceos-e-miriapodes",
+      "title": "Artrópodes: Insetos, Crustáceos e Miriápodes",
+      "sheet": "005",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-artropodes-aracnideos",
+      "title": "Artrópodes: Aracnídeos",
+      "sheet": "005",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-equinodermos",
+      "title": "Equinodermos",
+      "sheet": "005",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+      "title": "Introdução aos Cordados e os Peixes",
+      "sheet": "005",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-embriologia-animal",
+      "title": "Embriologia Animal",
+      "sheet": "007",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-sustentacao-e-da-locomocao",
+      "title": "Fisiologia da Sustentação e da Locomoção",
+      "sheet": "007",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-digestao",
+      "title": "Fisiologia da Digestão",
+      "sheet": "007",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-sangue-e-imunologia",
+      "title": "Sangue e Imunologia",
+      "sheet": "007",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-coracao-e-vasos-sanguineos",
+      "title": "Coração e Vasos Sanguíneos",
+      "sheet": "007",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-respiracao",
+      "title": "Fisiologia da Respiração",
+      "sheet": "007",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-excrecao",
+      "title": "Fisiologia da Excreção",
+      "sheet": "007",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-coordenacao-nervosa-i",
+      "title": "Fisiologia da Coordenação Nervosa I",
+      "sheet": "007",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-coordenacao-nervosa-ii",
+      "title": "Coordenação Nervosa II",
+      "sheet": "008",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-sistemas-sensoriais-visao-e-audicao",
+      "title": "Sistemas Sensoriais: Visão e Audição",
+      "sheet": "008",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-coordenacao-endocrina-i",
+      "title": "Coordenação Endócrina I",
+      "sheet": "008",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-coordenacao-endocrina-ii",
+      "title": "Coordenação Endócrina II",
+      "sheet": "008",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+      "title": "Reprodução Humana e Métodos Contraceptivos",
+      "sheet": "008",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-histologia-e-morfologia-vegetal",
+      "title": "Histologia e Morfologia Vegetal",
+      "sheet": "008",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas",
+      "title": "Morfofisiologia Vegetal: Caules e Folhas",
+      "sheet": "008",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua",
+      "title": "Traqueófitas: Transpiração e Reposição Rápida de Água",
+      "sheet": "008",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-fisiologia-vegetal-transporte-no-floema",
+      "title": "Fisiologia Vegetal: Transporte no Floema",
+      "sheet": "009",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-biologia-fisiologia-vegetal-hormonios-vegetais",
+      "title": "Fisiologia Vegetal: Hormônios Vegetais",
+      "sheet": "009",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-cinematica-escalar-conceitos-fundamentais",
+      "title": "Cinemática Escalar. Conceitos Fundamentais",
+      "sheet": "009",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-movimento-uniforme",
+      "title": "Movimento Uniforme",
+      "sheet": "009",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-movimento-uniformemente-variado",
+      "title": "Movimento Uniformemente Variado",
+      "sheet": "009",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-o-movimento-circular",
+      "title": "O Movimento Circular",
+      "sheet": "009",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "title": "Grandezas Físicas e Operações com Vetores",
+      "sheet": "009",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "title": "Velocidade Vetorial",
+      "sheet": "009",
+      "reviewer": "Biologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "title": "Composição de Movimentos",
+      "sheet": "010",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-aceleracao-vetorial",
+      "title": "Aceleração Vetorial",
+      "sheet": "010",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-forca-e-seus-tipos",
+      "title": "Força e seus Tipos",
+      "sheet": "010",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
+      "title": "Resultante de um Sistema de Forças",
+      "sheet": "010",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-as-leis-de-newton",
+      "title": "As Leis de Newton",
+      "sheet": "010",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-a-forca-de-contato",
+      "title": "A Força de Contato",
+      "sheet": "010",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+      "title": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+      "sheet": "010",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-plano-inclinado",
+      "title": "Plano Inclinado",
+      "sheet": "010",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-leis-da-gravitacao",
+      "title": "Leis da Gravitação",
+      "sheet": "011",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-dinamica-do-movimento-circular",
+      "title": "Dinâmica do Movimento Circular",
+      "sheet": "011",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
+      "title": "Analisando Movimentos Contidos em um Plano Vertical",
+      "sheet": "011",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-orbitas",
+      "title": "Órbitas",
+      "sheet": "011",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-balistica",
+      "title": "Balística",
+      "sheet": "011",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-movimento-harmonico-simples-mhs",
+      "title": "Movimento Harmônico Simples (MHS)",
+      "sheet": "011",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-impulso-e-quantidade-de-movimento",
+      "title": "Impulso e Quantidade de Movimento",
+      "sheet": "011",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento",
+      "title": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+      "sheet": "011",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-estatica",
+      "title": "Estática",
+      "sheet": "013",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-hidrostatica-densidade-e-pressao",
+      "title": "Hidrostática: Densidade e Pressão",
+      "sheet": "013",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+      "title": "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+      "sheet": "013",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-calor-sensivel-e-calor-latente",
+      "title": "Calor Sensível e Calor Latente",
+      "sheet": "013",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
+      "title": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
+      "sheet": "013",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
+      "title": "Trabalho da Força de Pressão do Gás",
+      "sheet": "013",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-primeira-lei-da-termodinamica",
+      "title": "Primeira Lei da Termodinâmica",
+      "sheet": "013",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
+      "title": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+      "sheet": "013",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
+      "title": "Máquinas Térmicas e Ciclo de Carnot",
+      "sheet": "014",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+      "title": "Eletrostática: Processos de Eletrização e Aplicações",
+      "sheet": "014",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "title": "Força Elétrica: Lei de Coulomb",
+      "sheet": "014",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "title": "Campo Elétrico",
+      "sheet": "014",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "title": "Energia Potencial e Potencial Elétrico",
+      "sheet": "014",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
+      "title": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
+      "sheet": "014",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "title": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "sheet": "014",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "title": "Dinâmica das Cargas Elétricas",
+      "sheet": "014",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-corrente-eletrica",
+      "title": "Corrente Elétrica",
+      "sheet": "015",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-potencia-eletrica",
+      "title": "Potência Elétrica",
+      "sheet": "015",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-resistores",
+      "title": "Resistores",
+      "sheet": "015",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-medidores-eletricos",
+      "title": "Medidores Elétricos",
+      "sheet": "015",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-geradores",
+      "title": "Geradores",
+      "sheet": "015",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-receptores",
+      "title": "Receptores",
+      "sheet": "015",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-circuitos-de-malha-unica",
+      "title": "Circuitos de Malha Única",
+      "sheet": "015",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-eletrodinamica-as-leis-de-kirchhoff",
+      "title": "Eletrodinâmica: as Leis de Kirchhoff",
+      "sheet": "015",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-capacitores",
+      "title": "Capacitores",
+      "sheet": "016",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+      "title": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
+      "sheet": "016",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "title": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
+      "sheet": "016",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "title": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "sheet": "016",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas",
+      "title": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
+      "sheet": "016",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+      "title": "Indução Eletromagnética: Lei de Lenz",
+      "sheet": "016",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "title": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "sheet": "016",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-fundamentos-da-optica-geometrica",
+      "title": "Fundamentos da Óptica Geométrica",
+      "sheet": "016",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-reflexao-em-superficies-planas",
+      "title": "Reflexão em Superfícies Planas",
+      "sheet": "017",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-reflexao-em-superficies-esfericas",
+      "title": "Reflexão em Superfícies Esféricas",
+      "sheet": "017",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes",
+      "title": "Refração: Fundamentos, Leis e Aplicações",
+      "sheet": "017",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+      "title": "Lentes Esféricas: Estudo Gráfico",
+      "sheet": "017",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-estudo-analitico-das-lentes-esfericas",
+      "title": "Estudo Analítico das Lentes Esféricas",
+      "sheet": "017",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+      "title": "Equação do Fabricante de Lentes e Associação de Lentes",
+      "sheet": "017",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-optica-da-visao",
+      "title": "Óptica da Visão",
+      "sheet": "017",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas",
+      "title": "Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas",
+      "sheet": "017",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-conceitos-basicos",
+      "title": "Conceitos Básicos",
+      "sheet": "018",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-equacao-fundamental-da-ondulatoria",
+      "title": "Equação Fundamental da Ondulatória",
+      "sheet": "018",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "title": "Ondulatória: Ondas Eletromagnéticas",
+      "sheet": "018",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-ondulatoria-som-e-suas-propriedades",
+      "title": "Ondulatória: Som e suas Propriedades",
+      "sheet": "018",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-intensidade-sonora",
+      "title": "Intensidade Sonora",
+      "sheet": "018",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas",
+      "title": "Reflexão, Eco, Reverberação e Refração de Ondas",
+      "sheet": "018",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas",
+      "title": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
+      "sheet": "018",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+      "title": "Fenômenos Ondulatórios: Difração, Polarização e Ressonância",
+      "sheet": "018",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento",
+      "title": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
+      "sheet": "019",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria",
+      "title": "Um Caso Particular de Interferência: Onda Estacionária",
+      "sheet": "019",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-ondas-estacionarias-em-cordas",
+      "title": "Ondas Estacionárias em Cordas",
+      "sheet": "019",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-ondas-estacionarias-em-tubos",
+      "title": "Ondas Estacionárias em Tubos",
+      "sheet": "019",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo",
+      "title": "Efeito Doppler: Descrição e Estudo Quantitativo",
+      "sheet": "019",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
+      "title": "Noções Básicas de Física Quântica",
+      "sheet": "019",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "title": "Coordenadas Geográficas",
+      "sheet": "019",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "title": "Movimentos da Terra",
+      "sheet": "019",
+      "reviewer": "Física",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-biogeografia-mundial",
+      "title": "Biogeografia Mundial",
+      "sheet": "021",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-agua-na-superficie-terrestre",
+      "title": "Água na Superfície Terrestre",
+      "sheet": "021",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
+      "title": "Desafios Ambientais do Século XXI",
+      "sheet": "021",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-geopolitica-ambiental",
+      "title": "Geopolítica Ambiental",
+      "sheet": "021",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "title": "Geopolítica dos Recursos Hídricos",
+      "sheet": "021",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-mundial",
+      "title": "Hidrogeografia Mundial",
+      "sheet": "021",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
+      "title": "Do Mundo Bipolar ao Multipolar",
+      "sheet": "021",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
+      "title": "Globalização e Processos Econômicos Atuais",
+      "sheet": "021",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-geografia-das-redes-mundiais",
+      "title": "Geografia das Redes Mundiais",
+      "sheet": "022",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-unilateralismo-e-multilateralismo",
+      "title": "Unilateralismo e Multilateralismo",
+      "sheet": "022",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-blocos-economicos",
+      "title": "Blocos Econômicos",
+      "sheet": "022",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-uniao-europeia",
+      "title": "União Europeia",
+      "sheet": "022",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-desigualdades-globais",
+      "title": "Desigualdades Globais",
+      "sheet": "022",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-mobilidade-populacional",
+      "title": "Mobilidade Populacional",
+      "sheet": "022",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-geografia-do-turismo",
+      "title": "Geografia do Turismo",
+      "sheet": "022",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-producao-agricola-mundial",
+      "title": "Produção Agrícola Mundial",
+      "sheet": "022",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-industria-i",
+      "title": "Indústria I",
+      "sheet": "023",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-industria-ii",
+      "title": "Indústria II",
+      "sheet": "023",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-gedeconomia-mundial",
+      "title": "Geoeconomia Mundial",
+      "sheet": "023",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-terrorismo-internacional",
+      "title": "Terrorismo Internacional",
+      "sheet": "023",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-geografia-das-religioes",
+      "title": "Geografia das Religiões",
+      "sheet": "023",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-tensoes-geopoliticas-na-europa",
+      "title": "Tensões Geopolíticas na Europa",
+      "sheet": "023",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
+      "title": "Geopolítica e Geoeconomia da América Latina",
+      "sheet": "023",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-africa-no-mundo-atual",
+      "title": "África no Mundo Atual",
+      "sheet": "023",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
+      "title": "Geopolítica e Geoeconomia da Ásia",
+      "sheet": "024",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-geografia-do-oriente-medio",
+      "title": "Geografia do Oriente Médio",
+      "sheet": "024",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-questao-palestina",
+      "title": "Questão Palestina",
+      "sheet": "024",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-conflitos-no-mundo-arabe",
+      "title": "Conflitos no Mundo Árabe",
+      "sheet": "024",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica",
+      "title": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+      "sheet": "024",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-geologia-e-geomorfologia",
+      "title": "Geologia e Geomorfologia",
+      "sheet": "024",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "title": "Relevo Brasileiro",
+      "sheet": "024",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-pedologia",
+      "title": "Pedologia",
+      "sheet": "024",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-climatologia-do-brasil",
+      "title": "Climatologia do Brasil",
+      "sheet": "025",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-i",
+      "title": "Biogeografia do Brasil I",
+      "sheet": "025",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-ii",
+      "title": "Biogeografia do Brasil II",
+      "sheet": "025",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-politicas-ambientais-brasileiras",
+      "title": "Políticas Ambientais Brasileiras",
+      "sheet": "025",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-do-brasil",
+      "title": "Hidrogeografia do Brasil",
+      "sheet": "025",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-dominios-morfoclimaticos",
+      "title": "Domínios Morfoclimáticos",
+      "sheet": "025",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-matriz-energetica",
+      "title": "Matriz Energética",
+      "sheet": "025",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+      "title": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+      "sheet": "025",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-mundo",
+      "title": "Energia Elétrica no Mundo",
+      "sheet": "026",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "title": "Energia Elétrica no Brasil",
+      "sheet": "026",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-producao-mineral",
+      "title": "Produção Mineral",
+      "sheet": "026",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-o-espaco-agrario-brasileiro",
+      "title": "O Espaço Agrário Brasileiro",
+      "sheet": "026",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-i",
+      "title": "O Espaço Industrial Brasileiro I",
+      "sheet": "026",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
+      "title": "O Espaço Industrial Brasileiro II",
+      "sheet": "026",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-dinamica-demografica",
+      "title": "Dinâmica Demográfica",
+      "sheet": "026",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+      "title": "Estrutura Étnica e Fluxos Migratórios",
+      "sheet": "026",
+      "reviewer": "Geografia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-baixa-idade-media",
+      "title": "Baixa Idade Média",
+      "sheet": "028",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-primeira-globalizacao",
+      "title": "A Primeira Globalização",
+      "sheet": "028",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-america-espanhola",
+      "title": "América Espanhola",
+      "sheet": "028",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-vida-urbana-e-renascimento-cultural",
+      "title": "Vida Urbana e Renascimento Cultural",
+      "sheet": "028",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-reforma-religiosa",
+      "title": "Reforma Religiosa",
+      "sheet": "028",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-absolutismo",
+      "title": "Absolutismo",
+      "sheet": "028",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-revolucao-industrial",
+      "title": "Revolução Industrial",
+      "sheet": "028",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-iluminismo",
+      "title": "Iluminismo",
+      "sheet": "028",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "title": "Revolução Francesa",
+      "sheet": "029",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-america-no-seculo-xix",
+      "title": "América no Século XIX",
+      "sheet": "029",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-europa-no-seculo-xix",
+      "title": "Europa no Século XIX",
+      "sheet": "029",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-imperialismo-e-belle-epoque",
+      "title": "Imperialismo e Belle Époque",
+      "sheet": "029",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-primeira-guerra-mundial-1914-1918",
+      "title": "Primeira Guerra Mundial (1914-1918)",
+      "sheet": "029",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+      "title": "Grandes Revoluções do Século XX",
+      "sheet": "029",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-o-periodo-entreguerras-1918-1939",
+      "title": "O Período Entreguerras (1918-1939)",
+      "sheet": "029",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-o-nazismo-na-alemanha",
+      "title": "O Nazismo na Alemanha",
+      "sheet": "029",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-segunda-guerra-mundial-1939-1945",
+      "title": "Segunda Guerra Mundial (1939-1945)",
+      "sheet": "030",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "title": "Guerra Fria",
+      "sheet": "030",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-descolonizacao-afro-asiatica",
+      "title": "Descolonização Afro-Asiática",
+      "sheet": "030",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-america-latina-no-seculo-xx",
+      "title": "América Latina no Século XX",
+      "sheet": "030",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-o-fim-da-guerra-fria",
+      "title": "O Fim da Guerra Fria",
+      "sheet": "030",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-historia-e-o-brasil",
+      "title": "A História e o Brasil",
+      "sheet": "030",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+      "title": "Grandes Navegações e Conquista Colonial",
+      "sheet": "030",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-montagem-da-colonizacao",
+      "title": "A Montagem da Colonização",
+      "sheet": "030",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-dinamica-interna-da-colonizacao",
+      "title": "Dinâmica Interna da Colonização",
+      "sheet": "031",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+      "title": "Disputas Europeias no Brasil Colonial",
+      "sheet": "031",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-interiorizacao-da-colonizacao",
+      "title": "A Interiorização da Colonização",
+      "sheet": "031",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "title": "A Mineração no Brasil Colonial",
+      "sheet": "031",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+      "title": "A Crise do Antigo Sistema Colonial",
+      "sheet": "031",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-independencia-do-brasil",
+      "title": "A Independência do Brasil",
+      "sheet": "031",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+      "title": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "sheet": "031",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+      "title": "Brasil Império: o Período Regencial (1831-1840)",
+      "sheet": "031",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+      "title": "Brasil Império: Segundo Reinado (1840-1889)",
+      "sheet": "032",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+      "title": "Brasil Império: o Declínio do Segundo Reinado",
+      "sheet": "032",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "title": "A República da Espada",
+      "sheet": "032",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+      "title": "Ascensão e Domínio das Oligarquias",
+      "sheet": "032",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+      "title": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+      "sheet": "032",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "title": "A Era Vargas",
+      "sheet": "032",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+      "title": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "sheet": "032",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-estado-novo",
+      "title": "A Era Vargas: o Estado Novo",
+      "sheet": "032",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+      "title": "Text Comprehension: Earthquakes",
+      "sheet": "034",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-hurricanes",
+      "title": "Text Comprehension: Hurricanes",
+      "sheet": "034",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases",
+      "title": "Text Comprehension: Ecology (Greenhouse Gases)",
+      "sheet": "034",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-pollution",
+      "title": "Text Comprehension: Pollution",
+      "sheet": "034",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-the-human-brain",
+      "title": "Text Comprehension: The Human Brain",
+      "sheet": "034",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-global-warming",
+      "title": "Text Comprehension: Global Warming",
+      "sheet": "034",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-novels-short-stories",
+      "title": "Text Comprehension: Novels/Short Stories",
+      "sheet": "034",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-bacteria",
+      "title": "Text Comprehension: Bacteria",
+      "sheet": "034",
+      "reviewer": "História/Inglês",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+      "title": "Organizando as Ideias: Brainstorm e Mind Maps",
+      "sheet": "036",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-projeto-de-texto-em-favor-da-progressao-textual",
+      "title": "Projeto de Texto em Favor da Progressão Textual",
+      "sheet": "036",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso",
+      "title": "Repertório: o Diferencial de Redações de Sucesso",
+      "sheet": "036",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos",
+      "title": "Qual Será o Tema deste Ano: Grandes Eixos Temáticos",
+      "sheet": "036",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-diferentes-graus-de-adequacao-a-proposta",
+      "title": "Diferentes Graus de Adequação à Proposta",
+      "sheet": "036",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+      "title": "Tangenciamento e Fuga: a Fronteira do Tema",
+      "sheet": "036",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto",
+      "title": "Gêneros e sua Relação com a Estrutura do Texto",
+      "sheet": "036",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-estrutura-classica-do-texto-dissertativo",
+      "title": "Estrutura Clássica do Texto Dissertativo",
+      "sheet": "036",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i",
+      "title": "Lendo a Coletânea: a Apreensão de Sentidos I",
+      "sheet": "037",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii",
+      "title": "Lendo a Coletânea: a Apreensão de Sentidos II",
+      "sheet": "037",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i",
+      "title": "Lendo a Coletânea: a Compreensão e o Texto Autoral I",
+      "sheet": "037",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii",
+      "title": "Lendo a Coletânea: a Compreensão e o Texto Autoral II",
+      "sheet": "037",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-meio-ambiente",
+      "title": "Incrementando o Repertório: Meio Ambiente",
+      "sheet": "037",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-meio-ambiente",
+      "title": "Analisando Tema de Redação: Meio Ambiente",
+      "sheet": "037",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho",
+      "title": "Incrementando o Repertório: Educação e Trabalho",
+      "sheet": "037",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho",
+      "title": "Analisando Tema de Redação: Educação e Trabalho",
+      "sheet": "037",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-temas-abstratos",
+      "title": "Incrementando o Repertório: Temas Abstratos",
+      "sheet": "038",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-analisando-tema-abstrato-de-redacao",
+      "title": "Analisando Tema Abstrato de Redação",
+      "sheet": "038",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade",
+      "title": "Incrementando o Repertório: Corpo, Saúde e Sexualidade",
+      "sheet": "038",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade",
+      "title": "Analisando Tema de Redação: Corpo, Saúde e Sexualidade",
+      "sheet": "038",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao",
+      "title": "Incrementando o Repertório: Violência, Leis e Punição",
+      "sheet": "038",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao",
+      "title": "Analisando Tema de Redação: Violência, Leis e Punição",
+      "sheet": "038",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder",
+      "title": "Incrementando o Repertório: Cidadania e Poder",
+      "sheet": "038",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder",
+      "title": "Analisando Tema de Redação: Cidadania e Poder",
+      "sheet": "038",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais",
+      "title": "Incrementando o Repertório: Arte, Cultura e Relações Sociais",
+      "sheet": "039",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais",
+      "title": "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",
+      "sheet": "039",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade",
+      "title": "Incrementando o Repertório: Mídia e Sociedade",
+      "sheet": "039",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade",
+      "title": "Analisando Tema de Redação: Mídia e Sociedade",
+      "sheet": "039",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao",
+      "title": "Parágrafo de Introdução: Delimitando a Opinião",
+      "sheet": "039",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-paragrafo-de-introducao-como-contextualizar",
+      "title": "Parágrafo de Introdução: como Contextualizar",
+      "sheet": "039",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-argumentacao-auditorio-particular-e-universal",
+      "title": "Argumentação: Auditório Particular e Universal",
+      "sheet": "039",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade",
+      "title": "Argumentação Quase-Lógica e Efeito de Verdade",
+      "sheet": "039",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-argumentacao-e-coerencia-interna",
+      "title": "Argumentação e Coerência Interna",
+      "sheet": "040",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-argumentacao-e-coerencia-externa",
+      "title": "Argumentação e Coerência Externa",
+      "sheet": "040",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos",
+      "title": "Recursos Argumentativos: Dados Numéricos e Exemplos",
+      "sheet": "040",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-vozes-prestigiadas",
+      "title": "Recursos Argumentativos: Vozes Prestigiadas",
+      "sheet": "040",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-ressalvando-o-ponto-de-vista-contrario",
+      "title": "Ressalvando o Ponto de Vista Contrário",
+      "sheet": "040",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-refutando-o-ponto-contrario",
+      "title": "Refutando o Ponto Contrário",
+      "sheet": "040",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade",
+      "title": "Recursos Argumentativos: Interdiscursividade e Intertextualidade",
+      "sheet": "040",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados",
+      "title": "Recursos Argumentativos: Temas de Redação já Analisados",
+      "sheet": "040",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-fatos-da-atualidade",
+      "title": "Recursos Argumentativos: Fatos da Atualidade",
+      "sheet": "041",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber",
+      "title": "Recursos Argumentativos: Múltiplos Domínios do Saber",
+      "sheet": "041",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-conclusao-por-sintese-ou-retomada-da-tese",
+      "title": "Conclusão por Síntese ou Retomada da Tese",
+      "sheet": "041",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade",
+      "title": "Conclusão: Sumarização, Focalização e Expressividade",
+      "sheet": "041",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania",
+      "title": "Proposta de Intervenção: Atores Sociais e Cidadania",
+      "sheet": "041",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao",
+      "title": "Proposta de Intervenção: Viabilização e Inovação",
+      "sheet": "041",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-proposta-de-intervencao-coerencia-argumentativa",
+      "title": "Proposta de Intervenção: Coerência Argumentativa",
+      "sheet": "041",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos",
+      "title": "Proposta de Intervenção: Respeito aos Direitos Humanos",
+      "sheet": "041",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo",
+      "title": "Recursos de Coesão Referencial no Texto Dissertativo",
+      "sheet": "042",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo",
+      "title": "Recursos de Coesão Sequencial no Texto Dissertativo",
+      "sheet": "042",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas",
+      "title": "Coesão no Texto Dissertativo: Análise de Problemas",
+      "sheet": "042",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade",
+      "title": "Recursos Linguísticos: Norma, Clareza e Expressividade",
+      "sheet": "042",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais",
+      "title": "Os Direitos Humanos de 1ª Geração: Direitos Individuais",
+      "sheet": "042",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos",
+      "title": "Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos",
+      "sheet": "042",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar",
+      "title": "Redações Nota 1000: Trunfos a Inspirar",
+      "sheet": "042",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-redacao-redacoes-na-midia-como-aprimorar",
+      "title": "Redações na Mídia: como Aprimorar",
+      "sheet": "042",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-verbo-e-sintaxe-da-oracao",
+      "title": "Verbo e Sintaxe da Oração",
+      "sheet": "044",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-concordancia",
+      "title": "Concordância",
+      "sheet": "044",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-significados-implicitos",
+      "title": "Significados Implícitos",
+      "sheet": "044",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-tipos-de-discurso",
+      "title": "Tipos de Discurso",
+      "sheet": "044",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula",
+      "title": "Pontuação I: Princípios para o Uso da Vírgula",
+      "sheet": "044",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao",
+      "title": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação",
+      "sheet": "044",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
+      "title": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
+      "sheet": "044",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe",
+      "title": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
+      "sheet": "044",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-mecanismo-de-regencia",
+      "title": "Mecanismo de Regência",
+      "sheet": "045",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-crase",
+      "title": "Crase",
+      "sheet": "045",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-processos-de-formacao-de-palavras",
+      "title": "Processos de Formação de Palavras",
+      "sheet": "045",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo",
+      "title": "Funções Sintáticas Nominais e Vocativo",
+      "sheet": "045",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-tipos-de-sujeito",
+      "title": "Tipos de Sujeito",
+      "sheet": "045",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-vozes-verbais",
+      "title": "Vozes Verbais",
+      "sheet": "045",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-oracoes-substantivas",
+      "title": "Orações Substantivas",
+      "sheet": "045",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-gramatica-oracoes-adjetivas",
+      "title": "Orações Adjetivas",
+      "sheet": "045",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-a-estetica-neoclassica",
+      "title": "A Estética Neoclássica",
+      "sheet": "047",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-a-estetica-romantica-poesia",
+      "title": "A Estética Romântica: Poesia",
+      "sheet": "047",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-elementos-da-narrativa",
+      "title": "Elementos da Narrativa",
+      "sheet": "047",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-a-estetica-romantica-prosa",
+      "title": "A Estética Romântica: Prosa",
+      "sheet": "047",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-a-estetica-realista",
+      "title": "A Estética Realista",
+      "sheet": "047",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-machado-de-assis",
+      "title": "Machado de Assis",
+      "sheet": "047",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-naturalismo",
+      "title": "Naturalismo",
+      "sheet": "047",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-realismo-portugues-eca-de-queiros",
+      "title": "Realismo Português: Eça de Queirós",
+      "sheet": "047",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-parnasianismo",
+      "title": "Parnasianismo",
+      "sheet": "048",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-simbolismo",
+      "title": "Simbolismo",
+      "sheet": "048",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-pre-modernismo",
+      "title": "Pré-Modernismo",
+      "sheet": "048",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-vanguardas-artisticas",
+      "title": "Vanguardas Artísticas",
+      "sheet": "048",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-fernando-pessoa",
+      "title": "Fernando Pessoa",
+      "sheet": "048",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-semana-de-arte-moderna",
+      "title": "Semana de Arte Moderna",
+      "sheet": "048",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-modernismo-no-brasil-primeira-geracao",
+      "title": "Modernismo no Brasil: Primeira Geração",
+      "sheet": "048",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-segunda-geracao-modernista-prosa",
+      "title": "Segunda Geração Modernista: Prosa",
+      "sheet": "048",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-graciliano-ramos",
+      "title": "Graciliano Ramos",
+      "sheet": "049",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-segunda-geracao-modernista-poesia",
+      "title": "Segunda Geração Modernista: Poesia",
+      "sheet": "049",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-carlos-drummond-de-andrade",
+      "title": "Carlos Drummond de Andrade",
+      "sheet": "049",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-joao-cabral-de-melo-neto",
+      "title": "João Cabral de Melo Neto",
+      "sheet": "049",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-poesia-concreta",
+      "title": "Poesia Concreta",
+      "sheet": "049",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-clarice-lispector",
+      "title": "Clarice Lispector",
+      "sheet": "049",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-guimaraes-rosa",
+      "title": "Guimarães Rosa",
+      "sheet": "049",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-poesia-brasileira-1960-1980",
+      "title": "Poesia Brasileira: 1960-1980",
+      "sheet": "049",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-prosa-brasileira-1960-1980",
+      "title": "Prosa Brasileira: 1960-1980",
+      "sheet": "050",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-literatura-lusofona-contemporanea",
+      "title": "Literatura Lusófona Contemporânea",
+      "sheet": "050",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-poesia-brasileira-contemporanea",
+      "title": "Poesia Brasileira Contemporânea",
+      "sheet": "050",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-prosa-brasileira-contemporanea",
+      "title": "Prosa Brasileira Contemporânea",
+      "sheet": "050",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-artes-plasticas-brasileiras",
+      "title": "Artes Plásticas Brasileiras",
+      "sheet": "050",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-teatro-brasileiro",
+      "title": "Teatro Brasileiro",
+      "sheet": "050",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-literatura-cancioneiro-popular-brasileiro",
+      "title": "Cancioneiro Popular Brasileiro",
+      "sheet": "050",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "title": "Fatores de Textualidade",
+      "sheet": "050",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-entendimento-de-texto-os-dois-niveis-da-leitura",
+      "title": "Os Dois Níveis da Leitura",
+      "sheet": "051",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-entendimento-de-texto-intertextualidade-e-interdiscursividade",
+      "title": "Intertextualidade e Interdiscursividade",
+      "sheet": "051",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-entendimento-de-texto-generos-textuais",
+      "title": "Gêneros Textuais",
+      "sheet": "051",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao",
+      "title": "Gêneros Narrativos e Níveis de Compreensão",
+      "sheet": "051",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura",
+      "title": "Gêneros não Verbais: Fundamentos de Leitura",
+      "sheet": "051",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-entendimento-de-texto-funcoes-da-linguagem",
+      "title": "Funções da Linguagem",
+      "sheet": "051",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria",
+      "title": "Função Poética e Linguagem Literária",
+      "sheet": "051",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-entendimento-de-texto-figuras-de-linguagem",
+      "title": "Figuras de Linguagem",
+      "sheet": "051",
+      "reviewer": "Linguagens",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-introducao-as-sequencias",
+      "title": "Introdução às Sequências",
+      "sheet": "053",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-progressao-aritmetica",
+      "title": "Progressão Aritmética",
+      "sheet": "053",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-progressao-geometrica",
+      "title": "Progressão Geométrica",
+      "sheet": "053",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-sequencias",
+      "title": "Sequências",
+      "sheet": "053",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-sistemas-de-equacoes",
+      "title": "Sistemas de Equações",
+      "sheet": "053",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-tabelas-e-matrizes",
+      "title": "Tabelas e Matrizes",
+      "sheet": "053",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-multiplicacao-de-matrizes",
+      "title": "Multiplicação de Matrizes",
+      "sheet": "053",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-determinantes",
+      "title": "Determinantes",
+      "sheet": "053",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-discussao-de-sistemas-lineares",
+      "title": "Discussão de Sistemas Lineares",
+      "sheet": "054",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-medias",
+      "title": "Médias",
+      "sheet": "054",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-introducao-as-tecnicas-de-contagem",
+      "title": "Introdução às Técnicas de Contagem",
+      "sheet": "054",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-o-problema-da-fila",
+      "title": "O Problema da Fila",
+      "sheet": "054",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-o-problema-do-grupo",
+      "title": "O Problema do Grupo",
+      "sheet": "054",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-tecnicas-de-contagem",
+      "title": "Técnicas de Contagem",
+      "sheet": "054",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-operacoes-com-probabilidades",
+      "title": "Operações com Probabilidades",
+      "sheet": "054",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-eventos-disjuntos-e-eventos-independentes",
+      "title": "Eventos Disjuntos e Eventos Independentes",
+      "sheet": "054",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-estatistica-descritiva",
+      "title": "Estatística Descritiva",
+      "sheet": "055",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-introducao-a-geometria-plana",
+      "title": "Introdução à Geometria Plana",
+      "sheet": "055",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-angulos-em-triangulos",
+      "title": "Ângulos em Triângulos",
+      "sheet": "055",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-angulos-em-poligonos",
+      "title": "Ângulos em Polígonos",
+      "sheet": "055",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-angulos-e-circunferencias",
+      "title": "Ângulos e Circunferências",
+      "sheet": "055",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-simetrias-e-congruencias",
+      "title": "Simetrias e Congruências",
+      "sheet": "055",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-identificacao-de-simetrias-i",
+      "title": "Identificação de Simetrias I",
+      "sheet": "055",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-identificacao-de-simetrias-ii",
+      "title": "Identificação de Simetrias II",
+      "sheet": "055",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-a-geometria-da-proporcionalidade",
+      "title": "A Geometria da Proporcionalidade",
+      "sheet": "056",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-semelhanca-de-triangulos",
+      "title": "Semelhança de Triângulos",
+      "sheet": "056",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo",
+      "title": "O Ponto Médio e o Baricentro de um Triângulo",
+      "sheet": "056",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-triangulo-retangulo",
+      "title": "Triângulo Retângulo",
+      "sheet": "056",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-a-geometria-metrica-plana",
+      "title": "A Geometria Métrica Plana",
+      "sheet": "056",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-areas-de-poligonos",
+      "title": "Áreas de Polígonos",
+      "sheet": "056",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-area-do-circulo-e-de-suas-partes",
+      "title": "Área do Círculo e de suas Partes",
+      "sheet": "056",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-razoes-entre-areas-de-figuras-planas",
+      "title": "Razões entre Áreas de Figuras Planas",
+      "sheet": "056",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-areas-de-figuras-planas",
+      "title": "Áreas de Figuras Planas",
+      "sheet": "057",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-trigonometria-no-triangulo-retangulo",
+      "title": "Trigonometria no Triângulo Retângulo",
+      "sheet": "057",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-relacoes-trigonometricas-em-poligonos",
+      "title": "Relações Trigonométricas em Polígonos",
+      "sheet": "057",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-a-trigonometria-dos-numeros-reais",
+      "title": "A Trigonometria dos Números Reais",
+      "sheet": "057",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-outras-razoes-trigonometricas",
+      "title": "Outras Razões Trigonométricas",
+      "sheet": "057",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-a-relacao-fundamental-da-trigonometria",
+      "title": "A Relação Fundamental da Trigonometria",
+      "sheet": "057",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-transformacoes-trigonometricas",
+      "title": "Transformações Trigonométricas",
+      "sheet": "057",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-funcoes-trigonometricas",
+      "title": "Funções Trigonométricas",
+      "sheet": "057",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-o-universo-tridimensional",
+      "title": "O Universo Tridimensional",
+      "sheet": "058",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "title": "Cubos e Paralelepípedos",
+      "sheet": "058",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "title": "Prismas",
+      "sheet": "058",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "title": "Pirâmides",
+      "sheet": "058",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "title": "Sólidos de Revolução",
+      "sheet": "058",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "title": "Razões entre Volumes de Sólidos",
+      "sheet": "058",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-introducao-a-geometria-analitica",
+      "title": "Introdução à Geometria Analítica",
+      "sheet": "058",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+      "title": "Lugar Geométrico e Equação da Circunferência",
+      "sheet": "058",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-estudo-analitico-da-reta",
+      "title": "Estudo Analítico da Reta",
+      "sheet": "059",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+      "title": "Posições Relativas entre Duas Retas",
+      "sheet": "059",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-distancia-entre-um-ponto-e-uma-reta",
+      "title": "Distância entre um Ponto e uma Reta",
+      "sheet": "059",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+      "title": "Posições Relativas entre uma Reta e uma Circunferência",
+      "sheet": "059",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-introducao-ao-estudo-analitico-das-conicas",
+      "title": "Introdução ao Estudo Analítico das Cônicas",
+      "sheet": "059",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-representacao-geometrica-de-inequacoes",
+      "title": "Representação Geométrica de Inequações",
+      "sheet": "059",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-a-geometria-dos-numeros-complexos",
+      "title": "A Geometria dos Números Complexos",
+      "sheet": "059",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-tecnicas-algebricas",
+      "title": "Técnicas Algébricas",
+      "sheet": "059",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-igualdades",
+      "title": "Igualdades",
+      "sheet": "060",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-desigualdades",
+      "title": "Desigualdades",
+      "sheet": "060",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-modelagem-algebrica-de-problemas-i",
+      "title": "Modelagem Algébrica de Problemas I",
+      "sheet": "060",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-equacoes-do-2-grau",
+      "title": "Equações do 2º Grau",
+      "sheet": "060",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-modelagem-algebrica-de-problemas-ii",
+      "title": "Modelagem Algébrica de Problemas II",
+      "sheet": "060",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-introducao-as-funcoes",
+      "title": "Introdução às Funções",
+      "sheet": "060",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-transformacoes-em-graficos-de-funcoes",
+      "title": "Transformações em Gráficos de Funções",
+      "sheet": "060",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-composicao-de-funcoes",
+      "title": "Composição de Funções",
+      "sheet": "060",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-inversao-de-funcoes",
+      "title": "Inversão de Funções",
+      "sheet": "061",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-funcoes-bijetoras",
+      "title": "Funções Bijetoras",
+      "sheet": "061",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-funcao-constante-e-funcao-afim",
+      "title": "Função Constante e Função Afim",
+      "sheet": "061",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-funcao-quadratica",
+      "title": "Função Quadrática",
+      "sheet": "061",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-estudo-do-sinal-de-funcoes",
+      "title": "Estudo do Sinal de Funções",
+      "sheet": "061",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-introducao-ao-modelo-exponencial",
+      "title": "Introdução ao Modelo Exponencial",
+      "sheet": "061",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-introducao-aos-logaritmos",
+      "title": "Introdução aos Logaritmos",
+      "sheet": "061",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-matematica-equacoes-e-funcoes-logaritmicas",
+      "title": "Equações e Funções Logarítmicas",
+      "sheet": "061",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "title": "Ligações Químicas e Alotropia",
+      "sheet": "063",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "title": "Geometria Molecular",
+      "sheet": "063",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "title": "Polaridade das Ligações e das Moléculas",
+      "sheet": "063",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "title": "Interações Intermoleculares",
+      "sheet": "063",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-composicao-da-materia-estados-fisicos",
+      "title": "Composição da Matéria: Estados Físicos",
+      "sheet": "063",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-o-estado-gasoso",
+      "title": "O Estado Gasoso",
+      "sheet": "063",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-estudo-dos-gases-ii",
+      "title": "Estudo dos Gases II",
+      "sheet": "063",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-separacao-de-misturas",
+      "title": "Separação de Misturas",
+      "sheet": "063",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes",
+      "title": "Transformações Físicas e Químicas e Balanceamento de Equações",
+      "sheet": "064",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-massa-atomica-mol-e-massa-molar",
+      "title": "Massa Atômica, Mol e Massa Molar",
+      "sheet": "064",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-determinacao-de-formulas-quimicas",
+      "title": "Determinação de Fórmulas Químicas",
+      "sheet": "064",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-estequiometria-leis-ponderais",
+      "title": "Estequiometria: Leis Ponderais",
+      "sheet": "064",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-calculos-estequiometricos",
+      "title": "Cálculos Estequiométricos",
+      "sheet": "064",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-quimica-inorganica",
+      "title": "Química Inorgânica",
+      "sheet": "064",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases",
+      "title": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+      "sheet": "064",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-processos-de-oxirreducao",
+      "title": "Processos de Oxirredução",
+      "sheet": "064",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-quimica-ambiental",
+      "title": "Química Ambiental",
+      "sheet": "065",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "title": "Introdução à Química Orgânica",
+      "sheet": "065",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "title": "Nomenclatura de Compostos Orgânicos",
+      "sheet": "065",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "title": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "sheet": "065",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "title": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "sheet": "065",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "title": "Isomeria",
+      "sheet": "065",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-combustiveis-fosseis",
+      "title": "Combustíveis Fósseis",
+      "sheet": "065",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "title": "Interpretando Reações Orgânicas",
+      "sheet": "065",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "title": "Reações de Substituição",
+      "sheet": "066",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-reacoes-de-adicao",
+      "title": "Reações de Adição",
+      "sheet": "066",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "title": "Reações de Oxidação em Hidrocarbonetos",
+      "sheet": "066",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "title": "Álcoois",
+      "sheet": "066",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-acidos-graxos-e-esterificacao",
+      "title": "Ácidos Graxos e Esterificação",
+      "sheet": "066",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-transesterificacao-alcoolise",
+      "title": "Transesterificação (Alcoólise)",
+      "sheet": "066",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-acidez-e-basicidade-pka",
+      "title": "Acidez e Basicidade (pKa)",
+      "sheet": "066",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "title": "Polímeros",
+      "sheet": "066",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-dispersoes",
+      "title": "Dispersões",
+      "sheet": "067",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-efeitos-coligativos",
+      "title": "Efeitos Coligativos",
+      "sheet": "067",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-termoquimica-i",
+      "title": "Termoquímica I",
+      "sheet": "067",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-termoquimica-ii",
+      "title": "Termoquímica II",
+      "sheet": "067",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-cinetica-quimica",
+      "title": "Cinética Química",
+      "sheet": "067",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias",
+      "title": "Introdução ao Estudo das Pilhas e Baterias",
+      "sheet": "067",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-eletroquimica-de-processos-espontaneos",
+      "title": "Eletroquímica de Processos Espontâneos",
+      "sheet": "067",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-quimica-eletroquimica-de-processos-nao-espontaneos",
+      "title": "Eletroquímica de Processos não Espontâneos",
+      "sheet": "067",
+      "reviewer": "Matemática/Química",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+      "title": "Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes",
+      "sheet": "069",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+      "title": "Heráclito e Parmênides: o Ser e o Devir",
+      "sheet": "069",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+      "title": "Os Sofistas e a Crise da Verdade",
+      "sheet": "069",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+      "title": "O Método Socrático e a Maiêutica",
+      "sheet": "069",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+      "title": "A Teoria das Ideias de Platão",
+      "sheet": "069",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-o-mito-da-caverna",
+      "title": "O Mito da Caverna",
+      "sheet": "069",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento",
+      "title": "A Alegoria da Linha Dividida e o Conhecimento",
+      "sheet": "069",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-logica-e-metafisica-aristotelicas",
+      "title": "Lógica e Metafísica Aristotélicas",
+      "sheet": "069",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo",
+      "title": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
+      "sheet": "070",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+      "title": "Política Aristotélica: o Homem como Animal Político",
+      "sheet": "070",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-patristica-e-santo-agostinho",
+      "title": "Patrística e Santo Agostinho",
+      "sheet": "070",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-escolastica-e-santo-tomas-de-aquino",
+      "title": "Escolástica e Santo Tomás de Aquino",
+      "sheet": "070",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+      "title": "A Relação entre Fé e Razão",
+      "sheet": "070",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica",
+      "title": "Descartes e o Método: a Dúvida Hiperbólica",
+      "sheet": "070",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+      "title": "Racionalismo Continental: Espinosa e Leibniz",
+      "sheet": "070",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+      "title": "Empirismo Britânico: Locke, Berkeley e Hume",
+      "sheet": "070",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-a-critica-de-hume-a-causalidade",
+      "title": "A Crítica de Hume à Causalidade",
+      "sheet": "071",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-hobbes-e-o-estado-de-natureza",
+      "title": "Hobbes e o Estado de Natureza",
+      "sheet": "071",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-locke-e-os-direitos-naturais",
+      "title": "Locke e os Direitos Naturais",
+      "sheet": "071",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-rousseau-e-a-vontade-geral",
+      "title": "Rousseau e a Vontade Geral",
+      "sheet": "071",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+      "title": "O Ideal Iluminista de Razão e Progresso",
+      "sheet": "071",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-a-critica-da-razao-pura",
+      "title": "A Crítica da Razão Pura",
+      "sheet": "071",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico",
+      "title": "A Ética Kantiana e o Imperativo Categórico",
+      "sheet": "071",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-hegel-e-a-dialetica",
+      "title": "Hegel e a Dialética",
+      "sheet": "071",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-o-materialismo-historico",
+      "title": "O Materialismo Histórico",
+      "sheet": "072",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-alienacao-e-mais-valia",
+      "title": "Alienação e Mais-Valia",
+      "sheet": "072",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista",
+      "title": "A Luta de Classes na Filosofia Marxista",
+      "sheet": "072",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais",
+      "title": "Nietzsche e a Crítica aos Valores Morais",
+      "sheet": "072",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-o-existencialismo-de-sartre",
+      "title": "O Existencialismo de Sartre",
+      "sheet": "072",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural",
+      "title": "A Escola de Frankfurt e a Indústria Cultural",
+      "sheet": "072",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+      "title": "Foucault e as Relações de Poder",
+      "sheet": "072",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-filosofia-justica-e-direitos-humanos",
+      "title": "Justiça e Direitos Humanos",
+      "sheet": "072",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
+      "title": "Modo de Produção e Estrutura Social",
+      "sheet": "074",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-ideologia-e-alienacao",
+      "title": "Ideologia e Alienação",
+      "sheet": "074",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+      "title": "A Luta de Classes na Análise Sociológica",
+      "sheet": "074",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-tipos-de-acao-social",
+      "title": "Tipos de Ação Social",
+      "sheet": "074",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-dominacao-e-poder-em-weber",
+      "title": "Dominação e Poder em Weber",
+      "sheet": "074",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
+      "title": "Ética Protestante e o Espírito do Capitalismo",
+      "sheet": "074",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-cultura-e-etnocentrismo",
+      "title": "Cultura e Etnocentrismo",
+      "sheet": "074",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-identidade-e-diferenca",
+      "title": "Identidade e Diferença",
+      "sheet": "074",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+      "title": "Multiculturalismo e Relativismo Cultural",
+      "sheet": "075",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-classes-sociais-e-mobilidade-social",
+      "title": "Classes Sociais e Mobilidade Social",
+      "sheet": "075",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-desigualdade-racial-no-brasil",
+      "title": "Desigualdade Racial no Brasil",
+      "sheet": "075",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-desigualdade-de-genero",
+      "title": "Desigualdade de Gênero",
+      "sheet": "075",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-divisao-social-do-trabalho",
+      "title": "Divisão Social do Trabalho",
+      "sheet": "075",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+      "title": "Transformações no Mundo do Trabalho",
+      "sheet": "075",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
+      "title": "Precarização e Uberização do Trabalho",
+      "sheet": "075",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+      "title": "Movimentos Sociais Clássicos e Contemporâneos",
+      "sheet": "075",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-cidadania-e-direitos",
+      "title": "Cidadania e Direitos",
+      "sheet": "076",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-democracia-e-participacao-politica",
+      "title": "Democracia e Participação Política",
+      "sheet": "076",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-globalizacao-economica-e-cultural",
+      "title": "Globalização Econômica e Cultural",
+      "sheet": "076",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-o-estado-nacao-na-era-global",
+      "title": "O Estado-Nação na Era Global",
+      "sheet": "076",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    },
+    {
+      "id": "summary-sociologia-a-sociedade-da-informacao",
+      "title": "A Sociedade da Informação",
+      "sheet": "076",
+      "reviewer": "Filosofia/Sociologia",
+      "views": [
+        "360-dark",
+        "1440-light"
+      ],
+      "source_commit": "a4d9529d123cf19b94ab99f16910bad67cc6987a",
+      "status": "opening_inspected_formal_approval_pending"
+    }
+  ]
+}

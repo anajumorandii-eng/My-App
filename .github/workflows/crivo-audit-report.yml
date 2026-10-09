@@ -3,7 +3,7 @@ name: Preservar relatório da auditoria integral
 on:
   push:
     branches:
-      - 'docs/verificacao-integral-awesome-2026-10-09'
+      - 'fix/revisao-501-capitulos-awesome-2026-10-09'
     paths:
       - '.github/workflows/crivo-audit-report.yml'
       - '.github/workflows/crivo-integral-audit.yml'
@@ -15,7 +15,7 @@ permissions:
 
 jobs:
   preservar:
-    if: github.ref_name == 'docs/verificacao-integral-awesome-2026-10-09'
+    if: github.ref_name == 'fix/revisao-501-capitulos-awesome-2026-10-09'
     runs-on: ubuntu-latest
     timeout-minutes: 120
     permissions:
@@ -81,7 +81,7 @@ jobs:
             const inventory = JSON.parse(fs.readFileSync('docs/inspecao-visual-613-2026-10-09/inventario-base.json','utf8'));
             const expected = new Set(inventory.map(c=>c.id));
             assert.equal(expected.size,613);
-            const root='docs/verificacao-awesome-613-2026-10-09';
+            const root='docs/revisao-demais-capitulos-awesome-2026-10-09';
             fs.mkdirSync(path.join(root,'execucao'),{recursive:true});
             function walk(dir) {
               if(!fs.existsSync(dir))return [];
@@ -130,7 +130,7 @@ jobs:
             const now=new Date().toISOString();
             const manifest={schema_version:1,generated_at_utc:now,source_commit:process.env.AUDIT_SOURCE_SHA,run_id:Number(process.env.AUDIT_RUN_ID),run_url:'https://github.com/anajumorandii-eng/My-App/actions/runs/'+process.env.AUDIT_RUN_ID,status:technicalStatus,expected:7356,actual,failed,complete,configurations,gallery,formal_quality:formal,visual_review_status:'pending',limits:['Chromium, synthetic preferences, no authenticated student data','Initial views and representative control interactions; not every parameter combination','Contact sheets require visual review; do not infer aesthetic or pedagogical approval','Full screenshots remain in original workflow artifacts for three days']};
             fs.writeFileSync(path.join(root,'execucao','manifesto.json'),JSON.stringify(manifest,null,2)+'\n');
-            const priorResult=JSON.parse(fs.readFileSync(path.join(root,'resultado-613.json'),'utf8'));
+            const priorResult={source_commit:process.env.AUDIT_SOURCE_SHA,summary:{},chapters:inventory.map(c=>({...c})),prior_visual_review:'revisao-501.json'};
             priorResult.structural_source_commit=priorResult.source_commit;
             priorResult.runtime_source_commit=process.env.AUDIT_SOURCE_SHA;
             priorResult.audited_at_utc=now;
@@ -139,7 +139,7 @@ jobs:
             priorResult.summary.fresh_browser_checks=actual;
             priorResult.summary.fresh_technical_failures=failed;
             priorResult.summary.fresh_visual_reviews=0;
-            priorResult.execution_location='GitHub Actions; local environment remains unavailable';
+            priorResult.execution_location='GitHub Actions; remote verification on GitHub Actions';
             for(const row of priorResult.chapters) {
               const checks=byChapter.get(row.id)||[];
               row.fresh_browser_verification=checks.length===12?(checks.every(c=>c.passed)?'passed':'findings'):'incomplete';
@@ -159,15 +159,15 @@ jobs:
               '[Manifesto e limites](execucao/manifesto.json) · [Resultado por capítulo](resultado-613.json) · [Galeria atual](GALERIA.md).\n\n'+
               'O roteiro verifica carregamento da cena nativa, objeto, overflow da página, áreas de controles de 44 px, IDs/referências SVG, loops de animação detectáveis em movimento reduzido, seleção por teclado, extremos do primeiro slider, preservação dos controles ao comparar, conceitos/inspetor e modos Testar/Reconstruir. Os resultados completos estão nos arquivos por configuração.\n\n'+
               'As configurações usam Chromium e preferências sintéticas. Não são prova de funcionamento em Safari/iPad físico, serviços autenticados reais, todos os valores dos controles ou aprovação pedagógica. O inventário formal permanece inalterado. O critério visual usa Claude e Miro do Awesome Design MD, adaptados à identidade existente do Crivo.\n\n'+
-              'A falha do ambiente local foi contornada pela execução remota. As folhas de contato ficam versionadas; as capturas individuais completas permanecem nos artefatos com retenção de três dias. A proposta segue em rascunho até analisar os achados e revisar as imagens; sem merge automático.\n\n'+
+              'A verificação foi executada remotamente no GitHub Actions. As folhas de contato ficam versionadas; as capturas individuais completas permanecem nos artefatos com retenção de três dias. A proposta segue em rascunho até analisar os achados e revisar as imagens; sem merge automático.\n\n'+
               '## Registro anterior à execução remota\n\n'+priorReadme.replace(/^# /,'### ');
             fs.writeFileSync(path.join(root,'README.md'),section);
             const continuityPath='docs/CRIVO-CONTINUIDADE.md';
             const continuity=fs.readFileSync(continuityPath,'utf8');
             const intro='## Auditoria automatizada executada no GitHub — '+now+'\n\n'+
-              'Fonte: `'+process.env.AUDIT_SOURCE_SHA+'`; execução '+process.env.AUDIT_RUN_ID+'. Estado técnico: '+technicalStatus+'; '+actual+' de 7.356 resultados; '+failed+' reprovações. [Relatório atual](verificacao-awesome-613-2026-10-09/README.md), [manifesto](verificacao-awesome-613-2026-10-09/execucao/manifesto.json) e [capturas para revisão](verificacao-awesome-613-2026-10-09/GALERIA.md).\n\n'+
-              'A execução remota contorna o bloqueio local. O código de produto permanece na base da main após #290; diferenças de branch nesta retomada são documentação e infraestrutura de auditoria. Aprovação estética/pedagógica não foi inferida dos testes. Os 81 estados em validação e os 532 não revisados do inventário formal foram preservados.\n\n'+
-              'Próximo passo: analisar os achados por ID e revisar as capturas com os critérios Awesome Design MD; depois concluir a revisão da PR #291. Não repetir a execução se o código não mudar e não houver falha ou dúvida nova. Não reaplicar #288/#289/#290. Sem merge automático.\n\n';
+              'Fonte: `'+process.env.AUDIT_SOURCE_SHA+'`; execução '+process.env.AUDIT_RUN_ID+'. Estado técnico: '+technicalStatus+'; '+actual+' de 7.356 resultados; '+failed+' reprovações. [Relatório atual](revisao-demais-capitulos-awesome-2026-10-09/README.md), [manifesto](revisao-demais-capitulos-awesome-2026-10-09/execucao/manifesto.json) e [capturas para revisão](revisao-demais-capitulos-awesome-2026-10-09/GALERIA.md).\n\n'+
+              'A execução verifica as correções da PR #292 após a base mesclada da PR #291: cabeçalhos, Geoeconomia, relevo e aromaticidade. A inspeção anterior das 501 aberturas está registrada em revisao-501.json. Aprovação estética/pedagógica não foi inferida dos testes. Os 81 estados em validação e os 532 não revisados do inventário formal foram preservados.\n\n'+
+              'Próximo passo: analisar os achados por ID e revisar as capturas com os critérios Awesome Design MD; depois concluir a revisão da PR #292. Não repetir a execução se o código não mudar e não houver falha ou dúvida nova. Não reaplicar #288/#289/#290. Sem merge automático.\n\n';
             fs.writeFileSync(continuityPath,continuity.replace(/^# CRIVO — continuidade operacional\n/,'# CRIVO — continuidade operacional\n\n'+intro));
             console.log('CRIVO_PERSISTED_SUMMARY '+JSON.stringify({manifest:root+'/execucao/manifesto.json',technicalStatus,complete,actual,failed,configurations,sheets:gallery.length,formal}));
           })().catch(error=>{console.error(error);process.exitCode=1;});
@@ -176,18 +176,18 @@ jobs:
         run: |
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
-          git add docs/verificacao-awesome-613-2026-10-09/ docs/CRIVO-CONTINUIDADE.md
+          git add docs/revisao-demais-capitulos-awesome-2026-10-09/ docs/CRIVO-CONTINUIDADE.md
           if git diff --cached --quiet; then
             exit 0
           fi
           git commit -m 'docs: preserva execução integral e capturas dos 613 capítulos'
-          git push origin HEAD:docs/verificacao-integral-awesome-2026-10-09
+          git push origin HEAD:fix/revisao-501-capitulos-awesome-2026-10-09
       - name: Preservar relatório em caso de falha na publicação
         if: always()
         uses: actions/upload-artifact@v4
         with:
           name: crivo-integral-relatorio-consolidado
           path: |
-            docs/verificacao-awesome-613-2026-10-09/
+            docs/revisao-demais-capitulos-awesome-2026-10-09/
             docs/CRIVO-CONTINUIDADE.md
           retention-days: 14
