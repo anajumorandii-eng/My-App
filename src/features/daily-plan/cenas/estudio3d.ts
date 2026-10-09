@@ -271,7 +271,9 @@ function rendererCompartilhado() {
   if (compartilhado) return compartilhado;
   // Canvas transparente: o cartão aparece por trás da cena, e a borda se
   // dissolve por máscara no CSS em vez de terminar num retângulo.
-  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, powerPreference: 'high-performance' });
+  // O estúdio desenha sob demanda. Sem preservar o quadro, uma recomposição
+  // do cartão podia limpar o canvas e deixar só os rótulos HTML visíveis.
+  const renderer = new THREE.WebGLRenderer({ antialias: true, alpha: true, preserveDrawingBuffer: true, powerPreference: 'high-performance' });
   renderer.setClearColor(0x000000, 0);
   renderer.shadowMap.enabled = true;
   // PCF suave no lugar de VSM: o VSM desfocava o mapa de sombra em várias
