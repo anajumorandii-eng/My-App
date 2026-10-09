@@ -16,6 +16,13 @@ describe('continuidade editorial de Geografia', () => {
   it('não apresenta a Escola de Sagres como instituição comprovada no resumo escrito', () => {
     const summary = interactiveSummaries.find(item => item.id === 'summary-historia-grandes-navegacoes-e-conquista-colonial')!;
     expect(summary.sections[0].content).not.toContain('centro de estudos náuticos associado');
+    expect(summary.sections[1].content).toContain('negociado diretamente pelas Coroas de Portugal e Castela');
+    expect(summary.sections[1].content).toContain('posteriormente confirmado pelo papa Júlio II em 1506');
+    expect(summary.sections[1].content).not.toContain('mediado pelo papado');
+    expect(summary.retrieval[0].prompt).toContain('Tordesilhas');
+    expect(summary.retrieval[0].prompt).not.toContain('Madri');
+    expect(summary.sections.map(section => section.id)).toEqual([1,2,3,4,5].map(index => 'summary-historia-grandes-navegacoes-e-conquista-colonial-editorial-v4-' + index));
+    expect(summary.retrieval[0].id).toBe('summary-historia-grandes-navegacoes-e-conquista-colonial-editorial-recall-v4');
   });
   it('corrige Geoeconomia sem alterar IDs de resumo, material, seções ou recuperação', () => {
     const summary = geographyInteractiveSummaries.find(item => item.id === 'summary-geografia-gedeconomia-mundial')!;
