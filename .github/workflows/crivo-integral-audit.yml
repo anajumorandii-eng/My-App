@@ -1,0 +1,115 @@
+name: Auditoria integral dos capítulos
+
+on:
+  pull_request:
+    paths:
+      - '.github/workflows/crivo-integral-audit.yml'
+      - 'docs/inspecao-visual-613-2026-10-09/*.cjs'
+      - 'src/**'
+      - 'package*.json'
+
+permissions:
+  contents: read
+
+concurrency:
+  group: crivo-integral-${{ github.event.pull_request.number }}
+  cancel-in-progress: true
+
+jobs:
+  catalogo:
+    if: github.head_ref == 'docs/verificacao-integral-awesome-2026-10-09'
+    runs-on: ubuntu-latest
+    timeout-minutes: 90
+    strategy:
+      fail-fast: false
+      max-parallel: 2
+      matrix:
+        width: [360, 834, 1440]
+        theme: [light, dark]
+    env:
+      CRIVO_AUDIT_WIDTH: ${{ matrix.width }}
+      CRIVO_AUDIT_THEME: ${{ matrix.theme }}
+      CRIVO_AUDIT_SHA: ${{ github.event.pull_request.head.sha }}
+      CRIVO_VISUAL_URL: http://127.0.0.1:3003
+      CRIVO_VISUAL_AUDIT_DIR: work/auditoria-integral-${{ matrix.width }}-${{ matrix.theme }}
+      PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH: /usr/bin/google-chrome
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          ref: ${{ github.event.pull_request.head.sha }}
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - name: Preparar roteiro com cobertura estrita
+        run: |
+          node <<'NODE'
+          const fs = require('node:fs');
+          const path = 'docs/inspecao-visual-613-2026-10-09/capturar.cjs';
+          let source = fs.readFileSync(path, 'utf8');
+          const patches = [["theme === 'light' ? 1440 : 360","Number(process.env.CRIVO_AUDIT_WIDTH)"],["reducedMotion: 'reduce'","reducedMotion: process.env.CRIVO_AUDIT_MOTION"],["await Promise.all(['light', 'dark'].map(async theme => {","await Promise.all([process.env.CRIVO_AUDIT_THEME].map(async theme => {"],["executablePath: '/usr/bin/chromium'","executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH || '/usr/bin/google-chrome'"],["box.height < 40","box.height < 43.9"],["      const record = { ...chapter, index, theme, width: Number(process.env.CRIVO_AUDIT_WIDTH) };","      const record = { ...chapter, index, theme, width: Number(process.env.CRIVO_AUDIT_WIDTH), motion: process.env.CRIVO_AUDIT_MOTION, source_commit: process.env.CRIVO_AUDIT_SHA };"],["        await page.screenshot({ path: path.join(root, stage, String(index).padStart(3,'0') + '-' + theme + '.png') });","        await page.screenshot({ type: 'jpeg', quality: 70, path: path.join(root, stage, String(index).padStart(3,'0') + '-' + theme + '.jpg') });"],["          pageOverflow: document.documentElement.scrollWidth > innerWidth,","          pageOverflow: document.documentElement.scrollWidth > innerWidth,\n          svg: (() => {\n            const nodes = [...element.querySelectorAll('svg [id],svg[id]')];\n            const ids = nodes.map(node => node.id);\n            const duplicates = ids.filter((id, i) => ids.indexOf(id) !== i);\n            const missing = [];\n            for (const svg of element.querySelectorAll('svg')) {\n              for (const node of [svg,...svg.querySelectorAll('*')]) {\n                for (const attr of node.attributes) {\n                  for (const hit of attr.value.matchAll(/url\\(\\s*['\"]?#([^)'\"]+)['\"]?\\s*\\)/g)) {\n                    if (!document.getElementById(hit[1])) missing.push(hit[1]);\n                  }\n                  if ((attr.name === 'href' || attr.name === 'xlink:href') && attr.value.startsWith('#') && !document.getElementById(attr.value.slice(1))) missing.push(attr.value);\n                }\n              }\n            }\n            return { duplicates: [...new Set(duplicates)], missing: [...new Set(missing)] };\n          })(),\n          reducedMotionLoops: matchMedia('(prefers-reduced-motion: reduce)').matches\n            ? element.getAnimations({ subtree: true }).filter(animation => animation.playState === 'running' && animation.effect?.getTiming().iterations === Infinity).length : 0,"],["        await page.getByRole('tab', { name: 'Testar', exact: true }).click();","        const snapshot = async () => frame.locator('.vs-chapter-scene-body').evaluate(element => ({\n          inputs: [...element.querySelectorAll('input,select,textarea')].map(control => ({ type: control.type, value: control.value, checked: control.checked })),\n          choices: [...element.querySelectorAll('button[aria-pressed],button[aria-selected]')].map(control => ({ label: control.textContent, pressed: control.getAttribute('aria-pressed'), selected: control.getAttribute('aria-selected') }))\n        }));\n        const stateBefore = await snapshot();\n        const comparison = frame.getByRole('button', { name: 'Comparar painéis', exact: true });\n        await comparison.focus(); await page.keyboard.press('Enter');\n        await page.waitForFunction(id => document.querySelector('[data-chapter-scene=\"' + id + '\"]')?.classList.contains('vs-chapter-scene--comparison'), chapter.id);\n        record.comparisonPreservesControls = JSON.stringify(stateBefore) === JSON.stringify(await snapshot());\n        await comparison.focus(); await page.keyboard.press('Enter');\n        const concepts = frame.locator('.hu-concepts');\n        await concepts.locator('summary').focus(); await page.keyboard.press('Enter');\n        await concepts.locator('button').nth(1).focus(); await page.keyboard.press('Enter');\n        const closeInspector = page.getByRole('button', { name: 'Fechar inspetor', exact: true });\n        await closeInspector.waitFor();\n        record.conceptKeyboardSelection = await closeInspector.evaluate(element => {\n          for (let node = element; node; node = node.parentElement) if (node.inert) return false;\n          return true;\n        });\n        await closeInspector.click();\n        await page.getByRole('tab', { name: 'Testar', exact: true }).click();"],["record.passed = record.icon === models[chapter.id].model &&","record.passed = record.comparisonPreservesControls && record.conceptKeyboardSelection && !record.metrics.svg.duplicates.length && !record.metrics.svg.missing.length && record.metrics.reducedMotionLoops === 0 && record.icon === models[chapter.id].model &&"],["      records.push(record);","      records.push(record);\n      console.log('CRIVO_AUDIT_ROW ' + JSON.stringify(record));"],["  if (failures.length) process.exitCode = 1;","  const complete = chapters.length === 613 && records.length === 613 && new Set(records.map(record => record.id)).size === 613;\n  const summary = { source_commit: process.env.CRIVO_AUDIT_SHA, run_id: process.env.GITHUB_RUN_ID, width: Number(process.env.CRIVO_AUDIT_WIDTH), theme: process.env.CRIVO_AUDIT_THEME, motion: process.env.CRIVO_AUDIT_MOTION, expected: 613, actual: records.length, unique_ids: new Set(records.map(record => record.id)).size, complete, passed: records.filter(record => record.passed).length, failures: failures.map(record => ({ id: record.id, error: record.error, metrics: record.metrics })) };\n  fs.writeFileSync(path.join(root, stage + '-summary.json'), JSON.stringify(summary, null, 2));\n  console.log('CRIVO_AUDIT_SUMMARY ' + JSON.stringify(summary));\n  if (failures.length || !complete) process.exitCode = 1;"]];
+          for (const [from, to] of patches) {
+            if (!source.includes(from)) throw new Error('Alvo de adaptação ausente: ' + from.slice(0, 100));
+            source = source.split(from).join(to);
+          }
+          new Function(source);
+          fs.writeFileSync('docs/inspecao-visual-613-2026-10-09/auditoria-remota.cjs', source);
+          
+          NODE
+          node --check docs/inspecao-visual-613-2026-10-09/auditoria-remota.cjs
+      - name: Verificar 613 capítulos nos dois modos de movimento
+        env:
+          NODE_ENV: production
+          PORT: '3003'
+        run: |
+          npm start > /tmp/crivo-integral-server.log 2>&1 &
+          audit_server_pid=$!
+          trap 'kill "$audit_server_pid"' EXIT
+          curl --fail --silent --retry 20 --retry-delay 1 --retry-all-errors --max-time 2 http://127.0.0.1:3003/api/health
+          audit_exit=0
+          for audit_motion in reduce no-preference; do
+            if ! CRIVO_AUDIT_MOTION="$audit_motion" node docs/inspecao-visual-613-2026-10-09/auditoria-remota.cjs "$audit_motion"; then
+              audit_exit=1
+            fi
+          done
+          exit "$audit_exit"
+      - name: Gerar folhas de contato
+        if: always()
+        run: |
+          node <<'NODE'
+          const { chromium } = require('playwright');
+          const fs = require('node:fs'), path = require('node:path');
+          (async () => {
+           const root = process.env.CRIVO_VISUAL_AUDIT_DIR;
+           const browser = await chromium.launch({ executablePath: process.env.PLAYWRIGHT_CHROMIUM_EXECUTABLE_PATH, args: ['--no-sandbox'] });
+           const page = await browser.newPage({ viewport: { width: 2000, height: 1250 }, deviceScaleFactor: 1 });
+           const chapters = require('./docs/inspecao-visual-613-2026-10-09/inventario-base.json');
+           const screenshots = chapters.map((chapter,index) => ({ ...chapter,index,file:path.join(root,'reduce',String(index).padStart(3,'0')+'-'+process.env.CRIVO_AUDIT_THEME+'.jpg') })).filter(item=>fs.existsSync(item.file));
+           fs.mkdirSync(path.join(root,'folhas'), { recursive: true });
+           for (let start=0;start<screenshots.length;start+=8) {
+             const batch=screenshots.slice(start,start+8);
+             const cards=batch.map(item=>'<article><header>'+item.index+' — '+item.subject+' — '+item.title+'</header><img src="data:image/jpeg;base64,'+fs.readFileSync(item.file).toString('base64')+'"></article>').join('');
+             await page.setContent('<html><style>body{margin:0;background:#ddd;font:16px Arial}main{display:grid;grid-template-columns:repeat(4,1fr);gap:8px;padding:8px}article{background:white}header{height:60px;padding:8px;box-sizing:border-box}img{width:100%;height:550px;object-fit:contain}</style><main>'+cards+'</main></html>');
+             const name=String(start/8).padStart(3,'0')+'.jpg';
+             const bytes=await page.screenshot({ type:'jpeg',quality:80,path:path.join(root,'folhas',name),fullPage:true });
+             if ((process.env.CRIVO_AUDIT_WIDTH==='1440'&&process.env.CRIVO_AUDIT_THEME==='light')||(process.env.CRIVO_AUDIT_WIDTH==='360'&&process.env.CRIVO_AUDIT_THEME==='dark')) {
+               const encoded=bytes.toString('base64');
+               for(let offset=0;offset<encoded.length;offset+=5000) console.log('CRIVO_CONTACT '+JSON.stringify({name,offset,data:encoded.slice(offset,offset+5000)}));
+             }
+           }
+           await browser.close();
+          })().catch(error=>{console.error(error);process.exitCode=1;});
+          
+          NODE
+      - name: Preservar resultados e capturas
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: crivo-integral-${{ matrix.width }}-${{ matrix.theme }}
+          path: |
+            work/auditoria-integral-${{ matrix.width }}-${{ matrix.theme }}
+            /tmp/crivo-integral-server.log
+          if-no-files-found: error
+          retention-days: 3
