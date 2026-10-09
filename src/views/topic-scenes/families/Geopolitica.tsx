@@ -1,5 +1,5 @@
 import { GeopoliticalPlate } from './GeopoliticalIllustration';
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { Arrow, ArrowHead, Person, type Scene } from './cenaKit';
@@ -78,6 +78,7 @@ const EDGES = [[0, 1], [0, 2], [0, 3], [1, 4], [1, 5], [2, 6], [2, 7], [3, 8], [
 const T_TICKS: [number, string, string][] = [[90, '2001', '11 de setembro'], [200, '2003', 'Iraque'], [350, 'anos 2010', 'Estado Islâmico'], [520, 'hoje', 'células e lobos solitários']];
 
 function TerrorNetworkDetail({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const net = active === 1 || active === 2;
   const cells = active === 2;
@@ -85,7 +86,7 @@ function TerrorNetworkDetail({ active }: Scene) {
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Terrorismo internacional: rótulo em disputa, rede hierárquica de 2001 que vira células e atores isolados, e os custos de vigilância, liberdades e polarização; recorte ${active + 1} em foco`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">TERRORISMO INTERNACIONAL · DE 2001 A HOJE</text>
-    <ArrowHead id="gp-t-head" />
+    <ArrowHead id={`${diagramId}-gp-t-head`} />
 
     <motion.g initial={false} animate={{ opacity: active === 0 ? 1 : 0 }} transition={p(0.4)}>
       <Person x={64} y={128} s={1.25} coat="bi-coat-army" />
@@ -217,6 +218,7 @@ const CAPTION = [
 ];
 
 function ReligionsMapDetail({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const zoom = active >= 2;
   const christ = active === 0;
@@ -224,19 +226,19 @@ function ReligionsMapDetail({ active }: Scene) {
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Geografia das religiões: difusão do cristianismo e do islamismo no mapa, Jerusalém sagrada para três religiões e laicidade no Irã, na França e no Brasil; recorte ${active + 1} em foco`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">GEOGRAFIA DAS RELIGIÕES · ORIGEM ≠ HOJE</text>
-    <ArrowHead id="gp-r-head" />
-    <defs><clipPath id="gp-r-clip"><rect x="10" y="10" width="600" height="340" rx="17" /></clipPath></defs>
-    <g clipPath="url(#gp-r-clip)"><motion.g initial={false} animate={{ scale: zoom ? 2.6 : 1, opacity: zoom ? 0.16 : 1 }} transition={p(1.1)} style={{ transformBox: 'view-box', transformOrigin: `${J[0]}px ${J[1]}px` }}>
+    <ArrowHead id={`${diagramId}-gp-r-head`} />
+    <defs><clipPath id={`${diagramId}-gp-r-clip`}><rect x="10" y="10" width="600" height="340" rx="17" /></clipPath></defs>
+    <g clipPath={`url(#${diagramId}-gp-r-clip)`}><motion.g initial={false} animate={{ scale: zoom ? 2.6 : 1, opacity: zoom ? 0.16 : 1 }} transition={p(1.1)} style={{ transformBox: 'view-box', transformOrigin: `${J[0]}px ${J[1]}px` }}>
       <WorldBase />
       <motion.ellipse cx="160" cy="176" rx="46" ry="52" className="gp-halo" initial={false} animate={{ opacity: christ ? 1 : 0, scale: christ ? [0.4, 1] : 0.4 }} transition={p(0.9, christ ? 1.6 : 0)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />
       <motion.ellipse cx="478" cy="190" rx="34" ry="18" className="gp-halo" initial={false} animate={{ opacity: islam ? 1 : 0, scale: islam ? [0.4, 1] : 0.4 }} transition={p(0.9, islam ? 1.4 : 0)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />
-      <Arrow d="M338 122Q322 98 306 104" on={christ} p={p} head="gp-r-head" delay={0.2} />
-      <Arrow d="M294 102Q196 70 108 132" on={christ} p={p} head="gp-r-head" delay={0.8} />
-      <Arrow d="M298 114Q252 150 196 192" on={christ} p={p} head="gp-r-head" delay={1} />
-      <Arrow d="M304 114Q330 150 316 184" on={christ} p={p} head="gp-r-head" delay={1.2} />
-      <Arrow d="M344 142Q318 150 294 134" on={islam} p={p} head="gp-r-head" delay={0.2} />
-      <Arrow d="M354 138Q370 110 390 108" on={islam} p={p} head="gp-r-head" delay={0.4} />
-      <Arrow d="M356 152Q412 212 470 190" on={islam} p={p} head="gp-r-head" delay={0.6} />
+      <Arrow d="M338 122Q322 98 306 104" on={christ} p={p} head={`${diagramId}-gp-r-head`} delay={0.2} />
+      <Arrow d="M294 102Q196 70 108 132" on={christ} p={p} head={`${diagramId}-gp-r-head`} delay={0.8} />
+      <Arrow d="M298 114Q252 150 196 192" on={christ} p={p} head={`${diagramId}-gp-r-head`} delay={1} />
+      <Arrow d="M304 114Q330 150 316 184" on={christ} p={p} head={`${diagramId}-gp-r-head`} delay={1.2} />
+      <Arrow d="M344 142Q318 150 294 134" on={islam} p={p} head={`${diagramId}-gp-r-head`} delay={0.2} />
+      <Arrow d="M354 138Q370 110 390 108" on={islam} p={p} head={`${diagramId}-gp-r-head`} delay={0.4} />
+      <Arrow d="M356 152Q412 212 470 190" on={islam} p={p} head={`${diagramId}-gp-r-head`} delay={0.6} />
       <motion.circle cx="418" cy="146" r="17" className="gp-ring" initial={false} animate={{ opacity: islam ? 1 : 0 }} transition={p(0.5, islam ? 1 : 0)} />
       {christ && <motion.g initial={false} animate={{ opacity: christ ? 1 : 0 }} transition={p(0.4, christ ? 0.3 : 0)}>
         <circle cx={J[0]} cy={J[1]} r="5" className="gp-origin" />
@@ -327,12 +329,13 @@ function Ballot({ x, y, on, p, delay }: { x: number; y: number; on: boolean; p: 
 // e Suécia (o efeito oposto ao objetivo que a Rússia declarou) e os dois
 // referendos que o resumo contrapõe — com aval de Londres e sem aval de Madri.
 function EuropeTensionsDetail({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const on = (k: number) => active === k;
   return <svg viewBox="0 0 620 360" role="img" aria-label={`Tensões geopolíticas na Europa: fronteiras do século XX, Ucrânia de 2014 a 2022, Finlândia e Suécia na Otan e referendos da Escócia e da Catalunha; recorte ${active + 1} em foco`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">EUROPA · FRONTEIRAS, GUERRA, REFERENDOS</text>
-    <ArrowHead id="gp-e-head" />
+    <ArrowHead id={`${diagramId}-gp-e-head`} />
     {[E_MAIN, E_BRITAIN, E_IRELAND, E_SICILY].map(d => <path key={d.slice(0, 20)} d={d} className="bi-land" />)}
     <path d={E_BLACK} className="gp-inland" />
     <motion.path d={E_CZECHO} className="gp-region gp-hl-a" initial={false} animate={{ opacity: on(0) ? 1 : 0 }} transition={p(0.5, on(0) ? 0.3 : 0)} />
@@ -357,11 +360,11 @@ function EuropeTensionsDetail({ active }: Scene) {
       <circle cx="233" cy="215" r="7" className="gp-ring" />
       <text x="244" y="150" textAnchor="middle" className="bi-tiny">Rússia</text>
       <text x="246" y="244" textAnchor="middle" className="bi-tiny">Donbass</text>
-      <Arrow d="M244 160Q238 176 226 190" on={on(1)} p={p} head="gp-e-head" delay={1.4} />
+      <Arrow d="M244 160Q238 176 226 190" on={on(1)} p={p} head={`${diagramId}-gp-e-head`} delay={1.4} />
     </motion.g>
 
     <motion.g initial={false} animate={{ opacity: on(2) ? 1 : 0 }} transition={p(0.4)}>
-      <Arrow d="M204 188Q236 150 204 130" on={on(2)} p={p} head="gp-e-head" delay={0.4} />
+      <Arrow d="M204 188Q236 150 204 130" on={on(2)} p={p} head={`${diagramId}-gp-e-head`} delay={0.4} />
       <motion.path d="M189.7 128.9L197.8 124L205.5 112.2L196.9 103.2L199.1 79.6L193.5 70.6" className="gp-otan" initial={false} animate={{ pathLength: on(2) ? 1 : 0 }} transition={p(0.9, on(2) ? 1.8 : 0)} />
       <text x="180" y="108" textAnchor="middle" className="bi-tiny gp-on-fill">Finlândia</text>
       <text x="134" y="130" textAnchor="middle" className="bi-tiny gp-on-fill">Suécia</text>
@@ -403,7 +406,7 @@ function EuropeTensionsDetail({ active }: Scene) {
       <text x="300" y="82" className="bi-panel-title">UCRÂNIA · DUAS DATAS, NÃO UMA</text>
       <text x="304" y="118" className="bi-date">2014</text>
       <text x="572" y="118" textAnchor="end" className="bi-date">2022</text>
-      <motion.path d="M354 112H518" className="bi-arrow" markerEnd="url(#gp-e-head)" initial={false} animate={{ pathLength: on(1) ? 1 : 0 }} transition={p(1, on(1) ? 0.6 : 0)} />
+      <motion.path d="M354 112H518" className="bi-arrow" markerEnd={`url(#${diagramId}-gp-e-head)`} initial={false} animate={{ pathLength: on(1) ? 1 : 0 }} transition={p(1, on(1) ? 0.6 : 0)} />
       <text x="436" y="104" textAnchor="middle" className="bi-hand-sm">oito anos</text>
       <text x="304" y="140" className="bi-small">anexação da Crimeia</text>
       <text x="304" y="154" className="bi-small">conflito limitado no Donbass</text>
@@ -421,7 +424,7 @@ function EuropeTensionsDetail({ active }: Scene) {
         animate={{ opacity: on(2) ? 1 : 0, y: on(2) ? 0 : -6 }} transition={p(0.4, on(2) ? 0.4 + k * 0.5 : 0)}>
         <rect x="312" y={96 + k * 46} width="250" height="28" rx="8" className={k === 2 ? 'gp-chip gp-chip-blue' : 'gp-chip'} />
         <text x="437" y={115 + k * 46} textAnchor="middle" className="bi-small bi-strong">{line}</text>
-        {k < 2 && <path d={`M437 ${126 + k * 46}v14`} className="bi-arrow-static" markerEnd="url(#gp-e-head)" />}
+        {k < 2 && <path d={`M437 ${126 + k * 46}v14`} className="bi-arrow-static" markerEnd={`url(#${diagramId}-gp-e-head)`} />}
       </motion.g>)}
       <text x="312" y="252" className="bi-small">países historicamente neutros; a UE</text>
       <text x="312" y="267" className="bi-small">acelera a redução do gás russo</text>
@@ -469,12 +472,13 @@ const MERCOSUL = [[213.6, 178], [192, 208.8], [197.4, 235.4], [173, 245.6]] as c
 const PACIFICO = [[73.2, 80], [148.8, 131.8], [143.4, 172.4], [156.9, 228.4]] as const;
 
 function LatinAmericaExportsDetail({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const on = (k: number) => active === k;
   return <svg viewBox="0 0 620 360" role="img" aria-label={`América Latina: pauta primário-exportadora da colônia às independências, substituição de importações de 1930 a 1970, Mercosul e Aliança do Pacífico, e a China como novo parceiro; recorte ${active + 1} em foco`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">AMÉRICA LATINA · O QUE SAI E PARA ONDE</text>
-    <ArrowHead id="gp-l-head" />
+    <ArrowHead id={`${diagramId}-gp-l-head`} />
     <path d={L_MAIN} className="bi-land" />
     <motion.g initial={false} animate={{ opacity: on(2) ? 1 : 0 }} transition={p(0.4)}>
       <motion.path d="M84 72L92 96L140 124L146 142L140 172L152 196L152 262L168 290" className="gp-coast" initial={false}
@@ -488,8 +492,8 @@ function LatinAmericaExportsDetail({ active }: Scene) {
         <circle cx={x} cy={y} r="5" className={colony ? 'gp-pin gp-pin-gold' : 'gp-pin'} />
         <text x={x + dx} y={t === 'ouro · Minas' ? y - 10 : t === 'cobre' ? y + 16 : y + 4} textAnchor={anchor} className="bi-small bi-strong">{t}</text>
       </motion.g>)}
-      <Arrow d="M240 218Q256 226 270 214" on={on(0)} p={p} head="gp-l-head" delay={2.4} />
-      <Arrow d="M180 116Q200 96 222 100" on={on(0)} p={p} head="gp-l-head" delay={2.5} />
+      <Arrow d="M240 218Q256 226 270 214" on={on(0)} p={p} head={`${diagramId}-gp-l-head`} delay={2.4} />
+      <Arrow d="M180 116Q200 96 222 100" on={on(0)} p={p} head={`${diagramId}-gp-l-head`} delay={2.5} />
     </motion.g>
 
     <motion.g initial={false} animate={{ opacity: on(1) ? 1 : 0 }} transition={p(0.4)}>
@@ -516,8 +520,8 @@ function LatinAmericaExportsDetail({ active }: Scene) {
       <circle cx="156.9" cy="228.4" r="5" className="gp-pin" />
       <text x="206" y="170" textAnchor="end" className="bi-tiny">Brasil</text>
       <text x="150" y="232" textAnchor="end" className="bi-tiny">Chile</text>
-      <Arrow d="M220 176Q262 162 294 180" on={on(3)} p={p} head="gp-l-head" delay={0.6} />
-      <Arrow d="M164 226Q246 214 294 192" on={on(3)} p={p} head="gp-l-head" delay={0.9} />
+      <Arrow d="M220 176Q262 162 294 180" on={on(3)} p={p} head={`${diagramId}-gp-l-head`} delay={0.6} />
+      <Arrow d="M164 226Q246 214 294 192" on={on(3)} p={p} head={`${diagramId}-gp-l-head`} delay={0.9} />
     </motion.g>
 
     <rect x="300" y="56" width="292" height="248" rx="14" className="bi-panel" />
@@ -525,7 +529,7 @@ function LatinAmericaExportsDetail({ active }: Scene) {
       <text x="318" y="82" className="bi-panel-title">PAUTA PRIMÁRIO-EXPORTADORA</text>
       <rect x="318" y="94" width="256" height="24" rx="8" className="gp-chip gp-chip-warm" />
       <text x="446" y="110" textAnchor="middle" className="bi-small bi-strong">colônia: prata (Potosí), ouro (Minas)</text>
-      <path d="M446 120v12" className="bi-arrow-static" markerEnd="url(#gp-l-head)" />
+      <path d="M446 120v12" className="bi-arrow-static" markerEnd={`url(#${diagramId}-gp-l-head)`} />
       <rect x="318" y="138" width="256" height="24" rx="8" className="gp-chip" />
       <text x="446" y="154" textAnchor="middle" className="bi-small bi-strong">após as independências, século XIX</text>
       <path d="M330 234V184M330 234H566" className="bi-axis" />
@@ -599,12 +603,13 @@ const ROUTE_PTS = [[[169, 189], [150, 194], [133, 200]], [[169, 189], [196, 192]
 const ROUTES = ROUTE_PTS.map(pts => `M${pts.map(q => q.join(' ')).join('L')}`);
 
 function AfricaTodayDetail({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const on = (k: number) => active === k;
   return <svg viewBox="0 0 620 360" role="img" aria-label={`África no mundo atual: fronteiras da Conferência de Berlim cortando grupos, diversidade de trajetórias, empréstimos chineses garantidos por recursos e maldição dos recursos; recorte ${active + 1} em foco`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">ÁFRICA · HERANÇA, DIVERSIDADE, RECURSOS</text>
-    <ArrowHead id="gp-a-head" />
+    <ArrowHead id={`${diagramId}-gp-a-head`} />
     <path d={A_MAIN} className="bi-land" /><path d={A_MADAG} className="bi-land" />
 
     <motion.g initial={false} animate={{ opacity: on(0) ? 1 : 0 }} transition={p(0.4)}>
@@ -681,10 +686,10 @@ function AfricaTodayDetail({ active }: Scene) {
       <text x="308" y="82" className="bi-panel-title">CHINA: INFRAESTRUTURA POR RECURSOS</text>
       <rect x="318" y="96" width="176" height="26" rx="8" className="gp-chip gp-chip-warm" />
       <text x="406" y="113" textAnchor="middle" className="bi-small bi-strong">empréstimo chinês</text>
-      <path d="M406 124v16" className="bi-arrow-static" markerEnd="url(#gp-a-head)" />
+      <path d="M406 124v16" className="bi-arrow-static" markerEnd={`url(#${diagramId}-gp-a-head)`} />
       <rect x="318" y="146" width="176" height="26" rx="8" className="gp-chip" />
       <text x="406" y="163" textAnchor="middle" className="bi-small bi-strong">estradas, ferrovias, portos</text>
-      <motion.path d="M496 160Q548 136 498 110" className="bi-arrow" markerEnd="url(#gp-a-head)" initial={false} animate={{ pathLength: on(2) ? 1 : 0 }} transition={p(0.7, on(2) ? 1.4 : 0)} />
+      <motion.path d="M496 160Q548 136 498 110" className="bi-arrow" markerEnd={`url(#${diagramId}-gp-a-head)`} initial={false} animate={{ pathLength: on(2) ? 1 : 0 }} transition={p(0.7, on(2) ? 1.4 : 0)} />
       <text x="530" y="128" className="bi-tiny">garantia:</text>
       <text x="530" y="140" className="bi-tiny">minérios</text>
       <text x="530" y="152" className="bi-tiny">e energia</text>
@@ -699,7 +704,7 @@ function AfricaTodayDetail({ active }: Scene) {
         animate={{ opacity: on(3) ? 1 : 0, y: on(3) ? 0 : -6 }} transition={p(0.4, on(3) ? 0.5 + k * 0.5 : 0)}>
         <rect x="318" y={96 + k * 44} width="246" height="26" rx="8" className={k === 2 ? 'gp-chip gp-chip-warm' : 'gp-chip'} />
         <text x="441" y={113 + k * 44} textAnchor="middle" className="bi-small bi-strong">{line}</text>
-        {k < 2 && <path d={`M441 ${124 + k * 44}v12`} className="bi-arrow-static" markerEnd="url(#gp-a-head)" />}
+        {k < 2 && <path d={`M441 ${124 + k * 44}v12`} className="bi-arrow-static" markerEnd={`url(#${diagramId}-gp-a-head)`} />}
       </motion.g>)}
       <text x="318" y="246" className="bi-small">RDC: maior parte das reservas mundiais</text>
       <text x="318" y="261" className="bi-small">de cobalto, para baterias de carros elétricos</text>

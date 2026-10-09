@@ -7,7 +7,7 @@ import { geografia } from '../data/geografia';
 import { HistoriaGeografia } from './HistoriaGeografia';
 
 describe('pranchas de História e Geografia', () => {
-  it('compara fontes e alterna a mesma figura sem permitir A e B iguais', async () => {
+  it('mantém duas figuras distintas visíveis e compara fontes sem permitir A e B iguais', async () => {
     const user = userEvent.setup();
     const entry = geografia.find(item => item.chapterId === 'summary-geografia-relevo-brasileiro')!;
     const { container } = render(<HistoriaGeografia entry={entry} />);
@@ -21,21 +21,28 @@ describe('pranchas de História e Geografia', () => {
     expect(within(group).getByText(entry.items[1].claim)).toBeInTheDocument();
     const choice = screen.getByRole('combobox', { name: 'Recorte B' });
     expect(within(choice).queryByRole('option', { name: entry.items[0].label })).toBeNull();
-    await user.click(screen.getByRole('button', { name: 'Ver B na prancha' }));
-    expect(figure.getAttribute('aria-label')).not.toBe(original);
-    expect(container.querySelectorAll('.hg-figure')).toHaveLength(1);
+    expect(container.querySelectorAll('.hg-figure')).toHaveLength(2);
+    const figures = screen.getAllByRole('img', { name: /Relevo brasileiro em perfil/ });
+    expect(figures[0].getAttribute('aria-label')).toBe(original);
+    expect(figures[1].getAttribute('aria-label')).not.toBe(original);
+    await user.click(screen.getByRole('button', { name: 'Localizar painel B' }));
+    expect(container.querySelectorAll('.hg-figure')[1]).toHaveFocus();
     await user.selectOptions(choice, '2');
     expect(within(group).getByText(entry.items[2].claim)).toBeInTheDocument();
-    expect(figure).toHaveAttribute('aria-label', expect.stringContaining('depressões em foco'));
+    expect(figures[1]).toHaveAttribute('aria-label', expect.stringContaining('depressões em foco'));
+    expect(figures[0].getAttribute('aria-label')).toBe(original);
     await user.click(screen.getByRole('button', { name: entry.items[2].label }));
-    expect(screen.getByRole('button', { name: 'Ver A na prancha' })).toHaveAttribute('aria-pressed', 'true');
+    expect(figures[0]).toHaveAttribute('aria-label', expect.stringContaining('depressões em foco'));
+    const ids = Array.from(container.querySelectorAll('[id]')).map(e => e.id);
+    expect(new Set(ids).size).toBe(ids.length);
     expect(choice).not.toHaveValue('2');
     await user.click(screen.getByRole('button', { name: 'Fechar comparação' }));
     expect(screen.queryByRole('group', { name: 'Comparação entre recortes' })).toBeNull();
     expect(screen.getByRole('status')).toHaveTextContent(entry.items[2].claim);
     await user.click(screen.getByRole('button', { name: 'Comparar recortes' }));
     expect(screen.getByRole('combobox', { name: 'Recorte B' })).not.toHaveValue('2');
-    expect(screen.getByRole('button', { name: 'Ver A na prancha' })).toHaveAttribute('aria-pressed', 'true');
+    expect(figures[0]).toHaveAttribute('aria-label', expect.stringContaining('depressões em foco'));
+
   });
   it('integra estamentos, disputa de representação e mudanças de regime na prancha francesa', () => {
     const entry = historia.find(item => item.chapterId === 'summary-historia-revolucao-francesa')!;

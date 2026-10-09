@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { Arrow, ArrowHead, Person, type Scene } from './cenaKit';
@@ -42,6 +42,7 @@ const GAMES = { x: 94, y: 226 };
 const GREECE = 'M34 60H298V92C286 100 276 112 270 126C266 140 272 156 258 164C244 170 230 160 214 168C200 176 186 176 176 184C170 190 176 198 186 204C200 214 204 232 194 246C186 262 196 280 184 292C174 300 164 284 160 276C154 290 144 298 136 292C128 282 132 268 122 262C112 272 98 276 94 262C88 244 70 236 70 218C70 200 90 194 104 190C120 186 140 188 158 188C138 178 112 176 92 172C70 168 52 158 44 140C38 124 34 100 34 60Z';
 
 export function GreekPoleis({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const crowd = Array.from({ length: 12 }, (_, k) => k);
   const citizens = [2, 7, 10];
@@ -112,8 +113,8 @@ export function GreekPoleis({ active }: Scene) {
         <text x="470" y={t.y} textAnchor="middle" className="an-tier-text">{t.text}</text>
       </motion.g>)}
       <text x="470" y="198" textAnchor="middle" className="bi-tiny">mais numerosos que os cidadãos</text>
-      <Arrow d="M398 104C350 116 346 160 372 186" on={active === 1} p={p} head="an-head-gr" delay={0.8} />
-      <Arrow d="M544 102C556 94 566 88 582 82" on={active === 1} p={p} head="an-head-gr" delay={1.1} />
+      <Arrow d="M398 104C350 116 346 160 372 186" on={active === 1} p={p} head={`${diagramId}-an-head-gr`} delay={0.8} />
+      <Arrow d="M544 102C556 94 566 88 582 82" on={active === 1} p={p} head={`${diagramId}-an-head-gr`} delay={1.1} />
       <text x="338" y="232" className="bi-small"><tspan className="bi-strong">dentro:</tspan> a críptia intimida os hilotas</text>
       <text x="338" y="250" className="bi-small"><tspan className="bi-strong">fora:</tspan> guerra com póleis rivais</text>
       <text x="338" y="284" className="bi-hand-sm">o exército vigia dentro e fora</text>
@@ -137,7 +138,7 @@ export function GreekPoleis({ active }: Scene) {
       <text x="338" y="278" className="bi-hand-sm">unidade cultural,</text>
       <text x="338" y="296" className="bi-hand-sm">fragmentação política</text>
     </motion.g>
-    <ArrowHead id="an-head-gr" />
+    <ArrowHead id={`${diagramId}-an-head-gr`} />
     <text x="30" y="342" className="bi-foot">Mapa esquemático, sem escala; figuras de Atenas ilustrativas, sem contagem.</text>
     </g>
   </svg>;
@@ -243,6 +244,7 @@ function Castle({ x, y }: { x: number; y: number }) {
 }
 
 export function FeudalBonds({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const left = active !== 1;
   const right = active !== 0;
@@ -252,7 +254,7 @@ export function FeudalBonds({ active }: Scene) {
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">EUROPA FEUDAL · DOIS VÍNCULOS</text>
-    <ArrowHead id="an-head-fe" />
+    <ArrowHead id={`${diagramId}-an-head-fe`} />
 
     <motion.g initial={false} animate={{ opacity: left ? 1 : 0.35 }} transition={p(0.5)}>
       <rect x="24" y="52" width="282" height="270" rx="14" className="bi-panel" />
@@ -283,9 +285,9 @@ export function FeudalBonds({ active }: Scene) {
       <text x="248" y="242" textAnchor="middle" className="bi-tiny">moinho</text>
       <text x="291" y="242" textAnchor="middle" className="bi-tiny">forno</text>
       <text x="36" y="256" className="bi-tiny">livre, mas preso à terra</text>
-      <Arrow d="M66 178C92 166 116 152 140 140" on={active === 0 || active === 2} p={p} head="an-head-fe" delay={0.3} />
-      <Arrow d="M116 170V146" on={active === 0 || active === 2} p={p} head="an-head-fe" delay={0.7} />
-      <Arrow d="M256 180C246 82 170 76 106 88" on={active === 0 || active === 2} p={p} head="an-head-fe" delay={1.1} />
+      <Arrow d="M66 178C92 166 116 152 140 140" on={active === 0 || active === 2} p={p} head={`${diagramId}-an-head-fe`} delay={0.3} />
+      <Arrow d="M116 170V146" on={active === 0 || active === 2} p={p} head={`${diagramId}-an-head-fe`} delay={0.7} />
+      <Arrow d="M256 180C246 82 170 76 106 88" on={active === 0 || active === 2} p={p} head={`${diagramId}-an-head-fe`} delay={1.1} />
       {duties.map((line, k) => <g key={line}>
         <motion.circle cx="44" cy={276 + k * 16} r="6.5" className="an-num" initial={false} animate={{ scale: active === 0 ? [1, 1.3, 1] : 1 }}
           transition={p(0.5, 0.3 + 0.4 * k)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />
@@ -312,10 +314,10 @@ export function FeudalBonds({ active }: Scene) {
       <Person x={518} y={262} s={0.65} coat="bi-coat-green" />
       <text x="534" y="268" className="bi-tiny">vassalos</text>
       <text x="534" y="280" className="bi-tiny">dele</text>
-      <Arrow d="M406 132C414 154 440 168 460 176" on={active >= 1} p={p} head="an-head-fe" delay={0.3} />
-      <Arrow d="M546 132C540 156 506 164 486 172" on={active >= 1} p={p} head="an-head-fe" delay={0.8} />
-      <Arrow d="M466 214C460 226 454 234 450 244" on={active >= 1} p={p} head="an-head-fe" delay={1.2} />
-      <Arrow d="M482 214C490 226 504 234 512 244" on={active >= 1} p={p} head="an-head-fe" delay={1.3} />
+      <Arrow d="M406 132C414 154 440 168 460 176" on={active >= 1} p={p} head={`${diagramId}-an-head-fe`} delay={0.3} />
+      <Arrow d="M546 132C540 156 506 164 486 172" on={active >= 1} p={p} head={`${diagramId}-an-head-fe`} delay={0.8} />
+      <Arrow d="M466 214C460 226 454 234 450 244" on={active >= 1} p={p} head={`${diagramId}-an-head-fe`} delay={1.2} />
+      <Arrow d="M482 214C490 226 504 234 512 244" on={active >= 1} p={p} head={`${diagramId}-an-head-fe`} delay={1.3} />
       {active === 1 && <motion.rect width="12" height="9" rx="2" className="an-fief" initial={{ x: 400, y: 136, opacity: 0 }}
         animate={{ x: [400, 430, 454], y: [136, 164, 174], opacity: [0, 1, 1] }} transition={p(1.2, 0.6)} />}
       {active === 1 && <motion.path d="M0 -7l6 2v5c0 4-3 6-6 7-3-1-6-3-6-7v-5Z" className="an-shield" initial={{ x: 470, y: 172, opacity: 0 }}
@@ -348,6 +350,7 @@ const MAYBE = [3, 6];
 const yr = (y: number) => 60 + (y - 1330) * 4;
 
 export function BlackDeath({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const tilt = active === 0 ? 14 : -14;
   const captions = [
@@ -360,11 +363,11 @@ export function BlackDeath({ active }: Scene) {
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">SÉCULO XIV · A PESTE E O TRABALHO</text>
-    <ArrowHead id="an-head-bd" />
+    <ArrowHead id={`${diagramId}-an-head-bd`} />
 
     <text x="40" y="70" className="bi-small bi-strong">Europa</text>
     <text x="304" y="70" textAnchor="end" className="bi-small bi-strong">Ásia Central</text>
-    <path d="M286 80C220 98 120 98 58 82" className="an-route" markerEnd="url(#an-head-bd)" />
+    <path d="M286 80C220 98 120 98 58 82" className="an-route" markerEnd={`url(#${diagramId}-an-head-bd)`} />
     <text x="172" y="110" textAnchor="middle" className="bi-tiny">rotas comerciais</text>
     {active === 0 && [0, 1, 2].map(k => <motion.circle key={k} r="4" className="an-germ" initial={{ cx: 286, cy: 80, opacity: 0 }}
       animate={{ cx: [286, 220, 140, 64], cy: [80, 92, 94, 84], opacity: [0, 1, 1, 0] }} transition={p(1.6, 0.2 + 0.35 * k)} />)}
@@ -437,6 +440,7 @@ export function BlackDeath({ active }: Scene) {
 const STATIONS = [90, 235, 385, 530];
 
 export function RenaissanceChain({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const names = ['comércio e bancos', 'mecenato', 'humanismo', 'arte'];
   const icons = [
@@ -450,9 +454,9 @@ export function RenaissanceChain({ active }: Scene) {
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">RENASCIMENTO · DA RIQUEZA À OBRA</text>
-    <ArrowHead id="an-head-rn" />
+    <ArrowHead id={`${diagramId}-an-head-rn`} />
 
-    {STATIONS.slice(0, -1).map((x, k) => <path key={x} d={`M${x + 36} 94H${STATIONS[k + 1] - 38}`} className="bi-arrow-static" markerEnd="url(#an-head-rn)" />)}
+    {STATIONS.slice(0, -1).map((x, k) => <path key={x} d={`M${x + 36} 94H${STATIONS[k + 1] - 38}`} className="bi-arrow-static" markerEnd={`url(#${diagramId}-an-head-rn)`} />)}
     <path d={`M${STATIONS[0]} 136H${STATIONS[3]}`} className="an-trail-bg" />
     <motion.path d={`M${STATIONS[0]} 136H${STATIONS[3]}`} className="an-trail" initial={false}
       animate={{ pathLength: active / 3 }} transition={p(1, 0.2)} />
@@ -514,7 +518,7 @@ export function RenaissanceChain({ active }: Scene) {
         <text x="76" y="272" textAnchor="middle" className="bi-tiny">Deus</text>
         <text x="176" y="274" textAnchor="middle" className="bi-tiny">ser humano</text>
         <Person x={76} y={206} s={0.42} coat="bi-coat-plain" />
-        <path d="M118 246h14" className="bi-arrow-static" markerEnd="url(#an-head-rn)" />
+        <path d="M118 246h14" className="bi-arrow-static" markerEnd={`url(#${diagramId}-an-head-rn)`} />
         <motion.g initial={{ scale: 0.5, opacity: 0.4 }} animate={{ scale: 1, opacity: 1 }} transition={p(0.8, 0.6)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }}>
           <Person x={176} y={238} s={0.62} coat="bi-coat-green" />
         </motion.g>

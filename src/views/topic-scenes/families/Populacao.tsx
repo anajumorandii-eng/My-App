@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { SocioEconomicIllustration } from './SocioEconomicIllustration';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -63,6 +63,7 @@ const ICONS: { label: string; draw: React.ReactNode }[][] = [
 ];
 
 export function DemographicTransition({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const cx = 500;
   const shape = [
@@ -82,7 +83,7 @@ export function DemographicTransition({ active }: Scene) {
     <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">TRANSIÇÃO DEMOGRÁFICA</text>
-    <defs><clipPath id="po-dd-reveal">
+    <defs><clipPath id={`${diagramId}-po-dd-reveal`}>
       <motion.rect x="34" y="60" height="190" initial={false} animate={{ width: PHASE_X[active + 1] - 32 }} transition={p(1.1)} />
     </clipPath></defs>
 
@@ -96,15 +97,15 @@ export function DemographicTransition({ active }: Scene) {
       <text x={(x + PHASE_X[k + 1]) / 2} y="256" textAnchor="middle" className={k === active ? 'bi-small bi-strong po-on' : 'bi-tiny'}>fase {k + 1}</text>
     </g>)}
     <path d="M40 70V240H370" className="bi-axis" />
-    <g clipPath="url(#po-dd-reveal)">
+    <g clipPath={`url(#${diagramId}-po-dd-reveal)`}>
       <path d={GAP_PATH} className="po-gap" />
       <path d={NAT_PATH} className="po-nat" />
       <path d={MORT_PATH} className="po-mort" />
     </g>
     <motion.text x="186" y="126" textAnchor="middle" className="bi-hand-sm" initial={false} animate={{ opacity: active >= 1 ? 1 : 0 }} transition={p(0.4, 0.9)}>explosão</motion.text>
 
-    <path d="M414 240V92" className="bi-axis" markerEnd="url(#po-head-age)" />
-    <ArrowHead id="po-head-age" />
+    <path d="M414 240V92" className="bi-axis" markerEnd={`url(#${diagramId}-po-head-age)`} />
+    <ArrowHead id={`${diagramId}-po-head-age`} />
     <text x="414" y="80" textAnchor="middle" className="bi-tiny">idade</text>
     <text x={cx - 40} y="80" textAnchor="middle" className="bi-tiny">homens</text>
     <text x={cx + 40} y="80" textAnchor="middle" className="bi-tiny">mulheres</text>
@@ -171,6 +172,7 @@ function workerSpot(split: number[], i: number) {
 }
 
 export function LaborSectors({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const split = SPLIT[active];
   const note = [
@@ -183,8 +185,8 @@ export function LaborSectors({ active }: Scene) {
     <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">SETORES DA ECONOMIA · TERCIARIZAÇÃO</text>
-    <ArrowHead id="po-head-sector" />
-    {[0, 1].map(k => <motion.path key={k} d={k === 0 ? 'M162 78Q210 56 258 78' : 'M362 78Q410 56 458 78'} className="bi-arrow" markerEnd="url(#po-head-sector)"
+    <ArrowHead id={`${diagramId}-po-head-sector`} />
+    {[0, 1].map(k => <motion.path key={k} d={k === 0 ? 'M162 78Q210 56 258 78' : 'M362 78Q410 56 458 78'} className="bi-arrow" markerEnd={`url(#${diagramId}-po-head-sector)`}
       initial={false} animate={{ pathLength: active > k ? 1 : 0, opacity: active > k ? 1 : 0 }} transition={p(0.8, 0.2)} />)}
 
     {SECTORS.map((s, k) => <g key={s.title}>
@@ -466,6 +468,7 @@ const PULL = [
 ];
 
 export function MigrationForces({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const pushOn = active !== 1;
   const pullOn = active !== 0;
@@ -490,8 +493,8 @@ export function MigrationForces({ active }: Scene) {
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
     <text x="30" y="40" className="bi-kicker">MIGRAÇÃO · EXPULSÃO E ATRAÇÃO</text>
     <defs>
-      <marker id="po-head-push" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="po-head-push" /></marker>
-      <marker id="po-head-pull" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="po-head-pull" /></marker>
+      <marker id={`${diagramId}-po-head-push`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="po-head-push" /></marker>
+      <marker id={`${diagramId}-po-head-pull`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="po-head-pull" /></marker>
     </defs>
 
     <text x="115" y="66" textAnchor="middle" className={active !== 1 ? 'bi-label po-warm' : 'bi-label'}>origem</text>
@@ -511,9 +514,9 @@ export function MigrationForces({ active }: Scene) {
     {PUSH.map((b, k) => badge(b, k, 72, pushOn, 'push'))}
     {PULL.map((b, k) => badge(b, k, 472, pullOn, 'pull'))}
 
-    <motion.path className="po-push" markerEnd="url(#po-head-push)" initial={false}
+    <motion.path className="po-push" markerEnd={`url(#${diagramId}-po-head-push)`} initial={false}
       animate={{ d: active === 2 ? 'M300 88C334 68 356 74 366 90' : 'M140 88C174 68 196 74 208 90', pathLength: pushOn ? 1 : 0, opacity: pushOn ? 1 : 0 }} transition={p(active === 2 ? 1.8 : 0.9, 0.4)} />
-    <motion.path className="po-pull" markerEnd="url(#po-head-pull)" initial={false}
+    <motion.path className="po-pull" markerEnd={`url(#${diagramId}-po-head-pull)`} initial={false}
       animate={{ d: active === 2 ? 'M400 86C414 72 428 70 444 76' : 'M254 88C300 62 396 62 444 80', pathLength: pullOn ? 1 : 0, opacity: pullOn ? 1 : 0 }} transition={p(active === 2 ? 1.8 : 0.9, 0.4)} />
     <motion.g initial={false} animate={{ x: active === 2 ? 380 : active === 1 ? 236 : 222 }} transition={p(active === 2 ? 1.8 : 0.6, 0.4)}>
       <Person x={0} y={103} s={0.72} coat="bi-coat-green" />

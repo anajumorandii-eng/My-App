@@ -1,5 +1,5 @@
 import { GeoIllustration } from './GeoIllustration';
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { BRAZIL } from './GeografiaFisica';
@@ -140,10 +140,11 @@ function NileValley() {
 }
 
 function Upstream() {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced(); const s = useFrom();
   const countries = [['Laos', 272], ['Tailândia', 368], ['Camboja', 462], ['Vietnã', 556]] as const;
   return <g>
-    <ArrowHead id="ab-head-mekong" />
+    <ArrowHead id={`${diagramId}-ab-head-mekong`} />
     <text x="250" y="72" className="bi-panel-title">MEKONG · SUDESTE ASIÁTICO</text>
     <text x="250" y="96" className="bi-label">barragens nas cabeceiras</text>
     <text x="250" y="116" className="bi-small">alteram o regime de vazão que chega a jusante:</text>
@@ -157,7 +158,7 @@ function Upstream() {
     <motion.path d="M150 222H212V262H158Z" className="ab-reservoir" initial={{ scaleY: s(0, 1) }} animate={{ scaleY: 1 }} transition={p(0.8, 0.5)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom' }} />
     <motion.rect x="210" y="208" width="12" height="58" rx="2" className="ab-dam" initial={{ scaleY: s(0, 1) }} animate={{ scaleY: 1 }} transition={p(0.6, 0.2)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom' }} />
     <motion.path d="M224 252C300 246 360 258 430 251S540 246 598 252" className="ab-river-wide" initial={{ strokeWidth: s(16, 6) }} animate={{ strokeWidth: 6 }} transition={p(1.6, 1)} />
-    <path d="M236 222H588" className="bi-arrow" markerEnd="url(#ab-head-mekong)" />
+    <path d="M236 222H588" className="bi-arrow" markerEnd={`url(#${diagramId}-ab-head-mekong)`} />
     <text x="240" y="214" className="bi-tiny">a jusante</text>
     {[300, 420, 530].map((x, k) => <motion.g key={x} initial={{ opacity: s(1, 0.35) }} animate={{ opacity: 0.35 }} transition={p(1, 1.4 + k * 0.1)}><Fish x={x} y={252} s={1.1} /></motion.g>)}
     {[252, 296, 344, 392, 440, 488, 532, 580].map((x, k) => <motion.path key={x} d={`M${x} 280v-9M${x} 275l-4-4M${x} 275l4-4`} className="ab-sprout"
@@ -527,6 +528,7 @@ const BIOMES = [
 ];
 
 export function BiomesProfile({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced(); const s = useFrom();
   const Stage = [Strata, AtlanticFragments, CerradoFire, CaatingaCycle][active];
   const b = BIOMES[active];
@@ -534,9 +536,9 @@ export function BiomesProfile({ active }: Scene) {
     <GeoIllustration kind="BiomesProfile" active={active} />
     <g transform="translate(0 390)">
     <Frame kicker="BIOGEOGRAFIA DO BRASIL · PERFIS" />
-    <defs><clipPath id="ab-clip-bio1"><rect x="22" y="52" width="382" height="244" rx="12" /></clipPath></defs>
+    <defs><clipPath id={`${diagramId}-ab-clip-bio1`}><rect x="22" y="52" width="382" height="244" rx="12" /></clipPath></defs>
     <rect x="22" y="52" width="382" height="244" rx="12" className="ab-stage" />
-    <motion.g key={active} clipPath="url(#ab-clip-bio1)" initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.4)}><Stage /></motion.g>
+    <motion.g key={active} clipPath={`url(#${diagramId}-ab-clip-bio1)`} initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.4)}><Stage /></motion.g>
     <rect x="22" y="52" width="382" height="244" rx="12" className="ab-stage-edge" />
 
     <rect x="414" y="52" width="184" height="244" rx="12" className="bi-panel" />
@@ -637,10 +639,11 @@ function FloodPulse() {
 }
 
 function PampaField() {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced(); const s = useFrom();
   const hill = 'M214 214Q300 184 400 206T598 200V332H214Z';
   return <g>
-    <defs><clipPath id="ab-clip-soy"><motion.rect y="150" width="200" height="200" initial={{ x: s(600, 452) }} animate={{ x: 452 }} transition={p(1.8, 0.6)} /></clipPath></defs>
+    <defs><clipPath id={`${diagramId}-ab-clip-soy`}><motion.rect y="150" width="200" height="200" initial={{ x: s(600, 452) }} animate={{ x: 452 }} transition={p(1.8, 0.6)} /></clipPath></defs>
     <path d={hill} className="ab-grassland" />
     {Array.from({ length: 16 }, (_, k) => <path key={k} d={`M${226 + k * 23} ${226 + (k % 3) * 14}l-3-8M${226 + k * 23} ${226 + (k % 3) * 14}l1-10M${226 + k * 23} ${226 + (k % 3) * 14}l4-7`} className="ab-grass" />)}
     {[[270, 208], [334, 214], [396, 210]].map(([x, y], k) => <g key={x} transform={`translate(${x} ${y}) scale(${k === 1 ? -1.1 : 1.1} 1.1)`}>
@@ -650,7 +653,7 @@ function PampaField() {
       <path d="M10 -12l7-3q5 0 5 4l-2 6q-2 2-5 0Z" className="ab-cow-body" />
       <path d="M16 -15l-1-4M19 -14l2-3" className="ab-cow" />
     </g>)}
-    <g clipPath="url(#ab-clip-soy)">
+    <g clipPath={`url(#${diagramId}-ab-clip-soy)`}>
       <path d={hill} className="ab-plowed" />
       {[0, 1, 2, 3, 4, 5].map(r => <path key={r} d={`M452 ${222 + r * 16}H598`} className="ab-furrow" />)}
       {[0, 1, 2, 3, 4, 5].flatMap(r => [0, 1, 2, 3, 4, 5].map(c => <path key={`${r}-${c}`} d={`M${466 + c * 24} ${220 + r * 16}v-6M${466 + c * 24} ${216 + r * 16}l-3-3M${466 + c * 24} ${216 + r * 16}l3-3`} className="ab-soy" />))}
@@ -721,6 +724,7 @@ function PantanalFire() {
 }
 
 export function WetlandsCoast({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced(); const s = useFrom();
   const Stage = [FloodPulse, PampaField, Mangrove, PantanalFire][active];
   const place = PLACES[active];
@@ -734,9 +738,9 @@ export function WetlandsCoast({ active }: Scene) {
       <text x="34" y="258" className="bi-panel-title">{place.title}</text>
       {place.lines.map((line, k) => <text key={line} x="34" y={278 + k * 16} className="bi-small">{line}</text>)}
     </motion.g>
-    <defs><clipPath id="ab-clip-bio2"><rect x="214" y="52" width="384" height="280" rx="12" /></clipPath></defs>
+    <defs><clipPath id={`${diagramId}-ab-clip-bio2`}><rect x="214" y="52" width="384" height="280" rx="12" /></clipPath></defs>
     <rect x="214" y="52" width="384" height="280" rx="12" className="ab-stage" />
-    <motion.g key={active} clipPath="url(#ab-clip-bio2)" initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.4)}><Stage /></motion.g>
+    <motion.g key={active} clipPath={`url(#${diagramId}-ab-clip-bio2)`} initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.4)}><Stage /></motion.g>
     <rect x="214" y="52" width="384" height="280" rx="12" className="ab-stage-edge" />
     <text x="30" y="346" className="bi-foot">Mapa e perfis esquemáticos, sem escala.</text>
   </g>

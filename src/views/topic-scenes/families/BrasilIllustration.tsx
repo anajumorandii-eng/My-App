@@ -1,3 +1,4 @@
+import { IllustrationMaterials, illustrationMaterialStyle } from './IllustrationMaterials';
 import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
@@ -5,7 +6,8 @@ import './BrasilIllustration.css';
 
 export function Plate({ title, period, active, children, caption, description }: {title:string;period:string;active:number;children:React.ReactNode;caption:string;description?:string}) {
   const id=useId().replace(/:/g,'');
-  return <svg className="brasil-plate" viewBox="0 0 780 700" role="img" aria-label={`${description ?? `${title}. ${caption}`}; recorte ${active+1} em foco`}>
+  return <svg className="brasil-plate" style={illustrationMaterialStyle(id)} viewBox="0 0 780 700" role="img" aria-label={`${description ?? `${title}. ${caption}`}; recorte ${active+1} em foco`}>
+    <IllustrationMaterials id={id} palette="brp"/>
     <defs><pattern id={id} width="35" height="31" patternUnits="userSpaceOnUse"><path d="M3 9h8m14 14h5M12 28h3" className="brp-grain"/></pattern></defs>
     <rect x="5" y="5" width="770" height="690" rx="12" className="brp-paper"/><rect x="5" y="5" width="770" height="690" rx="12" fill={`url(#${id})`}/>
     <text x="32" y="49" className="brp-title">{title}</text><text x="34" y="78" className="brp-period">{period}</text><path d="M32 89Q321 95 748 85" className="brp-underline"/>

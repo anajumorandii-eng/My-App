@@ -1,3 +1,4 @@
+import { IllustrationMaterials, illustrationMaterialStyle } from './IllustrationMaterials';
 import React, { useId } from 'react';
 import './HistorianIllustration.css';
 
@@ -338,7 +339,8 @@ function Artwork({ kind }: { kind: string }) {
 
 export function HistorianIllustration({ kind, active }: Props) {
   const id = useId().replace(/:/g, '');
-  return <g className="hi-illustration" data-active-excerpt={active + 1}>
+  return <g className="hi-illustration" style={illustrationMaterialStyle(id)} data-active-excerpt={active + 1}>
+    <IllustrationMaterials id={id} palette="hi"/>
     <defs><pattern id={`${id}-grain`} width="27" height="27" patternUnits="userSpaceOnUse"><path d="M2 7h5m11 13h6M8 25h2" className="hi-grain" /></pattern></defs>
     <rect x="8" y="8" width="604" height="365" rx="8" className="hi-background" />
     <rect x="8" y="8" width="604" height="365" rx="8" fill={`url(#${id}-grain)`} />

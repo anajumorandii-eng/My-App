@@ -72,3 +72,9 @@
 .dark .ha-cloud { fill:#8eaaa8; stroke:#c4d5c9; }
 .dark .ha-rain { stroke:#a4d8ed; }
 .ha-air-parcel { fill:var(--ha-wine); stroke:var(--ha-paper); stroke-width:1.5; }
+
+.ha-illustration :is(.ha-stone,.ha-column), .ha-illustrated :is(.ha-stone,.ha-column) { fill: var(--plate-stone); }
+.ha-illustrated :is(.ha-earth,.ha-wood-fill) { fill: var(--plate-earth); }
+.ha-illustrated .ha-sea { fill: var(--plate-sea); }
+ .ha-illustrated { --ha-stone: #c4b394; --ha-sea: #a6c7ca; }
+.dark .ha-illustrated { --ha-stone: #6a7569; --ha-sea: #3e6a72; }

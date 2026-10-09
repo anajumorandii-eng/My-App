@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { Arrow, ArrowHead, Person, type Scene } from './cenaKit';
@@ -30,6 +30,7 @@ const AFRICA = 'M318 140C340 132 376 134 396 144C410 154 414 174 406 190C398 210
 const LAYERS = ['metais = riqueza', 'pacto colonial', 'trabalho forçado', 'tráfico atlântico'];
 
 export function FirstGlobalization({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const still = p(1).duration === 0;
   const layer = (k: number) => ({ opacity: k === active ? 1 : k < active ? 0.42 : 0 });
@@ -43,7 +44,7 @@ export function FirstGlobalization({ active }: Scene) {
     <HistorianIllustration kind="FirstGlobalization" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="im-head-glob" />
+    <ArrowHead id={`${diagramId}-im-head-glob`} />
     <text x="30" y="40" className="bi-kicker">MERCANTILISMO · SÉC. XVI–XVIII</text>
     <path d={AMERICA_N} className="bi-land" />
     <path d={AMERICA_S} className="bi-land" />
@@ -81,8 +82,8 @@ export function FirstGlobalization({ active }: Scene) {
 
     {/* Camada 2: as duas mãos do pacto, com a trava da exclusividade. */}
     <motion.g initial={false} animate={layer(1)} transition={p(0.5)}>
-      <Arrow d="M222 190C258 150 282 128 306 112" on={active >= 1} p={p} head="im-head-glob" delay={0.2} />
-      <Arrow d="M312 80C270 68 228 72 202 84" on={active >= 1} p={p} head="im-head-glob" delay={0.6} />
+      <Arrow d="M222 190C258 150 282 128 306 112" on={active >= 1} p={p} head={`${diagramId}-im-head-glob`} delay={0.2} />
+      <Arrow d="M312 80C270 68 228 72 202 84" on={active >= 1} p={p} head={`${diagramId}-im-head-glob`} delay={0.6} />
       <text x="286" y="182" textAnchor="middle" className="bi-hand-sm">matéria-prima</text>
       <text x="256" y="62" textAnchor="middle" className="bi-hand-sm">manufaturados</text>
       <motion.g initial={false} animate={{ scale: active === 1 ? [0.4, 1.2, 1] : 1 }} transition={p(0.6, 1)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }}>
@@ -103,7 +104,7 @@ export function FirstGlobalization({ active }: Scene) {
           animate={{ opacity: active >= 2 ? 1 : 0, rotate: k % 2 ? 0 : 0 }} transition={p(0.4, 0.5 + k * 0.15)} />)}
         <text x="13" y="22" textAnchor="middle" className="bi-tiny">larga escala</text>
       </g>
-      <Arrow d="M130 200C140 200 146 198 152 194" on={active >= 2} p={p} head="im-head-glob" delay={0.9} />
+      <Arrow d="M130 200C140 200 146 198 152 194" on={active >= 2} p={p} head={`${diagramId}-im-head-glob`} delay={0.9} />
     </motion.g>
 
     {/* Camada 4: o navio negreiro cruza da África para a América. */}
@@ -170,6 +171,7 @@ export function FirstGlobalization({ active }: Scene) {
 // cargo — riqueza não compra o degrau de cima, e é essa exclusão que o resumo
 // liga à independência.
 export function SpanishCastes({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const still = p(1).duration === 0;
   const tiers = [
@@ -181,9 +183,9 @@ export function SpanishCastes({ active }: Scene) {
     <HistorianIllustration kind="SpanishCastes" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="im-head-casta" />
+    <ArrowHead id={`${diagramId}-im-head-casta`} />
     <text x="30" y="40" className="bi-kicker">AMÉRICA ESPANHOLA · CASTAS</text>
-    <path d="M52 196V88" className="bi-arrow-static" markerEnd="url(#im-head-casta)" />
+    <path d="M52 196V88" className="bi-arrow-static" markerEnd={`url(#${diagramId}-im-head-casta)`} />
     <text x="62" y="98" className="bi-tiny">mais direitos,</text>
     <text x="62" y="111" className="bi-tiny">cargos e status</text>
 
@@ -289,6 +291,7 @@ const STATIONS = [
 ];
 
 export function ReformationDialectic({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const still = p(1).duration === 0;
   const dim = (k: number) => ({ opacity: k === active || (active === 2 && k < 2) ? 1 : 0.5 });
@@ -297,7 +300,7 @@ export function ReformationDialectic({ active }: Scene) {
     <HistorianIllustration kind="ReformationDialectic" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="im-head-ref" />
+    <ArrowHead id={`${diagramId}-im-head-ref`} />
     <text x="30" y="40" className="bi-kicker">REFORMA E CONTRARREFORMA · SÉC. XVI</text>
     {STATIONS.map((s, k) => <g key={s.title}>
       <rect x={s.x} y="54" width="176" height="176" rx="14" className={k === active ? 'bi-panel im-card-on' : 'bi-panel'} />
@@ -315,7 +318,7 @@ export function ReformationDialectic({ active }: Scene) {
       <path d="M112 150h10" className="im-slot" />
       <motion.circle cx="117" cy="130" r="5" className="im-gold" initial={false}
         animate={active === 0 && !still ? { y: [-6, 20, 20], opacity: [1, 1, 0] } : { y: 20, opacity: 0 }} transition={p(1, 0.3)} />
-      <Arrow d="M138 150C146 140 150 132 152 124" on={active === 0} p={p} head="im-head-ref" delay={0.9} />
+      <Arrow d="M138 150C146 140 150 132 152 124" on={active === 0} p={p} head={`${diagramId}-im-head-ref`} delay={0.9} />
       <motion.g initial={false} animate={{ y: active === 0 && !still ? [12, 0] : 0 }} transition={p(0.6, 1.1)}>
         <path d="M156 100h24v30h-24Z" className="im-doc" />
         <path d="M160 108h16M160 114h16M160 120h10" className="bi-scroll-line" />
@@ -384,6 +387,7 @@ export function ReformationDialectic({ active }: Scene) {
 // sobe da guerra de todos contra todos; no terceiro recorte os dois fios
 // acendem juntos e se encontram no mesmo pedestal.
 export function AbsolutismPaths({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const still = p(1).duration === 0;
   const on = (k: number) => active === k || active === 2;
@@ -391,7 +395,7 @@ export function AbsolutismPaths({ active }: Scene) {
     <HistorianIllustration kind="AbsolutismPaths" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <ArrowHead id="im-head-abs" />
+    <ArrowHead id={`${diagramId}-im-head-abs`} />
     <text x="30" y="40" className="bi-kicker">ABSOLUTISMO · DUAS JUSTIFICATIVAS</text>
 
     {/* Trono central. */}
@@ -410,7 +414,7 @@ export function AbsolutismPaths({ active }: Scene) {
       <path d="M150 92a14 14 0 0 1 22-14a18 18 0 0 1 32 4a12 12 0 0 1 2 24h-52a10 10 0 0 1-4-14Z" className="im-cloud" />
       {[0, 1, 2].map(k => <motion.path key={k} d={`M${168 + k * 14} 108l${10 + k * 6} ${22 + k * 4}`} className="im-ray" initial={false}
         animate={{ pathLength: on(0) ? 1 : 0.4 }} transition={p(0.6, on(0) ? 0.2 + k * 0.12 : 0)} />)}
-      <Arrow d="M216 128C250 132 276 144 294 158" on={on(0)} p={p} head="im-head-abs" delay={0.5} />
+      <Arrow d="M216 128C250 132 276 144 294 158" on={on(0)} p={p} head={`${diagramId}-im-head-abs`} delay={0.5} />
       <Person x={70} y={124} s={1} coat="bi-coat-dark" />
       <path d="M67 136v8M73 136v8" className="im-collar" />
       <g transform="translate(96 146)">
@@ -432,7 +436,7 @@ export function AbsolutismPaths({ active }: Scene) {
         <path d="M464 76l26-16M492 76l-26-16" className="im-sword" />
       </motion.g>
       <text x="478" y="104" textAnchor="middle" className="bi-tiny">guerra de todos contra todos</text>
-      <Arrow d="M478 112V130" on={on(1)} p={p} head="im-head-abs" delay={0.4} />
+      <Arrow d="M478 112V130" on={on(1)} p={p} head={`${diagramId}-im-head-abs`} delay={0.4} />
       {[0, 1].map(k => <motion.rect key={k} x={452 + k * 44} y="80" width="9" height="7" rx="1" className="bi-ballot" initial={false}
         animate={active === 1 && !still ? { x: [0, 26 - k * 44, 26 - k * 44], y: [0, 50, 64], opacity: [1, 1, 0] } : { x: 0, y: 0, opacity: 0 }} transition={p(1.4, 0.6 + k * 0.2)} />)}
       <g transform="translate(482 156)">
@@ -441,7 +445,7 @@ export function AbsolutismPaths({ active }: Scene) {
       </g>
       <text x="530" y="152" className="bi-small bi-strong">Leviatã</text>
       <text x="530" y="166" className="bi-small">1651</text>
-      <Arrow d="M456 168C420 170 368 170 342 178" on={on(1)} p={p} head="im-head-abs" delay={0.9} />
+      <Arrow d="M456 168C420 170 368 170 342 178" on={on(1)} p={p} head={`${diagramId}-im-head-abs`} delay={0.9} />
       <text x="590" y="202" textAnchor="end" className="bi-label">contrato · Hobbes</text>
       <text x="590" y="224" textAnchor="end" className="bi-small">cada um cede seus direitos</text>
       <text x="590" y="240" textAnchor="end" className="bi-small">naturais ao soberano</text>
@@ -473,6 +477,7 @@ const THINKERS = [
 ];
 
 export function EnlightenmentLamp({ active }: Scene) {
+  const diagramId = useId().replace(/:/g, '');
   const p = usePaced();
   const still = p(1).duration === 0;
   const lit = (k: number) => active === k || active === 3;
@@ -489,7 +494,7 @@ export function EnlightenmentLamp({ active }: Scene) {
     <HistorianIllustration kind="EnlightenmentLamp" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <defs><marker id="im-head-ilu" viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="im-up-head" /></marker></defs>
+    <defs><marker id={`${diagramId}-im-head-ilu`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="5" markerHeight="5" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="im-up-head" /></marker></defs>
     <text x="30" y="40" className="bi-kicker">ILUMINISMO · SÉCULO XVIII</text>
 
     {THINKERS.map((t, k) => <g key={t.name}>
@@ -518,7 +523,7 @@ export function EnlightenmentLamp({ active }: Scene) {
       <path d="M296 124l2-12 6 5 4-9 4 9 6-5 2 12Z" className="bi-crown" />
       <motion.path d="M290 106l36 22M326 106l-36 22" className="bi-cross" initial={false} animate={{ pathLength: lit(1) ? 1 : 0, opacity: lit(1) ? 1 : 0 }} transition={p(0.5, 0.9)} />
       {[262, 286, 310, 334, 358].map((x, k) => <Person key={x} x={x} y={160} s={0.5} coat={['bi-coat-plain', 'bi-coat-green', 'bi-coat', 'bi-coat-green', 'bi-coat-plain'][k]} />)}
-      {[274, 310, 346].map((x, k) => <motion.path key={x} d={`M${x} 150v-16`} className="im-up" markerEnd="url(#im-head-ilu)" initial={false}
+      {[274, 310, 346].map((x, k) => <motion.path key={x} d={`M${x} 150v-16`} className="im-up" markerEnd={`url(#${diagramId}-im-head-ilu)`} initial={false}
         animate={{ pathLength: lit(1) ? 1 : 0, opacity: lit(1) ? 1 : 0 }} transition={p(0.6, lit(1) ? 0.2 + k * 0.15 : 0)} />)}
       <text x="310" y="190" textAnchor="middle" className="bi-tiny">vontade geral</text>
     </motion.g>

@@ -20,10 +20,15 @@ export function ChapterObjectIcon({chapterId}: {chapterId: string}) {
   const config = chapterIconModels[chapterId];
   const art = config && chapterIconGeometry[config.model];
   if (!art) return null;
-  const copper = `url(#${uid}-copper)`,metal = `url(#${uid}-metal)`,jade = `url(#${uid}-jade)`;
+  const organic = new Set(['heart','kidney','lungs','brain','neuron','stomach','gland','blood']);
+  const natural = new Set(['cell','leaf','tree','algae','flower','mountain','forest','seed','map','crop']);
+  const aquatic = new Set(['earth','globe','water','satellite','storm']);
+  const material = aquatic.has(config.model) ? 'metal' : organic.has(config.model) ? 'tissue' : natural.has(config.model) ? 'jade' : 'copper';
+  const copper = `url(#${uid}-${material})`,metal = `url(#${uid}-metal)`,jade = `url(#${uid}-jade)`;
   return <svg className="vs-object-icon vs-chapter-object" viewBox="0 0 80 80" aria-hidden="true"
-    data-chapter-object={chapterId} data-study-object={config.model} data-object-context={config.context}>
+    data-chapter-object={chapterId} data-study-object={config.model} data-object-context={config.context} data-object-material={material}>
     <defs>
+      <radialGradient id={`${uid}-tissue`} cx=".28" cy=".22" r=".85"><stop stopColor="#f9d4cc"/><stop offset=".42" stopColor="#df928a"/><stop offset=".8" stopColor="#b35a65"/><stop offset="1" stopColor="#743849"/></radialGradient>
       <linearGradient id={`${uid}-copper`} x1="0" y1="0" x2=".9" y2="1"><stop stopColor="#fae2b4"/><stop offset=".35" stopColor="#e8ba78"/><stop offset=".7" stopColor="#be884e"/><stop offset="1" stopColor="#805735"/></linearGradient>
       <linearGradient id={`${uid}-metal`} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#e2eeea"/><stop offset=".35" stopColor="#b9cdd0"/><stop offset=".72" stopColor="#74999f"/><stop offset="1" stopColor="#385d69"/></linearGradient>
       <linearGradient id={`${uid}-jade`} x1="0" y1="0" x2=".8" y2="1"><stop stopColor="#e1e8b3"/><stop offset=".4" stopColor="#a6bc8f"/><stop offset="1" stopColor="#4e7863"/></linearGradient>

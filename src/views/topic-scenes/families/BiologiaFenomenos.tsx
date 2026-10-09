@@ -1,4 +1,5 @@
 import React from 'react';
+import { BiologicalVolume } from './BiologicalVolume';
 import { motion } from 'motion/react';
 import type { SceneEntry } from '../types';
 import { useSceneMotion } from '../useSceneMotion';
@@ -441,7 +442,7 @@ function Virus({ ativo, t }: Cena) {
 function Transpiracao({ ativo, t }: Cena) {
   const ordem = ['Transpiração', 'Tensão', 'Coesão', 'Tração'];
   const atual = ordem.indexOf(ativo);
-  const parte = (i: number, filho: React.ReactNode) => <motion.g initial={false} animate={{ opacity: i === atual ? 1 : 0.3 }} transition={t}>{filho}</motion.g>;
+  const parte = (i: number, filho: React.ReactNode) => <motion.g initial={false} animate={{ opacity: i === atual ? 1 : 0.82 }} transition={t}>{filho}</motion.g>;
   return <g>
     <rect x={226} y={60} width={28} height={180} rx="6" className="bf-xilema" />
     <path d="M240 60q60-40 120-10q-60 30-120 10Z" className="bf-folha-planta" />
@@ -626,7 +627,14 @@ export const BIOLOGIA_FENOMENO_CENAS: Record<string, CenaFenomeno> = {
 
 export const BIOLOGIA_FENOMENO_IDS = new Set(Object.keys(BIOLOGIA_FENOMENO_CENAS));
 
+const BIOLOGIA_VOLUMETRICA: Record<string, CenaFenomeno> = Object.fromEntries(
+  Object.entries(BIOLOGIA_FENOMENO_CENAS).map(([id, config]) => {
+    const Drawing = config.cena;
+    return [id, { ...config, cena: function BiologicalDrawing(props: Cena) { return <BiologicalVolume><Drawing {...props}/></BiologicalVolume>; } }];
+  }),
+);
+
 export function BiologiaFenomenos({ entry }: { entry: SceneEntry }) {
   const t = useSceneMotion();
-  return <FenomenoFrame entry={entry} cenas={BIOLOGIA_FENOMENO_CENAS} t={t} />;
+  return <FenomenoFrame entry={entry} cenas={BIOLOGIA_VOLUMETRICA} t={t} />;
 }
