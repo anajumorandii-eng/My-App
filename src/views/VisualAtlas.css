@@ -93,9 +93,10 @@
 .crivo-visual--atlas .vs-lib-card { padding: 18px; background: var(--vs-paper); border: 1px solid var(--vs-line); border-radius: 12px; box-shadow: 0 2px 5px rgb(48 32 18 / .04); }
 .crivo-visual--atlas .vs-lib-card::before { display: none; }
 .crivo-visual--atlas .vs-lib-card:hover { transform: none; border-color: var(--vs-burgundy); }
+.crivo-visual--atlas .vs-lib-card > div > div { min-width: 0; flex: 1; overflow-wrap: anywhere; }
 .crivo-visual.crivo-visual--atlas .vs-lib-card strong,.crivo-visual.crivo-visual--atlas .vs-lib-card .font-bold { font-family: "Newsreader",Georgia,serif; font-weight: 500; font-size: 1.2rem; }
 .crivo-visual--atlas .vs-lib-card .text-zinc-500 { color: var(--vs-dim); }
-.crivo-visual--atlas .vs-lib-card-materia { font: 550 .75rem/1.4 Inter,system-ui,sans-serif; letter-spacing: .02em; }
+.crivo-visual.crivo-visual--atlas .vs-lib-card .vs-lib-card-materia { font: 550 .75rem/1.4 Inter,system-ui,sans-serif; letter-spacing: .02em; }
 .crivo-visual--atlas .vs-lib-filtros :is(select,input) { background: var(--vs-paper-strong); border-color: var(--vs-line); color: var(--vs-ink); border-radius: 8px; min-height: 44px; }
 .crivo-visual--atlas .vs-lib-filtros span { font: 500 .875rem/1.4 Inter,system-ui,sans-serif; color: var(--vs-dim)!important; text-transform: none; letter-spacing: 0; }
 .crivo-visual--atlas .vs-branch-map { padding: 22px; overflow: hidden; }
