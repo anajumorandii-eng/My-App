@@ -614,8 +614,8 @@ const geografiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-geografia-dominios-morfoclimaticos',
     family: 'tipologia',
-    question: "Em que seis domínios morfoclimáticos Ab'Sáber classificou o território brasileiro?",
-    nota: 'Os seis domínios coexistem territorialmente, com faixas de transição descritas como categoria à parte.',
+    question: "Como Amazônico, Cerrado e Caatinga se distinguem na classificação de Ab'Sáber?",
+    nota: 'A prancha compara três exemplos dos seis domínios. As faixas de transição são descritas como categoria à parte.',
     items: [
       {
         label: 'Amazônico',

@@ -414,7 +414,7 @@ const historiaBase: SceneEntry[] = [
     question: 'Como o pioneirismo tecnológico português condicionou, elo a elo, o modelo econômico inicial de baixo investimento no Brasil?',
     items: [
       {
-        label: 'Escola de Sagres',
+        label: 'Tecnologia náutica',
         claim: 'o investimento sistemático em tecnologia náutica permitiu a Portugal explorar progressivamente a costa africana e alcançar a Índia por via marítima em 1498',
         section: 'Pioneirismo português',
         quote: 'Esse investimento sistemático permitiu a Portugal explorar progressivamente a costa africana ao longo do século XV, contornando o Cabo da Boa Esperança em 1488 (expedição de Bartolomeu Dias) e finalmente alcançando a Índia por via marítima direta em 1498, com Vasco da Gama',

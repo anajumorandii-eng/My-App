@@ -27,11 +27,19 @@
       "scope": "Cabeçalhos compartilhados",
       "finding": "Palavras quebradas/cortadas",
       "fix": "Largura flexível e quebra entre palavras"
+    },
+    {
+      "id": "summary-geografia-dominios-morfoclimaticos",
+      "finding": "Pergunta abrangia seis domínios, mas prancha compara três",
+      "fix": "Pergunta e nota explicitam os três exemplos"
+    },
+    {
+      "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+      "finding": "Rótulo Escola de Sagres não correspondia à evidência citada de investimento náutico",
+      "fix": "Tecnologia náutica"
     }
   ],
   "pending": [
-    "Escola de Sagres: conferir contextualização histórica completa.",
-    "Domínios morfoclimáticos: conferir escopo dos exemplos apresentados.",
     "Fórmulas/vetores pequenos: ampliar quando necessário.",
     "Não há aprovação pedagógica ou estética formal automática."
   ],
