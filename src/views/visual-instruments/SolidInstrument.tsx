@@ -7,6 +7,7 @@ import { SOLID_CONFIGS, estadoInicial, type SolidConfigId } from '../../lib/soli
 import { ALTURA, LARGURA, desenhar, type Forma } from '../../lib/solidDrawing';
 import { formatar } from '../../lib/solids';
 import './SolidInstrument.css';
+import { SpatialSolidView } from './SpatialSolidView';
 
 /**
  * Prancha manipulável de sólidos: o objeto do capítulo, com as medidas nas mãos
@@ -63,6 +64,7 @@ export function solidInstrument(id: SolidConfigId) {
     const inicial = estadoInicial(config);
     const [valores, setValores] = useState(inicial.valores);
     const [forma, setForma] = useState(inicial.forma);
+    const [vista, setVista] = useState<'anotada' | 'espacial'>('espacial');
 
     const visiveis = config.controlesVisiveis && forma ? config.controlesVisiveis(forma) : config.controles.map((c) => c.id);
     const controles = config.controles.filter((c) => visiveis.includes(c.id));
@@ -84,6 +86,11 @@ export function solidInstrument(id: SolidConfigId) {
         emphasis={par.emphasis}
         scene={
           <div className="vs-instrument vs-solid-instrument">
+            <div className="vs-solid-view-switch" role="group" aria-label="Vista do sólido">
+              <button type="button" aria-pressed={vista === 'espacial'} onClick={() => setVista('espacial')}>Objeto 3D</button>
+              <button type="button" aria-pressed={vista === 'anotada'} onClick={() => setVista('anotada')}>Desenho anotado</button>
+            </div>
+            {vista === 'espacial' ? <SpatialSolidView id={id} values={valores} shape={forma} label={nome + ': ' + medidas} /> : (
             <svg
               className="vs-plane vs-solid"
               viewBox={`0 0 ${LARGURA} ${ALTURA}`}
@@ -93,6 +100,7 @@ export function solidInstrument(id: SolidConfigId) {
             >
               {desenhar(id, valores, forma).map((peca, i) => <Peca key={i} forma={peca} />)}
             </svg>
+            )}
             <p className="vs-instrument-dica">mexa nos controles: o desenho e as leituras acompanham</p>
 
             {config.formas && (

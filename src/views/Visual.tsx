@@ -26,7 +26,9 @@ import { ambienteDaMateria, ambienteDoCapitulo, usaMolduraTecnologica } from '..
 import { PREFERENCIAS_PADRAO, type PreferenciasVisual } from '../hooks/usePreferenciasVisual';
 import { useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
 import { registrarRecente } from './visual-boards/BuscaRapida';
+import { StudyObjectIcon } from './visual-boards/StudyObjectIcon';
 import './Visual.css';
+import './VisualAtlas.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
 
@@ -177,6 +179,7 @@ function VisualLibrary({ onOpen, preferencias }: {
                       enquanto a Ana Júlia procurava um capítulo. Saiu dos cards;
                       o movimento continua só dentro do mapa. */}
                   <div className="flex items-start gap-4">
+                    <StudyObjectIcon subject={item.subject} topic={item.topic} />
                     <div>
                       <span className="vs-lib-card-materia text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
                         {item.subject} • {item.topic}
@@ -359,7 +362,7 @@ export default function Visual() {
       );
     }
     return (
-      <div className="ni-main crivo-visual crivo-visual--tech">
+      <div className="ni-main crivo-visual crivo-visual--tech crivo-visual--atlas">
         <VisualLibrary onOpen={(id) => setSearchParams({ summary: id })} preferencias={preferencias} />
       </div>
     );
@@ -425,10 +428,10 @@ export default function Visual() {
   };
 
   return (
-    <MolduraTecnologicaContext.Provider value={tecnologico}>
+    <MolduraTecnologicaContext.Provider value={false}>
     {/* ni-main dá as margens que toda tela tem: sem ele o Visual encostava na
         barra lateral e na borda direita do iPad. */}
-    <div className={`ni-main crivo-visual${tecnologico ? ' crivo-visual--tech' : ''}`}>
+    <div className={`ni-main crivo-visual crivo-visual--atlas${tecnologico ? ' crivo-visual--tech' : ''}`}>
       <header className="vs-topic-bar">
         <button onClick={() => setSearchParams({})} className="vs-back-button" aria-label="Voltar à biblioteca visual">
           <ArrowLeft aria-hidden="true" />
@@ -521,7 +524,7 @@ export default function Visual() {
       )}
 
       <div data-study-mode={mode} className={`vs-workspace${!selectedNode && !intervention ? ' vs-workspace--solo' : ''}`}>
-        <motion.main key={mode} id={`visual-mode-panel-${mode}`} role="tabpanel" aria-labelledby={`visual-mode-${mode}`} className="vs-main" initial={reducedMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : MOTION_DURATION.component }}>
+        <motion.section key={mode} id={`visual-mode-panel-${mode}`} role="tabpanel" aria-labelledby={`visual-mode-${mode}`} className="vs-main" initial={reducedMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : MOTION_DURATION.component }}>
           {mode !== 'testar' && (
             <AnimatePresence mode="wait">
               <motion.div
@@ -547,10 +550,8 @@ export default function Visual() {
             </AnimatePresence>
           )}
 
-          {mode === 'explorar' && <VisualJourney key={summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
-
-
           {mode !== 'testar' && <ConceptChain
+            key={summary.id}
             map={map}
             states={states}
             selectedId={selectedNode}
@@ -559,6 +560,7 @@ export default function Visual() {
             escondendo={mode === 'reconstruir'}
           />}
 
+          {mode === 'explorar' && <VisualJourney key={summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
           {/* Quantas conexões o diagnóstico escondeu. Vivia dentro da prancha
               adiabática — a única das 26 que não usava o BoardShell —, então
               valia para um capítulo só. Aqui vale para todos, e a frase sobre
@@ -728,7 +730,7 @@ export default function Visual() {
               )}
             </section>
           )}
-        </motion.main>
+        </motion.section>
 
 
         {mode === 'explorar' && selectedNode ? (

@@ -1,0 +1,699 @@
+{
+  "passed": 96,
+  "mathChapters": 83,
+  "subjects": 14,
+  "checks": [
+    "artefato primário preservado",
+    "nós completos",
+    "representação desenhada",
+    "sem overflow",
+    "sem erros de execução"
+  ],
+  "results": [
+    {
+      "id": "summary-matematica-potencias-e-radicais",
+      "topic": "Potências e Radicais",
+      "representation": "experiment",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-razao-e-proporcao",
+      "topic": "Razão e Proporção",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-porcentagem",
+      "topic": "Porcentagem",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-o-sistema-de-numeracao-decimal",
+      "topic": "O Sistema de Numeração Decimal",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-introducao-a-teoria-dos-numeros-inteiros",
+      "topic": "Introdução à Teoria dos Números Inteiros",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-introducao-as-sequencias",
+      "topic": "Introdução às Sequências",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-progressao-aritmetica",
+      "topic": "Progressão Aritmética",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-progressao-geometrica",
+      "topic": "Progressão Geométrica",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-sequencias",
+      "topic": "Sequências",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-sistemas-de-equacoes",
+      "topic": "Sistemas de Equações",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-tabelas-e-matrizes",
+      "topic": "Tabelas e Matrizes",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-multiplicacao-de-matrizes",
+      "topic": "Multiplicação de Matrizes",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-determinantes",
+      "topic": "Determinantes",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-discussao-de-sistemas-lineares",
+      "topic": "Discussão de Sistemas Lineares",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-medias",
+      "topic": "Médias",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-introducao-as-tecnicas-de-contagem",
+      "topic": "Introdução às Técnicas de Contagem",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-o-problema-da-fila",
+      "topic": "O Problema da Fila",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-o-problema-do-grupo",
+      "topic": "O Problema do Grupo",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-tecnicas-de-contagem",
+      "topic": "Técnicas de Contagem",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-operacoes-com-probabilidades",
+      "topic": "Operações com Probabilidades",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-eventos-disjuntos-e-eventos-independentes",
+      "topic": "Eventos Disjuntos e Eventos Independentes",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-estatistica-descritiva",
+      "topic": "Estatística Descritiva",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-introducao-a-geometria-plana",
+      "topic": "Introdução à Geometria Plana",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-angulos-em-triangulos",
+      "topic": "Ângulos em Triângulos",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-angulos-em-poligonos",
+      "topic": "Ângulos em Polígonos",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-angulos-e-circunferencias",
+      "topic": "Ângulos e Circunferências",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-simetrias-e-congruencias",
+      "topic": "Simetrias e Congruências",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-identificacao-de-simetrias-i",
+      "topic": "Identificação de Simetrias I",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-identificacao-de-simetrias-ii",
+      "topic": "Identificação de Simetrias II",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-a-geometria-da-proporcionalidade",
+      "topic": "A Geometria da Proporcionalidade",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-semelhanca-de-triangulos",
+      "topic": "Semelhança de Triângulos",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo",
+      "topic": "O Ponto Médio e o Baricentro de um Triângulo",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-triangulo-retangulo",
+      "topic": "Triângulo Retângulo",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-a-geometria-metrica-plana",
+      "topic": "A Geometria Métrica Plana",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-areas-de-poligonos",
+      "topic": "Áreas de Polígonos",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-area-do-circulo-e-de-suas-partes",
+      "topic": "Área do Círculo e de suas Partes",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-razoes-entre-areas-de-figuras-planas",
+      "topic": "Razões entre Áreas de Figuras Planas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-areas-de-figuras-planas",
+      "topic": "Áreas de Figuras Planas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-trigonometria-no-triangulo-retangulo",
+      "topic": "Trigonometria no Triângulo Retângulo",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-relacoes-trigonometricas-em-poligonos",
+      "topic": "Relações Trigonométricas em Polígonos",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-a-trigonometria-dos-numeros-reais",
+      "topic": "A Trigonometria dos Números Reais",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-outras-razoes-trigonometricas",
+      "topic": "Outras Razões Trigonométricas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-a-relacao-fundamental-da-trigonometria",
+      "topic": "A Relação Fundamental da Trigonometria",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-transformacoes-trigonometricas",
+      "topic": "Transformações Trigonométricas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-funcoes-trigonometricas",
+      "topic": "Funções Trigonométricas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-o-universo-tridimensional",
+      "topic": "O Universo Tridimensional",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-introducao-a-geometria-analitica",
+      "topic": "Introdução à Geometria Analítica",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+      "topic": "Lugar Geométrico e Equação da Circunferência",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-estudo-analitico-da-reta",
+      "topic": "Estudo Analítico da Reta",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+      "topic": "Posições Relativas entre Duas Retas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-distancia-entre-um-ponto-e-uma-reta",
+      "topic": "Distância entre um Ponto e uma Reta",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+      "topic": "Posições Relativas entre uma Reta e uma Circunferência",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-introducao-ao-estudo-analitico-das-conicas",
+      "topic": "Introdução ao Estudo Analítico das Cônicas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-representacao-geometrica-de-inequacoes",
+      "topic": "Representação Geométrica de Inequações",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-a-geometria-dos-numeros-complexos",
+      "topic": "A Geometria dos Números Complexos",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-tecnicas-algebricas",
+      "topic": "Técnicas Algébricas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-igualdades",
+      "topic": "Igualdades",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-desigualdades",
+      "topic": "Desigualdades",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-modelagem-algebrica-de-problemas-i",
+      "topic": "Modelagem Algébrica de Problemas I",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-equacoes-do-2-grau",
+      "topic": "Equações do 2º Grau",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-modelagem-algebrica-de-problemas-ii",
+      "topic": "Modelagem Algébrica de Problemas II",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-introducao-as-funcoes",
+      "topic": "Introdução às Funções",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-transformacoes-em-graficos-de-funcoes",
+      "topic": "Transformações em Gráficos de Funções",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-composicao-de-funcoes",
+      "topic": "Composição de Funções",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-inversao-de-funcoes",
+      "topic": "Inversão de Funções",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-funcoes-bijetoras",
+      "topic": "Funções Bijetoras",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-funcao-constante-e-funcao-afim",
+      "topic": "Função Constante e Função Afim",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-funcao-quadratica",
+      "topic": "Função Quadrática",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-estudo-do-sinal-de-funcoes",
+      "topic": "Estudo do Sinal de Funções",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-introducao-ao-modelo-exponencial",
+      "topic": "Introdução ao Modelo Exponencial",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-introducao-aos-logaritmos",
+      "topic": "Introdução aos Logaritmos",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-equacoes-e-funcoes-logaritmicas",
+      "topic": "Equações e Funções Logarítmicas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-modelagem-exponencial-de-problemas",
+      "topic": "Modelagem Exponencial de Problemas",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-modulo-de-um-numero-real",
+      "topic": "Módulo de um Número Real",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-numeros-complexos",
+      "topic": "Números Complexos",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-polinomios",
+      "topic": "Polinômios",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-matematica-equacoes-polinomiais",
+      "topic": "Equações Polinomiais",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "mat-probabilidade-contagem",
+      "topic": "Introdução às Probabilidades",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "fis-termologia-calor",
+      "topic": "Temperatura, Calor e seus Mecanismos de Transferência",
+      "subject": "Física",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 2
+    },
+    {
+      "id": "atu-cop30-belem",
+      "topic": "Clima, energia e meio ambiente",
+      "subject": "Atualidades",
+      "representation": "instrument",
+      "nodes": 6,
+      "sceneCount": 1
+    },
+    {
+      "id": "bio-ecologia-introducao",
+      "topic": "Introdução à Ecologia",
+      "subject": "Biologia",
+      "representation": "experiment",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "subject": "Geografia",
+      "representation": "experiment",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "topic": "Introdução à História e Primeiras Civilizações",
+      "subject": "História",
+      "representation": "scene",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+      "topic": "Text Comprehension: Taxonomy and Terminology",
+      "subject": "Língua Inglesa",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+      "topic": "A Dissertação no Vestibular: Mitos e Verdades",
+      "subject": "Redação",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-gramatica-lingua-um-sistema-complexo",
+      "topic": "Língua: um Sistema Complexo",
+      "subject": "Gramática",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-literatura-a-arte-e-suas-linguagens",
+      "topic": "A Arte e suas Linguagens",
+      "subject": "Literatura",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+      "topic": "Fatores de Textualidade",
+      "subject": "Entendimento de Texto",
+      "representation": "instrument",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "topic": "Evolução dos Modelos Atômicos",
+      "subject": "Química",
+      "representation": "board",
+      "nodes": 5,
+      "sceneCount": 2
+    },
+    {
+      "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+      "topic": "O Nascimento da Filosofia: do Mito ao Logos",
+      "subject": "Filosofia",
+      "representation": "experiment",
+      "nodes": 5,
+      "sceneCount": 1
+    },
+    {
+      "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+      "topic": "O Contexto Histórico do Surgimento da Sociologia",
+      "subject": "Sociologia",
+      "representation": "scene",
+      "nodes": 5,
+      "sceneCount": 1
+    }
+  ]
+}
