@@ -1,34 +1,20 @@
 import React, { useId } from 'react';
-import { subjectEvidenceFor, SUBJECT_EVIDENCE } from '../features/daily-plan/components/SubjectEvidence';
+import { StudyObjectIcon } from '../views/visual-boards/StudyObjectIcon';
 import { cadernoDa, type Esboco } from '../lib/rabiscosDaMateria';
 
-/**
- * Fundo de caderno da tela inteira: papel envelhecido (CSS, em
- * `ambiente-tecnologico.css`) com os rabiscos da matéria por cima.
- *
- * É o caderno de óptica da bancada do Hoje estendido ao app, a pedido da Ana
- * Júlia. Os rabiscos vêm de `lib/rabiscosDaMateria.ts`, que só guarda conteúdo
- * verdadeiro; o ícone é o mesmo das abas da matéria.
- *
- * SVG no DOM, e não imagem de fundo em CSS: SVG em `url()` não enxerga as
- * fontes da página, e a letra à mão (Kalam) cairia na do sistema. Um ladrilho
- * só, repetido pelo `<pattern>`, fixo atrás do conteúdo: rola junto com nada e
- * é desenhado uma vez.
+/** Fundo decorativo de papel com um mapa de ideias da matéria.
+ * As ramificações agrupam anotações verdadeiras, sem indicar relações causais.
+ * O padrão SVG é fixo, não captura cliques e não adiciona alvos ao teclado.
+ * O mapa aparece uma vez; efeitos suaves e movimento reduzido ficam estáticos.
  */
 
-const LARGURA = 800;
-const ALTURA = 620;
-
-/** Lugar de cada anotação no ladrilho. Largura máxima: 34 caracteres a 22 px, cerca de 370 px. */
-const LUGARES_TEXTO = [
-  { x: 36, y: 64, rot: -3 },
-  { x: 400, y: 132, rot: 2.5 },
-  { x: 60, y: 420, rot: 2 },
-  { x: 400, y: 548, rot: -2.5 },
-];
-const LUGARES_ESBOCO = [
-  { x: 560, y: 250, escala: 1.3 },
-  { x: 120, y: 172, escala: 1.2 },
+const LARGURA = 1000;
+const ALTURA = 720;
+const RAMOS = [
+  { x: 38, y: 80, caminho: 'M500 350 C340 350 380 126 344 126', cor: 'vinho' },
+  { x: 656, y: 112, caminho: 'M500 350 C630 350 600 158 656 158', cor: 'azul' },
+  { x: 58, y: 510, caminho: 'M500 350 C350 350 400 556 364 556', cor: 'verde' },
+  { x: 636, y: 542, caminho: 'M500 350 C630 350 600 588 636 588', cor: 'ouro' },
 ];
 
 /** Cada esboço num quadro de 140 × 100, só traço. */
@@ -166,32 +152,37 @@ function DesenhoDoEsboco({ tipo }: { tipo: Esboco }) {
 export function FundoCaderno({ materia }: { materia?: string }) {
   const id = `caderno-${useId().replace(/:/g, '')}`;
   const caderno = cadernoDa(materia);
-  const Icone = (materia && SUBJECT_EVIDENCE[materia] ? subjectEvidenceFor(materia) : null)?.icon;
   return (
-    <div className="crivo-caderno" aria-hidden="true">
+    <div className="crivo-caderno crivo-caderno--mapa" aria-hidden="true" data-materia={materia || 'Crivo'}>
       <svg width="100%" height="100%">
         <defs>
+          <linearGradient id={`${id}-papel`} x2="0" y2="1">
+            <stop stopColor="var(--mapa-cartao-luz)" /><stop offset="1" stopColor="var(--mapa-cartao)" />
+          </linearGradient>
           <pattern id={id} width={LARGURA} height={ALTURA} patternUnits="userSpaceOnUse">
-            {caderno.anotacoes.map((anotacao, i) => {
-              const l = LUGARES_TEXTO[i];
-              return (
-                <text key={anotacao} x={l.x} y={l.y} transform={`rotate(${l.rot} ${l.x} ${l.y})`} className="crivo-caderno__anotacao">{anotacao}</text>
-              );
-            })}
-            {caderno.esbocos.map((esboco, i) => {
-              const l = LUGARES_ESBOCO[i];
-              return (
-                <g key={esboco} transform={`translate(${l.x} ${l.y}) scale(${l.escala})`} className="crivo-caderno__esboco">
-                  <DesenhoDoEsboco tipo={esboco} />
+            <g className="crivo-caderno__mapa">
+              {RAMOS.map((ramo, i) => (
+                <g key={ramo.cor} className={`crivo-caderno__ramo crivo-caderno__ramo--${ramo.cor}`}>
+                  <path className="crivo-caderno__conexao" d={ramo.caminho} pathLength="1" />
+                  <g transform={`translate(${ramo.x} ${ramo.y})`}>
+                    <rect className="crivo-caderno__sombra" x="3" y="6" width="306" height="92" rx="18" />
+                    <rect className="crivo-caderno__cartao" width="306" height="92" rx="18" fill={`url(#${id}-papel)`} />
+                    <circle cx="22" cy="24" r="4" fill="currentColor" />
+                    <text className="crivo-caderno__numero" x="37" y="28">0{i + 1}</text>
+                    <text className="crivo-caderno__ideia" x="20" y="61">{caderno.anotacoes[i]}</text>
+                  </g>
                 </g>
-              );
-            })}
-            {Icone && (
-              <>
-                <Icone x={340} y={300} width={46} height={46} strokeWidth={1.3} className="crivo-caderno__icone" />
-                <Icone x={60} y={494} width={36} height={36} strokeWidth={1.3} className="crivo-caderno__icone" />
-              </>
-            )}
+              ))}
+              <circle className="crivo-caderno__sombra" cx="503" cy="356" r="61" />
+              <circle className="crivo-caderno__raiz" cx="500" cy="350" r="61" fill={`url(#${id}-papel)`} />
+              <svg x="461" y="303" width="78" height="78"><StudyObjectIcon subject={materia || 'Crivo'} /></svg>
+              <text className="crivo-caderno__materia" x="500" y="388" textAnchor="middle">{materia || 'Crivo'}</text>
+            </g>
+            {caderno.esbocos.map((esboco, i) => (
+              <g key={esboco} transform={`translate(${i === 0 ? 85 : 780} 290) scale(1.05)`} className="crivo-caderno__esboco">
+                <DesenhoDoEsboco tipo={esboco} />
+              </g>
+            ))}
           </pattern>
         </defs>
         <rect width="100%" height="100%" fill={`url(#${id})`} />

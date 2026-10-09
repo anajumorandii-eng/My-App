@@ -114,6 +114,7 @@ export function PainelPersonalizar({ preferencias, onMudar, ambienteAutomatico }
 
           <fieldset>
             <legend>Fundo</legend>
+            <p className="vs-personalizar-fundo-ajuda">Caderno: mapa de ideias com ícones e anotações da matéria. Papel: a mesma textura, sem desenhos.</p>
             <div className="vs-personalizar-segmento">
               {FUNDOS.map((item) => (
                 <button key={item.valor} type="button" aria-pressed={preferencias.fundo === item.valor} onClick={() => onMudar({ fundo: item.valor })}>
