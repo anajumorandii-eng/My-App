@@ -1,0 +1,363 @@
+{
+  "checks": [
+    {
+      "id": "summary-matematica-estudo-analitico-da-reta",
+      "theme": "light",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-estudo-analitico-da-reta",
+      "theme": "light",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-estudo-analitico-da-reta",
+      "theme": "light",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+      "theme": "light",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+      "theme": "light",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+      "theme": "light",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-numeros-complexos",
+      "theme": "light",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-numeros-complexos",
+      "theme": "light",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-numeros-complexos",
+      "theme": "light",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "theme": "light",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "theme": "light",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "theme": "light",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "theme": "light",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "theme": "light",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "theme": "light",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "theme": "light",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "theme": "light",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "theme": "light",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-estudo-analitico-da-reta",
+      "theme": "dark",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-estudo-analitico-da-reta",
+      "theme": "dark",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-estudo-analitico-da-reta",
+      "theme": "dark",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+      "theme": "dark",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+      "theme": "dark",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+      "theme": "dark",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-numeros-complexos",
+      "theme": "dark",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-numeros-complexos",
+      "theme": "dark",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-numeros-complexos",
+      "theme": "dark",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "theme": "dark",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "theme": "dark",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "theme": "dark",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "theme": "dark",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "theme": "dark",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "theme": "dark",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "theme": "dark",
+      "width": 1440,
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "theme": "dark",
+      "width": 834,
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "theme": "dark",
+      "width": 360,
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+      "theme": "light",
+      "width": 1440,
+      "options": [
+        "Dentro",
+        "Sobre",
+        "Fora"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+      "theme": "light",
+      "width": 834,
+      "options": [
+        "Dentro",
+        "Sobre",
+        "Fora"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+      "theme": "light",
+      "width": 360,
+      "options": [
+        "Dentro",
+        "Sobre",
+        "Fora"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+      "theme": "light",
+      "width": 1440,
+      "options": [
+        "Secante",
+        "Tangente",
+        "Externa"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+      "theme": "light",
+      "width": 834,
+      "options": [
+        "Secante",
+        "Tangente",
+        "Externa"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+      "theme": "light",
+      "width": 360,
+      "options": [
+        "Secante",
+        "Tangente",
+        "Externa"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+      "theme": "dark",
+      "width": 1440,
+      "options": [
+        "Dentro",
+        "Sobre",
+        "Fora"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+      "theme": "dark",
+      "width": 834,
+      "options": [
+        "Dentro",
+        "Sobre",
+        "Fora"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+      "theme": "dark",
+      "width": 360,
+      "options": [
+        "Dentro",
+        "Sobre",
+        "Fora"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+      "theme": "dark",
+      "width": 1440,
+      "options": [
+        "Secante",
+        "Tangente",
+        "Externa"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+      "theme": "dark",
+      "width": 834,
+      "options": [
+        "Secante",
+        "Tangente",
+        "Externa"
+      ],
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+      "theme": "dark",
+      "width": 360,
+      "options": [
+        "Secante",
+        "Tangente",
+        "Externa"
+      ],
+      "passed": true
+    }
+  ],
+  "accessibilityChecks": 16,
+  "violations": 0,
+  "periodic": {
+    "id": "summary-fisica-equacao-fundamental-da-ondulatoria",
+    "endpointsEquivalent": true,
+    "quarterCycleChanges": true
+  },
+  "runtime": {
+    "consoleErrors": [],
+    "failedAssets": []
+  }
+}

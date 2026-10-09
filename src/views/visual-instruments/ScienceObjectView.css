@@ -28,3 +28,6 @@
   .crivo-visual--atlas .vs-nucleic-instrument>.vs-plane,
   .crivo-visual--atlas .vs-nucleic-instrument>.vs-nucleic-object { grid-column: 1; grid-row: 2/span 6; }
 }
+
+.vs-science-bond.multiple:not(.hydrogen) line { stroke-width: 3; }
+.vs-science-direction { fill: var(--vs-ink); font: 700 14px Inter, sans-serif; }

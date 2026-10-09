@@ -44,3 +44,7 @@ A composição editorial, os ícones por assunto e a exploração em foco chegam
 ## Fundo personalizado
 
 A composição de caderno agora usa mapas de ideias e ícones com volume por matéria. Ver [direção, personalização, capturas e validação](fundo-personalizado/README.md).
+
+## Revisão individual dos mecanismos
+
+Depois da composição visual e do fundo, a [revisão de 09/10/2026](../revisao-individual-capitulos-2026-10-09/README.md) registra os 613 capítulos separadamente e corrige casos conceituais reproduzidos em Matemática, Química e Biologia.

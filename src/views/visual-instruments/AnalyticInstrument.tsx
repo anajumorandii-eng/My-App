@@ -90,7 +90,7 @@ function PlanoAnalitico({
   // Na configuração de reta e circunferência o que se mede é a distância do
   // CENTRO à reta, não a do ponto: é ela que a leitura compara com o raio.
   const origemDaMedida = config.circulo && retaViva ? { x: config.circulo.cx, y: config.circulo.cy } : ponto;
-  const retaMedida = retaViva ?? config.reta ?? null;
+  const retaMedida = config.retaDe ? retaViva : config.reta ?? null;
   const pe = retaMedida ? projecaoNaReta(origemDaMedida, retaMedida) : null;
 
   return (
@@ -254,6 +254,7 @@ export function analyticInstrument(configId: ConfigId) {
     const [ponto, setPonto] = useState<Ponto>(config.inicial);
 
     const leituras = config.readouts(ponto);
+    const casoAtivo = config.casos?.find(caso => Math.hypot(ponto.x - caso.ponto.x, ponto.y - caso.ponto.y) < 1e-9);
     const noPrimeiro = props.map.nodes[1] ?? props.map.nodes[0] ?? null;
     const noSegundo = props.map.nodes[2] ?? props.map.nodes[props.map.nodes.length - 1] ?? null;
 
@@ -272,6 +273,7 @@ export function analyticInstrument(configId: ConfigId) {
           max={config.alcance}
           step={0.1}
           value={ponto[chave]}
+          aria-valuetext={num(ponto[chave])}
           onChange={(e) => setPonto((p) => ({ ...p, [chave]: Number(e.target.value) }))}
         />
       </div>
@@ -289,7 +291,13 @@ export function analyticInstrument(configId: ConfigId) {
           <div className="vs-instrument">
             <PlanoAnalitico config={config} ponto={ponto} onMover={setPonto} destaque={par.emphasis !== 'nenhum'} />
             <p className="vs-instrument-dica">arraste o ponto {config.rotulo}, ou use os controles</p>
-            <div className="vs-plane-controls">{eixo('x')}{eixo('y')}</div>
+            <div className="vs-plane-controls">
+              {config.casos && <div className="vs-analytic-cases" role="group" aria-label="Casos da geometria">
+                {config.casos.map(caso => <button key={caso.label} type="button" aria-pressed={Math.hypot(ponto.x - caso.ponto.x, ponto.y - caso.ponto.y) < 1e-9} onClick={() => setPonto(caso.ponto)}>{caso.label}</button>)}
+              </div>}
+              {casoAtivo?.detalhe && <p className="vs-instrument-dica">{casoAtivo.detalhe}</p>}
+              {eixo('x')}{eixo('y')}
+            </div>
             <dl className="vs-plane-readouts">
               {leituras.map((l) => (
                 <div key={l.label} data-pivot={l.pivot ? 'true' : undefined}>

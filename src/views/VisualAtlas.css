@@ -232,3 +232,8 @@
   white-space: normal;
   overflow-wrap: anywhere;
 }
+
+.vs-analytic-cases { display: flex; flex-wrap: wrap; gap: 6px; }
+.vs-analytic-cases button { min-height: 44px; padding: 8px 12px; border: 1px solid var(--vs-line); border-radius: 8px; background: var(--vs-paper-strong); color: var(--vs-ink); font-size: .8rem; }
+.vs-analytic-cases button[aria-pressed="true"] { background: var(--vs-burgundy); color: var(--vs-paper-strong); }
+.vs-analytic-cases button:focus-visible { outline: 2px solid var(--vs-burgundy); outline-offset: 3px; }

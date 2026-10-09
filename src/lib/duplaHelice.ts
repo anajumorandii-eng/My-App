@@ -99,3 +99,17 @@ export function geometriaDoPar(indice: number) {
     alturaNm: indice * DNA_B.subidaPorParNm,
   };
 }
+
+/** DNA-B destrogiro em coordenadas cartesianas com Y vertical, em nanômetros.
+ * O molde segue a sequência 3′ → 5′ conforme o índice aumenta; a outra fita
+ * segue o sentido oposto. A mudança de eixo conserva a quiralidade da hélice.
+ */
+export function posicoesDoParVertical(indice: number, quantidade = 10): {
+  molde: [number, number, number]; complementar: [number, number, number];
+} {
+  const { angulo } = geometriaDoPar(indice);
+  const raio = DNA_B.diametroNm / 2;
+  const y = (indice - (quantidade - 1) / 2) * DNA_B.subidaPorParNm;
+  const x = raio * Math.cos(angulo), z = -raio * Math.sin(angulo);
+  return { molde: [x, y, z], complementar: [-x, y, -z] };
+}

@@ -75,8 +75,9 @@ export interface AnalyticConfig {
    * apontava para uma distância que o desenho não tinha. Instrumento cujo
    * arraste não altera a leitura não é instrumento — é figura.
    */
-  retaDe?: (p: Ponto) => Reta;
+  retaDe?: (p: Ponto) => Reta | null;
   circulo?: Circulo;
+  casos?: Array<{ label: string; ponto: Ponto; detalhe?: string }>;
   /** Vértices fixos além de A, com o rótulo que a leitura usa. */
   outros?: Array<{ p: Ponto; rotulo: string }>;
   /** Preenche o triângulo A, outros, ponto arrastado. */
@@ -120,7 +121,7 @@ export function projecaoNaReta(p: Ponto, r: Reta): Ponto {
 
 export type PosicaoNoCirculo = 'dentro' | 'sobre' | 'fora';
 
-export function posicaoNoCirculo(p: Ponto, c: Circulo, tolerancia = 0.12): PosicaoNoCirculo {
+export function posicaoNoCirculo(p: Ponto, c: Circulo, tolerancia = 1e-9): PosicaoNoCirculo {
   const d = Math.hypot(p.x - c.cx, p.y - c.cy);
   if (Math.abs(d - c.r) <= tolerancia) return 'sobre';
   return d < c.r ? 'dentro' : 'fora';
@@ -149,7 +150,7 @@ export function interseccao(r1: Reta, r2: Reta): Ponto | null {
 export type PosicaoRetaCirculo = 'secante' | 'tangente' | 'externa';
 
 /** A comparação é entre a distância do centro à reta e o raio. É só isso. */
-export function posicaoRetaCirculo(r: Reta, c: Circulo, tolerancia = 0.12): PosicaoRetaCirculo {
+export function posicaoRetaCirculo(r: Reta, c: Circulo, tolerancia = 1e-9): PosicaoRetaCirculo {
   const d = distanciaPontoReta({ x: c.cx, y: c.cy }, r);
   if (Math.abs(d - c.r) <= tolerancia) return 'tangente';
   return d < c.r ? 'secante' : 'externa';
@@ -220,7 +221,8 @@ export function baricentro(a: Ponto, b: Ponto, c: Ponto): Ponto {
   return { x: (a.x + b.x + c.x) / 3, y: (a.y + b.y + c.y) / 3 };
 }
 
-export function moduloEArgumento(p: Ponto): { modulo: number; argumento: number } {
+export function moduloEArgumento(p: Ponto): { modulo: number; argumento: number | null } {
+  if (p.x === 0 && p.y === 0) return { modulo: 0, argumento: null };
   const graus = (Math.atan2(p.y, p.x) * 180) / Math.PI;
   return { modulo: Math.hypot(p.x, p.y), argumento: graus < 0 ? graus + 360 : graus };
 }
@@ -257,7 +259,7 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
         { label: 'ponto médio', value: `(${num(m.x)}; ${num(m.y)})` },
         {
           label: 'coeficiente angular',
-          value: inclinacao === null ? 'não existe (reta vertical)' : num(inclinacao),
+          value: distanciaEntrePontos(a, p) < 1e-9 ? 'indefinido: A e B coincidem' : inclinacao === null ? 'não existe (reta vertical)' : num(inclinacao),
           pivot: true,
         },
       ];
@@ -265,6 +267,7 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
     annotations: (p) => {
       const a = { x: -3, y: -2 };
       const m = pontoMedio(a, p);
+      if (distanciaEntrePontos(a, p) < 1e-9) return [{ text: 'A = B: reta não definida', x: p.x, y: p.y, ...afastarDosEixos('A = B: reta não definida', p.x, p.y, 6, [[1.8, 1.8]], [a]) }];
       // Esta configuração serve hoje só a "Estudo Analítico da Reta": ponto
       // médio e distância ganharam pranchas próprias. As duas notas antigas —
       // ponto médio e hipotenusa — apontavam para o mesmo ponto e se
@@ -320,6 +323,7 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
     inicial: { x: 3.4, y: 1.2 },
     rotulo: 'P',
     circulo: { cx: 0.5, cy: -0.5, r: 3 },
+    casos: [{ label: 'Dentro', ponto: { x: 0.5, y: -0.5 } }, { label: 'Sobre', ponto: { x: 3.5, y: -0.5 } }, { label: 'Fora', ponto: { x: 4.5, y: -0.5 } }],
     readouts: (p) => {
       const c: Circulo = { cx: 0.5, cy: -0.5, r: 3 };
       const d = Math.hypot(p.x - c.cx, p.y - c.cy);
@@ -356,8 +360,14 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
     fixo: { x: 0, y: -3 },
     // r₂ é a reta que passa por A e por P: arrastar P gira r₂, e em algum lugar
     // dessa rotação ela fica paralela a r₁. Encontrar esse lugar é o exercício.
-    retaDe: (p) => ({ a: p.y + 3, b: -p.x, c: -3 * p.x }),
+    retaDe: (p) => Math.hypot(p.x, p.y + 3) < 1e-9 ? null : ({ a: p.y + 3, b: -p.x, c: -3 * p.x }),
     readouts: (p) => {
+      if (Math.hypot(p.x, p.y + 3) < 1e-9) return [
+        { label: 'r₁ (fixa)', value: 'x − y = 0' },
+        { label: 'r₂ (por A e P)', value: 'não definida: A e P coincidem' },
+        { label: 'posição', value: 'indefinida: falta uma segunda reta', pivot: true },
+        { label: 'ponto comum', value: 'não se aplica' },
+      ];
       const r1: Reta = { a: 1, b: -1, c: 0 };
       const r2: Reta = { a: p.y + 3, b: -p.x, c: -3 * p.x };
       const cruz = interseccao(r1, r2);
@@ -369,6 +379,7 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
       ];
     },
     annotations: (p) => {
+      if (Math.hypot(p.x, p.y + 3) < 1e-9) return [{ text: 'A = P: reta não definida', x: p.x, y: p.y, dx: 1.8, dy: 1.6 }];
       const cruz = interseccao({ a: 1, b: -1, c: 0 }, { a: p.y + 3, b: -p.x, c: -3 * p.x });
       // Três casos, e confundir dois deles é mentir sobre a geometria: sem
       // cruzamento é paralelismo; cruzamento fora da moldura continua sendo
@@ -380,7 +391,7 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
       return [{ text: 'o ponto comum', x: cruz.x, y: cruz.y, dx: 1.5, dy: 1.4 }];
     },
     insight:
-      'o determinante dos coeficientes decide sozinho: diferente de zero, as retas se cruzam em um ponto; igual a zero, elas são paralelas. Arraste P até r₂ ficar paralela a r₁ e veja o ponto comum desaparecer.',
+      'Para duas retas definidas, determinante diferente de zero indica um único encontro. Determinante zero exige distinguir paralelas de coincidentes. Nesta cena, A está fora de r₁: r₂ só pode ser concorrente ou paralela. Se P coincidir com A, um único ponto não define r₂.',
   },
 
   'reta-circunferencia': {
@@ -391,6 +402,11 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
     inicial: { x: 2.6, y: 2.6 },
     rotulo: 'P',
     circulo: { cx: 0, cy: 0, r: 3 },
+    casos: [
+      { label: 'Secante', ponto: { x: 0, y: 0 } },
+      { label: 'Tangente', ponto: { x: 3 / Math.sqrt(2), y: 3 / Math.sqrt(2) }, detalhe: 'Tangência exata: x = y = 3/√2. As coordenadas exibidas são arredondadas.' },
+      { label: 'Externa', ponto: { x: 3, y: 3 } },
+    ],
     // A reta passa por P com inclinação fixa: arrastar P a aproxima ou afasta
     // do centro, e é assim que a estudante encontra sozinha a posição tangente.
     retaDe: (p) => ({ a: 1, b: 1, c: -(p.x + p.y) }),
@@ -402,7 +418,7 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
       return [
         { label: 'distância do centro à reta', value: num(d) },
         { label: 'raio', value: num(c.r) },
-        { label: 'comparação', value: d < c.r ? 'd < r' : d > c.r ? 'd > r' : 'd = r' },
+        { label: 'comparação', value: pos === 'tangente' ? 'd = r' : pos === 'secante' ? 'd < r' : 'd > r' },
         { label: 'posição', value: pos, pivot: true },
         { label: 'pontos em comum', value: pos === 'secante' ? 'dois' : pos === 'tangente' ? 'um' : 'nenhum' },
       ];
@@ -427,7 +443,7 @@ export const CONFIGS: Record<ConfigId, AnalyticConfig> = {
       return [
         { label: 'forma algébrica', value: `${num(p.x)} ${p.y < 0 ? '−' : '+'} ${num(Math.abs(p.y))}i` },
         { label: 'módulo |z|', value: num(modulo), pivot: true },
-        { label: 'argumento', value: `${num(argumento, 1)}°` },
+        { label: 'argumento', value: argumento === null ? 'indefinido para z = 0' : `${num(argumento, 1)}°` },
         { label: 'conjugado', value: `${num(p.x)} ${p.y < 0 ? '+' : '−'} ${num(Math.abs(p.y))}i` },
       ];
     },

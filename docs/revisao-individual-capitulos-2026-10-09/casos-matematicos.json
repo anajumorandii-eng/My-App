@@ -1,0 +1,332 @@
+[
+  {
+    "id": "summary-matematica-estudo-analitico-da-reta",
+    "config": "dois-pontos",
+    "point": {
+      "x": -3,
+      "y": -2
+    },
+    "before": [
+      {
+        "label": "distância AB",
+        "value": "0"
+      },
+      {
+        "label": "ponto médio",
+        "value": "(−3; −2)"
+      },
+      {
+        "label": "coeficiente angular",
+        "value": "não existe (reta vertical)",
+        "pivot": true
+      }
+    ],
+    "after": [
+      {
+        "label": "distância AB",
+        "value": "0"
+      },
+      {
+        "label": "ponto médio",
+        "value": "(−3; −2)"
+      },
+      {
+        "label": "coeficiente angular",
+        "value": "indefinido: A e B coincidem",
+        "pivot": true
+      }
+    ]
+  },
+  {
+    "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+    "config": "duas-retas",
+    "point": {
+      "x": 0,
+      "y": -3
+    },
+    "before": [
+      {
+        "label": "r₁ (fixa)",
+        "value": "x − y = 0"
+      },
+      {
+        "label": "r₂ (por A e P)",
+        "value": " = 0"
+      },
+      {
+        "label": "posição",
+        "value": "coincidentes",
+        "pivot": true
+      },
+      {
+        "label": "ponto comum",
+        "value": "nenhum"
+      }
+    ],
+    "after": [
+      {
+        "label": "r₁ (fixa)",
+        "value": "x − y = 0"
+      },
+      {
+        "label": "r₂ (por A e P)",
+        "value": "não definida: A e P coincidem"
+      },
+      {
+        "label": "posição",
+        "value": "indefinida: falta uma segunda reta",
+        "pivot": true
+      },
+      {
+        "label": "ponto comum",
+        "value": "não se aplica"
+      }
+    ]
+  },
+  {
+    "id": "summary-matematica-numeros-complexos",
+    "config": "complexo",
+    "point": {
+      "x": 0,
+      "y": 0
+    },
+    "before": [
+      {
+        "label": "forma algébrica",
+        "value": "0 + 0i"
+      },
+      {
+        "label": "módulo |z|",
+        "value": "0",
+        "pivot": true
+      },
+      {
+        "label": "argumento",
+        "value": "0°"
+      },
+      {
+        "label": "conjugado",
+        "value": "0 − 0i"
+      }
+    ],
+    "after": [
+      {
+        "label": "forma algébrica",
+        "value": "0 + 0i"
+      },
+      {
+        "label": "módulo |z|",
+        "value": "0",
+        "pivot": true
+      },
+      {
+        "label": "argumento",
+        "value": "indefinido para z = 0"
+      },
+      {
+        "label": "conjugado",
+        "value": "0 − 0i"
+      }
+    ]
+  },
+  {
+    "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+    "config": "circunferencia",
+    "point": {
+      "x": 3.4,
+      "y": -0.5
+    },
+    "before": [
+      {
+        "label": "equação",
+        "value": "(x − 0,5)² + (y + 0,5)² = 9"
+      },
+      {
+        "label": "distância ao centro",
+        "value": "2,9"
+      },
+      {
+        "label": "raio",
+        "value": "3"
+      },
+      {
+        "label": "posição",
+        "value": "sobre",
+        "pivot": true
+      }
+    ],
+    "after": [
+      {
+        "label": "equação",
+        "value": "(x − 0,5)² + (y + 0,5)² = 9"
+      },
+      {
+        "label": "distância ao centro",
+        "value": "2,9"
+      },
+      {
+        "label": "raio",
+        "value": "3"
+      },
+      {
+        "label": "posição",
+        "value": "dentro",
+        "pivot": true
+      }
+    ]
+  },
+  {
+    "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+    "config": "circunferencia",
+    "point": {
+      "x": 3.6,
+      "y": -0.5
+    },
+    "before": [
+      {
+        "label": "equação",
+        "value": "(x − 0,5)² + (y + 0,5)² = 9"
+      },
+      {
+        "label": "distância ao centro",
+        "value": "3,1"
+      },
+      {
+        "label": "raio",
+        "value": "3"
+      },
+      {
+        "label": "posição",
+        "value": "sobre",
+        "pivot": true
+      }
+    ],
+    "after": [
+      {
+        "label": "equação",
+        "value": "(x − 0,5)² + (y + 0,5)² = 9"
+      },
+      {
+        "label": "distância ao centro",
+        "value": "3,1"
+      },
+      {
+        "label": "raio",
+        "value": "3"
+      },
+      {
+        "label": "posição",
+        "value": "fora",
+        "pivot": true
+      }
+    ]
+  },
+  {
+    "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+    "config": "reta-circunferencia",
+    "point": {
+      "x": 2.1,
+      "y": 2.1
+    },
+    "before": [
+      {
+        "label": "distância do centro à reta",
+        "value": "2,97"
+      },
+      {
+        "label": "raio",
+        "value": "3"
+      },
+      {
+        "label": "comparação",
+        "value": "d < r"
+      },
+      {
+        "label": "posição",
+        "value": "tangente",
+        "pivot": true
+      },
+      {
+        "label": "pontos em comum",
+        "value": "um"
+      }
+    ],
+    "after": [
+      {
+        "label": "distância do centro à reta",
+        "value": "2,97"
+      },
+      {
+        "label": "raio",
+        "value": "3"
+      },
+      {
+        "label": "comparação",
+        "value": "d < r"
+      },
+      {
+        "label": "posição",
+        "value": "secante",
+        "pivot": true
+      },
+      {
+        "label": "pontos em comum",
+        "value": "dois"
+      }
+    ]
+  },
+  {
+    "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+    "config": "reta-circunferencia",
+    "point": {
+      "x": 2.2,
+      "y": 2.2
+    },
+    "before": [
+      {
+        "label": "distância do centro à reta",
+        "value": "3,11"
+      },
+      {
+        "label": "raio",
+        "value": "3"
+      },
+      {
+        "label": "comparação",
+        "value": "d > r"
+      },
+      {
+        "label": "posição",
+        "value": "tangente",
+        "pivot": true
+      },
+      {
+        "label": "pontos em comum",
+        "value": "um"
+      }
+    ],
+    "after": [
+      {
+        "label": "distância do centro à reta",
+        "value": "3,11"
+      },
+      {
+        "label": "raio",
+        "value": "3"
+      },
+      {
+        "label": "comparação",
+        "value": "d > r"
+      },
+      {
+        "label": "posição",
+        "value": "externa",
+        "pivot": true
+      },
+      {
+        "label": "pontos em comum",
+        "value": "nenhum"
+      }
+    ]
+  }
+]
