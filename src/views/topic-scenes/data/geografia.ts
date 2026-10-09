@@ -692,7 +692,7 @@ const geografiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-geografia-relevo-brasileiro',
     family: 'tipologia',
-    question: 'Em que três categorias estruturais o relevo brasileiro se classifica, segundo a proposta de Aziz Ab-Sáber?',
+    question: 'Em que três grandes categorias o relevo brasileiro se classifica, segundo a proposta de Jurandyr Ross?',
     nota: 'Planaltos, planícies e depressões coexistem no território, cada categoria com processo de formação próprio.',
     items: [
       {
