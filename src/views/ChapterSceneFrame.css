@@ -32,6 +32,8 @@
 .crivo-visual.crivo-visual--atlas .vs-chapter-scene-body :is(button,select,summary) { min-height: 44px; }
 .crivo-visual.crivo-visual--atlas .vs-chapter-scene-body input[type="range"] { min-height: 44px; }
 .crivo-visual.crivo-visual--atlas .vs-chapter-scene-body .vs-solid-formas label { min-height: 44px; }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene-body .tc-organic-card { grid-template-columns: 1fr; }
+.crivo-visual.crivo-visual--atlas .vs-chapter-scene-body .tc-organic-card .tc-chem-visual svg { height: auto; max-height: 150px; }
 .vs-chapter-scene-body button { overflow-wrap: anywhere; }
 .vs-chapter-scene-body :is(button,select,summary,input):focus-visible { outline: 3px solid var(--chapter-accent); outline-offset: 3px; }
 .vs-chapter-scene-body :is(.tc-scene,.topic-studio,.enzyme-board,.fungi-board,.vs-heart-board,.grammar-board) { border: 1px solid var(--vs-line); border-radius: 20px; box-shadow: 0 5px 0 color-mix(in srgb,var(--vs-metal) 12%,transparent),0 18px 45px color-mix(in srgb,var(--vs-metal) 7%,transparent); }
