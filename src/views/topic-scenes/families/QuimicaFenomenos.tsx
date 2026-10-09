@@ -1,4 +1,5 @@
 import React from 'react';
+import { MolecularObjectView } from '../../visual-instruments/ScienceObjectView';
 import { motion } from 'motion/react';
 import type { SceneEntry } from '../types';
 import { useSceneMotion } from '../useSceneMotion';
@@ -446,5 +447,5 @@ export const QUIMICA_FENOMENO_IDS = new Set(Object.keys(QUIMICA_FENOMENO_CENAS))
 
 export function QuimicaFenomenos({ entry }: { entry: SceneEntry }) {
   const t = useSceneMotion();
-  return <FenomenoFrame entry={entry} cenas={QUIMICA_FENOMENO_CENAS} t={t} />;
+  return <>{entry.chapterId === 'summary-quimica-polaridade-das-ligacoes-e-das-moleculas' && <MolecularObjectView />}<FenomenoFrame entry={entry} cenas={QUIMICA_FENOMENO_CENAS} t={t} /></>;
 }

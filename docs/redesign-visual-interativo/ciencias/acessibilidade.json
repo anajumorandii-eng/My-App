@@ -1,0 +1,32 @@
+[
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "id": "summary-biologia-acidos-nucleicos",
+    "theme": "light",
+    "violations": []
+  },
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+    "theme": "dark",
+    "violations": []
+  },
+  {
+    "id": "summary-biologia-acidos-nucleicos",
+    "theme": "dark",
+    "violations": []
+  }
+]

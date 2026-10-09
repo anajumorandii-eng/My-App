@@ -25,7 +25,7 @@ describe('QuimicaFenomenos', () => {
       expect(view.container.querySelector('.qf-scene svg')).not.toBeNull();
       const ultimo = entry.items.at(-1)!;
       fireEvent.click(screen.getByRole('button', { name: ultimo.label }));
-      expect(screen.getByRole('status')).toHaveTextContent(ultimo.claim);
+      expect(view.container.querySelector('.qf-scene [role="status"]')).toHaveTextContent(ultimo.claim);
       expect(screen.getByRole('img', { name: new RegExp(`^${ultimo.label}:`) })).toBeInTheDocument();
       view.unmount();
     }
