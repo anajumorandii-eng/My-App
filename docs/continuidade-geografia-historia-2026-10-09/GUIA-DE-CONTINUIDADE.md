@@ -1,6 +1,6 @@
 # Continuidade do Crivo — Geografia e História
 
-**Interrompido a pedido da usuária em 09/10/2026. Trabalho em rascunho.** Este guia deve ser entregue à outra conta junto com o link do PR. Não afirmar que o redesenho está pronto, aprovado ou publicado no site.
+**Registro histórico da interrupção em 09/10/2026.** A usuária autorizou a retomada nesta mesma conta depois do checkpoint. Consulte o [relatório atualizado](../redesign-geografia-historia-2026-10-09/README.md) e `ESTADO.json` para o resultado da retomada. O ZIP preserva o rascunho original; não o use para sobrescrever a versão atual da branch.
 
 ## Repositório e ponto de retomada
 
@@ -20,7 +20,7 @@ A estética aprovada usa papel editorial quente no tema claro, lousa no escuro, 
 
 A usuária pediu Design & Motion Kit. Foi aplicada a skill `design-motion-kit:awesome-design-md`, com consulta à referência Notion para hierarquia editorial, cartões, espaçamento e alvos de toque. **Adaptar à identidade Crivo**, sem copiar identidade de outra marca. A referência serve para composição, não para substituir as cenas autorais por cartões genéricos. Se o plugin não estiver disponível na outra conta, continuar pela documentação e pelo código existentes.
 
-A usuária autoriza salvar em branches e abrir PR sem pedir novamente, mas o repositório proíbe merge automático. Nunca deixar a entrega somente local. O último pedido foi **parar e salvar**, portanto este checkpoint não deve continuar a implementação nesta conta.
+A usuária autoriza salvar em branches e abrir PR sem pedir novamente, mas o repositório proíbe merge automático. Nunca deixar a entrega somente local. O pedido de **parar e salvar** originou este checkpoint; uma instrução posterior autorizou continuar na mesma conta.
 
 ## Implementação já escrita, ainda em rascunho
 

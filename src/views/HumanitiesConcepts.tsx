@@ -7,8 +7,9 @@ import './HumanitiesWorkspace.css';
 export function HumanitiesConcepts({ map, states, selectedId, onSelect }: {
   map: VisualMap; states: Record<string, NodeState>; selectedId: string | null; onSelect: (id: string) => void;
 }) {
-  return <nav className="hu-concepts" aria-label="Conceitos do capítulo">
-    <div className="hu-concepts-heading"><strong>Seu percurso neste capítulo</strong><span>Selecione um conceito para abrir o diagnóstico.</span></div>
+  return <details className="hu-concepts">
+    <summary className="hu-concepts-heading"><strong>Conceitos do capítulo</strong><span>Abrir o percurso e selecionar um conceito</span></summary>
+    <nav aria-label="Conceitos do capítulo">
     <div className="hu-concepts-path">
       {map.nodes.map((node, index) => <button type="button" key={node.id} aria-pressed={selectedId === node.id}
         onClick={() => onSelect(node.id)} className="hu-concept" data-concept-id={node.id}>
@@ -17,5 +18,6 @@ export function HumanitiesConcepts({ map, states, selectedId, onSelect }: {
           <em>{NODE_STATE_LABEL[states[node.id] ?? 'nao-avaliado']}</em></span>
       </button>)}
     </div>
-  </nav>;
+    </nav>
+  </details>;
 }

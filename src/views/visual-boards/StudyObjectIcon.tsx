@@ -24,7 +24,8 @@ export function chapterObject(subject: string, topic: string): ObjectKind {
     return /ecolog|vegetal|planta|fotossint|ambiente/.test(text) ? 'leaf' : 'cell';
   }
   if (subject === 'Geografia') {
-    if (/coordenad|cartograf|fuso|movimentos da terra/.test(text)) return 'map';
+    if (/movimentos da terra|fuso/.test(text)) return 'globe';
+    if (/coordenad|cartograf/.test(text)) return 'map';
     if (/clima/.test(text)) return 'rain';
     if (/hidro|agua|hidric/.test(text)) return 'river';
     if (/relevo|geomorf|geolog|pedolog|mineral/.test(text)) return 'terrain';
@@ -42,7 +43,8 @@ export function chapterObject(subject: string, topic: string): ObjectKind {
     if (/naveg|globaliza|interioriza|espanhola/.test(text)) return 'ship';
     if (/industrial/.test(text)) return 'factory';
     if (/mineracao/.test(text)) return 'terrain';
-    if (/guerra|militar|nazismo|entreguerras/.test(text)) return 'fort';
+    if (/guerra|militar|nazismo|entreguerras|republica da espada/.test(text)) return 'fort';
+    if (/estado novo/.test(text)) return 'scroll';
     if (/republic|brasil atual|vargas|oligarq/.test(text)) return 'ballot';
     if (/antiguidade|civilizacoes|feudal|idade media/.test(text)) return 'column';
     return 'scroll';

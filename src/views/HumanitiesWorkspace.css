@@ -10,7 +10,8 @@
 [data-humanities-workspace] .hg-scene>header small { color: var(--hu-accent); font: 600 10px/1.6 Inter,system-ui,sans-serif; letter-spacing: .12em; }
 [data-humanities-workspace] .hg-figure { border: 1px solid var(--vs-line); border-radius: 16px; box-shadow: inset 0 1px 0 #fff2; }
 .hu-recortes { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,155px),1fr)); gap: 10px; }
-.hu-recortes button { display: flex; align-items: center; gap: 10px; min-height: 70px; text-align: left; padding: 11px; background: var(--vs-paper); border: 1px solid var(--vs-line); border-radius: 12px; color: var(--vs-ink); font: 600 13px/1.35 Inter,system-ui,sans-serif; cursor: pointer; box-shadow: 0 3px 0 color-mix(in srgb,var(--vs-metal) 12%,transparent); }
+.hu-recortes button { display: flex; align-items: center; gap: 10px; min-width: 0; min-height: 70px; text-align: left; padding: 11px; background: var(--vs-paper); border: 1px solid var(--vs-line); border-radius: 12px; color: var(--vs-ink); font: 600 13px/1.35 Inter,system-ui,sans-serif; cursor: pointer; box-shadow: 0 3px 0 color-mix(in srgb,var(--vs-metal) 12%,transparent); }
+.hu-recortes button span:last-child { min-width: 0; overflow-wrap: anywhere; }
 .hu-recortes button span:first-child { display: grid; place-items: center; flex: 0 0 30px; height: 30px; border: 1px solid var(--vs-line); border-radius: 50%; color: var(--hu-accent); font-size: 11px; }
 .hu-recortes button[aria-pressed="true"] { border-color: var(--hu-accent); background: var(--hu-wash); box-shadow: 0 3px 0 var(--hu-accent); }
 .hu-recortes button[aria-pressed="true"] span:first-child { background: var(--hu-accent); color: var(--vs-paper-strong); }
@@ -30,7 +31,11 @@
 .hu-source blockquote { margin: 10px 0; color: var(--vs-dim); font: italic 14px/1.65 Georgia,serif; overflow-wrap: anywhere; }
 .hu-source cite { display: block; margin-top: 8px; font: 500 12px/1.4 Inter,system-ui,sans-serif; }
 .hu-concepts { margin: 22px 0 0; padding: 20px; border: 1px solid var(--vs-line); border-radius: 16px; background: var(--vs-paper-strong); }
-.hu-concepts-heading { display: flex; gap: 10px; align-items: baseline; justify-content: space-between; flex-wrap: wrap; margin-bottom: 14px; }
+.hu-concepts-heading { display: flex; gap: 10px; align-items: baseline; justify-content: space-between; flex-wrap: wrap; min-height: 44px; cursor: pointer; }
+.hu-concepts-heading::after { content: '+'; color: var(--hu-accent); font-size: 22px; }
+.hu-concepts[open] .hu-concepts-heading { margin-bottom: 14px; }
+.hu-concepts[open] .hu-concepts-heading::after { content: '−'; }
+.hu-concepts-heading:focus-visible { outline: 3px solid var(--hu-accent); outline-offset: 3px; }
 .hu-concepts-heading strong { font: 500 22px/1.3 Newsreader,Georgia,serif; }
 .hu-concepts-heading>span { font-size: 12px; color: var(--vs-dim); }
 .hu-concepts-path { display: grid; grid-template-columns: repeat(auto-fit,minmax(min(100%,210px),1fr)); gap: 10px; }
@@ -49,6 +54,7 @@
   .hu-comparison { grid-template-columns: 1fr; }
   .hu-concepts { padding: 14px; }
   .hu-concepts-path { grid-template-columns: 1fr; }
-  .hu-recortes { grid-template-columns: 1fr 1fr; }
-  .hu-recortes button { align-items: flex-start; }
+  .hu-recortes { grid-template-columns: minmax(0,1fr) minmax(0,1fr); }
+  .hu-recortes button { flex-direction: column; align-items: flex-start; gap: 6px; }
+  .hu-recortes button span:first-child { flex-basis: 22px; width: 22px; height: 22px; }
 }

@@ -47,12 +47,14 @@ export function VisualArtifact({
     <div data-visual-representation={representation} data-study-artifact-mode={mode}
       data-humanities-workspace={summary.subject === 'Geografia' ? 'geography' : summary.subject === 'História' ? 'history' : undefined}>
       <ChapterSceneFrame chapterId={summary.id} subject={summary.subject} title={summary.title} topic={summary.topic}>
-      {Board && <Board map={map} states={states} selectedId={selectedId} onSelect={onSelect} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />}
+      {closeFocus => <>
+      {Board && <Board map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }} hiddenEdgeIds={hiddenEdgeIds} mode={mode} />}
       {representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id} />}
       {representation === 'scene' && <TopicScene key={`cena-${summary.id}`} summaryId={summary.id} />}
       {representation === 'fallback' && <TopicFallbackVisual summary={summary} activeIndex={activeIndex} onSelectStep={onSelectStep} />}
       {mode === 'explorar' && (summary.subject === 'Geografia' || summary.subject === 'História') &&
-        <HumanitiesConcepts map={map} states={states} selectedId={selectedId} onSelect={onSelect} />}
+        <HumanitiesConcepts map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }} />}
+      </>}
       </ChapterSceneFrame>
     </div>
   );
