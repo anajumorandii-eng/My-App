@@ -7,7 +7,7 @@ const __dirname = dirname(fileURLToPath(import.meta.url));
 const dir = join(__dirname, 'families');
 // A gravura fornece contexto material estático. Os mecanismos e seus recortes
 // animados continuam nas quatro famílias históricas que a compõem.
-const staticArtwork = new Set(['HistorianIllustration.tsx']);
+const staticArtwork = new Set(['HistorianIllustration.tsx', 'BiologicalVolume.tsx', 'IllustrationMaterials.tsx']);
 const familias = readdirSync(dir).filter((f) => f.endsWith('.tsx') && !f.endsWith('.test.tsx') && !staticArtwork.has(f));
 
 function composedSources(file: string, visited = new Set<string>()): string {
@@ -19,6 +19,11 @@ function composedSources(file: string, visited = new Set<string>()): string {
 }
 
 describe('Portão do movimento', () => {
+  it.each(['BiologicalVolume.tsx', 'IllustrationMaterials.tsx'])('%s fornece materiais estáticos sem animação própria', arquivo => {
+    const source = composedSources(join(dir, arquivo));
+    expect(source).not.toMatch(/from ['"]motion\/react['"]/);
+    expect(source).not.toMatch(/<animate|<animateTransform|repeat:\s*Infinity/);
+  });
   it.each(familias)('%s aplica a política de movimento na composição', (arquivo) => {
     const source = composedSources(join(dir, arquivo));
     expect(source, `${arquivo} precisa compor movimento por motion/react`).toMatch(/from ['"]motion\/react['"]/);
