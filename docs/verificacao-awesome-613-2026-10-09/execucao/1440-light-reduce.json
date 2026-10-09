@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "width": 1440,
+    "theme": "light",
+    "motion": "reduce",
+    "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+    "run_id": 37992764943,
+    "complete": false,
+    "actual": 0,
+    "unique_ids": 0,
+    "passed": 0,
+    "failed": 0,
+    "invalid_provenance": false,
+    "file": "execucao/1440-light-reduce.json"
+  },
+  "summary": null,
+  "chapters": []
+}

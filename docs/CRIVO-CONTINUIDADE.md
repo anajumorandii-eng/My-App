@@ -1,5 +1,14 @@
 # CRIVO — continuidade operacional
 
+## Auditoria automatizada executada no GitHub — 2026-10-09T21:30:49.440Z
+
+Fonte: `6cbcecebded583bd09530744009c6d3c72e24794`; execução 37992764943. Estado técnico: incomplete; 0 de 7.356 resultados; 0 reprovações. [Relatório atual](verificacao-awesome-613-2026-10-09/README.md), [manifesto](verificacao-awesome-613-2026-10-09/execucao/manifesto.json) e [capturas para revisão](verificacao-awesome-613-2026-10-09/GALERIA.md).
+
+A execução remota contorna o bloqueio local. O código de produto permanece na base da main após #290; diferenças de branch nesta retomada são documentação e infraestrutura de auditoria. Aprovação estética/pedagógica não foi inferida dos testes. Os 81 estados em validação e os 532 não revisados do inventário formal foram preservados.
+
+Próximo passo: analisar os achados por ID e revisar as capturas com os critérios Awesome Design MD; depois concluir a revisão da PR #291. Não repetir a execução se o código não mudar e não houver falha ou dúvida nova. Não reaplicar #288/#289/#290. Sem merge automático.
+
+
 ## Verificação estrutural dos 613 capítulos com Awesome Design MD — 09/10/2026
 
 Base confirmada: `0ea6bfd64e4e4631aaf24e546a0ba32aa29cb4cc` na `main`. A PR #290 já foi integrada em `0526aafc5f909e31047285678c8cb48cf9231ef6`; #288 e #289 também estão integradas. Não reaplicar esses trabalhos. O registro de “proposta mais recente” abaixo é histórico.

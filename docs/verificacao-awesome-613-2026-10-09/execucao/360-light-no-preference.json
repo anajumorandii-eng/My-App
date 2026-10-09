@@ -1,0 +1,18 @@
+{
+  "metadata": {
+    "width": 360,
+    "theme": "light",
+    "motion": "no-preference",
+    "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+    "run_id": 37992764943,
+    "complete": false,
+    "actual": 0,
+    "unique_ids": 0,
+    "passed": 0,
+    "failed": 0,
+    "invalid_provenance": false,
+    "file": "execucao/360-light-no-preference.json"
+  },
+  "summary": null,
+  "chapters": []
+}

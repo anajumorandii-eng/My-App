@@ -1,4 +1,37 @@
-# Verificação e continuidade dos 613 capítulos — Awesome Design MD
+# Execução remota dos 613 capítulos — Awesome Design MD
+
+**Estado técnico: incomplete. Revisão visual das capturas: pendente.**
+
+Gerado em 2026-10-09T21:30:49.440Z. SHA verificado: `6cbcecebded583bd09530744009c6d3c72e24794`. [Execução no GitHub Actions](https://github.com/anajumorandii-eng/My-App/actions/runs/37992764943).
+
+Foram obtidos 0 resultados dos 7.356 previstos, com 0 reprovações automáticas. A cobertura completa exige 613 IDs únicos em cada uma das 12 configurações.
+
+| Largura | Tema | Movimento | Resultados | Aprovados técnicos | Reprovados | Completa |
+|---|---|---|---:|---:|---:|---|
+| 360 | light | reduce | 0 | 0 | 0 | não |
+| 360 | light | no-preference | 0 | 0 | 0 | não |
+| 360 | dark | reduce | 0 | 0 | 0 | não |
+| 360 | dark | no-preference | 0 | 0 | 0 | não |
+| 834 | light | reduce | 0 | 0 | 0 | não |
+| 834 | light | no-preference | 0 | 0 | 0 | não |
+| 834 | dark | reduce | 0 | 0 | 0 | não |
+| 834 | dark | no-preference | 0 | 0 | 0 | não |
+| 1440 | light | reduce | 0 | 0 | 0 | não |
+| 1440 | light | no-preference | 0 | 0 | 0 | não |
+| 1440 | dark | reduce | 0 | 0 | 0 | não |
+| 1440 | dark | no-preference | 0 | 0 | 0 | não |
+
+[Manifesto e limites](execucao/manifesto.json) · [Resultado por capítulo](resultado-613.json) · [Galeria atual](GALERIA.md).
+
+O roteiro verifica carregamento da cena nativa, objeto, overflow da página, áreas de controles de 44 px, IDs/referências SVG, loops de animação detectáveis em movimento reduzido, seleção por teclado, extremos do primeiro slider, preservação dos controles ao comparar, conceitos/inspetor e modos Testar/Reconstruir. Os resultados completos estão nos arquivos por configuração.
+
+As configurações usam Chromium e preferências sintéticas. Não são prova de funcionamento em Safari/iPad físico, serviços autenticados reais, todos os valores dos controles ou aprovação pedagógica. O inventário formal permanece inalterado. O critério visual usa Claude e Miro do Awesome Design MD, adaptados à identidade existente do Crivo.
+
+A falha do ambiente local foi contornada pela execução remota. As folhas de contato ficam versionadas; as capturas individuais completas permanecem nos artefatos com retenção de três dias. A proposta segue em rascunho até analisar os achados e revisar as imagens; sem merge automático.
+
+## Registro anterior à execução remota
+
+### Verificação e continuidade dos 613 capítulos — Awesome Design MD
 
 **Estado: verificação estrutural concluída; nova inspeção visual e execução do aplicativo bloqueadas.** Não é certificação integral do produto.
 

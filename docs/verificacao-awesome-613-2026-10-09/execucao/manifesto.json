@@ -1,0 +1,879 @@
+{
+  "schema_version": 1,
+  "generated_at_utc": "2026-10-09T21:30:49.440Z",
+  "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+  "run_id": 37992764943,
+  "run_url": "https://github.com/anajumorandii-eng/My-App/actions/runs/37992764943",
+  "status": "incomplete",
+  "expected": 7356,
+  "actual": 0,
+  "failed": 0,
+  "complete": false,
+  "configurations": [
+    {
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/360-light-reduce.json"
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/360-light-no-preference.json"
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/360-dark-reduce.json"
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/360-dark-no-preference.json"
+    },
+    {
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/834-light-reduce.json"
+    },
+    {
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/834-light-no-preference.json"
+    },
+    {
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/834-dark-reduce.json"
+    },
+    {
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/834-dark-no-preference.json"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/1440-light-reduce.json"
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/1440-light-no-preference.json"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/1440-dark-reduce.json"
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "source_commit": "6cbcecebded583bd09530744009c6d3c72e24794",
+      "run_id": 37992764943,
+      "complete": false,
+      "actual": 0,
+      "unique_ids": 0,
+      "passed": 0,
+      "failed": 0,
+      "invalid_provenance": false,
+      "file": "execucao/1440-dark-no-preference.json"
+    }
+  ],
+  "gallery": [
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/000.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/001.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/002.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/003.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/004.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/005.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/006.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/007.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/008.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/009.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/010.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/011.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/012.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/013.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/014.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/015.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/016.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/017.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/018.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/019.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/020.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/021.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/022.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/023.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/024.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/025.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/026.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/027.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/028.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/029.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/030.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/031.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/032.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/033.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/034.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/035.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/036.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/037.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/038.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/039.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/040.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/041.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/042.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/043.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/044.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/045.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/046.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/047.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/048.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/049.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/050.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/051.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/052.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/053.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/054.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/055.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/056.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/057.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/058.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/059.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/060.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/061.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/062.jpg",
+      "ids": []
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "path": "capturas/360-dark/063.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/000.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/001.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/002.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/003.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/004.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/005.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/006.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/007.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/008.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/009.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/010.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/011.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/012.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/013.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/014.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/015.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/016.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/017.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/018.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/019.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/020.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/021.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/022.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/023.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/024.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/025.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/026.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/027.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/028.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/029.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/030.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/031.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/032.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/033.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/034.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/035.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/036.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/037.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/038.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/039.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/040.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/041.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/042.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/043.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/044.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/045.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/046.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/047.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/048.jpg",
+      "ids": []
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "path": "capturas/1440-light/049.jpg",
+      "ids": []
+    }
+  ],
+  "formal_quality": {
+    "nao-revisado": 532,
+    "em-validacao": 81
+  },
+  "visual_review_status": "pending",
+  "limits": [
+    "Chromium, synthetic preferences, no authenticated student data",
+    "Initial views and representative control interactions; not every parameter combination",
+    "Contact sheets require visual review; do not infer aesthetic or pedagogical approval",
+    "Full screenshots remain in original workflow artifacts for three days"
+  ]
+}
