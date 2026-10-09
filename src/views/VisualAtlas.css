@@ -1,0 +1,184 @@
+/* Papel editorial e objetos com profundidade; o diagnóstico usa sua própria cor e legenda. */
+.crivo-visual.crivo-visual--atlas {
+  --vs-paper: #faf7f0;
+  --vs-paper-strong: #fffdf8;
+  --vs-ink: #29251f;
+  --vs-dim: #74695d;
+  --vs-ink-muted: var(--vs-dim);
+  --vs-line: #e3dbcd;
+  --vs-burgundy: #852636;
+  --vs-metal: #d7b77f;
+  --vs-metal-shade: #8c6847;
+  --vs-blue: #476e82;
+  --font-editorial: "Newsreader";
+  color: var(--vs-ink);
+}
+.dark .crivo-visual.crivo-visual--atlas {
+  --vs-paper: #202421;
+  --vs-paper-strong: #272c28;
+  --vs-ink: #f5eddf;
+  --vs-dim: #c0b6a5;
+  --vs-line: #4b5049;
+  --vs-burgundy: #e695a5;
+  --vs-metal: #dbbc88;
+  --vs-metal-shade: #604a38;
+  --vs-blue: #98bdca;
+}
+.crivo-visual.crivo-visual--atlas :is(h1,h2,h3,h4) { font-family: "Newsreader", Georgia, serif; font-weight: 450; letter-spacing: -.025em; }
+.crivo-visual.crivo-visual--atlas :is(button,select,input,textarea) { font-family: Inter,system-ui,sans-serif; }
+.crivo-visual.crivo-visual--atlas :is(.vs-scene-note text,.vs-plane-note text,.vs-hand-note) { font-family: Kalam,cursive; font-style: normal; text-transform: none; }
+.crivo-visual--atlas :is(.vs-study-board,.vs-journey,.vs-inspector,.vs-priority-panel,.vs-branch-map) {
+  border: 1px solid var(--vs-line);
+  border-radius: 14px;
+  background: var(--vs-paper);
+  color: var(--vs-ink);
+  box-shadow: 0 6px 20px rgb(48 32 18 / .045);
+  backdrop-filter: none;
+}
+.crivo-visual--atlas .vs-study-board { padding: clamp(18px,2.4vw,30px); }
+.crivo-visual--atlas .vs-study-board::before { opacity: .45; }
+.crivo-visual.crivo-visual--atlas .vs-board-head h2 {
+  font-family: "Newsreader",Georgia,serif;
+  font-size: clamp(2rem,3.6vw,3.25rem);
+  line-height: 1.06;
+  color: var(--vs-ink);
+  text-shadow: none;
+}
+.crivo-visual--atlas .vs-board-head p { font-size: .95rem; line-height: 1.55; color: var(--vs-dim); }
+.crivo-visual--atlas .vs-board-kicker { color: var(--vs-burgundy); font: 550 .75rem/1.3 Inter,system-ui,sans-serif; letter-spacing: .08em; }
+.crivo-visual--atlas .vs-topic-bar { margin-bottom: 22px; }
+.crivo-visual.crivo-visual--atlas .vs-topic-identity span { color: var(--vs-dim); font: 500 .75rem/1.5 Inter,system-ui,sans-serif; letter-spacing: .03em; }
+.crivo-visual.crivo-visual--atlas .vs-topic-identity strong { color: var(--vs-ink); font: 450 clamp(1.4rem,2.4vw,2rem)/1.2 "Newsreader",Georgia,serif; white-space: normal; }
+.crivo-visual--atlas .vs-topic-bar .vs-back-button { background: var(--vs-paper-strong); color: var(--vs-burgundy); border-color: var(--vs-line); }
+.crivo-visual--atlas .vs-study-toolbar { margin-bottom: 22px; }
+.crivo-visual--atlas .vs-modes { border: 1px solid var(--vs-line); border-radius: 10px; padding: 4px; gap: 4px!important; background: var(--vs-paper); }
+.crivo-visual.crivo-visual--atlas .vs-modes > button { min-height: 44px; padding: 9px 16px!important; border: 0!important; border-radius: 7px!important; color: var(--vs-dim)!important; font: 500 .875rem/1 Inter,system-ui,sans-serif; }
+.crivo-visual.crivo-visual--atlas .vs-modes > button[aria-selected=true] { background: #852636!important; color: #fffaf2!important; }
+.crivo-visual--atlas .vs-modes > button[aria-selected=true] > svg { transform: none; }
+.crivo-visual--atlas .vs-mode-hint { color: var(--vs-dim); font: 400 .875rem/1.5 Inter,system-ui,sans-serif; margin: 0; }
+.crivo-visual--atlas .vs-piston-wrap { background: var(--vs-paper-strong); border: 1px solid var(--vs-line); border-radius: 12px; }
+.crivo-visual--atlas .vs-concept-card {
+  border: 1px solid var(--vs-line);
+  border-radius: 10px;
+  background: var(--vs-paper-strong);
+  box-shadow: 0 2px 5px rgb(66 44 20 / .025);
+  transform: none;
+  text-align: left;
+}
+.crivo-visual--atlas .vs-concept-card.is-selected { border-color: var(--vs-burgundy); box-shadow: 0 0 0 2px color-mix(in srgb,var(--vs-burgundy) 14%,transparent); }
+.crivo-visual--atlas .vs-concept-label { font: 550 .8rem/1.4 Inter,system-ui,sans-serif; color: var(--vs-burgundy); }
+.crivo-visual.crivo-visual--atlas .vs-concept-card strong { font: 450 1.35rem/1.18 "Newsreader",Georgia,serif; }
+.crivo-visual--atlas .vs-concept-card > span:not(.vs-concept-label):not(.vs-state-line) { font-size: .875rem; line-height: 1.55; color: var(--vs-dim); }
+.crivo-visual--atlas .vs-concept-card code { color: var(--vs-ink); background: color-mix(in srgb,var(--vs-metal) 12%,var(--vs-paper-strong)); }
+.crivo-visual--atlas .vs-equation-strip { border: 1px solid var(--vs-line); border-radius: 10px; background: var(--vs-paper-strong); box-shadow: none; }
+.crivo-visual--atlas .vs-equation-strip strong { color: var(--vs-ink); }
+.crivo-visual--atlas .vs-landscape { min-height: 0; margin-top: 18px; background: none; }
+.crivo-visual--atlas .vs-landscape-art { display: none; }
+.crivo-visual--atlas .vs-landscape::after { display: none; }
+.crivo-visual--atlas .vs-landscape p { position: relative; padding: 16px 0 0; border-top: 1px solid var(--vs-line); color: var(--vs-dim); font-size: .875rem; line-height: 1.6; background: transparent; }
+.crivo-visual--atlas .vs-landscape p strong { color: var(--vs-ink); }
+.crivo-visual--atlas .vs-q-callout { border: 1px solid var(--vs-line); border-radius: 10px; background: var(--vs-paper-strong); box-shadow: none; color: var(--vs-burgundy); }
+.crivo-visual--atlas .vs-main { gap: 22px; }
+.crivo-visual.crivo-visual--atlas .vs-journey-number { color: var(--vs-burgundy); }
+.crivo-visual--atlas .vs-inspector { background: var(--vs-paper-strong); }
+.crivo-visual--atlas .vs-inspector :is(h3,h4) { color: var(--vs-ink); }
+.crivo-visual--atlas .vs-inspector-excerpt { color: var(--vs-dim); }
+.crivo-visual--atlas .vs-inspector-actions button { background: var(--vs-paper); border-color: var(--vs-line); color: var(--vs-ink); }
+.crivo-visual--atlas :is(button,a,input,textarea,select,summary):focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 3px; }
+.crivo-visual--atlas .vs-object-icon { width: 62px; height: 62px; flex-shrink: 0; color: var(--vs-metal-shade); overflow: visible; }
+.crivo-visual--atlas .vs-lib-header { background: var(--vs-paper); color: var(--vs-ink); border: 1px solid var(--vs-line); border-radius: 14px; box-shadow: none; }
+.crivo-visual.crivo-visual--atlas .vs-lib-header h1 { font: 450 clamp(2rem,4vw,3.3rem)/1.1 "Newsreader",Georgia,serif; color: var(--vs-ink); }
+.crivo-visual--atlas .vs-lib-header p { color: var(--vs-dim)!important; font-size: 1rem; }
+.crivo-visual--atlas .vs-lib-header > span { background: var(--vs-paper-strong)!important; color: var(--vs-burgundy); }
+.crivo-visual--atlas .vs-lib-card { padding: 18px; background: var(--vs-paper); border: 1px solid var(--vs-line); border-radius: 12px; box-shadow: 0 2px 5px rgb(48 32 18 / .04); }
+.crivo-visual--atlas .vs-lib-card::before { display: none; }
+.crivo-visual--atlas .vs-lib-card:hover { transform: none; border-color: var(--vs-burgundy); }
+.crivo-visual.crivo-visual--atlas .vs-lib-card strong,.crivo-visual.crivo-visual--atlas .vs-lib-card .font-bold { font-family: "Newsreader",Georgia,serif; font-weight: 500; font-size: 1.2rem; }
+.crivo-visual--atlas .vs-lib-card .text-zinc-500 { color: var(--vs-dim); }
+.crivo-visual--atlas .vs-lib-card-materia { font: 550 .75rem/1.4 Inter,system-ui,sans-serif; letter-spacing: .02em; }
+.crivo-visual--atlas .vs-lib-filtros :is(select,input) { background: var(--vs-paper-strong); border-color: var(--vs-line); color: var(--vs-ink); border-radius: 8px; min-height: 44px; }
+.crivo-visual--atlas .vs-lib-filtros span { font: 500 .875rem/1.4 Inter,system-ui,sans-serif; color: var(--vs-dim)!important; text-transform: none; letter-spacing: 0; }
+.crivo-visual--atlas .vs-branch-map { padding: 22px; overflow: hidden; }
+.vs-map-heading { display: flex; justify-content: space-between; align-items: center; gap: 16px; padding-bottom: 18px; border-bottom: 1px solid var(--vs-line); }
+.vs-map-heading>div { display: flex; align-items: center; gap: 10px; }
+.vs-map-heading svg { color: var(--vs-burgundy); width: 20px; }
+.crivo-visual--atlas .vs-map-heading h2 { font-size: 1.6rem; margin: 0; }
+.vs-map-heading>span { font-size: .8rem; color: var(--vs-dim); }
+.vs-map-tree { display: grid; grid-template-columns: minmax(140px, .65fr) minmax(0, 1fr); align-items: center; gap: 44px; padding: 22px 0 0; }
+.vs-map-tree>.vs-map-root { grid-column: 1; grid-row: 1; }
+.vs-map-tree>.vs-map-branches { grid-column: 2; grid-row: 1; }
+.vs-map-root { position: relative; display: flex; align-items: center; flex-direction: column; gap: 10px; padding: 24px 16px; border: 1px solid color-mix(in srgb,var(--vs-burgundy) 30%,var(--vs-line)); border-radius: 12px; background: var(--vs-paper-strong); text-align: center; box-shadow: 0 8px 20px rgb(57 39 16 / .04); }
+.vs-map-root>.vs-object-icon { width: 92px; height: 92px; }
+.vs-map-root>span { font-size: .75rem; color: var(--vs-burgundy); }
+.crivo-visual--atlas .vs-map-root>strong { font: 450 1.6rem/1.15 "Newsreader",Georgia,serif; color: var(--vs-ink); }
+.vs-map-root>small { font-size: .75rem; color: var(--vs-dim); }
+.vs-map-root::after { content: ""; position: absolute; width: 24px; height: 1px; background: var(--vs-line); right: -25px; top: 50%; }
+.crivo-visual--atlas .vs-chain.vs-map-branches { display: flex; flex-direction: column; gap: 12px; margin: 0; padding: 0 0 0 20px; overflow: visible; border-left: 1px solid var(--vs-line); }
+.crivo-visual--atlas .vs-chain .vs-map-branch { position: relative; display: grid; grid-template-columns: minmax(0,1fr) 38px; gap: 0; width: 100%; flex: auto; align-items: center; }
+.vs-map-branch::before { content: ""; width: 19px; height: 1px; background: var(--vs-line); position: absolute; left: -21px; top: 42px; }
+.crivo-visual--atlas .vs-map-branches .vs-chain-arrow { grid-column: 1/-1; padding: 2px 0 8px; font-size: .75rem; color: var(--vs-dim); }
+.crivo-visual--atlas .vs-map-branches .vs-chain-link { display: flex; flex-direction: row; gap: 12px; align-items: center; width: 100%; min-height: 86px; padding: 12px; border: 1px solid var(--vs-line); border-radius: 10px; background: var(--vs-paper-strong); border-left-color: var(--vs-line); transform: none; box-shadow: none; }
+.crivo-visual--atlas .vs-map-branches .vs-chain-link.is-selected { box-shadow: 0 0 0 2px color-mix(in srgb,var(--vs-burgundy) 17%,transparent); border-color: var(--vs-burgundy); }
+.vs-map-node-text { display: grid; gap: 5px; min-width: 0; text-align: left; }
+.crivo-visual--atlas .vs-chain-stage { color: var(--vs-dim); font: 550 .75rem/1.2 Inter,system-ui,sans-serif; letter-spacing: .03em; }
+.crivo-visual.crivo-visual--atlas .vs-chain-link strong { font: 500 1.1rem/1.25 "Newsreader",Georgia,serif; color: var(--vs-ink); }
+.vs-map-branches .vs-chain-state { font-size: .75rem; color: var(--vs-dim); }
+.vs-map-expand { display: grid; place-items: center; width: 34px; height: 44px; border: 1px solid var(--vs-line); border-left: 0; border-radius: 0 7px 7px 0; background: var(--vs-paper-strong); color: var(--vs-burgundy); }
+.vs-map-expand svg { width: 16px; height: 16px; }
+.vs-map-leaf { grid-column: 1/-1; margin: 10px 0 4px 32px; border-left: 2px solid var(--vs-line); padding: 4px 14px; color: var(--vs-dim); }
+.vs-map-leaf p { font-size: .875rem; line-height: 1.65; margin: 0 0 10px; }
+.vs-map-leaf>button { padding: 8px 12px; min-height: 44px; border: 1px solid var(--vs-line); border-radius: 7px; font-size: .8rem; background: var(--vs-paper-strong); color: var(--vs-burgundy); }
+.vs-solid-view-switch { display: flex; grid-column: 1/-1; gap: 4px; padding: 4px; border: 1px solid var(--vs-line); background: var(--vs-paper); border-radius: 8px; width: fit-content; margin-bottom: 12px; }
+.vs-solid-view-switch button { min-height: 44px; padding: 8px 14px; border: 0; border-radius: 5px; background: transparent; color: var(--vs-dim); font-size: .8rem; }
+.vs-solid-view-switch button[aria-pressed=true] { background: var(--vs-paper-strong); color: var(--vs-burgundy); box-shadow: 0 1px 4px rgb(48 32 18 / .08); }
+.vs-solid-spatial { cursor: grab; touch-action: none; }
+.vs-solid-spatial:active { cursor: grabbing; }
+.vs-solid-ground { fill: var(--vs-metal-shade); opacity: .12; }
+.vs-solid-face { fill: color-mix(in srgb,var(--vs-metal) calc(var(--face-light) * 100%),var(--vs-metal-shade)); stroke: color-mix(in srgb,var(--vs-metal-shade) 65%,var(--vs-paper-strong)); stroke-width: .6; stroke-linejoin: round; fill-opacity: .93; }
+.vs-solid-face[data-kind=base] { fill: color-mix(in srgb,var(--vs-blue) 30%,var(--vs-metal)); }
+.vs-solid-face[data-kind=comparison] { fill: color-mix(in srgb,var(--vs-blue) calc(var(--face-light) * 100%),var(--vs-metal-shade)); }
+.vs-solid-face[data-kind=cut] { fill: var(--vs-burgundy); fill-opacity: .4; stroke: var(--vs-burgundy); stroke-width: 1.5; }
+.vs-solid-dimension line { stroke: var(--vs-burgundy); stroke-width: 1.5; }
+.vs-solid-dimension text { fill: var(--vs-burgundy); font: 500 13px Kalam,cursive; paint-order: stroke; stroke: var(--vs-paper-strong); stroke-width: 3px; }
+.vs-spatial-solid { min-width: 0; }
+.vs-solid-rotation { display: grid; gap: 6px; padding: 12px; border: 1px solid var(--vs-line); border-radius: 10px; background: var(--vs-paper); }
+.vs-solid-rotation label { display: flex; justify-content: space-between; gap: 8px; color: var(--vs-dim); font-size: .8rem; }
+.vs-solid-rotation output { color: var(--vs-ink); font-variant-numeric: tabular-nums; }
+.vs-solid-rotation input { width: 100%; min-height: 24px; accent-color: var(--vs-burgundy); }
+.vs-solid-rotation button { display: inline-flex; justify-content: center; align-items: center; gap: 8px; min-height: 44px; background: var(--vs-paper-strong); border: 1px solid var(--vs-line); border-radius: 7px; font-size: .8rem; color: var(--vs-ink); }
+.vs-solid-rotation button svg { width: 15px; height: 15px; }
+@media(min-width:1100px) {
+  .crivo-visual--atlas .vs-solid-instrument>.vs-spatial-solid { grid-column: 1; grid-row: 2/span 10; }
+  .crivo-visual--atlas .vs-solid-instrument>.vs-plane { grid-column: 1; grid-row: 2/span 10; }
+  .crivo-visual--atlas .vs-solid-instrument>.vs-solid-view-switch { grid-column: 1/-1; grid-row: 1; }
+}
+@media(max-width:900px) {
+  .vs-map-tree { grid-template-columns: minmax(120px,.55fr) minmax(0,1fr); gap: 30px; }
+  .vs-map-root { padding: 18px 12px; }
+  .crivo-visual--atlas .vs-map-root>strong { font-size: 1.4rem; }
+  .crivo-visual--atlas .vs-map-branches .vs-chain-arrow { display: block; }
+  .crivo-visual--atlas .vs-inspector-shell { z-index: 70; }
+}
+@media(max-width:580px) {
+  .crivo-visual--atlas .vs-branch-map { padding: 16px; }
+  .vs-map-heading { align-items: flex-start; flex-direction: column; gap: 6px; }
+  .vs-map-tree { grid-template-columns: 1fr; gap: 24px; }
+  .vs-map-tree>.vs-map-branches { grid-column: 1; grid-row: 2; }
+  .vs-map-root { align-items: center; display: grid; grid-template-columns: 64px minmax(0,1fr); gap: 4px 12px; text-align: left; padding: 14px; }
+  .vs-map-root>.vs-object-icon { width: 64px; height: 64px; grid-row: 1/span 3; }
+  .vs-map-root::after { width: 1px; height: 24px; right: auto; left: 18px; top: 100%; }
+  .crivo-visual--atlas .vs-chain.vs-map-branches { margin-left: 18px; padding-left: 14px; }
+  .vs-map-branch::before { left: -15px; width: 13px; }
+  .crivo-visual--atlas .vs-map-branches .vs-chain-link { gap: 7px; padding: 10px 8px; }
+  .vs-map-branches .vs-object-icon { width: 44px; height: 44px; }
+  .crivo-visual--atlas .vs-chain-link strong { font-size: 1rem; }
+  .vs-map-leaf { margin-left: 12px; padding-left: 12px; }
+  .crivo-visual--atlas .vs-lib-card { padding: 14px; }
+  .crivo-visual--atlas .vs-modes>button { padding: 8px 10px!important; font-size: .8rem; }
+  .crivo-visual--atlas .vs-domain-toggle { font-size: .75rem; }
+  .crivo-visual--atlas .vs-board-head { gap: 14px; }
+}
+@media(prefers-reduced-motion:reduce) {
+  .crivo-visual--atlas .vs-object-icon { transform: none!important; }
+  .crivo-visual--atlas *, .crivo-visual--atlas *::before,.crivo-visual--atlas *::after { animation-duration: 0s!important; transition-duration: 0s!important; }
+}

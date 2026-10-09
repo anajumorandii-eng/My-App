@@ -1,0 +1,7 @@
+{
+  "branch": "design/visual-mapa-cenas-matematica",
+  "ordem": ["Matemática", "Física", "Química", "Biologia", "demais matérias"],
+  "concluido": ["Interface compartilhada com mapa expansível", "Ícones SVG com profundidade por matéria e etapa", "Cinco instrumentos de sólidos com geometria 3D e controles acessíveis", "Preservação de Explorar, Testar, Reconstruir e evidências", "Responsividade e tema escuro"],
+  "proxima_etapa_de_refinamento": "Revisão pedagógica e visual das cenas específicas, na ordem das matérias, sem substituir mecanismos fiéis por efeitos decorativos.",
+  "publicacao": "Código e evidências enviados em branch e PR no GitHub; sem merge automático."
+}
