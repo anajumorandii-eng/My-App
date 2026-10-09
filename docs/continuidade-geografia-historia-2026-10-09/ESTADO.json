@@ -1,0 +1,36 @@
+{
+  "status": "retomado e concluído: apresentação e revisão funcional; aguardando integração",
+  "branch": "redesign/geografia-historia",
+  "base": "e296f10c1a79f694ed6085dec65398ae2d144cbe",
+  "pr": "https://github.com/anajumorandii-eng/My-App/pull/288",
+  "capitulos": {
+    "Geografia": 63,
+    "História": 49
+  },
+  "implementacao": "apresentação dos 112 capítulos revisada; comparação A/B em 103 cenas, nove mecanismos próprios preservados; percurso de conceitos e navegação por teclado validados",
+  "validacao": {
+    "teste_direcionado": "46 testes passaram",
+    "lint": "passou",
+    "suite_completa": {
+      "resultado": "passou",
+      "node": 943,
+      "interface": 1406,
+      "arquivos_interface": 184,
+      "total": 2349
+    },
+    "build": "passou",
+    "navegador": {
+      "capitulos": 112,
+      "configuracoes_largura_tema": 448,
+      "layouts_celular_apos_ajuste_final": 112,
+      "estados_representativos": 72,
+      "checagens_axe": 24,
+      "violacoes_axe": 0
+    },
+    "capturas_novas": 36
+  },
+  "proxima_acao": "revisar e integrar PR #288; sem merge automático",
+  "merge_automatico": false,
+  "checkpoint_original": "c4b0639d279f4387aaf35f49862390bec7c9f380; ZIP preservado como registro histórico",
+  "relatorio": "../redesign-geografia-historia-2026-10-09/README.md"
+}

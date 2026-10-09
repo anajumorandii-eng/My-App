@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { fireEvent, render, screen } from '@testing-library/react';
-import { describe, expect, it } from 'vitest';
+import { describe, expect, it, vi } from 'vitest';
 import { ChapterSceneFrame } from './ChapterSceneFrame';
 function Scene() {
   const [value, setValue] = useState('5');
@@ -9,6 +9,25 @@ function Scene() {
 const input = { chapterId: 'capitulo-a', subject: 'Matemática', title: 'Prismas', topic: 'Sólidos' };
 
 describe('exploração em foco', () => {
+  it('fecha o ciclo de Tab no summary e ignora controles dentro de painéis recolhidos', () => {
+    const rects = vi.spyOn(HTMLElement.prototype, 'getClientRects').mockReturnValue([{} as DOMRect] as unknown as DOMRectList);
+    try {
+      const { container } = render(<ChapterSceneFrame {...input}><details><summary>Fontes da cena</summary><button type="button">Abrir fonte</button></details></ChapterSceneFrame>);
+      fireEvent.click(screen.getByRole('button', { name: 'Explorar em foco' }));
+      const toggle = screen.getByRole('button', { name: 'Sair do modo foco' });
+      const summary = screen.getByText('Fontes da cena');
+      summary.focus();
+      fireEvent.keyDown(document, { key: 'Tab' });
+      expect(toggle).toHaveFocus();
+      fireEvent.keyDown(document, { key: 'Tab', shiftKey: true });
+      expect(summary).toHaveFocus();
+      container.querySelector('details')!.open = true;
+      screen.getByRole('button', { name: 'Abrir fonte' }).focus();
+      fireEvent.keyDown(document, { key: 'Tab' });
+      expect(toggle).toHaveFocus();
+      fireEvent.keyDown(document, { key: 'Escape' });
+    } finally { rects.mockRestore(); }
+  });
   it('amplia sem remontar a cena e restaura foco, interação e rolagem ao sair', () => {
     const { container } = render(<><button className="outside">Fora da cena</button><ChapterSceneFrame {...input}><Scene /></ChapterSceneFrame></>);
     const outside = container.querySelector<HTMLElement>('.outside')!;

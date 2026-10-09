@@ -65,6 +65,26 @@ it('substitui mapa e leitura ao trocar de capítulo, sem deixar cópias anterior
 });
 
 describe('Visual aprovado', () => {
+  it('mantém o percurso de Humanas restrito a Explorar e abre o diagnóstico real', async () => {
+    const user = userEvent.setup();
+    const chapter = interactiveSummaries.find(s => s.id === 'summary-geografia-relevo-brasileiro')!;
+    const { container } = render(<MemoryRouter initialEntries={['/visual?summary=' + chapter.id]}><Visual /></MemoryRouter>);
+    await user.click(screen.getByRole('button', { name: 'Explorar em foco' }));
+    await user.click(screen.getByText('Conceitos do capítulo'));
+    const concepts = within(screen.getByRole('navigation', { name: 'Conceitos do capítulo' }));
+    const button = concepts.getAllByRole('button')[1];
+    await user.click(button);
+    expect(button).toHaveAttribute('aria-pressed', 'true');
+    expect(container.querySelector('.vs-inspector')).toHaveTextContent(chapter.sections[1].title);
+    expect(screen.queryByRole('dialog', { name: chapter.title })).toBeNull();
+    expect(update).not.toHaveBeenCalled();
+    await user.click(screen.getByRole('tab', { name: 'Testar' }));
+    expect(container.querySelector('.hu-concepts')).toBeNull();
+    expect(container.querySelector('[data-chapter-scene]')).toBeNull();
+    await user.click(screen.getByRole('tab', { name: 'Reconstruir' }));
+    expect(container.querySelector('.hu-concepts')).toBeNull();
+    expect(update).not.toHaveBeenCalled();
+  });
   it('retoma a etapa ao voltar de Testar sem revelar a prancha durante o teste', async () => {
     const user = userEvent.setup();
     render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);

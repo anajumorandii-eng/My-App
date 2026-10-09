@@ -1,0 +1,584 @@
+{
+  "records": [
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "theme": "light",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "theme": "light",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "theme": "light",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "theme": "light",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "theme": "light",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "theme": "light",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "light",
+      "width": 1440,
+      "comparison": false,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "light",
+      "width": 834,
+      "comparison": false,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "light",
+      "width": 360,
+      "comparison": false,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "theme": "light",
+      "width": 1440,
+      "comparison": false,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "theme": "light",
+      "width": 834,
+      "comparison": false,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "theme": "light",
+      "width": 360,
+      "comparison": false,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "theme": "light",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "theme": "light",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "theme": "light",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "theme": "light",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "theme": "light",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "theme": "light",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "theme": "light",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "theme": "light",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "theme": "light",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "theme": "light",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "theme": "light",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "theme": "light",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "theme": "light",
+      "width": 1440,
+      "comparison": false,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "theme": "light",
+      "width": 834,
+      "comparison": false,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "theme": "light",
+      "width": 360,
+      "comparison": false,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "theme": "light",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "theme": "light",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "theme": "light",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "theme": "light",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "theme": "light",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "theme": "light",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "theme": "light",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "theme": "light",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "theme": "light",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": true,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "theme": "dark",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "theme": "dark",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "theme": "dark",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "theme": "dark",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": false,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "dark",
+      "width": 834,
+      "comparison": false,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "theme": "dark",
+      "width": 360,
+      "comparison": false,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": false,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "theme": "dark",
+      "width": 834,
+      "comparison": false,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "theme": "dark",
+      "width": 360,
+      "comparison": false,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "theme": "dark",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "theme": "dark",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "theme": "dark",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "theme": "dark",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "theme": "dark",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "theme": "dark",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "theme": "dark",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "theme": "dark",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": false,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "theme": "dark",
+      "width": 834,
+      "comparison": false,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "theme": "dark",
+      "width": 360,
+      "comparison": false,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "theme": "dark",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "theme": "dark",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "theme": "dark",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "theme": "dark",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "theme": "dark",
+      "width": 1440,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "theme": "dark",
+      "width": 834,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "theme": "dark",
+      "width": 360,
+      "comparison": true,
+      "reducedMotion": false,
+      "focusSelectionAccessible": true
+    }
+  ],
+  "axeChecks": 24,
+  "violations": 0,
+  "errors": [],
+  "assets": []
+}

@@ -1,0 +1,3594 @@
+{
+  "chapters": 112,
+  "records": [
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "title": "Coordenadas Geográficas",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "title": "Coordenadas Geográficas",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "title": "Movimentos da Terra",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "title": "Movimentos da Terra",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-sistema-de-fusos-horarios",
+      "title": "Sistema de Fusos Horários",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-sistema-de-fusos-horarios",
+      "title": "Sistema de Fusos Horários",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-linguagem-cartografica",
+      "title": "Linguagem Cartográfica",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-projecoes-cartograficas",
+      "title": "Projeções Cartográficas",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-linguagem-cartografica",
+      "title": "Linguagem Cartográfica",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "title": "Cartografia Digital",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+      "title": "Representações Gráficas e Cartográficas",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-projecoes-cartograficas",
+      "title": "Projeções Cartográficas",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "title": "Dinâmica Climática",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "rain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "title": "Cartografia Digital",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-clima-mundial",
+      "title": "Clima Mundial",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "rain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geomorfologia-mundial",
+      "title": "Geomorfologia Mundial",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+      "title": "Representações Gráficas e Cartográficas",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "map",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-biogeografia-mundial",
+      "title": "Biogeografia Mundial",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-agua-na-superficie-terrestre",
+      "title": "Água na Superfície Terrestre",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "river",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "title": "Dinâmica Climática",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "rain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
+      "title": "Desafios Ambientais do Século XXI",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-ambiental",
+      "title": "Geopolítica Ambiental",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-clima-mundial",
+      "title": "Clima Mundial",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "rain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "title": "Geopolítica dos Recursos Hídricos",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "river",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geomorfologia-mundial",
+      "title": "Geomorfologia Mundial",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-mundial",
+      "title": "Hidrogeografia Mundial",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "river",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
+      "title": "Do Mundo Bipolar ao Multipolar",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-biogeografia-mundial",
+      "title": "Biogeografia Mundial",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
+      "title": "Globalização e Processos Econômicos Atuais",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geografia-das-redes-mundiais",
+      "title": "Geografia das Redes Mundiais",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-agua-na-superficie-terrestre",
+      "title": "Água na Superfície Terrestre",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "river",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-unilateralismo-e-multilateralismo",
+      "title": "Unilateralismo e Multilateralismo",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
+      "title": "Desafios Ambientais do Século XXI",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-blocos-economicos",
+      "title": "Blocos Econômicos",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-uniao-europeia",
+      "title": "União Europeia",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-ambiental",
+      "title": "Geopolítica Ambiental",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-desigualdades-globais",
+      "title": "Desigualdades Globais",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "title": "Geopolítica dos Recursos Hídricos",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "river",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-mobilidade-populacional",
+      "title": "Mobilidade Populacional",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "people",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geografia-do-turismo",
+      "title": "Geografia do Turismo",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "city",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-mundial",
+      "title": "Hidrogeografia Mundial",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "river",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-producao-agricola-mundial",
+      "title": "Produção Agrícola Mundial",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "crop",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
+      "title": "Do Mundo Bipolar ao Multipolar",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-industria-i",
+      "title": "Indústria I",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-industria-ii",
+      "title": "Indústria II",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
+      "title": "Globalização e Processos Econômicos Atuais",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-gedeconomia-mundial",
+      "title": "Gedeconomia Mundial",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geografia-das-redes-mundiais",
+      "title": "Geografia das Redes Mundiais",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-terrorismo-internacional",
+      "title": "Terrorismo Internacional",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-unilateralismo-e-multilateralismo",
+      "title": "Unilateralismo e Multilateralismo",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geografia-das-religioes",
+      "title": "Geografia das Religiões",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-tensoes-geopoliticas-na-europa",
+      "title": "Tensões Geopolíticas na Europa",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-blocos-economicos",
+      "title": "Blocos Econômicos",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
+      "title": "Geopolítica e Geoeconomia da América Latina",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-africa-no-mundo-atual",
+      "title": "África no Mundo Atual",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-uniao-europeia",
+      "title": "União Europeia",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
+      "title": "Geopolítica e Geoeconomia da Ásia",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-desigualdades-globais",
+      "title": "Desigualdades Globais",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geografia-do-oriente-medio",
+      "title": "Geografia do Oriente Médio",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-mobilidade-populacional",
+      "title": "Mobilidade Populacional",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "people",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-questao-palestina",
+      "title": "Questão Palestina",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-conflitos-no-mundo-arabe",
+      "title": "Conflitos no Mundo Árabe",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geografia-do-turismo",
+      "title": "Geografia do Turismo",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "city",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica",
+      "title": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "city",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-producao-agricola-mundial",
+      "title": "Produção Agrícola Mundial",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "crop",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geologia-e-geomorfologia",
+      "title": "Geologia e Geomorfologia",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "title": "Relevo Brasileiro",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-industria-i",
+      "title": "Indústria I",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-pedologia",
+      "title": "Pedologia",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-climatologia-do-brasil",
+      "title": "Climatologia do Brasil",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "rain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-industria-ii",
+      "title": "Indústria II",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-i",
+      "title": "Biogeografia do Brasil I",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-gedeconomia-mundial",
+      "title": "Gedeconomia Mundial",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-ii",
+      "title": "Biogeografia do Brasil II",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-politicas-ambientais-brasileiras",
+      "title": "Políticas Ambientais Brasileiras",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-terrorismo-internacional",
+      "title": "Terrorismo Internacional",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-do-brasil",
+      "title": "Hidrogeografia do Brasil",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "river",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-dominios-morfoclimaticos",
+      "title": "Domínios Morfoclimáticos",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "rain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geografia-das-religioes",
+      "title": "Geografia das Religiões",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-matriz-energetica",
+      "title": "Matriz Energética",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+      "title": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "energy",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-tensoes-geopoliticas-na-europa",
+      "title": "Tensões Geopolíticas na Europa",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-mundo",
+      "title": "Energia Elétrica no Mundo",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "energy",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "title": "Energia Elétrica no Brasil",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "energy",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
+      "title": "Geopolítica e Geoeconomia da América Latina",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-producao-mineral",
+      "title": "Produção Mineral",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-agrario-brasileiro",
+      "title": "O Espaço Agrário Brasileiro",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "crop",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-africa-no-mundo-atual",
+      "title": "África no Mundo Atual",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-i",
+      "title": "O Espaço Industrial Brasileiro I",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 2,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
+      "title": "Geopolítica e Geoeconomia da Ásia",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
+      "title": "O Espaço Industrial Brasileiro II",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-dinamica-demografica",
+      "title": "Dinâmica Demográfica",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "people",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geografia-do-oriente-medio",
+      "title": "Geografia do Oriente Médio",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+      "title": "Estrutura Étnica e Fluxos Migratórios",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "people",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-urbano-i",
+      "title": "O Espaço Urbano I",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "city",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-questao-palestina",
+      "title": "Questão Palestina",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-urbano-ii",
+      "title": "O Espaço Urbano II",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "city",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-conflitos-no-mundo-arabe",
+      "title": "Conflitos no Mundo Árabe",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-as-redes-de-transportes",
+      "title": "As Redes de Transportes",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-os-fluxos-do-comercio-externo",
+      "title": "Os Fluxos do Comércio Externo",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica",
+      "title": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "city",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "title": "Introdução à História e Primeiras Civilizações",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-grego",
+      "title": "Antiguidade Clássica: o Mundo Grego",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-geologia-e-geomorfologia",
+      "title": "Geologia e Geomorfologia",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "title": "Antiguidade Clássica: o Mundo Romano",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "title": "Relevo Brasileiro",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-alta-idade-media-e-feudalismo",
+      "title": "Alta Idade Média e Feudalismo",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-baixa-idade-media",
+      "title": "Baixa Idade Média",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-pedologia",
+      "title": "Pedologia",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-primeira-globalizacao",
+      "title": "A Primeira Globalização",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ship",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-climatologia-do-brasil",
+      "title": "Climatologia do Brasil",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "rain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-america-espanhola",
+      "title": "América Espanhola",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ship",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-vida-urbana-e-renascimento-cultural",
+      "title": "Vida Urbana e Renascimento Cultural",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-i",
+      "title": "Biogeografia do Brasil I",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-reforma-religiosa",
+      "title": "Reforma Religiosa",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-absolutismo",
+      "title": "Absolutismo",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-ii",
+      "title": "Biogeografia do Brasil II",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-revolucao-industrial",
+      "title": "Revolução Industrial",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-politicas-ambientais-brasileiras",
+      "title": "Políticas Ambientais Brasileiras",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "leaf",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-iluminismo",
+      "title": "Iluminismo",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-do-brasil",
+      "title": "Hidrogeografia do Brasil",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "river",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "title": "Revolução Francesa",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-america-no-seculo-xix",
+      "title": "América no Século XIX",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-dominios-morfoclimaticos",
+      "title": "Domínios Morfoclimáticos",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "rain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-europa-no-seculo-xix",
+      "title": "Europa no Século XIX",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-imperialismo-e-belle-epoque",
+      "title": "Imperialismo e Belle Époque",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-matriz-energetica",
+      "title": "Matriz Energética",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "globe",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-primeira-guerra-mundial-1914-1918",
+      "title": "Primeira Guerra Mundial (1914-1918)",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+      "title": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "energy",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+      "title": "Grandes Revoluções do Século XX",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-o-periodo-entreguerras-1918-1939",
+      "title": "O Período Entreguerras (1918-1939)",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-mundo",
+      "title": "Energia Elétrica no Mundo",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "energy",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-o-nazismo-na-alemanha",
+      "title": "O Nazismo na Alemanha",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "title": "Energia Elétrica no Brasil",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "energy",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-segunda-guerra-mundial-1939-1945",
+      "title": "Segunda Guerra Mundial (1939-1945)",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "title": "Guerra Fria",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-producao-mineral",
+      "title": "Produção Mineral",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-descolonizacao-afro-asiatica",
+      "title": "Descolonização Afro-Asiática",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-america-latina-no-seculo-xx",
+      "title": "América Latina no Século XX",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-agrario-brasileiro",
+      "title": "O Espaço Agrário Brasileiro",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "crop",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-o-fim-da-guerra-fria",
+      "title": "O Fim da Guerra Fria",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-historia-e-o-brasil",
+      "title": "A História e o Brasil",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-i",
+      "title": "O Espaço Industrial Brasileiro I",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 2,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+      "title": "Grandes Navegações e Conquista Colonial",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ship",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
+      "title": "O Espaço Industrial Brasileiro II",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-montagem-da-colonizacao",
+      "title": "A Montagem da Colonização",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-dinamica-interna-da-colonizacao",
+      "title": "Dinâmica Interna da Colonização",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-dinamica-demografica",
+      "title": "Dinâmica Demográfica",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "people",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+      "title": "Disputas Europeias no Brasil Colonial",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-interiorizacao-da-colonizacao",
+      "title": "A Interiorização da Colonização",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "ship",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+      "title": "Estrutura Étnica e Fluxos Migratórios",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "people",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "title": "A Mineração no Brasil Colonial",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+      "title": "A Crise do Antigo Sistema Colonial",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-urbano-i",
+      "title": "O Espaço Urbano I",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "city",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-o-espaco-urbano-ii",
+      "title": "O Espaço Urbano II",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "city",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-as-redes-de-transportes",
+      "title": "As Redes de Transportes",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-os-fluxos-do-comercio-externo",
+      "title": "Os Fluxos do Comércio Externo",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "network",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+      "title": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+      "title": "Brasil Império: o Período Regencial (1831-1840)",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "title": "Introdução à História e Primeiras Civilizações",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+      "title": "Brasil Império: Segundo Reinado (1840-1889)",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-grego",
+      "title": "Antiguidade Clássica: o Mundo Grego",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+      "title": "Brasil Império: o Declínio do Segundo Reinado",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "title": "A República da Espada",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "title": "Antiguidade Clássica: o Mundo Romano",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+      "title": "Ascensão e Domínio das Oligarquias",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+      "title": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-alta-idade-media-e-feudalismo",
+      "title": "Alta Idade Média e Feudalismo",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "title": "A Era Vargas",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-baixa-idade-media",
+      "title": "Baixa Idade Média",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "column",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+      "title": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-primeira-globalizacao",
+      "title": "A Primeira Globalização",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ship",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-estado-novo",
+      "title": "A Era Vargas: o Estado Novo",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
+      "title": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-america-espanhola",
+      "title": "América Espanhola",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ship",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
+      "title": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-vida-urbana-e-renascimento-cultural",
+      "title": "Vida Urbana e Renascimento Cultural",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-regime-militar-1964-1985-i",
+      "title": "Regime Militar (1964-1985) I",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-regime-militar-1964-1985-ii",
+      "title": "Regime Militar (1964-1985) II",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-o-brasil-atual",
+      "title": "O Brasil Atual",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-reforma-religiosa",
+      "title": "Reforma Religiosa",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "geo-bonus-demografico",
+      "title": "Estrutura Ativa da População",
+      "subject": "Geografia",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "people",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-absolutismo",
+      "title": "Absolutismo",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-revolucao-industrial",
+      "title": "Revolução Industrial",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "factory",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-iluminismo",
+      "title": "Iluminismo",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "title": "Revolução Francesa",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-america-no-seculo-xix",
+      "title": "América no Século XIX",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-europa-no-seculo-xix",
+      "title": "Europa no Século XIX",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-imperialismo-e-belle-epoque",
+      "title": "Imperialismo e Belle Époque",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-primeira-guerra-mundial-1914-1918",
+      "title": "Primeira Guerra Mundial (1914-1918)",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+      "title": "Grandes Revoluções do Século XX",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-o-periodo-entreguerras-1918-1939",
+      "title": "O Período Entreguerras (1918-1939)",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-o-nazismo-na-alemanha",
+      "title": "O Nazismo na Alemanha",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-segunda-guerra-mundial-1939-1945",
+      "title": "Segunda Guerra Mundial (1939-1945)",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "title": "Guerra Fria",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-descolonizacao-afro-asiatica",
+      "title": "Descolonização Afro-Asiática",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-america-latina-no-seculo-xx",
+      "title": "América Latina no Século XX",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-o-fim-da-guerra-fria",
+      "title": "O Fim da Guerra Fria",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-historia-e-o-brasil",
+      "title": "A História e o Brasil",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+      "title": "Grandes Navegações e Conquista Colonial",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ship",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-montagem-da-colonizacao",
+      "title": "A Montagem da Colonização",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-dinamica-interna-da-colonizacao",
+      "title": "Dinâmica Interna da Colonização",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+      "title": "Disputas Europeias no Brasil Colonial",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-interiorizacao-da-colonizacao",
+      "title": "A Interiorização da Colonização",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "ship",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "title": "A Mineração no Brasil Colonial",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "terrain",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+      "title": "A Crise do Antigo Sistema Colonial",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+      "title": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+      "title": "Brasil Império: o Período Regencial (1831-1840)",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+      "title": "Brasil Império: Segundo Reinado (1840-1889)",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+      "title": "Brasil Império: o Declínio do Segundo Reinado",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "title": "A República da Espada",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+      "title": "Ascensão e Domínio das Oligarquias",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+      "title": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "title": "A Era Vargas",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+      "title": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-estado-novo",
+      "title": "A Era Vargas: o Estado Novo",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
+      "title": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
+      "title": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-regime-militar-1964-1985-i",
+      "title": "Regime Militar (1964-1985) I",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-regime-militar-1964-1985-ii",
+      "title": "Regime Militar (1964-1985) II",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "fort",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-o-brasil-atual",
+      "title": "O Brasil Atual",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 4,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "ballot",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "geo-bonus-demografico",
+      "title": "Estrutura Ativa da População",
+      "subject": "Geografia",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 3,
+      "comparison": true,
+      "concepts": 5,
+      "icon": "people",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-independencia-do-brasil",
+      "title": "A Independência do Brasil",
+      "subject": "História",
+      "theme": "dark",
+      "widths": [
+        834,
+        390
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    },
+    {
+      "id": "summary-historia-a-independencia-do-brasil",
+      "title": "A Independência do Brasil",
+      "subject": "História",
+      "theme": "light",
+      "widths": [
+        1440,
+        360
+      ],
+      "recortes": 0,
+      "comparison": false,
+      "concepts": 5,
+      "icon": "scroll",
+      "state": "Não avaliado",
+      "passed": true
+    }
+  ],
+  "failures": [],
+  "rechecked_navigation": {
+    "id": "summary-historia-a-independencia-do-brasil",
+    "result": "passou nos dois temas com abertura direta"
+  }
+}

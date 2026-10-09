@@ -2,7 +2,7 @@ import React, { useId } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import type { PedagogicalStage } from '../../types/summary';
 
-type ObjectKind = 'solid' | 'curve' | 'matrix' | 'lens' | 'molecule' | 'cell' | 'book' | 'bulb' | 'target' | 'pencil' | 'globe' | 'column' | 'scales' | 'people' | 'letters' | 'wave' | 'circuit' | 'thermometer' | 'atom' | 'dna' | 'leaf';
+type ObjectKind = 'solid' | 'curve' | 'matrix' | 'lens' | 'molecule' | 'cell' | 'book' | 'bulb' | 'target' | 'pencil' | 'globe' | 'column' | 'scales' | 'people' | 'letters' | 'wave' | 'circuit' | 'thermometer' | 'atom' | 'dna' | 'leaf' | 'terrain' | 'map' | 'rain' | 'river' | 'city' | 'network' | 'crop' | 'energy' | 'ship' | 'factory' | 'scroll' | 'fort' | 'ballot';
 
 export function chapterObject(subject: string, topic: string): ObjectKind {
   const text = topic.normalize('NFD').replace(/\p{Diacritic}/gu, '').toLowerCase();
@@ -23,8 +23,32 @@ export function chapterObject(subject: string, topic: string): ObjectKind {
     if (/dna|rna|nucleic|genet|genica|sintese proteica/.test(text)) return 'dna';
     return /ecolog|vegetal|planta|fotossint|ambiente/.test(text) ? 'leaf' : 'cell';
   }
-  if (subject === 'Geografia' || subject === 'Atualidades') return 'globe';
-  if (subject === 'História') return 'column';
+  if (subject === 'Geografia') {
+    if (/movimentos da terra|fuso/.test(text)) return 'globe';
+    if (/coordenad|cartograf/.test(text)) return 'map';
+    if (/clima/.test(text)) return 'rain';
+    if (/hidro|agua|hidric/.test(text)) return 'river';
+    if (/relevo|geomorf|geolog|pedolog|mineral/.test(text)) return 'terrain';
+    if (/biogeo|dominio|ambient/.test(text)) return 'leaf';
+    if (/energi|combustiv|eletrica/.test(text)) return 'energy';
+    if (/agrari|agric/.test(text)) return 'crop';
+    if (/industri/.test(text)) return 'factory';
+    if (/urbano|paisagem|turismo/.test(text)) return 'city';
+    if (/popula|demogra|etnica|migrat/.test(text)) return 'people';
+    if (/rede|transporte|fluxos|comercio|globaliza|bloco|econom/.test(text)) return 'network';
+    return 'globe';
+  }
+  if (subject === 'Atualidades') return 'globe';
+  if (subject === 'História') {
+    if (/naveg|globaliza|interioriza|espanhola/.test(text)) return 'ship';
+    if (/industrial/.test(text)) return 'factory';
+    if (/mineracao/.test(text)) return 'terrain';
+    if (/guerra|militar|nazismo|entreguerras|republica da espada/.test(text)) return 'fort';
+    if (/estado novo/.test(text)) return 'scroll';
+    if (/republic|brasil atual|vargas|oligarq/.test(text)) return 'ballot';
+    if (/antiguidade|civilizacoes|feudal|idade media/.test(text)) return 'column';
+    return 'scroll';
+  }
   if (subject === 'Filosofia') return 'scales';
   if (subject === 'Sociologia') return 'people';
   if (subject === 'Redação') return 'pencil';
@@ -57,6 +81,19 @@ export function StudyObjectIcon({ subject, topic = '', stage, selected = false }
       </defs>
       <ellipse cx="32" cy="55" rx="20" ry="3.5" fill="currentColor" opacity="0.12" />
       <g stroke="#574331" strokeWidth="1.15" strokeLinejoin="round">
+        {kind === 'terrain' && <><path d="m5 39 25-14 29 14-24 16Z" fill={paint}/><path d="m5 39 30 16v6L5 45Zm30 16 24-16v6L35 61Z" fill="#956c49"/><path d="m11 39 17-27 9 12 7-15 12 29-21 12Z" fill={shade}/><path d="m28 12-5 17 8-5 6 0m7-15-5 25 9 7" fill="none" stroke="#e8dcc3"/></>}
+        {kind === 'map' && <><path d="m8 16 16-5 16 6 16-6v36l-16 6-16-6-16 5Z" fill={paint}/><path d="m24 11 16 6v36l-16-6Z" fill="#f4e5c7"/><path d="m24 11v36m16-30v36M13 33q12-15 20 0t17 1" fill="none" stroke="#67898b" strokeWidth="2"/><path d="M38 25a7 7 0 1 1 14 0q0 5-7 12-7-7-7-12Z" fill="#954b56"/><circle cx="45" cy="25" r="2" fill="#f7e6c7"/></>}
+        {kind === 'rain' && <><path d="m8 47 24-9 24 9-24 10Z" fill={shade}/><path d="M10 29q-6-13 7-15 2-13 14-8 10-8 16 5 14-1 10 14-1 6-12 6H19Z" fill={shade}/><path d="m19 36-4 8m17-8-4 8m17-8-4 8" stroke="#759dae" strokeWidth="3"/><path d="M14 24q0-5 9-6m5-7 7 1" stroke="#dfe8e1" fill="none"/></>}
+        {kind === 'river' && <><path d="m6 24 23-12 29 15-23 26-29-12Z" fill={paint}/><path d="m6 41 29 12v7L6 48Zm29 12 23-26v7L35 60Z" fill="#a4784b"/><path d="M23 16q17 4 11 11t8 13L35 50q-21-11-13-18t-8-9Z" fill={shade}/><path d="M26 18q12 5 7 11t6 12" stroke="#d1e6e4" fill="none"/></>}
+        {kind === 'city' && <><path d="m5 45 26-13 28 13-26 15Z" fill={shade}/>{[[12,24,16],[29,12,28],[44,28,17]].map(([x,y,h])=><g key={x}><path d={`M${x} ${y}l8-4 7 4-8 4Z`} fill={paint}/><path d={`M${x} ${y}l7 4v${h}l-7-4Z`} fill="#ae8157"/><path d={`M${x+7} ${y+4}l8-4v${h}l-8 4Z`} fill="#ecd9ae"/><path d={`M${x+10} ${y+8}v${h-7}m3-${h-7}v${h-7}`} stroke="#678998" strokeWidth="2"/></g>)}</>}
+        {kind === 'network' && <><path d="m9 42 24-14 22 14-24 14Z" fill={shade}/><path d="M16 16 48 23 32 46ZM16 16l16 30" stroke="#9d7e56" strokeWidth="3" fill="none"/>{[[16,16],[48,23],[32,46]].map(([x,y])=><circle key={x} cx={x} cy={y} r="8" fill={paint}/>)}</>}
+        {kind === 'crop' && <><path d="m6 38 24-12 28 13-26 17Z" fill={paint}/><path d="m6 38 26 18v5L6 44Zm26 18 26-17v5L32 61Z" fill="#926747"/><path d="m13 40 25-11m-18 17 25-12m-17 18 25-12" stroke="#60775a" strokeWidth="3"/><path d="M29 35V10m0 15q-13 0-13-9 13 0 13 9Zm0-4q13 0 13-10-13 0-13 10Z" fill="#91aa70" stroke="#596d44"/></>}
+        {kind === 'energy' && <><path d="m10 37 22-10 22 10-22 13Z" fill={shade}/><path d="m10 37 22 13v8L10 45Zm22 13 22-13v8L32 58Z" fill="#3f6574"/><path d="m34 6-17 24h14l-6 18 23-28H35l6-14Z" fill={paint}/></>}
+        {kind === 'ship' && <><path d="M5 43q26-10 54 0m-54 8q26-9 54 0" stroke="#739aa5" fill="none"/><path d="m10 38 44-3-12 15H21Z" fill={paint}/><path d="M31 35V7m-2 4L11 32h18Zm5-1 18 19H34Z" fill="#f1e1bf"/><path d="m19 43 24-2" stroke="#956945"/></>}
+        {kind === 'factory' && <><path d="m9 31 23-12 24 12v22l-23 8L9 49Z" fill={shade}/><path d="m9 31 9-10 8 7 8-10v33L9 49Z" fill={paint}/><path d="M41 26V7h8v21" fill="#ae895f"/><path d="M44 4q-8-4-16 0" stroke="#a9b8b6" fill="none" strokeWidth="4"/><path d="M14 35v9m9-12v16m19-14v12m8-14v12" stroke="#f0e0bb" strokeWidth="3"/></>}
+        {kind === 'scroll' && <><path d="M15 11h37v38q-9 11-17 4H12V21q-8-2-4-9 2-4 7-1Z" fill={paint}/><path d="M15 11q10 0 5 12h-8m23 30q-8-8-1-11h18" fill="#eddbb5"/><path d="M25 21h19m-19 7h19m-19 7h13" fill="none" stroke="#98734d" strokeWidth="2"/><circle cx="39" cy="38" r="5" fill="#9a4e5c"/></>}
+        {kind === 'fort' && <><path d="m8 25 24-12 24 12-24 12Z" fill={paint}/><path d="m8 25 24 12v20L8 45Zm24 12 24-12v20L32 57Z" fill={shade}/><path d="M8 25V15h7v6l8-4v-6l9-4v6l9 4v-6l8 4v6l7 4v10L32 47Z" fill="#b7c4c2"/><path d="M27 54V43q5-8 10-3v14" fill="#52717a"/></>}
+        {kind === 'ballot' && <><path d="m10 29 22-11 23 11-22 12Z" fill={paint}/><path d="m10 29 23 12v19L10 48Zm23 12 22-12v19L33 60Z" fill={shade}/><path d="m20 29 14-6 8 4-14 7Z" fill="#574c40"/><path d="m24 6 19 6-11 20-15-6Z" fill="#f1e2c3"/><path d="m23 17 4 4 9-6" stroke="#637d64" fill="none" strokeWidth="2"/></>}
         {kind === 'globe' && <><path d="M31 45v9m-13 2h29" strokeWidth="4" fill="none" /><circle cx="32" cy="28" r="21" fill={shade} /><path d="M24 11 17 21l8 6 4-3 8 9-2 9 9-4 5-11-9-5-4-10Z" fill="#a1bca2" /><ellipse cx="32" cy="28" rx="10" ry="21" fill="none" stroke="#dae5dc" strokeOpacity=".55" /><path d="M13 21q19 9 38 0M13 35q19-8 38 0" fill="none" stroke="#dae5dc" strokeOpacity=".55" /></>}
         {kind === 'column' && <><path d="m12 15 20-8 20 8v7H12Z" fill={paint} /><path d="M16 22h32v27H16Z" fill="#ecd7b0" /><path d="M22 23v24m9-24v24m10-24v24" stroke="#ad895c" strokeWidth="4" /><path d="M12 49h40v8H12Z" fill={paint} /></>}
         {kind === 'scales' && <><path d="M32 12v41m-18 3h36M12 23l20-7 20 7" strokeWidth="4" fill="none" stroke="#a37945" /><path d="m12 23-8 19h16Zm40 0-8 19h16Z" stroke="#7b6449" fill="none" /><path d="M4 42q8 14 16 0Zm40 0q8 14 16 0Z" fill={paint} /><circle cx="32" cy="15" r="5" fill={shade} /></>}

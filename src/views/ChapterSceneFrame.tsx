@@ -5,7 +5,8 @@ import './ChapterSceneFrame.css';
 
 /** A mesma cena fica no lugar ao ampliar: medidas, casos e evidências não são reiniciados. */
 export function ChapterSceneFrame({ chapterId, subject, title, topic, children }: {
-  chapterId: string; subject: string; title: string; topic: string; children: React.ReactNode;
+  chapterId: string; subject: string; title: string; topic: string;
+  children: React.ReactNode | ((closeFocus: () => void) => React.ReactNode);
 }) {
   const [focused, setFocused] = useState(false);
   const root = useRef<HTMLDivElement>(null), toggle = useRef<HTMLButtonElement>(null);
@@ -32,8 +33,16 @@ export function ChapterSceneFrame({ chapterId, subject, title, topic, children }
     const keyboard = (event: KeyboardEvent) => {
       if (event.key === 'Escape') { event.preventDefault(); event.stopPropagation(); setFocused(false); }
       if (event.key !== 'Tab') return;
-      const candidates = Array.from(element.querySelectorAll<HTMLElement>('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),a[href],[tabindex="0"]'))
-        .filter(e => e.getClientRects().length > 0);
+      const candidates = Array.from(element.querySelectorAll<HTMLElement>('button:not(:disabled),input:not(:disabled),select:not(:disabled),textarea:not(:disabled),a[href],summary,[tabindex="0"]'))
+        .filter(e => {
+          if (!e.getClientRects().length) return false;
+          // O navegador pode conservar retângulos dos filhos de um details
+          // fechado. Só seu summary participa da navegação por Tab.
+          for (let parent = e.parentElement; parent && parent !== element; parent = parent.parentElement) {
+            if (parent instanceof HTMLDetailsElement && !parent.open && !parent.querySelector(':scope > summary')?.contains(e)) return false;
+          }
+          return true;
+        });
       const first = candidates[0], last = candidates.at(-1);
       if (!first) { event.preventDefault(); toggle.current?.focus(); return; }
       if (event.shiftKey && document.activeElement === first) { event.preventDefault(); last?.focus(); }
@@ -57,6 +66,6 @@ export function ChapterSceneFrame({ chapterId, subject, title, topic, children }
         <span>{focused ? 'Sair do modo foco' : 'Explorar em foco'}</span>
       </button>
     </header>
-    <div className="vs-chapter-scene-body">{children}</div>
+    <div className="vs-chapter-scene-body">{typeof children === 'function' ? children(() => setFocused(false)) : children}</div>
   </div>;
 }

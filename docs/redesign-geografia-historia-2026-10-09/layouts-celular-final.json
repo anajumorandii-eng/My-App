@@ -1,0 +1,676 @@
+{
+  "records": [
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-sistema-de-fusos-horarios",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-linguagem-cartografica",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-projecoes-cartograficas",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-clima-mundial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geomorfologia-mundial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-biogeografia-mundial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-agua-na-superficie-terrestre",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geopolitica-ambiental",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-mundial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geografia-das-redes-mundiais",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-unilateralismo-e-multilateralismo",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-blocos-economicos",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-uniao-europeia",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-desigualdades-globais",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-mobilidade-populacional",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geografia-do-turismo",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-producao-agricola-mundial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-industria-i",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-industria-ii",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-gedeconomia-mundial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-terrorismo-internacional",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geografia-das-religioes",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-tensoes-geopoliticas-na-europa",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-africa-no-mundo-atual",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geografia-do-oriente-medio",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-questao-palestina",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-conflitos-no-mundo-arabe",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-geologia-e-geomorfologia",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-pedologia",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-climatologia-do-brasil",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-i",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-ii",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-politicas-ambientais-brasileiras",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-hidrogeografia-do-brasil",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-dominios-morfoclimaticos",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-matriz-energetica",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-mundo",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-energia-eletrica-no-brasil",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-producao-mineral",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-o-espaco-agrario-brasileiro",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-i",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-dinamica-demografica",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-o-espaco-urbano-i",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-o-espaco-urbano-ii",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-as-redes-de-transportes",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-geografia-os-fluxos-do-comercio-externo",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-grego",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-alta-idade-media-e-feudalismo",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-baixa-idade-media",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-primeira-globalizacao",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-america-espanhola",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-vida-urbana-e-renascimento-cultural",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-reforma-religiosa",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-absolutismo",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-revolucao-industrial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-iluminismo",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-revolucao-francesa",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-america-no-seculo-xix",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-europa-no-seculo-xix",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-imperialismo-e-belle-epoque",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-primeira-guerra-mundial-1914-1918",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-o-periodo-entreguerras-1918-1939",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-o-nazismo-na-alemanha",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-segunda-guerra-mundial-1939-1945",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-guerra-fria",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-descolonizacao-afro-asiatica",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-america-latina-no-seculo-xx",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-o-fim-da-guerra-fria",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-historia-e-o-brasil",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-montagem-da-colonizacao",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-dinamica-interna-da-colonizacao",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-interiorizacao-da-colonizacao",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-independencia-do-brasil",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-republica-da-espada",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-era-vargas",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-a-era-vargas-o-estado-novo",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-regime-militar-1964-1985-i",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-regime-militar-1964-1985-ii",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "summary-historia-o-brasil-atual",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    },
+    {
+      "id": "geo-bonus-demografico",
+      "width": 360,
+      "theme": "dark",
+      "overflow": false
+    }
+  ]
+}

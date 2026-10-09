@@ -1,0 +1,562 @@
+[
+  {
+    "id": "summary-geografia-coordenadas-geograficas",
+    "title": "Coordenadas Geográficas",
+    "rep": "experiment"
+  },
+  {
+    "id": "summary-geografia-movimentos-da-terra",
+    "title": "Movimentos da Terra",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-sistema-de-fusos-horarios",
+    "title": "Sistema de Fusos Horários",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-linguagem-cartografica",
+    "title": "Linguagem Cartográfica",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-projecoes-cartograficas",
+    "title": "Projeções Cartográficas",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-cartografia-digital",
+    "title": "Cartografia Digital",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+    "title": "Representações Gráficas e Cartográficas",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-dinamica-climatica",
+    "title": "Dinâmica Climática",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-clima-mundial",
+    "title": "Clima Mundial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geomorfologia-mundial",
+    "title": "Geomorfologia Mundial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-biogeografia-mundial",
+    "title": "Biogeografia Mundial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-agua-na-superficie-terrestre",
+    "title": "Água na Superfície Terrestre",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
+    "title": "Desafios Ambientais do Século XXI",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geopolitica-ambiental",
+    "title": "Geopolítica Ambiental",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+    "title": "Geopolítica dos Recursos Hídricos",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-hidrogeografia-mundial",
+    "title": "Hidrogeografia Mundial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
+    "title": "Do Mundo Bipolar ao Multipolar",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
+    "title": "Globalização e Processos Econômicos Atuais",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geografia-das-redes-mundiais",
+    "title": "Geografia das Redes Mundiais",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-unilateralismo-e-multilateralismo",
+    "title": "Unilateralismo e Multilateralismo",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-blocos-economicos",
+    "title": "Blocos Econômicos",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-uniao-europeia",
+    "title": "União Europeia",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-desigualdades-globais",
+    "title": "Desigualdades Globais",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-mobilidade-populacional",
+    "title": "Mobilidade Populacional",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geografia-do-turismo",
+    "title": "Geografia do Turismo",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-producao-agricola-mundial",
+    "title": "Produção Agrícola Mundial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-industria-i",
+    "title": "Indústria I",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-industria-ii",
+    "title": "Indústria II",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-gedeconomia-mundial",
+    "title": "Gedeconomia Mundial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-terrorismo-internacional",
+    "title": "Terrorismo Internacional",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geografia-das-religioes",
+    "title": "Geografia das Religiões",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-tensoes-geopoliticas-na-europa",
+    "title": "Tensões Geopolíticas na Europa",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
+    "title": "Geopolítica e Geoeconomia da América Latina",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-africa-no-mundo-atual",
+    "title": "África no Mundo Atual",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
+    "title": "Geopolítica e Geoeconomia da Ásia",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geografia-do-oriente-medio",
+    "title": "Geografia do Oriente Médio",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-questao-palestina",
+    "title": "Questão Palestina",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-conflitos-no-mundo-arabe",
+    "title": "Conflitos no Mundo Árabe",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica",
+    "title": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-geologia-e-geomorfologia",
+    "title": "Geologia e Geomorfologia",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-relevo-brasileiro",
+    "title": "Relevo Brasileiro",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-pedologia",
+    "title": "Pedologia",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-climatologia-do-brasil",
+    "title": "Climatologia do Brasil",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-biogeografia-do-brasil-i",
+    "title": "Biogeografia do Brasil I",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-biogeografia-do-brasil-ii",
+    "title": "Biogeografia do Brasil II",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-politicas-ambientais-brasileiras",
+    "title": "Políticas Ambientais Brasileiras",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-hidrogeografia-do-brasil",
+    "title": "Hidrogeografia do Brasil",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-dominios-morfoclimaticos",
+    "title": "Domínios Morfoclimáticos",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-matriz-energetica",
+    "title": "Matriz Energética",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+    "title": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+    "rep": "instrument"
+  },
+  {
+    "id": "summary-geografia-energia-eletrica-no-mundo",
+    "title": "Energia Elétrica no Mundo",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-energia-eletrica-no-brasil",
+    "title": "Energia Elétrica no Brasil",
+    "rep": "instrument"
+  },
+  {
+    "id": "summary-geografia-producao-mineral",
+    "title": "Produção Mineral",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-o-espaco-agrario-brasileiro",
+    "title": "O Espaço Agrário Brasileiro",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-o-espaco-industrial-brasileiro-i",
+    "title": "O Espaço Industrial Brasileiro I",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
+    "title": "O Espaço Industrial Brasileiro II",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-dinamica-demografica",
+    "title": "Dinâmica Demográfica",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+    "title": "Estrutura Étnica e Fluxos Migratórios",
+    "rep": "instrument"
+  },
+  {
+    "id": "summary-geografia-o-espaco-urbano-i",
+    "title": "O Espaço Urbano I",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-o-espaco-urbano-ii",
+    "title": "O Espaço Urbano II",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-as-redes-de-transportes",
+    "title": "As Redes de Transportes",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-geografia-os-fluxos-do-comercio-externo",
+    "title": "Os Fluxos do Comércio Externo",
+    "rep": "instrument"
+  },
+  {
+    "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+    "title": "Introdução à História e Primeiras Civilizações",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-antiguidade-classica-o-mundo-grego",
+    "title": "Antiguidade Clássica: o Mundo Grego",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+    "title": "Antiguidade Clássica: o Mundo Romano",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-alta-idade-media-e-feudalismo",
+    "title": "Alta Idade Média e Feudalismo",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-baixa-idade-media",
+    "title": "Baixa Idade Média",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-primeira-globalizacao",
+    "title": "A Primeira Globalização",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-america-espanhola",
+    "title": "América Espanhola",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-vida-urbana-e-renascimento-cultural",
+    "title": "Vida Urbana e Renascimento Cultural",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-reforma-religiosa",
+    "title": "Reforma Religiosa",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-absolutismo",
+    "title": "Absolutismo",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-revolucao-industrial",
+    "title": "Revolução Industrial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-iluminismo",
+    "title": "Iluminismo",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-revolucao-francesa",
+    "title": "Revolução Francesa",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-america-no-seculo-xix",
+    "title": "América no Século XIX",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-europa-no-seculo-xix",
+    "title": "Europa no Século XIX",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-imperialismo-e-belle-epoque",
+    "title": "Imperialismo e Belle Époque",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-primeira-guerra-mundial-1914-1918",
+    "title": "Primeira Guerra Mundial (1914-1918)",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+    "title": "Grandes Revoluções do Século XX",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-o-periodo-entreguerras-1918-1939",
+    "title": "O Período Entreguerras (1918-1939)",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-o-nazismo-na-alemanha",
+    "title": "O Nazismo na Alemanha",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-segunda-guerra-mundial-1939-1945",
+    "title": "Segunda Guerra Mundial (1939-1945)",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-guerra-fria",
+    "title": "Guerra Fria",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-descolonizacao-afro-asiatica",
+    "title": "Descolonização Afro-Asiática",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-america-latina-no-seculo-xx",
+    "title": "América Latina no Século XX",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-o-fim-da-guerra-fria",
+    "title": "O Fim da Guerra Fria",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-historia-e-o-brasil",
+    "title": "A História e o Brasil",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+    "title": "Grandes Navegações e Conquista Colonial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-montagem-da-colonizacao",
+    "title": "A Montagem da Colonização",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-dinamica-interna-da-colonizacao",
+    "title": "Dinâmica Interna da Colonização",
+    "rep": "instrument"
+  },
+  {
+    "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+    "title": "Disputas Europeias no Brasil Colonial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-interiorizacao-da-colonizacao",
+    "title": "A Interiorização da Colonização",
+    "rep": "instrument"
+  },
+  {
+    "id": "summary-historia-a-mineracao-no-brasil-colonial",
+    "title": "A Mineração no Brasil Colonial",
+    "rep": "instrument"
+  },
+  {
+    "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+    "title": "A Crise do Antigo Sistema Colonial",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-independencia-do-brasil",
+    "title": "A Independência do Brasil",
+    "rep": "board"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+    "title": "Brasil Império: Formação do Estado Nacional Brasileiro",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+    "title": "Brasil Império: o Período Regencial (1831-1840)",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+    "title": "Brasil Império: Segundo Reinado (1840-1889)",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+    "title": "Brasil Império: o Declínio do Segundo Reinado",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-republica-da-espada",
+    "title": "A República da Espada",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+    "title": "Ascensão e Domínio das Oligarquias",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+    "title": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-era-vargas",
+    "title": "A Era Vargas",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+    "title": "A Era Vargas: o Governo Constitucional (1934-1937)",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-a-era-vargas-o-estado-novo",
+    "title": "A Era Vargas: o Estado Novo",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
+    "title": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
+    "title": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-regime-militar-1964-1985-i",
+    "title": "Regime Militar (1964-1985) I",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-regime-militar-1964-1985-ii",
+    "title": "Regime Militar (1964-1985) II",
+    "rep": "scene"
+  },
+  {
+    "id": "summary-historia-o-brasil-atual",
+    "title": "O Brasil Atual",
+    "rep": "scene"
+  },
+  {
+    "id": "geo-bonus-demografico",
+    "title": "Estrutura Ativa da População",
+    "rep": "scene"
+  }
+]
