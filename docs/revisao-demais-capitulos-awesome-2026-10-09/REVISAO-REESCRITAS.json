@@ -1,0 +1,32 @@
+{
+  "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+  "scope": "Alterações dos textos e citações de Relevo Brasileiro e Grandes Navegações; revisão somente leitura.",
+  "results": [
+    {
+      "subject": "Geografia",
+      "status": "no_blocking_findings_in_changed_content",
+      "checks": [
+        "Geoeconomia mantém revisão 2 e IDs; sectionSlug preserva prefixo legado.",
+        "Relevo: Jurandyr Ross; processos/estruturas coerentes; três claims/quotes correspondem ao texto.",
+        "Domínios explicita três exemplos dos seis."
+      ]
+    },
+    {
+      "subject": "História",
+      "status": "no_blocking_findings_in_changed_content",
+      "checks": [
+        "Revisão 3 coerente em pioneirismo, pegadinha e exercício.",
+        "Atividade náutica documentada distinta de escola formal controversa.",
+        "Rótulo Tecnologia náutica corresponde à fonte; 1488/1498 preservados."
+      ]
+    }
+  ],
+  "preexisting_content_followups": [
+    "Grandes Navegações: conferir expressão Tordesilhas mediado pelo papado.",
+    "Grandes Navegações: recuperação pergunta sobre Madri sem explicação nesse capítulo."
+  ],
+  "limits": [
+    "Não constitui certificação pedagógica integral.",
+    "As capturas posteriores são revisadas separadamente."
+  ]
+}

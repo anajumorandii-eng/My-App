@@ -1,6 +1,6 @@
 # Execução remota dos 613 capítulos — Awesome Design MD
 
-**Estado técnico: passed. Revisão visual das capturas: pendente.**
+**Estado técnico: passed. Revisão visual posterior: amostra de 18 IDs em dois formatos, sem bloqueios visíveis nas aberturas.**
 
 Gerado em 2026-10-09T23:22:52.027Z. SHA verificado: `e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679`. [Execução no GitHub Actions](https://github.com/anajumorandii-eng/My-App/actions/runs/38001813270).
 
@@ -27,7 +27,7 @@ O roteiro verifica carregamento da cena nativa, objeto, overflow da página, ár
 
 As configurações usam Chromium e preferências sintéticas. Não são prova de funcionamento em Safari/iPad físico, serviços autenticados reais, todos os valores dos controles ou aprovação pedagógica. O inventário formal permanece inalterado. O critério visual usa Claude e Miro do Awesome Design MD, adaptados à identidade existente do Crivo.
 
-A verificação foi executada remotamente no GitHub Actions. As folhas de contato ficam versionadas; as capturas individuais completas permanecem nos artefatos com retenção de três dias. A proposta segue em rascunho até analisar os achados e revisar as imagens; sem merge automático.
+A verificação foi executada remotamente no GitHub Actions. As folhas de contato ficam versionadas; as capturas individuais completas permanecem nos artefatos com retenção de três dias. As capturas posteriores foram examinadas por amostra: 18 IDs em celular escuro e desktop claro, em 28 folhas de contato. [Registro posterior](REVISAO-POSTERIOR.json), [regressões](regressoes.json), [revisão dos textos alterados](REVISAO-REESCRITAS.json) e [encerramento](ENCERRAMENTO.md). Não equivale à validação de todos os estados; sem merge automático.
 
 ## Registro anterior à execução remota
 

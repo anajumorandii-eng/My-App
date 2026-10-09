@@ -6,7 +6,7 @@ Fonte: `e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679`; execução 38001813270. Estad
 
 A execução verifica as correções da PR de continuidade desta branch após a base mesclada da PR #291: cabeçalhos, Geoeconomia, relevo, aromaticidade e correspondência entre perguntas, rótulos e exemplos. A inspeção anterior das 501 aberturas está registrada em revisao-501.json. Aprovação estética/pedagógica não foi inferida dos testes. Os 81 estados em validação e os 532 não revisados do inventário formal foram preservados.
 
-Próximo passo: analisar os achados por ID e revisar as capturas com os critérios Awesome Design MD; depois concluir a revisão da PR de continuidade desta branch. Não repetir a execução se o código não mudar e não houver falha ou dúvida nova. Não reaplicar #288/#289/#290. Sem merge automático.
+Amostra posterior concluída: 18 IDs nas aberturas em 360/escuro e 1440/claro, sem bloqueios visíveis. [Encerramento](revisao-demais-capitulos-awesome-2026-10-09/ENCERRAMENTO.md) e [registro posterior](revisao-demais-capitulos-awesome-2026-10-09/REVISAO-POSTERIOR.json). Próximo passo: revisão e merge da PR #293 pelo responsável; a #292 foi encerrada como substituída. Não repetir a execução se o código não mudar e não houver falha ou dúvida nova. Não reaplicar #288/#289/#290. Sem merge automático.
 
 
 ## Auditoria automatizada executada no GitHub — 2026-10-09T22:01:37.193Z

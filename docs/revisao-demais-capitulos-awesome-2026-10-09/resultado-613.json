@@ -3,7 +3,8 @@
   "summary": {
     "fresh_browser_checks": 7356,
     "fresh_technical_failures": 0,
-    "fresh_visual_reviews": 0
+    "fresh_visual_reviews": 18,
+    "fresh_visual_views_per_reviewed_id": 2
   },
   "chapters": [
     {
@@ -4078,7 +4079,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-biologia-moluscos",
@@ -4660,7 +4662,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-biologia-cordados-tetrapodes",
@@ -6697,7 +6700,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-biologia-histologia-e-morfologia-vegetal",
@@ -18143,7 +18147,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-geografia-terrorismo-internacional",
@@ -19307,7 +19312,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-geografia-pedologia",
@@ -19986,7 +19992,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-geografia-matriz-energetica",
@@ -20180,7 +20187,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-geografia-energia-eletrica-no-mundo",
@@ -20956,7 +20964,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-geografia-o-espaco-urbano-i",
@@ -23963,7 +23972,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-historia-a-montagem-da-colonizacao",
@@ -24448,7 +24458,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
@@ -26485,7 +26496,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-hurricanes",
@@ -26776,7 +26788,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-lingua-inglesa-text-comprehension-the-human-brain",
@@ -28037,7 +28050,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-redacao-projeto-de-texto-em-favor-da-progressao-textual",
@@ -28522,7 +28536,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto",
@@ -38998,7 +39013,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-literatura-poesia-brasileira-contemporanea",
@@ -51317,7 +51333,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-quimica-reacoes-de-adicao",
@@ -53936,7 +53953,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
@@ -58980,7 +58998,8 @@
           "result_file": "execucao/1440-dark-no-preference.json"
         }
       ],
-      "fresh_visual_review": "pending_review_of_fresh_captures"
+      "fresh_visual_review": "opening_inspected_postfix",
+      "visual_review_record": "REVISAO-POSTERIOR.json"
     },
     {
       "id": "summary-sociologia-cidadania-e-direitos",
@@ -59472,7 +59491,8 @@
   "structural_source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
   "runtime_source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
   "audited_at_utc": "2026-10-09T23:22:52.027Z",
-  "status": "automated_verification_complete_visual_review_pending",
+  "status": "automated_verification_complete_visual_sample_reviewed",
   "runtime_manifest": "execucao/manifesto.json",
-  "execution_location": "GitHub Actions; remote verification on GitHub Actions"
+  "execution_location": "GitHub Actions; remote verification on GitHub Actions",
+  "visual_review_record": "REVISAO-POSTERIOR.json"
 }

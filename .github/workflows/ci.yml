@@ -28,6 +28,9 @@ jobs:
 
       - run: npm test
 
+      - name: Continuidade do catálogo e conteúdo editorial
+        run: npx vitest run src/data/continuityGeography.test.ts
+
       # Sem este passo uma quebra de build só aparecia no deploy.
       - run: npm run build
 

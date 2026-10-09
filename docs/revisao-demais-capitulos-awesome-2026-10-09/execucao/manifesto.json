@@ -2489,11 +2489,23 @@
     "nao-revisado": 532,
     "em-validacao": 81
   },
-  "visual_review_status": "pending",
+  "visual_review_status": "partial",
   "limits": [
     "Chromium, synthetic preferences, no authenticated student data",
     "Initial views and representative control interactions; not every parameter combination",
     "Contact sheets require visual review; do not infer aesthetic or pedagogical approval",
     "Full screenshots remain in original workflow artifacts for three days"
-  ]
+  ],
+  "visual_review": {
+    "source_commit": "e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679",
+    "capture_commit": "7e878095f18cb91ce9402b2abfa2e2c72c1be119",
+    "reviewed_ids": 18,
+    "views": [
+      "360-dark",
+      "1440-light"
+    ],
+    "reviewed_contact_sheets": 28,
+    "record": "../REVISAO-POSTERIOR.json",
+    "scope": "Abertura posterior às correções, amostra de 18 IDs em 360/escuro e 1440/claro; imagens com movimento reduzido."
+  }
 }
