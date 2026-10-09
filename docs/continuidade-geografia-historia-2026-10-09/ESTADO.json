@@ -1,0 +1,27 @@
+{
+  "status": "interrompido a pedido da usuária; rascunho",
+  "branch": "redesign/geografia-historia",
+  "base": "e296f10c1a79f694ed6085dec65398ae2d144cbe",
+  "pr": "https://github.com/anajumorandii-eng/My-App/pulls?q=is%3Apr+head%3Aredesign%2Fgeografia-historia",
+  "capitulos": {
+    "Geografia": 63,
+    "História": 49
+  },
+  "implementacao": "primeira camada de apresentação, ícones, comparação e percurso; revisão individual não concluída",
+  "validacao": {
+    "teste_direcionado": "20 testes passaram",
+    "lint": "passou",
+    "suite_completa": {
+      "resultado": "passou",
+      "node": 943,
+      "interface": 1402,
+      "arquivos_interface": 183,
+      "total": 2345
+    },
+    "build": "não executado nesta implementação",
+    "navegador": "não executado nesta implementação",
+    "capturas_novas": 0
+  },
+  "proxima_acao": "ler guia; testar comparação e percurso; validar em navegador e revisar os 112 capítulos",
+  "merge_automatico": false
+}

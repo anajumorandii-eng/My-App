@@ -378,31 +378,53 @@ function ColonialRevolts({ active, t }: { active: number; t: SceneTransition }) 
 
 export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
   const [active, setActive] = useState(0);
+  const [comparing, setComparing] = useState(false);
+  const [comparisonIndex, setComparisonIndex] = useState(1);
+  const [showComparison, setShowComparison] = useState(false);
+  const otherIndex = comparisonIndex === active ? (active + 1) % entry.items.length : comparisonIndex;
+  const displayed = comparing && showComparison ? otherIndex : active;
   const transition = useSceneMotion();
   const item = entry.items[active];
+  const other = entry.items[otherIndex];
   const history = entry.chapterId.startsWith('summary-historia-');
   return <section className="tc-scene hg-scene" aria-label={entry.question}>
     <header><small>CRIVO · {HEADERS[entry.chapterId] ?? (history ? 'cronologia e causalidade' : FISICA[entry.chapterId] || entry.chapterId === 'summary-geografia-dinamica-climatica' ? 'geografia física' : 'cartografia comparada')}</small><h4>{entry.question}</h4></header>
+    <div className="hu-recortes" role="group" aria-label="Selecione um recorte da prancha">
+      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => { setActive(index); setShowComparison(false); }} initial={false} animate={{ y: active === index ? -2 : 0 }} transition={transition}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span>{candidate.label}</span></motion.button>)}
+    </div>
+    <div className="hu-toolbar"><span>{comparing ? `Na prancha: ${entry.items[displayed].label}` : `${active + 1} de ${entry.items.length} recortes · ${item.label}`}</span>
+      {entry.items.length > 1 && <button type="button" className="hu-action" aria-pressed={comparing} onClick={() => { setComparing(!comparing); setShowComparison(false); }}>{comparing ? 'Fechar comparação' : 'Comparar recortes'}</button>}
+    </div>
     <div className="hg-figure" role="region" tabIndex={0} aria-label="Prancha visual: deslize para ver a figura inteira; com teclado, use as setas" onKeyDown={event => {
       if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
       event.preventDefault();
       event.currentTarget.scrollLeft += event.key === 'ArrowRight' ? 120 : -120;
     }}>
-      {SELF_PACED[entry.chapterId] ? React.createElement(SELF_PACED[entry.chapterId], { active })
-        : FISICA[entry.chapterId] ? React.createElement(FISICA[entry.chapterId], { active })
-        : entry.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial' ? <Navigations active={active} t={transition} />
-        : entry.chapterId === 'summary-historia-a-montagem-da-colonizacao' ? <Colonization active={active} t={transition} />
-        : entry.chapterId === 'summary-historia-a-crise-do-antigo-sistema-colonial' ? <ColonialRevolts active={active} t={transition} />
-        : entry.chapterId === 'summary-historia-revolucao-francesa' ? <FrenchRevolution active={active} t={transition} />
-        : entry.chapterId === 'summary-historia-revolucao-industrial' ? <IndustrialRevolution active={active} t={transition} />
-          : entry.chapterId === 'summary-geografia-dinamica-climatica' ? <RainMechanisms active={active} t={transition} />
-            : <ProjectionComparison active={active} t={transition} />}
+      {SELF_PACED[entry.chapterId] ? React.createElement(SELF_PACED[entry.chapterId], { active: displayed })
+        : FISICA[entry.chapterId] ? React.createElement(FISICA[entry.chapterId], { active: displayed })
+        : entry.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial' ? <Navigations active={displayed} t={transition} />
+        : entry.chapterId === 'summary-historia-a-montagem-da-colonizacao' ? <Colonization active={displayed} t={transition} />
+        : entry.chapterId === 'summary-historia-a-crise-do-antigo-sistema-colonial' ? <ColonialRevolts active={displayed} t={transition} />
+        : entry.chapterId === 'summary-historia-revolucao-francesa' ? <FrenchRevolution active={displayed} t={transition} />
+        : entry.chapterId === 'summary-historia-revolucao-industrial' ? <IndustrialRevolution active={displayed} t={transition} />
+          : entry.chapterId === 'summary-geografia-dinamica-climatica' ? <RainMechanisms active={displayed} t={transition} />
+            : <ProjectionComparison active={displayed} t={transition} />}
     </div>
     <p className="hg-pan-hint">Deslize a prancha para ver toda a figura. Com teclado, use as setas.</p>
-    <div className="hg-controls" aria-label="Selecione um recorte da prancha">
-      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => setActive(index)} animate={{ y: active === index ? -2 : 0 }} transition={transition}>{candidate.label}</motion.button>)}
-    </div>
-    <div className="hg-detail" role="status" aria-live="polite"><strong>{item.label}</strong><p>{item.claim}</p><blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote></div>
+    {comparing ? <div className="hu-comparison" role="group" aria-label="Comparação entre recortes">
+      <article><small>Recorte A · selecionado acima</small><h5>{item.label}</h5><p>{item.claim}</p>
+        <button type="button" className="hu-action" aria-pressed={!showComparison} onClick={() => setShowComparison(false)}>Ver A na prancha</button>
+        <Source item={item} /></article>
+      <article><label>Recorte B<select aria-label="Recorte B" value={otherIndex} onChange={event => { setComparisonIndex(Number(event.target.value)); setShowComparison(true); }}>
+        {entry.items.map((candidate, index) => index !== active && <option value={index} key={candidate.label}>{candidate.label}</option>)}
+      </select></label><h5>{other.label}</h5><p>{other.claim}</p>
+        <button type="button" className="hu-action" aria-pressed={showComparison} onClick={() => setShowComparison(true)}>Ver B na prancha</button>
+        <Source item={other} /></article>
+    </div> : <div className="hg-detail" role="status" aria-live="polite"><strong>{item.label}</strong><p>{item.claim}</p><Source item={item} /></div>}
     {!history && entry.nota && <p className="hg-note">{entry.nota}</p>}
   </section>;
+}
+
+function Source({ item }: { item: SceneEntry['items'][number] }) {
+  return <details className="hu-source"><summary>Conferir no capítulo · {item.section}</summary><blockquote>“{item.quote}”<cite>{item.section}</cite></blockquote></details>;
 }
