@@ -26,7 +26,7 @@ import { ambienteDaMateria, ambienteDoCapitulo, usaMolduraTecnologica } from '..
 import { PREFERENCIAS_PADRAO, type PreferenciasVisual } from '../hooks/usePreferenciasVisual';
 import { useAmbienteApp } from '../design-system/ambiente/AmbienteProvider';
 import { registrarRecente } from './visual-boards/BuscaRapida';
-import { StudyObjectIcon } from './visual-boards/StudyObjectIcon';
+import { ChapterObjectIcon } from './visual-boards/ChapterObjectIcon';
 import './Visual.css';
 import './VisualAtlas.css';
 
@@ -179,7 +179,7 @@ function VisualLibrary({ onOpen, preferencias }: {
                       enquanto a Ana Júlia procurava um capítulo. Saiu dos cards;
                       o movimento continua só dentro do mapa. */}
                   <div className="flex items-start gap-4">
-                    <StudyObjectIcon subject={item.subject} topic={item.topic + ' ' + item.title} />
+                    <ChapterObjectIcon chapterId={item.id} />
                     <div>
                       <span className="vs-lib-card-materia text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
                         {item.subject} • {item.topic}

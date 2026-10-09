@@ -12,7 +12,7 @@ import './QuimicaFenomenos.css';
 export type Cena = { ativo: string; t: ReturnType<typeof useSceneMotion> };
 export type CenaFenomeno = { cena: React.ComponentType<Cena>; rotulos: string[]; titulo: string };
 
-export const FOCO = (ligado: boolean) => ({ opacity: ligado ? 1 : 0.28 });
+export const FOCO = (ligado: boolean) => ({ opacity: ligado ? 1 : 0.82 });
 
 // `t` vem da família, que chama useSceneMotion(): é ela quem responde pelo
 // movimento reduzido, e o portão de movimento confere isso arquivo a arquivo.

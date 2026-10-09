@@ -3,6 +3,7 @@ import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Minus, Plus, Waypoints } from 'lucide-react';
 import { NODE_STATE_LABEL, RELATION_LABEL, STAGE_LABEL, type NodeState, type VisualMap } from '../lib/visualStudy';
 import { StudyObjectIcon } from './visual-boards/StudyObjectIcon';
+import { ChapterObjectIcon } from './visual-boards/ChapterObjectIcon';
 
 /**
  * A cadeia de conceitos do capítulo, com o estado de cada elo.
@@ -46,7 +47,7 @@ export function ConceptChain({
       </header>
       <div className="vs-map-tree">
         <div className="vs-map-root">
-          <StudyObjectIcon subject={map.subject} topic={map.topic + ' ' + map.title} />
+          <ChapterObjectIcon chapterId={map.summaryId} />
           <span>{map.subject}</span>
           <strong>{map.title}</strong>
           <small>{map.nodes.length} etapas conectadas</small>

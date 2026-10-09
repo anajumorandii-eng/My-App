@@ -104,3 +104,6 @@
 .qf-peixe { fill: color-mix(in srgb, var(--vs-blue) 55%, var(--vs-paper-strong)); stroke: var(--vs-ink); stroke-width: 1; }
 .qf-peixe--morto { fill: color-mix(in srgb, var(--vs-dim) 45%, var(--vs-paper-strong)); }
 .qf-olho { fill: var(--vs-ink); }
+
+/* Legendas permanecem legíveis nos quadros de comparação não selecionados. */
+.qf-svg :is(.qf-mini,.qf-rotulo,.qf-formula):not(.qf-formula--ativa) { fill: var(--vs-ink); }
