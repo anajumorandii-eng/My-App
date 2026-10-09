@@ -17386,7 +17386,7 @@
       },
       {
         "title": "Tratados e partilha",
-        "content": "Os tratados de partilha territorial entre as principais potências ibéricas buscaram formalizar diplomaticamente a divisão de áreas de exploração e colonização entre Portugal e Espanha, evitando conflitos diretos entre ambas as Coroas católicas. O Tratado de Tordesilhas (1494), mediado pelo papado, estabeleceu uma linha imaginária a 370 léguas a oeste das ilhas de Cabo Verde, atribuindo a Portugal os territórios a leste dessa linha e à Espanha os territórios a oeste, uma divisão que, na época de sua assinatura, ainda não considerava plenamente a extensão real do continente americano recém-alcançado por Colombo apenas dois anos antes. Essa linha, na prática, garantiu a Portugal direito formal sobre a porção oriental do atual território brasileiro, terra que seria oficialmente alcançada pela expedição de Pedro Álvares Cabral em 1500, embora o próprio tratado tenha se tornado, ao longo dos séculos seguintes, progressivamente irrelevante na prática territorial efetiva, à medida que a expansão bandeirante portuguesa avançou muito além da linha original estabelecida, incorporando territórios que, segundo o próprio Tordesilhas, pertenceriam formalmente à Espanha."
+        "content": "Os tratados de partilha territorial entre as principais potências ibéricas buscaram formalizar diplomaticamente a divisão de áreas de exploração e colonização entre Portugal e Espanha, evitando conflitos diretos entre ambas as Coroas católicas. O Tratado de Tordesilhas (1494), negociado diretamente pelas Coroas de Portugal e Castela após as bulas papais de 1493 e posteriormente confirmado pelo papa Júlio II em 1506, estabeleceu uma linha imaginária a 370 léguas a oeste das ilhas de Cabo Verde, atribuindo a Portugal os territórios a leste dessa linha e a Castela os territórios a oeste, uma divisão que, na época de sua assinatura, ainda não considerava plenamente a extensão real do continente americano recém-alcançado por Colombo apenas dois anos antes. Essa linha, na prática, garantiu a Portugal direito formal sobre a porção oriental do atual território brasileiro, terra que seria oficialmente alcançada pela expedição de Pedro Álvares Cabral em 1500, embora o próprio tratado tenha se tornado, ao longo dos séculos seguintes, progressivamente irrelevante na prática territorial efetiva, à medida que a expansão bandeirante portuguesa avançou muito além da linha original estabelecida, incorporando territórios que, segundo o próprio Tordesilhas, pertenceriam formalmente à Espanha."
       },
       {
         "title": "Primeiras décadas no Brasil",
@@ -17402,7 +17402,7 @@
       }
     ],
     "recall": {
-      "prompt": "Por que Portugal demorou a colonizar o Brasil? Qual princípio orientou o Tratado de Madri?",
+      "prompt": "Por que Portugal demorou a colonizar o Brasil? Por que Tordesilhas perdeu relevância prática?",
       "elements": [
         [
           "o comercio oriental era mais lucrativo",
@@ -17421,16 +17421,17 @@
           ]
         ],
         [
-          "Madri adotou o uso efetivo da terra",
+          "a ocupacao ultrapassou a linha negociada com conhecimento geografico incompleto",
           [
-            "uti possidetis",
-            "uso efetivo",
-            "madri"
+            "ocupacao",
+            "linha",
+            "geografico",
+            "tordesilhas"
           ]
         ]
       ]
     },
-    "rev": 3
+    "rev": 4
   },
   {
     "subject": "História",
