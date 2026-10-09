@@ -1,0 +1,6132 @@
+[
+  {
+    "id": "fis-termologia-calor",
+    "subject": "Física",
+    "title": "Calor, temperatura e mudanças de estado",
+    "topic": "Temperatura, Calor e seus Mecanismos de Transferência",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "calorimetria",
+    "object": "thermometer"
+  },
+  {
+    "id": "atu-cop30-belem",
+    "subject": "Atualidades",
+    "title": "COP30 em Belém: avanços, limites e leitura de prova",
+    "topic": "Clima, energia e meio ambiente",
+    "nodes": 6,
+    "representation": "instrument",
+    "artifact": "cop30-belem",
+    "object": "globe"
+  },
+  {
+    "id": "bio-ecologia-introducao",
+    "subject": "Biologia",
+    "title": "Introdução à Ecologia",
+    "topic": "Introdução à Ecologia",
+    "nodes": 5,
+    "representation": "experiment",
+    "artifact": "ecology",
+    "object": "leaf"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "subject": "Biologia",
+    "title": "Dinâmica de populações",
+    "topic": "Dinâmica de Populações",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "estrategias-reprodutivas",
+    "object": "cell"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "subject": "Biologia",
+    "title": "Espécies invasoras e controle biológico",
+    "topic": "Espécies Invasoras e Controle Biológico",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "invasao-impactos",
+    "object": "cell"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "subject": "Biologia",
+    "title": "Sucessão ecológica",
+    "topic": "Sucessão Ecológica",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "sucessao-comunidades",
+    "object": "leaf"
+  },
+  {
+    "id": "bio-ecologia-ciclo-carbono",
+    "subject": "Biologia",
+    "title": "Ciclos biogeoquímicos: ciclo do carbono",
+    "topic": "Ciclos Biogeoquímicos – Ciclo do Carbono",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "ciclo-carbono",
+    "object": "cell"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "subject": "Biologia",
+    "title": "Ciclo do nitrogênio",
+    "topic": "Ciclo do Nitrogênio",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "nitrogenio-solo-atmosfera",
+    "object": "cell"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "subject": "Biologia",
+    "title": "Ciclo hidrológico e poluição da água",
+    "topic": "Ciclo Hidrológico e Poluição da Água",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "poluicao-agua-agentes",
+    "object": "cell"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "subject": "Biologia",
+    "title": "Eutrofização e fluxo de energia",
+    "topic": "Eutrofização",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "eutrofizacao-lago",
+    "object": "cell"
+  },
+  {
+    "id": "bio-ecologia-poluicao-ar",
+    "subject": "Biologia",
+    "title": "Poluição do ar",
+    "topic": "Poluição do Ar",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "poluicao-ar",
+    "object": "cell"
+  },
+  {
+    "id": "bio-ecologia-biomagnificacao",
+    "subject": "Biologia",
+    "title": "Biomagnificação",
+    "topic": "Biomagnificação",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "biomagnificacao-trofica",
+    "object": "cell"
+  },
+  {
+    "id": "bio-ecologia-aquecimento-global-pops-biorremediacao",
+    "subject": "Biologia",
+    "title": "Aquecimento global, POPs e biorremediação",
+    "topic": "Poluição: Aquecimento Global, POPs e Biorremediação",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "clima-pops-biorremediacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-origem-da-vida-e-as-primeiras-celulas",
+    "subject": "Biologia",
+    "title": "Origem da Vida e as Primeiras Células",
+    "topic": "Origem da Vida e as Primeiras Células",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+    "subject": "Biologia",
+    "title": "Composição Química Celular: Compostos Inorgânicos",
+    "topic": "Composição Química Celular: Compostos Inorgânicos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "compostos-inorganicos",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios",
+    "subject": "Biologia",
+    "title": "Composição Química Celular: Carboidratos e Lipídios",
+    "topic": "Composição Química Celular: Carboidratos e Lipídios",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural",
+    "subject": "Biologia",
+    "title": "Composição Química Celular: Proteínas e sua Função Estrutural",
+    "topic": "Composição Química Celular: Proteínas e sua Função Estrutural",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-membranas-celulares",
+    "subject": "Biologia",
+    "title": "Membranas Celulares",
+    "topic": "Membranas Celulares",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "membrana",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-citoplasma-estrutura-e-componentes-i",
+    "subject": "Biologia",
+    "title": "Citoplasma: Estrutura e Componentes I",
+    "topic": "Citoplasma: Estrutura e Componentes I",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "citoplasma-i",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-citoplasma-estrutura-e-componentes-ii",
+    "subject": "Biologia",
+    "title": "Citoplasma: Estrutura e Componentes II",
+    "topic": "Citoplasma: Estrutura e Componentes II",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "citoplasma-ii",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-nucleo-celular",
+    "subject": "Biologia",
+    "title": "Núcleo Celular",
+    "topic": "Núcleo Celular",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "nucleo-celular",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-proteinas-enzimas",
+    "subject": "Biologia",
+    "title": "Proteínas: Enzimas",
+    "topic": "Proteínas: Enzimas",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "enzimas",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-bioenergetica-fermentacao-e-respiracao",
+    "subject": "Biologia",
+    "title": "Bioenergética: Fermentação e Respiração",
+    "topic": "Bioenergética: Fermentação e Respiração",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "respiracao-compartimentos",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-bioenergetica-fotossintese-e-quimiossintese",
+    "subject": "Biologia",
+    "title": "Bioenergética: Fotossíntese e Quimiossíntese",
+    "topic": "Bioenergética: Fotossíntese e Quimiossíntese",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "bioenergetica",
+    "object": "leaf"
+  },
+  {
+    "id": "summary-biologia-acidos-nucleicos",
+    "subject": "Biologia",
+    "title": "Ácidos Nucleicos",
+    "topic": "Ácidos Nucleicos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "acidos-nucleicos",
+    "object": "dna"
+  },
+  {
+    "id": "summary-biologia-divisao-celular",
+    "subject": "Biologia",
+    "title": "Divisão Celular",
+    "topic": "Divisão Celular",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "divisao-celular",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-mutacoes-cromossomicas-e-gametogenese",
+    "subject": "Biologia",
+    "title": "Mutações Cromossômicas e Gametogênese",
+    "topic": "Mutações Cromossômicas e Gametogênese",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "mutacoes-cromossomicas",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-biotecnologia",
+    "subject": "Biologia",
+    "title": "Biotecnologia",
+    "topic": "Biotecnologia",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "biotecnologia",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-introducao-a-genetica",
+    "subject": "Biologia",
+    "title": "Introdução à Genética",
+    "topic": "Introdução à Genética",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "introducao-genetica",
+    "object": "dna"
+  },
+  {
+    "id": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos",
+    "subject": "Biologia",
+    "title": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+    "topic": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "alelos-multiplos",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-heranca-sexual",
+    "subject": "Biologia",
+    "title": "Herança Sexual",
+    "topic": "Herança Sexual",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-segunda-lei-de-mendel",
+    "subject": "Biologia",
+    "title": "Segunda Lei de Mendel",
+    "topic": "Segunda Lei de Mendel",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "mendel",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-segunda-lei-de-mendel-e-interacao-genica",
+    "subject": "Biologia",
+    "title": "Segunda Lei de Mendel e Interação Gênica",
+    "topic": "Segunda Lei de Mendel e Interação Gênica",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "mendel",
+    "object": "dna"
+  },
+  {
+    "id": "summary-biologia-ligacao-genica",
+    "subject": "Biologia",
+    "title": "Ligação Gênica",
+    "topic": "Ligação Gênica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "ligacao-genica",
+    "object": "dna"
+  },
+  {
+    "id": "summary-biologia-mutacoes-genicas",
+    "subject": "Biologia",
+    "title": "Mutações Gênicas",
+    "topic": "Mutações Gênicas",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "dna"
+  },
+  {
+    "id": "summary-biologia-evolucao-biologica-construcao-historica",
+    "subject": "Biologia",
+    "title": "Evolução Biológica: Construção Histórica",
+    "topic": "Evolução Biológica: Construção Histórica",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-mecanismos-da-evolucao-biologica",
+    "subject": "Biologia",
+    "title": "Mecanismos da Evolução Biológica",
+    "topic": "Mecanismos da Evolução Biológica",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-biomas-brasileiros",
+    "subject": "Biologia",
+    "title": "Biomas Brasileiros",
+    "topic": "Biomas Brasileiros",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-classificacao-biologica-nomenclatura-cientifica-e-nocoes-de-sistematica-filogenetica",
+    "subject": "Biologia",
+    "title": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+    "topic": "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "dna"
+  },
+  {
+    "id": "summary-biologia-protozoarios-e-protozooses",
+    "subject": "Biologia",
+    "title": "Protozoários e Protozooses",
+    "topic": "Protozoários e Protozooses",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-poriferos-e-cnidarios",
+    "subject": "Biologia",
+    "title": "Poríferos e Cnidários",
+    "topic": "Poríferos e Cnidários",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "poriferos-cnidarios",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+    "subject": "Biologia",
+    "title": "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos",
+    "topic": "Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "arquitetura-corporal",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-moluscos",
+    "subject": "Biologia",
+    "title": "Moluscos",
+    "topic": "Moluscos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-anelideos",
+    "subject": "Biologia",
+    "title": "Anelídeos",
+    "topic": "Anelídeos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-artropodes-insetos-crustaceos-e-miriapodes",
+    "subject": "Biologia",
+    "title": "Artrópodes: Insetos, Crustáceos e Miriápodes",
+    "topic": "Artrópodes: Insetos, Crustáceos e Miriápodes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "artropodes-insetos",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-artropodes-aracnideos",
+    "subject": "Biologia",
+    "title": "Artrópodes: Aracnídeos",
+    "topic": "Artrópodes: Aracnídeos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "artropodes-aracnideos",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-equinodermos",
+    "subject": "Biologia",
+    "title": "Equinodermos",
+    "topic": "Equinodermos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+    "subject": "Biologia",
+    "title": "Introdução aos Cordados e os Peixes",
+    "topic": "Introdução aos Cordados e os Peixes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "cordados-peixes",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-cordados-tetrapodes",
+    "subject": "Biologia",
+    "title": "Cordados Tetrápodes",
+    "topic": "Cordados Tetrápodes",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-fungos",
+    "subject": "Biologia",
+    "title": "Fungos",
+    "topic": "Fungos",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "fungos",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-algas",
+    "subject": "Biologia",
+    "title": "Algas",
+    "topic": "Algas",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "atlas-luz-e-algas",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-ciclos-de-vida",
+    "subject": "Biologia",
+    "title": "Ciclos de Vida",
+    "topic": "Ciclos de Vida",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "ciclos-meiose",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-plantas-terrestres-i-briofitas-e-pteridofitas",
+    "subject": "Biologia",
+    "title": "Plantas Terrestres I: Briófitas e Pteridófitas",
+    "topic": "Plantas Terrestres I: Briófitas e Pteridófitas",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "leaf"
+  },
+  {
+    "id": "summary-biologia-plantas-terrestres-ii-gimnospermas-e-angiospermas",
+    "subject": "Biologia",
+    "title": "Plantas Terrestres II: Gimnospermas e Angiospermas",
+    "topic": "Plantas Terrestres II: Gimnospermas e Angiospermas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "gimnospermas-angiospermas",
+    "object": "leaf"
+  },
+  {
+    "id": "summary-biologia-procariotos",
+    "subject": "Biologia",
+    "title": "Procariotos",
+    "topic": "Procariotos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "procariotos",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-virus",
+    "subject": "Biologia",
+    "title": "Vírus",
+    "topic": "Vírus",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-embriologia-animal",
+    "subject": "Biologia",
+    "title": "Embriologia Animal",
+    "topic": "Embriologia Animal",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-sustentacao-e-da-locomocao",
+    "subject": "Biologia",
+    "title": "Fisiologia da Sustentação e da Locomoção",
+    "topic": "Fisiologia da Sustentação e da Locomoção",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "sustentacao-locomocao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-digestao",
+    "subject": "Biologia",
+    "title": "Fisiologia da Digestão",
+    "topic": "Fisiologia da Digestão",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-sangue-e-imunologia",
+    "subject": "Biologia",
+    "title": "Sangue e Imunologia",
+    "topic": "Sangue e Imunologia",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "abo",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-coracao-e-vasos-sanguineos",
+    "subject": "Biologia",
+    "title": "Coração e Vasos Sanguíneos",
+    "topic": "Coração e Vasos Sanguíneos",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "coracao-circulacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-respiracao",
+    "subject": "Biologia",
+    "title": "Fisiologia da Respiração",
+    "topic": "Fisiologia da Respiração",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "fisiologia-respiracao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-excrecao",
+    "subject": "Biologia",
+    "title": "Fisiologia da Excreção",
+    "topic": "Fisiologia da Excreção",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-coordenacao-nervosa-i",
+    "subject": "Biologia",
+    "title": "Fisiologia da Coordenação Nervosa I",
+    "topic": "Fisiologia da Coordenação Nervosa I",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-coordenacao-nervosa-ii",
+    "subject": "Biologia",
+    "title": "Coordenação Nervosa II",
+    "topic": "Coordenação Nervosa II",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-sistemas-sensoriais-visao-e-audicao",
+    "subject": "Biologia",
+    "title": "Sistemas Sensoriais: Visão e Audição",
+    "topic": "Sistemas Sensoriais: Visão e Audição",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "sistemas-sensoriais",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-coordenacao-endocrina-i",
+    "subject": "Biologia",
+    "title": "Coordenação Endócrina I",
+    "topic": "Coordenação Endócrina I",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coordenacao-endocrina-i",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-coordenacao-endocrina-ii",
+    "subject": "Biologia",
+    "title": "Coordenação Endócrina II",
+    "topic": "Coordenação Endócrina II",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+    "subject": "Biologia",
+    "title": "Reprodução Humana e Métodos Contraceptivos",
+    "topic": "Reprodução Humana e Métodos Contraceptivos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "reproducao-humana",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-histologia-e-morfologia-vegetal",
+    "subject": "Biologia",
+    "title": "Histologia e Morfologia Vegetal",
+    "topic": "Histologia e Morfologia Vegetal",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "histologia-vegetal",
+    "object": "leaf"
+  },
+  {
+    "id": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas",
+    "subject": "Biologia",
+    "title": "Morfofisiologia Vegetal: Caules e Folhas",
+    "topic": "Morfofisiologia Vegetal: Caules e Folhas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "caules-folhas",
+    "object": "leaf"
+  },
+  {
+    "id": "summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua",
+    "subject": "Biologia",
+    "title": "Traqueófitas: Transpiração e Reposição Rápida de Água",
+    "topic": "Traqueófitas: Transpiração e Reposição Rápida de Água",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "cell"
+  },
+  {
+    "id": "summary-biologia-fisiologia-vegetal-transporte-no-floema",
+    "subject": "Biologia",
+    "title": "Fisiologia Vegetal: Transporte no Floema",
+    "topic": "Fisiologia Vegetal: Transporte no Floema",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "leaf"
+  },
+  {
+    "id": "summary-biologia-fisiologia-vegetal-hormonios-vegetais",
+    "subject": "Biologia",
+    "title": "Fisiologia Vegetal: Hormônios Vegetais",
+    "topic": "Fisiologia Vegetal: Hormônios Vegetais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "hormonios-vegetais",
+    "object": "leaf"
+  },
+  {
+    "id": "summary-fisica-cinematica-escalar-conceitos-fundamentais",
+    "subject": "Física",
+    "title": "Cinemática Escalar. Conceitos Fundamentais",
+    "topic": "Cinemática Escalar. Conceitos Fundamentais",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "cinematica",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-movimento-uniforme",
+    "subject": "Física",
+    "title": "Movimento Uniforme",
+    "topic": "Movimento Uniforme",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "movimento-uniforme",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-movimento-uniformemente-variado",
+    "subject": "Física",
+    "title": "Movimento Uniformemente Variado",
+    "topic": "Movimento Uniformemente Variado",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "movimento-uniformemente-variado",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-o-movimento-circular",
+    "subject": "Física",
+    "title": "O Movimento Circular",
+    "topic": "O Movimento Circular",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "movimento-circular",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+    "subject": "Física",
+    "title": "Grandezas Físicas e Operações com Vetores",
+    "topic": "Grandezas Físicas e Operações com Vetores",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "grandezas-vetores",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-velocidade-vetorial",
+    "subject": "Física",
+    "title": "Velocidade Vetorial",
+    "topic": "Velocidade Vetorial",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "velocidade-vetorial",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-composicao-de-movimentos",
+    "subject": "Física",
+    "title": "Composição de Movimentos",
+    "topic": "Composição de Movimentos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "composicao-movimentos",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-aceleracao-vetorial",
+    "subject": "Física",
+    "title": "Aceleração Vetorial",
+    "topic": "Aceleração Vetorial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "grade-de-eixos",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-forca-e-seus-tipos",
+    "subject": "Física",
+    "title": "Força e seus Tipos",
+    "topic": "Força e seus Tipos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "forcas-vetores",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
+    "subject": "Física",
+    "title": "Resultante de um Sistema de Forças",
+    "topic": "Resultante de um Sistema de Forças",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "resultante-forcas",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-as-leis-de-newton",
+    "subject": "Física",
+    "title": "As Leis de Newton",
+    "topic": "As Leis de Newton",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "leis-newton",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-a-forca-de-contato",
+    "subject": "Física",
+    "title": "A Força de Contato",
+    "topic": "A Força de Contato",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "forca-contato",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+    "subject": "Física",
+    "title": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+    "topic": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "corpos-interagindo",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-plano-inclinado",
+    "subject": "Física",
+    "title": "Plano Inclinado",
+    "topic": "Plano Inclinado",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "plano-inclinado",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-leis-da-gravitacao",
+    "subject": "Física",
+    "title": "Leis da Gravitação",
+    "topic": "Leis da Gravitação",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "gravidade",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-dinamica-do-movimento-circular",
+    "subject": "Física",
+    "title": "Dinâmica do Movimento Circular",
+    "topic": "Dinâmica do Movimento Circular",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "dinamica-circular",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
+    "subject": "Física",
+    "title": "Analisando Movimentos Contidos em um Plano Vertical",
+    "topic": "Analisando Movimentos Contidos em um Plano Vertical",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "plano-vertical",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-orbitas",
+    "subject": "Física",
+    "title": "Órbitas",
+    "topic": "Órbitas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "orbitas",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-balistica",
+    "subject": "Física",
+    "title": "Balística",
+    "topic": "Balística",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "balistica",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-movimento-harmonico-simples-mhs",
+    "subject": "Física",
+    "title": "Movimento Harmônico Simples (MHS)",
+    "topic": "Movimento Harmônico Simples (MHS)",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "mhs",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-impulso-e-quantidade-de-movimento",
+    "subject": "Física",
+    "title": "Impulso e Quantidade de Movimento",
+    "topic": "Impulso e Quantidade de Movimento",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "impulso",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento",
+    "subject": "Física",
+    "title": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+    "topic": "Sistemas Isolados e a Conservação da Quantidade de Movimento",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "conservacao-momento",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-colisoes",
+    "subject": "Física",
+    "title": "Colisões",
+    "topic": "Colisões",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "colisoes-momento-energia",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
+    "subject": "Física",
+    "title": "Trabalho e Energia: Trabalho de uma Força",
+    "topic": "Trabalho e Energia: Trabalho de uma Força",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "trabalho-forca",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-teorema-da-energia-cinetica",
+    "subject": "Física",
+    "title": "Trabalho e Energia: Teorema da Energia Cinética",
+    "topic": "Trabalho e Energia: Teorema da Energia Cinética",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "energia-cinetica",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
+    "subject": "Física",
+    "title": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "topic": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "energia-potencial",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
+    "subject": "Física",
+    "title": "Sistemas Conservativos e Sistemas Não Conservativos",
+    "topic": "Sistemas Conservativos e Sistemas Não Conservativos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "nao-conservativo",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-potencia-maquina-e-rendimento",
+    "subject": "Física",
+    "title": "Potência, Máquina e Rendimento",
+    "topic": "Potência, Máquina e Rendimento",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "potencia",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+    "subject": "Física",
+    "title": "A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares",
+    "topic": "A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "geracao-eletrica",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-equivalencia-massa-energia",
+    "subject": "Física",
+    "title": "Equivalência Massa-Energia",
+    "topic": "Equivalência Massa-Energia",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "massa-energia",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-estatica",
+    "subject": "Física",
+    "title": "Estática",
+    "topic": "Estática",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "criterios-conjuntivos",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-hidrostatica-densidade-e-pressao",
+    "subject": "Física",
+    "title": "Hidrostática: Densidade e Pressão",
+    "topic": "Hidrostática: Densidade e Pressão",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "hidrostatica",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+    "subject": "Física",
+    "title": "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+    "topic": "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "thermometer"
+  },
+  {
+    "id": "summary-fisica-calor-sensivel-e-calor-latente",
+    "subject": "Física",
+    "title": "Calor Sensível e Calor Latente",
+    "topic": "Calor Sensível e Calor Latente",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "calorimetria",
+    "object": "thermometer"
+  },
+  {
+    "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
+    "subject": "Física",
+    "title": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
+    "topic": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "transformacoes-pv",
+    "object": "thermometer"
+  },
+  {
+    "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
+    "subject": "Física",
+    "title": "Trabalho da Força de Pressão do Gás",
+    "topic": "Trabalho da Força de Pressão do Gás",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "trabalho-gas",
+    "object": "thermometer"
+  },
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica",
+    "subject": "Física",
+    "title": "Primeira Lei da Termodinâmica",
+    "topic": "Primeira Lei da Termodinâmica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "primeira-lei",
+    "object": "thermometer"
+  },
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
+    "subject": "Física",
+    "title": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+    "topic": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "adiabatica",
+    "object": "thermometer"
+  },
+  {
+    "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
+    "subject": "Física",
+    "title": "Máquinas Térmicas e Ciclo de Carnot",
+    "topic": "Máquinas Térmicas e Ciclo de Carnot",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "ciclo-carnot",
+    "object": "thermometer"
+  },
+  {
+    "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+    "subject": "Física",
+    "title": "Eletrostática: Processos de Eletrização e Aplicações",
+    "topic": "Eletrostática: Processos de Eletrização e Aplicações",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "eletrizacao-cargas",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+    "subject": "Física",
+    "title": "Força Elétrica: Lei de Coulomb",
+    "topic": "Força Elétrica: Lei de Coulomb",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "lei-coulomb",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-campo-eletrico",
+    "subject": "Física",
+    "title": "Campo Elétrico",
+    "topic": "Campo Elétrico",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "campo-eletrico",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+    "subject": "Física",
+    "title": "Energia Potencial e Potencial Elétrico",
+    "topic": "Energia Potencial e Potencial Elétrico",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "potencial-eletrico",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
+    "subject": "Física",
+    "title": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
+    "topic": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "mapeamento-campo-eletrico",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+    "subject": "Física",
+    "title": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+    "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "campo-uniforme",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-dinamica-das-cargas-eletricas",
+    "subject": "Física",
+    "title": "Dinâmica das Cargas Elétricas",
+    "topic": "Dinâmica das Cargas Elétricas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "dinamica-cargas",
+    "object": "thermometer"
+  },
+  {
+    "id": "summary-fisica-corrente-eletrica",
+    "subject": "Física",
+    "title": "Corrente Elétrica",
+    "topic": "Corrente Elétrica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "corrente-eletrica",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-potencia-eletrica",
+    "subject": "Física",
+    "title": "Potência Elétrica",
+    "topic": "Potência Elétrica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "potencia-eletrica",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-resistores",
+    "subject": "Física",
+    "title": "Resistores",
+    "topic": "Resistores",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "resistores",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-medidores-eletricos",
+    "subject": "Física",
+    "title": "Medidores Elétricos",
+    "topic": "Medidores Elétricos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "medidores-eletricos",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-geradores",
+    "subject": "Física",
+    "title": "Geradores",
+    "topic": "Geradores",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "geradores-eletricos",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-receptores",
+    "subject": "Física",
+    "title": "Receptores",
+    "topic": "Receptores",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "receptores-eletricos",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-circuitos-de-malha-unica",
+    "subject": "Física",
+    "title": "Circuitos de Malha Única",
+    "topic": "Circuitos de Malha Única",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "circuitos",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-eletrodinamica-as-leis-de-kirchhoff",
+    "subject": "Física",
+    "title": "Eletrodinâmica: as Leis de Kirchhoff",
+    "topic": "Eletrodinâmica: as Leis de Kirchhoff",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "leis-kirchhoff",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-capacitores",
+    "subject": "Física",
+    "title": "Capacitores",
+    "topic": "Capacitores",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "capacitores",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+    "subject": "Física",
+    "title": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
+    "topic": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "imas-campo-terrestre",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+    "subject": "Física",
+    "title": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
+    "topic": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "fio-espira",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+    "subject": "Física",
+    "title": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+    "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "carga-em-b",
+    "object": "thermometer"
+  },
+  {
+    "id": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas",
+    "subject": "Física",
+    "title": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
+    "topic": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "fios-paralelos",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+    "subject": "Física",
+    "title": "Indução Eletromagnética: Lei de Lenz",
+    "topic": "Indução Eletromagnética: Lei de Lenz",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "lenz",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+    "subject": "Física",
+    "title": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+    "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "gerador-inducao",
+    "object": "circuit"
+  },
+  {
+    "id": "summary-fisica-fundamentos-da-optica-geometrica",
+    "subject": "Física",
+    "title": "Fundamentos da Óptica Geométrica",
+    "topic": "Fundamentos da Óptica Geométrica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "fundamentos-optica",
+    "object": "lens"
+  },
+  {
+    "id": "summary-fisica-reflexao-em-superficies-planas",
+    "subject": "Física",
+    "title": "Reflexão em Superfícies Planas",
+    "topic": "Reflexão em Superfícies Planas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "espelho-plano",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-reflexao-em-superficies-esfericas",
+    "subject": "Física",
+    "title": "Reflexão em Superfícies Esféricas",
+    "topic": "Reflexão em Superfícies Esféricas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "espelho-esferico",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes",
+    "subject": "Física",
+    "title": "Refração: Fundamentos, Leis e Aplicações",
+    "topic": "Refração: Fundamentos, Leis e Aplicações",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "refracao",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "subject": "Física",
+    "title": "Lentes Esféricas: Estudo Gráfico",
+    "topic": "Lentes Esféricas: Estudo Gráfico",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "lentes",
+    "object": "lens"
+  },
+  {
+    "id": "summary-fisica-estudo-analitico-das-lentes-esfericas",
+    "subject": "Física",
+    "title": "Estudo Analítico das Lentes Esféricas",
+    "topic": "Estudo Analítico das Lentes Esféricas",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "lentes",
+    "object": "lens"
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "subject": "Física",
+    "title": "Equação do Fabricante de Lentes e Associação de Lentes",
+    "topic": "Equação do Fabricante de Lentes e Associação de Lentes",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "lentes",
+    "object": "lens"
+  },
+  {
+    "id": "summary-fisica-optica-da-visao",
+    "subject": "Física",
+    "title": "Óptica da Visão",
+    "topic": "Óptica da Visão",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "defeitos-visao",
+    "object": "lens"
+  },
+  {
+    "id": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas",
+    "subject": "Física",
+    "title": "Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas",
+    "topic": "Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "microscopio-luneta",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-conceitos-basicos",
+    "subject": "Física",
+    "title": "Conceitos Básicos",
+    "topic": "Conceitos Básicos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "conceitos-ondas",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-equacao-fundamental-da-ondulatoria",
+    "subject": "Física",
+    "title": "Equação Fundamental da Ondulatória",
+    "topic": "Equação Fundamental da Ondulatória",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "ondulatoria",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "subject": "Física",
+    "title": "Ondulatória: Ondas Eletromagnéticas",
+    "topic": "Ondulatória: Ondas Eletromagnéticas",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "ondulatoria",
+    "object": "wave"
+  },
+  {
+    "id": "summary-fisica-ondulatoria-som-e-suas-propriedades",
+    "subject": "Física",
+    "title": "Ondulatória: Som e suas Propriedades",
+    "topic": "Ondulatória: Som e suas Propriedades",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "ondulatoria",
+    "object": "wave"
+  },
+  {
+    "id": "summary-fisica-intensidade-sonora",
+    "subject": "Física",
+    "title": "Intensidade Sonora",
+    "topic": "Intensidade Sonora",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "intensidade-sonora",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas",
+    "subject": "Física",
+    "title": "Reflexão, Eco, Reverberação e Refração de Ondas",
+    "topic": "Reflexão, Eco, Reverberação e Refração de Ondas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "eco-refracao",
+    "object": "wave"
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas",
+    "subject": "Física",
+    "title": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
+    "topic": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "reflexao-cordas",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "subject": "Física",
+    "title": "Fenômenos Ondulatórios: Difração, Polarização e Ressonância",
+    "topic": "Fenômenos Ondulatórios: Difração, Polarização e Ressonância",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "difracao-polarizacao",
+    "object": "wave"
+  },
+  {
+    "id": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento",
+    "subject": "Física",
+    "title": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
+    "topic": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "interferencia-ondas",
+    "object": "wave"
+  },
+  {
+    "id": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria",
+    "subject": "Física",
+    "title": "Um Caso Particular de Interferência: Onda Estacionária",
+    "topic": "Um Caso Particular de Interferência: Onda Estacionária",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "onda-estacionaria",
+    "object": "wave"
+  },
+  {
+    "id": "summary-fisica-ondas-estacionarias-em-cordas",
+    "subject": "Física",
+    "title": "Ondas Estacionárias em Cordas",
+    "topic": "Ondas Estacionárias em Cordas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "ondas-cordas",
+    "object": "wave"
+  },
+  {
+    "id": "summary-fisica-ondas-estacionarias-em-tubos",
+    "subject": "Física",
+    "title": "Ondas Estacionárias em Tubos",
+    "topic": "Ondas Estacionárias em Tubos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "ondas-tubos",
+    "object": "wave"
+  },
+  {
+    "id": "summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo",
+    "subject": "Física",
+    "title": "Efeito Doppler: Descrição e Estudo Quantitativo",
+    "topic": "Efeito Doppler: Descrição e Estudo Quantitativo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "efeito-doppler",
+    "object": "scales"
+  },
+  {
+    "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
+    "subject": "Física",
+    "title": "Noções Básicas de Física Quântica",
+    "topic": "Noções Básicas de Física Quântica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "fisica-quantica",
+    "object": "scales"
+  },
+  {
+    "id": "summary-geografia-coordenadas-geograficas",
+    "subject": "Geografia",
+    "title": "Coordenadas Geográficas",
+    "topic": "Coordenadas Geográficas",
+    "nodes": 5,
+    "representation": "experiment",
+    "artifact": "coordinates",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-movimentos-da-terra",
+    "subject": "Geografia",
+    "title": "Movimentos da Terra",
+    "topic": "Movimentos da Terra",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-sistema-de-fusos-horarios",
+    "subject": "Geografia",
+    "title": "Sistema de Fusos Horários",
+    "topic": "Sistema de Fusos Horários",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-linguagem-cartografica",
+    "subject": "Geografia",
+    "title": "Linguagem Cartográfica",
+    "topic": "Linguagem Cartográfica",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-projecoes-cartograficas",
+    "subject": "Geografia",
+    "title": "Projeções Cartográficas",
+    "topic": "Projeções Cartográficas",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-cartografia-digital",
+    "subject": "Geografia",
+    "title": "Cartografia Digital",
+    "topic": "Cartografia Digital",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+    "subject": "Geografia",
+    "title": "Representações Gráficas e Cartográficas",
+    "topic": "Representações Gráficas e Cartográficas",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-dinamica-climatica",
+    "subject": "Geografia",
+    "title": "Dinâmica Climática",
+    "topic": "Dinâmica Climática",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-clima-mundial",
+    "subject": "Geografia",
+    "title": "Clima Mundial",
+    "topic": "Clima Mundial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "criterios-conjuntivos",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geomorfologia-mundial",
+    "subject": "Geografia",
+    "title": "Geomorfologia Mundial",
+    "topic": "Geomorfologia Mundial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-biogeografia-mundial",
+    "subject": "Geografia",
+    "title": "Biogeografia Mundial",
+    "topic": "Biogeografia Mundial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-agua-na-superficie-terrestre",
+    "subject": "Geografia",
+    "title": "Água na Superfície Terrestre",
+    "topic": "Água na Superfície Terrestre",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
+    "subject": "Geografia",
+    "title": "Desafios Ambientais do Século XXI",
+    "topic": "Desafios Ambientais do Século XXI",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geopolitica-ambiental",
+    "subject": "Geografia",
+    "title": "Geopolítica Ambiental",
+    "topic": "Geopolítica Ambiental",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+    "subject": "Geografia",
+    "title": "Geopolítica dos Recursos Hídricos",
+    "topic": "Geopolítica dos Recursos Hídricos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-hidrogeografia-mundial",
+    "subject": "Geografia",
+    "title": "Hidrogeografia Mundial",
+    "topic": "Hidrogeografia Mundial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
+    "subject": "Geografia",
+    "title": "Do Mundo Bipolar ao Multipolar",
+    "topic": "Do Mundo Bipolar ao Multipolar",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
+    "subject": "Geografia",
+    "title": "Globalização e Processos Econômicos Atuais",
+    "topic": "Globalização e Processos Econômicos Atuais",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geografia-das-redes-mundiais",
+    "subject": "Geografia",
+    "title": "Geografia das Redes Mundiais",
+    "topic": "Geografia das Redes Mundiais",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-unilateralismo-e-multilateralismo",
+    "subject": "Geografia",
+    "title": "Unilateralismo e Multilateralismo",
+    "topic": "Unilateralismo e Multilateralismo",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-blocos-economicos",
+    "subject": "Geografia",
+    "title": "Blocos Econômicos",
+    "topic": "Blocos Econômicos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-uniao-europeia",
+    "subject": "Geografia",
+    "title": "União Europeia",
+    "topic": "União Europeia",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-desigualdades-globais",
+    "subject": "Geografia",
+    "title": "Desigualdades Globais",
+    "topic": "Desigualdades Globais",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-mobilidade-populacional",
+    "subject": "Geografia",
+    "title": "Mobilidade Populacional",
+    "topic": "Mobilidade Populacional",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "criterios-conjuntivos",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geografia-do-turismo",
+    "subject": "Geografia",
+    "title": "Geografia do Turismo",
+    "topic": "Geografia do Turismo",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-producao-agricola-mundial",
+    "subject": "Geografia",
+    "title": "Produção Agrícola Mundial",
+    "topic": "Produção Agrícola Mundial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-industria-i",
+    "subject": "Geografia",
+    "title": "Indústria I",
+    "topic": "Indústria I",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-industria-ii",
+    "subject": "Geografia",
+    "title": "Indústria II",
+    "topic": "Indústria II",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-gedeconomia-mundial",
+    "subject": "Geografia",
+    "title": "Gedeconomia Mundial",
+    "topic": "Gedeconomia Mundial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-terrorismo-internacional",
+    "subject": "Geografia",
+    "title": "Terrorismo Internacional",
+    "topic": "Terrorismo Internacional",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geografia-das-religioes",
+    "subject": "Geografia",
+    "title": "Geografia das Religiões",
+    "topic": "Geografia das Religiões",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-tensoes-geopoliticas-na-europa",
+    "subject": "Geografia",
+    "title": "Tensões Geopolíticas na Europa",
+    "topic": "Tensões Geopolíticas na Europa",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
+    "subject": "Geografia",
+    "title": "Geopolítica e Geoeconomia da América Latina",
+    "topic": "Geopolítica e Geoeconomia da América Latina",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-africa-no-mundo-atual",
+    "subject": "Geografia",
+    "title": "África no Mundo Atual",
+    "topic": "África no Mundo Atual",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
+    "subject": "Geografia",
+    "title": "Geopolítica e Geoeconomia da Ásia",
+    "topic": "Geopolítica e Geoeconomia da Ásia",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geografia-do-oriente-medio",
+    "subject": "Geografia",
+    "title": "Geografia do Oriente Médio",
+    "topic": "Geografia do Oriente Médio",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-questao-palestina",
+    "subject": "Geografia",
+    "title": "Questão Palestina",
+    "topic": "Questão Palestina",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-conflitos-no-mundo-arabe",
+    "subject": "Geografia",
+    "title": "Conflitos no Mundo Árabe",
+    "topic": "Conflitos no Mundo Árabe",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica",
+    "subject": "Geografia",
+    "title": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+    "topic": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-geologia-e-geomorfologia",
+    "subject": "Geografia",
+    "title": "Geologia e Geomorfologia",
+    "topic": "Geologia e Geomorfologia",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-relevo-brasileiro",
+    "subject": "Geografia",
+    "title": "Relevo Brasileiro",
+    "topic": "Relevo Brasileiro",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-pedologia",
+    "subject": "Geografia",
+    "title": "Pedologia",
+    "topic": "Pedologia",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-climatologia-do-brasil",
+    "subject": "Geografia",
+    "title": "Climatologia do Brasil",
+    "topic": "Climatologia do Brasil",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-biogeografia-do-brasil-i",
+    "subject": "Geografia",
+    "title": "Biogeografia do Brasil I",
+    "topic": "Biogeografia do Brasil I",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-biogeografia-do-brasil-ii",
+    "subject": "Geografia",
+    "title": "Biogeografia do Brasil II",
+    "topic": "Biogeografia do Brasil II",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-politicas-ambientais-brasileiras",
+    "subject": "Geografia",
+    "title": "Políticas Ambientais Brasileiras",
+    "topic": "Políticas Ambientais Brasileiras",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-hidrogeografia-do-brasil",
+    "subject": "Geografia",
+    "title": "Hidrogeografia do Brasil",
+    "topic": "Hidrogeografia do Brasil",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-dominios-morfoclimaticos",
+    "subject": "Geografia",
+    "title": "Domínios Morfoclimáticos",
+    "topic": "Domínios Morfoclimáticos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-matriz-energetica",
+    "subject": "Geografia",
+    "title": "Matriz Energética",
+    "topic": "Matriz Energética",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+    "subject": "Geografia",
+    "title": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+    "topic": "Combustíveis Fósseis e Biocombustíveis no Brasil",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "combustiveis-biocombustiveis-brasil",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-energia-eletrica-no-mundo",
+    "subject": "Geografia",
+    "title": "Energia Elétrica no Mundo",
+    "topic": "Energia Elétrica no Mundo",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-energia-eletrica-no-brasil",
+    "subject": "Geografia",
+    "title": "Energia Elétrica no Brasil",
+    "topic": "Energia Elétrica no Brasil",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "energia-eletrica-brasil",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-producao-mineral",
+    "subject": "Geografia",
+    "title": "Produção Mineral",
+    "topic": "Produção Mineral",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-o-espaco-agrario-brasileiro",
+    "subject": "Geografia",
+    "title": "O Espaço Agrário Brasileiro",
+    "topic": "O Espaço Agrário Brasileiro",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-o-espaco-industrial-brasileiro-i",
+    "subject": "Geografia",
+    "title": "O Espaço Industrial Brasileiro I",
+    "topic": "O Espaço Industrial Brasileiro I",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
+    "subject": "Geografia",
+    "title": "O Espaço Industrial Brasileiro II",
+    "topic": "O Espaço Industrial Brasileiro II",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-dinamica-demografica",
+    "subject": "Geografia",
+    "title": "Dinâmica Demográfica",
+    "topic": "Dinâmica Demográfica",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+    "subject": "Geografia",
+    "title": "Estrutura Étnica e Fluxos Migratórios",
+    "topic": "Estrutura Étnica e Fluxos Migratórios",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "fluxos-populacionais",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-o-espaco-urbano-i",
+    "subject": "Geografia",
+    "title": "O Espaço Urbano I",
+    "topic": "O Espaço Urbano I",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-o-espaco-urbano-ii",
+    "subject": "Geografia",
+    "title": "O Espaço Urbano II",
+    "topic": "O Espaço Urbano II",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-as-redes-de-transportes",
+    "subject": "Geografia",
+    "title": "As Redes de Transportes",
+    "topic": "As Redes de Transportes",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "globe"
+  },
+  {
+    "id": "summary-geografia-os-fluxos-do-comercio-externo",
+    "subject": "Geografia",
+    "title": "Os Fluxos do Comércio Externo",
+    "topic": "Os Fluxos do Comércio Externo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rede-comercio-externo",
+    "object": "globe"
+  },
+  {
+    "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+    "subject": "História",
+    "title": "Introdução à História e Primeiras Civilizações",
+    "topic": "Introdução à História e Primeiras Civilizações",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-antiguidade-classica-o-mundo-grego",
+    "subject": "História",
+    "title": "Antiguidade Clássica: o Mundo Grego",
+    "topic": "Antiguidade Clássica: o Mundo Grego",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+    "subject": "História",
+    "title": "Antiguidade Clássica: o Mundo Romano",
+    "topic": "Antiguidade Clássica: o Mundo Romano",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-alta-idade-media-e-feudalismo",
+    "subject": "História",
+    "title": "Alta Idade Média e Feudalismo",
+    "topic": "Alta Idade Média e Feudalismo",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-baixa-idade-media",
+    "subject": "História",
+    "title": "Baixa Idade Média",
+    "topic": "Baixa Idade Média",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-primeira-globalizacao",
+    "subject": "História",
+    "title": "A Primeira Globalização",
+    "topic": "A Primeira Globalização",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-america-espanhola",
+    "subject": "História",
+    "title": "América Espanhola",
+    "topic": "América Espanhola",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-vida-urbana-e-renascimento-cultural",
+    "subject": "História",
+    "title": "Vida Urbana e Renascimento Cultural",
+    "topic": "Vida Urbana e Renascimento Cultural",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-reforma-religiosa",
+    "subject": "História",
+    "title": "Reforma Religiosa",
+    "topic": "Reforma Religiosa",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "movimento-dialetico",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-absolutismo",
+    "subject": "História",
+    "title": "Absolutismo",
+    "topic": "Absolutismo",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-revolucao-industrial",
+    "subject": "História",
+    "title": "Revolução Industrial",
+    "topic": "Revolução Industrial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-iluminismo",
+    "subject": "História",
+    "title": "Iluminismo",
+    "topic": "Iluminismo",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-revolucao-francesa",
+    "subject": "História",
+    "title": "Revolução Francesa",
+    "topic": "Revolução Francesa",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-america-no-seculo-xix",
+    "subject": "História",
+    "title": "América no Século XIX",
+    "topic": "América no Século XIX",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-europa-no-seculo-xix",
+    "subject": "História",
+    "title": "Europa no Século XIX",
+    "topic": "Europa no Século XIX",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-imperialismo-e-belle-epoque",
+    "subject": "História",
+    "title": "Imperialismo e Belle Époque",
+    "topic": "Imperialismo e Belle Époque",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-primeira-guerra-mundial-1914-1918",
+    "subject": "História",
+    "title": "Primeira Guerra Mundial (1914-1918)",
+    "topic": "Primeira Guerra Mundial (1914-1918)",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "criterios-conjuntivos",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+    "subject": "História",
+    "title": "Grandes Revoluções do Século XX",
+    "topic": "Grandes Revoluções do Século XX",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-o-periodo-entreguerras-1918-1939",
+    "subject": "História",
+    "title": "O Período Entreguerras (1918-1939)",
+    "topic": "O Período Entreguerras (1918-1939)",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-o-nazismo-na-alemanha",
+    "subject": "História",
+    "title": "O Nazismo na Alemanha",
+    "topic": "O Nazismo na Alemanha",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "criterios-conjuntivos",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-segunda-guerra-mundial-1939-1945",
+    "subject": "História",
+    "title": "Segunda Guerra Mundial (1939-1945)",
+    "topic": "Segunda Guerra Mundial (1939-1945)",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-guerra-fria",
+    "subject": "História",
+    "title": "Guerra Fria",
+    "topic": "Guerra Fria",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-descolonizacao-afro-asiatica",
+    "subject": "História",
+    "title": "Descolonização Afro-Asiática",
+    "topic": "Descolonização Afro-Asiática",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-america-latina-no-seculo-xx",
+    "subject": "História",
+    "title": "América Latina no Século XX",
+    "topic": "América Latina no Século XX",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-o-fim-da-guerra-fria",
+    "subject": "História",
+    "title": "O Fim da Guerra Fria",
+    "topic": "O Fim da Guerra Fria",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-historia-e-o-brasil",
+    "subject": "História",
+    "title": "A História e o Brasil",
+    "topic": "A História e o Brasil",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+    "subject": "História",
+    "title": "Grandes Navegações e Conquista Colonial",
+    "topic": "Grandes Navegações e Conquista Colonial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-montagem-da-colonizacao",
+    "subject": "História",
+    "title": "A Montagem da Colonização",
+    "topic": "A Montagem da Colonização",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "criterios-conjuntivos",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-dinamica-interna-da-colonizacao",
+    "subject": "História",
+    "title": "Dinâmica Interna da Colonização",
+    "topic": "Dinâmica Interna da Colonização",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "dinamica-interna-colonizacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+    "subject": "História",
+    "title": "Disputas Europeias no Brasil Colonial",
+    "topic": "Disputas Europeias no Brasil Colonial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-interiorizacao-da-colonizacao",
+    "subject": "História",
+    "title": "A Interiorização da Colonização",
+    "topic": "A Interiorização da Colonização",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "interiorizacao-colonial",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-mineracao-no-brasil-colonial",
+    "subject": "História",
+    "title": "A Mineração no Brasil Colonial",
+    "topic": "A Mineração no Brasil Colonial",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "mineracao-colonial",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+    "subject": "História",
+    "title": "A Crise do Antigo Sistema Colonial",
+    "topic": "A Crise do Antigo Sistema Colonial",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-independencia-do-brasil",
+    "subject": "História",
+    "title": "A Independência do Brasil",
+    "topic": "A Independência do Brasil",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "independencia-brasil",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+    "subject": "História",
+    "title": "Brasil Império: Formação do Estado Nacional Brasileiro",
+    "topic": "Brasil Império: Formação do Estado Nacional Brasileiro",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+    "subject": "História",
+    "title": "Brasil Império: o Período Regencial (1831-1840)",
+    "topic": "Brasil Império: o Período Regencial (1831-1840)",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+    "subject": "História",
+    "title": "Brasil Império: Segundo Reinado (1840-1889)",
+    "topic": "Brasil Império: Segundo Reinado (1840-1889)",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+    "subject": "História",
+    "title": "Brasil Império: o Declínio do Segundo Reinado",
+    "topic": "Brasil Império: o Declínio do Segundo Reinado",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "criterios-conjuntivos",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-republica-da-espada",
+    "subject": "História",
+    "title": "A República da Espada",
+    "topic": "A República da Espada",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+    "subject": "História",
+    "title": "Ascensão e Domínio das Oligarquias",
+    "topic": "Ascensão e Domínio das Oligarquias",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+    "subject": "História",
+    "title": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+    "topic": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "camadas-de-determinacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-era-vargas",
+    "subject": "História",
+    "title": "A Era Vargas",
+    "topic": "A Era Vargas",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+    "subject": "História",
+    "title": "A Era Vargas: o Governo Constitucional (1934-1937)",
+    "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-a-era-vargas-o-estado-novo",
+    "subject": "História",
+    "title": "A Era Vargas: o Estado Novo",
+    "topic": "A Era Vargas: o Estado Novo",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
+    "subject": "História",
+    "title": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+    "topic": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
+    "subject": "História",
+    "title": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+    "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-regime-militar-1964-1985-i",
+    "subject": "História",
+    "title": "Regime Militar (1964-1985) I",
+    "topic": "Regime Militar (1964-1985) I",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-regime-militar-1964-1985-ii",
+    "subject": "História",
+    "title": "Regime Militar (1964-1985) II",
+    "topic": "Regime Militar (1964-1985) II",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "column"
+  },
+  {
+    "id": "summary-historia-o-brasil-atual",
+    "subject": "História",
+    "title": "O Brasil Atual",
+    "topic": "O Brasil Atual",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "criterios-conjuntivos",
+    "object": "column"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Taxonomy and Terminology",
+    "topic": "Text Comprehension: Taxonomy and Terminology",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "taxonomy",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-songs-and-poems",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Songs and Poems",
+    "topic": "Text Comprehension: Songs and Poems",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "songs-poems",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-calories-and-energy",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Calories and Energy",
+    "topic": "Text Comprehension: Calories and Energy",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "calories-energy",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Earthquakes",
+    "topic": "Text Comprehension: Earthquakes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "earthquakes",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-hurricanes",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Hurricanes",
+    "topic": "Text Comprehension: Hurricanes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "hurricanes",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "topic": "Text Comprehension: Ecology (Greenhouse Gases)",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "greenhouse-gases",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-pollution",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Pollution",
+    "topic": "Text Comprehension: Pollution",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "pollution",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-the-human-brain",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: The Human Brain",
+    "topic": "Text Comprehension: The Human Brain",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "human-brain",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-global-warming",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Global Warming",
+    "topic": "Text Comprehension: Global Warming",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "global-warming",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-novels-short-stories",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Novels/Short Stories",
+    "topic": "Text Comprehension: Novels/Short Stories",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "novels-short-stories",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-bacteria",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Bacteria",
+    "topic": "Text Comprehension: Bacteria",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "bacteria",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-viruses",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Viruses",
+    "topic": "Text Comprehension: Viruses",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "viruses",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-discrimination-against-women",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Discrimination Against Women",
+    "topic": "Text Comprehension: Discrimination Against Women",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "discrimination-against-women",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-women-empowerment",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Women Empowerment",
+    "topic": "Text Comprehension: Women Empowerment",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "women-empowerment",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-digital-technology",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Digital Technology",
+    "topic": "Text Comprehension: Digital Technology",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "digital-technology",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-health-probiotics",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Health – Probiotics",
+    "topic": "Text Comprehension: Health – Probiotics",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "health-probiotics",
+    "object": "letters"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-stem-cells",
+    "subject": "Língua Inglesa",
+    "title": "Text Comprehension: Stem Cells",
+    "topic": "Text Comprehension: Stem Cells",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "stem-cells",
+    "object": "letters"
+  },
+  {
+    "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+    "subject": "Redação",
+    "title": "A Dissertação no Vestibular: Mitos e Verdades",
+    "topic": "A Dissertação no Vestibular: Mitos e Verdades",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "dissertacao-mitos",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades",
+    "subject": "Redação",
+    "title": "O que se Avalia na Dissertação: Competências e Habilidades",
+    "topic": "O que se Avalia na Dissertação: Competências e Habilidades",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "avaliacao-dissertacao",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+    "subject": "Redação",
+    "title": "Organizando as Ideias: Brainstorm e Mind Maps",
+    "topic": "Organizando as Ideias: Brainstorm e Mind Maps",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "organizacao-ideias",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-projeto-de-texto-em-favor-da-progressao-textual",
+    "subject": "Redação",
+    "title": "Projeto de Texto em Favor da Progressão Textual",
+    "topic": "Projeto de Texto em Favor da Progressão Textual",
+    "nodes": 5,
+    "representation": "experiment",
+    "artifact": "argument",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso",
+    "subject": "Redação",
+    "title": "Repertório: o Diferencial de Redações de Sucesso",
+    "topic": "Repertório: o Diferencial de Redações de Sucesso",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "repertorio",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos",
+    "subject": "Redação",
+    "title": "Qual Será o Tema deste Ano: Grandes Eixos Temáticos",
+    "topic": "Qual Será o Tema deste Ano: Grandes Eixos Temáticos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "eixos-tematicos",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-diferentes-graus-de-adequacao-a-proposta",
+    "subject": "Redação",
+    "title": "Diferentes Graus de Adequação à Proposta",
+    "topic": "Diferentes Graus de Adequação à Proposta",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "adequacao-proposta",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+    "subject": "Redação",
+    "title": "Tangenciamento e Fuga: a Fronteira do Tema",
+    "topic": "Tangenciamento e Fuga: a Fronteira do Tema",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "fronteira-tema",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto",
+    "subject": "Redação",
+    "title": "Gêneros e sua Relação com a Estrutura do Texto",
+    "topic": "Gêneros e sua Relação com a Estrutura do Texto",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "genero-estrutura",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-estrutura-classica-do-texto-dissertativo",
+    "subject": "Redação",
+    "title": "Estrutura Clássica do Texto Dissertativo",
+    "topic": "Estrutura Clássica do Texto Dissertativo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "estrutura-dissertativa",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i",
+    "subject": "Redação",
+    "title": "Lendo a Coletânea: a Apreensão de Sentidos I",
+    "topic": "Lendo a Coletânea: a Apreensão de Sentidos I",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coletanea-sentidos-i",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii",
+    "subject": "Redação",
+    "title": "Lendo a Coletânea: a Apreensão de Sentidos II",
+    "topic": "Lendo a Coletânea: a Apreensão de Sentidos II",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coletanea-sentidos-ii",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i",
+    "subject": "Redação",
+    "title": "Lendo a Coletânea: a Compreensão e o Texto Autoral I",
+    "topic": "Lendo a Coletânea: a Compreensão e o Texto Autoral I",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coletanea-autoria-i",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii",
+    "subject": "Redação",
+    "title": "Lendo a Coletânea: a Compreensão e o Texto Autoral II",
+    "topic": "Lendo a Coletânea: a Compreensão e o Texto Autoral II",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coletanea-autoria-ii",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-meio-ambiente",
+    "subject": "Redação",
+    "title": "Incrementando o Repertório: Meio Ambiente",
+    "topic": "Incrementando o Repertório: Meio Ambiente",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rep-meio-ambiente",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-meio-ambiente",
+    "subject": "Redação",
+    "title": "Analisando Tema de Redação: Meio Ambiente",
+    "topic": "Analisando Tema de Redação: Meio Ambiente",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tema-meio-ambiente",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho",
+    "subject": "Redação",
+    "title": "Incrementando o Repertório: Educação e Trabalho",
+    "topic": "Incrementando o Repertório: Educação e Trabalho",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rep-educacao-trabalho",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho",
+    "subject": "Redação",
+    "title": "Analisando Tema de Redação: Educação e Trabalho",
+    "topic": "Analisando Tema de Redação: Educação e Trabalho",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tema-educacao-trabalho",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-temas-abstratos",
+    "subject": "Redação",
+    "title": "Incrementando o Repertório: Temas Abstratos",
+    "topic": "Incrementando o Repertório: Temas Abstratos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rep-abstratos",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-abstrato-de-redacao",
+    "subject": "Redação",
+    "title": "Analisando Tema Abstrato de Redação",
+    "topic": "Analisando Tema Abstrato de Redação",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tema-abstrato",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade",
+    "subject": "Redação",
+    "title": "Incrementando o Repertório: Corpo, Saúde e Sexualidade",
+    "topic": "Incrementando o Repertório: Corpo, Saúde e Sexualidade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rep-corpo-saude",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade",
+    "subject": "Redação",
+    "title": "Analisando Tema de Redação: Corpo, Saúde e Sexualidade",
+    "topic": "Analisando Tema de Redação: Corpo, Saúde e Sexualidade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tema-corpo-saude",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao",
+    "subject": "Redação",
+    "title": "Incrementando o Repertório: Violência, Leis e Punição",
+    "topic": "Incrementando o Repertório: Violência, Leis e Punição",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rep-violencia",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao",
+    "subject": "Redação",
+    "title": "Analisando Tema de Redação: Violência, Leis e Punição",
+    "topic": "Analisando Tema de Redação: Violência, Leis e Punição",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tema-violencia",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder",
+    "subject": "Redação",
+    "title": "Incrementando o Repertório: Cidadania e Poder",
+    "topic": "Incrementando o Repertório: Cidadania e Poder",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rep-cidadania",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder",
+    "subject": "Redação",
+    "title": "Analisando Tema de Redação: Cidadania e Poder",
+    "topic": "Analisando Tema de Redação: Cidadania e Poder",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tema-cidadania",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais",
+    "subject": "Redação",
+    "title": "Incrementando o Repertório: Arte, Cultura e Relações Sociais",
+    "topic": "Incrementando o Repertório: Arte, Cultura e Relações Sociais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rep-arte-cultura",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais",
+    "subject": "Redação",
+    "title": "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",
+    "topic": "Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tema-arte-cultura",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade",
+    "subject": "Redação",
+    "title": "Incrementando o Repertório: Mídia e Sociedade",
+    "topic": "Incrementando o Repertório: Mídia e Sociedade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rep-midia",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade",
+    "subject": "Redação",
+    "title": "Analisando Tema de Redação: Mídia e Sociedade",
+    "topic": "Analisando Tema de Redação: Mídia e Sociedade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tema-midia",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao",
+    "subject": "Redação",
+    "title": "Parágrafo de Introdução: Delimitando a Opinião",
+    "topic": "Parágrafo de Introdução: Delimitando a Opinião",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "intro-tese",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-paragrafo-de-introducao-como-contextualizar",
+    "subject": "Redação",
+    "title": "Parágrafo de Introdução: como Contextualizar",
+    "topic": "Parágrafo de Introdução: como Contextualizar",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "intro-contexto",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-argumentacao-auditorio-particular-e-universal",
+    "subject": "Redação",
+    "title": "Argumentação: Auditório Particular e Universal",
+    "topic": "Argumentação: Auditório Particular e Universal",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "auditorio",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade",
+    "subject": "Redação",
+    "title": "Argumentação Quase-Lógica e Efeito de Verdade",
+    "topic": "Argumentação Quase-Lógica e Efeito de Verdade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "quase-logica",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-argumentacao-e-coerencia-interna",
+    "subject": "Redação",
+    "title": "Argumentação e Coerência Interna",
+    "topic": "Argumentação e Coerência Interna",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coerencia-interna",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-argumentacao-e-coerencia-externa",
+    "subject": "Redação",
+    "title": "Argumentação e Coerência Externa",
+    "topic": "Argumentação e Coerência Externa",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coerencia-externa",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos",
+    "subject": "Redação",
+    "title": "Recursos Argumentativos: Dados Numéricos e Exemplos",
+    "topic": "Recursos Argumentativos: Dados Numéricos e Exemplos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "dados-exemplos",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-vozes-prestigiadas",
+    "subject": "Redação",
+    "title": "Recursos Argumentativos: Vozes Prestigiadas",
+    "topic": "Recursos Argumentativos: Vozes Prestigiadas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "vozes-prestigiadas",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-ressalvando-o-ponto-de-vista-contrario",
+    "subject": "Redação",
+    "title": "Ressalvando o Ponto de Vista Contrário",
+    "topic": "Ressalvando o Ponto de Vista Contrário",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "ressalva",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-refutando-o-ponto-contrario",
+    "subject": "Redação",
+    "title": "Refutando o Ponto Contrário",
+    "topic": "Refutando o Ponto Contrário",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "refutacao",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade",
+    "subject": "Redação",
+    "title": "Recursos Argumentativos: Interdiscursividade e Intertextualidade",
+    "topic": "Recursos Argumentativos: Interdiscursividade e Intertextualidade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "interdiscursividade",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados",
+    "subject": "Redação",
+    "title": "Recursos Argumentativos: Temas de Redação já Analisados",
+    "topic": "Recursos Argumentativos: Temas de Redação já Analisados",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "temas-analisados",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-fatos-da-atualidade",
+    "subject": "Redação",
+    "title": "Recursos Argumentativos: Fatos da Atualidade",
+    "topic": "Recursos Argumentativos: Fatos da Atualidade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "fatos-atualidade",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber",
+    "subject": "Redação",
+    "title": "Recursos Argumentativos: Múltiplos Domínios do Saber",
+    "topic": "Recursos Argumentativos: Múltiplos Domínios do Saber",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "multiplos-dominios",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-conclusao-por-sintese-ou-retomada-da-tese",
+    "subject": "Redação",
+    "title": "Conclusão por Síntese ou Retomada da Tese",
+    "topic": "Conclusão por Síntese ou Retomada da Tese",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "conclusao-sintese",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade",
+    "subject": "Redação",
+    "title": "Conclusão: Sumarização, Focalização e Expressividade",
+    "topic": "Conclusão: Sumarização, Focalização e Expressividade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "conclusao-foco",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania",
+    "subject": "Redação",
+    "title": "Proposta de Intervenção: Atores Sociais e Cidadania",
+    "topic": "Proposta de Intervenção: Atores Sociais e Cidadania",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "intervencao-atores",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao",
+    "subject": "Redação",
+    "title": "Proposta de Intervenção: Viabilização e Inovação",
+    "topic": "Proposta de Intervenção: Viabilização e Inovação",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "intervencao-viabilidade",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-proposta-de-intervencao-coerencia-argumentativa",
+    "subject": "Redação",
+    "title": "Proposta de Intervenção: Coerência Argumentativa",
+    "topic": "Proposta de Intervenção: Coerência Argumentativa",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "intervencao-coerencia",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos",
+    "subject": "Redação",
+    "title": "Proposta de Intervenção: Respeito aos Direitos Humanos",
+    "topic": "Proposta de Intervenção: Respeito aos Direitos Humanos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "intervencao-direitos",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo",
+    "subject": "Redação",
+    "title": "Recursos de Coesão Referencial no Texto Dissertativo",
+    "topic": "Recursos de Coesão Referencial no Texto Dissertativo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coesao-referencial",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo",
+    "subject": "Redação",
+    "title": "Recursos de Coesão Sequencial no Texto Dissertativo",
+    "topic": "Recursos de Coesão Sequencial no Texto Dissertativo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coesao-sequencial",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas",
+    "subject": "Redação",
+    "title": "Coesão no Texto Dissertativo: Análise de Problemas",
+    "topic": "Coesão no Texto Dissertativo: Análise de Problemas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "coesao-problemas",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade",
+    "subject": "Redação",
+    "title": "Recursos Linguísticos: Norma, Clareza e Expressividade",
+    "topic": "Recursos Linguísticos: Norma, Clareza e Expressividade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "linguagem-clareza",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais",
+    "subject": "Redação",
+    "title": "Os Direitos Humanos de 1ª Geração: Direitos Individuais",
+    "topic": "Os Direitos Humanos de 1ª Geração: Direitos Individuais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "direitos-1",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos",
+    "subject": "Redação",
+    "title": "Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos",
+    "topic": "Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "direitos-23",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar",
+    "subject": "Redação",
+    "title": "Redações Nota 1000: Trunfos a Inspirar",
+    "topic": "Redações Nota 1000: Trunfos a Inspirar",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "nota-mil",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-redacao-redacoes-na-midia-como-aprimorar",
+    "subject": "Redação",
+    "title": "Redações na Mídia: como Aprimorar",
+    "topic": "Redações na Mídia: como Aprimorar",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "redacao-midia",
+    "object": "pencil"
+  },
+  {
+    "id": "summary-gramatica-lingua-um-sistema-complexo",
+    "subject": "Gramática",
+    "title": "Língua: um Sistema Complexo",
+    "topic": "Língua: um Sistema Complexo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "lingua-sistema",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-variacao-linguistica",
+    "subject": "Gramática",
+    "title": "Variação Linguística",
+    "topic": "Variação Linguística",
+    "nodes": 5,
+    "representation": "experiment",
+    "artifact": "variation",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador",
+    "subject": "Gramática",
+    "title": "Substantivo: os Nomes e a Visão do Enunciador",
+    "topic": "Substantivo: os Nomes e a Visão do Enunciador",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "substantivo-visao-enunciador",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos",
+    "subject": "Gramática",
+    "title": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos",
+    "topic": "Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tipos-de-texto",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal",
+    "subject": "Gramática",
+    "title": "Artigo, Numeral e Adjetivo no Sintagma Nominal",
+    "topic": "Artigo, Numeral e Adjetivo no Sintagma Nominal",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "sintagma-nominal",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-pronomes",
+    "subject": "Gramática",
+    "title": "Pronomes",
+    "topic": "Pronomes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "pronomes",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-verbo",
+    "subject": "Gramática",
+    "title": "Verbo",
+    "topic": "Verbo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "verbo",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores",
+    "subject": "Gramática",
+    "title": "Advérbio e Locuções Adverbiais: Circunstanciadores",
+    "topic": "Advérbio e Locuções Adverbiais: Circunstanciadores",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "adverbio-circunstanciadores",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-verbo-e-sintaxe-da-oracao",
+    "subject": "Gramática",
+    "title": "Verbo e Sintaxe da Oração",
+    "topic": "Verbo e Sintaxe da Oração",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "verbo-sintaxe-oracao",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-concordancia",
+    "subject": "Gramática",
+    "title": "Concordância",
+    "topic": "Concordância",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "concordancia",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-significados-implicitos",
+    "subject": "Gramática",
+    "title": "Significados Implícitos",
+    "topic": "Significados Implícitos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "significados-implicitos",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-tipos-de-discurso",
+    "subject": "Gramática",
+    "title": "Tipos de Discurso",
+    "topic": "Tipos de Discurso",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tipos-de-discurso",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula",
+    "subject": "Gramática",
+    "title": "Pontuação I: Princípios para o Uso da Vírgula",
+    "topic": "Pontuação I: Princípios para o Uso da Vírgula",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "pontuacao-i",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao",
+    "subject": "Gramática",
+    "title": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação",
+    "topic": "Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "pontuacao-ii",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
+    "subject": "Gramática",
+    "title": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
+    "topic": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "lexico-em-contexto",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe",
+    "subject": "Gramática",
+    "title": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
+    "topic": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "ambiguidade",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-mecanismo-de-regencia",
+    "subject": "Gramática",
+    "title": "Mecanismo de Regência",
+    "topic": "Mecanismo de Regência",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "mecanismo-regencia",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-crase",
+    "subject": "Gramática",
+    "title": "Crase",
+    "topic": "Crase",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "crase",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-processos-de-formacao-de-palavras",
+    "subject": "Gramática",
+    "title": "Processos de Formação de Palavras",
+    "topic": "Processos de Formação de Palavras",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "formacao-palavras",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo",
+    "subject": "Gramática",
+    "title": "Funções Sintáticas Nominais e Vocativo",
+    "topic": "Funções Sintáticas Nominais e Vocativo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "funcoes-sintaticas-nominais",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-tipos-de-sujeito",
+    "subject": "Gramática",
+    "title": "Tipos de Sujeito",
+    "topic": "Tipos de Sujeito",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tipos-de-sujeito",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-vozes-verbais",
+    "subject": "Gramática",
+    "title": "Vozes Verbais",
+    "topic": "Vozes Verbais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "vozes-verbais",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-oracoes-substantivas",
+    "subject": "Gramática",
+    "title": "Orações Substantivas",
+    "topic": "Orações Substantivas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "oracoes-substantivas",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-oracoes-adjetivas",
+    "subject": "Gramática",
+    "title": "Orações Adjetivas",
+    "topic": "Orações Adjetivas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "oracoes-adjetivas",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-oracoes-adverbiais",
+    "subject": "Gramática",
+    "title": "Orações Adverbiais",
+    "topic": "Orações Adverbiais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "oracoes-adverbiais",
+    "object": "letters"
+  },
+  {
+    "id": "summary-gramatica-oracoes-coordenadas",
+    "subject": "Gramática",
+    "title": "Orações Coordenadas",
+    "topic": "Orações Coordenadas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "oracoes-coordenadas",
+    "object": "letters"
+  },
+  {
+    "id": "summary-literatura-a-arte-e-suas-linguagens",
+    "subject": "Literatura",
+    "title": "A Arte e suas Linguagens",
+    "topic": "A Arte e suas Linguagens",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "art-languages",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-texto-literario-x-texto-nao-literario",
+    "subject": "Literatura",
+    "title": "Texto Literário x Texto não Literário",
+    "topic": "Texto Literário x Texto não Literário",
+    "nodes": 5,
+    "representation": "experiment",
+    "artifact": "literary",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-trovadorismo-e-humanismo",
+    "subject": "Literatura",
+    "title": "Trovadorismo e Humanismo",
+    "topic": "Trovadorismo e Humanismo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "medieval-voices",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-renascimento-e-camoes",
+    "subject": "Literatura",
+    "title": "Renascimento e Camões",
+    "topic": "Renascimento e Camões",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "renaissance-camoes",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-brasil-primeiros-registros",
+    "subject": "Literatura",
+    "title": "Brasil: Primeiros Registros",
+    "topic": "Brasil: Primeiros Registros",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "first-records",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-a-estetica-barroca",
+    "subject": "Literatura",
+    "title": "A Estética Barroca",
+    "topic": "A Estética Barroca",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "baroque",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-a-estetica-neoclassica",
+    "subject": "Literatura",
+    "title": "A Estética Neoclássica",
+    "topic": "A Estética Neoclássica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "neoclassic",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-a-estetica-romantica-poesia",
+    "subject": "Literatura",
+    "title": "A Estética Romântica: Poesia",
+    "topic": "A Estética Romântica: Poesia",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "romantic-poetry",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-elementos-da-narrativa",
+    "subject": "Literatura",
+    "title": "Elementos da Narrativa",
+    "topic": "Elementos da Narrativa",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "narrative-elements",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-a-estetica-romantica-prosa",
+    "subject": "Literatura",
+    "title": "A Estética Romântica: Prosa",
+    "topic": "A Estética Romântica: Prosa",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "romantic-prose",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-a-estetica-realista",
+    "subject": "Literatura",
+    "title": "A Estética Realista",
+    "topic": "A Estética Realista",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "realism",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-machado-de-assis",
+    "subject": "Literatura",
+    "title": "Machado de Assis",
+    "topic": "Machado de Assis",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "machado-de-assis",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-naturalismo",
+    "subject": "Literatura",
+    "title": "Naturalismo",
+    "topic": "Naturalismo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "naturalism",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-realismo-portugues-eca-de-queiros",
+    "subject": "Literatura",
+    "title": "Realismo Português: Eça de Queirós",
+    "topic": "Realismo Português: Eça de Queirós",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "eca-de-queiros",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-parnasianismo",
+    "subject": "Literatura",
+    "title": "Parnasianismo",
+    "topic": "Parnasianismo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "parnassianism",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-simbolismo",
+    "subject": "Literatura",
+    "title": "Simbolismo",
+    "topic": "Simbolismo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "symbolism",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-pre-modernismo",
+    "subject": "Literatura",
+    "title": "Pré-Modernismo",
+    "topic": "Pré-Modernismo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "pre-modernism",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-vanguardas-artisticas",
+    "subject": "Literatura",
+    "title": "Vanguardas Artísticas",
+    "topic": "Vanguardas Artísticas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "vanguards",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-fernando-pessoa",
+    "subject": "Literatura",
+    "title": "Fernando Pessoa",
+    "topic": "Fernando Pessoa",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "fernando-pessoa",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-semana-de-arte-moderna",
+    "subject": "Literatura",
+    "title": "Semana de Arte Moderna",
+    "topic": "Semana de Arte Moderna",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "modern-art-week",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-modernismo-no-brasil-primeira-geracao",
+    "subject": "Literatura",
+    "title": "Modernismo no Brasil: Primeira Geração",
+    "topic": "Modernismo no Brasil: Primeira Geração",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "modernism-first-generation",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-segunda-geracao-modernista-prosa",
+    "subject": "Literatura",
+    "title": "Segunda Geração Modernista: Prosa",
+    "topic": "Segunda Geração Modernista: Prosa",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "modernism-second-prose",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-graciliano-ramos",
+    "subject": "Literatura",
+    "title": "Graciliano Ramos",
+    "topic": "Graciliano Ramos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "graciliano-ramos",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-segunda-geracao-modernista-poesia",
+    "subject": "Literatura",
+    "title": "Segunda Geração Modernista: Poesia",
+    "topic": "Segunda Geração Modernista: Poesia",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "modernism-second-generation",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-carlos-drummond-de-andrade",
+    "subject": "Literatura",
+    "title": "Carlos Drummond de Andrade",
+    "topic": "Carlos Drummond de Andrade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "carlos-drummond",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-joao-cabral-de-melo-neto",
+    "subject": "Literatura",
+    "title": "João Cabral de Melo Neto",
+    "topic": "João Cabral de Melo Neto",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "joao-cabral",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-poesia-concreta",
+    "subject": "Literatura",
+    "title": "Poesia Concreta",
+    "topic": "Poesia Concreta",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "concrete-poetry",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-clarice-lispector",
+    "subject": "Literatura",
+    "title": "Clarice Lispector",
+    "topic": "Clarice Lispector",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "clarice-lispector",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-guimaraes-rosa",
+    "subject": "Literatura",
+    "title": "Guimarães Rosa",
+    "topic": "Guimarães Rosa",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "guimaraes-rosa",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-poesia-brasileira-1960-1980",
+    "subject": "Literatura",
+    "title": "Poesia Brasileira: 1960-1980",
+    "topic": "Poesia Brasileira: 1960-1980",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "poetry-1960-1980",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-prosa-brasileira-1960-1980",
+    "subject": "Literatura",
+    "title": "Prosa Brasileira: 1960-1980",
+    "topic": "Prosa Brasileira: 1960-1980",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "prose-1960-1980",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-literatura-lusofona-contemporanea",
+    "subject": "Literatura",
+    "title": "Literatura Lusófona Contemporânea",
+    "topic": "Literatura Lusófona Contemporânea",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "lusophone-contemporary",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-poesia-brasileira-contemporanea",
+    "subject": "Literatura",
+    "title": "Poesia Brasileira Contemporânea",
+    "topic": "Poesia Brasileira Contemporânea",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "poetry-contemporary",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-prosa-brasileira-contemporanea",
+    "subject": "Literatura",
+    "title": "Prosa Brasileira Contemporânea",
+    "topic": "Prosa Brasileira Contemporânea",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "prose-contemporary",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-artes-plasticas-brasileiras",
+    "subject": "Literatura",
+    "title": "Artes Plásticas Brasileiras",
+    "topic": "Artes Plásticas Brasileiras",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "brazilian-visual-arts",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-teatro-brasileiro",
+    "subject": "Literatura",
+    "title": "Teatro Brasileiro",
+    "topic": "Teatro Brasileiro",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "brazilian-theater",
+    "object": "book"
+  },
+  {
+    "id": "summary-literatura-cancioneiro-popular-brasileiro",
+    "subject": "Literatura",
+    "title": "Cancioneiro Popular Brasileiro",
+    "topic": "Cancioneiro Popular Brasileiro",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "popular-songbook",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+    "subject": "Entendimento de Texto",
+    "title": "Fatores de Textualidade",
+    "topic": "Fatores de Textualidade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "textualidade",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-os-dois-niveis-da-leitura",
+    "subject": "Entendimento de Texto",
+    "title": "Os Dois Níveis da Leitura",
+    "topic": "Os Dois Níveis da Leitura",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "niveis-leitura",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-intertextualidade-e-interdiscursividade",
+    "subject": "Entendimento de Texto",
+    "title": "Intertextualidade e Interdiscursividade",
+    "topic": "Intertextualidade e Interdiscursividade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "intertextualidade",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-generos-textuais",
+    "subject": "Entendimento de Texto",
+    "title": "Gêneros Textuais",
+    "topic": "Gêneros Textuais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "generos",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao",
+    "subject": "Entendimento de Texto",
+    "title": "Gêneros Narrativos e Níveis de Compreensão",
+    "topic": "Gêneros Narrativos e Níveis de Compreensão",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "narrativos",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura",
+    "subject": "Entendimento de Texto",
+    "title": "Gêneros não Verbais: Fundamentos de Leitura",
+    "topic": "Gêneros não Verbais: Fundamentos de Leitura",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "nao-verbais",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-funcoes-da-linguagem",
+    "subject": "Entendimento de Texto",
+    "title": "Funções da Linguagem",
+    "topic": "Funções da Linguagem",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "funcoes",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria",
+    "subject": "Entendimento de Texto",
+    "title": "Função Poética e Linguagem Literária",
+    "topic": "Função Poética e Linguagem Literária",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "poetica",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-figuras-de-linguagem",
+    "subject": "Entendimento de Texto",
+    "title": "Figuras de Linguagem",
+    "topic": "Figuras de Linguagem",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "figuras",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-modelos-de-leitura-e-distorcoes-interpretativas",
+    "subject": "Entendimento de Texto",
+    "title": "Modelos de Leitura e Distorções Interpretativas",
+    "topic": "Modelos de Leitura e Distorções Interpretativas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "distorcoes",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-leitura-de-textos-comicos",
+    "subject": "Entendimento de Texto",
+    "title": "Leitura de Textos Cômicos",
+    "topic": "Leitura de Textos Cômicos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "comicos",
+    "object": "book"
+  },
+  {
+    "id": "summary-entendimento-de-texto-tecnologias-digitais-da-informacao-e-comunicacao-tdic-impactos-sociais",
+    "subject": "Entendimento de Texto",
+    "title": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+    "topic": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tdic",
+    "object": "book"
+  },
+  {
+    "id": "summary-matematica-potencias-e-radicais",
+    "subject": "Matemática",
+    "title": "Potências e Radicais",
+    "topic": "Potências e Radicais",
+    "nodes": 5,
+    "representation": "experiment",
+    "artifact": "powers",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-razao-e-proporcao",
+    "subject": "Matemática",
+    "title": "Razão e Proporção",
+    "topic": "Razão e Proporção",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "razao-proporcao",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-porcentagem",
+    "subject": "Matemática",
+    "title": "Porcentagem",
+    "topic": "Porcentagem",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "porcentagem",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-o-sistema-de-numeracao-decimal",
+    "subject": "Matemática",
+    "title": "O Sistema de Numeração Decimal",
+    "topic": "O Sistema de Numeração Decimal",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "sistema-decimal",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-introducao-a-teoria-dos-numeros-inteiros",
+    "subject": "Matemática",
+    "title": "Introdução à Teoria dos Números Inteiros",
+    "topic": "Introdução à Teoria dos Números Inteiros",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "numeros-inteiros",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-introducao-as-sequencias",
+    "subject": "Matemática",
+    "title": "Introdução às Sequências",
+    "topic": "Introdução às Sequências",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "progressoes",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-progressao-aritmetica",
+    "subject": "Matemática",
+    "title": "Progressão Aritmética",
+    "topic": "Progressão Aritmética",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "progressao-aritmetica",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-progressao-geometrica",
+    "subject": "Matemática",
+    "title": "Progressão Geométrica",
+    "topic": "Progressão Geométrica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "progressao-geometrica",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-sequencias",
+    "subject": "Matemática",
+    "title": "Sequências",
+    "topic": "Sequências",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "progressoes",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-sistemas-de-equacoes",
+    "subject": "Matemática",
+    "title": "Sistemas de Equações",
+    "topic": "Sistemas de Equações",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "sistemas-equacoes",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-tabelas-e-matrizes",
+    "subject": "Matemática",
+    "title": "Tabelas e Matrizes",
+    "topic": "Tabelas e Matrizes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tabelas-matrizes",
+    "object": "matrix"
+  },
+  {
+    "id": "summary-matematica-multiplicacao-de-matrizes",
+    "subject": "Matemática",
+    "title": "Multiplicação de Matrizes",
+    "topic": "Multiplicação de Matrizes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "multiplicacao-matrizes",
+    "object": "matrix"
+  },
+  {
+    "id": "summary-matematica-determinantes",
+    "subject": "Matemática",
+    "title": "Determinantes",
+    "topic": "Determinantes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "determinantes",
+    "object": "matrix"
+  },
+  {
+    "id": "summary-matematica-discussao-de-sistemas-lineares",
+    "subject": "Matemática",
+    "title": "Discussão de Sistemas Lineares",
+    "topic": "Discussão de Sistemas Lineares",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "discussao-sistemas",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-medias",
+    "subject": "Matemática",
+    "title": "Médias",
+    "topic": "Médias",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "medias",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-introducao-as-tecnicas-de-contagem",
+    "subject": "Matemática",
+    "title": "Introdução às Técnicas de Contagem",
+    "topic": "Introdução às Técnicas de Contagem",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "contagem",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-o-problema-da-fila",
+    "subject": "Matemática",
+    "title": "O Problema da Fila",
+    "topic": "O Problema da Fila",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "problema-fila",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-o-problema-do-grupo",
+    "subject": "Matemática",
+    "title": "O Problema do Grupo",
+    "topic": "O Problema do Grupo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "problema-grupo",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-tecnicas-de-contagem",
+    "subject": "Matemática",
+    "title": "Técnicas de Contagem",
+    "topic": "Técnicas de Contagem",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "contagem",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-operacoes-com-probabilidades",
+    "subject": "Matemática",
+    "title": "Operações com Probabilidades",
+    "topic": "Operações com Probabilidades",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "operacoes-probabilidades",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-eventos-disjuntos-e-eventos-independentes",
+    "subject": "Matemática",
+    "title": "Eventos Disjuntos e Eventos Independentes",
+    "topic": "Eventos Disjuntos e Eventos Independentes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "eventos",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-estatistica-descritiva",
+    "subject": "Matemática",
+    "title": "Estatística Descritiva",
+    "topic": "Estatística Descritiva",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "estatistica-descritiva",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-introducao-a-geometria-plana",
+    "subject": "Matemática",
+    "title": "Introdução à Geometria Plana",
+    "topic": "Introdução à Geometria Plana",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "geometria-plana-fundamentos",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-angulos-em-triangulos",
+    "subject": "Matemática",
+    "title": "Ângulos em Triângulos",
+    "topic": "Ângulos em Triângulos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "angulos-triangulo",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-angulos-em-poligonos",
+    "subject": "Matemática",
+    "title": "Ângulos em Polígonos",
+    "topic": "Ângulos em Polígonos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "angulos-poligono",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-angulos-e-circunferencias",
+    "subject": "Matemática",
+    "title": "Ângulos e Circunferências",
+    "topic": "Ângulos e Circunferências",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "angulos-circunferencia",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-simetrias-e-congruencias",
+    "subject": "Matemática",
+    "title": "Simetrias e Congruências",
+    "topic": "Simetrias e Congruências",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "simetrias-congruencias",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-identificacao-de-simetrias-i",
+    "subject": "Matemática",
+    "title": "Identificação de Simetrias I",
+    "topic": "Identificação de Simetrias I",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "simetrias-i",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-identificacao-de-simetrias-ii",
+    "subject": "Matemática",
+    "title": "Identificação de Simetrias II",
+    "topic": "Identificação de Simetrias II",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "simetrias-ii",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-a-geometria-da-proporcionalidade",
+    "subject": "Matemática",
+    "title": "A Geometria da Proporcionalidade",
+    "topic": "A Geometria da Proporcionalidade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "geometria-proporcionalidade",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-semelhanca-de-triangulos",
+    "subject": "Matemática",
+    "title": "Semelhança de Triângulos",
+    "topic": "Semelhança de Triângulos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "semelhanca-triangulos",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo",
+    "subject": "Matemática",
+    "title": "O Ponto Médio e o Baricentro de um Triângulo",
+    "topic": "O Ponto Médio e o Baricentro de um Triângulo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "ponto-medio",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-triangulo-retangulo",
+    "subject": "Matemática",
+    "title": "Triângulo Retângulo",
+    "topic": "Triângulo Retângulo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "triangulo-retangulo-metrico",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-a-geometria-metrica-plana",
+    "subject": "Matemática",
+    "title": "A Geometria Métrica Plana",
+    "topic": "A Geometria Métrica Plana",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "geometria-metrica-plana",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-areas-de-poligonos",
+    "subject": "Matemática",
+    "title": "Áreas de Polígonos",
+    "topic": "Áreas de Polígonos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "areas-poligonos",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-area-do-circulo-e-de-suas-partes",
+    "subject": "Matemática",
+    "title": "Área do Círculo e de suas Partes",
+    "topic": "Área do Círculo e de suas Partes",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "area-circulo-partes",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-razoes-entre-areas-de-figuras-planas",
+    "subject": "Matemática",
+    "title": "Razões entre Áreas de Figuras Planas",
+    "topic": "Razões entre Áreas de Figuras Planas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "razoes-areas-planas",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-areas-de-figuras-planas",
+    "subject": "Matemática",
+    "title": "Áreas de Figuras Planas",
+    "topic": "Áreas de Figuras Planas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "areas-figuras-planas",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-trigonometria-no-triangulo-retangulo",
+    "subject": "Matemática",
+    "title": "Trigonometria no Triângulo Retângulo",
+    "topic": "Trigonometria no Triângulo Retângulo",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "trigonometria-triangulo",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-relacoes-trigonometricas-em-poligonos",
+    "subject": "Matemática",
+    "title": "Relações Trigonométricas em Polígonos",
+    "topic": "Relações Trigonométricas em Polígonos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "trig-poligonos",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-a-trigonometria-dos-numeros-reais",
+    "subject": "Matemática",
+    "title": "A Trigonometria dos Números Reais",
+    "topic": "A Trigonometria dos Números Reais",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "trigonometria",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-outras-razoes-trigonometricas",
+    "subject": "Matemática",
+    "title": "Outras Razões Trigonométricas",
+    "topic": "Outras Razões Trigonométricas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "outras-razoes-trig",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-a-relacao-fundamental-da-trigonometria",
+    "subject": "Matemática",
+    "title": "A Relação Fundamental da Trigonometria",
+    "topic": "A Relação Fundamental da Trigonometria",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "trigonometria",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-transformacoes-trigonometricas",
+    "subject": "Matemática",
+    "title": "Transformações Trigonométricas",
+    "topic": "Transformações Trigonométricas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "transformacoes-trigonometricas",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-funcoes-trigonometricas",
+    "subject": "Matemática",
+    "title": "Funções Trigonométricas",
+    "topic": "Funções Trigonométricas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "funcoes-trigonometricas",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-o-universo-tridimensional",
+    "subject": "Matemática",
+    "title": "O Universo Tridimensional",
+    "topic": "O Universo Tridimensional",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "universo-tridimensional",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-cubos-e-paralelepipedos",
+    "subject": "Matemática",
+    "title": "Cubos e Paralelepípedos",
+    "topic": "Cubos e Paralelepípedos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "cubos-paralelepipedos",
+    "object": "solid"
+  },
+  {
+    "id": "summary-matematica-prismas",
+    "subject": "Matemática",
+    "title": "Prismas",
+    "topic": "Prismas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "prismas",
+    "object": "solid"
+  },
+  {
+    "id": "summary-matematica-piramides",
+    "subject": "Matemática",
+    "title": "Pirâmides",
+    "topic": "Pirâmides",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "piramides",
+    "object": "solid"
+  },
+  {
+    "id": "summary-matematica-solidos-de-revolucao",
+    "subject": "Matemática",
+    "title": "Sólidos de Revolução",
+    "topic": "Sólidos de Revolução",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "solidos-de-revolucao",
+    "object": "solid"
+  },
+  {
+    "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+    "subject": "Matemática",
+    "title": "Razões entre Volumes de Sólidos",
+    "topic": "Razões entre Volumes de Sólidos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "razoes-entre-volumes",
+    "object": "solid"
+  },
+  {
+    "id": "summary-matematica-introducao-a-geometria-analitica",
+    "subject": "Matemática",
+    "title": "Introdução à Geometria Analítica",
+    "topic": "Introdução à Geometria Analítica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "geometria-analitica",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+    "subject": "Matemática",
+    "title": "Lugar Geométrico e Equação da Circunferência",
+    "topic": "Lugar Geométrico e Equação da Circunferência",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "circunferencia",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-estudo-analitico-da-reta",
+    "subject": "Matemática",
+    "title": "Estudo Analítico da Reta",
+    "topic": "Estudo Analítico da Reta",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "reta-analitica",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+    "subject": "Matemática",
+    "title": "Posições Relativas entre Duas Retas",
+    "topic": "Posições Relativas entre Duas Retas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "duas-retas",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-distancia-entre-um-ponto-e-uma-reta",
+    "subject": "Matemática",
+    "title": "Distância entre um Ponto e uma Reta",
+    "topic": "Distância entre um Ponto e uma Reta",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "distancia-ponto-reta",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+    "subject": "Matemática",
+    "title": "Posições Relativas entre uma Reta e uma Circunferência",
+    "topic": "Posições Relativas entre uma Reta e uma Circunferência",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "reta-e-circunferencia",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-introducao-ao-estudo-analitico-das-conicas",
+    "subject": "Matemática",
+    "title": "Introdução ao Estudo Analítico das Cônicas",
+    "topic": "Introdução ao Estudo Analítico das Cônicas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "conicas",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-representacao-geometrica-de-inequacoes",
+    "subject": "Matemática",
+    "title": "Representação Geométrica de Inequações",
+    "topic": "Representação Geométrica de Inequações",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "representacao-geometrica-inequacoes",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-a-geometria-dos-numeros-complexos",
+    "subject": "Matemática",
+    "title": "A Geometria dos Números Complexos",
+    "topic": "A Geometria dos Números Complexos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "complexos",
+    "object": "target"
+  },
+  {
+    "id": "summary-matematica-tecnicas-algebricas",
+    "subject": "Matemática",
+    "title": "Técnicas Algébricas",
+    "topic": "Técnicas Algébricas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "tecnicas-algebricas",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-igualdades",
+    "subject": "Matemática",
+    "title": "Igualdades",
+    "topic": "Igualdades",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "igualdades",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-desigualdades",
+    "subject": "Matemática",
+    "title": "Desigualdades",
+    "topic": "Desigualdades",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "desigualdades",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-modelagem-algebrica-de-problemas-i",
+    "subject": "Matemática",
+    "title": "Modelagem Algébrica de Problemas I",
+    "topic": "Modelagem Algébrica de Problemas I",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "modelagem-algebrica-i",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-equacoes-do-2-grau",
+    "subject": "Matemática",
+    "title": "Equações do 2º Grau",
+    "topic": "Equações do 2º Grau",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "segundo-grau",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-modelagem-algebrica-de-problemas-ii",
+    "subject": "Matemática",
+    "title": "Modelagem Algébrica de Problemas II",
+    "topic": "Modelagem Algébrica de Problemas II",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "modelagem-algebrica-ii",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-introducao-as-funcoes",
+    "subject": "Matemática",
+    "title": "Introdução às Funções",
+    "topic": "Introdução às Funções",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "funcoes-introducao",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-transformacoes-em-graficos-de-funcoes",
+    "subject": "Matemática",
+    "title": "Transformações em Gráficos de Funções",
+    "topic": "Transformações em Gráficos de Funções",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "transformacoes-graficos",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-composicao-de-funcoes",
+    "subject": "Matemática",
+    "title": "Composição de Funções",
+    "topic": "Composição de Funções",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "composicao-funcoes",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-inversao-de-funcoes",
+    "subject": "Matemática",
+    "title": "Inversão de Funções",
+    "topic": "Inversão de Funções",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "inversao-funcoes",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-funcoes-bijetoras",
+    "subject": "Matemática",
+    "title": "Funções Bijetoras",
+    "topic": "Funções Bijetoras",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "funcoes-bijetoras",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-funcao-constante-e-funcao-afim",
+    "subject": "Matemática",
+    "title": "Função Constante e Função Afim",
+    "topic": "Função Constante e Função Afim",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "funcao-afim",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-funcao-quadratica",
+    "subject": "Matemática",
+    "title": "Função Quadrática",
+    "topic": "Função Quadrática",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "funcao-quadratica",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-estudo-do-sinal-de-funcoes",
+    "subject": "Matemática",
+    "title": "Estudo do Sinal de Funções",
+    "topic": "Estudo do Sinal de Funções",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "estudo-do-sinal",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-introducao-ao-modelo-exponencial",
+    "subject": "Matemática",
+    "title": "Introdução ao Modelo Exponencial",
+    "topic": "Introdução ao Modelo Exponencial",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "exponencial",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-introducao-aos-logaritmos",
+    "subject": "Matemática",
+    "title": "Introdução aos Logaritmos",
+    "topic": "Introdução aos Logaritmos",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "logaritmos",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-equacoes-e-funcoes-logaritmicas",
+    "subject": "Matemática",
+    "title": "Equações e Funções Logarítmicas",
+    "topic": "Equações e Funções Logarítmicas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "funcoes-logaritmicas",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-modelagem-exponencial-de-problemas",
+    "subject": "Matemática",
+    "title": "Modelagem Exponencial de Problemas",
+    "topic": "Modelagem Exponencial de Problemas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "modelagem-exponencial",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-modulo-de-um-numero-real",
+    "subject": "Matemática",
+    "title": "Módulo de um Número Real",
+    "topic": "Módulo de um Número Real",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "modulo-real",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-numeros-complexos",
+    "subject": "Matemática",
+    "title": "Números Complexos",
+    "topic": "Números Complexos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "complexos",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-polinomios",
+    "subject": "Matemática",
+    "title": "Polinômios",
+    "topic": "Polinômios",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "polinomios",
+    "object": "curve"
+  },
+  {
+    "id": "summary-matematica-equacoes-polinomiais",
+    "subject": "Matemática",
+    "title": "Equações Polinomiais",
+    "topic": "Equações Polinomiais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "equacoes-polinomiais",
+    "object": "curve"
+  },
+  {
+    "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+    "subject": "Química",
+    "title": "Evolução dos Modelos Atômicos",
+    "topic": "Evolução dos Modelos Atômicos",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "modelos-atomicos",
+    "object": "atom"
+  },
+  {
+    "id": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos",
+    "subject": "Química",
+    "title": "Organização da Tabela Periódica dos Elementos",
+    "topic": "Organização da Tabela Periódica dos Elementos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "atom"
+  },
+  {
+    "id": "summary-quimica-radioatividade-o-estudo-das-radiacoes",
+    "subject": "Química",
+    "title": "Radioatividade: o Estudo das Radiações",
+    "topic": "Radioatividade: o Estudo das Radiações",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "atom"
+  },
+  {
+    "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+    "subject": "Química",
+    "title": "Ligações Químicas e Alotropia",
+    "topic": "Ligações Químicas e Alotropia",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "ligacoes",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-geometria-molecular",
+    "subject": "Química",
+    "title": "Geometria Molecular",
+    "topic": "Geometria Molecular",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+    "subject": "Química",
+    "title": "Polaridade das Ligações e das Moléculas",
+    "topic": "Polaridade das Ligações e das Moléculas",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "criterios-conjuntivos",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-interacoes-intermoleculares",
+    "subject": "Química",
+    "title": "Interações Intermoleculares",
+    "topic": "Interações Intermoleculares",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-composicao-da-materia-estados-fisicos",
+    "subject": "Química",
+    "title": "Composição da Matéria: Estados Físicos",
+    "topic": "Composição da Matéria: Estados Físicos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-o-estado-gasoso",
+    "subject": "Química",
+    "title": "O Estado Gasoso",
+    "topic": "O Estado Gasoso",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "gas-state",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-estudo-dos-gases-ii",
+    "subject": "Química",
+    "title": "Estudo dos Gases II",
+    "topic": "Estudo dos Gases II",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "gas-law",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-separacao-de-misturas",
+    "subject": "Química",
+    "title": "Separação de Misturas",
+    "topic": "Separação de Misturas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "separation",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes",
+    "subject": "Química",
+    "title": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "topic": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "balancing",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-massa-atomica-mol-e-massa-molar",
+    "subject": "Química",
+    "title": "Massa Atômica, Mol e Massa Molar",
+    "topic": "Massa Atômica, Mol e Massa Molar",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "mole",
+    "object": "atom"
+  },
+  {
+    "id": "summary-quimica-determinacao-de-formulas-quimicas",
+    "subject": "Química",
+    "title": "Determinação de Fórmulas Químicas",
+    "topic": "Determinação de Fórmulas Químicas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "formula",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-estequiometria-leis-ponderais",
+    "subject": "Química",
+    "title": "Estequiometria: Leis Ponderais",
+    "topic": "Estequiometria: Leis Ponderais",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "leis-ponderais",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-calculos-estequiometricos",
+    "subject": "Química",
+    "title": "Cálculos Estequiométricos",
+    "topic": "Cálculos Estequiométricos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "stoichiometry",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-quimica-inorganica",
+    "subject": "Química",
+    "title": "Química Inorgânica",
+    "topic": "Química Inorgânica",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases",
+    "subject": "Química",
+    "title": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+    "topic": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "acido-base",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-processos-de-oxirreducao",
+    "subject": "Química",
+    "title": "Processos de Oxirredução",
+    "topic": "Processos de Oxirredução",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "redox",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-quimica-ambiental",
+    "subject": "Química",
+    "title": "Química Ambiental",
+    "topic": "Química Ambiental",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "cadeia-de-derivacao",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-introducao-a-quimica-organica",
+    "subject": "Química",
+    "title": "Introdução à Química Orgânica",
+    "topic": "Introdução à Química Orgânica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "carbon-chain",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+    "subject": "Química",
+    "title": "Nomenclatura de Compostos Orgânicos",
+    "topic": "Nomenclatura de Compostos Orgânicos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "organic-name",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+    "subject": "Química",
+    "title": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+    "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+    "subject": "Química",
+    "title": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+    "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-isomeria",
+    "subject": "Química",
+    "title": "Isomeria",
+    "topic": "Isomeria",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-combustiveis-fosseis",
+    "subject": "Química",
+    "title": "Combustíveis Fósseis",
+    "topic": "Combustíveis Fósseis",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-interpretando-reacoes-organicas",
+    "subject": "Química",
+    "title": "Interpretando Reações Orgânicas",
+    "topic": "Interpretando Reações Orgânicas",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-reacoes-de-substituicao",
+    "subject": "Química",
+    "title": "Reações de Substituição",
+    "topic": "Reações de Substituição",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-reacoes-de-adicao",
+    "subject": "Química",
+    "title": "Reações de Adição",
+    "topic": "Reações de Adição",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "addition",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+    "subject": "Química",
+    "title": "Reações de Oxidação em Hidrocarbonetos",
+    "topic": "Reações de Oxidação em Hidrocarbonetos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "oxidation",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-alcoois",
+    "subject": "Química",
+    "title": "Álcoois",
+    "topic": "Álcoois",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-acidos-graxos-e-esterificacao",
+    "subject": "Química",
+    "title": "Ácidos Graxos e Esterificação",
+    "topic": "Ácidos Graxos e Esterificação",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "esterification",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-transesterificacao-alcoolise",
+    "subject": "Química",
+    "title": "Transesterificação (Alcoólise)",
+    "topic": "Transesterificação (Alcoólise)",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "biodiesel",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-acidez-e-basicidade-pka",
+    "subject": "Química",
+    "title": "Acidez e Basicidade (pKa)",
+    "topic": "Acidez e Basicidade (pKa)",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "acidity",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-polimeros",
+    "subject": "Química",
+    "title": "Polímeros",
+    "topic": "Polímeros",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "polymer",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-dispersoes",
+    "subject": "Química",
+    "title": "Dispersões",
+    "topic": "Dispersões",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "dispersoes",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-efeitos-coligativos",
+    "subject": "Química",
+    "title": "Efeitos Coligativos",
+    "topic": "Efeitos Coligativos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "tipologia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-termoquimica-i",
+    "subject": "Química",
+    "title": "Termoquímica I",
+    "topic": "Termoquímica I",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "termoquimica",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-termoquimica-ii",
+    "subject": "Química",
+    "title": "Termoquímica II",
+    "topic": "Termoquímica II",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "termoquimica",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-cinetica-quimica",
+    "subject": "Química",
+    "title": "Cinética Química",
+    "topic": "Cinética Química",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias",
+    "subject": "Química",
+    "title": "Introdução ao Estudo das Pilhas e Baterias",
+    "topic": "Introdução ao Estudo das Pilhas e Baterias",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "pilhas-baterias",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-eletroquimica-de-processos-espontaneos",
+    "subject": "Química",
+    "title": "Eletroquímica de Processos Espontâneos",
+    "topic": "Eletroquímica de Processos Espontâneos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "eletroquimica-espontanea",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-eletroquimica-de-processos-nao-espontaneos",
+    "subject": "Química",
+    "title": "Eletroquímica de Processos não Espontâneos",
+    "topic": "Eletroquímica de Processos não Espontâneos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "eletrolise",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-aspectos-quantitativos-da-eletroquimica-e-metalurgia",
+    "subject": "Química",
+    "title": "Aspectos Quantitativos da Eletroquímica e Metalurgia",
+    "topic": "Aspectos Quantitativos da Eletroquímica e Metalurgia",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "faraday-metalurgia",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-deslocamento-de-equilibrio",
+    "subject": "Química",
+    "title": "Deslocamento de Equilíbrio",
+    "topic": "Deslocamento de Equilíbrio",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "equilibrium-shift",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-equilibrios-ionicos",
+    "subject": "Química",
+    "title": "Equilíbrios Iônicos",
+    "topic": "Equilíbrios Iônicos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "ionic-equilibrium",
+    "object": "molecule"
+  },
+  {
+    "id": "summary-quimica-equilibrios-ionicos-ii",
+    "subject": "Química",
+    "title": "Equilíbrios Iônicos II",
+    "topic": "Equilíbrios Iônicos II",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "grade-de-eixos",
+    "object": "molecule"
+  },
+  {
+    "id": "qui-equilibrio-acidificacao",
+    "subject": "Química",
+    "title": "Equilíbrio químico, acidez e intemperismo",
+    "topic": "Equilíbrios Químicos I",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "acid-weathering",
+    "object": "molecule"
+  },
+  {
+    "id": "mat-probabilidade-contagem",
+    "subject": "Matemática",
+    "title": "Contagem sistemática e probabilidade",
+    "topic": "Introdução às Probabilidades",
+    "nodes": 5,
+    "representation": "board",
+    "artifact": "probabilidade-pares",
+    "object": "curve"
+  },
+  {
+    "id": "geo-bonus-demografico",
+    "subject": "Geografia",
+    "title": "Estrutura Ativa da População",
+    "topic": "Estrutura Ativa da População",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "escala-de-graus",
+    "object": "globe"
+  },
+  {
+    "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+    "subject": "Filosofia",
+    "title": "O Nascimento da Filosofia: do Mito ao Logos",
+    "topic": "O Nascimento da Filosofia: do Mito ao Logos",
+    "nodes": 5,
+    "representation": "experiment",
+    "artifact": "myth",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+    "subject": "Filosofia",
+    "title": "Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes",
+    "topic": "Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+    "subject": "Filosofia",
+    "title": "Heráclito e Parmênides: o Ser e o Devir",
+    "topic": "Heráclito e Parmênides: o Ser e o Devir",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+    "subject": "Filosofia",
+    "title": "Os Sofistas e a Crise da Verdade",
+    "topic": "Os Sofistas e a Crise da Verdade",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+    "subject": "Filosofia",
+    "title": "O Método Socrático e a Maiêutica",
+    "topic": "O Método Socrático e a Maiêutica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "socratic-method",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+    "subject": "Filosofia",
+    "title": "A Teoria das Ideias de Platão",
+    "topic": "A Teoria das Ideias de Platão",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-o-mito-da-caverna",
+    "subject": "Filosofia",
+    "title": "O Mito da Caverna",
+    "topic": "O Mito da Caverna",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "cave",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento",
+    "subject": "Filosofia",
+    "title": "A Alegoria da Linha Dividida e o Conhecimento",
+    "topic": "A Alegoria da Linha Dividida e o Conhecimento",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "divided-line",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-logica-e-metafisica-aristotelicas",
+    "subject": "Filosofia",
+    "title": "Lógica e Metafísica Aristotélicas",
+    "topic": "Lógica e Metafísica Aristotélicas",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "aristotle-logic",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo",
+    "subject": "Filosofia",
+    "title": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
+    "topic": "A Ética a Nicômaco e a Doutrina do Meio-Termo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "golden-mean",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+    "subject": "Filosofia",
+    "title": "Política Aristotélica: o Homem como Animal Político",
+    "topic": "Política Aristotélica: o Homem como Animal Político",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-patristica-e-santo-agostinho",
+    "subject": "Filosofia",
+    "title": "Patrística e Santo Agostinho",
+    "topic": "Patrística e Santo Agostinho",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-escolastica-e-santo-tomas-de-aquino",
+    "subject": "Filosofia",
+    "title": "Escolástica e Santo Tomás de Aquino",
+    "topic": "Escolástica e Santo Tomás de Aquino",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "aquinas-synthesis",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+    "subject": "Filosofia",
+    "title": "A Relação entre Fé e Razão",
+    "topic": "A Relação entre Fé e Razão",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica",
+    "subject": "Filosofia",
+    "title": "Descartes e o Método: a Dúvida Hiperbólica",
+    "topic": "Descartes e o Método: a Dúvida Hiperbólica",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "cartesian-doubt",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+    "subject": "Filosofia",
+    "title": "Racionalismo Continental: Espinosa e Leibniz",
+    "topic": "Racionalismo Continental: Espinosa e Leibniz",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+    "subject": "Filosofia",
+    "title": "Empirismo Britânico: Locke, Berkeley e Hume",
+    "topic": "Empirismo Britânico: Locke, Berkeley e Hume",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-a-critica-de-hume-a-causalidade",
+    "subject": "Filosofia",
+    "title": "A Crítica de Hume à Causalidade",
+    "topic": "A Crítica de Hume à Causalidade",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "hume-causation",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-hobbes-e-o-estado-de-natureza",
+    "subject": "Filosofia",
+    "title": "Hobbes e o Estado de Natureza",
+    "topic": "Hobbes e o Estado de Natureza",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "hobbes-state",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-locke-e-os-direitos-naturais",
+    "subject": "Filosofia",
+    "title": "Locke e os Direitos Naturais",
+    "topic": "Locke e os Direitos Naturais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "locke-rights",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-rousseau-e-a-vontade-geral",
+    "subject": "Filosofia",
+    "title": "Rousseau e a Vontade Geral",
+    "topic": "Rousseau e a Vontade Geral",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "rousseau-general-will",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+    "subject": "Filosofia",
+    "title": "O Ideal Iluminista de Razão e Progresso",
+    "topic": "O Ideal Iluminista de Razão e Progresso",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-a-critica-da-razao-pura",
+    "subject": "Filosofia",
+    "title": "A Crítica da Razão Pura",
+    "topic": "A Crítica da Razão Pura",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico",
+    "subject": "Filosofia",
+    "title": "A Ética Kantiana e o Imperativo Categórico",
+    "topic": "A Ética Kantiana e o Imperativo Categórico",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "kant-duty",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-hegel-e-a-dialetica",
+    "subject": "Filosofia",
+    "title": "Hegel e a Dialética",
+    "topic": "Hegel e a Dialética",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "hegel-dialectic",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-o-materialismo-historico",
+    "subject": "Filosofia",
+    "title": "O Materialismo Histórico",
+    "topic": "O Materialismo Histórico",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "historical-materialism",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-alienacao-e-mais-valia",
+    "subject": "Filosofia",
+    "title": "Alienação e Mais-Valia",
+    "topic": "Alienação e Mais-Valia",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista",
+    "subject": "Filosofia",
+    "title": "A Luta de Classes na Filosofia Marxista",
+    "topic": "A Luta de Classes na Filosofia Marxista",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "class-struggle",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais",
+    "subject": "Filosofia",
+    "title": "Nietzsche e a Crítica aos Valores Morais",
+    "topic": "Nietzsche e a Crítica aos Valores Morais",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "nietzsche-genealogy",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-o-existencialismo-de-sartre",
+    "subject": "Filosofia",
+    "title": "O Existencialismo de Sartre",
+    "topic": "O Existencialismo de Sartre",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "sartre-freedom",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural",
+    "subject": "Filosofia",
+    "title": "A Escola de Frankfurt e a Indústria Cultural",
+    "topic": "A Escola de Frankfurt e a Indústria Cultural",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "frankfurt-culture",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+    "subject": "Filosofia",
+    "title": "Foucault e as Relações de Poder",
+    "topic": "Foucault e as Relações de Poder",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-justica-e-direitos-humanos",
+    "subject": "Filosofia",
+    "title": "Justiça e Direitos Humanos",
+    "topic": "Justiça e Direitos Humanos",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-etica-aplicada-e-bioetica",
+    "subject": "Filosofia",
+    "title": "Ética Aplicada e Bioética",
+    "topic": "Ética Aplicada e Bioética",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-filosofia-filosofia-politica-contemporanea",
+    "subject": "Filosofia",
+    "title": "Filosofia Política Contemporânea",
+    "topic": "Filosofia Política Contemporânea",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "scales"
+  },
+  {
+    "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+    "subject": "Sociologia",
+    "title": "O Contexto Histórico do Surgimento da Sociologia",
+    "topic": "O Contexto Histórico do Surgimento da Sociologia",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-o-que-e-o-fato-social",
+    "subject": "Sociologia",
+    "title": "O que é o Fato Social",
+    "topic": "O que é o Fato Social",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "social-fact",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-sociologia-e-senso-comum",
+    "subject": "Sociologia",
+    "title": "Sociologia e Senso Comum",
+    "topic": "Sociologia e Senso Comum",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-solidariedade-mecanica-e-solidariedade-organica",
+    "subject": "Sociologia",
+    "title": "Solidariedade Mecânica e Solidariedade Orgânica",
+    "topic": "Solidariedade Mecânica e Solidariedade Orgânica",
+    "nodes": 5,
+    "representation": "experiment",
+    "artifact": "solidarity",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-anomia-e-coesao-social",
+    "subject": "Sociologia",
+    "title": "Anomia e Coesão Social",
+    "topic": "Anomia e Coesão Social",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "anomie-grid",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
+    "subject": "Sociologia",
+    "title": "Educação e Socialização em Durkheim",
+    "topic": "Educação e Socialização em Durkheim",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "education-socialization",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
+    "subject": "Sociologia",
+    "title": "Modo de Produção e Estrutura Social",
+    "topic": "Modo de Produção e Estrutura Social",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "mode-of-production",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-ideologia-e-alienacao",
+    "subject": "Sociologia",
+    "title": "Ideologia e Alienação",
+    "topic": "Ideologia e Alienação",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "ideology-alienation",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+    "subject": "Sociologia",
+    "title": "A Luta de Classes na Análise Sociológica",
+    "topic": "A Luta de Classes na Análise Sociológica",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-tipos-de-acao-social",
+    "subject": "Sociologia",
+    "title": "Tipos de Ação Social",
+    "topic": "Tipos de Ação Social",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "social-action-types",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-dominacao-e-poder-em-weber",
+    "subject": "Sociologia",
+    "title": "Dominação e Poder em Weber",
+    "topic": "Dominação e Poder em Weber",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "weber-domination",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
+    "subject": "Sociologia",
+    "title": "Ética Protestante e o Espírito do Capitalismo",
+    "topic": "Ética Protestante e o Espírito do Capitalismo",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "protestant-ethic",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-cultura-e-etnocentrismo",
+    "subject": "Sociologia",
+    "title": "Cultura e Etnocentrismo",
+    "topic": "Cultura e Etnocentrismo",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-identidade-e-diferenca",
+    "subject": "Sociologia",
+    "title": "Identidade e Diferença",
+    "topic": "Identidade e Diferença",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "identity-difference",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+    "subject": "Sociologia",
+    "title": "Multiculturalismo e Relativismo Cultural",
+    "topic": "Multiculturalismo e Relativismo Cultural",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-classes-sociais-e-mobilidade-social",
+    "subject": "Sociologia",
+    "title": "Classes Sociais e Mobilidade Social",
+    "topic": "Classes Sociais e Mobilidade Social",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "mobility-grid",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-desigualdade-racial-no-brasil",
+    "subject": "Sociologia",
+    "title": "Desigualdade Racial no Brasil",
+    "topic": "Desigualdade Racial no Brasil",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-desigualdade-de-genero",
+    "subject": "Sociologia",
+    "title": "Desigualdade de Gênero",
+    "topic": "Desigualdade de Gênero",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "gender-inequality",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-divisao-social-do-trabalho",
+    "subject": "Sociologia",
+    "title": "Divisão Social do Trabalho",
+    "topic": "Divisão Social do Trabalho",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+    "subject": "Sociologia",
+    "title": "Transformações no Mundo do Trabalho",
+    "topic": "Transformações no Mundo do Trabalho",
+    "nodes": 5,
+    "representation": "scene",
+    "artifact": "contraste-de-posicoes",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
+    "subject": "Sociologia",
+    "title": "Precarização e Uberização do Trabalho",
+    "topic": "Precarização e Uberização do Trabalho",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "platform-work",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+    "subject": "Sociologia",
+    "title": "Movimentos Sociais Clássicos e Contemporâneos",
+    "topic": "Movimentos Sociais Clássicos e Contemporâneos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "social-movements",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-cidadania-e-direitos",
+    "subject": "Sociologia",
+    "title": "Cidadania e Direitos",
+    "topic": "Cidadania e Direitos",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "citizenship-rights",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-democracia-e-participacao-politica",
+    "subject": "Sociologia",
+    "title": "Democracia e Participação Política",
+    "topic": "Democracia e Participação Política",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "democracy-forms",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-globalizacao-economica-e-cultural",
+    "subject": "Sociologia",
+    "title": "Globalização Econômica e Cultural",
+    "topic": "Globalização Econômica e Cultural",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "globalization-flows",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-o-estado-nacao-na-era-global",
+    "subject": "Sociologia",
+    "title": "O Estado-Nação na Era Global",
+    "topic": "O Estado-Nação na Era Global",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "nation-state",
+    "object": "people"
+  },
+  {
+    "id": "summary-sociologia-a-sociedade-da-informacao",
+    "subject": "Sociologia",
+    "title": "A Sociedade da Informação",
+    "topic": "A Sociedade da Informação",
+    "nodes": 5,
+    "representation": "instrument",
+    "artifact": "information-society",
+    "object": "people"
+  }
+]

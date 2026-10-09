@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 
@@ -15,9 +15,13 @@ export function usePaced() {
 }
 
 export function Person({ x, y, s = 1, coat = 'bi-coat', hat }: { x: number; y: number; s?: number; coat?: string; hat?: 'crown' | 'kepi' | 'top' | 'brim' | 'cap' }) {
+  const uid = useId().replace(/:/g, '');
   return <g transform={`translate(${x} ${y}) scale(${s})`}>
+    <defs><linearGradient id={uid + '-volume'} x1="0" y1="0" x2="1" y2="1"><stop stopColor="#fff" stopOpacity=".35" /><stop offset=".45" stopColor="#fff" stopOpacity="0" /><stop offset="1" stopColor="#29251f" stopOpacity=".28" /></linearGradient></defs>
     <path d="M-11 34c0-16 5-24 11-24s11 8 11 24Z" className={coat} />
     <circle cx="0" cy="0" r="7" className="bi-face" />
+    <path d="M-11 34c0-16 5-24 11-24s11 8 11 24Z" fill={`url(#${uid}-volume)`} />
+    <circle cx="0" cy="0" r="7" fill={`url(#${uid}-volume)`} />
     {hat === 'crown' && <path d="M-7 -6l1-9 3 4 3-6 3 6 3-4 1 9Z" className="bi-crown" />}
     {hat === 'kepi' && <path d="M-7 -4v-7h13l1 7ZM-9 -4h17" className="bi-kepi" />}
     {hat === 'top' && <path d="M-6 -6v-11h12v11ZM-10 -6h20" className="bi-hat" />}

@@ -23,6 +23,7 @@ const organic: SceneEntry = {
 describe('QuimicaTipologia', () => {
   it('desenha geometrias moleculares em vez de círculos genéricos', () => {
     const { container } = render(<QuimicaTipologia entry={geometry} />);
+    expect(screen.getByRole('group', { name: 'Molécula do modelo' })).toBeInTheDocument();
     expect(container.querySelectorAll('.tc-chem-bond').length).toBeGreaterThan(0);
     expect(container.querySelectorAll('.tc-chem-pair').length).toBeGreaterThan(0);
   });

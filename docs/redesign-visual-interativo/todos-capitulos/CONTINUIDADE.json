@@ -1,0 +1,42 @@
+{
+  "branch": "design/visual-todos-capitulos",
+  "base": "2b3d1998",
+  "capitulos": 613,
+  "materias": 14,
+  "artefatos_preservados": true,
+  "verificacao_desktop_mobile": {
+    "capitulos_aprovados": 613,
+    "larguras": [
+      1440,
+      390
+    ],
+    "falhas": 0
+  },
+  "acessibilidade_por_materia": {
+    "checagens": 28,
+    "violacoes": 0
+  },
+  "mudancas": [
+    "Modo foco acessível sem remontar cenas",
+    "Materiais editoriais e volume nos kits compartilhados",
+    "Ícones por assunto nas 14 matérias",
+    "Correção de chaves duplicadas entre mapa e leitura",
+    "Modelo espacial também em Geometria Molecular",
+    "Papel ARIA válido no painel de detalhes de História",
+    "Descrições dos controles em linha própria para evitar colisões"
+  ],
+  "limites": [
+    "Representações próprias preservadas; não foram criadas 613 simulações 3D novas",
+    "Revisão pedagógica formal continua separada da verificação funcional"
+  ],
+  "persistencia": "Código, inventário, capturas e verificação em branch e PR no GitHub; sem merge automático.",
+  "validacao_projeto": {
+    "lint": "aprovado",
+    "build": "aprovado",
+    "testes_node": 938,
+    "testes_componentes": 1399,
+    "arquivos_de_testes_componentes": 183,
+    "total_testes": 2337,
+    "falhas": 0
+  }
+}

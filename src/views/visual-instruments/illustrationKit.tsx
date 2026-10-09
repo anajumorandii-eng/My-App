@@ -58,7 +58,7 @@ export function useKit() {
     Defs: () => <defs>
       {(Object.keys(COR) as Tom[]).map(tom =>
         <radialGradient key={tom} id={`${base}-esf-${tom}`} cx="35%" cy="30%" r="75%">
-          <stop offset="0" stopColor="#fff" stopOpacity=".9" />
+          <stop offset="0" stopColor="#fff" stopOpacity=".72" />
           <stop offset=".22" stopColor={COR[tom]} />
           <stop offset="1" stopColor={`color-mix(in srgb, ${COR[tom]} 55%, #000)`} />
         </radialGradient>)}
@@ -83,7 +83,7 @@ export function useKit() {
           linha reta (a soma zerada na interferência) tem altura zero e o
           filtro a apagava inteira. */}
       <filter id={`${base}-neon`} filterUnits="userSpaceOnUse" x="0" y="0" width="320" height="300">
-        <feGaussianBlur in="SourceGraphic" stdDeviation="3.2" result="halo" />
+        <feGaussianBlur in="SourceGraphic" stdDeviation=".8" result="halo" />
         <feMerge><feMergeNode in="halo" /><feMergeNode in="SourceGraphic" /></feMerge>
       </filter>
     </defs>,

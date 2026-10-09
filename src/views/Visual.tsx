@@ -179,7 +179,7 @@ function VisualLibrary({ onOpen, preferencias }: {
                       enquanto a Ana Júlia procurava um capítulo. Saiu dos cards;
                       o movimento continua só dentro do mapa. */}
                   <div className="flex items-start gap-4">
-                    <StudyObjectIcon subject={item.subject} topic={item.topic} />
+                    <StudyObjectIcon subject={item.subject} topic={item.topic + ' ' + item.title} />
                     <div>
                       <span className="vs-lib-card-materia text-xs font-bold uppercase tracking-wide text-indigo-600 dark:text-indigo-400">
                         {item.subject} • {item.topic}
@@ -551,7 +551,7 @@ export default function Visual() {
           )}
 
           {mode !== 'testar' && <ConceptChain
-            key={summary.id}
+            key={'map-' + summary.id}
             map={map}
             states={states}
             selectedId={selectedNode}
@@ -560,7 +560,7 @@ export default function Visual() {
             escondendo={mode === 'reconstruir'}
           />}
 
-          {mode === 'explorar' && <VisualJourney key={summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
+          {mode === 'explorar' && <VisualJourney key={'journey-' + summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
           {/* Quantas conexões o diagnóstico escondeu. Vivia dentro da prancha
               adiabática — a única das 26 que não usava o BoardShell —, então
               valia para um capítulo só. Aqui vale para todos, e a frase sobre

@@ -402,7 +402,7 @@ export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
     <div className="hg-controls" aria-label="Selecione um recorte da prancha">
       {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => setActive(index)} animate={{ y: active === index ? -2 : 0 }} transition={transition}>{candidate.label}</motion.button>)}
     </div>
-    <aside className="hg-detail" role="status" aria-live="polite"><strong>{item.label}</strong><p>{item.claim}</p><blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote></aside>
+    <div className="hg-detail" role="status" aria-live="polite"><strong>{item.label}</strong><p>{item.claim}</p><blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote></div>
     {!history && entry.nota && <p className="hg-note">{entry.nota}</p>}
   </section>;
 }

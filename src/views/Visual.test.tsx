@@ -1,6 +1,6 @@
 
 import { act, fireEvent, render, screen, within, waitFor } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { Link, MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
 import { interactiveSummaries } from '../data/interactiveSummaries';
@@ -52,6 +52,16 @@ function tentativa(matched: string[], missing: string | null): RetrievalAttempt 
 beforeEach(() => {
   progress = {};
   update.mockClear();
+});
+
+it('substitui mapa e leitura ao trocar de capítulo, sem deixar cópias anteriores', async () => {
+  const next = interactiveSummaries.find(s => s.id === 'summary-matematica-porcentagem')!;
+  const { container } = render(<MemoryRouter initialEntries={[rota]}><Link to={'/visual?summary=' + next.id}>Trocar capítulo</Link><Visual /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('link', { name: 'Trocar capítulo' }));
+  await waitFor(() => expect(container.querySelector('.vs-map-root strong')).toHaveTextContent(next.title));
+  expect(container.querySelectorAll('.vs-branch-map')).toHaveLength(1);
+  expect(container.querySelectorAll('.vs-journey')).toHaveLength(1);
+  expect(container.querySelectorAll('.vs-map-branches .vs-chain-link')).toHaveLength(next.sections.length);
 });
 
 describe('Visual aprovado', () => {
