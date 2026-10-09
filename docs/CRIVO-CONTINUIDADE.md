@@ -1,6 +1,12 @@
 # CRIVO — continuidade operacional
 
-## Proposta mais recente — inspeção visual dos 613 capítulos, 09/10/2026
+## Proposta mais recente — Biologia e comparação de painéis, 09/10/2026
+
+Prioridade confirmada: Biologia. A branch `redesign/ilustracoes-comparacao` parte de `2928b786`, após a integração das PRs #288 e #289. Revê as aberturas dos 184 capítulos de Biologia, Geografia e História; melhora materiais e desenhos biológicos, corrige a direção das trocas no nefron e permite comparar dois recortes em 103 capítulos de Geografia/História. O modo comparação compacta os painéis sem apagar controles. No desktop há painéis lado a lado; celular e tablet em retrato mantêm painéis empilhados e deslocamento das figuras quando necessário.
+
+Leia [a entrega atual](revisao-biologia-comparacao-2026-10-09/README.md), [a galeria](revisao-biologia-comparacao-2026-10-09/GALERIA.md) e [o guia de continuidade](revisao-biologia-comparacao-2026-10-09/CONTINUIDADE.md). Não reaplique as entregas integradas. Sem merge automático. As evidências de inspeção não promovem aprovação pedagógica.
+
+## Registro — inspeção visual dos 613 capítulos integrada na PR #289, 09/10/2026
 
 O pedido atual é conferir todos os capítulos e corrigir os desvios do visual aprovado, com objetos em relevo relacionados ao assunto. A branch `redesign/inspecao-visual-613` parte de `ac108c60`; Geografia e História já foram integradas pela PR #288 e não devem ser reaplicadas.
 

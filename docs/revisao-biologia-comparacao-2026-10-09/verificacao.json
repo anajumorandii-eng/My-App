@@ -1,0 +1,44 @@
+{
+  "schema_version": 1,
+  "source_commit": "9595f4ac0f9a71789d293ec74183fad9d8df2dcc",
+  "base_commit": "2928b786",
+  "branch": "redesign/ilustracoes-comparacao",
+  "generated_at_utc": "2026-10-09T19:35:50.497551+00:00",
+  "scope": {
+    "chapters": 184,
+    "subjects": {
+      "Biologia": 72,
+      "Geografia": 63,
+      "História": 49
+    },
+    "openings": 368,
+    "openings_passed": 368,
+    "comparison_chapters": 103,
+    "contact_sheets_visually_reviewed": 24,
+    "interaction_states": 102,
+    "interaction_states_passed": 102
+  },
+  "checks": {
+    "lint": "passed",
+    "full_tests": "passed",
+    "build": "passed",
+    "build_note": "Aviso do Vite: chunks acima de 500 kB. Build e bundle do servidor concluídos.",
+    "movement_regression": "54 passed",
+    "node_tests": 943,
+    "vitest_tests": 1523,
+    "total_tests": 2466,
+    "vitest_files": 186,
+    "command": "VITEST_MAX_WORKERS=2 npm test"
+  },
+  "limits": [
+    "Aberturas e estados representativos, não todos os controles e rolagens.",
+    "Chromium em viewports simuladas, não aparelhos físicos.",
+    "No celular os painéis ficam empilhados e desenhos grandes admitem deslocamento horizontal próprio.",
+    "Inspeção visual não é aprovação pedagógica."
+  ],
+  "sha256": {
+    "resultado-184.json": "10a3d8cbd1552460f90344963369981456a4b4668e35bde59532ea6a291cf4e8",
+    "interacoes-reduced-motion.json": "865dd5cb7baf2bf6ccabdce2804c4839987b451e88df8c32ff8c632c1ae01dca",
+    "interacoes-motion.json": "114109e4375cd0b99ee34c15deae5b81856710244a4ee1eac8821c14ece3289c"
+  }
+}
