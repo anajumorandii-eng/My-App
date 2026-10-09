@@ -73,4 +73,23 @@ describe('QuimicaOrganica', () => {
     expect(rendered.container.querySelector('[data-structure="primary-alcohol"]')).toBeInTheDocument();
     expect(rendered.container.querySelector('[data-structure="tertiary-alcohol"]')).toBeInTheDocument();
   });
+
+  it('preserva a aromaticidade do reagente e do produto na substituição eletrofílica', () => {
+    render(<TopicScene summaryId="summary-quimica-reacoes-de-substituicao" />);
+    fireEvent.click(screen.getByRole('button', { name: /Eletrofílica \(aromáticos\)/i }));
+    expect(screen.getByRole('status')).toHaveTextContent('O anel recupera a aromaticidade');
+    const diagram = screen.getByRole('img', { name: 'Substituição eletrofílica no anel aromático' });
+    const rings = [...diagram.querySelectorAll('polygon')];
+    const indicators = [...diagram.querySelectorAll('circle')];
+    expect(rings).toHaveLength(2);
+    expect(diagram).toHaveTextContent('Br');
+    for (const ring of rings) {
+      const vertices = ring.getAttribute('points')!.trim().split(/\s+/).map(point => point.split(',').map(Number));
+      const xs = vertices.map(([x]) => x), ys = vertices.map(([, y]) => y);
+      expect(indicators.filter(indicator => {
+        const x = Number(indicator.getAttribute('cx')), y = Number(indicator.getAttribute('cy')), r = Number(indicator.getAttribute('r'));
+        return r > 0 && x - r > Math.min(...xs) && x + r < Math.max(...xs) && y - r > Math.min(...ys) && y + r < Math.max(...ys);
+      })).toHaveLength(1);
+    }
+  });
 });

@@ -1,0 +1,45 @@
+name: Regressões da revisão dos capítulos
+on:
+  push:
+    branches: ['fix/continuidade-capitulos-awesome-2026-10-09-v2']
+    paths: ['src/**', 'scripts/crivo-header-regression.cjs', '.github/workflows/crivo-continuation-checks.yml', 'package*.json']
+permissions:
+  contents: read
+jobs:
+  conteudo:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npx vitest run src/views/topic-scenes/families/QuimicaOrganica.test.tsx src/data/continuityGeography.test.ts
+  cabecalhos:
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+      - run: npm ci --no-audit --no-fund
+      - run: npm run build
+      - name: Verificar leitura inteira dos cabeçalhos
+        env:
+          NODE_ENV: production
+          PORT: '3003'
+        run: |
+          npm start > /tmp/crivo-header-server.log 2>&1 &
+          header_server_pid=$!
+          trap 'kill "$header_server_pid"' EXIT
+          curl --fail --silent --retry 20 --retry-delay 1 --retry-all-errors --max-time 2 http://127.0.0.1:3003/api/health
+          node scripts/crivo-header-regression.cjs
+      - uses: actions/upload-artifact@v4
+        if: always()
+        with:
+          name: crivo-regressoes-cabecalhos
+          path: work/cabecalhos
+          retention-days: 14
