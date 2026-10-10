@@ -1,6 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { geographyInteractiveSummaries, geographySummaryMaterials } from './geographyInteractiveSummaries';
 import { interactiveSummaries } from './interactiveSummaries';
+import { evaluateRetrievalAnswer } from '../lib/summaryEngine';
 import { geografia } from '../views/topic-scenes/data/geografia';
 
 describe('continuidade editorial de Geografia', () => {
@@ -37,5 +38,63 @@ describe('continuidade editorial de Geografia', () => {
     expect(scene.question).toContain('Jurandyr Ross');
     expect(scene.question).not.toContain('Aziz');
     expect(scene.items.map(item => item.label)).toEqual(['Planaltos', 'Planícies', 'Depressões']);
+  });
+});
+
+describe('continuidade editorial de Brasil Colônia', () => {
+  const summary = (id: string) => interactiveSummaries.find(item => item.id === 'summary-historia-' + id)!;
+  const evaluate = (id: string, answer: string) => evaluateRetrievalAnswer(summary(id).retrieval[0], answer);
+
+  it('avalia a participação popular na independência sem exigir reconhecimento internacional fora do texto', () => {
+    const item = summary('a-independencia-do-brasil');
+    expect(item.retrieval[0].prompt).not.toContain('reconhecimento internacional');
+    expect(item.retrieval[0].expectedElements.map(element => element.label).join(' ')).not.toContain('sem participacao popular');
+    const result = evaluate('a-independencia-do-brasil', 'Preservou monarquia, escravidão e latifúndio. Houve participação popular nas guerras; a Bahia consolidou a independência em 1823.');
+    expect(result.firstMissingElement).toBeNull();
+    expect(result.matchedElements).toHaveLength(3);
+  });
+
+  it('avalia roças e resistência com o conteúdo de Dinâmica Interna, sem cobrar pecuária não explicada', () => {
+    const item = summary('dinamica-interna-da-colonizacao');
+    expect(item.retrieval[0].prompt).not.toContain('pecuária');
+    expect(evaluate('dinamica-interna-da-colonizacao', 'Roças produziam alimentos; o artesanato complementava a economia. Houve fugas para quilombos e sabotagem como resistência cotidiana.').firstMissingElement).toBeNull();
+  });
+
+  it('avalia os vetores de interiorização sem cobrar fiscalidade de outro capítulo', () => {
+    const item = summary('a-interiorizacao-da-colonizacao');
+    expect(item.retrieval[0].prompt).not.toContain('derrama');
+    expect(evaluate('a-interiorizacao-da-colonizacao', 'A mineração atraiu migração e cidades. A capital foi transferida para o Rio de Janeiro em 1763. A pecuária fornecia carne, couro e animais de tração.').firstMissingElement).toBeNull();
+  });
+
+  it('compara as duas revoltas sem exigir uma conclusão sobre a Inglaterra ausente do texto', () => {
+    const item = summary('a-crise-do-antigo-sistema-colonial');
+    expect(item.retrieval[0].expectedElements.map(element => element.label).join(' ')).not.toContain('Inglaterra');
+    expect(evaluate('a-crise-do-antigo-sistema-colonial', 'Terminou o exclusivo comercial. A Mineira mobilizou elites contra os impostos sobre o ouro e a derrama; a Baiana teve participação popular e defendeu a abolição.').firstMissingElement).toBeNull();
+  });
+
+  it('distingue a tomada de Macaco em 1694 da morte de Zumbi em 1695 nos trechos que ensinam a cronologia', () => {
+    const item = summary('dinamica-interna-da-colonizacao');
+    for (const index of [1, 3, 4]) {
+      expect(item.sections[index].content).toContain('1694');
+      expect(item.sections[index].content).toContain('1695');
+      expect(item.sections[index].content).not.toContain('destruição definitiva em 1695');
+    }
+  });
+
+  it('situa a Insurreição Pernambucana depois da administração de Nassau', () => {
+    const item = summary('disputas-europeias-no-brasil-colonial');
+    expect(item.sections[1].content).toContain('1637-1644');
+    expect(item.sections[2].content).toContain('iniciada em 1645, após a saída de Nassau em 1644');
+    expect(item.sections[2].content).not.toContain('ainda durante a administração de Nassau');
+  });
+});
+
+describe('recuperação editorial de Mineração', () => {
+  it('oferece uma recuperação avaliável sobre os três mecanismos de controle ensinados no capítulo', () => {
+    const item = interactiveSummaries.find(summary => summary.id === 'summary-historia-a-mineracao-no-brasil-colonial')!;
+    expect(item.retrieval).toHaveLength(1);
+    const result = evaluateRetrievalAnswer(item.retrieval[0], 'O quinto separava 20% do ouro para a Coroa. As Casas de Fundição faziam barras seladas após reter o imposto. A derrama cobrava a diferença para a cota mínima coletivamente.');
+    expect(result.matchedElements).toHaveLength(3);
+    expect(result.firstMissingElement).toBeNull();
   });
 });
