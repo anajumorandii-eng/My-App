@@ -1,7 +1,8 @@
-import React, { useMemo, useRef, useState } from 'react';
+import React, { useMemo } from 'react';
 import { RotateCcw } from 'lucide-react';
 import { projectSpatialModel, spatialSolid } from '../../lib/spatialSolid';
 import type { SolidConfigId } from '../../lib/solidInstruments';
+import { useSpatialRotation } from '../../hooks/useSpatialRotation';
 
 /** Projeção de geometria 3D em SVG, com rotação por gesto ou controle de teclado. */
 export function SpatialSolidView({ id, values, shape, label }: {
@@ -10,30 +11,14 @@ export function SpatialSolidView({ id, values, shape, label }: {
   shape?: string;
   label: string;
 }) {
-  const [yaw, setYaw] = useState(30), [pitch, setPitch] = useState(22);
-  const pointer = useRef<{ id: number; x: number; y: number; yaw: number; pitch: number } | null>(null);
+  const rotation = useSpatialRotation(30, 22);
+  const { yaw, setYaw, pitch, setPitch, reset } = rotation;
   const model = useMemo(() => spatialSolid(id, values, shape), [id, values, shape]);
   const projected = useMemo(() => projectSpatialModel(model, yaw, pitch), [model, yaw, pitch]);
-  const reset = () => { setYaw(30); setPitch(22); };
   return (
     <div className="vs-spatial-solid">
-      <svg className="vs-plane vs-solid vs-solid-spatial" viewBox="0 0 320 300" role="img"
+      <svg {...rotation.interaction} className="vs-plane vs-solid vs-solid-spatial" viewBox="0 0 320 300" role="img" data-view-yaw={yaw} data-view-pitch={pitch}
         aria-label={label + '. Objeto tridimensional: rotação ' + Math.round(yaw) + ' graus, ângulo vertical ' + Math.round(pitch) + ' graus.'}
-        onPointerDown={event => {
-          if (!event.isPrimary) return;
-          event.stopPropagation();
-          pointer.current = { id: event.pointerId, x: event.clientX, y: event.clientY, yaw, pitch };
-          event.currentTarget.setPointerCapture?.(event.pointerId);
-        }}
-        onPointerMove={event => {
-          const start = pointer.current;
-          if (!start || start.id !== event.pointerId) return;
-          event.stopPropagation();
-          setYaw(((start.yaw + (event.clientX - start.x) * 0.7) % 360 + 360) % 360);
-          setPitch(Math.max(-50, Math.min(65, start.pitch - (event.clientY - start.y) * 0.45)));
-        }}
-        onPointerUp={() => { pointer.current = null; }}
-        onPointerCancel={() => { pointer.current = null; }}
       >
         <ellipse className="vs-solid-ground" cx="160" cy="262" rx="90" ry="13" />
         {projected.faces.map(face => <polygon key={face.index} className="vs-solid-face" data-kind={face.kind}
@@ -51,7 +36,7 @@ export function SpatialSolidView({ id, values, shape, label }: {
         <input id={id + '-pitch'} type="range" min="-50" max="65" step="1" value={Math.round(pitch)} onChange={event => setPitch(Number(event.target.value))} />
         <button type="button" onClick={reset}><RotateCcw aria-hidden="true" />Restaurar vista</button>
       </div>
-      <p className="vs-instrument-dica">Arraste o objeto para ver outras faces. As medidas permanecem iguais.</p>
+      <p className="vs-instrument-dica">Arraste o objeto para ver outras faces. Com o desenho em foco, use as setas e Home. As medidas permanecem iguais.</p>
     </div>
   );
 }

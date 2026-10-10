@@ -2,6 +2,9 @@
 .vs-science-card header small { color: var(--vs-burgundy); font-size: 10px; letter-spacing: .12em; }
 .vs-science-card h4 { margin: 8px 0 18px; font: 600 26px/1.15 Newsreader, Georgia, serif; }
 .vs-science-object { max-width: 440px; margin: auto; width: 100%; display: block; }
+.vs-science-object[tabindex] { touch-action: none; cursor: grab; }
+.vs-science-object[tabindex]:active { cursor: grabbing; }
+.vs-science-object:focus-visible { outline: 3px solid var(--vs-burgundy); outline-offset: 3px; border-radius: 10px; }
 .vs-science-ground { fill: var(--vs-ink); opacity: .08; }
 .vs-science-bond line { stroke: var(--vs-dim); stroke-width: 7; stroke-linecap: round; }
 .vs-science-bond.hydrogen line { stroke: var(--vs-blue); stroke-width: 1.5; stroke-dasharray: 3 4; }
@@ -14,6 +17,11 @@
 .vs-science-backbone-light { stop-color: #e4dfb0; } .vs-science-backbone-mid { stop-color: #9b9272; } .vs-science-backbone-dark { stop-color: #5c5745; }
 .vs-science-choices { display: flex; flex-wrap: wrap; gap: 8px; }
 .vs-science-choices button { padding: 8px 12px; border: 1px solid var(--vs-line); border-radius: 8px; background: var(--vs-paper-strong); color: var(--vs-ink); font-size: 12px; }
+.vs-science-choices button, .vs-science-card .mechanism-time button { min-height: 44px; }
+.vs-science-card .mechanism-time button { padding: 8px 12px; border: 1px solid var(--vs-line); border-radius: 8px; background: var(--vs-paper-strong); color: var(--vs-ink); }
+.vs-science-card .mechanism-time label { display: block; margin: 12px 0; font-size: 12px; }
+.vs-science-card .mechanism-time button:focus-visible { outline: 3px solid var(--vs-burgundy); outline-offset: 3px; }
+.vs-science-card input[type=range] { min-height: 44px; }
 .vs-science-choices button[aria-pressed=true] { background: var(--vs-burgundy); color: var(--vs-paper-strong); }
 .vs-science-choices button:focus-visible { outline: 2px solid var(--vs-burgundy); outline-offset: 3px; }
 .vs-science-card input { width: 100%; accent-color: var(--vs-burgundy); }
@@ -31,3 +39,14 @@
 
 .vs-science-bond.multiple:not(.hydrogen) line { stroke-width: 3; }
 .vs-science-direction { fill: var(--vs-ink); font: 700 14px Inter, sans-serif; }
+.crivo-visual--atlas .vs-instrument > .vs-magnetic-spatial { grid-column: 1/-1; }
+.crivo-visual--atlas .vs-instrument > .vs-field-spatial { grid-column: 1/-1; }
+.vs-em-spatial svg text { font: 600 16px Inter, sans-serif; }
+.hg-figure .vs-earth-spatial { min-width: 0; }
+.hg-figure .vs-earth-spatial > svg { width: 100%; min-width: 0; max-width: 440px; }
+@media(min-width:900px) {
+  .vs-magnetic-spatial { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 16px 24px; }
+  .vs-magnetic-spatial > header, .vs-magnetic-spatial > .vs-science-caption { grid-column: 1/-1; }
+  .vs-magnetic-spatial > svg { grid-column: 1; grid-row: 2/4; align-self: center; }
+  .vs-magnetic-spatial-controls, .vs-magnetic-spatial > .vs-science-reading { grid-column: 2; }
+}

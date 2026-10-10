@@ -3,6 +3,7 @@ import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
 import '../TopicScene.css';
+import { StereochemistryView } from '../../visual-instruments/StereochemistryView';
 
 const ORGANIC_CHAPTERS = {
   functions: new Set([
@@ -120,14 +121,15 @@ export function QuimicaOrganica({ entry }: { entry: SceneEntry }) {
       <span><i className="tc-organic-swatch tc-organic-swatch--bond" /> ligações que definem a função</span>
     </div>
     <div className={`tc-chem-grid tc-organic-grid${entry.items.length > 6 ? ' tc-organic-grid--dense' : ''}`}>
-      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" className="tc-chem-card tc-organic-card" aria-pressed={focus === index} onClick={() => setFocus(index)} animate={{ opacity: focus === index ? 1 : 0.7, scale: focus === index ? 1.012 : 1 }} transition={transition}>
+      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" className="tc-chem-card tc-organic-card" aria-pressed={focus === index} onClick={() => setFocus(index)} animate={{ scale: focus === index ? 1.012 : 1 }} transition={transition}>
         <span className="tc-chem-visual"><Structure chapterId={entry.chapterId} label={candidate.label} /></span>
         <span className="tc-organic-card-copy"><strong>{candidate.label}</strong><span>{candidate.claim}</span></span>
       </motion.button>)}
     </div>
-    <aside className="tc-organic-detail" role="status">
+    <div className="tc-organic-detail" role="status">
       <div><small>{functionChapter ? 'Como reconhecer' : 'O que observar'}</small><strong>{item.label}</strong><p>{CUES[item.label] ?? item.claim}</p></div>
       <blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote>
-    </aside>
+    </div>
+    {entry.chapterId === ORGANIC_CHAPTERS.isomerism && <StereochemistryView />}
   </section>;
 }

@@ -5,6 +5,7 @@ import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
+import './GeographyRemainingInstrument.css';
 
 function DossierScene({ config, index }: { config: GeographyContext; index: number }) {
   const reduced = useReducedMotion();

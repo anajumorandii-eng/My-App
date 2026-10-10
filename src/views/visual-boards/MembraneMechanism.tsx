@@ -1,8 +1,10 @@
 import React, { useState } from 'react';
+import { MembraneSpatialView } from '../visual-instruments/MembraneSpatialView';
 import { MechanismFrame, TimeControl, useMechanismTime } from './MechanismFrame';
 
 export default function MembraneMechanism() {
   const [pump,setPump]=useState(false);
+  const [spatial, setSpatial] = useState(false);
   const clock=useMechanismTime();
   const sodium=Math.min(1,clock.time*2);
   const potassium=Math.max(0,clock.time*2-1);
@@ -15,8 +17,9 @@ export default function MembraneMechanism() {
     <p role="status">{pump?'Um ATP é hidrolisado por ciclo. Saem três cargas positivas e entram duas: saldo de uma carga positiva para fora.':'Soluto neutro: o fluxo líquido segue da maior para a menor concentração, por uma proteína, sem consumo direto de ATP.'}</p>
     <p>Transporte ativo primário usa energia diretamente, como esta ATPase. No secundário, o movimento de outro soluto a favor de seu gradiente fornece energia ao transporte contra o gradiente.</p>
     <TimeControl clock={clock} label="Percurso na membrana" />
+    <button type="button" aria-pressed={spatial} onClick={() => setSpatial(value => !value)}>{spatial ? 'Ver corte da membrana' : 'Explorar bicamada 3D'}</button>
   </>}>
-    <svg viewBox="0 0 520 420" role="img" aria-label={pump?'Bomba de sódio e potássio: 3 Na⁺ para fora e 2 K⁺ para dentro por ATP':'Difusão facilitada de soluto neutro a favor do gradiente'}>
+    {spatial ? <MembraneSpatialView pump={pump} time={clock.time} /> : <svg viewBox="0 0 520 420" role="img" aria-label={pump?'Bomba de sódio e potássio: 3 Na⁺ para fora e 2 K⁺ para dentro por ATP':'Difusão facilitada de soluto neutro a favor do gradiente'}>
       <text x="25" y="30" className="mf-heading">MEMBRANA / SENTIDO E ENERGIA</text>
       <text x="30" y="75">meio extracelular</text><text x="30" y="375">citoplasma</text>
       {Array.from({length:15},(_,i)=><g key={i} stroke="var(--mf-gold)" fill="var(--mf-gold)">
@@ -34,6 +37,6 @@ export default function MembraneMechanism() {
         <circle cx="260" cy={125+190*clock.time} r="9" fill="var(--mf-red)" stroke="var(--vs-ink)"/>
         <text x="380" y="295" textAnchor="middle">fluxo líquido ↓</text>
       </>}
-    </svg>
+    </svg>}
   </MechanismFrame>;
 }

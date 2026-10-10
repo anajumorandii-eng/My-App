@@ -1,0 +1,481 @@
+{
+  "historical_baseline": "2b52cad5ff7d2db078c91b1da0bf94e35e95a0de",
+  "baseline_result_count": 7356,
+  "baseline_configs": [
+    {
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    },
+    {
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "actual": 613,
+      "unique_ids": 613,
+      "passed": 613
+    }
+  ],
+  "current_deep_changed": 80,
+  "changed_deep_topics": [
+    [
+      "Biologia",
+      "Poríferos e Cnidários"
+    ],
+    [
+      "Física",
+      "As Leis de Newton"
+    ],
+    [
+      "Física",
+      "Campo Elétrico"
+    ],
+    [
+      "Física",
+      "Capacitores"
+    ],
+    [
+      "Física",
+      "Dinâmica do Movimento Circular"
+    ],
+    [
+      "Física",
+      "Hidrostática: Densidade e Pressão"
+    ],
+    [
+      "Física",
+      "O Movimento Circular"
+    ],
+    [
+      "Física",
+      "Temperatura, Calor e seus Mecanismos de Transferência"
+    ],
+    [
+      "Física",
+      "Trabalho da Força de Pressão do Gás"
+    ],
+    [
+      "Física",
+      "Trabalho e Energia: Trabalho de uma Força"
+    ],
+    [
+      "Geografia",
+      "Biogeografia Mundial"
+    ],
+    [
+      "Geografia",
+      "Cartografia Digital"
+    ],
+    [
+      "Geografia",
+      "Clima Mundial"
+    ],
+    [
+      "Geografia",
+      "Coordenadas Geográficas"
+    ],
+    [
+      "Geografia",
+      "Desafios Ambientais do Século XXI"
+    ],
+    [
+      "Geografia",
+      "Dinâmica Climática"
+    ],
+    [
+      "Geografia",
+      "Do Mundo Bipolar ao Multipolar"
+    ],
+    [
+      "Geografia",
+      "Geoeconomia Mundial"
+    ],
+    [
+      "Geografia",
+      "Geografia das Redes Mundiais"
+    ],
+    [
+      "Geografia",
+      "Geomorfologia Mundial"
+    ],
+    [
+      "Geografia",
+      "Geopolítica Ambiental"
+    ],
+    [
+      "Geografia",
+      "Geopolítica dos Recursos Hídricos"
+    ],
+    [
+      "Geografia",
+      "Globalização e Processos Econômicos Atuais"
+    ],
+    [
+      "Geografia",
+      "Hidrogeografia Mundial"
+    ],
+    [
+      "Geografia",
+      "Linguagem Cartográfica"
+    ],
+    [
+      "Geografia",
+      "Movimentos da Terra"
+    ],
+    [
+      "Geografia",
+      "Projeções Cartográficas"
+    ],
+    [
+      "Geografia",
+      "Relevo Brasileiro"
+    ],
+    [
+      "Geografia",
+      "Representações Gráficas e Cartográficas"
+    ],
+    [
+      "Geografia",
+      "Sistema de Fusos Horários"
+    ],
+    [
+      "Geografia",
+      "Unilateralismo e Multilateralismo"
+    ],
+    [
+      "Geografia",
+      "Água na Superfície Terrestre"
+    ],
+    [
+      "História",
+      "A Crise do Antigo Sistema Colonial"
+    ],
+    [
+      "História",
+      "A Era Vargas"
+    ],
+    [
+      "História",
+      "A Era Vargas: o Estado Novo"
+    ],
+    [
+      "História",
+      "A Era Vargas: o Governo Constitucional (1934-1937)"
+    ],
+    [
+      "História",
+      "A Independência do Brasil"
+    ],
+    [
+      "História",
+      "A Interiorização da Colonização"
+    ],
+    [
+      "História",
+      "A Mineração no Brasil Colonial"
+    ],
+    [
+      "História",
+      "A Montagem da Colonização"
+    ],
+    [
+      "História",
+      "A Primeira Globalização"
+    ],
+    [
+      "História",
+      "A Primeira República: o Declínio Oligárquico (1889-1930)"
+    ],
+    [
+      "História",
+      "A República da Espada"
+    ],
+    [
+      "História",
+      "Absolutismo"
+    ],
+    [
+      "História",
+      "Alta Idade Média e Feudalismo"
+    ],
+    [
+      "História",
+      "América Espanhola"
+    ],
+    [
+      "História",
+      "América Latina no Século XX"
+    ],
+    [
+      "História",
+      "América no Século XIX"
+    ],
+    [
+      "História",
+      "Antiguidade Clássica: o Mundo Grego"
+    ],
+    [
+      "História",
+      "Antiguidade Clássica: o Mundo Romano"
+    ],
+    [
+      "História",
+      "Ascensão e Domínio das Oligarquias"
+    ],
+    [
+      "História",
+      "Baixa Idade Média"
+    ],
+    [
+      "História",
+      "Brasil Império: Formação do Estado Nacional Brasileiro"
+    ],
+    [
+      "História",
+      "Brasil Império: Segundo Reinado (1840-1889)"
+    ],
+    [
+      "História",
+      "Brasil Império: o Declínio do Segundo Reinado"
+    ],
+    [
+      "História",
+      "Brasil Império: o Período Regencial (1831-1840)"
+    ],
+    [
+      "História",
+      "Descolonização Afro-Asiática"
+    ],
+    [
+      "História",
+      "Dinâmica Interna da Colonização"
+    ],
+    [
+      "História",
+      "Disputas Europeias no Brasil Colonial"
+    ],
+    [
+      "História",
+      "Europa no Século XIX"
+    ],
+    [
+      "História",
+      "Grandes Navegações e Conquista Colonial"
+    ],
+    [
+      "História",
+      "Grandes Revoluções do Século XX"
+    ],
+    [
+      "História",
+      "Guerra Fria"
+    ],
+    [
+      "História",
+      "Iluminismo"
+    ],
+    [
+      "História",
+      "Imperialismo e Belle Époque"
+    ],
+    [
+      "História",
+      "Introdução à História e Primeiras Civilizações"
+    ],
+    [
+      "História",
+      "O Brasil Atual"
+    ],
+    [
+      "História",
+      "O Fim da Guerra Fria"
+    ],
+    [
+      "História",
+      "O Nazismo na Alemanha"
+    ],
+    [
+      "História",
+      "O Período Entreguerras (1918-1939)"
+    ],
+    [
+      "História",
+      "Primeira Guerra Mundial (1914-1918)"
+    ],
+    [
+      "História",
+      "Reforma Religiosa"
+    ],
+    [
+      "História",
+      "Regime Militar (1964-1985) I"
+    ],
+    [
+      "História",
+      "Regime Militar (1964-1985) II"
+    ],
+    [
+      "História",
+      "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria"
+    ],
+    [
+      "História",
+      "República Liberal (1945-1964): Desenvolvimentismo e Populismo"
+    ],
+    [
+      "História",
+      "Revolução Francesa"
+    ],
+    [
+      "História",
+      "Revolução Industrial"
+    ],
+    [
+      "História",
+      "Segunda Guerra Mundial (1939-1945)"
+    ],
+    [
+      "História",
+      "Vida Urbana e Renascimento Cultural"
+    ]
+  ],
+  "changed_source_paths": [
+    "src/data/applyDeepSummaries.ts",
+    "src/data/continuityGeography.test.ts",
+    "src/data/deepSummaryContent.json",
+    "src/data/deepSummaryRetrieval.ts",
+    "src/data/mockData.ts",
+    "src/data/subjectSummaryFactory.ts",
+    "src/data/summaryCurriculum.ts",
+    "src/lib/orbitalLab.ts",
+    "src/lib/physicsRemainingLab.ts",
+    "src/lib/summaryEngine.test.ts",
+    "src/lib/summaryEngine.ts",
+    "src/views/HumanitiesWorkspace.css",
+    "src/views/Resumos.ui.test.tsx",
+    "src/views/Sessao.test.tsx",
+    "src/views/VisualAtlas.css",
+    "src/views/VisualJourney.test.tsx",
+    "src/views/topic-scenes/data/geografia.ts",
+    "src/views/topic-scenes/data/historia.ts",
+    "src/views/topic-scenes/data/lote13.ts",
+    "src/views/topic-scenes/data/lote14.ts",
+    "src/views/topic-scenes/data/lote15.ts",
+    "src/views/topic-scenes/data/lote16.ts",
+    "src/views/topic-scenes/data/lote17.ts",
+    "src/views/topic-scenes/data/lote18.ts",
+    "src/views/topic-scenes/families/AguasBiomas.tsx",
+    "src/views/topic-scenes/families/AmbienteEnergia.tsx",
+    "src/views/topic-scenes/families/Antiguidade.test.tsx",
+    "src/views/topic-scenes/families/Antiguidade.tsx",
+    "src/views/topic-scenes/families/BrasilImperio.tsx",
+    "src/views/topic-scenes/families/BrasilRepublica.tsx",
+    "src/views/topic-scenes/families/Cartografia.test.tsx",
+    "src/views/topic-scenes/families/Cartografia.tsx",
+    "src/views/topic-scenes/families/EconomiaGlobal.tsx",
+    "src/views/topic-scenes/families/EraVargas.test.tsx",
+    "src/views/topic-scenes/families/EraVargas.tsx",
+    "src/views/topic-scenes/families/GeografiaFisica.tsx",
+    "src/views/topic-scenes/families/GeografiaMundial.tsx",
+    "src/views/topic-scenes/families/Globalizacao.test.tsx",
+    "src/views/topic-scenes/families/Globalizacao.tsx",
+    "src/views/topic-scenes/families/HistoriaGeografia.test.tsx",
+    "src/views/topic-scenes/families/HistoriaGeografia.tsx",
+    "src/views/topic-scenes/families/HistoriaMundial.tsx",
+    "src/views/topic-scenes/families/IdadeModerna.test.tsx",
+    "src/views/topic-scenes/families/IdadeModerna.tsx",
+    "src/views/topic-scenes/families/QuimicaOrganica.test.tsx",
+    "src/views/topic-scenes/families/QuimicaOrganica.tsx",
+    "src/views/topic-scenes/families/SeculoXX.test.tsx",
+    "src/views/topic-scenes/families/SeculoXX.tsx",
+    "src/views/visual-boards/HydrostaticsBoard.tsx",
+    "src/views/visual-boards/chapterIconModels.json",
+    "src/views/visual-instruments/ExceptionalHumanitiesIllustration.tsx",
+    "src/views/visual-instruments/PhysicsMechanismScenes.tsx",
+    "src/views/visual-instruments/registry.ts",
+    "src/views/visualQualityReviews.ts"
+  ]
+}

@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { ElectromagneticWaveView } from '../visual-instruments/ElectromagneticWaveView';
 import {PhysicsDrawingWindow} from './PhysicsDrawingWindow';
 import { MechanismFrame, TimeControl, useMechanismTime } from './MechanismFrame';
 
@@ -8,6 +9,7 @@ export const waveValue = (x: number, frequency: number, phase: number) => Math.s
 
 export default function WaveMechanism({ kind }: { kind: WaveKind }) {
   const [frequency, setFrequency] = useState(2);
+  const [spatial, setSpatial] = useState(false);
   const [amplitude, setAmplitude] = useState(40);
   const clock = useMechanismTime();
   const lambda = wavelength(frequency);
@@ -17,11 +19,12 @@ export default function WaveMechanism({ kind }: { kind: WaveKind }) {
     <h3>{kind === 'sound' ? 'A compressão avança. O meio oscila.' : kind === 'electromagnetic' ? 'Campos oscilantes, sem meio material.' : 'A onda avança. O ponto oscila.'}</h3>
     <label>Frequência relativa: {frequency}<input type="range" min="1" max="3" step="1" value={frequency} onChange={event => { clock.seek(0); setFrequency(Number(event.target.value)); }} /></label>
     <label>Amplitude relativa: {amplitude}<input type="range" min="20" max="60" step="10" value={amplitude} onChange={event => { clock.stop(); setAmplitude(Number(event.target.value)); }} /></label>
-    <p role="status">Mesmo meio: v constante. Com f = {frequency}, λ = {lambda} unidades. A amplitude altera a oscilação, sem alterar λ neste modelo.</p>
+    <p role="status" aria-label="Leitura da onda">Mesmo meio: v constante. Com f = {frequency}, λ = {lambda} unidades. A amplitude altera a oscilação, sem alterar λ neste modelo.</p>
     <p>{kind === 'sound' ? 'No ar, as partículas oscilam na mesma direção em que o som se propaga. Compressões e rarefações se deslocam.' : kind === 'electromagnetic' ? 'E e B são perpendiculares entre si e à propagação. A onda eletromagnética pode se propagar no vácuo.' : 'A marca vermelha acompanha um ponto da corda: ele sobe e desce, enquanto o perfil se propaga para a direita.'}</p>
     <TimeControl clock={clock} label="Fração de um período" />
+    {kind === 'electromagnetic' && <button type="button" aria-pressed={spatial} onClick={() => setSpatial(value => !value)}>{spatial ? 'Ver projeção anotada' : 'Explorar campos 3D'}</button>}
   </>}>
-    <PhysicsDrawingWindow enabled={kind==='electromagnetic'}><svg viewBox="0 0 520 430" role="img" aria-label={kind === 'sound' ? 'Som longitudinal: compressões, rarefações e uma partícula oscilando horizontalmente' : kind === 'electromagnetic' ? 'Onda eletromagnética: campos E e B transversais à propagação' : 'Onda transversal com ponto do meio oscilando verticalmente'}>
+    {spatial && kind === 'electromagnetic' ? <ElectromagneticWaveView frequency={frequency} amplitude={amplitude} phase={clock.time} /> : <PhysicsDrawingWindow enabled={kind==='electromagnetic'}><svg viewBox="0 0 520 430" role="img" aria-label={kind === 'sound' ? 'Som longitudinal: compressões, rarefações e uma partícula oscilando horizontalmente' : kind === 'electromagnetic' ? 'Onda eletromagnética: campos E e B transversais à propagação' : 'Onda transversal com ponto do meio oscilando verticalmente'}>
       <text x="28" y="35" className="mf-heading">{kind === 'sound' ? 'SOM EM UM MEIO MATERIAL' : kind === 'electromagnetic' ? 'DOIS CAMPOS TRANSVERSAIS' : 'UMA CORDA EM OSCILAÇÃO'}</text>
       <path d="M50 100H470l-12-7m12 7-12 7" stroke="var(--mf-green)" strokeWidth="2" fill="none" /><text x="260" y="84" textAnchor="middle">{kind === 'electromagnetic' ? 'x · propagação' : 'propagação →'}</text>
       <path d="M35 230H488" className="mf-axis" />
@@ -50,6 +53,6 @@ export default function WaveMechanism({ kind }: { kind: WaveKind }) {
         {kind === 'transverse' && <><path d="M280 150V310m0-160-6 10m6-10 6 10m-6 150-6-10m6 10 6-10" stroke="var(--mf-red)" opacity=".4" /><circle cx="280" cy={230 - amplitude * waveValue(230, frequency, clock.time)} r="6" fill="var(--mf-red)" /><text x="280" y="345" textAnchor="middle">ponto fixo na direção horizontal</text></>}
       </>}
       <path d={`M60 385h${lambda}m0-6v12M60 379v12`} fill="none" stroke="var(--vs-ink)" /><text x={60 + lambda / 2} y="410" textAnchor="middle">λ = {lambda}</text>
-    </svg></PhysicsDrawingWindow>
+    </svg></PhysicsDrawingWindow>}
   </MechanismFrame>;
 }

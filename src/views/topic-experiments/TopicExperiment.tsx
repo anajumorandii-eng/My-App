@@ -8,6 +8,7 @@ import { MOTION_DURATION, MOTION_EASE } from '../../design-system/motion/tokens'
 import { topicExperiments } from './catalog';
 import './TopicExperiment.css';
 import { ExceptionalSceneWindow } from '../visual-instruments/ExceptionalHumanitiesIllustration';
+import { GeographicGlobeView } from '../visual-instruments/GeographicGlobeView';
 
 
 function useInkMotion() {
@@ -103,8 +104,9 @@ function Coordinates() {
       <label>Latitude: {Math.abs(latitude)}° {latitude < 0 ? 'S' : latitude > 0 ? 'N' : ''}<input type="range" min="-80" max="80" value={latitude} onChange={e=>setLatitude(Number(e.target.value))}/></label>
       <label>Longitude: {Math.abs(longitude)}° {longitude < 0 ? 'O' : longitude > 0 ? 'L' : ''}<input type="range" min="-90" max="90" value={longitude} onChange={e=>setLongitude(Number(e.target.value))}/></label>
     </div>
-    <p className="ts-observation" role="status">Nesta latitude, 1° de longitude corresponde a aproximadamente {kmLongitude} km, porque os meridianos convergem nos polos. Já 1° de latitude vale cerca de 111 km em qualquer lugar.</p>
+    <p className="ts-observation" role="status" aria-label="Distância por grau">Nesta latitude, 1° de longitude corresponde a aproximadamente {kmLongitude} km, porque os meridianos convergem nos polos. Já 1° de latitude vale cerca de 111 km em qualquer lugar.</p>
     <small>Modelo esférico, hemisfério visível de −90° a +90° de longitude. A elipse azul é o meridiano do ponto; a linha verde, o seu paralelo. Barras proporcionais aos quilômetros.</small>
+    <GeographicGlobeView latitude={latitude} longitude={longitude} />
   </Studio>;
 }
 

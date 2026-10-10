@@ -249,7 +249,8 @@
 .tc-organic-card .tc-chem-visual { min-height: 96px; }
 .tc-organic-card .tc-chem-visual svg { width: 100%; height: 100px; overflow: visible; }
 .tc-organic-card-copy { min-width: 0; display: grid; gap: 0.35rem; }
-.tc-organic-card-copy > span { color: var(--vs-dim); font: 0.76rem/1.35 system-ui, sans-serif; }
+.tc-organic-card > .tc-organic-card-copy { color: var(--vs-ink); }
+.tc-organic-card-copy > span { color: var(--vs-ink); font: 0.76rem/1.35 system-ui, sans-serif; }
 .tc-organic-bond { stroke: var(--vs-ink); stroke-width: 2.6; stroke-linecap: round; }
 .tc-organic-bond--accent { stroke: var(--vs-blue); stroke-width: 3.4; }
 .tc-organic-atom { fill: var(--vs-ink); font: 700 13px/1 ui-monospace, SFMono-Regular, Menlo, monospace; }

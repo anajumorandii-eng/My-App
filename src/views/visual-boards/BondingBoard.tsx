@@ -1,4 +1,5 @@
-import React from 'react';
+import React, { useState } from 'react';
+import { CarbonAllotropyView } from '../visual-instruments/CarbonAllotropyView';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
@@ -78,14 +79,16 @@ function BondScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
 
 export default function BondingBoard(props: BoardProps) {
   const par = boardPair(props);
+  const [spatial, setSpatial] = useState(false);
+  const allotropy = props.map.summaryId === 'summary-quimica-ligacoes-quimicas-e-alotropia';
   return (
     <BoardShell
-      title="Iônica e covalente"
-      subtitle="Quem decide é a diferença de eletronegatividade, não a tabela."
-      condition={{ label: 'critério', value: 'Δ E.N.' }}
+      title={spatial ? 'Redes de carbono' : 'Iônica e covalente'}
+      subtitle={spatial ? 'O mesmo elemento forma estruturas e propriedades diferentes.' : 'Quem decide é a diferença de eletronegatividade, não a tabela.'}
+      condition={spatial ? { label: 'elemento', value: 'C' } : { label: 'critério', value: 'Δ E.N.' }}
       ariaLabel="Prancha ilustrada de ligações químicas"
-      scene={<BondScene emphasis={par.emphasis} />}
-      sceneNotes={{ up: 'transfere ↑', down: '↓ compartilha' }}
+      scene={<>{allotropy && <div className="vs-science-choices"><button type="button" aria-pressed={spatial} onClick={() => setSpatial(open => !open)}>{spatial ? 'Ver ligações iônica e molecular' : 'Explorar alotropia 3D'}</button></div>}{spatial && allotropy ? <CarbonAllotropyView /> : <BondScene emphasis={par.emphasis} />}</>}
+      sceneNotes={spatial ? { up: 'rede tridimensional', down: 'folhas hexagonais' } : { up: 'transfere ↑', down: '↓ compartilha' }}
       emphasis={par.emphasis}
       left={{
         label: 'Ligação iônica',
@@ -96,7 +99,7 @@ export default function BondingBoard(props: BoardProps) {
       right={{
         label: 'Ligação covalente',
         headline: 'O par fica no meio.',
-        detail: 'Os dois puxam com força parecida e dividem o par de elétrons. O resultado são moléculas discretas, não um retículo.',
+        detail: 'Os dois átomos compartilham elétrons. H₂ forma moléculas discretas; diamante e grafite formam redes covalentes. Compartilhamento não implica sempre moléculas isoladas.',
         formula: 'Δ < 1,7 · par compartilhado',
       }}
       leftState={par.leftState}
@@ -105,7 +108,7 @@ export default function BondingBoard(props: BoardProps) {
       rightSelected={par.rightSelected}
       onSelectLeft={par.selectLeft}
       onSelectRight={par.selectRight}
-      equation={{ label: 'O que decorre', general: 'retículo', condition: 'contra', reduced: 'moléculas' }}
+      equation={{ label: 'Estrutura importa', general: 'redes iônicas', condition: 'e', reduced: 'moléculas ou redes covalentes' }}
       supports={
         <>
           <section className="vs-formula-note">

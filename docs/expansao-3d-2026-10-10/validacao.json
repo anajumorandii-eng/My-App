@@ -1,0 +1,3952 @@
+{
+  "primeiros_12": [
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "transport": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "trajectory": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "transport": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "trajectory": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "transport": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "trajectory": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "transport": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "trajectory": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "transport": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "trajectory": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "transport": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "trajectory": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "transport": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "trajectory": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "transport": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "trajectory": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "transport": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "trajectory": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "transport": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "trajectory": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "transport": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "trajectory": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-quimica-isomeria.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "topic": "Membranas Celulares",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "transport": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-biologia-membranas-celulares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "topic": "Ácidos Nucleicos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-biologia-acidos-nucleicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "trajectory": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "topic": "Coordenadas Geográficas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-geografia-coordenadas-geograficas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-cubos-e-paralelepipedos",
+      "topic": "Cubos e Paralelepípedos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-matematica-cubos-e-paralelepipedos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "topic": "Prismas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-matematica-prismas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "topic": "Pirâmides",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-matematica-piramides.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "topic": "Sólidos de Revolução",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-matematica-solidos-de-revolucao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "topic": "Razões entre Volumes de Sólidos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-matematica-razoes-entre-volumes-de-solidos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "topic": "Geometria Molecular",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-quimica-geometria-molecular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-quimica-polaridade-das-ligacoes-e-das-moleculas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "topic": "Isomeria",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "states": [
+        "trans",
+        "mirror"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-quimica-isomeria.jpg",
+      "passed": true
+    }
+  ],
+  "complementares_4": [
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "topic": "Campo MagnÃ©tico devido Ã  Corrente em Fio Reto e Espira: DescriÃ§Ã£o Vetorial e AplicaÃ§Ãµes",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "topic": "OndulatÃ³ria: Ondas EletromagnÃ©ticas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-fisica-ondulatoria-ondas-eletromagneticas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "topic": "Movimentos da Terra",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-geografia-movimentos-da-terra.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "topic": "Ligações Químicas e Alotropia",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-quimica-ligacoes-quimicas-e-alotropia.jpg",
+      "passed": true
+    }
+  ],
+  "base_613": {
+    "source_commit": "cb8452253ce6706690db3e0e9826562a1c756b14",
+    "total": 1226,
+    "configurations": [
+      {
+        "configuration": "360-dark-reduce",
+        "expected": 613,
+        "actual": 613,
+        "unique_ids": 613,
+        "failures": 0,
+        "complete": true
+      },
+      {
+        "configuration": "1440-light-normal",
+        "expected": 613,
+        "actual": 613,
+        "unique_ids": 613,
+        "failures": 0,
+        "complete": true
+      }
+    ],
+    "harness_note": "O roteiro seletivo adaptado preservou expected=15 no rodapé; os registros foram conferidos independentemente e a completude de 613 IDs por configuração está comprovada acima. Os rodapés originais foram preservados.",
+    "limits": "Duas configurações atuais; não repete a matriz histórica de 12 condições. Não é aprovação pedagógica ou inspeção manual de todas as capturas."
+  },
+  "source_commit": "cb8452253ce6706690db3e0e9826562a1c756b14",
+  "logic": {
+    "total": 961,
+    "passed": 961
+  },
+  "interface": {
+    "files": 187,
+    "total": 1536,
+    "passed": 1536
+  },
+  "lint": "passed",
+  "production_build": "passed",
+  "queue": "passed",
+  "editorial_approval": false
+}
