@@ -578,7 +578,7 @@ const historiaBase: SceneEntry[] = [
         label: 'Modelo de plantation',
         claim: 'a combinação caracteriza um modelo produtivo; não é uma regra sobre a substituição de uma população por outra',
         section: 'Economia açucareira',
-        quote: 'um arranjo que os historiadores chamam de plantation, replicado com variações em outras colônias americanas do período',
+        quote: 'um arranjo que os historiadores chamam de plantation, replicado com variações em outras colônias americanas europeias do período',
       },
     ],
   },

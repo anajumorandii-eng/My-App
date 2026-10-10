@@ -3611,8 +3611,8 @@
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
     "status": "em-validacao",
-    "mechanism": "balança de fatores (metáfora declarada)",
-    "relation": "resistência, epidemias e oposição jesuíta só juntas explicam a passagem ao tráfico transatlântico",
+    "mechanism": "características combinadas do modelo de plantation",
+    "relation": "grande propriedade, monocultura para exportação e trabalho escravizado caracterizam plantation; não explicam uma substituição geral de populações",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte1.png",
       "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte1-dark.png",
@@ -3625,7 +3625,7 @@
       "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-768-light.png",
       "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-768-dark.png"
     ],
-    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Revisão de 10/10/2026: mecanismo e legenda corrigidos; capturas listadas são anteriores à alteração e não validam a nova ilustração. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-dinamica-interna-da-colonizacao",
@@ -4010,8 +4010,8 @@
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
     "status": "em-validacao",
-    "mechanism": "Três condições juntas reduzem a desigualdade",
-    "relation": "Bolsa Família, salário mínimo acima da inflação e commodities em alta: só combinados explicam a queda da desigualdade nos anos 2000",
+    "mechanism": "contribuições para a queda da desigualdade",
+    "relation": "Bolsa Família, valorização real do salário mínimo e contexto econômico contribuem para a redução da desigualdade; a seleção não determina requisitos necessários",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte1.png",
       "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-recorte1-dark.png",
@@ -4026,7 +4026,7 @@
       "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-768-light.png",
       "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-o-brasil-atual-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Revisão de 10/10/2026: mecanismo e legenda corrigidos; capturas listadas são anteriores à alteração e não validam a nova ilustração. Aprovação editorial pendente."
   },
   {
     "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",

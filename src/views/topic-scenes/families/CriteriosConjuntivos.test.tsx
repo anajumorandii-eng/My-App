@@ -2,7 +2,6 @@ import React from 'react';
 import { render, screen, fireEvent } from '@testing-library/react';
 import { describe, it, expect } from 'vitest';
 import { CriteriosConjuntivos } from './CriteriosConjuntivos';
-import { historia } from '../data/historia';
 import type { SceneEntry } from '../types';
 
 const entry: SceneEntry = {
@@ -70,21 +69,5 @@ describe('Critérios conjuntivos', () => {
     fireEvent.click(screen.getByRole('button', { name: 'Latitude' }));
     fireEvent.click(screen.getByRole('button', { name: 'Altitude' }));
     expect(screen.getByRole('status')).toHaveTextContent('Reúne todos os critérios');
-  });
-});
-
-
-describe('contribuições históricas em Brasil Atual', () => {
-  it('destaca fontes sem exigir todos os fatores como condições necessárias', () => {
-    const chapter = historia.find(scene => scene.chapterId === 'summary-historia-o-brasil-atual')!;
-    render(<CriteriosConjuntivos entry={chapter} />);
-    expect(screen.getByText('CRIVO · fatores combinados')).toBeInTheDocument();
-    fireEvent.click(screen.getByRole('button', { name: 'Bolsa Família' }));
-    expect(screen.getByRole('status')).toHaveTextContent('Recortes em destaque: Bolsa Família');
-    expect(screen.getByRole('status')).not.toHaveTextContent('Ainda falta');
-    for (const item of chapter.items.slice(1)) fireEvent.click(screen.getByRole('button', { name: item.label }));
-    expect(screen.getByRole('status')).not.toHaveTextContent('Reúne todos os critérios');
-    fireEvent.click(screen.getByRole('button', { name: 'Bolsa Família' }));
-    expect(screen.getByRole('status')).not.toHaveTextContent('Bolsa Família');
   });
 });

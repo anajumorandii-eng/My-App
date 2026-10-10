@@ -13,7 +13,6 @@ import '../TopicScene.css';
 export function CriteriosConjuntivos({ entry }: { entry: SceneEntry }) {
   const [marcados, setMarcados] = useState<boolean[]>(() => entry.items.map(() => false));
   const transition = useSceneMotion();
-  const contributions = entry.chapterId === 'summary-historia-o-brasil-atual';
   const climate = entry.chapterId === 'summary-geografia-clima-mundial';
   const criteria = climate ? entry.items.filter(it => it.label !== 'Nenhum isolado') : entry.items;
   const algumMarcado = marcados.some(Boolean);
@@ -27,7 +26,7 @@ export function CriteriosConjuntivos({ entry }: { entry: SceneEntry }) {
   return (
     <section className="tc-scene" aria-label={entry.question}>
       <header>
-        <small>CRIVO · {contributions ? 'fatores combinados' : 'critérios conjuntivos'}</small>
+        <small>CRIVO · critérios conjuntivos</small>
         <h4>{entry.question}</h4>
       </header>
       <div className="tc-criteria-grid">
@@ -43,11 +42,9 @@ export function CriteriosConjuntivos({ entry }: { entry: SceneEntry }) {
       {algumMarcado && (
         <>
           <p className="tc-observation" role="status">
-            {contributions
-              ? `Recortes em destaque: ${entry.items.filter((_, i) => marcados[i]).map(it => it.label).join(', ')}.`
-              : todosMarcados
-                ? `Reúne todos os critérios: ${criteria.map((it) => it.label).join(', ')}.`
-                : `Ainda falta: ${faltantes.join(', ')}.`}
+            {todosMarcados
+              ? `Reúne todos os critérios: ${criteria.map((it) => it.label).join(', ')}.`
+              : `Ainda falta: ${faltantes.join(', ')}.`}
           </p>
           {entry.items.map((it, i) => marcados[i] && (
             <blockquote key={it.label} className="tc-quote">“{it.quote}” <cite>{it.section}</cite></blockquote>

@@ -50,7 +50,7 @@
   "limits": [
     "Leitura das seções não equivale à certificação bibliográfica de toda afirmação.",
     "O avaliador lexical não valida negações, associação correta de datas ou todas as relações causais.",
-    "Brasil Atual usa modo de contribuições no componente existente; a classificação interna da família continua pendente de revisão arquitetural.",
+    "Brasil Atual usa a ilustração própria InequalityGate de EraVargas; sua classificação interna da família continua pendente de revisão arquitetural.",
     "Não foi repetida a matriz integral de 7.356 casos nesta rodada.",
     "Inventário formal preservado; nenhuma promoção de aprovação."
   ],
@@ -425,12 +425,12 @@
         "Retirada afirmação de solução definitiva; ensinadas fases do Real e função da URV.",
         "Recall passou a cobrar participação democrática ensinada, sem exigir direitos indígenas/quilombolas ausentes das seções.",
         "Cena e suas quatro citações conferidas; claim de necessidade dos três fatores substituído por contribuição combinada, mantendo citações exatas.",
-        "Conferidos TopicScene.tsx, HistoriaGeografia.tsx e CriteriosConjuntivos.tsx: Brasil Atual usa o renderer conjuntivo genérico, sem SVG ou animação de causalidade própria.",
-        "Preservados quatro recortes, interação de seleção, citações e animação de realce; removido veredito lógico neste capítulo.",
+        "Conferido o renderer real HistoriaGeografia → EraVargas.InequalityGate: legenda e quarto recorte passam a apresentar contribuições, sem declarar condições necessárias.",
+        "Preservados quatro recortes, citações e animação de realce; a legenda da ilustração própria remove condições necessárias.",
         "Os primeiros três quotes permanecem literais; o quarto acompanha a pegadinha corrigida."
       ],
       "pending": [
-        "family metadata permanece 'criterios-conjuntivos' por compatibilidade com o catálogo: a leitura efetiva ganha exceção honesta de contribuições. Root deve decidir posteriormente a classificação; não há prova de necessidade conjunta para esta cena."
+        "A classificação interna continua criterios-conjuntivos por compatibilidade com o catálogo; a ilustração própria apresenta contribuições e a classificação arquitetural ainda requer revisão."
       ],
       "source_urls": [
         "https://www.bcb.gov.br/controleinflacao/planoreal?modalAberto=30anosreal_noticia1"
@@ -1811,21 +1811,6 @@
       "reason": "Mantém o quarto recorte com lastro literal após correção da pegadinha."
     },
     {
-      "topic": "O Brasil Atual",
-      "path": "src/views/topic-scenes/families/CriteriosConjuntivos.tsx",
-      "reason": "Ativa uma leitura de contribuições somente para Brasil Atual, sem alterar definições conjuntivas de outros capítulos."
-    },
-    {
-      "topic": "O Brasil Atual",
-      "path": "src/views/topic-scenes/families/CriteriosConjuntivos.tsx",
-      "reason": "Cabeçalho não chama fatores históricos de critérios necessários."
-    },
-    {
-      "topic": "O Brasil Atual",
-      "path": "src/views/topic-scenes/families/CriteriosConjuntivos.tsx",
-      "reason": "Selecionar um ou vários dos quatro recortes destaca fontes; nunca declara explicação incompleta ou dependência de selecionar todos."
-    },
-    {
       "topic": "Regime Militar (1964-1985) I",
       "path": "src/views/topic-scenes/data/lote14.ts",
       "reason": "Alinha a cena ativa ao AI-5 corrigido."
@@ -2378,6 +2363,16 @@
       "path": "src/data/deepSummaryContent.json",
       "section": "Pratique e confira",
       "reason": "Exercício reconhece múltiplos fatores."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/views/topic-scenes/families/EraVargas.tsx",
+      "reason": "Sincroniza o renderer real InequalityGate com contribuições combinadas, removendo a necessidade de 3 de 3 fatores."
+    },
+    {
+      "topic": "A Montagem da Colonização",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Restaura lastro literal de plantation: outras colônias americanas europeias do período."
     }
   ]
 }
