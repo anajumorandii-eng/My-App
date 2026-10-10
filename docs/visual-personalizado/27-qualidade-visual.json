@@ -3150,8 +3150,8 @@
     "primary": "scene",
     "artifact": "camadas-de-determinacao",
     "status": "em-validacao",
-    "mechanism": "Metal como riqueza puxa pacto, trabalho forçado e tráfico",
-    "relation": "A doutrina do metal acumulado cria o pacto colonial exclusivo, que exige trabalho compulsório em larga escala e, por fim, o tráfico atlântico",
+    "mechanism": "política mercantilista, comércio colonial e trabalho compulsório",
+    "relation": "controle comercial e exploração colonial articulam interesses metropolitanos, produção e coerção; escravizações indígena e africana coexistem",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte1.png",
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-recorte1-dark.png",
@@ -3166,7 +3166,7 @@
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-768-light.png",
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-a-primeira-globalizacao-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Registro atualizado em 10/10/2026 para acompanhar as correções do lote pedagógico. Capturas listadas antecedem estas alterações; não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-america-espanhola",
@@ -3352,8 +3352,8 @@
     "primary": "scene",
     "artifact": "contraste-de-posicoes",
     "status": "em-validacao",
-    "mechanism": "Mesma classe operária, duas estratégias",
-    "relation": "Do operariado saem o salto revolucionário de Marx e Engels (Manifesto, 1848) e a escada eleitoral da social-democracia (SPD)",
+    "mechanism": "duas estratégias no movimento operário",
+    "relation": "Marx e Engels defendem transformação revolucionária; a corrente de Bernstein defende reformas eleitorais, sem representar todo o SPD",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-recorte1.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-recorte1-dark.png",
@@ -3366,7 +3366,7 @@
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-768-light.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-europa-no-seculo-xix-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Registro atualizado em 10/10/2026 para acompanhar as correções do lote pedagógico. Capturas listadas antecedem estas alterações; não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-imperialismo-e-belle-epoque",
@@ -3375,8 +3375,8 @@
     "primary": "scene",
     "artifact": "tipologia",
     "status": "em-validacao",
-    "mechanism": "Cadeia de mando direta × indireta",
-    "relation": "A França governa pelo funcionário europeu; o Reino Unido mantém a chefia local e reduz custo; ao lado, a partilha de Berlim (1884–1885)",
+    "mechanism": "formas de dominação direta e indireta",
+    "relation": "formas francesas e britânicas de dominação são comparadas; Berlim define regras coloniais e não traça todo o mapa da África",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-recorte1.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-recorte1-dark.png",
@@ -3389,7 +3389,7 @@
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-768-light.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-imperialismo-e-belle-epoque-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Registro atualizado em 10/10/2026 para acompanhar as correções do lote pedagógico. Capturas listadas antecedem estas alterações; não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-primeira-guerra-mundial-1914-1918",
@@ -3398,8 +3398,8 @@
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
     "status": "em-validacao",
-    "mechanism": "Alianças + pressão + faísca de Sarajevo",
-    "relation": "A rede Tríplice Aliança × Tríplice Entente converte a crise balcânica em guerra continental; Sarajevo é estopim, não causa suficiente",
+    "mechanism": "rivalidades, alianças e decisões de governos",
+    "relation": "Sarajevo é o estopim; alianças e decisões dos governos ampliam a guerra, sem mobilização automática nem entrada italiana em 1914",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-recorte1.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-recorte1-dark.png",
@@ -3412,7 +3412,7 @@
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-768-light.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-primeira-guerra-mundial-1914-1918-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Registro atualizado em 10/10/2026 para acompanhar as correções do lote pedagógico. Capturas listadas antecedem estas alterações; não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
@@ -3433,8 +3433,8 @@
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
     "status": "em-validacao",
-    "mechanism": "Crise → totalitarismos → concessões → 1939",
-    "relation": "A quebra de 1929 espalha a crise; surgem regimes totalitários; cada concessão (Renânia, Áustria, Tchecoslováquia) leva a 1939",
+    "mechanism": "crises, regimes e apaziguamento",
+    "relation": "o fascismo italiano chega ao poder em 1922; a crise de 1929 agrava o contexto alemão, e agressões e decisões políticas levam à guerra",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-recorte1.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-recorte1-dark.png",
@@ -3447,7 +3447,7 @@
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-768-light.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-periodo-entreguerras-1918-1939-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Registro atualizado em 10/10/2026 para acompanhar as correções do lote pedagógico. Capturas listadas antecedem estas alterações; não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-o-nazismo-na-alemanha",
@@ -3456,8 +3456,8 @@
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
     "status": "em-validacao",
-    "mechanism": "Três rachaduras que só juntas derrubam",
-    "relation": "Hiperinflação (1923), Depressão (1929) e democracia frágil: cada uma sozinha não basta; juntas abrem o caminho legal de 1933",
+    "mechanism": "contexto de crises e mecanismos da ditadura",
+    "relation": "crises econômicas e fragilidade institucional compõem o contexto da ascensão; nomeação, medidas de exceção e repressão consolidam a ditadura em 1933",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte1.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-recorte1-dark.png",
@@ -3472,7 +3472,7 @@
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-768-light.png",
       "docs/visual-personalizado/screenshots/lote8-hg-2026-09-26/historia-o-nazismo-na-alemanha-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Registro atualizado em 10/10/2026 para acompanhar as correções do lote pedagógico. Capturas listadas antecedem estas alterações; não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-segunda-guerra-mundial-1939-1945",
@@ -3611,8 +3611,8 @@
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
     "status": "em-validacao",
-    "mechanism": "características combinadas do modelo de plantation",
-    "relation": "grande propriedade, monocultura para exportação e trabalho escravizado caracterizam plantation; não explicam uma substituição geral de populações",
+    "mechanism": "fatores históricos e coexistência regional de formas de escravização",
+    "relation": "resistência, epidemias, disputas pelo trabalho e circuito atlântico são contextualizados; a expansão do tráfico não apaga o cativeiro indígena",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte1.png",
       "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-recorte1-dark.png",
@@ -3625,7 +3625,7 @@
       "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-768-light.png",
       "docs/visual-personalizado/screenshots/lote2-hg-2026-09-25/historia-a-montagem-da-colonizacao-768-dark.png"
     ],
-    "notes": "Revisão de 10/10/2026: mecanismo e legenda corrigidos; capturas listadas são anteriores à alteração e não validam a nova ilustração. Aprovação editorial pendente."
+    "notes": "Cena e conteúdo da PR #297 preservados na integração. As evidências dessa PR permanecem disponíveis; capturas antigas do inventário não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-dinamica-interna-da-colonizacao",
@@ -3808,8 +3808,8 @@
     "primary": "scene",
     "artifact": "criterios-conjuntivos",
     "status": "em-validacao",
-    "mechanism": "plataforma da monarquia sobre três apoios",
-    "relation": "um apoio a menos faz balançar; clero, Exército e cafeicultores juntos derrubam o regime em 1889",
+    "mechanism": "setores do clero, do Exército e a monarquia em crise",
+    "relation": "conflitos com parte do clero, oficiais e proprietários desgastam a monarquia; o movimento militar republicano a depõe em 1889",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-recorte1.png",
       "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-recorte1-dark.png",
@@ -3822,7 +3822,7 @@
       "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-768-light.png",
       "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-brasil-imperio-o-declinio-do-segundo-reinado-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Registro atualizado em 10/10/2026 para acompanhar as correções do lote pedagógico. Capturas listadas antecedem estas alterações; não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-republica-da-espada",
@@ -3844,7 +3844,7 @@
     "artifact": "camadas-de-determinacao",
     "status": "em-validacao",
     "mechanism": "pirâmide do eleitor dependente ao presidente",
-    "relation": "dependência vira voto de cabresto; apoio federal e votos no Congresso ligam governadores e presidente; SP e MG se revezam",
+    "relation": "dependência e controle eleitoral sustentam oligarquias e barganhas federais; SP e MG não alternam a presidência automaticamente",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-recorte1.png",
       "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-recorte1-dark.png",
@@ -3857,7 +3857,7 @@
       "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-768-light.png",
       "docs/visual-personalizado/screenshots/lote4-hg-2026-09-26/historia-ascensao-e-dominio-das-oligarquias-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Registro atualizado em 10/10/2026 para acompanhar as correções do lote pedagógico. Capturas listadas antecedem estas alterações; não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
@@ -3889,8 +3889,8 @@
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
     "status": "em-validacao",
-    "mechanism": "Pressão armada leva governo sem mandato à Constituição",
-    "relation": "A Revolução de 1930 põe Vargas no poder sem voto; a revolta paulista de 1932 exige Constituinte e força a Constituição de 1934",
+    "mechanism": "ruptura de 1930 e processo constitucional",
+    "relation": "o governo por decretos enfrenta pressão constitucionalista; eleições para a Constituinte são previstas antes da revolta de julho de 1932, e a Constituição é promulgada em 1934",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte1.png",
       "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-recorte1-dark.png",
@@ -3905,7 +3905,7 @@
       "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-768-light.png",
       "docs/visual-personalizado/screenshots/lote6-hg-2026-09-26/historia-a-era-vargas-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Registro atualizado em 10/10/2026 para acompanhar as correções do lote pedagógico. Capturas listadas antecedem estas alterações; não validam o estado atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",

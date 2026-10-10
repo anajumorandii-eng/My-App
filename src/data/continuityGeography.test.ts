@@ -1,7 +1,7 @@
 import { describe, expect, it } from 'vitest';
 import { geographyInteractiveSummaries, geographySummaryMaterials } from './geographyInteractiveSummaries';
 import { interactiveSummaries } from './interactiveSummaries';
-import { evaluateRetrievalAnswer } from '../lib/summaryEngine';
+import { evaluateRetrievalAnswer, getReadingProgress } from '../lib/summaryEngine';
 import { historia } from '../views/topic-scenes/data/historia';
 import { validarLastro } from '../views/topic-scenes/lastro';
 import { geografia } from '../views/topic-scenes/data/geografia';
@@ -265,7 +265,7 @@ describe('continuidade editorial do lote de 30 capítulos de História', () => {
   });
   it('não apresenta a ampliação do tráfico como substituição uniforme nem catequese como ausência de coerção', () => {
     const text = content('A Montagem da Colonização', 2);
-    expect(text).toContain('coexistiu por séculos');
+    expect(text).toContain('coexistiram');
     expect(text).toContain('trabalho compulsório');
     expect(text).not.toContain('catequização como alternativa ao trabalho forçado');
   });
@@ -288,5 +288,42 @@ describe('lastro das cenas do lote editorial', () => {
     const item = interactiveSummaries.find(summary => summary.title === topic)!;
     const entry = historia.find(scene => scene.chapterId === item.id);
     if (entry) expect(validarLastro(entry, item)).toEqual([]);
+  });
+});
+
+const summary = (id: string) => interactiveSummaries.find(item => item.id === id)!;
+describe('continuidade das pendências Design & Motion Kit', () => {
+  it('ensina as condições da fusão e encaminha a recuperação para a explicação pertinente', () => {
+    const item = summary('fis-termologia-calor');
+    expect(item.sections.map(s => s.content).join(' ')).toMatch(/substância pura.*pressão constante/s);
+    expect(item.retrieval[0].hint).toContain('Mudanças de estado');
+    expect(evaluateRetrievalAnswer(item.retrieval[0], 'A temperatura permanece constante; a energia modifica as interações entre partículas. No vácuo ocorre radiação.').firstMissingElement).toBeNull();
+    expect(evaluateRetrievalAnswer(item.retrieval[0], 'A temperatura permanece constante; no vácuo ocorre radiação.').firstMissingElement).not.toBeNull();
+  });
+  it('cobra simbiose e risco do branqueamento sem afirmar morte inevitável', () => {
+    const item = summary('summary-biologia-poriferos-e-cnidarios');
+    expect(item.sections[1].content).toContain('zooxantelas');
+    expect(item.sections[1].content).toContain('não significa morte imediata');
+    expect(item.retrieval[0].prompt).not.toContain('branqueamento mata');
+    const answer = 'Perde zooxantelas e o aporte de nutrientes. Não significa morte imediata, pode se recuperar. Os flagelos movimentam a água e os coanócitos capturam partículas alimentares.';
+    expect(evaluateRetrievalAnswer(item.retrieval[0], answer).firstMissingElement).toBeNull();
+    expect(evaluateRetrievalAnswer(item.retrieval[0], 'zooxantela nutriente coanócito').firstMissingElement).not.toBeNull();
+  });
+  it('sustenta os recortes históricos no texto sem transformar causas em condições necessárias', () => {
+    const item = summary('summary-historia-a-montagem-da-colonizacao');
+    const scene = historia.find(s => s.chapterId === item.id)!;
+    expect(scene.question).not.toContain('nenhum sozinho suficiente');
+    expect(scene.items.some(i => i.label === 'Circuito atlântico')).toBe(true);
+    for (const recorte of scene.items) {
+      const section = item.sections.find(s => s.title === recorte.section)!;
+      expect(section.content).toContain(recorte.quote);
+    }
+    expect(item.sections[2].content).toContain('coexistiram');
+    expect(item.sections[2].content).toContain('trabalho compulsório');
+  });
+  it.each(['fis-termologia-calor', 'summary-biologia-poriferos-e-cnidarios', 'summary-historia-a-montagem-da-colonizacao'])('solicita releitura apenas da revisão editorial de %s', id => {
+    const item = summary(id);
+    expect(item.sections.every(s => s.id.includes('-editorial-v3-'))).toBe(true);
+    expect(getReadingProgress(item, { readSectionIds: [1,2,3,4,5].map(i => `${id}-editorial-v2-${i}`), status: 'em-revisao', important: true, answers: [] })).toBe(0);
   });
 });

@@ -129,22 +129,18 @@ describe('pranchas de História e Geografia', () => {
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('elo 4'));
   });
 
-  it('mostra os critérios do modelo de plantation sem impor uma regra de substituição de trabalhadores', async () => {
+  it('explora fatores históricos mantendo a coexistência regional em todos os recortes', async () => {
     const user = userEvent.setup();
     const entry = historia.find(item => item.chapterId === 'summary-historia-a-montagem-da-colonizacao')!;
     render(<HistoriaGeografia entry={entry} />);
     const diagram = screen.getByRole('img', { name: /Montagem da colonização/i });
-    expect(diagram).toHaveTextContent('latifúndio');
-    expect(diagram).toHaveTextContent('monocultura açucareira');
-    expect(diagram).toHaveTextContent('coerção em larga escala');
-    expect(diagram).not.toHaveTextContent('sozinho, não basta');
-    const combined = screen.getByRole('button', { name: 'Modelo de plantation' });
-    combined.focus();
-    await user.keyboard('{Enter}');
-    expect(combined).toHaveAttribute('aria-pressed', 'true');
-    expect(diagram).toHaveTextContent('A combinação caracteriza o modelo');
-    expect(screen.getByRole('status')).toHaveTextContent('não é uma regra');
-    expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('recorte 4'));
+    for (const label of ['Resistência indígena', 'Mortalidade por epidemias', 'Oposição jesuíta', 'Circuito atlântico']) {
+      await user.click(screen.getByRole('button', { name: label }));
+      expect(screen.getByRole('button', { name: label })).toHaveAttribute('aria-pressed', 'true');
+      expect(diagram).toHaveTextContent('persistência do cativeiro indígena');
+      expect(diagram).toHaveTextContent('maior fluxo de africanos escravizados');
+      expect(diagram).not.toHaveTextContent('sozinho, não basta');
+    }
   });
 
   it('contrasta a composição social das duas revoltas contra o mesmo pacto colonial', async () => {

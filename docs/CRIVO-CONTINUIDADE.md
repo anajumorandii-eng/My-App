@@ -1,5 +1,19 @@
 # CRIVO — continuidade operacional
 
+## Lote pedagógico de História — PR #296, 2026-10-10
+
+Proposta na branch `fix/revisao-pedagogica-30-capitulos-2026-10-10`, conciliada com a main `8b6b0a433d681a503dfaa332b5070e9e9589fd94` após #297. Preservados os três textos, o desenho de Montagem, os ajustes de legibilidade e as evidências de #297. A rodada examina 30 capítulos novos de História e retoma quatro de Brasil Colônia; 32 objetos de conteúdo mudam em relação à main atual. [Registro por capítulo, fontes e limites](revisao-pedagogica-lote-30-2026-10-10/README.md).
+
+A primeira passagem completa das cinco seções e recuperação chega a 39/613; restam 574 nessa etapa. Correções dirigidas de Calor e Poríferos/Cnidários em #297 são preservadas, sem inferir nova leitura integral desses capítulos. Nenhuma aprovação formal é promovida: 81 em validação e 532 não revisados. Os checks da ponta de [#296](https://github.com/anajumorandii-eng/My-App/pull/296) determinam seu estado técnico. Continuar em lotes de cerca de 30 capítulos, consultando os deltas e sem reaplicar PRs mescladas. Sem merge automático.
+
+## Retomada Design & Motion Kit — 2026-10-10
+
+Base conferida: `3200ea9b67eb00fdb867b287b9d2fed2ba162765`. As PRs #293, #294 e #295 já estão mescladas; as instruções de merge abaixo são checkpoints históricos, não ações pendentes.
+
+Corrigidos os achados confirmados de calor, Poríferos/Cnidários, Montagem da Colonização e legibilidade dos recortes da Crise do Antigo Sistema Colonial. Somente os três capítulos reescritos passam à revisão editorial 3. [Mudanças, fontes, validação e limites](continuidade-design-motion-2026-10-10/README.md).
+
+A estrutura dos 613 capítulos mantém zero divergências e nenhuma representação fallback. O inventário formal permanece com 81 capítulos em validação e 532 não revisados. Próximo passo: revisar os demais candidatos da triagem e pendências bibliográficas por ID; não inferir aprovação pedagógica integral dos testes. Não reaplicar PRs mescladas. Sem merge automático.
+
 ## Auditoria automatizada executada no GitHub — 2026-10-09T23:22:52.027Z
 
 Fonte: `e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679`; execução 38001813270. Estado técnico: passed; 7356 de 7.356 resultados; 0 reprovações. [Relatório atual](revisao-demais-capitulos-awesome-2026-10-09/README.md), [manifesto](revisao-demais-capitulos-awesome-2026-10-09/execucao/manifesto.json) e [capturas para revisão](revisao-demais-capitulos-awesome-2026-10-09/GALERIA.md).

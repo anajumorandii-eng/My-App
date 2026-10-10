@@ -13,8 +13,8 @@ function usePaced() {
 // Lote 8 da régua de História: séculos XIX e XX no mundo. Cada cena encena o
 // mecanismo que o capítulo defende — duas estradas para a mesma classe, duas
 // cadeias de mando colonial, a rede de alianças que a faísca de Sarajevo
-// incendeia, a escada de concessões até 1939, três rachaduras que só juntas
-// derrubam a democracia alemã, duas trilhas até a independência e a fileira de
+// incendeia, a escada de concessões até 1939, rachaduras que destacam crises e
+// fragilidade da democracia alemã, duas trilhas até a independência e a fileira de
 // dominós de 1989. Datas, nomes e números vêm do resumo do capítulo; o que é
 // desenho sem medida vem com rodapé dizendo isso.
 
@@ -396,9 +396,9 @@ export function InterwarChain({ active }: Scene) {
   </svg>;
 }
 
-// Nazismo: três rachaduras numa mesma fachada. Nos três primeiros recortes a
-// cena mostra cada fator sozinho, e o edifício da democracia fica de pé; só
-// no quarto, com as três juntas, ele cede e aparece o caminho legal de 1933.
+// Nazismo: rachaduras ilustram crises e fragilidade institucional. Os recortes
+// destacam aspectos do contexto; o quarto apresenta a concentração de poder
+// em 1933. A seleção não simula condições necessárias para a ditadura.
 // Sem iconografia do regime: o painel da direita mostra mecanismos.
 const FACTORS = [
   { y: 58, title: 'Hiperinflação · 1923', sub: 'desespero econômico', crack: 'M-38 0l6 14-5 12 7 16-4 18' },
@@ -411,7 +411,7 @@ export function DemocracyCracks({ active }: Scene) {
   const p = usePaced();
   const all = active === 3;
   const lit = (k: number) => all || active === k;
-  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Nazismo na Alemanha: hiperinflação, Grande Depressão e fragilidade institucional só em combinação levam a 1933; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Nazismo na Alemanha: crises econômicas e fragilidade institucional compõem o contexto da ascensão; leis e repressão consolidam a ditadura em 1933; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="DemocracyCracks" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
@@ -432,7 +432,7 @@ export function DemocracyCracks({ active }: Scene) {
       <Arrow d={`M228 ${f.y + 27}C244 ${f.y + 27} 242 ${150 + k * 30} 256 ${150 + k * 30}`} on={lit(k)} p={p} head={`${diagramId}-sx-head-naz`} delay={0.3} />
     </g>)}
 
-    <motion.g initial={false} animate={{ rotate: all ? -3 : 0, y: all ? 6 : 0 }} transition={p(0.8, 1.2)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom left' }}>
+    <motion.g initial={false} animate={{ rotate: 0, y: 0 }} transition={p(0.8, 1.2)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom left' }}>
       <path d="M264 132l54-30 54 30Z" className="sx-temple" />
       {[276, 302, 334, 360].map(x => <rect key={x} x={x - 7} y="134" width="14" height="80" rx="2" className="sx-column" />)}
       <rect x="262" y="214" width="112" height="10" rx="2" className="sx-temple" />
@@ -443,20 +443,20 @@ export function DemocracyCracks({ active }: Scene) {
     </motion.g>
     <text x="318" y="246" textAnchor="middle" className="bi-small bi-strong">democracia alemã</text>
     <motion.text key={active} x="318" y="268" textAnchor="middle" className="bi-hand-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 0.9)}>
-      {all ? 'juntos, abrem caminho' : 'sozinho, não basta'}
+      {all ? 'síntese do contexto' : 'fator em foco'}
     </motion.text>
 
     <rect x="398" y="52" width="196" height="238" rx="14" className="bi-panel" />
     <motion.g initial={false} animate={{ opacity: all ? 0 : 1 }} transition={p(0.4)}>
-      <text x="412" y="76" className="bi-panel-title">CONDIÇÕES REUNIDAS?</text>
+      <text x="412" y="76" className="bi-panel-title">FATORES EM CONTEXTO</text>
       {['1923', '1929', 'democracia frágil'].map((slot, k) => <g key={slot}>
         <rect x="414" y={94 + k * 44} width="164" height="32" rx="16" className={active === k ? 'sx-slot-box sx-slot-on' : 'sx-slot-box'} />
         <motion.circle cx="434" cy={110 + k * 44} r="8" className="sx-slot-dot" initial={false}
           animate={{ scale: active === k ? [0.4, 1.3, 1] : 0.6, opacity: active === k ? 1 : 0.35 }} transition={p(0.5, 0.5)} />
         <text x="452" y={114 + k * 44} className={active === k ? 'bi-small bi-strong' : 'bi-small'}>{slot}</text>
       </g>)}
-      <text x="496" y="248" textAnchor="middle" className="bi-hand-sm">falta a combinação:</text>
-      <text x="496" y="266" textAnchor="middle" className="bi-hand-sm">uma só não abre</text>
+      <text x="496" y="248" textAnchor="middle" className="bi-hand-sm">crises, instituições</text>
+      <text x="496" y="266" textAnchor="middle" className="bi-hand-sm">e decisões políticas</text>
     </motion.g>
     <motion.g initial={false} animate={{ opacity: all ? 1 : 0 }} transition={p(0.4, 1.4)}>
       <text x="412" y="76" className="bi-panel-title">1933 · LEIS E REPRESSÃO</text>
@@ -483,7 +483,7 @@ export function DemocracyCracks({ active }: Scene) {
       <text x="564" y="264" textAnchor="middle" className="bi-tiny">eliminada</text>
     </motion.g>
     <text x="30" y="316" className="bi-small">pano de fundo: Tratado de Versalhes (1919) e ressentimento nacionalista</text>
-    <text x="30" y="342" className="bi-foot">Rachaduras ilustrativas: mostram combinação, não medem o peso de cada fator.</text>
+    <text x="30" y="342" className="bi-foot">Rachaduras ilustrativas: destacam crises e fragilidade, sem medir seu peso.</text>
     </g>
   </svg>;
 }
@@ -695,7 +695,7 @@ export const HEADERS_LOTE8: Record<string, string> = {
   'summary-historia-imperialismo-e-belle-epoque': 'formas de dominação',
   'summary-historia-primeira-guerra-mundial-1914-1918': 'causas combinadas',
   'summary-historia-o-periodo-entreguerras-1918-1939': 'cadeia de causas',
-  'summary-historia-o-nazismo-na-alemanha': 'condições combinadas',
+  'summary-historia-o-nazismo-na-alemanha': 'contexto e ascensão',
   'summary-historia-descolonizacao-afro-asiatica': 'trajetórias comparadas',
   'summary-historia-o-fim-da-guerra-fria': 'reação em cadeia',
 };

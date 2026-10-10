@@ -1,10 +1,10 @@
 {
   "schema_version": 1,
-  "base_commit": "3200ea9b67eb00fdb867b287b9d2fed2ba162765",
+  "base_commit": "8b6b0a433d681a503dfaa332b5070e9e9589fd94",
   "new_chapters_reviewed": 30,
   "previous_chapters_revisited": 4,
   "corrected_chapters": 34,
-  "deep_content_changed": 33,
+  "deep_content_changed": 32,
   "retrieval_questions_revised": 25,
   "cumulative_first_pass": {
     "total": 613,
@@ -120,7 +120,8 @@
         "Inspecionados hgLotes.ts, os nove arquivos lote11.ts a lote19.ts e o roteamento SELF_PACED de HistoriaGeografia.tsx.",
         "Inspecionadas integralmente as pranchas aplicáveis em BrasilImperio.tsx e SegundoReinado/RepublicaEspada em BrasilRepublica.tsx.",
         "Segundo Reinado e República da Espada têm cenas ativas em lote14.ts; os registros historiaSemCenaBase são removidos pelas entradas HG_LOTE_ENTRIES. A inspeção anterior desses registros não cobria as cenas ativas.",
-        "A prancha StateFormation fala apenas em nomeação de senadores vitalícios; não repete a demissão indevida e não precisa alteração nesse ponto."
+        "A prancha StateFormation fala apenas em nomeação de senadores vitalícios; não repete a demissão indevida e não precisa alteração nesse ponto.",
+        "Revisão de integração: pergunta, legenda e inventário evitam representar a seleção de fatores como requisitos necessários da queda do regime."
       ],
       "pending": [
         "Validação parcial pedagógica e documental, não aprovação formal do capítulo.",
@@ -621,7 +622,8 @@
         "Nomeação legal formal distinguida da repressão e intimidação na implantação da ditadura.",
         "Recall não exige Leis de Nuremberg, ausentes do ensino; exige Wannsee e mecanismo ditatorial.",
         "Cena de ascensão retira inferência de ciclo econômico contínuo a partir de 1923.",
-        "Conferidos hgLotes e lote11–19: nenhum duplica os seis chapterIds deste grupo. Conferidas figuras em SeculoXX, IdadeModerna e HistorianIllustration; HistoriaMundial não contém os seis IDs."
+        "Conferidos hgLotes e lote11–19: nenhum duplica os seis chapterIds deste grupo. Conferidas figuras em SeculoXX, IdadeModerna e HistorianIllustration; HistoriaMundial não contém os seis IDs.",
+        "Revisão de integração: pergunta, legenda e inventário evitam representar a seleção de fatores como requisitos necessários da queda do regime."
       ],
       "pending": [],
       "source_urls": [
@@ -833,9 +835,11 @@
     {
       "topic": "A Montagem da Colonização",
       "checks": [
-        "Coexistência regional e coerção nos aldeamentos qualificadas.",
-        "Prática e recuperação alinhadas; cena passa a mostrar características do modelo de plantation.",
-        "Retirada a balança causal obrigatória."
+        "Conteúdo e cena da PR #297 preservados integralmente na integração, sem reaplicar o rascunho anterior de plantation.",
+        "Quatro recortes contextualizam resistência indígena, epidemias, disputas pelo trabalho e circuito atlântico; não exigem condições necessárias em conjunto.",
+        "Economia ensina investimentos; massapé descrito como argiloso sem origem geológica única.",
+        "Nordeste e São Vicente mostram coexistência e diferenças regionais; catequização não elimina trabalho compulsório.",
+        "Citações ativas foram conferidas literalmente contra as cinco seções integradas."
       ],
       "pending": [
         "A verificação bibliográfica das generalizações sobre capitanias deve continuar."
@@ -843,7 +847,7 @@
       "chapter_id": "summary-historia-a-montagem-da-colonizacao",
       "scope": "Retorno dirigido a pendências do lote anterior; não nova certificação integral.",
       "formal_approval": false,
-      "prior_revision": 2,
+      "prior_revision": 3,
       "result_revision": 3,
       "source_urls": [
         "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/escravidao-jose-roberto-pinto-de-goes/",
@@ -2305,42 +2309,6 @@
       "reason": "Texto cronológico do Pacífico explicita término formal sem mudar desenho."
     },
     {
-      "topic": "A Montagem da Colonização",
-      "path": "src/data/deepSummaryContent.json",
-      "section": "Economia açucareira",
-      "reason": "Retira origem geológica única não demonstrada."
-    },
-    {
-      "topic": "A Montagem da Colonização",
-      "path": "src/data/deepSummaryContent.json",
-      "section": "Economia açucareira",
-      "reason": "Ensina investimento que a recuperação já cobrava."
-    },
-    {
-      "topic": "A Montagem da Colonização",
-      "path": "src/data/deepSummaryContent.json",
-      "section": "Escravidão indígena e africana",
-      "reason": "Qualifica coexistência regional, tráfico e coerção nos aldeamentos; remove causalidade conjuntiva."
-    },
-    {
-      "topic": "A Montagem da Colonização",
-      "path": "src/data/deepSummaryContent.json",
-      "section": "Pegadinhas frequentes",
-      "reason": "Coexistência não limitada ao século XVI."
-    },
-    {
-      "topic": "A Montagem da Colonização",
-      "path": "src/data/deepSummaryContent.json",
-      "section": "Pegadinhas frequentes",
-      "reason": "Qualifica trabalho e oposição religiosa."
-    },
-    {
-      "topic": "A Montagem da Colonização",
-      "path": "src/data/deepSummaryContent.json",
-      "section": "Pratique e confira",
-      "reason": "Remove exercício que impunha prova causal falsa e fornece conferência."
-    },
-    {
       "topic": "A Crise do Antigo Sistema Colonial",
       "path": "src/data/deepSummaryContent.json",
       "section": "Pegadinhas frequentes",
@@ -2370,9 +2338,41 @@
       "reason": "Sincroniza o renderer real InequalityGate com contribuições combinadas, removendo a necessidade de 3 de 3 fatores."
     },
     {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Remove exigência de combinação exclusiva e colapso automático do edifício; recortes destacam contexto e concentração ditatorial."
+    },
+    {
+      "topic": "A Era Vargas: o Estado Novo",
+      "path": "src/views/topic-scenes/families/EraVargas.tsx",
+      "reason": "Corrige colisão da legenda CSN/crédito de 1940 com a anotação sobre a contradição da ditadura, reproduzida nas 12 configurações de navegador."
+    },
+    {
+      "topic": "Brasil Império: o Declínio do Segundo Reinado",
+      "path": "src/views/topic-scenes/families/BrasilImperio.tsx",
+      "reason": "Distingue desgaste em setores sociais do movimento militar que depôs a monarquia."
+    },
+    {
+      "topic": "Inventário visual",
+      "path": "src/views/visualQualityReviews.ts",
+      "reason": "Alinha nove descrições aos capítulos corrigidos; explicita que capturas antigas não validam as alterações."
+    },
+    {
       "topic": "A Montagem da Colonização",
       "path": "src/views/topic-scenes/data/historia.ts",
-      "reason": "Restaura lastro literal de plantation: outras colônias americanas europeias do período."
+      "reason": "Adota conteúdo e cena contextualizada já mesclados em #297; remove a proposta concorrente para preservar continuidade."
     }
-  ]
+  ],
+  "integration": {
+    "merged_pr": 297,
+    "main_commit": "8b6b0a433d681a503dfaa332b5070e9e9589fd94",
+    "preserved_main_deep_chapters": [
+      "Poríferos e Cnidários",
+      "Temperatura, Calor e seus Mecanismos de Transferência",
+      "A Montagem da Colonização"
+    ],
+    "new_deep_changes_relative_to_main": 32,
+    "unchanged_deep_entries_relative_to_main": 580,
+    "conflict_resolution": "Montagem preserva integralmente conteúdo e desenho contextualizado da PR #297; demais alterações independentes conciliadas."
+  }
 }

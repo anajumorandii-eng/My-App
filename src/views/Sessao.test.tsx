@@ -453,6 +453,7 @@ describe('Sessao', () => {
   });
 
   it('anuncia o tempo do cronômetro ao cruzar um minuto e ao concluir', async () => {
+    vi.setSystemTime(new Date('2026-10-10T15:00:00Z'));
     const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular', allocatedMinutes: 2 });
     dailyPlanHook.mockReturnValue(planWith([theoryAction]));
     masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
@@ -474,6 +475,7 @@ describe('Sessao', () => {
   });
 
   it('anuncia iniciar, pausar e concluir manualmente sem anunciar o segundo intermediário', async () => {
+    vi.setSystemTime(new Date('2026-10-10T15:00:00Z'));
     const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular', allocatedMinutes: 2 });
     dailyPlanHook.mockReturnValue(planWith([theoryAction]));
     masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });

@@ -284,25 +284,21 @@ function Navigations({ active, t }: { active: number; t: SceneTransition }) {
 }
 
 function Colonization({ active, t }: { active: number; t: SceneTransition }) {
-  const all = active === 3;
-  const traits = [
-    { label: 'Grande propriedade', detail: 'latifúndio', x: 28 },
-    { label: 'Exportação', detail: 'monocultura açucareira', x: 228 },
-    { label: 'Trabalho escravizado', detail: 'coerção em larga escala', x: 428 },
-  ];
-  return <HumanitiesCorePlate kind="colonization" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Montagem da colonização: características do modelo de plantation; recorte ${active + 1} destacado`}>
+  const factors = ['Resistência indígena', 'Epidemias e guerras', 'Disputas pelo trabalho', 'Comércio e tráfico'];
+  return <HumanitiesCorePlate kind="colonization" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Montagem da colonização: fatores históricos e coexistência regional da escravização indígena e africana; recorte ${active + 1} destacado`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
-    <text x="30" y="40" className="hg-kicker">ECONOMIA AÇUCAREIRA · PLANTATION</text>
-    {traits.map((trait, index) => <motion.g key={trait.label} initial={false} animate={{ opacity: all || active === index ? 1 : 0.45 }} transition={paced(t, 0.4)}>
-      <rect x={trait.x} y="100" width="164" height="138" rx="12" className="hg-panel" />
-      <text x={trait.x + 82} y="128" textAnchor="middle" className="hg-label">{trait.label}</text>
-      {index === 0 && <g>{[0, 1, 2, 3].map(row => <path key={row} d={`M${trait.x + 24} ${155 + row * 15}h116`} className="hg-document-line" />)}</g>}
-      {index === 1 && <g><path d={`M${trait.x + 27} 188h105l-17 20H${trait.x + 44}Z`} className="hg-fort" /><path d={`M${trait.x + 78} 187v-42l32 30h-32`} className="hg-document-line" /></g>}
-      {index === 2 && <g><circle cx={trait.x + 82} cy="158" r="10" className="hg-document-line" /><path d={`M${trait.x + 82} 170v35m0-25-20 15m20-15 20 15m-20 10-13 20m13-20 13 20`} className="hg-document-line" /></g>}
-      <text x={trait.x + 82} y="260" textAnchor="middle" className="hg-small">{trait.detail}</text>
+    <text x="30" y="40" className="hg-kicker">TRABALHO COLONIAL · DIFERENÇAS REGIONAIS</text>
+    {factors.map((label, k) => <motion.g key={label} className={active === k ? 'hg-process-active' : undefined} initial={false} animate={{ y: active === k ? -3 : 0 }} transition={t}>
+      <rect x={30 + (k % 2) * 290} y={65 + Math.floor(k / 2) * 70} width="270" height="52" rx="10" className="hg-document" />
+      <text x={165 + (k % 2) * 290} y={96 + Math.floor(k / 2) * 70} textAnchor="middle" className="hg-label">{label}</text>
     </motion.g>)}
-    <text x="310" y="308" textAnchor="middle" className="hg-hand">{all ? 'A combinação caracteriza o modelo' : 'Uma característica do modelo em foco'}</text>
-    <text x="30" y="340" className="hg-footnote">Modelo produtivo; a coexistência de formas de cativeiro variou por região.</text>
+    <text x="310" y="218" textAnchor="middle" className="hg-hand">causas contextualizadas, sem fórmula universal</text>
+    <path d="M310 230v12M165 242h290M165 242v12M455 242v12" className="hg-rope" />
+    <text x="165" y="276" textAnchor="middle" className="hg-label">Nordeste açucareiro</text>
+    <text x="165" y="297" textAnchor="middle" className="hg-label">maior fluxo de africanos escravizados</text>
+    <text x="455" y="276" textAnchor="middle" className="hg-label">São Vicente · século XVII</text>
+    <text x="455" y="297" textAnchor="middle" className="hg-label">persistência do cativeiro indígena</text>
+    <text x="30" y="334" className="hg-footnote">Explorações coexistiram; o esquema não mede o peso das causas.</text>
   </svg>}</HumanitiesCorePlate>;
 }
 

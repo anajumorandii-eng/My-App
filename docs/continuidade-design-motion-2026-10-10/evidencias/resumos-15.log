@@ -1,0 +1,9 @@
+
+ RUN  v4.1.11 /workspace/My-App
+
+
+ Test Files  1 passed (1)
+      Tests  15 passed (15)
+   Start at  02:41:53
+   Duration  25.62s (transform 5.17s, setup 675ms, import 8.02s, tests 11.86s, environment 4.26s)
+

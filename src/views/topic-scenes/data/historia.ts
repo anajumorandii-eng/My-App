@@ -554,31 +554,31 @@ const historiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-historia-a-montagem-da-colonizacao',
     family: 'criterios-conjuntivos',
-    question: 'Que características combinadas definem o modelo de plantation apresentado no capítulo?',
+    question: 'Como fatores locais e o circuito atlântico ajudam a explicar a expansão da escravização africana sem apagar a indígena?',
     items: [
       {
-        label: 'Grande propriedade',
-        claim: 'o modelo utiliza grandes extensões de terra',
-        section: 'Economia açucareira',
-        quote: 'latifúndio (grandes extensões de terra concedidas por sesmarias)',
+        label: 'Resistência indígena',
+        claim: 'fugas e revoltas afetaram a exploração colonial da mão de obra indígena',
+        section: 'Escravidão indígena e africana',
+        quote: 'A resistência indígena por fugas e revoltas e a mortalidade causada por epidemias e guerras afetaram a exploração dessa mão de obra.',
       },
       {
-        label: 'Produção para exportação',
-        claim: 'a monocultura açucareira é orientada ao mercado externo',
-        section: 'Economia açucareira',
-        quote: 'monocultura voltada à exportação',
+        label: 'Mortalidade por epidemias',
+        claim: 'epidemias e guerras afetaram populações indígenas, sem explicar sozinhas a expansão do tráfico',
+        section: 'Escravidão indígena e africana',
+        quote: 'A resistência indígena por fugas e revoltas e a mortalidade causada por epidemias e guerras afetaram a exploração dessa mão de obra.',
       },
       {
-        label: 'Trabalho escravizado',
-        claim: 'a produção emprega trabalho escravizado em larga escala',
-        section: 'Economia açucareira',
-        quote: 'trabalho escravizado em larga escala',
+        label: 'Oposição jesuíta',
+        claim: 'a oposição a determinadas formas de escravização coexistia com disputas pelo controle do trabalho nos aldeamentos',
+        section: 'Escravidão indígena e africana',
+        quote: 'A catequização em aldeamentos não eliminava o trabalho compulsório nem a subordinação colonial.',
       },
       {
-        label: 'Modelo de plantation',
-        claim: 'a combinação caracteriza um modelo produtivo; não é uma regra sobre a substituição de uma população por outra',
-        section: 'Economia açucareira',
-        quote: 'um arranjo que os historiadores chamam de plantation, replicado com variações em outras colônias americanas europeias do período',
+        label: 'Circuito atlântico',
+        claim: 'demanda açucareira, redes comerciais e lucros do tráfico favoreceram a expansão da escravização africana, com diferenças regionais',
+        section: 'Escravidão indígena e africana',
+        quote: 'A demanda da economia açucareira, as redes comerciais atlânticas e os lucros do tráfico favoreceram a expansão da escravização africana.',
       },
     ],
   },
@@ -911,7 +911,7 @@ const historiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-historia-o-nazismo-na-alemanha',
     family: 'criterios-conjuntivos',
-    question: 'Que condições, combinadas, e nenhuma sozinha suficiente, explicam a ascensão do nazismo na Alemanha?',
+    question: 'Como crises econômicas e fragilidade institucional compuseram o contexto da ascensão nazista?',
     items: [
       {
         label: 'Hiperinflação de 1923',
@@ -932,8 +932,8 @@ const historiaBase: SceneEntry[] = [
         quote: 'As bases da ascensão do nazismo na Alemanha combinaram crise econômica profunda, ressentimento nacionalista acumulado e fraqueza institucional da própria democracia alemã do período entreguerras.',
       },
       {
-        label: 'Nenhum fator isolado',
-        claim: 'nenhum desses fatores isolados seria suficiente para explicar sozinho a ascensão do nazismo — só a combinação deles explica o fenômeno',
+        label: 'Contexto e ascensão',
+        claim: 'os fatores compõem um contexto histórico de ascensão; não representam uma lista de requisitos necessários ou suficientes',
         section: 'Pegadinhas frequentes',
         quote: 'combinou-se com a hiperinflação de 1923, a Grande Depressão de 1929 e a fragilidade institucional da democracia alemã do período, sem um único fator isolado sendo suficiente para explicar sozinho o fenômeno.',
       },
@@ -942,7 +942,7 @@ const historiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-historia-brasil-imperio-o-declinio-do-segundo-reinado',
     family: 'criterios-conjuntivos',
-    question: 'Por que a perda simultânea de apoio de múltiplos setores, e não o desgaste de um só, derrubou a monarquia em 1889?',
+    question: 'Como o desgaste das bases de apoio contribuiu para a crise da monarquia antes da proclamação de 1889?',
     items: [
       {
         label: 'Questão Religiosa',

@@ -2,7 +2,7 @@
 
 A rodada examina as cinco seções e a recuperação de 30 capítulos novos de História, com inspeção das cenas ativas e consulta seletiva a fontes. Corrige também quatro capítulos já examinados em Brasil Colônia: Montagem, Crise, Interiorização e a legenda de Palmares em Dinâmica Interna.
 
-São 34 capítulos com correções, 33 objetos de conteúdo aprofundado alterados e 25 recuperações reformuladas ou adicionadas. As demais 579 entradas permanecem idênticas. IDs de capítulo/material preservados; a revisão editorial sobe uma unidade somente nos 33 objetos alterados, solicitando nova leitura.
+São 34 capítulos com correções, 32 objetos de conteúdo aprofundado alterados em relação à main após #297 e 25 recuperações reformuladas ou adicionadas. As demais 580 entradas permanecem idênticas à main atual; os três capítulos já corrigidos em #297 são preservados. IDs de capítulo/material preservados; a revisão editorial sobe uma unidade somente nos 32 objetos alterados, solicitando nova leitura.
 
 ## Achados e comportamento corrigido
 
@@ -19,7 +19,7 @@ A primeira passagem pedagógica cumulativa chega a **39/613**, restando **574**.
 
 O [registro por capítulo](revisao.json) discrimina escopo, fontes, acesso aberto/indexado e pendências. Fontes externas não foram todas lidas integralmente. O avaliador usa palavras-chave e não certifica precisão semântica de negações ou cronologia.
 
-Awesome Design MD (referências Claude e Miro) orienta clareza, relações explícitas, controles e preservação da identidade do Crivo. Em Montagem, a balança causal é substituída por características de plantation; em Brasil Atual, selecionar fatores destaca fontes, sem declarar uma explicação incompleta pela ausência de uma seleção.
+Awesome Design MD (referências Claude e Miro) orienta clareza, relações explícitas, controles e preservação da identidade do Crivo. Em Montagem, são preservados os fatores contextualizados e a coexistência regional já integrados em #297; em Brasil Atual, selecionar fatores destaca fontes, sem declarar uma explicação incompleta pela ausência de uma seleção.
 
 ## Verificação
 

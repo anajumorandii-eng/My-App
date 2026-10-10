@@ -11,7 +11,7 @@ describe('cenas autorais do Lote 8 (séculos XIX e XX no mundo)', () => {
     ['summary-historia-imperialismo-e-belle-epoque', /dominação direta francesa e dominação indireta britânica/, 'Conferência de Berlim, 1884–1885', 'Mesmo fenômeno', 'chefia local mantida'],
     ['summary-historia-primeira-guerra-mundial-1914-1918', /alianças e decisões dos governos.*Sarajevo como estopim/, 'Tríplice Entente', 'Sarajevo como estopim', 'causa suficiente'],
     ['summary-historia-o-periodo-entreguerras-1918-1939', /Crise de 1929.*apaziguamento/, 'outubro de 1929', 'Fracasso do apaziguamento', 'cada concessão encoraja a próxima exigência'],
-    ['summary-historia-o-nazismo-na-alemanha', /só em combinação levam a 1933/, 'democracia alemã', 'Nenhum fator isolado', 'Lei de Plenos Poderes'],
+    ['summary-historia-o-nazismo-na-alemanha', /compõem o contexto da ascensão.*consolidam a ditadura em 1933/, 'democracia alemã', 'Contexto e ascensão', 'Lei de Plenos Poderes'],
     ['summary-historia-descolonizacao-afro-asiatica', /Índia em 1947.*Argélia até 1962/, 'maioria muçulmana', 'Trajetórias diversas', 'postura da metrópole +'],
     ['summary-historia-o-fim-da-guerra-fria', /não intervenção soviética.*dissolução da URSS em 1991/, 'Tchecoslováquia', 'Dissolução da URSS', '15 repúblicas'],
   ] as const)('desenha o mecanismo de %s e reage ao último recorte', async (chapterId, name, text, button, after) => {
@@ -24,6 +24,11 @@ describe('cenas autorais do Lote 8 (séculos XIX e XX no mundo)', () => {
     await user.click(target);
     expect(target).toHaveAttribute('aria-pressed', 'true');
     expect(diagram).toHaveTextContent(after);
+    if (chapterId === 'summary-historia-o-nazismo-na-alemanha') {
+      expect(diagram).not.toHaveTextContent('sozinho, não basta');
+      expect(diagram).not.toHaveTextContent('uma só não abre');
+      expect(diagram).toHaveTextContent('síntese do contexto');
+    }
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining(`recorte ${entry.items.length}`));
   });
 });
