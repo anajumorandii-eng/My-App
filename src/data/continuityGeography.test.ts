@@ -136,3 +136,34 @@ describe('continuidade das pendências Design & Motion Kit', () => {
     expect(getReadingProgress(item, { readSectionIds: [1,2,3,4,5].map(i => `${id}-editorial-v2-${i}`), status: 'em-revisao', important: true, answers: [] })).toBe(0);
   });
 });
+
+describe('continuidade de Física — segunda rodada', () => {
+  const cases = [
+    ['o-movimento-circular', '2 Hz; T = 0,5 s. A velocidade depende do raio: v = omega R.', '2 Hz; a velocidade depende do raio.'],
+    ['as-leis-de-newton', 'N = 720 N. A resultante aponta para cima. Ação e reação atuam em corpos diferentes.', 'A resultante aponta para cima e o par atua em corpos diferentes.'],
+    ['dinamica-do-movimento-circular', 'A resultante centrípeta vale 2000 N e é fornecida pelo atrito estático.', 'A resultante centrípeta é fornecida pelo atrito.'],
+    ['trabalho-e-energia-trabalho-de-uma-forca', '100 J para força paralela; 50 J a 60°, devido ao cosseno do ângulo.', '50 J a 60°, devido ao cosseno do ângulo.'],
+    ['hidrostatica-densidade-e-pressao', '100000 Pa de pressão manométrica. Depende da profundidade, não da forma.', 'Depende da profundidade, não da forma.'],
+    ['trabalho-da-forca-de-pressao-do-gas', '400 J: pressão vezes variação de volume; área sob a curva.', 'Pressão vezes variação de volume; área sob a curva.'],
+    ['campo-eletrico', '2000 N/C, razão entre força e carga. Não depende da carga de prova.', 'É a razão entre força e carga, não depende da prova.'],
+    ['capacitores', '100 microcoulombs; energia 0,001 J. O dielétrico aumenta a capacitância.', 'Energia 0,001 J; o dielétrico aumenta a capacitância.'],
+  ];
+  for (const [slug, complete, incomplete] of cases) {
+    it(`exige o resultado e a explicação em ${slug}`, () => {
+      const item = interactiveSummaries.find(summary => summary.id === `summary-fisica-${slug}`)!;
+      expect(item).toBeDefined();
+      expect(evaluateRetrievalAnswer(item.retrieval[0], complete).transferUnlocked).toBe(true);
+      expect(evaluateRetrievalAnswer(item.retrieval[0], incomplete).transferUnlocked).toBe(false);
+      expect(evaluateRetrievalAnswer(item.retrieval[0], '').matchedElements).toEqual([]);
+      expect(getReadingProgress(item, { readSectionIds: [1,2,3,4,5].map(index => `${item.id}-editorial-v2-${index}`), status: 'em-revisao', important: false, answers: [] })).toBe(0);
+    });
+  }
+});
+
+it('não valida critérios de recuperação com resposta vazia em nenhum capítulo', () => {
+  for (const summary of interactiveSummaries) {
+    for (const question of summary.retrieval) {
+      expect(evaluateRetrievalAnswer(question, '').matchedElements, summary.id).toEqual([]);
+    }
+  }
+});

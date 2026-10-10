@@ -1,0 +1,89 @@
+{
+  "base": "8b6b0a433d681a503dfaa332b5070e9e9589fd94",
+  "sourceHashes": {
+    "src/data/deepSummaryContent.json": "4503f9bcbca999718cd3eebf53f4b1f3634caa1be17776a2acaca35514a64b08",
+    "src/data/continuityGeography.test.ts": "3430b62eb14a698fedfbc9e8a38d00146c32aeb37e994608a0d739648dc1a469",
+    "src/lib/summaryEngine.ts": "4b47cba86d65e095c0a541801d787956e7c555c95b413ee4270049a3fb0ab524",
+    "src/lib/summaryEngine.test.ts": "396d0fa26bf2497c37a0b76c155e8b676edeac78b310384e1f98593e573ee56d",
+    "src/lib/physicsRemainingLab.ts": "ee27fe215e0290c03647f24b2ea8332591473881e6af97fe385bc0732df692bf",
+    "src/lib/orbitalLab.ts": "918e1fab4812f7c781431e692b23a4de9f5a7261231f193f4f735b26303e812c",
+    "src/views/visual-instruments/PhysicsMechanismScenes.tsx": "f15ca22bae31be7ff4b3f11948945d7bd6cdea249d04a5f9acf208ff23f1ba7e",
+    "src/views/visual-boards/HydrostaticsBoard.tsx": "bda159b69bd6d92ec2f86c44fad727a124c6fbf7de0f27d6e0f89e327e0bda0c"
+  },
+  "validations": {
+    "typescript": "passed",
+    "build": "passed",
+    "nodeTests": 945,
+    "vitestTests": 1524,
+    "vitestFiles": 186,
+    "editorialAndSceneTests": 42,
+    "mechanismAndEvaluatorTests": 19,
+    "studyScreenTests": 15,
+    "catalogChapters": 613,
+    "structuralIssues": 0,
+    "fallbacks": 0,
+    "browserExpected": 96,
+    "browserActual": 96,
+    "browserPassed": 96,
+    "browserFailures": 0
+  },
+  "localLogHashes": {
+    "lint-final.log": "e5ca8640c5c7505d51b703c3f5313f08e04f101fbbff9eac01da458d43d8eb3e",
+    "build-publicacao.log": "810c11bbcabbb4ee034f17c56cb1ac9c4fc1775a58a8c5fffaeac00d18d62097",
+    "editorial-confirmado.log": "0cb23060339f5a4409abc339154735fae02748883fbde9314e9903548fd492ca",
+    "logica-final.log": "fe5af460cae7701d9e87c209dbdf765591b7a31c83d86c4e33016054550577bf",
+    "resumos-final.log": "76a5c9635bf3ae1d3b29cebd088ebd820d395b3e3c1760b93b037aff46a74e94",
+    "node-confirmado.log": "68d9408075d0d109b07ab6751bba1bb30a45a9bc0ed51668afa3be59ee06c7b9",
+    "suite.log": "d1e875fe8d5b2c7f3aa0e9dcf86f4b479dc59568abda2d3be8bed38206ef0579",
+    "regressao-red.log": "767bf6c6e288f5b0e36993f7ecc9190296068ba7418a2dd445cc0334d6c101c5",
+    "decimal-red.log": "16d9a0f24415d82deed7e37c6202dcb2d00b493103f8bd6cebd64f441423d566"
+  },
+  "captures": [
+    {
+      "id": "summary-fisica-o-movimento-circular",
+      "path": "capturas/000-360-dark.jpg",
+      "sha256": "da9563a993d4198c91df58682ded48c4b5e104196c8ad0c099e2cfbc42b828bb"
+    },
+    {
+      "id": "summary-fisica-as-leis-de-newton",
+      "path": "capturas/001-1440-light.jpg",
+      "sha256": "dffcfcea69dbfe1ada9c89a391f925816787260e7c61f6cda0e6d726f227cf4b"
+    },
+    {
+      "id": "summary-fisica-dinamica-do-movimento-circular",
+      "path": "capturas/002-360-dark.jpg",
+      "sha256": "979697a18b421020c7149d6f6baacb9e8b285408114f8fe1274a8bdcbf6b5f5a"
+    },
+    {
+      "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
+      "path": "capturas/003-1440-light.jpg",
+      "sha256": "e5037a7c8422d42dcd78008cbc8bcb694f37e0d13612bf72b48e104ec79979de"
+    },
+    {
+      "id": "summary-fisica-hidrostatica-densidade-e-pressao",
+      "path": "capturas/004-360-dark.jpg",
+      "sha256": "64f49d3ca566ab0fedf0fd3427be0c0abf8c3524c6bd727b6ac808d93b2ed304"
+    },
+    {
+      "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
+      "path": "capturas/005-1440-light.jpg",
+      "sha256": "5b8b570b04d18ccfa32674b9558f95c43ad5825bd4cb86d48ed18430c02693a6"
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "path": "capturas/006-360-dark.jpg",
+      "sha256": "06c1a5d39fda8065f5188d6255dfff6f13edd93103b3091b5aedb3d873dc8597"
+    },
+    {
+      "id": "summary-fisica-capacitores",
+      "path": "capturas/007-1440-light.jpg",
+      "sha256": "238a3b472fe66dfe98a7bf475a35c607fecc6de458059e6370fb9b14e18a26ac"
+    }
+  ],
+  "buildAssetHashes": {
+    "assets/deepSummaryContent-Bqx-s88D.js": "568a6b35188b028f2c5140844d836cf694ac1962ae44a14ba1822595b849b015",
+    "assets/index-C2GM3TtH.js": "386628c733fc7b27dd66c6f8844e140e48e0621e7122eac44b5d2321e0ffaff3",
+    "assets/PhysicsMechanismScenes-BcmvKBMg.js": "33dbd8eb3f57dddd07e9f72338dcb498181073124736cf655571844408cdb3c1",
+    "assets/HydrostaticsBoard-BAUfiKJL.js": "49d04fc3e851767bcd4bf0cb5373c7ce25fdb5c8d93eb50411a7a2aef163ce01"
+  }
+}

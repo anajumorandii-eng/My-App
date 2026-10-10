@@ -62,3 +62,17 @@ test('preserva a agenda por pergunta ao normalizar dados persistidos novos', () 
   });
   assert.equal(normalized.reviews?.q1.nextReviewAt, '2026-08-25T12:00:00.000Z');
 });
+
+test('não aprova números curtos ou fórmulas ausentes por uma lista vazia de palavras', () => {
+  for (const keyword of ['2', '50', '100', 'mv2', '0,5', 'p.dv']) {
+    const question = { ...summaries[0].retrieval[0], expectedElements: [{ label: keyword, keywords: [keyword] }] };
+    assert.equal(evaluateRetrievalAnswer(question, '').transferUnlocked, false, keyword);
+    assert.equal(evaluateRetrievalAnswer(question, 'Não sei resolver.').transferUnlocked, false, keyword);
+  }
+});
+
+test('distingue um resultado numérico de um número maior ou com sinal contrário', () => {
+  const question = { ...summaries[0].retrieval[0], expectedElements: [{ label: '100 J', keywords: ['100'] }] };
+  for (const answer of ['1000 J', '-100 J', '0,100 J']) assert.equal(evaluateRetrievalAnswer(question, answer).transferUnlocked, false, answer);
+  for (const answer of ['O trabalho é 100 J.', '+100 J', '100,0 J']) assert.equal(evaluateRetrievalAnswer(question, answer).transferUnlocked, true, answer);
+});

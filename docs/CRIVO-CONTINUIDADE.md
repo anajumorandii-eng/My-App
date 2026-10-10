@@ -1,5 +1,9 @@
 # CRIVO — continuidade operacional
 
+## Rodada 2 — Física e recuperação, 2026-10-10
+
+A rodada anterior foi integrada no PR #297; base desta retomada: `8b6b0a43`. Corrigidos oito capítulos de Física, com revisão editorial 3 apenas nesses capítulos, e o avaliador compartilhado para não aprovar números ausentes ou encontrados dentro de valores diferentes. Rótulos de três representações foram alinhados às condições ensinadas. [Correções, fontes, evidências e próximos capítulos](continuidade-rodada-2-2026-10-10/README.md). Estados formais preservados; sem merge automático.
+
 ## Retomada Design & Motion Kit — 2026-10-10
 
 Base conferida: `3200ea9b67eb00fdb867b287b9d2fed2ba162765`. As PRs #293, #294 e #295 já estão mescladas; as instruções de merge abaixo são checkpoints históricos, não ações pendentes.

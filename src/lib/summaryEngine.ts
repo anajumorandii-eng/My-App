@@ -30,8 +30,17 @@ export function getReadingProgress(summary: InteractiveSummary, progress?: Summa
 export function evaluateRetrievalAnswer(question: RetrievalPrompt, answer: string) {
   const normalized = fold(answer);
   const matchesKeyword = (keyword: string) => {
-    const normalizedKeyword = fold(keyword);
-    return normalized.includes(normalizedKeyword) || normalizedKeyword.split(/\s+/).filter((token) => token.length > 2).every((token) => normalized.includes(token));
+    const normalizedKeyword = fold(keyword).trim();
+    if (!normalizedKeyword) return false;
+    // Numeric results must match a complete value, not a substring of 1000
+    // or the magnitude of -100. Keep the lexical fallback for prose only.
+    if (/^[+-]?\d+(?:[.,]\d+)?$/.test(normalizedKeyword)) {
+      const values = normalized.replace(/−/g, '-').match(/[+-]?\d+(?:[.,]\d+)?/g) ?? [];
+      const expected = Number(normalizedKeyword.replace(',', '.'));
+      return values.some(value => Number(value.replace(',', '.')) === expected);
+    }
+    const tokens = normalizedKeyword.split(/\s+/).filter((token) => token.length > 2);
+    return normalized.includes(normalizedKeyword) || (tokens.length > 0 && tokens.every((token) => normalized.includes(token)));
   };
   const matchedElements = question.expectedElements.filter((element) => element.keywords.some(matchesKeyword)).map((element) => element.label);
   const firstMissingElement = question.expectedElements.find((element) => !matchedElements.includes(element.label))?.label ?? null;

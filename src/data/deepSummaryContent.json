@@ -6878,11 +6878,11 @@
       },
       {
         "title": "Como montar o diagrama",
-        "content": "A terceira lei, de ação e reação, estabelece que, para toda força que um corpo A exerce sobre um corpo B, existe uma força de reação de mesma intensidade, mesma direção, mas sentido oposto, que o corpo B exerce simultaneamente sobre o corpo A — essas duas forças formam sempre um par de ação e reação, e um detalhe frequentemente mal compreendido é que essas duas forças atuam sobre corpos diferentes (nunca sobre o mesmo corpo), e por isso jamais se cancelam mutuamente no diagrama de forças de um único corpo específico sendo analisado. Montar corretamente o diagrama de corpo livre é a habilidade prática mais importante para aplicar as leis de Newton a qualquer problema: isola-se mentalmente o corpo de interesse específico, e desenham-se apenas as forças que efetivamente atuam diretamente sobre esse corpo isolado (peso, normal, tração, atrito, força aplicada, e assim por diante), ignorando cuidadosamente qualquer força de reação que esse mesmo corpo exerça sobre outros corpos ao seu redor — apenas as forças que atuam sobre o corpo específico sendo analisado entram na soma vetorial que determina sua aceleração resultante segundo a segunda lei."
+        "content": "A terceira lei, de ação e reação, estabelece que, para toda força que um corpo A exerce sobre um corpo B, existe uma força de reação de mesma intensidade, mesma direção, mas sentido oposto, que o corpo B exerce simultaneamente sobre o corpo A — essas duas forças formam sempre um par de ação e reação, e um detalhe frequentemente mal compreendido é que essas duas forças atuam sobre corpos diferentes (nunca sobre o mesmo corpo), e por isso jamais se cancelam mutuamente no diagrama de forças de um único corpo específico sendo analisado. Montar corretamente o diagrama de corpo livre é a habilidade prática mais importante para aplicar as leis de Newton a qualquer problema: isola-se mentalmente o corpo de interesse específico, e desenham-se apenas as forças que efetivamente atuam diretamente sobre esse corpo isolado (peso, normal, tração, atrito, força aplicada, e assim por diante), ignorando cuidadosamente qualquer força de reação que esse mesmo corpo exerça sobre outros corpos ao seu redor — apenas as forças que atuam sobre o corpo específico sendo analisado entram na soma vetorial que determina sua aceleração resultante segundo a segunda lei. A reação ao peso da pessoa é a atração gravitacional que ela exerce sobre a Terra. A reação à normal do piso é a força de contato que a pessoa exerce sobre o piso; normal e peso sobre a pessoa não formam um par de ação e reação."
       },
       {
         "title": "Elevador resolvido",
-        "content": "Um exemplo clássico e extremamente cobrado de aplicação da segunda lei é o problema do elevador com uma pessoa em seu interior sobre uma balança: a balança não mede diretamente o peso real da pessoa, mas sim a força normal que ela exerce sobre a própria balança (que, pela terceira lei, é igual em módulo à força normal que a balança exerce de volta sobre a pessoa) — quando o elevador acelera para cima, a força normal necessária para produzir essa aceleração ascendente na pessoa precisa ser maior que o peso dela, e a balança registra um valor de leitura aparente maior que o peso real; quando o elevador acelera para baixo, a normal necessária é menor que o peso, e a balança registra um valor menor; e apenas quando o elevador está parado ou em movimento retilíneo uniforme (aceleração nula), a normal se iguala exatamente ao peso real da pessoa, e a balança registra corretamente esse valor verdadeiro. Sistemas de corpos conectados (blocos ligados por fio e roldana, por exemplo) e situações envolvendo atrito seguem exatamente o mesmo procedimento de diagrama de corpo livre aplicado individualmente a cada corpo do sistema, respeitando sempre que a tração no fio tem mesma intensidade em ambas as extremidades (para fio ideal, de massa desprezível) e que o atrito se opõe sempre ao movimento relativo (ou à tendência de movimento relativo) entre as superfícies em contato direto."
+        "content": "Um exemplo clássico e extremamente cobrado de aplicação da segunda lei é o problema do elevador com uma pessoa em seu interior sobre uma balança: a balança não mede diretamente o peso real da pessoa, mas sim a força normal que ela exerce sobre a própria balança (que, pela terceira lei, é igual em módulo à força normal que a balança exerce de volta sobre a pessoa) — quando o elevador acelera para cima, a força normal necessária para produzir essa aceleração ascendente na pessoa precisa ser maior que o peso dela, e a balança registra um valor de leitura aparente maior que o peso real; quando o elevador acelera para baixo, a normal necessária é menor que o peso, e a balança registra um valor menor; e apenas quando o elevador está parado ou em movimento retilíneo uniforme (aceleração nula), a normal se iguala exatamente ao peso real da pessoa, e a balança registra corretamente esse valor verdadeiro. Sistemas de corpos conectados (blocos ligados por fio e roldana, por exemplo) e situações envolvendo atrito seguem exatamente o mesmo procedimento de diagrama de corpo livre aplicado individualmente a cada corpo do sistema, respeitando sempre que a tração no fio tem mesma intensidade em ambas as extremidades (para fio ideal de massa desprezível e roldana ideal sem atrito e sem inércia de rotação) e que o atrito se opõe sempre ao movimento relativo (ou à tendência de movimento relativo) entre as superfícies em contato direto."
       },
       {
         "title": "Atrito e sistemas",
@@ -6893,7 +6893,7 @@
         "content": "Uma pessoa de massa 70 kg está dentro de um elevador que acelera para cima a 2 m/s². Calcule a força normal exercida pelo piso do elevador sobre a pessoa (a leitura aparente que uma balança sob seus pés registraria), considerando g = 10 m/s². Responda antes de conferir. Aplicando a segunda lei de Newton ao diagrama de corpo livre da pessoa, com duas forças verticais atuando sobre ela — o peso (P = m×g = 70×10 = 700 N, sempre apontando para baixo) e a força normal N (apontando para cima, exercida pelo piso do elevador sobre os pés da pessoa) —, e considerando o sentido positivo para cima (mesmo sentido da aceleração do elevador nesse caso específico): N − P = m×a, logo N = P + m×a = 700 + (70×2) = 700 + 140 = 840 N. A força normal exercida sobre a pessoa é de 840 N, maior que seu peso real de 700 N, exatamente porque o elevador está acelerando para cima — é necessária uma força resultante adicional, além de simplesmente equilibrar o peso, para produzir essa aceleração ascendente na pessoa, e é o piso do elevador, através da força normal aumentada, que fornece essa força extra necessária. Agora um segundo: dois blocos, A de massa 3 kg e B de massa 2 kg, estão conectados por um fio ideal (de massa desprezível e inextensível) que passa por uma roldana ideal (sem atrito e de massa desprezível), com o bloco A sobre uma mesa horizontal sem atrito e o bloco B pendurado verticalmente pelo fio, fora da mesa. Calcule a aceleração do sistema e a tração no fio, considerando g = 10 m/s². Aplicando a segunda lei separadamente a cada bloco: para o bloco B (que se move verticalmente, puxado pela gravidade e freado pela tração do fio), P_B − T = m_B×a, ou seja, 20 − T = 2a; para o bloco A (que se move horizontalmente sobre a mesa sem atrito, puxado apenas pela tração do fio), T = m_A×a, ou seja, T = 3a. Substituindo a segunda equação na primeira: 20 − 3a = 2a, logo 20 = 5a, resultando em a = 4 m/s². Substituindo de volta para encontrar a tração: T = 3×4 = 12 N. A aceleração do sistema completo (ambos os blocos conectados pelo fio, movendo-se com a mesma aceleração em módulo, um horizontalmente e outro verticalmente) é de 4 m/s², e a tração constante ao longo de todo o fio ideal é de 12 N."
       }
     ],
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Física",
@@ -6984,11 +6984,11 @@
       },
       {
         "title": "Campo de uma carga puntiforme",
-        "content": "Para uma carga puntiforme Q, o módulo do campo elétrico a uma distância r vale E = k×Q/r², com k a constante eletrostática do meio (no vácuo, k₀ ≈ 9×10⁹ N·m²/C²). Essa expressão nasce diretamente da lei de Coulomb: se uma carga de prova q estivesse a distância r de Q, a força entre elas seria F = k×Q×q/r², e dividindo por q sobra exatamente k×Q/r², sem nenhum resquício de q — confirmando que o campo é propriedade de Q e da posição, não da carga de prova usada para medi-lo. A dependência com 1/r² é a mesma da gravitação e da lei de Coulomb: dobrar a distância reduz o campo a um quarto, triplicar reduz a um nono. Quando mais de uma carga fonte está presente, o campo resultante em um ponto é a soma vetorial dos campos que cada carga geraria sozinha ali — o princípio da superposição, o mesmo que vale para forças. Isso significa que, para cargas de mesmo sinal alinhadas simetricamente, os campos podem se reforçar ou se cancelar dependendo da geometria: no ponto médio entre duas cargas iguais e de mesmo sinal, os campos individuais apontam em sentidos opostos e se cancelam exatamente."
+        "content": "Para uma carga puntiforme Q, o módulo do campo elétrico a uma distância r vale E = k×|Q|/r², com k a constante eletrostática do meio (no vácuo, k₀ ≈ 9×10⁹ N·m²/C²). Essa expressão nasce diretamente da lei de Coulomb: se uma carga de prova q estivesse a distância r de Q, a força entre elas seria F = k×Q×q/r², e dividindo por q sobra exatamente k×Q/r², sem nenhum resquício de q — confirmando que o campo é propriedade de Q e da posição, não da carga de prova usada para medi-lo. A dependência com 1/r² é a mesma da gravitação e da lei de Coulomb: dobrar a distância reduz o campo a um quarto, triplicar reduz a um nono. Quando mais de uma carga fonte está presente, o campo resultante em um ponto é a soma vetorial dos campos que cada carga geraria sozinha ali — o princípio da superposição, o mesmo que vale para forças. Isso significa que, para cargas de mesmo sinal alinhadas simetricamente, os campos podem se reforçar ou se cancelar dependendo da geometria: no ponto médio entre duas cargas iguais e de mesmo sinal, os campos individuais apontam em sentidos opostos e se cancelam exatamente."
       },
       {
         "title": "Força a partir do campo",
-        "content": "Uma vez que se conhece o campo E num ponto, a força sobre qualquer carga q colocada ali sai direto de F = q×E, invertendo a definição original. O ganho prático dessa inversão é que o campo pode ser calculado uma única vez para uma configuração de cargas fixas, e depois reaproveitado para prever a força sobre qualquer carga de prova que se queira colocar em qualquer ponto, sem refazer a soma vetorial de Coulomb toda vez. O sinal de q decide o sentido da força em relação ao campo: se q é positiva, a força tem o mesmo sentido do campo local; se q é negativa, a força é oposta ao campo. Essa relação é o que permite desenhar linhas de campo e, a partir delas, prever o movimento de uma carga solta naquela região — a linha de campo é tangente à força que uma carga positiva sofreria a cada ponto. Linhas de campo nascem em cargas positivas (ou no infinito) e morrem em cargas negativas (ou no infinito), nunca se cruzam, porque em cada ponto o campo tem uma única direção definida."
+        "content": "Uma vez que se conhece o campo E num ponto, a força sobre qualquer carga q colocada ali sai direto de F = q×E, invertendo a definição original. O ganho prático dessa inversão é que o campo pode ser calculado uma única vez para uma configuração de cargas fixas, e depois reaproveitado para prever a força sobre qualquer carga de prova que se queira colocar em qualquer ponto, sem refazer a soma vetorial de Coulomb toda vez. O sinal de q decide o sentido da força em relação ao campo: se q é positiva, a força tem o mesmo sentido do campo local; se q é negativa, a força é oposta ao campo. Essa relação é o que permite desenhar linhas de campo e, a partir delas, prever a força e a aceleração de uma carga naquela região — a linha de campo é tangente ao vetor campo em cada ponto, mas não é, em geral, a trajetória da carga, que também depende da velocidade inicial. Linhas de campo nascem em cargas positivas (ou no infinito) e morrem em cargas negativas (ou no infinito), nunca se cruzam, porque em cada ponto o campo tem uma única direção definida."
       },
       {
         "title": "Pegadinhas frequentes",
@@ -7024,9 +7024,10 @@
             "fonte"
           ]
         ]
-      ]
+      ],
+      "hint": "Retome as condições do modelo e as relações explicadas neste capítulo. Converta as unidades antes de calcular e justifique o resultado."
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Física",
@@ -7143,7 +7144,7 @@
     "sections": [
       {
         "title": "Guardar carga e campo",
-        "content": "Um capacitor é um dispositivo feito de dois condutores separados por um isolante (o dielétrico), capaz de armazenar carga elétrica e, com ela, energia no campo elétrico criado entre as placas. Ao ligar um capacitor a uma diferença de potencial U, cargas positivas se acumulam numa placa e negativas na outra, na mesma quantidade em módulo, até que o campo criado por essas cargas equilibre a tensão aplicada — nesse ponto, o capacitor está \"carregado\" e a corrente para de fluir por ele em regime permanente. A grandeza que relaciona carga acumulada e tensão é a capacitância, C = Q/U, medida em farads (F), e que depende só da geometria do capacitor e do dielétrico entre as placas, não da carga ou da tensão aplicadas — dobrar U dobra Q proporcionalmente, mantendo C constante, exatamente como a razão entre massa e volume define a densidade de um material independentemente de quanto material se tem. Para um capacitor de placas paralelas de área A e separação d, C = ε×A/d, em que ε é a permissividade do dielétrico: aumentar a área ou aproximar as placas aumenta a capacidade de armazenar carga para uma mesma tensão, e trocar o ar por um dielétrico com ε maior faz o mesmo."
+        "content": "Um capacitor é um dispositivo feito de dois condutores separados por um isolante (o dielétrico), capaz de armazenar carga elétrica e, com ela, energia no campo elétrico criado entre as placas. Ao ligar um capacitor a uma diferença de potencial U, cargas positivas se acumulam numa placa e negativas na outra, na mesma quantidade em módulo, até que o campo criado por essas cargas equilibre a tensão aplicada — nesse ponto, o capacitor está \"carregado\" e a corrente para de fluir por ele em regime permanente. A grandeza que relaciona carga acumulada e tensão é a capacitância, C = Q/U, medida em farads (F), e que depende só da geometria do capacitor e do dielétrico entre as placas, não da carga ou da tensão aplicadas — dobrar U dobra Q proporcionalmente, mantendo C constante, exatamente como a razão entre massa e volume define a densidade de um material independentemente de quanto material se tem. Para um capacitor de placas paralelas de área A e separação d, C = ε×A/d, em que ε é a permissividade do dielétrico: aumentar a área ou aproximar as placas aumenta a capacidade de armazenar carga para uma mesma tensão, e trocar o ar por um dielétrico com ε maior faz o mesmo. Essas relações pressupõem um capacitor ideal, geometria fixa e dielétrico linear. Ao preencher o espaço antes ocupado por ar ou vácuo com um dielétrico de permissividade maior, a capacitância aumenta; ligado a uma fonte de tensão constante, ele recebe mais carga. Se estiver isolado, a carga permanece e a tensão diminui."
       },
       {
         "title": "Energia armazenada",
@@ -7151,7 +7152,7 @@
       },
       {
         "title": "Associações e regime permanente",
-        "content": "Capacitores em paralelo têm a mesma tensão U em cada um, porque estão ligados aos mesmos dois pontos do circuito, e a carga total se distribui entre eles proporcionalmente às capacitâncias individuais; a capacitância equivalente é a soma direta, C_eq = C₁ + C₂ + ..., porque associar capacitores em paralelo equivale a aumentar a área efetiva de armazenamento. Em série, é a carga Q que é igual em todos os capacitores da associação — cada capacitor \"empurra\" a mesma quantidade de carga para o próximo por indução —, e é a tensão total que se divide entre eles; a capacitância equivalente segue 1/C_eq = 1/C₁ + 1/C₂ + ..., o inverso do padrão de resistores, e o resultado é sempre menor que a menor capacitância individual, porque associar em série equivale a aumentar a distância efetiva entre as placas extremas. Em regime permanente, com a corrente contínua estabilizada e o capacitor plenamente carregado, nenhuma corrente atravessa o ramo que contém apenas o capacitor — ele se comporta como um circuito aberto —, e toda a tensão da fonte, descontada a queda nos resistores em série com ele, aparece sobre suas placas; é esse comportamento de \"bloqueio\" em corrente contínua estabilizada que permite calcular a carga final de um capacitor num circuito misto sem resolver equações diferenciais."
+        "content": "Capacitores em paralelo têm a mesma tensão U em cada um, porque estão ligados aos mesmos dois pontos do circuito, e a carga total se distribui entre eles proporcionalmente às capacitâncias individuais; a capacitância equivalente é a soma direta, C_eq = C₁ + C₂ + ..., porque associar capacitores em paralelo equivale a aumentar a área efetiva de armazenamento. Em série, os módulos das cargas Q são iguais quando os capacitores estavam inicialmente descarregados e os nós intermediários permanecem isolados e com carga líquida nula; a redistribuição por indução conserva a carga desses nós. Cargas iniciais nos nós intermediários exigem considerar essa conservação explicitamente —, e é a tensão total que se divide entre eles; a capacitância equivalente segue 1/C_eq = 1/C₁ + 1/C₂ + ..., o inverso do padrão de resistores, e o resultado é sempre menor que a menor capacitância individual, porque associar em série equivale a aumentar a distância efetiva entre as placas extremas. Em regime permanente, com a corrente contínua estabilizada e o capacitor plenamente carregado, nenhuma corrente atravessa o ramo que contém apenas o capacitor — ele se comporta como um circuito aberto —, e toda a tensão da fonte, descontada a queda nos resistores em série com ele, aparece sobre suas placas; é esse comportamento de \"bloqueio\" em corrente contínua estabilizada que permite calcular a carga final de um capacitor num circuito misto sem resolver equações diferenciais."
       },
       {
         "title": "Pegadinhas frequentes",
@@ -7187,9 +7188,10 @@
             "maior"
           ]
         ]
-      ]
+      ],
+      "hint": "Retome as condições do modelo e as relações explicadas neste capítulo. Converta as unidades antes de calcular e justifique o resultado."
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Física",
@@ -7633,7 +7635,7 @@
     "sections": [
       {
         "title": "Quem segura o corpo na curva",
-        "content": "Todo corpo em movimento circular, mesmo com velocidade escalar constante, tem sua velocidade vetorial mudando de direção continuamente, e essa mudança de direção exige, pela segunda lei de Newton, uma força resultante não nula apontando para o centro da trajetória — é a força centrípeta, que não é um novo tipo de força física, mas sim o nome dado à resultante das forças reais (peso, tração, normal, atrito, força elétrica) que, numa dada situação, aponta para o centro e sustenta a curvatura do movimento. A pergunta central de qualquer problema de dinâmica circular é \"quem, fisicamente, está fazendo o papel de força centrípeta aqui\" — numa curva plana com atrito, é o atrito estático entre pneu e pista; num pêndulo cônico, é a componente horizontal da tração do fio; numa curva com pista inclinada sem atrito, é a componente horizontal da normal. Identificar corretamente qual força (ou combinação de forças) desempenha esse papel em cada situação concreta é o que resolve a maior parte desses problemas — sem essa identificação, a fórmula da força centrípeta fica sem conteúdo físico aplicável."
+        "content": "Todo corpo em movimento circular, mesmo com velocidade escalar constante, tem sua velocidade vetorial mudando de direção continuamente, e essa mudança de direção exige, pela segunda lei de Newton, uma componente radial não nula da força resultante, apontando para o centro da trajetória — é a componente centrípeta da resultante, que não é um novo tipo de força física, mas a soma das componentes radiais das forças reais (peso, tração, normal, atrito, força elétrica), dirigida para o centro e responsável pela curvatura do movimento. A pergunta central de qualquer problema de dinâmica circular é \"quem, fisicamente, está fazendo o papel de força centrípeta aqui\" — numa curva plana com atrito, é o atrito estático entre pneu e pista; num pêndulo cônico, é a componente horizontal da tração do fio; numa curva com pista inclinada sem atrito, é a componente horizontal da normal. Identificar corretamente qual força (ou combinação de forças) desempenha esse papel em cada situação concreta é o que resolve a maior parte desses problemas — sem essa identificação, a fórmula da força centrípeta fica sem conteúdo físico aplicável."
       },
       {
         "title": "A equação e seus usos",
@@ -7645,7 +7647,7 @@
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "O erro mais grave é somar uma \"força centrífuga\" ao diagrama de forças de um corpo em movimento circular observado de um referencial parado no chão — essa força não existe nesse referencial; o que existe são as forças reais, e a força centrípeta é a resultante delas, nunca uma força adicional. O segundo erro é, no ponto mais alto de uma trajetória circular vertical, escrever Fc = mg − N em vez de Fc = mg + N — no ponto mais alto, tanto o peso quanto a força normal da pista (quando ela empurra o corpo para dentro, como na parte interna de um loop) apontam para o centro, então se somam, e não se subtraem. O terceiro erro é achar que a velocidade mínima no ponto mais alto de um loop é zero — na verdade é v_mín = √(gR), a velocidade abaixo da qual a força centrípeta necessária seria menor que o próprio peso, fazendo o corpo cair antes de completar a trajetória. O quarto é, no pêndulo cônico, tentar decompor as forças na direção do fio e perpendicular a ele em vez de na horizontal e na vertical — a decomposição correta usa a vertical (onde o corpo não acelera, pois se move num círculo horizontal) e a horizontal (onde a aceleração centrípeta de fato ocorre). Um quinto erro é esquecer que a força centrípeta é sempre perpendicular à velocidade instantânea do corpo, nunca com componente na direção do movimento — é exatamente essa perpendicularidade que garante que o módulo da velocidade não mude, mesmo havendo aceleração (centrípeta) constante."
+        "content": "O erro mais grave é somar uma \"força centrífuga\" ao diagrama de forças de um corpo em movimento circular observado de um referencial parado no chão — essa força não existe nesse referencial; o que existe são as forças reais, e a força centrípeta é a resultante de suas componentes radiais, nunca uma força adicional. O segundo erro é, no ponto mais alto de uma trajetória circular vertical, escrever Fc = mg − N em vez de Fc = mg + N — no ponto mais alto, tanto o peso quanto a força normal da pista (quando ela empurra o corpo para dentro, como na parte interna de um loop) apontam para o centro, então se somam, e não se subtraem. O terceiro erro é achar que a velocidade mínima no ponto mais alto de um loop é zero — na verdade é v_mín = √(gR), a velocidade abaixo da qual a força centrípeta necessária seria menor que o próprio peso, fazendo o corpo cair antes de completar a trajetória. O quarto é escolher eixos e deixar de decompor a aceleração nesses mesmos eixos. No pêndulo cônico, a decomposição em vertical e horizontal simplifica a solução (a aceleração vertical é nula e a horizontal é centrípeta); outros eixos também são válidos, desde que se decomponha a aceleração nesses mesmos eixos. Um quinto erro é confundir a componente centrípeta da força com a força resultante total. A componente centrípeta é perpendicular à velocidade; se a rapidez variar, a resultante inclui também uma componente tangencial. No movimento circular uniforme, a resultante é apenas centrípeta: seu módulo é constante, mas sua direção muda ao longo da volta."
       },
       {
         "title": "Pratique e confira",
@@ -7653,7 +7655,7 @@
       }
     ],
     "recall": {
-      "prompt": "Um carro de 1000 kg faz uma curva de raio 50 m a 10 m/s. Calcule a força centrípeta necessária e diga quem a fornece.",
+      "prompt": "Um carro de 1000 kg faz uma curva horizontal plana de raio 50 m, sem derrapar, a 10 m/s constante. Despreze outras forças horizontais. Calcule a força centrípeta necessária e diga quem a fornece.",
       "elements": [
         [
           "forca de 2000 N",
@@ -7675,9 +7677,10 @@
             "atrito"
           ]
         ]
-      ]
+      ],
+      "hint": "Retome as condições do modelo e as relações explicadas neste capítulo. Converta as unidades antes de calcular e justifique o resultado."
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Física",
@@ -8633,7 +8636,7 @@
     "sections": [
       {
         "title": "O peso da coluna",
-        "content": "A pressão exercida por uma coluna de líquido em repouso decorre diretamente do peso desse líquido distribuído sobre a área da base que o sustenta — quanto mais alta a coluna, mais líquido há empilhado acima de um dado ponto, e mais peso esse ponto precisa suportar. A equação fundamental da hidrostática, P = P₀ + ρ×g×h, relaciona a pressão num ponto a uma profundidade h dentro de um líquido de densidade ρ, somada à pressão P₀ que já existe na superfície livre do líquido (tipicamente a pressão atmosférica). Essa dependência exclusivamente da profundidade h, e não da forma do recipiente nem da quantidade total de líquido, é o chamado paradoxo hidrostático: dois recipientes de formatos completamente diferentes, um estreito e alto, outro largo e baixo, mas com líquido até a mesma altura, exercem exatamente a mesma pressão no fundo — o peso total de líquido pode ser bem diferente entre os dois recipientes, mas a pressão, que é peso por unidade de área, acaba sendo igual, porque a área maior do recipiente largo \"diluí\" o peso maior na mesma proporção."
+        "content": "A pressão exercida por uma coluna de líquido em repouso decorre diretamente do peso desse líquido distribuído sobre a área da base que o sustenta — quanto mais alta a coluna, mais líquido há empilhado acima de um dado ponto, e mais peso esse ponto precisa suportar. A equação fundamental da hidrostática, P = P₀ + ρ×g×h, relaciona a pressão num ponto a uma profundidade h dentro de um líquido de densidade ρ, somada à pressão P₀ que já existe na superfície livre do líquido (tipicamente a pressão atmosférica). Essa dependência exclusivamente da profundidade h, e não da forma do recipiente nem da quantidade total de líquido, é o chamado paradoxo hidrostático: dois recipientes de formatos completamente diferentes, um estreito e alto, outro largo e baixo, mas com líquido até a mesma altura, exercem exatamente a mesma pressão no fundo — o peso total de líquido pode ser bem diferente entre os dois recipientes, mas a pressão é a mesma se a densidade, a gravidade, a profundidade e a pressão na superfície forem iguais. Em recipientes com paredes inclinadas, as forças das paredes sobre o líquido também entram no equilíbrio vertical: a força no fundo não precisa ser igual ao peso total do líquido. A pressão manométrica é o acréscimo ρgh em relação à pressão na superfície; a pressão absoluta inclui P₀. Por exemplo, a 10 m em água de densidade 1000 kg/m³, com g = 10 m/s², o acréscimo é 100000 Pa; se P₀ = 100000 Pa, a pressão absoluta é 200000 Pa."
       },
       {
         "title": "Pascal e Arquimedes",
@@ -8653,7 +8656,7 @@
       }
     ],
     "recall": {
-      "prompt": "Calcule a pressão hidrostática a 10 m de profundidade na água (d = 1000 kg/m³, g = 10 m/s²) e diga se a forma do recipiente altera o resultado.",
+      "prompt": "Calcule a pressão manométrica (o acréscimo em relação à superfície) a 10 m de profundidade na água em repouso (ρ = 1000 kg/m³, g = 10 m/s²). Diga se mudar a forma do recipiente altera esse acréscimo, mantendo a mesma profundidade e densidade.",
       "elements": [
         [
           "pressao de 100000 Pa",
@@ -8679,9 +8682,10 @@
             "independe"
           ]
         ]
-      ]
+      ],
+      "hint": "Retome as condições do modelo e as relações explicadas neste capítulo. Converta as unidades antes de calcular e justifique o resultado."
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Física",
@@ -9454,7 +9458,7 @@
     "sections": [
       {
         "title": "Girar é acelerar",
-        "content": "No movimento circular, mesmo quando a velocidade escalar é constante (movimento circular uniforme), o corpo está necessariamente acelerando, porque a direção do vetor velocidade muda continuamente ao longo da trajetória — e como aceleração é definida como a taxa de variação do vetor velocidade (não apenas de seu módulo), qualquer mudança de direção, mesmo sem mudança de módulo, já constitui aceleração. Essa aceleração, chamada centrípeta, aponta sempre para o centro da trajetória circular, perpendicularmente à velocidade instantânea, e tem módulo a_c = v²/R = ω²×R, com R o raio da trajetória. É essa aceleração centrípeta, exigida geometricamente por qualquer trajetória curva, que precisa ser sustentada por alguma força resultante real (tensão, atrito, força elétrica, gravitacional, conforme a situação física específica) apontando para o centro — sem essa força, o corpo não conseguiria manter a trajetória circular e seguiria em linha reta, pela primeira lei de Newton."
+        "content": "No movimento circular, mesmo quando a velocidade escalar é constante (movimento circular uniforme), o corpo está necessariamente acelerando, porque a direção do vetor velocidade muda continuamente ao longo da trajetória — e como aceleração é definida como a taxa de variação do vetor velocidade (não apenas de seu módulo), qualquer mudança de direção, mesmo sem mudança de módulo, já constitui aceleração. Essa aceleração, chamada centrípeta, aponta sempre para o centro da trajetória circular, perpendicularmente à velocidade instantânea, e tem módulo a_c = v²/R = ω²×R, com R o raio da trajetória. É essa aceleração centrípeta, exigida geometricamente por qualquer trajetória curva, que precisa ser sustentada por alguma força resultante real (tensão, atrito, força elétrica, gravitacional, conforme a situação física específica) apontando para o centro — sem essa força, o corpo não conseguiria manter a trajetória circular e seguiria em linha reta, pela primeira lei de Newton. No movimento circular uniforme, o módulo da aceleração centrípeta é constante, mas seu vetor muda de direção ao longo da volta. Se a rapidez variar, existe também aceleração tangencial; a aceleração total deixa de ser apenas centrípeta."
       },
       {
         "title": "Período, frequência e as duas velocidades",
@@ -9462,7 +9466,7 @@
       },
       {
         "title": "Acoplamentos",
-        "content": "Em acoplamentos mecânicos entre rodas, engrenagens ou polias, existem duas configurações fundamentais e opostas. No acoplamento por correia ou contato direto entre bordas (como duas engrenagens engrenadas entre si, ou duas polias ligadas por uma correia), a velocidade linear é a mesma nos pontos de contato de ambas as rodas (v₁=v₂), porque a correia ou o contato direto transmite exatamente o mesmo deslocamento linear de uma superfície para a outra — dessa igualdade decorre que ω₁×R₁=ω₂×R₂, então rodas de raios diferentes acopladas dessa forma giram com velocidades angulares inversamente proporcionais aos seus raios: a roda menor gira mais rápido angularmente que a maior. Já no acoplamento por eixo comum (duas rodas montadas no mesmo eixo rígido, girando solidariamente), é a velocidade angular que é igual nas duas (ω₁=ω₂), porque ambas completam a mesma fração de volta no mesmo intervalo de tempo, estando rigidamente presas ao mesmo eixo — nesse caso, as velocidades lineares dos pontos externos de cada roda são diferentes, proporcionais aos respectivos raios, exatamente o oposto do padrão do acoplamento por correia."
+        "content": "Em acoplamentos mecânicos entre rodas, engrenagens ou polias, existem duas configurações fundamentais e opostas. No acoplamento por correia ou contato direto entre bordas (como duas engrenagens engrenadas entre si, ou duas polias ligadas por uma correia), sem deslizamento da correia ou das superfícies em contato, os módulos das velocidades tangenciais nas bordas são iguais (v₁=v₂), porque a correia ou o contato direto transmite exatamente o mesmo deslocamento linear de uma superfície para a outra — dessa igualdade decorre que ω₁×R₁=ω₂×R₂, então rodas de raios diferentes acopladas dessa forma giram com velocidades angulares inversamente proporcionais aos seus raios: a roda menor gira mais rápido angularmente que a maior. Já no acoplamento por eixo comum (duas rodas montadas no mesmo eixo rígido, girando solidariamente), é a velocidade angular que é igual nas duas (ω₁=ω₂), porque ambas completam a mesma fração de volta no mesmo intervalo de tempo, estando rigidamente presas ao mesmo eixo — nesse caso, as velocidades lineares dos pontos externos de cada roda são diferentes, proporcionais aos respectivos raios, exatamente o oposto do padrão do acoplamento por correia."
       },
       {
         "title": "Pegadinhas frequentes",
@@ -9500,9 +9504,10 @@
             "omega"
           ]
         ]
-      ]
+      ],
+      "hint": "Retome as condições do modelo e as relações explicadas neste capítulo. Converta as unidades antes de calcular e justifique o resultado."
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Física",
@@ -10566,11 +10571,11 @@
       },
       {
         "title": "Como calcular",
-        "content": "Para uma transformação a pressão constante (isobárica), o cálculo do trabalho realizado pelo gás se simplifica bastante: τ=P×ΔV, o produto da pressão constante pela variação de volume do gás — essa fórmula é uma aplicação direta da definição geral de trabalho (força vezes deslocamento) combinada com a relação entre força e pressão (F=P×A) e entre deslocamento e variação de volume (ΔV=A×Δx, com Δx o deslocamento do êmbolo). Se o gás se expande (ΔV positivo), o trabalho realizado por ele é positivo; se é comprimido (ΔV negativo, volume final menor que o inicial), o trabalho realizado pelo gás é negativo, o que significa, na convenção usual, que o ambiente externo realizou trabalho positivo sobre o gás para comprimi-lo — essa é exatamente a mesma convenção de sinais já estabelecida na primeira lei da termodinâmica, com τ positivo correspondendo a trabalho realizado pelo sistema (o gás) sobre o ambiente."
+        "content": "Para uma transformação a pressão constante (isobárica), o cálculo do trabalho realizado pelo gás se simplifica bastante: τ=P×ΔV, o produto da pressão constante pela variação de volume do gás — essa fórmula é uma aplicação direta da definição geral de trabalho (força vezes deslocamento) combinada com a relação entre força e pressão (F=P×A) e entre deslocamento e variação de volume (ΔV=A×Δx, com Δx o deslocamento do êmbolo). Se o gás se expande (ΔV positivo), o trabalho realizado por ele é positivo; se é comprimido (ΔV negativo, volume final menor que o inicial), o trabalho realizado pelo gás é negativo, o que significa, na convenção usual, que o ambiente externo realizou trabalho positivo sobre o gás para comprimi-lo — essa é exatamente a mesma convenção de sinais já estabelecida na primeira lei da termodinâmica, com τ positivo correspondendo a trabalho realizado pelo sistema (o gás) sobre o ambiente. Para um processo quase estático, a pressão do gás pode ser usada na integral do trabalho, W = ∫p dV. Em um processo irreversível, o trabalho de fronteira é calculado com a pressão externa resistente, W = ∫p_ext dV; na expansão livre contra o vácuo, p_ext = 0 e W = 0, mesmo que o volume aumente."
       },
       {
         "title": "Ler o diagrama p-V",
-        "content": "Um diagrama pressão-volume (diagrama p-V) representa graficamente a evolução de um processo termodinâmico, com a pressão no eixo vertical e o volume no eixo horizontal, e uma propriedade geométrica fundamental desse diagrama é que o trabalho realizado pelo gás, para qualquer tipo de transformação (não apenas isobárica), corresponde exatamente à área sob a curva que representa o processo, entre os volumes inicial e final — para uma transformação isobárica, essa área é um retângulo simples (base ΔV, altura P constante), mas para transformações em que a pressão varia ao longo do processo (como numa transformação isotérmica ou adiabática), a área sob a curva assume formas mais complexas, exigindo, em princípio, métodos de cálculo integral para uma determinação exata, embora aproximações geométricas (decompor a área em retângulos e triângulos) frequentemente bastem para o nível de precisão exigido em problemas de vestibular. Num ciclo termodinâmico fechado, representado como uma curva fechada no diagrama p-V, a área delimitada pela própria curva corresponde ao trabalho líquido realizado pelo gás ao longo de todo o ciclo completo — positivo se o ciclo é percorrido no sentido horário no diagrama (o gás realiza mais trabalho na expansão do que recebe na compressão), e negativo se percorrido no sentido anti-horário."
+        "content": "Um diagrama pressão-volume (diagrama p-V) representa graficamente a evolução de um processo termodinâmico, com a pressão no eixo vertical e o volume no eixo horizontal, e uma propriedade geométrica fundamental desse diagrama é que o trabalho realizado pelo gás, para um processo quase estático (não apenas isobárico), corresponde exatamente à área sob a curva que representa o processo, entre os volumes inicial e final — para uma transformação isobárica, essa área é um retângulo simples (base ΔV, altura P constante), mas para transformações em que a pressão varia ao longo do processo (como numa transformação isotérmica ou adiabática), a área sob a curva assume formas mais complexas, exigindo, em princípio, métodos de cálculo integral para uma determinação exata, embora aproximações geométricas (decompor a área em retângulos e triângulos) frequentemente bastem para o nível de precisão exigido em problemas de vestibular. Num ciclo termodinâmico fechado, representado como uma curva fechada no diagrama p-V, a área delimitada pela própria curva corresponde ao trabalho líquido realizado pelo gás ao longo de todo o ciclo completo — positivo se o ciclo é percorrido no sentido horário no diagrama (o gás realiza mais trabalho na expansão do que recebe na compressão), e negativo se percorrido no sentido anti-horário."
       },
       {
         "title": "Pegadinhas frequentes",
@@ -10578,7 +10583,7 @@
       },
       {
         "title": "Pratique e confira",
-        "content": "Um gás se expande a pressão constante de 3×10⁵ Pa, de um volume inicial de 0,02 m³ para um volume final de 0,05 m³. Calcule o trabalho realizado pelo gás. τ=P×ΔV=3×10⁵×(0,05−0,02)=3×10⁵×0,03=9.000 J. Agora um problema mais analítico: um gás percorre um ciclo fechado representado num diagrama p-V por um retângulo, com pressão variando entre 1×10⁵ Pa e 3×10⁵ Pa, e volume variando entre 0,01 m³ e 0,04 m³, percorrido no sentido horário. Calcule o trabalho líquido realizado pelo gás ao longo de um ciclo completo. A área do retângulo delimitado pelo ciclo é a base (variação de volume) vezes a altura (variação de pressão): ΔV=0,04−0,01=0,03 m³, ΔP=3×10⁵−1×10⁵=2×10⁵ Pa, logo a área é 0,03×2×10⁵=6.000 J. Como o ciclo é percorrido no sentido horário, o trabalho líquido realizado pelo gás ao longo do ciclo completo é positivo, τ_ciclo=+6.000 J — o gás realiza, ao longo de todo o ciclo, mais trabalho durante os trechos de expansão (a pressões mais altas do lado direito do ciclo, se o retângulo for percorrido nesse sentido) do que recebe de volta durante os trechos de compressão (a pressões mais baixas), resultando num ganho líquido de trabalho entregue ao ambiente por ciclo completo — exatamente o princípio de funcionamento de qualquer máquina térmica cíclica, que repete esse ciclo continuamente para entregar trabalho útil de forma sustentada ao longo do tempo."
+        "content": "Um gás se expande a pressão constante de 3×10⁵ Pa, de um volume inicial de 0,02 m³ para um volume final de 0,05 m³. Calcule o trabalho realizado pelo gás. τ=P×ΔV=3×10⁵×(0,05−0,02)=3×10⁵×0,03=9.000 J. Agora um problema mais analítico: um gás percorre um ciclo fechado representado num diagrama p-V por um retângulo, com pressão variando entre 1×10⁵ Pa e 3×10⁵ Pa, e volume variando entre 0,01 m³ e 0,04 m³, percorrido no sentido horário. Calcule o trabalho líquido realizado pelo gás ao longo de um ciclo completo. A área do retângulo delimitado pelo ciclo é a base (variação de volume) vezes a altura (variação de pressão): ΔV=0,04−0,01=0,03 m³, ΔP=3×10⁵−1×10⁵=2×10⁵ Pa, logo a área é 0,03×2×10⁵=6.000 J. Como o ciclo é percorrido no sentido horário, o trabalho líquido realizado pelo gás ao longo do ciclo completo é positivo, τ_ciclo=+6.000 J — o gás realiza, ao longo de todo o ciclo, mais trabalho durante os trechos de expansão (a pressões mais altas no trecho superior do diagrama, percorrido da esquerda para a direita) do que recebe de volta durante os trechos de compressão (a pressões mais baixas), resultando num ganho líquido de trabalho entregue ao ambiente por ciclo completo — exatamente o princípio de funcionamento de qualquer máquina térmica cíclica, que repete esse ciclo continuamente para entregar trabalho útil de forma sustentada ao longo do tempo."
       }
     ],
     "recall": {
@@ -10606,9 +10611,10 @@
             "grafico"
           ]
         ]
-      ]
+      ],
+      "hint": "Retome as condições do modelo e as relações explicadas neste capítulo. Converta as unidades antes de calcular e justifique o resultado."
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Física",
@@ -10679,7 +10685,7 @@
       },
       {
         "title": "Trabalho de forças específicas",
-        "content": "Certas forças específicas, recorrentes em problemas de vestibular, merecem atenção quanto ao cálculo de seu trabalho em situações típicas: o trabalho do peso, ao longo de qualquer trajetória, depende apenas da variação de altura (não do caminho percorrido, já que o peso é uma força conservativa), τ_peso=−mg×Δh (negativo se o corpo sobe, ganhando altura; positivo se desce, perdendo altura); o trabalho da força normal é sempre nulo em superfícies onde o corpo se move ao longo delas, já que a normal é sempre perpendicular à superfície e, portanto, ao deslocamento sobre ela; o trabalho da força de atrito é sempre negativo quando o atrito se opõe ao movimento (a situação mais comum), τ_atrito=−f×d, e depende explicitamente da distância total percorrida, não apenas do deslocamento líquido entre início e fim — uma trajetória com idas e vindas dissipa mais energia por atrito do que um deslocamento direto entre os mesmos dois pontos, mesmo que o deslocamento líquido seja idêntico nos dois casos."
+        "content": "Certas forças específicas, recorrentes em problemas de vestibular, merecem atenção quanto ao cálculo de seu trabalho em situações típicas: o trabalho do peso, ao longo de qualquer trajetória, depende apenas da variação de altura (não do caminho percorrido, já que o peso é uma força conservativa), τ_peso=−mg×Δh (negativo se o corpo sobe, ganhando altura; positivo se desce, perdendo altura); o trabalho da força normal é nulo quando o deslocamento do corpo é tangente a uma superfície fixa, pois a normal é perpendicular a esse deslocamento; em uma plataforma que sobe, a normal pode realizar trabalho positivo sobre o corpo, porque o deslocamento tem componente na direção da normal; o trabalho da força de atrito é sempre negativo quando o atrito se opõe ao movimento (a situação mais comum), τ_atrito=−f×d, e depende explicitamente da distância total percorrida, não apenas do deslocamento líquido entre início e fim — uma trajetória com idas e vindas dissipa mais energia por atrito do que um deslocamento direto entre os mesmos dois pontos, mesmo que o deslocamento líquido seja idêntico nos dois casos."
       },
       {
         "title": "Pegadinhas frequentes",
@@ -10687,7 +10693,7 @@
       },
       {
         "title": "Pratique e confira",
-        "content": "Uma força de 20 N é aplicada a um bloco, formando um ângulo de 60° com a direção do deslocamento horizontal do bloco, que se move 5 m (cos60°=0,5). Calcule o trabalho realizado por essa força. τ=F×d×cos θ=20×5×0,5=50 J. Agora um problema mais analítico: um bloco de 4 kg é elevado verticalmente por 3 m e, em seguida, deslocado horizontalmente por 6 m sobre uma superfície com coeficiente de atrito cinético 0,3, antes de ser novamente abaixado 3 m até sua altura original (g=10 m/s²). Calcule o trabalho total realizado pelo peso e pelo atrito ao longo de todo o percurso. O trabalho do peso depende apenas da variação líquida de altura: como o bloco sobe 3 m e depois desce 3 m, retornando exatamente à altura original, Δh=0, então τ_peso_total=0 J, independentemente dos detalhes do percurso intermediário. O trabalho do atrito, por outro lado, ocorre apenas no trecho horizontal (nos trechos verticais, supondo-se ausência de atrito nesse levantamento, apenas o peso atua na direção do movimento): a força de atrito é f=μ×N=μ×mg=0,3×4×10=12 N, e o trabalho é τ_atrito=−f×d=−12×6=−72 J (negativo, opondo-se ao deslocamento horizontal). O resultado — trabalho do peso nulo ao longo de todo o percurso fechado, mas trabalho do atrito claramente não nulo e negativo — ilustra de forma direta a diferença fundamental entre uma força conservativa (peso, cujo trabalho depende só da posição final relativa à inicial) e uma força não conservativa (atrito, cujo trabalho depende do caminho específico percorrido, mesmo que o ponto de chegada coincida exatamente com o ponto de partida em altura)."
+        "content": "Uma força de 20 N é aplicada a um bloco, formando um ângulo de 60° com a direção do deslocamento horizontal do bloco, que se move 5 m (cos60°=0,5). Calcule o trabalho realizado por essa força. τ=F×d×cos θ=20×5×0,5=50 J. Agora um problema mais analítico: um bloco de 4 kg é elevado verticalmente por 3 m e, em seguida, deslocado horizontalmente por 6 m sobre uma superfície com coeficiente de atrito cinético 0,3, antes de ser novamente abaixado 3 m até sua altura original (g=10 m/s²). Calcule o trabalho total realizado pelo peso e pelo atrito ao longo de todo o percurso. O trabalho do peso depende apenas da variação líquida de altura: como o bloco sobe 3 m e depois desce 3 m, retornando exatamente à altura original, Δh=0, então τ_peso_total=0 J, independentemente dos detalhes do percurso intermediário. O trabalho do atrito, por outro lado, ocorre apenas no trecho horizontal (nos trechos verticais, supondo-se ausência de atrito no levantamento, calcula-se aqui apenas o trabalho do peso; a força que eleva ou sustenta o bloco também pode realizar trabalho, mas não foi solicitada): a força de atrito é f=μ×N=μ×mg=0,3×4×10=12 N, e o trabalho é τ_atrito=−f×d=−12×6=−72 J (negativo, opondo-se ao deslocamento horizontal). O resultado — trabalho do peso nulo ao longo de todo o percurso fechado, mas trabalho do atrito claramente não nulo e negativo — ilustra de forma direta a diferença fundamental entre uma força conservativa (peso, cujo trabalho depende só da posição final relativa à inicial) e uma força não conservativa (atrito, cujo trabalho depende do caminho específico percorrido, mesmo que o ponto de chegada coincida exatamente com o ponto de partida em altura)."
       }
     ],
     "recall": {
@@ -10713,9 +10719,10 @@
             "angulo"
           ]
         ]
-      ]
+      ],
+      "hint": "Retome as condições do modelo e as relações explicadas neste capítulo. Converta as unidades antes de calcular e justifique o resultado."
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Física",
