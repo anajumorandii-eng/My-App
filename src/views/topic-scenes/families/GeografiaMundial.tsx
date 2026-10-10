@@ -401,7 +401,8 @@ function NileBasinDetail({ active }: Scene) {
       <text x="382" y="208" className="bi-small bi-strong">Grande Barragem do Renascimento</text>
       <text x="382" y="222" className="bi-small">Etíope, no Nilo Azul</text>
       <text x="382" y="246" className="bi-hand-sm">o enchimento pode reter água;</text>
-      <text x="382" y="262" className="bi-hand-sm">impacto depende das chuvas e operação</text>
+      <text x="382" y="262" className="bi-hand-sm">efeito varia com chuvas,</text>
+      <text x="382" y="278" className="bi-hand-sm">seca e operação</text>
     </motion.g>
     <motion.g {...show(1)}>
       <text x="382" y="78" className="bi-panel-title">2 · TENSÃO DIPLOMÁTICA</text>
