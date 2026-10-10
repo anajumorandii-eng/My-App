@@ -284,42 +284,21 @@ function Navigations({ active, t }: { active: number; t: SceneTransition }) {
 }
 
 function Colonization({ active, t }: { active: number; t: SceneTransition }) {
-  // Metáfora de balança, avisada no rodapé: cada fator sozinho não inclina
-  // o prato; só os três juntos. É a afirmação do capítulo ("nenhum
-  // isoladamente seria suficiente"), não uma medida de peso.
-  const all = active === 3;
-  const factors = [
-    { label: 'resistência', x: 390 },
-    { label: 'epidemias', x: 450 },
-    { label: 'oposição jesuíta', x: 510 },
-  ];
-  return <HumanitiesCorePlate kind="colonization" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Montagem da colonização: resistência indígena, epidemias e oposição jesuíta só juntas explicam a passagem ao tráfico transatlântico; fator ${active + 1} destacado`}>
+  const factors = ['Resistência indígena', 'Epidemias e guerras', 'Disputas pelo trabalho', 'Comércio e tráfico'];
+  return <HumanitiesCorePlate kind="colonization" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Montagem da colonização: fatores históricos e coexistência regional da escravização indígena e africana; recorte ${active + 1} destacado`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
-    <text x="30" y="40" className="hg-kicker">MÃO DE OBRA NA COLÔNIA · SÉCULO XVI</text>
-    <path d="M296 300h48l-24-86Z" className="hg-pivot" />
-    <motion.g initial={false} animate={{ rotate: all ? 5 : 0 }} transition={paced(t, 0.9, all ? 0.9 : 0)} style={{ transformOrigin: '320px 214px' }}>
-      <path d="M130 214H510" className="hg-beam" />
-      <path d="M150 214l-30 50h100l-30-50M490 214l-30 50h100l-30-50" className="hg-rope" />
-      <path d="M110 264h120a60 14 0 0 1-120 0ZM410 264h120a60 14 0 0 1-120 0Z" className="hg-pan" />
-      {factors.map((f, k) => {
-        const present = all || active === k;
-        return <motion.g key={f.label} initial={false} animate={{ y: present ? 0 : -118, opacity: present ? 1 : 0.35 }} transition={paced(t, 0.6, all ? k * 0.2 : 0)}>
-          <rect x={f.x - 20} y="232" width="40" height="30" rx="6" className="hg-weight" />
-          {k === 0 && <path d={`M${f.x - 8} 254l10-14 6 8M${f.x + 2} 240l6-4`} className="hg-weight-icon" />}
-          {k === 1 && <g><circle cx={f.x} cy="247" r="6" className="hg-weight-icon" />{[0, 60, 120, 180, 240, 300].map(a => <path key={a} d={`M${f.x + 6 * Math.cos(a * Math.PI / 180)} ${247 + 6 * Math.sin(a * Math.PI / 180)}l${3 * Math.cos(a * Math.PI / 180)} ${3 * Math.sin(a * Math.PI / 180)}`} className="hg-weight-icon" />)}</g>}
-          {k === 2 && <path d={`M${f.x} 238v18M${f.x - 6} 244h12`} className="hg-weight-icon" />}
-        </motion.g>;
-      })}
-    </motion.g>
-      <text x="170" y="300" textAnchor="middle" className="hg-label">escravização</text>
-      <text x="170" y="316" textAnchor="middle" className="hg-label">indígena</text>
-      <text x="470" y="300" textAnchor="middle" className="hg-label">tráfico transatlântico</text>
-      <text x="470" y="316" textAnchor="middle" className="hg-label">de africanos</text>
-    {factors.map((f, k) => <text key={f.label} x={f.x} y={160 + (k % 2) * 16} textAnchor="middle" className={all || active === k ? 'hg-factor hg-factor-on' : 'hg-factor'}>{f.label}</text>)}
-    <motion.text x="320" y="90" textAnchor="middle" className="hg-hand" initial={false} animate={{ opacity: 1 }} key={all ? 'all' : 'one'} transition={paced(t, 0.4, 0.8)}>
-      {all ? 'juntos, inclinam a balança' : 'sozinho, não basta'}
-    </motion.text>
-    <text x="30" y="344" className="hg-footnote">Metáfora: sem peso medido.</text>
+    <text x="30" y="40" className="hg-kicker">TRABALHO COLONIAL · DIFERENÇAS REGIONAIS</text>
+    {factors.map((label, k) => <motion.g key={label} className={active === k ? 'hg-process-active' : undefined} initial={false} animate={{ y: active === k ? -3 : 0 }} transition={t}>
+      <rect x={30 + (k % 2) * 290} y={65 + Math.floor(k / 2) * 70} width="270" height="52" rx="10" className="hg-document" />
+      <text x={165 + (k % 2) * 290} y={96 + Math.floor(k / 2) * 70} textAnchor="middle" className="hg-label">{label}</text>
+    </motion.g>)}
+    <text x="310" y="218" textAnchor="middle" className="hg-hand">causas contextualizadas, sem fórmula universal</text>
+    <path d="M310 230v12M165 242h290M165 242v12M455 242v12" className="hg-rope" />
+    <text x="165" y="276" textAnchor="middle" className="hg-label">Nordeste açucareiro</text>
+    <text x="165" y="297" textAnchor="middle" className="hg-label">maior fluxo de africanos escravizados</text>
+    <text x="455" y="276" textAnchor="middle" className="hg-label">São Vicente · século XVII</text>
+    <text x="455" y="297" textAnchor="middle" className="hg-label">persistência do cativeiro indígena</text>
+    <text x="30" y="334" className="hg-footnote">Explorações coexistiram; o esquema não mede o peso das causas.</text>
   </svg>}</HumanitiesCorePlate>;
 }
 

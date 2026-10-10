@@ -1,0 +1,34 @@
+
+ RUN  v4.1.11 /workspace/My-App
+
+stderr | src/views/Sessao.midnight.test.tsx > Sessao > anuncia o tempo do cronômetro ao cruzar um minuto e ao concluir
+[Crivo] matéria sem perfil registrado; usando perfil neutro: Matéria
+
+ ❯ src/views/Sessao.midnight.test.tsx (17 tests | 1 failed | 16 skipped) 346ms
+     × anuncia o tempo do cronômetro ao cruzar um minuto e ao concluir 344ms
+
+⎯⎯⎯⎯⎯⎯⎯ Failed Tests 1 ⎯⎯⎯⎯⎯⎯⎯
+
+ FAIL  src/views/Sessao.midnight.test.tsx > Sessao > anuncia o tempo do cronômetro ao cruzar um minuto e ao concluir
+Error: expect(element).toHaveTextContent()
+
+Expected element to have text content:
+  Cronômetro concluído: 00:00
+Received:
+  01:00Tempo restante: 01:00
+ ❯ src/views/Sessao.midnight.test.tsx:473:23
+    471|
+    472|     act(() => vi.advanceTimersByTime(60_000));
+    473|     expect(liveTimer).toHaveTextContent('Cronômetro concluído: 00:00');
+       |                       ^
+    474|     expect(screen.getByText('Tempo de estudo registrado')).toBeInTheDo…
+    475|   });
+
+⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯⎯[1/1]⎯
+
+
+ Test Files  1 failed (1)
+      Tests  1 failed | 16 skipped (17)
+   Start at  03:02:11
+   Duration  2.21s (transform 557ms, setup 142ms, import 824ms, tests 346ms, environment 737ms)
+

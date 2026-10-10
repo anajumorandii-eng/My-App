@@ -1,0 +1,76 @@
+[
+  {
+    "id": "fis-termologia-calor",
+    "width": 360,
+    "theme": "dark",
+    "motion": "reduce",
+    "file": "360-dark-fis-termologia-calor.jpg"
+  },
+  {
+    "id": "summary-biologia-poriferos-e-cnidarios",
+    "width": 360,
+    "theme": "dark",
+    "motion": "reduce",
+    "file": "360-dark-summary-biologia-poriferos-e-cnidarios.jpg"
+  },
+  {
+    "id": "summary-historia-a-montagem-da-colonizacao",
+    "width": 360,
+    "theme": "dark",
+    "motion": "reduce",
+    "file": "360-dark-summary-historia-a-montagem-da-colonizacao.jpg"
+  },
+  {
+    "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+    "width": 360,
+    "theme": "dark",
+    "motion": "reduce",
+    "file": "360-dark-summary-historia-a-crise-do-antigo-sistema-colonial.jpg"
+  },
+  {
+    "id": "fis-termologia-calor",
+    "width": 1440,
+    "theme": "light",
+    "motion": "reduce",
+    "file": "1440-light-fis-termologia-calor.jpg"
+  },
+  {
+    "id": "summary-biologia-poriferos-e-cnidarios",
+    "width": 1440,
+    "theme": "light",
+    "motion": "reduce",
+    "file": "1440-light-summary-biologia-poriferos-e-cnidarios.jpg"
+  },
+  {
+    "id": "summary-historia-a-montagem-da-colonizacao",
+    "width": 1440,
+    "theme": "light",
+    "motion": "reduce",
+    "file": "1440-light-summary-historia-a-montagem-da-colonizacao.jpg"
+  },
+  {
+    "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+    "width": 1440,
+    "theme": "light",
+    "motion": "reduce",
+    "file": "1440-light-summary-historia-a-crise-do-antigo-sistema-colonial.jpg"
+  },
+  {
+    "id": "summary-historia-a-montagem-da-colonizacao",
+    "width": 1440,
+    "height": 2200,
+    "theme": "light",
+    "motion": "reduce",
+    "file": "colonizacao-prancha-light.png",
+    "purpose": "exportação da prancha inteira para inspeção de texto e contraste; viewport padrão verificado nos demais casos"
+  },
+  {
+    "id": "summary-historia-a-montagem-da-colonizacao",
+    "width": 1440,
+    "height": 2200,
+    "theme": "dark",
+    "motion": "reduce",
+    "file": "colonizacao-prancha-dark.png",
+    "purpose": "exportação da prancha inteira para inspeção de texto e contraste; viewport padrão verificado nos demais casos"
+  }
+]

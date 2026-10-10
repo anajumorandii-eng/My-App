@@ -1,0 +1,50 @@
+[
+  {
+    "theme": "light",
+    "foreground": "rgb(51, 61, 60)",
+    "background": "rgb(253, 249, 237)",
+    "ratio": 10.648307741279826
+  },
+  {
+    "theme": "light",
+    "foreground": "rgb(51, 61, 60)",
+    "background": "rgb(253, 249, 237)",
+    "ratio": 10.648307741279826
+  },
+  {
+    "theme": "light",
+    "foreground": "rgb(51, 61, 60)",
+    "background": "rgb(253, 249, 237)",
+    "ratio": 10.648307741279826
+  },
+  {
+    "theme": "light",
+    "foreground": "rgb(51, 61, 60)",
+    "background": "rgb(253, 249, 237)",
+    "ratio": 10.648307741279826
+  },
+  {
+    "theme": "dark",
+    "foreground": "rgb(244, 234, 215)",
+    "background": "rgb(53, 80, 90)",
+    "ratio": 7.192790982236276
+  },
+  {
+    "theme": "dark",
+    "foreground": "rgb(244, 234, 215)",
+    "background": "rgb(53, 80, 90)",
+    "ratio": 7.192790982236276
+  },
+  {
+    "theme": "dark",
+    "foreground": "rgb(244, 234, 215)",
+    "background": "rgb(53, 80, 90)",
+    "ratio": 7.192790982236276
+  },
+  {
+    "theme": "dark",
+    "foreground": "rgb(244, 234, 215)",
+    "background": "rgb(53, 80, 90)",
+    "ratio": 7.192790982236276
+  }
+]

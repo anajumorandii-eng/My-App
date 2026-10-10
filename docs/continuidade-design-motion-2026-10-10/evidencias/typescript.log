@@ -1,0 +1,8 @@
+
+> react-example@0.0.0 lint
+> node --max-old-space-size=4096 node_modules/typescript/bin/tsc --noEmit
+
+src/data/applyDeepSummaries.ts(36,5): error TS2322: Type '{ id: string; sectionId: string; prompt: string; expectedElements: { label: string; keywords: string[]; }[]; hint: unknown; transferPrompt: string; }[]' is not assignable to type 'RetrievalPrompt[]'.
+  Type '{ id: string; sectionId: string; prompt: string; expectedElements: { label: string; keywords: string[]; }[]; hint: unknown; transferPrompt: string; }' is not assignable to type 'RetrievalPrompt'.
+    Types of property 'hint' are incompatible.
+      Type 'unknown' is not assignable to type 'string'.
