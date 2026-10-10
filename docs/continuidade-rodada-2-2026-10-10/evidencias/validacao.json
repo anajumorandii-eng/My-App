@@ -3,12 +3,13 @@
   "sourceHashes": {
     "src/data/deepSummaryContent.json": "4503f9bcbca999718cd3eebf53f4b1f3634caa1be17776a2acaca35514a64b08",
     "src/data/continuityGeography.test.ts": "3430b62eb14a698fedfbc9e8a38d00146c32aeb37e994608a0d739648dc1a469",
-    "src/lib/summaryEngine.ts": "4b47cba86d65e095c0a541801d787956e7c555c95b413ee4270049a3fb0ab524",
+    "src/lib/summaryEngine.ts": "17e787071f3477a254293528036c45e1a504c3ef7d59258e999d78b0703e28f4",
     "src/lib/summaryEngine.test.ts": "396d0fa26bf2497c37a0b76c155e8b676edeac78b310384e1f98593e573ee56d",
     "src/lib/physicsRemainingLab.ts": "ee27fe215e0290c03647f24b2ea8332591473881e6af97fe385bc0732df692bf",
     "src/lib/orbitalLab.ts": "918e1fab4812f7c781431e692b23a4de9f5a7261231f193f4f735b26303e812c",
     "src/views/visual-instruments/PhysicsMechanismScenes.tsx": "f15ca22bae31be7ff4b3f11948945d7bd6cdea249d04a5f9acf208ff23f1ba7e",
-    "src/views/visual-boards/HydrostaticsBoard.tsx": "bda159b69bd6d92ec2f86c44fad727a124c6fbf7de0f27d6e0f89e327e0bda0c"
+    "src/views/visual-boards/HydrostaticsBoard.tsx": "bda159b69bd6d92ec2f86c44fad727a124c6fbf7de0f27d6e0f89e327e0bda0c",
+    "tsconfig.json": "8a4f8934f7daa5cf340361939c44ebf64fc6017cd2e8d15245128a06343360df"
   },
   "validations": {
     "typescript": "passed",
@@ -36,7 +37,12 @@
     "node-confirmado.log": "68d9408075d0d109b07ab6751bba1bb30a45a9bc0ed51668afa3be59ee06c7b9",
     "suite.log": "d1e875fe8d5b2c7f3aa0e9dcf86f4b479dc59568abda2d3be8bed38206ef0579",
     "regressao-red.log": "767bf6c6e288f5b0e36993f7ecc9190296068ba7418a2dd445cc0334d6c101c5",
-    "decimal-red.log": "16d9a0f24415d82deed7e37c6202dcb2d00b493103f8bd6cebd64f441423d566"
+    "decimal-red.log": "16d9a0f24415d82deed7e37c6202dcb2d00b493103f8bd6cebd64f441423d566",
+    "lint-checkout-limpo.log": "2b7c1e6db3003c7da0919872ec751570e18f5dfe802f9be165487d05c3f2bec3",
+    "lint-checkout-corrigido.log": "e5ca8640c5c7505d51b703c3f5313f08e04f101fbbff9eac01da458d43d8eb3e",
+    "avaliador-corrigido.log": "cde50ce96e68bc51c0030d78070ce00db52b1740ea9e730a8d3aeb9d5350c08d",
+    "build-tipagem-corrigida.log": "d6641631a6346aaa4108062a1c4de8045eb1d5a54c80e4e7c1feb2d863b93747",
+    "lint-final-isolado.log": "e5ca8640c5c7505d51b703c3f5313f08e04f101fbbff9eac01da458d43d8eb3e"
   },
   "captures": [
     {
@@ -85,5 +91,19 @@
     "assets/index-C2GM3TtH.js": "386628c733fc7b27dd66c6f8844e140e48e0621e7122eac44b5d2321e0ffaff3",
     "assets/PhysicsMechanismScenes-BcmvKBMg.js": "33dbd8eb3f57dddd07e9f72338dcb498181073124736cf655571844408cdb3c1",
     "assets/HydrostaticsBoard-BAUfiKJL.js": "49d04fc3e851767bcd4bf0cb5373c7ce25fdb5c8d93eb50411a7a2aef163ce01"
+  },
+  "typeCheckCorrection": {
+    "initialCI": "https://github.com/anajumorandii-eng/My-App/actions/runs/38022421682",
+    "reproducedOnCleanCheckout": true,
+    "cleanCheckoutAfterStringArrayAnnotation": "passed",
+    "runtimeChange": false,
+    "evaluatorTestsAfterCorrection": 8,
+    "excludedGeneratedFilesBeforeCorrection": {
+      "dist": 197,
+      "work": 28
+    },
+    "capturedBuildAssetsUnchanged": true,
+    "finalLocalLint": "passed",
+    "productFilesCheckedUnchanged": 858
   }
 }

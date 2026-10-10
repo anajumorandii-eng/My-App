@@ -35,7 +35,7 @@ export function evaluateRetrievalAnswer(question: RetrievalPrompt, answer: strin
     // Numeric results must match a complete value, not a substring of 1000
     // or the magnitude of -100. Keep the lexical fallback for prose only.
     if (/^[+-]?\d+(?:[.,]\d+)?$/.test(normalizedKeyword)) {
-      const values = normalized.replace(/−/g, '-').match(/[+-]?\d+(?:[.,]\d+)?/g) ?? [];
+      const values: string[] = normalized.replace(/−/g, '-').match(/[+-]?\d+(?:[.,]\d+)?/g) ?? [];
       const expected = Number(normalizedKeyword.replace(',', '.'));
       return values.some(value => Number(value.replace(',', '.')) === expected);
     }
