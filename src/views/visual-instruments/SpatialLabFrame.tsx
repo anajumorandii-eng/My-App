@@ -10,7 +10,7 @@ export function SpatialLabFrame({ title, reading, note, children, controls }: {
 }) {
   const camera = useSpatialRotation(25, 20), id = useId();
   return <section className="vs-science-card vs-field-spatial vs-spatial-lab" data-spatial-batch="2026-10-10" aria-label={title}>
-    <header><small>CRIVO · EXPLORAÇÃO ESPACIAL</small><h4>{title}</h4></header>
+    <header><small>CRIVO · EXPLORAÇÃO ESPACIAL</small><h3>{title}</h3></header>
     {children(camera)}
     {controls}
     <label className="vs-science-rotation" htmlFor={id + '-yaw'}>Girar a vista <output>{Math.round(camera.yaw)}°</output></label>

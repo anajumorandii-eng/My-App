@@ -1,5 +1,11 @@
 # CRIVO — continuidade operacional
 
+## Continuidade espacial — 24 capítulos de Física, 2026-10-10
+
+A PR #302 foi integrada em `6224972c`, com os dois checks aprovados na ponta `ce768c91`; a correção de chaves React preserva parâmetros e câmera dos experimentos existentes. Esta rodada parte da main `b130bb72` e acrescenta 24 suplementos de Física, com geometria XYZ, câmera manipulável, relações físicas e movimento finito acessível. [Modelos, lastro, evidências e limites](lote-fisica-24-2026-10-10/README.md).
+
+A continuidade espacial recente registra 61/613 capítulos atendidos e 552 ainda a confrontar por ID. Essa cobertura técnica não se soma nem equivale à contagem de primeira passagem pedagógica: os status editoriais foram preservados. Continuar pelos demais candidatos com objetos próprios do conteúdo, sem reaplicar PRs integradas e sem tratar os capítulos restantes como lacunas confirmadas.
+
 ## Rodada seguinte: 30 capítulos de História e Geografia — 2026-10-10
 
 A PR [#296](https://github.com/anajumorandii-eng/My-App/pull/296) está mesclada; sua CI e a CI na main passaram. A PR #298, com checks verdes na sua ponta, foi incorporada nesta rodada, preservando oito correções dirigidas de Física e o avaliador numérico; exige novos checks na união. A rodada atual revisa dez capítulos restantes de História e vinte de Geografia. [Conteúdo, fontes, validação e limites](revisao-pedagogica-historia-geografia-30-2026-10-10/README.md).
