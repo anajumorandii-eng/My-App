@@ -298,7 +298,7 @@ function Colonization({ active, t }: { active: number; t: SceneTransition }) {
       <text x={trait.x + 82} y="128" textAnchor="middle" className="hg-label">{trait.label}</text>
       {index === 0 && <g>{[0, 1, 2, 3].map(row => <path key={row} d={`M${trait.x + 24} ${155 + row * 15}h116`} className="hg-document-line" />)}</g>}
       {index === 1 && <g><path d={`M${trait.x + 27} 188h105l-17 20H${trait.x + 44}Z`} className="hg-fort" /><path d={`M${trait.x + 78} 187v-42l32 30h-32`} className="hg-document-line" /></g>}
-      {index === 2 && <g><circle cx={trait.x + 82} cy="158" r="10" className="hg-weight-icon" /><path d={`M${trait.x + 82} 170v35m0-25-20 15m20-15 20 15m-20 10-13 20m13-20 13 20`} className="hg-document-line" /></g>}
+      {index === 2 && <g><circle cx={trait.x + 82} cy="158" r="10" className="hg-document-line" /><path d={`M${trait.x + 82} 170v35m0-25-20 15m20-15 20 15m-20 10-13 20m13-20 13 20`} className="hg-document-line" /></g>}
       <text x={trait.x + 82} y="260" textAnchor="middle" className="hg-small">{trait.detail}</text>
     </motion.g>)}
     <text x="310" y="308" textAnchor="middle" className="hg-hand">{all ? 'A combinação caracteriza o modelo' : 'Uma característica do modelo em foco'}</text>
