@@ -1,0 +1,181 @@
+{
+  "schema_version": 1,
+  "base_commit": "0be94a117b235172fa722fc787849a318acec8d5",
+  "scope": "Primeiro lote de revisão pedagógica: leitura das cinco seções e recuperação de nove capítulos de Brasil Colônia; verificação seletiva das claims/quotes e fontes dos achados corrigidos.",
+  "formal_approval": false,
+  "reviewed_chapters": 9,
+  "corrected_chapters": 6,
+  "tests": {
+    "file": "src/data/continuityGeography.test.ts",
+    "new_cases": 7,
+    "purpose": "Quatro respostas-modelo avaliadas pelo motor real, recuperação de mineração, e duas regressões cronológicas."
+  },
+  "sources": [
+    {
+      "title": "Biblioteca Nacional — Pernambuco Holandês",
+      "url": "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/politica/pernambuco-holandes/",
+      "supports": "Nassau 1637–1644, Insurreição 1645–1654; página aberta e trecho consultado."
+    },
+    {
+      "title": "UFF — Impressões Rebeldes: Palmares (Silvia Lara)",
+      "url": "https://www.historia.uff.br/impressoesrebeldes/revolta/palmares/",
+      "supports": "Macaco em fevereiro de 1694, morte de Zumbi em novembro de 1695 e continuidade de outros mocambos; página aberta e trechos consultados."
+    },
+    {
+      "title": "Arquivo Nacional — Independência do Maranhão",
+      "url": "https://www.gov.br/arquivonacional/pt-br/sites_eventos/sites-tematicos-1/brasil-oitocentista/especial-bicentenario-da-independencia/longe-das-margens-do-ipiranga-a-independencia-do-maranhao-1/",
+      "supports": "Consolidação regional em 1823; página acessada, evidência específica presente no resultado indexado."
+    },
+    {
+      "title": "Arquivo Nacional — Casas de Fundição",
+      "url": "https://mapa.an.gov.br/index.php/assuntos/15-dicionario/57-dicionario-da-administracao-publica-brasileira-do-periodo-colonial/146-casas-de-fundicao-1603-1821",
+      "supports": "Quinto/cota/derrama; somente trecho indexado, abertura integral bloqueada."
+    }
+  ],
+  "limits": [
+    "Revisão parcial; não certifica toda afirmação dos nove capítulos nem todos os estados de cena.",
+    "Sem alteração de UI, layout ou CSS e sem nova auditoria integral de 7.356 casos.",
+    "Inventário formal preservado: 81 em validação e 532 não revisados."
+  ],
+  "chapters": [
+    {
+      "id": "summary-historia-a-historia-e-o-brasil",
+      "topic": "A História e o Brasil",
+      "prior_revision": 2,
+      "result_revision": 2,
+      "formal_status": "em-validacao",
+      "status": "partial_review_no_change",
+      "checks": [
+        "Texto discute diversidade indígena, crítica das fontes e agência; recuperação corresponde a esses eixos.",
+        "Claims/quotes da cena de contraste conferidos com as seções."
+      ],
+      "pending": [
+        "Verificação bibliográfica específica das estimativas demográficas e das generalizações sobre tradições historiográficas."
+      ]
+    },
+    {
+      "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+      "topic": "Grandes Navegações e Conquista Colonial",
+      "prior_revision": 4,
+      "result_revision": 4,
+      "formal_status": "em-validacao",
+      "status": "partial_review_no_change",
+      "checks": [
+        "Revisão 4 da PR #294 preservada; recuperação sobre Tordesilhas corresponde ao capítulo."
+      ],
+      "pending": [
+        "As generalizações sobre o alcance de Tordesilhas e sobre modelos iniciais de trabalho devem continuar na revisão bibliográfica."
+      ]
+    },
+    {
+      "id": "summary-historia-a-montagem-da-colonizacao",
+      "topic": "A Montagem da Colonização",
+      "prior_revision": 2,
+      "result_revision": 2,
+      "formal_status": "em-validacao",
+      "status": "findings_require_further_editorial_and_scene_review",
+      "checks": [
+        "Texto e quatro claims/quotes da cena lidos; recuperação de governo-geral e investimento corresponde ao conteúdo."
+      ],
+      "pending": [
+        "A balança apresenta resistência, epidemias e oposição jesuíta como condições necessárias conjuntas; conferir essa inferência e o peso comercial do tráfico.",
+        "A noção de substituição da escravidão indígena pela africana requer maior atenção às diferenças regionais e à coexistência.",
+        "Rever a formulação sobre catequização como alternativa ao trabalho forçado e a caracterização do solo de massapé."
+      ]
+    },
+    {
+      "id": "summary-historia-dinamica-interna-da-colonizacao",
+      "topic": "Dinâmica Interna da Colonização",
+      "prior_revision": 2,
+      "result_revision": 3,
+      "formal_status": "em-validacao",
+      "status": "corrected",
+      "checks": [
+        "Tomada de Macaco (1694) separada da morte de Zumbi (1695) em explicação, pegadinha e prática.",
+        "Mantida a ressalva de resistência de outros mocambos.",
+        "Recuperação agora avalia roças/ofícios e resistência, sem cobrar pecuária ausente."
+      ],
+      "pending": [
+        "Legenda visual c. 1600–1695 ainda deve explicitar os marcos; não se interpreta 1695 como desaparecimento de todos os mocambos.",
+        "Conferir com ampliação o estado da ilustração de resistência; não há captura nova nesta PR."
+      ]
+    },
+    {
+      "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+      "topic": "Disputas Europeias no Brasil Colonial",
+      "prior_revision": 2,
+      "result_revision": 3,
+      "formal_status": "nao-revisado",
+      "status": "corrected",
+      "checks": [
+        "Insurreição de 1645 situada após a saída de Nassau em 1644; governo 1637–1644 já correto no texto.",
+        "Recuperação existente corresponde a União Ibérica e concorrência açucareira."
+      ],
+      "pending": [
+        "Verificação da formulação sobre origens do empreendimento francês e do papel das companhias no Caribe."
+      ]
+    },
+    {
+      "id": "summary-historia-a-interiorizacao-da-colonizacao",
+      "topic": "A Interiorização da Colonização",
+      "prior_revision": 2,
+      "result_revision": 3,
+      "formal_status": "em-validacao",
+      "status": "corrected",
+      "checks": [
+        "Recuperação de fiscalidade substituída por mineração/migração/capital e pecuária, ensinadas nas três seções."
+      ],
+      "pending": [
+        "Rever o enquadramento do sertanismo de contrato e evitar reduzir a transferência da capital a uma causa única."
+      ]
+    },
+    {
+      "id": "summary-historia-a-mineracao-no-brasil-colonial",
+      "topic": "A Mineração no Brasil Colonial",
+      "prior_revision": 2,
+      "result_revision": 3,
+      "formal_status": "em-validacao",
+      "status": "corrected",
+      "checks": [
+        "Acrescentada recuperação editorial inexistente: quinto de 20%, fundição/barras e derrama/cota.",
+        "Conteúdo de fiscalidade confrontado com o verbete do Arquivo Nacional, disponível em trechos indexados."
+      ],
+      "pending": [
+        "Fonte integral do verbete bloqueada pelo site nesta consulta; não se registra leitura integral dessa página.",
+        "A cronologia dos diferentes regimes de arrecadação ainda merece conferência ampliada."
+      ]
+    },
+    {
+      "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+      "topic": "A Crise do Antigo Sistema Colonial",
+      "prior_revision": 2,
+      "result_revision": 3,
+      "formal_status": "em-validacao",
+      "status": "corrected",
+      "checks": [
+        "Recuperação compara exclusivo comercial e as duas revoltas, sem exigir vantagem à Inglaterra não explicada no capítulo.",
+        "Claims/quotes da cena de comparação conferidos."
+      ],
+      "pending": [
+        "Rever a apresentação do pacto colonial como ausência absoluta de comércio autônomo e da transferência da Corte como decisão nunca considerada anteriormente."
+      ]
+    },
+    {
+      "id": "summary-historia-a-independencia-do-brasil",
+      "topic": "A Independência do Brasil",
+      "prior_revision": 2,
+      "result_revision": 3,
+      "formal_status": "nao-revisado",
+      "status": "corrected",
+      "checks": [
+        "Recuperação reconhece participação popular nas guerras, de acordo com o próprio texto.",
+        "Retirada pergunta sobre custo do reconhecimento internacional, ausente das seções.",
+        "Recuperação distingue continuidade social e consolidação nas províncias."
+      ],
+      "pending": [
+        "Qualificar a interpretação das Cortes do Porto como recolonização uniforme; conferir composição regional dos projetos.",
+        "Board e todos os estados interativos ainda não receberam validação pedagógica integral."
+      ]
+    }
+  ]
+}

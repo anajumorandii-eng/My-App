@@ -15894,10 +15894,10 @@
       }
     ],
     "recall": {
-      "prompt": "Por que a abertura dos portos rompe o sistema colonial? Compare Inconfidência e Conjuração Baiana.",
+      "prompt": "Por que a abertura dos portos rompeu o exclusivo comercial? Compare a composição e as pautas da Inconfidência Mineira e da Conjuração Baiana.",
       "elements": [
         [
-          "fim do exclusivo comercial",
+          "a abertura dos portos permitiu comercio direto com nacoes amigas",
           [
             "exclusivo",
             "monopolio",
@@ -15905,15 +15905,15 @@
           ]
         ],
         [
-          "beneficio principal a Inglaterra",
+          "a Inconfidencia Mineira mobilizou principalmente elites insatisfeitas com a fiscalidade",
           [
-            "inglaterra",
-            "britanico",
-            "favoreceu"
+            "elite",
+            "ouro",
+            "derrama"
           ]
         ],
         [
-          "a Conjuracao teve base popular e defendeu a abolicao",
+          "a Conjuracao Baiana teve participacao popular e pautas como a abolicao",
           [
             "popular",
             "abolicao",
@@ -15922,7 +15922,7 @@
         ]
       ]
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "História",
@@ -16145,10 +16145,10 @@
       }
     ],
     "recall": {
-      "prompt": "Por que a independência brasileira é considerada conservadora? Qual o custo do reconhecimento internacional?",
+      "prompt": "Por que a independência manteve estruturas coloniais? Como as guerras e a participação popular contribuíram para sua consolidação?",
       "elements": [
         [
-          "manteve monarquia, escravidao e latifundio",
+          "a independencia preservou monarquia, escravidao e concentracao fundiaria",
           [
             "monarquia",
             "escravidao",
@@ -16156,24 +16156,24 @@
           ]
         ],
         [
-          "foi conduzida pelo alto sem participacao popular",
+          "houve participacao popular nas guerras de independencia",
           [
-            "alto",
-            "popular",
-            "elite"
+            "participacao popular",
+            "voluntario",
+            "populacao negra"
           ]
         ],
         [
-          "indenizacao a Portugal e acordos com a Inglaterra",
+          "a independencia foi consolidada em diferentes momentos nas provincias, como na Bahia em 1823",
           [
-            "indenizacao",
-            "inglaterra",
-            "tratado"
+            "bahia",
+            "1823",
+            "provincia"
           ]
         ]
       ]
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "História",
@@ -16201,18 +16201,18 @@
       }
     ],
     "recall": {
-      "prompt": "Por que a mineração deslocou o eixo da colônia? Diferencie quinto de derrama.",
+      "prompt": "Como a mineração deslocou o eixo da colônia? Qual foi o papel da pecuária na interiorização?",
       "elements": [
         [
-          "migracao intensa e urbanizacao no interior",
+          "a mineracao atraiu migracao e formou nucleos urbanos no interior",
           [
             "migracao",
-            "cidade",
-            "interior"
+            "urbanizacao",
+            "cidade"
           ]
         ],
         [
-          "transferencia da capital para o Rio",
+          "o eixo minerador favoreceu a transferencia da capital para o Rio de Janeiro",
           [
             "rio de janeiro",
             "capital",
@@ -16220,16 +16220,16 @@
           ]
         ],
         [
-          "o quinto e imposto e a derrama e cobranca forcada",
+          "a pecuaria ocupou o interior e forneceu carne, couro e animais de tracao",
           [
-            "quinto",
-            "derrama",
-            "cota"
+            "carne",
+            "couro",
+            "tracao"
           ]
         ]
       ]
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "História",
@@ -16256,7 +16256,36 @@
         "content": "Pratique: (1) Explique por que a mineração, diferentemente da economia açucareira, gerou uma estrutura social mais fluida e núcleos urbanos de crescimento mais rápido e disperso geograficamente. (2) Mais analítico: tanto a Revolta de Vila Rica (1720) quanto a Inconfidência Mineira (1789) surgiram de tensões relacionadas à fiscalidade sobre o ouro, mas em contextos econômicos distintos: a primeira em período de produção aurífera ainda expressiva, a segunda já em declínio da produção facilmente acessível. Compare as duas revoltas quanto a suas motivações imediatas e seus desfechos, explicando por que o declínio econômico regional, décadas depois da primeira revolta, tornou a ameaça de derrama ainda mais insustentável politicamente para a elite mineira na segunda, mesmo com um aparato fiscal metropolitano em teoria já mais consolidado e experiente na região."
       }
     ],
-    "rev": 2
+    "rev": 3,
+    "recall": {
+      "prompt": "Como o quinto, as Casas de Fundição e a derrama controlavam a produção e a circulação do ouro?",
+      "elements": [
+        [
+          "o quinto destinava vinte por cento do ouro a Coroa",
+          [
+            "20%",
+            "vinte por cento",
+            "um quinto"
+          ]
+        ],
+        [
+          "as Casas de Fundicao transformavam o ouro em barras seladas apos reter o imposto",
+          [
+            "fundicao",
+            "barra",
+            "selada"
+          ]
+        ],
+        [
+          "a derrama cobrava coletivamente a diferenca para a cota minima",
+          [
+            "derrama",
+            "cota",
+            "diferenca"
+          ]
+        ]
+      ]
+    }
   },
   {
     "subject": "História",
@@ -17218,7 +17247,7 @@
       },
       {
         "title": "Resistência escrava",
-        "content": "A resistência escrava às condições de exploração da escravidão colonial manifestou-se de formas diversas e não se limitou apenas a rebeliões armadas abertas, embora estas também tenham ocorrido ao longo do período colonial. A formação de quilombos — comunidades autônomas formadas por pessoas escravizadas fugidas, organizadas em territórios geralmente de difícil acesso que dificultavam sua localização e destruição por forças coloniais repressivas — representou uma das formas mais visíveis e duradouras dessa resistência, sendo o Quilombo dos Palmares, no atual território de Alagoas, o exemplo mais expressivo e duradouro, tendo resistido por praticamente todo o século XVII (formação estimada em torno de 1600, destruição definitiva em 1695) sob a liderança de figuras como Zumbi, chegando a abrigar, em seu período de maior expansão, população estimada em dezenas de milhares de pessoas. Além da fuga e formação de quilombos, formas mais cotidianas e menos visíveis de resistência incluíam sabotagem deliberada de ferramentas e processos produtivos, redução proposital do ritmo de trabalho, e preservação ativa de práticas culturais, religiosas e linguísticas de origem africana, mesmo sob repressão sistemática e tentativas constantes de apagamento cultural impostas pelos proprietários e pela própria estrutura colonial escravista."
+        "content": "A resistência escrava às condições de exploração da escravidão colonial manifestou-se de formas diversas e não se limitou apenas a rebeliões armadas abertas, embora estas também tenham ocorrido ao longo do período colonial. A formação de quilombos — comunidades autônomas formadas por pessoas escravizadas fugidas, organizadas em territórios geralmente de difícil acesso que dificultavam sua localização e destruição por forças coloniais repressivas — representou uma das formas mais visíveis e duradouras dessa resistência, sendo o Quilombo dos Palmares, no atual território de Alagoas, o exemplo mais expressivo e duradouro, tendo resistido por praticamente todo o século XVII (formação estimada em torno de 1600; tomada do principal mocambo, Macaco, em 1694; morte de Zumbi em 1695) sob a liderança de figuras como Zumbi — sem que a sua morte significasse o desaparecimento imediato de todos os mocambos —, chegando a abrigar, em seu período de maior expansão, população estimada em dezenas de milhares de pessoas. Além da fuga e formação de quilombos, formas mais cotidianas e menos visíveis de resistência incluíam sabotagem deliberada de ferramentas e processos produtivos, redução proposital do ritmo de trabalho, e preservação ativa de práticas culturais, religiosas e linguísticas de origem africana, mesmo sob repressão sistemática e tentativas constantes de apagamento cultural impostas pelos proprietários e pela própria estrutura colonial escravista."
       },
       {
         "title": "Atividades subsidiárias",
@@ -17226,43 +17255,42 @@
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Pegadinhas frequentes: 1) achar que a interpretação de Gilberto Freyre em \"Casa-Grande & Senzala\" é consenso historiográfico definitivo e não questionado — foi influente mas também recebeu críticas posteriores por minimizar, em certos aspectos de sua análise original, a violência estrutural da escravidão colonial. 2) achar que a resistência escrava se limitava exclusivamente a rebeliões armadas abertas — incluía também formas mais cotidianas e menos visíveis, como sabotagem, redução do ritmo de trabalho e preservação cultural, além da fuga para quilombos. 3) achar que o Quilombo dos Palmares foi destruído logo após sua formação — resistiu por praticamente todo o século XVII, quase cem anos, antes de sua destruição definitiva em 1695. 4) achar que a economia colonial açucareira era voltada exclusivamente à produção de cana-de-açúcar sem nenhuma outra atividade paralela — existiam atividades subsidiárias relevantes, como produção de alimentos de subsistência e artesanato, complementares à economia principal. 5) achar que apenas senhores de engenho e pessoas escravizadas existiam na sociedade colonial açucareira — havia também trabalhadores livres pobres em posição social intermediária, frequentemente pouco visíveis nas narrativas históricas tradicionais mais focadas na relação central senhor-escravizado. 6) confundir quilombo com simples fuga individual isolada — quilombos eram comunidades organizadas e estruturadas, com hierarquia própria e capacidade de resistência militar coletiva sustentada por longos períodos."
+        "content": "Pegadinhas frequentes: 1) achar que a interpretação de Gilberto Freyre em \"Casa-Grande & Senzala\" é consenso historiográfico definitivo e não questionado — foi influente mas também recebeu críticas posteriores por minimizar, em certos aspectos de sua análise original, a violência estrutural da escravidão colonial. 2) achar que a resistência escrava se limitava exclusivamente a rebeliões armadas abertas — incluía também formas mais cotidianas e menos visíveis, como sabotagem, redução do ritmo de trabalho e preservação cultural, além da fuga para quilombos. 3) achar que o Quilombo dos Palmares foi destruído logo após sua formação — resistiu por praticamente todo o século XVII, quase cem anos, até a tomada de Macaco em 1694; Zumbi foi morto em 1695, e a resistência de outros mocambos continuou. 4) achar que a economia colonial açucareira era voltada exclusivamente à produção de cana-de-açúcar sem nenhuma outra atividade paralela — existiam atividades subsidiárias relevantes, como produção de alimentos de subsistência e artesanato, complementares à economia principal. 5) achar que apenas senhores de engenho e pessoas escravizadas existiam na sociedade colonial açucareira — havia também trabalhadores livres pobres em posição social intermediária, frequentemente pouco visíveis nas narrativas históricas tradicionais mais focadas na relação central senhor-escravizado. 6) confundir quilombo com simples fuga individual isolada — quilombos eram comunidades organizadas e estruturadas, com hierarquia própria e capacidade de resistência militar coletiva sustentada por longos períodos."
       },
       {
         "title": "Pratique e confira",
-        "content": "Pratique: (1) Explique por que a interpretação de Gilberto Freyre sobre a sociedade colonial açucareira, embora historicamente influente, foi posteriormente criticada por historiadores por minimizar certos aspectos da violência estrutural inerente à relação escravista. (2) Mais analítico: o Quilombo dos Palmares resistiu por praticamente um século inteiro antes de sua destruição definitiva em 1695, chegando a abrigar dezenas de milhares de pessoas em seu período de maior expansão territorial e populacional. Explique por que a longevidade e a escala populacional de Palmares o tornam um exemplo historicamente excepcional de resistência escrava organizada, discutindo que fatores geográficos e organizacionais (localização de difícil acesso, estrutura política e militar interna própria) podem ajudar a explicar sua capacidade de resistir por tanto tempo às tentativas repetidas de destruição por parte das autoridades coloniais portuguesas ao longo de décadas."
+        "content": "Pratique: (1) Explique por que a interpretação de Gilberto Freyre sobre a sociedade colonial açucareira, embora historicamente influente, foi posteriormente criticada por historiadores por minimizar certos aspectos da violência estrutural inerente à relação escravista. (2) Mais analítico: o Quilombo dos Palmares resistiu por praticamente um século inteiro até a tomada de Macaco em 1694, seguida pela morte de Zumbi em 1695, chegando a abrigar dezenas de milhares de pessoas em seu período de maior expansão territorial e populacional. Explique por que a longevidade e a escala populacional de Palmares o tornam um exemplo historicamente excepcional de resistência escrava organizada, discutindo que fatores geográficos e organizacionais (localização de difícil acesso, estrutura política e militar interna própria) podem ajudar a explicar sua capacidade de resistir por tanto tempo às tentativas repetidas de destruição por parte das autoridades coloniais portuguesas ao longo de décadas."
       }
     ],
     "recall": {
-      "prompt": "Qual a importância da pecuária além da carne? Cite formas de resistência escrava.",
+      "prompt": "Como as atividades subsidiárias sustentavam a sociedade do açúcar? Cite formas de resistência à escravidão.",
       "elements": [
         [
-          "fornecia couro e animais de tracao",
+          "rocas e oficios complementavam a economia acucareira",
           [
-            "couro",
-            "tracao",
-            "engenho"
+            "roca",
+            "alimento",
+            "artesanato"
           ]
         ],
         [
-          "impulsionou a interiorizacao",
+          "fugas e quilombos constituiram formas de resistencia",
           [
-            "sertao",
-            "interiorizacao",
-            "ocupacao"
-          ]
-        ],
-        [
-          "fugas, quilombos e sabotagem",
-          [
-            "quilombo",
             "fuga",
-            "sabotagem"
+            "quilombo"
+          ]
+        ],
+        [
+          "a resistencia cotidiana incluiu sabotagem e preservacao cultural",
+          [
+            "sabotagem",
+            "cultural",
+            "ritmo"
           ]
         ]
       ]
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "História",
@@ -17278,7 +17306,7 @@
       },
       {
         "title": "Expulsão e consequências",
-        "content": "A expulsão dos holandeses do Nordeste brasileiro, consolidada definitivamente em 1654 após a Insurreição Pernambucana (iniciada em 1645, ainda durante a administração de Nassau, embora ele já tivesse deixado o Brasil pouco antes), resultou de combinação entre resistência armada local (envolvendo senhores de engenho luso-brasileiros, população mestiça e negra, incluindo figuras como Henrique Dias, líder de tropas negras, e o indígena Filipe Camarão) e o desgaste financeiro da própria Companhia das Índias Ocidentais holandesa, que via seus investimentos coloniais brasileiros tornarem-se cada vez menos rentáveis diante da resistência prolongada e dos custos crescentes de manutenção militar do território. As consequências históricas dessa presença holandesa, mesmo temporária, foram significativas: técnicas de produção açucareira aprendidas ou aperfeiçoadas durante o período holandês foram posteriormente levadas por ex-colonos holandeses para o Caribe, contribuindo para o desenvolvimento de uma indústria açucareira concorrente nas colônias caribenhas de outras potências europeias, o que impactaria negativamente, décadas depois, a competitividade internacional do próprio açúcar brasileiro no mercado europeu."
+        "content": "A expulsão dos holandeses do Nordeste brasileiro, consolidada definitivamente em 1654 após a Insurreição Pernambucana (iniciada em 1645, após a saída de Nassau em 1644), resultou de combinação entre resistência armada local (envolvendo senhores de engenho luso-brasileiros, população mestiça e negra, incluindo figuras como Henrique Dias, líder de tropas negras, e o indígena Filipe Camarão) e o desgaste financeiro da própria Companhia das Índias Ocidentais holandesa, que via seus investimentos coloniais brasileiros tornarem-se cada vez menos rentáveis diante da resistência prolongada e dos custos crescentes de manutenção militar do território. As consequências históricas dessa presença holandesa, mesmo temporária, foram significativas: técnicas de produção açucareira aprendidas ou aperfeiçoadas durante o período holandês foram posteriormente levadas por ex-colonos holandeses para o Caribe, contribuindo para o desenvolvimento de uma indústria açucareira concorrente nas colônias caribenhas de outras potências europeias, o que impactaria negativamente, décadas depois, a competitividade internacional do próprio açúcar brasileiro no mercado europeu."
       },
       {
         "title": "Pegadinhas frequentes",
@@ -17318,7 +17346,7 @@
         ]
       ]
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "História",
