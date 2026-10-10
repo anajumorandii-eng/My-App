@@ -70,7 +70,7 @@ function LengthVsFlow() {
   const p = usePaced(); const s = useFrom();
   return <g>
     <text x="40" y="74" className="bi-label">Nilo</text>
-    <text x="80" y="74" className="bi-small">mais de 6.600 km: o rio mais extenso do mundo</text>
+    <text x="80" y="74" className="bi-small">mais de 6.600 km nas medidas usuais</text>
     <rect x="40" y="84" width="540" height="44" rx="12" className="ab-sand" />
     {[70, 150, 262, 330, 452, 520].map((x, k) => <path key={x} d={`M${x} ${k % 2 ? 94 : 124}q14-9 28 0`} className="ab-dune" />)}
     <motion.path d={NILE} className="ab-river" initial={{ pathLength: s(0, 1) }} animate={{ pathLength: 1 }} transition={p(1.2, 0.2)} />
@@ -80,7 +80,7 @@ function LengthVsFlow() {
     <text x="309" y="158" textAnchor="middle" className="bi-tiny">comprimento</text>
 
     <text x="40" y="184" className="bi-label">Amazonas</text>
-    <text x="126" y="184" className="bi-small">mais curto, porém com muito mais água</text>
+    <text x="126" y="184" className="bi-small">muito mais água: extensão não é vazão</text>
     {[140, 240, 340].map((x, k) => <g key={x}>
       <Cloud x={x} y={212} s={0.9} />
       {[-10, 0, 10].map(dx => <motion.path key={dx} d={`M${x + dx} 220l-3 8`} className="ab-rain" initial={{ opacity: s(0, 1), y: s(-6, 0) }}
@@ -96,8 +96,8 @@ function LengthVsFlow() {
     <text x="514" y="244" textAnchor="middle" className="ab-on-sea-big">15% a 20%</text>
     <text x="514" y="260" textAnchor="middle" className="ab-on-sea">da água doce que</text>
     <text x="514" y="273" textAnchor="middle" className="ab-on-sea">os rios levam ao mar</text>
-    <motion.text x="40" y="312" className="bi-hand-sm" initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.6, 1.8)}>chuva constante + drenagem imensa = muito mais vazão</motion.text>
-    <text x="30" y="338" className="bi-foot">Esquemático: comprimentos e larguras sem escala.</text>
+    <motion.text x="40" y="312" className="bi-hand-sm" initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.6, 1.8)}>chuva abundante + drenagem imensa = muito mais vazão</motion.text>
+    <text x="30" y="338" className="bi-foot">Extensão depende da medição; comprimentos e larguras sem escala.</text>
   </g>;
 }
 
@@ -165,7 +165,7 @@ function Upstream() {
       initial={{ opacity: s(1, 0.4) }} animate={{ opacity: 0.4 }} transition={p(1, 1.6 + k * 0.05)} />)}
     {[320, 415, 510].map(x => <path key={x} d={`M${x} 262V300`} className="ab-border" />)}
     {countries.map(([name, x]) => <text key={name} x={x} y="294" textAnchor="middle" className="bi-small">{name}</text>)}
-    <motion.text x="30" y="322" className="bi-hand-sm" initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.6, 2)}>barragem é decisão soberana; a tensão vem sem acordo de repartição</motion.text>
+    <motion.text x="30" y="322" className="bi-hand-sm" initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.6, 2)}>rio compartilhado: cooperar e evitar danos a jusante</motion.text>
     <text x="30" y="342" className="bi-foot">No Nilo, a mesma tensão entre Etiópia, Sudão e Egito. Esquemático.</text>
   </g>;
 }
@@ -178,18 +178,18 @@ function WaterStress() {
     <motion.rect x="50" y="212" width="50" height="38" rx="4" className="ab-bar-dry" initial={{ scaleY: s(0, 1) }} animate={{ scaleY: 1 }} transition={p(0.8, 0.3)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom' }} />
     <motion.rect x="145" y="96" width="50" height="154" rx="4" className="ab-bar-wet" initial={{ scaleY: s(0, 1) }} animate={{ scaleY: 1 }} transition={p(1, 0.5)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom' }} />
     <motion.path d="M40 190H300" className="ab-threshold" initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.6, 1.2)} />
-    <text x="206" y="168" className="bi-tiny bi-warn">limiar crítico:</text>
+    <text x="206" y="168" className="bi-tiny bi-warn">limiar de escassez:</text>
     <text x="206" y="182" className="bi-tiny bi-warn">1.000 m³ por hab./ano</text>
     <text x="75" y="266" textAnchor="middle" className="bi-tiny">Oriente Médio e</text>
     <text x="75" y="278" textAnchor="middle" className="bi-tiny">Norte da África</text>
     <text x="170" y="266" textAnchor="middle" className="bi-tiny">Canadá, Brasil</text>
     <text x="170" y="278" textAnchor="middle" className="bi-tiny">e Rússia</text>
-    <text x="75" y="204" textAnchor="middle" className="bi-tiny bi-warn">estresse severo</text>
+    <text x="75" y="204" textAnchor="middle" className="bi-tiny bi-warn">escassez</text>
 
-    <text x="330" y="72" className="bi-panel-title">PARA ONDE VAI A ÁGUA DOCE</text>
+    <text x="330" y="72" className="bi-panel-title">RETIRADAS DE ÁGUA DOCE</text>
     <rect x="330" y="84" width="260" height="24" rx="6" className="ab-bar-other" />
     <motion.rect x="330" y="84" width="182" height="24" rx="6" className="ab-bar-irr" initial={{ scaleX: s(0, 1) }} animate={{ scaleX: 1 }} transition={p(0.9, 0.4)} style={{ transformBox: 'fill-box', transformOrigin: 'left' }} />
-    <text x="340" y="100" className="ab-bar-text">irrigação: mais de 70%</text>
+    <text x="340" y="100" className="ab-bar-text">agricultura: cerca de 70%</text>
     <text x="590" y="124" textAnchor="end" className="bi-tiny">indústria e uso doméstico, somados</text>
 
     <text x="330" y="160" className="bi-panel-title">ÁGUA VIRTUAL</text>
@@ -208,15 +208,15 @@ function WaterStress() {
     <text x="330" y="262" className="bi-small">importar alimento poupa a água</text>
     <text x="330" y="278" className="bi-small">que a produção doméstica gastaria</text>
     <motion.text x="40" y="312" className="bi-hand-sm" initial={{ opacity: s(0, 1) }} animate={{ opacity: 1 }} transition={p(0.6, 1.8)}>não é só volume: mais gente divide a mesma água</motion.text>
-    <text x="30" y="338" className="bi-foot">Barras ilustrativas; do texto vêm só o limiar de 1.000 m³ e os 70%.</text>
+    <text x="30" y="338" className="bi-foot">Barras ilustrativas: 1.000 m³ indica escassez; 70% refere-se a retiradas.</text>
   </g>;
 }
 
 export function WorldWaters({ active }: Scene) {
   const p = usePaced(); const s = useFrom();
-  const kicker = ['EXTENSÃO NÃO É VAZÃO', 'O NILO NO DESERTO', 'O RIO QUE CRUZA FRONTEIRAS', 'ESTRESSE HÍDRICO'][active];
+  const kicker = ['EXTENSÃO NÃO É VAZÃO', 'O NILO NO DESERTO', 'O RIO QUE CRUZA FRONTEIRAS', 'ESCASSEZ E RETIRADAS'][active];
   const Vignette = [LengthVsFlow, NileValley, Upstream, WaterStress][active];
-  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Hidrogeografia mundial: o Nilo mais extenso e a Amazônica com mais vazão, a faixa estreita do vale do Nilo, barragens nas cabeceiras do Mekong e estresse hídrico abaixo de mil metros cúbicos por habitante; recorte ${active + 1} em foco`}>
+  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Hidrogeografia mundial: extensão não é vazão, o Amazonas tem a maior vazão, a faixa estreita do vale do Nilo, barragens nas cabeceiras do Mekong, escassez abaixo de mil metros cúbicos por habitante ao ano e agricultura como maior setor de retiradas; recorte ${active + 1} em foco`}>
     <GeoIllustration kind="WorldWaters" active={active} />
     <g transform="translate(0 390)">
     <Frame kicker={`HIDROGEOGRAFIA MUNDIAL · ${kicker}`} />

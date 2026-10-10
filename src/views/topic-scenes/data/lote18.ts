@@ -17,9 +17,9 @@ export const ENTRIES_LOTE18: SceneEntry[] = [
       },
       {
         label: 'Gargalo na pandemia',
-        claim: 'Concentrar uma etapa em poucos lugares cria vulnerabilidade sistêmica: a escassez de semicondutores, originada principalmente em Taiwan, parou cadeias inteiras.',
+        claim: 'Concentrar etapas em poucos fornecedores cria vulnerabilidade: o descompasso global de oferta e demanda de chips, agravado pela pandemia, interrompeu cadeias inteiras.',
         section: 'Cadeias globais de valor',
-        quote: 'a pandemia de Covid-19 revelou como o fechamento de fábricas em poucos países-chave (como a escassez de semicondutores originada principalmente em Taiwan) pode paralisar cadeias produtivas inteiras em todo o mundo',
+        quote: 'A escassez de semicondutores resultou de um descompasso global entre oferta e demanda, agravado por interrupções de produção e logística',
       },
       {
         label: 'Custo × resiliência',
@@ -85,9 +85,9 @@ export const ENTRIES_LOTE18: SceneEntry[] = [
       },
       {
         label: 'Instituições do pós-guerra',
-        claim: 'ONU (1945), OMC, FMI e Banco Mundial nasceram após a Segunda Guerra; no Conselho de Segurança, só os cinco membros permanentes têm veto.',
+        claim: 'FMI e Banco Mundial têm origem em Bretton Woods (1944); ONU, em 1945, e OMC, em 1995. No Conselho, cinco permanentes podem vetar decisões não processuais.',
         section: 'As instituições multilaterais',
-        quote: 'com um Conselho de Segurança cujos cinco membros permanentes (Estados Unidos, Rússia, China, Reino Unido e França) possuem poder de veto sobre resoluções',
+        quote: 'com um Conselho de Segurança cujos cinco membros permanentes (Estados Unidos, Rússia, China, Reino Unido e França) podem vetar decisões sobre matérias não processuais',
       },
       {
         label: 'Problema sem fronteira',

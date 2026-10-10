@@ -327,3 +327,169 @@ describe('continuidade das pendências Design & Motion Kit', () => {
     expect(getReadingProgress(item, { readSectionIds: [1,2,3,4,5].map(i => `${id}-editorial-v2-${i}`), status: 'em-revisao', important: true, answers: [] })).toBe(0);
   });
 });
+
+
+describe('continuidade integral: História e Geografia, rodada seguinte', () => {
+  const models: Array<[string, string]> = [
+  [
+    "Introdução à História e Primeiras Civilizações",
+    "O excedente pode sustentar quem não planta e favorecer a especialização de ofícios e o crescimento urbano. A Mesopotâmia conheceu cidades-Estado e impérios em diferentes períodos. O Egito desenvolveu uma tradição de centralização sob o faraó, mas também teve fases de fragmentação."
+  ],
+  [
+    "Antiguidade Clássica: o Mundo Grego",
+    "As cidades independentes partilhavam cultura, língua, religião e Jogos Olímpicos. Em Atenas, homens cidadãos participavam diretamente das assembleias; excluía mulheres, escravizados e metecos. Os vínculos culturais não criavam um governo único."
+  ],
+  [
+    "Antiguidade Clássica: o Mundo Romano",
+    "As guerras civis entre generais enfraqueceram a ordem republicana. Augusto concentrou poder militar e político e manteve formalmente as instituições republicanas, como o Senado e as magistraturas, sob sua autoridade predominante."
+  ],
+  [
+    "Alta Idade Média e Feudalismo",
+    "Os servos deviam trabalho, produtos e taxas ao senhor e sofriam restrições jurídicas e de mobilidade. A vassalagem ligava nobres: o vassalo recebia um feudo em troca de serviço militar e conselho, além de fidelidade. Eram relações distintas que podiam coexistir."
+  ],
+  [
+    "Baixa Idade Média",
+    "A mortalidade gerou escassez de trabalhadores, e os sobreviventes puderam negociar melhores condições, embora enfrentassem resistência dos senhores. As Cruzadas intensificaram o comércio mediterrâneo já existente e ampliaram contatos com o Oriente."
+  ],
+  [
+    "América Espanhola",
+    "A encomienda permitia ao beneficiário receber tributos das comunidades indígenas, em bens ou serviços conforme o contexto. A mita era trabalho compulsório em rodízio, adaptado pelos espanhóis para a mineração. A preferência por peninsulares em altos cargos frustrava setores criollos com poder econômico e participação local e alimentava seu descontentamento, contribuindo para as independências."
+  ],
+  [
+    "Absolutismo",
+    "Bossuet defendia o direito divino: o poder vinha de Deus. Hobbes defendia um pacto em busca de segurança, autorizando um soberano indiviso, que podia ser uma pessoa ou assembleia, sem renúncia à autoconservação. Versalhes aproximava nobres da corte e os vinculava a favores e etiqueta, restringindo sua autonomia política."
+  ],
+  [
+    "Reforma Religiosa",
+    "Lutero criticava a arrecadação associada a indulgências e defendia a justificação pela fé, em vez de tratar pagamentos como garantia de salvação. Trento reafirmou dogmas católicos e corrigiu abusos, mantendo as indulgências. Os jesuítas atuavam em educação e missões, inclusive nos territórios coloniais."
+  ],
+  [
+    "Vida Urbana e Renascimento Cultural",
+    "A riqueza comercial das cidades italianas permitia a mecenas financiar artistas e intelectuais. O humanismo valorizava as capacidades humanas e os textos clássicos, frequentemente convivendo com a fé cristã. A arte incorporava perspectiva linear e naturalismo anatômico, continuando a produzir temas religiosos e ampliando temas mitológicos e seculares."
+  ],
+  [
+    "Iluminismo",
+    "A defesa de direitos universais convivia com a escravidão colonial e com a exclusão das mulheres e não proprietários da participação política plena, embora essas exclusões fossem contestadas. Montesquieu propôs a separação dos poderes para evitar a concentração do poder e a tirania."
+  ],
+  [
+    "Coordenadas Geográficas",
+    "A latitude é medida a partir do equador, ao norte ou ao sul. A longitude é medida a partir de Greenwich, a leste ou a oeste. Um grau de latitude vale aproximadamente 111 km; um grau de longitude diminui porque os meridianos convergem nos polos."
+  ],
+  [
+    "Movimentos da Terra",
+    "Os hemisférios têm estações opostas ao mesmo tempo, o que a distância comum ao Sol não explica. A causa principal é a inclinação do eixo, combinada com a translação. Por volta de 21 de dezembro ocorre o solstício de verão no hemisfério sul: raios mais diretos e dias mais longos."
+  ],
+  [
+    "Sistema de Fusos Horários",
+    "UTC−3 está 12 horas atrás de UTC+9. Subtraindo 12 horas de 9h30 de segunda-feira, chego a 21h30 de domingo."
+  ],
+  [
+    "Linguagem Cartográfica",
+    "6 cm × 250.000 = 1.500.000 cm, ou 15 km. Essa é a distância em linha reta; a estrada pode ser maior porque depende do traçado."
+  ],
+  [
+    "Projeções Cartográficas",
+    "Mercator aumenta a distorção das áreas em latitudes altas, perto dos polos. Para comparar áreas de países, procuraria uma projeção equivalente, que preserva a proporção das áreas."
+  ],
+  [
+    "Cartografia Digital",
+    "O SIG faz um cruzamento de camadas: população e distância às unidades mostram necessidade e oferta, e renda e doenças ajudam a priorizar vazios assistenciais. GPS determina a posição do receptor; sensoriamento remoto observa a superfície por imagens à distância."
+  ],
+  [
+    "Representações Gráficas e Cartográficas",
+    "São dois quilômetros: 4 vezes 50.000 dá 200.000 cm, ou 2 km. Escala grande mostra uma área menor com mais detalhe. A anamorfose dimensiona áreas por uma variável, por exemplo população."
+  ],
+  [
+    "Dinâmica Climática",
+    "Na convectiva a superfície aquece o ar; na orográfica uma barreira montanhosa força a subida; na frontal o encontro de massas levanta o ar quente. Quando sobe, o ar expande e esfria, podendo atingir a saturação e condensar."
+  ],
+  [
+    "Clima Mundial",
+    "Perto de 30 graus o ar descende, forma alta pressão e aquece, reduzindo a umidade relativa e dificultando nuvens e chuva. Quito tem altitude elevada nos Andes, por isso sua temperatura é menor apesar de estar junto ao Equador."
+  ],
+  [
+    "Geomorfologia Mundial",
+    "O Himalaia cresce pela colisão entre a placa Indiana e a Euroasiática, que comprime e espessa a crosta. O Japão está numa zona de subducção do Círculo de Fogo do Pacífico e por isso tem muitos terremotos."
+  ],
+  [
+    "Biogeografia Mundial",
+    "Perto de 30°, o ar desce, comprime e aquece, dificultando nuvens e chuva. O deserto tem precipitação escassa; a savana alterna estação chuvosa e estação seca."
+  ],
+  [
+    "Geopolítica Ambiental",
+    "Kyoto tinha metas obrigatórias para países desenvolvidos. Paris exige NDCs com metas nacionais e obrigações de transparência. Uma barragem a montante pode alterar as vazões recebidas por países a jusante, principalmente durante enchimento ou seca."
+  ],
+  [
+    "Geopolítica dos Recursos Hídricos",
+    "A água pode estar distante da população, e seu acesso depende de infraestrutura de captação, tratamento e distribuição. O uso a montante afeta quem está a jusante; a cooperação e os acordos pactuam usos, dados e solução de controvérsias."
+  ],
+  [
+    "Desafios Ambientais do Século XXI",
+    "Mitigação reduz emissões e atua nas causas. Adaptação prepara a sociedade para os impactos. As responsabilidades comuns porém diferenciadas consideram a responsabilidade histórica e a capacidade de cada país."
+  ],
+  [
+    "Água na Superfície Terrestre",
+    "Quase toda a água é salgada, nos oceanos. Grande parte da doce está em geleiras e no subsolo, distante do uso imediato. A bacia pede gestão integrada porque o uso a montante afeta quantidade e qualidade a jusante."
+  ],
+  [
+    "Hidrogeografia Mundial",
+    "O Egito está a jusante e depende do Nilo. O enchimento e a operação da barragem podem alterar a vazão recebida, sobretudo em secas, conforme as chuvas e os acordos. A agricultura é o setor que mais retira água doce."
+  ],
+  [
+    "Do Mundo Bipolar ao Multipolar",
+    "Não houve guerra aberta e generalizada entre EUA e URSS, mas houve guerras periféricas como Coreia e Vietnã, apoiadas pelas superpotências, e episódios de combate direto. A interpretação multipolar destaca vários centros de poder que disputam influência com pesos desiguais."
+  ],
+  [
+    "Globalização e Processos Econômicos Atuais",
+    "Distribuir etapas entre países permite aproveitar vantagens de custo e tecnologia. Concentrar uma etapa em poucos fornecedores cria gargalos: uma interrupção local pode parar a cadeia inteira. Diversificar fornecedores e fazer nearshoring reduz dependências e aumenta a resiliência, mesmo com custos maiores no curto prazo."
+  ],
+  [
+    "Geografia das Redes Mundiais",
+    "As redes ligam nós de comando com alta conectividade, e a proximidade física não determina a intensidade dos fluxos. Cabos submarinos concentram o tráfego de dados entre continentes: controlá-los ou rompê-los afeta comunicações e torna regiões com poucas rotas vulneráveis."
+  ],
+  [
+    "Unilateralismo e Multilateralismo",
+    "A composição do Conselho preserva a estrutura do pós-guerra de 1945, com cinco membros permanentes. Seu veto pode bloquear decisões não processuais, gerando críticas de representatividade. O problema climático ultrapassa fronteiras e exige cooperação global, pois nenhum país o resolve sozinho."
+  ]
+];
+  it.each(models)('aceita recuperação natural sobre conteúdo ensinado em %s', (topic, answer) => {
+    const item = interactiveSummaries.find(s => s.title === topic)!;
+    expect(item.sections).toHaveLength(5);
+    expect(item.retrieval).toHaveLength(1);
+    const result = evaluateRetrievalAnswer(item.retrieval[0], answer);
+    expect(result.firstMissingElement).toBeNull();
+    expect(result.matchedElements).toHaveLength(item.retrieval[0].expectedElements.length);
+  });
+  const sceneTopics = ["Introdução à História e Primeiras Civilizações","Antiguidade Clássica: o Mundo Grego","Antiguidade Clássica: o Mundo Romano","Alta Idade Média e Feudalismo","Baixa Idade Média","América Espanhola","Absolutismo","Reforma Religiosa","Vida Urbana e Renascimento Cultural","Iluminismo","Movimentos da Terra","Sistema de Fusos Horários","Linguagem Cartográfica","Projeções Cartográficas","Cartografia Digital","Representações Gráficas e Cartográficas","Dinâmica Climática","Clima Mundial","Geomorfologia Mundial","Biogeografia Mundial","Geopolítica Ambiental","Geopolítica dos Recursos Hídricos","Desafios Ambientais do Século XXI","Água na Superfície Terrestre","Hidrogeografia Mundial","Do Mundo Bipolar ao Multipolar","Globalização e Processos Econômicos Atuais","Geografia das Redes Mundiais","Unilateralismo e Multilateralismo"];
+  it.each(sceneTopics)('preserva a cena e suas citações em %s', topic => {
+    const item = interactiveSummaries.find(s => s.title === topic)!;
+    const entry = [...historia, ...geografia].find(s => s.chapterId === item.id);
+    expect(entry).toBeDefined();
+    expect(validarLastro(entry!, item)).toEqual([]);
+  });
+  it('não aceita só os pontos de origem como explicação completa das coordenadas', () => {
+    const item = interactiveSummaries.find(s => s.title === 'Coordenadas Geográficas')!;
+    expect(evaluateRetrievalAnswer(item.retrieval[0], 'Equador e Greenwich.').firstMissingElement).not.toBeNull();
+  });
+  it('distingue servidão de liberdade jurídica', () => {
+    const item = interactiveSummaries.find(s => s.title === 'Alta Idade Média e Feudalismo')!;
+    expect(item.sections[1].content).toContain('dependência jurídica');
+    expect(item.sections[1].content).not.toContain('juridicamente livres mas presos');
+  });
+  it('mede inclinação em relação à perpendicular e qualifica equinócios', () => {
+    const item = interactiveSummaries.find(s => s.title === 'Movimentos da Terra')!;
+    expect(item.sections[1].content).toMatch(/23,5.*perpendicular/);
+    expect(item.sections[3].content).not.toContain('duração igual em todo o planeta');
+    expect(item.sections[3].content).toMatch(/polares/);
+  });
+  it('distingue vinculação jurídica de Paris de metas nacionalmente definidas', () => {
+    const item = interactiveSummaries.find(s => s.title === 'Geopolítica Ambiental')!;
+    expect(item.sections[1].content).toContain('juridicamente vinculante');
+    expect(item.sections[1].content).not.toContain('não vinculantes');
+  });
+  it('distingue crátons, escudos e colisão continental de subducção', () => {
+    const item = interactiveSummaries.find(s => s.title === 'Geomorfologia Mundial')!;
+    expect(item.sections[0].content).toContain('incluem escudos');
+    expect(item.sections[0].content).toContain('não forma um arco vulcânico como o andino');
+  });
+});

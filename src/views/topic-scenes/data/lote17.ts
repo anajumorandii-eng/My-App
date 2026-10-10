@@ -52,15 +52,15 @@ export const ENTRIES_LOTE17: SceneEntry[] = [
       },
       {
         label: 'Kyoto × Paris',
-        claim: 'Kyoto (1997) obrigava só os desenvolvidos; Paris (2015) vale para todos, mas com metas voluntárias e sem sanção.',
+        claim: 'Kyoto (1997) fixou metas obrigatórias para países desenvolvidos; Paris (2015) exige NDCs de todas as Partes, com metas nacionalmente determinadas e sem sanções punitivas automáticas por não atingi-las.',
         section: 'Conferências e acordos',
         quote: 'O Protocolo de Kyoto (1997) foi o primeiro tratado a estabelecer metas obrigatórias de redução de emissões, mas apenas para países desenvolvidos',
       },
       {
         label: 'Nilo e a barragem',
-        claim: 'A barragem etíope fica em território próprio, mas reduz a água que chega ao Egito, rio abaixo.',
+        claim: 'A barragem etíope pode alterar vazões a jusante; impactos dependem do enchimento, da operação e das secas. Soberania territorial não elimina deveres de cooperação.',
         section: 'Conflitos por recursos',
-        quote: 'especialmente após a construção da Grande Barragem do Renascimento Etíope, que reduz a vazão que chega ao Egito',
+        quote: 'especialmente após a construção da Grande Barragem do Renascimento Etíope, cujo enchimento e regras de operação podem alterar a vazão a jusante, sobretudo em períodos de seca',
       },
       {
         label: 'Ártico em degelo',

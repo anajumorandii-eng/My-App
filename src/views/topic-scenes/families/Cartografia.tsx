@@ -120,7 +120,7 @@ export function TimeZones({ active }: Scene) {
       <text x="474" y="136" textAnchor="middle" className="ct-big">360° ÷ 24 h</text>
       <text x="474" y="170" textAnchor="middle" className="ct-big ct-accent">= 15° por hora</text>
       <text x="372" y="202" className="bi-small">a Terra gira de oeste para leste</text>
-      <text x="372" y="220" className="bi-small">24 fusos teóricos de 15° (1884)</text>
+      <text x="372" y="220" className="bi-small">modelo: 24 fusos teóricos de 15°</text>
       <text x="372" y="238" className="bi-small">a leste de Greenwich: UTC+</text>
       <text x="372" y="256" className="bi-small">a oeste de Greenwich: UTC−</text>
       <text x="474" y="282" textAnchor="middle" className="bi-hand-sm">o Sol “nasce” antes a leste</text>
@@ -496,7 +496,7 @@ export function DigitalMapping({ active }: Scene) {
     <defs><marker id={`${uid}-ct-dg-head`} viewBox="0 0 10 10" refX="6" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse"><path d="M0 0L10 5L0 10Z" className="ct-head" /></marker></defs>
 
 
-    <text x="30" y="344" className="bi-foot">Território, camadas e pixels são esquemáticos.</text>
+    <text x="30" y="344" className="bi-foot">Esquemático; resolução e revisita variam por sistema.</text>
   </g>
   </svg>;
 }
@@ -598,13 +598,14 @@ export function MapElements({ active }: Scene) {
       <motion.text x="30" y="66" className="bi-label" initial={false} animate={{ opacity: active === 2 ? [1, 1, 0] : 0 }} transition={p(1.6)}>tamanho = área real</motion.text>
       <motion.text x="30" y="66" className="bi-label ct-accent" initial={false} animate={{ opacity: active === 2 ? [0, 0, 1] : 0 }} transition={p(1.6)}>tamanho = população</motion.text>
       {COUNTRIES.map(c => {
-        const s = active === 2 ? c.pop : c.area;
+        const sizes = [Math.sqrt(c.area) * 9, Math.sqrt(c.pop) * 9];
+        const sizesToShow = p(1).duration === 0 ? sizes.slice(-1) : sizes;
         const move = p(1, active === 2 ? 0.9 : 0);
         return <g key={c.name}>
           <motion.rect rx="8" className={`ct-country-${c.vast ? 'vast' : 'dense'}`} initial={false}
-            animate={{ x: c.cx - s / 2, y: c.cy - s / 2, width: s, height: s }} transition={move} />
-          <motion.text x={c.cx} textAnchor="middle" className="bi-label" initial={false} animate={{ y: c.cy + s / 2 + 16 }} transition={move}>{c.name}</motion.text>
-          <motion.text x={c.cx} textAnchor="middle" className="bi-tiny" initial={false} animate={{ y: c.cy + s / 2 + 29 }} transition={move}>{c.vast ? 'vasto, pouco povoado' : 'populoso'}</motion.text>
+            animate={{ x: sizesToShow.map(size => c.cx - size / 2), y: sizesToShow.map(size => c.cy - size / 2), width: sizesToShow, height: sizesToShow }} transition={move} />
+          <motion.text x={c.cx} textAnchor="middle" className="bi-label" initial={false} animate={{ y: sizesToShow.map(size => c.cy + size / 2 + 16) }} transition={move}>{c.name}</motion.text>
+          <motion.text x={c.cx} textAnchor="middle" className="bi-tiny" initial={false} animate={{ y: sizesToShow.map(size => c.cy + size / 2 + 29) }} transition={move}>{c.vast ? 'vasto, pouco povoado' : 'populoso'}</motion.text>
         </g>;
       })}
       <text x="310" y="330" textAnchor="middle" className="bi-hand-sm">distorção de propósito, não erro</text>
@@ -624,7 +625,7 @@ export function MapElements({ active }: Scene) {
       <rect x="320" y="56" width="270" height="258" rx="10" className="bi-panel" />
       <text x="338" y="80" className="bi-panel-title">ANAMORFOSE</text>
       {COUNTRIES.map(c => {
-        const s = c.pop * 0.5, x = 318 + c.cx * 0.46, y = 64 + c.cy * 0.8;
+        const s = Math.sqrt(c.pop) * 4.5, x = 318 + c.cx * 0.46, y = 64 + c.cy * 0.8;
         return <g key={c.name}>
           <rect x={x - s / 2} y={y - s / 2} width={s} height={s} rx="5" className={`ct-country-${c.vast ? 'vast' : 'dense'}`} />
           <text x={x} y={y + s / 2 + 13} textAnchor="middle" className="bi-tiny">{c.name}</text>
@@ -735,11 +736,11 @@ export function SurfaceWater({ active }: Scene) {
       {[0, 1, 2].map(k => <motion.path key={k} d="M0 -4c-3 4-3 7 0 7s3-3 0-7Z" className="ct-drop" initial={false}
         animate={active === 2 ? { x: 354 + k * 8, y: [246, 262, 274], opacity: [0, 1, 0.8] } : { x: 354 + k * 8, y: 246, opacity: 0 }} transition={p(1.4, 0.4 + k * 0.3)} />)}
       <text x="330" y="80" className="bi-label">aquífero livre</text>
-      <text x="330" y="98" className="bi-small">nível freático exposto à superfície:</text>
+      <text x="330" y="98" className="bi-small">sem camada confinante acima:</text>
       <text x="330" y="114" className="bi-small">mais vulnerável à contaminação</text>
       <text x="30" y="80" className="bi-label">aquífero confinado</text>
-      <text x="30" y="98" className="bi-small">protegido por camada impermeável,</text>
-      <text x="30" y="114" className="bi-small">mas de recarga natural mais lenta</text>
+      <text x="30" y="98" className="bi-small">água sob pressão entre camadas,</text>
+      <text x="30" y="114" className="bi-small">com recarga dependente da geologia</text>
       <motion.path d="M168 186L196 226" className="ct-recharge" markerEnd={`url(#${uid}-ct-w-head)`} initial={false} animate={{ pathLength: active === 2 ? 1 : 0 }} transition={p(2.4, 0.6)} />
       <text x="206" y="200" className="bi-tiny">recarga</text>
       <text x="440" y="274" textAnchor="middle" className="bi-tiny ct-strong">livre</text>

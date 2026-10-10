@@ -118,13 +118,13 @@ function FrenchRevolution({ active }: { active: number; t: SceneTransition }) {
 
 function ProjectionComparison({ active, t }: { active: number; t: SceneTransition }) {
   const centers = [108, 310, 512];
-  const titles = ['CONFORME', 'EQUIVALENTE', 'EQUIDISTANTE'];
+  const titles = ['CONFORME', 'EQUIVALENTE', 'AZIMUTAL EQUID.'];
   // Indicatriz de Tissot: o mesmo círculo pequeno do globo, redesenhado por
   // cada projeção. Na conforme ele continua círculo mas cresce com a
   // latitude; na equivalente achata sem mudar de área (π·11·5,8 ≈ π·8²).
   const conformal = [[118, 12], [141, 8.5], [166, 6], [191, 8.5], [214, 12]];
   const equalArea = [[130, 11, 5.8], [166, 8, 8], [202, 11, 5.8]];
-  return <HumanitiesCorePlate kind="projection" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Propriedades cartográficas comparadas: conforme preserva forma local, equivalente preserva área, equidistante preserva distâncias desde um centro; ${titles[active].toLowerCase()} selecionada`}>
+  return <HumanitiesCorePlate kind="projection" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Propriedades cartográficas comparadas: conforme preserva forma local, equivalente preserva área, azimutal equidistante preserva distâncias desde um centro; ${titles[active].toLowerCase()} selecionada`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
     <text x="30" y="39" className="hg-kicker">A ESCOLHA DA PROJEÇÃO MUDA O QUE SE PRESERVA</text>
     {centers.map((x, i) => <g key={x} className={active === i ? 'hg-projection hg-projection-active' : 'hg-projection'}>

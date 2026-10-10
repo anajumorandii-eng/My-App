@@ -86,7 +86,7 @@ export const ENTRIES_LOTE15: SceneEntry[] = [
       },
       {
         label: 'Resolução × revisita',
-        claim: 'Cada sensor troca uma coisa pela outra: imagem grosseira com revisita diária, ou imagem muito detalhada com revisita rara.',
+        claim: 'Resolução espacial e revisita variam entre sensores e constelações; os dois casos ilustrados não são uma regra universal.',
         section: 'Pegadinhas frequentes',
         quote: 'desde imagens de baixíssima resolução espacial mas com revisita diária muito frequente, até imagens de altíssima resolução espacial mas com revisita muito menos frequente da mesma área específica',
       },
@@ -148,9 +148,9 @@ export const ENTRIES_LOTE15: SceneEntry[] = [
       },
       {
         label: 'Livre × confinado',
-        claim: 'O aquífero livre tem o nível freático exposto e se contamina mais; o confinado fica sob camada impermeável, mais protegido, mas recarrega devagar.',
+        claim: 'O aquífero livre não tem camada confinante acima da zona saturada; o confinado contém água sob pressão entre camadas pouco permeáveis. A vulnerabilidade e a recarga dependem da geologia.',
         section: 'Águas subterrâneas',
-        quote: 'geralmente mais protegidos de contaminação mas também de recarga natural mais lenta',
+        quote: 'a proteção e a recarga dependem da geologia e das áreas de recarga',
       },
       {
         label: 'Superexplotação',

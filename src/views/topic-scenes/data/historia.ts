@@ -235,9 +235,9 @@ const historiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Riqueza comercial',
-        claim: 'a riqueza do comércio mediterrâneo e do sistema bancário das cidades italianas foi condição econômica estrutural necessária — ainda que não suficiente isoladamente — para o florescimento artístico e cultural do Renascimento',
+        claim: 'a riqueza do comércio mediterrâneo e do sistema bancário das cidades italianas foi um fator importante, que não explica isoladamente o movimento, para o florescimento artístico e cultural do Renascimento',
         section: 'Pratique e confira',
-        quote: 'a riqueza gerada pelo comércio mediterrâneo e pelo sistema bancário das cidades italianas, especialmente Florença sob os Médici, foi condição econômica estrutural necessária (ainda que não suficiente isoladamente) para o florescimento artístico e cultural do Renascimento',
+        quote: 'a riqueza gerada pelo comércio mediterrâneo e pelo sistema bancário das cidades italianas, especialmente Florença sob os Médici, foi um fator importante (que não explica isoladamente o movimento) para o florescimento artístico e cultural do Renascimento',
       },
       {
         label: 'Mecenato',
@@ -247,9 +247,9 @@ const historiaBase: SceneEntry[] = [
       },
       {
         label: 'Humanismo',
-        claim: 'o humanismo, corrente de pensamento central ao movimento, deslocou o foco intelectual do teocentrismo medieval para uma perspectiva mais antropocêntrica',
+        claim: 'o humanismo valorizou os estudos clássicos e as capacidades humanas, frequentemente em convivência com a fé cristã',
         section: 'Humanismo e ciência',
-        quote: 'O humanismo renascentista, corrente de pensamento central ao movimento, deslocou progressivamente o foco intelectual do teocentrismo medieval (Deus como centro absoluto de todas as explicações sobre o mundo e a existência humana) para uma perspectiva mais antropocêntrica',
+        quote: 'O humanismo renascentista, corrente de pensamento central ao movimento, valorizou os estudos de gramática, retórica, história, poesia e filosofia moral a partir dos textos clássicos, destacando a capacidade racional, a dignidade e o potencial criativo do ser humano',
       },
       {
         label: 'Arte',
@@ -294,30 +294,29 @@ const historiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-historia-america-espanhola',
     family: 'escala-de-graus',
-    question: 'Como a hierarquia de castas coloniais distribuía direitos e status entre os grupos, da base ao topo?',
-    eixo: 'hierarquia jurídica e social colonial, do grupo com menos privilégios legais e políticos ao com mais — não uma escala de valor moral',
+    question: 'Como origem, nascimento e condição jurídica influenciavam oportunidades na sociedade colonial?',
+    eixo: 'privilégios e oportunidades desiguais — esquema geral, com variações de época e região',
     items: [
       {
         label: 'Grupos subordinados',
-        claim: 'mestiços, indígenas e população escravizada ocupavam posições intermediárias ou inferiores; a estrutura de castas determinava direitos legais, ocupações permitidas e status social de cada indivíduo',
+        claim: 'Mestiços, indígenas, africanos e descendentes sofriam discriminações diferentes; origem, riqueza e condição livre ou escravizada influenciavam oportunidades.',
         section: 'Sociedade colonial',
-        quote: 'mestiços, indígenas e população escravizada de origem africana, com posições intermediárias específicas conforme combinações étnicas variadas reconhecidas formalmente por essa estrutura de castas, que determinava direitos legais, ocupações permitidas e status social de cada indivíduo',
+        quote: 'Origem, local de nascimento, riqueza, condição livre ou escravizada e relações sociais influenciavam privilégios e oportunidades, com diferenças entre regiões e épocas.',
       },
       {
         label: 'Criollos',
-        claim: 'tinham poder econômico significativo mas eram frequentemente excluídos dos cargos políticos mais altos, reservados aos peninsulares',
+        claim: 'Descendentes de espanhóis nascidos na América participavam de instituições locais, mas enfrentavam preferência por peninsulares em muitos altos postos.',
         section: 'Sociedade colonial',
-        quote: 'os criollos (descendentes de espanhóis nascidos já na América, com poder econômico significativo mas frequentemente excluídos dos cargos políticos mais altos, reservados aos peninsulares, uma discriminação que geraria ressentimento crescente e alimentaria posteriormente os movimentos de independência liderados justamente por essa elite crioula)',
+        quote: 'criollos eram descendentes de espanhóis nascidos na América, frequentemente ricos e participantes de instituições locais, embora enfrentassem preferência por peninsulares em altos postos, especialmente no período das reformas bourbônicas',
       },
       {
         label: 'Peninsulares',
-        claim: 'ocupavam os cargos administrativos e eclesiásticos mais elevados, no topo da hierarquia',
+        claim: 'Espanhóis nascidos na Espanha predominavam em muitos cargos elevados; isso não tornava todos os peninsulares ricos ou poderosos.',
         section: 'Sociedade colonial',
-        quote: 'No topo estavam os peninsulares (espanhóis nascidos na própria Espanha, que ocupavam os cargos administrativos e eclesiásticos mais elevados)',
+        quote: 'Peninsulares eram espanhóis nascidos na Espanha e predominavam em muitos dos cargos mais elevados',
       },
     ],
-  },
-  // Task 3 — família movimento-dialetico (1 capítulo)
+  },  // Task 3 — família movimento-dialetico (1 capítulo)
   {
     chapterId: 'summary-historia-reforma-religiosa',
     family: 'movimento-dialetico',
@@ -325,9 +324,9 @@ const historiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Catolicismo pré-Reforma',
-        claim: 'a Igreja vendia indulgências prometendo redução do tempo de purgatório, prática que a crítica luterana viria a contestar',
+        claim: 'campanhas de arrecadação associadas a indulgências prometiam benefícios espirituais, prática contestada por Lutero',
         section: 'Causas e Lutero',
-        quote: 'a venda de indulgências (pagamentos que a Igreja Católica vendia prometendo redução do tempo de purgatório para o comprador ou para parentes falecidos)',
+        quote: 'a venda de indulgências (remissão da pena temporal de pecados já perdoados; campanhas de arrecadação associadas a indulgências prometiam benefícios espirituais para vivos e mortos)',
       },
       {
         label: 'Crítica luterana',
@@ -337,7 +336,7 @@ const historiaBase: SceneEntry[] = [
       },
       {
         label: 'Concílio de Trento',
-        claim: 'reafirmou os dogmas católicos centrais contestados pelos protestantes, mas também promoveu reformas internas para corrigir os abusos que haviam alimentado essas críticas — uma posição final que não é nem a pré-Reforma nem a simples rejeição da crítica protestante',
+        claim: 'reafirmou os dogmas católicos centrais contestados pelos protestantes, mas também promoveu reformas internas para corrigir os abusos que haviam alimentado essas críticas — uma reforma católica que preservava diferenças doutrinárias com o protestantismo, sem incorporar a justificação luterana',
         section: 'Contrarreforma',
         quote: 'reafirmou dogmas católicos centrais contestados pelos protestantes (como a autoridade papal, a validade dos sacramentos e a importância das obras combinadas com a fé para a salvação), ao mesmo tempo em que promoveu reformas internas destinadas a corrigir abusos genuínos que haviam alimentado as críticas protestantes originais',
       },
@@ -647,7 +646,7 @@ const historiaBase: SceneEntry[] = [
         label: 'Estrutura republicana',
         claim: 'a República Romana organizava-se por meio de instituições que distribuíam poder entre Senado, assembleias populares e magistrados eleitos em pares, evitando concentração excessiva de autoridade num único indivíduo',
         section: 'Da República ao Império',
-        quote: 'A República Romana (509-27 a.C.) organizava-se por meio de instituições que distribuíam poder entre diferentes órgãos — o Senado (composto por membros da aristocracia patrícia, com forte influência sobre política externa e finanças), as assembleias populares (com participação mais ampla, incluindo plebeus, especialmente após conquistas políticas como a criação do cargo de tribuno da plebe) e magistrados eleitos anualmente, como os cônsules, que exerciam poder executivo em pares para evitar concentração excessiva de autoridade num único indivíduo',
+        quote: 'A República Romana (509-27 a.C.) organizava-se por meio de instituições que distribuíam poder entre diferentes órgãos — o Senado (composto por membros da elite romana, inicialmente patrícios e depois também plebeus que alcançavam as magistraturas, com forte influência sobre política externa e finanças), as assembleias populares (com participação mais ampla, incluindo plebeus, especialmente após conquistas políticas como a criação do cargo de tribuno da plebe) e magistrados eleitos anualmente, como os cônsules, que exerciam poder executivo em pares para evitar concentração excessiva de autoridade num único indivíduo',
       },
       {
         label: 'Guerras civis',
@@ -782,7 +781,7 @@ const historiaBase: SceneEntry[] = [
         label: 'Atenas',
         claim: 'desenvolveu democracia direta restrita a homens livres nascidos de pai (e depois também de mãe) atenienses, excluindo mulheres, escravizados e metecos',
         section: 'Atenas e a cidadania restrita',
-        quote: 'apenas homens adultos, livres, nascidos em Atenas de pai ateniense (e, a partir de reforma de Péricles em 451 a.C., também de mãe ateniense) qualificavam-se como cidadãos com direito de participação política plena, excluindo completamente mulheres, escravizados (que compunham parcela expressiva, possivelmente majoritária, da população total ateniense) e metecos (estrangeiros residentes, mesmo que estabelecidos há gerações na cidade e economicamente ativos)',
+        quote: 'apenas homens adultos, livres, de ascendência ateniense pelo pai (e, a partir de reforma de Péricles em 451 a.C., também de mãe ateniense) qualificavam-se como cidadãos com direito de participação política plena, excluindo completamente mulheres, escravizados (que compunham parcela expressiva da população ateniense, cujo tamanho exato é discutido) e metecos (estrangeiros residentes, mesmo que estabelecidos há gerações na cidade e economicamente ativos)',
       },
       {
         label: 'Esparta',
@@ -794,7 +793,7 @@ const historiaBase: SceneEntry[] = [
         label: 'Mosaico helênico',
         claim: 'a Grécia Antiga nunca foi um Estado único, mas um mosaico de cidades-Estado independentes entre si, unidas por elementos culturais compartilhados',
         section: 'Uma região de cidades, não um Estado único',
-        quote: 'a Grécia Antiga nunca constituiu um Estado unificado no sentido moderno do termo, mas sim um mosaico de cidades-Estado (poleis) independentes entre si, cada uma com governo, leis, moeda e exército próprios, unidas por elementos culturais compartilhados — língua grega comum (ainda que com dialetos regionais distintos), religião politeísta com panteão de deuses comuns, e eventos pan-helênicos como os Jogos Olímpicos, que reuniam periodicamente representantes de diferentes cidades gregas em competição esportiva e celebração religiosa conjunta.',
+        quote: 'A Grécia Antiga nunca constituiu um Estado unificado no sentido moderno do termo, mas sim um mosaico de cidades-Estado (poleis) independentes entre si, cada uma com governo, leis, moeda e exército próprios, unidas por elementos culturais compartilhados — língua grega comum (ainda que com dialetos regionais distintos), religião politeísta com panteão de deuses comuns, e eventos pan-helênicos como os Jogos Olímpicos, que reuniam periodicamente representantes de diferentes cidades gregas em competição esportiva e celebração religiosa conjunta.',
       },
     ],
   },
@@ -811,9 +810,9 @@ const historiaBase: SceneEntry[] = [
       },
       {
         label: 'Contratualismo (Hobbes)',
-        claim: 'Hobbes oferecia justificativa racional e contratualista: sem soberano absoluto os homens viveriam em guerra constante, e o contrato social que cedia direitos a um soberano seria racionalmente justificado',
+        claim: 'Hobbes justificava por um pacto a autorização de soberano indiviso, pessoa ou assembleia, para garantir paz; os súditos preservavam a autoconservação',
         section: 'Justificativas teóricas',
-        quote: 'Thomas Hobbes, em sua obra "Leviatã" (1651), oferecia justificativa de natureza mais racional e contratualista: sem um poder soberano absoluto capaz de impor ordem, os seres humanos viveriam em "estado de natureza" de guerra constante de todos contra todos, e o contrato social pelo qual os indivíduos cediam seus direitos naturais a um soberano absoluto seria racionalmente justificado como forma de garantir segurança e paz coletiva, mesmo ao custo da submissão política irrestrita a esse poder centralizado.',
+        quote: 'Por um pacto entre si, os indivíduos autorizariam um soberano — uma pessoa ou uma assembleia — a exercer poder indiviso para garantir segurança e paz.',
       },
       {
         label: 'Convergência',
@@ -861,9 +860,9 @@ const historiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Servidão (senhor-servo)',
-        claim: 'o servo devia ao senhor prestações em trabalho, produtos e taxas, permanecendo preso à terra ainda que juridicamente livre',
+        claim: 'o servo devia ao senhor prestações em trabalho, produtos e taxas, com restrições jurídicas e de mobilidade',
         section: 'Senhorio, trabalho e poder',
-        quote: 'Os camponeses, majoritariamente servos (juridicamente livres mas presos à terra, não podendo abandoná-la sem autorização do senhor, diferente de escravizados que eram propriedade direta de um dono), deviam ao senhor prestações em trabalho (a corveia, dias de trabalho gratuito nas terras do domínio senhorial), em produtos (parcela da própria colheita) e em taxas diversas pelo uso de instalações do senhor',
+        quote: 'Os camponeses incluíam livres e servos, em proporções que variavam por região e época. Os servos (submetidos a dependência jurídica e a restrições de mobilidade, sem serem equivalentes a escravizados tratados como propriedade pessoal), deviam ao senhor prestações em trabalho (a corveia, dias de trabalho gratuito nas terras do domínio senhorial), em produtos (parcela da própria colheita) e em taxas diversas pelo uso de instalações do senhor',
       },
       {
         label: 'Suserania e vassalagem',
