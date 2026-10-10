@@ -698,7 +698,7 @@
       "subject": "Física",
       "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -706,7 +706,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/expansao-3d-gerador-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes",

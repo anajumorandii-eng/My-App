@@ -1,0 +1,272 @@
+{
+  "base": "0db26484467542f4d32818d8820beef997b2c734",
+  "logic_tests": {
+    "passed": 963,
+    "failed": 0
+  },
+  "related_ui_tests": {
+    "passed": 10,
+    "failed": 0,
+    "files": 2
+  },
+  "browser": {
+    "expected": 12,
+    "actual": 12,
+    "passed": 12,
+    "failures": []
+  },
+  "records": [
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-reduce-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-light-no-preference-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-reduce-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:360-dark-no-preference-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-reduce-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-light-no-preference-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-reduce-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:834-dark-no-preference-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-reduce-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-light-no-preference-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-reduce-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "physicalParameters": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "local:1440-dark-no-preference-summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores.jpg",
+      "passed": true
+    }
+  ],
+  "build": "passed",
+  "lint": "passed",
+  "queue": "passed",
+  "editorial_approval": false
+}
