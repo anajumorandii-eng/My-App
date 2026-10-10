@@ -53,7 +53,7 @@
       ],
       "visits": 360
     },
-    "execution": "Checks integrados pendentes na PR; não inferir aprovação editorial"
+    "execution": "Checks integrados pendentes após incorporação da #298; 30 modelos aceitos também pelo motor corrigido."
   },
   "merge_policy": "Usuária autorizou mesclar lotes concluídos com checks verdes e continuar a próxima rodada.",
   "groups": [
@@ -3630,5 +3630,13 @@
     "Motor de recuperação lexical não valida negação nem correção semântica integral.",
     "Fontes abertas e fontes apenas indexadas discriminadas nos registros por grupo.",
     "Capturas anteriores não aprovam a versão atual; aprovação editorial permanece pendente."
-  ]
+  ],
+  "integrated_updates": {
+    "pr": 298,
+    "head": "32cb18393fff9a005279350cb10e5f376cc69b39",
+    "physics_targeted_corrections": 8,
+    "not_counted_as_new_integral_first_pass": true,
+    "engine": "Correspondência numérica completa; critérios sem tokens não aprovam resposta vazia.",
+    "prior_checks": "CI e Verificar pull request passaram no head da #298; nova união exige checks próprios."
+  }
 }

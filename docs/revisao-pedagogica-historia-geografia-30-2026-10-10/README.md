@@ -11,3 +11,7 @@ Primeira passagem: 69/613 revisados, 544 pendentes. História: 49/49; Geografia:
 Verificação integrada pendente na PR: lint, testes, build e navegador em 390/834/1366 px, claro/escuro e com/sem redução de movimento, 360 visitas dirigidas com controles. Foram acrescentados 64 testes de continuidade e três testes de mecanismos. Não inferir inspeção visual manual de checks automatizados.
 
 A usuária autorizou mesclar cada rodada concluída após checks verdes e continuar a próxima. Registros antigos que exigem merge manual são históricos e foram substituídos por essa instrução. Próxima prioridade: os 43 capítulos restantes de Geografia.
+
+## Atualização concorrente incorporada
+
+A PR [#298](https://github.com/anajumorandii-eng/My-App/pull/298), já com checks verdes na sua ponta, foi incorporada por commit com dois pais. Preservados seus oito capítulos de Física, testes, fontes, capturas e correção do avaliador numérico. Correções dirigidas não são somadas à contagem de leitura integral. A união exige nova execução integrada; 30 modelos desta rodada passam também no motor atualizado. A suite de continuidade reúne 160 casos.

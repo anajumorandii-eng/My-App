@@ -68,7 +68,7 @@ function FluidScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' 
       {focoEmpuxo && <SceneNote text="empuxo = líquido deslocado" at={[173, superficie + 34]} to={[186, superficie - 40]} align="start" />}
 
       <text className="vs-scene-caption" x="160" y="292" textAnchor="middle">
-        {focoEmpuxo ? 'E = ρ𝑓 · V submerso · g' : 'a pressão depende só da profundidade'}
+        {focoEmpuxo ? 'E = ρ𝑓 · V submerso · g' : 'mesmo fluido: p cresce com a profundidade'}
       </text>
       <text className="vs-scene-caption" x="160" y="312" textAnchor="middle">
         {focoEmpuxo ? 'quem decide é a densidade, não o peso' : 'o formato do recipiente não entra'}
@@ -91,7 +91,7 @@ export default function HydrostaticsBoard(props: BoardProps) {
       left={{
         label: 'Pressão hidrostática',
         headline: 'Cresce com a profundidade.',
-        detail: 'Só a altura da coluna importa. Dois pontos na mesma profundidade têm a mesma pressão, mesmo em recipientes de formatos diferentes.',
+        detail: 'Com a mesma densidade, gravidade e pressão na superfície, pontos na mesma profundidade têm a mesma pressão, mesmo em recipientes de formatos diferentes.',
         formula: 'p = p₀ + ρ·g·h',
       }}
       right={{

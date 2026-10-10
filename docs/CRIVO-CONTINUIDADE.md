@@ -2,11 +2,15 @@
 
 ## Rodada seguinte: 30 capítulos de História e Geografia — 2026-10-10
 
-A PR [#296](https://github.com/anajumorandii-eng/My-App/pull/296) está mesclada; sua CI e a CI na main passaram. A rodada atual revisa dez capítulos restantes de História e vinte de Geografia. [Conteúdo, fontes, validação e limites](revisao-pedagogica-historia-geografia-30-2026-10-10/README.md).
+A PR [#296](https://github.com/anajumorandii-eng/My-App/pull/296) está mesclada; sua CI e a CI na main passaram. A PR #298, com checks verdes na sua ponta, foi incorporada nesta rodada, preservando oito correções dirigidas de Física e o avaliador numérico; exige novos checks na união. A rodada atual revisa dez capítulos restantes de História e vinte de Geografia. [Conteúdo, fontes, validação e limites](revisao-pedagogica-historia-geografia-30-2026-10-10/README.md).
 
 Primeira passagem das cinco seções e recuperação: 69/613 revisados, 544 pendentes; História 49/49 e Geografia 20/63. Não constitui aprovação formal: 81 em validação, 532 não revisados, zero aprovados. Os checks da PR atual ainda precisam passar antes do merge.
 
 **Autorização vigente:** a usuária pediu para mesclar cada lote concluído após checks verdes e corrigir o próximo. “Sem merge automático” nos checkpoints históricos abaixo foi substituído por essa instrução. Preservar atualizações recentes da main e não reaplicar PRs mescladas. Próxima rodada: 43 capítulos restantes de Geografia.
+
+## Rodada 2 — Física e recuperação, 2026-10-10
+
+A rodada anterior foi integrada no PR #297; base desta retomada: `8b6b0a43`. Corrigidos oito capítulos de Física, com revisão editorial 3 apenas nesses capítulos, e o avaliador compartilhado para não aprovar números ausentes ou encontrados dentro de valores diferentes. Rótulos de três representações foram alinhados às condições ensinadas. [Correções, fontes, evidências e próximos capítulos](continuidade-rodada-2-2026-10-10/README.md). Estados formais preservados; sem merge automático.
 
 ## Lote pedagógico de História — PR #296, 2026-10-10
 
