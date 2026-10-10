@@ -3239,7 +3239,7 @@
       },
       {
         "title": "Cnidários",
-        "content": "Cnidários — águas-vivas, corais, anêmonas e hidras — representam um salto organizacional importante sobre os poríferos: possuem tecidos verdadeiros (são diblásticos, com ectoderme e endoderme), simetria radial e uma cavidade gastrovascular com uma única abertura que funciona como boca e ânus simultaneamente, permitindo digestão tanto extracelular (dentro da cavidade) quanto intracelular (nas células que revestem a cavidade). A característica exclusiva e definidora do filo são os cnidócitos, células urticantes que disparam o nematocisto — uma estrutura em forma de arpão contendo toxina, usada tanto para captura de presas quanto para defesa. Possuem um sistema nervoso difuso, em rede, sem centralização em gânglios ou cérebro, mas suficiente para coordenar respostas simples e rápidas ao toque de uma presa ou predador. A musculatura é do tipo epitélio-muscular, com células que combinam função de revestimento e contração, permitindo movimentos de contração e expansão do corpo."
+        "content": "Cnidários — águas-vivas, corais, anêmonas e hidras — representam um salto organizacional importante sobre os poríferos: possuem tecidos verdadeiros (são diblásticos, com ectoderme e endoderme), simetria radial e uma cavidade gastrovascular com uma única abertura que funciona como boca e ânus simultaneamente, permitindo digestão tanto extracelular (dentro da cavidade) quanto intracelular (nas células que revestem a cavidade). A característica exclusiva e definidora do filo são os cnidócitos, células urticantes que disparam o nematocisto — uma estrutura em forma de arpão contendo toxina, usada tanto para captura de presas quanto para defesa. Possuem um sistema nervoso difuso, em rede, sem centralização em gânglios ou cérebro, mas suficiente para coordenar respostas simples e rápidas ao toque de uma presa ou predador. A musculatura é do tipo epitélio-muscular, com células que combinam função de revestimento e contração, permitindo movimentos de contração e expansão do corpo.\n\nMuitos corais construtores de recifes vivem em simbiose com microalgas chamadas zooxantelas, alojadas em seus tecidos. As algas fazem fotossíntese e fornecem compostos orgânicos que contribuem para a nutrição do coral; o animal oferece abrigo e recursos para essa associação. Estresses ambientais, como aquecimento anormal da água, podem causar perda dessas algas ou de seus pigmentos, deixando o esqueleto claro mais visível: é o branqueamento. Isso não significa morte imediata. A redução do aporte de nutrientes aumenta a vulnerabilidade e, se prolongada, pode levar à morte; se o estresse cessar e a associação se restabelecer, pode haver recuperação."
       },
       {
         "title": "Formas e ciclos",
@@ -3247,43 +3247,62 @@
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Dizer que esponja não é animal, por parecer planta ou rocha, é o erro mais básico — ela é animal heterótrofo, apenas sem tecidos organizados e séssil. O segundo é achar que a digestão do cnidário é totalmente extracelular por ter cavidade gastrovascular — ela é mista: extracelular inicial na cavidade e intracelular final nas células que a revestem, semelhante em parte ao que ocorre nos poríferos. O terceiro é confundir pólipo com medusa nas suas reproduções: pólipo reproduz-se predominantemente por brotamento assexuado, medusa produz gametas por reprodução sexuada — inverter isso derruba qualquer questão sobre o ciclo de vida da água-viva. O quarto é achar que todo cnidário tem as duas formas: corais e anêmonas existem apenas como pólipo, sem fase medusa alguma. O quinto é dizer que o nematocisto é uma célula — ele é uma organela especializada dentro do cnidócito, disparada por estímulo mecânico ou químico. E cuidado com a totipotência das esponjas: ela demonstra ausência de diferenciação celular rígida e centralizada, não \"inteligência\" ou sistema nervoso algum, que a esponja não possui."
+        "content": "Dizer que esponja não é animal, por parecer planta ou rocha, é o erro mais básico — ela é animal heterótrofo, apenas sem tecidos organizados e séssil. O segundo é achar que a digestão do cnidário é totalmente extracelular por ter cavidade gastrovascular — ela é mista: extracelular inicial na cavidade e intracelular final nas células que a revestem, semelhante em parte ao que ocorre nos poríferos. O terceiro é confundir pólipo com medusa nas suas reproduções: pólipo reproduz-se predominantemente por brotamento assexuado, medusa produz gametas por reprodução sexuada — inverter isso derruba qualquer questão sobre o ciclo de vida da água-viva. O quarto é achar que todo cnidário tem as duas formas: corais e anêmonas existem apenas como pólipo, sem fase medusa alguma. O quinto é dizer que o nematocisto é uma célula — ele é uma organela especializada dentro do cnidócito, disparada por estímulo mecânico ou químico. E cuidado com a totipotência das esponjas: ela demonstra ausência de diferenciação celular rígida e centralizada, não \"inteligência\" ou sistema nervoso algum, que a esponja não possui. Branqueamento não é sinônimo de morte: indica comprometimento da associação com as zooxantelas, com possibilidade de recuperação ou agravamento conforme a duração e a intensidade do estresse."
       },
       {
         "title": "Pratique e confira",
-        "content": "Por que uma esponja consegue se regenerar inteiramente a partir de células dissociadas mecanicamente (passadas por uma peneira fina, por exemplo), enquanto isso seria impossível num animal com tecidos verdadeiros como um cnidário? Responda antes de conferir. Porque as células da esponja não formam tecidos verdadeiros organizados nem estão comprometidas de forma rígida e irreversível com uma única função — são relativamente independentes e mantêm plasticidade suficiente para se reconhecerem, se reagregarem por afinidade química e se reorganizarem espacialmente até reconstituir a estrutura funcional do átrio, dos óstios e do ósculo. Num cnidário, as células já estão organizadas em camadas teciduais (ectoderme e endoderme) com diferenciação e comunicação intercelular mais estruturada, o que impede uma reagregação tão livre a partir de uma suspensão de células isoladas. Agora um segundo: explique por que a metagênese (alternância entre pólipo e medusa) é vantajosa evolutivamente, combinando os pontos fortes de cada forma. A resposta é que o pólipo séssil, fixo a um substrato favorável, garante reprodução assexuada rápida e eficiente por brotamento, multiplicando indivíduos geneticamente idênticos sem gasto energético com gametas; a medusa livre-natante permite dispersão a novos ambientes e reprodução sexuada, que gera variabilidade genética — a alternância aproveita a vantagem reprodutiva do pólipo e a vantagem dispersora e genética da medusa na mesma espécie."
+        "content": "Por que uma esponja consegue se regenerar inteiramente a partir de células dissociadas mecanicamente (passadas por uma peneira fina, por exemplo), enquanto isso seria impossível num animal com tecidos verdadeiros como um cnidário? Responda antes de conferir. Porque as células da esponja não formam tecidos verdadeiros organizados nem estão comprometidas de forma rígida e irreversível com uma única função — são relativamente independentes e mantêm plasticidade suficiente para se reconhecerem, se reagregarem por afinidade química e se reorganizarem espacialmente até reconstituir a estrutura funcional do átrio, dos óstios e do ósculo. Num cnidário, as células já estão organizadas em camadas teciduais (ectoderme e endoderme) com diferenciação e comunicação intercelular mais estruturada, o que impede uma reagregação tão livre a partir de uma suspensão de células isoladas. Agora um segundo: explique por que a metagênese (alternância entre pólipo e medusa) é vantajosa evolutivamente, combinando os pontos fortes de cada forma. A resposta é que o pólipo séssil, fixo a um substrato favorável, garante reprodução assexuada rápida e eficiente por brotamento, multiplicando indivíduos geneticamente idênticos sem gasto energético com gametas; a medusa livre-natante permite dispersão a novos ambientes e reprodução sexuada, que gera variabilidade genética — a alternância aproveita a vantagem reprodutiva do pólipo e a vantagem dispersora e genética da medusa na mesma espécie.\n\nUm coral fica branco após estresse térmico. Explique o risco e por que a cor, sozinha, não comprova morte. Resposta: a perda de zooxantelas reduz o aporte de nutrientes derivados da fotossíntese. O coral pode permanecer vivo e recuperar a associação; estresse prolongado aumenta o risco de morte. Compare com a alimentação de uma esponja: o batimento dos flagelos dos coanócitos movimenta a água, e essas células capturam partículas alimentares."
       }
     ],
     "recall": {
-      "prompt": "Por que o branqueamento mata os corais? E qual a função dos coanócitos nas esponjas?",
+      "prompt": "Por que o branqueamento prolongado pode levar corais à morte, e por que um coral branqueado ainda pode se recuperar? Explique também as duas funções dos coanócitos nas esponjas.",
+      "hint": "Retome “Cnidários” para relacionar simbiose, nutrição e recuperação, e “Poríferos” para relacionar corrente de água e captura de alimento.",
       "elements": [
         [
-          "a perda das zooxantelas simbiontes",
+          "perda das zooxantelas simbiontes",
           [
             "zooxantela",
             "simbionte",
-            "alga"
+            "microalga"
           ]
         ],
         [
-          "o coral perde a fonte de nutrientes",
+          "redução do aporte de nutrientes",
           [
             "nutriente",
-            "alimento",
-            "fome"
+            "nutricao",
+            "compostos organicos"
           ]
         ],
         [
-          "os coanocitos geram a corrente e capturam alimento",
+          "branqueamento não significa morte imediata e pode haver recuperação",
           [
-            "coanocito",
-            "flagelo",
-            "filtra"
+            "nao significa morte imediata",
+            "pode se recuperar",
+            "pode haver recuperacao",
+            "recuperar a associacao"
+          ]
+        ],
+        [
+          "flagelos movimentam a água",
+          [
+            "movimentam a agua",
+            "corrente de agua",
+            "batimento dos flagelos"
+          ]
+        ],
+        [
+          "coanócitos capturam partículas alimentares",
+          [
+            "capturam particulas",
+            "captura de alimento",
+            "filtram alimento",
+            "capturam alimento"
           ]
         ]
       ]
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Biologia",
@@ -10495,19 +10514,19 @@
       },
       {
         "title": "Condução, convecção e irradiação",
-        "content": "Calor se transfere por três mecanismos fisicamente distintos. Condução ocorre por colisões moleculares sucessivas dentro de um mesmo material ou entre materiais em contato direto, sem transporte macroscópico de matéria — moléculas mais agitadas (mais quentes) colidem com vizinhas menos agitadas, transferindo energia cinética gradualmente ao longo do material, um mecanismo dominante em sólidos, especialmente metais, que têm elétrons livres adicionais facilitando essa transferência. Convecção ocorre em fluidos (líquidos e gases) através do movimento macroscópico de porções inteiras do próprio fluido: partes mais quentes, geralmente menos densas, sobem, enquanto partes mais frias, mais densas, descem, criando correntes de convecção que transportam calor por deslocamento físico de matéria, o mecanismo por trás do aquecimento de uma sala por um aquecedor colocado próximo ao chão (o ar quente sobe naturalmente, distribuindo calor pelo ambiente) e das correntes atmosféricas e oceânicas em escala planetária. Irradiação (ou radiação térmica) é o único dos três mecanismos que não exige nenhum meio material — ocorre pela emissão de ondas eletromagnéticas (principalmente na faixa do infravermelho) por qualquer corpo com temperatura acima do zero absoluto, e é o único mecanismo capaz de transferir calor através do vácuo, exatamente como a energia solar atravessa o vácuo espacial para aquecer a Terra."
+        "content": "Calor se transfere por três mecanismos fisicamente distintos. Condução ocorre por colisões moleculares sucessivas dentro de um mesmo material ou entre materiais em contato direto, sem transporte macroscópico de matéria — moléculas mais agitadas (mais quentes) colidem com vizinhas menos agitadas, transferindo energia cinética gradualmente ao longo do material, um mecanismo dominante em sólidos, especialmente metais, que têm elétrons livres adicionais facilitando essa transferência. Convecção ocorre em fluidos (líquidos e gases) através do movimento macroscópico de porções inteiras do próprio fluido: partes mais quentes, geralmente menos densas, sobem, enquanto partes mais frias, mais densas, descem, criando correntes de convecção que transportam calor por deslocamento físico de matéria, o mecanismo por trás do aquecimento de uma sala por um aquecedor colocado próximo ao chão (o ar quente sobe naturalmente, distribuindo calor pelo ambiente) e das correntes atmosféricas e oceânicas em escala planetária. Irradiação (ou radiação térmica) é o único dos três mecanismos que não exige nenhum meio material — ocorre pela emissão de ondas eletromagnéticas (principalmente na faixa do infravermelho) por qualquer corpo com temperatura acima do zero absoluto, e é o único mecanismo capaz de transferir calor através do vácuo, exatamente como a energia solar atravessa o vácuo espacial para aquecer a Terra.\n\nMudanças de estado. Na fusão ideal de uma substância pura, sob pressão constante e com sólido e líquido em equilíbrio, a temperatura permanece constante enquanto as duas fases coexistem. A energia recebida modifica as interações e a organização entre partículas, em vez de aumentar a temperatura: é o calor latente. Usa-se Q=mL, sendo m a massa transformada e L o calor latente específico. Não se rompem, por isso, as ligações internas das moléculas de água. Depois da fusão completa, o aquecimento pode voltar a elevar a temperatura. Misturas ou mudanças de pressão não precisam apresentar esse mesmo patamar."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "O erro mais comum é achar que temperatura e calor são sinônimos, usando as duas palavras de forma intercambiável — temperatura é uma propriedade de estado de um corpo num instante; calor é energia em trânsito entre corpos a temperaturas diferentes, existindo apenas enquanto essa transferência ocorre. O segundo erro é achar que um corpo \"tem\" mais ou menos calor armazenado — corpos armazenam energia interna, não calor; calor é especificamente o nome dado à energia térmica durante o processo de transferência espontânea entre corpos, não uma quantidade fixa e permanente associada a um único corpo isolado. O terceiro erro é achar que a irradiação exige um meio material para se propagar, como os outros dois mecanismos — ela é o único mecanismo de transferência de calor que atravessa o vácuo livremente, sendo, inclusive, o único mecanismo pelo qual a energia solar consegue chegar até a Terra através do vácuo espacial interposto. O quarto erro é converter temperaturas usando fatores multiplicativos simples sem considerar os deslocamentos de zero entre as escalas — a conversão entre Celsius e Fahrenheit, por exemplo, exige tanto multiplicar por um fator (9/5) quanto somar um deslocamento (32), e omitir qualquer um dos dois termos produz um resultado incorreto. Um quinto erro é achar que a convecção pode ocorrer em sólidos — ela exige o deslocamento macroscópico de porções do próprio meio, algo que só é possível em fluidos (líquidos e gases), já que sólidos não fluem; a transferência de calor dentro de sólidos ocorre por condução, não convecção."
+        "content": "O erro mais comum é achar que temperatura e calor são sinônimos, usando as duas palavras de forma intercambiável — temperatura é uma propriedade de estado de um corpo num instante; calor é energia em trânsito entre corpos a temperaturas diferentes, existindo apenas enquanto essa transferência ocorre. O segundo erro é achar que um corpo \"tem\" mais ou menos calor armazenado — corpos armazenam energia interna, não calor; calor é especificamente o nome dado à energia térmica durante o processo de transferência espontânea entre corpos, não uma quantidade fixa e permanente associada a um único corpo isolado. O terceiro erro é achar que a irradiação exige um meio material para se propagar, como os outros dois mecanismos — ela é o único mecanismo de transferência de calor que atravessa o vácuo livremente, sendo, inclusive, o único mecanismo pelo qual a energia solar consegue chegar até a Terra através do vácuo espacial interposto. O quarto erro é converter temperaturas usando fatores multiplicativos simples sem considerar os deslocamentos de zero entre as escalas — a conversão entre Celsius e Fahrenheit, por exemplo, exige tanto multiplicar por um fator (9/5) quanto somar um deslocamento (32), e omitir qualquer um dos dois termos produz um resultado incorreto. Um quinto erro é achar que a convecção pode ocorrer em sólidos — ela exige o deslocamento macroscópico de porções do próprio meio, algo que só é possível em fluidos (líquidos e gases), já que sólidos não fluem; a transferência de calor dentro de sólidos ocorre por condução, não convecção. Não suponha que receber energia sempre aumenta a temperatura: durante a mudança de fase ideal descrita, ela permanece constante. A afirmação depende das condições de pureza, pressão e equilíbrio, não vale indiscriminadamente para qualquer mistura."
       },
       {
         "title": "Pratique e confira",
-        "content": "Converta 25°C para Fahrenheit e para Kelvin. Em Kelvin: K=25+273=298 K. Em Fahrenheit: °F=(9/5)×25+32=45+32=77°F. Agora um problema mais analítico: um termômetro Fahrenheit e um Celsius são colocados no mesmo ambiente. Determine a temperatura, em graus Celsius, na qual as duas escalas indicam exatamente o mesmo valor numérico. Fazendo °F=°C=x na fórmula de conversão: x=(9/5)x+32, logo x−(9/5)x=32, ou seja (−4/5)x=32, dando x=32×(−5/4)=−40. Verificando: −40°C corresponde a (9/5)×(−40)+32=−72+32=−40°F — as duas escalas de fato coincidem exatamente em −40 graus, o único ponto em que Celsius e Fahrenheit indicam o mesmo número, um resultado que emerge diretamente da resolução algébrica da equação de conversão, sem necessidade de tentativa e erro numérico, e que serve como um caso curioso e memorável de coincidência entre duas escalas com zeros e amplitudes de grau completamente diferentes."
+        "content": "Converta 25°C para Fahrenheit e para Kelvin. Em Kelvin: K=25+273=298 K. Em Fahrenheit: °F=(9/5)×25+32=45+32=77°F. Agora um problema mais analítico: um termômetro Fahrenheit e um Celsius são colocados no mesmo ambiente. Determine a temperatura, em graus Celsius, na qual as duas escalas indicam exatamente o mesmo valor numérico. Fazendo °F=°C=x na fórmula de conversão: x=(9/5)x+32, logo x−(9/5)x=32, ou seja (−4/5)x=32, dando x=32×(−5/4)=−40. Verificando: −40°C corresponde a (9/5)×(−40)+32=−72+32=−40°F — as duas escalas de fato coincidem exatamente em −40 graus, o único ponto em que Celsius e Fahrenheit indicam o mesmo número, um resultado que emerge diretamente da resolução algébrica da equação de conversão, sem necessidade de tentativa e erro numérico, e que serve como um caso curioso e memorável de coincidência entre duas escalas com zeros e amplitudes de grau completamente diferentes.\n\nUma amostra de gelo puro já na temperatura de fusão recebe energia sob pressão constante, em equilíbrio com água líquida. O termômetro precisa subir? Não: enquanto coexistem gelo e água, a energia corresponde ao calor latente de fusão. Num exemplo didático com m=50 g e L=80 cal/g, a fusão completa exige Q=50×80=4.000 cal; não exige variação de temperatura nessa etapa. No vácuo, condução e convecção não transportam essa energia: a transferência térmica ocorre por irradiação."
       }
     ],
     "recall": {
-      "prompt": "Sem consultar: por que a temperatura não aumenta durante uma fusão ideal, embora o corpo receba energia? Diga também qual mecanismo de transferência ocorre no vácuo.",
+      "prompt": "Sem consultar: numa fusão ideal de substância pura, sob pressão constante e em equilíbrio, por que a temperatura permanece constante enquanto sólido e líquido coexistem, embora haja energia recebida? Qual mecanismo de transferência térmica ocorre no vácuo?",
       "elements": [
         [
           "temperatura constante na mudanca de fase",
@@ -10517,12 +10536,12 @@
           ]
         ],
         [
-          "energia reorganiza as ligacoes",
+          "energia modifica as interações entre partículas",
           [
-            "ligacoes",
             "interacoes",
             "organizacao",
-            "estrutura"
+            "estrutura",
+            "calor latente"
           ]
         ],
         [
@@ -10532,9 +10551,10 @@
             "radiacao"
           ]
         ]
-      ]
+      ],
+      "hint": "Mudanças de estado: retome o trecho de “Condução, convecção e irradiação” sobre o patamar, o destino da energia e o mecanismo que dispensa meio material."
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "Física",
@@ -16297,19 +16317,19 @@
       },
       {
         "title": "Economia açucareira",
-        "content": "A economia açucareira, base da colonização portuguesa bem-sucedida no Brasil ao longo dos séculos XVI e XVII, organizou-se em torno do engenho, unidade produtiva que combinava plantação de cana-de-açúcar, moagem mecânica movida por tração animal, hídrica ou eventualmente vapor em período posterior, e processamento do açúcar bruto para exportação à Europa, onde o produto tinha alto valor comercial por ser ainda relativamente raro e caro no mercado europeu daquele período. O modelo de produção combinava latifúndio (grandes extensões de terra concedidas por sesmarias), monocultura voltada à exportação e trabalho escravizado em larga escala, um arranjo que os historiadores chamam de plantation, replicado com variações em outras colônias americanas europeias do período. A prosperidade açucareira concentrou-se especialmente na região Nordeste, particularmente Pernambuco e Bahia, cujo clima tropical úmido e solo de massapé (rico em nutrientes, formado a partir da decomposição de rochas calcárias) favoreciam especialmente o cultivo da cana em condições de alta produtividade agrícola para os padrões da época."
+        "content": "A economia açucareira, base da colonização portuguesa bem-sucedida no Brasil ao longo dos séculos XVI e XVII, organizou-se em torno do engenho, unidade produtiva que combinava plantação de cana-de-açúcar, moagem mecânica movida por tração animal, hídrica ou eventualmente vapor em período posterior, e processamento do açúcar bruto para exportação à Europa, onde o produto tinha alto valor comercial por ser ainda relativamente raro e caro no mercado europeu daquele período. O modelo de produção combinava latifúndio (grandes extensões de terra concedidas por sesmarias), monocultura voltada à exportação e trabalho escravizado em larga escala, um arranjo que os historiadores chamam de plantation, replicado com variações em outras colônias americanas europeias do período. A prosperidade açucareira concentrou-se especialmente na região Nordeste, particularmente Pernambuco e Bahia, cujo clima tropical úmido e solos argilosos conhecidos como massapé favoreciam especialmente o cultivo da cana em condições de alta produtividade agrícola para os padrões da época. O engenho exigia investimentos em terras, equipamentos e instalações; sua inserção no comércio de exportação articulava produção, financiamento e transporte atlântico."
       },
       {
         "title": "Escravidão indígena e africana",
-        "content": "A escravidão indígena precedeu cronologicamente a escravidão africana em larga escala na colônia, mas enfrentou obstáculos estruturais que levaram à sua substituição progressiva ao longo do século XVI. Populações indígenas escravizadas resistiam de diversas formas (fuga para o interior, onde o conhecimento do território dificultava a captura, e revoltas armadas) e sofriam mortalidade elevadíssima por epidemias de doenças europeias (varíola, sarampo, gripe) para as quais não possuíam imunidade biológica prévia, dizimando populações inteiras em poucas décadas de contato. A Igreja Católica, por meio de ordens religiosas como os jesuítas, também se opunha, por razões religiosas e políticas próprias, à escravização indígena, defendendo a catequização como alternativa ao trabalho forçado, embora aceitasse a escravidão africana sem a mesma oposição institucional sistemática. Esses fatores combinados levaram ao tráfico transatlântico de africanos escravizados, intensificado a partir de fins do século XVI, tornando-se a base majoritária da mão de obra da economia açucareira colonial ao longo dos séculos seguintes, num dos maiores e mais duradouros sistemas de escravização da história humana."
+        "content": "A escravização indígena e a africana coexistiram, com diferenças entre regiões e períodos. A expansão do tráfico transatlântico não apagou a exploração indígena: enquanto áreas açucareiras do Nordeste receberam maior fluxo de africanos escravizados, regiões como São Vicente continuaram recorrendo intensamente ao cativeiro indígena no século XVII. A resistência indígena por fugas e revoltas e a mortalidade causada por epidemias e guerras afetaram a exploração dessa mão de obra.\n\nOs jesuítas disputavam com os colonos o controle do trabalho indígena e se opunham a determinadas formas de escravização. A catequização em aldeamentos não eliminava o trabalho compulsório nem a subordinação colonial. Essa atuação não equivale a uma oposição institucional geral à escravidão africana.\n\nA demanda da economia açucareira, as redes comerciais atlânticas e os lucros do tráfico favoreceram a expansão da escravização africana. Resistência, epidemias e conflitos religiosos ajudam a explicar o contexto, mas não formam três condições necessárias que precisariam ocorrer juntas em todo lugar. A explicação deve considerar interesses econômicos, violência colonial e diferenças regionais, sem supor substituição imediata ou completa."
       },
       {
         "title": "Pegadinhas frequentes",
-        "content": "Pegadinhas frequentes: 1) achar que todas as capitanias hereditárias fracassaram igualmente — Pernambuco e São Vicente prosperaram de forma consistente, diferentemente da maioria das demais capitanias que efetivamente fracassaram. 2) achar que o Governo-Geral substituiu completamente o sistema de capitanias — as capitanias permaneceram como divisões administrativas, mas subordinadas à nova instância centralizada de governo. 3) confundir sesmaria com capitania hereditária — sesmaria é a concessão individual de terra dentro de uma capitania, um instrumento de distribuição fundiária em escala menor que a própria capitania. 4) achar que a escravidão africana substituiu instantaneamente a indígena — houve período de coexistência e transição gradual ao longo do século XVI, motivada por múltiplos fatores combinados, não uma substituição abrupta e única. 5) achar que a Igreja Católica se opunha a toda forma de escravidão colonial — jesuítas se opuseram especificamente à escravização indígena por razões próprias, sem a mesma oposição sistemática à escravidão africana. 6) achar que o modelo de plantation era exclusividade brasileira — foi replicado, com variações locais, em outras colônias americanas de diferentes potências europeias no mesmo período histórico."
+        "content": "Pegadinhas frequentes: 1) achar que todas as capitanias hereditárias fracassaram igualmente — Pernambuco e São Vicente prosperaram de forma consistente, diferentemente da maioria das demais capitanias que efetivamente fracassaram. 2) achar que o Governo-Geral substituiu completamente o sistema de capitanias — as capitanias permaneceram como divisões administrativas, mas subordinadas à nova instância centralizada de governo. 3) confundir sesmaria com capitania hereditária — sesmaria é a concessão individual de terra dentro de uma capitania, um instrumento de distribuição fundiária em escala menor que a própria capitania. 4) achar que a escravidão africana substituiu instantaneamente a indígena — as duas formas de exploração coexistiram, inclusive no século XVII, com trajetórias regionais distintas; a expansão do tráfico não encerrou automaticamente o cativeiro indígena. 5) achar que a Igreja Católica se opunha a toda forma de escravidão colonial — a oposição jesuíta a determinadas formas de cativeiro indígena coexistia com o controle do trabalho nos aldeamentos e sem uma oposição geral à escravidão africana. 6) achar que o modelo de plantation era exclusividade brasileira — foi replicado, com variações locais, em outras colônias americanas de diferentes potências europeias no mesmo período histórico."
       },
       {
         "title": "Pratique e confira",
-        "content": "Pratique: (1) Explique por que apenas as capitanias de Pernambuco e São Vicente prosperaram de forma consistente entre as capitanias hereditárias implantadas a partir de 1534, enquanto a maioria das demais fracassou. (2) Mais analítico: a escravização indígena, apesar de ter precedido cronologicamente a africana na colônia portuguesa, foi progressivamente substituída ao longo do século XVI. Considerando os múltiplos fatores citados (resistência indígena por fuga e revolta, mortalidade por epidemias, oposição religiosa jesuítica), explique por que nenhum desses fatores isoladamente seria suficiente para explicar essa transição, exigindo uma explicação que combine causas biológicas, políticas e religiosas atuando simultaneamente ao longo de décadas de colonização, e considere também o papel do próprio tráfico transatlântico já estabelecido como alternativa logística disponível aos colonos."
+        "content": "Pratique: (1) Por que a Coroa instituiu o Governo-Geral sem abolir as capitanias? Resposta: buscava ampliar a coordenação administrativa e centralizar defesa e justiça diante das dificuldades de muitas capitanias. (2) Por que a empresa açucareira articulava grande investimento e exportação? Resposta: terras, equipamentos e instalações exigiam recursos; a produção era organizada para abastecer o mercado externo. (3) Compare o Nordeste açucareiro e São Vicente no século XVII. Resposta: o primeiro estava mais integrado ao fluxo de africanos escravizados; a segunda região recorria intensamente à escravização indígena. Redes comerciais, lucros do tráfico e demanda açucareira devem ser relacionados à resistência, às epidemias e às disputas pelo trabalho, sem tratá-los como uma fórmula universal de substituição. Os aldeamentos tampouco significavam ausência de trabalho compulsório."
       }
     ],
     "recall": {
@@ -16341,7 +16361,7 @@
         ]
       ]
     },
-    "rev": 2
+    "rev": 3
   },
   {
     "subject": "História",

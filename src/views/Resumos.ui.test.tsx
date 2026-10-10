@@ -24,7 +24,7 @@ describe('restauração do contexto do resumo', () => {
   it('abre diretamente a pergunta indicada na URL após recarregar', () => {
     render(<MemoryRouter initialEntries={[rotaCalor]}><Resumos/></MemoryRouter>);
     expect(screen.getByRole('heading', { name: /Calor, temperatura/ })).toBeInTheDocument();
-    expect(screen.getByText(/por que a temperatura não aumenta/i)).toBeInTheDocument();
+    expect(screen.getByText(/por que a temperatura permanece constante/i)).toBeInTheDocument();
     expect(screen.getByLabelText('Sua resposta')).toHaveAttribute('data-question-id', perguntaCalor);
   });
 
@@ -89,7 +89,8 @@ describe('restauração do contexto do resumo', () => {
   it('não cria erro quando a primeira resposta contém todos os mecanismos', async () => {
     const user = userEvent.setup();
     render(<MemoryRouter initialEntries={[rotaCalor]}><Resumos/></MemoryRouter>);
-    await user.type(screen.getByLabelText('Sua resposta'), 'A temperatura constante caracteriza a mudança de fase, a energia reorganiza as interações e no vácuo a transferência ocorre por irradiação.');
+    await user.click(screen.getByLabelText('Sua resposta'));
+    await user.paste('A temperatura constante caracteriza a mudança de fase, a energia reorganiza as interações e no vácuo a transferência ocorre por irradiação.');
     await user.click(screen.getByRole('button', { name: 'Enviar para correção' }));
     const updater = update.mock.calls.at(-1)?.[1] as (progress: SummaryProgress) => SummaryProgress;
     const created = updater({ readSectionIds: [], status: 'nao-iniciado', important: false, answers: [] });

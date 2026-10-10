@@ -1,0 +1,298 @@
+vite v6.4.3 building for production...
+transforming...
+✓ 3721 modules transformed.
+rendering chunks...
+[plugin vite:reporter] 
+(!) /workspace/My-App/src/views/visual-instruments/LiteratureFoundations.tsx is dynamically imported by /workspace/My-App/src/views/visual-instruments/registry.ts but also statically imported by /workspace/My-App/src/views/topic-experiments/TopicExperiment.tsx, /workspace/My-App/src/views/visual-instruments/PhilosophyOperations.tsx, /workspace/My-App/src/views/visual-instruments/SociologyOperations.tsx, /workspace/My-App/src/views/visual-instruments/WritingOperations.tsx, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /workspace/My-App/src/views/visual-instruments/SociologyOperations.tsx is dynamically imported by /workspace/My-App/src/views/visual-instruments/registry.ts but also statically imported by /workspace/My-App/src/views/topic-experiments/TopicExperiment.tsx, dynamic import will not move module into another chunk.
+
+[plugin vite:reporter] 
+(!) /workspace/My-App/src/views/visual-instruments/PhilosophyOperations.tsx is dynamically imported by /workspace/My-App/src/views/visual-instruments/registry.ts but also statically imported by /workspace/My-App/src/views/topic-experiments/TopicExperiment.tsx, dynamic import will not move module into another chunk.
+
+computing gzip size...
+../work/design-motion/dist-confirmed/index.html                                              3.41 kB │ gzip:     1.49 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size3-Regular-CTq5MqoE.woff                4.42 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size4-Regular-Dl5lxZxV.woff2               4.93 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size2-Regular-Dy4dx90m.woff2               5.21 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size1-Regular-mCD8mA8B.woff2               5.47 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size4-Regular-BF-4gkZK.woff                5.98 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size2-Regular-oD1tc_U0.woff                6.19 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size1-Regular-C195tn64.woff                6.50 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Caligraphic-Regular-Di6jR-x-.woff2         6.91 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Caligraphic-Bold-Dq_IR9rO.woff2            6.91 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size3-Regular-DgpXs0kz.ttf                 7.59 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Caligraphic-Regular-CTRA-rTL.woff          7.66 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Caligraphic-Bold-BEiXGLvX.woff             7.72 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Script-Regular-D3wIWfF6.woff2              9.64 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_SansSerif-Regular-DDBCnlJ7.woff2          10.34 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size4-Regular-DWFBv043.ttf                10.36 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Script-Regular-D5yQViql.woff              10.59 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Fraktur-Regular-CTYiF6lA.woff2            11.32 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Fraktur-Bold-CL6g_b3V.woff2               11.35 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size2-Regular-B7gKUWhC.ttf                11.51 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_SansSerif-Italic-C3H0VqGB.woff2           12.03 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_SansSerif-Bold-D1sUS0GD.woff2             12.22 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Size1-Regular-Dbsnue_I.ttf                12.23 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_SansSerif-Regular-CS6fqUqJ.woff           12.32 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Caligraphic-Regular-wX97UBjC.ttf          12.34 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Caligraphic-Bold-ATXxdsX0.ttf             12.37 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Fraktur-Regular-Dxdc4cR9.woff             13.21 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Fraktur-Bold-BsDP51OF.woff                13.30 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Typewriter-Regular-CO6r4hn1.woff2         13.57 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_SansSerif-Italic-DN2j7dab.woff            14.11 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_SansSerif-Bold-DbIhKOiC.woff              14.41 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Typewriter-Regular-C0xS9mPB.woff          16.03 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Math-BoldItalic-CZnvNsCZ.woff2            16.40 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Math-Italic-t53AETM-.woff2                16.44 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Script-Regular-C5JkGWo-.ttf               16.65 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-BoldItalic-DxDJ3AOS.woff2            16.78 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-Italic-NWA7e6Wa.woff2                16.99 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Math-BoldItalic-iY-2wyZ7.woff             18.67 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Math-Italic-DA0__PXp.woff                 18.75 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-BoldItalic-SpSLRI95.woff             19.41 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_SansSerif-Regular-BNo7hRIc.ttf            19.44 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Fraktur-Regular-CB_wures.ttf              19.57 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Fraktur-Bold-BdnERNNW.ttf                 19.58 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-Italic-BMLOBm91.woff                 19.68 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_SansSerif-Italic-YYjJ1zSn.ttf             22.36 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_SansSerif-Bold-CFMepnvq.ttf               24.50 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-Bold-Cx986IdX.woff2                  25.32 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-Regular-B22Nviop.woff2               26.27 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Typewriter-Regular-D3Ib7_Hf.ttf           27.56 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_AMS-Regular-BQhdFMY1.woff2                28.08 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-Bold-Jm3AIy58.woff                   29.91 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-Regular-Dr94JaBh.woff                30.77 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Math-BoldItalic-B3XSjfu4.ttf              31.20 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Math-Italic-flOr_0UB.ttf                  31.31 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-BoldItalic-DzxPMmG6.ttf              32.97 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_AMS-Regular-DMm9YOAa.woff                 33.52 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-Italic-3WenGoN9.ttf                  33.58 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-Bold-waoOVXN0.ttf                    51.34 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_Main-Regular-ypZvNtVU.ttf                 53.58 kB
+../work/design-motion/dist-confirmed/assets/KaTeX_AMS-Regular-DRggAlZN.ttf                  63.63 kB
+../work/design-motion/dist-confirmed/assets/QuantitiesInstrument-5rr9EJi1.css                0.26 kB │ gzip:     0.17 kB
+../work/design-motion/dist-confirmed/assets/SequenceInstrument-N8u_f63V.css                  0.32 kB │ gzip:     0.19 kB
+../work/design-motion/dist-confirmed/assets/LiteraryTraitInstrument-DkM94Li9.css             0.55 kB │ gzip:     0.29 kB
+../work/design-motion/dist-confirmed/assets/HistoryPhaseInstrument-zsaBwa4K.css              0.55 kB │ gzip:     0.30 kB
+../work/design-motion/dist-confirmed/assets/VisionDefectsBoard-BktNfcWX.css                  0.70 kB │ gzip:     0.38 kB
+../work/design-motion/dist-confirmed/assets/PhysicsDrawingWindow-CkFzPaGt.css                0.83 kB │ gzip:     0.42 kB
+../work/design-motion/dist-confirmed/assets/MatrixInstrument-DoEg4_iJ.css                    0.93 kB │ gzip:     0.40 kB
+../work/design-motion/dist-confirmed/assets/PlanarGeometryInstrument-DJhnNiTe.css            1.03 kB │ gzip:     0.43 kB
+../work/design-motion/dist-confirmed/assets/AlgebraInstrument-WziARRu-.css                   1.06 kB │ gzip:     0.40 kB
+../work/design-motion/dist-confirmed/assets/AreaGeometryInstrument-hx97_o_C.css              1.19 kB │ gzip:     0.42 kB
+../work/design-motion/dist-confirmed/assets/GeographyRemainingInstrument-DqwC7nfW.css        1.45 kB │ gzip:     0.57 kB
+../work/design-motion/dist-confirmed/assets/SolidInstrument-Bn1DUyBZ.css                     1.74 kB │ gzip:     0.65 kB
+../work/design-motion/dist-confirmed/assets/ReadingInstrument-Ca0eercx.css                   1.85 kB │ gzip:     0.74 kB
+../work/design-motion/dist-confirmed/assets/MechanismFrame-CE2FzMus.css                      2.36 kB │ gzip:     0.87 kB
+../work/design-motion/dist-confirmed/assets/PhotosynthesisBoard-DYw8Rhm-.css                 2.47 kB │ gzip:     0.89 kB
+../work/design-motion/dist-confirmed/assets/EnglishInstrument-sAFZclRY.css                   2.55 kB │ gzip:     0.94 kB
+../work/design-motion/dist-confirmed/assets/EnzymeBoard-CqwW7hvu.css                         2.65 kB │ gzip:     0.93 kB
+../work/design-motion/dist-confirmed/assets/FungiBoard-eXzJMWWq.css                          2.81 kB │ gzip:     0.97 kB
+../work/design-motion/dist-confirmed/assets/HeartCirculationBoard-QaxkMppU.css               3.17 kB │ gzip:     1.12 kB
+../work/design-motion/dist-confirmed/assets/IndependenceBoard-DD92eeO9.css                   4.96 kB │ gzip:     1.43 kB
+../work/design-motion/dist-confirmed/assets/markdown-BJmosK-V.css                           30.26 kB │ gzip:     8.10 kB
+../work/design-motion/dist-confirmed/assets/index-DoJoQ5Q1.css                             219.01 kB │ gzip:    38.40 kB
+../work/design-motion/dist-confirmed/assets/Visual-C_E9xwWZ.css                            361.56 kB │ gzip:    69.09 kB
+../work/design-motion/dist-confirmed/assets/studyActionLabels-Dg40tBfO.js                    0.12 kB │ gzip:     0.13 kB
+../work/design-motion/dist-confirmed/assets/firestore-Cmjyt3XM.js                            0.12 kB │ gzip:     0.12 kB
+../work/design-motion/dist-confirmed/assets/useMateriaLembrada-D6_w60_L.js                   0.23 kB │ gzip:     0.19 kB
+../work/design-motion/dist-confirmed/assets/confidence-2tHfoRvc.js                           0.23 kB │ gzip:     0.18 kB
+../work/design-motion/dist-confirmed/assets/reviewUrgency-d5UPbGLN.js                        0.26 kB │ gzip:     0.22 kB
+../work/design-motion/dist-confirmed/assets/cardText-BPpOAu5q.js                             0.32 kB │ gzip:     0.25 kB
+../work/design-motion/dist-confirmed/assets/ambiente-BgHoA5zF.js                             0.42 kB │ gzip:     0.30 kB
+../work/design-motion/dist-confirmed/assets/contentCatalog-DjpHHgm4.js                       0.53 kB │ gzip:     0.30 kB
+../work/design-motion/dist-confirmed/assets/PhysicsDrawingWindow-BaNbQQ-2.js                 0.56 kB │ gzip:     0.37 kB
+../work/design-motion/dist-confirmed/assets/EmptyState-Dp5oF-3T.js                           0.59 kB │ gzip:     0.36 kB
+../work/design-motion/dist-confirmed/assets/AiText-aWe24QcQ.js                               0.60 kB │ gzip:     0.38 kB
+../work/design-motion/dist-confirmed/assets/usarCena-DxxTjoWt.js                             0.63 kB │ gzip:     0.36 kB
+../work/design-motion/dist-confirmed/assets/literaryCatalog-DhV3fsXn.js                      0.78 kB │ gzip:     0.36 kB
+../work/design-motion/dist-confirmed/assets/SceneNote-CI3-DMmH.js                            0.78 kB │ gzip:     0.46 kB
+../work/design-motion/dist-confirmed/assets/PrecisionMark-D1E1Qcye.js                        0.79 kB │ gzip:     0.29 kB
+../work/design-motion/dist-confirmed/assets/QuestionStatement-BDHhnXLD.js                    0.82 kB │ gzip:     0.51 kB
+../work/design-motion/dist-confirmed/assets/useQuestions-B8xRuQIU.js                         0.86 kB │ gzip:     0.50 kB
+../work/design-motion/dist-confirmed/assets/time-CxA2gV3S.js                                 0.91 kB │ gzip:     0.50 kB
+../work/design-motion/dist-confirmed/assets/KineticText-BH19ICwy.js                          0.92 kB │ gzip:     0.54 kB
+../work/design-motion/dist-confirmed/assets/errorLabels-C4SkZdrX.js                          0.92 kB │ gzip:     0.50 kB
+../work/design-motion/dist-confirmed/assets/tutorContracts-Dnh2gUqZ.js                       1.05 kB │ gzip:     0.47 kB
+../work/design-motion/dist-confirmed/assets/AiTextRenderer-K09DhMX8.js                       1.08 kB │ gzip:     0.47 kB
+../work/design-motion/dist-confirmed/assets/spacedRepetition-CyOiWi-X.js                     1.19 kB │ gzip:     0.57 kB
+../work/design-motion/dist-confirmed/assets/topicHierarchy-C_u2gSaC.js                       1.31 kB │ gzip:     0.71 kB
+../work/design-motion/dist-confirmed/assets/MechanismFrame-DcFG4Nxg.js                       1.31 kB │ gzip:     0.69 kB
+../work/design-motion/dist-confirmed/assets/crivoPaletteTween-DoDNbomF.js                    1.37 kB │ gzip:     0.80 kB
+../work/design-motion/dist-confirmed/assets/geometriaMolecular-CwW4GQ47.js                   1.54 kB │ gzip:     0.66 kB
+../work/design-motion/dist-confirmed/assets/sceneKit-BECJ_mZC.js                             1.71 kB │ gzip:     0.95 kB
+../work/design-motion/dist-confirmed/assets/useUserMastery-ByM4NsD0.js                       1.90 kB │ gzip:     0.92 kB
+../work/design-motion/dist-confirmed/assets/useStudentGoals-DlKtkz0D.js                      2.03 kB │ gzip:     0.96 kB
+../work/design-motion/dist-confirmed/assets/useUserProfile-CZbDC23P.js                       2.04 kB │ gzip:     0.96 kB
+../work/design-motion/dist-confirmed/assets/Admin-CMMgbAtA.js                                2.54 kB │ gzip:     1.12 kB
+../work/design-motion/dist-confirmed/assets/aiClient-BQ_g2way.js                             2.58 kB │ gzip:     1.13 kB
+../work/design-motion/dist-confirmed/assets/CenaDaMateria-4FNRHZ8I.js                        3.17 kB │ gzip:     1.27 kB
+../work/design-motion/dist-confirmed/assets/Desigualdade-U62dwp3A.js                         3.45 kB │ gzip:     1.79 kB
+../work/design-motion/dist-confirmed/assets/MechanismLab-ii426XnG.js                         3.73 kB │ gzip:     1.74 kB
+../work/design-motion/dist-confirmed/assets/Caverna-Bn_lhgRC.js                              4.11 kB │ gzip:     2.05 kB
+../work/design-motion/dist-confirmed/assets/ObrasObrigatorias-CO_3vByj.js                    4.15 kB │ gzip:     1.87 kB
+../work/design-motion/dist-confirmed/assets/ProbabilityPairsBoard-Cn7D5Ybo.js                4.24 kB │ gzip:     2.01 kB
+../work/design-motion/dist-confirmed/assets/RightTriangleBoard-9eqi9XRN.js                   4.27 kB │ gzip:     1.83 kB
+../work/design-motion/dist-confirmed/assets/TrigCircleBoard-C-jQWmbr.js                      4.32 kB │ gzip:     1.95 kB
+../work/design-motion/dist-confirmed/assets/CompetenciasEnem-BbZJWVh3.js                     4.37 kB │ gzip:     2.21 kB
+../work/design-motion/dist-confirmed/assets/RetaFinal-BRal3LZE.js                            4.41 kB │ gzip:     1.84 kB
+../work/design-motion/dist-confirmed/assets/QuadraticBoard-BGI4LBYP.js                       4.41 kB │ gzip:     2.02 kB
+../work/design-motion/dist-confirmed/assets/VectorsInstrument-DqLuGa4f.js                    4.41 kB │ gzip:     1.97 kB
+../work/design-motion/dist-confirmed/assets/ExponentialBoard-CDbUmBDs.js                     4.42 kB │ gzip:     2.00 kB
+../work/design-motion/dist-confirmed/assets/ProgressionBoard-ChkDVrdg.js                     4.44 kB │ gzip:     2.05 kB
+../work/design-motion/dist-confirmed/assets/studyRoadmap-Bd1Dw464.js                         4.47 kB │ gzip:     1.44 kB
+../work/design-motion/dist-confirmed/assets/OrbitalInstrument-BvAojtyh.js                    4.49 kB │ gzip:     2.01 kB
+../work/design-motion/dist-confirmed/assets/Escansao-Bd_xMuA4.js                             4.58 kB │ gzip:     2.36 kB
+../work/design-motion/dist-confirmed/assets/CountingBoard-CwCucZGH.js                        4.59 kB │ gzip:     2.11 kB
+../work/design-motion/dist-confirmed/assets/Obras-Bzqidbuo.js                                4.62 kB │ gzip:     2.01 kB
+../work/design-motion/dist-confirmed/assets/SolutionsBoard-DfJcLvlv.js                       4.65 kB │ gzip:     2.06 kB
+../work/design-motion/dist-confirmed/assets/EfeitoEstufa-Blb2E6rr.js                         4.68 kB │ gzip:     2.33 kB
+../work/design-motion/dist-confirmed/assets/duplaHelice-B8kj1dM0.js                          4.69 kB │ gzip:     2.13 kB
+../work/design-motion/dist-confirmed/assets/EnergyInstrument-cMJhv0Ou.js                     4.71 kB │ gzip:     2.03 kB
+../work/design-motion/dist-confirmed/assets/KinematicsInstrument-C4kF58Kz.js                 4.76 kB │ gzip:     2.12 kB
+../work/design-motion/dist-confirmed/assets/TrophicBoard-Bmo6yWpf.js                         4.80 kB │ gzip:     2.23 kB
+../work/design-motion/dist-confirmed/assets/studyPhase-BhrWYch0.js                           4.97 kB │ gzip:     1.50 kB
+../work/design-motion/dist-confirmed/assets/LogarithmBoard-BAoiu-kR.js                       5.00 kB │ gzip:     1.94 kB
+../work/design-motion/dist-confirmed/assets/SequenceInstrument-D7i6cEif.js                   5.02 kB │ gzip:     2.22 kB
+../work/design-motion/dist-confirmed/assets/CircuitBoard-ZzSJlynT.js                         5.07 kB │ gzip:     2.04 kB
+../work/design-motion/dist-confirmed/assets/DynamicsInstrument-B9z0g171.js                   5.10 kB │ gzip:     2.27 kB
+../work/design-motion/dist-confirmed/assets/CellDivisionBoard-nULa8-6C.js                    5.11 kB │ gzip:     2.03 kB
+../work/design-motion/dist-confirmed/assets/StoichiometryBoard-CglXB8v0.js                   5.13 kB │ gzip:     2.13 kB
+../work/design-motion/dist-confirmed/assets/HydrostaticsBoard-CZnnHcgW.js                    5.19 kB │ gzip:     2.14 kB
+../work/design-motion/dist-confirmed/assets/CarbonCycleBoard-CRLHfQ83.js                     5.32 kB │ gzip:     2.10 kB
+../work/design-motion/dist-confirmed/assets/BuscaRapida-V0vcU_nm.js                          5.35 kB │ gzip:     2.35 kB
+../work/design-motion/dist-confirmed/assets/BondingBoard-CNmJ7PGd.js                         5.35 kB │ gzip:     2.15 kB
+../work/design-motion/dist-confirmed/assets/MendelBoard-CWh6yR63.js                          5.42 kB │ gzip:     2.44 kB
+../work/design-motion/dist-confirmed/assets/NewtonBoard-dD03UB4T.js                          5.43 kB │ gzip:     2.04 kB
+../work/design-motion/dist-confirmed/assets/AnaliseSintatica-BxEiyhIy.js                     5.50 kB │ gzip:     2.49 kB
+../work/design-motion/dist-confirmed/assets/CrivoDesignSystemGallery-Bbqe86Y7.js             5.50 kB │ gzip:     1.97 kB
+../work/design-motion/dist-confirmed/assets/CurrentAffairsContextInstrument-evGdfUYq.js      5.58 kB │ gzip:     2.47 kB
+../work/design-motion/dist-confirmed/assets/DuplaHelice-DzEkZzNA.js                          5.58 kB │ gzip:     2.54 kB
+../work/design-motion/dist-confirmed/assets/illustrationKit-BhmCx8fx.js                      5.64 kB │ gzip:     2.07 kB
+../work/design-motion/dist-confirmed/assets/BloodTypeBoard-ClFLDiXp.js                       5.71 kB │ gzip:     2.17 kB
+../work/design-motion/dist-confirmed/assets/LinhaDoTempo-CUjCcQCB.js                         5.83 kB │ gzip:     2.59 kB
+../work/design-motion/dist-confirmed/assets/GeometriaMolecular-Dvhs5_Eh.js                   5.86 kB │ gzip:     2.70 kB
+../work/design-motion/dist-confirmed/assets/SolidosGeometricos-C0QnHXEM.js                   6.05 kB │ gzip:     2.66 kB
+../work/design-motion/dist-confirmed/assets/EstacoesDoAno-BFv_uflL.js                        6.06 kB │ gzip:     2.92 kB
+../work/design-motion/dist-confirmed/assets/EnzymeBoard-DFLu80Hb.js                          6.38 kB │ gzip:     2.67 kB
+../work/design-motion/dist-confirmed/assets/IndependenceBoard-B2ltN5GQ.js                    6.51 kB │ gzip:     2.81 kB
+../work/design-motion/dist-confirmed/assets/VisionDefectsBoard-CPG59NgK.js                   6.63 kB │ gzip:     2.77 kB
+../work/design-motion/dist-confirmed/assets/Laboratorio-srsunaim.js                          6.90 kB │ gzip:     2.68 kB
+../work/design-motion/dist-confirmed/assets/Estrategias-DomMFAqt.js                          7.42 kB │ gzip:     2.17 kB
+../work/design-motion/dist-confirmed/assets/AtomModelsBoard-YlGT6Cw3.js                      7.57 kB │ gzip:     3.35 kB
+../work/design-motion/dist-confirmed/assets/FungiBoard-NdjEvqwL.js                           7.68 kB │ gzip:     3.35 kB
+../work/design-motion/dist-confirmed/assets/useSummaryProgress-DWrQ0BF-.js                   7.76 kB │ gzip:     3.00 kB
+../work/design-motion/dist-confirmed/assets/KinematicsBoard-CNDlKw7E.js                      7.81 kB │ gzip:     3.10 kB
+../work/design-motion/dist-confirmed/assets/FlashcardSession-C90So3er.js                     7.82 kB │ gzip:     3.03 kB
+../work/design-motion/dist-confirmed/assets/Conexoes-B0io0onj.js                             7.91 kB │ gzip:     2.73 kB
+../work/design-motion/dist-confirmed/assets/Plano-d8yEl4FD.js                                7.93 kB │ gzip:     2.64 kB
+../work/design-motion/dist-confirmed/assets/WaveBoard-D5VGxyrl.js                            8.50 kB │ gzip:     3.50 kB
+../work/design-motion/dist-confirmed/assets/examPriorities-CgaC9lQN.js                       8.55 kB │ gzip:     1.82 kB
+../work/design-motion/dist-confirmed/assets/AdiabaticBoard-By7WapRi.js                       8.67 kB │ gzip:     3.25 kB
+../work/design-motion/dist-confirmed/assets/MembraneBoard-5x0YWDJO.js                        8.68 kB │ gzip:     3.38 kB
+../work/design-motion/dist-confirmed/assets/AcidBaseBoard-CPIaeCZ0.js                        8.83 kB │ gzip:     3.61 kB
+../work/design-motion/dist-confirmed/assets/HeartCirculationBoard-CWHEVdwc.js                8.86 kB │ gzip:     3.50 kB
+../work/design-motion/dist-confirmed/assets/CalorimetryBoard-08_HkyeX.js                     8.87 kB │ gzip:     3.42 kB
+../work/design-motion/dist-confirmed/assets/QuantitiesInstrument-BgCG3hSu.js                 9.23 kB │ gzip:     3.52 kB
+../work/design-motion/dist-confirmed/assets/ElectrostaticsInstrument-DNAX3sUL.js             9.35 kB │ gzip:     3.73 kB
+../work/design-motion/dist-confirmed/assets/AlgebraInstrument-DeS3jYBV.js                    9.65 kB │ gzip:     3.74 kB
+../work/design-motion/dist-confirmed/assets/useDailyPlan-DoZlUBD6.js                         9.86 kB │ gzip:     4.09 kB
+../work/design-motion/dist-confirmed/assets/BiologyInstrument-BaJ_u9qS.js                    9.88 kB │ gzip:     3.51 kB
+../work/design-motion/dist-confirmed/assets/PhotosynthesisBoard-C3snsLMO.js                  9.90 kB │ gzip:     3.74 kB
+../work/design-motion/dist-confirmed/assets/estudio3d-21Vsy9Gm.js                           10.07 kB │ gzip:     4.57 kB
+../work/design-motion/dist-confirmed/assets/Revisoes-B-Mef5Nw.js                            10.14 kB │ gzip:     3.82 kB
+../work/design-motion/dist-confirmed/assets/ThermochemBoard-xSFiQlFH.js                     10.14 kB │ gzip:     4.07 kB
+../work/design-motion/dist-confirmed/assets/ElectricInstrument-4M4ZuuPz.js                  10.15 kB │ gzip:     4.03 kB
+../work/design-motion/dist-confirmed/assets/ElectrochemistryInstrument-Dr3TCmBi.js          10.16 kB │ gzip:     3.58 kB
+../work/design-motion/dist-confirmed/assets/AdminObras-DOY7--4j.js                          10.32 kB │ gzip:     3.25 kB
+../work/design-motion/dist-confirmed/assets/OpticsInstrument-Cv5JQPMI.js                    10.67 kB │ gzip:     4.00 kB
+../work/design-motion/dist-confirmed/assets/HistoryInstrument-DbT7zpFh.js                   10.97 kB │ gzip:     4.11 kB
+../work/design-motion/dist-confirmed/assets/GeographyInstrument-BwwBi85K.js                 10.98 kB │ gzip:     4.07 kB
+../work/design-motion/dist-confirmed/assets/AreaGeometryInstrument-Csi22DDf.js              10.99 kB │ gzip:     4.08 kB
+../work/design-motion/dist-confirmed/assets/MatrixInstrument-CHiI0BPI.js                    11.03 kB │ gzip:     4.12 kB
+../work/design-motion/dist-confirmed/assets/AgendaView-B_48ec92.js                          11.22 kB │ gzip:     3.71 kB
+../work/design-motion/dist-confirmed/assets/useDailyStudyAvailability-B3OWNN6Q.js           12.22 kB │ gzip:     4.40 kB
+../work/design-motion/dist-confirmed/assets/ThermoInstrument-DEoWJxsE.js                    12.30 kB │ gzip:     4.11 kB
+../work/design-motion/dist-confirmed/assets/Prioridades-DqZKYHcn.js                         13.34 kB │ gzip:     5.03 kB
+../work/design-motion/dist-confirmed/assets/PlanarGeometryInstrument-C7WZmu3j.js            13.64 kB │ gzip:     4.88 kB
+../work/design-motion/dist-confirmed/assets/ObraDetalhe-TSpOSuTj.js                         14.38 kB │ gzip:     4.85 kB
+../work/design-motion/dist-confirmed/assets/Sessao-DNQleDVR.js                              14.53 kB │ gzip:     5.43 kB
+../work/design-motion/dist-confirmed/assets/BancadaOptica-Dai-w21h.js                       14.70 kB │ gzip:     5.99 kB
+../work/design-motion/dist-confirmed/assets/WavesInstrument-DXmDxt3S.js                     14.72 kB │ gzip:     5.43 kB
+../work/design-motion/dist-confirmed/assets/Perfil-Dz1P-it6.js                              14.76 kB │ gzip:     4.55 kB
+../work/design-motion/dist-confirmed/assets/Erros-D8cW42SJ.js                               15.03 kB │ gzip:     4.69 kB
+../work/design-motion/dist-confirmed/assets/AdminConteudo-GPsTqwU-.js                       15.16 kB │ gzip:     3.67 kB
+../work/design-motion/dist-confirmed/assets/MagnetismInstrument-N4kYtFUz.js                 15.25 kB │ gzip:     5.49 kB
+../work/design-motion/dist-confirmed/assets/MechanicsFinalInstrument-Co3nVcp9.js            15.52 kB │ gzip:     6.00 kB
+../work/design-motion/dist-confirmed/assets/RemainingMathInstrument-C_T_0WA_.js             15.76 kB │ gzip:     5.50 kB
+../work/design-motion/dist-confirmed/assets/LensBoard-BYZ6VyMX.js                           17.31 kB │ gzip:     6.03 kB
+../work/design-motion/dist-confirmed/assets/resolutionStrategies-tx6ET_8s.js                17.75 kB │ gzip:     7.12 kB
+../work/design-motion/dist-confirmed/assets/Questoes-CZv__g67.js                            18.27 kB │ gzip:     6.44 kB
+../work/design-motion/dist-confirmed/assets/userData-415jXrnT.js                            18.28 kB │ gzip:     6.51 kB
+../work/design-motion/dist-confirmed/assets/SolidInstrument-BM6Y_2Cz.js                     19.34 kB │ gzip:     7.24 kB
+../work/design-motion/dist-confirmed/assets/HistoryPhaseInstrument-CJIMe0GC.js              19.38 kB │ gzip:     7.55 kB
+../work/design-motion/dist-confirmed/assets/AnalyticInstrument-DpzxkM_f.js                  19.51 kB │ gzip:     7.58 kB
+../work/design-motion/dist-confirmed/assets/CartesianInstrument-DzocCdHE.js                 19.53 kB │ gzip:     7.38 kB
+../work/design-motion/dist-confirmed/assets/PhysicsMechanismScenes-DMo3QfUR.js              19.65 kB │ gzip:     6.76 kB
+../work/design-motion/dist-confirmed/assets/Tutor-BJLk-BQQ.js                               22.12 kB │ gzip:     5.38 kB
+../work/design-motion/dist-confirmed/assets/Flashcards-fG1qPRmt.js                          22.24 kB │ gzip:     6.25 kB
+../work/design-motion/dist-confirmed/assets/Evolucao-BHF5vs2T.js                            22.44 kB │ gzip:     6.95 kB
+../work/design-motion/dist-confirmed/assets/GeographyRemainingInstrument-SKqz5WW6.js        23.30 kB │ gzip:     7.77 kB
+../work/design-motion/dist-confirmed/assets/CrivoCore-DIPmbj7a.js                           23.54 kB │ gzip:     8.35 kB
+../work/design-motion/dist-confirmed/assets/Recuperacao-yKELRG-p.js                         24.80 kB │ gzip:     7.45 kB
+../work/design-motion/dist-confirmed/assets/WritingOperations-CJzf242F.js                   26.10 kB │ gzip:     8.65 kB
+../work/design-motion/dist-confirmed/assets/Dashboard-Cj9c5QGL.js                           30.30 kB │ gzip:    10.50 kB
+../work/design-motion/dist-confirmed/assets/Redacao-gt-svU1F.js                             30.70 kB │ gzip:     9.68 kB
+../work/design-motion/dist-confirmed/assets/GeographyContextInstrument-CqHXQVwB.js          31.17 kB │ gzip:     9.90 kB
+../work/design-motion/dist-confirmed/assets/ChemistryInstrument-ChN5w13T.js                 31.71 kB │ gzip:     9.89 kB
+../work/design-motion/dist-confirmed/assets/Resumos-BkyaIYWS.js                             32.45 kB │ gzip:    10.31 kB
+../work/design-motion/dist-confirmed/assets/Podcast-DYH_v4-q.js                             33.10 kB │ gzip:    11.38 kB
+../work/design-motion/dist-confirmed/assets/ReadingInstrument-DePUBppA.js                   34.99 kB │ gzip:    11.77 kB
+../work/design-motion/dist-confirmed/assets/nebulosas-yw6rpBy6.js                           37.09 kB │ gzip:    11.34 kB
+../work/design-motion/dist-confirmed/assets/opusculo-humanitario-BbOTRw_Z.js                38.01 kB │ gzip:    11.90 kB
+../work/design-motion/dist-confirmed/assets/geografia-DLuYp_7z.js                           38.98 kB │ gzip:    11.89 kB
+../work/design-motion/dist-confirmed/assets/router-uXJczNOQ.js                              39.66 kB │ gzip:    14.35 kB
+../work/design-motion/dist-confirmed/assets/EnglishInstrument-o4f7Fg-l.js                   41.38 kB │ gzip:    15.10 kB
+../work/design-motion/dist-confirmed/assets/PhysicsRemainingInstrument-CXJts5hB.js          42.50 kB │ gzip:    13.85 kB
+../work/design-motion/dist-confirmed/assets/memorias-de-martha-BBV_HwcM.js                  43.12 kB │ gzip:    13.47 kB
+../work/design-motion/dist-confirmed/assets/morangos-mofados-BXLAEPZK.js                    45.24 kB │ gzip:    13.98 kB
+../work/design-motion/dist-confirmed/assets/visao-das-plantas-tGrkTfj-.js                   45.53 kB │ gzip:    13.56 kB
+../work/design-motion/dist-confirmed/assets/cancao-para-ninar-menino-grande-DZ4tCLdY.js     45.83 kB │ gzip:    13.89 kB
+../work/design-motion/dist-confirmed/assets/a-vida-nao-e-util-CsvJybP0.js                   46.35 kB │ gzip:    13.89 kB
+../work/design-motion/dist-confirmed/assets/LiteraryTraitInstrument-Cy7mIy8N.js             48.15 kB │ gzip:    15.81 kB
+../work/design-motion/dist-confirmed/assets/BiologyRemainingInstrument-DP6dogD-.js          49.07 kB │ gzip:    15.27 kB
+../work/design-motion/dist-confirmed/assets/caminho-de-pedras-D8R1DxLg.js                   51.63 kB │ gzip:    16.12 kB
+../work/design-motion/dist-confirmed/assets/cancoes-escolhidas-14-letras-BqBnmdX9.js        51.80 kB │ gzip:    15.65 kB
+../work/design-motion/dist-confirmed/assets/balada-de-amor-ao-vento-QGsJ61KV.js             52.70 kB │ gzip:    15.83 kB
+../work/design-motion/dist-confirmed/assets/paixao-segundo-gh-2zqOccpD.js                   56.39 kB │ gzip:    16.98 kB
+../work/design-motion/dist-confirmed/assets/olhos-dagua-D4bOt0vO.js                         62.15 kB │ gzip:    18.46 kB
+../work/design-motion/dist-confirmed/assets/funerais-da-mamae-grande-72mF6Ayi.js            66.16 kB │ gzip:    18.39 kB
+../work/design-motion/dist-confirmed/assets/prosas-seguidas-de-odes-minimas-EbVt3eRs.js     66.47 kB │ gzip:    20.41 kB
+../work/design-motion/dist-confirmed/assets/WritingInstrument-YmKex-Cd.js                   74.37 kB │ gzip:    22.36 kB
+../work/design-motion/dist-confirmed/assets/GrammarInstrument-DylrH5VE.js                   81.04 kB │ gzip:    25.22 kB
+../work/design-motion/dist-confirmed/assets/index-Bx76EtIR.js                               86.35 kB │ gzip:    29.45 kB
+../work/design-motion/dist-confirmed/assets/summaryCurriculum-BxCwYTAg.js                   91.09 kB │ gzip:    17.11 kB
+../work/design-motion/dist-confirmed/assets/firebase-core-B18zcqXt.js                       92.59 kB │ gzip:    27.88 kB
+../work/design-motion/dist-confirmed/assets/gonzaga-de-sa-DS0bguV5.js                       93.36 kB │ gzip:    28.75 kB
+../work/design-motion/dist-confirmed/assets/no-seu-pescoco-BpOmoZlx.js                      93.47 kB │ gzip:    25.22 kB
+../work/design-motion/dist-confirmed/assets/firebase-auth-BUGAK1Oi.js                      114.82 kB │ gzip:    23.29 kB
+../work/design-motion/dist-confirmed/assets/mockData-ChbiG-KB.js                           122.85 kB │ gzip:    36.04 kB
+../work/design-motion/dist-confirmed/assets/Treino2aFase-gjgcDVi7.js                       145.50 kB │ gzip:    48.38 kB
+../work/design-motion/dist-confirmed/assets/interactiveSummaries-CAhFZEs2.js               162.52 kB │ gzip:    56.30 kB
+../work/design-motion/dist-confirmed/assets/bras-cubas-Cur_M2gN.js                         184.02 kB │ gzip:    52.33 kB
+../work/design-motion/dist-confirmed/assets/charts-DqEwOfXJ.js                             337.66 kB │ gzip:    90.48 kB
+../work/design-motion/dist-confirmed/assets/markdown-C_ihEEOv.js                           386.21 kB │ gzip:   115.81 kB
+../work/design-motion/dist-confirmed/assets/firebase-firestore-BLigD_Br.js                 474.79 kB │ gzip:   117.80 kB
+../work/design-motion/dist-confirmed/assets/vendor-CR8q0QVM.js                             532.80 kB │ gzip:   167.35 kB
+../work/design-motion/dist-confirmed/assets/Diagnostico-D3lOQUi-.js                        578.82 kB │ gzip:   168.41 kB
+../work/design-motion/dist-confirmed/assets/cena-3d-BEZ2F6Sp.js                            583.48 kB │ gzip:   147.81 kB
+../work/design-motion/dist-confirmed/assets/Visual-54MNoWFi.js                           1,938.53 kB │ gzip:   543.37 kB
+../work/design-motion/dist-confirmed/assets/deepSummaryContent-Dp-gh6I5.js               3,983.88 kB │ gzip: 1,188.40 kB
+
+(!) Some chunks are larger than 500 kB after minification. Consider:
+- Using dynamic import() to code-split the application
+- Use build.rollupOptions.output.manualChunks to improve chunking: https://rollupjs.org/configuration-options/#output-manualchunks
+- Adjust chunk size limit for this warning via build.chunkSizeWarningLimit.
+✓ built in 40.49s

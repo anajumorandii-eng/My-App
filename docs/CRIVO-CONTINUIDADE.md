@@ -1,5 +1,13 @@
 # CRIVO — continuidade operacional
 
+## Retomada Design & Motion Kit — 2026-10-10
+
+Base conferida: `3200ea9b67eb00fdb867b287b9d2fed2ba162765`. As PRs #293, #294 e #295 já estão mescladas; as instruções de merge abaixo são checkpoints históricos, não ações pendentes.
+
+Corrigidos os achados confirmados de calor, Poríferos/Cnidários, Montagem da Colonização e legibilidade dos recortes da Crise do Antigo Sistema Colonial. Somente os três capítulos reescritos passam à revisão editorial 3. [Mudanças, fontes, validação e limites](continuidade-design-motion-2026-10-10/README.md).
+
+A estrutura dos 613 capítulos mantém zero divergências e nenhuma representação fallback. O inventário formal permanece com 81 capítulos em validação e 532 não revisados. Próximo passo: revisar os demais candidatos da triagem e pendências bibliográficas por ID; não inferir aprovação pedagógica integral dos testes. Não reaplicar PRs mescladas. Sem merge automático.
+
 ## Auditoria automatizada executada no GitHub — 2026-10-09T23:22:52.027Z
 
 Fonte: `e2bc9c860a53a3ff2fe6e7ee3bc3a4c62d5b7679`; execução 38001813270. Estado técnico: passed; 7356 de 7.356 resultados; 0 reprovações. [Relatório atual](revisao-demais-capitulos-awesome-2026-10-09/README.md), [manifesto](revisao-demais-capitulos-awesome-2026-10-09/execucao/manifesto.json) e [capturas para revisão](revisao-demais-capitulos-awesome-2026-10-09/GALERIA.md).

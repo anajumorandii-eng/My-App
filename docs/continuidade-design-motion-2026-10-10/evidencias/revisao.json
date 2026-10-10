@@ -1,0 +1,56 @@
+{
+  "schema_version": 1,
+  "base_commit": "3200ea9b67eb00fdb867b287b9d2fed2ba162765",
+  "branch": "fix/continuidade-capitulos-design-motion",
+  "generated_at_utc": "2026-10-10T03:09:30.877942+00:00",
+  "source_files_sha256": {
+    "src/data/applyDeepSummaries.ts": "ee9787b1bdce22b82464d390b84aec18fa98b419310091ffc017587a81579167",
+    "src/data/continuityGeography.test.ts": "ea5c7548da84f5a6a52c6fc58fad4199e2271e06233cf75c6b0e59a3ee476368",
+    "src/data/deepSummaryContent.json": "57c01516368ec1dd985fa84fcd506965abeb829c88abcb0d60f57a73ad631f4e",
+    "src/views/HumanitiesWorkspace.css": "1a4194b5714f897cb23266f194183d91049bcf6e00b15dfe68e3e7131086b59c",
+    "src/views/Resumos.ui.test.tsx": "6ad2c3620714f21fe5b8401479b38497ce744736fdd933bcbb89e59a83bc769a",
+    "src/views/topic-scenes/data/historia.ts": "59e7d506390a2549d31bb8eacd7084304f907c0d52dc495e32955d04a283144c",
+    "src/views/topic-scenes/families/HistoriaGeografia.test.tsx": "5ef9f63934fb6a47fb427098b5317a399fc4f53a0bb10bfeca65d0765e68e24b",
+    "src/views/topic-scenes/families/HistoriaGeografia.tsx": "2a97e88178c0d65fb6f2693ae39d9fa1c1e9413927078780acc7f1991546af2c",
+    "src/views/Sessao.test.tsx": "99bbe08377239427aa64ff53bd396518ebbf853ff6bc969749f34f10eacf56b7"
+  },
+  "structural": {
+    "chapters": 613,
+    "subjects": 14,
+    "issues": 0,
+    "fallback": 0
+  },
+  "formal_statuses": {
+    "em-validacao": 81,
+    "nao-revisado": 532,
+    "aprovado": 0
+  },
+  "editorial_revision": {
+    "fis-termologia-calor": 3,
+    "summary-biologia-poriferos-e-cnidarios": 3,
+    "summary-historia-a-montagem-da-colonizacao": 3
+  },
+  "visual_fix": [
+    "summary-historia-a-crise-do-antigo-sistema-colonial"
+  ],
+  "checks": {
+    "browser_cases": 180,
+    "labels_cases": 90,
+    "colonization_states": 64,
+    "contrast_pairs": 8,
+    "contrast_min": 7.192790982236276,
+    "logic_tests": 943,
+    "focused_tests_unique": 87,
+    "formal_approval": false,
+    "session_tests": 17,
+    "broad_suite": {
+      "tests": 1524,
+      "files": 186,
+      "failed": 0
+    },
+    "typescript": "passed",
+    "build": "passed",
+    "data_tests": 17
+  },
+  "interruption": "O ambiente ficou offline durante a suíte ampla; os arquivos e os 180 casos completos foram recuperados. A suíte ampla foi reiniciada com o teste de colagem e sem varreduras de navegador concorrentes."
+}

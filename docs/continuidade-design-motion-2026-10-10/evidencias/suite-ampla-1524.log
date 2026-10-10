@@ -1,0 +1,15 @@
+
+> react-example@0.0.0 test:vitest
+> vitest run serverCalendar.test.ts src/features/availability src/features/daily-plan src/hooks src/components src/views --maxWorkers=2
+
+
+ RUN  v4.1.11 /workspace/My-App
+
+Not implemented: Window's scrollTo() method
+Not implemented: Window's scrollTo() method
+
+ Test Files  186 passed (186)
+      Tests  1524 passed (1524)
+   Start at  03:04:06
+   Duration  214.20s (transform 16.93s, setup 21.11s, import 73.83s, tests 168.13s, environment 133.58s)
+

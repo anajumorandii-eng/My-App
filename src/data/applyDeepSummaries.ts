@@ -7,7 +7,7 @@ import type { InteractiveSummary, SummarySection } from '../types/summary';
 type DeepChapter = {
   subject: string; topic: string;
   sections: { title: string; content: string }[];
-  recall?: { prompt: string; elements: [string, string[]][] };
+  recall?: { prompt: string; elements: [string, string[]][]; hint?: string };
   // Sobe a cada reescrita do texto do capitulo. Entra nos ids das secoes, para
   // que so o capitulo reescrito volte a pedir leitura em vez de todos.
   rev?: number;
@@ -35,7 +35,7 @@ export function applyDeepSummary(summary: InteractiveSummary): InteractiveSummar
     // did not assess this new content. Use the worked practice section instead.
     retrieval: recall ? [{ id: `${summary.id}-editorial-recall-v${rev}`, sectionId: `${summary.id}-editorial-v${rev}-${chapter.sections.length}`,
       prompt: recall.prompt, expectedElements: recall.elements.map(([label, keywords]) => ({ label, keywords })),
-      hint: `Retome a explicação “${chapter.sections[1].title}” e reconstrua as relações com suas palavras.`,
+      hint: ('hint' in recall && recall.hint) || `Retome a explicação “${chapter.sections[1].title}” e reconstrua as relações com suas palavras.`,
       transferPrompt: `Crie um exemplo diferente para demonstrar a mesma relação e justifique sua resposta.` }] : [],
     sources: [{ label: 'Síntese didática editorial com exemplos autorais. As situações de prática não são questões oficiais.', kind: 'fonte-independente' }],
   };

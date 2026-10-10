@@ -129,15 +129,18 @@ describe('pranchas de História e Geografia', () => {
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('elo 4'));
   });
 
-  it('só inclina a balança da mão de obra quando os três fatores atuam juntos', async () => {
+  it('explora fatores históricos mantendo a coexistência regional em todos os recortes', async () => {
     const user = userEvent.setup();
     const entry = historia.find(item => item.chapterId === 'summary-historia-a-montagem-da-colonizacao')!;
     render(<HistoriaGeografia entry={entry} />);
     const diagram = screen.getByRole('img', { name: /Montagem da colonização/i });
-    expect(diagram).toHaveTextContent('sozinho, não basta');
-    await user.click(screen.getByRole('button', { name: 'Nenhum fator isolado' }));
-    expect(diagram).toHaveTextContent('juntos, inclinam a balança');
-    expect(diagram).toHaveTextContent('Metáfora: sem peso medido.');
+    for (const label of ['Resistência indígena', 'Mortalidade por epidemias', 'Oposição jesuíta', 'Circuito atlântico']) {
+      await user.click(screen.getByRole('button', { name: label }));
+      expect(screen.getByRole('button', { name: label })).toHaveAttribute('aria-pressed', 'true');
+      expect(diagram).toHaveTextContent('persistência do cativeiro indígena');
+      expect(diagram).toHaveTextContent('maior fluxo de africanos escravizados');
+      expect(diagram).not.toHaveTextContent('sozinho, não basta');
+    }
   });
 
   it('contrasta a composição social das duas revoltas contra o mesmo pacto colonial', async () => {
