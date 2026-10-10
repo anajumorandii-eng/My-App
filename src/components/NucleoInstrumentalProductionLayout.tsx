@@ -187,7 +187,7 @@ function LayoutComAmbiente() {
       {menuOpen && <button className="ni-production-backdrop lg:hidden" aria-label="Fechar menu" tabIndex={-1} onClick={() => setMenuOpen(false)} />}
 
       <aside ref={railRef} role={isMobile && menuOpen ? 'dialog' : undefined} aria-modal={isMobile && menuOpen ? true : undefined} aria-label={isMobile && menuOpen ? 'Menu de navegação' : undefined} className={cn('ni-rail', railExpanded && 'is-expanded', menuOpen && 'is-open is-expanded')} aria-hidden={isMobile && !menuOpen ? true : undefined} inert={isMobile && !menuOpen}>
-        <button className="ni-mark" aria-label="Ir para Hoje" onClick={() => navigate('/')}><CrivoAppMark />{(railExpanded || menuOpen) && <span className="crivo-rail-wordmark">Crivo</span>}</button>
+        <button className="ni-mark" aria-label="Crivo · Ir para Hoje" onClick={() => navigate('/')}><CrivoAppMark />{(railExpanded || menuOpen) && <span className="crivo-rail-wordmark">Crivo</span>}</button>
         {menuOpen && <button className="ni-production-close" aria-label="Fechar menu" onClick={() => setMenuOpen(false)}><X aria-hidden="true" /></button>}
         <nav className="ni-rail-scroll" aria-label="Todas as telas do app">
           {NAVIGATION_GROUPS.map((group) => (
@@ -224,7 +224,7 @@ function LayoutComAmbiente() {
           </nav>
           {acoesDoTopo(false)}
           <button className="ni-theme-toggle" onClick={toggleTheme} aria-label={isDark ? 'Mudar para modo claro' : 'Mudar para modo escuro'}>{isDark ? <Sun aria-hidden="true" /> : <Moon aria-hidden="true" />}<span>{isDark ? 'claro' : 'escuro'}</span></button>
-          <NavLink to="/perfil" className="ni-avatar" aria-label="Abrir perfil">AJ</NavLink>
+          <NavLink to="/perfil" className="ni-avatar" aria-label="AJ · Abrir perfil">AJ</NavLink>
         </header>
         <main id="crivo-conteudo" tabIndex={-1} className="ni-production-main">
           <AnimatePresence mode="wait" initial={false}>

@@ -1,5 +1,6 @@
 import { GeoIllustration } from './GeoIllustration';
-import React, { useId } from 'react';
+import React, { useId, useState } from 'react';
+import { EarthSeasonsView } from '../../visual-instruments/EarthSeasonsView';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 
@@ -33,6 +34,7 @@ const ZONE = {
 
 export function EarthSeasons({ active }: Scene) {
   const p = usePaced();
+  const [spatial, setSpatial] = useState(false);
   const tilt = 23.5;
   const earth = (cx: number, sunRight: boolean, key: string, illumination?: number[]) => <g key={key}>
     <circle cx={cx} cy="196" r="24" className="gf-ocean" />
@@ -46,7 +48,7 @@ export function EarthSeasons({ active }: Scene) {
     </g>
   </g>;
   const orbit = Array.from({ length: 9 }, (_, k) => Math.PI - (k * Math.PI) / 8);
-  return <svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Movimentos da Terra: eixo inclinado 23,5 graus, hemisférios alternam, incidência direta e estações opostas; elo ${active + 1} destacado`}>
+  return <><svg viewBox="0 0 620 750" className="geo-authored-scene" role="img" aria-label={`Movimentos da Terra: eixo inclinado 23,5 graus, hemisférios alternam, incidência direta e estações opostas; elo ${active + 1} destacado`}>
     <GeoIllustration kind="EarthSeasons" active={active} />
     <g transform="translate(0 390)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="gf-night-sky" />
@@ -92,7 +94,7 @@ export function EarthSeasons({ active }: Scene) {
     </motion.g>
     <text x="30" y="336" className="gf-foot-light">A distância ao Sol varia pouco (periélio e afélio); o que muda é a inclinação dos raios.</text>
   </g>
-  </svg>;
+  </svg><div className="vs-science-choices"><button type="button" aria-expanded={spatial} onClick={() => setSpatial(open => !open)}>{spatial ? 'Recolher estações 3D' : 'Explorar estações 3D'}</button></div>{spatial && <EarthSeasonsView />}</>;
 }
 
 export function ReliefProfile({ active }: Scene) {

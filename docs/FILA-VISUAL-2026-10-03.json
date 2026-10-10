@@ -11040,7 +11040,7 @@
   "editorial": {
     "source": "src/data/deepSummaryContent.json",
     "total": 612,
-    "revision2": 568,
+    "revision2": 489,
     "pending": 42,
     "counts": {
       "Redação": 42
@@ -11299,6 +11299,10 @@
         "batch": "R2"
       }
     ],
-    "revision3": 2
+    "revision3": 78,
+    "revision4": 3,
+    "reconciledAt": "2026-10-10",
+    "reconciledSourceCommit": "cb8452253ce6706690db3e0e9826562a1c756b14",
+    "reconciliationNote": "Contagens sincronizadas com a fonte; revisao tecnica e pedagogica integral continuam separadas desta fila historica."
   }
 }

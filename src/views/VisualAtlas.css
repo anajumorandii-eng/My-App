@@ -134,6 +134,7 @@
 .vs-solid-view-switch button[aria-pressed=true] { background: var(--vs-paper-strong); color: var(--vs-burgundy); box-shadow: 0 1px 4px rgb(48 32 18 / .08); }
 .vs-solid-spatial { cursor: grab; touch-action: none; }
 .vs-solid-spatial:active { cursor: grabbing; }
+.vs-solid-spatial:focus-visible { outline: 3px solid var(--vs-burgundy); outline-offset: 3px; border-radius: 10px; }
 .vs-solid-ground { fill: var(--vs-metal-shade); opacity: .12; }
 .vs-solid-face { fill: color-mix(in srgb,var(--vs-metal) calc(var(--face-light) * 100%),var(--vs-metal-shade)); stroke: color-mix(in srgb,var(--vs-metal-shade) 65%,var(--vs-paper-strong)); stroke-width: .6; stroke-linejoin: round; fill-opacity: .93; }
 .vs-solid-face[data-kind=base] { fill: color-mix(in srgb,var(--vs-blue) 30%,var(--vs-metal)); }

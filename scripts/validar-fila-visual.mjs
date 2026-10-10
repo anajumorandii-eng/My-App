@@ -45,6 +45,7 @@ const pending = deep.filter(chapter => (chapter.rev ?? 1) < 2);
 assert.equal(deep.length, queue.editorial.total);
 assert.equal(deep.filter(chapter => chapter.rev === 2).length, queue.editorial.revision2);
 assert.equal(deep.filter(chapter => chapter.rev === 3).length, queue.editorial.revision3 ?? 0);
+assert.equal(deep.filter(chapter => chapter.rev === 4).length, queue.editorial.revision4 ?? 0);
 assert.equal(pending.length, queue.editorial.pending);
 assert.equal(queue.editorial.chapters.length, pending.length);
 const editorialKeys = new Set();

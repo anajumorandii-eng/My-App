@@ -27,7 +27,7 @@ describe('Personalização com vínculo explícito ao conteúdo', () => {
   it('recalcula a distância longitudinal conforme a latitude e respeita os hemisférios', () => {
     render(<TopicExperiment summaryId="summary-geografia-coordenadas-geograficas" />);
     fireEvent.change(screen.getByLabelText(/Latitude:/), { target: {value:'60'} });
-    expect(screen.getByRole('status')).toHaveTextContent('56 km');
+    expect(screen.getByRole('status', { name: 'Distância por grau' })).toHaveTextContent('56 km');
     fireEvent.change(screen.getByLabelText(/Longitude:/), { target: {value:'-45'} });
     expect(screen.getByLabelText(/Longitude:/)).toHaveAccessibleName('Longitude: 45° O');
   });

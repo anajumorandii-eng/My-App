@@ -1,0 +1,1432 @@
+{
+  "source_commit": "cb8452253ce6706690db3e0e9826562a1c756b14",
+  "method": "Triagem de candidatos por assunto; não aprova conteúdo nem declara lacuna confirmada. Cada ID precisa de confrontação com o mecanismo atual.",
+  "candidates": 95,
+  "rows": [
+    {
+      "id": "bio-ecologia-invasoras-controle-biologico",
+      "subject": "Biologia",
+      "topic": "Espécies Invasoras e Controle Biológico",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-origem-da-vida-e-as-primeiras-celulas",
+      "subject": "Biologia",
+      "topic": "Origem da Vida e as Primeiras Células",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "subject": "Biologia",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios",
+      "subject": "Biologia",
+      "topic": "Composição Química Celular: Carboidratos e Lipídios",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural",
+      "subject": "Biologia",
+      "topic": "Composição Química Celular: Proteínas e sua Função Estrutural",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-membranas-celulares",
+      "subject": "Biologia",
+      "topic": "Membranas Celulares",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "subject": "Biologia",
+      "topic": "Núcleo Celular",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-bioenergetica-fermentacao-e-respiracao",
+      "subject": "Biologia",
+      "topic": "Bioenergética: Fermentação e Respiração",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-acidos-nucleicos",
+      "subject": "Biologia",
+      "topic": "Ácidos Nucleicos",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-divisao-celular",
+      "subject": "Biologia",
+      "topic": "Divisão Celular",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos",
+      "subject": "Biologia",
+      "topic": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-embriologia-animal",
+      "subject": "Biologia",
+      "topic": "Embriologia Animal",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-digestao",
+      "subject": "Biologia",
+      "topic": "Fisiologia da Digestão",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-sangue-e-imunologia",
+      "subject": "Biologia",
+      "topic": "Sangue e Imunologia",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-coracao-e-vasos-sanguineos",
+      "subject": "Biologia",
+      "topic": "Coração e Vasos Sanguíneos",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-respiracao",
+      "subject": "Biologia",
+      "topic": "Fisiologia da Respiração",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+      "subject": "Biologia",
+      "topic": "Reprodução Humana e Métodos Contraceptivos",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-histologia-e-morfologia-vegetal",
+      "subject": "Biologia",
+      "topic": "Histologia e Morfologia Vegetal",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas",
+      "subject": "Biologia",
+      "topic": "Morfofisiologia Vegetal: Caules e Folhas",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-fisiologia-vegetal-transporte-no-floema",
+      "subject": "Biologia",
+      "topic": "Fisiologia Vegetal: Transporte no Floema",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-biologia-fisiologia-vegetal-hormonios-vegetais",
+      "subject": "Biologia",
+      "topic": "Fisiologia Vegetal: Hormônios Vegetais",
+      "reason": "Forma, organização e percurso biológico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-o-movimento-circular",
+      "subject": "Física",
+      "topic": "O Movimento Circular",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "subject": "Física",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "subject": "Física",
+      "topic": "Velocidade Vetorial",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-aceleracao-vetorial",
+      "subject": "Física",
+      "topic": "Aceleração Vetorial",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-forca-e-seus-tipos",
+      "subject": "Física",
+      "topic": "Força e seus Tipos",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
+      "subject": "Física",
+      "topic": "Resultante de um Sistema de Forças",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-a-forca-de-contato",
+      "subject": "Física",
+      "topic": "A Força de Contato",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+      "subject": "Física",
+      "topic": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-dinamica-do-movimento-circular",
+      "subject": "Física",
+      "topic": "Dinâmica do Movimento Circular",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
+      "subject": "Física",
+      "topic": "Trabalho e Energia: Trabalho de uma Força",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-hidrostatica-densidade-e-pressao",
+      "subject": "Física",
+      "topic": "Hidrostática: Densidade e Pressão",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
+      "subject": "Física",
+      "topic": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
+      "subject": "Física",
+      "topic": "Trabalho da Força de Pressão do Gás",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-primeira-lei-da-termodinamica",
+      "subject": "Física",
+      "topic": "Primeira Lei da Termodinâmica",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
+      "subject": "Física",
+      "topic": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "subject": "Física",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "subject": "Física",
+      "topic": "Campo Elétrico",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
+      "subject": "Física",
+      "topic": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "subject": "Física",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "subject": "Física",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+      "subject": "Física",
+      "topic": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+      "subject": "Física",
+      "topic": "Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações",
+      "reason": "Geometria do mecanismo físico",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+      "subject": "Física",
+      "topic": "Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme",
+      "reason": "Geometria do mecanismo físico",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas",
+      "subject": "Física",
+      "topic": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+      "subject": "Física",
+      "topic": "Indução Eletromagnética: Lei de Lenz",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+      "subject": "Física",
+      "topic": "Indução Eletromagnética: Análise da Corrente Induzida em Geradores",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes",
+      "subject": "Física",
+      "topic": "Refração: Fundamentos, Leis e Aplicações",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+      "subject": "Física",
+      "topic": "Lentes Esféricas: Estudo Gráfico",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-estudo-analitico-das-lentes-esfericas",
+      "subject": "Física",
+      "topic": "Estudo Analítico das Lentes Esféricas",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+      "subject": "Física",
+      "topic": "Equação do Fabricante de Lentes e Associação de Lentes",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+      "subject": "Física",
+      "topic": "Ondulatória: Ondas Eletromagnéticas",
+      "reason": "Geometria do mecanismo físico",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas",
+      "subject": "Física",
+      "topic": "Reflexão, Eco, Reverberação e Refração de Ondas",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas",
+      "subject": "Física",
+      "topic": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento",
+      "subject": "Física",
+      "topic": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria",
+      "subject": "Física",
+      "topic": "Um Caso Particular de Interferência: Onda Estacionária",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-ondas-estacionarias-em-cordas",
+      "subject": "Física",
+      "topic": "Ondas Estacionárias em Cordas",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-fisica-ondas-estacionarias-em-tubos",
+      "subject": "Física",
+      "topic": "Ondas Estacionárias em Tubos",
+      "reason": "Geometria do mecanismo físico",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-coordenadas-geograficas",
+      "subject": "Geografia",
+      "topic": "Coordenadas Geográficas",
+      "reason": "Globo, relevo e circulação",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "experiment",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-movimentos-da-terra",
+      "subject": "Geografia",
+      "topic": "Movimentos da Terra",
+      "reason": "Globo, relevo e circulação",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-sistema-de-fusos-horarios",
+      "subject": "Geografia",
+      "topic": "Sistema de Fusos Horários",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-linguagem-cartografica",
+      "subject": "Geografia",
+      "topic": "Linguagem Cartográfica",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-projecoes-cartograficas",
+      "subject": "Geografia",
+      "topic": "Projeções Cartográficas",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "subject": "Geografia",
+      "topic": "Cartografia Digital",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+      "subject": "Geografia",
+      "topic": "Representações Gráficas e Cartográficas",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "subject": "Geografia",
+      "topic": "Dinâmica Climática",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-clima-mundial",
+      "subject": "Geografia",
+      "topic": "Clima Mundial",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-geomorfologia-mundial",
+      "subject": "Geografia",
+      "topic": "Geomorfologia Mundial",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-biogeografia-mundial",
+      "subject": "Geografia",
+      "topic": "Biogeografia Mundial",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-agua-na-superficie-terrestre",
+      "subject": "Geografia",
+      "topic": "Água na Superfície Terrestre",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-geologia-e-geomorfologia",
+      "subject": "Geografia",
+      "topic": "Geologia e Geomorfologia",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "subject": "Geografia",
+      "topic": "Relevo Brasileiro",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-climatologia-do-brasil",
+      "subject": "Geografia",
+      "topic": "Climatologia do Brasil",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-i",
+      "subject": "Geografia",
+      "topic": "Biogeografia do Brasil I",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-ii",
+      "subject": "Geografia",
+      "topic": "Biogeografia do Brasil II",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-geografia-dominios-morfoclimaticos",
+      "subject": "Geografia",
+      "topic": "Domínios Morfoclimáticos",
+      "reason": "Globo, relevo e circulação",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-matematica-prismas",
+      "subject": "Matemática",
+      "topic": "Prismas",
+      "reason": "Geometria espacial e seções",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-matematica-piramides",
+      "subject": "Matemática",
+      "topic": "Pirâmides",
+      "reason": "Geometria espacial e seções",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-matematica-solidos-de-revolucao",
+      "subject": "Matemática",
+      "topic": "Sólidos de Revolução",
+      "reason": "Geometria espacial e seções",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+      "subject": "Matemática",
+      "topic": "Razões entre Volumes de Sólidos",
+      "reason": "Geometria espacial e seções",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "subject": "Química",
+      "topic": "Evolução dos Modelos Atômicos",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+      "subject": "Química",
+      "topic": "Ligações Químicas e Alotropia",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "board",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-geometria-molecular",
+      "subject": "Química",
+      "topic": "Geometria Molecular",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+      "subject": "Química",
+      "topic": "Polaridade das Ligações e das Moléculas",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "subject": "Química",
+      "topic": "Interações Intermoleculares",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-massa-atomica-mol-e-massa-molar",
+      "subject": "Química",
+      "topic": "Massa Atômica, Mol e Massa Molar",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-quimica-inorganica",
+      "subject": "Química",
+      "topic": "Química Inorgânica",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "subject": "Química",
+      "topic": "Introdução à Química Orgânica",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "subject": "Química",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "subject": "Química",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "subject": "Química",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-isomeria",
+      "subject": "Química",
+      "topic": "Isomeria",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "subject": "Química",
+      "topic": "Interpretando Reações Orgânicas",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "scene",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "subject": "Química",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "subject": "Química",
+      "topic": "Polímeros",
+      "reason": "Geometria de átomos e moléculas",
+      "status": "necessidade-a-validar-por-ID",
+      "current_artifact": "instrument",
+      "required": [
+        "objeto próprio do conteúdo",
+        "manipulação vinculada ao modelo",
+        "alternativa por teclado",
+        "movimento reduzido completo",
+        "conferência geométrica e pedagógica"
+      ]
+    }
+  ]
+}
