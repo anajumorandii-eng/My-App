@@ -11,7 +11,7 @@ describe('pranchas da Antiguidade e da Idade Média', () => {
     ['summary-historia-antiguidade-classica-o-mundo-romano', /poder repartido na República.*concentrado em Augusto/, '509 a.C. · República', 'Augusto', 'Otávio Augusto'],
     ['summary-historia-alta-idade-media-e-feudalismo', /senhorio com as obrigações do servo/, 'corveia: trabalho grátis no domínio', 'Vínculos distintos', 'serviço militar e conselho'],
     ['summary-historia-baixa-idade-media', /Peste Negra, escassez de mão de obra/, 'entre um terço e metade da população morre', 'Abalo do trabalho servil', 'melhores condições e remuneração'],
-    ['summary-historia-vida-urbana-e-renascimento-cultural', /da riqueza comercial ao mecenato/, 'condição necessária, não suficiente', 'Arte', 'perspectiva linear: Brunelleschi'],
+    ['summary-historia-vida-urbana-e-renascimento-cultural', /da riqueza comercial ao mecenato/, 'fator importante, não explicação única', 'Arte', 'perspectiva linear: Brunelleschi'],
   ] as const)('desenha o mecanismo de %s', async (chapterId, name, text, button, after) => {
     const user = userEvent.setup();
     const entry = historia.find(item => item.chapterId === chapterId)!;

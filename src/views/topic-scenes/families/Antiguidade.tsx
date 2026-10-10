@@ -209,7 +209,7 @@ export function RomanPower({ active }: Scene) {
     <rect x="446" y="52" width="150" height="236" rx="14" className="bi-panel" />
     <motion.g key={active} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 0.2)}>
       {[
-        { title: ['509–27 A.C.', 'REPÚBLICA'], lines: [['Senado:', true], ['aristocracia', false], ['patrícia', false], ['Assembleias:', true], ['plebeus e tribuno', false], ['Cônsules:', true], ['eleitos por um ano,', false], ['sempre em pares', false]], hand: ['poder repartido'] },
+        { title: ['509–27 A.C.', 'REPÚBLICA'], lines: [['Senado:', true], ['aristocracia', false], ['romana', false], ['Assembleias:', true], ['plebeus e tribuno', false], ['Cônsules:', true], ['eleitos por um ano,', false], ['sempre em pares', false]], hand: ['poder repartido'] },
         { title: ['SÉCULO I A.C.', 'CRISE'], lines: [['guerras civis', true], ['recorrentes', false], ['generais poderosos', false], ['disputam o', false], ['controle político', false]], hand: ['o poder foge', 'das instituições'] },
         { title: ['27 A.C.', 'IMPÉRIO'], lines: [['Augusto,', true], ['sobrinho-neto e', false], ['herdeiro de César,', false], ['concentra autoridade', false], ['militar, política', false], ['e religiosa', false]], hand: ['instituições', 'de fachada'] },
       ].filter((_, k) => k === active).map(panel => <g key={panel.title[0]}>
@@ -284,7 +284,7 @@ export function FeudalBonds({ active }: Scene) {
       <text x="150" y="242" textAnchor="middle" className="bi-small">mansos · camponeses</text>
       <text x="248" y="242" textAnchor="middle" className="bi-tiny">moinho</text>
       <text x="291" y="242" textAnchor="middle" className="bi-tiny">forno</text>
-      <text x="36" y="256" className="bi-tiny">livre, mas preso à terra</text>
+      <text x="36" y="256" className="bi-tiny">dependência jurídica</text>
       <Arrow d="M66 178C92 166 116 152 140 140" on={active === 0 || active === 2} p={p} head={`${diagramId}-an-head-fe`} delay={0.3} />
       <Arrow d="M116 170V146" on={active === 0 || active === 2} p={p} head={`${diagramId}-an-head-fe`} delay={0.7} />
       <Arrow d="M256 180C246 82 170 76 106 88" on={active === 0 || active === 2} p={p} head={`${diagramId}-an-head-fe`} delay={1.1} />
@@ -490,7 +490,7 @@ export function RenaissanceChain({ active }: Scene) {
         <text x="236" y="212" className="bi-label">comércio mediterrâneo e bancos</text>
         <text x="236" y="234" className="bi-small">enriquecem Florença, Veneza, Milão</text>
         <text x="236" y="252" className="bi-small">primeiras formas de capitalismo bancário europeu</text>
-        <text x="236" y="290" className="bi-hand-sm">condição necessária, não suficiente</text>
+        <text x="236" y="290" className="bi-hand-sm">fator importante, não explicação única</text>
       </g>}
       {active === 1 && <g>
         <Person x={52} y={234} s={0.9} coat="bi-coat-royal" hat="top" />
@@ -522,7 +522,7 @@ export function RenaissanceChain({ active }: Scene) {
         <motion.g initial={{ scale: 0.5, opacity: 0.4 }} animate={{ scale: 1, opacity: 1 }} transition={p(0.8, 0.6)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }}>
           <Person x={176} y={238} s={0.62} coat="bi-coat-green" />
         </motion.g>
-        <text x="236" y="212" className="bi-label">do teocentrismo ao antropocentrismo</text>
+        <text x="236" y="212" className="bi-label">estudos clássicos e capacidades humanas</text>
         <text x="236" y="234" className="bi-small">textos gregos e romanos, guardados por</text>
         <text x="236" y="250" className="bi-small">eruditos islâmicos e bizantinos</text>
         <text x="236" y="268" className="bi-small">Leonardo, homem universal · Copérnico, heliocentrismo</text>
@@ -545,7 +545,7 @@ export function RenaissanceChain({ active }: Scene) {
         <text x="236" y="298" className="bi-hand-sm">confiar em observar e raciocinar</text>
       </g>}
     </motion.g>
-    <text x="30" y="342" className="bi-foot">Cadeia esquemática: cada elo é condição do seguinte, não causa única.</text>
+    <text x="30" y="342" className="bi-foot">Relações esquemáticas: financiamento e valores se articulam.</text>
     </g>
   </svg>;
 }

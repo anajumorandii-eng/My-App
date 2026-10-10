@@ -46,7 +46,7 @@ export function FirstCities({ active }: Scene) {
   const uid = useId().replace(/:/g, '');
   const p = usePaced();
   const sacks = active >= 1 ? 6 : 2;
-  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Primeiras civilizações: de nômades a aldeias agrícolas e a cidades graças ao excedente, e a comparação entre as cidades-Estado do Tigre e Eufrates e o Estado centralizado do Nilo; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Primeiras civilizações: agricultura e excedente favorecem aldeias e cidades, com trajetórias diversas, e a comparação entre as cidades-Estado do Tigre e Eufrates e o Estado centralizado do Nilo; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="FirstCities" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />

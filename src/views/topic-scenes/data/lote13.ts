@@ -11,7 +11,7 @@ export const ENTRIES_LOTE13: SceneEntry[] = [
     items: [
       {
         label: 'Crescente Fértil',
-        claim: 'a partir de cerca de 10.000 a.C., caçadores-coletores nômades passam a viver em comunidades sedentárias de agricultura e pecuária — e isso aconteceu em vários centros independentes, não num só',
+        claim: 'a partir de cerca de 10.000 a.C., agricultura e pecuária se expandem em vários centros independentes, favorecendo comunidades sedentárias; assentamentos duradouros também existiam antes da domesticação',
         section: 'Revolução Agrícola e as primeiras cidades',
         quote: 'a partir de aproximadamente 10.000 a.C. (no chamado Crescente Fértil, no Oriente Médio, entre outros centros independentes de domesticação em diferentes continentes)',
       },
@@ -23,9 +23,9 @@ export const ENTRIES_LOTE13: SceneEntry[] = [
       },
       {
         label: 'Tigre e Eufrates',
-        claim: 'na Mesopotâmia, cidades-Estado independentes e rivais, como Ur, Uruk e Babilônia, e a escrita cuneiforme em tabuletas de argila, primeiro para a administração',
+        claim: 'na Mesopotâmia, cidades-Estado e também reinos e impérios em diferentes períodos; a escrita cuneiforme em tabuletas de argila teve usos inicialmente administrativos',
         section: 'Mesopotâmia e Egito',
-        quote: 'Na Mesopotâmia, a organização política caracterizou-se por cidades-Estado independentes e frequentemente rivais entre si',
+        quote: 'Na Mesopotâmia, cidades-Estado independentes e frequentemente rivais coexistiram, em diferentes períodos, com reinos e impérios que unificaram extensos territórios',
       },
       {
         label: 'Vale do Nilo',

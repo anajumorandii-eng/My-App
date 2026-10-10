@@ -341,7 +341,7 @@ export function EnvironmentalPower({ active }: Scene) {
     {active === 1 && <motion.g key="acordos" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4)}>
       {[
         { x: 30, year: 'KYOTO · 1997', a: 'metas obrigatórias', b: 'só para desenvolvidos', lit: [0, 1] },
-        { x: 318, year: 'PARIS · 2015', a: 'metas voluntárias (NDCs)', b: 'para todos; sem sanção', lit: [0, 1, 2, 3, 4, 5] },
+        { x: 318, year: 'PARIS · 2015', a: 'NDCs obrigatórias', b: 'metas definidas por cada país', lit: [0, 1, 2, 3, 4, 5] },
       ].map(({ x, year, a, b, lit }, side) => <g key={year}>
         <rect x={x} y="62" width="272" height="232" rx="14" className="bi-panel" />
         <text x={x + 16} y="86" className="bi-panel-title">{year}</text>
@@ -368,7 +368,7 @@ export function EnvironmentalPower({ active }: Scene) {
       </g>
       <text x="422" y="166" className="bi-tiny">bem abaixo de 2 °C;</text>
       <text x="422" y="179" className="bi-tiny">de preferência 1,5 °C</text>
-      <motion.text x="310" y="316" textAnchor="middle" className="bi-hand-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 1.6)}>mais países, menos obrigação</motion.text>
+      <motion.text x="310" y="316" textAnchor="middle" className="bi-hand-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 1.6)}>metas nacionais; tratado vinculante</motion.text>
     </motion.g>}
 
     {active === 2 && <motion.g key="nilo" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4)}>
@@ -386,10 +386,10 @@ export function EnvironmentalPower({ active }: Scene) {
       <text x="40" y="196" className="bi-tiny">lavoura e abastecimento</text>
       <text x="40" y="208" className="bi-tiny">dependem quase só do rio</text>
       <rect x="318" y="62" width="272" height="94" rx="14" className="bi-panel" />
-      <text x="334" y="86" className="bi-panel-title">LEGAL, E AINDA ASSIM TENSO</text>
+      <text x="334" y="86" className="bi-panel-title">SOBERANIA E COOPERAÇÃO</text>
       <text x="334" y="108" className="bi-small">obra no território soberano</text>
-      <text x="334" y="124" className="bi-small">da Etiópia; a vazão que chega</text>
-      <text x="334" y="140" className="bi-small">ao Egito diminui</text>
+      <text x="334" y="124" className="bi-small">da Etiópia; pode alterar vazões</text>
+      <text x="334" y="140" className="bi-small">conforme chuvas e operação</text>
       <text x="40" y="270" className="bi-tiny">também disputado:</text>
       <text x="40" y="284" className="bi-small">Tigre-Eufrates</text>
     </motion.g>}

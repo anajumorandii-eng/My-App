@@ -2031,7 +2031,7 @@
     "artifact": "tipologia",
     "status": "em-validacao",
     "mechanism": "comparação esquemática de três propriedades cartográficas",
-    "relation": "conforme preserva forma local; equivalente, área; equidistante, distâncias desde um centro",
+    "relation": "conforme preserva ângulos locais; equivalente preserva áreas; azimutal equidistante preserva distâncias desde seu centro",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-recorte1.png",
       "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-recorte1-dark.png",
@@ -2044,7 +2044,7 @@
       "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-768-light.png",
       "docs/visual-personalizado/screenshots/lote1-hg-2026-09-25/geografia-projecoes-cartograficas-768-dark.png"
     ],
-    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Redesenhada em 25/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente. Revisão pedagógica de 10/10 atualiza a descrição; capturas anteriores não validam a versão atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-cartografia-digital",
@@ -2125,8 +2125,8 @@
     "primary": "scene",
     "artifact": "tipologia",
     "status": "em-validacao",
-    "mechanism": "Idade e estabilidade tectônica classificam as estruturas",
-    "relation": "Cráton antigo e erodido, bacia com camadas acumuladas e dobra jovem levantada por subducção na mesma crosta sul-americana",
+    "mechanism": "estruturas geológicas e processos de formação do relevo",
+    "relation": "crátons incluem escudos e plataformas; bacias acumulam sedimentos; Andes e Himalaia representam subducção e colisão continental distintas",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-recorte1.png",
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-recorte1-dark.png",
@@ -2139,7 +2139,7 @@
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-768-light.png",
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geomorfologia-mundial-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente. Revisão pedagógica de 10/10 atualiza a descrição; capturas anteriores não validam a versão atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-biogeografia-mundial",
@@ -2148,8 +2148,8 @@
     "primary": "scene",
     "artifact": "tipologia",
     "status": "em-validacao",
-    "mechanism": "Latitude e circulação atmosférica ordenam os biomas",
-    "relation": "O ar sobe e chove na ZCIT e desce seco perto de 30°; a temperatura cai do equador ao polo e os biomas seguem essa ordem",
+    "mechanism": "padrões de biomas influenciados por clima e circulação",
+    "relation": "ZCIT favorece chuvas e subsidência perto de 30° dificulta chuva; padrões latitudinais admitem variações por relevo, solos e ação humana",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-recorte1.png",
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-recorte1-dark.png",
@@ -2162,7 +2162,7 @@
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-768-light.png",
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-biogeografia-mundial-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente. Revisão pedagógica de 10/10 atualiza a descrição; capturas anteriores não validam a versão atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-agua-na-superficie-terrestre",
@@ -2207,8 +2207,8 @@
     "primary": "scene",
     "artifact": "cadeia-de-derivacao",
     "status": "em-validacao",
-    "mechanism": "Quem controla a cabeceira decide a água de quem vem depois",
-    "relation": "Barragem sem acordo reduz a vazão; sem tratado há tensão; a dependência do Egito (>90%) torna a ameaça existencial",
+    "mechanism": "bacias compartilhadas ligam decisões a montante e efeitos a jusante",
+    "relation": "enchimento e operação de barragens podem alterar vazões conforme chuvas, secas e acordos; cooperação busca reduzir danos e tensões",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte1.png",
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-recorte1-dark.png",
@@ -2223,7 +2223,7 @@
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-768-light.png",
       "docs/visual-personalizado/screenshots/lote9-hg-2026-09-26/geografia-geopolitica-dos-recursos-hidricos-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente. Revisão pedagógica de 10/10 atualiza a descrição; capturas anteriores não validam a versão atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-geografia-hidrogeografia-mundial",
@@ -3175,8 +3175,8 @@
     "primary": "scene",
     "artifact": "escala-de-graus",
     "status": "em-validacao",
-    "mechanism": "Casta por origem e nascimento; cargo alto travado ao criollo",
-    "relation": "Origem e local de nascimento fixam o degrau; o criollo tem riqueza mas não chega ao cargo alto, e o ressentimento alimenta a independência",
+    "mechanism": "hierarquias coloniais de origem, riqueza e acesso a cargos",
+    "relation": "peninsulares predominam nos altos cargos; criollos têm acesso desigual, sem exclusão absoluta; classificações sociais variam regionalmente",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-recorte1.png",
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-recorte1-dark.png",
@@ -3189,7 +3189,7 @@
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-768-light.png",
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-america-espanhola-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente. Revisão pedagógica de 10/10 atualiza a descrição; capturas anteriores não validam a versão atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-vida-urbana-e-renascimento-cultural",
@@ -3246,8 +3246,8 @@
     "primary": "scene",
     "artifact": "tipologia",
     "status": "em-validacao",
-    "mechanism": "Direito divino e contrato: dois caminhos, o mesmo trono",
-    "relation": "Bossuet (base religiosa) e Hobbes (base racional e contratual, Leviatã, 1651) partem de fundamentos distintos e chegam ao mesmo poder absoluto",
+    "mechanism": "fundamentos religiosos e contratuais da soberania",
+    "relation": "Bossuet defende direito divino; Hobbes justifica soberano por autorização e proteção, com preservação da autodefesa",
     "evidencePaths": [
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-recorte1.png",
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-recorte1-dark.png",
@@ -3260,7 +3260,7 @@
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-768-light.png",
       "docs/visual-personalizado/screenshots/lote7b-hg-2026-09-26/historia-absolutismo-768-dark.png"
     ],
-    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente."
+    "notes": "Redesenhada em 26/09 pela régua aprovada: cena própria com movimento que explica o mecanismo. QA técnico: 390, 768 e 1440 px, temas claro e escuro, todos os recortes sem colisão de texto. Aprovação editorial pendente. Revisão pedagógica de 10/10 atualiza a descrição; capturas anteriores não validam a versão atual. Aprovação editorial pendente."
   },
   {
     "id": "summary-historia-revolucao-industrial",

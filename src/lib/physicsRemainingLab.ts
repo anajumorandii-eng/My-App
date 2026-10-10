@@ -59,7 +59,7 @@ export const PHYSICS_REMAINING: Record<PhysicsRemainingId, PhysicsRemainingConfi
   },
   'circular-motion': {
     id: 'circular-motion', name: 'Na correia, a borda acompanha a mesma velocidade linear',
-    question: 'Mude o raio da polia movida: as duas bordas têm a mesma velocidade linear, mas não a mesma velocidade angular.',
+    question: 'Sem deslizamento, mude o raio da polia movida: as bordas mantêm a mesma rapidez, mas os ritmos de rotação diferem.',
     control: { label: 'R₂', description: 'raio da polia movida, em cm', min: 10, max: 40, step: 5, initial: 25 },
     formula: 'v₁ = v₂  →  ω₁R₁ = ω₂R₂',
     insight: 'a correia impõe o mesmo deslocamento linear nas bordas. Por isso, quanto maior a polia movida, menor a sua velocidade angular.',

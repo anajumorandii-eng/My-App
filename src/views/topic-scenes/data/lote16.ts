@@ -16,9 +16,9 @@ export const ENTRIES_LOTE16: SceneEntry[] = [
     items: [
       {
         label: 'Extensão × vazão',
-        claim: 'O Nilo é o mais extenso; a Amazônica, mais curta, despeja muito mais água porque atravessa região de chuva intensa.',
+        claim: 'Nilo e Amazonas estão entre os rios mais extensos; o ranking depende da medição. O Amazonas tem muito mais vazão pela chuva e pela enorme bacia.',
         section: 'Pegadinhas frequentes',
-        quote: 'a Amazônia, embora mais curta que o Nilo, descarrega volume de água muito superior por atravessar região de pluviosidade muito mais intensa',
+        quote: 'o Amazonas descarrega muito mais água que o Nilo, independentemente da controvérsia sobre qual é mais longo, por drenar uma bacia enorme com elevada pluviosidade',
       },
       {
         label: 'Nilo no deserto',
@@ -34,9 +34,9 @@ export const ENTRIES_LOTE16: SceneEntry[] = [
       },
       {
         label: 'Estresse hídrico',
-        claim: 'Abaixo de mil m³ de água renovável por habitante ao ano, o país está em estresse hídrico severo; a irrigação é o maior consumo.',
+        claim: 'No indicador per capita, abaixo de 1.000 m³ por habitante ao ano há escassez. Estresse no ODS compara retiradas com água disponível; a agricultura lidera as retiradas.',
         section: 'Disponibilidade e estresse hídrico',
-        quote: 'com disponibilidade de água doce renovável por habitante abaixo de mil metros cúbicos por ano, o limiar considerado crítico',
+        quote: 'abaixo de 1.000 m³ indica escassez, e abaixo de 500 m³, escassez absoluta',
       },
     ],
   },

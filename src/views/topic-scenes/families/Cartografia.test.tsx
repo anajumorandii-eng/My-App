@@ -4,6 +4,7 @@ import userEvent from '@testing-library/user-event';
 import { describe, expect, it } from 'vitest';
 import { geografia } from '../data/geografia';
 import { sceneFor } from '../sceneFor';
+import { MapElements, SurfaceWater } from './Cartografia';
 import { HistoriaGeografia } from './HistoriaGeografia';
 
 
@@ -26,5 +27,23 @@ describe('cenas do Lote 15: cartografia e água', () => {
     expect(target).toHaveAttribute('aria-pressed', 'true');
     expect(diagram).toHaveTextContent(after);
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining(`recorte ${entry.items.length}`));
+  });
+});
+
+describe('precisão dos mecanismos cartográficos', () => {
+  it('representa população pela área dos quadrados, não pelo lado', () => {
+    const { container } = render(<MapElements active={3} />);
+    const widthFor = (name: string) => {
+      const labels = Array.from(container.querySelectorAll('text')).filter(el => el.textContent === name);
+      const group = labels[labels.length - 1].parentElement!;
+      return Number(group.querySelector('rect')!.getAttribute('width'));
+    };
+    expect(widthFor('China') ** 2 / widthFor('Índia') ** 2).toBeCloseTo(110 / 100);
+    expect(widthFor('Canadá') ** 2 / widthFor('Austrália') ** 2).toBeCloseTo(24 / 20);
+  });
+  it('distingue aquífero livre de exposição direta à superfície', () => {
+    const { container } = render(<SurfaceWater active={2} />);
+    expect(container).toHaveTextContent('sem camada confinante acima');
+    expect(container).not.toHaveTextContent('nível freático exposto à superfície');
   });
 });

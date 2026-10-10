@@ -179,7 +179,7 @@ export function SpanishCastes({ active }: Scene) {
     { x: 100, y: 142, w: 220, h: 58, label: 'criollos' },
     { x: 150, y: 78, w: 120, h: 58, label: 'peninsulares' },
   ];
-  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`América Espanhola: pirâmide de castas dos grupos subordinados aos criollos e aos peninsulares, com os cargos mais altos travados para os criollos; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`América Espanhola: pirâmide de castas dos grupos subordinados aos criollos e aos peninsulares, com preferência por peninsulares em muitos altos cargos; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="SpanishCastes" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
@@ -225,7 +225,7 @@ export function SpanishCastes({ active }: Scene) {
     {active === 1 && <motion.g initial={{ y: 0, opacity: still ? 0 : 1 }} animate={still ? { opacity: 0 } : { y: [0, -24, -10, 0], opacity: [1, 1, 1, 0] }} transition={p(1.6, 0.2)}>
       <Person x={250} y={160} s={0.55} coat="bi-coat-royal" hat="brim" />
     </motion.g>}
-    <motion.text x="142" y="132" textAnchor="end" className="bi-hand-sm" initial={false} animate={{ opacity: active >= 1 ? 1 : 0 }} transition={p(0.4, 1)}>travado</motion.text>
+    <motion.text x="142" y="132" textAnchor="end" className="bi-hand-sm" initial={false} animate={{ opacity: active >= 1 ? 1 : 0 }} transition={p(0.4, 1)}>preferência</motion.text>
 
     {/* O navio só chega no recorte dos peninsulares: nascer na Espanha é o que os põe no topo. */}
     <motion.g initial={false} animate={{ x: active === 2 ? 0 : 40, opacity: active === 2 ? 1 : 0.35 }} transition={p(1.1, 0.2)}>
@@ -241,9 +241,9 @@ export function SpanishCastes({ active }: Scene) {
     <motion.g key={active} initial={{ opacity: 0, y: 6 }} animate={{ opacity: 1, y: 0 }} transition={p(0.45, 0.25)}>
       {active === 0 && <g>
         <text x="502" y="80" textAnchor="middle" className="bi-panel-title">GRUPOS SUBORDINADOS</text>
-        {['posições intermediárias', 'por combinação étnica,', 'reconhecidas em lei'].map((l, k) => <text key={l} x="502" y={104 + k * 16} textAnchor="middle" className="bi-small">{l}</text>)}
-        <text x="502" y="166" textAnchor="middle" className="bi-small bi-strong">a casta determinava:</text>
-        {[['direitos legais', 'M-6 -5h12M0 -5v12M-8 -1l-3 6h6ZM8 -1l-3 6h6Z'], ['ocupações permitidas', 'M-7 7l10-10M1 -6l7 3-3 3'], ['status social', 'M-7 6h14M-5 6V0M0 6V-5M5 6V-2']].map(([word, d], k) => <g key={word}>
+        {['discriminações distintas;', 'origem e condição', 'influíam nas oportunidades'].map((l, k) => <text key={l} x="502" y={104 + k * 16} textAnchor="middle" className="bi-small">{l}</text>)}
+        <text x="502" y="166" textAnchor="middle" className="bi-small bi-strong">também influenciavam:</text>
+        {[['direitos legais', 'M-6 -5h12M0 -5v12M-8 -1l-3 6h6ZM8 -1l-3 6h6Z'], ['oportunidades', 'M-7 7l10-10M1 -6l7 3-3 3'], ['status social', 'M-7 6h14M-5 6V0M0 6V-5M5 6V-2']].map(([word, d], k) => <g key={word}>
           <g transform={`translate(430 ${190 + k * 24})`}><path d={d} className="bi-icon" /></g>
           <text x="446" y={194 + k * 24} className="bi-small">{word}</text>
         </g>)}
@@ -254,7 +254,7 @@ export function SpanishCastes({ active }: Scene) {
         <text x="428" y="152" className="bi-small bi-strong">poder econômico</text>
         <text x="580" y="152" textAnchor="end" className="im-yes">sim</text>
         <text x="428" y="174" className="bi-small bi-strong">cargos mais altos</text>
-        <text x="580" y="174" textAnchor="end" className="im-no">não</text>
+        <text x="580" y="174" textAnchor="end" className="im-no">restritos</text>
         <path d="M428 186H580" className="bi-tick" />
         <text x="502" y="210" textAnchor="middle" className="bi-hand-sm">ressentimento</text>
         <text x="502" y="230" textAnchor="middle" className="bi-small">alimenta, depois,</text>
@@ -273,7 +273,7 @@ export function SpanishCastes({ active }: Scene) {
         <text x="502" y="252" textAnchor="middle" className="bi-small">(México) e Peru (Lima)</text>
       </g>}
     </motion.g>
-    <text x="30" y="306" className="bi-small">origem étnica + local de nascimento → lugar na hierarquia</text>
+    <text x="30" y="306" className="bi-small">origem + nascimento + condição → oportunidades desiguais</text>
     <text x="30" y="342" className="bi-foot">Esquema da hierarquia jurídica; a altura dos degraus não mede população.</text>
     </g>
   </svg>;
@@ -295,7 +295,7 @@ export function ReformationDialectic({ active }: Scene) {
   const p = usePaced();
   const still = p(1).duration === 0;
   const dim = (k: number) => ({ opacity: k === active || (active === 2 && k < 2) ? 1 : 0.5 });
-  const notes = ['pagar para reduzir o purgatório', 'salvação pela fé, sem intermediário pago', 'nem a Igreja de antes, nem a simples recusa'];
+  const notes = ['pagar para reduzir o purgatório', 'salvação pela fé, sem intermediário pago', 'dogmas mantidos, abusos combatidos'];
   return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Reforma Religiosa em três tempos: venda de indulgências, crítica luterana de 1517 e Concílio de Trento, que mantém dogmas e corrige abusos; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="ReformationDialectic" active={active} />
     <g transform="translate(0 380)">
@@ -359,7 +359,7 @@ export function ReformationDialectic({ active }: Scene) {
       <text x="469" y="118" textAnchor="middle" className="im-col-title">reafirma</text>
       <text x="547" y="118" textAnchor="middle" className="im-col-title">corrige</text>
       {['autoridade', 'papal', 'sacramentos', 'fé + obras'].map((l, k) => <text key={l} x="469" y={138 + k * 16} textAnchor="middle" className="bi-tiny">{l}</text>)}
-      {['venda de', 'indulgências', 'formação', 'do clero'].map((l, k) => <text key={l} x="547" y={138 + k * 16} textAnchor="middle" className="bi-tiny">{l}</text>)}
+      {['abusos nas', 'indulgências', 'formação', 'do clero'].map((l, k) => <text key={l} x="547" y={138 + k * 16} textAnchor="middle" className="bi-tiny">{l}</text>)}
       <text x="508" y="222" textAnchor="middle" className="bi-tiny">a resposta: Contrarreforma</text>
     </motion.g>
 
@@ -447,8 +447,8 @@ export function AbsolutismPaths({ active }: Scene) {
       <text x="530" y="166" className="bi-small">1651</text>
       <Arrow d="M456 168C420 170 368 170 342 178" on={on(1)} p={p} head={`${diagramId}-im-head-abs`} delay={0.9} />
       <text x="590" y="202" textAnchor="end" className="bi-label">contrato · Hobbes</text>
-      <text x="590" y="224" textAnchor="end" className="bi-small">cada um cede seus direitos</text>
-      <text x="590" y="240" textAnchor="end" className="bi-small">naturais ao soberano</text>
+      <text x="590" y="224" textAnchor="end" className="bi-small">pacto autoriza o soberano</text>
+      <text x="590" y="240" textAnchor="end" className="bi-small">preserva autoconservação</text>
       <text x="590" y="256" textAnchor="end" className="bi-small">em troca de segurança e paz</text>
     </motion.g>
 
@@ -458,10 +458,10 @@ export function AbsolutismPaths({ active }: Scene) {
       <path d="M170 294C206 294 220 284 232 272M416 294C398 294 398 284 388 272" className="im-thread-keep" />
     </motion.g>
     <motion.text key={active} x="310" y="300" textAnchor="middle" className="bi-hand-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 1.2)}>
-      {['de Deus para o rei', 'do contrato para o rei', 'partidas diferentes,'][active]}
+      {['de Deus para o rei', 'do pacto ao soberano', 'partidas diferentes,'][active]}
     </motion.text>
     {active === 2 && <motion.text x="310" y="318" textAnchor="middle" className="bi-hand-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 1.4)}>mesma conclusão</motion.text>}
-    <text x="30" y="342" className="bi-foot">Esquema das duas teorias; o trono é metáfora do poder centralizado.</text>
+    <text x="30" y="342" className="bi-foot">Esquema das duas teorias; o trono é metáfora; Hobbes admite assembleia soberana.</text>
     </g>
   </svg>;
 }
@@ -578,7 +578,7 @@ export const SCENES_LOTE7B: Record<string, React.ComponentType<Scene>> = {
 export const HEADERS_LOTE7B: Record<string, string> = {
   'summary-historia-a-primeira-globalizacao': 'camadas da exploração colonial',
   'summary-historia-america-espanhola': 'hierarquia de castas',
-  'summary-historia-reforma-religiosa': 'tese, crítica e síntese',
+  'summary-historia-reforma-religiosa': 'crítica e reforma católica',
   'summary-historia-absolutismo': 'duas justificativas, um poder',
   'summary-historia-iluminismo': 'base comum, propostas distintas',
 };

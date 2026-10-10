@@ -282,7 +282,7 @@ export function OrbitalCena({ id, v }: { id: OrbitalId; v: number }) {
       <Rotulo x={c.x + R + 14} y={c.y - R + 4} ancora="start" cor={blue} peso={700}>v tangente</Rotulo>
       <Rotulo x={c.x + 8} y={c.y - 20} ancora="start" cor={accent} peso={700}>Fc ∝ v² = {f(v * v)}</Rotulo>
       <Rotulo x={20} y={272} ancora="start">módulo igual, direção mudando: há aceleração</Rotulo>
-      <Rotulo x={20} y={288} ancora="start">a resultante das forças reais aponta para o centro</Rotulo>
+      <Rotulo x={20} y={288} ancora="start">no MCU, a resultante aponta para o centro</Rotulo>
     </g>;
   }
   return <OrbitaCena v={v} reduzir={!!reduzir} />;

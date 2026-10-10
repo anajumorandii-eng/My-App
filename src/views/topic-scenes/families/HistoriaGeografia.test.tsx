@@ -92,9 +92,9 @@ describe('pranchas de História e Geografia', () => {
     expect(diagram).toHaveTextContent('forma local');
     expect(diagram).toHaveTextContent('área relativa');
     expect(diagram).toHaveTextContent('distância do centro');
-    await user.click(screen.getByRole('button', { name: 'Equidistante' }));
-    expect(screen.getByRole('status')).toHaveTextContent('ponto central');
-    expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('equidistante selecionada'));
+    await user.click(screen.getByRole('button', { name: 'Azimutal equidistante' }));
+    expect(screen.getByRole('status')).toHaveTextContent('distâncias do centro');
+    expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('azimutal equid. selecionada'));
   });
 
   it('liga cercamentos à fábrica e distingue documentação, pressão social e leis fabris', async () => {

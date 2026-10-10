@@ -34,9 +34,11 @@ const ZONE = {
 export function EarthSeasons({ active }: Scene) {
   const p = usePaced();
   const tilt = 23.5;
-  const earth = (cx: number, sunRight: boolean, key: string) => <g key={key}>
+  const earth = (cx: number, sunRight: boolean, key: string, illumination?: number[]) => <g key={key}>
     <circle cx={cx} cy="196" r="24" className="gf-ocean" />
-    <path d={sunRight ? `M${cx} 172A24 24 0 0 0 ${cx} 220Z` : `M${cx} 172A24 24 0 0 1 ${cx} 220Z`} className="gf-night" />
+    <motion.path d={sunRight ? `M${cx} 172A24 24 0 0 0 ${cx} 220Z` : `M${cx} 172A24 24 0 0 1 ${cx} 220Z`} className="gf-night" initial={false}
+      animate={{ rotate: illumination ? (p(1).duration === 0 ? illumination[illumination.length - 1] : illumination) : 0 }}
+      transition={illumination ? p(2.6) : { duration: 0 }} style={{ transformOrigin: `${cx}px 196px` }} />
     <g transform={`rotate(${tilt} ${cx} 196)`}>
       <ellipse cx={cx} cy="196" rx="24" ry="5" className="gf-equator" />
       <path d={`M${cx} 162V230`} className="gf-axis" />
@@ -68,7 +70,7 @@ export function EarthSeasons({ active }: Scene) {
     {active === 1 && <motion.g initial={{ x: -180, y: 0 }}
       animate={p(1).duration === 0 ? { x: 180, y: 0 } : { x: orbit.map(a => 180 * Math.cos(a)), y: orbit.map(a => -64 * Math.sin(a)) }}
       transition={p(2.6)}>
-      {earth(250, true, 'moving')}
+      {earth(250, true, 'moving', orbit.map(a => Math.atan2(64 * Math.sin(a), -180 * Math.cos(a)) * 180 / Math.PI))}
     </motion.g>}
     <motion.g initial={false} animate={{ opacity: active === 2 ? 1 : 0 }} transition={p(0.4, 0.2)}>
       <rect x="476" y="54" width="128" height="140" rx="10" className="gf-inset" />

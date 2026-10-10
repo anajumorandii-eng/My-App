@@ -154,7 +154,7 @@ function SmartphoneChain({ active }: Scene) {
       <motion.g initial={{ x: STATIONS[0].x }} animate={{ x: [STATIONS[0].x, 196, 190, 196, 192] }} transition={p(1.2, 0.1)}>
         <g transform="translate(0 76)"><Phone stage={0} /></g>
       </motion.g>
-      <text x="262" y="72" className="bi-hand-sm">fábricas fechadas: o chip não sai</text>
+      <text x="262" y="72" className="bi-hand-sm">gargalo: faltam chips</text>
       {[1, 2].map(k => <text key={k} x={STATIONS[k + 1].x} y={SY - 42} textAnchor="middle" className="gz-stop">parado</text>)}
     </g>}
 
@@ -187,7 +187,7 @@ function SmartphoneChain({ active }: Scene) {
         <text x="530" y="290" className="bi-tiny">custos</text>
       </g>}
       {active === 1 && <g>
-        <text x="40" y="250" className="bi-panel-title">COVID-19: UM PONTO FECHA, A CADEIA PARA</text>
+        <text x="40" y="250" className="bi-panel-title">COVID-19: GARGALOS NA CADEIA</text>
         <g transform="translate(70 294)"><Chip s={0.8} /></g>
         <path d="M58 282l24 24M82 282l-24 24" className="bi-cross" />
         <text x="104" y="282" className="bi-small bi-strong">escassez de semicondutores</text>
@@ -415,7 +415,7 @@ function Multilateral({ active }: Scene) {
     <SocioEconomicIllustration kind="diplomacy" active={active} />
     <g transform="translate(0 376)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
-    <text x="30" y="40" className="bi-kicker">{['UNILATERALISMO', 'MULTILATERALISMO', 'INSTITUIÇÕES DO PÓS-1945', 'PROBLEMAS SEM FRONTEIRA'][active]}</text>
+    <text x="30" y="40" className="bi-kicker">{['UNILATERALISMO', 'MULTILATERALISMO', 'INSTITUIÇÕES · 1944 EM DIANTE', 'PROBLEMAS SEM FRONTEIRA'][active]}</text>
     <ArrowHead id={`${diagramId}-gz-head-multi`} />
 
     {active <= 1 && <g>
@@ -464,14 +464,14 @@ function Multilateral({ active }: Scene) {
         <circle cx={76 + k * 21} cy="292" r="8.5" className="gz-veto" />
         <path d={`M${72 + k * 21} 289l4 6 4-6`} className="gz-veto-mark" />
       </motion.g>)}
-      {[0, 1, 2, 3].map(k => <circle key={k} cx={214 + k * 17} cy="292" r="6.5" className="gz-rot" />)}
-      <text x="112" y="316" textAnchor="middle" className="bi-tiny">5 permanentes: veto</text>
-      <text x="246" y="316" textAnchor="middle" className="bi-tiny">rotativos: sem veto</text>
+      {Array.from({ length: 10 }, (_, k) => <circle key={k} cx={214 + (k % 5) * 17} cy={284 + Math.floor(k / 5) * 16} r="6.5" className="gz-rot" />)}
+      <text x="112" y="316" textAnchor="middle" className="bi-tiny">5 permanentes: veto*</text>
+      <text x="246" y="316" textAnchor="middle" className="bi-tiny">10 eleitos: sem veto</text>
       <text x="160" y="334" textAnchor="middle" className="bi-tiny">EUA, Rússia, China, Reino Unido, França</text>
       {[
-        { y: 76, t: 'OMC', a: 'regras de comércio,', b: 'arbitragem de disputas', icon: <path d="M-12 -4h24M0 -12v20M-12 -4l-5 10h10ZM12 -4l-5 10h10Z" className="bi-icon" /> },
-        { y: 154, t: 'FMI', a: 'estabilidade, balanço', b: 'de pagamentos', icon: <g><path d="M-12 8h24M-9 8v-10M-3 8v-14M3 8v-8M9 8v-16" className="bi-icon" /></g> },
-        { y: 232, t: 'Banco Mundial', a: 'projetos de desenvolvimento', b: 'de longo prazo', icon: <g><path d="M-10 8v-10l10-8 10 8v10ZM-3 8v-6h6v6" className="bi-icon" /></g> },
+        { y: 76, t: 'OMC · 1995', a: 'regras de comércio,', b: 'arbitragem de disputas', icon: <path d="M-12 -4h24M0 -12v20M-12 -4l-5 10h10ZM12 -4l-5 10h10Z" className="bi-icon" /> },
+        { y: 154, t: 'FMI · 1944', a: 'estabilidade, balanço', b: 'de pagamentos', icon: <g><path d="M-12 8h24M-9 8v-10M-3 8v-14M3 8v-8M9 8v-16" className="bi-icon" /></g> },
+        { y: 232, t: 'Banco Mundial', a: '1944 · projetos de desenvolvimento', b: 'de longo prazo', icon: <g><path d="M-10 8v-10l10-8 10 8v10ZM-3 8v-6h6v6" className="bi-icon" /></g> },
       ].map((c, k) => <motion.g key={c.t} initial={{ opacity: 0, x: 10 }} animate={{ opacity: 1, x: 0 }} transition={p(0.45, 0.5 + k * 0.2)}>
         <rect x="316" y={c.y - 12} width="270" height="62" rx="10" className="gz-card" />
         <circle cx="346" cy={c.y + 19} r="18" className="gz-crit" />
@@ -480,7 +480,7 @@ function Multilateral({ active }: Scene) {
         <text x="374" y={c.y + 26} className="bi-tiny">{c.a}</text>
         <text x="374" y={c.y + 39} className="bi-tiny">{c.b}</text>
       </motion.g>)}
-      <text x="452" y="314" textAnchor="middle" className="bi-hand-sm">o veto reflete o poder de 1945</text>
+      <text x="452" y="314" textAnchor="middle" className="bi-hand-sm">*veto: matérias não processuais</text>
       <text x="452" y="332" textAnchor="middle" className="bi-tiny">críticas: representatividade, condicionalidades</text>
     </g>}
 

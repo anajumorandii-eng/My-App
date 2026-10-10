@@ -768,11 +768,11 @@ export function WorldOrder({ active }: Scene) {
       <text x="120" y="155" textAnchor="middle" className="eg-pole-text">EUA</text>
     </motion.g>
     <motion.g initial={false} animate={{ opacity: active === 3 ? 0 : 1 }} transition={p(0.5)}>
-      <text x="120" y="222" textAnchor="middle" className="bi-tiny bi-strong">Otan</text>
+      <text x="120" y="222" textAnchor="middle" className="bi-tiny bi-strong">Otan · 1949</text>
     </motion.g>
     <motion.g initial={false} animate={{ opacity: active >= 2 ? 0 : 1 }} transition={p(0.5, active >= 2 ? 0.6 : 0)}>
       {SATS.map(([dx, dy]) => <circle key={`${dx}${dy}`} cx={su[0] - dx} cy={su[1] + dy} r="7" className="eg-sat-su" />)}
-      <text x={su[0]} y="222" textAnchor="middle" className="bi-tiny bi-strong">Pacto de Varsóvia</text>
+      <text x={su[0]} y="222" textAnchor="middle" className="bi-tiny bi-strong">Pacto de Varsóvia · 1955</text>
     </motion.g>
     <motion.g initial={false} animate={{ opacity: active >= 2 ? 0 : 1 }} transition={p(0.3, active >= 2 ? 0.5 : 0)}>
       <circle cx={su[0]} cy={su[1]} r="36" className="eg-su" />
@@ -812,7 +812,7 @@ export function WorldOrder({ active }: Scene) {
     </motion.g>
 
     <motion.text x="210" y="70" textAnchor="middle" className="bi-hand-sm" key={`h-${active === 3}`} initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 0.8)}>
-      {active === 3 ? 'resta um polo' : 'dois polos, sem confronto direto'}
+      {active === 3 ? 'resta um polo' : 'dois polos, sem guerra generalizada'}
     </motion.text>
 
     <rect x="418" y="56" width="178" height="206" rx="14" className="bi-panel" />

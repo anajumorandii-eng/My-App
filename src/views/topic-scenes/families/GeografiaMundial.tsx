@@ -84,9 +84,9 @@ function ClimateFactorsDetail({ active }: Scene) {
       <Person x={0} y={0} s={0.6} coat="bi-coat-army" />
     </motion.g>
     <motion.g {...show(1)}>
-      <text x="420" y="78" className="bi-hand-sm">quanto mais alto, mais frio:</text>
-      <text x="420" y="96" className="bi-hand-sm">o ar rarefeito retém</text>
-      <text x="420" y="114" className="bi-hand-sm">menos calor</text>
+      <text x="420" y="78" className="bi-hand-sm">na troposfera, em geral:</text>
+      <text x="420" y="96" className="bi-hand-sm">ar que sobe expande</text>
+      <text x="420" y="114" className="bi-hand-sm">e esfria</text>
     </motion.g>
 
     {[246, 258].map((y, k) => <motion.path key={y} d={`M${130 - k * 12} ${y}C100 ${y - 6} 60 ${y + 6} ${24 + k * 8} ${y}`} className="gm-current" markerEnd={`url(#${uid}-gm-clima-head)`} initial={false}
@@ -102,7 +102,7 @@ function ClimateFactorsDetail({ active }: Scene) {
       <motion.path d="M590 148v62" className="gm-amp" initial={false} animate={{ pathLength: active === 2 ? [0, 1] : 1 }} transition={p(1.1, 0.7)} />
       <text x="578" y="160" textAnchor="end" className="bi-small bi-strong">no interior,</text>
       <text x="578" y="176" textAnchor="end" className="bi-small">amplitude maior</text>
-      <text x="30" y="218" className="bi-hand-sm">fria: ar seco (Atacama)</text>
+      <text x="30" y="218" className="bi-hand-sm">fria: ar estável (Atacama)</text>
     </motion.g>
 
     <motion.g {...show(3)}>
@@ -137,7 +137,7 @@ function ClimateFactorsDetail({ active }: Scene) {
 // levantando a cordilheira.
 const FRONT = 'M30 190H118L126 226L136 200L166 140L186 104L196 92L208 106L232 150L262 196L346 202L430 198Q450 186 468 192T506 188T540 194T560 190';
 const CARDS = [
-  { x: 30, title: 'Dobras modernas', lines: ['dezenas de milhões de anos', 'ativas: sismos e vulcões'], idx: 2 },
+  { x: 30, title: 'Dobras modernas', lines: ['convergência de placas', 'Andes: sismos e vulcões'], idx: 2 },
   { x: 220, title: 'Bacias sedimentares', lines: ['camadas por milhões de anos', 'sobre rochas mais antigas'], idx: 1 },
   { x: 410, title: 'Crátons', lines: ['formados há bilhões de anos', 'estáveis e muito erodidos'], idx: 0 },
 ];
@@ -170,7 +170,7 @@ function StructureBlockDetail({ active }: Scene) {
       transition={p(1.2, 0.4 + k * 0.2)} />)}
     <motion.g {...show(0)}>
       <text x="495" y="100" textAnchor="middle" className="bi-hand-sm">bilhões de anos de</text>
-      <text x="495" y="116" textAnchor="middle" className="bi-hand-sm">erosão: relevo baixo</text>
+      <text x="495" y="116" textAnchor="middle" className="bi-hand-sm">erosão modela o relevo</text>
     </motion.g>
 
     <defs><clipPath id={`${uid}-gm-basin-clip`}><path d="M262 198Q346 208 430 200Q396 262 318 256Q274 238 262 198Z" /></clipPath></defs>
@@ -315,7 +315,7 @@ function BiomeBeltDetail({ active }: Scene) {
       <circle cx="60" cy="297" r="8" className="gm-marker" />
     </motion.g>
     <text x="312" y="320" textAnchor="middle" className="bi-small">temperatura média cai com a latitude</text>
-    <text x="30" y="342" className="bi-foot">O mesmo padrão se repete no hemisfério sul.</text>
+    <text x="30" y="342" className="bi-foot">Padrão amplo; altitude, relevo e oceanos modificam as faixas.</text>
   </svg>;
 }
 
@@ -400,8 +400,9 @@ function NileBasinDetail({ active }: Scene) {
       <motion.path d="M518 184h58" className="gm-outflow" initial={false} animate={{ strokeWidth: active === 0 ? [9, 3] : 3 }} transition={p(1.6, 0.4)} />
       <text x="382" y="208" className="bi-small bi-strong">Grande Barragem do Renascimento</text>
       <text x="382" y="222" className="bi-small">Etíope, no Nilo Azul</text>
-      <text x="382" y="246" className="bi-hand-sm">enchendo o reservatório, menos</text>
-      <text x="382" y="262" className="bi-hand-sm">água chega ao Egito</text>
+      <text x="382" y="246" className="bi-hand-sm">o enchimento pode reter água;</text>
+      <text x="382" y="262" className="bi-hand-sm">efeito varia com chuvas,</text>
+      <text x="382" y="278" className="bi-hand-sm">seca e operação</text>
     </motion.g>
     <motion.g {...show(1)}>
       <text x="382" y="78" className="bi-panel-title">2 · TENSÃO DIPLOMÁTICA</text>
@@ -430,7 +431,7 @@ function NileBasinDetail({ active }: Scene) {
       <text x="430" y="160" textAnchor="middle" className="gm-drop-text">{">90%"}</text>
       <text x="474" y="126" className="bi-small bi-strong">da água doce do</text>
       <text x="474" y="142" className="bi-small bi-strong">Egito vem do Nilo</text>
-      <text x="382" y="208" className="bi-small">qualquer redução de vazão</text>
+      <text x="382" y="208" className="bi-small">redução prolongada ou mal coordenada</text>
       <text x="382" y="222" className="bi-small">ameaça a segurança hídrica</text>
       <text x="382" y="236" className="bi-small">e alimentar</text>
     </motion.g>

@@ -369,9 +369,9 @@ const geografiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Eixo inclinado',
-        claim: 'o eixo de rotação da Terra é inclinado em cerca de 23,5 graus em relação ao plano orbital, e é essa inclinação — não a variação de distância ao Sol — a verdadeira causa das estações',
+        claim: 'o eixo de rotação da Terra é inclinado em cerca de 23,5 graus em relação à perpendicular ao plano orbital; essa inclinação, combinada com a translação, explica as estações',
         section: 'A inclinação e as estações',
-        quote: 'O eixo de rotação da Terra é inclinado em aproximadamente 23,5 graus em relação ao plano de sua órbita ao redor do Sol, e essa inclinação, mantida praticamente constante ao longo do ano (o eixo aponta sempre para a mesma direção no espaço, na direção aproximada da estrela Polar), é a verdadeira causa das estações.',
+        quote: 'O eixo de rotação da Terra é inclinado em aproximadamente 23,5 graus em relação à perpendicular ao plano de sua órbita ao redor do Sol (ou 66,5 graus em relação ao próprio plano), e essa inclinação, mantida praticamente constante ao longo do ano (o eixo aponta aproximadamente para a mesma direção no espaço, próxima à estrela Polar no sentido do polo norte), em conjunto com a translação, explica as estações.',
       },
       {
         label: 'Hemisférios alternam',
@@ -431,9 +431,9 @@ const geografiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Barragem sem acordo',
-        claim: 'quando um país constrói uma grande barragem nas cabeceiras de um rio internacional sem acordo prévio com os países a jusante, reduz a vazão que chega a eles',
+        claim: 'uma barragem sem regras compartilhadas de enchimento e operação pode alterar vazões a jusante',
         section: 'Como surge um conflito',
-        quote: 'Quando um país constrói uma grande barragem nas cabeceiras de um rio internacional sem acordo prévio com os países a jusante — como ocorreu com a Grande Barragem do Renascimento Etíope no Nilo Azul, que reduziu temporariamente a vazão que chega ao Egito durante o período de enchimento do reservatório',
+        quote: 'Quando um país constrói uma grande barragem nas cabeceiras de um rio internacional sem acordo prévio com os países a jusante — como ocorreu com a Grande Barragem do Renascimento Etíope no Nilo Azul, cujo enchimento retém parte da água e pode alterar vazões a jusante; os efeitos no Egito dependem também das chuvas e da operação dos reservatórios',
       },
       {
         label: 'Vira tensão diplomática',
@@ -443,13 +443,13 @@ const geografiaBase: SceneEntry[] = [
       },
       {
         label: 'Ameaça existencial',
-        claim: 'a gravidade do conflito tende a ser proporcional à dependência do país a jusante: o Egito depende do Nilo para mais de 90% de sua água doce, o que torna qualquer redução de vazão uma ameaça existencial',
+        claim: 'a gravidade do conflito tende a aumentar com a dependência do país a jusante: reduções prolongadas ou mal coordenadas de vazão ameaçam a segurança hídrica',
         section: 'Como surge um conflito',
-        quote: 'A gravidade do conflito tende a ser proporcional à dependência do país a jusante: o Egito depende do Nilo para mais de 90% de sua água doce, o que torna qualquer redução de vazão uma ameaça existencial à sua segurança hídrica e alimentar',
+        quote: 'A gravidade do conflito tende a aumentar com a dependência do país a jusante: o Egito depende do Nilo para mais de 90% de sua água doce, o que torna reduções prolongadas ou mal coordenadas de vazão um risco à sua segurança hídrica e alimentar',
       },
       {
         label: 'Risco de escalada',
-        claim: 'essa ameaça existencial eleva o risco de escalada diplomática muito além do que ocorreria em bacias onde os países têm fontes hídricas alternativas',
+        claim: 'esse risco hídrico eleva o risco de escalada diplomática muito além do que ocorreria em bacias onde os países têm fontes hídricas alternativas',
         section: 'Como surge um conflito',
         quote: 'elevando o risco de escalada diplomática muito além do que ocorreria em bacias onde os países têm fontes hídricas alternativas',
       },
@@ -489,9 +489,9 @@ const geografiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Conforme',
-        claim: 'preserva os ângulos e a forma local dos continentes, mas distorce significativamente as áreas relativas em latitudes altas',
+        claim: 'preserva os ângulos e as formas locais, mas não as áreas; na Mercator, a distorção de área cresce com a latitude',
         section: 'Propriedades diferentes',
-        quote: 'As projeções conformes preservam os ângulos e, portanto, a forma local dos continentes, mas distorcem significativamente as áreas relativas, especialmente em latitudes mais altas, distantes do Equador.',
+        quote: 'As projeções conformes preservam os ângulos e as formas locais, mas não conservam as áreas.',
       },
       {
         label: 'Equivalente',
@@ -500,10 +500,10 @@ const geografiaBase: SceneEntry[] = [
         quote: 'As projeções equivalentes preservam a proporção correta das áreas territoriais entre diferentes regiões do mapa, mas distorcem as formas dos continentes para conseguir essa fidelidade de área.',
       },
       {
-        label: 'Equidistante',
-        claim: 'preserva a distância correta a partir de um ponto central do mapa até qualquer outro ponto, mas só entre esse centro e o resto — não entre dois pontos quaisquer',
+        label: 'Azimutal equidistante',
+        claim: 'preserva as distâncias do centro até os demais pontos; não preserva a distância entre todos os pares de pontos',
         section: 'Propriedades diferentes',
-        quote: 'As projeções equidistantes preservam a distância correta a partir de um ponto central de referência do mapa até qualquer outro ponto',
+        quote: 'Na projeção azimutal equidistante, as distâncias do centro até os demais pontos são corretas',
       },
     ],
   },
@@ -523,13 +523,13 @@ const geografiaBase: SceneEntry[] = [
         label: 'Deserto subtropical',
         claim: 'ocorre por volta de 30° de latitude, onde células de alta pressão atmosférica suprimem a formação de nuvens e chuva',
         section: 'Os grandes biomas',
-        quote: 'desertos subtropicais ocorrem por volta de 30° de latitude, onde células de alta pressão atmosférica (as células de Hadley descendentes) suprimem a formação de nuvens e chuva',
+        quote: 'desertos subtropicais ocorrem por volta de 30° de latitude, onde células de alta pressão atmosférica (ramos descendentes das células de Hadley) suprimem a formação de nuvens e chuva',
       },
       {
         label: 'Temperado-polar',
-        claim: 'a sequência de biomas de temperados a polares reflete diretamente a queda progressiva de temperatura média conforme a latitude aumenta em direção aos polos',
+        claim: 'a sequência de biomas de temperados a polares reflete, em linhas gerais, a queda progressiva de temperatura média conforme a latitude aumenta em direção aos polos',
         section: 'Os grandes biomas',
-        quote: 'a sequência de biomas de temperados a polares reflete diretamente a queda progressiva de temperatura média conforme a latitude aumenta em direção aos polos',
+        quote: 'a sequência de biomas de temperados a polares reflete, em linhas gerais, a queda progressiva de temperatura média conforme a latitude aumenta em direção aos polos',
       },
     ],
   },
@@ -567,21 +567,21 @@ const geografiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Crátons',
-        claim: 'núcleos continentais muito antigos, estáveis há centenas de milhões de anos e por isso profundamente erodidos, de relevo de baixa altitude',
+        claim: 'porções antigas e relativamente estáveis dos continentes; incluem escudos aflorantes e plataformas cobertas por sedimentos, sem altitude obrigatória',
         section: 'Estruturas geológicas',
-        quote: 'Os crátons (ou escudos cristalinos) são núcleos continentais muito antigos, formados há bilhões de anos, tectonicamente estáveis há centenas de milhões de anos e por isso profundamente erodidos, resultando em relevo de baixa altitude',
+        quote: 'Crátons são porções antigas e relativamente estáveis dos continentes; incluem escudos, onde o embasamento cristalino aflora, e plataformas, onde ele está coberto por sedimentos.',
       },
       {
         label: 'Bacias sedimentares',
-        claim: 'depressões preenchidas ao longo de milhões de anos por camadas de sedimentos acumuladas sobre rochas mais antigas',
+        claim: 'áreas de subsidência e acumulação de sedimentos; não precisam ser depressões topográficas atuais',
         section: 'Estruturas geológicas',
-        quote: 'As bacias sedimentares são depressões preenchidas ao longo de milhões de anos por camadas de sedimentos que se acumularam sobre rochas mais antigas',
+        quote: 'Bacias sedimentares são áreas de subsidência e acumulação de camadas de sedimentos sobre rochas mais antigas, como as bacias do Paraná e Amazônica; não precisam ser depressões topográficas atuais.',
       },
       {
         label: 'Dobras modernas',
-        claim: 'cadeias montanhosas jovens e geologicamente ativas, formadas pela colisão de placas tectônicas nos últimos dezenas de milhões de anos',
+        claim: 'cadeias orogênicas jovens formadas por convergência: subducção nos Andes, colisão continental no Himalaia; vulcanismo não ocorre em todas',
         section: 'Estruturas geológicas',
-        quote: 'As dobras modernas são cadeias montanhosas jovens, geologicamente ativas, formadas pela colisão de placas tectônicas nos últimos dezenas de milhões de anos',
+        quote: 'As cadeias orogênicas jovens resultam da convergência de placas: nos Andes, Nazca subducta sob a Sul-Americana; no Himalaia, Índia e Eurásia colidem continentalmente.',
       },
     ],
   },
@@ -651,9 +651,9 @@ const geografiaBase: SceneEntry[] = [
       },
       {
         label: 'Orográfica',
-        claim: 'acontece quando uma massa de ar úmido é forçada a subir uma barreira montanhosa, precipitando a barlavento e deixando o lado a sotavento seco',
+        claim: 'acontece quando uma massa de ar úmido é forçada a subir uma barreira montanhosa, precipitando a barlavento e podendo reduzir a chuva no lado a sotavento',
         section: 'Tipos de chuva',
-        quote: 'A chuva orográfica acontece quando uma massa de ar úmido é forçada a subir uma barreira montanhosa, esfriando e precipitando no lado a barlavento (voltado ao vento), enquanto o lado a sotavento fica seco pelo efeito foehn',
+        quote: 'A chuva orográfica acontece quando uma massa de ar úmido é forçada a subir uma barreira montanhosa, esfriando e precipitando no lado a barlavento (voltado ao vento), enquanto o lado a sotavento pode receber menos chuva',
       },
       {
         label: 'Frontal',
@@ -839,9 +839,9 @@ const geografiaBase: SceneEntry[] = [
       },
       {
         label: 'Altitude',
-        claim: 'o ar mais rarefeito em altitudes elevadas retém menos calor, reduzindo a temperatura média conforme se sobe',
+        claim: 'na troposfera, a temperatura geralmente diminui com a altura; o ar ascendente expande e esfria ao encontrar menor pressão',
         section: 'Fatores climáticos',
-        quote: 'altitude (o ar mais rarefeito em altitudes elevadas retém menos calor, reduzindo a temperatura média conforme se sobe)',
+        quote: 'altitude (na troposfera, a temperatura geralmente diminui com a altura; uma parcela de ar que sobe encontra menor pressão, expande-se e esfria adiabaticamente, embora inversões térmicas possam ocorrer)',
       },
       {
         label: 'Continent./correntes',

@@ -1,0 +1,124 @@
+{
+  "base": "8b6b0a433d681a503dfaa332b5070e9e9589fd94",
+  "chaptersInJSON": 612,
+  "changedChapters": [
+    {
+      "topic": "As Leis de Newton",
+      "fromRev": 2,
+      "toRev": 3,
+      "changedSections": [
+        2,
+        3
+      ],
+      "recallChanged": false
+    },
+    {
+      "topic": "Campo Elétrico",
+      "fromRev": 2,
+      "toRev": 3,
+      "changedSections": [
+        2,
+        3
+      ],
+      "recallChanged": true
+    },
+    {
+      "topic": "Capacitores",
+      "fromRev": 2,
+      "toRev": 3,
+      "changedSections": [
+        1,
+        3
+      ],
+      "recallChanged": true
+    },
+    {
+      "topic": "Dinâmica do Movimento Circular",
+      "fromRev": 2,
+      "toRev": 3,
+      "changedSections": [
+        1,
+        4
+      ],
+      "recallChanged": true
+    },
+    {
+      "topic": "Hidrostática: Densidade e Pressão",
+      "fromRev": 2,
+      "toRev": 3,
+      "changedSections": [
+        1
+      ],
+      "recallChanged": true
+    },
+    {
+      "topic": "O Movimento Circular",
+      "fromRev": 2,
+      "toRev": 3,
+      "changedSections": [
+        1,
+        3
+      ],
+      "recallChanged": true
+    },
+    {
+      "topic": "Trabalho da Força de Pressão do Gás",
+      "fromRev": 2,
+      "toRev": 3,
+      "changedSections": [
+        2,
+        3,
+        5
+      ],
+      "recallChanged": true
+    },
+    {
+      "topic": "Trabalho e Energia: Trabalho de uma Força",
+      "fromRev": 2,
+      "toRev": 3,
+      "changedSections": [
+        3,
+        5
+      ],
+      "recallChanged": true
+    }
+  ],
+  "formalApprovalUnchanged": true,
+  "sources": [
+    {
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/4-4-uniform-circular-motion",
+      "retrievedAt": "2026-10-10",
+      "htmlSha256": "e8d7a50e5d23528d9ed4225d1b832f61279be0d7d988ff24ceb71a885e7159d7"
+    },
+    {
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/5-6-common-forces",
+      "retrievedAt": "2026-10-10",
+      "htmlSha256": "68d763027d24703adf284137bf9b9e73de5442eb30b89729a98dba0ae8fc4485"
+    },
+    {
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/7-1-work",
+      "retrievedAt": "2026-10-10",
+      "htmlSha256": "952e6adb467b3e56009fb836a81474950c8d8927fb49f144f7bcc6372947c9da"
+    },
+    {
+      "url": "https://openstax.org/books/university-physics-volume-1/pages/14-1-fluids-density-and-pressure",
+      "retrievedAt": "2026-10-10",
+      "htmlSha256": "7c3f616e19c34b8f37767cc96f4b4742a6607cdd179f3250451f2a9ed9039e94"
+    },
+    {
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/3-2-work-heat-and-internal-energy",
+      "retrievedAt": "2026-10-10",
+      "htmlSha256": "dc299aa3fe57922ff7b379b63f4159476377a06e0a5c0477f4a3877bf92cac15"
+    },
+    {
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/5-4-electric-field",
+      "retrievedAt": "2026-10-10",
+      "htmlSha256": "13e2fd9f8cd5c5861a000305588862d669ab719ecace13d00600e0d7612a682c"
+    },
+    {
+      "url": "https://openstax.org/books/university-physics-volume-2/pages/8-2-capacitors-in-series-and-in-parallel",
+      "retrievedAt": "2026-10-10",
+      "htmlSha256": "0be2a643a41d4ff55102dfda2ca10effb641be8bac715f63aeb9e7bd7d7bf4bf"
+    }
+  ]
+}
