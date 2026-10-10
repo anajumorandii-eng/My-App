@@ -62,3 +62,9 @@ O lote 24 inicialmente falhou por capturas históricas ausentes no checkout espa
 Lighthouse em snapshot do modelo de Álcoois aberto no celular: acessibilidade 100 e boas práticas 100; SEO 60 e Agent 50. Estes escores pertencem a essa página/configuração, não equivalem à auditoria Lighthouse de todos os capítulos.
 
 A inspeção preliminar levou à ampliação do enquadramento molecular e à orientação das águas para evitar sobreposição. Os casos afetados foram repetidos no build final; as evidências anteriores permanecem no diretório local de auditoria.
+
+## Continuidade verificada pelo CI
+
+A primeira execução do CI da PR #302 aprovou lint, testes e build, mas o roteiro de História/Geografia encontrou o controle de latitude ainda em 20° depois de Home. A falha foi reproduzida localmente. O suplemento novo e o experimento existente reutilizavam a mesma chave React no fragmento: a reconciliação podia remontar o experimento e descartar seus parâmetros. A chave do suplemento passou a ter prefixo próprio. Um teste de integração verifica parâmetros e câmera depois de atualizar o artefato, além da ausência de erros React. A tentativa intermediária de tratar Home/End nos controles foi descartada; eles conservam sua semântica nativa. O roteiro confirma foco e envia as teclas pelo próprio controle, mantendo as asserções de mínimo/máximo. Esta correção não altera os 20 novos modelos nem promove revisão editorial.
+
+Após a correção: lint e build aprovados; 39/39 testes nos quatro arquivos de integração afetados. Coordenadas Geográficas passou no roteiro real de História/Geografia em **12/12 perfis** (390, 834 e 1366 px; claro/escuro; movimento reduzido/normal). Evidência local: `C:/crivo-audit-evidence-20261010/coordenadas-reconciliation`. A execução integral dos demais capítulos pertence ao CI desta revisão.

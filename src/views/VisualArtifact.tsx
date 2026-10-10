@@ -53,7 +53,7 @@ export function VisualArtifact({
       {representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id} />}
       {representation === 'scene' && <TopicScene key={`cena-${summary.id}`} summaryId={summary.id} />}
       {representation === 'fallback' && <TopicFallbackVisual summary={summary} activeIndex={activeIndex} onSelectStep={onSelectStep} />}
-      {mode === 'explorar' && <SpatialChapterSupplement key={summary.id} chapterId={summary.id} />}
+      {mode === 'explorar' && <SpatialChapterSupplement key={`espacial-${summary.id}`} chapterId={summary.id} />}
       {mode === 'explorar' &&
         <HumanitiesConcepts map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }} />}
       </>}

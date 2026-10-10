@@ -94,6 +94,21 @@ describe('Percurso ligado ao conteúdo', () => {
     fireEvent.click(secondStep);
     expect(selectStep).toHaveBeenCalledWith(1);
   });
+  it('preserva parâmetros e câmera do experimento ao atualizar o artefato', () => {
+    const summary=interactiveSummaries.find(item=>item.id==='summary-geografia-coordenadas-geograficas')!;
+    const props={summary,representation:'experiment' as const,map:buildVisualMap(summary),states:{},selectedId:null as string|null,onSelect:()=>{},hiddenEdgeIds:[],mode:'explorar' as const,activeIndex:0,onSelectStep:()=>{}};
+    const errors=vi.spyOn(console,'error').mockImplementation(()=>{});
+    try {
+      const view=render(<VisualArtifact {...props}/>);
+      fireEvent.change(screen.getByLabelText(/Latitude:/),{target:{value:'60'}});
+      fireEvent.change(screen.getByRole('slider',{name:/Girar o globo/}),{target:{value:'120'}});
+      view.rerender(<VisualArtifact {...props} selectedId={props.map.nodes[0].id}/>);
+      expect(screen.getByLabelText(/Latitude:/)).toHaveValue('60');
+      expect(screen.getByRole('slider',{name:/Girar o globo/})).toHaveValue('120');
+      expect(screen.getByRole('status',{name:'Distância por grau'})).toHaveTextContent('56 km');
+      expect(errors).not.toHaveBeenCalled();
+    } finally { errors.mockRestore(); }
+  });
   it('monta somente a cena dedicada quando ela é o artefato escolhido', () => {
     const summary = sceneOnlySummary;
     render(<VisualArtifact
