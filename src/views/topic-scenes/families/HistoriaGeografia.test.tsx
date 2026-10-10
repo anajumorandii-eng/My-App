@@ -93,7 +93,7 @@ describe('pranchas de História e Geografia', () => {
     expect(diagram).toHaveTextContent('área relativa');
     expect(diagram).toHaveTextContent('distância do centro');
     await user.click(screen.getByRole('button', { name: 'Azimutal equidistante' }));
-    expect(screen.getByRole('status')).toHaveTextContent('distâncias desde um centro');
+    expect(screen.getByRole('status')).toHaveTextContent('distâncias do centro');
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('azimutal equid. selecionada'));
   });
 
