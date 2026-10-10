@@ -42,6 +42,9 @@
 .crivo-visual--atlas .vs-instrument > .vs-magnetic-spatial { grid-column: 1/-1; }
 .crivo-visual--atlas .vs-instrument > .vs-field-spatial { grid-column: 1/-1; }
 .vs-em-spatial svg text { font: 600 16px Inter, sans-serif; }
+.vs-chapter-spatial-supplement { margin: 24px auto; max-width: 1200px; }
+.vs-spatial-parameter { display: block; margin: 16px 0; font-size: 14px; }
+.vs-spatial-lab svg > text { font: 500 12px Inter, sans-serif; }
 .hg-figure .vs-earth-spatial { min-width: 0; }
 .hg-figure .vs-earth-spatial > svg { width: 100%; min-width: 0; max-width: 440px; }
 @media(min-width:900px) {

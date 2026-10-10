@@ -1,0 +1,614 @@
+id,subject,topic,spatial_batch,editorial_status,remaining_action
+fis-termologia-calor,Física,"Temperatura, Calor e seus Mecanismos de Transferência",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+atu-cop30-belem,Atualidades,"Clima, energia e meio ambiente",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-introducao,Biologia,Introdução à Ecologia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-dinamica-populacoes,Biologia,Dinâmica de Populações,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-invasoras-controle-biologico,Biologia,Espécies Invasoras e Controle Biológico,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-sucessao,Biologia,Sucessão Ecológica,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-ciclo-carbono,Biologia,Ciclos Biogeoquímicos – Ciclo do Carbono,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-ciclo-nitrogenio,Biologia,Ciclo do Nitrogênio,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-ciclo-hidrologico-poluicao-agua,Biologia,Ciclo Hidrológico e Poluição da Água,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-eutrofizacao,Biologia,Eutrofização,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-poluicao-ar,Biologia,Poluição do Ar,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-biomagnificacao,Biologia,Biomagnificação,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+bio-ecologia-aquecimento-global-pops-biorremediacao,Biologia,"Poluição: Aquecimento Global, POPs e Biorremediação",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-origem-da-vida-e-as-primeiras-celulas,Biologia,Origem da Vida e as Primeiras Células,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-composicao-quimica-celular-compostos-inorganicos,Biologia,Composição Química Celular: Compostos Inorgânicos,lote-20,nao-revisado,revisao-editorial
+summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios,Biologia,Composição Química Celular: Carboidratos e Lipídios,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural,Biologia,Composição Química Celular: Proteínas e sua Função Estrutural,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-membranas-celulares,Biologia,Membranas Celulares,lotes-anteriores,em-validacao,revisao-editorial
+summary-biologia-citoplasma-estrutura-e-componentes-i,Biologia,Citoplasma: Estrutura e Componentes I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-citoplasma-estrutura-e-componentes-ii,Biologia,Citoplasma: Estrutura e Componentes II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-nucleo-celular,Biologia,Núcleo Celular,lote-20,nao-revisado,revisao-editorial
+summary-biologia-proteinas-enzimas,Biologia,Proteínas: Enzimas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-bioenergetica-fermentacao-e-respiracao,Biologia,Bioenergética: Fermentação e Respiração,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-bioenergetica-fotossintese-e-quimiossintese,Biologia,Bioenergética: Fotossíntese e Quimiossíntese,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-acidos-nucleicos,Biologia,Ácidos Nucleicos,lotes-anteriores,nao-revisado,revisao-editorial
+summary-biologia-divisao-celular,Biologia,Divisão Celular,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-mutacoes-cromossomicas-e-gametogenese,Biologia,Mutações Cromossômicas e Gametogênese,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-biotecnologia,Biologia,Biotecnologia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-introducao-a-genetica,Biologia,Introdução à Genética,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos,Biologia,Alelos Múltiplos e Herança dos Grupos Sanguíneos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-heranca-sexual,Biologia,Herança Sexual,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-segunda-lei-de-mendel,Biologia,Segunda Lei de Mendel,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-segunda-lei-de-mendel-e-interacao-genica,Biologia,Segunda Lei de Mendel e Interação Gênica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-ligacao-genica,Biologia,Ligação Gênica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-mutacoes-genicas,Biologia,Mutações Gênicas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-evolucao-biologica-construcao-historica,Biologia,Evolução Biológica: Construção Histórica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-mecanismos-da-evolucao-biologica,Biologia,Mecanismos da Evolução Biológica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-biomas-brasileiros,Biologia,Biomas Brasileiros,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-classificacao-biologica-nomenclatura-cientifica-e-nocoes-de-sistematica-filogenetica,Biologia,"Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-protozoarios-e-protozooses,Biologia,Protozoários e Protozooses,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-poriferos-e-cnidarios,Biologia,Poríferos e Cnidários,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos,Biologia,Arquitetura Corporal dos Animais e o Filo dos Platelmintos e dos Nematódeos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-moluscos,Biologia,Moluscos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-anelideos,Biologia,Anelídeos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-artropodes-insetos-crustaceos-e-miriapodes,Biologia,"Artrópodes: Insetos, Crustáceos e Miriápodes",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-artropodes-aracnideos,Biologia,Artrópodes: Aracnídeos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-equinodermos,Biologia,Equinodermos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-introducao-aos-cordados-e-os-peixes,Biologia,Introdução aos Cordados e os Peixes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-cordados-tetrapodes,Biologia,Cordados Tetrápodes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-fungos,Biologia,Fungos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-algas,Biologia,Algas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-ciclos-de-vida,Biologia,Ciclos de Vida,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-plantas-terrestres-i-briofitas-e-pteridofitas,Biologia,Plantas Terrestres I: Briófitas e Pteridófitas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-plantas-terrestres-ii-gimnospermas-e-angiospermas,Biologia,Plantas Terrestres II: Gimnospermas e Angiospermas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-procariotos,Biologia,Procariotos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-virus,Biologia,Vírus,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-embriologia-animal,Biologia,Embriologia Animal,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-fisiologia-da-sustentacao-e-da-locomocao,Biologia,Fisiologia da Sustentação e da Locomoção,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-fisiologia-da-digestao,Biologia,Fisiologia da Digestão,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-sangue-e-imunologia,Biologia,Sangue e Imunologia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-coracao-e-vasos-sanguineos,Biologia,Coração e Vasos Sanguíneos,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-fisiologia-da-respiracao,Biologia,Fisiologia da Respiração,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-fisiologia-da-excrecao,Biologia,Fisiologia da Excreção,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-fisiologia-da-coordenacao-nervosa-i,Biologia,Fisiologia da Coordenação Nervosa I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-coordenacao-nervosa-ii,Biologia,Coordenação Nervosa II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-sistemas-sensoriais-visao-e-audicao,Biologia,Sistemas Sensoriais: Visão e Audição,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-coordenacao-endocrina-i,Biologia,Coordenação Endócrina I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-coordenacao-endocrina-ii,Biologia,Coordenação Endócrina II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-reproducao-humana-e-metodos-contraceptivos,Biologia,Reprodução Humana e Métodos Contraceptivos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-histologia-e-morfologia-vegetal,Biologia,Histologia e Morfologia Vegetal,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-morfofisiologia-vegetal-caules-e-folhas,Biologia,Morfofisiologia Vegetal: Caules e Folhas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua,Biologia,Traqueófitas: Transpiração e Reposição Rápida de Água,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-fisiologia-vegetal-transporte-no-floema,Biologia,Fisiologia Vegetal: Transporte no Floema,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-biologia-fisiologia-vegetal-hormonios-vegetais,Biologia,Fisiologia Vegetal: Hormônios Vegetais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-cinematica-escalar-conceitos-fundamentais,Física,Cinemática Escalar. Conceitos Fundamentais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-movimento-uniforme,Física,Movimento Uniforme,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-movimento-uniformemente-variado,Física,Movimento Uniformemente Variado,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-o-movimento-circular,Física,O Movimento Circular,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-grandezas-fisicas-e-operacoes-com-vetores,Física,Grandezas Físicas e Operações com Vetores,lote-20,nao-revisado,revisao-editorial
+summary-fisica-velocidade-vetorial,Física,Velocidade Vetorial,lote-20,nao-revisado,revisao-editorial
+summary-fisica-composicao-de-movimentos,Física,Composição de Movimentos,lote-20,nao-revisado,revisao-editorial
+summary-fisica-aceleracao-vetorial,Física,Aceleração Vetorial,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-forca-e-seus-tipos,Física,Força e seus Tipos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-resultante-de-um-sistema-de-forcas,Física,Resultante de um Sistema de Forças,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-as-leis-de-newton,Física,As Leis de Newton,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-a-forca-de-contato,Física,A Força de Contato,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca,Física,Sistema de Corpos Interagindo e os Elementos Transmissores de Força,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-plano-inclinado,Física,Plano Inclinado,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-leis-da-gravitacao,Física,Leis da Gravitação,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-dinamica-do-movimento-circular,Física,Dinâmica do Movimento Circular,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical,Física,Analisando Movimentos Contidos em um Plano Vertical,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-orbitas,Física,Órbitas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-balistica,Física,Balística,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-movimento-harmonico-simples-mhs,Física,Movimento Harmônico Simples (MHS),a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-impulso-e-quantidade-de-movimento,Física,Impulso e Quantidade de Movimento,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento,Física,Sistemas Isolados e a Conservação da Quantidade de Movimento,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-colisoes,Física,Colisões,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-trabalho-e-energia-trabalho-de-uma-forca,Física,Trabalho e Energia: Trabalho de uma Força,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-trabalho-e-energia-teorema-da-energia-cinetica,Física,Trabalho e Energia: Teorema da Energia Cinética,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial,Física,Trabalho e Energia: o Teorema da Energia Potencial,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos,Física,Sistemas Conservativos e Sistemas Não Conservativos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-potencia-maquina-e-rendimento,Física,"Potência, Máquina e Rendimento",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares,Física,"A Física por trás da Obtenção de Energia Elétrica, das Quedas-d'Água aos Reatores Nucleares",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-equivalencia-massa-energia,Física,Equivalência Massa-Energia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-estatica,Física,Estática,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-hidrostatica-densidade-e-pressao,Física,Hidrostática: Densidade e Pressão,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos,Física,Dilatação ou Contração Térmica dos Sólidos e Líquidos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-calor-sensivel-e-calor-latente,Física,Calor Sensível e Calor Latente,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas,Física,Gases Ideais: Variáveis de Estado e as Transformações Gasosas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-trabalho-da-forca-de-pressao-do-gas,Física,Trabalho da Força de Pressão do Gás,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-primeira-lei-da-termodinamica,Física,Primeira Lei da Termodinâmica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares,Física,Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-maquinas-termicas-e-ciclo-de-carnot,Física,Máquinas Térmicas e Ciclo de Carnot,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes,Física,Eletrostática: Processos de Eletrização e Aplicações,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-forca-eletrica-lei-de-coulomb,Física,Força Elétrica: Lei de Coulomb,lote-20,nao-revisado,revisao-editorial
+summary-fisica-campo-eletrico,Física,Campo Elétrico,lote-20,nao-revisado,revisao-editorial
+summary-fisica-energia-potencial-e-potencial-eletrico,Física,Energia Potencial e Potencial Elétrico,lote-20,nao-revisado,revisao-editorial
+summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais,Física,Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial,Física,Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial,lote-20,nao-revisado,revisao-editorial
+summary-fisica-dinamica-das-cargas-eletricas,Física,Dinâmica das Cargas Elétricas,lote-20,nao-revisado,revisao-editorial
+summary-fisica-corrente-eletrica,Física,Corrente Elétrica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-potencia-eletrica,Física,Potência Elétrica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-resistores,Física,Resistores,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-medidores-eletricos,Física,Medidores Elétricos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-geradores,Física,Geradores,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-receptores,Física,Receptores,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-circuitos-de-malha-unica,Física,Circuitos de Malha Única,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-eletrodinamica-as-leis-de-kirchhoff,Física,Eletrodinâmica: as Leis de Kirchhoff,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-capacitores,Física,Capacitores,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre,Física,"Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes,Física,Campo Magnético devido à Corrente em Fio Reto e Espira: Descrição Vetorial e Aplicações,lotes-anteriores,nao-revisado,revisao-editorial
+summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme,Física,Força Magnética e Análise de Lançamentos de Cargas em um Campo Magnético Uniforme,lotes-anteriores,nao-revisado,revisao-editorial
+summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas,Física,Análise de Força Magnética em Fios Percorridos por Correntes Contínuas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-inducao-eletromagnetica-lei-de-lenz,Física,Indução Eletromagnética: Lei de Lenz,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores,Física,Indução Eletromagnética: Análise da Corrente Induzida em Geradores,lotes-anteriores,nao-revisado,revisao-editorial
+summary-fisica-fundamentos-da-optica-geometrica,Física,Fundamentos da Óptica Geométrica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-reflexao-em-superficies-planas,Física,Reflexão em Superfícies Planas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-reflexao-em-superficies-esfericas,Física,Reflexão em Superfícies Esféricas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-refracao-fundamentos-leis-e-aplicacoes,Física,"Refração: Fundamentos, Leis e Aplicações",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-lentes-esfericas-estudo-grafico,Física,Lentes Esféricas: Estudo Gráfico,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-estudo-analitico-das-lentes-esfericas,Física,Estudo Analítico das Lentes Esféricas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes,Física,Equação do Fabricante de Lentes e Associação de Lentes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-optica-da-visao,Física,Óptica da Visão,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas,Física,Microscópio e Luneta Astronômica (ou Telescópio Refrator): Noções Básicas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-conceitos-basicos,Física,Conceitos Básicos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-equacao-fundamental-da-ondulatoria,Física,Equação Fundamental da Ondulatória,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-ondulatoria-ondas-eletromagneticas,Física,Ondulatória: Ondas Eletromagnéticas,lotes-anteriores,em-validacao,revisao-editorial
+summary-fisica-ondulatoria-som-e-suas-propriedades,Física,Ondulatória: Som e suas Propriedades,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-intensidade-sonora,Física,Intensidade Sonora,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas,Física,"Reflexão, Eco, Reverberação e Refração de Ondas",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas,Física,Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia,Física,"Fenômenos Ondulatórios: Difração, Polarização e Ressonância",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento,Física,"Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria,Física,Um Caso Particular de Interferência: Onda Estacionária,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-ondas-estacionarias-em-cordas,Física,Ondas Estacionárias em Cordas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-ondas-estacionarias-em-tubos,Física,Ondas Estacionárias em Tubos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo,Física,Efeito Doppler: Descrição e Estudo Quantitativo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-fisica-nocoes-basicas-de-fisica-quantica,Física,Noções Básicas de Física Quântica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-coordenadas-geograficas,Geografia,Coordenadas Geográficas,lotes-anteriores,nao-revisado,revisao-editorial
+summary-geografia-movimentos-da-terra,Geografia,Movimentos da Terra,lotes-anteriores,em-validacao,revisao-editorial
+summary-geografia-sistema-de-fusos-horarios,Geografia,Sistema de Fusos Horários,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-linguagem-cartografica,Geografia,Linguagem Cartográfica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-projecoes-cartograficas,Geografia,Projeções Cartográficas,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-cartografia-digital,Geografia,Cartografia Digital,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-representacoes-graficas-e-cartograficas,Geografia,Representações Gráficas e Cartográficas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-dinamica-climatica,Geografia,Dinâmica Climática,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-clima-mundial,Geografia,Clima Mundial,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geomorfologia-mundial,Geografia,Geomorfologia Mundial,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-biogeografia-mundial,Geografia,Biogeografia Mundial,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-agua-na-superficie-terrestre,Geografia,Água na Superfície Terrestre,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-desafios-ambientais-do-seculo-xxi,Geografia,Desafios Ambientais do Século XXI,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geopolitica-ambiental,Geografia,Geopolítica Ambiental,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geopolitica-dos-recursos-hidricos,Geografia,Geopolítica dos Recursos Hídricos,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-hidrogeografia-mundial,Geografia,Hidrogeografia Mundial,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-do-mundo-bipolar-ao-multipolar,Geografia,Do Mundo Bipolar ao Multipolar,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-globalizacao-e-processos-economicos-atuais,Geografia,Globalização e Processos Econômicos Atuais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geografia-das-redes-mundiais,Geografia,Geografia das Redes Mundiais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-unilateralismo-e-multilateralismo,Geografia,Unilateralismo e Multilateralismo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-blocos-economicos,Geografia,Blocos Econômicos,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-uniao-europeia,Geografia,União Europeia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-desigualdades-globais,Geografia,Desigualdades Globais,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-mobilidade-populacional,Geografia,Mobilidade Populacional,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geografia-do-turismo,Geografia,Geografia do Turismo,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-producao-agricola-mundial,Geografia,Produção Agrícola Mundial,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-industria-i,Geografia,Indústria I,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-industria-ii,Geografia,Indústria II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-gedeconomia-mundial,Geografia,Geoeconomia Mundial,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-terrorismo-internacional,Geografia,Terrorismo Internacional,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geografia-das-religioes,Geografia,Geografia das Religiões,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-tensoes-geopoliticas-na-europa,Geografia,Tensões Geopolíticas na Europa,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geopolitica-e-geoeconomia-da-america-latina,Geografia,Geopolítica e Geoeconomia da América Latina,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-africa-no-mundo-atual,Geografia,África no Mundo Atual,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geopolitica-e-geoeconomia-da-asia,Geografia,Geopolítica e Geoeconomia da Ásia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geografia-do-oriente-medio,Geografia,Geografia do Oriente Médio,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-questao-palestina,Geografia,Questão Palestina,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-conflitos-no-mundo-arabe,Geografia,Conflitos no Mundo Árabe,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica,Geografia,"Paisagem, Espaço Geográfico e Ciência Geográfica",a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-geologia-e-geomorfologia,Geografia,Geologia e Geomorfologia,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-relevo-brasileiro,Geografia,Relevo Brasileiro,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-pedologia,Geografia,Pedologia,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-climatologia-do-brasil,Geografia,Climatologia do Brasil,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-biogeografia-do-brasil-i,Geografia,Biogeografia do Brasil I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-biogeografia-do-brasil-ii,Geografia,Biogeografia do Brasil II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-politicas-ambientais-brasileiras,Geografia,Políticas Ambientais Brasileiras,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-hidrogeografia-do-brasil,Geografia,Hidrogeografia do Brasil,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-dominios-morfoclimaticos,Geografia,Domínios Morfoclimáticos,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-matriz-energetica,Geografia,Matriz Energética,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil,Geografia,Combustíveis Fósseis e Biocombustíveis no Brasil,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-energia-eletrica-no-mundo,Geografia,Energia Elétrica no Mundo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-energia-eletrica-no-brasil,Geografia,Energia Elétrica no Brasil,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-producao-mineral,Geografia,Produção Mineral,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-o-espaco-agrario-brasileiro,Geografia,O Espaço Agrário Brasileiro,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-o-espaco-industrial-brasileiro-i,Geografia,O Espaço Industrial Brasileiro I,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-o-espaco-industrial-brasileiro-ii,Geografia,O Espaço Industrial Brasileiro II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-dinamica-demografica,Geografia,Dinâmica Demográfica,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-estrutura-etnica-e-fluxos-migratorios,Geografia,Estrutura Étnica e Fluxos Migratórios,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-o-espaco-urbano-i,Geografia,O Espaço Urbano I,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-o-espaco-urbano-ii,Geografia,O Espaço Urbano II,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-as-redes-de-transportes,Geografia,As Redes de Transportes,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-geografia-os-fluxos-do-comercio-externo,Geografia,Os Fluxos do Comércio Externo,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-introducao-a-historia-e-primeiras-civilizacoes,História,Introdução à História e Primeiras Civilizações,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-antiguidade-classica-o-mundo-grego,História,Antiguidade Clássica: o Mundo Grego,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-antiguidade-classica-o-mundo-romano,História,Antiguidade Clássica: o Mundo Romano,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-alta-idade-media-e-feudalismo,História,Alta Idade Média e Feudalismo,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-baixa-idade-media,História,Baixa Idade Média,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-primeira-globalizacao,História,A Primeira Globalização,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-america-espanhola,História,América Espanhola,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-vida-urbana-e-renascimento-cultural,História,Vida Urbana e Renascimento Cultural,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-reforma-religiosa,História,Reforma Religiosa,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-absolutismo,História,Absolutismo,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-revolucao-industrial,História,Revolução Industrial,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-iluminismo,História,Iluminismo,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-revolucao-francesa,História,Revolução Francesa,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-america-no-seculo-xix,História,América no Século XIX,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-europa-no-seculo-xix,História,Europa no Século XIX,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-imperialismo-e-belle-epoque,História,Imperialismo e Belle Époque,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-primeira-guerra-mundial-1914-1918,História,Primeira Guerra Mundial (1914-1918),a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-grandes-revolucoes-do-seculo-xx,História,Grandes Revoluções do Século XX,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-o-periodo-entreguerras-1918-1939,História,O Período Entreguerras (1918-1939),a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-o-nazismo-na-alemanha,História,O Nazismo na Alemanha,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-segunda-guerra-mundial-1939-1945,História,Segunda Guerra Mundial (1939-1945),a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-guerra-fria,História,Guerra Fria,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-descolonizacao-afro-asiatica,História,Descolonização Afro-Asiática,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-america-latina-no-seculo-xx,História,América Latina no Século XX,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-o-fim-da-guerra-fria,História,O Fim da Guerra Fria,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-historia-e-o-brasil,História,A História e o Brasil,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-grandes-navegacoes-e-conquista-colonial,História,Grandes Navegações e Conquista Colonial,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-montagem-da-colonizacao,História,A Montagem da Colonização,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-dinamica-interna-da-colonizacao,História,Dinâmica Interna da Colonização,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-disputas-europeias-no-brasil-colonial,História,Disputas Europeias no Brasil Colonial,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-interiorizacao-da-colonizacao,História,A Interiorização da Colonização,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-mineracao-no-brasil-colonial,História,A Mineração no Brasil Colonial,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-crise-do-antigo-sistema-colonial,História,A Crise do Antigo Sistema Colonial,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-independencia-do-brasil,História,A Independência do Brasil,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro,História,Brasil Império: Formação do Estado Nacional Brasileiro,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-brasil-imperio-o-periodo-regencial-1831-1840,História,Brasil Império: o Período Regencial (1831-1840),a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-brasil-imperio-segundo-reinado-1840-1889,História,Brasil Império: Segundo Reinado (1840-1889),a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-brasil-imperio-o-declinio-do-segundo-reinado,História,Brasil Império: o Declínio do Segundo Reinado,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-republica-da-espada,História,A República da Espada,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-ascensao-e-dominio-das-oligarquias,História,Ascensão e Domínio das Oligarquias,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930,História,A Primeira República: o Declínio Oligárquico (1889-1930),a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-era-vargas,História,A Era Vargas,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-era-vargas-o-governo-constitucional-1934-1937,História,A Era Vargas: o Governo Constitucional (1934-1937),a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-a-era-vargas-o-estado-novo,História,A Era Vargas: o Estado Novo,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria,História,República Liberal (1945-1964): Democracia em Tempos de Guerra Fria,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo,História,República Liberal (1945-1964): Desenvolvimentismo e Populismo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-regime-militar-1964-1985-i,História,Regime Militar (1964-1985) I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-regime-militar-1964-1985-ii,História,Regime Militar (1964-1985) II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-historia-o-brasil-atual,História,O Brasil Atual,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology,Língua Inglesa,Text Comprehension: Taxonomy and Terminology,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-songs-and-poems,Língua Inglesa,Text Comprehension: Songs and Poems,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-calories-and-energy,Língua Inglesa,Text Comprehension: Calories and Energy,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-earthquakes,Língua Inglesa,Text Comprehension: Earthquakes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-hurricanes,Língua Inglesa,Text Comprehension: Hurricanes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases,Língua Inglesa,Text Comprehension: Ecology (Greenhouse Gases),a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-pollution,Língua Inglesa,Text Comprehension: Pollution,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-the-human-brain,Língua Inglesa,Text Comprehension: The Human Brain,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-global-warming,Língua Inglesa,Text Comprehension: Global Warming,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-novels-short-stories,Língua Inglesa,Text Comprehension: Novels/Short Stories,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-bacteria,Língua Inglesa,Text Comprehension: Bacteria,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-viruses,Língua Inglesa,Text Comprehension: Viruses,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-discrimination-against-women,Língua Inglesa,Text Comprehension: Discrimination Against Women,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-women-empowerment,Língua Inglesa,Text Comprehension: Women Empowerment,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-digital-technology,Língua Inglesa,Text Comprehension: Digital Technology,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-health-probiotics,Língua Inglesa,Text Comprehension: Health – Probiotics,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-lingua-inglesa-text-comprehension-stem-cells,Língua Inglesa,Text Comprehension: Stem Cells,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades,Redação,A Dissertação no Vestibular: Mitos e Verdades,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades,Redação,O que se Avalia na Dissertação: Competências e Habilidades,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps,Redação,Organizando as Ideias: Brainstorm e Mind Maps,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-projeto-de-texto-em-favor-da-progressao-textual,Redação,Projeto de Texto em Favor da Progressão Textual,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso,Redação,Repertório: o Diferencial de Redações de Sucesso,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos,Redação,Qual Será o Tema deste Ano: Grandes Eixos Temáticos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-diferentes-graus-de-adequacao-a-proposta,Redação,Diferentes Graus de Adequação à Proposta,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema,Redação,Tangenciamento e Fuga: a Fronteira do Tema,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto,Redação,Gêneros e sua Relação com a Estrutura do Texto,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-estrutura-classica-do-texto-dissertativo,Redação,Estrutura Clássica do Texto Dissertativo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i,Redação,Lendo a Coletânea: a Apreensão de Sentidos I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii,Redação,Lendo a Coletânea: a Apreensão de Sentidos II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i,Redação,Lendo a Coletânea: a Compreensão e o Texto Autoral I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii,Redação,Lendo a Coletânea: a Compreensão e o Texto Autoral II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-incrementando-o-repertorio-meio-ambiente,Redação,Incrementando o Repertório: Meio Ambiente,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-analisando-tema-de-redacao-meio-ambiente,Redação,Analisando Tema de Redação: Meio Ambiente,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-incrementando-o-repertorio-educacao-e-trabalho,Redação,Incrementando o Repertório: Educação e Trabalho,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho,Redação,Analisando Tema de Redação: Educação e Trabalho,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-incrementando-o-repertorio-temas-abstratos,Redação,Incrementando o Repertório: Temas Abstratos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-analisando-tema-abstrato-de-redacao,Redação,Analisando Tema Abstrato de Redação,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade,Redação,"Incrementando o Repertório: Corpo, Saúde e Sexualidade",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade,Redação,"Analisando Tema de Redação: Corpo, Saúde e Sexualidade",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao,Redação,"Incrementando o Repertório: Violência, Leis e Punição",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao,Redação,"Analisando Tema de Redação: Violência, Leis e Punição",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-incrementando-o-repertorio-cidadania-e-poder,Redação,Incrementando o Repertório: Cidadania e Poder,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-analisando-tema-de-redacao-cidadania-e-poder,Redação,Analisando Tema de Redação: Cidadania e Poder,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais,Redação,"Incrementando o Repertório: Arte, Cultura e Relações Sociais",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais,Redação,"Analisando o Tema de Redação: Arte, Cultura e Relações Sociais",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-incrementando-o-repertorio-midia-e-sociedade,Redação,Incrementando o Repertório: Mídia e Sociedade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-analisando-tema-de-redacao-midia-e-sociedade,Redação,Analisando Tema de Redação: Mídia e Sociedade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao,Redação,Parágrafo de Introdução: Delimitando a Opinião,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-paragrafo-de-introducao-como-contextualizar,Redação,Parágrafo de Introdução: como Contextualizar,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-argumentacao-auditorio-particular-e-universal,Redação,Argumentação: Auditório Particular e Universal,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade,Redação,Argumentação Quase-Lógica e Efeito de Verdade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-argumentacao-e-coerencia-interna,Redação,Argumentação e Coerência Interna,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-argumentacao-e-coerencia-externa,Redação,Argumentação e Coerência Externa,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos,Redação,Recursos Argumentativos: Dados Numéricos e Exemplos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-recursos-argumentativos-vozes-prestigiadas,Redação,Recursos Argumentativos: Vozes Prestigiadas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-ressalvando-o-ponto-de-vista-contrario,Redação,Ressalvando o Ponto de Vista Contrário,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-refutando-o-ponto-contrario,Redação,Refutando o Ponto Contrário,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade,Redação,Recursos Argumentativos: Interdiscursividade e Intertextualidade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados,Redação,Recursos Argumentativos: Temas de Redação já Analisados,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-recursos-argumentativos-fatos-da-atualidade,Redação,Recursos Argumentativos: Fatos da Atualidade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber,Redação,Recursos Argumentativos: Múltiplos Domínios do Saber,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-conclusao-por-sintese-ou-retomada-da-tese,Redação,Conclusão por Síntese ou Retomada da Tese,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade,Redação,"Conclusão: Sumarização, Focalização e Expressividade",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania,Redação,Proposta de Intervenção: Atores Sociais e Cidadania,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao,Redação,Proposta de Intervenção: Viabilização e Inovação,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-proposta-de-intervencao-coerencia-argumentativa,Redação,Proposta de Intervenção: Coerência Argumentativa,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos,Redação,Proposta de Intervenção: Respeito aos Direitos Humanos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo,Redação,Recursos de Coesão Referencial no Texto Dissertativo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo,Redação,Recursos de Coesão Sequencial no Texto Dissertativo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas,Redação,Coesão no Texto Dissertativo: Análise de Problemas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade,Redação,"Recursos Linguísticos: Norma, Clareza e Expressividade",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais,Redação,Os Direitos Humanos de 1ª Geração: Direitos Individuais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos,Redação,"Os Direitos Humanos de 2ª e 3ª Geração: Direitos Sociais, Coletivos e Difusos",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-redacoes-nota-1000-trunfos-a-inspirar,Redação,Redações Nota 1000: Trunfos a Inspirar,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-redacao-redacoes-na-midia-como-aprimorar,Redação,Redações na Mídia: como Aprimorar,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-lingua-um-sistema-complexo,Gramática,Língua: um Sistema Complexo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-variacao-linguistica,Gramática,Variação Linguística,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador,Gramática,Substantivo: os Nomes e a Visão do Enunciador,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos,Gramática,Tipos de Texto: Explorando Elementos Concretos e Conceitos Abstratos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal,Gramática,"Artigo, Numeral e Adjetivo no Sintagma Nominal",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-pronomes,Gramática,Pronomes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-verbo,Gramática,Verbo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores,Gramática,Advérbio e Locuções Adverbiais: Circunstanciadores,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-verbo-e-sintaxe-da-oracao,Gramática,Verbo e Sintaxe da Oração,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-concordancia,Gramática,Concordância,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-significados-implicitos,Gramática,Significados Implícitos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-tipos-de-discurso,Gramática,Tipos de Discurso,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula,Gramática,Pontuação I: Princípios para o Uso da Vírgula,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao,Gramática,Pontuação II: Vírgula entre Orações e Outros Sinais de Pontuação,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas,Gramática,O Léxico em Contexto: Variadas Possibilidades Semânticas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe,Gramática,Ambiguidade: Duplicidade no Léxico e na Sintaxe,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-mecanismo-de-regencia,Gramática,Mecanismo de Regência,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-crase,Gramática,Crase,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-processos-de-formacao-de-palavras,Gramática,Processos de Formação de Palavras,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-funcoes-sintaticas-nominais-e-vocativo,Gramática,Funções Sintáticas Nominais e Vocativo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-tipos-de-sujeito,Gramática,Tipos de Sujeito,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-vozes-verbais,Gramática,Vozes Verbais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-oracoes-substantivas,Gramática,Orações Substantivas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-oracoes-adjetivas,Gramática,Orações Adjetivas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-oracoes-adverbiais,Gramática,Orações Adverbiais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-gramatica-oracoes-coordenadas,Gramática,Orações Coordenadas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-a-arte-e-suas-linguagens,Literatura,A Arte e suas Linguagens,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-texto-literario-x-texto-nao-literario,Literatura,Texto Literário x Texto não Literário,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-trovadorismo-e-humanismo,Literatura,Trovadorismo e Humanismo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-renascimento-e-camoes,Literatura,Renascimento e Camões,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-brasil-primeiros-registros,Literatura,Brasil: Primeiros Registros,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-a-estetica-barroca,Literatura,A Estética Barroca,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-a-estetica-neoclassica,Literatura,A Estética Neoclássica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-a-estetica-romantica-poesia,Literatura,A Estética Romântica: Poesia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-elementos-da-narrativa,Literatura,Elementos da Narrativa,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-a-estetica-romantica-prosa,Literatura,A Estética Romântica: Prosa,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-a-estetica-realista,Literatura,A Estética Realista,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-machado-de-assis,Literatura,Machado de Assis,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-naturalismo,Literatura,Naturalismo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-realismo-portugues-eca-de-queiros,Literatura,Realismo Português: Eça de Queirós,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-parnasianismo,Literatura,Parnasianismo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-simbolismo,Literatura,Simbolismo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-pre-modernismo,Literatura,Pré-Modernismo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-vanguardas-artisticas,Literatura,Vanguardas Artísticas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-fernando-pessoa,Literatura,Fernando Pessoa,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-semana-de-arte-moderna,Literatura,Semana de Arte Moderna,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-modernismo-no-brasil-primeira-geracao,Literatura,Modernismo no Brasil: Primeira Geração,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-segunda-geracao-modernista-prosa,Literatura,Segunda Geração Modernista: Prosa,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-graciliano-ramos,Literatura,Graciliano Ramos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-segunda-geracao-modernista-poesia,Literatura,Segunda Geração Modernista: Poesia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-carlos-drummond-de-andrade,Literatura,Carlos Drummond de Andrade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-joao-cabral-de-melo-neto,Literatura,João Cabral de Melo Neto,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-poesia-concreta,Literatura,Poesia Concreta,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-clarice-lispector,Literatura,Clarice Lispector,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-guimaraes-rosa,Literatura,Guimarães Rosa,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-poesia-brasileira-1960-1980,Literatura,Poesia Brasileira: 1960-1980,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-prosa-brasileira-1960-1980,Literatura,Prosa Brasileira: 1960-1980,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-literatura-lusofona-contemporanea,Literatura,Literatura Lusófona Contemporânea,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-poesia-brasileira-contemporanea,Literatura,Poesia Brasileira Contemporânea,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-prosa-brasileira-contemporanea,Literatura,Prosa Brasileira Contemporânea,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-artes-plasticas-brasileiras,Literatura,Artes Plásticas Brasileiras,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-teatro-brasileiro,Literatura,Teatro Brasileiro,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-literatura-cancioneiro-popular-brasileiro,Literatura,Cancioneiro Popular Brasileiro,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-fatores-de-textualidade,Entendimento de Texto,Fatores de Textualidade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-os-dois-niveis-da-leitura,Entendimento de Texto,Os Dois Níveis da Leitura,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-intertextualidade-e-interdiscursividade,Entendimento de Texto,Intertextualidade e Interdiscursividade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-generos-textuais,Entendimento de Texto,Gêneros Textuais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao,Entendimento de Texto,Gêneros Narrativos e Níveis de Compreensão,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura,Entendimento de Texto,Gêneros não Verbais: Fundamentos de Leitura,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-funcoes-da-linguagem,Entendimento de Texto,Funções da Linguagem,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria,Entendimento de Texto,Função Poética e Linguagem Literária,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-figuras-de-linguagem,Entendimento de Texto,Figuras de Linguagem,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-modelos-de-leitura-e-distorcoes-interpretativas,Entendimento de Texto,Modelos de Leitura e Distorções Interpretativas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-leitura-de-textos-comicos,Entendimento de Texto,Leitura de Textos Cômicos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-entendimento-de-texto-tecnologias-digitais-da-informacao-e-comunicacao-tdic-impactos-sociais,Entendimento de Texto,Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-potencias-e-radicais,Matemática,Potências e Radicais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-razao-e-proporcao,Matemática,Razão e Proporção,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-porcentagem,Matemática,Porcentagem,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-o-sistema-de-numeracao-decimal,Matemática,O Sistema de Numeração Decimal,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-introducao-a-teoria-dos-numeros-inteiros,Matemática,Introdução à Teoria dos Números Inteiros,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-introducao-as-sequencias,Matemática,Introdução às Sequências,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-progressao-aritmetica,Matemática,Progressão Aritmética,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-progressao-geometrica,Matemática,Progressão Geométrica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-sequencias,Matemática,Sequências,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-sistemas-de-equacoes,Matemática,Sistemas de Equações,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-tabelas-e-matrizes,Matemática,Tabelas e Matrizes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-multiplicacao-de-matrizes,Matemática,Multiplicação de Matrizes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-determinantes,Matemática,Determinantes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-discussao-de-sistemas-lineares,Matemática,Discussão de Sistemas Lineares,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-medias,Matemática,Médias,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-introducao-as-tecnicas-de-contagem,Matemática,Introdução às Técnicas de Contagem,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-o-problema-da-fila,Matemática,O Problema da Fila,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-o-problema-do-grupo,Matemática,O Problema do Grupo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-tecnicas-de-contagem,Matemática,Técnicas de Contagem,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-operacoes-com-probabilidades,Matemática,Operações com Probabilidades,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-eventos-disjuntos-e-eventos-independentes,Matemática,Eventos Disjuntos e Eventos Independentes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-estatistica-descritiva,Matemática,Estatística Descritiva,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-introducao-a-geometria-plana,Matemática,Introdução à Geometria Plana,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-angulos-em-triangulos,Matemática,Ângulos em Triângulos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-angulos-em-poligonos,Matemática,Ângulos em Polígonos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-angulos-e-circunferencias,Matemática,Ângulos e Circunferências,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-simetrias-e-congruencias,Matemática,Simetrias e Congruências,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-identificacao-de-simetrias-i,Matemática,Identificação de Simetrias I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-identificacao-de-simetrias-ii,Matemática,Identificação de Simetrias II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-a-geometria-da-proporcionalidade,Matemática,A Geometria da Proporcionalidade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-semelhanca-de-triangulos,Matemática,Semelhança de Triângulos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo,Matemática,O Ponto Médio e o Baricentro de um Triângulo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-triangulo-retangulo,Matemática,Triângulo Retângulo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-a-geometria-metrica-plana,Matemática,A Geometria Métrica Plana,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-areas-de-poligonos,Matemática,Áreas de Polígonos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-area-do-circulo-e-de-suas-partes,Matemática,Área do Círculo e de suas Partes,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-razoes-entre-areas-de-figuras-planas,Matemática,Razões entre Áreas de Figuras Planas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-areas-de-figuras-planas,Matemática,Áreas de Figuras Planas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-trigonometria-no-triangulo-retangulo,Matemática,Trigonometria no Triângulo Retângulo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-relacoes-trigonometricas-em-poligonos,Matemática,Relações Trigonométricas em Polígonos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-a-trigonometria-dos-numeros-reais,Matemática,A Trigonometria dos Números Reais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-outras-razoes-trigonometricas,Matemática,Outras Razões Trigonométricas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-a-relacao-fundamental-da-trigonometria,Matemática,A Relação Fundamental da Trigonometria,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-transformacoes-trigonometricas,Matemática,Transformações Trigonométricas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-funcoes-trigonometricas,Matemática,Funções Trigonométricas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-o-universo-tridimensional,Matemática,O Universo Tridimensional,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-cubos-e-paralelepipedos,Matemática,Cubos e Paralelepípedos,lotes-anteriores,nao-revisado,revisao-editorial
+summary-matematica-prismas,Matemática,Prismas,lotes-anteriores,nao-revisado,revisao-editorial
+summary-matematica-piramides,Matemática,Pirâmides,lotes-anteriores,nao-revisado,revisao-editorial
+summary-matematica-solidos-de-revolucao,Matemática,Sólidos de Revolução,lotes-anteriores,nao-revisado,revisao-editorial
+summary-matematica-razoes-entre-volumes-de-solidos,Matemática,Razões entre Volumes de Sólidos,lotes-anteriores,nao-revisado,revisao-editorial
+summary-matematica-introducao-a-geometria-analitica,Matemática,Introdução à Geometria Analítica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-lugar-geometrico-e-equacao-da-circunferencia,Matemática,Lugar Geométrico e Equação da Circunferência,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-estudo-analitico-da-reta,Matemática,Estudo Analítico da Reta,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-posicoes-relativas-entre-duas-retas,Matemática,Posições Relativas entre Duas Retas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-distancia-entre-um-ponto-e-uma-reta,Matemática,Distância entre um Ponto e uma Reta,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia,Matemática,Posições Relativas entre uma Reta e uma Circunferência,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-introducao-ao-estudo-analitico-das-conicas,Matemática,Introdução ao Estudo Analítico das Cônicas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-representacao-geometrica-de-inequacoes,Matemática,Representação Geométrica de Inequações,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-a-geometria-dos-numeros-complexos,Matemática,A Geometria dos Números Complexos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-tecnicas-algebricas,Matemática,Técnicas Algébricas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-igualdades,Matemática,Igualdades,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-desigualdades,Matemática,Desigualdades,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-modelagem-algebrica-de-problemas-i,Matemática,Modelagem Algébrica de Problemas I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-equacoes-do-2-grau,Matemática,Equações do 2º Grau,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-modelagem-algebrica-de-problemas-ii,Matemática,Modelagem Algébrica de Problemas II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-introducao-as-funcoes,Matemática,Introdução às Funções,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-transformacoes-em-graficos-de-funcoes,Matemática,Transformações em Gráficos de Funções,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-composicao-de-funcoes,Matemática,Composição de Funções,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-inversao-de-funcoes,Matemática,Inversão de Funções,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-funcoes-bijetoras,Matemática,Funções Bijetoras,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-funcao-constante-e-funcao-afim,Matemática,Função Constante e Função Afim,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-funcao-quadratica,Matemática,Função Quadrática,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-estudo-do-sinal-de-funcoes,Matemática,Estudo do Sinal de Funções,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-introducao-ao-modelo-exponencial,Matemática,Introdução ao Modelo Exponencial,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-introducao-aos-logaritmos,Matemática,Introdução aos Logaritmos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-equacoes-e-funcoes-logaritmicas,Matemática,Equações e Funções Logarítmicas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-modelagem-exponencial-de-problemas,Matemática,Modelagem Exponencial de Problemas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-modulo-de-um-numero-real,Matemática,Módulo de um Número Real,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-numeros-complexos,Matemática,Números Complexos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-polinomios,Matemática,Polinômios,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-matematica-equacoes-polinomiais,Matemática,Equações Polinomiais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-evolucao-dos-modelos-atomicos,Química,Evolução dos Modelos Atômicos,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-organizacao-da-tabela-periodica-dos-elementos,Química,Organização da Tabela Periódica dos Elementos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-radioatividade-o-estudo-das-radiacoes,Química,Radioatividade: o Estudo das Radiações,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-ligacoes-quimicas-e-alotropia,Química,Ligações Químicas e Alotropia,lotes-anteriores,nao-revisado,revisao-editorial
+summary-quimica-geometria-molecular,Química,Geometria Molecular,lotes-anteriores,nao-revisado,revisao-editorial
+summary-quimica-polaridade-das-ligacoes-e-das-moleculas,Química,Polaridade das Ligações e das Moléculas,lotes-anteriores,nao-revisado,revisao-editorial
+summary-quimica-interacoes-intermoleculares,Química,Interações Intermoleculares,lote-20,nao-revisado,revisao-editorial
+summary-quimica-composicao-da-materia-estados-fisicos,Química,Composição da Matéria: Estados Físicos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-o-estado-gasoso,Química,O Estado Gasoso,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-estudo-dos-gases-ii,Química,Estudo dos Gases II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-separacao-de-misturas,Química,Separação de Misturas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes,Química,Transformações Físicas e Químicas e Balanceamento de Equações,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-massa-atomica-mol-e-massa-molar,Química,"Massa Atômica, Mol e Massa Molar",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-determinacao-de-formulas-quimicas,Química,Determinação de Fórmulas Químicas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-estequiometria-leis-ponderais,Química,Estequiometria: Leis Ponderais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-calculos-estequiometricos,Química,Cálculos Estequiométricos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-quimica-inorganica,Química,Química Inorgânica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases,Química,Equações Iônicas e outras Teorias para Ácidos e Bases,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-processos-de-oxirreducao,Química,Processos de Oxirredução,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-quimica-ambiental,Química,Química Ambiental,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-introducao-a-quimica-organica,Química,Introdução à Química Orgânica,lote-20,nao-revisado,revisao-editorial
+summary-quimica-nomenclatura-de-compostos-organicos,Química,Nomenclatura de Compostos Orgânicos,lote-20,nao-revisado,revisao-editorial
+summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados,Química,Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados,lote-20,nao-revisado,revisao-editorial
+summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades,Química,Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades,lote-20,nao-revisado,revisao-editorial
+summary-quimica-isomeria,Química,Isomeria,lotes-anteriores,nao-revisado,revisao-editorial
+summary-quimica-combustiveis-fosseis,Química,Combustíveis Fósseis,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-interpretando-reacoes-organicas,Química,Interpretando Reações Orgânicas,lote-20,nao-revisado,revisao-editorial
+summary-quimica-reacoes-de-substituicao,Química,Reações de Substituição,lote-20,nao-revisado,revisao-editorial
+summary-quimica-reacoes-de-adicao,Química,Reações de Adição,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos,Química,Reações de Oxidação em Hidrocarbonetos,lote-20,nao-revisado,revisao-editorial
+summary-quimica-alcoois,Química,Álcoois,lote-20,nao-revisado,revisao-editorial
+summary-quimica-acidos-graxos-e-esterificacao,Química,Ácidos Graxos e Esterificação,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-transesterificacao-alcoolise,Química,Transesterificação (Alcoólise),a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-acidez-e-basicidade-pka,Química,Acidez e Basicidade (pKa),a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-polimeros,Química,Polímeros,lote-20,nao-revisado,revisao-editorial
+summary-quimica-dispersoes,Química,Dispersões,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-efeitos-coligativos,Química,Efeitos Coligativos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-termoquimica-i,Química,Termoquímica I,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-termoquimica-ii,Química,Termoquímica II,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-cinetica-quimica,Química,Cinética Química,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias,Química,Introdução ao Estudo das Pilhas e Baterias,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-eletroquimica-de-processos-espontaneos,Química,Eletroquímica de Processos Espontâneos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-eletroquimica-de-processos-nao-espontaneos,Química,Eletroquímica de Processos não Espontâneos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-aspectos-quantitativos-da-eletroquimica-e-metalurgia,Química,Aspectos Quantitativos da Eletroquímica e Metalurgia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-deslocamento-de-equilibrio,Química,Deslocamento de Equilíbrio,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-equilibrios-ionicos,Química,Equilíbrios Iônicos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-quimica-equilibrios-ionicos-ii,Química,Equilíbrios Iônicos II,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+qui-equilibrio-acidificacao,Química,Equilíbrios Químicos I,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+mat-probabilidade-contagem,Matemática,Introdução às Probabilidades,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+geo-bonus-demografico,Geografia,Estrutura Ativa da População,a-confrontar,em-validacao,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos,Filosofia,O Nascimento da Filosofia: do Mito ao Logos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes,Filosofia,"Os Filósofos da Physis: Tales, Anaximandro e Anaxímenes",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir,Filosofia,Heráclito e Parmênides: o Ser e o Devir,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-os-sofistas-e-a-crise-da-verdade,Filosofia,Os Sofistas e a Crise da Verdade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-o-metodo-socratico-e-a-maieutica,Filosofia,O Método Socrático e a Maiêutica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-a-teoria-das-ideias-de-platao,Filosofia,A Teoria das Ideias de Platão,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-o-mito-da-caverna,Filosofia,O Mito da Caverna,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento,Filosofia,A Alegoria da Linha Dividida e o Conhecimento,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-logica-e-metafisica-aristotelicas,Filosofia,Lógica e Metafísica Aristotélicas,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo,Filosofia,A Ética a Nicômaco e a Doutrina do Meio-Termo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-politica-aristotelica-o-homem-como-animal-politico,Filosofia,Política Aristotélica: o Homem como Animal Político,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-patristica-e-santo-agostinho,Filosofia,Patrística e Santo Agostinho,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-escolastica-e-santo-tomas-de-aquino,Filosofia,Escolástica e Santo Tomás de Aquino,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-a-relacao-entre-fe-e-razao,Filosofia,A Relação entre Fé e Razão,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica,Filosofia,Descartes e o Método: a Dúvida Hiperbólica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-racionalismo-continental-espinosa-e-leibniz,Filosofia,Racionalismo Continental: Espinosa e Leibniz,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-empirismo-britanico-locke-berkeley-e-hume,Filosofia,"Empirismo Britânico: Locke, Berkeley e Hume",a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-a-critica-de-hume-a-causalidade,Filosofia,A Crítica de Hume à Causalidade,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-hobbes-e-o-estado-de-natureza,Filosofia,Hobbes e o Estado de Natureza,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-locke-e-os-direitos-naturais,Filosofia,Locke e os Direitos Naturais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-rousseau-e-a-vontade-geral,Filosofia,Rousseau e a Vontade Geral,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-o-ideal-iluminista-de-razao-e-progresso,Filosofia,O Ideal Iluminista de Razão e Progresso,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-a-critica-da-razao-pura,Filosofia,A Crítica da Razão Pura,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico,Filosofia,A Ética Kantiana e o Imperativo Categórico,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-hegel-e-a-dialetica,Filosofia,Hegel e a Dialética,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-o-materialismo-historico,Filosofia,O Materialismo Histórico,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-alienacao-e-mais-valia,Filosofia,Alienação e Mais-Valia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-a-luta-de-classes-na-filosofia-marxista,Filosofia,A Luta de Classes na Filosofia Marxista,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-nietzsche-e-a-critica-aos-valores-morais,Filosofia,Nietzsche e a Crítica aos Valores Morais,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-o-existencialismo-de-sartre,Filosofia,O Existencialismo de Sartre,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural,Filosofia,A Escola de Frankfurt e a Indústria Cultural,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-foucault-e-as-relacoes-de-poder,Filosofia,Foucault e as Relações de Poder,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-justica-e-direitos-humanos,Filosofia,Justiça e Direitos Humanos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-etica-aplicada-e-bioetica,Filosofia,Ética Aplicada e Bioética,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-filosofia-filosofia-politica-contemporanea,Filosofia,Filosofia Política Contemporânea,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia,Sociologia,O Contexto Histórico do Surgimento da Sociologia,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-o-que-e-o-fato-social,Sociologia,O que é o Fato Social,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-sociologia-e-senso-comum,Sociologia,Sociologia e Senso Comum,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-solidariedade-mecanica-e-solidariedade-organica,Sociologia,Solidariedade Mecânica e Solidariedade Orgânica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-anomia-e-coesao-social,Sociologia,Anomia e Coesão Social,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-educacao-e-socializacao-em-durkheim,Sociologia,Educação e Socialização em Durkheim,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-modo-de-producao-e-estrutura-social,Sociologia,Modo de Produção e Estrutura Social,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-ideologia-e-alienacao,Sociologia,Ideologia e Alienação,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-a-luta-de-classes-na-analise-sociologica,Sociologia,A Luta de Classes na Análise Sociológica,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-tipos-de-acao-social,Sociologia,Tipos de Ação Social,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-dominacao-e-poder-em-weber,Sociologia,Dominação e Poder em Weber,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo,Sociologia,Ética Protestante e o Espírito do Capitalismo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-cultura-e-etnocentrismo,Sociologia,Cultura e Etnocentrismo,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-identidade-e-diferenca,Sociologia,Identidade e Diferença,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-multiculturalismo-e-relativismo-cultural,Sociologia,Multiculturalismo e Relativismo Cultural,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-classes-sociais-e-mobilidade-social,Sociologia,Classes Sociais e Mobilidade Social,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-desigualdade-racial-no-brasil,Sociologia,Desigualdade Racial no Brasil,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-desigualdade-de-genero,Sociologia,Desigualdade de Gênero,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-divisao-social-do-trabalho,Sociologia,Divisão Social do Trabalho,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-transformacoes-no-mundo-do-trabalho,Sociologia,Transformações no Mundo do Trabalho,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-precarizacao-e-uberizacao-do-trabalho,Sociologia,Precarização e Uberização do Trabalho,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-movimentos-sociais-classicos-e-contemporaneos,Sociologia,Movimentos Sociais Clássicos e Contemporâneos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-cidadania-e-direitos,Sociologia,Cidadania e Direitos,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-democracia-e-participacao-politica,Sociologia,Democracia e Participação Política,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-globalizacao-economica-e-cultural,Sociologia,Globalização Econômica e Cultural,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-o-estado-nacao-na-era-global,Sociologia,O Estado-Nação na Era Global,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo
+summary-sociologia-a-sociedade-da-informacao,Sociologia,A Sociedade da Informação,a-confrontar,nao-revisado,avaliar-modelo-e-necessidade-espacial-por-conteudo

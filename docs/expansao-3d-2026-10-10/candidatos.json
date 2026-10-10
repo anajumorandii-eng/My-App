@@ -38,7 +38,7 @@
       "subject": "Biologia",
       "topic": "Composição Química Celular: Compostos Inorgânicos",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -46,7 +46,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios",
@@ -98,7 +99,7 @@
       "subject": "Biologia",
       "topic": "Núcleo Celular",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -106,7 +107,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-bioenergetica-fermentacao-e-respiracao",
@@ -338,7 +340,7 @@
       "subject": "Física",
       "topic": "Grandezas Físicas e Operações com Vetores",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -346,14 +348,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-velocidade-vetorial",
       "subject": "Física",
       "topic": "Velocidade Vetorial",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -361,7 +364,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-aceleracao-vetorial",
@@ -548,7 +552,7 @@
       "subject": "Física",
       "topic": "Força Elétrica: Lei de Coulomb",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -556,14 +560,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-campo-eletrico",
       "subject": "Física",
       "topic": "Campo Elétrico",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -571,7 +576,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
@@ -593,7 +599,7 @@
       "subject": "Física",
       "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -601,14 +607,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-dinamica-das-cargas-eletricas",
       "subject": "Física",
       "topic": "Dinâmica das Cargas Elétricas",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -616,7 +623,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
@@ -1269,7 +1277,7 @@
       "subject": "Química",
       "topic": "Interações Intermoleculares",
       "reason": "Geometria de átomos e moléculas",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1277,7 +1285,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-quimica-massa-atomica-mol-e-massa-molar",
@@ -1314,7 +1323,7 @@
       "subject": "Química",
       "topic": "Introdução à Química Orgânica",
       "reason": "Geometria de átomos e moléculas",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -1322,14 +1331,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-quimica-nomenclatura-de-compostos-organicos",
       "subject": "Química",
       "topic": "Nomenclatura de Compostos Orgânicos",
       "reason": "Geometria de átomos e moléculas",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -1337,14 +1347,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
       "subject": "Química",
       "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
       "reason": "Geometria de átomos e moléculas",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1352,14 +1363,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
       "subject": "Química",
       "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
       "reason": "Geometria de átomos e moléculas",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1367,7 +1379,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-quimica-isomeria",
@@ -1389,7 +1402,7 @@
       "subject": "Química",
       "topic": "Interpretando Reações Orgânicas",
       "reason": "Geometria de átomos e moléculas",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1397,14 +1410,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
       "subject": "Química",
       "topic": "Reações de Oxidação em Hidrocarbonetos",
       "reason": "Geometria de átomos e moléculas",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -1412,14 +1426,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     },
     {
       "id": "summary-quimica-polimeros",
       "subject": "Química",
       "topic": "Polímeros",
       "reason": "Geometria de átomos e moléculas",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -1427,7 +1442,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-20-2026-10-10/README.md"
     }
   ]
 }

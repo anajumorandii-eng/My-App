@@ -1,0 +1,266 @@
+{
+  "source": "src/data/deepSummaryContent.json",
+  "source_sha256": "acfa9f883a2d6b1371eed67b9efbff5e29be713c717895adbeb40b6054c55e6b",
+  "rows": [
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "section_titles": [
+        "A água e suas propriedades",
+        "Sais minerais e suas funções",
+        "Teor de água e metabolismo",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "d53741cd461acf2fea5eb3fb1858be3054e943f9c73fbf0cd1d7555c68a1609f"
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "section_titles": [
+        "Envoltório e conteúdo",
+        "Cromatina e cromossomos",
+        "O núcleo como centro de controle",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "90bbdb68f40e4aa2bae1587c7ffe512d05ca6bca8b121ac86599462928e561dd"
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "section_titles": [
+        "Quando o número não basta",
+        "Somar e decompor",
+        "Decompor é a estratégia",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "64905c5d976dd040e7488c06dcd17c61877135f74806f95b2c5ec0075de64ead"
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "section_titles": [
+        "A velocidade aponta para algum lado",
+        "Velocidade média vetorial",
+        "Velocidade relativa",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "024065d35062bfe56fec0f268e88822b72d748d74feb085460f78e8e485af7dc"
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "section_titles": [
+        "Movimentos independentes",
+        "Como montar o problema",
+        "Ler a travessia de rio",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "aa179f18fabfe228d7f12babf80a7db80e823d1a735e5dd1db120e1b206d5c1a"
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "section_titles": [
+        "A gêmea elétrica da gravitação",
+        "Como usar",
+        "Comparando com a gravidade",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "7520d363b3ebcacb2a452d84ea973456f91856c17a2283d746ff45d6ccccc74b"
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "section_titles": [
+        "A carga altera o espaço",
+        "Campo de uma carga puntiforme",
+        "Força a partir do campo",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 3,
+      "chapter_sha256": "7b47f6725cb057be17ce11472e300344940ff0e864be5d16f1523acb8963a336"
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "section_titles": [
+        "Do vetor para o escalar",
+        "Trabalho e diferença de potencial",
+        "Para onde as cargas vão",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "061969c692fbfa591e8a9b22aaf5684ca3ec97d2342ea9147942576f66e5857a"
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "section_titles": [
+        "Onde o campo é o mesmo em toda parte",
+        "As relações do campo uniforme",
+        "Lançamento de cargas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "3c2a36874f9e7406a7b732e1506d5638d3567f977b15513ca3f0c56d1ce26271"
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "section_titles": [
+        "Newton continua valendo",
+        "Equilíbrio de cargas",
+        "Energia no movimento de cargas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "8b2c5b5069a3bbc222a7fc7f97e3c3ba56f4ffe1ae5e33e228d800260b5e3a5b"
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "section_titles": [
+        "Os três tipos",
+        "Efeito sobre as propriedades",
+        "Comparações típicas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "d02860f40e9eb73d073a8c4ba6e9d6e433f735fc66f92e6db92eef931ef1b2a9"
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "section_titles": [
+        "Carbono e cadeias",
+        "Estrutura determina propriedade",
+        "Funções orgânicas",
+        "Nomenclatura e erros",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "e2fb4951167e00a8d980b6d90439309309701e5546af8f79999a794e5465752a"
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "section_titles": [
+        "A estrutura do nome",
+        "Cadeia principal e ramificações",
+        "Classificação de cadeias",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "cc909979f5412c0dfb8fa6e048fd09d9fda40bb7d7a704074e4cd376cb344e0e"
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "section_titles": [
+        "Funções oxigenadas",
+        "Funções nitrogenadas",
+        "Ordem de prioridade",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "73ec51a84a6570245fc64d4c41f3548ff3e9cd604b3be8423652d07221e01c6d"
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "section_titles": [
+        "Identificar pelo grupo funcional",
+        "Propriedades físicas",
+        "Propriedades químicas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "be8ed9a41aa6ae340cbeacfbdc9d05b7ce835c9efa80e3e3559a2708778d946f"
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "section_titles": [
+        "Como ler um mecanismo",
+        "Os grandes tipos",
+        "Intermediários",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "23585dbcaba886ef8f5f39a7c7543199a2ee5acfc11d8239e27de2bd4e21ca8f"
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "section_titles": [
+        "Em alcanos",
+        "Em aromáticos",
+        "Em haletos",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "ff74991646af42c30599e7b49c2827361c3873f15011a3d73fb6dd7abfb77b06"
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "section_titles": [
+        "Combustão",
+        "Oxidação branda",
+        "Oxidação enérgica",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "53039ad38059765941b53d929f9cd44edc20fe08acc92f8e413ff7a48b3195eb"
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "section_titles": [
+        "Estrutura e classificação",
+        "Propriedades",
+        "Reações",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "1d699e70e6095276e6776cab47091082e053ca8ff4f2c26bc89aceabec67d4a9"
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "section_titles": [
+        "Conceito e classificação",
+        "Polimerização por adição",
+        "Polimerização por condensação",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "revision": 2,
+      "chapter_sha256": "da30f64eea28f12ab354efa9b26f5d09a165a56f73c5dbc1ebd72e24cea27fe5"
+    }
+  ]
+}

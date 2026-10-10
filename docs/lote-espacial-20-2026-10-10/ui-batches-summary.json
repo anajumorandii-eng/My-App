@@ -1,0 +1,441 @@
+{
+  "files": 189,
+  "batches": [
+    {
+      "batch": 1,
+      "files": [
+        "serverCalendar.test.ts",
+        "src/components/AuthInitialization.test.tsx",
+        "src/components/CrivoCore.ui.test.tsx",
+        "src/components/LayoutReducedMotionTransition.ui.test.tsx",
+        "src/components/LayoutRouteTransition.ui.test.tsx",
+        "src/components/SharedReducedMotion.ui.test.tsx",
+        "src/components/SummaryErrorsPanel.ui.test.tsx",
+        "src/components/SummaryProgressDashboard.ui.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 26,
+      "numPassedTests": 26,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 2,
+      "files": [
+        "src/components/SummaryReviewsPanel.ui.test.tsx",
+        "src/components/aj/AJPatterns.ui.test.tsx",
+        "src/components/layout/routePresentation.test.ts",
+        "src/components/navigation/AppNavigation.ui.test.tsx",
+        "src/components/subject-icons/ReducedIconMotion.ui.test.tsx",
+        "src/features/availability/AgendaView.test.tsx",
+        "src/features/availability/availabilityEngine.test.ts",
+        "src/features/availability/blockScheduler.test.ts"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 49,
+      "numPassedTests": 49,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 3,
+      "files": [
+        "src/features/availability/scheduleRepository.test.ts",
+        "src/features/availability/studyActionAllocator.test.ts",
+        "src/features/availability/time.test.ts",
+        "src/features/availability/useDailyStudyAvailability.test.tsx",
+        "src/features/availability/weeklyScheduleSeed.test.ts",
+        "src/features/daily-plan/cenas/BancadaOptica.test.tsx",
+        "src/features/daily-plan/cenas/CenaDaMateria.loading.test.tsx",
+        "src/features/daily-plan/cenas/CenaDaMateria.test.ts"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 39,
+      "numPassedTests": 39,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 4,
+      "files": [
+        "src/features/daily-plan/components/DailyPlanMotion.ui.test.tsx",
+        "src/features/daily-plan/motion/useDecisionChoreography.test.tsx",
+        "src/hooks/profileGoalsSafety.test.tsx",
+        "src/hooks/useDailyPlan.test.tsx",
+        "src/hooks/usePersonalPodcasts.test.tsx",
+        "src/hooks/usePodcastEpisodes.test.tsx",
+        "src/hooks/usePodcastVoices.test.tsx",
+        "src/hooks/useQuestions.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 50,
+      "numPassedTests": 50,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 5,
+      "files": [
+        "src/hooks/useSummaryProgress.test.tsx",
+        "src/hooks/useUserMastery.test.tsx",
+        "src/hooks/useUserProfile.test.tsx",
+        "src/views/ChapterSceneFrame.test.tsx",
+        "src/views/DailyPlanConsistency.test.tsx",
+        "src/views/DashboardAJ.ui.test.tsx",
+        "src/views/Diagnostico.test.tsx",
+        "src/views/EvolucaoSummaryDashboard.ui.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 53,
+      "numPassedTests": 53,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 6,
+      "files": [
+        "src/views/Flashcards.ui.test.tsx",
+        "src/views/GrammarVariationE.test.tsx",
+        "src/views/HumanitiesConcepts.test.tsx",
+        "src/views/ObraDetalhe.dossier.test.tsx",
+        "src/views/ObraDetalhe.progress.test.tsx",
+        "src/views/Perfil.persistence.test.tsx",
+        "src/views/Podcast.ui.test.tsx",
+        "src/views/Questoes.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 63,
+      "numPassedTests": 63,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 7,
+      "files": [
+        "src/views/Resumos.ui.test.tsx",
+        "src/views/Revisoes.ui.test.tsx",
+        "src/views/Sessao.test.tsx",
+        "src/views/TopicExperiment.test.tsx",
+        "src/views/Visual.test.tsx",
+        "src/views/VisualJourney.test.tsx",
+        "src/views/controlAccessibility.test.tsx",
+        "src/views/podcastAudio.test.ts"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 75,
+      "numPassedTests": 75,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 8,
+      "files": [
+        "src/views/topic-scenes/FisicaEntregaD.test.tsx",
+        "src/views/topic-scenes/TopicScene.test.tsx",
+        "src/views/topic-scenes/auditoria.test.ts",
+        "src/views/topic-scenes/contrast-plates/filosofia1.test.tsx",
+        "src/views/topic-scenes/contrast-plates/filosofia2.test.tsx",
+        "src/views/topic-scenes/contrast-plates/justica.test.ts",
+        "src/views/topic-scenes/contrast-plates/review-regressions.test.tsx",
+        "src/views/topic-scenes/familias-biologia.test.ts"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 51,
+      "numPassedTests": 51,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 9,
+      "files": [
+        "src/views/topic-scenes/familias-fisica.test.ts",
+        "src/views/topic-scenes/familias-geografia.test.ts",
+        "src/views/topic-scenes/familias-historia.test.ts",
+        "src/views/topic-scenes/familias-literatura.test.ts",
+        "src/views/topic-scenes/familias-matematica.test.ts",
+        "src/views/topic-scenes/familias-quimica.test.ts",
+        "src/views/topic-scenes/familias-sociologia.test.ts",
+        "src/views/topic-scenes/familias.test.ts"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 24,
+      "numPassedTests": 24,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 10,
+      "files": [
+        "src/views/topic-scenes/families/AguasBiomas.test.tsx",
+        "src/views/topic-scenes/families/AmbienteEnergia.test.tsx",
+        "src/views/topic-scenes/families/Antiguidade.test.tsx",
+        "src/views/topic-scenes/families/BiologiaFenomenos.test.tsx",
+        "src/views/topic-scenes/families/BiologiaFisiologia.test.tsx",
+        "src/views/topic-scenes/families/BiologiaProcessos.test.tsx",
+        "src/views/topic-scenes/families/BrasilRepublica.test.tsx",
+        "src/views/topic-scenes/families/CadeiaDeDerivacao.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 41,
+      "numPassedTests": 41,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 11,
+      "files": [
+        "src/views/topic-scenes/families/CamadasDeDeterminacao.test.tsx",
+        "src/views/topic-scenes/families/Cartografia.test.tsx",
+        "src/views/topic-scenes/families/ComparisonDiagrams.test.tsx",
+        "src/views/topic-scenes/families/ContrasteDePosicoes.test.tsx",
+        "src/views/topic-scenes/families/ContrasteEntregaC.test.tsx",
+        "src/views/topic-scenes/families/CriteriosConjuntivos.test.tsx",
+        "src/views/topic-scenes/families/EcologyCycles.test.tsx",
+        "src/views/topic-scenes/families/EcologyPlayer.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 144,
+      "numPassedTests": 144,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 12,
+      "files": [
+        "src/views/topic-scenes/families/EcologySystems.test.tsx",
+        "src/views/topic-scenes/families/EconomiaBrasil.test.tsx",
+        "src/views/topic-scenes/families/EconomiaGlobal.test.tsx",
+        "src/views/topic-scenes/families/EraVargas.test.tsx",
+        "src/views/topic-scenes/families/EscalaDeGraus.test.tsx",
+        "src/views/topic-scenes/families/FisicaFenomenos.test.tsx",
+        "src/views/topic-scenes/families/FisicaMecanismos.test.tsx",
+        "src/views/topic-scenes/families/GeografiaMundial.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 38,
+      "numPassedTests": 38,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 13,
+      "files": [
+        "src/views/topic-scenes/families/Geopolitica.test.tsx",
+        "src/views/topic-scenes/families/Globalizacao.test.tsx",
+        "src/views/topic-scenes/families/GradeDeEixos.test.tsx",
+        "src/views/topic-scenes/families/HistoriaGeografia.test.tsx",
+        "src/views/topic-scenes/families/HistoriaMundial.test.tsx",
+        "src/views/topic-scenes/families/IdadeModerna.test.tsx",
+        "src/views/topic-scenes/families/LinguagensLiteratura.test.tsx",
+        "src/views/topic-scenes/families/MovimentoDialetico.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 58,
+      "numPassedTests": 58,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 14,
+      "files": [
+        "src/views/topic-scenes/families/OrienteMedio.test.tsx",
+        "src/views/topic-scenes/families/Populacao.test.tsx",
+        "src/views/topic-scenes/families/QuimicaFenomenos.test.tsx",
+        "src/views/topic-scenes/families/QuimicaOrganica.test.tsx",
+        "src/views/topic-scenes/families/QuimicaTipologia.test.tsx",
+        "src/views/topic-scenes/families/SeculoXX.test.tsx",
+        "src/views/topic-scenes/families/Tipologia.test.tsx",
+        "src/views/topic-scenes/lastro.test.ts"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 42,
+      "numPassedTests": 42,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 15,
+      "files": [
+        "src/views/topic-scenes/movimento.test.ts",
+        "src/views/topic-scenes/sceneFor.test.ts",
+        "src/views/visual-boards/AmbienteProvider.test.tsx",
+        "src/views/visual-boards/BoardShell.test.tsx",
+        "src/views/visual-boards/BuscaRapida.test.tsx",
+        "src/views/visual-boards/CalorimetryBoard.test.tsx",
+        "src/views/visual-boards/ChapterObjectIcon.test.tsx",
+        "src/views/visual-boards/EnzymeBoard.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 83,
+      "numPassedTests": 83,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 16,
+      "files": [
+        "src/views/visual-boards/FungiBoard.test.tsx",
+        "src/views/visual-boards/IndependenceBoard.test.tsx",
+        "src/views/visual-boards/LensMechanism.test.tsx",
+        "src/views/visual-boards/MathMissingBoards.test.tsx",
+        "src/views/visual-boards/MechanismExpansion.test.tsx",
+        "src/views/visual-boards/NewtonFidelityD.test.tsx",
+        "src/views/visual-boards/OpticsWavesFidelity.test.tsx",
+        "src/views/visual-boards/PhMechanism.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 30,
+      "numPassedTests": 30,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 17,
+      "files": [
+        "src/views/visual-boards/PhotosynthesisMechanism.test.tsx",
+        "src/views/visual-boards/ScienceMechanisms.test.tsx",
+        "src/views/visual-boards/ScienceReviewBoards.test.tsx",
+        "src/views/visual-boards/VisionDefectsBoard.test.tsx",
+        "src/views/visual-boards/ambiente.test.tsx",
+        "src/views/visual-boards/registry.test.ts",
+        "src/views/visual-instruments/AlgebraInstrument.test.tsx",
+        "src/views/visual-instruments/AnalyticInstrument.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 50,
+      "numPassedTests": 50,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 18,
+      "files": [
+        "src/views/visual-instruments/AreaGeometryInstrument.test.tsx",
+        "src/views/visual-instruments/BiologyInstrument.test.tsx",
+        "src/views/visual-instruments/BiologyRemainingInstrument.test.tsx",
+        "src/views/visual-instruments/CartesianInstrument.test.tsx",
+        "src/views/visual-instruments/ChemistryInstrument.test.tsx",
+        "src/views/visual-instruments/ElectricInstrument.test.tsx",
+        "src/views/visual-instruments/ElectrochemistryInstrument.test.tsx",
+        "src/views/visual-instruments/ElectrostaticsInstrument.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 68,
+      "numPassedTests": 68,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 19,
+      "files": [
+        "src/views/visual-instruments/EnglishInstrument.test.tsx",
+        "src/views/visual-instruments/EnglishMechanismScenes.test.tsx",
+        "src/views/visual-instruments/GeneratorSpatialView.test.tsx",
+        "src/views/visual-instruments/GeographyContextInstrument.test.tsx",
+        "src/views/visual-instruments/GeographyInstrument.test.tsx",
+        "src/views/visual-instruments/GeographyRemainingInstrument.test.tsx",
+        "src/views/visual-instruments/GrammarCoverageE.test.tsx",
+        "src/views/visual-instruments/GrammarDrawingWindow.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 53,
+      "numPassedTests": 53,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 20,
+      "files": [
+        "src/views/visual-instruments/GrammarInstrument.test.tsx",
+        "src/views/visual-instruments/GrammarMorphologyScenes.test.tsx",
+        "src/views/visual-instruments/GrammarSyntaxScenes.test.tsx",
+        "src/views/visual-instruments/HistoryInstrument.test.tsx",
+        "src/views/visual-instruments/LiteraryScenes.test.tsx",
+        "src/views/visual-instruments/LiteratureFoundations.test.tsx",
+        "src/views/visual-instruments/MagnetismInstrument.test.tsx",
+        "src/views/visual-instruments/MatrixInstrument.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 149,
+      "numPassedTests": 149,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 21,
+      "files": [
+        "src/views/visual-instruments/MechanicsFidelityD.test.tsx",
+        "src/views/visual-instruments/MechanicsFinalInstrument.test.tsx",
+        "src/views/visual-instruments/OpticsInstrument.test.tsx",
+        "src/views/visual-instruments/PhilosophyOperations.test.tsx",
+        "src/views/visual-instruments/PhysicsMechanismScenes.test.tsx",
+        "src/views/visual-instruments/PhysicsRemainingInstrument.test.ts",
+        "src/views/visual-instruments/PhysicsRemainingInstrument.test.tsx",
+        "src/views/visual-instruments/PlanarGeometryInstrument.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 99,
+      "numPassedTests": 99,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 22,
+      "files": [
+        "src/views/visual-instruments/QuantitiesInstrument.test.tsx",
+        "src/views/visual-instruments/ReadingInstrument.test.tsx",
+        "src/views/visual-instruments/ReadingMechanismScenes.test.tsx",
+        "src/views/visual-instruments/RemainingMathInstrument.test.tsx",
+        "src/views/visual-instruments/ScienceObjectView.test.tsx",
+        "src/views/visual-instruments/SequenceInstrument.test.tsx",
+        "src/views/visual-instruments/SociologyOperations.test.tsx",
+        "src/views/visual-instruments/SolidInstrument.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 125,
+      "numPassedTests": 125,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 23,
+      "files": [
+        "src/views/visual-instruments/SpatialBatch.test.tsx",
+        "src/views/visual-instruments/SpatialExploration.test.tsx",
+        "src/views/visual-instruments/ThermoInstrument.test.tsx",
+        "src/views/visual-instruments/WavesInstrument.test.tsx",
+        "src/views/visual-instruments/WritingInstrument.test.tsx",
+        "src/views/visual-instruments/WritingOperations.test.tsx",
+        "src/views/visual-instruments/WritingReadingScenes.test.tsx",
+        "src/views/visual-instruments/pairContract.test.tsx"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 89,
+      "numPassedTests": 89,
+      "numFailedTests": 0,
+      "success": true
+    },
+    {
+      "batch": 24,
+      "files": [
+        "src/views/visual-instruments/registry.test.ts",
+        "src/views/visual-instruments/registryLoading.test.tsx",
+        "src/views/visualCoverage.test.ts",
+        "src/views/visualQuality.test.ts",
+        "src/views/visualRepresentation.test.ts"
+      ],
+      "exit_code": 0,
+      "numTotalTests": 54,
+      "numPassedTests": 54,
+      "numFailedTests": 0,
+      "success": true,
+      "revalidated": true,
+      "initial_failure": "Capturas historicas versionadas ausentes no checkout esparso; restauradas do blob HEAD sem alterar o teste."
+    }
+  ],
+  "totals": {
+    "numTotalTests": 1553,
+    "numPassedTests": 1553,
+    "numFailedTests": 0
+  }
+}
