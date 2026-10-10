@@ -42,6 +42,10 @@ Os 943 testes de lógica e 87 testes focados passaram. A suíte ampla encontrou 
 
 O ambiente perdeu temporariamente a conexão durante a verificação. As capturas e os resultados de navegador foram recuperados integralmente; a suíte ampla foi reiniciada após estabilizar os testes. TypeScript e build foram concluídos. A execução final passou nos 1.524 testes dos 186 arquivos, sem falhas; [log final](evidencias/suite-ampla-1524.log).
 
+### Correção posterior do CI
+
+Os dois fluxos do PR #297 falharam na checagem TypeScript: a propriedade opcional `hint` era inferida como `unknown` na união entre perguntas editoriais e legadas. A leitura agora verifica explicitamente `typeof recall.hint === 'string'`, preservando a dica padrão para os demais casos. Os hashes e logs acima documentam a auditoria anterior a este ajuste; a validação deste ajuste consta nos novos resultados do CI do PR.
+
 ### Reproduzir a auditoria seletiva
 
 Execute da raiz do repositório com dependências instaladas, build atualizado e `vite preview` na porta 3003. Os scripts usam dados locais de teste. `capturar.cjs` exige `CRIVO_AUDIT_WIDTH`, `CRIVO_AUDIT_THEME` e `CRIVO_AUDIT_MOTION`; repita as três larguras, os dois temas e as duas preferências de movimento. `CRIVO_VISUAL_URL` e os diretórios de saída são configuráveis. `recortes.cjs`, `colonizacao.cjs` e `contraste.cjs` reproduzem as verificações complementares. Use uma prévia estável para evitar mudanças do build durante a captura.
