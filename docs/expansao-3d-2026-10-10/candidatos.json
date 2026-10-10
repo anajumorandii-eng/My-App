@@ -325,7 +325,7 @@
       "subject": "Física",
       "topic": "O Movimento Circular",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -333,7 +333,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
@@ -372,7 +373,7 @@
       "subject": "Física",
       "topic": "Aceleração Vetorial",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -380,14 +381,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-forca-e-seus-tipos",
       "subject": "Física",
       "topic": "Força e seus Tipos",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -395,14 +397,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
       "subject": "Física",
       "topic": "Resultante de um Sistema de Forças",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -410,14 +413,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-a-forca-de-contato",
       "subject": "Física",
       "topic": "A Força de Contato",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -425,14 +429,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
       "subject": "Física",
       "topic": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -440,14 +445,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-dinamica-do-movimento-circular",
       "subject": "Física",
       "topic": "Dinâmica do Movimento Circular",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -455,14 +461,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
       "subject": "Física",
       "topic": "Trabalho e Energia: Trabalho de uma Força",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -470,14 +477,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-hidrostatica-densidade-e-pressao",
       "subject": "Física",
       "topic": "Hidrostática: Densidade e Pressão",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "board",
       "required": [
         "objeto próprio do conteúdo",
@@ -485,14 +493,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
       "subject": "Física",
       "topic": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -500,14 +509,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
       "subject": "Física",
       "topic": "Trabalho da Força de Pressão do Gás",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -515,14 +525,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-primeira-lei-da-termodinamica",
       "subject": "Física",
       "topic": "Primeira Lei da Termodinâmica",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -530,14 +541,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
       "subject": "Física",
       "topic": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "board",
       "required": [
         "objeto próprio do conteúdo",
@@ -545,7 +557,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
@@ -676,7 +689,7 @@
       "subject": "Física",
       "topic": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -684,7 +697,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
@@ -722,7 +736,7 @@
       "subject": "Física",
       "topic": "Refração: Fundamentos, Leis e Aplicações",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -730,14 +744,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-lentes-esfericas-estudo-grafico",
       "subject": "Física",
       "topic": "Lentes Esféricas: Estudo Gráfico",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "board",
       "required": [
         "objeto próprio do conteúdo",
@@ -745,14 +760,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-estudo-analitico-das-lentes-esfericas",
       "subject": "Física",
       "topic": "Estudo Analítico das Lentes Esféricas",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "board",
       "required": [
         "objeto próprio do conteúdo",
@@ -760,14 +776,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
       "subject": "Física",
       "topic": "Equação do Fabricante de Lentes e Associação de Lentes",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "board",
       "required": [
         "objeto próprio do conteúdo",
@@ -775,7 +792,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
@@ -797,7 +815,7 @@
       "subject": "Física",
       "topic": "Reflexão, Eco, Reverberação e Refração de Ondas",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -805,14 +823,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas",
       "subject": "Física",
       "topic": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -820,14 +839,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento",
       "subject": "Física",
       "topic": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -835,14 +855,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria",
       "subject": "Física",
       "topic": "Um Caso Particular de Interferência: Onda Estacionária",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -850,14 +871,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-ondas-estacionarias-em-cordas",
       "subject": "Física",
       "topic": "Ondas Estacionárias em Cordas",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -865,14 +887,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-ondas-estacionarias-em-tubos",
       "subject": "Física",
       "topic": "Ondas Estacionárias em Tubos",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -880,7 +903,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-fisica-24-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-coordenadas-geograficas",

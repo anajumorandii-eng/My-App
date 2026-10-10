@@ -1,0 +1,319 @@
+{
+  "base": "b130bb72da5dbf1cb9237b44ae10caad5ab2a5eb",
+  "source": "src/data/deepSummaryContent.json",
+  "source_sha256": "acfa9f883a2d6b1371eed67b9efbff5e29be713c717895adbeb40b6054c55e6b",
+  "chapters": [
+    {
+      "id": "summary-fisica-o-movimento-circular",
+      "subject": "Física",
+      "topic": "O Movimento Circular",
+      "sections": [
+        "Girar é acelerar",
+        "Período, frequência e as duas velocidades",
+        "Acoplamentos",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "4dda992f2fb496304f9c0eca0ef813eecaf531864693b0448446ae8f4b9f6f33"
+    },
+    {
+      "id": "summary-fisica-aceleracao-vetorial",
+      "subject": "Física",
+      "topic": "Aceleração Vetorial",
+      "sections": [
+        "Duas maneiras de mudar a velocidade",
+        "Tangencial e centrípeta",
+        "Ler cada movimento",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "a79c22a4d7c321a95543f5ad2e39da1fa98d3a722139b70d5d22375510511da3"
+    },
+    {
+      "id": "summary-fisica-dinamica-do-movimento-circular",
+      "subject": "Física",
+      "topic": "Dinâmica do Movimento Circular",
+      "sections": [
+        "Quem segura o corpo na curva",
+        "A equação e seus usos",
+        "Pêndulo cônico e globo da morte",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "17de3a46a6c117a39e44757a54e38869fedb21eb916b2a9ea086f6d0ad7d0a88"
+    },
+    {
+      "id": "summary-fisica-forca-e-seus-tipos",
+      "subject": "Física",
+      "topic": "Força e seus Tipos",
+      "sections": [
+        "Força é interação",
+        "As forças que aparecem no vestibular",
+        "Massa e peso não são a mesma coisa",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "662dff337cdd4c924d0ad3708fc59c2b7e255d7b330b7f7ca48b425fc5dc5c58"
+    },
+    {
+      "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
+      "subject": "Física",
+      "topic": "Resultante de um Sistema de Forças",
+      "sections": [
+        "O que o corpo enxerga",
+        "Como calcular",
+        "Equilíbrio",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "986d52242c1e4a09fb74f58ef77ac71d9ec7d2a3f8cb6656e2b6a310226d63fc"
+    },
+    {
+      "id": "summary-fisica-a-forca-de-contato",
+      "subject": "Física",
+      "topic": "A Força de Contato",
+      "sections": [
+        "Uma força, duas componentes",
+        "Atrito estático e cinético",
+        "Ler o coeficiente",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "853989ffe93bb36066eeb27fe00c1f4de39797912429e97f2c96086b80c8df7c"
+    },
+    {
+      "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+      "subject": "Física",
+      "topic": "Sistema de Corpos Interagindo e os Elementos Transmissores de Força",
+      "sections": [
+        "Um sistema, duas escalas de análise",
+        "A estratégia dos dois passos",
+        "Fio ideal e a máquina de Atwood",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "158984c4d2ccf39c6b5498ce82863764e939d02336f9282f0bd649d7a5926171"
+    },
+    {
+      "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
+      "subject": "Física",
+      "topic": "Trabalho e Energia: Trabalho de uma Força",
+      "sections": [
+        "Força que produz deslocamento",
+        "Sinal e significado",
+        "Trabalho de forças específicas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "5de8feb808594152757f53a6fb789788f24e79d075e2b9606c127debf54df18c"
+    },
+    {
+      "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
+      "subject": "Física",
+      "topic": "Gases Ideais: Variáveis de Estado e as Transformações Gasosas",
+      "sections": [
+        "Três variáveis amarradas",
+        "A equação geral e a de Clapeyron",
+        "As transformações particulares",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "d8b9bae538eaef741d4685977daa0b0da3bb78d995efa72b382e3c59359bd47e"
+    },
+    {
+      "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
+      "subject": "Física",
+      "topic": "Trabalho da Força de Pressão do Gás",
+      "sections": [
+        "Gás que empurra o êmbolo",
+        "Como calcular",
+        "Ler o diagrama p-V",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "f273773d74e0c7e23906c8f861854ecc874bf7a11dc231df1068c7791696275e"
+    },
+    {
+      "id": "summary-fisica-primeira-lei-da-termodinamica",
+      "subject": "Física",
+      "topic": "Primeira Lei da Termodinâmica",
+      "sections": [
+        "Conservação com contabilidade",
+        "Os sinais",
+        "Energia interna e temperatura",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "37275eb090441e3cf1e7338c7ba5dad59bdfeced2edc8d627046408e2a26011c"
+    },
+    {
+      "id": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
+      "subject": "Física",
+      "topic": "Primeira Lei da Termodinâmica Aplicada a Algumas Transformações Particulares",
+      "sections": [
+        "Um caso de cada vez",
+        "Isotérmica e isovolumétrica",
+        "Isobárica e adiabática",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "3317441dc9a7a55f317cbf2a7ae6f18bfae28957026f3f29b6ed6106e5e41ef9"
+    },
+    {
+      "id": "summary-fisica-hidrostatica-densidade-e-pressao",
+      "subject": "Física",
+      "topic": "Hidrostática: Densidade e Pressão",
+      "sections": [
+        "O peso da coluna",
+        "Pascal e Arquimedes",
+        "Flutuar ou afundar",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "766f71d14502382f3fa466642f9d75656111a21eb982de50d1148d00c94792fe"
+    },
+    {
+      "id": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes",
+      "subject": "Física",
+      "topic": "Refração: Fundamentos, Leis e Aplicações",
+      "sections": [
+        "Mudar de meio é mudar de velocidade",
+        "Lei de Snell",
+        "Reflexão total e aplicações",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "b84ee800493042e40a9d76f5111189737c37f583f09078251d2a1be49d6b5ae7"
+    },
+    {
+      "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+      "subject": "Física",
+      "topic": "Lentes Esféricas: Estudo Gráfico",
+      "sections": [
+        "Convergente e divergente",
+        "Os raios notáveis",
+        "As posições do objeto",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "2f5b87ebb6636b6634bae463cb293a35ea19673b3a5b5776d32299ce59253e9c"
+    },
+    {
+      "id": "summary-fisica-estudo-analitico-das-lentes-esfericas",
+      "subject": "Física",
+      "topic": "Estudo Analítico das Lentes Esféricas",
+      "sections": [
+        "Duas equações resolvem tudo",
+        "A convenção de sinais",
+        "Vergência",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "8aee3f9eabcf02c0a0c3d597df0960c30ecfeb694ffedb78481b9530a697ec61"
+    },
+    {
+      "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+      "subject": "Física",
+      "topic": "Equação do Fabricante de Lentes e Associação de Lentes",
+      "sections": [
+        "O que define a distância focal",
+        "Lente dentro da água",
+        "Associação de lentes justapostas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "020daca4e231eda2eaa38dbfc36f437f306f5e45b35e1bca46074c0015f37cb5"
+    },
+    {
+      "id": "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas",
+      "subject": "Física",
+      "topic": "Reflexão, Eco, Reverberação e Refração de Ondas",
+      "sections": [
+        "O que muda e o que não muda",
+        "Eco e reverberação",
+        "Refração e o desvio",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "0fc368d5b88829e3ce96e0c656f1d3d90521d73e1e5352e28f84e65c7abb79dd"
+    },
+    {
+      "id": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas",
+      "subject": "Física",
+      "topic": "Fenômenos Ondulatórios: Análise de Refração e Reflexão em Cordas",
+      "sections": [
+        "A velocidade numa corda",
+        "Reflexão em extremidade fixa e livre",
+        "Na emenda de duas cordas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "53e5fc9a723e72c48fe0f3bc0e3a98c7e494224af217720a6e7285ca068b07e8"
+    },
+    {
+      "id": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento",
+      "subject": "Física",
+      "topic": "Interferência de Ondas: Análise Quantitativa, Aplicações e Batimento",
+      "sections": [
+        "Superposição e a diferença de percurso",
+        "As condições em fórmula",
+        "Batimento",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "24b2057b8e1397237d75efe8ce7e07ab41547b75ad2d3cdbbf732a32c3ef2161"
+    },
+    {
+      "id": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria",
+      "subject": "Física",
+      "topic": "Um Caso Particular de Interferência: Onda Estacionária",
+      "sections": [
+        "Duas ondas iguais em sentidos opostos",
+        "A geometria dos nós e ventres",
+        "Por que só certas frequências funcionam",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "3011fa807e79606879ffeadeb3dafcb049ad5f57c0a7e70bf3f6c6cbb29ba7d1"
+    },
+    {
+      "id": "summary-fisica-ondas-estacionarias-em-cordas",
+      "subject": "Física",
+      "topic": "Ondas Estacionárias em Cordas",
+      "sections": [
+        "Corda presa nas duas pontas",
+        "A série harmônica",
+        "O que o instrumentista controla",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "f43caf0864568c7512d4126de85e9e0926fe6ffe102e8d4c60e7d73489f324d4"
+    },
+    {
+      "id": "summary-fisica-ondas-estacionarias-em-tubos",
+      "subject": "Física",
+      "topic": "Ondas Estacionárias em Tubos",
+      "sections": [
+        "Tubo aberto nas duas pontas",
+        "Tubo fechado numa ponta",
+        "O que muda a nota",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "4869af06314ca45e568bc190cf929550a47348f43b87a80c5fb191fa2ee7be70"
+    },
+    {
+      "id": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas",
+      "subject": "Física",
+      "topic": "Análise de Força Magnética em Fios Percorridos por Correntes Contínuas",
+      "sections": [
+        "Fio com corrente dentro de campo",
+        "Dois fios paralelos",
+        "Espira num campo e o motor",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "9bc61a09bbc4d909195b5ab72689c1ba9afa64bf0401b0c6d4a66b9fb897508b"
+    }
+  ]
+}
