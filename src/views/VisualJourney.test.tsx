@@ -11,6 +11,11 @@ import { sceneFor } from './topic-scenes/sceneFor';
 import { findBoard } from './visual-boards/registry';
 import { findInstrument } from './visual-instruments/registry';
 
+const normalizedText = (value: string | null | undefined) => value?.replace(/\s+/g, ' ').trim() ?? '';
+const contentNode = (content: string) => (_: string, element: Element | null) =>
+  normalizedText(element?.textContent) === normalizedText(content)
+  && !Array.from(element?.children ?? []).some(child => normalizedText(child.textContent) === normalizedText(content));
+
 const sceneOnlySummary = interactiveSummaries.find(
   (item) => sceneFor(item.id) && !topicExperiments[item.id] && !findBoard(item) && !findInstrument(item),
 )!;
@@ -29,12 +34,12 @@ describe('Percurso ligado ao conteúdo', () => {
     const summary = interactiveSummaries.find(s => s.subject === 'História')!;
     const practice = vi.fn();
     render(<VisualJourney summary={summary} onPractice={practice} />);
-    expect(screen.getByText(summary.sections[0].content)).toBeInTheDocument();
+    expect(screen.getByText(contentNode(summary.sections[0].content))).toBeInTheDocument();
     const nav = screen.getByRole('navigation', { name: 'Etapas do capítulo' });
     const steps = within(nav).getAllByRole('button');
     expect(steps).toHaveLength(summary.sections.length);
     fireEvent.click(steps[steps.length - 1]);
-    expect(await screen.findByText(summary.sections.at(-1)!.content)).toBeInTheDocument();
+    expect(await screen.findByText(contentNode(summary.sections.at(-1)!.content))).toBeInTheDocument();
     expect(practice).not.toHaveBeenCalled();
     fireEvent.click(screen.getByRole('button', { name: /Testar o que aprendi/ }));
     expect(practice).toHaveBeenCalledOnce();

@@ -9,7 +9,7 @@ describe('cenas autorais da Idade Moderna (lote 7B)', () => {
   it.each([
     ['summary-historia-a-primeira-globalizacao', /Primeira Globalização em camadas/, 'metais = riqueza', 'Tráfico transatlântico', 'abolição gradual'],
     ['summary-historia-america-espanhola', /pirâmide de castas/, 'nascidos na América', 'Peninsulares', 'na própria Espanha'],
-    ['summary-historia-reforma-religiosa', /Reforma Religiosa em três tempos/, 'justificação pela fé', 'Concílio de Trento', 'nem a Igreja de antes, nem a simples recusa'],
+    ['summary-historia-reforma-religiosa', /Reforma Religiosa em três tempos/, 'justificação pela fé', 'Concílio de Trento', 'dogmas mantidos, abusos combatidos'],
     ['summary-historia-absolutismo', /direito divino de Bossuet e o contrato de Hobbes/, 'Leviatã', 'Convergência', 'mesma conclusão'],
     ['summary-historia-iluminismo', /mesma base racionalista/, 'O Espírito das Leis · 1748', 'Base racionalista comum', 'mesma base, propostas diferentes'],
   ] as const)('desenha o mecanismo de %s', async (chapterId, name, text, button, after) => {
