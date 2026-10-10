@@ -7,9 +7,9 @@ import { HistoriaGeografia } from './HistoriaGeografia';
 
 describe('cenas autorais do Lote 8 (séculos XIX e XX no mundo)', () => {
   it.each([
-    ['summary-historia-europa-no-seculo-xix', /caminho da revolução.*reforma gradual/, 'Manifesto, 1848', 'Divisão estratégica', 'SPD: voto e negociação'],
+    ['summary-historia-europa-no-seculo-xix', /caminho da revolução.*reforma gradual/, 'Manifesto, 1848', 'Divisão estratégica', 'Bernstein: voto e reformas'],
     ['summary-historia-imperialismo-e-belle-epoque', /dominação direta francesa e dominação indireta britânica/, 'Conferência de Berlim, 1884–1885', 'Mesmo fenômeno', 'chefia local mantida'],
-    ['summary-historia-primeira-guerra-mundial-1914-1918', /alianças rígidas.*Sarajevo como estopim/, 'Tríplice Entente', 'Sarajevo como estopim', 'causa suficiente'],
+    ['summary-historia-primeira-guerra-mundial-1914-1918', /alianças e decisões dos governos.*Sarajevo como estopim/, 'Tríplice Entente', 'Sarajevo como estopim', 'causa suficiente'],
     ['summary-historia-o-periodo-entreguerras-1918-1939', /Crise de 1929.*apaziguamento/, 'outubro de 1929', 'Fracasso do apaziguamento', 'cada concessão encoraja a próxima exigência'],
     ['summary-historia-o-nazismo-na-alemanha', /só em combinação levam a 1933/, 'democracia alemã', 'Nenhum fator isolado', 'Lei de Plenos Poderes'],
     ['summary-historia-descolonizacao-afro-asiatica', /Índia em 1947.*Argélia até 1962/, 'maioria muçulmana', 'Trajetórias diversas', 'postura da metrópole +'],

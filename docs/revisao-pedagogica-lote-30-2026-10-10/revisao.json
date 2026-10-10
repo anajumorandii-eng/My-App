@@ -1,0 +1,2383 @@
+{
+  "schema_version": 1,
+  "base_commit": "3200ea9b67eb00fdb867b287b9d2fed2ba162765",
+  "new_chapters_reviewed": 30,
+  "previous_chapters_revisited": 4,
+  "corrected_chapters": 34,
+  "deep_content_changed": 33,
+  "retrieval_questions_revised": 25,
+  "cumulative_first_pass": {
+    "total": 613,
+    "reviewed": 39,
+    "pending": 574,
+    "previous_report": "docs/revisao-pedagogica-brasil-colonia-2026-10-10/revisao.json"
+  },
+  "formal_validation": {
+    "approved": 0,
+    "in_validation": 81,
+    "not_reviewed": 532
+  },
+  "references": {
+    "skill": "Awesome Design MD",
+    "design": [
+      "Claude",
+      "Miro"
+    ],
+    "adaptation": "Identidade Crivo preservada; nenhuma afiliação. Critérios de clareza, lastro textual e navegação aplicados às cenas existentes."
+  },
+  "validation_scope": {
+    "model_answers": 30,
+    "literal_scene_quotes": "Cenas ativas de 33 capítulos no teste de continuidade.",
+    "browser": {
+      "chapters": 17,
+      "widths": [
+        390,
+        834,
+        1366
+      ],
+      "themes": [
+        "light",
+        "dark"
+      ],
+      "motion": [
+        "reduce",
+        "no-preference"
+      ],
+      "chapter_configuration_visits": 204
+    },
+    "status": "Verificações automatizadas executadas pelo CI da PR; consultar checks do commit final."
+  },
+  "limits": [
+    "Leitura das seções não equivale à certificação bibliográfica de toda afirmação.",
+    "O avaliador lexical não valida negações, associação correta de datas ou todas as relações causais.",
+    "Brasil Atual usa modo de contribuições no componente existente; a classificação interna da família continua pendente de revisão arquitetural.",
+    "Não foi repetida a matriz integral de 7.356 casos nesta rodada.",
+    "Inventário formal preservado; nenhuma promoção de aprovação."
+  ],
+  "chapters": [
+    {
+      "topic": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "chapter_id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall no blob ba2bd0849200d5a5b0f1a4ad44246568a723b4b4.",
+        "Inspeção da cena correspondente ou do registro sem cena em historia.ts, incluindo correspondência de claims/citações.",
+        "Constituição1824: corrigidas demissão de senadores e exclusividade do Poder Moderador; sucessão portuguesa1826 corrigida; recall de voto censitário sem ensino substituído por Confederação do Equador.",
+        "Inspecionados hgLotes.ts, os nove arquivos lote11.ts a lote19.ts e o roteamento SELF_PACED de HistoriaGeografia.tsx.",
+        "Inspecionadas integralmente as pranchas aplicáveis em BrasilImperio.tsx e SegundoReinado/RepublicaEspada em BrasilRepublica.tsx.",
+        "Segundo Reinado e República da Espada têm cenas ativas em lote14.ts; os registros historiaSemCenaBase são removidos pelas entradas HG_LOTE_ENTRIES. A inspeção anterior desses registros não cobria as cenas ativas.",
+        "A prancha StateFormation fala apenas em nomeação de senadores vitalícios; não repete a demissão indevida e não precisa alteração nesse ponto."
+      ],
+      "pending": [
+        "Validação parcial pedagógica e documental, não aprovação formal do capítulo.",
+        "Validação parcial documental e estática; não houve navegador ou aprovação formal."
+      ],
+      "source_urls": [
+        "https://planalto.gov.br/ccivil_03/constituicao/constituicao24.htm",
+        "https://www.parlamento.pt/Parlamento/Paginas/guia-fundo-camara-deputados-1822-1910.aspx",
+        "https://dami.museuimperial.museus.gov.br/dami/handle/acervo/10273"
+      ]
+    },
+    {
+      "topic": "Brasil Império: Segundo Reinado (1840-1889)",
+      "chapter_id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall no blob ba2bd0849200d5a5b0f1a4ad44246568a723b4b4.",
+        "Inspeção da cena correspondente ou do registro sem cena em historia.ts, incluindo correspondência de claims/citações.",
+        "Cronologia cafeeira corrigida; recuperação sobre parlamentarismo e Lei de Terras não ensinados substituída por tráfico interno/escravidão/Exército.",
+        "Inspecionados hgLotes.ts, os nove arquivos lote11.ts a lote19.ts e o roteamento SELF_PACED de HistoriaGeografia.tsx.",
+        "Inspecionadas integralmente as pranchas aplicáveis em BrasilImperio.tsx e SegundoReinado/RepublicaEspada em BrasilRepublica.tsx.",
+        "Segundo Reinado e República da Espada têm cenas ativas em lote14.ts; os registros historiaSemCenaBase são removidos pelas entradas HG_LOTE_ENTRIES. A inspeção anterior desses registros não cobria as cenas ativas.",
+        "A prancha StateFormation fala apenas em nomeação de senadores vitalícios; não repete a demissão indevida e não precisa alteração nesse ponto."
+      ],
+      "pending": [
+        "Validação parcial pedagógica e documental, não aprovação formal do capítulo.",
+        "Validação parcial documental e estática; não houve navegador ou aprovação formal."
+      ],
+      "source_urls": [
+        "https://www.scielo.br/j/tem/a/8BKBmprCYNm34BWBDPcbfKD/?lang=pt",
+        "https://repositorio.fgv.br/bitstreams/0eb6b135-8a30-4323-a187-265087812bd1/download"
+      ]
+    },
+    {
+      "topic": "Brasil Império: o Declínio do Segundo Reinado",
+      "chapter_id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall no blob ba2bd0849200d5a5b0f1a4ad44246568a723b4b4.",
+        "Inspeção da cena correspondente ou do registro sem cena em historia.ts, incluindo correspondência de claims/citações.",
+        "Lei Sexagenários:60anos, com obrigação de serviços distinguida do limite65; Questão Religiosa concretizada; recall sobre inclusão pós-abolição sem ensino substituído por bases de apoio efetivamente tratadas.",
+        "Inspecionados hgLotes.ts, os nove arquivos lote11.ts a lote19.ts e o roteamento SELF_PACED de HistoriaGeografia.tsx.",
+        "Inspecionadas integralmente as pranchas aplicáveis em BrasilImperio.tsx e SegundoReinado/RepublicaEspada em BrasilRepublica.tsx.",
+        "Segundo Reinado e República da Espada têm cenas ativas em lote14.ts; os registros historiaSemCenaBase são removidos pelas entradas HG_LOTE_ENTRIES. A inspeção anterior desses registros não cobria as cenas ativas.",
+        "A prancha StateFormation fala apenas em nomeação de senadores vitalícios; não repete a demissão indevida e não precisa alteração nesse ponto."
+      ],
+      "pending": [
+        "Validação parcial pedagógica e documental, não aprovação formal do capítulo.",
+        "Validação parcial documental e estática; não houve navegador ou aprovação formal."
+      ],
+      "source_urls": [
+        "https://www12.senado.leg.br/noticias/materias/2015/08/31/lei-dos-sexagenarios-completa-130-anos",
+        "https://www12.senado.leg.br/noticias/especiais/arquivo-s/trono-altar-questao-religiosa-teve-prisao-de-bispos-e-enfraqueceu-imperio"
+      ]
+    },
+    {
+      "topic": "Brasil Império: o Período Regencial (1831-1840)",
+      "chapter_id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall no blob ba2bd0849200d5a5b0f1a4ad44246568a723b4b4.",
+        "Inspeção da cena correspondente ou do registro sem cena em historia.ts, incluindo correspondência de claims/citações.",
+        "Maioridade legal18 explicitada; distinção1840/1841 ensinada e retirada confusão com coroação da recuperação.",
+        "Inspecionados hgLotes.ts, os nove arquivos lote11.ts a lote19.ts e o roteamento SELF_PACED de HistoriaGeografia.tsx.",
+        "Inspecionadas integralmente as pranchas aplicáveis em BrasilImperio.tsx e SegundoReinado/RepublicaEspada em BrasilRepublica.tsx.",
+        "Segundo Reinado e República da Espada têm cenas ativas em lote14.ts; os registros historiaSemCenaBase são removidos pelas entradas HG_LOTE_ENTRIES. A inspeção anterior desses registros não cobria as cenas ativas.",
+        "A prancha StateFormation fala apenas em nomeação de senadores vitalícios; não repete a demissão indevida e não precisa alteração nesse ponto."
+      ],
+      "pending": [
+        "Validação parcial pedagógica e documental, não aprovação formal do capítulo.",
+        "Validação parcial documental e estática; não houve navegador ou aprovação formal."
+      ],
+      "source_urls": [
+        "https://planalto.gov.br/ccivil_03/constituicao/constituicao24.htm",
+        "https://www.senado.leg.br/senado/hotsites/histsf/O-Senado-no-2o-Reinado.asp"
+      ]
+    },
+    {
+      "topic": "A República da Espada",
+      "chapter_id": "summary-historia-a-republica-da-espada",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall no blob ba2bd0849200d5a5b0f1a4ad44246568a723b4b4.",
+        "Inspeção da cena correspondente ou do registro sem cena em historia.ts, incluindo correspondência de claims/citações.",
+        "Deodoro: vinte dias entre dissolução/renúncia; Primeira República começa1889; projeto federalista não reduzido à autonomia estadual; recuperação sem ensino de Encilhamento/eleitorado substituída.",
+        "Inspecionados hgLotes.ts, os nove arquivos lote11.ts a lote19.ts e o roteamento SELF_PACED de HistoriaGeografia.tsx.",
+        "Inspecionadas integralmente as pranchas aplicáveis em BrasilImperio.tsx e SegundoReinado/RepublicaEspada em BrasilRepublica.tsx.",
+        "Segundo Reinado e República da Espada têm cenas ativas em lote14.ts; os registros historiaSemCenaBase são removidos pelas entradas HG_LOTE_ENTRIES. A inspeção anterior desses registros não cobria as cenas ativas.",
+        "A prancha StateFormation fala apenas em nomeação de senadores vitalícios; não repete a demissão indevida e não precisa alteração nesse ponto."
+      ],
+      "pending": [
+        "Validação parcial pedagógica e documental, não aprovação formal do capítulo.",
+        "Validação parcial documental e estática; não houve navegador ou aprovação formal."
+      ],
+      "source_urls": [
+        "https://www.camara.leg.br/noticias/545319-parlamento-brasileiro-foi-fechado-ou-dissolvido-18-vezes/",
+        "https://cpdoc.fgv.br/artigos/revolucao-30",
+        "https://www2.camara.leg.br/a-camara/conheca/historia/a1republica.html/",
+        "https://atlas.fgv.br/verbetes/revolucao-federalista"
+      ]
+    },
+    {
+      "topic": "Ascensão e Domínio das Oligarquias",
+      "chapter_id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall no blob ba2bd0849200d5a5b0f1a4ad44246568a723b4b4.",
+        "Inspeção da cena correspondente ou do registro sem cena em historia.ts, incluindo correspondência de claims/citações.",
+        "Voto aberto/garantias1932 corrigidos; Convênio de Taubaté agora nomeado e explicado para sustentar recall; interesses e custos da valorização qualificados.",
+        "Inspecionados hgLotes.ts, os nove arquivos lote11.ts a lote19.ts e o roteamento SELF_PACED de HistoriaGeografia.tsx.",
+        "Inspecionadas integralmente as pranchas aplicáveis em BrasilImperio.tsx e SegundoReinado/RepublicaEspada em BrasilRepublica.tsx.",
+        "Segundo Reinado e República da Espada têm cenas ativas em lote14.ts; os registros historiaSemCenaBase são removidos pelas entradas HG_LOTE_ENTRIES. A inspeção anterior desses registros não cobria as cenas ativas.",
+        "A prancha StateFormation fala apenas em nomeação de senadores vitalícios; não repete a demissão indevida e não precisa alteração nesse ponto."
+      ],
+      "pending": [
+        "Validação parcial pedagógica e documental, não aprovação formal do capítulo.",
+        "Validação parcial documental e estática; não houve navegador ou aprovação formal."
+      ],
+      "source_urls": [
+        "https://www.tse.jus.br/comunicacao/noticias/2019/Fevereiro/serie-87-anos-codigo-eleitoral-de-1932-regulamentou-e-organizou-eleicoes-no-pais/",
+        "https://atlas.fgv.br/verbetes/convenio-de-taubate",
+        "https://cpdoc.fgv.br/sites/default/files/verbetes/primeira-republica/CONV%C3%8ANIO%20DE%20TAUBAT%C3%89.pdf"
+      ]
+    },
+    {
+      "topic": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+      "chapter_id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções do capítulo na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Conferência de continuidade entre explicações, pegadinhas, prática e recuperação.",
+        "Conferência das entradas correspondentes de historia.ts; preservados chapterId, family e desenho das cenas.",
+        "Correções da alternância rígida e da motivação do assassinato de João Pessoa.",
+        "Recall reformulado para usar críticas do tenentismo efetivamente ensinadas.",
+        "Inspecionados hgLotes.ts, todos os agregados lote11.ts–lote19.ts e os módulos EraVargas.tsx, BrasilRepublica.tsx e BrasilImperio.tsx na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Cenas e recortes ativos comparados às alterações propostas no primeiro arquivo.",
+        "Não encontrado recorte ou rótulo que demande patch adicional."
+      ],
+      "pending": [
+        "Validação de sintaxe, teste de literalidade com os dois arquivos de proposta aplicados e inspeção visual em navegador a cargo da integração; esta revisão foi textual."
+      ],
+      "source_urls": [
+        "https://www.pucrs.br/humanidades/wp-content/uploads/sites/30/2016/03/Federalismo-Argentina.pdf",
+        "https://cpdoc.fgv.br/sites/default/files/verbetes/primeira-republica/REVOLU%C3%87%C3%83O%20DE%201930.pdf"
+      ]
+    },
+    {
+      "topic": "A Era Vargas",
+      "chapter_id": "summary-historia-a-era-vargas",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções do capítulo na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Conferência de continuidade entre explicações, pegadinhas, prática e recuperação.",
+        "Conferência das entradas correspondentes de historia.ts; preservados chapterId, family e desenho das cenas.",
+        "Corrigidos órgão que promulgou a Constituição e órgão que elegeu Vargas, cronologia eleitoral e controle sindical.",
+        "Recall corrige voto feminino/secreto: Código de 1932, confirmação em 1934.",
+        "Quotes afetadas foram sincronizadas.",
+        "Inspecionados hgLotes.ts, todos os agregados lote11.ts–lote19.ts e os módulos EraVargas.tsx, BrasilRepublica.tsx e BrasilImperio.tsx na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Cenas e recortes ativos comparados às alterações propostas no primeiro arquivo.",
+        "Identificado rótulo sob documento de 1934 sem a origem eleitoral de 1932."
+      ],
+      "pending": [
+        "Validação de sintaxe, teste de literalidade com os dois arquivos de proposta aplicados e inspeção visual em navegador a cargo da integração; esta revisão foi textual."
+      ],
+      "source_urls": [
+        "https://www.pucrs.br/humanidades/wp-content/uploads/sites/30/2016/03/Federalismo-Argentina.pdf",
+        "https://www.tse.jus.br/servicos-eleitorais/glossario/termos/voto-da-mulher",
+        "https://www2.camara.leg.br/legin/fed/consti/1930-1939/constituicao-1934-16-julho-1934-365196-publicacaooriginal-1-pl.html",
+        "https://www.tse.jus.br/hotsites/eleicoes-de-1933/index.html",
+        "https://legis.senado.leg.br/norma/437677/publicacao/15770077"
+      ]
+    },
+    {
+      "topic": "A Era Vargas: o Estado Novo",
+      "chapter_id": "summary-historia-a-era-vargas-o-estado-novo",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções do capítulo na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Conferência de continuidade entre explicações, pegadinhas, prática e recuperação.",
+        "Conferência das entradas correspondentes de historia.ts; preservados chapterId, family e desenho das cenas.",
+        "Corrigidos início do corporativismo, aposentadoria atribuída à CLT e financiamento da CSN confundido com envio posterior da FEB.",
+        "Confirmada ausência de recall próprio na base; proposta de adição fundamentada no capítulo.",
+        "Inspecionados hgLotes.ts, todos os agregados lote11.ts–lote19.ts e os módulos EraVargas.tsx, BrasilRepublica.tsx e BrasilImperio.tsx na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Cenas e recortes ativos comparados às alterações propostas no primeiro arquivo.",
+        "CSN e FEB desenhadas lado a lado; rótulo de crédito deve incluir data para impedir leitura cronológica equivocada."
+      ],
+      "pending": [
+        "A explicação da queda de 1945 e a cena ainda tratam a contradição da guerra como inevitabilidade política; convém aprofundar a coalizão de oposição, o queremismo e o temor de continuidade de Vargas antes de emitir aprovação pedagógica abrangente.",
+        "Validação de sintaxe, teste de literalidade com os dois arquivos de proposta aplicados e inspeção visual em navegador a cargo da integração; esta revisão foi textual."
+      ],
+      "source_urls": [
+        "https://legis.senado.leg.br/norma/437677/publicacao/15770077",
+        "https://atlas.fgv.br/verbete/5458",
+        "https://www.gov.br/previdencia/pt-br/acesso-a-informacao/legislacao/previdencia/historico/periodo-de-1888-1933"
+      ]
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "chapter_id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções do capítulo na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Conferência de continuidade entre explicações, pegadinhas, prática e recuperação.",
+        "Conferência das entradas correspondentes de historia.ts; preservados chapterId, family e desenho das cenas.",
+        "Corrigidos estado de sítio/estado de guerra, autoria e uso do Plano Cohen e descrição da inspiração polonesa.",
+        "Claims e quotes afetadas sincronizados; recall existente permanece coerente.",
+        "Inspecionados hgLotes.ts, todos os agregados lote11.ts–lote19.ts e os módulos EraVargas.tsx, BrasilRepublica.tsx e BrasilImperio.tsx na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Cenas e recortes ativos comparados às alterações propostas no primeiro arquivo.",
+        "Não encontrado recorte ou rótulo que demande patch adicional."
+      ],
+      "pending": [
+        "A frase sobre confrontos de rua frequentes entre AIB e ANL requer investigação específica; a revisão não validou frequência nem ligação causal direta entre esses confrontos e a insurreição de 1935.",
+        "Validação de sintaxe, teste de literalidade com os dois arquivos de proposta aplicados e inspeção visual em navegador a cargo da integração; esta revisão foi textual."
+      ],
+      "source_urls": [
+        "https://atlas.fgv.br/verbete/5458",
+        "https://atlas.fgv.br/verbete/3707",
+        "https://atlas.fgv.br/verbete/1005"
+      ]
+    },
+    {
+      "topic": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+      "chapter_id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções do capítulo na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Conferência de continuidade entre explicações, pegadinhas, prática e recuperação.",
+        "Conferência das entradas correspondentes de historia.ts; preservados chapterId, family e desenho das cenas.",
+        "Corrigido retorno à legalidade do PCB em 1985.",
+        "Recall anterior exigia analfabetismo e parlamentarismo sem ensinar esses pontos nas cinco seções; substituído por conteúdo presente.",
+        "historia.ts contém apenas registro de lacuna neste tópico; não se criou cena nova.",
+        "Inspecionados hgLotes.ts, todos os agregados lote11.ts–lote19.ts e os módulos EraVargas.tsx, BrasilRepublica.tsx e BrasilImperio.tsx na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Correção do relatório anterior: ambos os capítulos República Liberal têm entradas ativas em lote14.ts e desenhos em BrasilRepublica.tsx, apesar de constarem da lista-base de lacunas em historia.ts.",
+        "Não encontrado recorte ou rótulo que demande patch adicional."
+      ],
+      "pending": [
+        "Validação de sintaxe, teste de literalidade com os dois arquivos de proposta aplicados e inspeção visual em navegador a cargo da integração; esta revisão foi textual."
+      ],
+      "source_urls": [
+        "https://www.tse.jus.br/jurisprudencia/julgados-historicos/cancelamento-de-registro-do-partido-comunista-brasileiro"
+      ]
+    },
+    {
+      "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "chapter_id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções do capítulo na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Conferência de continuidade entre explicações, pegadinhas, prática e recuperação.",
+        "Conferência das entradas correspondentes de historia.ts; preservados chapterId, family e desenho das cenas.",
+        "Corrigida distinção entre 30 metas setoriais e Brasília; removida descrição do interior como praticamente desabitado.",
+        "Recall anterior exigia apoio civil ao golpe e reformas de base, ausentes das cinco seções; substituído por conteúdo presente.",
+        "historia.ts contém apenas registro de lacuna neste tópico; não se criou cena nova.",
+        "Inspecionados hgLotes.ts, todos os agregados lote11.ts–lote19.ts e os módulos EraVargas.tsx, BrasilRepublica.tsx e BrasilImperio.tsx na base 3200ea9b67eb00fdb867b287b9d2fed2ba162765.",
+        "Correção do relatório anterior: ambos os capítulos República Liberal têm entradas ativas em lote14.ts e desenhos em BrasilRepublica.tsx, apesar de constarem da lista-base de lacunas em historia.ts.",
+        "Identificados claim e duas quotes stale em lote14.ts e dois textos stale no desenho."
+      ],
+      "pending": [
+        "O capítulo intitulado 'Desenvolvimentismo e Populismo' não define populismo nem seus limites historiográficos; revisão de escopo maior poderia completar esse conceito.",
+        "Validação de sintaxe, teste de literalidade com os dois arquivos de proposta aplicados e inspeção visual em navegador a cargo da integração; esta revisão foi textual."
+      ],
+      "source_urls": [
+        "https://atlas.fgv.br/verbete/6321",
+        "https://atlas.ipe.df.gov.br/?p=1714"
+      ]
+    },
+    {
+      "topic": "Regime Militar (1964-1985) I",
+      "chapter_id": "summary-historia-regime-militar-1964-1985-i",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall.",
+        "Precisados alcance do habeas corpus e relação entre AI-5 e censura.",
+        "Retirada metáfora do bolo da cobrança, pois não era ensinada.",
+        "Milagre 1968–1973, repressão e endividamento examinados; sem alteração de datas desses processos.",
+        "historia.ts registra capítulo sem cena; nenhuma citação visual ativa a atualizar.",
+        "Cena ativa localizada em lote14.ts, agregada via hgLotes; companions corrigem claim e quote após primeiro lote."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://www.planalto.gov.br/ccivil_03/ait/ait-05-68.htm"
+      ]
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "chapter_id": "summary-historia-regime-militar-1964-1985-ii",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall.",
+        "Corrigida anistia: texto legal, exclusões e interpretação de crimes conexos.",
+        "Precisada vigência da revogação do AI-5 e cronologia Tancredo–Sarney.",
+        "Diretas Já, eleição indireta e crise econômica examinadas.",
+        "historia.ts registra capítulo sem cena; nenhuma citação visual ativa a atualizar.",
+        "Cena ativa e prancha BrasilRepublica.tsx conferidas; datas e claims corrigidos; quote restaura lastro."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://www2.camara.leg.br/legin/fed/lei/1970-1979/lei-6683-28-agosto-1979-366522-publicacaooriginal-1-pl.html",
+        "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc_anterior1988/emc11-78.htm",
+        "https://stf.jus.br/arquivo/informativo/documento/informativo584.htm",
+        "https://noticias.stf.jus.br/postsnoticias/psol-questiona-em-acao-os-efeitos-da-lei-da-anistia/",
+        "https://www12.senado.leg.br/noticias/infomaterias/2025/03/a-redemocratizacao-em-dez-atos"
+      ]
+    },
+    {
+      "topic": "O Brasil Atual",
+      "chapter_id": "summary-historia-o-brasil-atual",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall.",
+        "Retirada afirmação de solução definitiva; ensinadas fases do Real e função da URV.",
+        "Recall passou a cobrar participação democrática ensinada, sem exigir direitos indígenas/quilombolas ausentes das seções.",
+        "Cena e suas quatro citações conferidas; claim de necessidade dos três fatores substituído por contribuição combinada, mantendo citações exatas.",
+        "Conferidos TopicScene.tsx, HistoriaGeografia.tsx e CriteriosConjuntivos.tsx: Brasil Atual usa o renderer conjuntivo genérico, sem SVG ou animação de causalidade própria.",
+        "Preservados quatro recortes, interação de seleção, citações e animação de realce; removido veredito lógico neste capítulo.",
+        "Os primeiros três quotes permanecem literais; o quarto acompanha a pegadinha corrigida."
+      ],
+      "pending": [
+        "family metadata permanece 'criterios-conjuntivos' por compatibilidade com o catálogo: a leitura efetiva ganha exceção honesta de contribuições. Root deve decidir posteriormente a classificação; não há prova de necessidade conjunta para esta cena."
+      ],
+      "source_urls": [
+        "https://www.bcb.gov.br/controleinflacao/planoreal?modalAberto=30anosreal_noticia1"
+      ]
+    },
+    {
+      "topic": "América Latina no Século XX",
+      "chapter_id": "summary-historia-america-latina-no-seculo-xx",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall.",
+        "Separadas Revolução Cubana de 1959 e declaração socialista de 1961.",
+        "Recall passou a cobrar mobilização e direitos trabalhistas ensinados, sem cobrar controle sindical ausente.",
+        "Datadas ditaduras, Operação Condor, trajetórias brasileira/argentina e justiça de transição examinadas.",
+        "historia.ts registra capítulo sem cena; nenhuma citação visual ativa a atualizar."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://history.state.gov/historicaldocuments/frus1961-63v10/d189",
+        "https://www.gov.br/memoriasreveladas/pt-br/centrais-de-conteudo/destaques/doi-codi-violencia-institucionalizada/"
+      ]
+    },
+    {
+      "topic": "América no Século XIX",
+      "chapter_id": "summary-historia-america-no-seculo-xix",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall.",
+        "Corrigida anexação do Texas em 1845, anterior à guerra.",
+        "Retirada oposição simplificadora entre Brasil pacífico e América hispânica sem monarquias.",
+        "Preservada centralidade da escravidão nas causas da Guerra Civil.",
+        "Recall passou a cobrar fragmentação e dependência ensinadas, sem Doutrina Monroe ou dificuldades geográficas não explicadas.",
+        "historia.ts registra capítulo sem cena; nenhuma citação visual ativa a atualizar."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://history.state.gov/milestones/1830-1860/texas-annexation",
+        "https://www.gov.br/arquivonacional/pt-br/sites_eventos/sites-tematicos-1/brasil-oitocentista/especial-bicentenario-da-independencia/apontamentos-sobre-a-independencia-do-brasil-na-bahia",
+        "https://www.marinha.mil.br/comemch/guerra-da-independencia",
+        "https://www.nps.gov/liho/learn/historyculture/slavery-cause-civil-war.htm",
+        "https://www.gob.mx/agn/articulos/agnresguarda-el-plan-que-termino-con-un-imperio"
+      ]
+    },
+    {
+      "topic": "Descolonização Afro-Asiática",
+      "chapter_id": "summary-historia-descolonizacao-afro-asiatica",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral das cinco seções e do recall.",
+        "Cinco seções lidas: contexto pós-guerra, trajetórias, heranças, pegadinhas e prática.",
+        "Recall passou a cobrar heranças e trajetórias ensinadas, sem exigir Bandung ou capitais/tecnologia não explicados.",
+        "Cena Índia/Argélia e três citações conferidas literalmente; preservadas."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://www.un.org/dppa/decolonization/en/about"
+      ]
+    },
+    {
+      "topic": "A Primeira Globalização",
+      "chapter_id": "summary-historia-a-primeira-globalizacao",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Lidas integralmente as cinco seções e o recall.",
+        "Conferidos 1492/1498, intercâmbio biológico, coerção colonial e cronologia indígena/africana.",
+        "Cena de camadas revisada; quotes da coerção sincronizadas.",
+        "Recall de colapso demográfico passou a ter violência e trabalho compulsório ensinados na seção.",
+        "Conferidos hgLotes e lote11–19: nenhum duplica os seis chapterIds deste grupo. Conferidas figuras em SeculoXX, IdadeModerna e HistorianIllustration; HistoriaMundial não contém os seis IDs."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://openstax.org/books/us-history/pages/2-4-new-worlds-in-the-americas-labor-commerce-and-the-columbian-exchange",
+        "https://revistas.usp.br/revmae/pt_BR/article/view/89832",
+        "https://historialuso.arquivonacional.gov.br/index.php/historia-luso-brasileira/assuntos/brasil/sociedade-do-acucar"
+      ]
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "chapter_id": "summary-historia-europa-no-seculo-xix",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Lidas integralmente as cinco seções e o recall.",
+        "Corrigida ordem Congresso/Waterloo e etapas italianas 1861/1866/1870.",
+        "Corrigida generalização de SPD exclusivamente reformista e sincronizada cena com Bernstein.",
+        "Recall substitui ludismo e cartismo, ausentes das cinco seções, por estratégias ensinadas.",
+        "Conferidos hgLotes e lote11–19: nenhum duplica os seis chapterIds deste grupo. Conferidas figuras em SeculoXX, IdadeModerna e HistorianIllustration; HistoriaMundial não contém os seis IDs."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://digital.wienbibliothek.at/wbrobv/content/titleinfo/2293309",
+        "https://www.napoleon.org/en/history-of-the-two-empires/articles/napoleon-and-saint-helena-1815-1816/",
+        "https://library.fes.de/fulltext/bibliothek/chronik/band1/e235e488.html",
+        "https://archivio.quirinale.it/aspr/gianni-bisiach/AV-002-000399/17-marzo-1861-vittorio-emanuele-ii-primo-re-d-italia"
+      ]
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "chapter_id": "summary-historia-imperialismo-e-belle-epoque",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Lidas integralmente as cinco seções e o recall.",
+        "Berlim não traçou todo o mapa nem reuniu exclusivamente europeus.",
+        "Estado Livre do Congo distinguido de Congo Belga, incluindo prática e pegadinha.",
+        "Cena de dominação direta/indireta preservada: suas quotes não são alteradas.",
+        "Recall exige regras coloniais, sem legitimar mito de mapa pronto.",
+        "Conferidos hgLotes e lote11–19: nenhum duplica os seis chapterIds deste grupo. Conferidas figuras em SeculoXX, IdadeModerna e HistorianIllustration; HistoriaMundial não contém os seis IDs."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://archiv.diplo.de/arc-de/das-politische-archiv/generalakte-2683776",
+        "https://www.afrikamuseum.be/en/about_us/viewpoints",
+        "https://www.afrikamuseum.be/en/discover/history"
+      ]
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "chapter_id": "summary-historia-primeira-guerra-mundial-1914-1918",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Lidas integralmente as cinco seções e o recall.",
+        "Alianças conferidas com ressalva de Itália neutra em 1914 e Entente em 1915.",
+        "Corrigido automatismo causal em teoria, prática e cena.",
+        "Artigo 231 distingue responsabilidade alemã e de aliados pelos danos.",
+        "Mortos em Verdun e Somme não foram confundidos com baixas; ordem de grandeza preservada.",
+        "Conferidos hgLotes e lote11–19: nenhum duplica os seis chapterIds deste grupo. Conferidas figuras em SeculoXX, IdadeModerna e HistorianIllustration; HistoriaMundial não contém os seis IDs."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://www.iwm.org.uk/history/first-world-war/outbreak",
+        "https://www.theworldwar.org/learn/about-wwi/italy-enters-world-war-i",
+        "https://history.state.gov/historicaldocuments/frus1919Parisv13/ch17subch1",
+        "https://memorial-verdun.fr/en/ressources/la-bataille-de-verdun"
+      ]
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "chapter_id": "summary-historia-o-periodo-entreguerras-1918-1939",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Lidas integralmente as cinco seções e o recall.",
+        "Crise de 1929 não apresentada como origem de Mussolini em 1922.",
+        "Nomeação real sob pressão fascista explicada.",
+        "Grande Terror delimitado em 1937-1938.",
+        "Cena conserva estrutura e explicita contextos diferentes; recall econômico continua ancorado no ensino.",
+        "Conferidos hgLotes e lote11–19: nenhum duplica os seis chapterIds deste grupo. Conferidas figuras em SeculoXX, IdadeModerna e HistorianIllustration; HistoriaMundial não contém os seis IDs."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://encyclopedia.ushmm.org/content/en/article/benito-mussolini-1",
+        "https://www.bpb.de/shop/zeitschriften/apuz/archiv/537822/stalinistischer-terror-genese-und-praxis-der-kommunistischen-gewaltherrschaft-in-der-sowjetunion-1917-1953/"
+      ]
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "chapter_id": "summary-historia-o-nazismo-na-alemanha",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Lidas integralmente as cinco seções e o recall.",
+        "Wannsee corrigida na teoria e pegadinha: implementação coordenada, genocídio anterior.",
+        "Definição de Holocausto distingue genocídio judeu e demais crimes nazistas sem apagar outras vítimas.",
+        "Nomeação legal formal distinguida da repressão e intimidação na implantação da ditadura.",
+        "Recall não exige Leis de Nuremberg, ausentes do ensino; exige Wannsee e mecanismo ditatorial.",
+        "Cena de ascensão retira inferência de ciclo econômico contínuo a partir de 1923.",
+        "Conferidos hgLotes e lote11–19: nenhum duplica os seis chapterIds deste grupo. Conferidas figuras em SeculoXX, IdadeModerna e HistorianIllustration; HistoriaMundial não contém os seis IDs."
+      ],
+      "pending": [],
+      "source_urls": [
+        "https://encyclopedia.ushmm.org/content/en/article/wannsee-conference-and-the-final-solution",
+        "https://encyclopedia.ushmm.org/content/en/article/introduction-to-the-holocaust",
+        "https://encyclopedia.ushmm.org/content/en/article/the-enabling-act",
+        "https://www.ushmm.org/learn/introduction-to-the-holocaust/path-to-nazi-genocide/chapter-1/aftermath-of-world-war-i-and-the-rise-of-nazism-1918-1933",
+        "https://history.state.gov/historicaldocuments/frus1919Parisv13/ch17subch1"
+      ]
+    },
+    {
+      "topic": "Grandes Revoluções do Século XX",
+      "chapter_id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral da seção: Revolução Russa",
+        "Leitura integral da seção: Revolução Mexicana",
+        "Leitura integral da seção: Revolução Chinesa",
+        "Leitura integral da seção: Pegadinhas frequentes",
+        "Leitura integral da seção: Pratique e confira",
+        "Leitura integral de recall.prompt e dos três elementos/keywords originais.",
+        "historia.ts: verificada entrada correspondente ou motivo de ausencia de cena; claims e quotes comparados ao resumo.",
+        "Cronologias Rússia 1917/1922, México 1910–1920/1917/1938 e China 1949/1958–1962/1966–1976/1978: nenhuma troca de datas necessária.",
+        "Prática 2 continha falsa consolidação rápida e desfecho mexicano em 1917; proposta corrige as duas premissas.",
+        "Recall retirou nomes/data como atalhos de pontuação; reforma agrária passa a ser resposta válida à inovação constitucional.",
+        "Inspecionados hgLotes.ts e lote11.ts a lote19.ts no commit-base; Grandes Revoluções, WWII e Guerra Fria possuem entradas ativas em lote13.ts; Francesa, Industrial e Fim da Guerra Fria usam historia.ts.",
+        "Inspecionados integralmente HistoriaGeografia.tsx, HumanitiesPrototypes.tsx, HumanitiesCorePlate.tsx, HistorianIllustration.tsx e recortes relevantes de HistoriaMundial.tsx.",
+        "Não há legenda textual 13h, 1833, treze horas ou deformidades no renderer industrial destes arquivos ao commit-base; os números 13 existentes pertencem à geometria SVG.",
+        "Complemento valida as quotes ativas Guerra Fria depois dos patches do primeiro arquivo."
+      ],
+      "pending": [
+        "Revisão deste grupo é parcial do lote; não constitui aprovação pedagógica formal de todo o conteúdo.",
+        "Keywords não validam negação ou associação correta de datas; testes de respostas contraditórias devem explicitar essa limitação do avaliador.",
+        "Aplicar cumulativamente com propostas-revolucoes.json; metadados de acesso acima refinam os acessos genéricos da primeira proposta."
+      ],
+      "source_urls": [
+        "https://encyclopedia.ushmm.org/content/en/article/the-russian-revolution-1917",
+        "https://www.marxists.org/archive/lenin/works/1917/dec/06.htm"
+      ]
+    },
+    {
+      "topic": "Guerra Fria",
+      "chapter_id": "summary-historia-guerra-fria",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral da seção: Bipolaridade",
+        "Leitura integral da seção: Conflitos e corridas",
+        "Leitura integral da seção: Terceiro Mundo e não alinhamento",
+        "Leitura integral da seção: Pegadinhas frequentes",
+        "Leitura integral da seção: Pratique e confira",
+        "Leitura integral de recall.prompt e dos três elementos/keywords originais.",
+        "historia.ts: verificada entrada correspondente ou motivo de ausencia de cena; claims e quotes comparados ao resumo.",
+        "Corrigidas origem do NAM (Belgrado 1961) em seção e prática, e causa imediata de Varsóvia (adesão da RFA 1955) em seção e pegadinha.",
+        "Demais cronologias e contraste contenção/destruição mútua examinados; nenhuma mudança necessária.",
+        "Recall elimina palavras genéricas como direto/confronto/apoio isoladas.",
+        "Inspecionados hgLotes.ts e lote11.ts a lote19.ts no commit-base; Grandes Revoluções, WWII e Guerra Fria possuem entradas ativas em lote13.ts; Francesa, Industrial e Fim da Guerra Fria usam historia.ts.",
+        "Inspecionados integralmente HistoriaGeografia.tsx, HumanitiesPrototypes.tsx, HumanitiesCorePlate.tsx, HistorianIllustration.tsx e recortes relevantes de HistoriaMundial.tsx.",
+        "Não há legenda textual 13h, 1833, treze horas ou deformidades no renderer industrial destes arquivos ao commit-base; os números 13 existentes pertencem à geometria SVG.",
+        "Complemento valida as quotes ativas Guerra Fria depois dos patches do primeiro arquivo."
+      ],
+      "pending": [
+        "Revisão deste grupo é parcial do lote; não constitui aprovação pedagógica formal de todo o conteúdo.",
+        "Keywords não validam negação ou associação correta de datas; testes de respostas contraditórias devem explicitar essa limitação do avaliador.",
+        "Aplicar cumulativamente com propostas-revolucoes.json; metadados de acesso acima refinam os acessos genéricos da primeira proposta."
+      ],
+      "source_urls": [
+        "https://nam.go.ug/history",
+        "https://www.nato.int/cps/en/natohq/declassified_138294.htm"
+      ]
+    },
+    {
+      "topic": "O Fim da Guerra Fria",
+      "chapter_id": "summary-historia-o-fim-da-guerra-fria",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral da seção: Crise soviética",
+        "Leitura integral da seção: 1989 e a dissolução",
+        "Leitura integral da seção: Nova ordem",
+        "Leitura integral da seção: Pegadinhas frequentes",
+        "Leitura integral da seção: Pratique e confira",
+        "Leitura integral de recall.prompt e dos três elementos/keywords originais.",
+        "historia.ts: verificada entrada correspondente ou motivo de ausencia de cena; claims e quotes comparados ao resumo.",
+        "1989 e dezembro de 1991 estão distinguidos corretamente; cenas citam literalmente as seções de origem.",
+        "Recall antigo exigia que perestroika 'desorganizou' a economia sem esse mecanismo ser ensinado; substituído por distinção efetivamente explicada.",
+        "Interpretações de nova ordem e pesos relativos da não intervenção/pressões internas são sínteses; não converteram-se em novos fatos absolutos.",
+        "Inspecionados hgLotes.ts e lote11.ts a lote19.ts no commit-base; Grandes Revoluções, WWII e Guerra Fria possuem entradas ativas em lote13.ts; Francesa, Industrial e Fim da Guerra Fria usam historia.ts.",
+        "Inspecionados integralmente HistoriaGeografia.tsx, HumanitiesPrototypes.tsx, HumanitiesCorePlate.tsx, HistorianIllustration.tsx e recortes relevantes de HistoriaMundial.tsx.",
+        "Não há legenda textual 13h, 1833, treze horas ou deformidades no renderer industrial destes arquivos ao commit-base; os números 13 existentes pertencem à geometria SVG.",
+        "Complemento valida as quotes ativas Guerra Fria depois dos patches do primeiro arquivo."
+      ],
+      "pending": [
+        "Revisão deste grupo é parcial do lote; não constitui aprovação pedagógica formal de todo o conteúdo.",
+        "Keywords não validam negação ou associação correta de datas; testes de respostas contraditórias devem explicitar essa limitação do avaliador.",
+        "Aplicar cumulativamente com propostas-revolucoes.json; metadados de acesso acima refinam os acessos genéricos da primeira proposta."
+      ],
+      "source_urls": [
+        "https://history.state.gov/milestones/1989-1992/collapse-soviet-union",
+        "https://www.nato.int/cps/en/natohq/declassified_136603.htm"
+      ]
+    },
+    {
+      "topic": "Segunda Guerra Mundial (1939-1945)",
+      "chapter_id": "summary-historia-segunda-guerra-mundial-1939-1945",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral da seção: Desenvolvimento do conflito",
+        "Leitura integral da seção: Frente do Pacífico e bombas atômicas",
+        "Leitura integral da seção: Consequências",
+        "Leitura integral da seção: Pegadinhas frequentes",
+        "Leitura integral da seção: Pratique e confira",
+        "Leitura integral de recall.prompt e dos três elementos/keywords originais.",
+        "historia.ts: verificada entrada correspondente ou motivo de ausencia de cena; claims e quotes comparados ao resumo.",
+        "Frentes, Stalingrado, consequências e prática lidas; corrige invasão 'soviética' ambígua em 1941.",
+        "Bombas: dois ataques, não um; considerar entrada soviética e distinguir anúncio em agosto da formalização em 2/9/1945.",
+        "Recall cobrava Plano Marshall ausente das cinco seções e maiores perdas alemãs não explicitadas; substituído por Stalingrado e objetivo da ONU ensinado.",
+        "Inspecionados hgLotes.ts e lote11.ts a lote19.ts no commit-base; Grandes Revoluções, WWII e Guerra Fria possuem entradas ativas em lote13.ts; Francesa, Industrial e Fim da Guerra Fria usam historia.ts.",
+        "Inspecionados integralmente HistoriaGeografia.tsx, HumanitiesPrototypes.tsx, HumanitiesCorePlate.tsx, HistorianIllustration.tsx e recortes relevantes de HistoriaMundial.tsx.",
+        "Não há legenda textual 13h, 1833, treze horas ou deformidades no renderer industrial destes arquivos ao commit-base; os números 13 existentes pertencem à geometria SVG.",
+        "Complemento valida as quotes ativas Guerra Fria depois dos patches do primeiro arquivo."
+      ],
+      "pending": [
+        "Revisão deste grupo é parcial do lote; não constitui aprovação pedagógica formal de todo o conteúdo.",
+        "Keywords não validam negação ou associação correta de datas; testes de respostas contraditórias devem explicitar essa limitação do avaliador.",
+        "Aplicar cumulativamente com propostas-revolucoes.json; metadados de acesso acima refinam os acessos genéricos da primeira proposta."
+      ],
+      "source_urls": [
+        "https://history.state.gov/milestones/1937-1945/us-soviet",
+        "https://www.archives.gov/exhibits/featured-documents/japanese-surrender-document"
+      ]
+    },
+    {
+      "topic": "Revolução Francesa",
+      "chapter_id": "summary-historia-revolucao-francesa",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral da seção: Crise do Antigo Regime",
+        "Leitura integral da seção: De 1789 à monarquia constitucional",
+        "Leitura integral da seção: República, radicalização e conflitos",
+        "Leitura integral da seção: Direitos proclamados e exclusões",
+        "Leitura integral da seção: Pratique e confira",
+        "Verificada ausência de recall no objeto original.",
+        "historia.ts: verificada entrada correspondente ou motivo de ausencia de cena; claims e quotes comparados ao resumo.",
+        "Corrigida confusão Assembleia Nacional em junho/Constituinte em julho também no claim e quote da cena.",
+        "Crise fiscal, Bastilha, direitos/exclusões, República e Terror examinados; não há erro inequívoco adicional que exija troca nesta revisão.",
+        "Recall ausente no original; proposta adiciona recuperação de crise fiscal e exclusões.",
+        "Inspecionados hgLotes.ts e lote11.ts a lote19.ts no commit-base; Grandes Revoluções, WWII e Guerra Fria possuem entradas ativas em lote13.ts; Francesa, Industrial e Fim da Guerra Fria usam historia.ts.",
+        "Inspecionados integralmente HistoriaGeografia.tsx, HumanitiesPrototypes.tsx, HumanitiesCorePlate.tsx, HistorianIllustration.tsx e recortes relevantes de HistoriaMundial.tsx.",
+        "Não há legenda textual 13h, 1833, treze horas ou deformidades no renderer industrial destes arquivos ao commit-base; os números 13 existentes pertencem à geometria SVG.",
+        "Complemento valida as quotes ativas Guerra Fria depois dos patches do primeiro arquivo."
+      ],
+      "pending": [
+        "Revisão deste grupo é parcial do lote; não constitui aprovação pedagógica formal de todo o conteúdo.",
+        "Keywords não validam negação ou associação correta de datas; testes de respostas contraditórias devem explicitar essa limitação do avaliador.",
+        "Aplicar cumulativamente com propostas-revolucoes.json; metadados de acesso acima refinam os acessos genéricos da primeira proposta."
+      ],
+      "source_urls": [
+        "https://www.assemblee-nationale.fr/dyn/histoire-et-patrimoine/revolution-francaise/assemblee-nationale-constituante"
+      ]
+    },
+    {
+      "topic": "Revolução Industrial",
+      "chapter_id": "summary-historia-revolucao-industrial",
+      "scope": "Cinco seções, recuperação e cenas ativas; verificação documental seletiva dos achados.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "checks": [
+        "Leitura integral da seção: Uma transformação da produção e do trabalho",
+        "Leitura integral da seção: Cercamentos e trabalho assalariado",
+        "Leitura integral da seção: Resistências e direitos",
+        "Leitura integral da seção: Fonte comparada",
+        "Leitura integral da seção: Pratique e confira",
+        "Verificada ausência de recall no objeto original.",
+        "historia.ts: verificada entrada correspondente ou motivo de ausencia de cena; claims e quotes comparados ao resumo.",
+        "Comparação de fontes sem autoria, título ou documento e números exatos não verificáveis foi substituída por inquéritos/comissão real versus Factory Act 1833.",
+        "Claim e quote da cena sincronizados com a seção Fonte comparada; IDs e família preservados.",
+        "Cercamentos/prática: retirada premissa de necessidade histórica absoluta; mecanismo perda de acesso/trabalho assalariado permanece.",
+        "Recall ausente no original; proposta adiciona cercamentos, ludismo e cartismo.",
+        "Inspecionados hgLotes.ts e lote11.ts a lote19.ts no commit-base; Grandes Revoluções, WWII e Guerra Fria possuem entradas ativas em lote13.ts; Francesa, Industrial e Fim da Guerra Fria usam historia.ts.",
+        "Inspecionados integralmente HistoriaGeografia.tsx, HumanitiesPrototypes.tsx, HumanitiesCorePlate.tsx, HistorianIllustration.tsx e recortes relevantes de HistoriaMundial.tsx.",
+        "Não há legenda textual 13h, 1833, treze horas ou deformidades no renderer industrial destes arquivos ao commit-base; os números 13 existentes pertencem à geometria SVG.",
+        "Complemento valida as quotes ativas Guerra Fria depois dos patches do primeiro arquivo."
+      ],
+      "pending": [
+        "Revisão deste grupo é parcial do lote; não constitui aprovação pedagógica formal de todo o conteúdo.",
+        "Keywords não validam negação ou associação correta de datas; testes de respostas contraditórias devem explicitar essa limitação do avaliador.",
+        "Aplicar cumulativamente com propostas-revolucoes.json; metadados de acesso acima refinam os acessos genéricos da primeira proposta."
+      ],
+      "source_urls": [
+        "https://www.parliament.uk/about/living-heritage/transformingsociety/livinglearning/19thcentury/overview/factoryact/",
+        "https://www.parliament.uk/about/living-heritage/transformingsociety/towncountry/landscape/overview/enclosingland/"
+      ]
+    },
+    {
+      "topic": "A Montagem da Colonização",
+      "checks": [
+        "Coexistência regional e coerção nos aldeamentos qualificadas.",
+        "Prática e recuperação alinhadas; cena passa a mostrar características do modelo de plantation.",
+        "Retirada a balança causal obrigatória."
+      ],
+      "pending": [
+        "A verificação bibliográfica das generalizações sobre capitanias deve continuar."
+      ],
+      "chapter_id": "summary-historia-a-montagem-da-colonizacao",
+      "scope": "Retorno dirigido a pendências do lote anterior; não nova certificação integral.",
+      "formal_approval": false,
+      "prior_revision": 2,
+      "result_revision": 3,
+      "source_urls": [
+        "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/escravidao-jose-roberto-pinto-de-goes/",
+        "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/alteridades/povos-indigenas-no-brasil/",
+        "https://revistas.usp.br/revmae/pt_BR/article/view/89832",
+        "https://bndigital.bn.gov.br/artigos/bicentenario-da-independencia-1763-transferencia-da-capital-do-vice-reino-do-brasil-para-o-rio-de-janeiro/",
+        "https://www.scielo.br/j/his/a/rWCLzjLHjQxLNFWG5nwHrNt/?format=html&lang=pt"
+      ]
+    },
+    {
+      "topic": "A Crise do Antigo Sistema Colonial",
+      "checks": [
+        "Propostas anteriores de transferência da Corte reconhecidas, sem confundir com decisão emergencial de 1807."
+      ],
+      "pending": [
+        "A apresentação do exclusivo comercial ainda precisa de maior atenção à circulação interna, exceções e contrabando."
+      ],
+      "chapter_id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+      "scope": "Retorno dirigido a pendências do lote anterior; não nova certificação integral.",
+      "formal_approval": false,
+      "prior_revision": 3,
+      "result_revision": 4,
+      "source_urls": [
+        "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/escravidao-jose-roberto-pinto-de-goes/",
+        "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/alteridades/povos-indigenas-no-brasil/",
+        "https://revistas.usp.br/revmae/pt_BR/article/view/89832",
+        "https://bndigital.bn.gov.br/artigos/bicentenario-da-independencia-1763-transferencia-da-capital-do-vice-reino-do-brasil-para-o-rio-de-janeiro/",
+        "https://www.scielo.br/j/his/a/rWCLzjLHjQxLNFWG5nwHrNt/?format=html&lang=pt"
+      ]
+    },
+    {
+      "topic": "A Interiorização da Colonização",
+      "checks": [
+        "Transferência de capital combina minas, porto, defesa e administração; prática sincronizada."
+      ],
+      "pending": [
+        "Rever sertanismo de contrato e a explicação quantitativa do emprego de escravizados na pecuária."
+      ],
+      "chapter_id": "summary-historia-a-interiorizacao-da-colonizacao",
+      "scope": "Retorno dirigido a pendências do lote anterior; não nova certificação integral.",
+      "formal_approval": false,
+      "prior_revision": 3,
+      "result_revision": 4,
+      "source_urls": [
+        "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/escravidao-jose-roberto-pinto-de-goes/",
+        "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/alteridades/povos-indigenas-no-brasil/",
+        "https://revistas.usp.br/revmae/pt_BR/article/view/89832",
+        "https://bndigital.bn.gov.br/artigos/bicentenario-da-independencia-1763-transferencia-da-capital-do-vice-reino-do-brasil-para-o-rio-de-janeiro/",
+        "https://www.scielo.br/j/his/a/rWCLzjLHjQxLNFWG5nwHrNt/?format=html&lang=pt"
+      ]
+    },
+    {
+      "topic": "Dinâmica Interna da Colonização",
+      "checks": [
+        "Legenda visual distingue tomada de Macaco em 1694 e morte de Zumbi em 1695, sem data terminal para Palmares."
+      ],
+      "pending": [
+        "Conferir estimativas populacionais e representação ampliada de outros mocambos."
+      ],
+      "chapter_id": "summary-historia-dinamica-interna-da-colonizacao",
+      "scope": "Retorno dirigido a pendências do lote anterior; não nova certificação integral.",
+      "formal_approval": false,
+      "prior_revision": 3,
+      "result_revision": 3,
+      "source_urls": [
+        "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/escravidao-jose-roberto-pinto-de-goes/",
+        "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/alteridades/povos-indigenas-no-brasil/",
+        "https://revistas.usp.br/revmae/pt_BR/article/view/89832",
+        "https://bndigital.bn.gov.br/artigos/bicentenario-da-independencia-1763-transferencia-da-capital-do-vice-reino-do-brasil-para-o-rio-de-janeiro/",
+        "https://www.scielo.br/j/his/a/rWCLzjLHjQxLNFWG5nwHrNt/?format=html&lang=pt"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "url": "https://planalto.gov.br/ccivil_03/constituicao/constituicao24.htm",
+      "title": "Constituição de1824, arts.40,43,101,121",
+      "access": "2026-10-10; página aberta por web open, trecho retornado lido; leitura integral da página não reivindicada"
+    },
+    {
+      "url": "https://www.parlamento.pt/Parlamento/Paginas/guia-fundo-camara-deputados-1822-1910.aspx",
+      "title": "Assembleia da República: Carta Constitucional de1826 e Poder Moderador",
+      "access": "2026-10-10; página aberta por web open, trecho retornado lido; leitura integral da página não reivindicada"
+    },
+    {
+      "url": "https://dami.museuimperial.museus.gov.br/dami/handle/acervo/10273",
+      "title": "Museu Imperial: Pedro I também rei de Portugal como PedroIV",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://www.scielo.br/j/tem/a/8BKBmprCYNm34BWBDPcbfKD/?lang=pt",
+      "title": "Revista Tempo: A presença inglesa no Império Brasileiro, café supera açúcar pós1830",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://repositorio.fgv.br/bitstreams/0eb6b135-8a30-4323-a187-265087812bd1/download",
+      "title": "FGV: cafeicultura paulista e produção brasileira no fim do séculoXIX",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://www12.senado.leg.br/noticias/materias/2015/08/31/lei-dos-sexagenarios-completa-130-anos",
+      "title": "Senado: liberdade aos60, serviços por3anos ou até65",
+      "access": "2026-10-10; página aberta por web open, trecho retornado lido; leitura integral da página não reivindicada"
+    },
+    {
+      "url": "https://www12.senado.leg.br/noticias/especiais/arquivo-s/trono-altar-questao-religiosa-teve-prisao-de-bispos-e-enfraqueceu-imperio",
+      "title": "Senado: maçonaria, padroado e beneplácito na Questão Religiosa",
+      "access": "2026-10-10; página aberta por web open, trecho retornado lido; leitura integral da página não reivindicada"
+    },
+    {
+      "url": "https://www.senado.leg.br/senado/hotsites/histsf/O-Senado-no-2o-Reinado.asp",
+      "title": "Senado: maioridade em1840 e coroação em18/7/1841",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://www.camara.leg.br/noticias/545319-parlamento-brasileiro-foi-fechado-ou-dissolvido-18-vezes/",
+      "title": "Câmara: Congresso fechado3/11, renúncia23/11/1891",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://cpdoc.fgv.br/artigos/revolucao-30",
+      "title": "FGV CPDOC: Primeira República1889-1930",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://www2.camara.leg.br/a-camara/conheca/historia/a1republica.html/",
+      "title": "Câmara: padrão político se define no final da década1890",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://atlas.fgv.br/verbetes/revolucao-federalista",
+      "title": "FGV: federalistas, parlamentarismo e reforço da União",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://www.tse.jus.br/comunicacao/noticias/2019/Fevereiro/serie-87-anos-codigo-eleitoral-de-1932-regulamentou-e-organizou-eleicoes-no-pais/",
+      "title": "TSE: Código Eleitoral1932 e voto secreto",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://atlas.fgv.br/verbetes/convenio-de-taubate",
+      "title": "FGV: Convênio de Taubaté,1906",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://cpdoc.fgv.br/sites/default/files/verbetes/primeira-republica/CONV%C3%8ANIO%20DE%20TAUBAT%C3%89.pdf",
+      "title": "FGV: custos, resistência e financiamento da valorização",
+      "access": "2026-10-10; resultado indexado de busca e excerto lido, página não aberta; leitura integral não reivindicada"
+    },
+    {
+      "url": "https://www.pucrs.br/humanidades/wp-content/uploads/sites/30/2016/03/Federalismo-Argentina.pdf",
+      "title": "Cláudia Viscardi — O federalismo oligárquico brasileiro: uma revisão da política do café-com-leite",
+      "access": "consultado em 2026-10-10; resultado web do artigo acadêmico"
+    },
+    {
+      "url": "https://cpdoc.fgv.br/sites/default/files/verbetes/primeira-republica/REVOLU%C3%87%C3%83O%20DE%201930.pdf",
+      "title": "FGV CPDOC — Revolução de 1930",
+      "access": "consultado em 2026-10-10; busca e abertura web"
+    },
+    {
+      "url": "https://www.tse.jus.br/servicos-eleitorais/glossario/termos/voto-da-mulher",
+      "title": "TSE — Voto da mulher",
+      "access": "resultado indexado lido em 2026-10-10; confirma Código de 1932 e Constituição de 1934"
+    },
+    {
+      "url": "https://www2.camara.leg.br/legin/fed/consti/1930-1939/constituicao-1934-16-julho-1934-365196-publicacaooriginal-1-pl.html",
+      "title": "Câmara dos Deputados — Constituição de 1934, publicação original",
+      "access": "consultado em 2026-10-10; busca e abertura web"
+    },
+    {
+      "url": "https://www.tse.jus.br/hotsites/eleicoes-de-1933/index.html",
+      "title": "TSE — Eleições de 1933",
+      "access": "consultado em 2026-10-10; busca e abertura web"
+    },
+    {
+      "url": "https://legis.senado.leg.br/norma/437677/publicacao/15770077",
+      "title": "Senado Federal — Decreto 19.770 de 19 de março de 1931",
+      "access": "consultado em 2026-10-10; resultado web do art. 2º"
+    },
+    {
+      "url": "https://atlas.fgv.br/verbete/5458",
+      "title": "FGV CPDOC — Getúlio Vargas (DHBB)",
+      "access": "página aberta e passagens indexadas lidas em 2026-10-10; crédito autorizado em setembro de 1940, CSN criada em abril de 1941, FEB enviada em 1944"
+    },
+    {
+      "url": "https://www.gov.br/previdencia/pt-br/acesso-a-informacao/legislacao/previdencia/historico/periodo-de-1888-1933",
+      "title": "Ministério da Previdência — Histórico 1888-1933",
+      "access": "consultado em 2026-10-10; resultado web"
+    },
+    {
+      "url": "https://atlas.fgv.br/verbete/3707",
+      "title": "FGV CPDOC — Olímpio Mourão Filho (DHBB)",
+      "access": "consultado em 2026-10-10; busca e abertura web"
+    },
+    {
+      "url": "https://atlas.fgv.br/verbete/1005",
+      "title": "FGV CPDOC — Francisco Campos (DHBB)",
+      "access": "consultado em 2026-10-10; resultado web sobre modelos polonês e italiano"
+    },
+    {
+      "url": "https://www.tse.jus.br/jurisprudencia/julgados-historicos/cancelamento-de-registro-do-partido-comunista-brasileiro",
+      "title": "TSE — Cancelamento de registro do PCB",
+      "access": "consultado em 2026-10-10; busca e abertura web"
+    },
+    {
+      "url": "https://atlas.fgv.br/verbete/6321",
+      "title": "FGV CPDOC — Programa de Metas",
+      "access": "página aberta em 2026-10-10; metas setoriais e educação como meta 30"
+    },
+    {
+      "url": "https://atlas.ipe.df.gov.br/?p=1714",
+      "title": "IPEDF — Evolução das regiões administrativas",
+      "access": "página aberta em 2026-10-10; Planaltina e Brazlândia anteriores à nova capital"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/ait/ait-05-68.htm",
+      "title": "AI-5 — texto original, arts. 2º, 10 e 11",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www2.camara.leg.br/legin/fed/lei/1970-1979/lei-6683-28-agosto-1979-366522-publicacaooriginal-1-pl.html",
+      "title": "Lei 6.683/1979 — texto original",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc_anterior1988/emc11-78.htm",
+      "title": "Emenda Constitucional 11/1978 — arts. 3º e 4º",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://stf.jus.br/arquivo/informativo/documento/informativo584.htm",
+      "title": "STF — ADPF 153",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://noticias.stf.jus.br/postsnoticias/psol-questiona-em-acao-os-efeitos-da-lei-da-anistia/",
+      "title": "STF — decisão interamericana no caso Gomes Lund",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www12.senado.leg.br/noticias/infomaterias/2025/03/a-redemocratizacao-em-dez-atos",
+      "title": "Senado — A Redemocratização em Dez Atos",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www.bcb.gov.br/controleinflacao/planoreal?modalAberto=30anosreal_noticia1",
+      "title": "Banco Central — fases do Plano Real e URV",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1961-63v10/d189",
+      "title": "FRUS — declaração socialista de Cuba em 1961",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www.gov.br/memoriasreveladas/pt-br/centrais-de-conteudo/destaques/doi-codi-violencia-institucionalizada/",
+      "title": "Arquivo Nacional — DOI-CODI e repressão institucionalizada",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://history.state.gov/milestones/1830-1860/texas-annexation",
+      "title": "Office of the Historian — Texas, guerra e tratado de Guadalupe Hidalgo",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www.gov.br/arquivonacional/pt-br/sites_eventos/sites-tematicos-1/brasil-oitocentista/especial-bicentenario-da-independencia/apontamentos-sobre-a-independencia-do-brasil-na-bahia",
+      "title": "Arquivo Nacional — guerra da independência na Bahia",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www.marinha.mil.br/comemch/guerra-da-independencia",
+      "title": "Marinha — guerras de independência, Maranhão e Pará",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www.nps.gov/liho/learn/historyculture/slavery-cause-civil-war.htm",
+      "title": "NPS — escravidão como causa da Guerra Civil",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www.gob.mx/agn/articulos/agnresguarda-el-plan-que-termino-con-un-imperio",
+      "title": "AGN México — Primeiro Império e Plano de Casa Mata",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://www.un.org/dppa/decolonization/en/about",
+      "title": "ONU — autodeterminação e resolução 1514",
+      "access": "2026-10-10 (consulta web; texto ou trecho indexado)"
+    },
+    {
+      "url": "https://openstax.org/books/us-history/pages/2-4-new-worlds-in-the-americas-labor-commerce-and-the-columbian-exchange",
+      "title": "OpenStax/Rice University — New Worlds in the Americas",
+      "access": "Consultado em 2026-10-10; página aberta pela ferramenta web."
+    },
+    {
+      "title": "USP — Índios e Africanos no interior paulista",
+      "url": "https://revistas.usp.br/revmae/pt_BR/article/view/89832",
+      "access": "Trecho indexado; presença indígena até o século XVIII; página integral ainda não consultada."
+    },
+    {
+      "url": "https://historialuso.arquivonacional.gov.br/index.php/historia-luso-brasileira/assuntos/brasil/sociedade-do-acucar",
+      "title": "Arquivo Nacional — Sociedade do Açúcar",
+      "access": "Consultado em 2026-10-10 via resultado de busca."
+    },
+    {
+      "url": "https://digital.wienbibliothek.at/wbrobv/content/titleinfo/2293309",
+      "title": "Wienbibliothek — Acte du Congrès de Vienne du 9 Juin 1815",
+      "access": "Consultado em 2026-10-10; página aberta pela ferramenta web."
+    },
+    {
+      "url": "https://www.napoleon.org/en/history-of-the-two-empires/articles/napoleon-and-saint-helena-1815-1816/",
+      "title": "Fondation Napoléon — Napoleon and St Helena, 1815-1816",
+      "access": "Consultado em 2026-10-10 via resultado de busca; Waterloo em 18/6/1815."
+    },
+    {
+      "url": "https://library.fes.de/fulltext/bibliothek/chronik/band1/e235e488.html",
+      "title": "Friedrich-Ebert-Stiftung — Programa de Erfurt de 1891",
+      "access": "Consultado em 2026-10-10; página aberta pela ferramenta web."
+    },
+    {
+      "url": "https://archivio.quirinale.it/aspr/gianni-bisiach/AV-002-000399/17-marzo-1861-vittorio-emanuele-ii-primo-re-d-italia",
+      "title": "Presidência da República italiana — Vittorio Emanuele II primo Re d'Italia",
+      "access": "Consultado em 2026-10-10 via resultado de busca."
+    },
+    {
+      "url": "https://archiv.diplo.de/arc-de/das-politische-archiv/generalakte-2683776",
+      "title": "Arquivo Diplomático alemão — Die Generalakte der Berliner Kongo-Konferenz",
+      "access": "Consultado em 2026-10-10; página aberta pela ferramenta web."
+    },
+    {
+      "url": "https://www.afrikamuseum.be/en/about_us/viewpoints",
+      "title": "Royal Museum for Central Africa — The viewpoints of the museum",
+      "access": "Consultado em 2026-10-10 via resultado de busca; Estado Livre do Congo 1885-1908."
+    },
+    {
+      "url": "https://www.afrikamuseum.be/en/discover/history",
+      "title": "Royal Museum for Central Africa — Museum history",
+      "access": "Consultado em 2026-10-10 via resultado de busca; transformação em Congo Belga em 1908."
+    },
+    {
+      "url": "https://www.iwm.org.uk/history/first-world-war/outbreak",
+      "title": "Imperial War Museums — The outbreak of the First World War",
+      "access": "Consultado em 2026-10-10 via versão indexada em arquivo britânico; acesso direto retornou 403."
+    },
+    {
+      "url": "https://www.theworldwar.org/learn/about-wwi/italy-enters-world-war-i",
+      "title": "National WWI Museum and Memorial — Italy Enters World War I",
+      "access": "Consultado em 2026-10-10 via resultado de busca."
+    },
+    {
+      "url": "https://history.state.gov/historicaldocuments/frus1919Parisv13/ch17subch1",
+      "title": "Office of the Historian — Article 231",
+      "access": "Consultado em 2026-10-10 via resultado de busca."
+    },
+    {
+      "url": "https://memorial-verdun.fr/en/ressources/la-bataille-de-verdun",
+      "title": "Mémorial de Verdun — The Battle of Verdun",
+      "access": "Consultado em 2026-10-10 via resultado de busca; não há necessidade de corrigir a ordem de grandeza dos mortos."
+    },
+    {
+      "url": "https://encyclopedia.ushmm.org/content/en/article/benito-mussolini-1",
+      "title": "USHMM — Benito Mussolini",
+      "access": "Consultado em 2026-10-10; página aberta pela ferramenta web."
+    },
+    {
+      "url": "https://www.bpb.de/shop/zeitschriften/apuz/archiv/537822/stalinistischer-terror-genese-und-praxis-der-kommunistischen-gewaltherrschaft-in-der-sowjetunion-1917-1953/",
+      "title": "Bundeszentrale für politische Bildung — Stalinistischer Terror",
+      "access": "Consultado em 2026-10-10 via resultado de busca; Grande Terror 1937-1938."
+    },
+    {
+      "url": "https://encyclopedia.ushmm.org/content/en/article/wannsee-conference-and-the-final-solution",
+      "title": "USHMM — Wannsee Conference and the Final Solution",
+      "access": "Consultado em 2026-10-10; página aberta pela ferramenta web."
+    },
+    {
+      "url": "https://encyclopedia.ushmm.org/content/en/article/introduction-to-the-holocaust",
+      "title": "USHMM — Introduction to the Holocaust",
+      "access": "Consultado em 2026-10-10 via resultado de busca."
+    },
+    {
+      "url": "https://encyclopedia.ushmm.org/content/en/article/the-enabling-act",
+      "title": "USHMM — The Enabling Act",
+      "access": "Consultado em 2026-10-10 via resultado de busca; intimidação e perseguição na aprovação."
+    },
+    {
+      "url": "https://www.ushmm.org/learn/introduction-to-the-holocaust/path-to-nazi-genocide/chapter-1/aftermath-of-world-war-i-and-the-rise-of-nazism-1918-1933",
+      "title": "USHMM — Aftermath of World War I and the Rise of Nazism",
+      "access": "Consultado em 2026-10-10; página aberta pela ferramenta web."
+    },
+    {
+      "url": "https://encyclopedia.ushmm.org/content/en/article/the-russian-revolution-1917",
+      "title": "USHMM — Russian Revolution, 1917",
+      "access": "Somente resultado indexado de busca consultado em 2026-10-10; página não aberta com sucesso."
+    },
+    {
+      "url": "https://www.marxists.org/archive/lenin/works/1917/dec/06.htm",
+      "title": "Lênin — Draft of a Manifesto to the Peasantry (fonte primária, 1917)",
+      "access": "Somente resultado indexado de busca consultado em 2026-10-10; página não aberta com sucesso."
+    },
+    {
+      "url": "https://nam.go.ug/history",
+      "title": "Non-Aligned Movement — History",
+      "access": "Página aberta com texto integral em 2026-10-10."
+    },
+    {
+      "url": "https://www.nato.int/cps/en/natohq/declassified_138294.htm",
+      "title": "NATO — What was the Warsaw Pact?",
+      "access": "Somente resultado indexado de busca consultado em 2026-10-10; página não aberta com sucesso."
+    },
+    {
+      "url": "https://history.state.gov/milestones/1989-1992/collapse-soviet-union",
+      "title": "Office of the Historian — The Collapse of the Soviet Union",
+      "access": "Somente resultado indexado de busca consultado em 2026-10-10; página não aberta com sucesso."
+    },
+    {
+      "url": "https://www.nato.int/cps/en/natohq/declassified_136603.htm",
+      "title": "NATO — Old adversaries become new partners",
+      "access": "Somente resultado indexado de busca consultado em 2026-10-10; página não aberta com sucesso."
+    },
+    {
+      "url": "https://history.state.gov/milestones/1937-1945/us-soviet",
+      "title": "Office of the Historian — U.S.-Soviet Alliance, 1941–1945",
+      "access": "Página aberta com texto integral em 2026-10-10."
+    },
+    {
+      "url": "https://www.archives.gov/exhibits/featured-documents/japanese-surrender-document",
+      "title": "US National Archives — Japan Surrenders",
+      "access": "Página aberta com texto integral em 2026-10-10."
+    },
+    {
+      "url": "https://www.assemblee-nationale.fr/dyn/histoire-et-patrimoine/revolution-francaise/assemblee-nationale-constituante",
+      "title": "Assemblée nationale — Assemblée nationale constituante",
+      "access": "Página aberta com texto integral em 2026-10-10."
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/livinglearning/19thcentury/overview/factoryact/",
+      "title": "UK Parliament — The 1833 Factory Act",
+      "access": "Página aberta com texto integral em 2026-10-10."
+    },
+    {
+      "url": "https://www.parliament.uk/about/living-heritage/transformingsociety/towncountry/landscape/overview/enclosingland/",
+      "title": "UK Parliament — Enclosing the land",
+      "access": "Página aberta com texto integral em 2026-10-10."
+    },
+    {
+      "url": "https://www.nato.int/en/about-us/nato-history/a-short-history-of-nato",
+      "title": "NATO — A short history of NATO",
+      "access": "Página aberta com texto integral em 2026-10-10; passagem sobre adesão da Alemanha Ocidental e Varsóvia. A URL declassified_138294.htm só teve índice disponível; abertura devolveu 404."
+    },
+    {
+      "title": "Biblioteca Nacional — Escravidão",
+      "url": "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/escravidao-jose-roberto-pinto-de-goes/",
+      "access": "Página aberta; fatores de expansão do tráfico."
+    },
+    {
+      "title": "Biblioteca Nacional — Povos indígenas no Brasil",
+      "url": "https://bndigital.bn.gov.br/dossies/rede-da-memoria-virtual-brasileira/alteridades/povos-indigenas-no-brasil/",
+      "access": "Página aberta; trabalho compulsório nos aldeamentos."
+    },
+    {
+      "title": "Biblioteca Nacional — Transferência da capital em 1763",
+      "url": "https://bndigital.bn.gov.br/artigos/bicentenario-da-independencia-1763-transferencia-da-capital-do-vice-reino-do-brasil-para-o-rio-de-janeiro/",
+      "access": "Página aberta; circulação mineira e defesa contra espanhóis."
+    },
+    {
+      "title": "Maria Fernanda Bicalho — A cidade do Rio de Janeiro e o sonho de uma capital americana",
+      "url": "https://www.scielo.br/j/his/a/rWCLzjLHjQxLNFWG5nwHrNt/?format=html&lang=pt",
+      "access": "Artigo aberto; proposta de D. Luís da Cunha em 1736."
+    }
+  ],
+  "changes": [
+    {
+      "topic": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "A Constituição de 1824",
+      "reason": "A Constituição distingue ministros demissíveis e senadores vitalícios (arts.40,43,101); não autoriza demitir senadores."
+    },
+    {
+      "topic": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "A Constituição de 1824",
+      "reason": "O Poder Moderador teve equivalente direto em Portugal; evitar exclusividade histórica falsa."
+    },
+    {
+      "topic": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Crise do Primeiro Reinado",
+      "reason": "Não era apenas possível herdeiro após1826; tornou-se rei e abdicou."
+    },
+    {
+      "topic": "A República da Espada",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Governos militares iniciais",
+      "reason": "Precisar marco para corrigir a cronologia da renúncia."
+    },
+    {
+      "topic": "A República da Espada",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Governos militares iniciais",
+      "reason": "Fechamento3/11 e renúncia23/11/1891, não meses."
+    },
+    {
+      "topic": "A República da Espada",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Corrigir repetição da mesma cronologia falsa."
+    },
+    {
+      "topic": "A República da Espada",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Crises do período",
+      "reason": "A oposição federalista defendia reforço da União/parlamentarismo; a autonomia estadual era defendida pelo PRR."
+    },
+    {
+      "topic": "A República da Espada",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Transição para os civis",
+      "reason": "República da Espada integra Primeira República;1889 é início, não1894."
+    },
+    {
+      "topic": "A República da Espada",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Não datar pacto oligárquico completo automaticamente da posse de Prudente."
+    },
+    {
+      "topic": "Brasil Império: o Declínio do Segundo Reinado",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Abolição gradual",
+      "reason": "Corrige idade60 e distingue liberdade legal de serviços indenizatórios até65."
+    },
+    {
+      "topic": "Brasil Império: o Declínio do Segundo Reinado",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Questões que corroem o Império",
+      "reason": "Ensina conflito concreto com maçonaria e separa padroado/beneplácito."
+    },
+    {
+      "topic": "Brasil Império: o Declínio do Segundo Reinado",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Alinhar síntese com explicação corrigida."
+    },
+    {
+      "topic": "Ascensão e Domínio das Oligarquias",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Coronelismo e voto de cabresto",
+      "reason": "Não tratar voto secreto garantido em lei durante toda Primeira República."
+    },
+    {
+      "topic": "Ascensão e Domínio das Oligarquias",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Alinhar pegadinha à cronologia eleitoral."
+    },
+    {
+      "topic": "Ascensão e Domínio das Oligarquias",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Café com leite e economia",
+      "reason": "Evitar naturalizar interesses cafeeiros como benefício uniforme nacional."
+    },
+    {
+      "topic": "Ascensão e Domínio das Oligarquias",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Café com leite e economia",
+      "reason": "O recall exige Convênio de Taubaté sem nomear/explicar anteriormente; ensinar comdata e signatários."
+    },
+    {
+      "topic": "Brasil Império: o Período Regencial (1831-1840)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Golpe da maioridade",
+      "reason": "Precisar idade legal torna contraste14/18 ensinável."
+    },
+    {
+      "topic": "Brasil Império: o Período Regencial (1831-1840)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Golpe da maioridade",
+      "reason": "Recuperação confundia maioridade com coroação; ensinar distinção temporal."
+    },
+    {
+      "topic": "Brasil Império: Segundo Reinado (1840-1889)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Corrige atraso cronológico; café liderava exportações antes do Segundo Reinado."
+    },
+    {
+      "topic": "Brasil Império: Segundo Reinado (1840-1889)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Estabilidade e café",
+      "reason": "Oeste paulista expandiu-se no fim do século; evitar antecipar hegemonia nacional ao meado."
+    },
+    {
+      "topic": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar citação da cena com a correção histórica do capítulo."
+    },
+    {
+      "topic": "Brasil Império: Formação do Estado Nacional Brasileiro",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar citação da cena com a correção histórica do capítulo."
+    },
+    {
+      "topic": "Brasil Império: o Declínio do Segundo Reinado",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar citação da cena com a correção histórica do capítulo."
+    },
+    {
+      "topic": "Brasil Império: o Declínio do Segundo Reinado",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Claim deve indicar o conflito concreto e distinguir as duas prerrogativas."
+    },
+    {
+      "topic": "A República da Espada",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Cena ativa importada por HG_LOTE_ENTRIES ainda repetia meses, em conflito com a cronologia corrigida."
+    },
+    {
+      "topic": "A República da Espada",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Sincronizar quote ativa com alteração de data na seção Governos militares iniciais."
+    },
+    {
+      "topic": "Brasil Império: o Declínio do Segundo Reinado",
+      "path": "src/views/topic-scenes/families/BrasilImperio.tsx",
+      "reason": "Descrição acessível tratava três apoios como condição automática e uniforme da queda; qualificar setores e explicitar agente da deposição."
+    },
+    {
+      "topic": "Ascensão e Domínio das Oligarquias",
+      "path": "src/views/topic-scenes/families/BrasilImperio.tsx",
+      "reason": "A faixa visual omitia o objeto da compra, prejudicando a explicação econômica e a conexão com o recall."
+    },
+    {
+      "topic": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Movimentos de contestação",
+      "reason": "Evitar regra mecânica de alternância inexistente."
+    },
+    {
+      "topic": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Crise de 1930",
+      "reason": "A sucessão dependeu de composições políticas, não de obrigação de alternância."
+    },
+    {
+      "topic": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Crise de 1930",
+      "reason": "Distinguir motivação local/pessoal do uso político nacional do assassinato."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Governo Provisório",
+      "reason": "Corrigir alternância rígida."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Governo Provisório",
+      "reason": "A Constituinte promulgou a Constituição; eleições já tinham sido convocadas antes da revolta."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Constituição de 1934",
+      "reason": "Corrigir origem cronológica das reformas eleitorais."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Constituição de 1934",
+      "reason": "Disposições transitórias art. 1º."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Trabalhismo e Estado",
+      "reason": "Evitar criação dos sindicatos oficiais só durante Estado Novo."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Consistência com correção do governo provisório."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Consistência da cronologia do voto feminino."
+    },
+    {
+      "topic": "A Era Vargas: o Estado Novo",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Trabalho e industrialização",
+      "reason": "Correção do início do controle corporativista."
+    },
+    {
+      "topic": "A Era Vargas: o Estado Novo",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Trabalho e industrialização",
+      "reason": "Aposentadoria integra legislação previdenciária específica, não foi direito criado pela CLT."
+    },
+    {
+      "topic": "A Era Vargas: o Estado Novo",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Trabalho e industrialização",
+      "reason": "Corrigir anacronismo do envio da FEB como contrapartida original da CSN."
+    },
+    {
+      "topic": "A Era Vargas: o Estado Novo",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Prática compatível com a cronologia corrigida."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Intentona e repressão",
+      "reason": "Distinguir instrumentos legais repressivos de 1935 e 1936."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Golpe do Estado Novo",
+      "reason": "Evitar equivalência imprecisa entre autoritarismo polonês e fascismo."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Golpe do Estado Novo",
+      "reason": "Distinguir autoria individual do uso fraudulento do texto."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Consistência com cronologia jurídica."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Consistência de autoria e uso."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Consistência de instrumentos."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Consistência de autoria e uso."
+    },
+    {
+      "topic": "República Liberal (1945-1964): Democracia em Tempos de Guerra Fria",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Anticomunismo e limites",
+      "reason": "TSE documenta retorno à legalidade em 1985."
+    },
+    {
+      "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Plano de Metas",
+      "reason": "Distinguir 30 metas setoriais e Brasília."
+    },
+    {
+      "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Plano de Metas",
+      "reason": "Eliminar apagamento da ocupação prévia do interior."
+    },
+    {
+      "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Consistência da contagem do programa."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar quote da cena com correção factual do resumo: A Constituinte promulgou a Constituição; eleições já tinham sido convocadas antes da revolta."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar quote da cena com correção factual do resumo: Distinguir instrumentos legais repressivos de 1935 e 1936."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar quote da cena com correção factual do resumo: Evitar equivalência imprecisa entre autoritarismo polonês e fascismo."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar quote da cena com correção factual do resumo: Distinguir autoria individual do uso fraudulento do texto."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Não atribuir exclusivamente à revolta de 1932 uma eleição já convocada antes dela."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Claim deve distinguir estado de sítio de estado de guerra."
+    },
+    {
+      "topic": "A Era Vargas: o Governo Constitucional (1934-1937)",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Claim deve distinguir autoria individual e uso político fraudulento."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Restaurar correspondência literal da quote com o início da frase do resumo."
+    },
+    {
+      "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Sincronizar claim ativo com a distinção entre metas setoriais e Brasília."
+    },
+    {
+      "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Quote deve continuar literal após a correção de Plano de Metas."
+    },
+    {
+      "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Quote deve continuar literal após remover a falsa descrição do interior como desabitado."
+    },
+    {
+      "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "path": "src/views/topic-scenes/families/BrasilRepublica.tsx",
+      "reason": "Descrição acessível deve distinguir metas setoriais e Brasília."
+    },
+    {
+      "topic": "República Liberal (1945-1964): Desenvolvimentismo e Populismo",
+      "path": "src/views/topic-scenes/families/BrasilRepublica.tsx",
+      "reason": "Corrigir também texto visível do desenho ativo sem mudar layout ou quantidade de linhas."
+    },
+    {
+      "topic": "A Era Vargas",
+      "path": "src/views/topic-scenes/families/EraVargas.tsx",
+      "reason": "Evitar que o documento de 1934 na figura sugira origem do voto feminino/secreto em 1934."
+    },
+    {
+      "topic": "A Era Vargas: o Estado Novo",
+      "path": "src/views/topic-scenes/families/EraVargas.tsx",
+      "reason": "A figura deve distinguir crédito de 1940, criação da CSN em 1941 e FEB na Itália em 1944–1945."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) I",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Anos de chumbo",
+      "reason": "Distingue as disposições do AI-5 de seus efeitos repressivos e delimita a suspensão do habeas corpus, que não foi universal."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) I",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Alinha exercício às disposições efetivamente estabelecidas no AI-5."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Distensão e abertura",
+      "reason": "Distingue aprovação da EC 11/1978 de sua entrada em vigor."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Distensão e abertura",
+      "reason": "A lei não declara perdão explícito à tortura nem concede anistia irrestrita; distingue texto legal, interpretação do STF e decisão interamericana."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Remove a apresentação de alcance irrestrito e juridicamente incontroverso."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Evita induzir aluno a repetir a caracterização equivocada da lei."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Diretas Já e transição",
+      "reason": "A redação anterior sugeria que Sarney assumiu apenas após a morte; explicita a cronologia."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Mantém a cronologia correta também na revisão."
+    },
+    {
+      "topic": "América no Século XIX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Estados Unidos",
+      "reason": "Corrige a cronologia da anexação do Texas."
+    },
+    {
+      "topic": "América no Século XIX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Independências latino-americanas",
+      "reason": "Retira oposição simplificadora que apaga as guerras de independência brasileiras."
+    },
+    {
+      "topic": "América no Século XIX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Corrige apagamento das guerras brasileiras e generalização de ausência de monarquias hispano-americanas."
+    },
+    {
+      "topic": "América no Século XIX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Preserva centralidade histórica da escravidão, evitando tratar questões econômicas e direitos estaduais como causas independentes equivalentes."
+    },
+    {
+      "topic": "América Latina no Século XX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Ditaduras militares",
+      "reason": "Distingue vitória revolucionária em 1959 de declaração socialista em 1961; elimina formulação geográfica imprecisa."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Estabilização e políticas sociais",
+      "reason": "Evita prometer fim definitivo da inflação e ensina mecanismo ausente no resumo."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "A evidência de contribuição combinada não demonstra que cada fator fosse individualmente necessário; a citação sustenta combinação explicativa."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "A descrição de contribuições múltiplas não prova necessidade ou suficiência lógica."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Remove premissa de insuficiência individual sem contrafactual demonstrado."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "O quarto recorte sintetiza contribuições; não enuncia necessidade."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Mantém o quarto recorte com lastro literal após correção da pegadinha."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/views/topic-scenes/families/CriteriosConjuntivos.tsx",
+      "reason": "Ativa uma leitura de contribuições somente para Brasil Atual, sem alterar definições conjuntivas de outros capítulos."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/views/topic-scenes/families/CriteriosConjuntivos.tsx",
+      "reason": "Cabeçalho não chama fatores históricos de critérios necessários."
+    },
+    {
+      "topic": "O Brasil Atual",
+      "path": "src/views/topic-scenes/families/CriteriosConjuntivos.tsx",
+      "reason": "Selecionar um ou vários dos quatro recortes destaca fontes; nunca declara explicação incompleta ou dependência de selecionar todos."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) I",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Alinha a cena ativa ao AI-5 corrigido."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) I",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Restaura lastro da cena ativa após primeiro patch deep."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Retira rótulo jurídico incondicional e distingue aprovação de vigência."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Restaura lastro da cena ativa após precisão da data."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/views/topic-scenes/data/lote14.ts",
+      "reason": "Retira implicação de que Sarney só assumiu após a morte."
+    },
+    {
+      "topic": "Regime Militar (1964-1985) II",
+      "path": "src/views/topic-scenes/families/BrasilRepublica.tsx",
+      "reason": "Legenda da prancha acompanha data efetiva de revogação."
+    },
+    {
+      "topic": "A Primeira Globalização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Mercantilismo e trabalho compulsório",
+      "reason": "Evita tratar a escravidão como necessidade inevitável do mercantilismo e uma substituição simultânea e completa em todas as Américas."
+    },
+    {
+      "topic": "A Primeira Globalização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Sincroniza a prática com a correção da cronologia e da relação entre interesses econômicos e coerção."
+    },
+    {
+      "topic": "A Primeira Globalização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Intercâmbio colombiano",
+      "reason": "A faixa não tem recorte regional/fonte no material e a resposta de recall já exige violência e trabalho; ensina a combinação sem naturalizar o colapso."
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Congresso de Viena e restauração",
+      "reason": "O Congresso antecede Waterloo (18/6/1815); remove inversão cronológica."
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Nacionalismos e unificações",
+      "reason": "1861 é proclamação do Reino, não término da unificação territorial."
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Movimento operário",
+      "reason": "Evita projetar a identidade reformista posterior sobre todo o SPD do século XIX; explicita debate interno e Programa de Erfurt."
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Mantém pegadinha coerente com pluralidade do SPD."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Formas de dominação",
+      "reason": "Arquivo diplomático alemão esclarece participantes e que Berlim definiu regras, não mapa completo."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Corrige participantes sem apagar exclusão africana."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Remove mito repetido na seção de pegadinhas."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Belle Époque e contradições",
+      "reason": "Distingue Estado Livre e Congo Belga."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Sincroniza nomenclatura e cronologia."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Sincroniza prática com distinção institucional."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Causas",
+      "reason": "Evita determinismo e confusão entre alianças anteriores e beligerantes."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Causas",
+      "reason": "Mantém estopim sem automatismo causal."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Evita a prática reinstalar mecanicismo corrigido."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Consequências",
+      "reason": "O artigo 231 incluía aliados e fundamentava reparações; distingue a cláusula do juízo historiográfico de culpa única."
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Bases da ascensão",
+      "reason": "O artigo 231 incluía aliados e fundamentava reparações; distingue a cláusula do juízo historiográfico de culpa única."
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Ascensão dos totalitarismos",
+      "reason": "A frase geral induz a crise de 1929 como causa do fascismo de 1922 e do stalinismo; distingue cronologias."
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Ascensão dos totalitarismos",
+      "reason": "A marcha pressionou a nomeação, não conquistou diretamente a capital/governo."
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Holocausto",
+      "reason": "Wannsee coordenou política já em execução; define Holocausto com precisão e preserva demais vítimas."
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Corrige repetição do erro central na pegadinha."
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Distingue definição histórica de Holocausto e conjunto de crimes nazistas."
+    },
+    {
+      "topic": "A Primeira Globalização",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincroniza claims e citações exatas com a correção factual no resumo; preserva chapterId, família e estrutura."
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincroniza claims e citações exatas com a correção factual no resumo; preserva chapterId, família e estrutura."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincroniza claims e citações exatas com a correção factual no resumo; preserva chapterId, família e estrutura."
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincroniza claims e citações exatas com a correção factual no resumo; preserva chapterId, família e estrutura."
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincroniza claims e citações exatas com a correção factual no resumo; preserva chapterId, família e estrutura."
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Ascensão dos totalitarismos",
+      "reason": "Distingue repressão de longa duração do período específico do Grande Terror."
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Bases da ascensão",
+      "reason": "Versalhes tratou da Alemanha; outros tratados regularam a paz com demais derrotados."
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Ideologia e Estado",
+      "reason": "Não apresenta destruição da democracia como processo apenas legal e consensual."
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Sincroniza ressalva sobre legalidade formal e coerção."
+    },
+    {
+      "topic": "A Primeira Globalização",
+      "path": "src/views/topic-scenes/families/IdadeModerna.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "A Primeira Globalização",
+      "path": "src/views/topic-scenes/families/IdadeModerna.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "A Primeira Globalização",
+      "path": "src/views/topic-scenes/families/IdadeModerna.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Europa no Século XIX",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Imperialismo e Belle Époque",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Itália não deve receber o clarão de entrada na guerra em 1914; neutralidade explícita no rodapé."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Primeira Guerra Mundial (1914-1918)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Retira seta 1929 → todos os regimes, cronologicamente falsa para Mussolini."
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "O Período Entreguerras (1918-1939)",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "O Nazismo na Alemanha",
+      "path": "src/views/topic-scenes/families/SeculoXX.tsx",
+      "reason": "Impede a figura ativa de repetir afirmação corrigida no conteúdo; preserva IDs, geometria e estados."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Bipolaridade",
+      "reason": "Corrigir o gatilho histórico de Varsóvia: adesão da RFA em 1955, não criação da OTAN em 1949."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Sincronizar a pegadinha com o gatilho de 1955."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Terceiro Mundo e não alinhamento",
+      "reason": "Distinguir Bandung 1955, antecedente afro-asiático, da fundação do NAM em Belgrado 1961."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Eliminar repetição da data/local de fundação errados no exercício."
+    },
+    {
+      "topic": "Revolução Francesa",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "De 1789 à monarquia constitucional",
+      "reason": "Distinguir proclamação da Assembleia Nacional (17/6) e Constituinte (9/7)."
+    },
+    {
+      "topic": "Grandes Revoluções do Século XX",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Corrigir exercício que trata consolidação russa como rápida e a constituição mexicana de 1917 como desfecho das disputas; contradiz cronologias do próprio capítulo."
+    },
+    {
+      "topic": "Revolução Industrial",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Fonte comparada",
+      "reason": "Substituir supostas fontes sem autoria/documento e precisão não verificável por comparação entre inquéritos identificáveis e Factory Act 1833, confirmada pelo Parlamento britânico."
+    },
+    {
+      "topic": "Revolução Industrial",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Cercamentos e trabalho assalariado",
+      "reason": "Evitar apresentar uma interpretação causal dos cercamentos como condição necessária universal da industrialização."
+    },
+    {
+      "topic": "Revolução Industrial",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Retirar premissa historiográfica determinista; cobrar mecanismo causal ensinado."
+    },
+    {
+      "topic": "Segunda Guerra Mundial (1939-1945)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Frente do Pacífico e bombas atômicas",
+      "reason": "Precisar que foram dois ataques, não um uso único.; Não atribuir encerramento formal às bombas em agosto nem omitir a entrada soviética entre fatores da rendição."
+    },
+    {
+      "topic": "Segunda Guerra Mundial (1939-1945)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Eliminar ambiguidade que atribui invasão de 1941 à URSS.; Precisar número dos ataques e data do fim formal da guerra."
+    },
+    {
+      "topic": "Segunda Guerra Mundial (1939-1945)",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Sincronizar prática com seção corrigida; não ensinar monocausalidade e data implícita errada."
+    },
+    {
+      "topic": "Revolução Francesa",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar claim da cena com a cronologia corrigida."
+    },
+    {
+      "topic": "Revolução Francesa",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar quote literal com resumo corrigido."
+    },
+    {
+      "topic": "Revolução Industrial",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar claim com fontes verificáveis na seção comparada."
+    },
+    {
+      "topic": "Revolução Industrial",
+      "path": "src/views/topic-scenes/data/historia.ts",
+      "reason": "Sincronizar quote da cena com seção corrigida."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/views/topic-scenes/data/lote13.ts",
+      "reason": "Sincronizar claim da entrada ativa do lote13 com o gatilho histórico corrigido."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/views/topic-scenes/data/lote13.ts",
+      "reason": "Manter quote literal da entrada ativa do lote13 após patch do resumo."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/views/topic-scenes/data/lote13.ts",
+      "reason": "Distinguir antecedente/fundação no claim ativo."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/views/topic-scenes/data/lote13.ts",
+      "reason": "Sincronizar quote ativa com seção corrigida."
+    },
+    {
+      "topic": "Segunda Guerra Mundial (1939-1945)",
+      "path": "src/views/topic-scenes/data/lote13.ts",
+      "reason": "Sincronizar claim ativa com fatores da rendição e fim formal."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/views/topic-scenes/families/HistoriaMundial.tsx",
+      "reason": "Corrigir gatilho no texto desenhado; preservar SVG e interatividade."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/views/topic-scenes/families/HistoriaMundial.tsx",
+      "reason": "A cronologia do recorte não alinhado passa a marcar fundação do movimento."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/views/topic-scenes/families/HistoriaMundial.tsx",
+      "reason": "Atualizar acessibilidade para distinguir os dois marcos."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/views/topic-scenes/families/HistoriaMundial.tsx",
+      "reason": "Marcar fundação correta na figura."
+    },
+    {
+      "topic": "Guerra Fria",
+      "path": "src/views/topic-scenes/families/HistoriaMundial.tsx",
+      "reason": "Preservar antecedente Bandung explícito no recorte sem alterar geometria."
+    },
+    {
+      "topic": "Segunda Guerra Mundial (1939-1945)",
+      "path": "src/views/topic-scenes/families/HistoriaMundial.tsx",
+      "reason": "Acessibilidade passa a distinguir ataques em agosto do fim formal."
+    },
+    {
+      "topic": "Segunda Guerra Mundial (1939-1945)",
+      "path": "src/views/topic-scenes/families/HistoriaMundial.tsx",
+      "reason": "Texto cronológico do Pacífico explicita término formal sem mudar desenho."
+    },
+    {
+      "topic": "A Montagem da Colonização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Economia açucareira",
+      "reason": "Retira origem geológica única não demonstrada."
+    },
+    {
+      "topic": "A Montagem da Colonização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Economia açucareira",
+      "reason": "Ensina investimento que a recuperação já cobrava."
+    },
+    {
+      "topic": "A Montagem da Colonização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Escravidão indígena e africana",
+      "reason": "Qualifica coexistência regional, tráfico e coerção nos aldeamentos; remove causalidade conjuntiva."
+    },
+    {
+      "topic": "A Montagem da Colonização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Coexistência não limitada ao século XVI."
+    },
+    {
+      "topic": "A Montagem da Colonização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Qualifica trabalho e oposição religiosa."
+    },
+    {
+      "topic": "A Montagem da Colonização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Remove exercício que impunha prova causal falsa e fornece conferência."
+    },
+    {
+      "topic": "A Crise do Antigo Sistema Colonial",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Reconhece propostas anteriores sem teleologia."
+    },
+    {
+      "topic": "A Interiorização da Colonização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Mineração",
+      "reason": "Capital não explicada exclusivamente pela mineração."
+    },
+    {
+      "topic": "A Interiorização da Colonização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pegadinhas frequentes",
+      "reason": "Sincroniza causalidade."
+    },
+    {
+      "topic": "A Interiorização da Colonização",
+      "path": "src/data/deepSummaryContent.json",
+      "section": "Pratique e confira",
+      "reason": "Exercício reconhece múltiplos fatores."
+    }
+  ]
+}

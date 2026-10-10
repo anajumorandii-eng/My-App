@@ -143,7 +143,7 @@ const historiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-historia-europa-no-seculo-xix',
     family: 'contraste-de-posicoes',
-    question: 'Como transformar a sociedade capitalista industrial: por revolução imediata ou por reforma gradual?',
+    question: 'Como transformar a sociedade capitalista industrial: por transformação revolucionária ou por reforma gradual?',
     items: [
       {
         label: 'Marx e Engels',
@@ -152,16 +152,16 @@ const historiaBase: SceneEntry[] = [
         quote: 'prevendo que o capitalismo industrial geraria, por suas próprias contradições estruturais internas, condições objetivas para sua própria superação revolucionária pelo proletariado industrial organizado',
       },
       {
-        label: 'Social-democracia (SPD)',
+        label: 'Corrente reformista (Bernstein)',
         claim: 'buscava reformas progressivas por participação eleitoral e negociação institucional, em vez de ruptura revolucionária imediata',
         section: 'Movimento operário',
-        quote: 'buscavam alcançar reformas sociais e políticas progressivamente por meio de participação eleitoral e negociação institucional dentro do próprio sistema parlamentar vigente, em vez de ruptura revolucionária imediata e completa',
+        quote: 'buscavam alcançar reformas sociais e políticas progressivamente por meio de participação eleitoral e negociação institucional, em vez de ruptura revolucionária',
       },
       {
         label: 'Divisão estratégica',
-        claim: 'reformismo gradual e revolução imediata marcaram profundamente os debates internos do movimento socialista europeu',
+        claim: 'reforma gradual e transformação revolucionária eram estratégias em disputa dentro da própria social-democracia',
         section: 'Movimento operário',
-        quote: 'uma divisão estratégica entre reformismo gradual e revolução imediata que marcaria profundamente os debates internos do movimento socialista europeu',
+        quote: 'Reforma gradual e transformação revolucionária eram estratégias em disputa dentro da própria social-democracia, não duas posições uniformes que separassem o SPD de todo o marxismo',
       },
     ],
   },
@@ -200,7 +200,7 @@ const historiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-historia-a-primeira-globalizacao',
     family: 'camadas-de-determinacao',
-    question: 'Como a doutrina mercantilista condicionava o recurso ao trabalho compulsório na exploração colonial?',
+    question: 'Como os interesses mercantilistas e coloniais favoreceram o recurso ao trabalho compulsório?',
     items: [
       {
         label: 'Doutrina mercantilista',
@@ -216,15 +216,15 @@ const historiaBase: SceneEntry[] = [
       },
       {
         label: 'Trabalho compulsório',
-        claim: 'essa lógica mercantilista exigia trabalho compulsório em larga escala para viabilizar economicamente a exploração colonial',
+        claim: 'os interesses coloniais favoreceram o uso de trabalho compulsório em larga escala',
         section: 'Mercantilismo e trabalho compulsório',
-        quote: 'Essa lógica exigia trabalho compulsório em larga escala para viabilizar economicamente a exploração colonial',
+        quote: 'Os interesses coloniais favoreceram o uso de trabalho compulsório em larga escala',
       },
       {
         label: 'Tráfico transatlântico',
-        claim: 'a escravização indígena inicial foi seguida majoritariamente pelo tráfico transatlântico de africanos, sustentando plantations e mineração',
+        claim: 'a escravização indígena e o tráfico transatlântico de africanos coexistiram, com pesos diferentes conforme região e período',
         section: 'Mercantilismo e trabalho compulsório',
-        quote: 'a escravização de povos indígenas primeiro, e depois, majoritariamente, o tráfico transatlântico de africanos escravizados, sustentando plantations de açúcar, mineração e outras atividades extrativistas',
+        quote: 'a escravização indígena e o tráfico transatlântico de africanos escravizados coexistiram, com pesos diferentes conforme a região e o período, sustentando plantations de açúcar, mineração e outras atividades extrativistas',
       },
     ],
   },
@@ -365,9 +365,9 @@ const historiaBase: SceneEntry[] = [
       },
       {
         label: 'Assembleia Nacional',
-        claim: 'insatisfeitos com o sistema de votação por estamento nos Estados Gerais, os representantes do Terceiro Estado se autoproclamaram Assembleia Nacional Constituinte em junho de 1789',
+        claim: 'insatisfeitos com o sistema de votação por estamento nos Estados Gerais, os representantes do Terceiro Estado se proclamaram Assembleia Nacional em 17 de junho de 1789; em 9 de julho, essa assembleia assumiu o título de Assembleia Nacional Constituinte',
         section: 'De 1789 à monarquia constitucional',
-        quote: 'representantes do Terceiro Estado, insatisfeitos com o sistema de votação por estamento (que garantia maioria estrutural aos dois estamentos privilegiados mesmo representando parcela muito menor da população), proclamaram-se Assembleia Nacional Constituinte em junho de 1789',
+        quote: 'representantes do Terceiro Estado, insatisfeitos com o sistema de votação por estamento (que garantia maioria estrutural aos dois estamentos privilegiados mesmo representando parcela muito menor da população), proclamaram-se Assembleia Nacional em 17 de junho de 1789, reivindicando legitimidade para representar a nação. Em 9 de julho, essa assembleia assumiu o título de Assembleia Nacional Constituinte',
       },
       {
         label: 'Tomada da Bastilha',
@@ -396,9 +396,9 @@ const historiaBase: SceneEntry[] = [
       },
       {
         label: 'Condições documentadas',
-        claim: 'um relato de fábrica de 1833 documentava jornada de treze horas para crianças a partir de nove anos, e um relatório parlamentar do mesmo período registrava deformidades físicas permanentes desenvolvidas ainda na infância pelo trabalho fabril',
+        claim: 'inquéritos parlamentares e uma comissão real britânica dos anos 1830 registraram abusos e maus-tratos de crianças nas fábricas; o Factory Act de 1833 proibiu o trabalho de menores de nove anos nas fábricas abrangidas e limitou as jornadas dos demais grupos de menores',
         section: 'Fonte comparada',
-        quote: 'um relato de fábrica têxtil inglesa de 1833 descreve jornada de trabalho de treze horas para crianças a partir de nove anos de idade, com intervalos curtos para refeição e punições físicas para lentidão ou erros no trabalho fabril. Um relatório parlamentar britânico do mesmo período, produzido justamente para investigar essas condições, documenta testemunhos de trabalhadores adultos relatando deformidades físicas permanentes desenvolvidas ainda na infância pelo próprio trabalho fabril extenuante',
+        quote: 'os relatórios de inquéritos parlamentares e da comissão real britânica dos anos 1830 registraram abusos e maus-tratos de crianças nas fábricas. Já o Factory Act de 1833 proibiu o emprego de menores de nove anos nas fábricas abrangidas pela lei, limitou a jornada dos grupos de nove a treze anos e de treze a dezoito anos e criou um corpo de inspetores',
       },
       {
         label: 'Leis fabris',
@@ -452,21 +452,21 @@ const historiaBase: SceneEntry[] = [
       },
       {
         label: 'Intentona de 1935',
-        claim: 'o governo Vargas utilizou a Intentona Comunista de 1935 para justificar a decretação de um estado de sítio que se estenderia por praticamente todo o restante de seu mandato constitucional',
+        claim: 'o governo Vargas utilizou a insurreição de 1935 para justificar medidas de exceção, incluindo o estado de sítio e, em 1936, a equiparação da comoção interna ao estado de guerra',
         section: 'Intentona e repressão',
-        quote: 'O governo Vargas utilizou o episódio para justificar decretação de estado de sítio (suspensão de garantias constitucionais) que se estenderia por praticamente todo o restante de seu mandato constitucional',
+        quote: 'O governo Vargas utilizou o episódio para justificar medidas de exceção: o estado de sítio em 1935 e, a partir de março de 1936, a equiparação da comoção interna ao estado de guerra, com prorrogações que ampliaram a suspensão de garantias constitucionais',
       },
       {
         label: 'Plano Cohen fabricado',
-        claim: 'a justificativa oficial para o golpe apoiou-se na divulgação do "Plano Cohen", posteriormente revelado como falsificação de militares integralistas, numa manobra deliberada para criar pretexto de emergência nacional',
+        claim: 'a justificativa oficial para o golpe apoiou-se no Plano Cohen, simulação redigida pelo capitão integralista Olímpio Mourão Filho e apresentada pelo comando militar como documento comunista autêntico',
         section: 'Golpe do Estado Novo',
-        quote: 'A justificativa oficial para o golpe apoiou-se na divulgação de um documento conhecido como "Plano Cohen", supostamente um plano comunista de insurreição armada em larga escala, que posteriormente se revelaria falsificado por militares integralistas ligados ao próprio governo, numa manobra deliberada para criar pretexto de emergência nacional que justificasse a suspensão da ordem constitucional vigente',
+        quote: 'A justificativa oficial para o golpe apoiou-se na divulgação de um documento conhecido como "Plano Cohen", supostamente um plano comunista de insurreição armada em larga escala, redigido pelo capitão integralista Olímpio Mourão Filho como simulação de uma insurreição comunista e apresentado pelo comando militar como documento autêntico, numa manobra deliberada para criar pretexto de emergência nacional que justificasse a suspensão da ordem constitucional vigente',
       },
       {
         label: 'Golpe de 1937',
         claim: 'o golpe de 10 de novembro de 1937 encerrou formalmente o período constitucional ao antecipar-se à eleição presidencial prevista para 1938, com Vargas outorgando nova Constituição e fechando o Congresso Nacional',
         section: 'Golpe do Estado Novo',
-        quote: 'O golpe do Estado Novo, em 10 de novembro de 1937, encerrou formalmente o período constitucional ao antecipar-se à eleição presidencial prevista para 1938, com Vargas outorgando nova Constituição (elaborada com inspiração explícita em modelos autoritários europeus, especialmente o fascismo polonês) sem qualquer processo constituinte democrático, e fechando o Congresso Nacional',
+        quote: 'O golpe do Estado Novo, em 10 de novembro de 1937, encerrou formalmente o período constitucional ao antecipar-se à eleição presidencial prevista para 1938, com Vargas outorgando nova Constituição (elaborada com inspiração explícita em modelos autoritários europeus, incluindo a Constituição autoritária polonesa de 1935) sem qualquer processo constituinte democrático, e fechando o Congresso Nacional',
       },
     ],
   },
@@ -504,7 +504,7 @@ const historiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-historia-o-periodo-entreguerras-1918-1939',
     family: 'cadeia-de-derivacao',
-    question: 'Como a instabilidade do pós-guerra e a Crise de 1929 desencadearam a ascensão dos totalitarismos, e como o fracasso do apaziguamento levou à Segunda Guerra Mundial?',
+    question: 'Como a crise econômica agravou a instabilidade no entreguerras, e por que o apaziguamento não conteve a expansão nazista?',
     items: [
       {
         label: 'Crise de 1929',
@@ -514,9 +514,9 @@ const historiaBase: SceneEntry[] = [
       },
       {
         label: 'Ascensão dos totalitarismos',
-        claim: 'a ascensão de regimes totalitários resultou, em parte significativa, das próprias condições de instabilidade econômica e política geradas pela Primeira Guerra Mundial e agravadas pela Crise de 1929',
+        claim: 'a ascensão dos regimes ocorreu em contextos distintos: o fascismo italiano antecedeu a Crise de 1929, que contribuiu especialmente para o crescimento do nazismo',
         section: 'Ascensão dos totalitarismos',
-        quote: 'A ascensão de regimes totalitários em diferentes países europeus durante o período entreguerras resultou, em parte significativa, das próprias condições de instabilidade econômica e política geradas pela Primeira Guerra Mundial e agravadas pela Crise de 1929 subsequente',
+        quote: 'A ascensão de regimes totalitários durante o entreguerras ocorreu em contextos distintos. A instabilidade posterior à Primeira Guerra Mundial favoreceu o fascismo italiano; a Crise de 1929, posterior à chegada de Mussolini ao governo, contribuiu especialmente para o crescimento do nazismo alemão. O stalinismo se consolidou em outro contexto, ligado às disputas pelo poder e às políticas do Estado soviético',
       },
       {
         label: 'Fracasso do apaziguamento',
@@ -535,7 +535,7 @@ const historiaBase: SceneEntry[] = [
         label: 'Constituição de 1824',
         claim: 'a Constituição de 1824, outorgada por dom Pedro I, criou o Poder Moderador, concentrando na prática poder político desproporcional nas mãos do imperador',
         section: 'A Constituição de 1824',
-        quote: 'criou o Poder Moderador, exercido pessoalmente pelo imperador, com atribuições que incluíam dissolver a Câmara dos Deputados, nomear e demitir ministros e senadores vitalícios, concedendo ao monarca capacidade de intervenção direta e decisiva sobre os demais poderes sempre que julgasse necessário',
+        quote: 'criou o Poder Moderador, exercido pessoalmente pelo imperador, com atribuições que incluíam dissolver a Câmara dos Deputados, nomear e demitir ministros e escolher senadores vitalícios a partir de listas tríplices, concedendo ao monarca capacidade de intervenção direta e decisiva sobre os demais poderes sempre que julgasse necessário',
       },
       {
         label: 'Confederação do Equador',
@@ -547,38 +547,38 @@ const historiaBase: SceneEntry[] = [
         label: 'Abdicação de 1831',
         claim: 'a insatisfação das elites com o autoritarismo do Poder Moderador, somada à percepção de que dom Pedro I priorizava interesses portugueses, foi um dos fatores que, combinados, culminaram em pressão política crescente e na abdicação do imperador em 1831',
         section: 'Crise do Primeiro Reinado',
-        quote: 'A insatisfação crescente de elites políticas brasileiras com o autoritarismo e a centralização de poder no Poder Moderador, somada à percepção de que dom Pedro I priorizava interesses portugueses (dada sua condição simultânea de possível herdeiro do trono português, questão sucessória que se tornaria efetivamente relevante após a morte de seu pai, dom João VI, em 1826) em detrimento dos interesses especificamente brasileiros, culminou em pressão política crescente que levaria à abdicação do imperador em favor de seu filho ainda criança, dom Pedro II, em abril de 1831, encerrando o período do Primeiro Reinado e dando início à fase regencial subsequente',
+        quote: 'A insatisfação crescente de elites políticas brasileiras com o autoritarismo e a centralização de poder no Poder Moderador, somada à percepção de que dom Pedro I priorizava interesses portugueses (pois sucedeu a dom João VI como Pedro IV de Portugal em 1826 e abdicou desse trono em favor de sua filha, Maria da Glória, permanecendo envolvido na disputa sucessória portuguesa) em detrimento dos interesses especificamente brasileiros, culminou em pressão política crescente que levaria à abdicação do imperador em favor de seu filho ainda criança, dom Pedro II, em abril de 1831, encerrando o período do Primeiro Reinado e dando início à fase regencial subsequente',
       },
     ],
   },
   {
     chapterId: 'summary-historia-a-montagem-da-colonizacao',
     family: 'criterios-conjuntivos',
-    question: 'Que fatores, combinados e nenhum sozinho suficiente, substituíram a escravidão indígena pelo tráfico transatlântico de africanos?',
+    question: 'Que características combinadas definem o modelo de plantation apresentado no capítulo?',
     items: [
       {
-        label: 'Resistência indígena',
-        claim: 'populações indígenas escravizadas resistiam por fuga para o interior, onde o conhecimento do território dificultava a captura, e por revoltas armadas',
-        section: 'Escravidão indígena e africana',
-        quote: 'Populações indígenas escravizadas resistiam de diversas formas (fuga para o interior, onde o conhecimento do território dificultava a captura, e revoltas armadas)',
+        label: 'Grande propriedade',
+        claim: 'o modelo utiliza grandes extensões de terra',
+        section: 'Economia açucareira',
+        quote: 'latifúndio (grandes extensões de terra concedidas por sesmarias)',
       },
       {
-        label: 'Mortalidade por epidemias',
-        claim: 'a mortalidade elevadíssima por doenças europeias, para as quais não havia imunidade prévia, dizimou populações inteiras em poucas décadas de contato',
-        section: 'Escravidão indígena e africana',
-        quote: 'sofriam mortalidade elevadíssima por epidemias de doenças europeias (varíola, sarampo, gripe) para as quais não possuíam imunidade biológica prévia, dizimando populações inteiras em poucas décadas de contato',
+        label: 'Produção para exportação',
+        claim: 'a monocultura açucareira é orientada ao mercado externo',
+        section: 'Economia açucareira',
+        quote: 'monocultura voltada à exportação',
       },
       {
-        label: 'Oposição jesuíta',
-        claim: 'ordens religiosas como os jesuítas se opunham à escravização indígena por razões próprias, defendendo a catequização como alternativa — embora aceitassem a escravidão africana sem a mesma oposição',
-        section: 'Escravidão indígena e africana',
-        quote: 'A Igreja Católica, por meio de ordens religiosas como os jesuítas, também se opunha, por razões religiosas e políticas próprias, à escravização indígena, defendendo a catequização como alternativa ao trabalho forçado, embora aceitasse a escravidão africana sem a mesma oposição institucional sistemática',
+        label: 'Trabalho escravizado',
+        claim: 'a produção emprega trabalho escravizado em larga escala',
+        section: 'Economia açucareira',
+        quote: 'trabalho escravizado em larga escala',
       },
       {
-        label: 'Nenhum fator isolado',
-        claim: 'nenhum desses fatores isoladamente seria suficiente para explicar a transição: ela exige causas biológicas, políticas e religiosas atuando simultaneamente ao longo de décadas',
-        section: 'Pratique e confira',
-        quote: 'explique por que nenhum desses fatores isoladamente seria suficiente para explicar essa transição, exigindo uma explicação que combine causas biológicas, políticas e religiosas atuando simultaneamente ao longo de décadas de colonização',
+        label: 'Modelo de plantation',
+        claim: 'a combinação caracteriza um modelo produtivo; não é uma regra sobre a substituição de uma população por outra',
+        section: 'Economia açucareira',
+        quote: 'um arranjo que os historiadores chamam de plantation, replicado com variações em outras colônias americanas do período',
       },
     ],
   },
@@ -607,9 +607,9 @@ const historiaBase: SceneEntry[] = [
       },
       {
         label: 'Constituição de 1934',
-        claim: 'sob essa pressão, o período de governo provisório se encerrou formalmente com a promulgação de uma nova Constituição em 1934',
+        claim: 'a pressão pela reconstitucionalização contribuiu para o encerramento do Governo Provisório com a Constituição promulgada pela Assembleia Nacional Constituinte em 1934',
         section: 'Governo Provisório',
-        quote: 'esse período de governo provisório se encerrou formalmente com a promulgação de uma nova Constituição em 1934, que Vargas assinou após pressão de diferentes setores políticos, incluindo o movimento constitucionalista paulista de 1932, que pegou em armas exigindo eleições para uma Assembleia Constituinte',
+        quote: 'Esse período de governo provisório se encerrou formalmente com a promulgação de uma nova Constituição em 1934, promulgada pela Assembleia Nacional Constituinte após pressão de diferentes setores políticos, incluindo o movimento constitucionalista paulista de 1932. A data da eleição constituinte já havia sido fixada em maio de 1932, antes da revolta armada de julho, mas a oposição paulista exigia o fim do Governo Provisório e a reconstitucionalização',
       },
     ],
   },
@@ -915,7 +915,7 @@ const historiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Hiperinflação de 1923',
-        claim: 'a hiperinflação catastrófica de 1923 abriu o ciclo de desespero econômico que criaria terreno fértil para discursos políticos radicais',
+        claim: 'a hiperinflação de 1923 foi uma crise anterior à Grande Depressão, distinta do colapso econômico iniciado em 1929',
         section: 'Bases da ascensão',
         quote: 'A hiperinflação catastrófica de 1923 e, posteriormente, a Grande Depressão de 1929 (que atingiu a Alemanha com particular severidade, dado seu já fragilizado sistema financeiro fortemente dependente de empréstimos e investimentos americanos que se retraíram abruptamente com a crise) geraram desemprego massivo e desespero econômico generalizado entre a população alemã, criando terreno fértil para discursos políticos radicais que prometiam soluções simples, embora falsas e perigosas, e culpados específicos (identificados especialmente na comunidade judaica alemã) para problemas econômicos e sociais estruturalmente complexos.',
       },
@@ -946,9 +946,9 @@ const historiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Questão Religiosa',
-        claim: 'o conflito com bispos sobre o padroado afastou parte do clero católico do apoio incondicional à monarquia',
+        claim: 'o conflito sobre a aplicação de normas papais contra a maçonaria, no contexto do padroado e do beneplácito imperial, desgastou o apoio de parte do clero à monarquia',
         section: 'Questões que corroem o Império',
-        quote: 'A Questão Religiosa (1872-1875) opôs o governo imperial, que exercia o chamado padroado (direito histórico do Estado de interferir em nomeações e decisões eclesiásticas dentro do território nacional), a bispos que se recusavam a aceitar essa subordinação em conformidade com orientações papais mais recentes contrárias ao padroado, gerando conflito que afastou parte do clero católico do apoio incondicional à monarquia.',
+        quote: 'A Questão Religiosa (1872-1875) envolveu o padroado, que vinculava a Igreja ao Estado, e o beneplácito imperial, que condicionava a aplicação de normas papais à aprovação do governo. Os bispos de Olinda e do Pará seguiram orientações papais contra a maçonaria e determinaram a exclusão de maçons de irmandades religiosas, apesar da oposição imperial. A recusa em revogar essas medidas levou à prisão dos bispos, posteriormente anistiados em 1875, e desgastou as relações entre parte do clero e a monarquia.',
       },
       {
         label: 'Questão Militar',
@@ -977,9 +977,9 @@ const historiaBase: SceneEntry[] = [
     items: [
       {
         label: 'Sistema de alianças',
-        claim: 'o sistema de alianças militares rígidas transformava qualquer conflito bilateral localizado em potencial detonador de guerra generalizada',
+        claim: 'o sistema de alianças ampliava o risco de internacionalização de crises, mas a guerra dependia também de decisões dos governos',
         section: 'Causas',
-        quote: 'o sistema de alianças militares rígidas (a Tríplice Aliança entre Alemanha, Áustria-Hungria e Itália, contraposta à Tríplice Entente entre França, Reino Unido e Rússia) transformava qualquer conflito bilateral localizado em potencial detonador de guerra generalizada envolvendo todas as grandes potências europeias simultaneamente.',
+        quote: 'o sistema de alianças (a Tríplice Aliança entre Alemanha, Áustria-Hungria e Itália, contraposta à Tríplice Entente entre França, Reino Unido e Rússia) ampliava o risco de internacionalização de crises. A guerra não decorreu automaticamente desses acordos: dependeu de decisões dos governos durante a crise de julho de 1914. A Itália permaneceu neutra em 1914 e entrou na guerra ao lado da Entente em 1915.',
       },
       {
         label: 'Nacionalismo e corrida armamentista',
@@ -998,7 +998,7 @@ const historiaBase: SceneEntry[] = [
   {
     chapterId: 'summary-historia-o-brasil-atual',
     family: 'criterios-conjuntivos',
-    question: 'Que condições combinadas, e nenhuma sozinha suficiente, explicam a redução da desigualdade brasileira nos anos 2000?',
+    question: 'Como transferências de renda, valorização do salário mínimo e crescimento econômico contribuíram para a redução da desigualdade brasileira nos anos 2000?',
     items: [
       {
         label: 'Bolsa Família',
@@ -1019,10 +1019,10 @@ const historiaBase: SceneEntry[] = [
         quote: 'programas de transferência direta de renda condicionada, como o Bolsa Família (unificado em 2003 a partir de programas sociais anteriores mais fragmentados), combinados com política de valorização real do salário mínimo acima da inflação e período de crescimento econômico favorecido por preços internacionais elevados de commodities exportadas pelo Brasil, contribuíram para redução expressiva da pobreza extrema e da desigualdade de renda medida pelo índice de Gini ao longo daquela década específica',
       },
       {
-        label: 'Nenhum fator isolado',
-        claim: 'nenhum fator isolado bastaria para explicar sozinho a redução da desigualdade nos anos 2000 — os três precisaram se combinar',
+        label: 'Fatores combinados',
+        claim: 'a redução da desigualdade nos anos 2000 teve contribuições combinadas das transferências de renda, da valorização do salário mínimo e do crescimento econômico',
         section: 'Pegadinhas frequentes',
-        quote: 'combinou-se também com valorização real do salário mínimo e período favorável de crescimento econômico puxado por preços elevados de commodities exportadas, sem um único fator isolado sendo suficiente para explicar sozinho essa redução.',
+        quote: 'combinou-se também com valorização real do salário mínimo e período favorável de crescimento econômico puxado por preços elevados de commodities exportadas, como fatores que contribuíram conjuntamente para essa redução.',
       },
     ],
   },

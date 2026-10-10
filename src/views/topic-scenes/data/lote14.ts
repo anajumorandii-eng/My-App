@@ -47,9 +47,9 @@ export const ENTRIES_LOTE14: SceneEntry[] = [
     items: [
       {
         label: 'Deodoro fecha o Congresso',
-        claim: 'Em 1891 Deodoro dissolve o Congresso; a crise contribui para sua renúncia meses depois, e Floriano assume.',
+        claim: 'Em 3 de novembro de 1891 Deodoro dissolve o Congresso; a crise contribui para sua renúncia em 23 de novembro, vinte dias depois, e Floriano assume.',
         section: 'Governos militares iniciais',
-        quote: 'chegando a dissolver o Congresso Nacional em 1891 diante de conflitos políticos com o Legislativo',
+        quote: 'chegando a dissolver o Congresso Nacional em 3 de novembro de 1891 diante de conflitos políticos com o Legislativo',
       },
       {
         label: 'Revolta da Armada',
@@ -109,15 +109,15 @@ export const ENTRIES_LOTE14: SceneEntry[] = [
     items: [
       {
         label: 'Plano de Metas',
-        claim: '31 metas em cinco áreas, com planejamento estatal e capital estrangeiro: "cinquenta anos em cinco".',
+        claim: '30 metas setoriais em cinco áreas, mais Brasília como meta-síntese, com planejamento estatal e capital estrangeiro: "cinquenta anos em cinco".',
         section: 'Plano de Metas',
-        quote: 'estabeleceu conjunto ambicioso de 31 metas específicas de investimento em setores considerados estratégicos',
+        quote: 'estabeleceu conjunto ambicioso de 30 metas específicas de investimento, organizadas em cinco grandes áreas',
       },
       {
         label: 'Brasília, 1960',
         claim: 'A capital sai do litoral para o interior: símbolo do otimismo e da interiorização do desenvolvimento.',
         section: 'Plano de Metas',
-        quote: 'A construção de Brasília, nova capital federal inaugurada em 1960 no interior do território nacional',
+        quote: 'A construção de Brasília, nova capital federal inaugurada em 1960 no Planalto Central, em região que já abrigava fazendas e núcleos urbanos como Planaltina e Brazlândia',
       },
       {
         label: 'Petrobras × montadoras',
@@ -146,9 +146,9 @@ export const ENTRIES_LOTE14: SceneEntry[] = [
       },
       {
         label: 'AI-5 e anos de chumbo',
-        claim: 'Dezembro de 1968: poder de fechar o Congresso e cassar sem controle judicial, censura prévia, repressão.',
+        claim: 'Dezembro de 1968: possibilidade de recesso do Congresso, cassações e suspensão do habeas corpus nas hipóteses previstas; intensificação da censura e da repressão.',
         section: 'Anos de chumbo',
-        quote: 'instaurou censura prévia sistemática à imprensa, à produção artística e cultural do país',
+        quote: 'O endurecimento repressivo também ampliou a censura à imprensa e à produção artística e cultural do país.',
       },
       {
         label: 'Milagre econômico',
@@ -171,9 +171,9 @@ export const ENTRIES_LOTE14: SceneEntry[] = [
     items: [
       {
         label: 'Abertura controlada',
-        claim: '"Lenta, gradual e segura": AI-5 revogado em 1978, fim da censura prévia e anistia recíproca em 1979.',
+        claim: '"Lenta, gradual e segura": revogação do AI-5 aprovada em 1978 e efetiva em 1979, fim da censura prévia e Lei da Anistia; extensão aos agentes da repressão por interpretação de crimes conexos.',
         section: 'Distensão e abertura',
-        quote: 'a revogação do AI-5 em 1978, o fim da censura prévia à imprensa, e a Lei da Anistia de 1979',
+        quote: 'a revogação do AI-5 aprovada em 1978, com efeitos a partir de 1º de janeiro de 1979, o fim da censura prévia à imprensa, e a Lei da Anistia de 1979',
       },
       {
         label: 'Crise econômica',
@@ -189,7 +189,7 @@ export const ENTRIES_LOTE14: SceneEntry[] = [
       },
       {
         label: 'Colégio eleitoral, 1985',
-        claim: 'Transição indireta: Tancredo eleito morre antes da posse; Sarney assume; Constituição em 1988.',
+        claim: 'Transição indireta: Tancredo eleito é hospitalizado antes da posse; Sarney toma posse em 15 de março de 1985 e assume definitivamente após a morte de Tancredo, em 21 de abril; Constituição em 1988.',
         section: 'Diretas Já e transição',
         quote: 'um colégio eleitoral composto por congressistas e delegados estaduais elegeu Tancredo Neves',
       },

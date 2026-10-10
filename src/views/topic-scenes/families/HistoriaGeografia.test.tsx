@@ -129,15 +129,22 @@ describe('pranchas de História e Geografia', () => {
     expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('elo 4'));
   });
 
-  it('só inclina a balança da mão de obra quando os três fatores atuam juntos', async () => {
+  it('mostra os critérios do modelo de plantation sem impor uma regra de substituição de trabalhadores', async () => {
     const user = userEvent.setup();
     const entry = historia.find(item => item.chapterId === 'summary-historia-a-montagem-da-colonizacao')!;
     render(<HistoriaGeografia entry={entry} />);
     const diagram = screen.getByRole('img', { name: /Montagem da colonização/i });
-    expect(diagram).toHaveTextContent('sozinho, não basta');
-    await user.click(screen.getByRole('button', { name: 'Nenhum fator isolado' }));
-    expect(diagram).toHaveTextContent('juntos, inclinam a balança');
-    expect(diagram).toHaveTextContent('Metáfora: sem peso medido.');
+    expect(diagram).toHaveTextContent('latifúndio');
+    expect(diagram).toHaveTextContent('monocultura açucareira');
+    expect(diagram).toHaveTextContent('coerção em larga escala');
+    expect(diagram).not.toHaveTextContent('sozinho, não basta');
+    const combined = screen.getByRole('button', { name: 'Modelo de plantation' });
+    combined.focus();
+    await user.keyboard('{Enter}');
+    expect(combined).toHaveAttribute('aria-pressed', 'true');
+    expect(diagram).toHaveTextContent('A combinação caracteriza o modelo');
+    expect(screen.getByRole('status')).toHaveTextContent('não é uma regra');
+    expect(diagram).toHaveAttribute('aria-label', expect.stringContaining('recorte 4'));
   });
 
   it('contrasta a composição social das duas revoltas contra o mesmo pacto colonial', async () => {
@@ -170,7 +177,7 @@ describe('pranchas de História e Geografia', () => {
   it.each([
     ['summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro', /Poder Moderador acima dos três poderes/, 'nomeia senadores vitalícios', 'Abdicação de 1831', 'cala a revolta, não o problema'],
     ['summary-historia-brasil-imperio-o-periodo-regencial-1831-1840', /Período Regencial.*1831 a 1845/, '1840: maioridade', 'Revoltas regenciais', 'não contém as províncias'],
-    ['summary-historia-brasil-imperio-o-declinio-do-segundo-reinado', /um apoio a menos faz balançar/, 'sem indenização', 'Perda simultânea', '15 nov. 1889'],
+    ['summary-historia-brasil-imperio-o-declinio-do-segundo-reinado', /Declínio do Segundo Reinado.*movimento militar republicano/, 'sem indenização', 'Perda simultânea', '15 nov. 1889'],
     ['summary-historia-ascensao-e-dominio-das-oligarquias', /do eleitor dependente ao coronel/, 'eleitores dependentes', 'Café com leite', 'valorização do café'],
     ['summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930', /tenentismo, pelo movimento operário e pelo modernismo/, 'greve geral, SP 1917', 'Modernismo', 'na arte'],
   ] as const)('desenha a estrutura de poder de %s', async (chapterId, name, text, button, after) => {

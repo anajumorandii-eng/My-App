@@ -284,42 +284,25 @@ function Navigations({ active, t }: { active: number; t: SceneTransition }) {
 }
 
 function Colonization({ active, t }: { active: number; t: SceneTransition }) {
-  // Metáfora de balança, avisada no rodapé: cada fator sozinho não inclina
-  // o prato; só os três juntos. É a afirmação do capítulo ("nenhum
-  // isoladamente seria suficiente"), não uma medida de peso.
   const all = active === 3;
-  const factors = [
-    { label: 'resistência', x: 390 },
-    { label: 'epidemias', x: 450 },
-    { label: 'oposição jesuíta', x: 510 },
+  const traits = [
+    { label: 'Grande propriedade', detail: 'latifúndio', x: 28 },
+    { label: 'Exportação', detail: 'monocultura açucareira', x: 228 },
+    { label: 'Trabalho escravizado', detail: 'coerção em larga escala', x: 428 },
   ];
-  return <HumanitiesCorePlate kind="colonization" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Montagem da colonização: resistência indígena, epidemias e oposição jesuíta só juntas explicam a passagem ao tráfico transatlântico; fator ${active + 1} destacado`}>
+  return <HumanitiesCorePlate kind="colonization" active={active}>{<svg viewBox="0 0 620 360" role="img" aria-label={`Montagem da colonização: características do modelo de plantation; recorte ${active + 1} destacado`}>
     <rect x="8" y="8" width="604" height="344" rx="18" className="hg-paper" />
-    <text x="30" y="40" className="hg-kicker">MÃO DE OBRA NA COLÔNIA · SÉCULO XVI</text>
-    <path d="M296 300h48l-24-86Z" className="hg-pivot" />
-    <motion.g initial={false} animate={{ rotate: all ? 5 : 0 }} transition={paced(t, 0.9, all ? 0.9 : 0)} style={{ transformOrigin: '320px 214px' }}>
-      <path d="M130 214H510" className="hg-beam" />
-      <path d="M150 214l-30 50h100l-30-50M490 214l-30 50h100l-30-50" className="hg-rope" />
-      <path d="M110 264h120a60 14 0 0 1-120 0ZM410 264h120a60 14 0 0 1-120 0Z" className="hg-pan" />
-      {factors.map((f, k) => {
-        const present = all || active === k;
-        return <motion.g key={f.label} initial={false} animate={{ y: present ? 0 : -118, opacity: present ? 1 : 0.35 }} transition={paced(t, 0.6, all ? k * 0.2 : 0)}>
-          <rect x={f.x - 20} y="232" width="40" height="30" rx="6" className="hg-weight" />
-          {k === 0 && <path d={`M${f.x - 8} 254l10-14 6 8M${f.x + 2} 240l6-4`} className="hg-weight-icon" />}
-          {k === 1 && <g><circle cx={f.x} cy="247" r="6" className="hg-weight-icon" />{[0, 60, 120, 180, 240, 300].map(a => <path key={a} d={`M${f.x + 6 * Math.cos(a * Math.PI / 180)} ${247 + 6 * Math.sin(a * Math.PI / 180)}l${3 * Math.cos(a * Math.PI / 180)} ${3 * Math.sin(a * Math.PI / 180)}`} className="hg-weight-icon" />)}</g>}
-          {k === 2 && <path d={`M${f.x} 238v18M${f.x - 6} 244h12`} className="hg-weight-icon" />}
-        </motion.g>;
-      })}
-    </motion.g>
-      <text x="170" y="300" textAnchor="middle" className="hg-label">escravização</text>
-      <text x="170" y="316" textAnchor="middle" className="hg-label">indígena</text>
-      <text x="470" y="300" textAnchor="middle" className="hg-label">tráfico transatlântico</text>
-      <text x="470" y="316" textAnchor="middle" className="hg-label">de africanos</text>
-    {factors.map((f, k) => <text key={f.label} x={f.x} y={160 + (k % 2) * 16} textAnchor="middle" className={all || active === k ? 'hg-factor hg-factor-on' : 'hg-factor'}>{f.label}</text>)}
-    <motion.text x="320" y="90" textAnchor="middle" className="hg-hand" initial={false} animate={{ opacity: 1 }} key={all ? 'all' : 'one'} transition={paced(t, 0.4, 0.8)}>
-      {all ? 'juntos, inclinam a balança' : 'sozinho, não basta'}
-    </motion.text>
-    <text x="30" y="344" className="hg-footnote">Metáfora: sem peso medido.</text>
+    <text x="30" y="40" className="hg-kicker">ECONOMIA AÇUCAREIRA · PLANTATION</text>
+    {traits.map((trait, index) => <motion.g key={trait.label} initial={false} animate={{ opacity: all || active === index ? 1 : 0.45 }} transition={paced(t, 0.4)}>
+      <rect x={trait.x} y="100" width="164" height="138" rx="12" className="hg-panel" />
+      <text x={trait.x + 82} y="128" textAnchor="middle" className="hg-label">{trait.label}</text>
+      {index === 0 && <g>{[0, 1, 2, 3].map(row => <path key={row} d={`M${trait.x + 24} ${155 + row * 15}h116`} className="hg-document-line" />)}</g>}
+      {index === 1 && <g><path d={`M${trait.x + 27} 188h105l-17 20H${trait.x + 44}Z`} className="hg-fort" /><path d={`M${trait.x + 78} 187v-42l32 30h-32`} className="hg-document-line" /></g>}
+      {index === 2 && <g><circle cx={trait.x + 82} cy="158" r="10" className="hg-weight-icon" /><path d={`M${trait.x + 82} 170v35m0-25-20 15m20-15 20 15m-20 10-13 20m13-20 13 20`} className="hg-document-line" /></g>}
+      <text x={trait.x + 82} y="260" textAnchor="middle" className="hg-small">{trait.detail}</text>
+    </motion.g>)}
+    <text x="310" y="308" textAnchor="middle" className="hg-hand">{all ? 'A combinação caracteriza o modelo' : 'Uma característica do modelo em foco'}</text>
+    <text x="30" y="340" className="hg-footnote">Modelo produtivo; a coexistência de formas de cativeiro variou por região.</text>
   </svg>}</HumanitiesCorePlate>;
 }
 

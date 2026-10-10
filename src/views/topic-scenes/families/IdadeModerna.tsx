@@ -37,8 +37,8 @@ export function FirstGlobalization({ active }: Scene) {
   const panel = [
     { title: ['DOUTRINA', 'MERCANTILISTA'], lines: ['riqueza = ouro e prata', 'acumulados', '', 'comércio: soma zero —', 'o ganho de um país', 'é a perda de outro'] },
     { title: ['PACTO', 'COLONIAL'], lines: ['a colônia fornece', 'matéria-prima barata', 'e compra manufaturados', 'só da metrópole:', 'exclusividade comercial'] },
-    { title: ['TRABALHO', 'COMPULSÓRIO'], lines: ['em larga escala:', 'é o que viabiliza', 'economicamente', 'a exploração colonial', 'primeiro, indígenas', 'escravizados'] },
-    { title: ['TRÁFICO', 'TRANSATLÂNTICO'], lines: ['depois, majoritariamente,', 'africanos escravizados', 'sustentam plantations', 'de açúcar e mineração', 'abolição gradual,', 'só no século XIX'] },
+    { title: ['TRABALHO', 'COMPULSÓRIO'], lines: ['interesses coloniais', 'favorecem coerção', 'em larga escala:', 'indígenas e africanos', 'escravizados coexistem', 'conforme região e época'] },
+    { title: ['TRÁFICO', 'TRANSATLÂNTICO'], lines: ['africanos escravizados', 'sustentam plantations', 'de açúcar e mineração', 'junto à coerção indígena;', 'abolição gradual', 'ao longo do século XIX'] },
   ][active];
   return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`A Primeira Globalização em camadas: doutrina mercantilista, pacto colonial, trabalho compulsório e tráfico transatlântico no mapa do Atlântico; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="FirstGlobalization" active={active} />
@@ -160,7 +160,7 @@ export function FirstGlobalization({ active }: Scene) {
         {k < 3 && <path d={`M${x + 128} 303h10M${x + 134} 299l4 4-4 4`} className="bi-arrow-static" />}
       </g>;
     })}
-    <text x="30" y="342" className="bi-foot">Contornos esquemáticos, sem escala; cada camada condiciona a seguinte.</text>
+    <text x="30" y="342" className="bi-foot">Contornos sem escala; interesses e formas de coerção se articulam.</text>
     </g>
   </svg>;
 }
