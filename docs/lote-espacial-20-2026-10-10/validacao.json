@@ -1,0 +1,5427 @@
+{
+  "base_commit": "3ad19a37503cacc0126642732c92e75759b0fcc3",
+  "node_tests": {
+    "total": 973,
+    "passed": 973,
+    "failed": 0
+  },
+  "lint": "passed",
+  "build": "passed",
+  "visual_queue": "passed; 613 IDs",
+  "ui_tests": {
+    "numTotalTests": 1553,
+    "numPassedTests": 1553,
+    "numFailedTests": 0
+  },
+  "browser": {
+    "expected": 240,
+    "actual": 240,
+    "passed": 240,
+    "failures": []
+  },
+  "records": [
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 360,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-reduce-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 360,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-light-no-preference-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 360,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-reduce-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 360,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "360-dark-no-preference-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 834,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-reduce-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 834,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-light-no-preference-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 834,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-reduce-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 834,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "touch": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "834-dark-no-preference-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 1440,
+      "theme": "light",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-reduce-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 1440,
+      "theme": "light",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-light-no-preference-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "reduce",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "reducedPlayback": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-reduce-summary-quimica-polimeros.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+      "topic": "Composição Química Celular: Compostos Inorgânicos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-biologia-composicao-quimica-celular-compostos-inorganicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-biologia-nucleo-celular",
+      "topic": "Núcleo Celular",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-biologia-nucleo-celular.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+      "topic": "Grandezas Físicas e Operações com Vetores",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-fisica-grandezas-fisicas-e-operacoes-com-vetores.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-velocidade-vetorial",
+      "topic": "Velocidade Vetorial",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-fisica-velocidade-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-composicao-de-movimentos",
+      "topic": "Composição de Movimentos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-fisica-composicao-de-movimentos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+      "topic": "Força Elétrica: Lei de Coulomb",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-fisica-forca-eletrica-lei-de-coulomb.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico",
+      "topic": "Campo Elétrico",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-fisica-campo-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+      "topic": "Energia Potencial e Potencial Elétrico",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-fisica-energia-potencial-e-potencial-eletrico.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+      "topic": "Campo Elétrico Uniforme: Abordagem Escalar e Abordagem Vetorial",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-fisica-dinamica-das-cargas-eletricas",
+      "topic": "Dinâmica das Cargas Elétricas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "nativeParameter": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-fisica-dinamica-das-cargas-eletricas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interacoes-intermoleculares",
+      "topic": "Interações Intermoleculares",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "separation": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-interacoes-intermoleculares.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-introducao-a-quimica-organica",
+      "topic": "Introdução à Química Orgânica",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "propano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-introducao-a-quimica-organica.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+      "topic": "Nomenclatura de Compostos Orgânicos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "propano",
+        "butano",
+        "2-metilpropano"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-nomenclatura-de-compostos-organicos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+      "topic": "Nomenclatura de Compostos Orgânicos Oxigenados e Nitrogenados",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "metoximetano",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+      "topic": "Reconhecimento de Funções Orgânicas e Algumas de suas Propriedades",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "metoximetano",
+        "etanol",
+        "etanal",
+        "propanona",
+        "ácido etanoico",
+        "etanamina"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-interpretando-reacoes-organicas",
+      "topic": "Interpretando Reações Orgânicas",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-interpretando-reacoes-organicas.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-substituicao",
+      "topic": "Reações de Substituição",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-reacoes-de-substituicao.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+      "topic": "Reações de Oxidação em Hidrocarbonetos",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-alcoois",
+      "topic": "Álcoois",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "examples": [
+        "etanol",
+        "propan-2-ol",
+        "2-metilpropan-2-ol"
+      ],
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-alcoois.jpg",
+      "passed": true
+    },
+    {
+      "id": "summary-quimica-polimeros",
+      "topic": "Polímeros",
+      "width": 1440,
+      "theme": "dark",
+      "motion": "no-preference",
+      "errors": [],
+      "keyboard": true,
+      "reset": true,
+      "drag": true,
+      "timeline": true,
+      "pause": true,
+      "metrics": {
+        "overflow": false,
+        "shortControls": [],
+        "loops": 0,
+        "duplicates": []
+      },
+      "screenshot": "1440-dark-no-preference-summary-quimica-polimeros.jpg",
+      "passed": true
+    }
+  ],
+  "lighthouse": {
+    "mode": "snapshot",
+    "scope": "Alcoois; modelo aberto; celular",
+    "accessibility": 100,
+    "best_practices": 100,
+    "seo": 60,
+    "agent": 50
+  },
+  "editorial_approval": false,
+  "selected_captures": 10,
+  "history": "Enquadramento molecular ampliado e aguas reorientadas durante inspecao; casos afetados repetidos sobre o build final. Evidencia preliminar preservada localmente."
+}

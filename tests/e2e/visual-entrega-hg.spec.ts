@@ -152,10 +152,11 @@ for (const width of [390,834,1366]) for (const theme of ['light','dark']) for (c
       const sliders = board.getByRole('slider');
       for (let i=0;i<await sliders.count();i++) {
         const slider=sliders.nth(i);
-        await slider.focus(); await page.keyboard.press('Home');
+        await slider.focus(); await expect(slider).toBeFocused();
+        await slider.press('Home');
         await expect(slider).toHaveValue((await slider.getAttribute('min')) ?? '0');
         await geometry(`controle-${i}-min`);
-        await page.keyboard.press('End');
+        await slider.press('End');
         await expect(slider).toHaveValue((await slider.getAttribute('max')) ?? '100');
         await geometry(`controle-${i}-max`);
       }
