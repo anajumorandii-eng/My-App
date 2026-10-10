@@ -1,0 +1,100 @@
+[
+  {
+    "file": "capturas/01-pendulo-celular.jpg",
+    "id": "summary-fisica-dinamica-do-movimento-circular",
+    "width": 360,
+    "height": 1100,
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  },
+  {
+    "file": "capturas/02-atwood-celular.jpg",
+    "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+    "width": 360,
+    "height": 1100,
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  },
+  {
+    "file": "capturas/03-gas-celular.jpg",
+    "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
+    "width": 360,
+    "height": 1100,
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  },
+  {
+    "file": "capturas/04-pressao-celular-escuro.jpg",
+    "id": "summary-fisica-hidrostatica-densidade-e-pressao",
+    "width": 360,
+    "height": 1100,
+    "theme": "dark",
+    "motion": "reduce",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  },
+  {
+    "file": "capturas/05-fabricante-desktop-escuro.jpg",
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "width": 1440,
+    "height": 1100,
+    "theme": "dark",
+    "motion": "reduce",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  },
+  {
+    "file": "capturas/06-refracao-desktop.jpg",
+    "id": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes",
+    "width": 1440,
+    "height": 1100,
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  },
+  {
+    "file": "capturas/07-interferencia-tablet.jpg",
+    "id": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento",
+    "width": 834,
+    "height": 1100,
+    "theme": "dark",
+    "motion": "no-preference",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  },
+  {
+    "file": "capturas/08-tubo-tablet.jpg",
+    "id": "summary-fisica-ondas-estacionarias-em-tubos",
+    "width": 834,
+    "height": 1100,
+    "theme": "dark",
+    "motion": "reduce",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  },
+  {
+    "file": "capturas/09-fio-tres-direcoes.jpg",
+    "id": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "90",
+    "reading": "θ = 90°; i = 2 A; B = 0,5 T; F = 1 N na direção +z.",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  },
+  {
+    "file": "capturas/10-lente-imagem-ampliada.jpg",
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "30",
+    "reading": "p = 30 cm; p′ = 60 cm; A = -2; h′ = -20 cm; imagem real e invertida.",
+    "build_sha256": "9eead1330a132052c041cc762d4236e21bdaaa29e3f5024837d2d7ab1a4499d0"
+  }
+]
