@@ -116,7 +116,7 @@ export const ENTRIES_LOTE13: SceneEntry[] = [
       },
       {
         label: 'Pacífico',
-        claim: 'Pearl Harbor (dezembro de 1941) põe os Estados Unidos na guerra; o avanço de ilha em ilha termina com Hiroshima e Nagasaki em agosto de 1945',
+        claim: 'Pearl Harbor (dezembro de 1941) põe os Estados Unidos na guerra; em agosto de 1945, os ataques a Hiroshima e Nagasaki e a entrada soviética contribuem para a rendição japonesa, formalizada em 2 de setembro',
         section: 'Frente do Pacífico e bombas atômicas',
         quote: 'entraram formalmente na guerra após o ataque surpresa japonês à base naval americana de Pearl Harbor, em dezembro de 1941',
       },
@@ -135,9 +135,9 @@ export const ENTRIES_LOTE13: SceneEntry[] = [
     items: [
       {
         label: 'Dois blocos',
-        claim: 'Otan (1949) de um lado, Pacto de Varsóvia (1955) em resposta do outro; o Muro de Berlim (1961) torna a divisão visível',
+        claim: 'Otan (1949) de um lado; o Pacto de Varsóvia (1955) responde à entrada da Alemanha Ocidental na Otan; o Muro de Berlim (1961) torna a divisão visível',
         section: 'Bipolaridade',
-        quote: 'organizado pelo Pacto de Varsóvia (criado em 1955 como resposta direta à formação da própria Otan)',
+        quote: 'organizado pelo Pacto de Varsóvia (criado em 1955, em resposta imediata à entrada da Alemanha Ocidental na Otan)',
       },
       {
         label: 'Guerras por procuração',
@@ -153,9 +153,9 @@ export const ENTRIES_LOTE13: SceneEntry[] = [
       },
       {
         label: 'Não alinhados',
-        claim: 'em Bandung (1955), Nehru, Sukarno e Nasser propõem um caminho próprio; na prática, muitos acabam recebendo apoio de uma das superpotências',
+        claim: 'Bandung (1955) antecede o Movimento dos Não Alinhados, formalizado em Belgrado (1961); na prática, muitos participantes recebem apoio de uma das superpotências',
         section: 'Terceiro Mundo e não alinhamento',
-        quote: 'formalizado na Conferência de Bandung (1955)',
+        quote: 'formalizado na Conferência de Belgrado (1961), tendo como antecedente a Conferência de Bandung (1955)',
       },
     ],
   },

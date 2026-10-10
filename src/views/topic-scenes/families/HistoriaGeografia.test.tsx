@@ -173,8 +173,8 @@ describe('pranchas de História e Geografia', () => {
   it.each([
     ['summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro', /Poder Moderador acima dos três poderes/, 'nomeia senadores vitalícios', 'Abdicação de 1831', 'cala a revolta, não o problema'],
     ['summary-historia-brasil-imperio-o-periodo-regencial-1831-1840', /Período Regencial.*1831 a 1845/, '1840: maioridade', 'Revoltas regenciais', 'não contém as províncias'],
-    ['summary-historia-brasil-imperio-o-declinio-do-segundo-reinado', /um apoio a menos faz balançar/, 'sem indenização', 'Perda simultânea', '15 nov. 1889'],
-    ['summary-historia-ascensao-e-dominio-das-oligarquias', /do eleitor dependente ao coronel/, 'eleitores dependentes', 'Café com leite', 'valorização do café'],
+    ['summary-historia-brasil-imperio-o-declinio-do-segundo-reinado', /Declínio do Segundo Reinado.*movimento militar republicano/, 'sem indenização', 'Perda simultânea', '15 nov. 1889'],
+    ['summary-historia-ascensao-e-dominio-das-oligarquias', /do eleitor dependente ao coronel/, 'eleitores dependentes', 'Café com leite', 'de excedentes de café'],
     ['summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930', /tenentismo, pelo movimento operário e pelo modernismo/, 'greve geral, SP 1917', 'Modernismo', 'na arte'],
   ] as const)('desenha a estrutura de poder de %s', async (chapterId, name, text, button, after) => {
     const user = userEvent.setup();

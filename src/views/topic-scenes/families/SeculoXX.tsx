@@ -13,8 +13,8 @@ function usePaced() {
 // Lote 8 da régua de História: séculos XIX e XX no mundo. Cada cena encena o
 // mecanismo que o capítulo defende — duas estradas para a mesma classe, duas
 // cadeias de mando colonial, a rede de alianças que a faísca de Sarajevo
-// incendeia, a escada de concessões até 1939, três rachaduras que só juntas
-// derrubam a democracia alemã, duas trilhas até a independência e a fileira de
+// incendeia, a escada de concessões até 1939, rachaduras que destacam crises e
+// fragilidade da democracia alemã, duas trilhas até a independência e a fileira de
 // dominós de 1989. Datas, nomes e números vêm do resumo do capítulo; o que é
 // desenho sem medida vem com rodapé dizendo isso.
 
@@ -34,7 +34,7 @@ export function WorkerRoads({ active }: Scene) {
     ['reformas por dentro do', 'sistema parlamentar'],
     ['a mesma classe,', 'duas estratégias'],
   ][active];
-  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Europa no século XIX: do operariado industrial saem o caminho da revolução, de Marx e Engels, e o da reforma gradual, da social-democracia; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Europa no século XIX: do operariado industrial saem o caminho da revolução, de Marx e Engels, e o da reforma gradual, da corrente de Bernstein; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="WorkerRoads" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
@@ -76,8 +76,8 @@ export function WorkerRoads({ active }: Scene) {
       <path d="M-16 -4v20M-6 -4v20M6 -4v20M16 -4v20" className="sx-temple-col" />
       <path d="M-22 18h44" className="sx-temple-col" />
     </g>
-    <text x="442" y="226" className={active === 1 ? 'bi-label bi-on' : 'bi-label'}>Social-democracia</text>
-    <text x="442" y="242" className="bi-small">SPD: voto e negociação</text>
+    <text x="442" y="226" className={active === 1 ? 'bi-label bi-on' : 'bi-label'}>Reformismo</text>
+    <text x="442" y="242" className="bi-small">Bernstein: voto e reformas</text>
     <text x="442" y="258" className="bi-small">reformas progressivas</text>
 
     <motion.g initial={false} animate={leapOn
@@ -98,7 +98,7 @@ export function WorkerRoads({ active }: Scene) {
 
     <path d="M40 316H580" className="bi-axis" />
     {[[1815, 'Congresso de Viena, 1815', 332, 'start', -8], [1848, 'Manifesto Comunista, 1848', 306, 'middle', 0],
-      [1861, 'Itália unificada, 1861', 332, 'middle', 0], [1871, 'Império Alemão, 1871', 306, 'end', 44]].map(([y, text, ty, anchor, dx]) => <g key={y as number}>
+      [1861, 'Reino da Itália, 1861', 332, 'middle', 0], [1871, 'Império Alemão, 1871', 306, 'end', 44]].map(([y, text, ty, anchor, dx]) => <g key={y as number}>
       <motion.circle cx={Y19(y as number)} cy="316" r="4" className={y === 1848 ? 'bi-dot bi-dot-warn' : 'bi-dot'} initial={false}
         animate={{ scale: y === 1848 && active === 0 ? 1.6 : 1 }} transition={p(0.4, 0.3)} />
       <text x={Y19(y as number) + (dx as number)} y={ty as number} textAnchor={anchor as 'start' | 'middle' | 'end'}
@@ -126,7 +126,7 @@ export function ColonialRule({ active }: Scene) {
     { c: 250, name: 'Reino Unido', mid: 'chefia local mantida', type: 'Indireta', note: 'delega: custa menos', on: active !== 0 },
   ];
   const hand = ['a metrópole governa direto', 'o chefe local serve à metrópole', 'dois tipos, o mesmo imperialismo'][active];
-  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Imperialismo: dominação direta francesa e dominação indireta britânica, com a partilha da África na Conferência de Berlim; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Imperialismo: dominação direta francesa e dominação indireta britânica, com regras coloniais da Conferência de Berlim; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="ColonialRule" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
@@ -174,9 +174,9 @@ export function ColonialRule({ active }: Scene) {
       <path d="M-18 -5v4M-10 -5v4M-2 -5v4M6 -5v4M14 -5v4" className="sx-rule-tick" />
     </g>
     <text x="350" y="246" className="bi-small bi-strong">Conferência de Berlim, 1884–1885</text>
-    <text x="350" y="264" className="bi-small">partilha só entre europeus</text>
-    <text x="350" y="282" className="bi-small">fronteiras ignoram etnias e línguas</text>
-    <text x="30" y="342" className="bi-foot">Contorno esquemático da África; linhas de fronteira ilustrativas.</text>
+    <text x="350" y="264" className="bi-small">sem representantes africanos</text>
+    <text x="350" y="282" className="bi-small">regras para expansão colonial</text>
+    <text x="30" y="342" className="bi-foot">Linhas ilustram a partilha posterior; Berlim não traçou todo o mapa.</text>
     </g>
   </svg>;
 }
@@ -201,7 +201,7 @@ export function AllianceFuse({ active }: Scene) {
   const p = usePaced();
   const fire = active === 2;
   const tension = [0.55, 0.9, 1][active];
-  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Primeira Guerra Mundial: alianças rígidas, pressão acumulada de nacionalismo e corrida armamentista, e Sarajevo como estopim; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Primeira Guerra Mundial: alianças e decisões dos governos, pressão acumulada de nacionalismo e corrida armamentista, e Sarajevo como estopim; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="AllianceFuse" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
@@ -211,7 +211,7 @@ export function AllianceFuse({ active }: Scene) {
     <motion.path d="M340 244Q330 206 266 204" className="sx-fuse" initial={false} animate={{ opacity: fire ? 1 : 0.5 }} transition={p(0.3)} />
     {NATIONS.map(n => <g key={n.id}>
       <motion.circle cx={n.x} cy={n.y} r="16" className="sx-flash" initial={false}
-        animate={fire ? { scale: [0.8, 2.2], opacity: [0, 0.9, 0] } : { scale: 0.8, opacity: 0 }} transition={p(0.8, 1.2 + n.wave * 0.28)}
+        animate={fire && n.id !== 'it' ? { scale: [0.8, 2.2], opacity: [0, 0.9, 0] } : { scale: 0.8, opacity: 0 }} transition={p(0.8, 1.2 + n.wave * 0.28)}
         style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />
       <circle cx={n.x} cy={n.y} r="15" className={n.bloc === 'a' ? 'sx-node-a' : 'sx-node-e'} />
       <path transform={`translate(${n.x} ${n.y})`} d="M-6 -7h12v7q0 6-6 9q-6-3-6-9Z" className="sx-shield" />
@@ -227,14 +227,14 @@ export function AllianceFuse({ active }: Scene) {
 
     <rect x="384" y="52" width="210" height="246" rx="14" className="bi-panel" />
     <motion.g initial={false} animate={{ opacity: active === 0 ? 1 : 0 }} transition={p(0.4)}>
-      <text x="400" y="76" className="bi-panel-title">ALIANÇAS RÍGIDAS</text>
-      <text x="400" y="100" className="bi-small">todas as potências presas</text>
-      <text x="400" y="116" className="bi-small">em dois blocos fechados</text>
+      <text x="400" y="76" className="bi-panel-title">ALIANÇAS E ESCOLHAS</text>
+      <text x="400" y="100" className="bi-small">acordos entre potências</text>
+      <text x="400" y="116" className="bi-small">ampliam o risco de guerra</text>
       <text x="400" y="146" className="bi-hand-sm">um conflito localizado</text>
-      <text x="400" y="164" className="bi-hand-sm">arrasta os aliados</text>
+      <text x="400" y="164" className="bi-hand-sm">envolve decisões políticas</text>
       <path d="M404 186h40M404 186l6-4M404 186l6 4M540 186h40M580 186l-6-4M580 186l-6 4" className="bi-arrow-static" />
       <circle cx="492" cy="186" r="7" className="sx-spark" />
-      <text x="492" y="214" textAnchor="middle" className="bi-tiny">bilateral vira generalizada</text>
+      <text x="492" y="214" textAnchor="middle" className="bi-tiny">escalada não automática</text>
     </motion.g>
     <motion.g initial={false} animate={{ opacity: active === 1 ? 1 : 0 }} transition={p(0.4)}>
       <text x="400" y="76" className="bi-panel-title">PRESSÃO ACUMULADA</text>
@@ -270,7 +270,7 @@ export function AllianceFuse({ active }: Scene) {
     <text x="48" y="318" className="bi-tiny">Tríplice Aliança</text>
     <circle cx="150" cy="314" r="6" className="sx-node-e" />
     <text x="162" y="318" className="bi-tiny">Tríplice Entente</text>
-    <text x="30" y="342" className="bi-foot">Posições esquemáticas, não um mapa; barra de tensão ilustrativa.</text>
+    <text x="30" y="342" className="bi-foot">Alianças antes da guerra; Itália neutra em 1914, com a Entente em 1915.</text>
     </g>
   </svg>;
 }
@@ -278,11 +278,11 @@ export function AllianceFuse({ active }: Scene) {
 // Entreguerras: a cadeia do capítulo no alto, uma cena por elo no meio e a
 // linha do tempo de 1918 a 1939 embaixo, com os anos do elo aceso.
 const Y20 = (y: number) => 40 + (y - 1918) * (540 / 21);
-const LINKS = ['Crise de 1929', 'Totalitarismos', 'Apaziguamento', 'Guerra, 1939'];
+const LINKS = ['Crise de 1929', 'Regimes e contextos', 'Apaziguamento', 'Guerra, 1939'];
 const HOT20 = [[1929, 1933], [1922, 1924, 1933], [1936, 1938, 1939]];
 const REGIMES = [
-  { x: 30, name: 'Itália', who: 'Mussolini', a: 'fascismo fundado em 1919', b: 'Marcha sobre Roma, 1922' },
-  { x: 222, name: 'URSS', who: 'Stalin', a: 'coletivização forçada', b: 'Grande Terror, anos 1930' },
+  { x: 30, name: 'Itália', who: 'Mussolini', a: 'fascismo fundado em 1919', b: 'nomeação real, 1922' },
+  { x: 222, name: 'URSS', who: 'Stalin', a: 'coletivização forçada', b: 'Grande Terror, 1937–1938' },
   { x: 414, name: 'Alemanha', who: 'nazismo', a: 'no poder em 1933', b: 'crise ainda mais aguda' },
 ];
 const STONES = [
@@ -308,7 +308,7 @@ export function InterwarChain({ active }: Scene) {
         <motion.rect x={x} y="52" width={w} height="26" rx="13" className={on ? 'sx-chip sx-chip-on' : 'sx-chip'} initial={false}
           animate={{ opacity: k <= active + (active === 2 ? 1 : 0) ? 1 : 0.45 }} transition={p(0.4)} />
         <text x={x + w / 2} y="69" textAnchor="middle" className={on ? 'sx-chip-text-on' : 'bi-small bi-strong'}>{l}</text>
-        {k < 3 && <path d={`M${x + w + 4} 65h12`} className="bi-arrow-static" markerEnd={`url(#${diagramId}-sx-head-int)`} />}
+        {k > 0 && k < 3 && <path d={`M${x + w + 4} 65h12`} className="bi-arrow-static" markerEnd={`url(#${diagramId}-sx-head-int)`} />}
       </g>;
     })}
 
@@ -354,7 +354,7 @@ export function InterwarChain({ active }: Scene) {
         <path d={`M${r.x + 14} 222h148`} className="sx-rule-line" />
         <text x={r.x + 14} y="236" className="bi-tiny bi-strong">{k === 1 ? 'esquerda revolucionária' : 'extrema direita'}</text>
       </motion.g>)}
-      <text x="310" y="272" textAnchor="middle" className="bi-hand-sm">crise do pós-guerra e de 1929 como terreno comum</text>
+      <text x="310" y="272" textAnchor="middle" className="bi-hand-sm">1922: fascismo; 1929 agrava a crise alemã</text>
     </motion.g>
 
     <motion.g initial={false} animate={{ opacity: active === 2 ? 1 : 0 }} transition={p(0.4)}>
@@ -396,9 +396,9 @@ export function InterwarChain({ active }: Scene) {
   </svg>;
 }
 
-// Nazismo: três rachaduras numa mesma fachada. Nos três primeiros recortes a
-// cena mostra cada fator sozinho, e o edifício da democracia fica de pé; só
-// no quarto, com as três juntas, ele cede e aparece o caminho legal de 1933.
+// Nazismo: rachaduras ilustram crises e fragilidade institucional. Os recortes
+// destacam aspectos do contexto; o quarto apresenta a concentração de poder
+// em 1933. A seleção não simula condições necessárias para a ditadura.
 // Sem iconografia do regime: o painel da direita mostra mecanismos.
 const FACTORS = [
   { y: 58, title: 'Hiperinflação · 1923', sub: 'desespero econômico', crack: 'M-38 0l6 14-5 12 7 16-4 18' },
@@ -411,7 +411,7 @@ export function DemocracyCracks({ active }: Scene) {
   const p = usePaced();
   const all = active === 3;
   const lit = (k: number) => all || active === k;
-  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Nazismo na Alemanha: hiperinflação, Grande Depressão e fragilidade institucional só em combinação levam a 1933; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Nazismo na Alemanha: crises econômicas e fragilidade institucional compõem o contexto da ascensão; leis e repressão consolidam a ditadura em 1933; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="DemocracyCracks" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
@@ -432,7 +432,7 @@ export function DemocracyCracks({ active }: Scene) {
       <Arrow d={`M228 ${f.y + 27}C244 ${f.y + 27} 242 ${150 + k * 30} 256 ${150 + k * 30}`} on={lit(k)} p={p} head={`${diagramId}-sx-head-naz`} delay={0.3} />
     </g>)}
 
-    <motion.g initial={false} animate={{ rotate: all ? -3 : 0, y: all ? 6 : 0 }} transition={p(0.8, 1.2)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom left' }}>
+    <motion.g initial={false} animate={{ rotate: 0, y: 0 }} transition={p(0.8, 1.2)} style={{ transformBox: 'fill-box', transformOrigin: 'bottom left' }}>
       <path d="M264 132l54-30 54 30Z" className="sx-temple" />
       {[276, 302, 334, 360].map(x => <rect key={x} x={x - 7} y="134" width="14" height="80" rx="2" className="sx-column" />)}
       <rect x="262" y="214" width="112" height="10" rx="2" className="sx-temple" />
@@ -443,23 +443,23 @@ export function DemocracyCracks({ active }: Scene) {
     </motion.g>
     <text x="318" y="246" textAnchor="middle" className="bi-small bi-strong">democracia alemã</text>
     <motion.text key={active} x="318" y="268" textAnchor="middle" className="bi-hand-sm" initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={p(0.4, 0.9)}>
-      {all ? 'juntos, abrem caminho' : 'sozinho, não basta'}
+      {all ? 'síntese do contexto' : 'fator em foco'}
     </motion.text>
 
     <rect x="398" y="52" width="196" height="238" rx="14" className="bi-panel" />
     <motion.g initial={false} animate={{ opacity: all ? 0 : 1 }} transition={p(0.4)}>
-      <text x="412" y="76" className="bi-panel-title">CONDIÇÕES REUNIDAS?</text>
+      <text x="412" y="76" className="bi-panel-title">FATORES EM CONTEXTO</text>
       {['1923', '1929', 'democracia frágil'].map((slot, k) => <g key={slot}>
         <rect x="414" y={94 + k * 44} width="164" height="32" rx="16" className={active === k ? 'sx-slot-box sx-slot-on' : 'sx-slot-box'} />
         <motion.circle cx="434" cy={110 + k * 44} r="8" className="sx-slot-dot" initial={false}
           animate={{ scale: active === k ? [0.4, 1.3, 1] : 0.6, opacity: active === k ? 1 : 0.35 }} transition={p(0.5, 0.5)} />
         <text x="452" y={114 + k * 44} className={active === k ? 'bi-small bi-strong' : 'bi-small'}>{slot}</text>
       </g>)}
-      <text x="496" y="248" textAnchor="middle" className="bi-hand-sm">falta a combinação:</text>
-      <text x="496" y="266" textAnchor="middle" className="bi-hand-sm">uma só não abre</text>
+      <text x="496" y="248" textAnchor="middle" className="bi-hand-sm">crises, instituições</text>
+      <text x="496" y="266" textAnchor="middle" className="bi-hand-sm">e decisões políticas</text>
     </motion.g>
     <motion.g initial={false} animate={{ opacity: all ? 1 : 0 }} transition={p(0.4, 1.4)}>
-      <text x="412" y="76" className="bi-panel-title">1933 · POR VIAS LEGAIS</text>
+      <text x="412" y="76" className="bi-panel-title">1933 · LEIS E REPRESSÃO</text>
       {[['Hitler, chanceler', 'nomeado por Hindenburg'], ['Decreto do Incêndio', 'do Reichstag'], ['Lei de Plenos Poderes', '']].map(([a, b], k) => <motion.g key={a}
         initial={false} animate={{ opacity: all ? 1 : 0, x: all ? 0 : -8 }} transition={p(0.4, 1.6 + k * 0.3)}>
         <circle cx="418" cy={96 + k * 38} r="4" className="bi-dot" />
@@ -483,7 +483,7 @@ export function DemocracyCracks({ active }: Scene) {
       <text x="564" y="264" textAnchor="middle" className="bi-tiny">eliminada</text>
     </motion.g>
     <text x="30" y="316" className="bi-small">pano de fundo: Tratado de Versalhes (1919) e ressentimento nacionalista</text>
-    <text x="30" y="342" className="bi-foot">Rachaduras ilustrativas: mostram combinação, não medem o peso de cada fator.</text>
+    <text x="30" y="342" className="bi-foot">Rachaduras ilustrativas: destacam crises e fragilidade, sem medir seu peso.</text>
     </g>
   </svg>;
 }
@@ -695,7 +695,7 @@ export const HEADERS_LOTE8: Record<string, string> = {
   'summary-historia-imperialismo-e-belle-epoque': 'formas de dominação',
   'summary-historia-primeira-guerra-mundial-1914-1918': 'causas combinadas',
   'summary-historia-o-periodo-entreguerras-1918-1939': 'cadeia de causas',
-  'summary-historia-o-nazismo-na-alemanha': 'condições combinadas',
+  'summary-historia-o-nazismo-na-alemanha': 'contexto e ascensão',
   'summary-historia-descolonizacao-afro-asiatica': 'trajetórias comparadas',
   'summary-historia-o-fim-da-guerra-fria': 'reação em cadeia',
 };

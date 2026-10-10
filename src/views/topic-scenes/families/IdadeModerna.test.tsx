@@ -7,7 +7,7 @@ import { HistoriaGeografia } from './HistoriaGeografia';
 
 describe('cenas autorais da Idade Moderna (lote 7B)', () => {
   it.each([
-    ['summary-historia-a-primeira-globalizacao', /Primeira Globalização em camadas/, 'metais = riqueza', 'Tráfico transatlântico', 'abolição gradual,'],
+    ['summary-historia-a-primeira-globalizacao', /Primeira Globalização em camadas/, 'metais = riqueza', 'Tráfico transatlântico', 'abolição gradual'],
     ['summary-historia-america-espanhola', /pirâmide de castas/, 'nascidos na América', 'Peninsulares', 'na própria Espanha'],
     ['summary-historia-reforma-religiosa', /Reforma Religiosa em três tempos/, 'justificação pela fé', 'Concílio de Trento', 'nem a Igreja de antes, nem a simples recusa'],
     ['summary-historia-absolutismo', /direito divino de Bossuet e o contrato de Hobbes/, 'Leviatã', 'Convergência', 'mesma conclusão'],

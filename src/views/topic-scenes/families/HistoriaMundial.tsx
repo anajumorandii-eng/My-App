@@ -408,7 +408,7 @@ export function WorldWarTwo({ active }: Scene) {
   const p = usePaced();
   const europe = active <= 1;
   const marks: [number, string, number][] = [[1939.7, 'Polônia', 0], [1940.4, 'França', 0], [1941.5, 'Barbarossa', 1], [1942.9, 'Stalingrado', 1], [1941.95, 'Pearl Harbor', 2], [1945.6, 'Hiroshima e Nagasaki', 2]];
-  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Segunda Guerra Mundial: blitzkrieg de 1939 a 1940, Frente Oriental até Stalingrado, Pacífico de Pearl Harbor a Hiroshima e Nagasaki, e o mundo bipolar de 1945; recorte ${active + 1} em foco`}>
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Segunda Guerra Mundial: blitzkrieg de 1939 a 1940, Frente Oriental até Stalingrado, Pacífico de Pearl Harbor à rendição japonesa formal em setembro de 1945, e o mundo bipolar de 1945; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="WorldWarTwo" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
@@ -489,7 +489,7 @@ export function WorldWarTwo({ active }: Scene) {
       <motion.circle cx={WY(y)} cy="290" r="5" className={active === k ? 'hm-tl-on' : 'hm-tl'} initial={false}
         animate={{ scale: active === k ? 1.3 : 1 }} transition={p(0.4)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />
     </g>)}
-    {['set. 1939 Polônia → 1940 França', '1941 Barbarossa → 1942–43 Stalingrado', '1941 Pearl Harbor → 1945 Hiroshima e Nagasaki'].map((line, k) => <Layer key={k} on={active === k} p={p} delay={0.3}>
+    {['set. 1939 Polônia → 1940 França', '1941 Barbarossa → 1942–43 Stalingrado', '1941 Pearl Harbor → rendição em set. 1945'].map((line, k) => <Layer key={k} on={active === k} p={p} delay={0.3}>
       <text x="212" y="272" textAnchor="middle" className="bi-small bi-strong">{line}</text>
     </Layer>)}
 
@@ -523,8 +523,8 @@ const CY = (y: number) => 40 + (y - 1947) * (540 / 44);
 export function ColdWar({ active }: Scene) {
   const uid = useId().replace(/:/g, '');
   const p = usePaced();
-  const ticks: [number, string, number][] = [[1949, 'Otan', 0], [1955, 'Varsóvia', 0], [1961, 'Muro', 0], [1950, 'Coreia', 1], [1962, 'Cuba', 1], [1957, 'Sputnik', 2], [1969, 'Apollo 11', 2], [1955.4, 'Bandung', 3]];
-  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Guerra Fria: Estados Unidos e União Soviética, Otan e Pacto de Varsóvia, guerras por procuração, corrida espacial e os não alinhados de Bandung; recorte ${active + 1} em foco`}>
+  const ticks: [number, string, number][] = [[1949, 'Otan', 0], [1955, 'Varsóvia', 0], [1961, 'Muro', 0], [1950, 'Coreia', 1], [1962, 'Cuba', 1], [1957, 'Sputnik', 2], [1969, 'Apollo 11', 2], [1961, 'Belgrado', 3]];
+  return <svg className="hi-plate" viewBox="0 0 620 740" role="img" aria-label={`Guerra Fria: Estados Unidos e União Soviética, Otan e Pacto de Varsóvia, guerras por procuração, corrida espacial e os não alinhados, de Bandung a Belgrado; recorte ${active + 1} em foco`}>
     <HistorianIllustration kind="ColdWar" active={active} />
     <g transform="translate(0 380)">
     <rect x="8" y="8" width="604" height="344" rx="18" className="bi-paper" />
@@ -556,7 +556,7 @@ export function ColdWar({ active }: Scene) {
       </motion.g>)}
       <text x="310" y="206" textAnchor="middle" className="bi-small bi-strong">Muro de Berlim · 1961</text>
       <Arrow d="M180 110C260 88 360 88 440 110" on={active === 0} p={p} head={`${uid}-hm-cw-head`} delay={1.1} />
-      <text x="310" y="84" textAnchor="middle" className="bi-hand-sm">Varsóvia responde à Otan</text>
+      <text x="310" y="84" textAnchor="middle" className="bi-hand-sm">Varsóvia: resposta à adesão da RFA</text>
     </Layer>
 
     {/* 2 · guerras por procuração e Cuba */}
@@ -604,10 +604,10 @@ export function ColdWar({ active }: Scene) {
     <Layer on={active === 3} p={p}>
       <motion.circle cx="310" cy="190" r="34" className="hm-third" initial={false}
         animate={{ scale: active === 3 ? [0.6, 1] : 1 }} transition={p(0.6, 0.2)} style={{ transformBox: 'fill-box', transformOrigin: 'center' }} />
-      <text x="310" y="186" textAnchor="middle" className="bi-small bi-strong">Bandung</text>
-      <text x="310" y="200" textAnchor="middle" className="bi-tiny">1955</text>
+      <text x="310" y="186" textAnchor="middle" className="bi-small bi-strong">Belgrado</text>
+      <text x="310" y="200" textAnchor="middle" className="bi-tiny">1961</text>
       <text x="310" y="104" textAnchor="middle" className="bi-small">Nehru · Sukarno · Nasser</text>
-      <text x="310" y="120" textAnchor="middle" className="bi-tiny">Índia · Indonésia · Egito</text>
+      <text x="310" y="120" textAnchor="middle" className="bi-tiny">Antecedente: Bandung · 1955</text>
       {[[276, 182, 150, 160], [344, 182, 470, 160]].map(([x1, y1, x2, y2], k) => <motion.path key={k} d={`M${x1} ${y1}L${x2} ${y2}`}
         className="hm-pull" initial={false} animate={{ pathLength: active === 3 ? 1 : 0 }} transition={p(0.8, 0.9 + 0.3 * k)} />)}
       <text x="310" y="248" textAnchor="middle" className="bi-hand-sm">na prática, apoio de um ou outro</text>
