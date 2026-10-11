@@ -28,3 +28,9 @@ test('cada item aparece na leitura e o desenho cabe no quadro',()=>{
       const [x,y]=rotateSpatialPoint(p,yaw,pitch);assert.ok(Number.isFinite(x)&&Math.abs(x)<150&&Math.abs(y)<140,`${id} v=${v}: ${p.map(n=>n.toFixed(0))}`);}
   }
 });
+test('nenhum capítulo usa a comparação genérica de colunas; o modelo segue o que o capítulo compara',()=>{
+  const by=(t:string)=>Object.values(LANGUAGES_SPATIAL_LESSONS).filter(l=>l.template===t).length;
+  assert.equal(by('compare'),0);
+  for(const t of ['spectrum','prism','shelf','mirror','checklist'])assert.ok(by(t)>0,t);
+  for(const [id,l] of Object.entries(LANGUAGES_SPATIAL_LESSONS))if(l.template==='mirror')assert.equal(l.items.length,2,id);
+});

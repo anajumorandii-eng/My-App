@@ -5,7 +5,7 @@ import type { SpatialPoint } from './spatialSolid';
 const pi=Math.PI;
 const clamp=(v:number,a:number,b:number)=>Math.max(a,Math.min(b,v));
 /** Moldes com percurso próprio (o movimento é o processo); os outros percorrem os itens. */
-export const HUMANITIES_MOVING:HumanitiesTemplate[]=['flows','cycle','cave','dialectic','sentence'];
+export const HUMANITIES_MOVING:HumanitiesTemplate[]=['flows','cycle','cave','dialectic','sentence','prism','shelf','checklist'];
 
 /** Rótulo curto para caber no palco; o texto completo vai para a leitura. */
 const short=(s:string)=>s.length>18?s.slice(0,17)+'…':s;
@@ -57,6 +57,28 @@ export function humanitiesSpatialDrawing(lesson:HumanitiesLesson,value:number,ti
       line(arc,a===sel||b===sel?'signal':'reference',{arrow:true});if(a===sel||b===sel)dot(arc[Math.round(t*16)],'body',3);}break;}
   case 'essay':{items.forEach((it,i)=>{const y=60-i*(120/n),h=120/n-6;box(-60,y-h,-4+i*2,120,h,8,roleOf(i));label([90,y-h/2,0],it[0]);
       for(let k=1;k<4;k++)line([[-52,y-h*k/4,6+i*2],[52-(k===3?30:0),y-h*k/4,6+i*2]],'reference');});break;}
+  case 'spectrum':{// Gradação: os itens ocupam um arco do mais fraco ao mais forte; o ponteiro aponta o item em destaque.
+    const R=80,ang=(i:number)=>pi-(i+.5)*pi/n,at=(i:number,r=R):SpatialPoint=>[r*Math.cos(ang(i)),-40+r*Math.sin(ang(i)),0];
+    line(Array.from({length:33},(_,k):SpatialPoint=>[R*Math.cos(pi-k*pi/32),-40+R*Math.sin(pi-k*pi/32),0]),'reference');face([[-95,-44,-20],[95,-44,-20],[95,-44,20],[-95,-44,20]],'reference');
+    items.forEach((it,i)=>{const h=(it[2]??3)*8;box(at(i)[0]-8,at(i)[1]-8,-8,16,h,16,roleOf(i));label(at(i,R+34),it[0]);});
+    arrow([0,-40,0],at(sel,R-14),'signal');dot([0,-40,0],'body',6);break;}
+  case 'prism':{// Um conceito decomposto em tipos: o feixe do tipo em destaque leva a partícula.
+    face([[-100,-22,0],[-78,24,0],[-56,-22,0]],'body');label([-78,-36,0],lesson.title);
+    items.forEach((it,i)=>{const y=n===1?0:65-i*130/(n-1),p:SpatialPoint=[55,y,0],src:SpatialPoint=[-66,0,0];
+      line([src,p],i===sel?'signal':'reference');dot(p,i===sel?'signal':'sum',i===sel?10:7);label([p[0]+40,p[1],0],it[0]);
+      if(i===sel)dot(lerp(src,p,t),'body',4);});break;}
+  case 'shelf':{// Estante de obras e autores: o volume em destaque sai da prateleira com o movimento.
+    const w=Math.min(44,180/n);face([[-100,-52,-20],[100,-52,-20],[100,-52,20],[-100,-52,20]],'reference');
+    items.forEach((it,i)=>{const x=-90+i*w+(180-n*w)/2,h=40+(it[2]??3)*12,z=i===sel?-15+28*t:-15;box(x+3,-52,z,w-6,h,30,roleOf(i));label([x+w/2,-52+h+12+i*15,z+15],it[0]);});break;}
+  case 'mirror':{// Par de opostos: duas folhas frente a frente, o eixo tracejado separa o que cada lado faz.
+    line([[0,-55,-25],[0,55,-25],[0,55,25],[0,-55,25],[0,-55,-25]],'reference',{dashed:true});
+    items.forEach((it,i)=>{const x=n===1?0:-75+i*150/(n-1);box(x-22,-45,-10,44,80,10,roleOf(i));label([x,50,0],it[0]);
+      for(let k=1;k<5;k++)line([[x-16,-45+k*15,1],[x+16-(k===4?12:0),-45+k*15,1]],'reference');});
+    if(n>1){arrow([-48,-5,0],[48,-5,0],sel===n-1?'signal':'reference');arrow([48,5,0],[-48,5,0],sel===0?'signal':'reference');}break;}
+  case 'checklist':{// Critérios conferidos um a um até o item em destaque.
+    const step=120/n,done=Math.ceil(t*(sel+1)-1e-9);items.forEach((it,i)=>{const y=58-i*step-step/2;
+      face([[-70,y-step/2+3,-4],[80,y-step/2+3,-4],[80,y+step/2-3,-4],[-70,y+step/2-3,-4]],roleOf(i));box(-88,y-6,-6,12,12,12,i<done?'signal':'reference');
+      if(i<done)line([[-86,y,7],[-82,y-5,7],[-74,y+8,7]],'signal');label([5,y,4],it[0]);});break;}
   }
   const [name,detail]=items[sel];
   return {traces,dots,labels,reading:`${name}: ${detail}`,legend:'Vinho: item em destaque · azul: demais itens · cinza: estrutura'};

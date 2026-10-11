@@ -12,7 +12,7 @@
  },
  {
   "id": "summary-lingua-inglesa-text-comprehension-songs-and-poems",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Reading songs and poems",
   "items": [
    "Literal",
@@ -55,7 +55,7 @@
  },
  {
   "id": "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Greenhouse gases",
   "items": [
    "CO₂",
@@ -65,7 +65,7 @@
  },
  {
   "id": "summary-lingua-inglesa-text-comprehension-pollution",
-  "template": "compare",
+  "template": "prism",
   "title": "Types of pollution",
   "items": [
    "Air",
@@ -76,7 +76,7 @@
  },
  {
   "id": "summary-lingua-inglesa-text-comprehension-the-human-brain",
-  "template": "compare",
+  "template": "prism",
   "title": "The human brain",
   "items": [
    "Cerebrum",
@@ -130,7 +130,7 @@
  },
  {
   "id": "summary-lingua-inglesa-text-comprehension-discrimination-against-women",
-  "template": "compare",
+  "template": "checklist",
   "title": "Gender gaps",
   "items": [
    "Pay gap",
@@ -162,7 +162,7 @@
  },
  {
   "id": "summary-lingua-inglesa-text-comprehension-health-probiotics",
-  "template": "compare",
+  "template": "checklist",
   "title": "Probiotics",
   "items": [
    "Live microbes",
@@ -183,7 +183,7 @@
  },
  {
   "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Mitos e verdades",
   "items": [
    "Mito: fórmula pronta",
@@ -193,7 +193,7 @@
  },
  {
   "id": "summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades",
-  "template": "compare",
+  "template": "checklist",
   "title": "Cinco competências (ENEM)",
   "items": [
    "C1",
@@ -227,7 +227,7 @@
  },
  {
   "id": "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso",
-  "template": "compare",
+  "template": "checklist",
   "title": "Repertório produtivo",
   "items": [
    "Legitimado",
@@ -269,7 +269,7 @@
  },
  {
   "id": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto",
-  "template": "compare",
+  "template": "prism",
   "title": "Gênero e estrutura",
   "items": [
    "Dissertativo-argumentativo",
@@ -290,7 +290,7 @@
  },
  {
   "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i",
-  "template": "compare",
+  "template": "checklist",
   "title": "Ler a coletânea",
   "items": [
    "Texto I",
@@ -312,7 +312,7 @@
  },
  {
   "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Coletânea × texto autoral",
   "items": [
    "Cópia",
@@ -528,7 +528,7 @@
  },
  {
   "id": "summary-redacao-paragrafo-de-introducao-como-contextualizar",
-  "template": "compare",
+  "template": "prism",
   "title": "Estratégias de contextualização",
   "items": [
    "Histórica",
@@ -570,7 +570,7 @@
  },
  {
   "id": "summary-redacao-argumentacao-e-coerencia-externa",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Coerência externa",
   "items": [
    "Fato verificável",
@@ -580,7 +580,7 @@
  },
  {
   "id": "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Dados e exemplos",
   "items": [
    "Dado",
@@ -590,7 +590,7 @@
  },
  {
   "id": "summary-redacao-recursos-argumentativos-vozes-prestigiadas",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Argumento de autoridade",
   "items": [
    "Especialista",
@@ -620,7 +620,7 @@
  },
  {
   "id": "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade",
-  "template": "compare",
+  "template": "mirror",
   "title": "Intertexto × interdiscurso",
   "items": [
    "Intertexto",
@@ -640,7 +640,7 @@
  },
  {
   "id": "summary-redacao-recursos-argumentativos-fatos-da-atualidade",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Fato da atualidade",
   "items": [
    "Fato",
@@ -671,7 +671,7 @@
  },
  {
   "id": "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade",
-  "template": "compare",
+  "template": "prism",
   "title": "Tipos de fecho",
   "items": [
    "Sumarização",
@@ -681,7 +681,7 @@
  },
  {
   "id": "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania",
-  "template": "compare",
+  "template": "checklist",
   "title": "Elementos da intervenção",
   "items": [
    "Agente",
@@ -713,7 +713,7 @@
  },
  {
   "id": "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Respeito aos direitos humanos",
   "items": [
    "Respeita",
@@ -734,7 +734,7 @@
  },
  {
   "id": "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo",
-  "template": "compare",
+  "template": "prism",
   "title": "Conectivos",
   "items": [
    "Adição",
@@ -745,7 +745,7 @@
  },
  {
   "id": "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas",
-  "template": "compare",
+  "template": "checklist",
   "title": "Problemas de coesão",
   "items": [
    "Repetição",
@@ -755,7 +755,7 @@
  },
  {
   "id": "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade",
-  "template": "compare",
+  "template": "checklist",
   "title": "Norma, clareza, expressividade",
   "items": [
    "Norma",
@@ -765,7 +765,7 @@
  },
  {
   "id": "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais",
-  "template": "compare",
+  "template": "prism",
   "title": "Direitos de 1ª geração",
   "items": [
    "Vida",
@@ -786,7 +786,7 @@
  },
  {
   "id": "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar",
-  "template": "compare",
+  "template": "checklist",
   "title": "Trunfos de redações nota 1000",
   "items": [
    "Recorte preciso",
@@ -818,7 +818,7 @@
  },
  {
   "id": "summary-gramatica-variacao-linguistica",
-  "template": "compare",
+  "template": "prism",
   "title": "Variação linguística",
   "items": [
    "Diatópica",
@@ -841,7 +841,7 @@
  },
  {
   "id": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos",
-  "template": "compare",
+  "template": "mirror",
   "title": "Concreto × abstrato",
   "items": [
    "Concreto",
@@ -915,7 +915,7 @@
  },
  {
   "id": "summary-gramatica-significados-implicitos",
-  "template": "compare",
+  "template": "mirror",
   "title": "Implícitos",
   "items": [
    "Pressuposto",
@@ -924,7 +924,7 @@
  },
  {
   "id": "summary-gramatica-tipos-de-discurso",
-  "template": "compare",
+  "template": "prism",
   "title": "Discursos",
   "items": [
    "Direto",
@@ -957,7 +957,7 @@
  },
  {
   "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
-  "template": "compare",
+  "template": "spectrum",
   "title": "Sentidos em contexto",
   "items": [
    "Denotação",
@@ -998,7 +998,7 @@
  },
  {
   "id": "summary-gramatica-processos-de-formacao-de-palavras",
-  "template": "compare",
+  "template": "prism",
   "title": "Formação de palavras",
   "items": [
    "Derivação",
@@ -1020,7 +1020,7 @@
  },
  {
   "id": "summary-gramatica-tipos-de-sujeito",
-  "template": "compare",
+  "template": "prism",
   "title": "Tipos de sujeito",
   "items": [
    "Simples",
@@ -1073,7 +1073,7 @@
  },
  {
   "id": "summary-gramatica-oracoes-coordenadas",
-  "template": "compare",
+  "template": "prism",
   "title": "Coordenadas",
   "items": [
    "Aditiva",
@@ -1085,7 +1085,7 @@
  },
  {
   "id": "summary-literatura-a-arte-e-suas-linguagens",
-  "template": "compare",
+  "template": "prism",
   "title": "Linguagens da arte",
   "items": [
    "Verbal",
@@ -1096,7 +1096,7 @@
  },
  {
   "id": "summary-literatura-texto-literario-x-texto-nao-literario",
-  "template": "compare",
+  "template": "mirror",
   "title": "Literário × não literário",
   "items": [
    "Literário",
@@ -1105,7 +1105,7 @@
  },
  {
   "id": "summary-literatura-trovadorismo-e-humanismo",
-  "template": "compare",
+  "template": "prism",
   "title": "Cantigas trovadorescas",
   "items": [
    "Amor",
@@ -1116,7 +1116,7 @@
  },
  {
   "id": "summary-literatura-renascimento-e-camoes",
-  "template": "compare",
+  "template": "shelf",
   "title": "Camões",
   "items": [
    "Os Lusíadas",
@@ -1146,7 +1146,7 @@
  },
  {
   "id": "summary-literatura-a-estetica-neoclassica",
-  "template": "compare",
+  "template": "checklist",
   "title": "Arcadismo",
   "items": [
    "Bucolismo",
@@ -1167,7 +1167,7 @@
  },
  {
   "id": "summary-literatura-elementos-da-narrativa",
-  "template": "compare",
+  "template": "checklist",
   "title": "Elementos da narrativa",
   "items": [
    "Narrador",
@@ -1179,7 +1179,7 @@
  },
  {
   "id": "summary-literatura-a-estetica-romantica-prosa",
-  "template": "compare",
+  "template": "prism",
   "title": "Romance romântico",
   "items": [
    "Indianista",
@@ -1190,7 +1190,7 @@
  },
  {
   "id": "summary-literatura-a-estetica-realista",
-  "template": "compare",
+  "template": "mirror",
   "title": "Romantismo × Realismo",
   "items": [
    "Romantismo",
@@ -1221,7 +1221,7 @@
  },
  {
   "id": "summary-literatura-realismo-portugues-eca-de-queiros",
-  "template": "compare",
+  "template": "shelf",
   "title": "Eça de Queirós",
   "items": [
    "O crime do padre Amaro",
@@ -1231,7 +1231,7 @@
  },
  {
   "id": "summary-literatura-parnasianismo",
-  "template": "compare",
+  "template": "checklist",
   "title": "Parnasianismo",
   "items": [
    "Arte pela arte",
@@ -1252,7 +1252,7 @@
  },
  {
   "id": "summary-literatura-pre-modernismo",
-  "template": "compare",
+  "template": "shelf",
   "title": "Pré-Modernismo",
   "items": [
    "Euclides da Cunha",
@@ -1263,7 +1263,7 @@
  },
  {
   "id": "summary-literatura-vanguardas-artisticas",
-  "template": "compare",
+  "template": "prism",
   "title": "Vanguardas europeias",
   "items": [
    "Futurismo",
@@ -1297,7 +1297,7 @@
  },
  {
   "id": "summary-literatura-modernismo-no-brasil-primeira-geracao",
-  "template": "compare",
+  "template": "shelf",
   "title": "Primeira geração",
   "items": [
    "Oswald",
@@ -1307,7 +1307,7 @@
  },
  {
   "id": "summary-literatura-segunda-geracao-modernista-prosa",
-  "template": "compare",
+  "template": "shelf",
   "title": "Romance de 30",
   "items": [
    "Graciliano",
@@ -1318,7 +1318,7 @@
  },
  {
   "id": "summary-literatura-graciliano-ramos",
-  "template": "compare",
+  "template": "shelf",
   "title": "Graciliano Ramos",
   "items": [
    "São Bernardo",
@@ -1328,7 +1328,7 @@
  },
  {
   "id": "summary-literatura-segunda-geracao-modernista-poesia",
-  "template": "compare",
+  "template": "shelf",
   "title": "Poesia de 30",
   "items": [
    "Drummond",
@@ -1350,7 +1350,7 @@
  },
  {
   "id": "summary-literatura-joao-cabral-de-melo-neto",
-  "template": "compare",
+  "template": "shelf",
   "title": "João Cabral",
   "items": [
    "Engenharia",
@@ -1371,7 +1371,7 @@
  },
  {
   "id": "summary-literatura-clarice-lispector",
-  "template": "compare",
+  "template": "shelf",
   "title": "Clarice Lispector",
   "items": [
    "Epifania",
@@ -1381,7 +1381,7 @@
  },
  {
   "id": "summary-literatura-guimaraes-rosa",
-  "template": "compare",
+  "template": "shelf",
   "title": "Guimarães Rosa",
   "items": [
    "Grande sertão: veredas",
@@ -1391,7 +1391,7 @@
  },
  {
   "id": "summary-literatura-poesia-brasileira-1960-1980",
-  "template": "compare",
+  "template": "prism",
   "title": "Poesia 1960–1980",
   "items": [
    "Poesia marginal",
@@ -1401,7 +1401,7 @@
  },
  {
   "id": "summary-literatura-prosa-brasileira-1960-1980",
-  "template": "compare",
+  "template": "shelf",
   "title": "Prosa 1960–1980",
   "items": [
    "Rubem Fonseca",
@@ -1411,7 +1411,7 @@
  },
  {
   "id": "summary-literatura-literatura-lusofona-contemporanea",
-  "template": "compare",
+  "template": "shelf",
   "title": "Literatura lusófona",
   "items": [
    "Mia Couto",
@@ -1421,7 +1421,7 @@
  },
  {
   "id": "summary-literatura-poesia-brasileira-contemporanea",
-  "template": "compare",
+  "template": "shelf",
   "title": "Poesia contemporânea",
   "items": [
    "Ana Martins Marques",
@@ -1431,7 +1431,7 @@
  },
  {
   "id": "summary-literatura-prosa-brasileira-contemporanea",
-  "template": "compare",
+  "template": "shelf",
   "title": "Prosa contemporânea",
   "items": [
    "Milton Hatoum",
@@ -1474,7 +1474,7 @@
  },
  {
   "id": "summary-entendimento-de-texto-fatores-de-textualidade",
-  "template": "compare",
+  "template": "checklist",
   "title": "Fatores de textualidade",
   "items": [
    "Coesão",
@@ -1507,7 +1507,7 @@
  },
  {
   "id": "summary-entendimento-de-texto-generos-textuais",
-  "template": "compare",
+  "template": "prism",
   "title": "Gêneros textuais",
   "items": [
    "Notícia",
@@ -1518,7 +1518,7 @@
  },
  {
   "id": "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao",
-  "template": "compare",
+  "template": "prism",
   "title": "Gêneros narrativos",
   "items": [
    "Conto",
@@ -1529,7 +1529,7 @@
  },
  {
   "id": "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura",
-  "template": "compare",
+  "template": "checklist",
   "title": "Ler imagens",
   "items": [
    "Composição",
@@ -1563,7 +1563,7 @@
  },
  {
   "id": "summary-entendimento-de-texto-figuras-de-linguagem",
-  "template": "compare",
+  "template": "prism",
   "title": "Figuras de linguagem",
   "items": [
    "Metáfora",
