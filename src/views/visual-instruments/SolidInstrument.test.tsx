@@ -25,7 +25,7 @@ function mover(rotulo: RegExp, valor: number) {
 describe('instrumento de sólidos', () => {
   it('bloco: abre com o exemplo do capítulo (3 x 4 x 12), cuja diagonal principal é 13', () => {
     montar('bloco', 'Cubos e Paralelepípedos');
-    expect(screen.getByRole('img', { name: /Bloco retangular.*3.*4.*12/i })).toBeInTheDocument();
+    expect(screen.getAllByRole('img', { name: /Bloco retangular.*3.*4.*12/i })[0]).toBeInTheDocument();
     expect(leitura('Diagonal principal')).toBe('13');
     expect(leitura('Volume')).toBe('144');
   });
@@ -34,7 +34,7 @@ describe('instrumento de sólidos', () => {
     montar('bloco', 'Cubos e Paralelepípedos');
     mover(/altura/i, 6);
     expect(leitura('Diagonal principal')).toBe('7,81');
-    expect(screen.getByRole('img', { name: /3.*4.*6/ })).toBeInTheDocument();
+    expect(screen.getAllByRole('img', { name: /3.*4.*6/ })[0]).toBeInTheDocument();
   });
 
   it('prisma: inclinar mantém o volume e troca as áreas pela aresta lateral', () => {
@@ -116,6 +116,6 @@ describe('instrumento de sólidos', () => {
 
   it('o desenho declara o viewBox que a geometria usa', () => {
     montar('bloco', 'Cubos e Paralelepípedos');
-    expect(screen.getByRole('img', { name: /Bloco retangular/i })).toHaveAttribute('viewBox', '0 0 320 300');
+    expect(screen.getAllByRole('img', { name: /Bloco retangular/i }).at(-1)).toHaveAttribute('viewBox', '0 0 320 300');
   });
 });

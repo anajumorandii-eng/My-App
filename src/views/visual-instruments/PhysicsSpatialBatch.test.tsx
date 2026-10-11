@@ -13,12 +13,12 @@ describe('lote espacial de Física',()=>{
     expect(drawing).toHaveAttribute('data-view-yaw','30');expect(reading.textContent).toBe(before);
     const control=screen.getByRole('slider',{name:config.label+' '+String(config.initial).replace('.',',')});
     fireEvent.change(control,{target:{value:String(config.max)}});
-    if(config.kind==='gas') fireEvent.change(screen.getByRole('slider',{name:'Percurso finito do modelo'}),{target:{value:'1'}});
+    if(config.kind.startsWith('gas')) fireEvent.change(screen.getByRole('slider',{name:'Percurso finito do modelo'}),{target:{value:'1'}});
     expect(reading.textContent).not.toBe(before);expect(drawing).toHaveAttribute('data-view-yaw','30');
     fireEvent.click(screen.getByRole('button',{name:'Restaurar vista'}));expect(drawing).toHaveAttribute('data-view-yaw','25');expect(control).toHaveValue(String(config.max));
   });
   it('mudança de transformação reinicia percurso e conserva estado inicial',()=>{
-    render(<ChapterPhysicsSpatialLab chapterId="summary-fisica-primeira-lei-da-termodinamica"/>);
+    render(<ChapterPhysicsSpatialLab chapterId="summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares"/>);
     fireEvent.change(screen.getByRole('slider',{name:'Percurso finito do modelo'}),{target:{value:'1'}});
     expect(screen.getByRole('status',{name:'Leitura do modelo espacial'})).toHaveTextContent('V = 1,5 L');
     fireEvent.click(screen.getByRole('button',{name:'Isocórica'}));
