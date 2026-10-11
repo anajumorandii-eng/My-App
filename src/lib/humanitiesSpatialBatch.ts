@@ -5,7 +5,7 @@
  * itens; o molde só decide a geometria. Datas e atribuições são as consagradas nos
  * manuais; onde há interpretação, a nota diz que é esquema.
  */
-export type HumanitiesTemplate = 'timeline'|'pyramid'|'flows'|'compare'|'cycle'|'concentric'|'cave'|'divided-line'|'mean'|'dialectic'|'blocs';
+export type HumanitiesTemplate = 'timeline'|'pyramid'|'flows'|'compare'|'cycle'|'concentric'|'cave'|'divided-line'|'mean'|'dialectic'|'blocs'|'sentence'|'essay'|'spectrum'|'prism'|'shelf'|'mirror'|'checklist';
 /** [rótulo curto, explicação, peso relativo opcional, grupo opcional] */
 export type HumanitiesItem = [string,string,number?,number?];
 export interface HumanitiesLesson {template:HumanitiesTemplate;title:string;items:HumanitiesItem[];links?:[number,number][];note:string;}

@@ -8,6 +8,7 @@ import { SCIENCE_SPATIAL_LESSONS } from '../lib/scienceSpatialBatch';
 import { MATH_SPATIAL_LESSONS } from '../lib/mathSpatialBatch';
 import { BIO_GEO_SPATIAL_LESSONS } from '../lib/bioGeoSpatialBatch';
 import { HUMANITIES_SPATIAL_LESSONS } from '../lib/humanitiesSpatialBatch';
+import { LANGUAGES_SPATIAL_LESSONS } from '../lib/languagesSpatialBatch';
 import './visual-instruments/ScienceObjectView.css';
 const MolecularLab=lazy(()=>import('./visual-instruments/ChapterMolecularLab'));
 const PhysicsLab=lazy(()=>import('./visual-instruments/ChapterPhysicsSpatialLab'));
@@ -25,7 +26,7 @@ export function SpatialChapterSupplement({ chapterId }: { chapterId: string }) {
   const science=!!SCIENCE_SPATIAL_LESSONS[chapterId];
   const math=!!MATH_SPATIAL_LESSONS[chapterId];
   const bioGeo=!!BIO_GEO_SPATIAL_LESSONS[chapterId];
-  const humanities=!!HUMANITIES_SPATIAL_LESSONS[chapterId];
+  const humanities=!!(HUMANITIES_SPATIAL_LESSONS[chapterId]??LANGUAGES_SPATIAL_LESSONS[chapterId]);
   const earth=!!EARTH_SPATIAL_LESSONS[chapterId];
   const biology=!!BIOLOGY_SPATIAL_LESSONS[chapterId];
   const physics=!!PHYSICS_SPATIAL_LESSONS[chapterId];
