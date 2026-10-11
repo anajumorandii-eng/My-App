@@ -13,3 +13,14 @@ Critérios pedidos pela Ana Júlia: 3D integrado sem botão, movimento, interaç
 | Cabe no quadro | 17 desenhos com elementos medidos além do viewBox (Química orgânica e Biologia molecular) — conferir |
 
 Nenhum erro de página. Conclusão: os 186 cumprem "girar", mas não cumprem integralmente "sem botão", "movimento" e "imersivo".
+
+## Depois da correção (mesmo roteiro, `resultado-pos-correcao.json`)
+
+| Critério | Antes | Depois |
+| --- | --- | --- |
+| 3D atrás de botão | 6 | 0 (os dois "botões" restantes da medição são etapas numeradas da prancha) |
+| Sem movimento | 89 | 0 — modelos de percurso mantêm o percurso; os demais percorrem o parâmetro ou giram por inteiro, sempre iniciados pela estudante, com pausa e movimento reduzido |
+| Gases com desenho repetido | 4 | 0 — partículas (estado), área sob p×V (trabalho), balanço Q/ΔU/W (1ª lei), quatro transformações (particulares) |
+| Erros de página | 0 | 0 |
+
+Acabamento: palco comum (`SpatialStage`) com luz de estúdio, perspectiva leve, ordenação de profundidade, faces com gradiente e sombreamento pela luz, esferas com brilho especular, piso em grade que se dissolve, sombras de contato e rótulos em pílula; painel com controle segmentado, trilhos preenchidos, números tabulares e leitura em cartão. Sólidos de Matemática e DNA deixaram de ficar cobertos pelo desenho 2D.
