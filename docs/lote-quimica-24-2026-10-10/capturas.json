@@ -1,0 +1,150 @@
+[
+  {
+    "file": "capturas/01-evolucao-dos-modelos-atomicos.jpg",
+    "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "55",
+    "reading": "Rutherford: carga positiva no núcleo ampliado; seis elétrons esquemáticos; raio visual 55.",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/02-separacao-de-misturas.jpg",
+    "id": "summary-quimica-separacao-de-misturas",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "4",
+    "reading": "4 unidades de areia retidas; filtrado contém água e sal dissolvido; passagem ilustrativa 100%.",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/03-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes.jpg",
+    "id": "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "1",
+    "reading": "2 H₂ + 1 O₂ → 2 H₂O; cada lado: 4 H e 2 O; menor razão 2:1:2.",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/04-calculos-estequiometricos.jpg",
+    "id": "summary-quimica-calculos-estequiometricos",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "3",
+    "reading": "ξ = 1,5 mol; restante H₂ = 0 mol, O₂ = 0,5 mol; H₂O = 3 mol; massa total ≈ 70 g; limitante H₂.",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/05-termoquimica-i.jpg",
+    "id": "summary-quimica-termoquimica-i",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "-20",
+    "reading": "ΔH₁ = -20 kJ/mol; ΔH₂ = -40 kJ/mol; soma = −60 kJ/mol = ΔH direto.",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/06-introducao-ao-estudo-das-pilhas-e-baterias.jpg",
+    "id": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "0.3",
+    "reading": "Zn: ânodo (−), oxidação; Cu: cátodo (+), redução; E° = 1,10 V; avanço ilustrado 0,3 mol; 0,6 mol e⁻ transferidos no circuito externo.",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/07-eletroquimica-de-processos-nao-espontaneos.jpg",
+    "id": "summary-quimica-eletroquimica-de-processos-nao-espontaneos",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "2000",
+    "reading": "Cátodo Cu (−): redução; ânodo Cu (+): oxidação; Q = 2.000 C; m(Cu) = 0,659 g; fonte externa, rendimento 100%.",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/08-deslocamento-de-equilibrio.jpg",
+    "id": "summary-quimica-deslocamento-de-equilibrio",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "0.5",
+    "reading": "V = 0,5 L; Qc após compressão = 2 mol/L; [N₂O₄] = 2,25 mol/L; [NO₂] = 1,5 mol/L; Qc atual = 1 mol/L; Kc = 1 mol/L; avanço = -0,125 mol.",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/09-organizacao-da-tabela-periodica-dos-elementos-celular.jpg",
+    "id": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/10-o-estado-gasoso-celular.jpg",
+    "id": "summary-quimica-o-estado-gasoso",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/11-dispersoes-celular.jpg",
+    "id": "summary-quimica-dispersoes",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  },
+  {
+    "file": "capturas/12-efeitos-coligativos-celular.jpg",
+    "id": "summary-quimica-efeitos-coligativos",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "build_sha256": "1c1563a227e62fef8a12e3535174c8290a31f9c3e77de2afbb4c074338c6aedf"
+  }
+]

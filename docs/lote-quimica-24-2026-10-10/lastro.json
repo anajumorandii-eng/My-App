@@ -1,0 +1,319 @@
+{
+  "base": "c2aba0a55e37254bdbb777e78a37f04d4c2e15f8",
+  "source": "src/data/deepSummaryContent.json",
+  "source_sha256": "acfa9f883a2d6b1371eed67b9efbff5e29be713c717895adbeb40b6054c55e6b",
+  "chapters": [
+    {
+      "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+      "subject": "Química",
+      "topic": "Evolução dos Modelos Atômicos",
+      "sections": [
+        "Modelos respondem a evidências",
+        "Experimentos decisivos",
+        "Modelo quântico",
+        "Pegadinhas históricas",
+        "Pratique e confira"
+      ],
+      "sha256": "9f4c0d224cc3db6715eb06b229ce98a650e0b805c1b348e46b586990902e5e8d"
+    },
+    {
+      "id": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos",
+      "subject": "Química",
+      "topic": "Organização da Tabela Periódica dos Elementos",
+      "sections": [
+        "A lógica da tabela",
+        "Propriedades periódicas",
+        "Famílias e comportamento",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "f995dd3c4f2e6f0aae0081094decaf1b2d41e2e8a95cb0b77b0e65b6f6798fd1"
+    },
+    {
+      "id": "summary-quimica-radioatividade-o-estudo-das-radiacoes",
+      "subject": "Química",
+      "topic": "Radioatividade: o Estudo das Radiações",
+      "sections": [
+        "As emissões",
+        "As leis de Soddy",
+        "Meia-vida e aplicações",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "d65b48ac6837f8ddf29ff7b20135943b91b71c5c7451dc51cdb072a2da19954b"
+    },
+    {
+      "id": "summary-quimica-composicao-da-materia-estados-fisicos",
+      "subject": "Química",
+      "topic": "Composição da Matéria: Estados Físicos",
+      "sections": [
+        "Estados e mudanças",
+        "Substância pura e mistura",
+        "Misturas eutéticas e azeotrópicas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "62de18592c48c985572d39cce34ddee397a0dd2c81d08df6e17d61a7d1755ca7"
+    },
+    {
+      "id": "summary-quimica-o-estado-gasoso",
+      "subject": "Química",
+      "topic": "O Estado Gasoso",
+      "sections": [
+        "Modelo de partículas",
+        "Variáveis de estado",
+        "Leitura microscópica",
+        "Limites do ideal",
+        "Pratique e confira"
+      ],
+      "sha256": "09acbe6bd9da479e43d7457e592fd1d01308ecec21971d240eb8aa2ad66281a5"
+    },
+    {
+      "id": "summary-quimica-estudo-dos-gases-ii",
+      "subject": "Química",
+      "topic": "Estudo dos Gases II",
+      "sections": [
+        "A equação geral e a de Clapeyron",
+        "Misturas gasosas",
+        "Difusão e efusão",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "fc968612b9f45296fde6612eb56be42e1ad47677fa1673e8629f38eb734121c7"
+    },
+    {
+      "id": "summary-quimica-separacao-de-misturas",
+      "subject": "Química",
+      "topic": "Separação de Misturas",
+      "sections": [
+        "Misturas heterogêneas",
+        "Misturas homogêneas",
+        "Casos especiais",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "d5089d54147b641349ab6c4cea25ae0282313a1248f52faa2f10a44487aa36fa"
+    },
+    {
+      "id": "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes",
+      "subject": "Química",
+      "topic": "Transformações Físicas e Químicas e Balanceamento de Equações",
+      "sections": [
+        "Distinguir os dois tipos",
+        "Leis ponderais",
+        "Balanceamento",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "34d306cdde8e8edaf58c19ec451f1826c011e355c4d8c46db35d8d23748aa412"
+    },
+    {
+      "id": "summary-quimica-massa-atomica-mol-e-massa-molar",
+      "subject": "Química",
+      "topic": "Massa Atômica, Mol e Massa Molar",
+      "sections": [
+        "Do átomo à balança",
+        "Convertendo entre grandezas",
+        "Massa molecular e fórmulas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "923d7aa501ed0e60cdbf0c8ea00f57895f4f24d0c7ca3f1a0a9294d0fcfc220e"
+    },
+    {
+      "id": "summary-quimica-determinacao-de-formulas-quimicas",
+      "subject": "Química",
+      "topic": "Determinação de Fórmulas Químicas",
+      "sections": [
+        "Fórmula percentual, mínima e molecular",
+        "O roteiro de cálculo",
+        "Casos com dados de combustão",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "1e4ca44e1bc7456ada512ed087aacc71ff7179dbd36b328694f3f44d1daed18d"
+    },
+    {
+      "id": "summary-quimica-estequiometria-leis-ponderais",
+      "subject": "Química",
+      "topic": "Estequiometria: Leis Ponderais",
+      "sections": [
+        "Da equação à quantidade",
+        "Reagente limitante e excesso",
+        "Pureza e rendimento",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "3e13061322bcef810467f98fad48d38cc24d23486d658e205b1dd1b658e5154f"
+    },
+    {
+      "id": "summary-quimica-calculos-estequiometricos",
+      "subject": "Química",
+      "topic": "Cálculos Estequiométricos",
+      "sections": [
+        "Quantidade antes da regra de três",
+        "Roteiro de resolução",
+        "Reagente limitante",
+        "Erros que derrubam a conta",
+        "Pratique e confira"
+      ],
+      "sha256": "01d943c640fbc48676aa91b0d011ceca99f8b2ec14f6ec581b2ad25d838ce95d"
+    },
+    {
+      "id": "summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases",
+      "subject": "Química",
+      "topic": "Equações Iônicas e outras Teorias para Ácidos e Bases",
+      "sections": [
+        "Equação iônica",
+        "Brønsted-Lowry",
+        "Lewis",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "cea0c566c23ffde9082851743ccf71ed558b1efac5f67e5cbf08ddd45297bb29"
+    },
+    {
+      "id": "summary-quimica-processos-de-oxirreducao",
+      "subject": "Química",
+      "topic": "Processos de Oxirredução",
+      "sections": [
+        "Transferência de elétrons",
+        "Identificar agentes",
+        "Balanceamento básico",
+        "Aplicações reais",
+        "Pratique e confira"
+      ],
+      "sha256": "6a88547d8197f70db76efacf3ccfd74edc1a652c232435eacef77e804659d926"
+    },
+    {
+      "id": "summary-quimica-dispersoes",
+      "subject": "Química",
+      "topic": "Dispersões",
+      "sections": [
+        "Classificação por tamanho",
+        "Coloides e efeito Tyndall",
+        "Concentração das soluções",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "f829ccacb8bb06a1987aa68e64582c0c4d58ab940ec2a9fe695eb50389c8767a"
+    },
+    {
+      "id": "summary-quimica-efeitos-coligativos",
+      "subject": "Química",
+      "topic": "Efeitos Coligativos",
+      "sections": [
+        "O que são",
+        "Os quatro efeitos",
+        "Eletrólitos e o fator de van't Hoff",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "7954b13bbe9c353627f1f897bd54046f52edd3bdc07609198ca7ddadd53b0b41"
+    },
+    {
+      "id": "summary-quimica-termoquimica-i",
+      "subject": "Química",
+      "topic": "Termoquímica I",
+      "sections": [
+        "Energia nas reações",
+        "Sistema e ambiente",
+        "Lei de Hess",
+        "Erros recorrentes",
+        "Pratique e confira"
+      ],
+      "sha256": "ca7c4c0461d9c926d4f923558306c9a5c9d12508a502b0b90d7fd173b06ed55a"
+    },
+    {
+      "id": "summary-quimica-termoquimica-ii",
+      "subject": "Química",
+      "topic": "Termoquímica II",
+      "sections": [
+        "Entalpia e entropia",
+        "Energia livre de Gibbs",
+        "Entalpias de formação e ligação",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "57c91ebac25d8c9f5c72059dc896eaa993cc9d7c8d40d99e95efca02fb281c5c"
+    },
+    {
+      "id": "summary-quimica-cinetica-quimica",
+      "subject": "Química",
+      "topic": "Cinética Química",
+      "sections": [
+        "Velocidade e colisões",
+        "Superfície e catalisador",
+        "Lei de velocidade",
+        "Pegadinhas",
+        "Pratique e confira"
+      ],
+      "sha256": "e222ef17801f356b5281522e10458e34a6eff13e8625300022ae902131a98b90"
+    },
+    {
+      "id": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias",
+      "subject": "Química",
+      "topic": "Introdução ao Estudo das Pilhas e Baterias",
+      "sections": [
+        "Reação que produz corrente",
+        "Organização da célula",
+        "Potencial e espontaneidade",
+        "Uso e descarte",
+        "Pratique e confira"
+      ],
+      "sha256": "55aba5ed20f21be4c9c5045f585576a480d3c8a423d70f5efcec72770c472a9e"
+    },
+    {
+      "id": "summary-quimica-eletroquimica-de-processos-espontaneos",
+      "subject": "Química",
+      "topic": "Eletroquímica de Processos Espontâneos",
+      "sections": [
+        "A pilha",
+        "Potenciais e força eletromotriz",
+        "Corrosão e proteção",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "96267db9ee328ebe17dc026b2953b6c4a6014035cf284034b4fc775aa8a41655"
+    },
+    {
+      "id": "summary-quimica-eletroquimica-de-processos-nao-espontaneos",
+      "subject": "Química",
+      "topic": "Eletroquímica de Processos não Espontâneos",
+      "sections": [
+        "Eletrólise",
+        "Ígnea e aquosa",
+        "Aplicações industriais",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "bbbce2f45a4fd9d61a51807c129d5b9362a22ab766fe2748b0586e8e04d5bb28"
+    },
+    {
+      "id": "summary-quimica-aspectos-quantitativos-da-eletroquimica-e-metalurgia",
+      "subject": "Química",
+      "topic": "Aspectos Quantitativos da Eletroquímica e Metalurgia",
+      "sections": [
+        "As leis de Faraday",
+        "O roteiro de cálculo",
+        "Metalurgia",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "e249bcc43af25dc8647020fcb2140c0e87cdbe199195406e6e2a7283abf7b3af"
+    },
+    {
+      "id": "summary-quimica-deslocamento-de-equilibrio",
+      "subject": "Química",
+      "topic": "Deslocamento de Equilíbrio",
+      "sections": [
+        "O princípio de Le Chatelier",
+        "Pressão e temperatura",
+        "Catalisador e inertes",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "fe11d5a20663dbd35c80cafe928a568820893692fb17a5bace8cd77b337434d0"
+    }
+  ]
+}
