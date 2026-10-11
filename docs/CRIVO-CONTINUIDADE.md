@@ -539,3 +539,7 @@ Após #308. Os 78 capítulos de Matemática a confrontar recebem modelo 3D no pa
 ## 11/10 — Lote Biologia e Geografia (88)
 
 Após #309. 43 capítulos de Biologia e 45 de Geografia recebem modelo 3D no palco comum. Geografia humana usa modelos conceituais com valores fictícios declarados; temas sensíveis em linha do tempo factual. [Registro](lote-biologia-geografia-88-2026-10-11/README.md). Não repetir estes 88.
+
+## 11/10 — Lote Humanas (111)
+
+Após #310. 49 capítulos de História, 35 de Filosofia e 27 de Sociologia recebem modelo 3D estrutural no palco comum. [Registro](lote-humanas-111-2026-10-11/README.md). Não repetir estes 111.

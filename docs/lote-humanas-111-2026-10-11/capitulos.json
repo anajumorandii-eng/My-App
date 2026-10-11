@@ -1,0 +1,1179 @@
+[
+ {
+  "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+  "template": "timeline",
+  "title": "Das aldeias às primeiras civilizações",
+  "items": [
+   "Neolítico",
+   "Cidades",
+   "Escrita",
+   "Egito"
+  ]
+ },
+ {
+  "id": "summary-historia-antiguidade-classica-o-mundo-grego",
+  "template": "compare",
+  "title": "Atenas × Esparta",
+  "items": [
+   "Atenas",
+   "Esparta",
+   "Excluídos"
+  ]
+ },
+ {
+  "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+  "template": "timeline",
+  "title": "Roma: três regimes",
+  "items": [
+   "Monarquia",
+   "República",
+   "Império",
+   "Queda do Ocidente"
+  ]
+ },
+ {
+  "id": "summary-historia-alta-idade-media-e-feudalismo",
+  "template": "pyramid",
+  "title": "Sociedade feudal",
+  "items": [
+   "Rei/suseranos",
+   "Clero",
+   "Nobreza",
+   "Servos"
+  ]
+ },
+ {
+  "id": "summary-historia-baixa-idade-media",
+  "template": "flows",
+  "title": "Renascimento comercial",
+  "items": [
+   "Feiras",
+   "Burgos",
+   "Mediterrâneo",
+   "Corporações"
+  ]
+ },
+ {
+  "id": "summary-historia-a-primeira-globalizacao",
+  "template": "flows",
+  "title": "Comércio atlântico triangular",
+  "items": [
+   "Europa",
+   "África",
+   "América"
+  ]
+ },
+ {
+  "id": "summary-historia-america-espanhola",
+  "template": "pyramid",
+  "title": "Sociedade colonial espanhola",
+  "items": [
+   "Chapetones",
+   "Criollos",
+   "Mestiços",
+   "Indígenas e escravizados"
+  ]
+ },
+ {
+  "id": "summary-historia-vida-urbana-e-renascimento-cultural",
+  "template": "concentric",
+  "title": "Humanismo renascentista",
+  "items": [
+   "Ser humano",
+   "Antiguidade",
+   "Mecenato",
+   "Cidades italianas"
+  ]
+ },
+ {
+  "id": "summary-historia-reforma-religiosa",
+  "template": "timeline",
+  "title": "Reformas",
+  "items": [
+   "1517",
+   "1534",
+   "1536",
+   "1545–63"
+  ]
+ },
+ {
+  "id": "summary-historia-absolutismo",
+  "template": "pyramid",
+  "title": "Monarquia absolutista",
+  "items": [
+   "Rei",
+   "Corte",
+   "Burocracia e exército",
+   "Súditos"
+  ]
+ },
+ {
+  "id": "summary-historia-revolucao-industrial",
+  "template": "flows",
+  "title": "Revolução Industrial",
+  "items": [
+   "Carvão",
+   "Fábrica",
+   "Operários",
+   "Mercado"
+  ]
+ },
+ {
+  "id": "summary-historia-iluminismo",
+  "template": "compare",
+  "title": "Pensadores iluministas",
+  "items": [
+   "Locke",
+   "Montesquieu",
+   "Voltaire",
+   "Rousseau"
+  ]
+ },
+ {
+  "id": "summary-historia-revolucao-francesa",
+  "template": "pyramid",
+  "title": "Os três estados",
+  "items": [
+   "Primeiro estado",
+   "Segundo estado",
+   "Terceiro estado"
+  ]
+ },
+ {
+  "id": "summary-historia-america-no-seculo-xix",
+  "template": "timeline",
+  "title": "Américas no século XIX",
+  "items": [
+   "1810–25",
+   "1823",
+   "1846–48",
+   "1861–65"
+  ]
+ },
+ {
+  "id": "summary-historia-europa-no-seculo-xix",
+  "template": "timeline",
+  "title": "Europa no século XIX",
+  "items": [
+   "1815",
+   "1848",
+   "1861",
+   "1871"
+  ]
+ },
+ {
+  "id": "summary-historia-imperialismo-e-belle-epoque",
+  "template": "flows",
+  "title": "Imperialismo",
+  "items": [
+   "Metrópoles",
+   "Colônias",
+   "Partilha"
+  ]
+ },
+ {
+  "id": "summary-historia-primeira-guerra-mundial-1914-1918",
+  "template": "blocs",
+  "title": "Alianças da Primeira Guerra",
+  "items": [
+   "Alemanha",
+   "Áustria-Hungria",
+   "Itália",
+   "França",
+   "Reino Unido",
+   "Rússia"
+  ]
+ },
+ {
+  "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+  "template": "timeline",
+  "title": "Revoluções do século XX",
+  "items": [
+   "1910",
+   "1917",
+   "1949",
+   "1959"
+  ]
+ },
+ {
+  "id": "summary-historia-o-periodo-entreguerras-1918-1939",
+  "template": "timeline",
+  "title": "Entreguerras",
+  "items": [
+   "1919",
+   "1922",
+   "1929",
+   "1933"
+  ]
+ },
+ {
+  "id": "summary-historia-o-nazismo-na-alemanha",
+  "template": "flows",
+  "title": "Ascensão do nazismo",
+  "items": [
+   "Crise de 1929",
+   "Revanchismo",
+   "Propaganda",
+   "Ditadura"
+  ]
+ },
+ {
+  "id": "summary-historia-segunda-guerra-mundial-1939-1945",
+  "template": "blocs",
+  "title": "Eixo × Aliados",
+  "items": [
+   "Alemanha",
+   "Itália",
+   "Japão",
+   "Reino Unido",
+   "URSS",
+   "EUA"
+  ]
+ },
+ {
+  "id": "summary-historia-guerra-fria",
+  "template": "blocs",
+  "title": "Dois blocos",
+  "items": [
+   "EUA",
+   "Europa Ocidental",
+   "URSS",
+   "Leste Europeu"
+  ]
+ },
+ {
+  "id": "summary-historia-descolonizacao-afro-asiatica",
+  "template": "timeline",
+  "title": "Descolonização",
+  "items": [
+   "1947",
+   "1955",
+   "1960",
+   "1962"
+  ]
+ },
+ {
+  "id": "summary-historia-america-latina-no-seculo-xx",
+  "template": "timeline",
+  "title": "América Latina no século XX",
+  "items": [
+   "1930–50",
+   "1959",
+   "1964–76",
+   "1980s"
+  ]
+ },
+ {
+  "id": "summary-historia-o-fim-da-guerra-fria",
+  "template": "timeline",
+  "title": "Fim da Guerra Fria",
+  "items": [
+   "1985",
+   "1989",
+   "1990",
+   "1991"
+  ]
+ },
+ {
+  "id": "summary-historia-a-historia-e-o-brasil",
+  "template": "concentric",
+  "title": "Fontes e tempo histórico",
+  "items": [
+   "Fonte",
+   "Interpretação",
+   "Tempo curto",
+   "Longa duração"
+  ]
+ },
+ {
+  "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+  "template": "timeline",
+  "title": "Grandes Navegações",
+  "items": [
+   "1415",
+   "1488",
+   "1492",
+   "1500"
+  ]
+ },
+ {
+  "id": "summary-historia-a-montagem-da-colonizacao",
+  "template": "flows",
+  "title": "Montagem da colonização",
+  "items": [
+   "Capitanias",
+   "Governo-geral",
+   "Engenho",
+   "Metrópole"
+  ]
+ },
+ {
+  "id": "summary-historia-dinamica-interna-da-colonizacao",
+  "template": "pyramid",
+  "title": "Sociedade açucareira",
+  "items": [
+   "Senhor de engenho",
+   "Lavradores e livres pobres",
+   "Escravizados"
+  ]
+ },
+ {
+  "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+  "template": "timeline",
+  "title": "Disputas europeias",
+  "items": [
+   "1555",
+   "1612",
+   "1630–54",
+   "1654"
+  ]
+ },
+ {
+  "id": "summary-historia-a-interiorizacao-da-colonizacao",
+  "template": "flows",
+  "title": "Interiorização",
+  "items": [
+   "Litoral",
+   "Bandeiras",
+   "Pecuária",
+   "Missões"
+  ]
+ },
+ {
+  "id": "summary-historia-a-mineracao-no-brasil-colonial",
+  "template": "flows",
+  "title": "Ciclo do ouro",
+  "items": [
+   "Minas",
+   "Quinto",
+   "Rio de Janeiro",
+   "Inglaterra"
+  ]
+ },
+ {
+  "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+  "template": "timeline",
+  "title": "Crise colonial",
+  "items": [
+   "1789",
+   "1798",
+   "1808",
+   "1815"
+  ]
+ },
+ {
+  "id": "summary-historia-a-independencia-do-brasil",
+  "template": "timeline",
+  "title": "Independência",
+  "items": [
+   "1820",
+   "1821",
+   "1822",
+   "1824"
+  ]
+ },
+ {
+  "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+  "template": "compare",
+  "title": "Constituição de 1824",
+  "items": [
+   "Executivo",
+   "Legislativo",
+   "Judiciário",
+   "Moderador"
+  ]
+ },
+ {
+  "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+  "template": "timeline",
+  "title": "Regências e revoltas",
+  "items": [
+   "1835",
+   "1835",
+   "1837",
+   "1838"
+  ]
+ },
+ {
+  "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+  "template": "flows",
+  "title": "Economia cafeeira",
+  "items": [
+   "Vale do Paraíba",
+   "Oeste paulista",
+   "Ferrovias",
+   "Exportação"
+  ]
+ },
+ {
+  "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+  "template": "timeline",
+  "title": "Abolição gradual",
+  "items": [
+   "1850",
+   "1871",
+   "1885",
+   "1888"
+  ]
+ },
+ {
+  "id": "summary-historia-a-republica-da-espada",
+  "template": "timeline",
+  "title": "República da Espada",
+  "items": [
+   "1889",
+   "1891",
+   "1893",
+   "1894"
+  ]
+ },
+ {
+  "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+  "template": "pyramid",
+  "title": "Política dos governadores",
+  "items": [
+   "Presidente",
+   "Governadores",
+   "Coronéis",
+   "Eleitores"
+  ]
+ },
+ {
+  "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+  "template": "timeline",
+  "title": "Declínio oligárquico",
+  "items": [
+   "1922",
+   "1924",
+   "1929",
+   "1930"
+  ]
+ },
+ {
+  "id": "summary-historia-a-era-vargas",
+  "template": "timeline",
+  "title": "Era Vargas",
+  "items": [
+   "1930–34",
+   "1932",
+   "1934–37",
+   "1937–45"
+  ]
+ },
+ {
+  "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+  "template": "compare",
+  "title": "Polarização dos anos 1930",
+  "items": [
+   "ANL",
+   "AIB",
+   "Governo"
+  ]
+ },
+ {
+  "id": "summary-historia-a-era-vargas-o-estado-novo",
+  "template": "flows",
+  "title": "Estado Novo",
+  "items": [
+   "Vargas",
+   "DIP",
+   "CLT",
+   "Indústria"
+  ]
+ },
+ {
+  "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
+  "template": "timeline",
+  "title": "República de 1946",
+  "items": [
+   "1946",
+   "1954",
+   "1961",
+   "1964"
+  ]
+ },
+ {
+  "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
+  "template": "compare",
+  "title": "Plano de Metas (JK)",
+  "items": [
+   "Energia",
+   "Transportes",
+   "Indústria de base",
+   "Brasília"
+  ]
+ },
+ {
+  "id": "summary-historia-regime-militar-1964-1985-i",
+  "template": "timeline",
+  "title": "Regime militar: endurecimento",
+  "items": [
+   "1964",
+   "1965",
+   "1968",
+   "1969–74"
+  ]
+ },
+ {
+  "id": "summary-historia-regime-militar-1964-1985-ii",
+  "template": "timeline",
+  "title": "Abertura",
+  "items": [
+   "1974",
+   "1979",
+   "1984",
+   "1985"
+  ]
+ },
+ {
+  "id": "summary-historia-o-brasil-atual",
+  "template": "timeline",
+  "title": "Nova República",
+  "items": [
+   "1988",
+   "1992",
+   "1994",
+   "2016"
+  ]
+ },
+ {
+  "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+  "template": "compare",
+  "title": "Mito e logos",
+  "items": [
+   "Mito",
+   "Logos",
+   "Pólis"
+  ]
+ },
+ {
+  "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+  "template": "compare",
+  "title": "A arché",
+  "items": [
+   "Tales",
+   "Anaximandro",
+   "Anaxímenes"
+  ]
+ },
+ {
+  "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+  "template": "compare",
+  "title": "Devir × ser",
+  "items": [
+   "Heráclito",
+   "Parmênides"
+  ]
+ },
+ {
+  "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+  "template": "concentric",
+  "title": "Relativismo sofista",
+  "items": [
+   "Indivíduo",
+   "Opinião",
+   "Retórica",
+   "Pólis"
+  ]
+ },
+ {
+  "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+  "template": "cycle",
+  "title": "Ironia e maiêutica",
+  "items": [
+   "Pergunta",
+   "Resposta",
+   "Refutação",
+   "Aporia",
+   "Parto de ideias"
+  ]
+ },
+ {
+  "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+  "template": "compare",
+  "title": "Dois mundos",
+  "items": [
+   "Mundo inteligível",
+   "Mundo sensível"
+  ]
+ },
+ {
+  "id": "summary-filosofia-o-mito-da-caverna",
+  "template": "cave",
+  "title": "Alegoria da caverna",
+  "items": [
+   "Sombras",
+   "Fogo",
+   "Saída",
+   "Sol"
+  ]
+ },
+ {
+  "id": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento",
+  "template": "divided-line",
+  "title": "Linha dividida",
+  "items": [
+   "Imaginação (eikasia)",
+   "Crença (pistis)",
+   "Pensamento (dianoia)",
+   "Intelecção (noesis)"
+  ]
+ },
+ {
+  "id": "summary-filosofia-logica-e-metafisica-aristotelicas",
+  "template": "compare",
+  "title": "Quatro causas",
+  "items": [
+   "Material",
+   "Formal",
+   "Eficiente",
+   "Final"
+  ]
+ },
+ {
+  "id": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo",
+  "template": "mean",
+  "title": "Virtude como meio-termo",
+  "items": [
+   "Covardia",
+   "Coragem",
+   "Temeridade"
+  ]
+ },
+ {
+  "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+  "template": "compare",
+  "title": "Formas de governo",
+  "items": [
+   "Monarquia",
+   "Aristocracia",
+   "Politeia"
+  ]
+ },
+ {
+  "id": "summary-filosofia-patristica-e-santo-agostinho",
+  "template": "compare",
+  "title": "Duas cidades",
+  "items": [
+   "Cidade de Deus",
+   "Cidade dos homens"
+  ]
+ },
+ {
+  "id": "summary-filosofia-escolastica-e-santo-tomas-de-aquino",
+  "template": "compare",
+  "title": "Cinco vias",
+  "items": [
+   "Movimento",
+   "Causa eficiente",
+   "Contingência",
+   "Graus de perfeição",
+   "Finalidade"
+  ]
+ },
+ {
+  "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+  "template": "compare",
+  "title": "Fé e razão",
+  "items": [
+   "Agostinho",
+   "Tomás",
+   "Ockham"
+  ]
+ },
+ {
+  "id": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica",
+  "template": "cycle",
+  "title": "Dúvida metódica",
+  "items": [
+   "Sentidos",
+   "Sonho",
+   "Gênio maligno",
+   "Cogito"
+  ]
+ },
+ {
+  "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+  "template": "compare",
+  "title": "Espinosa × Leibniz",
+  "items": [
+   "Espinosa",
+   "Leibniz"
+  ]
+ },
+ {
+  "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+  "template": "compare",
+  "title": "Empiristas",
+  "items": [
+   "Locke",
+   "Berkeley",
+   "Hume"
+  ]
+ },
+ {
+  "id": "summary-filosofia-a-critica-de-hume-a-causalidade",
+  "template": "cycle",
+  "title": "Causalidade e hábito",
+  "items": [
+   "Evento A",
+   "Evento B",
+   "Repetição",
+   "Hábito"
+  ]
+ },
+ {
+  "id": "summary-filosofia-hobbes-e-o-estado-de-natureza",
+  "template": "flows",
+  "title": "Do estado de natureza ao Leviatã",
+  "items": [
+   "Estado de natureza",
+   "Medo da morte",
+   "Contrato",
+   "Leviatã"
+  ]
+ },
+ {
+  "id": "summary-filosofia-locke-e-os-direitos-naturais",
+  "template": "flows",
+  "title": "Contrato em Locke",
+  "items": [
+   "Direitos naturais",
+   "Contrato",
+   "Governo limitado",
+   "Resistência"
+  ]
+ },
+ {
+  "id": "summary-filosofia-rousseau-e-a-vontade-geral",
+  "template": "concentric",
+  "title": "Vontade geral",
+  "items": [
+   "Indivíduo",
+   "Soma",
+   "Corpo político",
+   "Soberania"
+  ]
+ },
+ {
+  "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+  "template": "timeline",
+  "title": "Razão e progresso",
+  "items": [
+   "Crítica",
+   "Ciência",
+   "Direitos",
+   "Progresso"
+  ]
+ },
+ {
+  "id": "summary-filosofia-a-critica-da-razao-pura",
+  "template": "concentric",
+  "title": "Fenômeno e coisa em si",
+  "items": [
+   "Sensações",
+   "Formas a priori",
+   "Categorias",
+   "Coisa em si"
+  ]
+ },
+ {
+  "id": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico",
+  "template": "compare",
+  "title": "Imperativos",
+  "items": [
+   "Hipotético",
+   "Categórico",
+   "Humanidade"
+  ]
+ },
+ {
+  "id": "summary-filosofia-hegel-e-a-dialetica",
+  "template": "dialectic",
+  "title": "Dialética hegeliana",
+  "items": [
+   "Tese",
+   "Antítese",
+   "Síntese"
+  ]
+ },
+ {
+  "id": "summary-filosofia-o-materialismo-historico",
+  "template": "pyramid",
+  "title": "Base e superestrutura",
+  "items": [
+   "Superestrutura",
+   "Relações de produção",
+   "Forças produtivas"
+  ]
+ },
+ {
+  "id": "summary-filosofia-alienacao-e-mais-valia",
+  "template": "compare",
+  "title": "Jornada de trabalho",
+  "items": [
+   "Trabalho necessário",
+   "Trabalho excedente"
+  ]
+ },
+ {
+  "id": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista",
+  "template": "compare",
+  "title": "Classes antagônicas",
+  "items": [
+   "Escravo × senhor",
+   "Servo × senhor",
+   "Proletário × burguês"
+  ]
+ },
+ {
+  "id": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais",
+  "template": "compare",
+  "title": "Moral de senhores × de escravos",
+  "items": [
+   "Senhores",
+   "Escravos",
+   "Transvaloração"
+  ]
+ },
+ {
+  "id": "summary-filosofia-o-existencialismo-de-sartre",
+  "template": "compare",
+  "title": "Existência precede a essência",
+  "items": [
+   "Existência",
+   "Liberdade",
+   "Essência"
+  ]
+ },
+ {
+  "id": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural",
+  "template": "flows",
+  "title": "Indústria cultural",
+  "items": [
+   "Produção em série",
+   "Padronização",
+   "Consumo",
+   "Conformismo"
+  ]
+ },
+ {
+  "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+  "template": "concentric",
+  "title": "Panóptico",
+  "items": [
+   "Torre",
+   "Celas",
+   "Disciplina",
+   "Sociedade"
+  ]
+ },
+ {
+  "id": "summary-filosofia-justica-e-direitos-humanos",
+  "template": "timeline",
+  "title": "Direitos humanos",
+  "items": [
+   "1689",
+   "1789",
+   "1948",
+   "1988"
+  ]
+ },
+ {
+  "id": "summary-filosofia-etica-aplicada-e-bioetica",
+  "template": "compare",
+  "title": "Princípios da bioética",
+  "items": [
+   "Autonomia",
+   "Beneficência",
+   "Não maleficência",
+   "Justiça"
+  ]
+ },
+ {
+  "id": "summary-filosofia-filosofia-politica-contemporanea",
+  "template": "compare",
+  "title": "Justiça distributiva",
+  "items": [
+   "Rawls",
+   "Nozick",
+   "Sen"
+  ]
+ },
+ {
+  "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+  "template": "flows",
+  "title": "Por que surge a sociologia",
+  "items": [
+   "Revolução Industrial",
+   "Revolução Francesa",
+   "Questão social",
+   "Sociologia"
+  ]
+ },
+ {
+  "id": "summary-sociologia-o-que-e-o-fato-social",
+  "template": "concentric",
+  "title": "Fato social",
+  "items": [
+   "Indivíduo",
+   "Coercitividade",
+   "Exterioridade",
+   "Generalidade"
+  ]
+ },
+ {
+  "id": "summary-sociologia-sociologia-e-senso-comum",
+  "template": "compare",
+  "title": "Senso comum × sociologia",
+  "items": [
+   "Senso comum",
+   "Sociologia"
+  ]
+ },
+ {
+  "id": "summary-sociologia-solidariedade-mecanica-e-solidariedade-organica",
+  "template": "compare",
+  "title": "Solidariedades",
+  "items": [
+   "Mecânica",
+   "Orgânica"
+  ]
+ },
+ {
+  "id": "summary-sociologia-anomia-e-coesao-social",
+  "template": "compare",
+  "title": "Coesão × anomia",
+  "items": [
+   "Coesão",
+   "Anomia"
+  ]
+ },
+ {
+  "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
+  "template": "concentric",
+  "title": "Socialização",
+  "items": [
+   "Criança",
+   "Família",
+   "Escola",
+   "Sociedade"
+  ]
+ },
+ {
+  "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
+  "template": "timeline",
+  "title": "Modos de produção",
+  "items": [
+   "Primitivo",
+   "Escravista",
+   "Feudal",
+   "Capitalista"
+  ]
+ },
+ {
+  "id": "summary-sociologia-ideologia-e-alienacao",
+  "template": "flows",
+  "title": "Ideologia",
+  "items": [
+   "Classe dominante",
+   "Instituições",
+   "Senso comum",
+   "Alienação"
+  ]
+ },
+ {
+  "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+  "template": "compare",
+  "title": "Classes no capitalismo",
+  "items": [
+   "Burguesia",
+   "Proletariado"
+  ]
+ },
+ {
+  "id": "summary-sociologia-tipos-de-acao-social",
+  "template": "compare",
+  "title": "Tipos de ação (Weber)",
+  "items": [
+   "Racional com relação a fins",
+   "Racional com relação a valores",
+   "Afetiva",
+   "Tradicional"
+  ]
+ },
+ {
+  "id": "summary-sociologia-dominacao-e-poder-em-weber",
+  "template": "compare",
+  "title": "Dominação legítima",
+  "items": [
+   "Tradicional",
+   "Carismática",
+   "Racional-legal"
+  ]
+ },
+ {
+  "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
+  "template": "flows",
+  "title": "Ética protestante",
+  "items": [
+   "Predestinação",
+   "Vocação",
+   "Ascetismo",
+   "Capitalismo"
+  ]
+ },
+ {
+  "id": "summary-sociologia-cultura-e-etnocentrismo",
+  "template": "concentric",
+  "title": "Etnocentrismo",
+  "items": [
+   "Meu grupo",
+   "Outros próximos",
+   "Outros distantes"
+  ]
+ },
+ {
+  "id": "summary-sociologia-identidade-e-diferenca",
+  "template": "compare",
+  "title": "Identidade e diferença",
+  "items": [
+   "Identidade",
+   "Diferença"
+  ]
+ },
+ {
+  "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+  "template": "compare",
+  "title": "Relativismo × universalismo",
+  "items": [
+   "Relativismo",
+   "Universalismo"
+  ]
+ },
+ {
+  "id": "summary-sociologia-classes-sociais-e-mobilidade-social",
+  "template": "pyramid",
+  "title": "Estratificação e mobilidade",
+  "items": [
+   "Alta",
+   "Média",
+   "Baixa"
+  ]
+ },
+ {
+  "id": "summary-sociologia-desigualdade-racial-no-brasil",
+  "template": "compare",
+  "title": "Desigualdade racial",
+  "items": [
+   "Renda",
+   "Escolaridade",
+   "Violência"
+  ]
+ },
+ {
+  "id": "summary-sociologia-desigualdade-de-genero",
+  "template": "compare",
+  "title": "Desigualdade de gênero",
+  "items": [
+   "Renda",
+   "Trabalho doméstico",
+   "Representação"
+  ]
+ },
+ {
+  "id": "summary-sociologia-divisao-social-do-trabalho",
+  "template": "cycle",
+  "title": "Divisão do trabalho",
+  "items": [
+   "Especialização",
+   "Interdependência",
+   "Coesão orgânica",
+   "Alienação"
+  ]
+ },
+ {
+  "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+  "template": "timeline",
+  "title": "Modelos produtivos",
+  "items": [
+   "Taylorismo",
+   "Fordismo",
+   "Toyotismo",
+   "Plataformas"
+  ]
+ },
+ {
+  "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
+  "template": "compare",
+  "title": "Trabalho por plataforma",
+  "items": [
+   "Autonomia aparente",
+   "Riscos transferidos",
+   "Sem proteção"
+  ]
+ },
+ {
+  "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+  "template": "compare",
+  "title": "Movimentos sociais",
+  "items": [
+   "Clássicos",
+   "Novos",
+   "Em rede"
+  ]
+ },
+ {
+  "id": "summary-sociologia-cidadania-e-direitos",
+  "template": "timeline",
+  "title": "Cidadania em Marshall",
+  "items": [
+   "Civis",
+   "Políticos",
+   "Sociais"
+  ]
+ },
+ {
+  "id": "summary-sociologia-democracia-e-participacao-politica",
+  "template": "compare",
+  "title": "Formas de participação",
+  "items": [
+   "Representativa",
+   "Direta",
+   "Participativa"
+  ]
+ },
+ {
+  "id": "summary-sociologia-globalizacao-economica-e-cultural",
+  "template": "flows",
+  "title": "Globalização",
+  "items": [
+   "Capital",
+   "Mercadorias",
+   "Cultura",
+   "Local"
+  ]
+ },
+ {
+  "id": "summary-sociologia-o-estado-nacao-na-era-global",
+  "template": "concentric",
+  "title": "Soberania compartilhada",
+  "items": [
+   "Estado",
+   "Blocos",
+   "Organismos",
+   "Mercado global"
+  ]
+ },
+ {
+  "id": "summary-sociologia-a-sociedade-da-informacao",
+  "template": "flows",
+  "title": "Sociedade em rede",
+  "items": [
+   "Usuários",
+   "Plataformas",
+   "Bolhas",
+   "Esfera pública"
+  ]
+ }
+]
