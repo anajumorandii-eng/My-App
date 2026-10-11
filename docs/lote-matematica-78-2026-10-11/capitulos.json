@@ -1,0 +1,392 @@
+[
+ {
+  "id": "summary-matematica-potencias-e-radicais",
+  "kind": "powers",
+  "title": "a² é um quadrado, a³ é um cubo"
+ },
+ {
+  "id": "summary-matematica-razao-e-proporcao",
+  "kind": "ratio",
+  "title": "Caixas proporcionais"
+ },
+ {
+  "id": "summary-matematica-porcentagem",
+  "kind": "percent",
+  "title": "100 cubos: cada um é 1%"
+ },
+ {
+  "id": "summary-matematica-o-sistema-de-numeracao-decimal",
+  "kind": "decimal",
+  "title": "Valor posicional em blocos"
+ },
+ {
+  "id": "summary-matematica-introducao-a-teoria-dos-numeros-inteiros",
+  "kind": "divisors",
+  "title": "Divisores como retângulos"
+ },
+ {
+  "id": "summary-matematica-introducao-as-sequencias",
+  "kind": "figurate",
+  "title": "Sequências de figuras"
+ },
+ {
+  "id": "summary-matematica-progressao-aritmetica",
+  "kind": "arithmetic",
+  "title": "PA: cada torre soma r"
+ },
+ {
+  "id": "summary-matematica-progressao-geometrica",
+  "kind": "geometric",
+  "title": "PG: cada torre multiplica por q"
+ },
+ {
+  "id": "summary-matematica-sequencias",
+  "kind": "fibonacci",
+  "title": "Fibonacci em quadrados"
+ },
+ {
+  "id": "summary-matematica-sistemas-de-equacoes",
+  "kind": "system2",
+  "title": "Duas retas, uma solução"
+ },
+ {
+  "id": "summary-matematica-tabelas-e-matrizes",
+  "kind": "matrix",
+  "title": "Matriz como tabela de barras"
+ },
+ {
+  "id": "summary-matematica-multiplicacao-de-matrizes",
+  "kind": "matmul",
+  "title": "Linha × coluna = uma entrada"
+ },
+ {
+  "id": "summary-matematica-determinantes",
+  "kind": "determinant",
+  "title": "Determinante = área orientada"
+ },
+ {
+  "id": "summary-matematica-discussao-de-sistemas-lineares",
+  "kind": "planes",
+  "title": "Três planos, três situações"
+ },
+ {
+  "id": "summary-matematica-medias",
+  "kind": "means",
+  "title": "A média nivela as torres"
+ },
+ {
+  "id": "summary-matematica-introducao-as-tecnicas-de-contagem",
+  "kind": "tree",
+  "title": "Árvore de possibilidades"
+ },
+ {
+  "id": "summary-matematica-o-problema-da-fila",
+  "kind": "queue",
+  "title": "Fila: cada posição tem uma pessoa a menos"
+ },
+ {
+  "id": "summary-matematica-o-problema-do-grupo",
+  "kind": "group",
+  "title": "Grupo: a ordem não importa"
+ },
+ {
+  "id": "summary-matematica-tecnicas-de-contagem",
+  "kind": "anagram",
+  "title": "Anagramas com repetição"
+ },
+ {
+  "id": "summary-matematica-operacoes-com-probabilidades",
+  "kind": "union",
+  "title": "União de eventos"
+ },
+ {
+  "id": "summary-matematica-eventos-disjuntos-e-eventos-independentes",
+  "kind": "independence",
+  "title": "Disjuntos ou independentes"
+ },
+ {
+  "id": "summary-matematica-estatistica-descritiva",
+  "kind": "histogram",
+  "title": "Histograma, média e mediana"
+ },
+ {
+  "id": "summary-matematica-introducao-a-geometria-plana",
+  "kind": "plane-basics",
+  "title": "Ponto, reta e plano"
+ },
+ {
+  "id": "summary-matematica-angulos-em-triangulos",
+  "kind": "triangle-angles",
+  "title": "Os três ângulos fazem 180°"
+ },
+ {
+  "id": "summary-matematica-angulos-em-poligonos",
+  "kind": "polygon-angles",
+  "title": "Polígono regular"
+ },
+ {
+  "id": "summary-matematica-angulos-e-circunferencias",
+  "kind": "inscribed",
+  "title": "Inscrito vale metade do central"
+ },
+ {
+  "id": "summary-matematica-simetrias-e-congruencias",
+  "kind": "congruence",
+  "title": "Isometrias preservam a figura"
+ },
+ {
+  "id": "summary-matematica-identificacao-de-simetrias-i",
+  "kind": "axes-symmetry",
+  "title": "Eixos de simetria"
+ },
+ {
+  "id": "summary-matematica-identificacao-de-simetrias-ii",
+  "kind": "rotational",
+  "title": "Simetria de rotação"
+ },
+ {
+  "id": "summary-matematica-a-geometria-da-proporcionalidade",
+  "kind": "thales",
+  "title": "Teorema de Tales"
+ },
+ {
+  "id": "summary-matematica-semelhanca-de-triangulos",
+  "kind": "similar",
+  "title": "Triângulos semelhantes"
+ },
+ {
+  "id": "summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo",
+  "kind": "centroid",
+  "title": "Baricentro: o ponto de equilíbrio"
+ },
+ {
+  "id": "summary-matematica-triangulo-retangulo",
+  "kind": "pythagoras",
+  "title": "Quadrados sobre os lados"
+ },
+ {
+  "id": "summary-matematica-a-geometria-metrica-plana",
+  "kind": "metric",
+  "title": "Relações métricas"
+ },
+ {
+  "id": "summary-matematica-areas-de-poligonos",
+  "kind": "shear-area",
+  "title": "Mesma base, mesma altura, mesma área"
+ },
+ {
+  "id": "summary-matematica-area-do-circulo-e-de-suas-partes",
+  "kind": "circle-area",
+  "title": "Do círculo ao retângulo"
+ },
+ {
+  "id": "summary-matematica-razoes-entre-areas-de-figuras-planas",
+  "kind": "area-ratio",
+  "title": "Área cresce com k²"
+ },
+ {
+  "id": "summary-matematica-areas-de-figuras-planas",
+  "kind": "trapezoid",
+  "title": "Trapézio = dois triângulos"
+ },
+ {
+  "id": "summary-matematica-trigonometria-no-triangulo-retangulo",
+  "kind": "trig-ramp",
+  "title": "Rampa: seno, cosseno e tangente"
+ },
+ {
+  "id": "summary-matematica-relacoes-trigonometricas-em-poligonos",
+  "kind": "law-cosines",
+  "title": "Lei dos cossenos"
+ },
+ {
+  "id": "summary-matematica-a-trigonometria-dos-numeros-reais",
+  "kind": "unit-circle",
+  "title": "Círculo trigonométrico"
+ },
+ {
+  "id": "summary-matematica-outras-razoes-trigonometricas",
+  "kind": "tangent",
+  "title": "Tangente, secante e cotangente"
+ },
+ {
+  "id": "summary-matematica-a-relacao-fundamental-da-trigonometria",
+  "kind": "fundamental",
+  "title": "sen² + cos² = 1"
+ },
+ {
+  "id": "summary-matematica-transformacoes-trigonometricas",
+  "kind": "angle-sum",
+  "title": "Soma de arcos"
+ },
+ {
+  "id": "summary-matematica-funcoes-trigonometricas",
+  "kind": "sine-wave",
+  "title": "Do círculo à senoide"
+ },
+ {
+  "id": "summary-matematica-o-universo-tridimensional",
+  "kind": "space-point",
+  "title": "Coordenadas no espaço"
+ },
+ {
+  "id": "summary-matematica-introducao-a-geometria-analitica",
+  "kind": "distance",
+  "title": "Distância entre dois pontos"
+ },
+ {
+  "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+  "kind": "circle-eq",
+  "title": "Circunferência: mesma distância ao centro"
+ },
+ {
+  "id": "summary-matematica-estudo-analitico-da-reta",
+  "kind": "line-eq",
+  "title": "Coeficiente angular"
+ },
+ {
+  "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+  "kind": "two-lines",
+  "title": "Paralelas, concorrentes, perpendiculares"
+ },
+ {
+  "id": "summary-matematica-distancia-entre-um-ponto-e-uma-reta",
+  "kind": "point-line",
+  "title": "Distância é o segmento perpendicular"
+ },
+ {
+  "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+  "kind": "line-circle",
+  "title": "Secante, tangente ou exterior"
+ },
+ {
+  "id": "summary-matematica-introducao-ao-estudo-analitico-das-conicas",
+  "kind": "conics",
+  "title": "Cônicas: cortes do cone"
+ },
+ {
+  "id": "summary-matematica-representacao-geometrica-de-inequacoes",
+  "kind": "half-plane",
+  "title": "Inequação é um semiplano"
+ },
+ {
+  "id": "summary-matematica-a-geometria-dos-numeros-complexos",
+  "kind": "complex-rotation",
+  "title": "Multiplicar por i gira 90°"
+ },
+ {
+  "id": "summary-matematica-tecnicas-algebricas",
+  "kind": "binomial",
+  "title": "(a + b)² e (a + b)³ em blocos"
+ },
+ {
+  "id": "summary-matematica-igualdades",
+  "kind": "balance",
+  "title": "Equação como balança"
+ },
+ {
+  "id": "summary-matematica-desigualdades",
+  "kind": "inequality",
+  "title": "Inequação como balança"
+ },
+ {
+  "id": "summary-matematica-modelagem-algebrica-de-problemas-i",
+  "kind": "linear-model",
+  "title": "Tanque enchendo"
+ },
+ {
+  "id": "summary-matematica-equacoes-do-2-grau",
+  "kind": "complete-square",
+  "title": "Completar o quadrado"
+ },
+ {
+  "id": "summary-matematica-modelagem-algebrica-de-problemas-ii",
+  "kind": "max-area",
+  "title": "Cercado de perímetro fixo"
+ },
+ {
+  "id": "summary-matematica-introducao-as-funcoes",
+  "kind": "function-map",
+  "title": "Função: cada entrada, uma saída"
+ },
+ {
+  "id": "summary-matematica-transformacoes-em-graficos-de-funcoes",
+  "kind": "graph-transform",
+  "title": "Transformar o gráfico"
+ },
+ {
+  "id": "summary-matematica-composicao-de-funcoes",
+  "kind": "composition",
+  "title": "g ∘ f: aplicar f e depois g"
+ },
+ {
+  "id": "summary-matematica-inversao-de-funcoes",
+  "kind": "inverse",
+  "title": "f e f⁻¹: espelho em y = x"
+ },
+ {
+  "id": "summary-matematica-funcoes-bijetoras",
+  "kind": "bijection",
+  "title": "Injetora, sobrejetora, bijetora"
+ },
+ {
+  "id": "summary-matematica-funcao-constante-e-funcao-afim",
+  "kind": "affine",
+  "title": "Função afim"
+ },
+ {
+  "id": "summary-matematica-funcao-quadratica",
+  "kind": "quadratic",
+  "title": "Parábola e vértice"
+ },
+ {
+  "id": "summary-matematica-estudo-do-sinal-de-funcoes",
+  "kind": "sign",
+  "title": "Onde f é positiva"
+ },
+ {
+  "id": "summary-matematica-introducao-ao-modelo-exponencial",
+  "kind": "exponential",
+  "title": "Crescimento por fator"
+ },
+ {
+  "id": "summary-matematica-introducao-aos-logaritmos",
+  "kind": "log",
+  "title": "Logaritmo: o expoente procurado"
+ },
+ {
+  "id": "summary-matematica-equacoes-e-funcoes-logaritmicas",
+  "kind": "log-exp",
+  "title": "Exponencial e logaritmo"
+ },
+ {
+  "id": "summary-matematica-modelagem-exponencial-de-problemas",
+  "kind": "decay",
+  "title": "Meia-vida"
+ },
+ {
+  "id": "summary-matematica-modulo-de-um-numero-real",
+  "kind": "absolute",
+  "title": "Módulo é distância"
+ },
+ {
+  "id": "summary-matematica-numeros-complexos",
+  "kind": "complex-polar",
+  "title": "Módulo e argumento"
+ },
+ {
+  "id": "summary-matematica-polinomios",
+  "kind": "polynomial",
+  "title": "Raízes de um polinômio"
+ },
+ {
+  "id": "summary-matematica-equacoes-polinomiais",
+  "kind": "girard",
+  "title": "Relações de Girard"
+ },
+ {
+  "id": "mat-probabilidade-contagem",
+  "kind": "dice",
+  "title": "Dois dados: 36 resultados"
+ }
+]

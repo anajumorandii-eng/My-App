@@ -531,3 +531,7 @@ Fila validada da proposta: 164 tratados, 134 pendentes e 315 preservados, manten
 ## 11/10 — Lote ciências (56) e 3D integrado sem botão
 
 Base `349ba97`, após #306. A Ana Júlia pediu o 3D integrado de forma imersiva, sem botão de abrir. Todos os modelos espaciais existentes passam a abrir junto com a cena, e os 46 capítulos de Física, 9 de Química e COP30 recebem modelo espacial próprio. [Registro e capturas](lote-ciencias-56-2026-10-11/README.md). Restam 427 capítulos a confrontar; não repetir estes 56. Revisão editorial e pedagógica pendente.
+
+## 11/10 — Lote Matemática (78)
+
+Após #308. Os 78 capítulos de Matemática a confrontar recebem modelo 3D no palco comum, com movimento e interação. [Registro](lote-matematica-78-2026-10-11/README.md). Restam 349; não repetir Matemática.
