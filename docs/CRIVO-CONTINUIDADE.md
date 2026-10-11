@@ -535,3 +535,7 @@ Base `349ba97`, após #306. A Ana Júlia pediu o 3D integrado de forma imersiva,
 ## 11/10 — Lote Matemática (78)
 
 Após #308. Os 78 capítulos de Matemática a confrontar recebem modelo 3D no palco comum, com movimento e interação. [Registro](lote-matematica-78-2026-10-11/README.md). Restam 349; não repetir Matemática.
+
+## 11/10 — Lote Biologia e Geografia (88)
+
+Após #309. 43 capítulos de Biologia e 45 de Geografia recebem modelo 3D no palco comum. Geografia humana usa modelos conceituais com valores fictícios declarados; temas sensíveis em linha do tempo factual. [Registro](lote-biologia-geografia-88-2026-10-11/README.md). Não repetir estes 88.
