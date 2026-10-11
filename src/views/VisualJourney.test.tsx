@@ -23,6 +23,13 @@ const sceneOnlySummary = interactiveSummaries.find(
 vi.mock('../components/AiText', () => ({ AiText: ({ text }: { text: string }) => <div>{text}</div> }));
 
 describe('Percurso ligado ao conteúdo', () => {
+  it('sincroniza a leitura com a etapa escolhida fora do percurso', async () => {
+    const summary = sceneOnlySummary;
+    const view = render(<VisualJourney summary={summary} initialIndex={0} onPractice={() => {}} />);
+    view.rerender(<VisualJourney summary={summary} initialIndex={1} onPractice={() => {}} />);
+    expect(within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button')[1]).toHaveAttribute('aria-current', 'step');
+    expect(await screen.findByText(contentNode(summary.sections[1].content))).toBeInTheDocument();
+  });
   it('mantém a leitura guiada ao trocar de etapa, sem montar outro artefato', () => {
     const summary = sceneOnlySummary;
     render(<VisualJourney summary={summary} onPractice={() => {}} />);

@@ -1,0 +1,101 @@
+{
+  "chapters": 613,
+  "subjects": 14,
+  "sharedSpatialChapters": 588,
+  "dedicatedSpatialChapters": 25,
+  "chromiumCatalogWidths": [
+    1440,
+    834,
+    390,
+    360
+  ],
+  "chromiumCatalogFailures": 0,
+  "vitest": {
+    "files": 14,
+    "passed": 640,
+    "failed": 0
+  },
+  "nodeScientificTests": {
+    "passed": 60,
+    "failed": 0
+  },
+  "typescript": "passed",
+  "productionBuild": "passed",
+  "buildNotes": [
+    "Existing chunk size warnings and mixed static/dynamic imports"
+  ],
+  "ipadValidation": "WebKit emulation; physical device not tested",
+  "skills": [
+    "Design de Interfaces/accessibility",
+    "Design & Motion Kit/awesome-design-md",
+    "Qualidade/verification-before-completion",
+    "Cloud environment/cloud-environment-runtime"
+  ],
+  "designReference": "Notion hierarchy and readability adapted to the existing CRIVO visual system",
+  "chromiumProfiles": [
+    {
+      "profile": "desktop",
+      "width": 1440,
+      "height": 1000,
+      "errors": 0,
+      "overflow": false
+    },
+    {
+      "profile": "ipad",
+      "width": 834,
+      "height": 1112,
+      "errors": 0,
+      "overflow": false
+    },
+    {
+      "profile": "mobile",
+      "width": 390,
+      "height": 844,
+      "errors": 0,
+      "overflow": false
+    },
+    {
+      "profile": "small",
+      "width": 360,
+      "height": 800,
+      "errors": 0,
+      "overflow": false
+    }
+  ],
+  "webkitProfiles": [
+    {
+      "profile": "webkit-ipad",
+      "width": 834,
+      "height": 1112,
+      "errors": 0,
+      "overflow": false
+    },
+    {
+      "profile": "webkit-ipad-landscape",
+      "width": 1194,
+      "height": 834,
+      "errors": 0,
+      "overflow": false
+    },
+    {
+      "profile": "webkit-mobile",
+      "width": 390,
+      "height": 844,
+      "errors": 0,
+      "overflow": false
+    }
+  ],
+  "axe": {
+    "violations": 0,
+    "widths": [
+      1440,
+      834,
+      390
+    ],
+    "contrastIncomplete": true,
+    "tokenContrastRange": [
+      5.01,
+      14.98
+    ]
+  }
+}

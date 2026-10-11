@@ -1,0 +1,38 @@
+[
+  {
+    "role": "claro:texto",
+    "foreground": "#29251f",
+    "background": "#fffdf8",
+    "ratio": 14.98
+  },
+  {
+    "role": "claro:legenda",
+    "foreground": "#74695d",
+    "background": "#faf7f0",
+    "ratio": 5.01
+  },
+  {
+    "role": "claro:a\u00e7\u00e3o",
+    "foreground": "#fffdf8",
+    "background": "#852636",
+    "ratio": 8.87
+  },
+  {
+    "role": "escuro:texto",
+    "foreground": "#f5eddf",
+    "background": "#272c28",
+    "ratio": 12.23
+  },
+  {
+    "role": "escuro:legenda",
+    "foreground": "#c0b6a5",
+    "background": "#202421",
+    "ratio": 7.84
+  },
+  {
+    "role": "escuro:a\u00e7\u00e3o",
+    "foreground": "#272c28",
+    "background": "#e695a5",
+    "ratio": 6.23
+  }
+]

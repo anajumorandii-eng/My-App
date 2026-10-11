@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { AiText } from '../components/AiText';
 import { MOTION_DURATION, MOTION_EASE } from '../design-system/motion/tokens';
@@ -16,11 +16,12 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
   const [index, setIndex] = useState(initialIndex);
   const [direction, setDirection] = useState(1);
   const reduced = useReducedMotion();
+  useEffect(() => { setIndex(Math.max(0, Math.min(initialIndex, summary.sections.length - 1))); }, [initialIndex, summary.sections.length]);
   const section = summary.sections[index];
   if (!section) return null;
   const go = (next: number) => { setDirection(next > index ? 1 : -1); setIndex(next); onStepChange?.(next); };
   return (
-    <section className="vs-journey" aria-label="Percurso do capítulo" data-subject={summary.subject}>
+    <section id="visual-chapter-reading" tabIndex={-1} className="vs-journey" aria-label="Percurso do capítulo" data-subject={summary.subject}>
       <header className="vs-journey-heading">
         <div><span className="vs-board-kicker">{summary.subject} · {summary.topic}</span><h2>{summary.title}</h2></div>
         <span className="vs-journey-count">{index + 1} / {summary.sections.length}</span>

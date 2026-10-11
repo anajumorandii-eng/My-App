@@ -24,6 +24,7 @@ interface VisualArtifactProps {
   mode: StudyMode;
   activeIndex: number;
   onSelectStep: (index: number) => void;
+  onPractice?: () => void;
 }
 
 /**
@@ -36,7 +37,7 @@ interface VisualArtifactProps {
  */
 export function VisualArtifact({
   summary, representation, map, states, selectedId, onSelect, hiddenEdgeIds,
-  mode, activeIndex, onSelectStep,
+  mode, activeIndex, onSelectStep, onPractice,
 }: VisualArtifactProps) {
   const Board = representation === 'board'
     ? findBoard(summary)?.Component ?? null
@@ -58,6 +59,18 @@ export function VisualArtifact({
         <HumanitiesConcepts map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }} />}
       </>}
       </ChapterSceneFrame>
+      {mode === 'explorar' && <section className="vs-scene-bridge" aria-label="Da cena à compreensão">
+        <div><small>RELACIONE COM O CAPÍTULO</small><h3>{summary.sections[activeIndex]?.title ?? summary.title}</h3>
+          <p>{map.recallPrompt}</p></div>
+        <div className="vs-scene-bridge-actions">
+          <button type="button" onClick={() => {
+            const reading = document.getElementById('visual-chapter-reading');
+            reading?.scrollIntoView({ block: 'start' }); reading?.focus({ preventScroll: true });
+          }}>Entender esta etapa</button>
+          {onPractice && <button type="button" onClick={onPractice}>Responder ao desafio</button>}
+        </div>
+      </section>}
+
     </div>
   );
 }
