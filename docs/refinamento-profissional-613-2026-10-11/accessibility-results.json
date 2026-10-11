@@ -1,0 +1,35 @@
+[
+  {
+    "width": 1440,
+    "theme": "light",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 15
+      }
+    ]
+  },
+  {
+    "width": 834,
+    "theme": "dark",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 16
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "theme": "light",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "nodes": 23
+      }
+    ]
+  }
+]

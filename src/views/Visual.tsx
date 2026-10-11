@@ -329,6 +329,8 @@ export default function Visual() {
   const selectNode = (nodeId: string) => {
     selectionTriggerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     setSelectedNode(nodeId);
+    const step = map?.nodes.findIndex(node => node.id === nodeId) ?? -1;
+    if (step >= 0) setJourneyStep(step);
   };
 
   const closeInspector = () => {
@@ -545,6 +547,7 @@ export default function Visual() {
                   mode={mode}
                   activeIndex={journeyStep}
                   onSelectStep={setJourneyStep}
+                  onPractice={() => changeMode('testar')}
                 />
               </motion.div>
             </AnimatePresence>

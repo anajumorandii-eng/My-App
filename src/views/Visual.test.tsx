@@ -76,6 +76,8 @@ describe('Visual aprovado', () => {
     await user.click(button);
     expect(button).toHaveAttribute('aria-pressed', 'true');
     expect(container.querySelector('.vs-inspector')).toHaveTextContent(chapter.sections[1].title);
+    expect(within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button')[1]).toHaveAttribute('aria-current', 'step');
+    expect(screen.getByRole('region', { name: 'Da cena à compreensão' })).toHaveTextContent(chapter.sections[1].title);
     expect(screen.queryByRole('dialog', { name: chapter.title })).toBeNull();
     expect(update).not.toHaveBeenCalled();
     await user.click(screen.getByRole('tab', { name: 'Testar' }));

@@ -74,3 +74,20 @@
 @media(min-width:900px) {
   .vs-chapter-scene--comparison[data-chapter-subject="Biologia"] .qf-figure { width: min(100%,820px); justify-self: center; }
 }
+
+.vs-scene-bridge { display: flex; gap: 20px; align-items: center; justify-content: space-between; margin: 24px 0; padding: 20px; border: 1px solid var(--vs-line); border-radius: 16px; color: var(--vs-ink); background: var(--vs-paper-strong); }
+.vs-scene-bridge > div { min-width: 0; }
+.vs-scene-bridge small { font: 600 10px/1.5 Inter,system-ui,sans-serif; letter-spacing: .1em; color: var(--vs-burgundy); }
+.vs-scene-bridge h3 { margin: 8px 0; font: 500 23px/1.25 Newsreader,Georgia,serif; }
+.vs-scene-bridge p { font-size: 14px; line-height: 1.6; max-width: 65ch; overflow-wrap: anywhere; }
+.vs-scene-bridge-actions { display: flex; flex-direction: column; gap: 8px; flex: 0 0 auto; }
+.vs-scene-bridge button { min-height: 44px; padding: 10px 16px; border: 1px solid var(--vs-line); border-radius: 8px; background: var(--vs-paper); color: var(--vs-ink); font-size: 13px; }
+.vs-scene-bridge button:last-child { color: var(--vs-paper-strong); background: var(--vs-burgundy); border-color: var(--vs-burgundy); }
+.vs-scene-bridge button:focus-visible, #visual-chapter-reading:focus-visible { outline: 3px solid var(--vs-burgundy); outline-offset: 3px; }
+#visual-chapter-reading { scroll-margin-top: 100px; }
+@media(max-width:700px) { .vs-scene-bridge { flex-direction: column; align-items: stretch; padding: 16px; } .vs-scene-bridge-actions { flex-direction: row; flex-wrap: wrap; } .vs-scene-bridge button { flex: 1 1 160px; } }
+
+/* Um conteúdo de largura intrínseca não deve ampliar a coluna inteira. */
+.vs-main { grid-template-columns: minmax(0, 1fr); }
+.vs-main > div, .vs-journey-heading > div, .vs-board-head, .vs-board-body, .vs-concept-card { min-width: 0; }
+.vs-journey-heading h2, .vs-board-head h2, .vs-concept-card strong { overflow-wrap: anywhere; }
