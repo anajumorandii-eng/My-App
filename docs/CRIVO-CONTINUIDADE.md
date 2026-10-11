@@ -1,5 +1,11 @@
 # CRIVO — continuidade operacional
 
+## Continuidade espacial — 24 capítulos de Biologia, 2026-10-10
+
+A PR #304 foi integrada em `1e96015b`, com os dois checks verdes na ponta `9016bd38`. Base desta rodada: `b09428b9`. São 24 suplementos de Biologia com objetos XYZ específicos, câmera manipulável e percursos finitos, seguindo o Design & Motion Kit. [Modelos, lastro, evidências e limites](lote-biologia-24-2026-10-10/README.md).
+
+A continuidade espacial recente passa a 109/613 capítulos; 504 ainda a confrontar com seus mecanismos existentes. Estados editoriais preservados, sem promover aprovação formal ou declarar revisão pedagógica integral. O lote inclui recortes, não modelos completos de cada capítulo; continuar por IDs restantes sem reaplicar PRs integradas.
+
 ## Continuidade espacial — 24 capítulos de Química, 2026-10-10
 
 A PR #303 foi integrada em `1e8c0849`, com os dois checks verdes na ponta `93bc37fe`. Base desta rodada: `c2aba0a5`. São 24 suplementos de Química com objetos XYZ manipuláveis e relações quantitativas, mantendo os instrumentos atuais e o padrão Design & Motion Kit. [Modelos, lastro, evidências e limites](lote-quimica-24-2026-10-10/README.md).
