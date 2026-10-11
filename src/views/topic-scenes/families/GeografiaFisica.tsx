@@ -34,7 +34,6 @@ const ZONE = {
 
 export function EarthSeasons({ active }: Scene) {
   const p = usePaced();
-  const [spatial, setSpatial] = useState(false);
   const tilt = 23.5;
   const earth = (cx: number, sunRight: boolean, key: string, illumination?: number[]) => <g key={key}>
     <circle cx={cx} cy="196" r="24" className="gf-ocean" />
@@ -94,7 +93,7 @@ export function EarthSeasons({ active }: Scene) {
     </motion.g>
     <text x="30" y="336" className="gf-foot-light">A distância ao Sol varia pouco (periélio e afélio); o que muda é a inclinação dos raios.</text>
   </g>
-  </svg><div className="vs-science-choices"><button type="button" aria-expanded={spatial} onClick={() => setSpatial(open => !open)}>{spatial ? 'Recolher estações 3D' : 'Explorar estações 3D'}</button></div>{spatial && <EarthSeasonsView />}</>;
+  </svg><EarthSeasonsView /></>;
 }
 
 export function ReliefProfile({ active }: Scene) {

@@ -70,6 +70,37 @@ export function physicsSpatialDrawing(kind:PhysicsSpatialKind,value:number,time:
     arrow([-45,-20+dy,0],[-45,-20+dy+m.tension*.7,0],'sum');arrow([45,-20-dy,0],[45,-20-dy-value*7,0]);
     reading=`m₁ = 2 kg; m₂ = ${fmt(value)} kg; a₂ (para baixo) = ${fmt(m.acceleration)} m/s²; T = ${fmt(m.tension)} N; Δy₂ = ${fmt(m.displacement)} m; t = ${fmt(.5*time)} s.`;
     legend='Vinho: peso de m₂ · azul: tração em m₁; fio ideal';
+  } else if(kind==='gas-state'||kind==='gas-work'||kind==='gas-law') {
+    // Os três capítulos usam o mesmo gás ideal, mas cada um destaca a grandeza que ensina:
+    // a auditoria de 11/10/2026 achou os quatro capítulos de gases com o mesmo desenho e a mesma leitura.
+    const process=(choice||'isotherm') as GasProcess,ratio=1+(value-1)*time,m=gasState(process,ratio),bottom=-60,top=bottom+50*m.volume,cx=kind==='gas-work'?-45:0;
+    const label=(point:SpatialPoint,text:string)=>labels.push({point,text});
+    const shift=(p:SpatialPoint):SpatialPoint=>[p[0]+cx,p[1],p[2]];
+    line(ring(30,bottom).map(shift),'body',{closed:true});line(ring(30,top).map(shift),'signal',{closed:true});
+    for(const a of [0,Math.PI/2,Math.PI,1.5*Math.PI])line([shift([30*Math.cos(a),bottom,30*Math.sin(a)]),shift([30*Math.cos(a),bottom+100,30*Math.sin(a)])],'reference');
+    line([shift([0,top,0]),shift([0,top+22,0])],'signal');
+    if(kind==='gas-state'){
+      const jitter=Math.sqrt(m.temperature/300);
+      for(let i=0;i<14;i++){const a=i*2.4+time*9*jitter,r=8+((i*7)%20),h=bottom+4+((i*37)%100)/100*(top-bottom-8);dot([r*Math.cos(a),h+2*Math.sin(a*1.7)*jitter,r*Math.sin(a)],'sum',3.2);}
+      reading=`n fixo: pV/T = ${fmt(m.pressure*m.volume/m.temperature*3)} constante. V = ${fmt(m.volume)} L, p = ${fmt(m.pressure)} kPa, T = ${fmt(m.temperature)} K. Partículas mais agitadas ⇔ T maior.`;
+      legend='Azul: partículas do gás · vinho: êmbolo';
+    } else if(kind==='gas-work'){
+      const vx=(v:number)=>10+(v-.5)*50,py=(p:number)=>-60+p*.45;
+      const curve:SpatialPoint[]=Array.from({length:21},(_,i)=>{const r=1+(ratio-1)*i/20,st=gasState(process,r);return [vx(st.volume),py(st.pressure),0];});
+      line([[vx(.5),-60,0],[vx(2.1),-60,0]],'reference',{arrow:true});line([[vx(.5),-60,0],[vx(.5),40,0]],'reference',{arrow:true});
+      if(Math.abs(ratio-1)>1e-6&&process!=='isochor')line([...curve,[curve[curve.length-1][0],-60,0],[curve[0][0],-60,0]],'sum',{closed:true});
+      line(curve,'signal');label([vx(2.1),-72,0],'V');label([vx(.5)-8,48,0],'p');
+      reading=`W = área sob p×V = ${fmt(m.work)} J. ${process==='isochor'?'Isocórica: sem variação de volume, W = 0.':m.work>=0?'Expansão: o gás realiza trabalho.':'Compressão: trabalho sobre o gás.'}`;
+      legend='Azul: área = trabalho · vinho: caminho do processo';
+    } else {
+      const q=m.heat/10,w=m.work/10,u=m.deltaU/10;
+      if(Math.abs(q)>.05)arrow(q>0?[0,bottom-38,0]:[0,bottom-6,0],q>0?[0,bottom-38+Math.min(30,Math.abs(q)*4),0]:[0,bottom-6-Math.min(30,Math.abs(q)*4),0],'signal');
+      if(Math.abs(w)>.05)arrow([0,top+24,0],[0,top+24+Math.min(30,Math.abs(w)*4)*Math.sign(w),0],'sum');
+      box([55,bottom+50,0],[10,100,10]);line([[55,bottom,0],[55,bottom+50+Math.max(-48,Math.min(48,u*5)),0]],'signal');
+      label([0,bottom-50,0],'Q');label([0,top+60,0],'W');label([55,bottom+110,0],'ΔU');
+      reading=`Q = ${fmt(m.heat)} J = ΔU (${fmt(m.deltaU)} J) + W (${fmt(m.work)} J). ${process==='adiabat'?'Adiabática: Q = 0, W sai da energia interna.':process==='isotherm'?'Isotérmica: ΔU = 0, todo Q vira W.':''}`;
+      legend='Vinho: calor e energia interna · azul: trabalho';
+    }
   } else if(kind==='gas') {
     const ratio=1+(value-1)*time,m=gasState(choice as GasProcess,ratio),bottom=-70,top=bottom+60*m.volume;
     line(ring(36,bottom));line(ring(36,60),'reference',{dashed:true});line(ring(36,top),'signal');
