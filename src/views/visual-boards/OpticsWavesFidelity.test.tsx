@@ -51,9 +51,9 @@ describe.each([false, true])('óptica estática (movimento reduzido=%s)', reduce
 
 it('declara os três eixos e usa a mesma fase para E e B na perspectiva', () => {
   const view = render(<WaveMechanism kind="electromagnetic" />);
-  expect(screen.getByText('y · E')).toBeInTheDocument();
-  expect(screen.getByText('z · B')).toBeInTheDocument();
-  expect(screen.getByText('x · propagação')).toBeInTheDocument();
+  expect(screen.getAllByText('y · E')[0]).toBeInTheDocument();
+  expect(screen.getAllByText('z · B')[0]).toBeInTheDocument();
+  expect(screen.getAllByText('x · propagação')[0]).toBeInTheDocument();
   expect(screen.getAllByText(/perspectiva/).length).toBeGreaterThan(0);
   const check = () => {
     const samples = Array.from(view.container.querySelectorAll('[data-em-sample]'));
@@ -77,7 +77,7 @@ it('liga potência, área esférica, intensidade e curva de decibéis à distân
   const summary = interactiveSummaries.find(item => item.id === 'summary-fisica-intensidade-sonora')!;
   const view = render(<Component map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={vi.fn()} hiddenEdgeIds={[]} mode="explorar" />);
   for (const r of [2, 1, 8]) {
-    fireEvent.change(screen.getByRole('slider'), { target: { value: String(r) } });
+    fireEvent.change(screen.getAllByRole('slider')[0], { target: { value: String(r) } });
     expect(screen.getByText('P = 8 W')).toBeInTheDocument();
     expect(screen.getByText(`r = ${r} m`)).toBeInTheDocument();
     const surface = view.container.querySelector('[data-sound-surface]')!;

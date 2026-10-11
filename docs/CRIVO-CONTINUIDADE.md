@@ -527,3 +527,7 @@ O PR #259 foi integrado em `abba293c6c671f7b21bf1b34d536300fa28ac9d3`. A branch 
 Chromium: 14 configurações, 2.770 estados, 2.520 estados SVG e 78 capturas. Três configurações com falha de prazo do runner foram repetidas integralmente em execução serial; a evidência usa a última configuração aprovada e conserva a rodada inicial. A situação final de TypeScript, build, matrizes e suíte geral está no README da entrega.
 
 Fila validada da proposta: 164 tratados, 134 pendentes e 315 preservados, mantendo 613 IDs e sete lotes. Restam 114 aprofundamentos editoriais; 496 registros estão na revisão 2 e dois na revisão 3. O próximo lote é LG3/Literatura (37). Confirmar a integração da Entrega E e o delta de main antes de iniciar, sem repetir Gramática. Publicação em branch/PR autorizada; nenhum merge automático. [Retomada na nuvem](visual-integral-2026-10-05/entrega-e/RETOMADA.md).
+
+## 11/10 — Lote ciências (56) e 3D integrado sem botão
+
+Base `349ba97`, após #306. A Ana Júlia pediu o 3D integrado de forma imersiva, sem botão de abrir. Todos os modelos espaciais existentes passam a abrir junto com a cena, e os 46 capítulos de Física, 9 de Química e COP30 recebem modelo espacial próprio. [Registro e capturas](lote-ciencias-56-2026-10-11/README.md). Restam 427 capítulos a confrontar; não repetir estes 56. Revisão editorial e pedagógica pendente.

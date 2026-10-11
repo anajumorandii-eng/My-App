@@ -47,8 +47,7 @@ describe('exploração espacial por teclado', () => {
 
   it('a bicamada usa o mesmo modo e percurso da bomba, preservando a câmera', () => {
     render(<MembraneMechanism />);
-    fireEvent.click(screen.getByRole('button', { name: 'Explorar bicamada 3D' }));
-    const drawing = screen.getByRole('img');
+    const drawing = screen.getAllByRole('img')[1];
     fireEvent.keyDown(drawing, { key: 'ArrowRight' });
     fireEvent.click(screen.getByRole('button', { name: 'Bomba Na⁺/K⁺' }));
     fireEvent.change(screen.getByRole('slider', { name: 'Percurso na membrana' }), { target: { value: '1' } });
@@ -70,9 +69,8 @@ describe('exploração espacial por teclado', () => {
   it('a onda 3D conserva frequência, comprimento e posição do laboratório', () => {
     render(<WaveMechanism kind="electromagnetic" />);
     fireEvent.change(screen.getByRole('slider', { name: /Frequência relativa/ }), { target: { value: '3' } });
-    fireEvent.click(screen.getByRole('button', { name: 'Explorar campos 3D' }));
-    expect(screen.getByRole('img')).toHaveAccessibleName(/Frequência relativa 3, comprimento de onda 80/);
-    const drawing = screen.getByRole('img');
+    expect(screen.getAllByRole('img')[1]).toHaveAccessibleName(/Frequência relativa 3, comprimento de onda 80/);
+    const drawing = screen.getAllByRole('img')[1];
     const before = drawing.innerHTML;
     fireEvent.change(screen.getByRole('slider', { name: 'Fração de um período' }), { target: { value: '.25' } });
     expect(drawing.innerHTML).not.toBe(before);

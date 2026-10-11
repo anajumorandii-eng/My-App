@@ -14,7 +14,7 @@ it('distingue doação de par eletrônico de transferência de próton e mantém
   fireEvent.click(screen.getByRole('button',{name:'Equação iônica'}));
   expect(screen.getByRole('status')).toHaveTextContent('não os retira da solução');
   fireEvent.click(screen.getByRole('button',{name:'Reproduzir movimento'}));
-  expect(screen.getByRole('slider')).toHaveValue('1');
+  expect(screen.getAllByRole('slider')[0]).toHaveValue('1');
 });
 it('anula a vergência com índices iguais e troca o sinal com meio mais refringente',()=>{
   expect(lensPower(1,.2)).toBe(5);
@@ -32,12 +32,12 @@ it('soma vergências em vez de distâncias focais e representa sistema afocal',(
 it('preserva estequiometria e saldo eletrogênico da bomba sem exigir movimento',()=>{
   render(<MembraneMechanism />);
   fireEvent.click(screen.getByRole('button',{name:'Bomba Na⁺/K⁺'}));
-  expect(screen.getByRole('status')).toHaveTextContent('saldo de uma carga positiva para fora');
+  expect(screen.getAllByRole('status').some(s=>s.textContent?.includes('saldo de uma carga positiva para fora'))).toBe(true);
   fireEvent.click(screen.getByRole('button',{name:'Reproduzir movimento'}));
-  expect(screen.getByRole('slider')).toHaveValue('1');
+  expect(screen.getByRole('slider',{name:'Percurso na membrana'})).toHaveValue('1');
   fireEvent.click(screen.getByRole('button',{name:'Difusão facilitada'}));
-  expect(screen.getByRole('slider')).toHaveValue('0');
-  expect(screen.getByRole('status')).toHaveTextContent('sem consumo direto de ATP');
+  expect(screen.getByRole('slider',{name:'Percurso na membrana'})).toHaveValue('0');
+  expect(screen.getAllByRole('status').some(s=>s.textContent?.includes('sem consumo direto de ATP'))).toBe(true);
 });
 
 it('distingue plasmólise de equilíbrio isotônico e restaura o início ao mudar o meio',()=>{
@@ -45,9 +45,9 @@ it('distingue plasmólise de equilíbrio isotônico e restaura o início ao muda
   fireEvent.click(screen.getByRole('button',{name:'Hipertônico'}));
   expect(screen.getByRole('status')).toHaveTextContent('plasmólise');
   fireEvent.click(screen.getByRole('button',{name:'Reproduzir movimento'}));
-  expect(screen.getByRole('slider')).toHaveValue('1');
+  expect(screen.getAllByRole('slider')[0]).toHaveValue('1');
   fireEvent.click(screen.getByRole('button',{name:'Isotônico'}));
-  expect(screen.getByRole('slider')).toHaveValue('0');
+  expect(screen.getAllByRole('slider')[0]).toHaveValue('0');
   expect(screen.getByRole('status')).toHaveTextContent('trocas continuam');
 });
 

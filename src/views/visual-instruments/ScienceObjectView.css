@@ -53,3 +53,21 @@
   .vs-magnetic-spatial > svg { grid-column: 1; grid-row: 2/4; align-self: center; }
   .vs-magnetic-spatial-controls, .vs-magnetic-spatial > .vs-science-reading { grid-column: 2; }
 }
+
+/* Modelo espacial integrado à prancha (11/10/2026): a Ana Júlia recusou o 3D atrás de
+   um botão "Explorar". Ele agora abre junto com a cena, então precisa ler como palco do
+   capítulo — fundo contínuo e objeto grande — e não como cartão anexado no rodapé. */
+.vs-chapter-spatial-supplement { margin: 16px auto 0; }
+.vs-spatial-lab { position: relative; overflow: hidden; background:
+  radial-gradient(ellipse 70% 60% at 35% 45%, var(--vs-paper-strong) 0%, var(--vs-paper) 100%); }
+.vs-spatial-lab > svg.vs-science-object { max-width: 560px; filter: drop-shadow(0 10px 18px rgba(40, 28, 18, .12)); }
+@media(min-width:900px) {
+  .vs-spatial-lab { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 8px 32px; align-items: start; }
+  .vs-spatial-lab > header { grid-column: 1/-1; }
+  .vs-spatial-lab > svg.vs-science-object { grid-column: 1; grid-row: 2/span 12; align-self: center; }
+  .vs-spatial-lab > :not(header):not(svg) { grid-column: 2; }
+}
+@media(prefers-reduced-motion:no-preference) {
+  .vs-spatial-lab > svg.vs-science-object { animation: vs-spatial-enter .5s ease-out both; }
+  @keyframes vs-spatial-enter { from { opacity: 0; transform: translateY(8px) scale(.98); } to { opacity: 1; transform: none; } }
+}

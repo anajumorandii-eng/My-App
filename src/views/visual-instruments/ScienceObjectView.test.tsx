@@ -30,19 +30,17 @@ describe('objetos de Ciências com profundidade', () => {
   it('preserva a base entre pareamento e hélice, incluindo RNA e pontes de H', () => {
     const Component = biologyInstrument('nucleic-acids');
     render(<Component {...props('summary-biologia-acidos-nucleicos')} />);
-    fireEvent.change(screen.getByRole('slider'), { target: { value: '2' } });
-    fireEvent.click(screen.getByRole('button', { name: 'Dupla-hélice 3D' }));
-    expect(screen.getByRole('img').querySelectorAll('.vs-science-direction')).toHaveLength(4);
-    expect(Array.from(screen.getByRole('img').querySelectorAll('.vs-science-direction')).map(e => e.textContent)).toEqual(['3′', '5′', '5′', '3′']);
-    expect(screen.getByRole('img')).toHaveAccessibleName(/par destacado C–G, 3 pontes.*RNA transcrito: G/);
-    const name = screen.getByRole('img').getAttribute('aria-label');
-    const geometry = screen.getByRole('img').innerHTML;
+    fireEvent.change(screen.getAllByRole('slider')[0], { target: { value: '2' } });
+    expect(screen.getAllByRole('img')[1].querySelectorAll('.vs-science-direction')).toHaveLength(4);
+    expect(Array.from(screen.getAllByRole('img')[1].querySelectorAll('.vs-science-direction')).map(e => e.textContent)).toEqual(['3′', '5′', '5′', '3′']);
+    expect(screen.getAllByRole('img')[1]).toHaveAccessibleName(/par destacado C–G, 3 pontes.*RNA transcrito: G/);
+    const name = screen.getAllByRole('img')[1].getAttribute('aria-label');
+    const geometry = screen.getAllByRole('img')[1].innerHTML;
     fireEvent.click(screen.getByRole('button', { name: 'Girar +30°' }));
-    expect(screen.getByRole('img').innerHTML).not.toBe(geometry);
-    expect(screen.getByRole('img')).toHaveAccessibleName(name!);
-    fireEvent.click(screen.getByRole('button', { name: /^Pareamento$/ }));
-    expect(screen.getByRole('slider')).toHaveValue('2');
-    expect(screen.getByRole('img')).toHaveAccessibleName(/DNA complementar: G/);
+    expect(screen.getAllByRole('img')[1].innerHTML).not.toBe(geometry);
+    expect(screen.getAllByRole('img')[1]).toHaveAccessibleName(name!);
+    expect(screen.getAllByRole('slider')[0]).toHaveValue('2');
+    expect(screen.getAllByRole('img')[0]).toHaveAccessibleName(/DNA complementar: G/);
   });
 
   it('CO₂ conserva as duas ligações duplas sem transformar regiões de ligação em ligantes extras', () => {

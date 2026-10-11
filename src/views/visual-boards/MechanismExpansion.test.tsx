@@ -31,7 +31,7 @@ describe('expansão de mecanismos por capítulo', () => {
     const Component = board.Component;
     render(<Component map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={vi.fn()} hiddenEdgeIds={[]} mode="explorar" />);
     await act(async () => { await vi.dynamicImportSettled(); });
-    await waitFor(() => expect(screen.getByRole('img', { name: new RegExp(name) })).toBeInTheDocument());
+    await waitFor(() => expect(screen.getAllByRole('img', { name: new RegExp(name) })[0]).toBeInTheDocument());
     if (suffix === 'quimica-termoquimica-ii') {
       expect(screen.getAllByText('ΔG = ΔH − TΔS').length).toBeGreaterThan(0);
       expect(screen.getByText('ΔG = 0 · equilíbrio')).toBeInTheDocument();
