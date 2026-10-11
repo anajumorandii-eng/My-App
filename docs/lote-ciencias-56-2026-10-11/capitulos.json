@@ -1,0 +1,282 @@
+[
+ {
+  "id": "fis-termologia-calor",
+  "kind": "heat",
+  "title": "Calor: do quente para o frio"
+ },
+ {
+  "id": "atu-cop30-belem",
+  "kind": "greenhouse",
+  "title": "Gases de efeito estufa e balanço de energia"
+ },
+ {
+  "id": "summary-fisica-cinematica-escalar-conceitos-fundamentais",
+  "kind": "frames",
+  "title": "Mesmo movimento, referenciais diferentes"
+ },
+ {
+  "id": "summary-fisica-movimento-uniforme",
+  "kind": "uniform",
+  "title": "Deslocamentos iguais em tempos iguais"
+ },
+ {
+  "id": "summary-fisica-movimento-uniformemente-variado",
+  "kind": "accelerated",
+  "title": "Velocidade muda o mesmo tanto a cada segundo"
+ },
+ {
+  "id": "summary-fisica-as-leis-de-newton",
+  "kind": "newton",
+  "title": "Força resultante e aceleração"
+ },
+ {
+  "id": "summary-fisica-plano-inclinado",
+  "kind": "incline",
+  "title": "Rampa: componentes do peso"
+ },
+ {
+  "id": "summary-fisica-leis-da-gravitacao",
+  "kind": "gravity",
+  "title": "Inverso do quadrado da distância"
+ },
+ {
+  "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
+  "kind": "vertical",
+  "title": "Lançamento vertical"
+ },
+ {
+  "id": "summary-fisica-orbitas",
+  "kind": "orbit",
+  "title": "Órbita elíptica e segunda lei de Kepler"
+ },
+ {
+  "id": "summary-fisica-balistica",
+  "kind": "projectile",
+  "title": "Lançamento oblíquo"
+ },
+ {
+  "id": "summary-fisica-movimento-harmonico-simples-mhs",
+  "kind": "shm",
+  "title": "Massa e mola: MHS"
+ },
+ {
+  "id": "summary-fisica-impulso-e-quantidade-de-movimento",
+  "kind": "impulse",
+  "title": "Impulso muda a quantidade de movimento"
+ },
+ {
+  "id": "summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento",
+  "kind": "recoil",
+  "title": "Explosão: quantidade de movimento total nula"
+ },
+ {
+  "id": "summary-fisica-colisoes",
+  "kind": "collision",
+  "title": "Colisão frontal em trilho"
+ },
+ {
+  "id": "summary-fisica-trabalho-e-energia-teorema-da-energia-cinetica",
+  "kind": "kinetic-work",
+  "title": "Trabalho da resultante = ΔEc"
+ },
+ {
+  "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
+  "kind": "potential",
+  "title": "Trabalho do peso e energia potencial"
+ },
+ {
+  "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
+  "kind": "track",
+  "title": "Pista em U: energia conservada ou dissipada"
+ },
+ {
+  "id": "summary-fisica-potencia-maquina-e-rendimento",
+  "kind": "power",
+  "title": "Guindaste: potência útil e rendimento"
+ },
+ {
+  "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+  "kind": "plant",
+  "title": "Da energia primária à elétrica"
+ },
+ {
+  "id": "summary-fisica-equivalencia-massa-energia",
+  "kind": "mass-energy",
+  "title": "E = Δm·c²"
+ },
+ {
+  "id": "summary-fisica-estatica",
+  "kind": "lever",
+  "title": "Equilíbrio de momentos"
+ },
+ {
+  "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+  "kind": "expansion",
+  "title": "Dilatação linear, superficial e volumétrica"
+ },
+ {
+  "id": "summary-fisica-calor-sensivel-e-calor-latente",
+  "kind": "phase",
+  "title": "Gelo a −10 °C recebendo calor"
+ },
+ {
+  "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
+  "kind": "carnot",
+  "title": "Ciclo de Carnot entre duas fontes"
+ },
+ {
+  "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+  "kind": "charging",
+  "title": "Atrito, contato e indução"
+ },
+ {
+  "id": "summary-fisica-corrente-eletrica",
+  "kind": "current",
+  "title": "Carga atravessando uma seção"
+ },
+ {
+  "id": "summary-fisica-potencia-eletrica",
+  "kind": "electric-power",
+  "title": "Potência dissipada em um resistor"
+ },
+ {
+  "id": "summary-fisica-resistores",
+  "kind": "resistors",
+  "title": "Associação de resistores"
+ },
+ {
+  "id": "summary-fisica-medidores-eletricos",
+  "kind": "meters",
+  "title": "Amperímetro em série, voltímetro em paralelo"
+ },
+ {
+  "id": "summary-fisica-geradores",
+  "kind": "generator",
+  "title": "Gerador real: U = ε − r·i"
+ },
+ {
+  "id": "summary-fisica-receptores",
+  "kind": "receiver",
+  "title": "Receptor: U = ε′ + r′·i"
+ },
+ {
+  "id": "summary-fisica-circuitos-de-malha-unica",
+  "kind": "loop",
+  "title": "Malha única: lei de Pouillet"
+ },
+ {
+  "id": "summary-fisica-eletrodinamica-as-leis-de-kirchhoff",
+  "kind": "kirchhoff",
+  "title": "Nós e malhas"
+ },
+ {
+  "id": "summary-fisica-capacitores",
+  "kind": "capacitor",
+  "title": "Capacitor de placas paralelas"
+ },
+ {
+  "id": "summary-fisica-fundamentos-da-optica-geometrica",
+  "kind": "pinhole",
+  "title": "Câmara escura: propagação retilínea"
+ },
+ {
+  "id": "summary-fisica-reflexao-em-superficies-planas",
+  "kind": "plane-mirror",
+  "title": "Espelho plano: imagem simétrica"
+ },
+ {
+  "id": "summary-fisica-reflexao-em-superficies-esfericas",
+  "kind": "spherical-mirror",
+  "title": "Espelho côncavo e equação de Gauss"
+ },
+ {
+  "id": "summary-fisica-optica-da-visao",
+  "kind": "eye",
+  "title": "Olho: onde a imagem se forma"
+ },
+ {
+  "id": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas",
+  "kind": "telescope",
+  "title": "Duas lentes, dois instrumentos"
+ },
+ {
+  "id": "summary-fisica-conceitos-basicos",
+  "kind": "wave-types",
+  "title": "Onda transversal e longitudinal"
+ },
+ {
+  "id": "summary-fisica-equacao-fundamental-da-ondulatoria",
+  "kind": "wave-speed",
+  "title": "v = λ·f"
+ },
+ {
+  "id": "summary-fisica-ondulatoria-som-e-suas-propriedades",
+  "kind": "sound",
+  "title": "Som: compressões no ar"
+ },
+ {
+  "id": "summary-fisica-intensidade-sonora",
+  "kind": "intensity",
+  "title": "Esferas de mesma potência"
+ },
+ {
+  "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+  "kind": "wave-phenomena",
+  "title": "Difração, polarização e ressonância"
+ },
+ {
+  "id": "summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo",
+  "kind": "doppler",
+  "title": "Fonte em movimento: frentes de onda"
+ },
+ {
+  "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
+  "kind": "photoelectric",
+  "title": "Efeito fotoelétrico"
+ },
+ {
+  "id": "summary-quimica-quimica-ambiental",
+  "kind": "acid-rain",
+  "title": "Chuva ácida e calcário"
+ },
+ {
+  "id": "summary-quimica-combustiveis-fosseis",
+  "kind": "combustion",
+  "title": "Combustão completa do metano"
+ },
+ {
+  "id": "summary-quimica-reacoes-de-adicao",
+  "kind": "addition",
+  "title": "Adição de Br₂ ao eteno"
+ },
+ {
+  "id": "summary-quimica-acidos-graxos-e-esterificacao",
+  "kind": "esterification",
+  "title": "Esterificação de Fischer"
+ },
+ {
+  "id": "summary-quimica-transesterificacao-alcoolise",
+  "kind": "transesterification",
+  "title": "Triglicerídeo + metanol"
+ },
+ {
+  "id": "summary-quimica-acidez-e-basicidade-pka",
+  "kind": "pka",
+  "title": "pH × pKa: fração ionizada"
+ },
+ {
+  "id": "summary-quimica-equilibrios-ionicos",
+  "kind": "weak-acid",
+  "title": "Ionização de ácido fraco"
+ },
+ {
+  "id": "summary-quimica-equilibrios-ionicos-ii",
+  "kind": "solubility",
+  "title": "Produto de solubilidade e íon comum"
+ },
+ {
+  "id": "qui-equilibrio-acidificacao",
+  "kind": "equilibrium",
+  "title": "N₂O₄ ⇌ 2 NO₂: Q e K"
+ }
+]

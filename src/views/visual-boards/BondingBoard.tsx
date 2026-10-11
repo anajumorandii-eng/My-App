@@ -79,16 +79,15 @@ function BondScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
 
 export default function BondingBoard(props: BoardProps) {
   const par = boardPair(props);
-  const [spatial, setSpatial] = useState(false);
   const allotropy = props.map.summaryId === 'summary-quimica-ligacoes-quimicas-e-alotropia';
   return (
     <BoardShell
-      title={spatial ? 'Redes de carbono' : 'Iônica e covalente'}
-      subtitle={spatial ? 'O mesmo elemento forma estruturas e propriedades diferentes.' : 'Quem decide é a diferença de eletronegatividade, não a tabela.'}
-      condition={spatial ? { label: 'elemento', value: 'C' } : { label: 'critério', value: 'Δ E.N.' }}
+      title={'Iônica e covalente'}
+      subtitle={'Quem decide é a diferença de eletronegatividade, não a tabela.'}
+      condition={{ label: 'critério', value: 'Δ E.N.' }}
       ariaLabel="Prancha ilustrada de ligações químicas"
-      scene={<>{allotropy && <div className="vs-science-choices"><button type="button" aria-pressed={spatial} onClick={() => setSpatial(open => !open)}>{spatial ? 'Ver ligações iônica e molecular' : 'Explorar alotropia 3D'}</button></div>}{spatial && allotropy ? <CarbonAllotropyView /> : <BondScene emphasis={par.emphasis} />}</>}
-      sceneNotes={spatial ? { up: 'rede tridimensional', down: 'folhas hexagonais' } : { up: 'transfere ↑', down: '↓ compartilha' }}
+      scene={<><BondScene emphasis={par.emphasis} />{allotropy && <CarbonAllotropyView />}</>}
+      sceneNotes={{ up: 'transfere ↑', down: '↓ compartilha' }}
       emphasis={par.emphasis}
       left={{
         label: 'Ligação iônica',
