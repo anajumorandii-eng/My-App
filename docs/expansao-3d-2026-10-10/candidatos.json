@@ -8,7 +8,7 @@
       "subject": "Biologia",
       "topic": "Espécies Invasoras e Controle Biológico",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -16,7 +16,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-origem-da-vida-e-as-primeiras-celulas",
@@ -613,7 +614,7 @@
       "subject": "Física",
       "topic": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -621,7 +622,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
@@ -660,7 +662,7 @@
       "subject": "Física",
       "topic": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -668,7 +670,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
@@ -721,7 +724,7 @@
       "subject": "Física",
       "topic": "Indução Eletromagnética: Lei de Lenz",
       "reason": "Geometria do mecanismo físico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -729,7 +732,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
@@ -957,7 +961,7 @@
       "subject": "Geografia",
       "topic": "Sistema de Fusos Horários",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -965,14 +969,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-linguagem-cartografica",
       "subject": "Geografia",
       "topic": "Linguagem Cartográfica",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -980,14 +985,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-projecoes-cartograficas",
       "subject": "Geografia",
       "topic": "Projeções Cartográficas",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -995,14 +1001,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-cartografia-digital",
       "subject": "Geografia",
       "topic": "Cartografia Digital",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1010,14 +1017,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-representacoes-graficas-e-cartograficas",
       "subject": "Geografia",
       "topic": "Representações Gráficas e Cartográficas",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1025,14 +1033,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-dinamica-climatica",
       "subject": "Geografia",
       "topic": "Dinâmica Climática",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1040,14 +1049,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-clima-mundial",
       "subject": "Geografia",
       "topic": "Clima Mundial",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1055,14 +1065,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-geomorfologia-mundial",
       "subject": "Geografia",
       "topic": "Geomorfologia Mundial",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1070,14 +1081,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-biogeografia-mundial",
       "subject": "Geografia",
       "topic": "Biogeografia Mundial",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1085,14 +1097,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-agua-na-superficie-terrestre",
       "subject": "Geografia",
       "topic": "Água na Superfície Terrestre",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1100,14 +1113,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-geologia-e-geomorfologia",
       "subject": "Geografia",
       "topic": "Geologia e Geomorfologia",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1115,14 +1129,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-relevo-brasileiro",
       "subject": "Geografia",
       "topic": "Relevo Brasileiro",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1130,14 +1145,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-climatologia-do-brasil",
       "subject": "Geografia",
       "topic": "Climatologia do Brasil",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1145,14 +1161,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-biogeografia-do-brasil-i",
       "subject": "Geografia",
       "topic": "Biogeografia do Brasil I",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1160,14 +1177,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-biogeografia-do-brasil-ii",
       "subject": "Geografia",
       "topic": "Biogeografia do Brasil II",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1175,14 +1193,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-geografia-dominios-morfoclimaticos",
       "subject": "Geografia",
       "topic": "Domínios Morfoclimáticos",
       "reason": "Globo, relevo e circulação",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1190,7 +1209,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-matematica-prismas",
@@ -1350,7 +1370,7 @@
       "subject": "Química",
       "topic": "Química Inorgânica",
       "reason": "Geometria de átomos e moléculas",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -1358,7 +1378,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-espacial-21-2026-10-10/README.md"
     },
     {
       "id": "summary-quimica-introducao-a-quimica-organica",

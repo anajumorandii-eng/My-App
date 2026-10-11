@@ -1,0 +1,280 @@
+{
+  "base": "438cd45a2b4765ea8ccdccc0047971085743e9b8",
+  "source": "src/data/deepSummaryContent.json",
+  "source_sha256": "acfa9f883a2d6b1371eed67b9efbff5e29be713c717895adbeb40b6054c55e6b",
+  "chapters": [
+    {
+      "id": "summary-geografia-sistema-de-fusos-horarios",
+      "subject": "Geografia",
+      "topic": "Sistema de Fusos Horários",
+      "sections": [
+        "Da rotação ao horário",
+        "Método que evita troca de sinais",
+        "Viagem resolvida",
+        "Linha Internacional de Data",
+        "Pratique e confira"
+      ],
+      "sha256": "fa69baf0dc1e9fb93f18575e26435456f6475d6bab26819361dd3230afae55d7"
+    },
+    {
+      "id": "summary-geografia-linguagem-cartografica",
+      "subject": "Geografia",
+      "topic": "Linguagem Cartográfica",
+      "sections": [
+        "O mapa seleciona a realidade",
+        "Escala numérica e gráfica",
+        "Cálculo resolvido",
+        "Áreas e curvas de nível",
+        "Pratique e confira"
+      ],
+      "sha256": "a6d28ffebd358b779f19219314a5cf4bf040a637786981a3336b26fe81f97b1b"
+    },
+    {
+      "id": "summary-geografia-projecoes-cartograficas",
+      "subject": "Geografia",
+      "topic": "Projeções Cartográficas",
+      "sections": [
+        "Por que todo mapa distorce",
+        "Propriedades diferentes",
+        "Mercator e mapas equivalentes",
+        "Centro do mapa e interpretação política",
+        "Pratique e confira"
+      ],
+      "sha256": "0faac22d2cab0aaf9bc6501399b01385649e1f2ba4336f8a97e5fd7e6ba7e1d5"
+    },
+    {
+      "id": "summary-geografia-cartografia-digital",
+      "subject": "Geografia",
+      "topic": "Cartografia Digital",
+      "sections": [
+        "Novas tecnologias de mapeamento",
+        "Sistemas de Informação Geográfica",
+        "Usos e implicações",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "ea3d5e503367358b8da3ba0f82ee11ebd3c81b4442d91728c5c0aab2973c3ff4"
+    },
+    {
+      "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+      "subject": "Geografia",
+      "topic": "Representações Gráficas e Cartográficas",
+      "sections": [
+        "Elementos do mapa",
+        "Escala e generalização",
+        "Gráficos e anamorfoses",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "9d4f7fd486f5a44cced47e6ccce0da83a0196d5d6873cd3ca2021faf6a07aae1"
+    },
+    {
+      "id": "summary-geografia-dinamica-climatica",
+      "subject": "Geografia",
+      "topic": "Dinâmica Climática",
+      "sections": [
+        "Tempo e clima",
+        "Energia, pressão e circulação",
+        "Tipos de chuva",
+        "Climograma resolvido",
+        "Pratique e confira"
+      ],
+      "sha256": "dc1c1288a369955a1dc017d932e13cdaf88cc0cc8e1276e62f05b52d7330ad44"
+    },
+    {
+      "id": "summary-geografia-clima-mundial",
+      "subject": "Geografia",
+      "topic": "Clima Mundial",
+      "sections": [
+        "Fatores climáticos",
+        "Tipos climáticos",
+        "Circulação atmosférica",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "024804889b25c83dd5bdf1a1bfedd18adb96ca9d8032b8456b4918ebb475d6af"
+    },
+    {
+      "id": "summary-geografia-geomorfologia-mundial",
+      "subject": "Geografia",
+      "topic": "Geomorfologia Mundial",
+      "sections": [
+        "Estruturas geológicas",
+        "Agentes internos e externos",
+        "Tectônica de placas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "6f6c3de0b0fc82cbfb7b6e67bec8fa4c5363278a5a34f83881a183641a44bb50"
+    },
+    {
+      "id": "summary-geografia-biogeografia-mundial",
+      "subject": "Geografia",
+      "topic": "Biogeografia Mundial",
+      "sections": [
+        "Os grandes biomas",
+        "Adaptações",
+        "Pressões e conservação",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "ed0fbfd040bbb949a12858dfa7b6e45b349fa422ef6731f0a683569783585dc6"
+    },
+    {
+      "id": "summary-geografia-agua-na-superficie-terrestre",
+      "subject": "Geografia",
+      "topic": "Água na Superfície Terrestre",
+      "sections": [
+        "Distribuição da água",
+        "Bacias hidrográficas",
+        "Águas subterrâneas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "cfdf81bde3ecc5935647703d95877d44bf7a8aed6bf1de233b8f13f8ba574c48"
+    },
+    {
+      "id": "summary-geografia-geologia-e-geomorfologia",
+      "subject": "Geografia",
+      "topic": "Geologia e Geomorfologia",
+      "sections": [
+        "Estrutura da Terra e tempo geológico",
+        "Rochas e ciclo",
+        "Agentes modeladores",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "898afce87e4f3a69c1995e4030421d5711b13cc4a19db0374a49aa5893723c14"
+    },
+    {
+      "id": "summary-geografia-relevo-brasileiro",
+      "subject": "Geografia",
+      "topic": "Relevo Brasileiro",
+      "sections": [
+        "Estruturas e classificações",
+        "Principais unidades",
+        "Relevo e ocupação",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "4f7ea8385173f492fbfb36ecd23abe7ceacdfde20459312c206a71e407115291"
+    },
+    {
+      "id": "summary-geografia-climatologia-do-brasil",
+      "subject": "Geografia",
+      "topic": "Climatologia do Brasil",
+      "sections": [
+        "Fatores e massas de ar",
+        "Os tipos climáticos",
+        "Fenômenos e variabilidade",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "3f90ff55b9ac4e8579ca6c849a7cb57a73a0155acada298e9838d824c1765126"
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-i",
+      "subject": "Geografia",
+      "topic": "Biogeografia do Brasil I",
+      "sections": [
+        "Amazônia e Mata Atlântica",
+        "Cerrado e Caatinga",
+        "Pressões atuais",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "0fc4d4b08a35d9cc1e33ef2084e4839aec1d6dd1394daab99642193d626ec45e"
+    },
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-ii",
+      "subject": "Geografia",
+      "topic": "Biogeografia do Brasil II",
+      "sections": [
+        "Pantanal, Pampa e transições",
+        "Formações litorâneas",
+        "Conservação",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "53e3c99da26da8152a34b2dd924bddb85a931ead46189f6ad70c4b6c7f783bd8"
+    },
+    {
+      "id": "summary-geografia-dominios-morfoclimaticos",
+      "subject": "Geografia",
+      "topic": "Domínios Morfoclimáticos",
+      "sections": [
+        "A proposta de Ab'Sáber",
+        "Características de cada domínio",
+        "Faixas de transição",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "346057ab6e2f9bb27443503b9dfe4e0810f43664b8bbbe1648a8350f19810859"
+    },
+    {
+      "id": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
+      "subject": "Física",
+      "topic": "Mapeamento do Campo Elétrico: Linhas de Força e Superfícies Equipotenciais",
+      "sections": [
+        "Desenhar o invisível",
+        "Superfícies equipotenciais",
+        "Ler as figuras de prova",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "0f6668c2497d30fc9692e2f6b914b1f0995bcd4111164577293e5a123947d737"
+    },
+    {
+      "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+      "subject": "Física",
+      "topic": "Ímãs, Campo de Indução Magnético devido a Ímãs e Campo Magnético Terrestre",
+      "sections": [
+        "Polos que não se separam",
+        "Linhas de indução",
+        "O campo da Terra",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "0836a4eea6bf0a706998e2dcad4f15d05e707185224d0fbbd169e119d8d4bcf7"
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+      "subject": "Física",
+      "topic": "Indução Eletromagnética: Lei de Lenz",
+      "sections": [
+        "Campo variável cria corrente",
+        "A lei de Faraday e a de Lenz",
+        "Por que Lenz é conservação de energia",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "682a16226492ee56593599d70be6810ec5e98b663c914ba1321d7446c80df288"
+    },
+    {
+      "id": "bio-ecologia-invasoras-controle-biologico",
+      "subject": "Biologia",
+      "topic": "Espécies Invasoras e Controle Biológico",
+      "sections": [
+        "Por que uma espécie exótica se torna invasora",
+        "Impactos e exemplos",
+        "Controle biológico",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "0e57d726c55ad048b2cc987fdf5e40e52f955d96ba77eea78b94c2105199a972"
+    },
+    {
+      "id": "summary-quimica-quimica-inorganica",
+      "subject": "Química",
+      "topic": "Química Inorgânica",
+      "sections": [
+        "As quatro funções",
+        "Nomenclatura",
+        "Reações e óxidos",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "eaf8d00772a3c247cba96cd61b293d7b757e483d1a0dd9b19ffcf1b73abe90ff"
+    }
+  ]
+}
