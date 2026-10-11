@@ -17,7 +17,7 @@ export function SpatialLabFrame({ title, reading, note, children, controls }: {
     <input id={id + '-yaw'} type="range" min="0" max="360" value={camera.yaw} onChange={e => camera.setYaw(Number(e.target.value))} />
     <label className="vs-science-rotation" htmlFor={id + '-pitch'}>Inclinar a vista <output>{Math.round(camera.pitch)}°</output></label>
     <input id={id + '-pitch'} type="range" min="-50" max="65" value={camera.pitch} onChange={e => camera.setPitch(Number(e.target.value))} />
-    <div className="vs-science-choices"><button type="button" onClick={camera.reset}>Restaurar vista</button></div>
+    <div className="vs-science-choices"><button type="button" aria-pressed={camera.spinning} onClick={camera.toggleSpin}>{camera.spinning ? 'Pausar giro' : 'Girar o modelo'}</button><button type="button" onClick={camera.reset}>Restaurar vista</button></div>
     <p className="vs-science-reading" role="status" aria-label="Leitura do modelo espacial">{reading}</p>
     <p className="vs-science-caption">Arraste, toque ou use setas e Home para explorar. A câmera conserva os valores do modelo. {note}</p>
   </section>;

@@ -284,3 +284,12 @@
     word-break: normal;
   }
 }
+
+/* 3D e desenho anotado agora aparecem juntos (sem alternância): o anotado desce para baixo do
+   objeto em vez de dividir a mesma célula — dividindo, o 2D cobria o 3D. */
+@media (min-width: 900px) {
+  .crivo-visual--atlas .vs-solid-instrument>.vs-spatial-solid { grid-row: 1/span 10; }
+  .crivo-visual--atlas .vs-solid-instrument>.vs-plane { grid-row: 11/span 6; }
+  .crivo-visual--atlas .vs-nucleic-instrument>.vs-nucleic-object { grid-row: 1/span 6; }
+  .crivo-visual--atlas .vs-nucleic-instrument>.vs-plane { grid-column: 1; grid-row: 7/span 6; }
+}

@@ -24,6 +24,8 @@ export function scienceSpatialDrawing(kind:ScienceSpatialKind,value:number,time:
   const lerp=(a:SpatialPoint,b:SpatialPoint,k:number):SpatialPoint=>a.map((v,i)=>v+(b[i]-v)*k) as SpatialPoint;
   const ring=(r:number,center:SpatialPoint=[0,0,0],plane:'xz'|'xy'|'yz'='xz',role:SpatialTrace['role']='reference',n=48)=>line(Array.from({length:n+1},(_,i):SpatialPoint=>{const a=i*2*pi/n,c=r*Math.cos(a),s=r*Math.sin(a);return plane==='xz'?[center[0]+c,center[1],center[2]+s]:plane==='xy'?[center[0]+c,center[1]+s,center[2]]:[center[0],center[1]+c,center[2]+s];}),role);
   const sphere=(r:number,center:SpatialPoint,role:SpatialTrace['role']='reference')=>{ring(r,center,'xz',role,32);ring(r,center,'xy',role,32);ring(r,center,'yz',role,32);};
+  /** Corpo maciço (planeta, núcleo, esfera condutora): esfera sombreada com equador, não arame. */
+  const ball=(r:number,center:SpatialPoint,role:SpatialTrace['role']='body')=>{dot(center,role,r);line(Array.from({length:33},(_,i):SpatialPoint=>[center[0]+r*Math.cos(i*pi/16),center[1],center[2]+r*Math.sin(i*pi/16)]),'reference',{dashed:true});};
   const box=(c:SpatialPoint,s:SpatialPoint,role:SpatialTrace['role']='body')=>{
     const p=Array.from({length:8},(_,i):SpatialPoint=>c.map((v,j)=>v+s[j]*((i>>j&1)?.5:-.5)) as SpatialPoint);
     for(const face of [[0,1,3,2],[4,5,7,6]])line(face.map(i=>p[i]),role,{closed:true});
@@ -48,14 +50,14 @@ export function scienceSpatialDrawing(kind:ScienceSpatialKind,value:number,time:
       const loop:SpatialPoint[]=[[0,-45,0],[0,25,0],[45,25,0],[45,-45,0],[0,-45,0]];route(loop,'sum');
       reading=`Convecção: fluido aquecido fica menos denso e sobe; o frio desce. ΔT de ${value} K intensifica a circulação, mas aqui sem cálculo de vazão.`;
     } else {
-      sphere(26,[-60,0,0],'signal');box([60,0,0],[10,60,40]);
+      ball(26,[-60,0,0],'signal');box([60,0,0],[10,60,40]);
       for(const a of [-.4,0,.4]){const k=(t*0.8);arrow([-32,26*a,0],[-32+80*Math.max(.2,k),40*a,0],'signal');}
       reading=`Radiação: ondas eletromagnéticas atravessam o vácuo; não precisam de meio. Quanto mais quente o emissor (ΔT = ${value} K neste exemplo), mais energia irradia.`;
     }
     legend='Vinho: fluxo de energia · azul: circulação do fluido · cinza: recipiente'; break;
   }
   case 'greenhouse': {
-    sphere(50,[0,0,0],'body');const thick=50+8+(value-280)/28;ring(thick,[0,0,0],'xy','sum');ring(thick,[0,0,0],'xz','sum');
+    ball(50,[0,0,0],'sum');const thick=50+8+(value-280)/28;ring(thick,[0,0,0],'xy','sum');ring(thick,[0,0,0],'xz','sum');
     arrow([-85,75,0],[-36,36,0],'signal');label([-85,90,0],'Sol');
     arrow([30,30,0],[66,66,0],'sum');arrow([thick*.7,thick*.7,0],[40,40,0],'signal');
     reading=`CO₂ = ${value} ppm: forçamento ΔF ≈ 5,35·ln(${value}/280) = ${fmt(co2Forcing(value))} W/m². A camada absorve e reemite parte do infravermelho de volta à superfície.`;
@@ -97,7 +99,7 @@ export function scienceSpatialDrawing(kind:ScienceSpatialKind,value:number,time:
     legend='Vinho: P·sen θ · azul: P·cos θ · cinza: peso'; break;
   }
   case 'gravity': {
-    const d=25*value+10;sphere(18,[-d,0,0],'body');sphere(10,[d,0,0],'sum');
+    const d=25*value+10;ball(18,[-d,0,0],'body');ball(10,[d,0,0],'sum');
     const f=40/(value*value);arrow([-d+18,0,0],[-d+18+f,0,0]);arrow([d-10,0,0],[d-10-f,0,0]);
     label([0,-35,0],`d = ${value}`);
     reading=`F ∝ 1/d²: em d = ${value}, F = F₀/${value*value} = ${fmt(100/(value*value))}% de F₀. As duas setas têm mesmo módulo (ação e reação).`;break;
@@ -136,7 +138,7 @@ export function scienceSpatialDrawing(kind:ScienceSpatialKind,value:number,time:
     legend='Azul: mola · vinho: massa'; break;
   }
   case 'impulse': {
-    const dv=value*0.1/0.5,x=-60+(t>0.3?(t-0.3)*dv*20:0);floor(-30);sphere(12,[x,-18,0],'signal');
+    const dv=value*0.1/0.5,x=-60+(t>0.3?(t-0.3)*dv*20:0);floor(-30);ball(12,[x,-18,0],'signal');
     if(t<0.35)arrow([-100,-18,0],[-74,-18,0],'sum');arrow([x,0,0],[x+dv*3,0,0],'sum');
     reading=`I = F·Δt = ${value} × 0,1 = ${fmt(value*0.1)} N·s = Δq. Bola de 0,5 kg sai a ${fmt(dv)} m/s.`;break;
   }
@@ -185,7 +187,7 @@ export function scienceSpatialDrawing(kind:ScienceSpatialKind,value:number,time:
     }break;
   }
   case 'mass-energy': {
-    const E=value*1e-6*9e16;sphere(26,[-40,0,0],'body');sphere(24,[40,0,0],'sum');arrow([-12,0,0],[14,0,0]);
+    const E=value*1e-6*9e16;ball(26,[-40,0,0],'body');ball(24,[40,0,0],'sum');arrow([-12,0,0],[14,0,0]);
     reading=`Δm = ${value} mg ⇒ E = Δm·c² = ${sci(E)} J ≈ ${sci(E/3.6e6)} kWh. A massa “sumida” sai como energia.`;break;
   }
   case 'lever': {
@@ -221,7 +223,7 @@ export function scienceSpatialDrawing(kind:ScienceSpatialKind,value:number,time:
     reading=`T_Q = 600 K, T_F = ${value} K: η_Carnot = 1 − ${value}/600 = ${fmt(carnotEfficiency(value)*100,1)}%. Nenhuma máquina real entre as mesmas fontes supera esse valor.`;break;
   }
   case 'charging': {
-    sphere(20,[-40,0,0],'signal');sphere(20,[40,0,0],'sum');
+    ball(20,[-40,0,0],'signal');ball(20,[40,0,0],'sum');
     if(choice==='contact'){const x=40-t*20;line([[-20,0,0],[x-20,0,0]],'reference');reading=`Contato entre esferas idênticas: ${value} nC + 0 → ${fmt(value/2)} nC em cada. Carga total conservada; mesmo sinal.`;}
     else if(choice==='induction'){label([-40,0,0],'+');label([20,0,0],'−');label([58,0,0],'+');if(t>.5)arrow([60,-20,0],[60,-60,0],'reference');reading=`Indução: A (+${value} nC) atrai elétrons para o lado próximo de B. Aterrando o lado distante e desfazendo, B fica negativa: sinal oposto ao do indutor.`;}
     else {label([-40,0,0],`+${value}`);label([40,0,0],`−${value}`);reading=`Atrito: elétrons passam de um corpo ao outro. Ficam +${value} nC e −${value} nC: mesmos módulos, sinais opostos.`;}

@@ -1,4 +1,5 @@
-import { useRef, useState, type KeyboardEvent, type PointerEvent } from 'react';
+import { useEffect, useRef, useState, type KeyboardEvent, type PointerEvent } from 'react';
+import { animate, useReducedMotion } from 'motion/react';
 
 /** Altera somente a câmera; nunca as coordenadas ou medidas do modelo. */
 export function useSpatialRotation(initialYaw = 25, initialPitch = 12) {
@@ -7,14 +8,28 @@ export function useSpatialRotation(initialYaw = 25, initialPitch = 12) {
   const gesture = useRef<{ id: number; x: number; y: number; yaw: number; pitch: number } | null>(null);
   const wrap = (value: number) => (value % 360 + 360) % 360;
   const tilt = (value: number) => Math.max(-50, Math.min(65, value));
-  const reset = () => { setYaw(initialYaw); setPitch(initialPitch); };
+  const reset = () => { spin.current?.stop(); setSpinning(false); setYaw(initialYaw); setPitch(initialPitch); };
+  // Volta completa iniciada pela estudante, com fim e pausa. A auditoria de 11/10/2026 achou modelos
+  // sem nenhum movimento; girar o objeto inteiro é o movimento que todo modelo espacial tem a mostrar.
+  // Com movimento reduzido, nada anima: a vista apenas avança 90°.
+  const reduced = useReducedMotion();
+  const spin = useRef<{ stop: () => void } | null>(null);
+  const [spinning, setSpinning] = useState(false);
+  useEffect(() => () => spin.current?.stop(), []);
+  const toggleSpin = () => {
+    if (spinning) { spin.current?.stop(); setSpinning(false); return; }
+    if (reduced) { setYaw(value => wrap(value + 90)); return; }
+    const start = yaw; setSpinning(true);
+    spin.current = animate(0, 360, { duration: 6, ease: 'easeInOut', onUpdate: v => setYaw(wrap(start + v)), onComplete: () => setSpinning(false) });
+  };
   return {
-    yaw, pitch, setYaw, setPitch, reset,
+    yaw, pitch, setYaw, setPitch, reset, spinning, toggleSpin,
     interaction: {
       tabIndex: 0,
       onPointerDown(event: PointerEvent<SVGSVGElement>) {
         if (!event.isPrimary || (event.pointerType === 'mouse' && event.button !== 0)) return;
         event.stopPropagation();
+        spin.current?.stop(); setSpinning(false);
         gesture.current = { id: event.pointerId, x: event.clientX, y: event.clientY, yaw, pitch };
         event.currentTarget.setPointerCapture?.(event.pointerId);
       },

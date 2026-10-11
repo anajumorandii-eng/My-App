@@ -75,7 +75,7 @@ export function MolecularObjectView() {
     <input id={uid} type="range" min="0" max="360" value={yaw} onChange={event => setYaw(Number(event.target.value))} />
     <label className="vs-science-rotation" htmlFor={uid + '-pitch'}>Inclinar a molécula <output>{Math.round(rotation.pitch)}°</output></label>
     <input id={uid + '-pitch'} type="range" min="-50" max="65" value={rotation.pitch} onChange={event => rotation.setPitch(Number(event.target.value))} />
-    <div className="vs-science-choices"><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
+    <div className="vs-science-choices"><button type="button" aria-pressed={rotation.spinning} onClick={rotation.toggleSpin}>{rotation.spinning ? 'Pausar giro' : 'Girar o modelo'}</button><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
     <p className="vs-science-caption">Arraste o modelo para girar e inclinar. Com o desenho em foco, use as setas; Home restaura a vista.</p>
     <p className="vs-science-reading" role="status" aria-label="Leitura molecular"><strong>{m.geometria} · {m.anguloGraus.toLocaleString('pt-BR')}° · {polar ? 'polar' : 'apolar'}</strong><br />{m.paresLigantes} ligantes · {m.paresNaoLigantes} pares livres. Soma dos vetores de ligação: {momentoResultante(m).toLocaleString('pt-BR', { maximumFractionDigits: 2 })}.</p>
     <p className="vs-science-caption">Modelo esquemático: ligantes iguais têm o mesmo peso na soma. Esferas não estão em escala; a rotação conserva os ângulos. Os pares livres indicam regiões eletrônicas, não átomos. {id === 'CO2' && 'No CO₂, O=C=O tem duas ligações duplas; cada dupla ocupa uma região de ligação.'}</p>
@@ -109,9 +109,9 @@ export function NucleicObjectView({ value }: { value: number }) {
     <div className="vs-science-choices" role="group" aria-label="Rotação do DNA">
       <button type="button" onClick={() => setYaw((yaw + 330) % 360)}>Girar −30°</button>
       <button type="button" onClick={() => setYaw((yaw + 30) % 360)}>Girar +30°</button>
-      <button type="button" onClick={rotation.reset}>Restaurar vista</button>
+      <button type="button" aria-pressed={rotation.spinning} onClick={rotation.toggleSpin}>{rotation.spinning ? 'Pausar giro' : 'Girar o modelo'}</button><button type="button" onClick={rotation.reset}>Restaurar vista</button>
     </div>
     <p className="vs-science-caption">Arraste a hélice para girar e inclinar. Com o desenho em foco, use as setas; Home restaura a vista.</p>
-    <p className="vs-science-caption">DNA-B: hélice destrogira, aproximadamente 10 pares por volta. Sequência ilustrativa; o controle de base altera o par destacado. Traços entre bases representam pontes de H; as fitas são antiparalelas. Consulte “Pareamento” para comparar DNA e RNA.</p>
+    <p className="vs-science-caption">DNA-B: hélice destrogira, aproximadamente 10 pares por volta. Sequência ilustrativa; o controle de base altera o par destacado. Traços entre bases representam pontes de H; as fitas são antiparalelas. O pareamento abaixo compara DNA e RNA.</p>
   </div>;
 }

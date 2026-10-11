@@ -42,7 +42,7 @@ export function MagneticTrajectoryView({ theta }: { theta: number }) {
     <input id={id + '-yaw'} type="range" min="0" max="360" value={rotation.yaw} onChange={event => rotation.setYaw(Number(event.target.value))} />
     <label className="vs-science-rotation" htmlFor={id + '-pitch'}>Inclinar a vista <output>{Math.round(rotation.pitch)}°</output></label>
     <input id={id + '-pitch'} type="range" min="-50" max="65" value={rotation.pitch} onChange={event => rotation.setPitch(Number(event.target.value))} />
-    <div className="vs-science-choices"><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
+    <div className="vs-science-choices"><button type="button" aria-pressed={rotation.spinning} onClick={rotation.toggleSpin}>{rotation.spinning ? 'Pausar giro' : 'Girar o modelo'}</button><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
     </div>
     <p className="vs-science-reading" role="status" aria-label="Leitura da trajetória">Força magnética: {model.magnitude.toFixed(2).replace('.', ',')} N. F é perpendicular a v e a B; não altera o módulo da velocidade. {theta === 0 ? 'Sem componente perpendicular: F = 0.' : theta === 90 ? 'Sem componente paralela: a trajetória é um círculo.' : 'A componente paralela avança; a perpendicular gira.'}</p>
     <p className="vs-science-caption">Mude θ no controle principal. Arraste o desenho ou use setas e Home para mudar somente a câmera. Trajetória normalizada, sem escala de distância ou tempo; setas identificam direções, com escalas distintas. A reprodução é finita e iniciada por você. Com movimento reduzido, use o controle de posição.</p>

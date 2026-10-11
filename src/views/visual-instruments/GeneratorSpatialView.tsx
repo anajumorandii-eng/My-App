@@ -22,7 +22,7 @@ export function GeneratorSpatialView({ phase, omega }: { phase: number; omega: n
     </svg>
     <label className="vs-science-rotation" htmlFor={id+'-yaw'}>Girar a vista do gerador <output>{Math.round(rotation.yaw)}°</output></label><input id={id+'-yaw'} type="range" min="0" max="360" value={rotation.yaw} onChange={event=>rotation.setYaw(Number(event.target.value))} />
     <label className="vs-science-rotation" htmlFor={id+'-pitch'}>Inclinar a vista <output>{Math.round(rotation.pitch)}°</output></label><input id={id+'-pitch'} type="range" min="-50" max="65" value={rotation.pitch} onChange={event=>rotation.setPitch(Number(event.target.value))} />
-    <div className="vs-science-choices"><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
+    <div className="vs-science-choices"><button type="button" aria-pressed={rotation.spinning} onClick={rotation.toggleSpin}>{rotation.spinning ? 'Pausar giro' : 'Girar o modelo'}</button><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
     <p className="vs-science-reading" role="status" aria-label="Leitura espacial do gerador">NΦ = {format(model.fluxLinkage)} Wb; ε = {format(model.emf)} V. NBA = 0,4 Wb; ω = {omega} rad/s. θ = {phase}°. ε = NBAω sen θ; NΦ = NBA cos θ.</p>
     <p className="vs-science-caption">Mude a fase θ e ω nos controles principais. Arrastar ou usar setas e Home altera somente a câmera. Campo uniforme em +z; eixo mecânico em y. A área colorida é uma superfície matemática, não uma placa material. Esquema de bobina ideal, fora de escala; contatos e carga elétrica omitidos. O sinal da FEM usa a orientação da normal; a energia vem do trabalho mecânico. Com ω = 0, a FEM é nula em qualquer orientação.</p>
   </section>;

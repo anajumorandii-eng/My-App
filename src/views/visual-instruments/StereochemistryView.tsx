@@ -20,7 +20,7 @@ export function StereochemistryView() {
     <input id={id + '-yaw'} type="range" min="0" max="360" value={rotation.yaw} onChange={event => rotation.setYaw(Number(event.target.value))} />
     <label className="vs-science-rotation" htmlFor={id + '-pitch'}>Inclinar a vista <output>{Math.round(rotation.pitch)}°</output></label>
     <input id={id + '-pitch'} type="range" min="-50" max="65" value={rotation.pitch} onChange={event => rotation.setPitch(Number(event.target.value))} />
-    <div className="vs-science-choices"><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
+    <div className="vs-science-choices"><button type="button" aria-pressed={rotation.spinning} onClick={rotation.toggleSpin}>{rotation.spinning ? 'Pausar giro' : 'Girar o modelo'}</button><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
     <p className="vs-science-reading" role="status" aria-label="Leitura estereoquímica">{optical
       ? 'Quatro substituintes diferentes: as duas imagens especulares não se sobrepõem por rotação. A troca de modelo representa reflexão, não uma reação nem rotação da molécula.'
       : `Os grupos CH₃ ficam ${kind === 'cis' ? 'do mesmo lado' : 'em lados opostos'} da dupla. Girar a vista conserva ${kind}; a dupla não tem rotação livre.`}</p>
