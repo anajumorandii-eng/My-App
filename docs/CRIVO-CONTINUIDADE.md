@@ -543,3 +543,7 @@ Após #309. 43 capítulos de Biologia e 45 de Geografia recebem modelo 3D no pal
 ## 11/10 — Lote Humanas (111)
 
 Após #310. 49 capítulos de História, 35 de Filosofia e 27 de Sociologia recebem modelo 3D estrutural no palco comum. [Registro](lote-humanas-111-2026-10-11/README.md). Não repetir estes 111.
+
+## 11/10 — Lote Linguagens (150)
+
+Após #311. 17 capítulos de Inglês, 58 de Redação, 26 de Gramática, 37 de Literatura e 12 de Entendimento de Texto recebem modelo 3D estrutural, com os moldes novos de frase (arcos de dependência) e de redação (parágrafos empilhados). Com isto, os 613 capítulos têm modelo espacial; o que resta é revisão editorial. [Registro](lote-linguagens-150-2026-10-11/README.md). Não repetir estes 150.

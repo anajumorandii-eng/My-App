@@ -5,7 +5,7 @@ import type { SpatialPoint } from './spatialSolid';
 const pi=Math.PI;
 const clamp=(v:number,a:number,b:number)=>Math.max(a,Math.min(b,v));
 /** Moldes com percurso próprio (o movimento é o processo); os outros percorrem os itens. */
-export const HUMANITIES_MOVING:HumanitiesTemplate[]=['flows','cycle','cave','dialectic'];
+export const HUMANITIES_MOVING:HumanitiesTemplate[]=['flows','cycle','cave','dialectic','sentence'];
 
 /** Rótulo curto para caber no palco; o texto completo vai para a leitura. */
 const short=(s:string)=>s.length>18?s.slice(0,17)+'…':s;
@@ -51,6 +51,12 @@ export function humanitiesSpatialDrawing(lesson:HumanitiesLesson,value:number,ti
   case 'blocs':{const groups=[...new Set(items.map(it=>it[3]??0))];items.forEach((it,i)=>{const g=groups.indexOf(it[3]??0),same=items.filter(x=>(x[3]??0)===(it[3]??0)),j=same.indexOf(it);
       const p:SpatialPoint=[g===0?-55:55,-20+j*30-(same.length-1)*15,0];dot(p,i===sel?'signal':g===0?'sum':'body',8+(it[2]??3)*1.5);label([p[0]+(g===0?-34:34),p[1],0],it[0]);});
     line([[0,-70,-30],[0,70,-30],[0,70,30],[0,-70,30]],'reference',{dashed:true});break;}
+  case 'sentence':{const w=200/n;items.forEach((it,i)=>{const x=-100+w*(i+.5);box(x-w/2+3,-20,-12,w-6,22,24,roleOf(i));label([x,-32-(i%2)*20,0],it[0]);});
+    // Arcos de dependência: cada termo aponta para o núcleo de que depende; a partícula percorre o arco do item em destaque.
+    for(const [a,b] of lesson.links??[]){const xa=-100+w*(a+.5),xb=-100+w*(b+.5),h=18+Math.abs(b-a)*10;const arc=Array.from({length:17},(_,k):SpatialPoint=>{const u=k/16;return [xa+(xb-xa)*u,4+h*Math.sin(u*pi),0];});
+      line(arc,a===sel||b===sel?'signal':'reference',{arrow:true});if(a===sel||b===sel)dot(arc[Math.round(t*16)],'body',3);}break;}
+  case 'essay':{items.forEach((it,i)=>{const y=60-i*(120/n),h=120/n-6;box(-60,y-h,-4+i*2,120,h,8,roleOf(i));label([90,y-h/2,0],it[0]);
+      for(let k=1;k<4;k++)line([[-52,y-h*k/4,6+i*2],[52-(k===3?30:0),y-h*k/4,6+i*2]],'reference');});break;}
   }
   const [name,detail]=items[sel];
   return {traces,dots,labels,reading:`${name}: ${detail}`,legend:'Vinho: item em destaque · azul: demais itens · cinza: estrutura'};

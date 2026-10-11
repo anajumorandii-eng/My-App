@@ -1,0 +1,1607 @@
+[
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+  "template": "pyramid",
+  "title": "Taxonomy: from broad to specific",
+  "items": [
+   "Kingdom",
+   "Phylum/Class",
+   "Order/Family",
+   "Genus/Species"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-songs-and-poems",
+  "template": "compare",
+  "title": "Reading songs and poems",
+  "items": [
+   "Literal",
+   "Figurative",
+   "Tone"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-calories-and-energy",
+  "template": "flows",
+  "title": "Calories and energy",
+  "items": [
+   "Food",
+   "Metabolism",
+   "Activity",
+   "Storage"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+  "template": "flows",
+  "title": "Earthquakes",
+  "items": [
+   "Plates",
+   "Focus",
+   "Epicenter",
+   "Waves"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-hurricanes",
+  "template": "cycle",
+  "title": "Hurricanes",
+  "items": [
+   "Warm ocean",
+   "Low pressure",
+   "Eye",
+   "Landfall"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases",
+  "template": "compare",
+  "title": "Greenhouse gases",
+  "items": [
+   "CO₂",
+   "CH₄",
+   "N₂O"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-pollution",
+  "template": "compare",
+  "title": "Types of pollution",
+  "items": [
+   "Air",
+   "Water",
+   "Soil",
+   "Noise/light"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-the-human-brain",
+  "template": "compare",
+  "title": "The human brain",
+  "items": [
+   "Cerebrum",
+   "Cerebellum",
+   "Brainstem"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-global-warming",
+  "template": "flows",
+  "title": "Global warming",
+  "items": [
+   "Emissions",
+   "Trapped heat",
+   "Warming",
+   "Impacts"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-novels-short-stories",
+  "template": "timeline",
+  "title": "Plot structure",
+  "items": [
+   "Exposition",
+   "Rising action",
+   "Climax",
+   "Resolution"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-bacteria",
+  "template": "concentric",
+  "title": "Bacteria",
+  "items": [
+   "Nucleoid",
+   "Cytoplasm",
+   "Cell wall",
+   "Flagellum"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-viruses",
+  "template": "cycle",
+  "title": "Viruses",
+  "items": [
+   "Attach",
+   "Enter",
+   "Replicate",
+   "Release"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-discrimination-against-women",
+  "template": "compare",
+  "title": "Gender gaps",
+  "items": [
+   "Pay gap",
+   "Unpaid work",
+   "Representation"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-women-empowerment",
+  "template": "timeline",
+  "title": "Women's rights milestones",
+  "items": [
+   "1893",
+   "1932",
+   "1979",
+   "2006"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-digital-technology",
+  "template": "flows",
+  "title": "Digital technology",
+  "items": [
+   "Users",
+   "Platforms",
+   "Benefits",
+   "Risks"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-health-probiotics",
+  "template": "compare",
+  "title": "Probiotics",
+  "items": [
+   "Live microbes",
+   "Gut balance",
+   "Evidence"
+  ]
+ },
+ {
+  "id": "summary-lingua-inglesa-text-comprehension-stem-cells",
+  "template": "pyramid",
+  "title": "Stem cell potency",
+  "items": [
+   "Totipotent",
+   "Pluripotent",
+   "Multipotent",
+   "Specialized"
+  ]
+ },
+ {
+  "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+  "template": "compare",
+  "title": "Mitos e verdades",
+  "items": [
+   "Mito: fórmula pronta",
+   "Verdade: projeto",
+   "Verdade: tema recortado"
+  ]
+ },
+ {
+  "id": "summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades",
+  "template": "compare",
+  "title": "Cinco competências (ENEM)",
+  "items": [
+   "C1",
+   "C2",
+   "C3",
+   "C4",
+   "C5"
+  ]
+ },
+ {
+  "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+  "template": "flows",
+  "title": "Mapa mental",
+  "items": [
+   "Tema",
+   "Causas",
+   "Consequências",
+   "Repertório"
+  ]
+ },
+ {
+  "id": "summary-redacao-projeto-de-texto-em-favor-da-progressao-textual",
+  "template": "essay",
+  "title": "Projeto de texto",
+  "items": [
+   "Introdução",
+   "D1",
+   "D2",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso",
+  "template": "compare",
+  "title": "Repertório produtivo",
+  "items": [
+   "Legitimado",
+   "Pertinente",
+   "Produtivo"
+  ]
+ },
+ {
+  "id": "summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos",
+  "template": "concentric",
+  "title": "Eixos temáticos",
+  "items": [
+   "Recorte",
+   "Eixo",
+   "Sociedade brasileira",
+   "Direitos humanos"
+  ]
+ },
+ {
+  "id": "summary-redacao-diferentes-graus-de-adequacao-a-proposta",
+  "template": "pyramid",
+  "title": "Graus de adequação",
+  "items": [
+   "Pleno",
+   "Parcial",
+   "Tangência",
+   "Fuga"
+  ]
+ },
+ {
+  "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+  "template": "concentric",
+  "title": "Fronteira do tema",
+  "items": [
+   "Tema",
+   "Assunto",
+   "Fora"
+  ]
+ },
+ {
+  "id": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto",
+  "template": "compare",
+  "title": "Gênero e estrutura",
+  "items": [
+   "Dissertativo-argumentativo",
+   "Carta argumentativa",
+   "Artigo de opinião"
+  ]
+ },
+ {
+  "id": "summary-redacao-estrutura-classica-do-texto-dissertativo",
+  "template": "essay",
+  "title": "Estrutura clássica",
+  "items": [
+   "Introdução",
+   "Desenvolvimento 1",
+   "Desenvolvimento 2",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i",
+  "template": "compare",
+  "title": "Ler a coletânea",
+  "items": [
+   "Texto I",
+   "Texto II",
+   "Texto III",
+   "Proposta"
+  ]
+ },
+ {
+  "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii",
+  "template": "flows",
+  "title": "Relações entre textos",
+  "items": [
+   "Texto I",
+   "Texto II",
+   "Texto III",
+   "Recorte"
+  ]
+ },
+ {
+  "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i",
+  "template": "compare",
+  "title": "Coletânea × texto autoral",
+  "items": [
+   "Cópia",
+   "Paráfrase",
+   "Autoral"
+  ]
+ },
+ {
+  "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii",
+  "template": "cycle",
+  "title": "Do texto motivador ao argumento",
+  "items": [
+   "Ler",
+   "Relacionar",
+   "Posicionar",
+   "Desenvolver"
+  ]
+ },
+ {
+  "id": "summary-redacao-incrementando-o-repertorio-meio-ambiente",
+  "template": "concentric",
+  "title": "Repertório: meio ambiente",
+  "items": [
+   "Conceito",
+   "Lei",
+   "Acordo",
+   "Pensador"
+  ]
+ },
+ {
+  "id": "summary-redacao-analisando-tema-de-redacao-meio-ambiente",
+  "template": "essay",
+  "title": "Tema: meio ambiente",
+  "items": [
+   "Recorte",
+   "Tese",
+   "Argumentos",
+   "Risco",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho",
+  "template": "concentric",
+  "title": "Repertório: educação e trabalho",
+  "items": [
+   "Lei",
+   "Pensador",
+   "Conceito",
+   "Dado"
+  ]
+ },
+ {
+  "id": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho",
+  "template": "essay",
+  "title": "Tema: educação e trabalho",
+  "items": [
+   "Recorte",
+   "Tese",
+   "Argumentos",
+   "Risco",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-incrementando-o-repertorio-temas-abstratos",
+  "template": "concentric",
+  "title": "Repertório: temas abstratos",
+  "items": [
+   "Filosofia",
+   "Literatura",
+   "Conceito",
+   "Exemplo"
+  ]
+ },
+ {
+  "id": "summary-redacao-analisando-tema-abstrato-de-redacao",
+  "template": "essay",
+  "title": "Tema: tema abstrato",
+  "items": [
+   "Recorte",
+   "Tese",
+   "Argumentos",
+   "Risco",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade",
+  "template": "concentric",
+  "title": "Repertório: corpo e saúde",
+  "items": [
+   "Lei",
+   "Instituição",
+   "Pensador",
+   "Dado"
+  ]
+ },
+ {
+  "id": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade",
+  "template": "essay",
+  "title": "Tema: corpo e saúde",
+  "items": [
+   "Recorte",
+   "Tese",
+   "Argumentos",
+   "Risco",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao",
+  "template": "concentric",
+  "title": "Repertório: violência e punição",
+  "items": [
+   "Lei",
+   "Pensador",
+   "Conceito",
+   "Dado"
+  ]
+ },
+ {
+  "id": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao",
+  "template": "essay",
+  "title": "Tema: violência",
+  "items": [
+   "Recorte",
+   "Tese",
+   "Argumentos",
+   "Risco",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder",
+  "template": "concentric",
+  "title": "Repertório: cidadania e poder",
+  "items": [
+   "Pensador",
+   "Lei",
+   "Conceito",
+   "Filósofo"
+  ]
+ },
+ {
+  "id": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder",
+  "template": "essay",
+  "title": "Tema: cidadania",
+  "items": [
+   "Recorte",
+   "Tese",
+   "Argumentos",
+   "Risco",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais",
+  "template": "concentric",
+  "title": "Repertório: arte e cultura",
+  "items": [
+   "Lei",
+   "Conceito",
+   "Exemplo",
+   "Pensador"
+  ]
+ },
+ {
+  "id": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais",
+  "template": "essay",
+  "title": "Tema: arte e cultura",
+  "items": [
+   "Recorte",
+   "Tese",
+   "Argumentos",
+   "Risco",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade",
+  "template": "concentric",
+  "title": "Repertório: mídia e sociedade",
+  "items": [
+   "Conceito",
+   "Pensador",
+   "Lei",
+   "Fenômeno"
+  ]
+ },
+ {
+  "id": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade",
+  "template": "essay",
+  "title": "Tema: mídia",
+  "items": [
+   "Recorte",
+   "Tese",
+   "Argumentos",
+   "Risco",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao",
+  "template": "essay",
+  "title": "Introdução que delimita",
+  "items": [
+   "Contexto",
+   "Recorte",
+   "Tese",
+   "Anúncio"
+  ]
+ },
+ {
+  "id": "summary-redacao-paragrafo-de-introducao-como-contextualizar",
+  "template": "compare",
+  "title": "Estratégias de contextualização",
+  "items": [
+   "Histórica",
+   "Alusão",
+   "Dado",
+   "Conceito"
+  ]
+ },
+ {
+  "id": "summary-redacao-argumentacao-auditorio-particular-e-universal",
+  "template": "concentric",
+  "title": "Auditórios (Perelman)",
+  "items": [
+   "Particular",
+   "Ampliado",
+   "Universal"
+  ]
+ },
+ {
+  "id": "summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade",
+  "template": "flows",
+  "title": "Argumento quase-lógico",
+  "items": [
+   "Premissa",
+   "Relação",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-argumentacao-e-coerencia-interna",
+  "template": "flows",
+  "title": "Coerência interna",
+  "items": [
+   "Tese",
+   "Argumento 1",
+   "Argumento 2",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-argumentacao-e-coerencia-externa",
+  "template": "compare",
+  "title": "Coerência externa",
+  "items": [
+   "Fato verificável",
+   "Generalização",
+   "Informação falsa"
+  ]
+ },
+ {
+  "id": "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos",
+  "template": "compare",
+  "title": "Dados e exemplos",
+  "items": [
+   "Dado",
+   "Exemplo",
+   "Interpretação"
+  ]
+ },
+ {
+  "id": "summary-redacao-recursos-argumentativos-vozes-prestigiadas",
+  "template": "compare",
+  "title": "Argumento de autoridade",
+  "items": [
+   "Especialista",
+   "Citação",
+   "Comentário"
+  ]
+ },
+ {
+  "id": "summary-redacao-ressalvando-o-ponto-de-vista-contrario",
+  "template": "mean",
+  "title": "Concessão",
+  "items": [
+   "Ignorar",
+   "Conceder",
+   "Ceder"
+  ]
+ },
+ {
+  "id": "summary-redacao-refutando-o-ponto-contrario",
+  "template": "flows",
+  "title": "Refutação",
+  "items": [
+   "Contra-argumento",
+   "Exame",
+   "Tese"
+  ]
+ },
+ {
+  "id": "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade",
+  "template": "compare",
+  "title": "Intertexto × interdiscurso",
+  "items": [
+   "Intertexto",
+   "Interdiscurso"
+  ]
+ },
+ {
+  "id": "summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados",
+  "template": "timeline",
+  "title": "Temas do ENEM (exemplos)",
+  "items": [
+   "2015",
+   "2017",
+   "2018",
+   "2019"
+  ]
+ },
+ {
+  "id": "summary-redacao-recursos-argumentativos-fatos-da-atualidade",
+  "template": "compare",
+  "title": "Fato da atualidade",
+  "items": [
+   "Fato",
+   "Relevância",
+   "Análise"
+  ]
+ },
+ {
+  "id": "summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber",
+  "template": "concentric",
+  "title": "Múltiplos saberes",
+  "items": [
+   "Tema",
+   "História",
+   "Sociologia",
+   "Ciências"
+  ]
+ },
+ {
+  "id": "summary-redacao-conclusao-por-sintese-ou-retomada-da-tese",
+  "template": "essay",
+  "title": "Conclusão por síntese",
+  "items": [
+   "Retomada",
+   "Síntese",
+   "Fecho"
+  ]
+ },
+ {
+  "id": "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade",
+  "template": "compare",
+  "title": "Tipos de fecho",
+  "items": [
+   "Sumarização",
+   "Focalização",
+   "Expressividade"
+  ]
+ },
+ {
+  "id": "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania",
+  "template": "compare",
+  "title": "Elementos da intervenção",
+  "items": [
+   "Agente",
+   "Ação",
+   "Meio",
+   "Finalidade",
+   "Detalhamento"
+  ]
+ },
+ {
+  "id": "summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao",
+  "template": "mean",
+  "title": "Viabilidade",
+  "items": [
+   "Genérica",
+   "Viável",
+   "Utópica"
+  ]
+ },
+ {
+  "id": "summary-redacao-proposta-de-intervencao-coerencia-argumentativa",
+  "template": "flows",
+  "title": "Intervenção coerente",
+  "items": [
+   "Problema D1",
+   "Problema D2",
+   "Intervenção"
+  ]
+ },
+ {
+  "id": "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos",
+  "template": "compare",
+  "title": "Respeito aos direitos humanos",
+  "items": [
+   "Respeita",
+   "Viola"
+  ]
+ },
+ {
+  "id": "summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo",
+  "template": "sentence",
+  "title": "Coesão referencial",
+  "items": [
+   "A escola",
+   "precisa",
+   "de apoio;",
+   "ela",
+   "forma cidadãos."
+  ]
+ },
+ {
+  "id": "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo",
+  "template": "compare",
+  "title": "Conectivos",
+  "items": [
+   "Adição",
+   "Oposição",
+   "Causa",
+   "Conclusão"
+  ]
+ },
+ {
+  "id": "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas",
+  "template": "compare",
+  "title": "Problemas de coesão",
+  "items": [
+   "Repetição",
+   "Ambiguidade",
+   "Conectivo inadequado"
+  ]
+ },
+ {
+  "id": "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade",
+  "template": "compare",
+  "title": "Norma, clareza, expressividade",
+  "items": [
+   "Norma",
+   "Clareza",
+   "Expressividade"
+  ]
+ },
+ {
+  "id": "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais",
+  "template": "compare",
+  "title": "Direitos de 1ª geração",
+  "items": [
+   "Vida",
+   "Liberdade",
+   "Propriedade",
+   "Participação"
+  ]
+ },
+ {
+  "id": "summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos",
+  "template": "timeline",
+  "title": "Gerações de direitos",
+  "items": [
+   "1ª",
+   "2ª",
+   "3ª"
+  ]
+ },
+ {
+  "id": "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar",
+  "template": "compare",
+  "title": "Trunfos de redações nota 1000",
+  "items": [
+   "Recorte preciso",
+   "Repertório produtivo",
+   "Intervenção completa"
+  ]
+ },
+ {
+  "id": "summary-redacao-redacoes-na-midia-como-aprimorar",
+  "template": "cycle",
+  "title": "Reescrever para melhorar",
+  "items": [
+   "Ler",
+   "Diagnosticar",
+   "Reescrever",
+   "Comparar"
+  ]
+ },
+ {
+  "id": "summary-gramatica-lingua-um-sistema-complexo",
+  "template": "pyramid",
+  "title": "Níveis da língua",
+  "items": [
+   "Discurso",
+   "Sintaxe",
+   "Morfologia",
+   "Fonologia"
+  ]
+ },
+ {
+  "id": "summary-gramatica-variacao-linguistica",
+  "template": "compare",
+  "title": "Variação linguística",
+  "items": [
+   "Diatópica",
+   "Diastrática",
+   "Diafásica",
+   "Diacrônica"
+  ]
+ },
+ {
+  "id": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador",
+  "template": "sentence",
+  "title": "Nomear é avaliar",
+  "items": [
+   "O",
+   "protesto",
+   "ou",
+   "a",
+   "baderna?"
+  ]
+ },
+ {
+  "id": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos",
+  "template": "compare",
+  "title": "Concreto × abstrato",
+  "items": [
+   "Concreto",
+   "Abstrato"
+  ]
+ },
+ {
+  "id": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal",
+  "template": "sentence",
+  "title": "Sintagma nominal",
+  "items": [
+   "Os",
+   "dois",
+   "livros",
+   "antigos"
+  ]
+ },
+ {
+  "id": "summary-gramatica-pronomes",
+  "template": "sentence",
+  "title": "Pronome retoma",
+  "items": [
+   "Ana",
+   "chegou;",
+   "eu",
+   "a",
+   "vi."
+  ]
+ },
+ {
+  "id": "summary-gramatica-verbo",
+  "template": "timeline",
+  "title": "Tempos do indicativo",
+  "items": [
+   "Pretérito",
+   "Presente",
+   "Futuro"
+  ]
+ },
+ {
+  "id": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores",
+  "template": "sentence",
+  "title": "Advérbio circunstancia",
+  "items": [
+   "Ela",
+   "estudou",
+   "muito",
+   "ontem",
+   "em casa."
+  ]
+ },
+ {
+  "id": "summary-gramatica-verbo-e-sintaxe-da-oracao",
+  "template": "sentence",
+  "title": "Verbo organiza a oração",
+  "items": [
+   "A banca",
+   "corrigiu",
+   "as redações."
+  ]
+ },
+ {
+  "id": "summary-gramatica-concordancia",
+  "template": "sentence",
+  "title": "Concordância verbal",
+  "items": [
+   "Os alunos",
+   "chegaram",
+   "cedo."
+  ]
+ },
+ {
+  "id": "summary-gramatica-significados-implicitos",
+  "template": "compare",
+  "title": "Implícitos",
+  "items": [
+   "Pressuposto",
+   "Subentendido"
+  ]
+ },
+ {
+  "id": "summary-gramatica-tipos-de-discurso",
+  "template": "compare",
+  "title": "Discursos",
+  "items": [
+   "Direto",
+   "Indireto",
+   "Indireto livre"
+  ]
+ },
+ {
+  "id": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula",
+  "template": "sentence",
+  "title": "Vírgula e ordem",
+  "items": [
+   "Ontem,",
+   "os alunos",
+   "entregaram",
+   "o trabalho."
+  ]
+ },
+ {
+  "id": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao",
+  "template": "sentence",
+  "title": "Vírgula entre orações",
+  "items": [
+   "Estudou,",
+   "mas",
+   "não passou;",
+   "tentará",
+   "de novo."
+  ]
+ },
+ {
+  "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
+  "template": "compare",
+  "title": "Sentidos em contexto",
+  "items": [
+   "Denotação",
+   "Conotação",
+   "Polissemia"
+  ]
+ },
+ {
+  "id": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe",
+  "template": "sentence",
+  "title": "Ambiguidade sintática",
+  "items": [
+   "Vi",
+   "o menino",
+   "com",
+   "o binóculo."
+  ]
+ },
+ {
+  "id": "summary-gramatica-mecanismo-de-regencia",
+  "template": "sentence",
+  "title": "Regência",
+  "items": [
+   "Assisti",
+   "ao",
+   "filme."
+  ]
+ },
+ {
+  "id": "summary-gramatica-crase",
+  "template": "sentence",
+  "title": "Crase = a + a",
+  "items": [
+   "Fui",
+   "à",
+   "escola."
+  ]
+ },
+ {
+  "id": "summary-gramatica-processos-de-formacao-de-palavras",
+  "template": "compare",
+  "title": "Formação de palavras",
+  "items": [
+   "Derivação",
+   "Composição",
+   "Abreviação",
+   "Estrangeirismo"
+  ]
+ },
+ {
+  "id": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo",
+  "template": "sentence",
+  "title": "Funções nominais",
+  "items": [
+   "Ana,",
+   "a professora",
+   "de inglês,",
+   "chegou."
+  ]
+ },
+ {
+  "id": "summary-gramatica-tipos-de-sujeito",
+  "template": "compare",
+  "title": "Tipos de sujeito",
+  "items": [
+   "Simples",
+   "Composto",
+   "Oculto",
+   "Indeterminado",
+   "Inexistente"
+  ]
+ },
+ {
+  "id": "summary-gramatica-vozes-verbais",
+  "template": "sentence",
+  "title": "Voz passiva analítica",
+  "items": [
+   "As provas",
+   "foram",
+   "corrigidas",
+   "pela banca."
+  ]
+ },
+ {
+  "id": "summary-gramatica-oracoes-substantivas",
+  "template": "sentence",
+  "title": "Oração substantiva",
+  "items": [
+   "É",
+   "importante",
+   "que todos leiam."
+  ]
+ },
+ {
+  "id": "summary-gramatica-oracoes-adjetivas",
+  "template": "sentence",
+  "title": "Oração adjetiva",
+  "items": [
+   "O livro",
+   "que li",
+   "é ótimo."
+  ]
+ },
+ {
+  "id": "summary-gramatica-oracoes-adverbiais",
+  "template": "sentence",
+  "title": "Oração adverbial",
+  "items": [
+   "Embora chovesse,",
+   "saímos",
+   "cedo."
+  ]
+ },
+ {
+  "id": "summary-gramatica-oracoes-coordenadas",
+  "template": "compare",
+  "title": "Coordenadas",
+  "items": [
+   "Aditiva",
+   "Adversativa",
+   "Alternativa",
+   "Conclusiva",
+   "Explicativa"
+  ]
+ },
+ {
+  "id": "summary-literatura-a-arte-e-suas-linguagens",
+  "template": "compare",
+  "title": "Linguagens da arte",
+  "items": [
+   "Verbal",
+   "Visual",
+   "Sonora",
+   "Corporal"
+  ]
+ },
+ {
+  "id": "summary-literatura-texto-literario-x-texto-nao-literario",
+  "template": "compare",
+  "title": "Literário × não literário",
+  "items": [
+   "Literário",
+   "Não literário"
+  ]
+ },
+ {
+  "id": "summary-literatura-trovadorismo-e-humanismo",
+  "template": "compare",
+  "title": "Cantigas trovadorescas",
+  "items": [
+   "Amor",
+   "Amigo",
+   "Escárnio",
+   "Maldizer"
+  ]
+ },
+ {
+  "id": "summary-literatura-renascimento-e-camoes",
+  "template": "compare",
+  "title": "Camões",
+  "items": [
+   "Os Lusíadas",
+   "Lírica",
+   "Medida velha"
+  ]
+ },
+ {
+  "id": "summary-literatura-brasil-primeiros-registros",
+  "template": "timeline",
+  "title": "Primeiros registros",
+  "items": [
+   "1500",
+   "1549",
+   "Séc. XVI"
+  ]
+ },
+ {
+  "id": "summary-literatura-a-estetica-barroca",
+  "template": "dialectic",
+  "title": "Conflitos barrocos",
+  "items": [
+   "Fé",
+   "Matéria",
+   "Fusão tensa"
+  ]
+ },
+ {
+  "id": "summary-literatura-a-estetica-neoclassica",
+  "template": "compare",
+  "title": "Arcadismo",
+  "items": [
+   "Bucolismo",
+   "Fugere urbem",
+   "Carpe diem",
+   "Inutilia truncat"
+  ]
+ },
+ {
+  "id": "summary-literatura-a-estetica-romantica-poesia",
+  "template": "timeline",
+  "title": "Gerações românticas",
+  "items": [
+   "1ª",
+   "2ª",
+   "3ª"
+  ]
+ },
+ {
+  "id": "summary-literatura-elementos-da-narrativa",
+  "template": "compare",
+  "title": "Elementos da narrativa",
+  "items": [
+   "Narrador",
+   "Personagens",
+   "Tempo",
+   "Espaço",
+   "Enredo"
+  ]
+ },
+ {
+  "id": "summary-literatura-a-estetica-romantica-prosa",
+  "template": "compare",
+  "title": "Romance romântico",
+  "items": [
+   "Indianista",
+   "Urbano",
+   "Regionalista",
+   "Histórico"
+  ]
+ },
+ {
+  "id": "summary-literatura-a-estetica-realista",
+  "template": "compare",
+  "title": "Romantismo × Realismo",
+  "items": [
+   "Romantismo",
+   "Realismo"
+  ]
+ },
+ {
+  "id": "summary-literatura-machado-de-assis",
+  "template": "timeline",
+  "title": "Machado de Assis",
+  "items": [
+   "1872",
+   "1881",
+   "1891",
+   "1899"
+  ]
+ },
+ {
+  "id": "summary-literatura-naturalismo",
+  "template": "flows",
+  "title": "Determinismo naturalista",
+  "items": [
+   "Meio",
+   "Raça",
+   "Momento",
+   "Comportamento"
+  ]
+ },
+ {
+  "id": "summary-literatura-realismo-portugues-eca-de-queiros",
+  "template": "compare",
+  "title": "Eça de Queirós",
+  "items": [
+   "O crime do padre Amaro",
+   "O primo Basílio",
+   "Os Maias"
+  ]
+ },
+ {
+  "id": "summary-literatura-parnasianismo",
+  "template": "compare",
+  "title": "Parnasianismo",
+  "items": [
+   "Arte pela arte",
+   "Forma",
+   "Objetividade"
+  ]
+ },
+ {
+  "id": "summary-literatura-simbolismo",
+  "template": "concentric",
+  "title": "Simbolismo",
+  "items": [
+   "Sugestão",
+   "Musicalidade",
+   "Sinestesia",
+   "Espiritualidade"
+  ]
+ },
+ {
+  "id": "summary-literatura-pre-modernismo",
+  "template": "compare",
+  "title": "Pré-Modernismo",
+  "items": [
+   "Euclides da Cunha",
+   "Lima Barreto",
+   "Monteiro Lobato",
+   "Augusto dos Anjos"
+  ]
+ },
+ {
+  "id": "summary-literatura-vanguardas-artisticas",
+  "template": "compare",
+  "title": "Vanguardas europeias",
+  "items": [
+   "Futurismo",
+   "Cubismo",
+   "Expressionismo",
+   "Dadaísmo",
+   "Surrealismo"
+  ]
+ },
+ {
+  "id": "summary-literatura-fernando-pessoa",
+  "template": "blocs",
+  "title": "Pessoa e heterônimos",
+  "items": [
+   "Ortônimo",
+   "Caeiro",
+   "Reis",
+   "Campos"
+  ]
+ },
+ {
+  "id": "summary-literatura-semana-de-arte-moderna",
+  "template": "timeline",
+  "title": "Semana de 1922",
+  "items": [
+   "1917",
+   "Fev. 1922",
+   "1924",
+   "1928"
+  ]
+ },
+ {
+  "id": "summary-literatura-modernismo-no-brasil-primeira-geracao",
+  "template": "compare",
+  "title": "Primeira geração",
+  "items": [
+   "Oswald",
+   "Mário",
+   "Manuel Bandeira"
+  ]
+ },
+ {
+  "id": "summary-literatura-segunda-geracao-modernista-prosa",
+  "template": "compare",
+  "title": "Romance de 30",
+  "items": [
+   "Graciliano",
+   "Rachel de Queiroz",
+   "Jorge Amado",
+   "José Lins do Rego"
+  ]
+ },
+ {
+  "id": "summary-literatura-graciliano-ramos",
+  "template": "compare",
+  "title": "Graciliano Ramos",
+  "items": [
+   "São Bernardo",
+   "Angústia",
+   "Vidas secas"
+  ]
+ },
+ {
+  "id": "summary-literatura-segunda-geracao-modernista-poesia",
+  "template": "compare",
+  "title": "Poesia de 30",
+  "items": [
+   "Drummond",
+   "Cecília Meireles",
+   "Vinicius",
+   "Murilo Mendes"
+  ]
+ },
+ {
+  "id": "summary-literatura-carlos-drummond-de-andrade",
+  "template": "timeline",
+  "title": "Drummond",
+  "items": [
+   "1930",
+   "1940",
+   "1945",
+   "1951"
+  ]
+ },
+ {
+  "id": "summary-literatura-joao-cabral-de-melo-neto",
+  "template": "compare",
+  "title": "João Cabral",
+  "items": [
+   "Engenharia",
+   "Morte e vida severina",
+   "A educação pela pedra"
+  ]
+ },
+ {
+  "id": "summary-literatura-poesia-concreta",
+  "template": "concentric",
+  "title": "Poesia concreta",
+  "items": [
+   "Palavra",
+   "Espaço",
+   "Som",
+   "Grupo Noigandres"
+  ]
+ },
+ {
+  "id": "summary-literatura-clarice-lispector",
+  "template": "compare",
+  "title": "Clarice Lispector",
+  "items": [
+   "Epifania",
+   "Fluxo de consciência",
+   "A hora da estrela"
+  ]
+ },
+ {
+  "id": "summary-literatura-guimaraes-rosa",
+  "template": "compare",
+  "title": "Guimarães Rosa",
+  "items": [
+   "Grande sertão: veredas",
+   "Sagarana",
+   "Neologismos"
+  ]
+ },
+ {
+  "id": "summary-literatura-poesia-brasileira-1960-1980",
+  "template": "compare",
+  "title": "Poesia 1960–1980",
+  "items": [
+   "Poesia marginal",
+   "Tropicália",
+   "Poema-processo"
+  ]
+ },
+ {
+  "id": "summary-literatura-prosa-brasileira-1960-1980",
+  "template": "compare",
+  "title": "Prosa 1960–1980",
+  "items": [
+   "Rubem Fonseca",
+   "Lygia Fagundes Telles",
+   "Dalton Trevisan"
+  ]
+ },
+ {
+  "id": "summary-literatura-literatura-lusofona-contemporanea",
+  "template": "compare",
+  "title": "Literatura lusófona",
+  "items": [
+   "Mia Couto",
+   "Pepetela",
+   "Saramago"
+  ]
+ },
+ {
+  "id": "summary-literatura-poesia-brasileira-contemporanea",
+  "template": "compare",
+  "title": "Poesia contemporânea",
+  "items": [
+   "Ana Martins Marques",
+   "Paulo Henriques Britto",
+   "Conceição Evaristo"
+  ]
+ },
+ {
+  "id": "summary-literatura-prosa-brasileira-contemporanea",
+  "template": "compare",
+  "title": "Prosa contemporânea",
+  "items": [
+   "Milton Hatoum",
+   "Conceição Evaristo",
+   "Itamar Vieira Junior"
+  ]
+ },
+ {
+  "id": "summary-literatura-artes-plasticas-brasileiras",
+  "template": "timeline",
+  "title": "Artes plásticas",
+  "items": [
+   "Séc. XVIII",
+   "1928",
+   "1950s",
+   "1960s"
+  ]
+ },
+ {
+  "id": "summary-literatura-teatro-brasileiro",
+  "template": "timeline",
+  "title": "Teatro brasileiro",
+  "items": [
+   "1943",
+   "1955",
+   "1958",
+   "1960s"
+  ]
+ },
+ {
+  "id": "summary-literatura-cancioneiro-popular-brasileiro",
+  "template": "timeline",
+  "title": "Canção popular",
+  "items": [
+   "1917",
+   "1958",
+   "1968",
+   "1980s"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+  "template": "compare",
+  "title": "Fatores de textualidade",
+  "items": [
+   "Coesão",
+   "Coerência",
+   "Intencionalidade",
+   "Aceitabilidade",
+   "Situacionalidade",
+   "Informatividade"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-os-dois-niveis-da-leitura",
+  "template": "pyramid",
+  "title": "Níveis de leitura",
+  "items": [
+   "Inferência",
+   "Explícito"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-intertextualidade-e-interdiscursividade",
+  "template": "flows",
+  "title": "Diálogo entre textos",
+  "items": [
+   "Texto-fonte",
+   "Paródia",
+   "Paráfrase",
+   "Citação"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-generos-textuais",
+  "template": "compare",
+  "title": "Gêneros textuais",
+  "items": [
+   "Notícia",
+   "Editorial",
+   "Crônica",
+   "Charge"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao",
+  "template": "compare",
+  "title": "Gêneros narrativos",
+  "items": [
+   "Conto",
+   "Crônica",
+   "Romance",
+   "Fábula"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura",
+  "template": "compare",
+  "title": "Ler imagens",
+  "items": [
+   "Composição",
+   "Cor",
+   "Contexto"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-funcoes-da-linguagem",
+  "template": "flows",
+  "title": "Funções (Jakobson)",
+  "items": [
+   "Emissor",
+   "Receptor",
+   "Referente",
+   "Mensagem",
+   "Canal",
+   "Código"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria",
+  "template": "concentric",
+  "title": "Função poética",
+  "items": [
+   "Mensagem",
+   "Som",
+   "Ritmo",
+   "Imagem"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-figuras-de-linguagem",
+  "template": "compare",
+  "title": "Figuras de linguagem",
+  "items": [
+   "Metáfora",
+   "Metonímia",
+   "Ironia",
+   "Hipérbole",
+   "Antítese"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-modelos-de-leitura-e-distorcoes-interpretativas",
+  "template": "mean",
+  "title": "Leitura adequada",
+  "items": [
+   "Redução",
+   "Adequada",
+   "Extrapolação"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-leitura-de-textos-comicos",
+  "template": "flows",
+  "title": "Mecanismo do humor",
+  "items": [
+   "Expectativa",
+   "Quebra",
+   "Efeito"
+  ]
+ },
+ {
+  "id": "summary-entendimento-de-texto-tecnologias-digitais-da-informacao-e-comunicacao-tdic-impactos-sociais",
+  "template": "flows",
+  "title": "TDIC",
+  "items": [
+   "Acesso",
+   "Plataformas",
+   "Desinformação",
+   "Letramento"
+  ]
+ }
+]
