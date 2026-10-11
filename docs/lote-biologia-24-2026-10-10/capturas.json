@@ -1,0 +1,150 @@
+[
+  {
+    "file": "capturas/01-composicao-quimica-celular-carboidratos-e-lipidios.jpg",
+    "id": "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "6",
+    "reading": "6 pares no recorte por fileira; cabeças para os dois meios aquosos, caudas voltadas uma à outra.",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/02-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural.jpg",
+    "id": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "12",
+    "reading": "12 resíduos por trecho esquemático: folha beta, cadeia estendida. Tracejado: interações entre trechos.",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/03-divisao-celular.jpg",
+    "id": "summary-biologia-divisao-celular",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "2",
+    "reading": "Antes: 4 cromossomos duplicados, 8 cromátides. Cada filha: 4 cromossomos simples. Separação 100%.",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/04-coracao-e-vasos-sanguineos.jpg",
+    "id": "summary-biologia-coracao-e-vasos-sanguineos",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "32",
+    "reading": "Separação visual 32. Corpo → AD → VD → Pulmões → AE → VE → Corpo. Percurso funcional 100%; azul: menor oxigenação, vinho: maior.",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/05-citoplasma-estrutura-e-componentes-i.jpg",
+    "id": "summary-biologia-citoplasma-estrutura-e-componentes-i",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "4",
+    "reading": "4 cisternas ilustrativas; proteína pela via secretora 100%: RER → Golgi → vesícula → exocitose.",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/06-fisiologia-da-excrecao.jpg",
+    "id": "summary-biologia-fisiologia-da-excrecao",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "45",
+    "reading": "Profundidade visual da alça 45; filtrado no percurso 100%. Filtração no corpúsculo; setas laterais: reabsorção (sai) e secreção (entra).",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/07-fisiologia-da-coordenacao-nervosa-i.jpg",
+    "id": "summary-biologia-fisiologia-da-coordenacao-nervosa-i",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "4",
+    "reading": "4 internódios ilustrativos; sinal 100%. Regeneração do potencial nos nós, corrente local entre eles.",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/08-fisiologia-vegetal-transporte-no-floema.jpg",
+    "id": "summary-biologia-fisiologia-vegetal-transporte-no-floema",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "2",
+    "reading": "Diferença relativa de pressão 2; fonte → dreno, percurso 100%. Valor não fornece vazão física.",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/09-alelos-multiplos-e-heranca-dos-grupos-sanguineos-celular.jpg",
+    "id": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/10-fisiologia-da-respiracao-celular.jpg",
+    "id": "summary-biologia-fisiologia-da-respiracao",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/11-proteinas-enzimas-celular.jpg",
+    "id": "summary-biologia-proteinas-enzimas",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  },
+  {
+    "file": "capturas/12-traqueofitas-transpiracao-e-reposicao-rapida-de-agua-celular.jpg",
+    "id": "summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "build_sha256": "36f987fa5b26085753a7ededa537903127fa9e51f838f7330b9f67edd4e4b40c"
+  }
+]

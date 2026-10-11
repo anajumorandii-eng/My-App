@@ -1,0 +1,319 @@
+{
+  "base": "b09428b9e3c9491b7bfee49539ea7cf2f008e6ed",
+  "source": "src/data/deepSummaryContent.json",
+  "source_sha256": "acfa9f883a2d6b1371eed67b9efbff5e29be713c717895adbeb40b6054c55e6b",
+  "chapters": [
+    {
+      "id": "summary-biologia-origem-da-vida-e-as-primeiras-celulas",
+      "subject": "Biologia",
+      "topic": "Origem da Vida e as Primeiras Células",
+      "sections": [
+        "Das ideias antigas à hipótese atual",
+        "A hipótese de Oparin e Haldane",
+        "Dos coacervados às primeiras células",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "b84f6e2e5e1ddec69963a2dd49f89a9622758c1978c2488c1dba5d3f83f070b0"
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios",
+      "subject": "Biologia",
+      "topic": "Composição Química Celular: Carboidratos e Lipídios",
+      "sections": [
+        "Carboidratos",
+        "Reserva e estrutura",
+        "Lipídios",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "bf76487dc8cbabe10d10d0e6c5784189b513cf3360144954bc5e4488bb0cad05"
+    },
+    {
+      "id": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural",
+      "subject": "Biologia",
+      "topic": "Composição Química Celular: Proteínas e sua Função Estrutural",
+      "sections": [
+        "Aminoácidos e ligação peptídica",
+        "Os quatro níveis de estrutura",
+        "Funções das proteínas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "cad68365e48e1a35aa771f766c2ea2f4579576e87363cc86c5a66bc77f7975f6"
+    },
+    {
+      "id": "summary-biologia-bioenergetica-fermentacao-e-respiracao",
+      "subject": "Biologia",
+      "topic": "Bioenergética: Fermentação e Respiração",
+      "sections": [
+        "Obter energia utilizável",
+        "Respiração aeróbia",
+        "Fermentação como alternativa",
+        "O que não confundir",
+        "Pratique e confira"
+      ],
+      "sha256": "53f1e720eca6dcf64c2beef705fd84435f5e7a2fed41917b380840b777050273"
+    },
+    {
+      "id": "summary-biologia-divisao-celular",
+      "subject": "Biologia",
+      "topic": "Divisão Celular",
+      "sections": [
+        "Continuidade da informação",
+        "Mitose e ciclo celular",
+        "Meiose e variabilidade",
+        "Erros de prova",
+        "Pratique e confira"
+      ],
+      "sha256": "f3da0eea18f6415965d621926eab052efd11efc87032af8467e5c2d87601f5c6"
+    },
+    {
+      "id": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos",
+      "subject": "Biologia",
+      "topic": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
+      "sections": [
+        "Mais de dois alelos na população",
+        "O sistema ABO",
+        "Fator Rh e eritroblastose",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "e1a23df7bd77232a9c37f72b0e1e8abc4fcc1c24347a8f2bf984b59d3b7347da"
+    },
+    {
+      "id": "summary-biologia-embriologia-animal",
+      "subject": "Biologia",
+      "topic": "Embriologia Animal",
+      "sections": [
+        "Da fecundação à gástrula",
+        "Folhetos embrionários",
+        "Anexos embrionários",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "7809e94538bb19548d4e5a11242f11b5d1b7600cd6b5214686d9fd92377be831"
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-digestao",
+      "subject": "Biologia",
+      "topic": "Fisiologia da Digestão",
+      "sections": [
+        "O trajeto e as enzimas",
+        "Bile e absorção",
+        "Intestino grosso e regulação",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "8a8168482c297c87149162e391feaa65a3a7dee58e6714ec45963c7b92583a75"
+    },
+    {
+      "id": "summary-biologia-sangue-e-imunologia",
+      "subject": "Biologia",
+      "topic": "Sangue e Imunologia",
+      "sections": [
+        "Transporte e defesa",
+        "Resposta imune",
+        "Vacina e soro",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "b48631969cae1b7ce86c70450d1aebbfec86cabe726a41ee341f0c0d7380b0d1"
+    },
+    {
+      "id": "summary-biologia-coracao-e-vasos-sanguineos",
+      "subject": "Biologia",
+      "topic": "Coração e Vasos Sanguíneos",
+      "sections": [
+        "Circulação humana",
+        "Vasos e pressão",
+        "Ciclo cardíaco e controle",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "272eeac76bbdcbdff46fb0793e4088cb27cc4f71fee51d33d0d5a220cf451cbd"
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-respiracao",
+      "subject": "Biologia",
+      "topic": "Fisiologia da Respiração",
+      "sections": [
+        "Ventilação e trocas",
+        "Transporte dos gases",
+        "Controle respiratório",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "c8f2be6e83100d9fcee929eeea3880afe39b8b3e72c8423d2072942c31472ced"
+    },
+    {
+      "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+      "subject": "Biologia",
+      "topic": "Reprodução Humana e Métodos Contraceptivos",
+      "sections": [
+        "Anatomia e gametogênese",
+        "Ciclo menstrual",
+        "Métodos contraceptivos",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "7e3f8e64874b61821ab46f124ed615f862fed6ee0fc35b7a8202b4cfb45fcd0e"
+    },
+    {
+      "id": "summary-biologia-histologia-e-morfologia-vegetal",
+      "subject": "Biologia",
+      "topic": "Histologia e Morfologia Vegetal",
+      "sections": [
+        "Tecidos meristemáticos",
+        "Tecidos de revestimento e sustentação",
+        "Tecidos condutores",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "0fb5197141c67510dd4f461526702cd01d7fbc8a8685456be85a4be612334ffa"
+    },
+    {
+      "id": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas",
+      "subject": "Biologia",
+      "topic": "Morfofisiologia Vegetal: Caules e Folhas",
+      "sections": [
+        "Funções e tipos de caule",
+        "A folha e seus tecidos",
+        "Adaptações",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "a3e29e2a432fa93a4960b75065904e91ed7f6340d9a6e38bb0039dd10a371461"
+    },
+    {
+      "id": "summary-biologia-fisiologia-vegetal-transporte-no-floema",
+      "subject": "Biologia",
+      "topic": "Fisiologia Vegetal: Transporte no Floema",
+      "sections": [
+        "A hipótese do fluxo por pressão",
+        "Fontes e drenos",
+        "Diferenças em relação ao xilema",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "aaa0af1379cd954c69de7a43ba2ecb5fe2da862e5f8fecd6f60087ef098e1adb"
+    },
+    {
+      "id": "summary-biologia-fisiologia-vegetal-hormonios-vegetais",
+      "subject": "Biologia",
+      "topic": "Fisiologia Vegetal: Hormônios Vegetais",
+      "sections": [
+        "Auxinas",
+        "Giberelinas e citocininas",
+        "Etileno e ácido abscísico",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "f6367cb629c74f1d1752be96c23f1fcb373e38216d10d64922d6c1299a8fbd50"
+    },
+    {
+      "id": "summary-biologia-citoplasma-estrutura-e-componentes-i",
+      "subject": "Biologia",
+      "topic": "Citoplasma: Estrutura e Componentes I",
+      "sections": [
+        "Membrana plasmática e transporte",
+        "Osmose e meios",
+        "Citoplasma e organelas de síntese",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "5904a5ac49dabe53062b07dde35c224183719b68cdba7ab8382f6c017af8b230"
+    },
+    {
+      "id": "summary-biologia-citoplasma-estrutura-e-componentes-ii",
+      "subject": "Biologia",
+      "topic": "Citoplasma: Estrutura e Componentes II",
+      "sections": [
+        "Mitocôndrias e cloroplastos",
+        "Lisossomos e peroxissomos",
+        "Estruturas de movimento e sustentação",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "72e6bc656f85984d2ce50b4145e603a86e39dc748f5eccb054ee4857f7a40f77"
+    },
+    {
+      "id": "summary-biologia-proteinas-enzimas",
+      "subject": "Biologia",
+      "topic": "Proteínas: Enzimas",
+      "sections": [
+        "Catalisadores biológicos",
+        "Modelo de ação",
+        "Temperatura e pH",
+        "Inibição e regulação",
+        "Pratique e confira"
+      ],
+      "sha256": "78f40d44aae1bbb7636be4677767779a64e58884b347d25f12a20085191e6c4d"
+    },
+    {
+      "id": "summary-biologia-mutacoes-cromossomicas-e-gametogenese",
+      "subject": "Biologia",
+      "topic": "Mutações Cromossômicas e Gametogênese",
+      "sections": [
+        "Tipos de mutação cromossômica",
+        "Gametogênese",
+        "Síndromes e cariótipo",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "a38cfe79c093a3b6933e46419489235c141d0820e5be9a22969833852ac4eda0"
+    },
+    {
+      "id": "summary-biologia-biotecnologia",
+      "subject": "Biologia",
+      "topic": "Biotecnologia",
+      "sections": [
+        "Ferramentas do DNA recombinante",
+        "PCR, sequenciamento e identificação",
+        "Transgênicos, clonagem e edição gênica",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "12a122ed58bfa6dcbb0ed0fd8392786d0260afa6dda00a4327c75dd50b8948a1"
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-excrecao",
+      "subject": "Biologia",
+      "topic": "Fisiologia da Excreção",
+      "sections": [
+        "Néfron e formação da urina",
+        "Controle hormonal",
+        "Excretas nitrogenadas",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "4dc366993c1fe17c9b737bfc6a71bd719de3e96e68027b6b9c453c907cf0dd44"
+    },
+    {
+      "id": "summary-biologia-fisiologia-da-coordenacao-nervosa-i",
+      "subject": "Biologia",
+      "topic": "Fisiologia da Coordenação Nervosa I",
+      "sections": [
+        "Neurônio e impulso",
+        "Bainha de mielina",
+        "Sinapse",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "9648cecccc2db31c1441a699191f0249c4d8a5bf1152c0df14ee06e3464e842b"
+    },
+    {
+      "id": "summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua",
+      "subject": "Biologia",
+      "topic": "Traqueófitas: Transpiração e Reposição Rápida de Água",
+      "sections": [
+        "A teoria da tensão-coesão",
+        "Controle estomático",
+        "Pressão radicular e gutação",
+        "Pegadinhas frequentes",
+        "Pratique e confira"
+      ],
+      "sha256": "be553e4c844c95924d1c52579c33a212b37bb51db1bd6a4a60b7d26e68af9d3a"
+    }
+  ]
+}

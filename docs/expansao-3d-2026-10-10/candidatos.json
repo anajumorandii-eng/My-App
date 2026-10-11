@@ -23,7 +23,7 @@
       "subject": "Biologia",
       "topic": "Origem da Vida e as Primeiras Células",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -31,7 +31,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
@@ -54,7 +55,7 @@
       "subject": "Biologia",
       "topic": "Composição Química Celular: Carboidratos e Lipídios",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -62,14 +63,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural",
       "subject": "Biologia",
       "topic": "Composição Química Celular: Proteínas e sua Função Estrutural",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -77,7 +79,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-membranas-celulares",
@@ -115,7 +118,7 @@
       "subject": "Biologia",
       "topic": "Bioenergética: Fermentação e Respiração",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -123,7 +126,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-acidos-nucleicos",
@@ -145,7 +149,7 @@
       "subject": "Biologia",
       "topic": "Divisão Celular",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "board",
       "required": [
         "objeto próprio do conteúdo",
@@ -153,14 +157,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos",
       "subject": "Biologia",
       "topic": "Alelos Múltiplos e Herança dos Grupos Sanguíneos",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -168,14 +173,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-embriologia-animal",
       "subject": "Biologia",
       "topic": "Embriologia Animal",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -183,14 +189,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-fisiologia-da-digestao",
       "subject": "Biologia",
       "topic": "Fisiologia da Digestão",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -198,14 +205,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-sangue-e-imunologia",
       "subject": "Biologia",
       "topic": "Sangue e Imunologia",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "board",
       "required": [
         "objeto próprio do conteúdo",
@@ -213,14 +221,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-coracao-e-vasos-sanguineos",
       "subject": "Biologia",
       "topic": "Coração e Vasos Sanguíneos",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "board",
       "required": [
         "objeto próprio do conteúdo",
@@ -228,14 +237,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-fisiologia-da-respiracao",
       "subject": "Biologia",
       "topic": "Fisiologia da Respiração",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -243,14 +253,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
       "subject": "Biologia",
       "topic": "Reprodução Humana e Métodos Contraceptivos",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -258,14 +269,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-histologia-e-morfologia-vegetal",
       "subject": "Biologia",
       "topic": "Histologia e Morfologia Vegetal",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -273,14 +285,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas",
       "subject": "Biologia",
       "topic": "Morfofisiologia Vegetal: Caules e Folhas",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -288,14 +301,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-fisiologia-vegetal-transporte-no-floema",
       "subject": "Biologia",
       "topic": "Fisiologia Vegetal: Transporte no Floema",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "scene",
       "required": [
         "objeto próprio do conteúdo",
@@ -303,14 +317,15 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-biologia-fisiologia-vegetal-hormonios-vegetais",
       "subject": "Biologia",
       "topic": "Fisiologia Vegetal: Hormônios Vegetais",
       "reason": "Forma, organização e percurso biológico",
-      "status": "necessidade-a-validar-por-ID",
+      "status": "modelo-espacial-implementado-revisao-editorial-pendente",
       "current_artifact": "instrument",
       "required": [
         "objeto próprio do conteúdo",
@@ -318,7 +333,8 @@
         "alternativa por teclado",
         "movimento reduzido completo",
         "conferência geométrica e pedagógica"
-      ]
+      ],
+      "continuation": "docs/lote-biologia-24-2026-10-10/README.md"
     },
     {
       "id": "summary-fisica-o-movimento-circular",
