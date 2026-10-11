@@ -1,0 +1,319 @@
+[
+  {
+    "file": "capturas/01-summary-geografia-sistema-de-fusos-horarios.jpg",
+    "id": "summary-geografia-sistema-de-fusos-horarios",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "-45",
+    "reading": "Longitude -45°: UTC-3 no sistema teórico; leste adianta, oeste atrasa. 360° ÷ 24 h = 15°/h.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/02-summary-geografia-linguagem-cartografica.jpg",
+    "id": "summary-geografia-linguagem-cartografica",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "40",
+    "reading": "Curva destacada na altitude 40 do modelo; raio 42. Neste morro, subir reduz o raio; curvas não se cruzam.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/03-summary-geografia-projecoes-cartograficas.jpg",
+    "id": "summary-geografia-projecoes-cartograficas",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "45",
+    "reading": "Latitude 45°; ordenada projetada 0,88 radianos de referência. y = ln tan(π/4 + φ/2): amplia a separação dos paralelos perto dos polos.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/04-summary-geografia-cartografia-digital.jpg",
+    "id": "summary-geografia-cartografia-digital",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "15",
+    "reading": "Camadas separadas visualmente por 15: terreno, rede e observações. Linhas de alinhamento mantêm as coordenadas x/z ao separar as camadas.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/05-summary-geografia-representacoes-graficas-e-cartograficas.jpg",
+    "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "5",
+    "reading": "Regiões fictícias A = 3, B = 6, C = 5; barra C menor que B. Base representa território; altura representa valor, não altitude.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/06-summary-geografia-dinamica-climatica.jpg",
+    "id": "summary-geografia-dinamica-climatica",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "50",
+    "reading": "Barreira de altura visual 50; percurso 100%. Ar sobe a barlavento, precipita e desce a sotavento; não é chuva calculada.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/07-summary-geografia-clima-mundial.jpg",
+    "id": "summary-geografia-clima-mundial",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "30",
+    "reading": "Referência 30° N: médias latitudes / Ferrel. Circulação média simplificada em três células por hemisfério; não determina sozinha um tipo climático.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/08-summary-geografia-geomorfologia-mundial.jpg",
+    "id": "summary-geografia-geomorfologia-mundial",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "10",
+    "reading": "Divergência: placas se afastam, ascensão no limite. Deslocamento máximo visual 10; etapa 100%.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/09-summary-geografia-biogeografia-mundial.jpg",
+    "id": "summary-geografia-biogeografia-mundial",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "5",
+    "reading": "5 indivíduos simbólicos; estratos arbóreos e copas. Quantidade ilustrativa, sem inferir riqueza de espécies ou delimitar um bioma.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/10-summary-geografia-agua-na-superficie-terrestre.jpg",
+    "id": "summary-geografia-agua-na-superficie-terrestre",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "25",
+    "reading": "Aquífero em profundidade visual 25; afluentes convergem para o canal principal; etapa 100%. Modelo sem vazão calculada.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/11-summary-geografia-geologia-e-geomorfologia.jpg",
+    "id": "summary-geografia-geologia-e-geomorfologia",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "60",
+    "reading": "Abertura visual 60°; crosta, manto, núcleo externo e interno. Raios exagerados: não medir profundidades pela figura.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/12-summary-geografia-relevo-brasileiro.jpg",
+    "id": "summary-geografia-relevo-brasileiro",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "50",
+    "reading": "Planalto com altura visual 50; depressão rebaixada em relação ao entorno; planície com deposição. Altitude isolada não basta para classificar uma unidade.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/13-summary-geografia-climatologia-do-brasil.jpg",
+    "id": "summary-geografia-climatologia-do-brasil",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "50",
+    "reading": "Distância visual costa–interior 50; transporte conceitual de umidade oceânica; etapa 100%. Sem previsão de chuva ou posição real de massas de ar.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/14-summary-geografia-biogeografia-do-brasil-i.jpg",
+    "id": "summary-geografia-biogeografia-do-brasil-i",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "5",
+    "reading": "5 indivíduos simbólicos; estratos arbóreos e copas. Quantidade ilustrativa, sem inferir riqueza de espécies ou delimitar um bioma.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/15-summary-geografia-biogeografia-do-brasil-ii.jpg",
+    "id": "summary-geografia-biogeografia-do-brasil-ii",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "10",
+    "reading": "Nível da água visual 10; Pantanal: planície sujeita a pulso de inundação. Sem dado hidrológico real.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/16-summary-geografia-dominios-morfoclimaticos.jpg",
+    "id": "summary-geografia-dominios-morfoclimaticos",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "30",
+    "reading": "Amplitude visual 30; mares de morros: relevo mamelonar e contexto úmido. Recorte não equivale apenas à vegetação e não delimita território.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/17-summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais.jpg",
+    "id": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "2",
+    "reading": "Q = 2 nC; em r = 1 m, V ≈ 18 V. Campo sai de Q e é perpendicular às superfícies equipotenciais.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/18-summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre.jpg",
+    "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "3",
+    "reading": "3 linhas por face ilustrada: fora N → S; dentro S → N. Linhas fechadas, sem monopolo isolado; contagem de linhas não mede intensidade.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/19-summary-fisica-inducao-eletromagnetica-lei-de-lenz.jpg",
+    "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "2",
+    "reading": "Variação relativa 2; fluxo externo +z aumenta; B induzido −z, corrente horária, visto de +z. Etapa 100%.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/20-bio-ecologia-invasoras-controle-biologico.jpg",
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "5",
+    "reading": "5 invasoras simbólicas; agente alcança a invasora no exemplo seletivo; etapa 100%. Sem previsão de população ou recomendação de introdução.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/21-summary-quimica-quimica-inorganica.jpg",
+    "id": "summary-quimica-quimica-inorganica",
+    "viewport": {
+      "width": 1440,
+      "height": 1800
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "parameter": "3",
+    "reading": "3 unidades de exemplo; H₃O⁺ e Cl⁻: ionização de HCl em água; etapa visual 100%. Separação entre símbolos não mede concentração ou distância real.",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/22-summary-geografia-biogeografia-do-brasil-ii-celular.jpg",
+    "id": "summary-geografia-biogeografia-do-brasil-ii",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/23-summary-geografia-projecoes-cartograficas-celular.jpg",
+    "id": "summary-geografia-projecoes-cartograficas",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/24-summary-fisica-inducao-eletromagnetica-lei-de-lenz-celular.jpg",
+    "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "light",
+    "motion": "reduce",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  },
+  {
+    "file": "capturas/25-bio-ecologia-invasoras-controle-biologico-celular.jpg",
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "viewport": {
+      "width": 360,
+      "height": 1100
+    },
+    "theme": "dark",
+    "motion": "reduce",
+    "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63"
+  }
+]

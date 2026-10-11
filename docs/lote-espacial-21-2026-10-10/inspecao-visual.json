@@ -1,0 +1,64 @@
+{
+  "scope": "legibilidade-e-composicao-das-capturas; nao-e-aprovacao-editorial-ou-pedagogica",
+  "build_sha256": "42d26dbefc1756561c488099621d6c60e0dd6bd88cdcab09caee6f42af085e63",
+  "desktop": {
+    "width": 1440,
+    "height": 1800,
+    "theme": "dark",
+    "motion": "reduce",
+    "ids": [
+      "summary-geografia-sistema-de-fusos-horarios",
+      "summary-geografia-linguagem-cartografica",
+      "summary-geografia-projecoes-cartograficas",
+      "summary-geografia-cartografia-digital",
+      "summary-geografia-representacoes-graficas-e-cartograficas",
+      "summary-geografia-dinamica-climatica",
+      "summary-geografia-clima-mundial",
+      "summary-geografia-geomorfologia-mundial",
+      "summary-geografia-biogeografia-mundial",
+      "summary-geografia-agua-na-superficie-terrestre",
+      "summary-geografia-geologia-e-geomorfologia",
+      "summary-geografia-relevo-brasileiro",
+      "summary-geografia-climatologia-do-brasil",
+      "summary-geografia-biogeografia-do-brasil-i",
+      "summary-geografia-biogeografia-do-brasil-ii",
+      "summary-geografia-dominios-morfoclimaticos",
+      "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
+      "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+      "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+      "bio-ecologia-invasoras-controle-biologico",
+      "summary-quimica-quimica-inorganica"
+    ]
+  },
+  "mobile": [
+    {
+      "id": "summary-geografia-biogeografia-do-brasil-ii",
+      "width": 360,
+      "height": 1100,
+      "theme": "light",
+      "motion": "reduce"
+    },
+    {
+      "id": "summary-geografia-projecoes-cartograficas",
+      "width": 360,
+      "height": 1100,
+      "theme": "dark",
+      "motion": "reduce"
+    },
+    {
+      "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+      "width": 360,
+      "height": 1100,
+      "theme": "light",
+      "motion": "reduce"
+    },
+    {
+      "id": "bio-ecologia-invasoras-controle-biologico",
+      "width": 360,
+      "height": 1100,
+      "theme": "dark",
+      "motion": "reduce"
+    }
+  ],
+  "findings": "Capturas dos 21 cards e quatro configuracoes de celular inspecionadas; controles e leituras legiveis, sem rolagem horizontal na matriz automatizada. Capturas de celular sao recortes do viewport, com cabecalho de foco e conteudo que continua abaixo."
+}

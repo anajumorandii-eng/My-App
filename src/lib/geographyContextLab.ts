@@ -23,11 +23,8 @@ export type GeographyContextId =
   | 'world-electricity-sources'
   | 'fossil-biofuels-brazil'
   | 'brazil-industrial-command'
-  // Biogeografia do Brasil I e II compartilham hoje a mesma nota genérica em
-  // `geographyInteractiveSummaries.ts` (a função `note()` casa os dois títulos
-  // na mesma condição `t.includes('biogeografia')`). Sem conteúdo que
-  // distinga I de II, as duas entradas usam o mesmo modelo de três fatores —
-  // isso é fiel ao que o currículo hoje contém, não uma cópia por preguiça.
+  // Contextos históricos de fatores gerais. Os capítulos deepSummary atuais
+  // distinguem I/II; seus novos modelos espaciais seguem esses recortes próprios.
   | 'brazil-biogeography-i'
   | 'brazil-biogeography-ii'
   | 'brazilian-environmental-policy';
@@ -287,11 +284,7 @@ export const GEOGRAPHY_CONTEXTS: Record<GeographyContextId, GeographyContext> = 
       { label: 'Histórico', location: 'Evolução e barreiras', observation: 'Compare como história evolutiva e barreiras geográficas separaram ou aproximaram espécies ao longo do tempo.', conclusion: 'A distribuição atual carrega heranças de processos que já não estão mais ativos.' },
       { label: 'Humano', location: 'Ação humana', observation: 'Observe como uso do solo, desmatamento e urbanização alteram limites e composição de biomas.', conclusion: 'Biomas combinam fisionomia e processo em escala ampla — natureza e ação humana, juntas.' },
     ],
-    // I e II têm hoje a mesma nota-fonte (ver geographyInteractiveSummaries.ts);
-    // por isso o modelo de três fatores se repete de propósito, em vez de
-    // inventar uma distinção entre as duas metades que o currículo ainda não
-    // registrou.
-    caution: 'Esquema conceitual: não lista os biomas brasileiros nem seus limites reais. O modelo se repete em I e II porque as duas partes ainda compartilham a mesma nota-fonte no currículo.',
+    caution: 'Esquema geral de fatores de distribuição. O capítulo II e seu modelo espacial tratam Pantanal, Pampa e formações litorâneas; este contexto não delimita biomas.',
   },
   'brazilian-environmental-policy': {
     chapterId: 'summary-geografia-politicas-ambientais-brasileiras',
