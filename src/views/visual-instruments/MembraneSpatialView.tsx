@@ -26,7 +26,7 @@ export function MembraneSpatialView({ pump, time }: { pump: boolean; time: numbe
     <input id={id + '-yaw'} type="range" min="0" max="360" value={rotation.yaw} onChange={event => rotation.setYaw(Number(event.target.value))} />
     <label className="vs-science-rotation" htmlFor={id + '-pitch'}>Inclinar a vista <output>{Math.round(rotation.pitch)}°</output></label>
     <input id={id + '-pitch'} type="range" min="-50" max="65" value={rotation.pitch} onChange={event => rotation.setPitch(Number(event.target.value))} />
-    <div className="vs-science-choices"><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
+    <div className="vs-science-choices"><button type="button" aria-pressed={rotation.spinning} onClick={rotation.toggleSpin}>{rotation.spinning ? 'Pausar giro' : 'Girar o modelo'}</button><button type="button" onClick={rotation.reset}>Restaurar vista</button></div>
     <p className="vs-science-caption">Cabeças verdes: região hidrofílica; duas caudas vinho: região hidrofóbica. Contorno azul: proteína transmembrana. Use o percurso e o modo de transporte do laboratório. Arraste ou use setas e Home. Câmera e estrutura podem girar; exterior e citoplasma são os lados originais do modelo, não posições fixas na tela. Formas e tamanhos esquemáticos; o contorno não reproduz a estrutura de uma ATPase nem suas mudanças de conformação.</p>
   </section>;
 }

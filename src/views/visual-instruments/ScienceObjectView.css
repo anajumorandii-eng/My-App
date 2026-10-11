@@ -110,3 +110,14 @@
 .vs-spatial-lab .vs-science-rotation { color: var(--vs-dim); margin-top: 10px; }
 @media(max-width:560px) { .vs-spatial-lab { padding: 18px; border-radius: 16px; } }
 .vs-spatial-lab input[type=range][style*='--fill']::-webkit-slider-runnable-track { background: linear-gradient(90deg, var(--vs-burgundy) var(--fill), color-mix(in srgb, var(--vs-line) 80%, transparent) var(--fill)); }
+/* Visualizações 3D próprias (moléculas, sólidos, campos, globo) recebem o mesmo palco de estúdio,
+   para não parecerem de outro produto ao lado das que usam o SpatialStage. */
+svg.vs-science-object:not(.vs-spatial-stage) {
+  border-radius: 16px;
+  background: radial-gradient(ellipse 80% 70% at 42% 30%, var(--vs-paper-strong) 0%, var(--vs-paper) 62%, color-mix(in srgb, var(--vs-line) 55%, var(--vs-paper)) 100%);
+  box-shadow: 0 0 0 1px rgba(42,33,24,.08), 0 2px 4px rgba(42,33,24,.05), 0 18px 40px -18px rgba(42,33,24,.35);
+}
+.vs-science-card:not(.vs-spatial-lab) { border-radius: 20px; box-shadow: 0 1px 2px rgba(42,33,24,.06), 0 12px 32px -12px rgba(42,33,24,.18); }
+.vs-science-card .vs-science-choices button { transition-property: transform, background-color, box-shadow; transition-duration: 150ms; transition-timing-function: ease-out; }
+.vs-science-card .vs-science-choices button:active { transform: scale(.97); }
+.vs-science-card .vs-science-choices button[aria-pressed=true] { box-shadow: 0 6px 14px -8px var(--vs-burgundy); }

@@ -96,7 +96,10 @@ export function spatialSolid(id: SolidConfigId, v: Record<string, number>, shape
 
 export function projectSpatialModel(model: SpatialModel, yaw: number, pitch: number) {
   const transform = (p: SpatialPoint) => rotateSpatialPoint(p, yaw, pitch);
-  const screen = ([x, y]: SpatialPoint): [number, number] => [160 + x * model.scale, 150 - y * model.scale];
+  // Enquadra pelo raio do sólido (independe da câmera): com escala fixa, sólidos pequenos ocupavam um quinto do quadro.
+  const radius = Math.max(1e-6, ...model.faces.flatMap(f => f.points.map(p => Math.hypot(...p))));
+  const scale = Math.min(model.scale * 2.4, 112 / radius);
+  const screen = ([x, y]: SpatialPoint): [number, number] => [160 + x * scale, 150 - y * scale];
   const faces = model.faces.map((face, index) => {
     const points = face.points.map(transform);
     const depth = points.reduce((sum, p) => sum + p[2], 0) / points.length;
@@ -108,5 +111,5 @@ export function projectSpatialModel(model: SpatialModel, yaw: number, pitch: num
     return { index, kind: face.kind, points: points.map(screen), depth, light };
   }).sort((a, b) => a.depth - b.depth);
   const lines = model.lines.map(line => ({ ...line, from: screen(transform(line.from)), to: screen(transform(line.to)) }));
-  return { faces, lines };
+  return { faces, lines, groundY: 150 + radius * scale * .92 };
 }

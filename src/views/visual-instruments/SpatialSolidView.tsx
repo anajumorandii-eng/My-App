@@ -17,10 +17,10 @@ export function SpatialSolidView({ id, values, shape, label }: {
   const projected = useMemo(() => projectSpatialModel(model, yaw, pitch), [model, yaw, pitch]);
   return (
     <div className="vs-spatial-solid">
-      <svg {...rotation.interaction} className="vs-plane vs-solid vs-solid-spatial" viewBox="0 0 320 300" role="img" data-view-yaw={yaw} data-view-pitch={pitch}
+      <svg {...rotation.interaction} className="vs-plane vs-solid vs-solid-spatial vs-science-object" viewBox="0 0 320 300" role="img" data-view-yaw={yaw} data-view-pitch={pitch}
         aria-label={label + '. Objeto tridimensional: rotação ' + Math.round(yaw) + ' graus, ângulo vertical ' + Math.round(pitch) + ' graus.'}
       >
-        <ellipse className="vs-solid-ground" cx="160" cy="262" rx="90" ry="13" />
+        <ellipse className="vs-solid-ground" cx="160" cy={Math.min(284, projected.groundY)} rx="96" ry="12" />
         {projected.faces.map(face => <polygon key={face.index} className="vs-solid-face" data-kind={face.kind}
           points={face.points.map(p => p.map(v => v.toFixed(2)).join(',')).join(' ')}
           style={{ '--face-light': face.light } as React.CSSProperties} />)}
@@ -34,6 +34,7 @@ export function SpatialSolidView({ id, values, shape, label }: {
         <input id={id + '-yaw'} type="range" min="0" max="360" step="1" value={Math.round(yaw)} onChange={event => setYaw(Number(event.target.value))} />
         <label htmlFor={id + '-pitch'}>Inclinar a vista <output>{Math.round(pitch)}°</output></label>
         <input id={id + '-pitch'} type="range" min="-50" max="65" step="1" value={Math.round(pitch)} onChange={event => setPitch(Number(event.target.value))} />
+        <button type="button" aria-pressed={rotation.spinning} onClick={rotation.toggleSpin}>{rotation.spinning ? 'Pausar giro' : 'Girar o modelo'}</button>
         <button type="button" onClick={reset}><RotateCcw aria-hidden="true" />Restaurar vista</button>
       </div>
       <p className="vs-instrument-dica">Arraste o objeto para ver outras faces. Com o desenho em foco, use as setas e Home. As medidas permanecem iguais.</p>
