@@ -4,6 +4,7 @@ import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from '../visual-boards/types';
 import { FAMILIES, num, samplePoints, type Family, type FamilyId, type FamilyParam } from '../../lib/curveFamilies';
+import { chapterFocus } from '../../lib/mathChapterFocus';
 
 const mostrar = (p: FamilyParam, v: number) => p.valueLabels?.[v] ?? num(v);
 
@@ -232,6 +233,7 @@ export function cartesianInstrument(familyId: FamilyId) {
 
   return function CartesianBoard(props: BoardProps) {
     const par = boardPair(props);
+    const foco = chapterFocus(props.map.summaryId, { title: family.name, subtitle: family.question });
     const [a, setA] = useState(family.params[0].initial);
     const [b, setB] = useState(family.params[1].initial);
     const idA = useId();
@@ -271,8 +273,8 @@ export function cartesianInstrument(familyId: FamilyId) {
     return (
       <BoardShell
         kicker="Prancha manipulável"
-        title={family.name}
-        subtitle={family.question}
+        title={foco.title}
+        subtitle={foco.subtitle}
         condition={{ label: family.params[0].symbol, value: mostrar(family.params[0], a) }}
         ariaLabel={`Prancha manipulável de ${family.name.toLowerCase()}: ${props.map.title}`}
         emphasis={par.emphasis}
