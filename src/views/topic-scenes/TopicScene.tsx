@@ -22,6 +22,7 @@ import { LINGUAGENS_LITERATURA_SCENE_IDS, LinguagensLiteratura } from './familie
 import { CriteriosConjuntivos } from './families/CriteriosConjuntivos';
 import { GradeDeEixos } from './families/GradeDeEixos';
 import type { SceneEntry, SceneFamily } from './types';
+import { SceneStageContext, type SceneStageBridge } from '../visual-stage/stageCases';
 
 const FAMILIAS: Record<SceneFamily, React.ComponentType<{ entry: SceneEntry }>> = {
   'contraste-de-posicoes': ContrasteDePosicoes,
@@ -34,7 +35,7 @@ const FAMILIAS: Record<SceneFamily, React.ComponentType<{ entry: SceneEntry }>> 
   'grade-de-eixos': GradeDeEixos,
 };
 
-export function TopicScene({ summaryId }: { summaryId: string }) {
+export function TopicScene({ summaryId, stage = null }: { summaryId: string; stage?: SceneStageBridge | null }) {
   const entry = sceneFor(summaryId);
   if (!entry) return null;
   const quimicaGeometrica = entry.chapterId === 'summary-quimica-geometria-molecular';
@@ -66,8 +67,12 @@ export function TopicScene({ summaryId }: { summaryId: string }) {
         ? QuimicaTipologia
         : FAMILIAS[entry.family];
   return (
-    <div className="vs-handdrawn-container">
-      <Familia entry={entry} />
-    </div>
+    // O palco chega às famílias por contexto (visual-stage/stageCases.tsx):
+    // só as que leem `useStageCases` reagem à etapa; as outras seguem iguais.
+    <SceneStageContext.Provider value={stage}>
+      <div className="vs-handdrawn-container">
+        <Familia entry={entry} />
+      </div>
+    </SceneStageContext.Provider>
   );
 }

@@ -57,7 +57,8 @@ export function VisualArtifact({
         hiddenEdgeIds={hiddenEdgeIds} mode={mode}
         activeStep={activeIndex} onStepChange={onSelectStep} challengeActive={mode !== 'explorar'} focusTarget={focusTarget} />}
       {showMain && representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id} />}
-      {showMain && representation === 'scene' && <TopicScene key={`cena-${summary.id}`} summaryId={summary.id} />}
+      {showMain && representation === 'scene' && <TopicScene key={`cena-${summary.id}`} summaryId={summary.id}
+        stage={{ map, sections: summary.sections, activeStep: activeIndex, onStepChange: onSelectStep, selectedId, onSelect, mode, hiddenEdgeIds }} />}
       {showMain && representation === 'fallback' && <TopicFallbackVisual summary={summary} activeIndex={activeIndex} onSelectStep={onSelectStep} />}
       {showSpatial && <SpatialChapterSupplement key={`espacial-${summary.id}`} chapterId={summary.id} />}
       {mode === 'explorar' &&

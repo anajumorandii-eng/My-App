@@ -2,6 +2,10 @@ import React from 'react';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
+import { StageCaseLens, bridgeFromBoard, useStageCases, VEILED_CLAIM } from '../visual-stage/stageCases';
+import { INTERACTION_CASES, MENDEL_CASES } from './stageCaseItems';
+
+const CLASSE_NOME: Record<string, string> = { dom: 'A_B_', p1: 'A_bb', p2: 'aaB_', rec: 'aabb' };
 
 /**
  * Quadro de Punnett com os gametas nas bordas e as combinações dentro.
@@ -13,8 +17,17 @@ import type { BoardProps } from './types';
  * 2×2 (um par) e o de 4×4 (dois pares), onde o 9:3:3:1 aparece como contagem
  * das casas, e não como número a decorar.
  */
-function PunnettScene({ emphasis, interaction = false, startDihybrid = false }: { emphasis: 'esquerda' | 'direita' | 'nenhum'; interaction?: boolean; startDihybrid?: boolean }) {
-  const diHibrido = interaction || startDihybrid || emphasis === 'direita';
+function PunnettScene({ emphasis, interaction: interactionChapter = false, startDihybrid = false, stage }: { emphasis: 'esquerda' | 'direita' | 'nenhum'; interaction?: boolean; startDihybrid?: boolean; stage?: BoardProps }) {
+  // No palco, a etapa escolhe o quadro: em Segunda Lei, "Segregação
+  // independente" abre o 4×4; em Interação Gênica, "Epistasia" reclassifica as
+  // mesmas dezesseis casas em 9 : 7. Fora do palco vale o par de cartões, como antes.
+  const bridge = bridgeFromBoard(stage);
+  const items = interactionChapter ? INTERACTION_CASES : MENDEL_CASES;
+  const casos = useStageCases(items, interactionChapter ? 1 : startDihybrid ? 1 : 0, bridge);
+  const [celula, setCelula] = React.useState<string | null>(null);
+  const interaction = bridge ? interactionChapter && casos.active === 1 : interactionChapter;
+  const diHibrido = bridge ? interactionChapter || casos.active === 1 : interactionChapter || startDihybrid || emphasis === 'direita';
+  React.useEffect(() => setCelula(null), [diHibrido, interaction]);
 
   const cel = diHibrido ? 52 : 92;
   const gametas = diHibrido ? ['AB', 'Ab', 'aB', 'ab'] : ['A', 'a'];
@@ -32,8 +45,21 @@ function PunnettScene({ emphasis, interaction = false, startDihybrid = false }: 
     return dom1 && dom2 ? 'dom' : dom1 ? 'p1' : dom2 ? 'p2' : 'rec';
   };
 
-  return (
-    <svg className="vs-piston vs-scene" viewBox="0 0 320 330" role="img" data-emphasis={emphasis}
+  const nomeClasse = (c: string) => interaction ? (c === 'dom' ? 'A_B_, pigmentada' : 'sem pigmento')
+    : diHibrido ? CLASSE_NOME[c] : c === 'dom' ? 'A_, dominante' : 'aa, recessivo';
+  // A leitura da casa tocada conta as casas da mesma classe no próprio quadro:
+  // é daí que sai 9/16, 3/4 ou 7/16, sem número decorado.
+  const contagem = (() => {
+    if (!celula) return null;
+    const [i, j] = celula.split('-').map(Number);
+    const alvo = classe(gametas[i], gametas[j]);
+    const iguais = gametas.flatMap((l) => gametas.map((c) => classe(l, c))).filter((c) => c === alvo).length;
+    return `${nomeClasse(alvo)}: ${iguais} de ${gametas.length ** 2} casas`;
+  })();
+  const coberto = casos.veiled.has(casos.active);
+
+  const quadro = (
+    <svg className="vs-piston vs-scene" viewBox="0 0 320 330" role={bridge ? 'group' : 'img'} data-emphasis={emphasis}
       aria-label={diHibrido
         ? interaction ? 'Quadro de Punnett 4 por 4 para genes complementares, com nove células pigmentadas e sete sem pigmento' : 'Quadro de Punnett 4 por 4 para dois pares de alelos, com a proporção 9:3:3:1'
         : 'Quadro de Punnett 2 por 2 para um par de alelos, com a proporção 3:1'}>
@@ -49,7 +75,14 @@ function PunnettScene({ emphasis, interaction = false, startDihybrid = false }: 
           const par = [linha, coluna].join('').split('').sort((a, b) =>
             a.toLowerCase() === b.toLowerCase() ? (a < b ? -1 : 1) : a.toLowerCase() < b.toLowerCase() ? -1 : 1).join('');
           return (
-            <g key={`${i}-${j}`} className="vs-punnett-cell" data-classe={classe(linha, coluna)}>
+            <g key={`${i}-${j}`} className="vs-punnett-cell" data-classe={classe(linha, coluna)}
+              data-selected={celula === `${i}-${j}` || undefined}
+              {...(bridge ? {
+                role: 'button', tabIndex: 0, 'aria-pressed': celula === `${i}-${j}`,
+                'aria-label': `Casa ${par}: ${nomeClasse(classe(linha, coluna))}`,
+                onClick: () => setCelula(`${i}-${j}`),
+                onKeyDown: (event: React.KeyboardEvent) => { if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); setCelula(`${i}-${j}`); } },
+              } : {})}>
               <rect x={x0 + j * cel} y={y0 + i * cel} width={cel} height={cel} />
               <text x={x0 + j * cel + cel / 2} y={y0 + i * cel + cel / 2 + 5} textAnchor="middle">{par}</text>
             </g>
@@ -61,6 +94,17 @@ function PunnettScene({ emphasis, interaction = false, startDihybrid = false }: 
       </text>
     </svg>
   );
+  if (!bridge) return quadro;
+  return (
+    <div className="vs-punnett-stage">
+      <StageCaseLens cases={casos} items={items} />
+      <div className="mechanism-options" role="group" aria-label="Quadro de Punnett">
+        {items.map((item, n) => <button key={item.label} type="button" aria-pressed={casos.active === n} onClick={() => casos.choose(n)}>{item.label}</button>)}
+      </div>
+      {quadro}
+      <p role="status">{contagem ? <><strong>{contagem}.</strong> </> : 'Toque numa casa para contar a classe dela. '}{coberto ? VEILED_CLAIM : items[casos.active].claim}</p>
+    </div>
+  );
 }
 
 export default function MendelBoard(props: BoardProps) {
@@ -69,14 +113,19 @@ export default function MendelBoard(props: BoardProps) {
   const secondLaw = props.map.summaryId === 'summary-biologia-segunda-lei-de-mendel';
   const defaultDihybrid = secondLaw && par.emphasis === 'nenhum';
   const diHibrido = interaction || defaultDihybrid || par.emphasis === 'direita';
+  // No palco quem escolhe o quadro é a etapa (PunnettScene); o selo não pode
+  // afirmar um cruzamento que a cena ao lado talvez não esteja mostrando.
+  const noPalco = props.activeStep !== undefined && Boolean(props.onStepChange);
   return (
     <BoardShell
       title={interaction ? 'Interação gênica: uma via, dois genes' : 'As leis de Mendel'}
       subtitle={interaction ? 'A segregação continua mendeliana; o produto final depende dos dois loci.' : 'A segunda lei não é sobre dois caracteres — é sobre independência.'}
-      condition={{ label: 'cruzamento', value: diHibrido ? 'AaBb × AaBb' : 'Aa × Aa' }}
+      condition={{ label: 'cruzamento', value: noPalco && !interaction ? 'Aa ou AaBb' : diHibrido ? 'AaBb × AaBb' : 'Aa × Aa' }}
       ariaLabel={interaction ? 'Prancha de interação gênica complementar com proporção nove para sete' : 'Prancha ilustrada das leis de Mendel com quadro de Punnett'}
-      scene={<PunnettScene emphasis={par.emphasis} interaction={interaction} startDihybrid={defaultDihybrid} />}
-      sceneNotes={{ up: 'um par ↑', down: '↓ dois pares' }}
+      scene={<PunnettScene emphasis={par.emphasis} interaction={interaction} startDihybrid={defaultDihybrid} stage={props} />}
+      // No palco a etapa escolhe o quadro e as legendas "um par ↑ / ↓ dois pares"
+      // (que dizem qual cartão abre qual quadro) caíam por cima da faixa da etapa.
+      sceneNotes={noPalco ? undefined : { up: 'um par ↑', down: '↓ dois pares' }}
       emphasis={par.emphasis}
       left={interaction ? { label: 'Gene A · primeira etapa', headline: 'A_ produz o intermediário.', detail: 'Sem ao menos um alelo A funcional, a via é interrompida antes do intermediário e o organismo fica sem pigmento.', formula: 'precursor —A→ intermediário' } : { label: 'Primeira lei', headline: 'Cada par de alelos se separa.', detail: 'Na formação dos gametas, os dois alelos de um gene vão para células diferentes. Aa × Aa dá 3 dominantes para 1 recessivo.', formula: '3 : 1 (fenótipo) · 1 : 2 : 1 (genótipo)' }}
       right={interaction ? { label: 'Gene B · segunda etapa', headline: 'B_ converte o intermediário.', detail: 'Só A_B_ completa as duas etapas e produz pigmento. A_bb, aaB_ e aabb convergem no mesmo fenótipo sem pigmento.', formula: 'intermediário —B→ pigmento' } : { label: 'Segunda lei', headline: 'Pares diferentes se separam independentemente.', detail: 'Só vale se os genes estiverem em cromossomos diferentes. Genes ligados no mesmo cromossomo tendem a ir juntos e quebram a proporção.', formula: '9 : 3 : 3 : 1' }}

@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { StageControlLens, useStageControl, type StageControl } from '../visual-stage/stageParameter';
 import { ELECTROCHEMISTRY, type ElectrochemistryId } from '../../lib/electrochemistryLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
@@ -77,9 +78,14 @@ function ElectrochemistryScene({ id, value }: { id: ElectrochemistryId; value: n
 
 export function electrochemistryInstrument(id: ElectrochemistryId) {
   const config = ELECTROCHEMISTRY[id];
+  // Unidade lida da descrição do controle ("em volts", "em minutos"): é ela que
+  // o número citado na etapa precisa trazer para mover o cursor.
+  const unidade = /volts/.test(config.control.description) ? 'V' : /minutos/.test(config.control.description) ? 'min' : /ohms/.test(config.control.description) ? 'Ω' : /mols/.test(config.control.description) ? 'mol' : '';
+  const control: StageControl = { ...config.control, unit: unidade, control: config.control.label, readout: (v) => (config.readouts(v).find(item => item.pivot) ?? config.readouts(v)[0]).value };
   return function ElectrochemistryBoard(props: BoardProps) {
     const pair = boardPair(props);
-    const [value, setValue] = useState(config.control.initial);
+    const stage = useStageControl(props, control);
+    const { value, setValue } = stage;
     const readouts = config.readouts(value);
     const pivot = readouts.find(item => item.pivot) ?? readouts[0];
     const first = props.map.nodes[1] ?? props.map.nodes[0];
@@ -93,6 +99,7 @@ export function electrochemistryInstrument(id: ElectrochemistryId) {
       ariaLabel={`Instrumento de eletroquímica: ${props.map.title}`}
       emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
+        <StageControlLens props={props} control={control} label={config.control.label} state={stage} />
         <svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}>
           <ElectrochemistryScene id={id} value={value} />
         </svg>

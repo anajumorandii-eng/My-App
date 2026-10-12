@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { StageCaseLens, useStageCases, VEILED_CLAIM } from '../../visual-stage/stageCases';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import { rolarComSetas } from './BiologiaFisiologia';
@@ -117,7 +118,9 @@ function BiomagnificationDiagram({ focus }: { focus: number }) {
 }
 
 export function BiologiaProcessos({ entry }: { entry: SceneEntry }) {
-  const [focus, setFocus] = useState(0);
+  const cases = useStageCases(entry.items);
+  const focus = cases.active;
+  const coberto = cases.veiled.has(focus);
   const transition = useSceneMotion();
   const item = entry.items[focus];
   const algae = entry.chapterId === 'summary-biologia-algas';
@@ -125,11 +128,12 @@ export function BiologiaProcessos({ entry }: { entry: SceneEntry }) {
   const biomagnification = entry.chapterId === 'bio-ecologia-biomagnificacao';
   return <section className="tc-scene bp-process" aria-label={entry.question}>
     <header><small>CRIVO · atlas biológico</small><h4>{entry.question}</h4></header>
+    <StageCaseLens cases={cases} items={entry.items} />
     <div className="bp-process-figure" role="region" tabIndex={0} aria-label="Prancha visual: deslize para ver a figura inteira; com teclado, use as setas" onKeyDown={rolarComSetas}>{algae ? <AlgaeDiagram focus={focus}/> : respiration ? <RespirationDiagram focus={focus}/> : biomagnification ? <BiomagnificationDiagram focus={focus}/> : <LifeCycleDiagram focus={focus}/>}</div>
     <p className="bp-pan-hint">Deslize a prancha para ver toda a figura. Com teclado, use as setas.</p>
     <div className="bp-process-tabs" aria-label={algae ? 'Profundidade e pigmento' : respiration ? 'Etapas da respiração aeróbia' : biomagnification ? 'Níveis tróficos' : 'Posição da meiose'}>
-      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={focus === index} onClick={() => setFocus(index)} animate={{ y: focus === index ? -3 : 0 }} transition={transition}>{candidate.label}</motion.button>)}
+      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={focus === index} data-stage-focus={cases.stage && cases.focus.includes(index) ? 'true' : undefined} data-stage-veiled={cases.veiled.has(index) ? 'true' : undefined} onClick={() => cases.choose(index)} animate={{ y: focus === index ? -3 : 0 }} transition={transition}>{candidate.label}</motion.button>)}
     </div>
-    <aside className="bp-process-detail" role="status"><strong>{item.label}</strong><p>{item.claim}</p><blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote></aside>
+    <aside className="bp-process-detail" role="status"><strong>{item.label}</strong><p className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : item.claim}</p>{!coberto && <blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote>}</aside>
   </section>;
 }

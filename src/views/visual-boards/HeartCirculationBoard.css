@@ -28,3 +28,21 @@
 @media (max-width: 1100px) { .vs-heart-board .vs-board-body { grid-template-columns: minmax(0,1fr) minmax(0,1.3fr); } .vs-heart-board .vs-concept-card--compression { grid-column: 1/-1; } }
 @media (max-width: 900px) { .vs-heart-board .vs-board-body, .vs-heart-board .vs-support-grid { grid-template-columns: minmax(0,1fr); } .vs-heart-board .vs-piston-wrap { order: -1; } .vs-heart-art img { height: min(75vw,390px); } }
 @media (max-width: 620px) { .vs-heart-board .vs-board-body { gap: 12px; } .vs-heart-art img { height: min(81vw,350px); } .vs-heart-scene figcaption { font-size: .7rem; } .vs-heart-route,.vs-heart-area { padding: 14px; } }
+
+/* Camada de toque do coração no palco (HeartMechanism). Invisível até o foco:
+   o desenho continua o mesmo, só ganha alvos. */
+.vs-heart-hit > * { fill: transparent; stroke: transparent; stroke-width: 18; cursor: pointer; }
+.vs-heart-hit > rect { stroke-width: 3; }
+.vs-heart-hit--foco > * { stroke: color-mix(in srgb, var(--action-primary, var(--vs-burgundy)) 40%, transparent); stroke-dasharray: 6 6; stroke-width: 3; }
+.vs-heart-hit--foco > path { stroke-width: 9; }
+.vs-heart-hit--on > *, .vs-heart-hit:focus-visible > * { stroke: var(--action-primary, var(--vs-burgundy)); stroke-dasharray: none; }
+.vs-heart-hit--on > path, .vs-heart-hit:focus-visible > path { stroke-width: 10; opacity: .55; }
+.vs-heart-hit:focus { outline: none; }
+.vs-heart-explain { padding: 10px 12px; border-radius: 12px; border: 1px solid var(--vs-line); background: var(--surface-1, transparent); }
+.vs-heart-explain small { font: 600 11px/1.3 Inter, system-ui, sans-serif; color: var(--vs-dim); }
+.vs-heart-explain p { margin: 4px 0 0; font-size: 13.5px; line-height: 1.45; }
+.vs-heart-explain button, .vs-heart-area-toggle {
+  margin-top: 6px; min-height: 38px; padding: 6px 10px; border-radius: 9px; font-size: 12.5px; font-weight: 600;
+  border: 1px solid var(--vs-line); background: var(--surface-1, transparent); color: inherit;
+}
+.vs-heart-hint { color: var(--vs-dim); }

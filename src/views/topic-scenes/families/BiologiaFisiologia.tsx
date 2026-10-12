@@ -1,5 +1,6 @@
-import React, { useId, useState } from 'react';
+import React, { useId } from 'react';
 import { motion } from 'motion/react';
+import { StageCaseLens, useStageCases, VEILED_CLAIM } from '../../visual-stage/stageCases';
 import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
 import './BiologiaFisiologia.css';
@@ -109,7 +110,11 @@ export function rolarComSetas(event: React.KeyboardEvent<HTMLDivElement>) {
 }
 
 export function BiologiaFisiologia({ entry }: { entry: SceneEntry }) {
-  const [active, setActive] = useState(0);
+  // A etapa do palco abre a estrutura que a seção discute; tocar numa estrutura
+  // leva o palco à etapa que a explica.
+  const cases = useStageCases(entry.items);
+  const active = cases.active;
+  const coberto = cases.veiled.has(active);
   const transition = useSceneMotion();
   const item = entry.items[active];
 
@@ -118,11 +123,12 @@ export function BiologiaFisiologia({ entry }: { entry: SceneEntry }) {
     {/* No celular o quadro de 620 encolhia a ~350 px e as legendas caíam para
         6–7 px (auditoria 39, §4.7). Largura mínima e rolagem só dentro da
         prancha, como nas cenas de História e Geografia. */}
+    <StageCaseLens cases={cases} items={entry.items} />
     <div className="bp-board" role="region" tabIndex={0} aria-label="Prancha visual: deslize para ver a figura inteira; com teclado, use as setas" onKeyDown={rolarComSetas}><Diagram id={entry.chapterId} active={active} total={entry.items.length}/></div>
     <p className="bp-pan-hint">Deslize a prancha para ver toda a figura. Com teclado, use as setas.</p>
     <div className="bp-stepper" aria-label="Etapas do mecanismo">
-      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => setActive(index)} animate={{ opacity: index === active ? 1 : .66, scale: index === active ? 1.02 : 1 }} transition={transition}><span>{String(index + 1).padStart(2, '0')}</span><strong>{candidate.label}</strong></motion.button>)}
+      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} data-stage-focus={cases.stage && cases.focus.includes(index) ? 'true' : undefined} data-stage-veiled={cases.veiled.has(index) ? 'true' : undefined} onClick={() => cases.choose(index)} animate={{ opacity: index === active ? 1 : .66, scale: index === active ? 1.02 : 1 }} transition={transition}><span>{String(index + 1).padStart(2, '0')}</span><strong>{candidate.label}</strong></motion.button>)}
     </div>
-    <aside className="bp-detail" role="status"><div><small>ETAPA {active + 1} DE {entry.items.length}</small><strong>{item.label}</strong><p>{item.claim}</p></div><blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote></aside>
+    <aside className="bp-detail" role="status"><div><small>ETAPA {active + 1} DE {entry.items.length}</small><strong>{item.label}</strong><p className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : item.claim}</p></div>{!coberto && <blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote>}</aside>
   </section>;
 }

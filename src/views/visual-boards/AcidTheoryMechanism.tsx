@@ -1,4 +1,6 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { StageCaseLens, bridgeFromBoard, useStageCases, VEILED_CLAIM } from '../visual-stage/stageCases';
+import type { BoardProps } from './types';
 import { MechanismFrame, TimeControl, useMechanismTime } from './MechanismFrame';
 
 const cases = [
@@ -7,17 +9,24 @@ const cases = [
   { label: 'Equação iônica', title: 'Espectadores permanecem na solução.', left: 'H₃O⁺', right: 'OH⁻', products: '2 H₂O', detail: 'HCl e NaOH em água: Na⁺ e Cl⁻ aparecem inalterados nos dois lados. Cancelá-los na escrita não os retira da solução. H₃O⁺ + OH⁻ → 2 H₂O.', moving: 'H⁺' },
 ] as const;
 
-export default function AcidTheoryMechanism() {
-  const [index, setIndex] = useState(0);
+const ITENS = cases.map((item) => ({ label: item.label, claim: item.detail }));
+
+/** No palco, a etapa abre a teoria que a seção dela discute (ver stageCases). */
+export default function AcidTheoryMechanism({ stage }: { stage?: BoardProps }) {
+  const casos = useStageCases(ITENS, 0, bridgeFromBoard(stage));
+  const index = casos.active;
+  const setIndex = casos.choose;
   const clock = useMechanismTime();
   const c = cases[index];
+  const coberto = casos.veiled.has(index);
   return <MechanismFrame note="Esquemas de transformação e contabilidade de espécies; não representam trajetórias moleculares, velocidades nem proporções de equilíbrio. O par eletrônico de Lewis torna-se compartilhado na ligação." controls={<>
+    <StageCaseLens cases={casos} items={ITENS} />
     <h3>{c.title}</h3>
     <div className="mechanism-options" role="group" aria-label="Teoria ou representação">{cases.map((item,n)=><button key={item.label} type="button" aria-pressed={n===index} onClick={()=>{clock.seek(0);setIndex(n);}}>{item.label}</button>)}</div>
-    <p role="status">{c.detail}</p>
+    <p role="status" className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : c.detail}</p>
     <TimeControl clock={clock} label="Transformação ácido-base" />
   </>}>
-    <svg viewBox="0 0 520 420" role="img" aria-label={`${c.label}: ${c.detail}`}>
+    <svg viewBox="0 0 520 420" role="img" aria-label={`${c.label}: ${coberto ? VEILED_CLAIM : c.detail}`}>
       <text x="25" y="30" className="mf-heading">ÁCIDOS E BASES / O QUE É TRANSFERIDO?</text>
       <circle cx="120" cy="175" r="65" fill="var(--mf-red)" opacity=".12" />
       <circle cx="400" cy="175" r="65" fill="var(--mf-blue)" opacity=".12" />

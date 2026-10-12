@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { StageControlLens, useStageControl, type StageControl } from '../visual-stage/stageParameter';
 import { motion, useReducedMotion } from 'motion/react';
 import { CHEMISTRY, type ChemistryId, type ChemistryConfig } from '../../lib/chemistryInstrumentLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
@@ -87,9 +88,12 @@ function ChemistryDiagram({ id, config, value }: { id: ChemistryId; config: Chem
 
 export function chemistryInstrument(id: ChemistryId) {
   const config = CHEMISTRY[id];
+  // A etapa do palco posiciona o cursor no que o texto dela cita (ver stageParameter).
+  const control: StageControl = { min: config.min, max: config.max, step: config.step, initial: config.initial, unit: config.unit, control: config.control, readout: (v) => config.read(v).value };
   return function ChemistryBoard(props: BoardProps) {
     const pair = boardPair(props);
-    const [value, setValue] = useState(config.initial);
+    const stage = useStageControl(props, control);
+    const { value, setValue } = stage;
     const result = config.read(value);
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
@@ -97,6 +101,7 @@ export function chemistryInstrument(id: ChemistryId) {
       kicker="Laboratório de Química" title={config.title} subtitle={config.question}
       condition={{ label: result.label, value: result.value }} ariaLabel={`Instrumento de Química: ${props.map.title}`} emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
+        <StageControlLens props={props} control={control} label={config.control} state={stage} />
         <ChemistryDiagram id={id} config={config} value={value} />
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <label htmlFor={`chem-${id}`}><strong>{config.control}</strong><span>{config.question}</span><b>{value} {config.unit}</b></label>

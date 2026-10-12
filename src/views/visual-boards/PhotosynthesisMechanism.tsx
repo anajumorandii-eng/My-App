@@ -1,6 +1,9 @@
 import React, { useId, useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { MOTION_DURATION, MOTION_EASE } from '../../design-system/motion/tokens';
+import { StageCaseLens, bridgeFromBoard, useStageCases, VEILED_CLAIM } from '../visual-stage/stageCases';
+import { PHOTO_CASES } from './stageCaseItems';
+import type { BoardProps } from './types';
 import './PhotosynthesisMechanism.css';
 
 const steps = [
@@ -20,8 +23,11 @@ function Route({ d, color, replay }: { d: string; color: string; replay: string 
   </g>;
 }
 
-export default function PhotosynthesisMechanism() {
-  const [step, setStep] = useState(0);
+/** No palco, "Duas etapas integradas" abre as fotoquímicas e a seção "Quimiossíntese" o procarionte. */
+export default function PhotosynthesisMechanism({ stage }: { stage?: BoardProps }) {
+  const casos = useStageCases(PHOTO_CASES, 0, bridgeFromBoard(stage));
+  const step = casos.active;
+  const coberto = casos.veiled.has(step);
   const [replay, setReplay] = useState(0);
   const id = useId().replace(/:/g, '');
   const reduced = useReducedMotion();
@@ -89,10 +95,11 @@ export default function PhotosynthesisMechanism() {
       <button type="button" className="photo-replay" onClick={() => setReplay(value => value + 1)}>Repetir os fluxos</button>
     </div>
     <div className="photo-reading">
+      <StageCaseLens cases={casos} items={PHOTO_CASES} />
       <div className="photo-steps" role="group" aria-label="Etapas da bioenergética">
-        {steps.map((item, index) => <button key={item.label} type="button" aria-pressed={step === index} onClick={() => setStep(index)}><span>0{index + 1}</span>{item.label}</button>)}
+        {steps.map((item, index) => <button key={item.label} type="button" aria-pressed={step === index} onClick={() => casos.choose(index)}><span>0{index + 1}</span>{item.label}</button>)}
       </div>
-      <div role="status"><h3>{steps[step].title}</h3><p>{steps[step].text}</p></div>
+      <div role="status"><h3>{steps[step].title}</h3><p className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : steps[step].text}</p></div>
       <p className="photo-distinction"><strong>Energia ≠ carbono.</strong> Luz e oxidação inorgânica são fontes de energia. CO₂ é a fonte de carbono mostrada nos dois processos.</p>
     </div>
   </div>;
