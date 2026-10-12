@@ -289,10 +289,18 @@ export const FAMILIES: Record<FamilyId, Family> = {
       { label: `f(${num(b)})`, value: num(a) },
       { label: 'assíntota', value: 'vertical em x = 0' },
     ],
-    annotations: (a, b) => [
-      { text: 'f(1) = 0', x: 1, y: 0, dx: 1.1, dy: -1.7 },
-      { text: 'assíntota', x: 0.14, y: (a * Math.log(0.14)) / Math.log(b), dx: 1.8, dy: 0.9 },
-    ],
+    annotations: (a, b) => {
+      // A âncora antiga ficava em x = 0,14 com o rótulo subindo 0,9: na base 2
+      // ele parava em y ≈ −1,9, encostado em "f(1) = 0" (−1,7), e com a = 3 a
+      // própria âncora saía do quadro. Agora a seta toca a curva onde ela vale
+      // −3,6 — sempre dentro do quadro e colada à assíntota — e o rótulo desce,
+      // longe da nota da raiz.
+      const xAssintota = Math.max(0.03, Math.pow(b, -3.6 / a));
+      return [
+        { text: 'f(1) = 0', x: 1, y: 0, dx: 1.1, dy: -1.7 },
+        { text: 'assíntota', x: xAssintota, y: (a * Math.log(xAssintota)) / Math.log(b), dx: 1.7, dy: -0.7 },
+      ];
+    },
     insight:
       'o logaritmo responde "a que expoente elevo a base para chegar aqui" — por isso f(1) = 0 em toda base, e por isso a curva nunca alcança x = 0: não existe expoente que leve a base a zero.',
   },
@@ -349,7 +357,11 @@ export const FAMILIES: Record<FamilyId, Family> = {
       if (a === 0) return [{ text: 'sem V: valor fixo', x: 2, y: Math.abs(b), dx: 0.4, dy: 1.6 }];
       const vertice = -b / a;
       const marcas: Annotation[] = [];
-      if (vertice > -5.2 && vertice < 5.2) marcas.push({ text: 'vértice do V', x: vertice, y: 0, dx: 0.6, dy: 2.1 });
+      // Com o vértice perto da origem, dx = 0,6 centrava o rótulo sobre o eixo
+      // y, em cima da graduação "2". Afastar para o lado do braço mais baixo
+      // deixa o texto no vão entre o V e o eixo.
+      if (vertice > -5.2 && vertice < 5.2)
+        marcas.push({ text: 'vértice do V', x: vertice, y: 0, dx: vertice > 2 ? -1.9 : 1.9, dy: 2.1 });
       marcas.push({ text: 'nunca desce de zero', x: -4.4, y: Math.abs(a * -4.4 + b), dx: 0.5, dy: 1.5 });
       return marcas;
     },
