@@ -88,3 +88,16 @@
 .vs-punnett-stage .vs-punnett-cell[data-selected] rect,
 .vs-punnett-stage .vs-punnett-cell:focus-visible rect { stroke: var(--action-primary, #7a1f2b); stroke-width: 3.5; }
 .vs-stage-case-wrap { display: grid; gap: 8px; }
+
+/* Casos fora da MechanismFrame (Punnett, Gibbs, osmose no palco): mesmo
+   botão de caso da moldura, sem herdar o .mechanism-controls. */
+:is(.vs-punnett-stage, .vs-gibbs, .vs-stage-case-wrap) > .mechanism-options button {
+  min-height: 44px; padding: 10px 13px; color: inherit; background: transparent; cursor: pointer;
+  border: 1px solid color-mix(in srgb, var(--vs-ink, currentColor) 35%, transparent); border-radius: 4px; font: 600 14px/1.2 system-ui, sans-serif;
+}
+:is(.vs-punnett-stage, .vs-gibbs, .vs-stage-case-wrap) > .mechanism-options button[aria-pressed=true] {
+  border-color: var(--action-primary, #7a1f2b); box-shadow: inset 3px 0 var(--action-primary, #7a1f2b);
+  background: color-mix(in srgb, var(--action-primary, #7a1f2b) 10%, transparent);
+}
+:is(.vs-punnett-stage, .vs-gibbs, .vs-stage-case-wrap) > .mechanism-options button:focus-visible { outline: 3px solid var(--action-primary, #7a1f2b); outline-offset: 2px; }
+.vs-punnett-stage > p[role=status], .vs-gibbs > p[role=status] { margin: 0; font: 14px/1.55 system-ui, sans-serif; }

@@ -123,7 +123,9 @@ export default function MendelBoard(props: BoardProps) {
       condition={{ label: 'cruzamento', value: noPalco && !interaction ? 'Aa ou AaBb' : diHibrido ? 'AaBb × AaBb' : 'Aa × Aa' }}
       ariaLabel={interaction ? 'Prancha de interação gênica complementar com proporção nove para sete' : 'Prancha ilustrada das leis de Mendel com quadro de Punnett'}
       scene={<PunnettScene emphasis={par.emphasis} interaction={interaction} startDihybrid={defaultDihybrid} stage={props} />}
-      sceneNotes={{ up: 'um par ↑', down: '↓ dois pares' }}
+      // No palco a etapa escolhe o quadro e as legendas "um par ↑ / ↓ dois pares"
+      // (que dizem qual cartão abre qual quadro) caíam por cima da faixa da etapa.
+      sceneNotes={noPalco ? undefined : { up: 'um par ↑', down: '↓ dois pares' }}
       emphasis={par.emphasis}
       left={interaction ? { label: 'Gene A · primeira etapa', headline: 'A_ produz o intermediário.', detail: 'Sem ao menos um alelo A funcional, a via é interrompida antes do intermediário e o organismo fica sem pigmento.', formula: 'precursor —A→ intermediário' } : { label: 'Primeira lei', headline: 'Cada par de alelos se separa.', detail: 'Na formação dos gametas, os dois alelos de um gene vão para células diferentes. Aa × Aa dá 3 dominantes para 1 recessivo.', formula: '3 : 1 (fenótipo) · 1 : 2 : 1 (genótipo)' }}
       right={interaction ? { label: 'Gene B · segunda etapa', headline: 'B_ converte o intermediário.', detail: 'Só A_B_ completa as duas etapas e produz pigmento. A_bb, aaB_ e aabb convergem no mesmo fenótipo sem pigmento.', formula: 'intermediário —B→ pigmento' } : { label: 'Segunda lei', headline: 'Pares diferentes se separam independentemente.', detail: 'Só vale se os genes estiverem em cromossomos diferentes. Genes ligados no mesmo cromossomo tendem a ir juntos e quebram a proporção.', formula: '9 : 3 : 3 : 1' }}

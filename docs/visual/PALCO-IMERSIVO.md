@@ -66,3 +66,26 @@ inexistente ou etapa fora do trilho e, sem ponto válido, usa um por nó.
 4. Painel secundário que hoje fica abaixo da cena vira camada do palco (hoje: o
    modelo espacial de `SpatialChapterSupplement`).
 5. Conferir em 1440×900, 1366×900, 834×1112 e 390×844.
+
+## Química e Biologia: o que já segue a etapa (12/10/2026)
+
+Varredura dos 120 capítulos das duas matérias (48 de Química, 72 de Biologia):
+
+- **Cenas de `topic-scenes`** (45): famílias que leem `useStageCases`, listadas em
+  `STAGE_CASE_SCENE_IDS` (`visual-stage/sceneDeclarations.ts`), incluindo a bancada
+  de Mutações gênicas. Fica de fora `summary-quimica-equilibrios-ionicos-ii`
+  (`GradeDeEixos`): as citações dos casos não batem mais com o texto em revisão 2
+  do capítulo, e ligar a grade às etapas abriria a hidrólise na etapa errada.
+- **Instrumentos** (47): os quatro laboratórios (`chemistryInstrument`,
+  `electrochemistryInstrument`, `biologyInstrument`, `biologyRemainingInstrument`)
+  posicionam o cursor no valor que a seção da etapa cita (`stageParameter`).
+- **Pranchas** (8 de 16): coração e vasos, teorias ácido-base, Termoquímica I e II,
+  Membranas (a osmose sai do apoio e vira caso da cena), Bioenergética, Modelos
+  atômicos e as duas de Mendel (casas do quadro tocáveis, com contagem da classe).
+  Os casos dessas pranchas estão em `visual-boards/stageCaseItems.ts`, que tanto a
+  cena quanto a barra do palco leem.
+- **Ainda sem leitura da etapa:** Ligações e alotropia, Leis ponderais, Dispersões,
+  Fungos, Enzimas, Divisão celular e Sangue/ABO. As cenas delas são estáticas e
+  mudam só com o par de cartões; para seguirem a etapa precisam de casos desenhados
+  primeiro.
+
