@@ -254,7 +254,12 @@
 .crivo-visual.crivo-visual--atlas .vs-q-callout {
   flex: 0 1 auto;
   box-sizing: border-box;
-  width: max-content;
+  /* `max-content` aqui alargava a coluna da página no celular: na conta do
+     tamanho mínimo da grade, o `max-width` em porcentagem não vale, e o balão
+     contribuía com a frase inteira numa linha. Em Citoplasma II e nos dois
+     de Artrópodes a página rolava 24–95 px na horizontal. `fit-content` dá a
+     mesma largura na tela e deixa a frase quebrar quando falta espaço. */
+  width: fit-content;
   min-width: min(112px, 100%);
   max-width: min(220px, 100%);
 }
