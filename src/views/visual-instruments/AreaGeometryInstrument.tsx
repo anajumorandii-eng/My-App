@@ -1,3 +1,4 @@
+import { useStageParameter } from '../visual-boards/stageStep';
 import React, { useState } from 'react';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
@@ -99,12 +100,12 @@ export function areaGeometryInstrument(id: AreaConfigId) {
   const config = AREA_CONFIGS[id];
   return function AreaGeometryBoard(props: BoardProps) {
     const pair = boardPair(props);
-    const [value, setValue] = useState(config.control.initial);
+    const { value: value, setValue: setValue, lens: stageLens } = useStageParameter(config.control, (x) => config.readouts(x));
     const readouts = config.readouts(value);
     const pivot = readouts.find((item) => item.pivot) ?? readouts[0];
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
-    return <BoardShell
+    return <BoardShell palco={{ data: stageLens }}
       kicker="Laboratório de medida e decomposição"
       title={config.name}
       subtitle={config.question}

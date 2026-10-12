@@ -1,4 +1,4 @@
-import React, { useId, useState } from 'react';
+import React, { useId } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { HISTORY_PHASES, type HistoryPhaseId } from '../../lib/historyPhaseLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
@@ -8,6 +8,8 @@ import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import './HistoryPhaseInstrument.css';
 import { EngenhoScene } from './EngenhoScene';
+import { bridgeFromBoard, StageCaseLens, useStageCases, VEILED_CLAIM } from '../visual-stage/stageCases';
+import { contextCaseItems } from '../visual-stage/caseDeclaration';
 
 /**
  * Quebra um rótulo em no máximo duas linhas por contagem de caractere, não
@@ -69,8 +71,13 @@ function TimelineScene({ id, index }: { id: HistoryPhaseId; index: number }) {
 
 export function historyPhaseInstrument(id: HistoryPhaseId) {
   const config = HISTORY_PHASES[id];
+  const items = contextCaseItems(config);
   return function HistoryPhaseBoard(props: BoardProps) {
-    const [index, setIndex] = useState(0);
+    // No palco, a etapa abre o momento que o texto dela cita; tocar num momento
+    // leva o palco à etapa que o discute.
+    const cases = useStageCases(items, 0, bridgeFromBoard(props));
+    const index = cases.active;
+    const coberto = cases.veiled.has(index);
     const selected = config.cases[index];
     const pair = boardPair(props);
     const first = props.map.nodes[1] ?? props.map.nodes[0];
@@ -84,29 +91,30 @@ export function historyPhaseInstrument(id: HistoryPhaseId) {
       ariaLabel={`Instrumento histórico: ${props.map.title}`}
       emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
+        <StageCaseLens cases={cases} items={items} />
         {id === 'dinamica-interna-colonizacao' ? <EngenhoScene index={index} label={selected.label} /> : <TimelineScene id={id} index={index} />}
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <p>Percorra a linha do tempo:</p>
           <div className="vs-history-phase-options" role="group" aria-label={`Momentos de ${config.title}`}>
-            {config.cases.map((item, itemIndex) => <button key={item.label} type="button" aria-pressed={index === itemIndex} onClick={() => setIndex(itemIndex)}>{item.label}</button>)}
+            {config.cases.map((item, itemIndex) => <button key={item.label} type="button" aria-pressed={index === itemIndex} data-stage-focus={cases.stage && cases.focus.includes(itemIndex) ? 'true' : undefined} data-stage-veiled={cases.veiled.has(itemIndex) ? 'true' : undefined} onClick={() => cases.choose(itemIndex)}>{item.label}</button>)}
           </div>
         </div></div>
         <dl className="vs-plane-readouts" aria-live="polite">
           <div><dt>Quando</dt><dd>{selected.period}</dd></div>
           <div><dt>Observe</dt><dd>{selected.observation}</dd></div>
-          <div data-pivot="true"><dt>Conclua</dt><dd>{selected.conclusion}</dd></div>
+          <div data-pivot="true"><dt>Conclua</dt><dd className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : selected.conclusion}</dd></div>
         </dl>
         <p className="vs-instrument-dica">{config.caution}</p>
       </div>}
       left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt) || config.question, formula: config.relation }}
-      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt) || selected.observation, formula: `no recorte ${selected.label}: ${selected.conclusion}` }}
+      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt) || selected.observation, formula: coberto ? `no recorte ${selected.label}: ?` : `no recorte ${selected.label}: ${selected.conclusion}` }}
       leftState={pair.leftState}
       rightState={pair.rightState}
       leftSelected={pair.leftSelected}
       rightSelected={pair.rightSelected}
       onSelectLeft={pair.selectLeft}
       onSelectRight={pair.selectRight}
-      equation={{ label: 'Relação histórica', general: config.relation, condition: selected.label, reduced: selected.conclusion }}
+      equation={{ label: 'Relação histórica', general: config.relation, condition: selected.label, reduced: coberto ? '?' : selected.conclusion }}
       closing={config.caution}
     />;
   };

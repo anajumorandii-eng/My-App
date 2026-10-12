@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { StageCaseLens, useStageCases, VEILED_CLAIM } from '../../visual-stage/stageCases';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
@@ -109,7 +110,10 @@ function Structure({ chapterId, label }: { chapterId: string; label: string }) {
 }
 
 export function QuimicaOrganica({ entry }: { entry: SceneEntry }) {
-  const [focus, setFocus] = useState(0);
+  // A etapa do palco escolhe a estrutura que a seção discute.
+  const cases = useStageCases(entry.items);
+  const focus = cases.active;
+  const coberto = cases.veiled.has(focus);
   const transition = useSceneMotion();
   const item = entry.items[focus];
   const functionChapter = ORGANIC_CHAPTERS.functions.has(entry.chapterId);
@@ -120,15 +124,16 @@ export function QuimicaOrganica({ entry }: { entry: SceneEntry }) {
       <span><i className="tc-organic-swatch tc-organic-swatch--hetero" /> O/N e grupo funcional</span>
       <span><i className="tc-organic-swatch tc-organic-swatch--bond" /> ligações que definem a função</span>
     </div>
+    <StageCaseLens cases={cases} items={entry.items} />
     <div className={`tc-chem-grid tc-organic-grid${entry.items.length > 6 ? ' tc-organic-grid--dense' : ''}`}>
-      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" className="tc-chem-card tc-organic-card" aria-pressed={focus === index} onClick={() => setFocus(index)} animate={{ scale: focus === index ? 1.012 : 1 }} transition={transition}>
+      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" className="tc-chem-card tc-organic-card" aria-pressed={focus === index} data-stage-focus={cases.stage && cases.focus.includes(index) ? 'true' : undefined} data-stage-veiled={cases.veiled.has(index) ? 'true' : undefined} onClick={() => cases.choose(index)} animate={{ scale: focus === index ? 1.012 : 1 }} transition={transition}>
         <span className="tc-chem-visual"><Structure chapterId={entry.chapterId} label={candidate.label} /></span>
-        <span className="tc-organic-card-copy"><strong>{candidate.label}</strong><span>{candidate.claim}</span></span>
+        <span className="tc-organic-card-copy"><strong>{candidate.label}</strong><span className={cases.veiled.has(index) ? 'stage-veiled-claim' : undefined}>{cases.veiled.has(index) ? 'afirmação coberta' : candidate.claim}</span></span>
       </motion.button>)}
     </div>
     <div className="tc-organic-detail" role="status">
-      <div><small>{functionChapter ? 'Como reconhecer' : 'O que observar'}</small><strong>{item.label}</strong><p>{CUES[item.label] ?? item.claim}</p></div>
-      <blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote>
+      <div><small>{functionChapter ? 'Como reconhecer' : 'O que observar'}</small><strong>{item.label}</strong><p className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : CUES[item.label] ?? item.claim}</p></div>
+      {!coberto && <blockquote>“{item.quote}” <cite>{item.section}</cite></blockquote>}
     </div>
     {entry.chapterId === ORGANIC_CHAPTERS.isomerism && <StereochemistryView />}
   </section>;

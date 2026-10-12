@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
+import { StageCaseLens, useStageCases, VEILED_CLAIM } from '../../visual-stage/stageCases';
 import type { SceneEntry } from '../types';
 import '../TopicScene.css';
 
@@ -12,7 +13,7 @@ const MUTATIONS: Record<string, { before: string; after: string; effect: string 
   'Múltiplo de três': { before: 'AUG | AAA | CCU', after: 'AUG | GCU | AAA | CCU', effect: '+ GCU · quadro preservado' },
 };
 
-function MutationWorkbench({ entry, focus, onFocus }: { entry: SceneEntry; focus: number; onFocus: (index: number) => void }) {
+function MutationWorkbench({ entry, focus, onFocus, veiled = false }: { entry: SceneEntry; focus: number; onFocus: (index: number) => void; veiled?: boolean }) {
   const item = entry.items[focus];
   const mutation = MUTATIONS[item.label];
   const isFrame = item.label === 'Frameshift';
@@ -32,8 +33,8 @@ function MutationWorkbench({ entry, focus, onFocus }: { entry: SceneEntry; focus
         <span className={item.label === 'Silenciosa' ? 'tc-protein-same' : ''}>proteína</span><b>{item.label === 'Silenciosa' ? 'mesmo aminoácido' : item.label === 'Nonsense (sem sentido)' ? 'STOP precoce' : isFrame ? 'sequência reescrita' : isMultiple ? 'aminoácido extra' : 'aminoácido trocado'}</b>
       </div>
     </div>
-    <p className="tc-observation" role="status"><strong>{item.label}:</strong> {item.claim}</p>
-    <blockquote className="tc-quote">“{item.quote}” <cite>{item.section}</cite></blockquote>
+    <p className="tc-observation" role="status"><strong>{item.label}:</strong> {veiled ? VEILED_CLAIM : item.claim}</p>
+    {!veiled && <blockquote className="tc-quote">“{item.quote}” <cite>{item.section}</cite></blockquote>}
   </div>;
 }
 
@@ -43,11 +44,17 @@ export function Tipologia({ entry }: { entry: SceneEntry }) {
   const transition = useSceneMotion();
   const item = foco === null ? null : entry.items[foco];
   const mutations = entry.chapterId === 'summary-biologia-mutacoes-genicas';
+  // Só a bancada de mutações segue a etapa do palco (no palco, "Mutações
+  // gênicas" abre a silenciosa, "Erros comuns" a frameshift…). A grade genérica
+  // continua igual para as outras matérias, que têm migração própria.
+  const casos = useStageCases(entry.items, 0);
 
   if (mutations) {
+    const palco = casos.stage !== null;
     return <section className="tc-scene" aria-label={entry.question}>
       <header><small>CRIVO · leitura de código genético</small><h4>{entry.question}</h4></header>
-      <MutationWorkbench entry={entry} focus={foco ?? 0} onFocus={setFoco} />
+      {palco && <StageCaseLens cases={casos} items={entry.items} />}
+      <MutationWorkbench entry={entry} focus={palco ? casos.active : foco ?? 0} onFocus={palco ? casos.choose : setFoco} veiled={palco && casos.veiled.has(casos.active)} />
       {entry.nota && <p className="tc-nota">{entry.nota}</p>}
     </section>;
   }

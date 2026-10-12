@@ -1,0 +1,58 @@
+/* Palco de Geometria Molecular: molécula e galeria lado a lado na mesma cena;
+   abaixo de 760px de largura do palco, a galeria desce sob a molécula. */
+.gm-layout { display: grid; grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); gap: 12px; align-items: start; }
+@container (max-width: 520px) { .gm-layout { grid-template-columns: minmax(0, 1fr); } }
+.gm-stage { container-type: inline-size; }
+
+.gm-viewer { display: grid; gap: 8px; min-width: 0; }
+.gm-svg { width: 100%; max-height: min(48vh, 380px); height: auto; display: block; touch-action: none; cursor: grab; border-radius: 14px;
+  background: radial-gradient(circle at 50% 42%, var(--surface-1, var(--vs-paper-strong)) 0 52%, var(--surface-2, transparent) 100%); }
+.gm-svg:active { cursor: grabbing; }
+.gm-svg:focus-visible { outline: 3px solid var(--action-primary, var(--vs-burgundy)); outline-offset: 2px; }
+.gm-ground { fill: var(--vs-line); opacity: .35; }
+
+.gm-part { cursor: pointer; outline: none; }
+.gm-part:focus-visible .gm-atom, .gm-part:focus-visible .gm-pair, .gm-part:focus-visible .gm-bond { stroke: var(--action-primary, var(--vs-burgundy)); stroke-width: 4; }
+.gm-hit { stroke: transparent; stroke-width: 18; }
+.gm-bond { stroke: var(--vs-ink); stroke-width: 4; stroke-linecap: round; }
+.gm-part--on .gm-bond { stroke: var(--action-primary, var(--vs-burgundy)); stroke-width: 6; }
+.gm-atom { stroke: var(--vs-ink); stroke-width: 1.6; }
+.gm-atom--central { fill: color-mix(in srgb, var(--vs-burgundy) 38%, var(--vs-paper-strong)); }
+.gm-atom--ligante { fill: color-mix(in srgb, var(--vs-blue) 26%, var(--vs-paper-strong)); }
+.gm-part--on .gm-atom { stroke: var(--action-primary, var(--vs-burgundy)); stroke-width: 4; }
+.gm-symbol { fill: var(--vs-ink); font: 700 14px/1 Inter, system-ui, sans-serif; pointer-events: none; }
+.gm-symbol--central { font-size: 17px; }
+.gm-pair { fill: color-mix(in srgb, var(--vs-amber) 30%, var(--vs-paper-strong)); stroke: var(--vs-amber); stroke-width: 1.6; stroke-dasharray: 4 3; opacity: .92; }
+.gm-part--on .gm-pair { stroke: var(--action-primary, var(--vs-burgundy)); stroke-width: 3; stroke-dasharray: none; }
+.gm-dot { fill: var(--vs-ink); pointer-events: none; }
+.gm-vectors { pointer-events: none; }
+.gm-vector { stroke: var(--vs-blue); stroke-width: 7; stroke-linecap: round; opacity: .45; }
+.gm-resultant { stroke: var(--action-primary, var(--vs-burgundy)); stroke-width: 5; stroke-dasharray: 8 5; stroke-linecap: round; }
+.gm-cancel { fill: none; stroke: var(--vs-blue); stroke-width: 2; stroke-dasharray: 3 4; }
+
+.gm-camera { display: flex; flex-wrap: wrap; gap: 6px; }
+.gm-camera button, .gm-card { min-height: 40px; }
+.gm-camera button {
+  padding: 6px 10px; border-radius: 9px; font-size: 12.5px; font-weight: 600; color: inherit;
+  border: 1px solid var(--vs-line); background: var(--surface-1, transparent);
+}
+.gm-camera button[aria-pressed="true"] { background: var(--action-primary, var(--vs-burgundy)); color: var(--text-inverse, #fff); border-color: transparent; }
+
+.gm-flat { display: grid; justify-items: center; gap: 8px; padding: 18px; border-radius: 14px; background: var(--surface-2, transparent); }
+.gm-flat svg { width: min(260px, 80%); height: auto; }
+.gm-flat p { margin: 0; font-size: 13px; text-align: center; max-width: 38ch; }
+
+.gm-side { display: grid; gap: 10px; min-width: 0; }
+.gm-reading, .gm-explain { padding: 10px 12px; border-radius: 12px; border: 1px solid var(--vs-line); background: var(--surface-1, transparent); }
+.gm-reading strong { font-size: 15px; }
+.gm-reading p, .gm-explain p { margin: 4px 0 0; font-size: 13.5px; line-height: 1.45; }
+.gm-numbers { font-variant-numeric: tabular-nums; color: var(--vs-dim); }
+.gm-explain small { font: 600 11px/1.3 Inter, system-ui, sans-serif; letter-spacing: .03em; color: var(--vs-dim); }
+.gm-hint { color: var(--vs-dim); }
+.gm-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 6px; }
+@container (max-width: 520px) { .gm-gallery { grid-template-columns: repeat(3, minmax(0, 1fr)); } }
+.gm-card { display: grid; justify-items: center; gap: 2px; padding: 6px !important; text-align: center; }
+.gm-card .tc-chem-visual svg { height: 52px; }
+.gm-card strong { font-size: 11.5px; line-height: 1.2; }
+
+@media (prefers-reduced-motion: reduce) { .gm-svg { scroll-behavior: auto; } }

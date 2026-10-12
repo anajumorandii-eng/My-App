@@ -123,9 +123,9 @@ function TransferScene() {
 }
 
 export default function CalorimetryBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   return (
-    <BoardShell
+    <BoardShell palco
       title="Calor, temperatura e transferência"
       subtitle="Temperatura descreve o estado; calor atravessa a fronteira entre corpos."
       condition={{ label: 'no patamar', value: 'ΔT = 0' }}

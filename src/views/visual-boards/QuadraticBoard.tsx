@@ -65,9 +65,9 @@ function ParabolaScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhu
 }
 
 export default function QuadraticBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   return (
-    <BoardShell
+    <BoardShell palco
       title="Equação do 2º grau"
       subtitle="O discriminante é uma leitura do gráfico, não uma etapa da conta."
       condition={{ label: 'quando', value: 'a > 0' }}

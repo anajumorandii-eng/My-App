@@ -1,4 +1,5 @@
-import React, { useId, useMemo, useState } from 'react';
+import React, { useId, useMemo } from 'react';
+import { useStageParameters } from '../visual-boards/stageStep';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
@@ -234,8 +235,12 @@ export function cartesianInstrument(familyId: FamilyId) {
   return function CartesianBoard(props: BoardProps) {
     const par = boardPair(props);
     const foco = chapterFocus(props.map.summaryId, { title: family.name, subtitle: family.question });
-    const [a, setA] = useState(family.params[0].initial);
-    const [b, setB] = useState(family.params[1].initial);
+    // A etapa do palco move os dois parâmetros (lib/stageParameters): na
+    // estratégia a quadrática vai ao ponto em que o número de raízes vira.
+    const estagio = useStageParameters(family.params, ([x, y]) => family.readouts(x, y));
+    const [a, b] = estagio.values;
+    const setA = (valor: number) => estagio.setAt(0, valor);
+    const setB = (valor: number) => estagio.setAt(1, valor);
     const idA = useId();
     const idB = useId();
 
@@ -272,6 +277,7 @@ export function cartesianInstrument(familyId: FamilyId) {
 
     return (
       <BoardShell
+        palco={{ data: estagio.lens }}
         kicker="Prancha manipulável"
         title={foco.title}
         subtitle={foco.subtitle}

@@ -1,5 +1,6 @@
 import { createElement, lazy, Suspense, type ComponentType } from 'react';
 import type { BoardProps } from './types';
+import { StageStepProvider } from './stageStep';
 
 /** Catalog lookup stays synchronous; only the selected drawing is downloaded. */
 export function lazyBoard(load: () => Promise<{ default: ComponentType<BoardProps> }>): ComponentType<BoardProps> {
@@ -7,7 +8,7 @@ export function lazyBoard(load: () => Promise<{ default: ComponentType<BoardProp
   return function DeferredBoard(props: BoardProps) {
     return createElement(Suspense, {
       fallback: createElement('p', { role: 'status', className: 'p-4 text-sm' }, 'Carregando representação…'),
-    }, createElement(Component, props));
+    }, createElement(StageStepProvider, { props }, createElement(Component, props)));
   };
 }
 

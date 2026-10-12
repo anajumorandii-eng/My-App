@@ -59,10 +59,10 @@ function KinematicsScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nen
 }
 
 export default function KinematicsBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   if(props.map.summaryId==='summary-fisica-cinematica-escalar-conceitos-fundamentais') return <KinematicsConceptBoard {...props}/>;
   return (
-    <BoardShell
+    <BoardShell palco
       title="Velocidade por tempo"
       subtitle="A inclinação dá a aceleração; a área dá o deslocamento."
       condition={{ label: 'no gráfico', value: 'v × t' }}

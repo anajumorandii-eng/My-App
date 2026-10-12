@@ -2,13 +2,15 @@ import {GrammarVariationScene} from './GrammarVariationScene';
 import { LiteratureOperation } from '../visual-instruments/LiteratureFoundations';
 import { SociologyOperation } from '../visual-instruments/SociologyOperations';
 import { PhilosophyOperation } from '../visual-instruments/PhilosophyOperations';
-import React, { useState, useId } from 'react';
+import React, { useEffect, useState, useId } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { MOTION_DURATION, MOTION_EASE } from '../../design-system/motion/tokens';
 import { topicExperiments } from './catalog';
 import './TopicExperiment.css';
 import { ExceptionalSceneWindow } from '../visual-instruments/ExceptionalHumanitiesIllustration';
 import { GeographicGlobeView } from '../visual-instruments/GeographicGlobeView';
+import { StageStepBar, type SceneStageBridge } from '../visual-stage/stageCases';
+import { COORDINATES_FOCUS_TEXT, COORDINATES_STEPS } from './coordinatesStage';
 
 
 function useInkMotion() {
@@ -31,10 +33,22 @@ function Studio({ title, note, children }: { title: string; note: string; childr
 // do contorno com folga, e as duas barras de baixo põem lado a lado o que o
 // resumo chama de assimetria: 1° de latitude vale sempre cerca de 111 km, e
 // 1° de longitude encolhe com a latitude.
-function Coordinates() {
+function Coordinates({ stage }: { stage?: SceneStageBridge | null }) {
   const [latitude, setLatitude] = useState(20);
   const [longitude, setLongitude] = useState(30);
   const transition = useInkMotion();
+  // No palco, a etapa decide o que o globo mostra (coordinatesStage.ts): leva o
+  // ponto à coordenada que a seção escreve e acende a parte de que ela fala.
+  // Depois disso os cursores voltam a ser da estudante; só a próxima troca de
+  // etapa os move de novo.
+  const node = stage ? stage.map.nodes[stage.activeStep] : undefined;
+  const plano = node ? COORDINATES_STEPS[node.stage] : null;
+  const focus = stage && stage.mode === 'explorar' ? plano?.focus ?? null : null;
+  useEffect(() => {
+    if (!plano?.preset) return;
+    setLatitude(plano.preset.latitude);
+    setLongitude(plano.preset.longitude);
+  }, [plano]);
   const id = useId();
   const r = Math.PI / 180;
   const cx = 240, cy = 172, R = 122;
@@ -46,8 +60,19 @@ function Coordinates() {
   const bar = 206;
   const parallel = `M${cx - radius} ${y}H${cx + radius}`;
   const hemisphere = `${latitude < 0 ? 'Sul' : latitude > 0 ? 'Norte' : 'no Equador'}`;
+  const alvoAlcancado = plano?.alvo !== undefined && latitude === plano.alvo;
   return <Studio title="Um endereço sobre a esfera" note="Mova as coordenadas. A latitude parte do Equador; a longitude, de Greenwich.">
-    <ExceptionalSceneWindow label="Percorrer o globo e a comparação dos graus" coordinate><svg className="ts-coord" viewBox="0 0 480 456" role="img" aria-label={`Ponto a ${Math.abs(latitude)} graus ${latitude < 0 ? 'sul' : 'norte'} e ${Math.abs(longitude)} graus ${longitude < 0 ? 'oeste' : 'leste'}; 1 grau de latitude vale cerca de 111 km e 1 grau de longitude, nesta latitude, cerca de ${kmLongitude} km`}>
+    {stage && <StageStepBar map={stage.map} step={stage.activeStep} mode={stage.mode} onStepChange={stage.onStepChange}>
+      {stage.mode !== 'explorar'
+        ? <p className="stage-lens-mission" role="note"><b>Desafio na cena.</b> Mova latitude e longitude e compare as barras antes de escrever, na reconstrução do painel, o vínculo que falta.</p>
+        : focus && plano && <div className="stage-lens-focus">
+          <span><b>{plano.label}.</b> {COORDINATES_FOCUS_TEXT[focus]}</span>
+          {focus === 'missao' && <span role="status" data-coord-alvo={alvoAlcancado ? 'alcancado' : 'pendente'}>{alvoAlcancado
+            ? `Feito: a 40°N, 1° de longitude vale cerca de ${kmLongitude} km, contra 111 km de 1° de latitude.`
+            : `Agora: ${Math.abs(latitude)}°${latitude < 0 ? 'S' : latitude > 0 ? 'N' : ''}. Falta chegar a 40°N.`}</span>}
+        </div>}
+    </StageStepBar>}
+    <ExceptionalSceneWindow label="Percorrer o globo e a comparação dos graus" coordinate><svg className="ts-coord" data-stage-coord-focus={focus ?? undefined} viewBox="0 0 480 456" role="img" aria-label={`Ponto a ${Math.abs(latitude)} graus ${latitude < 0 ? 'sul' : 'norte'} e ${Math.abs(longitude)} graus ${longitude < 0 ? 'oeste' : 'leste'}; 1 grau de latitude vale cerca de 111 km e 1 grau de longitude, nesta latitude, cerca de ${kmLongitude} km`}>
       <defs><clipPath id={`${id}-globe`}><circle cx={cx} cy={cy} r={R}/></clipPath><radialGradient id={id} cx="32%" cy="24%"><stop stopColor="var(--vs-paper-strong)"/><stop offset="1" stopColor="var(--vs-blue)" stopOpacity=".2"/></radialGradient></defs>
       <circle cx={cx} cy={cy} r={R} fill={`url(#${id})`} stroke="currentColor" strokeWidth="1.5"/>
       <g clipPath={`url(#${id}-globe)`} fill="color-mix(in srgb,var(--vs-green) 24%,var(--vs-paper))" stroke="var(--vs-green)" strokeWidth="1.2">
@@ -81,7 +106,7 @@ function Coordinates() {
       <path d="M385 179Q369 182 355 190" fill="none" stroke="var(--vs-burgundy)" strokeWidth="1.5" strokeDasharray="3 3"/>
       <text x="382" y="169" fill="var(--vs-burgundy)" fontFamily="Kalam, cursive" fontSize="15">um lugar,</text>
       <text x="382" y="198" fill="var(--vs-burgundy)" fontFamily="Kalam, cursive" fontSize="15">dois ângulos</text>
-      <path d="M41 250Q115 303 240 294" fill="none" stroke="var(--vs-burgundy)" strokeWidth="1.5" strokeDasharray="3 3"/>
+      <path className="ts-coord-converge" d="M41 250Q115 303 240 294" fill="none" stroke="var(--vs-burgundy)" strokeWidth="1.5" strokeDasharray="3 3"/>
       <text x="24" y="231" fill="var(--vs-burgundy)" fontFamily="Kalam, cursive" fontSize="15">meridianos</text>
       <text x="24" y="260" fill="var(--vs-burgundy)" fontFamily="Kalam, cursive" fontSize="15">convergem</text>
       <text x="24" y="58" className="ts-coord-note">hemisfério</text>
@@ -89,6 +114,7 @@ function Coordinates() {
       <text x="24" y="102" className="ts-coord-label">{longitude === 0 ? 'em Greenwich' : longitude < 0 ? 'Oeste' : 'Leste'}</text>
 
 
+      {(focus === 'barras' || focus === 'convergencia' || focus === 'missao') && <rect x="12" y="326" width="456" height="126" rx="12" className="ts-coord-spot"/>}
       <text x="24" y="352" className="ts-coord-label">1° de latitude</text>
       <rect x="168" y="339" width={bar} height="14" rx="7" className="ts-coord-track"/>
       <rect x="168" y="339" width={bar} height="14" rx="7" className="ts-coord-bar-lat"/>
@@ -241,8 +267,14 @@ function Argument() {
 }
 
 
-export function TopicExperiment({summaryId}:{summaryId:string}) {
+/**
+ * `stage` é a mesma ponte que o palco entrega às cenas de topic-scenes. Só o
+ * globo de coordenadas a lê por enquanto; os outros experimentos a ignoram e
+ * se comportam como antes.
+ */
+export function TopicExperiment({summaryId, stage}:{summaryId:string; stage?: SceneStageBridge | null}) {
   const kind=topicExperiments[summaryId];
+  if (kind === 'coordinates') return <Coordinates stage={stage} />;
   const Component=kind&&({coordinates:Coordinates,powers:Powers,ecology:Ecology,myth:Myth,solidarity:Solidarity,cohesion:Cohesion,variation:Variation,sources:Sources,inference:Inference,literary:Literary,argument:Argument}[kind]);
   return Component?<Component/>:null;
 }

@@ -4,6 +4,7 @@ import { NODE_STATE_LABEL, type NodeState } from '../../lib/visualStudy';
 import type { BoardProps } from './types';
 import './IndependenceBoard.css';
 import ExceptionalHumanitiesIllustration from '../visual-instruments/ExceptionalHumanitiesIllustration';
+import { StageStepBar } from '../visual-stage/stageCases';
 
 type Focus = 'processo' | 'guerras' | 'continuidades' | 'nenhum';
 
@@ -16,12 +17,20 @@ function stateFor(states: Record<string, NodeState>, id?: string): NodeState {
  * The horizontal route holds the political rupture; the three persistent
  * tracks make the social and economic continuities legible at the same time.
  */
-export default function IndependenceBoard({ map, states, selectedId, onSelect }: BoardProps) {
+export default function IndependenceBoard({ map, states, selectedId, onSelect, activeStep, onStepChange, mode }: BoardProps) {
   const reducedMotion = useReducedMotion();
   const [processo, guerras, continuidades] = map.nodes;
+  const noPalco = activeStep !== undefined && Boolean(onStepChange);
+  // Os três eixos da prancha são os nós 0, 1 e 2 do capítulo (contexto,
+  // guerras, continuidades). No palco, sem nó selecionado, a etapa ativa é que
+  // escolhe o eixo; nas etapas de pegadinhas e de prática a prancha inteira
+  // fica acesa e a faixa aponta para a armadilha ou para o exercício.
+  const doPalco: Focus = !noPalco ? 'nenhum'
+    : activeStep === 0 ? 'processo' : activeStep === 1 ? 'guerras' : activeStep === 2 ? 'continuidades' : 'nenhum';
   const focus: Focus = selectedId === guerras?.id ? 'guerras'
     : selectedId === continuidades?.id ? 'continuidades'
-      : selectedId === processo?.id ? 'processo' : 'nenhum';
+      : selectedId === processo?.id ? 'processo' : doPalco;
+  const armadilha = noPalco && map.nodes[activeStep as number]?.stage === 'estrategia';
   const cards = [
     { key: 'processo' as const, node: processo, title: 'O conflito vem antes do grito', detail: 'Cortes recolonizadoras, Dia do Fico e apoio de elites ajudam a explicar a ruptura política.' },
     { key: 'guerras' as const, node: guerras, title: '1822 não encerra o processo', detail: 'Bahia, Maranhão, Pará e Piauí tiveram resistência; a Bahia se consolidou em 2 de julho de 1823.' },
@@ -34,6 +43,14 @@ export default function IndependenceBoard({ map, states, selectedId, onSelect }:
       <div className="independence-board__seal"><span>1821–1823</span><strong>ruptura política</strong></div>
     </header>
 
+    {noPalco && onStepChange && <StageStepBar map={map} step={activeStep as number} mode={mode} onStepChange={onStepChange}>
+      {mode === 'reconstruir'
+        ? <p className="stage-lens-mission" role="note"><b>Desafio na cena.</b> Percorra a linha de 1821 a 1823 e as três continuidades; depois escreva, na reconstrução do painel, o vínculo que a prancha mostra.</p>
+        : <div className="stage-lens-focus"><span>{focus === 'processo' ? 'Nesta etapa: o conflito que vem antes do grito.'
+          : focus === 'guerras' ? 'Nesta etapa: as guerras que seguem 1822.'
+            : focus === 'continuidades' ? 'Nesta etapa: o que atravessa a mudança.'
+              : armadilha ? 'Nesta etapa: a pegadinha de prova, no rodapé da prancha.' : 'Nesta etapa: a prancha inteira, para resolver o exercício do painel.'}</span></div>}
+    </StageStepBar>}
     <ExceptionalHumanitiesIllustration kind="independence" index={focus === 'guerras' ? 1 : focus === 'continuidades' ? 2 : 0} ariaLabel="Paisagem da Independência: palácio, Cortes, participação popular nas guerras e continuidade do trabalho escravizado"/>
     <p className="independence-board__hint">Percorra a prancha na horizontal para acompanhar 1821–1823. Com o foco na prancha, use as setas do teclado.</p>
     <div className="independence-board__viewport" tabIndex={0} role="region" aria-label="Percorrer a prancha da Independência" onKeyDown={event => {
@@ -61,6 +78,6 @@ export default function IndependenceBoard({ map, states, selectedId, onSelect }:
     <div className="independence-board__cards" aria-label="Eixos para estudar a Independência do Brasil">
       {cards.map((card) => { const state = stateFor(states, card.node?.id); const active = focus === card.key; return <button key={card.key} type="button" data-active={active || undefined} data-state={state} onClick={() => card.node && onSelect(card.node.id)}><small>{NODE_STATE_LABEL[state]}</small><strong>{card.title}</strong><span>{card.detail}</span></button>; })}
     </div>
-    <footer><strong>Pegadinha de prova:</strong> não trate 7 de setembro como fim automático das guerras, nem a separação política como abolição, reforma agrária ou república.</footer>
+    <footer data-stage-focus={armadilha ? 'true' : undefined}><strong>Pegadinha de prova:</strong> não trate 7 de setembro como fim automático das guerras, nem a separação política como abolição, reforma agrária ou república.</footer>
   </section>;
 }

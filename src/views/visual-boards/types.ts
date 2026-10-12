@@ -1,3 +1,4 @@
+import type { StageSceneProps } from '../visual-stage/contract';
 import type { NodeState, VisualMap } from '../../lib/visualStudy';
 
 /**
@@ -16,4 +17,9 @@ export interface BoardProps {
   onSelect: (id: string) => void;
   hiddenEdgeIds: string[];
   mode: 'explorar' | 'testar' | 'reconstruir';
+  /** Contrato do palco (docs/visual/PALCO-IMERSIVO.md). Opcional: prancha que não lê continua válida. */
+  activeStep?: StageSceneProps['activeStep'];
+  onStepChange?: StageSceneProps['onStepChange'];
+  challengeActive?: StageSceneProps['challengeActive'];
+  focusTarget?: StageSceneProps['focusTarget'];
 }

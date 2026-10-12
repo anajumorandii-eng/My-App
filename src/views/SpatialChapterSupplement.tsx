@@ -22,6 +22,14 @@ const BioGeoLab=lazy(()=>import('./visual-instruments/ChapterBioGeoSpatialLab'))
 const MathLab=lazy(()=>import('./visual-instruments/ChapterMathSpatialLab'));
 const ScienceLab=lazy(()=>import('./visual-instruments/ChapterScienceSpatialLab'));
 
+/** Se o capítulo tem modelo espacial: o palco usa isto para oferecer a camada. */
+export function hasSpatialSupplement(chapterId: string): boolean {
+  return !!(SPATIAL_CHAPTER_LESSONS[chapterId] || PHYSICS_SPATIAL_LESSONS[chapterId] || CHEMISTRY_SPATIAL_LESSONS[chapterId]
+    || BIOLOGY_SPATIAL_LESSONS[chapterId] || EARTH_SPATIAL_LESSONS[chapterId] || SCIENCE_SPATIAL_LESSONS[chapterId]
+    || MATH_SPATIAL_LESSONS[chapterId] || BIO_GEO_SPATIAL_LESSONS[chapterId] || HUMANITIES_SPATIAL_LESSONS[chapterId]
+    || LANGUAGES_SPATIAL_LESSONS[chapterId]);
+}
+
 export function SpatialChapterSupplement({ chapterId }: { chapterId: string }) {
   const science=!!SCIENCE_SPATIAL_LESSONS[chapterId];
   const math=!!MATH_SPATIAL_LESSONS[chapterId];

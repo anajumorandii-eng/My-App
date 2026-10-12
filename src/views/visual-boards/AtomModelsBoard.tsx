@@ -13,7 +13,7 @@ export default function AtomModelsBoard(props: BoardProps) {
       subtitle="Novas evidências revelam limites e motivam novos modelos."
       condition={{ label: 'critério', value: 'evidência' }}
       ariaLabel="Prancha ilustrada da evolução dos modelos atômicos"
-      scene={<AtomMechanism />}
+      scene={<AtomMechanism stage={props} />}
       sceneFirst
       emphasis={par.emphasis}
       left={{

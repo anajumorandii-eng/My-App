@@ -55,13 +55,13 @@ function TrigScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
 }
 
 export default function TrigCircleBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   const foco = chapterFocus(props.map.summaryId, {
     title: 'Círculo trigonométrico',
     subtitle: 'Seno e cosseno são as duas coordenadas do mesmo ponto.',
   });
   return (
-    <BoardShell
+    <BoardShell palco
       title={foco.title}
       subtitle={foco.subtitle}
       condition={{ label: 'raio', value: '= 1' }}

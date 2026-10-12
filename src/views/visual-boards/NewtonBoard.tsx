@@ -64,9 +64,9 @@ function NewtonRadial({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum
 }
 
 export default function NewtonBoard(props: BoardProps) {
-  const pair = boardPair(props);
+  const pair = boardPair(props, { porEtapa: true });
   return (
-    <BoardShell
+    <BoardShell palco
       kicker="Mapa de relações"
       title="As Leis de Newton"
       subtitle="O movimento muda quando a força resultante deixa de ser nula."

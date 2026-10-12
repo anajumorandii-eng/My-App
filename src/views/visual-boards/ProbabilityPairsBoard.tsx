@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useStageParameter, useStageParameters } from './stageStep';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
@@ -18,9 +19,20 @@ function razao(a: number, b: number): string {
   return `${fracao} ≈ ${(a / b).toLocaleString('pt-BR', { maximumFractionDigits: 2 })}`;
 }
 
+function contarPares(limite: number) {
+  const valores = Array.from({ length: limite - 2 }, (_, index) => index + 3);
+  const favoraveis = valores.flatMap((m) => valores.map((n) => [m, n] as const)).filter(([m, n]) => gcd(m, n) > 1).length;
+  return { favoraveis, total: valores.length ** 2 };
+}
+
 export default function ProbabilityPairsBoard(props: BoardProps) {
-  const [upper, setUpper] = useState(5);
-  const pair = boardPair(props);
+  // O limite do universo responde à etapa do palco: a fração favorável/total é
+  // a leitura que a aplicação recalcula e o exercício pede para alcançar.
+  const { value: upper, setValue: setUpper, lens } = useStageParameter({ min: 3, max: 9, step: 1, initial: 5 }, (limite) => {
+    const { favoraveis, total } = contarPares(limite);
+    return [{ label: 'P(mdc > 1)', value: razao(favoraveis, total), pivot: true }, { label: 'pares no universo', value: String(total) }];
+  });
+  const pair = boardPair(props, { porEtapa: true });
   const values = Array.from({ length: upper - 2 }, (_, index) => index + 3);
   const favorable = values.flatMap((m) => values.map((n) => [m, n] as const)).filter(([m, n]) => gcd(m, n) > 1).length;
   const total = values.length ** 2;
@@ -29,7 +41,7 @@ export default function ProbabilityPairsBoard(props: BoardProps) {
   const x0 = (320 - gridSize) / 2;
   const y0 = 68;
 
-  return <BoardShell
+  return <BoardShell palco={{ data: lens }}
     kicker="Laboratório de probabilidade"
     title="Contagem sistemática e probabilidade"
     subtitle="Defina o universo, marque o critério e conte cada par ordenado uma vez."

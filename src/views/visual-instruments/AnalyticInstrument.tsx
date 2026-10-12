@@ -1,5 +1,6 @@
 import React, { useRef, useState } from 'react';
 import BoardShell from '../visual-boards/BoardShell';
+import { useStageParameters } from '../visual-boards/stageStep';
 import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from '../visual-boards/types';
@@ -268,7 +269,19 @@ export function analyticInstrument(configId: ConfigId) {
   return function AnalyticBoard(props: BoardProps) {
     const par = boardPair(props);
     const foco = chapterFocus(props.map.summaryId, { title: config.name, subtitle: config.question });
-    const [ponto, setPonto] = useState<Ponto>(config.inicial);
+    // Os dois eixos do ponto respondem à etapa do palco (lib/stageParameters):
+    // na estratégia o ponto vai à posição mais próxima em que a leitura
+    // principal muda de natureza (dentro → sobre → fora, paralelas → concorrentes).
+    const estagio = useStageParameters(
+      [{ min: -config.alcance, max: config.alcance, step: 0.1, initial: config.inicial.x },
+        { min: -config.alcance, max: config.alcance, step: 0.1, initial: config.inicial.y }],
+      ([x, y]) => config.readouts({ x, y }),
+    );
+    const ponto: Ponto = { x: estagio.values[0], y: estagio.values[1] };
+    const setPonto = (proximo: Ponto | ((atual: Ponto) => Ponto)) => {
+      const alvo = typeof proximo === 'function' ? proximo(ponto) : proximo;
+      estagio.setAt(0, alvo.x); estagio.setAt(1, alvo.y);
+    };
 
     const leituras = config.readouts(ponto);
     const casoAtivo = config.casos?.find(caso => Math.hypot(ponto.x - caso.ponto.x, ponto.y - caso.ponto.y) < 1e-9);
@@ -298,6 +311,7 @@ export function analyticInstrument(configId: ConfigId) {
 
     return (
       <BoardShell
+        palco={{ data: estagio.lens }}
         kicker="Prancha manipulável"
         title={foco.title}
         subtitle={foco.subtitle}

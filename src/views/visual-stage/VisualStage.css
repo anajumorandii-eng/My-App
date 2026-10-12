@@ -1,0 +1,134 @@
+/* Palco imersivo (docs/visual/PALCO-IMERSIVO.md). Seletores sob
+   .crivo-visual--stage para vencer as regras antigas de vs-workspace e do
+   inspetor flutuante sem apagá-las de outras telas. */
+.crivo-visual--stage { --vs-stage-top: 270px; }
+.ni-production-main:has(> .crivo-visual--stage), .crivo-visual--stage.ni-main { padding-bottom: 12px; }
+.crivo-visual--stage .vs-topic-bar { margin-bottom: 10px; }
+
+.vs-stage {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(320px, 400px);
+  gap: 14px;
+  height: max(560px, calc(100dvh - var(--vs-stage-top)));
+}
+
+.vs-stage-scene, .vs-stage-hud {
+  min-height: 0;
+  border: 1px solid var(--vs-line, var(--surface-border, rgba(0,0,0,.12)));
+  border-radius: 18px;
+  background: var(--surface-1, var(--vs-paper-strong, #fff));
+}
+.vs-stage-scene { display: flex; flex-direction: column; overflow: hidden; }
+.vs-stage-scene-bar {
+  display: flex; flex-wrap: wrap; align-items: center; gap: 8px;
+  padding: 8px 10px; border-bottom: 1px solid var(--vs-line, rgba(0,0,0,.1));
+}
+.vs-stage-layers { display: inline-flex; gap: 4px; padding: 3px; border-radius: 10px; background: var(--surface-2, rgba(0,0,0,.05)); }
+.vs-stage-layers button, .vs-stage-hotspots button {
+  min-height: 36px; padding: 6px 10px; border-radius: 8px; border: 1px solid transparent;
+  font-size: 12.5px; font-weight: 600; color: inherit; background: transparent;
+}
+.vs-stage-layers button[aria-pressed="true"] { background: var(--action-primary, #7a1f2b); color: var(--text-inverse, #fff); }
+.vs-stage-hotspots { display: flex; gap: 6px; overflow-x: auto; min-width: 0; flex: 1 1 0; scrollbar-width: thin; }
+.vs-stage-hotspots button { display: inline-flex; align-items: center; gap: 6px; flex: 0 0 auto; max-width: 220px; border-color: var(--vs-line, rgba(0,0,0,.12)); }
+.vs-stage-hotspots button > span:first-child { font: 600 10px/1 Inter, system-ui, sans-serif; opacity: .7; }
+.vs-stage-hotspot-label { overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.vs-stage-hotspots button[aria-current="step"] { border-color: var(--action-primary, #7a1f2b); box-shadow: inset 0 -2px 0 var(--action-primary, #7a1f2b); }
+.vs-stage-layers button:focus-visible, .vs-stage-hotspots button:focus-visible, .vs-stage-map summary:focus-visible, .vs-journey-deepen:focus-visible {
+  outline: 3px solid var(--action-primary, #7a1f2b); outline-offset: 2px;
+}
+
+/* A cena rola por dentro do palco, não a página. */
+.vs-stage-viewport { flex: 1 1 auto; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 10px; }
+.vs-stage-viewport .vs-chapter-scene { margin: 0; }
+
+.vs-stage-veil {
+  display: grid; place-content: center; justify-items: center; gap: 8px; height: 100%; min-height: 240px;
+  text-align: center; padding: 24px; color: var(--text-secondary, inherit);
+  background: repeating-linear-gradient(135deg, transparent 0 14px, var(--surface-2, rgba(0,0,0,.035)) 14px 15px);
+  border-radius: 12px;
+}
+.vs-stage-veil svg { width: 34px; height: 34px; opacity: .55; }
+.vs-stage-veil p { font-weight: 600; max-width: 34ch; }
+
+.vs-stage-hud { display: flex; flex-direction: column; gap: 12px; padding: 12px; overflow: auto; overscroll-behavior: contain; }
+.crivo-visual--stage .vs-study-toolbar { margin: 0; }
+.crivo-visual--stage .vs-mode-row { flex-wrap: wrap; gap: 8px; }
+.crivo-visual--stage .vs-modes { flex: 1 1 100%; }
+.crivo-visual--stage .vs-stage-panel { display: flex; flex-direction: column; gap: 12px; min-width: 0; }
+
+/* Inspetor ancorado ao palco: nada de painel fixo nem fundo escurecido. */
+.crivo-visual--stage .vs-inspector-shell {
+  position: static; inset: auto; width: auto; max-width: none; max-height: none; transform: none;
+  box-shadow: none; z-index: auto; margin: 0;
+}
+
+/* Trilho de etapas compacto dentro do HUD. */
+.crivo-visual--stage .vs-journey { margin: 0; padding: 14px; scroll-margin-top: 8px; }
+.crivo-visual--stage .vs-journey-heading h2 { font-size: 18px; line-height: 1.25; }
+.crivo-visual--stage .vs-journey-steps { display: grid; grid-template-columns: repeat(5, minmax(0, 1fr)); gap: 4px; }
+.crivo-visual--stage .vs-journey-steps button { padding: 6px 4px; min-height: 44px; }
+.crivo-visual--stage .vs-journey-steps strong { display: none; }
+.crivo-visual--stage .vs-journey-page h3 { font-size: 17px; }
+.vs-journey-text:not([data-expanded]) {
+  max-height: 9.6em; overflow: hidden;
+  -webkit-mask-image: linear-gradient(#000 60%, transparent);
+  mask-image: linear-gradient(#000 60%, transparent);
+}
+.vs-journey-deepen {
+  margin-top: 6px; min-height: 40px; padding: 6px 12px; border-radius: 8px;
+  border: 1px solid var(--vs-line, rgba(0,0,0,.15)); background: transparent; color: inherit; font-size: 13px; font-weight: 600;
+}
+.crivo-visual--stage .vs-scene-bridge { margin: 0; padding: 14px; flex-direction: column; align-items: stretch; gap: 10px; }
+.crivo-visual--stage .vs-scene-bridge h3 { font-size: 17px; }
+.crivo-visual--stage .vs-scene-bridge-actions { flex-direction: row; flex-wrap: wrap; }
+.crivo-visual--stage .vs-scene-bridge button { flex: 1 1 140px; }
+.crivo-visual--stage .vs-priority-panel { position: static; margin: 0; }
+
+.vs-stage-map { border-top: 1px solid var(--vs-line, rgba(0,0,0,.1)); padding-top: 8px; }
+.vs-stage-map > summary { cursor: pointer; min-height: 40px; display: flex; align-items: center; font-weight: 700; font-size: 14px; }
+.vs-stage-map .vs-branch-map { margin: 0; }
+
+/* Testar: o palco inteiro é o desafio; o HUD ganha largura. */
+.vs-stage[data-study-mode="testar"] { grid-template-columns: minmax(0, .8fr) minmax(360px, 1fr); }
+
+/* iPad retrato e celular: cena no topo, presa; o painel desliza por baixo
+   dela como uma gaveta, sem página de 4.000px. */
+@media (max-width: 1100px) {
+  .vs-stage { grid-template-columns: minmax(0, 1fr); grid-template-rows: minmax(0, 58%) minmax(0, 1fr); }
+  .vs-stage[data-study-mode="testar"] { grid-template-columns: minmax(0, 1fr); grid-template-rows: auto minmax(0, 1fr); }
+  .vs-stage[data-study-mode="testar"] .vs-stage-veil { min-height: 0; height: auto; padding: 14px; }
+  .vs-stage-hud { border-radius: 18px 18px 12px 12px; box-shadow: 0 -8px 24px -18px rgba(0,0,0,.4); }
+}
+@media (max-width: 900px) {
+  .vs-stage { grid-template-rows: minmax(0, 52%) minmax(0, 1fr); gap: 8px; }
+  .vs-stage-hotspot-label { max-width: 110px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .vs-stage-hotspots { scroll-behavior: auto; }
+}
+
+/* Dentro do palco, a barra da cena não repete o título (a barra do capítulo
+   já o diz): fica só a fileira de ferramentas. O título continua no DOM, porque
+   é ele que nomeia o diálogo do modo foco. */
+.vs-stage-viewport .vs-chapter-scene:not(.vs-chapter-scene--focus) > .vs-chapter-scene-tools {
+  padding: 6px 8px; margin-bottom: 10px; border-radius: 12px; border-bottom-width: 1px; justify-content: flex-end; flex-wrap: nowrap;
+}
+.vs-stage-viewport .vs-chapter-scene:not(.vs-chapter-scene--focus) > .vs-chapter-scene-tools > .vs-object-icon { display: none; }
+.vs-stage-viewport .vs-chapter-scene:not(.vs-chapter-scene--focus) > .vs-chapter-scene-tools > div {
+  position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap;
+}
+.vs-stage-viewport .vs-chapter-scene:not(.vs-chapter-scene--focus) > .vs-chapter-scene-tools button { width: auto; min-height: 38px; padding: 6px 10px; font-size: 13px; }
+
+.crivo-visual--stage .vs-journey-steps { padding: 8px 0; overflow: visible; }
+.crivo-visual--stage .vs-journey-steps li { min-width: 0; }
+.crivo-visual--stage .vs-journey-steps button { flex-direction: column; gap: 2px; min-height: 48px; padding: 6px 4px; align-items: flex-start; }
+.crivo-visual--stage .vs-journey-steps small { margin: 0; font-size: 10.5px; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; max-width: 100%; }
+.crivo-visual--stage .vs-journey-number { font-size: 1rem; }
+@media (max-width: 900px) {
+  /* A barra inferior fixa do app ocupa ~80px; o palco termina acima dela. */
+  .crivo-visual--stage { --vs-stage-top: calc(232px + env(safe-area-inset-bottom)); }
+  .vs-stage-viewport .vs-chapter-scene:not(.vs-chapter-scene--focus) > .vs-chapter-scene-tools button span { font-size: 12px; }
+}
+@media (max-width: 1100px) { .crivo-visual--stage { --vs-stage-top: 232px; } }
+@media (max-width: 900px) { .crivo-visual--stage { --vs-stage-top: calc(256px + env(safe-area-inset-bottom)); } }

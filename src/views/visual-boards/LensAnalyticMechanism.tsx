@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useStageParameters } from './stageStep';
 import { motion, useReducedMotion } from 'motion/react';
 import { imagemDeLenteConvergente } from '../../lib/opticalImage';
 import { MechanismFrame } from './MechanismFrame';
@@ -27,9 +28,21 @@ function curva(f: number) {
   return trechos.filter((t) => t.length > 1).map((t) => `M${t.join('L')}`).join('');
 }
 
+const POSICOES_P = [10, 15, 20, 25, 30, 40, 50, 60];
+function sinalDaImagem(p: number, f: number) {
+  if (p === f) return 'no foco: sem imagem';
+  return imagemDeLenteConvergente(p, 1, f).distancia > 0 ? 'p′ > 0: real' : 'p′ < 0: virtual';
+}
+
 export default function LensAnalyticMechanism() {
-  const [f, setF] = useState(20);
-  const [p, setP] = useState(30);
+  // f e p respondem à etapa do palco; o sinal de p′ (real ou virtual) é a
+  // leitura que muda de natureza (lib/stageParameters).
+  const estagio = useStageParameters([{ min: 0, max: 7, step: 1, initial: 4 }, { min: 0, max: 1, step: 1, initial: 0 }],
+    ([posicao, tipo]) => [{ label: 'imagem', value: sinalDaImagem(POSICOES_P[posicao], tipo ? -20 : 20), pivot: true }]);
+  const p = POSICOES_P[estagio.values[0]] ?? 30;
+  const f = estagio.values[1] ? -20 : 20;
+  const setP = (valor: number) => estagio.setAt(0, Math.max(0, POSICOES_P.indexOf(valor)));
+  const setF = (valor: number) => estagio.setAt(1, valor < 0 ? 1 : 0);
   const reduzir = useReducedMotion();
   const noFoco = p === f;
   const img = noFoco ? null : imagemDeLenteConvergente(p, 1, f);

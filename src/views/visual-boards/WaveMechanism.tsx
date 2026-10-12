@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useStageParameters } from './stageStep';
 import { ElectromagneticWaveView } from '../visual-instruments/ElectromagneticWaveView';
 import {PhysicsDrawingWindow} from './PhysicsDrawingWindow';
 import { MechanismFrame, TimeControl, useMechanismTime } from './MechanismFrame';
@@ -8,8 +9,13 @@ export const wavelength = (frequency: number) => 240 / frequency;
 export const waveValue = (x: number, frequency: number, phase: number) => Math.sin(2 * Math.PI * (x / wavelength(frequency) - phase));
 
 export default function WaveMechanism({ kind }: { kind: WaveKind }) {
-  const [frequency, setFrequency] = useState(2);
-  const [amplitude, setAmplitude] = useState(40);
+  // Frequência e amplitude respondem à etapa do palco: a aplicação muda f e
+  // mostra λ recalculado; a estratégia mostra que a amplitude não mexe em λ.
+  const estagio = useStageParameters([{ min: 1, max: 3, step: 1, initial: 2 }, { min: 20, max: 60, step: 10, initial: 40 }],
+    ([f, a]) => [{ label: 'λ', value: `${wavelength(f)} unidades`, pivot: true }, { label: 'amplitude', value: String(a) }]);
+  const [frequency, amplitude] = estagio.values;
+  const setFrequency = (valor: number) => estagio.setAt(0, valor);
+  const setAmplitude = (valor: number) => estagio.setAt(1, valor);
   const clock = useMechanismTime();
   const lambda = wavelength(frequency);
   const points = Array.from({ length: 121 }, (_, i) => ({ x: 50 + i * 3.5, value: waveValue(i * 3.5, frequency, clock.time) }));
