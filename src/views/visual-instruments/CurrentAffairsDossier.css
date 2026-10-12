@@ -1,0 +1,30 @@
+/* Dossiê da COP30. Escopo .vs-cop para não vazar para os outros instrumentos. */
+.vs-cop .vs-cop-scene { width: 100%; height: auto; max-width: 560px; }
+.vs-cop-hand { font-family: "Kalam", "Newsreader", Georgia, serif; }
+.vs-cop-piece { cursor: pointer; outline: none; }
+/* Foco visível na própria peça: a cena é alcançável por teclado, não só por toque. */
+.vs-cop-piece:focus-visible > :first-child { stroke: var(--vs-blue); stroke-width: 3.5; }
+@media (prefers-reduced-motion: reduce) { .vs-cop-piece { transition: none; } }
+
+/* Critério e caso empilhados: na coluna lateral da prancha, a grade de dois
+   cartões que o dossiê antigo herdava espremia o texto do caso em 20 linhas. */
+.vs-cop-readout { display: grid; grid-template-columns: minmax(0, 1fr); gap: 6px; margin: 0; }
+.vs-cop-readout > div { background: var(--vs-paper-strong); border: 1px solid var(--vs-line); border-radius: 8px; padding: 6px 9px; min-width: 0; }
+.vs-cop-readout > div[data-pivot="true"] { border-color: var(--vs-burgundy); }
+.vs-cop-readout dt { font-size: .68rem; letter-spacing: .02em; color: var(--vs-dim); }
+.vs-cop-readout dd { margin: 1px 0 0; font-size: .84rem; line-height: 1.4; color: var(--vs-ink); overflow-wrap: anywhere; }
+
+.vs-cop-sort { margin-top: 12px; padding: 12px; border: 1px solid var(--vs-line); border-radius: 10px; background: var(--vs-paper); }
+.vs-cop-sort header { display: flex; justify-content: space-between; align-items: baseline; gap: 8px; flex-wrap: wrap; }
+.vs-cop-sort h4 { margin: 0; font: 700 1rem/1.25 "Newsreader", Georgia, serif; color: var(--vs-ink); }
+.vs-cop-sort header span { font-size: .72rem; color: var(--vs-dim); }
+.vs-cop-statement { margin: 8px 0 0; font: italic 1rem/1.4 "Newsreader", Georgia, serif; color: var(--vs-ink); }
+.vs-cop-verdict { margin: 0; min-height: 2.6em; font-size: .84rem; line-height: 1.45; color: var(--vs-ink); }
+.vs-cop-verdict[data-correct="true"] strong { color: var(--vs-forest); }
+.vs-cop-verdict[data-correct="false"] strong { color: var(--vs-burgundy); }
+.vs-cop-steps { display: flex; align-items: center; gap: 10px; margin-top: 8px; font-size: .8rem; color: var(--vs-dim); }
+.vs-cop-steps button { min-width: 44px; min-height: 44px; border: 1px solid var(--vs-ink-muted); border-radius: 99px; background: var(--vs-paper); color: var(--vs-ink); cursor: pointer; }
+.vs-cop-steps button:focus-visible { outline: 3px solid var(--vs-blue); outline-offset: 3px; }
+@media (max-width: 900px) {
+  .vs-cop .vs-geography-options button { min-height: 44px; }
+}
