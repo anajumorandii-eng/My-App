@@ -2,7 +2,7 @@ import {chromium, webkit, devices} from '@playwright/test';
 import fs from 'node:fs/promises';
 const isWebKit = process.env.CRIVO_BROWSER === 'webkit';
 const browser = await (isWebKit ? webkit : chromium).launch({ executablePath: process.env.CRIVO_BROWSER_EXECUTABLE || undefined, args: isWebKit ? [] : ['--no-sandbox'], headless: true });
-const out='docs/refinamento-profissional-613-2026-10-11';await fs.mkdir(out,{recursive:true});
+const out=process.env.CRIVO_VISUAL_OUTPUT || 'docs/refinamento-profissional-613-2026-10-11';await fs.mkdir(out,{recursive:true});
 const results=[];
 try {
 const profiles = isWebKit ? [['webkit-ipad',834,1112,'dark',true],['webkit-ipad-landscape',1194,834,'light',true],['webkit-mobile',390,844,'light',true]] : [['desktop',1440,1000,'light',false],['ipad',834,1112,'dark',true],['mobile',390,844,'light',true],['small',360,800,'dark',true]];

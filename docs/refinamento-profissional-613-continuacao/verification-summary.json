@@ -1,0 +1,58 @@
+{
+  "baseCommit": "72052c4d",
+  "previousPRs": [
+    313,
+    314
+  ],
+  "chapters": 613,
+  "subjects": 14,
+  "sharedSpatialChapters": 588,
+  "dedicatedSpatialChapters": 25,
+  "catalogWidths": [
+    1440,
+    834,
+    390,
+    360
+  ],
+  "catalogFailures": 0,
+  "savedConditionComparisons": 588,
+  "vitest": {
+    "files": 87,
+    "passed": 1352,
+    "failed": 0
+  },
+  "e2e": {
+    "passed": 8,
+    "failed": 0,
+    "engines": [
+      "Chromium desktop",
+      "WebKit iPad Pro 11"
+    ],
+    "subjects": [
+      "Linguagens",
+      "Física",
+      "Química",
+      "História"
+    ],
+    "checks": [
+      "saved conditions and geometry",
+      "manual camera priority",
+      "live reduced motion during rotation and playback",
+      "paused progress retention",
+      "responsive width",
+      "focus after clearing comparison"
+    ]
+  },
+  "typescript": "passed",
+  "productionBuild": "passed",
+  "axe": {
+    "violations": 0,
+    "contrastIncomplete": true
+  },
+  "ipadValidation": "WebKit emulation; physical device not tested",
+  "skills": [
+    "Design de Interfaces/accessibility",
+    "Qualidade/verification-before-completion"
+  ],
+  "newExternalDependencies": 0
+}

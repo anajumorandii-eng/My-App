@@ -1,7 +1,7 @@
 import React, { useId, useState } from 'react';
 import type { PhysicsSpatialDrawing } from '../../lib/physicsSpatialDrawing';
 import { TimeControl, useMechanismTime } from '../visual-boards/MechanismFrame';
-import { SpatialLabFrame } from './SpatialLabFrame';
+import { SpatialLabFrame, type SpatialObservationField } from './SpatialLabFrame';
 import { SpatialStage } from './SpatialStage';
 
 export interface SpatialLessonConfig { kind: string; title: string; label: string; min: number; max: number; step: number; initial: number; note: string; choices?: [string, string][]; }
@@ -35,7 +35,12 @@ export function SpatialLessonLab({ config, draw, moving, dataAttributes, paramet
   const shown = sweeping ? sweepValue(config, clock.time) : value;
   const model = draw(shown, timed ? clock.time : 0, choice);
   const label = parameterLabel?.(choice) ?? config.label;
-  return <SpatialLabFrame title={config.title} reading={model.reading} note={config.note} controls={<>
+  const observation: SpatialObservationField[] = [
+    { id: 'parameter', label, value: shown.toLocaleString('pt-BR') },
+    ...(config.choices?.length ? [{ id: 'condition', label: 'Condição', value: config.choices.find(item => item[0] === choice)?.[1] ?? choice }] : []),
+    { id: 'progress', label: timed ? 'Percurso do modelo' : 'Varredura do parâmetro', value: `${(clock.time * 100).toLocaleString('pt-BR', { maximumFractionDigits: 2 })}%` },
+  ];
+  return <SpatialLabFrame title={config.title} reading={model.reading} note={config.note} observation={observation} controls={<>
     <p className="vs-science-caption">{model.legend}</p>
     {!!config.choices?.length && <div className="vs-science-choices" role="group" aria-label="Condições do modelo">{config.choices.map(([id, text]) => <button key={id} type="button" aria-pressed={choice === id} onClick={() => { clock.seek(0); setChoice(id); }}>{text}</button>)}</div>}
     <label className="vs-spatial-parameter" htmlFor={uid + '-parameter'}>{label} <output>{shown.toLocaleString('pt-BR')}</output></label>

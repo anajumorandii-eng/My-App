@@ -63,3 +63,5 @@ it('a água sai do interior da célula hipertônica e mantém trocas opostas na 
   fireEvent.click(screen.getByRole('button',{name:'Reproduzir movimento'}));
   expect(markers().map(e=>e.getAttribute('cy'))).toEqual(['220','110','220','110']);
 });
+
+vi.mock('../../hooks/useLiveReducedMotion', () => ({ useLiveReducedMotion: () => true, readReducedMotionPreference: () => true }));

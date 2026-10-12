@@ -1,0 +1,29 @@
+[
+  {
+    "name": "webkit-ipad",
+    "width": 834,
+    "height": 1112,
+    "theme": "dark",
+    "touch": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "webkit-ipad-landscape",
+    "width": 1194,
+    "height": 834,
+    "theme": "light",
+    "touch": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "webkit-mobile",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "touch": true,
+    "overflow": false,
+    "errors": []
+  }
+]

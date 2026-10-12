@@ -142,3 +142,13 @@ svg.vs-science-object:not(.vs-spatial-stage) {
 @media(min-width:900px) { .vs-spatial-lab > svg.vs-science-object { grid-row: 2; } }
 @media(max-width:560px) { .vs-spatial-workbench { gap: 16px; } .vs-spatial-comparison-readings > div { padding: 12px; } }
 @media(prefers-reduced-motion:reduce) { .vs-spatial-lab button, .vs-spatial-lab input[type=range]::-webkit-slider-thumb { transition: none; } }
+
+/* A comparação explicita as condições registradas, sem depender só da cor. */
+.vs-spatial-state-fields { display: grid; gap: 6px; margin: 12px 0; }
+.vs-spatial-state-fields > div { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); gap: 8px; padding: 8px 10px; border-radius: 8px; background: var(--vs-paper); }
+.vs-spatial-state-fields dt { font-size: 12px; line-height: 1.5; color: var(--vs-dim); overflow-wrap: anywhere; }
+.vs-spatial-state-fields dd { display: flex; gap: 6px; flex-wrap: wrap; justify-content: flex-end; margin: 0; text-align: right; font-size: 13px; line-height: 1.5; font-variant-numeric: tabular-nums; overflow-wrap: anywhere; }
+.vs-spatial-state-fields [data-changed] { box-shadow: inset 3px 0 var(--vs-burgundy); }
+.vs-spatial-state-fields small { align-self: center; padding: 1px 5px; border: 1px solid var(--vs-line); border-radius: 4px; color: var(--vs-burgundy); font-size: 11px; font-weight: 600; }
+.vs-spatial-comparison-guide { padding: 12px 14px; border: 1px solid var(--vs-line); border-radius: 10px; font-size: 13px; line-height: 1.65; background: var(--vs-paper); }
+.vs-spatial-comparison-guide strong { font-size: inherit; }

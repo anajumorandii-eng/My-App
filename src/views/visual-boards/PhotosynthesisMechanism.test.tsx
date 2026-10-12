@@ -28,3 +28,5 @@ describe('Bioenergética em movimento reduzido', () => {
     expect(screen.getByRole('button', { name: /Quimiossíntese/ }).getAttribute('aria-pressed')).toBe('true');
   });
 });
+
+vi.mock('../../hooks/useLiveReducedMotion', () => ({ useLiveReducedMotion: () => true, readReducedMotionPreference: () => true }));

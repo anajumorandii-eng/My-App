@@ -5,6 +5,31 @@ import { SpatialLessonLab } from './SpatialLessonLab';
 import { physicsSpatialDrawing } from '../../lib/physicsSpatialDrawing';
 
 describe('comparação do modelo espacial', () => {
+  it('registra parâmetros, condição e percurso e distingue alteração de controle de alteração da leitura', () => {
+    render(<SpatialLessonLab config={{kind:'weight',title:'Peso',label:'Massa',min:1,max:10,step:1,initial:2,note:'Esquema',choices:[['a','Caso A'],['b','Caso B']]}} draw={() => physicsSpatialDrawing('weight',2,0,'')} moving={() => true} dataAttributes={{}} />);
+    fireEvent.click(screen.getByRole('button', {name:'Guardar para comparar'}));
+    const saved = screen.getByLabelText('Condições guardadas');
+    expect(within(saved).getByText('2')).toBeInTheDocument();
+    expect(within(saved).getByText('Caso A')).toBeInTheDocument();
+    expect(within(saved).getByText('0%')).toBeInTheDocument();
+    fireEvent.change(screen.getByRole('slider', {name:'Massa 2'}), {target:{value:'8'}});
+    fireEvent.click(screen.getByRole('button', {name:'Caso B'}));
+    fireEvent.change(screen.getByRole('slider', {name:'Percurso finito do modelo'}), {target:{value:'0.75'}});
+    const current = screen.getByLabelText('Condições atuais');
+    expect(within(current).getByText('8')).toBeInTheDocument();
+    expect(within(current).getByText('Caso B')).toBeInTheDocument();
+    expect(within(current).getByText('75%')).toBeInTheDocument();
+    expect(within(current).getAllByText('Alterado')).toHaveLength(3);
+    expect(saved).toHaveTextContent('Caso A');
+    expect(saved).toHaveTextContent('0%');
+    expect(screen.getByText(/A leitura permanece igual neste recorte/)).toBeInTheDocument();
+    fireEvent.click(screen.getByRole('button', {name:'Atualizar referência'}));
+    expect(saved).toHaveTextContent('Caso B');
+    expect(saved).toHaveTextContent('75%');
+    expect(within(current).queryByText('Alterado')).not.toBeInTheDocument();
+    fireEvent.keyDown(screen.getByRole('img'), {key:'ArrowRight'});
+    expect(screen.getByText(/Somente o ponto de vista foi ajustado/)).toBeInTheDocument();
+  });
   it('guarda a geometria e a leitura, conserva a referência ao manipular e permite substituí-la', () => {
     render(<SpatialLessonLab config={{kind:'weight',title:'Peso',label:'Massa',min:1,max:10,step:1,initial:2,note:'Modelo esquemático'}} draw={v => physicsSpatialDrawing('weight',v,0,'')} moving={() => false} dataAttributes={{}} />);
     const reading = screen.getByRole('status', {name:'Leitura do modelo espacial'}).textContent;
