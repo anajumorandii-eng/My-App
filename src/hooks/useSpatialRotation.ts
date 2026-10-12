@@ -41,7 +41,13 @@ export function useSpatialRotation(initialYaw = 25, initialPitch = 12) {
     setSpinning(true);
     spin.current = animate(0, 360, {
       duration: 6, ease: 'easeInOut',
-      onUpdate: value => { if (generation.current === currentGeneration) updateYaw(wrap(start + value)); },
+      onUpdate: value => {
+        if (generation.current !== currentGeneration) return;
+        // A media-query notification may still be pending in React. Respect
+        // the current preference before applying another visible frame.
+        if (readReducedMotionPreference()) { stopSpin(); return; }
+        updateYaw(wrap(start + value));
+      },
       onComplete: () => { if (generation.current === currentGeneration) { spin.current = null; setSpinning(false); } },
     });
   };

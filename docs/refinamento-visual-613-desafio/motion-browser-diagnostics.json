@@ -1,0 +1,62 @@
+{
+  "browser": "WebKit iPad emulado",
+  "scope": "Diagnóstico antes da correção; preferência reduzida ativa com giro ainda marcado como ativo",
+  "native": {
+    "events": [
+      {
+        "id": 3,
+        "event": false,
+        "cached": false,
+        "fresh": false,
+        "listener": "()=>Ou.current=e.matches"
+      },
+      {
+        "id": 7,
+        "event": false,
+        "cached": false,
+        "fresh": false,
+        "listener": "function(){py(n)&&yy(t)}"
+      },
+      {
+        "id": 9,
+        "event": false,
+        "cached": false,
+        "fresh": false,
+        "listener": "function(){py(n)&&yy(t)}"
+      },
+      {
+        "id": 3,
+        "event": true,
+        "cached": true,
+        "fresh": true,
+        "listener": "()=>Ou.current=e.matches"
+      },
+      {
+        "id": 7,
+        "event": true,
+        "cached": true,
+        "fresh": true,
+        "listener": "function(){py(n)&&yy(t)}"
+      },
+      {
+        "id": 9,
+        "event": true,
+        "cached": true,
+        "fresh": true,
+        "listener": "function(){py(n)&&yy(t)}"
+      }
+    ],
+    "fresh": true
+  },
+  "fix": "Verificar preferência vigente antes de aplicar cada quadro; conservar o último estado observado",
+  "regressions": {
+    "before": {
+      "failed": 2,
+      "passed": 10
+    },
+    "after": {
+      "failed": 0,
+      "passed": 12
+    }
+  }
+}

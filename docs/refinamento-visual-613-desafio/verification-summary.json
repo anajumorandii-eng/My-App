@@ -1,0 +1,59 @@
+{
+  "baseCommit": "e0677f3b",
+  "previousPR": 315,
+  "scope": "Integração funcional entre cena, leitura e desafio, sem promoção de aprovação editorial",
+  "chapters": 613,
+  "subjects": 14,
+  "catalogFailures": 0,
+  "widths": [
+    1440,
+    834,
+    390,
+    360
+  ],
+  "chapterChallengeLinks": 613,
+  "conditionComparisons": 588,
+  "vitest": {
+    "files": 88,
+    "passed": 1970,
+    "failed": 0
+  },
+  "finalChangedComponentTests": {
+    "files": 3,
+    "passed": 646,
+    "failed": 0
+  },
+  "e2e": {
+    "passed": 8,
+    "failed": 0,
+    "desktop": 4,
+    "ipadWebKit": 4,
+    "ipadNewActions": "tap",
+    "cancelExpectationTimeoutMs": 5000
+  },
+  "accessibility": {
+    "scopedAudits": 6,
+    "violations": 0,
+    "incomplete": 3,
+    "contrastIncompleteInExplore": true,
+    "recallIncomplete": 0
+  },
+  "lint": "passed",
+  "build": "passed",
+  "physicalIPadTested": false,
+  "editorialStatus": {
+    "inValidation": 81,
+    "unreviewed": 532,
+    "approved": 0
+  },
+  "integralPedagogicalFirstPass": {
+    "reviewed": 69,
+    "pending": 544
+  },
+  "skills": [
+    "categoria-design-interface:accessibility",
+    "categoria-qualidade:systematic-debugging",
+    "categoria-qualidade:verification-before-completion"
+  ],
+  "dependenciesAdded": []
+}

@@ -29,6 +29,15 @@ beforeEach(() => {
 });
 afterEach(() => vi.restoreAllMocks());
 describe('percurso sob controle da estudante', () => {
+  it('conserva o último estado antes de uma notificação pendente de movimento reduzido', () => {
+    render(<Demonstration />);
+    fireEvent.click(screen.getByRole('button', { name: 'Reproduzir' }));
+    act(() => animation.update(.37));
+    animation.reduced = true;
+    act(() => animation.update(.9));
+    expect(screen.getByLabelText('Tempo observado')).toHaveTextContent('0.37');
+    expect(screen.getByRole('button', { name: 'Reproduzir' })).toBeInTheDocument();
+  });
   it('reproduz sem animar quando a preferência muda antes da notificação', () => {
     render(<Demonstration />);
     animation.reduced = true;

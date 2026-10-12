@@ -383,3 +383,20 @@ describe('biblioteca do Visual lembra a matéria', () => {
     expect(screen.getByRole('combobox')).toHaveValue('Matemática');
   });
 });
+
+it('volta à explicação autoral do desafio sem perder a resposta ou o feedback', async () => {
+  render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('button', { name: 'Entender o desafio' }));
+  const section = capitulo.sections.find(s => s.id === capitulo.retrieval[0].sectionId)!;
+  await waitFor(() => expect(screen.getByRole('region', { name: 'Percurso do capítulo' })).toHaveFocus());
+  expect(within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getByRole('button', { name: new RegExp(section.title) })).toHaveAttribute('aria-current', 'step');
+  fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
+  expect(screen.getByLabelText('Sua resposta')).toHaveAccessibleDescription(`${capitulo.retrieval[0].prompt} Etapa relacionada: ${section.title}`);
+  fireEvent.change(screen.getByLabelText('Sua resposta'), { target: { value: 'Minha hipótese preservada' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Enviar para correção' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Revisar a explicação deste desafio' }));
+  await waitFor(() => expect(screen.getByRole('region', { name: 'Percurso do capítulo' })).toHaveFocus());
+  fireEvent.click(screen.getByRole('tab', { name: 'Testar' }));
+  expect(screen.getByLabelText('Sua resposta')).toHaveValue('Minha hipótese preservada');
+  expect(screen.getByText(/Você preservou:/)).toBeInTheDocument();
+});

@@ -27,7 +27,11 @@ export function useMechanismTime() {
     const currentGeneration = generation.current;
     animation.current = animate(0, 1, {
       duration: MOTION_DURATION.studyStep, ease: 'linear',
-      onUpdate: value => { if (generation.current === currentGeneration) setTime(value); },
+      onUpdate: value => {
+        if (generation.current !== currentGeneration) return;
+        if (readReducedMotionPreference()) { stop(); return; }
+        setTime(value);
+      },
       onComplete: () => { if (generation.current === currentGeneration) { animation.current = null; setPlaying(false); } },
     });
   };

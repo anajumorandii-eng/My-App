@@ -33,6 +33,15 @@ beforeEach(() => {
 });
 afterEach(() => vi.restoreAllMocks());
 describe('prioridade da câmera manual', () => {
+  it('não aplica outro quadro quando a preferência muda antes de o React receber a notificação', () => {
+    render(<Camera />);
+    fireEvent.click(screen.getByRole('button', { name: 'Girar automaticamente' }));
+    act(() => animation.update(30));
+    animation.reduced = true;
+    act(() => animation.update(90));
+    expect(screen.getByRole('img')).toHaveAttribute('data-yaw', '55');
+    expect(screen.getByRole('button', { name: 'Girar automaticamente' })).toBeInTheDocument();
+  });
   it('a ação respeita a preferência atual antes da notificação da consulta de mídia', () => {
     render(<Camera />);
     animation.reduced = true;

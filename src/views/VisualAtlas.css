@@ -298,3 +298,6 @@
   .crivo-visual--atlas .vs-nucleic-instrument>.vs-nucleic-object { grid-row: 1/span 6; }
   .crivo-visual--atlas .vs-nucleic-instrument>.vs-plane { grid-column: 1; grid-row: 7/span 6; }
 }
+
+/* Keep recall guidance legible against both chapter themes. */
+.crivo-visual--atlas .vs-recall-note { color: var(--vs-dim); }
