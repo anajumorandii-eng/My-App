@@ -5,7 +5,7 @@ import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import { useSceneMotion } from '../topic-scenes/useSceneMotion';
-import { Arrow, Box, Drawing, Line, OperationWorkshop, type Foundation } from './LiteratureFoundations';
+import { Arrow, Box, Drawing, Line, OperationWorkshop, readingForSection, type Foundation, type WorkshopLink } from './LiteratureFoundations';
 
 /** Filosofia: o argumento desenhado. A auditoria recusou, nestes capítulos,
  *  degraus que só davam ordem (caverna, linha, dúvida), círculos que trocavam de
@@ -323,7 +323,7 @@ function Rousseau({ state }: { state: number }) {
   return <Drawing label={['Homem natural com piedade', 'A cerca inaugura a desigualdade', 'Soma de vontades e vontade geral', 'Obedecer à lei que se fez'][state]}>
     {state === 0 && <><circle cx="120" cy="110" r="28" fill={paper} stroke={ink} strokeWidth="3"/><circle cx="260" cy="110" r="20" fill={wine}/><Arrow d="M150 110h85"/><Line x={120} y={170}>piedade: não quer o sofrimento alheio</Line><Line x={20} y={225}>bom antes da sociedade</Line></>}
     {state === 1 && <><path d="M60 160V80h200v80" fill="none" stroke={ink} strokeWidth="4"/>{[80, 120, 160, 200, 240].map(x => <path key={x} d={`M${x} 160V80`} stroke={ink}/>)}<Line x={110} y={60}>“isto é meu”</Line><Arrow d="M270 120h100m-12-8 12 8-12 8"/><Box x={380} y={98} w={150} strong>desigualdade</Box><Line x={20} y={225}>histórica, não natural</Line></>}
-    {state === 2 && <><Box x={20} y={40} w={240}>a + b + c = vontade de todos</Box><Box x={20} y={120} w={240} strong>o bem comum = vontade geral</Box><Arrow d="M265 140h60"/><Line x={340} y={146}>deliberar</Line><Line x={20} y={225}>não é contagem de preferências</Line></>}
+    {state === 2 && <><Box x={20} y={40} w={290}>a + b + c = vontade de todos</Box><Box x={20} y={120} w={290} strong>o bem comum = vontade geral</Box><Arrow d="M315 142h60"/><Line x={390} y={148}>deliberar</Line><Line x={20} y={225}>não é contagem de preferências</Line></>}
     {state === 3 && <><Box x={20} y={60} w={160}>cidadão</Box><Arrow d="M185 82h80m-12-8 12 8-12 8"/><Box x={275} y={60} w={140} strong>lei</Box><Arrow d="M345 110q-80 70-250 0"/><Line x={20} y={225}>autor e súdito da mesma lei</Line></>}
   </Drawing>;
 }
@@ -376,8 +376,8 @@ const drawings: Record<PhilosophyOperationId, React.ComponentType<{ state: numbe
   'rousseau-general-will': Rousseau, 'kant-duty': KantDuty, 'historical-materialism': HistoricalMaterialism, 'class-struggle': ClassStruggle,
   'sartre-freedom': Sartre, 'frankfurt-culture': Frankfurt,
 };
-export function PhilosophyOperation({ id }: { id: PhilosophyOperationId }) {
-  return <OperationWorkshop id={id} config={PHILOSOPHY_OPERATIONS[id]} Scene={drawings[id]}
+export function PhilosophyOperation({ id, link }: { id: PhilosophyOperationId; link?: WorkshopLink }) {
+  return <OperationWorkshop id={id} config={PHILOSOPHY_OPERATIONS[id]} Scene={drawings[id]} link={link}
     manuscript="Siga o argumento, não apenas o nome da tese."
     caption="As frases citadas vêm do resumo do capítulo; os exemplos do desenho são didáticos e autorais."/>;
 }
@@ -390,9 +390,9 @@ export function philosophyInstrument(id: PhilosophyOperationId) {
     return <BoardShell title={config.topic} kicker="Oficina de argumento · filosofia" subtitle={config.question}
       condition={{ label: 'Operação', value: 'Argumento desenhado' }} sceneFirst
       ariaLabel={`Oficina de filosofia: ${props.map.title}`} emphasis={pair.emphasis}
-      scene={<PhilosophyOperation id={id}/>}
+      scene={<PhilosophyOperation id={id} link={{ mode: props.mode, nodes: props.map.nodes, selectedId: props.selectedId, pairIds: [pair.leftId, pair.rightId] }}/>}
       left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? config.topic, detail: first?.excerpt ?? config.question, formula: config.relation }}
-      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? config.topic, detail: second?.excerpt ?? config.question, formula: 'tese → objeção → posição sustentada' }}
+      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? config.topic, detail: second?.excerpt ?? config.question, formula: readingForSection(config, second?.label) }}
       leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight}
       closing="Uma tese filosófica se entende pelo argumento que a sustenta."/>;
   };
