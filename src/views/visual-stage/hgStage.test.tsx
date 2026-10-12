@@ -1,5 +1,5 @@
 import React from 'react';
-import { fireEvent, render, screen, within } from '@testing-library/react';
+import { fireEvent, render, screen, waitFor, within } from '@testing-library/react';
 import { describe, expect, it, vi } from 'vitest';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
 import { buildVisualMap } from '../../lib/visualStudy';
@@ -150,11 +150,20 @@ describe('palco → cenas de História e Geografia', () => {
 const HG_INSTRUMENTS = interactiveSummaries.filter((summary) =>
   /^(História|Geografia|Atualidades)$/.test(String(summary.subject)) && resolveVisualRepresentation(summary) === 'instrument');
 
+// O registro entrega os laboratórios embrulhados em lazyBoard: o primeiro
+// render é o aviso de carregamento, e afirmar sobre ele passaria (ou falharia)
+// sem que o instrumento tivesse sido montado.
+async function renderLoaded(Component: React.ComponentType<BoardProps>, props: BoardProps) {
+  const view = render(<Component {...props} />);
+  await waitFor(() => expect(view.container.querySelector('.vs-instrument')).not.toBeNull());
+  return view;
+}
+
 describe('palco → laboratórios de História, Geografia e Atualidades', () => {
-  it.each(HG_INSTRUMENTS.map((summary) => summary.id))('%s: a faixa da etapa entra na cena e a etapa troca o que ela mostra', (id) => {
+  it.each(HG_INSTRUMENTS.map((summary) => summary.id))('%s: a faixa da etapa entra na cena e a etapa troca o que ela mostra', async (id) => {
     const summary = summaries.get(id)!;
     const Component = findInstrument(summary)!.Component;
-    const view = render(<Component {...boardProps(summary)} />);
+    const view = await renderLoaded(Component, boardProps(summary));
     const vistos = new Set<string>();
     for (let step = 0; step < summary.sections.length; step++) {
       view.rerender(<Component {...boardProps(summary, { activeStep: step })} />);
@@ -168,21 +177,21 @@ describe('palco → laboratórios de História, Geografia e Atualidades', () => 
     view.unmount();
   });
 
-  it('COP30: a etapa acende as peças da seção dela e tocar numa peça abre o nó de onde ela saiu', () => {
+  it('COP30: a etapa acende as peças da seção dela e tocar numa peça abre o nó de onde ela saiu', async () => {
     const summary = summaries.get('atu-cop30-belem')!;
     const Component = findInstrument(summary)!.Component;
     const props = boardProps(summary, { activeStep: 1 });
-    const view = render(<Component {...props} />);
+    const view = await renderLoaded(Component, props);
     const acesas = [...view.container.querySelectorAll('[data-stage-step-piece="true"]')].map((piece) => piece.getAttribute('aria-label'));
     expect(acesas.some((label) => /Acordo de Paris|amazônico/.test(label ?? ''))).toBe(true);
     fireEvent.click(view.container.querySelector('[aria-label^="Pacote Político"]')!);
     expect(props.onSelect).toHaveBeenCalledWith(props.map.nodes[0].id);
   });
 
-  it('fora do palco, os laboratórios não mostram a faixa da etapa', () => {
+  it('fora do palco, os laboratórios não mostram a faixa da etapa', async () => {
     for (const summary of HG_INSTRUMENTS) {
       const Component = findInstrument(summary)!.Component;
-      const view = render(<Component {...boardProps(summary, { activeStep: undefined, onStepChange: undefined })} />);
+      const view = await renderLoaded(Component, boardProps(summary, { activeStep: undefined, onStepChange: undefined }));
       expect(screen.queryByRole('group', { name: 'Etapa no palco' })).toBeNull();
       view.unmount();
     }
