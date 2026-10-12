@@ -371,11 +371,11 @@ export default function Visual() {
   useEffect(() => {
     setFocusReading(false); setJourneyStep(0); setMode('explorar'); setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
     setPlacements({}); setHistory([]); setGrades({}); setShowWhyHidden(false);
-    // Modelo espacial manipulável é o centro quando existe; a prancha autoral
-    // continua primeiro onde houver uma.
-    const next = summaryId ? interactiveSummaries.find((item) => item.id === summaryId) : undefined;
-    const rep = next ? resolveVisualRepresentation(next) : 'fallback';
-    setLayer(next && hasSpatialSupplement(next.id) && (rep === 'scene' || rep === 'fallback') ? 'espacial' : 'principal');
+    // A representação principal abre sempre primeiro. Abrir no modelo espacial
+    // quando a representação era 'scene' escondia a cena autoral validada em 77
+    // dos 112 capítulos de História e Geografia (visual-entrega-hg.spec.ts não
+    // achava a prancha); o modelo espacial continua a uma aba de distância.
+    setLayer('principal');
   }, [summaryId]);
 
   if (loading) {
