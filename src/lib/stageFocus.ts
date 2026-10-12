@@ -86,9 +86,25 @@ export function focusScore(candidate: FocusCandidate, text: string): number {
   if (termos.length === 0) return 0;
   const tokens = tokensDe(text);
   let total = 0;
+  let presentes = 0;
   for (const termo of termos) {
     const peso = /\d/.test(termo) ? 2 : 1;
-    for (const token of tokens) if (casa(termo, token)) total += peso;
+    let achou = 0;
+    for (const token of tokens) if (casa(termo, token)) achou += peso;
+    if (achou > 0) presentes += 1;
+    total += achou;
+  }
+  // Rótulo de várias palavras só conta se o texto trouxer ao menos duas delas
+  // (as duas, num rótulo de duas): "veias" solto num parágrafo sobre vasos não
+  // é citação das "veias cavas".
+  if (presentes < Math.min(2, termos.length)) total = 0;
+  // Rótulo de duas palavras ("ventrículo direito") vale mais quando aparece
+  // inteiro: contar só "ventrículo" e "direito" soltos empatava o lado direito
+  // com o esquerdo em todo parágrafo que fala dos dois ventrículos.
+  if (termos.length >= 2) {
+    const frase = ` ${normalizeFocusText(candidate.label).replace(/\s*\d+\s*/g, ' ').trim()} `;
+    const corpo = ` ${normalizeFocusText(text)} `;
+    if (frase.trim().split(' ').length >= 2) total += 3 * (corpo.split(frase).length - 1);
   }
   return total;
 }

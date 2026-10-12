@@ -29,11 +29,12 @@ test('Geometria Molecular: cada etapa abre a molécula que a seção dela discut
   const plan = planStageFocus(casos, geometria.sections);
   const top = plan.byStep.map((focus) => (focus[0] === undefined ? null : casos[focus[0]].label));
   // "Por que isso importa" é a polaridade da água; "Pegadinhas", o CO2 apolar
-  // de ligações polares; "Pratique", o metano comparado à amônia.
+  // de ligações polares; "Pratique", a amônia que é piramidal apesar das
+  // quatro regiões, comparada ao metano.
   assert.equal(top[2], 'Angular (H2O)');
   assert.equal(top[3], 'Linear');
-  assert.equal(top[4], 'Tetraédrica');
-  assert.ok(plan.byStep[4].includes(casos.findIndex((c) => c.label === 'Piramidal trigonal')));
+  assert.equal(top[4], 'Piramidal trigonal');
+  assert.ok(plan.byStep[4].includes(casos.findIndex((c) => c.label === 'Tetraédrica')));
   // A teoria da repulsão não cita molécula nenhuma: a etapa não força um caso,
   // e a cena fica na molécula em que estava.
   assert.deepEqual(plan.byStep[0], []);

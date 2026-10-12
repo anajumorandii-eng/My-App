@@ -28,7 +28,7 @@ function casoAberto(container: HTMLElement) {
 // Um capítulo por família migrada, escolhido entre os que a etapa de fato
 // troca de caso (ver a varredura em stageFocus.test.ts).
 const POR_FAMILIA = [
-  'summary-biologia-fisiologia-vegetal-transporte-no-floema', // FenomenoFrame (Biologia)
+  'summary-biologia-cordados-tetrapodes', // FenomenoFrame (Biologia)
   'summary-quimica-cinetica-quimica', // FenomenoFrame (Química)
   'summary-quimica-isomeria', // QuimicaOrganica
   'summary-biologia-coordenacao-endocrina-ii', // BiologiaFisiologia
@@ -101,7 +101,7 @@ describe('palco → cenas de Química e Biologia', () => {
     expect(screen.getByRole('button', { name: 'Vetores de ligação' })).toHaveAttribute('aria-pressed', 'true');
     stage = { ...stage, activeStep: 4 };
     view.rerender(<TopicScene summaryId={id} stage={stage} />);
-    expect(view.container.querySelector('[data-molecule]')?.getAttribute('data-molecule')).toBe('CH4');
+    expect(view.container.querySelector('[data-molecule]')?.getAttribute('data-molecule')).toBe('NH3');
   });
 
   it('Geometria Molecular: tocar no par isolado explica com uma frase do capítulo', () => {

@@ -13,7 +13,7 @@ export default function AcidBaseBoard(props: BoardProps) {
       subtitle="Compare transferência de próton, doação de par eletrônico e cancelamento de espectadores."
       condition={{ label: 'Compare', value: 'H⁺ / e⁻' }}
       ariaLabel="Prancha ilustrada de ácidos e bases e a escala de pH"
-      scene={<AcidTheoryMechanism />}
+      scene={<AcidTheoryMechanism stage={props} />}
       sceneFirst
       emphasis={par.emphasis}
       left={{

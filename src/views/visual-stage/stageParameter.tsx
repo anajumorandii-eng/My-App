@@ -1,10 +1,8 @@
 import React, { useEffect, useMemo, useState } from 'react';
-import { ChevronLeft, ChevronRight } from 'lucide-react';
 import { interactiveSummaries } from '../../data/interactiveSummaries';
-import { STAGE_LABEL } from '../../lib/visualStudy';
 import { parameterFromText, planStageFocus, type StageParameter } from '../../lib/stageFocus';
 import type { BoardProps } from '../visual-boards/types';
-import './stageCases.css';
+import { StageStepBar } from './stageCases';
 
 /**
  * Etapa → posição do controle de um instrumento (laboratórios de Química e
@@ -66,21 +64,9 @@ export function StageControlLens({ props, control, label, state }: {
   props: BoardProps; control: StageControl; label: string; state: ReturnType<typeof useStageControl>;
 }) {
   if (props.activeStep === undefined || !props.onStepChange) return null;
-  const step = state.step;
-  const node = props.map.nodes[step];
-  const total = props.map.nodes.length;
   const reconstruindo = props.mode === 'reconstruir';
-  const go = (next: number) => props.onStepChange?.(Math.max(0, Math.min(total - 1, next)));
   return (
-    <div className="stage-lens" role="group" aria-label="Etapa no palco" data-stage-step={step} data-stage-mode={props.mode}>
-      <div className="stage-lens-step">
-        <button type="button" onClick={() => go(step - 1)} disabled={step <= 0} aria-label="Etapa anterior"><ChevronLeft aria-hidden="true" /></button>
-        <p>
-          <small>ETAPA {String(step + 1).padStart(2, '0')} DE {String(total).padStart(2, '0')} · {node ? STAGE_LABEL[node.stage] : ''}</small>
-          <strong>{node?.label}</strong>
-        </p>
-        <button type="button" onClick={() => go(step + 1)} disabled={step >= total - 1} aria-label="Próxima etapa"><ChevronRight aria-hidden="true" /></button>
-      </div>
+    <StageStepBar map={props.map} step={state.step} mode={props.mode} onStepChange={props.onStepChange}>
       {reconstruindo ? (
         <p className="stage-lens-mission" role="note">
           <b>Desafio na cena.</b> Mova “{label}” e observe a leitura mudar; depois escreva, na reconstrução do painel, o vínculo que o laboratório mostrou.
@@ -92,6 +78,6 @@ export function StageControlLens({ props, control, label, state }: {
             : <span>O texto desta etapa não cita um valor de “{label}”: ajuste e observe.</span>}
         </div>
       )}
-    </div>
+    </StageStepBar>
   );
 }

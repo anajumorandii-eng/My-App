@@ -6,6 +6,8 @@ import {
   type FocusCandidate, type FocusSection, type StageFocusPlan,
 } from '../../lib/stageFocus';
 import type { StageMode } from './contract';
+import type { BoardProps } from '../visual-boards/types';
+import { interactiveSummaries } from '../../data/interactiveSummaries';
 import './stageCases.css';
 
 /**
@@ -33,6 +35,8 @@ export interface SceneStageBridge {
   hiddenEdgeIds: string[];
 }
 
+const sectionsBySummary = new Map(interactiveSummaries.map((summary) => [summary.id, summary.sections]));
+
 export const SceneStageContext = createContext<SceneStageBridge | null>(null);
 
 export function useSceneStage() {
@@ -56,8 +60,18 @@ export interface StageCases {
   veiled: Set<number>;
 }
 
-export function useStageCases(items: StageCaseItem[], initial = 0): StageCases {
-  const stage = useSceneStage();
+/** Prancha do registro (BoardProps) vista como palco: mesma ponte, sem contexto. */
+export function bridgeFromBoard(props: Pick<BoardProps, 'map' | 'activeStep' | 'onStepChange' | 'selectedId' | 'onSelect' | 'mode' | 'hiddenEdgeIds'> | undefined): SceneStageBridge | null {
+  if (!props || props.activeStep === undefined || !props.onStepChange) return null;
+  return {
+    map: props.map, sections: sectionsBySummary.get(props.map.summaryId) ?? [], activeStep: props.activeStep,
+    onStepChange: props.onStepChange, selectedId: props.selectedId, onSelect: props.onSelect, mode: props.mode, hiddenEdgeIds: props.hiddenEdgeIds,
+  };
+}
+
+export function useStageCases(items: StageCaseItem[], initial = 0, explicit?: SceneStageBridge | null): StageCases {
+  const fromContext = useSceneStage();
+  const stage = explicit === undefined ? fromContext : explicit;
   const sections = stage?.sections;
   const plan = useMemo(() => (sections ? planStageFocus(items, sections) : null), [items, sections]);
   const [active, setActive] = useState(initial);
@@ -103,6 +117,32 @@ export function useStageCases(items: StageCaseItem[], initial = 0): StageCases {
 }
 
 /**
+ * Faixa de etapa comum a toda cena migrada: em que etapa a estudante está, e
+ * setas para andar no trilho sem sair da cena. O conteúdo abaixo da linha é
+ * de cada cena (casos citados, valor citado, desafio).
+ */
+export function StageStepBar({ map, step, mode, onStepChange, children }: {
+  map: VisualMap; step: number; mode: StageMode; onStepChange: (step: number) => void; children?: React.ReactNode;
+}) {
+  const node = map.nodes[step];
+  const total = map.nodes.length;
+  const go = (next: number) => onStepChange(Math.max(0, Math.min(total - 1, next)));
+  return (
+    <div className="stage-lens" role="group" aria-label="Etapa no palco" data-stage-step={step} data-stage-mode={mode}>
+      <div className="stage-lens-step">
+        <button type="button" onClick={() => go(step - 1)} disabled={step <= 0} aria-label="Etapa anterior"><ChevronLeft aria-hidden="true" /></button>
+        <p>
+          <small>ETAPA {String(step + 1).padStart(2, '0')} DE {String(total).padStart(2, '0')} · {node ? STAGE_LABEL[node.stage] : ''}</small>
+          <strong>{node?.label}</strong>
+        </p>
+        <button type="button" onClick={() => go(step + 1)} disabled={step >= total - 1} aria-label="Próxima etapa"><ChevronRight aria-hidden="true" /></button>
+      </div>
+      {children}
+    </div>
+  );
+}
+
+/**
  * Faixa no topo da cena: a etapa em que a estudante está e os casos que essa
  * etapa discute, tocáveis. Em Reconstruir vira o desafio: observar na cena o
  * caso coberto e escrever o vínculo no formulário ao lado.
@@ -110,20 +150,10 @@ export function useStageCases(items: StageCaseItem[], initial = 0): StageCases {
 export function StageCaseLens({ cases, items }: { cases: StageCases; items: StageCaseItem[] }) {
   const { stage, step, focus, veiled, active, choose } = cases;
   if (!stage) return null;
-  const node = stage.map.nodes[step];
-  const total = stage.map.nodes.length;
   const reconstruindo = stage.mode === 'reconstruir';
   const cobertos = [...veiled];
   return (
-    <div className="stage-lens" role="group" aria-label="Etapa no palco" data-stage-step={step} data-stage-mode={stage.mode}>
-      <div className="stage-lens-step">
-        <button type="button" onClick={() => stage.onStepChange(step - 1)} disabled={step <= 0} aria-label="Etapa anterior"><ChevronLeft aria-hidden="true" /></button>
-        <p>
-          <small>ETAPA {String(step + 1).padStart(2, '0')} DE {String(total).padStart(2, '0')} · {node ? STAGE_LABEL[node.stage] : ''}</small>
-          <strong>{node?.label}</strong>
-        </p>
-        <button type="button" onClick={() => stage.onStepChange(step + 1)} disabled={step >= total - 1} aria-label="Próxima etapa"><ChevronRight aria-hidden="true" /></button>
-      </div>
+    <StageStepBar map={stage.map} step={step} mode={stage.mode} onStepChange={stage.onStepChange}>
       {reconstruindo && cobertos.length > 0 ? (
         <p className="stage-lens-mission" role="note">
           <b>Desafio na cena.</b> A afirmação de {cobertos.map((index) => items[index]?.label).join(', ')} está coberta: observe a figura,
@@ -143,7 +173,7 @@ export function StageCaseLens({ cases, items }: { cases: StageCases; items: Stag
           )}
         </div>
       )}
-    </div>
+    </StageStepBar>
   );
 }
 
