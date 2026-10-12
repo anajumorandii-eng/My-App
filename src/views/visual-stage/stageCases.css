@@ -1,6 +1,7 @@
 /* Faixa da etapa dentro da cena (stageCases.tsx). Tokens do design system: é
    por eles que Caderno e Papel chegam aqui; nada de cor fixa. */
 .stage-lens {
+  position: relative; /* contém o rótulo só para leitor de tela; sem isso ele escapava da rolagem da cena e alongava a página */
   display: grid; gap: 8px; margin: 0 0 10px; padding: 8px 10px;
   border: 1px solid var(--vs-line, var(--surface-border, rgba(0,0,0,.12)));
   border-left: 4px solid var(--action-primary, #7a1f2b);
@@ -46,3 +47,30 @@
    etapa ocupa a largura toda acima dos dois. */
 .crivo-visual .vs-instrument > .stage-lens { grid-column: 1 / -1; grid-row: 1; }
 .crivo-visual .vs-instrument:has(> .stage-lens) > .vs-plane { grid-row: 2 / span 6; }
+
+/* No celular a cena tem pouco mais de 400px de altura no palco: a faixa
+   encolhe para não empurrar a figura para baixo da dobra. O rótulo "Nesta
+   etapa o texto discute" sai da vista (fica para o leitor de tela) quando há
+   os botões dos casos, que já dizem a mesma coisa. */
+@media (max-width: 900px) {
+  .stage-lens { padding: 5px 8px; gap: 4px; margin-bottom: 8px; }
+  .stage-lens-step { gap: 6px; }
+  .stage-lens-step button { width: 36px; height: 36px; }
+  .stage-lens-step small { font-size: 9.5px; }
+  .stage-lens-step strong { font-size: 13px; }
+  .stage-lens-focus { font-size: 12px; gap: 4px; }
+  .stage-lens-focus:has(ul) > span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .stage-lens-focus li button, .stage-lens-chip { min-height: 32px; padding: 3px 9px; font-size: 12px; }
+  .stage-lens-mission { font-size: 12px; }
+  .crivo-visual.crivo-visual--stage .vs-stage-viewport .tc-scene:has(> .stage-lens) > header h4 { font-size: 1rem; margin-bottom: 4px; }
+}
+
+/* No celular a figura vem antes da faixa: com ~300px de cena visível, a faixa
+   no topo deixava a estudante vendo só texto ao abrir a etapa. */
+@media (max-width: 900px) {
+  .vs-stage-viewport .tc-scene:has(> .stage-lens) { display: flex; flex-direction: column; }
+  .vs-stage-viewport .tc-scene:has(> .stage-lens) > * { order: 3; width: 100%; min-width: 0; align-self: stretch; }
+  .vs-stage-viewport .tc-scene:has(> .stage-lens) > header { order: 0; }
+  .vs-stage-viewport .tc-scene:has(> .stage-lens) > :is(.qf-figure, .bp-board, .bp-process-figure, .ec-figure, .gm-layout) { order: 1; }
+  .vs-stage-viewport .tc-scene:has(> .stage-lens) > .stage-lens { order: 2; margin-top: 8px; }
+}

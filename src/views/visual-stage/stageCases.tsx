@@ -159,6 +159,12 @@ export function StageCaseLens({ cases, items }: { cases: StageCases; items: Stag
           <b>Desafio na cena.</b> A afirmação de {cobertos.map((index) => items[index]?.label).join(', ')} está coberta: observe a figura,
           compare com os outros casos e escreva o vínculo na reconstrução do painel.
         </p>
+      ) : reconstruindo && stage.hiddenEdgeIds.length > 0 ? (
+        // Dizer isso é melhor que fingir: quando o elo oculto (ex.: "restam 10
+        // gramas") não é um dos casos desenhados, a cena não tem o que cobrir.
+        <p className="stage-lens-mission" role="note">
+          O elo oculto não é um dos casos desenhados nesta cena: use a figura como apoio e reconstrua pelo painel.
+        </p>
       ) : (
         <div className="stage-lens-focus">
           <span>{focus.length > 0 ? 'Nesta etapa o texto discute:' : 'O texto desta etapa não cita um caso da cena: explore livremente.'}</span>

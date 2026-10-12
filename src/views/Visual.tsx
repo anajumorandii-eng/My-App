@@ -372,10 +372,13 @@ export default function Visual() {
     setFocusReading(false); setJourneyStep(0); setMode('explorar'); setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
     setPlacements({}); setHistory([]); setGrades({}); setShowWhyHidden(false);
     // Modelo espacial manipulável é o centro quando existe; a prancha autoral
-    // continua primeiro onde houver uma.
+    // continua primeiro onde houver uma — e a cena que segue a etapa do palco
+    // (declara pontos em visual-stage/declarations) também: abrir no modelo
+    // espacial escondia justamente a cena que muda com o trilho ao lado.
     const next = summaryId ? interactiveSummaries.find((item) => item.id === summaryId) : undefined;
     const rep = next ? resolveVisualRepresentation(next) : 'fallback';
-    setLayer(next && hasSpatialSupplement(next.id) && (rep === 'scene' || rep === 'fallback') ? 'espacial' : 'principal');
+    const cenaDoPalco = next && rep === 'scene' && stageDeclarationFor(next, rep) !== null;
+    setLayer(next && hasSpatialSupplement(next.id) && !cenaDoPalco && (rep === 'scene' || rep === 'fallback') ? 'espacial' : 'principal');
   }, [summaryId]);
 
   if (loading) {
