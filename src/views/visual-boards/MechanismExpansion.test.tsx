@@ -44,6 +44,17 @@ describe('expansão de mecanismos por capítulo', () => {
     expect(screen.getByRole('slider', { name: /Fração de um período|Percurso|Avanço|Demonstração/ })).toHaveValue('1');
     expect(screen.queryByRole('button', { name: 'Pausar movimento' })).toBeNull();
   });
+  it.each([
+    ['fisica-ondulatoria-ondas-eletromagneticas', 'c = λ · f', 'no vácuo'],
+    ['fisica-ondulatoria-som-e-suas-propriedades', 'v ≈ 340 m/s', 'no ar'],
+    ['fisica-equacao-fundamental-da-ondulatoria', 'v = λ · f', 'no mesmo meio'],
+  ])('a prancha de ondulatória lê a equação e a condição do capítulo em %s', (suffix, equacao, condicao) => {
+    const summary = interactiveSummaries.find(item => item.id === `summary-${suffix}`)!;
+    const Component = findBoard(summary)!.Component;
+    const { container } = render(<Component map={buildVisualMap(summary)} states={{}} selectedId={null} onSelect={vi.fn()} hiddenEdgeIds={[]} mode="explorar" />);
+    expect(container.querySelector('.vs-equation-strip')?.textContent).toContain(equacao);
+    expect(container.querySelector('.vs-q-callout')?.getAttribute('aria-label')).toContain(condicao);
+  });
   it('conserva v = λf e periodicidade da onda', () => {
     for (const frequency of [1, 2, 3]) {
       expect(wavelength(frequency) * frequency).toBe(240);
