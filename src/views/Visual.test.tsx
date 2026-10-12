@@ -335,33 +335,32 @@ describe('prancha no celular', () => {
     return () => { window.matchMedia = original; };
   }
 
-  it('divide a prancha em duas faces e não esconde nada no desktop', async () => {
-    // Desktop: o alternador não existe, e equação e apoios estão na tela junto
-    // com os conceitos.
+  // A prancha adiabática foi migrada para o palco: cena e painel já são duas
+  // áreas, então ela não se divide de novo em faces; a tira de equação, que
+  // ficava abaixo da cena, aparece na faixa da etapa a que pertence.
+  it('no palco, a equação entra na faixa da etapa em vez de ficar abaixo da cena', async () => {
+    const user = userEvent.setup();
     render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
+    expect(await screen.findByText('Expansão adiabática')).toBeInTheDocument();
     expect(screen.queryByRole('tablist', { name: 'Seções da prancha' })).not.toBeInTheDocument();
-    expect(screen.getByText('Expansão adiabática')).toBeInTheDocument();
-    // A tira de equação e os apoios ficam na outra face, e no desktop aparecem
-    // junto com os conceitos em vez de se esconderem atrás de uma aba.
-    expect(screen.getByLabelText(/Primeira lei aplicada/i)).toBeInTheDocument();
+    expect(screen.queryByLabelText(/Primeira lei aplicada/i)).not.toBeInTheDocument();
     expect(screen.getByText('Relações úteis')).toBeInTheDocument();
+
+    const lente = screen.getByRole('region', { name: 'Etapa 1 na cena' });
+    await user.click(within(lente).getByRole('button', { name: 'Próxima etapa' }));
+    const conceito = screen.getByRole('region', { name: 'Etapa 2 na cena' });
+    expect(within(conceito).getByText('ΔU = Q − W')).toBeInTheDocument();
+    // A etapa do palco e a do percurso são a mesma.
+    expect(within(screen.getByRole('navigation', { name: 'Etapas do capítulo' })).getAllByRole('button')[1]).toHaveAttribute('aria-current', 'step');
   });
 
-  it('esconde os apoios atrás da face Relações no celular', async () => {
+  it('no celular, a prancha do palco não esconde a cena atrás de uma aba', async () => {
     const restaurar = comLarguraDeCelular();
     try {
-      const user = userEvent.setup();
       render(<MemoryRouter initialEntries={[rota]}><Visual /></MemoryRouter>);
-
-      const faces = screen.getByRole('tablist', { name: 'Seções da prancha' });
-      expect(within(faces).getByRole('tab', { name: 'Essencial' })).toHaveAttribute('aria-selected', 'true');
-      // Essencial mostra os conceitos; a tira de equação fica para a outra face.
-      expect(screen.getByText('Expansão adiabática')).toBeInTheDocument();
-      expect(screen.queryByText('Relações úteis')).not.toBeInTheDocument();
-
-      await user.click(within(faces).getByRole('tab', { name: 'Relações' }));
+      expect(await screen.findByText('Expansão adiabática')).toBeInTheDocument();
+      expect(screen.queryByRole('tablist', { name: 'Seções da prancha' })).not.toBeInTheDocument();
       expect(screen.getByText('Relações úteis')).toBeInTheDocument();
-      expect(screen.queryByText('Expansão adiabática')).not.toBeInTheDocument();
     } finally {
       restaurar();
     }

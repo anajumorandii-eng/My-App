@@ -47,9 +47,9 @@ function VisionScene({ emphasis, corrected }: { emphasis: 'esquerda' | 'direita'
 }
 
 export default function VisionDefectsBoard(props: BoardProps) {
-  const pair = boardPair(props);
+  const pair = boardPair(props, { porEtapa: true });
   const [corrected, setCorrected] = useState(false);
-  return <BoardShell
+  return <BoardShell palco
     title="Defeitos da visão: onde o foco erra"
     subtitle="A correção não escolhe uma lente por nome: ela recoloca o foco na retina."
     condition={corrected ? { label: 'imagem nítida', value: 'foco na retina' } : { label: 'situação', value: 'sem correção' }}

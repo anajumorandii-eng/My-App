@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { useStageParameters } from './stageStep';
 import {PhysicsDrawingWindow} from './PhysicsDrawingWindow';
 import { imagemDeLenteConvergente } from '../../lib/opticalImage';
 import { MechanismFrame, TimeControl, useMechanismTime } from './MechanismFrame';
@@ -14,9 +15,21 @@ export function lensRays(distance: number, focal = 70) {
   };
 }
 
+const POSICOES = [175, 140, 105, 70, 42];
+function naturezaDaImagem(distance: number, focal: number) {
+  if (distance === focal) return 'sem imagem a distância finita';
+  return imagemDeLenteConvergente(distance, 38, focal).real ? 'real e invertida' : 'virtual e direita';
+}
+
 export default function LensMechanism() {
-  const [distance, setDistance] = useState(175);
-  const [focal, setFocal] = useState(70);
+  // Posição do objeto (entre as cinco do capítulo) e tipo de lente respondem à
+  // etapa do palco; a natureza da imagem é a leitura (lib/stageParameters).
+  const estagio = useStageParameters([{ min: 0, max: 4, step: 1, initial: 0 }, { min: 0, max: 1, step: 1, initial: 0 }],
+    ([posicao, tipo]) => [{ label: 'imagem', value: naturezaDaImagem(POSICOES[posicao], tipo ? -70 : 70), pivot: true }]);
+  const distance = POSICOES[estagio.values[0]] ?? 175;
+  const focal = estagio.values[1] ? -70 : 70;
+  const setDistance = (valor: number) => estagio.setAt(0, Math.max(0, POSICOES.indexOf(valor)));
+  const setFocal = (valor: number) => estagio.setAt(1, valor < 0 ? 1 : 0);
   const clock = useMechanismTime();
   const atFocus = distance === focal;
   const r = lensRays(distance, focal);

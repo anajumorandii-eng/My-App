@@ -67,9 +67,9 @@ function CircuitScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum
 }
 
 export default function CircuitBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   return (
-    <BoardShell
+    <BoardShell palco
       title="Série e paralelo"
       subtitle="O que muda é o número de caminhos. O resto decorre disso."
       condition={{ label: 'lei de Ohm', value: 'U = R·i' }}

@@ -123,10 +123,10 @@ function AdiabaticPiston({ emphasis }: { emphasis: 'expansao' | 'compressao' | '
 }
 
 export default function AdiabaticBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
 
   return (
-    <BoardShell
+    <BoardShell palco
       title="Transformação adiabática"
       subtitle="Quando não há troca de calor entre o sistema e o meio."
       condition={{ label: 'condição', value: 'Q = 0' }}

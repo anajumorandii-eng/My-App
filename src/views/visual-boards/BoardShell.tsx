@@ -3,6 +3,7 @@ import { BookOpen, Cog, Lightbulb, PenLine, Sparkles, Target } from 'lucide-reac
 import { SceneViewport } from './SceneViewport';
 import { NODE_STATE_LABEL, type NodeState } from '../../lib/visualStudy';
 import { useMolduraTecnologica } from './ambiente';
+import { StageLens, useStageStep, type StageLensData } from './stageStep';
 
 /**
  * A composição que toda prancha compartilha: cabeçalho com a condição do
@@ -63,6 +64,13 @@ export interface BoardShellProps {
    * lista única de capítulos. A prop existe para teste e para forçar.
    */
   tecnologico?: boolean;
+  /**
+   * Prancha migrada para o palco (docs/visual/PALCO-IMERSIVO.md). Dentro do
+   * palco, a faixa da etapa entra na cena e a tira de equação e o fecho, que
+   * ficavam abaixo dela, passam a aparecer na etapa a que pertencem. É opt-in
+   * para não mudar a prancha de quem ainda não foi migrado.
+   */
+  palco?: { data?: StageLensData } | true;
 }
 
 type Face = 'essencial' | 'relacoes';
@@ -94,11 +102,20 @@ export default function BoardShell({
   kicker = 'Prancha ilustrada', title, subtitle, condition,
   left, right, leftState, rightState,
   onSelectLeft, onSelectRight, leftSelected, rightSelected,
-  scene, sceneFirst = false, sceneNotes, emphasis = 'nenhum', equation, supports, closing, ariaLabel, tecnologico: tecnologicoProp,
+  scene, sceneFirst = false, sceneNotes, emphasis = 'nenhum', equation, supports, closing, ariaLabel, tecnologico: tecnologicoProp, palco,
 }: BoardShellProps) {
+  const etapa = useStageStep();
+  const noPalco = Boolean(palco && etapa);
+  // Conceito acende o cartão do nó 1, aplicação o do nó 2: os mesmos nós do
+  // par, então a cor continua significando o mesmo estado.
+  const focoDaEtapa = !noPalco ? undefined
+    : etapa?.stage === 'conceito' ? 'esquerda' : etapa?.stage === 'aplicacao' ? 'direita' : undefined;
   const doContexto = useMolduraTecnologica();
   const tecnologico = tecnologicoProp ?? doContexto;
-  const compacto = useCompacto();
+  const compactoDaTela = useCompacto();
+  // No palco, cena e painel já são duas áreas; dividir a prancha em faces de
+  // novo escondia a cena atrás de uma aba.
+  const compacto = compactoDaTela && !noPalco;
   // Luz que segue o dedo ou o mouse: a borda dos vidros acende perto dele,
   // como nos sites de referência. Só grava duas variáveis CSS; o desenho é
   // todo do CSS.
@@ -111,13 +128,17 @@ export default function BoardShell({
   // No desktop nada se esconde: as duas faces aparecem juntas, como sempre.
   const mostra = (alvo: Face) => !compacto || face === alvo;
   const scenePanel = <div className="vs-piston-wrap" data-emphasis={emphasis === 'esquerda' ? 'expansao' : emphasis === 'direita' ? 'compressao' : 'nenhum'}>
+    {noPalco && <StageLens question={subtitle} formula={equation?.general ?? left.formula}
+      reduced={equation ? `${equation.general} ${equation.condition} ${equation.reduced}` : right.formula}
+      closing={closing} data={palco === true ? undefined : palco?.data} />}
     <SceneViewport notas={sceneNotes}>{scene}</SceneViewport>
   </div>;
 
   return (
     <section
-      className={`vs-study-board${sceneFirst ? ' vs-study-board--scene-first' : ''}${tecnologico ? ' vs-study-board--tech' : ''}`}
+      className={`vs-study-board${sceneFirst ? ' vs-study-board--scene-first' : ''}${tecnologico ? ' vs-study-board--tech' : ''}${noPalco ? ' vs-study-board--palco' : ''}`}
       data-testid="visual-study-board"
+      data-stage-step={noPalco ? etapa?.stage : undefined}
       aria-label={ariaLabel}
       onPointerMove={tecnologico ? moverLuz : undefined}
     >
@@ -155,13 +176,13 @@ export default function BoardShell({
       {mostra('essencial') && (
       <div className="vs-board-body">
         {sceneFirst && scenePanel}
-        <ConceptCard side="expansion" data={left} state={leftState} selected={leftSelected} onSelect={onSelectLeft} tecnologico={tecnologico} />
+        <ConceptCard side="expansion" data={left} state={leftState} selected={leftSelected} onSelect={onSelectLeft} tecnologico={tecnologico} focoDaEtapa={focoDaEtapa === 'esquerda'} />
         {!sceneFirst && scenePanel}
-        <ConceptCard side="compression" data={right} state={rightState} selected={rightSelected} onSelect={onSelectRight} tecnologico={tecnologico} />
+        <ConceptCard side="compression" data={right} state={rightState} selected={rightSelected} onSelect={onSelectRight} tecnologico={tecnologico} focoDaEtapa={focoDaEtapa === 'direita'} />
       </div>
       )}
 
-      {mostra('relacoes') && equation && (
+      {mostra('relacoes') && equation && !noPalco && (
         <div className="vs-equation-strip" aria-label={equation.label}>
           <span>{equation.label}</span>
           <strong>{equation.general}</strong>
@@ -172,7 +193,7 @@ export default function BoardShell({
 
       {mostra('relacoes') && supports && <div className="vs-support-grid">{supports}</div>}
 
-      <footer className="vs-landscape">
+      {!noPalco && <footer className="vs-landscape">
         {!tecnologico && <svg className="vs-landscape-art" viewBox="0 0 640 170" aria-hidden="true" preserveAspectRatio="none">
           <defs>
             <filter id="vs-landscape-grain" x="-5%" y="-5%" width="110%" height="110%">
@@ -186,13 +207,13 @@ export default function BoardShell({
           <path className="vs-hill vs-hill--near" d="M0 146 C 108 122, 190 136, 268 142 S 428 118, 520 132 S 604 148, 640 142 L640 170 L0 170 Z" filter="url(#vs-landscape-grain)" />
         </svg>}
         <p>{tecnologico && <span className="vs-tech-dot" aria-hidden="true" />}<strong>Ideia central:</strong> {closing}</p>
-      </footer>
+      </footer>}
     </section>
   );
 }
 
 function ConceptCard({
-  side, data, state, selected, onSelect, tecnologico,
+  side, data, state, selected, onSelect, tecnologico, focoDaEtapa = false,
 }: {
   side: 'expansion' | 'compression';
   data: ConceptSide;
@@ -200,6 +221,7 @@ function ConceptCard({
   selected: boolean;
   onSelect: () => void;
   tecnologico?: boolean;
+  focoDaEtapa?: boolean;
 }) {
   // Vidro que inclina sob o ponteiro: a profundidade dos cartões flutuantes
   // da referência. Só variáveis CSS; o movimento reduzido anula no CSS.
@@ -219,6 +241,7 @@ function ConceptCard({
       type="button"
       className={`vs-concept-card vs-concept-card--${side}${selected ? ' is-selected' : ''}`}
       data-state={state}
+      data-stage-focus={focoDaEtapa || undefined}
       onClick={onSelect}
       onPointerMove={tecnologico ? inclinar : undefined}
       onPointerLeave={tecnologico ? soltar : undefined}

@@ -7,13 +7,13 @@ import LensPowerMechanism from './LensPowerMechanism';
 import LensAnalyticMechanism from './LensAnalyticMechanism';
 
 export default function LensBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   const maker = props.map.summaryId === 'summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes';
   // O estudo analítico caía no mesmo ramo do gráfico e saía idêntico a ele,
   // título e texto inclusive (auditoria 37). Os textos abaixo saem do resumo.
   if (props.map.summaryId === 'summary-fisica-estudo-analitico-das-lentes-esfericas') return <LensAnalyticBoard {...props} />;
   return (
-    <BoardShell
+    <BoardShell palco
       title={maker ? 'Fabricante e associação de lentes' : 'Lentes: onde a imagem se forma'}
       subtitle={maker ? 'Mude o meio, a curvatura e a segunda lente para comparar a vergência.' : 'Dois raios bastam para achar a imagem — o resto é consequência.'}
       condition={maker ? {label:'lentes delgadas',value:'em contato'} : { label: 'delgadas', value: 'Gauss' }}
@@ -62,9 +62,9 @@ export default function LensBoard(props: BoardProps) {
 }
 
 function LensAnalyticBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   return (
-    <BoardShell
+    <BoardShell palco
       title="Lentes: duas equações e um sinal"
       subtitle="Sem traçar raio: o sinal de p′ já diz se a imagem é real ou virtual."
       condition={{ label: 'objeto real', value: 'p > 0' }}

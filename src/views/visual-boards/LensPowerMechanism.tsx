@@ -1,12 +1,16 @@
 import React, { useState } from 'react';
+import { useStageParameters } from './stageStep';
 import {PhysicsDrawingWindow} from './PhysicsDrawingWindow';
 import { MechanismFrame, TimeControl, useMechanismTime } from './MechanismFrame';
 
 export const lensPower = (medium: number, radius: number) => (1.5 / medium - 1) * (2 / radius);
 export default function LensPowerMechanism() {
-  const [medium,setMedium]=useState(1);
-  const [radius,setRadius]=useState(.2);
-  const [second,setSecond]=useState(0);
+  // Meio, curvatura e segunda lente respondem à etapa do palco; o sinal da
+  // vergência é a leitura que vira (lib/stageParameters).
+  const estagio=useStageParameters([{min:1,max:1.6,step:.1,initial:1},{min:.2,max:.5,step:.1,initial:.2},{min:-5,max:5,step:1,initial:0}],
+    ([n,r,v])=>{const total=lensPower(n,r)+v;return [{label:'vergência',value:Math.abs(total)<1e-9?'nula: sistema afocal':total>0?'positiva: convergente':'negativa: divergente',pivot:true}];});
+  const [medium,radius,second]=estagio.values;
+  const setMedium=(v:number)=>estagio.setAt(0,v),setRadius=(v:number)=>estagio.setAt(1,v),setSecond=(v:number)=>estagio.setAt(2,v);
   const clock=useMechanismTime();
   const power=lensPower(medium,radius)+second;
   const scale=400;

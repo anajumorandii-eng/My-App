@@ -1,0 +1,84 @@
+/* Faixa da etapa dentro da cena (stageStep.tsx). Tokens do design system para
+   que caderno, papel e tema escuro cheguem a ela sem cor fixa. */
+.vs-stage-lens {
+  display: grid;
+  gap: 6px;
+  margin: 0 0 10px;
+  padding: 10px 12px;
+  border: 1px solid var(--vs-line, var(--surface-border, rgba(0, 0, 0, .12)));
+  border-left: 4px solid var(--vs-burgundy, var(--action-primary));
+  border-radius: 12px;
+  background: var(--surface-2, var(--vs-paper, transparent));
+  color: var(--vs-ink, inherit);
+  font-size: 14px;
+  line-height: 1.4;
+}
+.vs-stage-lens > header { display: flex; align-items: center; gap: 8px; flex-wrap: wrap; }
+.vs-stage-lens > header .vs-stage-lens-node { flex: 1 1 auto; min-width: 0; }
+.vs-stage-lens > header .vs-stage-lens-nav { margin-left: auto; }
+.vs-stage-lens-kicker { font: 700 11px/1.2 Inter, system-ui, sans-serif; letter-spacing: .08em; text-transform: uppercase; color: var(--vs-burgundy, var(--action-primary)); }
+.vs-stage-lens-nav { display: inline-flex; gap: 4px; }
+.vs-stage-lens-nav button, .vs-stage-lens-node {
+  display: inline-flex; align-items: center; gap: 6px; min-height: 34px; min-width: 34px; justify-content: center;
+  padding: 3px 8px; border-radius: 8px; border: 1px solid var(--vs-line, rgba(0, 0, 0, .14));
+  background: var(--surface-1, transparent); color: inherit; font: inherit; font-weight: 600;
+}
+.vs-stage-lens-nav button:disabled { opacity: .4; }
+.vs-stage-lens-nav svg, .vs-stage-lens-node svg, .vs-stage-lens-challenge svg { width: 16px; height: 16px; flex: 0 0 auto; }
+.vs-stage-lens-node { justify-content: flex-start; text-align: left; max-width: 100%; }
+.vs-stage-lens button:focus-visible { outline: 3px solid var(--action-primary, var(--vs-burgundy)); outline-offset: 2px; }
+.vs-stage-lens p { margin: 0; }
+.vs-stage-lens-cue { font-weight: 600; }
+.vs-stage-lens code { font-family: 'JetBrains Mono', ui-monospace, monospace; font-size: 13px; overflow-wrap: anywhere; }
+.vs-stage-lens small { opacity: .8; font-size: 12px; }
+.vs-stage-lens-changes { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.vs-stage-lens-changes li {
+  padding: 3px 8px; border-radius: 999px; font-size: 12.5px;
+  border: 1px solid var(--vs-line, rgba(0, 0, 0, .14)); background: var(--surface-1, transparent);
+}
+.vs-stage-lens-changes li > span { opacity: .75; }
+.vs-stage-lens-challenge { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; font-weight: 600; }
+.vs-stage-lens-challenge[data-reached] { color: var(--vs-burgundy, var(--action-primary)); }
+
+/* Prancha migrada, dentro do palco: o título já está na barra do capítulo e a
+   pergunta virou a faixa da intuição; o cabeçalho encolhe para a cena subir. */
+.crivo-visual .vs-study-board.vs-study-board--palco { padding: clamp(12px, 1.6vw, 18px); }
+.vs-study-board--palco .vs-board-head { align-items: center; gap: 12px; }
+.crivo-visual.crivo-visual--atlas .vs-study-board--palco .vs-board-head h2 { margin: 2px 0 0; font-size: clamp(20px, 2.1vw, 26px); line-height: 1.1; letter-spacing: -.01em; }
+.crivo-visual .vs-study-board--palco .vs-board-head p,
+.crivo-visual .vs-study-board--palco .vs-board-kicker,
+.crivo-visual .vs-study-board--palco > .vs-brush { display: none; }
+.crivo-visual .vs-study-board--palco .vs-q-callout { flex-basis: auto; min-height: 0; min-width: 72px; padding: 6px 12px; transform: none; }
+.crivo-visual .vs-study-board--palco .vs-q-callout strong { font-size: 20px; }
+.vs-study-board--palco .vs-board-body { margin-top: 10px; }
+.vs-study-board--palco .vs-concept-card[data-stage-focus] {
+  outline: 3px solid var(--action-primary, var(--vs-burgundy));
+  outline-offset: 2px;
+}
+@media (prefers-reduced-motion: no-preference) {
+  .vs-study-board--palco .vs-concept-card { transition: outline-color .2s ease; }
+}
+
+/* iPad retrato e celular: a cena tem pouco mais de meia tela. O título da
+   prancha repete a barra do capítulo e sai; a leitura principal fica como
+   etiqueta, e a faixa da etapa perde as etiquetas de "antes → agora", que as
+   leituras do instrumento logo abaixo já mostram. */
+@media (max-width: 900px) {
+  .crivo-visual .vs-study-board--palco .vs-board-head h2 { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+  .crivo-visual .vs-study-board--palco .vs-board-head { justify-content: flex-end; }
+  .crivo-visual .vs-study-board--palco .vs-q-callout { display: flex; gap: 8px; align-items: baseline; padding: 4px 10px; }
+  .crivo-visual .vs-study-board--palco .vs-q-callout strong { font-size: 16px; }
+  .vs-study-board--palco .vs-stage-lens { padding: 8px 10px; font-size: 13px; }
+  .vs-study-board--palco .vs-stage-lens-changes { display: none; }
+}
+@media (max-width: 560px) {
+  /* O nó da etapa já está na barra de pontos do palco, logo acima. */
+  .vs-study-board--palco .vs-stage-lens-node { display: none; }
+  .vs-study-board--palco .vs-stage-lens > div > p:first-child {
+    display: -webkit-box; -webkit-line-clamp: 3; -webkit-box-orient: vertical; overflow: hidden;
+  }
+  .crivo-visual .vs-study-board.vs-study-board--palco { padding: 10px; }
+  /* A leitura principal continua nas leituras do instrumento, sob a cena. */
+  .crivo-visual .vs-study-board--palco .vs-board-head { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); }
+  .crivo-visual .vs-study-board--palco .vs-board-body { margin-top: 0; }
+}

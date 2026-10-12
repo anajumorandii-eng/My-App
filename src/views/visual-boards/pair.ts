@@ -23,7 +23,14 @@ export interface BoardPair {
   selectRight: () => void;
 }
 
-export function boardPair({ map, states, selectedId, onSelect }: BoardProps): BoardPair {
+/**
+ * `porEtapa`: sem nó selecionado, a etapa do palco escolhe a ênfase — conceito
+ * acende o lado do nó 1, aplicação o do nó 2. As pranchas autorais já animam a
+ * cena pela ênfase (o pistão expande ou comprime, a lente converge ou diverge),
+ * então é isso que faz a cena mudar quando a estudante troca de etapa. Opt-in:
+ * prancha que não pede continua só com a seleção.
+ */
+export function boardPair({ map, states, selectedId, onSelect, activeStep }: BoardProps, options: { porEtapa?: boolean } = {}): BoardPair {
   const leftNode = map.nodes[1] ?? map.nodes[0] ?? null;
   const rightNode = map.nodes[2] ?? map.nodes[map.nodes.length - 1] ?? null;
   const leftId = leftNode?.id ?? null;
@@ -35,12 +42,18 @@ export function boardPair({ map, states, selectedId, onSelect }: BoardProps): Bo
   const leftSelected = distintos && selectedId === leftId;
   const rightSelected = distintos && selectedId === rightId;
 
+  const etapa = (): BoardPair['emphasis'] => {
+    if (!options.porEtapa || !distintos || selectedId || activeStep === undefined) return 'nenhum';
+    const stage = map.nodes[activeStep]?.stage;
+    return stage === 'conceito' ? 'esquerda' : stage === 'aplicacao' ? 'direita' : 'nenhum';
+  };
+
   return {
     leftId, rightId,
     leftState: leftId ? states[leftId] ?? 'nao-avaliado' : 'nao-avaliado',
     rightState: rightId ? states[rightId] ?? 'nao-avaliado' : 'nao-avaliado',
     leftSelected, rightSelected,
-    emphasis: leftSelected ? 'esquerda' : rightSelected ? 'direita' : 'nenhum',
+    emphasis: leftSelected ? 'esquerda' : rightSelected ? 'direita' : etapa(),
     selectLeft: () => leftId && onSelect(leftId),
     selectRight: () => rightId && onSelect(rightId),
   };
