@@ -3,6 +3,7 @@ import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from '../visual-boards/types';
+import { chapterFocus } from '../../lib/mathChapterFocus';
 import {
   CONFIGS, afastarDosEixos, baricentro, escreverReta, num, pontoMedio, projecaoNaReta,
   type AnalyticConfig, type ConfigId, type Ponto, type Reta,
@@ -93,6 +94,49 @@ function PlanoAnalitico({
   const retaMedida = config.retaDe ? retaViva : config.reta ?? null;
   const pe = retaMedida ? projecaoNaReta(origemDaMedida, retaMedida) : null;
 
+  const notas = config.annotations(ponto).map((m) => {
+    const ax = tx(m.x);
+    const ay = ty(m.y);
+    const reposicionar = ['circunferencia', 'ponto-reta', 'complexo'].includes(config.id);
+    const largura = m.text.length * (reposicionar ? 5.8 : 4.6);
+    const deslocamento = reposicionar ? afastarDosEixos(m.text, m.x, m.y, alcance, [[m.dx, m.dy]], [ponto, ...(config.fixo ? [config.fixo] : []), ...(config.outros ?? []).map(o => o.p)]) : m;
+    let lx = Math.min(LARGURA - 8 - largura / 2, Math.max(8 + largura / 2, tx(m.x + deslocamento.dx)));
+    let ly = Math.min(ALTURA - 8, Math.max(16, ty(m.y + deslocamento.dy)));
+    // O clamp da moldura pode devolver uma nota à faixa das graduações.
+    if (reposicionar && lx + largura / 2 > ox - 26 && lx - largura / 2 < ox + 8) {
+      lx = lx >= ox ? ox + 12 + largura / 2 : ox - 30 - largura / 2;
+    }
+    if (reposicionar && ly > oy - 3 && ly < oy + 29) ly = oy - 8;
+    if (reposicionar) {
+      // Avaliar depois do clamp e da proteção dos eixos: mover só x pode
+      // devolver a frase ao ponto e ao nome que o helper já tinha evitado.
+      const px = tx(ponto.x), py = ty(ponto.y);
+      const ocupaPonto = (baseline: number) => lx + largura / 2 > px - 17 && lx - largura / 2 < px + 28 && baseline + 4 > py - 23 && baseline - 14 < py + 17;
+      if (ocupaPonto(ly)) {
+        const candidatos = [py - 30, py + 36, 24, ALTURA - 20]
+          .filter(y => y >= 16 && y <= ALTURA - 8 && !(y > oy - 3 && y < oy + 29) && !ocupaPonto(y));
+        candidatos.sort((a, b) => Math.abs(a - ly) - Math.abs(b - ly));
+        ly = candidatos[0] ?? ly;
+      }
+    }
+    const cx = (ax + lx) / 2 + (ay - ly) * 0.22;
+    const cy = (ay + ly) / 2 + (lx - ax) * 0.22;
+    return { m, ax, ay, lx, ly, cx, cy, largura };
+  });
+
+  // Graduação some onde há texto que a cena precisa dizer. A varredura no
+  // navegador achou o "4" do eixo y embaixo do nome de P na distância
+  // ponto-reta e o "2" embaixo de "é esta distância" na reta e circunferência:
+  // as notas já desviavam dos eixos, mas o nome do ponto arrastado não, e o
+  // clamp da moldura podia devolver uma nota à faixa dos números.
+  type Caixa = { x0: number; x1: number; y0: number; y1: number };
+  const ocupadas: Caixa[] = [
+    { x0: tx(ponto.x) + 9, x1: tx(ponto.x) + 13 + config.rotulo.length * 8, y0: ty(ponto.y) - 21, y1: ty(ponto.y) - 5 },
+    ...notas.map(({ lx, ly, largura }) => ({ x0: lx - largura / 2 - 2, x1: lx + largura / 2 + 2, y0: ly - 12, y1: ly + 3 })),
+  ];
+  const livre = (c: Caixa) => !ocupadas.some((o) => c.x0 < o.x1 && c.x1 > o.x0 && c.y0 < o.y1 && c.y1 > o.y0);
+  const largTick = (v: number) => String(v).length * 6.5;
+
   return (
     <svg
       ref={svg}
@@ -112,12 +156,12 @@ function PlanoAnalitico({
       <g className="vs-plane-axis">
         <line x1={tx(-alcance)} y1={oy} x2={tx(alcance)} y2={oy} />
         <line x1={ox} y1={ty(alcance)} x2={ox} y2={ty(-alcance)} />
-        {marcas.filter((v) => v % 2 === 0).map((v) => (
+        {marcas.filter((v) => v % 2 === 0 && livre({ x0: tx(v) - largTick(v) / 2, x1: tx(v) + largTick(v) / 2, y0: oy + 2, y1: oy + 14 })).map((v) => (
           <text key={`tx${v}`} x={tx(v)} y={oy + 12} textAnchor="middle">{v}</text>
         ))}
         {/* O eixo vertical também precisa de número: sem eles, ler a ordenada do
             ponto arrastado vira contagem de quadradinhos. */}
-        {marcas.filter((v) => v % 2 === 0).map((v) => (
+        {marcas.filter((v) => v % 2 === 0 && livre({ x0: ox - 6 - largTick(v), x1: ox - 6, y0: ty(v) - 6, y1: ty(v) + 5 })).map((v) => (
           <text key={`ty${v}`} x={ox - 6} y={ty(v) + 3.5} textAnchor="end">{v}</text>
         ))}
       </g>
@@ -185,40 +229,12 @@ function PlanoAnalitico({
         </g>
       )}
 
-      {config.annotations(ponto).map((m) => {
-        const ax = tx(m.x);
-        const ay = ty(m.y);
-        const reposicionar = ['circunferencia', 'ponto-reta', 'complexo'].includes(config.id);
-        const largura = m.text.length * (reposicionar ? 5.8 : 4.6);
-        const deslocamento = reposicionar ? afastarDosEixos(m.text, m.x, m.y, alcance, [[m.dx, m.dy]], [ponto, ...(config.fixo ? [config.fixo] : []), ...(config.outros ?? []).map(o => o.p)]) : m;
-        let lx = Math.min(LARGURA - 8 - largura / 2, Math.max(8 + largura / 2, tx(m.x + deslocamento.dx)));
-        let ly = Math.min(ALTURA - 8, Math.max(16, ty(m.y + deslocamento.dy)));
-        // O clamp da moldura pode devolver uma nota à faixa das graduações.
-        if (reposicionar && lx + largura / 2 > ox - 26 && lx - largura / 2 < ox + 8) {
-          lx = lx >= ox ? ox + 12 + largura / 2 : ox - 30 - largura / 2;
-        }
-        if (reposicionar && ly > oy - 3 && ly < oy + 29) ly = oy - 8;
-        if (reposicionar) {
-          // Avaliar depois do clamp e da proteção dos eixos: mover só x pode
-          // devolver a frase ao ponto e ao nome que o helper já tinha evitado.
-          const px = tx(ponto.x), py = ty(ponto.y);
-          const ocupaPonto = (baseline: number) => lx + largura / 2 > px - 17 && lx - largura / 2 < px + 28 && baseline + 4 > py - 23 && baseline - 14 < py + 17;
-          if (ocupaPonto(ly)) {
-            const candidatos = [py - 30, py + 36, 24, ALTURA - 20]
-              .filter(y => y >= 16 && y <= ALTURA - 8 && !(y > oy - 3 && y < oy + 29) && !ocupaPonto(y));
-            candidatos.sort((a, b) => Math.abs(a - ly) - Math.abs(b - ly));
-            ly = candidatos[0] ?? ly;
-          }
-        }
-        const cx = (ax + lx) / 2 + (ay - ly) * 0.22;
-        const cy = (ay + ly) / 2 + (lx - ax) * 0.22;
-        return (
-          <g className="vs-plane-note" key={m.text} data-analytic-note={m.text}>
-            <path className="vs-plane-arrow" d={`M${lx.toFixed(1)} ${(ly < ay ? ly + 4 : ly - 9).toFixed(1)} Q${cx.toFixed(1)} ${cy.toFixed(1)} ${ax.toFixed(1)} ${ay.toFixed(1)}`} />
-            <text x={lx.toFixed(1)} y={ly.toFixed(1)} textAnchor="middle">{m.text}</text>
-          </g>
-        );
-      })}
+      {notas.map(({ m, ax, ay, lx, ly, cx, cy }) => (
+        <g className="vs-plane-note" key={m.text} data-analytic-note={m.text}>
+          <path className="vs-plane-arrow" d={`M${lx.toFixed(1)} ${(ly < ay ? ly + 4 : ly - 9).toFixed(1)} Q${cx.toFixed(1)} ${cy.toFixed(1)} ${ax.toFixed(1)} ${ay.toFixed(1)}`} />
+          <text x={lx.toFixed(1)} y={ly.toFixed(1)} textAnchor="middle">{m.text}</text>
+        </g>
+      ))}
 
       {/* O ponto arrastável. `data-arrastavel` é o que impede o SceneViewport de
           interpretar o gesto como arraste da prancha inteira. */}
@@ -251,6 +267,7 @@ export function analyticInstrument(configId: ConfigId) {
 
   return function AnalyticBoard(props: BoardProps) {
     const par = boardPair(props);
+    const foco = chapterFocus(props.map.summaryId, { title: config.name, subtitle: config.question });
     const [ponto, setPonto] = useState<Ponto>(config.inicial);
 
     const leituras = config.readouts(ponto);
@@ -282,8 +299,8 @@ export function analyticInstrument(configId: ConfigId) {
     return (
       <BoardShell
         kicker="Prancha manipulável"
-        title={config.name}
-        subtitle={config.question}
+        title={foco.title}
+        subtitle={foco.subtitle}
         condition={{ label: config.rotulo, value: `(${ponto.x.toFixed(1).replace('.', ',').replace('-', '−')}; ${ponto.y.toFixed(1).replace('.', ',').replace('-', '−')})` }}
         ariaLabel={`Prancha manipulável de geometria analítica: ${props.map.title}`}
         emphasis={par.emphasis}

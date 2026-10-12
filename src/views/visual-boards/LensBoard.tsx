@@ -80,7 +80,7 @@ function LensAnalyticBoard(props: BoardProps) {
       rightSelected={par.rightSelected}
       onSelectLeft={par.selectLeft}
       onSelectRight={par.selectRight}
-      equation={{ label: 'Vergência', general: 'V = 1/f', condition: 'f em metros', reduced: 'di-optrias' }}
+      equation={{ label: 'Vergência', general: 'V = 1/f', condition: 'f em metros', reduced: 'em dioptrias (di)' }}
       closing="p′ negativo não é erro de conta: é imagem virtual, e o sinal de f vem do tipo de lente, nunca é escolhido."
     />
   );

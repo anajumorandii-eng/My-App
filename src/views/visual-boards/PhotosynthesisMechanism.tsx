@@ -57,7 +57,8 @@ export default function PhotosynthesisMechanism() {
           {[0, 1, 2].map(stack => <g key={stack} transform={`translate(${93 + stack * 61} ${251 + stack % 2 * 17})`}>
             {[0, 1, 2, 3, 4].map(layer => <motion.ellipse key={`${layer}-${key}`} cx="0" cy={layer * 9} rx="24" ry="7" className="photo-thylakoid" initial={reduced ? false : { opacity: .6 }} animate={{ opacity: 1 }} transition={transition} />)}
           </g>)}
-          <text x="97" y="338" className="photo-small">grana · tilacoides</text>
+          {/* Em x=97 a seta do O₂ (que sai da pilha do meio) cortava a palavra "tilacoides"; à direita dela o rótulo continua sob os grana. */}
+          <text x="170" y="338" className="photo-small">grana · tilacoides</text>
           <text x="347" y="343" className="photo-small">estroma</text>
           <motion.g animate={{ opacity: step === 0 ? 1 : .8 }} transition={transition}>
             <circle cx="94" cy="93" r="19" fill="var(--photo-gold)" />

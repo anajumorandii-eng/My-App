@@ -3,6 +3,7 @@ import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
 import { SceneNote } from './SceneNote';
+import { chapterFocus } from '../../lib/mathChapterFocus';
 
 /**
  * Árvore de possibilidades com os mesmos elementos contados de dois jeitos.
@@ -75,10 +76,14 @@ function CountingScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhu
 
 export default function CountingBoard(props: BoardProps) {
   const par = boardPair(props);
+  const foco = chapterFocus(props.map.summaryId, {
+    title: 'Arranjo ou combinação',
+    subtitle: 'Uma pergunta decide tudo: trocar a ordem gera um caso novo?',
+  });
   return (
     <BoardShell
-      title="Arranjo ou combinação"
-      subtitle="Uma pergunta decide tudo: trocar a ordem gera um caso novo?"
+      title={foco.title}
+      subtitle={foco.subtitle}
       condition={{ label: 'exemplo', value: 'C(3,2)' }}
       ariaLabel="Prancha ilustrada de análise combinatória"
       scene={<CountingScene emphasis={par.emphasis} />}
