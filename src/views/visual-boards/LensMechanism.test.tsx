@@ -40,3 +40,5 @@ it('representa divergência e foco sem coordenadas infinitas no SVG',()=>{
   expect(r.image.distancia).toBe(-35);
   expect(r.image.ampliacao).toBe(.5);
 });
+
+vi.mock('../../hooks/useLiveReducedMotion', () => ({ useLiveReducedMotion: () => true, readReducedMotionPreference: () => true }));

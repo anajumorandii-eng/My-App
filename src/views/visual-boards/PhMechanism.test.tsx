@@ -17,3 +17,5 @@ it('atualiza a comparação e mantém exploração sem movimento', () => {
   fireEvent.click(screen.getByRole('button',{name:'Reproduzir movimento'}));
   expect(screen.getByRole('slider',{name:'Comparação na escala de pH'})).toHaveValue('1');
 });
+
+vi.mock('../../hooks/useLiveReducedMotion', () => ({ useLiveReducedMotion: () => true, readReducedMotionPreference: () => true }));

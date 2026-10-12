@@ -1,26 +1,49 @@
-import { useEffect, useRef, useState, type KeyboardEvent, type PointerEvent } from 'react';
-import { animate, useReducedMotion } from 'motion/react';
+import { useCallback, useEffect, useRef, useState, type Dispatch, type SetStateAction, type KeyboardEvent, type PointerEvent } from 'react';
+import { animate } from 'motion/react';
+import { readReducedMotionPreference, useLiveReducedMotion } from './useLiveReducedMotion';
 
 /** Altera somente a câmera; nunca as coordenadas ou medidas do modelo. */
 export function useSpatialRotation(initialYaw = 25, initialPitch = 12) {
-  const [yaw, setYaw] = useState(initialYaw);
-  const [pitch, setPitch] = useState(initialPitch);
+  const [yaw, updateYaw] = useState(initialYaw);
+  const [pitch, updatePitch] = useState(initialPitch);
   const gesture = useRef<{ id: number; x: number; y: number; yaw: number; pitch: number } | null>(null);
   const wrap = (value: number) => (value % 360 + 360) % 360;
   const tilt = (value: number) => Math.max(-50, Math.min(65, value));
-  const reset = () => { spin.current?.stop(); setSpinning(false); setYaw(initialYaw); setPitch(initialPitch); };
+
   // Volta completa iniciada pela estudante, com fim e pausa. A auditoria de 11/10/2026 achou modelos
   // sem nenhum movimento; girar o objeto inteiro é o movimento que todo modelo espacial tem a mostrar.
   // Com movimento reduzido, nada anima: a vista apenas avança 90°.
-  const reduced = useReducedMotion();
+  const reduced = useLiveReducedMotion();
   const spin = useRef<{ stop: () => void } | null>(null);
   const [spinning, setSpinning] = useState(false);
-  useEffect(() => () => spin.current?.stop(), []);
+  const generation = useRef(0);
+  const stopSpin = useCallback(() => {
+    generation.current += 1;
+    spin.current?.stop();
+    spin.current = null;
+    setSpinning(false);
+  }, []);
+  const setYaw: Dispatch<SetStateAction<number>> = useCallback(value => { stopSpin(); updateYaw(value); }, [stopSpin]);
+  const setPitch: Dispatch<SetStateAction<number>> = useCallback(value => { stopSpin(); updatePitch(value); }, [stopSpin]);
+  const reset = () => { stopSpin(); updateYaw(initialYaw); updatePitch(initialPitch); };
+  useEffect(() => () => { generation.current += 1; spin.current?.stop(); }, []);
+  useEffect(() => { if (reduced) stopSpin(); }, [reduced, stopSpin]);
+  useEffect(() => {
+    const visibilityChanged = () => { if (document.visibilityState === 'hidden') stopSpin(); };
+    document.addEventListener('visibilitychange', visibilityChanged);
+    return () => document.removeEventListener('visibilitychange', visibilityChanged);
+  }, [stopSpin]);
   const toggleSpin = () => {
-    if (spinning) { spin.current?.stop(); setSpinning(false); return; }
-    if (reduced) { setYaw(value => wrap(value + 90)); return; }
-    const start = yaw; setSpinning(true);
-    spin.current = animate(0, 360, { duration: 6, ease: 'easeInOut', onUpdate: v => setYaw(wrap(start + v)), onComplete: () => setSpinning(false) });
+    if (spinning) { stopSpin(); return; }
+    if (readReducedMotionPreference()) { setYaw(value => wrap(value + 90)); return; }
+    stopSpin();
+    const start = yaw, currentGeneration = generation.current;
+    setSpinning(true);
+    spin.current = animate(0, 360, {
+      duration: 6, ease: 'easeInOut',
+      onUpdate: value => { if (generation.current === currentGeneration) updateYaw(wrap(start + value)); },
+      onComplete: () => { if (generation.current === currentGeneration) { spin.current = null; setSpinning(false); } },
+    });
   };
   return {
     yaw, pitch, setYaw, setPitch, reset, spinning, toggleSpin,
@@ -29,7 +52,7 @@ export function useSpatialRotation(initialYaw = 25, initialPitch = 12) {
       onPointerDown(event: PointerEvent<SVGSVGElement>) {
         if (!event.isPrimary || (event.pointerType === 'mouse' && event.button !== 0)) return;
         event.stopPropagation();
-        spin.current?.stop(); setSpinning(false);
+        stopSpin();
         gesture.current = { id: event.pointerId, x: event.clientX, y: event.clientY, yaw, pitch };
         event.currentTarget.setPointerCapture?.(event.pointerId);
       },

@@ -93,3 +93,5 @@ it('liga potência, área esférica, intensidade e curva de decibéis à distân
   expect(points).toHaveLength(8);
   expect(Number(points[1].getAttribute('data-db')) - Number(points[0].getAttribute('data-db'))).toBeCloseTo(-6.0205999);
 });
+
+vi.mock('../../hooks/useLiveReducedMotion', () => ({ useLiveReducedMotion: () => motion.reduced, readReducedMotionPreference: () => motion.reduced }));

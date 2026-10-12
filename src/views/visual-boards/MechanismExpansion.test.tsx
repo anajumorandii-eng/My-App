@@ -86,3 +86,5 @@ describe('expansão de mecanismos por capítulo', () => {
     expect(screen.getByLabelText('Elétron no nível 3')).toBeInTheDocument();
   });
 });
+
+vi.mock('../../hooks/useLiveReducedMotion', () => ({ useLiveReducedMotion: () => true, readReducedMotionPreference: () => true }));
