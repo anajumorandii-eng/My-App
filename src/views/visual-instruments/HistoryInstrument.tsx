@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { HISTORY_INSTRUMENTS, historyInstrumentState, type HistoryInstrumentId } from '../../lib/historyInstrumentLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import BoardShell from '../visual-boards/BoardShell';
@@ -8,6 +8,8 @@ import type { BoardProps } from '../visual-boards/types';
 import { InteriorizationScene } from './InteriorizationScene';
 import { MiningColonyScene } from './MiningColonyScene';
 import { ExceptionalSceneWindow } from './ExceptionalHumanitiesIllustration';
+import { bridgeFromBoard, StageCaseLens, useStageCases, VEILED_CLAIM } from '../visual-stage/stageCases';
+import { historyStateItems } from '../visual-stage/caseDeclaration';
 
 const ink = { fontWeight: 800, fill: 'var(--vs-ink)' } as const;
 
@@ -59,8 +61,14 @@ function HistoryScene({ id, selected }: { id: HistoryInstrumentId; selected: num
 
 export function historyInstrument(id: HistoryInstrumentId) {
   const config = HISTORY_INSTRUMENTS[id];
+  const items = historyStateItems(config);
   return function HistoryBoard(props: BoardProps) {
-    const [selected, setSelected] = useState(0);
+    // No palco, a etapa leva o cursor ao recorte que o texto dela cita. Arrastar
+    // o cursor é exploração local: abrir o inspetor a cada posição do arraste
+    // tiraria a estudante da etapa em que ela está.
+    const cases = useStageCases(items, 0, bridgeFromBoard(props));
+    const selected = cases.active;
+    const coberto = cases.veiled.has(selected);
     const state = historyInstrumentState(id, selected);
     const pair = boardPair(props);
     const first = props.map.nodes[1] ?? props.map.nodes[0];
@@ -74,16 +82,17 @@ export function historyInstrument(id: HistoryInstrumentId) {
       ariaLabel={`Instrumento histórico: ${props.map.title}`}
       emphasis={pair.emphasis}
       scene={<div className="vs-instrument">
+        <StageCaseLens cases={cases} items={items} />
         {id === 'interiorization' || id === 'mining-colony' ? <ExceptionalSceneWindow label={`Percorrer a figura: ${config.name}`}>
           <svg className="vs-plane ehi-illustration" viewBox="0 0 320 230" role="img" aria-label={`${config.name}; ${state.label}: ${state.focus}`}><HistoryScene id={id} selected={selected}/></svg>
         </ExceptionalSceneWindow> : <svg className="vs-plane" viewBox="0 0 320 300" role="img" aria-label={`${config.name}; ${state.label}: ${state.focus}`}><HistoryScene id={id} selected={selected}/></svg>}
         <p className="vs-instrument-dica">mude o recorte para comparar as relações</p>
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <label htmlFor={`history-${id}`}><strong>{config.controlLabel}</strong><span>{config.controlDescription}</span><b>{state.label}</b></label>
-          <input id={`history-${id}`} type="range" min="0" max={config.states.length - 1} step="1" value={selected} onChange={event => setSelected(Number(event.target.value))} />
+          <input id={`history-${id}`} type="range" min="0" max={config.states.length - 1} step="1" value={selected} onChange={event => cases.show(Number(event.target.value))} />
         </div></div>
         <dl className="vs-plane-readouts">
-          <div data-pivot="true"><dt>Relação</dt><dd>{state.relation}</dd></div>
+          <div data-pivot="true"><dt>Relação</dt><dd className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : state.relation}</dd></div>
           <div><dt>Lastro</dt><dd>{state.evidence}</dd></div>
         </dl>
       </div>}
@@ -95,7 +104,7 @@ export function historyInstrument(id: HistoryInstrumentId) {
       rightSelected={pair.rightSelected}
       onSelectLeft={pair.selectLeft}
       onSelectRight={pair.selectRight}
-      equation={{ label: 'Relação histórica', general: config.formula, condition: state.label, reduced: state.relation }}
+      equation={{ label: 'Relação histórica', general: config.formula, condition: state.label, reduced: coberto ? '?' : state.relation }}
       closing={config.insight}
     />;
   };

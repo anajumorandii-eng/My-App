@@ -1,4 +1,4 @@
-import React, { useId, useState } from 'react';
+import React, { useId } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import { GEOGRAPHY_CONTEXTS, type GeographyContext, type GeographyContextId } from '../../lib/geographyContextLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
@@ -8,6 +8,8 @@ import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import './GeographyRemainingInstrument.css';
 import { GEOGRAPHY_CONTEXT_DIAGRAM_IDS, GeographyContextDiagram } from './GeographyContextDiagrams';
+import { bridgeFromBoard, StageCaseLens, useStageCases, VEILED_CLAIM } from '../visual-stage/stageCases';
+import { contextCaseItems } from '../visual-stage/caseDeclaration';
 
 function ContextScene({ config, index }: { config: GeographyContext; index: number }) {
   const reduced = useReducedMotion();
@@ -38,16 +40,24 @@ function ContextScene({ config, index }: { config: GeographyContext; index: numb
  * — só a tabela de configuração muda de um capítulo para outro.
  */
 export function buildContextInstrument(config: GeographyContext) {
+  // Constante por capítulo: o plano etapa → recorte é memorizado pela
+  // identidade desta lista. A afirmação entra para o véu de Reconstruir saber
+  // qual recorte entregaria a relação oculta.
+  const items = contextCaseItems(config);
   return function GeographyContextBoard(props: BoardProps) {
-    const [index, setIndex] = useState(0);
+    // No palco, a etapa abre o recorte que o texto dela cita; tocar num recorte
+    // leva o palco à etapa que o discute. Fora do palco, escolha local.
+    const cases = useStageCases(items, 0, bridgeFromBoard(props));
+    const index = cases.active;
+    const coberto = cases.veiled.has(index);
     const selected = config.cases[index];
     const pair = boardPair(props);
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
     return <BoardShell sceneFirst={GEOGRAPHY_CONTEXT_DIAGRAM_IDS.has(config.chapterId)} kicker="Leitura territorial" title={config.title} subtitle={config.question}
       condition={{ label: 'Recorte', value: selected.label }} ariaLabel={`Instrumento geográfico: ${props.map.title}`} emphasis={pair.emphasis}
-      scene={<div className="vs-instrument">{GEOGRAPHY_CONTEXT_DIAGRAM_IDS.has(config.chapterId) ? <GeographyContextDiagram config={config} index={index} /> : <ContextScene config={config} index={index} />}<div className="vs-plane-controls"><div className="vs-plane-control"><p>Alterne a escala de leitura:</p><div className="vs-geography-options" role="group" aria-label={`Recortes de ${config.title}`}>{config.cases.map((item, itemIndex) => <button key={item.label} type="button" aria-pressed={index === itemIndex} onClick={() => setIndex(itemIndex)}>{item.label}</button>)}</div></div></div><dl className="vs-plane-readouts" aria-live="polite"><div><dt>Onde</dt><dd>{selected.location}</dd></div><div><dt>Observe</dt><dd>{selected.observation}</dd></div><div data-pivot="true"><dt>Conclua</dt><dd>{selected.conclusion}</dd></div></dl><p className="vs-instrument-dica">{config.caution}</p></div>}
-      left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt) || config.question, formula: config.relation }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt) || selected.observation, formula: `no recorte ${selected.label}: ${selected.conclusion}` }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação territorial', general: config.relation, condition: selected.label, reduced: selected.conclusion }} closing={config.caution} />;
+      scene={<div className="vs-instrument"><StageCaseLens cases={cases} items={items} />{GEOGRAPHY_CONTEXT_DIAGRAM_IDS.has(config.chapterId) ? <GeographyContextDiagram config={config} index={index} /> : <ContextScene config={config} index={index} />}<div className="vs-plane-controls"><div className="vs-plane-control"><p>Alterne a escala de leitura:</p><div className="vs-geography-options" role="group" aria-label={`Recortes de ${config.title}`}>{config.cases.map((item, itemIndex) => <button key={item.label} type="button" aria-pressed={index === itemIndex} data-stage-focus={cases.stage && cases.focus.includes(itemIndex) ? 'true' : undefined} data-stage-veiled={cases.veiled.has(itemIndex) ? 'true' : undefined} onClick={() => cases.choose(itemIndex)}>{item.label}</button>)}</div></div></div><dl className="vs-plane-readouts" aria-live="polite"><div><dt>Onde</dt><dd>{selected.location}</dd></div><div><dt>Observe</dt><dd>{selected.observation}</dd></div><div data-pivot="true"><dt>Conclua</dt><dd className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : selected.conclusion}</dd></div></dl><p className="vs-instrument-dica">{config.caution}</p></div>}
+      left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt) || config.question, formula: config.relation }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt) || selected.observation, formula: coberto ? `no recorte ${selected.label}: ?` : `no recorte ${selected.label}: ${selected.conclusion}` }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação territorial', general: config.relation, condition: selected.label, reduced: coberto ? '?' : selected.conclusion }} closing={config.caution} />;
   };
 }
 

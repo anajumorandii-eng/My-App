@@ -1,6 +1,8 @@
 import React, { useId, useState } from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
+import { StageCaseLens, useStageCases, VEILED_CLAIM } from '../../visual-stage/stageCases';
+import { comparisonPartner, LAYER_BY_STAGE, LAYER_INFO, stepReading, type HgLayer } from '../../visual-stage/hgLayers';
 import type { SceneEntry } from '../types';
 import './HistoriaGeografia.css';
 import { FrenchRevolutionPlate, ClimatePlate } from './HumanitiesPrototypes';
@@ -357,21 +359,55 @@ function ColonialRevolts({ active, t }: { active: number; t: SceneTransition }) 
 }
 
 export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
-  const [active, setActive] = useState(0);
-  const [comparing, setComparing] = useState(false);
-  const [comparisonIndex, setComparisonIndex] = useState(1);
+  // No palco, a etapa abre o recorte que a seção dela discute e escolhe a
+  // camada de leitura do documento (visual-stage/hgLayers.ts). Fora do palco o
+  // contexto não existe: a escolha volta a ser só local, como antes.
+  const cases = useStageCases(entry.items);
+  const active = cases.active;
+  const stage = cases.stage;
+  const node = stage?.map.nodes[cases.step];
+  const layer: HgLayer | null = stage && node && stage.mode !== 'reconstruir' ? LAYER_BY_STAGE[node.stage] : null;
+  const [comparingChoice, setComparingChoice] = useState<boolean | null>(null);
+  const [comparisonChoice, setComparisonChoice] = useState<number | null>(null);
+  const [conferido, setConferido] = useState(false);
+  // Trocar de etapa devolve a camada ao que a etapa pede: a comparação aberta à
+  // mão na aplicação não pode seguir aberta na armadilha, nem a afirmação
+  // conferida na missão continuar descoberta na próxima visita.
+  const camadaKey = `${cases.step}|${layer ?? ''}`;
+  const [lastCamada, setLastCamada] = useState(camadaKey);
+  if (lastCamada !== camadaKey) {
+    setLastCamada(camadaKey);
+    setComparingChoice(null);
+    setComparisonChoice(null);
+    setConferido(false);
+  }
+  const total = entry.items.length;
+  const comparing = total > 1 && (comparingChoice ?? layer === 'comparar');
+  const defaultPartner = stage ? comparisonPartner(active, cases.focus, total) : (active === 1 ? (active + 1) % total : 1);
+  const otherIndex = comparisonChoice !== null && comparisonChoice !== active ? comparisonChoice : defaultPartner;
   const panelId = useId();
   const locatePanel = (panel: number) => {
     const element = document.getElementById(`${panelId}-${panel}`);
     element?.focus();
     element?.scrollIntoView?.({ block: 'nearest', inline: 'nearest' });
   };
-  const otherIndex = comparisonIndex === active ? (active + 1) % entry.items.length : comparisonIndex;
-  const displayed = active;
   const transition = useSceneMotion();
   const item = entry.items[active];
   const other = entry.items[otherIndex];
   const history = entry.chapterId.startsWith('summary-historia-');
+  const coberto = cases.veiled.has(active);
+  // Observar e missão cobrem a afirmação até a estudante pedir: na intuição a
+  // figura vem antes do texto; no exercício a resposta não pode estar escrita
+  // ao lado do recorte que ela precisa escolher.
+  const aguardando = (layer === 'observar' || layer === 'missao') && !conferido;
+  const secao = stage?.sections[cases.step];
+  const leitura = layer ? stepReading(secao, item.label) : null;
+  const tocar = (index: number) => {
+    // Na missão a escolha é a resposta da estudante: trocar de recorte não pode
+    // levar o palco para a etapa do recorte e tirá-la do exercício.
+    if (layer === 'missao') { cases.show(index); setConferido(false); }
+    else cases.choose(index);
+  };
   const renderDrawing = (selected: number) => (SELF_PACED[entry.chapterId] ? React.createElement(SELF_PACED[entry.chapterId], { active: selected })
         : FISICA[entry.chapterId] ? React.createElement(FISICA[entry.chapterId], { active: selected })
         : entry.chapterId === 'summary-historia-grandes-navegacoes-e-conquista-colonial' ? <Navigations active={selected} t={transition} />
@@ -381,16 +417,26 @@ export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
         : entry.chapterId === 'summary-historia-revolucao-industrial' ? <IndustrialRevolution active={selected} t={transition} />
           : entry.chapterId === 'summary-geografia-dinamica-climatica' ? <RainMechanisms active={selected} t={transition} />
             : <ProjectionComparison active={selected} t={transition} />);
-  return <section className="tc-scene hg-scene" aria-label={entry.question}>
+  const afirmacao = (alvo: SceneEntry['items'][number], veiled: boolean) => veiled
+    ? <p className="stage-veiled-claim">{VEILED_CLAIM}</p>
+    : <p>{alvo.claim}</p>;
+  return <section className="tc-scene hg-scene" aria-label={entry.question} data-hg-layer={layer ?? undefined}>
     <header><small>CRIVO · {HEADERS[entry.chapterId] ?? (history ? 'cronologia e causalidade' : FISICA[entry.chapterId] || entry.chapterId === 'summary-geografia-dinamica-climatica' ? 'geografia física' : 'cartografia comparada')}</small><h4>{entry.question}</h4></header>
+    <StageCaseLens cases={cases} items={entry.items} />
     <div className="hu-recortes" role="group" aria-label="Selecione um recorte da prancha">
-      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index} onClick={() => { setActive(index); }} initial={false} animate={{ y: active === index ? -2 : 0 }} transition={transition}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span>{candidate.label}</span></motion.button>)}
+      {entry.items.map((candidate, index) => <motion.button key={candidate.label} type="button" aria-pressed={active === index}
+        data-stage-focus={stage && cases.focus.includes(index) ? 'true' : undefined} data-stage-veiled={cases.veiled.has(index) ? 'true' : undefined}
+        onClick={() => tocar(index)} initial={false} animate={{ y: active === index ? -2 : 0 }} transition={transition}><span aria-hidden="true">{String(index + 1).padStart(2, '0')}</span><span>{candidate.label}</span></motion.button>)}
     </div>
-    <div className="hu-toolbar"><span>{comparing ? `A · ${item.label} / B · ${other.label}` : `${active + 1} de ${entry.items.length} recortes · ${item.label}`}</span>
-      {entry.items.length > 1 && <button type="button" className="hu-action" aria-pressed={comparing} onClick={() => { setComparing(!comparing); }}>{comparing ? 'Fechar comparação' : 'Comparar recortes'}</button>}
+    <div className="hu-toolbar"><span>{comparing ? `A · ${item.label} / B · ${other.label}` : `${active + 1} de ${total} recortes · ${item.label}`}</span>
+      {total > 1 && <button type="button" className="hu-action" aria-pressed={comparing} onClick={() => { setComparingChoice(!comparing); }}>{comparing ? 'Fechar comparação' : 'Comparar recortes'}</button>}
     </div>
+    {layer && <div className="hg-layer" data-layer={layer}>
+      <strong>{LAYER_INFO[layer].titulo}</strong>
+      <span>{LAYER_INFO[layer].instrucao}</span>
+    </div>}
     <div className={`hg-figure-group${comparing ? ' hg-figure-group--pair' : ''}`}>
-      {(comparing ? [active, otherIndex] : [displayed]).map((selected, panel) => <div className="hg-figure-panel" key={panel}>
+      {(comparing ? [active, otherIndex] : [active]).map((selected, panel) => <div className="hg-figure-panel" key={panel}>
         {comparing && <h5>{panel === 0 ? 'A' : 'B'} · {entry.items[selected].label}</h5>}
     <div id={`${panelId}-${panel}`} className="hg-figure" role="region" tabIndex={0} aria-label={`${comparing ? `Painel ${panel === 0 ? 'A' : 'B'} · ${entry.items[selected].label}. ` : ''}Prancha visual: deslize para ver a figura inteira; com teclado, use as setas`} onKeyDown={event => {
       if (event.key !== 'ArrowRight' && event.key !== 'ArrowLeft') return;
@@ -402,16 +448,29 @@ export function HistoriaGeografia({ entry }: { entry: SceneEntry }) {
       </div>)}
     </div>
     <p className="hg-pan-hint">Deslize a prancha para ver toda a figura. Com teclado, use as setas.</p>
+    {layer && (layer === 'armadilha' || leitura) && <p className="hg-step-reading" data-layer={layer}>
+      <b>{layer === 'armadilha' ? 'O alerta desta etapa' : 'Nesta etapa, o texto diz'}:</b>{' '}
+      {leitura ?? 'esta etapa não nomeia o recorte aberto; o alerta dela está no painel ao lado.'}
+    </p>}
     {comparing ? <div className="hu-comparison" role="group" aria-label="Comparação entre recortes">
-      <article><small>Recorte A · selecionado acima</small><h5>{item.label}</h5><p>{item.claim}</p>
+      <article><small>Recorte A · selecionado acima</small><h5>{item.label}</h5>{afirmacao(item, coberto)}
         <button type="button" className="hu-action" onClick={() => locatePanel(0)}>Localizar painel A</button>
-        <Source item={item} /></article>
-      <article><label>Recorte B<select aria-label="Recorte B" value={otherIndex} onChange={event => setComparisonIndex(Number(event.target.value))}>
+        {!coberto && <Source item={item} />}</article>
+      <article><label>Recorte B<select aria-label="Recorte B" value={otherIndex} onChange={event => setComparisonChoice(Number(event.target.value))}>
         {entry.items.map((candidate, index) => index !== active && <option value={index} key={candidate.label}>{candidate.label}</option>)}
-      </select></label><h5>{other.label}</h5><p>{other.claim}</p>
+      </select></label><h5>{other.label}</h5>{afirmacao(other, cases.veiled.has(otherIndex))}
         <button type="button" className="hu-action" onClick={() => locatePanel(1)}>Localizar painel B</button>
-        <Source item={other} /></article>
-    </div> : <div className="hg-detail" role="status" aria-live="polite"><strong>{item.label}</strong><p>{item.claim}</p><Source item={item} /></div>}
+        {!cases.veiled.has(otherIndex) && <Source item={other} />}</article>
+    </div> : <div className="hg-detail" role="status" aria-live="polite"><strong>{item.label}</strong>
+      {aguardando
+        ? <>
+          <p className="stage-veiled-claim">{layer === 'missao'
+            ? 'Leia o exercício no painel e escolha, nos recortes acima, o que sustenta a resposta. A resposta avaliada continua no desafio do painel.'
+            : 'Observe a figura primeiro. O que ela mostra sobre este recorte?'}</p>
+          <button type="button" className="hu-action" onClick={() => setConferido(true)}>{layer === 'missao' ? 'Conferir este recorte' : 'Ler a afirmação'}</button>
+        </>
+        : <>{afirmacao(item, coberto)}{!coberto && <Source item={item} />}</>}
+    </div>}
     {!history && entry.nota && <p className="hg-note">{entry.nota}</p>}
   </section>;
 }

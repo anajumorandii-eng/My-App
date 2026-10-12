@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import { motion, useReducedMotion } from 'motion/react';
 import {
   EVIDENCE_LENS_LABEL,
@@ -7,6 +7,8 @@ import {
   type EvidenceLens,
 } from '../../lib/currentAffairsContextLab';
 import { STAGE_LABEL } from '../../lib/visualStudy';
+import { StageStepBar } from '../visual-stage/stageCases';
+import { piecesOfSection } from '../visual-stage/caseDeclaration';
 import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
@@ -25,11 +27,13 @@ const LENS_ORDER: EvidenceLens[] = ['fato', 'contexto', 'interpretacao', 'hipote
  * afirmação daquele tipo ser classificada certo — a cena só confirma o que a
  * estudante já separou, em vez de entregar a separação pronta.
  */
-function Cop30Scene({ config, lens, revealed, onPick }: {
+function Cop30Scene({ config, lens, revealed, onPick, stepIds }: {
   config: CurrentAffairsDossierConfig;
   lens: EvidenceLens;
   revealed: Set<EvidenceLens>;
-  onPick: (lens: EvidenceLens) => void;
+  onPick: (pieceId: string) => void;
+  /** Peças tiradas da seção da etapa ativa do palco. */
+  stepIds: Set<string>;
 }) {
   const reduced = useReducedMotion();
   const label = (id: string) => config.pieces.find((piece) => piece.id === id)?.label ?? id;
@@ -41,15 +45,16 @@ function Cop30Scene({ config, lens, revealed, onPick }: {
     <motion.g
       className="vs-cop-piece"
       data-on={on(id) || undefined}
+      data-stage-step-piece={stepIds.has(id) || undefined}
       initial={false}
       animate={{ opacity: on(id) ? 1 : 0.55 }}
       transition={transition}
       role="button"
       tabIndex={0}
       aria-label={`${label(id)} — ver como ${EVIDENCE_LENS_LABEL[lensOf(id)].toLowerCase()}`}
-      onClick={() => onPick(lensOf(id))}
+      onClick={() => onPick(id)}
       onKeyDown={(event: React.KeyboardEvent) => {
-        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onPick(lensOf(id)); }
+        if (event.key === 'Enter' || event.key === ' ') { event.preventDefault(); onPick(id); }
       }}
     >{children}</motion.g>
   );
@@ -132,6 +137,31 @@ export function currentAffairsDossier(config: CurrentAffairsDossierConfig) {
   return function CurrentAffairsBoard(props: BoardProps) {
     const [lens, setLens] = useState<EvidenceLens>('fato');
     const [step, setStep] = useState(0);
+    const noPalco = props.activeStep !== undefined && Boolean(props.onStepChange);
+    const etapa = noPalco ? props.activeStep as number : -1;
+    const node = props.map.nodes[etapa];
+    const stepPieces = piecesOfSection(config, node?.sectionId);
+    const stepIds = new Set(stepPieces.map((piece) => piece.id));
+    const stepLens = stepPieces[0]?.lens ?? null;
+    // O dossiê registra de que seção cada peça e cada afirmação saíram
+    // (`sectionId`), então a etapa não adivinha o que discute: é a seção dela.
+    const stepStatement = node ? config.statements.findIndex((item) => item.sectionId === node.sectionId) : -1;
+    // A etapa acende as peças da seção dela e leva o quadro de classificação à
+    // afirmação tirada da mesma seção. A seção "Leitura de prova" não traz peça:
+    // a cena fica onde estava e a faixa manda para o quadro de classificação.
+    useEffect(() => {
+      if (stepLens) setLens(stepLens);
+      if (stepStatement >= 0) setStep(stepStatement);
+    }, [etapa, stepLens, stepStatement]);
+    const pickPiece = (pieceId: string) => {
+      const piece = config.pieces.find((item) => item.id === pieceId);
+      if (!piece) return;
+      setLens(piece.lens);
+      // Tocar numa peça abre o nó da seção de onde ela saiu, como os pontos de
+      // investigação; nos desafios a peça só troca a lente.
+      const home = props.map.nodes.find((item) => item.sectionId === piece.sectionId);
+      if (noPalco && home && props.mode === 'explorar') props.onSelect(home.id);
+    };
     const [answers, setAnswers] = useState<Record<string, EvidenceLens>>({});
     const pair = boardPair(props);
     const first = props.map.nodes[1] ?? props.map.nodes[0];
@@ -158,7 +188,16 @@ export function currentAffairsDossier(config: CurrentAffairsDossierConfig) {
       condition={{ label: 'Lente', value: EVIDENCE_LENS_LABEL[lens] }}
       ariaLabel={`Dossiê de atualidades: ${props.map.title}`} emphasis={pair.emphasis}
       scene={<div className="vs-instrument vs-cop">
-        <Cop30Scene config={config} lens={lens} revealed={revealed} onPick={setLens}/>
+        {noPalco && props.onStepChange && <StageStepBar map={props.map} step={etapa} mode={props.mode} onStepChange={props.onStepChange}>
+          {props.mode !== 'explorar'
+            ? <p className="stage-lens-mission" role="note"><b>Desafio na cena.</b> Classifique as afirmações no quadro da cena: a etiqueta de cada peça só aparece quando você acerta o tipo. A resposta avaliada continua no formulário do painel.</p>
+            : <div className="stage-lens-focus">
+              {stepPieces.length > 0
+                ? <><span>Nesta etapa a seção traz:</span><ul>{stepPieces.map((piece) => <li key={piece.id}><button type="button" aria-pressed={lens === piece.lens} onClick={() => setLens(piece.lens)}>{piece.label}</button></li>)}</ul></>
+                : <span>Esta seção não acrescenta peça ao dossiê: classifique as afirmações no quadro abaixo da cena.</span>}
+            </div>}
+        </StageStepBar>}
+        <Cop30Scene config={config} lens={lens} revealed={revealed} onPick={pickPiece} stepIds={stepIds}/>
         <div className="vs-plane-controls"><div className="vs-plane-control">
           <p>Leia o caso por tipo de evidência:</p>
           <div className="vs-geography-options" role="group" aria-label="Tipo de evidência em foco">
@@ -169,7 +208,7 @@ export function currentAffairsDossier(config: CurrentAffairsDossierConfig) {
           <div><dt>Critério</dt><dd>{info.rule}</dd></div>
           <div data-pivot="true"><dt>No caso</dt><dd>{info.reading}</dd></div>
         </dl>
-        <section className="vs-cop-sort" aria-labelledby="vs-cop-sort-title">
+        <section className="vs-cop-sort" aria-labelledby="vs-cop-sort-title" data-stage-focus={noPalco && (stepPieces.length === 0 || props.mode !== 'explorar') ? 'true' : undefined}>
           <header>
             <h4 id="vs-cop-sort-title">Classifique a afirmação</h4>
             <span>{done} de {config.statements.length} certas</span>
@@ -198,3 +237,4 @@ export function currentAffairsDossier(config: CurrentAffairsDossierConfig) {
       closing={config.closing} />;
   };
 }
+
