@@ -1,9 +1,15 @@
 import React, { useState } from 'react';
+import { StageCaseLens, bridgeFromBoard, useStageCases, VEILED_CLAIM } from '../visual-stage/stageCases';
 import { MechanismFrame, TimeControl, useMechanismTime } from './MechanismFrame';
+import { ATOM_CASES } from './stageCaseItems';
+import type { BoardProps } from './types';
 
 export const hydrogenEnergy = (n: number) => -13.6 / (n * n);
-export default function AtomMechanism() {
-  const [bohr, setBohr] = useState(false);
+/** No palco, "Modelo quântico" abre os níveis de Bohr e "Experimentos decisivos" a lâmina de ouro. */
+export default function AtomMechanism({ stage }: { stage?: BoardProps }) {
+  const casos = useStageCases(ATOM_CASES, 0, bridgeFromBoard(stage));
+  const bohr = casos.active === 1;
+  const coberto = casos.veiled.has(casos.active);
   const [emission, setEmission] = useState(true);
   const clock = useMechanismTime();
   const from = emission ? 3 : 2;
@@ -12,10 +18,11 @@ export default function AtomMechanism() {
   const y = (n: number) => 358 - (hydrogenEnergy(n) + 13.6) * 20;
   const rays = [0, 1, 2, 3, 4, 5].map(i => ({ start: 171 + i * 16, end: 171 + i * 16 }));
   return <MechanismFrame note={bohr ? 'Hidrogênio no modelo de Bohr. Altura representa energia; não a trajetória espacial de um elétron.' : 'Montagem e trajetórias esquemáticas. O número de raios desenhados não representa a proporção experimental.'} controls={<>
-    <div className="mechanism-options" role="group" aria-label="Evidência atômica"><button type="button" aria-pressed={!bohr} onClick={() => { clock.seek(0); setBohr(false); }}>Lâmina de ouro</button><button type="button" aria-pressed={bohr} onClick={() => { clock.seek(0); setBohr(true); }}>Níveis de Bohr</button></div>
+    <StageCaseLens cases={casos} items={ATOM_CASES} />
+    <div className="mechanism-options" role="group" aria-label="Evidência atômica">{ATOM_CASES.map((item, i) => <button type="button" key={item.label} aria-pressed={casos.active === i} onClick={() => { clock.seek(0); casos.choose(i); }}>{i === 0 ? 'Lâmina de ouro' : 'Níveis de Bohr'}</button>)}</div>
     <h3>{bohr ? 'A diferença de energia vira um fóton.' : 'A maioria atravessa; poucas desviam muito.'}</h3>
     {bohr && <div className="mechanism-options" role="group" aria-label="Transição eletrônica">{['Emissão 3 → 2', 'Absorção 2 → 3'].map((label, i) => <button type="button" key={label} aria-pressed={emission === (i === 0)} onClick={() => { clock.seek(0); setEmission(i === 0); }}>{label}</button>)}</div>}
-    <p role="status">{bohr ? `${emission ? 'Emissão' : 'Absorção'}: |ΔE| = ${energy.toLocaleString('pt-BR', { maximumFractionDigits: 2 })} eV. O fóton tem energia hν = |ΔE|.` : 'Os grandes desvios de algumas partículas alfa sustentam a existência de um núcleo pequeno, denso e positivo. A maior parte do volume permite a passagem.'}</p>
+    <p role="status" className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : bohr ? `${emission ? 'Emissão' : 'Absorção'}: |ΔE| = ${energy.toLocaleString('pt-BR', { maximumFractionDigits: 2 })} eV. O fóton tem energia hν = |ΔE|.` : 'Os grandes desvios de algumas partículas alfa sustentam a existência de um núcleo pequeno, denso e positivo. A maior parte do volume permite a passagem.'}</p>
     <p>{bohr ? 'O elétron aparece apenas nos níveis permitidos. A troca de nível é mostrada como um salto; a posição do fóton é esquemática, sem escala de tempo.' : 'O resultado contraria uma carga positiva espalhada uniformemente. Ele não determina, sozinho, os níveis de energia de Bohr.'}</p>
     <TimeControl clock={clock} label={bohr ? 'Demonstração da transição' : 'Percurso das partículas alfa'} />
   </>}>

@@ -1,19 +1,34 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { MembraneSpatialView } from '../visual-instruments/MembraneSpatialView';
+import { StageCaseLens, bridgeFromBoard, useStageCases, VEILED_CLAIM } from '../visual-stage/stageCases';
 import { MechanismFrame, TimeControl, useMechanismTime } from './MechanismFrame';
+import OsmosisMechanism from './OsmosisMechanism';
+import { MEMBRANE_CASES } from './stageCaseItems';
+import type { BoardProps } from './types';
 
-export default function MembraneMechanism() {
-  const [pump,setPump]=useState(false);
+// Fora do palco a osmose continua no painel de apoio da prancha; no palco ela
+// é o terceiro caso da cena, porque "Ler tonicidade" é uma etapa inteira do
+// capítulo e ficava sem figura ao lado do texto, lá embaixo da página.
+const SEM_OSMOSE = MEMBRANE_CASES.slice(0, 2);
+
+export default function MembraneMechanism({ stage }: { stage?: BoardProps }) {
+  const bridge = bridgeFromBoard(stage);
+  const items = bridge ? MEMBRANE_CASES : SEM_OSMOSE;
+  const casos = useStageCases(items, 0, bridge);
+  const pump = casos.active === 1;
+  const coberto = casos.veiled.has(casos.active);
   const clock=useMechanismTime();
+  const opcoes = <div className="mechanism-options" role="group" aria-label="Transporte pela membrana">
+    {items.map((item, i) => <button key={item.label} type="button" aria-pressed={casos.active === i} onClick={() => { clock.seek(0); casos.choose(i); }}>{i === 1 ? 'Bomba Na⁺/K⁺' : item.label}</button>)}
+  </div>;
+  if (casos.active === 2) return <div className="vs-stage-case-wrap"><StageCaseLens cases={casos} items={items} />{opcoes}<OsmosisMechanism />{coberto && <p role="note" className="stage-veiled-claim">{VEILED_CLAIM}</p>}</div>;
   const sodium=Math.min(1,clock.time*2);
   const potassium=Math.max(0,clock.time*2-1);
   return <MechanismFrame note="Representação de fluxo líquido e de um ciclo da bomba, sem escala molecular ou temporal. Partículas também se movem nos dois sentidos na difusão; o gradiente determina o saldo. Íons respondem ao gradiente eletroquímico." controls={<>
+    <StageCaseLens cases={casos} items={items} />
     <h3>{pump?'Três Na⁺ saem; dois K⁺ entram.':'Proteína não significa gasto de ATP.'}</h3>
-    <div className="mechanism-options" role="group" aria-label="Transporte pela membrana">
-      <button type="button" aria-pressed={!pump} onClick={()=>{clock.seek(0);setPump(false);}}>Difusão facilitada</button>
-      <button type="button" aria-pressed={pump} onClick={()=>{clock.seek(0);setPump(true);}}>Bomba Na⁺/K⁺</button>
-    </div>
-    <p role="status">{pump?'Um ATP é hidrolisado por ciclo. Saem três cargas positivas e entram duas: saldo de uma carga positiva para fora.':'Soluto neutro: o fluxo líquido segue da maior para a menor concentração, por uma proteína, sem consumo direto de ATP.'}</p>
+    {opcoes}
+    <p role="status" className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : pump?'Um ATP é hidrolisado por ciclo. Saem três cargas positivas e entram duas: saldo de uma carga positiva para fora.':'Soluto neutro: o fluxo líquido segue da maior para a menor concentração, por uma proteína, sem consumo direto de ATP.'}</p>
     <p>Transporte ativo primário usa energia diretamente, como esta ATPase. No secundário, o movimento de outro soluto a favor de seu gradiente fornece energia ao transporte contra o gradiente.</p>
     <TimeControl clock={clock} label="Percurso na membrana" />
   </>}>

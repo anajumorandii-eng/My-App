@@ -1,5 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
+import { StageCaseLens, bridgeFromBoard, useStageCases, VEILED_CLAIM } from '../visual-stage/stageCases';
 import { MechanismFrame, TimeControl, useMechanismTime } from './MechanismFrame';
+import { THERMO_CASES } from './stageCaseItems';
+import type { BoardProps } from './types';
 
 export function enthalpyProfile(progress: number, endothermic: boolean) {
   const start = endothermic ? 275 : 155;
@@ -7,9 +10,18 @@ export function enthalpyProfile(progress: number, endothermic: boolean) {
   return progress <= .5 ? start + (75 - start) * Math.sin(Math.PI * progress) : 75 + (end - 75) * (1 - Math.cos(Math.PI * (progress - .5)));
 }
 
-export default function ThermochemMechanism({ hess = false }: { hess?: boolean }) {
-  const [endo, setEndo] = useState(false);
-  const [indirect, setIndirect] = useState(true);
+/**
+ * Perfil de entalpia e Lei de Hess na mesma cena. No palco, a etapa abre o
+ * caso que a seção dela discute — em Termoquímica I, "Lei de Hess" abre os
+ * caminhos A → B → C; antes o perfil era a única coisa desenhada e a etapa de
+ * Hess ficava sem figura ao lado do texto.
+ */
+export default function ThermochemMechanism({ stage }: { stage?: BoardProps }) {
+  const casos = useStageCases(THERMO_CASES, 0, bridgeFromBoard(stage));
+  const hess = casos.active === 2;
+  const endo = casos.active === 1;
+  const [indirect, setIndirect] = React.useState(true);
+  const coberto = casos.veiled.has(casos.active);
   const clock = useMechanismTime();
   const start = endo ? 275 : 155;
   const end = endo ? 155 : 275;
@@ -20,15 +32,19 @@ export default function ThermochemMechanism({ hess = false }: { hess?: boolean }
   const b = indirect && clock.time <= .5 ? hessPoints[1] : hessPoints[hessPoints.length - 1];
   const t = indirect && clock.time > .5 ? clock.time * 2 - 1 : local;
   return <MechanismFrame note={hess ? 'Estados A, B e C hipotéticos. Valores em kJ por reação como escrita; não são dados de uma substância.' : 'Perfil energético esquemático. O eixo horizontal é o avanço da reação, não o tempo.'} controls={<>
-    <div className="mechanism-options" role="group" aria-label={hess ? 'Caminhos da reação' : 'Troca de calor'}>
-      {(hess ? ['Por B', 'Direto'] : ['Exotérmica', 'Endotérmica']).map((label, i) => <button type="button" key={label} aria-pressed={hess ? indirect === (i === 0) : endo === (i === 1)} onClick={() => { clock.seek(0); if (hess) setIndirect(i === 0); else setEndo(i === 1); }}>{label}</button>)}
+    <StageCaseLens cases={casos} items={THERMO_CASES} />
+    <div className="mechanism-options" role="group" aria-label="Caso termoquímico">
+      {THERMO_CASES.map((item, i) => <button type="button" key={item.label} aria-pressed={casos.active === i} onClick={() => { clock.seek(0); casos.choose(i); }}>{item.label}</button>)}
     </div>
+    {hess && <div className="mechanism-options" role="group" aria-label="Caminhos da reação">
+      {['Por B', 'Direto'].map((label, i) => <button type="button" key={label} aria-pressed={indirect === (i === 0)} onClick={() => { clock.seek(0); setIndirect(i === 0); }}>{label}</button>)}
+    </div>}
     <h3>{hess ? 'O caminho muda; o saldo permanece.' : endo ? 'O sistema recebe calor.' : 'O sistema entrega calor.'}</h3>
-    <p role="status">{hess ? indirect ? 'A → B: −40 kJ. B → C: −60 kJ. Soma: −100 kJ.' : 'A → C: −100 kJ. Mesmos estados inicial e final, mesmo ΔH.' : endo ? 'Hprodutos > Hreagentes: ΔH positivo. O calor é absorvido pelo sistema.' : 'Hprodutos < Hreagentes: ΔH negativo. O calor é liberado para a vizinhança.'}</p>
+    <p role="status" className={coberto ? 'stage-veiled-claim' : undefined}>{coberto ? VEILED_CLAIM : hess ? indirect ? 'A → B: −40 kJ. B → C: −60 kJ. Soma: −100 kJ.' : 'A → C: −100 kJ. Mesmos estados inicial e final, mesmo ΔH.' : endo ? 'Hprodutos > Hreagentes: ΔH positivo. O calor é absorvido pelo sistema.' : 'Hprodutos < Hreagentes: ΔH negativo. O calor é liberado para a vizinhança.'}</p>
     <p>{hess ? 'Somar equações exige cancelar os intermediários. Ao inverter uma equação, inverta o sinal de ΔH; ao multiplicá-la, multiplique também ΔH.' : 'Ea é a diferença entre o nível dos reagentes e o pico. O sinal de ΔH não basta para determinar velocidade ou espontaneidade.'}</p>
     <TimeControl clock={clock} label={hess ? 'Percurso entre os estados' : 'Avanço da reação'} />
   </>}>
-    <svg viewBox="0 0 520 455" role="img" aria-label={hess ? `Lei de Hess: ${indirect ? 'A para B para C' : 'A para C'}, variação total menos 100 quilojoules` : `Perfil ${endo ? 'endotérmico, delta H positivo' : 'exotérmico, delta H negativo'}, com barreira de ativação`}>
+    <svg viewBox="0 0 520 455" role="img" aria-label={coberto ? `${THERMO_CASES[casos.active].label}: ${VEILED_CLAIM}` : hess ? `Lei de Hess: ${indirect ? 'A para B para C' : 'A para C'}, variação total menos 100 quilojoules` : `Perfil ${endo ? 'endotérmico, delta H positivo' : 'exotérmico, delta H negativo'}, com barreira de ativação`}>
       <text x="26" y="28" className="mf-heading">{hess ? 'LEI DE HESS / ENTALPIA É FUNÇÃO DE ESTADO' : 'ENTALPIA / OLHE PARA O SISTEMA'}</text>
       <path d="M45 345V55m0 290H478" className="mf-axis" /><text x="22" y="65">H</text><text x="295" y="373">avanço da reação</text>
       {hess ? <>

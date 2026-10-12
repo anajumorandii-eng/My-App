@@ -124,4 +124,15 @@ describe('palco → cenas de Química e Biologia', () => {
       for (const spot of declaration.hotspots ?? []) expect(labels.has(spot.label)).toBe(true);
     }
   });
+
+  it('Mutações gênicas: "Inserções e deleções" abre a inserção em múltiplo de três na bancada de códons', () => {
+    const id = 'summary-biologia-mutacoes-genicas';
+    const view = render(<TopicScene summaryId={id} stage={bridge(id)} />);
+    const aba = () => within(screen.getByRole('tablist', { name: 'Tipo de mutação' })).getByRole('tab', { selected: true }).textContent;
+    const inicial = aba();
+    view.rerender(<TopicScene summaryId={id} stage={bridge(id, { activeStep: 1 })} />);
+    expect(aba()).toBe('Múltiplo de três');
+    expect(inicial).not.toBe('Múltiplo de três');
+    expect(STAGE_CASE_SCENE_IDS.has(id)).toBe(true);
+  });
 });

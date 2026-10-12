@@ -1,6 +1,6 @@
 import type { InteractiveSummary } from '../../types/summary';
 import { buildVisualMap } from '../../lib/visualStudy';
-import { planStageFocus } from '../../lib/stageFocus';
+import { planStageFocus, type FocusCandidate } from '../../lib/stageFocus';
 import { sceneFor } from '../topic-scenes/sceneFor';
 import { ECOLOGY_CYCLE_IDS } from '../topic-scenes/families/EcologyCycles';
 import { ECOLOGY_SYSTEM_IDS } from '../topic-scenes/families/EcologySystems';
@@ -16,6 +16,7 @@ export const STAGE_CASE_SCENE_IDS: ReadonlySet<string> = new Set([
   ...ECOLOGY_CYCLE_IDS, ...ECOLOGY_SYSTEM_IDS, ...BIOLOGY_PHYSIOLOGY_SCENE_IDS, ...BIOLOGY_PROCESS_IDS,
   ...ORGANIC_SCENE_IDS, ...QUIMICA_FENOMENO_IDS, ...BIOLOGIA_FENOMENO_IDS,
   'summary-quimica-geometria-molecular',
+  'summary-biologia-mutacoes-genicas',
 ]);
 
 /**
@@ -29,12 +30,17 @@ export function sceneStageDeclaration(summary: InteractiveSummary): StageSceneDe
   if (!STAGE_CASE_SCENE_IDS.has(summary.id)) return null;
   const entry = sceneFor(summary.id);
   if (!entry) return null;
+  return casesStageDeclaration(summary, entry.items);
+}
+
+/** Um ponto por etapa, com o nome do caso que a etapa abre (cenas e pranchas). */
+export function casesStageDeclaration(summary: InteractiveSummary, items: FocusCandidate[]): StageSceneDeclaration {
   const map = buildVisualMap(summary);
-  const plan = planStageFocus(entry.items, summary.sections);
+  const plan = planStageFocus(items, summary.sections);
   return {
     hotspots: map.nodes.map((node, step) => {
       const caso = plan.byStep[step]?.[0];
-      return { id: `etapa-${step}`, label: caso === undefined ? node.label : entry.items[caso].label, nodeId: node.id, step };
+      return { id: `etapa-${step}`, label: caso === undefined ? node.label : items[caso].label, nodeId: node.id, step };
     }),
   };
 }

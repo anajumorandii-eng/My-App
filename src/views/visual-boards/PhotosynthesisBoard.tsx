@@ -11,7 +11,7 @@ export default function PhotosynthesisBoard(props: BoardProps) {
     subtitle="A fonte de energia muda. O carbono pode vir do CO₂."
     condition={{ label: 'compare', value: 'energia' }}
     ariaLabel="Prancha de fotossíntese e quimiossíntese: energia e fixação de carbono"
-    scene={<PhotosynthesisMechanism />}
+    scene={<PhotosynthesisMechanism stage={props} />}
     sceneFirst
     emphasis={par.emphasis}
     left={{ label: 'Fotossíntese', headline: 'Luz sustenta a produção de matéria orgânica.', detail: 'Na fotossíntese oxigênica, as reações fotoquímicas liberam O₂ da água e produzem ATP e NADPH. O ciclo de Calvin fixa CO₂.', formula: 'luz → ATP e NADPH → fixação de CO₂' }}

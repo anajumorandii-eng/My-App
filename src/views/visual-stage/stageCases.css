@@ -74,3 +74,17 @@
   .vs-stage-viewport .tc-scene:has(> .stage-lens) > :is(.qf-figure, .bp-board, .bp-process-figure, .ec-figure, .gm-layout) { order: 1; }
   .vs-stage-viewport .tc-scene:has(> .stage-lens) > .stage-lens { order: 2; margin-top: 8px; }
 }
+
+/* Gibbs (ThermochemBoard): cursor de temperatura e casos ficam sob a reta,
+   dentro da cena, em vez de num painel abaixo. */
+.vs-gibbs { display: grid; gap: 8px; }
+.vs-gibbs-control { display: grid; gap: 4px; font-size: 13px; }
+.vs-gibbs-control input { width: 100%; accent-color: var(--action-primary, #7a1f2b); }
+
+/* Quadro de Punnett no palco: casas tocáveis. O contorno marca a casa lida;
+   o foco de teclado usa o mesmo traço para não depender só de cor. */
+.vs-punnett-stage { display: grid; gap: 8px; }
+.vs-punnett-stage .vs-punnett-cell[role="button"] { cursor: pointer; outline: none; }
+.vs-punnett-stage .vs-punnett-cell[data-selected] rect,
+.vs-punnett-stage .vs-punnett-cell:focus-visible rect { stroke: var(--action-primary, #7a1f2b); stroke-width: 3.5; }
+.vs-stage-case-wrap { display: grid; gap: 8px; }
