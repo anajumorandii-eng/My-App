@@ -41,11 +41,11 @@ const LEITURA: Record<WaveKind, Leitura> = {
 };
 
 export default function WaveBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   const kind: WaveKind = props.map.summaryId.endsWith('som-e-suas-propriedades') ? 'sound' : props.map.summaryId.endsWith('ondas-eletromagneticas') ? 'electromagnetic' : 'transverse';
   const leitura = LEITURA[kind];
   return (
-    <BoardShell
+    <BoardShell palco
       title={kind === 'sound' ? 'Som: compressões que se propagam' : kind === 'electromagnetic' ? 'Ondas eletromagnéticas' : 'Onda: comprimento e frequência'}
       subtitle={leitura.subtitle}
       condition={leitura.condition}

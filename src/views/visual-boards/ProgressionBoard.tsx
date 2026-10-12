@@ -71,13 +71,13 @@ function SequenceScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhu
 }
 
 export default function ProgressionBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   const foco = chapterFocus(props.map.summaryId, {
     title: 'PA e PG',
     subtitle: 'A pergunta é sempre a mesma: o que se repete entre um termo e o próximo?',
   });
   return (
-    <BoardShell
+    <BoardShell palco
       title={foco.title}
       subtitle={foco.subtitle}
       condition={{ label: 'o passo', value: '+ ou ×' }}

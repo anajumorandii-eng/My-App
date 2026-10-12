@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import BoardShell from '../visual-boards/BoardShell';
+import { useStageParameters } from '../visual-boards/stageStep';
 import { boardPair } from '../visual-boards/pair';
 import { STAGE_LABEL } from '../../lib/visualStudy';
 import type { BoardProps } from '../visual-boards/types';
@@ -62,8 +63,19 @@ export function solidInstrument(id: SolidConfigId) {
   return function SolidBoard(props: BoardProps) {
     const par = boardPair(props);
     const inicial = estadoInicial(config);
-    const [valores, setValores] = useState(inicial.valores);
     const [forma, setForma] = useState(inicial.forma);
+    // As medidas respondem à etapa do palco (lib/stageParameters): aplicação
+    // muda uma aresta e mostra o volume recalculado; estratégia leva ao caso
+    // em que a leitura principal muda de natureza, ou ao extremo da faixa.
+    const estagio = useStageParameters(
+      config.controles.map((c) => ({ min: c.min, max: c.max, step: c.passo, initial: inicial.valores[c.id] ?? c.inicial })),
+      (lista) => config.leituras(Object.fromEntries(config.controles.map((c, i) => [c.id, lista[i]])), forma),
+    );
+    const valores: Record<string, number> = Object.fromEntries(config.controles.map((c, i) => [c.id, estagio.values[i]]));
+    const setValores = (mudar: (atual: Record<string, number>) => Record<string, number>) => {
+      const proximo = mudar(valores);
+      config.controles.forEach((c, i) => { if (proximo[c.id] !== valores[c.id]) estagio.setAt(i, proximo[c.id]); });
+    };
 
     const visiveis = config.controlesVisiveis && forma ? config.controlesVisiveis(forma) : config.controles.map((c) => c.id);
     const controles = config.controles.filter((c) => visiveis.includes(c.id));
@@ -77,6 +89,7 @@ export function solidInstrument(id: SolidConfigId) {
 
     return (
       <BoardShell
+        palco={{ data: estagio.lens }}
         kicker="Prancha manipulável"
         title={config.name}
         subtitle={config.question}

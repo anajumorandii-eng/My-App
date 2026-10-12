@@ -61,9 +61,9 @@ function GrowthScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum'
 }
 
 export default function ExponentialBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   return (
-    <BoardShell
+    <BoardShell palco
       title="Linear e exponencial"
       subtitle="A diferença não é a velocidade — é o que se repete a cada passo."
       condition={{ label: 'por passo', value: '+ ou ×' }}

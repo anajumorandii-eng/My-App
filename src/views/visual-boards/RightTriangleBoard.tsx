@@ -1,19 +1,32 @@
 import React, { useState } from 'react';
+import { useStageParameter, useStageParameters } from './stageStep';
 import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
 
 const decimal = (value: number) => value.toFixed(2).replace('.', ',');
 
+function razoesDoAngulo(graus: number) {
+  const r = graus * Math.PI / 180;
+  const tangente = Math.tan(r);
+  return [
+    { label: 'sen θ', value: decimal(Math.sin(r)) },
+    { label: 'cos θ', value: decimal(Math.cos(r)) },
+    { label: 'tg θ', value: tangente > 1 ? `${decimal(tangente)} (cateto oposto maior)` : tangente < 1 ? `${decimal(tangente)} (cateto adjacente maior)` : '1 (catetos iguais)', pivot: true },
+  ];
+}
+
 export default function RightTriangleBoard(props: BoardProps) {
-  const [angle, setAngle] = useState(40);
-  const pair = boardPair(props);
+  // O ângulo responde à etapa do palco; seno, cosseno e tangente são a leitura
+  // (lib/stageParameters). Tangente passa de 1 em 45°: é a virada da estratégia.
+  const { value: angle, setValue: setAngle, lens } = useStageParameter({ min: 20, max: 70, step: 10, initial: 40 }, razoesDoAngulo);
+  const pair = boardPair(props, { porEtapa: true });
   const radians = angle * Math.PI / 180;
   const opposite = 5 * Math.sin(radians);
   const adjacent = 5 * Math.cos(radians);
   const x = 45 + 205 * Math.cos(radians);
   const y = 238 - 205 * Math.sin(radians);
-  return <BoardShell
+  return <BoardShell palco={{ data: lens }}
     kicker="Laboratório de trigonometria"
     title="Trigonometria no triângulo retângulo"
     subtitle="Seno, cosseno e tangente são razões entre lados definidos pelo ângulo escolhido."

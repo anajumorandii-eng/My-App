@@ -66,9 +66,9 @@ function LogScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' })
 }
 
 export default function LogarithmBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   return (
-    <BoardShell
+    <BoardShell palco
       title="Logaritmo é expoente"
       subtitle="A mesma igualdade, lida de dois lados."
       condition={{ label: 'sempre', value: 'base > 0' }}

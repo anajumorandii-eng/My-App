@@ -75,13 +75,13 @@ function CountingScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhu
 }
 
 export default function CountingBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   const foco = chapterFocus(props.map.summaryId, {
     title: 'Arranjo ou combinação',
     subtitle: 'Uma pergunta decide tudo: trocar a ordem gera um caso novo?',
   });
   return (
-    <BoardShell
+    <BoardShell palco
       title={foco.title}
       subtitle={foco.subtitle}
       condition={{ label: 'exemplo', value: 'C(3,2)' }}

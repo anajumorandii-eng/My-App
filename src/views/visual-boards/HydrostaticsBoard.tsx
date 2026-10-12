@@ -78,9 +78,9 @@ function FluidScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' 
 }
 
 export default function HydrostaticsBoard(props: BoardProps) {
-  const par = boardPair(props);
+  const par = boardPair(props, { porEtapa: true });
   return (
-    <BoardShell
+    <BoardShell palco
       title="Pressão e empuxo"
       subtitle="Uma depende da profundidade; o outro, do volume submerso."
       condition={{ label: 'no fluido', value: 'ρgh' }}

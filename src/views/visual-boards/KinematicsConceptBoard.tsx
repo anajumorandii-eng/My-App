@@ -1,3 +1,4 @@
+import { useStageParameter } from './stageStep';
 import React,{useState} from 'react';
 import {motion,useReducedMotion} from 'motion/react';
 import BoardShell from './BoardShell';
@@ -5,9 +6,12 @@ import {boardPair} from './pair';
 import type {BoardProps} from './types';
 
 export default function KinematicsConceptBoard(props:BoardProps){
- const pair=boardPair(props),[shift,setShift]=useState(false),reduced=useReducedMotion();
+ const pair=boardPair(props,{porEtapa:true}),reduced=useReducedMotion();
+ // A origem do referencial responde à etapa do palco: posições mudam, Δs = +2 m não.
+ const origem=useStageParameter({min:0,max:1,step:1,initial:0},(v)=>[{label:'origem',value:v?'em −2 m':'em 0 m'},{label:'posição de A',value:`${-1+2*v} m`},{label:'Δs de A a C',value:'+2 m',pivot:true}]);
+ const shift=origem.value===1,setShift=(mudar:(v:boolean)=>boolean)=>origem.setValue(mudar(shift)?1:0);
  const origin=shift?-2:0;
- return <BoardShell title="Posição, percurso e referencial" subtitle="Um móvel parte de A, vai a B e retorna até C sobre a mesma rua." condition={{label:'saldo',value:'Δs = +2 m'}} ariaLabel="Prancha de conceitos fundamentais de cinemática" emphasis={pair.emphasis}
+ return <BoardShell palco={{data:origem.lens}} title="Posição, percurso e referencial" subtitle="Um móvel parte de A, vai a B e retorna até C sobre a mesma rua." condition={{label:'saldo',value:'Δs = +2 m'}} ariaLabel="Prancha de conceitos fundamentais de cinemática" emphasis={pair.emphasis}
   scene={<div className="vs-instrument"><svg className="vs-plane" viewBox="0 0 320 350" role="img" aria-label="Percurso A B C: distância 8 metros e deslocamento positivo2 metros" data-kinematics="reference-path" style={{fontFamily:'Kalam, cursive',fontSize:14,fill:'var(--vs-ink)'}}>
    <defs><marker id="kin-path-head" viewBox="0 0 10 10" refX="9" refY="5" markerWidth="5" markerHeight="5" orient="auto"><path d="M1 1L9 5L1 9" fill="none" stroke="var(--vs-burgundy)"/></marker></defs>
    <text x="160" y="24" textAnchor="middle">A → B → C · rua retilínea</text>

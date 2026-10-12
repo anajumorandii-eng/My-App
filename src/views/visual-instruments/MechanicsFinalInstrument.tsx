@@ -1,3 +1,4 @@
+import { useStageParameter } from '../visual-boards/stageStep';
 import React, { useState } from 'react';
 import {MechanicsFidelityScenes} from './MechanicsFidelityScenes';
 import BoardShell from '../visual-boards/BoardShell';
@@ -89,12 +90,12 @@ export function mechanicsFinalInstrument(id: MechanicsFinalId) {
   const config = MECHANICS_FINAL[id];
   return function MechanicsFinalBoard(props: BoardProps) {
     const pair = boardPair(props);
-    const [value, setValue] = useState(config.control.initial);
+    const { value: value, setValue: setValue, lens: stageLens } = useStageParameter(config.control, (x) => config.readouts(x));
     const readouts = config.readouts(value);
     const pivot = readouts.find(readout => readout.pivot) ?? readouts[0];
     const first = props.map.nodes[1] ?? props.map.nodes[0];
     const second = props.map.nodes[2] ?? props.map.nodes.at(-1);
-    return <BoardShell kicker="Laboratório de mecânica" title={config.name} subtitle={config.question} condition={{ label: '↔', value: pivot.value }} ariaLabel={`Instrumento de mecânica: ${props.map.title}`} emphasis={pair.emphasis}
+    return <BoardShell palco={{ data: stageLens }} kicker="Laboratório de mecânica" title={config.name} subtitle={config.question} condition={{ label: '↔', value: pivot.value }} ariaLabel={`Instrumento de mecânica: ${props.map.title}`} emphasis={pair.emphasis}
       scene={<div className="vs-instrument"><svg className="vs-plane" viewBox={id==='mass-energy'?'0 0 320 300':'0 0 320 420'} role="img" aria-label={`${config.name}; ${pivot.label}: ${pivot.value}`}><Scene id={id} value={value}/></svg><p className="vs-instrument-dica">mexa na grandeza e acompanhe a consequência física</p><div className="vs-plane-controls"><div className="vs-plane-control"><label htmlFor={`mechanics-final-${id}`}><strong>{config.control.label}</strong><span>{config.control.description}</span><b>{value}</b></label><input id={`mechanics-final-${id}`} type="range" min={config.control.min} max={config.control.max} step={config.control.step} value={value} onChange={event => setValue(Number(event.target.value))}/></div></div><dl className="vs-plane-readouts">{readouts.map(readout => <div key={readout.label} data-pivot={readout.pivot ? 'true' : undefined}><dt>{readout.label}</dt><dd>{readout.value}</dd></div>)}</dl></div>}
       left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? props.map.title, detail: short(first?.excerpt), formula: config.formula }} right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? props.map.title, detail: short(second?.excerpt), formula: pivot.value }} leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight} equation={{ label: 'Relação mecânica', general: config.formula, condition: 'mostra', reduced: pivot.value }} closing={config.insight} />;
   };
