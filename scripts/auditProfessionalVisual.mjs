@@ -5,6 +5,7 @@ import { tmpdir } from 'node:os';
 import { createHash } from 'node:crypto';
 
 // Run against the current build: CRIVO_URL=http://127.0.0.1:3001 node scripts/auditProfessionalVisual.mjs
+const challengeLinks = JSON.parse(await fs.readFile('docs/refinamento-visual-613-desafio/challenge-links.json', 'utf8'));
 const catalog = JSON.parse(await fs.readFile('docs/visual-personalizado/18-matriz-cobertura.json', 'utf8'));
 const output = path.resolve(process.env.CRIVO_VISUAL_OUTPUT || 'docs/refinamento-profissional-613-2026-10-11');
 await fs.mkdir(output, { recursive: true });
@@ -84,10 +85,23 @@ try {
         }
         await page.getByRole('button', { name: 'Entender esta etapa' }).click();
         if (!await page.locator('#visual-chapter-reading').evaluate(el => el === document.activeElement)) throw new Error('Leitura sem foco');
+        await page.getByRole('button', { name: 'Entender o desafio' }).click();
+        const section = challengeLinks.find(link => link.id === chapter.id);
+        const currentStep = page.getByRole('navigation', { name: 'Etapas do capítulo' }).locator('[aria-current="step"]');
+        await currentStep.filter({ hasText: section.sectionTitle }).waitFor();
+        if (!(await currentStep.innerText()).includes(section.sectionTitle)) throw new Error('Desafio ligado à etapa errada');
+        if (!await page.locator('#visual-chapter-reading').evaluate(el => el === document.activeElement)) throw new Error('Explicação do desafio sem foco');
+        result.challengeSection = section.sectionId;
         await page.getByRole('button', { name: 'Responder ao desafio' }).click();
         await page.getByRole('heading', { name: 'Recuperação sem consulta' }).waitFor();
         if (await page.locator('.vs-spatial-lab').count()) throw new Error('Cena presente na recuperação sem consulta');
-      } catch (error) { result.errors.push(error.message); }
+      } catch (error) {
+        // An interrupted browser cannot provide evidence about later chapters.
+        // Preserve existing checkpoints and abort instead of reporting hundreds
+        // of chapter failures caused by the same closed process.
+        if (page.isClosed() || !browser.isConnected()) throw error;
+        result.errors.push(error.message);
+      }
       result.errors.push(...errors); results.push(result);
       await fs.writeFile(path.join(checkpointOutput, `checkpoint-${worker}.json`), JSON.stringify(results.filter(r => catalog.rows.findIndex(c => c.id === r.id) % 3 === worker)));
       if (result.errors.length) console.log(JSON.stringify({id:result.id,errors:result.errors}));

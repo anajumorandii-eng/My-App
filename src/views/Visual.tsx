@@ -5,6 +5,7 @@ import { ArrowLeft, Compass, HelpCircle, RotateCcw, Search, Undo2, Waypoints, X 
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import { useMateriaLembrada } from '../hooks/useMateriaLembrada';
 
+import { challengeSectionIndex } from '../lib/visualChallenge';
 import { evaluateRetrievalAnswer } from '../lib/summaryEngine';
 import { applySummaryAttempt } from '../lib/summaryStudy';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
@@ -38,13 +39,15 @@ const MODE_HINT: Record<Mode, string> = {
   testar: 'Recupere sem consultar. O que você escrever vira evidência.',
   reconstruir: 'Recomponha os elos que o diagnóstico escondeu.',
 };
+
 const REPRESENTATION_LABEL = {
-  board: 'prancha',
-  experiment: 'experimento',
-  instrument: 'instrumento',
-  scene: 'cena',
-  fallback: 'estrutura visual',
+  board: 'na mesma prancha',
+  experiment: 'no mesmo experimento',
+  instrument: 'no mesmo instrumento',
+  scene: 'na mesma cena',
+  fallback: 'na mesma estrutura visual',
 } as const;
+
 const MODES: Mode[] = ['explorar', 'testar', 'reconstruir'];
 const NODE_H = 62;
 const NODE_GAP = 46;
@@ -282,6 +285,7 @@ export default function Visual() {
   const summaryId = searchParams.get('summary');
   const [mode, setMode] = useState<Mode>('explorar');
   const [journeyStep, setJourneyStep] = useState(0);
+  const [focusReading, setFocusReading] = useState(false);
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [disagreed, setDisagreed] = useState(false);
   const [mostrarDominio, setMostrarDominio] = useState(false);
@@ -326,6 +330,20 @@ export default function Visual() {
     setDisagreed(false);
   };
 
+  const readChallenge = () => {
+    if (!summary) return;
+    setJourneyStep(challengeSectionIndex(summary));
+    changeMode('explorar');
+    setFocusReading(true);
+  };
+  useEffect(() => {
+    if (!focusReading || mode !== 'explorar') return;
+    const reading = document.getElementById('visual-chapter-reading');
+    reading?.scrollIntoView?.({ block: 'start' });
+    reading?.focus({ preventScroll: true });
+    setFocusReading(false);
+  }, [focusReading, mode, journeyStep]);
+
   const selectNode = (nodeId: string) => {
     selectionTriggerRef.current = document.activeElement instanceof HTMLElement ? document.activeElement : null;
     setSelectedNode(nodeId);
@@ -341,7 +359,7 @@ export default function Visual() {
   // Trocar de capítulo tem de limpar a mesa: manter resposta e peças da anterior
   // faria a reconstrução corrigir o texto errado contra o mapa novo.
   useEffect(() => {
-    setJourneyStep(0); setMode('explorar'); setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
+    setFocusReading(false); setJourneyStep(0); setMode('explorar'); setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
     setPlacements({}); setHistory([]); setGrades({}); setShowWhyHidden(false);
   }, [summaryId]);
 
@@ -548,6 +566,7 @@ export default function Visual() {
                   activeIndex={journeyStep}
                   onSelectStep={setJourneyStep}
                   onPractice={() => changeMode('testar')}
+                  onReadChallenge={readChallenge}
                 />
               </motion.div>
             </AnimatePresence>
@@ -579,14 +598,16 @@ export default function Visual() {
           {mode === 'testar' && (
             <section className="rounded-2xl border-2 border-indigo-200 bg-white p-5 dark:border-indigo-900 dark:bg-zinc-900">
               <h2 className="font-bold">Recuperação sem consulta</h2>
-              <p className="mt-2 text-sm text-zinc-500" data-visual-representation={representation}>
-                Você vai recuperar o capítulo a partir da mesma {REPRESENTATION_LABEL[representation]}, sem consultá-la agora.
+              <p className="vs-recall-note mt-2 text-sm" data-visual-representation={representation}>
+                Recupere as relações que explorou {REPRESENTATION_LABEL[representation]}, sem consultar a cena ou a leitura.
               </p>
               {question ? (
                 <>
-                  <p className="mt-2 font-semibold">{question.prompt}</p>
+                  <p id="visual-recall-question" className="mt-2 font-semibold">{question.prompt}</p>
+                  <p id="visual-recall-context" className="vs-recall-note mt-2 text-sm">Etapa relacionada: {summary.sections[challengeSectionIndex(summary)]?.title}</p>
                   <textarea
                     aria-label="Sua resposta"
+                    aria-describedby="visual-recall-question visual-recall-context"
                     rows={5}
                     value={draft}
                     onChange={(event) => { setDraft(event.target.value); setFeedback(null); }}
@@ -594,7 +615,7 @@ export default function Visual() {
                     className="mt-3 w-full rounded-xl border border-zinc-300 bg-transparent p-3 dark:border-zinc-700"
                   />
                   <details className="mt-2">
-                    <summary className="cursor-pointer text-sm text-zinc-500">Preciso de uma pista</summary>
+                    <summary className="vs-recall-note cursor-pointer text-sm">Preciso de uma pista</summary>
                     <p className="mt-2 text-sm">{question.hint}</p>
                   </details>
                   <button
@@ -606,6 +627,7 @@ export default function Visual() {
                   </button>
                   {feedback && (
                     <div role="status" className="mt-4 rounded-xl bg-zinc-100 p-4 text-sm dark:bg-zinc-800">
+                      <button type="button" onClick={readChallenge} className="mb-3 min-h-11 rounded-lg border px-3 py-2">Revisar a explicação deste desafio</button>
                       <p><strong>Você preservou:</strong> {feedback.matched.length ? feedback.matched.join(', ') : 'ainda nenhuma relação identificável'}</p>
                       {feedback.missing
                         ? <p className="mt-2 text-amber-700 dark:text-amber-300"><strong>Primeiro elo ausente:</strong> {feedback.missing}.</p>

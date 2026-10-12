@@ -1,0 +1,3680 @@
+[
+  {
+    "id": "fis-termologia-calor",
+    "questionId": "fis-termologia-calor-editorial-recall-v3",
+    "sectionId": "fis-termologia-calor-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "atu-cop30-belem",
+    "questionId": "cop-r1",
+    "sectionId": "cop-h",
+    "sectionTitle": "Hipóteses e cenários"
+  },
+  {
+    "id": "bio-ecologia-introducao",
+    "questionId": "bio-ecologia-introducao-editorial-recall-v2",
+    "sectionId": "bio-ecologia-introducao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-dinamica-populacoes",
+    "questionId": "bio-ecologia-dinamica-populacoes-editorial-recall-v2",
+    "sectionId": "bio-ecologia-dinamica-populacoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-invasoras-controle-biologico",
+    "questionId": "bio-ecologia-invasoras-controle-biologico-editorial-recall-v2",
+    "sectionId": "bio-ecologia-invasoras-controle-biologico-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-sucessao",
+    "questionId": "bio-ecologia-sucessao-editorial-recall-v2",
+    "sectionId": "bio-ecologia-sucessao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-ciclo-carbono",
+    "questionId": "bio-ecologia-ciclo-carbono-editorial-recall-v2",
+    "sectionId": "bio-ecologia-ciclo-carbono-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-ciclo-nitrogenio",
+    "questionId": "bio-ecologia-ciclo-nitrogenio-editorial-recall-v2",
+    "sectionId": "bio-ecologia-ciclo-nitrogenio-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-ciclo-hidrologico-poluicao-agua",
+    "questionId": "bio-ecologia-ciclo-hidrologico-poluicao-agua-editorial-recall-v2",
+    "sectionId": "bio-ecologia-ciclo-hidrologico-poluicao-agua-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-eutrofizacao",
+    "questionId": "bio-ecologia-eutrofizacao-editorial-recall-v2",
+    "sectionId": "bio-ecologia-eutrofizacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-poluicao-ar",
+    "questionId": "bio-ecologia-poluicao-ar-editorial-recall-v2",
+    "sectionId": "bio-ecologia-poluicao-ar-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-biomagnificacao",
+    "questionId": "bio-ecologia-biomagnificacao-editorial-recall-v2",
+    "sectionId": "bio-ecologia-biomagnificacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "bio-ecologia-aquecimento-global-pops-biorremediacao",
+    "questionId": "bio-ecologia-aquecimento-global-pops-biorremediacao-editorial-recall-v2",
+    "sectionId": "bio-ecologia-aquecimento-global-pops-biorremediacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-origem-da-vida-e-as-primeiras-celulas",
+    "questionId": "summary-biologia-origem-da-vida-e-as-primeiras-celulas-editorial-recall-v2",
+    "sectionId": "summary-biologia-origem-da-vida-e-as-primeiras-celulas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-composicao-quimica-celular-compostos-inorganicos",
+    "questionId": "summary-biologia-composicao-quimica-celular-compostos-inorganicos-editorial-recall-v2",
+    "sectionId": "summary-biologia-composicao-quimica-celular-compostos-inorganicos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios",
+    "questionId": "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios-editorial-recall-v2",
+    "sectionId": "summary-biologia-composicao-quimica-celular-carboidratos-e-lipidios-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural",
+    "questionId": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural-editorial-recall-v2",
+    "sectionId": "summary-biologia-composicao-quimica-celular-proteinas-e-sua-funcao-estrutural-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-membranas-celulares",
+    "questionId": "summary-biologia-membranas-celulares-editorial-recall-v2",
+    "sectionId": "summary-biologia-membranas-celulares-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-citoplasma-estrutura-e-componentes-i",
+    "questionId": "summary-biologia-citoplasma-estrutura-e-componentes-i-editorial-recall-v2",
+    "sectionId": "summary-biologia-citoplasma-estrutura-e-componentes-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-citoplasma-estrutura-e-componentes-ii",
+    "questionId": "summary-biologia-citoplasma-estrutura-e-componentes-ii-editorial-recall-v2",
+    "sectionId": "summary-biologia-citoplasma-estrutura-e-componentes-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-nucleo-celular",
+    "questionId": "summary-biologia-nucleo-celular-editorial-recall-v2",
+    "sectionId": "summary-biologia-nucleo-celular-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-proteinas-enzimas",
+    "questionId": "summary-biologia-proteinas-enzimas-editorial-recall-v2",
+    "sectionId": "summary-biologia-proteinas-enzimas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-bioenergetica-fermentacao-e-respiracao",
+    "questionId": "summary-biologia-bioenergetica-fermentacao-e-respiracao-editorial-recall-v2",
+    "sectionId": "summary-biologia-bioenergetica-fermentacao-e-respiracao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-bioenergetica-fotossintese-e-quimiossintese",
+    "questionId": "summary-biologia-bioenergetica-fotossintese-e-quimiossintese-editorial-recall-v2",
+    "sectionId": "summary-biologia-bioenergetica-fotossintese-e-quimiossintese-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-acidos-nucleicos",
+    "questionId": "summary-biologia-acidos-nucleicos-editorial-recall-v2",
+    "sectionId": "summary-biologia-acidos-nucleicos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-divisao-celular",
+    "questionId": "summary-biologia-divisao-celular-editorial-recall-v2",
+    "sectionId": "summary-biologia-divisao-celular-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-mutacoes-cromossomicas-e-gametogenese",
+    "questionId": "summary-biologia-mutacoes-cromossomicas-e-gametogenese-editorial-recall-v2",
+    "sectionId": "summary-biologia-mutacoes-cromossomicas-e-gametogenese-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-biotecnologia",
+    "questionId": "summary-biologia-biotecnologia-editorial-recall-v2",
+    "sectionId": "summary-biologia-biotecnologia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-introducao-a-genetica",
+    "questionId": "summary-biologia-introducao-a-genetica-editorial-recall-v2",
+    "sectionId": "summary-biologia-introducao-a-genetica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos",
+    "questionId": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos-editorial-recall-v2",
+    "sectionId": "summary-biologia-alelos-multiplos-e-heranca-dos-grupos-sanguineos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-heranca-sexual",
+    "questionId": "summary-biologia-heranca-sexual-editorial-recall-v2",
+    "sectionId": "summary-biologia-heranca-sexual-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-segunda-lei-de-mendel",
+    "questionId": "summary-biologia-segunda-lei-de-mendel-editorial-recall-v2",
+    "sectionId": "summary-biologia-segunda-lei-de-mendel-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-segunda-lei-de-mendel-e-interacao-genica",
+    "questionId": "summary-biologia-segunda-lei-de-mendel-e-interacao-genica-editorial-recall-v2",
+    "sectionId": "summary-biologia-segunda-lei-de-mendel-e-interacao-genica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-ligacao-genica",
+    "questionId": "summary-biologia-ligacao-genica-editorial-recall-v2",
+    "sectionId": "summary-biologia-ligacao-genica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-mutacoes-genicas",
+    "questionId": "summary-biologia-mutacoes-genicas-editorial-recall-v2",
+    "sectionId": "summary-biologia-mutacoes-genicas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-evolucao-biologica-construcao-historica",
+    "questionId": "summary-biologia-evolucao-biologica-construcao-historica-editorial-recall-v2",
+    "sectionId": "summary-biologia-evolucao-biologica-construcao-historica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-mecanismos-da-evolucao-biologica",
+    "questionId": "summary-biologia-mecanismos-da-evolucao-biologica-editorial-recall-v2",
+    "sectionId": "summary-biologia-mecanismos-da-evolucao-biologica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-biomas-brasileiros",
+    "questionId": "summary-biologia-biomas-brasileiros-editorial-recall-v2",
+    "sectionId": "summary-biologia-biomas-brasileiros-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-classificacao-biologica-nomenclatura-cientifica-e-nocoes-de-sistematica-filogenetica",
+    "questionId": "summary-biologia-classificacao-biologica-nomenclatura-cientifica-e-nocoes-de-sistematica-filogenetica-editorial-recall-v2",
+    "sectionId": "summary-biologia-classificacao-biologica-nomenclatura-cientifica-e-nocoes-de-sistematica-filogenetica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-protozoarios-e-protozooses",
+    "questionId": "summary-biologia-protozoarios-e-protozooses-editorial-recall-v2",
+    "sectionId": "summary-biologia-protozoarios-e-protozooses-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-poriferos-e-cnidarios",
+    "questionId": "summary-biologia-poriferos-e-cnidarios-editorial-recall-v3",
+    "sectionId": "summary-biologia-poriferos-e-cnidarios-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos",
+    "questionId": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos-editorial-recall-v2",
+    "sectionId": "summary-biologia-arquitetura-corporal-dos-animais-e-o-filo-dos-platelmintos-e-dos-nematodeos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-moluscos",
+    "questionId": "summary-biologia-moluscos-editorial-recall-v2",
+    "sectionId": "summary-biologia-moluscos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-anelideos",
+    "questionId": "summary-biologia-anelideos-editorial-recall-v2",
+    "sectionId": "summary-biologia-anelideos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-artropodes-insetos-crustaceos-e-miriapodes",
+    "questionId": "summary-biologia-artropodes-insetos-crustaceos-e-miriapodes-editorial-recall-v2",
+    "sectionId": "summary-biologia-artropodes-insetos-crustaceos-e-miriapodes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-artropodes-aracnideos",
+    "questionId": "summary-biologia-artropodes-aracnideos-editorial-recall-v2",
+    "sectionId": "summary-biologia-artropodes-aracnideos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-equinodermos",
+    "questionId": "summary-biologia-equinodermos-editorial-recall-v2",
+    "sectionId": "summary-biologia-equinodermos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-introducao-aos-cordados-e-os-peixes",
+    "questionId": "summary-biologia-introducao-aos-cordados-e-os-peixes-editorial-recall-v2",
+    "sectionId": "summary-biologia-introducao-aos-cordados-e-os-peixes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-cordados-tetrapodes",
+    "questionId": "summary-biologia-cordados-tetrapodes-editorial-recall-v2",
+    "sectionId": "summary-biologia-cordados-tetrapodes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-fungos",
+    "questionId": "summary-biologia-fungos-editorial-recall-v2",
+    "sectionId": "summary-biologia-fungos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-algas",
+    "questionId": "summary-biologia-algas-editorial-recall-v2",
+    "sectionId": "summary-biologia-algas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-ciclos-de-vida",
+    "questionId": "summary-biologia-ciclos-de-vida-editorial-recall-v2",
+    "sectionId": "summary-biologia-ciclos-de-vida-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-plantas-terrestres-i-briofitas-e-pteridofitas",
+    "questionId": "summary-biologia-plantas-terrestres-i-briofitas-e-pteridofitas-editorial-recall-v2",
+    "sectionId": "summary-biologia-plantas-terrestres-i-briofitas-e-pteridofitas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-plantas-terrestres-ii-gimnospermas-e-angiospermas",
+    "questionId": "summary-biologia-plantas-terrestres-ii-gimnospermas-e-angiospermas-editorial-recall-v2",
+    "sectionId": "summary-biologia-plantas-terrestres-ii-gimnospermas-e-angiospermas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-procariotos",
+    "questionId": "summary-biologia-procariotos-editorial-recall-v2",
+    "sectionId": "summary-biologia-procariotos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-virus",
+    "questionId": "summary-biologia-virus-editorial-recall-v2",
+    "sectionId": "summary-biologia-virus-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-embriologia-animal",
+    "questionId": "summary-biologia-embriologia-animal-editorial-recall-v2",
+    "sectionId": "summary-biologia-embriologia-animal-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-sustentacao-e-da-locomocao",
+    "questionId": "summary-biologia-fisiologia-da-sustentacao-e-da-locomocao-editorial-recall-v2",
+    "sectionId": "summary-biologia-fisiologia-da-sustentacao-e-da-locomocao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-digestao",
+    "questionId": "summary-biologia-fisiologia-da-digestao-editorial-recall-v2",
+    "sectionId": "summary-biologia-fisiologia-da-digestao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-sangue-e-imunologia",
+    "questionId": "summary-biologia-sangue-e-imunologia-editorial-recall-v2",
+    "sectionId": "summary-biologia-sangue-e-imunologia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-coracao-e-vasos-sanguineos",
+    "questionId": "summary-biologia-coracao-e-vasos-sanguineos-editorial-recall-v2",
+    "sectionId": "summary-biologia-coracao-e-vasos-sanguineos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-respiracao",
+    "questionId": "summary-biologia-fisiologia-da-respiracao-editorial-recall-v2",
+    "sectionId": "summary-biologia-fisiologia-da-respiracao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-excrecao",
+    "questionId": "summary-biologia-fisiologia-da-excrecao-editorial-recall-v2",
+    "sectionId": "summary-biologia-fisiologia-da-excrecao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-fisiologia-da-coordenacao-nervosa-i",
+    "questionId": "summary-biologia-fisiologia-da-coordenacao-nervosa-i-editorial-recall-v2",
+    "sectionId": "summary-biologia-fisiologia-da-coordenacao-nervosa-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-coordenacao-nervosa-ii",
+    "questionId": "summary-biologia-coordenacao-nervosa-ii-editorial-recall-v2",
+    "sectionId": "summary-biologia-coordenacao-nervosa-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-sistemas-sensoriais-visao-e-audicao",
+    "questionId": "summary-biologia-sistemas-sensoriais-visao-e-audicao-editorial-recall-v2",
+    "sectionId": "summary-biologia-sistemas-sensoriais-visao-e-audicao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-coordenacao-endocrina-i",
+    "questionId": "summary-biologia-coordenacao-endocrina-i-editorial-recall-v2",
+    "sectionId": "summary-biologia-coordenacao-endocrina-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-coordenacao-endocrina-ii",
+    "questionId": "summary-biologia-coordenacao-endocrina-ii-editorial-recall-v2",
+    "sectionId": "summary-biologia-coordenacao-endocrina-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-reproducao-humana-e-metodos-contraceptivos",
+    "questionId": "summary-biologia-reproducao-humana-e-metodos-contraceptivos-editorial-recall-v2",
+    "sectionId": "summary-biologia-reproducao-humana-e-metodos-contraceptivos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-histologia-e-morfologia-vegetal",
+    "questionId": "summary-biologia-histologia-e-morfologia-vegetal-editorial-recall-v2",
+    "sectionId": "summary-biologia-histologia-e-morfologia-vegetal-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas",
+    "questionId": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas-editorial-recall-v2",
+    "sectionId": "summary-biologia-morfofisiologia-vegetal-caules-e-folhas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua",
+    "questionId": "summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua-editorial-recall-v2",
+    "sectionId": "summary-biologia-traqueofitas-transpiracao-e-reposicao-rapida-de-agua-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-fisiologia-vegetal-transporte-no-floema",
+    "questionId": "summary-biologia-fisiologia-vegetal-transporte-no-floema-editorial-recall-v2",
+    "sectionId": "summary-biologia-fisiologia-vegetal-transporte-no-floema-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-biologia-fisiologia-vegetal-hormonios-vegetais",
+    "questionId": "summary-biologia-fisiologia-vegetal-hormonios-vegetais-editorial-recall-v2",
+    "sectionId": "summary-biologia-fisiologia-vegetal-hormonios-vegetais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-cinematica-escalar-conceitos-fundamentais",
+    "questionId": "summary-fisica-cinematica-escalar-conceitos-fundamentais-editorial-recall-v2",
+    "sectionId": "summary-fisica-cinematica-escalar-conceitos-fundamentais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-movimento-uniforme",
+    "questionId": "summary-fisica-movimento-uniforme-editorial-recall-v2",
+    "sectionId": "summary-fisica-movimento-uniforme-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-movimento-uniformemente-variado",
+    "questionId": "summary-fisica-movimento-uniformemente-variado-editorial-recall-v2",
+    "sectionId": "summary-fisica-movimento-uniformemente-variado-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-o-movimento-circular",
+    "questionId": "summary-fisica-o-movimento-circular-editorial-recall-v3",
+    "sectionId": "summary-fisica-o-movimento-circular-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores",
+    "questionId": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores-editorial-recall-v2",
+    "sectionId": "summary-fisica-grandezas-fisicas-e-operacoes-com-vetores-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-velocidade-vetorial",
+    "questionId": "summary-fisica-velocidade-vetorial-editorial-recall-v2",
+    "sectionId": "summary-fisica-velocidade-vetorial-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-composicao-de-movimentos",
+    "questionId": "summary-fisica-composicao-de-movimentos-editorial-recall-v2",
+    "sectionId": "summary-fisica-composicao-de-movimentos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-aceleracao-vetorial",
+    "questionId": "summary-fisica-aceleracao-vetorial-editorial-recall-v2",
+    "sectionId": "summary-fisica-aceleracao-vetorial-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-forca-e-seus-tipos",
+    "questionId": "summary-fisica-forca-e-seus-tipos-editorial-recall-v2",
+    "sectionId": "summary-fisica-forca-e-seus-tipos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-resultante-de-um-sistema-de-forcas",
+    "questionId": "summary-fisica-resultante-de-um-sistema-de-forcas-editorial-recall-v2",
+    "sectionId": "summary-fisica-resultante-de-um-sistema-de-forcas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-as-leis-de-newton",
+    "questionId": "summary-fisica-as-leis-de-newton-editorial-recall-v3",
+    "sectionId": "summary-fisica-as-leis-de-newton-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-a-forca-de-contato",
+    "questionId": "summary-fisica-a-forca-de-contato-editorial-recall-v2",
+    "sectionId": "summary-fisica-a-forca-de-contato-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca",
+    "questionId": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca-editorial-recall-v2",
+    "sectionId": "summary-fisica-sistema-de-corpos-interagindo-e-os-elementos-transmissores-de-forca-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-plano-inclinado",
+    "questionId": "summary-fisica-plano-inclinado-editorial-recall-v2",
+    "sectionId": "summary-fisica-plano-inclinado-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-leis-da-gravitacao",
+    "questionId": "summary-fisica-leis-da-gravitacao-editorial-recall-v2",
+    "sectionId": "summary-fisica-leis-da-gravitacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-dinamica-do-movimento-circular",
+    "questionId": "summary-fisica-dinamica-do-movimento-circular-editorial-recall-v3",
+    "sectionId": "summary-fisica-dinamica-do-movimento-circular-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical",
+    "questionId": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical-editorial-recall-v2",
+    "sectionId": "summary-fisica-analisando-movimentos-contidos-em-um-plano-vertical-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-orbitas",
+    "questionId": "summary-fisica-orbitas-editorial-recall-v2",
+    "sectionId": "summary-fisica-orbitas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-balistica",
+    "questionId": "summary-fisica-balistica-editorial-recall-v2",
+    "sectionId": "summary-fisica-balistica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-movimento-harmonico-simples-mhs",
+    "questionId": "summary-fisica-movimento-harmonico-simples-mhs-editorial-recall-v2",
+    "sectionId": "summary-fisica-movimento-harmonico-simples-mhs-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-impulso-e-quantidade-de-movimento",
+    "questionId": "summary-fisica-impulso-e-quantidade-de-movimento-editorial-recall-v2",
+    "sectionId": "summary-fisica-impulso-e-quantidade-de-movimento-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento",
+    "questionId": "summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento-editorial-recall-v2",
+    "sectionId": "summary-fisica-sistemas-isolados-e-a-conservacao-da-quantidade-de-movimento-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-colisoes",
+    "questionId": "summary-fisica-colisoes-editorial-recall-v2",
+    "sectionId": "summary-fisica-colisoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca",
+    "questionId": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca-editorial-recall-v3",
+    "sectionId": "summary-fisica-trabalho-e-energia-trabalho-de-uma-forca-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-teorema-da-energia-cinetica",
+    "questionId": "summary-fisica-trabalho-e-energia-teorema-da-energia-cinetica-editorial-recall-v2",
+    "sectionId": "summary-fisica-trabalho-e-energia-teorema-da-energia-cinetica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial",
+    "questionId": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial-editorial-recall-v2",
+    "sectionId": "summary-fisica-trabalho-e-energia-o-teorema-da-energia-potencial-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos",
+    "questionId": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos-editorial-recall-v2",
+    "sectionId": "summary-fisica-sistemas-conservativos-e-sistemas-nao-conservativos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-potencia-maquina-e-rendimento",
+    "questionId": "summary-fisica-potencia-maquina-e-rendimento-editorial-recall-v2",
+    "sectionId": "summary-fisica-potencia-maquina-e-rendimento-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares",
+    "questionId": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares-editorial-recall-v2",
+    "sectionId": "summary-fisica-a-fisica-por-tras-da-obtencao-de-energia-eletrica-das-quedas-d-agua-aos-reatores-nucleares-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-equivalencia-massa-energia",
+    "questionId": "summary-fisica-equivalencia-massa-energia-editorial-recall-v2",
+    "sectionId": "summary-fisica-equivalencia-massa-energia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-estatica",
+    "questionId": "summary-fisica-estatica-editorial-recall-v2",
+    "sectionId": "summary-fisica-estatica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-hidrostatica-densidade-e-pressao",
+    "questionId": "summary-fisica-hidrostatica-densidade-e-pressao-editorial-recall-v3",
+    "sectionId": "summary-fisica-hidrostatica-densidade-e-pressao-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos",
+    "questionId": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos-editorial-recall-v2",
+    "sectionId": "summary-fisica-dilatacao-ou-contracao-termica-dos-solidos-e-liquidos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-calor-sensivel-e-calor-latente",
+    "questionId": "summary-fisica-calor-sensivel-e-calor-latente-editorial-recall-v2",
+    "sectionId": "summary-fisica-calor-sensivel-e-calor-latente-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas",
+    "questionId": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas-editorial-recall-v2",
+    "sectionId": "summary-fisica-gases-ideais-variaveis-de-estado-e-as-transformacoes-gasosas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-trabalho-da-forca-de-pressao-do-gas",
+    "questionId": "summary-fisica-trabalho-da-forca-de-pressao-do-gas-editorial-recall-v3",
+    "sectionId": "summary-fisica-trabalho-da-forca-de-pressao-do-gas-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica",
+    "questionId": "summary-fisica-primeira-lei-da-termodinamica-editorial-recall-v2",
+    "sectionId": "summary-fisica-primeira-lei-da-termodinamica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares",
+    "questionId": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares-editorial-recall-v2",
+    "sectionId": "summary-fisica-primeira-lei-da-termodinamica-aplicada-a-algumas-transformacoes-particulares-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot",
+    "questionId": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot-editorial-recall-v2",
+    "sectionId": "summary-fisica-maquinas-termicas-e-ciclo-de-carnot-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes",
+    "questionId": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes-editorial-recall-v2",
+    "sectionId": "summary-fisica-eletrostatica-processos-de-eletrizacao-e-aplicacoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-forca-eletrica-lei-de-coulomb",
+    "questionId": "summary-fisica-forca-eletrica-lei-de-coulomb-editorial-recall-v2",
+    "sectionId": "summary-fisica-forca-eletrica-lei-de-coulomb-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-campo-eletrico",
+    "questionId": "summary-fisica-campo-eletrico-editorial-recall-v3",
+    "sectionId": "summary-fisica-campo-eletrico-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-energia-potencial-e-potencial-eletrico",
+    "questionId": "summary-fisica-energia-potencial-e-potencial-eletrico-editorial-recall-v2",
+    "sectionId": "summary-fisica-energia-potencial-e-potencial-eletrico-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais",
+    "questionId": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais-editorial-recall-v2",
+    "sectionId": "summary-fisica-mapeamento-do-campo-eletrico-linhas-de-forca-e-superficies-equipotenciais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial",
+    "questionId": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial-editorial-recall-v2",
+    "sectionId": "summary-fisica-campo-eletrico-uniforme-abordagem-escalar-e-abordagem-vetorial-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-dinamica-das-cargas-eletricas",
+    "questionId": "summary-fisica-dinamica-das-cargas-eletricas-editorial-recall-v2",
+    "sectionId": "summary-fisica-dinamica-das-cargas-eletricas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-corrente-eletrica",
+    "questionId": "summary-fisica-corrente-eletrica-editorial-recall-v2",
+    "sectionId": "summary-fisica-corrente-eletrica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-potencia-eletrica",
+    "questionId": "summary-fisica-potencia-eletrica-editorial-recall-v2",
+    "sectionId": "summary-fisica-potencia-eletrica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-resistores",
+    "questionId": "summary-fisica-resistores-editorial-recall-v2",
+    "sectionId": "summary-fisica-resistores-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-medidores-eletricos",
+    "questionId": "summary-fisica-medidores-eletricos-editorial-recall-v2",
+    "sectionId": "summary-fisica-medidores-eletricos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-geradores",
+    "questionId": "summary-fisica-geradores-editorial-recall-v2",
+    "sectionId": "summary-fisica-geradores-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-receptores",
+    "questionId": "summary-fisica-receptores-editorial-recall-v2",
+    "sectionId": "summary-fisica-receptores-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-circuitos-de-malha-unica",
+    "questionId": "summary-fisica-circuitos-de-malha-unica-editorial-recall-v2",
+    "sectionId": "summary-fisica-circuitos-de-malha-unica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-eletrodinamica-as-leis-de-kirchhoff",
+    "questionId": "summary-fisica-eletrodinamica-as-leis-de-kirchhoff-editorial-recall-v2",
+    "sectionId": "summary-fisica-eletrodinamica-as-leis-de-kirchhoff-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-capacitores",
+    "questionId": "summary-fisica-capacitores-editorial-recall-v3",
+    "sectionId": "summary-fisica-capacitores-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre",
+    "questionId": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre-editorial-recall-v2",
+    "sectionId": "summary-fisica-imas-campo-de-inducao-magnetico-devido-a-imas-e-campo-magnetico-terrestre-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes",
+    "questionId": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes-editorial-recall-v2",
+    "sectionId": "summary-fisica-campo-magnetico-devido-a-corrente-em-fio-reto-e-espira-descricao-vetorial-e-aplicacoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme",
+    "questionId": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme-editorial-recall-v2",
+    "sectionId": "summary-fisica-forca-magnetica-e-analise-de-lancamentos-de-cargas-em-um-campo-magnetico-uniforme-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas",
+    "questionId": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas-editorial-recall-v2",
+    "sectionId": "summary-fisica-analise-de-forca-magnetica-em-fios-percorridos-por-correntes-continuas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-inducao-eletromagnetica-lei-de-lenz",
+    "questionId": "summary-fisica-inducao-eletromagnetica-lei-de-lenz-editorial-recall-v2",
+    "sectionId": "summary-fisica-inducao-eletromagnetica-lei-de-lenz-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores",
+    "questionId": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores-editorial-recall-v2",
+    "sectionId": "summary-fisica-inducao-eletromagnetica-analise-da-corrente-induzida-em-geradores-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-fundamentos-da-optica-geometrica",
+    "questionId": "summary-fisica-fundamentos-da-optica-geometrica-editorial-recall-v2",
+    "sectionId": "summary-fisica-fundamentos-da-optica-geometrica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-reflexao-em-superficies-planas",
+    "questionId": "summary-fisica-reflexao-em-superficies-planas-editorial-recall-v2",
+    "sectionId": "summary-fisica-reflexao-em-superficies-planas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-reflexao-em-superficies-esfericas",
+    "questionId": "summary-fisica-reflexao-em-superficies-esfericas-editorial-recall-v2",
+    "sectionId": "summary-fisica-reflexao-em-superficies-esfericas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes",
+    "questionId": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes-editorial-recall-v2",
+    "sectionId": "summary-fisica-refracao-fundamentos-leis-e-aplicacoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-lentes-esfericas-estudo-grafico",
+    "questionId": "summary-fisica-lentes-esfericas-estudo-grafico-editorial-recall-v2",
+    "sectionId": "summary-fisica-lentes-esfericas-estudo-grafico-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-estudo-analitico-das-lentes-esfericas",
+    "questionId": "summary-fisica-estudo-analitico-das-lentes-esfericas-editorial-recall-v2",
+    "sectionId": "summary-fisica-estudo-analitico-das-lentes-esfericas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes",
+    "questionId": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes-editorial-recall-v2",
+    "sectionId": "summary-fisica-equacao-do-fabricante-de-lentes-e-associacao-de-lentes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-optica-da-visao",
+    "questionId": "summary-fisica-optica-da-visao-editorial-recall-v2",
+    "sectionId": "summary-fisica-optica-da-visao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas",
+    "questionId": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas-editorial-recall-v2",
+    "sectionId": "summary-fisica-microscopio-e-luneta-astronomica-ou-telescopio-refrator-nocoes-basicas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-conceitos-basicos",
+    "questionId": "summary-fisica-conceitos-basicos-editorial-recall-v2",
+    "sectionId": "summary-fisica-conceitos-basicos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-equacao-fundamental-da-ondulatoria",
+    "questionId": "summary-fisica-equacao-fundamental-da-ondulatoria-editorial-recall-v2",
+    "sectionId": "summary-fisica-equacao-fundamental-da-ondulatoria-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-ondulatoria-ondas-eletromagneticas",
+    "questionId": "summary-fisica-ondulatoria-ondas-eletromagneticas-editorial-recall-v2",
+    "sectionId": "summary-fisica-ondulatoria-ondas-eletromagneticas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-ondulatoria-som-e-suas-propriedades",
+    "questionId": "summary-fisica-ondulatoria-som-e-suas-propriedades-editorial-recall-v2",
+    "sectionId": "summary-fisica-ondulatoria-som-e-suas-propriedades-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-intensidade-sonora",
+    "questionId": "summary-fisica-intensidade-sonora-editorial-recall-v2",
+    "sectionId": "summary-fisica-intensidade-sonora-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas",
+    "questionId": "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas-editorial-recall-v2",
+    "sectionId": "summary-fisica-reflexao-eco-reverberacao-e-refracao-de-ondas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas",
+    "questionId": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas-editorial-recall-v2",
+    "sectionId": "summary-fisica-fenomenos-ondulatorios-analise-de-refracao-e-reflexao-em-cordas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia",
+    "questionId": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia-editorial-recall-v2",
+    "sectionId": "summary-fisica-fenomenos-ondulatorios-difracao-polarizacao-e-ressonancia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento",
+    "questionId": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento-editorial-recall-v2",
+    "sectionId": "summary-fisica-interferencia-de-ondas-analise-quantitativa-aplicacoes-e-batimento-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria",
+    "questionId": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria-editorial-recall-v2",
+    "sectionId": "summary-fisica-um-caso-particular-de-interferencia-onda-estacionaria-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-ondas-estacionarias-em-cordas",
+    "questionId": "summary-fisica-ondas-estacionarias-em-cordas-editorial-recall-v2",
+    "sectionId": "summary-fisica-ondas-estacionarias-em-cordas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-ondas-estacionarias-em-tubos",
+    "questionId": "summary-fisica-ondas-estacionarias-em-tubos-editorial-recall-v2",
+    "sectionId": "summary-fisica-ondas-estacionarias-em-tubos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo",
+    "questionId": "summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo-editorial-recall-v2",
+    "sectionId": "summary-fisica-efeito-doppler-descricao-e-estudo-quantitativo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-fisica-nocoes-basicas-de-fisica-quantica",
+    "questionId": "summary-fisica-nocoes-basicas-de-fisica-quantica-editorial-recall-v2",
+    "sectionId": "summary-fisica-nocoes-basicas-de-fisica-quantica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-coordenadas-geograficas",
+    "questionId": "summary-geografia-coordenadas-geograficas-editorial-recall-v3",
+    "sectionId": "summary-geografia-coordenadas-geograficas-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-movimentos-da-terra",
+    "questionId": "summary-geografia-movimentos-da-terra-editorial-recall-v3",
+    "sectionId": "summary-geografia-movimentos-da-terra-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-sistema-de-fusos-horarios",
+    "questionId": "summary-geografia-sistema-de-fusos-horarios-editorial-recall-v3",
+    "sectionId": "summary-geografia-sistema-de-fusos-horarios-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-linguagem-cartografica",
+    "questionId": "summary-geografia-linguagem-cartografica-editorial-recall-v3",
+    "sectionId": "summary-geografia-linguagem-cartografica-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-projecoes-cartograficas",
+    "questionId": "summary-geografia-projecoes-cartograficas-editorial-recall-v3",
+    "sectionId": "summary-geografia-projecoes-cartograficas-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-cartografia-digital",
+    "questionId": "summary-geografia-cartografia-digital-editorial-recall-v3",
+    "sectionId": "summary-geografia-cartografia-digital-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-representacoes-graficas-e-cartograficas",
+    "questionId": "summary-geografia-representacoes-graficas-e-cartograficas-editorial-recall-v3",
+    "sectionId": "summary-geografia-representacoes-graficas-e-cartograficas-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-dinamica-climatica",
+    "questionId": "summary-geografia-dinamica-climatica-editorial-recall-v3",
+    "sectionId": "summary-geografia-dinamica-climatica-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-clima-mundial",
+    "questionId": "summary-geografia-clima-mundial-editorial-recall-v3",
+    "sectionId": "summary-geografia-clima-mundial-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geomorfologia-mundial",
+    "questionId": "summary-geografia-geomorfologia-mundial-editorial-recall-v3",
+    "sectionId": "summary-geografia-geomorfologia-mundial-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-biogeografia-mundial",
+    "questionId": "summary-geografia-biogeografia-mundial-editorial-recall-v3",
+    "sectionId": "summary-geografia-biogeografia-mundial-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-agua-na-superficie-terrestre",
+    "questionId": "summary-geografia-agua-na-superficie-terrestre-editorial-recall-v3",
+    "sectionId": "summary-geografia-agua-na-superficie-terrestre-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-desafios-ambientais-do-seculo-xxi",
+    "questionId": "summary-geografia-desafios-ambientais-do-seculo-xxi-editorial-recall-v3",
+    "sectionId": "summary-geografia-desafios-ambientais-do-seculo-xxi-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geopolitica-ambiental",
+    "questionId": "summary-geografia-geopolitica-ambiental-editorial-recall-v3",
+    "sectionId": "summary-geografia-geopolitica-ambiental-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geopolitica-dos-recursos-hidricos",
+    "questionId": "summary-geografia-geopolitica-dos-recursos-hidricos-editorial-recall-v3",
+    "sectionId": "summary-geografia-geopolitica-dos-recursos-hidricos-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-hidrogeografia-mundial",
+    "questionId": "summary-geografia-hidrogeografia-mundial-editorial-recall-v3",
+    "sectionId": "summary-geografia-hidrogeografia-mundial-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-do-mundo-bipolar-ao-multipolar",
+    "questionId": "summary-geografia-do-mundo-bipolar-ao-multipolar-editorial-recall-v3",
+    "sectionId": "summary-geografia-do-mundo-bipolar-ao-multipolar-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-globalizacao-e-processos-economicos-atuais",
+    "questionId": "summary-geografia-globalizacao-e-processos-economicos-atuais-editorial-recall-v3",
+    "sectionId": "summary-geografia-globalizacao-e-processos-economicos-atuais-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geografia-das-redes-mundiais",
+    "questionId": "summary-geografia-geografia-das-redes-mundiais-editorial-recall-v3",
+    "sectionId": "summary-geografia-geografia-das-redes-mundiais-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-unilateralismo-e-multilateralismo",
+    "questionId": "summary-geografia-unilateralismo-e-multilateralismo-editorial-recall-v3",
+    "sectionId": "summary-geografia-unilateralismo-e-multilateralismo-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-blocos-economicos",
+    "questionId": "summary-geografia-blocos-economicos-editorial-recall-v2",
+    "sectionId": "summary-geografia-blocos-economicos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-uniao-europeia",
+    "questionId": "summary-geografia-uniao-europeia-editorial-recall-v2",
+    "sectionId": "summary-geografia-uniao-europeia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-desigualdades-globais",
+    "questionId": "summary-geografia-desigualdades-globais-editorial-recall-v2",
+    "sectionId": "summary-geografia-desigualdades-globais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-mobilidade-populacional",
+    "questionId": "summary-geografia-mobilidade-populacional-editorial-recall-v2",
+    "sectionId": "summary-geografia-mobilidade-populacional-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geografia-do-turismo",
+    "questionId": "summary-geografia-geografia-do-turismo-editorial-recall-v2",
+    "sectionId": "summary-geografia-geografia-do-turismo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-producao-agricola-mundial",
+    "questionId": "summary-geografia-producao-agricola-mundial-editorial-recall-v2",
+    "sectionId": "summary-geografia-producao-agricola-mundial-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-industria-i",
+    "questionId": "summary-geografia-industria-i-editorial-recall-v2",
+    "sectionId": "summary-geografia-industria-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-industria-ii",
+    "questionId": "summary-geografia-industria-ii-editorial-recall-v2",
+    "sectionId": "summary-geografia-industria-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-gedeconomia-mundial",
+    "questionId": "summary-geografia-gedeconomia-mundial-editorial-recall-v2",
+    "sectionId": "summary-geografia-gedeconomia-mundial-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-terrorismo-internacional",
+    "questionId": "summary-geografia-terrorismo-internacional-editorial-recall-v2",
+    "sectionId": "summary-geografia-terrorismo-internacional-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geografia-das-religioes",
+    "questionId": "summary-geografia-geografia-das-religioes-editorial-recall-v2",
+    "sectionId": "summary-geografia-geografia-das-religioes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-tensoes-geopoliticas-na-europa",
+    "questionId": "summary-geografia-tensoes-geopoliticas-na-europa-editorial-recall-v2",
+    "sectionId": "summary-geografia-tensoes-geopoliticas-na-europa-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina",
+    "questionId": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina-editorial-recall-v2",
+    "sectionId": "summary-geografia-geopolitica-e-geoeconomia-da-america-latina-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-africa-no-mundo-atual",
+    "questionId": "summary-geografia-africa-no-mundo-atual-editorial-recall-v2",
+    "sectionId": "summary-geografia-africa-no-mundo-atual-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geopolitica-e-geoeconomia-da-asia",
+    "questionId": "summary-geografia-geopolitica-e-geoeconomia-da-asia-editorial-recall-v2",
+    "sectionId": "summary-geografia-geopolitica-e-geoeconomia-da-asia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geografia-do-oriente-medio",
+    "questionId": "summary-geografia-geografia-do-oriente-medio-editorial-recall-v2",
+    "sectionId": "summary-geografia-geografia-do-oriente-medio-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-questao-palestina",
+    "questionId": "summary-geografia-questao-palestina-editorial-recall-v2",
+    "sectionId": "summary-geografia-questao-palestina-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-conflitos-no-mundo-arabe",
+    "questionId": "summary-geografia-conflitos-no-mundo-arabe-editorial-recall-v2",
+    "sectionId": "summary-geografia-conflitos-no-mundo-arabe-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica",
+    "questionId": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica-editorial-recall-v2",
+    "sectionId": "summary-geografia-paisagem-espaco-geografico-e-ciencia-geografica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-geologia-e-geomorfologia",
+    "questionId": "summary-geografia-geologia-e-geomorfologia-editorial-recall-v2",
+    "sectionId": "summary-geografia-geologia-e-geomorfologia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-relevo-brasileiro",
+    "questionId": "summary-geografia-relevo-brasileiro-editorial-recall-v3",
+    "sectionId": "summary-geografia-relevo-brasileiro-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-pedologia",
+    "questionId": "summary-geografia-pedologia-editorial-recall-v2",
+    "sectionId": "summary-geografia-pedologia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-climatologia-do-brasil",
+    "questionId": "summary-geografia-climatologia-do-brasil-editorial-recall-v2",
+    "sectionId": "summary-geografia-climatologia-do-brasil-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-biogeografia-do-brasil-i",
+    "questionId": "summary-geografia-biogeografia-do-brasil-i-editorial-recall-v2",
+    "sectionId": "summary-geografia-biogeografia-do-brasil-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-biogeografia-do-brasil-ii",
+    "questionId": "summary-geografia-biogeografia-do-brasil-ii-editorial-recall-v2",
+    "sectionId": "summary-geografia-biogeografia-do-brasil-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-politicas-ambientais-brasileiras",
+    "questionId": "summary-geografia-politicas-ambientais-brasileiras-editorial-recall-v2",
+    "sectionId": "summary-geografia-politicas-ambientais-brasileiras-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-hidrogeografia-do-brasil",
+    "questionId": "summary-geografia-hidrogeografia-do-brasil-editorial-recall-v2",
+    "sectionId": "summary-geografia-hidrogeografia-do-brasil-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-dominios-morfoclimaticos",
+    "questionId": "summary-geografia-dominios-morfoclimaticos-editorial-recall-v2",
+    "sectionId": "summary-geografia-dominios-morfoclimaticos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-matriz-energetica",
+    "questionId": "summary-geografia-matriz-energetica-editorial-recall-v2",
+    "sectionId": "summary-geografia-matriz-energetica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil",
+    "questionId": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-editorial-recall-v2",
+    "sectionId": "summary-geografia-combustiveis-fosseis-e-biocombustiveis-no-brasil-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-energia-eletrica-no-mundo",
+    "questionId": "summary-geografia-energia-eletrica-no-mundo-editorial-recall-v2",
+    "sectionId": "summary-geografia-energia-eletrica-no-mundo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-energia-eletrica-no-brasil",
+    "questionId": "summary-geografia-energia-eletrica-no-brasil-editorial-recall-v2",
+    "sectionId": "summary-geografia-energia-eletrica-no-brasil-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-producao-mineral",
+    "questionId": "summary-geografia-producao-mineral-editorial-recall-v2",
+    "sectionId": "summary-geografia-producao-mineral-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-o-espaco-agrario-brasileiro",
+    "questionId": "summary-geografia-o-espaco-agrario-brasileiro-editorial-recall-v2",
+    "sectionId": "summary-geografia-o-espaco-agrario-brasileiro-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-o-espaco-industrial-brasileiro-i",
+    "questionId": "summary-geografia-o-espaco-industrial-brasileiro-i-editorial-recall-v2",
+    "sectionId": "summary-geografia-o-espaco-industrial-brasileiro-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-o-espaco-industrial-brasileiro-ii",
+    "questionId": "summary-geografia-o-espaco-industrial-brasileiro-ii-editorial-recall-v2",
+    "sectionId": "summary-geografia-o-espaco-industrial-brasileiro-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-dinamica-demografica",
+    "questionId": "summary-geografia-dinamica-demografica-editorial-recall-v2",
+    "sectionId": "summary-geografia-dinamica-demografica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-estrutura-etnica-e-fluxos-migratorios",
+    "questionId": "summary-geografia-estrutura-etnica-e-fluxos-migratorios-editorial-recall-v2",
+    "sectionId": "summary-geografia-estrutura-etnica-e-fluxos-migratorios-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-o-espaco-urbano-i",
+    "questionId": "summary-geografia-o-espaco-urbano-i-editorial-recall-v2",
+    "sectionId": "summary-geografia-o-espaco-urbano-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-o-espaco-urbano-ii",
+    "questionId": "summary-geografia-o-espaco-urbano-ii-editorial-recall-v2",
+    "sectionId": "summary-geografia-o-espaco-urbano-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-as-redes-de-transportes",
+    "questionId": "summary-geografia-as-redes-de-transportes-editorial-recall-v2",
+    "sectionId": "summary-geografia-as-redes-de-transportes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-geografia-os-fluxos-do-comercio-externo",
+    "questionId": "summary-geografia-os-fluxos-do-comercio-externo-editorial-recall-v2",
+    "sectionId": "summary-geografia-os-fluxos-do-comercio-externo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes",
+    "questionId": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes-editorial-recall-v3",
+    "sectionId": "summary-historia-introducao-a-historia-e-primeiras-civilizacoes-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-antiguidade-classica-o-mundo-grego",
+    "questionId": "summary-historia-antiguidade-classica-o-mundo-grego-editorial-recall-v3",
+    "sectionId": "summary-historia-antiguidade-classica-o-mundo-grego-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-antiguidade-classica-o-mundo-romano",
+    "questionId": "summary-historia-antiguidade-classica-o-mundo-romano-editorial-recall-v3",
+    "sectionId": "summary-historia-antiguidade-classica-o-mundo-romano-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-alta-idade-media-e-feudalismo",
+    "questionId": "summary-historia-alta-idade-media-e-feudalismo-editorial-recall-v3",
+    "sectionId": "summary-historia-alta-idade-media-e-feudalismo-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-baixa-idade-media",
+    "questionId": "summary-historia-baixa-idade-media-editorial-recall-v3",
+    "sectionId": "summary-historia-baixa-idade-media-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-primeira-globalizacao",
+    "questionId": "summary-historia-a-primeira-globalizacao-editorial-recall-v3",
+    "sectionId": "summary-historia-a-primeira-globalizacao-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-america-espanhola",
+    "questionId": "summary-historia-america-espanhola-editorial-recall-v3",
+    "sectionId": "summary-historia-america-espanhola-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-vida-urbana-e-renascimento-cultural",
+    "questionId": "summary-historia-vida-urbana-e-renascimento-cultural-editorial-recall-v3",
+    "sectionId": "summary-historia-vida-urbana-e-renascimento-cultural-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-reforma-religiosa",
+    "questionId": "summary-historia-reforma-religiosa-editorial-recall-v3",
+    "sectionId": "summary-historia-reforma-religiosa-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-absolutismo",
+    "questionId": "summary-historia-absolutismo-editorial-recall-v3",
+    "sectionId": "summary-historia-absolutismo-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-revolucao-industrial",
+    "questionId": "summary-historia-revolucao-industrial-editorial-recall-v3",
+    "sectionId": "summary-historia-revolucao-industrial-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-iluminismo",
+    "questionId": "summary-historia-iluminismo-editorial-recall-v3",
+    "sectionId": "summary-historia-iluminismo-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-revolucao-francesa",
+    "questionId": "summary-historia-revolucao-francesa-editorial-recall-v3",
+    "sectionId": "summary-historia-revolucao-francesa-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-america-no-seculo-xix",
+    "questionId": "summary-historia-america-no-seculo-xix-editorial-recall-v3",
+    "sectionId": "summary-historia-america-no-seculo-xix-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-europa-no-seculo-xix",
+    "questionId": "summary-historia-europa-no-seculo-xix-editorial-recall-v3",
+    "sectionId": "summary-historia-europa-no-seculo-xix-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-imperialismo-e-belle-epoque",
+    "questionId": "summary-historia-imperialismo-e-belle-epoque-editorial-recall-v3",
+    "sectionId": "summary-historia-imperialismo-e-belle-epoque-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-primeira-guerra-mundial-1914-1918",
+    "questionId": "summary-historia-primeira-guerra-mundial-1914-1918-editorial-recall-v3",
+    "sectionId": "summary-historia-primeira-guerra-mundial-1914-1918-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-grandes-revolucoes-do-seculo-xx",
+    "questionId": "summary-historia-grandes-revolucoes-do-seculo-xx-editorial-recall-v3",
+    "sectionId": "summary-historia-grandes-revolucoes-do-seculo-xx-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-o-periodo-entreguerras-1918-1939",
+    "questionId": "summary-historia-o-periodo-entreguerras-1918-1939-editorial-recall-v3",
+    "sectionId": "summary-historia-o-periodo-entreguerras-1918-1939-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-o-nazismo-na-alemanha",
+    "questionId": "summary-historia-o-nazismo-na-alemanha-editorial-recall-v3",
+    "sectionId": "summary-historia-o-nazismo-na-alemanha-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-segunda-guerra-mundial-1939-1945",
+    "questionId": "summary-historia-segunda-guerra-mundial-1939-1945-editorial-recall-v3",
+    "sectionId": "summary-historia-segunda-guerra-mundial-1939-1945-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-guerra-fria",
+    "questionId": "summary-historia-guerra-fria-editorial-recall-v3",
+    "sectionId": "summary-historia-guerra-fria-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-descolonizacao-afro-asiatica",
+    "questionId": "summary-historia-descolonizacao-afro-asiatica-editorial-recall-v3",
+    "sectionId": "summary-historia-descolonizacao-afro-asiatica-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-america-latina-no-seculo-xx",
+    "questionId": "summary-historia-america-latina-no-seculo-xx-editorial-recall-v3",
+    "sectionId": "summary-historia-america-latina-no-seculo-xx-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-o-fim-da-guerra-fria",
+    "questionId": "summary-historia-o-fim-da-guerra-fria-editorial-recall-v3",
+    "sectionId": "summary-historia-o-fim-da-guerra-fria-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-historia-e-o-brasil",
+    "questionId": "summary-historia-a-historia-e-o-brasil-editorial-recall-v2",
+    "sectionId": "summary-historia-a-historia-e-o-brasil-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-grandes-navegacoes-e-conquista-colonial",
+    "questionId": "summary-historia-grandes-navegacoes-e-conquista-colonial-editorial-recall-v4",
+    "sectionId": "summary-historia-grandes-navegacoes-e-conquista-colonial-editorial-v4-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-montagem-da-colonizacao",
+    "questionId": "summary-historia-a-montagem-da-colonizacao-editorial-recall-v3",
+    "sectionId": "summary-historia-a-montagem-da-colonizacao-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-dinamica-interna-da-colonizacao",
+    "questionId": "summary-historia-dinamica-interna-da-colonizacao-editorial-recall-v3",
+    "sectionId": "summary-historia-dinamica-interna-da-colonizacao-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-disputas-europeias-no-brasil-colonial",
+    "questionId": "summary-historia-disputas-europeias-no-brasil-colonial-editorial-recall-v3",
+    "sectionId": "summary-historia-disputas-europeias-no-brasil-colonial-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-interiorizacao-da-colonizacao",
+    "questionId": "summary-historia-a-interiorizacao-da-colonizacao-editorial-recall-v4",
+    "sectionId": "summary-historia-a-interiorizacao-da-colonizacao-editorial-v4-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-mineracao-no-brasil-colonial",
+    "questionId": "summary-historia-a-mineracao-no-brasil-colonial-editorial-recall-v3",
+    "sectionId": "summary-historia-a-mineracao-no-brasil-colonial-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-crise-do-antigo-sistema-colonial",
+    "questionId": "summary-historia-a-crise-do-antigo-sistema-colonial-editorial-recall-v4",
+    "sectionId": "summary-historia-a-crise-do-antigo-sistema-colonial-editorial-v4-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-independencia-do-brasil",
+    "questionId": "summary-historia-a-independencia-do-brasil-editorial-recall-v3",
+    "sectionId": "summary-historia-a-independencia-do-brasil-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro",
+    "questionId": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-editorial-recall-v3",
+    "sectionId": "summary-historia-brasil-imperio-formacao-do-estado-nacional-brasileiro-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840",
+    "questionId": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840-editorial-recall-v3",
+    "sectionId": "summary-historia-brasil-imperio-o-periodo-regencial-1831-1840-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-segundo-reinado-1840-1889",
+    "questionId": "summary-historia-brasil-imperio-segundo-reinado-1840-1889-editorial-recall-v3",
+    "sectionId": "summary-historia-brasil-imperio-segundo-reinado-1840-1889-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado",
+    "questionId": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado-editorial-recall-v3",
+    "sectionId": "summary-historia-brasil-imperio-o-declinio-do-segundo-reinado-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-republica-da-espada",
+    "questionId": "summary-historia-a-republica-da-espada-editorial-recall-v3",
+    "sectionId": "summary-historia-a-republica-da-espada-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-ascensao-e-dominio-das-oligarquias",
+    "questionId": "summary-historia-ascensao-e-dominio-das-oligarquias-editorial-recall-v3",
+    "sectionId": "summary-historia-ascensao-e-dominio-das-oligarquias-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930",
+    "questionId": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-editorial-recall-v3",
+    "sectionId": "summary-historia-a-primeira-republica-o-declinio-oligarquico-1889-1930-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-era-vargas",
+    "questionId": "summary-historia-a-era-vargas-editorial-recall-v3",
+    "sectionId": "summary-historia-a-era-vargas-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937",
+    "questionId": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937-editorial-recall-v3",
+    "sectionId": "summary-historia-a-era-vargas-o-governo-constitucional-1934-1937-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-a-era-vargas-o-estado-novo",
+    "questionId": "summary-historia-a-era-vargas-o-estado-novo-editorial-recall-v3",
+    "sectionId": "summary-historia-a-era-vargas-o-estado-novo-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria",
+    "questionId": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria-editorial-recall-v3",
+    "sectionId": "summary-historia-republica-liberal-1945-1964-democracia-em-tempos-de-guerra-fria-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo",
+    "questionId": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo-editorial-recall-v3",
+    "sectionId": "summary-historia-republica-liberal-1945-1964-desenvolvimentismo-e-populismo-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-regime-militar-1964-1985-i",
+    "questionId": "summary-historia-regime-militar-1964-1985-i-editorial-recall-v3",
+    "sectionId": "summary-historia-regime-militar-1964-1985-i-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-regime-militar-1964-1985-ii",
+    "questionId": "summary-historia-regime-militar-1964-1985-ii-editorial-recall-v3",
+    "sectionId": "summary-historia-regime-militar-1964-1985-ii-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-historia-o-brasil-atual",
+    "questionId": "summary-historia-o-brasil-atual-editorial-recall-v3",
+    "sectionId": "summary-historia-o-brasil-atual-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology",
+    "questionId": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-taxonomy-and-terminology-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-songs-and-poems",
+    "questionId": "summary-lingua-inglesa-text-comprehension-songs-and-poems-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-songs-and-poems-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-calories-and-energy",
+    "questionId": "summary-lingua-inglesa-text-comprehension-calories-and-energy-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-calories-and-energy-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-earthquakes",
+    "questionId": "summary-lingua-inglesa-text-comprehension-earthquakes-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-earthquakes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-hurricanes",
+    "questionId": "summary-lingua-inglesa-text-comprehension-hurricanes-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-hurricanes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases",
+    "questionId": "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-ecology-greenhouse-gases-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-pollution",
+    "questionId": "summary-lingua-inglesa-text-comprehension-pollution-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-pollution-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-the-human-brain",
+    "questionId": "summary-lingua-inglesa-text-comprehension-the-human-brain-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-the-human-brain-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-global-warming",
+    "questionId": "summary-lingua-inglesa-text-comprehension-global-warming-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-global-warming-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-novels-short-stories",
+    "questionId": "summary-lingua-inglesa-text-comprehension-novels-short-stories-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-novels-short-stories-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-bacteria",
+    "questionId": "summary-lingua-inglesa-text-comprehension-bacteria-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-bacteria-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-viruses",
+    "questionId": "summary-lingua-inglesa-text-comprehension-viruses-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-viruses-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-discrimination-against-women",
+    "questionId": "summary-lingua-inglesa-text-comprehension-discrimination-against-women-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-discrimination-against-women-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-women-empowerment",
+    "questionId": "summary-lingua-inglesa-text-comprehension-women-empowerment-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-women-empowerment-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-digital-technology",
+    "questionId": "summary-lingua-inglesa-text-comprehension-digital-technology-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-digital-technology-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-health-probiotics",
+    "questionId": "summary-lingua-inglesa-text-comprehension-health-probiotics-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-health-probiotics-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-lingua-inglesa-text-comprehension-stem-cells",
+    "questionId": "summary-lingua-inglesa-text-comprehension-stem-cells-editorial-recall-v2",
+    "sectionId": "summary-lingua-inglesa-text-comprehension-stem-cells-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades",
+    "questionId": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades-editorial-recall-v1",
+    "sectionId": "summary-redacao-a-dissertacao-no-vestibular-mitos-e-verdades-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades",
+    "questionId": "summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades-editorial-recall-v1",
+    "sectionId": "summary-redacao-o-que-se-avalia-na-dissertacao-competencias-e-habilidades-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps",
+    "questionId": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps-editorial-recall-v1",
+    "sectionId": "summary-redacao-organizando-as-ideias-brainstorm-e-mind-maps-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-projeto-de-texto-em-favor-da-progressao-textual",
+    "questionId": "summary-redacao-projeto-de-texto-em-favor-da-progressao-textual-editorial-recall-v1",
+    "sectionId": "summary-redacao-projeto-de-texto-em-favor-da-progressao-textual-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso",
+    "questionId": "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso-editorial-recall-v1",
+    "sectionId": "summary-redacao-repertorio-o-diferencial-de-redacoes-de-sucesso-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos",
+    "questionId": "summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos-editorial-recall-v1",
+    "sectionId": "summary-redacao-qual-sera-o-tema-deste-ano-grandes-eixos-tematicos-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-diferentes-graus-de-adequacao-a-proposta",
+    "questionId": "summary-redacao-diferentes-graus-de-adequacao-a-proposta-editorial-recall-v1",
+    "sectionId": "summary-redacao-diferentes-graus-de-adequacao-a-proposta-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema",
+    "questionId": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema-editorial-recall-v1",
+    "sectionId": "summary-redacao-tangenciamento-e-fuga-a-fronteira-do-tema-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto",
+    "questionId": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto-editorial-recall-v1",
+    "sectionId": "summary-redacao-generos-e-sua-relacao-com-a-estrutura-do-texto-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-estrutura-classica-do-texto-dissertativo",
+    "questionId": "summary-redacao-estrutura-classica-do-texto-dissertativo-editorial-recall-v1",
+    "sectionId": "summary-redacao-estrutura-classica-do-texto-dissertativo-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i",
+    "questionId": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i-editorial-recall-v1",
+    "sectionId": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-i-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii",
+    "questionId": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii-editorial-recall-v1",
+    "sectionId": "summary-redacao-lendo-a-coletanea-a-apreensao-de-sentidos-ii-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i",
+    "questionId": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i-editorial-recall-v1",
+    "sectionId": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-i-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii",
+    "questionId": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii-editorial-recall-v1",
+    "sectionId": "summary-redacao-lendo-a-coletanea-a-compreensao-e-o-texto-autoral-ii-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-meio-ambiente",
+    "questionId": "summary-redacao-incrementando-o-repertorio-meio-ambiente-editorial-recall-v2",
+    "sectionId": "summary-redacao-incrementando-o-repertorio-meio-ambiente-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-meio-ambiente",
+    "questionId": "summary-redacao-analisando-tema-de-redacao-meio-ambiente-editorial-recall-v2",
+    "sectionId": "summary-redacao-analisando-tema-de-redacao-meio-ambiente-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho",
+    "questionId": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho-editorial-recall-v2",
+    "sectionId": "summary-redacao-incrementando-o-repertorio-educacao-e-trabalho-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho",
+    "questionId": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho-editorial-recall-v2",
+    "sectionId": "summary-redacao-analisando-tema-de-redacao-educacao-e-trabalho-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-temas-abstratos",
+    "questionId": "summary-redacao-incrementando-o-repertorio-temas-abstratos-editorial-recall-v2",
+    "sectionId": "summary-redacao-incrementando-o-repertorio-temas-abstratos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-abstrato-de-redacao",
+    "questionId": "summary-redacao-analisando-tema-abstrato-de-redacao-editorial-recall-v2",
+    "sectionId": "summary-redacao-analisando-tema-abstrato-de-redacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade",
+    "questionId": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade-editorial-recall-v2",
+    "sectionId": "summary-redacao-incrementando-o-repertorio-corpo-saude-e-sexualidade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade",
+    "questionId": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade-editorial-recall-v2",
+    "sectionId": "summary-redacao-analisando-tema-de-redacao-corpo-saude-e-sexualidade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao",
+    "questionId": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao-editorial-recall-v2",
+    "sectionId": "summary-redacao-incrementando-o-repertorio-violencia-leis-e-punicao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao",
+    "questionId": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao-editorial-recall-v2",
+    "sectionId": "summary-redacao-analisando-tema-de-redacao-violencia-leis-e-punicao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder",
+    "questionId": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder-editorial-recall-v2",
+    "sectionId": "summary-redacao-incrementando-o-repertorio-cidadania-e-poder-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder",
+    "questionId": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder-editorial-recall-v2",
+    "sectionId": "summary-redacao-analisando-tema-de-redacao-cidadania-e-poder-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais",
+    "questionId": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais-editorial-recall-v2",
+    "sectionId": "summary-redacao-incrementando-o-repertorio-arte-cultura-e-relacoes-sociais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais",
+    "questionId": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais-editorial-recall-v2",
+    "sectionId": "summary-redacao-analisando-o-tema-de-redacao-arte-cultura-e-relacoes-sociais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade",
+    "questionId": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade-editorial-recall-v2",
+    "sectionId": "summary-redacao-incrementando-o-repertorio-midia-e-sociedade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade",
+    "questionId": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade-editorial-recall-v2",
+    "sectionId": "summary-redacao-analisando-tema-de-redacao-midia-e-sociedade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao",
+    "questionId": "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao-editorial-recall-v1",
+    "sectionId": "summary-redacao-paragrafo-de-introducao-delimitando-a-opiniao-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-paragrafo-de-introducao-como-contextualizar",
+    "questionId": "summary-redacao-paragrafo-de-introducao-como-contextualizar-editorial-recall-v1",
+    "sectionId": "summary-redacao-paragrafo-de-introducao-como-contextualizar-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-argumentacao-auditorio-particular-e-universal",
+    "questionId": "summary-redacao-argumentacao-auditorio-particular-e-universal-editorial-recall-v1",
+    "sectionId": "summary-redacao-argumentacao-auditorio-particular-e-universal-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade",
+    "questionId": "summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade-editorial-recall-v1",
+    "sectionId": "summary-redacao-argumentacao-quase-logica-e-efeito-de-verdade-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-argumentacao-e-coerencia-interna",
+    "questionId": "summary-redacao-argumentacao-e-coerencia-interna-editorial-recall-v1",
+    "sectionId": "summary-redacao-argumentacao-e-coerencia-interna-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-argumentacao-e-coerencia-externa",
+    "questionId": "summary-redacao-argumentacao-e-coerencia-externa-editorial-recall-v1",
+    "sectionId": "summary-redacao-argumentacao-e-coerencia-externa-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos",
+    "questionId": "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos-editorial-recall-v1",
+    "sectionId": "summary-redacao-recursos-argumentativos-dados-numericos-e-exemplos-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-vozes-prestigiadas",
+    "questionId": "summary-redacao-recursos-argumentativos-vozes-prestigiadas-editorial-recall-v1",
+    "sectionId": "summary-redacao-recursos-argumentativos-vozes-prestigiadas-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-ressalvando-o-ponto-de-vista-contrario",
+    "questionId": "summary-redacao-ressalvando-o-ponto-de-vista-contrario-editorial-recall-v1",
+    "sectionId": "summary-redacao-ressalvando-o-ponto-de-vista-contrario-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-refutando-o-ponto-contrario",
+    "questionId": "summary-redacao-refutando-o-ponto-contrario-editorial-recall-v1",
+    "sectionId": "summary-redacao-refutando-o-ponto-contrario-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade",
+    "questionId": "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade-editorial-recall-v1",
+    "sectionId": "summary-redacao-recursos-argumentativos-interdiscursividade-e-intertextualidade-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados",
+    "questionId": "summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados-editorial-recall-v1",
+    "sectionId": "summary-redacao-recursos-argumentativos-temas-de-redacao-ja-analisados-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-fatos-da-atualidade",
+    "questionId": "summary-redacao-recursos-argumentativos-fatos-da-atualidade-editorial-recall-v1",
+    "sectionId": "summary-redacao-recursos-argumentativos-fatos-da-atualidade-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber",
+    "questionId": "summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber-editorial-recall-v1",
+    "sectionId": "summary-redacao-recursos-argumentativos-multiplos-dominios-do-saber-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-conclusao-por-sintese-ou-retomada-da-tese",
+    "questionId": "summary-redacao-conclusao-por-sintese-ou-retomada-da-tese-editorial-recall-v1",
+    "sectionId": "summary-redacao-conclusao-por-sintese-ou-retomada-da-tese-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade",
+    "questionId": "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade-editorial-recall-v1",
+    "sectionId": "summary-redacao-conclusao-sumarizacao-focalizacao-e-expressividade-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania",
+    "questionId": "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania-editorial-recall-v1",
+    "sectionId": "summary-redacao-proposta-de-intervencao-atores-sociais-e-cidadania-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao",
+    "questionId": "summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao-editorial-recall-v1",
+    "sectionId": "summary-redacao-proposta-de-intervencao-viabilizacao-e-inovacao-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-proposta-de-intervencao-coerencia-argumentativa",
+    "questionId": "summary-redacao-proposta-de-intervencao-coerencia-argumentativa-editorial-recall-v1",
+    "sectionId": "summary-redacao-proposta-de-intervencao-coerencia-argumentativa-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos",
+    "questionId": "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos-editorial-recall-v1",
+    "sectionId": "summary-redacao-proposta-de-intervencao-respeito-aos-direitos-humanos-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo",
+    "questionId": "summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo-editorial-recall-v1",
+    "sectionId": "summary-redacao-recursos-de-coesao-referencial-no-texto-dissertativo-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo",
+    "questionId": "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo-editorial-recall-v1",
+    "sectionId": "summary-redacao-recursos-de-coesao-sequencial-no-texto-dissertativo-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas",
+    "questionId": "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas-editorial-recall-v1",
+    "sectionId": "summary-redacao-coesao-no-texto-dissertativo-analise-de-problemas-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade",
+    "questionId": "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade-editorial-recall-v1",
+    "sectionId": "summary-redacao-recursos-linguisticos-norma-clareza-e-expressividade-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais",
+    "questionId": "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais-editorial-recall-v1",
+    "sectionId": "summary-redacao-os-direitos-humanos-de-1-geracao-direitos-individuais-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos",
+    "questionId": "summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos-editorial-recall-v1",
+    "sectionId": "summary-redacao-os-direitos-humanos-de-2-e-3-geracao-direitos-sociais-coletivos-e-difusos-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar",
+    "questionId": "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar-editorial-recall-v1",
+    "sectionId": "summary-redacao-redacoes-nota-1000-trunfos-a-inspirar-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-redacao-redacoes-na-midia-como-aprimorar",
+    "questionId": "summary-redacao-redacoes-na-midia-como-aprimorar-editorial-recall-v1",
+    "sectionId": "summary-redacao-redacoes-na-midia-como-aprimorar-editorial-v1-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-lingua-um-sistema-complexo",
+    "questionId": "summary-gramatica-lingua-um-sistema-complexo-editorial-recall-v2",
+    "sectionId": "summary-gramatica-lingua-um-sistema-complexo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-variacao-linguistica",
+    "questionId": "summary-gramatica-variacao-linguistica-editorial-recall-v2",
+    "sectionId": "summary-gramatica-variacao-linguistica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador",
+    "questionId": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador-editorial-recall-v2",
+    "sectionId": "summary-gramatica-substantivo-os-nomes-e-a-visao-do-enunciador-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos",
+    "questionId": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos-editorial-recall-v2",
+    "sectionId": "summary-gramatica-tipos-de-texto-explorando-elementos-concretos-e-conceitos-abstratos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal",
+    "questionId": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal-editorial-recall-v2",
+    "sectionId": "summary-gramatica-artigo-numeral-e-adjetivo-no-sintagma-nominal-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-pronomes",
+    "questionId": "summary-gramatica-pronomes-editorial-recall-v2",
+    "sectionId": "summary-gramatica-pronomes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-verbo",
+    "questionId": "summary-gramatica-verbo-editorial-recall-v2",
+    "sectionId": "summary-gramatica-verbo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores",
+    "questionId": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores-editorial-recall-v2",
+    "sectionId": "summary-gramatica-adverbio-e-locucoes-adverbiais-circunstanciadores-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-verbo-e-sintaxe-da-oracao",
+    "questionId": "summary-gramatica-verbo-e-sintaxe-da-oracao-editorial-recall-v2",
+    "sectionId": "summary-gramatica-verbo-e-sintaxe-da-oracao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-concordancia",
+    "questionId": "summary-gramatica-concordancia-editorial-recall-v2",
+    "sectionId": "summary-gramatica-concordancia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-significados-implicitos",
+    "questionId": "summary-gramatica-significados-implicitos-editorial-recall-v2",
+    "sectionId": "summary-gramatica-significados-implicitos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-tipos-de-discurso",
+    "questionId": "summary-gramatica-tipos-de-discurso-editorial-recall-v2",
+    "sectionId": "summary-gramatica-tipos-de-discurso-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula",
+    "questionId": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula-editorial-recall-v2",
+    "sectionId": "summary-gramatica-pontuacao-i-principios-para-o-uso-da-virgula-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao",
+    "questionId": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao-editorial-recall-v2",
+    "sectionId": "summary-gramatica-pontuacao-ii-virgula-entre-oracoes-e-outros-sinais-de-pontuacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas",
+    "questionId": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas-editorial-recall-v2",
+    "sectionId": "summary-gramatica-o-lexico-em-contexto-variadas-possibilidades-semanticas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe",
+    "questionId": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe-editorial-recall-v2",
+    "sectionId": "summary-gramatica-ambiguidade-duplicidade-no-lexico-e-na-sintaxe-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-mecanismo-de-regencia",
+    "questionId": "summary-gramatica-mecanismo-de-regencia-editorial-recall-v2",
+    "sectionId": "summary-gramatica-mecanismo-de-regencia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-crase",
+    "questionId": "summary-gramatica-crase-editorial-recall-v2",
+    "sectionId": "summary-gramatica-crase-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-processos-de-formacao-de-palavras",
+    "questionId": "summary-gramatica-processos-de-formacao-de-palavras-editorial-recall-v2",
+    "sectionId": "summary-gramatica-processos-de-formacao-de-palavras-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo",
+    "questionId": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo-editorial-recall-v2",
+    "sectionId": "summary-gramatica-funcoes-sintaticas-nominais-e-vocativo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-tipos-de-sujeito",
+    "questionId": "summary-gramatica-tipos-de-sujeito-editorial-recall-v2",
+    "sectionId": "summary-gramatica-tipos-de-sujeito-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-vozes-verbais",
+    "questionId": "summary-gramatica-vozes-verbais-editorial-recall-v2",
+    "sectionId": "summary-gramatica-vozes-verbais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-oracoes-substantivas",
+    "questionId": "summary-gramatica-oracoes-substantivas-editorial-recall-v2",
+    "sectionId": "summary-gramatica-oracoes-substantivas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-oracoes-adjetivas",
+    "questionId": "summary-gramatica-oracoes-adjetivas-editorial-recall-v2",
+    "sectionId": "summary-gramatica-oracoes-adjetivas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-oracoes-adverbiais",
+    "questionId": "summary-gramatica-oracoes-adverbiais-editorial-recall-v2",
+    "sectionId": "summary-gramatica-oracoes-adverbiais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-gramatica-oracoes-coordenadas",
+    "questionId": "summary-gramatica-oracoes-coordenadas-editorial-recall-v2",
+    "sectionId": "summary-gramatica-oracoes-coordenadas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-a-arte-e-suas-linguagens",
+    "questionId": "summary-literatura-a-arte-e-suas-linguagens-editorial-recall-v2",
+    "sectionId": "summary-literatura-a-arte-e-suas-linguagens-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-texto-literario-x-texto-nao-literario",
+    "questionId": "summary-literatura-texto-literario-x-texto-nao-literario-editorial-recall-v2",
+    "sectionId": "summary-literatura-texto-literario-x-texto-nao-literario-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-trovadorismo-e-humanismo",
+    "questionId": "summary-literatura-trovadorismo-e-humanismo-editorial-recall-v2",
+    "sectionId": "summary-literatura-trovadorismo-e-humanismo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-renascimento-e-camoes",
+    "questionId": "summary-literatura-renascimento-e-camoes-editorial-recall-v2",
+    "sectionId": "summary-literatura-renascimento-e-camoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-brasil-primeiros-registros",
+    "questionId": "summary-literatura-brasil-primeiros-registros-editorial-recall-v2",
+    "sectionId": "summary-literatura-brasil-primeiros-registros-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-a-estetica-barroca",
+    "questionId": "summary-literatura-a-estetica-barroca-editorial-recall-v2",
+    "sectionId": "summary-literatura-a-estetica-barroca-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-a-estetica-neoclassica",
+    "questionId": "summary-literatura-a-estetica-neoclassica-editorial-recall-v2",
+    "sectionId": "summary-literatura-a-estetica-neoclassica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-a-estetica-romantica-poesia",
+    "questionId": "summary-literatura-a-estetica-romantica-poesia-editorial-recall-v2",
+    "sectionId": "summary-literatura-a-estetica-romantica-poesia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-elementos-da-narrativa",
+    "questionId": "summary-literatura-elementos-da-narrativa-editorial-recall-v2",
+    "sectionId": "summary-literatura-elementos-da-narrativa-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-a-estetica-romantica-prosa",
+    "questionId": "summary-literatura-a-estetica-romantica-prosa-editorial-recall-v2",
+    "sectionId": "summary-literatura-a-estetica-romantica-prosa-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-a-estetica-realista",
+    "questionId": "summary-literatura-a-estetica-realista-editorial-recall-v2",
+    "sectionId": "summary-literatura-a-estetica-realista-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-machado-de-assis",
+    "questionId": "summary-literatura-machado-de-assis-editorial-recall-v2",
+    "sectionId": "summary-literatura-machado-de-assis-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-naturalismo",
+    "questionId": "summary-literatura-naturalismo-editorial-recall-v2",
+    "sectionId": "summary-literatura-naturalismo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-realismo-portugues-eca-de-queiros",
+    "questionId": "summary-literatura-realismo-portugues-eca-de-queiros-editorial-recall-v2",
+    "sectionId": "summary-literatura-realismo-portugues-eca-de-queiros-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-parnasianismo",
+    "questionId": "summary-literatura-parnasianismo-editorial-recall-v2",
+    "sectionId": "summary-literatura-parnasianismo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-simbolismo",
+    "questionId": "summary-literatura-simbolismo-editorial-recall-v2",
+    "sectionId": "summary-literatura-simbolismo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-pre-modernismo",
+    "questionId": "summary-literatura-pre-modernismo-editorial-recall-v2",
+    "sectionId": "summary-literatura-pre-modernismo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-vanguardas-artisticas",
+    "questionId": "summary-literatura-vanguardas-artisticas-editorial-recall-v2",
+    "sectionId": "summary-literatura-vanguardas-artisticas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-fernando-pessoa",
+    "questionId": "summary-literatura-fernando-pessoa-editorial-recall-v2",
+    "sectionId": "summary-literatura-fernando-pessoa-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-semana-de-arte-moderna",
+    "questionId": "summary-literatura-semana-de-arte-moderna-editorial-recall-v2",
+    "sectionId": "summary-literatura-semana-de-arte-moderna-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-modernismo-no-brasil-primeira-geracao",
+    "questionId": "summary-literatura-modernismo-no-brasil-primeira-geracao-editorial-recall-v2",
+    "sectionId": "summary-literatura-modernismo-no-brasil-primeira-geracao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-segunda-geracao-modernista-prosa",
+    "questionId": "summary-literatura-segunda-geracao-modernista-prosa-editorial-recall-v2",
+    "sectionId": "summary-literatura-segunda-geracao-modernista-prosa-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-graciliano-ramos",
+    "questionId": "summary-literatura-graciliano-ramos-editorial-recall-v2",
+    "sectionId": "summary-literatura-graciliano-ramos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-segunda-geracao-modernista-poesia",
+    "questionId": "summary-literatura-segunda-geracao-modernista-poesia-editorial-recall-v2",
+    "sectionId": "summary-literatura-segunda-geracao-modernista-poesia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-carlos-drummond-de-andrade",
+    "questionId": "summary-literatura-carlos-drummond-de-andrade-editorial-recall-v2",
+    "sectionId": "summary-literatura-carlos-drummond-de-andrade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-joao-cabral-de-melo-neto",
+    "questionId": "summary-literatura-joao-cabral-de-melo-neto-editorial-recall-v2",
+    "sectionId": "summary-literatura-joao-cabral-de-melo-neto-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-poesia-concreta",
+    "questionId": "summary-literatura-poesia-concreta-editorial-recall-v2",
+    "sectionId": "summary-literatura-poesia-concreta-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-clarice-lispector",
+    "questionId": "summary-literatura-clarice-lispector-editorial-recall-v2",
+    "sectionId": "summary-literatura-clarice-lispector-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-guimaraes-rosa",
+    "questionId": "summary-literatura-guimaraes-rosa-editorial-recall-v2",
+    "sectionId": "summary-literatura-guimaraes-rosa-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-poesia-brasileira-1960-1980",
+    "questionId": "summary-literatura-poesia-brasileira-1960-1980-editorial-recall-v2",
+    "sectionId": "summary-literatura-poesia-brasileira-1960-1980-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-prosa-brasileira-1960-1980",
+    "questionId": "summary-literatura-prosa-brasileira-1960-1980-editorial-recall-v2",
+    "sectionId": "summary-literatura-prosa-brasileira-1960-1980-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-literatura-lusofona-contemporanea",
+    "questionId": "summary-literatura-literatura-lusofona-contemporanea-editorial-recall-v2",
+    "sectionId": "summary-literatura-literatura-lusofona-contemporanea-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-poesia-brasileira-contemporanea",
+    "questionId": "summary-literatura-poesia-brasileira-contemporanea-editorial-recall-v2",
+    "sectionId": "summary-literatura-poesia-brasileira-contemporanea-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-prosa-brasileira-contemporanea",
+    "questionId": "summary-literatura-prosa-brasileira-contemporanea-editorial-recall-v2",
+    "sectionId": "summary-literatura-prosa-brasileira-contemporanea-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-artes-plasticas-brasileiras",
+    "questionId": "summary-literatura-artes-plasticas-brasileiras-editorial-recall-v2",
+    "sectionId": "summary-literatura-artes-plasticas-brasileiras-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-teatro-brasileiro",
+    "questionId": "summary-literatura-teatro-brasileiro-editorial-recall-v2",
+    "sectionId": "summary-literatura-teatro-brasileiro-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-literatura-cancioneiro-popular-brasileiro",
+    "questionId": "summary-literatura-cancioneiro-popular-brasileiro-editorial-recall-v2",
+    "sectionId": "summary-literatura-cancioneiro-popular-brasileiro-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-fatores-de-textualidade",
+    "questionId": "summary-entendimento-de-texto-fatores-de-textualidade-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-fatores-de-textualidade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-os-dois-niveis-da-leitura",
+    "questionId": "summary-entendimento-de-texto-os-dois-niveis-da-leitura-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-os-dois-niveis-da-leitura-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-intertextualidade-e-interdiscursividade",
+    "questionId": "summary-entendimento-de-texto-intertextualidade-e-interdiscursividade-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-intertextualidade-e-interdiscursividade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-generos-textuais",
+    "questionId": "summary-entendimento-de-texto-generos-textuais-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-generos-textuais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao",
+    "questionId": "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-generos-narrativos-e-niveis-de-compreensao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura",
+    "questionId": "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-generos-nao-verbais-fundamentos-de-leitura-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-funcoes-da-linguagem",
+    "questionId": "summary-entendimento-de-texto-funcoes-da-linguagem-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-funcoes-da-linguagem-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria",
+    "questionId": "summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-funcao-poetica-e-linguagem-literaria-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-figuras-de-linguagem",
+    "questionId": "summary-entendimento-de-texto-figuras-de-linguagem-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-figuras-de-linguagem-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-modelos-de-leitura-e-distorcoes-interpretativas",
+    "questionId": "summary-entendimento-de-texto-modelos-de-leitura-e-distorcoes-interpretativas-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-modelos-de-leitura-e-distorcoes-interpretativas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-leitura-de-textos-comicos",
+    "questionId": "summary-entendimento-de-texto-leitura-de-textos-comicos-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-leitura-de-textos-comicos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-entendimento-de-texto-tecnologias-digitais-da-informacao-e-comunicacao-tdic-impactos-sociais",
+    "questionId": "summary-entendimento-de-texto-tecnologias-digitais-da-informacao-e-comunicacao-tdic-impactos-sociais-editorial-recall-v2",
+    "sectionId": "summary-entendimento-de-texto-tecnologias-digitais-da-informacao-e-comunicacao-tdic-impactos-sociais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-potencias-e-radicais",
+    "questionId": "summary-matematica-potencias-e-radicais-editorial-recall-v2",
+    "sectionId": "summary-matematica-potencias-e-radicais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-razao-e-proporcao",
+    "questionId": "summary-matematica-razao-e-proporcao-editorial-recall-v2",
+    "sectionId": "summary-matematica-razao-e-proporcao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-porcentagem",
+    "questionId": "summary-matematica-porcentagem-editorial-recall-v2",
+    "sectionId": "summary-matematica-porcentagem-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-o-sistema-de-numeracao-decimal",
+    "questionId": "summary-matematica-o-sistema-de-numeracao-decimal-editorial-recall-v2",
+    "sectionId": "summary-matematica-o-sistema-de-numeracao-decimal-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-introducao-a-teoria-dos-numeros-inteiros",
+    "questionId": "summary-matematica-introducao-a-teoria-dos-numeros-inteiros-editorial-recall-v2",
+    "sectionId": "summary-matematica-introducao-a-teoria-dos-numeros-inteiros-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-introducao-as-sequencias",
+    "questionId": "summary-matematica-introducao-as-sequencias-editorial-recall-v2",
+    "sectionId": "summary-matematica-introducao-as-sequencias-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-progressao-aritmetica",
+    "questionId": "summary-matematica-progressao-aritmetica-editorial-recall-v2",
+    "sectionId": "summary-matematica-progressao-aritmetica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-progressao-geometrica",
+    "questionId": "summary-matematica-progressao-geometrica-editorial-recall-v2",
+    "sectionId": "summary-matematica-progressao-geometrica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-sequencias",
+    "questionId": "summary-matematica-sequencias-editorial-recall-v2",
+    "sectionId": "summary-matematica-sequencias-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-sistemas-de-equacoes",
+    "questionId": "summary-matematica-sistemas-de-equacoes-editorial-recall-v2",
+    "sectionId": "summary-matematica-sistemas-de-equacoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-tabelas-e-matrizes",
+    "questionId": "summary-matematica-tabelas-e-matrizes-editorial-recall-v2",
+    "sectionId": "summary-matematica-tabelas-e-matrizes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-multiplicacao-de-matrizes",
+    "questionId": "summary-matematica-multiplicacao-de-matrizes-editorial-recall-v2",
+    "sectionId": "summary-matematica-multiplicacao-de-matrizes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-determinantes",
+    "questionId": "summary-matematica-determinantes-editorial-recall-v2",
+    "sectionId": "summary-matematica-determinantes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-discussao-de-sistemas-lineares",
+    "questionId": "summary-matematica-discussao-de-sistemas-lineares-editorial-recall-v2",
+    "sectionId": "summary-matematica-discussao-de-sistemas-lineares-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-medias",
+    "questionId": "summary-matematica-medias-editorial-recall-v2",
+    "sectionId": "summary-matematica-medias-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-introducao-as-tecnicas-de-contagem",
+    "questionId": "summary-matematica-introducao-as-tecnicas-de-contagem-editorial-recall-v2",
+    "sectionId": "summary-matematica-introducao-as-tecnicas-de-contagem-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-o-problema-da-fila",
+    "questionId": "summary-matematica-o-problema-da-fila-editorial-recall-v2",
+    "sectionId": "summary-matematica-o-problema-da-fila-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-o-problema-do-grupo",
+    "questionId": "summary-matematica-o-problema-do-grupo-editorial-recall-v2",
+    "sectionId": "summary-matematica-o-problema-do-grupo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-tecnicas-de-contagem",
+    "questionId": "summary-matematica-tecnicas-de-contagem-editorial-recall-v2",
+    "sectionId": "summary-matematica-tecnicas-de-contagem-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-operacoes-com-probabilidades",
+    "questionId": "summary-matematica-operacoes-com-probabilidades-editorial-recall-v2",
+    "sectionId": "summary-matematica-operacoes-com-probabilidades-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-eventos-disjuntos-e-eventos-independentes",
+    "questionId": "summary-matematica-eventos-disjuntos-e-eventos-independentes-editorial-recall-v2",
+    "sectionId": "summary-matematica-eventos-disjuntos-e-eventos-independentes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-estatistica-descritiva",
+    "questionId": "summary-matematica-estatistica-descritiva-editorial-recall-v2",
+    "sectionId": "summary-matematica-estatistica-descritiva-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-introducao-a-geometria-plana",
+    "questionId": "summary-matematica-introducao-a-geometria-plana-editorial-recall-v2",
+    "sectionId": "summary-matematica-introducao-a-geometria-plana-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-angulos-em-triangulos",
+    "questionId": "summary-matematica-angulos-em-triangulos-editorial-recall-v2",
+    "sectionId": "summary-matematica-angulos-em-triangulos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-angulos-em-poligonos",
+    "questionId": "summary-matematica-angulos-em-poligonos-editorial-recall-v2",
+    "sectionId": "summary-matematica-angulos-em-poligonos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-angulos-e-circunferencias",
+    "questionId": "summary-matematica-angulos-e-circunferencias-editorial-recall-v2",
+    "sectionId": "summary-matematica-angulos-e-circunferencias-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-simetrias-e-congruencias",
+    "questionId": "summary-matematica-simetrias-e-congruencias-editorial-recall-v2",
+    "sectionId": "summary-matematica-simetrias-e-congruencias-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-identificacao-de-simetrias-i",
+    "questionId": "summary-matematica-identificacao-de-simetrias-i-editorial-recall-v2",
+    "sectionId": "summary-matematica-identificacao-de-simetrias-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-identificacao-de-simetrias-ii",
+    "questionId": "summary-matematica-identificacao-de-simetrias-ii-editorial-recall-v2",
+    "sectionId": "summary-matematica-identificacao-de-simetrias-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-a-geometria-da-proporcionalidade",
+    "questionId": "summary-matematica-a-geometria-da-proporcionalidade-editorial-recall-v2",
+    "sectionId": "summary-matematica-a-geometria-da-proporcionalidade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-semelhanca-de-triangulos",
+    "questionId": "summary-matematica-semelhanca-de-triangulos-editorial-recall-v2",
+    "sectionId": "summary-matematica-semelhanca-de-triangulos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo",
+    "questionId": "summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo-editorial-recall-v2",
+    "sectionId": "summary-matematica-o-ponto-medio-e-o-baricentro-de-um-triangulo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-triangulo-retangulo",
+    "questionId": "summary-matematica-triangulo-retangulo-editorial-recall-v2",
+    "sectionId": "summary-matematica-triangulo-retangulo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-a-geometria-metrica-plana",
+    "questionId": "summary-matematica-a-geometria-metrica-plana-editorial-recall-v2",
+    "sectionId": "summary-matematica-a-geometria-metrica-plana-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-areas-de-poligonos",
+    "questionId": "summary-matematica-areas-de-poligonos-editorial-recall-v2",
+    "sectionId": "summary-matematica-areas-de-poligonos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-area-do-circulo-e-de-suas-partes",
+    "questionId": "summary-matematica-area-do-circulo-e-de-suas-partes-editorial-recall-v2",
+    "sectionId": "summary-matematica-area-do-circulo-e-de-suas-partes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-razoes-entre-areas-de-figuras-planas",
+    "questionId": "summary-matematica-razoes-entre-areas-de-figuras-planas-editorial-recall-v2",
+    "sectionId": "summary-matematica-razoes-entre-areas-de-figuras-planas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-areas-de-figuras-planas",
+    "questionId": "summary-matematica-areas-de-figuras-planas-editorial-recall-v2",
+    "sectionId": "summary-matematica-areas-de-figuras-planas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-trigonometria-no-triangulo-retangulo",
+    "questionId": "summary-matematica-trigonometria-no-triangulo-retangulo-editorial-recall-v2",
+    "sectionId": "summary-matematica-trigonometria-no-triangulo-retangulo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-relacoes-trigonometricas-em-poligonos",
+    "questionId": "summary-matematica-relacoes-trigonometricas-em-poligonos-editorial-recall-v2",
+    "sectionId": "summary-matematica-relacoes-trigonometricas-em-poligonos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-a-trigonometria-dos-numeros-reais",
+    "questionId": "summary-matematica-a-trigonometria-dos-numeros-reais-editorial-recall-v2",
+    "sectionId": "summary-matematica-a-trigonometria-dos-numeros-reais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-outras-razoes-trigonometricas",
+    "questionId": "summary-matematica-outras-razoes-trigonometricas-editorial-recall-v2",
+    "sectionId": "summary-matematica-outras-razoes-trigonometricas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-a-relacao-fundamental-da-trigonometria",
+    "questionId": "summary-matematica-a-relacao-fundamental-da-trigonometria-editorial-recall-v2",
+    "sectionId": "summary-matematica-a-relacao-fundamental-da-trigonometria-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-transformacoes-trigonometricas",
+    "questionId": "summary-matematica-transformacoes-trigonometricas-editorial-recall-v2",
+    "sectionId": "summary-matematica-transformacoes-trigonometricas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-funcoes-trigonometricas",
+    "questionId": "summary-matematica-funcoes-trigonometricas-editorial-recall-v2",
+    "sectionId": "summary-matematica-funcoes-trigonometricas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-o-universo-tridimensional",
+    "questionId": "summary-matematica-o-universo-tridimensional-editorial-recall-v2",
+    "sectionId": "summary-matematica-o-universo-tridimensional-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-cubos-e-paralelepipedos",
+    "questionId": "summary-matematica-cubos-e-paralelepipedos-editorial-recall-v2",
+    "sectionId": "summary-matematica-cubos-e-paralelepipedos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-prismas",
+    "questionId": "summary-matematica-prismas-editorial-recall-v2",
+    "sectionId": "summary-matematica-prismas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-piramides",
+    "questionId": "summary-matematica-piramides-editorial-recall-v2",
+    "sectionId": "summary-matematica-piramides-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-solidos-de-revolucao",
+    "questionId": "summary-matematica-solidos-de-revolucao-editorial-recall-v2",
+    "sectionId": "summary-matematica-solidos-de-revolucao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-razoes-entre-volumes-de-solidos",
+    "questionId": "summary-matematica-razoes-entre-volumes-de-solidos-editorial-recall-v2",
+    "sectionId": "summary-matematica-razoes-entre-volumes-de-solidos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-introducao-a-geometria-analitica",
+    "questionId": "summary-matematica-introducao-a-geometria-analitica-editorial-recall-v2",
+    "sectionId": "summary-matematica-introducao-a-geometria-analitica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia",
+    "questionId": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia-editorial-recall-v2",
+    "sectionId": "summary-matematica-lugar-geometrico-e-equacao-da-circunferencia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-estudo-analitico-da-reta",
+    "questionId": "summary-matematica-estudo-analitico-da-reta-editorial-recall-v2",
+    "sectionId": "summary-matematica-estudo-analitico-da-reta-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-posicoes-relativas-entre-duas-retas",
+    "questionId": "summary-matematica-posicoes-relativas-entre-duas-retas-editorial-recall-v2",
+    "sectionId": "summary-matematica-posicoes-relativas-entre-duas-retas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-distancia-entre-um-ponto-e-uma-reta",
+    "questionId": "summary-matematica-distancia-entre-um-ponto-e-uma-reta-editorial-recall-v2",
+    "sectionId": "summary-matematica-distancia-entre-um-ponto-e-uma-reta-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia",
+    "questionId": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia-editorial-recall-v2",
+    "sectionId": "summary-matematica-posicoes-relativas-entre-uma-reta-e-uma-circunferencia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-introducao-ao-estudo-analitico-das-conicas",
+    "questionId": "summary-matematica-introducao-ao-estudo-analitico-das-conicas-editorial-recall-v2",
+    "sectionId": "summary-matematica-introducao-ao-estudo-analitico-das-conicas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-representacao-geometrica-de-inequacoes",
+    "questionId": "summary-matematica-representacao-geometrica-de-inequacoes-editorial-recall-v2",
+    "sectionId": "summary-matematica-representacao-geometrica-de-inequacoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-a-geometria-dos-numeros-complexos",
+    "questionId": "summary-matematica-a-geometria-dos-numeros-complexos-editorial-recall-v2",
+    "sectionId": "summary-matematica-a-geometria-dos-numeros-complexos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-tecnicas-algebricas",
+    "questionId": "summary-matematica-tecnicas-algebricas-editorial-recall-v2",
+    "sectionId": "summary-matematica-tecnicas-algebricas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-igualdades",
+    "questionId": "summary-matematica-igualdades-editorial-recall-v2",
+    "sectionId": "summary-matematica-igualdades-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-desigualdades",
+    "questionId": "summary-matematica-desigualdades-editorial-recall-v2",
+    "sectionId": "summary-matematica-desigualdades-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-modelagem-algebrica-de-problemas-i",
+    "questionId": "summary-matematica-modelagem-algebrica-de-problemas-i-editorial-recall-v2",
+    "sectionId": "summary-matematica-modelagem-algebrica-de-problemas-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-equacoes-do-2-grau",
+    "questionId": "summary-matematica-equacoes-do-2-grau-editorial-recall-v2",
+    "sectionId": "summary-matematica-equacoes-do-2-grau-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-modelagem-algebrica-de-problemas-ii",
+    "questionId": "summary-matematica-modelagem-algebrica-de-problemas-ii-editorial-recall-v2",
+    "sectionId": "summary-matematica-modelagem-algebrica-de-problemas-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-introducao-as-funcoes",
+    "questionId": "summary-matematica-introducao-as-funcoes-editorial-recall-v2",
+    "sectionId": "summary-matematica-introducao-as-funcoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-transformacoes-em-graficos-de-funcoes",
+    "questionId": "summary-matematica-transformacoes-em-graficos-de-funcoes-editorial-recall-v2",
+    "sectionId": "summary-matematica-transformacoes-em-graficos-de-funcoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-composicao-de-funcoes",
+    "questionId": "summary-matematica-composicao-de-funcoes-editorial-recall-v2",
+    "sectionId": "summary-matematica-composicao-de-funcoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-inversao-de-funcoes",
+    "questionId": "summary-matematica-inversao-de-funcoes-editorial-recall-v2",
+    "sectionId": "summary-matematica-inversao-de-funcoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-funcoes-bijetoras",
+    "questionId": "summary-matematica-funcoes-bijetoras-editorial-recall-v2",
+    "sectionId": "summary-matematica-funcoes-bijetoras-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-funcao-constante-e-funcao-afim",
+    "questionId": "summary-matematica-funcao-constante-e-funcao-afim-editorial-recall-v2",
+    "sectionId": "summary-matematica-funcao-constante-e-funcao-afim-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-funcao-quadratica",
+    "questionId": "summary-matematica-funcao-quadratica-editorial-recall-v2",
+    "sectionId": "summary-matematica-funcao-quadratica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-estudo-do-sinal-de-funcoes",
+    "questionId": "summary-matematica-estudo-do-sinal-de-funcoes-editorial-recall-v2",
+    "sectionId": "summary-matematica-estudo-do-sinal-de-funcoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-introducao-ao-modelo-exponencial",
+    "questionId": "summary-matematica-introducao-ao-modelo-exponencial-editorial-recall-v2",
+    "sectionId": "summary-matematica-introducao-ao-modelo-exponencial-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-introducao-aos-logaritmos",
+    "questionId": "summary-matematica-introducao-aos-logaritmos-editorial-recall-v2",
+    "sectionId": "summary-matematica-introducao-aos-logaritmos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-equacoes-e-funcoes-logaritmicas",
+    "questionId": "summary-matematica-equacoes-e-funcoes-logaritmicas-editorial-recall-v2",
+    "sectionId": "summary-matematica-equacoes-e-funcoes-logaritmicas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-modelagem-exponencial-de-problemas",
+    "questionId": "summary-matematica-modelagem-exponencial-de-problemas-editorial-recall-v2",
+    "sectionId": "summary-matematica-modelagem-exponencial-de-problemas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-modulo-de-um-numero-real",
+    "questionId": "summary-matematica-modulo-de-um-numero-real-editorial-recall-v2",
+    "sectionId": "summary-matematica-modulo-de-um-numero-real-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-numeros-complexos",
+    "questionId": "summary-matematica-numeros-complexos-editorial-recall-v2",
+    "sectionId": "summary-matematica-numeros-complexos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-polinomios",
+    "questionId": "summary-matematica-polinomios-editorial-recall-v2",
+    "sectionId": "summary-matematica-polinomios-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-matematica-equacoes-polinomiais",
+    "questionId": "summary-matematica-equacoes-polinomiais-editorial-recall-v2",
+    "sectionId": "summary-matematica-equacoes-polinomiais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-evolucao-dos-modelos-atomicos",
+    "questionId": "summary-quimica-evolucao-dos-modelos-atomicos-editorial-recall-v2",
+    "sectionId": "summary-quimica-evolucao-dos-modelos-atomicos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos",
+    "questionId": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos-editorial-recall-v2",
+    "sectionId": "summary-quimica-organizacao-da-tabela-periodica-dos-elementos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-radioatividade-o-estudo-das-radiacoes",
+    "questionId": "summary-quimica-radioatividade-o-estudo-das-radiacoes-editorial-recall-v2",
+    "sectionId": "summary-quimica-radioatividade-o-estudo-das-radiacoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-ligacoes-quimicas-e-alotropia",
+    "questionId": "summary-quimica-ligacoes-quimicas-e-alotropia-editorial-recall-v2",
+    "sectionId": "summary-quimica-ligacoes-quimicas-e-alotropia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-geometria-molecular",
+    "questionId": "summary-quimica-geometria-molecular-editorial-recall-v2",
+    "sectionId": "summary-quimica-geometria-molecular-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas",
+    "questionId": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas-editorial-recall-v2",
+    "sectionId": "summary-quimica-polaridade-das-ligacoes-e-das-moleculas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-interacoes-intermoleculares",
+    "questionId": "summary-quimica-interacoes-intermoleculares-editorial-recall-v2",
+    "sectionId": "summary-quimica-interacoes-intermoleculares-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-composicao-da-materia-estados-fisicos",
+    "questionId": "summary-quimica-composicao-da-materia-estados-fisicos-editorial-recall-v2",
+    "sectionId": "summary-quimica-composicao-da-materia-estados-fisicos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-o-estado-gasoso",
+    "questionId": "summary-quimica-o-estado-gasoso-editorial-recall-v2",
+    "sectionId": "summary-quimica-o-estado-gasoso-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-estudo-dos-gases-ii",
+    "questionId": "summary-quimica-estudo-dos-gases-ii-editorial-recall-v2",
+    "sectionId": "summary-quimica-estudo-dos-gases-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-separacao-de-misturas",
+    "questionId": "summary-quimica-separacao-de-misturas-editorial-recall-v2",
+    "sectionId": "summary-quimica-separacao-de-misturas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes",
+    "questionId": "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes-editorial-recall-v2",
+    "sectionId": "summary-quimica-transformacoes-fisicas-e-quimicas-e-balanceamento-de-equacoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-massa-atomica-mol-e-massa-molar",
+    "questionId": "summary-quimica-massa-atomica-mol-e-massa-molar-editorial-recall-v2",
+    "sectionId": "summary-quimica-massa-atomica-mol-e-massa-molar-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-determinacao-de-formulas-quimicas",
+    "questionId": "summary-quimica-determinacao-de-formulas-quimicas-editorial-recall-v2",
+    "sectionId": "summary-quimica-determinacao-de-formulas-quimicas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-estequiometria-leis-ponderais",
+    "questionId": "summary-quimica-estequiometria-leis-ponderais-editorial-recall-v2",
+    "sectionId": "summary-quimica-estequiometria-leis-ponderais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-calculos-estequiometricos",
+    "questionId": "summary-quimica-calculos-estequiometricos-editorial-recall-v2",
+    "sectionId": "summary-quimica-calculos-estequiometricos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-quimica-inorganica",
+    "questionId": "summary-quimica-quimica-inorganica-editorial-recall-v2",
+    "sectionId": "summary-quimica-quimica-inorganica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases",
+    "questionId": "summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases-editorial-recall-v2",
+    "sectionId": "summary-quimica-equacoes-ionicas-e-outras-teorias-para-acidos-e-bases-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-processos-de-oxirreducao",
+    "questionId": "summary-quimica-processos-de-oxirreducao-editorial-recall-v2",
+    "sectionId": "summary-quimica-processos-de-oxirreducao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-quimica-ambiental",
+    "questionId": "summary-quimica-quimica-ambiental-editorial-recall-v2",
+    "sectionId": "summary-quimica-quimica-ambiental-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-introducao-a-quimica-organica",
+    "questionId": "summary-quimica-introducao-a-quimica-organica-editorial-recall-v2",
+    "sectionId": "summary-quimica-introducao-a-quimica-organica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-nomenclatura-de-compostos-organicos",
+    "questionId": "summary-quimica-nomenclatura-de-compostos-organicos-editorial-recall-v2",
+    "sectionId": "summary-quimica-nomenclatura-de-compostos-organicos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados",
+    "questionId": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados-editorial-recall-v2",
+    "sectionId": "summary-quimica-nomenclatura-de-compostos-organicos-oxigenados-e-nitrogenados-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades",
+    "questionId": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades-editorial-recall-v2",
+    "sectionId": "summary-quimica-reconhecimento-de-funcoes-organicas-e-algumas-de-suas-propriedades-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-isomeria",
+    "questionId": "summary-quimica-isomeria-editorial-recall-v2",
+    "sectionId": "summary-quimica-isomeria-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-combustiveis-fosseis",
+    "questionId": "summary-quimica-combustiveis-fosseis-editorial-recall-v2",
+    "sectionId": "summary-quimica-combustiveis-fosseis-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-interpretando-reacoes-organicas",
+    "questionId": "summary-quimica-interpretando-reacoes-organicas-editorial-recall-v2",
+    "sectionId": "summary-quimica-interpretando-reacoes-organicas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-reacoes-de-substituicao",
+    "questionId": "summary-quimica-reacoes-de-substituicao-editorial-recall-v2",
+    "sectionId": "summary-quimica-reacoes-de-substituicao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-reacoes-de-adicao",
+    "questionId": "summary-quimica-reacoes-de-adicao-editorial-recall-v2",
+    "sectionId": "summary-quimica-reacoes-de-adicao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos",
+    "questionId": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos-editorial-recall-v2",
+    "sectionId": "summary-quimica-reacoes-de-oxidacao-em-hidrocarbonetos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-alcoois",
+    "questionId": "summary-quimica-alcoois-editorial-recall-v2",
+    "sectionId": "summary-quimica-alcoois-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-acidos-graxos-e-esterificacao",
+    "questionId": "summary-quimica-acidos-graxos-e-esterificacao-editorial-recall-v2",
+    "sectionId": "summary-quimica-acidos-graxos-e-esterificacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-transesterificacao-alcoolise",
+    "questionId": "summary-quimica-transesterificacao-alcoolise-editorial-recall-v2",
+    "sectionId": "summary-quimica-transesterificacao-alcoolise-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-acidez-e-basicidade-pka",
+    "questionId": "summary-quimica-acidez-e-basicidade-pka-editorial-recall-v2",
+    "sectionId": "summary-quimica-acidez-e-basicidade-pka-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-polimeros",
+    "questionId": "summary-quimica-polimeros-editorial-recall-v2",
+    "sectionId": "summary-quimica-polimeros-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-dispersoes",
+    "questionId": "summary-quimica-dispersoes-editorial-recall-v2",
+    "sectionId": "summary-quimica-dispersoes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-efeitos-coligativos",
+    "questionId": "summary-quimica-efeitos-coligativos-editorial-recall-v2",
+    "sectionId": "summary-quimica-efeitos-coligativos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-termoquimica-i",
+    "questionId": "summary-quimica-termoquimica-i-editorial-recall-v2",
+    "sectionId": "summary-quimica-termoquimica-i-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-termoquimica-ii",
+    "questionId": "summary-quimica-termoquimica-ii-editorial-recall-v2",
+    "sectionId": "summary-quimica-termoquimica-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-cinetica-quimica",
+    "questionId": "summary-quimica-cinetica-quimica-editorial-recall-v2",
+    "sectionId": "summary-quimica-cinetica-quimica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias",
+    "questionId": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias-editorial-recall-v2",
+    "sectionId": "summary-quimica-introducao-ao-estudo-das-pilhas-e-baterias-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-eletroquimica-de-processos-espontaneos",
+    "questionId": "summary-quimica-eletroquimica-de-processos-espontaneos-editorial-recall-v2",
+    "sectionId": "summary-quimica-eletroquimica-de-processos-espontaneos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-eletroquimica-de-processos-nao-espontaneos",
+    "questionId": "summary-quimica-eletroquimica-de-processos-nao-espontaneos-editorial-recall-v2",
+    "sectionId": "summary-quimica-eletroquimica-de-processos-nao-espontaneos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-aspectos-quantitativos-da-eletroquimica-e-metalurgia",
+    "questionId": "summary-quimica-aspectos-quantitativos-da-eletroquimica-e-metalurgia-editorial-recall-v2",
+    "sectionId": "summary-quimica-aspectos-quantitativos-da-eletroquimica-e-metalurgia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-deslocamento-de-equilibrio",
+    "questionId": "summary-quimica-deslocamento-de-equilibrio-editorial-recall-v2",
+    "sectionId": "summary-quimica-deslocamento-de-equilibrio-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-equilibrios-ionicos",
+    "questionId": "summary-quimica-equilibrios-ionicos-editorial-recall-v2",
+    "sectionId": "summary-quimica-equilibrios-ionicos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-quimica-equilibrios-ionicos-ii",
+    "questionId": "summary-quimica-equilibrios-ionicos-ii-editorial-recall-v2",
+    "sectionId": "summary-quimica-equilibrios-ionicos-ii-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "qui-equilibrio-acidificacao",
+    "questionId": "qui-equilibrio-acidificacao-editorial-recall-v2",
+    "sectionId": "qui-equilibrio-acidificacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "mat-probabilidade-contagem",
+    "questionId": "mat-probabilidade-contagem-editorial-recall-v2",
+    "sectionId": "mat-probabilidade-contagem-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "geo-bonus-demografico",
+    "questionId": "geo-bonus-demografico-editorial-recall-v2",
+    "sectionId": "geo-bonus-demografico-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos",
+    "questionId": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos-editorial-recall-v2",
+    "sectionId": "summary-filosofia-o-nascimento-da-filosofia-do-mito-ao-logos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes",
+    "questionId": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes-editorial-recall-v2",
+    "sectionId": "summary-filosofia-os-filosofos-da-physis-tales-anaximandro-e-anaximenes-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir",
+    "questionId": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir-editorial-recall-v2",
+    "sectionId": "summary-filosofia-heraclito-e-parmenides-o-ser-e-o-devir-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-os-sofistas-e-a-crise-da-verdade",
+    "questionId": "summary-filosofia-os-sofistas-e-a-crise-da-verdade-editorial-recall-v2",
+    "sectionId": "summary-filosofia-os-sofistas-e-a-crise-da-verdade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-o-metodo-socratico-e-a-maieutica",
+    "questionId": "summary-filosofia-o-metodo-socratico-e-a-maieutica-editorial-recall-v2",
+    "sectionId": "summary-filosofia-o-metodo-socratico-e-a-maieutica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-a-teoria-das-ideias-de-platao",
+    "questionId": "summary-filosofia-a-teoria-das-ideias-de-platao-editorial-recall-v2",
+    "sectionId": "summary-filosofia-a-teoria-das-ideias-de-platao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-o-mito-da-caverna",
+    "questionId": "summary-filosofia-o-mito-da-caverna-editorial-recall-v2",
+    "sectionId": "summary-filosofia-o-mito-da-caverna-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento",
+    "questionId": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento-editorial-recall-v2",
+    "sectionId": "summary-filosofia-a-alegoria-da-linha-dividida-e-o-conhecimento-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-logica-e-metafisica-aristotelicas",
+    "questionId": "summary-filosofia-logica-e-metafisica-aristotelicas-editorial-recall-v2",
+    "sectionId": "summary-filosofia-logica-e-metafisica-aristotelicas-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo",
+    "questionId": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo-editorial-recall-v2",
+    "sectionId": "summary-filosofia-a-etica-a-nicomaco-e-a-doutrina-do-meio-termo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico",
+    "questionId": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico-editorial-recall-v2",
+    "sectionId": "summary-filosofia-politica-aristotelica-o-homem-como-animal-politico-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-patristica-e-santo-agostinho",
+    "questionId": "summary-filosofia-patristica-e-santo-agostinho-editorial-recall-v2",
+    "sectionId": "summary-filosofia-patristica-e-santo-agostinho-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-escolastica-e-santo-tomas-de-aquino",
+    "questionId": "summary-filosofia-escolastica-e-santo-tomas-de-aquino-editorial-recall-v2",
+    "sectionId": "summary-filosofia-escolastica-e-santo-tomas-de-aquino-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-a-relacao-entre-fe-e-razao",
+    "questionId": "summary-filosofia-a-relacao-entre-fe-e-razao-editorial-recall-v2",
+    "sectionId": "summary-filosofia-a-relacao-entre-fe-e-razao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica",
+    "questionId": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica-editorial-recall-v2",
+    "sectionId": "summary-filosofia-descartes-e-o-metodo-a-duvida-hiperbolica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz",
+    "questionId": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz-editorial-recall-v2",
+    "sectionId": "summary-filosofia-racionalismo-continental-espinosa-e-leibniz-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume",
+    "questionId": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume-editorial-recall-v2",
+    "sectionId": "summary-filosofia-empirismo-britanico-locke-berkeley-e-hume-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-a-critica-de-hume-a-causalidade",
+    "questionId": "summary-filosofia-a-critica-de-hume-a-causalidade-editorial-recall-v2",
+    "sectionId": "summary-filosofia-a-critica-de-hume-a-causalidade-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-hobbes-e-o-estado-de-natureza",
+    "questionId": "summary-filosofia-hobbes-e-o-estado-de-natureza-editorial-recall-v2",
+    "sectionId": "summary-filosofia-hobbes-e-o-estado-de-natureza-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-locke-e-os-direitos-naturais",
+    "questionId": "summary-filosofia-locke-e-os-direitos-naturais-editorial-recall-v2",
+    "sectionId": "summary-filosofia-locke-e-os-direitos-naturais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-rousseau-e-a-vontade-geral",
+    "questionId": "summary-filosofia-rousseau-e-a-vontade-geral-editorial-recall-v2",
+    "sectionId": "summary-filosofia-rousseau-e-a-vontade-geral-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso",
+    "questionId": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso-editorial-recall-v2",
+    "sectionId": "summary-filosofia-o-ideal-iluminista-de-razao-e-progresso-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-a-critica-da-razao-pura",
+    "questionId": "summary-filosofia-a-critica-da-razao-pura-editorial-recall-v3",
+    "sectionId": "summary-filosofia-a-critica-da-razao-pura-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico",
+    "questionId": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico-editorial-recall-v2",
+    "sectionId": "summary-filosofia-a-etica-kantiana-e-o-imperativo-categorico-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-hegel-e-a-dialetica",
+    "questionId": "summary-filosofia-hegel-e-a-dialetica-editorial-recall-v2",
+    "sectionId": "summary-filosofia-hegel-e-a-dialetica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-o-materialismo-historico",
+    "questionId": "summary-filosofia-o-materialismo-historico-editorial-recall-v2",
+    "sectionId": "summary-filosofia-o-materialismo-historico-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-alienacao-e-mais-valia",
+    "questionId": "summary-filosofia-alienacao-e-mais-valia-editorial-recall-v2",
+    "sectionId": "summary-filosofia-alienacao-e-mais-valia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista",
+    "questionId": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista-editorial-recall-v2",
+    "sectionId": "summary-filosofia-a-luta-de-classes-na-filosofia-marxista-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais",
+    "questionId": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais-editorial-recall-v2",
+    "sectionId": "summary-filosofia-nietzsche-e-a-critica-aos-valores-morais-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-o-existencialismo-de-sartre",
+    "questionId": "summary-filosofia-o-existencialismo-de-sartre-editorial-recall-v2",
+    "sectionId": "summary-filosofia-o-existencialismo-de-sartre-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural",
+    "questionId": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural-editorial-recall-v2",
+    "sectionId": "summary-filosofia-a-escola-de-frankfurt-e-a-industria-cultural-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-foucault-e-as-relacoes-de-poder",
+    "questionId": "summary-filosofia-foucault-e-as-relacoes-de-poder-editorial-recall-v2",
+    "sectionId": "summary-filosofia-foucault-e-as-relacoes-de-poder-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-justica-e-direitos-humanos",
+    "questionId": "summary-filosofia-justica-e-direitos-humanos-editorial-recall-v3",
+    "sectionId": "summary-filosofia-justica-e-direitos-humanos-editorial-v3-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-etica-aplicada-e-bioetica",
+    "questionId": "summary-filosofia-etica-aplicada-e-bioetica-editorial-recall-v2",
+    "sectionId": "summary-filosofia-etica-aplicada-e-bioetica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-filosofia-filosofia-politica-contemporanea",
+    "questionId": "summary-filosofia-filosofia-politica-contemporanea-editorial-recall-v2",
+    "sectionId": "summary-filosofia-filosofia-politica-contemporanea-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia",
+    "questionId": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia-editorial-recall-v2",
+    "sectionId": "summary-sociologia-o-contexto-historico-do-surgimento-da-sociologia-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-o-que-e-o-fato-social",
+    "questionId": "summary-sociologia-o-que-e-o-fato-social-editorial-recall-v2",
+    "sectionId": "summary-sociologia-o-que-e-o-fato-social-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-sociologia-e-senso-comum",
+    "questionId": "summary-sociologia-sociologia-e-senso-comum-editorial-recall-v2",
+    "sectionId": "summary-sociologia-sociologia-e-senso-comum-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-solidariedade-mecanica-e-solidariedade-organica",
+    "questionId": "summary-sociologia-solidariedade-mecanica-e-solidariedade-organica-editorial-recall-v2",
+    "sectionId": "summary-sociologia-solidariedade-mecanica-e-solidariedade-organica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-anomia-e-coesao-social",
+    "questionId": "summary-sociologia-anomia-e-coesao-social-editorial-recall-v2",
+    "sectionId": "summary-sociologia-anomia-e-coesao-social-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-educacao-e-socializacao-em-durkheim",
+    "questionId": "summary-sociologia-educacao-e-socializacao-em-durkheim-editorial-recall-v2",
+    "sectionId": "summary-sociologia-educacao-e-socializacao-em-durkheim-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-modo-de-producao-e-estrutura-social",
+    "questionId": "summary-sociologia-modo-de-producao-e-estrutura-social-editorial-recall-v2",
+    "sectionId": "summary-sociologia-modo-de-producao-e-estrutura-social-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-ideologia-e-alienacao",
+    "questionId": "summary-sociologia-ideologia-e-alienacao-editorial-recall-v2",
+    "sectionId": "summary-sociologia-ideologia-e-alienacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-a-luta-de-classes-na-analise-sociologica",
+    "questionId": "summary-sociologia-a-luta-de-classes-na-analise-sociologica-editorial-recall-v2",
+    "sectionId": "summary-sociologia-a-luta-de-classes-na-analise-sociologica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-tipos-de-acao-social",
+    "questionId": "summary-sociologia-tipos-de-acao-social-editorial-recall-v2",
+    "sectionId": "summary-sociologia-tipos-de-acao-social-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-dominacao-e-poder-em-weber",
+    "questionId": "summary-sociologia-dominacao-e-poder-em-weber-editorial-recall-v2",
+    "sectionId": "summary-sociologia-dominacao-e-poder-em-weber-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo",
+    "questionId": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo-editorial-recall-v2",
+    "sectionId": "summary-sociologia-etica-protestante-e-o-espirito-do-capitalismo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-cultura-e-etnocentrismo",
+    "questionId": "summary-sociologia-cultura-e-etnocentrismo-editorial-recall-v2",
+    "sectionId": "summary-sociologia-cultura-e-etnocentrismo-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-identidade-e-diferenca",
+    "questionId": "summary-sociologia-identidade-e-diferenca-editorial-recall-v2",
+    "sectionId": "summary-sociologia-identidade-e-diferenca-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-multiculturalismo-e-relativismo-cultural",
+    "questionId": "summary-sociologia-multiculturalismo-e-relativismo-cultural-editorial-recall-v2",
+    "sectionId": "summary-sociologia-multiculturalismo-e-relativismo-cultural-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-classes-sociais-e-mobilidade-social",
+    "questionId": "summary-sociologia-classes-sociais-e-mobilidade-social-editorial-recall-v2",
+    "sectionId": "summary-sociologia-classes-sociais-e-mobilidade-social-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-desigualdade-racial-no-brasil",
+    "questionId": "summary-sociologia-desigualdade-racial-no-brasil-editorial-recall-v2",
+    "sectionId": "summary-sociologia-desigualdade-racial-no-brasil-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-desigualdade-de-genero",
+    "questionId": "summary-sociologia-desigualdade-de-genero-editorial-recall-v2",
+    "sectionId": "summary-sociologia-desigualdade-de-genero-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-divisao-social-do-trabalho",
+    "questionId": "summary-sociologia-divisao-social-do-trabalho-editorial-recall-v2",
+    "sectionId": "summary-sociologia-divisao-social-do-trabalho-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-transformacoes-no-mundo-do-trabalho",
+    "questionId": "summary-sociologia-transformacoes-no-mundo-do-trabalho-editorial-recall-v2",
+    "sectionId": "summary-sociologia-transformacoes-no-mundo-do-trabalho-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho",
+    "questionId": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho-editorial-recall-v2",
+    "sectionId": "summary-sociologia-precarizacao-e-uberizacao-do-trabalho-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos",
+    "questionId": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos-editorial-recall-v2",
+    "sectionId": "summary-sociologia-movimentos-sociais-classicos-e-contemporaneos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-cidadania-e-direitos",
+    "questionId": "summary-sociologia-cidadania-e-direitos-editorial-recall-v2",
+    "sectionId": "summary-sociologia-cidadania-e-direitos-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-democracia-e-participacao-politica",
+    "questionId": "summary-sociologia-democracia-e-participacao-politica-editorial-recall-v2",
+    "sectionId": "summary-sociologia-democracia-e-participacao-politica-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-globalizacao-economica-e-cultural",
+    "questionId": "summary-sociologia-globalizacao-economica-e-cultural-editorial-recall-v2",
+    "sectionId": "summary-sociologia-globalizacao-economica-e-cultural-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-o-estado-nacao-na-era-global",
+    "questionId": "summary-sociologia-o-estado-nacao-na-era-global-editorial-recall-v2",
+    "sectionId": "summary-sociologia-o-estado-nacao-na-era-global-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  },
+  {
+    "id": "summary-sociologia-a-sociedade-da-informacao",
+    "questionId": "summary-sociologia-a-sociedade-da-informacao-editorial-recall-v2",
+    "sectionId": "summary-sociologia-a-sociedade-da-informacao-editorial-v2-5",
+    "sectionTitle": "Pratique e confira"
+  }
+]

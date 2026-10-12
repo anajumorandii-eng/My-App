@@ -1,0 +1,526 @@
+[
+  {
+    "width": 1440,
+    "theme": "light",
+    "mode": "explorar",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.2pt (14.88px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<strong>Pratique e confira</strong>",
+            "target": [
+              ".vs-journey-steps > li:nth-child(5) > button[type=\"button\"] > span:nth-child(2) > strong"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 1440,
+    "theme": "light",
+    "mode": "testar",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "width": 834,
+    "theme": "dark",
+    "mode": "explorar",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<small>Exercício</small>",
+            "target": [
+              "li:nth-child(5) > button[type=\"button\"] > span:nth-child(2) > small"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.2pt (14.88px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<strong>Pratique e confira</strong>",
+            "target": [
+              ".vs-journey-steps > li:nth-child(5) > button[type=\"button\"] > span:nth-child(2) > strong"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 834,
+    "theme": "dark",
+    "mode": "testar",
+    "violations": [],
+    "incomplete": []
+  },
+  {
+    "width": 360,
+    "theme": "dark",
+    "mode": "explorar",
+    "violations": [],
+    "incomplete": [
+      {
+        "id": "color-contrast",
+        "impact": "serious",
+        "tags": [
+          "cat.color",
+          "wcag2aa",
+          "wcag143",
+          "TTv5",
+          "TT13.c",
+          "EN-301-549",
+          "EN-9.1.4.3",
+          "ACT",
+          "RGAAv4",
+          "RGAA-3.2.1"
+        ],
+        "description": "Ensure the contrast between foreground and background colors meets WCAG 2 AA minimum contrast ratio thresholds",
+        "help": "Elements must meet minimum color contrast ratio thresholds",
+        "helpUrl": "https://dequeuniversity.com/rules/axe/4.13/color-contrast?application=playwright",
+        "nodes": [
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.2pt (14.88px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<strong>Concordância nominal</strong>",
+            "target": [
+              ".vs-journey-steps > li:nth-child(2) > button[type=\"button\"] > span:nth-child(2) > strong"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "14.4pt (19.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<span class=\"vs-journey-number\">03</span>",
+            "target": [
+              "li:nth-child(3) > button[type=\"button\"] > .vs-journey-number"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<small>Aplicação</small>",
+            "target": [
+              "li:nth-child(3) > button[type=\"button\"] > span:nth-child(2) > small"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.2pt (14.88px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<strong>Casos de atenção</strong>",
+            "target": [
+              ".vs-journey-steps > li:nth-child(3) > button[type=\"button\"] > span:nth-child(2) > strong"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "14.4pt (19.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<span class=\"vs-journey-number\">04</span>",
+            "target": [
+              "li:nth-child(4) > button[type=\"button\"] > .vs-journey-number"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<small>Estratégia</small>",
+            "target": [
+              "li:nth-child(4) > button[type=\"button\"] > span:nth-child(2) > small"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.2pt (14.88px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<strong>Pegadinhas frequentes</strong>",
+            "target": [
+              ".vs-journey-steps > li:nth-child(4) > button[type=\"button\"] > span:nth-child(2) > strong"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "14.4pt (19.2px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<span class=\"vs-journey-number\">05</span>",
+            "target": [
+              "li:nth-child(5) > button[type=\"button\"] > .vs-journey-number"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "9.6pt (12.8px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<small>Exercício</small>",
+            "target": [
+              "li:nth-child(5) > button[type=\"button\"] > span:nth-child(2) > small"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          },
+          {
+            "any": [
+              {
+                "id": "color-contrast",
+                "data": {
+                  "contrastRatio": 0,
+                  "fontSize": "11.2pt (14.88px)",
+                  "fontWeight": "normal",
+                  "messageKey": "elmPartiallyObscured",
+                  "expectedContrastRatio": "4.5:1"
+                },
+                "relatedNodes": [
+                  {
+                    "html": "<section id=\"visual-chapter-reading\" tabindex=\"-1\" class=\"vs-journey\" aria-label=\"Percurso do capítulo\" data-subject=\"Gramática\">",
+                    "target": [
+                      "#visual-chapter-reading"
+                    ]
+                  }
+                ],
+                "impact": "serious",
+                "message": "Element's background color could not be determined because it's partially obscured by another element"
+              }
+            ],
+            "all": [],
+            "none": [],
+            "impact": "serious",
+            "html": "<strong>Pratique e confira</strong>",
+            "target": [
+              ".vs-journey-steps > li:nth-child(5) > button[type=\"button\"] > span:nth-child(2) > strong"
+            ],
+            "failureSummary": "Fix any of the following:\n  Element's background color could not be determined because it's partially obscured by another element"
+          }
+        ]
+      }
+    ]
+  },
+  {
+    "width": 360,
+    "theme": "dark",
+    "mode": "testar",
+    "violations": [],
+    "incomplete": []
+  }
+]

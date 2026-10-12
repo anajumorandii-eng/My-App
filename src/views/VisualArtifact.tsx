@@ -1,4 +1,5 @@
 import React from 'react';
+import { challengeSectionIndex } from '../lib/visualChallenge';
 import { SpatialChapterSupplement } from './SpatialChapterSupplement';
 import { HumanitiesConcepts } from './HumanitiesConcepts';
 import { ChapterSceneFrame } from './ChapterSceneFrame';
@@ -25,6 +26,7 @@ interface VisualArtifactProps {
   activeIndex: number;
   onSelectStep: (index: number) => void;
   onPractice?: () => void;
+  onReadChallenge?: () => void;
 }
 
 /**
@@ -37,13 +39,15 @@ interface VisualArtifactProps {
  */
 export function VisualArtifact({
   summary, representation, map, states, selectedId, onSelect, hiddenEdgeIds,
-  mode, activeIndex, onSelectStep, onPractice,
+  mode, activeIndex, onSelectStep, onPractice, onReadChallenge,
 }: VisualArtifactProps) {
   const Board = representation === 'board'
     ? findBoard(summary)?.Component ?? null
     : representation === 'instrument'
       ? findInstrument(summary)?.Component ?? null
       : null;
+
+  const challengeSection = summary.sections[challengeSectionIndex(summary)];
 
   return (
     <div data-visual-representation={representation} data-study-artifact-mode={mode}
@@ -61,12 +65,14 @@ export function VisualArtifact({
       </ChapterSceneFrame>
       {mode === 'explorar' && <section className="vs-scene-bridge" aria-label="Da cena à compreensão">
         <div><small>RELACIONE COM O CAPÍTULO</small><h3>{summary.sections[activeIndex]?.title ?? summary.title}</h3>
-          <p>{map.recallPrompt}</p></div>
+          <p>{map.recallPrompt}</p>
+          {challengeSection && <p className="vs-scene-challenge-context">Explicação do desafio: {challengeSection.title}</p>}</div>
         <div className="vs-scene-bridge-actions">
           <button type="button" onClick={() => {
             const reading = document.getElementById('visual-chapter-reading');
-            reading?.scrollIntoView({ block: 'start' }); reading?.focus({ preventScroll: true });
+            reading?.scrollIntoView?.({ block: 'start' }); reading?.focus({ preventScroll: true });
           }}>Entender esta etapa</button>
+          {onReadChallenge && <button type="button" onClick={onReadChallenge}>Entender o desafio</button>}
           {onPractice && <button type="button" onClick={onPractice}>Responder ao desafio</button>}
         </div>
       </section>}

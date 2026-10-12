@@ -1,3 +1,5 @@
+import { readFileSync } from 'node:fs';
+const challengeLinks: Array<{ id: string; sectionTitle: string }> = JSON.parse(readFileSync('docs/refinamento-visual-613-desafio/challenge-links.json', 'utf8'));
 import { expect, test } from '@playwright/test';
 
 const chapters = [
@@ -8,8 +10,9 @@ const chapters = [
 ] as const;
 
 for (const [subject, id] of chapters) {
-  test(`${subject}: condições comparáveis e câmera sob controle manual`, async ({ page }) => {
+  test(`${subject}: condições comparáveis e câmera sob controle manual`, async ({ page }, testInfo) => {
     test.setTimeout(90_000);
+    const activate = testInfo.project.name === 'ipad-webkit' ? 'tap' : 'click';
     await page.emulateMedia({ reducedMotion: 'reduce' });
     await page.addInitScript(() => localStorage.setItem('juju_onboarding', 'true'));
     await page.goto(`/visual?summary=${id}`, { waitUntil: 'domcontentloaded' });
@@ -63,5 +66,18 @@ for (const [subject, id] of chapters) {
     }
     await lab.getByRole('button', { name: 'Limpar comparação' }).click();
     await expect(lab.getByRole('button', { name: 'Guardar para comparar' })).toBeFocused();
+    const section = challengeLinks.find(link => link.id === id)!;
+    await page.getByRole('button', { name: 'Entender o desafio' })[activate]();
+    await expect(page.locator('#visual-chapter-reading')).toBeFocused();
+    await expect(page.getByRole('navigation', { name: 'Etapas do capítulo' }).locator('[aria-current="step"]')).toContainText(section.sectionTitle);
+    await page.getByRole('button', { name: 'Responder ao desafio' })[activate]();
+    await page.getByLabel('Sua resposta', { exact: true }).fill('Hipótese para revisar');
+    await page.getByRole('button', { name: 'Enviar para correção' }).click();
+    await page.getByRole('button', { name: 'Revisar a explicação deste desafio' })[activate]();
+    await expect(page.locator('#visual-chapter-reading')).toBeFocused();
+    await expect(page.getByRole('navigation', { name: 'Etapas do capítulo' }).locator('[aria-current="step"]')).toContainText(section.sectionTitle);
+    await page.getByRole('tab', { name: 'Testar', exact: true }).click();
+    await expect(page.getByLabel('Sua resposta', { exact: true })).toHaveValue('Hipótese para revisar');
+    await expect(page.getByText('Você preservou:', { exact: true })).toBeVisible();
   });
 }
