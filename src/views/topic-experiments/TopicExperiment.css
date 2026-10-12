@@ -68,3 +68,19 @@
 .ts-coord-track { fill:currentColor; opacity:.1; }
 .ts-coord-bar-lat { fill:var(--vs-blue); }
 .ts-coord-bar-long { fill:var(--vs-green); }
+
+/* Palco: a etapa acende a parte do globo de que a seção dela fala
+   (coordinatesStage.ts). Traço e fundo de tinta, não cor nova, para não
+   confundir com a cor de estado de domínio dos cartões. */
+.ts-coord-spot { fill: color-mix(in srgb, var(--action-primary, var(--vs-burgundy)) 7%, transparent); stroke: var(--action-primary, var(--vs-burgundy)); stroke-width: 2; stroke-dasharray: 5 4; }
+.ts-coord[data-stage-coord-focus='referencias'] .ts-reference { stroke: var(--action-primary, var(--vs-burgundy)); stroke-width: 3.5; }
+.ts-coord[data-stage-coord-focus='leitura'] .ts-position { stroke: var(--action-primary, var(--vs-burgundy)); stroke-width: 4; }
+.ts-coord[data-stage-coord-focus='convergencia'] .ts-coord-converge,
+.ts-coord[data-stage-coord-focus='convergencia'] .ts-longitude { stroke-width: 3.5; stroke-dasharray: none; }
+
+/* No palco o título do experimento deixa de ser manchete: a 1366×900 ele e a
+   nota empurravam o globo para fora da área visível da cena. Mesma régua que
+   stageCases.css aplica às cenas de topic-scenes. */
+.crivo-visual.crivo-visual--stage .topic-studio:has(> .stage-lens) > header h4 { font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.25; margin: 2px 0 6px; }
+.crivo-visual.crivo-visual--stage .topic-studio:has(> .stage-lens) > header h4::after { margin-top: 6px; width: 64px; }
+.crivo-visual.crivo-visual--stage .topic-studio:has(> .stage-lens) > header p { font-size: 13px; margin: 0 0 6px; }

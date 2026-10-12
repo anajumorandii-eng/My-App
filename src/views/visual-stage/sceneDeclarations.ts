@@ -9,14 +9,16 @@ import { BIOLOGY_PROCESS_IDS } from '../topic-scenes/families/BiologiaProcessos'
 import { ORGANIC_SCENE_IDS } from '../topic-scenes/families/QuimicaOrganica';
 import { QUIMICA_FENOMENO_IDS } from '../topic-scenes/families/QuimicaFenomenos';
 import { BIOLOGIA_FENOMENO_IDS } from '../topic-scenes/families/BiologiaFenomenos';
+import { HISTORIA_GEOGRAFIA_IDS } from '../topic-scenes/families/HistoriaGeografia';
 import type { StageSceneDeclaration } from './contract';
 
-/** Capítulos cuja família de cena lê `useStageCases` (Química e Biologia). */
+/** Capítulos cuja família de cena lê `useStageCases` (Química, Biologia, História e Geografia). */
 export const STAGE_CASE_SCENE_IDS: ReadonlySet<string> = new Set([
   ...ECOLOGY_CYCLE_IDS, ...ECOLOGY_SYSTEM_IDS, ...BIOLOGY_PHYSIOLOGY_SCENE_IDS, ...BIOLOGY_PROCESS_IDS,
   ...ORGANIC_SCENE_IDS, ...QUIMICA_FENOMENO_IDS, ...BIOLOGIA_FENOMENO_IDS,
   'summary-quimica-geometria-molecular',
   'summary-biologia-mutacoes-genicas',
+  ...HISTORIA_GEOGRAFIA_IDS,
 ]);
 
 /**

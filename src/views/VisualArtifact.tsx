@@ -56,7 +56,8 @@ export function VisualArtifact({
       {showMain && Board && <Board map={map} states={states} selectedId={selectedId} onSelect={id => { closeFocus(); onSelect(id); }}
         hiddenEdgeIds={hiddenEdgeIds} mode={mode}
         activeStep={activeIndex} onStepChange={onSelectStep} challengeActive={mode !== 'explorar'} focusTarget={focusTarget} />}
-      {showMain && representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id} />}
+      {showMain && representation === 'experiment' && <TopicExperiment key={summary.id} summaryId={summary.id}
+        stage={{ map, sections: summary.sections, activeStep: activeIndex, onStepChange: onSelectStep, selectedId, onSelect, mode, hiddenEdgeIds }} />}
       {showMain && representation === 'scene' && <TopicScene key={`cena-${summary.id}`} summaryId={summary.id}
         stage={{ map, sections: summary.sections, activeStep: activeIndex, onStepChange: onSelectStep, selectedId, onSelect, mode, hiddenEdgeIds }} />}
       {showMain && representation === 'fallback' && <TopicFallbackVisual summary={summary} activeIndex={activeIndex} onSelectStep={onSelectStep} />}

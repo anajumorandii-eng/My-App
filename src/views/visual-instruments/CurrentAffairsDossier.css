@@ -28,3 +28,9 @@
 @media (max-width: 900px) {
   .vs-cop .vs-geography-options button { min-height: 44px; }
 }
+
+/* Palco: as peças tiradas da seção da etapa ativa ganham traço de tinta, além
+   do brilho da lente. Tracejado, não cor nova, para não confundir com o
+   estado de domínio dos cartões. */
+.vs-cop-piece[data-stage-step-piece="true"] > :first-child { stroke: var(--action-primary, var(--vs-burgundy)); stroke-width: 3.5; stroke-dasharray: 2 3; }
+.vs-cop .stage-lens { margin-bottom: 8px; }

@@ -5,6 +5,19 @@ import type { VisualRepresentation } from '../visualRepresentation';
 import type { StageSceneDeclaration } from './contract';
 import { casesStageDeclaration, sceneStageDeclaration } from './sceneDeclarations';
 import { boardStageCases } from '../visual-boards/stageCaseItems';
+import { instrumentStageDeclaration } from './caseDeclaration';
+import { buildVisualMap } from '../../lib/visualStudy';
+import { COORDINATES_CHAPTER, COORDINATES_STEPS } from '../topic-experiments/coordinatesStage';
+
+/** Experimentos que leem a etapa declaram um ponto por etapa, com o que ela acende no experimento. */
+function experimentStageDeclaration(summary: InteractiveSummary): StageSceneDeclaration | null {
+  if (summary.id !== COORDINATES_CHAPTER) return null;
+  return {
+    hotspots: buildVisualMap(summary).nodes.map((node, step) => ({
+      id: `etapa-${step}`, label: COORDINATES_STEPS[node.stage].label, nodeId: node.id, step,
+    })),
+  };
+}
 
 /**
  * Uma cena migrada declara o que oferece ao palco pendurando `stage` no próprio
@@ -16,6 +29,9 @@ export type StageAwareComponent = { stage?: StageSceneDeclaration | ((summary: I
 export function stageDeclarationFor(summary: InteractiveSummary, representation: VisualRepresentation): StageSceneDeclaration | null {
   // Cenas de topic-scenes não são componentes do registro: declaram pelo id.
   if (representation === 'scene') return sceneStageDeclaration(summary);
+  if (representation === 'experiment') return experimentStageDeclaration(summary);
+  // Laboratórios de recortes chegam embrulhados em lazyBoard: declaram pelo id.
+  if (representation === 'instrument') { const declared = instrumentStageDeclaration(summary); if (declared) return declared; }
   // Pranchas carregam sob demanda (lazyBoard), então `Component.stage` não
   // chega aqui; as que alternam casos pela etapa declaram pela lista comum.
   if (representation === 'board') {

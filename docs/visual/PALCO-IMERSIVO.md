@@ -89,3 +89,24 @@ Varredura dos 120 capítulos das duas matérias (48 de Química, 72 de Biologia)
   mudam só com o par de cartões; para seguirem a etapa precisam de casos desenhados
   primeiro.
 
+## História, Geografia e Atualidades (113 capítulos)
+
+Medição de 12/10/2026, pela representação que abre cada capítulo:
+
+| Componente | Capítulos | O que a etapa muda |
+| --- | --- | --- |
+| `topic-scenes/families/HistoriaGeografia.tsx` | 103 | abre o recorte que a seção cita (`useStageCases`) e escolhe a camada de leitura (`visual-stage/hgLayers.ts`): observar com a afirmação coberta, relacionar, comparar dois recortes, ler o alerta, e na missão escolher o recorte que sustenta a resposta |
+| `GeographyContextInstrument`, `HistoryPhaseInstrument`, `HistoryInstrument` | 7 | a etapa leva o recorte/cursor ao caso que a seção cita; Reconstruir cobre a conclusão que entregaria a relação oculta |
+| `CurrentAffairsDossier` (COP30) | 1 | acende as peças tiradas da seção da etapa (`sectionId` do dossiê) e leva o quadro à afirmação da mesma seção |
+| `IndependenceBoard` | 1 | a etapa escolhe o eixo da prancha; a de pegadinhas acende o rodapé |
+| `TopicExperiment` / globo de coordenadas | 1 | `topic-experiments/coordinatesStage.ts`: acende barras, referências ou convergência, leva o ponto a 23°S, 46°O (leitura resolvida) e, no exercício, pede ajustar a latitude até 40°N |
+
+Os pontos de investigação vêm de `visual-stage/caseDeclaration.ts` (laboratórios,
+que chegam embrulhados em `lazyBoard` e por isso declaram pelo id),
+`sceneDeclarations.ts` (cenas) e `declarations.ts` (experimento). Nenhuma camada
+grava evidência: o desafio continua no formulário do palco.
+
+Ainda não alcançado: a camada "Modelo espacial" (`SpatialChapterSupplement`)
+não lê a etapa; `HumanitiesConcepts` repete, abaixo da cena, os nós que a barra
+de pontos já oferece (o `Visual.test.tsx` ainda o exige); o cabeçalho do
+`BoardShell` dos laboratórios segue grande dentro do palco.
