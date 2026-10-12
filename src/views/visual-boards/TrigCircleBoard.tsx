@@ -3,6 +3,7 @@ import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
 import { SceneNote } from './SceneNote';
+import { chapterFocus } from '../../lib/mathChapterFocus';
 
 /**
  * Círculo trigonométrico com o ponto no arco e as duas projeções.
@@ -55,10 +56,14 @@ function TrigScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhum' }
 
 export default function TrigCircleBoard(props: BoardProps) {
   const par = boardPair(props);
+  const foco = chapterFocus(props.map.summaryId, {
+    title: 'Círculo trigonométrico',
+    subtitle: 'Seno e cosseno são as duas coordenadas do mesmo ponto.',
+  });
   return (
     <BoardShell
-      title="Círculo trigonométrico"
-      subtitle="Seno e cosseno são as duas coordenadas do mesmo ponto."
+      title={foco.title}
+      subtitle={foco.subtitle}
       condition={{ label: 'raio', value: '= 1' }}
       ariaLabel="Prancha ilustrada da relação fundamental da trigonometria"
       scene={<TrigScene emphasis={par.emphasis} />}

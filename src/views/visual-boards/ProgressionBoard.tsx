@@ -3,6 +3,7 @@ import BoardShell from './BoardShell';
 import { boardPair } from './pair';
 import type { BoardProps } from './types';
 import { SceneNote } from './SceneNote';
+import { chapterFocus } from '../../lib/mathChapterFocus';
 
 /**
  * Termos de uma sequência com o passo entre eles marcado.
@@ -71,10 +72,14 @@ function SequenceScene({ emphasis }: { emphasis: 'esquerda' | 'direita' | 'nenhu
 
 export default function ProgressionBoard(props: BoardProps) {
   const par = boardPair(props);
+  const foco = chapterFocus(props.map.summaryId, {
+    title: 'PA e PG',
+    subtitle: 'A pergunta é sempre a mesma: o que se repete entre um termo e o próximo?',
+  });
   return (
     <BoardShell
-      title="PA e PG"
-      subtitle="A pergunta é sempre a mesma: o que se repete entre um termo e o próximo?"
+      title={foco.title}
+      subtitle={foco.subtitle}
       condition={{ label: 'o passo', value: '+ ou ×' }}
       ariaLabel="Prancha ilustrada de sequências: progressão aritmética e geométrica"
       scene={<SequenceScene emphasis={par.emphasis} />}
