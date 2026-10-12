@@ -371,14 +371,11 @@ export default function Visual() {
   useEffect(() => {
     setFocusReading(false); setJourneyStep(0); setMode('explorar'); setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
     setPlacements({}); setHistory([]); setGrades({}); setShowWhyHidden(false);
-    // Modelo espacial manipulável é o centro quando existe; a prancha autoral
-    // continua primeiro onde houver uma — e a cena que segue a etapa do palco
-    // (declara pontos em visual-stage/declarations) também: abrir no modelo
-    // espacial escondia justamente a cena que muda com o trilho ao lado.
-    const next = summaryId ? interactiveSummaries.find((item) => item.id === summaryId) : undefined;
-    const rep = next ? resolveVisualRepresentation(next) : 'fallback';
-    const cenaDoPalco = next && rep === 'scene' && stageDeclarationFor(next, rep) !== null;
-    setLayer(next && hasSpatialSupplement(next.id) && !cenaDoPalco && (rep === 'scene' || rep === 'fallback') ? 'espacial' : 'principal');
+    // A representação principal abre sempre primeiro. Abrir no modelo espacial
+    // quando a representação era 'scene' escondia a cena autoral validada em 77
+    // dos 112 capítulos de História e Geografia (visual-entrega-hg.spec.ts não
+    // achava a prancha); o modelo espacial continua a uma aba de distância.
+    setLayer('principal');
   }, [summaryId]);
 
   if (loading) {
