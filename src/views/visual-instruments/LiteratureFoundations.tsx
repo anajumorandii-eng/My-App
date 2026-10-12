@@ -318,31 +318,106 @@ const drawings: Record<LiteratureFoundationId, React.ComponentType<{ state: numb
   'poetry-contemporary': PoetryNow, 'prose-contemporary': ProseNow, 'lusophone-contemporary': Lusophone, 'brazilian-visual-arts': VisualArts,
   'brazilian-theater': Theater, 'popular-songbook': Songbook,
 };
-type WorkshopProps = { id: string; config: Foundation; Scene: React.ComponentType<{ state: number }>; manuscript: string; caption: string; literature?: boolean; extra?: React.ReactNode };
-/** A mesma oficina serve Literatura e Sociologia: só mudam a frase de abertura
- *  e o aviso sobre os exemplos. `data-literature-operation` fica só na
- *  Literatura porque os testes e o roteiro da Entrega F o usam como contrato. */
-export function OperationWorkshop({ id, config, Scene, manuscript, caption, literature = false, extra }: WorkshopProps) {
+/** Liga a oficina ao mapa do capítulo. Sem isso, escolher um estado da
+ *  oficina e escolher um nó do mapa eram dois controles que não se conheciam:
+ *  a estudante via "Retorno" na cena e o inspetor seguia falando de outra
+ *  relação. Cada estado já declara a seção do resumo de onde sai a âncora
+ *  (`section`), e os nós do mapa são essas mesmas seções — o vínculo é dado
+ *  existente, não inventado. */
+export interface WorkshopLink {
+  mode: BoardProps['mode'];
+  nodes: BoardProps['map']['nodes'];
+  selectedId: string | null;
+  /** Ids dos nós 1 e 2 — os do par de cartões — para marcar quais estados os alimentam. */
+  pairIds?: [string | null, string | null];
+}
+type WorkshopProps = { id: string; config: Foundation; Scene: React.ComponentType<{ state: number }>; manuscript: string; caption: string; literature?: boolean; extra?: React.ReactNode; link?: WorkshopLink };
+
+/** A leitura que o cartão da direita (nó 2) mostra como fórmula. Antes era uma
+ *  frase fixa por matéria ("tese → objeção → posição sustentada") repetida em
+ *  todos os capítulos: leitura de família no lugar da do capítulo. Agora vem da
+ *  conclusão do estado que sai da mesma seção do nó; sem estado correspondente,
+ *  a sequência de estados do próprio capítulo. */
+export function readingForSection(config: Foundation, section: string | undefined): string {
+  const match = section ? config.states.find(state => state.section === section) : undefined;
+  return match ? match.conclusion : config.states.map(state => state.label).join(' → ');
+}
+
+/** A oficina é a mesma em Literatura, Sociologia e Filosofia: só mudam a frase
+ *  de abertura e o aviso sobre os exemplos. `data-literature-operation` fica só
+ *  na Literatura porque os testes e o roteiro da Entrega F o usam como contrato. */
+export function OperationWorkshop({ id, config, Scene, manuscript, caption, literature = false, extra, link }: WorkshopProps) {
   const [index, setIndex] = useState(0);
+  const [revealed, setRevealed] = useState(false);
   const selected = config.states[index];
   const drawing = React.useRef<HTMLDivElement>(null);
+  const [overflows, setOverflows] = useState(true);
+  const nodeBySection = React.useMemo(() => new Map((link?.nodes ?? []).map(node => [node.label, node])), [link?.nodes]);
+  const selectedNode = link?.nodes.find(node => node.id === link.selectedId);
+  // Nó escolhido no mapa ou num cartão leva a oficina ao estado daquela seção.
+  // Só troca se o estado atual não for dessa seção: dois estados podem sair da
+  // mesma seção, e escolher o segundo não pode ser desfeito pelo efeito.
+  React.useEffect(() => {
+    if (!selectedNode) return;
+    if (config.states[index]?.section === selectedNode.label) return;
+    const target = config.states.findIndex(state => state.section === selectedNode.label);
+    if (target >= 0) { setIndex(target); setRevealed(false); }
+  }, [selectedNode?.id]);
+  // A dica de arrastar só aparece quando há o que arrastar: no desktop a cena
+  // cabe inteira e a instrução "deslize a prancha" apontava para nada.
+  React.useEffect(() => {
+    const element = drawing.current;
+    if (!element) return;
+    // Sem layout (jsdom, aba oculta) a largura é zero: mantém os controles.
+    const measure = () => setOverflows(element.clientWidth === 0 || element.scrollWidth > element.clientWidth + 1);
+    measure();
+    if (typeof ResizeObserver === 'undefined') return;
+    const observer = new ResizeObserver(measure);
+    observer.observe(element);
+    return () => observer.disconnect();
+  }, []);
+  // O sentido inverso (estado → nó) foi tentado e recusado: abaixo de 900px
+  // selecionar um nó abre o inspetor em gaveta com fundo, e cada toque num
+  // estado da oficina cobria a própria oficina. O vínculo fica na marca
+  // "cartão 1/2" e no nó escolhido levando ao estado.
+  const choose = (i: number) => { setIndex(i); setRevealed(false); };
   const pan = (amount: number) => { if (drawing.current) drawing.current.scrollLeft += amount; };
-  return <section className="lf-operation" data-operation={id} data-literature-operation={literature ? id : undefined} aria-label={config.question}>
+  // Em Reconstruir a conclusão fica fechada até a estudante pedir: ler a
+  // conclusão pronta logo acima do formulário esvaziava a reconstrução. Testar
+  // não monta a prancha, então não precisa do mesmo cuidado aqui.
+  const challenge = link?.mode === 'reconstruir';
+  const hideConclusion = challenge && !revealed;
+  const pairTag = (section: string) => {
+    const node = nodeBySection.get(section);
+    if (!node || !link?.pairIds) return null;
+    if (node.id === link.pairIds[0]) return 'cartão 1';
+    if (node.id === link.pairIds[1]) return 'cartão 2';
+    return null;
+  };
+  return <section className="lf-operation" data-operation={id} data-literature-operation={literature ? id : undefined} data-mode={link?.mode} aria-label={config.question}>
     <p className="lf-manuscript">{manuscript}</p>
-    <div className="lf-controls" role="group" aria-label={`Operações de ${config.topic}`}>{config.states.map((state, i) => <button type="button" key={state.label} aria-pressed={index === i} onClick={() => setIndex(i)}>{state.label}</button>)}</div>
+    <div className="lf-controls" role="group" aria-label={`Operações de ${config.topic}`}>{config.states.map((state, i) => {
+      const tag = pairTag(state.section);
+      return <button type="button" key={state.label} aria-pressed={index === i} onClick={() => choose(i)} data-pair={tag ?? undefined}>{state.label}{tag && <> <span className="lf-pair-tag">{tag}</span></>}</button>;
+    })}</div>
     <p className="lf-caption">{caption}</p>
-    <div className="lf-drawing-window" ref={drawing} tabIndex={0} role="region" aria-label={`Percorrer demonstração de ${config.topic}`} onKeyDown={event => {
+    <div className="lf-drawing-window" ref={drawing} tabIndex={overflows ? 0 : -1} role="region" aria-label={`Percorrer demonstração de ${config.topic}`} data-overflows={overflows ? 'true' : 'false'} onKeyDown={event => {
       if (event.target !== event.currentTarget) return;
       if (event.key === 'ArrowRight' || event.key === 'ArrowLeft') { event.preventDefault(); pan(event.key === 'ArrowRight' ? 160 : -160); }
       if (event.key === 'Home' || event.key === 'End') { event.preventDefault(); event.currentTarget.scrollLeft = event.key === 'Home' ? 0 : event.currentTarget.scrollWidth; }
     }}><Scene state={index}/></div>
-    <div className="lf-pan"><span>Deslize a prancha; com teclado, use as setas.</span><button type="button" aria-label="Percorrer demonstração para a esquerda" onClick={() => pan(-160)}>←</button><button type="button" aria-label="Percorrer demonstração para a direita" onClick={() => pan(160)}>→</button></div>
-    <div className="lf-reading" role="status" aria-live="polite"><blockquote>“{selected.anchor}”<cite>{selected.section}</cite></blockquote><div><strong>{selected.label}</strong><p>{selected.observation}</p><p className="lf-conclusion">{selected.conclusion}</p></div></div>
+    {overflows && <div className="lf-pan"><span>Deslize a prancha; com teclado, use as setas.</span><button type="button" aria-label="Percorrer demonstração para a esquerda" onClick={() => pan(-160)}>←</button><button type="button" aria-label="Percorrer demonstração para a direita" onClick={() => pan(160)}>→</button></div>}
+    <div className="lf-reading" role="status" aria-live="polite"><blockquote>“{selected.anchor}”<cite>{selected.section}</cite></blockquote><div><strong>{selected.label}</strong><p>{selected.observation}</p>
+      {hideConclusion
+        ? <div className="lf-challenge"><p>Antes de ver: o que se conclui de “{selected.label}”? Tente na reconstrução abaixo e depois confira.</p><button type="button" className="lf-inline-control" onClick={() => setRevealed(true)}>Conferir a conclusão</button></div>
+        : <p className="lf-conclusion">{selected.conclusion}</p>}
+      {selectedNode && selectedNode.label === selected.section && <p className="lf-node-link">Relação do mapa em foco: {selectedNode.label}</p>}
+    </div></div>
     {extra}
   </section>;
 }
-export function LiteratureOperation({ id }: { id: LiteratureFoundationId }) {
-  return <OperationWorkshop id={id} config={LITERATURE_FOUNDATIONS[id]} Scene={drawings[id]} literature
+export function LiteratureOperation({ id, link }: { id: LiteratureFoundationId; link?: WorkshopLink }) {
+  return <OperationWorkshop id={id} config={LITERATURE_FOUNDATIONS[id]} Scene={drawings[id]} literature link={link}
     manuscript="Leia a operação, não apenas o nome da escola."
     caption="Exemplos didáticos autorais. Não são versos ou cenas dos autores estudados."
     extra={id === 'art-languages' && <p className="lf-context">Contexto: critérios de beleza mudam. No retrato oficial, tamanho e luz podem legitimar poder. Avaliar a obra só pela proporção naturalista atual pode ser anacrônico; explicar seu contexto não obriga a aceitar a hierarquia.</p>}/>;
@@ -356,9 +431,9 @@ export function literatureFoundationInstrument(id: LiteratureFoundationId) {
     return <BoardShell title={config.topic} kicker="Oficina de leitura · fundamentos" subtitle={config.question}
       condition={{ label: 'Operação', value: 'Exemplos autorais' }} sceneFirst
       ariaLabel={`Oficina literária: ${props.map.title}`} emphasis={pair.emphasis}
-      scene={<LiteratureOperation id={id}/>}
+      scene={<LiteratureOperation id={id} link={{ mode: props.mode, nodes: props.map.nodes, selectedId: props.selectedId, pairIds: [pair.leftId, pair.rightId] }}/>}
       left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? config.topic, detail: first?.excerpt ?? config.question, formula: config.relation }}
-      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? config.topic, detail: second?.excerpt ?? config.question, formula: 'marca textual → efeito → interpretação sustentada' }}
+      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? config.topic, detail: second?.excerpt ?? config.question, formula: readingForSection(config, second?.label) }}
       leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight}
       closing="Uma leitura pode ser plural, mas precisa explicar as marcas que a sustentam."/>;
   };

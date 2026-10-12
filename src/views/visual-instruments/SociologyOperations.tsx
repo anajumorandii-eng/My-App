@@ -5,7 +5,7 @@ import BoardShell from '../visual-boards/BoardShell';
 import { boardPair } from '../visual-boards/pair';
 import type { BoardProps } from '../visual-boards/types';
 import { useSceneMotion } from '../topic-scenes/useSceneMotion';
-import { Arrow, Box, Drawing, Line, OperationWorkshop, type Foundation } from './LiteratureFoundations';
+import { Arrow, Box, Drawing, Line, OperationWorkshop, readingForSection, type Foundation, type WorkshopLink } from './LiteratureFoundations';
 
 /** Sociologia aplica o conceito a um caso. A auditoria apontou, nestes
  *  dezenove capítulos (H3 e H2), cartões e grades que só trocavam rótulo ou veredito: aqui cada
@@ -395,8 +395,8 @@ const drawings: Record<SociologyOperationId, React.ComponentType<{ state: number
   'gender-inequality': GenderInequality, 'platform-work': PlatformWork, 'social-movements': SocialMovements,
   'democracy-forms': DemocracyForms, 'globalization-flows': GlobalizationFlows, 'nation-state': NationState,
 };
-export function SociologyOperation({ id }: { id: SociologyOperationId }) {
-  return <OperationWorkshop id={id} config={SOCIOLOGY_OPERATIONS[id]} Scene={drawings[id]}
+export function SociologyOperation({ id, link }: { id: SociologyOperationId; link?: WorkshopLink }) {
+  return <OperationWorkshop id={id} config={SOCIOLOGY_OPERATIONS[id]} Scene={drawings[id]} link={link}
     manuscript="Aplique o conceito ao caso, não apenas o nome."
     caption="Casos didáticos autorais. Não são dados de pesquisa nem citações dos autores estudados."/>;
 }
@@ -409,9 +409,9 @@ export function sociologyInstrument(id: SociologyOperationId) {
     return <BoardShell title={config.topic} kicker="Oficina de análise · sociologia" subtitle={config.question}
       condition={{ label: 'Operação', value: 'Casos autorais' }} sceneFirst
       ariaLabel={`Oficina de sociologia: ${props.map.title}`} emphasis={pair.emphasis}
-      scene={<SociologyOperation id={id}/>}
+      scene={<SociologyOperation id={id} link={{ mode: props.mode, nodes: props.map.nodes, selectedId: props.selectedId, pairIds: [pair.leftId, pair.rightId] }}/>}
       left={{ label: STAGE_LABEL[first?.stage ?? 'conceito'], headline: first?.label ?? config.topic, detail: first?.excerpt ?? config.question, formula: config.relation }}
-      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? config.topic, detail: second?.excerpt ?? config.question, formula: 'caso → conceito → explicação sustentada' }}
+      right={{ label: STAGE_LABEL[second?.stage ?? 'aplicacao'], headline: second?.label ?? config.topic, detail: second?.excerpt ?? config.question, formula: readingForSection(config, second?.label) }}
       leftState={pair.leftState} rightState={pair.rightState} leftSelected={pair.leftSelected} rightSelected={pair.rightSelected} onSelectLeft={pair.selectLeft} onSelectRight={pair.selectRight}
       closing="Um conceito sociológico se prova no caso, não na definição decorada."/>;
   };
