@@ -22,4 +22,7 @@
 .photo-mechanism button:focus-visible { outline:3px solid var(--photo-blue); outline-offset:3px; }
 .vs-study-board:has(.photo-mechanism) .vs-board-body { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .vs-study-board:has(.photo-mechanism) .vs-piston-wrap { grid-column:1/-1; min-width:0; }
-@media(max-width:900px) { .photo-mechanism,.vs-study-board:has(.photo-mechanism) .vs-board-body { grid-template-columns:minmax(0,1fr); } .photo-mechanism { gap:12px; } }
+/* Mesma armadilha da MechanismFrame: com o corpo em uma coluna entre 621 e
+   900 px, a área "esq" do Visual.css ficava com 0 px e o cartão da
+   fotossíntese media 40 px de largura no iPad em retrato. Só a moldura empilha. */
+@media(max-width:900px) { .photo-mechanism { grid-template-columns:minmax(0,1fr); gap:12px; } }
