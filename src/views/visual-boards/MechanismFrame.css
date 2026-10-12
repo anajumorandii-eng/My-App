@@ -19,9 +19,20 @@
 .mechanism-time { border-top:1px solid color-mix(in srgb,var(--vs-ink) 22%,transparent); padding-top:18px; margin-top:20px; }
 .vs-study-board:has(.mechanism-frame) .vs-board-body { grid-template-columns:repeat(2,minmax(0,1fr)); }
 .vs-study-board:has(.mechanism-frame) .vs-piston-wrap { grid-column:1/-1; min-width:0; }
-@media(max-width:900px) { .mechanism-frame,.vs-study-board:has(.mechanism-frame) .vs-board-body { grid-template-columns:minmax(0,1fr); } .mechanism-frame { gap:12px; } }
+/* Só a moldura empilha abaixo de 900 px. O corpo da prancha ficava junto nesta
+   regra com uma coluna, mas entre 621 e 900 px o Visual.css mantém as áreas
+   "cena cena" / "esq dir": com uma coluna declarada, a área "esq" virava uma
+   faixa de 0 px e o cartão do nó 1 media 40 px de largura e 3.400 de altura no
+   iPad em retrato (Membranas, Ácidos e bases, pH, Termoquímica). */
+@media(max-width:900px) { .mechanism-frame { grid-template-columns:minmax(0,1fr); gap:12px; } }
 @media(max-width:600px) {
   .mechanism-drawing text { font-size:21px; }
   .mechanism-drawing .mf-small { font-size:18px; }
   .mechanism-drawing .mf-heading { font-size:16px; letter-spacing:.3px; }
 }
+/* Osmose (Membranas) e pH (Ácidos e bases) entram como apoio, ao lado de duas
+   notas. Numa das duas colunas do apoio a moldura ficava com 275 px, a coluna
+   de controles reservava 215 e o desenho encolhia a 36 px: a legenda descia em
+   uma palavra por linha e a figura sumia. O mecanismo ocupa a linha inteira;
+   as notas seguem lado a lado embaixo. */
+.vs-support-grid > .mechanism-frame { grid-column: 1 / -1; }
