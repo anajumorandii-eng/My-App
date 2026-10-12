@@ -1,7 +1,8 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { motion } from 'motion/react';
 import { useSceneMotion } from '../useSceneMotion';
 import type { SceneEntry } from '../types';
+import { StageCaseLens, useStageCases, VEILED_CLAIM } from '../../visual-stage/stageCases';
 import '../TopicScene.css';
 import './QuimicaFenomenos.css';
 
@@ -17,11 +18,18 @@ export const FOCO = (ligado: boolean) => ({ opacity: ligado ? 1 : 0.82 });
 // `t` vem da família, que chama useSceneMotion(): é ela quem responde pelo
 // movimento reduzido, e o portão de movimento confere isso arquivo a arquivo.
 export function FenomenoFrame({ entry, cenas, t }: { entry: SceneEntry; cenas: Record<string, CenaFenomeno>; t: ReturnType<typeof useSceneMotion> }) {
-  const [ativo, setAtivo] = useState(0);
+  // No palco, a etapa ativa escolhe o caso (o que a seção da etapa discute) e o
+  // toque num caso leva o palco à etapa que o explica. Fora do palco o
+  // contexto não existe e a moldura volta a ser a escolha local de antes.
+  const cases = useStageCases(entry.items);
+  const ativo = cases.active;
   const { cena: CenaAtual, titulo } = cenas[entry.chapterId];
   const item = entry.items[ativo];
+  const coberto = cases.veiled.has(ativo);
+  const foco = new Set(cases.focus);
   return <section className="tc-scene qf-scene" aria-label={entry.question}>
     <header><small>CRIVO · {titulo}</small><h4>{entry.question}</h4></header>
+    <StageCaseLens cases={cases} items={entry.items} />
     {/* No celular o quadro de 480 encolhia a ~350 px e as legendas caíam para
         7 px. Mesmo precedente das cenas de História e Geografia: largura
         mínima e rolagem só dentro da prancha, nunca da página. */}
@@ -30,16 +38,22 @@ export function FenomenoFrame({ entry, cenas, t }: { entry: SceneEntry; cenas: R
       event.preventDefault();
       event.currentTarget.scrollLeft += event.key === 'ArrowRight' ? 120 : -120;
     }}>
-      <svg viewBox="0 0 480 300" className="qf-svg" role="img" aria-label={`${item.label}: ${item.claim}`}>
+      <svg viewBox="0 0 480 300" className="qf-svg" role="img" aria-label={coberto ? `${item.label}: ${VEILED_CLAIM}` : `${item.label}: ${item.claim}`}>
         <CenaAtual ativo={item.label} t={t} />
       </svg>
     </div>
     <p className="qf-pan-hint">Deslize a prancha para ver toda a figura. Com teclado, use as setas.</p>
     <div className="tc-choices" role="group" aria-label="Escolha o caso da prancha">
-      {entry.items.map((it, i) => <motion.button key={it.label} type="button" aria-pressed={ativo === i} onClick={() => setAtivo(i)} initial={false} animate={{ y: ativo === i ? -2 : 0 }} transition={t}>{it.label}</motion.button>)}
+      {entry.items.map((it, i) => <motion.button key={it.label} type="button" aria-pressed={ativo === i}
+        data-stage-focus={cases.stage && foco.has(i) ? 'true' : undefined} data-stage-veiled={cases.veiled.has(i) ? 'true' : undefined}
+        onClick={() => cases.choose(i)} initial={false} animate={{ y: ativo === i ? -2 : 0 }} transition={t}>{it.label}</motion.button>)}
     </div>
-    <p className="tc-observation" role="status" aria-live="polite"><strong>{item.label}:</strong> {item.claim}</p>
-    <blockquote className="tc-quote">“{item.quote}” <cite>{item.section}</cite></blockquote>
+    {coberto
+      ? <p className="tc-observation stage-veiled-claim" role="status" aria-live="polite"><strong>{item.label}:</strong> {VEILED_CLAIM}</p>
+      : <>
+        <p className="tc-observation" role="status" aria-live="polite"><strong>{item.label}:</strong> {item.claim}</p>
+        <blockquote className="tc-quote">“{item.quote}” <cite>{item.section}</cite></blockquote>
+      </>}
     <p className="qf-nota">Desenho esquemático: formas e proporções ilustram o mecanismo; o texto e a citação vêm do resumo.</p>
   </section>;
 }

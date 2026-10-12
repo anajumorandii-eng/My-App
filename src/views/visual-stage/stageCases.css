@@ -1,0 +1,48 @@
+/* Faixa da etapa dentro da cena (stageCases.tsx). Tokens do design system: é
+   por eles que Caderno e Papel chegam aqui; nada de cor fixa. */
+.stage-lens {
+  display: grid; gap: 8px; margin: 0 0 10px; padding: 8px 10px;
+  border: 1px solid var(--vs-line, var(--surface-border, rgba(0,0,0,.12)));
+  border-left: 4px solid var(--action-primary, #7a1f2b);
+  border-radius: 12px; background: var(--surface-2, rgba(0,0,0,.03));
+}
+.stage-lens-step { display: grid; grid-template-columns: auto minmax(0, 1fr) auto; align-items: center; gap: 8px; }
+.stage-lens-step p { margin: 0; min-width: 0; display: grid; }
+.stage-lens-step small { font: 600 10.5px/1.3 Inter, system-ui, sans-serif; letter-spacing: .04em; opacity: .75; }
+.stage-lens-step strong { font-size: 14px; line-height: 1.3; overflow: hidden; text-overflow: ellipsis; white-space: nowrap; }
+.stage-lens-step button {
+  display: inline-grid; place-items: center; width: 40px; height: 40px; border-radius: 10px;
+  border: 1px solid var(--vs-line, rgba(0,0,0,.15)); background: var(--surface-1, transparent); color: inherit;
+}
+.stage-lens-step button:disabled { opacity: .35; }
+.stage-lens-step button svg { width: 18px; height: 18px; }
+.stage-lens-focus { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; font-size: 12.5px; }
+.stage-lens-focus ul { display: flex; flex-wrap: wrap; gap: 6px; margin: 0; padding: 0; list-style: none; }
+.stage-lens-focus li button {
+  min-height: 34px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+  border: 1px solid var(--action-primary, #7a1f2b); background: transparent; color: inherit;
+}
+.stage-lens-focus li button[aria-pressed="true"] { background: var(--action-primary, #7a1f2b); color: var(--text-inverse, #fff); }
+.stage-lens-mission { margin: 0; font-size: 13px; line-height: 1.45; }
+.stage-lens button:focus-visible { outline: 3px solid var(--action-primary, #7a1f2b); outline-offset: 2px; }
+
+/* Casos que a etapa discute ganham marca; o coberto em Reconstruir, tracejado. */
+[data-stage-focus="true"] { box-shadow: inset 0 -3px 0 var(--action-primary, #7a1f2b); }
+[data-stage-veiled="true"] { outline: 2px dashed var(--action-primary, #7a1f2b); outline-offset: 2px; }
+.stage-veiled-claim { font-style: italic; opacity: .85; }
+
+/* Dentro do palco, a pergunta da cena deixa de ser manchete: em 1366×900 o
+   título de quatro linhas empurrava a molécula para fora da área visível.
+   A especificidade precisa passar a de ChapterSceneFrame.css, que fixa 39px. */
+.crivo-visual.crivo-visual--stage .vs-stage-viewport .tc-scene:has(> .stage-lens) > header h4 { font-size: clamp(1.05rem, 1.6vw, 1.3rem); line-height: 1.25; margin: 2px 0 6px; }
+.crivo-visual.crivo-visual--stage .vs-stage-viewport .tc-scene:has(> .stage-lens) > header p { font-size: 13px; margin: 0 0 6px; }
+.stage-lens-chip {
+  min-height: 34px; padding: 4px 10px; border-radius: 999px; font-size: 12.5px; font-weight: 600;
+  border: 1px solid var(--action-primary, #7a1f2b); background: transparent; color: inherit;
+}
+.stage-lens-chip[aria-pressed="true"] { background: var(--action-primary, #7a1f2b); color: var(--text-inverse, #fff); }
+
+/* No laboratório (.vs-instrument é grade de figura + controles), a faixa da
+   etapa ocupa a largura toda acima dos dois. */
+.crivo-visual .vs-instrument > .stage-lens { grid-column: 1 / -1; grid-row: 1; }
+.crivo-visual .vs-instrument:has(> .stage-lens) > .vs-plane { grid-row: 2 / span 6; }
