@@ -4,15 +4,52 @@ import { boardPair } from './pair';
 import type { BoardProps } from './types';
 import WaveMechanism, { type WaveKind } from './WaveMechanism';
 
+type Leitura = {
+  subtitle: string;
+  condition: { label: string; value: string };
+  ariaLabel: string;
+  equation: { label: string; general: string; condition: string; reduced: string };
+  closing: string;
+};
+
+// A prancha atende três capítulos e o mecanismo já mudava com o capítulo, mas
+// condição, equação e ideia central eram as da equação fundamental nos três:
+// Ondas Eletromagnéticas lia "v fixa no mesmo meio" sem citar c nem o vácuo, e
+// Som não dizia os 340 m/s que o próprio resumo usa. Os números vêm dos resumos.
+const LEITURA: Record<WaveKind, Leitura> = {
+  transverse: {
+    subtitle: 'Uma perturbação que transporta energia sem transportar matéria.',
+    condition: { label: 'no mesmo meio', value: 'v fixa' },
+    ariaLabel: 'Prancha ilustrada da equação fundamental da ondulatória',
+    equation: { label: 'Equação fundamental', general: 'v = λ · f', condition: 'com v constante', reduced: 'λ ∝ 1/f' },
+    closing: 'a velocidade da onda é do meio, a frequência é da fonte, e o comprimento é o que sobra da razão entre as duas.',
+  },
+  sound: {
+    subtitle: 'Onda mecânica longitudinal: precisa de meio e não atravessa o vácuo.',
+    condition: { label: 'no ar', value: '≈ 340 m/s' },
+    ariaLabel: 'Prancha ilustrada do som e suas propriedades',
+    equation: { label: 'Som no ar', general: 'v = λ · f', condition: 'v ≈ 340 m/s', reduced: 'agudo: f maior, λ menor' },
+    closing: 'a frequência decide grave ou agudo, a amplitude decide forte ou fraco, e o meio decide a velocidade — no vácuo não há som.',
+  },
+  electromagnetic: {
+    subtitle: 'Campos elétrico e magnético que se sustentam, mesmo sem meio material.',
+    condition: { label: 'no vácuo', value: 'c fixa' },
+    ariaLabel: 'Prancha ilustrada de ondas eletromagnéticas',
+    equation: { label: 'No vácuo', general: 'c = λ · f', condition: 'c ≈ 3×10⁸ m/s', reduced: 'λ ∝ 1/f' },
+    closing: 'no vácuo todas as faixas do espectro andam a c; o que distingue rádio, luz e raios X é a frequência, e λ acompanha.',
+  },
+};
+
 export default function WaveBoard(props: BoardProps) {
   const par = boardPair(props);
   const kind: WaveKind = props.map.summaryId.endsWith('som-e-suas-propriedades') ? 'sound' : props.map.summaryId.endsWith('ondas-eletromagneticas') ? 'electromagnetic' : 'transverse';
+  const leitura = LEITURA[kind];
   return (
     <BoardShell
       title={kind === 'sound' ? 'Som: compressões que se propagam' : kind === 'electromagnetic' ? 'Ondas eletromagnéticas' : 'Onda: comprimento e frequência'}
-      subtitle="Uma perturbação que transporta energia sem transportar matéria."
-      condition={{ label: 'no mesmo meio', value: 'v fixa' }}
-      ariaLabel="Prancha ilustrada de ondulatória"
+      subtitle={leitura.subtitle}
+      condition={leitura.condition}
+      ariaLabel={leitura.ariaLabel}
       scene={<WaveMechanism kind={kind} />}
       sceneFirst
       emphasis={par.emphasis}
@@ -34,7 +71,7 @@ export default function WaveBoard(props: BoardProps) {
       rightSelected={par.rightSelected}
       onSelectLeft={par.selectLeft}
       onSelectRight={par.selectRight}
-      equation={{ label: 'Equação fundamental', general: 'v = λ · f', condition: 'com v constante', reduced: 'λ ∝ 1/f' }}
+      equation={leitura.equation}
       supports={
         <>
           <section className="vs-formula-note">
@@ -50,7 +87,7 @@ export default function WaveBoard(props: BoardProps) {
           </section>
         </>
       }
-      closing="a velocidade da onda é do meio, a frequência é da fonte, e o comprimento é o que sobra da razão entre as duas."
+      closing={leitura.closing}
     />
   );
 }
