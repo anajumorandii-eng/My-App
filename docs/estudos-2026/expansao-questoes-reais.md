@@ -72,3 +72,30 @@ Resultados finais:
 - `npm run lint`: passou após a versão final.
 - `npm run build`: passou; permanecem os avisos de tamanho de chunks e de imports do projeto.
 - Integridade final: as 2.887 entradas anteriores foram comparadas por id e conteúdo; **zero registros anteriores alterados**, 72 acrescentados. O TXT de gabarito também tem hash próprio, preservando a extração que foi conferida contra o PDF primário.
+
+## Caderno em PDF
+
+[Caderno Unicamp 2026 — 99 páginas](../../public/real-exams/unicamp-2026.pdf), também oferecido para download na tela de Questões quando o recorte é Unicamp/2026.
+
+- Páginas 1–2: orientação e localização por matéria.
+- Páginas 3–26: as 24 páginas originais da prova, mantidas em formato vetorial.
+- Página 27: gabarito oficial.
+- Páginas 28–99: uma resolução e revisão por questão; a questão n fica na página 27 + n.
+
+Inclui marcadores de navegação para cada questão original e cada resolução. A prova/gabarito foram incorporados sem alterar seus fluxos de conteúdo; o verificador compara essas páginas com os PDFs primários. Os 72 comentários foram comparados integralmente com o banco, normalizando apenas espaços: nenhuma perda de texto, fórmula ou critério na impressão. Foram inspecionadas a orientação e resoluções, incluindo a questão de cinemática com mais texto.
+
+Para reproduzir:
+
+```sh
+npx tsx scripts/generateRealExamWorkbook.ts /tmp/editorial.html
+```
+
+Exporte esse HTML para `/tmp/editorial.pdf` com Chromium, respeitando o tamanho/margens definidos no CSS, com fundos e sem cabeçalhos/rodapés automáticos. A parte editorial deve ter 74 páginas. Depois, com `pypdf` instalado:
+
+```sh
+python3 scripts/montar-caderno-unicamp-2026.py /tmp/editorial.pdf /caminho/prova.pdf /caminho/gabarito.pdf public/real-exams/unicamp-2026.pdf
+```
+
+O montador confere hashes das fontes, paginação, gabaritos por número e todo o texto editorial antes de montar, e confirma 99 páginas e integridade dos originais no resultado. Os PDFs de entrada são temporários; o caderno comentado é o artefato publicado.
+
+O download do PDF foi integrado ao recorte Unicamp/2026 e coberto pelos testes da tela. Tipos, testes direcionados e build foram conferidos novamente após essa integração. O artefato empacotado tem o mesmo hash do caderno publicado.

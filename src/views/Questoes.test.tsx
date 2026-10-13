@@ -67,10 +67,12 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     expect(screen.getByText('Prova de 2026')).toBeInTheDocument();
     expect(screen.queryByText(QUESTION.explanation)).not.toBeInTheDocument();
     expect(screen.getByLabelText('Tópico')).toHaveTextContent('Genética (1)');
+    expect(screen.getByRole('link', { name: /Caderno Unicamp 2026/ })).toHaveAttribute('href', '/real-exams/unicamp-2026.pdf');
     expect(screen.getByRole('button', { name: /Só Questões Reais \(1\)/ })).toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: /Só Questões Reais/ }));
     expect(screen.getByLabelText('Banca')).toHaveValue('all');
     expect(screen.getByLabelText('Ano da prova')).toHaveValue('all');
+    expect(screen.queryByRole('link', { name: /Caderno Unicamp 2026/ })).not.toBeInTheDocument();
     expect(screen.getByText(/Questão 1 de 3/)).toBeInTheDocument();
   });
 

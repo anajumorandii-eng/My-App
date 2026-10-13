@@ -569,6 +569,14 @@ export default function Questoes() {
         </label>
       </div>
 
+      {boardFilter === 'UNICAMP' && yearFilter === '2026' && (
+        <p className="mb-4 text-xs">
+          <a href="/real-exams/unicamp-2026.pdf" download className="ni-link">
+            Caderno Unicamp 2026 — baixar PDF com prova, gabarito e resoluções · 99 páginas
+          </a>
+        </p>
+      )}
+
       {question ? (
         <section className="ni-grid ni-grid--practice">
           {/* Left Workspace Panel */}
