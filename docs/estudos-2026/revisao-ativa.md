@@ -15,3 +15,9 @@ Em Revisões, escolha matéria, banca e capítulo e reserve 15, 30 ou 45 minutos
 Sem exercício de recuperação, o recorte não pode ser registrado. Sem questão de aplicação compatível, a limitação é explícita e o resultado é apenas de recuperação, sem nota forte. Critérios ausentes ou erro na aplicação impedem nota forte; o erro recebe resultado fraco. A comparação dos critérios é autoavaliação, não correção automática de texto. A recomendação de duração é uma estimativa, não um cronômetro nem uma promessa de completar todo o conteúdo.
 
 A sessão fixa sua questão ao iniciar. Atualizações remotas do banco não trocam o exercício durante a tentativa. Falha de gravação preserva a resposta e permite tentar novamente. Resumos agendados e revisitas de erros continuam integrados à página.
+
+## Adicionar revisão
+
+Na aba Revisões, use **Adicionar revisão**, escolha matéria, tópico, capítulo opcional, banca opcional e data, e pressione **Salvar revisão**. O formulário lista capítulos que já dispõem de recuperação ativa. A data considera São Paulo; agendamentos novos começam hoje ou em uma data futura. Um recorte idêntico na mesma data não é adicionado novamente.
+
+As revisões manuais aparecem em ordem de data, com **Abrir revisão** para iniciar o treino. Agendar não conta como revisão feita nem altera domínio. Na conta conectada, os agendamentos ficam no Firestore privado da conta. A conclusão grava o resultado de domínio e o status da revisão na mesma transação, uma única vez por ID, mesmo em uma repetição após falha ou em outra aba. Sem login, os agendamentos ficam somente neste navegador, isolados dos dados da conta; o progresso do treino permanece em demonstração.

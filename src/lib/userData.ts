@@ -335,3 +335,28 @@ export async function saveErrorRevisitResult(uid: string, errorId: string, day: 
   if (!uid || !errorId || !result) throw new Error('Revisita inválida.');
   await setDoc(doc(db, 'users', uid, 'errorLogs', errorId), { revisitResults: { [day]: result } }, { merge: true });
 }
+
+/** A conclusão manual e seu efeito no progresso compartilham a mesma transação. */
+export async function completeUserManualReview(
+  uid: string, reviewId: string, rating: 'fraco' | 'mediano' | 'forte'
+): Promise<TopicMastery[]> {
+  const reviewRef = doc(db, 'users', uid, 'manualReviews', reviewId);
+  const masteryRef = doc(db, 'users', uid, 'data', 'mastery');
+  const { applyReviewOutcome, qualityFromSelfRating } = await import('./spacedRepetition');
+  const now = new Date();
+  return runTransaction(db, async transaction => {
+    const reviewSnapshot = await transaction.get(reviewRef);
+    const masterySnapshot = await transaction.get(masteryRef);
+    if (!reviewSnapshot.exists()) throw new Error('Revisão não encontrada.');
+    const review = reviewSnapshot.data();
+    if (!mockTopics.some(topic => topic.id === review.topicId)) throw new Error('Tópico indisponível.');
+    const current = reconcileMastery(masterySnapshot.exists() ? (masterySnapshot.data().items ?? []) : []);
+    if (review.status === 'completed') return current;
+    if (review.status !== 'scheduled') throw new Error('Estado de revisão inválido.');
+    const next = current.map(item => item.topicId === review.topicId
+      ? { ...item, ...applyReviewOutcome(item, qualityFromSelfRating(rating), now) } : item);
+    transaction.set(masteryRef, { items: next, updatedAt: serverTimestamp() }, { merge: true });
+    transaction.set(reviewRef, { status: 'completed' }, { merge: true });
+    return next;
+  });
+}
