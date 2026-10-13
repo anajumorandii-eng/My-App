@@ -370,3 +370,11 @@ describe('Questoes — visibilidade do filtro de questões reais', () => {
     expect(grupos.every((grupo) => (grupo as HTMLOptGroupElement).children.length > 0)).toBe(true);
   });
 });
+
+it.each(['Citoplasma', 'Mitocôndria'])('mostra justificativa da alternativa correta ao responder %s', async answer => {
+  const user = userEvent.setup();
+  render(<Questoes />);
+  await user.click(screen.getByRole('button', { name: new RegExp(answer) }));
+  expect(screen.getByText('Por que a alternativa correta está certa')).toBeInTheDocument();
+  expect(screen.getByText(QUESTION.explanation)).toBeInTheDocument();
+});

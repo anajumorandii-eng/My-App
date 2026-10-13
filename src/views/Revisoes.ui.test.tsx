@@ -6,7 +6,7 @@ import Revisoes from './Revisoes';
 
 // Doze tópicos, todos vencidos: o bastante para passar do primeiro lote.
 const topicos = mockTopics.slice(0, 12);
-const mastery = topicos.map((topic) => ({
+let mastery = topicos.map((topic) => ({
   topicId: topic.id,
   level: 40,
   uncertainty: 0.4,
@@ -15,6 +15,7 @@ const mastery = topicos.map((topic) => ({
 }));
 
 const { stream } = vi.hoisted(() => ({ stream: vi.fn(async () => ({ text: 'Revisão detalhada gerada' })) }));
+vi.mock('../hooks/useQuestions', () => ({ useQuestions: () => ({ questions: [], loading: false, syncError: null }) }));
 vi.mock('../components/ReviewDayContext', () => ({ default: () => <div>Revisão na rotina</div> }));
 vi.mock('../lib/aiClient', () => ({ requestAiTextStream: stream }));
 
@@ -49,4 +50,16 @@ it('envia banca e subtópico selecionados e não reutiliza revisão de outra ban
   await screen.findByText('Revisão detalhada gerada');
   fireEvent.change(screen.getByLabelText('Banca da revisão'), { target: { value: 'ENEM / Inep' } });
   expect(screen.queryByText('Revisão detalhada gerada')).toBeNull();
+});
+
+
+it('mantém a tentativa iniciada quando o progresso reordena a fila fora dos dez primeiros', () => {
+  const original = mastery;
+  const { rerender } = render(<MemoryRouter><Revisoes /></MemoryRouter>);
+  fireEvent.click(screen.getAllByRole('button', { name: 'Iniciar revisão ativa · 10–15 min' })[0]);
+  fireEvent.change(screen.getByLabelText('Sua explicação sem consulta'), { target: { value: 'Minha resposta preservada' } });
+  mastery = original.map((entry, index) => index === 0 ? { ...entry, level: 100, uncertainty: 0, lastReviewed: new Date().toISOString() } : entry);
+  rerender(<MemoryRouter><Revisoes /></MemoryRouter>);
+  expect(screen.getByLabelText('Sua explicação sem consulta')).toHaveValue('Minha resposta preservada');
+  mastery = original;
 });
