@@ -1,3 +1,4 @@
+import { lazy, Suspense } from 'react';
 import React, { useState } from 'react';
 import {
   generalResolutionMethod,
@@ -10,9 +11,12 @@ import { Panel } from '../components/ui/Panel';
 import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
-type Tab = 'metodo' | 'materia' | 'banca' | 'segunda-fase';
+const StrategyExplorer = lazy(() => import('../components/StrategyExplorer'));
+
+type Tab = 'guia' | 'metodo' | 'materia' | 'banca' | 'segunda-fase';
 
 const TABS: { id: Tab; label: string }[] = [
+  { id: 'guia', label: 'Banca, matéria e tópico' },
   { id: 'metodo', label: 'Método Geral' },
   { id: 'materia', label: 'Por Matéria' },
   { id: 'banca', label: 'Por Banca' },
@@ -21,7 +25,7 @@ const TABS: { id: Tab; label: string }[] = [
 
 
 export default function Estrategias() {
-  const [tab, setTab] = useState<Tab>('metodo');
+  const [tab, setTab] = useState<Tab>('guia');
   const [expandedSubject, setExpandedSubject] = useState<string | null>(subjectStrategies[0]?.subject ?? null);
   const [expandedProtocol, setExpandedProtocol] = useState<string | null>(null);
 
@@ -69,6 +73,8 @@ export default function Estrategias() {
           );
         })}
       </div>
+
+      {tab === 'guia' && <Suspense fallback={<p role="status">Carregando estratégias...</p>}><StrategyExplorer /></Suspense>}
 
       {/* Method Tab */}
       {tab === 'metodo' && (

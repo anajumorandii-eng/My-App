@@ -1,6 +1,8 @@
+import AdaptiveStudyDay from '../../components/AdaptiveStudyDay';
 import { useEffect, useState } from 'react';
 import { CalendarDays, Clock3, Save } from 'lucide-react';
 import { useDailyStudyAvailability } from './useDailyStudyAvailability';
+import { createCourseRoutine } from './courseRoutine';
 import { entriesAreSafe } from './scheduleSafety';
 import { motion } from 'motion/react';
 import {
@@ -73,13 +75,13 @@ export default function AgendaView() {
     setExceptionForm(newExceptionForm(localDate, exception));
   }, [exception, localDate]);
 
-  const updateStudyWindow = (day: Weekday, entryId: string, field: 'start' | 'end', value: string) => {
+  const updateStudyWindow = (day: Weekday, entryId: string, field: 'start' | 'end' | 'label' | 'kind' | 'purpose', value: string) => {
     setScheduleSaveError(null);
     setDraftSchedule((current) => current && {
       ...current,
       days: {
         ...current.days,
-        [day]: current.days[day].map((entry) => entry.id === entryId ? { ...entry, [field]: value } : entry),
+        [day]: current.days[day].map((entry) => entry.id === entryId ? Object.fromEntries(Object.entries({ ...entry, [field]: value, ...(field === 'kind' && value !== 'study_window' ? { purpose: '' } : {}) }).filter(([key, val]) => key !== 'purpose' || val === 'review')) as unknown as ScheduleEntry : entry),
       },
     });
     setEditedEntryIds((current) => new Set(current).add(entryId));
@@ -87,7 +89,7 @@ export default function AgendaView() {
 
   const addStudyWindow = (day: Weekday) => setDraftSchedule((current) => current && ({
     ...current,
-    days: { ...current.days, [day]: [...current.days[day], { id: `${day}-study`, label: 'Estudo autônomo', kind: 'study_window', start: '14:40', end: day === 'sunday' ? '15:30' : '20:30' }] },
+    days: { ...current.days, [day]: [...current.days[day], { id: `${day}-study-${Date.now()}-${Math.random().toString(36).slice(2, 7)}`, label: 'Estudo autônomo', kind: 'study_window', start: '14:40', end: day === 'sunday' ? '15:30' : '20:30' }] },
   }));
 
   const removeStudyWindow = (day: Weekday, entryId: string) => setDraftSchedule((current) => current && ({
@@ -105,7 +107,7 @@ export default function AgendaView() {
       return;
     }
     if (WEEKDAYS.some(({ key }) => !entriesAreSafe(key, draftSchedule.days[key]))) {
-      setScheduleSaveError('Janelas de estudo não podem sobrepor períodos protegidos nem passar de 20:30 de segunda a sábado.');
+      setScheduleSaveError('Janelas não podem sobrepor compromissos. Estudo termina até 20:30 e revisão até 21:00 de segunda a sábado.');
       return;
     }
     const confirmedSchedule: WeeklySchedule = {
@@ -166,7 +168,12 @@ export default function AgendaView() {
       <section aria-labelledby="semana-recorrente" className="space-y-3">
         <div>
           <h2 id="semana-recorrente" className="text-xl font-semibold">Semana recorrente</h2>
-          <p className="text-sm text-zinc-600 dark:text-zinc-400">Compromissos são apenas um resumo; edite as janelas de estudo.</p>
+          <p className="text-sm text-zinc-600 dark:text-zinc-400">Edite aulas, refeições, deslocamentos, descanso e janelas de estudo. Confirme as estimativas antes de salvar.</p>
+        </div>
+        <div className="rounded-xl border border-[var(--line)] p-4 space-y-2">
+          <h3 className="font-semibold">Rotina com cursinho e revisão noturna</h3>
+          <p className="text-sm text-[var(--dim)]">Modelo do cronograma: aulas até 13h45, Obras quinta 15h50–16h40, pausas de 15 minutos e revisão 20h30–21h. Horários e deslocamentos aguardam sua conferência. Carregar altera o rascunho; use Salvar semana para aplicar.</p>
+          <button type="button" className="text-sm underline" onClick={() => { setDraftSchedule(createCourseRoutine(new Date().toISOString())); setEditedEntryIds(new Set()); setScheduleSaveError(null); }}>Carregar rotina do cronograma</button>
         </div>
         <div className="grid gap-3 md:grid-cols-2 xl:grid-cols-3">
           {WEEKDAYS.map(({ key, label }, index) => (
@@ -222,9 +229,11 @@ export default function AgendaView() {
         </div>
       </section>
 
+      <AdaptiveStudyDay localDate={localDate} availability={availability} schedule={schedule} />
+
       <section aria-labelledby="disponibilidade-efetiva" className="rounded-2xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-4 space-y-3">
         <div className="flex items-center justify-between gap-4">
-          <div><h2 id="disponibilidade-efetiva" className="text-xl font-semibold">Disponibilidade efetiva</h2><p className="text-sm text-zinc-600 dark:text-zinc-400">Para {localDate}</p></div>
+          <div><h2 id="disponibilidade-efetiva" className="text-xl font-semibold">Capacidade da rotina antes das restrições de prova</h2><p className="text-sm text-zinc-600 dark:text-zinc-400">Para {localDate}. O plano acima aplica prova e véspera a estas janelas.</p></div>
           <strong className="text-indigo-600 dark:text-indigo-400">{availability?.totalMinutes ?? 0} min</strong>
         </div>
         <p role="status" className="text-sm text-zinc-600 dark:text-zinc-400">Calendar: {availability?.warnings.some(({ code }) => code === 'calendar-disconnected') ? 'desconectado' : availability?.warnings.some(({ code }) => code === 'calendar-failed') ? 'falha na consulta' : availability?.status === 'ready' ? 'exceções aplicadas' : 'indisponível'}</p>
@@ -247,8 +256,20 @@ function Field({ label, children }: { label: string; children: React.ReactNode }
   return <label className="block text-sm font-medium text-zinc-700 dark:text-zinc-300">{label}<span className="mt-1 block">{children}</span></label>;
 }
 
-function WeekdayCard({ label, entries, onChange, onAdd, onRemove }: { label: string; entries: ScheduleEntry[]; onChange: (entryId: string, field: 'start' | 'end', value: string) => void; onAdd: () => void; onRemove: (entryId: string) => void }) {
-  const studyEntries = entries.filter((entry) => entry.kind === 'study_window');
-  const protectedEntries = entries.filter((entry) => entry.kind !== 'study_window');
-  return <article className="rounded-xl border border-zinc-200 dark:border-zinc-800 bg-white dark:bg-zinc-900 p-3 space-y-3"><h3 className="font-semibold">{label}</h3><ul className="text-sm text-zinc-600 dark:text-zinc-400 space-y-1">{protectedEntries.map((entry) => <li key={entry.id}>{entry.label}: {entry.start}–{entry.end}{entry.isEstimate && <span className="ml-2 text-amber-700 dark:text-amber-300">Estimativa editável</span>}</li>)}</ul>{studyEntries.map((entry) => <div key={entry.id} className="grid grid-cols-2 gap-2"><Field label={`Início de ${label.toLowerCase()}`}><input aria-label={`Início de ${label.toLowerCase()}`} type="time" value={entry.start} onChange={(event) => onChange(entry.id, 'start', event.target.value)} className="field" /></Field><Field label={`Fim de ${label.toLowerCase()}`}><input aria-label={`Fim de ${label.toLowerCase()}`} type="time" value={entry.end} onChange={(event) => onChange(entry.id, 'end', event.target.value)} className="field" /></Field>{entry.isEstimate && <p className="col-span-2 text-xs text-amber-700 dark:text-amber-300">Estimativa editável</p>}<button type="button" onClick={() => onRemove(entry.id)} className="col-span-2 text-sm text-red-700 dark:text-red-400">Remover janela</button></div>)}{studyEntries.length === 0 && <button type="button" onClick={onAdd} className="text-sm text-indigo-700 dark:text-indigo-300">Adicionar janela</button>}</article>;
+function WeekdayCard({ label, entries, onChange, onAdd, onRemove }: { label: string; entries: ScheduleEntry[]; onChange: (entryId: string, field: 'start' | 'end' | 'label' | 'kind' | 'purpose', value: string) => void; onAdd: () => void; onRemove: (entryId: string) => void }) {
+  return <article className="rounded-xl border border-[var(--line)] bg-[var(--surface)] p-3 space-y-3">
+    <h3 className="font-semibold">{label}</h3>
+    {entries.map((entry, index) => <details key={entry.id} className="border-t border-[var(--line)] pt-2">
+      <summary className="cursor-pointer text-sm">{entry.label}: {entry.start}–{entry.end}{entry.isEstimate && <span className="ml-2 text-xs text-amber-700 dark:text-amber-300">Estimativa editável</span>}</summary>
+      <div className="grid grid-cols-2 gap-2 mt-2">
+        <Field label={`Atividade de ${label.toLowerCase()} ${index + 1}`}><input value={entry.label} onChange={(event) => onChange(entry.id, 'label', event.target.value)} className="field" /></Field>
+        <Field label={`Tipo de ${label.toLowerCase()} ${index + 1}`}><select value={entry.kind} onChange={(event) => onChange(entry.id, 'kind', event.target.value)} className="field">{[['class','Aula'],['transport','Deslocamento'],['meal','Refeição'],['rest','Descanso'],['study_window','Estudo'],['unavailable','Compromisso']].map(([value, name]) => <option key={value} value={value}>{name}</option>)}</select></Field>
+        <Field label={`Início de ${label.toLowerCase()} ${index + 1}`}><input aria-label={entry.kind === 'study_window' && entries.filter((e) => e.kind === 'study_window').length === 1 ? `Início de ${label.toLowerCase()}` : `Início de ${label.toLowerCase()} ${index + 1}`} type="time" value={entry.start} onChange={(event) => onChange(entry.id, 'start', event.target.value)} className="field" /></Field>
+        <Field label={`Fim de ${label.toLowerCase()} ${index + 1}`}><input aria-label={entry.kind === 'study_window' && entries.filter((e) => e.kind === 'study_window').length === 1 ? `Fim de ${label.toLowerCase()}` : `Fim de ${label.toLowerCase()} ${index + 1}`} type="time" value={entry.end} onChange={(event) => onChange(entry.id, 'end', event.target.value)} className="field" /></Field>
+        {entry.kind === 'study_window' && <Field label={`Finalidade de ${label.toLowerCase()} ${index + 1}`}><select value={entry.purpose ?? ''} onChange={(event) => onChange(entry.id, 'purpose', event.target.value)} className="field"><option value="">Estudo e prática (50 min)</option><option value="review">Revisão e erros (15–30 min)</option></select></Field>}
+        <button type="button" onClick={() => onRemove(entry.id)} className="text-sm text-red-700 dark:text-red-400">Remover {entry.kind === 'study_window' ? 'janela' : 'atividade'}</button>
+      </div>
+    </details>)}
+    <button type="button" onClick={onAdd} className="text-sm underline">Adicionar janela ou compromisso</button>
+  </article>;
 }

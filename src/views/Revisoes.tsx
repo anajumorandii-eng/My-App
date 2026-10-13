@@ -1,3 +1,6 @@
+import ReviewDayContext from '../components/ReviewDayContext';
+import { ReviewInsightCard } from '../components/ReviewInsightCard';
+import { isoToLocalDate } from '../features/availability/time';
 import React, { useEffect, useMemo, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { TopicMastery } from '../types';
@@ -28,8 +31,12 @@ export default function Revisoes() {
   const { mastery: masteryState, updateMastery, isPersisted, syncError } = useUserMastery();
   const { progress: summaryProgress } = useSummaryProgress();
   const [tips, setTips] = useState<Record<string, string>>({});
+  const [tipErrors, setTipErrors] = useState<Record<string, string>>({});
   const [loadingTipFor, setLoadingTipFor] = useState<string | null>(null);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
+  const [board, setBoard] = useState('');
+  const [chapters, setChapters] = useState<Record<string, string>>({});
+  const tipKey = (topicId: string) => JSON.stringify([topicId, board, chapters[topicId] ?? '']);
   // A fila chegava a 105 cartões numa página de 24 mil pixels. Ela já vem
   // ordenada por urgência: as primeiras dizem o que fazer agora.
   const [visiveis, setVisiveis] = useState(10);
@@ -72,19 +79,23 @@ export default function Revisoes() {
   };
 
   const fetchTip = async (mastery: TopicMastery, topicName: string, subject: string) => {
-    setLoadingTipFor(mastery.topicId);
+    const key = tipKey(mastery.topicId);
+    setLoadingTipFor(key);
+    setTipErrors((prev) => ({ ...prev, [key]: '' }));
     try {
       const daysSinceReview = Math.round((Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000);
       let acumulado = '';
-      const data = await requestAiTextStream('review-tip', { topic: topicName, subject, level: mastery.level, daysSinceReview }, (delta) => {
+      const data = await requestAiTextStream('review-tip', { topic: topicName, subject, board: board || undefined, chapter: chapters[mastery.topicId] || undefined, chapters: mockTopics.find((t) => t.id === mastery.topicId)?.chapters?.join('; '), level: mastery.level, daysSinceReview }, (delta) => {
         acumulado += delta;
-        setTips((prev) => ({ ...prev, [mastery.topicId]: acumulado }));
+        setTips((prev) => ({ ...prev, [key]: acumulado }));
       });
-      setTips((prev) => ({ ...prev, [mastery.topicId]: data.text }));
+      setTips((prev) => ({ ...prev, [key]: data.text }));
     } catch (error) {
       console.error('Failed to fetch review tip:', error);
+      setTips((prev) => { const next = { ...prev }; delete next[key]; return next; });
+      setTipErrors((prev) => ({ ...prev, [key]: 'Não foi possível preparar a revisão. Tente novamente.' }));
     } finally {
-      setLoadingTipFor(null);
+      setLoadingTipFor((current) => current === key ? null : current);
     }
   };
 
@@ -110,7 +121,7 @@ export default function Revisoes() {
       <div className="ni-title">
         <div>
           <h1>Revise antes que o prazo vença.</h1>
-          <p>O algoritmo SM-2 calcula o momento exato de revisar cada tópico para blindar a retenção.</p>
+          <p>As revisões combinam espaçamento, desempenho registrado e tempo disponível. Recupere o conteúdo antes de consultar a explicação.</p>
         </div>
         <div className="ni-state">
           <i /> {pendingToday > 0 ? `${pendingToday} revisões urgentes hoje` : 'retenção em dia'}
@@ -170,11 +181,22 @@ export default function Revisoes() {
         </div>
       </Panel>
 
+      <label className="flex flex-wrap items-center gap-2 mt-4 text-xs text-[var(--dim)]">
+        Banca da revisão
+        <select value={board} onChange={(event) => setBoard(event.target.value)} className="rounded-lg border border-[var(--line)] bg-[var(--surface)] p-2 text-[var(--text)]">
+          <option value="">Comparar bancas</option>
+          {['Fuvest', 'Unicamp / Comvest', 'Unesp / Vunesp', 'Famerp', 'Unifesp', 'ENEM / Inep'].map((name) => <option key={name} value={name}>{name}</option>)}
+        </select>
+      </label>
+
+      <ReviewDayContext localDate={isoToLocalDate(new Date().toISOString())} />
+
       {/* Reviews queue */}
       <div className="space-y-3 mt-4">
         {filteredQueue.slice(0, visiveis).map(({ mastery, topic, urgency }) => {
-          const tip = tips[mastery.topicId];
-          const isLoadingTip = loadingTipFor === mastery.topicId;
+          const key = tipKey(mastery.topicId);
+          const tip = tips[key];
+          const isLoadingTip = loadingTipFor === key;
           const subPalette = PALETTES[topic!.subject] ?? PALETTES.Matemática;
           const SubjIcon = SUBJECT_ICONS[topic!.subject] ?? Repeat;
 
@@ -236,17 +258,31 @@ export default function Revisoes() {
                 </div>
               </div>
 
+              <ReviewInsightCard mastery={mastery} />
+
+              {!!topic!.chapters?.length && (
+                <label className="flex flex-wrap items-center gap-2 mt-3 text-xs text-[var(--dim)]">
+                  Tópico da revisão
+                  <select value={chapters[mastery.topicId] ?? ''} onChange={(event) => setChapters((prev) => ({ ...prev, [mastery.topicId]: event.target.value }))} className="max-w-full rounded-lg border border-[var(--line)] bg-[var(--surface)] p-2 text-[var(--text)]">
+                    <option value="">Visão geral de {topic!.name}</option>
+                    {topic!.chapters!.map((name) => <option key={name} value={name}>{name}</option>)}
+                  </select>
+                </label>
+              )}
+
               {!tip && (
                 <button
                   onClick={() => fetchTip(mastery, topic!.name, topic!.subject)}
-                  disabled={isLoadingTip}
+                  disabled={loadingTipFor !== null}
                   className="mt-3 inline-flex items-center px-3 py-1 text-xs font-medium subject-text border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                 >
                   <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${isLoadingTip ? 'animate-pulse' : ''}`} />
-                  {isLoadingTip ? 'Gerando dica...' : 'Dica rápida com IA'}
+                  {isLoadingTip ? 'Preparando revisão...' : 'Revisão por banca e tópico'}
                 </button>
               )}
 
+              {tipErrors[key] && <p role="alert" className="mt-2 text-xs text-[var(--status-error)]">{tipErrors[key]}</p>}
+              {isLoadingTip && tip && <p role="status" className="mt-2 text-xs text-[var(--dim)]">Preparando revisão...</p>}
               {tip && (
                 <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
                   <div className="flex items-start gap-2">

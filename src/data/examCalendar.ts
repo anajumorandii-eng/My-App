@@ -1,16 +1,6 @@
-// Datas reais dos vestibulares de Medicina 2026, verificadas diretamente nos
-// portais oficiais de cada instituição (Comvest, Fuvest, Vunesp, Santa Casa,
-// Einstein, Sírio-Libanês, INEP) em agosto de 2026 — não apenas lidas do
-// calendário interno do Anglo, que mistura provas oficiais com simulados
-// próprios (ex.: "AP-1".."AP-8", "FUVEST 1".."FUVEST 7", "ENEM 1".."ENEM 4",
-// "UNICAMP 1"/"2", "UNESP 1"/"2") e havia levado a algumas datas erradas aqui
-// numa primeira leitura (Unicamp 1ª fase, Santa Casa, Einstein e Unesp
-// tinham sido lidas incorretamente — corrigido depois de checar as fontes
-// oficiais). Unifesp (Medicina, Sistema Misto) ficou de fora: não foi
-// possível confirmar a data exata do ciclo 2027 nas buscas — no ciclo
-// anterior as provas complementares foram em 18-19/dez, então o padrão é
-// meados/fim de dezembro, mas vale conferir em ingresso.unifesp.br antes de
-// confiar numa data específica.
+// Calendário de provas com proveniência por registro. Rechecagem de 13/10:
+// docs/estudos-2026/fontes-e-evidencias.md. Datas ainda sem confirmação
+// independente ficam com confiança baixa e não bloqueiam automaticamente a agenda.
 export interface VestibularExam {
   id: string;
   board: string;
@@ -53,58 +43,62 @@ export const vestibularCalendar2026: VestibularExam[] = [
   {
     id: 'unicamp-1fase', board: 'Unicamp', phase: '1a-fase',
     label: 'UNICAMP (Comvest) — 1ª fase', date: '2026-10-18',
-    source: 'CNN Brasil — "Unicamp divulga datas do vestibular 2027"', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf', verifiedOn: '2026-10-13', confidence: 'alta',
   },
   {
     id: 'unicamp-2fase-d1', board: 'Unicamp', phase: '2a-fase',
     label: 'UNICAMP — 2ª fase, dia 1', date: '2026-11-29',
-    source: 'CNN Brasil — "Unicamp divulga datas do vestibular 2027"', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf', verifiedOn: '2026-10-13', confidence: 'alta',
   },
   {
     id: 'unicamp-2fase-d2', board: 'Unicamp', phase: '2a-fase',
     label: 'UNICAMP — 2ª fase, dia 2', date: '2026-11-30',
-    source: 'CNN Brasil — "Unicamp divulga datas do vestibular 2027"', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'https://www.comvest.unicamp.br/wp-content/uploads/2026/07/VU2027-Manual-do-Ingresso.pdf', verifiedOn: '2026-10-13', confidence: 'alta',
   },
   {
     id: 'fuvest-1fase', board: 'Fuvest', phase: '1a-fase',
     label: 'FUVEST — 1ª fase', date: '2026-11-01',
-    source: 'fuvest.br — "FUVEST divulga cronograma completo do Vestibular 2027"', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'https://www.fuvest.br/vestibular-da-usp/', verifiedOn: '2026-10-13', confidence: 'alta',
   },
   {
     id: 'fuvest-2fase-d1', board: 'Fuvest', phase: '2a-fase',
     label: 'FUVEST — 2ª fase, dia 1', date: '2026-12-06',
-    source: 'fuvest.br — "FUVEST divulga cronograma completo do Vestibular 2027"', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'https://www.fuvest.br/vestibular-da-usp/', verifiedOn: '2026-10-13', confidence: 'alta',
   },
   {
     id: 'fuvest-2fase-d2', board: 'Fuvest', phase: '2a-fase',
     label: 'FUVEST — 2ª fase, dia 2', date: '2026-12-07',
-    source: 'fuvest.br — "FUVEST divulga cronograma completo do Vestibular 2027"', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'https://www.fuvest.br/vestibular-da-usp/', verifiedOn: '2026-10-13', confidence: 'alta',
   },
   {
     id: 'enem-d1', board: 'ENEM', phase: 'unica',
     label: 'ENEM — Dia 1', date: '2026-11-08',
-    source: 'Edital nº 64/INEP (22/05/2026), citado por vestibulandoweb.com.br', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-falta-um-mes-para-o-primeiro-dia-de-provas', verifiedOn: '2026-10-13', confidence: 'alta',
   },
   {
     id: 'enem-d2', board: 'ENEM', phase: 'unica',
     label: 'ENEM — Dia 2', date: '2026-11-15',
-    source: 'Edital nº 64/INEP (22/05/2026), citado por vestibulandoweb.com.br', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'https://www.gov.br/inep/pt-br/centrais-de-conteudo/noticias/enem/enem-2026-falta-um-mes-para-o-primeiro-dia-de-provas', verifiedOn: '2026-10-13', confidence: 'alta',
   },
   {
     id: 'unesp-1fase', board: 'UNESP', phase: '1a-fase',
     label: 'UNESP (Vunesp) — 1ª fase', date: '2026-11-22',
-    source: 'agenciasp.sp.gov.br — "Vestibular 2027: Unesp divulga calendário de inscrições"', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'https://vestibular.unesp.br/', verifiedOn: '2026-10-13', confidence: 'alta',
   },
   {
     id: 'unesp-2fase-d1', board: 'UNESP', phase: '2a-fase',
     label: 'UNESP — 2ª fase, dia 1', date: '2026-12-13',
-    source: 'agenciasp.sp.gov.br — "Vestibular 2027: Unesp divulga calendário de inscrições"', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'Cronograma fornecido; conferir edital vigente em https://vestibular.unesp.br/', verifiedOn: '2026-10-13', confidence: 'baixa',
   },
   {
     id: 'unesp-2fase-d2', board: 'UNESP', phase: '2a-fase',
     label: 'UNESP — 2ª fase, dia 2', date: '2026-12-14',
-    source: 'agenciasp.sp.gov.br — "Vestibular 2027: Unesp divulga calendário de inscrições"', verifiedOn: VERIFIED_ON, confidence: 'alta',
+    source: 'Cronograma fornecido; conferir edital vigente em https://vestibular.unesp.br/', verifiedOn: '2026-10-13', confidence: 'baixa',
   },
+  { id: 'famerp-d1', board: 'Famerp', phase: 'unica', label: 'FAMERP — conhecimentos gerais', date: '2026-12-10', source: 'https://www.famerp.br/wp-content/plugins/download-attachments/includes/download.php?id=31419', verifiedOn: '2026-10-13', confidence: 'alta' },
+  { id: 'famerp-d2', board: 'Famerp', phase: 'unica', label: 'FAMERP — específicos e redação', date: '2026-12-11', source: 'https://www.famerp.br/wp-content/plugins/download-attachments/includes/download.php?id=31419', verifiedOn: '2026-10-13', confidence: 'alta' },
+  { id: 'unifesp-d1', board: 'Unifesp', phase: '2a-fase', label: 'UNIFESP — dia 1 (a confirmar)', date: '2026-12-17', source: 'Cronograma fornecido; confirmação pendente em https://ingresso.unifesp.br/', verifiedOn: '2026-10-13', confidence: 'baixa' },
+  { id: 'unifesp-d2', board: 'Unifesp', phase: '2a-fase', label: 'UNIFESP — dia 2 (a confirmar)', date: '2026-12-18', source: 'Cronograma fornecido; confirmação pendente em https://ingresso.unifesp.br/', verifiedOn: '2026-10-13', confidence: 'baixa' },
 ];
 
 // Comparação de nome de banca tolerante a maiúsculas/minúsculas — o app usa

@@ -99,7 +99,8 @@ function isWeeklySchedule(value: unknown): value is WeeklySchedule {
 function isBlockPolicy(value: unknown): value is WeeklySchedule['blockPolicy'] {
   return isRecord(value)
     && value.blockMinutes === 50
-    && value.shortBreakMinutes === 10
+    && (value.allowShortStudyBlocks === undefined || typeof value.allowShortStudyBlocks === 'boolean')
+    && (value.shortBreakMinutes === 10 || value.shortBreakMinutes === 15)
     && value.longBreakMinutes === 30
     && value.blocksBeforeLongBreak === 3;
 }
@@ -117,7 +118,8 @@ function isScheduleEntry(value: unknown): value is ScheduleEntry {
     && isTime(value.start)
     && isTime(value.end)
     && value.end > value.start
-    && (value.isEstimate === undefined || typeof value.isEstimate === 'boolean');
+    && (value.isEstimate === undefined || typeof value.isEstimate === 'boolean')
+    && (value.purpose === undefined || (value.kind === 'study_window' && value.purpose === 'review'));
 }
 
 function isScheduleException(value: unknown): value is ScheduleException {

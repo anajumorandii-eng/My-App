@@ -76,13 +76,13 @@ describe('allocateStudyActions', () => {
     expect(allocated[2].intervalStart).toBe('2026-08-24T16:00:00.000Z');
   });
 
-  it('never backfills a later-priority action before an already allocated action', () => {
+  it('preenche sobras sem deslocar ações prioritárias e retorna ordem cronológica', () => {
     const allocated = allocateStudyActions(
       [action('high-45', 45, 100), action('middle-45', 45, 90), action('low-5', 5, 80)],
       intervals,
     );
-    expect(allocated.map(({ id }) => id)).toEqual(['high-45', 'middle-45', 'low-5']);
-    expect(allocated.map(({ priorityScore }) => priorityScore)).toEqual([100, 90, 80]);
+    expect(allocated.map(({ id }) => id)).toEqual(['high-45', 'low-5', 'middle-45']);
+    expect(allocated.map(({ priorityScore }) => priorityScore)).toEqual([100, 80, 90]);
     expect(allocated.every((item, index) => index === 0 || item.intervalStart >= allocated[index - 1].intervalStart)).toBe(true);
   });
 
@@ -100,4 +100,18 @@ describe('allocateStudyActions', () => {
       expect(allocatedAction.intervalEnd <= containingInterval!.end).toBe(true);
     }
   });
+});
+
+it('reserva revisão noturna para revisão/erros e preenche intervalos menores que uma ação anterior não usou', () => {
+  const review = { ...action('review', 15, 80), type: 'review' as const };
+  const short = action('short', 20, 70);
+  const windows: StudyInterval[] = [
+    { start: '2026-10-13T14:30:00-03:00', end: '2026-10-13T14:50:00-03:00', durationMinutes: 20 },
+    { start: '2026-10-13T16:00:00-03:00', end: '2026-10-13T16:50:00-03:00', durationMinutes: 50 },
+    { start: '2026-10-13T20:30:00-03:00', end: '2026-10-13T21:00:00-03:00', durationMinutes: 30, purpose: 'review' },
+  ];
+  const result = allocateStudyActions([action('long', 45, 100), review, short], windows);
+  expect(result.find((a) => a.id === 'review')?.intervalStart).toBe(windows[2].start);
+  expect(result.find((a) => a.id === 'short')?.intervalStart).toBe(windows[0].start);
+  expect(result.find((a) => a.id === 'long')?.intervalStart).toBe(windows[1].start);
 });

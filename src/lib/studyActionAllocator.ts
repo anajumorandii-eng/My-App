@@ -6,6 +6,7 @@ interface IntervalCursor {
   cursor: string;
   cursorMs: number;
   endMs: number;
+  purpose?: 'review';
 }
 
 export function allocateStudyActions(
@@ -13,7 +14,8 @@ export function allocateStudyActions(
   intervals: StudyInterval[],
 ): AllocatedStudyAction[] {
   const cursors = intervals
-    .map(({ start, end }): IntervalCursor => ({
+    .map(({ start, end, purpose }): IntervalCursor => ({
+      purpose,
       end,
       cursor: start,
       cursorMs: new Date(start).getTime(),
@@ -23,7 +25,6 @@ export function allocateStudyActions(
     .sort((left, right) => left.cursorMs - right.cursorMs);
 
   const allocated: AllocatedStudyAction[] = [];
-  let currentIntervalIndex = 0;
 
   for (const action of prioritizedActions) {
     if (!Number.isFinite(action.estimatedMinutes) || action.estimatedMinutes <= 0 || action.estimatedMinutes > 50) {
@@ -31,14 +32,10 @@ export function allocateStudyActions(
     }
 
     const durationMs = action.estimatedMinutes * 60_000;
-    while (
-      currentIntervalIndex < cursors.length
-      && cursors[currentIntervalIndex].cursorMs + durationMs > cursors[currentIntervalIndex].endMs
-    ) {
-      currentIntervalIndex += 1;
-    }
-
-    const cursor = cursors[currentIntervalIndex];
+    const fits = (cursor: IntervalCursor) => cursor.cursorMs + durationMs <= cursor.endMs;
+    const canReview = action.type === 'review' || action.type === 'error_analysis';
+    const cursor = (canReview ? cursors.find((cursor) => cursor.purpose === 'review' && fits(cursor)) : undefined)
+      ?? cursors.find((cursor) => !cursor.purpose && fits(cursor));
     if (!cursor) continue;
 
     const intervalEndMs = cursor.cursorMs + durationMs;
@@ -53,5 +50,5 @@ export function allocateStudyActions(
     cursor.cursor = intervalEnd;
   }
 
-  return allocated;
+  return allocated.sort((a, b) => new Date(a.intervalStart).getTime() - new Date(b.intervalStart).getTime());
 }

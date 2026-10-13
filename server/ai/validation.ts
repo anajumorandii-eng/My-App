@@ -140,6 +140,9 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
       };
     case 'question-explanation':
       return {
+        board: optionalString(payload, 'board', MAX_SHORT_TEXT),
+        topic: optionalString(payload, 'topic', MAX_SHORT_TEXT),
+        chapter: optionalString(payload, 'chapter', MAX_SHORT_TEXT),
         prompt: requiredString(payload, 'prompt', MAX_LONG_TEXT),
         subject: requiredString(payload, 'subject'),
         selectedAnswer: requiredString(payload, 'selectedAnswer', MAX_LONG_TEXT),
@@ -206,6 +209,11 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
       };
     case 'review-tip':
       return {
+        guideMode: optionalString(payload, 'guideMode', 30),
+        referenceText: optionalString(payload, 'referenceText', MAX_LONG_TEXT),
+        board: optionalString(payload, 'board', MAX_SHORT_TEXT),
+        chapter: optionalString(payload, 'chapter', MAX_SHORT_TEXT),
+        chapters: optionalString(payload, 'chapters', 6000),
         topic: requiredString(payload, 'topic'),
         subject: requiredString(payload, 'subject'),
         level: requiredNumber(payload, 'level', 0, 100),

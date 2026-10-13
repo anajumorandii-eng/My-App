@@ -1,3 +1,4 @@
+import { useSearchParams } from 'react-router-dom';
 import React, { useEffect, useMemo, useState } from 'react';
 import { mockErrorLogs, mockTopics } from '../data/mockData';
 import { ErrorLog } from '../types';
@@ -23,6 +24,8 @@ const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
 
 export default function Erros() {
   const { user, isConnected } = useAuth();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const selectedRecord = searchParams.get('registro');
   const { progress: summaryProgress } = useSummaryProgress();
   const [logs, setLogs] = useState<ErrorLog[]>(mockErrorLogs);
   const [typeFilter, setTypeFilter] = useState<ErrorLog['type'] | 'all'>('all');
@@ -52,8 +55,8 @@ export default function Erros() {
   }, [user]);
 
   const filtered = useMemo(
-    () => (typeFilter === 'all' ? logs : logs.filter((l) => l.type === typeFilter)),
-    [logs, typeFilter]
+    () => selectedRecord ? logs.filter((log) => log.id === selectedRecord) : (typeFilter === 'all' ? logs : logs.filter((l) => l.type === typeFilter)),
+    [logs, typeFilter, selectedRecord]
   );
 
   const countsByType = useMemo(() => {
@@ -265,6 +268,7 @@ export default function Erros() {
         </Panel>
       )}
 
+      {selectedRecord && <div className="ni-panel p-3 mb-3 text-sm"><p>Registro selecionado pela revisita: {selectedRecord}</p><button type="button" className="underline" onClick={() => setSearchParams({})}>Mostrar todos os registros</button></div>}
       {/* List of error logs */}
       <div className="space-y-3">
         {filtered.map((log) => {

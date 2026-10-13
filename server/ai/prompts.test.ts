@@ -205,3 +205,61 @@ test('diagnóstico da questão prioriza o relato da estudante quando ele existe'
   assert.match(semRelato, /Ela não soube dizer por que errou/);
   assert.match(semRelato, /Sem relato, use "baixa"/);
 });
+
+test('resolução recebe banca e subtópico pela validação e justifica cada etapa', () => {
+  const payload = validateAiPayload('question-explanation', {
+    board: 'FUVEST', topic: 'Funções', chapter: 'Função exponencial',
+    subject: 'Matemática', prompt: 'Determine o tempo de duplicação.',
+    selectedAnswer: '2 horas', correctAnswer: '2 horas', isCorrect: true,
+    baseExplanation: 'Use o modelo exponencial.',
+  });
+  const prompt = buildAiPrompt('question-explanation', payload);
+  assert.match(prompt, /Banca em foco: FUVEST/);
+  assert.match(prompt, /Subtópico em foco: Função exponencial/);
+  assert.match(prompt, /Em cada etapa mostre a ação, o princípio/);
+  assert.match(prompt, /Se a aluna acertou/);
+  assert.match(prompt, /Não invente frequência/);
+});
+
+test('revisão preserva o recorte de banca e capítulo e separa perguntas dos critérios', () => {
+  const payload = validateAiPayload('review-tip', {
+    board: 'Unicamp / Comvest', subject: 'Biologia', topic: 'Genética',
+    chapter: 'Herança Sexual', chapters: 'Herança Sexual; Ligação Gênica',
+    level: 30, daysSinceReview: 12,
+  });
+  const prompt = buildAiPrompt('review-tip', payload);
+  assert.match(prompt, /Banca em foco: Unicamp \/ Comvest/);
+  assert.match(prompt, /Subtópico em foco: Herança Sexual/);
+  assert.match(prompt, /domínio baixo exige bases e pré-requisitos/);
+  assert.match(prompt, /em bloco separado/);
+  assert.match(prompt, /mini-exemplo resolvido por etapas/);
+});
+
+test('clientes antigos sem banca continuam válidos sem atribuição inventada', () => {
+  const payload = validateAiPayload('review-tip', {
+    subject: 'História', topic: 'Brasil Colônia', level: 80, daysSinceReview: 3,
+  });
+  assert.match(buildAiPrompt('review-tip', payload), /Banca não informada/);
+  assert.throws(() => validateAiPayload('review-tip', { ...payload, board: 123 }));
+  assert.throws(() => validateAiPayload('review-tip', { ...payload, chapters: 'x'.repeat(6001) }));
+});
+
+
+test('detalhamento inclui decisões intermediárias, limites de aplicação e rubrica da transferência', () => {
+  const resolution = buildAiPrompt('question-explanation', validateAiPayload('question-explanation', {
+    subject: 'Física', prompt: 'Calcule a aceleração.', selectedAnswer: '2', correctAnswer: '3',
+    isCorrect: false, baseExplanation: 'Aplique a segunda lei de Newton.',
+  }));
+  assert.match(resolution, /resultado intermediário/);
+  assert.match(resolution, /hipóteses e condições de validade/);
+  assert.match(resolution, /primeiro ponto em que esse caminho/);
+  assert.match(resolution, /solução comentada da transferência/);
+  const review = buildAiPrompt('review-tip', validateAiPayload('review-tip', {
+    subject: 'Biologia', topic: 'Genética', level: 90, daysSinceReview: 5,
+  }));
+  assert.match(review, /exemplos e contraexemplos/);
+  assert.match(review, /dois pequenos enunciados autorais/);
+  assert.match(review, /quatro perguntas de recuperação/);
+  assert.match(review, /completa, parcial ou que precisa ser refeita/);
+  assert.match(review, /não anuncie cobertura integral/);
+});

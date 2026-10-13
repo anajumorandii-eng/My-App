@@ -1,3 +1,5 @@
+import { useDailyStudyAvailability } from '../features/availability/useDailyStudyAvailability';
+import { todayInSaoPaulo } from '../features/availability/time';
 import React, { useMemo } from 'react';
 import { useStudentGoals } from '../hooks/useStudentGoals';
 import { buildRoadmap, upcomingMilestones } from '../lib/studyRoadmap';
@@ -18,6 +20,7 @@ function formatRange(start: string, end: string): string {
 
 export default function RetaFinal() {
   const { goals } = useStudentGoals();
+  const { schedule, loading: scheduleLoading, syncError: scheduleError } = useDailyStudyAvailability(todayInSaoPaulo());
 
   const milestones = useMemo(() => upcomingMilestones(goals), [goals]);
   const horizon = useMemo(() => {
@@ -28,8 +31,8 @@ export default function RetaFinal() {
   const weeks = useMemo(() => {
     const from = new Date();
     const until = horizon ?? new Date(from.getFullYear(), from.getMonth() + 4, from.getDate());
-    return buildRoadmap(goals, from, until);
-  }, [goals, horizon]);
+    return schedule ? buildRoadmap(goals, from, until, schedule) : [];
+  }, [goals, horizon, schedule]);
 
   const totalNetHours = useMemo(
     () => Math.round(weeks.reduce((sum, w) => sum + w.netStudyMinutes, 0) / 60),
@@ -63,6 +66,9 @@ export default function RetaFinal() {
         </div>
       </div>
 
+      <p className="text-xs text-[var(--dim)] mb-4">Capacidade estimada pela rotina salva, com restrições de prova e véspera. Calendar e exceções futuras ainda precisam ser conferidos. Segunda fase depende de convocação.</p>
+      {scheduleLoading && <p role="status">Carregando sua rotina para calcular o horizonte...</p>}
+      {scheduleError && <p role="alert">{scheduleError}</p>}
       {/* Milestone countdown cards */}
       {milestones.length > 0 && (
         <section className="grid grid-cols-1 sm:grid-cols-3 gap-4 mb-4">
@@ -75,7 +81,7 @@ export default function RetaFinal() {
             >
               <div className="flex items-center text-[10px] font-mono text-[var(--dim)] mb-1 uppercase tracking-wider">
                 <CalendarClock className="w-3.5 h-3.5 mr-1.5 subject-text" />
-                {exam.label}
+                {exam.label}{exam.confidence !== 'alta' ? ' · a confirmar' : ''}
               </div>
               <p className="text-2xl font-bold font-mono subject-text">
                 {daysUntil(exam.date) === 0 ? 'É hoje' : `${daysUntil(exam.date)} dias`}
