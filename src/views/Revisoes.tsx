@@ -1,3 +1,4 @@
+import { ManualReviewsPanel } from '../components/ManualReviewsPanel';
 import { ActiveTopicReview } from '../components/ActiveTopicReview';
 import { useQuestions } from '../hooks/useQuestions';
 import ReviewDayContext from '../components/ReviewDayContext';
@@ -25,7 +26,7 @@ type SelfRating = 'fraco' | 'mediano' | 'forte';
 
 export default function Revisoes() {
   const { questions, loading: questionsLoading } = useQuestions();
-  const { mastery: masteryState, updateMastery, isPersisted, syncError } = useUserMastery();
+  const { mastery: masteryState, updateMastery, acceptCommittedMastery, isPersisted, syncError } = useUserMastery();
   const { progress: summaryProgress } = useSummaryProgress();
   const [tips, setTips] = useState<Record<string, string>>({});
   const [tipErrors, setTipErrors] = useState<Record<string, string>>({});
@@ -134,6 +135,8 @@ export default function Revisoes() {
         </p>
       )}
       {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
+
+      <ManualReviewsPanel questions={questions} loading={questionsLoading} onReview={rateReview} onCommitted={acceptCommittedMastery} />
 
       {/* Subject Filter Bar */}
       <div className="ni-subjects">
