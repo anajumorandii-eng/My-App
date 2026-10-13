@@ -81,16 +81,20 @@ export default function Questoes() {
   const { mastery, updateMastery, isPersisted, syncError } = useUserMastery();
   const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions();
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
-  const [subjectFilter, setSubjectFilter] = useState('Todas');
+  const requestScope = new URLSearchParams(window.location.search);
+  const requestedTopic = mockTopics.find(topic => topic.id === requestScope.get('topic'));
+  const rawBoard = canonicalExamBoard(requestScope.get('board') ?? '');
+  const requestedBoard = ['FUVEST', 'UNICAMP', 'UNESP', 'FAMERP', 'UNIFESP', 'ENEM'].includes(rawBoard) ? rawBoard : 'all';
+  const [subjectFilter, setSubjectFilter] = useState(requestedTopic?.subject ?? 'Todas');
   // A matéria filtrada dá a cor da tela, como nos Resumos e no Visual.
   const ambiente = useMemo(() => (subjectFilter !== 'Todas' ? ambienteDaMateria(subjectFilter) : null), [subjectFilter]);
   useAmbienteDaTela(ambiente);
-  const [topicFilter, setTopicFilter] = useState<string>(ALL);
+  const [topicFilter, setTopicFilter] = useState<string>(requestedTopic?.id ?? ALL);
   const [subtopicFilter, setSubtopicFilter] = useState<string>(ALL);
-  const [onlyRealExams, setOnlyRealExams] = useState(false);
-  const [boardFilter, setBoardFilter] = useState('all');
+  const [onlyRealExams, setOnlyRealExams] = useState(requestedBoard !== 'all');
+  const [boardFilter, setBoardFilter] = useState(requestedBoard);
   const [yearFilter, setYearFilter] = useState('all');
-  const examBoards = useMemo(() => [...new Set(mockQuestions.flatMap(q => q.examSource ? [canonicalExamBoard(q.examSource.board)] : []))].sort(), [mockQuestions]);
+  const examBoards = useMemo(() => [...new Set([...(requestedBoard !== 'all' ? [requestedBoard] : []), ...mockQuestions.flatMap(q => q.examSource ? [canonicalExamBoard(q.examSource.board)] : [])])].sort(), [mockQuestions, requestedBoard]);
   const examYears = useMemo(() => {
     const questions = mockQuestions.filter(q => q.examSource && matchesExamFilters(q, boardFilter, 'all'));
     return {

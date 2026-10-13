@@ -1,3 +1,4 @@
+import { PriorityStudyPanel } from '../components/PriorityStudyPanel';
 import React, { useMemo, useState } from 'react';
 import { examPriorities, targetExamBoards, extraExamBoards } from '../data/examPriorities';
 import { literaryWorks } from '../data/literaryWorks';
@@ -9,12 +10,12 @@ import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
 
 export default function Prioridades() {
-  const subjects = useMemo(() => examPriorities.map((s) => s.subject), []);
+  const subjects = useMemo(() => [...examPriorities.map((s) => s.subject), 'Literatura', 'Redação', 'Filosofia', 'Sociologia'], []);
   const [activeSubject, setActiveSubject] = useState(subjects[0]);
   const [expandedBoard, setExpandedBoard] = useState<string | null>(null);
   const [expandedWork, setExpandedWork] = useState<string | null>(null);
 
-  const data = examPriorities.find((s) => s.subject === activeSubject)!;
+  const data = examPriorities.find((s) => s.subject === activeSubject) ?? { subject: activeSubject, regionalSummary: [], byBoard: [] };
   const allBoards = [...targetExamBoards, ...extraExamBoards];
 
   // Map subject name to matching palette key
@@ -47,7 +48,7 @@ export default function Prioridades() {
       <div className="ni-title">
         <div>
           <h1>Foque onde o retorno é maior.</h1>
-          <p>Análise de incidência estatística de temas nas provas mais concorridas de Medicina.</p>
+          <p>Escolha o que estudar, entenda a recomendação e transforme a prioridade em resolução e revisão.</p>
         </div>
         <div className="ni-state">
           <i /> {activeSubject} · Raio-X de Incidência
@@ -79,11 +80,13 @@ export default function Prioridades() {
       </div>
 
       <div className="space-y-4">
+        <PriorityStudyPanel key={activeSubject} subject={activeSubject} />
         {/* Regional Summary Panel */}
         <Panel subject={paletteKey} className="ni-panel p-5">
           <h2 className="font-display font-medium text-sm text-[var(--text)] mb-0.5">Resumo da região (todos os vestibulares)</h2>
-          <p className="text-xs text-[var(--dim)] mb-4">Ranking agregado de temas mais cobrados em {activeSubject} — priorize os do topo primeiro.</p>
+          <p className="text-xs text-[var(--dim)] mb-4">Referência histórica de {activeSubject}, relatório Anglo (2023–2025). Use junto com domínio e pré-requisitos; o topo histórico não determina sozinho a próxima atividade.</p>
           <div className="space-y-3">
+            {data.regionalSummary.length === 0 && <p className="text-sm">Não há percentual histórico cadastrado para esta área. Use o roteiro curricular e as evidências pessoais acima.</p>}
             {data.regionalSummary.map((topic, i) => (
               <div key={topic.theme} className="flex items-center gap-2">
                 <span className="w-5 text-xs font-mono text-[var(--dim)] shrink-0">{i + 1}º</span>

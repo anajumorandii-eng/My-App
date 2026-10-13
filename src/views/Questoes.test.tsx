@@ -378,3 +378,22 @@ it.each(['Citoplasma', 'Mitocôndria'])('mostra justificativa da alternativa cor
   expect(screen.getByText('Por que a alternativa correta está certa')).toBeInTheDocument();
   expect(screen.getByText(QUESTION.explanation)).toBeInTheDocument();
 });
+
+it('abre o tópico encaminhado por Prioridades sem trocar o recorte', () => {
+  window.history.pushState({}, '', '/questoes?topic=bio_genetica');
+  questionsHook.mockReturnValue({ questions: [{ ...QUESTION, topicId: 'bio_genetica' }], syncError: null });
+  render(<Questoes />);
+  expect(screen.getByRole('combobox', { name: 'Tópico' })).toHaveValue('bio_genetica');
+  expect(screen.getByText(QUESTION.prompt)).toBeInTheDocument();
+  window.history.replaceState({}, '', '/');
+});
+
+it('mantém a banca e o tópico encaminhados por Prioridades', () => {
+  window.history.pushState({}, '', '/questoes?topic=bio_genetica&board=FUVEST');
+  questionsHook.mockReturnValue({ questions: [{ ...QUESTION, id: 'fuvest', topicId: 'bio_genetica', prompt: 'Treino Fuvest encaminhado', examSource: { board: 'FUVEST', year: 2026 } }, { ...QUESTION, id: 'comvest', topicId: 'bio_genetica', prompt: 'Questão de outra banca', examSource: { board: 'COMVEST', year: 2026 } }], syncError: null });
+  render(<Questoes />);
+  expect(screen.getByRole('combobox', { name: 'Banca' })).toHaveValue('FUVEST');
+  expect(screen.getByText('Treino Fuvest encaminhado')).toBeInTheDocument();
+  expect(screen.queryByText('Questão de outra banca')).toBeNull();
+  window.history.replaceState({}, '', '/');
+});

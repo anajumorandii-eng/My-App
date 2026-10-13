@@ -31,3 +31,12 @@ test('não quebra com uma banca sem entrada para o assunto', () => {
 test('retorna 0 para um tópico desconhecido', () => {
   assert.equal(topicIncidenceWeight({ id: 'topico_inexistente', subject: 'Biologia' }), 0);
 });
+
+test('não confunde eletrostática com eletrodinâmica nem geografia física com agrária', () => {
+  assert.equal(topicIncidenceWeight({ id: 'fis_eletrostatica', subject: 'Física' }, 'Fuvest'), 0);
+  assert.equal(topicIncidenceWeight({ id: 'geo_fisica_brasil', subject: 'Geografia' }, 'Famerp'), 0);
+});
+test('população urbana usa a referência de população, não a de geografia agrária', () => {
+  const weight = topicIncidenceWeight({ id: 'geo_populacao_urbana_brasil', subject: 'Geografia' }, 'Fuvest');
+  assert.ok(Math.abs(weight - (0.055 + 0.133)) < 1e-9);
+});
