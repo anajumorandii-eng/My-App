@@ -45,8 +45,9 @@
 .vs-chapter-object { flex-shrink: 0; }
 @media(max-width:660px) {
   .vs-chapter-scene .vs-chapter-scene-tools { padding: 14px; flex-wrap: wrap; gap: 10px; }
-  .vs-chapter-scene .vs-chapter-scene-tools>.vs-object-icon { width: 64px; height: 64px; flex-basis: 64px; }
-  .vs-chapter-scene .vs-chapter-scene-tools>div { flex-basis: calc(100% - 74px); }
+  .vs-chapter-scene .vs-chapter-scene-tools>.vs-object-icon { width: 44px; height: 44px; flex-basis: 44px; }
+  .vs-chapter-scene .vs-chapter-scene-tools>div { flex-basis: calc(100% - 54px); }
+  .vs-chapter-scene .vs-chapter-scene-tools button { width: auto; flex: 1 1 130px; }
 }
 
 /* A comparação preserva os controles e a escala de leitura: só distribui os

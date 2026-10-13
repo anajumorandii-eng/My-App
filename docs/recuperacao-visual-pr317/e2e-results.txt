@@ -1,0 +1,23 @@
+
+Running 14 tests using 1 worker
+
+(node:9955) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   1 [desktop] › tests/e2e/visual-recovery.spec.ts:4:3 › summary-gramatica-concordancia: cena e leitura completas, sem janelas de rolagem concorrentes (6.6s)
+  ✓   2 [desktop] › tests/e2e/visual-recovery.spec.ts:4:3 › fis-termologia-calor: cena e leitura completas, sem janelas de rolagem concorrentes (5.5s)
+  ✓   3 [desktop] › tests/e2e/visual-recovery.spec.ts:4:3 › summary-historia-introducao-a-historia-e-primeiras-civilizacoes: cena e leitura completas, sem janelas de rolagem concorrentes (5.4s)
+  ✓   4 [desktop] › tests/e2e/visual-refinement-continuation.spec.ts:13:3 › Linguagens: condições comparáveis e câmera sob controle manual (7.7s)
+  ✓   5 [desktop] › tests/e2e/visual-refinement-continuation.spec.ts:13:3 › Física: condições comparáveis e câmera sob controle manual (8.2s)
+  ✓   6 [desktop] › tests/e2e/visual-refinement-continuation.spec.ts:13:3 › Química: condições comparáveis e câmera sob controle manual (7.2s)
+  ✓   7 [desktop] › tests/e2e/visual-refinement-continuation.spec.ts:13:3 › História: condições comparáveis e câmera sob controle manual (7.6s)
+(node:10326) Warning: The 'NO_COLOR' env is ignored due to the 'FORCE_COLOR' env being set.
+(Use `node --trace-warnings ...` to show where the warning was created)
+  ✓   8 [ipad-webkit] › tests/e2e/visual-recovery.spec.ts:4:3 › summary-gramatica-concordancia: cena e leitura completas, sem janelas de rolagem concorrentes (7.6s)
+  ✓   9 [ipad-webkit] › tests/e2e/visual-recovery.spec.ts:4:3 › fis-termologia-calor: cena e leitura completas, sem janelas de rolagem concorrentes (8.1s)
+  ✓  10 [ipad-webkit] › tests/e2e/visual-recovery.spec.ts:4:3 › summary-historia-introducao-a-historia-e-primeiras-civilizacoes: cena e leitura completas, sem janelas de rolagem concorrentes (7.4s)
+  ✓  11 [ipad-webkit] › tests/e2e/visual-refinement-continuation.spec.ts:13:3 › Linguagens: condições comparáveis e câmera sob controle manual (23.7s)
+  ✓  12 [ipad-webkit] › tests/e2e/visual-refinement-continuation.spec.ts:13:3 › Física: condições comparáveis e câmera sob controle manual (23.0s)
+  ✓  13 [ipad-webkit] › tests/e2e/visual-refinement-continuation.spec.ts:13:3 › Química: condições comparáveis e câmera sob controle manual (20.8s)
+  ✓  14 [ipad-webkit] › tests/e2e/visual-refinement-continuation.spec.ts:13:3 › História: condições comparáveis e câmera sob controle manual (23.4s)
+
+  14 passed (2.7m)
