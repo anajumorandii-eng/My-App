@@ -76,8 +76,16 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     expect(screen.getByText(/Questão 1 de 3/)).toBeInTheDocument();
   });
 
-  it('preserva a página e mostra links separados para prova e gabarito após responder', async () => {
+  it('mostra só o texto quando a questão não depende da página original', () => {
     questionsHook.mockReturnValue({ questions: [{ ...QUESTION,
+      originalPages: [{ page: 5, url: '/question-media/oficiais/unicamp-2026-qx/p05.webp' }],
+    }], syncError: null });
+    render(<Questoes />);
+    expect(screen.queryByRole('img')).not.toBeInTheDocument();
+  });
+
+  it('preserva a página e mostra links separados para prova e gabarito após responder', async () => {
+    questionsHook.mockReturnValue({ questions: [{ ...QUESTION, prompt: `${QUESTION.prompt} Observe a figura.`,
       originalPages: [{ page: 5, url: '/question-media/oficiais/unicamp-2026-qx/p05.webp' }],
       examSource: { board: 'UNICAMP', year: 2026, phase: '1ª fase', questionNumber: 9,
         sourceUrl: 'https://www.comvest.unicamp.br/prova.pdf', answerKeyUrl: 'https://www.comvest.unicamp.br/gabarito.pdf' },
