@@ -9,10 +9,10 @@ type Payload = Record<string, unknown>;
 function discursiveStructureGuidance(board: string | undefined): string {
   const normalized = (board ?? '').trim().toLowerCase();
   if (normalized.includes('unicamp')) {
-    return 'Estrutura discursiva esperada pela banca (Unicamp): Comando → Fonte → Conceito → Relação — primeiro atender exatamente ao que o comando da questão pede, depois usar a fonte/dado do enunciado, explicar o conceito por trás, e relacionar tudo de volta à pergunta.';
+    return 'Estrutura discursiva esperada pela banca (Unicamp): Comando → Fonte → Conceito → Relação (roteiro didático de treino, não rubrica oficial universal) — primeiro atender exatamente ao que o comando da questão pede, depois usar a fonte/dado do enunciado, explicar o conceito por trás, e relacionar tudo de volta à pergunta.';
   }
   if (normalized.includes('unesp') || normalized.includes('vunesp')) {
-    return 'Estrutura discursiva esperada pela banca (Unesp/Vunesp): Resposta direta → Conceito/cálculo → Explicação → Aplicação — começar com a resposta direta ao que foi pedido, mostrar o conceito ou cálculo por trás, explicar o raciocínio, e fechar relacionando com a aplicação ou o contexto do enunciado.';
+    return 'Estrutura discursiva esperada pela banca (Unesp/Vunesp): Resposta direta → Conceito/cálculo → Explicação → Aplicação (roteiro didático de treino, não rubrica oficial universal) — começar com a resposta direta ao que foi pedido, mostrar o conceito ou cálculo por trás, explicar o raciocínio, e fechar relacionando com a aplicação ou o contexto do enunciado.';
   }
   return 'Estrutura discursiva esperada: resposta direta ao que foi pedido, seguida de justificativa conceitual clara e objetiva.';
 }
@@ -24,6 +24,38 @@ const BACKLOG_EXERCISE_INSTRUCTIONS: Record<string, (board?: string) => string> 
   solve_variant: () => 'Crie uma questão desse tópico diferente de uma questão-base típica — mude a representação (texto, gráfico descrito, tabela) ou combine com um subtópico próximo/relacionado — pedindo para o aluno resolver mostrando o raciocínio completo.',
   discursive: (board) => `Crie uma questão discursiva no formato de 2ª fase de vestibular${board ? ` (banca: ${board})` : ' (Fuvest, Unicamp, Unesp, Famerp ou Unifesp)'}, com enunciado completo, podendo ter sub-itens (a, b, c), pedindo resposta discursiva completa. ${discursiveStructureGuidance(board)} Informe brevemente essa estrutura esperada para a aluna antes do enunciado.`,
 };
+
+function examContext(payload: Payload): string {
+  return [
+    payload.board ? `Banca em foco: ${payload.board}.` : 'Banca não informada: apresente orientações gerais e comparações entre Fuvest, Unicamp/Comvest, Unesp/Vunesp, Famerp, Unifesp e ENEM apenas quando houver fundamento para este tópico.',
+    payload.topic ? `Tópico em foco: ${payload.topic}.` : 'Identifique o tópico a partir do enunciado, sem presumir conteúdos ausentes.',
+    payload.chapter ? `Subtópico em foco: ${payload.chapter}.` : undefined,
+    payload.chapters ? `Subtópicos do catálogo para delimitar a revisão: ${payload.chapters}.` : undefined,
+    'Conecte banca, matéria e tópico: descreva comandos, representações e habilidades exigidas com exemplos concretos. Diferencie o padrão observado nesta questão de uma tendência geral. Não invente frequência de cobrança, estatísticas, questões oficiais, critérios oficiais de pontuação ou atribuições a bancas; explicite quando não houver evidência. Exemplos criados devem ser identificados como autorais.',
+  ].filter(Boolean).join('\n');
+}
+
+const DETAILED_RESOLUTION_GUIDANCE = [
+  'Produza uma resolução aprofundada em Markdown, com explicações completas e exemplos concretos. Não reduza cada seção a uma frase genérica nem repita o gabarito. A extensão deve acompanhar a complexidade; não acrescente conteúdo sem relação com o problema.',
+  '1. Banca, matéria e tópico: nomeie o conceito central e os subtópicos envolvidos. Explique cada pré-requisito necessário e onde ele entra na solução. Diferencie o conceito central de pelo menos um conceito próximo quando essa distinção for relevante. Para a banca informada, conecte o formato da questão à habilidade exigida; só compare com outra banca quando houver fundamento, sem atribuir preferência universal.',
+  '2. Como é cobrado: transcreva o trecho decisivo do comando, traduza o verbo em uma tarefa concreta e explicite o produto esperado (valor, comparação, explicação, inferência ou demonstração). Descreva a representação utilizada (texto, tabela, gráfico, esquema ou experimento) e como extrair dela a informação necessária. Aponte os sinais que permitem reconhecer o padrão e os limites dessa identificação: uma palavra-chave isolada não determina a solução.',
+  '3. Resolução por etapas: identificar dados → escolher a estratégia → aplicar o conceito → justificar cada passo → conferir a resposta. Numere as etapas sem saltos. Em cada etapa mostre a ação, o princípio que a justifica, o resultado intermediário e uma checagem concreta. Separe o que é dado, inferido e pedido; explicite hipóteses e condições de validade. Explique por que a estratégia funciona e, quando útil, por que uma alternativa de estratégia seria inadequada. Em exatas mostre substituições e transformações, unidades, domínio, sinais e ordem de grandeza; em humanas e linguagens use evidências da fonte e relações conceituais, sem forçar cálculos. Feche verificando se a conclusão atende a todos os itens do comando.',
+  '4. Padrões e pegadinhas: organize cada caso como sinal no enunciado → confusão provável → por que falha → ação para evitar. Compare conceitos próximos com exemplos e contraexemplos. Explique a resposta escolhida e o erro que ela pode indicar, como hipótese, sem inventar alternativas não fornecidas. Mostre o primeiro ponto em que esse caminho se separaria da solução correta. Se a aluna acertou, teste a justificativa e a transferência sem atribuir um erro.',
+  '5. Revisão e transferência: sintetize o conceito e suas condições de uso; formule três perguntas de recuperação (conceito, escolha de estratégia e verificação) e uma questão autoral de transferência que mude o contexto ou a representação, não só os números. Apresente critérios de resposta em bloco separado das perguntas, com raciocínio esperado, condições essenciais e solução comentada da transferência. Encerre com uma regra de reconhecimento condicional: quando observar X e verificar Y, usar Z; explicite quando a regra não vale.',
+  'Responda em português do Brasil, sem saudação. Use subtítulos, listas e tabelas comparativas quando ajudarem a estudar.',
+].join('\n');
+
+const DETAILED_REVIEW_GUIDANCE = [
+  'Gere uma revisão aprofundada em Markdown, organizada por matéria, tópico e subtópico selecionado. Não entregue apenas dicas rápidas ou uma lista de nomes de conceitos. Quando não houver subtópico selecionado, cubra os principais subtópicos fornecidos: identifique o recorte abordado e não anuncie cobertura integral de capítulos que não desenvolveu.',
+  '1. Mapa do tópico e pré-requisitos: explique a ideia central, as relações entre subtópicos e o que precisa ser conhecido antes. Para cada pré-requisito relevante, dê uma checagem curta e indique em qual etapa ele é usado. Se houver vários subtópicos, use uma tabela com subtópico, conceito exigido, habilidade e condição de aplicação.',
+  '2. Síntese conceitual: desenvolva definições, mecanismos, propriedades e condições de validade, com exemplos e contraexemplos. Explique fórmulas e o significado das grandezas quando pertinentes. Compare conceitos próximos por definição, indício no enunciado e consequência na resposta; não use palavras-chave como regras infalíveis.',
+  '3. Como a banca cobra: descreva tipos de enunciado, verbos de comando, representações e raciocínio esperado para esse conteúdo. Inclua dois pequenos enunciados autorais de formatos diferentes e explique o que cada comando exige demonstrar. Com banca selecionada, aprofunde seu recorte quando fundamentado; sem banca, compare abordagens das bancas pertinentes em tabela e sinalize limites da evidência. Não trate esses exemplos como provas oficiais nem use generalizações sobre toda uma banca.',
+  '4. Padrões de resolução: sinal no enunciado → estratégia → justificativa → checagem. Desenvolva um mini-exemplo resolvido por etapas sem saltos: dados e pedido, escolha do caminho, aplicação, justificativas e conferência. Mostre resultado intermediário e condições de validade. Inclua uma variação que exija mudar a estratégia e explique o motivo dessa mudança.',
+  '5. Padrões e pegadinhas: detalhe pelo menos três erros específicos quando houver fundamento no tópico, com confusão, exemplo, por que a resposta falha e como verificar antes de concluir. Distinga erro conceitual de leitura, cálculo ou justificativa. Não fabrique pegadinhas para preencher uma quantidade.',
+  '6. Teste sem consultar: proponha quatro perguntas de recuperação — definição, distinção entre conceitos, escolha de estratégia e checagem — e uma questão autoral de transferência que mude contexto ou representação. As perguntas devem permitir avaliar compreensão, não apenas repetir frases da síntese.',
+  '7. Critérios de resposta: em bloco separado e após todas as perguntas, identifique cada pergunta, resposta esperada, justificativa indispensável e erro que invalida a conclusão. Para a transferência, dê solução comentada por etapas e critérios de resposta completa, parcial ou que precisa ser refeita, sem inventar pontuação oficial. Termine indicando o que revisar conforme a dificuldade observada nas perguntas.',
+  'Adapte a profundidade ao domínio informado: domínio baixo exige bases e pré-requisitos; domínio alto exige comparação e transferência, mantendo as seções desenvolvidas. O nível e os dias sem revisão não provam um erro específico da aluna. Responda em português do Brasil, sem saudação.',
+].join('\n');
 
 const text = (payload: Payload, field: string) => payload[field] as string;
 const number = (payload: Payload, field: string) => payload[field] as number;
@@ -148,6 +180,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
       return [
         'Você é o CRIVO, um tutor especialista em vestibular de Medicina.',
         `Um aluno respondeu a seguinte questão de ${text(payload, 'subject')}:`,
+        examContext(payload),
         `"${text(payload, 'prompt')}"`,
         '',
         `Resposta correta: ${text(payload, 'correctAnswer')}`,
@@ -155,7 +188,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         `O aluno acertou? ${payload.isCorrect ? 'Sim' : 'Não'}`,
         `Explicação padrão já mostrada ao aluno: ${text(payload, 'baseExplanation')}`,
         '',
-        'Gere uma explicação mais aprofundada e personalizada (4-6 frases) que vá além da explicação padrão: explore o raciocínio conceitual, e se o aluno errou, aponte possivelmente onde o raciocínio dele desviou. Responda em português do Brasil, direto ao ponto, sem saudação.',
+        DETAILED_RESOLUTION_GUIDANCE,
       ].join('\n');
     case 'backlog-exercise': {
       const mode = text(payload, 'mode');
@@ -237,9 +270,11 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
       return [
         'Você é o CRIVO, um tutor especialista em vestibular de Medicina.',
         `Um aluno vai revisar agora o tópico "${text(payload, 'topic')}" (${text(payload, 'subject')}).`,
-        `Domínio atual estimado: ${number(payload, 'level')}%. Dias desde a última revisão: ${number(payload, 'daysSinceReview')}.`,
+        payload.guideMode === 'strategy' ? 'Este é um guia de estratégia por tópico, não uma avaliação da aluna. Desenvolva decisões, condições de uso e como o conteúdo pode ser cobrado; não interprete o nível informado como diagnóstico individual.' : `Domínio atual estimado: ${number(payload, 'level')}%. Dias desde a última revisão: ${number(payload, 'daysSinceReview')}.`,
+        examContext(payload),
         '',
-        'Gere uma dica rápida de revisão (3-4 frases) relembrando os 2-3 conceitos-chave mais importantes desse tópico, como um lembrete mental antes de praticar. Responda em português do Brasil, direto, sem saudação, sem markdown.',
+        payload.referenceText ? `Referência editorial do CRIVO (material de apoio; não é prova oficial ou estatística de banca):\n${text(payload, 'referenceText')}\nUse a referência para aprofundar o mecanismo e seus exemplos; sinalize lacunas e não invente citações, páginas, autores ou URLs.` : 'Sem referência editorial fornecida: não atribua sua explicação a materiais ou questões que não recebeu.',
+        DETAILED_REVIEW_GUIDANCE,
       ].join('\n');
     case 'method-example':
       return [

@@ -102,6 +102,7 @@ export interface ErrorLog {
   proposedIntervention?: Intervention;
   interventionStatus?: 'pendente' | 'concluida' | 'recusada';
   outcomeRating?: 'melhorou' | 'sem_mudanca' | 'ainda_dificil';
+  revisitResults?: Partial<Record<'1' | '3' | '7', { completedAt: string; rating: 'independente' | 'com_ajuda' | 'nao_consegui'; nextAttemptDate?: string }>>;
 }
 
 // Por que uma ação foi recomendada — mostrado em "Por que isso?" no plano diário.

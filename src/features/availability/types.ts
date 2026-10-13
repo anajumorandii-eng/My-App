@@ -9,6 +9,7 @@ export interface ScheduleEntry {
   start: string;
   end: string;
   isEstimate?: boolean;
+  purpose?: 'review';
 }
 
 export interface WeeklySchedule {
@@ -16,7 +17,8 @@ export interface WeeklySchedule {
   timeZone: typeof SAO_PAULO_TIME_ZONE;
   blockPolicy: {
     blockMinutes: 50;
-    shortBreakMinutes: 10;
+    allowShortStudyBlocks?: boolean;
+    shortBreakMinutes: 10 | 15;
     longBreakMinutes: 30;
     blocksBeforeLongBreak: 3;
   };
@@ -52,7 +54,8 @@ export type CalendarOverlayInput =
 export interface StudyInterval {
   start: string;
   end: string;
-  durationMinutes: 50;
+  durationMinutes: number;
+  purpose?: 'review';
 }
 
 export type AvailabilityWarning =

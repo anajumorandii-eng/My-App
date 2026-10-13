@@ -372,6 +372,9 @@ export default function Questoes() {
       const correctOption = question.options.find((o) => o.id === question.correctOptionId);
       let acumulado = '';
       const data = await requestAiTextStream('question-explanation', {
+        board: question.examSource?.board,
+        topic: mockTopics.find((topic) => topic.id === question.topicId)?.name,
+        chapter: question.chapter,
         prompt: question.prompt,
         subject: question.subject,
         selectedAnswer: selectedOption?.text ?? '',
@@ -591,10 +594,10 @@ export default function Questoes() {
                 <div className="p-4 rounded-xl border border-[var(--line)] bg-[var(--surface2)]/40 text-left space-y-3">
                   <div className="flex items-center justify-between">
                     <span className="ni-kicker" style={{ margin: 0 }}>Gabarito e justificativa</span>
-                    {!isCorrect && !question.originalPages?.length && (
-                      <button onClick={fetchDeepExplanation} className="ni-link text-xs">
+                    {!question.originalPages?.length && (
+                      <button onClick={fetchDeepExplanation} disabled={loadingDeepExplanation} className="ni-link text-xs disabled:opacity-50">
                         <Sparkles className="w-3.5 h-3.5 inline mr-1" />
-                        {loadingDeepExplanation ? 'Analisando...' : 'Explicar com IA'}
+                        {loadingDeepExplanation ? 'Analisando...' : 'Resolução por etapas'}
                       </button>
                     )}
                   </div>

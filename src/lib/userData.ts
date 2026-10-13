@@ -329,3 +329,9 @@ export async function saveUserSummaryProgress(uid: string, change: SummaryChange
     return merged;
   });
 }
+
+
+export async function saveErrorRevisitResult(uid: string, errorId: string, day: '1' | '3' | '7', result: NonNullable<ErrorLog['revisitResults']>['1']): Promise<void> {
+  if (!uid || !errorId || !result) throw new Error('Revisita inválida.');
+  await setDoc(doc(db, 'users', uid, 'errorLogs', errorId), { revisitResults: { [day]: result } }, { merge: true });
+}

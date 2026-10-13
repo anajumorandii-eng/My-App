@@ -4,6 +4,7 @@ import { mockTopics } from '../data/mockData';
 import { useDailyStudyAvailability } from '../features/availability/useDailyStudyAvailability';
 import type { AvailabilityWarning, DailyStudyAvailability } from '../features/availability/types';
 import { EfficiencyEngine } from '../lib/efficiencyEngine';
+import { applyExamDayLimits } from '../lib/examDayLimits';
 import { allocateStudyActions } from '../lib/studyActionAllocator';
 import type { AllocatedStudyAction, StudyAction, TopicMastery, StudentGoals } from '../types';
 import { useUserMastery } from './useUserMastery';
@@ -34,15 +35,22 @@ export function useDailyPlan(localDate: string): DailyPlanState {
     () => loading ? [] : EfficiencyEngine.rankStudyActions(masteryState.mastery, mockTopics, profileState.profile, goals),
     [loading, goals, masteryState.mastery, profileState.profile],
   );
+  const effectiveAvailability = useMemo(() => {
+    if (!availabilityState.availability) return undefined;
+    const intervals = applyExamDayLimits(availabilityState.availability.intervals, localDate, goals);
+    const totalMinutes = intervals.reduce((sum, interval) => sum + interval.durationMinutes, 0);
+    return { ...availabilityState.availability, intervals, totalMinutes, status: totalMinutes === 0 ? 'no-availability' as const : availabilityState.availability.status };
+  }, [availabilityState.availability, localDate, goals]);
+
   const allocatedActions = useMemo(
-    () => allocateStudyActions(prioritizedActions, availabilityState.availability?.intervals ?? []),
-    [availabilityState.availability?.intervals, prioritizedActions],
+    () => allocateStudyActions(prioritizedActions, effectiveAvailability?.intervals ?? []),
+    [effectiveAvailability?.intervals, prioritizedActions],
   );
 
   return {
     mastery: masteryState.mastery,
     goals,
-    availability: availabilityState.availability,
+    availability: effectiveAvailability,
     prioritizedActions,
     allocatedActions,
     loading,

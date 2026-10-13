@@ -70,3 +70,17 @@ test('upcomingMilestones lista só provas futuras de bancas ativas, em ordem', (
   const dates = milestones.map((m) => m.date);
   assert.deepEqual(dates, [...dates].sort());
 });
+
+test('roteiro com rotina salva não inventa horas fora das janelas', async () => {
+  const { createInitialWeeklySchedule } = await import('../features/availability/weeklyScheduleSeed');
+  const schedule = createInitialWeeklySchedule('2026-10-13T12:00:00Z');
+  Object.keys(schedule.days).forEach((day) => { schedule.days[day as keyof typeof schedule.days] = []; });
+  const date = new Date('2026-10-13T12:00:00');
+  const weeks = buildRoadmap(goalsWith([{ board: 'UNICAMP', weight: 1, phaseFocus: 'ambas' }]), date, date, schedule);
+  assert.equal(weeks[0].netStudyMinutes, 0);
+});
+test('marcos respeitam o foco de primeira fase sem incluir segunda fase inativa', () => {
+  const exams = upcomingMilestones(goalsWith([{ board: 'UNICAMP', weight: 1, phaseFocus: '1a-fase' }]), new Date('2026-10-13T12:00:00'));
+  assert.equal(exams.length, 1);
+  assert.equal(exams[0].phase, '1a-fase');
+});

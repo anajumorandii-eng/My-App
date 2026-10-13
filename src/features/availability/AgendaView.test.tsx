@@ -41,6 +41,8 @@ vi.mock('./useDailyStudyAvailability', () => ({
   },
 }));
 
+vi.mock('../../components/AdaptiveStudyDay', () => ({ default: () => <div>Plano adaptativo</div> }));
+
 vi.mock('../../context/AuthContext', () => ({
   AuthProvider: ({ children }: { children: ReactNode }) => children,
 }));
@@ -170,7 +172,7 @@ describe('AgendaView', () => {
     expect(within(sunday).getByLabelText('Início de domingo')).toHaveValue('14:40');
     await act(async () => fireEvent.click(screen.getByRole('button', { name: 'Salvar semana' })));
     const saved = availabilityState.saveSchedule.mock.calls[0][0] as WeeklySchedule;
-    expect(saved.days.sunday[0]).toMatchObject({ id: 'sunday-study', kind: 'study_window' });
+    expect(saved.days.sunday[0]).toMatchObject({ id: expect.stringMatching(/^sunday-study-/), kind: 'study_window' });
 
     fireEvent.click(within(sunday).getByRole('button', { name: /Remover janela/i }));
     await act(async () => fireEvent.click(screen.getByRole('button', { name: 'Salvar semana' })));
@@ -218,4 +220,15 @@ describe('AgendaView', () => {
 
     expect(screen.getByRole('heading', { name: 'Agenda' })).toBeInTheDocument();
   });
+});
+
+
+it('carrega rotina como rascunho sem persistir nem substituir a agenda salva', () => {
+  availabilityState.schedule = createInitialWeeklySchedule('2026-10-13T12:00:00Z');
+  render(<AgendaView />);
+  fireEvent.click(screen.getByRole('button', { name: 'Carregar rotina do cronograma' }));
+  expect(availabilityState.saveSchedule).not.toHaveBeenCalled();
+  expect(screen.getAllByText(/20:30–21:00/).length).toBe(6);
+  expect(screen.getByText(/Aula de Obras: 15:50–16:40/)).toBeInTheDocument();
+  expect(availabilityState.schedule.days.thursday[0].end).toBe('17:35');
 });

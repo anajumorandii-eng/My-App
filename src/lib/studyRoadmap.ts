@@ -1,3 +1,6 @@
+import { resolveEffectiveStudyAvailability } from '../features/availability/availabilityEngine';
+import type { WeeklySchedule } from '../features/availability/types';
+import { applyExamDayLimits } from './examDayLimits';
 import { StudentGoals } from '../types';
 import { vestibularCalendar2026, VestibularExam, sameBoard, daysUntil } from '../data/examCalendar';
 import { computeStudyBlocksForWeekday } from './netStudyTime';
@@ -35,9 +38,8 @@ function activeBoards(goals: StudentGoals): Set<string> {
 }
 
 function milestonesInRange(goals: StudentGoals, start: Date, end: Date): VestibularExam[] {
-  const boards = activeBoards(goals);
   return vestibularCalendar2026
-    .filter((exam) => [...boards].some((board) => sameBoard(board, exam.board)))
+    .filter((exam) => goals.boardWeights.some((goal) => goal.weight > 0 && sameBoard(goal.board, exam.board) && (goal.phaseFocus === 'ambas' || exam.phase === 'unica' || goal.phaseFocus === exam.phase)))
     .filter((exam) => {
       const examDate = new Date(`${exam.date}T00:00:00`);
       return examDate >= start && examDate <= end;
@@ -51,7 +53,7 @@ function milestonesInRange(goals: StudentGoals, start: Date, end: Date): Vestibu
  * estudo líquido daquela semana, calculado a partir do horário real do
  * cursinho + a janela de estudo autônomo (15h-20:30, com pausas).
  */
-export function buildRoadmap(goals: StudentGoals, from: Date, until: Date): RoadmapWeek[] {
+export function buildRoadmap(goals: StudentGoals, from: Date, until: Date, schedule?: WeeklySchedule): RoadmapWeek[] {
   const weeks: RoadmapWeek[] = [];
   let cursor = startOfWeekMonday(from);
   const untilMidnight = new Date(until.getFullYear(), until.getMonth(), until.getDate());
@@ -63,7 +65,13 @@ export function buildRoadmap(goals: StudentGoals, from: Date, until: Date): Road
     let netStudyMinutes = 0;
     for (let i = 0; i < 7; i++) {
       const day = addDays(cursor, i);
-      netStudyMinutes += computeStudyBlocksForWeekday(day.getDay()).netMinutes;
+      if (!schedule) {
+        netStudyMinutes += computeStudyBlocksForWeekday(day.getDay()).netMinutes;
+      } else if (toIsoDate(day) >= toIsoDate(from) && toIsoDate(day) <= toIsoDate(until)) {
+        const date = toIsoDate(day);
+        const availability = resolveEffectiveStudyAvailability(schedule, undefined, { status: 'connected', events: [] }, date);
+        netStudyMinutes += applyExamDayLimits(availability.intervals, date, goals).reduce((sum, interval) => sum + interval.durationMinutes, 0);
+      }
     }
 
     weeks.push({
@@ -88,9 +96,8 @@ export function daysToNearestMilestone(goals: StudentGoals, now: Date = new Date
 
 /** Todas as provas futuras (bancas ativas) ordenadas por data — usado para listar os marcos do roteiro. */
 export function upcomingMilestones(goals: StudentGoals, now: Date = new Date()): VestibularExam[] {
-  const boards = activeBoards(goals);
   return vestibularCalendar2026
-    .filter((exam) => [...boards].some((board) => sameBoard(board, exam.board)))
+    .filter((exam) => goals.boardWeights.some((goal) => goal.weight > 0 && sameBoard(goal.board, exam.board) && (goal.phaseFocus === 'ambas' || exam.phase === 'unica' || goal.phaseFocus === exam.phase)))
     .filter((exam) => daysUntil(exam.date, now) >= 0)
     .sort((a, b) => a.date.localeCompare(b.date));
 }

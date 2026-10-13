@@ -1,3 +1,5 @@
+import { studyBoardProfiles } from './studyProtocols';
+
 // Estratégias de resolução de questões — método geral, por matéria, por banca
 // e protocolos de segunda fase (discursiva). Inspirado nos materiais de
 // tutoria da Ana Júlia (estratégias por matéria, padrões de banca e
@@ -210,33 +212,13 @@ export interface BancaStrategy {
   examStrategy: string;
 }
 
-export const bancaStrategies: BancaStrategy[] = [
-  {
-    board: 'Fuvest (USP)',
-    profile: 'Cobra raciocínio, profundidade e domínio conceitual real. Enunciados menos óbvios, que só "viram a chave" no fim. Muita conexão entre matérias (química + biologia, física + matemática, história + geografia). Pouca decoreba isolada; muita aplicação de conceito em situação não-padrão. Em Humanas/Literatura: análise sofisticada, obras obrigatórias cobradas a fundo, texto de apoio que precisa ser cruzado com o conteúdo.',
-    examStrategy: 'Não responda no impulso na primeira leitura. Releia procurando "o que ela realmente está testando aqui?" — desconfie de enunciados que parecem fáceis demais, geralmente há uma camada extra.',
-  },
-  {
-    board: 'Unicamp / Comvest',
-    profile: 'Cobra leitura cuidadosa e aplicação em contexto. 1ª fase de múltipla escolha com viés de leitura longa; 2ª fase frequentemente dissertativa, pedindo para explicar/justificar o raciocínio. Muitos gráficos, tabelas e situações-problema do mundo real, com a informação relevante espalhada.',
-    examStrategy: 'Extraia os dados do texto/gráfico com calma antes de calcular. Treine escrever o raciocínio de forma organizada mesmo em questões de múltipla escolha — isso fixa o hábito para a segunda fase.',
-  },
-  {
-    board: 'Vunesp (Unesp e Famerp)',
-    profile: 'Cobra objetividade, cálculo direto e técnica rápida. Questões mais "limpas", com menos contexto que Unicamp/ENEM. Recompensa quem domina a técnica e resolve com agilidade — tempo por questão costuma ser apertado. Famerp tende a ter forte peso em Biologia/Química com viés de saúde/contexto clínico.',
-    examStrategy: 'Tenha automatismo nas fórmulas e procedimentos mais comuns. Não complique o que é direto — mas confira o detalhe (uma unidade, um sinal, uma casa decimal) antes de marcar.',
-  },
-  {
-    board: 'Unifesp',
-    profile: 'Cobra precisão conceitual e interpretação científica exigente. Questões contextualizadas em ciência/saúde, com detalhes finos fazendo diferença — conceitos próximos precisam estar bem separados.',
-    examStrategy: 'Domine a definição exata dos conceitos (não a versão "popular"). Leia dados experimentais e gráficos com rigor, prestando atenção em eixos, escalas e unidades. Desconfie de alternativas "quase certas".',
-  },
-  {
-    board: 'ENEM / Inep',
-    profile: 'Cobra interpretação, cotidiano e leitura estratégica. Textos longos, gráficos e tabelas — o "filtro" de leitura é a habilidade mais testada. O conteúdo técnico costuma ser simples, mas disfarçado em texto.',
-    examStrategy: 'Identifique a pergunta real (geralmente na última frase) antes de ler todo o texto, para já ler com foco. Use lógica e ordem de grandeza para eliminar alternativas absurdas sem calcular tudo. Gestão de tempo é crítica.',
-  },
-];
+// Formato confirmado separado do roteiro didático; Vunesp não torna
+// instituições distintas uma prova única com a mesma cobrança.
+export const bancaStrategies: BancaStrategy[] = studyBoardProfiles.map((profile) => ({
+  board: profile.board,
+  profile: profile.format,
+  examStrategy: profile.training,
+}));
 
 export interface ProtocolStep {
   letter: string;

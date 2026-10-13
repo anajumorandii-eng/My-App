@@ -12,7 +12,7 @@ import {
   type WeeklySchedule,
 } from './types';
 
-type TimeRange = { start: string; end: string };
+type TimeRange = { start: string; end: string; purpose?: 'review' };
 
 const WEEKDAYS: Weekday[] = [
   'sunday', 'monday', 'tuesday', 'wednesday', 'thursday', 'friday', 'saturday',
@@ -98,7 +98,7 @@ function applyException(
       return windows
         .map((window) => {
           const range = wallRange(localDate, window);
-          return { start: range.start, end: departure < range.end ? departure : range.end };
+          return { ...range, end: departure < range.end ? departure : range.end };
         })
         .filter((window) => window.end > window.start)
         .map(toCandidateStudyWindow)
@@ -141,13 +141,14 @@ function wallRange(localDate: string, range: CandidateStudyWindow): TimeRange {
   const start = new Date(localDateTimeToIso(localDate, range.start)).toISOString();
   const end = new Date(localDateTimeToIso(localDate, range.end)).toISOString();
   if (end <= start) throw new Error('Invalid study window order');
-  return { start, end };
+  return { start, end, ...(range.purpose ? { purpose: range.purpose } : {}) };
 }
 
 function toCandidateStudyWindow(range: TimeRange): CandidateStudyWindow | undefined {
   const window = {
     start: toWallTime(roundToMinute(range.start, 'up')),
     end: toWallTime(roundToMinute(range.end, 'down')),
+    ...(range.purpose ? { purpose: range.purpose } : {}),
   };
   return window.end > window.start ? window : undefined;
 }
@@ -187,7 +188,7 @@ function calendarWarnings(calendar: CalendarOverlayInput, noAvailability: boolea
 function subtractInterval(source: TimeRange, busy: TimeRange): TimeRange[] {
   if (busy.end <= source.start || busy.start >= source.end) return [source];
   return [
-    source.start < busy.start ? { start: source.start, end: busy.start } : undefined,
-    busy.end < source.end ? { start: busy.end, end: source.end } : undefined,
+    source.start < busy.start ? { ...source, end: busy.start } : undefined,
+    busy.end < source.end ? { ...source, start: busy.end } : undefined,
   ].filter((range): range is TimeRange => Boolean(range && range.end > range.start));
 }
