@@ -1,0 +1,134 @@
+{
+  "board": "UNICAMP",
+  "year": 2026,
+  "phase": "1ª fase",
+  "version": "Q/X",
+  "examUrl": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+  "answerKeyUrl": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Q_X-gabarito.pdf",
+  "examSha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253",
+  "answerKeySha256": "13c5e846462f6bfd2eee2ba7bdc8fab35c57ea80aeacf1c405a99889f464dc24",
+  "verifiedOn": "2026-10-13",
+  "media": [
+    {
+      "page": 3,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p03.webp",
+      "sha256": "ac21cbcb2105aae518aeb4c51e502b5f6dc6e1f00ce951a6986d112886b39f68"
+    },
+    {
+      "page": 4,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p04.webp",
+      "sha256": "2366cf579c8e6f609312a0b335ec0f42ecba4ebb1c5b0adc0ea7261a1272860c"
+    },
+    {
+      "page": 5,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p05.webp",
+      "sha256": "011b2760a6b444bcfe668c8685e70cf179c2adf46d8d1a40c45e8a98bae0f9b5"
+    },
+    {
+      "page": 6,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p06.webp",
+      "sha256": "53d8f1715efbc04692c026d399a3a664d698dd4edee6f301ca28a0b4d9f1c84e"
+    },
+    {
+      "page": 7,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p07.webp",
+      "sha256": "db4e9c7c3d3298dd8752710c5ac92b0146b7d61d4031e8a631cc2cf0c6edd47e"
+    },
+    {
+      "page": 8,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p08.webp",
+      "sha256": "dcfdb7247ef5932f58e763f2f4e958687d7608fbdbfa6e927b402c8ef05d00dd"
+    },
+    {
+      "page": 9,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p09.webp",
+      "sha256": "388ebb0985bc482765788c20d1c5b95b3e0ac72c0fff4d61cf8b192dec92198b"
+    },
+    {
+      "page": 10,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p10.webp",
+      "sha256": "6a12e411789ea392d9e5c0532597bb28bdb8dcf4a33d86966419c43b3e46856c"
+    },
+    {
+      "page": 11,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p11.webp",
+      "sha256": "c896ecd692eca2867766a928e8900c33ebb4ddfc36d8feea35302c158e892fd5"
+    },
+    {
+      "page": 12,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p12.webp",
+      "sha256": "0fcd84c39c1d1c5d5007c13e92d785a4866f24880806911b5e5aa4923a80d9a0"
+    },
+    {
+      "page": 13,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p13.webp",
+      "sha256": "48447fc61e986c108d26bac108d0f4cf8691c8449b271635a8cbdfbe6c4e2997"
+    },
+    {
+      "page": 14,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p14.webp",
+      "sha256": "b8647386e23bf297eadaa54416f1c116499d4a82db58655648756d5c3725b7e1"
+    },
+    {
+      "page": 15,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p15.webp",
+      "sha256": "cba3e5c00f003b537a6fc7e7560b23956539281a7555a09a600160abc69c9650"
+    },
+    {
+      "page": 16,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p16.webp",
+      "sha256": "136f5adaffd898f7fdff7ceaa2f3ce82e440c824d1a2b42c4deaf480ec84fbe4"
+    },
+    {
+      "page": 17,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p17.webp",
+      "sha256": "927bbd7d223ffbc6f7b6d40a56cc5a019c7ed1b85274e0bc5e803d2566eef0e7"
+    },
+    {
+      "page": 18,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p18.webp",
+      "sha256": "e4fa901f8f897d1ce4fc3f16f5a917312f1936a4ee15a533508ba28494847894"
+    },
+    {
+      "page": 19,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p19.webp",
+      "sha256": "e26c95e013976083254124ccf9251d64700f4cb3a66380e5a2d1aec0bfcac75d"
+    },
+    {
+      "page": 20,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p20.webp",
+      "sha256": "0fe4c042ab58effbb89a11e8b1935284c3d3bb3444aed9525943a6203289a964"
+    },
+    {
+      "page": 21,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p21.webp",
+      "sha256": "f3fef8c1305c77289f9c08cb04103e14367fb712cf2380fdd02da6c16e8f9952"
+    },
+    {
+      "page": 22,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p22.webp",
+      "sha256": "d1f7a295bd5990cca55fbcd38f0c61918662105ccb1b6d2b00047df619110831"
+    },
+    {
+      "page": 23,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p23.webp",
+      "sha256": "59221955e6bc1fc89cd2be8043830b56d9544b9d2a13a4230d041810302662de"
+    },
+    {
+      "page": 24,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p24.webp",
+      "sha256": "2ac359981d3c0758235f3ecfc1b034a392ee498098514d1a59b73d3e04654aa5"
+    },
+    {
+      "page": 25,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p25.webp",
+      "sha256": "4a9de841a1e3abd7c3994c9f20d3caeaaca8706b3449d7ea7bd2a33204915161"
+    },
+    {
+      "page": 26,
+      "url": "/question-media/oficiais/unicamp-2026-qx/p26.webp",
+      "sha256": "dc36768e03c1aaf69ce31a1e05b4dc92ef724e3f44fe6dfd9ad9ac25a49fa55a"
+    }
+  ],
+  "answerKeyTextSha256": "37a0446026f9a1485707ba6ce3b6308040b81000c37d7cf319bfe1bddcf10a04"
+}

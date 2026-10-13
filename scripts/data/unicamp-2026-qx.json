@@ -1,0 +1,3399 @@
+[
+  {
+    "number": 1,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Polissemia de upset em uma manchete",
+    "concept": "Sentido contextual e classe gramatical; pré-requisito: distinguir substantivo de adjetivo.",
+    "steps": [
+      "Localize upset na manchete sobre a vitória de Fernanda Torres e compare as duas definições fornecidas.",
+      "Use a função da palavra na frase, e não uma tradução isolada: biggest upset nomeia um resultado inesperado.",
+      "Associe a ocorrência à primeira definição, a de substantivo: um desfecho contrário ao que se considerava provável.",
+      "A manchete trata da surpresa do resultado; não afirma que as outras atrizes ficaram tristes nem desqualifica a vencedora.",
+      "Confira as duas partes da alternativa C: definição 1 e ausência de desqualificação. A acrescenta sarcasmo sem apoio."
+    ],
+    "trap": "A tradução automática upset = chateado ignora a classe gramatical. A banca combina manchete visual, verbete e reação nas redes.",
+    "retrieval": [
+      "O que distingue upset substantivo de upset adjetivo?",
+      "Por que uma vitória inesperada não implica ironia contra a vencedora?"
+    ],
+    "transfer": "Exercício autoral: compare “an electoral upset” e “the voters were upset”. Traduza e justifique a diferença.",
+    "criteria": [
+      "Resultado eleitoral inesperado na primeira expressão.",
+      "Eleitores aborrecidos na segunda; justificar por função e contexto."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "primeira definição mostrada no texto 2 e, por isso, tem conotação sarcástica ao comparar as atrizes citadas."
+      },
+      {
+        "id": "b",
+        "text": "segunda definição mostrada no texto 2 e, por isso, não assume conotação crítica."
+      },
+      {
+        "id": "c",
+        "text": "primeira definição mostrada no texto 2 e, por isso, não desqualifica a vitória da atriz."
+      },
+      {
+        "id": "d",
+        "text": "segunda definição mostrada no texto 2 e, por isso, estabelece uma hierarquia entre as atrizes citadas."
+      }
+    ],
+    "pages": [
+      3
+    ]
+  },
+  {
+    "number": 2,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Sequência de cenas e pistas discursivas",
+    "concept": "Leitura multimodal e organização temporal; pré-requisito: reconhecer conectores e descrições visuais.",
+    "steps": [
+      "Identifique as três pistas: fechamento das cortinas, intimidade do casal cercado por militares e close-up de Eunice.",
+      "Crie uma correspondência entre cada descrição e os quadros, antes de olhar as sequências das alternativas.",
+      "As cortinas e a retirada de luz correspondem a B; o casal sob a presença dos militares, a C; o close-up, a A.",
+      "“In this other one” e “Then” organizam a progressão B → C → A. A ordem é a da descrição, não a posição da figura.",
+      "Releia a fala do diretor e confira que cada cena aparece uma vez: a alternativa B conserva a sequência."
+    ],
+    "trap": "Não ordenar pela familiaridade com o filme. A resposta depende das evidências no texto e nas imagens.",
+    "retrieval": [
+      "Como Then organiza a sequência?",
+      "Que detalhe distingue um close-up de um enquadramento do ambiente?"
+    ],
+    "transfer": "Exercício autoral: descreva três imagens como plano aberto, plano do casal e close-up. Explique a progressão do foco.",
+    "criteria": [
+      "Nomear o elemento observado em cada plano.",
+      "Explicar que o enquadramento aproxima o foco de um personagem, sem inventar acontecimentos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Quadro A, Quadro C, Quadro B."
+      },
+      {
+        "id": "b",
+        "text": "Quadro B, Quadro C, Quadro A."
+      },
+      {
+        "id": "c",
+        "text": "Quadro C, Quadro B, Quadro A."
+      },
+      {
+        "id": "d",
+        "text": "Quadro B, Quadro A, Quadro C."
+      }
+    ],
+    "pages": [
+      3
+    ]
+  },
+  {
+    "number": 3,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Humor e dinheiro como jogo em Wall Street",
+    "concept": "Inferência de crítica em tirinha; pré-requisito: integrar falas, cenário e objetos.",
+    "steps": [
+      "Leia as falas e observe as moedas, o copo para doações e os jogos associados ao dinheiro.",
+      "Procure o contraste que produz humor, em vez de interpretar cada quadro isoladamente.",
+      "A explicação “In this place money is for playing games” trata o dinheiro como instrumento de jogo naquele ambiente.",
+      "A tirinha critica a atitude de quem lida com dinheiro como jogo. Não faz uma contagem comparativa de moedas nem um levantamento de renda.",
+      "Confira a alternativa C: ela descreve a crítica geral que as falas constroem. A e B introduzem comparações que não são o foco."
+    ],
+    "trap": "Uma crítica social plausível pode ser mais ampla que a crítica efetivamente enunciada. A banca pede o sentido geral desta tirinha.",
+    "retrieval": [
+      "Qual fala constrói a crítica?",
+      "Como distinguir evidência textual de uma opinião sobre desigualdade?"
+    ],
+    "transfer": "Exercício autoral: um cartum chama a bolsa de “cassino”. Explique a comparação e indique um limite da interpretação.",
+    "criteria": [
+      "Relacionar cassino a aposta, risco e jogo.",
+      "Não concluir, sem evidência, que toda operação financeira é ilegal."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "injustiça de um personagem receber menos moedas do que o outro, na Wall St."
+      },
+      {
+        "id": "b",
+        "text": "diferença de status financeiro entre as pessoas que transitam pela Wall St."
+      },
+      {
+        "id": "c",
+        "text": "atitude das pessoas que circulam na Wall St. para as quais lidar com dinheiro é um jogo."
+      },
+      {
+        "id": "d",
+        "text": "postura das pessoas que circulam na Wall St. que ignoram problemas e necessidades sociais."
+      }
+    ],
+    "pages": [
+      3
+    ]
+  },
+  {
+    "number": 4,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Inflação atual e expectativa de alta",
+    "concept": "Relações temporais em notícia; pré-requisito: interpretar ahead of, expected e bracing.",
+    "steps": [
+      "Localize Mild, Expected Jump e are bracing no título e no subtítulo.",
+      "Separe a situação atual da expectativa futura, mantendo os agentes citados.",
+      "Mild indica inflação moderada agora; expected jump e bracing apontam preparação para uma possível reaceleração.",
+      "A alternativa B mantém economistas e formuladores de políticas como agentes da preparação. C transforma adaptação em garantia de estabilidade.",
+      "Confira B com os dois tempos: presente moderado e expectativa de alta. A reduz os agentes ao governo; D troca o foco do enunciado."
+    ],
+    "trap": "Não converter previsão em fato consumado nem omitir a oposição entre o presente e a expectativa.",
+    "retrieval": [
+      "Qual expressão indica expectativa?",
+      "Como traduzir bracing for sem afirmar que o evento já ocorreu?"
+    ],
+    "transfer": "Exercício autoral: interprete “Prices stable ahead of expected supply cuts”.",
+    "criteria": [
+      "Preços estáveis no momento.",
+      "Cortes esperados na oferta, sem garantia de estabilidade futura."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o governo dos EUA está se preparando para um salto na inflação diante da guerra comercial de tarifas."
+      },
+      {
+        "id": "b",
+        "text": "a inflação nos EUA se mantém moderada, mas economistas e legisladores estão se preparando diante da expectativa de alta das tarifas."
+      },
+      {
+        "id": "c",
+        "text": "a inflação nos EUA deve se manter moderada, pois as empresas estão se adaptando ao aumento das tarifas."
+      },
+      {
+        "id": "d",
+        "text": "as empresas dos EUA estão se adaptando à aceleração da inflação diante da guerra de tarifas estabelecida pelo governo."
+      }
+    ],
+    "pages": [
+      4
+    ]
+  },
+  {
+    "number": 5,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Obra de arte, técnica e experiências raciais",
+    "concept": "Relação entre citação e comentário explicativo; pré-requisito: reconhecer referentes de her e this.",
+    "steps": [
+      "Identifique quem escreveu a citação, quem produziu a obra e o que o comentário diz sobre os borrões.",
+      "Use o texto 3 como critério, pois é ele que o comando pede interpretar.",
+      "O comentário associa palavras ilegíveis à experiência racial de Hurston; Ligon incorpora os efeitos de espalhamento da tinta.",
+      "D reúne técnica pictórica e vivências da autora. B transfere a confusão para a própria identidade de Ligon, alterando o referente.",
+      "Confira D e descarte intenções que não estão sustentadas: A impõe uma explicação de invisibilização e C fala em recusa de identidade."
+    ],
+    "trap": "O pronome her refere-se à autora citada. Trocar o referente muda a interpretação mesmo quando o tema geral parece correto.",
+    "retrieval": [
+      "A quem se refere her confusion?",
+      "Como a técnica de Ligon dialoga com a experiência relatada por Hurston?"
+    ],
+    "transfer": "Exercício autoral: diferencie a voz de um escritor citado e a de um artista que adapta seu texto.",
+    "criteria": [
+      "Atribuir cada enunciado ao seu autor.",
+      "Explicar a relação entre as duas obras sem igualar experiências pessoais."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a ilegibilidade em parte das imagens é intencional, pois reforça a invisibilização da identidade negra em contextos brancos, como sugere a autora do texto 1."
+      },
+      {
+        "id": "b",
+        "text": "os efeitos da tinta usada por Glenn Ligon aludem à confusão desse artista quanto à sua própria identidade racial, semelhante ao que relata a autora do texto 1."
+      },
+      {
+        "id": "c",
+        "text": "a repetição de frases nas imagens é proposital, pois representa a recusa de algumas pessoas em se verem como negras, como sugere a autora do texto 1."
+      },
+      {
+        "id": "d",
+        "text": "os borrões em parte das imagens são um efeito da técnica usada por Glenn Ligon e aludem às vivências raciais da autora do texto 1."
+      }
+    ],
+    "pages": [
+      4
+    ]
+  },
+  {
+    "number": 6,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Discrimination Against Women",
+    "title": "Leitura de resumo científico e masculinidade",
+    "concept": "Compreensão de argumento e ressalvas; pré-requisito: reconhecer while, therefore e fall short.",
+    "steps": [
+      "Localize a definição de incels, a ressalva sobre violência e o trecho sobre hegemonic masculinity.",
+      "Distinga descrição do grupo, hipótese explicativa e proposta de intervenção.",
+      "“Attempt to perform” e “fall short” indicam tentativa de desempenhar masculinidade hegemônica e frustração associada à inatividade sexual.",
+      "C preserva essa relação. A troca o motivo atribuído às mulheres; B inventa a necessidade de definir abstinência; D muda a intervenção online específica.",
+      "Confira C sem generalizar a violência: o resumo diz que a vasta maioria não comete aqueles ataques."
+    ],
+    "trap": "Uma alternativa pode começar com uma informação verdadeira e terminar com uma finalidade inventada.",
+    "retrieval": [
+      "Que relação fall short estabelece?",
+      "Qual ressalva impede generalizar violência a todos os integrantes?"
+    ],
+    "transfer": "Exercício autoral: reescreva uma conclusão científica com “a maioria não” e explique por que a ressalva importa.",
+    "criteria": [
+      "Preservar a extensão do grupo mencionado.",
+      "Não transformar associação descrita em regra universal."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“Incel” é uma comunidade majoritariamente constituída por homens que culpam mulheres por questionarem sua masculinidade."
+      },
+      {
+        "id": "b",
+        "text": "as pesquisas sobre a comunidade “Incel” ainda são escassas, por isso há a necessidade de mais estudos que definam teoricamente a abstinência sexual."
+      },
+      {
+        "id": "c",
+        "text": "homens “Incel”, muitas vezes, tentam exercer uma masculinidade dominante que resulta em expectativas frustradas devido à inatividade sexual."
+      },
+      {
+        "id": "d",
+        "text": "a pesquisa propõe práticas terapêuticas que integrem homens “Incel” a outros grupos sociais para melhor compreender as complexidades da masculinidade."
+      }
+    ],
+    "pages": [
+      4
+    ]
+  },
+  {
+    "number": 7,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Autonomia universitária em carta pública",
+    "concept": "Tese, concessão e recusa; pré-requisito: identificar o contraste marcado por However.",
+    "steps": [
+      "Identifique as demandas governamentais, a defesa de independência e as medidas contra o antissemitismo.",
+      "Separe recusar controle institucional de recusar combater discriminação.",
+      "O presidente rejeita interferências nos conteúdos e nas pesquisas: “No government should dictate” explicita sua posição.",
+      "D traduz a defesa de autonomia. A não reproduz a alegação central e C contradiz a afirmação de que medidas já foram tomadas.",
+      "Releia o parágrafo com However: a recusa dirige-se à imposição de poder, não ao dever de enfrentar o antissemitismo."
+    ],
+    "trap": "Não confundir contestar um meio de intervenção com negar o problema que é usado para justificá-lo.",
+    "retrieval": [
+      "Qual é a tese da carta?",
+      "Que função tem o reconhecimento das responsabilidades morais antes de However?"
+    ],
+    "transfer": "Exercício autoral: diferencie “discordo da medida” de “nego o problema” em um argumento institucional.",
+    "criteria": [
+      "Identificar objeto da discordância.",
+      "Apresentar uma medida alternativa coerente com o reconhecimento do problema."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "As acusações de antissemitismo feitas à universidade são inconstitucionais, por isso Garber se recusa a aceitar as demandas propostas pelo governo."
+      },
+      {
+        "id": "b",
+        "text": "As comparações entre as ideologias de professores e de alunos são sem precedentes, por isso Garber se nega a abrir mão da liberdade de expressão da comunidade."
+      },
+      {
+        "id": "c",
+        "text": "As justificativas do governo para interromper o financiamento são falhas, por isso Garber se nega a tomar medidas para resolver os problemas apontados."
+      },
+      {
+        "id": "d",
+        "text": "As demandas do governo são uma tentativa de controle da autonomia das universidades, por isso Garber se recusa a acatar as exigências impostas."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ]
+  },
+  {
+    "number": 8,
+    "topicId": "fis_calorimetria",
+    "subject": "Física",
+    "chapter": "Temperatura, Calor e seus Mecanismos de Transferência",
+    "title": "Condução, convecção e radiação",
+    "concept": "Mecanismos de transferência de calor; pré-requisito: matéria, fluidos e diferença de temperatura.",
+    "steps": [
+      "Liste as quatro afirmações e examine separadamente meio necessário e mecanismo físico.",
+      "Use três critérios: condução exige matéria; convecção desloca fluido; radiação transporta energia por ondas eletromagnéticas.",
+      "1 é falsa: não há condução no vácuo. 2 é falsa: o fluxo condutivo depende da diferença de temperaturas. 3 e 4 são verdadeiras.",
+      "Na condução, a interação entre partículas transporta energia; na convecção, a própria massa de fluido se desloca. Radiação dispensa meio material.",
+      "Apenas 3 e 4 permanecem: D. Não confunda funcionamento do termômetro infravermelho com contato físico."
+    ],
+    "trap": "A palavra calor não implica um único mecanismo. A banca cobra comparação de afirmações, não aplicação automática de uma fórmula.",
+    "retrieval": [
+      "Por que o Sol aquece a Terra através do vácuo?",
+      "O que se desloca na convecção?"
+    ],
+    "transfer": "Exercício autoral: explique por que água aquecida no fundo de uma panela circula.",
+    "criteria": [
+      "Relacionar aquecimento e redução de densidade nas condições usuais.",
+      "Identificar deslocamento do líquido como convecção, distinguindo-o da condução na panela."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "1 e 2."
+      },
+      {
+        "id": "b",
+        "text": "1 e 4."
+      },
+      {
+        "id": "c",
+        "text": "2 e 3."
+      },
+      {
+        "id": "d",
+        "text": "3 e 4."
+      }
+    ],
+    "pages": [
+      5
+    ]
+  },
+  {
+    "number": 9,
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "chapter": "Corrente Elétrica",
+    "title": "Capacidade de bateria e carga elétrica",
+    "concept": "Carga Q = iΔt; pré-requisito: prefixo mili e conversão hora–segundo.",
+    "steps": [
+      "Anote i = 4 000 mA e Δt = 1 h; a incógnita é carga em coulombs.",
+      "Use Q = iΔt com ampère e segundo.",
+      "Converta 4 000 mA = 4 A e 1 h = 3 600 s. Então Q = 4 × 3 600 = 14 400 C.",
+      "Ampère significa coulomb por segundo: A × s = C. A carga não é numericamente igual à capacidade expressa em mAh.",
+      "A alternativa C corresponde a 14 400 C. D mantém o fator mil indevidamente; B não converte a hora."
+    ],
+    "trap": "Converter unidades antes de multiplicar evita fatores de mil e de 3 600.",
+    "retrieval": [
+      "Por que mAh mede carga?",
+      "Quanto vale 1 Ah em coulombs?"
+    ],
+    "transfer": "Exercício autoral: uma bateria fornece 2 A durante 30 minutos. Calcule a carga.",
+    "criteria": [
+      "Converter 30 min = 1 800 s.",
+      "Obter 3 600 C por Q = iΔt."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "4 C."
+      },
+      {
+        "id": "b",
+        "text": "4 000 C."
+      },
+      {
+        "id": "c",
+        "text": "14 400 C."
+      },
+      {
+        "id": "d",
+        "text": "14 400 000 C."
+      }
+    ],
+    "pages": [
+      5
+    ]
+  },
+  {
+    "number": 10,
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "chapter": "Geradores",
+    "title": "Tensão nos terminais de uma bateria real",
+    "concept": "Gerador com resistência interna; pré-requisito: associação em série e lei de Ohm.",
+    "steps": [
+      "Identifique força eletromotriz 3,6 V, resistência interna 1,2 Ω e resistência externa 6,0 Ω.",
+      "Calcule a corrente pelo circuito inteiro e depois a tensão que o voltímetro mede no resistor externo.",
+      "i = 3,6/(6,0 + 1,2) = 0,5 A. U = Ri = 6,0 × 0,5 = 3,0 V.",
+      "A queda interna é 1,2 × 0,5 = 0,6 V; por isso a tensão externa é menor que a força eletromotriz.",
+      "3,0 + 0,6 = 3,6 V confirma a soma das quedas. A resposta é B, não o valor de 3,6 V da fonte ideal."
+    ],
+    "trap": "O voltímetro não mede automaticamente a força eletromotriz. É preciso identificar seus pontos de ligação.",
+    "retrieval": [
+      "Como escrever U = ε − ri?",
+      "O que acontece com U se a resistência interna for nula?"
+    ],
+    "transfer": "Exercício autoral: uma fonte de 12 V com r = 1 Ω alimenta R = 5 Ω. Determine i e U.",
+    "criteria": [
+      "i = 2 A pela resistência total de 6 Ω.",
+      "U = 10 V e queda interna de 2 V."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,6 V."
+      },
+      {
+        "id": "b",
+        "text": "3,0 V."
+      },
+      {
+        "id": "c",
+        "text": "3,6 V."
+      },
+      {
+        "id": "d",
+        "text": "4,3 V."
+      }
+    ],
+    "pages": [
+      5
+    ]
+  },
+  {
+    "number": 11,
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "chapter": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "title": "Energia de bateria e elevação de massa",
+    "concept": "Conversão Wh–J e energia potencial gravitacional; pré-requisito: trabalho e unidades.",
+    "steps": [
+      "Anote E = 15 Wh, m = 45 kg e g = 10 m/s²; pede-se a altura y.",
+      "Iguale a energia armazenada à variação de energia potencial, como exige o modelo do enunciado.",
+      "15 Wh = 15 × 3 600 = 54 000 J. De mgy = E, y = 54 000/(45 × 10) = 120 m.",
+      "O watt-hora mede energia: W = J/s. A igualdade proposta não inclui perdas de um equipamento real.",
+      "45 × 10 × 120 = 54 000 J confirma o cálculo. C é a alternativa correta."
+    ],
+    "trap": "Wh não é watt por hora. Não acrescentar rendimento quando o problema estabelece a igualdade das energias.",
+    "retrieval": [
+      "Por que 1 Wh equivale a 3 600 J?",
+      "Como a altura varia se a massa dobra com a mesma energia?"
+    ],
+    "transfer": "Exercício autoral: 10 Wh elevam 36 kg com g = 10 m/s², sem perdas. Determine a altura.",
+    "criteria": [
+      "Converter para 36 000 J.",
+      "Obter 100 m e explicar a proporcionalidade inversa com a massa."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,03 m."
+      },
+      {
+        "id": "b",
+        "text": "3 m."
+      },
+      {
+        "id": "c",
+        "text": "120 m."
+      },
+      {
+        "id": "d",
+        "text": "1 200 m."
+      }
+    ],
+    "pages": [
+      5
+    ]
+  },
+  {
+    "number": 12,
+    "topicId": "fis_optica_instrumental",
+    "subject": "Física",
+    "chapter": "Estudo Analítico das Lentes Esféricas",
+    "title": "Imagem direita e ampliada em lente delgada",
+    "concept": "Lente convergente usada como lupa; pré-requisito: imagem real/virtual e distância focal.",
+    "steps": [
+      "Identifique a condição: imagem direita e maior que o objeto.",
+      "Compare os regimes de formação de imagens de lentes convergentes e divergentes para um objeto real.",
+      "A lente convergente produz imagem virtual, direita e ampliada quando 0 < p < f.",
+      "A lente divergente produz imagem direita, mas reduzida; fora do foco, a convergente não fornece esse regime de imagem direita ampliada.",
+      "A combina convergente e objeto antes do foco. Confira que ambas as condições, e não apenas uma, estão atendidas."
+    ],
+    "trap": "Direita não significa necessariamente ampliada. A banca cobra a combinação das características da imagem.",
+    "retrieval": [
+      "Qual regime de uma lente funciona como lupa?",
+      "Por que uma lente divergente não resolve este problema?"
+    ],
+    "transfer": "Exercício autoral: uma lupa tem f = 10 cm e o objeto está a 5 cm. Determine a natureza e o aumento da imagem.",
+    "criteria": [
+      "Pela equação da lente, p′ = −10 cm: imagem virtual.",
+      "Aumento −p′/p = 2: direita e ampliada."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a lente é convergente e a distância entre objeto e lente é menor que a distância focal."
+      },
+      {
+        "id": "b",
+        "text": "a lente é divergente e a distância entre objeto e lente é menor que a distância focal."
+      },
+      {
+        "id": "c",
+        "text": "a lente é convergente e a distância entre objeto e lente é maior que a distância focal."
+      },
+      {
+        "id": "d",
+        "text": "a lente é divergente e a distância entre objeto e lente é maior que a distância focal."
+      }
+    ],
+    "pages": [
+      5,
+      6
+    ]
+  },
+  {
+    "number": 13,
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "chapter": "Movimento Uniformemente Variado",
+    "title": "Gráfico de posição em quatro trechos de movimento",
+    "concept": "Inclinação e concavidade de s(t); pré-requisito: velocidade como taxa de variação da posição.",
+    "steps": [
+      "Converta 36 km/h = 10 m/s e marque os intervalos 0–30, 30–50, 50–80, 80–95 e 95–120 s.",
+      "Associe movimento uniforme a reta, desaceleração a concavidade para baixo, repouso a horizontal e aceleração a concavidade para cima.",
+      "As posições acumuladas são s(30) = 300 m, s(50) = 400 m, s(80) = 400 m e s(95) = 490 m; v(95) = 12 m/s.",
+      "De 95 a 120 s, soma-se 12 × 25 = 300 m: s(120) = 790 m. A posição não cai durante a frenagem, pois a velocidade continua positiva.",
+      "O gráfico A é o que respeita formas e valores. Compare os quatro gráficos na página original; as alternativas são visuais."
+    ],
+    "trap": "Desacelerar não é voltar ao ponto de partida. Em s(t), a velocidade é a inclinação, não a altura da curva.",
+    "retrieval": [
+      "O que uma horizontal em s(t) significa?",
+      "Como reconhecer aceleração negativa com velocidade positiva?"
+    ],
+    "transfer": "Exercício autoral: desenhe s(t) de um veículo a 8 m/s por 10 s, freando até parar nos 4 s seguintes.",
+    "criteria": [
+      "Reta até s = 80 m, depois curva crescente côncava para baixo.",
+      "Deslocamento de frenagem 16 m; posição final 96 m."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "Gráfico A — alternativa visual na página original."
+      },
+      {
+        "id": "b",
+        "text": "Gráfico B — alternativa visual na página original."
+      },
+      {
+        "id": "c",
+        "text": "Gráfico C — alternativa visual na página original."
+      },
+      {
+        "id": "d",
+        "text": "Gráfico D — alternativa visual na página original."
+      }
+    ],
+    "pages": [
+      6
+    ]
+  },
+  {
+    "number": 14,
+    "topicId": "fis_leis_newton",
+    "subject": "Física",
+    "chapter": "As Leis de Newton",
+    "title": "Força resultante na frenagem da motocicleta",
+    "concept": "Segunda lei de Newton; pré-requisito: aceleração média no MUV e conversão de velocidade.",
+    "steps": [
+      "Use o texto comum: v inicial = 36 km/h = 10 m/s, v final = 0, intervalo 30–50 s e massa 180 kg.",
+      "Calcule a aceleração do trecho de frenagem e aplique F resultante = ma.",
+      "a = (0 − 10)/(50 − 30) = −0,5 m/s². F = 180 × (−0,5) = −90 N.",
+      "O sinal indica sentido contrário à velocidade adotada como positiva. O comando pede o módulo, que é 90 N.",
+      "A resposta é B. Não use os 50 s desde o início: a frenagem dura apenas 20 s."
+    ],
+    "trap": "A aceleração de 0,8 m/s² pertence ao trecho posterior; usar esse dado responderia a outro intervalo.",
+    "retrieval": [
+      "Qual intervalo entra no cálculo da frenagem?",
+      "Qual diferença há entre F = −90 N e |F| = 90 N?"
+    ],
+    "transfer": "Exercício autoral: 200 kg reduzem a velocidade de 12 a 4 m/s em 4 s. Calcule o módulo da resultante.",
+    "criteria": [
+      "a = −2 m/s².",
+      "Módulo de 400 N, em sentido oposto ao movimento."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "36 N."
+      },
+      {
+        "id": "b",
+        "text": "90 N."
+      },
+      {
+        "id": "c",
+        "text": "324 N."
+      },
+      {
+        "id": "d",
+        "text": "1 800 N."
+      }
+    ],
+    "pages": [
+      6
+    ]
+  },
+  {
+    "number": 15,
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "chapter": "Globalização e Processos Econômicos Atuais",
+    "title": "Alimentação, lugar e circuitos globalizados",
+    "concept": "Especialização produtiva e homogeneização; pré-requisito: divisão territorial do trabalho.",
+    "steps": [
+      "Identifique a substituição de alimentos ligados a tradições locais por ultraprocessados que circulam globalmente.",
+      "Relacione produção especializada, circulação e consumo, sem pressupor proximidade física entre indústria e consumidor.",
+      "As redes de circulação permitem conectar áreas especializadas e mercados distantes, enfraquecendo vínculos alimentares com o lugar.",
+      "A explicita seletividade e impactos nos mosaicos tradicionais. B supõe disseminação automática; C fala em maior conexão com o lugar, contrariando a homogeneização descrita; D elimina a vinculação entre indústria e agropecuária.",
+      "Confira os efeitos sociais mencionados no texto: a eficiência logística não garante acesso à diversidade alimentar regional."
+    ],
+    "trap": "“Modernização” não significa benefício universal. A banca pede relacionar redes produtivas e consequências territoriais.",
+    "retrieval": [
+      "Como especialização difere de diversidade produtiva?",
+      "Por que alimentos podem circular mais e os hábitos ficarem mais homogêneos?"
+    ],
+    "transfer": "Exercício autoral: compare uma feira regional e uma rede global de ultraprocessados quanto à relação com o lugar.",
+    "criteria": [
+      "Identificar origem, circulação e consumo.",
+      "Explicar homogeneização sem afirmar que toda produção local desaparece."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "menor vínculo com o lugar, visto que a indústria de processamento de alimentos e a produção agropecuária estão cada vez mais especializadas. Assim, produtos circulam com maior velocidade e eficiência entre a área de produção e o mercado consumidor, reduzindo o acesso da população a alimentos in natura e à diversidade produtiva regional."
+      },
+      {
+        "id": "b",
+        "text": "maior interdependência com o lugar, visto que a indústria de processamento precisa manter a proximidade com as áreas da produção agropecuária, aproveitando a modernização do sistema de circulação para atingir o mercado consumidor mais distante. Isso fortalece o acesso da população a produtos da agricultura familiar e à diversidade produtiva regional."
+      },
+      {
+        "id": "c",
+        "text": "maior conexão com o lugar, visto que a indústria de processamento de alimentos pode estar distante da área de produção agropecuária. O sistema de circulação permite interligar, com menor custo, a área de produção ao mercado consumidor, restringindo o acesso da população à produção da pequena indústria local e à diversidade alimentar regional."
+      },
+      {
+        "id": "d",
+        "text": "menor correlação com o lugar, visto que a indústria de processamento e a produção agropecuária possuem pouca vinculação entre si, tornando-se independentes, mas com estreitamento promovido pelo sistema de circulação entre a área de produção e o mercado consumidor. Isso favorece o acesso da população aos alimentos da culinária local e à diversidade alimentar regional."
+      }
+    ],
+    "pages": [
+      6,
+      7
+    ]
+  },
+  {
+    "number": 16,
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "chapter": "Coordenadas Geográficas",
+    "title": "Norte/Sul Global e hemisférios",
+    "concept": "Regionalização econômica versus posição geográfica; pré-requisito: Equador e Greenwich.",
+    "steps": [
+      "Separe a classificação Norte/Sul Global da localização nos hemisférios indicada no mapa.",
+      "Teste cada alternativa em dois planos: grupo geopolítico e posição norte/sul, leste/oeste.",
+      "Estados Unidos e Canadá pertencem ao Norte Global e localizam-se nos hemisférios setentrional e ocidental.",
+      "A erra ao colocar Austrália e Nova Zelândia no ocidental; B coloca países sul-americanos no oriental; D inclui China e Índia no Norte Global.",
+      "C é a única combinação integralmente correta. Norte Global não é sinônimo de hemisfério norte."
+    ],
+    "trap": "Uma metade correta não salva a alternativa. Confira todos os países e ambos os hemisférios.",
+    "retrieval": [
+      "Qual diferença há entre Norte Global e hemisfério norte?",
+      "Como Greenwich divide os hemisférios?"
+    ],
+    "transfer": "Exercício autoral: localize a Austrália nos hemisférios e explique sua classificação no Norte Global.",
+    "criteria": [
+      "Hemisférios sul e oriental.",
+      "Classificação socioeconômica e geopolítica, não latitude."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Austrália e Nova Zelândia são os únicos países do Norte Global situados no hemisfério meridional e hemisfério ocidental."
+      },
+      {
+        "id": "b",
+        "text": "Argentina, Brasil, Chile, Colômbia, Equador e Venezuela estão no Sul Global e têm seus territórios no hemisfério meridional e no hemisfério oriental."
+      },
+      {
+        "id": "c",
+        "text": "Estados Unidos e Canadá são países do continente americano no Norte Global que têm seus territórios localizados no hemisfério setentrional e hemisfério ocidental."
+      },
+      {
+        "id": "d",
+        "text": "China, Rússia, Índia e Japão, integrantes do Norte Global, estão situados no hemisfério setentrional e no hemisfério oriental."
+      }
+    ],
+    "pages": [
+      7
+    ]
+  },
+  {
+    "number": 17,
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "chapter": "Biogeografia Mundial",
+    "title": "Transição entre deserto e savana africana",
+    "concept": "Gradiente climático e adaptações vegetais; pré-requisito: xerófitas e sazonalidade das chuvas.",
+    "steps": [
+      "Leia a legenda: zona III é subtropical árida e zona II é tropical estacional.",
+      "Acompanhe a transição III → II pelo aumento relativo da disponibilidade de água.",
+      "No contato com o deserto predominam vegetação de pequeno porte e adaptações xerófitas; em direção à zona II há savanização.",
+      "D respeita esse gradiente. Árvores higrófilas e florestas densas não caracterizam o lado árido da transição.",
+      "Confira D pela combinação entre legenda e fitofisionomia; não trate zonas de transição como fronteiras abruptas."
+    ],
+    "trap": "Os números romanos dependem da legenda desta questão. Não reutilizar uma classificação memorizada de outro mapa.",
+    "retrieval": [
+      "O que significa xerófita?",
+      "Como a transição deserto–savana se relaciona às chuvas?"
+    ],
+    "transfer": "Exercício autoral: descreva duas mudanças esperadas na vegetação ao passar de região árida a tropical estacional.",
+    "criteria": [
+      "Menor domínio de adaptações extremas à escassez hídrica.",
+      "Crescimento da cobertura de savana associado à disponibilidade sazonal de água."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A zona de transição I–II apresenta fitofisionomias típicas de savanas perenifólias nas proximidades da zona I e um processo gradativo do desenvolvimento de florestas ombrófilas no limite com a zona II."
+      },
+      {
+        "id": "b",
+        "text": "A zona de transição II–III apresenta formações vegetais contínuas e densas, com árvores latifoliadas e higrófilas, típicas da zona II e em detrimento das savanas típicas da zona III."
+      },
+      {
+        "id": "c",
+        "text": "A zona de transição II–V apresenta uma vegetação densa e permanente, com gramíneas e arbustos, pois a influência da zona V predomina por influência dos processos costeiros."
+      },
+      {
+        "id": "d",
+        "text": "A zona de transição III–II apresenta vegetação de pequeno porte e espécies xerófitas no contato com a zona III, e um processo gradativo de savanização em direção à zona II."
+      }
+    ],
+    "pages": [
+      7
+    ]
+  },
+  {
+    "number": 18,
+    "topicId": "geo_hidrogeografia",
+    "subject": "Geografia",
+    "chapter": "Geopolítica dos Recursos Hídricos",
+    "title": "Rio Indo, montante e poder sobre a água",
+    "concept": "Drenagem exorreica e interdependência hídrica; pré-requisito: bacia, afluente, montante e jusante.",
+    "steps": [
+      "Localize o sentido dos cursos de água, a Índia, o Paquistão e a saída da bacia para o oceano.",
+      "Use montante/jusante como posição relativa no fluxo; identifique quem pode interferir no abastecimento a jusante.",
+      "Os afluentes situados a montante do Paquistão permitem à Índia interferir no fluxo destinado às áreas agrícolas paquistanesas.",
+      "A drenagem é exorreica, pois alcança o oceano. A e C erram com endorreica; B inverte a capacidade de controle.",
+      "D combina direção, tipo de drenagem e consequência econômica. Confira o trajeto no mapa original."
+    ],
+    "trap": "Montante não quer dizer norte. A posição depende do sentido do rio.",
+    "retrieval": [
+      "Quem fica a jusante de uma barragem sofre quais efeitos possíveis?",
+      "Como distinguir bacia exorreica de endorreica?"
+    ],
+    "transfer": "Exercício autoral: dois países compartilham um rio que desemboca no mar. Explique o risco de retenção de água no país a montante.",
+    "criteria": [
+      "Drenagem exorreica.",
+      "Possível redução da vazão a jusante, com efeitos agrícolas e necessidade de acordo."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "são rios drenados para o interior do continente (endorreicos) e escoam em direção à jusante, onde se localizam áreas agrícolas do Paquistão. Por isso, eventuais represamentos pela Índia comprometeriam a economia paquistanesa."
+      },
+      {
+        "id": "b",
+        "text": "são rios drenados para o oceano (exorreicos) situados na montante do território indiano. Isso permitiria ao Paquistão represar sua vazão e reduzir o abastecimento indiano destinado às atividades agropecuárias e industriais."
+      },
+      {
+        "id": "c",
+        "text": "são rios drenados para o interior do continente (endorreicos) e correm em direção à jusante, comprometendo as atividades econômicas das áreas urbanizadas do Paquistão que dependem da vazão originada nos afluentes situados na Índia."
+      },
+      {
+        "id": "d",
+        "text": "são rios drenados para o oceano (exorreicos) situados na montante do Paquistão. Isso permitiria à Índia controlar seu fluxo, afetando as atividades agrícolas paquistanesas e comprometendo a economia do Paquistão."
+      }
+    ],
+    "pages": [
+      8
+    ]
+  },
+  {
+    "number": 19,
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "chapter": "Geografia do Oriente Médio",
+    "title": "Alianças e disputas do Irã",
+    "concept": "Leitura de mapa e quadro geopolítico; pré-requisito: diferenças entre grupos e Estados.",
+    "steps": [
+      "Localize Iraque, Síria, Iêmen e Líbano e leia as colunas Disputas e Alianças.",
+      "Associe grupos a seus países e teste o quadro completo, evitando uma classificação genérica de todo o Oriente Médio.",
+      "O quadro correto apresenta disputas com a minoria sunita no Iraque e com o Estado Islâmico na Síria; alianças com Houthis e Hezbollah.",
+      "A respeita a organização pedida. As outras permutam aliados e adversários, especialmente Houthis, Hezbollah e Estado Islâmico.",
+      "Confira A nas duas colunas. Trata-se do contexto descrito na prova, não de uma afirmação de uniformidade entre todos os sunitas ou xiitas."
+    ],
+    "trap": "Identidade religiosa não torna todos os grupos aliados. A banca cobra relações específicas situadas no tempo e no espaço.",
+    "retrieval": [
+      "Em que países atuam Houthis e Hezbollah?",
+      "Por que não basta opor países “muçulmanos” a países “ocidentais”?"
+    ],
+    "transfer": "Exercício autoral: organize um quadro com um Estado, um grupo aliado e um adversário no contexto descrito.",
+    "criteria": [
+      "Irã e um dos aliados mencionados com localização correta.",
+      "Distinguir grupo armado, população religiosa e Estado."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Disputas: com a minoria sunita do islamismo (Iraque); com o Estado Islâmico (Síria). Alianças: com os Houthis (Iêmen); com o Hezbollah (Líbano)."
+      },
+      {
+        "id": "b",
+        "text": "Disputas: com os Houthis (Iêmen); com o Estado Islâmico (Síria). Alianças: com a minoria sunita do islamismo (Iraque); com o Hezbollah (Líbano)."
+      },
+      {
+        "id": "c",
+        "text": "Disputas: com a minoria sunita do islamismo (Iraque); com o Hezbollah (Líbano). Alianças: com os Houthis (Iêmen); com o Estado Islâmico (Síria)."
+      },
+      {
+        "id": "d",
+        "text": "Disputas: com os Houthis (Iêmen); com o Hezbollah (Líbano). Alianças: com a minoria sunita do islamismo (Iraque); com o Estado Islâmico (Síria)."
+      }
+    ],
+    "pages": [
+      8
+    ]
+  },
+  {
+    "number": 20,
+    "topicId": "geo_economica_brasil",
+    "subject": "Geografia",
+    "chapter": "O Espaço Agrário Brasileiro",
+    "title": "Modernização seletiva no agronegócio baiano",
+    "concept": "Circuitos espaciais produtivos e seletividade territorial; pré-requisito: inovação e especialização.",
+    "steps": [
+      "Localize no mapa as regiões incorporadas aos circuitos produtivos a partir dos anos 1970.",
+      "Procure o efeito da especialização em áreas específicas, e não uma difusão homogênea por todo o território.",
+      "A especialização aumenta o uso de técnicas e a conexão com mercados globalizados, mas a modernização seleciona espaços.",
+      "A explicita seletividade e impactos nos mosaicos tradicionais. B e D supõem disseminação automática para todos os setores.",
+      "Confira A sem concluir que o território inteiro se modernizou do mesmo modo: os enclaves e os contrastes são centrais."
+    ],
+    "trap": "Maior conexão externa pode coexistir com desigualdade interna. Não confundir integração global com homogeneidade regional.",
+    "retrieval": [
+      "O que é seletividade espacial?",
+      "Como um circuito globalizado pode alterar a produção tradicional?"
+    ],
+    "transfer": "Exercício autoral: explique por que duas regiões vizinhas podem receber intensidades diferentes de inovação agrícola.",
+    "criteria": [
+      "Considerar infraestrutura, investimento e especialização.",
+      "Relacionar a desigualdade à seleção de espaços, não a ausência total de redes."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A especialização produtiva regional favoreceu o uso intensivo de inovações técnico-científicas, promovendo seletividade espacial da modernização, o que gerou impactos nos mosaicos produtivos tradicionais."
+      },
+      {
+        "id": "b",
+        "text": "Os enclaves de modernização regional promoveram a difusão de uma produção diversificada setorialmente, o que garantiu o espraiamento das inovações técnico-científicas para as demais localidades da região."
+      },
+      {
+        "id": "c",
+        "text": "A especialização produtiva regional permitiu a cooperação das inovações técnico-científicas com os mosaicos produtivos tradicionais, o que restringiu maior conectividade espacial entre os estados limítrofes."
+      },
+      {
+        "id": "d",
+        "text": "Os enclaves de modernização regional viabilizaram a dilatação das inovações técnico-científicas para setores produtivos não especializados, o que acarretou a eliminação da seletividade espacial produzida pela especialização."
+      }
+    ],
+    "pages": [
+      9
+    ]
+  },
+  {
+    "number": 21,
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "chapter": "O Espaço Urbano II",
+    "title": "Centralidade empresarial e rede urbana",
+    "concept": "Comando territorial por vínculos empresariais; pré-requisito: hierarquia urbana e leitura de séries.",
+    "steps": [
+      "Identifique o indicador: trabalhadores de uma empresa fora do município onde está sua sede.",
+      "Leia as tendências no gráfico e associe o indicador a comando empresarial, não simplesmente a população municipal.",
+      "Barueri apresenta crescimento do assalariado externo e integra a Região Metropolitana de São Paulo.",
+      "Esse movimento reforça a posição metropolitana na gestão empresarial. As demais alternativas distorcem tendências ou confundem gestão pública e empresarial.",
+      "B corresponde ao indicador e à rede urbana. Uma sede concentra comando mesmo quando parte dos empregados trabalha em outros lugares."
+    ],
+    "trap": "A unidade medida é emprego externo à sede, não a população da cidade. Ler o título e a variável evita diagnóstico errado.",
+    "retrieval": [
+      "Como uma sede empresarial comanda atividades distantes?",
+      "Por que município e região metropolitana não são escalas equivalentes?"
+    ],
+    "transfer": "Exercício autoral: uma empresa tem sede em A e filiais em cinco cidades. Explique como A ganha centralidade.",
+    "criteria": [
+      "Identificar decisão e gestão concentradas na sede.",
+      "Distinguir empregos nas filiais de população da sede."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Rio de Janeiro, capital, amplia sua centralidade como centro de gestão empresarial do território nacional, conservando sua histórica função industrial e de administração pública."
+      },
+      {
+        "id": "b",
+        "text": "Barueri apresenta tendência de crescimento do assalariado externo, contribuindo para manter a Região Metropolitana de São Paulo no topo da hierarquia urbana."
+      },
+      {
+        "id": "c",
+        "text": "Brasília apresenta tendência de queda de seus assalariados externos, demonstrando a dificuldade da capital do país para permanecer como centro de gestão pública do território na atualidade."
+      },
+      {
+        "id": "d",
+        "text": "Itajaí apresenta destaque por sua função industrial, perdendo força na centralidade da gestão empresarial do território por ser uma cidade de médio porte na Região Metropolitana da Foz do Rio Itajaí."
+      }
+    ],
+    "pages": [
+      9
+    ]
+  },
+  {
+    "number": 22,
+    "topicId": "soc_estratificacao_desigualdade",
+    "subject": "Sociologia",
+    "chapter": "Classes Sociais e Mobilidade Social",
+    "title": "Gosto, feijoada e distinção social",
+    "concept": "Gosto como prática social de classe; pré-requisito: função, forma e necessidade.",
+    "steps": [
+      "Compare a imagem da refeição com o texto sobre desinteresse, distância da necessidade e senso estético.",
+      "Use o conceito de distinção para explicar a valorização da apresentação, sem reduzir o gosto a preferência individual.",
+      "A estética da refeição de luxo valoriza forma e afastamento da necessidade de saciedade como sinais de posição social.",
+      "D expressa essa prática de distinção. C reconhece a classe, mas inverte o papel da necessidade na formação desse gosto.",
+      "Confira D com a definição do texto. O problema não é decidir se a feijoada é bonita, mas interpretar seu sentido social."
+    ],
+    "trap": "Um exemplo cotidiano pede aplicação de conceito. Juízo pessoal sobre a comida não substitui análise sociológica.",
+    "retrieval": [
+      "Como forma e função se distinguem no texto?",
+      "Por que o gosto pode ser relacionado à posição de classe?"
+    ],
+    "transfer": "Exercício autoral: explique uma apresentação de comida que prioriza a aparência sobre a saciedade.",
+    "criteria": [
+      "Usar o conceito de distinção social.",
+      "Relacionar forma e distância da necessidade, sem presumir o gosto de todo indivíduo de uma classe."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "demonstra que a formação do gosto está mais relacionado a juízos pessoais, pois as práticas alimentares são guiadas por necessidades de sobrevivência e não produzem distinção social."
+      },
+      {
+        "id": "b",
+        "text": "representa uma aproximação social das classes altas em relação às populares, pois reduz a distância simbólica entre o universo do luxo e o popular, limitando o alcance da distinção social."
+      },
+      {
+        "id": "c",
+        "text": "demonstra que o gosto está mais relacionado a experiências de classe e menos a juízos pessoais, pois simboliza o gosto das classes altas pelo belo e um senso estético formado pela necessidade."
+      },
+      {
+        "id": "d",
+        "text": "representa uma prática de distinção social das classes altas em relação às populares, pois simboliza um senso estético que valoriza a forma e aquilo que não é necessário, em vez da função."
+      }
+    ],
+    "pages": [
+      10
+    ]
+  },
+  {
+    "number": 23,
+    "topicId": "fil_etica_politica_contemporanea",
+    "subject": "Filosofia",
+    "chapter": "Ética Aplicada e Bioética",
+    "title": "Relações entre sociedade e natureza",
+    "concept": "Interdependência de agentes humanos e não humanos; pré-requisito: tese e comparação de textos.",
+    "steps": [
+      "Identifique em Krenak a continuidade entre humanidade e Terra e em Stengers o conjunto de processos interligados.",
+      "Compare a articulação entre seres humanos, seres vivos e processos da Terra; não restrinja a discussão apenas à sociedade.",
+      "Os textos apresentam um regime de atividades e relações que envolve agentes humanos e não humanos. As mudanças põem em risco formas de vida que participam dessa articulação.",
+      "D contempla a atuação articulada e o risco aos agentes envolvidos. C restringe a consequência à sociedade, enquanto Stengers também destaca inúmeras espécies vivas; A e B tratam a própria Terra como ameaçada contra a ressalva do texto.",
+      "Confira D nos dois textos e no gabarito oficial. Distinguir permanência do planeta e ameaça a formas de vida não equivale a negar a crise ambiental."
+    ],
+    "trap": "Não reduzir o conjunto de agentes à humanidade. A banca cobra a articulação entre humanos e não humanos e distingue ameaça às formas de vida da permanência da Terra.",
+    "retrieval": [
+      "Qual ressalva Stengers faz sobre a Terra?",
+      "Como Krenak contesta a separação entre humanidade e natureza?"
+    ],
+    "transfer": "Exercício autoral: explique a frase “o planeta permanece, mas uma sociedade pode não sobreviver às mudanças”.",
+    "criteria": [
+      "Distinguir existência física do planeta e habitabilidade.",
+      "Relacionar sociedade a clima, solo, oceanos e outros seres vivos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "passaram a se influenciar por meio do desenvolvimento das forças produtivas e do trabalho ao longo da história, o que coloca a natureza em risco."
+      },
+      {
+        "id": "b",
+        "text": "estão articuladas por múltiplos processos que envolvem agentes humanos e não humanos (oceanos, atmosfera, clima, solo, etc.), o que coloca a natureza em risco."
+      },
+      {
+        "id": "c",
+        "text": "possuem uma história comum e articulada, fato percebido por povos de diferentes matrizes culturais, o que coloca a sociedade em risco."
+      },
+      {
+        "id": "d",
+        "text": "possuem um regime de atividades próprio, que envolve agentes humanos e não humanos (oceanos, atmosfera, clima, solo, etc.), o que coloca tais agentes em risco."
+      }
+    ],
+    "pages": [
+      10
+    ]
+  },
+  {
+    "number": 24,
+    "topicId": "soc_estratificacao_desigualdade",
+    "subject": "Sociologia",
+    "chapter": "Desigualdade de Gênero",
+    "title": "Adolescência e significação social do corpo",
+    "concept": "Construção social de gênero; pré-requisito: distinguir evento biológico de sentido social.",
+    "steps": [
+      "Localize a afirmação de que hormônios importam, mas não determinam como a adolescência é experimentada.",
+      "Diferencie mudanças corporais e significados produzidos por práticas, instituições e relações sociais.",
+      "A ordem de gênero participa da interpretação das mudanças e das performances de masculinidade e feminilidade.",
+      "C mantém essa relação. B atribui produção biológica às masculinidades; D transforma experiências diversas em um todo homogêneo.",
+      "Confira C nos dois textos. Reconhecer mediação social não significa negar que o corpo se desenvolve biologicamente."
+    ],
+    "trap": "Evite determinismo biológico e generalização de que todos os adolescentes vivem a mesma masculinidade.",
+    "retrieval": [
+      "Como um evento corporal pode receber significado social?",
+      "Qual papel a escola pode ter na socialização de gênero?"
+    ],
+    "transfer": "Exercício autoral: explique como uma prática esportiva pode atribuir prestígio diferente a comportamentos de meninos e meninas.",
+    "criteria": [
+      "Identificar norma social e distribuição de prestígio.",
+      "Não reduzir o comportamento a hormônios nem generalizar todas as experiências."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a adolescência, como processo de participar do mundo adulto, desafia padrões previamente estabelecidos, promovendo riscos e violência que poderiam ser evitados caso tais padrões fossem mantidos."
+      },
+      {
+        "id": "b",
+        "text": "masculinidades hegemônicas e subordinadas são produzidas biológica e socialmente, por meio de práticas corporais como a sexualidade e o esporte e em confronto com instituições, como a escola."
+      },
+      {
+        "id": "c",
+        "text": "eventos biológicos associados às mudanças corporais da adolescência são significados socialmente, o que torna a ordem de gênero em que tais mudanças ocorrem importante para compreendermos masculinidades e feminilidades."
+      },
+      {
+        "id": "d",
+        "text": "a precocidade na busca de status de adultos e do prestígio masculino por meninos adolescentes os torna ansiosos, fazendo das masculinidades juvenis contemporâneas um todo homogêneo e violento."
+      }
+    ],
+    "pages": [
+      10,
+      11
+    ]
+  },
+  {
+    "number": 25,
+    "topicId": "soc_estratificacao_desigualdade",
+    "subject": "Sociologia",
+    "chapter": "Desigualdade de Gênero",
+    "title": "Taxonomia binária e horizonte democrático",
+    "concept": "Reconhecimento político e crítica à exclusão; pré-requisito: reconstruir a tese do autor.",
+    "steps": [
+      "Identifique a definição de gênero atribuída à OMS e o pedido de nova epistemologia feito por Preciado.",
+      "Procure a proposta de reconhecimento político sem transformar a leitura em concordância pessoal obrigatória.",
+      "O texto critica uma taxonomia institucional binária que exclui multiplicidades e propõe ampliar o horizonte democrático.",
+      "C corresponde à tese. A nega a variação cultural afirmada; B substitui reconhecimento por reconciliação com uma suposta natureza; D acrescenta mérito como condição.",
+      "Confira C com a conclusão: designação sexual ou de gênero não deve condicionar reconhecimento social e político."
+    ],
+    "trap": "O comando exige compreender o argumento apresentado. Uma alternativa com vocabulário democrático pode introduzir uma condição que o autor recusa.",
+    "retrieval": [
+      "Qual critério de reconhecimento o texto contesta?",
+      "Por que a alternativa com “mérito” altera a tese?"
+    ],
+    "transfer": "Exercício autoral: formule a tese do texto em uma frase e uma consequência institucional coerente.",
+    "criteria": [
+      "Reconhecimento sem condicionamento por designação sexual ou de gênero.",
+      "Propor inclusão de direitos, sem reintroduzir o binarismo como barreira."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A diferença sexual entre homem e mulher é informada pela biologia e indiferente a variações culturais, a despeito do que dizem a OMS e as associações feministas, gays, lésbicas e trans."
+      },
+      {
+        "id": "b",
+        "text": "Embora seja inevitável admitir que haja pessoas que não se enquadram na taxonomia binária, é necessário elaborar coletivamente caminhos para ajudá-las a uma reconciliação com a própria natureza."
+      },
+      {
+        "id": "c",
+        "text": "As instituições sociais e políticas operam normalmente com uma taxonomia binária violenta e excludente da multiplicidade de seres humanos, que precisa ser revista em nome da ampliação do nosso horizonte democrático."
+      },
+      {
+        "id": "d",
+        "text": "Gênero e sexualidade são categorias identitárias inadequadas ao processo de ampliação do horizonte democrático com vistas ao reconhecimento social e político de todos os indivíduos em função do seu próprio mérito."
+      }
+    ],
+    "pages": [
+      11
+    ]
+  },
+  {
+    "number": 26,
+    "topicId": "fil_etica_politica_contemporanea",
+    "subject": "Filosofia",
+    "chapter": "Filosofia Política Contemporânea",
+    "title": "Rosa Luxemburgo, democracia e socialismo",
+    "concept": "Participação popular versus burocratização; pré-requisito: distinguir meios, fins e etapas políticas.",
+    "steps": [
+      "Localize a crítica a “primeiro toma-se o poder, depois muda-se o mundo” e a defesa de liberdades públicas.",
+      "Compare as alternativas com a simultaneidade entre transformação socialista e instituição democrática.",
+      "Os conselhos devem permitir participação ativa de massas esclarecidas e autônomas na condução do poder.",
+      "D representa a associação de democracia e socialismo nos textos. A nega liberdades defendidas e B separa etapas que a autora reúne.",
+      "Confira D no contexto desse pensamento; não transforme a associação conceitual em afirmação de que todo regime chamado socialista é democrático."
+    ],
+    "trap": "A banca contrapõe participação efetiva e burocracia. Tomada de poder não basta para cumprir a proposta descrita.",
+    "retrieval": [
+      "Por que eleições, imprensa e debate aparecem no texto?",
+      "Como os conselhos se relacionam à autonomia popular?"
+    ],
+    "transfer": "Exercício autoral: explique por que substituir governantes sem participação da população não satisfaz a proposta dos textos.",
+    "criteria": [
+      "Relacionar participação ativa e transformação democrática.",
+      "Indicar o risco de permanecer apenas uma burocracia como elemento ativo."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Para afastar o socialismo da ameaça da burocracia, às vezes é necessário restringir a liberdade de imprensa, o debate público e as eleições gerais."
+      },
+      {
+        "id": "b",
+        "text": "A instituição da democracia é uma etapa posterior à tomada do poder político e equivale à mudança do mundo."
+      },
+      {
+        "id": "c",
+        "text": "A democracia socialista não difere da democracia representativa: ambas se baseiam na soberania popular dos conselhos, mas tendem à burocracia partidária."
+      },
+      {
+        "id": "d",
+        "text": "Democracia e socialismo são sinônimos, pois os conselhos populares deveriam possibilitar a participação ativa das massas na condução do poder político e econômico."
+      }
+    ],
+    "pages": [
+      11
+    ]
+  },
+  {
+    "number": 27,
+    "topicId": "fil_etica_politica_contemporanea",
+    "subject": "Filosofia",
+    "chapter": "Justiça e Direitos Humanos",
+    "title": "Cícero: reta razão e utilidade comum",
+    "concept": "Justiça, lei natural e bem comum; pré-requisito: distinguir utilidade comum de vantagem particular.",
+    "steps": [
+      "Identifique os dois fundamentos: não prejudicar e servir à utilidade comum; depois a referência à reta razão.",
+      "Compare a noção de justiça com simples obediência a leis escritas e busca de vantagem individual.",
+      "A reta razão fornece a orientação natural da ação justa, voltada ao bem comum, e não ao interesse particular.",
+      "B reúne utilidade comum e agir segundo a reta razão. A torna leis escritas critério suficiente; C e D distorcem o papel da utilidade.",
+      "Confira B nos dois excertos. Uma lei ser escrita não garante sua justiça, e vantagem própria não equivale a utilidade comum."
+    ],
+    "trap": "A mesma palavra “utilidade” muda de alcance conforme seu complemento. Não equiparar comum e particular.",
+    "retrieval": [
+      "Qual diferença há entre lei escrita e lei natural no texto?",
+      "Como utilidade comum difere de vantagem pessoal?"
+    ],
+    "transfer": "Exercício autoral: uma norma beneficia apenas quem a criou e prejudica os demais. Avalie-a pelos critérios dos excertos.",
+    "criteria": [
+      "Questionar dano e ausência de bem comum.",
+      "Não justificar a norma apenas por estar escrita ou ser útil ao autor."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A justiça consiste na obediência às leis escritas e às instituições dos povos: deve servir à utilidade comum e não à utilidade daquilo que é vantajoso para si."
+      },
+      {
+        "id": "b",
+        "text": "A utilidade comum é o fundamento da justiça de uma República e, para serem justos, os cidadãos devem agir conforme a reta razão, com a qual a natureza lhes dotou."
+      },
+      {
+        "id": "c",
+        "text": "A reta razão, enquanto lei natural, é a base da justiça. A injustiça ocorre quando a utilidade deixa de ser a medida de todas as coisas."
+      },
+      {
+        "id": "d",
+        "text": "Se a justiça é agir conforme a reta razão e a utilidade é um dos fundamentos da justiça, agir com vistas aquilo que é vantajoso para si é justo."
+      }
+    ],
+    "pages": [
+      11,
+      12
+    ]
+  },
+  {
+    "number": 28,
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "chapter": "Dinâmica Interna da Colonização",
+    "title": "Copacabana e conexões comerciais coloniais",
+    "concept": "Redes coloniais e circulação cultural; pré-requisito: distinguir porto comercial e origem dos metais.",
+    "steps": [
+      "Localize Luanda, Buenos Aires, Rio de Janeiro e Potosí na rede descrita e identifique a origem do culto religioso.",
+      "Reconstrua os fluxos de pessoas escravizadas, prata e referências culturais em vez de procurar uma história isolada de cada colônia.",
+      "O tráfico conectava espaços africanos e americanos; prata peruana circulava por Buenos Aires e o culto de Copacabana chegou ao Rio.",
+      "C sintetiza conexões comerciais e culturais entre Américas portuguesa e espanhola. A localiza a extração em Buenos Aires; B troca prata por pedras preciosas.",
+      "Confira C com o exemplo religioso. O nome da praia não demonstra, por si, um ponto específico de desembarque de escravizados."
+    ],
+    "trap": "Porto de circulação não é necessariamente local de extração. A banca usa uma marca cultural para revelar redes históricas.",
+    "retrieval": [
+      "Qual papel tinham Buenos Aires e Potosí na rede?",
+      "Como uma devoção religiosa pode registrar circulação cultural?"
+    ],
+    "transfer": "Exercício autoral: explique por que fronteiras de impérios não impediam contatos entre suas colônias.",
+    "criteria": [
+      "Indicar comércio permitido ou contrabando.",
+      "Apontar circulação cultural além de circulação econômica."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A extração de prata em Buenos Aires conectou o Brasil ao comércio internacional de metais que passava por Copacabana."
+      },
+      {
+        "id": "b",
+        "text": "O tráfico de pedras preciosas de Buenos Aires complementava o fornecimento de mão de obra trazida de Luanda para o Porto de Copacabana."
+      },
+      {
+        "id": "c",
+        "text": "Copacabana remete ao passado em que as Américas portuguesa e espanhola se conectavam por redes comerciais e culturais."
+      },
+      {
+        "id": "d",
+        "text": "Copacabana preserva a memória do desembarque de escravizados que, dali, eram levados para Buenos Aires e Peru."
+      }
+    ],
+    "pages": [
+      12
+    ]
+  },
+  {
+    "number": 29,
+    "topicId": "his_idade_antiga",
+    "subject": "História",
+    "chapter": "Antiguidade Clássica: o Mundo Grego",
+    "title": "Esporte, cidadania e distinção em Atenas",
+    "concept": "Formação de elite e representação do corpo; pré-requisito: cidadania ateniense e leitura iconográfica.",
+    "steps": [
+      "Observe atleta sem barba, treinamento em palestra e inscrição de beleza; considere a preparação para cidadania.",
+      "Relacione representação idealizada do corpo às condições sociais de formação do atleta.",
+      "A cena expressa beleza e treinamento vinculados ao jovem bem-nascido, configurando distinção de classe.",
+      "B respeita a interpretação apoiada no texto. A associa a cena ao trabalho manual; C chama de maduro quem é descrito sem barba.",
+      "Confira B: a imagem representa preparação, não prova de vitória olímpica nem ápice já consumado de masculinidade."
+    ],
+    "trap": "A ausência de barba é pista etária. Não importar a noção atual de esporte universal para a cidadania antiga.",
+    "retrieval": [
+      "Qual detalhe sugere juventude?",
+      "Como treinamento corporal e privilégio social se relacionam?"
+    ],
+    "transfer": "Exercício autoral: explique por que uma imagem de atleta não prova igualdade de acesso ao esporte em Atenas.",
+    "criteria": [
+      "Relacionar prática a formação e condições sociais.",
+      "Distinguir ideal representado de participação universal."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Um atleta do lançamento de discos, esporte olímpico, ligado ao trabalho manual das camadas subalternas."
+      },
+      {
+        "id": "b",
+        "text": "Distinção de classe social, já que se representa um ideário de beleza própria ao atleta bem-nascido."
+      },
+      {
+        "id": "c",
+        "text": "Um cidadão ateniense maduro e despido, em pose comum aos lançadores de disco já vitoriosos."
+      },
+      {
+        "id": "d",
+        "text": "Elementos gráficos que representam a percepção social e esportiva do ápice da masculinidade."
+      }
+    ],
+    "pages": [
+      12
+    ]
+  },
+  {
+    "number": 30,
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "chapter": "América no Século XIX",
+    "title": "Rousseau traduzido por Mariano Moreno",
+    "concept": "Apropriação política de ideias iluministas; pré-requisito: contexto das independências americanas.",
+    "steps": [
+      "Identifique o elogio ao pacto social e a decisão explícita de suprimir passagens religiosas.",
+      "Analise a tradução como intervenção intelectual situada, e não como reprodução neutra do original.",
+      "Moreno seleciona o que divulga de Rousseau conforme seus objetivos políticos e ideológicos.",
+      "B corresponde à supressão declarada. A atribui a Rousseau defesa de absolutismo e D reduz Moreno a resistência ao Iluminismo.",
+      "Confira B unindo elogio e corte editorial. A recepção favorável de uma obra pode ser seletiva."
+    ],
+    "trap": "Não concluir adesão integral ao autor a partir do elogio de parte de sua obra.",
+    "retrieval": [
+      "Que evidência demonstra intervenção editorial?",
+      "Como seleção de trechos muda a recepção de uma ideia?"
+    ],
+    "transfer": "Exercício autoral: um tradutor elogia a soberania popular e exclui capítulos de religião. Explique sua apropriação seletiva.",
+    "criteria": [
+      "Citar as duas ações, divulgação e supressão.",
+      "Relacionar edição a projeto político sem atribuir rejeição de toda a obra."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "critica a defesa que Rousseau faz da Igreja e dos governos absolutistas na obra O Contrato Social."
+      },
+      {
+        "id": "b",
+        "text": "interfere na tradução e edição da obra de Rousseau conforme seus ideários políticos e ideológicos."
+      },
+      {
+        "id": "c",
+        "text": "justifica a tradução da obra para difundir a ideia de obediência cívica ligada à religião católica e ao rei."
+      },
+      {
+        "id": "d",
+        "text": "demonstra seu caráter conservador e a resistência ao pensamento liberal e iluminista na Argentina."
+      }
+    ],
+    "pages": [
+      12,
+      13
+    ]
+  },
+  {
+    "number": 31,
+    "topicId": "his_primeira_republica_vargas",
+    "subject": "História",
+    "chapter": "A Era Vargas: o Estado Novo",
+    "title": "Estado Novo visto pela imprensa estrangeira",
+    "concept": "Comparação de fontes e interpretações; pré-requisito: autoritarismo de 1937 e crítica documental.",
+    "steps": [
+      "Compare as qualificações pseudo-fascista, um tanto fascista, democrático e nacionalista usadas pelos correspondentes.",
+      "Distinga a existência histórica de censura das experiências particulares narradas por cada jornalista.",
+      "Os dois relatos apresentam interpretações diferentes sobre o enquadramento ideológico do governo Vargas.",
+      "C sintetiza controvérsias e ambiguidades. A afirma unanimidade inexistente e B introduz sanções não citadas.",
+      "Confira C sem tomar a experiência de um correspondente como prova de ausência geral de censura."
+    ],
+    "trap": "Uma fonte pode relativizar um fato e outra enfatizá-lo. O comando pede repercussão, não escolher o jornalista “mais confiável” por intuição.",
+    "retrieval": [
+      "Que termos revelam divergência entre os relatos?",
+      "Por que “não tive dificuldades” não comprova inexistência de censura?"
+    ],
+    "transfer": "Exercício autoral: compare dois jornais que descrevem um mesmo governo com termos diferentes.",
+    "criteria": [
+      "Identificar diferenças concretas de caracterização.",
+      "Separar interpretação editorial de fato histórico e experiência pessoal."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "percepção unânime do pleno alinhamento ideológico do Brasil com governos fascistas."
+      },
+      {
+        "id": "b",
+        "text": "condenação ao fascismo e sugestão de sanções econômicas em razão do apoio alemão a Vargas."
+      },
+      {
+        "id": "c",
+        "text": "controvérsias e ambiguidades na caracterização ideológica do novo governo Vargas."
+      },
+      {
+        "id": "d",
+        "text": "estratégias de resistência à censura imposta aos jornalistas que atuavam no Brasil."
+      }
+    ],
+    "pages": [
+      13
+    ]
+  },
+  {
+    "number": 32,
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "chapter": "Globalização e Processos Econômicos Atuais",
+    "title": "Ingresso chinês na OMC e expectativas de globalização",
+    "concept": "Comparação temporal de discursos econômicos; pré-requisito: OMC e integração comercial.",
+    "steps": [
+      "Anote a data de 1999 e as manifestações positivas dos EUA, da União Europeia e da direção da OMC.",
+      "Compare expectativas daquela conjuntura com conflitos comerciais posteriores, evitando ler o passado como se fosse presente.",
+      "O texto documenta otimismo com a expansão da integração econômica mundial nas décadas de 1990 e 2000.",
+      "A descreve esse horizonte. B inverte o deslocamento industrial; C transforma guerra tarifária em prova de fracasso chinês; D acrescenta direitos humanos sem apoio.",
+      "Confira A na linguagem de cooperação e prosperidade. Expectativa histórica não equivale a garantia de seus resultados."
+    ],
+    "trap": "Uma consequência atual não deve ser projetada como intenção original. A questão cruza História e Geografia econômica.",
+    "retrieval": [
+      "Qual é a expectativa predominante em 1999?",
+      "Qual diferença há entre expectativa e resultado histórico?"
+    ],
+    "transfer": "Exercício autoral: explique como um discurso de integração pode coexistir, anos depois, com disputas tarifárias.",
+    "criteria": [
+      "Situar cada discurso em sua conjuntura.",
+      "Distinguir integração econômica de ausência de competição e conflito."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "havia um otimismo em relação à expansão da globalização da economia mundial entre as décadas de 1990 e 2000."
+      },
+      {
+        "id": "b",
+        "text": "a entrada da China na OMC interrompeu o deslocamento das indústrias norte-americana e europeia para a Ásia."
+      },
+      {
+        "id": "c",
+        "text": "a guerra tarifária contemporânea revela o fracasso do modelo de desenvolvimento chinês dos anos 2000."
+      },
+      {
+        "id": "d",
+        "text": "os compromissos assumidos pela China na entrada na OMC permitiram a consolidação dos direitos humanos no país."
+      }
+    ],
+    "pages": [
+      13
+    ]
+  },
+  {
+    "number": 33,
+    "topicId": "his_republica_liberal_atual",
+    "subject": "História",
+    "chapter": "Regime Militar (1964-1985) II",
+    "title": "Zuzu Angel, moda e denúncia política",
+    "concept": "Arte como resistência à ditadura; pré-requisito: repressão pós-AI-5 e leitura contextual de símbolos.",
+    "steps": [
+      "Observe desenhos infantis e motivos militares e situe o desfile em 1971, durante a repressão política.",
+      "Relacione os símbolos ao contexto da denúncia, sem atribuir apoio ao regime apenas por representar armas ou uniformes.",
+      "A combinação de desenhos infantis e motivos militares funciona como denúncia do desaparecimento de presos políticos.",
+      "B interpreta o contraste e o contexto. A sugere amenização; C confunde representação crítica com alienação; D transforma denúncia em adesão.",
+      "Confira B relacionando imagens e data. A presença de símbolo militar não informa sozinha se há celebração ou crítica."
+    ],
+    "trap": "O significado político de uma imagem depende de sua montagem e contexto, não de uma lista de objetos.",
+    "retrieval": [
+      "Por que representar um canhão pode ser denúncia?",
+      "O que a data de 1971 acrescenta à leitura?"
+    ],
+    "transfer": "Exercício autoral: explique uma obra que justapõe brinquedos e símbolos de violência estatal.",
+    "criteria": [
+      "Descrever o contraste visual.",
+      "Justificar leitura crítica pelo contexto sem presumir apoio aos símbolos retratados."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "utilização de um vestido de noiva, decorado com símbolos militares e desenhos infantis, amenizava a percepção internacional dos anos de chumbo do Brasil pós-AI5."
+      },
+      {
+        "id": "b",
+        "text": "escolha por desenhos infantis, associados aos motivos militares, expressa uma denúncia do desaparecimento de presos políticos."
+      },
+      {
+        "id": "c",
+        "text": "banalização de elementos militares, em um desfile de moda, mostra uma alienação de parte da classe artística brasileira diante do regime militar."
+      },
+      {
+        "id": "d",
+        "text": "opção pelos motivos militares remonta à valorização do nacionalismo e à adesão da estilista à política externa do Regime Militar."
+      }
+    ],
+    "pages": [
+      13,
+      14
+    ]
+  },
+  {
+    "number": 34,
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "chapter": "América no Século XIX",
+    "title": "Jus soli, jus sanguinis e imigração",
+    "concept": "Formação histórica de nacionalidade; pré-requisito: direito de solo e direito de sangue.",
+    "steps": [
+      "Leia as definições e observe o predomínio de cada princípio no mapa contemporâneo.",
+      "Relacione nacionalidade aos processos históricos de formação dos Estados e de imigração.",
+      "Ex-colônias americanas receberam fluxos imigratórios relevantes, que influenciaram suas definições de nacionalidade e cidadania.",
+      "B articula mapa e história. A universaliza aquisição de nacionalidade na Europa; C e D introduzem explicações que o texto não sustenta.",
+      "Confira B sem transformar predominância cartográfica em regra absoluta: legislações podem combinar critérios e condições."
+    ],
+    "trap": "Nacionalidade por solo ou filiação não é uma distinção natural eterna; o texto destaca sua construção histórica.",
+    "retrieval": [
+      "Como jus soli difere de jus sanguinis?",
+      "Por que países de imigração podem valorizar o nascimento no território?"
+    ],
+    "transfer": "Exercício autoral: compare a nacionalidade de uma criança por local de nascimento e por filiação.",
+    "criteria": [
+      "Definir corretamente ambos os critérios.",
+      "Indicar que aplicação e combinações dependem da legislação de cada país."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Filhos de estrangeiros nascidos em países europeus adquiriam a nacionalidade e a cidadania ao nascer, após o fim das revoluções burguesas."
+      },
+      {
+        "id": "b",
+        "text": "As ex-colônias europeias nas Américas eram importantes destinos de imigrantes, o que influenciou suas definições de cidadania e nacionalidade."
+      },
+      {
+        "id": "c",
+        "text": "Regimes populistas proibiram que os nascidos nos novos países reivindicassem cidadania europeia, após as independências americanas."
+      },
+      {
+        "id": "d",
+        "text": "O jus sanguinis era utilizado nas colônias como um instrumento de controle pela Europa para dificultar o acesso à cidadania dos povos nativos."
+      }
+    ],
+    "pages": [
+      14
+    ]
+  },
+  {
+    "number": 35,
+    "topicId": "bio_microbiologia",
+    "subject": "Biologia",
+    "chapter": "Procariotos",
+    "title": "Microbiota e suscetibilidade à infecção intestinal",
+    "concept": "Comparação experimental com controles; pré-requisito: grupos experimental/controle e leitura de distribuição.",
+    "steps": [
+      "Identifique camundongos colonizados por microbiotas EUA, FIJI e GUAT e compare controles com infectados.",
+      "Use aumento da profundidade das glândulas como indicador de efeito inflamatório apresentado, não como medida direta de digestão.",
+      "Nos grupos EUA e FIJI, a distribuição dos infectados está acima dos controles; em GUAT, a diferença é muito menor.",
+      "A é compatível com maior suscetibilidade nos dois primeiros grupos. B e D atribuem benefício digestivo que não foi medido.",
+      "Confira A e respeite o modelo: são camundongos com microbiota de diferentes populações, não um teste clínico direto em humanos."
+    ],
+    "trap": "Comparar apenas valores absolutos sem o controle pode inverter a interpretação. A figura não mede todas as funções da microbiota.",
+    "retrieval": [
+      "Qual grupo deve ser comparado com cada infectado?",
+      "Por que o experimento não prova maior eficiência digestiva?"
+    ],
+    "transfer": "Exercício autoral: descreva como testar o efeito de uma microbiota sobre inflamação, controlando a infecção.",
+    "criteria": [
+      "Comparar animais infectados e não infectados com a mesma microbiota.",
+      "Definir um indicador inflamatório e evitar conclusões sobre funções não medidas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "impactar a sensibilidade às infecções entéricas, sendo as populações dos EUA e de FIJI as mais suscetíveis."
+      },
+      {
+        "id": "b",
+        "text": "auxiliar a digestão no trato gastrointestinal, sendo a população da GUAT a mais beneficiada."
+      },
+      {
+        "id": "c",
+        "text": "impactar a sensibilidade às infecções entéricas, sendo a população da GUAT a mais suscetível."
+      },
+      {
+        "id": "d",
+        "text": "auxiliar a digestão no trato gastrointestinal, sendo as populações dos EUA e de FIJI as mais beneficiadas."
+      }
+    ],
+    "pages": [
+      15
+    ]
+  },
+  {
+    "number": 36,
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "chapter": "Fisiologia Vegetal: Transporte no Floema",
+    "title": "Anelamento, floema e recuperação do caule",
+    "concept": "Transporte de fotoassimilados e câmbio; pré-requisito: posição e funções de xilema e floema.",
+    "steps": [
+      "Identifique frutos maiores no grupo 1, perda de folhas no grupo 2 e recuperação da região anelada no grupo 1.",
+      "Associe remoção da casca à interrupção do floema e diferencie o transporte de açúcares do transporte de água.",
+      "O anelamento restringe transporte de produtos da fotossíntese em direção às raízes, favorecendo acúmulo acima do corte.",
+      "A recuperação do grupo 1 indica preservação da atividade cambial capaz de recompor tecidos. D apresenta floema, raízes e câmbio preservado.",
+      "Confira D; xilema transporta principalmente água e sais das raízes, e sua remoção não explicaria o mecanismo proposto."
+    ],
+    "trap": "Floema não tem sempre um único sentido. Aqui importa a relação fonte–dreno e a interrupção do caminho para as raízes.",
+    "retrieval": [
+      "Por que frutos acima do anel podem aumentar?",
+      "Qual papel do câmbio na recuperação do grupo 1?"
+    ],
+    "transfer": "Exercício autoral: preveja o que ocorre às raízes se um anelamento total do floema não for reparado.",
+    "criteria": [
+      "Redução do recebimento de fotoassimilados.",
+      "Comprometimento da nutrição das raízes e, com o tempo, da planta."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "xilema e limitou o transporte de água para as folhas, comprometendo a atividade do câmbio vascular nas plantas do grupo 1."
+      },
+      {
+        "id": "b",
+        "text": "floema e restringiu o transporte dos produtos da fotossíntese para as folhas, sem comprometer a atividade do câmbio vascular nas plantas do grupo 2."
+      },
+      {
+        "id": "c",
+        "text": "xilema e limitou o transporte de água para as raízes, comprometendo a atividade do câmbio vascular nas plantas do grupo 2."
+      },
+      {
+        "id": "d",
+        "text": "floema e restringiu o transporte dos produtos da fotossíntese para as raízes, sem comprometer a atividade do câmbio vascular nas plantas do grupo 1."
+      }
+    ],
+    "pages": [
+      15
+    ]
+  },
+  {
+    "number": 37,
+    "topicId": "bio_genetica",
+    "subject": "Biologia",
+    "chapter": "Introdução à Genética",
+    "title": "Alelo deletério e depressão endogâmica",
+    "concept": "Segregação mendeliana e homozigose recessiva; pré-requisito: genótipo versus fenótipo.",
+    "steps": [
+      "Os pais em preto são heterozigotos; represente-os como Aa. O alelo recessivo deletério reduz ganho de peso em aa.",
+      "Monte Aa × Aa e conte genótipos esperados, sem usar os três descendentes desenhados como frequência universal.",
+      "A descendência esperada é 1/4 AA, 1/2 Aa e 1/4 aa. A condição recessiva deletéria ocorre em 25%.",
+      "C relaciona essa expressão à depressão endogâmica. Homozigose total é 50%, mas AA e aa não têm o mesmo efeito descrito.",
+      "Confira C pelo cruzamento. Valores de massa na figura não substituem a probabilidade mendeliana da geração."
+    ],
+    "trap": "A heterozigose esperada é 50%, não 33%. Diferencie probabilidade do cruzamento, amostra desenhada e efeito do alelo.",
+    "retrieval": [
+      "Por que 50% de homozigotos não significa 50% com alelo deletério em dose dupla?",
+      "Qual relação a endogamia tem com exposição de recessivos?"
+    ],
+    "transfer": "Exercício autoral: cruze Aa com aa para um alelo recessivo deletério. Determine a chance de aa.",
+    "criteria": [
+      "50% Aa e 50% aa.",
+      "Explicar que o efeito deletério recessivo aparece em aa."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A heterose ocorre no cruzamento entre indivíduos heterozigotos, levando à maior massa corporal, com probabilidade de ocorrer em 66% dos animais da geração F1."
+      },
+      {
+        "id": "b",
+        "text": "A heterozigose tem probabilidade de ocorrer em 33% dos animais da geração F1, proporcionando animais com maior massa corporal e maior variabilidade genética."
+      },
+      {
+        "id": "c",
+        "text": "A depressão endogâmica tem probabilidade de ocorrer em 25% dos animais da geração F1, proporcionando animais com menor massa corporal e também menor variabilidade genética."
+      },
+      {
+        "id": "d",
+        "text": "A homozigose determina a depressão endogâmica, levando à menor massa corporal, com probabilidade de ocorrer em 50% dos animais da geração F1."
+      }
+    ],
+    "pages": [
+      15
+    ]
+  },
+  {
+    "number": 38,
+    "topicId": "bio_botanica",
+    "subject": "Biologia",
+    "chapter": "Fungos",
+    "title": "Mitose, plasmogamia e meiose no ciclo de fungo",
+    "concept": "Ploidia em ciclo haplonte; pré-requisito: n, 2n e distinção entre fusão celular e nuclear.",
+    "steps": [
+      "Acompanhe na figura fases n, células com núcleos separados e a breve etapa 2n.",
+      "Identifique eventos por alteração de ploidia e por fusão, não apenas pela direção das setas.",
+      "I e II correspondem a mitoses; III é plasmogamia, união de citoplasmas; IV é meiose após a fase diploide.",
+      "A plasmogamia não é cariogamia: os núcleos podem permanecer separados antes da fusão nuclear. A meiose restaura a condição haploide.",
+      "A sequência mitose, mitose, plasmogamia, meiose é C. Confira a tabela na página original."
+    ],
+    "trap": "n + n não é automaticamente 2n no mesmo núcleo. Confundir plasmogamia e cariogamia compromete a leitura do ciclo.",
+    "retrieval": [
+      "Qual evento reduz a ploidia?",
+      "Por que uma célula dicariótica não é um núcleo diploide?"
+    ],
+    "transfer": "Exercício autoral: descreva plasmogamia, cariogamia e meiose em sequência.",
+    "criteria": [
+      "Fusão de citoplasmas, depois fusão de núcleos.",
+      "Meiose reduz 2n a n; não atribuir essa redução à mitose."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "I: mitose; II: meiose; III: plasmogamia; IV: meiose."
+      },
+      {
+        "id": "b",
+        "text": "I: meiose; II: meiose; III: cariogamia; IV: mitose."
+      },
+      {
+        "id": "c",
+        "text": "I: mitose; II: mitose; III: plasmogamia; IV: meiose."
+      },
+      {
+        "id": "d",
+        "text": "I: meiose; II: mitose; III: cariogamia; IV: mitose."
+      }
+    ],
+    "pages": [
+      15,
+      16
+    ]
+  },
+  {
+    "number": 39,
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "chapter": "Espécies Invasoras e Controle Biológico",
+    "title": "Predador exótico e sucesso de invasão",
+    "concept": "Dinâmica de populações e efeitos indiretos; pré-requisito: predação, competição e extinção local.",
+    "steps": [
+      "Leia a definição de sucesso da invasão e siga as curvas nos cenários I e II.",
+      "Compare estabelecimento do exótico e destino das duas populações nativas, sem equiparar presença inicial a sucesso.",
+      "No cenário I, o exótico se estabelece, a presa nativa diminui e o predador nativo é extinto.",
+      "Isso satisfaz o critério de sucesso dado no texto e corresponde a B. As demais trocam cenários, espécie extinta ou persistência do invasor.",
+      "Confira B pelo comportamento final das curvas; uma queda não significa extinção quando a densidade permanece acima de zero."
+    ],
+    "trap": "A definição operacional está no enunciado. Não exigir extinção de todas as espécies nativas para considerar invasão bem-sucedida.",
+    "retrieval": [
+      "Qual critério de sucesso a questão adota?",
+      "Como distinguir redução populacional e extinção no gráfico?"
+    ],
+    "transfer": "Exercício autoral: um invasor persiste e reduz a presa nativa sem extingui-la. Avalie segundo a definição desta prova.",
+    "criteria": [
+      "Classificar como sucesso pelo critério de redução da nativa.",
+      "Explicar que persistência positiva não equivale a extinção."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "O cenário I representa insucesso da invasão biológica. O predador exótico é extinto, causando a redução populacional da presa nativa e o aumento populacional do predador nativo."
+      },
+      {
+        "id": "b",
+        "text": "O cenário I representa sucesso da invasão biológica. O predador exótico se instala, causando a redução populacional da presa nativa e a extinção do predador nativo."
+      },
+      {
+        "id": "c",
+        "text": "O cenário II representa sucesso da invasão biológica. O predador exótico se instala, causando a redução populacional do predador nativo e a extinção da presa nativa."
+      },
+      {
+        "id": "d",
+        "text": "O cenário II representa insucesso da invasão biológica. O predador exótico é extinto, causando a redução populacional da presa nativa e o aumento populacional do predador nativo."
+      }
+    ],
+    "pages": [
+      16
+    ]
+  },
+  {
+    "number": 40,
+    "topicId": "bio_zoologia",
+    "subject": "Biologia",
+    "chapter": "Artrópodes: Aracnídeos",
+    "title": "Insetos, aracnídeos e classificação da placa",
+    "concept": "Hierarquia taxonômica e características de artrópodes; pré-requisito: distinguir filo e classe.",
+    "steps": [
+      "Identifique mosquitos, abelhas, carrapatos e escorpiões na placa intitulada “insetos perigosos”.",
+      "Separe o filo comum das classes diferentes.",
+      "Todos são artrópodes; mosquitos e abelhas são insetos, enquanto carrapatos e escorpiões são aracnídeos.",
+      "O título é incorreto por incluir aracnídeos como insetos. C reconhece grupos, mas declara a placa correta; B exclui aracnídeos dos artrópodes.",
+      "D é a alternativa completa. Classificação correta dos animais e avaliação do título devem coincidir."
+    ],
+    "trap": "Aracnídeo não é o oposto de artrópode: é uma classe dentro do filo. Confira a hierarquia.",
+    "retrieval": [
+      "Quantas pernas tem um inseto adulto típico?",
+      "Qual relação taxonômica há entre Arachnida e Arthropoda?"
+    ],
+    "transfer": "Exercício autoral: corrija uma placa que chama aranha e formiga de insetos.",
+    "criteria": [
+      "Formiga é inseto; aranha é aracnídeo.",
+      "Um título comum adequado é artrópodes, se esses forem os únicos grupos listados."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "correta, já que os carrapatos e escorpiões são classificados como quilópodes e os mosquitos e as abelhas como diplópodes."
+      },
+      {
+        "id": "b",
+        "text": "errada, pois apenas dois animais são artrópodes, sendo eles os mosquitos e as abelhas, que são classificados como insetos."
+      },
+      {
+        "id": "c",
+        "text": "correta, já que os mosquitos e as abelhas são classificados como artrópodes e os carrapatos e escorpiões como aracnídeos."
+      },
+      {
+        "id": "d",
+        "text": "errada, pois mesmo que todos os animais sejam classificados como artrópodes, os carrapatos e os escorpiões são aracnídeos."
+      }
+    ],
+    "pages": [
+      16
+    ]
+  },
+  {
+    "number": 41,
+    "topicId": "bio_evolucao",
+    "subject": "Biologia",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "title": "Hominídeos e evolução em mosaico",
+    "concept": "Distribuição de características e coexistência; pré-requisito: evolução ramificada e cronologia de traços.",
+    "steps": [
+      "Compare as espécies e procure nas alternativas afirmações exclusivas como “o primeiro”.",
+      "Considere que bipedismo, ferramentas e uso do fogo não surgiram todos em Homo sapiens.",
+      "Neandertais tinham cérebro desenvolvido, capacidade de comunicação e uso de fogo e ferramentas; coexistiram com outros hominídeos.",
+      "C reúne características compatíveis. A atribui fogo a Australopithecus; B faz de erectus o primeiro bípede; D reserva fogo e ferramentas a sapiens.",
+      "Confira C sem desenhar uma escada linear: espécies podem compartilhar características e coexistir."
+    ],
+    "trap": "Uma alternativa pode trazer uma característica correta e uma prioridade cronológica falsa.",
+    "retrieval": [
+      "Por que evolução humana não é uma escada de quatro crânios?",
+      "Que afirmações “foi o primeiro” invalidam as outras alternativas?"
+    ],
+    "transfer": "Exercício autoral: explique como duas espécies de hominídeos podem coexistir e compartilhar ferramentas.",
+    "criteria": [
+      "Usar evolução ramificada e ancestralidade.",
+      "Não confundir coexistência com identidade de espécie nem inovação com exclusividade de sapiens."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "O Australopithecus possuía cérebro pequeno e crânio com a maxila projetada para frente da face. Apresentava bipedismo e utilizava o fogo, o que favoreceu a evolução da espécie."
+      },
+      {
+        "id": "b",
+        "text": "O Homo erectus possuía cérebro de tamanho médio, fala rudimentar e várias características atuais, como testa plana e proeminente. Foi o primeiro a apresentar bipedismo e usar ferramentas, o que permitiu sua coexistência com outros hominídeos."
+      },
+      {
+        "id": "c",
+        "text": "O Homo neanderthalensis possuía nariz e narinas voltadas para baixo, além de cérebro bem desenvolvido e capacidade de comunicação. Utilizava o fogo e ferramentas, o que permitiu sua coexistência com outros hominídeos."
+      },
+      {
+        "id": "d",
+        "text": "O Homo sapiens possui, como característica mais marcante, o cérebro bem desenvolvido e a capacidade da fala. Foi o primeiro a usar o fogo e ferramentas, favorecendo a evolução da espécie."
+      }
+    ],
+    "pages": [
+      16,
+      17
+    ]
+  },
+  {
+    "number": 42,
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "chapter": "Estatística Descritiva",
+    "title": "Percentuais regionais em três conclaves",
+    "concept": "Leitura de gráfico e quantificador “em cada”; pré-requisito: soma de percentuais da mesma base.",
+    "steps": [
+      "Identifique as cinco regiões e os anos 2005, 2013 e 2025; o comando exige uma afirmação válida nos três.",
+      "Some as parcelas citadas por alternativa em cada ano, usando a mesma base de cardeais votantes.",
+      "Europa e África ultrapassam juntas 50% nos três conclaves; em 2025 a soma é 39,3% + 13,3% = 52,6%.",
+      "C atende ao quantificador. A não chega a 40%; B não vale nos primeiros anos; D exige igualdade de 30% que não se mantém.",
+      "Confira também 2005 e 2013 no gráfico. Mostrar apenas 2025 não basta para provar “em cada conclave”."
+    ],
+    "trap": "Dois terços necessários à eleição não são o limiar perguntado. O texto tem dados que não precisam entrar na conta.",
+    "retrieval": [
+      "Por que a base percentual precisa ser a mesma?",
+      "Qual diferença há entre “em 2025” e “em cada conclave”?"
+    ],
+    "transfer": "Exercício autoral: grupos A e B somam 52%, 49% e 54% em três anos. Pode-se afirmar que sempre passam de 50%?",
+    "criteria": [
+      "Não: o ano com 49% é contraexemplo.",
+      "Verificar os três valores, sem usar média ou apenas o último ano."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "América Latina e África juntas corresponderam a mais que 40% da quantidade de cardeais votantes."
+      },
+      {
+        "id": "b",
+        "text": "Ásia, Oceania e África juntas corresponderam a mais que 30% da quantidade de cardeais votantes."
+      },
+      {
+        "id": "c",
+        "text": "Europa e África juntas corresponderam a mais que 50% da quantidade de cardeais votantes."
+      },
+      {
+        "id": "d",
+        "text": "Ásia, Oceania, Estados Unidos e Canadá juntos corresponderam a 30% da quantidade de cardeais votantes."
+      }
+    ],
+    "pages": [
+      17
+    ]
+  },
+  {
+    "number": 43,
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "chapter": "Porcentagem",
+    "title": "Reajustes sucessivos e remuneração acumulada",
+    "concept": "Porcentagem composta e soma de rendimentos; pré-requisito: fator multiplicativo e base de comparação.",
+    "steps": [
+      "Represente o salário original por S; são 12 meses de cada um dos três anos em ambas as propostas.",
+      "Compare totais dos três anos, não somente o salário de dezembro de 2027.",
+      "Proposta 1: 12 × 3 × 1,5S = 54S. Proposta 2: 12S × (1,2 + 1,44 + 1,728) = 52,416S.",
+      "A diferença relativa ao total da proposta 2 é (54 − 52,416)/52,416 ≈ 0,0302, ou 3,02%.",
+      "A proposta 1 dá aproximadamente 3% a mais: A. O salário final maior da proposta 2 não implica maior total acumulado."
+    ],
+    "trap": "20% + 20% + 20% não reproduz reajustes sucessivos. Declare a base quando calcula “maior que”.",
+    "retrieval": [
+      "Por que o terceiro salário é 1,728S?",
+      "Qual total deve ser o denominador da comparação pedida?"
+    ],
+    "transfer": "Exercício autoral: compare por dois anos um reajuste imediato de 30% com reajustes de 20% no início de cada ano.",
+    "criteria": [
+      "Totais de 31,2S e 31,68S.",
+      "A segunda proposta supera a primeira; distinguir salário final e total."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "3% maior que o total a ser recebido na proposta 2."
+      },
+      {
+        "id": "b",
+        "text": "1% maior que o total a ser recebido na proposta 2."
+      },
+      {
+        "id": "c",
+        "text": "3% menor que o total a ser recebido na proposta 2."
+      },
+      {
+        "id": "d",
+        "text": "1% menor que o total a ser recebido na proposta 2."
+      }
+    ],
+    "pages": [
+      17
+    ]
+  },
+  {
+    "number": 44,
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "chapter": "Composição de Funções",
+    "title": "Ponto do gráfico de uma função composta",
+    "concept": "Composição e substituição algébrica; pré-requisito: coordenadas e avaliação de polinômios.",
+    "steps": [
+      "O gráfico de f(g(x)) passa por (1,5); anote g(x) = 3 − x e f(x) = x³ + 2x² + ax − 1.",
+      "Calcule primeiro g(1); a coordenada 1 é entrada da função composta, não diretamente de f.",
+      "g(1) = 2, logo f(2) = 5. Assim 8 + 8 + 2a − 1 = 5.",
+      "15 + 2a = 5 fornece 2a = −10 e a = −5. A composição altera o argumento antes de aplicar f.",
+      "Com a = −5, f(2) = 8 + 8 − 10 − 1 = 5. A resposta é D."
+    ],
+    "trap": "Usar f(1) = 5 em vez de f(g(1)) = 5 produz uma equação diferente.",
+    "retrieval": [
+      "A qual função pertence o ponto (1,5)?",
+      "Em que ordem se avalia f(g(x))?"
+    ],
+    "transfer": "Exercício autoral: g(x) = 2x e f(x) = x² + a; se f(g(3)) = 40, encontre a.",
+    "criteria": [
+      "g(3) = 6.",
+      "36 + a = 40, portanto a = 4."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "−2."
+      },
+      {
+        "id": "b",
+        "text": "−3."
+      },
+      {
+        "id": "c",
+        "text": "−4."
+      },
+      {
+        "id": "d",
+        "text": "−5."
+      }
+    ],
+    "pages": [
+      17
+    ]
+  },
+  {
+    "number": 45,
+    "topicId": "mat_complexos_polinomios",
+    "subject": "Matemática",
+    "chapter": "Polinômios",
+    "title": "Graus de soma, produto e diferença de polinômios",
+    "concept": "Cancelamento de coeficientes líderes; pré-requisito: grau e produto de polinômios não nulos.",
+    "steps": [
+      "Anote grau(p + q) = 3 e grau(pq) = 8.",
+      "Use que os graus do produto se somam e investigue por que a soma tem grau menor.",
+      "Se os graus fossem diferentes, o maior sobreviveria na soma e seria 3, tornando impossível um produto de grau 8. Portanto ambos têm grau 4.",
+      "Os coeficientes de x⁴ são opostos para cancelar na soma. Na diferença eles se somam em módulo e não se cancelam.",
+      "Grau(p − q) = 4: B. O cancelamento da soma não autoriza repetir o mesmo cancelamento na diferença."
+    ],
+    "trap": "O grau da soma não é sempre o máximo: pode cair quando os termos líderes cancelam.",
+    "retrieval": [
+      "Quando os graus de dois polinômios se somam?",
+      "Por que cancelamento em p + q impede cancelamento em p − q?"
+    ],
+    "transfer": "Exercício autoral: p = x⁴ + x³ e q = −x⁴ + 2x³. Determine os graus de soma, produto e diferença.",
+    "criteria": [
+      "Graus 3, 8 e 4.",
+      "Justificar pelo cancelamento do termo de grau 4 apenas na soma."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "5."
+      },
+      {
+        "id": "b",
+        "text": "4."
+      },
+      {
+        "id": "c",
+        "text": "3."
+      },
+      {
+        "id": "d",
+        "text": "2."
+      }
+    ],
+    "pages": [
+      17
+    ]
+  },
+  {
+    "number": 46,
+    "topicId": "mat_geometria_analitica",
+    "subject": "Matemática",
+    "chapter": "Distância entre um Ponto e uma Reta",
+    "title": "Reta, ângulo com eixo y e distância à origem",
+    "concept": "Coeficiente angular e distância ponto–reta; pré-requisito: tangente e forma geral da reta.",
+    "steps": [
+      "A reta cresce e tem intercepto negativo; o ângulo indicado é de 30° com o eixo y e a distância à origem é √3.",
+      "Converta para inclinação de 60° com o eixo x e use a fórmula da distância à reta.",
+      "a = tan 60° = √3. Para y = ax + b, d = |b|/√(a² + 1) = |b|/2.",
+      "De d = √3, |b| = 2√3; como o intercepto está abaixo da origem, b = −2√3.",
+      "ab = √3 × (−2√3) = −6: C. O sinal do intercepto é fixado pela figura."
+    ],
+    "trap": "O ângulo com y não é diretamente a inclinação com x; também não trocar distância perpendicular por intercepto.",
+    "retrieval": [
+      "Qual é a inclinação com x neste desenho?",
+      "Por que precisamos da figura para escolher o sinal de b?"
+    ],
+    "transfer": "Exercício autoral: y = x + b tem distância 2 à origem e intercepto negativo. Encontre b.",
+    "criteria": [
+      "2 = |b|/√2.",
+      "b = −2√2, usando o sinal informado."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "−4."
+      },
+      {
+        "id": "b",
+        "text": "−5."
+      },
+      {
+        "id": "c",
+        "text": "−6."
+      },
+      {
+        "id": "d",
+        "text": "−7."
+      }
+    ],
+    "pages": [
+      18
+    ]
+  },
+  {
+    "number": 47,
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "chapter": "Linguagem Cartográfica",
+    "title": "Área de mapa por massa do papel",
+    "concept": "Escala linear e quadrado da escala; pré-requisito: densidade superficial e conversão m²–km².",
+    "steps": [
+      "Anote massa 1,0815 g, gramatura 75 g/m² e escala 1:5 000 000.",
+      "Calcule a área do papel pela gramatura e amplie pelo quadrado do fator linear.",
+      "A papel = 1,0815/75 = 0,01442 m². A real = 0,01442 × (5 000 000)² = 3,605 × 10¹¹ m².",
+      "Para passar de m² a km², divida por 10⁶: A real = 360 500 km².",
+      "D coincide com o resultado. Faça a conferência por cm²: 144,2 cm² no mapa e 2 500 km² por cm²."
+    ],
+    "trap": "Aplicar a escala uma única vez fornece comprimento, não área. O fator de conversão das unidades também é quadrático.",
+    "retrieval": [
+      "Por que a escala de área é o quadrado da linear?",
+      "Quanto vale 1 cm² nesta escala?"
+    ],
+    "transfer": "Exercício autoral: em 1:100 000, uma região ocupa 12 cm². Determine a área real.",
+    "criteria": [
+      "1 cm equivale a 1 km, logo 1 cm² a 1 km².",
+      "Área real de 12 km²."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "359.900 km²."
+      },
+      {
+        "id": "b",
+        "text": "360.100 km²."
+      },
+      {
+        "id": "c",
+        "text": "360.300 km²."
+      },
+      {
+        "id": "d",
+        "text": "360.500 km²."
+      }
+    ],
+    "pages": [
+      18
+    ]
+  },
+  {
+    "number": 48,
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "chapter": "Função Quadrática",
+    "title": "Parábola de trajetória com vértice conhecido",
+    "concept": "Forma de vértice e ponto adicional; pré-requisito: parábola côncava para baixo.",
+    "steps": [
+      "Escolha os eixos da figura: ponto inicial (0,2) e vértice de altura máxima (9,3).",
+      "Use y = a(x − 9)² + 3 para incorporar diretamente a posição do vértice.",
+      "No ponto inicial, 2 = 81a + 3, portanto a = −1/81.",
+      "Expandindo: y = −x²/81 + 2x/9 + 2. O coeficiente negativo é coerente com uma altura máxima.",
+      "C satisfaz y(0) = 2 e y(9) = 3, além de ter vértice em x = 9."
+    ],
+    "trap": "A distância entre atletas localiza o vértice, não uma raiz no solo. Não impor y(9) = 0.",
+    "retrieval": [
+      "Por que usar a forma de vértice simplifica a conta?",
+      "Como conferir o sinal de a pelo desenho?"
+    ],
+    "transfer": "Exercício autoral: uma trajetória passa por (0,1) e tem vértice (4,3). Encontre a equação.",
+    "criteria": [
+      "a = −1/8.",
+      "y = −(x − 4)²/8 + 3; conferir o ponto inicial."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "y = (−1/9)x² + (10/9)x + 2."
+      },
+      {
+        "id": "b",
+        "text": "y = (−1/99)x² + (20/99)x + 2."
+      },
+      {
+        "id": "c",
+        "text": "y = (−1/81)x² + (2/9)x + 2."
+      },
+      {
+        "id": "d",
+        "text": "y = (−1/4)x² + (9/2)x + 2."
+      }
+    ],
+    "pages": [
+      18,
+      19
+    ]
+  },
+  {
+    "number": 49,
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "chapter": "Introdução às Probabilidades",
+    "title": "Exatamente duas crianças com o próprio brinquedo",
+    "concept": "Permutações com pontos fixos; pré-requisito: fatorial, combinação e equiprobabilidade.",
+    "steps": [
+      "Considere cinco brinquedos distintos e todas as distribuições equiprováveis; queremos exatamente duas coincidências.",
+      "Escolha as duas crianças que ficam com os próprios brinquedos e impeça coincidências entre as três restantes.",
+      "Existem C(5,2) = 10 escolhas e duas permutações sem pontos fixos para os três brinquedos restantes.",
+      "Casos favoráveis = 10 × 2 = 20; casos possíveis = 5! = 120. P = 20/120 = 1/6.",
+      "B é a resposta. Se permitir que outra criança receba o próprio brinquedo, contará casos de mais de duas coincidências."
+    ],
+    "trap": "“Exatamente duas” exige exclusão das coincidências restantes. Os eventos de retirada não são independentes.",
+    "retrieval": [
+      "Por que não multiplicar duas probabilidades de 1/5?",
+      "Quantas permutações de três elementos não têm ponto fixo?"
+    ],
+    "transfer": "Exercício autoral: três pessoas trocam três presentes ao acaso. Qual é a chance de ninguém receber o próprio?",
+    "criteria": [
+      "Duas permutações favoráveis entre 3! = 6.",
+      "Probabilidade de 1/3, sem tratar retiradas como independentes."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "1/5."
+      },
+      {
+        "id": "b",
+        "text": "1/6."
+      },
+      {
+        "id": "c",
+        "text": "1/25."
+      },
+      {
+        "id": "d",
+        "text": "1/30."
+      }
+    ],
+    "pages": [
+      19
+    ]
+  },
+  {
+    "number": 50,
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "chapter": "Relações Trigonométricas em Polígonos",
+    "title": "Área de triângulo simétrico dentro de quadrado",
+    "concept": "Cosseno e simetria; pré-requisito: produto escalar ou lei dos cossenos e área de triângulo.",
+    "steps": [
+      "Como M é o ponto médio de AB e PD = QC, o triângulo PMQ é simétrico. Denote metade de PQ por t e a altura por x.",
+      "Use os vetores MP = (−t,−x) e MQ = (t,−x), ou a lei dos cossenos, para expressar cos θ.",
+      "cos θ = (x² − t²)/(x² + t²) = 2/3. Assim 3x² − 3t² = 2x² + 2t² e t = x/√5.",
+      "A área é (2t × x)/2 = tx = x²/√5 = (√5/5)x².",
+      "A corresponde ao resultado. Para conferir, t < x/2, compatível com P e Q internos ao lado do quadrado."
+    ],
+    "trap": "A altura é o lado inteiro x; t é metade da base, não a base completa.",
+    "retrieval": [
+      "Qual informação garante a simetria?",
+      "Qual é a base do triângulo em função de t?"
+    ],
+    "transfer": "Exercício autoral: mantenha a figura e faça cos θ = 3/5. Determine a área.",
+    "criteria": [
+      "t² = x²/4, logo t = x/2.",
+      "Área x²/2; P e Q passam a coincidir com os extremos do lado."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "(√5/5)x²."
+      },
+      {
+        "id": "b",
+        "text": "(√3/2)x²."
+      },
+      {
+        "id": "c",
+        "text": "(√2/2)x²."
+      },
+      {
+        "id": "d",
+        "text": "(√3/4)x²."
+      }
+    ],
+    "pages": [
+      19
+    ]
+  },
+  {
+    "number": 51,
+    "topicId": "mat_complexos_polinomios",
+    "subject": "Matemática",
+    "chapter": "Módulo de um Número Real",
+    "title": "Inequações modulares e números primos",
+    "concept": "Interseção de conjuntos e contagem; pré-requisito: módulo como distância e primalidade.",
+    "steps": [
+      "Leia simultaneamente |x − 5| ≥ 2, |x − 11| ≤ 9 e x natural.",
+      "Resolva cada condição como intervalos antes de contar primos.",
+      "A primeira dá x ≤ 3 ou x ≥ 7; a segunda dá 2 ≤ x ≤ 20. A interseção é [2,3] ∪ [7,20] nos naturais.",
+      "Os primos são 2, 3, 7, 11, 13, 17 e 19. O primo 5 foi excluído pela primeira condição.",
+      "São sete números: C. Os limites são inclusivos por ≥ e ≤."
+    ],
+    "trap": "“E” pede interseção. Não contar o primo 5 apenas por pertencer ao intervalo 2–20.",
+    "retrieval": [
+      "Como interpretar módulo como distância?",
+      "Por que x = 5 é excluído?"
+    ],
+    "transfer": "Exercício autoral: encontre os primos naturais que satisfazem |x − 5| ≤ 3.",
+    "criteria": [
+      "Intervalo inclusivo 2 ≤ x ≤ 8.",
+      "Primos 2, 3, 5 e 7."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "5."
+      },
+      {
+        "id": "b",
+        "text": "6."
+      },
+      {
+        "id": "c",
+        "text": "7."
+      },
+      {
+        "id": "d",
+        "text": "8."
+      }
+    ],
+    "pages": [
+      19
+    ]
+  },
+  {
+    "number": 52,
+    "topicId": "mat_sequencias_matrizes",
+    "subject": "Matemática",
+    "chapter": "Sistemas de Equações",
+    "title": "Tropa com força e astúcia equilibradas",
+    "concept": "Modelagem por sistema linear; pré-requisito: soma ponderada e número total.",
+    "steps": [
+      "Denote soldados por s e estrategistas por e; há 100 combatentes.",
+      "Monte uma equação de quantidade e outra de igualdade entre as pontuações totais.",
+      "s + e = 100 e 70s + 20e = 30s + 80e. Logo 40s = 60e, ou 2s = 3e.",
+      "Substituindo s = 1,5e na soma, 2,5e = 100: e = 40 e s = 60.",
+      "Força = 4 200 + 800 = 5 000; astúcia = 1 800 + 3 200 = 5 000. Resposta B."
+    ],
+    "trap": "Não igualar os números de combatentes: as pontuações por indivíduo são diferentes.",
+    "retrieval": [
+      "Por que a soma de habilidades deve ser ponderada?",
+      "Quais duas condições independentes resolvem o problema?"
+    ],
+    "transfer": "Exercício autoral: usando as mesmas pontuações, distribua 50 combatentes com força e astúcia iguais.",
+    "criteria": [
+      "Mesma proporção 3 soldados para 2 estrategistas.",
+      "30 soldados e 20 estrategistas; conferir ambos os totais."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "70 soldados e 30 estrategistas."
+      },
+      {
+        "id": "b",
+        "text": "60 soldados e 40 estrategistas."
+      },
+      {
+        "id": "c",
+        "text": "50 soldados e 50 estrategistas."
+      },
+      {
+        "id": "d",
+        "text": "40 soldados e 60 estrategistas."
+      }
+    ],
+    "pages": [
+      19
+    ]
+  },
+  {
+    "number": 53,
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "chapter": "Áreas de Polígonos",
+    "title": "Área sombreada por interseção de segmentos",
+    "concept": "Semelhança ou coordenadas e área; pré-requisito: identificação correta da região pintada.",
+    "steps": [
+      "Adote D = (0,0), A = (0,6), B = (6,6), C = (6,0). Então P = (3,6), Q = (6,4), R = (1,0) e S = (0,4).",
+      "A região sombreada é o triângulo formado por P, Q e a interseção T de PR com SQ.",
+      "Em PR, y = 3(x − 1). Como SQ tem y = 4, T = (7/3,4). A base TQ mede 6 − 7/3 = 11/3.",
+      "A altura de P até TQ é 2. Área = (11/3 × 2)/2 = 11/3.",
+      "A é a resposta. Confira que não calculou a área de todo o quadrilátero PQRS nem de um triângulo com base no lado inferior."
+    ],
+    "trap": "O ponto R serve para definir a reta PR, mas não é um vértice da região sombreada.",
+    "retrieval": [
+      "Onde está a base da região pintada?",
+      "Como determinar T por semelhança ou pela equação da reta?"
+    ],
+    "transfer": "Exercício autoral: mantenha a figura, mas faça DR = 0. Calcule a área sombreada.",
+    "criteria": [
+      "PR passa a ser y = 2x, logo T = (2,4).",
+      "Base 4 e altura 2: área 4."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "11/3."
+      },
+      {
+        "id": "b",
+        "text": "13/3."
+      },
+      {
+        "id": "c",
+        "text": "15/4."
+      },
+      {
+        "id": "d",
+        "text": "17/4."
+      }
+    ],
+    "pages": [
+      19
+    ]
+  },
+  {
+    "number": 54,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Variação Linguística",
+    "title": "Pronúncia de advogado e desconhecimento linguístico",
+    "concept": "Variação fonética e comentário metalinguístico; pré-requisito: distinguir som, letra e vogal de apoio.",
+    "steps": [
+      "Identifique as pronúncias adevogado e adivogado e a afirmação dos comentaristas sobre “d mudo”.",
+      "Analise a articulação da consoante e a presença da vogal de apoio, sem tomar insulto como regra linguística.",
+      "As duas pronúncias mencionadas mostram acomodação do encontro consonantal; a alegação de “d mudo” não descreve adequadamente o português brasileiro.",
+      "B aponta desconhecimento linguístico. A explica o ataque por baixa escolaridade, contrariando o perfil da autora; C afirma uma frequência não demonstrada.",
+      "Confira B com a discussão fonética. Pode haver preconceito nos comentários, mas a alternativa A traz uma justificativa incompatível com o texto."
+    ],
+    "trap": "Um rótulo social plausível não torna verdadeiro todo o restante da alternativa.",
+    "retrieval": [
+      "Como letra e som se distinguem?",
+      "Por que a justificativa completa de A deve ser examinada?"
+    ],
+    "transfer": "Exercício autoral: explique por que insultar alguém por uma pronúncia não constitui análise fonética.",
+    "criteria": [
+      "Distinguir juízo social de descrição linguística.",
+      "Identificar a necessidade de observar sons efetivamente produzidos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "preconceito linguístico, já que os comentários negativos foram motivados pelo fato de a autora ter um baixo nível de escolaridade."
+      },
+      {
+        "id": "b",
+        "text": "desconhecimento linguístico, uma vez que a palavra advogado não é pronunciada com “d” mudo no português brasileiro."
+      },
+      {
+        "id": "c",
+        "text": "negacionismo linguístico, pois os críticos não reconhecem que a pronúncia adevogado é a mais comum na norma culta."
+      },
+      {
+        "id": "d",
+        "text": "correção linguística, porque só uma das duas pronúncias ocorre no português, enquanto a outra é um desvio fonético."
+      }
+    ],
+    "pages": [
+      20
+    ]
+  },
+  {
+    "number": 55,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Os Dois Níveis da Leitura",
+    "title": "Nós e nóix: delimitação sociocultural",
+    "concept": "Sentido de coletividade e escolha de grafia; pré-requisito: contraste explicitado no texto.",
+    "steps": [
+      "Localize Nós da totalidade e nóix de pertencimento difuso, ancestralidade e fechamento nas ruas.",
+      "Compare os sentidos de grupo; não classifique a mudança somente como erro ortográfico.",
+      "Nós é apresentado como totalidade delimitada; nóix refere-se a coletividade difusa articulada por vivências e vínculos específicos.",
+      "A representa uma distinção sociocultural. B troca a discussão de sentido por classe de palavras; C e D criam oposições não afirmadas.",
+      "Confira A com “não sabemos exatamente quem ou quantos somos”. A grafia participa da identidade, mas não explica sozinha toda a distinção."
+    ],
+    "trap": "A interpretação precisa partir das definições internas do texto, não da gramática normativa isolada.",
+    "retrieval": [
+      "Que vínculos sustentam o nóix?",
+      "Por que a oposição não é meramente gramatical?"
+    ],
+    "transfer": "Exercício autoral: explique uma grafia deliberadamente local que marca pertencimento a um grupo.",
+    "criteria": [
+      "Relacionar forma linguística e identidade.",
+      "Não concluir mudança automática de classe gramatical."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "sociocultural, pois esses termos se referem a grupos demarcados distintamente: enquanto Nós é bem delimitado, nóix diz respeito a uma coletividade difusa, mas marcada por compartilhar vivências específicas."
+      },
+      {
+        "id": "b",
+        "text": "gramatical, pois esses termos não pertencem à mesma classe de palavras: enquanto Nós é um pronome típico da norma culta, nóix é um substantivo popular que serve à expressão da diversidade."
+      },
+      {
+        "id": "c",
+        "text": "histórica, pois esses termos caracterizam os indivíduos em função do seu passado: enquanto Nós abrange aqueles sem ancestralidade, nóix reúne os que assumem os ancestrais como parte de sua história."
+      },
+      {
+        "id": "d",
+        "text": "política, pois esses termos revelam uma polarização na forma de se relacionar com o poder: enquanto Nós simboliza o apoio à opressão social, nóix caracteriza uma rejeição aos poderes instituídos."
+      }
+    ],
+    "pages": [
+      20
+    ]
+  },
+  {
+    "number": 56,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Intertextualidade e Interdiscursividade",
+    "title": "Pretuguês, ancestralidade e identidade linguística",
+    "concept": "Intertextualidade e formação do português brasileiro; pré-requisito: relacionar dois textos sem presumir etimologias.",
+    "steps": [
+      "Releia o texto de nóix e o texto que explica Pretuguês e a contribuição de populações africanas.",
+      "Procure o vínculo identitário com ancestralidade, distinguindo-o da origem etimológica de uma palavra específica.",
+      "Nóix aparece como marca de um grupo cujos ancestrais participaram da africanização do português brasileiro.",
+      "C expressa essa relação. A afirma que o vocábulo foi introduzido por africanos escravizados, algo que o material não demonstra; B introduz segregação.",
+      "Confira C: o texto associa língua e memória coletiva, não fornece uma pesquisa etimológica de nóix."
+    ],
+    "trap": "Vínculo cultural não prova origem histórica direta de cada palavra. A banca cobra a referência a um conceito.",
+    "retrieval": [
+      "Qual contribuição o conceito de Pretuguês evidencia?",
+      "Por que a alternativa A ultrapassa a evidência disponível?"
+    ],
+    "transfer": "Exercício autoral: diferencie origem etimológica de uma palavra e seu uso como marca identitária.",
+    "criteria": [
+      "Etimologia exige trajetória histórica do vocábulo.",
+      "Identidade pode ser produzida por usos, pronúncias e vínculos de um grupo."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "um vocábulo introduzido no Brasil pelos africanos escravizados, da mesma forma que outras palavras de origem africana acomodadas na língua."
+      },
+      {
+        "id": "b",
+        "text": "uma expressão identitária que serve para demarcar os negros brasileiros e segregá-los dos demais grupos étnico-raciais que compõem o país."
+      },
+      {
+        "id": "c",
+        "text": "uma marca linguística associada a um grupo cujos ancestrais reúnem aqueles que contribuíram para a africanização do português brasileiro."
+      },
+      {
+        "id": "d",
+        "text": "um traço dialetal característico dos sotaques urbanos brasileiros que são fortemente marcados pela presença de palavras africanas."
+      }
+    ],
+    "pages": [
+      20,
+      21
+    ]
+  },
+  {
+    "number": 57,
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "chapter": "Orações Coordenadas",
+    "title": "Valores de que e controle da luta",
+    "concept": "Relação explicativa e efeito argumentativo; pré-requisito: função de conectivos no contexto.",
+    "steps": [
+      "Leia a peça visual completa e localize justificativas que outras pessoas apresentam para controlar a luta de alguém.",
+      "Analise que em cada relação de sentido; a mesma forma pode ter funções distintas.",
+      "O valor explicativo sustenta a enumeração de justificativas que tentam apagar a dimensão pessoal da luta.",
+      "A corresponde a esse encadeamento. B transforma justificativas em comparação; C em condição; D em causa da desistência da resistência individual.",
+      "Confira A observando a passagem da fala alheia ao reconhecimento dos “supostos donos da luta”."
+    ],
+    "trap": "Não atribuir um único valor a todas as ocorrências de que nem classificá-lo sem ler o argumento.",
+    "retrieval": [
+      "Qual relação distingue explicação de condição?",
+      "De quem são as justificativas enumeradas?"
+    ],
+    "transfer": "Exercício autoral: compare “lute, que há razões” e “se houver razões, lute”.",
+    "criteria": [
+      "Primeiro enunciado apresenta explicação para uma orientação.",
+      "Segundo estabelece condição; justificar pela relação entre orações."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "explicativo, com o objetivo de listar justificativas que tentam suprimir, em favor de outros, uma dimensão pessoal da luta."
+      },
+      {
+        "id": "b",
+        "text": "comparativo, com o objetivo de equiparar a luta motivada por convicções próprias e a luta instigada por quem está no poder."
+      },
+      {
+        "id": "c",
+        "text": "condicional, com o objetivo de caracterizar a luta como uma condição para combater aqueles que a querem controlar."
+      },
+      {
+        "id": "d",
+        "text": "causal, com o objetivo de reiterar as situações que levam alguém a desistir de promover a luta como forma de resistência individual."
+      }
+    ],
+    "pages": [
+      21
+    ]
+  },
+  {
+    "number": 58,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+    "title": "Definição de image macro e meme Nazaré Confusa",
+    "concept": "Aplicação de definição a exemplo multimodal; pré-requisito: frame, template e linguagem híbrida.",
+    "steps": [
+      "Liste características da definição: um frame, imagem-texto e interação entre visual e verbal.",
+      "Teste cada característica no meme exibido, sem supor que todo meme pertence ao mesmo tipo.",
+      "O exemplo tem mais de um frame e conteúdos textuais diferentes sobre imagens distintas.",
+      "D reconhece que ele não reúne todos os elementos do image macro definido. A erra o número de frames e B afirma subordinação contrariando o texto.",
+      "Confira D pela estrutura observável. Compartilhar humor e hibridismo não basta para satisfazer todas as condições da definição."
+    ],
+    "trap": "Categorias próximas podem compartilhar características sem serem equivalentes. O comando exige aplicação da definição fornecida.",
+    "retrieval": [
+      "Qual característica impede classificar este exemplo como um único image macro?",
+      "Qual papel do visual na definição?"
+    ],
+    "transfer": "Exercício autoral: compare um meme de um frame e uma montagem de quatro frames usando a definição da questão.",
+    "criteria": [
+      "Verificar número de frames e relação texto–imagem.",
+      "Não classificar só pela presença de humor."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "um típico image macro, pois utiliza um único frame para fundir o visual e o verbal, além de adicionar um mesmo elemento textual a várias ocorrências de uma só imagem."
+      },
+      {
+        "id": "b",
+        "text": "um meme composto por vários image macros, nos quais uma mesma imagem se subordina à linguagem textual matemática em um jogo pictório de afetação recíproca."
+      },
+      {
+        "id": "c",
+        "text": "uma experiência verbal e visual que se aproxima do image macro no que diz respeito à sua estrutura híbrida, mas se afasta desse tipo por não permitir a rápida apreensão do seu conteúdo."
+      },
+      {
+        "id": "d",
+        "text": "uma peça memética que não reúne todos os elementos de um image macro, pois apresenta mais de um frame e adiciona conteúdos textuais diferentes a imagens distintas."
+      }
+    ],
+    "pages": [
+      21
+    ]
+  },
+  {
+    "number": 59,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Gêneros Textuais",
+    "title": "Manifesto sobre imitação do estilo Ghibli",
+    "concept": "Gênero, propósito e tese; pré-requisito: distinguir manifesto, resenha e carta.",
+    "steps": [
+      "Identifique autoria institucional, tese contra imitação automatizada e defesa de autenticidade artística.",
+      "Classifique pelo propósito e pela organização argumentativa, não apenas por ter crítica.",
+      "O texto assume posição e defende publicamente princípios artísticos: funciona como manifesto contrário à geração do estilo por IA.",
+      "C conserva tese e justificativa. B inventa convite explícito a boicote; D trata como resenha de obra; A introduz perda de irreverência.",
+      "Confira C nos parágrafos de defesa da arte artesanal e dos trabalhos autorais. A leitura pede a posição do texto, não uma decisão pessoal sobre IA."
+    ],
+    "trap": "Textos críticos não são todos resenhas. Observe objeto, finalidade e modo de intervenção pública.",
+    "retrieval": [
+      "Qual tese sustenta o texto?",
+      "Por que “resenha crítica” não é a melhor classificação aqui?"
+    ],
+    "transfer": "Exercício autoral: escreva duas frases de um manifesto defendendo preservação de trabalho artístico.",
+    "criteria": [
+      "Declarar posição e princípio defendido.",
+      "Apresentar justificativa, sem fingir uma análise de obra específica."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma nota de repúdio às IAs, por simplificarem o conteúdo das produções do Studio Ghibli, que perdem seus traços irreverentes ao serem utilizadas na geração mecânica de imagens."
+      },
+      {
+        "id": "b",
+        "text": "uma carta aberta para incentivar um boicote às IAs, que permitem construir animações mecanizadas de qualquer imagem e emulam as produções do Studio Ghibli no intuito confundir as pessoas."
+      },
+      {
+        "id": "c",
+        "text": "um manifesto contrário ao uso de IAs para gerar o estilo Ghibli, por utilizarem recursos automatizados que imitam animações originais do Studio Ghibli, o que desvaloriza a autenticidade artística do estúdio."
+      },
+      {
+        "id": "d",
+        "text": "uma resenha crítica sobre a forma como as IAs imitam os recursos artesanais do Studio Ghibli para produzir imagens sem identidade autoral, que depreciam o esforço humano."
+      }
+    ],
+    "pages": [
+      22
+    ]
+  },
+  {
+    "number": 60,
+    "topicId": "por_lit_modernismo",
+    "subject": "Português",
+    "chapter": "Carlos Drummond de Andrade",
+    "title": "Drummond lido em diálogo com Krenak",
+    "concept": "Intertextualidade e crítica ao progresso; pré-requisito: repetição, ironia e tese do ensaio.",
+    "steps": [
+      "Observe a repetição de coloniza, civiliza e humaniza e o novo tédio em Lua e Marte.",
+      "Compare a lógica de expansão no poema com a crítica de Krenak à relação utilitária com a Terra.",
+      "O homem reproduz nos novos espaços a mesma postura que já adotava na Terra, sem transformar sua relação com o lugar.",
+      "B expressa a condução pela ideia de progresso sem postura consciente. A responsabiliza exclusivamente ciência e tecnologia; C afirma superação da Terra.",
+      "Confira B com “Lua humanizada: tão igual à Terra” e “que lugar quadrado”: a repetição expõe o limite da conquista."
+    ],
+    "trap": "Ironia não é celebração literal da colonização. A banca pede diálogo entre obras, não resumo separado de cada uma.",
+    "retrieval": [
+      "Que efeito produz repetir coloniza e humaniza?",
+      "Como os lugares conquistados se tornam semelhantes à Terra?"
+    ],
+    "transfer": "Exercício autoral: explique por que mudar de lugar sem mudar a relação com o mundo pode reproduzir o mesmo problema.",
+    "criteria": [
+      "Relacionar expansão espacial e repetição de práticas.",
+      "Usar uma evidência do poema para sustentar a crítica."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "responsabiliza a ciência e tecnologia, desgastadas em seus valores, pela corrosão das relações nas sociedades contemporâneas."
+      },
+      {
+        "id": "b",
+        "text": "mostra que os Homens, guiados pela ideia de progresso, não adotam uma postura consciente em relação ao seu espaço."
+      },
+      {
+        "id": "c",
+        "text": "evidencia que a Terra, desgastada em seus valores, foi superada pelos elementos da conquista espacial."
+      },
+      {
+        "id": "d",
+        "text": "identifica a aniquilação das sociedades contemporâneas nos programas de governos persuadidos pelo progresso."
+      }
+    ],
+    "pages": [
+      22,
+      23
+    ]
+  },
+  {
+    "number": 61,
+    "topicId": "por_lit_contemporanea",
+    "subject": "Português",
+    "chapter": "Poesia Brasileira Contemporânea",
+    "title": "Ode mínima e objeto cotidiano",
+    "concept": "Reelaboração de gênero poético; pré-requisito: ode clássica e ironia.",
+    "steps": [
+      "Compare o poema dirigido aos óculos com a definição clássica de ode em homenagem a assunto ou pessoa ilustre.",
+      "Identifique o que o poema preserva da homenagem e o que muda em escala e objeto.",
+      "A ode mínima dirige-se a um objeto cotidiano fundamental à experiência do eu lírico, em lugar de alguém ou algo ilustre.",
+      "D nomeia essa reelaboração. A e B preservam solenidade sem considerar a mudança; C acrescenta vínculo obrigatório a canção popular.",
+      "Confira D sem ignorar a ambivalência: o eu lírico agradece aos óculos, mas questiona como eles filtram sua visão."
+    ],
+    "trap": "Não inferir que toda homenagem usa tom nobre. A transformação de gênero depende de comparação de características.",
+    "retrieval": [
+      "O que há de mínimo nessa ode?",
+      "Como os óculos são valorizados e problematizados ao mesmo tempo?"
+    ],
+    "transfer": "Exercício autoral: proponha uma ode mínima a uma chave e explique sua relação com a ode clássica.",
+    "criteria": [
+      "Escolher objeto cotidiano e aspecto significativo.",
+      "Comparar objeto e escala com a homenagem clássica, sem exigir solenidade."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "respeitar a elevação do assunto, a nobreza do tom e os sentimentos ilustres."
+      },
+      {
+        "id": "b",
+        "text": "utilizar-se de um tom elevado e cerimonioso para a homenagem."
+      },
+      {
+        "id": "c",
+        "text": "dirigir-se a um objeto, vinculando-se ao gênero canção popular."
+      },
+      {
+        "id": "d",
+        "text": "celebrar um objeto fundamental, os óculos, e não algo/alguém ilustre."
+      }
+    ],
+    "pages": [
+      23
+    ]
+  },
+  {
+    "number": 62,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Gêneros Narrativos e Níveis de Compreensão",
+    "title": "Réplica: diáspora e experiência de Nkem",
+    "concept": "Leitura de obra e focalização; pré-requisito: personagens, deslocamento e relações conjugais.",
+    "steps": [
+      "Identifique Nkem como protagonista e recupere sua experiência entre Nigéria e Estados Unidos no conto Réplica.",
+      "Analise os conflitos a partir das observações da personagem, sem reduzir a narrativa a um slogan nacionalista.",
+      "O deslocamento põe em tensão práticas, pertencimento e expectativas nas relações; o choque cultural é reelaborado pelo olhar de Nkem.",
+      "A corresponde à experiência diaspórica. B desloca a causa para recolonização; C generaliza falência de sororidade; D restringe o conflito a saudade nacionalista.",
+      "Confira A com situações concretas do conto. Conhecer apenas a nacionalidade da autora não basta para responder."
+    ],
+    "trap": "A questão não fornece um trecho de apoio: requer leitura da obra. Recuperar episódios e focalização é melhor que memorizar rótulos.",
+    "retrieval": [
+      "Como o deslocamento transforma a experiência de Nkem?",
+      "Qual diferença há entre autora e perspectiva da personagem?"
+    ],
+    "transfer": "Exercício autoral: escolha uma cena de Réplica que revele tensão de pertencimento e explique-a.",
+    "criteria": [
+      "Identificar uma cena efetiva da obra.",
+      "Relacionar a percepção de Nkem ao deslocamento e às relações, sem inventar fala ou episódio."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o choque cultural, consequente das diásporas africanas contemporâneas, reelaborado pelas observações de Nkem."
+      },
+      {
+        "id": "b",
+        "text": "as contradições culturais, consequentes do processo de recolonização da Nigéria, expressas pelos negócios ilícitos de Obiora."
+      },
+      {
+        "id": "c",
+        "text": "a opressão feminina, consequente da falência do modelo africano de sororidade, como no relato de Ijemamaka."
+      },
+      {
+        "id": "d",
+        "text": "o sentimento de nacionalismo, consequente das saudades de práticas culturais, como no estranhamento dos vizinhos brancos (povo oyibo)."
+      }
+    ],
+    "pages": [
+      23
+    ]
+  },
+  {
+    "number": 63,
+    "topicId": "por_lit_contemporanea",
+    "subject": "Português",
+    "chapter": "Prosa Brasileira: 1960-1980",
+    "title": "Pera, uva ou maçã?: ritmo e ansiedade",
+    "concept": "Relação entre forma narrativa e estado psicológico; pré-requisito: oralidade, pontuação e sequência temporal.",
+    "steps": [
+      "Observe o fluxo sem pontuação convencional, as retomadas e a sequência da compra das ameixas até o velório.",
+      "Relacione ritmo verbal e experiência da personagem, distinguindo velocidade de desorganização lógica.",
+      "A ausência de pausas fortes acelera a narração e sugere ansiedade na fala da personagem.",
+      "B associa recurso formal e efeito psicológico. A chama de apatia e retardamento; C afirma ruptura temporal; D atribui ambiguidade como efeito central.",
+      "Confira B com o encadeamento compreensível das ações: aceleração não elimina a sequência narrativa."
+    ],
+    "trap": "Não interpretar toda ausência de pontuação como falta de sentido. No texto literário, a forma pode construir um efeito.",
+    "retrieval": [
+      "Que recurso aproxima o relato de uma fala?",
+      "Por que o leitor ainda consegue ordenar as ações?"
+    ],
+    "transfer": "Exercício autoral: reescreva duas frases do trecho com pausas mais longas e compare o ritmo.",
+    "criteria": [
+      "Preservar acontecimentos e sequência.",
+      "Explicar que as pausas podem desacelerar o relato e alterar sua impressão psicológica."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A presença de orações como “foi então que vi”, “foi aí que eu reparei” e “só aí eu entendi” cria um efeito de retardamento da narrativa, o que reflete o estado psicológico de apatia da personagem que fala."
+      },
+      {
+        "id": "b",
+        "text": "A ausência de pontuação cria um efeito de aceleração da narrativa, o que reflete o estado psicológico de ansiedade da personagem que fala."
+      },
+      {
+        "id": "c",
+        "text": "A presença de orações como “foi então que vi”, “foi aí que eu reparei” e “só aí eu entendi” rompe a sequência temporal da narrativa, prejudicando o seu desenvolvimento lógico."
+      },
+      {
+        "id": "d",
+        "text": "A ausência de pontuação desorganiza a sequência das ações da personagem, o que reflete sua confusão e causa uma ambiguidade de sentido em sua narrativa."
+      }
+    ],
+    "pages": [
+      23
+    ]
+  },
+  {
+    "number": 64,
+    "topicId": "por_lit_romantismo_realismo",
+    "subject": "Português",
+    "chapter": "Machado de Assis",
+    "title": "Casa Velha: função narrativa da cena do sineiro",
+    "concept": "Cena, relações afetivas e enredo; pré-requisito: Lalau, Félix e Dona Antônia na obra.",
+    "steps": [
+      "Localize a cena do sineiro no enredo e identifique Lalau, o filho de Dona Antônia e a observação da compaixão da moça.",
+      "Distinga tema social do trecho e função específica da cena no desenvolvimento das relações afetivas.",
+      "A cena permite expor a Dona Antônia o sentimento entre Lalau e seu filho, articulado à observação da compaixão de Lalau pelo sineiro.",
+      "C responde ao papel no enredo. A atribui solidariedade de classe como função exclusiva; B coloca caridade de Dona Antônia no centro; D toma a descrição por representação total.",
+      "Confira C pela articulação dos personagens na obra. O fragmento isolado é insuficiente para substituir o conhecimento do enredo."
+    ],
+    "trap": "A pergunta “cumpre o papel de” exige função narrativa. Um tema presente no trecho pode não responder ao comando.",
+    "retrieval": [
+      "Qual diferença há entre tema da cena e função no enredo?",
+      "Como a observação de Lalau revela uma relação afetiva?"
+    ],
+    "transfer": "Exercício autoral: selecione outra cena de Casa Velha e explique o que ela muda nas relações entre personagens.",
+    "criteria": [
+      "Identificar a cena efetiva e os personagens.",
+      "Explicar uma consequência narrativa, em vez de apenas nomear um tema social."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "mostrar a solidariedade de classe desenvolvida por Lalau que, sendo uma agregada, identifica seus interesses com os do velho sineiro."
+      },
+      {
+        "id": "b",
+        "text": "exibir o caráter caridoso de Dona Antônia, que mantém o escravizado sob seus cuidados mesmo após deixar de ser útil como trabalhador."
+      },
+      {
+        "id": "c",
+        "text": "expor a Dona Antônia o sentimento existente entre Lalau e seu filho, enquanto ele observa a compaixão da moça pelo sineiro."
+      },
+      {
+        "id": "d",
+        "text": "sugerir a complexidade da organização social característica da Casa Velha, na qual se via representada toda a sociedade humana."
+      }
+    ],
+    "pages": [
+      23,
+      24
+    ]
+  },
+  {
+    "number": 65,
+    "topicId": "por_lit_contemporanea",
+    "subject": "Português",
+    "chapter": "Cancioneiro Popular Brasileiro",
+    "title": "Alvorada de Cartola: amor e contraste lírico",
+    "concept": "Comparação poética e estado do eu lírico; pré-requisito: imagem, personificação e adversidade.",
+    "steps": [
+      "Compare a alegria da alvorada com “meus caminhos tão sem vida”, “quase nada” e “estrada perdida”.",
+      "Identifique a aproximação entre pessoa amada e luz da alvorada, preservando o contraste com o desalento.",
+      "A chegada da pessoa amada ilumina a experiência do eu lírico, como a alvorada, apesar da desilusão que o restante dos versos mostra.",
+      "C reúne comparação e contraste. A supõe harmonia completa; B introduz pobreza como eixo e D transforma a imagem em previsão de futuro.",
+      "Confira C com “Você também me lembra a alvorada”. A leitura precisa explicar versos positivos e negativos."
+    ],
+    "trap": "Não concluir vida plenamente feliz a partir da paisagem alegre. A comparação não apaga o sofrimento do eu lírico.",
+    "retrieval": [
+      "Qual verso constrói a comparação com a pessoa amada?",
+      "Que versos impedem uma leitura inteiramente otimista?"
+    ],
+    "transfer": "Exercício autoral: explique como uma imagem luminosa pode coexistir com tristeza em uma canção.",
+    "criteria": [
+      "Reconhecer contraste entre paisagem ou pessoa e estado do eu lírico.",
+      "Sustentar a interpretação com versos, sem confundir eu lírico e biografia do compositor."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "O eu-lírico enfatiza a harmonia entre a cena idílica do morro no momento da alvorada e a alegria de sua vida junto à pessoa amada."
+      },
+      {
+        "id": "b",
+        "text": "O eu-lírico enfatiza um contraste entre a alegria da alvorada no morro e a pobreza das pessoas que habitam aquele espaço."
+      },
+      {
+        "id": "c",
+        "text": "A alvorada no morro é, para o eu-lírico, como a imagem da pessoa amada, que lhe traz alegria, apesar de sua desilusão e desesperança."
+      },
+      {
+        "id": "d",
+        "text": "A alvorada no morro funciona, no poema, como imagem do futuro que pode ser transformado pelo amor, apesar das condições de vida difíceis."
+      }
+    ],
+    "pages": [
+      24
+    ]
+  },
+  {
+    "number": 66,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "title": "Domínios macroscópico, submicroscópico e simbólico",
+    "concept": "Representações em Química; pré-requisito: distinguir fenômeno observável, modelo de partículas e notação.",
+    "steps": [
+      "Leia os rótulos do triângulo e compare as ilustrações A–H na página original.",
+      "Classifique pelo que cada imagem representa, e não simplesmente por ser um desenho.",
+      "D mostra um fenômeno observável; G representa partículas reagindo; H usa uma equação química. Correspondem a macro, submicro e simbólico.",
+      "C combina gráfico simbólico de energia com modelos de partículas, reunindo simbólico e submicroscópico.",
+      "D é a alternativa: D, G, H e a combinação em C. A chama rede de partículas de macroscópica e C chama estruturas químicas de observação macroscópica."
+    ],
+    "trap": "O nível submicroscópico também é comunicado por desenhos; “imagem” não implica escala macroscópica.",
+    "retrieval": [
+      "Como diferenciar bolhas observadas e moléculas representadas?",
+      "Que tipo de representação é uma equação química?"
+    ],
+    "transfer": "Exercício autoral: descreva a evaporação da água nos três domínios.",
+    "criteria": [
+      "Macroscópico: desaparecimento gradual do líquido ou mudança de estado observável.",
+      "Submicro: moléculas passam à fase gasosa; simbólico: H₂O(l) → H₂O(g), sem mudança de identidade química."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "(F), (H) e (G), enquanto a ilustração (C) apresenta uma combinação dos domínios simbólico e submicroscópico."
+      },
+      {
+        "id": "b",
+        "text": "(G), (D) e (A), enquanto a ilustração (E) apresenta uma combinação dos domínios simbólico e submicroscópico."
+      },
+      {
+        "id": "c",
+        "text": "(B), (A) e (H), enquanto a ilustração (E) apresenta uma combinação dos domínios simbólico e submicroscópico."
+      },
+      {
+        "id": "d",
+        "text": "(D), (G) e (H), enquanto a ilustração (C) apresenta uma combinação dos domínios simbólico e submicroscópico."
+      }
+    ],
+    "pages": [
+      24
+    ]
+  },
+  {
+    "number": 67,
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "chapter": "Deslocamento de Equilíbrio",
+    "title": "CO₂, acidificação e carbonato nos corais",
+    "concept": "Equilíbrio ácido-base e disponibilidade de carbonato; pré-requisito: pH e princípio de Le Chatelier.",
+    "steps": [
+      "Leia as reações do infográfico, identifique A, B e C e observe a curva decrescente entre os eixos.",
+      "Reconstrua as espécies a partir dos balanços de átomos e cargas e associe aumento de CO₂ à acidificação.",
+      "A = CO₃²⁻; B = CaCO₃; C = CO₃²⁻. H⁺ consome carbonato para formar bicarbonato, reduzindo disponibilidade para calcificação.",
+      "X representa CO₂ atmosférico e Y, carbonato: mais CO₂ reduz pH e carbonato, prejudicando corais.",
+      "B combina espécies, eixos e efeito ambiental. A e D dizem aumento do pH; C conclui menor degradação contra o mecanismo apresentado."
+    ],
+    "trap": "Acidificação é diminuição do pH, mesmo que a água permaneça alcalina. Não trocar bicarbonato por carbonato.",
+    "retrieval": [
+      "Por que H⁺ reduz disponibilidade de CO₃²⁻?",
+      "Acidificar exige que o pH fique menor que 7?"
+    ],
+    "transfer": "Exercício autoral: explique a passagem de pH 8,2 a 8,0 em água oceânica e um efeito possível nos corais.",
+    "criteria": [
+      "Reconhecer acidificação sem necessidade de pH abaixo de 7.",
+      "Relacionar aumento de H⁺, consumo de carbonato e dificuldade de calcificação."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "CO₂, CO₃²⁻ e CaCO₃, enquanto os eixos X e Y no infográfico representam respectivamente [CO₃²⁻] e [CO₂]atm. Globalmente, o aumento da [CO₂]atm provoca um aumento do pH dos oceanos e, consequentemente, uma maior degradação dos corais."
+      },
+      {
+        "id": "b",
+        "text": "CO₃²⁻, CaCO₃ e CO₃²⁻, enquanto os eixos X e Y no infográfico representam respectivamente [CO₂]atm e [CO₃²⁻]. Globalmente, o aumento da [CO₂]atm provoca uma diminuição do pH dos oceanos e, consequentemente, uma maior degradação dos corais."
+      },
+      {
+        "id": "c",
+        "text": "CO₂, CaCO₃ e CO₃²⁻, enquanto os eixos X e Y no infográfico representam respectivamente [CO₃²⁻] e [CO₂]atm. Globalmente, o aumento da [CO₂]atm provoca uma diminuição do pH dos oceanos e, consequentemente, uma menor degradação dos corais."
+      },
+      {
+        "id": "d",
+        "text": "CO₃²⁻, CaCO₃ e CO₃²⁻, enquanto os eixos X e Y no infográfico representam respectivamente [CO₃²⁻] e [CO₂]atm. Globalmente, o aumento da [CO₂]atm provoca um aumento do pH dos oceanos e, consequentemente, uma menor degradação dos corais."
+      }
+    ],
+    "pages": [
+      25
+    ]
+  },
+  {
+    "number": 68,
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "chapter": "Termoquímica I",
+    "title": "Hidrogênio e querosene por massa e volume",
+    "concept": "Densidade energética gravimétrica e volumétrica; pré-requisito: massa molar e densidade.",
+    "steps": [
+      "Anote energia por mol, massa molar e densidade de ambos os combustíveis; a comparação exige a mesma energia gerada.",
+      "Calcule energia por massa e, separadamente, energia por volume.",
+      "H₂: 240/2 = 120 kJ/g. Querosene: 6 745/153 ≈ 44,1 kJ/g. O hidrogênio oferece mais energia por massa.",
+      "Por volume: H₂ ≈ 120 × 0,071 = 8,52 kJ/cm³; querosene ≈ 44,1 × 0,804 = 35,4 kJ/cm³. O hidrogênio exige mais volume para igual energia.",
+      "C é a vantagem correta. A e B invertem o resultado volumétrico, e D diz massa maior quando ela é menor."
+    ],
+    "trap": "Comparar só kJ/mol é insuficiente: um mol de cada combustível tem massas diferentes.",
+    "retrieval": [
+      "Como converter kJ/mol em kJ/g?",
+      "Por que um combustível pode ser melhor por massa e pior por volume?"
+    ],
+    "transfer": "Exercício autoral: combustível A fornece 40 kJ/g e tem densidade 0,8 g/cm³; B fornece 100 kJ/g e tem 0,1 g/cm³. Compare.",
+    "criteria": [
+      "B tem vantagem por massa.",
+      "A fornece 32 kJ/cm³, B 10 kJ/cm³: A tem vantagem por volume."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "sua razão energia por volume é maior."
+      },
+      {
+        "id": "b",
+        "text": "o volume utilizado será menor."
+      },
+      {
+        "id": "c",
+        "text": "sua razão energia por massa é maior."
+      },
+      {
+        "id": "d",
+        "text": "a massa utilizada será maior."
+      }
+    ],
+    "pages": [
+      25
+    ]
+  },
+  {
+    "number": 69,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Cálculos Estequiométricos",
+    "title": "Captura de CO₂: razão molar e ganho de massa",
+    "concept": "Conversões mmol–mol e massa percentual; pré-requisito: massa molar e leitura aproximada de gráfico.",
+    "steps": [
+      "Leia cerca de 3,0 mmol de CO₂ por grama de sólido aos 65 min; massa molar do sólido é 332,3 g/mol.",
+      "Escolha base de 1 g de sólido para calcular tanto razão molar quanto ganho percentual.",
+      "n CO₂ ≈ 0,003 mol; n sólido = 1/332,3 ≈ 0,00301 mol. Razão ≈ 1 mol de CO₂ por mol de sólido.",
+      "A massa capturada é 0,003 × 44 = 0,132 g, ou 13,2% da massa inicial de 1 g.",
+      "B corresponde a razão 1 e aumento de aproximadamente 13%. A leitura é aproximada, como o comando informa."
+    ],
+    "trap": "3 mmol/g não significa razão molar de 3. O denominador precisa ser convertido de gramas para mols do sólido.",
+    "retrieval": [
+      "Qual vantagem há em escolher base de 1 g?",
+      "Qual massa entra no denominador do aumento percentual?"
+    ],
+    "transfer": "Exercício autoral: 1 g de sólido de massa molar 200 g/mol captura 2 mmol de CO₂. Calcule razão molar e ganho de massa.",
+    "criteria": [
+      "Razão 0,002/0,005 = 0,4.",
+      "Massa 0,088 g, aumento de 8,8% sobre a massa inicial."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "(i) 3 e (ii) 13% em relação ao inicial."
+      },
+      {
+        "id": "b",
+        "text": "(i) 1 e (ii) 13% em relação ao inicial."
+      },
+      {
+        "id": "c",
+        "text": "(i) 3 e (ii) 30% em relação ao inicial."
+      },
+      {
+        "id": "d",
+        "text": "(i) 1 e (ii) 30% em relação ao inicial."
+      }
+    ],
+    "pages": [
+      25
+    ]
+  },
+  {
+    "number": 70,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "title": "Processo Solvay e regeneração de insumos",
+    "concept": "Balanço global de um processo; pré-requisito: intermediários, recirculação e conservação.",
+    "steps": [
+      "Acompanhe no fluxograma salmoura, calcário, amônia e as correntes de retorno.",
+      "Diferencie insumo consumido no balanço global de substância que participa de uma etapa e é regenerada em outra.",
+      "No modelo apresentado, a amônia é regenerada; a manutenção exige salmoura e calcário.",
+      "O balanço global é 2NaCl + CaCO₃ → Na₂CO₃ + CaCl₂. NH₃ cancela ao somar as etapas, mas o calcário não.",
+      "A é a resposta. O CO₂ recirculado não elimina a necessidade do CO₂ fornecido a partir de calcário no balanço global."
+    ],
+    "trap": "Não classificar toda seta de entrada como consumo permanente. É necessário seguir os retornos.",
+    "retrieval": [
+      "Como identificar um intermediário regenerado?",
+      "Quais espécies sobrevivem no balanço global?"
+    ],
+    "transfer": "Exercício autoral: um reagente X é consumido na etapa 1 e recuperado integralmente na etapa 2. O que ocorre ao somar as equações?",
+    "criteria": [
+      "X cancela do balanço global.",
+      "Sua participação intermediária não demonstra consumo líquido no modelo ideal."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "salmoura e calcário, pois a amônia é totalmente regenerada durante o processo."
+      },
+      {
+        "id": "b",
+        "text": "gás carbônico e salmoura, pois a amônia é totalmente regenerada durante o processo."
+      },
+      {
+        "id": "c",
+        "text": "calcário e amônia, pois o gás carbônico é totalmente regenerado durante o processo."
+      },
+      {
+        "id": "d",
+        "text": "amônia e salmoura, pois o gás carbônico é totalmente regenerado durante o processo."
+      }
+    ],
+    "pages": [
+      26
+    ]
+  },
+  {
+    "number": 71,
+    "topicId": "qui_solucoes",
+    "subject": "Química",
+    "chapter": "Dispersões",
+    "title": "Etanol combustível: teor de água e densidade",
+    "concept": "Mistura ideal e limites de especificação; pré-requisito: densidade e concentração em massa.",
+    "steps": [
+      "Compare teores alcoólicos do anidro, hidratado e premium; água é mais densa que etanol nas condições usuais.",
+      "Use a tendência de composição e identifique se cada especificação é limite mínimo ou máximo.",
+      "No EAC, alto teor alcoólico pede mínimo de 99,3% e baixo teor de água limita a densidade por um máximo de 791,5 kg/m³.",
+      "EHC tem mais água e maior densidade: 805–811. EHCP tem maior teor alcoólico e densidade menor: 800–803.",
+      "A fornece máximo, mínimo e intervalos na ordem correta. C inverte os intervalos dos dois hidratados."
+    ],
+    "trap": "Teor alcoólico alto não significa densidade alta: água e etanol têm densidades distintas. A mistura ideal é hipótese desta questão.",
+    "retrieval": [
+      "Por que o hidratado comum é mais denso que o premium?",
+      "Qual diferença há entre especificação mínima e máxima?"
+    ],
+    "transfer": "Exercício autoral: em uma mistura ideal de água e etanol, explique qualitativamente o efeito de aumentar a fração de água.",
+    "criteria": [
+      "A densidade aumenta nas condições consideradas.",
+      "O teor de etanol diminui; não tratar densidade e teor alcoólico como proporção direta."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "máximo; mínimo; entre 805 e 811 e entre 800 e 803."
+      },
+      {
+        "id": "b",
+        "text": "mínimo; máximo; entre 805 e 811 e entre 800 e 803."
+      },
+      {
+        "id": "c",
+        "text": "máximo; mínimo; entre 800 e 803 e entre 805 e 811."
+      },
+      {
+        "id": "d",
+        "text": "mínimo; máximo; entre 800 e 803 e entre 805 e 811."
+      }
+    ],
+    "pages": [
+      26
+    ]
+  },
+  {
+    "number": 72,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Separação de Misturas",
+    "title": "Processos de obtenção de lítio: o que os dados permitem concluir",
+    "concept": "Comparação de processos e limites de inferência; pré-requisito: temperatura, consumo e rendimento.",
+    "steps": [
+      "Compare as temperaturas, etapas de lixiviação e indicações de consumo de carbonato nos dois métodos.",
+      "Separe vantagens apresentadas de variáveis não medidas, especialmente tempo total e rendimento.",
+      "O método proposto usa tratamento a temperatura menor e lixiviação em temperatura ambiente; o esquema indica menor consumo de carbonato.",
+      "D expressa menor intensidade energética e menor consumo indicado, sem afirmar rendimento. A e B acrescentam rendimento maior e C rendimento menor sem dados.",
+      "Confira D com o limite “considerando apenas essas informações”. Obter o mesmo produto não prova que a quantidade ou porcentagem obtida seja igual."
+    ],
+    "trap": "Menor temperatura não demonstra por si maior rendimento nem tempo total menor. Responda dentro do alcance das evidências.",
+    "retrieval": [
+      "Que dados seriam necessários para comparar rendimento?",
+      "Por que número de etapas não determina sozinho duração total?"
+    ],
+    "transfer": "Exercício autoral: dois processos produzem a mesma substância; só se informam temperaturas. Pode-se decidir qual tem maior rendimento?",
+    "criteria": [
+      "Não: faltam quantidades de produto e bases de reagentes.",
+      "Distinguir condição operacional de rendimento e sugerir dados de massa ou mols."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "mais rápido e apresenta maior rendimento, porém consome mais carbonato na etapa final de separação do lítio."
+      },
+      {
+        "id": "b",
+        "text": "mais intensivo em energia e com maior consumo de carbonato na etapa final de separação do lítio, porém com maior rendimento."
+      },
+      {
+        "id": "c",
+        "text": "mais lento e apresenta menor rendimento, porém consome menos carbonato na etapa final de separação do lítio."
+      },
+      {
+        "id": "d",
+        "text": "menos intensivo em energia e com menor consumo de carbonato na etapa final de separação do lítio, porém nada se pode afirmar acerca do rendimento."
+      }
+    ],
+    "pages": [
+      26
+    ]
+  }
+]

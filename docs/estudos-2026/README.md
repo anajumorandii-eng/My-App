@@ -4,6 +4,7 @@ Entrega de 13/10/2026. Escopo aprovado em conversa, incluindo execução automá
 
 ## Material para usar
 
+- [Expansão de questões reais — Unicamp 2026](expansao-questoes-reais.md): 72 questões oficiais com resolução por etapas, recuperação e transferência.
 - [Guia em PDF — 24 páginas](../../public/study-guide.pdf).
 - [Guia navegável e para impressão](../../public/study-guide.html), com [estilos compartilhados](../../public/study-guide.css).
 - [Guia em Markdown](guia-de-estudo.md): métodos, rotina, fases, correção, redação, obras e 12 protocolos por área.
