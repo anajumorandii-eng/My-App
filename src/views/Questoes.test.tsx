@@ -50,6 +50,48 @@ beforeEach(() => {
   });
 });
 
+describe('Questoes — banca, ano e fontes oficiais', () => {
+  it('combina banca/ano e recalcula tópicos, contagens e resposta ao trocar a prova', async () => {
+    questionsHook.mockReturnValue({ questions: [
+      { ...QUESTION, id: 'comvest25', topicId: 'bio_estrutura_fisio_celular', chapter: 'Membranas Celulares', prompt: 'Prova de 2025', examSource: { board: 'COMVEST', year: 2025 } },
+      { ...QUESTION, id: 'unicamp26', topicId: 'bio_genetica', chapter: 'Introdução à Genética', prompt: 'Prova de 2026', examSource: { board: 'UNICAMP', year: 2026 } },
+      { ...QUESTION, id: 'fuvest26', topicId: 'bio_estrutura_fisio_celular', chapter: 'Núcleo Celular', prompt: 'Outra banca', examSource: { board: 'FUVEST', year: 2026 } },
+    ], syncError: null });
+    const user = userEvent.setup();
+    render(<Questoes />);
+    await user.selectOptions(screen.getByLabelText('Banca'), 'UNICAMP');
+    expect(screen.getByText(/Questão 1 de 2/)).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
+    expect(screen.getByText(QUESTION.explanation)).toBeInTheDocument();
+    await user.selectOptions(screen.getByLabelText('Ano da prova'), '2026');
+    expect(screen.getByText('Prova de 2026')).toBeInTheDocument();
+    expect(screen.queryByText(QUESTION.explanation)).not.toBeInTheDocument();
+    expect(screen.getByLabelText('Tópico')).toHaveTextContent('Genética (1)');
+    expect(screen.getByRole('link', { name: /Caderno Unicamp 2026/ })).toHaveAttribute('href', '/real-exams/unicamp-2026.pdf');
+    expect(screen.getByRole('button', { name: /Só Questões Reais \(1\)/ })).toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: /Só Questões Reais/ }));
+    expect(screen.getByLabelText('Banca')).toHaveValue('all');
+    expect(screen.getByLabelText('Ano da prova')).toHaveValue('all');
+    expect(screen.queryByRole('link', { name: /Caderno Unicamp 2026/ })).not.toBeInTheDocument();
+    expect(screen.getByText(/Questão 1 de 3/)).toBeInTheDocument();
+  });
+
+  it('preserva a página e mostra links separados para prova e gabarito após responder', async () => {
+    questionsHook.mockReturnValue({ questions: [{ ...QUESTION,
+      originalPages: [{ page: 5, url: '/question-media/oficiais/unicamp-2026-qx/p05.webp' }],
+      examSource: { board: 'UNICAMP', year: 2026, phase: '1ª fase', questionNumber: 9,
+        sourceUrl: 'https://www.comvest.unicamp.br/prova.pdf', answerKeyUrl: 'https://www.comvest.unicamp.br/gabarito.pdf' },
+    }], syncError: null });
+    const user = userEvent.setup();
+    render(<Questoes />);
+    expect(screen.getByRole('img')).toHaveAttribute('src', '/question-media/oficiais/unicamp-2026-qx/p05.webp');
+    await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
+    expect(screen.getByRole('link', { name: 'Conferir prova original' })).toHaveAttribute('href', 'https://www.comvest.unicamp.br/prova.pdf');
+    expect(screen.getByRole('link', { name: 'Conferir gabarito oficial' })).toHaveAttribute('href', 'https://www.comvest.unicamp.br/gabarito.pdf');
+    expect(requestAiTextMock).not.toHaveBeenCalled();
+  });
+});
+
 describe('Questoes — estados de persistência (regressão da migração instrumental)', () => {
   it('mostra o aviso de modo demonstração quando o domínio não está sendo persistido', () => {
     masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn(), isPersisted: false, syncError: null });

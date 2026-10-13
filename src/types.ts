@@ -230,6 +230,10 @@ export interface Question {
     board: string; // e.g. 'ENEM', 'FUVEST', 'COMVEST', 'VUNESP', 'FAMERP'
     year?: number; // Unknown when a workbook reproduces an exam without its year.
     sourceUrl?: string; // Idem: a coletânea por assunto não traz o link da prova.
+    answerKeyUrl?: string;
+    phase?: string;
+    version?: string;
+    questionNumber?: number;
   };
 }
 

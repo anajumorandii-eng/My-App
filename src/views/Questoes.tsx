@@ -18,7 +18,7 @@ const ERROR_TYPE_ORDER: ErrorLog['type'][] = [
 ];
 import { Skeleton } from '../components/ui/Skeleton';
 import { AiText } from '../components/AiText';
-import { TopicMastery, ErrorLog } from '../types';
+import { TopicMastery, ErrorLog, Question } from '../types';
 import { applyReviewOutcome, qualityFromAnswerCorrectness, intervalDaysOf, nextReviewDate } from '../lib/spacedRepetition';
 import { motion, AnimatePresence } from 'motion/react';
 import {
@@ -38,6 +38,7 @@ import { PALETTES } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 import { mockTopics } from '../data/mockData';
 import { ALL, buildTopicHierarchy, filterByHierarchy } from '../lib/topicHierarchy';
+import { canonicalExamBoard, matchesExamFilters } from '../lib/questionExamFilters';
 
 function Metric({
   label,
@@ -70,9 +71,9 @@ function Metric({
   );
 }
 
-function examSourceLabel(source: { board: string; year?: number; sourceUrl?: string } | string | undefined) {
+function examSourceLabel(source: Question['examSource'] | string | undefined) {
   if (!source) return 'Banco de Questões';
-  return typeof source === 'string' ? source : `${source.board}${source.year ? ` ${source.year}` : ' · reprodução em apostila'}`;
+  return typeof source === 'string' ? source : `${source.board}${source.year ? ` ${source.year}` : ' · reprodução em apostila'}${source.phase ? ` · ${source.phase}` : ''}${source.questionNumber ? ` · questão ${source.questionNumber}` : ''}`;
 }
 
 export default function Questoes() {
@@ -87,6 +88,16 @@ export default function Questoes() {
   const [topicFilter, setTopicFilter] = useState<string>(ALL);
   const [subtopicFilter, setSubtopicFilter] = useState<string>(ALL);
   const [onlyRealExams, setOnlyRealExams] = useState(false);
+  const [boardFilter, setBoardFilter] = useState('all');
+  const [yearFilter, setYearFilter] = useState('all');
+  const examBoards = useMemo(() => [...new Set(mockQuestions.flatMap(q => q.examSource ? [canonicalExamBoard(q.examSource.board)] : []))].sort(), [mockQuestions]);
+  const examYears = useMemo(() => {
+    const questions = mockQuestions.filter(q => q.examSource && matchesExamFilters(q, boardFilter, 'all'));
+    return {
+      years: [...new Set(questions.flatMap(q => q.examSource?.year ? [q.examSource.year] : []))].sort((a, b) => b - a),
+      hasUnknown: questions.some(q => !q.examSource?.year),
+    };
+  }, [mockQuestions, boardFilter]);
   const [index, setIndex] = useState(0);
   const [selectedOptionId, setSelectedOptionId] = useState<string | null>(null);
   const [history, setHistory] = useState<{ questionId: string; correct: boolean }[]>([]);
@@ -114,9 +125,9 @@ export default function Questoes() {
   // de tópico e subtópico reflitam o que o filtro vai realmente entregar. Se
   // fosse depois, um tópico apareceria com 40 questões e abriria com zero.
   const scoped = useMemo(() => {
-    const base = onlyRealExams ? mockQuestions.filter((q) => q.examSource) : mockQuestions;
+    const base = mockQuestions.filter(q => (!onlyRealExams || q.examSource) && matchesExamFilters(q, boardFilter, yearFilter));
     return subjectFilter === 'Todas' ? base : base.filter((q) => q.subject === subjectFilter);
-  }, [mockQuestions, subjectFilter, onlyRealExams]);
+  }, [mockQuestions, subjectFilter, onlyRealExams, boardFilter, yearFilter]);
 
   // Quantas questões reais existem na matéria selecionada. Vai no rótulo do
   // botão porque, sem o número, um banco desatualizado e um filtro quebrado
@@ -125,8 +136,8 @@ export default function Questoes() {
     const base = subjectFilter === 'Todas'
       ? mockQuestions
       : mockQuestions.filter((q) => q.subject === subjectFilter);
-    return base.filter((q) => q.examSource).length;
-  }, [mockQuestions, subjectFilter]);
+    return base.filter((q) => q.examSource && matchesExamFilters(q, boardFilter, yearFilter)).length;
+  }, [mockQuestions, subjectFilter, boardFilter, yearFilter]);
 
   const topicTree = useMemo(() => buildTopicHierarchy(scoped, mockTopics), [scoped]);
 
@@ -198,9 +209,22 @@ export default function Questoes() {
 
   const toggleRealExams = () => {
     setOnlyRealExams((v) => !v);
+    if (onlyRealExams) {
+      setBoardFilter('all');
+      setYearFilter('all');
+    }
     // O recorte de provas reais é bem menor que o banco inteiro, então o tópico
     // que estava selecionado pode nem existir nele. Voltar ao topo evita a tela
     // vazia sem explicação.
+    setTopicFilter(ALL);
+    setSubtopicFilter(ALL);
+    resetQuestionState();
+  };
+
+  const changeExam = (board: string, year: string) => {
+    setBoardFilter(board);
+    setYearFilter(year);
+    if (board !== 'all' || year !== 'all') setOnlyRealExams(true);
     setTopicFilter(ALL);
     setSubtopicFilter(ALL);
     resetQuestionState();
@@ -494,6 +518,21 @@ export default function Questoes() {
           que pertencem, então a hierarquia fica visível em vez de achatada. */}
       <div className="crivo-topic-filters">
         <label className="crivo-topic-filter">
+          <span>Banca</span>
+          <select value={boardFilter} onChange={e => changeExam(e.target.value, 'all')}>
+            <option value="all">Todas as bancas</option>
+            {examBoards.map(board => <option key={board} value={board}>{board}</option>)}
+          </select>
+        </label>
+        <label className="crivo-topic-filter">
+          <span>Ano da prova</span>
+          <select value={yearFilter} onChange={e => changeExam(boardFilter, e.target.value)}>
+            <option value="all">Todos os anos</option>
+            {examYears.years.map(year => <option key={year} value={String(year)}>{year}</option>)}
+            {examYears.hasUnknown && <option value="unknown">Ano não identificado</option>}
+          </select>
+        </label>
+        <label className="crivo-topic-filter">
           <span>Tópico</span>
           <select value={topicFilter} onChange={(e) => changeTopic(e.target.value)}>
             <option value={ALL}>Todos os tópicos ({pool.length === 0 && topicFilter === ALL ? 0 : scoped.length})</option>
@@ -529,6 +568,14 @@ export default function Questoes() {
           </select>
         </label>
       </div>
+
+      {boardFilter === 'UNICAMP' && yearFilter === '2026' && (
+        <p className="mb-4 text-xs">
+          <a href="/real-exams/unicamp-2026.pdf" download className="ni-link">
+            Caderno Unicamp 2026 — baixar PDF com prova, gabarito e resoluções · 99 páginas
+          </a>
+        </p>
+      )}
 
       {question ? (
         <section className="ni-grid ni-grid--practice">
@@ -601,8 +648,9 @@ export default function Questoes() {
                       </button>
                     )}
                   </div>
-                  <p className="text-xs text-[var(--dim)] leading-relaxed">{question.explanation}</p>
-                  {question.examSource?.sourceUrl && <a href={question.examSource.sourceUrl} target="_blank" rel="noreferrer" className="ni-link text-xs">Conferir fonte e gabarito</a>}
+                  <p className="text-xs text-[var(--dim)] leading-relaxed whitespace-pre-line">{question.explanation}</p>
+                  {question.examSource?.sourceUrl && <a href={question.examSource.sourceUrl} target="_blank" rel="noreferrer" className="ni-link text-xs">{question.examSource.answerKeyUrl ? 'Conferir prova original' : 'Conferir fonte e gabarito'}</a>}
+                  {question.examSource?.answerKeyUrl && <a href={question.examSource.answerKeyUrl} target="_blank" rel="noreferrer" className="ni-link text-xs ml-3">Conferir gabarito oficial</a>}
 
                   {deepExplanation && (
                     <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs">
