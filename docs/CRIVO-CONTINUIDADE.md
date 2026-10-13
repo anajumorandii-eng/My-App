@@ -1,5 +1,11 @@
 # CRIVO — continuidade operacional
 
+## Recuperação da organização visual após a PR #317 — 2026-10-12
+
+Base `ed7d7ac1`. A usuária apontou a última PR (#317) como origem da regressão visual. A recuperação remove o palco compartilhado de altura fixa e as duas rolagens internas, restaura títulos e explicações integrais e mantém juntos a cena e o suplemento espacial. Preserva as correções particulares e o contrato de etapa de #317. [Diagnóstico, capturas, recursos e validação](recuperacao-visual-pr317/README.md).
+
+Esta recuperação substitui a organização do palco descrita em `docs/visual/PALCO-IMERSIVO.md`; não reaplicar aquela moldura aos capítulos sem avaliar a leitura completa e o uso em telas pequenas. Textos e modelos por disciplina continuam na base atual.
+
 ## Continuidade espacial — 21 capítulos, 2026-10-10
 
 Base `438cd45a`, após a PR #305 integrada. Esta rodada acrescenta 16 recortes de Geografia, três de Física, um de Biologia e um de Química. Os 21 candidatos prioritários restantes recebem modelos XYZ específicos, câmera manipulável e movimento finito onde pertinente. [Modelos, lastro e limites](lote-espacial-21-2026-10-10/README.md).

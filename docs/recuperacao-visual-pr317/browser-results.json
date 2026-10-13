@@ -1,0 +1,38 @@
+[
+  {
+    "name": "desktop",
+    "width": 1440,
+    "height": 1000,
+    "theme": "light",
+    "touch": false,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "ipad",
+    "width": 834,
+    "height": 1112,
+    "theme": "dark",
+    "touch": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "mobile",
+    "width": 390,
+    "height": 844,
+    "theme": "light",
+    "touch": true,
+    "overflow": false,
+    "errors": []
+  },
+  {
+    "name": "small",
+    "width": 360,
+    "height": 800,
+    "theme": "dark",
+    "touch": true,
+    "overflow": false,
+    "errors": []
+  }
+]

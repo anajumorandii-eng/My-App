@@ -21,10 +21,6 @@ import { resolveVisualRepresentation } from './visualRepresentation';
 import { VisualArtifact } from './VisualArtifact';
 import { ConceptChain } from './ConceptChain';
 import { VisualJourney } from './VisualJourney';
-import { hasSpatialSupplement } from './SpatialChapterSupplement';
-import type { StageLayerId } from './VisualArtifact';
-import { hotspotStep, resolveStageDeclaration } from './visual-stage/contract';
-import { stageDeclarationFor } from './visual-stage/declarations';
 import { MOTION_DURATION } from '../design-system/motion/tokens';
 import { MolduraTecnologicaContext, useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria, ambienteDoCapitulo, usaMolduraTecnologica } from '../lib/visualAmbiente';
@@ -34,7 +30,6 @@ import { registrarRecente } from './visual-boards/BuscaRapida';
 import { ChapterObjectIcon } from './visual-boards/ChapterObjectIcon';
 import './Visual.css';
 import './VisualAtlas.css';
-import './visual-stage/VisualStage.css';
 
 type Mode = 'explorar' | 'testar' | 'reconstruir';
 
@@ -51,10 +46,6 @@ const REPRESENTATION_LABEL = {
   instrument: 'no mesmo instrumento',
   scene: 'na mesma cena',
   fallback: 'na mesma estrutura visual',
-} as const;
-
-const LAYER_LABEL = {
-  board: 'Prancha', experiment: 'Experimento', instrument: 'Instrumento', scene: 'Cena', fallback: 'Estrutura',
 } as const;
 
 const MODES: Mode[] = ['explorar', 'testar', 'reconstruir'];
@@ -298,7 +289,6 @@ export default function Visual() {
   const [selectedNode, setSelectedNode] = useState<string | null>(null);
   const [disagreed, setDisagreed] = useState(false);
   const [mostrarDominio, setMostrarDominio] = useState(false);
-  const [layer, setLayer] = useState<StageLayerId>('principal');
   const [draft, setDraft] = useState('');
   const [feedback, setFeedback] = useState<{ matched: string[]; missing: string | null } | null>(null);
   const [placements, setPlacements] = useState<Record<string, string>>({});
@@ -371,11 +361,6 @@ export default function Visual() {
   useEffect(() => {
     setFocusReading(false); setJourneyStep(0); setMode('explorar'); setSelectedNode(null); setDisagreed(false); setDraft(''); setFeedback(null);
     setPlacements({}); setHistory([]); setGrades({}); setShowWhyHidden(false);
-    // A representação principal abre sempre primeiro. Abrir no modelo espacial
-    // quando a representação era 'scene' escondia a cena autoral validada em 77
-    // dos 112 capítulos de História e Geografia (visual-entrega-hg.spec.ts não
-    // achava a prancha); o modelo espacial continua a uma aba de distância.
-    setLayer('principal');
   }, [summaryId]);
 
   if (loading) {
@@ -413,8 +398,6 @@ export default function Visual() {
   // modos e o diagnóstico, em 576 dos 613 capítulos. O aviso agora é uma peça
   // dentro da tela, não a tela.
   const representation = resolveVisualRepresentation(summary);
-  const hasSpatial = hasSpatialSupplement(summary.id);
-  const stage = resolveStageDeclaration(map, stageDeclarationFor(summary, representation));
   const question = summary.retrieval[0] ?? null;
   // A relação de índice i é desenhada sobre a aresta de índice i. O vínculo é
   // convencional — relação vem da pergunta de recuperação, aresta vem da
@@ -464,18 +447,11 @@ export default function Visual() {
     setFeedback({ matched: evaluation.matchedElements, missing: evaluation.firstMissingElement });
   };
 
-  const stageLayers: { id: StageLayerId; label: string }[] = hasSpatial
-    ? [{ id: 'principal', label: LAYER_LABEL[representation] }, { id: 'espacial', label: 'Modelo espacial' }]
-    : [];
-  const activeLayer: StageLayerId | undefined = hasSpatial ? layer : undefined;
-
   return (
     <MolduraTecnologicaContext.Provider value={false}>
-    {/* Palco imersivo: cena e trabalho na mesma área visível. Antes a página
-        empilhava cena, galeria, desafio, mapa e só no fim o texto das etapas
-        (4.380px em Geometria Molecular), e cena e leitura nunca dividiam a tela.
-        Contrato e regras em docs/visual/PALCO-IMERSIVO.md. */}
-    <div className={`ni-main crivo-visual crivo-visual--atlas crivo-visual--stage${tecnologico ? ' crivo-visual--tech' : ''}`}>
+    {/* ni-main dá as margens que toda tela tem: sem ele o Visual encostava na
+        barra lateral e na borda direita do iPad. */}
+    <div className={`ni-main crivo-visual crivo-visual--atlas${tecnologico ? ' crivo-visual--tech' : ''}`}>
       <header className="vs-topic-bar">
         <button onClick={() => setSearchParams({})} className="vs-back-button" aria-label="Voltar à biblioteca visual">
           <ArrowLeft aria-hidden="true" />
@@ -488,73 +464,8 @@ export default function Visual() {
 
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
 
-      <div className="vs-stage" data-study-mode={mode}>
-        <section className="vs-stage-scene" aria-label={`Palco de ${summary.title}`}>
-          <div className="vs-stage-scene-bar">
-            {stageLayers.length > 0 && mode === 'explorar' && (
-              <div role="group" aria-label="Camadas do palco" className="vs-stage-layers">
-                {stageLayers.map((item) => (
-                  <button key={item.id} type="button" aria-pressed={activeLayer === item.id} onClick={() => setLayer(item.id)}>{item.label}</button>
-                ))}
-              </div>
-            )}
-            {mode !== 'testar' && (
-              <nav aria-label="Pontos de investigação" className="vs-stage-hotspots">
-                {stage.hotspots.map((spot) => {
-                  const step = hotspotStep(map, spot);
-                  return (
-                    <button key={spot.id} type="button" aria-current={step === journeyStep ? 'step' : undefined}
-                      onClick={() => (spot.nodeId ? selectNode(spot.nodeId) : setJourneyStep(step))}
-                      title={spot.label}>
-                      <span aria-hidden="true">{String(step + 1).padStart(2, '0')}</span>
-                      <span className="vs-stage-hotspot-label">{spot.label}</span>
-                    </button>
-                  );
-                })}
-              </nav>
-            )}
-          </div>
-          <div className="vs-stage-viewport">
-            {mode === 'testar' ? (
-              // Testar é "sem consultar": a cena não é montada (nem fica no DOM
-              // para leitor de tela), mas o palco continua o mesmo lugar.
-              <div className="vs-stage-veil" data-visual-representation={representation}>
-                <Waypoints aria-hidden="true" />
-                <p>A cena está velada enquanto você recupera sem consultar.</p>
-                <small>Ela volta no mesmo ponto quando você retorna a Explorar.</small>
-              </div>
-            ) : (
-              <AnimatePresence mode="wait">
-                <motion.div
-                  key={summary.id}
-                  initial={reducedMotion ? false : { opacity: 0, scale: 0.99 }}
-                  animate={{ opacity: 1, scale: 1 }}
-                  exit={reducedMotion ? undefined : { opacity: 0 }}
-                  transition={{ duration: reducedMotion ? 0 : 0.38, ease: [0.22, 1, 0.36, 1] }}
-                >
-                  <VisualArtifact
-                    summary={summary}
-                    representation={representation}
-                    map={map}
-                    states={states}
-                    selectedId={selectedNode}
-                    onSelect={selectNode}
-                    hiddenEdgeIds={hiddenEdgeIds}
-                    mode={mode}
-                    activeIndex={journeyStep}
-                    onSelectStep={setJourneyStep}
-                    layer={activeLayer}
-                    focusTarget={selectedNode}
-                  />
-                </motion.div>
-              </AnimatePresence>
-            )}
-          </div>
-        </section>
-
-        <aside className="vs-stage-hud" aria-label="Painel do palco">
-          <div className="vs-study-toolbar">
-          <div className="vs-mode-row">
+      <div className="vs-study-toolbar">
+      <div className="vs-mode-row">
       <div role="tablist" aria-label="Modo de estudo" className="vs-modes">
         {MODES.map((key) => (
           <button
@@ -584,6 +495,11 @@ export default function Visual() {
         ))}
       </div>
 
+      {/* "Mostrar domínio": a leitura do capítulo inteiro de uma vez, em vez de
+          nó por nó pelo inspetor. Não é dado novo — é o mesmo `states` que já
+          colore cada cartão, reunido numa lista com a legenda ao lado. Sem a
+          legenda, a cor sozinha não diz o que significa para quem abriu a tela
+          pela primeira vez. */}
       <button
         type="button"
         className="vs-domain-toggle"
@@ -627,49 +543,50 @@ export default function Visual() {
         </section>
       )}
 
-          {mode === 'explorar' && selectedNode && (
-            <aside className="vs-inspector-shell" aria-label="Conceito selecionado">
-            <Inspector
-                map={map}
-                summary={summary}
-                nodeId={selectedNode}
-                answers={answers}
-                disagreed={disagreed}
-                onClose={closeInspector}
-                onDisagree={() => setDisagreed((value) => !value)}
-                onModeChange={changeMode}
-                onOpenSummary={(sectionId) => navigate('/resumos?summary=' + encodeURIComponent(summary.id) + '#' + sectionId)}
-              />
-            </aside>
+      <div data-study-mode={mode} className={`vs-workspace${!selectedNode && !intervention ? ' vs-workspace--solo' : ''}`}>
+        <motion.section key={mode} id={`visual-mode-panel-${mode}`} role="tabpanel" aria-labelledby={`visual-mode-${mode}`} className="vs-main" initial={reducedMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : MOTION_DURATION.component }}>
+          {mode !== 'testar' && (
+            <AnimatePresence mode="wait">
+              <motion.div
+                key={summary.id}
+                initial={reducedMotion ? false : { opacity: 0, y: 16, scale: 0.99 }}
+                animate={{ opacity: 1, y: 0, scale: 1 }}
+                exit={reducedMotion ? undefined : { opacity: 0, y: -8 }}
+                transition={{ duration: reducedMotion ? 0 : 0.38, ease: [0.22, 1, 0.36, 1] }}
+              >
+                <VisualArtifact
+                  summary={summary}
+                  representation={representation}
+                  map={map}
+                  states={states}
+                  selectedId={selectedNode}
+                  onSelect={selectNode}
+                  hiddenEdgeIds={hiddenEdgeIds}
+                  mode={mode}
+                  activeIndex={journeyStep}
+                  onSelectStep={setJourneyStep}
+                  onPractice={() => changeMode('testar')}
+                  onReadChallenge={readChallenge}
+                />
+              </motion.div>
+            </AnimatePresence>
           )}
 
-          <motion.section key={mode} id={`visual-mode-panel-${mode}`} role="tabpanel" aria-labelledby={`visual-mode-${mode}`} className="vs-main vs-stage-panel" initial={reducedMotion ? false : { opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: reducedMotion ? 0 : MOTION_DURATION.component }}>
+          {mode !== 'testar' && <ConceptChain
+            key={'map-' + summary.id}
+            map={map}
+            states={states}
+            selectedId={selectedNode}
+            onSelect={selectNode}
+            hiddenEdgeIds={hiddenEdgeIds}
+            escondendo={mode === 'reconstruir'}
+          />}
+
           {mode === 'explorar' && <VisualJourney key={'journey-' + summary.id} summary={summary} initialIndex={journeyStep} onStepChange={setJourneyStep} onPractice={() => changeMode('testar')} />}
-
-          {mode === 'explorar' && (
-            <section className="vs-scene-bridge" aria-label="Da cena à compreensão">
-              <div><small>RELACIONE COM O CAPÍTULO</small><h3>{summary.sections[journeyStep]?.title ?? summary.title}</h3>
-                <p>{map.recallPrompt}</p>
-                {summary.sections[challengeSectionIndex(summary)] && <p className="vs-scene-challenge-context">Explicação do desafio: {summary.sections[challengeSectionIndex(summary)].title}</p>}</div>
-              <div className="vs-scene-bridge-actions">
-                <button type="button" onClick={readChallenge}>Entender o desafio</button>
-                <button type="button" onClick={() => changeMode('testar')}>Responder ao desafio</button>
-              </div>
-            </section>
-          )}
-
-          {mode === 'explorar' && !selectedNode && intervention && (
-            <section className="vs-priority-panel" aria-label="Diagnóstico vivo">
-              <span className="vs-priority-kicker"><Compass aria-hidden="true" /> Diagnóstico vivo</span>
-              <h2>Seu próximo elo</h2>
-              <StateBadge state={intervention.state} />
-              <p><strong>{displayLabel(intervention.label)}</strong></p>
-              <p>{intervention.why}</p>
-              <small>{CONFIDENCE_LABEL[intervention.confidence]}</small>
-              <button type="button" onClick={() => changeMode('reconstruir')}>{intervention.action}</button>
-            </section>
-          )}
-
+          {/* Quantas conexões o diagnóstico escondeu. Vivia dentro da prancha
+              adiabática — a única das 26 que não usava o BoardShell —, então
+              valia para um capítulo só. Aqui vale para todos, e a frase sobre
+              "responder sem consultar" saiu porque o MODE_HINT acima já a diz. */}
           {mode === 'reconstruir' && hiddenEdgeIds.length > 0 && (
             <p className="vs-active-mode-note" role="status">
               {hiddenEdgeIds.length === 1
@@ -838,23 +755,37 @@ export default function Visual() {
               )}
             </section>
           )}
-          </motion.section>
+        </motion.section>
 
-          {mode !== 'testar' && (
-            <details className="vs-stage-map" open={mode === 'reconstruir' || undefined}>
-              <summary>Mapa do capítulo</summary>
-              <ConceptChain
-                key={'map-' + summary.id}
+
+        {mode === 'explorar' && selectedNode ? (
+          <>
+            <button type="button" className="vs-inspector-backdrop" onClick={closeInspector} aria-label="Fechar conceito selecionado" />
+            <aside className="vs-inspector-shell" aria-label="Conceito selecionado">
+              <Inspector
                 map={map}
-                states={states}
-                selectedId={selectedNode}
-                onSelect={selectNode}
-                hiddenEdgeIds={hiddenEdgeIds}
-                escondendo={mode === 'reconstruir'}
+                summary={summary}
+                nodeId={selectedNode}
+                answers={answers}
+                disagreed={disagreed}
+                onClose={closeInspector}
+                onDisagree={() => setDisagreed((value) => !value)}
+                onModeChange={changeMode}
+                onOpenSummary={(sectionId) => navigate('/resumos?summary=' + encodeURIComponent(summary.id) + '#' + sectionId)}
               />
-            </details>
-          )}
-        </aside>
+            </aside>
+          </>
+        ) : mode === 'explorar' && intervention ? (
+          <aside className="vs-priority-panel">
+            <span className="vs-priority-kicker"><Compass aria-hidden="true" /> Diagnóstico vivo</span>
+            <h2>Seu próximo elo</h2>
+            <StateBadge state={intervention.state} />
+            <p><strong>{displayLabel(intervention.label)}</strong></p>
+            <p>{intervention.why}</p>
+            <small>{CONFIDENCE_LABEL[intervention.confidence]}</small>
+            <button type="button" onClick={() => changeMode('reconstruir')}>{intervention.action}</button>
+          </aside>
+        ) : null}
       </div>
     </div>
     </MolduraTecnologicaContext.Provider>

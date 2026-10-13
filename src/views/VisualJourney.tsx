@@ -15,14 +15,11 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
 }) {
   const [index, setIndex] = useState(initialIndex);
   const [direction, setDirection] = useState(1);
-  // No palco a etapa abre curta; o texto integral fica no DOM (leitor de tela e
-  // busca o alcançam) e "Aprofundar" só solta o recorte visual, no mesmo lugar.
-  const [deep, setDeep] = useState(false);
   const reduced = useReducedMotion();
   useEffect(() => { setIndex(Math.max(0, Math.min(initialIndex, summary.sections.length - 1))); }, [initialIndex, summary.sections.length]);
   const section = summary.sections[index];
   if (!section) return null;
-  const go = (next: number) => { setDeep(false); setDirection(next > index ? 1 : -1); setIndex(next); onStepChange?.(next); };
+  const go = (next: number) => { setDirection(next > index ? 1 : -1); setIndex(next); onStepChange?.(next); };
   return (
     <section id="visual-chapter-reading" tabIndex={-1} className="vs-journey" aria-label="Percurso do capítulo" data-subject={summary.subject}>
       <header className="vs-journey-heading">
@@ -48,14 +45,8 @@ export function VisualJourney({ summary, onPractice, initialIndex = 0, onStepCha
           transition={{ duration: reduced ? 0 : MOTION_DURATION.component, ease: MOTION_EASE }}>
           <span className="vs-board-kicker">{STAGE_LABEL[section.stage]}{section.evidenceKind ? ` · ${section.evidenceKind}` : ''}</span>
           <h3>{section.title}</h3>
-          <div id={`vs-journey-text-${section.id}`} className="vs-journey-text" data-expanded={deep || undefined}>
-            <AiText text={section.content} />
-            {section.callout && <aside className="vs-journey-callout"><AiText text={section.callout} /></aside>}
-          </div>
-          <button type="button" className="vs-journey-deepen" aria-expanded={deep}
-            aria-controls={`vs-journey-text-${section.id}`} onClick={() => setDeep(v => !v)}>
-            {deep ? 'Recolher explicação' : 'Aprofundar esta etapa'}
-          </button>
+          <AiText text={section.content} />
+          {section.callout && <aside className="vs-journey-callout"><AiText text={section.callout} /></aside>}
         </motion.article>
       </AnimatePresence>
       <details className="vs-reading-lens"><summary>Explorar e comparar trechos desta etapa</summary>
