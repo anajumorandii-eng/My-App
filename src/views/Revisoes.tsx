@@ -1,3 +1,5 @@
+import { ActiveTopicReview } from '../components/ActiveTopicReview';
+import { useQuestions } from '../hooks/useQuestions';
 import ReviewDayContext from '../components/ReviewDayContext';
 import { ReviewInsightCard } from '../components/ReviewInsightCard';
 import { isoToLocalDate } from '../features/availability/time';
@@ -9,7 +11,7 @@ import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { urgencyOf } from '../lib/reviewUrgency';
 import { applyReviewOutcome, qualityFromSelfRating } from '../lib/spacedRepetition';
-import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles, Frown, Meh, Smile } from 'lucide-react';
+import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
 import { useSummaryProgress } from '../hooks/useSummaryProgress';
 import { interactiveSummaries } from '../data/interactiveSummaries';
 import SummaryReviewsPanel from '../components/SummaryReviewsPanel';
@@ -21,18 +23,15 @@ import { ambienteDaMateria } from '../lib/visualAmbiente';
 
 type SelfRating = 'fraco' | 'mediano' | 'forte';
 
-const RATING_OPTIONS: { value: SelfRating; label: string; icon: typeof Frown }[] = [
-  { value: 'fraco', label: 'Esqueci', icon: Frown },
-  { value: 'mediano', label: 'Foi difícil', icon: Meh },
-  { value: 'forte', label: 'Lembrei fácil', icon: Smile },
-];
-
 export default function Revisoes() {
+  const { questions, loading: questionsLoading } = useQuestions();
   const { mastery: masteryState, updateMastery, isPersisted, syncError } = useUserMastery();
   const { progress: summaryProgress } = useSummaryProgress();
   const [tips, setTips] = useState<Record<string, string>>({});
   const [tipErrors, setTipErrors] = useState<Record<string, string>>({});
   const [loadingTipFor, setLoadingTipFor] = useState<string | null>(null);
+  const [activeTopics, setActiveTopics] = useState<string[]>([]);
+  const [budget, setBudget] = useState(30);
   const [subjectFilter, setSubjectFilter] = useState('Todas');
   const [board, setBoard] = useState('');
   const [chapters, setChapters] = useState<Record<string, string>>({});
@@ -73,7 +72,7 @@ export default function Revisoes() {
   const pendingToday = queue.filter((entry) => entry.urgency > 50).length;
 
   const rateReview = (topicId: string, rating: SelfRating) => {
-    updateMastery((prev: TopicMastery[]) =>
+    return updateMastery((prev: TopicMastery[]) =>
       prev.map((m) => (m.topicId === topicId ? { ...m, ...applyReviewOutcome(m, qualityFromSelfRating(rating)) } : m))
     );
   };
@@ -120,7 +119,7 @@ export default function Revisoes() {
       {/* Main Title */}
       <div className="ni-title">
         <div>
-          <h1>Revise antes que o prazo vença.</h1>
+          <h1>Recupere, aplique e confira o que aprendeu.</h1>
           <p>As revisões combinam espaçamento, desempenho registrado e tempo disponível. Recupere o conteúdo antes de consultar a explicação.</p>
         </div>
         <div className="ni-state">
@@ -191,9 +190,15 @@ export default function Revisoes() {
 
       <ReviewDayContext localDate={isoToLocalDate(new Date().toISOString())} />
 
+      <section className="mt-4 rounded-lg border border-[var(--line)] p-4" aria-label="Plano de revisão de hoje">
+        <label>Tempo disponível para revisão <select value={budget} onChange={e => setBudget(Number(e.target.value))} className="ml-2 bg-[var(--surface2)] p-2 rounded">{[15, 30, 45].map(minutes => <option key={minutes} value={minutes}>{minutes} minutos</option>)}</select></label>
+        <p className="mt-2 text-sm">Comece por {Math.min(Math.floor(budget / 15), filteredQueue.length)} tópico(s) da fila: {filteredQueue.slice(0, Math.floor(budget / 15)).map(entry => entry.topic!.name).join(' · ') || 'nenhum tópico disponível'}. Reserve até 15 minutos para cada treino; se faltar base, pare e reconstrua o conceito antes de avançar.</p>
+        <p className="text-xs mt-2">A data orienta a prioridade. A resposta sem consulta, os critérios conferidos e a aplicação orientam o próximo intervalo.</p>
+      </section>
+
       {/* Reviews queue */}
       <div className="space-y-3 mt-4">
-        {filteredQueue.slice(0, visiveis).map(({ mastery, topic, urgency }) => {
+        {filteredQueue.filter((entry, index) => index < visiveis || activeTopics.includes(entry.mastery.topicId)).map(({ mastery, topic, urgency }) => {
           const key = tipKey(mastery.topicId);
           const tip = tips[key];
           const isLoadingTip = loadingTipFor === key;
@@ -242,21 +247,7 @@ export default function Revisoes() {
                 </div>
               </div>
 
-              <div className="mt-4 pt-3 border-t border-[var(--line)]">
-                <p className="text-xs text-[var(--dim)] mb-2">Sem consultar o resumo: você recuperou esse conceito agora?</p>
-                <div className="grid grid-cols-3 gap-2">
-                  {RATING_OPTIONS.map(({ value, label, icon: Icon }) => (
-                    <button
-                      key={value}
-                      onClick={() => rateReview(mastery.topicId, value)}
-                      className="flex items-center justify-center px-3 py-2 rounded-lg text-xs font-medium border border-[var(--line)] bg-[var(--surface2)] hover:border-[var(--primary)] text-[var(--text)] transition-colors"
-                    >
-                      <Icon className="w-3.5 h-3.5 mr-1.5 subject-text" />
-                      {label}
-                    </button>
-                  ))}
-                </div>
-              </div>
+              <ActiveTopicReview onStart={() => setActiveTopics(ids => ids.includes(mastery.topicId) ? ids : [...ids, mastery.topicId])} loading={questionsLoading} questions={questions} key={JSON.stringify([mastery.topicId, board, chapters[mastery.topicId]])} topicId={mastery.topicId} chapter={chapters[mastery.topicId]} board={board} onComplete={(rating) => rateReview(mastery.topicId, rating)} />
 
               <ReviewInsightCard mastery={mastery} />
 

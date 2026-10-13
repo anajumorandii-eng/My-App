@@ -640,7 +640,7 @@ export default function Questoes() {
                 {/* Explanation & Diagnosis */}
                 <div className="p-4 rounded-xl border border-[var(--line)] bg-[var(--surface2)]/40 text-left space-y-3">
                   <div className="flex items-center justify-between">
-                    <span className="ni-kicker" style={{ margin: 0 }}>Gabarito e justificativa</span>
+                    <span className="ni-kicker" style={{ margin: 0 }}>Por que a alternativa correta está certa</span>
                     {!question.originalPages?.length && (
                       <button onClick={fetchDeepExplanation} disabled={loadingDeepExplanation} className="ni-link text-xs disabled:opacity-50">
                         <Sparkles className="w-3.5 h-3.5 inline mr-1" />
@@ -648,6 +648,7 @@ export default function Questoes() {
                       </button>
                     )}
                   </div>
+                  <p className="text-sm font-semibold mb-2">Alternativa correta: {question.correctOptionId.toUpperCase()} · {question.options.find(option => option.id === question.correctOptionId)?.text}</p>
                   <p className="text-xs text-[var(--dim)] leading-relaxed whitespace-pre-line">{question.explanation}</p>
                   {question.examSource?.sourceUrl && <a href={question.examSource.sourceUrl} target="_blank" rel="noreferrer" className="ni-link text-xs">{question.examSource.answerKeyUrl ? 'Conferir prova original' : 'Conferir fonte e gabarito'}</a>}
                   {question.examSource?.answerKeyUrl && <a href={question.examSource.answerKeyUrl} target="_blank" rel="noreferrer" className="ni-link text-xs ml-3">Conferir gabarito oficial</a>}
