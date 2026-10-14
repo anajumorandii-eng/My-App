@@ -85,12 +85,14 @@ test('reduced motion keeps the decision and disclosed evidence in their final fr
   await expect(stage.getByRole('button', { name: 'Começar' })).toBeEnabled();
   await expect(stage.getByTestId('crivo-core')).toHaveCount(0);
   await expect(page.locator('[data-motion-active="true"]')).toHaveCount(0);
-  await expect.poll(() => stage.evaluate((el) => getComputedStyle(el).transform)).toBe('none');
+  // Browser-side assertions keep retrying while the subject's lazy 3D scene
+  // loads. A host-side poll can exhaust its budget on one slow evaluate call.
+  await expect(stage).toHaveCSS('transform', 'none', { timeout: 15_000 });
   await stage.getByRole('button', { name: 'Por que isso?' }).click();
   const evidence = stage.getByRole('region', { name: 'Fatores da recomendação' });
   await expect(evidence).toBeVisible();
   await expect(stage).toHaveAttribute('data-phase', 'decomposed');
-  await expect.poll(() => evidence.evaluate((el) => getComputedStyle(el).transform)).toBe('none');
+  await expect(evidence).toHaveCSS('transform', 'none', { timeout: 15_000 });
   await expect.poll(() => stage.evaluate((el) => el.getAnimations({ subtree: true })
     .filter((animation) => animation.playState === 'running' && animation.effect?.getTiming().iterations === Infinity).length)).toBe(0);
 });
