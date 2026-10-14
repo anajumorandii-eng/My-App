@@ -1,0 +1,3355 @@
+[
+  {
+    "number": 1,
+    "topicId": "geo_cartografia",
+    "subject": "Geografia",
+    "chapter": "Linguagem Cartográfica",
+    "title": "Escala e detalhamento de impactos ambientais",
+    "concept": "Escala numérica e generalização cartográfica; pré-requisito: comparar razões.",
+    "steps": [
+      "Observe no esquema que escala maior corresponde a área menor, mais informação e menos generalização.",
+      "Compare o objetivo de um atlas escolar com o de localizar impactos de uma obra: a intervenção exige detalhes locais.",
+      "Uma escala como 1:5.000 reduz menos o terreno que 1:5.000.000 e permite registrar elementos pequenos.",
+      "A alternativa B combina corretamente escala maior e menos generalização em estudos de impacto; A e D invertem essa relação.",
+      "Confira que C também erra o público dos atlas escolares e associa escala maior a menos informação."
+    ],
+    "trap": "Confundir denominador maior com escala maior: 1:5.000 é maior que 1:5.000.000.",
+    "retrieval": [
+      "Qual escala mostra mais detalhes: 1:10.000 ou 1:100.000?",
+      "Por que a finalidade de um mapa determina sua generalização?"
+    ],
+    "transfer": "Exercício autoral: uma nascente está a 3 cm de uma estrada num mapa 1:10.000. Calcule a distância real e escolha essa escala ou 1:1.000.000 para planejar proteção local.",
+    "criteria": [
+      "Distância real de 300 m.",
+      "Escolher 1:10.000, com maior detalhamento e menor generalização."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "Atlas escolares apresentam mapas com escala menor e pouca generalização. O objetivo dos mapas que figuram nesses atlas é a representação espacial de diferentes variáveis físico-naturais, demográficas e socioeconômicas, acessíveis a um público bastante diversificado."
+      },
+      {
+        "id": "b",
+        "text": "Os mapas elaborados para estudos de impactos ambientais, estudos estes aplicados a projetos de infraestrutura, precisam ter escala maior e, consequentemente, menos generalização dos dados, pois a intervenção no território deve minimizar impactos ambientais."
+      },
+      {
+        "id": "c",
+        "text": "Atlas escolares apresentam mapas com escala maior e menos informação. O objetivo dos mapas que figuram nesses atlas é a representação espacial de diferentes variáveis (físico-naturais, demográficas e socioeconômicas) que sejam acessíveis a um público bastante especializado."
+      },
+      {
+        "id": "d",
+        "text": "Os mapas elaborados para estudos de impactos ambientais, estudos estes aplicados a projetos de infraestrutura, precisam ter escala menor e, consequentemente, mais informação, pois a intervenção no território deve minimizar impactos ambientais."
+      }
+    ],
+    "pages": [
+      3
+    ]
+  },
+  {
+    "number": 2,
+    "topicId": "geo_geopolitica_regional",
+    "subject": "Geografia",
+    "chapter": "Geopolítica e Geoeconomia da América Latina",
+    "title": "Fronteiras e disputa por Essequibo",
+    "concept": "Construção política de fronteiras; pré-requisito: distinguir território e elemento natural.",
+    "steps": [
+      "Identifique a reivindicação venezuelana sobre Essequibo e a referência a um limite reconhecido internacionalmente.",
+      "Pergunte o que estabelece a validade de uma fronteira: decisões, disputas e acordos entre Estados.",
+      "Rios ou montanhas podem servir de suporte físico, mas não determinam por si sós a soberania territorial.",
+      "B descreve a dimensão política; A e C reduzem a fronteira a formas geométricas ou marcos naturais.",
+      "Confira D: convenções apenas locais não explicam a definição internacional de limites entre países."
+    ],
+    "trap": "A presença de um rio na fronteira não torna natural a decisão sobre sua função política.",
+    "retrieval": [
+      "Qual a diferença entre limite físico e decisão de soberania?",
+      "Como uma disputa territorial revela o caráter histórico das fronteiras?"
+    ],
+    "transfer": "Exercício autoral: dois países adotam por tratado o curso de um rio como limite. Explique se a fronteira é essencialmente natural ou política e indique a função do rio.",
+    "criteria": [
+      "É política, pois decorre de acordo entre Estados.",
+      "O rio funciona como referência física para demarcação."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "geométrica: trata-se de uma linha demarcada por formas geográficas tais como muros, cercas ou vias de circulação."
+      },
+      {
+        "id": "b",
+        "text": "política: trata-se de uma zona definida por meio de disputas e acordos internacionais pelo direito de uso de um determinado território."
+      },
+      {
+        "id": "c",
+        "text": "natural: trata-se de uma linha demarcada por meio de marcos geográficos tais como rios, mares, lagos, geleiras e montanhas."
+      },
+      {
+        "id": "d",
+        "text": "técnica: trata-se de uma zona definida por tratados e convenções locais que protegem a soberania do Estado-nação."
+      }
+    ],
+    "pages": [
+      3
+    ]
+  },
+  {
+    "number": 3,
+    "topicId": "geo_globalizacao_economica",
+    "subject": "Geografia",
+    "chapter": "Produção Agrícola Mundial",
+    "title": "Cacau no Golfo da Guiné",
+    "concept": "Distribuição agrícola e condições socioambientais; pré-requisito: localização da África ocidental.",
+    "steps": [
+      "Leia no gráfico que Costa do Marfim e Gana lideram a produção de cacau.",
+      "Localize esses países na África ocidental, junto ao Golfo da Guiné, e relacione-os ao clima quente e úmido.",
+      "O cultivo se associa a áreas de floresta equatorial-tropical, com conversão de vegetação e forte presença de trabalho manual.",
+      "A reúne região, vegetação e condições produtivas; B e D deslocam a produção para o norte africano.",
+      "Confira C: a região está correta, mas floresta mediterrânea e colheita mecanizada não caracterizam o sistema descrito."
+    ],
+    "trap": "Escolher pela região correta e ignorar as condições de cultivo na segunda metade da alternativa.",
+    "retrieval": [
+      "Quais dois países lideram o gráfico?",
+      "Por que o clima mediterrâneo não caracteriza o núcleo cacaueiro africano?"
+    ],
+    "transfer": "Exercício autoral: compare a aptidão para cacau de uma área quente e úmida no Golfo da Guiné e outra com verão seco no Mediterrâneo. Indique a mais favorável e um impacto de sua expansão.",
+    "criteria": [
+      "Área quente e úmida do Golfo da Guiné.",
+      "Desmatamento ou perda de biodiversidade com substituição da floresta por lavouras."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "África ocidental, na costa do Golfo da Guiné, em áreas de floresta equatorial-tropical; cultivo sob forte custo ecológico e colheita manual."
+      },
+      {
+        "id": "b",
+        "text": "África setentrional, na costa do Estreito de Gibraltar, em áreas de floresta mediterrânea; cultivo com manejo sustentável da floresta e colheita mecanizada."
+      },
+      {
+        "id": "c",
+        "text": "África ocidental, na costa do Golfo da Guiné, em áreas de floresta mediterrânea; cultivo com manejo sustentável da floresta e colheita mecanizada."
+      },
+      {
+        "id": "d",
+        "text": "África setentrional, na costa do Estreito de Gibraltar, em áreas de floresta equatorial-tropical; cultivo sob forte custo ecológico e colheita manual."
+      }
+    ],
+    "pages": [
+      3
+    ]
+  },
+  {
+    "number": 4,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Geologia e Geomorfologia",
+    "title": "Escudos cristalinos e minerais metálicos",
+    "concept": "Estruturas geológicas antigas e recursos minerais; pré-requisito: tipos de rochas.",
+    "steps": [
+      "Identifique os escudos como estruturas pré-cambrianas expostas e pouco deformadas no Fanerozoico.",
+      "Distinga o embasamento cristalino de bacias sedimentares antes de associar recursos econômicos.",
+      "Escudos reúnem rochas ígneas e metamórficas e podem concentrar minerais metálicos utilizados na siderurgia.",
+      "C é a combinação correta; petróleo e gás, mencionados em A e B, se associam sobretudo a bacias sedimentares.",
+      "Confira D: atribui rochas sedimentares aos escudos e destina minerais à indústria petroquímica."
+    ],
+    "trap": "Associar qualquer riqueza mineral a qualquer estrutura geológica, sem distinguir minério e combustível fóssil.",
+    "retrieval": [
+      "Que tipos de rocha predominam no embasamento cristalino?",
+      "Em que estrutura se procuram normalmente petróleo e gás?"
+    ],
+    "transfer": "Exercício autoral: uma prospecção encontra ferro no embasamento metamórfico e petróleo em camadas sedimentares. Associe cada recurso à estrutura geológica e à cadeia industrial principal.",
+    "criteria": [
+      "Ferro: escudo/embasamento cristalino e siderurgia.",
+      "Petróleo: bacia sedimentar e cadeia petroquímica/energética."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "ígneas e metamórficas; apresentam combustíveis fósseis, a exemplo de petróleo e gás, explorados pela indústria petroquímica."
+      },
+      {
+        "id": "b",
+        "text": "sedimentares; apresentam jazidas de combustíveis fósseis, a exemplo de petróleo e gás, jazidas estas exploradas pela indústria siderúrgica."
+      },
+      {
+        "id": "c",
+        "text": "ígneas e metamórficas; apresentam jazidas de minerais metálicos, explorados em larga escala pela indústria siderúrgica."
+      },
+      {
+        "id": "d",
+        "text": "sedimentares; apresentam jazidas de minerais metálicos e não metálicos, explorados pela indústria petroquímica."
+      }
+    ],
+    "pages": [
+      4
+    ]
+  },
+  {
+    "number": 5,
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "chapter": "Dinâmica Climática",
+    "title": "Alta pressão e bloqueio de frentes frias",
+    "concept": "Circulação atmosférica e bloqueio; pré-requisito: alta e baixa pressão.",
+    "steps": [
+      "Localize no mapa A, alta pressão, sobre a área de calor, e B, baixa pressão, próxima ao Sul.",
+      "Relacione a alta pressão à subsidência do ar e à dificuldade de formação de nuvens.",
+      "A persistência do sistema mantém tempo seco e quente e dificulta o avanço da frente fria para o interior.",
+      "D descreve esse bloqueio; A atribui-o incorretamente à baixa pressão e B faz a alta pressão produzir tempestades.",
+      "Confira C: o centro da alta pressão não corresponde à área de precipitação extrema indicada."
+    ],
+    "trap": "Interpretar A e B como simples letras, sem consultar a legenda de pressão atmosférica.",
+    "retrieval": [
+      "Como a subsidência influencia a nebulosidade?",
+      "Qual sistema bloqueou o avanço da frente fria no mapa?"
+    ],
+    "transfer": "Exercício autoral: um anticiclone persistente cobre o Sudeste enquanto uma frente fica estacionária no Sul. Preveja o tempo predominante em cada área e explique a diferença.",
+    "criteria": [
+      "Sudeste: tempo mais seco e persistência do calor devido à alta pressão.",
+      "Sul: maior possibilidade de chuva prolongada junto à frente bloqueada."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "precipitações extremas no período apresentado ficou restrita ao Rio Grande do Sul, pois a frente fria não avançou, por conta do bloqueio decorrente da Baixa Pressão, em direção ao interior do país."
+      },
+      {
+        "id": "b",
+        "text": "ondas de calor no período está associada a eventos de precipitação extrema, pois as Altas Pressões Atmosféricas dão origem às nuvens de tempestades que formam as frentes frias."
+      },
+      {
+        "id": "c",
+        "text": "precipitações extremas no período ocorreu no centro das áreas de Alta Pressão e de Baixa Pressão, sendo que nas bordas desses sistemas se formaram as ondas de calor com tempo seco e temperaturas altas."
+      },
+      {
+        "id": "d",
+        "text": "ondas de calor tem origem na formação de zonas de Alta Pressão; essas zonas, além de formarem tempo seco e, nesse caso, temperatura elevada, bloqueiam o avanço de frentes frias para o interior do país."
+      }
+    ],
+    "pages": [
+      4
+    ]
+  },
+  {
+    "number": 6,
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "chapter": "O Espaço Urbano II",
+    "title": "Planejamento integrado contra desastres urbanos",
+    "concept": "Gestão territorial federativa e função social da cidade; pré-requisito: competências dos entes federativos.",
+    "steps": [
+      "Retome os eventos extremos e o grande contingente urbano exposto no texto e mapa da página anterior.",
+      "Identifique que programas e metas nacionais exigem articulação entre escalas de governo.",
+      "União, estados e municípios devem coordenar prevenção, infraestrutura, defesa civil e ordenamento territorial.",
+      "B prevê ação sistêmica, participação popular e função social da cidade; A, C e D isolam responsabilidades em um nível.",
+      "Confira que a mudança massiva para áreas rurais proposta em D não constitui planejamento urbano integrado."
+    ],
+    "trap": "Tratar defesa civil como atuação exclusiva do município e limitar planejamento à resposta emergencial.",
+    "retrieval": [
+      "Por que uma bacia metropolitana exige coordenação entre municípios?",
+      "Como a participação popular melhora o planejamento de áreas de risco?"
+    ],
+    "transfer": "Exercício autoral: três municípios compartilham um rio sujeito a enchentes. Proponha uma medida integrada de prevenção e explique quais escalas de governo devem cooperar.",
+    "criteria": [
+      "Medida coerente: monitoramento conjunto, drenagem coordenada ou proteção de várzeas em toda a bacia.",
+      "Cooperação municipal, estadual e federal, com participação das comunidades expostas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "normativa, de responsabilidade do ente municipal que define e custeia as estratégias para enfrentar fenômenos urgentes; deve também se apoiar na Política Nacional de Proteção e Defesa Civil e nos indivíduos que se voluntariam."
+      },
+      {
+        "id": "b",
+        "text": "sistêmica, de responsabilidade dos três entes federativos, ação esta que dê conta de enfrentar os graves problemas urbano-ambientais do país; a participação popular e o cumprimento da função social da cidade são instrumentos importantes."
+      },
+      {
+        "id": "c",
+        "text": "pragmática, de responsabilidade dos entes estaduais e Distrito Federal; para a gestão metropolitana, esses entes contratam equipes técnico-científicas de organizações não governamentais, conforme previsto no Estatuto da Cidade."
+      },
+      {
+        "id": "d",
+        "text": "setorial, de responsabilidade do ente federal; esse ente, conforme estabelecido no Estatuto da Metrópole, prevê um orçamento destinado a possíveis deslocamentos massivos da população metropolitana a áreas rurais em curto prazo."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ]
+  },
+  {
+    "number": 7,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Políticas Ambientais Brasileiras",
+    "title": "Direitos no espaço marítimo brasileiro",
+    "concept": "Soberania territorial e direitos econômicos marítimos; pré-requisito: leitura de legenda e limites.",
+    "steps": [
+      "Leia na figura os limites do Mar Territorial, 12 milhas, e da ZEE, 200 milhas.",
+      "Distinga soberania sobre o território marítimo de direitos soberanos para exploração econômica.",
+      "No Mar Territorial há soberania; até o limite da ZEE o Brasil detém direitos de exploração e uso de recursos.",
+      "D expressa essa distinção; A nega indevidamente direitos no Mar Territorial e C atribui controle brasileiro ao alto-mar.",
+      "D enuncia precisamente os dois limites pedidos. B fala em exploração de recursos da plataforma: esse regime se refere ao leito e ao subsolo e possui delimitação jurídica própria; não o confunda com a área de recursos da ZEE indicada no mapa."
+    ],
+    "trap": "Aplicar à plataforma continental estendida o mesmo regime de soberania do Mar Territorial.",
+    "retrieval": [
+      "Qual é o limite usual da ZEE em milhas náuticas?",
+      "Direitos sobre recursos do fundo marinho equivalem a soberania sobre as águas?"
+    ],
+    "transfer": "Exercício autoral: compare um ponto a 8 milhas e outro a 150 milhas da costa, ambos fora de situações especiais. Indique o regime principal de direitos brasileiros em cada um.",
+    "criteria": [
+      "8 milhas: Mar Territorial, com soberania e observância do direito de passagem inocente.",
+      "150 milhas: ZEE, com direitos soberanos sobre recursos, sem soberania territorial plena."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o controle da plataforma continental estendida, mas não o direito exclusivo de exploração econômica dos recursos no limite do Mar Territorial."
+      },
+      {
+        "id": "b",
+        "text": "soberania de exploração de recursos em toda a extensão da área da plataforma continental, conforme os tratados internacionais sobre o Direito do Mar."
+      },
+      {
+        "id": "c",
+        "text": "o controle das águas em alto mar com a autorização das Nações Unidas (ONU), ampliando a exploração para além do limite da Zona Econômica Exclusiva (ZEE)."
+      },
+      {
+        "id": "d",
+        "text": "soberania sobre a área do Mar Territorial e detém o direito de exploração e de uso dos recursos até o limite da Zona Econômica Exclusiva (ZEE)."
+      }
+    ],
+    "pages": [
+      5
+    ]
+  },
+  {
+    "number": 8,
+    "topicId": "fis_cinematica_vetorial",
+    "subject": "Física",
+    "chapter": "Composição de Movimentos",
+    "title": "Vento favorável no trecho Baltimore–Londres",
+    "concept": "Velocidades relativas colineares; pré-requisito: movimento uniforme.",
+    "steps": [
+      "Extraia da figura o comprimento de B, 2000 km; a velocidade do avião em relação ao ar é 750 km/h.",
+      "Adote leste como sentido positivo: no trecho B o vento de 250 km/h acompanha o avião.",
+      "Componha v(avião/solo)=v(avião/ar)+v(ar/solo)=750+250=1000 km/h.",
+      "Calcule Δt=2000/1000=2,0 h, selecionando D; A e B subtraem um vento favorável.",
+      "Confira C: acerta a velocidade, mas 4 h não percorrem 2000 km a 1000 km/h; as oito horas sem vento não são o tempo de B."
+    ],
+    "trap": "Usar a duração total do trajeto para um trecho de apenas 2000 km.",
+    "retrieval": [
+      "Quando velocidades relativas se somam em módulo?",
+      "Qual informação da figura permite calcular o tempo em B?"
+    ],
+    "transfer": "Exercício autoral: um avião mantém 600 km/h em relação ao ar num trecho de 1400 km com vento contrário de 100 km/h. Calcule a velocidade no solo e o tempo.",
+    "criteria": [
+      "Velocidade no solo de 500 km/h.",
+      "Tempo de 2,8 h, isto é, 2 h 48 min."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "o módulo da velocidade média do avião em relação ao solo no trecho B é |v⃗avião,solo| = 500 km/h, e o tempo de viagem no mesmo trecho é Δt = 4,0 h."
+      },
+      {
+        "id": "b",
+        "text": "o módulo da velocidade média do avião em relação ao solo no trecho B é |v⃗avião,solo| = 500 km/h, e o tempo de viagem no mesmo trecho é Δt = 2,0 h."
+      },
+      {
+        "id": "c",
+        "text": "o módulo da velocidade média do avião em relação ao solo no trecho B é |v⃗avião,solo| = 1000 km/h, e o tempo de viagem no mesmo trecho é Δt = 4,0 h."
+      },
+      {
+        "id": "d",
+        "text": "o módulo da velocidade média do avião em relação ao solo no trecho B é |v⃗avião,solo| = 1000 km/h, e o tempo de viagem no mesmo trecho é Δt = 2,0 h."
+      }
+    ],
+    "pages": [
+      5
+    ]
+  },
+  {
+    "number": 9,
+    "topicId": "fis_cinematica",
+    "subject": "Física",
+    "chapter": "O Movimento Circular",
+    "title": "Velocidade de uma sonda lunar",
+    "concept": "Relação entre perímetro orbital e período; pré-requisito: conversão de horas em segundos.",
+    "steps": [
+      "Identifique r=1,848×10⁶ m e T=2,0 h para uma volta circular completa.",
+      "Use velocidade escalar v=2πr/T e mantenha distância em metros e tempo em segundos.",
+      "Com π≈3, o percurso é 11,088×10⁶ m; o período é 7200 s.",
+      "Divida os valores: v=1540 m/s, alternativa B; C e D apresentam quilômetros por segundo incompatíveis com a órbita.",
+      "Confira multiplicando 1540×7200=11.088.000 m; A não recupera o perímetro correto."
+    ],
+    "trap": "Dividir o raio pelo período em vez do comprimento da circunferência, ou esquecer a conversão de horas.",
+    "retrieval": [
+      "Que distância a sonda percorre em uma volta?",
+      "Por que a velocidade escalar pode ser constante e a velocidade vetorial variar?"
+    ],
+    "transfer": "Exercício autoral: uma sonda percorre uma órbita de raio 2,4×10⁶ m em 4 h. Use π=3 e determine sua velocidade escalar.",
+    "criteria": [
+      "Comprimento orbital de 14,4×10⁶ m.",
+      "Período de 14.400 s e velocidade de 1000 m/s."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "256,6 m/s."
+      },
+      {
+        "id": "b",
+        "text": "1540 m/s."
+      },
+      {
+        "id": "c",
+        "text": "3696 km/s."
+      },
+      {
+        "id": "d",
+        "text": "5544 km/s."
+      }
+    ],
+    "pages": [
+      5,
+      6
+    ]
+  },
+  {
+    "number": 10,
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "chapter": "Leis da Gravitação",
+    "title": "Ponto de cancelamento entre Terra e Lua",
+    "concept": "Leitura de aceleração resultante e posição relativa; pré-requisito: razão entre distâncias.",
+    "steps": [
+      "Identifique d=380.000 km e observe que o eixo horizontal apresenta r/d, com r medido desde a Terra.",
+      "Procure o cruzamento da curva com a=0, condição de cancelamento das forças.",
+      "Leia r/d≈0,9; portanto, a distância à Terra é 0,9×380.000=342.000 km.",
+      "A pergunta pede a distância à Lua: d−r=0,1d=38.000 km, alternativa A.",
+      "Confira D: 342.000 km é a distância ao centro da Terra, não ao centro da Lua; B e C usam frações diferentes da leitura do zero."
+    ],
+    "trap": "Responder com a distância que aparece no eixo sem trocar o centro de referência.",
+    "retrieval": [
+      "O que representa a interseção com a=0?",
+      "Como transformar uma distância à Terra em distância à Lua nesse segmento?"
+    ],
+    "transfer": "Exercício autoral: em um sistema de dois astros separados por 500.000 km, o cancelamento ocorre em r/d=0,8, com r medido do primeiro astro. Calcule as duas distâncias.",
+    "criteria": [
+      "400.000 km ao primeiro astro.",
+      "100.000 km ao segundo astro, obtidos por complemento."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "38 000 km."
+      },
+      {
+        "id": "b",
+        "text": "114 000 km."
+      },
+      {
+        "id": "c",
+        "text": "266 000 km."
+      },
+      {
+        "id": "d",
+        "text": "342 000 km."
+      }
+    ],
+    "pages": [
+      5,
+      6
+    ]
+  },
+  {
+    "number": 11,
+    "topicId": "fis_ondas_fundamentos",
+    "subject": "Física",
+    "chapter": "Equação Fundamental da Ondulatória",
+    "title": "Conversão do comprimento de onda na Arapuca",
+    "concept": "Relação v=λf na aproximação de velocidade igual no mesmo meio; pré-requisito: proporcionalidade inversa.",
+    "steps": [
+      "Identifique a conversão de λ₁=128 nm para λ₂=350 nm e a informação de propagação no mesmo meio.",
+      "Na aproximação adotada pela questão, use v₁=v₂ e a relação v=λf.",
+      "Assim, f₂/f₁=λ₁/λ₂=128/350≈0,366: a frequência final é menor.",
+      "B combina frequência menor com velocidade igual; A inverte a proporcionalidade e C e D mantêm indevidamente a frequência.",
+      "Confira que se trata de conversão da radiação pelo material, não apenas da passagem de uma onda por uma interface, onde a frequência se conservaria."
+    ],
+    "trap": "Aplicar conservação da frequência de uma simples refração a um processo que transforma a radiação.",
+    "retrieval": [
+      "Qual é a relação entre frequência e comprimento de onda para velocidade fixa?",
+      "Como conversão de radiação difere de simples refração?"
+    ],
+    "transfer": "Exercício autoral: um conversor troca radiação de 200 nm por 500 nm; considere igual velocidade de propagação. Determine f₂/f₁ e a variação percentual da frequência.",
+    "criteria": [
+      "Razão f₂/f₁=0,4.",
+      "Redução de 60% da frequência."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a frequência f₂ é maior que a frequência f₁; a velocidade v₂ é igual à velocidade v₁."
+      },
+      {
+        "id": "b",
+        "text": "a frequência f₂ é menor que a frequência f₁; a velocidade v₂ é igual à velocidade v₁."
+      },
+      {
+        "id": "c",
+        "text": "a frequência f₂ é igual à frequência f₁; a velocidade v₂ é maior que a velocidade v₁."
+      },
+      {
+        "id": "d",
+        "text": "a frequência f₂ é igual à frequência f₁; a velocidade v₂ é menor que a velocidade v₁."
+      }
+    ],
+    "pages": [
+      6
+    ]
+  },
+  {
+    "number": 12,
+    "topicId": "fis_calorimetria",
+    "subject": "Física",
+    "chapter": "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+    "title": "Coeficiente negativo de dilatação",
+    "concept": "Dilatação linear e leitura de variações pequenas; pré-requisito: notação científica.",
+    "steps": [
+      "Leia no gráfico L₀=2,0000 mm a 0 °C e L=1,9995 mm a 50 °C.",
+      "Use ΔL=L₀αΔT, com a variação de comprimento preservando seu sinal.",
+      "Calcule ΔL=−0,0005 mm e α=−0,0005/(2,0000×50)=−5,0×10⁻⁶ °C⁻¹.",
+      "B é o resultado; C confunde a variação relativa de comprimento, −2,5×10⁻⁴, com o coeficiente por grau.",
+      "Confira o sinal: o comprimento diminui ao aquecer; A e D não reproduzem a redução de 0,0005 mm em 50 °C."
+    ],
+    "trap": "Confundir ΔL/L₀ com α, omitindo a divisão por ΔT.",
+    "retrieval": [
+      "Por que o coeficiente tem sinal negativo?",
+      "Qual diferença existe entre variação absoluta e relativa de comprimento?"
+    ],
+    "transfer": "Exercício autoral: uma barra de 100 mm com α=−4×10⁻⁶ °C⁻¹ aquece 25 °C. Calcule ΔL e o comprimento final.",
+    "criteria": [
+      "ΔL=−0,010 mm.",
+      "Comprimento final de 99,990 mm."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "−1,0×10⁻⁷ °C⁻¹."
+      },
+      {
+        "id": "b",
+        "text": "−5,0×10⁻⁶ °C⁻¹."
+      },
+      {
+        "id": "c",
+        "text": "−2,5×10⁻⁴ °C⁻¹."
+      },
+      {
+        "id": "d",
+        "text": "−4,0×10⁻² °C⁻¹."
+      }
+    ],
+    "pages": [
+      6
+    ]
+  },
+  {
+    "number": 13,
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "chapter": "Potência Elétrica",
+    "title": "Correntes no painel e na bateria",
+    "concept": "Conservação de potência em conversor ideal; pré-requisito: P=Ui.",
+    "steps": [
+      "Registre P=462 W, U(painel)=42 V e U(bateria)=12 V; o controlador é ideal.",
+      "Use a mesma potência nos dois lados, pois toda a energia gerada é armazenada.",
+      "Calcule i(painel)=462/42=11 A e i(bateria)=462/12=38,5 A.",
+      "A apresenta as duas correntes corretas; B e D reduzem indevidamente a corrente quando a tensão cai.",
+      "Confira 42×11=12×38,5=462 W; C e D atribuem ao painel uma corrente incompatível com sua potência."
+    ],
+    "trap": "Supor que o controlador conserva a corrente; o que se conserva no modelo ideal é a potência.",
+    "retrieval": [
+      "Por que diminuir a tensão pode aumentar a corrente num conversor ideal?",
+      "Qual produto deve coincidir nos dois lados do controlador?"
+    ],
+    "transfer": "Exercício autoral: um painel de 240 W a 30 V alimenta uma bateria de 12 V por conversor com rendimento de 90%. Calcule as correntes de entrada e saída.",
+    "criteria": [
+      "Entrada: 240/30=8 A.",
+      "Saída: potência de 216 W e corrente de 18 A."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "ipainel = 11 A e ibat = 38,5 A."
+      },
+      {
+        "id": "b",
+        "text": "ipainel = 11 A e ibat = 3,1 A."
+      },
+      {
+        "id": "c",
+        "text": "ipainel = 134,75 A e ibat = 38,5 A."
+      },
+      {
+        "id": "d",
+        "text": "ipainel = 134,75 A e ibat = 3,1 A."
+      }
+    ],
+    "pages": [
+      7
+    ]
+  },
+  {
+    "number": 14,
+    "topicId": "fis_energia",
+    "subject": "Física",
+    "chapter": "Potência, Máquina e Rendimento",
+    "title": "Eficiência de um painel solar",
+    "concept": "Potência incidente e rendimento energético; pré-requisito: intensidade por unidade de área.",
+    "steps": [
+      "Identifique a potência elétrica de 462 W, a área de 2,5 m² e a intensidade incidente de 924 W/m².",
+      "Calcule primeiro a potência solar total: P(incidente)=I×A.",
+      "Obtenha P(incidente)=924×2,5=2310 W e η=462/2310=0,20.",
+      "Converta para porcentagem: 20%, alternativa B; C divide diretamente 462 por 924 e ignora a área.",
+      "Confira que 20% de 2310 W são 462 W; A e D não reproduzem a potência elétrica fornecida."
+    ],
+    "trap": "Tratar a intensidade em W/m² como se já fosse potência em W.",
+    "retrieval": [
+      "Por que a área entra no cálculo da potência incidente?",
+      "Como se obtém rendimento a partir das potências de entrada e saída?"
+    ],
+    "transfer": "Exercício autoral: um painel de 3 m² recebe 800 W/m² e fornece 360 W. Determine sua eficiência e a energia elétrica gerada em duas horas constantes.",
+    "criteria": [
+      "Eficiência de 15%, pois a potência incidente é 2400 W.",
+      "Energia elétrica de 720 Wh ou 0,72 kWh."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "5 %."
+      },
+      {
+        "id": "b",
+        "text": "20 %."
+      },
+      {
+        "id": "c",
+        "text": "50 %."
+      },
+      {
+        "id": "d",
+        "text": "80 %."
+      }
+    ],
+    "pages": [
+      7
+    ]
+  },
+  {
+    "number": 15,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Quem recebe críticas na manchete policial",
+    "concept": "Voz passiva, expressão idiomática e modalidade; pré-requisito: distinguir ameaça e ação consumada.",
+    "steps": [
+      "Leia Police under fire e Scotland Yard criticised como expressões de críticas dirigidas à polícia.",
+      "Distinga threat to arrest de prisão efetivamente realizada: a manchete informa ameaça de prender.",
+      "O subtítulo atribui à polícia a avaliação de que a presença de Falter seria provocativa e antagonizaria os manifestantes.",
+      "B preserva alvo da crítica e possibilidade de prisão; A troca críticas por ameaças e afirma prisão consumada.",
+      "Confira C e D: fazem a Scotland Yard emitir a crítica, quando ela é a instituição criticada."
+    ],
+    "trap": "Traduzir under fire literalmente e inverter agente e paciente de criticised.",
+    "retrieval": [
+      "Quem foi criticado em Scotland Yard criticised?",
+      "Threat to arrest informa que alguém já foi preso?"
+    ],
+    "transfer": "Exercício autoral: interprete “Council under fire after threat to close library”. Indique quem recebe a crítica e se o fechamento está confirmado.",
+    "criteria": [
+      "O conselho recebe críticas.",
+      "Há ameaça de fechamento, não confirmação de que a biblioteca foi fechada."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a polícia sofreu ameaças depois de prender um cidadão judeu que estaria provocando participantes de um protesto pró-Palestina."
+      },
+      {
+        "id": "b",
+        "text": "em um protesto pró-Palestina, a ação da polícia foi criticada, pois os policiais teriam cogitado prender Gideon Falter, que estaria confrontando manifestantes."
+      },
+      {
+        "id": "c",
+        "text": "a Scotland Yard criticou a ação do cidadão Gideon Falter, que estaria provocando participantes de um protesto pró-Palestina."
+      },
+      {
+        "id": "d",
+        "text": "em um protesto pró-Palestina, a Scotland Yard criticou a insinuação de que a polícia teria ameaçado prender um cidadão que estaria confrontando manifestantes."
+      }
+    ],
+    "pages": [
+      7
+    ]
+  },
+  {
+    "number": 16,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Registro oral na fala da médica",
+    "concept": "Reformulação e adequação de registro; pré-requisito: identificar gírias em contexto.",
+    "steps": [
+      "Compare o diagnóstico inicial compound fracture com a reformulação dirigida à paciente: Bro, spill the tea, finna, glow up e no cap.",
+      "Identifique a troca do registro técnico por expressões coloquiais associadas à comunicação juvenil.",
+      "Observe que a médica passa a comentar resultados e procedimentos futuros, como cuidar da perna, em linguagem informal.",
+      "D descreve vocábulos de oralidade e atualização dos procedimentos; A restringe a reformulação a verbos frasais e B a abreviações.",
+      "Confira C: embora existam gírias de classes variadas, a fala não especifica melhor o diagnóstico; ela reformula a interação e os próximos cuidados."
+    ],
+    "trap": "Escolher C apenas porque há gírias, ignorando que ela exige maior precisão diagnóstica.",
+    "retrieval": [
+      "Qual contraste de registro há entre compound fracture e no cap?",
+      "A reformulação acrescenta diagnóstico técnico mais preciso ou muda a comunicação sobre cuidados?"
+    ],
+    "transfer": "Exercício autoral: reescreva “Don’t worry, we’re gonna fix your leg, no cap” em registro profissional, preservando a tranquilização e o procedimento futuro.",
+    "criteria": [
+      "Formulação possível: “Do not worry; we will treat your leg.”",
+      "Remover gonna e no cap sem inventar um diagnóstico ou garantir resultado clínico não expresso."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "expressões que utilizam verbos frasais para recontextualizar o tratamento da paciente."
+      },
+      {
+        "id": "b",
+        "text": "abreviações de substantivos, através das quais a médica amplia as informações do caso."
+      },
+      {
+        "id": "c",
+        "text": "gírias que utilizam diversas classes de palavras para especificar melhor o diagnóstico da paciente."
+      },
+      {
+        "id": "d",
+        "text": "vocábulos marcados pela oralidade, através dos quais a médica atualiza os procedimentos futuros."
+      }
+    ],
+    "pages": [
+      7,
+      8
+    ]
+  },
+  {
+    "number": 17,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Estereótipos de gênero e raça em imagens de IA",
+    "concept": "Leitura cruzada de gráficos e legenda; pré-requisito: distinguir dado real de saída de modelo.",
+    "steps": [
+      "Leia a legenda: círculos representam autodeclaração dos trabalhadores; losangos representam imagens produzidas pela IA.",
+      "No gráfico de gênero, procure profissão gerada só como masculina; confirme no gráfico racial a representação exclusivamente branca.",
+      "Software developer satisfaz ambos os extremos, embora seus círculos indiquem diversidade de trabalhadores.",
+      "Housekeeper aparece na IA como 100% feminina e majoritariamente não branca, enquanto o dado real racial está no lado de maioria branca: alternativa C.",
+      "Confira as outras duplas nos dois eixos: chef não é gerado exclusivamente masculino, pilot não atende à segunda descrição e taxi driver não é exclusivamente branco."
+    ],
+    "trap": "Ler apenas o painel de gênero, ou trocar círculos de dados observados por losangos de IA.",
+    "retrieval": [
+      "Que símbolo identifica a saída da IA?",
+      "Por que é necessário cruzar gênero e raça para identificar cada profissão?"
+    ],
+    "transfer": "Exercício autoral: uma profissão tem 60% de mulheres e 70% de brancos nos dados reais; a IA gera 100% de mulheres e 20% de brancos. Calcule as diferenças em pontos percentuais e interprete o viés.",
+    "criteria": [
+      "Representação feminina aumenta 40 pontos percentuais.",
+      "Representação branca diminui 50 pontos percentuais; a IA exagera uma associação entre profissão, gênero feminino e pessoas não brancas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Motorista de taxi e comissário(a) de bordo."
+      },
+      {
+        "id": "b",
+        "text": "Chef de cozinha e enfermeiro(a)."
+      },
+      {
+        "id": "c",
+        "text": "Designer de software e trabalhador(a) doméstico(a)."
+      },
+      {
+        "id": "d",
+        "text": "Piloto(a) e cozinheiro(a)."
+      }
+    ],
+    "pages": [
+      8
+    ]
+  },
+  {
+    "number": 18,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Novels/Short Stories",
+    "title": "Paradoxo da escassez de autores afro-americanos",
+    "concept": "Inferência textual e analogia entre violência histórica e ficção científica; pré-requisito: reconhecer perplexing.",
+    "steps": [
+      "Localize a afirmação inicial: poucos afro-americanos escrevem ficção científica, fato considerado perplexing.",
+      "Busque a justificativa introduzida por since: esses sujeitos habitariam, em sentido concreto, um pesadelo de ficção científica.",
+      "A intolerância, o apagamento histórico e o emprego da tecnologia sobre corpos negros aproximam experiência vivida e temas do gênero.",
+      "D expressa o paradoxo da baixa participação apesar dessa semelhança; A transforma a própria escassez em pesadelo.",
+      "Confira B e C: o texto não atribui à ausência de autores intenção deliberada de protestar ou deslegitimar a história negra."
+    ],
+    "trap": "Interpretar a ausência como ação intencional, quando o autor a apresenta como fato que causa perplexidade.",
+    "retrieval": [
+      "Que relação since estabelece entre a escassez e a experiência histórica?",
+      "Por que a palavra perplexing favorece a leitura de paradoxo?"
+    ],
+    "transfer": "Exercício autoral: um crítico afirma ser surpreendente que poucos sobreviventes de um regime de vigilância escrevam distopias, pois já conheceram controle tecnológico e apagamento da memória. Explicite o paradoxo sem atribuir intenção aos sobreviventes.",
+    "criteria": [
+      "Há baixa participação no gênero apesar da proximidade entre experiência vivida e temas distópicos.",
+      "A frase não prova protesto deliberado nem desejo de apagar a memória."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "pesadelo que retrata o apagamento sistemático dos avanços culturais da comunidade negra."
+      },
+      {
+        "id": "b",
+        "text": "protesto contra o processo de exclusão e de subalternização dessas pessoas na sociedade."
+      },
+      {
+        "id": "c",
+        "text": "movimento explícito que tem por objetivo deslegitimar o passado e a história do movimento negro."
+      },
+      {
+        "id": "d",
+        "text": "paradoxo que se deve à semelhança entre as violências que vivem e ações retratadas nessas obras."
+      }
+    ],
+    "pages": [
+      8
+    ]
+  },
+  {
+    "number": 19,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Songs and Poems",
+    "title": "Conhecer o passado para imaginar o futuro",
+    "concept": "Afrofuturismo, memória e transformação em Parable of the Talents (1998), de Octavia E. Butler; pré-requisito: interpretar imperativos e oposição contextual.",
+    "steps": [
+      "Retome Dery na página física 8: uma comunidade com a história deliberadamente apagada enfrenta o problema de imaginar futuros possíveis.",
+      "Leia as duas partes do poema de Butler, iniciado na página 8 e concluído na 9; procure o que fazer com o passado, não apenas a expressão final Go.",
+      "“Let the past / Teach you” e “know the past” atribuem à memória a função de ensinar, inspirar, advertir e fortalecer.",
+      "“What was / Cannot / Come again” e “God is Change” impedem a repetição literal: reconhecer o passado e deixá-lo ir são movimentos compatíveis.",
+      "A reúne contribuição da memória e impossibilidade de repetição, de acordo com o gabarito. B reduz a aprendizagem a líderes religiosos; C valoriza o apagamento; D transforma elaboração da memória em esquecimento obrigatório."
+    ],
+    "trap": "Ler apenas “The past Go” e concluir que sobreviver exige apagar a história ignora os imperativos anteriores.",
+    "retrieval": [
+      "Que duas funções o poema atribui ao conhecimento do passado?",
+      "Como “Cannot / Come again” limita a relação entre memória e futuro?"
+    ],
+    "transfer": "Exercício autoral: uma comunidade preserva relatos de uma enchente de 1980 e projeta casas elevadas para 2040. Explique em duas frases por que isso exemplifica a relação entre memória e futuro proposta pelo poema.",
+    "criteria": [
+      "Relatos do passado fornecem aprendizagem ou advertência para o projeto.",
+      "Casas elevadas constituem adaptação nova, sem reproduzir literalmente 1980."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o passado pode contribuir para a construção de futuros possíveis, mas não pode ser repetido."
+      },
+      {
+        "id": "b",
+        "text": "a imaginação de futuros possíveis está condicionada ao ensino sobre líderes religiosos do passado."
+      },
+      {
+        "id": "c",
+        "text": "o apagamento do passado pode trazer ensinamentos, mas isso não garante a criação de futuros possíveis."
+      },
+      {
+        "id": "d",
+        "text": "a sobrevivência em futuros possíveis requer que os costumes e as dores do passado sejam esquecidos."
+      }
+    ],
+    "pages": [
+      8,
+      9
+    ]
+  },
+  {
+    "number": 20,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Polissemia de subject e object e poder de fala",
+    "concept": "Argumentação por polissemia: nomes gramaticais e verbos de sujeição/contestação; pré-requisito: distinguir função nominal e verbal.",
+    "steps": [
+      "Localize “don’t object to remaining object” e “You are not a subject (unless you subject yourself to me)” no post de ALOK.",
+      "Compare funções: object verbo significa contestar, enquanto object nome designa objeto; subject nome indica sujeito, enquanto subject yourself indica sujeitar-se.",
+      "O jogo faz o controle gramatical representar controle social: a pessoa é tratada como objeto e só aceita como sujeito se subordinada ao interlocutor poderoso.",
+      "“Who gets to speak” e “controls the world” reforçam a desigualdade de autoridade para produzir sentidos, em vez de uma simples dificuldade mecânica da língua.",
+      "B identifica o par efetivamente explorado, conforme o gabarito. A inventa um enfoque escolar; C substitui object por predicate; D desloca o mecanismo para os pronomes e a aparência."
+    ],
+    "trap": "A presença de pronouns no texto não faz dele o par lexical que estrutura o jogo argumentativo.",
+    "retrieval": [
+      "Qual é a diferença entre object verbo e object substantivo no post?",
+      "Como subject yourself altera o sentido de subject?"
+    ],
+    "transfer": "Exercício autoral: traduza “They object to being objects” e explique como a repetição aproxima linguagem e poder.",
+    "criteria": [
+      "Tradução equivalente a “Eles/elas contestam ser objetos”.",
+      "Distinguir contestação ativa e objetificação, relacionando a repetição à recusa da submissão."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“gramática” e “pronomes”, pois o ensino, nas escolas, desses temas invisibiliza pessoas não binárias as quais supostamente violam regras gramaticais."
+      },
+      {
+        "id": "b",
+        "text": "“sujeito” e “objeto”, pois esses termos só são usados para pessoas não binárias quando elas se sujeitam e aceitam o controle por aqueles que têm poder."
+      },
+      {
+        "id": "c",
+        "text": "“sujeito” e “predicado”, pois as relações de poder hierárquicas impedem que pessoas não binárias se expressem e assumam o controle de suas palavras."
+      },
+      {
+        "id": "d",
+        "text": "“objeto” e “pronomes”, pois embora as pessoas não binárias escolham seus pronomes, elas ainda são objetificadas devido às suas aparências físicas."
+      }
+    ],
+    "pages": [
+      9
+    ]
+  },
+  {
+    "number": 21,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Global Warming",
+    "title": "Desastres climáticos e vulnerabilidade política",
+    "concept": "Leitura de tese e causalidade múltipla; pré-requisito: reconhecer contrastes introduzidos por however e while.",
+    "steps": [
+      "O resumo admite desde o início que climate change shapes weather events; portanto, não nega a influência do clima.",
+      "Use however para localizar a ressalva: atribuir ao clima a causa dos desastres pode ocultar fragilidades e desigualdades preexistentes.",
+      "Observe o exemplo de governos responsabilizados por investimentos insuficientes na prevenção de enchentes e secas.",
+      "A conclusão exige análise multicausal porque enquadramentos centrados apenas no clima retiram fatores socioeconômicos e políticos da agenda pública.",
+      "D mantém a ligação entre política, vulnerabilidade e sofrimento, como no gabarito. A confunde vulnerabilidade local com culpabilização do lugar; B restaura a centralidade climática criticada; C atribui a políticos e público a mesma falha, apesar do contraste do texto."
+    ],
+    "trap": "Reconhecer a influência do clima não autoriza tratá-lo como explicação suficiente do desastre.",
+    "retrieval": [
+      "Qual diferença o texto estabelece entre evento meteorológico e desastre?",
+      "Por que a forma de atribuir causas altera a agenda de políticas públicas?"
+    ],
+    "transfer": "Exercício autoral: duas cidades recebem a mesma chuva; uma mantém drenagem e moradias seguras, a outra tem drenagem obstruída e casas em área inundável. Explique a diferença possível nos danos por duas causas.",
+    "criteria": [
+      "A chuva atua como fator meteorológico comum.",
+      "Infraestrutura e exposição habitacional explicam a maior vulnerabilidade da segunda cidade."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Culpar, por desastres ambientais, os locais de vulnerabilidade é uma estratégia para neutralizar a responsabilidade humana por esses acontecimentos."
+      },
+      {
+        "id": "b",
+        "text": "É importante que a discussão sobre desastres ambientais considere o clima como fator central para a redução dos danos decorrentes desses eventos."
+      },
+      {
+        "id": "c",
+        "text": "Os políticos e o público falham por não reconhecerem que as políticas públicas são cruciais para a criação de estratégias de prevenção contra enchentes."
+      },
+      {
+        "id": "d",
+        "text": "Ignorar o protagonismo de questões políticas em casos de desastres ambientais omite a relação direta entre a esfera política e as causas e efeitos dessas catástrofes."
+      }
+    ],
+    "pages": [
+      9
+    ]
+  },
+  {
+    "number": 22,
+    "topicId": "fil_socrates_platao",
+    "subject": "Filosofia",
+    "chapter": "O Mito da Caverna",
+    "title": "A Ideia do Bem e a decisão política",
+    "concept": "Conhecimento do Bem na República, de Platão; pré-requisito: distinguir difícil acesso e impossibilidade de conhecer.",
+    "steps": [
+      "Identifique na República a expressão “no limite do cognoscível” e a qualificação “a custo”: a Ideia do Bem é alcançável, mas exige esforço.",
+      "Separe sua função ontológica e sua função prática: ela causa o justo e o belo e orienta a inteligência.",
+      "A frase “é preciso vê-la” liga conhecer o Bem a agir sensatamente tanto na vida particular quanto na pública.",
+      "C traduz essa necessidade como não ser prescindível para boas decisões na cidade, sem afirmar que todos já a conheçam.",
+      "Confira C no gabarito. A contradiz “a custo”; B atribui orientação já efetiva aos habitantes presos à caverna; D converte o limite do cognoscível em absoluta incognoscibilidade."
+    ],
+    "trap": "“Não é prescindível” significa indispensável; a dupla negação pode inverter a leitura.",
+    "retrieval": [
+      "Por que “a custo” não significa “incognoscível”?",
+      "Como o conhecimento do Bem se relaciona à vida pública?"
+    ],
+    "transfer": "Exercício autoral: classifique as afirmações “o Bem é imediatamente visível”, “o Bem pode ser conhecido com esforço” e “conhecê-lo orienta boas decisões” segundo o excerto.",
+    "criteria": [
+      "Primeira afirmação incompatível com “a custo”; segunda compatível.",
+      "Terceira compatível com a necessidade de vê-lo para agir sensatamente."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "O diálogo trata da ideia do Bem, causa do justo, do belo, da verdade e da inteligência; o Bem é prontamente visível aos habitantes da caverna."
+      },
+      {
+        "id": "b",
+        "text": "Por ser causa da justiça e senhora da verdade e da inteligência, a ideia do Bem orienta o comportamento dos habitantes da caverna, na sua vida particular e pública."
+      },
+      {
+        "id": "c",
+        "text": "Embora não seja facilmente cognoscível, a Ideia do Bem – enquanto causa do justo e do belo – não é prescindível para a tomada de boas decisões na cidade."
+      },
+      {
+        "id": "d",
+        "text": "O diálogo entre Sócrates e Glauco trata da Ideia do Bem, que – por situar-se no limite do cognoscível – permanece a todos incognoscível."
+      }
+    ],
+    "pages": [
+      10
+    ]
+  },
+  {
+    "number": 23,
+    "topicId": "fil_contratualismo_iluminismo",
+    "subject": "Filosofia",
+    "chapter": "O Ideal Iluminista de Razão e Progresso",
+    "title": "Racionalidade feminina e direitos universais",
+    "concept": "Crítica à exclusão das mulheres em Reivindicações dos direitos da mulher (1792), de Mary Wollstonecraft; pré-requisito: ler condição e consequência.",
+    "steps": [
+      "Situe a carta a Talleyrand no debate constitucional da Revolução Francesa: a autora questiona a exclusão feminina dos direitos naturais.",
+      "Reconstrua a condição “prove antes”: quem exclui mulheres deve justificar essa exclusão demonstrando ausência de razão, em vez de pressupô-la.",
+      "O excerto não afirma inferioridade racional feminina; evidencia a inconsistência entre universalidade dos direitos e privilégio masculino.",
+      "Sem essa prova, a exclusão é injustiça e tirania; uma prática culturalmente aceita ainda pode solapar a moralidade.",
+      "D expressa a estrutura condicional, como no gabarito. A restringe a crítica ao absolutismo; B toma irracionalidade feminina como fato; C inventa uma conquista prévia de direitos que o trecho não afirma."
+    ],
+    "trap": "Confundir a condição exigida aos defensores da exclusão com a opinião da própria autora sobre as mulheres.",
+    "retrieval": [
+      "A autora afirma que mulheres são desprovidas de razão ou exige que isso seja provado?",
+      "Que contradição existe entre direitos naturais universais e exclusão feminina?"
+    ],
+    "transfer": "Exercício autoral: uma associação declara iguais direitos a todos os adultos racionais, mas proíbe mulheres de votar sem justificativa. Reconstitua a crítica de Wollstonecraft em duas proposições.",
+    "criteria": [
+      "Identificar contradição entre regra universal e exclusão baseada no sexo.",
+      "Exigir fundamento racional para a exclusão e, na sua ausência, qualificá-la como injusta."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Ao abordar tanto a possibilidade de uma nova constituição quanto a tirania masculina, Wollstonecraft faz uma crítica ao absolutismo, finalmente derrubado, através da instauração da República e da Declaração dos Direitos do Homem, no contexto da Revolução Francesa."
+      },
+      {
+        "id": "b",
+        "text": "A crítica de Wollstonecraft recai sobre os homens que, ao serem tiranos com as mulheres, destroem a moral da sociedade. Ela defende a necessidade de uma nova constituição: que não seja injusta com o sexo feminino e conceda direitos às mulheres, ainda que não sejam racionais como os homens."
+      },
+      {
+        "id": "c",
+        "text": "A nova Constituição, defendida pelo Sr. Talleyrand-Périgord, é injusta porque retira das mulheres direitos conquistados em decorrência da Revolução Francesa, quando as mulheres passaram a ser reconhecidas como seres racionais e participantes da humanidade."
+      },
+      {
+        "id": "d",
+        "text": "A menos que seja provado que a racionalidade das mulheres é deficiente, se comparada à dos homens, excluí-las da Constituição é ato injusto, ainda que coerente com uma cultura que aceita a tirania masculina."
+      }
+    ],
+    "pages": [
+      10
+    ]
+  },
+  {
+    "number": 24,
+    "topicId": "fil_etica_politica_contemporanea",
+    "subject": "Filosofia",
+    "chapter": "Filosofia Política Contemporânea",
+    "title": "Monocultura e pluralidade em Futuro ancestral",
+    "concept": "Crítica de Ailton Krenak à homogeneização colonial em Futuro ancestral (2022); pré-requisito: interpretar metáfora no contexto.",
+    "steps": [
+      "Leia monocultura junto de “vida plural dos povos”, “mundos diversos” e “colonialismo”, e não isoladamente como técnica agrícola.",
+      "Compare a euforia da monocultura às confluências de Nêgo Bispo: confluências permitem que mundos distintos se afetem.",
+      "A oposição mostra que a crítica recai sobre um modelo único que recusa diversidade cultural e formas plurais de vida.",
+      "B explicita a analogia entre monocultura e imposição colonial; a igualdade criticada aqui é a homogeneização que apaga diferenças.",
+      "B coincide com o gabarito. A e C limitam o argumento à agricultura; D apresenta uma relação causal genérica, mas não explicita a recusa da pluralidade que organiza o excerto."
+    ],
+    "trap": "Tomar “somos todos iguais” como crítica à igualdade de direitos, quando o contexto denuncia a uniformização colonial.",
+    "retrieval": [
+      "O que distingue confluências e monocultura no excerto?",
+      "Por que ler monocultura só como plantio reduz o argumento?"
+    ],
+    "transfer": "Exercício autoral: compare um museu que exige uma única língua e uma única versão da história com outro que reúne narrativas e línguas de vários povos. Associe cada modelo a monocultura ou confluência e justifique.",
+    "criteria": [
+      "Primeiro modelo: monocultura, pela imposição de uniformidade.",
+      "Segundo modelo: confluência, por permitir encontro entre mundos diversos sem apagá-los."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A monocultura praticada nos grandes latifúndios é responsável por diversos problemas ambientais e pela necropolítica."
+      },
+      {
+        "id": "b",
+        "text": "A monocultura, assim como a imposição colonial de um modelo cultural único, se expressa na recusa da pluralidade de povos e culturas."
+      },
+      {
+        "id": "c",
+        "text": "Adiar o fim do mundo requer o combate à monocultura na produção agrícola e a transfiguração deste mundo em que estamos vivendo."
+      },
+      {
+        "id": "d",
+        "text": "A monocultura, produtora de violências, é resultado do colonialismo e da necropolítica."
+      }
+    ],
+    "pages": [
+      10
+    ]
+  },
+  {
+    "number": 25,
+    "topicId": "his_idade_antiga",
+    "subject": "História",
+    "chapter": "Antiguidade Clássica: o Mundo Grego",
+    "title": "Cidadania feminina e revisão historiográfica em Atenas",
+    "concept": "Historicidade dos conceitos de política e cidadania; pré-requisito: distinguir participação cívica e exercício do voto.",
+    "steps": [
+      "O texto contrasta estudos até o fim do século XX com pesquisas após 2000, portanto pergunta também sobre mudança historiográfica.",
+      "A definição anterior equiparava política a cidadania formal masculina e, assim, apagava outras formas de ação pública.",
+      "As novas pesquisas identificam mulheres filhas de pai e mãe atenienses com funções no mundo cívico, apesar de restrições ao voto, às magistraturas e aos tribunais.",
+      "D preserva o debate sobre conceitos e sua relação com essas mulheres, sem lhes atribuir direitos políticos iguais aos dos homens.",
+      "D coincide com o gabarito. A inventa consenso desde o século XIX; B mantém o afastamento total refutado; C transforma cidadania discutida em cidadania plena com voto."
+    ],
+    "trap": "Redimensionar a atuação pública das mulheres não equivale a afirmar sufrágio feminino em Atenas.",
+    "retrieval": [
+      "Por que igualar política ao voto pode ocultar ações das mulheres?",
+      "Que limites políticos o excerto mantém mesmo ao reconhecê-las como cidadãs?"
+    ],
+    "transfer": "Exercício autoral: uma ateniense participa de funções religiosas públicas, mas não pode votar nem exercer magistratura. Explique por que o caso pode integrar a história política sem indicar igualdade de direitos.",
+    "criteria": [
+      "Reconhecer funções religiosas/cívicas como ação no espaço público.",
+      "Manter a distinção entre essa participação e os direitos masculinos de voto e magistratura."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Desde o século XIX, os estudiosos defendem que o conceito de “cidadania” e o de “política” na democracia ateniense eram frágeis, sendo pertinentes aos homens da elite."
+      },
+      {
+        "id": "b",
+        "text": "Estudiosos afirmam que, na democracia ateniense, a cidadania e a política eram conceitos desvinculados; portanto, as mulheres atenienses estavam afastadas da vida pública."
+      },
+      {
+        "id": "c",
+        "text": "Desde os anos de 2000, os estudiosos passaram a reconhecer as mulheres da Antiguidade Clássica nascidas de pai e mãe atenienses como cidadãs plenas com direito ao voto."
+      },
+      {
+        "id": "d",
+        "text": "Novas pesquisas debatem os conceitos de “cidadania” e de “política”, bem como a relação desses conceitos com as mulheres atenienses que poderiam ser definidas como cidadãs."
+      }
+    ],
+    "pages": [
+      10,
+      11
+    ]
+  },
+  {
+    "number": 26,
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "chapter": "América Espanhola",
+    "title": "Justiça como estratégia de resistência à escravidão",
+    "concept": "Agência de pessoas escravizadas e ações de liberdade na América espanhola; pré-requisito: distinguir alforria individual e abolição.",
+    "steps": [
+      "Organize a cronologia: Juana afirma ter recebido liberdade verbal em 1751 e recorre ao Cabildo de Santiago em 1765.",
+      "O intervalo e a desconsideração da alforria pelas senhoras explicam por que a liberdade prometida precisava de reconhecimento jurídico.",
+      "A atuação do procurador de pobres mostra o uso de recursos institucionais por uma pessoa escravizada em defesa da própria liberdade.",
+      "D interpreta o caso como uma entre várias estratégias de resistência, sem garantir o desfecho do processo nem generalizar uma abolição.",
+      "D coincide com o gabarito. A atribui abolição no século XVIII sem apoio; B supõe passividade africana; C nega possibilidade de negociação que a demanda judicial evidencia."
+    ],
+    "trap": "A existência de ação judicial não prova vitória de Juana, nem o fim do sistema escravista.",
+    "retrieval": [
+      "Por que Juana recorre à Justiça catorze anos após a alforria alegada?",
+      "Como uma ação de liberdade pode constituir resistência sem abolir a escravidão?"
+    ],
+    "transfer": "Exercício autoral: uma pessoa escravizada apresenta testemunhas de uma promessa de alforria para obter reconhecimento judicial. Identifique a estratégia e diga qual conclusão sobre seu resultado não pode ser extraída só do pedido.",
+    "criteria": [
+      "Estratégia de resistência jurídica orientada à liberdade individual.",
+      "O pedido não demonstra sentença favorável nem abolição geral."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "As ações judiciais resultaram em um questionamento da sociedade escravocrata; por conta delas, foi decretado o fim do sistema de escravidão africana no século XVIII."
+      },
+      {
+        "id": "b",
+        "text": "A resistência à escravidão indígena era marcada pelo enfrentamento físico e, no caso da resistência africana à escravidão, predominava a postura passiva."
+      },
+      {
+        "id": "c",
+        "text": "Embora houvesse demandas jurídicas dos escravizados, o Império era inflexível quanto a essas negociações na Justiça, como demonstrado no excerto."
+      },
+      {
+        "id": "d",
+        "text": "Os estudos sobre a escravidão têm demonstrado que muitos escravizados, entre várias estratégias, articulavam a luta pela liberdade na Justiça."
+      }
+    ],
+    "pages": [
+      11
+    ]
+  },
+  {
+    "number": 27,
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "chapter": "Dinâmica Interna da Colonização",
+    "title": "Paisagem colonial como interpretação histórica",
+    "concept": "Paisagem e projeções políticas na carta de Lavradio de 1769; pré-requisito: distinguir descrição e juízo de valor.",
+    "steps": [
+      "Situe a carta em 1769, no governo do Rio de Janeiro, e identifique o olhar de um administrador colonial sobre a cidade.",
+      "Sublinhe “vista sumamente desagradável”, “povos sumamente pobres” e “cadáver”: são avaliações, não medidas objetivas das serras.",
+      "Lavradio conecta relevo, comércio e expectativas de governo; a paisagem vista expressa preocupações e valores históricos.",
+      "B formula essa dimensão construída política e ideologicamente. A existência de relevo montanhoso não impediu o porto de exercer funções comerciais.",
+      "B coincide com o gabarito. A faz do relevo impedimento absoluto; C desloca o documento de 1769 para a transferência da corte em 1808; D inventa uma discussão sobre técnicas indígenas dos arcos."
+    ],
+    "trap": "Tratar o juízo estético do governador como prova objetiva de inviabilidade econômica da cidade.",
+    "retrieval": [
+      "Que expressão da carta revela um julgamento e não uma descrição neutra?",
+      "Como a preocupação comercial participa da percepção da paisagem?"
+    ],
+    "transfer": "Exercício autoral: dois viajantes descrevem o mesmo porto como “entrada estratégica” e “lugar ameaçador”. Indique um dado comum e duas perspectivas possíveis que expliquem os juízos.",
+    "criteria": [
+      "Dado comum: o porto observado é o mesmo.",
+      "Relacionar entrada estratégica a interesse comercial/militar e ameaça a experiência ou posição histórica distinta, sem atribuir neutralidade aos juízos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A geografia montanhosa e rochosa impedia tanto o desenvolvimento do Rio de Janeiro quanto o uso do porto dessa cidade, no Brasil colonial, como centro de trocas comerciais."
+      },
+      {
+        "id": "b",
+        "text": "A concepção que se tem sobre o que seja “paisagem” é um construto histórico que envolve projeções políticas e ideológicas a respeito do que se vê."
+      },
+      {
+        "id": "c",
+        "text": "A concepção sobre o que seja uma paisagem bonita foi um argumento utilizado pela elite para convencer, contra a vontade de Lavradio, a corte portuguesa a migrar para o Brasil."
+      },
+      {
+        "id": "d",
+        "text": "O eurocentrismo impediu Lavradio de reconhecer o sucesso e a beleza dos arcos de pedra construídos com técnicas indígenas locais no Rio de Janeiro."
+      }
+    ],
+    "pages": [
+      11
+    ]
+  },
+  {
+    "number": 28,
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "chapter": "Revolução Francesa",
+    "title": "Goya e o terror da ocupação napoleônica",
+    "concept": "Iconografia de martírio e crítica da violência em O 3 de maio de 1808 em Madri, pintado em 1814; pré-requisito: distinguir data representada e execução da obra.",
+    "steps": [
+      "Observe a reprodução: à direita, soldados alinhados apontam armas; à esquerda, vítimas, corpos no chão e um homem de camisa branca com braços erguidos.",
+      "A luz da lanterna torna a figura branca um foco visual; seus braços e mãos abertos evocam a iconografia de Cristo crucificado.",
+      "Situe o episódio na repressão francesa à resistência espanhola contra a ocupação napoleônica em 1808; a pintura foi feita em 1814.",
+      "A associação ao martírio humaniza a vítima popular e sublinha o terror da ocupação, sustentando D.",
+      "D coincide com o gabarito. A troca centralidade das vítimas por exaltação francesa; B deduz apoio da Igreja ao invasor; C situa o massacre na Revolução Francesa, confundindo contexto e período."
+    ],
+    "trap": "A organização do pelotão não significa que a obra glorifique seus soldados; observe o foco de luz e a vítima.",
+    "retrieval": [
+      "Que detalhe visual aproxima o homem de camisa branca da representação de Cristo?",
+      "Qual diferença existe entre 1808 e 1814 na identificação da pintura?"
+    ],
+    "transfer": "Exercício autoral: em uma descrição da obra, escreva uma frase sobre um elemento visual e outra sobre seu efeito interpretativo, relacionando-as à ocupação napoleônica.",
+    "criteria": [
+      "Citar braços abertos e/ou camisa branca iluminada na vítima.",
+      "Associar martírio e terror da repressão de 1808, sem confundir o episódio com a Revolução Francesa."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o pintor destaca o protagonismo francês ao mostrar, na cena de fuzilamento decorrente da ocupação napoleônica na Península Ibérica, as armas dos oficiais do exército."
+      },
+      {
+        "id": "b",
+        "text": "o quadro enfoca, ao optar por representar em posição de mártires as vítimas do fuzilamento, a simpatia da Igreja Católica espanhola para com a ocupação napoleônica."
+      },
+      {
+        "id": "c",
+        "text": "a lanterna, que integra a pintura no quadro, ilumina o massacre contra os revoltosos, pelo pelotão racionalmente organizado de soldados, durante a revolução francesa."
+      },
+      {
+        "id": "d",
+        "text": "a figura popular do espanhol de camisa branca é associada à representação de Cristo, com os braços e mãos abertos, na cruz; essa figura sublinha o terror da ocupação napoleônica."
+      }
+    ],
+    "pages": [
+      11
+    ]
+  },
+  {
+    "number": 29,
+    "topicId": "his_primeira_republica_vargas",
+    "subject": "História",
+    "chapter": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+    "title": "Concurso eugênico de 1929 e hierarquia racial",
+    "concept": "Eugenia brasileira como projeto racial e reprodutivo; pré-requisito: distinguir explicação histórica de validação científica.",
+    "steps": [
+      "Leia o concurso de 1929 e a capa: “proles sadias e belas”, “futura elite nacional” e “cruzamento de raças” expõem seleção e hierarquização de famílias.",
+      "Relacione essa seleção ao ideário eugênico da época, que associava branquitude, suposta pureza racial e reprodução considerada superior.",
+      "A apresenta a criança branca e a família numerosa como padrões valorizados por essa ideologia, não como critérios científicos válidos de saúde.",
+      "Elimine B: esse projeto racial não buscava superar desigualdades entre negros e brancos; C erra ao dizer que a eugenia rejeitava práticas científicas, pois se legitimava pelo discurso médico-científico.",
+      "A coincide com o gabarito. D mistura o caso de 1929 com revoltas vacinais nos anos 1930; a conhecida Revolta da Vacina ocorreu em 1904. A caracterização racial requer conhecimento histórico, além da leitura da capa."
+    ],
+    "trap": "Reproduzir a alegação eugênica de superioridade racial como fato biológico; aqui ela é objeto de análise crítica.",
+    "retrieval": [
+      "Que palavras do excerto revelam o projeto de selecionar uma elite?",
+      "Por que buscar legitimação médica não torna verdadeiras as hierarquias raciais eugênicas?"
+    ],
+    "transfer": "Exercício autoral: analise a frase fictícia “premiaremos famílias brancas numerosas para formar uma elite hereditária”. Identifique dois pressupostos eugênicos sem endossá-los.",
+    "criteria": [
+      "Identificar hierarquia racial e associação de branquitude a suposta superioridade.",
+      "Identificar valorização seletiva da reprodução/hereditariedade para formar uma elite."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "Uma criança considerada saudável seria branca e oriunda de uma família numerosa, o que atestaria a pureza racial da família e a superioridade reprodutiva da mulher."
+      },
+      {
+        "id": "b",
+        "text": "A ideologia do “aperfeiçoamento da raça” demandava políticas públicas para superação das desigualdades entre negros e brancos nas grandes cidades."
+      },
+      {
+        "id": "c",
+        "text": "Em sua busca por tratamentos alternativos ao “robustecimento” do corpo e “aperfeiçoamento racial”, a medicina eugênica opunha-se às práticas científicas."
+      },
+      {
+        "id": "d",
+        "text": "Tanto o autoritarismo contra os pobres quanto a obrigatoriedade das vacinas criadas pelo serviço sanitário eugênico provocaram grandes revoltas populares na década de 1930."
+      }
+    ],
+    "pages": [
+      12
+    ]
+  },
+  {
+    "number": 30,
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "chapter": "Descolonização Afro-Asiática",
+    "title": "Unidade nacional no projeto de Amílcar Cabral",
+    "concept": "Anticolonialismo e construção nacional acima das divisões étnicas; pré-requisito: diferenciar unidade política e uniformidade cultural.",
+    "steps": [
+      "Situe Cabral na luta do PAIGC contra Portugal, com início da luta armada em 1963 e horizonte de independência de Guiné e Cabo Verde.",
+      "Na fala, a enumeração de papel, fula, mandinga e filhos de caboverdianos nega que essas distinções dividam o partido.",
+      "O objetivo é organizar uma unidade política comum para enfrentar o colonialismo, e não afirmar inexistência real de diferenças étnicas.",
+      "D identifica unidades nacionais acima dessas divisões como instrumento de fortalecimento da luta anticolonial.",
+      "D coincide com o gabarito. A inventa restauração de fronteiras de antigos reinos; B desloca o projeto para enaltecimento de etnias; C introduz exigência de rejeitar línguas europeias que a fala não contém."
+    ],
+    "trap": "“Aqui não há” expressa superação política da divisão no partido, não desaparecimento cultural dos grupos.",
+    "retrieval": [
+      "Por que Cabral enumera grupos étnicos ao falar da unidade do partido?",
+      "Qual diferença existe entre unidade nacional e apagamento de diversidade?"
+    ],
+    "transfer": "Exercício autoral: uma frente anticolonial reúne três grupos com línguas diferentes em torno de independência e governo comum. Explique por que há unidade política sem necessidade de uniformidade cultural.",
+    "criteria": [
+      "O objetivo de independência e as instituições comuns sustentam a unidade política.",
+      "A coexistência das três línguas mantém diferenças culturais compatíveis com a frente."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Almejava, com base nas fronteiras dos reinos africanos que existiam antes da chegada dos europeus, construir nações independentes."
+      },
+      {
+        "id": "b",
+        "text": "Buscava formar, para o enaltecimento das identidades étnicas que antecediam o colonialismo, uma grande unidade pan-africanista."
+      },
+      {
+        "id": "c",
+        "text": "Propunha um movimento de descolonização das culturas africanas, o qual demandava a adoção de dialetos locais e a rejeição, como idioma nacional, das línguas europeias."
+      },
+      {
+        "id": "d",
+        "text": "Defendia, para fortalecer a luta contra a colonização e ideologia portuguesa, as unidades políticas nacionais posicionadas acima da diversidade de etnias africanas."
+      }
+    ],
+    "pages": [
+      12
+    ]
+  },
+  {
+    "number": 31,
+    "topicId": "his_guerra_fria_contemporaneo",
+    "subject": "História",
+    "chapter": "América Latina no Século XX",
+    "title": "Povos originários e construção da memória argentina",
+    "concept": "Disputas de memória e participação na história nacional; pré-requisito: distinguir inclusão como objeto e participação como sujeito.",
+    "steps": [
+      "Situe a ESMA como centro de repressão da ditadura argentina de 1976–1983 transformado em espaço de memória em 2004.",
+      "A fala indígena não pede apenas que objetos ou identidades sejam adicionados a uma exposição: pede fazer parte da história nacional.",
+      "Esse pedido busca ampliar a narrativa e incluir perspectivas historicamente marginalizadas na construção da memória.",
+      "B explicita a incorporação dessas perspectivas sem opor os indígenas às Mães e Avós da Plaza de Mayo.",
+      "B coincide com o gabarito. A inventa oposição a esses movimentos; C troca participação por apagamento; D inverte expansão da narrativa em redução temática e protesto contra o museu."
+    ],
+    "trap": "Disputa pela memória pode ampliar uma narrativa compartilhada sem rejeitar os outros movimentos presentes.",
+    "retrieval": [
+      "Por que “ser adicionado” a um museu difere de participar da história nacional?",
+      "Qual proposta do líder indígena amplia a memória da ESMA?"
+    ],
+    "transfer": "Exercício autoral: um museu exibe um objeto indígena sem contextualização; depois convida lideranças indígenas para elaborar depoimentos e interpretar a história nacional. Compare as duas formas de inclusão.",
+    "criteria": [
+      "Primeira forma: presença como objeto isolado, com limitada participação na narrativa.",
+      "Segunda forma: participação na produção da memória e ampliação das perspectivas históricas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "os indígenas se posicionam – nas disputas pela memória nacional da Ditadura – abertamente contra o movimento das Mães e Avós da Plaza de Mayo."
+      },
+      {
+        "id": "b",
+        "text": "os indígenas – ao incorporarem perspectivas marginalizadas, como as dos povos originários – querem fazer parte da construção do museu para a expansão da história nacional."
+      },
+      {
+        "id": "c",
+        "text": "as lideranças indígenas – para dar visibilidade às suas identidades étnicas – propõem que a memória da nação seja apagada no antigo edifício da ESMA."
+      },
+      {
+        "id": "d",
+        "text": "nos protestos contrários à ocupação – para transformação em espaço de memória – do antigo edifício da ESMA, os ativistas indígenas defendem a redução temática do museu."
+      }
+    ],
+    "pages": [
+      12
+    ]
+  },
+  {
+    "number": 32,
+    "topicId": "soc_estratificacao_desigualdade",
+    "subject": "Sociologia",
+    "chapter": "Desigualdade de Gênero",
+    "title": "Cuidado coletivo e dependência econômica das mães",
+    "concept": "Reprodução social e distribuição do trabalho de cuidado; pré-requisito: distinguir socialização do cuidado e responsabilização familiar.",
+    "steps": [
+      "Complete a leitura de Gilman, iniciada na página 12: cozinhas comuns, contratação coletiva de serviços e creches reduzem a concentração das tarefas na família e nas mulheres.",
+      "Leia a reforma de 1996 no texto 2: o Estado deixa de fornecer auxílio às mães pobres e transfere essa responsabilidade ao pai biológico.",
+      "Compare efeitos: a organização coletiva proposta no texto 1 amplia suportes externos; o texto 2 fortalece dependência econômica feminina em relação ao homem.",
+      "D é a alternativa que reconhece divergência e socialização do cuidado. A e C afirmam convergência; B inverte o efeito do texto 2 ao falar em autonomia.",
+      "D coincide com o gabarito. Ressalva de precisão: o trecho de Gilman explicita contratação coletiva e creches, mas não nomeia o Estado; “também ao Estado” é formulação da alternativa oficial, não uma frase que se possa atribuir literalmente ao excerto."
+    ],
+    "trap": "Ampliar a responsabilidade financeira do pai não implica, no texto 2, autonomia da mãe; o autor afirma dependência.",
+    "retrieval": [
+      "Que mecanismos de Gilman retiram cuidado da responsabilidade exclusivamente doméstica?",
+      "Por que a reforma de 1996 pode manter um vínculo que a mãe não deseja?"
+    ],
+    "transfer": "Exercício autoral: compare uma creche pública que atende filhos de mães sem exigir vínculo com o pai a um benefício disponível apenas mediante pagamento do pai biológico. Qual arranjo reduz essa dependência específica e por quê?",
+    "criteria": [
+      "A creche pública oferece cuidado sem condicionar acesso ao vínculo com o pai.",
+      "O segundo arranjo mantém a provisão vinculada ao pai, podendo reforçar dependência econômica."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "são convergentes, pois fortalecem a importância, para a vida moderna, dos lares individualizados e das famílias biológicas. As reformas indicam a prevalência de ambos em relação ao Estado."
+      },
+      {
+        "id": "b",
+        "text": "são divergentes, pois apenas a reforma descrita no texto 2 fortalece a autonomia das mães, por ampliar a responsabilidade dos pais biológicos e por desresponsabilizar o Estado."
+      },
+      {
+        "id": "c",
+        "text": "são convergentes, pois facilitam o desenvolvimento da privacidade das famílias e ampliam a autonomia individual. Essas reformas favorecem o desenvolvimento da vida coletiva."
+      },
+      {
+        "id": "d",
+        "text": "são divergentes, pois apenas a reforma descrita no texto 1 desvincula, da responsabilidade das famílias e das mulheres, as tarefas de cuidado e de reprodução social da vida, vinculando-as também ao Estado."
+      }
+    ],
+    "pages": [
+      12,
+      13
+    ]
+  },
+  {
+    "number": 33,
+    "topicId": "soc_movimentos_sociais",
+    "subject": "Sociologia",
+    "chapter": "Democracia e Participação Política",
+    "title": "Constituinte e negociação democrática das diferenças",
+    "concept": "Cidadania, igualdade e direito à diferença; pré-requisito: distinguir diversidade e desigualdade.",
+    "steps": [
+      "Observe a charge de Henfil: muitas pessoas participam da construção da imagem nacional identificada como Constituinte.",
+      "Associe a participação visual ao argumento de Dagnino: a Constituição de 1988 redefine cidadania ao incorporar direito à diferença.",
+      "O objetivo é impedir que diferenças sirvam de base para discriminação; reconhecê-las não equivale a naturalizar desigualdades.",
+      "B reúne negociação democrática, ordenamento jurídico e convivência entre grupos e classes, conectando charge e texto.",
+      "B coincide com o gabarito. A e C separam cidadania e democracia, ao contrário da articulação proposta; C diz que a igualdade foi limitada; D deduz maior desigualdade da diversidade de representação."
+    ],
+    "trap": "Direito à diferença pode ampliar igualdade de direitos; diferenças sociais não justificam discriminação.",
+    "retrieval": [
+      "Como a charge representa a participação da sociedade civil?",
+      "Por que diferença e desigualdade não são sinônimos para Dagnino?"
+    ],
+    "transfer": "Exercício autoral: uma escola assegura igual acesso às aulas e adapta materiais para estudantes com deficiência. Explique como reconhecer uma diferença pode realizar a igualdade de direitos.",
+    "criteria": [
+      "Adaptação reconhece necessidades distintas sem hierarquizar estudantes.",
+      "Igualdade aparece no acesso efetivo à educação, não na imposição de meios idênticos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "tornou autônomos os conceitos de cidadania e democracia, que se relacionam com a esfera da liberdade individual; tal liberdade promove a igualdade nas relações sociais."
+      },
+      {
+        "id": "b",
+        "text": "estabeleceu a negociação democrática da diferença; tal negociação passa a ser concebida como parte do ordenamento jurídico e da convivência entre os grupos e as classes sociais."
+      },
+      {
+        "id": "c",
+        "text": "reforçou diferenças e limitou o princípio jurídico da igualdade, tornando cidadania e democracia conceitos autônomos e radicalizados."
+      },
+      {
+        "id": "d",
+        "text": "abriu espaço para a participação da sociedade civil, o que tornou mais diversa, e, portanto, mais desigual, a representação política."
+      }
+    ],
+    "pages": [
+      13
+    ]
+  },
+  {
+    "number": 34,
+    "topicId": "soc_cultura_identidade",
+    "subject": "Sociologia",
+    "chapter": "Identidade e Diferença",
+    "title": "Homem cordial: emoção privada no espaço público",
+    "concept": "Cordialidade em Raízes do Brasil e sua aproximação a Fado Tropical (1973); pré-requisito: distinguir emoção e gentileza.",
+    "steps": [
+      "O texto sobre Sérgio Buarque de Holanda define cordialidade como ética de fundo emotivo e ressalta que ela não significa gentileza.",
+      "As referências a sentimentos particularistas e ao ambiente doméstico apontam predominância de vínculos privados sobre regras impessoais.",
+      "Na canção de Chico Buarque, o eu lírico chora enquanto suas mãos torturam: sentimentalismo e violência podem coexistir.",
+      "A formula a extensão dos vínculos pessoais ao espaço público, sem transformar o homem cordial em sujeito solidário e supraindividual.",
+      "A coincide com o gabarito. B identifica cordialidade com solidariedade coletiva; C lhe atribui impessoalidade; D descreve o recinto doméstico como concorrência entre cidadãos, destoando da lógica privada apresentada."
+    ],
+    "trap": "A palavra cordial no uso cotidiano sugere gentileza, mas o conceito sociológico apresentado não tem esse sentido.",
+    "retrieval": [
+      "Por que o torturador sentimental da canção não contradiz o conceito de homem cordial?",
+      "O que ocorre quando vínculos privados orientam decisões em espaços públicos?"
+    ],
+    "transfer": "Exercício autoral: um servidor concede atendimento prioritário a um amigo por afeição pessoal, ignorando a ordem pública de chegada. Explique a relação do caso com o homem cordial e indique a regra impessoal contrariada.",
+    "criteria": [
+      "O vínculo privado organiza a decisão em um serviço público, exemplificando personalização.",
+      "A ordem de chegada é a regra impessoal contrariada; cordialidade não garante justiça ou gentileza para todos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "manifesta adesão a normas de convívio pessoalizadas, marcadas pela ética da cordialidade e pela centralidade de vínculos privados mesmo em espaços coletivos e públicos."
+      },
+      {
+        "id": "b",
+        "text": "é um tipo social que se originou na colonização portuguesa, marcado pela ética emotiva e solidária da cordialidade e por uma prática de cunho coletivo e supraindividual."
+      },
+      {
+        "id": "c",
+        "text": "percebe, como ambiente propício ao seu desenvolvimento individual, a vida em sociedade; para ele, a ética da cordialidade permite a impessoalidade dos vínculos sociais."
+      },
+      {
+        "id": "d",
+        "text": "manifesta um apego aos valores da personalidade configurada pelo recinto doméstico, ambiente próprio da concorrência entre os cidadãos."
+      }
+    ],
+    "pages": [
+      13
+    ]
+  },
+  {
+    "number": 35,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Gêneros não Verbais: Fundamentos de Leitura",
+    "title": "Primeira pessoa e intimidade no grafite de Simone Siss",
+    "concept": "Integração verbal e visual em O que tenho dentro de nós (2024); pré-requisito: identificar pronomes e flexões de primeira pessoa.",
+    "steps": [
+      "Observe o mural: uma mão feminina segura a lata de spray, e a representação integra inscrições sobre a interioridade de quem fala.",
+      "Localize “me”, “eu”, “mim” e verbos como “abri”, “sou” e “moro”: a voz enunciadora apresenta sua própria experiência.",
+      "“Me li inteira” e “Moro mesmo dentro de mim” sustentam a leitura intimista; a imagem da mão liga essa voz ao ato de expressão no muro.",
+      "B reúne corretamente marcas de primeira pessoa e composição imagética; o grafite expõe uma condição subjetiva de quem segura a lata.",
+      "B coincide com o gabarito. A exige referência explícita à luta por substantivos/adjetivos; C afirma predominância de adjetivos e pronomes femininos; D recorre ao singular, critério que não identifica especificamente a voz de primeira pessoa."
+    ],
+    "trap": "A temática feminina não dispensa analisar quais classes e pessoas gramaticais efetivamente sustentam a alternativa.",
+    "retrieval": [
+      "Quais pronomes do grafite marcam a primeira pessoa?",
+      "Por que singular é uma pista menos precisa que primeira pessoa para caracterizar a voz?"
+    ],
+    "transfer": "Exercício autoral: compare “Ela mora dentro de si” e “Eu moro dentro de mim” como legendas da mesma mão com spray. Identifique qual produz autorrepresentação em primeira pessoa e cite duas marcas.",
+    "criteria": [
+      "A segunda legenda produz autorrepresentação em primeira pessoa.",
+      "Eu e mim são marcas explícitas dessa pessoa; a primeira está em terceira pessoa."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "um ato de militância, sugerido pelo emprego de substantivos e adjetivos que fazem referência explícita à luta feminina, representada pela figura de uma mão que empunha uma lata de spray."
+      },
+      {
+        "id": "b",
+        "text": "uma experiência intimista, evidenciada por pronomes e verbos em primeira pessoa, dentro de um plano imagético no qual uma mão feminina, por meio de uma lata de spray, expõe a condição de quem a segura."
+      },
+      {
+        "id": "c",
+        "text": "um gesto identitário, marcado pela predominância de adjetivos e pronomes femininos em alusão à força da mulher, que é sinalizada por uma lata de spray integrada à mão que a aperta."
+      },
+      {
+        "id": "d",
+        "text": "uma manifestação subjetiva, ilustrada pela ocorrência de substantivos e verbos no singular integrados a uma imagem na qual uma mão feminina textualiza seus sentimentos por meio de uma lata de spray."
+      }
+    ],
+    "pages": [
+      14
+    ]
+  },
+  {
+    "number": 36,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
+    "title": "Maria vai com as outras: expressão e autonomia",
+    "concept": "Ressignificação de expressão cristalizada no grafite e contraste com a canção de Vinícius de Moraes e Toquinho (1971); pré-requisito: reconhecer sentido idiomático.",
+    "steps": [
+      "Recupere o sentido usual de “maria vai com as outras”: pessoa que segue os outros sem posicionamento próprio.",
+      "No grafite, a forma muda para “Sou Maria... E vou com as outras!”; o eu que também afirma “falo meus nãos” escolhe associar-se a outras mulheres.",
+      "Na canção, mantém-se “Era Maria vai com as outras”, associado à avaliação da turma e às expectativas de coser e casar.",
+      "O conector “Porém” revela o particular desconhecido da personagem: além de rezar, ela também pecava, singularizando-a diante da imagem social.",
+      "C distingue mudança positiva de forma no mural e exploração do sentido original seguida de singularização na canção, como no gabarito. A atribui a ambos a mesma ressignificação; B inverte os tratamentos; D afirma alteração formal e preservação semântica em ambos."
+    ],
+    "trap": "A personagem ter um particular não significa que a canção altere a forma da expressão, como faz explicitamente o grafite.",
+    "retrieval": [
+      "Que mudança formal o mural faz na expressão cristalizada?",
+      "Qual função de “Porém” na apresentação da Maria da canção?"
+    ],
+    "transfer": "Exercício autoral: compare “Ela é maria vai com as outras” e “Sou Maria e vou com as outras porque escolhi marchar com elas”. Explique o sentido de seguir outras pessoas em cada frase.",
+    "criteria": [
+      "Primeira frase usa o idiomatismo para caracterizar ausência de autonomia.",
+      "Segunda explicita decisão própria e associação coletiva, deslocando o valor pejorativo para uma escolha positiva."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o texto 1 e o texto 2 a ressignificam, visando tanto subverter o senso comum sobre a condição feminina na sociedade quanto introduzir uma perspectiva a partir da qual a mulher seja vista como a responsável por suas escolhas."
+      },
+      {
+        "id": "b",
+        "text": "o texto 1 preserva o sentido da expressão, no intuito de valorizar o lugar da mulher na produção artística, enquanto o texto 2 o altera para mostrar uma personagem em dissonância com as expectativas da sociedade."
+      },
+      {
+        "id": "c",
+        "text": "enquanto o texto 1 altera a forma da expressão para lhe atribuir um valor positivo na associação com outras mulheres, o texto 2 explora o sentido original da mesma expressão e singulariza a personagem retratada."
+      },
+      {
+        "id": "d",
+        "text": "o significado da expressão é preservado tanto no texto 1 quanto no texto 2, mas a sua forma é alterada para destacar a figura feminina como tendo uma personalidade própria, que não se deixa influenciar por outras mulheres."
+      }
+    ],
+    "pages": [
+      14
+    ]
+  },
+  {
+    "number": 37,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Gêneros não Verbais: Fundamentos de Leitura",
+    "title": "A estatura desmonta a ostentação de poder",
+    "concept": "Relação entre linguagem verbal e imagem na sátira; pré-requisitos: acompanhar a sequência dos quadros e distinguir poder declarado de avaliação do narrador visual.",
+    "steps": [
+      "A personagem enumera dinheiro, amizades, cargo, escolas, títulos e ascendência; ao longo dos quatro quadros, sua figura encolhe diante do interlocutor.",
+      "Compare a pretensão das falas com a mudança de escala, mantendo separados o que a personagem afirma e o que o desenho sugere.",
+      "Quanto mais ela apresenta credenciais para impor superioridade, menor se torna sua estatura; o último quadro radicaliza essa perda de grandeza.",
+      "D nomeia a oposição entre grandeza social alegada e diminuição física. A supõe uma troca efetiva de autoridade; C supõe concordância entre fala e tamanho. B descreve a alteração, mas não a inversão de proporcionalidade que produz o sentido específico.",
+      "Releia a legenda do último quadro e as alternativas na página seguinte: a insistência em títulos e avô acompanha o menor tamanho, confirmando D."
+    ],
+    "trap": "Escolher B pela simples presença de mudança física, sem explicar por que o encolhimento contraria a autoimagem grandiosa.",
+    "retrieval": [
+      "Como a escala da personagem funciona como comentário crítico?",
+      "Que diferença há entre mudar de tamanho e representar uma inversão de proporcionalidade?"
+    ],
+    "transfer": "Exercício autoral: imagine três quadros em que um chefe diz “Sou indispensável”, “Sem mim nada funciona”, “Todos dependem de mim”, enquanto sua cadeira cresce e ele encolhe. Explique o efeito dessa oposição e proponha uma última fala coerente.",
+    "criteria": [
+      "Interpretar o encolhimento como crítica à importância autoproclamada, reforçada pela cadeira como símbolo do cargo.",
+      "Uma fala como “Vocês sabem o tamanho do meu cargo?” mantém a ostentação e o contraste com a pequenez física."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "troca nas posições de autoridade a partir de mudanças na altura de uma das personagens."
+      },
+      {
+        "id": "b",
+        "text": "alteração na dimensão física das personagens em função daquilo que é enunciado."
+      },
+      {
+        "id": "c",
+        "text": "reafirmação das experiências sociais de poder em consonância com o tamanho daquele que fala."
+      },
+      {
+        "id": "d",
+        "text": "inversão de proporcionalidade entre o conteúdo do que é afirmado e a estatura de quem o afirma."
+      }
+    ],
+    "pages": [
+      14,
+      15
+    ]
+  },
+  {
+    "number": 38,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Intertextualidade e Interdiscursividade",
+    "title": "Importância autoproclamada e necessidade coletiva",
+    "concept": "Comparação de categorias de valor entre ensaio e tira; pré-requisitos: recuperar o texto visual da Q37 e distinguir as definições contextuais de importante, útil e necessário.",
+    "steps": [
+      "Bispo distingue quem se acha ótimo e espera ser servido de quem faz falta à comunidade; a tira mostra alguém exibindo suas credenciais de status.",
+      "Use as definições do ensaio como chave de leitura da personagem, sem substituir importante por seu sentido cotidiano de pessoa valiosa.",
+      "A lista de dinheiro, contatos, cargos e títulos evidencia que ela se considera superior: corresponde à pessoa importante que se acha ótima.",
+      "A é compatível com o uso crítico de importante no ensaio. B nega essa classificação; C aplica indevidamente uma equivalência entre necessidade e importância; D atribui à personagem uma autoavaliação de utilidade que ela não manifesta.",
+      "Confira que a resposta caracteriza a maneira de a personagem se enxergar, e não reconhece sua necessidade comunitária: A."
+    ],
+    "trap": "Ler importante como elogio e esquecer que Bispo dá ao termo uma definição crítica específica.",
+    "retrieval": [
+      "O que torna alguém necessário, segundo Bispo?",
+      "Quais falas da tira revelam importância autoproclamada?"
+    ],
+    "transfer": "Exercício autoral: uma pessoa afirma “Todos devem me atender porque sou diretor”; outra organiza o abastecimento comunitário e é procurada quando falta. Classifique-as segundo as categorias do excerto e justifique.",
+    "criteria": [
+      "A primeira expressa importância autoproclamada e expectativa de serviço.",
+      "A segunda exemplifica necessidade: sua presença faz falta ao funcionamento da comunidade."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "se acha ótimo por ser importante."
+      },
+      {
+        "id": "b",
+        "text": "não é importante, embora se considere ótimo."
+      },
+      {
+        "id": "c",
+        "text": "é desnecessário, porque não tem importância."
+      },
+      {
+        "id": "d",
+        "text": "se considera útil, apesar de ser importante."
+      }
+    ],
+    "pages": [
+      14,
+      15
+    ]
+  },
+  {
+    "number": 39,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Verbo e Sintaxe da Oração",
+    "title": "Macetar sem objeto expresso",
+    "concept": "Transitividade e ressignificação de um verbo; pré-requisitos: reconhecer complemento verbal e diferenciar gerúndio de adjetivo.",
+    "steps": [
+      "O verbete define macetar como golpear alguém ou algo com maceta; o refrão repete macetando sem dizer quem ou o que recebe o golpe.",
+      "Procure os constituintes que completariam o verbo na acepção dicionarizada e verifique sua presença na letra.",
+      "O complemento que especificaria o alvo não aparece; o uso deixa a ação aberta à interpretação carnavalesca, afastando-a do golpe literal.",
+      "D identifica a ausência de complemento. A não explica o efeito porque Veveta é apresentada como agente; B aponta uma forma repetida, mas não a omissão do alvo; C inventa adjetivação, pois macetando conserva uso verbal.",
+      "Confira a comparação entre “golpear alguém ou algo” e “macetando”: a mudança relevante é a não explicitação do objeto, portanto D."
+    ],
+    "trap": "Confundir forma nominal do verbo com mudança de classe gramatical ou achar que a repetição, sozinha, explica a nova acepção.",
+    "retrieval": [
+      "Qual elemento aparece na definição e falta no refrão?",
+      "Por que gerúndio não implica adjetivação?"
+    ],
+    "transfer": "Exercício autoral: compare “O pedreiro martelou a chapa” e “Na festa, o DJ veio martelando”. Identifique o complemento e explique como sua ausência no segundo uso favorece um sentido figurado.",
+    "criteria": [
+      "A chapa é o objeto direto e alvo literal na primeira frase.",
+      "Na segunda, não há alvo expresso; martelando pode sugerir intensidade musical, sem afirmar golpes físicos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a ocultação do sujeito do verbo."
+      },
+      {
+        "id": "b",
+        "text": "o uso repetido do verbo no gerúndio."
+      },
+      {
+        "id": "c",
+        "text": "o processo de adjetivação do verbo."
+      },
+      {
+        "id": "d",
+        "text": "a ausência de complemento para o verbo."
+      }
+    ],
+    "pages": [
+      15
+    ]
+  },
+  {
+    "number": 40,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
+    "title": "Ligar como telefonar e dar importância",
+    "concept": "Polissemia e crítica social em postagem; pré-requisitos: reconhecer sentido lexical contextual e o papel das expressões ninguém liga e ligar para alguém.",
+    "steps": [
+      "A postagem recorda o celular como telefone e afirma que hoje o aparelho serve para tudo, menos telefonar; termina com “Ninguém mais liga! Ninguém liga pra ninguém”.",
+      "Teste as duas leituras do mesmo verbo em relação ao tema das chamadas e ao tema das relações entre pessoas.",
+      "Ligar significa efetuar chamada telefônica e também importar-se com alguém; o segundo sentido acrescenta uma avaliação crítica do vínculo humano.",
+      "B une a crítica dos usos do aparelho à duplicidade de ligar. A desloca o fenômeno para mais; C atribui a ninguém uma função sintática indevida; D tenta obter de para uma ambiguidade locativa que não organiza a postagem.",
+      "Confira que as duas paráfrases, “ninguém telefona” e “ninguém se importa”, preservam a frase final: B."
+    ],
+    "trap": "Procurar o duplo sentido em um advérbio ou preposição porque aparecem perto do verbo ambíguo.",
+    "retrieval": [
+      "Quais são as duas acepções de ligar na frase final?",
+      "Como a ambiguidade transforma uma observação tecnológica em crítica social?"
+    ],
+    "transfer": "Exercício autoral: interprete o anúncio de uma campanha de amizade “Conectados o dia inteiro, desligados uns dos outros”. Explique os dois campos de sentido e a crítica implícita.",
+    "criteria": [
+      "Conectados remete à conexão digital; desligados sugere falta de atenção e vínculo afetivo.",
+      "A oposição critica a coexistência de uso contínuo da rede e pouca atenção às outras pessoas."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "visão bem-humorada sobre as inovações do celular e é produzido pelas interpretações de “mais”, que expressa intensidade e adição ao mesmo tempo."
+      },
+      {
+        "id": "b",
+        "text": "perspectiva crítica sobre os usos que vêm sendo feitos do celular e resulta dos significados de “ligar”, que pode indicar tanto uma ação quanto um juízo de valor."
+      },
+      {
+        "id": "c",
+        "text": "postura irônica sobre os usuários do celular e deriva dos usos de “ninguém”, que indetermina o sujeito e o objeto no parágrafo em que ocorre."
+      },
+      {
+        "id": "d",
+        "text": "visão pessimista sobre o futuro do celular e depende dos sentidos de “para”, que remete ao destinatário de uma mensagem e ao lugar em que se encontra."
+      }
+    ],
+    "pages": [
+      15
+    ]
+  },
+  {
+    "number": 41,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Gêneros Narrativos e Níveis de Compreensão",
+    "title": "Alice e o desencontro de sentidos",
+    "concept": "Construção do diálogo e interpretação literal; pré-requisitos: distinguir finalidade pragmática de conteúdo literal e reconhecer o jogo de linguagem da narrativa.",
+    "steps": [
+      "Alice pede um caminho para sair, diz não se importar com o destino e depois deseja chegar a algum lugar; o Gato condiciona a orientação ao destino e garante apenas que andar leva a algum lugar.",
+      "Compare a expectativa de orientação de Alice com a resposta logicamente literal do Gato.",
+      "Para Alice, algum lugar pressupõe uma saída satisfatória; o Gato toma a expressão como qualquer localização atingida após caminhar, sem resolver o objetivo da menina.",
+      "D traduz o desencontro entre os sentidos que os interlocutores atribuem às palavras. A reduz o diálogo a afeto; B privilegia a aparência fantástica; C supõe um domínio que a hesitação e a falta de orientação desmentem.",
+      "Confira a resposta final: ela satisfaz uma leitura literal, mas frustra o pedido prático, característica do jogo semântico da narrativa. Resposta D."
+    ],
+    "trap": "Usar o fato de o Gato ser fantástico para escolher B, sem analisar o funcionamento específico da conversa.",
+    "retrieval": [
+      "Por que a resposta final do Gato é literal e pouco útil para Alice?",
+      "Que pressuposto Alice não explicita ao pedir um caminho?"
+    ],
+    "transfer": "Exercício autoral: um viajante pergunta “Este ônibus me leva a algum lugar?” e o motorista responde “Sim, todo ônibus se desloca”. Explique a informação pretendida e a interpretação dada.",
+    "criteria": [
+      "O viajante busca um destino adequado à sua necessidade, possivelmente uma localização específica.",
+      "O motorista responde à existência de deslocamento e de qualquer destino; não informa a utilidade da rota."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "do afeto que marca o contato que Alice estabelece com os habitantes do país das maravilhas."
+      },
+      {
+        "id": "b",
+        "text": "do estranhamento que Alice experimenta ao conhecer seres que não existiam no mundo de onde ela veio."
+      },
+      {
+        "id": "c",
+        "text": "da descoberta, por parte de Alice, do domínio que ela tem sobre as situações no país das maravilhas."
+      },
+      {
+        "id": "d",
+        "text": "da percepção, por parte de Alice, de que as palavras não têm sempre o mesmo sentido para quem as usa."
+      }
+    ],
+    "pages": [
+      15,
+      16
+    ]
+  },
+  {
+    "number": 42,
+    "topicId": "por_lit_modernismo",
+    "subject": "Português",
+    "chapter": "Pré-Modernismo",
+    "title": "Gonzaga de Sá entre indivíduo e repartição",
+    "concept": "Sátira da burocracia em Lima Barreto; pré-requisitos: reconhecer ironia, função do narrador e a diferença entre avaliação da instituição e da personagem.",
+    "steps": [
+      "O narrador ironiza a fabricação de ídolos e apresenta uma repartição que acumula papéis e decide quantas setas deve ter a imagem de São Sebastião.",
+      "Separe o alvo institucional da sátira da caracterização de Gonzaga de Sá no romance, indivíduo de reflexão e sensibilidade.",
+      "A seriedade aplicada a um pormenor ritual evidencia a desproporção burocrática; o personagem, porém, tem valor humano que não se esgota nessa tarefa.",
+      "C combina valorização do indivíduo e sátira estatal. A faz dele culpado pelo entrave; B atribui imposição pessoal de fé; D atribui ambição de ascensão religiosa. Esses motivos não são demonstrados pelo excerto nem definem sua função no romance.",
+      "Confira a expressão “muito seriamente” diante do número de setas: a ironia recai no procedimento, sem apagar a individualidade de Gonzaga. Resposta C."
+    ],
+    "trap": "Transformar a crítica à repartição em condenação moral do funcionário ou inferir oportunismo religioso sem evidência.",
+    "retrieval": [
+      "Qual desproporção produz a sátira burocrática no excerto?",
+      "Por que criticar a repartição não equivale a desvalorizar Gonzaga de Sá?"
+    ],
+    "transfer": "Exercício autoral: um conto apresenta uma bibliotecária sensível que, por ordem da direção, preenche seis formulários para autorizar o empréstimo de um lápis. Escreva uma interpretação que distinga alvo da sátira e valor da personagem.",
+    "criteria": [
+      "O excesso de formulários para um empréstimo banal satiriza o procedimento institucional.",
+      "A sensibilidade da bibliotecária permite valorizá-la sem legitimar a burocracia; não prova sabotagem ou ambição pessoal."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "criticar um funcionário que prejudica o andamento da burocracia estatal."
+      },
+      {
+        "id": "b",
+        "text": "representar um sujeito que usa o serviço público para impor sua fé ao Estado."
+      },
+      {
+        "id": "c",
+        "text": "mostrar o valor do indivíduo em meio à sátira da burocracia estatal."
+      },
+      {
+        "id": "d",
+        "text": "figurar um sujeito que usa a religião para sua ascensão no serviço público."
+      }
+    ],
+    "pages": [
+      16
+    ]
+  },
+  {
+    "number": 43,
+    "topicId": "por_lit_contemporanea",
+    "subject": "Português",
+    "chapter": "Literatura Lusófona Contemporânea",
+    "title": "Lágrimas e desamparo em Chiziane e Evaristo",
+    "concept": "Leitura comparativa de imagens e experiência feminina; pré-requisitos: reconhecer narradoras, contexto desigual e distinção entre sofrimento, submissão e narcisismo. Articulação com a prosa brasileira contemporânea de Evaristo.",
+    "steps": [
+      "Em Niketche, a narradora vê no espelho olheiras causadas pelo choro; em Olhos D’água, a memória do abraço materno associa a chuva às lágrimas da mãe.",
+      "Busque o núcleo comum das imagens, relacionando-o às condições sociais das mulheres nas duas narrativas.",
+      "Lágrimas, olheiras e águas exprimem sofrimento e desamparo em contextos de desigualdade; o abraço evidencia proteção e não elimina a vulnerabilidade da mãe.",
+      "D reúne imagem comum e condição social. A restringe a análise a problemas econômicos e ecológicos; B interpreta o espelho como narcisismo sem fundamento; C confunde sofrimento com submissão e apaga a iniciativa protetora e a agência das mulheres.",
+      "Confira que o vínculo é o choro, e que os trechos não autorizam transformar desamparo em obediência passiva: D."
+    ],
+    "trap": "Associar automaticamente mulher que chora a submissão, ou espelho a vaidade, desprezando a situação narrada.",
+    "retrieval": [
+      "Como a chuva se conecta às lágrimas em Olhos D’água?",
+      "Que evidência impede reduzir o abraço materno a submissão?"
+    ],
+    "transfer": "Exercício autoral: compare “Ela enxugou as lágrimas antes de procurar emprego” e “Na enchente, a mãe ergueu o filho acima da água, chorando”. Identifique uma imagem comum e explique por que sofrimento não exclui ação.",
+    "criteria": [
+      "Lágrimas e água associam as cenas ao sofrimento e à vulnerabilidade.",
+      "Procurar emprego e proteger o filho são ações das personagens; chorar não prova passividade ou submissão."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "pelo par “olheiras/abraço”, o medo feminino diante dos problemas econômicos e ecológicos do Sul Global."
+      },
+      {
+        "id": "b",
+        "text": "pelo par “espelho/águas”, o narcisismo feminino em um ambiente sociocultural altamente desigual."
+      },
+      {
+        "id": "c",
+        "text": "pela relação entre as águas e as lágrimas, a submissão feminina diante dos problemas econômicos e ecológicos do Sul Global."
+      },
+      {
+        "id": "d",
+        "text": "pela relação entre as águas e as lágrimas, o desamparo feminino em um ambiente sociocultural altamente desigual."
+      }
+    ],
+    "pages": [
+      16
+    ]
+  },
+  {
+    "number": 44,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Verbo",
+    "title": "Indicativo e subjuntivo na intimidade de Além do ponto",
+    "concept": "Modos verbais e contraste entre estado vivido e julgamento imaginado; pré-requisitos: identificar pretérito imperfeito do indicativo e do subjuntivo. Articulação com a prosa brasileira de 1960–1980.",
+    "steps": [
+      "O narrador admite que bebia, passava fome e não dormia, mas não queria que o outro pensasse nesses estados; aparecem queria, andava e pensasse.",
+      "Classifique os modos verbais e relacione-os ao grau de afirmação das experiências e das reações atribuídas ao outro.",
+      "Queria e andava estão no imperfeito do indicativo e apresentam desejo e condição do eu; pensasse está no imperfeito do subjuntivo e insere o julgamento do ele no campo imaginado.",
+      "A identifica os dois modos que sustentam o contraste. B omite a marca do julgamento imaginado; C atribui a andar uma oposição que não organiza essas ocorrências; D seleciona gerúndios sem explicar a diferença entre realidade e hipótese.",
+      "Confira a cadeia “não queria que ele pensasse ... e eu andava”: indicativo para a vivência do eu, subjuntivo para a avaliação temida. Resposta A."
+    ],
+    "trap": "Escolher B só porque a negação se repete, deixando de analisar pensasse e o julgamento hipotético.",
+    "retrieval": [
+      "Qual modo e tempo correspondem a pensasse?",
+      "Como a passagem opõe admissão íntima e impressão desejada?"
+    ],
+    "transfer": "Exercício autoral: analise “Eu estava exausto, mas não queria que ela percebesse”. Classifique estava e percebesse e explique a diferença entre o estado do eu e a percepção da outra pessoa.",
+    "criteria": [
+      "Estava: pretérito imperfeito do indicativo; percebesse: pretérito imperfeito do subjuntivo.",
+      "A exaustão é afirmada; a percepção da outra pessoa aparece como possibilidade indesejada, sem ser confirmada."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "é criado por formas verbais no pretérito imperfeito do indicativo (“queria”, “andava”) e pretérito imperfeito do subjuntivo (“pensasse”)."
+      },
+      {
+        "id": "b",
+        "text": "é criado pelo uso de orações negativas (“eu não queria”) e do pretérito imperfeito do indicativo (“eu andava”)."
+      },
+      {
+        "id": "c",
+        "text": "é criado pela polissemia do verbo “andar”, usado no sentido de “caminhar”/ ”deslocar-se” e no de “seguir”/“progredir”."
+      },
+      {
+        "id": "d",
+        "text": "é criado pelo uso de formas verbais no gerúndio (“bebendo”, “chegando”) e pela repetição de orações negativas (“eu não queria”)."
+      }
+    ],
+    "pages": [
+      16
+    ]
+  },
+  {
+    "number": 45,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Os Dois Níveis da Leitura",
+    "title": "Conhecimento indígena e relação não predatória",
+    "concept": "Inferência sustentada por ensaio e perspectivas de mundo; pré-requisitos: distinguir conteúdo do sonho e interpretação do autor. Articulação com cultura e relações entre sociedade e natureza, sem exigir teoria externa.",
+    "steps": [
+      "O pajé sonha com a desolação produzida pela ação predatória dos brancos; Krenak percebe no modo indígena de observar uma abertura para o conhecimento e registra alertas sobre a invasão.",
+      "Articule a ameaça material à valorização de outra perspectiva de conhecimento, sem alterar o conteúdo do sonho.",
+      "A passagem contrapõe a invasão predatória a formas indígenas de observar e pensar que podem ampliar o entendimento e orientar outra relação com a natureza.",
+      "C expressa essa diferença e a valorização do conhecimento não predatório. A interpreta a fresta como trauma sobre o passado; B inventa reconhecimento dos brancos; D muda o sonho de desolação para um sonho de cessação da ameaça.",
+      "Releia a situação inicial e “abrir uma fresta de entendimento”: o sonho anuncia ameaça, enquanto a perspectiva indígena oferece possibilidade de conhecimento. Resposta C."
+    ],
+    "trap": "Converter um sonho que alerta para a destruição em desejo de que ela termine, para escolher D.",
+    "retrieval": [
+      "O que o sonho do pajé anuncia?",
+      "Que contribuição Krenak atribui ao modo indígena de observar e pensar?"
+    ],
+    "transfer": "Exercício autoral: uma liderança diz “O rio não é só recurso; seu ciclo ensina quando plantar. A mineração destrói tanto a água quanto esse aprendizado”. Identifique a crítica e a perspectiva de conhecimento valorizada.",
+    "criteria": [
+      "A crítica relaciona extração predatória à destruição do rio e do saber ligado a ele.",
+      "Valoriza conhecimento construído pela observação dos ciclos e uma relação com a natureza que não a reduz a estoque explorável."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o trauma de variados povos indígenas das florestas, decorrente das frestas de entendimento sobre o passado colonial extrativista."
+      },
+      {
+        "id": "b",
+        "text": "a adoção da diversidade de perspectivas, embora os homens brancos reconheçam a falibilidade do sistema de dominação presente."
+      },
+      {
+        "id": "c",
+        "text": "a diferença de perspectivas na relação homem-natureza, com a valorização da busca de um conhecimento não predatório."
+      },
+      {
+        "id": "d",
+        "text": "a resistência indígena a partir do sonho de que os homens brancos deixem de ameaçar a existência dos povos originários."
+      }
+    ],
+    "pages": [
+      16,
+      17
+    ]
+  },
+  {
+    "number": 46,
+    "topicId": "por_lit_contemporanea",
+    "subject": "Português",
+    "chapter": "Cancioneiro Popular Brasileiro",
+    "title": "Cipreste e cruz na melancolia do pensamento",
+    "concept": "Imagens poéticas e tonalidade lírica; pré-requisitos: reconhecer metáfora e o simbolismo funerário de cipreste e cruz.",
+    "steps": [
+      "O eu lírico contrapõe o direito de cantar a seu hábito de pensar no não realizado; deseja mudar o pensar e o associa a folha desprendida, luz vacilante e cipreste com cruz.",
+      "Leia as imagens em conjunto e identifique o tom que explica o desejo de mudança.",
+      "A folha conduzida pelo vento e a luz cega sugerem instabilidade; cipreste e cruz intensificam a atmosfera de morte, tristeza e melancolia.",
+      "C relaciona desejo de mudança e imagem funerária. A coloca a alegria como imagem principal; B afirma afastamento da realidade sem dar conta da dor pelas realizações frustradas; D desloca o centro para o vento que levaria o próprio eu, embora a metáfora nomeie o pensamento.",
+      "Confira o fechamento da canção: a cruz escolta o cipreste e concentra a tonalidade fúnebre, confirmando C."
+    ],
+    "trap": "Isolar a folha ou o vento e ignorar as imagens finais que definem o tom da canção.",
+    "retrieval": [
+      "O que cipreste e cruz sugerem em conjunto?",
+      "Por que o eu lírico deseja mudar seu pensamento?"
+    ],
+    "transfer": "Exercício autoral: interprete os versos “Guardo no peito um sino sem voz / e uma vela apagada ao amanhecer”. Identifique duas imagens e proponha um tom sustentado por elas.",
+    "criteria": [
+      "Sino sem voz e vela apagada figuram ausência de som e de luz.",
+      "Tristeza, luto ou perda são leituras justificáveis pela privação indicada; alegria triunfante exigiria evidência adicional."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "acredita que, assim como todas as pessoas, tem o direito de viver cantando, embora isso seja algo difícil de ser realizado. A principal imagem poética utilizada é a da alegria do canto, o qual é capaz de mudar a vida."
+      },
+      {
+        "id": "b",
+        "text": "gostaria de mudar o seu pensamento, aproximando-o da realidade de sua vida, da qual ele se desprendeu. A principal imagem poética utilizada é a do sonho e do devaneio, dissociados da vida real."
+      },
+      {
+        "id": "c",
+        "text": "gostaria de mudar o seu pensamento, porque este é marcado pela tristeza e melancolia. A principal imagem poética utilizada é a da morte, presente nas figuras do cipreste e da cruz."
+      },
+      {
+        "id": "d",
+        "text": "acredita que pensar seja um defeito que ele gostaria de corrigir, mas não consegue. A principal imagem poética utilizada é a do vento, o qual carrega o eu-lírico independentemente de sua vontade."
+      }
+    ],
+    "pages": [
+      17
+    ]
+  },
+  {
+    "number": 47,
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "chapter": "Estatística Descritiva",
+    "title": "Complemento percentual no gráfico do PISA",
+    "concept": "Leitura de gráfico de barras e categorias complementares; pré-requisitos: porcentagem, legenda e diferença entre razão e pontos percentuais. Contexto educacional não altera o foco matemático.",
+    "steps": [
+      "O gráfico informa baixo desempenho: Brasil 73% em Matemática, 50% em Leitura e 55% em Ciências; médias OCDE 31%, 26% e 24%. Alto desempenho em Leitura no Brasil: 2%.",
+      "Associe cinza a pontuação abaixo do nível 2 e calcule o complemento quando a pergunta pede pelo menos esse nível.",
+      "Em Ciências, 100% − 55% = 45% atingem pelo menos o nível 2. Em Leitura, o baixo desempenho de 50% é menor que os 55% de Ciências.",
+      "A é correta. B inverte 50% e 55%; C é falsa porque 2 × 31% = 62%, diferente de 73%; D troca os 2% de alto desempenho em Leitura por 5%.",
+      "Confira a legenda e o total de 100%: a faixa abaixo do nível 2 e seu complemento esgotam o conjunto. Resposta A, 45%."
+    ],
+    "trap": "Confundir a parcela branca intermediária com todo o grupo que atingiu pelo menos o nível 2, excluindo indevidamente os alunos de alto desempenho.",
+    "retrieval": [
+      "Como se obtém o percentual que atingiu pelo menos o nível 2?",
+      "Por que 73% não é o dobro de 31%?"
+    ],
+    "transfer": "Exercício autoral: em uma avaliação, 42% ficam abaixo do nível 2, 6% atingem o nível 5 ou superior e os demais estão entre os níveis 2 e 4. Calcule as parcelas que atingiram pelo menos o nível 2 e que ficaram nos níveis intermediários.",
+    "criteria": [
+      "Pelo menos nível 2: 100% − 42% = 58%, incluindo o alto desempenho.",
+      "Níveis 2 a 4: 58% − 6% = 52%; as três parcelas somam 100%."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "que atingiu pelo menos o nível 2 de proficiência em ciências é de 45%."
+      },
+      {
+        "id": "b",
+        "text": "que tem baixo desempenho em leitura é maior do que o percentual de alunos com baixo desempenho em ciências."
+      },
+      {
+        "id": "c",
+        "text": "com baixo desempenho em Matemática é o dobro do percentual da média da OCDE."
+      },
+      {
+        "id": "d",
+        "text": "que teve alto desempenho em Leitura é de 5%."
+      }
+    ],
+    "pages": [
+      17
+    ]
+  },
+  {
+    "number": 48,
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "chapter": "Operações com Probabilidades",
+    "title": "Múltiplos de 3 ou 7 sem dupla contagem",
+    "concept": "Probabilidade da união com inclusão e exclusão; pré-requisitos: contagem de múltiplos, mínimo múltiplo comum e equiprobabilidade.",
+    "steps": [
+      "O sorteio é uniforme entre os 2025 inteiros de 1 a 2025, inclusive; interessam os divisíveis por 3 ou por 7.",
+      "Conte separadamente os dois conjuntos e subtraia a interseção, composta pelos múltiplos de 21.",
+      "⌊2025/3⌋ = 675, ⌊2025/7⌋ = 289 e ⌊2025/21⌋ = 96. A união tem 675 + 289 − 96 = 868 números; P = 868/2025.",
+      "A apresenta 868/2025. B conta apenas múltiplos de 7; C, apenas múltiplos de 3; D usa 951, que não resulta da contagem correta da união.",
+      "Confira os limites: 7 × 289 = 2023 e 21 × 96 = 2016 estão no intervalo, mas os múltiplos seguintes não. O resultado fica entre a probabilidade de cada conjunto e a soma delas: A."
+    ],
+    "trap": "Somar as contagens sem descontar os 96 números que são múltiplos de ambos os divisores; interpretar ou como exclusivo também altera o evento.",
+    "retrieval": [
+      "Por que os múltiplos de 21 são contados duas vezes na soma inicial?",
+      "Como se conta a quantidade de múltiplos de um inteiro em 1 até N?"
+    ],
+    "transfer": "Exercício autoral: sorteie uniformemente um inteiro entre 1 e 120. Determine a probabilidade de ser múltiplo de 4 ou de 6, incluindo os que são múltiplos de ambos.",
+    "criteria": [
+      "Há 30 múltiplos de 4, 20 de 6 e 10 de 12; união = 40.",
+      "Probabilidade 40/120 = 1/3; o uso de 12 como MMC evita dupla contagem."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "868/2025."
+      },
+      {
+        "id": "b",
+        "text": "289/2025."
+      },
+      {
+        "id": "c",
+        "text": "675/2025."
+      },
+      {
+        "id": "d",
+        "text": "951/2025."
+      }
+    ],
+    "pages": [
+      17
+    ]
+  },
+  {
+    "number": 49,
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "chapter": "Porcentagem",
+    "title": "Dois reajustes e um desconto sobre bases diferentes",
+    "concept": "Variações percentuais sucessivas por fatores multiplicativos; pré-requisitos: converter porcentagens em fatores e calcular preço em reais.",
+    "steps": [
+      "O preço inicial é R$ 2.000,00; ocorrem aumentos de 10% em abril e junho e desconto de 20% sobre o preço vigente em novembro.",
+      "Atualize a base a cada operação: aumentos usam fator 1,10 e desconto usa fator 0,80.",
+      "Após abril: 2000 × 1,10 = R$ 2.200,00. Após junho: 2200 × 1,10 = R$ 2.420,00. Na compra: 2420 × 0,80 = R$ 1.936,00.",
+      "B corresponde ao preço calculado. C supõe cancelamento aditivo de 10% + 10% − 20%; A e D não resultam da aplicação sucessiva dos três fatores.",
+      "Confira por um único produto: 1,10² × 0,80 = 0,968; 96,8% de R$ 2.000,00 é R$ 1.936,00, redução líquida de 3,2%. Resposta B."
+    ],
+    "trap": "Somar as taxas como se incidissem todas sobre R$ 2.000,00; o segundo aumento e o desconto têm bases atualizadas.",
+    "retrieval": [
+      "Qual é o fator correspondente a desconto de 20%?",
+      "Por que dois aumentos de 10% não equivalem a um aumento de 20%?"
+    ],
+    "transfer": "Exercício autoral: um produto custa R$ 500,00, aumenta 20% e depois recebe desconto de 20%. Calcule o preço final e a variação líquida.",
+    "criteria": [
+      "R$ 500,00 × 1,20 × 0,80 = R$ 480,00.",
+      "Fator total 0,96: queda de 4%, ou R$ 20,00; aumento e desconto de mesma taxa não se anulam."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "R$ 1.896,00."
+      },
+      {
+        "id": "b",
+        "text": "R$ 1.936,00."
+      },
+      {
+        "id": "c",
+        "text": "R$ 2.000,00."
+      },
+      {
+        "id": "d",
+        "text": "R$ 2.052,00."
+      }
+    ],
+    "pages": [
+      17,
+      18
+    ]
+  },
+  {
+    "number": 50,
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "chapter": "A Relação Fundamental da Trigonometria",
+    "title": "Seno de quinze graus pela identidade de meio arco",
+    "concept": "Identidade fundamental e meio arco com escolha do sinal; pré-requisitos: cos(π/6) = √3/2, radicais e sinais no primeiro quadrante.",
+    "steps": [
+      "O arco procurado é π/12, ou 15°, e seu dobro é π/6. A fórmula fornecida permite obter o cosseno do meio arco.",
+      "Aplique a fórmula com x = π/6 e depois use sen²θ + cos²θ = 1; escolha a raiz positiva porque θ está no primeiro quadrante.",
+      "cos²(π/12) = (1 + √3/2)/2 = (2 + √3)/4. Logo sen²(π/12) = (2 − √3)/4 e sen(π/12) = √(2 − √3)/2.",
+      "A apresenta esse radical. B corresponde ao cosseno de 15°; C e D trocam o termo 2 por 3 e não satisfazem a identidade calculada.",
+      "Como 15° < 30°, o seno deve ser positivo e menor que 1/2; aproximadamente 0,259, enquanto B vale aproximadamente 0,966. Resposta A."
+    ],
+    "trap": "Copiar diretamente o radical obtido para cos(π/12), sem aplicar a identidade fundamental para encontrar o seno.",
+    "retrieval": [
+      "Como o seno do meio arco é obtido a partir do cosseno?",
+      "Qual quadrante fixa o sinal da raiz para π/12?"
+    ],
+    "transfer": "Exercício autoral: calcule exatamente sen(π/8) usando cos(π/4) = √2/2 e a identidade de meio arco. Verifique o sinal e compare com sen(π/4).",
+    "criteria": [
+      "sen(π/8) = √(2 − √2)/2, derivado de sen²(π/8) = (1 − √2/2)/2.",
+      "Resultado positivo e aproximadamente 0,383, menor que √2/2; π/8 está no primeiro quadrante."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "√(2 − √3)/2."
+      },
+      {
+        "id": "b",
+        "text": "√(2 + √3)/2."
+      },
+      {
+        "id": "c",
+        "text": "√(3 − √3)/2."
+      },
+      {
+        "id": "d",
+        "text": "√(3 + √3)/2."
+      }
+    ],
+    "pages": [
+      18
+    ]
+  },
+  {
+    "number": 51,
+    "topicId": "mat_dados_probabilidade",
+    "subject": "Matemática",
+    "chapter": "Introdução às Probabilidades",
+    "title": "Exatamente dois sabores no diagrama de Venn",
+    "concept": "Contagem por regiões disjuntas e probabilidade; pré-requisitos: diagrama de três conjuntos, soma de parcelas e amostragem uniforme.",
+    "steps": [
+      "Há 65 copos. As regiões de sabor único têm 10, 15 e 8; a interseção tripla tem 7; uma região de dois sabores tem 6 e as outras duas estão marcadas com interrogação.",
+      "Use o complemento: todos os copos têm um, dois ou três sabores, sem precisar determinar separadamente as duas regiões desconhecidas.",
+      "Exatamente dois sabores: 65 − (10 + 15 + 8) − 7 = 25 copos. Os dois valores desconhecidos somam 19, e com os 6 conhecidos totalizam 25. P = 25/65 = 5/13.",
+      "A é correta. B, C e D não representam a razão entre os 25 casos favoráveis e os 65 copos. Incluir os 7 da interseção tripla daria 32/65, evento diferente.",
+      "Confira as parcelas disjuntas: 33 com um sabor + 25 com dois + 7 com três = 65. A probabilidade simplificada é 5/13. Resposta A."
+    ],
+    "trap": "Somar interseções incluindo a região tripla, ou achar que faltam dados porque as duas incógnitas não são individualmente conhecidas.",
+    "retrieval": [
+      "Por que não é preciso descobrir cada região desconhecida?",
+      "Qual diferença há entre exatamente dois e pelo menos dois sabores?"
+    ],
+    "transfer": "Exercício autoral: em 80 copos, 41 contêm um único sabor e 9 contêm três sabores. Todos contêm de um a três sabores. Determine as probabilidades de exatamente dois e de pelo menos dois sabores.",
+    "criteria": [
+      "Exatamente dois: 80 − 41 − 9 = 30; probabilidade 30/80 = 3/8.",
+      "Pelo menos dois: 30 + 9 = 39; probabilidade 39/80. As regiões devem ser disjuntas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "5/13."
+      },
+      {
+        "id": "b",
+        "text": "1/10."
+      },
+      {
+        "id": "c",
+        "text": "7/22."
+      },
+      {
+        "id": "d",
+        "text": "2/7."
+      }
+    ],
+    "pages": [
+      18
+    ]
+  },
+  {
+    "number": 52,
+    "topicId": "mat_equacoes",
+    "subject": "Matemática",
+    "chapter": "Desigualdades",
+    "title": "Limites de uma soma a partir de módulos",
+    "concept": "Módulo como distância e desigualdades intervalares; pré-requisitos: resolver |u| ≤ a e somar limites superiores.",
+    "steps": [
+      "As restrições são |x − 2| ≤ 2 e |y − 3| ≤ 1 para números reais.",
+      "Transforme cada condição de distância em intervalo e derive a faixa possível de x + y.",
+      "−2 ≤ x − 2 ≤ 2 dá 0 ≤ x ≤ 4; −1 ≤ y − 3 ≤ 1 dá 2 ≤ y ≤ 4. Assim 2 ≤ x + y ≤ 8.",
+      "C é sempre verdadeira. A falha em x = 0, y = 2, pois x² + y² = 4 > 1; B falha no mesmo par, pois soma 2 < 10; D falha porque 4 < 36.",
+      "Confira que a cota superior 8 é atingida por x = 4, y = 4, par permitido. A conclusão universal é x + y ≤ 8: C."
+    ],
+    "trap": "Tratar o módulo como igualdade e considerar apenas os extremos, ou confundir a existência de um exemplo com validade para todos os pares.",
+    "retrieval": [
+      "Que intervalo corresponde a |x − 2| ≤ 2?",
+      "Como um único par permitido refuta uma conclusão universal falsa?"
+    ],
+    "transfer": "Exercício autoral: se |u − 5| ≤ 2 e |v + 1| ≤ 3, determine o menor e o maior valor de u + v e forneça pares que os atinjam.",
+    "criteria": [
+      "u ∈ [3,7] e v ∈ [−4,2]; soma em [−1,9].",
+      "Mínimo −1 no par (3,−4), máximo 9 no par (7,2); ambos satisfazem os módulos."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "x² + y² ≤ 1."
+      },
+      {
+        "id": "b",
+        "text": "x + y ≥ 10."
+      },
+      {
+        "id": "c",
+        "text": "x + y ≤ 8."
+      },
+      {
+        "id": "d",
+        "text": "x² + y² ≥ 36."
+      }
+    ],
+    "pages": [
+      18
+    ]
+  },
+  {
+    "number": 54,
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "chapter": "Composição de Funções",
+    "title": "Composição quadrática e contagem de inteiros",
+    "concept": "Substituição na composição e inequação por estudo de sinais; pré-requisitos: fatoração, raízes e contagem de inteiros em intervalo aberto.",
+    "steps": [
+      "f(x) = x − 2, g(x) = x² − 4x e o enunciado pede x ∈ ℤ com g(f(x)) < 0.",
+      "Substitua o argumento inteiro de g por f(x), fatore a expressão composta e encontre o intervalo de negatividade.",
+      "g(f(x)) = (x − 2)² − 4(x − 2) = (x − 2)(x − 6). O produto é negativo quando 2 < x < 6.",
+      "Os inteiros admissíveis são 3, 4 e 5, total 3: B. A e C erram a contagem; D conta os cinco inteiros de [2,6], mas os extremos anulam o produto e a desigualdade é estrita.",
+      "Confira g(f(3)) = −3, g(f(4)) = −4 e g(f(5)) = −3; em 2 e 6 o valor é zero. Resposta B."
+    ],
+    "trap": "Resolver g(x) < 0 diretamente sem compor com f, ou incluir as raízes em uma desigualdade estrita.",
+    "retrieval": [
+      "Como se monta g(f(x)) sem trocar a ordem da composição?",
+      "Por que x = 2 e x = 6 não são soluções?"
+    ],
+    "transfer": "Exercício autoral: sejam h(x) = x + 1 e k(t) = t² − 6t. Conte os inteiros x que satisfazem k(h(x)) < 0 e liste-os.",
+    "criteria": [
+      "k(h(x)) = (x + 1)(x − 5); negatividade em −1 < x < 5.",
+      "Inteiros 0, 1, 2, 3 e 4: cinco soluções; −1 e 5 dão zero e ficam excluídos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "2."
+      },
+      {
+        "id": "b",
+        "text": "3."
+      },
+      {
+        "id": "c",
+        "text": "4."
+      },
+      {
+        "id": "d",
+        "text": "5."
+      }
+    ],
+    "pages": [
+      18
+    ]
+  },
+  {
+    "number": 55,
+    "topicId": "mat_geometria_plana",
+    "subject": "Matemática",
+    "chapter": "Triângulo Retângulo",
+    "title": "Do quadrado inclinado ao quadrado apoiado na base",
+    "concept": "Projeções de segmentos perpendiculares e semelhança; pré-requisito: Pitágoras e razões trigonométricas.",
+    "steps": [
+      "Observe na figura que AG=4, GD=GH=3, D pertence a AC e o vértice inferior direito do quadrado menor toca a lateral esquerda do maior.",
+      "Chame θ o ângulo BAC. O triângulo AGD é retângulo em G; determine AD e projete os lados do quadrado menor sobre AC.",
+      "AD=5; cosθ=4/5 e senθ=3/5. A abscissa do vértice inferior direito é AE=5+3·4/5=37/5.",
+      "O canto superior esquerdo do quadrado maior pertence a AB, logo EF=AE·tanθ=(37/5)·(3/4)=111/20 cm: B. As demais frações não satisfazem essa inclinação.",
+      "Confira com coordenadas: H=(28/5,21/5); o vértice inferior direito é (37/5,9/5) e o canto superior esquerdo do maior é (37/5,111/20)."
+    ],
+    "trap": "Tratar os dois quadrados como se tivessem lados paralelos apaga a projeção 3·4/5; não é necessário supor ângulo reto em B.",
+    "retrieval": [
+      "Como AG e GD determinam tan(BAC)?",
+      "Qual projeção localiza a lateral esquerda do quadrado maior?"
+    ],
+    "transfer": "Exercício autoral: mantenha a mesma configuração de contatos, mas use AG=8 cm e GH=6 cm. Calcule AD, AE e EF.",
+    "criteria": [
+      "AD=10 cm e AE=74/5 cm.",
+      "EF=111/10 cm; a duplicação de todas as medidas duplica o lado maior."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "121/20."
+      },
+      {
+        "id": "b",
+        "text": "111/20."
+      },
+      {
+        "id": "c",
+        "text": "102/15."
+      },
+      {
+        "id": "d",
+        "text": "98/15."
+      }
+    ],
+    "pages": [
+      18,
+      19
+    ]
+  },
+  {
+    "number": 56,
+    "topicId": "mat_sequencias_matrizes",
+    "subject": "Matemática",
+    "chapter": "Progressão Aritmética",
+    "title": "Segunda diferença das somas parciais",
+    "concept": "Diferenças de somas consecutivas recuperam os termos da PA.",
+    "steps": [
+      "Os valores 168, 220 e 279 são somas parciais consecutivas, não termos consecutivos da PA original.",
+      "Use s(n+1)−s(n)=a(n+1), e depois subtraia dois termos consecutivos de a.",
+      "Os termos recuperados são 220−168=52 e 279−220=59; portanto r=59−52=7.",
+      "B corresponde à segunda diferença 279−2·220+168. A, C e D dão razões incompatíveis com 52 e 59.",
+      "Reconstrua as duas somas: 168+52=220 e 220+59=279. Não é preciso descobrir a posição n."
+    ],
+    "trap": "Aplicar a definição de PA diretamente a 168, 220 e 279 confunde a sequência de somas com a de parcelas.",
+    "retrieval": [
+      "Que parcela surge ao subtrair duas somas parciais consecutivas?",
+      "Por que a segunda diferença de s é a razão de a?"
+    ],
+    "transfer": "Exercício autoral: três somas parciais consecutivas de uma PA são 77, 112 e 153. Determine as duas parcelas acrescidas e a razão.",
+    "criteria": [
+      "Parcelas 35 e 41.",
+      "Razão 6, obtida também por 153−2·112+77.",
+      "Dados realizáveis: a₁=−7 e r=6 dão s₇=77, s₈=112 e s₉=153."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "5."
+      },
+      {
+        "id": "b",
+        "text": "7."
+      },
+      {
+        "id": "c",
+        "text": "9."
+      },
+      {
+        "id": "d",
+        "text": "11."
+      }
+    ],
+    "pages": [
+      19
+    ]
+  },
+  {
+    "number": 57,
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "chapter": "Função Quadrática",
+    "title": "Coeficientes de uma parábola por três pontos",
+    "concept": "Sistema linear para os coeficientes de uma função quadrática.",
+    "steps": [
+      "Use P=(0,−4), Q=(2,−1) e M=(−2,5); a pergunta pede abc, não a ordenada do vértice.",
+      "Substitua primeiro x=0 para obter c; os pontos com abscissas opostas permitem eliminar b por adição.",
+      "c=−4; 4a+2b=3 e 4a−2b=9. Somando, a=3/2; então b=−3/2.",
+      "abc=(3/2)(−3/2)(−4)=9, alternativa D. Os produtos 6, 7 e 8 não correspondem ao sistema.",
+      "Confira f(2)=6−3−4=−1 e f(−2)=6+3−4=5; dois coeficientes negativos tornam o produto positivo."
+    ],
+    "trap": "Esquecer o sinal de x em bx para M altera b e o produto.",
+    "retrieval": [
+      "Qual coeficiente é a ordenada da parábola em x=0?",
+      "Como abscissas opostas ajudam a separar a e b?"
+    ],
+    "transfer": "Exercício autoral: uma parábola passa por (0,−2), (1,1) e (−1,−1). Determine seus coeficientes e seu produto.",
+    "criteria": [
+      "c=−2, a=2 e b=1.",
+      "Produto abc=−4; a função 2x²+x−2 reproduz os três pontos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "6."
+      },
+      {
+        "id": "b",
+        "text": "7."
+      },
+      {
+        "id": "c",
+        "text": "8."
+      },
+      {
+        "id": "d",
+        "text": "9."
+      }
+    ],
+    "pages": [
+      19
+    ]
+  },
+  {
+    "number": 58,
+    "topicId": "mat_trigonometria",
+    "subject": "Matemática",
+    "chapter": "Funções Trigonométricas",
+    "title": "Fase, amplitude e nível médio de um poluente",
+    "concept": "Combinação de seno e cosseno com mesma frequência; pré-requisito: valores em 0 e π.",
+    "steps": [
+      "A função é Q(t)=20+2 sen t−4 cos t; examine na página os quatro gráficos identificados por a, b, c e d.",
+      "Compare valor inicial, sentido inicial de variação, nível médio e periodicidade antes de acompanhar todo o desenho.",
+      "Q(0)=16 e Q(π)=24. A amplitude é √(2²+4²)=2√5, o nível médio é 20 e o período é 2π.",
+      "O gráfico A começa em 16 crescendo e oscila em torno de 20. B e D têm queda do nível médio; C começa em 20 e tem fase incompatível.",
+      "Os extremos devem estar entre 20−2√5≈15,53 e 20+2√5≈24,47. O primeiro máximo ocorre em π−arctan(1/2)≈2,68 anos."
+    ],
+    "trap": "Somar as amplitudes 2+4 produz 6 incorretamente; seno e cosseno atingem seus máximos em tempos diferentes.",
+    "retrieval": [
+      "Como calcular a amplitude de A sen t+B cos t?",
+      "Quais dois valores simples ajudam a reconhecer a fase no gráfico?"
+    ],
+    "transfer": "Exercício autoral: para R(t)=10+3 sen t−4 cos t, encontre R(0), o período, o intervalo de valores e o sentido de variação logo após t=0.",
+    "criteria": [
+      "R(0)=6, período 2π e imagem [5,15].",
+      "A função cresce logo após zero, pois o coeficiente inicial da variação é 3."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Gráfico da alternativa a na página original."
+      },
+      {
+        "id": "b",
+        "text": "Gráfico da alternativa b na página original."
+      },
+      {
+        "id": "c",
+        "text": "Gráfico da alternativa c na página original."
+      },
+      {
+        "id": "d",
+        "text": "Gráfico da alternativa d na página original."
+      }
+    ],
+    "pages": [
+      19
+    ]
+  },
+  {
+    "number": 59,
+    "topicId": "qui_oxirreducao",
+    "subject": "Química",
+    "chapter": "Química Ambiental",
+    "title": "Eletrificação e a origem da energia",
+    "concept": "Avaliação ambiental da cadeia energética e leitura de ironia visual.",
+    "steps": [
+      "Na imagem, a bicicleta é chamada de Ecobike e a ciclista usa um símbolo ecológico; o cabo liga o veículo à rede de uma usina com chaminés e fumaça.",
+      "Separe os sinais de identidade ambiental do veículo do impacto da fonte que produz a eletricidade.",
+      "O verde combina com a inscrição e o símbolo. Entretanto, a eletrificação não elimina automaticamente emissões se a geração continua poluente.",
+      "B une as duas conclusões. A aceita a concepção criticada; C e D atribuem cinza aos sinais positivos do conjunto bicicleta/ciclista.",
+      "Reveja o percurso visual usina→rede→recarga: a fumaça ao fundo é a evidência que produz a incongruência e o humor."
+    ],
+    "trap": "Julgar apenas a ausência de escapamento no veículo desconsidera o processo de geração elétrica.",
+    "retrieval": [
+      "Que detalhe visual liga a bicicleta à usina?",
+      "Por que o impacto de um veículo elétrico depende da matriz elétrica?"
+    ],
+    "transfer": "Exercício autoral: um ônibus consome 100 kWh por viagem. Compare emissões da geração em duas redes, com 0,8 kg CO₂/kWh e 0,1 kg CO₂/kWh, ignorando fabricação e outros impactos.",
+    "criteria": [
+      "Emissões de 80 kg e 10 kg CO₂ por viagem.",
+      "A segunda rede reduz as emissões consideradas em 70 kg, ou 87,5%."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A cor verde, se usada tanto na bicicleta quanto na roupa da ciclista, estaria de acordo com outros elementos presentes no conjunto bicicleta/ciclista. A concepção da ciclista sobre transição energética está correta."
+      },
+      {
+        "id": "b",
+        "text": "A cor verde, se usada tanto na bicicleta quanto na roupa da ciclista, estaria de acordo com outros elementos presentes no conjunto bicicleta/ciclista. A concepção da ciclista sobre transição energética está incorreta."
+      },
+      {
+        "id": "c",
+        "text": "A cor cinza, se usada tanto na bicicleta quanto na roupa da ciclista, estaria de acordo com outros elementos presentes no conjunto bicicleta/ciclista. A concepção da ciclista sobre transição energética está correta."
+      },
+      {
+        "id": "d",
+        "text": "A cor cinza, se usada tanto na bicicleta quanto na roupa da ciclista, estaria de acordo com outros elementos presentes no conjunto bicicleta/ciclista. A concepção da ciclista sobre transição energética está incorreta."
+      }
+    ],
+    "pages": [
+      20
+    ]
+  },
+  {
+    "number": 60,
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "chapter": "Termoquímica I",
+    "title": "Percentual energético não é percentual em massa",
+    "concept": "Conversão entre participação energética e massa a partir de energia específica.",
+    "steps": [
+      "As participações energéticas são 5% de proteínas, 52% de gorduras e 43% de carboidratos; a energia por massa da gordura é 2,25 vezes a das outras duas.",
+      "Divida cada participação energética pela energia específica relativa e normalize as massas encontradas.",
+      "As massas relativas são 5, 52/2,25 e 43, cuja soma é 640/9. As frações em massa são 7,03125%, 32,5% e 60,46875%, respectivamente.",
+      "A é correta: proteínas e carboidratos têm percentuais em massa maiores, e gorduras menor. B e D exigiriam que todas as frações variassem no mesmo sentido; C inverte a densidade energética.",
+      "Confira que as três porcentagens somam 100% e que 32,5·2,25/(7,03125+32,5·2,25+60,46875)=52%."
+    ],
+    "trap": "Comparar percentuais sem dividir pela energia por grama trata gordura como se tivesse a mesma densidade energética.",
+    "retrieval": [
+      "Por que gordura precisa de menos massa para a mesma energia?",
+      "Qual normalização transforma massas relativas em porcentagens?"
+    ],
+    "transfer": "Exercício autoral: um alimento tem 10%, 45% e 45% da energia provenientes, respectivamente, de proteínas, gorduras e carboidratos. Use a razão energética 1:2,25:1 e calcule as porcentagens em massa.",
+    "criteria": [
+      "Massas relativas 10, 20 e 45; total 75.",
+      "Percentuais 13⅓%, 26⅔% e 60%, respectivamente."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "proteínas e carboidratos serão maiores e o percentual de gordura será menor."
+      },
+      {
+        "id": "b",
+        "text": "proteínas, carboidratos e gorduras serão maiores."
+      },
+      {
+        "id": "c",
+        "text": "proteínas e carboidratos serão menores e o percentual de gordura será maior."
+      },
+      {
+        "id": "d",
+        "text": "proteínas, carboidratos e gorduras serão menores."
+      }
+    ],
+    "pages": [
+      20
+    ]
+  },
+  {
+    "number": 61,
+    "topicId": "qui_oxirreducao",
+    "subject": "Química",
+    "chapter": "Química Ambiental",
+    "title": "Biodigestão da vinhaça e demanda de oxigênio",
+    "concept": "Produção anaeróbica de biogás e redução da carga orgânica do efluente.",
+    "steps": [
+      "A vinhaça é rica em matéria orgânica e potássio; o processo anaeróbico gera biogás e um líquido ainda aproveitável na fertirrigação.",
+      "Identifique o combustível característico do biogás e relacione consumo de matéria orgânica à demanda bioquímica de oxigênio (DBO).",
+      "O combustível é principalmente metano. A conversão de parte da matéria orgânica em biogás reduz a carga biodegradável remanescente e a DBO do líquido.",
+      "D é a combinação correta. A e C confundem metano com butano; B afirma aumento de DBO onde houve consumo do substrato orgânico.",
+      "A redução da DBO não significa retirada total dos nutrientes: a manutenção do potássio ajuda a explicar a fertirrigação após a biodigestão."
+    ],
+    "trap": "Confundir DBO com o oxigênio usado dentro do biodigestor: a digestão é anaeróbica, mas o efluente pode demandar oxigênio quando biodegradado em outro ambiente.",
+    "retrieval": [
+      "Qual gás combustível caracteriza o biogás?",
+      "Como a retirada de matéria orgânica biodegradável afeta a DBO?"
+    ],
+    "transfer": "Exercício autoral: um biodigestor recebe 50 m³ de vinhaça e rende 12 m³ de biogás por m³. A DBO cai de 20 a 6 kg O₂/m³, sem mudança de volume líquido. Calcule o biogás e a redução da carga de DBO.",
+    "criteria": [
+      "Produção de 600 m³ de biogás.",
+      "Carga de DBO cai de 1000 a 300 kg O₂; redução de 700 kg, ou 70%."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "butano. Adicionalmente, a vinhaça biodigerida aplicada à fertirrigação reduz, em relação à vinhaça in natura, a demanda bioquímica de oxigênio."
+      },
+      {
+        "id": "b",
+        "text": "metano. Adicionalmente, a vinhaça biodigerida aplicada à fertirrigação aumenta, em relação à vinhaça in natura, a demanda bioquímica de oxigênio."
+      },
+      {
+        "id": "c",
+        "text": "butano. Adicionalmente, a vinhaça biodigerida aplicada à fertirrigação aumenta, em relação à vinhaça in natura, a demanda bioquímica de oxigênio."
+      },
+      {
+        "id": "d",
+        "text": "metano. Adicionalmente, a vinhaça biodigerida aplicada à fertirrigação reduz, em relação à vinhaça in natura, a demanda bioquímica de oxigênio."
+      }
+    ],
+    "pages": [
+      20
+    ]
+  },
+  {
+    "number": 62,
+    "topicId": "qui_eletroquimica",
+    "subject": "Química",
+    "chapter": "Eletroquímica de Processos não Espontâneos",
+    "title": "Oxigênio e remoção de CO₂ no submarino",
+    "concept": "Eletrólise da água e neutralização de óxido ácido por base.",
+    "steps": [
+      "O submarino dispõe de energia elétrica e precisa produzir O₂ e retirar CO₂ da atmosfera interna.",
+      "Distinga separação física da água de decomposição química e reconheça o caráter ácido do CO₂ em água.",
+      "A eletrólise da água purificada produz O₂: 2 H₂O→2 H₂+O₂. Uma solução básica absorve CO₂ formando espécies como bicarbonato ou carbonato.",
+      "B contém os dois procedimentos. A e C confundem destilação com geração de oxigênio; D usa água salina diretamente e solução ácida, com riscos de produtos de eletrólise dos sais e sem a neutralização desejada.",
+      "Confira o balanço de átomos da eletrólise e uma reação de captura: CO₂+2 OH⁻→CO₃²⁻+H₂O."
+    ],
+    "trap": "A água destilada continua sendo H₂O; separar sal e água não separa hidrogênio e oxigênio.",
+    "retrieval": [
+      "Qual transformação química libera O₂ da água?",
+      "Por que uma base favorece a captura de CO₂?"
+    ],
+    "transfer": "Exercício autoral: considere 36 g de água completamente eletrolisada, com massa molar 18 g/mol, e captura de 0,5 mol de CO₂ segundo CO₂+2 NaOH→Na₂CO₃+H₂O. Determine os mols de O₂ e de NaOH necessários.",
+    "criteria": [
+      "2 mol de água geram 1 mol de O₂.",
+      "A captura requer 1 mol de NaOH."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "para gerar O2: destilação direta da água do mar; para absorver o CO2: uso de uma solução ácida."
+      },
+      {
+        "id": "b",
+        "text": "para gerar O2: eletrólise da água purificada do mar; para absorver o CO2: uso de uma solução básica."
+      },
+      {
+        "id": "c",
+        "text": "para gerar O2: destilação da água purificada do mar; para absorver o CO2: uso de uma solução básica."
+      },
+      {
+        "id": "d",
+        "text": "para gerar O2: eletrólise direta da água do mar; para absorver o CO2: uso de uma solução ácida."
+      }
+    ],
+    "pages": [
+      20,
+      21
+    ]
+  },
+  {
+    "number": 63,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Massa Atômica, Mol e Massa Molar",
+    "title": "Massa da base e massa do cloridrato",
+    "concept": "Proporção entre massas de substâncias em associação molecular.",
+    "steps": [
+      "42,4 mg de cloridrato contêm 37,5 mg de venlafaxina neutra; a diferença 4,9 mg corresponde ao HCl associado.",
+      "Para n moléculas de HCl por molécula neutra, a razão 4,9/37,5 é n·36,5/M, em que M é a massa molar da base.",
+      "M=n·36,5·37,5/4,9≈279,34n g/mol. Se n=1, M≈279; se n=2, M≈559.",
+      "B é o único par oferecido que satisfaz a proporção: um HCl e aproximadamente 279 g/mol. As opções com 140 e as com dois HCl não reproduzem 4,9/37,5.",
+      "Confira 37,5·36,5/279≈4,91 mg de HCl. A proporção isolada fixa M/n, não n; a escolha depende dos pares apresentados nas alternativas."
+    ],
+    "trap": "Usar 42,4 mg como massa da base, ou afirmar que a razão determina n sem informações adicionais, extrapola os dados.",
+    "retrieval": [
+      "Que massa corresponde exclusivamente ao HCl?",
+      "Qual quantidade a razão de massas determina quando n é desconhecido?"
+    ],
+    "transfer": "Exercício autoral: uma base de massa molar 200 g/mol forma um sal com exatamente um HCl por molécula. Uma amostra contém 40 mg da base; calcule a massa de HCl e a massa total do sal.",
+    "criteria": [
+      "HCl=40·36,5/200=7,3 mg.",
+      "Massa total do sal=47,3 mg."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma molécula de HCl, então a massa molar da venlafaxina neutra é de aproximadamente 140 g/mol."
+      },
+      {
+        "id": "b",
+        "text": "uma molécula de HCl, então a massa molar da venlafaxina neutra é de aproximadamente 279 g/mol."
+      },
+      {
+        "id": "c",
+        "text": "duas moléculas de HCl, então a massa molar da venlafaxina neutra é de aproximadamente 279 g/mol."
+      },
+      {
+        "id": "d",
+        "text": "duas moléculas de HCl, então a massa molar da venlafaxina neutra é de aproximadamente 140 g/mol."
+      }
+    ],
+    "pages": [
+      21
+    ]
+  },
+  {
+    "number": 64,
+    "topicId": "qui_cinetica",
+    "subject": "Química",
+    "chapter": "Cinética Química",
+    "title": "Persistência do complexo e troca de ligantes",
+    "concept": "Interpretação cinética de curvas de concentração e identificação de reagente e produto.",
+    "steps": [
+      "O enunciado associa maior eficiência à menor velocidade de troca de DMSO por DMSO-d6; compare cores e tipos de traçado no gráfico.",
+      "As curvas sólidas decrescentes descrevem a permanência do DMSO ligado ao complexo; as pontilhadas crescentes descrevem DMSO liberado.",
+      "A curva sólida vermelha diminui mais lentamente do que as verde e azul, que chegam perto de seus níveis finais muito antes.",
+      "D é correta: vermelho mais eficiente, sólido para o complexo original e pontilhado para DMSO livre. A e C escolhem os de troca rápida; B troca a identidade dos traçados e ainda menciona DMSO-d6 livre.",
+      "Compare a retenção em tempos iguais, sem confundir valores iniciais diferentes com velocidade: o vermelho conserva ligante por mais tempo ao longo da série."
+    ],
+    "trap": "A curva crescente registra produto liberado, não aumento da quantidade do fármaco original.",
+    "retrieval": [
+      "Que espécie aumenta enquanto o ligante original é substituído?",
+      "Como distinguir maior concentração inicial de maior persistência?"
+    ],
+    "transfer": "Exercício autoral: dois complexos têm concentração inicial 0,020 mol/L. Após 1 h, restam 0,015 mol/L do complexo R e 0,005 mol/L do S. Calcule as perdas relativas e escolha o mais persistente pelo critério do enunciado.",
+    "criteria": [
+      "R perdeu 25% e S perdeu 75% da concentração inicial.",
+      "R é mais persistente; sob o critério proposto, é o candidato mais eficiente."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "os fármacos em verde e azul são os mais eficientes; as linhas sólidas representam suas concentrações em função do tempo; as linhas pontilhadas representam as concentrações do DMSO-d6 livre."
+      },
+      {
+        "id": "b",
+        "text": "o fármaco em vermelho é o mais eficiente; a linha pontilhada representa sua concentração em função do tempo; a linha sólida representa a concentração do DMSO-d6 livre."
+      },
+      {
+        "id": "c",
+        "text": "os fármacos em verde e azul são os mais eficientes; as linhas pontilhadas representam suas concentrações em função do tempo; as linhas sólidas representam as concentrações do DMSO livre."
+      },
+      {
+        "id": "d",
+        "text": "o fármaco em vermelho é o mais eficiente; a linha sólida representa sua concentração em função do tempo; a linha pontilhada representa a concentração do DMSO livre."
+      }
+    ],
+    "pages": [
+      21
+    ]
+  },
+  {
+    "number": 65,
+    "topicId": "qui_cinetica",
+    "subject": "Química",
+    "chapter": "Cinética Química",
+    "title": "Repelência e mortalidade em curvas dose–resposta",
+    "concept": "Leitura de resposta experimental: efeito repelente e efeito inseticida não são equivalentes.",
+    "steps": [
+      "A legenda separa símbolos preenchidos para repelência e vazados para mortalidade após 24 h, em três substâncias.",
+      "Analise separadamente se há afastamento de mosquitos e se há mortalidade, respeitando as concentrações efetivamente testadas.",
+      "As três substâncias têm repelência em parte da faixa. Apenas os círculos vazados da transflutrina saem do zero, chegando a 100%; mortalidade de icaridina e óleo de cravo permanece nula.",
+      "C corresponde aos dados. A e B negam o efeito inseticida da transflutrina; B e D também excluem a repelência observada para óleo de cravo.",
+      "Confira o óleo de cravo nas doses altas: os quadrados preenchidos sobem, mas os vazados continuam na linha de mortalidade zero."
+    ],
+    "trap": "Confundir símbolo preenchido com vazado transforma afastamento em morte; o eixo de concentração apresenta valores em escala não linear.",
+    "retrieval": [
+      "Qual diferença operacional separa repelência de mortalidade?",
+      "Que símbolos mostram o comportamento do óleo de cravo?"
+    ],
+    "transfer": "Exercício autoral: em um teste com 100 mosquitos, um composto afasta 70 e causa 5 mortes após 24 h; outro afasta 50 e causa 40 mortes. Calcule os percentuais e compare os dois efeitos.",
+    "criteria": [
+      "Primeiro: 70% de repelência e 5% de mortalidade; segundo: 50% e 40%.",
+      "O primeiro repele mais, enquanto o segundo tem maior ação inseticida; não deduzir um efeito a partir do outro."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a transflutrina, a icaridina e o óleo de cravo têm ação repelente, mas não ação inseticida."
+      },
+      {
+        "id": "b",
+        "text": "apenas a transflutrina e a icaridina têm ação repelente, mas não ação inseticida."
+      },
+      {
+        "id": "c",
+        "text": "a transflutrina, a icaridina e o óleo de cravo têm ação repelente, mas somente um deles tem ação inseticida."
+      },
+      {
+        "id": "d",
+        "text": "apenas a transflutrina e a icaridina têm ação repelente, mas somente uma delas tem ação inseticida."
+      }
+    ],
+    "pages": [
+      21
+    ]
+  },
+  {
+    "number": 66,
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "chapter": "Biomas Brasileiros",
+    "title": "Raízes expostas e ambiente do manguezal",
+    "concept": "Identificação de ecossistema costeiro e adaptações à salinidade e ao solo anóxico.",
+    "steps": [
+      "A obra mostra árvores com raízes expostas e caranguejos em um ecossistema costeiro.",
+      "Associe as raízes ao ambiente alagado e salino, distinguindo manguezal de restinga e halofitismo de xerofitismo.",
+      "Manguezais têm solo úmido, salino, pobre em oxigênio e rico em nutrientes; sua vegetação tolera salinidade e apresenta adaptações radiculares.",
+      "A reúne esses atributos. B e C descrevem restinga sem corresponder à imagem; D chama caranguejos de moluscos, embora sejam crustáceos.",
+      "A riqueza de nutrientes não elimina a baixa oxigenação do solo: alagamento e decomposição ajudam a explicar a demanda por adaptações."
+    ],
+    "trap": "Raiz exposta não é sinônimo de adaptação à seca; sua função depende das condições do ambiente.",
+    "retrieval": [
+      "O que significa vegetação halófita?",
+      "Por que solo rico em matéria orgânica pode ter pouco oxigênio?"
+    ],
+    "transfer": "Exercício autoral: um estuário tem solo permanentemente encharcado, água salobra, raízes aéreas e caranguejos. Identifique o ecossistema, duas restrições fisiológicas para as plantas e o grupo dos caranguejos.",
+    "criteria": [
+      "Identificar manguezal e restrições de salinidade e baixa disponibilidade de oxigênio no solo.",
+      "Classificar os caranguejos como artrópodes crustáceos."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "as árvores com raízes expostas representam a vegetação halófita característica de áreas alagadiças dos manguezais, sendo o solo úmido, salino, pobre em oxigênio e rico em nutrientes."
+      },
+      {
+        "id": "b",
+        "text": "os caranguejos são crustáceos e constituem a base de uma extensa cadeia alimentar, característica de áreas lodosas das restingas, com solo arenoso, pobre em nutrientes e em oxigênio."
+      },
+      {
+        "id": "c",
+        "text": "as árvores com raízes aéreas representam a vegetação xerófita característica de áreas lodosas das restingas, sendo o solo arenoso, salobre, rico em carbono e em matéria orgânica."
+      },
+      {
+        "id": "d",
+        "text": "os caranguejos são moluscos característicos de áreas alagadiças dos manguezais, habitam o solo úmido e salino, se alimentam da matéria orgânica em decomposição e de uma variedade de pequenos animais."
+      }
+    ],
+    "pages": [
+      22
+    ]
+  },
+  {
+    "number": 67,
+    "topicId": "bio_codigo_genetico_sintese",
+    "subject": "Biologia",
+    "chapter": "Ácidos Nucleicos",
+    "title": "Inativação do X e controle epigenético",
+    "concept": "Homologia parcial dos cromossomos sexuais e regulação da transcrição.",
+    "steps": [
+      "As quatro lacunas tratam, respectivamente, da relação entre X e Y, das unidades silenciadas, da etapa da expressão bloqueada e do material regulado.",
+      "Separe cromossomos sexuais de autossomos e transcrição de tradução; epigenética modifica atividade, sem alterar necessariamente a sequência do DNA.",
+      "X e Y são parcialmente homólogos; genes silenciados deixam de ser transcritos; a regulação atua sobre o funcionamento do genoma.",
+      "C fornece homólogos, genes, transcritos e genoma. A confunde transcrição com tradução e genoma com código genético; B e D classificam X e Y como autossomos.",
+      "O código genético é a correspondência entre códons e aminoácidos; não é o conjunto de sequências que sofre compactação no corpúsculo de Barr."
+    ],
+    "trap": "Dizer que genes são traduzidos confunde DNA com RNA mensageiro; tradução utiliza a mensagem transcrita.",
+    "retrieval": [
+      "Como genoma difere de código genético?",
+      "Qual etapa da expressão gênica é diretamente reduzida pelo silenciamento cromatínico?"
+    ],
+    "transfer": "Exercício autoral: duas células possuem a mesma sequência de um gene, mas somente a primeira produz seu RNA. Proponha uma explicação epigenética e indique a etapa inicialmente afetada.",
+    "criteria": [
+      "Apontar compactação de cromatina ou marca epigenética que dificulte acesso ao gene.",
+      "Identificar redução da transcrição, sem exigir mutação na sequência do DNA."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "(i) homólogos; (ii) alelos; (iii) traduzidos; (iv) código genético."
+      },
+      {
+        "id": "b",
+        "text": "(i) autossomos; (ii) genes; (iii) transcritos; (iv) código genético."
+      },
+      {
+        "id": "c",
+        "text": "(i) homólogos; (ii) genes; (iii) transcritos; (iv) genoma."
+      },
+      {
+        "id": "d",
+        "text": "(i) autossomos; (ii) alelos; (iii) traduzidos; (iv) genoma."
+      }
+    ],
+    "pages": [
+      22
+    ]
+  },
+  {
+    "number": 68,
+    "topicId": "bio_estrutura_fisio_celular",
+    "subject": "Biologia",
+    "chapter": "Citoplasma: Estrutura e Componentes II",
+    "title": "Motilidade ciliar e transporte de muco",
+    "concept": "Estruturas celulares móveis e defesa mecânica do epitélio respiratório.",
+    "steps": [
+      "As setas mostram projeções apicais móveis. Na condição infectada, há desorganização dessas estruturas, menor amplitude de movimento e maior espessura de muco.",
+      "Relacione a estrutura ao transporte mucociliar e diferencie cílios de microvilosidades absorventes.",
+      "As projeções são cílios; sua motilidade prejudicada reduz o deslocamento do muco e favorece o acúmulo e infecções secundárias.",
+      "C explica estrutura, função e consequência. A atribui absorção aos cílios e aumento de velocidade; B e D identificam incorretamente microvilosidades.",
+      "Confronte os gráficos: a oscilação regular de maior amplitude do epitélio normal dá lugar a movimento menor e irregular, coerente com a perda de transporte."
+    ],
+    "trap": "Todas as projeções apicais não têm a mesma função: microvilosidades ampliam superfície; cílios deslocam material sobre o epitélio.",
+    "retrieval": [
+      "Qual estrutura promove o transporte mucociliar?",
+      "Como a menor motilidade favorece infecção secundária?"
+    ],
+    "transfer": "Exercício autoral: em duas amostras de epitélio, o muco percorre 6 mm em 2 min e 2 mm em 2 min. Calcule as velocidades e a redução percentual, e relacione o resultado ao movimento ciliar.",
+    "criteria": [
+      "Velocidades 3 e 1 mm/min; queda de 2/3, aproximadamente 66,7%.",
+      "Menor batimento efetivo dos cílios reduz remoção de muco e partículas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "os cílios, cuja função de absorção é estimulada durante a infecção, o que justifica a maior velocidade de transporte de muco e seu acúmulo nas vias aéreas."
+      },
+      {
+        "id": "b",
+        "text": "as microvilosidades, cuja função de absorção é prejudicada durante a infecção, o que justifica a menor velocidade de transporte de muco e seu acúmulo nas vias aéreas."
+      },
+      {
+        "id": "c",
+        "text": "os cílios, cuja função de motilidade é prejudicada durante a infecção, o que justifica a menor velocidade de transporte de muco e seu acúmulo nas vias aéreas."
+      },
+      {
+        "id": "d",
+        "text": "as microvilosidades, cuja função de motilidade é estimulada durante a infecção, o que justifica a maior velocidade de transporte de muco e seu acúmulo nas vias aéreas."
+      }
+    ],
+    "pages": [
+      22
+    ]
+  },
+  {
+    "number": 69,
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "chapter": "Fisiologia Vegetal: Hormônios Vegetais",
+    "title": "Floração e duração da noite contínua",
+    "concept": "Fotoperiodismo e interrupção do período escuro; pré-requisito: distinguir dia longo de noite curta.",
+    "steps": [
+      "As condições I, II e III têm noites contínuas de 16, 12 e 8 h. Em IV, o período escuro de 14 h é interrompido por 2 h de luz.",
+      "Para a espécie de dia longo representada, procure noite curta ou noite longa interrompida, não apenas a soma diária das horas iluminadas.",
+      "III oferece 8 h contínuas de escuro; IV quebra a continuidade do escuro por um pulso luminoso e também permite a floração.",
+      "A reúne III e IV. B inclui a longa noite de I; C inclui II no lugar da noite interrompida; D inclui I e exclui III.",
+      "A escolha segue o padrão da espécie implícito nas alternativas; plantas de dia longo reais têm limiares críticos próprios, não um limite universal de 12 h."
+    ],
+    "trap": "Somar as horas de luz em IV e ignorar sua posição no meio da noite perde o fator que permite a floração.",
+    "retrieval": [
+      "Por que um pulso de luz durante a noite pode alterar a floração?",
+      "Planta de dia longo significa necessidade de noite contínua longa ou curta?"
+    ],
+    "transfer": "Exercício autoral: uma espécie de dia longo floresce quando nenhum intervalo contínuo de escuro alcança 10 h. Compare 16 h de escuro contínuo com 16 h de escuro divididas em dois blocos de 8 h por um pulso de luz eficaz.",
+    "criteria": [
+      "Sem pulso: não floresce, pois a noite contínua tem 16 h.",
+      "Com pulso: floresce, pois os dois blocos contínuos têm 8 h, abaixo do limiar."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "III e IV."
+      },
+      {
+        "id": "b",
+        "text": "I e II."
+      },
+      {
+        "id": "c",
+        "text": "II e III."
+      },
+      {
+        "id": "d",
+        "text": "I e IV."
+      }
+    ],
+    "pages": [
+      22,
+      23
+    ]
+  },
+  {
+    "number": 70,
+    "topicId": "bio_evolucao",
+    "subject": "Biologia",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "title": "Adaptação com ou sem barreira geográfica",
+    "concept": "Seleção natural, deriva, fluxo gênico e especiação alopátrica ou simpátrica.",
+    "steps": [
+      "A pergunta distingue mecanismos que alteram populações e condições que podem levar à formação de espécies.",
+      "Julgue a necessidade de isolamento geográfico separadamente da atuação da seleção natural sobre variações herdáveis.",
+      "A seleção natural pode favorecer fenótipos adequados ao ambiente tanto entre populações geograficamente isoladas como sem uma barreira geográfica.",
+      "B é correta. A confunde deriva com fluxo gênico; C atribui divergência de espécies à seleção convergente; D exige isolamento geográfico e nichos distintos em todos os casos.",
+      "Especiação simpátrica mostra que a separação espacial não é condição universal; fluxo gênico tende a homogeneizar populações, enquanto deriva resulta de amostragem aleatória."
+    ],
+    "trap": "Transformar um mecanismo comum de especiação, o isolamento geográfico, em requisito obrigatório exclui a especiação simpátrica.",
+    "retrieval": [
+      "Como deriva genética difere de fluxo gênico?",
+      "Por que isolamento geográfico não é requisito de toda especiação?"
+    ],
+    "transfer": "Exercício autoral: em uma mesma região, uma duplicação cromossômica produz plantas férteis entre si, mas incapazes de gerar descendentes férteis com a população original. Classifique o isolamento e a modalidade espacial de especiação.",
+    "criteria": [
+      "Reconhecer isolamento reprodutivo associado à alteração cromossômica.",
+      "Classificar como especiação simpátrica, pois não houve barreira geográfica."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A deriva genética é um componente da especiação, levando a uma maior diversidade genética devido ao fluxo de genes entre populações."
+      },
+      {
+        "id": "b",
+        "text": "A seleção natural contribui para a adaptação ecológica tanto na presença como na ausência de isolamento geográfico entre populações."
+      },
+      {
+        "id": "c",
+        "text": "A especiação é induzida por barreiras de fluxo gênico entre populações, sendo resultante da seleção convergente baseada na ecologia entre ambientes."
+      },
+      {
+        "id": "d",
+        "text": "O isolamento geográfico é necessário para que ocorra a especiação, com as novas espécies ocupando nichos ecológicos distintos."
+      }
+    ],
+    "pages": [
+      23
+    ]
+  },
+  {
+    "number": 71,
+    "topicId": "bio_zoologia",
+    "subject": "Biologia",
+    "chapter": "Poríferos e Cnidários",
+    "title": "Endemismo e características dos cnidários",
+    "concept": "Distribuição restrita de espécies e distinção entre filos animais.",
+    "steps": [
+      "O texto relata alto endemismo em montanhas subaquáticas e lista cnidários, moluscos, crustáceos e peixes.",
+      "Interprete endemismo como distribuição geográfica restrita e confira os atributos taxonômicos de cada alternativa.",
+      "Águas-vivas e corais são cnidários: possuem tecidos verdadeiros, simetria radial e modalidades sexuadas e assexuadas de reprodução.",
+      "B combina distribuição restrita e características corretas. A trata caravelas como triblásticas; C trata crustáceos como diblásticos; D confunde polvos, moluscos, com a forma medusa.",
+      "A forma medusoide é característica de certos cnidários, não de todo animal com tentáculos; o aspecto externo do polvo não altera sua classificação."
+    ],
+    "trap": "Endêmico não significa necessariamente raro, e presença de tentáculos não identifica sozinha o filo Cnidaria.",
+    "retrieval": [
+      "O que torna uma espécie endêmica?",
+      "Quais diferenças distinguem um polvo de uma água-viva?"
+    ],
+    "transfer": "Exercício autoral: uma espécie de coral ocorre apenas em um arquipélago e produz larvas após fecundação, além de colônias por brotamento. Indique seu filo, sua condição biogeográfica e os dois modos de reprodução.",
+    "criteria": [
+      "Filo Cnidaria e endemismo do arquipélago.",
+      "Fecundação corresponde à reprodução sexuada; brotamento, à assexuada."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "são encontrados em diversos locais do planeta Terra e que os peixes e as caravelas são exemplos de animais triblásticos."
+      },
+      {
+        "id": "b",
+        "text": "encontrados têm distribuição restrita no planeta Terra, e que as águas-vivas e os corais possuem simetria radial, tecidos verdadeiros e se reproduzem de forma sexuada e assexuada."
+      },
+      {
+        "id": "c",
+        "text": "são encontrados em diversos locais do planeta Terra e que os camarões e as lagostas são exemplos de animais diblásticos."
+      },
+      {
+        "id": "d",
+        "text": "encontrados têm distribuição restrita no planeta Terra e que os polvos representam o estágio de vida medusoide, estado este caracterizado pelo formato de sino, boca voltada para baixo e presença de tentáculos."
+      }
+    ],
+    "pages": [
+      23
+    ]
+  },
+  {
+    "number": 72,
+    "topicId": "bio_genetica",
+    "subject": "Biologia",
+    "chapter": "Ligação Gênica",
+    "title": "Mapa de três genes e dupla recombinação",
+    "concept": "Frequência de recombinação em dois intervalos adjacentes; pré-requisito: fase parental e crossing-over.",
+    "steps": [
+      "A figura dá ABC e abc: 3453 cada; ABc e abC: 476 cada; AbC e aBc: 6 cada; Abc e aBC: 134 cada. A ordem informada é A–B–C.",
+      "Identifique parentais pela maior frequência e duplos recombinantes pela inversão apenas do gene central em relação aos parentais.",
+      "Total=8138. Para AB, conte 134+134+6+6=280; para BC, conte 476+476+6+6=964. As distâncias são aproximadamente 3,44 e 11,85 cM.",
+      "D é correta: há crossing-over único e duplo, e AB<BC. A e C excluem os duplos; B inverte as distâncias.",
+      "Inclua os 12 duplos nos dois intervalos. Ressalva biológica: machos de Drosophila normalmente não realizam crossing-over; a análise numérica segue o conjunto hipotético apresentado, apesar dessa inconsistência do enunciado."
+    ],
+    "trap": "Excluir os gametas duplos reduz ambas as distâncias; calcular só A–C perde eventos que restauram a combinação dos genes externos.",
+    "retrieval": [
+      "Por que um duplo crossing-over entra na contagem dos dois intervalos?",
+      "Como os gametas raros revelam o gene central?"
+    ],
+    "transfer": "Exercício autoral: uma fêmea heterozigota A–B–C produz 1000 gametas: ABC e abc, 400 cada; ABc e abC, 60 cada; Abc e aBC, 35 cada; AbC e aBc, 5 cada. Calcule AB, BC e a frequência recombinante observada entre A e C.",
+    "criteria": [
+      "AB=(70+10)/1000=8 cM; BC=(120+10)/1000=13 cM.",
+      "Recombinantes A–C=190/1000=19%; a soma do mapa é 21 cM porque os duplos são contados nos dois intervalos."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "crossing-over único. A distância entre os genes da cor dos olhos (A/a) e os da cor do corpo (B/b) é maior que a distância entre os genes da cor do corpo (B/b) e os das cerdas (C/c)."
+      },
+      {
+        "id": "b",
+        "text": "crossing-over único ou duplo. A distância entre os genes da cor dos olhos (A/a) e os da cor do corpo (B/b) é maior que a distância entre os genes da cor do corpo (B/b) e os das cerdas (C/c)."
+      },
+      {
+        "id": "c",
+        "text": "crossing-over único. A distância entre os genes da cor dos olhos (A/a) e os da cor do corpo (B/b) é menor que a distância entre os genes da cor do corpo (B/b) e os das cerdas (C/c)."
+      },
+      {
+        "id": "d",
+        "text": "crossing-over único ou duplo. A distância entre os genes da cor dos olhos (A/a) e os da cor do corpo (B/b) é menor que a distância entre os genes da cor do corpo (B/b) e os das cerdas (C/c)."
+      }
+    ],
+    "pages": [
+      23
+    ]
+  }
+]

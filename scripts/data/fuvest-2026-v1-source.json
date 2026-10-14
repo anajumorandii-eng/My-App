@@ -1,0 +1,103 @@
+{
+  "board": "FUVEST",
+  "year": 2026,
+  "phase": "1ª fase",
+  "version": "V1",
+  "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+  "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-gabarito.pdf",
+  "excludedNumbers": [
+    3
+  ],
+  "media": [
+    {
+      "page": 9,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p09.webp",
+      "sha256": "a94bd2d6d41f59c009fb0387c99c0b768cf1e6d55d79c3250c5f0cda90c59f24"
+    },
+    {
+      "page": 10,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p10.webp",
+      "sha256": "628426d708e4df3643a59bf002764e48ae140ce3fc3c4a528fb503b26fcc3ede"
+    },
+    {
+      "page": 11,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p11.webp",
+      "sha256": "c674149d1ddbd31bef3ab49a5536a0fc58d8359f3bcd822caf3f30b42cf7cf9a"
+    },
+    {
+      "page": 15,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p15.webp",
+      "sha256": "02196c36e401edc38321d2c5d163a1e28e65825af124d244e2fad580962a212a"
+    },
+    {
+      "page": 22,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p22.webp",
+      "sha256": "1497d3e73ad305c076843720d9213ae8594305b50648eae4dc5ae252e8d37ce7"
+    },
+    {
+      "page": 25,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p25.webp",
+      "sha256": "d233dbec0babca2783acb5f9cacf824d9ad423648facae237d9ff48db4406fc2"
+    },
+    {
+      "page": 26,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p26.webp",
+      "sha256": "eab7522ffc27ce12ef480137714683392cd655c5f4cabc72e85e8f688980095f"
+    },
+    {
+      "page": 27,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p27.webp",
+      "sha256": "839ca7f0a6a6dcd379c46db8297a41530c87225cf25b83b5d40670cc89ae8b8e"
+    },
+    {
+      "page": 29,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p29.webp",
+      "sha256": "7f6c507ceea9dd5f28db440587d649769ca8a61462340d31645b2bdf290df8e3"
+    },
+    {
+      "page": 35,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p35.webp",
+      "sha256": "aef44bc74b161d3d68bbb03f7243470363ff78dfee34ed430f7603e40e88776e"
+    },
+    {
+      "page": 36,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p36.webp",
+      "sha256": "7fb678e4f148d028058e20f4047940d3adeafebf609e0c9aac21e83bd0f11a61"
+    },
+    {
+      "page": 37,
+      "url": "/question-media/oficiais/fuvest-2026-v1/p37.webp",
+      "sha256": "471c168e36b02cbf89041030f65fcef9999d006929b083069e62a5b38fa8184c"
+    }
+  ],
+  "idPrefix": "fuvest_2026",
+  "sourceFile": "FUVEST_2026_1a_fase_V1.pdf",
+  "totalQuestions": 90,
+  "firstNumber": 1,
+  "optionIds": "abcde",
+  "selectedNumbers": [
+    18,
+    20,
+    21,
+    23,
+    24,
+    25,
+    34,
+    48,
+    55,
+    59,
+    60,
+    61,
+    67,
+    84,
+    85,
+    89
+  ],
+  "answerKeyFormat": "fuvest",
+  "keyMarker": "FUVEST 2026",
+  "examSha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+  "answerKeySha256": "a9e1084a125fa35bcefb875610328c0a8cb9b1a298880f2f0c75b928bd860e8e",
+  "answerKeyTextSha256": "da1a594f93c5c37e3aa4938acb8f3d297ad79bfd099628b073626eee1fb1304d",
+  "answerKeyTextFile": "gabaritos/FUVEST/fuvest-2026-v1.txt",
+  "itemsFile": "scripts/data/fuvest-2026-v1-expansao.json"
+}

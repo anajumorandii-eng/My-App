@@ -5,6 +5,7 @@ Entrega de 13/10/2026. Escopo aprovado em conversa, incluindo execução automá
 ## Material para usar
 
 - [Expansão de questões reais — Unicamp 2026](expansao-questoes-reais.md): 72 questões oficiais com resolução por etapas, recuperação e transferência.
+- [Expansão de questões reais — seis bancas](expansao-multibancas-2026-10-14.md): mais 135 questões, fontes pareadas e revisão editorial; banco com 3.094 itens.
 - [Caderno de questões reais — PDF, 99 páginas](../../public/real-exams/unicamp-2026.pdf): prova vetorial, gabarito e resoluções autorais com navegação por questão.
 - [Guia em PDF — 24 páginas](../../public/study-guide.pdf).
 - [Guia navegável e para impressão](../../public/study-guide.html), com [estilos compartilhados](../../public/study-guide.css).

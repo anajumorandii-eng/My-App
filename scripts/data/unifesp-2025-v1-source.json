@@ -1,0 +1,72 @@
+{
+  "board": "UNIFESP",
+  "year": 2025,
+  "phase": "1º dia · Língua Portuguesa e Língua Inglesa",
+  "version": "V1",
+  "examUrl": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+  "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+  "excludedNumbers": [],
+  "media": [
+    {
+      "page": 3,
+      "url": "/question-media/oficiais/unifesp-2025-v1/p03.webp",
+      "sha256": "02a4c9906f985fdffc89e77722cbd191084130169bf7f759db92d9dc3488f310"
+    },
+    {
+      "page": 4,
+      "url": "/question-media/oficiais/unifesp-2025-v1/p04.webp",
+      "sha256": "b80ec371485c64ccf03d6a1c2c2108c1bd8c3acdf8faf2443d148cf5e745046e"
+    },
+    {
+      "page": 5,
+      "url": "/question-media/oficiais/unifesp-2025-v1/p05.webp",
+      "sha256": "2105d90c65509d3736c3014f6b9dfb2cd2c94eb29b125117dedb0d11e5973e06"
+    },
+    {
+      "page": 6,
+      "url": "/question-media/oficiais/unifesp-2025-v1/p06.webp",
+      "sha256": "0c342b23c649db06f48fb1d812908eac9e46b44a2ebe1efa4049d3f755b75670"
+    },
+    {
+      "page": 7,
+      "url": "/question-media/oficiais/unifesp-2025-v1/p07.webp",
+      "sha256": "06dbed8d8280bbb66676222ce7dcf93aaa8d0c87de0f04f9a59ade05e9f3316d"
+    },
+    {
+      "page": 8,
+      "url": "/question-media/oficiais/unifesp-2025-v1/p08.webp",
+      "sha256": "5aff424b945a7daac0d1b4f3a8fe36d757e242bfd046862ab1eac56c09e2346b"
+    },
+    {
+      "page": 9,
+      "url": "/question-media/oficiais/unifesp-2025-v1/p09.webp",
+      "sha256": "65125f417fb51b445a7c405c332c03f6cd7635f7987cdd6d46e8ea3867595cb6"
+    }
+  ],
+  "idPrefix": "unifesp_2025_v1",
+  "sourceFile": "UNIFESP_2025_dia_1_objetiva_V1.pdf",
+  "totalQuestions": 25,
+  "firstNumber": 1,
+  "optionIds": "abcde",
+  "selectedNumbers": [
+    1,
+    3,
+    6,
+    7,
+    8,
+    9,
+    10,
+    12,
+    16,
+    19,
+    23,
+    25
+  ],
+  "answerKeyFormat": "vunesp",
+  "keyMarker": "UFSP2401",
+  "examSha256": "962508178f10fd97e78d1155a6f5fe5ce62d709cd677261d38f79b5617d8af20",
+  "answerKeySha256": "9a22a33dabb7f7b9e8d7a245aceceaf170806f007e41475bc4acc55d6d73d4a7",
+  "answerKeyTextSha256": "73c0b27db0d0858b3420873bc59deead07e953bd5437bf869efa74eb6df0f3a2",
+  "answerKeyTextFile": "gabaritos/UNIFESP/unifesp-2025-v1.txt",
+  "itemsFile": "scripts/data/unifesp-2025-v1-expansao.json"
+}

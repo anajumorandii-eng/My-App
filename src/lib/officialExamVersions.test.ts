@@ -1,0 +1,35 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import { readFileSync } from 'node:fs';
+import { mockTopics } from '../data/mockData';
+import { buildReviewedExamQuestions, readComvestQXAnswerKey } from './officialExamExpansion';
+import * as expansion from './officialExamExpansion';
+const oldItems = JSON.parse(readFileSync('scripts/data/unicamp-2026-qx.json','utf8'));
+const oldSource = JSON.parse(readFileSync('scripts/data/unicamp-2026-qx-source.json','utf8'));
+const oldAnswers = readComvestQXAnswerKey(readFileSync('gabaritos/UNICAMP/UNICAMP-2026_Provas_Q_e_X.txt','utf8'));
+const text = readFileSync('gabaritos/UNICAMP/unicamp-2025-qz.txt','utf8');
+test('parser seleciona Q/Z e preserva a anulação oficial sem adivinhar alternativa',()=>{
+  const read = expansion.readComvestAnswerKey;
+  assert.equal(typeof read,'function');
+  const answers: Map<number,string> = read(text,'Q/Z');
+  assert.equal(answers.size,72);
+  assert.equal(answers.get(1),'b');
+  assert.equal(answers.get(53),'*');
+  assert.equal(answers.get(72),'d');
+  assert.throws(()=>read(text,'Q/X'),/corresponde/);
+  assert.throws(()=>read(text.replace(/18\s+D.*72\s+D/,'18 D'),'Q/Z'),/incompleto/);
+});
+test('nova edição mantém identidade própria e exige exclusão explícita da anulada',()=>{
+  const source = {...oldSource,year:2025,version:'Q/Z'};
+  const sameNumbers = buildReviewedExamQuestions(oldItems,oldAnswers,source,mockTopics);
+  assert.equal(sameNumbers[0].id,'unicamp_2025_q01');
+  assert.match(sameNumbers[0].prompt,/UNICAMP 2025.*Q\/Z/);
+  assert.equal(sameNumbers[0].sourceMaterial?.file,'UNICAMP_2025_1a_fase_Q_Z.pdf');
+  const answers = new Map(oldAnswers); answers.set(53,'*');
+  const items = oldItems.filter((item:any)=>item.number!==53);
+  const result = buildReviewedExamQuestions(items,answers,{...source,excludedNumbers:[53]},mockTopics);
+  assert.equal(result.length,71);
+  assert.ok(!result.some(q=>q.examSource?.questionNumber===53));
+  assert.throws(()=>buildReviewedExamQuestions(items,answers,source,mockTopics),/fichas/);
+  assert.throws(()=>buildReviewedExamQuestions(items,oldAnswers,{...source,excludedNumbers:[53]},mockTopics),/anulada/);
+});

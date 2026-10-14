@@ -22,14 +22,28 @@ export interface OfficialExamSource {
   year: number;
   phase: string;
   version: string;
+  excludedNumbers?: number[];
   examUrl: string;
   answerKeyUrl: string;
   media: { page: number; url: string; sha256: string }[];
 }
 
-/** Q/X has numbered pairs in four columns, unlike the FUVEST version table. */
-export function readComvestQXAnswerKey(text: string): Map<number, string> {
-  if (!/PROVAS\s+Q\s+(?:e|E)\s+X/.test(text)) throw new Error('Gabarito não corresponde às provas Q/X.');
+export interface ReviewedOfficialSource extends OfficialExamSource {
+  idPrefix: string;
+  sourceFile: string;
+  totalQuestions: number;
+  firstNumber: number;
+  optionIds: 'abcd' | 'abcde';
+  selectedNumbers: number[];
+}
+
+/** Comvest's numbered column pairs belong to one version, not four versions. */
+export function readComvestAnswerKey(text: string, version: string): Map<number, string> {
+  if (!/^[A-Z]\/[A-Z]$/.test(version)) throw new Error('Versão da prova inválida.');
+  const [first, second] = version.split('/');
+  if (!new RegExp(`PROVAS\\s+${first}\\s+(?:e|E)\\s+${second}\\b`).test(text)) {
+    throw new Error(`Gabarito não corresponde às provas ${version}.`);
+  }
   const answers = new Map<number, string>();
   for (const line of text.split('\n')) {
     if (!/^\s*\d{2}\s+[A-D*](?:\s+\d{2}\s+[A-D*]){3}\s*$/.test(line)) continue;
@@ -40,21 +54,58 @@ export function readComvestQXAnswerKey(text: string): Map<number, string> {
     }
   }
   if (answers.size !== 72 || Array.from({ length: 72 }, (_, i) => i + 1).some(n => !answers.has(n))) {
-    throw new Error('Gabarito Q/X incompleto: esperadas as 72 questões numeradas.');
+    throw new Error(`Gabarito ${version} incompleto: esperadas as 72 questões numeradas.`);
   }
   return answers;
+}
+export function readComvestQXAnswerKey(text: string): Map<number, string> {
+  return readComvestAnswerKey(text, 'Q/X');
 }
 
 export function buildReviewedExamQuestions(
   items: ReviewedExamItem[], answers: Map<number, string>, source: OfficialExamSource, topics: Topic[],
 ): Question[] {
+  if (!Number.isInteger(source.year) || !/^[A-Z]\/[A-Z]$/.test(source.version) ||
+      !['UNICAMP','COMVEST'].includes(source.board.toUpperCase())) throw new Error('Identidade da fonte Unicamp inválida.');
+  const excluded = new Set(source.excludedNumbers ?? []);
+  if (items.length !== 72 - excluded.size) throw new Error(`A expansão deve conter ${72 - excluded.size} fichas revisadas.`);
+  return buildReviewedOfficialQuestions(items, answers, {
+    ...source, idPrefix: `unicamp_${source.year}`, sourceFile: `UNICAMP_${source.year}_1a_fase_${source.version.replace('/', '_')}.pdf`,
+    totalQuestions: 72, firstNumber: 1, optionIds: 'abcd',
+    selectedNumbers: Array.from({length:72}, (_, i) => i + 1).filter(n => !excluded.has(n)),
+  }, topics);
+}
+
+export function buildReviewedOfficialQuestions(
+  items: ReviewedExamItem[], answers: Map<number, string>, source: ReviewedOfficialSource, topics: Topic[],
+): Question[] {
   const catalog = new Map(topics.map(topic => [topic.id, topic]));
   const numbers = new Set<number>();
   const labels = ['Identificar dados', 'Escolher a estratégia', 'Aplicar o conceito', 'Justificar', 'Conferir'];
-  if (items.length !== 72) throw new Error('A expansão deve conter as 72 fichas revisadas.');
+  const lastNumber = source.firstNumber + source.totalQuestions - 1;
+  const inRange = (n: number) => Number.isInteger(n) && n >= source.firstNumber && n <= lastNumber;
+  if (!Number.isInteger(source.year) || !Number.isInteger(source.totalQuestions) || source.totalQuestions < 1 ||
+      !Number.isInteger(source.firstNumber) || source.firstNumber < 1 || !/^[a-z0-9_]+$/.test(source.idPrefix) ||
+      !source.sourceFile.endsWith('.pdf') || !source.board.trim() || !source.phase.trim() || !source.version.trim() ||
+      !['abcd', 'abcde'].includes(source.optionIds)) throw new Error('Identidade da fonte oficial inválida.');
+  if (answers.size !== source.totalQuestions || [...answers].some(([n, a]) => !inRange(n) ||
+      (a !== '*' && (a.length !== 1 || !source.optionIds.includes(a))))) throw new Error('Gabarito incompleto ou fora da faixa oficial.');
+  if (new Set(source.media.map(media => media.page)).size !== source.media.length || source.media.some(media =>
+      !Number.isInteger(media.page) || media.page < 1 || !media.url.trim() || !/^[a-f0-9]{64}$/.test(media.sha256))) {
+    throw new Error('Catálogo de páginas inválido.');
+  }
+  const excluded = new Set(source.excludedNumbers ?? []);
+  if (excluded.size !== (source.excludedNumbers ?? []).length || [...excluded].some(number =>
+      !inRange(number) || answers.get(number) !== '*')) {
+    throw new Error('Exclusão exige questão anulada no gabarito oficial.');
+  }
+  const selected = new Set(source.selectedNumbers);
+  if (!selected.size || selected.size !== source.selectedNumbers.length || items.length !== selected.size ||
+      [...selected].some(n => !inRange(n) || excluded.has(n) || answers.get(n) === '*') ||
+      [...answers].some(([n,a]) => a === '*' && !excluded.has(n))) throw new Error('Seleção inválida: item anulado ou anulação não registrada.');
   return items.map(item => {
     const topic = catalog.get(item.topicId);
-    if (!Number.isInteger(item.number) || item.number < 1 || item.number > 72 || numbers.has(item.number)) {
+    if (!inRange(item.number) || !selected.has(item.number) || numbers.has(item.number) || excluded.has(item.number)) {
       throw new Error(`Número inválido ou duplicado: ${item.number}.`);
     }
     numbers.add(item.number);
@@ -65,7 +116,7 @@ export function buildReviewedExamQuestions(
     if (!answer || answer === '*' || !item.options.some(option => option.id === answer)) {
       throw new Error(`Gabarito ausente, anulado ou inválido: questão ${item.number}.`);
     }
-    if (item.options.map(option => option.id).join('') !== 'abcd' || item.options.some(option => !option.text.trim())) {
+    if (item.options.map(option => option.id).join('') !== source.optionIds || item.options.some(option => !option.text.trim())) {
       throw new Error(`Alternativas incompletas: questão ${item.number}.`);
     }
     if (item.steps.length !== 5 || item.steps.some(step => !step.trim()) || item.retrieval.length !== 2 ||
@@ -74,7 +125,7 @@ export function buildReviewedExamQuestions(
         !item.title.trim() || !item.concept.trim() || !['easy', 'medium', 'hard'].includes(item.difficulty)) {
       throw new Error(`Comentário ou revisão incompletos: questão ${item.number}.`);
     }
-    if (!item.pages.length || new Set(item.pages).size !== item.pages.length) {
+    if (!item.pages.length || new Set(item.pages).size !== item.pages.length || item.pages.some(page => !Number.isInteger(page) || page < 1)) {
       throw new Error(`Páginas ausentes ou repetidas: questão ${item.number}.`);
     }
     const originalPages = item.pages.map(page => {
@@ -83,11 +134,11 @@ export function buildReviewedExamQuestions(
       return { page, url: media.url };
     });
     return {
-      id: `unicamp_2026_q${String(item.number).padStart(2, '0')}`,
+      id: `${source.idPrefix}_q${String(item.number).padStart(2, '0')}`,
       topicId: item.topicId, subject: item.subject, chapter: item.chapter,
-      prompt: `UNICAMP 2026 · 1ª fase · prova Q/X · questão ${item.number}.\nTema de estudo: ${item.title}.\nLeia o enunciado original, os textos e as figuras nas páginas abaixo. Responda apenas à questão ${item.number}.`,
+      prompt: `${['UNICAMP','COMVEST'].includes(source.board.toUpperCase()) ? 'UNICAMP' : source.board} ${source.year} · ${source.phase} · prova ${source.version} · questão ${item.number}.\nTema de estudo: ${item.title}.\nLeia o enunciado original, os textos e as figuras nas páginas abaixo. Responda apenas à questão ${item.number}.`,
       options: item.options, correctOptionId: answer, difficulty: item.difficulty, originalPages,
-      sourceMaterial: { file: 'UNICAMP_2026_1a_fase_Q_X.pdf', page: item.pages[0], questionNumber: item.number },
+      sourceMaterial: { file: source.sourceFile, page: item.pages[0], questionNumber: item.number },
       examSource: {
         board: source.board, year: source.year, sourceUrl: source.examUrl,
         answerKeyUrl: source.answerKeyUrl, phase: source.phase, version: source.version, questionNumber: item.number,

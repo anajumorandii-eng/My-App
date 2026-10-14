@@ -1,0 +1,616 @@
+[
+  {
+    "number": 3,
+    "topicId": "por_lit_classica_barroca",
+    "subject": "Português",
+    "chapter": "A Estética Neoclássica",
+    "title": "Mitologia no poema árcade",
+    "concept": "Referências clássicas na estética árcade; pré-requisito: reconhecer o repertório greco-romano.",
+    "steps": [
+      "Localize Vênus, Antero e Cupido no poema e leia as notas que identificam a deusa e seus filhos.",
+      "Procure uma marca efetivamente presente no texto, sem presumir que todo poema árcade desenvolva o mesmo tema.",
+      "O enredo mobiliza divindades do amor e corresponde à retomada de referências da Antiguidade clássica.",
+      "A é correta pela referência greco-romana; B descreve um traço amplo da poesia lírica, C não é o tema demonstrado e D exige um elogio bucólico ausente.",
+      "Confira a presença de primeira pessoa e emoções: ela também afasta E, que atribui objetividade e impessoalidade ao poema."
+    ],
+    "trap": "Confundir uma característica recorrente do Arcadismo, como o bucolismo, com a característica comprovada neste poema.",
+    "retrieval": [
+      "Que personagens tornam explícito o repertório clássico?",
+      "Como distinguir uma marca da escola de uma marca comprovada no texto?"
+    ],
+    "transfer": "Exercício autoral: um poema invoca Apolo para inspirar o canto. Identifique a origem desse repertório e explique por que a invocação, sozinha, não prova bucolismo.",
+    "criteria": [
+      "Apolo pertence à mitologia greco-romana; reconhecer retomada clássica.",
+      "Bucolismo requer valorização do campo ou vida pastoril, não fornecida pela simples invocação."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "a referência à mitologia greco-romana."
+      },
+      {
+        "id": "b",
+        "text": "a tonalidade subjetiva e confessional."
+      },
+      {
+        "id": "c",
+        "text": "a temática voltada à transitoriedade da vida."
+      },
+      {
+        "id": "d",
+        "text": "o enaltecimento da vida bucólica."
+      },
+      {
+        "id": "e",
+        "text": "o ideal da objetividade e da impessoalidade."
+      }
+    ],
+    "pages": [
+      2
+    ]
+  },
+  {
+    "number": 5,
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "chapter": "Vozes Verbais",
+    "title": "O se como pronome apassivador",
+    "concept": "Voz passiva sintética; pré-requisito: transitividade e sujeito paciente.",
+    "steps": [
+      "Compare os cinco versos, observando o verbo a que se está associado.",
+      "Teste a transformação em voz passiva analítica: objeto procurado pode tornar-se sujeito paciente.",
+      "Em “O tesouro se procura”, o sentido é “O tesouro é procurado”; tesouro recebe a ação e procurar é transitivo direto.",
+      "E é correta. Em A e B, se acompanha acolher-se e esconder-se; C e D iniciam hipóteses com se, sem construir passiva.",
+      "Confira a concordância pelo plural: “Os tesouros se procuram” equivale a “Os tesouros são procurados”."
+    ],
+    "trap": "Tomar qualquer ocorrência de se como passiva, ignorando usos pronominais e condicionais.",
+    "retrieval": [
+      "Qual paráfrase identifica a passiva sintética?",
+      "Por que se em “Se os procuro” não apassiva procurar?"
+    ],
+    "transfer": "Exercício autoral: transforme “Vendem-se duas casas” em passiva analítica e identifique o sujeito.",
+    "criteria": [
+      "“Duas casas são vendidas”, preservando o plural.",
+      "Duas casas é sujeito paciente; se é pronome apassivador."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“No teu seio se acolheram,” (6ª estrofe)"
+      },
+      {
+        "id": "b",
+        "text": "“Dos meus olhos não se escondem” (8ª estrofe)"
+      },
+      {
+        "id": "c",
+        "text": "“Se os procuro, espreito e chamo,” (8ª estrofe)"
+      },
+      {
+        "id": "d",
+        "text": "“Se piedade aflito rogo,” (11ª estrofe)"
+      },
+      {
+        "id": "e",
+        "text": "“O tesouro se procura,” (2ª estrofe)"
+      }
+    ],
+    "pages": [
+      2,
+      3
+    ]
+  },
+  {
+    "number": 12,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Concessão com although",
+    "concept": "Conector concessivo; pré-requisito: relação entre orações.",
+    "steps": [
+      "Leia “Although online dating had been around since Match.com” no contexto da popularização dos aplicativos.",
+      "Identifique uma informação admitida que não impede a afirmação posterior: namoro online já existia.",
+      "Although equivale a “apesar de que”, expresso por “Despite the fact that”.",
+      "C mantém a concessão; A introduz circunstância causal/temporal, B e D hipótese ou condição, E finalidade.",
+      "Substitua o conector na frase inteira e confira que o fato anterior continua reconhecido sem mudar para uma condição."
+    ],
+    "trap": "Confundir concessão, que admite um fato, com condição, que depende de hipótese.",
+    "retrieval": [
+      "Qual relação although estabelece?",
+      "Como diferenciar despite the fact that de on the condition that?"
+    ],
+    "transfer": "Exercício autoral: reescreva “Although the app was free, few people downloaded it” com “Despite the fact that” e traduza.",
+    "criteria": [
+      "“Despite the fact that the app was free, few people downloaded it”.",
+      "“Apesar de o aplicativo ser gratuito, poucas pessoas o baixaram”; relação concessiva."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "Now that."
+      },
+      {
+        "id": "b",
+        "text": "Assuming that."
+      },
+      {
+        "id": "c",
+        "text": "Despite the fact that."
+      },
+      {
+        "id": "d",
+        "text": "On the condition that."
+      },
+      {
+        "id": "e",
+        "text": "In order that."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ]
+  },
+  {
+    "number": 21,
+    "topicId": "his_idade_antiga",
+    "subject": "História",
+    "chapter": "Antiguidade Clássica: o Mundo Romano",
+    "title": "Cristianismo e autoridade imperial",
+    "concept": "Relação entre culto público e poder romano; pré-requisito: religião cívica no Império.",
+    "steps": [
+      "O excerto contrapõe tolerância a várias religiões e perseguição aos cristãos por mais de dois séculos.",
+      "Identifique o motivo expresso: a recusa ao culto dos deuses e do imperador era vista como desafio à ordem.",
+      "O culto imperial tinha dimensão política; recusá-lo podia ser interpretado como contestação da autoridade do Estado.",
+      "D corresponde à ameaça política percebida; A transforma Roma em monoteísta e B nega a perseguição mencionada.",
+      "C atribui apoio valorativo ao autor sem evidência; E nega o conflito. Confira que D explica a interpretação romana, não uma aprovação da perseguição."
+    ],
+    "trap": "Ler a perseguição apenas como divergência teológica e perder a ligação explícita com a ordem política.",
+    "retrieval": [
+      "Por que a recusa ao culto imperial podia ser política?",
+      "A tolerância romana era irrestrita segundo o excerto?"
+    ],
+    "transfer": "Exercício autoral: um Estado exige um rito público em honra do governante; um grupo religioso se recusa. Explique duas dimensões do conflito.",
+    "criteria": [
+      "Dimensão religiosa: divergência sobre o culto e suas obrigações.",
+      "Dimensão política: o Estado pode interpretar a recusa como contestação de autoridade ou lealdade."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "defende a centralidade do monoteísmo na organização interna do Império."
+      },
+      {
+        "id": "b",
+        "text": "destaca a relação pacífica que o Império manteve em relação a todas as religiões."
+      },
+      {
+        "id": "c",
+        "text": "apoia a atitude desafiadora dos cristãos em relação ao comando do Império."
+      },
+      {
+        "id": "d",
+        "text": "aponta a ameaça política que o cristianismo representou para o Império."
+      },
+      {
+        "id": "e",
+        "text": "rejeita a ideia de que o Império ameaçasse o avanço do cristianismo."
+      }
+    ],
+    "pages": [
+      6
+    ]
+  },
+  {
+    "number": 32,
+    "topicId": "geo_populacao_urbana_brasil",
+    "subject": "Geografia",
+    "chapter": "Os Fluxos do Comércio Externo",
+    "title": "Commodities e balança comercial",
+    "concept": "Exportações de produtos básicos; pré-requisito: saldo comercial e valor agregado.",
+    "steps": [
+      "O texto define commodities como mercadorias padronizadas agrícolas, minerais ou energéticas negociadas mundialmente.",
+      "Diferencie relevância econômica de sofisticação tecnológica: produtos básicos podem gerar grandes receitas de exportação.",
+      "As exportações de commodities brasileiras somam receitas externas e contribuem positivamente para a balança comercial.",
+      "D é correta; A e E minimizam um setor relevante, B confunde commodities com bens de alta tecnologia.",
+      "C troca o mecanismo de contribuição ao comércio externo por infraestrutura e serviços; confira que saldo comercial é exportações menos importações."
+    ],
+    "trap": "Concluir que produto com pouco processamento tem pouca importância econômica.",
+    "retrieval": [
+      "O que define commodity no texto?",
+      "Como uma exportação contribui para o saldo comercial?"
+    ],
+    "transfer": "Exercício autoral: um país exporta US$ 70 bilhões de commodities e US$ 30 bilhões de outros bens, importando US$ 85 bilhões. Calcule o saldo comercial e a parcela das commodities nas exportações.",
+    "criteria": [
+      "Saldo = 100 − 85 = US$ 15 bilhões, superávit.",
+      "Commodities = 70/100 = 70% das exportações."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "insignificantes, uma vez que a exportação de produtos industrializados garante o superávit econômico."
+      },
+      {
+        "id": "b",
+        "text": "relevantes, uma vez que são produtos com alto valor agregado relacionados com os setores de alta tecnologia."
+      },
+      {
+        "id": "c",
+        "text": "expressivas, uma vez que são impulsionadas por investimentos nos setores de infraestrutura e serviços."
+      },
+      {
+        "id": "d",
+        "text": "importantes, uma vez que as exportações desses produtos influenciam positivamente a balança comercial."
+      },
+      {
+        "id": "e",
+        "text": "inexpressivas, uma vez que a principal fonte de crescimento econômico do país está atrelada ao setor de serviços."
+      }
+    ],
+    "pages": [
+      9
+    ]
+  },
+  {
+    "number": 46,
+    "topicId": "bio_zoologia",
+    "subject": "Biologia",
+    "chapter": "Protozoários e Protozooses",
+    "title": "Transmissão fecal-oral da amebíase",
+    "concept": "Ingestão de cistos de protozoários; pré-requisito: distinguir formas infectantes e vetores.",
+    "steps": [
+      "Identifique a doença como amebíase, uma protozoose intestinal, e não uma verminose ou infecção transmitida por insetos.",
+      "Recupere sua via fecal-oral: cistos eliminados nas fezes podem contaminar água e alimentos.",
+      "A infecção ocorre pela ingestão dos cistos de Entamoeba histolytica presentes no material contaminado.",
+      "E é correta. A remete a vetores de outras protozooses; B a larvas de helmintos; D à transmissão vetorial da doença de Chagas.",
+      "C menciona cisticercos em carne, ligados à teníase, não à amebíase. Confira que a prevenção envolve água segura, higiene e saneamento."
+    ],
+    "trap": "Associar toda protozoose a mosquito ou confundir cisto de protozoário com cisticerco de helminto.",
+    "retrieval": [
+      "Qual é a forma infectante ingerida na amebíase?",
+      "Que medida interrompe a via fecal-oral?"
+    ],
+    "transfer": "Exercício autoral: moradores adoecem após beber água de poço contaminado por esgoto. Explique uma via possível de amebíase e proponha duas medidas de prevenção.",
+    "criteria": [
+      "Ingestão de cistos de E. histolytica na água contaminada.",
+      "Tratar a água e impedir contaminação por esgoto; higiene de mãos/alimentos também é aceitável."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "picada de mosquitos contaminados."
+      },
+      {
+        "id": "b",
+        "text": "penetração de larvas na pele humana."
+      },
+      {
+        "id": "c",
+        "text": "ingestão de carne crua contaminada com cisticercos."
+      },
+      {
+        "id": "d",
+        "text": "picada de barbeiros contaminados."
+      },
+      {
+        "id": "e",
+        "text": "ingestão de água ou alimentos contaminados por cistos."
+      }
+    ],
+    "pages": [
+      13
+    ]
+  },
+  {
+    "number": 47,
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "chapter": "Fisiologia da Coordenação Nervosa I",
+    "title": "Receptores opioides e sinapse neural",
+    "concept": "Receptores de membrana na comunicação neural; pré-requisito: neurônio e sinapse química.",
+    "steps": [
+      "O excerto diz que o fentanil interage com receptores opioides no cérebro e altera a sinalização neural.",
+      "Localize o alvo descrito: receptor proteico de membrana, relacionado à comunicação entre células, não ao DNA nuclear.",
+      "Entre as alternativas, D descreve interação sináptica com proteínas expostas na membrana dendrítica.",
+      "A e E afirmam bloqueios de liberação ou transporte não apresentados; B desloca o alvo para expressão gênica e C para a bainha de mielina.",
+      "Confira D como a descrição compatível entre as oferecidas; o excerto não exige que todos os receptores opioides reais sejam exclusivamente dendríticos."
+    ],
+    "trap": "Confundir modulação de receptores com interrupção física da condução no axônio; não generalizar a localização dendrítica a todos os receptores opioides.",
+    "retrieval": [
+      "Qual estrutura celular recebe o sinal em uma sinapse química?",
+      "Interagir com receptor de membrana equivale a alterar diretamente o DNA?"
+    ],
+    "transfer": "Exercício autoral: uma substância liga-se a um receptor na membrana pós-sináptica e reduz a resposta a um neurotransmissor. Identifique o local de ação e diferencie-o da bainha de mielina.",
+    "criteria": [
+      "Ação na membrana pós-sináptica e na recepção do sinal químico.",
+      "Mielina isola segmentos axoniais e favorece condução; não é o receptor descrito."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "nas terminações axoniais dos neurônios ao bloquear a liberação de neurotransmissores pela membrana da célula."
+      },
+      {
+        "id": "b",
+        "text": "no núcleo do neurônio ao inibir a expressão do gene responsável pela síntese de neurotransmissores."
+      },
+      {
+        "id": "c",
+        "text": "na bainha de mielina dos neurônios ao interromper a condução dos impulsos nervosos pelo bloqueio de receptores nos axônios."
+      },
+      {
+        "id": "d",
+        "text": "na sinapse neural ao interagir com as proteínas de membrana presentes na superfície externa dos dendritos nos neurônios."
+      },
+      {
+        "id": "e",
+        "text": "nos axônios dos neurônios ao inibir o transporte de neurotransmissores ao longo dessas estruturas celulares."
+      }
+    ],
+    "pages": [
+      13
+    ]
+  },
+  {
+    "number": 54,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "title": "Balanceamento da produção de fósforo branco",
+    "concept": "Conservação dos átomos; pré-requisito: leitura de índices e coeficientes.",
+    "steps": [
+      "A equação fixa 1 P4, 6 CaSiO3 e 10 CO nos produtos; determine x, y e z nos reagentes.",
+      "Balanceie primeiro fósforo e cálcio: cada Ca3(PO4)2 tem dois P e três Ca.",
+      "Para quatro P, x = 2; seis Si exigem y = 6 e dez CO exigem z = 10.",
+      "Logo x + y + z = 18, alternativa D. A, B, C e E não correspondem à soma dos três coeficientes que conservam os elementos.",
+      "Confira oxigênio: reagentes 2×8 + 6×2 = 28; produtos 6×3 + 10 = 28. Não inclua os coeficientes dos produtos na soma pedida."
+    ],
+    "trap": "Somar todos os coeficientes ou alterar índices das fórmulas para balancear.",
+    "retrieval": [
+      "Qual coeficiente fornece quatro átomos de fósforo?",
+      "Como conferir a conservação do oxigênio?"
+    ],
+    "transfer": "Exercício autoral: para a mesma reação balanceada, calcule os mols de Ca3(PO4)2, SiO2 e C consumidos para obter 3 mol de P4.",
+    "criteria": [
+      "Multiplicar os coeficientes 2, 6 e 10 por 3.",
+      "Consumos: 6 mol de Ca3(PO4)2, 18 mol de SiO2 e 30 mol de C."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "20."
+      },
+      {
+        "id": "b",
+        "text": "14."
+      },
+      {
+        "id": "c",
+        "text": "16."
+      },
+      {
+        "id": "d",
+        "text": "18."
+      },
+      {
+        "id": "e",
+        "text": "12."
+      }
+    ],
+    "pages": [
+      16
+    ]
+  },
+  {
+    "number": 55,
+    "topicId": "qui_polaridade_geometria",
+    "subject": "Química",
+    "chapter": "Interações Intermoleculares",
+    "title": "Ligações de hidrogênio na solução de boldina",
+    "concept": "Interações entre grupos OH e amina; pré-requisito: eletronegatividade e pares de elétrons.",
+    "steps": [
+      "Observe as estruturas: a boldina apresenta grupos OH e a dietilamina apresenta N–H e par de elétrons disponível no nitrogênio.",
+      "Procure hidrogênios ligados a O ou N e átomos eletronegativos capazes de aceitar ligação de hidrogênio.",
+      "As moléculas podem estabelecer interações O–H···N, entre outras ligações de hidrogênio compatíveis com os grupos mostrados.",
+      "D nomeia a interação específica predominante; A é uma categoria menos específica, C descreve indução e não reconhece os grupos capazes de ligação de hidrogênio.",
+      "B e E exigem espécies iônicas que não são as moléculas neutras representadas. Confira a estrutura em vez de usar apenas a fórmula molecular."
+    ],
+    "trap": "Chamar qualquer interação entre moléculas polares apenas de dipolo permanente e perder a ligação de hidrogênio indicada pelos grupos.",
+    "retrieval": [
+      "Quais grupos da boldina podem doar hidrogênio nessa interação?",
+      "Qual átomo da dietilamina pode aceitar ligação de hidrogênio?"
+    ],
+    "transfer": "Exercício autoral: compare etanol com dietiléter quanto à capacidade de formar ligações de hidrogênio entre moléculas da própria substância.",
+    "criteria": [
+      "Etanol tem O–H doador e O aceitador, formando ligações de hidrogênio entre suas moléculas.",
+      "Dietiléter possui O aceitador, mas não O–H/N–H/F–H doador; não forma essas ligações entre suas próprias moléculas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "interação dipolo permanente – dipolo permanente."
+      },
+      {
+        "id": "b",
+        "text": "interação íon – dipolo permanente."
+      },
+      {
+        "id": "c",
+        "text": "interação dipolo permanente – dipolo induzido."
+      },
+      {
+        "id": "d",
+        "text": "ligação de hidrogênio."
+      },
+      {
+        "id": "e",
+        "text": "ligação iônica."
+      }
+    ],
+    "pages": [
+      16
+    ]
+  },
+  {
+    "number": 63,
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "chapter": "Órbitas",
+    "title": "Velocidade orbital de um satélite",
+    "concept": "Gravitação como força centrípeta; pré-requisito: movimento circular uniforme.",
+    "steps": [
+      "Considere massa terrestre M, massa do satélite m e raio orbital R medido a partir do centro da Terra.",
+      "Iguale os módulos: GMm/R² = mv²/R, pois a gravitação fornece a resultante centrípeta.",
+      "Cancele m e um fator R; resulta v² = GM/R e v = √(GM/R).",
+      "C é correta. A mantém m e não tem raiz; B multiplica o termo por 2, como na velocidade de escape; D mantém R² e E divide por 2 indevidamente.",
+      "Confira a unidade: GM/R tem dimensão m²/s², cuja raiz é velocidade; a massa do satélite não altera v para uma órbita de mesmo raio."
+    ],
+    "trap": "Confundir raio orbital com altitude ou velocidade orbital com velocidade de escape.",
+    "retrieval": [
+      "Por que a massa do satélite desaparece?",
+      "Como a velocidade muda se o raio orbital quadruplica?"
+    ],
+    "transfer": "Exercício autoral: dois satélites orbitam o mesmo planeta em raios R e 4R. Se o primeiro tem velocidade 8 km/s, determine a velocidade do segundo.",
+    "criteria": [
+      "Usar v proporcional a 1/√R para massa planetária fixa.",
+      "v₂/v₁ = 1/2; v₂ = 4 km/s."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "v = G·M·m/R"
+      },
+      {
+        "id": "b",
+        "text": "v = √(2·G·M/R)"
+      },
+      {
+        "id": "c",
+        "text": "v = √(G·M/R)"
+      },
+      {
+        "id": "d",
+        "text": "v = √(G·M/R²)"
+      },
+      {
+        "id": "e",
+        "text": "v = √(G·M/(2·R))"
+      }
+    ],
+    "pages": [
+      18
+    ]
+  },
+  {
+    "number": 72,
+    "topicId": "mat_funcoes",
+    "subject": "Matemática",
+    "chapter": "Função Constante e Função Afim",
+    "title": "Conversão entre três escalas afins",
+    "concept": "Determinação de coeficientes a partir de dois pontos; pré-requisito: função afim.",
+    "steps": [
+      "Da tabela, os pares (tA,tB) são (4,−1) e (10,8); os pares (tB,tC) são (−1,3,5) e (8,8).",
+      "Calcule cada inclinação por Δsaída/Δentrada e depois obtenha o termo independente.",
+      "m = 9/6 = 1,5; −1 = 1,5×4 + n dá n = −7. p = 4,5/9 = 0,5; 3,5 = 0,5×(−1) + q dá q = 4.",
+      "A soma é 1,5 − 7 + 0,5 + 4 = −1, alternativa C; A, B, D e E não reproduzem essa soma.",
+      "Confira os segundos pontos: 1,5×10 − 7 = 8 e 0,5×8 + 4 = 8. Use tB, não tA, como entrada da segunda função."
+    ],
+    "trap": "Calcular a segunda conversão diretamente de A para C quando a fórmula fornecida relaciona B a C.",
+    "retrieval": [
+      "Como obter a inclinação a partir de dois pares?",
+      "Qual variável é a entrada em tC = ptB + q?"
+    ],
+    "transfer": "Exercício autoral: tB = 2tA − 3 e tC = 0,5tB + 4. Determine tC em função de tA e calcule tC para tA = 6.",
+    "criteria": [
+      "Composição: tC = 0,5(2tA − 3) + 4 = tA + 2,5.",
+      "Para tA = 6, tC = 8,5."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "3."
+      },
+      {
+        "id": "b",
+        "text": "−2."
+      },
+      {
+        "id": "c",
+        "text": "−1."
+      },
+      {
+        "id": "d",
+        "text": "1."
+      },
+      {
+        "id": "e",
+        "text": "−3."
+      }
+    ],
+    "pages": [
+      21
+    ]
+  },
+  {
+    "number": 77,
+    "topicId": "mat_geometria_espacial",
+    "subject": "Matemática",
+    "chapter": "Sólidos de Revolução",
+    "title": "Igualdade numérica entre área e volume do cilindro",
+    "concept": "Área total e volume do cilindro; pré-requisito: manipulação algébrica e medidas positivas.",
+    "steps": [
+      "O cilindro circular reto tem raio r e altura h positivos; a questão compara valores numéricos em uma unidade fixada.",
+      "Use área total 2πr² + 2πrh e volume πr²h, incluindo as duas bases na área.",
+      "Iguale e divida por πr: 2r + 2h = rh. Assim r(h − 2) = 2h e r = 2h/(h − 2).",
+      "D é correta. B inverte o sinal do denominador; A e C perdem fatores de 2; E introduz h² sem origem na equação.",
+      "Como r e h são positivos, h > 2 nessa unidade. Substitua h = 4, r = 4: área e volume valem numericamente 64π."
+    ],
+    "trap": "Usar apenas a área lateral ou tratar a igualdade numérica como identidade dimensional independente da unidade.",
+    "retrieval": [
+      "Qual é a área total do cilindro?",
+      "Por que a solução positiva exige h > 2 na unidade fixada?"
+    ],
+    "transfer": "Exercício autoral: na mesma condição de igualdade numérica, tome h = 6. Determine r e confira área total e volume.",
+    "criteria": [
+      "r = 12/(6 − 2) = 3.",
+      "Área total = 2π×9 + 2π×3×6 = 54π; volume = π×9×6 = 54π."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "h/(h − 1)"
+      },
+      {
+        "id": "b",
+        "text": "2h/(2 − h)"
+      },
+      {
+        "id": "c",
+        "text": "h/(1 − h)"
+      },
+      {
+        "id": "d",
+        "text": "2h/(h − 2)"
+      },
+      {
+        "id": "e",
+        "text": "h²/(h − 2)"
+      }
+    ],
+    "pages": [
+      22
+    ]
+  }
+]
