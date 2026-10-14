@@ -14,12 +14,12 @@ export const essayStructure: StructurePart[] = [
   {
     part: 'Introdução',
     title: 'Contextualização',
-    description: 'Parta de algo mais amplo — um repertório, um fato histórico/social, uma observação conceitual — e vá estreitando até o recorte específico do tema. Evite começar direto pela tese sem preparar o terreno.',
+    description: 'Parta de algo mais amplo — um repertório, um fato histórico/social, uma observação conceitual — e vá estreitando até o recorte específico do tema. Abrir diretamente pela tese também pode funcionar, desde que o recorte e a posição fiquem claros.',
   },
   {
     part: 'Introdução',
     title: 'Tese',
-    description: 'Declare com clareza a posição que você vai defender. Uma tese fraca ou implícita — que o corretor precisa "adivinhar" — é um dos erros que mais limita a nota em todas as bancas.',
+    description: 'Declare com clareza a posição que você vai defender. Uma tese fraca ou implícita — que o corretor precisa "adivinhar" — prejudica textos argumentativos; em outros gêneros, confira como a posição ou ideia central deve aparecer na situação proposta.',
   },
   {
     part: 'Desenvolvimento',
@@ -64,7 +64,7 @@ export const interventionFormula: InterventionElement[] = [
   { letter: '2', title: 'Ação', description: 'O que exatamente será feito — verbo de ação concreto, não uma boa intenção vaga ("conscientizar" sozinho não basta).' },
   { letter: '3', title: 'Meio/modo', description: 'Como a ação será executada na prática (campanhas, leis, parcerias, investimento, currículo escolar...).' },
   { letter: '4', title: 'Finalidade', description: 'Para quê — o efeito esperado, conectado de volta à tese do texto.' },
-  { letter: '5', title: 'Detalhamento', description: 'Aprofunde um dos quatro elementos acima. É o elemento mais esquecido, e sua ausência é o motivo mais comum de a Competência V do ENEM não bater 200/200 mesmo em redações fortes.' },
+  { letter: '5', title: 'Detalhamento', description: 'Aprofunde um dos quatro elementos acima. Explique um aspecto pertinente da execução ou da função de um elemento; confira os descritores na cartilha vigente.' },
 ];
 
 export interface RepertoireGuidance {
@@ -115,7 +115,7 @@ export const essayBoardProfiles: EssayBoardProfile[] = [
     format: 'Texto dissertativo-argumentativo em prosa, tema sigiloso até o dia da prova, a partir de uma coletânea de textos motivadores. Extensão: até 30 linhas, com mínimo efetivo de 8 linhas.',
     scoring: '5 competências, cada uma avaliada em uma de 6 faixas (0, 40, 80, 120, 160 ou 200 pontos), somando 0 a 1000. Corrigida por 2 corretores independentes, com um 3º em caso de divergência grande entre eles.',
     criteria: [
-      { name: 'I — Domínio da norma culta', description: 'Gramática, ortografia, acentuação, concordância, regência, pontuação e construção de frases. Nota máxima tolera no máximo 1-2 desvios não recorrentes — não zero desvios, mas nenhum padrão de erro repetido.' },
+      { name: 'I — Domínio da norma culta', description: 'Gramática, ortografia, acentuação, concordância, regência, pontuação e construção de frases. Revise desvios recorrentes e construções de frase; os descritores da cartilha orientam as faixas, sem uma contagem simples de erros que garanta nota.' },
       { name: 'II — Compreensão da proposta e uso de repertório', description: 'Entender o recorte exato do tema e usar repertório de várias áreas do conhecimento para desenvolvê-lo, dentro da estrutura dissertativo-argumentativa (não vale narrar, descrever ou usar outro gênero).' },
       { name: 'III — Seleção e organização de argumentos', description: 'Projeto de texto: os argumentos formam uma linha de raciocínio coerente em defesa de um ponto de vista, não uma lista solta de ideias.' },
       { name: 'IV — Coesão textual', description: 'Uso de conectivos, retomadas (anáfora/catáfora) e articulação entre parágrafos — a "costura" do texto.' },
@@ -128,14 +128,14 @@ export const essayBoardProfiles: EssayBoardProfile[] = [
       'Folha em branco, letra ilegível ou texto em língua estrangeira.',
       'Importante: desde uma decisão do STF em 2017, uma proposta de intervenção que desrespeita direitos humanos zera APENAS a Competência V (–200 pontos), não a redação inteira — um erro comum é achar que zera tudo.',
     ],
-    keyToMaxScore: 'As 5 competências precisam bater a faixa máxima ao mesmo tempo — menos de 0,1% dos participantes tira 1000. O gargalo mais comum não é falta de conteúdo, é a Competência V incompleta (faltando o "detalhamento") ou repertório decorado que não sustenta de fato a Competência II/III.',
+    keyToMaxScore: 'Trabalhe as cinco competências: domínio da escrita, recorte e repertório, organização argumentativa, coesão e intervenção. Identifique seu próprio ponto de ruptura a partir de trechos, sem presumir um gargalo igual para todas as estudantes.',
   },
   {
     board: 'Fuvest',
-    format: 'A partir de 2026, uma coletânea gera 2 propostas e você escolhe apenas uma: Proposta 1 (dissertativo-argumentativo clássico) ou Proposta 2 (gênero narrativo revelado só no dia, ex.: crônica, carta). Não indicar qual proposta você escolheu zera a redação.',
-    scoring: 'Faz parte da 2ª fase, no mesmo dia da prova de Português. A pontuação exata e a escala de correção mudam de ano para ano (em 2026 a própria Fuvest precisou publicar uma nota de esclarecimento reajustando a escala) — confirme sempre no edital vigente.',
+    format: 'O guia de provas 2027 orienta escolher uma das propostas na folha de redação e respeitar a modalidade indicada. Informa nota zero caso nenhuma proposta seja escolhida. Leia o comando antes de decidir a estrutura.',
+    scoring: 'O guia oficial 2027 apresenta pesos 3, 2, 3 e 2 para os quatro eixos de avaliação, considerando a modalidade escolhida. Pesos não devem ser confundidos com uma escala automática de nota para este treino.',
     criteria: [
-      { name: 'Desenvolvimento do tema e autoria', description: 'Apropriação produtiva da coletânea (intertextualidade), com evidências de voz própria. Copiar ou parafrasear os textos de apoio é fortemente penalizado.' },
+      { name: 'Desenvolvimento do tema e autoria', description: 'Apropriação produtiva da coletânea (intertextualidade), com evidências de voz própria. Use informações da coletânea com elaboração e função claras, sem copiar seus trechos como texto próprio.' },
       { name: 'Gênero e tipo de texto', description: 'Respeitar as características do gênero pedido — ainda mais decisivo agora que existe a opção narrativa.' },
       { name: 'Coesão, coerência e progressão', description: 'Articulação do texto e progressão real do argumento, não apenas conectivos soltos.' },
       { name: 'Correção linguística', description: 'Norma culta, precisão vocabular — evitar clichês e "frases feitas".' },
@@ -152,7 +152,7 @@ export const essayBoardProfiles: EssayBoardProfile[] = [
   {
     board: 'Unicamp / Comvest',
     format: 'Não existe "o" formato da redação da Comvest: o gênero textual pedido muda todo ano e só é revelado no dia da prova. Já caíram carta, crônica, discurso, verbete, roteiro, texto de opinião, manifesto, petição, projeto de lei, comunicado e depoimento pessoal — geralmente com 2 propostas simultâneas em gêneros diferentes (em 2025: projeto de lei + comunicado formal; em 2026: depoimento pessoal + nota de esclarecimento). As propostas costumam pedir que você assuma uma "máscara discursiva" — escrever como um interlocutor específico, para um destinatário específico, no registro daquele gênero.',
-    scoring: '4 critérios avaliados de 0 a 3 cada, somando até 12 pontos (estrutura corroborada por múltiplas fontes; o peso exato na nota final do vestibular é menos claro).',
+    scoring: 'As diretrizes institucionais avaliam proposta temática, gênero, leitura dos textos e convenções/coerência/coesão. Consulte a grade temática da prova e o manual vigente para pontuação e procedimentos.',
     criteria: [
       { name: 'Proposta Temática', description: 'Adequação ao tema e à situação comunicativa específica pedida pela proposta.' },
       { name: 'Gênero', description: 'Respeito às características formais e composicionais do gênero pedido (ex.: cabeçalho e fecho de carta, tom de discurso, estrutura de nota oficial).' },
@@ -160,8 +160,8 @@ export const essayBoardProfiles: EssayBoardProfile[] = [
       { name: 'Convenções da escrita e coesão', description: 'Norma-padrão: escolhas lexicais e sintáticas, coesão, ortografia.' },
     ],
     zeroRules: [
-      'Zerar a redação elimina o candidato do vestibular, independentemente das outras notas — por isso a Comvest costuma corrigir a redação antes das demais provas.',
-      'Fugir do gênero pedido ou do tema.',
+      'Confira nas diretrizes e no manual as condições de anulação e eliminação. Não confunda falha pontual em um critério com anulação global.',
+      'Abandonar o tema ou as tarefas da proposta; o enquadramento da anulação segue as diretrizes institucionais.',
       'Copiar trechos da coletânea sem elaboração.',
     ],
     keyToMaxScore: 'Como o gênero muda todo ano, treinar só dissertação não prepara para a Comvest. O que separa notas altas é reconhecer rápido qual gênero foi pedido e produzir um texto que respeite de verdade as convenções formais dele, usando a coletânea com clareza, sem copiá-la.',
@@ -208,8 +208,8 @@ export const essayBoardProfiles: EssayBoardProfile[] = [
   },
   {
     board: 'Unifesp',
-    format: 'Dissertativo-argumentativo com proposta de intervenção obrigatória (como o ENEM) — diferente de Unesp/Famerp, que normalmente não exigem intervenção explícita. Faz parte do "Dia 1" de provas complementares, junto com Português e Inglês objetivos.',
-    scoring: 'Corrigida por 2 corretores independentes, cujas notas são somadas. Segue o padrão Vunesp de 3 critérios, com nomes ligeiramente diferentes.',
+    format: 'Confira o gênero e a tarefa no comando e no documento vigente da Unifesp. Não foi confirmada fonte primária para intervenção universalmente obrigatória; não aplique automaticamente o modelo do ENEM.',
+    scoring: 'Confirme escala, pesos e procedimentos no documento vigente da Unifesp. Não importe a escala de outro vestibular organizado pela mesma instituição.',
     criteria: [
       { name: 'Tema', description: 'Adesão ao tema proposto e desenvolvimento adequado.' },
       { name: 'Estrutura', description: 'Presença clara de introdução, desenvolvimento e conclusão dissertativo-argumentativos.' },
@@ -220,7 +220,7 @@ export const essayBoardProfiles: EssayBoardProfile[] = [
       'Não seguir a estrutura dissertativo-argumentativa.',
       'Ausência de proposta de intervenção quando exigida.',
     ],
-    keyToMaxScore: 'Use a fórmula de 5 elementos da proposta de intervenção (como no ENEM) — é o ponto que mais diferencia essa redação das demais bancas Vunesp, que normalmente não cobram isso.',
+    keyToMaxScore: 'Desenvolva o recorte com argumentos sustentados, coerência, progressão e linguagem precisa. Faça intervenção quando o comando ou critério aplicável a exigir.',
     uncertain: true,
     note: 'O peso exato da redação na nota final tem poucas fontes disponíveis — confirme no edital vigente antes de tratar como definitivo.',
   },
@@ -237,7 +237,7 @@ export const commonMistakes: CommonMistake[] = [
   { mistake: 'Parágrafos desequilibrados', why: 'Um parágrafo muito desenvolvido e outro raso sugere planejamento fraco do texto como um todo.' },
   { mistake: 'Desvios gramaticais recorrentes', why: 'Um erro isolado custa pouco; o mesmo erro repetido várias vezes é tratado como um padrão, não um deslize — e isso pesa muito mais na correção.' },
   { mistake: 'Fuga parcial ao tema', why: 'Discutir o assunto geral mas errar o recorte específico pedido é menos grave que fuga total, mas ainda limita a nota — muito comum quando o tema é reescrito "de memória" em vez de reler o comando com atenção.' },
-  { mistake: 'Copiar ou parafrasear a coletânea', why: 'As 6 bancas pesquisadas penalizam isso de forma independente — é o único erro que aparece em 100% dos perfis de banca levantados.' },
+  { mistake: 'Copiar a coletânea ou apenas repeti-la sem elaboração', why: 'Use informações pertinentes com elaboração própria. Uma paráfrase pode ter função produtiva quando identificada e articulada ao raciocínio; repetir o conteúdo sem desenvolver sua função não substitui argumentação.' },
   { mistake: 'Ignorar o limite de linhas', why: 'Ficar abaixo do mínimo (geralmente 7-8 linhas) zera a redação em quase todas as bancas; textos "curtos mas válidos" ainda são penalizados no critério de estrutura/expressão.' },
   { mistake: 'Não indicar a proposta escolhida (Fuvest) ou ignorar o gênero pedido (Comvest)', why: 'Fuvest zera se você não marcar qual das duas propostas respondeu; a Comvest penaliza pesado quem escreve uma dissertação genérica quando o gênero pedido era outro.' },
 ];

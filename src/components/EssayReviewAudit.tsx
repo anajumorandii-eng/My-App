@@ -1,0 +1,13 @@
+export type EssayAudit = Record<string, { evidence: string; checked: boolean }>;
+export function EssayReviewAudit({ board, audit, onChange }: { board: string; audit: EssayAudit; onChange: (audit: EssayAudit) => void }) {
+  const criteria = [
+    ['task', 'Tema, tarefa e gênero', 'Mostre um trecho que cumpre o recorte, a finalidade e o gênero solicitado.'],
+    ['progress', 'Progressão e coerência', 'Mostre como um argumento ou cena avança a ideia, sem repetir nem contradizer o anterior.'],
+    ['sources', 'Uso de evidência e coletânea', 'Identifique uma informação e explique sua função, com origem verificável e elaboração própria.'],
+    ['cohesion', 'Coesão e referentes', 'Escolha uma ligação entre frases: qual relação ela expressa e a que seus termos se referem?'],
+    ['language', 'Linguagem e revisão de padrão', 'Identifique uma construção que revisou e explique a regra ou o efeito. Não declare ausência de erros sem reler.'],
+    ...(board === 'ENEM' ? [['ending', 'Intervenção e direitos humanos', 'Mostre a proposta, sua relação com o problema e a função dos elementos planejados.']] : [['ending', 'Fechamento e finalidade', 'Mostre como o fechamento cumpre a tarefa do gênero, sem impor intervenção do ENEM.']]),
+  ];
+  const complete = criteria.filter(([id]) => audit[id]?.checked && audit[id]?.evidence.trim()).length;
+  return <section className="space-y-4" aria-labelledby="essay-audit-title"><h2 id="essay-audit-title" className="font-semibold">Revisar com evidência, não apenas marcar itens</h2><p className="text-sm">Escolha um trecho do seu texto e explique como atende ao critério antes de marcar. Autoavaliação: {complete}/{criteria.length} critérios demonstrados por você; isso não equivale à nota da banca.</p>{criteria.map(([id, title, hint]) => <div key={id} className="border-t border-[var(--line)] pt-3"><label className="block text-sm">Evidência de {title}<p className="text-xs text-[var(--dim)] my-1">{hint}</p><textarea className="field w-full block" value={audit[id]?.evidence ?? ''} onChange={event => onChange({ ...audit, [id]: { evidence: event.target.value, checked: false } })} /></label><label className="block mt-2 text-sm"><input type="checkbox" disabled={!audit[id]?.evidence.trim()} checked={audit[id]?.checked ?? false} onChange={event => onChange({ ...audit, [id]: { evidence: audit[id].evidence, checked: event.target.checked } })} /> Conferi {title}</label></div>)}<p className="text-sm">{complete === criteria.length ? 'Agora teste a habilidade mais trabalhada em outro tema e outro recorte.' : 'Reescreva primeiro o critério sem evidência ou o trecho que não cumpre a tarefa; depois revise coesão e linguagem.'}</p></section>;
+}

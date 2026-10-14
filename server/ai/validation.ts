@@ -99,8 +99,11 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         subject: requiredString(payload, 'subject'),
         question: optionalString(payload, 'question', MAX_LONG_TEXT),
       };
-    case 'answer-correction':
+    case 'answer-correction': {
+      const answerKind = optionalString(payload, 'answerKind', MAX_SHORT_TEXT);
+      if (answerKind && answerKind !== 'essay' && answerKind !== 'discursive') throw new AiValidationError('O campo answerKind deve ser essay ou discursive.');
       return {
+        ...(answerKind ? { answerKind } : {}),
         topic: requiredString(payload, 'topic'),
         subject: requiredString(payload, 'subject'),
         question: requiredString(payload, 'question', MAX_LONG_TEXT),
@@ -108,6 +111,7 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         board: optionalString(payload, 'board', MAX_SHORT_TEXT),
         modelAnswer: payload.modelAnswer !== undefined ? requiredStringArray(payload, 'modelAnswer') : undefined,
       };
+    }
     case 'error-hypothesis': {
       const topic = requiredString(payload, 'topic');
       const subject = requiredString(payload, 'subject');

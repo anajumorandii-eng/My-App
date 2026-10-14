@@ -99,14 +99,15 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         'Separe fato estabelecido de tendência geral — nunca apresente uma tendência como se fosse uma estatística exata que você não verificou. Responda em português do Brasil.',
       ].filter((line): line is string => line !== undefined).join('\n');
     case 'answer-correction': {
+      const isEssay = payload.answerKind === 'essay';
       const board = payload.board ? text(payload, 'board') : undefined;
-      const grounding = payload.modelAnswer
+      const grounding = isEssay ? 'Avalie uma redação pelo gênero, tarefa e critérios informados. Use trechos do texto como evidência. Não invente nota oficial nem imponha o modelo do ENEM a outras propostas.' : payload.modelAnswer
         ? `Pontos-chave esperados na resposta:\n${(payload.modelAnswer as string[]).map((item) => `- ${item}`).join('\n')}`
         : 'Primeiro resolva mentalmente a questão para determinar a resposta ou abordagem correta antes de corrigir.';
       return [
         'Você é o CRIVO, um corretor especialista em vestibular de Medicina.',
         `Tópico: ${text(payload, 'topic')} (${text(payload, 'subject')}).`,
-        board ? discursiveStructureGuidance(board) : undefined,
+        !isEssay && board ? discursiveStructureGuidance(board) : undefined,
         '',
         `Questão:\n"${text(payload, 'question')}"`,
         '',
@@ -119,7 +120,7 @@ export function buildAiPrompt(task: AiTask, payload: Payload): string {
         '2. rupturaPoint — o PRIMEIRO ponto exato onde o raciocínio comprometeu a resposta — não "errou tudo", o ponto específico;',
         '3. porque — por que esse ponto de ruptura compromete a resposta;',
         '4. correcaoMinima — a menor correção necessária para consertar esse ponto específico;',
-        '5. respostaModelo — uma resposta-modelo proporcional ao nível da pergunta, sem se alongar além do necessário;',
+        isEssay ? '5. respostaModelo — um trecho de exemplo formativo compatível com o gênero e a tarefa, para comparação, sem apresentar uma redação para copiar;' : '5. respostaModelo — uma resposta-modelo proporcional ao nível da pergunta, sem se alongar além do necessário;',
         '6. padraoRecorrente — só preencha se houver evidência textual de um padrão que já apareceu antes nesta resposta (ex.: o mesmo tipo de erro se repetindo); caso não haja evidência, use null — não invente um padrão.',
         '',
         'Responda APENAS com um objeto JSON válido, sem markdown, sem texto antes ou depois, no formato exato:',
