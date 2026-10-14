@@ -1,3 +1,4 @@
+import { notifyStudyData } from '../../lib/studyDataEvents';
 import { deleteDoc, doc, getDoc, runTransaction, setDoc } from 'firebase/firestore';
 import { db } from '../../lib/firestore';
 import { createInitialWeeklySchedule } from './weeklyScheduleSeed';
@@ -38,6 +39,7 @@ export async function getOrCreateWeeklySchedule(uid: string): Promise<WeeklySche
 export async function saveWeeklySchedule(uid: string, schedule: WeeklySchedule): Promise<void> {
   validateWeeklySchedule(schedule);
   await setDoc(weeklyScheduleRef(uid), schedule);
+  notifyStudyData(uid, 'schedule');
 }
 
 export async function getScheduleException(uid: string, localDate: string): Promise<ScheduleException | undefined> {
@@ -49,10 +51,12 @@ export async function getScheduleException(uid: string, localDate: string): Prom
 export async function saveScheduleException(uid: string, exception: ScheduleException): Promise<void> {
   validateScheduleException(exception);
   await setDoc(scheduleExceptionRef(uid, exception.localDate), exception);
+  notifyStudyData(uid, 'schedule');
 }
 
 export async function deleteScheduleException(uid: string, localDate: string): Promise<void> {
   await deleteDoc(scheduleExceptionRef(uid, localDate));
+  notifyStudyData(uid, 'schedule');
 }
 
 function weeklyScheduleRef(uid: string) {

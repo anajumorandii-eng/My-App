@@ -22,3 +22,16 @@ describe('ambiente da tela inteira', () => {
     expect(document.documentElement.dataset.ambiente).toBeUndefined();
   });
 });
+
+it('uma atividade retida libera as cores ao ficar oculta e recupera o ambiente ao voltar',async()=>{
+ const React=await import('react');
+ const {StudyActivityVisibleContext}=await import('../../context/StudyActivityContext');
+ let visible=true;
+ const ambiente=ambienteDoCapitulo({id:'summary-fisica-orbitas',subject:'Física',topic:'Órbitas'});
+ const {rerender}=renderHook(()=>useAmbienteDaTela(ambiente),{wrapper:({children})=>React.createElement(StudyActivityVisibleContext.Provider,{value:visible},children)});
+ expect(document.documentElement.dataset.ambienteNome).toBe('espaço');
+ visible=false;rerender();
+ expect(document.documentElement.dataset.ambienteNome).toBeUndefined();
+ visible=true;rerender();
+ expect(document.documentElement.dataset.ambienteNome).toBe('espaço');
+});

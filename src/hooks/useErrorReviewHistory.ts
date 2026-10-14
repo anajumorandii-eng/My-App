@@ -1,3 +1,4 @@
+import { useStudyDataRevision } from './useStudyDataRevision';
 import { useEffect, useRef, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { getUserErrorLogs, saveErrorRevisitResult } from '../lib/userData';
@@ -8,6 +9,7 @@ import type { ErrorRevisit } from '../lib/reviewInsights';
 export function useErrorReviewHistory() {
   const { user } = useAuth();
   const uid = user?.uid ?? null;
+  const dataRevision = useStudyDataRevision(uid, 'errors');
   const activeUid = useRef(uid); activeUid.current = uid;
   const writing = useRef(false);
   const [state, setState] = useState<{ uid: string | null; errors: ErrorLog[] }>({ uid: null, errors: [] });
@@ -23,7 +25,7 @@ export function useErrorReviewHistory() {
         .finally(() => { if (!cancelled) setLoading(false); });
     }
     return () => { cancelled = true; };
-  }, [uid]);
+  }, [uid, dataRevision]);
   const complete = async (revisit: ErrorRevisit, rating: 'independente' | 'com_ajuda' | 'nao_consegui') => {
     if (!uid || activeUid.current !== uid || writing.current) return false;
     writing.current = true;

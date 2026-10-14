@@ -16,6 +16,8 @@ Regenerar Markdown/HTML: `node --import tsx scripts/generateStudyGuide.ts`. O PD
 
 ## No aplicativo
 
+- [Central de revisão](central-revisao.md): 21 recursos, roteiro nas janelas restantes e preservação das atividades ao alternar.
+
 **Estratégias:** seletor de 12 áreas, 6 bancas, 105 tópicos e seus capítulos. Cada área tem sequência de resolução, conferência, exemplo, transferência, revisão e pegadinhas. Aprofundamento usa trechos dos resumos editoriais e, quando encontrados, exemplos textuais com origem no banco. A ausência de exemplo elegível não mede ausência na prova. Vunesp não agrupa instituições distintas numa mesma regra de formato.
 
 **Revisões:** insight com evidência disponível, ação, duração e critério. A fila de erros cria revisitas D+1/D+3/D+7, consolida atrasos, identifica a questão/relato e abre o registro correspondente. Tentativa com ajuda ou malsucedida volta no dia seguinte; registrar tentativa não aumenta domínio automaticamente. Tentativas registradas no dia consomem o orçamento, sem repor 30 minutos depois de cada conclusão.

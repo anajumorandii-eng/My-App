@@ -111,3 +111,31 @@ it('preserves the newest edit when its value repeats an older rejected write', a
   expect(io.saveProfile).toHaveBeenLastCalledWith('a', { targetCourse: 'Y' }, true);
   expect(io.saveGoals).toHaveBeenLastCalledWith('a', { primaryGoal: 'Y' });
 });
+
+it('não substitui uma edição em gravação por uma leitura disparada de outra atividade',async()=>{
+ const {notifyStudyData}=await import('../lib/studyDataEvents');
+ const {result}=renderHook(()=>useStudentGoals());
+ await waitFor(()=>expect(result.current.isPersisted).toBe(true));
+ let finish!:()=>void;
+ io.saveGoals.mockImplementationOnce(()=>new Promise<void>(resolve=>{finish=resolve;}));
+ let operation!:Promise<boolean>;
+ act(()=>{operation=result.current.updateGoals(g=>({...g,primaryGoal:'Edição atual'}));});
+ await waitFor(()=>expect(finish).toBeDefined());
+ act(()=>notifyStudyData('a','goals'));
+ await act(async()=>{});
+ expect(result.current.goals.primaryGoal).toBe('Edição atual');
+ await act(async()=>{finish();await operation;});
+});
+
+it('ignora uma falha inicial antiga após atualizar os objetivos com uma leitura nova',async()=>{
+ const {notifyStudyData}=await import('../lib/studyDataEvents');
+ let rejectOld!:(error:Error)=>void;
+ io.readGoals.mockImplementationOnce(()=>new Promise((_resolve,reject)=>{rejectOld=reject;}));
+ const {result}=renderHook(()=>useStudentGoals());
+ io.readGoals.mockResolvedValue({...mockStudentGoals,primaryGoal:'Objetivo atualizado'});
+ act(()=>notifyStudyData('a','goals'));
+ await waitFor(()=>expect(result.current.goals.primaryGoal).toBe('Objetivo atualizado'));
+ expect(result.current.loading).toBe(false);
+ await act(async()=>rejectOld(new Error('leitura antiga')));
+ expect(result.current.syncError).toBeNull();
+});

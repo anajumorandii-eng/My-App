@@ -1,4 +1,5 @@
-import React, { useMemo, useState } from 'react';
+import React, { useContext, useMemo, useState } from 'react';
+import { UNSAFE_LocationContext } from 'react-router-dom';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
 import { useAuth } from '../context/AuthContext';
@@ -81,7 +82,8 @@ export default function Questoes() {
   const { mastery, updateMastery, isPersisted, syncError } = useUserMastery();
   const { questions: mockQuestions, loading: questionsLoading, syncError: questionsSyncError } = useQuestions();
   const subjects = useMemo(() => ['Todas', ...new Set(mockQuestions.map((q) => q.subject))], [mockQuestions]);
-  const requestScope = new URLSearchParams(window.location.search);
+  const localLocation = useContext(UNSAFE_LocationContext);
+  const requestScope = new URLSearchParams(localLocation?.location.search ?? window.location.search);
   const requestedTopic = mockTopics.find(topic => topic.id === requestScope.get('topic'));
   const rawBoard = canonicalExamBoard(requestScope.get('board') ?? '');
   const requestedBoard = ['FUVEST', 'UNICAMP', 'UNESP', 'FAMERP', 'UNIFESP', 'ENEM'].includes(rawBoard) ? rawBoard : 'all';

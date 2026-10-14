@@ -2,7 +2,7 @@ import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, expect, it, vi } from 'vitest';
 import { mockTopics } from '../data/mockData';
-import Revisoes from './Revisoes';
+import Revisoes from './ReviewQueue';
 
 // Doze tópicos, todos vencidos: o bastante para passar do primeiro lote.
 const topicos = mockTopics.slice(0, 12);
@@ -62,4 +62,13 @@ it('mantém a tentativa iniciada quando o progresso reordena a fila fora dos dez
   rerender(<MemoryRouter><Revisoes /></MemoryRouter>);
   expect(screen.getByLabelText('Sua explicação sem consulta')).toHaveValue('Minha resposta preservada');
   mastery = original;
+});
+
+it('não trata tópicos nunca estudados como revisões vencidas',()=>{
+ const original=mastery;
+ mastery=topicos.map(topic=>({topicId:topic.id,level:0,uncertainty:1,lastReviewed:new Date(0).toISOString(),errorSignals:0}));
+ render(<MemoryRouter><Revisoes /></MemoryRouter>);
+ expect(screen.queryByRole('heading',{name:topicos[0].name})).toBeNull();
+ expect(screen.queryByText(/12 revisões urgentes hoje/)).toBeNull();
+ mastery=original;
 });

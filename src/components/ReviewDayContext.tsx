@@ -1,14 +1,15 @@
+import { remainingReviewIntervals } from '../lib/reviewSessionPlan';
 import { formatIsoTimeInSaoPaulo } from '../features/availability/time';
 import { Link } from 'react-router-dom';
 import { useDailyStudyAvailability } from '../features/availability/useDailyStudyAvailability';
 import { useStudentGoals } from '../hooks/useStudentGoals';
-import { applyExamDayLimits } from '../lib/examDayLimits';
+
 import ErrorRevisitPanel from './ErrorRevisitPanel';
 
 export default function ReviewDayContext({ localDate }: { localDate: string }) {
   const { availability, loading, syncError } = useDailyStudyAvailability(localDate);
   const { goals } = useStudentGoals();
-  const intervals = applyExamDayLimits(availability?.intervals ?? [], localDate, goals);
+  const intervals = remainingReviewIntervals(availability?.intervals ?? [], localDate, goals, new Date().toISOString());
   const reserved = intervals.filter((i) => i.purpose === 'review');
   const budget = Math.min(30, (reserved.length ? reserved : intervals).reduce((sum, i) => sum + i.durationMinutes, 0));
   return <div className="space-y-3 mb-4">

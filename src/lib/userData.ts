@@ -1,3 +1,4 @@
+import { notifyStudyData } from './studyDataEvents';
 import { doc, getDoc, setDoc, collection, getDocs, query, orderBy, limit, runTransaction, serverTimestamp } from 'firebase/firestore';
 import { db } from './firestore';
 import { TopicMastery, ErrorLog, UserProfile, DiscursiveAttempt, BacklogItem, StudentGoals, PlanFeedback, StudySessionRecord, RecoveryEvidence } from '../types';
@@ -88,6 +89,7 @@ export async function getUserMastery(uid: string): Promise<TopicMastery[]> {
 export async function saveUserMastery(uid: string, items: TopicMastery[]): Promise<void> {
   const ref = doc(db, 'users', uid, 'data', 'mastery');
   await setDoc(ref, { items, updatedAt: serverTimestamp() });
+  notifyStudyData(uid, 'mastery');
 }
 
 // A read-modify-write transaction prevents another tab from being silently
@@ -99,7 +101,7 @@ export async function updateUserMastery(
   updater: (current: TopicMastery[]) => TopicMastery[]
 ): Promise<TopicMastery[]> {
   const ref = doc(db, 'users', uid, 'data', 'mastery');
-  return runTransaction(db, async (transaction) => {
+  const committed = await runTransaction(db, async (transaction) => {
     const snap = await transaction.get(ref);
     const saved = snap.exists() ? ((snap.data().items as TopicMastery[]) ?? []) : [];
     const current = reconcileMastery(saved);
@@ -107,6 +109,8 @@ export async function updateUserMastery(
     transaction.set(ref, { items: next, updatedAt: serverTimestamp() }, { merge: true });
     return next;
   });
+  notifyStudyData(uid, 'mastery');
+  return committed;
 }
 
 export async function getUserProfile(uid: string): Promise<UserProfile> {
@@ -133,6 +137,7 @@ export async function getUserErrorLogs(uid: string): Promise<ErrorLog[]> {
 export async function addUserErrorLog(uid: string, log: ErrorLog): Promise<void> {
   const ref = doc(db, 'users', uid, 'errorLogs', log.id);
   await setDoc(ref, log);
+  notifyStudyData(uid, 'errors');
 }
 
 export async function getUserAttempts(uid: string): Promise<QuestionAttempt[]> {
@@ -229,7 +234,7 @@ export async function recordUserRecoveryEvidence(
   const masteryRef = doc(db, 'users', uid, 'data', 'mastery');
   const evidenceRef = doc(db, 'users', uid, 'recoveryEvidence', evidence.id);
 
-  return runTransaction(db, async (transaction) => {
+  const committed = await runTransaction(db, async (transaction) => {
     const [backlogSnap, masterySnap, evidenceSnap] = await Promise.all([
       transaction.get(backlogRef),
       transaction.get(masteryRef),
@@ -259,6 +264,8 @@ export async function recordUserRecoveryEvidence(
     transaction.set(evidenceRef, { ...evidence, createdAt: serverTimestamp() });
     return result;
   });
+  notifyStudyData(uid, 'mastery');
+  return committed;
 }
 
 export async function getStudentGoals(uid: string): Promise<StudentGoals> {
@@ -274,6 +281,7 @@ export async function getStudentGoals(uid: string): Promise<StudentGoals> {
 export async function saveStudentGoals(uid: string, goals: Partial<StudentGoals>): Promise<void> {
   const ref = doc(db, 'users', uid, 'data', 'goals');
   await setDoc(ref, goals, { merge: true });
+  notifyStudyData(uid, 'goals');
 }
 
 // Feedback estruturado de "Discordo" numa recomendação — só registrado, o
@@ -334,6 +342,7 @@ export async function saveUserSummaryProgress(uid: string, change: SummaryChange
 export async function saveErrorRevisitResult(uid: string, errorId: string, day: '1' | '3' | '7', result: NonNullable<ErrorLog['revisitResults']>['1']): Promise<void> {
   if (!uid || !errorId || !result) throw new Error('Revisita inválida.');
   await setDoc(doc(db, 'users', uid, 'errorLogs', errorId), { revisitResults: { [day]: result } }, { merge: true });
+  notifyStudyData(uid, 'errors');
 }
 
 /** A conclusão manual e seu efeito no progresso compartilham a mesma transação. */
@@ -344,7 +353,7 @@ export async function completeUserManualReview(
   const masteryRef = doc(db, 'users', uid, 'data', 'mastery');
   const { applyReviewOutcome, qualityFromSelfRating } = await import('./spacedRepetition');
   const now = new Date();
-  return runTransaction(db, async transaction => {
+  const committed = await runTransaction(db, async transaction => {
     const reviewSnapshot = await transaction.get(reviewRef);
     const masterySnapshot = await transaction.get(masteryRef);
     if (!reviewSnapshot.exists()) throw new Error('Revisão não encontrada.');
@@ -359,4 +368,6 @@ export async function completeUserManualReview(
     transaction.set(reviewRef, { status: 'completed' }, { merge: true });
     return next;
   });
+  notifyStudyData(uid, 'mastery');
+  return committed;
 }

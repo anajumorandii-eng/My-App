@@ -1,0 +1,304 @@
+import { ManualReviewsPanel } from '../components/ManualReviewsPanel';
+import { ActiveTopicReview } from '../components/ActiveTopicReview';
+import { useQuestions } from '../hooks/useQuestions';
+import ReviewDayContext from '../components/ReviewDayContext';
+import { ReviewInsightCard } from '../components/ReviewInsightCard';
+import { isoToLocalDate } from '../features/availability/time';
+import React, { useEffect, useMemo, useState } from 'react';
+import { mockTopics } from '../data/mockData';
+import { TopicMastery } from '../types';
+import { useUserMastery } from '../hooks/useUserMastery';
+import { requestAiTextStream } from '../lib/aiClient';
+import { AiText } from '../components/AiText';
+import { urgencyOf } from '../lib/reviewUrgency';
+import { applyReviewOutcome, qualityFromSelfRating } from '../lib/spacedRepetition';
+import { Repeat, CheckCircle2, AlertTriangle, CloudOff, Sparkles } from 'lucide-react';
+import { useSummaryProgress } from '../hooks/useSummaryProgress';
+import { interactiveSummaries } from '../data/interactiveSummaries';
+import SummaryReviewsPanel from '../components/SummaryReviewsPanel';
+import { Panel } from '../components/ui/Panel';
+import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
+import { SUBJECT_ICONS } from './Dashboard';
+import { useAmbienteDaTela } from './visual-boards/ambiente';
+import { ambienteDaMateria } from '../lib/visualAmbiente';
+
+type SelfRating = 'fraco' | 'mediano' | 'forte';
+
+export default function ReviewQueue() {
+  const { questions, loading: questionsLoading } = useQuestions();
+  const { mastery: masteryState, updateMastery, acceptCommittedMastery, isPersisted, syncError } = useUserMastery();
+  const { progress: summaryProgress } = useSummaryProgress();
+  const [tips, setTips] = useState<Record<string, string>>({});
+  const [tipErrors, setTipErrors] = useState<Record<string, string>>({});
+  const [loadingTipFor, setLoadingTipFor] = useState<string | null>(null);
+  const [activeTopics, setActiveTopics] = useState<string[]>([]);
+  const [budget, setBudget] = useState(30);
+  const [subjectFilter, setSubjectFilter] = useState('Todas');
+  const [board, setBoard] = useState('');
+  const [chapters, setChapters] = useState<Record<string, string>>({});
+  const tipKey = (topicId: string) => JSON.stringify([topicId, board, chapters[topicId] ?? '']);
+  // A fila chegava a 105 cartões numa página de 24 mil pixels. Ela já vem
+  // ordenada por urgência: as primeiras dizem o que fazer agora.
+  const [visiveis, setVisiveis] = useState(10);
+  useEffect(() => { setVisiveis(10); }, [subjectFilter]);
+  // A cor da tela segue a matéria em foco pelo ambiente do app, em vez da
+  // paleta que antes ficava fixa no contêiner e vencia o ambiente.
+  const materiaDoAmbiente = subjectFilter !== 'Todas' ? subjectFilter : null;
+  const ambiente = useMemo(() => (materiaDoAmbiente ? ambienteDaMateria(materiaDoAmbiente) : null), [materiaDoAmbiente]);
+  useAmbienteDaTela(ambiente);
+
+  const queue = useMemo(() => {
+    return (isPersisted ? masteryState : [])
+      .filter(mastery => mastery.level !== 0 || mastery.lastReviewed !== new Date(0).toISOString())
+      .map((mastery) => {
+        const topic = mockTopics.find((t) => t.id === mastery.topicId);
+        return { mastery, topic, urgency: urgencyOf(mastery) };
+      })
+      .filter((entry) => entry.topic)
+      .sort((a, b) => b.urgency - a.urgency);
+  }, [masteryState, isPersisted]);
+
+  const subjects = useMemo(() => {
+    const subs = new Set<string>();
+    queue.forEach((q) => {
+      if (q.topic?.subject) subs.add(q.topic.subject);
+    });
+    return ['Todas', ...Array.from(subs)];
+  }, [queue]);
+
+  const filteredQueue = useMemo(() => {
+    if (subjectFilter === 'Todas') return queue;
+    return queue.filter((q) => q.topic?.subject === subjectFilter);
+  }, [queue, subjectFilter]);
+
+  const pendingToday = isPersisted ? queue.filter((entry) => entry.urgency > 50).length : 0;
+
+  const rateReview = (topicId: string, rating: SelfRating) => {
+    return updateMastery((prev: TopicMastery[]) =>
+      prev.map((m) => (m.topicId === topicId ? { ...m, ...applyReviewOutcome(m, qualityFromSelfRating(rating)) } : m))
+    );
+  };
+
+  const fetchTip = async (mastery: TopicMastery, topicName: string, subject: string) => {
+    const key = tipKey(mastery.topicId);
+    setLoadingTipFor(key);
+    setTipErrors((prev) => ({ ...prev, [key]: '' }));
+    try {
+      const daysSinceReview = Math.round((Date.now() - new Date(mastery.lastReviewed).getTime()) / 86400000);
+      let acumulado = '';
+      const data = await requestAiTextStream('review-tip', { topic: topicName, subject, board: board || undefined, chapter: chapters[mastery.topicId] || undefined, chapters: mockTopics.find((t) => t.id === mastery.topicId)?.chapters?.join('; '), level: mastery.level, daysSinceReview }, (delta) => {
+        acumulado += delta;
+        setTips((prev) => ({ ...prev, [key]: acumulado }));
+      });
+      setTips((prev) => ({ ...prev, [key]: data.text }));
+    } catch (error) {
+      console.error('Failed to fetch review tip:', error);
+      setTips((prev) => { const next = { ...prev }; delete next[key]; return next; });
+      setTipErrors((prev) => ({ ...prev, [key]: 'Não foi possível preparar a revisão. Tente novamente.' }));
+    } finally {
+      setLoadingTipFor((current) => current === key ? null : current);
+    }
+  };
+
+  const FirstIcon = SUBJECT_ICONS[queue[0]?.topic?.subject ?? 'Matemática'] ?? Repeat;
+
+  return (
+    <div className="ni-main">
+      {/* Route Breadcrumb */}
+      <div className="ni-route">
+        <span>Estudar</span>
+        <i />
+        <span style={{ display: 'inline-flex', alignItems: 'center', gap: '5px' }}>
+          <span className="w-5 h-5 flex items-center justify-center rounded-full bg-[var(--action-primary)] text-[var(--text-inverse)]">
+            <FirstIcon className="w-3 h-3" />
+          </span>
+          REPETIÇÃO ESPAÇADA
+        </span>
+        <i />
+        <b>REVISÕES ADAPTATIVAS</b>
+      </div>
+
+      {/* Main Title */}
+      <div className="ni-title">
+        <div>
+          <h1>Recupere, aplique e confira o que aprendeu.</h1>
+          <p>As revisões combinam espaçamento, desempenho registrado e tempo disponível. Recupere o conteúdo antes de consultar a explicação.</p>
+        </div>
+        <div className="ni-state">
+          <i /> {pendingToday > 0 ? `${pendingToday} revisões urgentes hoje` : isPersisted ? 'sem pendências urgentes nos dados carregados' : 'demonstração — sem diagnóstico pessoal'}
+        </div>
+      </div>
+
+      {!isPersisted && (
+        <p className="flex items-start text-xs text-[var(--dim)] mb-2">
+          <CloudOff className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0" />
+          Modo demonstração — conecte sua conta Google em "Conexões" para sincronização em nuvem.
+        </p>
+      )}
+      {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
+
+      <ManualReviewsPanel questions={questions} loading={questionsLoading} onReview={rateReview} onCommitted={acceptCommittedMastery} />
+
+      {/* Subject Filter Bar */}
+      <div className="ni-subjects">
+        {subjects.map((subj) => {
+          const active = subjectFilter === subj;
+          const Icon = SUBJECT_ICONS[subj] ?? Repeat;
+          const subPalette = PALETTES[subj] ?? PALETTES.Matemática;
+          return (
+            // O estado ativo vem do design system (.ni-subjects button.active),
+            // como nas Questões: o estilo inline pintava a aba com a paleta da
+            // matéria, e "Todas", que não é matéria, caía no azul de Matemática.
+            <button
+              key={subj}
+              onClick={() => setSubjectFilter(subj)}
+              className={active ? 'active' : ''}
+              aria-pressed={active}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '6px' }}
+            >
+              {subj !== 'Todas' && <Icon className="w-3 h-3" style={{ color: subPalette.primary }} />}
+              <span>{subj}</span>
+            </button>
+          );
+        })}
+      </div>
+
+      <SummaryReviewsPanel progress={summaryProgress} summaries={interactiveSummaries} />
+
+      {/* Metric summary panel */}
+      <Panel subject="Matemática" className="ni-panel p-5 flex items-center gap-4">
+        <div
+          className="w-10 h-10 rounded-full flex items-center justify-center shrink-0"
+          style={{
+            backgroundColor: pendingToday > 0 ? 'rgba(239, 191, 97, 0.2)' : 'rgba(134, 220, 165, 0.2)',
+            color: pendingToday > 0 ? '#efbf61' : '#86dca5',
+          }}
+        >
+          {pendingToday > 0 ? <AlertTriangle className="w-5 h-5" /> : <CheckCircle2 className="w-5 h-5" />}
+        </div>
+        <div>
+          <p className="text-xl font-display font-bold text-[var(--text)]">{pendingToday}</p>
+          <p className="text-xs font-mono uppercase tracking-wider text-[var(--dim)]">
+            {pendingToday > 0 ? 'revisões com alta urgência' : 'nenhuma revisão urgente pendente'}
+          </p>
+        </div>
+      </Panel>
+
+      <label className="flex flex-wrap items-center gap-2 mt-4 text-xs text-[var(--dim)]">
+        Banca da revisão
+        <select value={board} onChange={(event) => setBoard(event.target.value)} className="rounded-lg border border-[var(--line)] bg-[var(--surface)] p-2 text-[var(--text)]">
+          <option value="">Comparar bancas</option>
+          {['Fuvest', 'Unicamp / Comvest', 'Unesp / Vunesp', 'Famerp', 'Unifesp', 'ENEM / Inep'].map((name) => <option key={name} value={name}>{name}</option>)}
+        </select>
+      </label>
+
+      <ReviewDayContext localDate={isoToLocalDate(new Date().toISOString())} />
+
+      <section className="mt-4 rounded-lg border border-[var(--line)] p-4" aria-label="Plano de revisão de hoje">
+        <label>Tempo disponível para revisão <select value={budget} onChange={e => setBudget(Number(e.target.value))} className="ml-2 bg-[var(--surface2)] p-2 rounded">{[15, 30, 45].map(minutes => <option key={minutes} value={minutes}>{minutes} minutos</option>)}</select></label>
+        <p className="mt-2 text-sm">Comece por {Math.min(Math.floor(budget / 15), filteredQueue.length)} tópico(s) da fila: {filteredQueue.slice(0, Math.floor(budget / 15)).map(entry => entry.topic!.name).join(' · ') || 'nenhum tópico disponível'}. Reserve até 15 minutos para cada treino; se faltar base, pare e reconstrua o conceito antes de avançar.</p>
+        <p className="text-xs mt-2">A data orienta a prioridade. A resposta sem consulta, os critérios conferidos e a aplicação orientam o próximo intervalo.</p>
+      </section>
+
+      {/* Reviews queue */}
+      <div className="space-y-3 mt-4">
+        {filteredQueue.filter((entry, index) => index < visiveis || activeTopics.includes(entry.mastery.topicId)).map(({ mastery, topic, urgency }) => {
+          const key = tipKey(mastery.topicId);
+          const tip = tips[key];
+          const isLoadingTip = loadingTipFor === key;
+          const subPalette = PALETTES[topic!.subject] ?? PALETTES.Matemática;
+          const SubjIcon = SUBJECT_ICONS[topic!.subject] ?? Repeat;
+
+          return (
+            <Panel
+              key={mastery.topicId}
+              subject={topic!.subject}
+              interactive
+              className="ni-panel p-5 transition-colors"
+            >
+              <div className="flex items-center justify-between">
+                <div className="flex items-center min-w-0">
+                  <span
+                    className="text-[10px] font-mono font-semibold px-2.5 py-1 rounded-full mr-3 shrink-0 flex items-center gap-1.5"
+                    style={{ backgroundColor: subPalette.primary, color: PALETTE_INK }}
+                  >
+                    <SubjIcon className="w-3 h-3" />
+                    {topic!.subject}
+                  </span>
+                  <div className="min-w-0">
+                    <h4 className="font-display font-medium text-base text-[var(--text)] truncate">{topic!.name}</h4>
+                    <p className="text-xs text-[var(--dim)] mt-0.5">
+                      Domínio: <b className="text-[var(--text)]">{mastery.level}%</b> • Última revisão: {new Date(mastery.lastReviewed).toLocaleDateString('pt-BR')}
+                    </p>
+                  </div>
+                </div>
+                <div className="flex items-center shrink-0 ml-4 gap-3">
+                  {/* A barra não dizia o que media: ao lado de "Domínio: 20%", um
+                      "100%" solto parecia outro domínio. É a urgência da revisão. */}
+                  <div className="hidden sm:flex items-center w-40" title="Urgência da revisão">
+                    <span className="text-[10px] font-mono uppercase tracking-wide text-[var(--dim)] mr-2">Urgência</span>
+                    <div className="w-full h-1.5 bg-[var(--surface2)] rounded-full overflow-hidden mr-2">
+                      <div
+                        className="h-full rounded-full"
+                        style={{
+                          width: `${urgency}%`,
+                          backgroundColor: urgency > 70 ? 'var(--status-error)' : urgency > 40 ? 'var(--status-warning)' : 'var(--status-success)',
+                        }}
+                      />
+                    </div>
+                    <span className="text-[11px] font-mono text-[var(--dim)] w-8 text-right">{Math.round(urgency)}%</span>
+                  </div>
+                </div>
+              </div>
+
+              <ActiveTopicReview onStart={() => setActiveTopics(ids => ids.includes(mastery.topicId) ? ids : [...ids, mastery.topicId])} loading={questionsLoading} questions={questions} key={JSON.stringify([mastery.topicId, board, chapters[mastery.topicId]])} topicId={mastery.topicId} chapter={chapters[mastery.topicId]} board={board} onComplete={(rating) => rateReview(mastery.topicId, rating)} />
+
+              <ReviewInsightCard mastery={mastery} />
+
+              {!!topic!.chapters?.length && (
+                <label className="flex flex-wrap items-center gap-2 mt-3 text-xs text-[var(--dim)]">
+                  Tópico da revisão
+                  <select value={chapters[mastery.topicId] ?? ''} onChange={(event) => setChapters((prev) => ({ ...prev, [mastery.topicId]: event.target.value }))} className="max-w-full rounded-lg border border-[var(--line)] bg-[var(--surface)] p-2 text-[var(--text)]">
+                    <option value="">Visão geral de {topic!.name}</option>
+                    {topic!.chapters!.map((name) => <option key={name} value={name}>{name}</option>)}
+                  </select>
+                </label>
+              )}
+
+              {!tip && (
+                <button
+                  onClick={() => fetchTip(mastery, topic!.name, topic!.subject)}
+                  disabled={loadingTipFor !== null}
+                  className="mt-3 inline-flex items-center px-3 py-1 text-xs font-medium subject-text border border-[var(--line)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
+                >
+                  <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${isLoadingTip ? 'animate-pulse' : ''}`} />
+                  {isLoadingTip ? 'Preparando revisão...' : 'Revisão por banca e tópico'}
+                </button>
+              )}
+
+              {tipErrors[key] && <p role="alert" className="mt-2 text-xs text-[var(--status-error)]">{tipErrors[key]}</p>}
+              {isLoadingTip && tip && <p role="status" className="mt-2 text-xs text-[var(--dim)]">Preparando revisão...</p>}
+              {tip && (
+                <div className="mt-3 p-3 rounded-lg border border-[var(--primary)]/30 bg-[var(--primary)]/10 text-xs text-[var(--text)]">
+                  <div className="flex items-start gap-2">
+                    <Sparkles className="w-4 h-4 subject-text shrink-0 mt-0.5" />
+                    <AiText text={tip} className="flex-1" />
+                  </div>
+                </div>
+              )}
+            </Panel>
+          );
+        })}
+        {filteredQueue.length > visiveis && (
+          <button
+            type="button"
+            onClick={() => setVisiveis((n) => n + 10)}
+            className="w-full rounded-xl border border-[var(--line)] bg-[var(--surface)] px-4 py-2.5 text-sm font-medium text-[var(--text)] hover:border-[var(--primary)]"
+          >
+            Mostrar mais {Math.min(10, filteredQueue.length - visiveis)} de {filteredQueue.length - visiveis} restantes
+          </button>
+        )}
+      </div>
+    </div>
+  );
+}
