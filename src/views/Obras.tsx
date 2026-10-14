@@ -1,3 +1,4 @@
+import { LiteraryStudyMethod } from '../components/LiteraryStudyMethod';
 import React, { useEffect, useMemo, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { BookOpen, Loader2, Search } from 'lucide-react';
@@ -67,6 +68,8 @@ export default function Obras() {
           <i /> {works === null ? 'carregando catálogo' : `${works.length} ${works.length === 1 ? 'obra' : 'obras'} no catálogo`}
         </div>
       </div>
+
+      <LiteraryStudyMethod />
 
       {/* Filters */}
       <div className="ni-subjects">

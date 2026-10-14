@@ -1,0 +1,64 @@
+import { useEffect, useState } from 'react';
+import { useAuth } from '../context/AuthContext';
+import { getLiteraryWorks } from '../lib/literaryCatalog';
+import { loadWorkDossier, visibleDossier } from '../lib/workDossiers';
+import { emptyLiteraryStudyNote, publishedLiteraryPassages, readLiteraryNotebook } from '../lib/literaryStudyWorkshop';
+import { literaryAnalysisCriteria, literaryComparisonAxes } from '../data/literaryStudyWorkshop';
+import type { LiteraryWork, WorkDossier, ExamRequirement } from '../types/literaryWorks';
+export function LiteraryStudyWorkshop({ work, dossier, requirements = [] }: { work: LiteraryWork; dossier: WorkDossier; requirements?: ExamRequirement[] }) {
+  const { user } = useAuth();
+  return <WorkStudyNotebook key={JSON.stringify([user?.uid ?? 'demo', work.id, dossier.edition.label])} scope={user?.uid ?? 'demo'} work={work} dossier={dossier} requirements={requirements} />;
+}
+function WorkStudyNotebook({ scope, work, dossier, requirements }: { scope: string; work: LiteraryWork; dossier: WorkDossier; requirements: ExamRequirement[] }) {
+  const key = `crivo_literary_notebook_v1:${JSON.stringify([scope, work.id, dossier.edition.label])}`;
+  const units = dossier.units.filter(unit => unit.guide.editorialStatus === 'published');
+  const [unitId, setUnitId] = useState(units[0]?.id ?? '');
+  const [cardId, setCardId] = useState('');
+  const cards = publishedLiteraryPassages(dossier, unitId);
+  const card = cards.find(item => item.id === cardId) ?? cards[0];
+  const unit = units.find(item => item.id === unitId);
+  const noteId = JSON.stringify([unitId, card?.id ?? 'without-card']);
+  const [notebook, setNotebook] = useState(() => readLiteraryNotebook(key));
+  const note = notebook[noteId] ?? emptyLiteraryStudyNote();
+  const [mode, setMode] = useState<'analysis' | 'retrieval' | 'comparison'>('analysis');
+  const [revealed, setRevealed] = useState<Record<string, boolean>>({});
+  const [message, setMessage] = useState('');
+  const [works, setWorks] = useState<LiteraryWork[]>([]);
+  const [catalogError, setCatalogError] = useState(false);
+  const [peerSlug, setPeerSlug] = useState('');
+  const [peerData, setPeerData] = useState<{ slug: string; dossier: WorkDossier | null }>({ slug: '', dossier: null });
+  const peerDossier = peerData.slug === peerSlug ? peerData.dossier : null;
+  const [peerCardId, setPeerCardId] = useState('');
+  const [peerLoading, setPeerLoading] = useState(false);
+  const [peerError, setPeerError] = useState('');
+  const [axisId, setAxisId] = useState('voz');
+  useEffect(() => { let active = true; getLiteraryWorks().then(items => { if (active) setWorks(items.filter(item => item.id !== work.id)); }).catch(() => { if (active) setCatalogError(true); }); return () => { active = false; }; }, [work.id]);
+  useEffect(() => {
+    let active = true; setPeerData({ slug: peerSlug, dossier: null }); setPeerError(''); setPeerLoading(Boolean(peerSlug));
+    if (peerSlug) loadWorkDossier(peerSlug).then(value => { if (active) { setPeerData({ slug: peerSlug, dossier: value ? visibleDossier(value, false) : null }); if (!value) setPeerError('Não há dossiê disponível para esta obra.'); } }).catch(() => { if (active) setPeerError('Não foi possível carregar a obra de comparação.'); }).finally(() => { if (active) setPeerLoading(false); });
+    return () => { active = false; };
+  }, [peerSlug]);
+  const peerCards = peerDossier ? publishedLiteraryPassages(peerDossier) : [];
+  const peerCard = peerCards.find(item => item.id === peerCardId) ?? peerCards[0];
+  const axis = literaryComparisonAxes.find(item => item.id === axisId)!;
+  const update = (field: 'analysis' | 'retrieval' | 'revision', value: string) => { setNotebook(items => ({ ...items, [noteId]: { ...note, [field]: value, checked: [] } })); setMessage(''); };
+  const save = () => { try { localStorage.setItem(key, JSON.stringify(notebook)); setMessage('Fichas salvas neste navegador.'); } catch { setMessage('Não foi possível salvar. Sua resposta continua aberta; copie-a antes de sair.'); } };
+  const visibleKey = JSON.stringify([noteId, mode]);
+  const response = mode === 'retrieval' ? note.retrieval : note.analysis;
+  return <section className="ni-panel p-5 space-y-4" aria-labelledby="literary-workshop-title"><h2 id="literary-workshop-title" className="font-display text-xl">Laboratório de leitura · {work.title}</h2><p className="text-sm">Escolha a unidade e produza uma análise antes de consultar o comentário. As fichas ficam neste navegador, separadas por conta, obra e edição. Marque a leitura na aba Leitura guiada após concluir a unidade.</p><p className="text-xs text-[var(--dim)]">Edição: {dossier.edition.label}. As localizações são as do dossiê; confira-as em seu exemplar.</p>
+    {requirements.some(item => item.active) && <div className="text-sm space-y-1"><p className="font-semibold">Recortes exigidos no catálogo</p>{requirements.filter(item => item.active).map(item => <p key={item.id}>{item.board} · {item.examCycle}: {item.requiredScope} · <a className="underline" href={item.officialListUrl} target="_blank" rel="noreferrer">Conferir lista oficial</a></p>)}<p className="text-xs">Concentre o treino nas unidades exigidas pela sua prova; o laboratório também permite leitura complementar.</p></div>}
+    <div className="grid sm:grid-cols-2 gap-3"><label>Unidade do laboratório<select className="field block w-full" value={unitId} onChange={event => { setUnitId(event.target.value); setCardId(''); setMessage(''); }}>{units.map(item => <option value={item.id} key={item.id}>{item.title}</option>)}</select></label><label>Passagem do laboratório<select className="field block w-full" value={card?.id ?? ''} disabled={!cards.length} onChange={event => { setCardId(event.target.value); setMessage(''); }}>{cards.map(item => <option value={item.id} key={item.id}>{item.location} · passagem {cards.indexOf(item) + 1}</option>)}</select></label></div>
+    {!unit && <p>Não há unidade com guia publicado para este treino.</p>}
+    <div className="flex flex-wrap gap-2">{([['analysis', 'Analisar com passagem'], ['retrieval', 'Revisar sem consulta'], ['comparison', 'Comparar obras']] as const).map(([value, label]) => <button className="ni-button" aria-pressed={mode === value} key={value} onClick={() => setMode(value)}>{label}</button>)}</div>
+    {mode !== 'comparison' && unit && <>
+      {mode === 'analysis' && card && <div><p className="text-xs">{card.location}</p><blockquote className="border-l-2 border-[var(--primary)] pl-3 my-2 text-sm">{card.quote}</blockquote><p className="text-xs">Camada de evidência: {card.evidenceLayer === 'textual_evidence' ? 'evidência textual' : card.evidenceLayer === 'documented_criticism' ? 'crítica documentada' : 'síntese fundamentada'}.</p></div>}
+      {mode === 'analysis' && !card && <p className="text-sm">Esta unidade tem guia publicado, mas não possui passagem-chave publicada. Use seu exemplar e registre a localização na resposta; não há citação pronta para comparar.</p>}
+      <p className="text-sm">{mode === 'retrieval' ? `Sem consultar: reconstitua a situação de ${unit.title}, identifique uma voz/procedimento, explique o efeito e relacione ao conjunto. Localize depois a evidência para conferir.` : 'Explique contexto → voz → indício → procedimento → efeito → relação com o conjunto. Dê uma conclusão apoiada no trecho, não apenas um rótulo de escola ou resumo.'}</p>
+      <label className="block text-sm">{mode === 'retrieval' ? 'Minha recuperação sem consulta' : 'Minha análise antes do comentário'}<textarea className="field block w-full" rows={5} disabled={revealed[visibleKey]} value={response} onChange={event => update(mode === 'retrieval' ? 'retrieval' : 'analysis', event.target.value)} /></label>
+      <button className="ni-button" disabled={!response.trim()} onClick={() => setRevealed(items => ({ ...items, [visibleKey]: true }))}>Conferir análise e critérios</button>
+      {revealed[visibleKey] && <div className="space-y-3 text-sm"><p><b>Síntese publicada da unidade:</b> {unit.guide.summary}</p><ul className="list-disc pl-5">{unit.guide.observe.map(item => <li key={item}>{item}</li>)}</ul>{card && <dl className="space-y-2"><div><dt className="font-semibold">Contexto</dt><dd>{card.context}</dd></div><div><dt className="font-semibold">Recurso e efeito</dt><dd>{card.formalDevice} {card.effect}</dd></div><div><dt className="font-semibold">Parte e conjunto</dt><dd>{card.wholeRelation}</dd></div></dl>}<p>Autoavaliação: marque o que sua resposta demonstra; os critérios não geram nota ou domínio automaticamente.</p>{literaryAnalysisCriteria.map(criterion => <label className="block" key={criterion}><input type="checkbox" checked={note.checked.includes(`${mode}:${criterion}`)} onChange={event => setNotebook(items => ({ ...items, [noteId]: { ...note, checked: event.target.checked ? [...note.checked, `${mode}:${criterion}`] : note.checked.filter(item => item !== `${mode}:${criterion}`) } }))} /> {criterion}</label>)}<label className="block">Minha reescrita da análise<textarea className="field block w-full" rows={4} value={note.revision} onChange={event => update('revision', event.target.value)} /></label><p><b>Transferência autoral:</b> se a mesma situação fosse enunciada por outra voz ou organizada em outra ordem, o efeito seria igual? Proponha uma mudança hipotética e justifique o que se altera. Isso não descreve outra versão real da obra.</p><details><summary className="cursor-pointer">Conferir critérios da transferência</summary><p>Distinga o conteúdo da operação formal, explicite a mudança e explique seu efeito sobre o leitor. Confirme depois sua interpretação em outro trecho, preservando diferenças de contexto.</p></details></div>}
+    </>}
+    {mode === 'comparison' && <div className="space-y-3"><p className="text-sm">Compare duas passagens pelo mesmo eixo. A comparação é um treino autoral, não uma relação crítica já demonstrada nem previsão de prova.</p>{catalogError && <p role="alert">Não foi possível carregar o catálogo de comparação.</p>}<label className="block">Outra obra para comparar<select className="field block w-full" value={peerSlug} onChange={event => { setPeerSlug(event.target.value); setPeerCardId(''); }}><option value="">Escolha outra obra</option>{works.map(item => <option key={item.id} value={item.slug}>{item.title}</option>)}</select></label><label className="block">Eixo da comparação<select className="field block w-full" value={axisId} onChange={event => setAxisId(event.target.value)}>{literaryComparisonAxes.map(item => <option key={item.id} value={item.id}>{item.title}</option>)}</select></label><label className="block">Passagem da outra obra<select className="field block w-full" disabled={!peerCards.length || peerLoading} value={peerCard?.id ?? ''} onChange={event => setPeerCardId(event.target.value)}>{peerCards.map(item => <option value={item.id} key={item.id}>{item.location}</option>)}</select></label>{peerLoading && <p role="status">Carregando a passagem publicada…</p>}{peerError && <p role="alert">{peerError}</p>}{peerDossier && !peerCard && <p>Esta obra não tem passagem publicada elegível para este laboratório.</p>}{card && peerCard && !peerLoading && <><p className="text-sm"><b>{work.title}:</b> {card.quote} · {card.location}</p><p className="text-sm">Contexto da primeira passagem: {card.context}</p><p className="text-sm"><b>{works.find(item => item.slug === peerSlug)?.title}:</b> {peerCard.quote} · {peerCard.location}</p><p className="text-sm">Contexto da segunda passagem: {peerCard.context}</p><p className="text-xs">Edição da segunda obra: {peerDossier?.edition.label}.</p><p className="text-sm">{axis.question}</p><label className="block">Minha comparação<textarea className="field block w-full" rows={5} value={notebook[JSON.stringify(['comparison', noteId, peerSlug, peerDossier?.edition.label, peerCard.id, axisId])]?.comparison ?? ''} onChange={event => { const id = JSON.stringify(['comparison', noteId, peerSlug, peerDossier?.edition.label, peerCard.id, axisId]); setNotebook(items => ({ ...items, [id]: { ...(items[id] ?? emptyLiteraryStudyNote()), comparison: event.target.value } })); setMessage(''); }} /></label><details><summary className="cursor-pointer">Critérios para conferir a comparação</summary><ul className="list-disc pl-5 text-sm"><li>Mesmo eixo nas duas passagens.</li><li>Um indício localizado de cada obra e explicação de seu funcionamento.</li><li>Uma aproximação e uma diferença justificadas, sem equiparar autor e voz.</li><li>Limite da comparação: explique o que os recortes não permitem generalizar.</li></ul></details></>}{!card && <p>Escolha uma unidade com passagem publicada para comparar.</p>}</div>}
+    <button className="ni-button" onClick={save}>Salvar fichas de leitura</button>{message && <p role="status" className="text-sm">{message}</p>}
+  </section>;
+}
