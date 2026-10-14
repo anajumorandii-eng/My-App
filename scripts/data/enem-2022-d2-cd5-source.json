@@ -1,0 +1,79 @@
+{
+  "board": "ENEM",
+  "year": 2022,
+  "phase": "2º dia · aplicação regular",
+  "version": "CD5 amarelo",
+  "examUrl": "https://riep.inep.gov.br/bitstreams/481e4c70-e485-4d0b-ac11-82746e24bc16/download",
+  "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/06c1b02d-a528-4f3d-beb2-8db7048158a7/download",
+  "excludedNumbers": [
+    175
+  ],
+  "media": [
+    {
+      "page": 2,
+      "url": "/question-media/oficiais/enem-2022-d2-cd5/p02.webp",
+      "sha256": "a79e0dea5b7324490be3719e9b66215380051d018bd5b1d59c9de4799bba7fc5"
+    },
+    {
+      "page": 3,
+      "url": "/question-media/oficiais/enem-2022-d2-cd5/p03.webp",
+      "sha256": "7c8806ec3d2d6b6221da6ec0fa87642dc7230eed00130baebbe89b0972ea8a5a"
+    },
+    {
+      "page": 4,
+      "url": "/question-media/oficiais/enem-2022-d2-cd5/p04.webp",
+      "sha256": "00195a12e24e7d37238c652c03f3b007d27782d69b1cfdbcbc8d4bf4c06a7679"
+    },
+    {
+      "page": 6,
+      "url": "/question-media/oficiais/enem-2022-d2-cd5/p06.webp",
+      "sha256": "343fd99c2d8efe3e3e9a3142b0999f597519d398d66e5158b96724f63716aaba"
+    },
+    {
+      "page": 10,
+      "url": "/question-media/oficiais/enem-2022-d2-cd5/p10.webp",
+      "sha256": "8fe0843c7319a3d6769ed6150b7d42f89e3190a4d7541fda1d17a59332d561c5"
+    },
+    {
+      "page": 15,
+      "url": "/question-media/oficiais/enem-2022-d2-cd5/p15.webp",
+      "sha256": "d660b3265bd2f2680ae6b60384921b728d175ba51e7320400b174aa38703853f"
+    },
+    {
+      "page": 17,
+      "url": "/question-media/oficiais/enem-2022-d2-cd5/p17.webp",
+      "sha256": "fdf766eb1de4708cd7118478772fad921404a6d634ea4685dccd02b4d8dd762c"
+    },
+    {
+      "page": 23,
+      "url": "/question-media/oficiais/enem-2022-d2-cd5/p23.webp",
+      "sha256": "319cb865169d3951bfaf869c16515f07f4da893ff6c7a93e8f0a90e5001916f3"
+    }
+  ],
+  "idPrefix": "enem_2022_d2_cd5",
+  "sourceFile": "ENEM_2022_dia_2_CD5_amarelo.pdf",
+  "totalQuestions": 90,
+  "firstNumber": 91,
+  "optionIds": "abcde",
+  "selectedNumbers": [
+    92,
+    94,
+    97,
+    98,
+    99,
+    104,
+    105,
+    116,
+    130,
+    136,
+    140,
+    157
+  ],
+  "answerKeyFormat": "enem",
+  "keyMarker": "Gabarito 2022",
+  "examSha256": "068a960ff3fde64d89484995f1a323676c354ad1efa27c109f09a4bb90619756",
+  "answerKeySha256": "2aca83d7cf5e990f63318a525883d2e77ba2d2baf815566efb96287dbf631b11",
+  "answerKeyTextSha256": "1827bc636444e822c839dc477931c190f66a7d6472372cf46735b833e9a29717",
+  "answerKeyTextFile": "gabaritos/ENEM/enem-2022-d2-cd5.txt",
+  "itemsFile": "scripts/data/enem-2022-d2-cd5-expansao.json"
+}

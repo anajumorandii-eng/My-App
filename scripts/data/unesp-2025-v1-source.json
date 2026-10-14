@@ -1,0 +1,92 @@
+{
+  "board": "UNESP",
+  "year": 2025,
+  "phase": "1ª fase",
+  "version": "V1",
+  "examUrl": "https://documento.vunesp.com.br/documento/stream/NjU5MzI0Mg%3d%3d",
+  "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjU5MzIzOA%3d%3d",
+  "excludedNumbers": [],
+  "media": [
+    {
+      "page": 3,
+      "url": "/question-media/oficiais/unesp-2025-v1/p03.webp",
+      "sha256": "3d90391e9d91a1337bb9ef3618432969f15abcf257c728f360a992df973acc09"
+    },
+    {
+      "page": 4,
+      "url": "/question-media/oficiais/unesp-2025-v1/p04.webp",
+      "sha256": "20ddb009a04cc3793a4978ebf4c5851814e9c99bee1c09ee9c96970adaf38190"
+    },
+    {
+      "page": 8,
+      "url": "/question-media/oficiais/unesp-2025-v1/p08.webp",
+      "sha256": "c4b98fa8f936b87c6f257f44df82fe0e45c3b37d0c0804ff90f136d1d6b9a9ec"
+    },
+    {
+      "page": 9,
+      "url": "/question-media/oficiais/unesp-2025-v1/p09.webp",
+      "sha256": "e911e6e44db839f4dcdcc46517c8acfd544512681355fd038bc5b3a253432ea7"
+    },
+    {
+      "page": 12,
+      "url": "/question-media/oficiais/unesp-2025-v1/p12.webp",
+      "sha256": "d88704fa3a6b67ddd5783d16799151342d7d8c7e3c87444cbe3d2f07fdc0d10b"
+    },
+    {
+      "page": 19,
+      "url": "/question-media/oficiais/unesp-2025-v1/p19.webp",
+      "sha256": "1ae7e6080859331243023c8a6aa6f91af2042552e0ab6aac4234ca2fb556135a"
+    },
+    {
+      "page": 22,
+      "url": "/question-media/oficiais/unesp-2025-v1/p22.webp",
+      "sha256": "b403b0cc365e454d7c4d13ad2b7fc90e203c453cd167eb7e70b5378ebc3e4686"
+    },
+    {
+      "page": 23,
+      "url": "/question-media/oficiais/unesp-2025-v1/p23.webp",
+      "sha256": "6e8fe700948c378be70bbd8c9566d1575b8dd0a7f6cbbfc00b0eed5299a2064f"
+    },
+    {
+      "page": 26,
+      "url": "/question-media/oficiais/unesp-2025-v1/p26.webp",
+      "sha256": "1a25f438331ff411edd921d0d0fb2dbb8d0ab16df3c9861ba095529f8d8e6ec6"
+    },
+    {
+      "page": 27,
+      "url": "/question-media/oficiais/unesp-2025-v1/p27.webp",
+      "sha256": "86fc94ba288f3bd2668b1226e261d4a21c29f93a110577559ee48a43a7965d44"
+    },
+    {
+      "page": 31,
+      "url": "/question-media/oficiais/unesp-2025-v1/p31.webp",
+      "sha256": "067dd1e79b76e64d6833a350a5644da850aaf73fe12ef64de9ee6eee7d3055a9"
+    }
+  ],
+  "idPrefix": "unesp_2025_v1",
+  "sourceFile": "UNESP_2025_1a_fase_V1.pdf",
+  "totalQuestions": 90,
+  "firstNumber": 1,
+  "optionIds": "abcde",
+  "selectedNumbers": [
+    5,
+    18,
+    21,
+    33,
+    51,
+    59,
+    61,
+    65,
+    73,
+    75,
+    78,
+    90
+  ],
+  "answerKeyFormat": "vunesp",
+  "keyMarker": "VNSP2404",
+  "examSha256": "b2702765445da4a833b6fa06bad063b8d9b4fb9c00773a6f5184f178e43266fa",
+  "answerKeySha256": "a70664a5827116c0b90dc3b187c13fe97d942c76ef9660c9812ef36da0ecceaf",
+  "answerKeyTextSha256": "9fb2b0a8abd050396b74cd303a4cd82b94dea73130c6fd2b96c6e4d88650853f",
+  "answerKeyTextFile": "gabaritos/UNESP/unesp-2025-v1.txt",
+  "itemsFile": "scripts/data/unesp-2025-v1-expansao.json"
+}

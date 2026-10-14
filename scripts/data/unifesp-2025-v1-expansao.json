@@ -1,0 +1,641 @@
+[
+  {
+    "number": 1,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Gêneros Textuais",
+    "title": "Folhetim: cotidiano, leveza e humor",
+    "concept": "Inferência de características do gênero a partir das metáforas de Alencar; pré-requisito: distinguir assunto e modo de apresentação.",
+    "steps": [
+      "Observe no segundo parágrafo a busca de graça, sal e espírito no fato mais comezinho e, no terceiro, as imagens de voo e liberdade.",
+      "Associe o cotidiano ao conteúdo e as imagens bem-humoradas ao tratamento estilístico, restringindo a leitura aos parágrafos indicados.",
+      "O fato comezinho é matéria cotidiana, compatível com o viés jornalístico; a graça e a imagem do colibri sustentam leveza e humor.",
+      "C reúne as duas características. A e B atribuem um projeto memorialístico; D contraria a leveza; E acrescenta finalidade de corrigir costumes.",
+      "Confira C no gabarito V1 e releia graça, sal e espírito: o tom jocoso do autor não autoriza inventar uma finalidade moralizadora."
+    ],
+    "trap": "Confundir a ironia usada pelo autor com a finalidade de corrigir costumes atribuída ao gênero.",
+    "retrieval": [
+      "Qual expressão aponta para o cotidiano?",
+      "Que imagens sustentam leveza sem provar sentimentalismo?"
+    ],
+    "transfer": "Exercício autoral: um cronista relata a fila do mercado e compara os carrinhos a tartarugas apressadas. Identifique a matéria cotidiana e explique o efeito da comparação.",
+    "criteria": [
+      "A fila do mercado é a situação cotidiana observada.",
+      "A comparação reúne lentidão e pressa, criando humor por incongruência."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "viés memorialístico, texto escrito com emoção e sentimentalismo."
+      },
+      {
+        "id": "b",
+        "text": "viés memorialístico, texto escrito visando comover seus leitores."
+      },
+      {
+        "id": "c",
+        "text": "viés jornalístico, texto escrito com leveza e humor."
+      },
+      {
+        "id": "d",
+        "text": "viés jornalístico, texto escrito com rigor e seriedade."
+      },
+      {
+        "id": "e",
+        "text": "viés irônico, texto escrito visando corrigir os costumes dos leitores."
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "Leia o trecho de um folhetim, texto precursor da crônica atual, do escritor José de Alencar, publicado originalmente em 24.09.1854.\n\nÉ uma felicidade que não me tenha ainda dado ao trabalho de saber quem foi o inventor deste monstro de Horácio¹, deste novo Proteu², que chamam — folhetim; senão aproveitaria alguns momentos em que estivesse de candeias às avessas³, e escrever-lhe-ia uma biografia, que, com as anotações de certos críticos que eu conheço, havia de fazer o tal sujeito ter um inferno no purgatório onde necessariamente deve estar o inventor de tão desastrada ideia.\n\n[...] Fazerem do escritor uma espécie de colibri a esvoaçar em ziguezague, e a sugar, como o mel das flores, a graça, o sal e o espírito que deve necessariamente descobrir no fato o mais comezinho!\n\nAinda isto não é tudo. Depois que o mísero folhetinista por força de vontade conseguiu atingir a este último esforço da volubilidade, quando à custa de magia e de encanto fez que a pena se lembrasse dos tempos em que voava, deixa finalmente o pensamento lançar-se sobre o papel, livre como o espaço. Cuida que é uma borboleta que quebrou a crisálida para ostentar o brilho fascinador de suas cores; mas engana-se: é apenas uma formiga que criou asas para perder-se.\n\nDe um lado um crítico, aliás de boa-fé, é de opinião que o folhetinista inventou em vez de contar, o que por conseguinte excedeu os limites da crônica. Outro afirma que plagiou, e prova imediatamente que tal autor, se não disse a mesma coisa, teve intenção de dizer [...]. Se se trata de coisa séria, a amável leitora amarrota o jornal, e atira-o de lado com um momozinho⁴ displicente a que é impossível resistir. Quando se fala de bailes, de uma mocinha bonita, de uns olhos brejeiros, o velho tira os óculos de maçado⁵ e diz entre dentes: “Ah! o sujeitinho está namorando à minha custa! Não fala contra as reformas! Hei de suspender a assinatura.”\n\n(José de Alencar. Ao correr da pena, 2004.) ¹ monstro de Horácio: figura grotesca imaginada pelo escritor latino Horácio; tal figura conjugava partes de diferentes animais\n\n² Proteu: deus marinho, que podia assumir diferentes formas.\n\n³ de candeias às avessas: de mau humor.\n\n⁴ momozinho: zombaria, galhofa.\n\n⁵ maçado: aborrecido, entediado.\n\nDepreendem-se do segundo e do terceiro parágrafos do texto as seguintes características do folhetim:",
+    "statementComplete": true
+  },
+  {
+    "number": 3,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Pronomes",
+    "title": "O destinatário de escrever-lhe-ia",
+    "concept": "Coesão referencial e pronome oblíquo; pré-requisito: identificar destinatário de escrever.",
+    "steps": [
+      "Localize escrever-lhe-ia uma biografia e a referência anterior a quem foi o inventor do folhetim.",
+      "Reconstitua a oração com o nome do destinatário no lugar de lhe: escreveria uma biografia ao inventor.",
+      "Lhe retoma o inventor, sujeito que o narrador deseja satirizar por ter criado o folhetim.",
+      "E é correta; Proteu e folhetim são caracterizações do gênero, enquanto biografia e anotações não são destinatários da escrita.",
+      "Confira E no gabarito V1 e a retomada posterior tal sujeito, que preserva o referente humano."
+    ],
+    "trap": "Escolher o substantivo mais próximo em vez do referente compatível com a função de destinatário.",
+    "retrieval": [
+      "Como reescrever lhe com um sintagma preposicionado?",
+      "Que retomada posterior confirma o referente humano?"
+    ],
+    "transfer": "Exercício autoral: em “Encontrei a autora do artigo e lhe escrevi uma mensagem”, substitua lhe por seu referente e identifique sua função.",
+    "criteria": [
+      "Lhe significa à autora do artigo.",
+      "O pronome exerce função de objeto indireto de escrevi, indicando destinatário."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "a Proteu."
+      },
+      {
+        "id": "b",
+        "text": "às anotações de certos críticos."
+      },
+      {
+        "id": "c",
+        "text": "à biografia."
+      },
+      {
+        "id": "d",
+        "text": "ao folhetim."
+      },
+      {
+        "id": "e",
+        "text": "ao inventor do folhetim."
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "Leia o trecho de um folhetim, texto precursor da crônica atual, do escritor José de Alencar, publicado originalmente em 24.09.1854.\n\nÉ uma felicidade que não me tenha ainda dado ao trabalho de saber quem foi o inventor deste monstro de Horácio¹, deste novo Proteu², que chamam — folhetim; senão aproveitaria alguns momentos em que estivesse de candeias às avessas³, e escrever-lhe-ia uma biografia, que, com as anotações de certos críticos que eu conheço, havia de fazer o tal sujeito ter um inferno no purgatório onde necessariamente deve estar o inventor de tão desastrada ideia.\n\n[...] Fazerem do escritor uma espécie de colibri a esvoaçar em ziguezague, e a sugar, como o mel das flores, a graça, o sal e o espírito que deve necessariamente descobrir no fato o mais comezinho!\n\nAinda isto não é tudo. Depois que o mísero folhetinista por força de vontade conseguiu atingir a este último esforço da volubilidade, quando à custa de magia e de encanto fez que a pena se lembrasse dos tempos em que voava, deixa finalmente o pensamento lançar-se sobre o papel, livre como o espaço. Cuida que é uma borboleta que quebrou a crisálida para ostentar o brilho fascinador de suas cores; mas engana-se: é apenas uma formiga que criou asas para perder-se.\n\nDe um lado um crítico, aliás de boa-fé, é de opinião que o folhetinista inventou em vez de contar, o que por conseguinte excedeu os limites da crônica. Outro afirma que plagiou, e prova imediatamente que tal autor, se não disse a mesma coisa, teve intenção de dizer [...]. Se se trata de coisa séria, a amável leitora amarrota o jornal, e atira-o de lado com um momozinho⁴ displicente a que é impossível resistir. Quando se fala de bailes, de uma mocinha bonita, de uns olhos brejeiros, o velho tira os óculos de maçado⁵ e diz entre dentes: “Ah! o sujeitinho está namorando à minha custa! Não fala contra as reformas! Hei de suspender a assinatura.”\n\n(José de Alencar. Ao correr da pena, 2004.) ¹ monstro de Horácio: figura grotesca imaginada pelo escritor latino Horácio; tal figura conjugava partes de diferentes animais\n\n² Proteu: deus marinho, que podia assumir diferentes formas.\n\n³ de candeias às avessas: de mau humor.\n\n⁴ momozinho: zombaria, galhofa.\n\n⁵ maçado: aborrecido, entediado.\n\nO pronome sublinhado no primeiro parágrafo refere-se\n(O pronome destacado é “lhe”, em “escrever-lhe-ia”.)",
+    "statementComplete": true
+  },
+  {
+    "number": 6,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Advérbio e Locuções Adverbiais: Circunstanciadores",
+    "title": "Hoje e o momento da enunciação",
+    "concept": "Dêixis temporal versus organização cronológica interna; pré-requisito: reconhecer advérbios e referências temporais.",
+    "steps": [
+      "Leia a definição de dêitico e localize hoje, em seguida e bilhões de anos mais tarde nas alternativas.",
+      "Pergunte se a interpretação exige saber quando o autor enuncia ou apenas acompanhar a sequência dos eventos narrados.",
+      "Hoje, em somos hoje, aponta para o presente do enunciador, contrastado com primeiro antepassado e descendentes.",
+      "C apresenta a dêixis temporal pedida. D e E organizam a cronologia narrada; A e B não contêm um marcador temporal equivalente a hoje.",
+      "Confira C no gabarito V1 e diferencie esse hoje de uma data histórica fixa, que permanece identificável fora da situação de fala."
+    ],
+    "trap": "Tratar toda expressão temporal como dêitica, incluindo relações cronológicas internas.",
+    "retrieval": [
+      "Por que hoje depende da situação de fala?",
+      "Qual a diferença entre hoje e em seguida neste texto?"
+    ],
+    "transfer": "Exercício autoral: compare “Hoje entrego o relatório” e “O relatório foi entregue em 10 de maio de 2024”. Qual referência muda se a frase for dita em outro dia?",
+    "criteria": [
+      "Hoje muda de referente conforme o dia da enunciação.",
+      "10 de maio de 2024 continua designando a mesma data."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "“A ciência nos mostrou que a razão, motivada pela paixão da descoberta, é o instrumento mais poderoso que temos para responder a nossas perguntas sobre o mundo natural.” (1º parágrafo)"
+      },
+      {
+        "id": "b",
+        "text": "“Buscamos por simetrias perfeitas, criamos equações para descrevê-las, mas vemos que nossas soluções são apenas aproximações de uma realidade imperfeita.” (2º parágrafo)"
+      },
+      {
+        "id": "c",
+        "text": "“Nosso primeiro antepassado era tão fascinado quanto somos hoje pelo mistério da Criação. Nossos descendentes continuarão essa busca, tentando desvendar o sentido da existência.” (1º parágrafo)"
+      },
+      {
+        "id": "d",
+        "text": "“Em seguida, nuvens de hidrogênio e hélio, cercadas por véus invisíveis de matéria escura, entraram em colapso devido a sua própria gravidade para formar as primeiras estrelas e galáxias.” (2º parágrafo)"
+      },
+      {
+        "id": "e",
+        "text": "“Bilhões de anos mais tarde, nossos antepassados começaram a se questionar sobre a razão de sua existência. Sozinhos, contemplaram os céus, buscando nas estrelas pela sua origem.” (2º parágrafo)"
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "Leia um trecho do livro Criação imperfeita, do físico Marcelo Gleiser.\n\nNosso primeiro antepassado era tão fascinado quanto somos hoje pelo mistério da Criação. Nossos descendentes continuarão essa busca, tentando desvendar o sentido da existência. Somos, e seremos sempre, criaturas criadoras. Mas nosso foco precisa mudar. A ciência nos mostrou que a razão, motivada pela paixão da descoberta, é o instrumento mais poderoso que temos para responder a nossas perguntas sobre o mundo natural. Dado que nossas primeiras explicações do mundo surgiram de imagens e narrativas míticas, não é surpreendente que a ciência carregue, nas suas raízes, a mesma expectativa mítica de explicações finais sobre o mundo, sobre nossa razão de ser. [...]\n\nA despeito da nossa necessidade de encontrar perfeição e simetria em tudo, o poder criativo da Natureza vem de assimetrias e de imperfeições que se manifestam desde o mundo das partículas subatômicas ao Universo como um todo. Buscamos por simetrias perfeitas, criamos equações para descrevê-las, mas vemos que nossas soluções são apenas aproximações de uma realidade imperfeita. E assim deveria ser. Assimetria gera desequilíbrio, desequilíbrio gera transformação, transformação gera realização, a emergência de estrutura. Algumas das simetrias mais básicas da física de partículas devem ser violadas para que a matéria exista. A vida seria impossível sem a assimetria molecular, a quiralidade das biomoléculas. O Universo por inteiro talvez tenha surgido de uma flutuação quântica que emergiu do multiverso, uma entidade atemporal onde incontáveis possíveis universos coexistem. Segundo essa visão, o cosmo é produto de um acidente que carregava consigo as sementes da existência. De um início incerto e após uma expansão superacelerada, o cosmo evoluiu para gerar os elementos químicos mais leves. Em seguida, nuvens de hidrogênio e hélio, cercadas por véus invisíveis de matéria escura, entraram em colapso devido a sua própria gravidade para formar as primeiras estrelas e galáxias. Bilhões de anos mais tarde, em torno de uma estrela comum, um planeta banhado por vastos oceanos coletou os ingredientes necessários para a vida. Após colisões de enorme violência com asteroides e cometas, de incontáveis erupções vulcânicas, de turbulência furiosa nos oceanos, o planeta foi se acalmando. Da sopa primordial, moléculas interagiram e cresceram, interligando-se para formar a primeira criatura viva. Bilhões de anos mais tarde, nossos antepassados começaram a se questionar sobre a razão de sua existência. Sozinhos, contemplaram os céus, buscando nas estrelas pela sua origem.\n\n(Criação imperfeita, 2024.)\n\nDêiticos são elementos indiciais da linguagem que se referem ao lugar em que o enunciado é produzido, ao momento da enunciação e aos atores do discurso. Termos como “aqui” ou “agora” devem ser interpretados em função do lugar ou do momento em que se encontram os atores do discurso quando dizem “aqui” ou “agora”. Verifica-se um dêitico que se refere ao momento em que o enunciado é produzido no trecho",
+    "statementComplete": true
+  },
+  {
+    "number": 7,
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "chapter": "Orações Adverbiais",
+    "title": "Finalidade e desenvolvimento de para formar",
+    "concept": "Oração reduzida de infinitivo com valor final; pré-requisito: sujeito plural e pretérito do subjuntivo.",
+    "steps": [
+      "Identifique para formar a primeira criatura viva e o sujeito moléculas, retomado na oração de finalidade.",
+      "Desenvolva a oração final com para que, preservando o sujeito plural e a sequência temporal do passado.",
+      "A reescrita é interligando-se para que formassem a primeira criatura viva: formassem é terceira pessoa do plural do pretérito imperfeito do subjuntivo.",
+      "E satisfaz modo e concordância. A e C estão no indicativo; B e D estão no singular, e B também está no indicativo.",
+      "Confira E no gabarito V1; criatura é objeto de formar e não deve determinar a concordância verbal."
+    ],
+    "trap": "Concordar o verbo com criatura viva, confundindo objeto singular e sujeito plural.",
+    "retrieval": [
+      "Qual conjunção desenvolve a finalidade?",
+      "Por que formassem está no plural?"
+    ],
+    "transfer": "Exercício autoral: desenvolva “Os alunos se reuniram para preparar a feira”, preservando o sujeito e o passado.",
+    "criteria": [
+      "Os alunos se reuniram para que preparassem a feira.",
+      "Preparassem está no imperfeito do subjuntivo e concorda com os alunos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "formavam."
+      },
+      {
+        "id": "b",
+        "text": "formou."
+      },
+      {
+        "id": "c",
+        "text": "formaram."
+      },
+      {
+        "id": "d",
+        "text": "formasse."
+      },
+      {
+        "id": "e",
+        "text": "formassem."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia um trecho do livro Criação imperfeita, do físico Marcelo Gleiser.\n\nNosso primeiro antepassado era tão fascinado quanto somos hoje pelo mistério da Criação. Nossos descendentes continuarão essa busca, tentando desvendar o sentido da existência. Somos, e seremos sempre, criaturas criadoras. Mas nosso foco precisa mudar. A ciência nos mostrou que a razão, motivada pela paixão da descoberta, é o instrumento mais poderoso que temos para responder a nossas perguntas sobre o mundo natural. Dado que nossas primeiras explicações do mundo surgiram de imagens e narrativas míticas, não é surpreendente que a ciência carregue, nas suas raízes, a mesma expectativa mítica de explicações finais sobre o mundo, sobre nossa razão de ser. [...]\n\nA despeito da nossa necessidade de encontrar perfeição e simetria em tudo, o poder criativo da Natureza vem de assimetrias e de imperfeições que se manifestam desde o mundo das partículas subatômicas ao Universo como um todo. Buscamos por simetrias perfeitas, criamos equações para descrevê-las, mas vemos que nossas soluções são apenas aproximações de uma realidade imperfeita. E assim deveria ser. Assimetria gera desequilíbrio, desequilíbrio gera transformação, transformação gera realização, a emergência de estrutura. Algumas das simetrias mais básicas da física de partículas devem ser violadas para que a matéria exista. A vida seria impossível sem a assimetria molecular, a quiralidade das biomoléculas. O Universo por inteiro talvez tenha surgido de uma flutuação quântica que emergiu do multiverso, uma entidade atemporal onde incontáveis possíveis universos coexistem. Segundo essa visão, o cosmo é produto de um acidente que carregava consigo as sementes da existência. De um início incerto e após uma expansão superacelerada, o cosmo evoluiu para gerar os elementos químicos mais leves. Em seguida, nuvens de hidrogênio e hélio, cercadas por véus invisíveis de matéria escura, entraram em colapso devido a sua própria gravidade para formar as primeiras estrelas e galáxias. Bilhões de anos mais tarde, em torno de uma estrela comum, um planeta banhado por vastos oceanos coletou os ingredientes necessários para a vida. Após colisões de enorme violência com asteroides e cometas, de incontáveis erupções vulcânicas, de turbulência furiosa nos oceanos, o planeta foi se acalmando. Da sopa primordial, moléculas interagiram e cresceram, interligando-se para formar a primeira criatura viva. Bilhões de anos mais tarde, nossos antepassados começaram a se questionar sobre a razão de sua existência. Sozinhos, contemplaram os céus, buscando nas estrelas pela sua origem.\n\n(Criação imperfeita, 2024.)\n\n“Da sopa primordial, moléculas interagiram e cresceram, interligando-se para formar a primeira criatura viva.” (2º parágrafo)\n\nAo se transpor a oração reduzida sublinhada para uma oração desenvolvida, seu verbo assume a seguinte forma:\n(A oração destacada é “para formar a primeira criatura viva”.)",
+    "statementComplete": true
+  },
+  {
+    "number": 8,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Processos de Formação de Palavras",
+    "title": "Negação em assimetria e imperfeita",
+    "concept": "Valor semântico de prefixos no contexto; pré-requisito: reconhecer base e afixo.",
+    "steps": [
+      "Localize assimetria na frase sobre a vida e compare os prefixos das palavras nas cinco alternativas.",
+      "Separe o prefixo da base e compare o sentido expresso, sem exigir identidade de letras.",
+      "Assimetria indica ausência de simetria; imperfeita indica negação da perfeição. O im- é forma do prefixo negativo in-.",
+      "D contém o valor negativo. Multi- indica multiplicidade, sub- posição inferior, inter- relação recíproca e ante- anterioridade.",
+      "Confira D no gabarito V1 e a oposição textual entre simetrias perfeitas e realidade imperfeita."
+    ],
+    "trap": "Procurar prefixos graficamente iguais quando o comando pede o mesmo sentido.",
+    "retrieval": [
+      "Que valor compartilham a- e im- nestas palavras?",
+      "Que sentido tem multi- em multiverso?"
+    ],
+    "transfer": "Exercício autoral: compare os prefixos de amoral, incapaz e subterrâneo. Quais dois expressam ausência ou negação?",
+    "criteria": [
+      "A- em amoral e in- em incapaz expressam ausência ou negação.",
+      "Sub- em subterrâneo expressa posição abaixo, e não negação."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "“uma flutuação quântica que emergiu do multiverso”."
+      },
+      {
+        "id": "b",
+        "text": "“desde o mundo das partículas subatômicas ao Universo como um todo”."
+      },
+      {
+        "id": "c",
+        "text": "“Da sopa primordial, moléculas interagiram e cresceram”."
+      },
+      {
+        "id": "d",
+        "text": "“nossas soluções são apenas aproximações de uma realidade imperfeita”."
+      },
+      {
+        "id": "e",
+        "text": "“nossos antepassados começaram a se questionar sobre a razão de sua existência”."
+      }
+    ],
+    "pages": [
+      4,
+      5
+    ],
+    "statement": "Leia um trecho do livro Criação imperfeita, do físico Marcelo Gleiser.\n\nNosso primeiro antepassado era tão fascinado quanto somos hoje pelo mistério da Criação. Nossos descendentes continuarão essa busca, tentando desvendar o sentido da existência. Somos, e seremos sempre, criaturas criadoras. Mas nosso foco precisa mudar. A ciência nos mostrou que a razão, motivada pela paixão da descoberta, é o instrumento mais poderoso que temos para responder a nossas perguntas sobre o mundo natural. Dado que nossas primeiras explicações do mundo surgiram de imagens e narrativas míticas, não é surpreendente que a ciência carregue, nas suas raízes, a mesma expectativa mítica de explicações finais sobre o mundo, sobre nossa razão de ser. [...]\n\nA despeito da nossa necessidade de encontrar perfeição e simetria em tudo, o poder criativo da Natureza vem de assimetrias e de imperfeições que se manifestam desde o mundo das partículas subatômicas ao Universo como um todo. Buscamos por simetrias perfeitas, criamos equações para descrevê-las, mas vemos que nossas soluções são apenas aproximações de uma realidade imperfeita. E assim deveria ser. Assimetria gera desequilíbrio, desequilíbrio gera transformação, transformação gera realização, a emergência de estrutura. Algumas das simetrias mais básicas da física de partículas devem ser violadas para que a matéria exista. A vida seria impossível sem a assimetria molecular, a quiralidade das biomoléculas. O Universo por inteiro talvez tenha surgido de uma flutuação quântica que emergiu do multiverso, uma entidade atemporal onde incontáveis possíveis universos coexistem. Segundo essa visão, o cosmo é produto de um acidente que carregava consigo as sementes da existência. De um início incerto e após uma expansão superacelerada, o cosmo evoluiu para gerar os elementos químicos mais leves. Em seguida, nuvens de hidrogênio e hélio, cercadas por véus invisíveis de matéria escura, entraram em colapso devido a sua própria gravidade para formar as primeiras estrelas e galáxias. Bilhões de anos mais tarde, em torno de uma estrela comum, um planeta banhado por vastos oceanos coletou os ingredientes necessários para a vida. Após colisões de enorme violência com asteroides e cometas, de incontáveis erupções vulcânicas, de turbulência furiosa nos oceanos, o planeta foi se acalmando. Da sopa primordial, moléculas interagiram e cresceram, interligando-se para formar a primeira criatura viva. Bilhões de anos mais tarde, nossos antepassados começaram a se questionar sobre a razão de sua existência. Sozinhos, contemplaram os céus, buscando nas estrelas pela sua origem.\n\n(Criação imperfeita, 2024.)\n\n“A vida seria impossível sem a assimetria molecular” (2º parágrafo)\n\nO prefixo da palavra sublinhada expressa determinado sentido. Tal sentido também está presente no prefixo de uma palavra que consta do seguinte trecho do segundo parágrafo:\n(A palavra destacada é “assimetria”.)",
+    "statementComplete": true
+  },
+  {
+    "number": 9,
+    "topicId": "por_lit_modernismo",
+    "subject": "Português",
+    "chapter": "Pré-Modernismo",
+    "title": "Os sertões entre literatura e análise social",
+    "concept": "Reconhecimento de obra por estrutura e contexto histórico; pré-requisito: Pré-Modernismo e Euclides da Cunha.",
+    "steps": [
+      "Reúna as pistas terra, homem e luta, começo do século XX e análise da distância cultural entre litoral e interior.",
+      "Compare estrutura e período de cada obra proposta, evitando decidir apenas pelo cenário sertanejo.",
+      "Os sertões, de Euclides da Cunha, organiza-se em A Terra, O Homem e A Luta e articula narrativa literária, interpretação social e análise de Canudos.",
+      "B satisfaz todas as pistas; as demais obras pertencem a momentos posteriores e não apresentam essa divisão tripartite.",
+      "Confira B no gabarito V1 e a convergência entre estrutura, autoria e período, sem reduzir a obra a um único gênero."
+    ],
+    "trap": "Escolher Grande sertão: veredas apenas pela presença de sertão no título.",
+    "retrieval": [
+      "Quais partes de Os sertões são evocadas no comentário?",
+      "Por que a data intelectual ajuda a eliminar as outras obras?"
+    ],
+    "transfer": "Exercício autoral: uma ficha descreve “obra publicada em 1902, organizada em A Terra, O Homem e A Luta, sobre Canudos”. Identifique título, autor e uma dimensão além da narrativa literária.",
+    "criteria": [
+      "Os sertões, de Euclides da Cunha.",
+      "Aceitar análise histórica, geográfica ou social, ligada à descrição do meio e do conflito de Canudos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Morte e vida severina, de João Cabral de Melo Neto."
+      },
+      {
+        "id": "b",
+        "text": "Os sertões, de Euclides da Cunha."
+      },
+      {
+        "id": "c",
+        "text": "Capitães da areia, de Jorge Amado."
+      },
+      {
+        "id": "d",
+        "text": "Grande sertão: veredas, de Guimarães Rosa."
+      },
+      {
+        "id": "e",
+        "text": "Vidas secas, de Graciliano Ramos."
+      }
+    ],
+    "pages": [
+      5
+    ],
+    "statement": "É preciso ler esse livro singular sem a obsessão de enquadrá-lo em um determinado gênero literário, o que implicaria prejuízo paralisante. Ao contrário, a abertura a mais de uma perspectiva é o modo próprio de enfrentá-lo. A descrição minuciosa, pedantemente minuciosa, da terra, do homem e da luta situa essa obra, de pleno direito, no nível da cultura científica e histórica. Seu autor fez geografia humana e sociologia como um espírito atilado poderia fazê-lo no começo do século XX, em nosso meio intelectual, então avesso à observação demorada e à pesquisa pura. Situando a obra na evolução do pensamento brasileiro, diz lucidamente Antonio Candido: “Livro posto entre a literatura e a sociologia naturalista, essa obra assinala um fim e um começo: o fim do imperialismo literário, o começo da análise científica aplicada aos aspectos mais importantes da sociedade brasileira (no caso, as contradições contidas na diferença de cultura entre as regiões litorâneas e o interior).”\n\n(Alfredo Bosi. O pré-modernismo, 1973. Adaptado.)\n\nTal comentário aplica-se à obra",
+    "statementComplete": true
+  },
+  {
+    "number": 10,
+    "topicId": "por_norma_culta",
+    "subject": "Português",
+    "chapter": "Tipos de Discurso",
+    "title": "O microfone que converte a fala de Lola",
+    "concept": "Discurso direto e indireto em tirinha; pré-requisito: pessoa gramatical e referência enunciativa.",
+    "steps": [
+      "Compare as falas de Lola “Meu nome é Lola” e “eu dou um show” com as versões do microfone “O nome dela é Lola” e “ela dá um show”.",
+      "Observe quem fala originalmente e como o microfone relata a fala para outros ouvintes, alterando primeira para terceira pessoa.",
+      "Lola apresenta discurso direto; o microfone transpõe seu conteúdo para discurso indireto, deslocando os referentes pessoais.",
+      "C descreve essa contraposição. A confunde a presença de balões com discurso direto em ambos; B invoca discurso indireto livre sem o correspondente efeito de mistura de vozes.",
+      "Confira C no gabarito V1; D e E invertem a identificação de Lola, cuja fala contém eu e meu."
+    ],
+    "trap": "Classificar todo texto em balão como discurso direto, ignorando que o microfone relata a voz de outra personagem.",
+    "retrieval": [
+      "Quais mudanças pessoais ocorrem entre eu dou e ela dá?",
+      "Por que o relato do microfone não é discurso indireto livre?"
+    ],
+    "transfer": "Exercício autoral: converta “Meu nome é Ana e eu canto bem”, dita por Ana, em relato iniciado por “Ana disse que”.",
+    "criteria": [
+      "Ana disse que seu nome era Ana e que cantava bem; aceitar é e canta se houver enquadramento presente coerente.",
+      "Substituir meu/eu por referências à personagem e manter o conteúdo original."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "alternância do discurso direto de Lola com o discurso direto do microfone."
+      },
+      {
+        "id": "b",
+        "text": "manutenção de um discurso indireto livre, já que a fala do microfone absorve a fala de Lola."
+      },
+      {
+        "id": "c",
+        "text": "contraposição entre o discurso direto de Lola e o discurso indireto do microfone."
+      },
+      {
+        "id": "d",
+        "text": "alternância do discurso indireto de Lola com o discurso indireto do microfone."
+      },
+      {
+        "id": "e",
+        "text": "contraposição entre o discurso indireto de Lola e o discurso direto do microfone."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "Examine a tirinha da cartunista Laerte.\n(Lola, a andorinha, 2013. Adaptado.)\n\nO sentido da tirinha é construído, sobretudo, a partir da",
+    "statementComplete": true
+  },
+  {
+    "number": 12,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Figuras de Linguagem",
+    "title": "A luva como voz do soneto",
+    "concept": "Personificação como estrutura do poema; pré-requisito: distinguir eu lírico e autor.",
+    "steps": [
+      "Leia o soneto inteiro e relacione “calçar-vos”, “me deixou sozinha” e a saudade da luva abandonada no último verso.",
+      "Identifique quem ocupa a primeira pessoa e se esse ser pode literalmente sentir saudade e falar de seu destino.",
+      "A luva é o eu lírico: recebe sentimentos e voz humanos, organizando todo o soneto por personificação.",
+      "C é correta. Não há reflexão central sobre a escrita, redundância estruturante, suavização de expressão ou diálogo explícito com outra obra que sustente A, B, D ou E.",
+      "Confira C no gabarito V1; as comparações com flor e cálix reforçam a figura, mas não substituem a identificação da voz da luva."
+    ],
+    "trap": "Atribuir a primeira pessoa diretamente ao poeta e deixar de reconhecer o objeto personificado.",
+    "retrieval": [
+      "Que verso identifica o eu lírico como luva?",
+      "Como distinguir personificação de comparação?"
+    ],
+    "transfer": "Exercício autoral: em “A chave, esquecida na gaveta, lamentava a porta que nunca mais abriria”, identifique a figura e a palavra que a comprova.",
+    "criteria": [
+      "Personificação da chave.",
+      "Lamentava atribui emoção humana ao objeto; abrir a porta sozinho não comprovaria a figura."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a metalinguagem."
+      },
+      {
+        "id": "b",
+        "text": "o pleonasmo."
+      },
+      {
+        "id": "c",
+        "text": "a personificação."
+      },
+      {
+        "id": "d",
+        "text": "o eufemismo."
+      },
+      {
+        "id": "e",
+        "text": "a intertextualidade."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "Leia o soneto “Luva abandonada”, de Alberto de Oliveira.\n\nUma só vez calçar-vos me foi dado,\nDedos claros! A escura sorte minha,\nO meu destino, como um vento irado,\nLevou-vos longe e me deixou sozinha!\n\nSobre este cofre, desta cama ao lado,\nMurcho, como uma flor, triste e mesquinha,\nBebendo ávida o cheiro delicado\nQue aquela mão de dedos claros tinha.\n\nCálix¹! que a alma de um lírio teve um dia\nEm si guardada, antes que ao chão pendesse,\nBreve me hei de esfazer² em poeira, em nada...\n\nOh! em que chaga viva tocaria\nQuem nesta vida compreender pudesse\nA saudade da luva abandonada!\n\n(www.nilc.icmc.usp.br)\n¹ cálix: invólucro externo de uma flor; cálice.\n² esfazer: desfazer.\n\nO recurso expressivo que constitui o elemento estruturante do soneto é",
+    "statementComplete": true
+  },
+  {
+    "number": 16,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Como funciona o robô bio-híbrido",
+    "concept": "Propósito comunicativo de divulgação científica; pré-requisito: distinguir ideia central e detalhe.",
+    "steps": [
+      "Reúna os três parágrafos: criação de máquinas com fungos, conexão a eletrodos e computador, movimento provocado por luz ultravioleta.",
+      "Busque a alternativa que cobre essa progressão explicativa, sem transformar aplicação futura em finalidade econômica.",
+      "O texto apresenta um robô inovador e explica como impulsos dos fungos se convertem em comandos digitais de movimento.",
+      "B expressa esse propósito. A acrescenta combinação com células humanas; C confunde comparação de sinais neuronais com resistência humana; D e E deslocam o foco para lucro ou viabilidade econômica.",
+      "Confira B no gabarito V1 e a cadeia luz → sinais elétricos → comandos → movimento."
+    ],
+    "trap": "Usar a referência a neurônios humanos para concluir que células humanas integram os novos robôs.",
+    "retrieval": [
+      "Que cadeia converte um estímulo em movimento?",
+      "Quais detalhes afastam uma leitura sobre lucratividade?"
+    ],
+    "transfer": "Exercício autoral: resuma em uma frase o propósito de uma notícia que descreve sensores de umidade ligados a um programa que aciona a irrigação, sem discutir preços.",
+    "criteria": [
+      "A frase deve apresentar e explicar o sistema automatizado de irrigação.",
+      "Mencionar umidade detectada, processamento e acionamento, sem inventar análise de custos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "justify the use of a combination of fungi and human cells in robots."
+      },
+      {
+        "id": "b",
+        "text": "present the functioning of an innovative robot."
+      },
+      {
+        "id": "c",
+        "text": "compare robots and humans in terms of resistance."
+      },
+      {
+        "id": "d",
+        "text": "discuss the potential profitability of a new product."
+      },
+      {
+        "id": "e",
+        "text": "show that fungi culture may be economically viable."
+      }
+    ],
+    "pages": [
+      7
+    ],
+    "statement": "Leia o texto e examine a imagem do robô.\n\nEat your heart out, Victor Frankenstein!¹ Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots — which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n\nThe team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n\nThe end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n\n² mycelium: singular form of mycelia.\n\nThe main purpose of the text is to",
+    "statementComplete": true
+  },
+  {
+    "number": 19,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "A forma do robô na fotografia",
+    "concept": "Correspondência entre descrição verbal e imagem; pré-requisito: reconhecer starfish-shaped e wheels.",
+    "steps": [
+      "Examine a foto: o dispositivo tem braços radiais apoiados na superfície e uma plataforma central.",
+      "Compare os traços visíveis com as descrições do terceiro parágrafo, separando o robô fotografado do outro robô mencionado.",
+      "A configuração radial corresponde ao soft, starfish-shaped walking robot, descrito como parecido com uma estrela-do-mar.",
+      "E corresponde à imagem. B descreve o outro robô com rodas; A, C e D tratam de resistência, cultivo ou células, sem nomear a forma visível.",
+      "Confira E no gabarito V1 e a referência above pictured, que conecta a fotografia à primeira descrição do terceiro parágrafo."
+    ],
+    "trap": "Confundir o segundo robô citado no texto com o dispositivo fotografado.",
+    "retrieval": [
+      "Como interpretar starfish-shaped?",
+      "Que expressão liga diretamente o terceiro parágrafo à imagem?"
+    ],
+    "transfer": "Exercício autoral: uma notícia menciona “a wheeled rover and a six-legged walking robot”, mas mostra um aparelho de seis pernas sem rodas. Qual descrição corresponde à foto e por quê?",
+    "criteria": [
+      "Six-legged walking robot corresponde à imagem.",
+      "Seis pernas e ausência de rodas sustentam a escolha; wheeled rover requer rodas."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "“Fungi, by contrast, are incredibly resilient” (1º parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“another hard robot with wheels” (3º parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“The team behind the project cultured these filaments” (2º parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“have generally employed animal cells” (1º parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“soft, starfish-shaped walking robot” (3º parágrafo)."
+      }
+    ],
+    "pages": [
+      7,
+      8
+    ],
+    "statement": "Leia o texto e examine a imagem do robô.\n\nEat your heart out, Victor Frankenstein!¹ Researchers have succeeded in creating living machines made from electronic parts and living fungi. In the past, so-called biohybrid robots — which combine living tissue with robotic materials — have generally employed animal cells, but these are hard to keep alive. Fungi, by contrast, are incredibly resilient. Their branching networks of rootlike filaments, called mycelia, which allow mushrooms to connect and communicate underground, can both sense the environment and fire off electrical signals in response — just like neurons in the human brain.\n\nThe team behind the project cultured these filaments from the king oyster mushroom (Pleurotus eryngii) onto electrodes in a 3D-printed platform, then hooked them up to a computer interface — allowing electrical impulses from the fungi to be converted into digital commands.\n\nThe end result was the above pictured soft, starfish-shaped walking robot, as well as another hard robot with wheels. In both cases, the team used ultraviolet light to stimulate the mycelium², triggering electrical signals that directed the robots to walk and roll at different speeds, the researchers report in Science Robotics. Experts tell National Geographic that the advance lays the groundwork for building robust, sustainable robots. In the future, these hardy, light-activated cyborgs could be employed in harsh environments on Earth or even on missions outside our planet.\n\n(Phie Jacobs. www.science.org, 28.08.2024. Adaptado.)\n\n¹ Victor Frankenstein: young scientist and protagonist of a novel and a film, who becomes obsessed with the idea of creating life. Frankenstein constructs the Monster, a living creature with human-like appearance, from parts of deceased bodies.\n\n² mycelium: singular form of mycelia.\n\nA imagem do robô ilustra o seguinte trecho do texto:",
+    "statementComplete": true
+  },
+  {
+    "number": 23,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Pollution",
+    "title": "Must e a resposta às queimadas",
+    "concept": "Modalidade de obrigação em texto ambiental; pré-requisito: distinguir dever, possibilidade e conselho.",
+    "steps": [
+      "Localize must respond quickly e seu sujeito, the Brazilian authorities, no trecho sobre impunidade e incêndios ilegais.",
+      "Interprete o modal na situação: o autor exige providências institucionais, detalhadas por investigate e hold those responsible accountable.",
+      "Must atribui obrigação de responder rapidamente às autoridades; não comunica apenas uma possibilidade ou autorização.",
+      "C é correta. Permissão e possibilidade não correspondem à cobrança; sugestão e conselho enfraquecem o valor de necessidade explicitado por must.",
+      "Confira C no gabarito V1 e traduza o trecho como as autoridades brasileiras devem responder rapidamente."
+    ],
+    "trap": "Aplicar a leitura de dedução de must a uma frase que prescreve uma ação às autoridades.",
+    "retrieval": [
+      "Quem deve agir segundo a frase?",
+      "Que ações especificam o dever de responder?"
+    ],
+    "transfer": "Exercício autoral: compare “Visitors must wear helmets” e “Visitors may wear hats”. Traduza os modais e indique a regra obrigatória.",
+    "criteria": [
+      "Must wear helmets significa devem usar capacetes e exprime obrigação.",
+      "May wear hats significa podem usar chapéus e exprime permissão neste contexto."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "permissão."
+      },
+      {
+        "id": "b",
+        "text": "possibilidade."
+      },
+      {
+        "id": "c",
+        "text": "obrigação."
+      },
+      {
+        "id": "d",
+        "text": "sugestão."
+      },
+      {
+        "id": "e",
+        "text": "conselho."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Leia o texto e examine o infográfico.\n\nYear after year, illegal fires consume thousands of hectares of Brazilian biomes, threatening biodiversity and all life on the planet. Data from the end of August 2024 shows a dramatic and alarming increase in fire outbreaks compared to the same period in 2023 in the Amazon, Cerrado, and Pantanal. In this distressing scenario, impunity acts as fuel for this destruction, and the Brazilian authorities must respond quickly: investigate and hold those responsible for illegal fires accountable, while also strengthening prevention measures and adopting strategies to deal with the reality of extreme events.\n\nThe consequences of fires know no borders. In addition to causing harm to people living nearby, the smoke from fires in the Amazon and Pantanal travelled to distant regions. The state of São Paulo experienced its worst August since INPE's (Instituto Nacional de Pesquisas Espaciais) measurements began in 1998, with 3,612 heat spots recorded — something never seen before. The reasons are still being investigated, as on a single day (August 23), the number of fire outbreaks in the state surpassed those recorded across the entire Amazon biome, where illegal fires are common at this time of year.\n\n(www.greenpeace.org, 05.09.2024. Adaptado.)\n\nNo trecho do primeiro parágrafo “In this distressing scenario, impunity acts as fuel for this destruction, and the Brazilian authorities must respond quickly”, o termo sublinhado expressa\n(O termo destacado é “must”.)",
+    "statementComplete": true
+  },
+  {
+    "number": 25,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Pollution",
+    "title": "Sol, degradação e vulnerabilidade ao fogo",
+    "concept": "Cadeia causal em infográfico ambiental; pré-requisito: reconhecer resulting in e more suitable to burn.",
+    "steps": [
+      "Leia o bloco Fire as a tool for destruction: florestas degradadas expõem áreas ao sol, ficam mais secas e mais propensas a queimar.",
+      "Siga a cadeia exposição → ressecamento → queima, confrontando-a com as consequências oferecidas nas alternativas.",
+      "O bloco conclui que a maior parte das árvores é queimada; isso corresponde à afirmação de que a maioria dos troncos acaba queimada.",
+      "C é a alternativa compatível. A e B acrescentam adaptação positiva; D afirma resistência ao fogo, oposta ao infográfico; E inventa aumento de fertilidade.",
+      "Confira C no gabarito V1 e preserve a distinção: a exposição causa ressecamento, que favorece a queima, sem provar que toda árvore queima imediatamente."
+    ],
+    "trap": "Inferir fertilidade agrícola a partir do uso do fogo, embora o comando peça a consequência representada no infográfico.",
+    "retrieval": [
+      "Como resulting in organiza a cadeia causal?",
+      "Por que mais seca implica maior vulnerabilidade, e não resistência?"
+    ],
+    "transfer": "Exercício autoral: interprete “Canopy loss exposes the ground to sunlight, resulting in drier vegetation and greater fire risk”. Indique duas etapas causais e um limite da conclusão.",
+    "criteria": [
+      "Perda de cobertura aumenta exposição solar; isso resseca a vegetação e aumenta o risco de fogo.",
+      "Maior risco não significa ocorrência inevitável ou imediata de incêndio."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "the areas are transformed into a suitable habitat for many animal species."
+      },
+      {
+        "id": "b",
+        "text": "the biodiversity of plants in these areas adapts to the new conditions."
+      },
+      {
+        "id": "c",
+        "text": "the majority of logs in the deforested areas are eventually burned."
+      },
+      {
+        "id": "d",
+        "text": "the forest around such areas becomes more resilient to fires."
+      },
+      {
+        "id": "e",
+        "text": "the soil in these areas becomes more fertile for intensive agriculture."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Leia o texto e examine o infográfico.\n\nYear after year, illegal fires consume thousands of hectares of Brazilian biomes, threatening biodiversity and all life on the planet. Data from the end of August 2024 shows a dramatic and alarming increase in fire outbreaks compared to the same period in 2023 in the Amazon, Cerrado, and Pantanal. In this distressing scenario, impunity acts as fuel for this destruction, and the Brazilian authorities must respond quickly: investigate and hold those responsible for illegal fires accountable, while also strengthening prevention measures and adopting strategies to deal with the reality of extreme events.\n\nThe consequences of fires know no borders. In addition to causing harm to people living nearby, the smoke from fires in the Amazon and Pantanal travelled to distant regions. The state of São Paulo experienced its worst August since INPE's (Instituto Nacional de Pesquisas Espaciais) measurements began in 1998, with 3,612 heat spots recorded — something never seen before. The reasons are still being investigated, as on a single day (August 23), the number of fire outbreaks in the state surpassed those recorded across the entire Amazon biome, where illegal fires are common at this time of year.\n\n(www.greenpeace.org, 05.09.2024. Adaptado.)\n\nAccording to the infographic, a direct consequence of exposing deforested areas to the sun is:",
+    "statementComplete": true
+  }
+]

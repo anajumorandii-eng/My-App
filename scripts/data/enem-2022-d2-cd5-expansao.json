@@ -1,0 +1,638 @@
+[
+  {
+    "number": 92,
+    "topicId": "fis_dinamica_impulsiva",
+    "subject": "Física",
+    "chapter": "Impulso e Quantidade de Movimento",
+    "title": "Colisão com retorno e dissipação de energia",
+    "concept": "A força média relaciona-se ao impulso: |F média| = |Δp|/Δt. A energia cinética depende do quadrado da velocidade. Para uma mesma entrada e mesmo tempo de colisão, retornar exige maior variação de momento, enquanto parar dissipa toda a energia cinética inicial.",
+    "steps": [
+      "Compare carros iguais com a mesma velocidade inicial e colisões de igual duração. Com pneus há retorno; com blocos o carro para.",
+      "Defina o sentido inicial como positivo e a velocidade de retorno como −u, com 0<u<v.",
+      "Nos pneus |Δp| = m(v+u); nos blocos |Δp| = mv. Portanto a força média em módulo é maior nos pneus.",
+      "Nos blocos a perda é mv²/2; nos pneus é m(v²−u²)/2. A dissipação é maior nos blocos: alternativa A.",
+      "Confirme que retorno não significa mais energia dissipada: parte da energia cinética permanece no movimento de volta, embora o impulso seja maior."
+    ],
+    "trap": "Velocidade tem sinal na quantidade de movimento, mas a energia cinética usa v². A análise de força não pode ser reutilizada como se fosse análise de dissipação.",
+    "retrieval": [
+      "Por que voltar aumenta o módulo da variação da quantidade de movimento?",
+      "Qual situação deixa menor energia cinética final: parar ou retornar?"
+    ],
+    "transfer": "Um carro de 1 000 kg chega a 10 m/s; a colisão dura 0,5 s. Compare parar com retornar a 2 m/s: calcule forças médias em módulo e energias dissipadas, desprezando outras energias finais.",
+    "criteria": [
+      "Obter 20 000 N ao parar e 24 000 N no retorno.",
+      "Obter 50 000 J ao parar e 48 000 J no retorno, explicitando o sinal negativo da velocidade final no impulso."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A força é maior na colisão com a barreira de pneus, e a energia dissipada é maior na colisão com a barreira de blocos."
+      },
+      {
+        "id": "b",
+        "text": "A força é maior na colisão com a barreira de blocos, e a energia dissipada é maior na colisão com a barreira de pneus."
+      },
+      {
+        "id": "c",
+        "text": "A força é maior na colisão com a barreira de blocos, e a energia dissipada é a mesma nas duas situações."
+      },
+      {
+        "id": "d",
+        "text": "A força é maior na colisão com a barreira de pneus, e a energia dissipada é maior na colisão com a barreira de pneus."
+      },
+      {
+        "id": "e",
+        "text": "A força é maior na colisão com a barreira de blocos, e a energia dissipada é maior na colisão com a barreira de blocos."
+      }
+    ],
+    "pages": [
+      2
+    ],
+    "statement": "Em um autódromo, os carros podem derrapar em uma curva e bater na parede de proteção. Para diminuir o impacto de uma batida, pode-se colocar na parede uma barreira de pneus, isso faz com que a colisão seja mais demorada e o carro retorne com velocidade reduzida. Outra opção é colocar uma barreira de blocos de um material que se deforma, tornando-a tão demorada quanto a colisão com os pneus, mas que não permite a volta do carro após a colisão.\n\nComparando as duas situações, como ficam a força média exercida sobre o carro e a energia mecânica dissipada?",
+    "statementComplete": true
+  },
+  {
+    "number": 94,
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "chapter": "Sangue e Imunologia",
+    "title": "Antígeno tumoral apresentado por vetor não patogênico",
+    "concept": "A imunidade adaptativa distingue alvos por antígenos. A modificação genética faz o protozoário expressar uma molécula tumoral, permitindo que a resposta induzida reconheça também células do tumor. É necessário distinguir especificidade adaptativa de inflamação e de resposta inata.",
+    "steps": [
+      "Identifique o dado decisivo: o T. cruzi modificado apresenta moléculas também produzidas pelas células tumorais, sem causar a doença descrita.",
+      "Relacione a molécula compartilhada ao reconhecimento de um antígeno específico; a identidade do alvo, e não sua origem, orienta o ataque.",
+      "Durante a resposta ao vetor, o sistema imune é exposto ao antígeno tumoral e gera defesa dirigida a ele.",
+      "Células tumorais que exibem esse alvo podem ser reconhecidas depois da imunização: apresentação de antígeno específico, alternativa D.",
+      "Autoimunidade e hipersensibilidade não descrevem o mecanismo proposto; ativação inata isolada não explica a especificidade e ação anti-inflamatória não explica a destruição do alvo."
+    ],
+    "trap": "A cobrança liga engenharia genética à especificidade imune. Não transforme a presença de células do próprio organismo em diagnóstico automático de autoimunidade: o texto constrói a resposta contra um marcador tumoral.",
+    "retrieval": [
+      "Qual molécula conecta a resposta contra o protozoário ao reconhecimento tumoral?",
+      "Por que apenas uma resposta inata inespecífica não explica o efeito descrito?"
+    ],
+    "transfer": "Um vetor inofensivo expressa o antígeno X. Após imunização, há células tumorais com X e outras sem X. Qual grupo tem o alvo específico dessa resposta e por que a proteção pode falhar no outro grupo?",
+    "criteria": [
+      "Identificar as células com X como portadoras do antígeno reconhecido.",
+      "Explicar que células sem X não apresentam esse alvo, sem afirmar que toda resposta imune esteja ausente."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Autoimunidade."
+      },
+      {
+        "id": "b",
+        "text": "Hipersensibilidade."
+      },
+      {
+        "id": "c",
+        "text": "Ativação da resposta inata."
+      },
+      {
+        "id": "d",
+        "text": "Apresentação de antígeno específico."
+      },
+      {
+        "id": "e",
+        "text": "Desencadeamento de processo anti-inflamatório."
+      }
+    ],
+    "pages": [
+      3
+    ],
+    "statement": "O protozoário Trypanosoma cruzi, causador da doença de Chagas, pode ser a nova arma da medicina contra o câncer. Pesquisadores brasileiros conseguiram criar uma vacina contra a doença usando uma variação do protozoário incapaz de desencadear a patologia (não patogênico). Para isso, realizaram uma modificação genética criando um T. cruzi capaz de produzir também moléculas fabricadas pelas células tumorais. Quando o organismo inicia o combate ao protozoário, entra em contato também com a molécula tumoral, que passa a ser vista também pelo sistema imune como um indicador de células do protozoário. Depois de induzidas as defesas, estas passam a destruir todas as células com a molécula tumoral, como se lutassem apenas contra o protozoário.\n\nDisponível em: www.estadao.com.br. Acesso em: 1 mar. 2012 (adaptado).\n\nQual o mecanismo utilizado no experimento para enganar as células de defesa, fazendo com que ataquem o tumor?",
+    "statementComplete": true
+  },
+  {
+    "number": 97,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Separação de Misturas",
+    "title": "Decantação na estação de tratamento de água",
+    "concept": "Sólidos em suspensão constituem uma mistura heterogênea. Coagulação favorece agregação; os flocos sedimentam sob a gravidade na decantação. Filtração retém partículas remanescentes, desinfecção controla microrganismos e fluoretação não separa sólidos.",
+    "steps": [
+      "O problema exige a retirada da maior parte dos sólidos suspensos, não a etapa final que torna a água segura.",
+      "Separe a formação dos agregados de sua efetiva remoção do fluxo de água.",
+      "Na decantação, os flocos mais densos sedimentam e permitem separar a água do material acumulado.",
+      "A retirada de grande parte dos sólidos ocorre na decantação, alternativa B.",
+      "Coagulação prepara os sólidos para sedimentação; filtração complementa a remoção. Desinfecção e fluoretação têm objetivos diferentes da redução principal de sólidos."
+    ],
+    "trap": "O primeiro processo citado não é automaticamente a resposta. Coagular agrega partículas; decantar separa os agregados da água.",
+    "retrieval": [
+      "O que a coagulação modifica nas partículas em suspensão?",
+      "Por que filtrar depois de decantar ainda pode ser necessário?"
+    ],
+    "transfer": "Uma água tem 200 mg/L de sólidos. A decantação remove 80% e a filtração retém 75% do que restou. Calcule a concentração final e a fração total removida.",
+    "criteria": [
+      "Obter 40 mg/L após decantação e 10 mg/L após filtração.",
+      "Calcular remoção total de 190/200 = 95%, sem somar 80% e 75%."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "Coagulação."
+      },
+      {
+        "id": "b",
+        "text": "Decantação."
+      },
+      {
+        "id": "c",
+        "text": "Filtração."
+      },
+      {
+        "id": "d",
+        "text": "Desinfecção."
+      },
+      {
+        "id": "e",
+        "text": "Fluoretação."
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "A água bruta coletada de mananciais apresenta alto índice de sólidos suspensos, o que a deixa com um aspecto turvo. Para se obter uma água límpida e potável, ela deve passar por um processo de purificação numa estação de tratamento de água. Nesse processo, as principais etapas são, nesta ordem: coagulação, decantação, filtração, desinfecção e fluoretação.\n\nQual é a etapa de retirada de grande parte desses sólidos?",
+    "statementComplete": true
+  },
+  {
+    "number": 98,
+    "topicId": "bio_metabolismo_energetico",
+    "subject": "Biologia",
+    "chapter": "Bioenergética: Fermentação e Respiração",
+    "title": "Termogenina e desacoplamento mitocondrial",
+    "concept": "A cadeia respiratória estabelece um gradiente de prótons através da membrana mitocondrial interna. O retorno de H+ pela ATP sintase acopla a energia desse gradiente à síntese de ATP; proteínas desacopladoras oferecem outra via e dissipam energia como calor.",
+    "steps": [
+      "Localize a pista: prótons deixam de chegar à ATP sintase e o organismo produz calor.",
+      "Escolha a etapa cuja síntese de ATP depende diretamente do gradiente de prótons: fosforilação oxidativa.",
+      "A termogenina permite dissipar o gradiente sem a mesma produção de ATP, desacoplando transporte de elétrons e fosforilação.",
+      "A intervenção é na fosforilação oxidativa, alternativa E; glicólise e fermentação não dependem desse mecanismo mitocondrial.",
+      "Ciclo cítrico e oxidação do piruvato fornecem transportadores reduzidos à cadeia, mas não são a etapa diretamente indicada pela pista ATP sintase."
+    ],
+    "trap": "Não confunda produção de calor com interrupção de toda a respiração. O desacoplamento altera a eficiência de produção de ATP e pode manter ou estimular o fluxo respiratório.",
+    "retrieval": [
+      "Onde se forma o gradiente de H+ utilizado pela ATP sintase?",
+      "Por que dissipar esse gradiente aumenta a liberação de energia como calor?"
+    ],
+    "transfer": "Em uma comparação idealizada, duas células oxidam a mesma quantidade de combustível. Uma tem maior passagem de H+ por proteínas desacopladoras. Compare ATP e calor por unidade de combustível.",
+    "criteria": [
+      "Prever menor rendimento de ATP na célula mais desacoplada.",
+      "Prever maior dissipação térmica, distinguindo rendimento de taxa de consumo de combustível."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Glicólise."
+      },
+      {
+        "id": "b",
+        "text": "Fermentação lática."
+      },
+      {
+        "id": "c",
+        "text": "Ciclo do ácido cítrico."
+      },
+      {
+        "id": "d",
+        "text": "Oxidação do piruvato."
+      },
+      {
+        "id": "e",
+        "text": "Fosforilação oxidativa."
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "Os ursos, por não apresentarem uma hibernação verdadeira, acordam por causa da presença de termogenina, uma proteína mitocondrial que impede a chegada dos prótons até a ATP sintetase, gerando calor. Esse calor é importante para aquecer o organismo, permitindo seu despertar.\n\nSADAVA, D. et al. Vida: a ciência da biologia. Porto Alegre: Artmed, 2009 (adaptado).\n\nEm qual etapa do metabolismo energético celular a termogenina interfere?",
+    "statementComplete": true
+  },
+  {
+    "number": 99,
+    "topicId": "fis_circuitos",
+    "subject": "Física",
+    "chapter": "Resistores",
+    "title": "Lei de Ohm em modelo de congestionamento",
+    "concept": "No modelo proposto, a resistência é a razão entre a diferença de potencial e a corrente: R=U/i. As unidades têm interpretação própria da analogia, mas o quociente organiza as rotas da mesma maneira que na lei de Ohm.",
+    "steps": [
+      "Leia os pares da tabela: rota 1 (510;4), rota 2 (608;4), rota 3 (575;3).",
+      "Calcule a razão d.d.p./corrente para cada rota, pois o aplicativo ordena por resistência crescente.",
+      "Obtenha R1=127,5; R2=152; R3=191,666… nas unidades do modelo.",
+      "A ordenação 127,5 < 152 < 191,666… corresponde a 1, 2, 3, alternativa A.",
+      "A rota 3 tem d.d.p. menor que a 2, mas também corrente menor: ordenar somente pela d.d.p. faria uma comparação incorreta."
+    ],
+    "trap": "Leia a grandeza pedida: a maior corrente ou a menor d.d.p. isoladamente não basta. O modelo exige o quociente entre ambas.",
+    "retrieval": [
+      "Qual equação permite calcular a resistência no modelo?",
+      "Por que a rota com 575 pode superar a de 608 em resistência?"
+    ],
+    "transfer": "Em um circuito real, três resistores recebem respectivamente (12 V; 2 A), (9 V; 1 A) e (20 V; 4 A). Calcule e ordene suas resistências de modo crescente.",
+    "criteria": [
+      "Calcular R1=6 Ω, R2=9 Ω e R3=5 Ω.",
+      "Ordenar 3, 1, 2 e justificar pelo quociente U/i."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "1, 2, 3."
+      },
+      {
+        "id": "b",
+        "text": "1, 3, 2."
+      },
+      {
+        "id": "c",
+        "text": "2, 1, 3."
+      },
+      {
+        "id": "d",
+        "text": "3, 1, 2."
+      },
+      {
+        "id": "e",
+        "text": "3, 2, 1."
+      }
+    ],
+    "pages": [
+      4
+    ],
+    "statement": "A fim de classificar as melhores rotas em um aplicativo de trânsito, um pesquisador propõe um modelo com base em circuitos elétricos. Nesse modelo, a corrente representa o número de carros que passam por um ponto da pista no intervalo de 1 s. A diferença de potencial (d.d.p.) corresponde à quantidade de energia por carro necessária para o deslocamento de 1 m. De forma análoga à lei de Ohm, cada via é classificada pela sua resistência, sendo a de maior resistência a mais congestionada. O aplicativo mostra as rotas em ordem crescente, ou seja, da rota de menor para a de maior resistência.\n\nComo teste para o sistema, são utilizadas três possíveis vias para uma viagem de A até B, com os valores de d.d.p. e corrente conforme a tabela.\n\nRota | d.d.p. (J/(carro·m)) | Corrente (carro/s)\n1 | 510 | 4\n2 | 608 | 4\n3 | 575 | 3\n\nNesse teste, a ordenação das rotas indicadas pelo aplicativo será:",
+    "statementComplete": true
+  },
+  {
+    "number": 104,
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "chapter": "Espécies Invasoras e Controle Biológico",
+    "title": "Espécie exótica e substituição da vegetação nativa",
+    "concept": "Uma espécie introduzida pode competir por espaço, luz, água e nutrientes, reduzindo a presença de espécies nativas. Ser exótica não implica invasão em todo contexto; o problema descrito é a ocupação e substituição da flora original.",
+    "steps": [
+      "Reconheça a jaqueira como espécie originária de outra região e adaptada ao ambiente brasileiro.",
+      "Procure o mecanismo que reduz a composição nativa da comunidade, não simplesmente o número total de árvores.",
+      "A ocupação de áreas antes dominadas por vegetação nativa pode substituir parte dessa flora e diminuir sua diversidade.",
+      "A alternativa A relaciona diretamente introdução e perda de flora original; os demais itens acrescentam consequências não demonstradas.",
+      "Uma população não se mantém indefinidamente acima da capacidade de suporte; facilitar dispersores nativos ou criar relações adicionais tampouco demonstra redução de biodiversidade."
+    ],
+    "trap": "A pegadinha é confundir abundância da invasora com diversidade da comunidade. Muitos indivíduos de uma espécie podem coexistir com menor riqueza de espécies nativas.",
+    "retrieval": [
+      "Como competição por luz pode favorecer a substituição de plantas nativas?",
+      "Qual a diferença entre abundância e riqueza de espécies?"
+    ],
+    "transfer": "Uma parcela tinha 12 espécies nativas. Após expansão de uma invasora, conserva 7 nativas e a invasora. Calcule a riqueza total final e explique por que aumento do número de árvores não garante recuperação da biodiversidade.",
+    "criteria": [
+      "Calcular 8 espécies no total final, contra 12 antes.",
+      "Distinguir número de indivíduos de número de espécies e reconhecer a perda de 5 espécies nativas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "ocupam áreas de vegetação nativa e substituem parcialmente a flora original."
+      },
+      {
+        "id": "b",
+        "text": "estimulam a competição por seus frutos entre animais típicos da região e eliminam as espécies perdedoras."
+      },
+      {
+        "id": "c",
+        "text": "alteram os nichos e aumentam o número de possibilidades de relações entre os seres vivos daquele ambiente."
+      },
+      {
+        "id": "d",
+        "text": "apresentam alta taxa de reprodução e se mantêm com um número de indivíduos superior à capacidade suporte do ambiente."
+      },
+      {
+        "id": "e",
+        "text": "diminuem a relação de competição entre os polinizadores e facilitam a ação de dispersores de sementes de espécies nativas."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "A extinção de espécies é uma ameaça real que afeta diversas regiões do país. A introdução de espécies exóticas pode ser considerada um fator maximizador desse processo. A jaqueira (Artocarpus heterophyllus), por exemplo, é uma árvore originária da Índia e de regiões do Sudeste Asiático que foi introduzida ainda na era colonial e se aclimatou muito bem em praticamente todo o território nacional.\n\nCasos como o dessa árvore podem provocar a redução da biodiversidade, pois elas",
+    "statementComplete": true
+  },
+  {
+    "number": 105,
+    "topicId": "fis_cinematica_vetorial",
+    "subject": "Física",
+    "chapter": "Composição de Movimentos",
+    "title": "Jato horizontal como medida da velocidade de saída",
+    "concept": "No lançamento horizontal, a queda vertical determina o tempo e o movimento horizontal uniforme determina a velocidade inicial. Essa mesma velocidade, orientada verticalmente, produz altura máxima H=v0²/(2g), supondo saída com igual rapidez e desprezando resistência do ar.",
+    "steps": [
+      "Identifique altura horizontal de lançamento h=1 m, alcance x=3 m e g=10 m/s².",
+      "Use h=gt²/2 para a queda e x=v0t para o movimento horizontal.",
+      "Obtenha t²=0,2 s² e v0²=x²/t²=9/0,2=45 m²/s².",
+      "Na orientação vertical, H=v0²/(2g)=45/20=2,25 m acima da saída, alternativa B.",
+      "A expressão direta H=x²/(4h)=9/4 confirma o resultado. Não acrescente a altura de 1 m: ela pertence ao experimento horizontal e a pergunta mede a subida a partir da saída."
+    ],
+    "trap": "Os 3 m são alcance horizontal, não altura vertical. O tempo de queda depende da altura e não do alcance; compare alturas sempre com a referência solicitada.",
+    "retrieval": [
+      "Por que o movimento horizontal não altera o tempo de queda neste modelo?",
+      "Como eliminar o tempo para obter H em função de x e h?"
+    ],
+    "transfer": "Com a saída horizontal a 2 m do chão, um jato alcança 4 m horizontalmente. Mantendo a rapidez, determine a altura acima da saída se ela for apontada para cima. Use g=10 m/s².",
+    "criteria": [
+      "Calcular t²=0,4 e v0²=16/0,4=40.",
+      "Obter H=40/20=2 m acima da saída."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "1,50 m."
+      },
+      {
+        "id": "b",
+        "text": "2,25 m."
+      },
+      {
+        "id": "c",
+        "text": "4,00 m."
+      },
+      {
+        "id": "d",
+        "text": "4,50 m."
+      },
+      {
+        "id": "e",
+        "text": "5,00 m."
+      }
+    ],
+    "pages": [
+      6
+    ],
+    "statement": "Em um dia de calor intenso, dois colegas estão a brincar com a água da mangueira. Um deles quer saber até que altura o jato de água alcança, a partir da saída de água, quando a mangueira está posicionada totalmente na direção vertical. O outro colega propõe então o seguinte experimento: eles posicionarem a saída de água da mangueira na direção horizontal, a 1 m de altura em relação ao chão, e então medirem a distância horizontal entre a mangueira e o local onde a água atinge o chão. A medida dessa distância foi de 3 m, e a partir disso eles calcularam o alcance vertical do jato de água. Considere a aceleração da gravidade de 10 m s⁻².\n\nO resultado que eles obtiveram foi de",
+    "statementComplete": true
+  },
+  {
+    "number": 116,
+    "topicId": "qui_oxirreducao",
+    "subject": "Química",
+    "chapter": "Processos de Oxirredução",
+    "title": "Poder oxidante do ozônio e risco sanitário",
+    "concept": "Um agente oxidante promove oxidação de outra espécie enquanto ele próprio recebe elétrons e se reduz. O ozônio é um oxidante forte; a reatividade que pode inativar microrganismos também pode atacar componentes de células humanas e gerar subprodutos.",
+    "steps": [
+      "Identifique a substância empregada para sanitização e o risco químico de uso indiscriminado: O3.",
+      "Classifique seu papel pela transferência de elétrons, em vez de assumir que sanitizante é necessariamente ácido ou base.",
+      "O ozônio atua como oxidante, recebendo elétrons e favorecendo alterações oxidativas em outras moléculas.",
+      "A alternativa B explica tanto o efeito sanitizante quanto a possibilidade de dano a tecidos e materiais.",
+      "Catalisador participa de um ciclo sendo regenerado; redutor doa elétrons. Nenhuma dessas classificações descreve o papel químico destacado para O3."
+    ],
+    "trap": "Quem causa oxidação é o oxidante, mas ele próprio se reduz. Confundir o nome do agente com a transformação sofrida por ele inverte a resposta.",
+    "retrieval": [
+      "O oxidante recebe ou doa elétrons?",
+      "Por que uma mesma reatividade pode ser útil contra microrganismos e lesiva ao organismo?"
+    ],
+    "transfer": "Na semirreação O3 + 2 H+ + 2 e− → O2 + H2O, classifique O3 e determine quantos mols de elétrons são recebidos por 0,25 mol de O3.",
+    "criteria": [
+      "Classificar O3 como oxidante por receber elétrons.",
+      "Calcular 0,50 mol de elétrons usando a proporção 1:2."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "catalisador."
+      },
+      {
+        "id": "b",
+        "text": "oxidante."
+      },
+      {
+        "id": "c",
+        "text": "redutor."
+      },
+      {
+        "id": "d",
+        "text": "ácido."
+      },
+      {
+        "id": "e",
+        "text": "base."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "Durante o ano de 2020, impulsionado pela necessidade de respostas rápidas e eficientes para desinfectar ambientes de possíveis contaminações com o SARS-CoV-2, causador da covid-19, diversas alternativas foram buscadas para os procedimentos de descontaminação de materiais e ambientes. Entre elas, o uso de ozônio em meio aquoso como agente sanitizante para pulverização em humanos e equipamentos de proteção em câmaras ou túneis, higienização de automóveis e de ambientes fechados e descontaminação de trajes. No entanto, pouca atenção foi dada à toxicidade do ozônio, à formação de subprodutos, ao nível de concentração segura e às precauções necessárias.\n\nLIMA, M. J. A.; FELIX, E. P.; CARDOSO, A. A. Aplicações e implicações do ozônio na indústria, ambiente e saúde. Química Nova, n. 9, 2021 (adaptado).\n\nO grande risco envolvido no emprego indiscriminado dessa substância deve-se à sua ação química como",
+    "statementComplete": true
+  },
+  {
+    "number": 130,
+    "topicId": "qui_radioatividade",
+    "subject": "Química",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "title": "Meia-vida do iodo-131",
+    "concept": "O decaimento radioativo ideal obedece m(t)=m0·(1/2)^(t/t½). A meia-vida é o intervalo para reduzir à metade a quantidade presente, independentemente da massa inicial; não se subtrai a mesma massa em intervalos sucessivos.",
+    "steps": [
+      "Leia a tabela: a massa cai de 12,0 µg a 6,0 µg em 8 dias.",
+      "Adote t½ = 8 dias e conte 40/8 = 5 meias-vidas.",
+      "Calcule m = 12·(1/2)^5 = 12/32 = 0,375 µg.",
+      "A massa mais próxima é 0,4 µg, alternativa D; o arredondamento ocorre somente ao comparar com as opções.",
+      "A sequência 12 → 6 → 3 → 1,5 → 0,75 → 0,375 confirma o cálculo. O valor de 14 dias na tabela é compatível com o modelo aproximado."
+    ],
+    "trap": "A redução é multiplicativa, não linear. Também não use 14 dias como meia-vida: nesse momento a massa não é metade de 12 µg.",
+    "retrieval": [
+      "Qual par de valores da tabela permite obter diretamente a meia-vida?",
+      "Após três meias-vidas, que fração da quantidade inicial permanece?"
+    ],
+    "transfer": "Uma amostra de 32 µg do mesmo isótopo tem meia-vida de 8 dias. Determine a massa após 24 dias e o tempo para restarem 2 µg.",
+    "criteria": [
+      "Calcular 32/2³ = 4 µg após 24 dias.",
+      "Reconhecer 32/2⁴ = 2 µg e obter 32 dias."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "2,4 µg."
+      },
+      {
+        "id": "b",
+        "text": "1,5 µg."
+      },
+      {
+        "id": "c",
+        "text": "0,8 µg."
+      },
+      {
+        "id": "d",
+        "text": "0,4 µg."
+      },
+      {
+        "id": "e",
+        "text": "0,2 µg."
+      }
+    ],
+    "pages": [
+      15
+    ],
+    "statement": "O elemento iodo (I) tem função biológica e é acumulado na tireoide. Nos acidentes nucleares de Chernobyl e Fukushima, ocorreu a liberação para a atmosfera do radioisótopo ¹³¹I, responsável por enfermidades nas pessoas que foram expostas a ele. O decaimento de uma massa de 12 microgramas do isótopo ¹³¹I foi monitorado por 14 dias, conforme o quadro.\n\nTempo (dia) | Massa residual de ¹³¹I (μg)\n0 | 12,0\n2 | 10,1\n4 | 8,5\n5 | 7,8\n6 | 7,2\n8 | 6,0\n14 | 3,6\n\nApós o período de 40 dias, a massa residual desse isótopo é mais próxima de",
+    "statementComplete": true
+  },
+  {
+    "number": 136,
+    "topicId": "mat_sequencias_matrizes",
+    "subject": "Matemática",
+    "chapter": "Médias",
+    "title": "Média salarial ponderada e reajuste máximo",
+    "concept": "A média dos salários deve ser ponderada pelos números de professores. Reajuste percentual atua sobre o salário original de cada grupo, e o limite para a média impõe uma desigualdade para a folha total.",
+    "steps": [
+      "Há 60 mestres com R$ 8 000 e 40 doutores com R$ 12 000. O teto de média é R$ 12 240 para 100 pessoas.",
+      "Calcule primeiro o salário dos mestres após reajuste: 8 000·1,25=10 000. Represente o reajuste dos doutores por r.",
+      "A folha deve satisfazer 60·10 000 + 40·12 000·(1+r) ≤ 100·12 240.",
+      "Logo 480 000(1+r) ≤ 624 000, 1+r ≤ 1,30 e r ≤ 0,30. O máximo é 30,0%, alternativa D.",
+      "Com doutores a R$ 15 600, a folha é R$ 1 224 000 e a média R$ 12 240, confirmando que o limite é atingido."
+    ],
+    "trap": "A média não é a média simples de dois salários: os grupos têm 60 e 40 pessoas. O percentual do doutor usa R$ 12 000 como base, não o salário já reajustado do mestre.",
+    "retrieval": [
+      "Por que a média de dois valores salariais não representa esta universidade?",
+      "Como converter o teto da média em teto para a folha mensal?"
+    ],
+    "transfer": "Uma escola tem 30 professores a R$ 4 000 e 20 a R$ 6 000. O primeiro grupo recebe 10% e a média final deve ser no máximo R$ 5 520. Qual o maior reajuste percentual do segundo grupo?",
+    "criteria": [
+      "Montar 30·4 400 + 20·6 000(1+r) ≤ 50·5 520.",
+      "Obter salário máximo de R$ 7 200 para o segundo grupo e reajuste de 20%."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "14,4."
+      },
+      {
+        "id": "b",
+        "text": "20,7."
+      },
+      {
+        "id": "c",
+        "text": "22,0."
+      },
+      {
+        "id": "d",
+        "text": "30,0."
+      },
+      {
+        "id": "e",
+        "text": "37,5."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "Em uma universidade, atuam professores que estão enquadrados funcionalmente pela sua maior titulação: mestre ou doutor. Nela há, atualmente, 60 mestres e 40 doutores. Os salários mensais dos professores mestres e dos doutores são, respectivamente, R$ 8 000,00 e R$ 12 000,00.\n\nA diretoria da instituição pretende proporcionar um aumento salarial diferenciado para o ano seguinte, de tal forma que o salário médio mensal dos professores dessa instituição não ultrapasse R$ 12 240,00. A universidade já estabeleceu que o aumento salarial será de 25% para os mestres e precisa ainda definir o percentual de reajuste para os doutores.\n\nMantido o número atual de professores com suas atuais titulações, o aumento salarial, em porcentagem, a ser concedido aos doutores deverá ser de, no máximo,",
+    "statementComplete": true
+  },
+  {
+    "number": 140,
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "subject": "Matemática",
+    "chapter": "Porcentagem",
+    "title": "Percentuais sucessivos com bases diferentes",
+    "concept": "Acréscimos e descontos sucessivos são fatores multiplicativos. O desconto de 2% aplica-se ao preço normal, que já é 10% maior, por isso o fator resultante é 1,10·0,98, e não 1+0,10−0,02.",
+    "steps": [
+      "O preço promocional é R$ 1 000. O normal tem acréscimo de 10% e o cartão dá desconto de 2% sobre o normal.",
+      "Separe o preço efetivo da estimativa da cliente, que adicionou 8% ao promocional.",
+      "Preço da loja: 1 000·1,10·0,98=1 078. Estimativa: 1 000·1,08=1 080.",
+      "A loja apresenta valor R$ 2 menor, alternativa A.",
+      "O desconto real é R$ 22 sobre R$ 1 100, enquanto a conta da cliente equivale a descontar R$ 20. A diferença de base explica os R$ 2."
+    ],
+    "trap": "Não subtraia percentuais quando a base muda. Também confira a direção da comparação: o valor da loja é menor que o calculado pela cliente.",
+    "retrieval": [
+      "Sobre qual valor incide o desconto de 2%?",
+      "Qual fator único equivale ao acréscimo de 10% seguido de desconto de 2%?"
+    ],
+    "transfer": "Um produto custa R$ 500 e sofre aumento de 20% seguido de desconto de 10%. Calcule o preço final e a diferença para a estimativa de um aumento líquido de 10%.",
+    "criteria": [
+      "Obter 500·1,20·0,90=R$ 540.",
+      "Comparar com R$ 550 e indicar R$ 10 a menos, correspondendo a aumento efetivo de 8%."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "R$ 2,00 menor."
+      },
+      {
+        "id": "b",
+        "text": "R$ 100,00 menor."
+      },
+      {
+        "id": "c",
+        "text": "R$ 200,00 menor."
+      },
+      {
+        "id": "d",
+        "text": "R$ 42,00 maior."
+      },
+      {
+        "id": "e",
+        "text": "R$ 80,00 maior."
+      }
+    ],
+    "pages": [
+      17
+    ],
+    "statement": "Em uma loja, o preço promocional de uma geladeira é de R$ 1 000,00 para pagamento somente em dinheiro. Seu preço normal, fora da promoção, é 10% maior. Para pagamento feito com o cartão de crédito da loja, é dado um desconto de 2% sobre o preço normal.\n\nUma cliente decidiu comprar essa geladeira, optando pelo pagamento com o cartão de crédito da loja. Ela calculou que o valor a ser pago seria o preço promocional acrescido de 8%. Ao ser informada pela loja do valor a pagar, segundo sua opção, percebeu uma diferença entre seu cálculo e o valor que lhe foi apresentado.\n\nO valor apresentado pela loja, comparado ao valor calculado pela cliente, foi",
+    "statementComplete": true
+  },
+  {
+    "number": 157,
+    "topicId": "mat_combinatoria",
+    "subject": "Matemática",
+    "chapter": "Introdução às Técnicas de Contagem",
+    "title": "Opcionais independentes e limite estrito de configurações",
+    "concept": "O princípio multiplicativo conta escolhas independentes. Cada um dos três opcionais pode estar presente ou ausente, dando 2³=8 subconjuntos, inclusive o conjunto vazio. O anúncio exige mais de 1 000, de modo que o número inteiro de cores deve satisfazer uma desigualdade estrita.",
+    "steps": [
+      "Há 7 modelos, 2 motores, 3 opcionais que podem ser incluídos livremente e um número desconhecido c de cores.",
+      "Conte os pacotes como subconjuntos de 3 itens: 1+3+3+1=8, ou 2³=8.",
+      "O total de configurações é 7·2·8·c=112c; exija 112c>1 000.",
+      "Como c>8,92857…, o menor inteiro possível é 9, alternativa B.",
+      "Oito cores produzem 896 configurações e nove produzem 1 008. Essa comparação confirma a minimalidade e a fidelidade ao anúncio."
+    ],
+    "trap": "Não use apenas 3 pacotes: escolher dois opcionais gera três combinações distintas. Inclua a configuração sem opcionais e respeite o termo mais de.",
+    "retrieval": [
+      "Por que três opcionais geram oito escolhas e não três?",
+      "Que verificação garante que o número inteiro de cores encontrado é mínimo?"
+    ],
+    "transfer": "Uma fábrica oferece 4 modelos, 3 motores e 2 opcionais independentes. Quantas cores, no mínimo, permitem anunciar mais de 500 configurações?",
+    "criteria": [
+      "Contar 2²=4 pacotes e montar 48c>500.",
+      "Obter c=11 e verificar 480 para 10 cores e 528 para 11."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "8."
+      },
+      {
+        "id": "b",
+        "text": "9."
+      },
+      {
+        "id": "c",
+        "text": "11."
+      },
+      {
+        "id": "d",
+        "text": "18."
+      },
+      {
+        "id": "e",
+        "text": "24."
+      }
+    ],
+    "pages": [
+      23
+    ],
+    "statement": "Uma montadora de automóveis divulgou que oferta a seus clientes mais de 1 000 configurações diferentes de carro, variando o modelo, a motorização, os opcionais e a cor do veículo. Atualmente, ela oferece 7 modelos de carros com 2 tipos de motores: 1.0 e 1.6. Já em relação aos opcionais, existem 3 escolhas possíveis: central multimídia, rodas de liga leve e bancos de couro, podendo o cliente optar por incluir um, dois, três ou nenhum dos opcionais disponíveis.\n\nPara ser fiel à divulgação feita, a quantidade mínima de cores que a montadora deverá disponibilizar a seus clientes é",
+    "statementComplete": true
+  }
+]

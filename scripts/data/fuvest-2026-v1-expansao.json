@@ -1,0 +1,850 @@
+[
+  {
+    "number": 18,
+    "topicId": "mat_log_exponenciais",
+    "subject": "Matemática",
+    "chapter": "Modelagem Exponencial de Problemas",
+    "title": "Limiar de usuários em crescimento exponencial",
+    "concept": "Inequação exponencial e logaritmos; pré-requisito: fator de crescimento e propriedades dos logaritmos.",
+    "steps": [
+      "M(t)=200(1,1)^t está em milhares; ultrapassar 300 mil exige 200(1,1)^t>300.",
+      "Isole a potência e aplique logaritmos: t>log(1,5)/log(1,1); a base 1,1 é maior que 1.",
+      "Com os dados, log(1,5)=0,4771+0,6990−1=0,1761 e log(1,1)=0,0414; o limiar é t≈4,25 semanas.",
+      "O limiar pertence ao intervalo entre 4 e 6 semanas, alternativa E; A, B, C e D ficam antes dele.",
+      "Conferir: M(4)=292,82 mil e M(5)=322,10 mil. Em semanas inteiras, a primeira superação ocorre na quinta semana."
+    ],
+    "trap": "Não usar crescimento linear de 20 mil por semana nem confundir 300 mil com 300 milhões.",
+    "retrieval": [
+      "Como transformar uma inequação exponencial em uma condição para t?",
+      "Qual é a diferença entre o limiar contínuo e a primeira semana inteira?"
+    ],
+    "transfer": "Exercício autoral: uma plataforma tem 100 mil usuários e cresce 20% por semana. Determine quando ultrapassa 200 mil e a primeira semana inteira correspondente.",
+    "criteria": [
+      "Escrever t>log(2)/log(1,2)≈3,80 semanas.",
+      "Indicar a quarta semana; verificar 172,8 mil na terceira e 207,36 mil na quarta."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Entre 0 e 1 semana."
+      },
+      {
+        "id": "b",
+        "text": "Entre 1 e 3 semanas."
+      },
+      {
+        "id": "c",
+        "text": "Entre 2 e 4 semanas."
+      },
+      {
+        "id": "d",
+        "text": "Entre 3 e 4 semanas."
+      },
+      {
+        "id": "e",
+        "text": "Entre 4 e 6 semanas."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Uma startup de tecnologia está desenvolvendo um novo aplicativo e observa que o número de usuários está crescendo, em milhares, após t semanas do lançamento, de acordo com a função:\nM(t) = 200 × (1,1)ᵗ\n\nCom isso, a equipe da startup quer saber: qual é o período, em semanas, em que o número de usuários ultrapassa 300 mil?\n\nNote e adote:\nlog 3 ≅ 0,4771; log 5 ≅ 0,6990 e log 11 ≅ 1,0414",
+    "statementComplete": true
+  },
+  {
+    "number": 20,
+    "topicId": "his_moderna_iluminismo",
+    "subject": "História",
+    "chapter": "América no Século XIX",
+    "title": "Permanências da exploração indígena após a independência",
+    "concept": "Emancipação política e permanências sociais; pré-requisito: colonização espanhola e formação das repúblicas latino-americanas.",
+    "steps": [
+      "O autor peruano pergunta se os indígenas sofrem menos sob a República e registra o fim de corregimientos e encomiendas.",
+      "Distinga mudança institucional de mudança nas relações sociais; procure o contraste introduzido por mas persistem.",
+      "Trabalhos forçados, recrutamentos, servidão e matanças continuam: a emancipação não elimina exploração e marginalização.",
+      "A reúne mudanças e permanências. B inventa protagonismo na emancipação; C afirma melhoria; D transforma denúncia em justificativa; E converte crítica em defesa do recrutamento.",
+      "Confira o tom condenatório em execração e sofrimento: o autor responsabiliza a sociedade republicana, sem legitimar seus abusos."
+    ],
+    "trap": "Tomar a abolição de instituições coloniais como prova do fim da exploração.",
+    "retrieval": [
+      "Que mudança institucional o excerto reconhece?",
+      "Quais práticas demonstram permanência de exploração?"
+    ],
+    "transfer": "Exercício autoral: uma república extingue tributos coloniais, mas obriga comunidades indígenas a trabalhar sem remuneração nas estradas. Identifique uma ruptura e uma permanência.",
+    "criteria": [
+      "Ruptura: extinção dos tributos coloniais.",
+      "Permanência: coerção laboral e desigualdade social; independência política não equivale a emancipação social."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "identifica mudanças na condição dos indígenas após a emancipação política, mas afirma a persistência de sua exploração no trabalho e de sua marginalização social."
+      },
+      {
+        "id": "b",
+        "text": "valoriza a ativa participação dos indígenas no processo de emancipação política, mas admite a dificuldade política de incorporá-los à nova ordem social."
+      },
+      {
+        "id": "c",
+        "text": "reconhece os crimes contra os indígenas cometidos durante a colonização espanhola, mas enfatiza a melhoria nas relações sociais e na condição indígena sob a República."
+      },
+      {
+        "id": "d",
+        "text": "defende a persistência da exclusão social dos indígenas na República, mas a justifica em função das heranças recebidas do período de colonização espanhola."
+      },
+      {
+        "id": "e",
+        "text": "critica a obrigatoriedade do alistamento militar dos indígenas, mas insiste na importância de sua participação e de seu envolvimento na construção da República."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "O indígena sofre menos sob a República do que sob a dominação espanhola? Não existem mais corregimientos nem encomiendas, mas persistem os trabalhos forçados e os recrutamentos. O sofrimento que lhe provocamos basta para descarregar sobre nós a execração dos seres humanos. Nós o conservamos na ignorância e na servidão, o envilecemos no quartel, o embrutecemos com o álcool, o lançamos a destroçar-se nas guerras civis e, de tempos em tempos, organizamos caçadas e matanças.\nManuel González Prada. “Nuestros índios”. In: Ideas en torno de Latinoamérica. México: UNAM, 1986. Adaptado.\n\nO excerto, extraído de um texto publicado no início do século XX pelo peruano Manuel González Prada,",
+    "statementComplete": true
+  },
+  {
+    "number": 21,
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "chapter": "A Montagem da Colonização",
+    "title": "Catequese infantil e construção de alianças",
+    "concept": "Agência indígena e negociação na colonização; pré-requisito: atuação jesuíta no século XVI.",
+    "steps": [
+      "O excerto registra a entrega de crianças aos jesuítas e sugere que o ensino poderia estabelecer alianças.",
+      "Leia as expressões talvez e difícil determinar ao certo como limites da evidência, evitando generalizações.",
+      "A catequização tinha uma dimensão religiosa e podia constituir uma estratégia de relacionamento entre grupos indígenas e padres.",
+      "B conserva essa dimensão. A pressupõe submissão total; C ignora a incerteza documental; D inventa formação administrativa; E exclui a função de aliança.",
+      "Confira se a conclusão mantém alguns grupos e possibilidade, sem apresentar todos os indígenas como um bloco passivo."
+    ],
+    "trap": "Reduzir catequese à imposição unilateral ou transformar uma hipótese histórica em certeza universal.",
+    "retrieval": [
+      "Como a entrega de crianças podia servir à construção de alianças?",
+      "Que expressões limitam o alcance da conclusão histórica?"
+    ],
+    "transfer": "Exercício autoral: um documento relata que uma comunidade entregou crianças a missionários e recebeu apoio contra um grupo rival. Proponha duas dimensões dessa relação.",
+    "criteria": [
+      "Identificar ensino religioso e tentativa de conversão.",
+      "Identificar negociação de aliança e agência da comunidade, sem concluir submissão total."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A aliança entre grupos indígenas e padres implicava total submissão dos primeiros aos segundos."
+      },
+      {
+        "id": "b",
+        "text": "A catequização das crianças significava uma estratégia de construção de relacionamento entre os povos envolvidos na colonização portuguesa."
+      },
+      {
+        "id": "c",
+        "text": "A documentação evidencia a imagem que as várias tribos indígenas tinham a respeito dos portugueses."
+      },
+      {
+        "id": "d",
+        "text": "As ações pedagógicas visavam preparar os indígenas para a administração colonial."
+      },
+      {
+        "id": "e",
+        "text": "A instrução religiosa era o único objetivo no ensino de crianças indígenas."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Na documentação jesuítica quinhentista, há constantes referências ao desejo dos índios de entregarem seus filhos para que fossem ensinados pelos padres. Talvez o ensino das crianças indígenas pudesse representar, também, uma possibilidade de estabelecer alianças entre grupos indígenas e padres, revelando outra dimensão da evangelização das crianças como ‘grande meio’ para se converter o gentio. É difícil determinar ao certo qual foi a imagem a respeito dos portugueses construída pelas várias tribos indígenas e, principalmente, dos religiosos da Companhia de Jesus, mas a construção de alianças, a partir das crianças (os índios dando seus filhos), pode ter constituído uma possibilidade frutífera de relacionamento para alguns grupos.\nRafael Chambouleyron. “Jesuítas e as crianças no Brasil quinhentista”. In: Mary del Priore. História das crianças no Brasil. São Paulo: Contexto, 1999.\n\nCom base no excerto, é correto afirmar:",
+    "statementComplete": true
+  },
+  {
+    "number": 23,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Políticas Ambientais Brasileiras",
+    "title": "Tendência histórica do desmatamento da Mata Atlântica",
+    "concept": "Leitura de série histórica ambiental; pré-requisito: distinguir tendência de oscilações anuais.",
+    "steps": [
+      "Leia as barras de 1985 a 2024, a curva decrescente e os valores textuais: 143,66 km² em 2024 e 113,99 km² em 2017–2018.",
+      "Compare o início e o fim da série e observe a tendência ajustada; não exija queda em cada ano.",
+      "As áreas anuais passam de valores próximos de mil km² para centenas e a curva mostra redução persistente no conjunto da série.",
+      "D descreve essa tendência. A atribui sazonalidade natural sem evidência; B inventa causa ligada à silvicultura; C descreve três elevações ausentes; E inverte a tendência.",
+      "Confira que existem aumentos locais, inclusive recentes: redução consistente da tendência não significa desmatamento zero ou queda estritamente monotônica."
+    ],
+    "trap": "Confundir a curva de tendência com as barras anuais ou concluir recuperação de toda a cobertura florestal.",
+    "retrieval": [
+      "Uma tendência decrescente permite aumentos em alguns anos?",
+      "A área anual desmatada mede a área total de floresta restante?"
+    ],
+    "transfer": "Exercício autoral: áreas anuais desmatadas foram 800, 600, 650, 400 e 200 km². Descreva a tendência e identifique uma oscilação.",
+    "criteria": [
+      "Tendência geral decrescente: de 800 para 200 km², redução de 75%.",
+      "Aumento local de 600 para 650 km²; não concluir ausência de tendência por esse aumento."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a área de desmatamento apresenta ciclos sazonais em função da variabilidade natural do clima, independentemente da atividade antrópica."
+      },
+      {
+        "id": "b",
+        "text": "os anos de 2017 e 2018 apresentaram áreas reduzidas de desmatamento associadas à menor procura por madeiras de áreas de silvicultura."
+      },
+      {
+        "id": "c",
+        "text": "os primeiros 15 anos de monitoramento (1985 a 1999) são marcados por três períodos de elevação da área de desmatamento."
+      },
+      {
+        "id": "d",
+        "text": "é possível observar uma redução consistente na área de desmatamento da Mata Atlântica (km2/ano) ao longo de toda a série histórica."
+      },
+      {
+        "id": "e",
+        "text": "há uma evolução crescente da área de desmatamento nos limites da Mata Atlântica, em especial nos últimos 10 anos de monitoramento."
+      }
+    ],
+    "pages": [
+      10
+    ],
+    "statement": "No ano de 2024, o Atlas da Mata Atlântica identificou uma perda de 143,66 km² de florestas maduras dentro do limite de aplicação da Lei da Mata Atlântica. A área foi muito semelhante à do ano anterior, com uma queda de apenas 2% na taxa de desmatamento de um ano para o outro, o que denuncia a situação de vulnerabilidade do Bioma. Além da redução tímida, a taxa ainda está longe do menor desmatamento já registrado desde a primeira edição do Atlas, em 1985: os 113,99 km² observados no período de 2017 a 2018. O gráfico apresenta a área de desmatamento e a tendência para a série histórica.\n[Gráfico de barras — área desmatada por ano (km²), valores aproximados: 1985 a 1990, cerca de 1.100; 1991 a 1996, cerca de 1.000; 1997 a 2000, cerca de 900; 2001 a 2008, cerca de 370; 2009 a 2024, entre cerca de 120 e 300 (o maior, em 2016). Uma linha de tendência cai continuamente de cerca de 1.400 em 1985 para cerca de 150 em 2024.]\nDisponível em https://sosma.org.br/. Adaptado.\n\nAcerca das informações do texto e da análise do gráfico, é possível concluir que",
+    "statementComplete": true
+  },
+  {
+    "number": 24,
+    "topicId": "geo_climatologia_socioambiental",
+    "subject": "Geografia",
+    "chapter": "Desafios Ambientais do Século XXI",
+    "title": "Esverdeamento da Antártida e aquecimento",
+    "concept": "Mudanças climáticas em ambientes frios e indicadores de vegetação; pré-requisito: interpretação de legenda e série temporal.",
+    "steps": [
+      "A cobertura aumenta de 0,86 km² em 1986 para 11,95 km² em 2021; a foto mostra musgos e a legenda distingue NDVI>0,2 de TCG>0.",
+      "Compare as barras ao longo do tempo, sobretudo a ampliação desde 2016; relacione vegetação, disponibilidade de terreno sem gelo e temperatura.",
+      "A expansão vegetal é compatível com aquecimento e menor cobertura de gelo em ambientes frios; os indicadores apresentados registram áreas vegetadas.",
+      "C é a associação climática coerente. A inventa efeito das bases; B trata índices de vegetação como radiação; D contradiz a variação; E invoca menor umidade e nível do mar sem apoio.",
+      "Confira o limite do suporte: o gráfico de 2016 mostra vegetação, sem uma série direta de temperatura ou gelo. A associação climática não deve ser apresentada como medição dessas duas variáveis."
+    ],
+    "trap": "Confundir índices de vegetação com termômetros ou tratar associação ambiental como demonstração causal isolada.",
+    "retrieval": [
+      "O que os limiares NDVI>0,2 e TCG>0 indicam na legenda?",
+      "Como menor cobertura de gelo pode favorecer a expansão dos musgos?"
+    ],
+    "transfer": "Exercício autoral: a área vegetada de uma ilha polar passa de 2 para 10 km², enquanto a temperatura média aumenta 1°C. Calcule a variação percentual e indique uma hipótese e um limite da inferência.",
+    "criteria": [
+      "Aumento de 400%, equivalente a cinco vezes a área inicial.",
+      "Hipótese: aquecimento favorece vegetação; correlação não isola causalidade e exigiria dados de gelo e outros fatores."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a construção de bases de pesquisa científica em diferentes pontos da área favorece a presença e a expansão dos musgos na região."
+      },
+      {
+        "id": "b",
+        "text": "ocorre um processo natural de recomposição florística da região impulsionado pela radiação solar demonstrada pelo NDVI e TCG, desde 2016."
+      },
+      {
+        "id": "c",
+        "text": "existe uma evidência da associação do greening à elevação da temperatura do ar e menor cobertura de gelo, demonstrado no gráfico de 2016."
+      },
+      {
+        "id": "d",
+        "text": "os dados temporais de NDVI e TCG permanecem constantes ao longo da série histórica de dados representada para a região."
+      },
+      {
+        "id": "e",
+        "text": "a elevação do nível do mar na região com cada vez menos umidade do ar tem como consequência o processo de greening."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "A área de cobertura vegetal observada no arquipélago das Ilhas Shetlands do Sul, na Antártida, próxima à Península desse continente, aumentou de 0,86 km² em 1986 para 11,95 km² em 2021, indicando uma taxa de mudança acelerada nos últimos anos. Essa tendência ecoa um padrão mais amplo de esverdeamento em ambientes de clima frio, que sugere futuras mudanças generalizadas nos ecossistemas terrestres na Antártida e em seu funcionamento a longo prazo.\n[Foto: encosta coberta de musgos na Ilha Ardley, com manchas de neve ao fundo.]\n[Gráfico: Ilha Ardley (62° S) e evolução temporal do Índice de Vegetação Normalizado (NDVI > 0,2) e do Índice de Vegetação Verde (TCG > 0, sigla em inglês para Tasseled Cap Greenness), em km², de 1986 a 2021. Até 2003 a área fica abaixo de 1 km²; há um pico isolado de cerca de 6 km² em 2004; a partir de 2015 os valores ficam altos e variáveis — cerca de 8 (2015), 10 (2016), 2,5 (2017), 12 (2018), 5,5 (2020) e 12 (2021). O TCG só passa de 1 km² a partir de 2015, chegando a cerca de 2,5 em 2018.]\nDisponível em doi.org/10.1038/s41561-024-01564-5. Adaptado.\n\nO processo de esverdeamento (greening) da área apresentada na imagem, sua evolução temporal desde 1986 e os elementos do texto permitem concluir que",
+    "statementComplete": true
+  },
+  {
+    "number": 25,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Global Warming",
+    "title": "Plataformas de gelo e velocidade das geleiras",
+    "concept": "Leitura de texto científico em inglês e relações causais; pré-requisito: distinguir ice sheet, ice shelf e glacier.",
+    "steps": [
+      "O texto distingue gelo assentado em terra de plataforma flutuante; cita 11% da área e três quartos da costa antártica.",
+      "Localize regulate the speed, hold glaciers back e Take the shelf away para identificar a função das plataformas.",
+      "As plataformas freiam as geleiras continentais; sua remoção pode acelerar a entrada de gelo e água continental no oceano.",
+      "C corresponde à função descrita. A confunde plataforma existente com gelo já derretido; B erra o equilíbrio entre empuxo e peso; D troca costa por área; E nega o princípio explicitamente usado.",
+      "Confira a distinção do texto: a fusão do gelo já flutuante não eleva o nível no modelo apresentado, mas a entrada de gelo continental pode elevá-lo."
+    ],
+    "trap": "Trocar três quartos da costa por três quartos da área e confundir efeitos do gelo flutuante com continental.",
+    "retrieval": [
+      "Qual passagem explica a função de contenção das plataformas?",
+      "Por que o texto diferencia derretimento da plataforma e entrada de gelo continental?"
+    ],
+    "transfer": "Exercício autoral: interprete “The floating shelf restrains the glacier; its collapse accelerates land ice discharge”. Explique as duas etapas e o possível efeito no nível do mar.",
+    "criteria": [
+      "A plataforma flutuante freia o movimento da geleira e seu colapso reduz essa contenção.",
+      "Mais gelo continental entra no oceano, podendo elevar o nível do mar."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "A área da superfície de gelo já derretido é aproximadamente do tamanho da França."
+      },
+      {
+        "id": "b",
+        "text": "O princípio de Arquimedes afirma que as plataformas de gelo possuem uma força de empuxo muito menor que seu peso e, portanto, flutuam."
+      },
+      {
+        "id": "c",
+        "text": "Plataformas de gelo são importantes porque atuam para regular a velocidade das geleiras na Antártida."
+      },
+      {
+        "id": "d",
+        "text": "Plataformas de gelo flutuantes são relevantes porque representam três quartos da área total da Antártida."
+      },
+      {
+        "id": "e",
+        "text": "O princípio de Arquimedes não se aplica no caso do derretimento do gelo flutuando na costa antártica."
+      }
+    ],
+    "pages": [
+      11
+    ],
+    "statement": "Considere o texto a seguir:\n[Imagem de satélite: plataforma de gelo coberta de neve, com lagos e canais azuis de água de degelo na superfície.]\n\nIce flows across Antarctica and continues to do so as it reaches the edge of the land mass and extends over the ocean. The huge floating tongues of ice often remain attached to the continent. Anything that remains grounded on the land is part of the Antarctic ice sheet; the floating part is an ice shelf. Floating ice shelves surround three-quarters of Antarctica’s coast and make up about 11% of its total area. One of the largest, the Ross Ice Shelf, is roughly the size of France. The George VI Ice Shelf is shown in the image, taken by NASA’s Landsat 8 in January 2020.\nIt may seem intuitive that all the ice added to the ocean from melting ice shelves would raise global sea level, but that’s not the case. By Archimedes’s principle, ice shelves floating on the water have already displaced their own weight, so their disintegration or melting won’t change the water level. Ice shelves do, however, regulate the speed of glaciers on Antarctica’s land. Ice shelves act to hold glaciers back. Take the shelf away, and the glaciers are free to speed up and flow into the ocean. Any ice and liquid water that the glaciers take with them will raise sea level. Of Earth’s fresh water, 70% is stored in Antarctica’s ice; that is the equivalent of about 58 meters of sea-level rise if all of it were to melt.\nBuzzard, S. “The surface hydrology of Antarctica’s floating ice”. Physics Today 75, 28-33 (2022). Adaptado.\n\nSegundo o texto, é correto afirmar:",
+    "statementComplete": true
+  },
+  {
+    "number": 34,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Hidrogeografia do Brasil",
+    "title": "Sedimentos andinos e águas brancas amazônicas",
+    "concept": "Bacia hidrográfica, erosão e transporte de sedimentos; pré-requisito: montante, jusante e leitura de legenda.",
+    "steps": [
+      "O texto define águas brancas por alta concentração de sólidos inorgânicos em suspensão, pretas por matéria orgânica dissolvida e claras por baixos teores de ambos.",
+      "No mapa, localize o Solimões na classe branca e acompanhe sua posição na drenagem que recebe materiais das cabeceiras andinas.",
+      "A erosão a montante fornece sedimentos minerais transportados pelos rios, explicando a elevada concentração de SIS no Solimões.",
+      "E conecta localização, material e processo. A confunde MOD com erosão mineral e exclusividade; B inventa origem poluidora; C generaliza infraestrutura sem evidência; D atribui a B a definição das águas claras.",
+      "Confira a legenda: os subtipos A e B são classes intermediárias, e a cor do mapa representa classificação hidroquímica, não níveis comprovados de contaminação."
+    ],
+    "trap": "Classificar como Química apenas pela palavra hidroquímica ou atribuir cores naturais exclusivamente à poluição.",
+    "retrieval": [
+      "Qual é a diferença entre SIS e MOD?",
+      "Como a erosão a montante influencia as águas observadas a jusante?"
+    ],
+    "transfer": "Exercício autoral: um rio nasce em montanhas sujeitas à erosão e chega a uma planície com água turva e muito sedimento mineral. Classifique-o segundo Sioli e explique o processo.",
+    "criteria": [
+      "Águas brancas pela alta concentração de sólidos inorgânicos em suspensão.",
+      "Erosão das cabeceiras seguida de transporte fluvial de sedimentos para jusante."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "As águas Pretas com alto teor orgânico na Amazônia são provenientes dos processos erosivos e localizam-se em áreas de Terras Pretas de Índio, o que caracteriza a coloração escura exclusiva da sub bacia do Rio Negro, diferindo das demais regiões amazônicas."
+      },
+      {
+        "id": "b",
+        "text": "A baixa concentração de SIS e MOD nas águas Claras é resultado dos garimpos ilegais na Amazônia, devido à utilização de mercúrio e dos agrotóxicos nos cultivos da soja nas regiões onde há maior desmatamento."
+      },
+      {
+        "id": "c",
+        "text": "A classificação intermediária do tipo A tem características hidroquímicas alteradas devido ao impacto direto e indireto de mudanças no uso do solo, além de grandes projetos de infraestrutura em toda parte norte-oriental da bacia amazônica."
+      },
+      {
+        "id": "d",
+        "text": "As águas intermediárias tipo B, com baixa concentração SIS e MOD, localizadas sobretudo no Baixo Amazonas, possuem essas características devido às mudanças no uso do solo nas últimas décadas e por ser uma área com muitos igarapés."
+      },
+      {
+        "id": "e",
+        "text": "As águas Brancas, como as do Rio Solimões, com alta concentração de SIS, têm essas características hidroquímicas devido aos processos erosivos de regiões a montante, como, por exemplo, as nascentes do rio Amazonas na Cordilheira dos Andes."
+      }
+    ],
+    "pages": [
+      15
+    ],
+    "statement": "As cores das águas dos rios são resultado de transformações físico-químicas, indicando fatores como os sólidos (material inorgânico) em suspensão (SIS) e o material orgânico dissolvido (MOD). A classificação científica das águas amazônicas mais utilizada é a de Harald Sioli (1950), que identificou três tipos: Brancas (alta concentração de SIS), Pretas (alta concentração de MOD) e Claras (baixas concentrações de SIS e MOD). Pesquisas mais recentes que analisam dados hidroquímicos têm indicado uma composição química mais variada nas águas amazônicas, dividindo os rios da região também em dois tipos intermediários: A (subtipo das águas claras) e B (subtipo que está entre as águas brancas e pretas).\n[Mapa: Principais rios da Região Hidrográfica Amazônica, que ocupa 45% do território nacional. Águas Brancas: Amazonas, Solimões, Madeira, Purus, Japurá, Javari, Parauapebas e outros rios que descem do oeste e do sul. Águas Pretas: Negro e seus afluentes. Águas Claras: Branco, Trombetas, Jari, Tapajós e Xingu. Intermediárias tipo A: afluentes do Branco, do Trombetas, do Tapajós e do Xingu, como o Iriri, no norte e no leste da bacia. Intermediárias tipo B: o Içá e afluentes da margem sul do Solimões, entre o Javari e o Purus.]\nAtlas da Amazônia Brasileira, 2025. Adaptado.\n\nA partir das informações do mapa e do texto, assinale a alternativa correta.",
+    "statementComplete": true
+  },
+  {
+    "number": 48,
+    "topicId": "por_texto",
+    "subject": "Português",
+    "chapter": "Intertextualidade e Interdiscursividade",
+    "title": "Adão e a serpente no despertar de Mwando",
+    "concept": "Intertextualidade bíblica e conflito interior; pré-requisito: reconhecer metáforas e comparação narrativa.",
+    "steps": [
+      "Mwando é comparado a Adão; a serpente, a maçã, a perda da venda e o nascimento figurado acompanham a paixão por Sarnau.",
+      "Associe o repertório bíblico à passagem da inocência ao conhecimento, depois observe os efeitos emocionais no personagem.",
+      "O despertar amoroso e sexual rompe a inocência e abala a devoção: o quarto funciona como refúgio de um personagem transtornado.",
+      "B articula despertar e conflito. A acrescenta perda total de fé e resignação; C inventa trauma superado; D transforma perturbação em transcendência; E imagina nova devoção e paraíso utópico.",
+      "Confira sente o coração a bater, devoção abalada e abismo: as imagens sustentam perturbação, sem resolução pacífica do conflito."
+    ],
+    "trap": "Ler nasceu como nascimento literal ou presumir que a referência bíblica implica abandono completo da fé.",
+    "retrieval": [
+      "Como a serpente e a maçã participam da intertextualidade?",
+      "Que expressão comprova o conflito entre devoção e paixão?"
+    ],
+    "transfer": "Exercício autoral: interprete “Ao descobrir o desejo, sentiu-se como quem provou o fruto proibido; a antiga serenidade se desfez”. Identifique o intertexto e seu efeito.",
+    "criteria": [
+      "Referência ao fruto proibido e à narrativa bíblica do Éden.",
+      "Passagem da inocência ao conhecimento/desejo, com perda da serenidade e conflito."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "por uma decepção com o mundo, causada pela perda da fé e pela compreensão da fragilidade das relações humanas, o que o levou a um isolamento resignado."
+      },
+      {
+        "id": "b",
+        "text": "pelo despertar sexual e pelo conhecimento, que rompem com um estado de inocência anterior, resultando em uma perturbação emocional e um conflito interior."
+      },
+      {
+        "id": "c",
+        "text": "pela superação de um trauma passado, sendo que a figura da cobra é o símbolo do obstáculo que foi vencido e que o conduz a um novo estágio de maturidade e paz."
+      },
+      {
+        "id": "d",
+        "text": "por um processo de profunda introspecção, no qual o amor é um caminho para a autodescoberta e transcendência espiritual, apesar das dificuldades iniciais."
+      },
+      {
+        "id": "e",
+        "text": "pela busca por um novo tipo de devoção religiosa, tendo a figura feminina como fonte de inspiração que o afasta ainda mais dos preceitos tradicionais e o aproxima de um paraíso utópico."
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "Mwando está embasbacado com a descoberta do insólito do mundo. Como o Adão no Paraíso, a voz da serpente sugeriu-lhe a maçã, que lhe arrancou brutalmente a venda de todos os mistérios. Sim, escutou os lábios de uma mulher pronunciando em sussurros o seu nome, despertando-o do ventre fecundo da inocência. Mwando nasceu. Sente o coração a bater com força, mesmo à maneira do primeiro amor.\n(…)\nProcurou o refúgio do quarto e fechou-se. Estava transtornado. Sentia a sua devoção abalada pela paixão. Não conseguia fugir às tramas da serpente, a Sarnau arrastava-o cada vez mais para o abismo.\nPaulina Chiziane. Balada de amor ao vento.\n\nConsiderando a intertextualidade bíblica presente no excerto de Balada de amor ao vento, a experiência de Mwando é caracterizada",
+    "statementComplete": true
+  },
+  {
+    "number": 55,
+    "topicId": "mat_teoria_numeros",
+    "subject": "Matemática",
+    "chapter": "Introdução à Teoria dos Números Inteiros",
+    "title": "Números perfeitos e uma progressão de termos pares",
+    "concept": "Divisibilidade, números perfeitos e progressão geométrica; pré-requisito: divisores próprios e potências.",
+    "steps": [
+      "Um perfeito iguala a soma dos divisores positivos próprios; Euclides exige que 2^n−1 seja primo antes de concluir que 2^(n−1)(2^n−1) é perfeito.",
+      "Teste as afirmações por exemplos pequenos; determine o primeiro perfeito e a expressão geral da PG de razão 3.",
+      "O primeiro perfeito é 6=1+2+3. A PG tem termo 6·3^(k−1), sempre inteiro par, confirmando B.",
+      "A falha em 2^4−1=15; C falha porque 31 tem apenas divisor próprio 1; D falha porque os divisores próprios de 120 somam 240; E falha porque as diferenças são 2,4,8,…, uma PG.",
+      "Confira também 28=1+2+4+7+14. A proposição é condicional: o resultado para n=4 não se torna perfeito sem a hipótese de primalidade."
+    ],
+    "trap": "Aplicar a fórmula de Euclides ignorando a hipótese de primalidade ou confundir diferenças exponenciais com PA.",
+    "retrieval": [
+      "Por que 6 é perfeito e 31 não é?",
+      "Qual hipótese autoriza usar a proposição de Euclides?"
+    ],
+    "transfer": "Exercício autoral: use n=5 para obter um perfeito e determine os três primeiros termos de uma PG de razão 3 que comece em 6.",
+    "criteria": [
+      "2^5−1=31 é primo e 2^4·31=496 é perfeito pela proposição.",
+      "PG: 6,18,54; todos pares porque são múltiplos de 6."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Com exceção de n = 1, os 5 primeiros termos da sequência (aₙ) = (2ⁿ − 1) são números primos."
+      },
+      {
+        "id": "b",
+        "text": "Os termos da progressão geométrica, cujo primeiro termo é o primeiro número perfeito e cuja razão é 3, são pares."
+      },
+      {
+        "id": "c",
+        "text": "Os números 28 e 31 são números perfeitos."
+      },
+      {
+        "id": "d",
+        "text": "Na proposição de Euclides, para n = 4, obtemos que 2ⁿ − 1 não é primo, mas que 2ⁿ⁻¹(2ⁿ − 1) é perfeito."
+      },
+      {
+        "id": "e",
+        "text": "A sequência formada pela diferença dos termos consecutivos de (aₙ) = (2ⁿ − 1) é uma progressão aritmética de razão 2."
+      }
+    ],
+    "pages": [
+      25
+    ],
+    "statement": "Existem números curiosos na matemática. Os números perfeitos são alguns deles. Um número n (para n ∈ ℕ*) é perfeito se, e somente se, for igual à soma de seus divisores positivos (excluindo o próprio). Relacionando números perfeitos e números primos, Euclides escreveu uma proposição em seu famoso livro “Elementos”: se 2ⁿ − 1 é um número primo, então 2ⁿ⁻¹(2ⁿ − 1) é um número perfeito.\nConsiderando o que foi exposto, é correto afirmar:",
+    "statementComplete": true
+  },
+  {
+    "number": 59,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Observações e previsões na tensão de Hubble",
+    "concept": "Compreensão de divulgação científica e método empírico; pré-requisito: diferenciar medição e previsão teórica.",
+    "steps": [
+      "Leia o apoio completo na página 26: a equipe de Riess mede H0 cerca de 8% acima da previsão baseada nos ingredientes e equações conhecidos do cosmos.",
+      "Localize measured, theoretical prediction e latest measurement based on Webb data, relacionando observação e modelo.",
+      "A equipe produz dados observacionais e os compara com previsões teóricas; novos dados do Webb concordam com suas estimativas anteriores.",
+      "C resume o método. A ignora a discrepância; B inventa simulações; D exclui indevidamente os dados anteriores; E afirma rejeição das equações e novas leis que o texto não relata.",
+      "Confira a rivalidade científica: Freedman obtém resultados diferentes conforme o tipo de estrela. A hipótese de modelo incompleto é uma interpretação da discrepância, não prova definitiva."
+    ],
+    "trap": "Tomar discrepância como rejeição automática de toda a teoria ou inferir exclusividade do Webb pela menção a seus dados.",
+    "retrieval": [
+      "Qual é a diferença entre measured H0 e theoretical prediction?",
+      "Por que earlier estimates impede concluir uso exclusivo de dados do Webb?"
+    ],
+    "transfer": "Exercício autoral: um modelo prevê 70 unidades para uma constante; duas medições independentes encontram 75 e 76. Descreva o procedimento científico e duas possibilidades a investigar.",
+    "criteria": [
+      "Comparar medições observacionais com a previsão teórica, reconhecendo a discrepância.",
+      "Investigar erros/incertezas de medição e possíveis limitações do modelo, sem declarar nova lei comprovada."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "mantém as previsões do modelo consolidado pela ciência."
+      },
+      {
+        "id": "b",
+        "text": "utiliza número limitado de simulações de computador para estimar a constante de Hubble."
+      },
+      {
+        "id": "c",
+        "text": "obtém dados observacionais para confrontar previsões teóricas."
+      },
+      {
+        "id": "d",
+        "text": "faz uso exclusivo de dados do Telescópio Espacial James Webb."
+      },
+      {
+        "id": "e",
+        "text": "rejeita equações conhecidas e proposição de novas leis físicas."
+      }
+    ],
+    "pages": [
+      26
+    ],
+    "statement": "Texto para as questões 58 e 59.\nNearly a century ago, Edwin Hubble discovered that the universe is getting larger. Modern measurements of how fast it is expanding disagree, however, suggesting that our understanding of the laws of physics might be off. Everyone expected the sharp vision of the James Webb Space Telescope to bring the answer into focus. But a long-awaited analysis of the telescope’s observations released late Monday evening once again gleans conflicting expansion rates from different types of data, while homing in on possible sources of error at the heart of the conflict.\nTwo rival teams have led the effort to measure the cosmic expansion rate, which is known as the Hubble constant, or H₀. One of these teams, led by Adam Riess of Johns Hopkins University, has consistently measured H₀ to be about 8 percent higher than the theoretical prediction for how fast space should be expanding, based on the cosmos’s known ingredients and governing equations. This discrepancy, known as the Hubble tension, suggests that the theoretical model of the cosmos might be missing something—some extra ingredient or effect that speeds up cosmic expansion.\nRiess and his team released their latest measurement of H₀ based on Webb data this spring, getting a value that agrees with their earlier estimates.\nBut for years a rival team led by Wendy Freedman of the University of Chicago has urged caution, arguing that cleaner measurements were needed. Her team’s own measurements of H₀ have invariably landed closer than Riess’ to the theoretical prediction, implying that the Hubble tension may not be real.\nSince the Webb telescope started taking data in 2022, the astrophysics community has awaited Freedman’s multipronged analysis using the telescope’s observations of three types of stars. Now, the results are in: Two types of stars yield H₀ estimates that align with the theoretical prediction, while the third—the same type of star Riess uses—matches his team’s higher H₀ value.\nDisponível em https://wired.com/. 08 Sep 2024. Adaptado.\n\nDe acordo com o texto, a abordagem metodológica da equipe de Adam Riess",
+    "statementComplete": true
+  },
+  {
+    "number": 60,
+    "topicId": "fis_gravitacao_circular",
+    "subject": "Física",
+    "chapter": "Leis da Gravitação",
+    "title": "Densidade de um buraco negro de massa solar",
+    "concept": "Raio de Schwarzschild e comparação de densidades; pré-requisito: volume esférico e notação científica.",
+    "steps": [
+      "Use massas iguais, RSol=10^9 m, G=10^−10 N·m²/kg², M=2·10^30 kg e c=3·10^8 m/s.",
+      "Calcule RSc=2GM/c² e aproveite a igualdade das massas para cancelar M na razão das densidades.",
+      "RSc=(4·10^20)/(9·10^16)≈4,44·10^3 m; ρBN/ρSol=(RSol/RSc)^3=(2,25·10^5)^3≈1,14·10^16.",
+      "A ordem de grandeza é 10^16, alternativa D. A inverte a compactação; B, C e E não correspondem ao cubo da razão dos raios calculados.",
+      "Confira que a razão é adimensional e maior que 1. Use o G fornecido pela prova, sem substituí-lo por um valor tabelado."
+    ],
+    "trap": "Comparar densidades usando apenas a razão dos raios ou esquecer o quadrado de c.",
+    "retrieval": [
+      "Por que a razão dos raios aparece elevada ao cubo?",
+      "Que simplificação ocorre quando as massas são iguais?"
+    ],
+    "transfer": "Exercício autoral: duas esferas de mesma massa têm raios de 1000 m e 10 m. Calcule a razão entre a densidade da menor e a da maior.",
+    "criteria": [
+      "Razão das densidades=(1000/10)^3.",
+      "Resultado 10^6; a esfera menor é um milhão de vezes mais densa."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "10⁻²"
+      },
+      {
+        "id": "b",
+        "text": "10⁴"
+      },
+      {
+        "id": "c",
+        "text": "10¹⁰"
+      },
+      {
+        "id": "d",
+        "text": "10¹⁶"
+      },
+      {
+        "id": "e",
+        "text": "10²²"
+      }
+    ],
+    "pages": [
+      27
+    ],
+    "statement": "Desde as primeiras descobertas, os buracos negros despertam enorme interesse da humanidade. Eles são caracterizados por regiões suficientemente densas e massivas em que o campo gravitacional é tão intenso que nada que esteja a distâncias inferiores a R_Sc do buraco negro consegue escapar de sua atração, nem a luz ou outras formas de radiação. Esse raio, também conhecido como raio de Schwarzschild, é expresso por R_Sc = 2GM/c², sendo G a constante de gravitação universal, M a massa do buraco negro e c a velocidade da luz.\nConsidere, por simplicidade, um buraco negro de massa igual à massa solar M_Sol = 2×10³⁰ kg e de raio igual a R_Sc. Nesse caso, a razão entre a densidade volumétrica de um buraco negro e a densidade volumétrica do Sol apresenta uma ordem de grandeza mais próxima de:\n\nNote e adote:\nSuponha uniformes as densidades volumétricas do Sol e do buraco negro.\nConsidere que o buraco negro e o Sol sejam esféricos e tenham distribuição de massa uniforme.\nG = 10⁻¹⁰ Nm²/kg²; R_Sol = 10⁹ m; c = 3×10⁸ m/s.",
+    "statementComplete": true
+  },
+  {
+    "number": 61,
+    "topicId": "fis_fisica_moderna",
+    "subject": "Física",
+    "chapter": "Noções Básicas de Física Quântica",
+    "title": "Frequência e energia cinética no efeito fotoelétrico",
+    "concept": "Equação fotoelétrica de Einstein; pré-requisito: energia do fóton e função trabalho.",
+    "steps": [
+      "O enunciado fornece E=hf e define a função trabalho como energia mínima necessária para retirar o elétron.",
+      "Escreva Kmax=hf−φ e compare separadamente frequência, intensidade e função trabalho.",
+      "Para o mesmo material, aumentar f aumenta a energia de cada fóton e a energia cinética máxima dos elétrons ejetados.",
+      "C está correta. A aumenta a quantidade de fótons; B não eleva energia por elétron; D aumenta a energia consumida na extração; E reduz a energia disponível.",
+      "Confira a condição hf>φ para emissão. O efeito da intensidade sobre a quantidade de elétrons não deve ser confundido com energia cinética individual."
+    ],
+    "trap": "Confundir intensidade com frequência ou esquecer que função trabalho maior reduz Kmax para o mesmo fóton.",
+    "retrieval": [
+      "Qual equação relaciona energia cinética máxima, frequência e função trabalho?",
+      "O que muda ao aumentar intensidade mantendo frequência constante?"
+    ],
+    "transfer": "Exercício autoral: um metal tem função trabalho de 2 eV. Compare fótons de 3 eV e 5 eV e indique o efeito de duplicar a intensidade.",
+    "criteria": [
+      "Energias cinéticas máximas de 1 eV e 3 eV, respectivamente.",
+      "Duplicar intensidade pode aumentar a quantidade de elétrons emitidos, mantendo Kmax para cada frequência."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "Aumentando a intensidade da luz incidente."
+      },
+      {
+        "id": "b",
+        "text": "Usando uma superfície maior."
+      },
+      {
+        "id": "c",
+        "text": "Aumentando a frequência da luz incidente."
+      },
+      {
+        "id": "d",
+        "text": "Usando um material com função trabalho maior."
+      },
+      {
+        "id": "e",
+        "text": "Diminuindo a energia do fóton incidente."
+      }
+    ],
+    "pages": [
+      27
+    ],
+    "statement": "Em 1905, Albert Einstein propôs que a luz, um tipo de radiação eletromagnética, é composta por fótons, sendo que cada fóton tem energia proporcional à frequência da luz (f) e à constante de Planck (h). Nesses termos, E = hf, e a intensidade da luz é a medida da quantidade de fótons. Essa interpretação foi fundamental para o desenvolvimento da teoria quântica da luz e para explicar o efeito fotoelétrico. Esse efeito consiste em um fenômeno físico no qual elétrons são ejetados de um material, geralmente um metal, quando este é irradiado com luz cujos fótons têm energia maior que a energia de ligação do elétron ao material, também conhecida como função trabalho. Assim, quando o fóton incide sobre a superfície do material, a energia excedente transforma-se na energia cinética do elétron que escapa da superfície.\nEm qual das situações a seguir a energia cinética do elétron ejetado no efeito fotoelétrico aumenta?",
+    "statementComplete": true
+  },
+  {
+    "number": 67,
+    "topicId": "qui_estequiometria",
+    "subject": "Química",
+    "chapter": "Massa Atômica, Mol e Massa Molar",
+    "title": "Isótopos no espectro de uma amostra pura",
+    "concept": "Isotopia e razão massa/carga; pré-requisito: massa isotópica e carga de íons.",
+    "steps": [
+      "A espécie intacta [C44H69NO12Ca]²⁺ tem massa 843,444 e sinal principal m/z=421,722; os outros picos ficam à direita e são menores.",
+      "Fixe a carga em 2 e relacione aumentos de m/z a aumentos de massa, sem pressupor mistura de substâncias.",
+      "Isótopos menos abundantes e mais pesados substituem alguns átomos, produzindo isotopólogos com massas maiores; o primeiro pico adicional está em 422,223.",
+      "A explica os picos. B contradiz a espécie de carga 2; C chama os isótopos adicionais de mais abundantes; D atribui múltiplas massas à carga; E exigiria sinais à esquerda.",
+      "Confira Δ(m/z)=422,223−421,722=0,501, correspondente a Δmassa≈1,002 com carga 2. Pureza química não elimina variedade isotópica."
+    ],
+    "trap": "Tomar múltiplos picos como impurezas ou imaginar que a carga do cálcio determina diversas massas do mesmo isotopólogo.",
+    "retrieval": [
+      "Por que uma amostra pura pode apresentar vários picos isotópicos?",
+      "Como a carga 2 modifica o espaçamento entre picos de massas diferentes em uma unidade?"
+    ],
+    "transfer": "Exercício autoral: um íon de carga +2 tem isotopólogos de massas 600 e 602. Determine os respectivos m/z e explique se isso exige impureza.",
+    "criteria": [
+      "m/z=300 e 301, com espaçamento 1.",
+      "Não exige impureza: a mesma espécie química pode conter diferentes isótopos."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "à presença de outros isótopos menos abundantes e mais pesados de átomos presentes na molécula."
+      },
+      {
+        "id": "b",
+        "text": "às espécies com cargas unitárias que possuem massa maior."
+      },
+      {
+        "id": "c",
+        "text": "à presença de outros isótopos mais abundantes e mais pesados de átomos presentes na molécula."
+      },
+      {
+        "id": "d",
+        "text": "à carga do cálcio, que faz com que a espécie detectada tenha mais de uma massa molecular."
+      },
+      {
+        "id": "e",
+        "text": "à presença de outros isótopos menos abundantes e mais leves de átomos presentes na molécula."
+      }
+    ],
+    "pages": [
+      29
+    ],
+    "statement": "A espectrometria de massas, utilizada para a identificação das proteínas no estudo apresentado no texto, é uma técnica que permite determinar com precisão a massa molecular de moléculas carregadas. A determinação da massa exata da molécula é feita a partir do conhecimento da sua carga e da razão massa/carga (m/z), parâmetro que influencia no movimento das espécies, permitindo sua determinação. Caso a carga das moléculas seja unitária, a razão m/z é numericamente igual à massa da espécie a ser identificada. Caso a carga seja 2, a razão m/z detectada é metade da massa da molécula.\nA imagem a seguir representa, na forma de um gráfico, o resultado de uma análise por espectrometria de massas de uma amostra pura contendo apenas uma espécie intacta com fórmula molecular [C₄₄H₆₉NO₁₂Ca]²⁺ e massa exata, considerando os isótopos mais abundantes, de 843,444 g/mol, detectada como m/z 421,722.\n[Espectro — abundância (%) × m/z: picos em 421,722 (100%), 422,223 (cerca de 47%), 422,725 (cerca de 13%), 423,226 (cerca de 3%), 423,720 (cerca de 2%) e 424,221 (cerca de 1%).]\n\nA presença de outros sinais além do sinal de m/z 421,722, mesmo em uma amostra pura não contendo nenhuma outra espécie além do [C₄₄H₆₉NO₁₂Ca]²⁺, deve-se",
+    "statementComplete": true
+  },
+  {
+    "number": 84,
+    "topicId": "bio_fisio_vegetal",
+    "subject": "Biologia",
+    "chapter": "Traqueófitas: Transpiração e Reposição Rápida de Água",
+    "title": "Perda de solutos e fechamento estomático",
+    "concept": "Osmose e turgor das células-guarda; pré-requisito: potencial osmótico e abertura do ostíolo.",
+    "steps": [
+      "Na figura, Z aponta do ostíolo aberto à esquerda para o fechado à direita; identifique as células-guarda e seus vacúolos.",
+      "Relacione a concentração de solutos ao fluxo osmótico de água e à pressão de turgor.",
+      "A diminuição de solutos nas células-guarda favorece saída de água, reduz o turgor e fecha o ostíolo.",
+      "B descreve o mecanismo. A, C e D tendem a favorecer abertura nas condições usuais indicadas; E aumentaria o turgor, produzindo o sentido contrário.",
+      "Confira a direção da seta antes de responder: fechamento, e não abertura. A figura não exige inferir um horário exato do dia."
+    ],
+    "trap": "Trocar o sentido da seta ou associar saída de água ao aumento do turgor.",
+    "retrieval": [
+      "Qual mudança de turgor acompanha o fechamento estomático?",
+      "Como a perda de solutos modifica o fluxo de água das células-guarda?"
+    ],
+    "transfer": "Exercício autoral: células-guarda acumulam K⁺ e recebem água por osmose. Preveja a mudança do turgor e do ostíolo.",
+    "criteria": [
+      "Aumento de solutos favorece entrada de água e elevação do turgor.",
+      "O ostíolo tende a abrir, aumentando a possibilidade de trocas gasosas e transpiração."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a passagem de uma condição de escuro (noite) para alta luminosidade (dia)."
+      },
+      {
+        "id": "b",
+        "text": "a diminuição da concentração de solutos na célula estomática."
+      },
+      {
+        "id": "c",
+        "text": "o aumento da umidade relativa do ar ao longo do dia."
+      },
+      {
+        "id": "d",
+        "text": "a intensificação da concentração de água no solo em que a planta se encontra."
+      },
+      {
+        "id": "e",
+        "text": "o aumento do nível de turgescência (turgor) da célula estomática."
+      }
+    ],
+    "pages": [
+      35
+    ],
+    "statement": "A figura a seguir corresponde a células estomáticas da folha de uma planta de mata atlântica, em dois momentos distintos.\n[Figura: uma seta Z aponta da esquerda para a direita. À esquerda, duas células-guarda curvas, afastadas, com o ostíolo aberto entre elas e vacúolos grandes. À direita, as mesmas células-guarda retas e encostadas, com o ostíolo fechado e vacúolos menores. Estão indicados célula-guarda, vacúolo, núcleo e cloroplasto.]\n\nÉ correto afirmar que a seta Z representa",
+    "statementComplete": true
+  },
+  {
+    "number": 85,
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "chapter": "Introdução à Ecologia",
+    "title": "Sobreposição de nichos e competição",
+    "concept": "Nicho ecológico e competição; pré-requisito: distinguir habitat e uso de recursos.",
+    "steps": [
+      "Os círculos representam nichos das espécies A e B; N marca a interseção hachurada, associada ao recurso usado por ambas.",
+      "Interprete a sobreposição como compartilhamento de condições ou recursos, sem confundi-la com o espaço físico do habitat.",
+      "Na região compartilhada pode ocorrer competição entre espécies e entre indivíduos da mesma espécie, sobretudo com recurso limitante.",
+      "A expressa essa possibilidade. B nega sobreposição possível; C confunde nicho com habitat; D transforma região do diagrama no recurso; E afirma especiação sem base.",
+      "Confira o verbo pode: a sobreposição permite competição, mas o desenho não demonstra escassez, equilíbrio perfeito nem formação de nova espécie."
+    ],
+    "trap": "Supor que nicho é exclusivo ou que competição ocorre apenas entre espécies diferentes.",
+    "retrieval": [
+      "Qual é a diferença entre nicho ecológico e habitat?",
+      "Quando o recurso compartilhado pode gerar competição intra e interespecífica?"
+    ],
+    "transfer": "Exercício autoral: duas espécies de aves comem as mesmas sementes escassas. Dois indivíduos da primeira espécie também disputam sementes. Classifique as duas disputas.",
+    "criteria": [
+      "Entre as espécies: competição interespecífica.",
+      "Entre indivíduos da mesma espécie: competição intraespecífica; recurso limitado explica ambas."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "uma região de sobreposição de nichos, na qual pode ocorrer competição intraespecífica e interespecífica."
+      },
+      {
+        "id": "b",
+        "text": "uma área fictícia, já que, por definição, nicho é algo exclusivo de uma espécie e não pode se sobrepor a outro nicho."
+      },
+      {
+        "id": "c",
+        "text": "o conceito de habitat, que corresponde ao local em que duas ou mais espécies distintas coabitam."
+      },
+      {
+        "id": "d",
+        "text": "o próprio recurso compartilhado pelas duas espécies de forma simétrica e equilibrada."
+      },
+      {
+        "id": "e",
+        "text": "o surgimento de um outro nicho, no qual os organismos ali presentes podem evoluir, originando uma nova espécie."
+      }
+    ],
+    "pages": [
+      36
+    ],
+    "statement": "A figura a seguir representa nichos ecológicos de duas espécies que utilizam um dado recurso ambiental em comum e de forma semelhante.\n[Figura: dois círculos parcialmente sobrepostos, “Nicho ecológico espécie A” e “Nicho ecológico espécie B”; a área de sobreposição está marcada com N.]\n\nÉ correto afirmar que a área N representa",
+    "statementComplete": true
+  },
+  {
+    "number": 89,
+    "topicId": "por_lit_contemporanea",
+    "subject": "Português",
+    "chapter": "Prosa Brasileira Contemporânea",
+    "title": "Sobrenome e reivindicação da riqueza produzida por escravizados",
+    "concept": "Memória da escravidão e resistência no romance; pré-requisito: inferência textual e desigualdade histórica.",
+    "steps": [
+      "A família negra de Neide preserva Paranhos, sobrenome herdado da escravatura e compartilhado com uma família branca tradicional.",
+      "Observe a reinterpretação do nome: enfrentamento e reivindicação velada de uma fortuna, em vez de simples deferência.",
+      "O sobrenome revela um vínculo historicamente desigual e afirma a contribuição dos negros para a riqueza da família branca.",
+      "C reúne desigualdade e reivindicação. A inventa programas e decadência; B restringe o sentido a instituições monárquicas; D propõe harmonia republicana; E transforma resistência em dependência e miscigenação.",
+      "Confira que a reivindicação é velada e simbólica: o texto não narra transferência legal de patrimônio nem comprova ascensão econômica da família negra."
+    ],
+    "trap": "Tratar a preservação do sobrenome como submissão sem reconhecer seu novo sentido de enfrentamento.",
+    "retrieval": [
+      "Que significado de resistência o sobrenome adquire?",
+      "Qual expressão sustenta a participação negra na riqueza da família branca?"
+    ],
+    "transfer": "Exercício autoral: uma narradora diz “Guardamos o nome dos antigos senhores para lembrar que a casa deles foi erguida por nossas mãos”. Explique o uso político do sobrenome.",
+    "criteria": [
+      "O nome conserva memória de uma relação desigual oriunda da escravidão.",
+      "A frase reivindica reconhecimento do trabalho e da contribuição dos subordinados para o patrimônio dos dominantes."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "a ascensão social dos “Paranhos” negros após o fim da escravidão, alcançada por meio dos programas governamentais de ajuda a ex-escravizados, e a decadência dos “Paranhos” brancos trazida pela crise do café."
+      },
+      {
+        "id": "b",
+        "text": "o racismo expresso nas ações e decisões das instituições políticas monárquicas, provenientes do período colonial, e a manutenção da dominação socioeconômica dos “Paranhos” negros pelos “Paranhos” brancos."
+      },
+      {
+        "id": "c",
+        "text": "a persistência de um vínculo desigual entre as famílias, oriundo do período da escravidão, e um esforço dos “Paranhos” negros de afirmar sua participação no enriquecimento dos “Paranhos” brancos."
+      },
+      {
+        "id": "d",
+        "text": "o esforço de construção de uma ordem social harmoniosa, desenvolvida durante a Primeira República, e a persistência de ressentimentos e rivalidades pessoais entre os “Paranhos” brancos e os “Paranhos” negros."
+      },
+      {
+        "id": "e",
+        "text": "a dependência financeira dos “Paranhos” negros em relação aos “Paranhos” brancos, provocada por sua condição de escravizados, e a valorização da mistura racial como característica de formação do povo brasileiro."
+      }
+    ],
+    "pages": [
+      37
+    ],
+    "statement": "A família de Neide fazia questão de conservar o pomposo sobrenome, “Paranhos”, herdado dos tempos da escravatura. A manutenção do nome dos descendentes dos antigos colonizadores, cuja família era tradicional na cidade, para o clã descendente de africanos escravizados, ganhara um sentido de enfrentamento aos brancos “Paranhos”. Para além de ser um destino histórico, era uma velada reivindicação de uma fortuna familiar dos brancos, que em grande parte era de pertença dos negros “Paranhos”.\nConceição Evaristo. Canção para ninar menino grande.\n\nNo excerto, o uso do mesmo nome por uma família branca e uma família negra indica",
+    "statementComplete": true
+  }
+]

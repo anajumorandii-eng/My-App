@@ -1,0 +1,639 @@
+[
+  {
+    "number": 5,
+    "topicId": "por_sintaxe",
+    "subject": "Português",
+    "chapter": "Vozes Verbais",
+    "title": "Quem sonhou o pássaro?",
+    "concept": "Conversão de voz passiva em ativa preservando participantes e tempo verbal; pré-requisitos: sujeito paciente, agente da passiva e pretérito perfeito.",
+    "steps": [
+      "Identifique “Fui sonhado” como passiva analítica na primeira pessoa: o falante foi objeto do sonho.",
+      "Transforme “por ti” no sujeito “tu” e o antigo sujeito em objeto “me”.",
+      "Conjugue sonhar no pretérito perfeito para tu: sonhaste; obtenha “Tu me sonhaste”.",
+      "A troca os papéis; C muda pessoa e tempo; D troca tu por você; E usa mais-que-perfeito em vez de perfeito.",
+      "Confira sujeito tu, objeto me e tempo perfeito: a alternativa B conserva os três."
+    ],
+    "trap": "Não confundir sonhaste com sonharas: a terminação altera a relação temporal.",
+    "retrieval": [
+      "Qual expressão vira sujeito na passagem da passiva à ativa?",
+      "Por que sonharas não conserva o tempo de fui sonhado?"
+    ],
+    "transfer": "Exercício autoral: passe “Fui elogiado por ti ontem” para a voz ativa e identifique o objeto.",
+    "criteria": [
+      "Escrever “Tu me elogiaste ontem”.",
+      "Identificar me como objeto direto e preservar o pretérito perfeito."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "Eu te sonhei."
+      },
+      {
+        "id": "b",
+        "text": "Tu me sonhaste."
+      },
+      {
+        "id": "c",
+        "text": "Ele o sonhara."
+      },
+      {
+        "id": "d",
+        "text": "Você me sonhou."
+      },
+      {
+        "id": "e",
+        "text": "Tu me sonharas."
+      }
+    ],
+    "pages": [
+      3,
+      4
+    ],
+    "statement": "Texto: conto “Passei por um sonho”, do escritor angolano José Eduardo Agualusa. No 4º parágrafo, o pássaro que aparece nos sonhos do enfermeiro Justo Santana diz:\n“— Fui sonhado por ti — disse-lhe o pássaro —, com o fim de esclarecer o espírito dos Homens e de trazer a liberdade a este pobre país.”\n\n“Fui sonhado por ti” (4º parágrafo)\n\nTransposto para a voz ativa, o trecho assume a seguinte redação:",
+    "statementComplete": true
+  },
+  {
+    "number": 18,
+    "topicId": "por_lit_romantismo_realismo",
+    "subject": "Português",
+    "chapter": "Elementos da Narrativa",
+    "title": "Limite de conhecimento do narrador",
+    "concept": "Onisciência e marcas de desconhecimento narrativo; pré-requisito: distinguir conhecimento do narrador de informação omitida por escolha.",
+    "steps": [
+      "Leia a crônica disponível e localize a informação cronológica da abertura.",
+      "Procure uma declaração de ignorância, e não apenas comentários pessoais ou linguagem figurada.",
+      "“Não sei de que ano” declara desconhecimento explícito da data do evento.",
+      "D contém essa limitação; A e C descrevem eventos, B anuncia confidência e E relata a transferência da pena sem admitir ignorância.",
+      "Confira que a pergunta é sobre conhecimento prejudicado: a incerteza temporal confirma D."
+    ],
+    "trap": "Não tomar “confidência” ou recusa de revelar algo como prova automática de desconhecimento.",
+    "retrieval": [
+      "Que expressão da abertura contradiz conhecimento completo?",
+      "Qual a diferença entre não saber e não revelar?"
+    ],
+    "transfer": "Exercício autoral: compare “Não contarei onde ela nasceu” e “Não sei onde ela nasceu”. Qual indica limite de conhecimento?",
+    "criteria": [
+      "A segunda frase indica desconhecimento do local de nascimento.",
+      "A primeira anuncia omissão deliberada e não prova ignorância."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "“As folhas se animavam ao seu contato, a poesia corria em ondas de ouro, donde saltavam chispas brilhantes de graça e espírito” (2o parágrafo)."
+      },
+      {
+        "id": "b",
+        "text": "“Só vos direi, e isto mesmo é confidência, que, depois de muito sonho e de muita inspiração, a pena se lançava sobre o papel” (2o parágrafo)."
+      },
+      {
+        "id": "c",
+        "text": "“a pena trêmula e vacilante caía sobre a mesa sem forças e sem vida, e soltava uns acentos doces” (3o parágrafo)."
+      },
+      {
+        "id": "d",
+        "text": "“Um belo dia, não sei de que ano, uma linda fada, que chamareis como quiserdes, a poesia ou a imaginação, tomou-se de amores” (1o parágrafo)."
+      },
+      {
+        "id": "e",
+        "text": "“um dia o herói do meu conto, chamado a estudos mais graves, lembrou-se de um amigo obscuro, e deu-lhe a sua pena de ouro” (4o parágrafo)."
+      }
+    ],
+    "pages": [
+      8
+    ],
+    "statement": "Para responder às questões de 16 a 20, leia o trecho de uma crônica de José de Alencar, publicada originalmente em 03.09.1854.\n\nUm belo dia, não sei de que ano, uma linda fada, que chamareis como quiserdes, a poesia ou a imaginação, tomou-se de amores por um moço de talento, um tanto volúvel como de ordinário o são as fantasias ricas e brilhantes que se deleitam admirando o belo em todas as formas. Ora, dizem que as fadas não podem sofrer a inconstância, no que lhes acho toda a razão; e por isso a fada de meu conto, temendo a rivalidade dos anjinhos cá deste mundo, onde os há tão belos, tomou as formas de uma pena, pena de cisne, linda como os amores, e entregou-se ao seu amante de corpo e alma.\nNão serei eu que desvendarei os mistérios desses amores fantásticos, e vos contarei as horas deliciosas que corriam no silêncio do gabinete, mudas e sem palavras. Só vos direi, e isto mesmo é confidência, que, depois de muito sonho e de muita inspiração, a pena se lançava sobre o papel, deslizava docemente, brincava como uma fada que era, bordando as flores mais delicadas, destilando perfumes mais esquisitos que todos os perfumes do Oriente. As folhas se animavam ao seu contato, a poesia corria em ondas de ouro, donde saltavam chispas brilhantes de graça e espírito.\nPor fim, a desoras¹, quando já não havia mais papel, quando a luz a morrer apenas empalidecia as sombras da noite, a pena trêmula e vacilante caía sobre a mesa sem forças e sem vida, e soltava uns acentos doces, notas estremecidas como as cordas da harpa ferida pelo vento. Era o último beijo da fada que se despedia, o último canto do cisne moribundo.\nAssim se passou muito tempo; mas já não há amores que durem sempre, principalmente em dias como os nossos, nos quais o símbolo da constância é uma borboleta. Acabou o poema fantástico no fim de dois anos; e um dia o herói do meu conto, chamado a estudos mais graves, lembrou-se de um amigo obscuro, e deu-lhe a sua pena de ouro.\n(José de Alencar. Crônicas escolhidas, 1995.)\n¹ desoras: altas horas da noite.\n\nA onisciência do narrador (ou seja, um conhecimento preciso e acabado dos eventos narrados) mostra-se prejudicada no seguinte trecho:",
+    "statementComplete": true
+  },
+  {
+    "number": 21,
+    "topicId": "ing_01",
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Finalidade do texto sobre o cacau",
+    "concept": "Identificação de finalidade comunicativa e relação causa-consequência; pré-requisitos: vocabulário de preços, clima e produção.",
+    "steps": [
+      "Observe que a abertura anuncia o encarecimento do cacau desde 2022 e seu recorde em janeiro de 2024.",
+      "Reúna as causas nos parágrafos seguintes: chuvas, seca e doenças nas plantações.",
+      "Essas causas explicam a redução de oferta e a escalada dos preços, em vez de propor uma campanha de consumo.",
+      "A expressa a finalidade; B inventa persuasão, C diz causa única apesar das doenças, D inventa oportunidades e E projeta lucros para 2025.",
+      "Releia “partly to blame” e “other price pressures”: confirmam explicação de vários fatores, alternativa A."
+    ],
+    "trap": "Expressões absolutas como only eliminam fatores que o texto enumera.",
+    "retrieval": [
+      "Que palavra mostra que o clima é apenas parte da explicação?",
+      "Por que mencionar consumidores não torna o texto uma campanha contra chocolate?"
+    ],
+    "transfer": "Exercício autoral: “Coffee prices rose after drought reduced harvests and transport costs increased.” Escreva a finalidade e duas causas.",
+    "criteria": [
+      "Finalidade: explicar a alta dos preços do café.",
+      "Causas: seca com redução das colheitas e aumento do custo de transporte."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "explain the reasons that have led to the escalation of cocoa prices."
+      },
+      {
+        "id": "b",
+        "text": "convince consumers to reduce chocolate intake to force price drop."
+      },
+      {
+        "id": "c",
+        "text": "establish climate change as the only cause of cocoa production crisis."
+      },
+      {
+        "id": "d",
+        "text": "present opportunities for countries to expand their cocoa exports."
+      },
+      {
+        "id": "e",
+        "text": "show that chocolate producers intend to increase their profits even more in 2025."
+      }
+    ],
+    "pages": [
+      9
+    ],
+    "statement": "Leia o texto e examine os gráficos para responder às questões de 21 a 26.\n\nIf you’re a chocoholic you may have noticed that your habit has lately become more expensive. The price of cocoa began creeping up in the second half of 2022. Since then it has doubled, reaching an all-time high in January 2024. That steep rise spells trouble for the chocolate business and sweet-toothed consumers alike.\n\nBitter issue — Cocoa\nGraph 1 — Price, $’000 per tonne: em torno de 1 a 1,5 entre 1990 e 2005; entre cerca de 2 e 3,5 de 2006 a 2022; sobe bruscamente para cerca de 4,4 em 2024.\nGraph 2 — Production, 2023, % of world output (valores aproximados): Ivory Coast 45; Ghana 14; Ecuador 9; Cameroon 6; Nigeria 6; Brazil 4; Indonesia 4; Other 14.\n\nClimate patterns are partly to blame for rising costs. Cocoa is mostly produced by small farmers in West Africa. Ghana and Ivory Coast grow about 60% of the world’s crop. Last season, in 2023, the El Niño weather pattern led to unseasonably high temperatures and rainfall that ravaged crops. Total rainfall in Ivory Coast’s cocoa-growing areas in 2023 was the highest in 20 years, according to Gro Intelligence, a data firm.\nThis year El Niño has brought severe drought to the cocoa farms, reducing production further. ING, a bank, estimates that this year the gap between global production and consumption will be at its widest since at least 2014. Extreme weather patterns have hit other commodities, too. Droughts in Thailand and India are affecting rice plantations. Torrential rain in Brazil, the world’s biggest sugar exporter, has affected its exports. Besides, other price pressures are specific to the cocoa industry. Swollen-shoot virus and black-pod disease — killers of cocoa trees — spread across Ghana and Ivory Coast during heavy rainfall last year. Tropical Research Services, a research company, estimates that by the end of 2023 the swollen-shoot virus had infected around 20% of Ivory Coast’s cocoa trees.\n(www.economist.com, 28.02.2024. Adaptado.)\n\nThe aim of the text is to",
+    "statementComplete": true
+  },
+  {
+    "number": 33,
+    "topicId": "his_brasil_colonia",
+    "subject": "História",
+    "chapter": "A Mineração no Brasil Colonial",
+    "title": "Mineração e mudança da capital colonial",
+    "concept": "Reorganização territorial e político-econômica na mineração; pré-requisitos: economia colonial e função dos portos atlânticos.",
+    "steps": [
+      "Registre os dados: mineração em Minas, Goiás e Mato Grosso, crescimento do Rio e transferência da capital em 1763.",
+      "Conecte as minas do interior aos circuitos de transporte e comércio controlados pelo porto do Rio.",
+      "A atração de população e riqueza para Centro-Sul modifica a organização do território e a sede administrativa.",
+      "E reúne ocupação espacial e reestruturação político-econômica; A localiza o crescimento no Nordeste, B inventa ausência de navegação, C desloca a disputa à metrópole e D prioriza classes sociais.",
+      "Confira a sequência ouro → redes comerciais → centralidade do Rio → capital: todos os elos sustentam E."
+    ],
+    "trap": "Não interpretar mudança da capital como evento administrativo isolado da atividade econômica.",
+    "retrieval": [
+      "Como o porto do Rio se conecta à mineração do interior?",
+      "Que mudança administrativa reconhece o novo centro econômico?"
+    ],
+    "transfer": "Exercício autoral: uma região portuária cresce ao escoar minério do interior e passa a sediar o governo. Identifique duas dimensões da transformação.",
+    "criteria": [
+      "Dimensão econômica: ampliação do comércio e da centralidade do porto.",
+      "Dimensão política: transferência da sede governamental, associada à reorganização territorial."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o aumento da densidade demográfica no Nordeste e o início da ocupação dos territórios sertanejos."
+      },
+      {
+        "id": "b",
+        "text": "a preferência por modelos de transporte terrestre e a ausência de uma política de estímulo à navegação fluvial."
+      },
+      {
+        "id": "c",
+        "text": "os interesses financeiros de caráter regional e as disputas pelo controle do poder político na metrópole."
+      },
+      {
+        "id": "d",
+        "text": "a constituição de novas formas de exploração de recursos naturais e a redefinição das relações entre classes sociais."
+      },
+      {
+        "id": "e",
+        "text": "os processos de ocupação dos espaços geográficos e a reestruturação das dinâmicas político-econômicas."
+      }
+    ],
+    "pages": [
+      12
+    ],
+    "statement": "Leia o excerto para responder às questões 33 e 34.\n\nO boom na mineração do ouro, em Minas Gerais, mudou poderosamente o centro de gravidade da economia e da população brasileiras do Norte para o Centro e o Sul. [...] Embora os baianos tivessem voz considerável nos investimentos feitos dentro das zonas de mineração, a logística do transporte pelo interior fez com que a balança comercial para e a partir das províncias do interior pendesse para as cidades do Sul. Assim, as minas de Minas Gerais, Goiás e Mato Grosso tornaram-se a hinterlândia crucial do porto do Rio de Janeiro. O Rio de Janeiro logo ultrapassou a Bahia em transporte marítimo e comércio internacional, e chegou rapidamente a uma população de 50 mil habitantes na capital. A Coroa reconheceu esta nova realidade [...], mudando a capital da colônia de Salvador para o Rio de Janeiro, em 1763.\n(Herbert S. Klein. Escravidão africana: América Latina e Caribe, 1987.)\n\nO excerto registra uma transformação importante no processo de colonização da América portuguesa e caracteriza a conexão entre",
+    "statementComplete": true
+  },
+  {
+    "number": 51,
+    "topicId": "geo_fisica_brasil",
+    "subject": "Geografia",
+    "chapter": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+    "title": "Territórios quilombolas e vegetação nativa",
+    "concept": "Relação sociedade-natureza e leitura comparativa de dados territoriais; pré-requisitos: percentuais e comunidades tradicionais.",
+    "steps": [
+      "Compare as perdas de vegetação entre 1985 e 2022: 4,7% nos territórios quilombolas e 25% nas áreas privadas.",
+      "Interprete a diferença como indício de formas distintas de ocupar e utilizar o território.",
+      "A menor perda é compatível com uma relação específica da comunidade tradicional com a natureza.",
+      "D sintetiza essa particularidade; A presume desinteresse, B erro de coleta, C reintegração produtiva e E ausência legislativa, sem apoio nos índices.",
+      "Confira que os dados comparam desmatamento, não participação econômica ou validade legal: escolha D."
+    ],
+    "trap": "Menor desmatamento não demonstra ausência de uso econômico do território.",
+    "retrieval": [
+      "Qual é a diferença entre os índices em pontos percentuais?",
+      "Por que conservação não implica território desocupado?"
+    ],
+    "transfer": "Exercício autoral: uma comunidade perde 3% da vegetação e propriedades vizinhas perdem 18% em igual período. Calcule a diferença e formule uma inferência limitada.",
+    "criteria": [
+      "Diferença de 15 pontos percentuais.",
+      "Os dados indicam conservação maior na comunidade, mas não provam ausência de atividade econômica nem identificam sozinhos toda a causalidade."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "o desinteresse pelo uso e ocupação de territórios não integrados à economia nacional."
+      },
+      {
+        "id": "b",
+        "text": "a desigualdade na coleta de dados sobre as transformações socioespaciais em áreas nativas."
+      },
+      {
+        "id": "c",
+        "text": "o compromisso de reintegração das comunidades tradicionais ao espaço produtivo brasileiro."
+      },
+      {
+        "id": "d",
+        "text": "a particularidade da relação sociedade-natureza em uma dada comunidade tradicional."
+      },
+      {
+        "id": "e",
+        "text": "a carência de legislação para definir o que são territórios quilombolas e quem pode ocupá-los."
+      }
+    ],
+    "pages": [
+      19
+    ],
+    "statement": "Os territórios quilombolas figuram na lista de áreas com menor desmatamento do Brasil, segundo um levantamento divulgado em 2023 pelo MapBiomas. No período de 1985 a 2022, a perda de vegetação nativa nesses territórios foi de 4,7%, enquanto áreas privadas registraram um índice de 25%.\n(www.cartacapital.com.br. Adaptado.)\n\nOs valores de desmatamento apresentados expressam",
+    "statementComplete": true
+  },
+  {
+    "number": 59,
+    "topicId": "fil_aristoteles",
+    "subject": "Filosofia",
+    "chapter": "Lógica e Metafísica Aristotélicas",
+    "title": "Silogismo e necessidade da conclusão",
+    "concept": "Conhecimento dedutivo e estrutura do silogismo; pré-requisitos: premissa, conclusão e consequência necessária.",
+    "steps": [
+      "No texto 1, destaque que o discurso demonstrativo parte do verdadeiro e chega ao verdadeiro.",
+      "No texto 2, identifique uma conclusão que decorre necessariamente das premissas sem termo externo.",
+      "Reconheça o silogismo como estrutura de inferência dedutiva, cuja conclusão é consequência das proposições estabelecidas.",
+      "A identifica a contribuição; B trata de classificação, C de crítica a Platão, D de ética e E de finalidade cósmica, temas ausentes da descrição lógica.",
+      "Confira “decorre necessariamente” nos Analíticos: é a pista decisiva para conhecimento dedutivo, A."
+    ],
+    "trap": "Confundir uma contribuição conhecida de Aristóteles com aquela efetivamente descrita nos excertos.",
+    "retrieval": [
+      "O que faz a conclusão de um silogismo decorrer necessariamente?",
+      "Por que o justo meio não responde a uma questão sobre demonstração?"
+    ],
+    "transfer": "Exercício autoral: Todos os mamíferos são vertebrados. Todas as baleias são mamíferos. Derive a conclusão e o termo mediador.",
+    "criteria": [
+      "Conclusão: todas as baleias são vertebrados.",
+      "Mamíferos é o termo mediador que conecta as premissas sem aparecer na conclusão."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "à estruturação do conhecimento dedutivo."
+      },
+      {
+        "id": "b",
+        "text": "ao método de classificação sistemática."
+      },
+      {
+        "id": "c",
+        "text": "à refutação do dualismo platônico."
+      },
+      {
+        "id": "d",
+        "text": "ao princípio do justo meio."
+      },
+      {
+        "id": "e",
+        "text": "à concepção teleológica de cosmos."
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "Texto 1\nA obra Organon constitui o primeiro estudo amplo da disciplina Lógica, embora falte essa palavra para designá-la. No início de Analíticos, Aristóteles define a disciplina que se prepara para investigar como ciência da demonstração e do saber demonstrativo. Distingue dois tipos de discurso, dialético e demonstrativo: o primeiro parte do problemático e do provável e termina necessariamente no provável; o segundo parte do verdadeiro e termina no verdadeiro.\n(Nicola Abbagnano. Dicionário de filosofia, 2007. Adaptado.)\n\nTexto 2\nNo Livro I, capítulo 1 de sua obra Primeiros Analíticos, Aristóteles define o que é um silogismo perfeito: “Silogismo é um argumento no qual, colocadas certas coisas, outra distinta das estabelecidas decorre necessariamente, porque essas coisas são o caso. Por ‘porque essas coisas são o caso’ quero dizer decorrer em virtude delas; por ‘decorrer em virtude delas’ quero dizer não carecer de nenhum termo externo para que o necessário venha a ser o caso”.\n(Mateus R. F. Ferreira. “O que são silogismos perfeitos?”. https://revistas.ufpr.br/doispontos, 2013. Adaptado.)\n\nNos textos 1 e 2 está apresentada uma das principais contribuições de Aristóteles para a história da filosofia. Tal contribuição refere-se",
+    "statementComplete": true
+  },
+  {
+    "number": 61,
+    "topicId": "bio_ecologia",
+    "subject": "Biologia",
+    "chapter": "Introdução à Ecologia",
+    "title": "Disputa de presas entre orcas e humanos",
+    "concept": "Competição interespecífica por recursos compartilhados; pré-requisitos: nicho ecológico, predação e relações ecológicas.",
+    "steps": [
+      "Registre que orcas predam 121 espécies e humanos afetam 10460, havendo sobreposição de 69% nas presas.",
+      "Considere a relação entre orcas e humanos, e não a relação de cada consumidor com sua presa.",
+      "Relacione o uso das mesmas presas à superexploração humana descrita: reduzir esse recurso pode prejudicar a alimentação das orcas, configurando competição interespecífica.",
+      "A é competição; B e D exigem benefício recíproco, E benefício sem prejuízo e C inibição sem disputa pelo recurso, ausentes no caso.",
+      "Confira que compartilhar alimento indica sobreposição de nichos; é a exploração que reduz sua disponibilidade, destacada no excerto, que sustenta a competição. Sobreposição sozinha não prova prejuízo."
+    ],
+    "trap": "Responder predação quando a pergunta compara dois consumidores que compartilham presas.",
+    "retrieval": [
+      "Por que duas espécies predadoras podem competir entre si?",
+      "Qual recurso compartilhado aparece explicitamente no excerto?"
+    ],
+    "transfer": "Exercício autoral: garças e martins-pescadores capturam os mesmos pequenos peixes de uma lagoa. Os peixes são escassos, e a captura por uma espécie reduz o alimento disponível à outra. Classifique a relação entre as aves e entre ave e peixe.",
+    "criteria": [
+      "Entre as espécies de aves: competição interespecífica por alimento.",
+      "Entre ave e peixe capturado: predação."
+    ],
+    "difficulty": "easy",
+    "options": [
+      {
+        "id": "a",
+        "text": "competição."
+      },
+      {
+        "id": "b",
+        "text": "protocooperação."
+      },
+      {
+        "id": "c",
+        "text": "amensalismo."
+      },
+      {
+        "id": "d",
+        "text": "mutualismo."
+      },
+      {
+        "id": "e",
+        "text": "comensalismo."
+      }
+    ],
+    "pages": [
+      22
+    ],
+    "statement": "De acordo com uma pesquisa científica, enquanto a baleia orca preda 121 espécies, os seres humanos, dentro do mesmo nicho marinho em que vivem os grandes cetáceos, afetam a vida de 10 460 espécies. Como existe uma sobreposição de, neste caso, 69% das espécies predadas tanto pela orca quanto pelo ser humano, a superexploração humana dos mares, cada vez mais, vai afetar as cadeias ecológicas desse tipo de ambiente.\n(Eduardo Geraque. https://jornal.unesp.br. Adaptado.)\n\nA sobreposição citada no excerto sugere que, entre as orcas e os seres humanos, ocorre a relação ecológica denominada",
+    "statementComplete": true
+  },
+  {
+    "number": 65,
+    "topicId": "bio_fisio_animal",
+    "subject": "Biologia",
+    "chapter": "Fisiologia da Respiração",
+    "title": "Apneia, pH e controle respiratório",
+    "concept": "Mecânica inspiratória e controle da ventilação por CO₂/pH; pré-requisitos: diafragma, músculos intercostais e sistema nervoso.",
+    "steps": [
+      "Identifique as três lacunas: ação muscular ao inspirar, pH durante apneia e centro que aumenta a frequência respiratória.",
+      "A inspiração exige contração do diafragma e dos intercostais externos, ampliando o volume torácico.",
+      "Na apneia, o CO₂ produzido acumula-se e favorece formação de H⁺, diminuindo o pH sanguíneo.",
+      "O bulbo participa do controle respiratório; E reúne contrair, diminui e bulbo. A erra pH e centro; B, C e D propõem relaxamento inspiratório.",
+      "Confira a cadeia contração → inspiração; retenção de CO₂ → acidificação; comando bulbar → ventilação: alternativa E."
+    ],
+    "trap": "Associar inspiração ao relaxamento do diafragma ou atribuir a regulação respiratória ao cerebelo.",
+    "retrieval": [
+      "Como o movimento do diafragma aumenta o volume torácico?",
+      "Como a retenção de CO₂ altera a concentração de H⁺?"
+    ],
+    "transfer": "Exercício autoral: durante uma apneia curta, o CO₂ sobe de 40 para 48 mmHg. Preveja a direção da mudança de pH e da demanda ventilatória.",
+    "criteria": [
+      "O aumento de CO₂ tende a diminuir o pH pela formação de ácido carbônico/H⁺.",
+      "A demanda ventilatória aumenta por estímulo dos mecanismos de controle respiratório."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "contrair – aumenta – cerebelo."
+      },
+      {
+        "id": "b",
+        "text": "relaxar – diminui – cerebelo."
+      },
+      {
+        "id": "c",
+        "text": "relaxar – aumenta – bulbo."
+      },
+      {
+        "id": "d",
+        "text": "relaxar – aumenta – cerebelo."
+      },
+      {
+        "id": "e",
+        "text": "contrair – diminui – bulbo."
+      }
+    ],
+    "pages": [
+      23
+    ],
+    "statement": "Haenyeos (mulheres do mar em coreano) são as famosas mergulhadoras da Ilha de Jeju, no sul da Coreia do Sul. Estas mulheres, hoje com idade entre 65 e 90 anos, seguem a antiga tradição de coletar frutos do mar, atingindo profundidades de até 12 metros apenas com o ar dos pulmões. Esse trabalho é uma das formas de sustentar as famílias dessas mulheres que são reconhecidas pela Unesco como Patrimônio Cultural Imaterial da Humanidade.\n(www.comes.com.br. Adaptado.)\n\nAntes de mergulhar, as Haenyeos devem _________ os músculos intercostais e o diafragma para encher os pulmões com ar. Durante o mergulho, o valor do pH sanguíneo _________ e, ao retornarem à superfície, o _________ promove o aumento da frequência respiratória das Haenyeos.\n\nAs lacunas do texto são preenchidas, respectivamente, por:",
+    "statementComplete": true
+  },
+  {
+    "number": 73,
+    "topicId": "qui_equilibrio",
+    "subject": "Química",
+    "chapter": "Deslocamento de Equilíbrio",
+    "title": "Controle da formação de HCN",
+    "concept": "Deslocamento de equilíbrio por adição de produto e controle de pH; pré-requisitos: bases, hidrólise de sais e princípio de Le Chatelier.",
+    "steps": [
+      "Leia CN⁻ + H₂O ⇌ HCN + OH⁻ e observe que HCN dissolvido pode passar à fase gasosa.",
+      "Para reduzir HCN, desloque o primeiro equilíbrio para a esquerda acrescentando OH⁻.",
+      "NaOH fornece OH⁻ e eleva o pH, favorecendo CN⁻ em vez de HCN.",
+      "E combina reagente e direção corretos; A usa NaCl, B diz que NaOH reduz pH, C diz que HCl eleva pH e D acidifica favorecendo HCN.",
+      "Confira ambos os efeitos da base: pH maior e menos HCN disponível para volatilizar, alternativa E."
+    ],
+    "trap": "Diminuir o pH consome OH⁻ e favorece justamente a formação do gás tóxico.",
+    "retrieval": [
+      "Qual lado do equilíbrio é favorecido pela adição de OH⁻?",
+      "Por que ácido aumenta a fração não ionizada HCN?"
+    ],
+    "transfer": "Exercício autoral teórico: no equilíbrio HA ⇌ H⁺ + A⁻ de um ácido fraco, preveja o efeito da adição de base sobre HA e A⁻.",
+    "criteria": [
+      "A base consome H⁺ e desloca o equilíbrio para a direita.",
+      "A fração A⁻ aumenta e a fração HA diminui."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "elevar o pH da solução de NaCN por adição de NaCl."
+      },
+      {
+        "id": "b",
+        "text": "diminuir o pH da solução de NaCN por adição de NaOH."
+      },
+      {
+        "id": "c",
+        "text": "elevar o pH da solução de NaCN por adição de HCl."
+      },
+      {
+        "id": "d",
+        "text": "diminuir o pH da solução de NaCN por adição de HCl."
+      },
+      {
+        "id": "e",
+        "text": "elevar o pH da solução de NaCN por adição de NaOH."
+      }
+    ],
+    "pages": [
+      26
+    ],
+    "statement": "Em uma solução aquosa de cianeto de sódio (NaCN), ocorrem os seguintes equilíbrios simultâneos:\nCN⁻ (aq) + H₂O (ℓ) ⇌ HCN (aq) + OH⁻ (aq)\nHCN (aq) ⇌ HCN (g)\n\nO cianeto de hidrogênio (HCN) é um gás extremamente tóxico, que pode ser fatal quando inalado. Para minimizar o escape desse gás para a atmosfera, recomenda-se",
+    "statementComplete": true
+  },
+  {
+    "number": 75,
+    "topicId": "qui_termoquimica",
+    "subject": "Química",
+    "chapter": "Termoquímica II",
+    "title": "Entalpia de combustão da hidrazina",
+    "concept": "Entalpia de reação por energias de ligação; pré-requisitos: balanceamento e contagem de ligações rompidas/formadas.",
+    "steps": [
+      "Registre N₂H₄ + O₂ → N₂ + 2H₂O e as energias N–H 391, N–N 163, O=O 497, N≡N 949 e O–H 463 kJ/mol.",
+      "Use ΔH = soma das ligações rompidas menos soma das ligações formadas.",
+      "Rompem-se 4 N–H, 1 N–N e 1 O=O: 4×391 + 163 + 497 = 2224 kJ.",
+      "Formam-se 1 N≡N e 4 O–H: 949 + 4×463 = 2801 kJ; ΔH = −577 kJ/mol. C dá a energia liberada; D/E são somas parciais e A/B não dão o saldo.",
+      "Confira os dois mols de água e o sinal negativo: liberar 577 kJ corresponde à alternativa C."
+    ],
+    "trap": "Contar apenas duas ligações O–H apesar do coeficiente 2 da água, ou inverter a subtração.",
+    "retrieval": [
+      "Por que romper uma ligação tem contribuição positiva?",
+      "Quantas ligações O–H se formam por mol de hidrazina?"
+    ],
+    "transfer": "Exercício autoral: H₂ + Cl₂ → 2HCl, com energias H–H = 436, Cl–Cl = 243 e H–Cl = 431 kJ/mol. Calcule ΔH.",
+    "criteria": [
+      "Energia para romper: 436 + 243 = 679 kJ/mol; energia de formação: 2×431 = 862 kJ/mol.",
+      "ΔH = −183 kJ/mol; reação exotérmica, libera 183 kJ por mol de H₂."
+    ],
+    "difficulty": "medium",
+    "options": [
+      {
+        "id": "a",
+        "text": "949 kJ."
+      },
+      {
+        "id": "b",
+        "text": "1 727 kJ."
+      },
+      {
+        "id": "c",
+        "text": "577 kJ."
+      },
+      {
+        "id": "d",
+        "text": "2 224 kJ."
+      },
+      {
+        "id": "e",
+        "text": "2 801 kJ."
+      }
+    ],
+    "pages": [
+      26
+    ],
+    "statement": "A hidrazina (N₂H₄), substância utilizada como propelente de foguetes, sofre combustão conforme a equação:\nN₂H₄ + O₂ ⟶ N₂ + 2H₂O\n\nA tabela apresenta alguns valores de entalpias de ligação envolvidas nessa reação.\nLigação — Entalpia (kJ/mol)\nN–H — 391\nN≡N — 949\nN–N — 163\nO=O — 497\nH–O — 463\n\nUtilizando os dados tabelados, calcula-se que a combustão de 1 mol de hidrazina irá liberar",
+    "statementComplete": true
+  },
+  {
+    "number": 78,
+    "topicId": "fis_leis_newton",
+    "subject": "Física",
+    "chapter": "Plano Inclinado",
+    "title": "Aceleração máxima sem deslizamento",
+    "concept": "Atrito estático e segunda lei de Newton em plano inclinado; pré-requisitos: decomposição do peso e fₑ ≤ μₑN.",
+    "steps": [
+      "Registre μₑ = 0,8, g = 10 m/s², senθ = 0,6 e cosθ = 0,8; a figura mostra a esteira acelerando para cima da rampa.",
+      "Na direção perpendicular, N = mg cosθ; ao longo da rampa, o atrito aponta para cima e o peso mg senθ para baixo.",
+      "No limite, fₑ = μₑmg cosθ; aplique fₑ − mg senθ = ma.",
+      "Obtenha a máxima = 10(0,8×0,8 − 0,6) = 0,4 m/s²: A. B, C, D e E não satisfazem a igualdade do limite de atrito.",
+      "Confira por unidade de massa: atrito máximo 6,4 N/kg menos peso tangencial 6 N/kg deixa 0,4 N/kg."
+    ],
+    "trap": "Usar μg sem o cosseno ou esquecer que parte do atrito sustenta o peso ao longo da rampa.",
+    "retrieval": [
+      "Em que sentido atua o atrito na caixa acelerada para cima?",
+      "Qual desigualdade define a ausência de escorregamento?"
+    ],
+    "transfer": "Exercício autoral: mantenha senθ = 0,6, cosθ = 0,8 e g = 10, mas use μₑ = 1,0. Determine a aceleração máxima para cima.",
+    "criteria": [
+      "Escrever a máxima = g(μₑ cosθ − senθ).",
+      "Calcular 10(0,8 − 0,6) = 2,0 m/s²."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "0,4 m/s2."
+      },
+      {
+        "id": "b",
+        "text": "0,2 m/s2."
+      },
+      {
+        "id": "c",
+        "text": "0,5 m/s2."
+      },
+      {
+        "id": "d",
+        "text": "0,1 m/s2."
+      },
+      {
+        "id": "e",
+        "text": "0,3 m/s2."
+      }
+    ],
+    "pages": [
+      27
+    ],
+    "statement": "Uma esteira rolante é utilizada para transportar caixas para o alto de uma plataforma. Para iniciar a subida a partir do repouso, a esteira é colocada em movimento uniformemente acelerado por alguns instantes, até que as caixas atinjam uma velocidade constante, compatível com a subida. O coeficiente de atrito estático entre as superfícies das caixas e a superfície da esteira é 0,8 e a aceleração da gravidade local tem intensidade 10 m/s².\n[Figura: esteira inclinada de um ângulo θ com a horizontal, levando caixas para cima até a plataforma.]\n\nSabendo que sen θ = 0,6 e que cos θ = 0,8, a intensidade da máxima aceleração que a esteira pode ter no início de seu movimento, sem que as caixas escorreguem sobre ela, será",
+    "statementComplete": true
+  },
+  {
+    "number": 90,
+    "topicId": "mat_sequencias_matrizes",
+    "subject": "Matemática",
+    "chapter": "Progressão Geométrica",
+    "title": "Tempos sucessivos nas voltas do triângulo",
+    "concept": "Soma finita de progressão geométrica aplicada a tempos; pré-requisitos: conversão de unidades e t = distância/velocidade.",
+    "steps": [
+      "A figura mostra três lados de 10 cm; dez voltas correspondem a 30 lados, e a velocidade dobra após cada lado.",
+      "Converta 6 m/min para 10 cm/s: o primeiro lado demora 1 s.",
+      "Como o comprimento se mantém e a velocidade dobra, os tempos são 1, 1/2, 1/4, …, 1/2²⁹ segundos.",
+      "Some 30 termos: S = (1 − (1/2)³⁰)/(1 − 1/2) = 2(1 − 2⁻³⁰) s, aproximadamente 2 s. A é correta; B/C/D superestimam e E conta só o primeiro lado.",
+      "Confira que S é menor que 2 s, mas maior que 1,5 s: aproximação de 2 s confirmada na alternativa A."
+    ],
+    "trap": "Dobrar a velocidade somente após cada volta, quando o enunciado manda fazê-lo após cada lado.",
+    "retrieval": [
+      "Por que os tempos têm razão 1/2 se as velocidades têm razão 2?",
+      "Quantos trechos entram na soma para dez voltas?"
+    ],
+    "transfer": "Exercício autoral: um móvel percorre cinco trechos de 20 cm, começando a 20 cm/s e dobrando a velocidade após cada trecho. Calcule o tempo total.",
+    "criteria": [
+      "Tempos: 1, 1/2, 1/4, 1/8 e 1/16 s.",
+      "Soma = 31/16 s = 1,9375 s."
+    ],
+    "difficulty": "hard",
+    "options": [
+      {
+        "id": "a",
+        "text": "2 s."
+      },
+      {
+        "id": "b",
+        "text": "12 s."
+      },
+      {
+        "id": "c",
+        "text": "6 s."
+      },
+      {
+        "id": "d",
+        "text": "3 s."
+      },
+      {
+        "id": "e",
+        "text": "1 s."
+      }
+    ],
+    "pages": [
+      31
+    ],
+    "statement": "Uma partícula desloca-se sobre os lados de um triângulo equilátero ABC, de lado 10 cm, partindo do vértice A no sentido horário, conforme a figura. A intensidade da velocidade inicial dessa partícula, que é de 6 m/min, sempre dobra após a partícula percorrer um lado inteiro do triângulo e, durante o percurso de cada lado do triângulo, ela permanece constante.\n[Figura: triângulo equilátero ABC de lado 10 cm, com setas indicando o percurso A → B → C → A.]\n\nNessas condições, e desconsiderando os intervalos de tempo de aceleração dessa partícula, ela terá dado 10 voltas completas ao longo do perímetro do triângulo em, aproximadamente,",
+    "statementComplete": true
+  }
+]

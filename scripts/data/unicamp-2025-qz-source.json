@@ -1,0 +1,203 @@
+{
+  "board": "UNICAMP",
+  "year": 2025,
+  "phase": "1ª fase",
+  "version": "Q/Z",
+  "examUrl": "https://www.comvest.unicamp.br/vest2025/F1/f12025Q_Z.pdf",
+  "answerKeyUrl": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+  "excludedNumbers": [
+    53
+  ],
+  "media": [
+    {
+      "page": 3,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p03.webp",
+      "sha256": "16d44f11f796b03611a14cabe08449ae7dd9d69d0457914140a7370e2d9e72c0"
+    },
+    {
+      "page": 4,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p04.webp",
+      "sha256": "7be46fef4038f4b6cf97a6284ef7e9ead34ea1fbcdc9394dd7004423408bda2d"
+    },
+    {
+      "page": 5,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p05.webp",
+      "sha256": "95b881e5f58868b449032fa65fd54ae0d9fb704b039a6704cf618c0f0fcca4c6"
+    },
+    {
+      "page": 6,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p06.webp",
+      "sha256": "bbb4307666ffb63c76feefb07620852f11133d5a0bf7e56639e9b001fb2fea57"
+    },
+    {
+      "page": 7,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p07.webp",
+      "sha256": "089f9b1f37e1b9785852f6f8185844e13d99fed6f41f16bb2f01295824bc9740"
+    },
+    {
+      "page": 8,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p08.webp",
+      "sha256": "c9163fa598995234b5650824ae8ced51c6ee4e3ee69ca57605dca4773dd90d87"
+    },
+    {
+      "page": 9,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p09.webp",
+      "sha256": "ff8db0d6027cacb8fb18cad76c79055befcb89a00a7d6a22ba7d40cffd823bf9"
+    },
+    {
+      "page": 10,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p10.webp",
+      "sha256": "86a411c220de6c17da15ca6853952f699afe8d21fcd6f274b56a82287b1b30c4"
+    },
+    {
+      "page": 11,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p11.webp",
+      "sha256": "41c6a2ea0de3b58d05c09e8751a7e0bd93b428f59185aa3a3b04f5dacb370db5"
+    },
+    {
+      "page": 12,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p12.webp",
+      "sha256": "506f92ae9ff9abda5b21edea6dc07ca23d6b5ee165a7c288d8e779fce40bb39d"
+    },
+    {
+      "page": 13,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p13.webp",
+      "sha256": "907a63ad2a64f7432dbe39c0c4cfaddc5be5018600a8d0b993337eae67e2efcf"
+    },
+    {
+      "page": 14,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p14.webp",
+      "sha256": "02b074b3371a748a15f9d113e91c28871ca610526d126196bc76857ad4c610bd"
+    },
+    {
+      "page": 15,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p15.webp",
+      "sha256": "2d9e9c36cdf8576a6d73b7d9ebda52067ef541e0f026fb579e5bb37cd775a632"
+    },
+    {
+      "page": 16,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p16.webp",
+      "sha256": "22d873b792ba59f1f22f20b91a7b8f565598f2868de392d5f62ec787e27ed033"
+    },
+    {
+      "page": 17,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p17.webp",
+      "sha256": "68b19dd71fd2452b0f8031dbf0a8e0583278a016198f6a34a3be82f5d6bdbc9b"
+    },
+    {
+      "page": 18,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p18.webp",
+      "sha256": "727ba3f5320e8ed6eb283f2d9ea7281f3a4930b17b3e415417d565ad07d7a5b7"
+    },
+    {
+      "page": 19,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p19.webp",
+      "sha256": "3cccc034a39cd538de4236debdbce038c5c3b89dc5fbf329bff0ea87fc20162c"
+    },
+    {
+      "page": 20,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p20.webp",
+      "sha256": "b5de25afe47e8666e6084be160d7166d694393f585303174bb9efdea151f03f2"
+    },
+    {
+      "page": 21,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p21.webp",
+      "sha256": "42029802da1560d9ccb11a747a3d9236f388febd18a91f1d3e33e4992d314d8a"
+    },
+    {
+      "page": 22,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p22.webp",
+      "sha256": "7aa11b02b48853aaec173fc68c98514eceebd9c624bfacc331c9f3b172a4c5c6"
+    },
+    {
+      "page": 23,
+      "url": "/question-media/oficiais/unicamp-2025-qz/p23.webp",
+      "sha256": "328070d2b7961da16ad545afa64f606068e9adedd2340d3ccc2ff7b144dcc462"
+    }
+  ],
+  "idPrefix": "unicamp_2025",
+  "sourceFile": "UNICAMP_2025_1a_fase_Q_Z.pdf",
+  "totalQuestions": 72,
+  "firstNumber": 1,
+  "optionIds": "abcd",
+  "selectedNumbers": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    37,
+    38,
+    39,
+    40,
+    41,
+    42,
+    43,
+    44,
+    45,
+    46,
+    47,
+    48,
+    49,
+    50,
+    51,
+    52,
+    54,
+    55,
+    56,
+    57,
+    58,
+    59,
+    60,
+    61,
+    62,
+    63,
+    64,
+    65,
+    66,
+    67,
+    68,
+    69,
+    70,
+    71,
+    72
+  ],
+  "answerKeyFormat": "comvest",
+  "keyMarker": "PROVAS Q e Z",
+  "examSha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710",
+  "answerKeySha256": "26cc09a657c54357a84fbe23a6e8af34eb150c6a0012556929a481bf29a3f008",
+  "answerKeyTextSha256": "abc8880f2a65aa93451425854b0525fdffdcd755ab51838b28fc215ee674115d",
+  "answerKeyTextFile": "gabaritos/UNICAMP/unicamp-2025-qz.txt",
+  "itemsFile": "scripts/data/unicamp-2025-qz.json"
+}
