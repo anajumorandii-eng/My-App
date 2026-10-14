@@ -89,9 +89,12 @@ def cabecalhos(im: Image.Image, palavras: list[dict], url: str) -> list[tuple[in
         linhas: dict = {}
         for p in palavras:
             linhas.setdefault(p["linha"], []).append(p)
+        # O OCR às vezes junta o número da questão à linha da figura ao lado
+        # (o "33" ao lado do gráfico da 32), então não se exige linha sozinha.
         for ws in linhas.values():
-            if len(ws) == 1 and re.fullmatch(r"\d{1,2}", ws[0]["t"]) and ws[0]["h"] >= 18:
-                p = ws[0]
+            for p in ws[:1]:
+                if not (re.fullmatch(r"\d{1,2}", p["t"]) and p["h"] >= 18):
+                    continue
                 col = int(p["x"] > meio)
                 esquerda = 60 if col == 0 else meio + 20
                 if p["x"] < esquerda + 40:
@@ -126,6 +129,9 @@ def figuras_na_regiao(im: Image.Image, palavras: list[dict], caixa: tuple[int, i
     cinza = rgb.mean(axis=2)
     satur = rgb.max(axis=2) - rgb.min(axis=2)
     tinta = (cinza < 225) | (satur > 35)
+    # Número de questão e "QUESTÃO" não são rótulo do desenho logo abaixo.
+    palavras = [p for p in palavras if not (re.fullmatch(r"\d{1,3}\.?", p["t"]) and p["h"] >= 20)
+                and not p["t"].upper().startswith("QUESTÃO")]
     dentro = [p for p in palavras if p["conf"] > 30 and x0 <= p["x"] and p["x"] + p["w"] <= x1
               and y0 <= p["y"] and p["y"] + p["h"] <= y1]
     tocam = [p for p in palavras if p["conf"] > 30 and p["x"] < x1 and p["x"] + p["w"] > x0
@@ -195,6 +201,11 @@ def figuras_na_regiao(im: Image.Image, palavras: list[dict], caixa: tuple[int, i
             # a seguir"), não título (centralizado) nem legenda (recuada).
             if b[0] < margem + 12:
                 continue
+            # Coluna de texto ao lado da imagem (enunciado à direita da pintura)
+            # não é legenda: legenda e título ficam acima ou abaixo do desenho.
+            sobre = min(b[2], nucleo[2]) - max(b[0], nucleo[0])
+            if sobre < 0.6 * (b[2] - b[0]):
+                continue
             if encosta(nucleo, b, 10, 16) and (b[2] - b[0]) < 1.6 * (nucleo[2] - nucleo[0]):
                 absorve(c, b)
     # Linhas de texto corrido não podem ter sido engolidas: se a caixa cobre
@@ -242,8 +253,10 @@ def figuras_na_regiao(im: Image.Image, palavras: list[dict], caixa: tuple[int, i
     # Junta caixas sobrepostas.
     juntas: list[list[int]] = []
     for c in finais:
+        # Partes do mesmo desenho separadas por um vão (mapa-múndi cortado ao
+        # meio pelo título, os três quadros de uma tira) viram um recorte só.
         for j in juntas:
-            if c[0] < j[2] and c[2] > j[0] and c[1] < j[3] and c[3] > j[1]:
+            if c[0] < j[2] + 40 and c[2] > j[0] - 40 and c[1] < j[3] + 40 and c[3] > j[1] - 40:
                 j[:] = [min(j[0], c[0]), min(j[1], c[1]), max(j[2], c[2]), max(j[3], c[3])]
                 break
         else:
@@ -292,7 +305,15 @@ def processar(q: dict) -> tuple[str, list[dict], list[str]]:
     recortes, avisos = [], []
     paginas = q.get("originalPages") or []
     comecou = False
+    # A última questão da apostila arrasta dezenas de páginas no recorte
+    # original (até 34 em ap_mat_unicamp_105), que são a resolução comentada
+    # -- conteúdo de terceiros. Só a página do cabeçalho e as duas seguintes.
+    depois = 0
     for pg in paginas:
+        if comecou:
+            depois += 1
+            if depois > 2:
+                break
         caminho = os.path.join(PUBLIC, pg["url"].lstrip("/"))
         im = Image.open(caminho).convert("RGB")
         palavras = ocr(im)
