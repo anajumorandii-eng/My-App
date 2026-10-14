@@ -247,3 +247,32 @@ it('encerra carregamento com erro recuperável se a leitura do diário local é 
     expect(repository.save).not.toHaveBeenCalled();
   } finally { readKey.mockRestore(); }
 });
+
+it('duas atividades abertas recebem a mesma alteração sem remontar a resposta', async () => {
+  const first=renderHook(()=>useSummaryProgress());
+  const second=renderHook(()=>useSummaryProgress());
+  await waitFor(()=>expect(second.result.current.loading).toBe(false));
+  act(()=>first.result.current.update('shared',current=>({...current,important:true})));
+  expect(second.result.current.progress.shared.important).toBe(true);
+  act(()=>second.result.current.update('shared',current=>({...current,status:'em-revisao'})));
+  expect(first.result.current.progress.shared.status).toBe('em-revisao');
+  expect(first.result.current.progress.shared.important).toBe(true);
+});
+
+it('uma confirmação antiga não apaga uma edição recebida de outra atividade',async()=>{
+  auth.user={uid:'A'};
+  const firstSave=deferred<SummaryProgressMap>();
+  repository.save.mockImplementationOnce(()=>firstSave.promise).mockResolvedValue(undefined);
+  const first=renderHook(()=>useSummaryProgress());
+  const second=renderHook(()=>useSummaryProgress());
+  await waitFor(()=>expect(first.result.current.loading || second.result.current.loading).toBe(false));
+  act(()=>first.result.current.update('shared',current=>({...current,important:true})));
+  await waitFor(()=>expect(repository.save).toHaveBeenCalledTimes(1));
+  act(()=>second.result.current.update('shared',current=>({...current,important:false})));
+  await act(async()=>{});
+  expect(repository.save).toHaveBeenCalledTimes(1);
+  await act(async()=>firstSave.resolve({shared:{readSectionIds:[],answers:[],status:'em-revisao',important:true}}));
+  await waitFor(()=>expect(repository.save).toHaveBeenCalledTimes(2));
+  expect(first.result.current.progress.shared.important).toBe(false);
+  expect(second.result.current.progress.shared.important).toBe(false);
+});

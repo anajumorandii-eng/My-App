@@ -1,3 +1,4 @@
+import { StudyActivityVisibleContext } from '../../context/StudyActivityContext';
 import { createContext, useContext, useEffect } from 'react';
 import type { Ambiente } from '../../lib/visualAmbiente';
 import type { PreferenciasVisual } from '../../hooks/usePreferenciasVisual';
@@ -24,15 +25,16 @@ export const useMolduraTecnologica = () => useContext(MolduraTecnologicaContext)
  */
 export function useAmbienteDaTela(ambiente: Ambiente | null, preferencias?: Pick<PreferenciasVisual, 'efeitos' | 'fundo'>) {
   const app = useAmbienteApp();
+  const visible = useContext(StudyActivityVisibleContext);
   const registrar = app?.registrar;
   const efeitos = preferencias?.efeitos ?? 'completo';
   const fundo = preferencias?.fundo ?? 'aurora';
   useEffect(() => {
-    if (!ambiente || typeof document === 'undefined') return;
+    if (!visible || !ambiente || typeof document === 'undefined') return;
     if (registrar) {
       registrar(ambiente);
       return () => registrar(null);
     }
     return aplicarAmbiente(ambiente, { efeitos, fundo });
-  }, [ambiente, registrar, efeitos, fundo]);
+  }, [ambiente, registrar, efeitos, fundo, visible]);
 }

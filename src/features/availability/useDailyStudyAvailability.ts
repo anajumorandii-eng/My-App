@@ -1,3 +1,4 @@
+import { useStudyDataRevision } from '../../hooks/useStudyDataRevision';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../../context/AuthContext';
 import { authHeaders } from '../../lib/auth';
@@ -45,6 +46,7 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
   const exceptionRef = useRef<ScheduleException | undefined>(undefined);
 
   const uid = user?.uid;
+  const dataRevision = useStudyDataRevision(uid, 'schedule');
 
   useEffect(() => {
     let cancelled = false;
@@ -114,7 +116,7 @@ export function useDailyStudyAvailability(localDate: string): DailyStudyAvailabi
       cancelled = true;
       controller.abort();
     };
-  }, [isConnected, localDate, uid]);
+  }, [isConnected, localDate, uid, dataRevision]);
 
   const updateResolvedState = useCallback((nextSchedule: WeeklySchedule, nextException: ScheduleException | undefined) => {
     scheduleRef.current = nextSchedule;

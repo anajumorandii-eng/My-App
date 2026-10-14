@@ -1,3 +1,4 @@
+import { useStudyDataRevision } from '../hooks/useStudyDataRevision';
 import { useSearchParams } from 'react-router-dom';
 import React, { useEffect, useMemo, useState } from 'react';
 import { mockErrorLogs, mockTopics } from '../data/mockData';
@@ -24,6 +25,7 @@ const OUTCOME_LABELS: Record<NonNullable<ErrorLog['outcomeRating']>, string> = {
 
 export default function Erros() {
   const { user, isConnected } = useAuth();
+  const dataRevision = useStudyDataRevision(user?.uid, 'errors');
   const [searchParams, setSearchParams] = useSearchParams();
   const selectedRecord = searchParams.get('registro');
   const { progress: summaryProgress } = useSummaryProgress();
@@ -52,7 +54,7 @@ export default function Erros() {
     return () => {
       cancelled = true;
     };
-  }, [user]);
+  }, [user, dataRevision]);
 
   const filtered = useMemo(
     () => selectedRecord ? logs.filter((log) => log.id === selectedRecord) : (typeFilter === 'all' ? logs : logs.filter((l) => l.type === typeFilter)),

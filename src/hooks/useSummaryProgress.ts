@@ -1,3 +1,4 @@
+import { notifySummaryChange, subscribeSummaryChanges, serializeSummaryWrite } from '../lib/studyDataEvents';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { emptySummaryProgress, normalizeSummaryProgressMap } from '../lib/summaryEngine';
@@ -36,6 +37,7 @@ function readPending(uid: string): SummaryChange[] {
 interface ProgressSession {
   uid: string | null;
   generation: number;
+  revision: number;
   progress: SummaryProgressMap;
   ready: boolean;
   remoteReady: boolean;
@@ -45,7 +47,7 @@ interface ProgressSession {
   writeFailed: boolean;
 }
 const newSession = (uid: string | null, generation: number): ProgressSession => ({
-  uid, generation, progress: {}, ready: false, remoteReady: false, pending: 0, syncError: null, saveQueue: Promise.resolve(), writeFailed: false,
+  uid, generation, revision: 0, progress: {}, ready: false, remoteReady: false, pending: 0, syncError: null, saveQueue: Promise.resolve(), writeFailed: false,
 });
 
 export function useSummaryProgress() {
@@ -66,14 +68,15 @@ export function useSummaryProgress() {
     const owner = current.uid;
     if (owner === null) return;
     current.pending += 1;
-    current.saveQueue = current.saveQueue.then(async () => {
+    current.saveQueue = serializeSummaryWrite(owner, async () => {
       try {
         if (current.writeFailed) return;
+        const readRevision = current.revision;
         const remote = await saveUserSummaryProgress(owner, change);
         localStorage.removeItem(`${pendingPrefix(owner)}${change.id}`);
         if (sessionRef.current === current) {
           const pending = readPending(owner);
-          if (remote) {
+          if (remote && readRevision === current.revision) {
             current.progress = migrateSummaryProgressMap(pending.reduce(applySummaryChange, { ...current.progress, ...normalizeSummaryProgressMap(remote) }), interactiveSummaries);
             localStorage.setItem(storageKey(owner), JSON.stringify(current.progress));
           }
@@ -99,6 +102,7 @@ export function useSummaryProgress() {
       publish(session);
       return;
     }
+    const readRevision = session.revision;
     getUserSummaryProgress(uid).then(remote => {
       if (!active()) return;
       const pending = readPending(uid);
@@ -117,7 +121,9 @@ export function useSummaryProgress() {
         recovery.push(seed);
       }
       pending.unshift(...recovery);
-      const baseline = { ...local, ...normalizedRemote };
+      const baseline = readRevision === session.revision
+        ? { ...readLocal(uid), ...normalizedRemote }
+        : { ...normalizedRemote, ...readLocal(uid), ...session.progress };
       const merged = migrateSummaryProgressMap(pending.reduce(applySummaryChange, baseline), interactiveSummaries);
       session.progress = merged;
       session.remoteReady = true;
@@ -135,12 +141,20 @@ export function useSummaryProgress() {
     return () => { cancelled = true; };
   }, [uid, session, publish, enqueue]);
 
+  useEffect(() => subscribeSummaryChanges((owner,change,origin) => {
+    if (owner !== uid || origin === session || sessionRef.current !== session) return;
+    session.revision += 1;
+    session.progress = applySummaryChange(session.progress, change);
+    publish(session);
+  }), [uid, session, publish]);
+
   const update = useCallback((summaryId: string, updater: (current: SummaryProgress) => SummaryProgress) => {
     if (sessionRef.current !== session || !session.ready) return;
     const before = session.progress[summaryId] ?? emptySummaryProgress();
     const after = updater(before);
     const change = createSummaryChange(summaryId, before, after);
     const next = { ...session.progress, [summaryId]: after };
+    session.revision += 1;
     session.progress = next;
     let durable = true;
     try {
@@ -153,6 +167,7 @@ export function useSummaryProgress() {
       session.syncError = 'Não foi possível salvar neste dispositivo. Mantenha esta página aberta e tente novamente.';
     }
     if (uid !== null && session.remoteReady && durable) enqueue(session, change);
+    notifySummaryChange(uid, change, session);
     publish(session);
   }, [uid, session, publish, enqueue]);
 

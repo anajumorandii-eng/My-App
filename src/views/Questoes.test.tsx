@@ -397,3 +397,10 @@ it('mantém a banca e o tópico encaminhados por Prioridades', () => {
   expect(screen.queryByText('Questão de outra banca')).toBeNull();
   window.history.replaceState({}, '', '/');
 });
+
+it('usa a banca da navegação local da central, preservando o endereço externo',async()=>{
+ const {MemoryRouter}=await import('react-router-dom');
+ questionsHook.mockReturnValue({questions:[{...QUESTION,id:'local-unicamp',prompt:'Questão da central',examSource:{board:'UNICAMP',year:2026}}],syncError:null});
+ render(<MemoryRouter initialEntries={['/questoes?board=UNICAMP']}><Questoes/></MemoryRouter>);
+ expect(screen.getByRole('combobox',{name:'Banca'})).toHaveValue('UNICAMP');
+});

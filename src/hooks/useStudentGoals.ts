@@ -1,3 +1,4 @@
+import { useStudyDataRevision } from './useStudyDataRevision';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { getStudentGoals, saveStudentGoals } from '../lib/userData';
@@ -7,6 +8,7 @@ import { StudentGoals } from '../types';
 export function useStudentGoals() {
   const { user } = useAuth();
   const uid = user?.uid ?? null;
+  const dataRevision = useStudyDataRevision(uid, 'goals');
   const currentUid = useRef(uid);
   currentUid.current = uid;
   const latest = useRef<StudentGoals>(mockStudentGoals);
@@ -15,6 +17,8 @@ export function useStudentGoals() {
   const failedFields = useRef(new Set<keyof StudentGoals>());
   const revisions = useRef(new Map<keyof StudentGoals, number>());
   const session = useRef(0);
+  const pending = useRef(0);
+  const refreshSequence = useRef(0);
   const readyUid = useRef<string | null>(null);
   const [state, setState] = useState({ uid: null as string | null, value: mockStudentGoals });
   const [loading, setLoading] = useState(false);
@@ -23,6 +27,7 @@ export function useStudentGoals() {
   useEffect(() => {
     let cancelled = false;
     session.current += 1;
+    pending.current = 0;
     queue.current = Promise.resolve();
     failedFields.current.clear();
     revisions.current.clear();
@@ -33,17 +38,34 @@ export function useStudentGoals() {
     setSyncError(null);
     setLoading(Boolean(uid));
     if (!uid) return;
+    const initialSequence = refreshSequence.current;
     getStudentGoals(uid).then(data => {
-      if (cancelled) return;
+      if (cancelled || initialSequence !== refreshSequence.current) return;
       latest.current = data;
       acknowledged.current = data;
       readyUid.current = uid;
       setState({ uid, value: data });
     }).catch(() => {
-      if (!cancelled) setSyncError('Não foi possível carregar seus objetivos salvos. A edição está indisponível.');
+      if (!cancelled && initialSequence === refreshSequence.current) setSyncError('Não foi possível carregar seus objetivos salvos. A edição está indisponível.');
     }).finally(() => { if (!cancelled) setLoading(false); });
     return () => { cancelled = true; readyUid.current = null; };
   }, [uid]);
+
+  useEffect(() => {
+    if (!uid || dataRevision === 0 || pending.current > 0) return;
+    let cancelled = false;
+    const revision = new Map(revisions.current);
+    const sequence = ++refreshSequence.current;
+    void getStudentGoals(uid).then(data => {
+      if (cancelled || currentUid.current !== uid || sequence !== refreshSequence.current || pending.current > 0) return;
+      if ([...revisions.current].some(([key,value]) => revision.get(key) !== value)) return;
+      latest.current = data; acknowledged.current = data;
+      readyUid.current = uid;
+      setLoading(false);
+      setState({ uid, value: data });
+    }).catch(() => { if (!cancelled) setSyncError('Não foi possível atualizar os objetivos.'); });
+    return () => { cancelled = true; };
+  }, [uid, dataRevision]);
 
   const updateGoals = useCallback(async (updater: (prev: StudentGoals) => StudentGoals): Promise<boolean> => {
     if (currentUid.current !== uid || (uid && readyUid.current !== uid)) return false;
@@ -62,6 +84,7 @@ export function useStudentGoals() {
     setState({ uid, value: next });
     if (!uid) return false;
     if (!Object.keys(patch).length) return false;
+    pending.current += 1;
     const operation = queue.current.then(async () => {
       if (currentUid.current !== uid || readyUid.current !== uid || session.current !== requestSession) return false;
       try {
@@ -85,7 +108,9 @@ export function useStudentGoals() {
         return false;
       }
     });
-    queue.current = operation;
+    queue.current = operation.finally(() => {
+      if (currentUid.current === uid && session.current === requestSession) pending.current -= 1;
+    });
     return operation;
   }, [uid]);
 

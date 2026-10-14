@@ -1,3 +1,4 @@
+import { useStudyDataRevision } from './useStudyDataRevision';
 import { useCallback, useEffect, useRef, useState } from 'react';
 import { useAuth } from '../context/AuthContext';
 import { getUserMastery, updateUserMastery } from '../lib/userData';
@@ -17,6 +18,8 @@ export function useUserMastery() {
   const activeUid = useRef<string | null>(null);
 
   const uid = user?.uid ?? null;
+  const dataRevision = useStudyDataRevision(uid, 'mastery');
+  const refreshSequence = useRef(0);
   if (activeUid.current !== uid) {
     activeUid.current = uid;
     localRevision.current += 1;
@@ -38,9 +41,11 @@ export function useUserMastery() {
 
     let cancelled = false;
     setLoading(true);
+    const readRevision = localRevision.current;
+    const readSequence = refreshSequence.current;
     getUserMastery(user.uid)
       .then((data) => {
-        if (!cancelled) {
+        if (!cancelled && readRevision === localRevision.current && readSequence === refreshSequence.current) {
           setMastery(data);
           setUsingFallback(false);
           setLoadedUid(user.uid);
@@ -48,7 +53,7 @@ export function useUserMastery() {
       })
       .catch((error) => {
         console.error('Failed to load user mastery:', error);
-        if (!cancelled) {
+        if (!cancelled && readRevision === localRevision.current && readSequence === refreshSequence.current) {
           setMastery([]);
           setLoadedUid(user.uid);
           setSyncError('Não foi possível carregar seu progresso salvo. Recarregue a página para tentar novamente.');
@@ -63,6 +68,20 @@ export function useUserMastery() {
       cancelled = true;
     };
   }, [user]);
+
+  useEffect(() => {
+    if (!uid || dataRevision === 0) return;
+    const sequence = ++refreshSequence.current;
+    const revision = localRevision.current;
+    let cancelled = false;
+    void getUserMastery(uid).then(data => {
+      if (!cancelled && activeUid.current === uid && sequence === refreshSequence.current &&
+          revision === localRevision.current && pendingWritesRef.current === 0) {
+        setMastery(data); setLoadedUid(uid); setUsingFallback(false); setSyncError(null); setLoading(false);
+      }
+    }).catch(() => { if (!cancelled && sequence === refreshSequence.current) setSyncError('Não foi possível atualizar o progresso após a atividade.'); });
+    return () => { cancelled = true; };
+  }, [uid, dataRevision]);
 
   const updateMastery = useCallback(
     (updater: (prev: TopicMastery[]) => TopicMastery[]): Promise<boolean> => {
@@ -100,13 +119,14 @@ export function useUserMastery() {
             setPendingWrites(pendingWritesRef.current);
             if (pendingWritesRef.current === 0) {
               const refreshRevision = localRevision.current;
+              const refreshReadSequence = refreshSequence.current;
               void getUserMastery(operationUid).then((authoritative) => {
-                if (activeUid.current === operationUid && localRevision.current === refreshRevision) {
+                if (activeUid.current === operationUid && localRevision.current === refreshRevision && refreshReadSequence === refreshSequence.current) {
                   setMastery(authoritative);
                 }
               }).catch((error) => {
                 console.error('Failed to reconcile user mastery after save:', error);
-                if (activeUid.current === operationUid && localRevision.current === refreshRevision) {
+                if (activeUid.current === operationUid && localRevision.current === refreshRevision && refreshReadSequence === refreshSequence.current) {
                   setSyncError('Não foi possível confirmar o progresso salvo. Recarregue a página.');
                 }
               });
