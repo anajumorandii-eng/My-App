@@ -15,6 +15,10 @@ export interface ReviewedExamItem {
   difficulty: Question['difficulty'];
   options: Question['options'];
   pages: number[];
+  /** Enunciado transcrito da prova, conferido contra a página. Sem ele a
+   * questão só remetia à imagem da página, que saiu da tela a pedido da Ana
+   * Júlia; figura que o texto não carrega vira descrição entre colchetes. */
+  statement?: string;
 }
 
 export interface OfficialExamSource {
@@ -136,7 +140,8 @@ export function buildReviewedOfficialQuestions(
     return {
       id: `${source.idPrefix}_q${String(item.number).padStart(2, '0')}`,
       topicId: item.topicId, subject: item.subject, chapter: item.chapter,
-      prompt: `${['UNICAMP','COMVEST'].includes(source.board.toUpperCase()) ? 'UNICAMP' : source.board} ${source.year} · ${source.phase} · prova ${source.version} · questão ${item.number}.\nTema de estudo: ${item.title}.\nLeia o enunciado original, os textos e as figuras nas páginas abaixo. Responda apenas à questão ${item.number}.`,
+      prompt: item.statement?.trim() ||
+        `${['UNICAMP','COMVEST'].includes(source.board.toUpperCase()) ? 'UNICAMP' : source.board} ${source.year} · ${source.phase} · prova ${source.version} · questão ${item.number}.\nTema de estudo: ${item.title}.\nLeia o enunciado original, os textos e as figuras nas páginas abaixo. Responda apenas à questão ${item.number}.`,
       options: item.options, correctOptionId: answer, difficulty: item.difficulty, originalPages,
       sourceMaterial: { file: source.sourceFile, page: item.pages[0], questionNumber: item.number },
       examSource: {

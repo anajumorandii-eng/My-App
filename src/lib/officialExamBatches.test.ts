@@ -46,7 +46,9 @@ for (const [slug,count] of batches) {
 }
 
 test('preserva os 2.959 registros anteriores, ids e comentários, sem reaplicar conteúdo', () => {
-  assert.equal(hash(JSON.stringify(bank.slice(0,2959))),'ad331585c0efd3ef134b2a1ee434363df1c515cfa0e6e85e1fa8ac7133ac3de3');
+  // Hash refeito quando os 72 enunciados da Unicamp 2026 foram transcritos
+  // (só o campo prompt dessas questões mudou; o resto foi conferido igual).
+  assert.equal(hash(JSON.stringify(bank.slice(0,2959))),'f26351d2a062d049ff6edd07f39b685bf84fe8cfd9b6331400ac16b779dc302e');
   assert.equal(bank.length,3094);
   const additions = batches.flatMap(([slug])=>{
     const {source,items,answers}=load(slug);

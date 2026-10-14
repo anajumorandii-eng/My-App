@@ -21,7 +21,10 @@ test('parser seleciona Q/Z e preserva a anulação oficial sem adivinhar alterna
 });
 test('nova edição mantém identidade própria e exige exclusão explícita da anulada',()=>{
   const source = {...oldSource,year:2025,version:'Q/Z'};
-  const sameNumbers = buildReviewedExamQuestions(oldItems,oldAnswers,source,mockTopics);
+  // O enunciado transcrito é da prova de 2026; aqui só interessa a identidade
+  // que a fonte dá à questão, então ele sai das fichas emprestadas.
+  const semEnunciado = oldItems.map(({statement:_s,...item}:any)=>item);
+  const sameNumbers = buildReviewedExamQuestions(semEnunciado,oldAnswers,source,mockTopics);
   assert.equal(sameNumbers[0].id,'unicamp_2025_q01');
   assert.match(sameNumbers[0].prompt,/UNICAMP 2025.*Q\/Z/);
   assert.equal(sameNumbers[0].sourceMaterial?.file,'UNICAMP_2025_1a_fase_Q_Z.pdf');
