@@ -263,3 +263,15 @@ test('detalhamento inclui decisões intermediárias, limites de aplicação e ru
   assert.match(review, /completa, parcial ou que precisa ser refeita/);
   assert.match(review, /não anuncie cobertura integral/);
 });
+
+test('redação por gênero não recebe roteiro de resposta discursiva', () => {
+  for (const board of ['Fuvest', 'Unicamp', 'Unesp/Vunesp']) {
+    const payload = validateAiPayload('answer-correction', { topic: 'Redação', subject: 'Redação', board, answerKind: 'essay', question: 'Escreva uma carta à direção.', studentAnswer: 'À direção, solicitamos um horário.' });
+    const prompt = buildAiPrompt('answer-correction', payload);
+    assert.match(prompt, /Avalie uma redação pelo gênero/);
+    assert.doesNotMatch(prompt, /Comando.*Fonte.*Conceito.*Relação|conceito\/cálculo|resposta direta.*justificativa conceitual/i);
+  }
+});
+test('modo de correção inválido é recusado', () => {
+  assert.throws(() => validateAiPayload('answer-correction', { topic: 'Redação', subject: 'Redação', answerKind: 'inventado', question: 'Uma proposta', studentAnswer: 'Um texto' }), /answerKind/);
+});

@@ -1,11 +1,15 @@
-import React, { useState } from 'react';
+import { EssayReviewAudit, type EssayAudit } from '../components/EssayReviewAudit';
+import { EssayWorkshop } from '../components/EssayWorkshop';
+import { emptyEssayPlan } from '../data/essayWorkshop';
+import { readEssayCurrent, readEssayVersions, essayCorrectionQuestion, type EssayVersion } from '../lib/essayWorkspace';
+import { useAuth } from '../context/AuthContext';
+import React, { useState, useRef, useEffect } from 'react';
 import {
   essayStructure,
   interventionFormula,
   repertoireGuidance,
   essayBoardProfiles,
   commonMistakes,
-  revisionChecklist,
 } from '../data/essayModule';
 import { PenLine, ChevronDown, Lightbulb, AlertTriangle, CheckCircle2, XCircle, MessageSquareQuote, Sparkles, Save } from 'lucide-react';
 import { aiErrorMessage, requestAiText } from '../lib/aiClient';
@@ -27,42 +31,67 @@ const TABS: { id: Tab; label: string }[] = [
 const PART_ORDER: Array<'Introdução' | 'Desenvolvimento' | 'Conclusão'> = ['Introdução', 'Desenvolvimento', 'Conclusão'];
 
 export default function Redacao() {
+  const { user } = useAuth();
+  const scope = user?.uid ?? 'demo';
+  return <EssayEditor key={scope} scope={scope} />;
+}
+function EssayEditor({ scope }: { scope: string }) {
+  const currentKey = `crivo_essay_current_v1:${scope}`;
+  const [savedWorkspace] = useState(() => readEssayCurrent(scope));
+  const versionsKey = `crivo_essay_versions_v1:${scope}`;
+  const [plan, setPlan] = useState(savedWorkspace.plan);
+  const [versions, setVersions] = useState(() => readEssayVersions(versionsKey));
+  const [audit, setAudit] = useState<EssayAudit>({});
+  const [saveMessage, setSaveMessage] = useState('');
+  const [rewriteCorrection, setRewriteCorrection] = useState<AnswerCorrection | null>(null);
+  const correctionEpoch = useRef(0);
+  useEffect(() => () => { correctionEpoch.current++; }, []);
+  const invalidate = () => { setAudit({}); correctionEpoch.current++; setCorrection(null); setRewriteCorrection(null); setPracticeError(null); setSaveMessage(''); };
+
   const [tab, setTab] = useState<Tab>('pratica');
   const [expandedBoard, setExpandedBoard] = useState<string | null>(essayBoardProfiles[0]?.board ?? null);
-  const [board, setBoard] = useState('ENEM');
-  const [theme, setTheme] = useState(() => localStorage.getItem('juju-essay-theme') ?? '');
-  const [draft, setDraft] = useState(() => localStorage.getItem('juju-essay-draft') ?? '');
-  const [rewrite, setRewrite] = useState(() => localStorage.getItem('juju-essay-rewrite') ?? '');
+  const [board, setBoard] = useState(savedWorkspace.board);
+  const [theme, setTheme] = useState(savedWorkspace.theme);
+  const [draft, setDraft] = useState(savedWorkspace.draft);
+  const [rewrite, setRewrite] = useState(savedWorkspace.rewrite);
   const [correction, setCorrection] = useState<AnswerCorrection | null>(null);
   const [correcting, setCorrecting] = useState(false);
   const [practiceError, setPracticeError] = useState<string | null>(null);
 
   const saveDraft = () => {
-    localStorage.setItem('juju-essay-theme', theme);
-    localStorage.setItem('juju-essay-draft', draft);
-    localStorage.setItem('juju-essay-rewrite', rewrite);
+    setSaveMessage(''); setPracticeError(null);
+    try {
+      localStorage.setItem(currentKey, JSON.stringify({ board, theme, draft, rewrite, plan }));
+      const version: EssayVersion = { id: crypto.randomUUID(), date: new Date().toISOString(), board, theme, draft, rewrite, plan: { ...plan } };
+      const previous = versions[0];
+      const unchanged = previous && previous.board === board && previous.theme === theme && previous.draft === draft && previous.rewrite === rewrite && JSON.stringify(previous.plan) === JSON.stringify(plan);
+      const next = unchanged ? versions : [version, ...versions].slice(0, 20);
+      localStorage.setItem(versionsKey, JSON.stringify(next));
+      setVersions(next); setSaveMessage('Versão salva neste navegador.'); return true;
+    } catch { setPracticeError('Não foi possível salvar neste navegador. O texto permanece aberto; copie-o antes de sair.'); return false; }
   };
 
-  const correctEssay = async () => {
-    if (!theme.trim() || !draft.trim()) return;
-    saveDraft();
-    setCorrecting(true);
-    setPracticeError(null);
+  const correctEssay = async (phase: 'draft' | 'rewrite' = 'draft') => {
+    const text = phase === 'rewrite' ? rewrite : draft;
+    if (!theme.trim() || !text.trim()) return;
+    const question = essayCorrectionQuestion(board, theme.trim(), plan, phase === 'rewrite' ? { draft, rupture: correction?.rupturaPoint ?? 'Sem diagnóstico anterior disponível; compare as duas versões sem inventar o retorno da primeira.' } : undefined);
+    if (text.trim().length > 12000 || question.length > 12000) { setPracticeError('O texto ou o contexto de correção excede 12.000 caracteres. Reduza as informações de planejamento ou da coletânea mantendo o necessário para avaliar a proposta.'); return; }
+    if (!saveDraft()) return;
+    const epoch = ++correctionEpoch.current;
+    setCorrecting(true); setPracticeError(null);
+    if (phase === 'rewrite') setRewriteCorrection(null); else { setCorrection(null); setRewriteCorrection(null); }
     try {
       const result = await requestAiText('answer-correction', {
-        topic: `Redação — ${theme.trim()}`,
-        subject: 'Língua Portuguesa / Redação',
-        board,
-        question: `Produza uma redação sobre o tema: ${theme.trim()}. Avalie tese, argumentação, coesão, repertório, adequação ao tema e ao perfil da banca ${board}.`,
-        studentAnswer: draft.trim(),
+        topic: `Redação — ${theme.trim().slice(0, 270)}`,
+        subject: 'Língua Portuguesa / Redação', answerKind: 'essay', board, question, studentAnswer: text.trim(),
       });
-      setCorrection(parseAnswerCorrection(result.text));
-      setRewrite(draft);
+      if (correctionEpoch.current !== epoch) return;
+      const feedback = parseAnswerCorrection(result.text);
+      if (phase === 'rewrite') setRewriteCorrection(feedback);
+      else { setCorrection(feedback); setRewrite(current => current.trim() ? current : text); }
     } catch (error) {
-      setPracticeError(aiErrorMessage(error));
-    } finally {
-      setCorrecting(false);
-    }
+      if (correctionEpoch.current === epoch) setPracticeError(aiErrorMessage(error));
+    } finally { setCorrecting(false); }
   };
 
   const PenIcon = SUBJECT_ICONS['Português'] ?? PenLine;
@@ -121,7 +150,7 @@ export default function Redacao() {
             <select
               aria-label="Banca da redação"
               value={board}
-              onChange={(e) => setBoard(e.target.value)}
+              onChange={(e) => { invalidate(); setBoard(e.target.value); }}
               className="border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
             >
               {['ENEM', 'Fuvest', 'Unicamp', 'Unesp/Vunesp', 'Famerp', 'Unifesp'].map((item) => (
@@ -130,12 +159,17 @@ export default function Redacao() {
             </select>
             <input
               value={theme}
-              onChange={(e) => setTheme(e.target.value)}
+              aria-label="Tema da redação"
+              onChange={(e) => { invalidate(); setTheme(e.target.value); }}
               placeholder="Tema ou proposta de redação..."
               className="md:col-span-2 border border-[var(--line)] bg-[var(--surface2)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
             />
           </div>
 
+          {scope !== 'demo' && !savedWorkspace.draft && Boolean(localStorage.getItem('juju-essay-draft')) && <div className="ni-panel p-3 text-sm"><p>Há um rascunho anterior neste navegador que não estava associado a uma conta. Importar copia o texto para o espaço desta conta.</p><button className="ni-button mt-2" onClick={() => { if ((draft.trim() || theme.trim() || rewrite.trim()) && !saveDraft()) return; invalidate(); setTheme(localStorage.getItem('juju-essay-theme') ?? ''); setDraft(localStorage.getItem('juju-essay-draft') ?? ''); setRewrite(localStorage.getItem('juju-essay-rewrite') ?? ''); }}>Importar meu rascunho anterior</button></div>}
+          <EssayWorkshop board={board} plan={plan} onChange={value => { invalidate(); setPlan(value); }} />
+          <p className="text-xs text-[var(--dim)]">A correção por IA é formativa. Compare seus trechos com a proposta e os critérios; ela não é uma nota oficial. Planejamento e versões são salvos neste navegador, até 20 versões recentes.</p>
+          {saveMessage && <p role="status" className="text-sm">{saveMessage}</p>}
           <Panel subject="Português" className="ni-panel p-5">
             <div className="flex justify-between items-center text-xs mb-2">
               <span className="font-semibold text-[var(--text)]">Primeira versão (rascunho)</span>
@@ -143,7 +177,9 @@ export default function Redacao() {
             </div>
             <textarea
               value={draft}
-              onChange={(e) => { setDraft(e.target.value); setCorrection(null); }}
+              aria-label="Primeira versão da redação"
+              maxLength={12000}
+              onChange={(e) => { invalidate(); setDraft(e.target.value); }}
               rows={14}
               placeholder="Escreva sua redação aqui..."
               className="w-full bg-[var(--surface2)] border border-[var(--line)] rounded-xl p-4 text-xs text-[var(--text)] leading-relaxed outline-none focus:border-[var(--primary)]"
@@ -157,7 +193,7 @@ export default function Redacao() {
                 Salvar rascunho
               </button>
               <button
-                onClick={correctEssay}
+                onClick={() => void correctEssay('draft')}
                 disabled={correcting || !theme.trim() || !draft.trim()}
                 className="flex items-center px-3.5 py-1.5 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
               >
@@ -168,8 +204,9 @@ export default function Redacao() {
             {practiceError && <p className="text-xs text-rose-500 mt-2">{practiceError}</p>}
           </Panel>
 
-          {correction && (
+          {(correction || rewrite.trim()) && (
             <div className="space-y-4">
+              {correction && <>
               <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 {[
                   ['O que funcionou', correction.acertos],
@@ -189,14 +226,17 @@ export default function Redacao() {
                 <AiText text={correction.respostaModelo} className="text-[var(--dim)] leading-relaxed" />
               </Panel>
 
+              </>}
               <Panel subject="Português" className="ni-panel p-5">
                 <div className="flex justify-between items-center text-xs mb-2">
-                  <span className="font-semibold text-[var(--text)]">Reescrita obrigatória</span>
-                  <span className="text-[var(--dim)]">Corrija primeiro o ponto de ruptura indicado</span>
+                  <span className="font-semibold text-[var(--text)]">Reescrita para comparação</span>
+                  <span className="text-[var(--dim)]">Confira o ponto de ruptura ou compare a versão salva com a proposta</span>
                 </div>
                 <textarea
                   value={rewrite}
-                  onChange={(e) => setRewrite(e.target.value)}
+                  aria-label="Reescrita da redação"
+                  maxLength={12000}
+                  onChange={(e) => { setAudit({}); correctionEpoch.current++; setRewriteCorrection(null); setPracticeError(null); setRewrite(e.target.value); }}
                   rows={14}
                   className="w-full bg-[var(--surface2)] border border-[var(--line)] rounded-xl p-4 text-xs text-[var(--text)] leading-relaxed outline-none focus:border-[var(--primary)]"
                 />
@@ -208,15 +248,21 @@ export default function Redacao() {
                   <Save className="w-3.5 h-3.5 mr-1.5" />
                   Salvar reescrita
                 </button>
+                <button className="ni-button mt-3 ml-2" disabled={correcting || !rewrite.trim() || rewrite.trim() === draft.trim()} onClick={() => void correctEssay('rewrite')}>Reavaliar reescrita</button>
+                {rewriteCorrection && <div className="space-y-3 mt-4 text-sm" role="status"><h3 className="font-semibold">Retorno da reescrita</h3><p><b>O que melhorou ou funcionou:</b> {rewriteCorrection.acertos}</p><p><b>Ponto que ainda exige trabalho:</b> {rewriteCorrection.rupturaPoint}</p><p>{rewriteCorrection.porque}</p><p><b>Próxima mudança:</b> {rewriteCorrection.correcaoMinima}</p></div>}
+                <p className="text-xs mt-3">Após revisar, reconstrua de memória o problema, a mudança feita e seu efeito. No próximo treino, aplique a mesma habilidade a outro tema.</p>
               </Panel>
             </div>
           )}
         </div>
       )}
 
+      {tab === 'pratica' && versions.length > 0 && <details className="ni-panel p-4 mt-4"><summary className="cursor-pointer font-semibold">Versões salvas neste navegador ({versions.length})</summary><p className="text-xs mt-2">Ao restaurar, substitua o texto aberto somente depois de salvar as mudanças que deseja manter.</p><ul className="space-y-2 mt-3">{versions.map(version => <li key={version.id} className="text-sm border-t border-[var(--line)] pt-2">{version.board} · {version.theme || 'Sem tema'} · {new Date(version.date).toLocaleString('pt-BR', { timeZone: 'America/Sao_Paulo' })}<button className="ni-button ml-2" disabled={correcting} onClick={() => { if (!saveDraft()) return; invalidate(); setBoard(version.board); setTheme(version.theme); setDraft(version.draft); setRewrite(version.rewrite); setPlan({ ...emptyEssayPlan, ...version.plan }); }}>Restaurar versão</button></li>)}</ul></details>}
+
       {/* Structure Guide Tab */}
       {tab === 'estrutura' && (
         <div className="space-y-6">
+          <p className="text-sm">Este guia organiza argumentação dissertativa. Para carta, nota, crônica ou outro gênero, planeje a situação comunicativa e siga a proposta, sem impor um esquema fixo de parágrafos.</p>
           {PART_ORDER.map((part) => (
             <section key={part} className="space-y-3">
               <h2 className="font-display font-medium text-sm text-[var(--text)]">{part}</h2>
@@ -236,7 +282,7 @@ export default function Redacao() {
           <section>
             <h2 className="font-display font-medium text-sm text-[var(--text)] mb-1">Fórmula da Proposta de Intervenção</h2>
             <p className="text-xs text-[var(--dim)] mb-3">
-              Obrigatória no ENEM e cobrada explicitamente pela Unifesp.
+              Exigida no ENEM. Nas demais provas, siga o comando e os critérios vigentes; não imponha esta fórmula a todo gênero.
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
               {interventionFormula.map((el) => (
@@ -391,7 +437,7 @@ export default function Redacao() {
       {tab === 'erros' && (
         <section className="space-y-3">
           <p className="text-xs text-[var(--dim)] mb-2">
-            Erros que aparecem de forma consistente em todas as bancas pesquisadas — proteger contra eles vale mais pontos do que qualquer truque isolado.
+            Identifique qual problema aparece no seu texto e corrija o mecanismo. Penalidades e descritores dependem da proposta e do documento vigente.
           </p>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
             {commonMistakes.map((m) => (
@@ -410,17 +456,7 @@ export default function Redacao() {
       {/* Checklist Tab */}
       {tab === 'checklist' && (
         <Panel subject="Português" className="ni-panel p-6">
-          <p className="text-xs text-[var(--dim)] mb-4">
-            Rode essa lista antes de considerar a redação pronta — no treino e, mentalmente, na prova.
-          </p>
-          <ul className="space-y-3">
-            {revisionChecklist.map((item, i) => (
-              <li key={i} className="flex items-start text-xs text-[var(--text)]">
-                <CheckCircle2 className="w-4 h-4 mr-2.5 mt-0.5 text-emerald-400 shrink-0" />
-                <span>{item}</span>
-              </li>
-            ))}
-          </ul>
+          <EssayReviewAudit board={board} audit={audit} onChange={setAudit} />
         </Panel>
       )}
     </div>
