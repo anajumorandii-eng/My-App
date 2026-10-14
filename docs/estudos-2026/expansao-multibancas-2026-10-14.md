@@ -1,6 +1,6 @@
 # Expansão de questões reais — seis bancas
 
-Entrega de 14/10/2026: **135 questões novas**, banco de **2.959 → 3.094**. Os 2.959 registros anteriores permanecem iguais, inclusive IDs, gabaritos e comentários; as chaves de progresso não mudam.
+Entrega de 14/10/2026: **135 questões novas**, banco de **2.959 → 3.094**. IDs, gabaritos e comentários dos 2.959 registros anteriores foram preservados. Os 72 enunciados da Unicamp 2026 foram transcritos nesta PR, com correção da referência às alternativas gráficas da questão 13; a migração também acrescenta recortes e o sinalizador `statementComplete`. As chaves de progresso não mudam.
 
 | Banca | Prova pareada | Novas | Cobertura desta entrega |
 |---|---|---:|---|
@@ -11,11 +11,11 @@ Entrega de 14/10/2026: **135 questões novas**, banco de **2.959 → 3.094**. Os
 | Unifesp | 2025, dia 1, Português e Inglês, V1 | 12 | Seleção das 25 objetivas; nenhuma redação/discursiva convertida |
 | Enem | 2022, dia 2, CD5 amarelo, aplicação regular | 12 | Seleção das 90 questões 91–180; Q175 anulada excluída |
 
-As seleções não equivalem a provas completas. O Enem deste lote é de 2022, não de 2025/2026. O caderno 2025 foi localizado, mas seu gabarito primário não ficou acessível; não usamos respostas de outra edição. A Unicamp 2026, já publicada com 72 questões, permanece intacta.
+As seleções não equivalem a provas completas. O Enem deste lote é de 2022, não de 2025/2026. O caderno 2025 foi localizado, mas seu gabarito primário não ficou acessível; não usamos respostas de outra edição. A Unicamp 2026 mantém suas 72 questões, IDs, classificação, respostas e comentários; seus enunciados passaram a ser texto.
 
 ## Como estudar
 
-Em **Questões**, escolha a banca e o ano. Cada item identifica fase/dia, versão e número original. As 70 páginas físicas preservadas contêm o enunciado, figuras, fórmulas, alternativas visuais e textos compartilhados; toque na página para ampliar. A posição na fila de treino é distinta do número impresso da questão.
+Em **Questões**, escolha a banca e o ano. Cada item identifica fase/dia, versão e número original. As 135 questões novas e as 72 da Unicamp 2026 têm enunciados transcritos. Figuras, gráficos, mapas, estruturas químicas e alternativas visuais aparecem como recortes, sem link na imagem. Tabelas e fórmulas foram preservadas no texto quando suficientes para responder. Textos e imagens compartilhados acompanham cada questão a que se aplicam. As 70 páginas físicas ficam preservadas como fontes. Questões antigas ainda não migradas mantêm a imagem necessária como apoio, em vez de perder os dados para a tentativa. A posição na fila de treino é distinta do número impresso da questão.
 
 Depois da tentativa, o comentário apresenta gabarito oficial, conceito, cinco etapas de resolução, pegadinha, duas perguntas de recuperação e exercício autoral de transferência com critérios de resposta. Há links separados para prova e gabarito. As quatro alternativas da Unicamp e as cinco das outras bancas foram mantidas.
 
@@ -45,15 +45,36 @@ npx tsx scripts/importar-expansao-oficial.ts \
   /caminho/prova-oficial.pdf /caminho/gabarito-oficial.pdf
 ```
 
-O padrão é conferência sem gravar; `--write` acrescenta apenas registros inéditos. O importador confere os bytes dos PDFs, texto e imagens antes de construir o lote; lê respostas pelo número explícito; rejeita versão trocada, faixa incompleta, anulada não registrada, currículo inválido, contexto sem mídia e conflito com ID existente. Repetir o mesmo lote é idempotente. Nenhuma rotina sobrescreve gabaritos antigos ou renumera o Enem como 1–90.
+O padrão é conferência sem gravar; `--write` acrescenta apenas registros inéditos. O importador confere os bytes dos PDFs, texto e imagens antes de construir o lote; lê respostas pelo número explícito; rejeita versão trocada, faixa incompleta, anulada não registrada, currículo inválido, contexto sem mídia e conflito com ID existente. Repetir o mesmo lote é idempotente inclusive no banco publicado com `figures`: a comparação ignora o campo derivado quando a ficha não o fornece, preserva o registro existente e continua recusando alterações de gabarito, enunciado ou comentário. A ordem das propriedades JSON não cria um falso conflito. Nenhuma rotina sobrescreve gabaritos antigos ou renumera o Enem como 1–90.
 
-O teste de preservação compara o hash dos primeiros 2.959 registros e reconstrói os seis lotes contra o banco publicado. Os testes também cobrem troca de cor/dia no Enem, separação V1–V4 da FUVEST, exclusões oficiais, alternativas e páginas incompletas. As 70 páginas passaram por `scripts/conferir-marca-dagua.py`: zero ocorrências.
+O teste de preservação compara o hash do conteúdo dos primeiros 2.959 registros, após a migração dos enunciados da Unicamp 2026 e sem os campos aditivos `figures`/`statementComplete`. O teste de idempotência usa também o banco publicado completo, sem retirar os recortes. Os seis lotes são reconstruídos contra o banco publicado. Os testes também cobrem troca de cor/dia no Enem, separação V1–V4 da FUVEST, exclusões oficiais, alternativas e páginas incompletas. As 70 páginas passaram por `scripts/conferir-marca-dagua.py`: zero ocorrências.
+
+## Continuidade da revisão — 14/10/2026
+
+Concluídos os 36 enunciados pendentes: 12 Famerp, 12 Unifesp e 12 Enem. Conferência manual contra as páginas preservadas, incluindo poemas, textos-base completos, termos sublinhados, índices químicos e tabelas. Exemplos de dados que o OCR havia truncado: Famerp Q72 usa (4, −1, 3,5) e (10, 8, 8); Enem Q99 usa correntes 4, 4, 3; Enem Q130 preserva sete linhas e o isótopo ¹³¹I. Nenhuma alternativa ou resposta oficial desses 36 itens foi trocada.
+
+Restaurados 15 recortes conferidos manualmente, com coordenadas e hashes de origem/saída em `scripts/data/recortes-oficiais-revisados.json`. Cinco questões também receberam o contexto visual compartilhado: Unicamp Q6/Q36/Q38 e Unifesp Q19/Q23. A Unicamp Q55 agora mostra os dois quadrados e os segmentos rotulados. As fórmulas estruturais da Famerp Q55, o robô da Unifesp Q16/Q19 e o infográfico da Q23/Q25 estão completos. Na questão Enem Q99, a continuação com alternativas deixou de ser tratada como figura; a tabela permanece.
+
+Em questões com dependência visual, o componente dispensa a página quando há `statementComplete`, ou quando os recortes já estão disponíveis. O acervo antigo ainda sem recortes preserva o apoio original quando o texto indica dependência visual. Isso é uma proteção contra regressão; não significa que todas as imagens do acervo antigo receberam recorte manual.
+
+No transcritor, a continuação de um texto-base compartilhado é acrescentada uma vez à lista comum, em vez de uma vez por referência. A palavra imediatamente anterior a `QUESTÃO` também é preservada; somente as chaves de numeração da Fuvest são excluídas. Falhas de `pdftotext`/Tesseract interrompem o comando. OCR continua sendo rascunho e requer conferência editorial.
+
+```bash
+python3 -m unittest discover -s scripts -p test_transcrever_enunciados.py
+python3 scripts/conferir-recortes-oficiais.py
+# Regenerar os mesmos pixels, conferindo todos os hashes antes de gravar:
+python3 scripts/conferir-recortes-oficiais.py --write
+```
 
 ## Validação final
 
-- Lint TypeScript e build de produção: aprovados.
-- Suíte completa: 1.095 testes de servidor/bibliotecas e 3.153 de interface aprovados.
-- Continuidade de Geografia: 160 testes aprovados; matriz visual: 13 testes aprovados e arquivos gerados sem alterações.
-- Navegador Chromium com build de produção, modo demonstração: 12 cenários, seis bancas em 390×844 e 834×1112. Conferidos filtros/contagens, números originais, quatro/cinco alternativas, carregamento das imagens, comentário após resposta errada e URLs de prova/gabarito. Zero erros de JavaScript e zero transbordamento horizontal.
-- Inspeção das capturas de Enem no celular e Unicamp no iPad: página original, indicação da questão e feedback visíveis; ampliação disponível pelo link da imagem.
-- `git diff --check`: limpo. Nenhuma dependência ou interface do aplicativo foi alterada nesta expansão.
+- Lint TypeScript e build de produção: aprovados após as correções.
+- `npm test`: 1.098 testes de servidor/bibliotecas e 3.158 de interface aprovados.
+- Python: dois testes de regressão (continuação compartilhada e falha do OCR) aprovados.
+- 15 fontes/recortes conferidos por SHA-256; regeneração dos mesmos pixels aprovada. OCR da faixa inferior dos 15 recortes novos: zero marcas d’água.
+- Chromium com build de produção: 106 cenários, 53 questões em 390×844 e 834×1112. Inclui todos os 36 novos enunciados, os recortes restaurados, contextos compartilhados e três questões antigas protegidas pelo apoio original. Texto integral, número de alternativas, URLs/decodificação das imagens e feedback após resposta errada conferidos; zero erros de JavaScript e zero transbordamento horizontal.
+- Inspeção das capturas Famerp Q55/celular e Unifesp Q25/iPad: estruturas químicas e infográfico completos, com alternativas e feedback.
+- Comparação com `a3f9149a`: 3.094 IDs, opções, respostas, comentários e classificações preservados; somente 36 campos `prompt` alterados. Zero instruções “Leia o enunciado original” restantes.
+- `git diff --check`: limpo.
+
+A auditoria do navegador seleciona uma questão real por cenário pela resposta de `/questions.json`; verifica a renderização e a tentativa, sem afirmar nova validação das contagens dos filtros ou persistência no Firestore. Reprodução: inicie `npm run preview -- --host 127.0.0.1 --port 4173` após o build e execute `node scripts/auditOfficialExpansion.mjs`. Relatório e capturas são gravados no diretório temporário `crivo-pr328-browser`.

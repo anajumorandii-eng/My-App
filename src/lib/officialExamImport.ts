@@ -1,4 +1,5 @@
 import type { Question } from '../types';
+import { isDeepStrictEqual } from 'node:util';
 
 const board = (q: Question) => q.examSource?.board.toUpperCase().replace('COMVEST', 'UNICAMP');
 
@@ -10,7 +11,11 @@ export function appendReviewedQuestions(bank: Question[], additions: Question[])
   for (const question of additions) {
     const existing = byId.get(question.id);
     if (existing) {
-      if (JSON.stringify(existing) !== JSON.stringify(question)) throw new Error(`Conflito com registro existente: ${question.id}.`);
+      // Os recortes são acrescentados após a importação. Reaplicar a ficha
+      // sem esse campo deve preservar as figuras já publicadas.
+      const { figures: _figures, ...withoutFigures } = existing;
+      const comparable = question.figures === undefined ? withoutFigures : existing;
+      if (!isDeepStrictEqual(comparable, question)) throw new Error(`Conflito com registro existente: ${question.id}.`);
       continue;
     }
     const conflict = [...bank, ...fresh].find(q => board(q) === board(question) &&

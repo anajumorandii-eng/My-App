@@ -19,6 +19,7 @@ export interface ReviewedExamItem {
    * questão só remetia à imagem da página, que saiu da tela a pedido da Ana
    * Júlia; figura que o texto não carrega vira descrição entre colchetes. */
   statement?: string;
+  statementComplete?: boolean;
 }
 
 export interface OfficialExamSource {
@@ -108,6 +109,7 @@ export function buildReviewedOfficialQuestions(
       [...selected].some(n => !inRange(n) || excluded.has(n) || answers.get(n) === '*') ||
       [...answers].some(([n,a]) => a === '*' && !excluded.has(n))) throw new Error('Seleção inválida: item anulado ou anulação não registrada.');
   return items.map(item => {
+    if (item.statementComplete && !item.statement?.trim()) throw new Error(`Enunciado completo ausente: questão ${item.number}.`);
     const topic = catalog.get(item.topicId);
     if (!inRange(item.number) || !selected.has(item.number) || numbers.has(item.number) || excluded.has(item.number)) {
       throw new Error(`Número inválido ou duplicado: ${item.number}.`);
@@ -143,6 +145,7 @@ export function buildReviewedOfficialQuestions(
       prompt: item.statement?.trim() ||
         `${['UNICAMP','COMVEST'].includes(source.board.toUpperCase()) ? 'UNICAMP' : source.board} ${source.year} · ${source.phase} · prova ${source.version} · questão ${item.number}.\nTema de estudo: ${item.title}.\nLeia o enunciado original, os textos e as figuras nas páginas abaixo. Responda apenas à questão ${item.number}.`,
       options: item.options, correctOptionId: answer, difficulty: item.difficulty, originalPages,
+      ...(item.statementComplete ? { statementComplete: true } : {}),
       sourceMaterial: { file: source.sourceFile, page: item.pages[0], questionNumber: item.number },
       examSource: {
         board: source.board, year: source.year, sourceUrl: source.examUrl,

@@ -37,7 +37,7 @@ AMBIENTE = {**os.environ, "OMP_THREAD_LIMIT": "1"}
 
 def palavras_pdf(pdf: str, pagina: int) -> tuple[list[dict], float]:
     html = subprocess.run(["pdftotext", "-bbox", "-f", str(pagina), "-l", str(pagina), pdf, "-"],
-                          capture_output=True, text=True).stdout
+                          capture_output=True, text=True, check=True).stdout
     largura = float(re.search(r'<page width="([\d.]+)"', html).group(1))
     ws = []
     for m in re.finditer(r'<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)">(.*?)</word>', html):
@@ -50,9 +50,11 @@ def palavras_ocr(imagem: str) -> tuple[list[dict], float]:
     im = Image.open(imagem).convert("L")
     with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
         im.save(tmp.name)
+    try:
         tsv = subprocess.run(["tesseract", tmp.name, "-", "-l", "por", "--psm", "3", "tsv"],
-                             capture_output=True, text=True, env=AMBIENTE).stdout
-    os.unlink(tmp.name)
+                             capture_output=True, text=True, env=AMBIENTE, check=True).stdout
+    finally:
+        os.unlink(tmp.name)
     ws = []
     for linha in tsv.splitlines()[1:]:
         c = linha.split("\t")
@@ -72,7 +74,7 @@ def palavras_ocr(imagem: str) -> tuple[list[dict], float]:
             with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
                 fundo.save(tmp.name)
                 t = subprocess.run(["tesseract", tmp.name, "-", "--psm", "7", "-c", "tessedit_char_whitelist=0123456789"],
-                                   capture_output=True, text=True, env=AMBIENTE).stdout.strip()
+                                   capture_output=True, text=True, env=AMBIENTE, check=True).stdout.strip()
             os.unlink(tmp.name)
             if t.isdigit():
                 ws[i + 1] = {**ws[i + 1], "t": t, "y": w["y"]}
@@ -140,7 +142,8 @@ def juntar_hifen(t: str) -> str:
 
 def main(argv: list[str]) -> int:
     lote, fonte, saida = argv
-    source = json.load(open(os.path.join(RAIZ, "scripts", "data", f"{lote}-source.json")))
+    with open(os.path.join(RAIZ, "scripts", "data", f"{lote}-source.json"), encoding="utf-8") as source_file:
+        source = json.load(source_file)
     paginas = sorted(m["page"] for m in source["media"])
     url = {m["page"]: m["url"] for m in source["media"]}
     fluxo: list[tuple[str, dict]] = []  # ("h", {n}) ou ("w", palavra)
@@ -150,7 +153,13 @@ def main(argv: list[str]) -> int:
         else:
             ws, largura = palavras_pdf(fonte, p)
         heads = cabecalhos(ws, largura)
-        pular = {j for *_, i in heads for j in (i - 1, i, i + 1)}
+        pular = set()
+        for *_, i in heads:
+            # Fuvest usa { número }; nas outras bancas o índice aponta para
+            # QUESTÃO. O token anterior pode ser a última palavra do texto-base.
+            pular.update((i, i + 1))
+            if i > 0 and ws[i - 1]["t"] == "{":
+                pular.add(i - 1)
         topo = min((w["y"] for w in ws), default=0) + 0.04 * largura
         for col in (0, 1):
             dentro = [(w["y"], i, w) for i, w in enumerate(ws) if int(w["x"] > largura / 2) == col
@@ -187,10 +196,9 @@ def main(argv: list[str]) -> int:
             if atual is not None:
                 blocos[atual] += ls
             elif ls and compartilhado:
-                ultimo = max(compartilhado)
-                for n, comum in compartilhado.items():
-                    if comum is compartilhado[ultimo]:
-                        comum += ls
+                # As questões do intervalo apontam para a mesma lista. Uma
+                # continuação pertence ao texto, não a cada referência a ele.
+                compartilhado[max(compartilhado)].extend(ls)
     prefixo = source.get("idPrefix") or "unicamp_2026"
     resultado = {}
     for n in sorted(blocos):
@@ -199,7 +207,8 @@ def main(argv: list[str]) -> int:
             partes.append(juntar_hifen("\n".join(compartilhado[n])))
         partes.append(juntar_hifen(separar(blocos[n])))
         resultado[f"{prefixo}_q{n:02d}"] = "\n\n".join(p for p in partes if p)
-    json.dump(resultado, open(saida, "w"), ensure_ascii=False, indent=1)
+    with open(saida, "w", encoding="utf-8") as output_file:
+        json.dump(resultado, output_file, ensure_ascii=False, indent=1)
     print(f"{lote}: {len(resultado)} enunciados")
     return 0
 

@@ -1,0 +1,39 @@
+{
+  "commitBase": "a3f9149a",
+  "questionCount": 3094,
+  "newStatements": 36,
+  "newCrops": 15,
+  "sharedVisualContexts": 5,
+  "preserved": [
+    "ids",
+    "options",
+    "correctOptionId",
+    "explanation",
+    "classification",
+    "sourceMaterial",
+    "originalPages"
+  ],
+  "validation": {
+    "lint": "passed",
+    "build": "passed",
+    "nodeTests": 1098,
+    "interfaceTests": 3158,
+    "pythonTests": 2,
+    "ocrMarkedImages": 0,
+    "browserScenarios": 106,
+    "browserQuestions": 53,
+    "viewports": [
+      {
+        "width": 390,
+        "height": 844
+      },
+      {
+        "width": 834,
+        "height": 1112
+      }
+    ],
+    "jsErrors": 0,
+    "horizontalOverflow": 0
+  },
+  "browserScope": "Uma questão real por cenário, selecionada pela resposta de /questions.json; sem gravação no Firestore."
+}

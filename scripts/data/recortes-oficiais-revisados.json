@@ -1,0 +1,197 @@
+[
+  {
+    "questionId": "unicamp_2025_q01",
+    "source": "/question-media/oficiais/unicamp-2025-qz/p03.webp",
+    "sourceSha256": "16d44f11f796b03611a14cabe08449ae7dd9d69d0457914140a7370e2d9e72c0",
+    "box": [
+      65,
+      342,
+      575,
+      600
+    ],
+    "url": "/question-media/figuras/unicamp_2025_q01-revisada-1.webp",
+    "sha256": "94887d79683a78ce1a00f701814694f4d2f016e851b38a3e2c508e340bacd6e4"
+  },
+  {
+    "questionId": "unicamp_2025_q08",
+    "source": "/question-media/oficiais/unicamp-2025-qz/p05.webp",
+    "sourceSha256": "95b881e5f58868b449032fa65fd54ae0d9fb704b039a6704cf618c0f0fcca4c6",
+    "box": [
+      608,
+      685,
+      1160,
+      890
+    ],
+    "url": "/question-media/figuras/unicamp_2025_q08-revisada-1.webp",
+    "sha256": "c4e8650913845e4f3335ca8c35ce435afcaaeec4a038b9ddf1efa7ee4857f939"
+  },
+  {
+    "questionId": "unicamp_2025_q12",
+    "source": "/question-media/oficiais/unicamp-2025-qz/p06.webp",
+    "sourceSha256": "bbb4307666ffb63c76feefb07620852f11133d5a0bf7e56639e9b001fb2fea57",
+    "box": [
+      625,
+      1030,
+      1090,
+      1350
+    ],
+    "url": "/question-media/figuras/unicamp_2025_q12-revisada-1.webp",
+    "sha256": "803318cd4881f3a1c5f9ca30a13d800bb1cb2b008d15de7d43b5ed3f9e3fbdd0"
+  },
+  {
+    "questionId": "unicamp_2025_q55",
+    "source": "/question-media/oficiais/unicamp-2025-qz/p19.webp",
+    "sourceSha256": "3cccc034a39cd538de4236debdbce038c5c3b89dc5fbf329bff0ea87fc20162c",
+    "box": [
+      80,
+      108,
+      530,
+      332
+    ],
+    "url": "/question-media/figuras/unicamp_2025_q55-revisada-1.webp",
+    "sha256": "432f034399ff3f23bd734ecfd73002846b5e9479fe8497501d8d92ceb0e60966"
+  },
+  {
+    "questionId": "fuvest_2026_q23",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p10.webp",
+    "sourceSha256": "628426d708e4df3643a59bf002764e48ae140ce3fc3c4a528fb503b26fcc3ede",
+    "box": [
+      625,
+      392,
+      1125,
+      593
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q23-revisada-1.webp",
+    "sha256": "fbfbab73793eb8571b47c3b26881b6e7db1ae3df7bc319a99eb3c06f4d5cb811"
+  },
+  {
+    "questionId": "fuvest_2026_q24",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p11.webp",
+    "sourceSha256": "c674149d1ddbd31bef3ab49a5536a0fc58d8359f3bcd822caf3f30b42cf7cf9a",
+    "box": [
+      65,
+      348,
+      582,
+      1058
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q24-revisada-1.webp",
+    "sha256": "9d5a360b91919f578bfbe009a9c8de7c9834d393b18c37e29744ae1705618800"
+  },
+  {
+    "questionId": "fuvest_2026_q34",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p15.webp",
+    "sourceSha256": "02196c36e401edc38321d2c5d163a1e28e65825af124d244e2fad580962a212a",
+    "box": [
+      62,
+      428,
+      570,
+      865
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q34-revisada-1.webp",
+    "sha256": "d8ac3aae92293103f45a76855670086e18d06d59da6bfc7f442e707ad547db58"
+  },
+  {
+    "questionId": "fuvest_2026_q67",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p29.webp",
+    "sourceSha256": "7f6c507ceea9dd5f28db440587d649769ca8a61462340d31645b2bdf290df8e3",
+    "box": [
+      117,
+      530,
+      514,
+      874
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q67-revisada-1.webp",
+    "sha256": "ac21c4e8839f4a7fa6ee51cf81fe526582dd599493be2a5f284a8d2deb31dffa"
+  },
+  {
+    "questionId": "fuvest_2026_q84",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p35.webp",
+    "sourceSha256": "aef44bc74b161d3d68bbb03f7243470363ff78dfee34ed430f7603e40e88776e",
+    "box": [
+      625,
+      665,
+      1115,
+      1010
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q84-revisada-1.webp",
+    "sha256": "acb8b22e623056786894b8059141b53e0f77ad6b1c704f59850ba1ae590a4749"
+  },
+  {
+    "questionId": "fuvest_2026_q85",
+    "source": "/question-media/oficiais/fuvest-2026-v1/p36.webp",
+    "sourceSha256": "7fb678e4f148d028058e20f4047940d3adeafebf609e0c9aac21e83bd0f11a61",
+    "box": [
+      105,
+      200,
+      565,
+      480
+    ],
+    "url": "/question-media/figuras/fuvest_2026_q85-revisada-1.webp",
+    "sha256": "e3265cac37baf9a7101bac6b52a35737dd0d61777a37b9e8ba1633a2404aa651"
+  },
+  {
+    "questionId": "unesp_2025_v1_q78",
+    "source": "/question-media/oficiais/unesp-2025-v1/p27.webp",
+    "sourceSha256": "86fc94ba288f3bd2668b1226e261d4a21c29f93a110577559ee48a43a7965d44",
+    "box": [
+      635,
+      1125,
+      1150,
+      1315
+    ],
+    "url": "/question-media/figuras/unesp_2025_v1_q78-revisada-1.webp",
+    "sha256": "2c95f7f0587b774288e9b8eb11f06452e33b54e556b0ae72b2529a01c69d1c2f"
+  },
+  {
+    "questionId": "famerp_2025_v1_q12",
+    "source": "/question-media/oficiais/famerp-2025-v1/p04.webp",
+    "sourceSha256": "830a9300b70e652c4821c9f1344b22f8c857c9e0267d44a815eefc772c80f5f8",
+    "box": [
+      684,
+      717,
+      1049,
+      1103
+    ],
+    "url": "/question-media/figuras/famerp_2025_v1_q12-revisada-1.webp",
+    "sha256": "d6ec5bf469f8886ddfc1d9202bd473aabc7f77a5c04db7a3887fdb4e9e640f4a"
+  },
+  {
+    "questionId": "famerp_2025_v1_q55",
+    "source": "/question-media/oficiais/famerp-2025-v1/p16.webp",
+    "sourceSha256": "86cc5789905299eda57a59d72fd53de5f8dd220f818ddec86e64776f3c2f7755",
+    "box": [
+      611,
+      245,
+      1125,
+      441
+    ],
+    "url": "/question-media/figuras/famerp_2025_v1_q55-revisada-1.webp",
+    "sha256": "f9ed154f615f6fee0895f8468b0943bb1dd985e881ca83fd11a1dd3855b0e291"
+  },
+  {
+    "questionId": "unifesp_2025_v1_q16",
+    "source": "/question-media/oficiais/unifesp-2025-v1/p07.webp",
+    "sourceSha256": "06dbed8d8280bbb66676222ce7dcf93aaa8d0c87de0f04f9a59ade05e9f3316d",
+    "box": [
+      683,
+      135,
+      1048,
+      392
+    ],
+    "url": "/question-media/figuras/unifesp_2025_v1_q16-revisada-1.webp",
+    "sha256": "182f165e5927355344c5d7ea7d392944122e54666bc826c9ac404fbee11370b7"
+  },
+  {
+    "questionId": "unifesp_2025_v1_q25",
+    "source": "/question-media/oficiais/unifesp-2025-v1/p09.webp",
+    "sourceSha256": "65125f417fb51b445a7c405c332c03f6cd7635f7987cdd6d46e8ea3867595cb6",
+    "box": [
+      62,
+      651,
+      588,
+      1348
+    ],
+    "url": "/question-media/figuras/unifesp_2025_v1_q25-revisada-1.webp",
+    "sha256": "7eeedcaf3071edc1895674dfd79393f9f3a9914840874cb1e2a394ab66a92a08"
+  }
+]

@@ -48,8 +48,9 @@ for (const [slug,count] of batches) {
 test('preserva os 2.959 registros anteriores, ids e comentários, sem reaplicar conteúdo', () => {
   // Hash refeito quando os 72 enunciados da Unicamp 2026 foram transcritos
   // (prompt dessas questões, e o texto das alternativas gráficas da 13, que
-  // apontava para a página; o resto foi conferido igual).
-  assert.equal(hash(JSON.stringify(bank.slice(0,2959))),'485cfbc0f5ceb50c90bc2bdeb78382c1d5ff8a73daafce76bd526520ae0607f1');
+  // apontava para a página; o resto foi conferido igual). O sinalizador de
+  // migração statementComplete é aditivo e não integra esse hash de conteúdo.
+  assert.equal(hash(JSON.stringify(bank.slice(0,2959).map(({ statementComplete: _complete, ...q }) => q))),'485cfbc0f5ceb50c90bc2bdeb78382c1d5ff8a73daafce76bd526520ae0607f1');
   assert.equal(bank.length,3094);
   const additions = batches.flatMap(([slug])=>{
     const {source,items,answers}=load(slug);
@@ -85,4 +86,44 @@ test('Fuvest não mistura V1–V4 e importação recusa alternativas ou contexto
   assert.throws(()=>buildReviewedOfficialQuestions([{...first,options:first.options.slice(1)},...items.slice(1)],answers,source,mockTopics),/Alternativas/);
   assert.throws(()=>buildReviewedOfficialQuestions(items,answers,{...source,media:[]},mockTopics),/preservada/);
   assert.throws(()=>readOfficialAnswerKey(text + '\n' + text.split('\n').find(line=>/^\s*18\s/.test(line)),source),/repetido/);
+});
+
+
+test('reaplicar lote no banco publicado preserva as figuras derivadas', () => {
+  const published = JSON.parse(readFileSync('public/questions.json', 'utf8')) as Question[];
+  const { source, items, answers } = load('unicamp-2025-qz');
+  const additions = buildReviewedOfficialQuestions(items, answers, source, mockTopics);
+  assert.ok(published.some(q => q.id.startsWith('unicamp_2025_') && q.figures?.length));
+  assert.deepEqual(appendReviewedQuestions(published, additions), published);
+  assert.throws(() => appendReviewedQuestions(published, [{ ...additions[0], correctOptionId: 'z' }]), /Conflito/);
+});
+
+test('todas as novas questões possuem enunciado e contexto em texto antes da tentativa', () => {
+  for (const [slug] of batches) {
+    const { source, items } = load(slug);
+    for (const item of items) {
+      const id = `${source.idPrefix}_q${String(item.number).padStart(2, '0')}`;
+      const published = bank.find(q => q.id === id)!;
+      assert.ok(item.statement && item.statement.trim().length > 60, id);
+      assert.doesNotMatch(published.prompt, /Leia o enunciado original|nas páginas abaixo/, id);
+    }
+  }
+  const topic = (id: string) => bank.find(q => q.id === id)!.prompt;
+  assert.match(topic('unifesp_2025_v1_q03'), /escrever-lhe-ia/);
+  assert.match(topic('unifesp_2025_v1_q07'), /Da sopa primordial/);
+  assert.match(topic('famerp_2025_v1_q72'), /4 \| −1 \| 3,5/);
+  assert.match(topic('enem_2022_d2_cd5_q99'), /2 \| 608 \| 4/);
+  assert.match(topic('enem_2022_d2_cd5_q130'), /8 \| 6,0/);
+});
+
+test('gráficos, estruturas e contextos visuais decisivos permanecem disponíveis sem a página inteira', () => {
+  const published: Question[] = JSON.parse(readFileSync('public/questions.json', 'utf8'));
+  for (const id of ['unicamp_2025_q01', 'unicamp_2025_q08', 'unicamp_2025_q12',
+    'fuvest_2026_q23', 'fuvest_2026_q24', 'fuvest_2026_q34', 'fuvest_2026_q67', 'fuvest_2026_q84', 'fuvest_2026_q85',
+    'unesp_2025_v1_q78', 'famerp_2025_v1_q55', 'unifesp_2025_v1_q10',
+    'unifesp_2025_v1_q16', 'unifesp_2025_v1_q19', 'unifesp_2025_v1_q23', 'unifesp_2025_v1_q25']) {
+    const question = published.find(q => q.id === id)!;
+    assert.ok(question.figures?.length, `Figura ausente: ${id}`);
+    for (const figure of question.figures!) assert.ok(readFileSync(`public${figure.url}`).length > 1000, id);
+  }
 });
