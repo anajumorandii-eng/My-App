@@ -38,12 +38,12 @@ AMBIENTE = {**os.environ, "OMP_THREAD_LIMIT": "1"}
 PAGINA_INTEIRA = ("/question-media/fuvest-2025/", "/question-media/oficiais/", "/question-media/anglo-geo-v1/")
 
 
-def ocr(im: Image.Image) -> list[dict]:
+def ocr(im: Image.Image, psm: str = "3") -> list[dict]:
     with tempfile.NamedTemporaryFile(suffix=".png", delete=False) as tmp:
         im.save(tmp.name)
         nome = tmp.name
     try:
-        tsv = subprocess.run(["tesseract", nome, "-", "-l", "por", "--psm", "3", "tsv"],
+        tsv = subprocess.run(["tesseract", nome, "-", "-l", "por", "--psm", psm, "tsv"],
                              capture_output=True, text=True, env=AMBIENTE).stdout
     finally:
         os.unlink(nome)
@@ -69,7 +69,7 @@ def cabecalhos_anglo(im: Image.Image) -> list[tuple[int, int]]:
         h, w = s[0].stop - s[0].start, s[1].stop - s[1].start
         col = int(s[1].start > meio)
         esquerda = s[1].start - (0 if col == 0 else meio)
-        if 18 <= h <= 32 and 26 <= w <= 45 and escuro[s].mean() > 0.6 and esquerda < W * 0.15:
+        if 18 <= h <= 32 and 20 <= w <= 62 and escuro[s].mean() > 0.5 and esquerda < W * 0.25:
             caixas.append((col, s[0].start))
     return sorted(caixas)
 
@@ -99,12 +99,23 @@ def cabecalhos(im: Image.Image, palavras: list[dict], url: str) -> list[tuple[in
                 esquerda = 60 if col == 0 else meio + 20
                 if p["x"] < esquerda + 40:
                     achados.append((int(p["t"]), col, p["y"]))
+        # Número ao lado de imagem some na segmentação da página inteira (o
+        # "33" da página 14); uma faixa estreita da margem lida em modo
+        # esparso o recupera.
+        vistos = {a[0] for a in achados}
+        for col, x in ((0, 50), (1, int(meio) + 10)):
+            faixa = im.crop((x, 0, x + 90, im.height))
+            for p in ocr(faixa, "11"):
+                if re.fullmatch(r"\d{1,2}", p["t"]) and p["h"] >= 18 and int(p["t"]) not in vistos:
+                    achados.append((int(p["t"]), col, p["y"]))
+                    vistos.add(int(p["t"]))
     elif "/apostilas/" in url:
         primeiras: dict = {}
         for p in palavras:
             primeiras.setdefault(p["linha"], p)
         for p in primeiras.values():
-            m = re.fullmatch(r"(\d{1,3})\.", p["t"])
+            # O ponto às vezes sai vírgula ("44,") e o "11." sai "1.".
+            m = re.fullmatch(r"(\d{1,3})[.,]", p["t"])
             if m and p["x"] < W * 0.2:
                 achados.append((int(m.group(1)), 0, p["y"]))
     else:  # anglo: número branco num quadrado escuro, em sequência na página
@@ -121,6 +132,64 @@ def cabecalhos(im: Image.Image, palavras: list[dict], url: str) -> list[tuple[in
     return achados
 
 
+def aparar_texto_lateral(c, tinta, origem, palavras):
+    """Corta a coluna de texto que o OCR leu como linhas curtas ao lado da
+    imagem (enunciado à direita da pintura nas apostilas de História)."""
+    x0, y0 = origem
+    for _ in range(2):
+        sub = tinta[c[1] - y0:c[3] - y0, c[0] - x0:c[2] - x0]
+        if sub.size == 0:
+            return c
+        # Só cortes verticais: corte horizontal levava legenda e rótulo de eixo,
+        # que também são só texto, mas pertencem ao desenho.
+        for eixo in (0,):
+            # Coluna "vazia" admite resto de letra que o OCR não mascarou.
+            perfil = sub.mean(axis=eixo) > 0.03
+            n = len(perfil)
+            # procura um vão sem desenho de pelo menos 20 px
+            vazio = ~perfil
+            corte = None
+            i = 0
+            while i < n:
+                if vazio[i]:
+                    j = i
+                    while j < n and vazio[j]:
+                        j += 1
+                    if j - i >= 12 and (0 < i or j < n):
+                        corte = (i, j)
+                    i = j
+                else:
+                    i += 1
+            if not corte:
+                continue
+            i, j = corte
+            # Vão que encosta na borda: a coluna de texto é o próprio vão.
+            if j == n:
+                j = i
+            elif i == 0:
+                i = j
+            if eixo == 0:  # vão vertical: lados esquerdo/direito
+                partes = [(c[0], c[1], c[0] + i, c[3]), (c[0] + j, c[1], c[2], c[3])]
+            else:
+                partes = [(c[0], c[1], c[2], c[1] + i), (c[0], c[1] + j, c[2], c[3])]
+            def so_texto(b):
+                area = max(1, (b[2] - b[0]) * (b[3] - b[1]))
+                d = tinta[b[1] - y0:b[3] - y0, b[0] - x0:b[2] - x0].sum()
+                txt = sum(1 for p in palavras if p["x"] >= b[0] - 2 and p["x"] + p["w"] <= b[2] + 2
+                          and p["y"] >= b[1] - 2 and p["y"] + p["h"] <= b[3] + 2)
+                letras = sum(p["w"] * p["h"] for p in palavras if p["x"] >= b[0] - 2 and p["x"] + p["w"] <= b[2] + 2
+                             and p["y"] >= b[1] - 2 and p["y"] + p["h"] <= b[3] + 2)
+                # Coluna de enunciado é densa de palavras; o lado de um gráfico
+                # com rótulos de eixo também tem pouca tinta, mas pouca letra.
+                return txt >= 10 and d < 0.04 * area and letras > 0.2 * area
+            a, b = partes
+            if so_texto(b) and not so_texto(a):
+                c = [a[0], a[1], a[2], a[3]]
+            elif so_texto(a) and not so_texto(b):
+                c = [b[0], b[1], b[2], b[3]]
+    return c
+
+
 def figuras_na_regiao(im: Image.Image, palavras: list[dict], caixa: tuple[int, int, int, int]) -> list[tuple[int, int, int, int]]:
     x0, y0, x1, y1 = caixa
     rgb = np.asarray(im.convert("RGB")).astype(int)[y0:y1, x0:x1]
@@ -129,14 +198,17 @@ def figuras_na_regiao(im: Image.Image, palavras: list[dict], caixa: tuple[int, i
     cinza = rgb.mean(axis=2)
     satur = rgb.max(axis=2) - rgb.min(axis=2)
     tinta = (cinza < 225) | (satur > 35)
-    # Número de questão e "QUESTÃO" não são rótulo do desenho logo abaixo.
+    # Número de questão e "QUESTÃO" não são rótulo do desenho logo abaixo,
+    # e também não são desenho: saem da tinta antes de juntar as manchas.
+    cabecas = [p for p in palavras if (re.fullmatch(r"\d{1,3}\.?", p["t"]) and p["h"] >= 20)
+               or p["t"].upper().startswith("QUESTÃO")]
     palavras = [p for p in palavras if not (re.fullmatch(r"\d{1,3}\.?", p["t"]) and p["h"] >= 20)
                 and not p["t"].upper().startswith("QUESTÃO")]
     dentro = [p for p in palavras if p["conf"] > 30 and x0 <= p["x"] and p["x"] + p["w"] <= x1
               and y0 <= p["y"] and p["y"] + p["h"] <= y1]
     tocam = [p for p in palavras if p["conf"] > 30 and p["x"] < x1 and p["x"] + p["w"] > x0
              and p["y"] < y1 and p["y"] + p["h"] > y0]
-    for p in tocam:
+    for p in tocam + cabecas:
         if p["h"] > 60:  # "palavra" gigante é desenho lido como texto
             continue
         # Folga de 6 px: na página escaneada (Anglo) o halo borrado da letra
@@ -248,6 +320,7 @@ def figuras_na_regiao(im: Image.Image, palavras: list[dict], caixa: tuple[int, i
                 c[1] = py1 + 1
             if py0 < c[3] < py1:
                 c[3] = py0 - 1
+        c = aparar_texto_lateral(c, tinta, (x0, y0), tocam)
         finais.append(tuple(c))
     finais = sorted(set(finais), key=lambda c: (c[1], c[0]))
     # Junta caixas sobrepostas.
@@ -261,7 +334,23 @@ def figuras_na_regiao(im: Image.Image, palavras: list[dict], caixa: tuple[int, i
                 break
         else:
             juntas.append(list(c))
-    return [tuple(j) for j in juntas if j[2] - j[0] > 60 and j[3] - j[1] > 60]
+    return [tirar_numero_no_topo(im, tuple(j)) for j in juntas if j[2] - j[0] > 60 and j[3] - j[1] > 60]
+
+
+def tirar_numero_no_topo(im: Image.Image, c):
+    """O número da questão ("33", "07") fica colado acima da figura e o OCR da
+    página inteira não o lê. Tinta só no canto esquerdo do topo, separada do
+    resto por uma faixa branca, é esse número e sai do recorte."""
+    a = np.asarray(im.crop(c).convert("L")) < 160
+    h, w = a.shape
+    linhas = a.any(axis=1)
+    for y in range(4, min(70, h - 10)):
+        if not linhas[y:y + 5].any() and linhas[:y].any():
+            colunas = np.where(a[:y].any(axis=0))[0]
+            if colunas.max() < w * 0.2:
+                return (c[0], c[1] + y + 5, c[2], c[3])
+            break
+    return c
 
 
 def numero_da_questao(q: dict) -> int | None:
@@ -272,7 +361,7 @@ def numero_da_questao(q: dict) -> int | None:
     return int(m.group(1)) if m else None
 
 
-def regioes(q: dict, im: Image.Image, palavras: list[dict], url: str, comecou: bool):
+def regioes(q: dict, im: Image.Image, palavras: list[dict], url: str, comecou: bool, forcar: bool = False):
     """Retângulos da página que pertencem à questão, e se ela já começou."""
     W, H = im.size
     if "/apostilas/" in url:
@@ -282,12 +371,19 @@ def regioes(q: dict, im: Image.Image, palavras: list[dict], url: str, comecou: b
         topo, base = int(H * (0.13 if "anglo" in url else 0.055)), int(H * 0.955)
         direita = int(W * 0.93) if "anglo" in url else int(W * 0.985)
         cols = [(int(W * 0.02), W // 2), (W // 2, direita)]
+        # A página 44 da Anglo é de coluna única (quadro largo de fusos).
+        if "anglo" in url and not any(c == 1 for c, _ in cabecalhos_anglo(im)):
+            cols = [(int(W * 0.02), direita)]
     heads = sorted(((num, min(c, len(cols) - 1), y) for num, c, y in cabecalhos(im, palavras, url)),
                    key=lambda h: (h[1], h[2]))
     n = numero_da_questao(q)
     inicio = next(((c, y) for num, c, y in heads if num == n), None)
+    if inicio is None and n is not None and re.fullmatch(r"(\d)\1", str(n)):
+        inicio = next(((c, y) for num, c, y in heads if num == n % 10), None)
     if inicio is None:
-        if not comecou:
+        # Página que começa já na questão seguinte, sem o cabeçalho desta: a
+        # questão veio da página anterior, que não está em originalPages.
+        if not comecou and not forcar and not any(num == n + 1 for num, _, _ in heads):
             return [], False
         inicio = (0, topo)
     fim = (len(cols) - 1, base)
@@ -321,6 +417,16 @@ def processar(q: dict) -> tuple[str, list[dict], list[str]]:
         for r in rs:
             for c in figuras_na_regiao(im, palavras, r):
                 recortes.append((im, c))
+    if not comecou and paginas and "/apostilas/" in paginas[0]["url"]:
+        # O OCR leu mal o número ("110." como "1O."). O recorte da apostila
+        # começa na própria questão, então a primeira página vale do topo.
+        pg = paginas[0]
+        im = Image.open(os.path.join(PUBLIC, pg["url"].lstrip("/"))).convert("RGB")
+        palavras = ocr(im)
+        rs, comecou = regioes(q, im, palavras, pg["url"], False, forcar=True)
+        for r in rs:
+            for c in figuras_na_regiao(im, palavras, r):
+                recortes.append((im, c))
     if not comecou:
         avisos.append(f"{q['id']}: cabeçalho da questão não achado")
     figs = []
@@ -346,17 +452,18 @@ def main(argv: list[str]) -> int:
     # de questões; figura de verdade é de uma questão só.
     def assinatura(url):
         with Image.open(os.path.join(PUBLIC, url.lstrip("/"))) as im:
-            g = np.asarray(im.convert("L").resize((24, 24))).astype(int)
-            return (im.width // 12, im.height // 12, (g < g.mean() - 10).tobytes())
-    vistos: dict = {}
-    for qid, (figs, _) in res.items():
-        for f in figs:
-            vistos.setdefault(assinatura(f["url"]), set()).add(qid)
-    repetidas = {k for k, v in vistos.items() if len(v) >= 3}
+            g = np.asarray(im.convert("L").resize((16, 16))).astype(int)
+            return g < g.mean() - 10
+    todas = [(qid, f["url"], assinatura(f["url"])) for qid, (figs, _) in res.items() for f in figs]
+    repetidas = set()
+    for qid, url, a in todas:
+        outras = {q for q, u, b in todas if q != qid and (a != b).sum() <= 12}
+        if outras:
+            repetidas.add(url)
     for qid, (figs, av) in res.items():
         manter = []
         for f in figs:
-            if assinatura(f["url"]) in repetidas:
+            if f["url"] in repetidas:
                 os.unlink(os.path.join(PUBLIC, f["url"].lstrip("/")))
             else:
                 manter.append(f)

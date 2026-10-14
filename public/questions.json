@@ -48802,6 +48802,11 @@
         "url": "/question-media/fuvest-2025/page-14.jpg",
         "page": 14
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q32-1.webp"
+      }
     ]
   },
   {
@@ -48897,6 +48902,11 @@
       {
         "url": "/question-media/fuvest-2025/page-17.jpg",
         "page": 17
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q40-1.webp"
       }
     ]
   },
@@ -49285,6 +49295,11 @@
       {
         "url": "/question-media/fuvest-2025/page-24.jpg",
         "page": 24
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q62-1.webp"
       }
     ]
   },
@@ -49676,6 +49691,11 @@
         "url": "/question-media/fuvest-2025/page-2.jpg",
         "page": 2
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q1-1.webp"
+      }
     ]
   },
   {
@@ -49723,6 +49743,11 @@
         "url": "/question-media/fuvest-2025/page-3.jpg",
         "page": 3
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q2-1.webp"
+      }
     ]
   },
   {
@@ -49769,6 +49794,11 @@
       {
         "url": "/question-media/fuvest-2025/page-3.jpg",
         "page": 3
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q3-1.webp"
       }
     ]
   },
@@ -49865,6 +49895,11 @@
         "url": "/question-media/fuvest-2025/page-4.jpg",
         "page": 4
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q5-1.webp"
+      }
     ]
   },
   {
@@ -49912,6 +49947,11 @@
         "url": "/question-media/fuvest-2025/page-4.jpg",
         "page": 4
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q6-1.webp"
+      }
     ]
   },
   {
@@ -49958,6 +49998,11 @@
       {
         "url": "/question-media/fuvest-2025/page-5.jpg",
         "page": 5
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q7-1.webp"
       }
     ]
   },
@@ -50153,6 +50198,11 @@
         "url": "/question-media/fuvest-2025/page-8.jpg",
         "page": 8
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q16-1.webp"
+      }
     ]
   },
   {
@@ -50199,6 +50249,11 @@
       {
         "url": "/question-media/fuvest-2025/page-8.jpg",
         "page": 8
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q17-1.webp"
       }
     ]
   },
@@ -50247,6 +50302,11 @@
         "url": "/question-media/fuvest-2025/page-9.jpg",
         "page": 9
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q18-1.webp"
+      }
     ]
   },
   {
@@ -50293,6 +50353,11 @@
       {
         "url": "/question-media/fuvest-2025/page-9.jpg",
         "page": 9
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q19-1.webp"
       }
     ]
   },
@@ -50341,6 +50406,11 @@
         "url": "/question-media/fuvest-2025/page-9.jpg",
         "page": 9
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q20-1.webp"
+      }
     ]
   },
   {
@@ -50388,6 +50458,11 @@
         "url": "/question-media/fuvest-2025/page-10.jpg",
         "page": 10
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q22-1.webp"
+      }
     ]
   },
   {
@@ -50434,6 +50509,11 @@
       {
         "url": "/question-media/fuvest-2025/page-11.jpg",
         "page": 11
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q23-1.webp"
       }
     ]
   },
@@ -50483,7 +50563,12 @@
         "page": 11
       }
     ],
-    "chapter": "Química Inorgânica"
+    "chapter": "Química Inorgânica",
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q24-1.webp"
+      }
+    ]
   },
   {
     "id": "fuvest_2025_q25",
@@ -50577,6 +50662,14 @@
         "url": "/question-media/fuvest-2025/page-12.jpg",
         "page": 12
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q26-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/fuvest_2025_q26-2.webp"
+      }
     ]
   },
   {
@@ -50624,6 +50717,11 @@
         "url": "/question-media/fuvest-2025/page-13.jpg",
         "page": 13
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q30-1.webp"
+      }
     ]
   },
   {
@@ -50670,6 +50768,14 @@
       {
         "url": "/question-media/fuvest-2025/page-14.jpg",
         "page": 14
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q33-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/fuvest_2025_q33-2.webp"
       }
     ]
   },
@@ -50918,6 +51024,11 @@
         "url": "/question-media/fuvest-2025/page-17.jpg",
         "page": 17
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q39-1.webp"
+      }
     ]
   },
   {
@@ -51016,6 +51127,11 @@
         "url": "/question-media/fuvest-2025/page-19.jpg",
         "page": 19
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q44-1.webp"
+      }
     ]
   },
   {
@@ -51062,6 +51178,11 @@
       {
         "url": "/question-media/fuvest-2025/page-19.jpg",
         "page": 19
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q47-1.webp"
       }
     ]
   },
@@ -51110,6 +51231,14 @@
         "url": "/question-media/fuvest-2025/page-20.jpg",
         "page": 20
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q48-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/fuvest_2025_q48-2.webp"
+      }
     ]
   },
   {
@@ -51157,6 +51286,11 @@
         "url": "/question-media/fuvest-2025/page-20.jpg",
         "page": 20
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q49-1.webp"
+      }
     ]
   },
   {
@@ -51203,6 +51337,11 @@
       {
         "url": "/question-media/fuvest-2025/page-21.jpg",
         "page": 21
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q51-1.webp"
       }
     ]
   },
@@ -51297,6 +51436,11 @@
       {
         "url": "/question-media/fuvest-2025/page-21.jpg",
         "page": 21
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q53-1.webp"
       }
     ]
   },
@@ -51393,6 +51537,11 @@
         "url": "/question-media/fuvest-2025/page-22.jpg",
         "page": 22
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q57-1.webp"
+      }
     ]
   },
   {
@@ -51487,6 +51636,11 @@
         "url": "/question-media/fuvest-2025/page-23.jpg",
         "page": 23
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q59-1.webp"
+      }
     ]
   },
   {
@@ -51533,6 +51687,11 @@
       {
         "url": "/question-media/fuvest-2025/page-23.jpg",
         "page": 23
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q60-1.webp"
       }
     ]
   },
@@ -51627,6 +51786,11 @@
       {
         "url": "/question-media/fuvest-2025/page-24.jpg",
         "page": 24
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q63-1.webp"
       }
     ]
   },
@@ -51775,6 +51939,11 @@
         "url": "/question-media/fuvest-2025/page-25.jpg",
         "page": 25
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q67-1.webp"
+      }
     ]
   },
   {
@@ -51822,6 +51991,11 @@
         "url": "/question-media/fuvest-2025/page-26.jpg",
         "page": 26
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q68-1.webp"
+      }
     ]
   },
   {
@@ -51868,6 +52042,11 @@
       {
         "url": "/question-media/fuvest-2025/page-26.jpg",
         "page": 26
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q69-1.webp"
       }
     ]
   },
@@ -52108,6 +52287,11 @@
         "url": "/question-media/fuvest-2025/page-28.jpg",
         "page": 28
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q75-1.webp"
+      }
     ]
   },
   {
@@ -52249,6 +52433,11 @@
         "url": "/question-media/fuvest-2025/page-29.jpg",
         "page": 29
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q78-1.webp"
+      }
     ]
   },
   {
@@ -52295,6 +52484,11 @@
       {
         "url": "/question-media/fuvest-2025/page-29.jpg",
         "page": 29
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q79-1.webp"
       }
     ]
   },
@@ -52436,6 +52630,11 @@
       {
         "url": "/question-media/fuvest-2025/page-32.jpg",
         "page": 32
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/fuvest_2025_q86-1.webp"
       }
     ]
   },
@@ -52820,6 +53019,14 @@
         "url": "/question-media/anglo-geo-v1/page-44.jpg",
         "page": 44
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/anglo_geo_v1_c3_q6-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/anglo_geo_v1_c3_q6-2.webp"
+      }
     ]
   },
   {
@@ -52915,6 +53122,11 @@
       {
         "url": "/question-media/anglo-geo-v1/page-45.jpg",
         "page": 45
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/anglo_geo_v1_c3_q9-1.webp"
       }
     ]
   },
@@ -67458,6 +67670,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_003-p7.webp",
         "page": 7
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_003-1.webp"
+      }
     ]
   },
   {
@@ -67497,6 +67714,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_004-p8.webp",
         "page": 8
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_004-1.webp"
       }
     ]
   },
@@ -67577,6 +67799,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_006-p9.webp",
         "page": 9
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_006-1.webp"
       }
     ]
   },
@@ -67778,6 +68005,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_012-p13.webp",
         "page": 13
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_012-1.webp"
+      }
     ]
   },
   {
@@ -67902,6 +68134,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_015-p14.webp",
         "page": 14
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_015-1.webp"
+      }
     ]
   },
   {
@@ -67941,6 +68178,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_017-p16.webp",
         "page": 16
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_017-1.webp"
       }
     ]
   },
@@ -67982,6 +68224,14 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_018-p17.webp",
         "page": 17
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_018-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_018-2.webp"
+      }
     ]
   },
   {
@@ -68022,6 +68272,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_019-p18.webp",
         "page": 18
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_019-1.webp"
+      }
     ]
   },
   {
@@ -68061,6 +68316,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_022-p20.webp",
         "page": 20
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_022-1.webp"
       }
     ]
   },
@@ -68106,6 +68366,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_023-p22.webp",
         "page": 22
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_023-1.webp"
+      }
     ]
   },
   {
@@ -68146,6 +68411,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_024-p22.webp",
         "page": 22
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_024-1.webp"
+      }
     ]
   },
   {
@@ -68185,6 +68455,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_025-p23.webp",
         "page": 23
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_025-1.webp"
       }
     ]
   },
@@ -68306,6 +68581,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_038-p33.webp",
         "page": 33
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_038-1.webp"
+      }
     ]
   },
   {
@@ -68385,6 +68665,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_045-p37.webp",
         "page": 37
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_045-1.webp"
       }
     ]
   },
@@ -68470,6 +68755,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_049-p42.webp",
         "page": 42
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_049-1.webp"
+      }
     ]
   },
   {
@@ -68513,6 +68803,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_051-p44.webp",
         "page": 44
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_051-1.webp"
       }
     ]
   },
@@ -68806,6 +69101,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_060-p50.webp",
         "page": 50
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_060-1.webp"
+      }
     ]
   },
   {
@@ -69058,6 +69358,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_074-p60.webp",
         "page": 60
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_074-1.webp"
+      }
     ]
   },
   {
@@ -69098,6 +69403,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_075-p60.webp",
         "page": 60
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_075-1.webp"
+      }
     ]
   },
   {
@@ -69137,6 +69447,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_076-p61.webp",
         "page": 61
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_076-1.webp"
       }
     ]
   },
@@ -69222,6 +69537,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_078-p63.webp",
         "page": 63
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_078-1.webp"
+      }
     ]
   },
   {
@@ -69302,6 +69622,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_082-p66.webp",
         "page": 66
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_082-1.webp"
+      }
     ]
   },
   {
@@ -69342,6 +69667,17 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_083-p67.webp",
         "page": 67
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_083-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_083-2.webp"
+      },
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_083-3.webp"
+      }
     ]
   },
   {
@@ -69381,6 +69717,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_087-p69.webp",
         "page": 69
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_087-1.webp"
       }
     ]
   },
@@ -69461,6 +69802,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_090-p71.webp",
         "page": 71
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_090-1.webp"
       }
     ]
   },
@@ -69638,6 +69984,11 @@
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_096-p76.webp",
         "page": 76
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_096-1.webp"
+      }
     ]
   },
   {
@@ -69677,6 +70028,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_fuvest/ap_bio_fuvest_099-p78.webp",
         "page": 78
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_fuvest_099-1.webp"
       }
     ]
   },
@@ -69754,6 +70110,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_003-p7.webp",
         "page": 7
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_003-1.webp"
+      }
     ]
   },
   {
@@ -69790,6 +70151,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_006-p9.webp",
         "page": 9
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_006-1.webp"
+      }
     ]
   },
   {
@@ -69825,6 +70191,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_008-p10.webp",
         "page": 10
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_008-1.webp"
       }
     ]
   },
@@ -69898,6 +70269,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_012-p12.webp",
         "page": 12
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_012-1.webp"
+      }
     ]
   },
   {
@@ -69933,6 +70309,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_015-p15.webp",
         "page": 15
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_015-1.webp"
       }
     ]
   },
@@ -70010,6 +70391,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_018-p18.webp",
         "page": 18
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_018-1.webp"
+      }
     ]
   },
   {
@@ -70082,6 +70468,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_024-p23.webp",
         "page": 23
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_024-1.webp"
+      }
     ]
   },
   {
@@ -70117,6 +70508,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_027-p25.webp",
         "page": 25
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_027-1.webp"
       }
     ]
   },
@@ -70157,6 +70553,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_030-p28.webp",
         "page": 28
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_030-1.webp"
       }
     ]
   },
@@ -70234,6 +70635,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_035-p32.webp",
         "page": 32
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_035-1.webp"
+      }
     ]
   },
   {
@@ -70306,6 +70712,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_037-p33.webp",
         "page": 33
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_037-1.webp"
+      }
     ]
   },
   {
@@ -70345,6 +70756,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_038-p35.webp",
         "page": 35
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_038-1.webp"
       }
     ]
   },
@@ -70422,6 +70838,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_044-p38.webp",
         "page": 38
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_044-1.webp"
+      }
     ]
   },
   {
@@ -70462,6 +70883,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_045-p40.webp",
         "page": 40
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_045-1.webp"
+      }
     ]
   },
   {
@@ -70497,6 +70923,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_047-p41.webp",
         "page": 41
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_047-1.webp"
       }
     ]
   },
@@ -70534,6 +70965,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_048-p42.webp",
         "page": 42
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_048-1.webp"
+      }
     ]
   },
   {
@@ -70569,6 +71005,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_049-p43.webp",
         "page": 43
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_049-1.webp"
       }
     ]
   },
@@ -70682,6 +71123,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_053-p46.webp",
         "page": 46
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_053-1.webp"
+      }
     ]
   },
   {
@@ -70718,6 +71164,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_054-p47.webp",
         "page": 47
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_054-1.webp"
+      }
     ]
   },
   {
@@ -70753,6 +71204,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_056-p49.webp",
         "page": 49
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_056-1.webp"
       }
     ]
   },
@@ -70830,6 +71286,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_060-p53.webp",
         "page": 53
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_060-1.webp"
+      }
     ]
   },
   {
@@ -70865,6 +71326,14 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_064-p56.webp",
         "page": 56
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_064-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_064-2.webp"
       }
     ]
   },
@@ -70942,6 +71411,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_080-p65.webp",
         "page": 65
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_080-1.webp"
+      }
     ]
   },
   {
@@ -70978,6 +71452,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_081-p66.webp",
         "page": 66
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_081-1.webp"
+      }
     ]
   },
   {
@@ -71013,6 +71492,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_083-p67.webp",
         "page": 67
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_083-1.webp"
       }
     ]
   },
@@ -71126,6 +71610,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_091-p71.webp",
         "page": 71
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_091-1.webp"
+      }
     ]
   },
   {
@@ -71206,6 +71695,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_094-p74.webp",
         "page": 74
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_094-1.webp"
+      }
     ]
   },
   {
@@ -71241,6 +71735,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_097-p75.webp",
         "page": 75
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_097-1.webp"
       }
     ]
   },
@@ -71278,6 +71777,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_098-p76.webp",
         "page": 76
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_098-1.webp"
+      }
     ]
   },
   {
@@ -71313,6 +71817,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_099-p76.webp",
         "page": 76
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_099-1.webp"
       }
     ]
   },
@@ -71390,6 +71899,11 @@
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_101-p77.webp",
         "page": 77
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_101-1.webp"
+      }
     ]
   },
   {
@@ -71465,6 +71979,11 @@
       {
         "url": "/question-media/apostilas/ap_bio_unicamp/ap_bio_unicamp_103-p79.webp",
         "page": 79
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_bio_unicamp_103-1.webp"
       }
     ]
   },
@@ -71682,6 +72201,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_008-p11.webp",
         "page": 11
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_008-1.webp"
+      }
     ]
   },
   {
@@ -71790,6 +72314,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_012-p15.webp",
         "page": 15
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_012-1.webp"
+      }
     ]
   },
   {
@@ -71825,6 +72354,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_013-p16.webp",
         "page": 16
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_013-1.webp"
       }
     ]
   },
@@ -71862,6 +72396,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_014-p17.webp",
         "page": 17
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_014-1.webp"
+      }
     ]
   },
   {
@@ -71898,6 +72437,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_016-p19.webp",
         "page": 19
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_016-1.webp"
+      }
     ]
   },
   {
@@ -71933,6 +72477,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_017-p20.webp",
         "page": 20
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_017-1.webp"
       }
     ]
   },
@@ -72122,6 +72671,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_024-p25.webp",
         "page": 25
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_024-1.webp"
+      }
     ]
   },
   {
@@ -72193,6 +72747,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_028-p29.webp",
         "page": 29
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_028-1.webp"
       }
     ]
   },
@@ -72454,6 +73013,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_042-p38.webp",
         "page": 38
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_042-1.webp"
+      }
     ]
   },
   {
@@ -72566,6 +73130,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_048-p41.webp",
         "page": 41
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_048-1.webp"
+      }
     ]
   },
   {
@@ -72637,6 +73206,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_050-p43.webp",
         "page": 43
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_050-1.webp"
       }
     ]
   },
@@ -72858,6 +73432,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_058-p47.webp",
         "page": 47
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_058-1.webp"
+      }
     ]
   },
   {
@@ -72929,6 +73508,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_062-p51.webp",
         "page": 51
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_062-1.webp"
       }
     ]
   },
@@ -73041,6 +73625,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_066-p53.webp",
         "page": 53
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_066-1.webp"
       }
     ]
   },
@@ -73185,6 +73774,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_070-p55.webp",
         "page": 55
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_070-1.webp"
       }
     ]
   },
@@ -73366,6 +73960,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_075-p58.webp",
         "page": 58
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_075-1.webp"
+      }
     ]
   },
   {
@@ -73401,6 +74000,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_076-p58.webp",
         "page": 58
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_076-1.webp"
       }
     ]
   },
@@ -73474,6 +74078,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_080-p60.webp",
         "page": 60
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_080-1.webp"
+      }
     ]
   },
   {
@@ -73546,6 +74155,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_083-p62.webp",
         "page": 62
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_083-1.webp"
+      }
     ]
   },
   {
@@ -73617,6 +74231,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_085-p63.webp",
         "page": 63
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_085-1.webp"
       }
     ]
   },
@@ -73694,6 +74313,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_089-p66.webp",
         "page": 66
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_089-1.webp"
+      }
     ]
   },
   {
@@ -73729,6 +74353,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_090-p67.webp",
         "page": 67
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_090-1.webp"
       }
     ]
   },
@@ -73842,6 +74471,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_095-p70.webp",
         "page": 70
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_095-1.webp"
+      }
     ]
   },
   {
@@ -73878,6 +74512,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_098-p73.webp",
         "page": 73
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_098-1.webp"
+      }
     ]
   },
   {
@@ -73913,6 +74552,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_099-p74.webp",
         "page": 74
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_099-1.webp"
       }
     ]
   },
@@ -73985,6 +74629,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_101-p75.webp",
         "page": 75
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_101-1.webp"
       }
     ]
   },
@@ -74061,6 +74710,11 @@
       {
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_103-p77.webp",
         "page": 77
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_103-1.webp"
       }
     ]
   },
@@ -74214,6 +74868,11 @@
         "url": "/question-media/apostilas/ap_fis_unicamp/ap_fis_unicamp_108-p80.webp",
         "page": 80
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_fis_unicamp_108-1.webp"
+      }
     ]
   },
   {
@@ -74286,6 +74945,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_002-p6.webp",
         "page": 6
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_002-1.webp"
+      }
     ]
   },
   {
@@ -74321,6 +74985,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_003-p7.webp",
         "page": 7
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_003-1.webp"
       }
     ]
   },
@@ -74358,6 +75027,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_004-p8.webp",
         "page": 8
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_004-1.webp"
+      }
     ]
   },
   {
@@ -74393,6 +75067,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_005-p9.webp",
         "page": 9
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_005-1.webp"
       }
     ]
   },
@@ -74470,6 +75149,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_007-p11.webp",
         "page": 11
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_007-1.webp"
+      }
     ]
   },
   {
@@ -74505,6 +75189,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_009-p12.webp",
         "page": 12
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_009-1.webp"
       }
     ]
   },
@@ -74546,6 +75235,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_011-p15.webp",
         "page": 15
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_011-1.webp"
+      }
     ]
   },
   {
@@ -74581,6 +75275,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_014-p17.webp",
         "page": 17
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_014-1.webp"
       }
     ]
   },
@@ -74654,6 +75353,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_018-p20.webp",
         "page": 20
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_018-1.webp"
+      }
     ]
   },
   {
@@ -74694,6 +75398,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_019-p21.webp",
         "page": 21
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_019-1.webp"
+      }
     ]
   },
   {
@@ -74729,6 +75438,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_021-p22.webp",
         "page": 22
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_021-1.webp"
       }
     ]
   },
@@ -74806,6 +75520,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_024-p24.webp",
         "page": 24
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_024-1.webp"
+      }
     ]
   },
   {
@@ -74841,6 +75560,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_026-p26.webp",
         "page": 26
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_026-1.webp"
       }
     ]
   },
@@ -74882,6 +75606,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_028-p29.webp",
         "page": 29
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_028-1.webp"
+      }
     ]
   },
   {
@@ -74917,6 +75646,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_030-p30.webp",
         "page": 30
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_030-1.webp"
       }
     ]
   },
@@ -74954,6 +75688,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_032-p32.webp",
         "page": 32
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_032-1.webp"
+      }
     ]
   },
   {
@@ -74990,6 +75729,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_035-p35.webp",
         "page": 35
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_035-1.webp"
+      }
     ]
   },
   {
@@ -75025,6 +75769,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_037-p37.webp",
         "page": 37
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_037-1.webp"
       }
     ]
   },
@@ -75066,6 +75815,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_038-p39.webp",
         "page": 39
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_038-1.webp"
+      }
     ]
   },
   {
@@ -75101,6 +75855,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_039-p39.webp",
         "page": 39
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_039-1.webp"
       }
     ]
   },
@@ -75173,6 +75932,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_045-p44.webp",
         "page": 44
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_045-1.webp"
       }
     ]
   },
@@ -75286,6 +76050,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_050-p50.webp",
         "page": 50
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_050-1.webp"
+      }
     ]
   },
   {
@@ -75321,6 +76090,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_051-p50.webp",
         "page": 50
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_051-1.webp"
       }
     ]
   },
@@ -75358,6 +76132,11 @@
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_053-p52.webp",
         "page": 52
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_053-1.webp"
+      }
     ]
   },
   {
@@ -75393,6 +76172,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_054-p53.webp",
         "page": 53
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_054-1.webp"
       }
     ]
   },
@@ -75549,6 +76333,11 @@
       {
         "url": "/question-media/apostilas/ap_geo_unicamp/ap_geo_unicamp_067-p62.webp",
         "page": 62
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_geo_unicamp_067-1.webp"
       }
     ]
   },
@@ -75758,6 +76547,11 @@
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_004-p10.webp",
         "page": 10
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_gram_unicamp_004-1.webp"
+      }
     ]
   },
   {
@@ -75797,6 +76591,11 @@
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_006-p11.webp",
         "page": 11
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_gram_unicamp_006-1.webp"
       }
     ]
   },
@@ -75869,6 +76668,11 @@
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_009-p14.webp",
         "page": 14
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_gram_unicamp_009-1.webp"
       }
     ]
   },
@@ -76418,6 +77222,11 @@
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_027-p34.webp",
         "page": 34
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_gram_unicamp_027-1.webp"
+      }
     ]
   },
   {
@@ -76610,6 +77419,11 @@
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_032-p40.webp",
         "page": 40
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_gram_unicamp_032-1.webp"
+      }
     ]
   },
   {
@@ -76649,6 +77463,11 @@
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_034-p42.webp",
         "page": 42
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_gram_unicamp_034-1.webp"
       }
     ]
   },
@@ -76801,6 +77620,11 @@
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_039-p46.webp",
         "page": 46
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_gram_unicamp_039-1.webp"
       }
     ]
   },
@@ -77030,6 +77854,11 @@
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_053-p62.webp",
         "page": 62
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_gram_unicamp_053-1.webp"
+      }
     ]
   },
   {
@@ -77109,6 +77938,11 @@
       {
         "url": "/question-media/apostilas/ap_gram_unicamp/ap_gram_unicamp_058-p66.webp",
         "page": 66
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_gram_unicamp_058-1.webp"
       }
     ]
   },
@@ -77718,6 +78552,11 @@
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_007-p10.webp",
         "page": 10
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_fuvest_007-1.webp"
+      }
     ]
   },
   {
@@ -77845,6 +78684,11 @@
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_012-p13.webp",
         "page": 13
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_fuvest_012-1.webp"
       }
     ]
   },
@@ -78146,6 +78990,11 @@
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_038-p27.webp",
         "page": 27
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_fuvest_038-1.webp"
+      }
     ]
   },
   {
@@ -78314,6 +79163,11 @@
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_044-p32.webp",
         "page": 32
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_fuvest_044-1.webp"
+      }
     ]
   },
   {
@@ -78353,6 +79207,11 @@
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_046-p34.webp",
         "page": 34
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_fuvest_046-1.webp"
       }
     ]
   },
@@ -78485,6 +79344,11 @@
       {
         "url": "/question-media/apostilas/ap_hisbra_fuvest/ap_hisbra_fuvest_054-p40.webp",
         "page": 40
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_fuvest_054-1.webp"
       }
     ]
   },
@@ -78869,6 +79733,11 @@
       {
         "url": "/question-media/apostilas/ap_hisbra_unesp/ap_hisbra_unesp_002-p5.webp",
         "page": 5
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unesp_002-1.webp"
       }
     ]
   },
@@ -79830,6 +80699,11 @@
         "url": "/question-media/apostilas/ap_hisbra_unesp/ap_hisbra_unesp_045-p31.webp",
         "page": 31
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unesp_045-1.webp"
+      }
     ]
   },
   {
@@ -80301,6 +81175,11 @@
       {
         "url": "/question-media/apostilas/ap_hisbra_unesp/ap_hisbra_unesp_062-p45.webp",
         "page": 45
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unesp_062-1.webp"
       }
     ]
   },
@@ -81074,6 +81953,11 @@
         "url": "/question-media/apostilas/ap_hisbra_unesp/ap_hisbra_unesp_094-p68.webp",
         "page": 68
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unesp_094-1.webp"
+      }
     ]
   },
   {
@@ -81282,6 +82166,11 @@
         "url": "/question-media/apostilas/ap_hisbra_unesp/ap_hisbra_unesp_110-p77.webp",
         "page": 77
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unesp_110-1.webp"
+      }
     ]
   },
   {
@@ -81321,6 +82210,11 @@
       {
         "url": "/question-media/apostilas/ap_hisbra_unesp/ap_hisbra_unesp_111-p78.webp",
         "page": 78
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unesp_111-1.webp"
       }
     ]
   },
@@ -81362,6 +82256,11 @@
         "url": "/question-media/apostilas/ap_hisbra_unesp/ap_hisbra_unesp_112-p79.webp",
         "page": 79
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unesp_112-1.webp"
+      }
     ]
   },
   {
@@ -81401,6 +82300,14 @@
       {
         "url": "/question-media/apostilas/ap_hisbra_unesp/ap_hisbra_unesp_113-p80.webp",
         "page": 80
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unesp_113-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/ap_hisbra_unesp_113-2.webp"
       }
     ]
   },
@@ -81598,6 +82505,11 @@
         "url": "/question-media/apostilas/ap_hisbra_unicamp/ap_hisbra_unicamp_012-p15.webp",
         "page": 15
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unicamp_012-1.webp"
+      }
     ]
   },
   {
@@ -81762,6 +82674,11 @@
         "url": "/question-media/apostilas/ap_hisbra_unicamp/ap_hisbra_unicamp_021-p24.webp",
         "page": 24
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisbra_unicamp_021-1.webp"
+      }
     ]
   },
   {
@@ -81885,6 +82802,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_007-p8.webp",
         "page": 8
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_fuvest_007-1.webp"
       }
     ]
   },
@@ -82058,6 +82980,11 @@
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_028-p19.webp",
         "page": 19
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_fuvest_028-1.webp"
+      }
     ]
   },
   {
@@ -82097,6 +83024,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_029-p19.webp",
         "page": 19
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_fuvest_029-1.webp"
       }
     ]
   },
@@ -82450,6 +83382,11 @@
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_055-p32.webp",
         "page": 32
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_fuvest_055-1.webp"
+      }
     ]
   },
   {
@@ -82617,6 +83554,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_085-p47.webp",
         "page": 47
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_fuvest_085-1.webp"
       }
     ]
   },
@@ -82790,6 +83732,11 @@
         "url": "/question-media/apostilas/ap_hisger_fuvest/ap_hisger_fuvest_090-p51.webp",
         "page": 51
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_fuvest_090-1.webp"
+      }
     ]
   },
   {
@@ -82874,6 +83821,11 @@
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_002-p6.webp",
         "page": 6
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_002-1.webp"
+      }
     ]
   },
   {
@@ -82957,6 +83909,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_006-p8.webp",
         "page": 8
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_006-1.webp"
       }
     ]
   },
@@ -83554,6 +84511,11 @@
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_026-p22.webp",
         "page": 22
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_026-1.webp"
+      }
     ]
   },
   {
@@ -83638,6 +84600,11 @@
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_030-p25.webp",
         "page": 25
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_030-1.webp"
+      }
     ]
   },
   {
@@ -83677,6 +84644,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_031-p26.webp",
         "page": 26
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_031-1.webp"
       }
     ]
   },
@@ -83761,6 +84733,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_034-p28.webp",
         "page": 28
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_034-1.webp"
       }
     ]
   },
@@ -83970,6 +84947,11 @@
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_045-p34.webp",
         "page": 34
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_045-1.webp"
+      }
     ]
   },
   {
@@ -84145,6 +85127,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_051-p40.webp",
         "page": 40
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_051-1.webp"
       }
     ]
   },
@@ -84870,6 +85857,11 @@
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_079-p60.webp",
         "page": 60
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_079-1.webp"
+      }
     ]
   },
   {
@@ -84909,6 +85901,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_080-p61.webp",
         "page": 61
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_080-1.webp"
       }
     ]
   },
@@ -85302,6 +86299,11 @@
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_093-p72.webp",
         "page": 72
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_093-1.webp"
+      }
     ]
   },
   {
@@ -85341,6 +86343,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_094-p73.webp",
         "page": 73
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_094-1.webp"
       }
     ]
   },
@@ -85382,6 +86389,11 @@
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_095-p74.webp",
         "page": 74
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_095-1.webp"
+      }
     ]
   },
   {
@@ -85421,6 +86433,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_unesp/ap_hisger_unesp_096-p74.webp",
         "page": 74
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unesp_096-1.webp"
       }
     ]
   },
@@ -85690,6 +86707,11 @@
         "url": "/question-media/apostilas/ap_hisger_unicamp/ap_hisger_unicamp_003-p7.webp",
         "page": 7
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unicamp_003-1.webp"
+      }
     ]
   },
   {
@@ -85806,6 +86828,11 @@
         "url": "/question-media/apostilas/ap_hisger_unicamp/ap_hisger_unicamp_011-p16.webp",
         "page": 16
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unicamp_011-1.webp"
+      }
     ]
   },
   {
@@ -85881,6 +86908,11 @@
       {
         "url": "/question-media/apostilas/ap_hisger_unicamp/ap_hisger_unicamp_013-p17.webp",
         "page": 17
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_hisger_unicamp_013-1.webp"
       }
     ]
   },
@@ -86382,6 +87414,14 @@
         "url": "/question-media/apostilas/ap_lit_unicamp/ap_lit_unicamp_009-p12.webp",
         "page": 12
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_lit_unicamp_009-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/ap_lit_unicamp_009-2.webp"
+      }
     ]
   },
   {
@@ -86694,6 +87734,11 @@
         "url": "/question-media/apostilas/ap_lit_unicamp/ap_lit_unicamp_024-p26.webp",
         "page": 26
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_lit_unicamp_024-1.webp"
+      }
     ]
   },
   {
@@ -86881,6 +87926,11 @@
       {
         "url": "/question-media/apostilas/ap_lit_unicamp/ap_lit_unicamp_031-p32.webp",
         "page": 32
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_lit_unicamp_031-1.webp"
       }
     ]
   },
@@ -87510,6 +88560,11 @@
         "url": "/question-media/apostilas/ap_lit_unicamp/ap_lit_unicamp_054-p66.webp",
         "page": 66
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_lit_unicamp_054-1.webp"
+      }
     ]
   },
   {
@@ -87589,6 +88644,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_002-p5.webp",
         "page": 5
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_002-1.webp"
       }
     ]
   },
@@ -87670,6 +88730,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_007-p8.webp",
         "page": 8
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_007-1.webp"
+      }
     ]
   },
   {
@@ -87709,6 +88774,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_008-p9.webp",
         "page": 9
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_008-1.webp"
       }
     ]
   },
@@ -88198,6 +89268,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_031-p23.webp",
         "page": 23
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_031-1.webp"
+      }
     ]
   },
   {
@@ -88237,6 +89312,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_032-p24.webp",
         "page": 24
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_032-1.webp"
       }
     ]
   },
@@ -88317,6 +89397,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_034-p26.webp",
         "page": 26
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_034-1.webp"
       }
     ]
   },
@@ -88441,6 +89526,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_038-p28.webp",
         "page": 28
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_038-1.webp"
       }
     ]
   },
@@ -88642,6 +89732,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_045-p32.webp",
         "page": 32
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_045-1.webp"
+      }
     ]
   },
   {
@@ -88766,6 +89861,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_048-p34.webp",
         "page": 34
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_048-1.webp"
+      }
     ]
   },
   {
@@ -88886,6 +89986,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_052-p36.webp",
         "page": 36
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_052-1.webp"
+      }
     ]
   },
   {
@@ -88926,6 +90031,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_053-p37.webp",
         "page": 37
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_053-1.webp"
+      }
     ]
   },
   {
@@ -88965,6 +90075,14 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_054-p38.webp",
         "page": 38
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_054-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_054-2.webp"
       }
     ]
   },
@@ -89086,6 +90204,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_057-p40.webp",
         "page": 40
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_057-1.webp"
+      }
     ]
   },
   {
@@ -89125,6 +90248,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_058-p41.webp",
         "page": 41
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_058-1.webp"
       }
     ]
   },
@@ -89370,6 +90498,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_065-p45.webp",
         "page": 45
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_065-1.webp"
+      }
     ]
   },
   {
@@ -89409,6 +90542,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_067-p47.webp",
         "page": 47
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_067-1.webp"
       }
     ]
   },
@@ -89530,6 +90668,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_071-p50.webp",
         "page": 50
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_071-1.webp"
+      }
     ]
   },
   {
@@ -89609,6 +90752,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_074-p51.webp",
         "page": 51
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_074-1.webp"
       }
     ]
   },
@@ -89850,6 +90998,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_084-p58.webp",
         "page": 58
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_084-1.webp"
+      }
     ]
   },
   {
@@ -90022,6 +91175,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_091-p63.webp",
         "page": 63
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_091-1.webp"
+      }
     ]
   },
   {
@@ -90146,6 +91304,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_096-p66.webp",
         "page": 66
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_096-1.webp"
+      }
     ]
   },
   {
@@ -90185,6 +91348,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_098-p67.webp",
         "page": 67
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_098-1.webp"
       }
     ]
   },
@@ -90678,6 +91846,11 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_116-p77.webp",
         "page": 77
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_116-1.webp"
+      }
     ]
   },
   {
@@ -90717,6 +91890,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_117-p78.webp",
         "page": 78
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_117-1.webp"
       }
     ]
   },
@@ -90758,6 +91936,14 @@
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_118-p79.webp",
         "page": 79
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_118-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_118-2.webp"
+      }
     ]
   },
   {
@@ -90797,6 +91983,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_fuvest/ap_mat_fuvest_119-p80.webp",
         "page": 80
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_fuvest_119-1.webp"
       }
     ]
   },
@@ -91378,6 +92569,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_026-p17.webp",
         "page": 17
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_026-1.webp"
+      }
     ]
   },
   {
@@ -91485,6 +92681,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_030-p20.webp",
         "page": 20
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_030-1.webp"
       }
     ]
   },
@@ -91782,6 +92983,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_044-p30.webp",
         "page": 30
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_044-1.webp"
+      }
     ]
   },
   {
@@ -91817,6 +93023,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_045-p31.webp",
         "page": 31
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_045-1.webp"
       }
     ]
   },
@@ -91929,6 +93140,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_048-p34.webp",
         "page": 34
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_048-1.webp"
       }
     ]
   },
@@ -92298,6 +93514,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_058-p38.webp",
         "page": 38
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_058-1.webp"
+      }
     ]
   },
   {
@@ -92446,6 +93667,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_063-p41.webp",
         "page": 41
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_063-1.webp"
+      }
     ]
   },
   {
@@ -92518,6 +93744,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_065-p42.webp",
         "page": 42
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_065-1.webp"
+      }
     ]
   },
   {
@@ -92553,6 +93784,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_067-p43.webp",
         "page": 43
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_067-1.webp"
       }
     ]
   },
@@ -92666,6 +93902,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_072-p47.webp",
         "page": 47
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_072-1.webp"
+      }
     ]
   },
   {
@@ -92738,6 +93979,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_074-p47.webp",
         "page": 47
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_074-1.webp"
+      }
     ]
   },
   {
@@ -92773,6 +94019,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_075-p48.webp",
         "page": 48
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_075-1.webp"
       }
     ]
   },
@@ -92810,6 +94061,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_076-p48.webp",
         "page": 48
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_076-1.webp"
+      }
     ]
   },
   {
@@ -92846,6 +94102,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_077-p49.webp",
         "page": 49
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_077-1.webp"
+      }
     ]
   },
   {
@@ -92881,6 +94142,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_078-p49.webp",
         "page": 49
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_078-1.webp"
       }
     ]
   },
@@ -92953,6 +94219,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_080-p50.webp",
         "page": 50
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_080-1.webp"
       }
     ]
   },
@@ -93062,6 +94333,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_084-p52.webp",
         "page": 52
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_084-1.webp"
+      }
     ]
   },
   {
@@ -93097,6 +94373,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_085-p53.webp",
         "page": 53
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_085-1.webp"
       }
     ]
   },
@@ -93326,6 +94607,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_093-p58.webp",
         "page": 58
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_093-1.webp"
+      }
     ]
   },
   {
@@ -93361,6 +94647,11 @@
       {
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_094-p59.webp",
         "page": 59
+      }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_094-1.webp"
       }
     ]
   },
@@ -93790,6 +95081,11 @@
         "url": "/question-media/apostilas/ap_mat_unicamp/ap_mat_unicamp_105-p96.webp",
         "page": 96
       }
+    ],
+    "figures": [
+      {
+        "url": "/question-media/figuras/ap_mat_unicamp_105-1.webp"
+      }
     ]
   },
   {
@@ -93838,7 +95134,12 @@
       "version": "Q/X",
       "questionNumber": 1
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 1.\n\nConceito e pré-requisitos\nSentido contextual e classe gramatical; pré-requisito: distinguir substantivo de adjetivo.\n\nResolução por etapas\n1. Identificar dados: Localize upset na manchete sobre a vitória de Fernanda Torres e compare as duas definições fornecidas.\n2. Escolher a estratégia: Use a função da palavra na frase, e não uma tradução isolada: biggest upset nomeia um resultado inesperado.\n3. Aplicar o conceito: Associe a ocorrência à primeira definição, a de substantivo: um desfecho contrário ao que se considerava provável.\n4. Justificar: A manchete trata da surpresa do resultado; não afirma que as outras atrizes ficaram tristes nem desqualifica a vencedora.\n5. Conferir: Confira as duas partes da alternativa C: definição 1 e ausência de desqualificação. A acrescenta sarcasmo sem apoio.\n\nPadrão de cobrança e pegadinha\nA tradução automática upset = chateado ignora a classe gramatical. A banca combina manchete visual, verbete e reação nas redes.\n\nRevisão ativa — responda sem consultar\n1. O que distingue upset substantivo de upset adjetivo?\n2. Por que uma vitória inesperada não implica ironia contra a vencedora?\n\nTransferência — Exercício autoral: compare “an electoral upset” e “the voters were upset”. Traduza e justifique a diferença.\nCritérios de resposta:\n• Resultado eleitoral inesperado na primeira expressão.\n• Eleitores aborrecidos na segunda; justificar por função e contexto."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 1.\n\nConceito e pré-requisitos\nSentido contextual e classe gramatical; pré-requisito: distinguir substantivo de adjetivo.\n\nResolução por etapas\n1. Identificar dados: Localize upset na manchete sobre a vitória de Fernanda Torres e compare as duas definições fornecidas.\n2. Escolher a estratégia: Use a função da palavra na frase, e não uma tradução isolada: biggest upset nomeia um resultado inesperado.\n3. Aplicar o conceito: Associe a ocorrência à primeira definição, a de substantivo: um desfecho contrário ao que se considerava provável.\n4. Justificar: A manchete trata da surpresa do resultado; não afirma que as outras atrizes ficaram tristes nem desqualifica a vencedora.\n5. Conferir: Confira as duas partes da alternativa C: definição 1 e ausência de desqualificação. A acrescenta sarcasmo sem apoio.\n\nPadrão de cobrança e pegadinha\nA tradução automática upset = chateado ignora a classe gramatical. A banca combina manchete visual, verbete e reação nas redes.\n\nRevisão ativa — responda sem consultar\n1. O que distingue upset substantivo de upset adjetivo?\n2. Por que uma vitória inesperada não implica ironia contra a vencedora?\n\nTransferência — Exercício autoral: compare “an electoral upset” e “the voters were upset”. Traduza e justifique a diferença.\nCritérios de resposta:\n• Resultado eleitoral inesperado na primeira expressão.\n• Eleitores aborrecidos na segunda; justificar por função e contexto.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q01-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q02",
@@ -93886,7 +95187,12 @@
       "version": "Q/X",
       "questionNumber": 2
     },
-    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 2.\n\nConceito e pré-requisitos\nLeitura multimodal e organização temporal; pré-requisito: reconhecer conectores e descrições visuais.\n\nResolução por etapas\n1. Identificar dados: Identifique as três pistas: fechamento das cortinas, intimidade do casal cercado por militares e close-up de Eunice.\n2. Escolher a estratégia: Crie uma correspondência entre cada descrição e os quadros, antes de olhar as sequências das alternativas.\n3. Aplicar o conceito: As cortinas e a retirada de luz correspondem a B; o casal sob a presença dos militares, a C; o close-up, a A.\n4. Justificar: “In this other one” e “Then” organizam a progressão B → C → A. A ordem é a da descrição, não a posição da figura.\n5. Conferir: Releia a fala do diretor e confira que cada cena aparece uma vez: a alternativa B conserva a sequência.\n\nPadrão de cobrança e pegadinha\nNão ordenar pela familiaridade com o filme. A resposta depende das evidências no texto e nas imagens.\n\nRevisão ativa — responda sem consultar\n1. Como Then organiza a sequência?\n2. Que detalhe distingue um close-up de um enquadramento do ambiente?\n\nTransferência — Exercício autoral: descreva três imagens como plano aberto, plano do casal e close-up. Explique a progressão do foco.\nCritérios de resposta:\n• Nomear o elemento observado em cada plano.\n• Explicar que o enquadramento aproxima o foco de um personagem, sem inventar acontecimentos."
+    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 2.\n\nConceito e pré-requisitos\nLeitura multimodal e organização temporal; pré-requisito: reconhecer conectores e descrições visuais.\n\nResolução por etapas\n1. Identificar dados: Identifique as três pistas: fechamento das cortinas, intimidade do casal cercado por militares e close-up de Eunice.\n2. Escolher a estratégia: Crie uma correspondência entre cada descrição e os quadros, antes de olhar as sequências das alternativas.\n3. Aplicar o conceito: As cortinas e a retirada de luz correspondem a B; o casal sob a presença dos militares, a C; o close-up, a A.\n4. Justificar: “In this other one” e “Then” organizam a progressão B → C → A. A ordem é a da descrição, não a posição da figura.\n5. Conferir: Releia a fala do diretor e confira que cada cena aparece uma vez: a alternativa B conserva a sequência.\n\nPadrão de cobrança e pegadinha\nNão ordenar pela familiaridade com o filme. A resposta depende das evidências no texto e nas imagens.\n\nRevisão ativa — responda sem consultar\n1. Como Then organiza a sequência?\n2. Que detalhe distingue um close-up de um enquadramento do ambiente?\n\nTransferência — Exercício autoral: descreva três imagens como plano aberto, plano do casal e close-up. Explique a progressão do foco.\nCritérios de resposta:\n• Nomear o elemento observado em cada plano.\n• Explicar que o enquadramento aproxima o foco de um personagem, sem inventar acontecimentos.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q02-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q03",
@@ -93934,7 +95240,12 @@
       "version": "Q/X",
       "questionNumber": 3
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 3.\n\nConceito e pré-requisitos\nInferência de crítica em tirinha; pré-requisito: integrar falas, cenário e objetos.\n\nResolução por etapas\n1. Identificar dados: Leia as falas e observe as moedas, o copo para doações e os jogos associados ao dinheiro.\n2. Escolher a estratégia: Procure o contraste que produz humor, em vez de interpretar cada quadro isoladamente.\n3. Aplicar o conceito: A explicação “In this place money is for playing games” trata o dinheiro como instrumento de jogo naquele ambiente.\n4. Justificar: A tirinha critica a atitude de quem lida com dinheiro como jogo. Não faz uma contagem comparativa de moedas nem um levantamento de renda.\n5. Conferir: Confira a alternativa C: ela descreve a crítica geral que as falas constroem. A e B introduzem comparações que não são o foco.\n\nPadrão de cobrança e pegadinha\nUma crítica social plausível pode ser mais ampla que a crítica efetivamente enunciada. A banca pede o sentido geral desta tirinha.\n\nRevisão ativa — responda sem consultar\n1. Qual fala constrói a crítica?\n2. Como distinguir evidência textual de uma opinião sobre desigualdade?\n\nTransferência — Exercício autoral: um cartum chama a bolsa de “cassino”. Explique a comparação e indique um limite da interpretação.\nCritérios de resposta:\n• Relacionar cassino a aposta, risco e jogo.\n• Não concluir, sem evidência, que toda operação financeira é ilegal."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 3.\n\nConceito e pré-requisitos\nInferência de crítica em tirinha; pré-requisito: integrar falas, cenário e objetos.\n\nResolução por etapas\n1. Identificar dados: Leia as falas e observe as moedas, o copo para doações e os jogos associados ao dinheiro.\n2. Escolher a estratégia: Procure o contraste que produz humor, em vez de interpretar cada quadro isoladamente.\n3. Aplicar o conceito: A explicação “In this place money is for playing games” trata o dinheiro como instrumento de jogo naquele ambiente.\n4. Justificar: A tirinha critica a atitude de quem lida com dinheiro como jogo. Não faz uma contagem comparativa de moedas nem um levantamento de renda.\n5. Conferir: Confira a alternativa C: ela descreve a crítica geral que as falas constroem. A e B introduzem comparações que não são o foco.\n\nPadrão de cobrança e pegadinha\nUma crítica social plausível pode ser mais ampla que a crítica efetivamente enunciada. A banca pede o sentido geral desta tirinha.\n\nRevisão ativa — responda sem consultar\n1. Qual fala constrói a crítica?\n2. Como distinguir evidência textual de uma opinião sobre desigualdade?\n\nTransferência — Exercício autoral: um cartum chama a bolsa de “cassino”. Explique a comparação e indique um limite da interpretação.\nCritérios de resposta:\n• Relacionar cassino a aposta, risco e jogo.\n• Não concluir, sem evidência, que toda operação financeira é ilegal.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q03-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q04",
@@ -94030,7 +95341,12 @@
       "version": "Q/X",
       "questionNumber": 5
     },
-    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 5.\n\nConceito e pré-requisitos\nRelação entre citação e comentário explicativo; pré-requisito: reconhecer referentes de her e this.\n\nResolução por etapas\n1. Identificar dados: Identifique quem escreveu a citação, quem produziu a obra e o que o comentário diz sobre os borrões.\n2. Escolher a estratégia: Use o texto 3 como critério, pois é ele que o comando pede interpretar.\n3. Aplicar o conceito: O comentário associa palavras ilegíveis à experiência racial de Hurston; Ligon incorpora os efeitos de espalhamento da tinta.\n4. Justificar: D reúne técnica pictórica e vivências da autora. B transfere a confusão para a própria identidade de Ligon, alterando o referente.\n5. Conferir: Confira D e descarte intenções que não estão sustentadas: A impõe uma explicação de invisibilização e C fala em recusa de identidade.\n\nPadrão de cobrança e pegadinha\nO pronome her refere-se à autora citada. Trocar o referente muda a interpretação mesmo quando o tema geral parece correto.\n\nRevisão ativa — responda sem consultar\n1. A quem se refere her confusion?\n2. Como a técnica de Ligon dialoga com a experiência relatada por Hurston?\n\nTransferência — Exercício autoral: diferencie a voz de um escritor citado e a de um artista que adapta seu texto.\nCritérios de resposta:\n• Atribuir cada enunciado ao seu autor.\n• Explicar a relação entre as duas obras sem igualar experiências pessoais."
+    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 5.\n\nConceito e pré-requisitos\nRelação entre citação e comentário explicativo; pré-requisito: reconhecer referentes de her e this.\n\nResolução por etapas\n1. Identificar dados: Identifique quem escreveu a citação, quem produziu a obra e o que o comentário diz sobre os borrões.\n2. Escolher a estratégia: Use o texto 3 como critério, pois é ele que o comando pede interpretar.\n3. Aplicar o conceito: O comentário associa palavras ilegíveis à experiência racial de Hurston; Ligon incorpora os efeitos de espalhamento da tinta.\n4. Justificar: D reúne técnica pictórica e vivências da autora. B transfere a confusão para a própria identidade de Ligon, alterando o referente.\n5. Conferir: Confira D e descarte intenções que não estão sustentadas: A impõe uma explicação de invisibilização e C fala em recusa de identidade.\n\nPadrão de cobrança e pegadinha\nO pronome her refere-se à autora citada. Trocar o referente muda a interpretação mesmo quando o tema geral parece correto.\n\nRevisão ativa — responda sem consultar\n1. A quem se refere her confusion?\n2. Como a técnica de Ligon dialoga com a experiência relatada por Hurston?\n\nTransferência — Exercício autoral: diferencie a voz de um escritor citado e a de um artista que adapta seu texto.\nCritérios de resposta:\n• Atribuir cada enunciado ao seu autor.\n• Explicar a relação entre as duas obras sem igualar experiências pessoais.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q05-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q06",
@@ -94274,7 +95590,12 @@
       "version": "Q/X",
       "questionNumber": 10
     },
-    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 10.\n\nConceito e pré-requisitos\nGerador com resistência interna; pré-requisito: associação em série e lei de Ohm.\n\nResolução por etapas\n1. Identificar dados: Identifique força eletromotriz 3,6 V, resistência interna 1,2 Ω e resistência externa 6,0 Ω.\n2. Escolher a estratégia: Calcule a corrente pelo circuito inteiro e depois a tensão que o voltímetro mede no resistor externo.\n3. Aplicar o conceito: i = 3,6/(6,0 + 1,2) = 0,5 A. U = Ri = 6,0 × 0,5 = 3,0 V.\n4. Justificar: A queda interna é 1,2 × 0,5 = 0,6 V; por isso a tensão externa é menor que a força eletromotriz.\n5. Conferir: 3,0 + 0,6 = 3,6 V confirma a soma das quedas. A resposta é B, não o valor de 3,6 V da fonte ideal.\n\nPadrão de cobrança e pegadinha\nO voltímetro não mede automaticamente a força eletromotriz. É preciso identificar seus pontos de ligação.\n\nRevisão ativa — responda sem consultar\n1. Como escrever U = ε − ri?\n2. O que acontece com U se a resistência interna for nula?\n\nTransferência — Exercício autoral: uma fonte de 12 V com r = 1 Ω alimenta R = 5 Ω. Determine i e U.\nCritérios de resposta:\n• i = 2 A pela resistência total de 6 Ω.\n• U = 10 V e queda interna de 2 V."
+    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 10.\n\nConceito e pré-requisitos\nGerador com resistência interna; pré-requisito: associação em série e lei de Ohm.\n\nResolução por etapas\n1. Identificar dados: Identifique força eletromotriz 3,6 V, resistência interna 1,2 Ω e resistência externa 6,0 Ω.\n2. Escolher a estratégia: Calcule a corrente pelo circuito inteiro e depois a tensão que o voltímetro mede no resistor externo.\n3. Aplicar o conceito: i = 3,6/(6,0 + 1,2) = 0,5 A. U = Ri = 6,0 × 0,5 = 3,0 V.\n4. Justificar: A queda interna é 1,2 × 0,5 = 0,6 V; por isso a tensão externa é menor que a força eletromotriz.\n5. Conferir: 3,0 + 0,6 = 3,6 V confirma a soma das quedas. A resposta é B, não o valor de 3,6 V da fonte ideal.\n\nPadrão de cobrança e pegadinha\nO voltímetro não mede automaticamente a força eletromotriz. É preciso identificar seus pontos de ligação.\n\nRevisão ativa — responda sem consultar\n1. Como escrever U = ε − ri?\n2. O que acontece com U se a resistência interna for nula?\n\nTransferência — Exercício autoral: uma fonte de 12 V com r = 1 Ω alimenta R = 5 Ω. Determine i e U.\nCritérios de resposta:\n• i = 2 A pela resistência total de 6 Ω.\n• U = 10 V e queda interna de 2 V.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q10-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q11",
@@ -94422,7 +95743,15 @@
       "version": "Q/X",
       "questionNumber": 13
     },
-    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 13.\n\nConceito e pré-requisitos\nInclinação e concavidade de s(t); pré-requisito: velocidade como taxa de variação da posição.\n\nResolução por etapas\n1. Identificar dados: Converta 36 km/h = 10 m/s e marque os intervalos 0–30, 30–50, 50–80, 80–95 e 95–120 s.\n2. Escolher a estratégia: Associe movimento uniforme a reta, desaceleração a concavidade para baixo, repouso a horizontal e aceleração a concavidade para cima.\n3. Aplicar o conceito: As posições acumuladas são s(30) = 300 m, s(50) = 400 m, s(80) = 400 m e s(95) = 490 m; v(95) = 12 m/s.\n4. Justificar: De 95 a 120 s, soma-se 12 × 25 = 300 m: s(120) = 790 m. A posição não cai durante a frenagem, pois a velocidade continua positiva.\n5. Conferir: O gráfico A é o que respeita formas e valores. Compare os quatro gráficos na página original; as alternativas são visuais.\n\nPadrão de cobrança e pegadinha\nDesacelerar não é voltar ao ponto de partida. Em s(t), a velocidade é a inclinação, não a altura da curva.\n\nRevisão ativa — responda sem consultar\n1. O que uma horizontal em s(t) significa?\n2. Como reconhecer aceleração negativa com velocidade positiva?\n\nTransferência — Exercício autoral: desenhe s(t) de um veículo a 8 m/s por 10 s, freando até parar nos 4 s seguintes.\nCritérios de resposta:\n• Reta até s = 80 m, depois curva crescente côncava para baixo.\n• Deslocamento de frenagem 16 m; posição final 96 m."
+    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 13.\n\nConceito e pré-requisitos\nInclinação e concavidade de s(t); pré-requisito: velocidade como taxa de variação da posição.\n\nResolução por etapas\n1. Identificar dados: Converta 36 km/h = 10 m/s e marque os intervalos 0–30, 30–50, 50–80, 80–95 e 95–120 s.\n2. Escolher a estratégia: Associe movimento uniforme a reta, desaceleração a concavidade para baixo, repouso a horizontal e aceleração a concavidade para cima.\n3. Aplicar o conceito: As posições acumuladas são s(30) = 300 m, s(50) = 400 m, s(80) = 400 m e s(95) = 490 m; v(95) = 12 m/s.\n4. Justificar: De 95 a 120 s, soma-se 12 × 25 = 300 m: s(120) = 790 m. A posição não cai durante a frenagem, pois a velocidade continua positiva.\n5. Conferir: O gráfico A é o que respeita formas e valores. Compare os quatro gráficos na página original; as alternativas são visuais.\n\nPadrão de cobrança e pegadinha\nDesacelerar não é voltar ao ponto de partida. Em s(t), a velocidade é a inclinação, não a altura da curva.\n\nRevisão ativa — responda sem consultar\n1. O que uma horizontal em s(t) significa?\n2. Como reconhecer aceleração negativa com velocidade positiva?\n\nTransferência — Exercício autoral: desenhe s(t) de um veículo a 8 m/s por 10 s, freando até parar nos 4 s seguintes.\nCritérios de resposta:\n• Reta até s = 80 m, depois curva crescente côncava para baixo.\n• Deslocamento de frenagem 16 m; posição final 96 m.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q13-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/unicamp_2026_q13-2.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q14",
@@ -94570,7 +95899,12 @@
       "version": "Q/X",
       "questionNumber": 16
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 16.\n\nConceito e pré-requisitos\nRegionalização econômica versus posição geográfica; pré-requisito: Equador e Greenwich.\n\nResolução por etapas\n1. Identificar dados: Separe a classificação Norte/Sul Global da localização nos hemisférios indicada no mapa.\n2. Escolher a estratégia: Teste cada alternativa em dois planos: grupo geopolítico e posição norte/sul, leste/oeste.\n3. Aplicar o conceito: Estados Unidos e Canadá pertencem ao Norte Global e localizam-se nos hemisférios setentrional e ocidental.\n4. Justificar: A erra ao colocar Austrália e Nova Zelândia no ocidental; B coloca países sul-americanos no oriental; D inclui China e Índia no Norte Global.\n5. Conferir: C é a única combinação integralmente correta. Norte Global não é sinônimo de hemisfério norte.\n\nPadrão de cobrança e pegadinha\nUma metade correta não salva a alternativa. Confira todos os países e ambos os hemisférios.\n\nRevisão ativa — responda sem consultar\n1. Qual diferença há entre Norte Global e hemisfério norte?\n2. Como Greenwich divide os hemisférios?\n\nTransferência — Exercício autoral: localize a Austrália nos hemisférios e explique sua classificação no Norte Global.\nCritérios de resposta:\n• Hemisférios sul e oriental.\n• Classificação socioeconômica e geopolítica, não latitude."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 16.\n\nConceito e pré-requisitos\nRegionalização econômica versus posição geográfica; pré-requisito: Equador e Greenwich.\n\nResolução por etapas\n1. Identificar dados: Separe a classificação Norte/Sul Global da localização nos hemisférios indicada no mapa.\n2. Escolher a estratégia: Teste cada alternativa em dois planos: grupo geopolítico e posição norte/sul, leste/oeste.\n3. Aplicar o conceito: Estados Unidos e Canadá pertencem ao Norte Global e localizam-se nos hemisférios setentrional e ocidental.\n4. Justificar: A erra ao colocar Austrália e Nova Zelândia no ocidental; B coloca países sul-americanos no oriental; D inclui China e Índia no Norte Global.\n5. Conferir: C é a única combinação integralmente correta. Norte Global não é sinônimo de hemisfério norte.\n\nPadrão de cobrança e pegadinha\nUma metade correta não salva a alternativa. Confira todos os países e ambos os hemisférios.\n\nRevisão ativa — responda sem consultar\n1. Qual diferença há entre Norte Global e hemisfério norte?\n2. Como Greenwich divide os hemisférios?\n\nTransferência — Exercício autoral: localize a Austrália nos hemisférios e explique sua classificação no Norte Global.\nCritérios de resposta:\n• Hemisférios sul e oriental.\n• Classificação socioeconômica e geopolítica, não latitude.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q16-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q17",
@@ -94618,7 +95952,12 @@
       "version": "Q/X",
       "questionNumber": 17
     },
-    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 17.\n\nConceito e pré-requisitos\nGradiente climático e adaptações vegetais; pré-requisito: xerófitas e sazonalidade das chuvas.\n\nResolução por etapas\n1. Identificar dados: Leia a legenda: zona III é subtropical árida e zona II é tropical estacional.\n2. Escolher a estratégia: Acompanhe a transição III → II pelo aumento relativo da disponibilidade de água.\n3. Aplicar o conceito: No contato com o deserto predominam vegetação de pequeno porte e adaptações xerófitas; em direção à zona II há savanização.\n4. Justificar: D respeita esse gradiente. Árvores higrófilas e florestas densas não caracterizam o lado árido da transição.\n5. Conferir: Confira D pela combinação entre legenda e fitofisionomia; não trate zonas de transição como fronteiras abruptas.\n\nPadrão de cobrança e pegadinha\nOs números romanos dependem da legenda desta questão. Não reutilizar uma classificação memorizada de outro mapa.\n\nRevisão ativa — responda sem consultar\n1. O que significa xerófita?\n2. Como a transição deserto–savana se relaciona às chuvas?\n\nTransferência — Exercício autoral: descreva duas mudanças esperadas na vegetação ao passar de região árida a tropical estacional.\nCritérios de resposta:\n• Menor domínio de adaptações extremas à escassez hídrica.\n• Crescimento da cobertura de savana associado à disponibilidade sazonal de água."
+    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 17.\n\nConceito e pré-requisitos\nGradiente climático e adaptações vegetais; pré-requisito: xerófitas e sazonalidade das chuvas.\n\nResolução por etapas\n1. Identificar dados: Leia a legenda: zona III é subtropical árida e zona II é tropical estacional.\n2. Escolher a estratégia: Acompanhe a transição III → II pelo aumento relativo da disponibilidade de água.\n3. Aplicar o conceito: No contato com o deserto predominam vegetação de pequeno porte e adaptações xerófitas; em direção à zona II há savanização.\n4. Justificar: D respeita esse gradiente. Árvores higrófilas e florestas densas não caracterizam o lado árido da transição.\n5. Conferir: Confira D pela combinação entre legenda e fitofisionomia; não trate zonas de transição como fronteiras abruptas.\n\nPadrão de cobrança e pegadinha\nOs números romanos dependem da legenda desta questão. Não reutilizar uma classificação memorizada de outro mapa.\n\nRevisão ativa — responda sem consultar\n1. O que significa xerófita?\n2. Como a transição deserto–savana se relaciona às chuvas?\n\nTransferência — Exercício autoral: descreva duas mudanças esperadas na vegetação ao passar de região árida a tropical estacional.\nCritérios de resposta:\n• Menor domínio de adaptações extremas à escassez hídrica.\n• Crescimento da cobertura de savana associado à disponibilidade sazonal de água.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q17-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q18",
@@ -94666,7 +96005,12 @@
       "version": "Q/X",
       "questionNumber": 18
     },
-    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 18.\n\nConceito e pré-requisitos\nDrenagem exorreica e interdependência hídrica; pré-requisito: bacia, afluente, montante e jusante.\n\nResolução por etapas\n1. Identificar dados: Localize o sentido dos cursos de água, a Índia, o Paquistão e a saída da bacia para o oceano.\n2. Escolher a estratégia: Use montante/jusante como posição relativa no fluxo; identifique quem pode interferir no abastecimento a jusante.\n3. Aplicar o conceito: Os afluentes situados a montante do Paquistão permitem à Índia interferir no fluxo destinado às áreas agrícolas paquistanesas.\n4. Justificar: A drenagem é exorreica, pois alcança o oceano. A e C erram com endorreica; B inverte a capacidade de controle.\n5. Conferir: D combina direção, tipo de drenagem e consequência econômica. Confira o trajeto no mapa original.\n\nPadrão de cobrança e pegadinha\nMontante não quer dizer norte. A posição depende do sentido do rio.\n\nRevisão ativa — responda sem consultar\n1. Quem fica a jusante de uma barragem sofre quais efeitos possíveis?\n2. Como distinguir bacia exorreica de endorreica?\n\nTransferência — Exercício autoral: dois países compartilham um rio que desemboca no mar. Explique o risco de retenção de água no país a montante.\nCritérios de resposta:\n• Drenagem exorreica.\n• Possível redução da vazão a jusante, com efeitos agrícolas e necessidade de acordo."
+    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 18.\n\nConceito e pré-requisitos\nDrenagem exorreica e interdependência hídrica; pré-requisito: bacia, afluente, montante e jusante.\n\nResolução por etapas\n1. Identificar dados: Localize o sentido dos cursos de água, a Índia, o Paquistão e a saída da bacia para o oceano.\n2. Escolher a estratégia: Use montante/jusante como posição relativa no fluxo; identifique quem pode interferir no abastecimento a jusante.\n3. Aplicar o conceito: Os afluentes situados a montante do Paquistão permitem à Índia interferir no fluxo destinado às áreas agrícolas paquistanesas.\n4. Justificar: A drenagem é exorreica, pois alcança o oceano. A e C erram com endorreica; B inverte a capacidade de controle.\n5. Conferir: D combina direção, tipo de drenagem e consequência econômica. Confira o trajeto no mapa original.\n\nPadrão de cobrança e pegadinha\nMontante não quer dizer norte. A posição depende do sentido do rio.\n\nRevisão ativa — responda sem consultar\n1. Quem fica a jusante de uma barragem sofre quais efeitos possíveis?\n2. Como distinguir bacia exorreica de endorreica?\n\nTransferência — Exercício autoral: dois países compartilham um rio que desemboca no mar. Explique o risco de retenção de água no país a montante.\nCritérios de resposta:\n• Drenagem exorreica.\n• Possível redução da vazão a jusante, com efeitos agrícolas e necessidade de acordo.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q18-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q19",
@@ -94714,7 +96058,12 @@
       "version": "Q/X",
       "questionNumber": 19
     },
-    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 19.\n\nConceito e pré-requisitos\nLeitura de mapa e quadro geopolítico; pré-requisito: diferenças entre grupos e Estados.\n\nResolução por etapas\n1. Identificar dados: Localize Iraque, Síria, Iêmen e Líbano e leia as colunas Disputas e Alianças.\n2. Escolher a estratégia: Associe grupos a seus países e teste o quadro completo, evitando uma classificação genérica de todo o Oriente Médio.\n3. Aplicar o conceito: O quadro correto apresenta disputas com a minoria sunita no Iraque e com o Estado Islâmico na Síria; alianças com Houthis e Hezbollah.\n4. Justificar: A respeita a organização pedida. As outras permutam aliados e adversários, especialmente Houthis, Hezbollah e Estado Islâmico.\n5. Conferir: Confira A nas duas colunas. Trata-se do contexto descrito na prova, não de uma afirmação de uniformidade entre todos os sunitas ou xiitas.\n\nPadrão de cobrança e pegadinha\nIdentidade religiosa não torna todos os grupos aliados. A banca cobra relações específicas situadas no tempo e no espaço.\n\nRevisão ativa — responda sem consultar\n1. Em que países atuam Houthis e Hezbollah?\n2. Por que não basta opor países “muçulmanos” a países “ocidentais”?\n\nTransferência — Exercício autoral: organize um quadro com um Estado, um grupo aliado e um adversário no contexto descrito.\nCritérios de resposta:\n• Irã e um dos aliados mencionados com localização correta.\n• Distinguir grupo armado, população religiosa e Estado."
+    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 19.\n\nConceito e pré-requisitos\nLeitura de mapa e quadro geopolítico; pré-requisito: diferenças entre grupos e Estados.\n\nResolução por etapas\n1. Identificar dados: Localize Iraque, Síria, Iêmen e Líbano e leia as colunas Disputas e Alianças.\n2. Escolher a estratégia: Associe grupos a seus países e teste o quadro completo, evitando uma classificação genérica de todo o Oriente Médio.\n3. Aplicar o conceito: O quadro correto apresenta disputas com a minoria sunita no Iraque e com o Estado Islâmico na Síria; alianças com Houthis e Hezbollah.\n4. Justificar: A respeita a organização pedida. As outras permutam aliados e adversários, especialmente Houthis, Hezbollah e Estado Islâmico.\n5. Conferir: Confira A nas duas colunas. Trata-se do contexto descrito na prova, não de uma afirmação de uniformidade entre todos os sunitas ou xiitas.\n\nPadrão de cobrança e pegadinha\nIdentidade religiosa não torna todos os grupos aliados. A banca cobra relações específicas situadas no tempo e no espaço.\n\nRevisão ativa — responda sem consultar\n1. Em que países atuam Houthis e Hezbollah?\n2. Por que não basta opor países “muçulmanos” a países “ocidentais”?\n\nTransferência — Exercício autoral: organize um quadro com um Estado, um grupo aliado e um adversário no contexto descrito.\nCritérios de resposta:\n• Irã e um dos aliados mencionados com localização correta.\n• Distinguir grupo armado, população religiosa e Estado.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q19-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q20",
@@ -94762,7 +96111,12 @@
       "version": "Q/X",
       "questionNumber": 20
     },
-    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 20.\n\nConceito e pré-requisitos\nCircuitos espaciais produtivos e seletividade territorial; pré-requisito: inovação e especialização.\n\nResolução por etapas\n1. Identificar dados: Localize no mapa as regiões incorporadas aos circuitos produtivos a partir dos anos 1970.\n2. Escolher a estratégia: Procure o efeito da especialização em áreas específicas, e não uma difusão homogênea por todo o território.\n3. Aplicar o conceito: A especialização aumenta o uso de técnicas e a conexão com mercados globalizados, mas a modernização seleciona espaços.\n4. Justificar: A explicita seletividade e impactos nos mosaicos tradicionais. B e D supõem disseminação automática para todos os setores.\n5. Conferir: Confira A sem concluir que o território inteiro se modernizou do mesmo modo: os enclaves e os contrastes são centrais.\n\nPadrão de cobrança e pegadinha\nMaior conexão externa pode coexistir com desigualdade interna. Não confundir integração global com homogeneidade regional.\n\nRevisão ativa — responda sem consultar\n1. O que é seletividade espacial?\n2. Como um circuito globalizado pode alterar a produção tradicional?\n\nTransferência — Exercício autoral: explique por que duas regiões vizinhas podem receber intensidades diferentes de inovação agrícola.\nCritérios de resposta:\n• Considerar infraestrutura, investimento e especialização.\n• Relacionar a desigualdade à seleção de espaços, não a ausência total de redes."
+    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 20.\n\nConceito e pré-requisitos\nCircuitos espaciais produtivos e seletividade territorial; pré-requisito: inovação e especialização.\n\nResolução por etapas\n1. Identificar dados: Localize no mapa as regiões incorporadas aos circuitos produtivos a partir dos anos 1970.\n2. Escolher a estratégia: Procure o efeito da especialização em áreas específicas, e não uma difusão homogênea por todo o território.\n3. Aplicar o conceito: A especialização aumenta o uso de técnicas e a conexão com mercados globalizados, mas a modernização seleciona espaços.\n4. Justificar: A explicita seletividade e impactos nos mosaicos tradicionais. B e D supõem disseminação automática para todos os setores.\n5. Conferir: Confira A sem concluir que o território inteiro se modernizou do mesmo modo: os enclaves e os contrastes são centrais.\n\nPadrão de cobrança e pegadinha\nMaior conexão externa pode coexistir com desigualdade interna. Não confundir integração global com homogeneidade regional.\n\nRevisão ativa — responda sem consultar\n1. O que é seletividade espacial?\n2. Como um circuito globalizado pode alterar a produção tradicional?\n\nTransferência — Exercício autoral: explique por que duas regiões vizinhas podem receber intensidades diferentes de inovação agrícola.\nCritérios de resposta:\n• Considerar infraestrutura, investimento e especialização.\n• Relacionar a desigualdade à seleção de espaços, não a ausência total de redes.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q20-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q21",
@@ -94810,7 +96164,12 @@
       "version": "Q/X",
       "questionNumber": 21
     },
-    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 21.\n\nConceito e pré-requisitos\nComando territorial por vínculos empresariais; pré-requisito: hierarquia urbana e leitura de séries.\n\nResolução por etapas\n1. Identificar dados: Identifique o indicador: trabalhadores de uma empresa fora do município onde está sua sede.\n2. Escolher a estratégia: Leia as tendências no gráfico e associe o indicador a comando empresarial, não simplesmente a população municipal.\n3. Aplicar o conceito: Barueri apresenta crescimento do assalariado externo e integra a Região Metropolitana de São Paulo.\n4. Justificar: Esse movimento reforça a posição metropolitana na gestão empresarial. As demais alternativas distorcem tendências ou confundem gestão pública e empresarial.\n5. Conferir: B corresponde ao indicador e à rede urbana. Uma sede concentra comando mesmo quando parte dos empregados trabalha em outros lugares.\n\nPadrão de cobrança e pegadinha\nA unidade medida é emprego externo à sede, não a população da cidade. Ler o título e a variável evita diagnóstico errado.\n\nRevisão ativa — responda sem consultar\n1. Como uma sede empresarial comanda atividades distantes?\n2. Por que município e região metropolitana não são escalas equivalentes?\n\nTransferência — Exercício autoral: uma empresa tem sede em A e filiais em cinco cidades. Explique como A ganha centralidade.\nCritérios de resposta:\n• Identificar decisão e gestão concentradas na sede.\n• Distinguir empregos nas filiais de população da sede."
+    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 21.\n\nConceito e pré-requisitos\nComando territorial por vínculos empresariais; pré-requisito: hierarquia urbana e leitura de séries.\n\nResolução por etapas\n1. Identificar dados: Identifique o indicador: trabalhadores de uma empresa fora do município onde está sua sede.\n2. Escolher a estratégia: Leia as tendências no gráfico e associe o indicador a comando empresarial, não simplesmente a população municipal.\n3. Aplicar o conceito: Barueri apresenta crescimento do assalariado externo e integra a Região Metropolitana de São Paulo.\n4. Justificar: Esse movimento reforça a posição metropolitana na gestão empresarial. As demais alternativas distorcem tendências ou confundem gestão pública e empresarial.\n5. Conferir: B corresponde ao indicador e à rede urbana. Uma sede concentra comando mesmo quando parte dos empregados trabalha em outros lugares.\n\nPadrão de cobrança e pegadinha\nA unidade medida é emprego externo à sede, não a população da cidade. Ler o título e a variável evita diagnóstico errado.\n\nRevisão ativa — responda sem consultar\n1. Como uma sede empresarial comanda atividades distantes?\n2. Por que município e região metropolitana não são escalas equivalentes?\n\nTransferência — Exercício autoral: uma empresa tem sede em A e filiais em cinco cidades. Explique como A ganha centralidade.\nCritérios de resposta:\n• Identificar decisão e gestão concentradas na sede.\n• Distinguir empregos nas filiais de população da sede.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q21-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q22",
@@ -94858,7 +96217,12 @@
       "version": "Q/X",
       "questionNumber": 22
     },
-    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 22.\n\nConceito e pré-requisitos\nGosto como prática social de classe; pré-requisito: função, forma e necessidade.\n\nResolução por etapas\n1. Identificar dados: Compare a imagem da refeição com o texto sobre desinteresse, distância da necessidade e senso estético.\n2. Escolher a estratégia: Use o conceito de distinção para explicar a valorização da apresentação, sem reduzir o gosto a preferência individual.\n3. Aplicar o conceito: A estética da refeição de luxo valoriza forma e afastamento da necessidade de saciedade como sinais de posição social.\n4. Justificar: D expressa essa prática de distinção. C reconhece a classe, mas inverte o papel da necessidade na formação desse gosto.\n5. Conferir: Confira D com a definição do texto. O problema não é decidir se a feijoada é bonita, mas interpretar seu sentido social.\n\nPadrão de cobrança e pegadinha\nUm exemplo cotidiano pede aplicação de conceito. Juízo pessoal sobre a comida não substitui análise sociológica.\n\nRevisão ativa — responda sem consultar\n1. Como forma e função se distinguem no texto?\n2. Por que o gosto pode ser relacionado à posição de classe?\n\nTransferência — Exercício autoral: explique uma apresentação de comida que prioriza a aparência sobre a saciedade.\nCritérios de resposta:\n• Usar o conceito de distinção social.\n• Relacionar forma e distância da necessidade, sem presumir o gosto de todo indivíduo de uma classe."
+    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 22.\n\nConceito e pré-requisitos\nGosto como prática social de classe; pré-requisito: função, forma e necessidade.\n\nResolução por etapas\n1. Identificar dados: Compare a imagem da refeição com o texto sobre desinteresse, distância da necessidade e senso estético.\n2. Escolher a estratégia: Use o conceito de distinção para explicar a valorização da apresentação, sem reduzir o gosto a preferência individual.\n3. Aplicar o conceito: A estética da refeição de luxo valoriza forma e afastamento da necessidade de saciedade como sinais de posição social.\n4. Justificar: D expressa essa prática de distinção. C reconhece a classe, mas inverte o papel da necessidade na formação desse gosto.\n5. Conferir: Confira D com a definição do texto. O problema não é decidir se a feijoada é bonita, mas interpretar seu sentido social.\n\nPadrão de cobrança e pegadinha\nUm exemplo cotidiano pede aplicação de conceito. Juízo pessoal sobre a comida não substitui análise sociológica.\n\nRevisão ativa — responda sem consultar\n1. Como forma e função se distinguem no texto?\n2. Por que o gosto pode ser relacionado à posição de classe?\n\nTransferência — Exercício autoral: explique uma apresentação de comida que prioriza a aparência sobre a saciedade.\nCritérios de resposta:\n• Usar o conceito de distinção social.\n• Relacionar forma e distância da necessidade, sem presumir o gosto de todo indivíduo de uma classe.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q22-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q23",
@@ -95202,7 +96566,12 @@
       "version": "Q/X",
       "questionNumber": 29
     },
-    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 29.\n\nConceito e pré-requisitos\nFormação de elite e representação do corpo; pré-requisito: cidadania ateniense e leitura iconográfica.\n\nResolução por etapas\n1. Identificar dados: Observe atleta sem barba, treinamento em palestra e inscrição de beleza; considere a preparação para cidadania.\n2. Escolher a estratégia: Relacione representação idealizada do corpo às condições sociais de formação do atleta.\n3. Aplicar o conceito: A cena expressa beleza e treinamento vinculados ao jovem bem-nascido, configurando distinção de classe.\n4. Justificar: B respeita a interpretação apoiada no texto. A associa a cena ao trabalho manual; C chama de maduro quem é descrito sem barba.\n5. Conferir: Confira B: a imagem representa preparação, não prova de vitória olímpica nem ápice já consumado de masculinidade.\n\nPadrão de cobrança e pegadinha\nA ausência de barba é pista etária. Não importar a noção atual de esporte universal para a cidadania antiga.\n\nRevisão ativa — responda sem consultar\n1. Qual detalhe sugere juventude?\n2. Como treinamento corporal e privilégio social se relacionam?\n\nTransferência — Exercício autoral: explique por que uma imagem de atleta não prova igualdade de acesso ao esporte em Atenas.\nCritérios de resposta:\n• Relacionar prática a formação e condições sociais.\n• Distinguir ideal representado de participação universal."
+    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 29.\n\nConceito e pré-requisitos\nFormação de elite e representação do corpo; pré-requisito: cidadania ateniense e leitura iconográfica.\n\nResolução por etapas\n1. Identificar dados: Observe atleta sem barba, treinamento em palestra e inscrição de beleza; considere a preparação para cidadania.\n2. Escolher a estratégia: Relacione representação idealizada do corpo às condições sociais de formação do atleta.\n3. Aplicar o conceito: A cena expressa beleza e treinamento vinculados ao jovem bem-nascido, configurando distinção de classe.\n4. Justificar: B respeita a interpretação apoiada no texto. A associa a cena ao trabalho manual; C chama de maduro quem é descrito sem barba.\n5. Conferir: Confira B: a imagem representa preparação, não prova de vitória olímpica nem ápice já consumado de masculinidade.\n\nPadrão de cobrança e pegadinha\nA ausência de barba é pista etária. Não importar a noção atual de esporte universal para a cidadania antiga.\n\nRevisão ativa — responda sem consultar\n1. Qual detalhe sugere juventude?\n2. Como treinamento corporal e privilégio social se relacionam?\n\nTransferência — Exercício autoral: explique por que uma imagem de atleta não prova igualdade de acesso ao esporte em Atenas.\nCritérios de resposta:\n• Relacionar prática a formação e condições sociais.\n• Distinguir ideal representado de participação universal.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q29-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q30",
@@ -95402,7 +96771,15 @@
       "version": "Q/X",
       "questionNumber": 33
     },
-    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 33.\n\nConceito e pré-requisitos\nArte como resistência à ditadura; pré-requisito: repressão pós-AI-5 e leitura contextual de símbolos.\n\nResolução por etapas\n1. Identificar dados: Observe desenhos infantis e motivos militares e situe o desfile em 1971, durante a repressão política.\n2. Escolher a estratégia: Relacione os símbolos ao contexto da denúncia, sem atribuir apoio ao regime apenas por representar armas ou uniformes.\n3. Aplicar o conceito: A combinação de desenhos infantis e motivos militares funciona como denúncia do desaparecimento de presos políticos.\n4. Justificar: B interpreta o contraste e o contexto. A sugere amenização; C confunde representação crítica com alienação; D transforma denúncia em adesão.\n5. Conferir: Confira B relacionando imagens e data. A presença de símbolo militar não informa sozinha se há celebração ou crítica.\n\nPadrão de cobrança e pegadinha\nO significado político de uma imagem depende de sua montagem e contexto, não de uma lista de objetos.\n\nRevisão ativa — responda sem consultar\n1. Por que representar um canhão pode ser denúncia?\n2. O que a data de 1971 acrescenta à leitura?\n\nTransferência — Exercício autoral: explique uma obra que justapõe brinquedos e símbolos de violência estatal.\nCritérios de resposta:\n• Descrever o contraste visual.\n• Justificar leitura crítica pelo contexto sem presumir apoio aos símbolos retratados."
+    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 33.\n\nConceito e pré-requisitos\nArte como resistência à ditadura; pré-requisito: repressão pós-AI-5 e leitura contextual de símbolos.\n\nResolução por etapas\n1. Identificar dados: Observe desenhos infantis e motivos militares e situe o desfile em 1971, durante a repressão política.\n2. Escolher a estratégia: Relacione os símbolos ao contexto da denúncia, sem atribuir apoio ao regime apenas por representar armas ou uniformes.\n3. Aplicar o conceito: A combinação de desenhos infantis e motivos militares funciona como denúncia do desaparecimento de presos políticos.\n4. Justificar: B interpreta o contraste e o contexto. A sugere amenização; C confunde representação crítica com alienação; D transforma denúncia em adesão.\n5. Conferir: Confira B relacionando imagens e data. A presença de símbolo militar não informa sozinha se há celebração ou crítica.\n\nPadrão de cobrança e pegadinha\nO significado político de uma imagem depende de sua montagem e contexto, não de uma lista de objetos.\n\nRevisão ativa — responda sem consultar\n1. Por que representar um canhão pode ser denúncia?\n2. O que a data de 1971 acrescenta à leitura?\n\nTransferência — Exercício autoral: explique uma obra que justapõe brinquedos e símbolos de violência estatal.\nCritérios de resposta:\n• Descrever o contraste visual.\n• Justificar leitura crítica pelo contexto sem presumir apoio aos símbolos retratados.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q33-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/unicamp_2026_q33-2.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q34",
@@ -95450,7 +96827,18 @@
       "version": "Q/X",
       "questionNumber": 34
     },
-    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 34.\n\nConceito e pré-requisitos\nFormação histórica de nacionalidade; pré-requisito: direito de solo e direito de sangue.\n\nResolução por etapas\n1. Identificar dados: Leia as definições e observe o predomínio de cada princípio no mapa contemporâneo.\n2. Escolher a estratégia: Relacione nacionalidade aos processos históricos de formação dos Estados e de imigração.\n3. Aplicar o conceito: Ex-colônias americanas receberam fluxos imigratórios relevantes, que influenciaram suas definições de nacionalidade e cidadania.\n4. Justificar: B articula mapa e história. A universaliza aquisição de nacionalidade na Europa; C e D introduzem explicações que o texto não sustenta.\n5. Conferir: Confira B sem transformar predominância cartográfica em regra absoluta: legislações podem combinar critérios e condições.\n\nPadrão de cobrança e pegadinha\nNacionalidade por solo ou filiação não é uma distinção natural eterna; o texto destaca sua construção histórica.\n\nRevisão ativa — responda sem consultar\n1. Como jus soli difere de jus sanguinis?\n2. Por que países de imigração podem valorizar o nascimento no território?\n\nTransferência — Exercício autoral: compare a nacionalidade de uma criança por local de nascimento e por filiação.\nCritérios de resposta:\n• Definir corretamente ambos os critérios.\n• Indicar que aplicação e combinações dependem da legislação de cada país."
+    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 34.\n\nConceito e pré-requisitos\nFormação histórica de nacionalidade; pré-requisito: direito de solo e direito de sangue.\n\nResolução por etapas\n1. Identificar dados: Leia as definições e observe o predomínio de cada princípio no mapa contemporâneo.\n2. Escolher a estratégia: Relacione nacionalidade aos processos históricos de formação dos Estados e de imigração.\n3. Aplicar o conceito: Ex-colônias americanas receberam fluxos imigratórios relevantes, que influenciaram suas definições de nacionalidade e cidadania.\n4. Justificar: B articula mapa e história. A universaliza aquisição de nacionalidade na Europa; C e D introduzem explicações que o texto não sustenta.\n5. Conferir: Confira B sem transformar predominância cartográfica em regra absoluta: legislações podem combinar critérios e condições.\n\nPadrão de cobrança e pegadinha\nNacionalidade por solo ou filiação não é uma distinção natural eterna; o texto destaca sua construção histórica.\n\nRevisão ativa — responda sem consultar\n1. Como jus soli difere de jus sanguinis?\n2. Por que países de imigração podem valorizar o nascimento no território?\n\nTransferência — Exercício autoral: compare a nacionalidade de uma criança por local de nascimento e por filiação.\nCritérios de resposta:\n• Definir corretamente ambos os critérios.\n• Indicar que aplicação e combinações dependem da legislação de cada país.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q34-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/unicamp_2026_q34-2.webp"
+      },
+      {
+        "url": "/question-media/figuras/unicamp_2026_q34-3.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q35",
@@ -95498,7 +96886,12 @@
       "version": "Q/X",
       "questionNumber": 35
     },
-    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 35.\n\nConceito e pré-requisitos\nComparação experimental com controles; pré-requisito: grupos experimental/controle e leitura de distribuição.\n\nResolução por etapas\n1. Identificar dados: Identifique camundongos colonizados por microbiotas EUA, FIJI e GUAT e compare controles com infectados.\n2. Escolher a estratégia: Use aumento da profundidade das glândulas como indicador de efeito inflamatório apresentado, não como medida direta de digestão.\n3. Aplicar o conceito: Nos grupos EUA e FIJI, a distribuição dos infectados está acima dos controles; em GUAT, a diferença é muito menor.\n4. Justificar: A é compatível com maior suscetibilidade nos dois primeiros grupos. B e D atribuem benefício digestivo que não foi medido.\n5. Conferir: Confira A e respeite o modelo: são camundongos com microbiota de diferentes populações, não um teste clínico direto em humanos.\n\nPadrão de cobrança e pegadinha\nComparar apenas valores absolutos sem o controle pode inverter a interpretação. A figura não mede todas as funções da microbiota.\n\nRevisão ativa — responda sem consultar\n1. Qual grupo deve ser comparado com cada infectado?\n2. Por que o experimento não prova maior eficiência digestiva?\n\nTransferência — Exercício autoral: descreva como testar o efeito de uma microbiota sobre inflamação, controlando a infecção.\nCritérios de resposta:\n• Comparar animais infectados e não infectados com a mesma microbiota.\n• Definir um indicador inflamatório e evitar conclusões sobre funções não medidas."
+    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 35.\n\nConceito e pré-requisitos\nComparação experimental com controles; pré-requisito: grupos experimental/controle e leitura de distribuição.\n\nResolução por etapas\n1. Identificar dados: Identifique camundongos colonizados por microbiotas EUA, FIJI e GUAT e compare controles com infectados.\n2. Escolher a estratégia: Use aumento da profundidade das glândulas como indicador de efeito inflamatório apresentado, não como medida direta de digestão.\n3. Aplicar o conceito: Nos grupos EUA e FIJI, a distribuição dos infectados está acima dos controles; em GUAT, a diferença é muito menor.\n4. Justificar: A é compatível com maior suscetibilidade nos dois primeiros grupos. B e D atribuem benefício digestivo que não foi medido.\n5. Conferir: Confira A e respeite o modelo: são camundongos com microbiota de diferentes populações, não um teste clínico direto em humanos.\n\nPadrão de cobrança e pegadinha\nComparar apenas valores absolutos sem o controle pode inverter a interpretação. A figura não mede todas as funções da microbiota.\n\nRevisão ativa — responda sem consultar\n1. Qual grupo deve ser comparado com cada infectado?\n2. Por que o experimento não prova maior eficiência digestiva?\n\nTransferência — Exercício autoral: descreva como testar o efeito de uma microbiota sobre inflamação, controlando a infecção.\nCritérios de resposta:\n• Comparar animais infectados e não infectados com a mesma microbiota.\n• Definir um indicador inflamatório e evitar conclusões sobre funções não medidas.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q35-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q36",
@@ -95594,7 +96987,12 @@
       "version": "Q/X",
       "questionNumber": 37
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 37.\n\nConceito e pré-requisitos\nSegregação mendeliana e homozigose recessiva; pré-requisito: genótipo versus fenótipo.\n\nResolução por etapas\n1. Identificar dados: Os pais em preto são heterozigotos; represente-os como Aa. O alelo recessivo deletério reduz ganho de peso em aa.\n2. Escolher a estratégia: Monte Aa × Aa e conte genótipos esperados, sem usar os três descendentes desenhados como frequência universal.\n3. Aplicar o conceito: A descendência esperada é 1/4 AA, 1/2 Aa e 1/4 aa. A condição recessiva deletéria ocorre em 25%.\n4. Justificar: C relaciona essa expressão à depressão endogâmica. Homozigose total é 50%, mas AA e aa não têm o mesmo efeito descrito.\n5. Conferir: Confira C pelo cruzamento. Valores de massa na figura não substituem a probabilidade mendeliana da geração.\n\nPadrão de cobrança e pegadinha\nA heterozigose esperada é 50%, não 33%. Diferencie probabilidade do cruzamento, amostra desenhada e efeito do alelo.\n\nRevisão ativa — responda sem consultar\n1. Por que 50% de homozigotos não significa 50% com alelo deletério em dose dupla?\n2. Qual relação a endogamia tem com exposição de recessivos?\n\nTransferência — Exercício autoral: cruze Aa com aa para um alelo recessivo deletério. Determine a chance de aa.\nCritérios de resposta:\n• 50% Aa e 50% aa.\n• Explicar que o efeito deletério recessivo aparece em aa."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 37.\n\nConceito e pré-requisitos\nSegregação mendeliana e homozigose recessiva; pré-requisito: genótipo versus fenótipo.\n\nResolução por etapas\n1. Identificar dados: Os pais em preto são heterozigotos; represente-os como Aa. O alelo recessivo deletério reduz ganho de peso em aa.\n2. Escolher a estratégia: Monte Aa × Aa e conte genótipos esperados, sem usar os três descendentes desenhados como frequência universal.\n3. Aplicar o conceito: A descendência esperada é 1/4 AA, 1/2 Aa e 1/4 aa. A condição recessiva deletéria ocorre em 25%.\n4. Justificar: C relaciona essa expressão à depressão endogâmica. Homozigose total é 50%, mas AA e aa não têm o mesmo efeito descrito.\n5. Conferir: Confira C pelo cruzamento. Valores de massa na figura não substituem a probabilidade mendeliana da geração.\n\nPadrão de cobrança e pegadinha\nA heterozigose esperada é 50%, não 33%. Diferencie probabilidade do cruzamento, amostra desenhada e efeito do alelo.\n\nRevisão ativa — responda sem consultar\n1. Por que 50% de homozigotos não significa 50% com alelo deletério em dose dupla?\n2. Qual relação a endogamia tem com exposição de recessivos?\n\nTransferência — Exercício autoral: cruze Aa com aa para um alelo recessivo deletério. Determine a chance de aa.\nCritérios de resposta:\n• 50% Aa e 50% aa.\n• Explicar que o efeito deletério recessivo aparece em aa.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q37-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q38",
@@ -95646,7 +97044,15 @@
       "version": "Q/X",
       "questionNumber": 38
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 38.\n\nConceito e pré-requisitos\nPloidia em ciclo haplonte; pré-requisito: n, 2n e distinção entre fusão celular e nuclear.\n\nResolução por etapas\n1. Identificar dados: Acompanhe na figura fases n, células com núcleos separados e a breve etapa 2n.\n2. Escolher a estratégia: Identifique eventos por alteração de ploidia e por fusão, não apenas pela direção das setas.\n3. Aplicar o conceito: I e II correspondem a mitoses; III é plasmogamia, união de citoplasmas; IV é meiose após a fase diploide.\n4. Justificar: A plasmogamia não é cariogamia: os núcleos podem permanecer separados antes da fusão nuclear. A meiose restaura a condição haploide.\n5. Conferir: A sequência mitose, mitose, plasmogamia, meiose é C. Confira a tabela na página original.\n\nPadrão de cobrança e pegadinha\nn + n não é automaticamente 2n no mesmo núcleo. Confundir plasmogamia e cariogamia compromete a leitura do ciclo.\n\nRevisão ativa — responda sem consultar\n1. Qual evento reduz a ploidia?\n2. Por que uma célula dicariótica não é um núcleo diploide?\n\nTransferência — Exercício autoral: descreva plasmogamia, cariogamia e meiose em sequência.\nCritérios de resposta:\n• Fusão de citoplasmas, depois fusão de núcleos.\n• Meiose reduz 2n a n; não atribuir essa redução à mitose."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 38.\n\nConceito e pré-requisitos\nPloidia em ciclo haplonte; pré-requisito: n, 2n e distinção entre fusão celular e nuclear.\n\nResolução por etapas\n1. Identificar dados: Acompanhe na figura fases n, células com núcleos separados e a breve etapa 2n.\n2. Escolher a estratégia: Identifique eventos por alteração de ploidia e por fusão, não apenas pela direção das setas.\n3. Aplicar o conceito: I e II correspondem a mitoses; III é plasmogamia, união de citoplasmas; IV é meiose após a fase diploide.\n4. Justificar: A plasmogamia não é cariogamia: os núcleos podem permanecer separados antes da fusão nuclear. A meiose restaura a condição haploide.\n5. Conferir: A sequência mitose, mitose, plasmogamia, meiose é C. Confira a tabela na página original.\n\nPadrão de cobrança e pegadinha\nn + n não é automaticamente 2n no mesmo núcleo. Confundir plasmogamia e cariogamia compromete a leitura do ciclo.\n\nRevisão ativa — responda sem consultar\n1. Qual evento reduz a ploidia?\n2. Por que uma célula dicariótica não é um núcleo diploide?\n\nTransferência — Exercício autoral: descreva plasmogamia, cariogamia e meiose em sequência.\nCritérios de resposta:\n• Fusão de citoplasmas, depois fusão de núcleos.\n• Meiose reduz 2n a n; não atribuir essa redução à mitose.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q38-1.webp"
+      },
+      {
+        "url": "/question-media/figuras/unicamp_2026_q38-2.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q39",
@@ -95694,7 +97100,12 @@
       "version": "Q/X",
       "questionNumber": 39
     },
-    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 39.\n\nConceito e pré-requisitos\nDinâmica de populações e efeitos indiretos; pré-requisito: predação, competição e extinção local.\n\nResolução por etapas\n1. Identificar dados: Leia a definição de sucesso da invasão e siga as curvas nos cenários I e II.\n2. Escolher a estratégia: Compare estabelecimento do exótico e destino das duas populações nativas, sem equiparar presença inicial a sucesso.\n3. Aplicar o conceito: No cenário I, o exótico se estabelece, a presa nativa diminui e o predador nativo é extinto.\n4. Justificar: Isso satisfaz o critério de sucesso dado no texto e corresponde a B. As demais trocam cenários, espécie extinta ou persistência do invasor.\n5. Conferir: Confira B pelo comportamento final das curvas; uma queda não significa extinção quando a densidade permanece acima de zero.\n\nPadrão de cobrança e pegadinha\nA definição operacional está no enunciado. Não exigir extinção de todas as espécies nativas para considerar invasão bem-sucedida.\n\nRevisão ativa — responda sem consultar\n1. Qual critério de sucesso a questão adota?\n2. Como distinguir redução populacional e extinção no gráfico?\n\nTransferência — Exercício autoral: um invasor persiste e reduz a presa nativa sem extingui-la. Avalie segundo a definição desta prova.\nCritérios de resposta:\n• Classificar como sucesso pelo critério de redução da nativa.\n• Explicar que persistência positiva não equivale a extinção."
+    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 39.\n\nConceito e pré-requisitos\nDinâmica de populações e efeitos indiretos; pré-requisito: predação, competição e extinção local.\n\nResolução por etapas\n1. Identificar dados: Leia a definição de sucesso da invasão e siga as curvas nos cenários I e II.\n2. Escolher a estratégia: Compare estabelecimento do exótico e destino das duas populações nativas, sem equiparar presença inicial a sucesso.\n3. Aplicar o conceito: No cenário I, o exótico se estabelece, a presa nativa diminui e o predador nativo é extinto.\n4. Justificar: Isso satisfaz o critério de sucesso dado no texto e corresponde a B. As demais trocam cenários, espécie extinta ou persistência do invasor.\n5. Conferir: Confira B pelo comportamento final das curvas; uma queda não significa extinção quando a densidade permanece acima de zero.\n\nPadrão de cobrança e pegadinha\nA definição operacional está no enunciado. Não exigir extinção de todas as espécies nativas para considerar invasão bem-sucedida.\n\nRevisão ativa — responda sem consultar\n1. Qual critério de sucesso a questão adota?\n2. Como distinguir redução populacional e extinção no gráfico?\n\nTransferência — Exercício autoral: um invasor persiste e reduz a presa nativa sem extingui-la. Avalie segundo a definição desta prova.\nCritérios de resposta:\n• Classificar como sucesso pelo critério de redução da nativa.\n• Explicar que persistência positiva não equivale a extinção.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q39-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q40",
@@ -95742,7 +97153,12 @@
       "version": "Q/X",
       "questionNumber": 40
     },
-    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 40.\n\nConceito e pré-requisitos\nHierarquia taxonômica e características de artrópodes; pré-requisito: distinguir filo e classe.\n\nResolução por etapas\n1. Identificar dados: Identifique mosquitos, abelhas, carrapatos e escorpiões na placa intitulada “insetos perigosos”.\n2. Escolher a estratégia: Separe o filo comum das classes diferentes.\n3. Aplicar o conceito: Todos são artrópodes; mosquitos e abelhas são insetos, enquanto carrapatos e escorpiões são aracnídeos.\n4. Justificar: O título é incorreto por incluir aracnídeos como insetos. C reconhece grupos, mas declara a placa correta; B exclui aracnídeos dos artrópodes.\n5. Conferir: D é a alternativa completa. Classificação correta dos animais e avaliação do título devem coincidir.\n\nPadrão de cobrança e pegadinha\nAracnídeo não é o oposto de artrópode: é uma classe dentro do filo. Confira a hierarquia.\n\nRevisão ativa — responda sem consultar\n1. Quantas pernas tem um inseto adulto típico?\n2. Qual relação taxonômica há entre Arachnida e Arthropoda?\n\nTransferência — Exercício autoral: corrija uma placa que chama aranha e formiga de insetos.\nCritérios de resposta:\n• Formiga é inseto; aranha é aracnídeo.\n• Um título comum adequado é artrópodes, se esses forem os únicos grupos listados."
+    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 40.\n\nConceito e pré-requisitos\nHierarquia taxonômica e características de artrópodes; pré-requisito: distinguir filo e classe.\n\nResolução por etapas\n1. Identificar dados: Identifique mosquitos, abelhas, carrapatos e escorpiões na placa intitulada “insetos perigosos”.\n2. Escolher a estratégia: Separe o filo comum das classes diferentes.\n3. Aplicar o conceito: Todos são artrópodes; mosquitos e abelhas são insetos, enquanto carrapatos e escorpiões são aracnídeos.\n4. Justificar: O título é incorreto por incluir aracnídeos como insetos. C reconhece grupos, mas declara a placa correta; B exclui aracnídeos dos artrópodes.\n5. Conferir: D é a alternativa completa. Classificação correta dos animais e avaliação do título devem coincidir.\n\nPadrão de cobrança e pegadinha\nAracnídeo não é o oposto de artrópode: é uma classe dentro do filo. Confira a hierarquia.\n\nRevisão ativa — responda sem consultar\n1. Quantas pernas tem um inseto adulto típico?\n2. Qual relação taxonômica há entre Arachnida e Arthropoda?\n\nTransferência — Exercício autoral: corrija uma placa que chama aranha e formiga de insetos.\nCritérios de resposta:\n• Formiga é inseto; aranha é aracnídeo.\n• Um título comum adequado é artrópodes, se esses forem os únicos grupos listados.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q40-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q41",
@@ -95794,7 +97210,12 @@
       "version": "Q/X",
       "questionNumber": 41
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 41.\n\nConceito e pré-requisitos\nDistribuição de características e coexistência; pré-requisito: evolução ramificada e cronologia de traços.\n\nResolução por etapas\n1. Identificar dados: Compare as espécies e procure nas alternativas afirmações exclusivas como “o primeiro”.\n2. Escolher a estratégia: Considere que bipedismo, ferramentas e uso do fogo não surgiram todos em Homo sapiens.\n3. Aplicar o conceito: Neandertais tinham cérebro desenvolvido, capacidade de comunicação e uso de fogo e ferramentas; coexistiram com outros hominídeos.\n4. Justificar: C reúne características compatíveis. A atribui fogo a Australopithecus; B faz de erectus o primeiro bípede; D reserva fogo e ferramentas a sapiens.\n5. Conferir: Confira C sem desenhar uma escada linear: espécies podem compartilhar características e coexistir.\n\nPadrão de cobrança e pegadinha\nUma alternativa pode trazer uma característica correta e uma prioridade cronológica falsa.\n\nRevisão ativa — responda sem consultar\n1. Por que evolução humana não é uma escada de quatro crânios?\n2. Que afirmações “foi o primeiro” invalidam as outras alternativas?\n\nTransferência — Exercício autoral: explique como duas espécies de hominídeos podem coexistir e compartilhar ferramentas.\nCritérios de resposta:\n• Usar evolução ramificada e ancestralidade.\n• Não confundir coexistência com identidade de espécie nem inovação com exclusividade de sapiens."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 41.\n\nConceito e pré-requisitos\nDistribuição de características e coexistência; pré-requisito: evolução ramificada e cronologia de traços.\n\nResolução por etapas\n1. Identificar dados: Compare as espécies e procure nas alternativas afirmações exclusivas como “o primeiro”.\n2. Escolher a estratégia: Considere que bipedismo, ferramentas e uso do fogo não surgiram todos em Homo sapiens.\n3. Aplicar o conceito: Neandertais tinham cérebro desenvolvido, capacidade de comunicação e uso de fogo e ferramentas; coexistiram com outros hominídeos.\n4. Justificar: C reúne características compatíveis. A atribui fogo a Australopithecus; B faz de erectus o primeiro bípede; D reserva fogo e ferramentas a sapiens.\n5. Conferir: Confira C sem desenhar uma escada linear: espécies podem compartilhar características e coexistir.\n\nPadrão de cobrança e pegadinha\nUma alternativa pode trazer uma característica correta e uma prioridade cronológica falsa.\n\nRevisão ativa — responda sem consultar\n1. Por que evolução humana não é uma escada de quatro crânios?\n2. Que afirmações “foi o primeiro” invalidam as outras alternativas?\n\nTransferência — Exercício autoral: explique como duas espécies de hominídeos podem coexistir e compartilhar ferramentas.\nCritérios de resposta:\n• Usar evolução ramificada e ancestralidade.\n• Não confundir coexistência com identidade de espécie nem inovação com exclusividade de sapiens.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q41-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q42",
@@ -95842,7 +97263,12 @@
       "version": "Q/X",
       "questionNumber": 42
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 42.\n\nConceito e pré-requisitos\nLeitura de gráfico e quantificador “em cada”; pré-requisito: soma de percentuais da mesma base.\n\nResolução por etapas\n1. Identificar dados: Identifique as cinco regiões e os anos 2005, 2013 e 2025; o comando exige uma afirmação válida nos três.\n2. Escolher a estratégia: Some as parcelas citadas por alternativa em cada ano, usando a mesma base de cardeais votantes.\n3. Aplicar o conceito: Europa e África ultrapassam juntas 50% nos três conclaves; em 2025 a soma é 39,3% + 13,3% = 52,6%.\n4. Justificar: C atende ao quantificador. A não chega a 40%; B não vale nos primeiros anos; D exige igualdade de 30% que não se mantém.\n5. Conferir: Confira também 2005 e 2013 no gráfico. Mostrar apenas 2025 não basta para provar “em cada conclave”.\n\nPadrão de cobrança e pegadinha\nDois terços necessários à eleição não são o limiar perguntado. O texto tem dados que não precisam entrar na conta.\n\nRevisão ativa — responda sem consultar\n1. Por que a base percentual precisa ser a mesma?\n2. Qual diferença há entre “em 2025” e “em cada conclave”?\n\nTransferência — Exercício autoral: grupos A e B somam 52%, 49% e 54% em três anos. Pode-se afirmar que sempre passam de 50%?\nCritérios de resposta:\n• Não: o ano com 49% é contraexemplo.\n• Verificar os três valores, sem usar média ou apenas o último ano."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 42.\n\nConceito e pré-requisitos\nLeitura de gráfico e quantificador “em cada”; pré-requisito: soma de percentuais da mesma base.\n\nResolução por etapas\n1. Identificar dados: Identifique as cinco regiões e os anos 2005, 2013 e 2025; o comando exige uma afirmação válida nos três.\n2. Escolher a estratégia: Some as parcelas citadas por alternativa em cada ano, usando a mesma base de cardeais votantes.\n3. Aplicar o conceito: Europa e África ultrapassam juntas 50% nos três conclaves; em 2025 a soma é 39,3% + 13,3% = 52,6%.\n4. Justificar: C atende ao quantificador. A não chega a 40%; B não vale nos primeiros anos; D exige igualdade de 30% que não se mantém.\n5. Conferir: Confira também 2005 e 2013 no gráfico. Mostrar apenas 2025 não basta para provar “em cada conclave”.\n\nPadrão de cobrança e pegadinha\nDois terços necessários à eleição não são o limiar perguntado. O texto tem dados que não precisam entrar na conta.\n\nRevisão ativa — responda sem consultar\n1. Por que a base percentual precisa ser a mesma?\n2. Qual diferença há entre “em 2025” e “em cada conclave”?\n\nTransferência — Exercício autoral: grupos A e B somam 52%, 49% e 54% em três anos. Pode-se afirmar que sempre passam de 50%?\nCritérios de resposta:\n• Não: o ano com 49% é contraexemplo.\n• Verificar os três valores, sem usar média ou apenas o último ano.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q42-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q43",
@@ -96034,7 +97460,12 @@
       "version": "Q/X",
       "questionNumber": 46
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 46.\n\nConceito e pré-requisitos\nCoeficiente angular e distância ponto–reta; pré-requisito: tangente e forma geral da reta.\n\nResolução por etapas\n1. Identificar dados: A reta cresce e tem intercepto negativo; o ângulo indicado é de 30° com o eixo y e a distância à origem é √3.\n2. Escolher a estratégia: Converta para inclinação de 60° com o eixo x e use a fórmula da distância à reta.\n3. Aplicar o conceito: a = tan 60° = √3. Para y = ax + b, d = |b|/√(a² + 1) = |b|/2.\n4. Justificar: De d = √3, |b| = 2√3; como o intercepto está abaixo da origem, b = −2√3.\n5. Conferir: ab = √3 × (−2√3) = −6: C. O sinal do intercepto é fixado pela figura.\n\nPadrão de cobrança e pegadinha\nO ângulo com y não é diretamente a inclinação com x; também não trocar distância perpendicular por intercepto.\n\nRevisão ativa — responda sem consultar\n1. Qual é a inclinação com x neste desenho?\n2. Por que precisamos da figura para escolher o sinal de b?\n\nTransferência — Exercício autoral: y = x + b tem distância 2 à origem e intercepto negativo. Encontre b.\nCritérios de resposta:\n• 2 = |b|/√2.\n• b = −2√2, usando o sinal informado."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 46.\n\nConceito e pré-requisitos\nCoeficiente angular e distância ponto–reta; pré-requisito: tangente e forma geral da reta.\n\nResolução por etapas\n1. Identificar dados: A reta cresce e tem intercepto negativo; o ângulo indicado é de 30° com o eixo y e a distância à origem é √3.\n2. Escolher a estratégia: Converta para inclinação de 60° com o eixo x e use a fórmula da distância à reta.\n3. Aplicar o conceito: a = tan 60° = √3. Para y = ax + b, d = |b|/√(a² + 1) = |b|/2.\n4. Justificar: De d = √3, |b| = 2√3; como o intercepto está abaixo da origem, b = −2√3.\n5. Conferir: ab = √3 × (−2√3) = −6: C. O sinal do intercepto é fixado pela figura.\n\nPadrão de cobrança e pegadinha\nO ângulo com y não é diretamente a inclinação com x; também não trocar distância perpendicular por intercepto.\n\nRevisão ativa — responda sem consultar\n1. Qual é a inclinação com x neste desenho?\n2. Por que precisamos da figura para escolher o sinal de b?\n\nTransferência — Exercício autoral: y = x + b tem distância 2 à origem e intercepto negativo. Encontre b.\nCritérios de resposta:\n• 2 = |b|/√2.\n• b = −2√2, usando o sinal informado.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q46-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q47",
@@ -96082,7 +97513,12 @@
       "version": "Q/X",
       "questionNumber": 47
     },
-    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 47.\n\nConceito e pré-requisitos\nEscala linear e quadrado da escala; pré-requisito: densidade superficial e conversão m²–km².\n\nResolução por etapas\n1. Identificar dados: Anote massa 1,0815 g, gramatura 75 g/m² e escala 1:5 000 000.\n2. Escolher a estratégia: Calcule a área do papel pela gramatura e amplie pelo quadrado do fator linear.\n3. Aplicar o conceito: A papel = 1,0815/75 = 0,01442 m². A real = 0,01442 × (5 000 000)² = 3,605 × 10¹¹ m².\n4. Justificar: Para passar de m² a km², divida por 10⁶: A real = 360 500 km².\n5. Conferir: D coincide com o resultado. Faça a conferência por cm²: 144,2 cm² no mapa e 2 500 km² por cm².\n\nPadrão de cobrança e pegadinha\nAplicar a escala uma única vez fornece comprimento, não área. O fator de conversão das unidades também é quadrático.\n\nRevisão ativa — responda sem consultar\n1. Por que a escala de área é o quadrado da linear?\n2. Quanto vale 1 cm² nesta escala?\n\nTransferência — Exercício autoral: em 1:100 000, uma região ocupa 12 cm². Determine a área real.\nCritérios de resposta:\n• 1 cm equivale a 1 km, logo 1 cm² a 1 km².\n• Área real de 12 km²."
+    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 47.\n\nConceito e pré-requisitos\nEscala linear e quadrado da escala; pré-requisito: densidade superficial e conversão m²–km².\n\nResolução por etapas\n1. Identificar dados: Anote massa 1,0815 g, gramatura 75 g/m² e escala 1:5 000 000.\n2. Escolher a estratégia: Calcule a área do papel pela gramatura e amplie pelo quadrado do fator linear.\n3. Aplicar o conceito: A papel = 1,0815/75 = 0,01442 m². A real = 0,01442 × (5 000 000)² = 3,605 × 10¹¹ m².\n4. Justificar: Para passar de m² a km², divida por 10⁶: A real = 360 500 km².\n5. Conferir: D coincide com o resultado. Faça a conferência por cm²: 144,2 cm² no mapa e 2 500 km² por cm².\n\nPadrão de cobrança e pegadinha\nAplicar a escala uma única vez fornece comprimento, não área. O fator de conversão das unidades também é quadrático.\n\nRevisão ativa — responda sem consultar\n1. Por que a escala de área é o quadrado da linear?\n2. Quanto vale 1 cm² nesta escala?\n\nTransferência — Exercício autoral: em 1:100 000, uma região ocupa 12 cm². Determine a área real.\nCritérios de resposta:\n• 1 cm equivale a 1 km, logo 1 cm² a 1 km².\n• Área real de 12 km².",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q47-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q48",
@@ -96134,7 +97570,12 @@
       "version": "Q/X",
       "questionNumber": 48
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 48.\n\nConceito e pré-requisitos\nForma de vértice e ponto adicional; pré-requisito: parábola côncava para baixo.\n\nResolução por etapas\n1. Identificar dados: Escolha os eixos da figura: ponto inicial (0,2) e vértice de altura máxima (9,3).\n2. Escolher a estratégia: Use y = a(x − 9)² + 3 para incorporar diretamente a posição do vértice.\n3. Aplicar o conceito: No ponto inicial, 2 = 81a + 3, portanto a = −1/81.\n4. Justificar: Expandindo: y = −x²/81 + 2x/9 + 2. O coeficiente negativo é coerente com uma altura máxima.\n5. Conferir: C satisfaz y(0) = 2 e y(9) = 3, além de ter vértice em x = 9.\n\nPadrão de cobrança e pegadinha\nA distância entre atletas localiza o vértice, não uma raiz no solo. Não impor y(9) = 0.\n\nRevisão ativa — responda sem consultar\n1. Por que usar a forma de vértice simplifica a conta?\n2. Como conferir o sinal de a pelo desenho?\n\nTransferência — Exercício autoral: uma trajetória passa por (0,1) e tem vértice (4,3). Encontre a equação.\nCritérios de resposta:\n• a = −1/8.\n• y = −(x − 4)²/8 + 3; conferir o ponto inicial."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 48.\n\nConceito e pré-requisitos\nForma de vértice e ponto adicional; pré-requisito: parábola côncava para baixo.\n\nResolução por etapas\n1. Identificar dados: Escolha os eixos da figura: ponto inicial (0,2) e vértice de altura máxima (9,3).\n2. Escolher a estratégia: Use y = a(x − 9)² + 3 para incorporar diretamente a posição do vértice.\n3. Aplicar o conceito: No ponto inicial, 2 = 81a + 3, portanto a = −1/81.\n4. Justificar: Expandindo: y = −x²/81 + 2x/9 + 2. O coeficiente negativo é coerente com uma altura máxima.\n5. Conferir: C satisfaz y(0) = 2 e y(9) = 3, além de ter vértice em x = 9.\n\nPadrão de cobrança e pegadinha\nA distância entre atletas localiza o vértice, não uma raiz no solo. Não impor y(9) = 0.\n\nRevisão ativa — responda sem consultar\n1. Por que usar a forma de vértice simplifica a conta?\n2. Como conferir o sinal de a pelo desenho?\n\nTransferência — Exercício autoral: uma trajetória passa por (0,1) e tem vértice (4,3). Encontre a equação.\nCritérios de resposta:\n• a = −1/8.\n• y = −(x − 4)²/8 + 3; conferir o ponto inicial.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q48-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q49",
@@ -96230,7 +97671,12 @@
       "version": "Q/X",
       "questionNumber": 50
     },
-    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 50.\n\nConceito e pré-requisitos\nCosseno e simetria; pré-requisito: produto escalar ou lei dos cossenos e área de triângulo.\n\nResolução por etapas\n1. Identificar dados: Como M é o ponto médio de AB e PD = QC, o triângulo PMQ é simétrico. Denote metade de PQ por t e a altura por x.\n2. Escolher a estratégia: Use os vetores MP = (−t,−x) e MQ = (t,−x), ou a lei dos cossenos, para expressar cos θ.\n3. Aplicar o conceito: cos θ = (x² − t²)/(x² + t²) = 2/3. Assim 3x² − 3t² = 2x² + 2t² e t = x/√5.\n4. Justificar: A área é (2t × x)/2 = tx = x²/√5 = (√5/5)x².\n5. Conferir: A corresponde ao resultado. Para conferir, t < x/2, compatível com P e Q internos ao lado do quadrado.\n\nPadrão de cobrança e pegadinha\nA altura é o lado inteiro x; t é metade da base, não a base completa.\n\nRevisão ativa — responda sem consultar\n1. Qual informação garante a simetria?\n2. Qual é a base do triângulo em função de t?\n\nTransferência — Exercício autoral: mantenha a figura e faça cos θ = 3/5. Determine a área.\nCritérios de resposta:\n• t² = x²/4, logo t = x/2.\n• Área x²/2; P e Q passam a coincidir com os extremos do lado."
+    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 50.\n\nConceito e pré-requisitos\nCosseno e simetria; pré-requisito: produto escalar ou lei dos cossenos e área de triângulo.\n\nResolução por etapas\n1. Identificar dados: Como M é o ponto médio de AB e PD = QC, o triângulo PMQ é simétrico. Denote metade de PQ por t e a altura por x.\n2. Escolher a estratégia: Use os vetores MP = (−t,−x) e MQ = (t,−x), ou a lei dos cossenos, para expressar cos θ.\n3. Aplicar o conceito: cos θ = (x² − t²)/(x² + t²) = 2/3. Assim 3x² − 3t² = 2x² + 2t² e t = x/√5.\n4. Justificar: A área é (2t × x)/2 = tx = x²/√5 = (√5/5)x².\n5. Conferir: A corresponde ao resultado. Para conferir, t < x/2, compatível com P e Q internos ao lado do quadrado.\n\nPadrão de cobrança e pegadinha\nA altura é o lado inteiro x; t é metade da base, não a base completa.\n\nRevisão ativa — responda sem consultar\n1. Qual informação garante a simetria?\n2. Qual é a base do triângulo em função de t?\n\nTransferência — Exercício autoral: mantenha a figura e faça cos θ = 3/5. Determine a área.\nCritérios de resposta:\n• t² = x²/4, logo t = x/2.\n• Área x²/2; P e Q passam a coincidir com os extremos do lado.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q50-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q51",
@@ -96374,7 +97820,12 @@
       "version": "Q/X",
       "questionNumber": 53
     },
-    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 53.\n\nConceito e pré-requisitos\nSemelhança ou coordenadas e área; pré-requisito: identificação correta da região pintada.\n\nResolução por etapas\n1. Identificar dados: Adote D = (0,0), A = (0,6), B = (6,6), C = (6,0). Então P = (3,6), Q = (6,4), R = (1,0) e S = (0,4).\n2. Escolher a estratégia: A região sombreada é o triângulo formado por P, Q e a interseção T de PR com SQ.\n3. Aplicar o conceito: Em PR, y = 3(x − 1). Como SQ tem y = 4, T = (7/3,4). A base TQ mede 6 − 7/3 = 11/3.\n4. Justificar: A altura de P até TQ é 2. Área = (11/3 × 2)/2 = 11/3.\n5. Conferir: A é a resposta. Confira que não calculou a área de todo o quadrilátero PQRS nem de um triângulo com base no lado inferior.\n\nPadrão de cobrança e pegadinha\nO ponto R serve para definir a reta PR, mas não é um vértice da região sombreada.\n\nRevisão ativa — responda sem consultar\n1. Onde está a base da região pintada?\n2. Como determinar T por semelhança ou pela equação da reta?\n\nTransferência — Exercício autoral: mantenha a figura, mas faça DR = 0. Calcule a área sombreada.\nCritérios de resposta:\n• PR passa a ser y = 2x, logo T = (2,4).\n• Base 4 e altura 2: área 4."
+    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 53.\n\nConceito e pré-requisitos\nSemelhança ou coordenadas e área; pré-requisito: identificação correta da região pintada.\n\nResolução por etapas\n1. Identificar dados: Adote D = (0,0), A = (0,6), B = (6,6), C = (6,0). Então P = (3,6), Q = (6,4), R = (1,0) e S = (0,4).\n2. Escolher a estratégia: A região sombreada é o triângulo formado por P, Q e a interseção T de PR com SQ.\n3. Aplicar o conceito: Em PR, y = 3(x − 1). Como SQ tem y = 4, T = (7/3,4). A base TQ mede 6 − 7/3 = 11/3.\n4. Justificar: A altura de P até TQ é 2. Área = (11/3 × 2)/2 = 11/3.\n5. Conferir: A é a resposta. Confira que não calculou a área de todo o quadrilátero PQRS nem de um triângulo com base no lado inferior.\n\nPadrão de cobrança e pegadinha\nO ponto R serve para definir a reta PR, mas não é um vértice da região sombreada.\n\nRevisão ativa — responda sem consultar\n1. Onde está a base da região pintada?\n2. Como determinar T por semelhança ou pela equação da reta?\n\nTransferência — Exercício autoral: mantenha a figura, mas faça DR = 0. Calcule a área sombreada.\nCritérios de resposta:\n• PR passa a ser y = 2x, logo T = (2,4).\n• Base 4 e altura 2: área 4.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q53-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q54",
@@ -96570,7 +98021,12 @@
       "version": "Q/X",
       "questionNumber": 57
     },
-    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 57.\n\nConceito e pré-requisitos\nRelação explicativa e efeito argumentativo; pré-requisito: função de conectivos no contexto.\n\nResolução por etapas\n1. Identificar dados: Leia a peça visual completa e localize justificativas que outras pessoas apresentam para controlar a luta de alguém.\n2. Escolher a estratégia: Analise que em cada relação de sentido; a mesma forma pode ter funções distintas.\n3. Aplicar o conceito: O valor explicativo sustenta a enumeração de justificativas que tentam apagar a dimensão pessoal da luta.\n4. Justificar: A corresponde a esse encadeamento. B transforma justificativas em comparação; C em condição; D em causa da desistência da resistência individual.\n5. Conferir: Confira A observando a passagem da fala alheia ao reconhecimento dos “supostos donos da luta”.\n\nPadrão de cobrança e pegadinha\nNão atribuir um único valor a todas as ocorrências de que nem classificá-lo sem ler o argumento.\n\nRevisão ativa — responda sem consultar\n1. Qual relação distingue explicação de condição?\n2. De quem são as justificativas enumeradas?\n\nTransferência — Exercício autoral: compare “lute, que há razões” e “se houver razões, lute”.\nCritérios de resposta:\n• Primeiro enunciado apresenta explicação para uma orientação.\n• Segundo estabelece condição; justificar pela relação entre orações."
+    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 57.\n\nConceito e pré-requisitos\nRelação explicativa e efeito argumentativo; pré-requisito: função de conectivos no contexto.\n\nResolução por etapas\n1. Identificar dados: Leia a peça visual completa e localize justificativas que outras pessoas apresentam para controlar a luta de alguém.\n2. Escolher a estratégia: Analise que em cada relação de sentido; a mesma forma pode ter funções distintas.\n3. Aplicar o conceito: O valor explicativo sustenta a enumeração de justificativas que tentam apagar a dimensão pessoal da luta.\n4. Justificar: A corresponde a esse encadeamento. B transforma justificativas em comparação; C em condição; D em causa da desistência da resistência individual.\n5. Conferir: Confira A observando a passagem da fala alheia ao reconhecimento dos “supostos donos da luta”.\n\nPadrão de cobrança e pegadinha\nNão atribuir um único valor a todas as ocorrências de que nem classificá-lo sem ler o argumento.\n\nRevisão ativa — responda sem consultar\n1. Qual relação distingue explicação de condição?\n2. De quem são as justificativas enumeradas?\n\nTransferência — Exercício autoral: compare “lute, que há razões” e “se houver razões, lute”.\nCritérios de resposta:\n• Primeiro enunciado apresenta explicação para uma orientação.\n• Segundo estabelece condição; justificar pela relação entre orações.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q57-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q58",
@@ -96618,7 +98074,12 @@
       "version": "Q/X",
       "questionNumber": 58
     },
-    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 58.\n\nConceito e pré-requisitos\nAplicação de definição a exemplo multimodal; pré-requisito: frame, template e linguagem híbrida.\n\nResolução por etapas\n1. Identificar dados: Liste características da definição: um frame, imagem-texto e interação entre visual e verbal.\n2. Escolher a estratégia: Teste cada característica no meme exibido, sem supor que todo meme pertence ao mesmo tipo.\n3. Aplicar o conceito: O exemplo tem mais de um frame e conteúdos textuais diferentes sobre imagens distintas.\n4. Justificar: D reconhece que ele não reúne todos os elementos do image macro definido. A erra o número de frames e B afirma subordinação contrariando o texto.\n5. Conferir: Confira D pela estrutura observável. Compartilhar humor e hibridismo não basta para satisfazer todas as condições da definição.\n\nPadrão de cobrança e pegadinha\nCategorias próximas podem compartilhar características sem serem equivalentes. O comando exige aplicação da definição fornecida.\n\nRevisão ativa — responda sem consultar\n1. Qual característica impede classificar este exemplo como um único image macro?\n2. Qual papel do visual na definição?\n\nTransferência — Exercício autoral: compare um meme de um frame e uma montagem de quatro frames usando a definição da questão.\nCritérios de resposta:\n• Verificar número de frames e relação texto–imagem.\n• Não classificar só pela presença de humor."
+    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 58.\n\nConceito e pré-requisitos\nAplicação de definição a exemplo multimodal; pré-requisito: frame, template e linguagem híbrida.\n\nResolução por etapas\n1. Identificar dados: Liste características da definição: um frame, imagem-texto e interação entre visual e verbal.\n2. Escolher a estratégia: Teste cada característica no meme exibido, sem supor que todo meme pertence ao mesmo tipo.\n3. Aplicar o conceito: O exemplo tem mais de um frame e conteúdos textuais diferentes sobre imagens distintas.\n4. Justificar: D reconhece que ele não reúne todos os elementos do image macro definido. A erra o número de frames e B afirma subordinação contrariando o texto.\n5. Conferir: Confira D pela estrutura observável. Compartilhar humor e hibridismo não basta para satisfazer todas as condições da definição.\n\nPadrão de cobrança e pegadinha\nCategorias próximas podem compartilhar características sem serem equivalentes. O comando exige aplicação da definição fornecida.\n\nRevisão ativa — responda sem consultar\n1. Qual característica impede classificar este exemplo como um único image macro?\n2. Qual papel do visual na definição?\n\nTransferência — Exercício autoral: compare um meme de um frame e uma montagem de quatro frames usando a definição da questão.\nCritérios de resposta:\n• Verificar número de frames e relação texto–imagem.\n• Não classificar só pela presença de humor.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q58-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q59",
@@ -96666,7 +98127,12 @@
       "version": "Q/X",
       "questionNumber": 59
     },
-    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 59.\n\nConceito e pré-requisitos\nGênero, propósito e tese; pré-requisito: distinguir manifesto, resenha e carta.\n\nResolução por etapas\n1. Identificar dados: Identifique autoria institucional, tese contra imitação automatizada e defesa de autenticidade artística.\n2. Escolher a estratégia: Classifique pelo propósito e pela organização argumentativa, não apenas por ter crítica.\n3. Aplicar o conceito: O texto assume posição e defende publicamente princípios artísticos: funciona como manifesto contrário à geração do estilo por IA.\n4. Justificar: C conserva tese e justificativa. B inventa convite explícito a boicote; D trata como resenha de obra; A introduz perda de irreverência.\n5. Conferir: Confira C nos parágrafos de defesa da arte artesanal e dos trabalhos autorais. A leitura pede a posição do texto, não uma decisão pessoal sobre IA.\n\nPadrão de cobrança e pegadinha\nTextos críticos não são todos resenhas. Observe objeto, finalidade e modo de intervenção pública.\n\nRevisão ativa — responda sem consultar\n1. Qual tese sustenta o texto?\n2. Por que “resenha crítica” não é a melhor classificação aqui?\n\nTransferência — Exercício autoral: escreva duas frases de um manifesto defendendo preservação de trabalho artístico.\nCritérios de resposta:\n• Declarar posição e princípio defendido.\n• Apresentar justificativa, sem fingir uma análise de obra específica."
+    "explanation": "Gabarito oficial: C · UNICAMP 2026 · Q/X · questão 59.\n\nConceito e pré-requisitos\nGênero, propósito e tese; pré-requisito: distinguir manifesto, resenha e carta.\n\nResolução por etapas\n1. Identificar dados: Identifique autoria institucional, tese contra imitação automatizada e defesa de autenticidade artística.\n2. Escolher a estratégia: Classifique pelo propósito e pela organização argumentativa, não apenas por ter crítica.\n3. Aplicar o conceito: O texto assume posição e defende publicamente princípios artísticos: funciona como manifesto contrário à geração do estilo por IA.\n4. Justificar: C conserva tese e justificativa. B inventa convite explícito a boicote; D trata como resenha de obra; A introduz perda de irreverência.\n5. Conferir: Confira C nos parágrafos de defesa da arte artesanal e dos trabalhos autorais. A leitura pede a posição do texto, não uma decisão pessoal sobre IA.\n\nPadrão de cobrança e pegadinha\nTextos críticos não são todos resenhas. Observe objeto, finalidade e modo de intervenção pública.\n\nRevisão ativa — responda sem consultar\n1. Qual tese sustenta o texto?\n2. Por que “resenha crítica” não é a melhor classificação aqui?\n\nTransferência — Exercício autoral: escreva duas frases de um manifesto defendendo preservação de trabalho artístico.\nCritérios de resposta:\n• Declarar posição e princípio defendido.\n• Apresentar justificativa, sem fingir uma análise de obra específica.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q59-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q60",
@@ -97010,7 +98476,12 @@
       "version": "Q/X",
       "questionNumber": 66
     },
-    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 66.\n\nConceito e pré-requisitos\nRepresentações em Química; pré-requisito: distinguir fenômeno observável, modelo de partículas e notação.\n\nResolução por etapas\n1. Identificar dados: Leia os rótulos do triângulo e compare as ilustrações A–H na página original.\n2. Escolher a estratégia: Classifique pelo que cada imagem representa, e não simplesmente por ser um desenho.\n3. Aplicar o conceito: D mostra um fenômeno observável; G representa partículas reagindo; H usa uma equação química. Correspondem a macro, submicro e simbólico.\n4. Justificar: C combina gráfico simbólico de energia com modelos de partículas, reunindo simbólico e submicroscópico.\n5. Conferir: D é a alternativa: D, G, H e a combinação em C. A chama rede de partículas de macroscópica e C chama estruturas químicas de observação macroscópica.\n\nPadrão de cobrança e pegadinha\nO nível submicroscópico também é comunicado por desenhos; “imagem” não implica escala macroscópica.\n\nRevisão ativa — responda sem consultar\n1. Como diferenciar bolhas observadas e moléculas representadas?\n2. Que tipo de representação é uma equação química?\n\nTransferência — Exercício autoral: descreva a evaporação da água nos três domínios.\nCritérios de resposta:\n• Macroscópico: desaparecimento gradual do líquido ou mudança de estado observável.\n• Submicro: moléculas passam à fase gasosa; simbólico: H₂O(l) → H₂O(g), sem mudança de identidade química."
+    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 66.\n\nConceito e pré-requisitos\nRepresentações em Química; pré-requisito: distinguir fenômeno observável, modelo de partículas e notação.\n\nResolução por etapas\n1. Identificar dados: Leia os rótulos do triângulo e compare as ilustrações A–H na página original.\n2. Escolher a estratégia: Classifique pelo que cada imagem representa, e não simplesmente por ser um desenho.\n3. Aplicar o conceito: D mostra um fenômeno observável; G representa partículas reagindo; H usa uma equação química. Correspondem a macro, submicro e simbólico.\n4. Justificar: C combina gráfico simbólico de energia com modelos de partículas, reunindo simbólico e submicroscópico.\n5. Conferir: D é a alternativa: D, G, H e a combinação em C. A chama rede de partículas de macroscópica e C chama estruturas químicas de observação macroscópica.\n\nPadrão de cobrança e pegadinha\nO nível submicroscópico também é comunicado por desenhos; “imagem” não implica escala macroscópica.\n\nRevisão ativa — responda sem consultar\n1. Como diferenciar bolhas observadas e moléculas representadas?\n2. Que tipo de representação é uma equação química?\n\nTransferência — Exercício autoral: descreva a evaporação da água nos três domínios.\nCritérios de resposta:\n• Macroscópico: desaparecimento gradual do líquido ou mudança de estado observável.\n• Submicro: moléculas passam à fase gasosa; simbólico: H₂O(l) → H₂O(g), sem mudança de identidade química.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q66-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q67",
@@ -97058,7 +98529,12 @@
       "version": "Q/X",
       "questionNumber": 67
     },
-    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 67.\n\nConceito e pré-requisitos\nEquilíbrio ácido-base e disponibilidade de carbonato; pré-requisito: pH e princípio de Le Chatelier.\n\nResolução por etapas\n1. Identificar dados: Leia as reações do infográfico, identifique A, B e C e observe a curva decrescente entre os eixos.\n2. Escolher a estratégia: Reconstrua as espécies a partir dos balanços de átomos e cargas e associe aumento de CO₂ à acidificação.\n3. Aplicar o conceito: A = CO₃²⁻; B = CaCO₃; C = CO₃²⁻. H⁺ consome carbonato para formar bicarbonato, reduzindo disponibilidade para calcificação.\n4. Justificar: X representa CO₂ atmosférico e Y, carbonato: mais CO₂ reduz pH e carbonato, prejudicando corais.\n5. Conferir: B combina espécies, eixos e efeito ambiental. A e D dizem aumento do pH; C conclui menor degradação contra o mecanismo apresentado.\n\nPadrão de cobrança e pegadinha\nAcidificação é diminuição do pH, mesmo que a água permaneça alcalina. Não trocar bicarbonato por carbonato.\n\nRevisão ativa — responda sem consultar\n1. Por que H⁺ reduz disponibilidade de CO₃²⁻?\n2. Acidificar exige que o pH fique menor que 7?\n\nTransferência — Exercício autoral: explique a passagem de pH 8,2 a 8,0 em água oceânica e um efeito possível nos corais.\nCritérios de resposta:\n• Reconhecer acidificação sem necessidade de pH abaixo de 7.\n• Relacionar aumento de H⁺, consumo de carbonato e dificuldade de calcificação."
+    "explanation": "Gabarito oficial: B · UNICAMP 2026 · Q/X · questão 67.\n\nConceito e pré-requisitos\nEquilíbrio ácido-base e disponibilidade de carbonato; pré-requisito: pH e princípio de Le Chatelier.\n\nResolução por etapas\n1. Identificar dados: Leia as reações do infográfico, identifique A, B e C e observe a curva decrescente entre os eixos.\n2. Escolher a estratégia: Reconstrua as espécies a partir dos balanços de átomos e cargas e associe aumento de CO₂ à acidificação.\n3. Aplicar o conceito: A = CO₃²⁻; B = CaCO₃; C = CO₃²⁻. H⁺ consome carbonato para formar bicarbonato, reduzindo disponibilidade para calcificação.\n4. Justificar: X representa CO₂ atmosférico e Y, carbonato: mais CO₂ reduz pH e carbonato, prejudicando corais.\n5. Conferir: B combina espécies, eixos e efeito ambiental. A e D dizem aumento do pH; C conclui menor degradação contra o mecanismo apresentado.\n\nPadrão de cobrança e pegadinha\nAcidificação é diminuição do pH, mesmo que a água permaneça alcalina. Não trocar bicarbonato por carbonato.\n\nRevisão ativa — responda sem consultar\n1. Por que H⁺ reduz disponibilidade de CO₃²⁻?\n2. Acidificar exige que o pH fique menor que 7?\n\nTransferência — Exercício autoral: explique a passagem de pH 8,2 a 8,0 em água oceânica e um efeito possível nos corais.\nCritérios de resposta:\n• Reconhecer acidificação sem necessidade de pH abaixo de 7.\n• Relacionar aumento de H⁺, consumo de carbonato e dificuldade de calcificação.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q67-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q68",
@@ -97202,7 +98678,12 @@
       "version": "Q/X",
       "questionNumber": 70
     },
-    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 70.\n\nConceito e pré-requisitos\nBalanço global de um processo; pré-requisito: intermediários, recirculação e conservação.\n\nResolução por etapas\n1. Identificar dados: Acompanhe no fluxograma salmoura, calcário, amônia e as correntes de retorno.\n2. Escolher a estratégia: Diferencie insumo consumido no balanço global de substância que participa de uma etapa e é regenerada em outra.\n3. Aplicar o conceito: No modelo apresentado, a amônia é regenerada; a manutenção exige salmoura e calcário.\n4. Justificar: O balanço global é 2NaCl + CaCO₃ → Na₂CO₃ + CaCl₂. NH₃ cancela ao somar as etapas, mas o calcário não.\n5. Conferir: A é a resposta. O CO₂ recirculado não elimina a necessidade do CO₂ fornecido a partir de calcário no balanço global.\n\nPadrão de cobrança e pegadinha\nNão classificar toda seta de entrada como consumo permanente. É necessário seguir os retornos.\n\nRevisão ativa — responda sem consultar\n1. Como identificar um intermediário regenerado?\n2. Quais espécies sobrevivem no balanço global?\n\nTransferência — Exercício autoral: um reagente X é consumido na etapa 1 e recuperado integralmente na etapa 2. O que ocorre ao somar as equações?\nCritérios de resposta:\n• X cancela do balanço global.\n• Sua participação intermediária não demonstra consumo líquido no modelo ideal."
+    "explanation": "Gabarito oficial: A · UNICAMP 2026 · Q/X · questão 70.\n\nConceito e pré-requisitos\nBalanço global de um processo; pré-requisito: intermediários, recirculação e conservação.\n\nResolução por etapas\n1. Identificar dados: Acompanhe no fluxograma salmoura, calcário, amônia e as correntes de retorno.\n2. Escolher a estratégia: Diferencie insumo consumido no balanço global de substância que participa de uma etapa e é regenerada em outra.\n3. Aplicar o conceito: No modelo apresentado, a amônia é regenerada; a manutenção exige salmoura e calcário.\n4. Justificar: O balanço global é 2NaCl + CaCO₃ → Na₂CO₃ + CaCl₂. NH₃ cancela ao somar as etapas, mas o calcário não.\n5. Conferir: A é a resposta. O CO₂ recirculado não elimina a necessidade do CO₂ fornecido a partir de calcário no balanço global.\n\nPadrão de cobrança e pegadinha\nNão classificar toda seta de entrada como consumo permanente. É necessário seguir os retornos.\n\nRevisão ativa — responda sem consultar\n1. Como identificar um intermediário regenerado?\n2. Quais espécies sobrevivem no balanço global?\n\nTransferência — Exercício autoral: um reagente X é consumido na etapa 1 e recuperado integralmente na etapa 2. O que ocorre ao somar as equações?\nCritérios de resposta:\n• X cancela do balanço global.\n• Sua participação intermediária não demonstra consumo líquido no modelo ideal.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q70-1.webp"
+      }
+    ]
   },
   {
     "id": "unicamp_2026_q71",
@@ -97298,6 +98779,11 @@
       "version": "Q/X",
       "questionNumber": 72
     },
-    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 72.\n\nConceito e pré-requisitos\nComparação de processos e limites de inferência; pré-requisito: temperatura, consumo e rendimento.\n\nResolução por etapas\n1. Identificar dados: Compare as temperaturas, etapas de lixiviação e indicações de consumo de carbonato nos dois métodos.\n2. Escolher a estratégia: Separe vantagens apresentadas de variáveis não medidas, especialmente tempo total e rendimento.\n3. Aplicar o conceito: O método proposto usa tratamento a temperatura menor e lixiviação em temperatura ambiente; o esquema indica menor consumo de carbonato.\n4. Justificar: D expressa menor intensidade energética e menor consumo indicado, sem afirmar rendimento. A e B acrescentam rendimento maior e C rendimento menor sem dados.\n5. Conferir: Confira D com o limite “considerando apenas essas informações”. Obter o mesmo produto não prova que a quantidade ou porcentagem obtida seja igual.\n\nPadrão de cobrança e pegadinha\nMenor temperatura não demonstra por si maior rendimento nem tempo total menor. Responda dentro do alcance das evidências.\n\nRevisão ativa — responda sem consultar\n1. Que dados seriam necessários para comparar rendimento?\n2. Por que número de etapas não determina sozinho duração total?\n\nTransferência — Exercício autoral: dois processos produzem a mesma substância; só se informam temperaturas. Pode-se decidir qual tem maior rendimento?\nCritérios de resposta:\n• Não: faltam quantidades de produto e bases de reagentes.\n• Distinguir condição operacional de rendimento e sugerir dados de massa ou mols."
+    "explanation": "Gabarito oficial: D · UNICAMP 2026 · Q/X · questão 72.\n\nConceito e pré-requisitos\nComparação de processos e limites de inferência; pré-requisito: temperatura, consumo e rendimento.\n\nResolução por etapas\n1. Identificar dados: Compare as temperaturas, etapas de lixiviação e indicações de consumo de carbonato nos dois métodos.\n2. Escolher a estratégia: Separe vantagens apresentadas de variáveis não medidas, especialmente tempo total e rendimento.\n3. Aplicar o conceito: O método proposto usa tratamento a temperatura menor e lixiviação em temperatura ambiente; o esquema indica menor consumo de carbonato.\n4. Justificar: D expressa menor intensidade energética e menor consumo indicado, sem afirmar rendimento. A e B acrescentam rendimento maior e C rendimento menor sem dados.\n5. Conferir: Confira D com o limite “considerando apenas essas informações”. Obter o mesmo produto não prova que a quantidade ou porcentagem obtida seja igual.\n\nPadrão de cobrança e pegadinha\nMenor temperatura não demonstra por si maior rendimento nem tempo total menor. Responda dentro do alcance das evidências.\n\nRevisão ativa — responda sem consultar\n1. Que dados seriam necessários para comparar rendimento?\n2. Por que número de etapas não determina sozinho duração total?\n\nTransferência — Exercício autoral: dois processos produzem a mesma substância; só se informam temperaturas. Pode-se decidir qual tem maior rendimento?\nCritérios de resposta:\n• Não: faltam quantidades de produto e bases de reagentes.\n• Distinguir condição operacional de rendimento e sugerir dados de massa ou mols.",
+    "figures": [
+      {
+        "url": "/question-media/figuras/unicamp_2026_q72-1.webp"
+      }
+    ]
   }
 ]
