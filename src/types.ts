@@ -211,6 +211,8 @@ export interface QuizOption {
 
 export interface Question {
   originalPages?: { url: string; page: number }[];
+  /** Só os desenhos da questão (mapa, gráfico, esquema), recortados da página por scripts/extrair-figuras.py. */
+  figures?: { url: string }[];
   sourceMaterial?: { file: string; page: number; questionNumber: number; answerPage?: number };
   id: string;
   topicId: string;
