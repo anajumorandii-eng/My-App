@@ -15,7 +15,7 @@ As seleções não equivalem a provas completas. O Enem deste lote é de 2022, n
 
 ## Como estudar
 
-Em **Questões**, escolha a banca e o ano. Cada item identifica fase/dia, versão e número original. As 135 questões novas e as 72 da Unicamp 2026 têm enunciados transcritos. Figuras, gráficos, mapas, estruturas químicas e alternativas visuais aparecem como recortes, sem link na imagem. Tabelas e fórmulas foram preservadas no texto quando suficientes para responder. Textos e imagens compartilhados acompanham cada questão a que se aplicam. As 70 páginas físicas ficam preservadas como fontes. Questões antigas ainda não migradas mantêm a imagem necessária como apoio, em vez de perder os dados para a tentativa. A posição na fila de treino é distinta do número impresso da questão.
+Em **Questões**, escolha a banca e o ano. Cada item identifica fase/dia, versão e número original. As 135 questões novas e as 72 da Unicamp 2026 têm enunciados transcritos. Figuras, gráficos, mapas, estruturas químicas e alternativas visuais aparecem como recortes, sem link na imagem. Tabelas e fórmulas foram preservadas no texto quando suficientes para responder. Textos e imagens compartilhados acompanham cada questão a que se aplicam. As 70 páginas físicas ficam preservadas como fontes. Por orientação da Ana Júlia, páginas inteiras não aparecem, inclusive nas questões antigas. Somente enunciado em texto e imagens do campo `figures` são exibidos, sem links nas figuras. A posição na fila de treino é distinta do número impresso da questão.
 
 Depois da tentativa, o comentário apresenta gabarito oficial, conceito, cinco etapas de resolução, pegadinha, duas perguntas de recuperação e exercício autoral de transferência com critérios de resposta. Há links separados para prova e gabarito. As quatro alternativas da Unicamp e as cinco das outras bancas foram mantidas.
 
@@ -55,7 +55,7 @@ Concluídos os 36 enunciados pendentes: 12 Famerp, 12 Unifesp e 12 Enem. Confer�
 
 Restaurados 15 recortes conferidos manualmente, com coordenadas e hashes de origem/saída em `scripts/data/recortes-oficiais-revisados.json`. Cinco questões também receberam o contexto visual compartilhado: Unicamp Q6/Q36/Q38 e Unifesp Q19/Q23. A Unicamp Q55 agora mostra os dois quadrados e os segmentos rotulados. As fórmulas estruturais da Famerp Q55, o robô da Unifesp Q16/Q19 e o infográfico da Q23/Q25 estão completos. Na questão Enem Q99, a continuação com alternativas deixou de ser tratada como figura; a tabela permanece.
 
-Em questões com dependência visual, o componente dispensa a página quando há `statementComplete`, ou quando os recortes já estão disponíveis. O acervo antigo ainda sem recortes preserva o apoio original quando o texto indica dependência visual. Isso é uma proteção contra regressão; não significa que todas as imagens do acervo antigo receberam recorte manual.
+A orientação posterior da Ana Júlia remove o apoio por página inteira, inclusive no acervo antigo. O componente mostra somente a transcrição e `figures`. Isso não significa que todo o acervo antigo recebeu transcrição ou recorte manual; as fontes `originalPages` são mantidas nos dados, sem exibição na tela.
 
 No transcritor, a continuação de um texto-base compartilhado é acrescentada uma vez à lista comum, em vez de uma vez por referência. A palavra imediatamente anterior a `QUESTÃO` também é preservada; somente as chaves de numeração da Fuvest são excluídas. Falhas de `pdftotext`/Tesseract interrompem o comando. OCR continua sendo rascunho e requer conferência editorial.
 
@@ -66,14 +66,21 @@ python3 scripts/conferir-recortes-oficiais.py
 python3 scripts/conferir-recortes-oficiais.py --write
 ```
 
+## Apresentação sem páginas e sem fundo branco
+
+A página inteira foi retirada sem exceções. As figuras não recebem âncora, link, fundo CSS branco nem moldura de página. `QuestionFigure` retira o papel branco no Canvas apenas na apresentação, sem alterar os arquivos oficiais, textos ou hashes de origem. Gráficos de traço usam transparência nas áreas de papel e tinta neutra do tema; cores das séries e legendas são preservadas. Em fotografias, mapas e tirinhas coloridas, o branco interno permanece quando pertence ao conteúdo — letras brancas e detalhes do objeto não são apagados. A troca do tema atualiza a apresentação.
+
+A renderização é determinística e não usa redesenho generativo das provas. O cache de imagens derivadas é limitado. Fontes locais da entrega são conferidas no navegador; uma fonte externa que impeça leitura por CORS mantém sua imagem original legível.
+
 ## Validação final
 
 - Lint TypeScript e build de produção: aprovados após as correções.
-- `npm test`: 1.098 testes de servidor/bibliotecas e 3.158 de interface aprovados.
+- `npm test`: 1.100 testes de servidor/bibliotecas e 3.158 de interface aprovados após a remoção das páginas e a integração das figuras.
+- Transparência: dois testes verificam remoção do papel, preservação das cores, conservação de letras brancas internas e ausência de mutação dos pixels originais.
 - Python: dois testes de regressão (continuação compartilhada e falha do OCR) aprovados.
 - 15 fontes/recortes conferidos por SHA-256; regeneração dos mesmos pixels aprovada. OCR da faixa inferior dos 15 recortes novos: zero marcas d’água.
-- Chromium com build de produção: 106 cenários, 53 questões em 390×844 e 834×1112. Inclui todos os 36 novos enunciados, os recortes restaurados, contextos compartilhados e três questões antigas protegidas pelo apoio original. Texto integral, número de alternativas, URLs/decodificação das imagens e feedback após resposta errada conferidos; zero erros de JavaScript e zero transbordamento horizontal.
-- Inspeção das capturas Famerp Q55/celular e Unifesp Q25/iPad: estruturas químicas e infográfico completos, com alternativas e feedback.
+- Chromium com build de produção: 106 cenários, 53 questões em 390×844 e 834×1112. Inclui todos os 36 novos enunciados, os recortes restaurados, contextos compartilhados e três questões antigas verificadas sem exibição de páginas. Texto integral, número de alternativas, URLs/decodificação das imagens e feedback após resposta errada conferidos; zero erros de JavaScript e zero transbordamento horizontal.
+- Temas: 12 cenários adicionais, três figuras em celular/iPad e claro/escuro. Alfa real positivo, ausência de fundo CSS/links e tinta neutra do tema conferidos. Capturas Famerp Q55 claro/escuro inspecionadas: fórmulas e rótulos legíveis sobre o fundo da tela. Reprodução: `node scripts/auditOfficialFigureThemes.mjs`; capturas em `crivo-pr328-themes`, no diretório temporário.
 - Comparação com `a3f9149a`: 3.094 IDs, opções, respostas, comentários e classificações preservados; somente 36 campos `prompt` alterados. Zero instruções “Leia o enunciado original” restantes.
 - `git diff --check`: limpo.
 

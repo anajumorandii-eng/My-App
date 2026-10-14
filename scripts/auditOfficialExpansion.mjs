@@ -26,10 +26,11 @@ try {
    await page.waitForSelector('.ni-question',{timeout:15000});
    const normalize=text=>text.replace(/\s+/g,' ').trim();
    assert.equal(normalize(await page.locator('.ni-question').innerText()),normalize(selected.prompt),id);
+   await page.waitForFunction(() => [...document.querySelectorAll('.ni-question img')].every(image => image.getAttribute('data-background') === 'transparent'));
    const images=await page.locator('.ni-question img').evaluateAll(nodes=>Promise.all(nodes.map(async image=>{
-    image.loading='eager';await image.decode();return {src:image.getAttribute('src'),width:image.naturalWidth,height:image.naturalHeight,linked:!!image.closest('a')};
+    image.loading='eager';await image.decode();return {src:image.getAttribute('data-source')??image.getAttribute('src'),width:image.naturalWidth,height:image.naturalHeight,linked:!!image.closest('a')};
    })));
-   const expected=selected.figures??(selected.statementComplete?[]:selected.originalPages??[]);
+   const expected=selected.figures??[];
    assert.deepEqual(images.map(i=>i.src),expected.map(i=>i.url),id);
    assert.ok(images.every(i=>i.width>0&&i.height>0&&!i.linked),id);
    assert.equal(await page.locator('.ni-options button').count(),selected.options.length,id);

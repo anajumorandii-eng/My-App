@@ -12,15 +12,18 @@ const question: Question = {
   correctOptionId: 'b', explanation: 'Use a resistência para relacionar os gráficos.',
   originalPages: [{ url: '/question-media/apostilas/graficos.webp', page: 21 }],
 };
-it('mantém dados visuais disponíveis em questão antiga que ainda não recebeu recortes', () => {
+it('não exibe páginas nem links, inclusive em questão antiga sem recortes', () => {
   render(<QuestionStatement question={question} />);
-  expect(screen.getByRole('img').getAttribute('src')).toBe(question.originalPages![0].url);
-  expect(screen.getByRole('img').closest('a')).toBeNull();
+  expect(screen.queryByRole('img')).toBeNull();
+  expect(screen.queryByRole('link')).toBeNull();
+  expect(screen.getByText(question.prompt)).toBeInTheDocument();
 });
 it('substitui a página pelo recorte assim que a figura está disponível', () => {
   render(<QuestionStatement question={{ ...question, figures: [{ url: '/figura.webp' }] }} />);
   expect(screen.getAllByRole('img')).toHaveLength(1);
   expect(screen.getByRole('img').getAttribute('src')).toBe('/figura.webp');
+  expect(screen.getByRole('img').closest('a')).toBeNull();
+  expect(screen.getByRole('img')).not.toHaveClass('bg-white');
 });
 it('não repete a página de uma questão cujo texto é autossuficiente', () => {
   render(<QuestionStatement question={{ ...question, prompt: 'Qual é a potência para uma corrente de 2 A e resistência de 3 Ω?' }} />);

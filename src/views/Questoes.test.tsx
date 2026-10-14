@@ -103,7 +103,7 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     }], syncError: null });
     const user = userEvent.setup();
     render(<Questoes />);
-    expect(screen.getByRole('img')).toHaveAttribute('src', '/question-media/oficiais/unicamp-2026-qx/p05.webp');
+    expect(screen.queryByRole('img')).not.toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
     expect(screen.getByRole('link', { name: 'Conferir prova original' })).toHaveAttribute('href', 'https://www.comvest.unicamp.br/prova.pdf');
     expect(screen.getByRole('link', { name: 'Conferir gabarito oficial' })).toHaveAttribute('href', 'https://www.comvest.unicamp.br/gabarito.pdf');

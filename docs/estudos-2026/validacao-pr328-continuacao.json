@@ -16,7 +16,7 @@
   "validation": {
     "lint": "passed",
     "build": "passed",
-    "nodeTests": 1098,
+    "nodeTests": 1100,
     "interfaceTests": 3158,
     "pythonTests": 2,
     "ocrMarkedImages": 0,
@@ -33,7 +33,11 @@
       }
     ],
     "jsErrors": 0,
-    "horizontalOverflow": 0
+    "horizontalOverflow": 0,
+    "browserThemeScenarios": 12,
+    "displayedPages": 0,
+    "linkedFigures": 0,
+    "transparentFigureBackgrounds": "Canvas determinístico; tinta neutra acompanha o tema, cores do conteúdo preservadas"
   },
   "browserScope": "Uma questão real por cenário, selecionada pela resposta de /questions.json; sem gravação no Firestore."
 }
