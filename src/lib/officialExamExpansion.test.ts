@@ -48,8 +48,12 @@ test('imagens publicadas são as páginas oficiais conferidas, incluindo textos 
     const question = bank.find(q => q.id === `unicamp_2026_q${number.padStart(2, '0')}`)!;
     assert.deepEqual(question.originalPages!.map(page => page.page), pages, `contexto da questão ${number}`);
   }
+  // As alternativas da 13 são gráficos. Sem a página na tela, cada gráfico é
+  // descrito no enunciado e a alternativa remete a essa descrição.
   const graphical = bank.find(q => q.id === 'unicamp_2026_q13')!;
-  assert.ok(graphical.options.every(option => /alternativa visual/.test(option.text)));
+  assert.ok(graphical.options.every(option => /descrito no enunciado/.test(option.text)));
+  assert.match(graphical.prompt, /^a\) reta de 0 a 300 m/m);
+  assert.match(graphical.prompt, /^d\) reta de 0 a cerca de 320 m/m);
 });
 
 test('gabarito rejeita versão trocada, numeração duplicada e tabela truncada', () => {

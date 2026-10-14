@@ -605,25 +605,25 @@
     "options": [
       {
         "id": "a",
-        "text": "Gráfico A — alternativa visual na página original."
+        "text": "Gráfico a, descrito no enunciado."
       },
       {
         "id": "b",
-        "text": "Gráfico B — alternativa visual na página original."
+        "text": "Gráfico b, descrito no enunciado."
       },
       {
         "id": "c",
-        "text": "Gráfico C — alternativa visual na página original."
+        "text": "Gráfico c, descrito no enunciado."
       },
       {
         "id": "d",
-        "text": "Gráfico D — alternativa visual na página original."
+        "text": "Gráfico d, descrito no enunciado."
       }
     ],
     "pages": [
       6
     ],
-    "statement": "Texto para as questões 13 e 14.\nRecentemente, grandes cidades iniciaram a implantação de faixas exclusivas para motocicletas como, por exemplo, a faixa azul na cidade de São Paulo. Um motociclista adentra, em t = 0, um percurso retilíneo de uma faixa azul com velocidade constante v₀ = 36 km/h e mantém essa velocidade até o tempo t = 30 s (trecho I). Em seguida, continua o percurso com desaceleração constante (a < 0) até parar completamente diante de um semáforo em t = 50 s (trecho II). Após mais 30 s, ele retoma o movimento e mantém uma aceleração constante e positiva a = 0,8 m/s² desde t = 80 s até t = 95 s (trecho III). Posteriormente, o motociclista segue com velocidade constante até t = 120 s (trecho IV).\n\nQual é o gráfico que representa a posição s(t) do motociclista em função do tempo t? (As alternativas são os gráficos a, b, c e d da figura abaixo.)"
+    "statement": "Texto para as questões 13 e 14.\nRecentemente, grandes cidades iniciaram a implantação de faixas exclusivas para motocicletas como, por exemplo, a faixa azul na cidade de São Paulo. Um motociclista adentra, em t = 0, um percurso retilíneo de uma faixa azul com velocidade constante v₀ = 36 km/h e mantém essa velocidade até o tempo t = 30 s (trecho I). Em seguida, continua o percurso com desaceleração constante (a < 0) até parar completamente diante de um semáforo em t = 50 s (trecho II). Após mais 30 s, ele retoma o movimento e mantém uma aceleração constante e positiva a = 0,8 m/s² desde t = 80 s até t = 95 s (trecho III). Posteriormente, o motociclista segue com velocidade constante até t = 120 s (trecho IV).\n\nQual é o gráfico que representa a posição s(t) do motociclista em função do tempo t?\n\nAs alternativas são quatro gráficos de s(t) (m) × t (s), de 0 a 120 s:\na) reta de 0 a 300 m até 30 s; curva que se achata até 400 m em 50 s; constante em 400 m até 80 s; curva que se inclina cada vez mais até cerca de 450 m em 95 s; reta até cerca de 800 m em 120 s.\nb) reta de 0 a 300 m até 30 s; curva que primeiro desce um pouco e depois sobe, cada vez mais inclinada, até cerca de 460 m em 50 s; constante até 80 s; curva crescente até cerca de 560 m em 95 s; reta até 800 m em 120 s.\nc) reta de 0 a 300 m até 30 s; curva que se achata até 400 m em 50 s; constante até 80 s; sobe até cerca de 520 m em 92 s e cai um pouco até cerca de 510 m em 95 s; reta até 800 m em 120 s.\nd) reta de 0 a cerca de 320 m até 35 s; curva que cai até 0 m em 50 s; constante em 0 até 80 s; curva crescente até cerca de 90 m em 95 s; reta até cerca de 400 m em 120 s."
   },
   {
     "number": 14,
