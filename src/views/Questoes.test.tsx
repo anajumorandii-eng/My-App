@@ -84,6 +84,17 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     expect(screen.queryByRole('img')).not.toBeInTheDocument();
   });
 
+  it('mostra as figuras recortadas da questão, sem link para a página', () => {
+    questionsHook.mockReturnValue({ questions: [{ ...QUESTION,
+      originalPages: [{ page: 5, url: '/question-media/oficiais/unicamp-2026-qx/p05.webp' }],
+      figures: [{ url: '/question-media/figuras/x-1.webp' }],
+    }], syncError: null });
+    render(<Questoes />);
+    const figura = screen.getByRole('img', { name: 'Figura 1 da questão' });
+    expect(figura).toHaveAttribute('src', '/question-media/figuras/x-1.webp');
+    expect(figura.closest('a')).toBeNull();
+  });
+
   it('preserva a página e mostra links separados para prova e gabarito após responder', async () => {
     questionsHook.mockReturnValue({ questions: [{ ...QUESTION, prompt: `${QUESTION.prompt} Observe a figura.`,
       originalPages: [{ page: 5, url: '/question-media/oficiais/unicamp-2026-qx/p05.webp' }],
@@ -92,7 +103,7 @@ describe('Questoes — banca, ano e fontes oficiais', () => {
     }], syncError: null });
     const user = userEvent.setup();
     render(<Questoes />);
-    expect(screen.getByRole('img')).toHaveAttribute('src', '/question-media/oficiais/unicamp-2026-qx/p05.webp');
+    expect(screen.queryByRole('img', { hidden: true })).not.toBeInTheDocument();
     await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
     expect(screen.getByRole('link', { name: 'Conferir prova original' })).toHaveAttribute('href', 'https://www.comvest.unicamp.br/prova.pdf');
     expect(screen.getByRole('link', { name: 'Conferir gabarito oficial' })).toHaveAttribute('href', 'https://www.comvest.unicamp.br/gabarito.pdf');

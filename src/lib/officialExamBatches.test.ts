@@ -13,7 +13,10 @@ const batches = [
   ['famerp-2025-v1',12], ['unifesp-2025-v1',12], ['enem-2022-d2-cd5',12],
 ] as const;
 const hash = (bytes: Uint8Array | string) => createHash('sha256').update(bytes).digest('hex');
-const bank: Question[] = JSON.parse(readFileSync('public/questions.json','utf8'));
+// `figures` é gravado depois, por scripts/extrair-figuras.py, a partir da
+// página; não faz parte do que a revisão das provas gera nem do hash histórico.
+const bank: Question[] = (JSON.parse(readFileSync('public/questions.json','utf8')) as Question[])
+  .map(({ figures: _figures, ...q }) => q);
 function load(slug: string) {
   const source: OfficialBatchSource = JSON.parse(readFileSync(`scripts/data/${slug}-source.json`,'utf8'));
   const items: ReviewedExamItem[] = JSON.parse(readFileSync(source.itemsFile,'utf8'));

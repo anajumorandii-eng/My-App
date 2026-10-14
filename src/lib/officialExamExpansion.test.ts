@@ -15,7 +15,10 @@ const bank = JSON.parse(readFileSync('public/questions.json', 'utf8')) as Questi
 test('Unicamp 2026 contém as 72 questões Q/X com respostas por número e fontes distintas', () => {
   const actual = bank.filter(q => q.id.startsWith('unicamp_2026_q'));
   assert.equal(actual.length, 72);
-  assert.deepEqual(actual, buildReviewedExamQuestions(items, answers, source, mockTopics));
+  // `figures` é gravado depois, por scripts/extrair-figuras.py, a partir da
+  // página; não faz parte do que a revisão da prova gera.
+  const semFiguras = actual.map(({ figures: _figures, ...q }) => q);
+  assert.deepEqual(semFiguras, buildReviewedExamQuestions(items, answers, source, mockTopics));
   for (const q of actual) {
     const n = q.examSource!.questionNumber!;
     assert.equal(q.correctOptionId, answers.get(n), `gabarito da questão ${n}`);
