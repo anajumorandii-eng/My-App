@@ -1,3 +1,4 @@
+import { LiteraryStudyWorkshop } from '../components/LiteraryStudyWorkshop';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
 import { BookOpen, Loader2, CheckCircle2, Circle, Construction } from 'lucide-react';
@@ -10,7 +11,7 @@ import { getReadingProgress, saveReadingProgress } from '../lib/literaryData';
 import { Panel } from '../components/ui/Panel';
 import { SUBJECT_ICONS } from './Dashboard';
 
-type TabId = 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 'bancas' | 'questoes' | 'revisao' | 'fontes';
+type TabId = 'laboratorio' | 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 'bancas' | 'questoes' | 'revisao' | 'fontes';
 
 const TABS: { id: TabId; label: string }[] = [
   { id: 'comece_aqui', label: 'Comece aqui' },
@@ -20,6 +21,7 @@ const TABS: { id: TabId; label: string }[] = [
   { id: 'bancas', label: 'Bancas' },
   { id: 'questoes', label: 'Questões' },
   { id: 'revisao', label: 'Revisão ativa' },
+  { id: 'laboratorio', label: 'Laboratório de leitura' },
   { id: 'fontes', label: 'Fontes' },
 ];
 
@@ -63,6 +65,7 @@ export default function ObraDetalhe() {
   const [progress, setProgress] = useState<ReadingProgress[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
   const [tab, setTab] = useState<TabId>('comece_aqui');
+  const [labOpened, setLabOpened] = useState(false);
   const [searchParams] = useSearchParams();
   const review = searchParams.get('revisao') === '1';
   const [rawDossier, setRawDossier] = useState<WorkDossier | null>(null);
@@ -259,7 +262,7 @@ export default function ObraDetalhe() {
           return (
             <button
               key={t.id}
-              onClick={() => setTab(t.id)}
+              onClick={() => { setTab(t.id); if (t.id === 'laboratorio') setLabOpened(true); }}
               className={active ? 'subject-text' : undefined}
               style={active
                 ? { borderBottom: '2px solid var(--primary)', paddingBottom: '6px', marginBottom: '-1px' }
@@ -272,6 +275,8 @@ export default function ObraDetalhe() {
       </div>
 
       {saveError && <p role="alert" className="ni-panel p-3 text-sm text-[var(--text)]">{saveError}</p>}
+      <div hidden={tab !== 'laboratorio'}>{labOpened && (dossier ? <LiteraryStudyWorkshop work={work} dossier={dossier} requirements={requirements} /> : tab === 'laboratorio' && <ContentPendingState label="O laboratório com dossiê publicado" />)}</div>
+
       {/* Tab content */}
       {tab === 'comece_aqui' && (
         <Panel subject="Literatura" className="ni-panel p-6 space-y-3">

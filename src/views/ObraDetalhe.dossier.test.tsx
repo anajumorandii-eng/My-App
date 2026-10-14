@@ -24,6 +24,7 @@ vi.mock('../lib/workDossiers', async importOriginal => {
 
 vi.mock('../context/AuthContext', () => ({ useAuth: () => ({ user: null }) }));
 vi.mock('../lib/literaryCatalog', () => ({
+  getLiteraryWorks: async () => [],
   getLiteraryWorkBySlug: async (slug: string) => ({ id: slug, slug, title: 'Memórias de Martha', author: 'Júlia Lopes de Almeida', genre: 'romance', language: 'pt-BR' }),
   getEditions: async () => [],
   getExamRequirements: async () => [],
@@ -199,4 +200,16 @@ describe('ObraDetalhe com dossiê', () => {
     fireEvent.click(await screen.findByRole('button', { name: 'Questões' }));
     expect(screen.getByText(/O banco de questões autorais ainda está em elaboração/)).toBeInTheDocument();
   });
+});
+
+
+it('mantém a tentativa do laboratório ao alternar abas da obra', async () => {
+  renderAt('/obras/olhos-dagua');
+  await screen.findByRole('button', { name: 'Laboratório de leitura' });
+  fireEvent.click(screen.getByRole('button', { name: 'Laboratório de leitura' }));
+  await screen.findByLabelText('Minha análise antes do comentário');
+  fireEvent.change(screen.getByLabelText('Minha análise antes do comentário'), { target: { value: 'Minha análise preservada entre abas.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Análise' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Laboratório de leitura' }));
+  expect(screen.getByLabelText('Minha análise antes do comentário')).toHaveValue('Minha análise preservada entre abas.');
 });
