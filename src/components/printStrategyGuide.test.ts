@@ -1,5 +1,5 @@
 import { expect, it, vi } from 'vitest';
-import { printStrategyGuide } from './printStrategyGuide';
+import { printStrategyGuide } from '../lib/printStrategyGuide';
 
 it('imprime somente o guia renderizado e remove o quadro ao terminar', async () => {
   const content = document.createElement('article');
