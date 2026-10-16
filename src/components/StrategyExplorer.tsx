@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { studyAreaForTopic, studyBoardProfiles, studyProtocols } from '../data/studyProtocols';
 import { requestAiTextStream } from '../lib/aiClient';
@@ -6,7 +6,49 @@ import type { Question } from '../types';
 import { QuestionStatement } from './QuestionStatement';
 import { AiText } from './AiText';
 
+import { useAuth } from '../context/AuthContext';
+import { cacheStrategyGuides, loadStrategyGuides, readStrategyGuides, saveStrategyGuide, type StrategyGuide } from '../lib/strategyGuides';
+import { printStrategyGuide } from '../lib/printStrategyGuide';
+
 export default function StrategyExplorer() {
+  const { user } = useAuth();
+  return <StrategyExplorerContent key={user?.uid ?? 'guest'} uid={user?.uid ?? null} />;
+}
+
+function StrategyExplorerContent({ uid }: { uid: string | null }) {
+  const [guides, setGuides] = useState(() => readStrategyGuides(uid));
+  const guidesRef = useRef(guides);
+  const printContent = useRef<HTMLDivElement>(null);
+  const [saveMessage, setSaveMessage] = useState('');
+  useEffect(() => {
+    if (!uid) return;
+    let cancelled = false;
+    void loadStrategyGuides(uid).then(remote => {
+      if (cancelled) return;
+      const merged = { ...remote };
+      for (const [key, guide] of Object.entries(guidesRef.current)) {
+        if (!merged[key] || guide.savedAt >= merged[key].savedAt) merged[key] = guide;
+      }
+      guidesRef.current = merged;
+      setGuides(merged);
+      try { cacheStrategyGuides(uid, merged); } catch { /* A cópia da conta continua disponível. */ }
+    }).catch(() => { if (!cancelled) setSaveMessage('Não foi possível carregar os guias da conta. As cópias deste navegador continuam disponíveis.'); });
+    return () => { cancelled = true; };
+  }, [uid]);
+  const persist = async (guide: StrategyGuide) => {
+    const next = { ...guidesRef.current, [guide.key]: guide };
+    guidesRef.current = next;
+    setGuides(next);
+    let cached = false;
+    try { cacheStrategyGuides(uid, next); cached = true; } catch { /* Mostra a falha abaixo. */ }
+    if (uid) {
+      setSaveMessage(cached ? 'Salvo neste navegador. Sincronizando com sua conta...' : 'Salvando na sua conta...');
+      try { await saveStrategyGuide(uid, guide); setSaveMessage('Salvo na sua conta.'); }
+      catch { setSaveMessage(cached ? 'Salvo neste navegador. Não foi possível sincronizar com sua conta; tente salvar novamente.' : 'Não foi possível salvar. Imprima ou tente salvar novamente antes de sair.'); }
+    } else {
+      setSaveMessage(cached ? 'Salvo neste navegador. Entre na sua conta para salvar guias na conta.' : 'Não foi possível salvar neste navegador. Imprima o guia antes de sair.');
+    }
+  };
   const [subject, setSubject] = useState('Matemática');
   const topics = mockTopics.filter((topic) => studyAreaForTopic(topic) === subject);
   const [topicId, setTopicId] = useState(topics[0]?.id ?? '');
@@ -21,6 +63,7 @@ export default function StrategyExplorer() {
   const protocol = studyProtocols.find((item) => item.subject === subject)!;
   const boardProfile = studyBoardProfiles.find((item) => item.board === board)!;
   const key = JSON.stringify([subject, topic?.id, chapter, board]);
+  useEffect(() => { setSaveMessage(''); }, [key]);
   const changeSubject = (value: string) => { setSubject(value); setTopicId(mockTopics.find((topic) => studyAreaForTopic(topic) === value)?.id ?? ''); setChapter(''); };
   const generate = async () => {
     if (!topic || busy.current) return;
@@ -41,13 +84,21 @@ export default function StrategyExplorer() {
       const result = await requestAiTextStream('review-tip', { topic: topic.name, subject, board, chapter: chapter || undefined, chapters: topic.chapters?.join('; '), level: 40, daysSinceReview: 0, guideMode: 'strategy', referenceText: referenceText || undefined }, (delta) => {
         text += delta; setAnswers((prev) => ({ ...prev, [key]: text }));
       });
-      setAnswers((prev) => ({ ...prev, [key]: result.text }));
+      if (!result.text.trim()) throw new Error('Guia vazio');
+      setAnswers((prev) => { const next = { ...prev }; delete next[key]; return next; });
+      void persist({ key, subject, topicId: topic.id, topicName: topic.name, chapter, board, text: result.text, savedAt: new Date().toISOString() });
     } catch {
       setAnswers((prev) => { const next = { ...prev }; delete next[key]; return next; });
       setErrors((prev) => ({ ...prev, [key]: 'Não foi possível aprofundar agora. O protocolo e o exemplo abaixo continuam disponíveis; tente novamente.' }));
     } finally { busy.current = false; setLoadingKey(null); }
   };
   return <section className="space-y-4" aria-labelledby="guia-estrategias">
+    {Object.keys(guides).length > 0 && <div className="ni-panel p-4 space-y-2">
+      <h2 className="font-display text-lg">Aprofundamentos salvos</h2>
+      <ul className="space-y-2">{Object.values(guides).sort((a, b) => b.savedAt.localeCompare(a.savedAt)).map(guide => <li key={guide.key}>
+        <button type="button" className="text-sm underline text-left" onClick={() => { setSubject(guide.subject); setTopicId(guide.topicId); setChapter(guide.chapter); setBoard(guide.board); }}>{guide.subject} · {guide.topicName}{guide.chapter ? ` · ${guide.chapter}` : ''} · {guide.board}</button>
+      </li>)}</ul>
+    </div>}
     <div className="ni-panel p-4 space-y-3">
       <h2 id="guia-estrategias" className="font-display text-xl">Banca, matéria e tópico: decidir cada passo</h2>
       <p className="text-sm text-[var(--dim)]">Escolha o recorte do currículo. O protocolo e o exemplo são autorais; o guia aprofundado usa os resumos editoriais disponíveis como referência e deve ser conferido com questões e gabaritos.</p>
@@ -74,13 +125,22 @@ export default function StrategyExplorer() {
     <div className="ni-panel p-4 space-y-3">
       <h3 className="font-display text-lg">Aprofundamento: {chapter || topic?.name}</h3>
       <p className="text-xs text-[var(--dim)]">Conceitos, representações, decisão de estratégia, resolução justificada, contrastes, pegadinhas e exercícios. Comparações de cobrança devem indicar evidência; frequência não é inferida pelo nome da banca.</p>
-      <button type="button" disabled={loadingKey !== null} onClick={() => void generate()} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50">{loadingKey === key ? 'Preparando guia...' : 'Aprofundar este tópico e sua cobrança'}</button>
+      <button type="button" disabled={loadingKey !== null} onClick={() => void generate()} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50">{loadingKey === key ? 'Preparando guia...' : guides[key] ? 'Gerar novo aprofundamento' : 'Aprofundar este tópico e sua cobrança'}</button>
       {errors[key] && <p role="alert" className="text-sm">{errors[key]}</p>}
       {examples[key] && <details><summary className="cursor-pointer text-sm">Questões com origem identificada neste recorte: {examples[key].length}</summary>
         {examples[key].length === 0 && <p className="text-xs mt-2">Não há exemplo textual elegível no banco local para este recorte. Questões com figuras devem ser conferidas na tela de questões; a ausência aqui não mede incidência.</p>}
         {examples[key].map((question) => <article key={question.id} className="border-t border-[var(--line)] pt-3 mt-3 text-sm"><h4 className="font-semibold">{question.examSource?.board} · {question.examSource?.year ?? 'ano não informado'} · {question.id}</h4><QuestionStatement question={question} />{question.examSource?.sourceUrl && <a href={question.examSource.sourceUrl} target="_blank" rel="noreferrer" className="text-xs underline">Conferir origem cadastrada</a>}<p className="text-xs text-[var(--dim)]">A origem pode ser reprodução em apostila ou fonte secundária; confira a prova e o gabarito oficiais.</p></article>)}
       </details>}
-      {answers[key] && <AiText text={answers[key]} className="text-sm leading-relaxed" />}
+      {saveMessage && <p role="status" className="text-xs text-[var(--dim)]">{saveMessage}</p>}
+      {guides[key] && !saveMessage && <p className="text-xs text-[var(--dim)]">Salvo neste navegador · {new Date(guides[key].savedAt).toLocaleString('pt-BR')}</p>}
+      {guides[key] && <div className="flex flex-wrap gap-3">
+        <button type="button" disabled={loadingKey !== null} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50" onClick={() => { if (printContent.current) printStrategyGuide(printContent.current, `Aprofundamento — ${subject} — ${chapter || topic?.name} — ${board}`); }}>Imprimir / Salvar em PDF</button>
+        {uid && <button type="button" className="text-sm underline" onClick={() => void persist(guides[key])}>Salvar novamente na conta</button>}
+      </div>}
+      {(answers[key] || guides[key]) && <div ref={printContent}>
+        <h4 className="font-display text-lg">{subject} · {topic?.name}{chapter ? ` · ${chapter}` : ''} · {board}</h4>
+        <AiText text={answers[key] || guides[key]?.text || ''} className="text-sm leading-relaxed" />
+      </div>}
     </div>
     <a href="/study-guide.html" target="_blank" rel="noreferrer" className="text-sm underline">Abrir guia completo para consultar ou imprimir</a>
   </section>;
