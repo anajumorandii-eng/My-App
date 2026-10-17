@@ -213,3 +213,11 @@ it('mantém a tentativa do laboratório ao alternar abas da obra', async () => {
   fireEvent.click(screen.getByRole('button', { name: 'Laboratório de leitura' }));
   expect(screen.getByLabelText('Minha análise antes do comentário')).toHaveValue('Minha análise preservada entre abas.');
 });
+
+it('abre o resumo aprofundado por link e alterna para estratégias da mesma obra', async () => {
+  renderAt('/obras/olhos-dagua?aba=resumo');
+  expect(await screen.findByRole('heading', { name: 'Resumo aprofundado de Olhos d’água' })).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('link', { name: 'Ver estratégias desta obra' }));
+  expect(await screen.findByRole('heading', { name: 'Estratégias de leitura e resolução de Olhos d’água' })).toBeInTheDocument();
+  expect(screen.getByRole('button', { name: 'Imprimir / Salvar em PDF' })).toBeInTheDocument();
+});

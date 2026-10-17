@@ -15,3 +15,17 @@ it('imprime somente o guia renderizado e remove o quadro ao terminar', async () 
   frame.contentWindow!.dispatchEvent(new Event('afterprint'));
   expect(document.querySelector('iframe')).toBeNull();
 });
+
+it('inclui a análise recolhida no PDF e retira controles de seleção', async () => {
+  const content = document.createElement('article');
+  content.innerHTML = '<label data-print-exclude>Unidade<select><option>Conto</option></select></label><details><summary>Análise</summary><p>Explicação aprofundada</p></details>';
+  printStrategyGuide(content, 'Resumo de obra');
+  const frame = document.querySelector('iframe')!;
+  vi.spyOn(frame.contentWindow!, 'print').mockImplementation(() => {});
+  vi.spyOn(frame.contentWindow!, 'focus').mockImplementation(() => {});
+  expect(frame.contentDocument!.querySelector('select')).toBeNull();
+  expect(frame.contentDocument!.querySelector('details')!.open).toBe(true);
+  expect(content.querySelector('details')!.open).toBe(false);
+  await vi.waitFor(() => expect(frame.contentWindow!.print).toHaveBeenCalledOnce());
+  frame.contentWindow!.dispatchEvent(new Event('afterprint'));
+});

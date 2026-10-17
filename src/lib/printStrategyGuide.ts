@@ -20,7 +20,10 @@ export function printStrategyGuide(content: HTMLElement, title: string) {
   const printStyle = target.createElement('style');
   printStyle.textContent = '@page{margin:18mm} body{background:white!important;color:black!important;font:12pt/1.6 sans-serif;padding:0} body *{color:black!important} h1,h2,h3,h4{break-after:avoid} pre{white-space:pre-wrap} img,svg{max-width:100%}';
   target.head.appendChild(printStyle);
-  target.body.appendChild(content.cloneNode(true));
+  const printable = content.cloneNode(true) as HTMLElement;
+  printable.querySelectorAll('[data-print-exclude]').forEach(element => element.remove());
+  printable.querySelectorAll('details').forEach(element => { element.open = true; });
+  target.body.appendChild(printable);
   void Promise.all(pending).then(() => target.fonts?.ready).then(() => {
     const view = frame.contentWindow;
     if (!view) { frame.remove(); return; }
