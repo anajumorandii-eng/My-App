@@ -80,3 +80,16 @@ test('recorte literário inclui a unidade publicada e apenas as suas passagens',
   dossier.units.find(unit => unit.id === 'maria')!.guide.editorialStatus = 'needs_review';
   assert.throws(() => buildWorkStudyPacket(dossier, 'maria'));
 });
+
+test('pacote combinado reserva fontes para cada tópico e não trunca enunciados', async () => {
+  const { buildCombinedStudyPacket } = await import('./studySources');
+  const evolution: Topic = { id: 'bio_evolucao', name: 'Evolução', subject: 'Biologia', prerequisites: [], chapters: ['Seleção'] };
+  const q1 = question('g1', 'UNICAMP'), q2 = { ...question('e1', 'FUVEST'), topicId: evolution.id };
+  const packet = buildCombinedStudyPacket([{ topic, chapter: '' }, { topic: evolution, chapter: '' }], ['UNICAMP', 'FUVEST'], { questions: [q1, q2], summaries: [{ subject: 'Biologia', topic: 'Mendel', sections: [{ title: 'Genética', content: 'Segregação.' }] }, { subject: 'Biologia', topic: 'Seleção', sections: [{ title: 'Evolução', content: 'Variação e seleção.' }] }] });
+  assert.deepEqual(packet.selections?.map(item => item.topicId), [topic.id, evolution.id]);
+  assert.deepEqual(packet.sources.filter(item => item.kind === 'questao').map(item => item.questionId), ['g1', 'e1']);
+  assert.ok(packet.sources.some(item => item.topicId === evolution.id && item.kind === 'resumo'));
+  assert.ok(packet.referenceText.includes(q1.prompt));
+  assert.ok(packet.referenceText.length <= 24000);
+  assert.throws(() => buildCombinedStudyPacket([{ topic, chapter: '' }, { topic: { ...evolution, subject: 'Física' }, chapter: '' }], [], { questions: [], summaries: [] }));
+});

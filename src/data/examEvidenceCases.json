@@ -1,0 +1,4081 @@
+[
+  {
+    "id": "unicamp-2025-qz:1",
+    "cohortId": "unicamp-2025-qz",
+    "number": 1,
+    "questionId": "unicamp_2025_q1",
+    "topicId": "geo_cartografia",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Linguagem Cartográfica",
+    "title": "Escala e detalhamento de impactos ambientais",
+    "concept": "Escala numérica e generalização cartográfica; pré-requisito: comparar razões.",
+    "trap": "Confundir denominador maior com escala maior: 1:5.000 é maior que 1:5.000.000.",
+    "steps": [
+      "Observe no esquema que escala maior corresponde a área menor, mais informação e menos generalização.",
+      "Compare o objetivo de um atlas escolar com o de localizar impactos de uma obra: a intervenção exige detalhes locais."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:2",
+    "cohortId": "unicamp-2025-qz",
+    "number": 2,
+    "questionId": "unicamp_2025_q2",
+    "topicId": "geo_geopolitica_regional",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Geopolítica e Geoeconomia da América Latina",
+    "title": "Fronteiras e disputa por Essequibo",
+    "concept": "Construção política de fronteiras; pré-requisito: distinguir território e elemento natural.",
+    "trap": "A presença de um rio na fronteira não torna natural a decisão sobre sua função política.",
+    "steps": [
+      "Identifique a reivindicação venezuelana sobre Essequibo e a referência a um limite reconhecido internacionalmente.",
+      "Pergunte o que estabelece a validade de uma fronteira: decisões, disputas e acordos entre Estados."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:3",
+    "cohortId": "unicamp-2025-qz",
+    "number": 3,
+    "questionId": "unicamp_2025_q3",
+    "topicId": "geo_globalizacao_economica",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Produção Agrícola Mundial",
+    "title": "Cacau no Golfo da Guiné",
+    "concept": "Distribuição agrícola e condições socioambientais; pré-requisito: localização da África ocidental.",
+    "trap": "Escolher pela região correta e ignorar as condições de cultivo na segunda metade da alternativa.",
+    "steps": [
+      "Leia no gráfico que Costa do Marfim e Gana lideram a produção de cacau.",
+      "Localize esses países na África ocidental, junto ao Golfo da Guiné, e relacione-os ao clima quente e úmido."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:4",
+    "cohortId": "unicamp-2025-qz",
+    "number": 4,
+    "questionId": "unicamp_2025_q4",
+    "topicId": "geo_fisica_brasil",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Geologia e Geomorfologia",
+    "title": "Escudos cristalinos e minerais metálicos",
+    "concept": "Estruturas geológicas antigas e recursos minerais; pré-requisito: tipos de rochas.",
+    "trap": "Associar qualquer riqueza mineral a qualquer estrutura geológica, sem distinguir minério e combustível fóssil.",
+    "steps": [
+      "Identifique os escudos como estruturas pré-cambrianas expostas e pouco deformadas no Fanerozoico.",
+      "Distinga o embasamento cristalino de bacias sedimentares antes de associar recursos econômicos."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:5",
+    "cohortId": "unicamp-2025-qz",
+    "number": 5,
+    "questionId": "unicamp_2025_q5",
+    "topicId": "geo_climatologia_socioambiental",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Dinâmica Climática",
+    "title": "Alta pressão e bloqueio de frentes frias",
+    "concept": "Circulação atmosférica e bloqueio; pré-requisito: alta e baixa pressão.",
+    "trap": "Interpretar A e B como simples letras, sem consultar a legenda de pressão atmosférica.",
+    "steps": [
+      "Localize no mapa A, alta pressão, sobre a área de calor, e B, baixa pressão, próxima ao Sul.",
+      "Relacione a alta pressão à subsidência do ar e à dificuldade de formação de nuvens."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:6",
+    "cohortId": "unicamp-2025-qz",
+    "number": 6,
+    "questionId": "unicamp_2025_q6",
+    "topicId": "geo_populacao_urbana_brasil",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "O Espaço Urbano II",
+    "title": "Planejamento integrado contra desastres urbanos",
+    "concept": "Gestão territorial federativa e função social da cidade; pré-requisito: competências dos entes federativos.",
+    "trap": "Tratar defesa civil como atuação exclusiva do município e limitar planejamento à resposta emergencial.",
+    "steps": [
+      "Retome os eventos extremos e o grande contingente urbano exposto no texto e mapa da página anterior.",
+      "Identifique que programas e metas nacionais exigem articulação entre escalas de governo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:7",
+    "cohortId": "unicamp-2025-qz",
+    "number": 7,
+    "questionId": "unicamp_2025_q7",
+    "topicId": "geo_fisica_brasil",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Políticas Ambientais Brasileiras",
+    "title": "Direitos no espaço marítimo brasileiro",
+    "concept": "Soberania territorial e direitos econômicos marítimos; pré-requisito: leitura de legenda e limites.",
+    "trap": "Aplicar à plataforma continental estendida o mesmo regime de soberania do Mar Territorial.",
+    "steps": [
+      "Leia na figura os limites do Mar Territorial, 12 milhas, e da ZEE, 200 milhas.",
+      "Distinga soberania sobre o território marítimo de direitos soberanos para exploração econômica."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:8",
+    "cohortId": "unicamp-2025-qz",
+    "number": 8,
+    "questionId": "unicamp_2025_q8",
+    "topicId": "fis_cinematica_vetorial",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Composição de Movimentos",
+    "title": "Vento favorável no trecho Baltimore–Londres",
+    "concept": "Velocidades relativas colineares; pré-requisito: movimento uniforme.",
+    "trap": "Usar a duração total do trajeto para um trecho de apenas 2000 km.",
+    "steps": [
+      "Extraia da figura o comprimento de B, 2000 km; a velocidade do avião em relação ao ar é 750 km/h.",
+      "Adote leste como sentido positivo: no trecho B o vento de 250 km/h acompanha o avião."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:9",
+    "cohortId": "unicamp-2025-qz",
+    "number": 9,
+    "questionId": "unicamp_2025_q9",
+    "topicId": "fis_cinematica",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "O Movimento Circular",
+    "title": "Velocidade de uma sonda lunar",
+    "concept": "Relação entre perímetro orbital e período; pré-requisito: conversão de horas em segundos.",
+    "trap": "Dividir o raio pelo período em vez do comprimento da circunferência, ou esquecer a conversão de horas.",
+    "steps": [
+      "Identifique r=1,848×10⁶ m e T=2,0 h para uma volta circular completa.",
+      "Use velocidade escalar v=2πr/T e mantenha distância em metros e tempo em segundos."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:10",
+    "cohortId": "unicamp-2025-qz",
+    "number": 10,
+    "questionId": "unicamp_2025_q10",
+    "topicId": "fis_gravitacao_circular",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Leis da Gravitação",
+    "title": "Ponto de cancelamento entre Terra e Lua",
+    "concept": "Leitura de aceleração resultante e posição relativa; pré-requisito: razão entre distâncias.",
+    "trap": "Responder com a distância que aparece no eixo sem trocar o centro de referência.",
+    "steps": [
+      "Identifique d=380.000 km e observe que o eixo horizontal apresenta r/d, com r medido desde a Terra.",
+      "Procure o cruzamento da curva com a=0, condição de cancelamento das forças."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:11",
+    "cohortId": "unicamp-2025-qz",
+    "number": 11,
+    "questionId": "unicamp_2025_q11",
+    "topicId": "fis_ondas_fundamentos",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Equação Fundamental da Ondulatória",
+    "title": "Conversão do comprimento de onda na Arapuca",
+    "concept": "Relação v=λf na aproximação de velocidade igual no mesmo meio; pré-requisito: proporcionalidade inversa.",
+    "trap": "Aplicar conservação da frequência de uma simples refração a um processo que transforma a radiação.",
+    "steps": [
+      "Identifique a conversão de λ₁=128 nm para λ₂=350 nm e a informação de propagação no mesmo meio.",
+      "Na aproximação adotada pela questão, use v₁=v₂ e a relação v=λf."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:12",
+    "cohortId": "unicamp-2025-qz",
+    "number": 12,
+    "questionId": "unicamp_2025_q12",
+    "topicId": "fis_calorimetria",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Dilatação ou Contração Térmica dos Sólidos e Líquidos",
+    "title": "Coeficiente negativo de dilatação",
+    "concept": "Dilatação linear e leitura de variações pequenas; pré-requisito: notação científica.",
+    "trap": "Confundir ΔL/L₀ com α, omitindo a divisão por ΔT.",
+    "steps": [
+      "Leia no gráfico L₀=2,0000 mm a 0 °C e L=1,9995 mm a 50 °C.",
+      "Use ΔL=L₀αΔT, com a variação de comprimento preservando seu sinal."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:13",
+    "cohortId": "unicamp-2025-qz",
+    "number": 13,
+    "questionId": "unicamp_2025_q13",
+    "topicId": "fis_circuitos",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Potência Elétrica",
+    "title": "Correntes no painel e na bateria",
+    "concept": "Conservação de potência em conversor ideal; pré-requisito: P=Ui.",
+    "trap": "Supor que o controlador conserva a corrente; o que se conserva no modelo ideal é a potência.",
+    "steps": [
+      "Registre P=462 W, U(painel)=42 V e U(bateria)=12 V; o controlador é ideal.",
+      "Use a mesma potência nos dois lados, pois toda a energia gerada é armazenada."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:14",
+    "cohortId": "unicamp-2025-qz",
+    "number": 14,
+    "questionId": "unicamp_2025_q14",
+    "topicId": "fis_energia",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Potência, Máquina e Rendimento",
+    "title": "Eficiência de um painel solar",
+    "concept": "Potência incidente e rendimento energético; pré-requisito: intensidade por unidade de área.",
+    "trap": "Tratar a intensidade em W/m² como se já fosse potência em W.",
+    "steps": [
+      "Identifique a potência elétrica de 462 W, a área de 2,5 m² e a intensidade incidente de 924 W/m².",
+      "Calcule primeiro a potência solar total: P(incidente)=I×A."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:15",
+    "cohortId": "unicamp-2025-qz",
+    "number": 15,
+    "questionId": "unicamp_2025_q15",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Quem recebe críticas na manchete policial",
+    "concept": "Voz passiva, expressão idiomática e modalidade; pré-requisito: distinguir ameaça e ação consumada.",
+    "trap": "Traduzir under fire literalmente e inverter agente e paciente de criticised.",
+    "steps": [
+      "Leia Police under fire e Scotland Yard criticised como expressões de críticas dirigidas à polícia.",
+      "Distinga threat to arrest de prisão efetivamente realizada: a manchete informa ameaça de prender."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:16",
+    "cohortId": "unicamp-2025-qz",
+    "number": 16,
+    "questionId": "unicamp_2025_q16",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Registro oral na fala da médica",
+    "concept": "Reformulação e adequação de registro; pré-requisito: identificar gírias em contexto.",
+    "trap": "Escolher C apenas porque há gírias, ignorando que ela exige maior precisão diagnóstica.",
+    "steps": [
+      "Compare o diagnóstico inicial compound fracture com a reformulação dirigida à paciente: Bro, spill the tea, finna, glow up e no cap.",
+      "Identifique a troca do registro técnico por expressões coloquiais associadas à comunicação juvenil."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:17",
+    "cohortId": "unicamp-2025-qz",
+    "number": 17,
+    "questionId": "unicamp_2025_q17",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Estereótipos de gênero e raça em imagens de IA",
+    "concept": "Leitura cruzada de gráficos e legenda; pré-requisito: distinguir dado real de saída de modelo.",
+    "trap": "Ler apenas o painel de gênero, ou trocar círculos de dados observados por losangos de IA.",
+    "steps": [
+      "Leia a legenda: círculos representam autodeclaração dos trabalhadores; losangos representam imagens produzidas pela IA.",
+      "No gráfico de gênero, procure profissão gerada só como masculina; confirme no gráfico racial a representação exclusivamente branca."
+    ],
+    "commandWords": [
+      "correta"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:18",
+    "cohortId": "unicamp-2025-qz",
+    "number": 18,
+    "questionId": "unicamp_2025_q18",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Novels/Short Stories",
+    "title": "Paradoxo da escassez de autores afro-americanos",
+    "concept": "Inferência textual e analogia entre violência histórica e ficção científica; pré-requisito: reconhecer perplexing.",
+    "trap": "Interpretar a ausência como ação intencional, quando o autor a apresenta como fato que causa perplexidade.",
+    "steps": [
+      "Localize a afirmação inicial: poucos afro-americanos escrevem ficção científica, fato considerado perplexing.",
+      "Busque a justificativa introduzida por since: esses sujeitos habitariam, em sentido concreto, um pesadelo de ficção científica."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:19",
+    "cohortId": "unicamp-2025-qz",
+    "number": 19,
+    "questionId": "unicamp_2025_q19",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Songs and Poems",
+    "title": "Conhecer o passado para imaginar o futuro",
+    "concept": "Afrofuturismo, memória e transformação em Parable of the Talents (1998), de Octavia E. Butler; pré-requisito: interpretar imperativos e oposição contextual.",
+    "trap": "Ler apenas “The past Go” e concluir que sobreviver exige apagar a história ignora os imperativos anteriores.",
+    "steps": [
+      "Retome Dery na página física 8: uma comunidade com a história deliberadamente apagada enfrenta o problema de imaginar futuros possíveis.",
+      "Leia as duas partes do poema de Butler, iniciado na página 8 e concluído na 9; procure o que fazer com o passado, não apenas a expressão final Go."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:20",
+    "cohortId": "unicamp-2025-qz",
+    "number": 20,
+    "questionId": "unicamp_2025_q20",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Polissemia de subject e object e poder de fala",
+    "concept": "Argumentação por polissemia: nomes gramaticais e verbos de sujeição/contestação; pré-requisito: distinguir função nominal e verbal.",
+    "trap": "A presença de pronouns no texto não faz dele o par lexical que estrutura o jogo argumentativo.",
+    "steps": [
+      "Localize “don’t object to remaining object” e “You are not a subject (unless you subject yourself to me)” no post de ALOK.",
+      "Compare funções: object verbo significa contestar, enquanto object nome designa objeto; subject nome indica sujeito, enquanto subject yourself indica sujeitar-se."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:21",
+    "cohortId": "unicamp-2025-qz",
+    "number": 21,
+    "questionId": "unicamp_2025_q21",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Global Warming",
+    "title": "Desastres climáticos e vulnerabilidade política",
+    "concept": "Leitura de tese e causalidade múltipla; pré-requisito: reconhecer contrastes introduzidos por however e while.",
+    "trap": "Reconhecer a influência do clima não autoriza tratá-lo como explicação suficiente do desastre.",
+    "steps": [
+      "O resumo admite desde o início que climate change shapes weather events; portanto, não nega a influência do clima.",
+      "Use however para localizar a ressalva: atribuir ao clima a causa dos desastres pode ocultar fragilidades e desigualdades preexistentes."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:22",
+    "cohortId": "unicamp-2025-qz",
+    "number": 22,
+    "questionId": "unicamp_2025_q22",
+    "topicId": "fil_socrates_platao",
+    "relatedTopicIds": [],
+    "subject": "Filosofia",
+    "chapter": "O Mito da Caverna",
+    "title": "A Ideia do Bem e a decisão política",
+    "concept": "Conhecimento do Bem na República, de Platão; pré-requisito: distinguir difícil acesso e impossibilidade de conhecer.",
+    "trap": "“Não é prescindível” significa indispensável; a dupla negação pode inverter a leitura.",
+    "steps": [
+      "Identifique na República a expressão “no limite do cognoscível” e a qualificação “a custo”: a Ideia do Bem é alcançável, mas exige esforço.",
+      "Separe sua função ontológica e sua função prática: ela causa o justo e o belo e orienta a inteligência."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:23",
+    "cohortId": "unicamp-2025-qz",
+    "number": 23,
+    "questionId": "unicamp_2025_q23",
+    "topicId": "fil_contratualismo_iluminismo",
+    "relatedTopicIds": [],
+    "subject": "Filosofia",
+    "chapter": "O Ideal Iluminista de Razão e Progresso",
+    "title": "Racionalidade feminina e direitos universais",
+    "concept": "Crítica à exclusão das mulheres em Reivindicações dos direitos da mulher (1792), de Mary Wollstonecraft; pré-requisito: ler condição e consequência.",
+    "trap": "Confundir a condição exigida aos defensores da exclusão com a opinião da própria autora sobre as mulheres.",
+    "steps": [
+      "Situe a carta a Talleyrand no debate constitucional da Revolução Francesa: a autora questiona a exclusão feminina dos direitos naturais.",
+      "Reconstrua a condição “prove antes”: quem exclui mulheres deve justificar essa exclusão demonstrando ausência de razão, em vez de pressupô-la."
+    ],
+    "commandWords": [
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:24",
+    "cohortId": "unicamp-2025-qz",
+    "number": 24,
+    "questionId": "unicamp_2025_q24",
+    "topicId": "fil_etica_politica_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Filosofia",
+    "chapter": "Filosofia Política Contemporânea",
+    "title": "Monocultura e pluralidade em Futuro ancestral",
+    "concept": "Crítica de Ailton Krenak à homogeneização colonial em Futuro ancestral (2022); pré-requisito: interpretar metáfora no contexto.",
+    "trap": "Tomar “somos todos iguais” como crítica à igualdade de direitos, quando o contexto denuncia a uniformização colonial.",
+    "steps": [
+      "Leia monocultura junto de “vida plural dos povos”, “mundos diversos” e “colonialismo”, e não isoladamente como técnica agrícola.",
+      "Compare a euforia da monocultura às confluências de Nêgo Bispo: confluências permitem que mundos distintos se afetem."
+    ],
+    "commandWords": [
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:25",
+    "cohortId": "unicamp-2025-qz",
+    "number": 25,
+    "questionId": "unicamp_2025_q25",
+    "topicId": "his_idade_antiga",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "Antiguidade Clássica: o Mundo Grego",
+    "title": "Cidadania feminina e revisão historiográfica em Atenas",
+    "concept": "Historicidade dos conceitos de política e cidadania; pré-requisito: distinguir participação cívica e exercício do voto.",
+    "trap": "Redimensionar a atuação pública das mulheres não equivale a afirmar sufrágio feminino em Atenas.",
+    "steps": [
+      "O texto contrasta estudos até o fim do século XX com pesquisas após 2000, portanto pergunta também sobre mudança historiográfica.",
+      "A definição anterior equiparava política a cidadania formal masculina e, assim, apagava outras formas de ação pública."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:26",
+    "cohortId": "unicamp-2025-qz",
+    "number": 26,
+    "questionId": "unicamp_2025_q26",
+    "topicId": "his_moderna_iluminismo",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "América Espanhola",
+    "title": "Justiça como estratégia de resistência à escravidão",
+    "concept": "Agência de pessoas escravizadas e ações de liberdade na América espanhola; pré-requisito: distinguir alforria individual e abolição.",
+    "trap": "A existência de ação judicial não prova vitória de Juana, nem o fim do sistema escravista.",
+    "steps": [
+      "Organize a cronologia: Juana afirma ter recebido liberdade verbal em 1751 e recorre ao Cabildo de Santiago em 1765.",
+      "O intervalo e a desconsideração da alforria pelas senhoras explicam por que a liberdade prometida precisava de reconhecimento jurídico."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:27",
+    "cohortId": "unicamp-2025-qz",
+    "number": 27,
+    "questionId": "unicamp_2025_q27",
+    "topicId": "his_brasil_colonia",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "Dinâmica Interna da Colonização",
+    "title": "Paisagem colonial como interpretação histórica",
+    "concept": "Paisagem e projeções políticas na carta de Lavradio de 1769; pré-requisito: distinguir descrição e juízo de valor.",
+    "trap": "Tratar o juízo estético do governador como prova objetiva de inviabilidade econômica da cidade.",
+    "steps": [
+      "Situe a carta em 1769, no governo do Rio de Janeiro, e identifique o olhar de um administrador colonial sobre a cidade.",
+      "Sublinhe “vista sumamente desagradável”, “povos sumamente pobres” e “cadáver”: são avaliações, não medidas objetivas das serras."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:28",
+    "cohortId": "unicamp-2025-qz",
+    "number": 28,
+    "questionId": "unicamp_2025_q28",
+    "topicId": "his_moderna_iluminismo",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "Revolução Francesa",
+    "title": "Goya e o terror da ocupação napoleônica",
+    "concept": "Iconografia de martírio e crítica da violência em O 3 de maio de 1808 em Madri, pintado em 1814; pré-requisito: distinguir data representada e execução da obra.",
+    "trap": "A organização do pelotão não significa que a obra glorifique seus soldados; observe o foco de luz e a vítima.",
+    "steps": [
+      "Observe a reprodução: à direita, soldados alinhados apontam armas; à esquerda, vítimas, corpos no chão e um homem de camisa branca com braços erguidos.",
+      "A luz da lanterna torna a figura branca um foco visual; seus braços e mãos abertos evocam a iconografia de Cristo crucificado."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:29",
+    "cohortId": "unicamp-2025-qz",
+    "number": 29,
+    "questionId": "unicamp_2025_q29",
+    "topicId": "his_primeira_republica_vargas",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "A Primeira República: o Declínio Oligárquico (1889-1930)",
+    "title": "Concurso eugênico de 1929 e hierarquia racial",
+    "concept": "Eugenia brasileira como projeto racial e reprodutivo; pré-requisito: distinguir explicação histórica de validação científica.",
+    "trap": "Reproduzir a alegação eugênica de superioridade racial como fato biológico; aqui ela é objeto de análise crítica.",
+    "steps": [
+      "Leia o concurso de 1929 e a capa: “proles sadias e belas”, “futura elite nacional” e “cruzamento de raças” expõem seleção e hierarquização de famílias.",
+      "Relacione essa seleção ao ideário eugênico da época, que associava branquitude, suposta pureza racial e reprodução considerada superior."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:30",
+    "cohortId": "unicamp-2025-qz",
+    "number": 30,
+    "questionId": "unicamp_2025_q30",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "Descolonização Afro-Asiática",
+    "title": "Unidade nacional no projeto de Amílcar Cabral",
+    "concept": "Anticolonialismo e construção nacional acima das divisões étnicas; pré-requisito: diferenciar unidade política e uniformidade cultural.",
+    "trap": "“Aqui não há” expressa superação política da divisão no partido, não desaparecimento cultural dos grupos.",
+    "steps": [
+      "Situe Cabral na luta do PAIGC contra Portugal, com início da luta armada em 1963 e horizonte de independência de Guiné e Cabo Verde.",
+      "Na fala, a enumeração de papel, fula, mandinga e filhos de caboverdianos nega que essas distinções dividam o partido."
+    ],
+    "commandWords": [
+      "correta"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:31",
+    "cohortId": "unicamp-2025-qz",
+    "number": 31,
+    "questionId": "unicamp_2025_q31",
+    "topicId": "his_guerra_fria_contemporaneo",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "América Latina no Século XX",
+    "title": "Povos originários e construção da memória argentina",
+    "concept": "Disputas de memória e participação na história nacional; pré-requisito: distinguir inclusão como objeto e participação como sujeito.",
+    "trap": "Disputa pela memória pode ampliar uma narrativa compartilhada sem rejeitar os outros movimentos presentes.",
+    "steps": [
+      "Situe a ESMA como centro de repressão da ditadura argentina de 1976–1983 transformado em espaço de memória em 2004.",
+      "A fala indígena não pede apenas que objetos ou identidades sejam adicionados a uma exposição: pede fazer parte da história nacional."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:32",
+    "cohortId": "unicamp-2025-qz",
+    "number": 32,
+    "questionId": "unicamp_2025_q32",
+    "topicId": "soc_estratificacao_desigualdade",
+    "relatedTopicIds": [],
+    "subject": "Sociologia",
+    "chapter": "Desigualdade de Gênero",
+    "title": "Cuidado coletivo e dependência econômica das mães",
+    "concept": "Reprodução social e distribuição do trabalho de cuidado; pré-requisito: distinguir socialização do cuidado e responsabilização familiar.",
+    "trap": "Ampliar a responsabilidade financeira do pai não implica, no texto 2, autonomia da mãe; o autor afirma dependência.",
+    "steps": [
+      "Complete a leitura de Gilman, iniciada na página 12: cozinhas comuns, contratação coletiva de serviços e creches reduzem a concentração das tarefas na família e nas mulheres.",
+      "Leia a reforma de 1996 no texto 2: o Estado deixa de fornecer auxílio às mães pobres e transfere essa responsabilidade ao pai biológico."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:33",
+    "cohortId": "unicamp-2025-qz",
+    "number": 33,
+    "questionId": "unicamp_2025_q33",
+    "topicId": "soc_movimentos_sociais",
+    "relatedTopicIds": [],
+    "subject": "Sociologia",
+    "chapter": "Democracia e Participação Política",
+    "title": "Constituinte e negociação democrática das diferenças",
+    "concept": "Cidadania, igualdade e direito à diferença; pré-requisito: distinguir diversidade e desigualdade.",
+    "trap": "Direito à diferença pode ampliar igualdade de direitos; diferenças sociais não justificam discriminação.",
+    "steps": [
+      "Observe a charge de Henfil: muitas pessoas participam da construção da imagem nacional identificada como Constituinte.",
+      "Associe a participação visual ao argumento de Dagnino: a Constituição de 1988 redefine cidadania ao incorporar direito à diferença."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:34",
+    "cohortId": "unicamp-2025-qz",
+    "number": 34,
+    "questionId": "unicamp_2025_q34",
+    "topicId": "soc_cultura_identidade",
+    "relatedTopicIds": [],
+    "subject": "Sociologia",
+    "chapter": "Identidade e Diferença",
+    "title": "Homem cordial: emoção privada no espaço público",
+    "concept": "Cordialidade em Raízes do Brasil e sua aproximação a Fado Tropical (1973); pré-requisito: distinguir emoção e gentileza.",
+    "trap": "A palavra cordial no uso cotidiano sugere gentileza, mas o conceito sociológico apresentado não tem esse sentido.",
+    "steps": [
+      "O texto sobre Sérgio Buarque de Holanda define cordialidade como ética de fundo emotivo e ressalta que ela não significa gentileza.",
+      "As referências a sentimentos particularistas e ao ambiente doméstico apontam predominância de vínculos privados sobre regras impessoais."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:35",
+    "cohortId": "unicamp-2025-qz",
+    "number": 35,
+    "questionId": "unicamp_2025_q35",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Gêneros não Verbais: Fundamentos de Leitura",
+    "title": "Primeira pessoa e intimidade no grafite de Simone Siss",
+    "concept": "Integração verbal e visual em O que tenho dentro de nós (2024); pré-requisito: identificar pronomes e flexões de primeira pessoa.",
+    "trap": "A temática feminina não dispensa analisar quais classes e pessoas gramaticais efetivamente sustentam a alternativa.",
+    "steps": [
+      "Observe o mural: uma mão feminina segura a lata de spray, e a representação integra inscrições sobre a interioridade de quem fala.",
+      "Localize “me”, “eu”, “mim” e verbos como “abri”, “sou” e “moro”: a voz enunciadora apresenta sua própria experiência."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:36",
+    "cohortId": "unicamp-2025-qz",
+    "number": 36,
+    "questionId": "unicamp_2025_q36",
+    "topicId": "por_norma_culta",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "O Léxico em Contexto: Variadas Possibilidades Semânticas",
+    "title": "Maria vai com as outras: expressão e autonomia",
+    "concept": "Ressignificação de expressão cristalizada no grafite e contraste com a canção de Vinícius de Moraes e Toquinho (1971); pré-requisito: reconhecer sentido idiomático.",
+    "trap": "A personagem ter um particular não significa que a canção altere a forma da expressão, como faz explicitamente o grafite.",
+    "steps": [
+      "Recupere o sentido usual de “maria vai com as outras”: pessoa que segue os outros sem posicionamento próprio.",
+      "No grafite, a forma muda para “Sou Maria... E vou com as outras!”; o eu que também afirma “falo meus nãos” escolhe associar-se a outras mulheres."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:37",
+    "cohortId": "unicamp-2025-qz",
+    "number": 37,
+    "questionId": "unicamp_2025_q37",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Gêneros não Verbais: Fundamentos de Leitura",
+    "title": "A estatura desmonta a ostentação de poder",
+    "concept": "Relação entre linguagem verbal e imagem na sátira; pré-requisitos: acompanhar a sequência dos quadros e distinguir poder declarado de avaliação do narrador visual.",
+    "trap": "Escolher B pela simples presença de mudança física, sem explicar por que o encolhimento contraria a autoimagem grandiosa.",
+    "steps": [
+      "A personagem enumera dinheiro, amizades, cargo, escolas, títulos e ascendência; ao longo dos quatro quadros, sua figura encolhe diante do interlocutor.",
+      "Compare a pretensão das falas com a mudança de escala, mantendo separados o que a personagem afirma e o que o desenho sugere."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:38",
+    "cohortId": "unicamp-2025-qz",
+    "number": 38,
+    "questionId": "unicamp_2025_q38",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Intertextualidade e Interdiscursividade",
+    "title": "Importância autoproclamada e necessidade coletiva",
+    "concept": "Comparação de categorias de valor entre ensaio e tira; pré-requisitos: recuperar o texto visual da Q37 e distinguir as definições contextuais de importante, útil e necessário.",
+    "trap": "Ler importante como elogio e esquecer que Bispo dá ao termo uma definição crítica específica.",
+    "steps": [
+      "Bispo distingue quem se acha ótimo e espera ser servido de quem faz falta à comunidade; a tira mostra alguém exibindo suas credenciais de status.",
+      "Use as definições do ensaio como chave de leitura da personagem, sem substituir importante por seu sentido cotidiano de pessoa valiosa."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:39",
+    "cohortId": "unicamp-2025-qz",
+    "number": 39,
+    "questionId": "unicamp_2025_q39",
+    "topicId": "por_norma_culta",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Verbo e Sintaxe da Oração",
+    "title": "Macetar sem objeto expresso",
+    "concept": "Transitividade e ressignificação de um verbo; pré-requisitos: reconhecer complemento verbal e diferenciar gerúndio de adjetivo.",
+    "trap": "Confundir forma nominal do verbo com mudança de classe gramatical ou achar que a repetição, sozinha, explica a nova acepção.",
+    "steps": [
+      "O verbete define macetar como golpear alguém ou algo com maceta; o refrão repete macetando sem dizer quem ou o que recebe o golpe.",
+      "Procure os constituintes que completariam o verbo na acepção dicionarizada e verifique sua presença na letra."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:40",
+    "cohortId": "unicamp-2025-qz",
+    "number": 40,
+    "questionId": "unicamp_2025_q40",
+    "topicId": "por_norma_culta",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Ambiguidade: Duplicidade no Léxico e na Sintaxe",
+    "title": "Ligar como telefonar e dar importância",
+    "concept": "Polissemia e crítica social em postagem; pré-requisitos: reconhecer sentido lexical contextual e o papel das expressões ninguém liga e ligar para alguém.",
+    "trap": "Procurar o duplo sentido em um advérbio ou preposição porque aparecem perto do verbo ambíguo.",
+    "steps": [
+      "A postagem recorda o celular como telefone e afirma que hoje o aparelho serve para tudo, menos telefonar; termina com “Ninguém mais liga! Ninguém liga pra ninguém”.",
+      "Teste as duas leituras do mesmo verbo em relação ao tema das chamadas e ao tema das relações entre pessoas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:41",
+    "cohortId": "unicamp-2025-qz",
+    "number": 41,
+    "questionId": "unicamp_2025_q41",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Gêneros Narrativos e Níveis de Compreensão",
+    "title": "Alice e o desencontro de sentidos",
+    "concept": "Construção do diálogo e interpretação literal; pré-requisitos: distinguir finalidade pragmática de conteúdo literal e reconhecer o jogo de linguagem da narrativa.",
+    "trap": "Usar o fato de o Gato ser fantástico para escolher B, sem analisar o funcionamento específico da conversa.",
+    "steps": [
+      "Alice pede um caminho para sair, diz não se importar com o destino e depois deseja chegar a algum lugar; o Gato condiciona a orientação ao destino e garante apenas que andar leva a algum lugar.",
+      "Compare a expectativa de orientação de Alice com a resposta logicamente literal do Gato."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:42",
+    "cohortId": "unicamp-2025-qz",
+    "number": 42,
+    "questionId": "unicamp_2025_q42",
+    "topicId": "por_lit_modernismo",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Pré-Modernismo",
+    "title": "Gonzaga de Sá entre indivíduo e repartição",
+    "concept": "Sátira da burocracia em Lima Barreto; pré-requisitos: reconhecer ironia, função do narrador e a diferença entre avaliação da instituição e da personagem.",
+    "trap": "Transformar a crítica à repartição em condenação moral do funcionário ou inferir oportunismo religioso sem evidência.",
+    "steps": [
+      "O narrador ironiza a fabricação de ídolos e apresenta uma repartição que acumula papéis e decide quantas setas deve ter a imagem de São Sebastião.",
+      "Separe o alvo institucional da sátira da caracterização de Gonzaga de Sá no romance, indivíduo de reflexão e sensibilidade."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:43",
+    "cohortId": "unicamp-2025-qz",
+    "number": 43,
+    "questionId": "unicamp_2025_q43",
+    "topicId": "por_lit_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Literatura Lusófona Contemporânea",
+    "title": "Lágrimas e desamparo em Chiziane e Evaristo",
+    "concept": "Leitura comparativa de imagens e experiência feminina; pré-requisitos: reconhecer narradoras, contexto desigual e distinção entre sofrimento, submissão e narcisismo. Articulação com a prosa brasileira contemporânea de Evaristo.",
+    "trap": "Associar automaticamente mulher que chora a submissão, ou espelho a vaidade, desprezando a situação narrada.",
+    "steps": [
+      "Em Niketche, a narradora vê no espelho olheiras causadas pelo choro; em Olhos D’água, a memória do abraço materno associa a chuva às lágrimas da mãe.",
+      "Busque o núcleo comum das imagens, relacionando-o às condições sociais das mulheres nas duas narrativas."
+    ],
+    "commandWords": [
+      "por que"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:44",
+    "cohortId": "unicamp-2025-qz",
+    "number": 44,
+    "questionId": "unicamp_2025_q44",
+    "topicId": "por_norma_culta",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Verbo",
+    "title": "Indicativo e subjuntivo na intimidade de Além do ponto",
+    "concept": "Modos verbais e contraste entre estado vivido e julgamento imaginado; pré-requisitos: identificar pretérito imperfeito do indicativo e do subjuntivo. Articulação com a prosa brasileira de 1960–1980.",
+    "trap": "Escolher B só porque a negação se repete, deixando de analisar pensasse e o julgamento hipotético.",
+    "steps": [
+      "O narrador admite que bebia, passava fome e não dormia, mas não queria que o outro pensasse nesses estados; aparecem queria, andava e pensasse.",
+      "Classifique os modos verbais e relacione-os ao grau de afirmação das experiências e das reações atribuídas ao outro."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:45",
+    "cohortId": "unicamp-2025-qz",
+    "number": 45,
+    "questionId": "unicamp_2025_q45",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Os Dois Níveis da Leitura",
+    "title": "Conhecimento indígena e relação não predatória",
+    "concept": "Inferência sustentada por ensaio e perspectivas de mundo; pré-requisitos: distinguir conteúdo do sonho e interpretação do autor. Articulação com cultura e relações entre sociedade e natureza, sem exigir teoria externa.",
+    "trap": "Converter um sonho que alerta para a destruição em desejo de que ela termine, para escolher D.",
+    "steps": [
+      "O pajé sonha com a desolação produzida pela ação predatória dos brancos; Krenak percebe no modo indígena de observar uma abertura para o conhecimento e registra alertas sobre a invasão.",
+      "Articule a ameaça material à valorização de outra perspectiva de conhecimento, sem alterar o conteúdo do sonho."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:46",
+    "cohortId": "unicamp-2025-qz",
+    "number": 46,
+    "questionId": "unicamp_2025_q46",
+    "topicId": "por_lit_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Cancioneiro Popular Brasileiro",
+    "title": "Cipreste e cruz na melancolia do pensamento",
+    "concept": "Imagens poéticas e tonalidade lírica; pré-requisitos: reconhecer metáfora e o simbolismo funerário de cipreste e cruz.",
+    "trap": "Isolar a folha ou o vento e ignorar as imagens finais que definem o tom da canção.",
+    "steps": [
+      "O eu lírico contrapõe o direito de cantar a seu hábito de pensar no não realizado; deseja mudar o pensar e o associa a folha desprendida, luz vacilante e cipreste com cruz.",
+      "Leia as imagens em conjunto e identifique o tom que explica o desejo de mudança."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:47",
+    "cohortId": "unicamp-2025-qz",
+    "number": 47,
+    "questionId": "unicamp_2025_q47",
+    "topicId": "mat_dados_probabilidade",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Estatística Descritiva",
+    "title": "Complemento percentual no gráfico do PISA",
+    "concept": "Leitura de gráfico de barras e categorias complementares; pré-requisitos: porcentagem, legenda e diferença entre razão e pontos percentuais. Contexto educacional não altera o foco matemático.",
+    "trap": "Confundir a parcela branca intermediária com todo o grupo que atingiu pelo menos o nível 2, excluindo indevidamente os alunos de alto desempenho.",
+    "steps": [
+      "O gráfico informa baixo desempenho: Brasil 73% em Matemática, 50% em Leitura e 55% em Ciências; médias OCDE 31%, 26% e 24%. Alto desempenho em Leitura no Brasil: 2%.",
+      "Associe cinza a pontuação abaixo do nível 2 e calcule o complemento quando a pergunta pede pelo menos esse nível."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:48",
+    "cohortId": "unicamp-2025-qz",
+    "number": 48,
+    "questionId": "unicamp_2025_q48",
+    "topicId": "mat_dados_probabilidade",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Operações com Probabilidades",
+    "title": "Múltiplos de 3 ou 7 sem dupla contagem",
+    "concept": "Probabilidade da união com inclusão e exclusão; pré-requisitos: contagem de múltiplos, mínimo múltiplo comum e equiprobabilidade.",
+    "trap": "Somar as contagens sem descontar os 96 números que são múltiplos de ambos os divisores; interpretar ou como exclusivo também altera o evento.",
+    "steps": [
+      "O sorteio é uniforme entre os 2025 inteiros de 1 a 2025, inclusive; interessam os divisíveis por 3 ou por 7.",
+      "Conte separadamente os dois conjuntos e subtraia a interseção, composta pelos múltiplos de 21."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:49",
+    "cohortId": "unicamp-2025-qz",
+    "number": 49,
+    "questionId": "unicamp_2025_q49",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Porcentagem",
+    "title": "Dois reajustes e um desconto sobre bases diferentes",
+    "concept": "Variações percentuais sucessivas por fatores multiplicativos; pré-requisitos: converter porcentagens em fatores e calcular preço em reais.",
+    "trap": "Somar as taxas como se incidissem todas sobre R$ 2.000,00; o segundo aumento e o desconto têm bases atualizadas.",
+    "steps": [
+      "O preço inicial é R$ 2.000,00; ocorrem aumentos de 10% em abril e junho e desconto de 20% sobre o preço vigente em novembro.",
+      "Atualize a base a cada operação: aumentos usam fator 1,10 e desconto usa fator 0,80."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:50",
+    "cohortId": "unicamp-2025-qz",
+    "number": 50,
+    "questionId": "unicamp_2025_q50",
+    "topicId": "mat_trigonometria",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "A Relação Fundamental da Trigonometria",
+    "title": "Seno de quinze graus pela identidade de meio arco",
+    "concept": "Identidade fundamental e meio arco com escolha do sinal; pré-requisitos: cos(π/6) = √3/2, radicais e sinais no primeiro quadrante.",
+    "trap": "Copiar diretamente o radical obtido para cos(π/12), sem aplicar a identidade fundamental para encontrar o seno.",
+    "steps": [
+      "O arco procurado é π/12, ou 15°, e seu dobro é π/6. A fórmula fornecida permite obter o cosseno do meio arco.",
+      "Aplique a fórmula com x = π/6 e depois use sen²θ + cos²θ = 1; escolha a raiz positiva porque θ está no primeiro quadrante."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:51",
+    "cohortId": "unicamp-2025-qz",
+    "number": 51,
+    "questionId": "unicamp_2025_q51",
+    "topicId": "mat_dados_probabilidade",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Introdução às Probabilidades",
+    "title": "Exatamente dois sabores no diagrama de Venn",
+    "concept": "Contagem por regiões disjuntas e probabilidade; pré-requisitos: diagrama de três conjuntos, soma de parcelas e amostragem uniforme.",
+    "trap": "Somar interseções incluindo a região tripla, ou achar que faltam dados porque as duas incógnitas não são individualmente conhecidas.",
+    "steps": [
+      "Há 65 copos. As regiões de sabor único têm 10, 15 e 8; a interseção tripla tem 7; uma região de dois sabores tem 6 e as outras duas estão marcadas com interrogação.",
+      "Use o complemento: todos os copos têm um, dois ou três sabores, sem precisar determinar separadamente as duas regiões desconhecidas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:52",
+    "cohortId": "unicamp-2025-qz",
+    "number": 52,
+    "questionId": "unicamp_2025_q52",
+    "topicId": "mat_equacoes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Desigualdades",
+    "title": "Limites de uma soma a partir de módulos",
+    "concept": "Módulo como distância e desigualdades intervalares; pré-requisitos: resolver |u| ≤ a e somar limites superiores.",
+    "trap": "Tratar o módulo como igualdade e considerar apenas os extremos, ou confundir a existência de um exemplo com validade para todos os pares.",
+    "steps": [
+      "As restrições são |x − 2| ≤ 2 e |y − 3| ≤ 1 para números reais.",
+      "Transforme cada condição de distância em intervalo e derive a faixa possível de x + y."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:54",
+    "cohortId": "unicamp-2025-qz",
+    "number": 54,
+    "questionId": "unicamp_2025_q54",
+    "topicId": "mat_funcoes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Composição de Funções",
+    "title": "Composição quadrática e contagem de inteiros",
+    "concept": "Substituição na composição e inequação por estudo de sinais; pré-requisitos: fatoração, raízes e contagem de inteiros em intervalo aberto.",
+    "trap": "Resolver g(x) < 0 diretamente sem compor com f, ou incluir as raízes em uma desigualdade estrita.",
+    "steps": [
+      "f(x) = x − 2, g(x) = x² − 4x e o enunciado pede x ∈ ℤ com g(f(x)) < 0.",
+      "Substitua o argumento inteiro de g por f(x), fatore a expressão composta e encontre o intervalo de negatividade."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:55",
+    "cohortId": "unicamp-2025-qz",
+    "number": 55,
+    "questionId": "unicamp_2025_q55",
+    "topicId": "mat_geometria_plana",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Triângulo Retângulo",
+    "title": "Do quadrado inclinado ao quadrado apoiado na base",
+    "concept": "Projeções de segmentos perpendiculares e semelhança; pré-requisito: Pitágoras e razões trigonométricas.",
+    "trap": "Tratar os dois quadrados como se tivessem lados paralelos apaga a projeção 3·4/5; não é necessário supor ângulo reto em B.",
+    "steps": [
+      "Observe na figura que AG=4, GD=GH=3, D pertence a AC e o vértice inferior direito do quadrado menor toca a lateral esquerda do maior.",
+      "Chame θ o ângulo BAC. O triângulo AGD é retângulo em G; determine AD e projete os lados do quadrado menor sobre AC."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:56",
+    "cohortId": "unicamp-2025-qz",
+    "number": 56,
+    "questionId": "unicamp_2025_q56",
+    "topicId": "mat_sequencias_matrizes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Progressão Aritmética",
+    "title": "Segunda diferença das somas parciais",
+    "concept": "Diferenças de somas consecutivas recuperam os termos da PA.",
+    "trap": "Aplicar a definição de PA diretamente a 168, 220 e 279 confunde a sequência de somas com a de parcelas.",
+    "steps": [
+      "Os valores 168, 220 e 279 são somas parciais consecutivas, não termos consecutivos da PA original.",
+      "Use s(n+1)−s(n)=a(n+1), e depois subtraia dois termos consecutivos de a."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:57",
+    "cohortId": "unicamp-2025-qz",
+    "number": 57,
+    "questionId": "unicamp_2025_q57",
+    "topicId": "mat_funcoes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Função Quadrática",
+    "title": "Coeficientes de uma parábola por três pontos",
+    "concept": "Sistema linear para os coeficientes de uma função quadrática.",
+    "trap": "Esquecer o sinal de x em bx para M altera b e o produto.",
+    "steps": [
+      "Use P=(0,−4), Q=(2,−1) e M=(−2,5); a pergunta pede abc, não a ordenada do vértice.",
+      "Substitua primeiro x=0 para obter c; os pontos com abscissas opostas permitem eliminar b por adição."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:58",
+    "cohortId": "unicamp-2025-qz",
+    "number": 58,
+    "questionId": "unicamp_2025_q58",
+    "topicId": "mat_trigonometria",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Funções Trigonométricas",
+    "title": "Fase, amplitude e nível médio de um poluente",
+    "concept": "Combinação de seno e cosseno com mesma frequência; pré-requisito: valores em 0 e π.",
+    "trap": "Somar as amplitudes 2+4 produz 6 incorretamente; seno e cosseno atingem seus máximos em tempos diferentes.",
+    "steps": [
+      "A função é Q(t)=20+2 sen t−4 cos t; examine na página os quatro gráficos identificados por a, b, c e d.",
+      "Compare valor inicial, sentido inicial de variação, nível médio e periodicidade antes de acompanhar todo o desenho."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:59",
+    "cohortId": "unicamp-2025-qz",
+    "number": 59,
+    "questionId": "unicamp_2025_q59",
+    "topicId": "qui_oxirreducao",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Química Ambiental",
+    "title": "Eletrificação e a origem da energia",
+    "concept": "Avaliação ambiental da cadeia energética e leitura de ironia visual.",
+    "trap": "Julgar apenas a ausência de escapamento no veículo desconsidera o processo de geração elétrica.",
+    "steps": [
+      "Na imagem, a bicicleta é chamada de Ecobike e a ciclista usa um símbolo ecológico; o cabo liga o veículo à rede de uma usina com chaminés e fumaça.",
+      "Separe os sinais de identidade ambiental do veículo do impacto da fonte que produz a eletricidade."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:60",
+    "cohortId": "unicamp-2025-qz",
+    "number": 60,
+    "questionId": "unicamp_2025_q60",
+    "topicId": "qui_termoquimica",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Termoquímica I",
+    "title": "Percentual energético não é percentual em massa",
+    "concept": "Conversão entre participação energética e massa a partir de energia específica.",
+    "trap": "Comparar percentuais sem dividir pela energia por grama trata gordura como se tivesse a mesma densidade energética.",
+    "steps": [
+      "As participações energéticas são 5% de proteínas, 52% de gorduras e 43% de carboidratos; a energia por massa da gordura é 2,25 vezes a das outras duas.",
+      "Divida cada participação energética pela energia específica relativa e normalize as massas encontradas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:61",
+    "cohortId": "unicamp-2025-qz",
+    "number": 61,
+    "questionId": "unicamp_2025_q61",
+    "topicId": "qui_oxirreducao",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Química Ambiental",
+    "title": "Biodigestão da vinhaça e demanda de oxigênio",
+    "concept": "Produção anaeróbica de biogás e redução da carga orgânica do efluente.",
+    "trap": "Confundir DBO com o oxigênio usado dentro do biodigestor: a digestão é anaeróbica, mas o efluente pode demandar oxigênio quando biodegradado em outro ambiente.",
+    "steps": [
+      "A vinhaça é rica em matéria orgânica e potássio; o processo anaeróbico gera biogás e um líquido ainda aproveitável na fertirrigação.",
+      "Identifique o combustível característico do biogás e relacione consumo de matéria orgânica à demanda bioquímica de oxigênio (DBO)."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:62",
+    "cohortId": "unicamp-2025-qz",
+    "number": 62,
+    "questionId": "unicamp_2025_q62",
+    "topicId": "qui_eletroquimica",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Eletroquímica de Processos não Espontâneos",
+    "title": "Oxigênio e remoção de CO₂ no submarino",
+    "concept": "Eletrólise da água e neutralização de óxido ácido por base.",
+    "trap": "A água destilada continua sendo H₂O; separar sal e água não separa hidrogênio e oxigênio.",
+    "steps": [
+      "O submarino dispõe de energia elétrica e precisa produzir O₂ e retirar CO₂ da atmosfera interna.",
+      "Distinga separação física da água de decomposição química e reconheça o caráter ácido do CO₂ em água."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:63",
+    "cohortId": "unicamp-2025-qz",
+    "number": 63,
+    "questionId": "unicamp_2025_q63",
+    "topicId": "qui_estequiometria",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Massa Atômica, Mol e Massa Molar",
+    "title": "Massa da base e massa do cloridrato",
+    "concept": "Proporção entre massas de substâncias em associação molecular.",
+    "trap": "Usar 42,4 mg como massa da base, ou afirmar que a razão determina n sem informações adicionais, extrapola os dados.",
+    "steps": [
+      "42,4 mg de cloridrato contêm 37,5 mg de venlafaxina neutra; a diferença 4,9 mg corresponde ao HCl associado.",
+      "Para n moléculas de HCl por molécula neutra, a razão 4,9/37,5 é n·36,5/M, em que M é a massa molar da base."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:64",
+    "cohortId": "unicamp-2025-qz",
+    "number": 64,
+    "questionId": "unicamp_2025_q64",
+    "topicId": "qui_cinetica",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Cinética Química",
+    "title": "Persistência do complexo e troca de ligantes",
+    "concept": "Interpretação cinética de curvas de concentração e identificação de reagente e produto.",
+    "trap": "A curva crescente registra produto liberado, não aumento da quantidade do fármaco original.",
+    "steps": [
+      "O enunciado associa maior eficiência à menor velocidade de troca de DMSO por DMSO-d6; compare cores e tipos de traçado no gráfico.",
+      "As curvas sólidas decrescentes descrevem a permanência do DMSO ligado ao complexo; as pontilhadas crescentes descrevem DMSO liberado."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:65",
+    "cohortId": "unicamp-2025-qz",
+    "number": 65,
+    "questionId": "unicamp_2025_q65",
+    "topicId": "qui_cinetica",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Cinética Química",
+    "title": "Repelência e mortalidade em curvas dose–resposta",
+    "concept": "Leitura de resposta experimental: efeito repelente e efeito inseticida não são equivalentes.",
+    "trap": "Confundir símbolo preenchido com vazado transforma afastamento em morte; o eixo de concentração apresenta valores em escala não linear.",
+    "steps": [
+      "A legenda separa símbolos preenchidos para repelência e vazados para mortalidade após 24 h, em três substâncias.",
+      "Analise separadamente se há afastamento de mosquitos e se há mortalidade, respeitando as concentrações efetivamente testadas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:66",
+    "cohortId": "unicamp-2025-qz",
+    "number": 66,
+    "questionId": "unicamp_2025_q66",
+    "topicId": "bio_ecologia",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Biomas Brasileiros",
+    "title": "Raízes expostas e ambiente do manguezal",
+    "concept": "Identificação de ecossistema costeiro e adaptações à salinidade e ao solo anóxico.",
+    "trap": "Raiz exposta não é sinônimo de adaptação à seca; sua função depende das condições do ambiente.",
+    "steps": [
+      "A obra mostra árvores com raízes expostas e caranguejos em um ecossistema costeiro.",
+      "Associe as raízes ao ambiente alagado e salino, distinguindo manguezal de restinga e halofitismo de xerofitismo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:67",
+    "cohortId": "unicamp-2025-qz",
+    "number": 67,
+    "questionId": "unicamp_2025_q67",
+    "topicId": "bio_codigo_genetico_sintese",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Ácidos Nucleicos",
+    "title": "Inativação do X e controle epigenético",
+    "concept": "Homologia parcial dos cromossomos sexuais e regulação da transcrição.",
+    "trap": "Dizer que genes são traduzidos confunde DNA com RNA mensageiro; tradução utiliza a mensagem transcrita.",
+    "steps": [
+      "As quatro lacunas tratam, respectivamente, da relação entre X e Y, das unidades silenciadas, da etapa da expressão bloqueada e do material regulado.",
+      "Separe cromossomos sexuais de autossomos e transcrição de tradução; epigenética modifica atividade, sem alterar necessariamente a sequência do DNA."
+    ],
+    "commandWords": [
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:68",
+    "cohortId": "unicamp-2025-qz",
+    "number": 68,
+    "questionId": "unicamp_2025_q68",
+    "topicId": "bio_estrutura_fisio_celular",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Citoplasma: Estrutura e Componentes II",
+    "title": "Motilidade ciliar e transporte de muco",
+    "concept": "Estruturas celulares móveis e defesa mecânica do epitélio respiratório.",
+    "trap": "Todas as projeções apicais não têm a mesma função: microvilosidades ampliam superfície; cílios deslocam material sobre o epitélio.",
+    "steps": [
+      "As setas mostram projeções apicais móveis. Na condição infectada, há desorganização dessas estruturas, menor amplitude de movimento e maior espessura de muco.",
+      "Relacione a estrutura ao transporte mucociliar e diferencie cílios de microvilosidades absorventes."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:69",
+    "cohortId": "unicamp-2025-qz",
+    "number": 69,
+    "questionId": "unicamp_2025_q69",
+    "topicId": "bio_fisio_vegetal",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Fisiologia Vegetal: Hormônios Vegetais",
+    "title": "Floração e duração da noite contínua",
+    "concept": "Fotoperiodismo e interrupção do período escuro; pré-requisito: distinguir dia longo de noite curta.",
+    "trap": "Somar as horas de luz em IV e ignorar sua posição no meio da noite perde o fator que permite a floração.",
+    "steps": [
+      "As condições I, II e III têm noites contínuas de 16, 12 e 8 h. Em IV, o período escuro de 14 h é interrompido por 2 h de luz.",
+      "Para a espécie de dia longo representada, procure noite curta ou noite longa interrompida, não apenas a soma diária das horas iluminadas."
+    ],
+    "commandWords": [
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:70",
+    "cohortId": "unicamp-2025-qz",
+    "number": 70,
+    "questionId": "unicamp_2025_q70",
+    "topicId": "bio_evolucao",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "title": "Adaptação com ou sem barreira geográfica",
+    "concept": "Seleção natural, deriva, fluxo gênico e especiação alopátrica ou simpátrica.",
+    "trap": "Transformar um mecanismo comum de especiação, o isolamento geográfico, em requisito obrigatório exclui a especiação simpátrica.",
+    "steps": [
+      "A pergunta distingue mecanismos que alteram populações e condições que podem levar à formação de espécies.",
+      "Julgue a necessidade de isolamento geográfico separadamente da atuação da seleção natural sobre variações herdáveis."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2025-qz:71",
+    "cohortId": "unicamp-2025-qz",
+    "number": 71,
+    "questionId": "unicamp_2025_q71",
+    "topicId": "bio_zoologia",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Poríferos e Cnidários",
+    "title": "Endemismo e características dos cnidários",
+    "concept": "Distribuição restrita de espécies e distinção entre filos animais.",
+    "trap": "Endêmico não significa necessariamente raro, e presença de tentáculos não identifica sozinha o filo Cnidaria.",
+    "steps": [
+      "O texto relata alto endemismo em montanhas subaquáticas e lista cnidários, moluscos, crustáceos e peixes.",
+      "Interprete endemismo como distribuição geográfica restrita e confira os atributos taxonômicos de cada alternativa."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2025-qz:72",
+    "cohortId": "unicamp-2025-qz",
+    "number": 72,
+    "questionId": "unicamp_2025_q72",
+    "topicId": "bio_genetica",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Ligação Gênica",
+    "title": "Mapa de três genes e dupla recombinação",
+    "concept": "Frequência de recombinação em dois intervalos adjacentes; pré-requisito: fase parental e crossing-over.",
+    "trap": "Excluir os gametas duplos reduz ambas as distâncias; calcular só A–C perde eventos que restauram a combinação dos genes externos.",
+    "steps": [
+      "A figura dá ABC e abc: 3453 cada; ABc e abC: 476 cada; AbC e aBc: 6 cada; Abc e aBC: 134 cada. A ordem informada é A–B–C.",
+      "Identifique parentais pela maior frequência e duplos recombinantes pela inversão apenas do gene central em relação aos parentais."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:1",
+    "cohortId": "unicamp-2026-qx",
+    "number": 1,
+    "questionId": "unicamp_2026_q1",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Polissemia de upset em uma manchete",
+    "concept": "Sentido contextual e classe gramatical; pré-requisito: distinguir substantivo de adjetivo.",
+    "trap": "A tradução automática upset = chateado ignora a classe gramatical. A banca combina manchete visual, verbete e reação nas redes.",
+    "steps": [
+      "Localize upset na manchete sobre a vitória de Fernanda Torres e compare as duas definições fornecidas.",
+      "Use a função da palavra na frase, e não uma tradução isolada: biggest upset nomeia um resultado inesperado."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:2",
+    "cohortId": "unicamp-2026-qx",
+    "number": 2,
+    "questionId": "unicamp_2026_q2",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Sequência de cenas e pistas discursivas",
+    "concept": "Leitura multimodal e organização temporal; pré-requisito: reconhecer conectores e descrições visuais.",
+    "trap": "Não ordenar pela familiaridade com o filme. A resposta depende das evidências no texto e nas imagens.",
+    "steps": [
+      "Identifique as três pistas: fechamento das cortinas, intimidade do casal cercado por militares e close-up de Eunice.",
+      "Crie uma correspondência entre cada descrição e os quadros, antes de olhar as sequências das alternativas."
+    ],
+    "commandWords": [
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:3",
+    "cohortId": "unicamp-2026-qx",
+    "number": 3,
+    "questionId": "unicamp_2026_q3",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Humor e dinheiro como jogo em Wall Street",
+    "concept": "Inferência de crítica em tirinha; pré-requisito: integrar falas, cenário e objetos.",
+    "trap": "Uma crítica social plausível pode ser mais ampla que a crítica efetivamente enunciada. A banca pede o sentido geral desta tirinha.",
+    "steps": [
+      "Leia as falas e observe as moedas, o copo para doações e os jogos associados ao dinheiro.",
+      "Procure o contraste que produz humor, em vez de interpretar cada quadro isoladamente."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:4",
+    "cohortId": "unicamp-2026-qx",
+    "number": 4,
+    "questionId": "unicamp_2026_q4",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Inflação atual e expectativa de alta",
+    "concept": "Relações temporais em notícia; pré-requisito: interpretar ahead of, expected e bracing.",
+    "trap": "Não converter previsão em fato consumado nem omitir a oposição entre o presente e a expectativa.",
+    "steps": [
+      "Localize Mild, Expected Jump e are bracing no título e no subtítulo.",
+      "Separe a situação atual da expectativa futura, mantendo os agentes citados."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:5",
+    "cohortId": "unicamp-2026-qx",
+    "number": 5,
+    "questionId": "unicamp_2026_q5",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Obra de arte, técnica e experiências raciais",
+    "concept": "Relação entre citação e comentário explicativo; pré-requisito: reconhecer referentes de her e this.",
+    "trap": "O pronome her refere-se à autora citada. Trocar o referente muda a interpretação mesmo quando o tema geral parece correto.",
+    "steps": [
+      "Identifique quem escreveu a citação, quem produziu a obra e o que o comentário diz sobre os borrões.",
+      "Use o texto 3 como critério, pois é ele que o comando pede interpretar."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:6",
+    "cohortId": "unicamp-2026-qx",
+    "number": 6,
+    "questionId": "unicamp_2026_q6",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Discrimination Against Women",
+    "title": "Leitura de resumo científico e masculinidade",
+    "concept": "Compreensão de argumento e ressalvas; pré-requisito: reconhecer while, therefore e fall short.",
+    "trap": "Uma alternativa pode começar com uma informação verdadeira e terminar com uma finalidade inventada.",
+    "steps": [
+      "Localize a definição de incels, a ressalva sobre violência e o trecho sobre hegemonic masculinity.",
+      "Distinga descrição do grupo, hipótese explicativa e proposta de intervenção."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:7",
+    "cohortId": "unicamp-2026-qx",
+    "number": 7,
+    "questionId": "unicamp_2026_q7",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Autonomia universitária em carta pública",
+    "concept": "Tese, concessão e recusa; pré-requisito: identificar o contraste marcado por However.",
+    "trap": "Não confundir contestar um meio de intervenção com negar o problema que é usado para justificá-lo.",
+    "steps": [
+      "Identifique as demandas governamentais, a defesa de independência e as medidas contra o antissemitismo.",
+      "Separe recusar controle institucional de recusar combater discriminação."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:8",
+    "cohortId": "unicamp-2026-qx",
+    "number": 8,
+    "questionId": "unicamp_2026_q8",
+    "topicId": "fis_calorimetria",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Temperatura, Calor e seus Mecanismos de Transferência",
+    "title": "Condução, convecção e radiação",
+    "concept": "Mecanismos de transferência de calor; pré-requisito: matéria, fluidos e diferença de temperatura.",
+    "trap": "A palavra calor não implica um único mecanismo. A banca cobra comparação de afirmações, não aplicação automática de uma fórmula.",
+    "steps": [
+      "Liste as quatro afirmações e examine separadamente meio necessário e mecanismo físico.",
+      "Use três critérios: condução exige matéria; convecção desloca fluido; radiação transporta energia por ondas eletromagnéticas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:9",
+    "cohortId": "unicamp-2026-qx",
+    "number": 9,
+    "questionId": "unicamp_2026_q9",
+    "topicId": "fis_circuitos",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Corrente Elétrica",
+    "title": "Capacidade de bateria e carga elétrica",
+    "concept": "Carga Q = iΔt; pré-requisito: prefixo mili e conversão hora–segundo.",
+    "trap": "Converter unidades antes de multiplicar evita fatores de mil e de 3 600.",
+    "steps": [
+      "Anote i = 4 000 mA e Δt = 1 h; a incógnita é carga em coulombs.",
+      "Use Q = iΔt com ampère e segundo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:10",
+    "cohortId": "unicamp-2026-qx",
+    "number": 10,
+    "questionId": "unicamp_2026_q10",
+    "topicId": "fis_circuitos",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Geradores",
+    "title": "Tensão nos terminais de uma bateria real",
+    "concept": "Gerador com resistência interna; pré-requisito: associação em série e lei de Ohm.",
+    "trap": "O voltímetro não mede automaticamente a força eletromotriz. É preciso identificar seus pontos de ligação.",
+    "steps": [
+      "Identifique força eletromotriz 3,6 V, resistência interna 1,2 Ω e resistência externa 6,0 Ω.",
+      "Calcule a corrente pelo circuito inteiro e depois a tensão que o voltímetro mede no resistor externo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:11",
+    "cohortId": "unicamp-2026-qx",
+    "number": 11,
+    "questionId": "unicamp_2026_q11",
+    "topicId": "fis_energia",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Trabalho e Energia: o Teorema da Energia Potencial",
+    "title": "Energia de bateria e elevação de massa",
+    "concept": "Conversão Wh–J e energia potencial gravitacional; pré-requisito: trabalho e unidades.",
+    "trap": "Wh não é watt por hora. Não acrescentar rendimento quando o problema estabelece a igualdade das energias.",
+    "steps": [
+      "Anote E = 15 Wh, m = 45 kg e g = 10 m/s²; pede-se a altura y.",
+      "Iguale a energia armazenada à variação de energia potencial, como exige o modelo do enunciado."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:12",
+    "cohortId": "unicamp-2026-qx",
+    "number": 12,
+    "questionId": "unicamp_2026_q12",
+    "topicId": "fis_optica_instrumental",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Estudo Analítico das Lentes Esféricas",
+    "title": "Imagem direita e ampliada em lente delgada",
+    "concept": "Lente convergente usada como lupa; pré-requisito: imagem real/virtual e distância focal.",
+    "trap": "Direita não significa necessariamente ampliada. A banca cobra a combinação das características da imagem.",
+    "steps": [
+      "Identifique a condição: imagem direita e maior que o objeto.",
+      "Compare os regimes de formação de imagens de lentes convergentes e divergentes para um objeto real."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:13",
+    "cohortId": "unicamp-2026-qx",
+    "number": 13,
+    "questionId": "unicamp_2026_q13",
+    "topicId": "fis_cinematica",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Movimento Uniformemente Variado",
+    "title": "Gráfico de posição em quatro trechos de movimento",
+    "concept": "Inclinação e concavidade de s(t); pré-requisito: velocidade como taxa de variação da posição.",
+    "trap": "Desacelerar não é voltar ao ponto de partida. Em s(t), a velocidade é a inclinação, não a altura da curva.",
+    "steps": [
+      "Converta 36 km/h = 10 m/s e marque os intervalos 0–30, 30–50, 50–80, 80–95 e 95–120 s.",
+      "Associe movimento uniforme a reta, desaceleração a concavidade para baixo, repouso a horizontal e aceleração a concavidade para cima."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:14",
+    "cohortId": "unicamp-2026-qx",
+    "number": 14,
+    "questionId": "unicamp_2026_q14",
+    "topicId": "fis_leis_newton",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "As Leis de Newton",
+    "title": "Força resultante na frenagem da motocicleta",
+    "concept": "Segunda lei de Newton; pré-requisito: aceleração média no MUV e conversão de velocidade.",
+    "trap": "A aceleração de 0,8 m/s² pertence ao trecho posterior; usar esse dado responderia a outro intervalo.",
+    "steps": [
+      "Use o texto comum: v inicial = 36 km/h = 10 m/s, v final = 0, intervalo 30–50 s e massa 180 kg.",
+      "Calcule a aceleração do trecho de frenagem e aplique F resultante = ma."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:15",
+    "cohortId": "unicamp-2026-qx",
+    "number": 15,
+    "questionId": "unicamp_2026_q15",
+    "topicId": "geo_globalizacao_economica",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Globalização e Processos Econômicos Atuais",
+    "title": "Alimentação, lugar e circuitos globalizados",
+    "concept": "Especialização produtiva e homogeneização; pré-requisito: divisão territorial do trabalho.",
+    "trap": "“Modernização” não significa benefício universal. A banca pede relacionar redes produtivas e consequências territoriais.",
+    "steps": [
+      "Identifique a substituição de alimentos ligados a tradições locais por ultraprocessados que circulam globalmente.",
+      "Relacione produção especializada, circulação e consumo, sem pressupor proximidade física entre indústria e consumidor."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:16",
+    "cohortId": "unicamp-2026-qx",
+    "number": 16,
+    "questionId": "unicamp_2026_q16",
+    "topicId": "geo_cartografia",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Coordenadas Geográficas",
+    "title": "Norte/Sul Global e hemisférios",
+    "concept": "Regionalização econômica versus posição geográfica; pré-requisito: Equador e Greenwich.",
+    "trap": "Uma metade correta não salva a alternativa. Confira todos os países e ambos os hemisférios.",
+    "steps": [
+      "Separe a classificação Norte/Sul Global da localização nos hemisférios indicada no mapa.",
+      "Teste cada alternativa em dois planos: grupo geopolítico e posição norte/sul, leste/oeste."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:17",
+    "cohortId": "unicamp-2026-qx",
+    "number": 17,
+    "questionId": "unicamp_2026_q17",
+    "topicId": "geo_climatologia_socioambiental",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Biogeografia Mundial",
+    "title": "Transição entre deserto e savana africana",
+    "concept": "Gradiente climático e adaptações vegetais; pré-requisito: xerófitas e sazonalidade das chuvas.",
+    "trap": "Os números romanos dependem da legenda desta questão. Não reutilizar uma classificação memorizada de outro mapa.",
+    "steps": [
+      "Leia a legenda: zona III é subtropical árida e zona II é tropical estacional.",
+      "Acompanhe a transição III → II pelo aumento relativo da disponibilidade de água."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:18",
+    "cohortId": "unicamp-2026-qx",
+    "number": 18,
+    "questionId": "unicamp_2026_q18",
+    "topicId": "geo_hidrogeografia",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Geopolítica dos Recursos Hídricos",
+    "title": "Rio Indo, montante e poder sobre a água",
+    "concept": "Drenagem exorreica e interdependência hídrica; pré-requisito: bacia, afluente, montante e jusante.",
+    "trap": "Montante não quer dizer norte. A posição depende do sentido do rio.",
+    "steps": [
+      "Localize o sentido dos cursos de água, a Índia, o Paquistão e a saída da bacia para o oceano.",
+      "Use montante/jusante como posição relativa no fluxo; identifique quem pode interferir no abastecimento a jusante."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:19",
+    "cohortId": "unicamp-2026-qx",
+    "number": 19,
+    "questionId": "unicamp_2026_q19",
+    "topicId": "geo_geopolitica_regional",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Geografia do Oriente Médio",
+    "title": "Alianças e disputas do Irã",
+    "concept": "Leitura de mapa e quadro geopolítico; pré-requisito: diferenças entre grupos e Estados.",
+    "trap": "Identidade religiosa não torna todos os grupos aliados. A banca cobra relações específicas situadas no tempo e no espaço.",
+    "steps": [
+      "Localize Iraque, Síria, Iêmen e Líbano e leia as colunas Disputas e Alianças.",
+      "Associe grupos a seus países e teste o quadro completo, evitando uma classificação genérica de todo o Oriente Médio."
+    ],
+    "commandWords": [
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:20",
+    "cohortId": "unicamp-2026-qx",
+    "number": 20,
+    "questionId": "unicamp_2026_q20",
+    "topicId": "geo_economica_brasil",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "O Espaço Agrário Brasileiro",
+    "title": "Modernização seletiva no agronegócio baiano",
+    "concept": "Circuitos espaciais produtivos e seletividade territorial; pré-requisito: inovação e especialização.",
+    "trap": "Maior conexão externa pode coexistir com desigualdade interna. Não confundir integração global com homogeneidade regional.",
+    "steps": [
+      "Localize no mapa as regiões incorporadas aos circuitos produtivos a partir dos anos 1970.",
+      "Procure o efeito da especialização em áreas específicas, e não uma difusão homogênea por todo o território."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:21",
+    "cohortId": "unicamp-2026-qx",
+    "number": 21,
+    "questionId": "unicamp_2026_q21",
+    "topicId": "geo_populacao_urbana_brasil",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "O Espaço Urbano II",
+    "title": "Centralidade empresarial e rede urbana",
+    "concept": "Comando territorial por vínculos empresariais; pré-requisito: hierarquia urbana e leitura de séries.",
+    "trap": "A unidade medida é emprego externo à sede, não a população da cidade. Ler o título e a variável evita diagnóstico errado.",
+    "steps": [
+      "Identifique o indicador: trabalhadores de uma empresa fora do município onde está sua sede.",
+      "Leia as tendências no gráfico e associe o indicador a comando empresarial, não simplesmente a população municipal."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:22",
+    "cohortId": "unicamp-2026-qx",
+    "number": 22,
+    "questionId": "unicamp_2026_q22",
+    "topicId": "soc_estratificacao_desigualdade",
+    "relatedTopicIds": [],
+    "subject": "Sociologia",
+    "chapter": "Classes Sociais e Mobilidade Social",
+    "title": "Gosto, feijoada e distinção social",
+    "concept": "Gosto como prática social de classe; pré-requisito: função, forma e necessidade.",
+    "trap": "Um exemplo cotidiano pede aplicação de conceito. Juízo pessoal sobre a comida não substitui análise sociológica.",
+    "steps": [
+      "Compare a imagem da refeição com o texto sobre desinteresse, distância da necessidade e senso estético.",
+      "Use o conceito de distinção para explicar a valorização da apresentação, sem reduzir o gosto a preferência individual."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:23",
+    "cohortId": "unicamp-2026-qx",
+    "number": 23,
+    "questionId": "unicamp_2026_q23",
+    "topicId": "fil_etica_politica_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Filosofia",
+    "chapter": "Ética Aplicada e Bioética",
+    "title": "Relações entre sociedade e natureza",
+    "concept": "Interdependência de agentes humanos e não humanos; pré-requisito: tese e comparação de textos.",
+    "trap": "Não reduzir o conjunto de agentes à humanidade. A banca cobra a articulação entre humanos e não humanos e distingue ameaça às formas de vida da permanência da Terra.",
+    "steps": [
+      "Identifique em Krenak a continuidade entre humanidade e Terra e em Stengers o conjunto de processos interligados.",
+      "Compare a articulação entre seres humanos, seres vivos e processos da Terra; não restrinja a discussão apenas à sociedade."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:24",
+    "cohortId": "unicamp-2026-qx",
+    "number": 24,
+    "questionId": "unicamp_2026_q24",
+    "topicId": "soc_estratificacao_desigualdade",
+    "relatedTopicIds": [],
+    "subject": "Sociologia",
+    "chapter": "Desigualdade de Gênero",
+    "title": "Adolescência e significação social do corpo",
+    "concept": "Construção social de gênero; pré-requisito: distinguir evento biológico de sentido social.",
+    "trap": "Evite determinismo biológico e generalização de que todos os adolescentes vivem a mesma masculinidade.",
+    "steps": [
+      "Localize a afirmação de que hormônios importam, mas não determinam como a adolescência é experimentada.",
+      "Diferencie mudanças corporais e significados produzidos por práticas, instituições e relações sociais."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:25",
+    "cohortId": "unicamp-2026-qx",
+    "number": 25,
+    "questionId": "unicamp_2026_q25",
+    "topicId": "soc_estratificacao_desigualdade",
+    "relatedTopicIds": [],
+    "subject": "Sociologia",
+    "chapter": "Desigualdade de Gênero",
+    "title": "Taxonomia binária e horizonte democrático",
+    "concept": "Reconhecimento político e crítica à exclusão; pré-requisito: reconstruir a tese do autor.",
+    "trap": "O comando exige compreender o argumento apresentado. Uma alternativa com vocabulário democrático pode introduzir uma condição que o autor recusa.",
+    "steps": [
+      "Identifique a definição de gênero atribuída à OMS e o pedido de nova epistemologia feito por Preciado.",
+      "Procure a proposta de reconhecimento político sem transformar a leitura em concordância pessoal obrigatória."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:26",
+    "cohortId": "unicamp-2026-qx",
+    "number": 26,
+    "questionId": "unicamp_2026_q26",
+    "topicId": "fil_etica_politica_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Filosofia",
+    "chapter": "Filosofia Política Contemporânea",
+    "title": "Rosa Luxemburgo, democracia e socialismo",
+    "concept": "Participação popular versus burocratização; pré-requisito: distinguir meios, fins e etapas políticas.",
+    "trap": "A banca contrapõe participação efetiva e burocracia. Tomada de poder não basta para cumprir a proposta descrita.",
+    "steps": [
+      "Localize a crítica a “primeiro toma-se o poder, depois muda-se o mundo” e a defesa de liberdades públicas.",
+      "Compare as alternativas com a simultaneidade entre transformação socialista e instituição democrática."
+    ],
+    "commandWords": [
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:27",
+    "cohortId": "unicamp-2026-qx",
+    "number": 27,
+    "questionId": "unicamp_2026_q27",
+    "topicId": "fil_etica_politica_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Filosofia",
+    "chapter": "Justiça e Direitos Humanos",
+    "title": "Cícero: reta razão e utilidade comum",
+    "concept": "Justiça, lei natural e bem comum; pré-requisito: distinguir utilidade comum de vantagem particular.",
+    "trap": "A mesma palavra “utilidade” muda de alcance conforme seu complemento. Não equiparar comum e particular.",
+    "steps": [
+      "Identifique os dois fundamentos: não prejudicar e servir à utilidade comum; depois a referência à reta razão.",
+      "Compare a noção de justiça com simples obediência a leis escritas e busca de vantagem individual."
+    ],
+    "commandWords": [
+      "correta"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:28",
+    "cohortId": "unicamp-2026-qx",
+    "number": 28,
+    "questionId": "unicamp_2026_q28",
+    "topicId": "his_brasil_colonia",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "Dinâmica Interna da Colonização",
+    "title": "Copacabana e conexões comerciais coloniais",
+    "concept": "Redes coloniais e circulação cultural; pré-requisito: distinguir porto comercial e origem dos metais.",
+    "trap": "Porto de circulação não é necessariamente local de extração. A banca usa uma marca cultural para revelar redes históricas.",
+    "steps": [
+      "Localize Luanda, Buenos Aires, Rio de Janeiro e Potosí na rede descrita e identifique a origem do culto religioso.",
+      "Reconstrua os fluxos de pessoas escravizadas, prata e referências culturais em vez de procurar uma história isolada de cada colônia."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:29",
+    "cohortId": "unicamp-2026-qx",
+    "number": 29,
+    "questionId": "unicamp_2026_q29",
+    "topicId": "his_idade_antiga",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "Antiguidade Clássica: o Mundo Grego",
+    "title": "Esporte, cidadania e distinção em Atenas",
+    "concept": "Formação de elite e representação do corpo; pré-requisito: cidadania ateniense e leitura iconográfica.",
+    "trap": "A ausência de barba é pista etária. Não importar a noção atual de esporte universal para a cidadania antiga.",
+    "steps": [
+      "Observe atleta sem barba, treinamento em palestra e inscrição de beleza; considere a preparação para cidadania.",
+      "Relacione representação idealizada do corpo às condições sociais de formação do atleta."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:30",
+    "cohortId": "unicamp-2026-qx",
+    "number": 30,
+    "questionId": "unicamp_2026_q30",
+    "topicId": "his_moderna_iluminismo",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "América no Século XIX",
+    "title": "Rousseau traduzido por Mariano Moreno",
+    "concept": "Apropriação política de ideias iluministas; pré-requisito: contexto das independências americanas.",
+    "trap": "Não concluir adesão integral ao autor a partir do elogio de parte de sua obra.",
+    "steps": [
+      "Identifique o elogio ao pacto social e a decisão explícita de suprimir passagens religiosas.",
+      "Analise a tradução como intervenção intelectual situada, e não como reprodução neutra do original."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:31",
+    "cohortId": "unicamp-2026-qx",
+    "number": 31,
+    "questionId": "unicamp_2026_q31",
+    "topicId": "his_primeira_republica_vargas",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "A Era Vargas: o Estado Novo",
+    "title": "Estado Novo visto pela imprensa estrangeira",
+    "concept": "Comparação de fontes e interpretações; pré-requisito: autoritarismo de 1937 e crítica documental.",
+    "trap": "Uma fonte pode relativizar um fato e outra enfatizá-lo. O comando pede repercussão, não escolher o jornalista “mais confiável” por intuição.",
+    "steps": [
+      "Compare as qualificações pseudo-fascista, um tanto fascista, democrático e nacionalista usadas pelos correspondentes.",
+      "Distinga a existência histórica de censura das experiências particulares narradas por cada jornalista."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:32",
+    "cohortId": "unicamp-2026-qx",
+    "number": 32,
+    "questionId": "unicamp_2026_q32",
+    "topicId": "geo_globalizacao_economica",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Globalização e Processos Econômicos Atuais",
+    "title": "Ingresso chinês na OMC e expectativas de globalização",
+    "concept": "Comparação temporal de discursos econômicos; pré-requisito: OMC e integração comercial.",
+    "trap": "Uma consequência atual não deve ser projetada como intenção original. A questão cruza História e Geografia econômica.",
+    "steps": [
+      "Anote a data de 1999 e as manifestações positivas dos EUA, da União Europeia e da direção da OMC.",
+      "Compare expectativas daquela conjuntura com conflitos comerciais posteriores, evitando ler o passado como se fosse presente."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:33",
+    "cohortId": "unicamp-2026-qx",
+    "number": 33,
+    "questionId": "unicamp_2026_q33",
+    "topicId": "his_republica_liberal_atual",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "Regime Militar (1964-1985) II",
+    "title": "Zuzu Angel, moda e denúncia política",
+    "concept": "Arte como resistência à ditadura; pré-requisito: repressão pós-AI-5 e leitura contextual de símbolos.",
+    "trap": "O significado político de uma imagem depende de sua montagem e contexto, não de uma lista de objetos.",
+    "steps": [
+      "Observe desenhos infantis e motivos militares e situe o desfile em 1971, durante a repressão política.",
+      "Relacione os símbolos ao contexto da denúncia, sem atribuir apoio ao regime apenas por representar armas ou uniformes."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:34",
+    "cohortId": "unicamp-2026-qx",
+    "number": 34,
+    "questionId": "unicamp_2026_q34",
+    "topicId": "his_moderna_iluminismo",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "América no Século XIX",
+    "title": "Jus soli, jus sanguinis e imigração",
+    "concept": "Formação histórica de nacionalidade; pré-requisito: direito de solo e direito de sangue.",
+    "trap": "Nacionalidade por solo ou filiação não é uma distinção natural eterna; o texto destaca sua construção histórica.",
+    "steps": [
+      "Leia as definições e observe o predomínio de cada princípio no mapa contemporâneo.",
+      "Relacione nacionalidade aos processos históricos de formação dos Estados e de imigração."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:35",
+    "cohortId": "unicamp-2026-qx",
+    "number": 35,
+    "questionId": "unicamp_2026_q35",
+    "topicId": "bio_microbiologia",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Procariotos",
+    "title": "Microbiota e suscetibilidade à infecção intestinal",
+    "concept": "Comparação experimental com controles; pré-requisito: grupos experimental/controle e leitura de distribuição.",
+    "trap": "Comparar apenas valores absolutos sem o controle pode inverter a interpretação. A figura não mede todas as funções da microbiota.",
+    "steps": [
+      "Identifique camundongos colonizados por microbiotas EUA, FIJI e GUAT e compare controles com infectados.",
+      "Use aumento da profundidade das glândulas como indicador de efeito inflamatório apresentado, não como medida direta de digestão."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:36",
+    "cohortId": "unicamp-2026-qx",
+    "number": 36,
+    "questionId": "unicamp_2026_q36",
+    "topicId": "bio_fisio_vegetal",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Fisiologia Vegetal: Transporte no Floema",
+    "title": "Anelamento, floema e recuperação do caule",
+    "concept": "Transporte de fotoassimilados e câmbio; pré-requisito: posição e funções de xilema e floema.",
+    "trap": "Floema não tem sempre um único sentido. Aqui importa a relação fonte–dreno e a interrupção do caminho para as raízes.",
+    "steps": [
+      "Identifique frutos maiores no grupo 1, perda de folhas no grupo 2 e recuperação da região anelada no grupo 1.",
+      "Associe remoção da casca à interrupção do floema e diferencie o transporte de açúcares do transporte de água."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:37",
+    "cohortId": "unicamp-2026-qx",
+    "number": 37,
+    "questionId": "unicamp_2026_q37",
+    "topicId": "bio_genetica",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Introdução à Genética",
+    "title": "Alelo deletério e depressão endogâmica",
+    "concept": "Segregação mendeliana e homozigose recessiva; pré-requisito: genótipo versus fenótipo.",
+    "trap": "A heterozigose esperada é 50%, não 33%. Diferencie probabilidade do cruzamento, amostra desenhada e efeito do alelo.",
+    "steps": [
+      "Os pais em preto são heterozigotos; represente-os como Aa. O alelo recessivo deletério reduz ganho de peso em aa.",
+      "Monte Aa × Aa e conte genótipos esperados, sem usar os três descendentes desenhados como frequência universal."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:38",
+    "cohortId": "unicamp-2026-qx",
+    "number": 38,
+    "questionId": "unicamp_2026_q38",
+    "topicId": "bio_botanica",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Fungos",
+    "title": "Mitose, plasmogamia e meiose no ciclo de fungo",
+    "concept": "Ploidia em ciclo haplonte; pré-requisito: n, 2n e distinção entre fusão celular e nuclear.",
+    "trap": "n + n não é automaticamente 2n no mesmo núcleo. Confundir plasmogamia e cariogamia compromete a leitura do ciclo.",
+    "steps": [
+      "Acompanhe na figura fases n, células com núcleos separados e a breve etapa 2n.",
+      "Identifique eventos por alteração de ploidia e por fusão, não apenas pela direção das setas."
+    ],
+    "commandWords": [
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:39",
+    "cohortId": "unicamp-2026-qx",
+    "number": 39,
+    "questionId": "unicamp_2026_q39",
+    "topicId": "bio_ecologia",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Espécies Invasoras e Controle Biológico",
+    "title": "Predador exótico e sucesso de invasão",
+    "concept": "Dinâmica de populações e efeitos indiretos; pré-requisito: predação, competição e extinção local.",
+    "trap": "A definição operacional está no enunciado. Não exigir extinção de todas as espécies nativas para considerar invasão bem-sucedida.",
+    "steps": [
+      "Leia a definição de sucesso da invasão e siga as curvas nos cenários I e II.",
+      "Compare estabelecimento do exótico e destino das duas populações nativas, sem equiparar presença inicial a sucesso."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:40",
+    "cohortId": "unicamp-2026-qx",
+    "number": 40,
+    "questionId": "unicamp_2026_q40",
+    "topicId": "bio_zoologia",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Artrópodes: Aracnídeos",
+    "title": "Insetos, aracnídeos e classificação da placa",
+    "concept": "Hierarquia taxonômica e características de artrópodes; pré-requisito: distinguir filo e classe.",
+    "trap": "Aracnídeo não é o oposto de artrópode: é uma classe dentro do filo. Confira a hierarquia.",
+    "steps": [
+      "Identifique mosquitos, abelhas, carrapatos e escorpiões na placa intitulada “insetos perigosos”.",
+      "Separe o filo comum das classes diferentes."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:41",
+    "cohortId": "unicamp-2026-qx",
+    "number": 41,
+    "questionId": "unicamp_2026_q41",
+    "topicId": "bio_evolucao",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Mecanismos da Evolução Biológica",
+    "title": "Hominídeos e evolução em mosaico",
+    "concept": "Distribuição de características e coexistência; pré-requisito: evolução ramificada e cronologia de traços.",
+    "trap": "Uma alternativa pode trazer uma característica correta e uma prioridade cronológica falsa.",
+    "steps": [
+      "Compare as espécies e procure nas alternativas afirmações exclusivas como “o primeiro”.",
+      "Considere que bipedismo, ferramentas e uso do fogo não surgiram todos em Homo sapiens."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:42",
+    "cohortId": "unicamp-2026-qx",
+    "number": 42,
+    "questionId": "unicamp_2026_q42",
+    "topicId": "mat_dados_probabilidade",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Estatística Descritiva",
+    "title": "Percentuais regionais em três conclaves",
+    "concept": "Leitura de gráfico e quantificador “em cada”; pré-requisito: soma de percentuais da mesma base.",
+    "trap": "Dois terços necessários à eleição não são o limiar perguntado. O texto tem dados que não precisam entrar na conta.",
+    "steps": [
+      "Identifique as cinco regiões e os anos 2005, 2013 e 2025; o comando exige uma afirmação válida nos três.",
+      "Some as parcelas citadas por alternativa em cada ano, usando a mesma base de cardeais votantes."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:43",
+    "cohortId": "unicamp-2026-qx",
+    "number": 43,
+    "questionId": "unicamp_2026_q43",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Porcentagem",
+    "title": "Reajustes sucessivos e remuneração acumulada",
+    "concept": "Porcentagem composta e soma de rendimentos; pré-requisito: fator multiplicativo e base de comparação.",
+    "trap": "20% + 20% + 20% não reproduz reajustes sucessivos. Declare a base quando calcula “maior que”.",
+    "steps": [
+      "Represente o salário original por S; são 12 meses de cada um dos três anos em ambas as propostas.",
+      "Compare totais dos três anos, não somente o salário de dezembro de 2027."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:44",
+    "cohortId": "unicamp-2026-qx",
+    "number": 44,
+    "questionId": "unicamp_2026_q44",
+    "topicId": "mat_funcoes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Composição de Funções",
+    "title": "Ponto do gráfico de uma função composta",
+    "concept": "Composição e substituição algébrica; pré-requisito: coordenadas e avaliação de polinômios.",
+    "trap": "Usar f(1) = 5 em vez de f(g(1)) = 5 produz uma equação diferente.",
+    "steps": [
+      "O gráfico de f(g(x)) passa por (1,5); anote g(x) = 3 − x e f(x) = x³ + 2x² + ax − 1.",
+      "Calcule primeiro g(1); a coordenada 1 é entrada da função composta, não diretamente de f."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:45",
+    "cohortId": "unicamp-2026-qx",
+    "number": 45,
+    "questionId": "unicamp_2026_q45",
+    "topicId": "mat_complexos_polinomios",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Polinômios",
+    "title": "Graus de soma, produto e diferença de polinômios",
+    "concept": "Cancelamento de coeficientes líderes; pré-requisito: grau e produto de polinômios não nulos.",
+    "trap": "O grau da soma não é sempre o máximo: pode cair quando os termos líderes cancelam.",
+    "steps": [
+      "Anote grau(p + q) = 3 e grau(pq) = 8.",
+      "Use que os graus do produto se somam e investigue por que a soma tem grau menor."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:46",
+    "cohortId": "unicamp-2026-qx",
+    "number": 46,
+    "questionId": "unicamp_2026_q46",
+    "topicId": "mat_geometria_analitica",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Distância entre um Ponto e uma Reta",
+    "title": "Reta, ângulo com eixo y e distância à origem",
+    "concept": "Coeficiente angular e distância ponto–reta; pré-requisito: tangente e forma geral da reta.",
+    "trap": "O ângulo com y não é diretamente a inclinação com x; também não trocar distância perpendicular por intercepto.",
+    "steps": [
+      "A reta cresce e tem intercepto negativo; o ângulo indicado é de 30° com o eixo y e a distância à origem é √3.",
+      "Converta para inclinação de 60° com o eixo x e use a fórmula da distância à reta."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:47",
+    "cohortId": "unicamp-2026-qx",
+    "number": 47,
+    "questionId": "unicamp_2026_q47",
+    "topicId": "geo_cartografia",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Linguagem Cartográfica",
+    "title": "Área de mapa por massa do papel",
+    "concept": "Escala linear e quadrado da escala; pré-requisito: densidade superficial e conversão m²–km².",
+    "trap": "Aplicar a escala uma única vez fornece comprimento, não área. O fator de conversão das unidades também é quadrático.",
+    "steps": [
+      "Anote massa 1,0815 g, gramatura 75 g/m² e escala 1:5 000 000.",
+      "Calcule a área do papel pela gramatura e amplie pelo quadrado do fator linear."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:48",
+    "cohortId": "unicamp-2026-qx",
+    "number": 48,
+    "questionId": "unicamp_2026_q48",
+    "topicId": "mat_funcoes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Função Quadrática",
+    "title": "Parábola de trajetória com vértice conhecido",
+    "concept": "Forma de vértice e ponto adicional; pré-requisito: parábola côncava para baixo.",
+    "trap": "A distância entre atletas localiza o vértice, não uma raiz no solo. Não impor y(9) = 0.",
+    "steps": [
+      "Escolha os eixos da figura: ponto inicial (0,2) e vértice de altura máxima (9,3).",
+      "Use y = a(x − 9)² + 3 para incorporar diretamente a posição do vértice."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:49",
+    "cohortId": "unicamp-2026-qx",
+    "number": 49,
+    "questionId": "unicamp_2026_q49",
+    "topicId": "mat_dados_probabilidade",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Introdução às Probabilidades",
+    "title": "Exatamente duas crianças com o próprio brinquedo",
+    "concept": "Permutações com pontos fixos; pré-requisito: fatorial, combinação e equiprobabilidade.",
+    "trap": "“Exatamente duas” exige exclusão das coincidências restantes. Os eventos de retirada não são independentes.",
+    "steps": [
+      "Considere cinco brinquedos distintos e todas as distribuições equiprováveis; queremos exatamente duas coincidências.",
+      "Escolha as duas crianças que ficam com os próprios brinquedos e impeça coincidências entre as três restantes."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:50",
+    "cohortId": "unicamp-2026-qx",
+    "number": 50,
+    "questionId": "unicamp_2026_q50",
+    "topicId": "mat_trigonometria",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Relações Trigonométricas em Polígonos",
+    "title": "Área de triângulo simétrico dentro de quadrado",
+    "concept": "Cosseno e simetria; pré-requisito: produto escalar ou lei dos cossenos e área de triângulo.",
+    "trap": "A altura é o lado inteiro x; t é metade da base, não a base completa.",
+    "steps": [
+      "Como M é o ponto médio de AB e PD = QC, o triângulo PMQ é simétrico. Denote metade de PQ por t e a altura por x.",
+      "Use os vetores MP = (−t,−x) e MQ = (t,−x), ou a lei dos cossenos, para expressar cos θ."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:51",
+    "cohortId": "unicamp-2026-qx",
+    "number": 51,
+    "questionId": "unicamp_2026_q51",
+    "topicId": "mat_complexos_polinomios",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Módulo de um Número Real",
+    "title": "Inequações modulares e números primos",
+    "concept": "Interseção de conjuntos e contagem; pré-requisito: módulo como distância e primalidade.",
+    "trap": "“E” pede interseção. Não contar o primo 5 apenas por pertencer ao intervalo 2–20.",
+    "steps": [
+      "Leia simultaneamente |x − 5| ≥ 2, |x − 11| ≤ 9 e x natural.",
+      "Resolva cada condição como intervalos antes de contar primos."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:52",
+    "cohortId": "unicamp-2026-qx",
+    "number": 52,
+    "questionId": "unicamp_2026_q52",
+    "topicId": "mat_sequencias_matrizes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Sistemas de Equações",
+    "title": "Tropa com força e astúcia equilibradas",
+    "concept": "Modelagem por sistema linear; pré-requisito: soma ponderada e número total.",
+    "trap": "Não igualar os números de combatentes: as pontuações por indivíduo são diferentes.",
+    "steps": [
+      "Denote soldados por s e estrategistas por e; há 100 combatentes.",
+      "Monte uma equação de quantidade e outra de igualdade entre as pontuações totais."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:53",
+    "cohortId": "unicamp-2026-qx",
+    "number": 53,
+    "questionId": "unicamp_2026_q53",
+    "topicId": "mat_geometria_plana",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Áreas de Polígonos",
+    "title": "Área sombreada por interseção de segmentos",
+    "concept": "Semelhança ou coordenadas e área; pré-requisito: identificação correta da região pintada.",
+    "trap": "O ponto R serve para definir a reta PR, mas não é um vértice da região sombreada.",
+    "steps": [
+      "Adote D = (0,0), A = (0,6), B = (6,6), C = (6,0). Então P = (3,6), Q = (6,4), R = (1,0) e S = (0,4).",
+      "A região sombreada é o triângulo formado por P, Q e a interseção T de PR com SQ."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:54",
+    "cohortId": "unicamp-2026-qx",
+    "number": 54,
+    "questionId": "unicamp_2026_q54",
+    "topicId": "por_norma_culta",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Variação Linguística",
+    "title": "Pronúncia de advogado e desconhecimento linguístico",
+    "concept": "Variação fonética e comentário metalinguístico; pré-requisito: distinguir som, letra e vogal de apoio.",
+    "trap": "Um rótulo social plausível não torna verdadeiro todo o restante da alternativa.",
+    "steps": [
+      "Identifique as pronúncias adevogado e adivogado e a afirmação dos comentaristas sobre “d mudo”.",
+      "Analise a articulação da consoante e a presença da vogal de apoio, sem tomar insulto como regra linguística."
+    ],
+    "commandWords": [
+      "por que"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:55",
+    "cohortId": "unicamp-2026-qx",
+    "number": 55,
+    "questionId": "unicamp_2026_q55",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Os Dois Níveis da Leitura",
+    "title": "Nós e nóix: delimitação sociocultural",
+    "concept": "Sentido de coletividade e escolha de grafia; pré-requisito: contraste explicitado no texto.",
+    "trap": "A interpretação precisa partir das definições internas do texto, não da gramática normativa isolada.",
+    "steps": [
+      "Localize Nós da totalidade e nóix de pertencimento difuso, ancestralidade e fechamento nas ruas.",
+      "Compare os sentidos de grupo; não classifique a mudança somente como erro ortográfico."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:56",
+    "cohortId": "unicamp-2026-qx",
+    "number": 56,
+    "questionId": "unicamp_2026_q56",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Intertextualidade e Interdiscursividade",
+    "title": "Pretuguês, ancestralidade e identidade linguística",
+    "concept": "Intertextualidade e formação do português brasileiro; pré-requisito: relacionar dois textos sem presumir etimologias.",
+    "trap": "Vínculo cultural não prova origem histórica direta de cada palavra. A banca cobra a referência a um conceito.",
+    "steps": [
+      "Releia o texto de nóix e o texto que explica Pretuguês e a contribuição de populações africanas.",
+      "Procure o vínculo identitário com ancestralidade, distinguindo-o da origem etimológica de uma palavra específica."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:57",
+    "cohortId": "unicamp-2026-qx",
+    "number": 57,
+    "questionId": "unicamp_2026_q57",
+    "topicId": "por_sintaxe",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Orações Coordenadas",
+    "title": "Valores de que e controle da luta",
+    "concept": "Relação explicativa e efeito argumentativo; pré-requisito: função de conectivos no contexto.",
+    "trap": "Não atribuir um único valor a todas as ocorrências de que nem classificá-lo sem ler o argumento.",
+    "steps": [
+      "Leia a peça visual completa e localize justificativas que outras pessoas apresentam para controlar a luta de alguém.",
+      "Analise que em cada relação de sentido; a mesma forma pode ter funções distintas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:58",
+    "cohortId": "unicamp-2026-qx",
+    "number": 58,
+    "questionId": "unicamp_2026_q58",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Tecnologias Digitais da Informação e Comunicação (TDIC): Impactos Sociais",
+    "title": "Definição de image macro e meme Nazaré Confusa",
+    "concept": "Aplicação de definição a exemplo multimodal; pré-requisito: frame, template e linguagem híbrida.",
+    "trap": "Categorias próximas podem compartilhar características sem serem equivalentes. O comando exige aplicação da definição fornecida.",
+    "steps": [
+      "Liste características da definição: um frame, imagem-texto e interação entre visual e verbal.",
+      "Teste cada característica no meme exibido, sem supor que todo meme pertence ao mesmo tipo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:59",
+    "cohortId": "unicamp-2026-qx",
+    "number": 59,
+    "questionId": "unicamp_2026_q59",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Gêneros Textuais",
+    "title": "Manifesto sobre imitação do estilo Ghibli",
+    "concept": "Gênero, propósito e tese; pré-requisito: distinguir manifesto, resenha e carta.",
+    "trap": "Textos críticos não são todos resenhas. Observe objeto, finalidade e modo de intervenção pública.",
+    "steps": [
+      "Identifique autoria institucional, tese contra imitação automatizada e defesa de autenticidade artística.",
+      "Classifique pelo propósito e pela organização argumentativa, não apenas por ter crítica."
+    ],
+    "commandWords": [
+      "por que"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:60",
+    "cohortId": "unicamp-2026-qx",
+    "number": 60,
+    "questionId": "unicamp_2026_q60",
+    "topicId": "por_lit_modernismo",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Carlos Drummond de Andrade",
+    "title": "Drummond lido em diálogo com Krenak",
+    "concept": "Intertextualidade e crítica ao progresso; pré-requisito: repetição, ironia e tese do ensaio.",
+    "trap": "Ironia não é celebração literal da colonização. A banca pede diálogo entre obras, não resumo separado de cada uma.",
+    "steps": [
+      "Observe a repetição de coloniza, civiliza e humaniza e o novo tédio em Lua e Marte.",
+      "Compare a lógica de expansão no poema com a crítica de Krenak à relação utilitária com a Terra."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:61",
+    "cohortId": "unicamp-2026-qx",
+    "number": 61,
+    "questionId": "unicamp_2026_q61",
+    "topicId": "por_lit_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Poesia Brasileira Contemporânea",
+    "title": "Ode mínima e objeto cotidiano",
+    "concept": "Reelaboração de gênero poético; pré-requisito: ode clássica e ironia.",
+    "trap": "Não inferir que toda homenagem usa tom nobre. A transformação de gênero depende de comparação de características.",
+    "steps": [
+      "Compare o poema dirigido aos óculos com a definição clássica de ode em homenagem a assunto ou pessoa ilustre.",
+      "Identifique o que o poema preserva da homenagem e o que muda em escala e objeto."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:62",
+    "cohortId": "unicamp-2026-qx",
+    "number": 62,
+    "questionId": "unicamp_2026_q62",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Gêneros Narrativos e Níveis de Compreensão",
+    "title": "Réplica: diáspora e experiência de Nkem",
+    "concept": "Leitura de obra e focalização; pré-requisito: personagens, deslocamento e relações conjugais.",
+    "trap": "A questão não fornece um trecho de apoio: requer leitura da obra. Recuperar episódios e focalização é melhor que memorizar rótulos.",
+    "steps": [
+      "Identifique Nkem como protagonista e recupere sua experiência entre Nigéria e Estados Unidos no conto Réplica.",
+      "Analise os conflitos a partir das observações da personagem, sem reduzir a narrativa a um slogan nacionalista."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:63",
+    "cohortId": "unicamp-2026-qx",
+    "number": 63,
+    "questionId": "unicamp_2026_q63",
+    "topicId": "por_lit_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Prosa Brasileira: 1960-1980",
+    "title": "Pera, uva ou maçã?: ritmo e ansiedade",
+    "concept": "Relação entre forma narrativa e estado psicológico; pré-requisito: oralidade, pontuação e sequência temporal.",
+    "trap": "Não interpretar toda ausência de pontuação como falta de sentido. No texto literário, a forma pode construir um efeito.",
+    "steps": [
+      "Observe o fluxo sem pontuação convencional, as retomadas e a sequência da compra das ameixas até o velório.",
+      "Relacione ritmo verbal e experiência da personagem, distinguindo velocidade de desorganização lógica."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:64",
+    "cohortId": "unicamp-2026-qx",
+    "number": 64,
+    "questionId": "unicamp_2026_q64",
+    "topicId": "por_lit_romantismo_realismo",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Machado de Assis",
+    "title": "Casa Velha: função narrativa da cena do sineiro",
+    "concept": "Cena, relações afetivas e enredo; pré-requisito: Lalau, Félix e Dona Antônia na obra.",
+    "trap": "A pergunta “cumpre o papel de” exige função narrativa. Um tema presente no trecho pode não responder ao comando.",
+    "steps": [
+      "Localize a cena do sineiro no enredo e identifique Lalau, o filho de Dona Antônia e a observação da compaixão da moça.",
+      "Distinga tema social do trecho e função específica da cena no desenvolvimento das relações afetivas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:65",
+    "cohortId": "unicamp-2026-qx",
+    "number": 65,
+    "questionId": "unicamp_2026_q65",
+    "topicId": "por_lit_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Cancioneiro Popular Brasileiro",
+    "title": "Alvorada de Cartola: amor e contraste lírico",
+    "concept": "Comparação poética e estado do eu lírico; pré-requisito: imagem, personificação e adversidade.",
+    "trap": "Não concluir vida plenamente feliz a partir da paisagem alegre. A comparação não apaga o sofrimento do eu lírico.",
+    "steps": [
+      "Compare a alegria da alvorada com “meus caminhos tão sem vida”, “quase nada” e “estrada perdida”.",
+      "Identifique a aproximação entre pessoa amada e luz da alvorada, preservando o contraste com o desalento."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "unicamp-2026-qx:66",
+    "cohortId": "unicamp-2026-qx",
+    "number": 66,
+    "questionId": "unicamp_2026_q66",
+    "topicId": "qui_estequiometria",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "title": "Domínios macroscópico, submicroscópico e simbólico",
+    "concept": "Representações em Química; pré-requisito: distinguir fenômeno observável, modelo de partículas e notação.",
+    "trap": "O nível submicroscópico também é comunicado por desenhos; “imagem” não implica escala macroscópica.",
+    "steps": [
+      "Leia os rótulos do triângulo e compare as ilustrações A–H na página original.",
+      "Classifique pelo que cada imagem representa, e não simplesmente por ser um desenho."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:67",
+    "cohortId": "unicamp-2026-qx",
+    "number": 67,
+    "questionId": "unicamp_2026_q67",
+    "topicId": "qui_equilibrio",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Deslocamento de Equilíbrio",
+    "title": "CO₂, acidificação e carbonato nos corais",
+    "concept": "Equilíbrio ácido-base e disponibilidade de carbonato; pré-requisito: pH e princípio de Le Chatelier.",
+    "trap": "Acidificação é diminuição do pH, mesmo que a água permaneça alcalina. Não trocar bicarbonato por carbonato.",
+    "steps": [
+      "Leia as reações do infográfico, identifique A, B e C e observe a curva decrescente entre os eixos.",
+      "Reconstrua as espécies a partir dos balanços de átomos e cargas e associe aumento de CO₂ à acidificação."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:68",
+    "cohortId": "unicamp-2026-qx",
+    "number": 68,
+    "questionId": "unicamp_2026_q68",
+    "topicId": "qui_termoquimica",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Termoquímica I",
+    "title": "Hidrogênio e querosene por massa e volume",
+    "concept": "Densidade energética gravimétrica e volumétrica; pré-requisito: massa molar e densidade.",
+    "trap": "Comparar só kJ/mol é insuficiente: um mol de cada combustível tem massas diferentes.",
+    "steps": [
+      "Anote energia por mol, massa molar e densidade de ambos os combustíveis; a comparação exige a mesma energia gerada.",
+      "Calcule energia por massa e, separadamente, energia por volume."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:69",
+    "cohortId": "unicamp-2026-qx",
+    "number": 69,
+    "questionId": "unicamp_2026_q69",
+    "topicId": "qui_estequiometria",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Cálculos Estequiométricos",
+    "title": "Captura de CO₂: razão molar e ganho de massa",
+    "concept": "Conversões mmol–mol e massa percentual; pré-requisito: massa molar e leitura aproximada de gráfico.",
+    "trap": "3 mmol/g não significa razão molar de 3. O denominador precisa ser convertido de gramas para mols do sólido.",
+    "steps": [
+      "Leia cerca de 3,0 mmol de CO₂ por grama de sólido aos 65 min; massa molar do sólido é 332,3 g/mol.",
+      "Escolha base de 1 g de sólido para calcular tanto razão molar quanto ganho percentual."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:70",
+    "cohortId": "unicamp-2026-qx",
+    "number": 70,
+    "questionId": "unicamp_2026_q70",
+    "topicId": "qui_estequiometria",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "title": "Processo Solvay e regeneração de insumos",
+    "concept": "Balanço global de um processo; pré-requisito: intermediários, recirculação e conservação.",
+    "trap": "Não classificar toda seta de entrada como consumo permanente. É necessário seguir os retornos.",
+    "steps": [
+      "Acompanhe no fluxograma salmoura, calcário, amônia e as correntes de retorno.",
+      "Diferencie insumo consumido no balanço global de substância que participa de uma etapa e é regenerada em outra."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:71",
+    "cohortId": "unicamp-2026-qx",
+    "number": 71,
+    "questionId": "unicamp_2026_q71",
+    "topicId": "qui_solucoes",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Dispersões",
+    "title": "Etanol combustível: teor de água e densidade",
+    "concept": "Mistura ideal e limites de especificação; pré-requisito: densidade e concentração em massa.",
+    "trap": "Teor alcoólico alto não significa densidade alta: água e etanol têm densidades distintas. A mistura ideal é hipótese desta questão.",
+    "steps": [
+      "Compare teores alcoólicos do anidro, hidratado e premium; água é mais densa que etanol nas condições usuais.",
+      "Use a tendência de composição e identifique se cada especificação é limite mínimo ou máximo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unicamp-2026-qx:72",
+    "cohortId": "unicamp-2026-qx",
+    "number": 72,
+    "questionId": "unicamp_2026_q72",
+    "topicId": "qui_estequiometria",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Separação de Misturas",
+    "title": "Processos de obtenção de lítio: o que os dados permitem concluir",
+    "concept": "Comparação de processos e limites de inferência; pré-requisito: temperatura, consumo e rendimento.",
+    "trap": "Menor temperatura não demonstra por si maior rendimento nem tempo total menor. Responda dentro do alcance das evidências.",
+    "steps": [
+      "Compare as temperaturas, etapas de lixiviação e indicações de consumo de carbonato nos dois métodos.",
+      "Separe vantagens apresentadas de variáveis não medidas, especialmente tempo total e rendimento."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:18",
+    "cohortId": "fuvest-2026-v1",
+    "number": 18,
+    "questionId": "fuvest_2026_q18",
+    "topicId": "mat_log_exponenciais",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Modelagem Exponencial de Problemas",
+    "title": "Limiar de usuários em crescimento exponencial",
+    "concept": "Inequação exponencial e logaritmos; pré-requisito: fator de crescimento e propriedades dos logaritmos.",
+    "trap": "Não usar crescimento linear de 20 mil por semana nem confundir 300 mil com 300 milhões.",
+    "steps": [
+      "M(t)=200(1,1)^t está em milhares; ultrapassar 300 mil exige 200(1,1)^t>300.",
+      "Isole a potência e aplique logaritmos: t>log(1,5)/log(1,1); a base 1,1 é maior que 1."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:20",
+    "cohortId": "fuvest-2026-v1",
+    "number": 20,
+    "questionId": "fuvest_2026_q20",
+    "topicId": "his_moderna_iluminismo",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "América no Século XIX",
+    "title": "Permanências da exploração indígena após a independência",
+    "concept": "Emancipação política e permanências sociais; pré-requisito: colonização espanhola e formação das repúblicas latino-americanas.",
+    "trap": "Tomar a abolição de instituições coloniais como prova do fim da exploração.",
+    "steps": [
+      "O autor peruano pergunta se os indígenas sofrem menos sob a República e registra o fim de corregimientos e encomiendas.",
+      "Distinga mudança institucional de mudança nas relações sociais; procure o contraste introduzido por mas persistem."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:21",
+    "cohortId": "fuvest-2026-v1",
+    "number": 21,
+    "questionId": "fuvest_2026_q21",
+    "topicId": "his_brasil_colonia",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "A Montagem da Colonização",
+    "title": "Catequese infantil e construção de alianças",
+    "concept": "Agência indígena e negociação na colonização; pré-requisito: atuação jesuíta no século XVI.",
+    "trap": "Reduzir catequese à imposição unilateral ou transformar uma hipótese histórica em certeza universal.",
+    "steps": [
+      "O excerto registra a entrega de crianças aos jesuítas e sugere que o ensino poderia estabelecer alianças.",
+      "Leia as expressões talvez e difícil determinar ao certo como limites da evidência, evitando generalizações."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:23",
+    "cohortId": "fuvest-2026-v1",
+    "number": 23,
+    "questionId": "fuvest_2026_q23",
+    "topicId": "geo_fisica_brasil",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Políticas Ambientais Brasileiras",
+    "title": "Tendência histórica do desmatamento da Mata Atlântica",
+    "concept": "Leitura de série histórica ambiental; pré-requisito: distinguir tendência de oscilações anuais.",
+    "trap": "Confundir a curva de tendência com as barras anuais ou concluir recuperação de toda a cobertura florestal.",
+    "steps": [
+      "Leia as barras de 1985 a 2024, a curva decrescente e os valores textuais: 143,66 km² em 2024 e 113,99 km² em 2017–2018.",
+      "Compare o início e o fim da série e observe a tendência ajustada; não exija queda em cada ano."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:24",
+    "cohortId": "fuvest-2026-v1",
+    "number": 24,
+    "questionId": "fuvest_2026_q24",
+    "topicId": "geo_climatologia_socioambiental",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Desafios Ambientais do Século XXI",
+    "title": "Esverdeamento da Antártida e aquecimento",
+    "concept": "Mudanças climáticas em ambientes frios e indicadores de vegetação; pré-requisito: interpretação de legenda e série temporal.",
+    "trap": "Confundir índices de vegetação com termômetros ou tratar associação ambiental como demonstração causal isolada.",
+    "steps": [
+      "A cobertura aumenta de 0,86 km² em 1986 para 11,95 km² em 2021; a foto mostra musgos e a legenda distingue NDVI>0,2 de TCG>0.",
+      "Compare as barras ao longo do tempo, sobretudo a ampliação desde 2016; relacione vegetação, disponibilidade de terreno sem gelo e temperatura."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:25",
+    "cohortId": "fuvest-2026-v1",
+    "number": 25,
+    "questionId": "fuvest_2026_q25",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Global Warming",
+    "title": "Plataformas de gelo e velocidade das geleiras",
+    "concept": "Leitura de texto científico em inglês e relações causais; pré-requisito: distinguir ice sheet, ice shelf e glacier.",
+    "trap": "Trocar três quartos da costa por três quartos da área e confundir efeitos do gelo flutuante com continental.",
+    "steps": [
+      "O texto distingue gelo assentado em terra de plataforma flutuante; cita 11% da área e três quartos da costa antártica.",
+      "Localize regulate the speed, hold glaciers back e Take the shelf away para identificar a função das plataformas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:34",
+    "cohortId": "fuvest-2026-v1",
+    "number": 34,
+    "questionId": "fuvest_2026_q34",
+    "topicId": "geo_fisica_brasil",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Hidrogeografia do Brasil",
+    "title": "Sedimentos andinos e águas brancas amazônicas",
+    "concept": "Bacia hidrográfica, erosão e transporte de sedimentos; pré-requisito: montante, jusante e leitura de legenda.",
+    "trap": "Classificar como Química apenas pela palavra hidroquímica ou atribuir cores naturais exclusivamente à poluição.",
+    "steps": [
+      "O texto define águas brancas por alta concentração de sólidos inorgânicos em suspensão, pretas por matéria orgânica dissolvida e claras por baixos teores de ambos.",
+      "No mapa, localize o Solimões na classe branca e acompanhe sua posição na drenagem que recebe materiais das cabeceiras andinas."
+    ],
+    "commandWords": [
+      "correta",
+      "assinale"
+    ]
+  },
+  {
+    "id": "fuvest-2026-v1:48",
+    "cohortId": "fuvest-2026-v1",
+    "number": 48,
+    "questionId": "fuvest_2026_q48",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Intertextualidade e Interdiscursividade",
+    "title": "Adão e a serpente no despertar de Mwando",
+    "concept": "Intertextualidade bíblica e conflito interior; pré-requisito: reconhecer metáforas e comparação narrativa.",
+    "trap": "Ler nasceu como nascimento literal ou presumir que a referência bíblica implica abandono completo da fé.",
+    "steps": [
+      "Mwando é comparado a Adão; a serpente, a maçã, a perda da venda e o nascimento figurado acompanham a paixão por Sarnau.",
+      "Associe o repertório bíblico à passagem da inocência ao conhecimento, depois observe os efeitos emocionais no personagem."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:55",
+    "cohortId": "fuvest-2026-v1",
+    "number": 55,
+    "questionId": "fuvest_2026_q55",
+    "topicId": "mat_teoria_numeros",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Introdução à Teoria dos Números Inteiros",
+    "title": "Números perfeitos e uma progressão de termos pares",
+    "concept": "Divisibilidade, números perfeitos e progressão geométrica; pré-requisito: divisores próprios e potências.",
+    "trap": "Aplicar a fórmula de Euclides ignorando a hipótese de primalidade ou confundir diferenças exponenciais com PA.",
+    "steps": [
+      "Um perfeito iguala a soma dos divisores positivos próprios; Euclides exige que 2^n−1 seja primo antes de concluir que 2^(n−1)(2^n−1) é perfeito.",
+      "Teste as afirmações por exemplos pequenos; determine o primeiro perfeito e a expressão geral da PG de razão 3."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:59",
+    "cohortId": "fuvest-2026-v1",
+    "number": 59,
+    "questionId": "fuvest_2026_q59",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Observações e previsões na tensão de Hubble",
+    "concept": "Compreensão de divulgação científica e método empírico; pré-requisito: diferenciar medição e previsão teórica.",
+    "trap": "Tomar discrepância como rejeição automática de toda a teoria ou inferir exclusividade do Webb pela menção a seus dados.",
+    "steps": [
+      "Leia o apoio completo na página 26: a equipe de Riess mede H0 cerca de 8% acima da previsão baseada nos ingredientes e equações conhecidos do cosmos.",
+      "Localize measured, theoretical prediction e latest measurement based on Webb data, relacionando observação e modelo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:60",
+    "cohortId": "fuvest-2026-v1",
+    "number": 60,
+    "questionId": "fuvest_2026_q60",
+    "topicId": "fis_gravitacao_circular",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Leis da Gravitação",
+    "title": "Densidade de um buraco negro de massa solar",
+    "concept": "Raio de Schwarzschild e comparação de densidades; pré-requisito: volume esférico e notação científica.",
+    "trap": "Comparar densidades usando apenas a razão dos raios ou esquecer o quadrado de c.",
+    "steps": [
+      "Use massas iguais, RSol=10^9 m, G=10^−10 N·m²/kg², M=2·10^30 kg e c=3·10^8 m/s.",
+      "Calcule RSc=2GM/c² e aproveite a igualdade das massas para cancelar M na razão das densidades."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:61",
+    "cohortId": "fuvest-2026-v1",
+    "number": 61,
+    "questionId": "fuvest_2026_q61",
+    "topicId": "fis_fisica_moderna",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Noções Básicas de Física Quântica",
+    "title": "Frequência e energia cinética no efeito fotoelétrico",
+    "concept": "Equação fotoelétrica de Einstein; pré-requisito: energia do fóton e função trabalho.",
+    "trap": "Confundir intensidade com frequência ou esquecer que função trabalho maior reduz Kmax para o mesmo fóton.",
+    "steps": [
+      "O enunciado fornece E=hf e define a função trabalho como energia mínima necessária para retirar o elétron.",
+      "Escreva Kmax=hf−φ e compare separadamente frequência, intensidade e função trabalho."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:67",
+    "cohortId": "fuvest-2026-v1",
+    "number": 67,
+    "questionId": "fuvest_2026_q67",
+    "topicId": "qui_estequiometria",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Massa Atômica, Mol e Massa Molar",
+    "title": "Isótopos no espectro de uma amostra pura",
+    "concept": "Isotopia e razão massa/carga; pré-requisito: massa isotópica e carga de íons.",
+    "trap": "Tomar múltiplos picos como impurezas ou imaginar que a carga do cálcio determina diversas massas do mesmo isotopólogo.",
+    "steps": [
+      "A espécie intacta [C44H69NO12Ca]²⁺ tem massa 843,444 e sinal principal m/z=421,722; os outros picos ficam à direita e são menores.",
+      "Fixe a carga em 2 e relacione aumentos de m/z a aumentos de massa, sem pressupor mistura de substâncias."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:84",
+    "cohortId": "fuvest-2026-v1",
+    "number": 84,
+    "questionId": "fuvest_2026_q84",
+    "topicId": "bio_fisio_vegetal",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Traqueófitas: Transpiração e Reposição Rápida de Água",
+    "title": "Perda de solutos e fechamento estomático",
+    "concept": "Osmose e turgor das células-guarda; pré-requisito: potencial osmótico e abertura do ostíolo.",
+    "trap": "Trocar o sentido da seta ou associar saída de água ao aumento do turgor.",
+    "steps": [
+      "Na figura, Z aponta do ostíolo aberto à esquerda para o fechado à direita; identifique as células-guarda e seus vacúolos.",
+      "Relacione a concentração de solutos ao fluxo osmótico de água e à pressão de turgor."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:85",
+    "cohortId": "fuvest-2026-v1",
+    "number": 85,
+    "questionId": "fuvest_2026_q85",
+    "topicId": "bio_ecologia",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Introdução à Ecologia",
+    "title": "Sobreposição de nichos e competição",
+    "concept": "Nicho ecológico e competição; pré-requisito: distinguir habitat e uso de recursos.",
+    "trap": "Supor que nicho é exclusivo ou que competição ocorre apenas entre espécies diferentes.",
+    "steps": [
+      "Os círculos representam nichos das espécies A e B; N marca a interseção hachurada, associada ao recurso usado por ambas.",
+      "Interprete a sobreposição como compartilhamento de condições ou recursos, sem confundi-la com o espaço físico do habitat."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "fuvest-2026-v1:89",
+    "cohortId": "fuvest-2026-v1",
+    "number": 89,
+    "questionId": "fuvest_2026_q89",
+    "topicId": "por_lit_contemporanea",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Prosa Brasileira Contemporânea",
+    "title": "Sobrenome e reivindicação da riqueza produzida por escravizados",
+    "concept": "Memória da escravidão e resistência no romance; pré-requisito: inferência textual e desigualdade histórica.",
+    "trap": "Tratar a preservação do sobrenome como submissão sem reconhecer seu novo sentido de enfrentamento.",
+    "steps": [
+      "A família negra de Neide preserva Paranhos, sobrenome herdado da escravatura e compartilhado com uma família branca tradicional.",
+      "Observe a reinterpretação do nome: enfrentamento e reivindicação velada de uma fortuna, em vez de simples deferência."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:5",
+    "cohortId": "unesp-2025-v1",
+    "number": 5,
+    "questionId": "unesp_2025_v1_q5",
+    "topicId": "por_sintaxe",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Vozes Verbais",
+    "title": "Quem sonhou o pássaro?",
+    "concept": "Conversão de voz passiva em ativa preservando participantes e tempo verbal; pré-requisitos: sujeito paciente, agente da passiva e pretérito perfeito.",
+    "trap": "Não confundir sonhaste com sonharas: a terminação altera a relação temporal.",
+    "steps": [
+      "Identifique “Fui sonhado” como passiva analítica na primeira pessoa: o falante foi objeto do sonho.",
+      "Transforme “por ti” no sujeito “tu” e o antigo sujeito em objeto “me”."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:18",
+    "cohortId": "unesp-2025-v1",
+    "number": 18,
+    "questionId": "unesp_2025_v1_q18",
+    "topicId": "por_lit_romantismo_realismo",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Elementos da Narrativa",
+    "title": "Limite de conhecimento do narrador",
+    "concept": "Onisciência e marcas de desconhecimento narrativo; pré-requisito: distinguir conhecimento do narrador de informação omitida por escolha.",
+    "trap": "Não tomar “confidência” ou recusa de revelar algo como prova automática de desconhecimento.",
+    "steps": [
+      "Leia a crônica disponível e localize a informação cronológica da abertura.",
+      "Procure uma declaração de ignorância, e não apenas comentários pessoais ou linguagem figurada."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:21",
+    "cohortId": "unesp-2025-v1",
+    "number": 21,
+    "questionId": "unesp_2025_v1_q21",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Taxonomy and Terminology",
+    "title": "Finalidade do texto sobre o cacau",
+    "concept": "Identificação de finalidade comunicativa e relação causa-consequência; pré-requisitos: vocabulário de preços, clima e produção.",
+    "trap": "Expressões absolutas como only eliminam fatores que o texto enumera.",
+    "steps": [
+      "Observe que a abertura anuncia o encarecimento do cacau desde 2022 e seu recorde em janeiro de 2024.",
+      "Reúna as causas nos parágrafos seguintes: chuvas, seca e doenças nas plantações."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:33",
+    "cohortId": "unesp-2025-v1",
+    "number": 33,
+    "questionId": "unesp_2025_v1_q33",
+    "topicId": "his_brasil_colonia",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "A Mineração no Brasil Colonial",
+    "title": "Mineração e mudança da capital colonial",
+    "concept": "Reorganização territorial e político-econômica na mineração; pré-requisitos: economia colonial e função dos portos atlânticos.",
+    "trap": "Não interpretar mudança da capital como evento administrativo isolado da atividade econômica.",
+    "steps": [
+      "Registre os dados: mineração em Minas, Goiás e Mato Grosso, crescimento do Rio e transferência da capital em 1763.",
+      "Conecte as minas do interior aos circuitos de transporte e comércio controlados pelo porto do Rio."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:51",
+    "cohortId": "unesp-2025-v1",
+    "number": 51,
+    "questionId": "unesp_2025_v1_q51",
+    "topicId": "geo_fisica_brasil",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Paisagem, Espaço Geográfico e Ciência Geográfica",
+    "title": "Territórios quilombolas e vegetação nativa",
+    "concept": "Relação sociedade-natureza e leitura comparativa de dados territoriais; pré-requisitos: percentuais e comunidades tradicionais.",
+    "trap": "Menor desmatamento não demonstra ausência de uso econômico do território.",
+    "steps": [
+      "Compare as perdas de vegetação entre 1985 e 2022: 4,7% nos territórios quilombolas e 25% nas áreas privadas.",
+      "Interprete a diferença como indício de formas distintas de ocupar e utilizar o território."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:59",
+    "cohortId": "unesp-2025-v1",
+    "number": 59,
+    "questionId": "unesp_2025_v1_q59",
+    "topicId": "fil_aristoteles",
+    "relatedTopicIds": [],
+    "subject": "Filosofia",
+    "chapter": "Lógica e Metafísica Aristotélicas",
+    "title": "Silogismo e necessidade da conclusão",
+    "concept": "Conhecimento dedutivo e estrutura do silogismo; pré-requisitos: premissa, conclusão e consequência necessária.",
+    "trap": "Confundir uma contribuição conhecida de Aristóteles com aquela efetivamente descrita nos excertos.",
+    "steps": [
+      "No texto 1, destaque que o discurso demonstrativo parte do verdadeiro e chega ao verdadeiro.",
+      "No texto 2, identifique uma conclusão que decorre necessariamente das premissas sem termo externo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:61",
+    "cohortId": "unesp-2025-v1",
+    "number": 61,
+    "questionId": "unesp_2025_v1_q61",
+    "topicId": "bio_ecologia",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Introdução à Ecologia",
+    "title": "Disputa de presas entre orcas e humanos",
+    "concept": "Competição interespecífica por recursos compartilhados; pré-requisitos: nicho ecológico, predação e relações ecológicas.",
+    "trap": "Responder predação quando a pergunta compara dois consumidores que compartilham presas.",
+    "steps": [
+      "Registre que orcas predam 121 espécies e humanos afetam 10460, havendo sobreposição de 69% nas presas.",
+      "Considere a relação entre orcas e humanos, e não a relação de cada consumidor com sua presa."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:65",
+    "cohortId": "unesp-2025-v1",
+    "number": 65,
+    "questionId": "unesp_2025_v1_q65",
+    "topicId": "bio_fisio_animal",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Fisiologia da Respiração",
+    "title": "Apneia, pH e controle respiratório",
+    "concept": "Mecânica inspiratória e controle da ventilação por CO₂/pH; pré-requisitos: diafragma, músculos intercostais e sistema nervoso.",
+    "trap": "Associar inspiração ao relaxamento do diafragma ou atribuir a regulação respiratória ao cerebelo.",
+    "steps": [
+      "Identifique as três lacunas: ação muscular ao inspirar, pH durante apneia e centro que aumenta a frequência respiratória.",
+      "A inspiração exige contração do diafragma e dos intercostais externos, ampliando o volume torácico."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:73",
+    "cohortId": "unesp-2025-v1",
+    "number": 73,
+    "questionId": "unesp_2025_v1_q73",
+    "topicId": "qui_equilibrio",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Deslocamento de Equilíbrio",
+    "title": "Controle da formação de HCN",
+    "concept": "Deslocamento de equilíbrio por adição de produto e controle de pH; pré-requisitos: bases, hidrólise de sais e princípio de Le Chatelier.",
+    "trap": "Diminuir o pH consome OH⁻ e favorece justamente a formação do gás tóxico.",
+    "steps": [
+      "Leia CN⁻ + H₂O ⇌ HCN + OH⁻ e observe que HCN dissolvido pode passar à fase gasosa.",
+      "Para reduzir HCN, desloque o primeiro equilíbrio para a esquerda acrescentando OH⁻."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:75",
+    "cohortId": "unesp-2025-v1",
+    "number": 75,
+    "questionId": "unesp_2025_v1_q75",
+    "topicId": "qui_termoquimica",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Termoquímica II",
+    "title": "Entalpia de combustão da hidrazina",
+    "concept": "Entalpia de reação por energias de ligação; pré-requisitos: balanceamento e contagem de ligações rompidas/formadas.",
+    "trap": "Contar apenas duas ligações O–H apesar do coeficiente 2 da água, ou inverter a subtração.",
+    "steps": [
+      "Registre N₂H₄ + O₂ → N₂ + 2H₂O e as energias N–H 391, N–N 163, O=O 497, N≡N 949 e O–H 463 kJ/mol.",
+      "Use ΔH = soma das ligações rompidas menos soma das ligações formadas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:78",
+    "cohortId": "unesp-2025-v1",
+    "number": 78,
+    "questionId": "unesp_2025_v1_q78",
+    "topicId": "fis_leis_newton",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Plano Inclinado",
+    "title": "Aceleração máxima sem deslizamento",
+    "concept": "Atrito estático e segunda lei de Newton em plano inclinado; pré-requisitos: decomposição do peso e fₑ ≤ μₑN.",
+    "trap": "Usar μg sem o cosseno ou esquecer que parte do atrito sustenta o peso ao longo da rampa.",
+    "steps": [
+      "Registre μₑ = 0,8, g = 10 m/s², senθ = 0,6 e cosθ = 0,8; a figura mostra a esteira acelerando para cima da rampa.",
+      "Na direção perpendicular, N = mg cosθ; ao longo da rampa, o atrito aponta para cima e o peso mg senθ para baixo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unesp-2025-v1:90",
+    "cohortId": "unesp-2025-v1",
+    "number": 90,
+    "questionId": "unesp_2025_v1_q90",
+    "topicId": "mat_sequencias_matrizes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Progressão Geométrica",
+    "title": "Tempos sucessivos nas voltas do triângulo",
+    "concept": "Soma finita de progressão geométrica aplicada a tempos; pré-requisitos: conversão de unidades e t = distância/velocidade.",
+    "trap": "Dobrar a velocidade somente após cada volta, quando o enunciado manda fazê-lo após cada lado.",
+    "steps": [
+      "A figura mostra três lados de 10 cm; dez voltas correspondem a 30 lados, e a velocidade dobra após cada lado.",
+      "Converta 6 m/min para 10 cm/s: o primeiro lado demora 1 s."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:3",
+    "cohortId": "famerp-2025-v1",
+    "number": 3,
+    "questionId": "famerp_2025_v1_q3",
+    "topicId": "por_lit_classica_barroca",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "A Estética Neoclássica",
+    "title": "Mitologia no poema árcade",
+    "concept": "Referências clássicas na estética árcade; pré-requisito: reconhecer o repertório greco-romano.",
+    "trap": "Confundir uma característica recorrente do Arcadismo, como o bucolismo, com a característica comprovada neste poema.",
+    "steps": [
+      "Localize Vênus, Antero e Cupido no poema e leia as notas que identificam a deusa e seus filhos.",
+      "Procure uma marca efetivamente presente no texto, sem presumir que todo poema árcade desenvolva o mesmo tema."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:5",
+    "cohortId": "famerp-2025-v1",
+    "number": 5,
+    "questionId": "famerp_2025_v1_q5",
+    "topicId": "por_sintaxe",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Vozes Verbais",
+    "title": "O se como pronome apassivador",
+    "concept": "Voz passiva sintética; pré-requisito: transitividade e sujeito paciente.",
+    "trap": "Tomar qualquer ocorrência de se como passiva, ignorando usos pronominais e condicionais.",
+    "steps": [
+      "Compare os cinco versos, observando o verbo a que se está associado.",
+      "Teste a transformação em voz passiva analítica: objeto procurado pode tornar-se sujeito paciente."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:12",
+    "cohortId": "famerp-2025-v1",
+    "number": 12,
+    "questionId": "famerp_2025_v1_q12",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Concessão com although",
+    "concept": "Conector concessivo; pré-requisito: relação entre orações.",
+    "trap": "Confundir concessão, que admite um fato, com condição, que depende de hipótese.",
+    "steps": [
+      "Leia “Although online dating had been around since Match.com” no contexto da popularização dos aplicativos.",
+      "Identifique uma informação admitida que não impede a afirmação posterior: namoro online já existia."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:21",
+    "cohortId": "famerp-2025-v1",
+    "number": 21,
+    "questionId": "famerp_2025_v1_q21",
+    "topicId": "his_idade_antiga",
+    "relatedTopicIds": [],
+    "subject": "História",
+    "chapter": "Antiguidade Clássica: o Mundo Romano",
+    "title": "Cristianismo e autoridade imperial",
+    "concept": "Relação entre culto público e poder romano; pré-requisito: religião cívica no Império.",
+    "trap": "Ler a perseguição apenas como divergência teológica e perder a ligação explícita com a ordem política.",
+    "steps": [
+      "O excerto contrapõe tolerância a várias religiões e perseguição aos cristãos por mais de dois séculos.",
+      "Identifique o motivo expresso: a recusa ao culto dos deuses e do imperador era vista como desafio à ordem."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:32",
+    "cohortId": "famerp-2025-v1",
+    "number": 32,
+    "questionId": "famerp_2025_v1_q32",
+    "topicId": "geo_populacao_urbana_brasil",
+    "relatedTopicIds": [],
+    "subject": "Geografia",
+    "chapter": "Os Fluxos do Comércio Externo",
+    "title": "Commodities e balança comercial",
+    "concept": "Exportações de produtos básicos; pré-requisito: saldo comercial e valor agregado.",
+    "trap": "Concluir que produto com pouco processamento tem pouca importância econômica.",
+    "steps": [
+      "O texto define commodities como mercadorias padronizadas agrícolas, minerais ou energéticas negociadas mundialmente.",
+      "Diferencie relevância econômica de sofisticação tecnológica: produtos básicos podem gerar grandes receitas de exportação."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:46",
+    "cohortId": "famerp-2025-v1",
+    "number": 46,
+    "questionId": "famerp_2025_v1_q46",
+    "topicId": "bio_zoologia",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Protozoários e Protozooses",
+    "title": "Transmissão fecal-oral da amebíase",
+    "concept": "Ingestão de cistos de protozoários; pré-requisito: distinguir formas infectantes e vetores.",
+    "trap": "Associar toda protozoose a mosquito ou confundir cisto de protozoário com cisticerco de helminto.",
+    "steps": [
+      "Identifique a doença como amebíase, uma protozoose intestinal, e não uma verminose ou infecção transmitida por insetos.",
+      "Recupere sua via fecal-oral: cistos eliminados nas fezes podem contaminar água e alimentos."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:47",
+    "cohortId": "famerp-2025-v1",
+    "number": 47,
+    "questionId": "famerp_2025_v1_q47",
+    "topicId": "bio_fisio_animal",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Fisiologia da Coordenação Nervosa I",
+    "title": "Receptores opioides e sinapse neural",
+    "concept": "Receptores de membrana na comunicação neural; pré-requisito: neurônio e sinapse química.",
+    "trap": "Confundir modulação de receptores com interrupção física da condução no axônio; não generalizar a localização dendrítica a todos os receptores opioides.",
+    "steps": [
+      "O excerto diz que o fentanil interage com receptores opioides no cérebro e altera a sinalização neural.",
+      "Localize o alvo descrito: receptor proteico de membrana, relacionado à comunicação entre células, não ao DNA nuclear."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:54",
+    "cohortId": "famerp-2025-v1",
+    "number": 54,
+    "questionId": "famerp_2025_v1_q54",
+    "topicId": "qui_estequiometria",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Transformações Físicas e Químicas e Balanceamento de Equações",
+    "title": "Balanceamento da produção de fósforo branco",
+    "concept": "Conservação dos átomos; pré-requisito: leitura de índices e coeficientes.",
+    "trap": "Somar todos os coeficientes ou alterar índices das fórmulas para balancear.",
+    "steps": [
+      "A equação fixa 1 P4, 6 CaSiO3 e 10 CO nos produtos; determine x, y e z nos reagentes.",
+      "Balanceie primeiro fósforo e cálcio: cada Ca3(PO4)2 tem dois P e três Ca."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:55",
+    "cohortId": "famerp-2025-v1",
+    "number": 55,
+    "questionId": "famerp_2025_v1_q55",
+    "topicId": "qui_polaridade_geometria",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Interações Intermoleculares",
+    "title": "Ligações de hidrogênio na solução de boldina",
+    "concept": "Interações entre grupos OH e amina; pré-requisito: eletronegatividade e pares de elétrons.",
+    "trap": "Chamar qualquer interação entre moléculas polares apenas de dipolo permanente e perder a ligação de hidrogênio indicada pelos grupos.",
+    "steps": [
+      "Observe as estruturas: a boldina apresenta grupos OH e a dietilamina apresenta N–H e par de elétrons disponível no nitrogênio.",
+      "Procure hidrogênios ligados a O ou N e átomos eletronegativos capazes de aceitar ligação de hidrogênio."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:63",
+    "cohortId": "famerp-2025-v1",
+    "number": 63,
+    "questionId": "famerp_2025_v1_q63",
+    "topicId": "fis_gravitacao_circular",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Órbitas",
+    "title": "Velocidade orbital de um satélite",
+    "concept": "Gravitação como força centrípeta; pré-requisito: movimento circular uniforme.",
+    "trap": "Confundir raio orbital com altitude ou velocidade orbital com velocidade de escape.",
+    "steps": [
+      "Considere massa terrestre M, massa do satélite m e raio orbital R medido a partir do centro da Terra.",
+      "Iguale os módulos: GMm/R² = mv²/R, pois a gravitação fornece a resultante centrípeta."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:72",
+    "cohortId": "famerp-2025-v1",
+    "number": 72,
+    "questionId": "famerp_2025_v1_q72",
+    "topicId": "mat_funcoes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Função Constante e Função Afim",
+    "title": "Conversão entre três escalas afins",
+    "concept": "Determinação de coeficientes a partir de dois pontos; pré-requisito: função afim.",
+    "trap": "Calcular a segunda conversão diretamente de A para C quando a fórmula fornecida relaciona B a C.",
+    "steps": [
+      "Da tabela, os pares (tA,tB) são (4,−1) e (10,8); os pares (tB,tC) são (−1,3,5) e (8,8).",
+      "Calcule cada inclinação por Δsaída/Δentrada e depois obtenha o termo independente."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "famerp-2025-v1:77",
+    "cohortId": "famerp-2025-v1",
+    "number": 77,
+    "questionId": "famerp_2025_v1_q77",
+    "topicId": "mat_geometria_espacial",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Sólidos de Revolução",
+    "title": "Igualdade numérica entre área e volume do cilindro",
+    "concept": "Área total e volume do cilindro; pré-requisito: manipulação algébrica e medidas positivas.",
+    "trap": "Usar apenas a área lateral ou tratar a igualdade numérica como identidade dimensional independente da unidade.",
+    "steps": [
+      "O cilindro circular reto tem raio r e altura h positivos; a questão compara valores numéricos em uma unidade fixada.",
+      "Use área total 2πr² + 2πrh e volume πr²h, incluindo as duas bases na área."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:1",
+    "cohortId": "unifesp-2025-v1",
+    "number": 1,
+    "questionId": "unifesp_2025_v1_q1",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Gêneros Textuais",
+    "title": "Folhetim: cotidiano, leveza e humor",
+    "concept": "Inferência de características do gênero a partir das metáforas de Alencar; pré-requisito: distinguir assunto e modo de apresentação.",
+    "trap": "Confundir a ironia usada pelo autor com a finalidade de corrigir costumes atribuída ao gênero.",
+    "steps": [
+      "Observe no segundo parágrafo a busca de graça, sal e espírito no fato mais comezinho e, no terceiro, as imagens de voo e liberdade.",
+      "Associe o cotidiano ao conteúdo e as imagens bem-humoradas ao tratamento estilístico, restringindo a leitura aos parágrafos indicados."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:3",
+    "cohortId": "unifesp-2025-v1",
+    "number": 3,
+    "questionId": "unifesp_2025_v1_q3",
+    "topicId": "por_norma_culta",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Pronomes",
+    "title": "O destinatário de escrever-lhe-ia",
+    "concept": "Coesão referencial e pronome oblíquo; pré-requisito: identificar destinatário de escrever.",
+    "trap": "Escolher o substantivo mais próximo em vez do referente compatível com a função de destinatário.",
+    "steps": [
+      "Localize escrever-lhe-ia uma biografia e a referência anterior a quem foi o inventor do folhetim.",
+      "Reconstitua a oração com o nome do destinatário no lugar de lhe: escreveria uma biografia ao inventor."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:6",
+    "cohortId": "unifesp-2025-v1",
+    "number": 6,
+    "questionId": "unifesp_2025_v1_q6",
+    "topicId": "por_norma_culta",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Advérbio e Locuções Adverbiais: Circunstanciadores",
+    "title": "Hoje e o momento da enunciação",
+    "concept": "Dêixis temporal versus organização cronológica interna; pré-requisito: reconhecer advérbios e referências temporais.",
+    "trap": "Tratar toda expressão temporal como dêitica, incluindo relações cronológicas internas.",
+    "steps": [
+      "Leia a definição de dêitico e localize hoje, em seguida e bilhões de anos mais tarde nas alternativas.",
+      "Pergunte se a interpretação exige saber quando o autor enuncia ou apenas acompanhar a sequência dos eventos narrados."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:7",
+    "cohortId": "unifesp-2025-v1",
+    "number": 7,
+    "questionId": "unifesp_2025_v1_q7",
+    "topicId": "por_sintaxe",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Orações Adverbiais",
+    "title": "Finalidade e desenvolvimento de para formar",
+    "concept": "Oração reduzida de infinitivo com valor final; pré-requisito: sujeito plural e pretérito do subjuntivo.",
+    "trap": "Concordar o verbo com criatura viva, confundindo objeto singular e sujeito plural.",
+    "steps": [
+      "Identifique para formar a primeira criatura viva e o sujeito moléculas, retomado na oração de finalidade.",
+      "Desenvolva a oração final com para que, preservando o sujeito plural e a sequência temporal do passado."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:8",
+    "cohortId": "unifesp-2025-v1",
+    "number": 8,
+    "questionId": "unifesp_2025_v1_q8",
+    "topicId": "por_norma_culta",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Processos de Formação de Palavras",
+    "title": "Negação em assimetria e imperfeita",
+    "concept": "Valor semântico de prefixos no contexto; pré-requisito: reconhecer base e afixo.",
+    "trap": "Procurar prefixos graficamente iguais quando o comando pede o mesmo sentido.",
+    "steps": [
+      "Localize assimetria na frase sobre a vida e compare os prefixos das palavras nas cinco alternativas.",
+      "Separe o prefixo da base e compare o sentido expresso, sem exigir identidade de letras."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:9",
+    "cohortId": "unifesp-2025-v1",
+    "number": 9,
+    "questionId": "unifesp_2025_v1_q9",
+    "topicId": "por_lit_modernismo",
+    "relatedTopicIds": [],
+    "subject": "Literatura",
+    "chapter": "Pré-Modernismo",
+    "title": "Os sertões entre literatura e análise social",
+    "concept": "Reconhecimento de obra por estrutura e contexto histórico; pré-requisito: Pré-Modernismo e Euclides da Cunha.",
+    "trap": "Escolher Grande sertão: veredas apenas pela presença de sertão no título.",
+    "steps": [
+      "Reúna as pistas terra, homem e luta, começo do século XX e análise da distância cultural entre litoral e interior.",
+      "Compare estrutura e período de cada obra proposta, evitando decidir apenas pelo cenário sertanejo."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:10",
+    "cohortId": "unifesp-2025-v1",
+    "number": 10,
+    "questionId": "unifesp_2025_v1_q10",
+    "topicId": "por_norma_culta",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Tipos de Discurso",
+    "title": "O microfone que converte a fala de Lola",
+    "concept": "Discurso direto e indireto em tirinha; pré-requisito: pessoa gramatical e referência enunciativa.",
+    "trap": "Classificar todo texto em balão como discurso direto, ignorando que o microfone relata a voz de outra personagem.",
+    "steps": [
+      "Compare as falas de Lola “Meu nome é Lola” e “eu dou um show” com as versões do microfone “O nome dela é Lola” e “ela dá um show”.",
+      "Observe quem fala originalmente e como o microfone relata a fala para outros ouvintes, alterando primeira para terceira pessoa."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:12",
+    "cohortId": "unifesp-2025-v1",
+    "number": 12,
+    "questionId": "unifesp_2025_v1_q12",
+    "topicId": "por_texto",
+    "relatedTopicIds": [],
+    "subject": "Português",
+    "chapter": "Figuras de Linguagem",
+    "title": "A luva como voz do soneto",
+    "concept": "Personificação como estrutura do poema; pré-requisito: distinguir eu lírico e autor.",
+    "trap": "Atribuir a primeira pessoa diretamente ao poeta e deixar de reconhecer o objeto personificado.",
+    "steps": [
+      "Leia o soneto inteiro e relacione “calçar-vos”, “me deixou sozinha” e a saudade da luva abandonada no último verso.",
+      "Identifique quem ocupa a primeira pessoa e se esse ser pode literalmente sentir saudade e falar de seu destino."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:16",
+    "cohortId": "unifesp-2025-v1",
+    "number": 16,
+    "questionId": "unifesp_2025_v1_q16",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "Como funciona o robô bio-híbrido",
+    "concept": "Propósito comunicativo de divulgação científica; pré-requisito: distinguir ideia central e detalhe.",
+    "trap": "Usar a referência a neurônios humanos para concluir que células humanas integram os novos robôs.",
+    "steps": [
+      "Reúna os três parágrafos: criação de máquinas com fungos, conexão a eletrodos e computador, movimento provocado por luz ultravioleta.",
+      "Busque a alternativa que cobre essa progressão explicativa, sem transformar aplicação futura em finalidade econômica."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:19",
+    "cohortId": "unifesp-2025-v1",
+    "number": 19,
+    "questionId": "unifesp_2025_v1_q19",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Digital Technology",
+    "title": "A forma do robô na fotografia",
+    "concept": "Correspondência entre descrição verbal e imagem; pré-requisito: reconhecer starfish-shaped e wheels.",
+    "trap": "Confundir o segundo robô citado no texto com o dispositivo fotografado.",
+    "steps": [
+      "Examine a foto: o dispositivo tem braços radiais apoiados na superfície e uma plataforma central.",
+      "Compare os traços visíveis com as descrições do terceiro parágrafo, separando o robô fotografado do outro robô mencionado."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:23",
+    "cohortId": "unifesp-2025-v1",
+    "number": 23,
+    "questionId": "unifesp_2025_v1_q23",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Pollution",
+    "title": "Must e a resposta às queimadas",
+    "concept": "Modalidade de obrigação em texto ambiental; pré-requisito: distinguir dever, possibilidade e conselho.",
+    "trap": "Aplicar a leitura de dedução de must a uma frase que prescreve uma ação às autoridades.",
+    "steps": [
+      "Localize must respond quickly e seu sujeito, the Brazilian authorities, no trecho sobre impunidade e incêndios ilegais.",
+      "Interprete o modal na situação: o autor exige providências institucionais, detalhadas por investigate e hold those responsible accountable."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "unifesp-2025-v1:25",
+    "cohortId": "unifesp-2025-v1",
+    "number": 25,
+    "questionId": "unifesp_2025_v1_q25",
+    "topicId": "ing_01",
+    "relatedTopicIds": [],
+    "subject": "Inglês",
+    "chapter": "Text Comprehension: Pollution",
+    "title": "Sol, degradação e vulnerabilidade ao fogo",
+    "concept": "Cadeia causal em infográfico ambiental; pré-requisito: reconhecer resulting in e more suitable to burn.",
+    "trap": "Inferir fertilidade agrícola a partir do uso do fogo, embora o comando peça a consequência representada no infográfico.",
+    "steps": [
+      "Leia o bloco Fire as a tool for destruction: florestas degradadas expõem áreas ao sol, ficam mais secas e mais propensas a queimar.",
+      "Siga a cadeia exposição → ressecamento → queima, confrontando-a com as consequências oferecidas nas alternativas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:92",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 92,
+    "questionId": "enem_2022_d2_cd5_q92",
+    "topicId": "fis_dinamica_impulsiva",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Impulso e Quantidade de Movimento",
+    "title": "Colisão com retorno e dissipação de energia",
+    "concept": "A força média relaciona-se ao impulso: |F média| = |Δp|/Δt. A energia cinética depende do quadrado da velocidade. Para uma mesma entrada e mesmo tempo de colisão, retornar exige maior variação de momento, enquanto parar dissipa toda a energia cinética inicial.",
+    "trap": "Velocidade tem sinal na quantidade de movimento, mas a energia cinética usa v². A análise de força não pode ser reutilizada como se fosse análise de dissipação.",
+    "steps": [
+      "Compare carros iguais com a mesma velocidade inicial e colisões de igual duração. Com pneus há retorno; com blocos o carro para.",
+      "Defina o sentido inicial como positivo e a velocidade de retorno como −u, com 0<u<v."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:94",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 94,
+    "questionId": "enem_2022_d2_cd5_q94",
+    "topicId": "bio_fisio_animal",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Sangue e Imunologia",
+    "title": "Antígeno tumoral apresentado por vetor não patogênico",
+    "concept": "A imunidade adaptativa distingue alvos por antígenos. A modificação genética faz o protozoário expressar uma molécula tumoral, permitindo que a resposta induzida reconheça também células do tumor. É necessário distinguir especificidade adaptativa de inflamação e de resposta inata.",
+    "trap": "A cobrança liga engenharia genética à especificidade imune. Não transforme a presença de células do próprio organismo em diagnóstico automático de autoimunidade: o texto constrói a resposta contra um marcador tumoral.",
+    "steps": [
+      "Identifique o dado decisivo: o T. cruzi modificado apresenta moléculas também produzidas pelas células tumorais, sem causar a doença descrita.",
+      "Relacione a molécula compartilhada ao reconhecimento de um antígeno específico; a identidade do alvo, e não sua origem, orienta o ataque."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:97",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 97,
+    "questionId": "enem_2022_d2_cd5_q97",
+    "topicId": "qui_estequiometria",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Separação de Misturas",
+    "title": "Decantação na estação de tratamento de água",
+    "concept": "Sólidos em suspensão constituem uma mistura heterogênea. Coagulação favorece agregação; os flocos sedimentam sob a gravidade na decantação. Filtração retém partículas remanescentes, desinfecção controla microrganismos e fluoretação não separa sólidos.",
+    "trap": "O primeiro processo citado não é automaticamente a resposta. Coagular agrega partículas; decantar separa os agregados da água.",
+    "steps": [
+      "O problema exige a retirada da maior parte dos sólidos suspensos, não a etapa final que torna a água segura.",
+      "Separe a formação dos agregados de sua efetiva remoção do fluxo de água."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:98",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 98,
+    "questionId": "enem_2022_d2_cd5_q98",
+    "topicId": "bio_metabolismo_energetico",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Bioenergética: Fermentação e Respiração",
+    "title": "Termogenina e desacoplamento mitocondrial",
+    "concept": "A cadeia respiratória estabelece um gradiente de prótons através da membrana mitocondrial interna. O retorno de H+ pela ATP sintase acopla a energia desse gradiente à síntese de ATP; proteínas desacopladoras oferecem outra via e dissipam energia como calor.",
+    "trap": "Não confunda produção de calor com interrupção de toda a respiração. O desacoplamento altera a eficiência de produção de ATP e pode manter ou estimular o fluxo respiratório.",
+    "steps": [
+      "Localize a pista: prótons deixam de chegar à ATP sintase e o organismo produz calor.",
+      "Escolha a etapa cuja síntese de ATP depende diretamente do gradiente de prótons: fosforilação oxidativa."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:99",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 99,
+    "questionId": "enem_2022_d2_cd5_q99",
+    "topicId": "fis_circuitos",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Resistores",
+    "title": "Lei de Ohm em modelo de congestionamento",
+    "concept": "No modelo proposto, a resistência é a razão entre a diferença de potencial e a corrente: R=U/i. As unidades têm interpretação própria da analogia, mas o quociente organiza as rotas da mesma maneira que na lei de Ohm.",
+    "trap": "Leia a grandeza pedida: a maior corrente ou a menor d.d.p. isoladamente não basta. O modelo exige o quociente entre ambas.",
+    "steps": [
+      "Leia os pares da tabela: rota 1 (510;4), rota 2 (608;4), rota 3 (575;3).",
+      "Calcule a razão d.d.p./corrente para cada rota, pois o aplicativo ordena por resistência crescente."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:104",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 104,
+    "questionId": "enem_2022_d2_cd5_q104",
+    "topicId": "bio_ecologia",
+    "relatedTopicIds": [],
+    "subject": "Biologia",
+    "chapter": "Espécies Invasoras e Controle Biológico",
+    "title": "Espécie exótica e substituição da vegetação nativa",
+    "concept": "Uma espécie introduzida pode competir por espaço, luz, água e nutrientes, reduzindo a presença de espécies nativas. Ser exótica não implica invasão em todo contexto; o problema descrito é a ocupação e substituição da flora original.",
+    "trap": "A pegadinha é confundir abundância da invasora com diversidade da comunidade. Muitos indivíduos de uma espécie podem coexistir com menor riqueza de espécies nativas.",
+    "steps": [
+      "Reconheça a jaqueira como espécie originária de outra região e adaptada ao ambiente brasileiro.",
+      "Procure o mecanismo que reduz a composição nativa da comunidade, não simplesmente o número total de árvores."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:105",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 105,
+    "questionId": "enem_2022_d2_cd5_q105",
+    "topicId": "fis_cinematica_vetorial",
+    "relatedTopicIds": [],
+    "subject": "Física",
+    "chapter": "Composição de Movimentos",
+    "title": "Jato horizontal como medida da velocidade de saída",
+    "concept": "No lançamento horizontal, a queda vertical determina o tempo e o movimento horizontal uniforme determina a velocidade inicial. Essa mesma velocidade, orientada verticalmente, produz altura máxima H=v0²/(2g), supondo saída com igual rapidez e desprezando resistência do ar.",
+    "trap": "Os 3 m são alcance horizontal, não altura vertical. O tempo de queda depende da altura e não do alcance; compare alturas sempre com a referência solicitada.",
+    "steps": [
+      "Identifique altura horizontal de lançamento h=1 m, alcance x=3 m e g=10 m/s².",
+      "Use h=gt²/2 para a queda e x=v0t para o movimento horizontal."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:116",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 116,
+    "questionId": "enem_2022_d2_cd5_q116",
+    "topicId": "qui_oxirreducao",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Processos de Oxirredução",
+    "title": "Poder oxidante do ozônio e risco sanitário",
+    "concept": "Um agente oxidante promove oxidação de outra espécie enquanto ele próprio recebe elétrons e se reduz. O ozônio é um oxidante forte; a reatividade que pode inativar microrganismos também pode atacar componentes de células humanas e gerar subprodutos.",
+    "trap": "Quem causa oxidação é o oxidante, mas ele próprio se reduz. Confundir o nome do agente com a transformação sofrida por ele inverte a resposta.",
+    "steps": [
+      "Identifique a substância empregada para sanitização e o risco químico de uso indiscriminado: O3.",
+      "Classifique seu papel pela transferência de elétrons, em vez de assumir que sanitizante é necessariamente ácido ou base."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:130",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 130,
+    "questionId": "enem_2022_d2_cd5_q130",
+    "topicId": "qui_radioatividade",
+    "relatedTopicIds": [],
+    "subject": "Química",
+    "chapter": "Radioatividade: o Estudo das Radiações",
+    "title": "Meia-vida do iodo-131",
+    "concept": "O decaimento radioativo ideal obedece m(t)=m0·(1/2)^(t/t½). A meia-vida é o intervalo para reduzir à metade a quantidade presente, independentemente da massa inicial; não se subtrai a mesma massa em intervalos sucessivos.",
+    "trap": "A redução é multiplicativa, não linear. Também não use 14 dias como meia-vida: nesse momento a massa não é metade de 12 µg.",
+    "steps": [
+      "Leia a tabela: a massa cai de 12,0 µg a 6,0 µg em 8 dias.",
+      "Adote t½ = 8 dias e conte 40/8 = 5 meias-vidas."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:136",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 136,
+    "questionId": "enem_2022_d2_cd5_q136",
+    "topicId": "mat_sequencias_matrizes",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Médias",
+    "title": "Média salarial ponderada e reajuste máximo",
+    "concept": "A média dos salários deve ser ponderada pelos números de professores. Reajuste percentual atua sobre o salário original de cada grupo, e o limite para a média impõe uma desigualdade para a folha total.",
+    "trap": "A média não é a média simples de dois salários: os grupos têm 60 e 40 pessoas. O percentual do doutor usa R$ 12 000 como base, não o salário já reajustado do mestre.",
+    "steps": [
+      "Há 60 mestres com R$ 8 000 e 40 doutores com R$ 12 000. O teto de média é R$ 12 240 para 100 pessoas.",
+      "Calcule primeiro o salário dos mestres após reajuste: 8 000·1,25=10 000. Represente o reajuste dos doutores por r."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:140",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 140,
+    "questionId": "enem_2022_d2_cd5_q140",
+    "topicId": "mat_aritmetica_proporcionalidade",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Porcentagem",
+    "title": "Percentuais sucessivos com bases diferentes",
+    "concept": "Acréscimos e descontos sucessivos são fatores multiplicativos. O desconto de 2% aplica-se ao preço normal, que já é 10% maior, por isso o fator resultante é 1,10·0,98, e não 1+0,10−0,02.",
+    "trap": "Não subtraia percentuais quando a base muda. Também confira a direção da comparação: o valor da loja é menor que o calculado pela cliente.",
+    "steps": [
+      "O preço promocional é R$ 1 000. O normal tem acréscimo de 10% e o cartão dá desconto de 2% sobre o normal.",
+      "Separe o preço efetivo da estimativa da cliente, que adicionou 8% ao promocional."
+    ],
+    "commandWords": []
+  },
+  {
+    "id": "enem-2022-d2-cd5:157",
+    "cohortId": "enem-2022-d2-cd5",
+    "number": 157,
+    "questionId": "enem_2022_d2_cd5_q157",
+    "topicId": "mat_combinatoria",
+    "relatedTopicIds": [],
+    "subject": "Matemática",
+    "chapter": "Introdução às Técnicas de Contagem",
+    "title": "Opcionais independentes e limite estrito de configurações",
+    "concept": "O princípio multiplicativo conta escolhas independentes. Cada um dos três opcionais pode estar presente ou ausente, dando 2³=8 subconjuntos, inclusive o conjunto vazio. O anúncio exige mais de 1 000, de modo que o número inteiro de cores deve satisfazer uma desigualdade estrita.",
+    "trap": "Não use apenas 3 pacotes: escolher dois opcionais gera três combinações distintas. Inclua a configuração sem opcionais e respeite o termo mais de.",
+    "steps": [
+      "Há 7 modelos, 2 motores, 3 opcionais que podem ser incluídos livremente e um número desconhecido c de cores.",
+      "Conte os pacotes como subconjuntos de 3 itens: 1+3+3+1=8, ou 2³=8."
+    ],
+    "commandWords": []
+  },
+  {
+    "number": 1,
+    "topicId": "bio_ecologia",
+    "relatedTopicIds": [
+      "bio_fisio_animal"
+    ],
+    "title": "Oceanos e temperatura",
+    "concept": "Termorregulação e consequências ecológicas do aquecimento.",
+    "trap": "Justifique a diferença fisiológica; não apenas liste animais.",
+    "commandWords": [
+      "cite",
+      "justifique",
+      "explique"
+    ],
+    "id": "fuvest-2026-biologia-f2:1",
+    "cohortId": "fuvest-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 2,
+    "topicId": "bio_estrutura_fisio_celular",
+    "relatedTopicIds": [
+      "qui_organica_fundamentos"
+    ],
+    "title": "Hidrocarbonetos e células",
+    "concept": "Lipofilicidade, membranas e detoxificação.",
+    "trap": "Relacione propriedade química e dano celular.",
+    "commandWords": [
+      "por que",
+      "qual"
+    ],
+    "id": "fuvest-2026-biologia-f2:2",
+    "cohortId": "fuvest-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 3,
+    "topicId": "bio_ecologia",
+    "relatedTopicIds": [
+      "bio_fisio_vegetal"
+    ],
+    "title": "Cultivo e chuva",
+    "concept": "Sazonalidade, adaptações vegetais e agricultura.",
+    "trap": "Use o climograma na comparação.",
+    "commandWords": [
+      "compare",
+      "determine",
+      "cite"
+    ],
+    "id": "fuvest-2026-biologia-f2:3",
+    "cohortId": "fuvest-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 4,
+    "topicId": "bio_metabolismo_energetico",
+    "relatedTopicIds": [
+      "bio_fisio_vegetal"
+    ],
+    "title": "Luz e metabolismo",
+    "concept": "Fotossíntese, respiração e saturação.",
+    "trap": "Diferencie compensação de saturação luminosa.",
+    "commandWords": [
+      "cite",
+      "explique"
+    ],
+    "id": "fuvest-2026-biologia-f2:4",
+    "cohortId": "fuvest-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 5,
+    "topicId": "bio_fisio_animal",
+    "relatedTopicIds": [
+      "bio_estrutura_fisio_celular"
+    ],
+    "title": "Comunicação neural",
+    "concept": "Transmissão sináptica e estruturas celulares.",
+    "trap": "Identifique os componentes do esquema.",
+    "commandWords": [
+      "qual",
+      "o que"
+    ],
+    "id": "fuvest-2026-biologia-f2:5",
+    "cohortId": "fuvest-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 6,
+    "topicId": "bio_zoologia",
+    "relatedTopicIds": [
+      "bio_botanica"
+    ],
+    "title": "Crescimento e quitina",
+    "concept": "Muda e comparação estrutural com fungos.",
+    "trap": "Localize a estrutura em cada grupo.",
+    "commandWords": [
+      "cite",
+      "explique"
+    ],
+    "id": "fuvest-2026-biologia-f2:6",
+    "cohortId": "fuvest-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 7,
+    "topicId": "bio_fisio_animal",
+    "relatedTopicIds": [
+      "bio_estrutura_fisio_celular"
+    ],
+    "title": "Neurônios e saliva",
+    "concept": "Estrutura, função e plasticidade.",
+    "trap": "Responda também às funções salivares.",
+    "commandWords": [
+      "qual",
+      "explique",
+      "cite"
+    ],
+    "id": "unicamp-2026-biologia-f2:7",
+    "cohortId": "unicamp-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 8,
+    "topicId": "bio_ecologia",
+    "relatedTopicIds": [
+      "bio_fisio_vegetal"
+    ],
+    "title": "Rios voadores",
+    "concept": "Ciclo hídrico e transpiração.",
+    "trap": "Conecte estômatos e fluxo de água.",
+    "commandWords": [
+      "indique",
+      "explique",
+      "inclua"
+    ],
+    "id": "unicamp-2026-biologia-f2:8",
+    "cohortId": "unicamp-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 9,
+    "topicId": "bio_ecologia",
+    "relatedTopicIds": [
+      "bio_botanica"
+    ],
+    "title": "Lemna e algas",
+    "concept": "Interações e crescimento aquático.",
+    "trap": "Sustente a interpretação nos gráficos.",
+    "commandWords": [
+      "descreva",
+      "indique",
+      "justifique"
+    ],
+    "id": "unicamp-2026-biologia-f2:9",
+    "cohortId": "unicamp-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 10,
+    "topicId": "bio_metabolismo_energetico",
+    "relatedTopicIds": [
+      "bio_fisio_animal",
+      "bio_microbiologia"
+    ],
+    "title": "Oxigênio intestinal",
+    "concept": "Microbiota, metabolismo e digestão.",
+    "trap": "Não confunda emulsificação e hidrólise.",
+    "commandWords": [
+      "qual",
+      "justifique",
+      "cite",
+      "indique"
+    ],
+    "id": "unicamp-2026-biologia-f2:10",
+    "cohortId": "unicamp-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 11,
+    "topicId": "bio_evolucao",
+    "relatedTopicIds": [
+      "bio_ecologia",
+      "bio_zoologia"
+    ],
+    "title": "Plumagem de pavões",
+    "concept": "Seleção sexual e predação.",
+    "trap": "Evolução não implica progresso.",
+    "commandWords": [
+      "cite",
+      "explique",
+      "justificativas"
+    ],
+    "id": "unicamp-2026-biologia-f2:11",
+    "cohortId": "unicamp-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 12,
+    "topicId": "bio_biotecnologia",
+    "relatedTopicIds": [
+      "bio_fisio_animal",
+      "bio_botanica"
+    ],
+    "title": "Arroz biofortificado",
+    "concept": "Transgenia e transporte gasoso.",
+    "trap": "Diferencie transgenia e terapia gênica.",
+    "commandWords": [
+      "explique",
+      "cite"
+    ],
+    "id": "unicamp-2026-biologia-f2:12",
+    "cohortId": "unicamp-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  },
+  {
+    "number": 13,
+    "topicId": "bio_genetica",
+    "relatedTopicIds": [
+      "bio_codigo_genetico_sintese",
+      "bio_fisio_animal"
+    ],
+    "title": "CPS1",
+    "concept": "Herança, tradução e excreção.",
+    "trap": "Relacione mutação e proteína.",
+    "commandWords": [
+      "qual",
+      "por que"
+    ],
+    "id": "unicamp-2026-biologia-f2:13",
+    "cohortId": "unicamp-2026-biologia-f2",
+    "subject": "Biologia",
+    "chapter": "",
+    "steps": []
+  }
+]

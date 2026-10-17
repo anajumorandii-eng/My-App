@@ -60,7 +60,8 @@ const allocatedActions: AllocatedStudyAction[] = [
       { kind: 'review_urgency', rawValue: 73, contribution: 21.9 },
       { kind: 'recurring_errors', rawValue: 2, contribution: 12 },
       { kind: 'energy_adjustment', rawValue: 1, contribution: 0 },
-      { kind: 'exam_relevance', rawValue: 1.08225, contribution: 4.93 },
+      // Proximidade da primeira fase: sem herdar incidência da segunda fase.
+      { kind: 'exam_relevance', rawValue: 1.07, contribution: 4.2 },
     ],
     snapshot: { masteryLevel: 35, uncertainty: 0.3, calculatedAt: '2026-08-24T12:00:00.000Z' },
     intervalStart: '2026-08-24T14:40:00-03:00',
@@ -276,6 +277,14 @@ describe('daily plan consistency across views', () => {
     expect(within(context!).getByText('73% de urgência neste tópico')).toBeInTheDocument();
     expect(within(context!).getByText('FUVEST — 1ª fase')).toBeInTheDocument();
     expect(within(context!).queryByText(/Santa Casa/)).not.toBeInTheDocument();
+  });
+
+  it('Dashboard não atribui causalidade atual a uma pontuação da metodologia antiga', () => {
+    currentPlan = { ...sharedPlan, allocatedActions: [{ ...allocatedActions[0], factors: allocatedActions[0].factors.map(factor => factor.kind === 'exam_relevance' ? { ...factor, rawValue: 1.08225 } : factor) }] };
+    renderView(<Dashboard />);
+    const context = screen.getByText('Contexto que entrou na decisão').closest('details');
+    expect(within(context!).queryByText('FUVEST — 1ª fase')).not.toBeInTheDocument();
+    expect(within(context!).getByText('73% de urgência neste tópico')).toBeInTheDocument();
   });
 
   it('Dashboard omits decision context when no current-action signal contributed', () => {

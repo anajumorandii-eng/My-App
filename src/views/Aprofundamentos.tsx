@@ -35,7 +35,7 @@ function GuideLibrary({ uid }: { uid: string | null }) {
   const order = params.get('ordem') === 'assunto' ? 'assunto' : 'recentes';
   const terms = normalize(query).trim().split(/\s+/).filter(Boolean);
   const filtered = all.filter(guide => (!subject || guide.subject === subject) && (!board || guideBoards(guide).includes(board)) &&
-    terms.every(term => normalize([guide.subject, guide.topicName, guide.chapter, guide.board, guide.text].join(' ')).includes(term)))
+    terms.every(term => normalize([guide.subject, guide.topicName, guide.chapter, guide.board, guide.text, ...(guide.selections?.map(item => `${item.topicName} ${item.chapter}`) ?? [])].join(' ')).includes(term)))
     .sort((a, b) => order === 'assunto' ? (a.chapter || a.topicName).localeCompare(b.chapter || b.topicName, 'pt-BR') || b.savedAt.localeCompare(a.savedAt) : b.savedAt.localeCompare(a.savedAt));
   const totalPages = Math.max(1, Math.ceil(filtered.length / PAGE_SIZE));
   const page = Math.min(totalPages, Math.max(1, Number.parseInt(params.get('pagina') ?? '1', 10) || 1));
@@ -49,7 +49,7 @@ function GuideLibrary({ uid }: { uid: string | null }) {
     return next;
   }, { replace: true });
   const guideUrl = (guide: StrategyGuide) => { const next = new URLSearchParams(params); next.set('guia', guide.key); return `/aprofundamentos?${next}`; };
-  const contextUrl = selected && typeof selected.workSlug === 'string' ? `/obras/${encodeURIComponent(selected.workSlug)}?${new URLSearchParams({ aba: 'estrategias', ...(selected.workUnitId ? { unidade: selected.workUnitId } : {}) })}` : selected ? `/estrategias?${new URLSearchParams({ topic: selected.topicId, ...(selected.chapter ? { chapter: selected.chapter } : {}), board: selected.board })}` : '/estrategias';
+  const contextUrl = selected && typeof selected.workSlug === 'string' ? `/obras/${encodeURIComponent(selected.workSlug)}?${new URLSearchParams({ aba: 'estrategias', ...(selected.workUnitId ? { unidade: selected.workUnitId } : {}) })}` : selected ? `/estrategias?${new URLSearchParams({ topic: selected.topicId, ...((selected.selections?.[0]?.chapter || selected.chapter) ? { chapter: selected.selections?.[0]?.chapter || selected.chapter } : {}), ...(Array.isArray(selected.selections) && selected.selections.length > 1 ? { topics: JSON.stringify(selected.selections.slice(1)) } : {}), board: selected.board })}` : '/estrategias';
   useEffect(() => {
     if (selected) { heading.current?.focus({ preventScroll: true }); window.scrollTo(0, 0); }
   }, [selected?.key]);
@@ -76,6 +76,7 @@ function GuideLibrary({ uid }: { uid: string | null }) {
         <article ref={printContent} className="ni-panel p-5 space-y-4">
           <h2 className="font-display text-xl">{selected.subject} · {selected.chapter || selected.topicName}</h2>
           <p className="text-sm text-[var(--dim)]">{selected.topicName} · {selected.board} · Salvo em {dateLabel(selected.savedAt)}</p>
+          {selected.selections?.length ? <p className="text-sm">Recortes: {selected.selections.map(item => `${item.topicName} — ${item.chapter || 'visão geral'}`).join(' + ')}</p> : null}
           <AiText text={selected.text} className="text-sm leading-relaxed" />
           {isStudyPacket(selected.studyPacket) && <StudySourcesPanel packet={selected.studyPacket} />}
         </article>

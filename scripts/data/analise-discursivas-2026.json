@@ -1,0 +1,234 @@
+[
+  {
+    "id": "fuvest-2026-biologia-f2",
+    "board": "FUVEST",
+    "year": 2026,
+    "phase": "2ª fase · Biologia",
+    "phaseGroup": "2a",
+    "version": "Biologia",
+    "examUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-respostas-esperadas-biologia.pdf",
+    "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-respostas-esperadas-biologia.pdf",
+    "reviewedOn": "2026-10-17",
+    "completeSubjects": [
+      "Biologia"
+    ],
+    "totalQuestions": 6,
+    "items": [
+      {
+        "number": 1,
+        "topicId": "bio_ecologia",
+        "relatedTopicIds": [
+          "bio_fisio_animal"
+        ],
+        "title": "Oceanos e temperatura",
+        "concept": "Termorregulação e consequências ecológicas do aquecimento.",
+        "trap": "Justifique a diferença fisiológica; não apenas liste animais.",
+        "commandWords": [
+          "cite",
+          "justifique",
+          "explique"
+        ]
+      },
+      {
+        "number": 2,
+        "topicId": "bio_estrutura_fisio_celular",
+        "relatedTopicIds": [
+          "qui_organica_fundamentos"
+        ],
+        "title": "Hidrocarbonetos e células",
+        "concept": "Lipofilicidade, membranas e detoxificação.",
+        "trap": "Relacione propriedade química e dano celular.",
+        "commandWords": [
+          "por que",
+          "qual"
+        ]
+      },
+      {
+        "number": 3,
+        "topicId": "bio_ecologia",
+        "relatedTopicIds": [
+          "bio_fisio_vegetal"
+        ],
+        "title": "Cultivo e chuva",
+        "concept": "Sazonalidade, adaptações vegetais e agricultura.",
+        "trap": "Use o climograma na comparação.",
+        "commandWords": [
+          "compare",
+          "determine",
+          "cite"
+        ]
+      },
+      {
+        "number": 4,
+        "topicId": "bio_metabolismo_energetico",
+        "relatedTopicIds": [
+          "bio_fisio_vegetal"
+        ],
+        "title": "Luz e metabolismo",
+        "concept": "Fotossíntese, respiração e saturação.",
+        "trap": "Diferencie compensação de saturação luminosa.",
+        "commandWords": [
+          "cite",
+          "explique"
+        ]
+      },
+      {
+        "number": 5,
+        "topicId": "bio_fisio_animal",
+        "relatedTopicIds": [
+          "bio_estrutura_fisio_celular"
+        ],
+        "title": "Comunicação neural",
+        "concept": "Transmissão sináptica e estruturas celulares.",
+        "trap": "Identifique os componentes do esquema.",
+        "commandWords": [
+          "qual",
+          "o que"
+        ]
+      },
+      {
+        "number": 6,
+        "topicId": "bio_zoologia",
+        "relatedTopicIds": [
+          "bio_botanica"
+        ],
+        "title": "Crescimento e quitina",
+        "concept": "Muda e comparação estrutural com fungos.",
+        "trap": "Localize a estrutura em cada grupo.",
+        "commandWords": [
+          "cite",
+          "explique"
+        ]
+      }
+    ],
+    "examSha256": "ee361f09557ecfee211f7c23f36932705a35b3f0160646433c0cbf498a61f6b5",
+    "answerKeySha256": "ee361f09557ecfee211f7c23f36932705a35b3f0160646433c0cbf498a61f6b5"
+  },
+  {
+    "id": "unicamp-2026-biologia-f2",
+    "board": "UNICAMP",
+    "year": 2026,
+    "phase": "2ª fase · Biológicas/Saúde · Biologia",
+    "phaseGroup": "2a",
+    "version": "Biológicas/Saúde",
+    "examUrl": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F2_2o-dia_CB_S.pdf",
+    "answerKeyUrl": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F2_2o-dia_CB_S.pdf",
+    "reviewedOn": "2026-10-17",
+    "completeSubjects": [
+      "Biologia"
+    ],
+    "totalQuestions": 7,
+    "items": [
+      {
+        "number": 7,
+        "topicId": "bio_fisio_animal",
+        "relatedTopicIds": [
+          "bio_estrutura_fisio_celular"
+        ],
+        "title": "Neurônios e saliva",
+        "concept": "Estrutura, função e plasticidade.",
+        "trap": "Responda também às funções salivares.",
+        "commandWords": [
+          "qual",
+          "explique",
+          "cite"
+        ]
+      },
+      {
+        "number": 8,
+        "topicId": "bio_ecologia",
+        "relatedTopicIds": [
+          "bio_fisio_vegetal"
+        ],
+        "title": "Rios voadores",
+        "concept": "Ciclo hídrico e transpiração.",
+        "trap": "Conecte estômatos e fluxo de água.",
+        "commandWords": [
+          "indique",
+          "explique",
+          "inclua"
+        ]
+      },
+      {
+        "number": 9,
+        "topicId": "bio_ecologia",
+        "relatedTopicIds": [
+          "bio_botanica"
+        ],
+        "title": "Lemna e algas",
+        "concept": "Interações e crescimento aquático.",
+        "trap": "Sustente a interpretação nos gráficos.",
+        "commandWords": [
+          "descreva",
+          "indique",
+          "justifique"
+        ]
+      },
+      {
+        "number": 10,
+        "topicId": "bio_metabolismo_energetico",
+        "relatedTopicIds": [
+          "bio_fisio_animal",
+          "bio_microbiologia"
+        ],
+        "title": "Oxigênio intestinal",
+        "concept": "Microbiota, metabolismo e digestão.",
+        "trap": "Não confunda emulsificação e hidrólise.",
+        "commandWords": [
+          "qual",
+          "justifique",
+          "cite",
+          "indique"
+        ]
+      },
+      {
+        "number": 11,
+        "topicId": "bio_evolucao",
+        "relatedTopicIds": [
+          "bio_ecologia",
+          "bio_zoologia"
+        ],
+        "title": "Plumagem de pavões",
+        "concept": "Seleção sexual e predação.",
+        "trap": "Evolução não implica progresso.",
+        "commandWords": [
+          "cite",
+          "explique",
+          "justificativas"
+        ]
+      },
+      {
+        "number": 12,
+        "topicId": "bio_biotecnologia",
+        "relatedTopicIds": [
+          "bio_fisio_animal",
+          "bio_botanica"
+        ],
+        "title": "Arroz biofortificado",
+        "concept": "Transgenia e transporte gasoso.",
+        "trap": "Diferencie transgenia e terapia gênica.",
+        "commandWords": [
+          "explique",
+          "cite"
+        ]
+      },
+      {
+        "number": 13,
+        "topicId": "bio_genetica",
+        "relatedTopicIds": [
+          "bio_codigo_genetico_sintese",
+          "bio_fisio_animal"
+        ],
+        "title": "CPS1",
+        "concept": "Herança, tradução e excreção.",
+        "trap": "Relacione mutação e proteína.",
+        "commandWords": [
+          "qual",
+          "por que"
+        ]
+      }
+    ],
+    "examSha256": "1796eb5652a6f3555705318fd36416e0ec20115e3ef83dbee386ed0bf0d6fbbb",
+    "answerKeySha256": "1796eb5652a6f3555705318fd36416e0ec20115e3ef83dbee386ed0bf0d6fbbb"
+  }
+]

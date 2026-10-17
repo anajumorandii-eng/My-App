@@ -1,31 +1,42 @@
-import { expect, it, vi } from 'vitest';
+import { afterEach, expect, it, vi } from 'vitest';
 import { printStrategyGuide } from '../lib/printStrategyGuide';
-
-it('imprime somente o guia renderizado e remove o quadro ao terminar', async () => {
+afterEach(() => { window.dispatchEvent(new Event('afterprint')); vi.restoreAllMocks(); });
+it('imprime somente o guia renderizado na janela atual e restaura a tela ao terminar', () => {
+  const title = document.title;
   const content = document.createElement('article');
   content.innerHTML = '<h1>Matemática · Unicamp</h1><p><strong>Conceito</strong> e resolução</p>';
+  const print = vi.spyOn(window, 'print').mockImplementation(() => {});
   printStrategyGuide(content, 'Aprofundamento de Matemática');
-  const frame = document.querySelector('iframe')!;
-  const print = vi.spyOn(frame.contentWindow!, 'print').mockImplementation(() => {});
-  vi.spyOn(frame.contentWindow!, 'focus').mockImplementation(() => {});
-  await vi.waitFor(() => expect(print).toHaveBeenCalledOnce());
-  expect(frame.contentDocument!.title).toBe('Aprofundamento de Matemática');
-  expect(frame.contentDocument!.querySelector('strong')!.textContent).toBe('Conceito');
-  expect(content.isConnected).toBe(false);
-  frame.contentWindow!.dispatchEvent(new Event('afterprint'));
+  expect(print).toHaveBeenCalledOnce();
   expect(document.querySelector('iframe')).toBeNull();
+  const printable = document.querySelector('[data-crivo-print-root]')!;
+  expect(document.title).toBe('Aprofundamento de Matemática');
+  expect(printable.querySelector('strong')!.textContent).toBe('Conceito');
+  expect(content.isConnected).toBe(false);
+  window.dispatchEvent(new Event('afterprint'));
+  expect(document.querySelector('[data-crivo-print-root]')).toBeNull();
+  expect(document.title).toBe(title);
 });
-
-it('inclui a análise recolhida no PDF e retira controles de seleção', async () => {
+it('inclui a análise recolhida e fontes ocultas no PDF e retira controles de seleção', () => {
   const content = document.createElement('article');
-  content.innerHTML = '<label data-print-exclude>Unidade<select><option>Conto</option></select></label><details><summary>Análise</summary><p>Explicação aprofundada</p></details>';
+  content.innerHTML = '<label data-print-exclude>Unidade<select><option>Conto</option></select></label><details><summary>Análise</summary><p>Explicação aprofundada</p></details><div class="hidden" data-print-only>Fonte conferida</div>';
+  const print = vi.spyOn(window, 'print').mockImplementation(() => {});
   printStrategyGuide(content, 'Resumo de obra');
-  const frame = document.querySelector('iframe')!;
-  vi.spyOn(frame.contentWindow!, 'print').mockImplementation(() => {});
-  vi.spyOn(frame.contentWindow!, 'focus').mockImplementation(() => {});
-  expect(frame.contentDocument!.querySelector('select')).toBeNull();
-  expect(frame.contentDocument!.querySelector('details')!.open).toBe(true);
+  const printable = document.querySelector('[data-crivo-print-root]')!;
+  expect(printable.querySelector('select')).toBeNull();
+  expect(printable.querySelector('details')!.open).toBe(true);
   expect(content.querySelector('details')!.open).toBe(false);
-  await vi.waitFor(() => expect(frame.contentWindow!.print).toHaveBeenCalledOnce());
-  frame.contentWindow!.dispatchEvent(new Event('afterprint'));
+  expect(printable.querySelector('[data-print-only]')).not.toHaveClass('hidden');
+  expect(printable.textContent).toContain('Fonte conferida');
+  expect(print).toHaveBeenCalledOnce();
+});
+it('limpa a preparação anterior ao imprimir novamente e restaura a tela se o navegador falhar', () => {
+  const title = document.title;
+  const print = vi.spyOn(window, 'print').mockImplementation(() => {});
+  const content = document.createElement('article');content.textContent = 'Texto';
+  printStrategyGuide(content, 'Primeiro');printStrategyGuide(content, 'Segundo');
+  expect(document.querySelectorAll('[data-crivo-print-root]')).toHaveLength(1);
+  print.mockImplementation(() => { throw new Error('blocked'); });
+  expect(() => printStrategyGuide(content, 'Terceiro')).toThrow('blocked');
+  expect(document.querySelector('[data-crivo-print-root]')).toBeNull();expect(document.title).toBe(title);
 });

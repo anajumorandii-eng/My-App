@@ -1,9 +1,10 @@
 import type { Question, Topic } from '../types';
+import { studyAreaForTopic } from '../data/studyProtocols';
 import { prioritySummarySubject } from './actionablePriorities';
 import { canonicalExamBoard } from './questionExamFilters';
 export const STUDY_SOURCE_CHAR_LIMIT = 24000;
-export interface StudySource { id: string; title: string; kind: 'resumo' | 'questao'; content: string; excerpt: boolean; url?: string; questionId?: string; board?: string }
-export interface StudyPacket { sources: StudySource[]; coverage: { board: string; available: number; readable: number; included: number }[]; referenceText: string; topicId: string; chapter: string }
+export interface StudySource { id: string; title: string; kind: 'resumo' | 'questao'; content: string; excerpt: boolean; url?: string; questionId?: string; board?: string; topicId?: string }
+export interface StudyPacket { selections?: { topicId: string; topicName: string; chapter: string }[]; sources: StudySource[]; coverage: { board: string; available: number; readable: number; included: number }[]; referenceText: string; topicId: string; chapter: string }
 export interface StudySummary { subject: string; topic: string; sections: { title: string; content: string }[] }
 const cleanUrl = (value?: string) => { try { const url = new URL(value ?? ''); return ['http:', 'https:'].includes(url.protocol) ? url.href : undefined; } catch { return undefined; } };
 const clip = (text: string, limit: number) => text.length <= limit ? text : `${text.slice(0, limit - 35).replace(/\s+\S*$/, '')}\n[Recorte: continuação não incluída.]`;
@@ -61,4 +62,38 @@ export function isStudyPacket(value: unknown): value is StudyPacket {
   if (!value || typeof value !== 'object') return false;
   const packet = value as StudyPacket;
   return typeof packet.topicId === 'string' && typeof packet.chapter === 'string' && typeof packet.referenceText === 'string' && Array.isArray(packet.coverage) && packet.coverage.every(item => item && typeof item.board === 'string' && ['available', 'readable', 'included'].every(field => Number.isFinite(item[field as 'available']))) && Array.isArray(packet.sources) && packet.sources.every(source => source && ['id', 'title', 'content'].every(field => typeof source[field as 'id'] === 'string') && ['resumo', 'questao'].includes(source.kind));
+}
+
+export interface StudySelection { topic: Topic; chapter: string }
+export function buildCombinedStudyPacket(selections: StudySelection[], boards: string[], material: { questions: Question[]; summaries: StudySummary[] }): StudyPacket {
+  if (!selections.length || selections.length > 4 || new Set(selections.map(item => item.topic.id)).size !== selections.length ||
+      new Set(selections.map(item => studyAreaForTopic(item.topic))).size !== 1) throw new Error('Escolha até quatro tópicos da mesma área.');
+  const packets = selections.map(item => buildStudyPacket({ ...item, boards, ...material }));
+  const sources: StudySource[] = [];
+  const add = (source: StudySource, topicId: string) => sources.push({ ...source, id: `F${sources.length + 1}`, topicId });
+  packets.forEach((packet, index) => {
+    const summary = packet.sources.find(source => source.kind === 'resumo');
+    if (summary) add({ ...summary, content: clip(summary.content, 1800), excerpt: summary.excerpt || summary.content.length > 1800 }, selections[index].topic.id);
+  });
+  const buckets = packets.map(packet => packet.sources.filter(source => source.kind === 'questao'));
+  const used = new Set<string>();
+  for (let round = 0; sources.filter(source => source.kind === 'questao').length < 6 && buckets.some(bucket => bucket[round]); round++) {
+    for (let index = 0; index < buckets.length; index++) {
+      const source = buckets[index][round];
+      if (source && !used.has(source.questionId!) && sources.filter(item => item.kind === 'questao').length < 6) { used.add(source.questionId!); add(source, selections[index].topic.id); }
+    }
+  }
+  const coverage = [...new Set(packets.flatMap(packet => packet.coverage.map(row => row.board)))].map(board => ({
+    board, available: packets.reduce((sum, packet) => sum + (packet.coverage.find(row => row.board === board)?.available ?? 0), 0),
+    readable: packets.reduce((sum, packet) => sum + (packet.coverage.find(row => row.board === board)?.readable ?? 0), 0),
+    included: sources.filter(source => source.kind === 'questao' && source.board === board).length,
+  }));
+  const scopes = selections.map(item => ({ topicId: item.topic.id, topicName: item.topic.name, chapter: item.chapter }));
+  const packet: StudyPacket = { topicId: selections[0].topic.id, chapter: '', selections: scopes, sources, coverage, referenceText: '' };
+  packet.referenceText = renderStudyReference(packet);
+  if (packet.referenceText.length > STUDY_SOURCE_CHAR_LIMIT) throw new Error('As fontes excedem o limite. Reduza a seleção.');
+  return packet;
+}
+export function renderStudyReference(packet: StudyPacket): string {
+  return `${packet.selections ? `Recortes solicitados: ${packet.selections.map(item => `${item.topicName}${item.chapter ? ` — ${item.chapter}` : ' — visão geral'}`).join('; ')}.\n\n` : ''}${packet.sources.map(source => `[${source.id}] ${source.title}\nTipo: ${source.kind === 'resumo' ? 'síntese ou análise editorial; não é enunciado integral' : 'questão cadastrada com origem identificada'}${source.excerpt ? '; recorte parcial' : ''}\n${source.url ? `Fonte: ${source.url}\n` : ''}${source.content}`).join('\n\n')}`;
 }

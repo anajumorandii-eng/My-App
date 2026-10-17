@@ -14,7 +14,7 @@ describe('prioridades práticas', () => {
     expect(screen.getAllByLabelText(/Bloco de 15 minutos/).length).toBeGreaterThan(0);
     expect(screen.getAllByRole('link', { name: 'Resolver questões deste tópico' })[0]).toHaveAttribute('href', expect.stringContaining('/questoes?topic='));
     fireEvent.change(screen.getByRole('combobox', { name: 'Banca das prioridades' }), { target: { value: 'ENEM' } });
-    expect(screen.getByText(/Não há recorte histórico específico de ENEM/)).toBeInTheDocument();
+    expect(screen.getByText(/Não há recorte completo classificado de ENEM/)).toBeInTheDocument();
   });
   it('não atribui dados demo ao desempenho pessoal', () => {
     state.persisted = false;
