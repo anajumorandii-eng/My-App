@@ -10,6 +10,8 @@ export interface StrategyGuide {
   board: string;
   text: string;
   savedAt: string;
+  workSlug?: string;
+  workUnitId?: string;
   targetBoards?: string[];
   studyPacket?: import('./studySources').StudyPacket;
 }

@@ -49,7 +49,7 @@ function GuideLibrary({ uid }: { uid: string | null }) {
     return next;
   }, { replace: true });
   const guideUrl = (guide: StrategyGuide) => { const next = new URLSearchParams(params); next.set('guia', guide.key); return `/aprofundamentos?${next}`; };
-  const contextUrl = selected ? `/estrategias?${new URLSearchParams({ topic: selected.topicId, ...(selected.chapter ? { chapter: selected.chapter } : {}), board: selected.board })}` : '/estrategias';
+  const contextUrl = selected && typeof selected.workSlug === 'string' ? `/obras/${encodeURIComponent(selected.workSlug)}?${new URLSearchParams({ aba: 'estrategias', ...(selected.workUnitId ? { unidade: selected.workUnitId } : {}) })}` : selected ? `/estrategias?${new URLSearchParams({ topic: selected.topicId, ...(selected.chapter ? { chapter: selected.chapter } : {}), board: selected.board })}` : '/estrategias';
   useEffect(() => {
     if (selected) { heading.current?.focus({ preventScroll: true }); window.scrollTo(0, 0); }
   }, [selected?.key]);

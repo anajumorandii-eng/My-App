@@ -5,6 +5,7 @@ import type { WorkDossier } from '../types/literaryWorks';
 import { getWorkStudyGuide } from '../lib/workStudyGuides';
 import { literaryBoardTraining } from '../data/literaryStudyWorkshop';
 import { printStrategyGuide } from '../lib/printStrategyGuide';
+import { WorkDeepening } from './WorkDeepening';
 import { AiText } from './AiText';
 
 type StudyUnit = NonNullable<ReturnType<typeof getWorkStudyGuide>>['units'][number];
@@ -87,6 +88,7 @@ export function WorkStudyContent({ dossier, mode }: { dossier: WorkDossier; mode
         <ol className="list-decimal pl-5 space-y-2 text-sm">{guide.units.map(item => <li key={item.id}><button type="button" className="underline text-left" onClick={() => chooseUnit(item.id)}>{item.title}</button></li>)}</ol>
       </details>}
     </div>
+    <WorkDeepening dossier={dossier} title={guide.profile.title} unitId={unit?.id} unitTitle={unit?.title} />
     <Link to={workLink('fontes')} className="text-sm underline">Consultar fontes e recorte da obra</Link>
   </section>;
 }

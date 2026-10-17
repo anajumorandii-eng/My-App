@@ -84,3 +84,10 @@ it('um link inválido não impede voltar à biblioteca e uma falha da conta mant
   fireEvent.click(screen.getByRole('link', { name: 'Voltar à biblioteca de aprofundamentos' }));
   expect(screen.getByRole('link', { name: /Abrir aprofundamento:/ })).toBeInTheDocument();
 });
+
+it('retorna do guia literário à obra e à unidade que originaram o aprofundamento', () => {
+  const literary = { ...guide(0), key: 'obra:maria', topicId: 'obra:olhos-dagua', topicName: 'Olhos d’água', chapter: 'Maria', subject: 'Literatura', workSlug: 'olhos-dagua', workUnitId: 'maria' };
+  cacheStrategyGuides(null, collection(literary));
+  open(strategyGuideUrl(literary));
+  expect(screen.getByRole('link', { name: 'Voltar à estratégia deste tópico' })).toHaveAttribute('href', '/obras/olhos-dagua?aba=estrategias&unidade=maria');
+});
