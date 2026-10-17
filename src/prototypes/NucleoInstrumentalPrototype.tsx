@@ -375,6 +375,17 @@ export const SCREENS: InstrumentalScreen[] = [
     action: "Editar perfil",
   },
   {
+    key: "avaliacao-ia",
+    label: "Avaliação de IA",
+    title: "Escolher com evidências do seu estudo.",
+    summary: "Sessões privadas, comparação de respostas e avaliação de qualidade.",
+    kind: "admin",
+    icon: Activity,
+    subject: "Atualidades",
+    topic: "Qualidade das respostas",
+    action: "Avaliar respostas",
+  },
+  {
     key: "admin",
     label: "Administração",
     title: "Pulso da plataforma, com sinal e contexto.",

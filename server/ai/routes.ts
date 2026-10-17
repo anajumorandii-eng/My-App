@@ -1,3 +1,6 @@
+import { withinCaptureBudget, type EvaluationService } from './evaluation';
+import type { EvaluationRun } from '../../src/features/ai-evaluation/types';
+import { isEvaluationAdmin } from './evaluationRoutes';
 import { randomUUID } from 'node:crypto';
 import { Router } from 'express';
 import { AiGenerationError, AiTimeoutError, AiUnavailableError, AiValidationError } from './errors';
@@ -43,13 +46,25 @@ const ROUTES: Array<{ path: string; task: AiTask }> = [
   { path: '/method-example', task: 'method-example' },
 ];
 
-export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, apostilaReferences?: ApostilaReferenceStore): Router {
+export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, apostilaReferences?: ApostilaReferenceStore, evaluation?: EvaluationService): Router {
   const router = Router();
 
   for (const { path, task } of ROUTES) {
     router.post(path, async (req, res) => {
       const requestId = randomUUID();
       const startedAt = Date.now();
+      let evaluationRun: EvaluationRun | null = null;
+      let evaluationCapture: 'inactive' | 'saved' | 'failed' = 'inactive';
+      let firstTokenMs: number | null = null;
+      let partialText = '';
+      let generationStartedAt = startedAt;
+      const finishCapture = async (result: import('./types').AiGenerationResult | null) => {
+        if (!evaluation || !evaluationRun) return;
+        try {
+          await withinCaptureBudget(evaluation.finish(res.locals.userId, evaluationRun, result, Date.now() - generationStartedAt, firstTokenMs, partialText));
+          evaluationCapture = 'saved';
+        } catch { evaluationCapture = 'failed'; console.warn('AI evaluation capture failed.'); }
+      };
       try {
         const payload = validateAiPayload(task, req.body);
 
@@ -63,6 +78,13 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
         }
 
         const request = { task, prompt: buildAiPrompt(task, payload), userId: res.locals.userId as string | undefined };
+
+        if (evaluation && isEvaluationAdmin(res.locals)) {
+          try {
+            evaluationRun = await withinCaptureBudget(evaluation.begin(res.locals.userId, { task, payload, requestId, prompt: request.prompt, source: String(req.get('X-Crivo-Source') ?? ''), ...service.describeTask(task) }));
+          } catch { evaluationCapture = 'failed'; console.warn('AI evaluation capture failed.'); }
+        }
+        generationStartedAt = Date.now();
 
         if (wantsStream(req as never) && service.supportsStreaming) {
           // Cabeçalhos antes do primeiro pedaço, e sem buffer no caminho: o
@@ -96,9 +118,12 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
                 console.info(JSON.stringify({ event: 'ai_request', requestId, userId: res.locals.userId, task, model: result.model, provider: result.provider, usage: result.usage, estimatedCostUsd, fallback: result.fallback, cached: result.cached, streamed: true, status: 200, durationMs }));
                 metrics?.record({ task, model: result.model, usage: result.usage, estimatedCostUsd, fallback: result.fallback, cached: result.cached, status: 200, durationMs })
                   .catch((metricError) => console.error('AI metrics write failed:', metricError));
-                res.write(sseFrame({ done: true, ...result, requestId }));
+                await finishCapture(result);
+                res.write(sseFrame({ done: true, ...result, requestId, evaluationCapture }));
                 return res.end();
               }
+              if (firstTokenMs === null && passo.value) firstTokenMs = Date.now() - generationStartedAt;
+              partialText = (partialText + passo.value).slice(0, 64_001);
               res.write(sseFrame({ delta: passo.value }));
               // O middleware de compressão segura os pedaços até encher o
               // buffer; sem este flush o streaming chegaria tudo de uma vez.
@@ -113,12 +138,17 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
             console.info(JSON.stringify({ event: 'ai_request', requestId, userId: res.locals.userId, task, streamed: true, status: isTimeout ? 504 : 502, durationMs }));
             metrics?.record({ task, status: isTimeout ? 504 : 502, durationMs })
               .catch((metricError) => console.error('AI metrics write failed:', metricError));
+            await finishCapture(null);
             res.write(sseFrame({
+              evaluationCapture,
               error: isTimeout ? 'A resposta demorou mais do que o esperado. Tente novamente.' : 'Falha ao processar solicitação de IA',
               code: isTimeout ? 'AI_TIMEOUT' : 'AI_GENERATION_FAILED',
               requestId,
             }));
             return res.end();
+          } finally {
+            try { await stream.return?.(undefined as never); } catch { console.warn('AI stream cleanup failed.'); }
+            if (evaluationRun?.status === 'running') await finishCapture(null);
           }
         }
 
@@ -128,7 +158,8 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
         console.info(JSON.stringify({ event: 'ai_request', requestId, userId: res.locals.userId, task, model: result.model, provider: result.provider, usage: result.usage, estimatedCostUsd, fallback: result.fallback, cached: result.cached, status: 200, durationMs }));
         metrics?.record({ task, model: result.model, usage: result.usage, estimatedCostUsd, fallback: result.fallback, cached: result.cached, status: 200, durationMs })
           .catch((metricError) => console.error('AI metrics write failed:', metricError));
-        res.json({ ...result, requestId });
+        await finishCapture(result);
+        res.json({ ...result, requestId, evaluationCapture });
       } catch (error) {
         const durationMs = Date.now() - startedAt;
         let status = 502;
@@ -151,7 +182,8 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
         metrics?.record({ task, status, durationMs })
           .catch((metricError) => console.error('AI metrics write failed:', metricError));
 
-        return res.status(status).json({ error: message, code, requestId });
+        await finishCapture(null);
+        return res.status(status).json({ error: message, code, requestId, evaluationCapture });
       }
     });
   }

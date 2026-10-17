@@ -33,6 +33,7 @@ const Redacao = lazy(() => import('./views/Redacao'));
 const Treino2aFase = lazy(() => import('./views/Treino2aFase'));
 const Recuperacao = lazy(() => import('./views/Recuperacao'));
 const Diagnostico = lazy(() => import('./views/Diagnostico'));
+const AiEvaluation = lazy(() => import('./views/AiEvaluation'));
 const Admin = lazy(() => import('./views/Admin'));
 const AdminObras = lazy(() => import('./views/AdminObras'));
 const AdminConteudo = lazy(() => import('./views/AdminConteudo'));
@@ -118,6 +119,7 @@ export default function App() {
                 <Route path="obras-obrigatorias" element={<ObrasObrigatorias />} />
                 <Route path="obras" element={<Obras />} />
                 <Route path="obras/:workSlug" element={<ObraDetalhe />} />
+                <Route path="avaliacao-ia" element={<AiEvaluation />} />
                 <Route path="admin" element={<Admin />} />
                 <Route path="admin/obras" element={<AdminObras />} />
                 <Route path="admin/conteudo" element={<AdminConteudo />} />

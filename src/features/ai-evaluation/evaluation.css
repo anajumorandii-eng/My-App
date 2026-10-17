@@ -1,0 +1,51 @@
+.ai-evaluation {
+  padding: 1.25rem;
+  min-width: 0;
+  overflow-wrap: anywhere;
+}
+.ai-evaluation .ni-button,
+.ai-capture-notice .ni-button {
+  min-height: 44px;
+  padding: 0.55rem 0.9rem;
+  border: 1px solid var(--line);
+  border-radius: 0.6rem;
+  background: var(--surface);
+  color: var(--text);
+  font: inherit;
+  font-size: 0.875rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+.ai-evaluation .ni-button:hover:not(:disabled),
+.ai-capture-notice .ni-button:hover:not(:disabled) {
+  border-color: var(--primary);
+}
+.ai-evaluation .ni-button:disabled,
+.ai-capture-notice .ni-button:disabled {
+  opacity: 0.55;
+  cursor: not-allowed;
+}
+.ai-evaluation :is(button, select, input, textarea, summary):focus-visible,
+.ai-capture-notice :is(button, a):focus-visible {
+  outline: 2px solid var(--primary);
+  outline-offset: 3px;
+}
+.ai-evaluation :is(select, input, textarea) {
+  min-width: 0;
+  max-width: 100%;
+}
+.ai-evaluation pre {
+  overflow-wrap: anywhere;
+}
+.ai-capture-notice {
+  margin: 0.75rem 1.25rem;
+  overflow-wrap: anywhere;
+}
+@media (max-width: 600px) {
+  .ai-evaluation {
+    padding: 1rem;
+  }
+  .ai-capture-notice {
+    margin: 0.5rem 1rem;
+  }
+}

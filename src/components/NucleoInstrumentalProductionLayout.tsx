@@ -2,6 +2,7 @@ import React, { Suspense, lazy, useCallback, useEffect, useMemo, useRef, useStat
 import { AnimatePresence, motion, useReducedMotion } from 'motion/react';
 import { Menu, Moon, Sun, X } from 'lucide-react';
 import { NavLink, Outlet, useLocation, useNavigate } from 'react-router-dom';
+import { CaptureNotice } from '../features/ai-evaluation/CaptureNotice';
 import { BottomNav } from './BottomNav';
 import { OnboardingModal } from './OnboardingModal';
 import { IconButton } from './ui/IconButton';
@@ -27,7 +28,7 @@ const PATH_BY_SCREEN: Record<string, string> = {
   'obras-obrigatorias': '/obras-obrigatorias', obras: '/obras', 'obra-detalhe': '/obras', erros: '/erros', podcast: '/podcast',
   tutor: '/tutor', laboratorio: '/laboratorio', 'treino-2a-fase': '/treino-2a-fase', redacao: '/redacao', estrategias: '/estrategias',
   evolucao: '/evolucao', prioridades: '/prioridades', conexoes: '/conexoes', perfil: '/perfil', admin: '/admin',
-  'admin-obras': '/admin/obras', 'admin-conteudo': '/admin/conteudo',
+  'avaliacao-ia': '/avaliacao-ia', 'admin-obras': '/admin/obras', 'admin-conteudo': '/admin/conteudo',
 };
 
 const NAVIGATION_GROUPS = [
@@ -230,6 +231,7 @@ function LayoutComAmbiente() {
           <AnimatePresence mode="wait" initial={false}>
             <motion.div key={location.pathname} className="ni-production-view" initial={reducedMotion ? false : { opacity: 0, y: 14 }} animate={{ opacity: 1, y: 0 }} exit={reducedMotion ? undefined : { opacity: 0, y: -8 }} transition={{ duration: MOTION_DURATION.micro, ease: MOTION_EASE }}>
               <RouteBoundary pathname={location.pathname}>
+                <CaptureNotice />
                 <Outlet />
               </RouteBoundary>
             </motion.div>
