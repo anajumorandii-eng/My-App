@@ -30,3 +30,11 @@ test('blocos cabem exatamente no tempo escolhido', () => {
 test('links usam nomes reais do catálogo de resumos nas áreas de linguagem', () => {
   for (const [id, subject, expected] of [['por_texto', 'Português', 'Entendimento de Texto'], ['por_sintaxe', 'Português', 'Gramática'], ['por_lit_modernismo', 'Português', 'Literatura'], ['por_red_argumentacao', 'Português', 'Redação'], ['ing_01', 'Inglês', 'Língua Inglesa']]) assert.equal(prioritySummarySubject({ id, subject }), expected);
 });
+
+test('combina as bancas pelos pesos sem multiplicar o diagnóstico pessoal', () => {
+  const both = buildActionablePriorities(topics, [evidence('bio_genetica', 20)], true, undefined, now, [{ board: 'Fuvest', weight: 0.8, phaseFocus: 'ambas' }, { board: 'Unicamp', weight: 0.2, phaseFocus: 'ambas' }]);
+  const entry = both.find(item => item.topic.id === 'bio_genetica')!;
+  assert.equal(entry.boardFactors.length, 2);
+  assert.equal(entry.factors.history, entry.boardFactors[0].history * 0.8 + entry.boardFactors[1].history * 0.2);
+  assert.equal(entry.factors.gap, 36);
+});

@@ -5,11 +5,10 @@ import { RequestHandler } from 'express';
 // domínio, não do código.
 const HSTS_MAX_AGE_SECONDS = 15_552_000;
 
-// Recursos que o app não usa (conferido em src/: nenhuma chamada a câmera,
-// microfone, geolocalização, USB ou pagamento). Negá-los deixa um script
-// injetado sem acesso a eles. Se um dia o app passar a usar um deles, é aqui
-// que se libera.
-const PERMISSIONS_POLICY = 'camera=(), microphone=(), geolocation=(), payment=(), usb=()';
+// O registro de reflexão usa microfone somente na própria origem e após
+// ação e permissão da estudante. Câmera, localização, USB e pagamento
+// continuam indisponíveis. A navegação SPA exige a mesma política na origem.
+const PERMISSIONS_POLICY = 'camera=(), microphone=(self), geolocation=(), payment=(), usb=()';
 
 /**
  * Cabeçalhos de proteção que valem para toda resposta, inclusive 404 e erro.

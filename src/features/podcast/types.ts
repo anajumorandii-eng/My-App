@@ -5,4 +5,6 @@ export interface PersonalPodcast extends PodcastEpisode {
   createdAt: string;
   sourceLabels: string[];
   focus: string;
+  studyPacket?: import('../../lib/studySources').StudyPacket;
+  targetBoards?: string[];
 }

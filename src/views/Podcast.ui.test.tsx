@@ -1,3 +1,4 @@
+import { MemoryRouter } from 'react-router-dom';
 import React, { useState } from 'react';
 import { cleanup, fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { afterEach, beforeEach, expect, it, vi } from 'vitest';
@@ -7,11 +8,13 @@ import { synthesizePodcastAudio } from '../lib/podcastAudio';
 vi.mock('../hooks/useUserProfile', () => ({ useUserProfile: () => { const [profile, updateProfile] = useState({}); return { profile, updateProfile }; } }));
 vi.mock('../hooks/usePodcastVoices', () => ({ usePodcastVoices: () => ({ voices: ['Achernar', 'Enceladus', 'Aoede', 'Zubenelgenubi', 'Algenib', 'Kore', 'Puck'].map(name => ({ value: `pt-BR-Chirp3-HD-${name}`, label: name })).concat([{ value: 'pt-BR-Wavenet-D', label: 'Wavenet-D' }]) }) }));
 vi.mock('../hooks/usePodcastEpisodes', () => ({ usePodcastEpisodes: () => ({ episodes: [] }) }));
+vi.mock('../lib/loadStudyPacket', () => ({ loadStudyPacket: vi.fn(async (topic: any) => ({ topicId: topic.id, chapter: '', referenceText: '[F1] Fonte de genética: separação dos alelos.', coverage: [], sources: [{ id: 'F1', title: 'Fonte de genética', kind: 'resumo', content: 'Separação dos alelos.', excerpt: false }] })) }));
 vi.mock('../lib/aiClient', () => ({ requestAiTextStream: vi.fn() }));
 vi.mock('../lib/podcastAudio', () => ({ synthesizePodcastAudio: vi.fn(), podcastAudioErrorMessage: () => 'Voz natural indisponível' }));
 vi.mock('../hooks/usePersonalPodcasts', () => ({ usePersonalPodcasts: () => { const [episodes, set] = useState<any[]>([]); return { episodes, saveEpisode: async (ep: any) => set(old => [ep, ...old]) }; } }));
 afterEach(cleanup);
 beforeEach(() => {
+  localStorage.clear();
   vi.spyOn(HTMLMediaElement.prototype, 'pause').mockImplementation(() => {});
   vi.spyOn(HTMLMediaElement.prototype, 'play').mockResolvedValue();
   URL.createObjectURL = vi.fn(() => 'blob:podcast'); URL.revokeObjectURL = vi.fn();
@@ -124,4 +127,23 @@ it('mostra apenas as seis vozes escolhidas e inicia com Achernar e Enceladus', (
   fireEvent.click(screen.getByRole('button', { name: 'Uma pessoa' }));
   fireEvent.change(first, { target: { value: expected[2] } });
   expect(first.value).toBe('pt-BR-Chirp3-HD-Aoede');
+});
+
+it('o preparo aprofundado é explícito e mantém o comando da estudante', async () => {
+  render(<Podcast />);
+  fireEvent.change(screen.getByLabelText('Título do episódio'), { target: { value: 'Como sei se entendi osmose?' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Preparar conversa aprofundada de 12 minutos' }));
+  fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
+  await waitFor(() => expect(requestAiTextStream).toHaveBeenCalled());
+  expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({ level: 'avancado', durationMinutes: 12, hostStyle: 'analitico', cohostStyle: 'curioso' });
+});
+
+it('reúne as fontes e a autoexplicação do tópico no mesmo pedido de podcast', async () => {
+  render(<MemoryRouter><Podcast /></MemoryRouter>);
+  fireEvent.change(screen.getByLabelText('Tópico do caderno de áudio'), { target: { value: 'bio_genetica' } });
+  await screen.findByText('[F1] Fonte de genética');
+  fireEvent.change(screen.getByRole('textbox', { name: /Antes de consultar/ }), { target: { value: 'Não sei explicar a separação dos alelos.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Gerar meu podcast' }));
+  await waitFor(() => expect(requestAiTextStream).toHaveBeenCalled());
+  expect(vi.mocked(requestAiTextStream).mock.calls[0][1]).toMatchObject({ sourceText: expect.stringContaining('[F1]'), learnerReflection: expect.stringContaining('Não sei explicar') });
 });

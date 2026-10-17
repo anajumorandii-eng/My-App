@@ -1,3 +1,14 @@
+import { workStudyGuides } from '../data/workStudyGuides';
+import type { Topic } from '../types';
+import { StudyReflectionPanel } from '../components/StudyReflectionPanel';
+import { reflectionForTutor } from '../lib/learningReflection';
+import { useStudentGoals } from '../hooks/useStudentGoals';
+import { resolveStudyTargets } from '../lib/studyTargets';
+import { loadStudyPacket } from '../lib/loadStudyPacket';
+import { STUDY_SOURCE_CHAR_LIMIT, type StudyPacket } from '../lib/studySources';
+import { StudySourcesPanel } from '../components/StudySourcesPanel';
+import { mockTopics } from '../data/mockData';
+import { prioritySummarySubject } from '../lib/actionablePriorities';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { flushSync } from 'react-dom';
 import { preparePodcastPlayback } from '../lib/podcastPlayback';
@@ -17,11 +28,19 @@ import type { PersonalPodcast } from '../features/podcast/types';
 import { PodcastSettingsPanel, PodcastSelect, podcastInputClass } from '../features/podcast/PodcastSettingsPanel';
 import { PodcastPlayer, downloadPodcastText } from '../features/podcast/PodcastPlayer';
 
+const studyTopics: Topic[] = [...mockTopics, ...Object.entries(workStudyGuides).map(([slug, work]) => ({ id: `obra:${slug}`, name: work.title, subject: 'Literatura' as const, prerequisites: [] }))];
 const topics = summaryCurriculum.flatMap(subject => subject.topics);
 const subjects = [...new Set(topics.map(t => t.subject))];
 
 export default function Podcast() {
   const { profile, updateProfile, syncError: profileError, loading: profileLoading, isPersisted: profilePersisted } = useUserProfile();
+  const goals = useStudentGoals();
+  const targets = resolveStudyTargets(profile, Boolean(profilePersisted), goals.goals, goals.isPersisted);
+  const params = new URLSearchParams(typeof window === 'undefined' ? '' : window.location.search);
+  const [studyTopicId, setStudyTopicId] = useState(params.get('topic') ?? (params.get('work') ? `obra:${params.get('work')}` : ''));
+  const [studyChapter, setStudyChapter] = useState(params.get('chapter') ?? '');
+  const [packetState, setPacketState] = useState<{ key: string; packet?: StudyPacket; error?: string } | null>(null);
+  const studyTopic = studyTopics.find(item => item.id === studyTopicId);
   const { episodes: catalog, syncError: catalogError } = usePodcastEpisodes();
   const { episodes: personal, saveEpisode, syncError: personalError, pendingCount, hasMore, loading: personalLoading, loadMore, retrySaves } = usePersonalPodcasts();
   const { user } = useAuth();
@@ -30,6 +49,9 @@ export default function Podcast() {
   const panelVoices = selectedPodcastVoices(voices);
   const savedSettings: PodcastSettings = { ...DEFAULT_PODCAST_SETTINGS, ...(profile.podcastVoiceName ? { voiceName: profile.podcastVoiceName } : {}), ...profile.podcastSettings };
   const settings: PodcastSettings = { ...savedSettings, ...resolvePodcastVoices(savedSettings.voiceName, savedSettings.secondVoice, panelVoices) };
+  const studyBoards = params.get('board') ? [params.get('board')!] : settings.exam === 'Geral' ? targets.map(item => item.board) : [settings.exam];
+  const packetKey = JSON.stringify([studyTopicId, studyChapter, studyBoards]);
+  const studyPacket = packetState?.key === packetKey ? packetState.packet : undefined;
   const [title, setTitle] = useState('');
   const [subject, setSubject] = useState('Biologia');
   const [focus, setFocus] = useState('');
@@ -66,6 +88,14 @@ export default function Podcast() {
     setPlaybackNotice(null); setTitle(''); setFocus(''); setSourceText(''); setSelected([]);
     cache.current.forEach(url => URL.revokeObjectURL(url)); cache.current.clear();
   }, [user?.uid]);
+  useEffect(() => {
+    let cancelled = false;
+    if (!studyTopic) { setPacketState(null); return; }
+    setPacketState(null);
+    void loadStudyPacket(studyTopic, studyChapter, studyBoards).then(packet => { if (!cancelled) setPacketState({ key: packetKey, packet }); }).catch(() => { if (!cancelled) setPacketState({ key: packetKey, error: 'Não foi possível carregar as fontes deste estudo. Escolha novamente o tópico ou tente mais tarde.' }); });
+    return () => { cancelled = true; };
+  }, [packetKey]);
+  useEffect(() => { if (studyTopic) { setTitle(studyTopic.name); setSubject(prioritySummarySubject(studyTopic)); } }, [studyTopicId]);
   const sourceChoices = useMemo(() => topics.filter(t => t.subject === subject && t.title.toLocaleLowerCase('pt-BR').includes(query.toLocaleLowerCase('pt-BR'))), [subject, query]);
   const filteredCatalog = catalog.filter(ep => `${ep.title} ${ep.subject}`.toLocaleLowerCase('pt-BR').includes(libraryQuery.toLocaleLowerCase('pt-BR')));
   const preferencesBlocked = Boolean(profileLoading || (user && !profilePersisted));
@@ -83,6 +113,8 @@ export default function Podcast() {
     setGenerating(true); setError(null); setDraft('');
     try {
       const sources: string[] = []; const labels: string[] = [];
+      if (studyTopic && !studyPacket) throw new Error('Aguarde o carregamento das fontes do estudo.');
+      if (studyPacket) { sources.push(studyPacket.referenceText); labels.push(...studyPacket.sources.map(source => `[${source.id}] ${source.title}`)); }
       if (sourceIds.length) {
         const { default: chapters } = await import('../data/deepSummaryContent.json');
         for (const id of sourceIds) {
@@ -95,14 +127,14 @@ export default function Podcast() {
       }
       if (sourceText.trim()) { sources.push(`Material da estudante\n${sourceText.trim()}`); labels.push('Material da estudante'); }
       const material = sources.join('\n\n');
-      if (material.length > 12000) throw new Error('Os materiais somam mais de 12.000 caracteres. Selecione menos resumos ou reduza o texto para este episódio.');
+      if (material.length > STUDY_SOURCE_CHAR_LIMIT) throw new Error('Os materiais somam mais de 24.000 caracteres. Selecione menos resumos ou reduza o texto para este episódio.');
       const result = await requestAiTextStream('podcast-script', {
         title: inputTitle, subject: inputSubject, topic: sourceIds.map(id => topics.find(t => t.id === id)?.title).join(', ') || inputTitle,
-        ...snapshot, focus: inputFocus, sourceText: material,
+        ...snapshot, learnerReflection: studyTopic ? reflectionForTutor(owner ?? null, studyTopic.id) : '', targetBoards: studyBoards, focus: inputFocus, sourceText: material,
       }, delta => { if (task === generationTask.current) setDraft(old => old + delta); });
       if (task !== generationTask.current || owner !== accountRef.current) return;
       splitPodcastScript(result.text, snapshot.speakers === 2);
-      const episode: PersonalPodcast = { id: crypto.randomUUID(), topicId: sourceIds[0] ?? 'personalizado', title: inputTitle, subject: inputSubject, durationMinutes: snapshot.durationMinutes, script: result.text, settings: snapshot, createdAt: new Date().toISOString(), sourceLabels: labels, focus: inputFocus };
+      const episode: PersonalPodcast = { id: crypto.randomUUID(), topicId: sourceIds[0] ?? 'personalizado', title: inputTitle, subject: inputSubject, durationMinutes: snapshot.durationMinutes, script: result.text, settings: snapshot, createdAt: new Date().toISOString(), sourceLabels: labels, focus: inputFocus, targetBoards: studyBoards, ...(studyPacket ? { studyPacket: result.serverSources?.length ? { ...studyPacket, sources: [...studyPacket.sources, ...result.serverSources] } : studyPacket } : result.serverSources?.length ? { studyPacket: { topicId: sourceIds[0] ?? 'personalizado', chapter: '', coverage: [], referenceText: material, sources: result.serverSources } } : {}) };
       saveEpisode(episode);
       if (task === generationTask.current) { setActive(episode); setAudioUrl(null); audioRef.current?.pause(); setPlayingId(null); }
     } catch (e) {
@@ -166,20 +198,32 @@ export default function Podcast() {
     {(error || profileError || personalError || catalogError) && <div role="alert" className="rounded-xl border border-rose-500/30 bg-rose-500/10 p-3 mb-4 text-sm text-[var(--text)]">{error || profileError || personalError || catalogError}</div>}
     <div className="grid grid-cols-1 xl:grid-cols-2 gap-5 mb-6">
       <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating} className="space-y-5 min-w-0"><legend className="flex items-center gap-2 text-base font-semibold mb-4"><BookOpen size={18} /> 1. O que vamos estudar?</legend>
+        <section className="rounded-xl border border-[var(--line)] p-4 space-y-3" aria-label="Estudo com fontes e provas">
+          <h2 className="font-display text-lg">Estudo aprofundado com fontes e provas</h2>
+          <p className="text-sm text-[var(--dim)]">Escolha um tópico para reunir resumos e questões das bancas consideradas. O roteiro e a transcrição preservam o índice de fontes.</p>
+          <label className="block text-sm">Tópico do caderno de áudio<select className={podcastInputClass} value={studyTopicId} onChange={event => { setStudyTopicId(event.target.value); setStudyChapter(''); }}><option value="">Criar livremente pelo tema</option>{studyTopics.map(topic => <option key={topic.id} value={topic.id}>{topic.subject} · {topic.name}</option>)}</select></label>
+          {studyTopic && <label className="block text-sm">Capítulo do caderno de áudio<select className={podcastInputClass} value={studyChapter} onChange={event => setStudyChapter(event.target.value)}><option value="">Visão geral</option>{studyTopic.chapters?.map(chapter => <option key={chapter}>{chapter}</option>)}</select></label>}
+          <p className="text-xs">{targets.length ? `Suas bancas: ${targets.map(item => item.board).join(' · ')}. Com foco Geral, todas participam do recorte.` : 'Sem bancas pessoais confirmadas: o foco Geral usa as origens disponíveis nas questões.'}</p>
+          <button type="button" className="text-sm underline" disabled={preferencesBlocked || generating} onClick={() => updateProfile(previous => ({ ...previous, podcastSettings: { ...settings, durationMinutes: 12, level: 'avancado', format: 'conversa', hostStyle: 'analitico', cohostStyle: 'curioso' } }), ['podcastSettings'])}>Preparar conversa aprofundada de 12 minutos</button>
+          {studyTopic && !packetState && <p role="status">Reunindo fontes e questões…</p>}
+          {packetState?.key === packetKey && packetState.error && <p role="alert">{packetState.error}</p>}
+          {studyTopic && <StudyReflectionPanel topicId={studyTopic.id} topicName={studyTopic.name} subject={studyTopic.subject} />}
+          {studyPacket && <StudySourcesPanel packet={studyPacket} />}
+        </section>
         <label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">Título do episódio</span><input className={podcastInputClass} value={title} maxLength={300} onChange={e => setTitle(e.target.value)} placeholder="Ex.: Osmose sem decorar fórmulas" /></label>
         <PodcastSelect label="Matéria do episódio" value={subject} choices={Object.fromEntries(subjects.map(v => [v, v]))} onChange={setSubject} />
         <div className="space-y-2"><label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">Buscar nos resumos do CRIVO (opcional)</span><input className={podcastInputClass} value={query} onChange={e => setQuery(e.target.value)} placeholder="Busque um capítulo…" /></label><select aria-label="Adicionar resumo como fonte (opcional)" className={podcastInputClass} value="" disabled={selected.length >= 3} onChange={e => { const id = e.target.value; if (!id || selected.includes(id)) return; setSelected(old => [...old, id]); if (!title.trim()) setTitle(topics.find(t => t.id === id)?.title ?? ''); }}><option value="">Se quiser, adicione até 3 resumos</option>{sourceChoices.filter(t => !selected.includes(t.id)).map(t => <option key={t.id} value={t.id}>{t.title}</option>)}</select>{selected.map(id => <div key={id} className="flex justify-between items-center gap-2 rounded-xl bg-[var(--surface2)] p-2.5 text-xs"><span>{topics.find(t => t.id === id)?.title}</span><button type="button" aria-label={`Remover fonte ${topics.find(t => t.id === id)?.title}`} onClick={() => setSelected(old => old.filter(v => v !== id))}><X size={16} /></button></div>)}</div>
-        <label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">Seu material de estudo (opcional)</span><textarea aria-label="Seu material de estudo (opcional)" rows={5} className={podcastInputClass} value={sourceText} maxLength={12000} onChange={e => setSourceText(e.target.value)} placeholder="Se quiser, cole suas anotações ou um trecho do material para orientar o episódio." /><span className="block text-[11px] text-[var(--dim)]">{sourceText.length.toLocaleString('pt-BR')} / 12.000 caracteres · limite total com os resumos selecionados</span></label>
+        <label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">Seu material de estudo (opcional)</span><textarea aria-label="Seu material de estudo (opcional)" rows={5} className={podcastInputClass} value={sourceText} maxLength={12000} onChange={e => setSourceText(e.target.value)} placeholder="Se quiser, cole suas anotações ou um trecho do material para orientar o episódio." /><span className="block text-[11px] text-[var(--dim)]">{sourceText.length.toLocaleString('pt-BR')} / 12.000 caracteres · texto pessoal · limite conjunto de 24.000 com as fontes selecionadas</span></label>
         <label className="block space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">O que você quer aprender? (opcional)</span><textarea rows={3} className={podcastInputClass} value={focus} maxLength={2000} onChange={e => setFocus(e.target.value)} placeholder="Ex.: Compare osmose e difusão, explique com exemplos e me faça perguntas no final." /></label>
         {!selected.length && !sourceText.trim() && <p className="text-xs text-[var(--dim)]">Você pode gerar o episódio só com o tema. Resumos e materiais são opcionais; se quiser, use-os para direcionar a explicação.</p>}
       </fieldset></section>
-      <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating || preferencesBlocked} className="min-w-0"><legend className="text-base font-semibold mb-5">2. Monte sua experiência</legend><PodcastSettingsPanel settings={settings} change={change} voiceOptions={panelVoices} onPreview={previewVoice} previewLoading={Boolean(loadingId)} /></fieldset>
+      <section className="ni-panel p-5 sm:p-6"><fieldset disabled={generating || preferencesBlocked} className="min-w-0"><legend className="text-base font-semibold mb-5">2. Monte sua experiência</legend><PodcastSettingsPanel examChoices={targets.map(item => item.board)} settings={settings} change={change} voiceOptions={panelVoices} onPreview={previewVoice} previewLoading={Boolean(loadingId)} /></fieldset>
         {preferencesBlocked && <p className="text-xs text-[var(--dim)] mt-4">{profileLoading ? 'Carregando suas preferências…' : 'As preferências precisam ser carregadas antes de criar o episódio. Reabra a aba para tentar novamente.'}</p>}
         {voicesLoading && <p role="status" className="text-xs text-[var(--dim)] mt-4">Consultando vozes em português…</p>}
         {voicesError && <p role="alert" className="text-xs mt-4">{voicesError} <button type="button" onClick={retryVoices} className="underline">Tentar consultar novamente</button></p>}
         {!user && !voices.length && <p className="text-xs text-[var(--dim)] mt-4">Conecte sua conta para consultar e experimentar as vozes disponíveis.</p>}
         {sameVoice && <p className="text-sm text-rose-500 mt-4">Escolha vozes diferentes para as duas pessoas.</p>}
-        <button type="button" disabled={generating || preferencesBlocked || voicesBlocked || !title.trim() || sameVoice} onClick={generate} className="w-full flex justify-center items-center gap-2 mt-6 rounded-xl bg-[var(--action-primary)] text-[var(--text-inverse)] px-4 py-3.5 font-semibold text-sm disabled:opacity-50">{generating ? <Loader2 size={17} className="animate-spin" /> : <Sparkles size={17} />}{generating ? 'Criando seu roteiro…' : 'Gerar meu podcast'}</button>
+        <button type="button" disabled={generating || preferencesBlocked || voicesBlocked || !title.trim() || sameVoice || Boolean(studyTopic && !studyPacket)} onClick={generate} className="w-full flex justify-center items-center gap-2 mt-6 rounded-xl bg-[var(--action-primary)] text-[var(--text-inverse)] px-4 py-3.5 font-semibold text-sm disabled:opacity-50">{generating ? <Loader2 size={17} className="animate-spin" /> : <Sparkles size={17} />}{generating ? 'Criando seu roteiro…' : 'Gerar meu podcast'}</button>
         <p className="text-xs text-[var(--dim)] mt-3">Primeiro criamos o roteiro; ao reproduzir, geramos o áudio com as vozes escolhidas. Suas preferências ficam no perfil quando você está conectada.</p>
       </section>
     </div>

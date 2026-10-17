@@ -1,0 +1,21 @@
+# Estudo integrado com fontes e todas as bancas
+
+O objetivo é articular prioridades, explicação, resolução, revisão e áudio com os mesmos materiais e as metas efetivamente salvas. O plano de longo prazo considera todas as bancas; proximidade de uma data não apaga as outras. Pesos pessoais são normalizados e explicados. Ausência de perfil confirmado não transforma dados de demonstração em inscrições.
+
+A base factual reúne resumos editoriais e questões com origem identificada. Cada recorte apresenta IDs de fontes, banca/ano quando cadastrados e cobertura disponível versus incluída. Questões sem origem não sustentam afirmações sobre bancas; figuras não fornecidas ao modelo não podem ser interpretadas. Vunesp isoladamente não identifica Unesp. Citações e frequência não são inventadas. Um conjunto de questões cadastradas não constitui estimativa de incidência.
+
+O aprofundamento explica mecanismo, condições de uso, limites, contraexemplos, resolução por etapas e recuperação sem consulta. Comparações de bancas usam apenas as questões efetivamente fornecidas. O guia e suas fontes são preservados juntos, com impressão/PDF. O podcast usa o mesmo recorte, preserva seus ajustes de voz, duração e nível, referencia fontes na fala e mantém o índice na transcrição. Ampliação da duração é escolha explícita, não alteração silenciosa do perfil.
+
+Acervo local inspecionado: 3.094 questões, 612 resumos aprofundados e 58 PDFs em `provas brutas`. Os PDFs não são considerados integralmente indexados só por existirem no repositório. A implementação reutiliza o banco já extraído e declara os limites de cada recorte. Apostilas disponíveis no armazenamento do servidor podem complementar a geração, com identificação distinta das fontes enviadas pelo navegador.
+
+## Tornar visível como o estudante pensa
+
+O registro anterior ao estudo aceita texto e gravação de até três minutos. As perguntas mudam conforme a matéria: mecanismo e escala em Biologia, representação e validade em Matemática, modelo e grandezas em Física, fonte e temporalidade em História, voz e efeito em Literatura, entre outras áreas. O estudante pode comparar seu entendimento inicial e revisado, explicar suas decisões e propor uma verificação. O bloco de prioridades permite reconstruir uma explicação, ensinar em voz alta, comparar/produzir contraexemplos ou explicar uma questão. A opção inicial é a autoexplicação.
+
+Textos e áudios ficam neste navegador, separados por conta e tópico; obras usam a chave `obra:slug`. O áudio é armazenado em IndexedDB, com reprodução e download. Não há acesso ao microfone antes do clique, transcrição automática ou envio do áudio ao tutor. O texto escrito, quando presente, acompanha a solicitação explícita de geração de guia/podcast; a IA deve tratá-lo como hipótese da estudante, sem inferir diagnóstico psicológico ou estilo de aprendizagem fixo. A gravação por si só não altera domínio, revisão ou acerto de questão.
+
+Os podcasts também aceitam os 18 dossiês literários publicados. O recorte inclui introdução/análise e passagens com edição e localização. Não há promoção de módulos em revisão. Os complementos de apostila obtidos pelo servidor são devolvidos no resultado como fonte AS1 e preservados no índice, inclusive no streaming. Não são uma fonte invisível da explicação.
+
+As bancas são a união das inscrições do perfil e das metas de peso positivo que já foram efetivamente carregadas. Duplicatas COMVEST/Unicamp são consolidadas; Vunesp não é automaticamente Unesp. Pesos são normalizados; se todos forem zero, o conjunto recebe pesos iguais. Sem peso específico, o valor inicial é 1 antes da normalização. A contribuição histórica por banca explicita quando o relatório só oferece referência regional para aquela matéria. As parcelas de domínio, urgência e incerteza não são multiplicadas pelo número de provas.
+
+Guias e podcasts passam pela rota de raciocínio configurada no provedor OmniRoute, mantendo a recuperação existente caso o provedor falhe antes de emitir conteúdo. A configuração compartilhada de produção continua sendo respeitada. A mudança não instala um modelo novo, não garante acurácia por escolher uma rota e não substitui confronto das afirmações com as fontes.

@@ -22,6 +22,7 @@ export function printStrategyGuide(content: HTMLElement, title: string) {
   target.head.appendChild(printStyle);
   const printable = content.cloneNode(true) as HTMLElement;
   printable.querySelectorAll('[data-print-exclude]').forEach(element => element.remove());
+  printable.querySelectorAll<HTMLElement>('[data-print-only]').forEach(element => { element.style.display = 'block'; });
   printable.querySelectorAll('details').forEach(element => { element.open = true; });
   target.body.appendChild(printable);
   void Promise.all(pending).then(() => target.fonts?.ready).then(() => {

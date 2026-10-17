@@ -5,7 +5,7 @@ export const podcastInputClass = 'w-full min-w-0 rounded-xl border border-[var(-
 export function PodcastSelect({ label, value, choices, onChange }: { label: string; value: string; choices: Record<string, string>; onChange: (value: string) => void }) {
   return <label className="block min-w-0 space-y-1.5"><span className="text-xs font-medium text-[var(--dim)]">{label}</span><select aria-label={label} className={podcastInputClass} value={value} onChange={e => onChange(e.target.value)}>{Object.entries(choices).map(([key, name]) => <option key={key} value={key}>{name}</option>)}</select></label>;
 }
-export function PodcastSettingsPanel({ settings, change, voiceOptions, onPreview, previewLoading }: { settings: PodcastSettings; voiceOptions: PodcastVoiceOption[]; onPreview: (voice: string) => void; previewLoading: boolean; change: <K extends keyof PodcastSettings>(key: K, value: PodcastSettings[K]) => void }) {
+export function PodcastSettingsPanel({ settings, change, voiceOptions, onPreview, previewLoading, examChoices = [] }: { examChoices?: string[]; settings: PodcastSettings; voiceOptions: PodcastVoiceOption[]; onPreview: (voice: string) => void; previewLoading: boolean; change: <K extends keyof PodcastSettings>(key: K, value: PodcastSettings[K]) => void }) {
   const voices = Object.fromEntries(voiceOptions.map(v => [v.value, v.label]));
   const voiceChoices = (value: string) => voices[value] ? voices : { ...voices, [value]: voiceOptions.length ? 'Voz indisponível · escolha outra' : 'Aguardando catálogo de vozes' };
   return <div className="space-y-5">
@@ -24,7 +24,7 @@ export function PodcastSettingsPanel({ settings, change, voiceOptions, onPreview
       <PodcastSelect label="Seu conhecimento no tema" value={settings.level} choices={PODCAST_LEVELS} onChange={v => change('level', v as PodcastSettings['level'])} />
       <PodcastSelect label="Ritmo da explicação" value={settings.pace} choices={PODCAST_PACES} onChange={v => change('pace', v as PodcastSettings['pace'])} />
       <PodcastSelect label="Tom da conversa" value={settings.tone} choices={PODCAST_TONES} onChange={v => change('tone', v as PodcastSettings['tone'])} />
-      <PodcastSelect label="Foco de vestibular" value={settings.exam} choices={Object.fromEntries(['Geral', 'Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp', 'ENEM'].map(v => [v, v]))} onChange={v => change('exam', v)} />
+      <PodcastSelect label="Foco de vestibular" value={settings.exam} choices={Object.fromEntries([...new Set(['Geral', 'Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp', 'ENEM', ...examChoices])].map(v => [v, v]))} onChange={v => change('exam', v)} />
     </div>
   </div>;
 }

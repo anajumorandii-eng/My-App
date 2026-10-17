@@ -67,11 +67,18 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
       };
       try {
         const payload = validateAiPayload(task, req.body);
+        const serverSources: import('../../src/lib/studySources').StudySource[] = [];
 
-        if (task === 'content-explanation' && apostilaReferences && typeof payload.topic === 'string' && typeof payload.subject === 'string') {
+        if (['content-explanation', 'review-tip', 'podcast-script'].includes(task) && apostilaReferences && typeof payload.topic === 'string' && typeof payload.subject === 'string') {
           try {
             const reference = await apostilaReferences.getReference(payload.subject, payload.topic);
-            if (reference) payload.apostilaReference = reference.text.slice(0, MAX_REFERENCE_CHARS_IN_PROMPT);
+            if (reference) {
+              const material = reference.text.slice(0, MAX_REFERENCE_CHARS_IN_PROMPT);
+              payload.apostilaReference = material;
+              if (task !== 'content-explanation') serverSources.push({ id: 'AS1', title: `Apostila: ${reference.subject} — ${reference.topicName}`, kind: 'resumo', content: material, excerpt: reference.text.length > material.length });
+              if (task === 'review-tip') payload.referenceText = `${payload.referenceText ?? ''}\n\n[AS1] Apostila do servidor: ${reference.subject} — ${reference.topicName}; trecho complementar\n${material}`;
+              if (task === 'podcast-script') payload.sourceText = `${payload.sourceText ?? ''}\n\n[AS1] Apostila do servidor: ${reference.subject} — ${reference.topicName}; trecho complementar\n${material}`;
+            }
           } catch (referenceError) {
             console.error('Falha ao buscar referência da apostila (seguindo sem grounding):', referenceError);
           }
@@ -119,7 +126,7 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
                 metrics?.record({ task, model: result.model, usage: result.usage, estimatedCostUsd, fallback: result.fallback, cached: result.cached, status: 200, durationMs })
                   .catch((metricError) => console.error('AI metrics write failed:', metricError));
                 await finishCapture(result);
-                res.write(sseFrame({ done: true, ...result, requestId, evaluationCapture }));
+                res.write(sseFrame({ done: true, ...result, requestId, evaluationCapture, ...(serverSources.length ? { serverSources } : {}) }));
                 return res.end();
               }
               if (firstTokenMs === null && passo.value) firstTokenMs = Date.now() - generationStartedAt;
@@ -159,7 +166,7 @@ export function createAiRouter(service: AiService, metrics?: AiMetricsRecorder, 
         metrics?.record({ task, model: result.model, usage: result.usage, estimatedCostUsd, fallback: result.fallback, cached: result.cached, status: 200, durationMs })
           .catch((metricError) => console.error('AI metrics write failed:', metricError));
         await finishCapture(result);
-        res.json({ ...result, requestId, evaluationCapture });
+        res.json({ ...result, requestId, evaluationCapture, ...(serverSources.length ? { serverSources } : {}) });
       } catch (error) {
         const durationMs = Date.now() - startedAt;
         let status = 502;

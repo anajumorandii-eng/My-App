@@ -14,6 +14,8 @@ const DEEP_TASKS = new Set<AiTask>([
   'backlog-exercise',
   'backlog-correction',
   'discursive-feedback',
+  'review-tip',
+  'podcast-script',
 ]);
 
 export interface OmniRouteOptions {
@@ -22,6 +24,10 @@ export interface OmniRouteOptions {
   deepModel?: string;
   fastModel?: string;
   fetch?: typeof fetch;
+}
+
+class OmniRouteHttpError extends AiGenerationError {
+  constructor(readonly status: number) { super(`OmniRoute respondeu com HTTP ${status}.`); }
 }
 
 interface ChatCompletionUsage { prompt_tokens?: number; completion_tokens?: number; total_tokens?: number }
@@ -105,7 +111,7 @@ export class OmniRouteProvider implements AiProvider {
     try {
       return await this.complete(primaryModel, prompt, signal);
     } catch (error) {
-      if (primaryModel === this.fastModel || signal?.aborted) throw error;
+      if (primaryModel === this.fastModel || signal?.aborted || (error instanceof OmniRouteHttpError && [401, 403].includes(error.status))) throw error;
       const fallback = await this.complete(this.fastModel, prompt, signal);
       return { ...fallback, fallback: true };
     }
@@ -125,7 +131,7 @@ export class OmniRouteProvider implements AiProvider {
     try {
       return yield* this.streamComplete(primaryModel, prompt, signal, () => { emitiu = true; });
     } catch (error) {
-      if (emitiu || primaryModel === this.fastModel || signal?.aborted) throw error;
+      if (emitiu || primaryModel === this.fastModel || signal?.aborted || (error instanceof OmniRouteHttpError && [401, 403].includes(error.status))) throw error;
       const fallback = yield* this.streamComplete(this.fastModel, prompt, signal);
       return { ...fallback, fallback: true };
     }
@@ -159,7 +165,7 @@ export class OmniRouteProvider implements AiProvider {
       signal,
     });
 
-    if (!response.ok) throw new AiGenerationError(`OmniRoute respondeu com HTTP ${response.status}.`);
+    if (!response.ok) throw new OmniRouteHttpError(response.status);
     if (!response.body) throw new AiGenerationError('OmniRoute não devolveu corpo para streaming.');
 
     const decoder = new TextDecoder();
@@ -221,7 +227,7 @@ export class OmniRouteProvider implements AiProvider {
     });
 
     if (!response.ok) {
-      throw new AiGenerationError(`OmniRoute respondeu com HTTP ${response.status}.`);
+      throw new OmniRouteHttpError(response.status);
     }
 
     let body: ChatCompletionResponse;
