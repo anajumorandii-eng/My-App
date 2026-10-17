@@ -66,3 +66,17 @@ test('os 18 dossiês podem formar pacotes de áudio dentro do limite de contexto
     assert.ok(packet.sources.length > 1, slug);
   }
 });
+
+test('recorte literário inclui a unidade publicada e apenas as suas passagens', async () => {
+  const { buildWorkStudyPacket } = await import('./studySources');
+  const { loadWorkDossier } = await import('./workDossiers');
+  const dossier = (await loadWorkDossier('olhos-dagua'))!;
+  const packet = buildWorkStudyPacket(dossier, 'maria');
+  assert.equal(packet.chapter, 'Maria');
+  assert.ok(packet.referenceText.includes('Unidade publicada · Maria'));
+  const other = dossier.evidence.find(card => card.unitId !== 'maria');
+  assert.ok(other);
+  assert.ok(!packet.sources.some(source => source.content.includes(other.quote)));
+  dossier.units.find(unit => unit.id === 'maria')!.guide.editorialStatus = 'needs_review';
+  assert.throws(() => buildWorkStudyPacket(dossier, 'maria'));
+});

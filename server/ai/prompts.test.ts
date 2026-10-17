@@ -275,3 +275,15 @@ test('redação por gênero não recebe roteiro de resposta discursiva', () => {
 test('modo de correção inválido é recusado', () => {
   assert.throws(() => validateAiPayload('answer-correction', { topic: 'Redação', subject: 'Redação', answerKind: 'inventado', question: 'Uma proposta', studentAnswer: 'Um texto' }), /answerKind/);
 });
+
+test('aprofundamento literário exige evidência, recorte e recuperação ativa sem diagnóstico inventado', () => {
+  const prompt = buildAiPrompt('review-tip', validateAiPayload('review-tip', {
+    topic: 'Obra de teste', subject: 'Literatura', chapter: 'Obra completa', board: 'UNICAMP',
+    targetBoards: ['UNICAMP'], guideMode: 'literary-strategy', level: 40, daysSinceReview: 0,
+    referenceText: '[F1] Análise editorial publicada',
+  }));
+  assert.match(prompt, /indício textual → escolha formal → efeito/);
+  assert.match(prompt, /explicação em voz alta ou áudio/);
+  assert.match(prompt, /não um dossiê editorial aprovado/);
+  assert.doesNotMatch(prompt, /Domínio atual estimado: 40/);
+});
