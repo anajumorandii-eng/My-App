@@ -37,7 +37,7 @@ describe('Controles com propósito acessível', () => {
     expect(screen.getByRole('button', { name: 'Reproduzir episódio Divisão celular' })).toBeEnabled();
   });
   it('identifica iniciar, pausar e reiniciar o cronômetro', () => {
-    render(<Treino2aFase />);
+    render(<MemoryRouter><Treino2aFase /></MemoryRouter>);
     fireEvent.click(screen.getByRole('button', { name: 'Iniciar cronômetro da questão' }));
     expect(screen.getByRole('button', { name: 'Pausar cronômetro da questão' })).toBeEnabled();
     fireEvent.click(screen.getByRole('button', { name: 'Reiniciar cronômetro da questão' }));

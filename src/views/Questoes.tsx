@@ -1,4 +1,4 @@
-import React, { useContext, useMemo, useState } from 'react';
+import React, { useContext, useEffect, useMemo, useState } from 'react';
 import { UNSAFE_LocationContext } from 'react-router-dom';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
@@ -93,7 +93,7 @@ export default function Questoes() {
   const ambiente = useMemo(() => (subjectFilter !== 'Todas' ? ambienteDaMateria(subjectFilter) : null), [subjectFilter]);
   useAmbienteDaTela(ambiente);
   const [topicFilter, setTopicFilter] = useState<string>(requestedTopic?.id ?? ALL);
-  const [subtopicFilter, setSubtopicFilter] = useState<string>(ALL);
+  const [subtopicFilter, setSubtopicFilter] = useState<string>(requestedTopic?.chapters?.includes(requestScope.get('chapter') ?? '') ? requestScope.get('chapter')! : ALL);
   const [onlyRealExams, setOnlyRealExams] = useState(requestedBoard !== 'all');
   const [boardFilter, setBoardFilter] = useState(requestedBoard);
   const [yearFilter, setYearFilter] = useState('all');
@@ -195,6 +195,17 @@ export default function Questoes() {
     setDeepExplanation(null);
     resetDiagnosisState();
   };
+
+  useEffect(() => {
+    setSearchQuery('');
+    setSubjectFilter(requestedTopic?.subject ?? 'Todas');
+    setTopicFilter(requestedTopic?.id ?? ALL);
+    setSubtopicFilter(requestedTopic?.chapters?.includes(requestScope.get('chapter') ?? '') ? requestScope.get('chapter')! : ALL);
+    setBoardFilter(requestedBoard);
+    setYearFilter('all');
+    setOnlyRealExams(requestedBoard !== 'all');
+    resetQuestionState();
+  }, [requestScope.get('topic'), requestScope.get('chapter'), requestScope.get('board')]);
 
   const changeSubject = (subject: string) => {
     setSubjectFilter(subject);

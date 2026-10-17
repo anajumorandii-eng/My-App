@@ -13,6 +13,7 @@ test('normaliza uma solicitação socrática válida', () => {
   assert.deepEqual(payload, {
     question: 'Por que a água é polar?',
     topic: 'Ligações químicas',
+    history: [],
   });
 });
 

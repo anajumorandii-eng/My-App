@@ -1,0 +1,1175 @@
+{
+  "date": "2026-10-17",
+  "scope": "Estados públicos/demonstração; 31 rotas, duas larguras, dois temas. Não certifica todos os estados autenticados ou qualidade editorial.",
+  "configurations": 124,
+  "findings": 0,
+  "routes": [
+    {
+      "route": "/",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/diagnostico",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/plano",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/agenda",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/reta-final",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/recuperacao",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/sessao",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/questoes",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/revisoes",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/flashcards",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/treino-2a-fase",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/redacao",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/erros",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/resumos",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/visual",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/podcast",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/tutor",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/laboratorio",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/estrategias",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/evolucao",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/prioridades",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras-obrigatorias",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras/olhos-dagua",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/avaliacao-ia",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/caminho-indisponivel",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/conexoes",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/perfil",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin/obras",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin/conteudo",
+      "theme": "light",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/diagnostico",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/plano",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/agenda",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/reta-final",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/recuperacao",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/sessao",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/questoes",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/revisoes",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/flashcards",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/treino-2a-fase",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/redacao",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/erros",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/resumos",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/visual",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/podcast",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/tutor",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/laboratorio",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/estrategias",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/evolucao",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/prioridades",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras-obrigatorias",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras/olhos-dagua",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/avaliacao-ia",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/caminho-indisponivel",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/conexoes",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/perfil",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin/obras",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin/conteudo",
+      "theme": "light",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/diagnostico",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/plano",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/agenda",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/reta-final",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/recuperacao",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/sessao",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/questoes",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/revisoes",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/flashcards",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/treino-2a-fase",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/redacao",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/erros",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/resumos",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/visual",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/podcast",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/tutor",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/laboratorio",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/estrategias",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/evolucao",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/prioridades",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras-obrigatorias",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras/olhos-dagua",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/avaliacao-ia",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/caminho-indisponivel",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/conexoes",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/perfil",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin/obras",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin/conteudo",
+      "theme": "dark",
+      "width": 390,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/diagnostico",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/plano",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/agenda",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/reta-final",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/recuperacao",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/sessao",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/questoes",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/revisoes",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/flashcards",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/treino-2a-fase",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/redacao",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/erros",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/resumos",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/visual",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/podcast",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/tutor",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/laboratorio",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/estrategias",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/evolucao",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/prioridades",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras-obrigatorias",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/obras/olhos-dagua",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/avaliacao-ia",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/caminho-indisponivel",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/conexoes",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/perfil",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin/obras",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    },
+    {
+      "route": "/admin/conteudo",
+      "theme": "dark",
+      "width": 1366,
+      "runtimeErrors": [],
+      "overflow": 0,
+      "accessibilityViolations": [],
+      "failure": null
+    }
+  ],
+  "continuity": [
+    {
+      "width": 390,
+      "errors": [],
+      "checks": [
+        "tutor: tópico, capítulo e mensagem recuperados",
+        "tutor: troca de modo preserva o trabalho",
+        "navegação contextual mantém tópico e capítulo",
+        "resumo: explicação não enviada recuperada",
+        "redação: salvamento automático",
+        "discursiva: resposta recuperada",
+        "laboratório: aplicação ao assunto escolhido",
+        "endereço inexistente: recuperação da navegação"
+      ],
+      "overflow": 0,
+      "passed": true
+    },
+    {
+      "width": 1366,
+      "errors": [],
+      "checks": [
+        "tutor: tópico, capítulo e mensagem recuperados",
+        "tutor: troca de modo preserva o trabalho",
+        "navegação contextual mantém tópico e capítulo",
+        "resumo: explicação não enviada recuperada",
+        "redação: salvamento automático",
+        "discursiva: resposta recuperada",
+        "laboratório: aplicação ao assunto escolhido",
+        "endereço inexistente: recuperação da navegação"
+      ],
+      "overflow": 0,
+      "passed": true
+    }
+  ],
+  "generatedStateChecks": {
+    "kind": "Explicação/correção do tutor e correção de redação com respostas simuladas",
+    "configurations": 4,
+    "themes": [
+      "light",
+      "dark"
+    ],
+    "accessibilityViolations": 0
+  },
+  "tests": {
+    "nodePassed": 1141,
+    "interfacePassed": 3198,
+    "interfaceFilesPassed": 237,
+    "additionalFocusedPassed": 5,
+    "typescript": "passed",
+    "productionBuild": "passed"
+  }
+}

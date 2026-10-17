@@ -4,7 +4,7 @@
  */
 
 import React, { Suspense, lazy } from 'react';
-import { BrowserRouter, Routes, Route, useLocation } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, useLocation } from 'react-router-dom';
 import NucleoInstrumentalProductionLayout from './components/NucleoInstrumentalProductionLayout';
 import { LegacyPrototypeRedirect } from './components/LegacyPrototypeRedirect';
 import { AuthProvider } from './context/AuthContext';
@@ -123,6 +123,7 @@ export default function App() {
                 <Route path="admin" element={<Admin />} />
                 <Route path="admin/obras" element={<AdminObras />} />
                 <Route path="admin/conteudo" element={<AdminConteudo />} />
+                <Route path="*" element={<div className="ni-main space-y-4"><h1 className="text-2xl font-semibold">Este caminho não foi encontrado.</h1><p>O endereço pode ter mudado. Escolha uma área para continuar estudando.</p><nav aria-label="Retomar navegação" className="flex flex-wrap gap-4"><Link className="ni-link" to="/">Voltar para Hoje</Link><Link className="ni-link" to="/resumos">Abrir resumos</Link><Link className="ni-link" to="/revisoes">Retomar revisões</Link></nav></div>} />
               </Route>
             </Routes>
           </RouteShell>

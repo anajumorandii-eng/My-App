@@ -1,4 +1,5 @@
-import { render, screen, waitFor } from '@testing-library/react';
+import { Link, MemoryRouter } from 'react-router-dom';
+import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import userEvent from '@testing-library/user-event';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import type { Question } from '../types';
@@ -434,4 +435,17 @@ it('usa a banca da navegação local da central, preservando o endereço externo
  questionsHook.mockReturnValue({questions:[{...QUESTION,id:'local-unicamp',prompt:'Questão da central',examSource:{board:'UNICAMP',year:2026}}],syncError:null});
  render(<MemoryRouter initialEntries={['/questoes?board=UNICAMP']}><Questoes/></MemoryRouter>);
  expect(screen.getByRole('combobox',{name:'Banca'})).toHaveValue('UNICAMP');
+});
+
+
+it('acompanha tópico e capítulo de um novo link com a tela já aberta', async () => {
+  questionsHook.mockReturnValue({ questions: [
+    { ...QUESTION, id: 'genetica', topicId: 'bio_genetica', chapter: 'Herança Sexual', prompt: 'Enunciado de genética.' },
+    { ...QUESTION, id: 'ecologia', topicId: 'bio_ecologia', prompt: 'Enunciado de ecologia.' },
+  ], loading: false, syncError: null });
+  render(<MemoryRouter initialEntries={['/questoes?topic=bio_ecologia']}><Link to="/questoes?topic=bio_genetica&chapter=Heran%C3%A7a+Sexual">Trocar assunto pela navegação</Link><Questoes /></MemoryRouter>);
+  expect(screen.getByText('Enunciado de ecologia.')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('link', { name: 'Trocar assunto pela navegação' }));
+  expect(await screen.findByText('Enunciado de genética.')).toBeInTheDocument();
+  expect(screen.getByLabelText('Subtópico')).toHaveValue('Herança Sexual');
 });

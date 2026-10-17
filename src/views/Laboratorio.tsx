@@ -1,12 +1,18 @@
-import React, { useMemo, useState } from 'react';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { mockTopics } from '../data/mockData';
 import { StudyMethod } from '../types';
 import { useUserMastery } from '../hooks/useUserMastery';
 import { useStudyMethods } from '../hooks/useStudyMethods';
-import { requestAiTextStream } from '../lib/aiClient';
+import { aiErrorMessage, requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { FlaskConical, ChevronDown, Brain, Repeat as RepeatIcon, Target, Zap, Sparkles, CheckCircle2, type LucideIcon } from 'lucide-react';
 import { Panel } from '../components/ui/Panel';
+
+import { useAuth } from '../context/AuthContext';
+import { useStudyDraft } from '../hooks/useStudyDraft';
+import { StudyDraftNotice } from '../components/StudyDraftNotice';
+import { StudyReflectionPanel } from '../components/StudyReflectionPanel';
+import { StudyJourneyLinks } from '../components/StudyJourneyLinks';
 
 const ACTIVE_IN_ENGINE = new Set(['method_spaced_repetition', 'method_interleaving']);
 
@@ -18,11 +24,18 @@ const CATEGORY_META: Record<StudyMethod['category'], { label: string; icon: Luci
 };
 
 export default function Laboratorio() {
+  const { user } = useAuth();
+  return <MethodLaboratory key={user?.uid ?? 'guest'} />;
+}
+function MethodLaboratory() {
   const { mastery } = useUserMastery();
   const { studyMethods, syncError } = useStudyMethods();
   const [categoryFilter, setCategoryFilter] = useState<StudyMethod['category'] | 'all'>('all');
   const [expandedId, setExpandedId] = useState<string | null>(studyMethods[0]?.id ?? null);
-  const [examples, setExamples] = useState<Record<string, string>>({});
+  const [exampleError, setExampleError] = useState<string | null>(null);
+  const [chosenTopicId, setChosenTopicId] = useState('');
+  const requestEpoch = useRef(0);
+  useEffect(() => () => { requestEpoch.current++; }, []);
   const [loadingExampleFor, setLoadingExampleFor] = useState<string | null>(null);
 
   const filtered = useMemo(
@@ -36,24 +49,30 @@ export default function Laboratorio() {
     return mockTopics.find((t) => t.id === topicId) ?? mockTopics[0];
   }, [mastery]);
 
+  const selectedTopic = mockTopics.find(topic => topic.id === chosenTopicId) ?? weakestTopic;
+  const [examples, setExamples, examplesStatus] = useStudyDraft<Record<string, string>>(`laboratorio:${selectedTopic.id}`, {}, (value): value is Record<string, string> => !!value && typeof value === 'object' && !Array.isArray(value) && Object.values(value).every(item => typeof item === 'string'));
+  useEffect(() => { requestEpoch.current++; setLoadingExampleFor(null); setExampleError(null); }, [selectedTopic.id]);
+
   const fetchExample = async (method: StudyMethod) => {
-    setLoadingExampleFor(method.id);
+    if (loadingExampleFor) return;
+    const epoch = ++requestEpoch.current;
+    setLoadingExampleFor(method.id); setExampleError(null);
     try {
       let acumulado = '';
       const data = await requestAiTextStream('method-example', {
         methodName: method.name,
         methodSummary: method.summary,
-        topic: weakestTopic.name,
-        subject: weakestTopic.subject,
+        topic: selectedTopic.name,
+        subject: selectedTopic.subject,
       }, (delta) => {
         acumulado += delta;
-        setExamples((prev) => ({ ...prev, [method.id]: acumulado }));
+        if (requestEpoch.current === epoch) setExamples((prev) => ({ ...prev, [method.id]: acumulado }));
       });
-      setExamples((prev) => ({ ...prev, [method.id]: data.text }));
+      if (requestEpoch.current === epoch) setExamples((prev) => ({ ...prev, [method.id]: data.text }));
     } catch (error) {
-      console.error('Failed to fetch method example:', error);
+      if (requestEpoch.current === epoch) { setExampleError(aiErrorMessage(error)); setExamples(previous => { const next = { ...previous }; delete next[method.id]; return next; }); }
     } finally {
-      setLoadingExampleFor(null);
+      if (requestEpoch.current === epoch) setLoadingExampleFor(null);
     }
   };
 
@@ -78,7 +97,7 @@ export default function Laboratorio() {
       <div className="ni-title">
         <div>
           <h1>Técnicas com evidência científica.</h1>
-          <p>Metodologias comprovadas de retenção e aplicação integradas diretamente ao motor do plano.</p>
+          <p>Compare métodos de recuperação, explicação e aplicação no assunto que você está estudando. Os métodos ligados ao plano estão identificados.</p>
         </div>
         <div className="ni-state">
           <i /> {studyMethods.length} métodos catalogados
@@ -87,6 +106,7 @@ export default function Laboratorio() {
 
       {syncError && <p className="text-xs text-rose-500 mb-2">{syncError}</p>}
 
+      <div className="mb-4 space-y-3"><label className="block text-sm">Assunto para aplicar os métodos<select aria-label="Assunto para aplicar os métodos" value={selectedTopic.id} onChange={event => setChosenTopicId(event.target.value)} className="field block w-full mt-2">{mockTopics.map(topic => <option key={topic.id} value={topic.id}>{topic.subject} · {topic.name}</option>)}</select></label><StudyDraftNotice statuses={[examplesStatus]} />{exampleError && <p role="alert" className="text-status-error text-sm">{exampleError}</p>}<details><summary className="cursor-pointer text-sm font-semibold">Experimentar: recuperar, explicar e comparar</summary><StudyReflectionPanel topicId={selectedTopic.id} topicName={selectedTopic.name} subject={selectedTopic.subject} /></details><StudyJourneyLinks topicId={selectedTopic.id} /></div>
       {/* Filter bar */}
       <div className="ni-subjects">
         <button
@@ -147,7 +167,7 @@ export default function Laboratorio() {
                     <h3 className="font-display font-medium text-xs text-[var(--text)] flex items-center flex-wrap gap-2">
                       {method.name}
                       {ACTIVE_IN_ENGINE.has(method.id) && (
-                        <span className="inline-flex items-center text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-300 border border-emerald-500/30">
+                        <span className="inline-flex items-center text-[10px] font-mono font-bold px-2 py-0.5 rounded-full bg-emerald-500/20 text-emerald-900 dark:text-emerald-200 border border-emerald-500/30">
                           <CheckCircle2 className="w-2.5 h-2.5 mr-1" />
                           Ativo no motor
                         </span>
@@ -201,13 +221,13 @@ export default function Laboratorio() {
                     {!examples[method.id] && (
                       <button
                         onClick={() => fetchExample(method)}
-                        disabled={loadingExampleFor === method.id}
+                        disabled={!!loadingExampleFor}
                         className="flex items-center px-3 py-1.5 text-xs font-semibold subject-text border border-[var(--primary)] rounded-lg hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                       >
                         <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingExampleFor === method.id ? 'animate-pulse' : ''}`} />
                         {loadingExampleFor === method.id
                           ? 'Gerando exemplo...'
-                          : `Exemplo aplicado ao meu ponto fraco (${weakestTopic.name})`}
+                          : `Exemplo aplicado a ${selectedTopic.name}`}
                       </button>
                     )}
                     {examples[method.id] && (

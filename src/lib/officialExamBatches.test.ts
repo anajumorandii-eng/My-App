@@ -45,12 +45,18 @@ for (const [slug,count] of batches) {
   });
 }
 
-test('preserva os 2.959 registros anteriores, ids e comentários, sem reaplicar conteúdo', () => {
+test('preserva os registros anteriores fora da correção conferida de G6PD, sem reaplicar conteúdo', () => {
   // Hash refeito quando os 72 enunciados da Unicamp 2026 foram transcritos
   // (prompt dessas questões, e o texto das alternativas gráficas da 13, que
   // apontava para a página; o resto foi conferido igual). O sinalizador de
   // migração statementComplete é aditivo e não integra esse hash de conteúdo.
-  assert.equal(hash(JSON.stringify(bank.slice(0,2959).map(({ statementComplete: _complete, ...q }) => q))),'485cfbc0f5ceb50c90bc2bdeb78382c1d5ff8a73daafce76bd526520ae0607f1');
+  // G6PD foi corrigida contra prova/gabarito oficiais; a regressão detalhada
+  // está em questionBankContent.test.ts. Os outros 2.958 registros mantêm
+  // exatamente o conteúdo anterior, não um novo baseline indiscriminado.
+  const preserved = bank.slice(0, 2959).filter(q => q.id !== 'q_real_fuvest_2022_bio');
+  assert.equal(preserved.length, 2958);
+  assert.equal(bank.filter(q => q.id === 'q_real_fuvest_2022_bio').length, 1);
+  assert.equal(hash(JSON.stringify(preserved.map(({ statementComplete: _complete, ...q }) => q))), '7dca5c26bac9342c1b33fb72ad47c375d67ad813e96ebb84cb457e010fc75d1e');
   assert.equal(bank.length,3094);
   const additions = batches.flatMap(([slug])=>{
     const {source,items,answers}=load(slug);

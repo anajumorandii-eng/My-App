@@ -105,3 +105,13 @@ it('importar legado preserva a redação aberta em uma versão antes da substitu
   const versions = JSON.parse(localStorage.getItem('crivo_essay_versions_v1:a')!);
   expect(versions.some((item: { draft: string }) => item.draft === 'Texto original de treino.')).toBe(true);
 });
+
+it('recupera a redação e o planejamento sem exigir salvar uma versão manualmente', () => {
+  mocks.uid = 'a';
+  const first = render(<Redacao />); fillDraft();
+  fireEvent.change(screen.getByLabelText('Banca da redação'), { target: { value: 'Unicamp' } });
+  first.unmount(); render(<Redacao />);
+  expect(screen.getByLabelText('Primeira versão da redação')).toHaveValue('Texto original de treino.');
+  expect(screen.getByLabelText('Banca da redação')).toHaveValue('Unicamp');
+  expect(localStorage.getItem('crivo_essay_versions_v1:a')).toBeNull();
+});

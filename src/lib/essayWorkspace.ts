@@ -31,5 +31,6 @@ export function readEssayCurrent(scope: string): Omit<EssayVersion, 'id' | 'date
     const value = JSON.parse(localStorage.getItem(`crivo_essay_current_v1:${scope}`) ?? 'null');
     if (value && ['ENEM', 'Fuvest', 'Unicamp', 'Unesp/Vunesp', 'Famerp', 'Unifesp'].includes(value.board) && ['theme', 'draft', 'rewrite'].every(key => typeof value[key] === 'string') && value.plan && Object.keys(emptyEssayPlan).every(key => typeof value.plan[key] === 'string')) return value;
   } catch { /* Um registro inválido não substitui o rascunho legado. */ }
-  return { board: 'ENEM', theme: scope === 'demo' ? localStorage.getItem('juju-essay-theme') ?? '' : '', draft: scope === 'demo' ? localStorage.getItem('juju-essay-draft') ?? '' : '', rewrite: scope === 'demo' ? localStorage.getItem('juju-essay-rewrite') ?? '' : '', plan: readEssayPlan(`crivo_essay_plan_v1:${scope}`) };
+  const legacy = (key: string) => { try { return scope === 'demo' ? localStorage.getItem(key) ?? '' : ''; } catch { return ''; } };
+  return { board: 'ENEM', theme: legacy('juju-essay-theme'), draft: legacy('juju-essay-draft'), rewrite: legacy('juju-essay-rewrite'), plan: readEssayPlan(`crivo_essay_plan_v1:${scope}`) };
 }
