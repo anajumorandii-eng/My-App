@@ -331,6 +331,17 @@ export const SCREENS: InstrumentalScreen[] = [
     action: "Ver estratégia",
   },
   {
+    key: "aprofundamentos",
+    label: "Meus aprofundamentos",
+    title: "Retome o que você aprofundou.",
+    summary: "Guias salvos por assunto e banca, com leitura e impressão próprias.",
+    kind: "library",
+    icon: BookText,
+    subject: "Português",
+    topic: "Biblioteca de aprofundamentos",
+    action: "Abrir biblioteca",
+  },
+  {
     key: "evolucao",
     label: "Evolução",
     title: "Evolução é uma trajetória, não um número solto.",

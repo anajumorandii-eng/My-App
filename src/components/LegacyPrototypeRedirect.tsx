@@ -27,6 +27,7 @@ const PROTOTYPE_SCREEN_ROUTES: Record<string, string> = {
   'treino-2a-fase': '/treino-2a-fase',
   redacao: '/redacao',
   estrategias: '/estrategias',
+  aprofundamentos: '/aprofundamentos',
   evolucao: '/evolucao',
   prioridades: '/prioridades',
   conexoes: '/conexoes',

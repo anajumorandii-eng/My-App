@@ -1,0 +1,131 @@
+{
+  "scope": "Biblioteca de guias com 40 registros sintéticos locais e explorador público de estratégias por obra. Sem autenticação, geração de IA ou gravação na conta.",
+  "configurations": 4,
+  "accessibilityStates": 16,
+  "results": [
+    {
+      "theme": "light",
+      "width": 390,
+      "errors": [],
+      "checks": [
+        "estratégia sem lista de salvos; biblioteca própria paginada",
+        "busca sem acentos, filtros, leitor, recarga e retorno sem perda dos 40 guias",
+        "obra completa por padrão; unidade opcional; retorno à visão geral; troca de obra sem herdar a unidade"
+      ],
+      "accessibility": [
+        {
+          "label": "biblioteca: 40 guias, 12 cartões por página",
+          "violations": []
+        },
+        {
+          "label": "leitor de guia salvo recuperado pela URL",
+          "violations": []
+        },
+        {
+          "label": "estratégia: visão geral da obra completa como padrão",
+          "violations": []
+        },
+        {
+          "label": "estratégia: aprofundamento opcional da unidade",
+          "violations": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "theme": "light",
+      "width": 1366,
+      "errors": [],
+      "checks": [
+        "estratégia sem lista de salvos; biblioteca própria paginada",
+        "busca sem acentos, filtros, leitor, recarga e retorno sem perda dos 40 guias",
+        "obra completa por padrão; unidade opcional; retorno à visão geral; troca de obra sem herdar a unidade"
+      ],
+      "accessibility": [
+        {
+          "label": "biblioteca: 40 guias, 12 cartões por página",
+          "violations": []
+        },
+        {
+          "label": "leitor de guia salvo recuperado pela URL",
+          "violations": []
+        },
+        {
+          "label": "estratégia: visão geral da obra completa como padrão",
+          "violations": []
+        },
+        {
+          "label": "estratégia: aprofundamento opcional da unidade",
+          "violations": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "width": 390,
+      "errors": [],
+      "checks": [
+        "estratégia sem lista de salvos; biblioteca própria paginada",
+        "busca sem acentos, filtros, leitor, recarga e retorno sem perda dos 40 guias",
+        "obra completa por padrão; unidade opcional; retorno à visão geral; troca de obra sem herdar a unidade"
+      ],
+      "accessibility": [
+        {
+          "label": "biblioteca: 40 guias, 12 cartões por página",
+          "violations": []
+        },
+        {
+          "label": "leitor de guia salvo recuperado pela URL",
+          "violations": []
+        },
+        {
+          "label": "estratégia: visão geral da obra completa como padrão",
+          "violations": []
+        },
+        {
+          "label": "estratégia: aprofundamento opcional da unidade",
+          "violations": []
+        }
+      ],
+      "passed": true
+    },
+    {
+      "theme": "dark",
+      "width": 1366,
+      "errors": [],
+      "checks": [
+        "estratégia sem lista de salvos; biblioteca própria paginada",
+        "busca sem acentos, filtros, leitor, recarga e retorno sem perda dos 40 guias",
+        "obra completa por padrão; unidade opcional; retorno à visão geral; troca de obra sem herdar a unidade"
+      ],
+      "accessibility": [
+        {
+          "label": "biblioteca: 40 guias, 12 cartões por página",
+          "violations": []
+        },
+        {
+          "label": "leitor de guia salvo recuperado pela URL",
+          "violations": []
+        },
+        {
+          "label": "estratégia: visão geral da obra completa como padrão",
+          "violations": []
+        },
+        {
+          "label": "estratégia: aprofundamento opcional da unidade",
+          "violations": []
+        }
+      ],
+      "passed": true
+    }
+  ],
+  "checks": {
+    "typescript": "passed",
+    "productionBuild": "passed",
+    "nodeTestsPassed": 1141,
+    "interfaceTestsPassed": 3209,
+    "interfaceTestFilesPassed": 239,
+    "focusedTestsPassed": 18
+  }
+}

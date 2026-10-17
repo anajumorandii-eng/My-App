@@ -11,7 +11,8 @@ import { requestAiTextStream } from '../lib/aiClient';
 import { AiText } from './AiText';
 
 import { useAuth } from '../context/AuthContext';
-import { cacheStrategyGuides, loadStrategyGuides, readStrategyGuides, saveStrategyGuide, type StrategyGuide } from '../lib/strategyGuides';
+import { strategyGuideUrl } from '../lib/strategyGuides';
+import { useStrategyGuides } from '../hooks/useStrategyGuides';
 import { printStrategyGuide } from '../lib/printStrategyGuide';
 
 export default function StrategyExplorer() {
@@ -24,39 +25,8 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   const requestedTopic = mockTopics.find(item => item.id === searchParams.get('topic'));
   const { targets, loading: targetsLoading, error: targetsError } = useStudyTargets();
   const [packetState, setPacketState] = useState<{ key: string; packet?: StudyPacket; error?: string } | null>(null);
-  const [guides, setGuides] = useState(() => readStrategyGuides(uid));
-  const guidesRef = useRef(guides);
+  const { guides, persist, error: guidesError, reload: reloadGuides, saveMessage, setSaveMessage } = useStrategyGuides(uid);
   const printContent = useRef<HTMLDivElement>(null);
-  const [saveMessage, setSaveMessage] = useState('');
-  useEffect(() => {
-    if (!uid) return;
-    let cancelled = false;
-    void loadStrategyGuides(uid).then(remote => {
-      if (cancelled) return;
-      const merged = { ...remote };
-      for (const [key, guide] of Object.entries(guidesRef.current)) {
-        if (!merged[key] || guide.savedAt >= merged[key].savedAt) merged[key] = guide;
-      }
-      guidesRef.current = merged;
-      setGuides(merged);
-      try { cacheStrategyGuides(uid, merged); } catch { /* A cópia da conta continua disponível. */ }
-    }).catch(() => { if (!cancelled) setSaveMessage('Não foi possível carregar os guias da conta. As cópias deste navegador continuam disponíveis.'); });
-    return () => { cancelled = true; };
-  }, [uid]);
-  const persist = async (guide: StrategyGuide) => {
-    const next = { ...guidesRef.current, [guide.key]: guide };
-    guidesRef.current = next;
-    setGuides(next);
-    let cached = false;
-    try { cacheStrategyGuides(uid, next); cached = true; } catch { /* Mostra a falha abaixo. */ }
-    if (uid) {
-      setSaveMessage(cached ? 'Salvo neste navegador. Sincronizando com sua conta...' : 'Salvando na sua conta...');
-      try { await saveStrategyGuide(uid, guide); setSaveMessage('Salvo na sua conta.'); }
-      catch { setSaveMessage(cached ? 'Salvo neste navegador. Não foi possível sincronizar com sua conta; tente salvar novamente.' : 'Não foi possível salvar. Imprima ou tente salvar novamente antes de sair.'); }
-    } else {
-      setSaveMessage(cached ? 'Salvo neste navegador. Entre na sua conta para salvar guias na conta.' : 'Não foi possível salvar neste navegador. Imprima o guia antes de sair.');
-    }
-  };
   const [subject, setSubject] = useState(requestedTopic ? studyAreaForTopic(requestedTopic) : 'Matemática');
   const topics = mockTopics.filter((topic) => studyAreaForTopic(topic) === subject);
   const [topicId, setTopicId] = useState(requestedTopic?.id ?? topics[0]?.id ?? '');
@@ -100,12 +70,11 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
     } finally { busy.current = false; setLoadingKey(null); }
   };
   return <section className="space-y-4" aria-labelledby="guia-estrategias">
-    {Object.keys(guides).length > 0 && <div className="ni-panel p-4 space-y-2">
-      <h2 className="font-display text-lg">Aprofundamentos salvos</h2>
-      <ul className="space-y-2">{Object.values(guides).sort((a, b) => b.savedAt.localeCompare(a.savedAt)).map(guide => <li key={guide.key}>
-        <button type="button" className="text-sm underline text-left" onClick={() => { setSubject(guide.subject); setTopicId(guide.topicId); setChapter(guide.chapter); setBoard(guide.board); }}>{guide.subject} · {guide.topicName}{guide.chapter ? ` · ${guide.chapter}` : ''} · {guide.board}</button>
-      </li>)}</ul>
-    </div>}
+    <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[var(--line)] p-4">
+      <p className="text-sm text-[var(--dim)]">Os guias que você gera ficam organizados na sua biblioteca.</p>
+      <a href="/aprofundamentos" className="text-sm font-semibold underline">Meus aprofundamentos ({Object.keys(guides).length})</a>
+    </div>
+    {guidesError && <div role="alert" className="text-sm"><p>{guidesError}</p><button type="button" className="underline" onClick={reloadGuides}>Tentar carregar novamente</button></div>}
     <div className="ni-panel p-4 space-y-3">
       <h2 id="guia-estrategias" className="font-display text-xl">Banca, matéria e tópico: decidir cada passo</h2>
       <p className="text-sm text-[var(--dim)]">Escolha o recorte do currículo. O protocolo e o exemplo são autorais; o guia aprofundado usa os resumos editoriais disponíveis como referência e deve ser conferido com questões e gabaritos.</p>
@@ -145,6 +114,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
       {guides[key]?.targetBoards?.length ? <p className="text-xs">Bancas deste guia salvo: {guides[key].targetBoards!.join(' · ')}</p> : null}
       <a className="text-sm underline block" href={`/podcast?topic=${encodeURIComponent(topic?.id ?? '')}${chapter ? `&chapter=${encodeURIComponent(chapter)}` : ''}${board !== 'Todas as bancas' ? `&board=${encodeURIComponent(board)}` : ''}`}>Transformar este recorte em podcast aprofundado</a>
       {guides[key] && <div className="flex flex-wrap gap-3">
+        <a href={strategyGuideUrl(guides[key])} className="text-sm underline">Abrir este guia na biblioteca</a>
         <button type="button" disabled={loadingKey !== null} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50" onClick={() => { if (printContent.current) printStrategyGuide(printContent.current, `Aprofundamento — ${subject} — ${chapter || topic?.name} — ${board}`); }}>Imprimir / Salvar em PDF</button>
         {uid && <button type="button" className="text-sm underline" onClick={() => void persist(guides[key])}>Salvar novamente na conta</button>}
       </div>}

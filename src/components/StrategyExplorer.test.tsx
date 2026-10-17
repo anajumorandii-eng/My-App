@@ -12,10 +12,20 @@ vi.mock('../lib/strategyGuides', async () => {
 vi.mock('../lib/printStrategyGuide', () => ({ printStrategyGuide: vi.fn() }));
 import { printStrategyGuide } from '../lib/printStrategyGuide';
 import StrategyExplorer from './StrategyExplorer';
+import { cacheStrategyGuides } from '../lib/strategyGuides';
 
 beforeEach(() => { localStorage.clear(); auth.user = null; loadGuides.mockResolvedValue({}); saveGuide.mockResolvedValue(); generate.mockResolvedValue({ text: 'Guia do tópico selecionado' }); });
 
 describe('guia por matéria, tópico e banca', () => {
+  it('mantém os guias antigos na biblioteca sem listar todos no topo da estratégia', () => {
+    const key = JSON.stringify(['Biologia', 'bio_genetica', '', 'UNICAMP']);
+    cacheStrategyGuides(null, { [key]: { key, subject: 'Biologia', topicId: 'bio_genetica', topicName: 'Guia fora do recorte', chapter: '', board: 'UNICAMP', text: 'Conteúdo antigo preservado.', savedAt: '2026-10-17T12:00:00Z' } });
+    render(<StrategyExplorer />);
+    expect(screen.queryByRole('heading', { name: 'Aprofundamentos salvos' })).toBeNull();
+    expect(screen.queryByText('Guia fora do recorte')).toBeNull();
+    expect(screen.getByRole('link', { name: 'Meus aprofundamentos (1)' })).toHaveAttribute('href', '/aprofundamentos');
+    expect(localStorage.getItem('crivo:strategy-guides:v1:guest')).toContain('Conteúdo antigo preservado.');
+  });
   it('seleciona currículo real, apresenta procedimento da matéria e envia recorte completo à IA', async () => {
     render(<StrategyExplorer />);
     fireEvent.change(screen.getByLabelText('Matéria do guia'), { target: { value: 'Química' } });

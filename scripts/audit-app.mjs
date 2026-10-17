@@ -4,7 +4,7 @@ import { chromium } from '@playwright/test';
 import AxeBuilder from '@axe-core/playwright';
 
 // Apenas estados públicos/demonstração: não autentica nem envia respostas.
-const routes = ['/', '/diagnostico', '/plano', '/agenda', '/reta-final', '/recuperacao', '/sessao', '/questoes', '/revisoes', '/flashcards', '/treino-2a-fase', '/redacao', '/erros', '/resumos', '/visual', '/podcast', '/tutor', '/laboratorio', '/estrategias', '/evolucao', '/prioridades', '/obras', '/obras-obrigatorias', '/obras/olhos-dagua', '/avaliacao-ia', '/caminho-indisponivel', '/conexoes', '/perfil', '/admin', '/admin/obras', '/admin/conteudo'];
+const routes = ['/', '/diagnostico', '/plano', '/agenda', '/reta-final', '/recuperacao', '/sessao', '/questoes', '/revisoes', '/flashcards', '/treino-2a-fase', '/redacao', '/erros', '/resumos', '/visual', '/podcast', '/tutor', '/laboratorio', '/estrategias', '/aprofundamentos', '/evolucao', '/prioridades', '/obras', '/obras-obrigatorias', '/obras/olhos-dagua', '/avaliacao-ia', '/caminho-indisponivel', '/conexoes', '/perfil', '/admin', '/admin/obras', '/admin/conteudo'];
 const output = process.env.CRIVO_AUDIT_OUTPUT || 'tests/e2e/.artifacts/audit-app';
 const widths = (process.env.CRIVO_AUDIT_WIDTHS || '390,1366').split(',').map(Number);
 const selectedRoutes = process.env.CRIVO_AUDIT_ROUTES?.split(',') || routes;

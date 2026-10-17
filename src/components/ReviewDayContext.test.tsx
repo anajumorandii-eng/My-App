@@ -6,6 +6,10 @@ vi.mock('../hooks/useStudentGoals', () => ({ useStudentGoals: () => ({ goals: { 
 vi.mock('./ErrorRevisitPanel', () => ({ default: () => <div>Erros</div> }));
 import ReviewDayContext from './ReviewDayContext';
 it('mostra horários de véspera em São Paulo, inclusive finais recebidos em UTC', () => {
-  render(<MemoryRouter><ReviewDayContext localDate="2026-10-17" /></MemoryRouter>);
-  expect(screen.getByText(/14:30–15:20, 15:30–16:10/)).toBeInTheDocument();
+  vi.useFakeTimers();
+  vi.setSystemTime(new Date('2026-10-17T12:00:00Z'));
+  try {
+    render(<MemoryRouter><ReviewDayContext localDate="2026-10-17" /></MemoryRouter>);
+    expect(screen.getByText(/14:30–15:20, 15:30–16:10/)).toBeInTheDocument();
+  } finally { vi.useRealTimers(); }
 });

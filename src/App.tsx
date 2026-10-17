@@ -27,6 +27,7 @@ const Laboratorio = lazy(() => import('./views/Laboratorio'));
 const Evolucao = lazy(() => import('./views/Evolucao'));
 const Prioridades = lazy(() => import('./views/Prioridades'));
 const Estrategias = lazy(() => import('./views/Estrategias'));
+const Aprofundamentos = lazy(() => import('./views/Aprofundamentos'));
 const Conexoes = lazy(() => import('./views/Conexoes'));
 const Perfil = lazy(() => import('./views/Perfil'));
 const Redacao = lazy(() => import('./views/Redacao'));
@@ -109,6 +110,7 @@ export default function App() {
                 <Route path="evolucao" element={<Evolucao />} />
                 <Route path="prioridades" element={<Prioridades />} />
                 <Route path="estrategias" element={<Estrategias />} />
+                <Route path="aprofundamentos" element={<Aprofundamentos />} />
                 <Route path="conexoes" element={<Conexoes />} />
                 <Route path="perfil" element={<Perfil />} />
                 <Route path="redacao" element={<Redacao />} />
