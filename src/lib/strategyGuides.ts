@@ -14,23 +14,40 @@ export interface StrategyGuide {
   studyPacket?: import('./studySources').StudyPacket;
 }
 export type StrategyGuides = Record<string, StrategyGuide>;
-const storageKey = (uid: string | null) => `crivo:strategy-guides:v1:${uid ?? 'guest'}`;
+export const strategyGuidesStorageKey = (uid: string | null) => `crivo:strategy-guides:v1:${uid ?? 'guest'}`;
+export const STRATEGY_GUIDES_CHANGED = 'crivo:strategy-guides-changed';
+export function isStrategyGuide(value: unknown): value is StrategyGuide {
+  if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
+  const guide = value as Record<string, unknown>;
+  return ['key', 'subject', 'topicId', 'topicName', 'chapter', 'board', 'text', 'savedAt'].every(field => typeof guide[field] === 'string');
+}
+export function mergeStrategyGuides(...collections: StrategyGuides[]): StrategyGuides {
+  const result: StrategyGuides = Object.create(null);
+  for (const guides of collections) for (const [key, guide] of Object.entries(guides)) {
+    if (!isStrategyGuide(guide) || guide.key !== key) continue;
+    if (!result[key] || guide.savedAt >= result[key].savedAt) result[key] = guide;
+  }
+  return result;
+}
+export function strategyGuideUrl(guide: Pick<StrategyGuide, 'key'>): string {
+  return `/aprofundamentos?${new URLSearchParams({ guia: guide.key })}`;
+}
 export function readStrategyGuides(uid: string | null): StrategyGuides {
   try {
-    const value = JSON.parse(localStorage.getItem(storageKey(uid)) ?? '{}');
+    const value = JSON.parse(localStorage.getItem(strategyGuidesStorageKey(uid)) ?? '{}');
     if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
-    return Object.fromEntries(Object.entries(value).filter(([key, item]) => {
-      const guide = item as StrategyGuide;
-      return guide && guide.key === key && ['subject', 'topicId', 'topicName', 'chapter', 'board', 'text', 'savedAt'].every(field => typeof guide[field as keyof StrategyGuide] === 'string');
-    })) as StrategyGuides;
+    return mergeStrategyGuides(value);
   } catch { return {}; }
 }
 export function cacheStrategyGuides(uid: string | null, guides: StrategyGuides) {
-  localStorage.setItem(storageKey(uid), JSON.stringify(guides));
+  localStorage.setItem(strategyGuidesStorageKey(uid), JSON.stringify(guides));
+  window.dispatchEvent(new CustomEvent(STRATEGY_GUIDES_CHANGED, { detail: uid }));
 }
 export async function loadStrategyGuides(uid: string): Promise<StrategyGuides> {
   const snapshot = await getDocs(collection(db, 'users', uid, 'strategyGuides'));
-  return Object.fromEntries(snapshot.docs.map(item => { const guide = item.data() as StrategyGuide; return [guide.key, guide]; }));
+  const guides: StrategyGuides = Object.create(null);
+  for (const item of snapshot.docs) { const guide = item.data(); if (isStrategyGuide(guide)) guides[guide.key] = guide; }
+  return guides;
 }
 export async function saveStrategyGuide(uid: string, guide: StrategyGuide) {
   await setDoc(doc(db, 'users', uid, 'strategyGuides', encodeURIComponent(guide.key)), guide);
