@@ -1,5 +1,5 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { MemoryRouter } from 'react-router-dom';
+import { Link, MemoryRouter } from 'react-router-dom';
 import { beforeEach, describe, expect, it, vi } from 'vitest';
 import userEvent from '@testing-library/user-event';
 import { interactiveSummaries } from '../data/interactiveSummaries';
@@ -19,7 +19,7 @@ vi.mock('../hooks/useSummaryProgress', () => ({
 }));
 
 describe('restauração do contexto do resumo', () => {
-  beforeEach(() => update.mockClear());
+  beforeEach(() => { update.mockClear(); localStorage.clear(); });
 
   it('abre diretamente a pergunta indicada na URL após recarregar', () => {
     render(<MemoryRouter initialEntries={[rotaCalor]}><Resumos/></MemoryRouter>);
@@ -96,4 +96,12 @@ describe('restauração do contexto do resumo', () => {
     const created = updater({ readSectionIds: [], status: 'nao-iniciado', important: false, answers: [] });
     expect(deriveSummaryErrorEntries({ 'fis-termologia-calor': created }, interactiveSummaries)).toHaveLength(0);
   });
+});
+
+
+it('acompanha outro capítulo pela URL sem precisar desmontar a biblioteca', async () => {
+  const next = interactiveSummaries.find(item => item.id === 'bio-ecologia-introducao')!;
+  render(<MemoryRouter initialEntries={[rotaCalor]}><Link to={`/resumos?summary=${next.id}`}>Trocar capítulo pela navegação</Link><Resumos /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('link', { name: 'Trocar capítulo pela navegação' }));
+  expect(await screen.findByRole('heading', { name: next.title })).toBeInTheDocument();
 });

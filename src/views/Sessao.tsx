@@ -21,6 +21,9 @@ import { SUBJECT_ICONS } from '../prototypes/NucleoInstrumentalPrototype';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
 import { STUDY_ACTION_TYPE_LABELS } from '../lib/studyActionLabels';
+import { QuestionStatement } from '../components/QuestionStatement';
+import { StudyReflectionPanel } from '../components/StudyReflectionPanel';
+import { StudyJourneyLinks } from '../components/StudyJourneyLinks';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -64,7 +67,7 @@ export default function Sessao() {
   const activeUid = user?.uid ?? null;
   const localDate = todayInSaoPaulo();
   const { availability, allocatedActions: dailyPlan, loading: dailyPlanLoading } = useDailyPlan(localDate);
-  const { questions } = useQuestions();
+  const { questions, loading: questionsLoading } = useQuestions();
 
   const [selectedAction, setSelectedAction] = useState<AllocatedStudyAction | null>(null);
   const [subjectFilter, setSubjectFilter] = useState<string | null>(null);
@@ -125,15 +128,14 @@ export default function Sessao() {
 
   // Banco de MC filtrado por tópico para a mini-atividade (ver
   // MINI_ACTIVITY_TYPES), embaralhado e recortado a até MINI_ACTIVITY_SIZE
-  // perguntas. Deliberadamente memoizado só pela identidade da ação
-  // selecionada (não por `questions`): uma vez sorteada a pool para esta
-  // ação, ela não deve se re-embaralhar só porque o banco de questões
-  // terminou de sincronizar com o Firestore no meio da atividade.
+  // perguntas. A primeira carga do banco pode chegar depois do plano: ela
+  // precisa preencher a atividade. Atualizações posteriores do Firestore não
+  // reembaralham uma atividade que já começou.
   const activityPool = useMemo<Question[]>(() => {
     if (!selectedAction || !MINI_ACTIVITY_TYPES.has(selectedAction.type)) return [];
     const candidates = questions.filter((q) => q.topicId === selectedAction.topicId);
     return shuffled(candidates).slice(0, MINI_ACTIVITY_SIZE);
-  }, [selectedAction?.id, selectedAction?.type, selectedAction?.topicId]);
+  }, [selectedAction?.id, selectedAction?.type, selectedAction?.topicId, questionsLoading]);
 
   const [activityIndex, setActivityIndex] = useState(0);
   const [activitySelectedOptionId, setActivitySelectedOptionId] = useState<string | null>(null);
@@ -158,6 +160,7 @@ export default function Sessao() {
   // uma questão MC para o tópico — sem isso, cai no mesmo cronômetro focado
   // e honesto do 'theory' (ver showHonestFocusLabel).
   const wantsMiniActivity = !!selectedAction && MINI_ACTIVITY_TYPES.has(selectedAction.type);
+  const waitingForActivity = wantsMiniActivity && questionsLoading;
   const showMiniActivity = wantsMiniActivity && activityPool.length > 0 && !activityCompleted;
   const showHonestFocusLabel = !!selectedAction && (!wantsMiniActivity || activityPool.length === 0);
 
@@ -478,16 +481,18 @@ export default function Sessao() {
                 <CrivoCore state={coreState} subject={selectedAction.subject} topicId={selectedAction.topicId} size={140} />
               </div>
 
+              <div className="w-full mb-5 space-y-3"><details className="text-left"><summary className="cursor-pointer text-sm font-semibold">Antes de começar: recuperar e explicar o que sei</summary><StudyReflectionPanel topicId={selectedAction.topicId} topicName={selectedAction.topicName} subject={selectedAction.subject} /></details><StudyJourneyLinks topicId={selectedAction.topicId} /></div>
+
               {showHonestFocusLabel && (
                 <p className="text-xs text-text-secondary mb-6 max-w-md">{HONEST_FOCUS_LABEL}</p>
               )}
 
               {showMiniActivity && currentActivityQuestion && (
                 <div className="w-full max-w-xl text-left mb-4">
-                  <p className="text-xs font-semibold uppercase tracking-wide text-action-primary mb-3">
+                  <p className="text-xs font-semibold uppercase tracking-wide text-text-secondary mb-3">
                     Mini-atividade antes do cronômetro • Questão {activityIndex + 1} de {activityPool.length}
                   </p>
-                  <p className="text-base font-medium mb-4 leading-relaxed">{currentActivityQuestion.prompt}</p>
+                  <QuestionStatement question={currentActivityQuestion} />
                   <div className="space-y-2 mb-4">
                     {currentActivityQuestion.options.map((option) => {
                       const isSelected = activitySelectedOptionId === option.id;
@@ -527,7 +532,8 @@ export default function Sessao() {
                 </div>
               )}
 
-              {!showMiniActivity && (
+              {waitingForActivity && <p role="status" className="text-sm text-text-secondary">Carregando questões para este bloco…</p>}
+              {!showMiniActivity && !waitingForActivity && (
                 <>
                   {activityCompleted && activityPool.length > 0 && (
                     <p className="text-xs text-status-success mb-6 max-w-md">

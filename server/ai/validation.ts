@@ -96,11 +96,24 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
   const payload = asObject(body);
 
   switch (task) {
-    case 'socratic':
+    case 'socratic': {
+      const history = payload.history ?? [];
+      if (!Array.isArray(history) || history.length > 12) throw new AiValidationError('O histórico deve conter até 12 mensagens.');
+      let length = 0;
+      const messages = history.map(item => {
+        const message = asObject(item);
+        if (message.role !== 'user' && message.role !== 'assistant') throw new AiValidationError('Papel inválido no histórico.');
+        const content = requiredString(message, 'content', 2000);
+        length += content.length;
+        return { role: message.role, content };
+      });
+      if (length > 12000) throw new AiValidationError('O histórico excede 12.000 caracteres.');
       return {
         question: requiredString(payload, 'question', MAX_LONG_TEXT),
         topic: requiredString(payload, 'topic'),
+        history: messages,
       };
+    }
     case 'content-explanation':
       return {
         topic: requiredString(payload, 'topic'),

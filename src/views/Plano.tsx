@@ -119,9 +119,9 @@ export default function Plano() {
             {warnings.map((warning, index) => (
               <p
                 key={`${warning.code}-${index}`}
-                className="flex items-start text-xs text-amber-300 bg-amber-500/10 border border-amber-500/20 rounded-lg px-3 py-2"
+                className="flex items-start text-xs text-amber-900 dark:text-amber-200 bg-amber-500/10 border border-amber-500/20 rounded-lg px-3 py-2"
               >
-                <AlertTriangle className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0 text-amber-400" />
+                <AlertTriangle className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0 text-amber-800 dark:text-amber-300" />
                 {warning.message}
               </p>
             ))}

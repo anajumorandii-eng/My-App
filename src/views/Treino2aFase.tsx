@@ -1,10 +1,11 @@
-import React, { useEffect, useMemo, useState } from 'react';
+import { StudyExportButton } from '../components/StudyExportButton';
+import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { discursiveQuestions, boardExamStructure } from '../data/discursiveQuestions';
 import { secondPhaseProtocols } from '../data/resolutionStrategies';
 import { useDiscursiveAttempts } from '../hooks/useDiscursiveAttempts';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
-import { requestAiTextStream } from '../lib/aiClient';
+import { registerStudySelfRating } from '../lib/studySelfRating';
+import { aiErrorMessage, requestAiTextStream } from '../lib/aiClient';
 import { AiText } from '../components/AiText';
 import { DiscursiveQuestion } from '../types';
 import {
@@ -26,6 +27,12 @@ import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype
 import { SUBJECT_ICONS } from './Dashboard';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
+
+import { useAuth } from '../context/AuthContext';
+import { useStudyDraft, isText } from '../hooks/useStudyDraft';
+import { StudyDraftNotice } from '../components/StudyDraftNotice';
+import { StudyReflectionPanel } from '../components/StudyReflectionPanel';
+import { StudyJourneyLinks } from '../components/StudyJourneyLinks';
 
 function formatTime(totalSeconds: number) {
   const m = Math.floor(totalSeconds / 60).toString().padStart(2, '0');
@@ -50,6 +57,10 @@ const RATING_LABELS: { value: Rating; label: string; classes: string }[] = [
 ];
 
 export default function Treino2aFase() {
+  const { user } = useAuth();
+  return <DiscursiveTraining key={user?.uid ?? 'guest'} />;
+}
+function DiscursiveTraining() {
   const { attempts, addAttempt, isPersisted, syncError } = useDiscursiveAttempts();
   const { updateMastery, syncing: masterySyncing, syncError: masterySyncError } = useUserMastery();
 
@@ -91,23 +102,29 @@ export default function Treino2aFase() {
   const ambiente = useMemo(() => (materiaDoAmbiente ? ambienteDaMateria(materiaDoAmbiente) : null), [materiaDoAmbiente]);
   useAmbienteDaTela(ambiente);
 
-  const [answer, setAnswer] = useState('');
+  const [answer, setAnswer, answerStatus] = useStudyDraft(`discursiva:${question?.id}:answer`, '', isText);
   const [revealed, setRevealed] = useState(false);
   const [showProtocol, setShowProtocol] = useState(false);
   const [rating, setRating] = useState<Rating | null>(null);
   const [savedFlash, setSavedFlash] = useState(false);
-  const [aiFeedback, setAiFeedback] = useState<string | null>(null);
+  const [aiFeedback, setAiFeedback, feedbackStatus] = useStudyDraft(`discursiva:${question?.id}:feedback`, '', isText);
+  const [feedbackError, setFeedbackError] = useState<string | null>(null);
+  const [savingRating, setSavingRating] = useState(false);
+  const feedbackEpoch = useRef(0);
+  useEffect(() => () => { feedbackEpoch.current++; }, []);
   const [loadingFeedback, setLoadingFeedback] = useState(false);
 
   const [secondsLeft, setSecondsLeft] = useState((question?.suggestedMinutes ?? 15) * 60);
   const [isRunning, setIsRunning] = useState(false);
 
   useEffect(() => {
-    setAnswer('');
     setRevealed(false);
     setShowProtocol(false);
     setRating(null);
-    setAiFeedback(null);
+    feedbackEpoch.current++;
+    setFeedbackError(null);
+    setLoadingFeedback(false);
+    setSavingRating(false);
     setIsRunning(false);
     setSecondsLeft((question?.suggestedMinutes ?? 15) * 60);
   }, [question?.id]);
@@ -129,26 +146,32 @@ export default function Treino2aFase() {
     ? secondPhaseProtocols.find((p) => p.board === question.board && !p.scope.toLowerCase().includes('literatura'))
     : undefined;
 
-  const rate = (value: Rating) => {
-    if (!question || rating) return;
-    setRating(value);
-    addAttempt({
+  const rate = async (value: Rating) => {
+    if (!question || rating || savingRating) return;
+    const epoch = feedbackEpoch.current;
+    setSavingRating(true); setFeedbackError(null);
+    const saved = await addAttempt({
       id: `disc_attempt_${Date.now()}`,
       questionId: question.id,
       topicId: question.topicId,
       selfRating: value,
       date: new Date().toISOString(),
     });
-    updateMastery((items) => items.map((item) => item.topicId === question.topicId
-      ? { ...item, ...applyDiscursiveSelfRatingOutcome(item, value) }
-      : item));
+    if (feedbackEpoch.current !== epoch) return;
+    setSavingRating(false);
+    if (!saved) { setFeedbackError('Não foi possível salvar a avaliação. Sua resposta está preservada; tente novamente.'); return; }
+    setRating(value);
+    const masterySaved = await updateMastery(items => registerStudySelfRating(items, question.topicId, value));
+    if (feedbackEpoch.current !== epoch) return;
+    if (!masterySaved) setFeedbackError('A avaliação foi registrada, mas não foi possível atualizar o domínio. Sua resposta foi preservada.');
     setSavedFlash(true);
     setTimeout(() => setSavedFlash(false), 1500);
   };
 
   const fetchAiFeedback = async () => {
     if (!question || !answer.trim()) return;
-    setLoadingFeedback(true);
+    const epoch = ++feedbackEpoch.current;
+    setLoadingFeedback(true); setFeedbackError(null);
     try {
       let acumulado = '';
       const data = await requestAiTextStream('discursive-feedback', {
@@ -159,13 +182,13 @@ export default function Treino2aFase() {
         studentAnswer: answer,
       }, (delta) => {
         acumulado += delta;
-        setAiFeedback(acumulado);
+        if (feedbackEpoch.current === epoch) setAiFeedback(acumulado);
       });
-      setAiFeedback(data.text);
+      if (feedbackEpoch.current === epoch) setAiFeedback(data.text);
     } catch (error) {
-      console.error('Failed to fetch AI feedback:', error);
+      if (feedbackEpoch.current === epoch) setFeedbackError(aiErrorMessage(error));
     } finally {
-      setLoadingFeedback(false);
+      if (feedbackEpoch.current === epoch) setLoadingFeedback(false);
     }
   };
 
@@ -173,7 +196,7 @@ export default function Treino2aFase() {
   const SubjIcon = SUBJECT_ICONS[question?.subject ?? 'Matemática'] ?? ClipboardEdit;
 
   return (
-    <div className="ni-main">
+    <div className="ni-main" data-study-export>
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>Estudar</span>
@@ -205,8 +228,9 @@ export default function Treino2aFase() {
           Modo demonstração — conecte sua conta Google em "Conexões" para salvar seu histórico de treino.
         </p>
       )}
-      {(syncError || masterySyncError) && <p className="text-xs text-rose-500 mb-2">{syncError || masterySyncError}</p>}
+      {(syncError || masterySyncError) && <p className="text-xs text-rose-800 dark:text-rose-300 mb-2">{syncError || masterySyncError}</p>}
 
+      <div className="mb-4"><StudyExportButton title={`Discursiva — ${question?.topic ?? 'Estudo'}`} /></div>
       {/* Filter bars */}
       <div className="space-y-2 mb-4">
         <div className="ni-subjects" style={{ margin: 0 }}>
@@ -319,8 +343,8 @@ export default function Treino2aFase() {
               </ul>
             )}
             {question.uncertain && question.note && (
-              <div className="flex items-start p-2.5 mt-3 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs">
-                <AlertTriangle className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0 text-amber-400" />
+              <div className="flex items-start p-2.5 mt-3 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-900 dark:text-amber-200 text-xs">
+                <AlertTriangle className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0 text-amber-800 dark:text-amber-300" />
                 <p>{question.note}</p>
               </div>
             )}
@@ -386,6 +410,10 @@ export default function Treino2aFase() {
             </div>
           </div>
 
+          <StudyDraftNotice statuses={[answerStatus, feedbackStatus]} />
+          <details><summary className="text-sm font-semibold cursor-pointer">Antes da resposta: o que lembro e por que escolho esse caminho?</summary><StudyReflectionPanel topicId={question.topicId} topicName={question.topic} subject={question.subject} /></details>
+          <StudyJourneyLinks topicId={question.topicId} />
+          {feedbackError && <p role="alert" className="text-sm text-status-error">{feedbackError}</p>}
           {/* Answer textarea */}
           <div>
             <label htmlFor="answer" className="text-xs font-medium text-[var(--dim)] mb-1.5 block">
@@ -393,8 +421,10 @@ export default function Treino2aFase() {
             </label>
             <textarea
               id="answer"
+              disabled={savingRating}
               value={answer}
-              onChange={(e) => setAnswer(e.target.value)}
+              maxLength={12000}
+              onChange={(e) => { feedbackEpoch.current++; setAnswer(e.target.value); setAiFeedback(''); setLoadingFeedback(false); setFeedbackError(null); setRating(null); }}
               rows={8}
               placeholder="Escreva sua resposta como se estivesse na prova — demonstre o raciocínio e os passos intermediários."
               className="w-full px-4 py-3 rounded-xl border border-[var(--line)] bg-[var(--surface2)] text-xs text-[var(--text)] leading-relaxed focus:outline-none focus:border-[var(--primary)]"
@@ -413,21 +443,21 @@ export default function Treino2aFase() {
           ) : (
             <div className="space-y-4">
               <div className="p-4 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-xs leading-relaxed text-[var(--text)]">
-                <p className="font-semibold text-emerald-400 mb-2">Pontos esperados na resposta</p>
+                <p className="font-semibold text-emerald-800 dark:text-emerald-300 mb-2">Pontos esperados na resposta</p>
                 <ul className="space-y-1.5">
                   {question.modelAnswer.map((m, i) => (
                     <li key={i} className="flex items-start">
-                      <span className="mr-2 text-emerald-400">•</span>
+                      <span className="mr-2 text-emerald-800 dark:text-emerald-300">•</span>
                       <span>{m}</span>
                     </li>
                   ))}
                 </ul>
               </div>
 
-              {!aiFeedback && (
+              {(!aiFeedback || feedbackError) && (
                 <button
                   onClick={fetchAiFeedback}
-                  disabled={loadingFeedback || !answer.trim()}
+                  disabled={loadingFeedback || savingRating || !answer.trim()}
                   className="w-full flex items-center justify-center py-2.5 border border-[var(--primary)] subject-text rounded-xl font-semibold text-xs hover:bg-[var(--surface2)] disabled:opacity-50 transition-colors"
                 >
                   <Sparkles className={`w-3.5 h-3.5 mr-1.5 ${loadingFeedback ? 'animate-pulse' : ''}`} />
@@ -448,9 +478,9 @@ export default function Treino2aFase() {
                 <div className="flex items-center justify-between mb-2">
                   <p className="text-xs font-medium text-[var(--dim)]">Como você avalia sua resposta?</p>
                   {savedFlash && (
-                    <p className="flex items-center text-xs text-emerald-400 font-medium font-mono">
+                    <p className="flex items-center text-xs text-emerald-800 dark:text-emerald-300 font-medium font-mono">
                       <Check className="w-3 h-3 mr-1" />
-                      Salvo
+                      {isPersisted ? 'Salvo' : 'Avaliação nesta sessão'}
                     </p>
                   )}
                   {masterySyncing && <p className="text-[11px] text-[var(--dim)]">Sincronizando domínio...</p>}
@@ -460,7 +490,7 @@ export default function Treino2aFase() {
                     <button
                       key={r.value}
                       onClick={() => rate(r.value)}
-                      disabled={rating !== null}
+                      disabled={rating !== null || savingRating}
                       className="px-3 py-2 rounded-lg text-xs font-semibold border border-[var(--line)] bg-[var(--surface2)] hover:border-[var(--primary)] text-[var(--text)] transition-colors disabled:opacity-60"
                       style={rating === r.value ? { backgroundColor: 'color-mix(in srgb, var(--primary) 18%, transparent)', color: 'var(--text)' } : undefined}
                     >

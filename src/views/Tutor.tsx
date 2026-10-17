@@ -1,5 +1,6 @@
+import { StudyExportButton } from '../components/StudyExportButton';
 import React, { useMemo, useState, useRef, useEffect } from 'react';
-import { useNavigate } from 'react-router-dom';
+import { useNavigate, useSearchParams } from 'react-router-dom';
 import { mockTopics } from '../data/mockData';
 import { Topic } from '../types';
 import { aiErrorMessage, requestAiText, requestAiTextStream } from '../lib/aiClient';
@@ -7,11 +8,18 @@ import { parseContentExplanation, parseAnswerCorrection, ContentExplanation, Ans
 import { AiText } from '../components/AiText';
 import { Brain, Send, Bot, User, Sparkles, BookOpenText, ClipboardCheck, CalendarClock, PencilLine, Lightbulb, Target, School, AlertTriangle, HelpCircle, RotateCcw, type LucideIcon } from 'lucide-react';
 import { useUserMastery } from '../hooks/useUserMastery';
-import { applyDiscursiveSelfRatingOutcome } from '../lib/spacedRepetition';
+import { registerStudySelfRating } from '../lib/studySelfRating';
 import { Panel } from '../components/ui/Panel';
 import { SUBJECT_ICONS } from './Dashboard';
 import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
+
+import { useAuth } from '../context/AuthContext';
+import { useStudyDraft, isText, isBoolean } from '../hooks/useStudyDraft';
+import { StudyDraftNotice } from '../components/StudyDraftNotice';
+import { StudyJourneyLinks } from '../components/StudyJourneyLinks';
+import { StudyReflectionPanel } from '../components/StudyReflectionPanel';
+import { isExplanation, isCorrection, isTutorMessages, conversationHistory, type TutorMessage } from '../lib/tutorWorkspace';
 
 const DISCURSIVE_BOARDS = ['Fuvest', 'Unicamp', 'Unesp', 'Famerp', 'Unifesp'];
 
@@ -34,12 +42,18 @@ function useTopicPicker() {
     });
     return groups;
   }, []);
-  const [topicId, setTopicIdRaw] = useState(mockTopics[0].id);
-  const [subtopic, setSubtopic] = useState('');
+  const [params, setParams] = useSearchParams();
+  const requested = mockTopics.find(item => item.id === params.get('topic'));
+  const [topicId, setTopicIdRaw] = useState(requested?.id ?? mockTopics[0].id);
+  const [subtopic, setSubtopic] = useState(requested?.chapters?.includes(params.get('chapter') ?? '') ? params.get('chapter')! : '');
+  useEffect(() => {
+    if (requested) { setTopicIdRaw(requested.id); setSubtopic(requested.chapters?.includes(params.get('chapter') ?? '') ? params.get('chapter')! : ''); }
+  }, [params.get('topic'), params.get('chapter')]);
   const topic = mockTopics.find((t) => t.id === topicId) ?? mockTopics[0];
   const setTopicId = (id: string) => {
     setTopicIdRaw(id);
     setSubtopic('');
+    setParams({ topic: id });
   };
   const effectiveTopic = subtopic ? `${topic.name} — ${subtopic}` : topic.name;
   return { topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic };
@@ -98,11 +112,11 @@ function CorrectionCard({ correction }: { correction: AnswerCorrection }) {
   return (
     <div className="space-y-3">
       <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-xs text-[var(--text)]">
-        <p className="font-semibold mb-1 flex items-center text-emerald-400"><ClipboardCheck className="w-3.5 h-3.5 mr-1.5" />O que você acertou</p>
+        <p className="font-semibold mb-1 flex items-center text-emerald-800 dark:text-emerald-300"><ClipboardCheck className="w-3.5 h-3.5 mr-1.5" />O que você acertou</p>
         <AiText text={correction.acertos} />
       </div>
       <div className="p-3.5 rounded-xl border border-rose-500/30 bg-rose-500/10 text-xs text-[var(--text)]">
-        <p className="font-semibold mb-1 flex items-center text-[#e08391]"><AlertTriangle className="w-3.5 h-3.5 mr-1.5" />Primeiro ponto de ruptura</p>
+        <p className="font-semibold mb-1 flex items-center text-rose-800 dark:text-rose-300"><AlertTriangle className="w-3.5 h-3.5 mr-1.5" />Primeiro ponto de ruptura</p>
         <AiText text={correction.rupturaPoint} />
       </div>
       <div className="p-3.5 rounded-xl bg-[var(--surface2)] border border-[var(--line)] text-xs text-[var(--text)]">
@@ -118,8 +132,8 @@ function CorrectionCard({ correction }: { correction: AnswerCorrection }) {
         <AiText text={correction.respostaModelo} />
       </div>
       {correction.padraoRecorrente && (
-        <div className="p-3.5 rounded-xl border border-amber-500/30 bg-amber-500/10 text-xs text-amber-300">
-          <p className="font-semibold mb-1 text-amber-400">Padrão recorrente notado</p>
+        <div className="p-3.5 rounded-xl border border-amber-500/30 bg-amber-500/10 text-xs text-amber-900 dark:text-amber-200">
+          <p className="font-semibold mb-1 text-amber-800 dark:text-amber-300">Padrão recorrente notado</p>
           <AiText text={correction.padraoRecorrente} />
         </div>
       )}
@@ -128,14 +142,14 @@ function CorrectionCard({ correction }: { correction: AnswerCorrection }) {
 }
 
 function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic }: ReturnType<typeof useTopicPicker>) {
-  const [question, setQuestion] = useState('');
+  const [question, setQuestion, questionStatus] = useStudyDraft(`tutor:explicar:${topicId}:${subtopic}:question`, '', isText);
   const [loading, setLoading] = useState(false);
-  const [explanation, setExplanation] = useState<ContentExplanation | null>(null);
+  const [explanation, setExplanation, explanationStatus] = useStudyDraft(`tutor:explicar:${topicId}:${subtopic}:explanation`, null, isExplanation);
   const [error, setError] = useState<string | null>(null);
-  const [checkAnswer, setCheckAnswer] = useState('');
+  const [checkAnswer, setCheckAnswer, checkAnswerStatus] = useStudyDraft(`tutor:explicar:${topicId}:${subtopic}:checkAnswer`, '', isText);
   const [checkLoading, setCheckLoading] = useState(false);
-  const [checkCorrection, setCheckCorrection] = useState<AnswerCorrection | null>(null);
-  const [checkRecorded, setCheckRecorded] = useState(false);
+  const [checkCorrection, setCheckCorrection, checkCorrectionStatus] = useStudyDraft(`tutor:explicar:${topicId}:${subtopic}:checkCorrection`, null, isCorrection);
+  const [checkRecorded, setCheckRecorded, checkRecordedStatus] = useStudyDraft(`tutor:explicar:${topicId}:${subtopic}:checkRecorded`, false, isBoolean);
   const { updateMastery, syncing } = useUserMastery();
 
   const explain = async () => {
@@ -179,9 +193,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
 
   const recordCheck = async (rating: 'fraco' | 'mediano' | 'forte') => {
     if (checkRecorded) return;
-    const saved = await updateMastery((items) => items.map((item) => item.topicId === topicId
-      ? { ...item, ...applyDiscursiveSelfRatingOutcome(item, rating) }
-      : item));
+    const saved = await updateMastery(items => registerStudySelfRating(items, topicId, rating));
     if (!saved) {
       setError('Não foi possível salvar a checagem. Tente novamente.');
       return;
@@ -191,11 +203,14 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
 
   return (
     <div className="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1">
+      <StudyDraftNotice statuses={[questionStatus, explanationStatus, checkAnswerStatus, checkCorrectionStatus, checkRecordedStatus]} />
       <div className="flex items-center justify-between flex-wrap gap-2">
         <span className="text-xs font-semibold text-[var(--dim)]">Tópico</span>
         <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
       <textarea
+        aria-label="Questão ou dúvida para estudar"
+        disabled={loading}
         value={question}
         onChange={(e) => setQuestion(e.target.value)}
         rows={2}
@@ -209,7 +224,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       >
         {loading ? 'Explicando...' : 'Explicar'}
       </button>
-      {error && <p className="text-xs text-rose-500">{error}</p>}
+      {error && <p className="text-xs text-rose-800 dark:text-rose-300">{error}</p>}
 
       {explanation && (
         <div className="space-y-3 pt-2">
@@ -229,14 +244,16 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
             <p className="font-semibold mb-1 flex items-center text-[var(--dim)]"><School className="w-3.5 h-3.5 mr-1.5" />Como cai na prova</p>
             <AiText text={explanation.comoCai} />
           </div>
-          <div className="p-3.5 rounded-xl border border-amber-500/30 bg-amber-500/10 text-xs text-amber-300">
-            <p className="font-semibold mb-1 flex items-center text-amber-400"><AlertTriangle className="w-3.5 h-3.5 mr-1.5" />Pegadinha comum</p>
+          <div className="p-3.5 rounded-xl border border-amber-500/30 bg-amber-500/10 text-xs text-amber-900 dark:text-amber-200">
+            <p className="font-semibold mb-1 flex items-center text-amber-800 dark:text-amber-300"><AlertTriangle className="w-3.5 h-3.5 mr-1.5" />Pegadinha comum</p>
             <AiText text={explanation.pegadinha} />
           </div>
           <div className="p-3.5 rounded-xl border border-emerald-500/30 bg-emerald-500/10 text-xs text-[var(--text)]">
-            <p className="font-semibold mb-1 flex items-center text-emerald-400"><HelpCircle className="w-3.5 h-3.5 mr-1.5" />Pergunta de checagem</p>
+            <p className="font-semibold mb-1 flex items-center text-emerald-800 dark:text-emerald-300"><HelpCircle className="w-3.5 h-3.5 mr-1.5" />Pergunta de checagem</p>
             <AiText text={explanation.checagem} />
             <textarea
+              aria-label="Minha resposta à checagem do tutor"
+              disabled={checkLoading}
               value={checkAnswer}
               onChange={(e) => { setCheckAnswer(e.target.value); setCheckCorrection(null); setCheckRecorded(false); }}
               rows={3}
@@ -264,7 +281,7 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
                   </div>
                   <p className="text-[11px] text-[var(--dim)] mt-2">A explicação sozinha não altera seu domínio; esta checagem tem peso calibrado.</p>
                 </div>
-              ) : <p className="text-xs text-emerald-400 font-mono">Checagem registrada no domínio e nas próximas revisões.</p>}
+              ) : <p className="text-xs text-emerald-800 dark:text-emerald-300 font-mono">Checagem registrada no domínio e nas próximas revisões.</p>}
             </div>
           )}
         </div>
@@ -274,11 +291,11 @@ function ExplicarPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
 }
 
 function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic }: ReturnType<typeof useTopicPicker>) {
-  const [question, setQuestion] = useState('');
-  const [answer, setAnswer] = useState('');
-  const [board, setBoard] = useState('');
+  const [question, setQuestion, questionStatus] = useStudyDraft(`tutor:corrigir:${topicId}:${subtopic}:question`, '', isText);
+  const [answer, setAnswer, answerStatus] = useStudyDraft(`tutor:corrigir:${topicId}:${subtopic}:answer`, '', isText);
+  const [board, setBoard, boardStatus] = useStudyDraft(`tutor:corrigir:${topicId}:${subtopic}:board`, '', isText);
   const [loading, setLoading] = useState(false);
-  const [correction, setCorrection] = useState<AnswerCorrection | null>(null);
+  const [correction, setCorrection, correctionStatus] = useStudyDraft(`tutor:corrigir:${topicId}:${subtopic}:correction`, null, isCorrection);
   const [error, setError] = useState<string | null>(null);
 
   const correct = async () => {
@@ -303,6 +320,7 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
 
   return (
     <div className="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1">
+      <StudyDraftNotice statuses={[questionStatus, answerStatus, boardStatus, correctionStatus]} />
       <div className="flex items-center justify-between flex-wrap gap-2">
         <span className="text-xs font-semibold text-[var(--dim)]">Tópico</span>
         <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
@@ -310,8 +328,10 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       <div>
         <label className="text-xs text-[var(--dim)] mb-1 block">Questão (cole o enunciado)</label>
         <textarea
-          value={question}
-          onChange={(e) => setQuestion(e.target.value)}
+          aria-label="Questão ou dúvida para estudar"
+          disabled={loading}
+        value={question}
+          onChange={(e) => { setQuestion(e.target.value); setCorrection(null); }}
           rows={2}
           className="w-full bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
         />
@@ -319,8 +339,10 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       <div>
         <label className="text-xs text-[var(--dim)] mb-1 block">Sua resposta</label>
         <textarea
+          aria-label="Minha resposta para correção"
+          disabled={loading}
           value={answer}
-          onChange={(e) => setAnswer(e.target.value)}
+          onChange={(e) => { setAnswer(e.target.value); setCorrection(null); }}
           rows={4}
           className="w-full bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
         />
@@ -329,8 +351,9 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
         <label htmlFor="tutor-correction-board" className="text-xs text-[var(--dim)] mb-1 block">Banca para critério analítico (opcional)</label>
         <select
           id="tutor-correction-board"
+          disabled={loading}
           value={board}
-          onChange={(e) => setBoard(e.target.value)}
+          onChange={(e) => { setBoard(e.target.value); setCorrection(null); }}
           className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
         >
           <option value="" className="bg-zinc-50 dark:bg-zinc-900 text-zinc-900 dark:text-zinc-100">Objetiva / sem banca específica</option>
@@ -344,20 +367,20 @@ function CorrigirPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, 
       >
         {loading ? 'Corrigindo...' : 'Corrigir resposta'}
       </button>
-      {error && <p className="text-xs text-rose-500">{error}</p>}
+      {error && <p className="text-xs text-rose-800 dark:text-rose-300">{error}</p>}
       {correction && <div className="pt-2"><CorrectionCard correction={correction} /></div>}
     </div>
   );
 }
 
 function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic }: ReturnType<typeof useTopicPicker>) {
-  const [isDiscursive, setIsDiscursive] = useState(false);
-  const [board, setBoard] = useState(DISCURSIVE_BOARDS[0]);
+  const [isDiscursive, setIsDiscursive, isDiscursiveStatus] = useStudyDraft(`tutor:questao:${topicId}:${subtopic}:isDiscursive`, false, isBoolean);
+  const [board, setBoard, boardStatus] = useStudyDraft(`tutor:questao:${topicId}:${subtopic}:board`, DISCURSIVE_BOARDS[0], isText);
   const [generating, setGenerating] = useState(false);
-  const [exercise, setExercise] = useState<string | null>(null);
-  const [answer, setAnswer] = useState('');
+  const [exercise, setExercise, exerciseStatus] = useStudyDraft(`tutor:questao:${topicId}:${subtopic}:${isDiscursive}:${board}:exercise`, '', isText);
+  const [answer, setAnswer, answerStatus] = useStudyDraft(`tutor:questao:${topicId}:${subtopic}:${isDiscursive}:${board}:answer`, '', isText);
   const [correcting, setCorrecting] = useState(false);
-  const [correction, setCorrection] = useState<AnswerCorrection | null>(null);
+  const [correction, setCorrection, correctionStatus] = useStudyDraft(`tutor:questao:${topicId}:${subtopic}:${isDiscursive}:${board}:correction`, null, isCorrection);
   const [error, setError] = useState<string | null>(null);
 
   const generate = async (transfer: boolean) => {
@@ -407,18 +430,20 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
 
   return (
     <div className="p-5 sm:p-6 space-y-4 overflow-y-auto flex-1">
+      <StudyDraftNotice statuses={[isDiscursiveStatus, boardStatus, exerciseStatus, answerStatus, correctionStatus]} />
       <div className="flex items-center justify-between flex-wrap gap-2">
         <span className="text-xs font-semibold text-[var(--dim)]">Tópico</span>
         <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
       <div className="flex items-center gap-3 flex-wrap">
         <label className="flex items-center text-xs text-[var(--text)] gap-2">
-          <input type="checkbox" checked={isDiscursive} onChange={(e) => setIsDiscursive(e.target.checked)} />
+          <input type="checkbox" checked={isDiscursive} disabled={generating || correcting} onChange={(e) => setIsDiscursive(e.target.checked)} />
           Questão discursiva (2ª fase)
         </label>
         {isDiscursive && (
           <select
             aria-label="Banca da questão discursiva"
+            disabled={generating || correcting}
             value={board}
             onChange={(e) => setBoard(e.target.value)}
             className="bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-lg px-2.5 py-1 text-xs outline-none focus:border-[var(--primary)]"
@@ -429,12 +454,12 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
       </div>
       <button
         onClick={() => generate(false)}
-        disabled={generating}
+        disabled={generating || correcting}
         className="px-4 py-2 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
       >
         {generating ? 'Gerando...' : 'Gerar questão'}
       </button>
-      {error && <p className="text-xs text-rose-500">{error}</p>}
+      {error && <p className="text-xs text-rose-800 dark:text-rose-300">{error}</p>}
 
       {exercise && (
         <div className="space-y-3 pt-2">
@@ -444,15 +469,17 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
           <div>
             <label className="text-xs text-[var(--dim)] mb-1 block">Sua resposta</label>
             <textarea
-              value={answer}
-              onChange={(e) => setAnswer(e.target.value)}
+              aria-label="Minha resposta para correção"
+          disabled={correcting || generating}
+          value={answer}
+              onChange={(e) => { setAnswer(e.target.value); setCorrection(null); }}
               rows={4}
               className="w-full bg-[var(--surface2)] border border-[var(--line)] text-[var(--text)] rounded-xl px-4 py-2.5 text-xs outline-none focus:border-[var(--primary)]"
             />
           </div>
           <button
             onClick={correct}
-            disabled={correcting || !answer.trim()}
+            disabled={correcting || generating || !answer.trim()}
             className="px-4 py-2 bg-[var(--action-primary)] text-[var(--text-inverse)] disabled:opacity-50 rounded-lg text-xs font-semibold transition-opacity"
           >
             {correcting ? 'Corrigindo...' : 'Corrigir resposta'}
@@ -465,7 +492,7 @@ function QuestaoPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, s
           <CorrectionCard correction={correction} />
           <button
             onClick={() => generate(true)}
-            disabled={generating}
+            disabled={generating || correcting}
             className="flex items-center px-4 py-2 border border-[var(--primary)] subject-text rounded-lg text-xs font-semibold hover:bg-[var(--surface2)] transition-colors"
           >
             <RotateCcw className="w-3.5 h-3.5 mr-1.5" />
@@ -495,17 +522,11 @@ function RevisaoPanel() {
   );
 }
 
-interface Message {
-  id: string;
-  sender: 'ai' | 'user';
-  text: string;
-}
-
 function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, setSubtopic, effectiveTopic }: ReturnType<typeof useTopicPicker>) {
-  const [input, setInput] = useState('');
-  const [messages, setMessages] = useState<Message[]>([
-    { id: '1', sender: 'ai', text: `Olá! Qual dúvida sobre ${topic.name} você quer destravar pensando junto comigo?` },
-  ]);
+  const [input, setInput, inputStatus] = useStudyDraft(`tutor:duvida:${topicId}:${subtopic}:input`, '', isText);
+  const [messages, setMessages, messagesStatus] = useStudyDraft<TutorMessage[]>(`tutor:duvida:${topicId}:${subtopic}:messages`, [
+    { id: '1', sender: 'ai', text: `Olá! O que você lembra sobre ${effectiveTopic}, antes de consultar o material? Explique do seu jeito para começarmos pelo seu raciocínio.` },
+  ], isTutorMessages);
   const [isLoading, setIsLoading] = useState(false);
   const scrollRef = useRef<HTMLDivElement>(null);
 
@@ -515,28 +536,28 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
 
   const handleSend = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim()) return;
-    const userMessage: Message = { id: Date.now().toString(), sender: 'user', text: input };
+    if (!input.trim() || isLoading) return;
+    const userMessage: TutorMessage = { id: Date.now().toString(), sender: 'user', text: input };
     // A bolha da resposta nasce vazia e vai sendo preenchida conforme o texto
     // chega — antes eram até dois minutos e meio de espera antes de a aluna
     // ver qualquer coisa.
     const respostaId = `${Date.now()}-ai`;
-    setMessages((prev) => [...prev, userMessage, { id: respostaId, sender: 'ai', text: '' }]);
+    setMessages((prev) => [...prev, userMessage, { id: respostaId, sender: 'ai', text: '', state: 'pending' }]);
     setInput('');
     setIsLoading(true);
 
-    const escreverNaBolha = (texto: string) =>
-      setMessages((prev) => prev.map((m) => (m.id === respostaId ? { ...m, text: texto } : m)));
+    const escreverNaBolha = (texto: string, state: TutorMessage['state'] = 'pending') =>
+      setMessages((prev) => prev.map((m) => (m.id === respostaId ? { ...m, text: texto, state } : m)));
 
     try {
       let acumulado = '';
-      const data = await requestAiTextStream('socratic', { question: userMessage.text, topic: effectiveTopic }, (delta) => {
+      const data = await requestAiTextStream('socratic', { question: userMessage.text, topic: effectiveTopic, history: conversationHistory(messages) }, (delta) => {
         acumulado += delta;
         escreverNaBolha(acumulado);
       });
-      escreverNaBolha(data.text || acumulado || 'Ocorreu um erro ao processar a resposta.');
+      escreverNaBolha(data.text || acumulado || 'Ocorreu um erro ao processar a resposta.', 'complete');
     } catch (error) {
-      escreverNaBolha(aiErrorMessage(error));
+      escreverNaBolha(aiErrorMessage(error), 'error');
     } finally {
       setIsLoading(false);
     }
@@ -552,6 +573,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
         <TopicSelect topicsBySubject={topicsBySubject} topicId={topicId} onChange={setTopicId} topic={topic} subtopic={subtopic} setSubtopic={setSubtopic} />
       </div>
 
+      <div className="px-5 py-2"><StudyDraftNotice statuses={[inputStatus, messagesStatus]} /></div>
       <div ref={scrollRef} className="flex-1 overflow-y-auto p-5 space-y-4">
         {messages.map((msg) => (
           <div
@@ -571,7 +593,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
                   ? 'bg-[var(--action-primary)] text-[var(--text-inverse)]'
                   : 'bg-[var(--surface2)] text-[var(--text)] border border-[var(--line)]'
               }`}>
-                {msg.sender === 'user' ? <p className="whitespace-pre-wrap">{msg.text}</p> : <AiText text={msg.text} />}
+                {msg.sender === 'user' ? <p className="whitespace-pre-wrap">{msg.text}</p> : <><AiText text={msg.text} />{msg.state === 'pending' && !isLoading && <p className="mt-2 text-status-warning">Resposta interrompida. Envie uma mensagem para retomar a conversa.</p>}</>}
               </div>
             </div>
           </div>
@@ -597,6 +619,8 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
         <form onSubmit={handleSend} className="relative flex items-center">
           <input
             type="text"
+            aria-label="Sua explicação para o tutor"
+            maxLength={12000}
             value={input}
             onChange={(e) => setInput(e.target.value)}
             placeholder="Descreva seu raciocínio ou responda à pergunta do tutor..."
@@ -617,6 +641,7 @@ function DuvidaPanel({ topicsBySubject, topicId, setTopicId, topic, subtopic, se
 }
 
 export default function Tutor() {
+  const { user } = useAuth();
   const [mode, setMode] = useState<Mode>('duvida');
   const picker = useTopicPicker();
   const SubIcon = SUBJECT_ICONS[picker.topic.subject] ?? Brain;
@@ -627,7 +652,7 @@ export default function Tutor() {
   useAmbienteDaTela(ambiente);
 
   return (
-    <div className="ni-main">
+    <div className="ni-main" data-study-export>
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>Biblioteca</span>
@@ -653,6 +678,7 @@ export default function Tutor() {
         </div>
       </div>
 
+      <div className="mb-4"><StudyExportButton title={`Tutor — ${picker.effectiveTopic}`} /></div>
       {/* Mode selectors */}
       <div className="ni-subjects">
         {MODES.map((m) => {
@@ -674,12 +700,14 @@ export default function Tutor() {
         })}
       </div>
 
+      <details className="mb-4"><summary className="cursor-pointer text-sm font-semibold">Registrar o que lembro e como estou entendendo</summary><StudyReflectionPanel topicId={picker.topicId} topicName={picker.topic.name} subject={picker.topic.subject} /></details>
+      <div className="mb-4"><StudyJourneyLinks topicId={picker.topicId} chapter={picker.subtopic || undefined} /></div>
       {/* Panel container */}
-      <Panel subject={picker.topic.subject} className="ni-panel flex flex-col h-[560px] overflow-hidden">
-        {mode === 'duvida' && <DuvidaPanel {...picker} />}
-        {mode === 'explicar' && <ExplicarPanel {...picker} />}
-        {mode === 'corrigir' && <CorrigirPanel {...picker} />}
-        {mode === 'questao' && <QuestaoPanel {...picker} />}
+      <Panel subject={picker.topic.subject} className="ni-panel flex flex-col min-h-[560px] max-h-[85vh] overflow-hidden">
+        {mode === 'duvida' && <DuvidaPanel key={`${user?.uid ?? 'guest'}:${picker.topicId}:${picker.subtopic}`} {...picker} />}
+        {mode === 'explicar' && <ExplicarPanel key={`${user?.uid ?? 'guest'}:${picker.topicId}:${picker.subtopic}`} {...picker} />}
+        {mode === 'corrigir' && <CorrigirPanel key={`${user?.uid ?? 'guest'}:${picker.topicId}:${picker.subtopic}`} {...picker} />}
+        {mode === 'questao' && <QuestaoPanel key={`${user?.uid ?? 'guest'}:${picker.topicId}:${picker.subtopic}`} {...picker} />}
         {mode === 'revisao' && <RevisaoPanel />}
       </Panel>
     </div>

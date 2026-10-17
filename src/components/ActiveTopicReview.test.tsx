@@ -1,9 +1,10 @@
 import { fireEvent, render, screen } from '@testing-library/react';
-import { describe, expect, it, vi } from 'vitest';
+import { beforeEach, describe, expect, it, vi } from 'vitest';
 import { ActiveTopicReview } from './ActiveTopicReview';
 import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
 import type { Question } from '../types';
 const prompt = mockTopicDiscursivePrompts[0];
+beforeEach(() => localStorage.clear());
 const question: Question = { id: 'real', topicId: prompt.topicId, subject: prompt.subject, chapter: prompt.chapter, prompt: 'Escolha a proporção.', options: [{ id: 'a', text: 'Direta' }, { id: 'b', text: 'Inversa' }], correctOptionId: 'a', explanation: 'Multiplicar uma grandeza multiplica a outra pelo mesmo fator.', difficulty: 'easy', examSource: { board: 'COMVEST', year: 2026 } };
 describe('revisão com evidência', () => {
   it.each(['a', 'b'])('exige recuperação e aplicação e explica o gabarito para resposta %s', async answer => {

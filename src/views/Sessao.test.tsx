@@ -94,6 +94,19 @@ describe('Sessao', () => {
     vi.clearAllMocks();
   });
 
+  it('preenche a atividade quando o banco chega depois do plano sem perder as figuras', async () => {
+    dailyPlanHook.mockReturnValue(planWith([makeAction({ type: 'practice', topicId: 'bio_genetica' })]));
+    masteryHook.mockReturnValue({ mastery: [], updateMastery: vi.fn().mockResolvedValue(true), isPersisted: true });
+    questionsHook.mockReturnValue({ questions: [], loading: true });
+    const rendered = renderSessao();
+    await screen.findByText('Carregando questões para este bloco…');
+    const question = makeQuestion({ topicId: 'bio_genetica', prompt: 'Interprete o mapa.', figures: [{ url: '/mapa-original.png' }] });
+    questionsHook.mockReturnValue({ questions: [question], loading: false });
+    rendered.rerender(<MemoryRouter><Sessao /></MemoryRouter>);
+    expect(await screen.findByText('Interprete o mapa.')).toBeInTheDocument();
+    expect(screen.getByRole('img', { name: 'Figura 1 da questão' })).toHaveAttribute('src', '/mapa-original.png');
+  });
+
   it('mostra um aviso não bloqueante e cai para a primeira ação do plano quando ?topic= não existe em dailyPlan', async () => {
     const theoryAction = makeAction({ id: 'genetics', type: 'theory', topicId: 'bio-genetics', topicName: 'Genética Molecular' });
     dailyPlanHook.mockReturnValue(planWith([theoryAction]));

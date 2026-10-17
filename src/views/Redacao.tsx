@@ -1,7 +1,11 @@
+import { StudyExportButton } from '../components/StudyExportButton';
 import { EssayReviewAudit, type EssayAudit } from '../components/EssayReviewAudit';
 import { EssayWorkshop } from '../components/EssayWorkshop';
 import { emptyEssayPlan } from '../data/essayWorkshop';
 import { readEssayCurrent, readEssayVersions, essayCorrectionQuestion, type EssayVersion } from '../lib/essayWorkspace';
+import { useStudyDraft } from '../hooks/useStudyDraft';
+import { isCorrection } from '../lib/tutorWorkspace';
+import { StudyDraftNotice } from '../components/StudyDraftNotice';
 import { useAuth } from '../context/AuthContext';
 import React, { useState, useRef, useEffect } from 'react';
 import {
@@ -43,7 +47,7 @@ function EssayEditor({ scope }: { scope: string }) {
   const [versions, setVersions] = useState(() => readEssayVersions(versionsKey));
   const [audit, setAudit] = useState<EssayAudit>({});
   const [saveMessage, setSaveMessage] = useState('');
-  const [rewriteCorrection, setRewriteCorrection] = useState<AnswerCorrection | null>(null);
+  const [rewriteCorrection, setRewriteCorrection, rewriteCorrectionStatus] = useStudyDraft('redacao:rewriteCorrection', null, isCorrection);
   const correctionEpoch = useRef(0);
   useEffect(() => () => { correctionEpoch.current++; }, []);
   const invalidate = () => { setAudit({}); correctionEpoch.current++; setCorrection(null); setRewriteCorrection(null); setPracticeError(null); setSaveMessage(''); };
@@ -54,9 +58,15 @@ function EssayEditor({ scope }: { scope: string }) {
   const [theme, setTheme] = useState(savedWorkspace.theme);
   const [draft, setDraft] = useState(savedWorkspace.draft);
   const [rewrite, setRewrite] = useState(savedWorkspace.rewrite);
-  const [correction, setCorrection] = useState<AnswerCorrection | null>(null);
+  const [correction, setCorrection, correctionStatus] = useStudyDraft('redacao:correction', null, isCorrection);
   const [correcting, setCorrecting] = useState(false);
   const [practiceError, setPracticeError] = useState<string | null>(null);
+
+  const [autoSaveStatus, setAutoSaveStatus] = useState('empty');
+  useEffect(() => {
+    try { localStorage.setItem(currentKey, JSON.stringify({ board, theme, draft, rewrite, plan })); setAutoSaveStatus('saved'); }
+    catch { setAutoSaveStatus('unavailable'); }
+  }, [currentKey, board, theme, draft, rewrite, plan]);
 
   const saveDraft = () => {
     setSaveMessage(''); setPracticeError(null);
@@ -97,7 +107,7 @@ function EssayEditor({ scope }: { scope: string }) {
   const PenIcon = SUBJECT_ICONS['Português'] ?? PenLine;
 
   return (
-    <div className="ni-main">
+    <div className="ni-main" data-study-export>
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>REDAÇÃO</span>
@@ -123,6 +133,8 @@ function EssayEditor({ scope }: { scope: string }) {
         </div>
       </div>
 
+      <div className="mb-4"><StudyDraftNotice statuses={[autoSaveStatus, correctionStatus, rewriteCorrectionStatus]} /><p className="text-xs text-[var(--dim)]">O rascunho atual é salvo automaticamente. Use “Salvar rascunho” para criar uma versão no histórico.</p></div>
+      <div className="mb-4"><StudyExportButton title={`Redação — ${theme || board}`} /></div>
       {/* Tabs */}
       <div className="ni-subjects">
         {TABS.map((t) => {
@@ -312,14 +324,14 @@ function EssayEditor({ scope }: { scope: string }) {
             </p>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <Panel subject="Biologia" className="ni-panel p-5">
-                <p className="text-xs font-semibold text-emerald-400 mb-2 flex items-center">
+                <p className="text-xs font-semibold text-emerald-800 dark:text-emerald-300 mb-2 flex items-center">
                   <CheckCircle2 className="w-3.5 h-3.5 mr-1.5" />
                   Produtivo
                 </p>
                 <ul className="space-y-1.5">
                   {repertoireGuidance.productive.map((p, i) => (
                     <li key={i} className="text-xs text-[var(--dim)] flex items-start">
-                      <span className="mr-2 text-emerald-400">•</span>
+                      <span className="mr-2 text-emerald-800 dark:text-emerald-300">•</span>
                       <span>{p}</span>
                     </li>
                   ))}
@@ -371,15 +383,15 @@ function EssayEditor({ scope }: { scope: string }) {
                 >
                   <div className="min-w-0 flex items-center">
                     <h3 className="font-display font-medium text-sm text-[var(--text)] truncate">{b.board}</h3>
-                    {b.uncertain && <AlertTriangle className="w-3.5 h-3.5 ml-2 text-amber-400 shrink-0" />}
+                    {b.uncertain && <AlertTriangle className="w-3.5 h-3.5 ml-2 text-amber-800 dark:text-amber-300 shrink-0" />}
                   </div>
                   <ChevronDown className={`w-3.5 h-3.5 text-[var(--dim)] shrink-0 ml-3 transition-transform ${isExpanded ? 'rotate-180' : ''}`} />
                 </button>
                 {isExpanded && (
                   <div className="px-5 pb-5 pt-1 border-t border-[var(--line)] space-y-3">
                     {b.note && (
-                      <div className="flex items-start p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-300 text-xs">
-                        <AlertTriangle className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0 text-amber-400" />
+                      <div className="flex items-start p-2.5 rounded-lg bg-amber-500/10 border border-amber-500/20 text-amber-900 dark:text-amber-200 text-xs">
+                        <AlertTriangle className="w-3.5 h-3.5 mr-1.5 mt-0.5 shrink-0 text-amber-800 dark:text-amber-300" />
                         <p>{b.note}</p>
                       </div>
                     )}

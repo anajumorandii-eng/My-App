@@ -32,6 +32,21 @@ test('the published question bank has unique and answerable entries', async () =
   }
 });
 
+test('Fuvest 2022 G6PD preserva contexto, mapa e dados necessários sem exibir página inteira', async () => {
+  const question = (await loadQuestions()).find(q => q.id === 'q_real_fuvest_2022_bio')!;
+  assert.match(question.prompt, /Norte = 18 milhões/);
+  assert.match(question.prompt, /áreas mostradas no mapa/);
+  assert.equal(question.statementComplete, true);
+  assert.equal(question.correctOptionId, 'c');
+  assert.equal(question.examSource?.questionNumber, 1);
+  assert.equal(question.examSource?.version, 'V');
+  assert.equal(question.figures?.length, 1);
+  assert.ok(question.examSource?.answerKeyUrl?.includes('gabarito_retificado'));
+  const figure = await stat(path.join(repositoryRoot, 'public', question.figures![0].url));
+  assert.ok(figure.size > 0);
+  assert.match(question.explanation, /0,05 × 18.000.000 = 900.000/);
+});
+
 test('all 90 FUVEST 2025 questions retain their original page images', async () => {
   const questions = await loadQuestions();
   const fuvest2025 = questions.filter(

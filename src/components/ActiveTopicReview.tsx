@@ -3,6 +3,8 @@ import { mockTopicDiscursivePrompts } from '../data/topicDiscursivePrompts';
 import type { Question, TopicDiscursivePrompt } from '../types';
 import { canonicalExamBoard } from '../lib/questionExamFilters';
 import { QuestionStatement } from './QuestionStatement';
+import { useStudyDraft, isText } from '../hooks/useStudyDraft';
+import { StudyDraftNotice } from './StudyDraftNotice';
 
 export function ActiveTopicReview({ topicId, chapter, board, questions, loading = false, onStart, onComplete }: {
   topicId: string; chapter?: string; board: string; questions: Question[]; loading?: boolean; onStart?: () => void;
@@ -18,7 +20,7 @@ export function ActiveTopicReview({ topicId, chapter, board, questions, loading 
   const [saving, setSaving] = useState(false);
   const [saveError, setSaveError] = useState(false);
   const [started, setStarted] = useState(false);
-  const [response, setResponse] = useState('');
+  const [response, setResponse, responseStatus] = useStudyDraft(`revisao:${topicId}:${prompt?.id}:${board}`, '', isText);
   const [revealed, setRevealed] = useState(false);
   const [checks, setChecks] = useState<string[]>([]);
   const [answer, setAnswer] = useState<string | null>(null);
@@ -28,6 +30,7 @@ export function ActiveTopicReview({ topicId, chapter, board, questions, loading 
   const ready = revealed && (!question || answer !== null);
   const correct = question ? answer === question.correctOptionId : false;
   return <section aria-label="Treino de revisão ativa" className="mt-4 space-y-3 border-t border-[var(--line)] pt-3">
+    <StudyDraftNotice statuses={[responseStatus]} />
     <p className="text-xs">1. Recuperar sem consulta (3 min) → 2. Conferir critérios (2 min) → 3. Aplicar em questão (5–10 min).</p>
     <p className="font-semibold">{prompt.prompt}</p>
     <label className="block">Sua explicação sem consulta<textarea className="block w-full rounded border p-2 bg-[var(--surface2)]" value={response} disabled={revealed} onChange={e => setResponse(e.target.value)} /></label>
