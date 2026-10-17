@@ -1,6 +1,7 @@
 import { getFirebaseIdToken } from './auth';
 
 export interface AiTextResponse {
+  serverSources?: import('./studySources').StudySource[];
   text: string;
   requestId?: string;
   provider?: string;

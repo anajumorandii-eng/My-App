@@ -1,3 +1,4 @@
+import { StudyReflectionPanel } from './StudyReflectionPanel';
 import { useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import type { WorkDossier } from '../types/literaryWorks';
@@ -24,9 +25,11 @@ export function WorkStudyContent({ dossier, mode }: { dossier: WorkDossier; mode
         try { printStrategyGuide(content.current, heading); setPrintError(''); }
         catch { setPrintError('Não foi possível abrir a impressão. Tente novamente.'); }
       }}>Imprimir / Salvar em PDF</button>
+      <Link className="text-sm underline" to={`/podcast?work=${encodeURIComponent(dossier.slug)}`}>Estudar esta obra em áudio com fontes</Link>
       <Link className="text-sm underline" to={workLink(mode === 'summary' ? 'estrategias' : 'resumo')}>{mode === 'summary' ? 'Ver estratégias desta obra' : 'Abrir resumo aprofundado'}</Link>
     </div>
     {printError && <p role="alert">{printError}</p>}
+    <StudyReflectionPanel topicId={`obra:${dossier.slug}`} topicName={guide.profile.title} subject="Literatura" />
     <div ref={content} className="space-y-5">
       <h2 className="font-display text-xl">{heading}</h2>
       <p className="text-xs text-[var(--dim)]">Síntese de estudo baseada no dossiê publicado. O resumo inclui desfechos. Edição de referência: {guide.edition.label}</p>

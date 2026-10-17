@@ -10,6 +10,8 @@ export interface StrategyGuide {
   board: string;
   text: string;
   savedAt: string;
+  targetBoards?: string[];
+  studyPacket?: import('./studySources').StudyPacket;
 }
 export type StrategyGuides = Record<string, StrategyGuide>;
 const storageKey = (uid: string | null) => `crivo:strategy-guides:v1:${uid ?? 'guest'}`;

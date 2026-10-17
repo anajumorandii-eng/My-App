@@ -34,3 +34,11 @@ it('encaminha Literatura para o catálogo de Literatura', () => {
   render(<MemoryRouter><PriorityStudyPanel subject="Literatura" /></MemoryRouter>);
   expect(screen.getAllByRole('link', { name: 'Abrir resumos da matéria' })[0]).toHaveAttribute('href', '/resumos?subject=Literatura');
 });
+
+it('permite demonstrar entendimento sem começar por uma lista de exercícios', () => {
+  render(<MemoryRouter><PriorityStudyPanel subject="Biologia" /></MemoryRouter>);
+  expect(screen.getByLabelText('Como vou demonstrar compreensão')).toHaveValue('explicar');
+  expect(screen.getAllByText(/Reconstrua o mecanismo com suas palavras/).length).toBeGreaterThan(0);
+  fireEvent.change(screen.getByLabelText('Como vou demonstrar compreensão'), { target: { value: 'ensinar' } });
+  expect(screen.getAllByText(/Grave ou explique em voz alta/).length).toBeGreaterThan(0);
+});

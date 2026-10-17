@@ -1,6 +1,7 @@
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
 const { generate, auth, loadGuides, saveGuide } = vi.hoisted(() => ({ generate: vi.fn(async () => ({ text: 'Guia do tópico selecionado' })), auth: { user: null as null | { uid: string } }, loadGuides: vi.fn(async () => ({})), saveGuide: vi.fn(async () => {}) }));
+vi.mock('../hooks/useStudyTargets', () => ({ useStudyTargets: () => ({ targets: [], loading: false, error: null }) }));
 vi.mock('../lib/contentCatalog', () => ({ getLocalQuestionBank: async () => [] }));
 vi.mock('../lib/aiClient', () => ({ requestAiTextStream: generate }));
 vi.mock('../context/AuthContext', () => ({ useAuth: () => auth }));
@@ -71,4 +72,12 @@ it('avisa quando a sincronização falha e recupera a cópia local', async () =>
   first.unmount();
   render(<StrategyExplorer />);
   expect(await screen.findByText('Guia do tópico selecionado')).toBeTruthy();
+});
+
+it('usa a autoexplicação escrita para orientar o aprofundamento sem supor que ouviu áudio', async () => {
+  render(<StrategyExplorer />);
+  fireEvent.change(screen.getByRole('textbox', { name: /Antes de consultar/ }), { target: { value: 'Lembro a regra, mas não entendo por que funciona.' } });
+  fireEvent.click(screen.getByRole('button', { name: 'Aprofundar este tópico e sua cobrança' }));
+  await waitFor(() => expect(generate).toHaveBeenCalled());
+  expect(generate).toHaveBeenCalledWith('review-tip', expect.objectContaining({ learnerReflection: expect.stringContaining('não entendo por que funciona') }), expect.any(Function));
 });

@@ -5,7 +5,9 @@ import { OmniRouteProvider, selectOmniRouteModel } from './omniRouteProvider';
 
 test('seleciona o combo deep para tarefas de raciocínio e fast para tarefas leves', () => {
   assert.equal(selectOmniRouteModel('discursive-feedback'), 'juju-deep-v1');
-  assert.equal(selectOmniRouteModel('review-tip'), 'juju-fast-v1');
+  assert.equal(selectOmniRouteModel('review-tip'), 'juju-deep-v1');
+  assert.equal(selectOmniRouteModel('podcast-script'), 'juju-deep-v1');
+  assert.equal(selectOmniRouteModel('method-example'), 'juju-fast-v1');
 });
 
 test('envia uma requisição Chat Completions autenticada ao combo correto', async () => {
@@ -199,8 +201,8 @@ test('recupera erro temporário de streaming antes de emitir texto, sem trocar d
   await stream.return({ text: '', model: 'shared-route' });
 });
 
-test('limita falhas temporárias a duas chamadas e não repete falha de autenticação', async () => {
-  for (const [status, expectedCalls] of [[500, 2], [401, 1]]) {
+test('limita falhas temporárias a duas chamadas por rota e não repete falha de autenticação', async () => {
+  for (const [status, expectedCalls] of [[500, 4], [401, 1], [403, 1]]) {
     let calls = 0;
     const provider = new OmniRouteProvider({ baseUrl: 'https://omniroute.example/v1', apiKey: 'test-secret', fetch: async () => { calls++; return new Response('{}', { status }); } });
     await assert.rejects(provider.generate({ task: 'podcast-script', prompt: 'Explique osmose.' }));

@@ -1,3 +1,4 @@
+import { STUDY_SOURCE_CHAR_LIMIT } from '../../src/lib/studySources';
 import { DEFAULT_PODCAST_SETTINGS, PODCAST_FORMATS, PODCAST_LEVELS, PODCAST_PACES, PODCAST_TONES, PODCAST_HOST_STYLES } from '../../src/lib/podcastConfig';
 import { AiValidationError } from './errors';
 import { AiTask } from './types';
@@ -38,6 +39,13 @@ function optionalString(payload: Payload, field: string, maxLength = MAX_LONG_TE
     throw new AiValidationError(`O campo "${field}" excede ${maxLength} caracteres.`);
   }
   return normalized || undefined;
+}
+
+function studyBoards(payload: Payload): string[] {
+  if (payload.targetBoards === undefined) return [];
+  const values = payload.targetBoards;
+  if (!Array.isArray(values) || values.length > 15 || values.some(value => typeof value !== 'string' || !value.trim() || value.length > 100)) throw new AiValidationError('Bancas de estudo inválidas.');
+  return [...new Set(values.map(value => (value as string).trim()))];
 }
 
 function requiredBoolean(payload: Payload, field: string): boolean {
@@ -197,7 +205,9 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
         hostStyle: choice('hostStyle', PODCAST_HOST_STYLES, defaults.hostStyle),
         cohostStyle: choice('cohostStyle', PODCAST_HOST_STYLES, defaults.cohostStyle),
         focus: optionalString(payload, 'focus', 2000),
-        sourceText: optionalString(payload, 'sourceText', 12000),
+        sourceText: optionalString(payload, 'sourceText', STUDY_SOURCE_CHAR_LIMIT),
+        targetBoards: studyBoards(payload),
+        learnerReflection: optionalString(payload, 'learnerReflection', 6000),
         exam: optionalString(payload, 'exam', 100) ?? 'Geral',
         title: requiredString(payload, 'title'),
         subject: requiredString(payload, 'subject'),
@@ -214,7 +224,9 @@ export function validateAiPayload(task: AiTask, body: unknown): Payload {
     case 'review-tip':
       return {
         guideMode: optionalString(payload, 'guideMode', 30),
-        referenceText: optionalString(payload, 'referenceText', MAX_LONG_TEXT),
+        referenceText: optionalString(payload, 'referenceText', STUDY_SOURCE_CHAR_LIMIT),
+        targetBoards: studyBoards(payload),
+        learnerReflection: optionalString(payload, 'learnerReflection', 6000),
         board: optionalString(payload, 'board', MAX_SHORT_TEXT),
         chapter: optionalString(payload, 'chapter', MAX_SHORT_TEXT),
         chapters: optionalString(payload, 'chapters', 6000),

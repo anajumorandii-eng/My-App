@@ -41,6 +41,6 @@ test('respeita a rota compartilhada configurada em produção para podcasts', ()
 
 test('rotas específicas prevalecem sobre a configuração compartilhada', () => {
   const provider = createAiProvider({ AI_PROVIDER: 'omniroute', OMNIROUTE_API_KEY: 'secret-test-key', OMNIROUTE_BASE_URL: 'https://omniroute.test/v1', OMNIROUTE_MODEL: 'shared-text-route', AI_DEEP_MODEL: 'reasoning-route', AI_FAST_MODEL: 'short-text-route' });
-  assert.equal(provider.modelForTask?.('podcast-script'), 'short-text-route');
+  assert.equal(provider.modelForTask?.('podcast-script'), 'reasoning-route');
   assert.equal(provider.modelForTask?.('content-explanation'), 'reasoning-route');
 });

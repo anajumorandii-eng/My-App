@@ -29,7 +29,7 @@ test('toda resposta leva os cabeçalhos de proteção básicos', async () => {
     assert.equal(res.headers.get('x-frame-options'), 'DENY');
     assert.equal(res.headers.get('content-security-policy'), "frame-ancestors 'none'");
     assert.equal(res.headers.get('referrer-policy'), 'strict-origin-when-cross-origin');
-    assert.equal(res.headers.get('permissions-policy'), 'camera=(), microphone=(), geolocation=(), payment=(), usb=()');
+    assert.equal(res.headers.get('permissions-policy'), 'camera=(), microphone=(self), geolocation=(), payment=(), usb=()');
   });
 });
 

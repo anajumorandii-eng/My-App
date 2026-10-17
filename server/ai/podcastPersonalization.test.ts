@@ -12,7 +12,7 @@ test('podcast preserva duração, participantes, didática e fontes na geração
   assert.match(prompt, /1560/);
 });
 test('podcast rejeita configurações inválidas e fontes exageradas', () => {
-  for (const settings of [{ speakers: 3 }, { durationMinutes: 100 }, { durationMinutes: 2.5 }, { format: 'x' }, { sourceText: 'x'.repeat(12001) }]) {
+  for (const settings of [{ speakers: 3 }, { durationMinutes: 100 }, { durationMinutes: 2.5 }, { format: 'x' }, { sourceText: 'x'.repeat(24001) }]) {
     assert.throws(() => validateAiPayload('podcast-script', { ...base, ...settings }));
   }
 });
@@ -26,4 +26,23 @@ test('aceita combinação de títulos de três fontes longas', () => {
   const topic = Array.from({ length: 3 }, () => 'Fisiologia e mecanismos de coordenação, sinalização e regulação do organismo '.repeat(2)).join(', ');
   assert.ok(topic.length > 300 && topic.length < 1200);
   assert.equal(validateAiPayload('podcast-script', { ...base, topic }).topic, topic.trim());
+});
+
+test('aprofundamento multibanca mantém fontes e exige mecanismo, limites e recuperação', () => {
+  const payload = validateAiPayload('podcast-script', { ...base, targetBoards: ['Fuvest', 'Unicamp', 'UNESP'], level: 'avancado', sourceText: '[F1] Questão fornecida' });
+  const prompt = buildAiPrompt('podcast-script', payload);
+  assert.match(prompt, /Fuvest, Unicamp, UNESP/);
+  assert.match(prompt, /mecanismo causal/);
+  assert.match(prompt, /recuperação sem consulta/);
+  assert.match(prompt, /F1/);
+  assert.doesNotThrow(() => validateAiPayload('podcast-script', { ...base, targetBoards: [] }));
+  assert.throws(() => validateAiPayload('podcast-script', { ...base, targetBoards: ['x'.repeat(101)] }));
+});
+
+test('a reflexão orienta perguntas sobre o entendimento, sem simular audição ou diagnóstico', () => {
+  const payload = validateAiPayload('podcast-script', { ...base, learnerReflection: 'Lembro o nome, mas não consigo explicar o mecanismo.' });
+  const prompt = buildAiPrompt('podcast-script', payload);
+  assert.match(prompt, /comparar a explicação inicial e a revisada/);
+  assert.match(prompt, /Áudio não transcrito não foi ouvido/);
+  assert.match(prompt, /não consigo explicar o mecanismo/);
 });
