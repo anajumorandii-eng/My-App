@@ -10,6 +10,7 @@ export interface StrategyGuide {
   board: string;
   text: string;
   savedAt: string;
+  selections?: { topicId: string; topicName: string; chapter: string }[];
   workSlug?: string;
   workUnitId?: string;
   targetBoards?: string[];
@@ -21,6 +22,7 @@ export const STRATEGY_GUIDES_CHANGED = 'crivo:strategy-guides-changed';
 export function isStrategyGuide(value: unknown): value is StrategyGuide {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return false;
   const guide = value as Record<string, unknown>;
+  if (guide.selections !== undefined && (!Array.isArray(guide.selections) || !guide.selections.every(item => item && typeof item === 'object' && ['topicId', 'topicName', 'chapter'].every(field => typeof item[field] === 'string')))) return false;
   return ['key', 'subject', 'topicId', 'topicName', 'chapter', 'board', 'text', 'savedAt'].every(field => typeof guide[field] === 'string');
 }
 export function mergeStrategyGuides(...collections: StrategyGuides[]): StrategyGuides {

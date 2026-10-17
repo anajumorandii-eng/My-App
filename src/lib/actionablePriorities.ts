@@ -1,6 +1,5 @@
 import type { BoardWeight, Topic, TopicMastery } from '../types';
-import { canonicalExamBoard } from './questionExamFilters';
-import { examPriorities } from '../data/examPriorities';
+import { completeTopicEvidence } from './examEvidence';
 import { topicIncidenceWeight } from './topicIncidence';
 import { urgencyOf } from './reviewUrgency';
 
@@ -14,10 +13,8 @@ export function buildActionablePriorities(topics: Topic[], mastery: TopicMastery
     const clamp = (value: number) => Math.min(100, Math.max(0, Number.isFinite(value) ? value : 0));
     const urgency = evidence ? urgencyOf(evidence, now) : 0;
     const boardFactors = (board ? [{ board, weight: 1, phaseFocus: 'ambas' as const }] : targets).map(target => {
-      const reportBoard = examPriorities.flatMap(item => item.byBoard).find(item => canonicalExamBoard(item.board) === canonicalExamBoard(target.board))?.board ?? target.board;
-      const subjectName = topic.subject === 'Português' ? 'Língua Portuguesa' : topic.subject === 'Inglês' ? 'Língua Inglesa' : topic.subject;
-      const specificHistory = Boolean(examPriorities.find(item => item.subject === subjectName)?.byBoard.some(item => canonicalExamBoard(item.board) === canonicalExamBoard(target.board)));
-      return { ...target, specificHistory, history: Math.min(1, Math.max(0, topicIncidenceWeight(topic, reportBoard))) * 15 };
+      const specificHistory = completeTopicEvidence(topic, target.board, target.phaseFocus).length > 0;
+      return { ...target, specificHistory, history: Math.min(1, Math.max(0, topicIncidenceWeight(topic, target.board, target.phaseFocus))) * 15 };
     });
     const totalWeight = boardFactors.reduce((sum, item) => sum + Math.max(0, item.weight), 0);
     const combinedHistory = totalWeight ? boardFactors.reduce((sum, item) => sum + item.history * Math.max(0, item.weight) / totalWeight, 0) : Math.min(1, Math.max(0, topicIncidenceWeight(topic, board))) * 15;

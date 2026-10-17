@@ -91,3 +91,12 @@ it('retorna do guia literário à obra e à unidade que originaram o aprofundame
   open(strategyGuideUrl(literary));
   expect(screen.getByRole('link', { name: 'Voltar à estratégia deste tópico' })).toHaveAttribute('href', '/obras/olhos-dagua?aba=estrategias&unidade=maria');
 });
+
+it('preserva capítulos dos dois tópicos ao voltar do leitor combinado à estratégia', () => {
+  const combined = { ...guide(0), key: 'combined', subject: 'Biologia', topicId: 'bio_ecologia', topicName: 'Ecologia + Evolução', chapter: '', selections: [{ topicId: 'bio_ecologia', topicName: 'Ecologia', chapter: 'Dinâmica de Populações' }, { topicId: 'bio_evolucao', topicName: 'Evolução', chapter: 'Mecanismos da Evolução Biológica' }] };
+  cacheStrategyGuides(null, collection(combined));open(strategyGuideUrl(combined));
+  const url = new URL(screen.getByRole('link', { name: 'Voltar à estratégia deste tópico' }).getAttribute('href')!, 'http://localhost');
+  expect(url.searchParams.get('chapter')).toBe('Dinâmica de Populações');
+  expect(JSON.parse(url.searchParams.get('topics')!)).toEqual([combined.selections[1]]);
+  expect(screen.getByText(/Recortes: Ecologia — Dinâmica de Populações/)).toBeInTheDocument();
+});

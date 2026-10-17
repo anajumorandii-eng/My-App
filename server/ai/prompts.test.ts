@@ -287,3 +287,11 @@ test('aprofundamento literário exige evidência, recorte e recuperação ativa 
   assert.match(prompt, /não um dossiê editorial aprovado/);
   assert.doesNotMatch(prompt, /Domínio atual estimado: 40/);
 });
+
+test('guia combinado pede conexões, limites por tópico e palavras de comando sem atalhos de gabarito', () => {
+  const prompt = buildAiPrompt('review-tip', validateAiPayload('review-tip', { topic: 'Ecologia + Evolução', subject: 'Biologia', guideMode: 'combined-strategy', level: 40, daysSinceReview: 0 }));
+  assert.match(prompt, /Cubra cada recorte explicitamente/);
+  assert.match(prompt, /Palavras-chave não são atalhos de gabarito/);
+  assert.match(prompt, /Não omita silenciosamente um tópico/);
+  assert.doesNotMatch(prompt, /Domínio atual estimado/);
+});

@@ -1,0 +1,218 @@
+[
+  {
+    "id": "enem-2022-d2-cd5",
+    "board": "ENEM",
+    "year": 2022,
+    "documents": [
+      {
+        "kind": "exam",
+        "url": "https://riep.inep.gov.br/bitstreams/481e4c70-e485-4d0b-ac11-82746e24bc16/download",
+        "verified": true,
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "068a960ff3fde64d89484995f1a323676c354ad1efa27c109f09a4bb90619756"
+      },
+      {
+        "kind": "answerKey",
+        "url": "https://riep.inep.gov.br/bitstreams/06c1b02d-a528-4f3d-beb2-8db7048158a7/download",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "2aca83d7cf5e990f63318a525883d2e77ba2d2baf815566efb96287dbf631b11",
+        "verified": true
+      }
+    ],
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "famerp-2025-v1",
+    "board": "FAMERP",
+    "year": 2025,
+    "documents": [
+      {
+        "kind": "exam",
+        "url": "https://documento.vunesp.com.br/documento/stream/NjY1MTk1Nw%3d%3d",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "a5972bd6c1903350e9033e0a0da253eb503f63c33601a06e0cd0983acd3cd290",
+        "verified": true
+      },
+      {
+        "kind": "answerKey",
+        "url": "https://documento.vunesp.com.br/documento/stream/NjY1MTk1MA%3d%3d",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "e0ad3b858d1b6b570c87fb41e174b2b19318185d9d9ae53934764d6ecf6aa964",
+        "verified": true
+      }
+    ],
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "fuvest-2026-v1",
+    "board": "FUVEST",
+    "year": 2026,
+    "documents": [
+      {
+        "kind": "exam",
+        "url": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+        "verified": true
+      },
+      {
+        "kind": "answerKey",
+        "url": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-gabarito.pdf",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "a9e1084a125fa35bcefb875610328c0a8cb9b1a298880f2f0c75b928bd860e8e",
+        "verified": true
+      }
+    ],
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "unesp-2025-v1",
+    "board": "UNESP",
+    "year": 2025,
+    "documents": [
+      {
+        "kind": "exam",
+        "url": "https://documento.vunesp.com.br/documento/stream/NjU5MzI0Mg%3d%3d",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "b2702765445da4a833b6fa06bad063b8d9b4fb9c00773a6f5184f178e43266fa",
+        "verified": true
+      },
+      {
+        "kind": "answerKey",
+        "url": "https://documento.vunesp.com.br/documento/stream/NjU5MzIzOA%3d%3d",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "a70664a5827116c0b90dc3b187c13fe97d942c76ef9660c9812ef36da0ecceaf",
+        "verified": true
+      }
+    ],
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "unicamp-2025-qz",
+    "board": "UNICAMP",
+    "year": 2025,
+    "documents": [
+      {
+        "kind": "exam",
+        "url": "https://www.comvest.unicamp.br/vest2025/F1/f12025Q_Z.pdf",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "41564e9bbd20e03a9b62356c0ccf29b6070bf615b9ac8ecfe660021548cd0710",
+        "verified": true
+      },
+      {
+        "kind": "answerKey",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2024/10/QZ_gabarito_2025_FINAL_site.pdf",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "26cc09a657c54357a84fbe23a6e8af34eb150c6a0012556929a481bf29a3f008",
+        "verified": true
+      }
+    ],
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "unicamp-2026-qx",
+    "board": "UNICAMP",
+    "year": 2026,
+    "documents": [
+      {
+        "kind": "exam",
+        "url": "https://www.comvest.unicamp.br/vest2026/F1/f12026Q_X.pdf",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "8f6955a3d2b373bfdfa872c6dfbf1396e0bf15a938d1eaedf14c626c7e12b253",
+        "verified": true
+      },
+      {
+        "kind": "answerKey",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2025/10/Q_X-gabarito.pdf",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "13c5e846462f6bfd2eee2ba7bdc8fab35c57ea80aeacf1c405a99889f464dc24",
+        "verified": true
+      }
+    ],
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "unifesp-2025-v1",
+    "board": "UNIFESP",
+    "year": 2025,
+    "documents": [
+      {
+        "kind": "exam",
+        "url": "https://documento.vunesp.com.br/documento/stream/NjY1NzAwMw%3d%3d",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "962508178f10fd97e78d1155a6f5fe5ce62d709cd677261d38f79b5617d8af20",
+        "verified": true
+      },
+      {
+        "kind": "answerKey",
+        "url": "https://documento.vunesp.com.br/documento/stream/NjY1Njk5OQ%3d%3d",
+        "status": 200,
+        "pdf": true,
+        "matchesRecordedHash": true,
+        "sha256": "9a22a33dabb7f7b9e8d7a245aceceaf170806f007e41475bc4acc55d6d73d4a7",
+        "verified": true
+      }
+    ],
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "fuvest-2026-biologia-f2",
+    "board": "FUVEST",
+    "year": 2026,
+    "documents": [
+      {
+        "kind": "examAndExpectedAnswers",
+        "url": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-respostas-esperadas-biologia.pdf",
+        "status": 200,
+        "pdf": true,
+        "sha256": "ee361f09557ecfee211f7c23f36932705a35b3f0160646433c0cbf498a61f6b5",
+        "verified": true,
+        "matchesRecordedHash": true
+      }
+    ],
+    "verifiedOn": "2026-10-17"
+  },
+  {
+    "id": "unicamp-2026-biologia-f2",
+    "board": "UNICAMP",
+    "year": 2026,
+    "documents": [
+      {
+        "kind": "examAndExpectedAnswers",
+        "url": "https://www.comvest.unicamp.br/wp-content/uploads/2026/06/F2_2o-dia_CB_S.pdf",
+        "status": 200,
+        "pdf": true,
+        "sha256": "1796eb5652a6f3555705318fd36416e0ec20115e3ef83dbee386ed0bf0d6fbbb",
+        "verified": true,
+        "matchesRecordedHash": true
+      }
+    ],
+    "verifiedOn": "2026-10-17"
+  }
+]

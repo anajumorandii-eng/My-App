@@ -8,7 +8,7 @@ import { interleaveBySubject } from './interleaving';
 // Dentro dos últimos 90 dias antes de uma prova, o plano é puxado para cima
 // em duas camadas: um boost de urgência geral (essa prova está chegando)
 // somado a um boost por tópico, proporcional a quanto aquele tema realmente
-// cai naquela banca (dado real de examPriorities.ts via topicIncidence.ts).
+// aparece nos recortes completos classificados (sinal conservador via topicIncidence.ts).
 // Os dois boosts são calculados por banca ATIVA e ponderados pelo peso que a
 // estudante deu a cada uma (StudentGoals.boardWeights) — assim uma banca de
 // peso baixo com prova perto não sequestra o plano de uma banca prioritária
@@ -31,6 +31,7 @@ const PREREQUISITE_BLOCKED_LEVEL = 50;
 export interface BoardSignal {
   board: string; // nome canônico da banca, como está em examCalendar.ts
   weight: number; // peso que a estudante deu a essa banca
+  phaseFocus?: '1a-fase' | '2a-fase' | 'ambas';
   progress: number; // 0 (longe) a 1 (véspera) da prova mais próxima dessa banca
 }
 
@@ -46,7 +47,7 @@ export function computeBoardSignals(goals: StudentGoals, now: Date = new Date())
     const remaining = daysUntil(exams[0].date, now);
     if (remaining < 0 || remaining > DEADLINE_WINDOW_DAYS) continue;
     const progress = (DEADLINE_WINDOW_DAYS - remaining) / DEADLINE_WINDOW_DAYS;
-    signals.push({ board: exams[0].board, weight: boardWeight.weight, progress });
+    signals.push({ board: exams[0].board, weight: boardWeight.weight, progress, phaseFocus: exams[0].phase === 'unica' ? 'ambas' : exams[0].phase });
   }
   return signals;
 }
@@ -70,7 +71,7 @@ export function examFocusFor(topic: Topic, signals: BoardSignal[]): ExamFocus {
     urgencyTerm = Math.max(urgencyTerm, proximityContribution);
     if (proximityContribution > PROXIMITY_REASON_THRESHOLD) hasProximityReason = true;
 
-    const incidence = Math.min(topicIncidenceWeight(topic, signal.board), 1);
+    const incidence = Math.min(topicIncidenceWeight(topic, signal.board, signal.phaseFocus), 1);
     const incidenceContribution = proximityContribution * incidence;
     incidenceTerm = Math.max(incidenceTerm, incidenceContribution);
     if (incidenceContribution > INCIDENCE_REASON_THRESHOLD) hasIncidenceReason = true;

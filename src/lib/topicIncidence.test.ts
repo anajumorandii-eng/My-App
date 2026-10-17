@@ -1,42 +1,34 @@
 import assert from 'node:assert/strict';
 import test from 'node:test';
 import { topicIncidenceWeight } from './topicIncidence';
-
-test('soma a incidência regional dos temas mapeados para o tópico', () => {
-  const weight = topicIncidenceWeight({ id: 'bio_ecologia', subject: 'Biologia' });
-  assert.ok(Math.abs(weight - 0.185) < 1e-9);
+import { completeTopicEvidence, examEvidenceCohorts } from './examEvidence';
+const ecology = { id: 'bio_ecologia', subject: 'Biologia' };
+test('calcula um sinal reduzido por tamanho da amostra, separando fases sem somar percentuais', () => {
+  // Unicamp: 2/14 nas duas primeiras fases; 2/7 na segunda fase de 2026.
+  const weight = topicIncidenceWeight(ecology, 'Unicamp');
+  assert.ok(Math.abs(weight - (2 / 34 + 2 / 27) / 2) < 1e-9);
+  assert.equal(topicIncidenceWeight(ecology, 'COMVEST'), weight);
+  assert.ok(Math.abs(topicIncidenceWeight(ecology, 'UNICAMP', '1a-fase') - 2 / 34) < 1e-9);
 });
-
-test('soma a incidência específica da banca por cima da regional quando informada', () => {
-  const withoutBoard = topicIncidenceWeight({ id: 'bio_ecologia', subject: 'Biologia' });
-  const withBoard = topicIncidenceWeight({ id: 'bio_ecologia', subject: 'Biologia' }, 'Fuvest');
-  assert.ok(withBoard > withoutBoard);
-  assert.ok(Math.abs(withBoard - (0.185 + 0.166)) < 1e-9);
+test('amostras selecionadas não viram incidência e banca sem dados não herda outra banca', () => {
+  assert.equal(topicIncidenceWeight(ecology, 'FAMERP'), 0);
+  assert.equal(topicIncidenceWeight(ecology, 'UNESP'), 0);
+  assert.equal(topicIncidenceWeight(ecology, 'Banca Inexistente'), 0);
+  assert.ok(topicIncidenceWeight(ecology, 'FUVEST', '2a-fase') > 0);
+  assert.equal(topicIncidenceWeight(ecology, 'FUVEST', '1a-fase'), 0);
 });
-
-test('retorna 0 para um tópico sem temas mapeados no relatório', () => {
-  assert.equal(topicIncidenceWeight({ id: 'bio_botanica', subject: 'Biologia' }), 0);
+test('cada denominador usa apenas questões válidas da matéria e recorte', () => {
+  const rows = completeTopicEvidence(ecology, 'UNICAMP', '1a-fase');
+  assert.deepEqual(rows.map(row => row.total), [7, 7]);
+  const math = { id: 'mat_funcoes', subject: 'Matemática' };
+  const year2025 = completeTopicEvidence(math, 'UNICAMP').find(row => row.cohort.year === 2025)!;
+  assert.ok(year2025.cohort.excludedNumbers.includes(53));
+  assert.equal(year2025.total, 11);
+  for (const cohort of examEvidenceCohorts) for (const subject of cohort.subjects) assert.equal(subject.topics.reduce((sum, topic) => sum + topic.count, 0), subject.total);
 });
-
-test('resolve o alias de assunto (Português -> Língua Portuguesa)', () => {
-  const weight = topicIncidenceWeight({ id: 'por_norma_culta', subject: 'Português' });
-  assert.ok(weight > 0);
-});
-
-test('não quebra com uma banca sem entrada para o assunto', () => {
-  const weight = topicIncidenceWeight({ id: 'bio_ecologia', subject: 'Biologia' }, 'Banca Inexistente');
-  assert.ok(Math.abs(weight - 0.185) < 1e-9);
-});
-
-test('retorna 0 para um tópico desconhecido', () => {
+test('Literatura não herda todos os temas de Português nem duplica incidência por escola', () => {
   assert.equal(topicIncidenceWeight({ id: 'topico_inexistente', subject: 'Biologia' }), 0);
-});
-
-test('não confunde eletrostática com eletrodinâmica nem geografia física com agrária', () => {
-  assert.equal(topicIncidenceWeight({ id: 'fis_eletrostatica', subject: 'Física' }, 'Fuvest'), 0);
-  assert.equal(topicIncidenceWeight({ id: 'geo_fisica_brasil', subject: 'Geografia' }, 'Famerp'), 0);
-});
-test('população urbana usa a referência de população, não a de geografia agrária', () => {
-  const weight = topicIncidenceWeight({ id: 'geo_populacao_urbana_brasil', subject: 'Geografia' }, 'Fuvest');
-  assert.ok(Math.abs(weight - (0.055 + 0.133)) < 1e-9);
+  const literature = completeTopicEvidence({ id: 'por_lit_classica_barroca', subject: 'Português' }, 'UNICAMP');
+  assert.ok(literature.every(row => row.count === 0));
+  assert.ok(literature.every(row => row.total < 12));
 });

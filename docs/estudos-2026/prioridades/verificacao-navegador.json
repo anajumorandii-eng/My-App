@@ -1,0 +1,90 @@
+[
+  {
+    "width": 390,
+    "theme": "light",
+    "passed": true,
+    "pdfContainsSavedGuide": true,
+    "nativePrintCalledInCurrentWindow": true,
+    "errors": [],
+    "accessibility": [
+      {
+        "label": "estratégia com dois tópicos e guia salvo",
+        "violations": []
+      },
+      {
+        "label": "biblioteca: guia combinado recuperado",
+        "violations": []
+      },
+      {
+        "label": "prioridades: prova e fase com evidência da conexão",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "width": 390,
+    "theme": "dark",
+    "passed": true,
+    "pdfContainsSavedGuide": true,
+    "nativePrintCalledInCurrentWindow": true,
+    "errors": [],
+    "accessibility": [
+      {
+        "label": "estratégia com dois tópicos e guia salvo",
+        "violations": []
+      },
+      {
+        "label": "biblioteca: guia combinado recuperado",
+        "violations": []
+      },
+      {
+        "label": "prioridades: prova e fase com evidência da conexão",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "width": 1366,
+    "theme": "light",
+    "passed": true,
+    "pdfContainsSavedGuide": true,
+    "nativePrintCalledInCurrentWindow": true,
+    "errors": [],
+    "accessibility": [
+      {
+        "label": "estratégia com dois tópicos e guia salvo",
+        "violations": []
+      },
+      {
+        "label": "biblioteca: guia combinado recuperado",
+        "violations": []
+      },
+      {
+        "label": "prioridades: prova e fase com evidência da conexão",
+        "violations": []
+      }
+    ]
+  },
+  {
+    "width": 1366,
+    "theme": "dark",
+    "passed": true,
+    "pdfContainsSavedGuide": true,
+    "nativePrintCalledInCurrentWindow": true,
+    "errors": [],
+    "accessibility": [
+      {
+        "label": "estratégia com dois tópicos e guia salvo",
+        "violations": []
+      },
+      {
+        "label": "biblioteca: guia combinado recuperado",
+        "violations": []
+      },
+      {
+        "label": "prioridades: prova e fase com evidência da conexão",
+        "violations": []
+      }
+    ]
+  }
+]

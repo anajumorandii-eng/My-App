@@ -111,7 +111,7 @@ test('examFocusFor não altera nada quando não há sinais de banca', () => {
 });
 
 test('examFocusFor usa o maior sinal entre bancas, não a soma (banca secundária perto não sequestra)', () => {
-  const t = topic({ id: 'bio_ecologia', subject: 'Biologia' }); // tema com incidência real alta em Fuvest
+  const t = topic({ id: 'bio_ecologia', subject: 'Biologia' }); // duas ocorrências num recorte pequeno da segunda fase
   const onlyStrong = examFocusFor(t, [{ board: 'Fuvest', weight: 1, progress: 0.8 }]);
   const strongPlusWeak = examFocusFor(t, [
     { board: 'Fuvest', weight: 1, progress: 0.8 },
@@ -122,7 +122,7 @@ test('examFocusFor usa o maior sinal entre bancas, não a soma (banca secundári
   // combinador é max(), não soma.
   assert.ok(Math.abs(strongPlusWeak.multiplier - onlyStrong.multiplier) < 1e-9);
   assert.ok(onlyStrong.hasProximityReason);
-  assert.ok(onlyStrong.hasIncidenceReason);
+  assert.equal(onlyStrong.hasIncidenceReason, false); // amostra pequena não sustenta o destaque forte
 });
 
 test('examFocusFor não penaliza tópico sem dado de incidência, mas também não o marca como relevante', () => {
@@ -240,4 +240,12 @@ test('generateDailyPlan não desperdiça orçamento de um balde quando falta ite
   const plan = EfficiencyEngine.generateDailyPlan(masteryData, topics, profile(), 60, goals, now);
   assert.equal(plan.length, 1);
   assert.ok(plan[0].reasons.includes('tempo_disponivel'));
+});
+
+ test('sinal de primeira fase não usa a incidência da segunda fase e destaca somente base suficiente', () => {
+  const ecology = topic({ id: 'bio_ecologia', subject: 'Biologia' });
+  const first = examFocusFor(ecology, [{ board: 'FUVEST', weight: 1, progress: 0.8, phaseFocus: '1a-fase' }]);
+  assert.equal(first.multiplier, 1 + 0.8 * 0.3);
+  const english = examFocusFor(topic({ id: 'ing_01', subject: 'Inglês' }), [{ board: 'UNICAMP', weight: 1, progress: 0.8, phaseFocus: '1a-fase' }]);
+  assert.ok(english.hasIncidenceReason);
 });

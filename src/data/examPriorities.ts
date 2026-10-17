@@ -1,3 +1,6 @@
+// LEGADO EM QUARENTENA: os percentuais abaixo não têm denominador nem recorte
+// rastreável por registro. Não usar na interface ou no cálculo de prioridades.
+// Base ativa: examEvidenceCounts.json e src/lib/examEvidence.ts.
 // Fonte: relatório "Anglo Analisa Região Sudeste" — incidência de temas por
 // vestibular nas provas de 2023-2025. Percentuais são o ano mais recente
 // disponível (2025) ou, quando os anos empatam, a leitura geral do gráfico.
