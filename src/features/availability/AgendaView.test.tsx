@@ -45,6 +45,7 @@ vi.mock('../../components/AdaptiveStudyDay', () => ({ default: () => <div>Plano 
 
 vi.mock('../../context/AuthContext', () => ({
   AuthProvider: ({ children }: { children: ReactNode }) => children,
+  useAuth: () => ({ user: null, loading: false, isConnected: false }),
 }));
 
 import AgendaView from './AgendaView';

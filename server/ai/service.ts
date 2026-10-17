@@ -16,6 +16,10 @@ export class AiService {
     private readonly cacheTtlMs = 10 * 60_000,
   ) {}
 
+  describeTask(task: AiGenerationRequest['task']) {
+    return { provider: this.provider.name, requestedModel: this.provider.modelForTask?.(task) ?? this.provider.model };
+  }
+
   async generate(request: AiGenerationRequest): Promise<AiGenerationResult> {
     if (!this.provider.isConfigured) throw new AiUnavailableError();
 

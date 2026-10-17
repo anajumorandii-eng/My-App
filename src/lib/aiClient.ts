@@ -8,6 +8,7 @@ export interface AiTextResponse {
   usage?: { promptTokens?: number; completionTokens?: number; totalTokens?: number };
   fallback?: boolean;
   cached?: boolean;
+  evaluationCapture?: 'inactive' | 'saved' | 'failed';
 }
 
 interface AiErrorBody {
@@ -46,12 +47,13 @@ export async function requestAiText(
     }
     const response = await fetch(`/api/ai/${endpoint}`, {
       method: 'POST',
-      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}` },
+      headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${idToken}`, 'X-Crivo-Source': window.location?.pathname ?? '' },
       body: JSON.stringify(payload),
       signal: controller.signal,
     });
 
     const body = await response.json().catch(() => ({})) as AiTextResponse & AiErrorBody;
+    if (body.evaluationCapture === 'failed') window.dispatchEvent?.(new Event('crivo-evaluation-capture-failed'));
     if (!response.ok) {
       throw new AiRequestError(
         body.error || 'Não foi possível obter uma resposta da IA.',
@@ -117,6 +119,7 @@ export async function requestAiTextStream(
       headers: {
         'Content-Type': 'application/json',
         Accept: 'text/event-stream',
+        'X-Crivo-Source': window.location?.pathname ?? '',
         Authorization: `Bearer ${idToken}`,
       },
       body: JSON.stringify(payload),
@@ -146,6 +149,7 @@ export async function requestAiTextStream(
         buffer = buffer.slice(corte + 2);
         if (bruto.startsWith('data:')) {
           const frame = JSON.parse(bruto.slice(5).trim()) as StreamFrame;
+          if ((frame as AiTextResponse).evaluationCapture === 'failed') window.dispatchEvent?.(new Event('crivo-evaluation-capture-failed'));
           if (frame.error) throw new AiRequestError(frame.error, 502, frame.code, frame.requestId);
           if (frame.delta) onDelta(frame.delta);
           if (frame.done && typeof frame.text === 'string') final = frame as AiTextResponse;

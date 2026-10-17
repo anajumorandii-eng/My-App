@@ -7,6 +7,8 @@ import cookieParser from 'cookie-parser';
 import { google } from 'googleapis';
 import { createAiProvider } from './server/ai/provider';
 import { createAiDailyLimit, createAiRateLimit, MemoryDailyQuotaStore } from './server/ai/rateLimit';
+import { createEvaluationService } from './server/ai/evaluationRuntime';
+import { createEvaluationRouter } from './server/ai/evaluationRoutes';
 import { createAiRouter } from './server/ai/routes';
 import { AiService, parseAiTimeout } from './server/ai/service';
 import { adminAuthMiddleware, firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './server/auth/firebaseAuth';
@@ -74,6 +76,7 @@ app.use(cookieParser());
 // the JUJU fast and deep combos.
 const aiProvider = createAiProvider();
 const aiService = new AiService(aiProvider, parseAiTimeout(process.env.AI_TIMEOUT_MS));
+const aiEvaluation = createEvaluationService(getFirestore(getFirebaseAdminApp()));
 const dailyQuotaStore = process.env.AI_QUOTA_STORE === 'firestore'
   ? new FirestoreDailyQuotaStore(getFirestore(getFirebaseAdminApp()))
   : new MemoryDailyQuotaStore();
@@ -231,11 +234,12 @@ app.get('/api/drive/files', firebaseAuthMiddleware(), createAiRateLimit(), async
 });
 
 // AI routes preserve their public paths and `{ text }` response contract.
-app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics, apostilaReferences));
+app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyLimit({ store: dailyQuotaStore }), createAiRouter(aiService, aiMetrics, apostilaReferences, aiEvaluation));
 // Shares the AI rate limit and daily quota store so narrated playback counts
 // against the same per-user budget as every other AI feature in the app.
 const podcastDailyLimit = createAiDailyLimit({ store: dailyQuotaStore });
 app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), (req, res, next) => req.method === 'POST' ? podcastDailyLimit(req, res, next) : next(), createPodcastAudioRouter(podcastTtsService));
+app.use('/api/ai-evaluation', adminAuthMiddleware(), requireAdmin, createAiRateLimit({ maxRequests: 180 }), createEvaluationRouter(aiEvaluation, dailyQuotaStore));
 app.use('/api/admin', adminAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
 // Painel /admin/conteudo: questões, métodos de estudo e episódios de
 // podcast, antes hardcoded em src/data/mockData.ts, agora administráveis
