@@ -51,6 +51,26 @@ beforeEach(() => {
 });
 
 describe('Questoes — banca, ano e fontes oficiais', () => {
+  it('busca no enunciado sem acentos, preserva os filtros e limpa a resposta anterior', async () => {
+    questionsHook.mockReturnValue({ questions: [
+      { ...QUESTION, id: 'unicamp', examSource: { board: 'UNICAMP', year: 2026 } },
+      { ...QUESTION, id: 'fuvest', prompt: 'Onde ocorre a fotossíntese?', examSource: { board: 'FUVEST', year: 2026 } },
+    ], syncError: null });
+    const user = userEvent.setup();
+    render(<Questoes />);
+    await user.click(screen.getByRole('button', { name: /Citoplasma/ }));
+    await user.type(screen.getByRole('searchbox', { name: 'Buscar questões' }), 'fotossintese');
+    expect(screen.getByText('Onde ocorre a fotossíntese?')).toBeInTheDocument();
+    expect(screen.queryByText(QUESTION.explanation)).not.toBeInTheDocument();
+    expect(screen.getByRole('status')).toHaveTextContent('1 questão encontrada');
+    await user.selectOptions(screen.getByLabelText('Banca'), 'UNICAMP');
+    expect(screen.getByText('Nenhuma questão encontrada para este filtro.')).toBeInTheDocument();
+    expect(screen.queryByText(/O banco carregado não tem nenhuma questão de prova real/)).not.toBeInTheDocument();
+    await user.click(screen.getByRole('button', { name: 'Limpar busca' }));
+    expect(screen.getByText(QUESTION.prompt)).toBeInTheDocument();
+    expect(screen.getByLabelText('Banca')).toHaveValue('UNICAMP');
+  });
+
   it('combina banca/ano e recalcula tópicos, contagens e resposta ao trocar a prova', async () => {
     questionsHook.mockReturnValue({ questions: [
       { ...QUESTION, id: 'comvest25', topicId: 'bio_estrutura_fisio_celular', chapter: 'Membranas Celulares', prompt: 'Prova de 2025', examSource: { board: 'COMVEST', year: 2025 } },

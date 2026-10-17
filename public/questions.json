@@ -11052,7 +11052,7 @@
     "chapter": "Herança Sexual",
     "topicId": "bio_genetica",
     "subject": "Biologia",
-    "prompt": "A deficiência na enzima G6PD é uma condição recessiva ligada ao cromossomo X, que pode ser diagnosticada no teste do pezinho expandido. Pessoas com deficiência nessa enzima são suscetíveis à anemia hemolítica ao serem expostas à cloroquina ou primaquina, drogas amplamente prescritas por médicos no tratamento da malária. Assinale a alternativa correta:",
+    "prompt": "A deficiência na enzima G6PD é uma condição recessiva ligada ao cromossomo X, que pode ser diagnosticada no teste do pezinho expandido. Pessoas com deficiência nesta enzima são suscetíveis à anemia hemolítica ao serem expostas à cloroquina ou primaquina, drogas amplamente prescritas por médicos no tratamento da malária. No Brasil, a prevalência de deficiência em G6PD na população geral varia de acordo com as áreas mostradas no mapa:\n\nDombrowski, J G et al. (2017), Malar J, 16:253, doi:10.1186/s12936-017-1889-6 e Monteiro, W M et al. (2014), Mem Inst Oswaldo Cruz, 109:5, 553-568, doi:10.1590/0074-0276140123. Adaptados.\n\nIndique a afirmação correta sobre a segurança da prescrição de cloroquina nesse contexto.\n\nNote e adote: População de três regiões brasileiras: Norte = 18 milhões; Nordeste = 58 milhões; Centro-Oeste = 17 milhões.",
     "options": [
       {
         "id": "a",
@@ -11076,13 +11076,23 @@
       }
     ],
     "correctOptionId": "c",
-    "explanation": "Por ser uma herança recessiva ligada ao cromossomo X, homens (XY) manifestam a deficiência com apenas um alelo recessivo, enquanto mulheres (XX) precisam de dois — o que torna a condição, e o risco de anemia hemolítica sob cloroquina, muito mais comum no sexo masculino.",
+    "explanation": "O mapa indica prevalência de 5% na região Norte. Aplicando esse percentual aos 18 milhões de habitantes informados: 0,05 × 18.000.000 = 900.000 pessoas. A deficiência recessiva ligada ao X manifesta-se com um alelo recessivo em homens (XY), enquanto mulheres (XX) precisam de dois; por isso, a alternativa C associa corretamente o contingente exposto ao risco à maior frequência no sexo masculino. Ausência de sintomas nos pais não exclui mãe portadora, e o X de um filho homem vem da mãe, não do pai.",
     "difficulty": "medium",
     "examSource": {
       "board": "FUVEST",
       "year": 2022,
-      "sourceUrl": "https://acervo.fuvest.br/fuvest/2022/fuvest_2022_primeira_fase_tipo_V.pdf"
-    }
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
+      "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_gabarito_retificado.pdf",
+      "phase": "1ª fase",
+      "version": "V",
+      "questionNumber": 1
+    },
+    "statementComplete": true,
+    "figures": [
+      {
+        "url": "/question-media/oficiais/fuvest-2022-v/q01-mapa.png"
+      }
+    ]
   },
   {
     "id": "q_real_fuvest_2023_qui",

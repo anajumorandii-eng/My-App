@@ -40,6 +40,7 @@ import { SUBJECT_ICONS } from './Dashboard';
 import { mockTopics } from '../data/mockData';
 import { ALL, buildTopicHierarchy, filterByHierarchy } from '../lib/topicHierarchy';
 import { canonicalExamBoard, matchesExamFilters } from '../lib/questionExamFilters';
+import { matchesQuestionSearch } from '../lib/questionSearch';
 
 function Metric({
   label,
@@ -96,6 +97,7 @@ export default function Questoes() {
   const [onlyRealExams, setOnlyRealExams] = useState(requestedBoard !== 'all');
   const [boardFilter, setBoardFilter] = useState(requestedBoard);
   const [yearFilter, setYearFilter] = useState('all');
+  const [searchQuery, setSearchQuery] = useState('');
   const examBoards = useMemo(() => [...new Set([...(requestedBoard !== 'all' ? [requestedBoard] : []), ...mockQuestions.flatMap(q => q.examSource ? [canonicalExamBoard(q.examSource.board)] : [])])].sort(), [mockQuestions, requestedBoard]);
   const examYears = useMemo(() => {
     const questions = mockQuestions.filter(q => q.examSource && matchesExamFilters(q, boardFilter, 'all'));
@@ -131,9 +133,9 @@ export default function Questoes() {
   // de tópico e subtópico reflitam o que o filtro vai realmente entregar. Se
   // fosse depois, um tópico apareceria com 40 questões e abriria com zero.
   const scoped = useMemo(() => {
-    const base = mockQuestions.filter(q => (!onlyRealExams || q.examSource) && matchesExamFilters(q, boardFilter, yearFilter));
+    const base = mockQuestions.filter(q => (!onlyRealExams || q.examSource) && matchesExamFilters(q, boardFilter, yearFilter) && matchesQuestionSearch(q, searchQuery));
     return subjectFilter === 'Todas' ? base : base.filter((q) => q.subject === subjectFilter);
-  }, [mockQuestions, subjectFilter, onlyRealExams, boardFilter, yearFilter]);
+  }, [mockQuestions, subjectFilter, onlyRealExams, boardFilter, yearFilter, searchQuery]);
 
   // Quantas questões reais existem na matéria selecionada. Vai no rótulo do
   // botão porque, sem o número, um banco desatualizado e um filtro quebrado
@@ -142,8 +144,8 @@ export default function Questoes() {
     const base = subjectFilter === 'Todas'
       ? mockQuestions
       : mockQuestions.filter((q) => q.subject === subjectFilter);
-    return base.filter((q) => q.examSource && matchesExamFilters(q, boardFilter, yearFilter)).length;
-  }, [mockQuestions, subjectFilter, boardFilter, yearFilter]);
+    return base.filter((q) => q.examSource && matchesExamFilters(q, boardFilter, yearFilter) && matchesQuestionSearch(q, searchQuery)).length;
+  }, [mockQuestions, subjectFilter, boardFilter, yearFilter, searchQuery]);
 
   const topicTree = useMemo(() => buildTopicHierarchy(scoped, mockTopics), [scoped]);
 
@@ -522,6 +524,19 @@ export default function Questoes() {
           uma parede de texto que estourava a largura da tela no retrato. Agora
           são dois campos, e em "Todas" os tópicos vêm agrupados pela matéria a
           que pertencem, então a hierarquia fica visível em vez de achatada. */}
+      <div className="mb-4 space-y-2">
+        <label className="crivo-topic-filter">
+          <span>Buscar questões</span>
+          <input type="search" value={searchQuery} maxLength={200}
+            placeholder="Palavras do enunciado, capítulo ou origem"
+            onChange={event => { setSearchQuery(event.target.value); resetQuestionState(); }}
+            aria-describedby="question-search-help"
+            className="w-full min-w-0 rounded-lg border border-[var(--line)] bg-transparent p-3 text-sm" />
+        </label>
+        <p id="question-search-help" className="text-xs text-[var(--dim)]">Busca no banco carregado, sem diferenciar acentos. Os filtros abaixo continuam valendo.</p>
+        <p role="status" className="text-xs text-[var(--dim)]">{questionsLoading ? 'Carregando questões…' : `${pool.length} ${pool.length === 1 ? 'questão encontrada' : 'questões encontradas'}`}</p>
+        {searchQuery && <button type="button" className="ni-link text-sm" onClick={() => { setSearchQuery(''); resetQuestionState(); }}>Limpar busca</button>}
+      </div>
       <div className="crivo-topic-filters">
         <label className="crivo-topic-filter">
           <span>Banca</span>
@@ -840,7 +855,7 @@ export default function Questoes() {
       ) : (
         <div className="text-center py-16 space-y-2">
           <p className="text-[var(--dim)]">Nenhuma questão encontrada para este filtro.</p>
-          {onlyRealExams && realExamCount === 0 && (
+          {onlyRealExams && realExamCount === 0 && !searchQuery.trim() && (
             // Distingue "o filtro não achou nada aqui" de "o banco carregado
             // não tem questão de prova nenhuma" — o segundo caso costuma ser
             // Firestore desatualizado, e o caminho é semear em /admin/conteudo.
