@@ -11,3 +11,13 @@ O laboratório restringe seus modelos a unidades com guia publicado e passagens 
 Fichas são salvas somente neste navegador, separadas por conta, obra, edição, unidade e passagem. Comparações incluem também segunda obra, sua edição/passagem e eixo. Trocar seleções preserva as respostas já escritas; alternar abas mantém o laboratório montado depois da primeira abertura. Falha de salvamento deixa o texto aberto e edição posterior retira a confirmação anterior. A autoavaliação não alimenta domínio ou conclusão de leitura automaticamente; a leitura é registrada na aba própria.
 
 Validação cobre os 18 dossiês existentes, gates editoriais, recuperação sem indícios antecipados, conta/edição, respostas entre abas, comparação por eixo e descarte de carregamento atrasado. O catálogo continua usando o acesso normal ao Firestore; o laboratório não introduz catálogo fictício nem contorna autenticação.
+
+## Resumos aprofundados e estratégias por obra
+
+A área de Estratégias oferece a aba **Por obra**, com os 18 títulos que possuem dossiê no repositório. Cada roteiro tem procedimentos específicos de leitura e resolução, equívocos de interpretação a evitar e adaptação didática da resposta para FUVEST ou Unicamp. Oferecer treino para uma banca não afirma que a obra integra sua lista: o ciclo e o recorte continuam sendo conferidos nas fontes e requisitos do catálogo.
+
+Cada página de obra inclui **Resumo aprofundado** e **Estratégias**. O resumo acrescenta três eixos de síntese específicos do título, reúne a análise integral publicada e permite selecionar uma unidade para estudar seu resumo, observações formais e passagens comentadas. Cada passagem preserva contexto, recurso, efeito, relação com o conjunto e localização na edição de referência. Unidades sem cartão publicado informam essa ausência. Recortes de contos, agrupamentos didáticos e a distinção entre ensaio, poesia e narrativa permanecem explícitos.
+
+As novas sínteses em `src/data/workStudyGuides.ts` são paráfrases didáticas dos módulos de introdução e análise já publicados, sem novas citações ou referências de paginação. A função `getWorkStudyGuide` exige ambos os módulos publicados e filtra unidades e cartões novamente, inclusive no modo de revisão. Não altera o estado editorial dos dossiês nem atribui às sínteses uma revisão humana inexistente. A bibliografia e os limites das pesquisas continuam na aba Fontes.
+
+Links diretos usam `?aba=resumo`, `?aba=estrategias` e `?aba=fontes`. A troca de aba mantém os demais parâmetros, inclusive o modo de revisão, e preserva o laboratório montado. Resumos e estratégias podem ser impressos ou salvos como PDF pelo navegador. A impressão inclui a análise recolhida e a unidade selecionada, remove seletores e mantém o estado da tela original.

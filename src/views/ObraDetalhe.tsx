@@ -1,3 +1,4 @@
+import { WorkStudyContent } from '../components/WorkStudyContent';
 import { LiteraryStudyWorkshop } from '../components/LiteraryStudyWorkshop';
 import React, { useEffect, useMemo, useRef, useState } from 'react';
 import { Link, useParams, useSearchParams } from 'react-router-dom';
@@ -11,10 +12,12 @@ import { getReadingProgress, saveReadingProgress } from '../lib/literaryData';
 import { Panel } from '../components/ui/Panel';
 import { SUBJECT_ICONS } from './Dashboard';
 
-type TabId = 'laboratorio' | 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 'bancas' | 'questoes' | 'revisao' | 'fontes';
+type TabId = 'resumo' | 'estrategias' | 'laboratorio' | 'comece_aqui' | 'leitura_guiada' | 'analise' | 'passagens_chave' | 'bancas' | 'questoes' | 'revisao' | 'fontes';
 
 const TABS: { id: TabId; label: string }[] = [
   { id: 'comece_aqui', label: 'Comece aqui' },
+  { id: 'resumo', label: 'Resumo aprofundado' },
+  { id: 'estrategias', label: 'Estratégias' },
   { id: 'leitura_guiada', label: 'Leitura guiada' },
   { id: 'analise', label: 'Análise' },
   { id: 'passagens_chave', label: 'Passagens-chave' },
@@ -64,11 +67,14 @@ export default function ObraDetalhe() {
   const [units, setUnits] = useState<WorkUnit[]>([]);
   const [progress, setProgress] = useState<ReadingProgress[]>([]);
   const [loadError, setLoadError] = useState<string | null>(null);
-  const [tab, setTab] = useState<TabId>('comece_aqui');
-  const [labOpened, setLabOpened] = useState(false);
-  const [searchParams] = useSearchParams();
+  const [searchParams, setSearchParams] = useSearchParams();
+  const requestedTab = searchParams.get('aba');
+  const tab: TabId = TABS.some(item => item.id === requestedTab) ? requestedTab as TabId : 'comece_aqui';
+  const [labOpened, setLabOpened] = useState(tab === 'laboratorio');
   const review = searchParams.get('revisao') === '1';
   const [rawDossier, setRawDossier] = useState<WorkDossier | null>(null);
+
+  useEffect(() => { if (tab === 'laboratorio') setLabOpened(true); }, [tab]);
 
   const uid = user?.uid;
   const [progressReady, setProgressReady] = useState(false);
@@ -262,7 +268,7 @@ export default function ObraDetalhe() {
           return (
             <button
               key={t.id}
-              onClick={() => { setTab(t.id); if (t.id === 'laboratorio') setLabOpened(true); }}
+              onClick={() => { setSearchParams(previous => { const next = new URLSearchParams(previous); next.set('aba', t.id); return next; }, { replace: true }); if (t.id === 'laboratorio') setLabOpened(true); }}
               className={active ? 'subject-text' : undefined}
               style={active
                 ? { borderBottom: '2px solid var(--primary)', paddingBottom: '6px', marginBottom: '-1px' }
@@ -276,6 +282,8 @@ export default function ObraDetalhe() {
 
       {saveError && <p role="alert" className="ni-panel p-3 text-sm text-[var(--text)]">{saveError}</p>}
       <div hidden={tab !== 'laboratorio'}>{labOpened && (dossier ? <LiteraryStudyWorkshop work={work} dossier={dossier} requirements={requirements} /> : tab === 'laboratorio' && <ContentPendingState label="O laboratório com dossiê publicado" />)}</div>
+
+      {(tab === 'resumo' || tab === 'estrategias') && (dossier ? <WorkStudyContent key={`${workSlug}:${tab}`} dossier={dossier} mode={tab === 'resumo' ? 'summary' : 'strategy'} /> : <ContentPendingState label={tab === 'resumo' ? 'O resumo aprofundado' : 'O roteiro de estratégias'} />)}
 
       {/* Tab content */}
       {tab === 'comece_aqui' && (

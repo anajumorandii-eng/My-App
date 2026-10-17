@@ -11,12 +11,14 @@ import { Panel } from '../components/ui/Panel';
 import { PALETTES, PALETTE_INK } from '../prototypes/NucleoInstrumentalPrototype';
 import { SUBJECT_ICONS } from './Dashboard';
 
+const WorkStrategiesExplorer = lazy(() => import('../components/WorkStrategiesExplorer'));
 const StrategyExplorer = lazy(() => import('../components/StrategyExplorer'));
 
-type Tab = 'guia' | 'metodo' | 'materia' | 'banca' | 'segunda-fase';
+type Tab = 'guia' | 'metodo' | 'materia' | 'banca' | 'segunda-fase' | 'obras';
 
 const TABS: { id: Tab; label: string }[] = [
   { id: 'guia', label: 'Banca, matéria e tópico' },
+  { id: 'obras', label: 'Por obra' },
   { id: 'metodo', label: 'Método Geral' },
   { id: 'materia', label: 'Por Matéria' },
   { id: 'banca', label: 'Por Banca' },
@@ -75,6 +77,8 @@ export default function Estrategias() {
       </div>
 
       {tab === 'guia' && <Suspense fallback={<p role="status">Carregando estratégias...</p>}><StrategyExplorer /></Suspense>}
+
+      {tab === 'obras' && <Suspense fallback={<p role="status">Carregando estratégias de obras...</p>}><WorkStrategiesExplorer /></Suspense>}
 
       {/* Method Tab */}
       {tab === 'metodo' && (
