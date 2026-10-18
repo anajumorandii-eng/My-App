@@ -8,7 +8,7 @@ declare module '*.webp' {
   export default src;
 }
 
-declare module '*.webp?inline' {
+declare module '*.jpg?inline' {
   const src: string;
   export default src;
 }

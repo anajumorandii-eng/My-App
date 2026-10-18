@@ -25,7 +25,7 @@ try {
     expect(await page.evaluate(() => window.__printCalls)).toBe(1);
     await page.emulateMedia({ media: 'print' });
     await expect(page.locator('[data-crivo-print-root]')).toBeVisible();
-    await page.locator('[data-print-masthead] img').evaluate(img => img.decode());
+    await page.locator('[data-print-frame]').evaluate(img => img.decode());
     const root = page.locator('[data-print-content]');
     expect(await root.locator('p').first().evaluate(el => getComputedStyle(el).color)).toBe('rgb(38, 60, 61)');
     const file = `${output}/crivo-${theme}-${width}.pdf`;
@@ -33,13 +33,25 @@ try {
     const text = execFileSync('pdftotext', ['-layout', file, '-'], { encoding: 'utf8' });
     const pages = text.split('\f').filter(page => page.trim());
     expect(pages.length).toBeGreaterThan(2);
+    expect(pages.length).toBeLessThanOrEqual(4);
     expect(text).toContain('Ecologia'); expect(text).toContain('SEÇÃO 14'); expect(text).toContain('FONTE CONFERIDA');
     expect(text).not.toContain('NÃO IMPRIMIR');
-    expect(pages.every(page => page.includes('SEÇÃO') || page.includes('FONTE CONFERIDA'))).toBe(true);
+    expect(pages.every(page => page.replace(/CRIVO\s*·\s*CADERNO DE ESTUDO/g, '').trim().length > 20)).toBe(true);
     expect(text).toContain('CADERNO DE ESTUDO');
+    const imagePages = new Set(execFileSync('pdfimages', ['-list', file], { encoding: 'utf8' }).split('\n').flatMap(line => /^\s*(\d+)\s+\d+\s+image/.exec(line)?.slice(1) ?? []));
+    expect(imagePages.size).toBe(pages.length);
+    const bbox = execFileSync('pdftotext', ['-bbox', file, '-'], { encoding: 'utf8' });
+    for (const match of bbox.matchAll(/<word xMin="([\d.]+)" yMin="([\d.]+)" xMax="([\d.]+)" yMax="([\d.]+)"/g)) {
+      const [, x1, y1, x2, y2] = match.map(Number);
+      if (y1 > 810) continue; // Small identity below the text area.
+      expect(x1).toBeGreaterThanOrEqual(50);
+      expect(x2).toBeLessThanOrEqual(546);
+      expect(y1).toBeGreaterThanOrEqual(44);
+      expect(y2).toBeLessThanOrEqual(798);
+    }
     await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
     expect(await page.locator('[data-crivo-print-root]').count()).toBe(0);
-    results.push({ theme, width, pages: pages.length, synchronousPrint: true, readableWithoutBackgroundGraphics: true, allSectionsAndSources: true, cleanedUp: true });
+    results.push({ theme, width, pages: pages.length, synchronousPrint: true, readableWithoutBackgroundGraphics: true, allSectionsAndSources: true, frameOnEveryPage: true, textInsideNormalMargins: true, cleanedUp: true });
     await page.close();
   }
 } finally {
