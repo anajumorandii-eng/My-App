@@ -20,7 +20,7 @@ export function ExamEvidencePanel({ subject, topicIds, boards = [] }: { subject:
   const ordered = topicIds?.length ? selectExamEvidence(selected, topicIds, boards, selected.length) : selected;
   return <section className="ni-panel p-5 space-y-4" aria-label="Evidências de provas e formas de cobrança">
     <h2 className="font-display text-xl">Como as provas cobram este conteúdo</h2>
-    <p className="text-sm">Provas e gabaritos oficiais conferidos em {evidenceReviewedOn.split('-').reverse().join('/')}. Classificação por tópico feita pelo CRIVO. O número mostra o que foi observado no recorte, sem prever a próxima prova.</p>
+    <p className="text-sm">Base de evidências atualizada em {evidenceReviewedOn.split('-').reverse().join('/')}. As datas de conferência e os documentos pertencem a cada recorte. Classificação por tópico feita pelo CRIVO. O número mostra o que foi observado no recorte, sem prever a próxima prova.</p>
     <div className="grid sm:grid-cols-2 gap-3">
       <label className="block text-sm">Banca das evidências<select className="field block w-full" value={board} onChange={event => { setBoard(event.target.value); setVisible(4); }}><option value="">Todas neste recorte</option>{[...new Set(examEvidenceCohorts.filter(cohort => !signature || signature.split('|').includes(canonicalExamBoard(cohort.board))).map(cohort => cohort.board))].map(name => <option key={name}>{name}</option>)}</select></label>
       <label className="block text-sm">Fase das evidências<select className="field block w-full" value={phase} onChange={event => { setPhase(event.target.value); setVisible(4); }}><option value="">Fases disponíveis, separadas abaixo</option><option value="1a">Objetivas / primeiro dia</option><option value="2a">Discursivas de segunda fase</option></select></label>
@@ -34,9 +34,9 @@ export function ExamEvidencePanel({ subject, topicIds, boards = [] }: { subject:
       return <details key={cohort.id} className="border-t border-[var(--line)] pt-3">
         <summary className="cursor-pointer text-sm font-semibold">{cohort.board} {cohort.year} · {cohort.phase} · {complete ? 'Recorte completo da matéria' : 'Amostra selecionada'} · {group.total} questões</summary>
         <p className="text-xs mt-2">Versão {cohort.version}. {complete ? `${group.total} questões válidas classificadas nesta matéria.` : `${group.total} exemplos classificados de um caderno de ${cohort.totalQuestions} questões; amostra não representativa.`} {cohort.excludedNumbers.length ? `Anuladas excluídas: ${cohort.excludedNumbers.join(', ')}.` : ''}</p>
-        <ul className="text-sm space-y-2 mt-3">{topics.map(row => <li key={row.topicId}>{mockTopics.find(topic => topic.id === row.topicId)?.name ?? row.topicId}: <b>{row.count}/{group.total}</b>{complete ? ` (${(row.count / group.total * 100).toFixed(1)}% observado)` : ' exemplos da seleção'} · questões {row.numbers.join(', ')}</li>)}</ul>
+        <ul className="text-sm space-y-2 mt-3">{topics.map(row => <li key={row.topicId}>{mockTopics.find(topic => topic.id === row.topicId)?.name ?? row.topicId.replace(/^fuvest-unmapped:/, '')}: <b>{row.count}/{group.total}</b>{complete ? ` (${(row.count / group.total * 100).toFixed(1)}% observado)` : ' exemplos da seleção'} · questões {row.numbers.join(', ')}</li>)}</ul>
         {!topics.length && <p className="text-sm mt-2">Nenhuma questão recebeu este tópico principal neste recorte; relações secundárias podem aparecer nos exemplos abaixo.</p>}
-        <div className="flex flex-wrap gap-4 mt-3 text-xs"><a className="underline" href={cohort.examUrl} target="_blank" rel="noreferrer">Prova oficial</a><a className="underline" href={cohort.answerKeyUrl} target="_blank" rel="noreferrer">Gabarito / respostas esperadas</a></div>
+        <div className="flex flex-wrap gap-4 mt-3 text-xs"><a className="underline" href={cohort.examUrl} target="_blank" rel="noreferrer">Prova oficial</a>{cohort.answerKeyUrl && <a className="underline" href={cohort.answerKeyUrl} target="_blank" rel="noreferrer">Gabarito / respostas esperadas</a>}</div>
       </details>;
     })}
     <h3 className="font-semibold">Comandos, conceitos e pontos de atenção</h3>

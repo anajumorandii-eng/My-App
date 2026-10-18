@@ -5,8 +5,8 @@ import { completeTopicEvidence } from './examEvidence';
  * Average available phases within each board, then boards; never add a regional
  * percentage to a board percentage. n/(n+20) is an editorial conservative factor,
  * not a confidence interval or a forecast. */
-export function topicIncidenceWeight(topic: Pick<Topic, 'id' | 'subject'>, board?: string, phase: '1a-fase' | '2a-fase' | 'ambas' = 'ambas'): number {
-  const records = completeTopicEvidence(topic, board, phase);
+export function topicIncidenceWeight(topic: Pick<Topic, 'id' | 'subject'>, board?: string, phase: '1a-fase' | '2a-fase' | 'ambas' = 'ambas', fuvestCareer?: 'medicina'): number {
+  const records = completeTopicEvidence(topic, board, phase, fuvestCareer);
   const boards = [...new Set(records.map(record => record.cohort.board))];
   if (!boards.length) return 0;
   return boards.reduce((total, name) => {

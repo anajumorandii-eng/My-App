@@ -6,18 +6,18 @@ import { urgencyOf } from './reviewUrgency';
 export function hasPriorityEvidence(mastery: TopicMastery | undefined): mastery is TopicMastery {
   return Boolean(mastery && mastery.origin !== 'seed' && mastery.origin !== 'demo' && Number.isFinite(new Date(mastery.lastReviewed).getTime()) && new Date(mastery.lastReviewed).getTime() > 0);
 }
-export function buildActionablePriorities(topics: Topic[], mastery: TopicMastery[], persisted: boolean, board?: string, now = new Date(), targets: BoardWeight[] = []) {
+export function buildActionablePriorities(topics: Topic[], mastery: TopicMastery[], persisted: boolean, board?: string, now = new Date(), targets: BoardWeight[] = [], fuvestCareer?: 'medicina') {
   const observed = new Map(persisted ? mastery.filter(hasPriorityEvidence).map(item => [item.topicId, item]) : []);
   return topics.map(topic => {
     const evidence = observed.get(topic.id);
     const clamp = (value: number) => Math.min(100, Math.max(0, Number.isFinite(value) ? value : 0));
     const urgency = evidence ? urgencyOf(evidence, now) : 0;
     const boardFactors = (board ? [{ board, weight: 1, phaseFocus: 'ambas' as const }] : targets).map(target => {
-      const specificHistory = completeTopicEvidence(topic, target.board, target.phaseFocus).length > 0;
-      return { ...target, specificHistory, history: Math.min(1, Math.max(0, topicIncidenceWeight(topic, target.board, target.phaseFocus))) * 15 };
+      const specificHistory = completeTopicEvidence(topic, target.board, target.phaseFocus, fuvestCareer).length > 0;
+      return { ...target, specificHistory, history: Math.min(1, Math.max(0, topicIncidenceWeight(topic, target.board, target.phaseFocus, fuvestCareer))) * 15 };
     });
     const totalWeight = boardFactors.reduce((sum, item) => sum + Math.max(0, item.weight), 0);
-    const combinedHistory = totalWeight ? boardFactors.reduce((sum, item) => sum + item.history * Math.max(0, item.weight) / totalWeight, 0) : Math.min(1, Math.max(0, topicIncidenceWeight(topic, board))) * 15;
+    const combinedHistory = totalWeight ? boardFactors.reduce((sum, item) => sum + item.history * Math.max(0, item.weight) / totalWeight, 0) : Math.min(1, Math.max(0, topicIncidenceWeight(topic, board, 'ambas', fuvestCareer))) * 15;
     const factors = {
       gap: evidence ? (100 - clamp(evidence.level)) * 0.45 : 0,
       review: evidence ? clamp(urgency) * 0.25 : 0,

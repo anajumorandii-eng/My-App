@@ -1,0 +1,2185 @@
+{
+  "reviewedOn": "2026-10-18",
+  "reviewType": "revisão independente amostral de integração; não dupla recodificação completa",
+  "selection": {
+    "seed": "fuvest-audit-v1-fixed-strata-2026-10-18",
+    "method": "seleção determinística pré-fixada por estrato; não amostra aleatória nem estimativa estatística de erro",
+    "perYear": {
+      "1a": [
+        "01",
+        "16",
+        "31",
+        "46",
+        "61",
+        "76"
+      ],
+      "2a-dia1": [
+        "P03",
+        "P08"
+      ],
+      "2a-dia2": [
+        "B02",
+        "Q03",
+        "H04",
+        "M05"
+      ]
+    },
+    "years": [
+      2022,
+      2023,
+      2024,
+      2025,
+      2026
+    ],
+    "expectedSample": 60,
+    "actualSample": 60,
+    "medicineItems": 10
+  },
+  "scope": "Conferência de identidade, página e coerência material da classificação, síntese, estratégia e armadilha contra enunciado. Não refiz integralmente60soluções nem auditei todos os gabaritos/685registros.",
+  "engineReview": {
+    "files": [
+      "src/lib/fuvestIncidence.ts",
+      "scripts/buildFuvestIncidence.ts"
+    ],
+    "checks": [
+      {
+        "name": "denominator",
+        "status": "pass",
+        "description": "n/N por matéria principal no recorte, excluindo anuladas; conceitos associados não duplicam o total."
+      },
+      {
+        "name": "confidence",
+        "status": "pass",
+        "description": "Filtro de alta confiança restringe hits sem diminuir denominador."
+      },
+      {
+        "name": "medicine",
+        "status": "pass",
+        "description": "Filtro seleciona12 de36 por campus/ano:2022–24 SP BFQ quatro,Bauru BGQ quatro,RP BFGQ três;2025–26 todos BFGQ três. Testes adicionais cobrem essa distinção."
+      },
+      {
+        "name": "coverage",
+        "status": "pass",
+        "description": "Após relato ao integrador, gerador exige três fases distintas/ano,15cadernos únicos,685IDs, números válidos e páginas inteiras positivas."
+      },
+      {
+        "name": "associated-taxonomy",
+        "status": "pass",
+        "description": "Integrador adicionou validação dosrelatedTopicIds após revisão."
+      },
+      {
+        "name": "annual-missing",
+        "status": "caveat",
+        "description": "observedEditions mede edições integralmente cobertas, incluindo zero da categoria; percentual anual com denominador0 permanece indefinido."
+      },
+      {
+        "name": "pairs",
+        "status": "caveat",
+        "description": "Pares são coocorrência de áreas; clique pode incluir duas áreas secundárias. Não mede força causal, dificuldade ou ganho didático."
+      },
+      {
+        "name": "subtopics",
+        "status": "pass",
+        "description": "Subassuntos coexistem e são deduplicados dentro do item; porcentagens não devem ser somadas."
+      }
+    ],
+    "executedAssertions": {
+      "passed": 8,
+      "failed": 0,
+      "script": "work/fuvest-incidence/rules/audit_engine.ts",
+      "checks": [
+        "exclusions",
+        "primary-subject-denominator",
+        "high-confidence-numerator",
+        "confidence-denominator-preserved",
+        "annual-zero",
+        "subtopic-within-item-deduplication",
+        "medicine12-of36",
+        "phase-isolation"
+      ]
+    }
+  },
+  "sourceVerification": [
+    {
+      "year": 2022,
+      "paperId": "fuvest-2022-f1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
+      "sha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
+      "actualSha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2022,
+      "paperId": "fuvest-2022-d1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_1.pdf",
+      "sha256": "fbff1b7f188b0acdc7fa3affb125cfa3ca8b7d8bbf063c380007c4f4f7be4a7b",
+      "actualSha256": "fbff1b7f188b0acdc7fa3affb125cfa3ca8b7d8bbf063c380007c4f4f7be4a7b",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2022,
+      "paperId": "fuvest-2022-d2",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
+      "sha256": "25d3a4aecd29ea147f961e1a6d8ae32f36f0a447a941fe428c04e0e5b4407b76",
+      "actualSha256": "25d3a4aecd29ea147f961e1a6d8ae32f36f0a447a941fe428c04e0e5b4407b76",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2023,
+      "paperId": "fuvest-2023-f1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "sha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "actualSha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2023,
+      "paperId": "fuvest-2023-f2-d1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_1.pdf",
+      "sha256": "9945042f8edfbf11ce743d0ff4995815be9d2b31579232ffbc0788c4f6d6ac96",
+      "actualSha256": "9945042f8edfbf11ce743d0ff4995815be9d2b31579232ffbc0788c4f6d6ac96",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2023,
+      "paperId": "fuvest-2023-f2-d2",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+      "sha256": "1fe9afaf17b1849c8b9aa92882f52a2ef846b03005b13166ebfec9474433379c",
+      "actualSha256": "1fe9afaf17b1849c8b9aa92882f52a2ef846b03005b13166ebfec9474433379c",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2024,
+      "paperId": "fuvest-2024-f1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_primeira_fase_prova_V.pdf",
+      "sha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
+      "actualSha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2024,
+      "paperId": "fuvest-2024-f2-dia1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_1dia.pdf",
+      "sha256": "0c8e8465e707ca57611a34e37ed885f2cd75f5072706d8b03ce7d367d555ce28",
+      "actualSha256": "0c8e8465e707ca57611a34e37ed885f2cd75f5072706d8b03ce7d367d555ce28",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2024,
+      "paperId": "fuvest-2024-f2-dia2",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
+      "sha256": "cc591c016f2dbbc3a6f22e80bc4b95539378cce8f2f24fc88dd34cf9e4c8d0c7",
+      "actualSha256": "cc591c016f2dbbc3a6f22e80bc4b95539378cce8f2f24fc88dd34cf9e4c8d0c7",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2025,
+      "paperId": "fuvest-2025-f1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "sha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "actualSha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2025,
+      "paperId": "fuvest-2025-f2-dia1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia1.pdf",
+      "sha256": "1efb3ec7a497dfb64180f7f95a38da1e0058a3aa234e4aa3dfb736261150c1fc",
+      "actualSha256": "1efb3ec7a497dfb64180f7f95a38da1e0058a3aa234e4aa3dfb736261150c1fc",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2025,
+      "paperId": "fuvest-2025-f2-dia2",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
+      "sha256": "420339db266ec93d9cf8f9491064aacf858b55ffe8f04b4d7bd3b5f47b11aee4",
+      "actualSha256": "420339db266ec93d9cf8f9491064aacf858b55ffe8f04b4d7bd3b5f47b11aee4",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2026,
+      "paperId": "fuvest-2026-f1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "actualSha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2026,
+      "paperId": "fuvest-2026-f2-d1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-prova.pdf",
+      "sha256": "1a2e017b8a3558da8e797cb61b5882d17165759c98bf59042c49a3644fc300ce",
+      "actualSha256": "1a2e017b8a3558da8e797cb61b5882d17165759c98bf59042c49a3644fc300ce",
+      "hashStatus": "pass"
+    },
+    {
+      "year": 2026,
+      "paperId": "fuvest-2026-f2-d2",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+      "sha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05",
+      "actualSha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05",
+      "hashStatus": "pass"
+    }
+  ],
+  "findings": [
+    {
+      "id": "classification-2023-61",
+      "questionId": "fuvest-2023-f1:61",
+      "initialStatus": "uncertain",
+      "field": "topicId/confidence",
+      "before": {
+        "topicId": "bio_evolucao",
+        "confidence": "high"
+      },
+      "description": "O comando permite inferir herbivoria pela distribuição da defesa química, sem pedir mecanismo evolutivo; Ecologia é candidata primária mais direta.",
+      "recommendation": "Reavaliar primáriaEcologia, Evolução associada e confiança média; ou explicitar a ambiguidade se mantida.",
+      "reportedTo": "corpus_2023",
+      "after": {
+        "topicId": "bio_ecologia",
+        "confidence": "medium",
+        "reviewNote": "Fronteira ecologia/evolução revista por leitura da página19; adaptação aparece no contexto da fonte, mas não é a operação pedida."
+      },
+      "resolution": "corrected"
+    },
+    {
+      "id": "secondary-2026-46",
+      "questionId": "fuvest-2026-f1:46",
+      "initialStatus": "fail",
+      "field": "relatedSubjects",
+      "before": [],
+      "description": "A comparação com escultura barroca é operação expressamente exigida; Arte estava ausente das áreas associadas.",
+      "recommendation": "Incluir Arte mantendo Literatura primária e confiança média.",
+      "reportedTo": "corpus_2026",
+      "after": {
+        "relatedSubjects": [
+          "Arte"
+        ]
+      },
+      "resolution": "corrected"
+    },
+    {
+      "id": "skills-2025-M05",
+      "questionId": "fuvest-2025-f2-dia2:M05",
+      "initialStatus": "fail",
+      "field": "skills",
+      "before": [
+        "interpretacao_textual"
+      ],
+      "description": "Apenas interpretação textual omitia cálculo e modelagem/divisibilidade realmente necessários.",
+      "recommendation": "Incluir calculo e modelagem.",
+      "reportedTo": "corpus_2025",
+      "after": {
+        "skills": [
+          "modelagem",
+          "calculo"
+        ]
+      },
+      "resolution": "corrected"
+    },
+    {
+      "id": "skills-2025-Q03",
+      "questionId": "fuvest-2025-f2-dia2:Q03",
+      "initialStatus": "fail",
+      "field": "skills",
+      "before": [
+        "interpretacao_textual"
+      ],
+      "description": "Representações deLewis e tautômeros requerem aplicação conceitual e representação molecular.",
+      "recommendation": "Incluir aplicacao_conceitual e/ou modelagem.",
+      "reportedTo": "corpus_2025",
+      "after": {
+        "skills": [
+          "representacao_espacial",
+          "modelagem",
+          "comparacao_conceitual"
+        ]
+      },
+      "resolution": "corrected"
+    }
+  ],
+  "summary": {
+    "pass": 60,
+    "fail": 0,
+    "uncertain": 0
+  },
+  "questions": [
+    {
+      "id": "fuvest-2022-f1:01",
+      "year": 2022,
+      "phase": "1a",
+      "number": "01",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
+      "sourcePage": 2,
+      "recordPage": 2,
+      "sourceSha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Recessividade ligada ao X, prevalência regional da deficiência G6PD e população exposta à cloroquina.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_genetica",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-f1:16",
+      "year": 2022,
+      "phase": "1a",
+      "number": "16",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
+      "sourcePage": 6,
+      "recordPage": 6,
+      "sourceSha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Gráfico relaciona pressão, velocidade e área nos vasos; alternativa correta depende das trocas capilares.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_fisio_animal",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-f1:31",
+      "year": 2022,
+      "phase": "1a",
+      "number": "31",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
+      "sourcePage": 10,
+      "recordPage": 10,
+      "sourceSha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Representação chinesa alterna símbolos por posição decimal do número91625.",
+      "expectedPrimarySubject": "Matemática",
+      "observedPrimarySubject": "Matemática",
+      "observedTopicId": "mat_teoria_numeros",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-f1:46",
+      "year": 2022,
+      "phase": "1a",
+      "number": "46",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
+      "sourcePage": 13,
+      "recordPage": 13,
+      "sourceSha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Comando em português pede localizar solução de restaurantes no texto inglês sobre entregas.",
+      "expectedPrimarySubject": "Inglês",
+      "observedPrimarySubject": "Inglês",
+      "observedTopicId": "ing_01",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-f1:61",
+      "year": 2022,
+      "phase": "1a",
+      "number": "61",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
+      "sourcePage": 17,
+      "recordPage": 17,
+      "sourceSha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Mapa com curvas de nível, vegetação e observador orientado para nordeste deve ser associado à paisagem.",
+      "expectedPrimarySubject": "Geografia",
+      "observedPrimarySubject": "Geografia",
+      "observedTopicId": "geo_cartografia",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-f1:76",
+      "year": 2022,
+      "phase": "1a",
+      "number": "76",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_primeira_fase_tipo_V.pdf",
+      "sourcePage": 22,
+      "recordPage": 22,
+      "sourceSha256": "adf72b06ef0ec73b522185ce8c142a96895ab5d54405a39b03cffb8ee5120281",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Predominância de Al3+, hidróxido precipitado e aluminato varia com pH; anfoterismo é decisivo.",
+      "expectedPrimarySubject": "Química",
+      "observedPrimarySubject": "Química",
+      "observedTopicId": "qui_inorganica",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-d1:P03",
+      "year": 2022,
+      "phase": "2a-dia1",
+      "number": "P03",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_1.pdf",
+      "sourcePage": 4,
+      "recordPage": 4,
+      "sourceSha256": "fbff1b7f188b0acdc7fa3affb125cfa3ca8b7d8bbf063c380007c4f4f7be4a7b",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Canção Ela desatinou: oposição de universos emocionais e dois desenvolvimentos do gerúndio ambíguo.",
+      "expectedPrimarySubject": "Português",
+      "observedPrimarySubject": "Português",
+      "observedTopicId": "por_sintaxe",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-d1:P08",
+      "year": 2022,
+      "phase": "2a-dia1",
+      "number": "P08",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_1.pdf",
+      "sourcePage": 8,
+      "recordPage": 8,
+      "sourceSha256": "fbff1b7f188b0acdc7fa3affb125cfa3ca8b7d8bbf063c380007c4f4f7be4a7b",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Discurso de Rubem Braga sobre ética e perfil de Julião Tavares exige leitura de Angústia.",
+      "expectedPrimarySubject": "Literatura",
+      "observedPrimarySubject": "Literatura",
+      "observedTopicId": "por_lit_modernismo",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-d2:B02",
+      "year": 2022,
+      "phase": "2a-dia2",
+      "number": "B02",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
+      "sourcePage": 20,
+      "recordPage": 20,
+      "sourceSha256": "25d3a4aecd29ea147f961e1a6d8ae32f36f0a447a941fe428c04e0e5b4407b76",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Cladograma pede característica derivada, monofilia e origens independentes da multicelularidade.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_evolucao",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-d2:Q03",
+      "year": 2022,
+      "phase": "2a-dia2",
+      "number": "Q03",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
+      "sourcePage": 16,
+      "recordPage": 16,
+      "sourceSha256": "25d3a4aecd29ea147f961e1a6d8ae32f36f0a447a941fe428c04e0e5b4407b76",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Lewis do SO2, reações da chuva ácida e massa deCaO calculada a partir do enxofre no carvão.",
+      "expectedPrimarySubject": "Química",
+      "observedPrimarySubject": "Química",
+      "observedTopicId": "qui_estequiometria",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-d2:H04",
+      "year": 2022,
+      "phase": "2a-dia2",
+      "number": "H04",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
+      "sourcePage": 34,
+      "recordPage": 34,
+      "sourceSha256": "25d3a4aecd29ea147f961e1a6d8ae32f36f0a447a941fe428c04e0e5b4407b76",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Fundação Palmares: nome, criação em1988 e políticas antirracistas de memória/inclusão.",
+      "expectedPrimarySubject": "História",
+      "observedPrimarySubject": "História",
+      "observedTopicId": "his_republica_liberal_atual",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2022-d2:M05",
+      "year": 2022,
+      "phase": "2a-dia2",
+      "number": "M05",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
+      "sourcePage": 6,
+      "recordPage": 6,
+      "sourceSha256": "25d3a4aecd29ea147f961e1a6d8ae32f36f0a447a941fe428c04e0e5b4407b76",
+      "classificationFileSha256": "9bbe021c56dad80cc4e5e8f305883e216df56877d5245d2e2d9f4bda9bb16c78",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Interseções entre circunferência e parábola y=ax²+1 e condição para três pontos comuns.",
+      "expectedPrimarySubject": "Matemática",
+      "observedPrimarySubject": "Matemática",
+      "observedTopicId": "mat_geometria_analitica",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f1:01",
+      "year": 2023,
+      "phase": "1a",
+      "number": "01",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "sourcePage": 2,
+      "recordPage": 2,
+      "sourceSha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Conceito de interseccionalidade é aplicado aos dados de raça/gênero no mercado de trabalho.",
+      "expectedPrimarySubject": "Sociologia",
+      "observedPrimarySubject": "Sociologia",
+      "observedTopicId": "soc_estratificacao_desigualdade",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f1:16",
+      "year": 2023,
+      "phase": "1a",
+      "number": "16",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "sourcePage": 6,
+      "recordPage": 6,
+      "sourceSha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Pesca no entorno deGalápagos: risco de resíduos e retirada acima da reposição dos estoques.",
+      "expectedPrimarySubject": "Geografia",
+      "observedPrimarySubject": "Geografia",
+      "observedTopicId": "geo_climatologia_socioambiental",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f1:31",
+      "year": 2023,
+      "phase": "1a",
+      "number": "31",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "sourcePage": 10,
+      "recordPage": 10,
+      "sourceSha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Hume: impossibilidade de ideia de sabor sem impressão sensorial correspondente.",
+      "expectedPrimarySubject": "Filosofia",
+      "observedPrimarySubject": "Filosofia",
+      "observedTopicId": "fil_moderna_racionalismo_empirismo",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f1:46",
+      "year": 2023,
+      "phase": "1a",
+      "number": "46",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "sourcePage": 14,
+      "recordPage": 14,
+      "sourceSha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Reversibilidade entre comandar e obedecer na pólis remete à isonomia dos cidadãos.",
+      "expectedPrimarySubject": "História",
+      "observedPrimarySubject": "História",
+      "observedTopicId": "his_idade_antiga",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f1:61",
+      "year": 2023,
+      "phase": "1a",
+      "number": "61",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "sourcePage": 19,
+      "recordPage": 19,
+      "sourceSha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Mapa de plantas com ou sem defesa química permite inferir menor herbivoria na cidade; mecanismo evolutivo não é diretamente pedido.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_ecologia",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "uncertain",
+      "status": "pass",
+      "notes": [
+        "O comando permite inferir herbivoria pela distribuição da defesa química, sem pedir mecanismo evolutivo; Ecologia é candidata primária mais direta.",
+        "corrected"
+      ]
+    },
+    {
+      "id": "fuvest-2023-f1:76",
+      "year": 2023,
+      "phase": "1a",
+      "number": "76",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "sourcePage": 23,
+      "recordPage": 23,
+      "sourceSha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Lagarto correndo na água depende de reação vertical à força das patas, e não de flutuação estática.",
+      "expectedPrimarySubject": "Física",
+      "observedPrimarySubject": "Física",
+      "observedTopicId": "fis_leis_newton",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f2-d1:P03",
+      "year": 2023,
+      "phase": "2a-dia1",
+      "number": "P03",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_1.pdf",
+      "sourcePage": 4,
+      "recordPage": 4,
+      "sourceSha256": "9945042f8edfbf11ce743d0ff4995815be9d2b31579232ffbc0788c4f6d6ac96",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Paulo Freire: metáfora financeira em educação bancária e efeito de repetição de já não.",
+      "expectedPrimarySubject": "Português",
+      "observedPrimarySubject": "Português",
+      "observedTopicId": "por_texto",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f2-d1:P08",
+      "year": 2023,
+      "phase": "2a-dia1",
+      "number": "P08",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_1.pdf",
+      "sourcePage": 8,
+      "recordPage": 8,
+      "sourceSha256": "9945042f8edfbf11ce743d0ff4995815be9d2b31579232ffbc0788c4f6d6ac96",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Romanceiro da Inconfidência articula Tiradentes, ambição/injustiça/covardia e consequências éticas.",
+      "expectedPrimarySubject": "Literatura",
+      "observedPrimarySubject": "Literatura",
+      "observedTopicId": "por_lit_modernismo",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f2-d2:B02",
+      "year": 2023,
+      "phase": "2a-dia2",
+      "number": "B02",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+      "sourcePage": 20,
+      "recordPage": 20,
+      "sourceSha256": "1fe9afaf17b1849c8b9aa92882f52a2ef846b03005b13166ebfec9474433379c",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "ADH, especialização do epitélio renal e néfrons de roedores de habitats diferentes.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_fisio_animal",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f2-d2:Q03",
+      "year": 2023,
+      "phase": "2a-dia2",
+      "number": "Q03",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+      "sourcePage": 16,
+      "recordPage": 16,
+      "sourceSha256": "1fe9afaf17b1849c8b9aa92882f52a2ef846b03005b13166ebfec9474433379c",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Síntese peptídica com EDC/DCC, interações com água e mols de sulfato no métodoKjeldahl.",
+      "expectedPrimarySubject": "Química",
+      "observedPrimarySubject": "Química",
+      "observedTopicId": "qui_organica_reacoes",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f2-d2:H04",
+      "year": 2023,
+      "phase": "2a-dia2",
+      "number": "H04",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+      "sourcePage": 34,
+      "recordPage": 34,
+      "sourceSha256": "1fe9afaf17b1849c8b9aa92882f52a2ef846b03005b13166ebfec9474433379c",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Tropicália: artista, características e diferenças para canções de protesto eJovem Guarda.",
+      "expectedPrimarySubject": "História",
+      "observedPrimarySubject": "História",
+      "observedTopicId": "his_republica_liberal_atual",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2023-f2-d2:M05",
+      "year": 2023,
+      "phase": "2a-dia2",
+      "number": "M05",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+      "sourcePage": 6,
+      "recordPage": 6,
+      "sourceSha256": "1fe9afaf17b1849c8b9aa92882f52a2ef846b03005b13166ebfec9474433379c",
+      "classificationFileSha256": "3edf6bc7f255e6502fe53984d3f161e7e84c402952ba0fb09cf8d0300441f47a",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Desigualdades normativas e número inteiro de degraus determinam dimensões e limites da tangente.",
+      "expectedPrimarySubject": "Matemática",
+      "observedPrimarySubject": "Matemática",
+      "observedTopicId": "mat_equacoes",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f1:01",
+      "year": 2024,
+      "phase": "1a",
+      "number": "01",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_primeira_fase_prova_V.pdf",
+      "sourcePage": 2,
+      "recordPage": 2,
+      "sourceSha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Verso deConceição Evaristo usa quilombos como metáfora da resistência coletiva atual.",
+      "expectedPrimarySubject": "Português",
+      "observedPrimarySubject": "Português",
+      "observedTopicId": "por_texto",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f1:16",
+      "year": 2024,
+      "phase": "1a",
+      "number": "16",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_primeira_fase_prova_V.pdf",
+      "sourcePage": 6,
+      "recordPage": 6,
+      "sourceSha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Dois irmãos: distinguir suspeita da paternidade deNael de reconhecimento explícito.",
+      "expectedPrimarySubject": "Literatura",
+      "observedPrimarySubject": "Literatura",
+      "observedTopicId": "por_lit_contemporanea",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f1:31",
+      "year": 2024,
+      "phase": "1a",
+      "number": "31",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_primeira_fase_prova_V.pdf",
+      "sourcePage": 13,
+      "recordPage": 13,
+      "sourceSha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Volume retirado de cilindro horizontal exige segmento circular; fração da altura não é fração do volume.",
+      "expectedPrimarySubject": "Matemática",
+      "observedPrimarySubject": "Matemática",
+      "observedTopicId": "mat_geometria_espacial",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f1:46",
+      "year": 2024,
+      "phase": "1a",
+      "number": "46",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_primeira_fase_prova_V.pdf",
+      "sourcePage": 18,
+      "recordPage": 18,
+      "sourceSha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Mapa histórico da cafeicultura mostra avanço para oeste e formação da rede ferroviária/portuária.",
+      "expectedPrimarySubject": "Geografia",
+      "observedPrimarySubject": "Geografia",
+      "observedTopicId": "geo_economica_brasil",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f1:61",
+      "year": 2024,
+      "phase": "1a",
+      "number": "61",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_primeira_fase_prova_V.pdf",
+      "sourcePage": 23,
+      "recordPage": 23,
+      "sourceSha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Gráfico relaciona aridez e balanço de radiação à biomassa/biodiversidade e aos biomas.",
+      "expectedPrimarySubject": "Geografia",
+      "observedPrimarySubject": "Geografia",
+      "observedTopicId": "geo_climatologia_socioambiental",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f1:76",
+      "year": 2024,
+      "phase": "1a",
+      "number": "76",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_primeira_fase_prova_V.pdf",
+      "sourcePage": 29,
+      "recordPage": 29,
+      "sourceSha256": "f7d6e72253ac8fb23ec2283a5776155e6f5a91ef192c280bcc0e94e167c7f41e",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Texto situa aproximaçãoCuba/URSS e solidariedade ao movimento negro dosEUA naGuerraFria.",
+      "expectedPrimarySubject": "História",
+      "observedPrimarySubject": "História",
+      "observedTopicId": "his_guerra_fria_contemporaneo",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f2-dia1:P03",
+      "year": 2024,
+      "phase": "2a-dia1",
+      "number": "P03",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_1dia.pdf",
+      "sourcePage": 4,
+      "recordPage": 4,
+      "sourceSha256": "0c8e8465e707ca57611a34e37ed885f2cd75f5072706d8b03ce7d367d555ce28",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Humanidade/sub-humanidade: formação lexical e reescrita com correlação temporal no passado.",
+      "expectedPrimarySubject": "Português",
+      "observedPrimarySubject": "Português",
+      "observedTopicId": "por_norma_culta",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f2-dia1:P08",
+      "year": 2024,
+      "phase": "2a-dia1",
+      "number": "P08",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_1dia.pdf",
+      "sourcePage": 8,
+      "recordPage": 8,
+      "sourceSha256": "0c8e8465e707ca57611a34e37ed885f2cd75f5072706d8b03ce7d367d555ce28",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Quincas Borba: mediocridade deRubião e articulação de tragédia/farsa na loucura da personagem.",
+      "expectedPrimarySubject": "Literatura",
+      "observedPrimarySubject": "Literatura",
+      "observedTopicId": "por_lit_romantismo_realismo",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f2-dia2:B02",
+      "year": 2024,
+      "phase": "2a-dia2",
+      "number": "B02",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
+      "sourcePage": 20,
+      "recordPage": 20,
+      "sourceSha256": "cc591c016f2dbbc3a6f22e80bc4b95539378cce8f2f24fc88dd34cf9e4c8d0c7",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Mariposas antes/depois da industrialização: seleção direcional, predação e distribuição fenotípica.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_evolucao",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f2-dia2:Q03",
+      "year": 2024,
+      "phase": "2a-dia2",
+      "number": "Q03",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
+      "sourcePage": 16,
+      "recordPage": 16,
+      "sourceSha256": "cc591c016f2dbbc3a6f22e80bc4b95539378cce8f2f24fc88dd34cf9e4c8d0c7",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Balão volumétrico: incerteza relativa, aquecimento da solução e variação depH por diluição dez vezes.",
+      "expectedPrimarySubject": "Química",
+      "observedPrimarySubject": "Química",
+      "observedTopicId": "qui_solucoes",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f2-dia2:H04",
+      "year": 2024,
+      "phase": "2a-dia2",
+      "number": "H04",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
+      "sourcePage": 34,
+      "recordPage": 34,
+      "sourceSha256": "cc591c016f2dbbc3a6f22e80bc4b95539378cce8f2f24fc88dd34cf9e4c8d0c7",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Capa deFelaKuti articula pan-africanismo, consciência negra e emancipação pós-colonial.",
+      "expectedPrimarySubject": "História",
+      "observedPrimarySubject": "História",
+      "observedTopicId": "his_guerra_fria_contemporaneo",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2024-f2-dia2:M05",
+      "year": 2024,
+      "phase": "2a-dia2",
+      "number": "M05",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
+      "sourcePage": 6,
+      "recordPage": 6,
+      "sourceSha256": "cc591c016f2dbbc3a6f22e80bc4b95539378cce8f2f24fc88dd34cf9e4c8d0c7",
+      "classificationFileSha256": "ea454c6e46ddc9176c3d20fc28ff09bfba2972fc99e3244cb9c28c3caa9f0be8",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Triângulo delimitado por eixos e x+y=4 gira em torno de três retas; sólidos de revolução.",
+      "expectedPrimarySubject": "Matemática",
+      "observedPrimarySubject": "Matemática",
+      "observedTopicId": "mat_geometria_espacial",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f1:01",
+      "year": 2025,
+      "phase": "1a",
+      "number": "01",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "sourcePage": 2,
+      "recordPage": 2,
+      "sourceSha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Textos deKopenawa/Glicéria e manto tupinambá conectam arte, colonialidade e resistência cultural.",
+      "expectedPrimarySubject": "Arte",
+      "observedPrimarySubject": "Arte",
+      "observedTopicId": null,
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f1:16",
+      "year": 2025,
+      "phase": "1a",
+      "number": "16",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "sourcePage": 8,
+      "recordPage": 8,
+      "sourceSha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Aplicar tabela de inclinações a cada segmento de uma rampa; altura/comprimento é razão decisiva.",
+      "expectedPrimarySubject": "Matemática",
+      "observedPrimarySubject": "Matemática",
+      "observedTopicId": "mat_aritmetica_proporcionalidade",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f1:31",
+      "year": 2025,
+      "phase": "1a",
+      "number": "31",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "sourcePage": 14,
+      "recordPage": 14,
+      "sourceSha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Coral e alga trocam benefícios; perda de recifes elimina habitat, proteção e alimento.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_ecologia",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f1:46",
+      "year": 2025,
+      "phase": "1a",
+      "number": "46",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "sourcePage": 19,
+      "recordPage": 19,
+      "sourceSha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Valor energético de sementes decorre de suas reservas para o embrião vegetal.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_botanica",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f1:61",
+      "year": 2025,
+      "phase": "1a",
+      "number": "61",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "sourcePage": 24,
+      "recordPage": 24,
+      "sourceSha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Versos ingleses sobre penas/pesos aludem às experiências galileanas de queda de corpos.",
+      "expectedPrimarySubject": "Física",
+      "observedPrimarySubject": "Física",
+      "observedTopicId": "fis_cinematica",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f1:76",
+      "year": 2025,
+      "phase": "1a",
+      "number": "76",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "sourcePage": 28,
+      "recordPage": 28,
+      "sourceSha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Volume e área lateral respondem de modo diferente à redução do raio e à redução da altura.",
+      "expectedPrimarySubject": "Matemática",
+      "observedPrimarySubject": "Matemática",
+      "observedTopicId": "mat_geometria_espacial",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f2-dia1:P03",
+      "year": 2025,
+      "phase": "2a-dia1",
+      "number": "P03",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia1.pdf",
+      "sourcePage": 3,
+      "recordPage": 3,
+      "sourceSha256": "1efb3ec7a497dfb64180f7f95a38da1e0058a3aa234e4aa3dfb736261150c1fc",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Quincas Borba e fotografia de1888 exigem distinguir posição do autor e ambivalência deRubião.",
+      "expectedPrimarySubject": "Literatura",
+      "observedPrimarySubject": "Literatura",
+      "observedTopicId": "por_lit_romantismo_realismo",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f2-dia1:P08",
+      "year": 2025,
+      "phase": "2a-dia1",
+      "number": "P08",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia1.pdf",
+      "sourcePage": 5,
+      "recordPage": 5,
+      "sourceSha256": "1efb3ec7a497dfb64180f7f95a38da1e0058a3aa234e4aa3dfb736261150c1fc",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Crônica futebolística pede explicar conotação/personificação e formação humorística de palavras por sufixação.",
+      "expectedPrimarySubject": "Português",
+      "observedPrimarySubject": "Português",
+      "observedTopicId": "por_norma_culta",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f2-dia2:B02",
+      "year": 2025,
+      "phase": "2a-dia2",
+      "number": "B02",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
+      "sourcePage": 3,
+      "recordPage": 3,
+      "sourceSha256": "420339db266ec93d9cf8f9491064aacf858b55ffe8f04b4d7bd3b5f47b11aee4",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Biomas vizinhos doCerrado, sazonalidade climática e retroalimentação savanização/aquecimento.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_ecologia",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f2-dia2:Q03",
+      "year": 2025,
+      "phase": "2a-dia2",
+      "number": "Q03",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
+      "sourcePage": 40,
+      "recordPage": 40,
+      "sourceSha256": "420339db266ec93d9cf8f9491064aacf858b55ffe8f04b4d7bd3b5f47b11aee4",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Desenho deErlenmeyer, Lewis de hidrocarbonetos mínimos e tautomeria enol/carbonila.",
+      "expectedPrimarySubject": "Química",
+      "observedPrimarySubject": "Química",
+      "observedTopicId": "qui_organica_fundamentos",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "fail",
+      "status": "pass",
+      "notes": [
+        "Representações deLewis e tautômeros requerem aplicação conceitual e representação molecular.",
+        "corrected"
+      ]
+    },
+    {
+      "id": "fuvest-2025-f2-dia2:H04",
+      "year": 2025,
+      "phase": "2a-dia2",
+      "number": "H04",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
+      "sourcePage": 26,
+      "recordPage": 26,
+      "sourceSha256": "420339db266ec93d9cf8f9491064aacf858b55ffe8f04b4d7bd3b5f47b11aee4",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Propaganda de sabão veicula racismo pseudocientífico; comando inclui rivalidade colonial naÁfrica doSul.",
+      "expectedPrimarySubject": "História",
+      "observedPrimarySubject": "História",
+      "observedTopicId": "his_imperialismo_guerras",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2025-f2-dia2:M05",
+      "year": 2025,
+      "phase": "2a-dia2",
+      "number": "M05",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
+      "sourcePage": 35,
+      "recordPage": 35,
+      "sourceSha256": "420339db266ec93d9cf8f9491064aacf858b55ffe8f04b4d7bd3b5f47b11aee4",
+      "classificationFileSha256": "8323e1b4353574b7a39ac930458d6dbc69294526af62f77bb865bfb30f55eee0",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Sequência n/2^b:PA, casas decimais e integridade da soma exigem cálculo e divisibilidade.",
+      "expectedPrimarySubject": "Matemática",
+      "observedPrimarySubject": "Matemática",
+      "observedTopicId": "mat_teoria_numeros",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "fail",
+      "status": "pass",
+      "notes": [
+        "Apenas interpretação textual omitia cálculo e modelagem/divisibilidade realmente necessários.",
+        "corrected"
+      ]
+    },
+    {
+      "id": "fuvest-2026-f1:01",
+      "year": 2026,
+      "phase": "1a",
+      "number": "01",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sourcePage": 2,
+      "recordPage": 2,
+      "sourceSha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Paráfrase deve preservar concessão, finalidade e caráter possível da trapaça narrada porCaetano.",
+      "expectedPrimarySubject": "Português",
+      "observedPrimarySubject": "Português",
+      "observedTopicId": "por_sintaxe",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f1:16",
+      "year": 2026,
+      "phase": "1a",
+      "number": "16",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sourcePage": 8,
+      "recordPage": 8,
+      "sourceSha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Just-in-time é interpretado como trabalho sob demanda na organização de plataformas.",
+      "expectedPrimarySubject": "Sociologia",
+      "observedPrimarySubject": "Sociologia",
+      "observedTopicId": "soc_trabalho_sociedade",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f1:31",
+      "year": 2026,
+      "phase": "1a",
+      "number": "31",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sourcePage": 14,
+      "recordPage": 14,
+      "sourceSha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "NaOH dissolvido pela umidade neutraliza acidez; não atua como sódio metálico de sacrifício.",
+      "expectedPrimarySubject": "Química",
+      "observedPrimarySubject": "Química",
+      "observedTopicId": "qui_inorganica",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f1:46",
+      "year": 2026,
+      "phase": "1a",
+      "number": "46",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sourcePage": 21,
+      "recordPage": 21,
+      "sourceSha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Comparação explícita da escultura barrocaCristoCachorro com a despersonalização moderna deO Cristo cigano.",
+      "expectedPrimarySubject": "Literatura",
+      "observedPrimarySubject": "Literatura",
+      "observedTopicId": "por_lit_contemporanea",
+      "confidence": "medium",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "fail",
+      "status": "pass",
+      "notes": [
+        "A comparação com escultura barroca é operação expressamente exigida; Arte estava ausente das áreas associadas.",
+        "corrected"
+      ]
+    },
+    {
+      "id": "fuvest-2026-f1:61",
+      "year": 2026,
+      "phase": "1a",
+      "number": "61",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sourcePage": 27,
+      "recordPage": 27,
+      "sourceSha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Efeito fotoelétrico: aumentar frequência aumenta energia cinética para mesma função trabalho.",
+      "expectedPrimarySubject": "Física",
+      "observedPrimarySubject": "Física",
+      "observedTopicId": "fis_fisica_moderna",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f1:76",
+      "year": 2026,
+      "phase": "1a",
+      "number": "76",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sourcePage": 33,
+      "recordPage": 33,
+      "sourceSha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Audiograma e definição logarítmica permitem obter razão de intensidades pela diferença em decibéis.",
+      "expectedPrimarySubject": "Física",
+      "observedPrimarySubject": "Física",
+      "observedTopicId": "fis_ondulatoria",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f2-d1:P03",
+      "year": 2026,
+      "phase": "2a-dia1",
+      "number": "P03",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-prova.pdf",
+      "sourcePage": 4,
+      "recordPage": 4,
+      "sourceSha256": "1a2e017b8a3558da8e797cb61b5882d17165759c98bf59042c49a3644fc300ce",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Comparar memória como tormento emTelles e missão de escrevivência emEvaristo.",
+      "expectedPrimarySubject": "Literatura",
+      "observedPrimarySubject": "Literatura",
+      "observedTopicId": "por_lit_contemporanea",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f2-d1:P08",
+      "year": 2026,
+      "phase": "2a-dia1",
+      "number": "P08",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-prova.pdf",
+      "sourcePage": 8,
+      "recordPage": 8,
+      "sourceSha256": "1a2e017b8a3558da8e797cb61b5882d17165759c98bf59042c49a3644fc300ce",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Imagens escolares do séculoXIX eOpúsculo humanitário exigem discutir exclusão educacional de gênero/etnia.",
+      "expectedPrimarySubject": "Literatura",
+      "observedPrimarySubject": "Literatura",
+      "observedTopicId": "por_lit_romantismo_realismo",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f2-d2:B02",
+      "year": 2026,
+      "phase": "2a-dia2",
+      "number": "B02",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+      "sourcePage": 3,
+      "recordPage": 3,
+      "sourceSha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Hidrocarbonetos, lipossolubilidade, entrada pela membrana e detoxificação emperoxissomos/REL nofígado.",
+      "expectedPrimarySubject": "Biologia",
+      "observedPrimarySubject": "Biologia",
+      "observedTopicId": "bio_estrutura_fisio_celular",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f2-d2:Q03",
+      "year": 2026,
+      "phase": "2a-dia2",
+      "number": "Q03",
+      "medicineSubset": true,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+      "sourcePage": 40,
+      "recordPage": 40,
+      "sourceSha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Desinfetantes: reação estrutural, deslocamento com acidificação eLewis/geometria/polaridade deNCl3.",
+      "expectedPrimarySubject": "Química",
+      "observedPrimarySubject": "Química",
+      "observedTopicId": "qui_equilibrio",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f2-d2:H04",
+      "year": 2026,
+      "phase": "2a-dia2",
+      "number": "H04",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+      "sourcePage": 26,
+      "recordPage": 26,
+      "sourceSha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Abelardo: transmissão medieval do saber, autonomia universitária e autoridade intelectual do mestre.",
+      "expectedPrimarySubject": "História",
+      "observedPrimarySubject": "História",
+      "observedTopicId": "his_idade_media",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    },
+    {
+      "id": "fuvest-2026-f2-d2:M05",
+      "year": 2026,
+      "phase": "2a-dia2",
+      "number": "M05",
+      "medicineSubset": false,
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+      "sourcePage": 35,
+      "recordPage": 35,
+      "sourceSha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05",
+      "classificationFileSha256": "673977750e88c403b771a5b7eedbffd1cd6b344afb6ade1c493e6e9d45fba9df",
+      "method": [
+        "leitura do enunciado extraído doPDF",
+        "comparação com matéria/tópico/síntese/estratégia/armadilha",
+        "inspeção visual quando representação decisiva"
+      ],
+      "evidence": "Luminária no vértice de pirâmide inscrita no cubo: distância ao piso, arestas e projeção ortogonal.",
+      "expectedPrimarySubject": "Matemática",
+      "observedPrimarySubject": "Matemática",
+      "observedTopicId": "mat_geometria_espacial",
+      "confidence": "high",
+      "checks": {
+        "identityAndPage": "pass",
+        "primarySubject": "pass",
+        "summaryAndStrategy": "pass",
+        "classificationAndSkills": "pass"
+      },
+      "initialStatus": "pass",
+      "status": "pass",
+      "notes": []
+    }
+  ],
+  "limitations": [
+    "Seleção sistemática com os mesmos números por edição não assegura representatividade de todas as disciplinas ou dificuldades.",
+    "Pass indica ausência de divergência material detectada no escopo conferido; não é garantia de solução/categorização única.",
+    "Os mesmos enunciados admitem primárias distintas em questões interdisciplinares; casos discutíveis permanecem descritos.",
+    "As estratégias são orientações editoriais; não constituem rubricas oficiais de pontuação."
+  ]
+}

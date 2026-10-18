@@ -1,3 +1,5 @@
+> Atualização: a cobertura FUVEST foi substituída pela série completa 2022–2026. Veja [método e integração atuais](../prioridades-aprofundadas.md). Os números de 220 fichas/nove recortes abaixo documentam a etapa anterior; a base integrada atual tem 881 fichas/22 recortes.
+
 # Prioridades, cobrança e aprofundamentos combinados
 
 ## Problema encontrado

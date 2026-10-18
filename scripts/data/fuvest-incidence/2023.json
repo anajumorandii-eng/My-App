@@ -1,0 +1,4166 @@
+{
+  "year": 2023,
+  "reviewedOn": "2026-10-18",
+  "reviewType": "single-editor-source-reading",
+  "papers": [
+    {
+      "id": "fuvest-2023-f1",
+      "phase": "1a",
+      "version": "V",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_gabarito_primeira_fase.pdf",
+      "sha256": "8a9941afd99addd61090c6432c8f8c28bbb6f8ed14d50cb2b8d30dfedf4751ac",
+      "answerKeySha256": "34dd073be5c79c6e7f4464dc16399d05abd4605cdbc29a134ce15d69ba7ed86b",
+      "pages": 28,
+      "bytes": 6469477,
+      "answerKeyBytes": 530692,
+      "expectedQuestions": 90,
+      "questions": [
+        {
+          "number": "01",
+          "page": 2,
+          "subject": "Sociologia",
+          "topicId": "soc_estratificacao_desigualdade",
+          "topic": "Estratificação Social e Desigualdade",
+          "subtopics": [
+            "Interseccionalidade de raça e gênero"
+          ],
+          "skills": [
+            "analise_imagem",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar desigualdades salariais à sobreposição de discriminações no mercado brasileiro",
+          "rationale": "A operação decisiva consiste em localize o grupo prejudicado nos dois eixos.",
+          "strategy": [
+            "Compare salários por raça e gênero",
+            "Localize o grupo prejudicado nos dois eixos"
+          ],
+          "trap": "Tratar discriminações como independentes",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "02",
+          "page": 2,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Os Dois Níveis da Leitura"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar avaliação dos avanços e limites da representação política feminina",
+          "rationale": "A operação decisiva consiste em confronte porcentagens eleitorais e parlamentares.",
+          "strategy": [
+            "Separe avanços legais de participação efetiva",
+            "Confronte porcentagens eleitorais e parlamentares"
+          ],
+          "trap": "Confundir crescimento com representação proporcional",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "03",
+          "page": 2,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Trabalho feminino e magistério"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer inserção profissional feminina e persistências patriarcais no início republicano",
+          "rationale": "A operação decisiva consiste em relacione magistério e reconhecimento social.",
+          "strategy": [
+            "Identifique profissões citadas pela cronista",
+            "Relacione magistério e reconhecimento social"
+          ],
+          "trap": "Atribuir mudanças apenas ao sufrágio de 1934",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "04",
+          "page": 3,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Carlos Drummond de Andrade"
+          ],
+          "skills": [
+            "analise_literaria",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar repetição e trabalho feminino no poema Família de Drummond",
+          "rationale": "A operação decisiva consiste em relacione o refrão ao serviço doméstico.",
+          "strategy": [
+            "Observe a enumeração nominal",
+            "Relacione o refrão ao serviço doméstico"
+          ],
+          "trap": "Ler a família como emancipação feminina",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "O Léxico em Contexto: Variadas Possibilidades Semânticas"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar eufemização das relações trabalhistas pelo termo colaborador no ensaio",
+          "rationale": "A operação decisiva consiste em relacione troca lexical à ocultação da exploração.",
+          "strategy": [
+            "Compare trabalhador e colaborador",
+            "Relacione troca lexical à ocultação da exploração"
+          ],
+          "trap": "Tomar vocabulário positivo como melhoria real",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "06",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Vozes Verbais"
+          ],
+          "skills": [
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar efeito discursivo das construções pronominais em texto sobre trabalho",
+          "rationale": "A operação decisiva consiste em avalie a omissão de agentes no discurso.",
+          "strategy": [
+            "Identifique construções com se",
+            "Avalie a omissão de agentes no discurso"
+          ],
+          "trap": "Reduzir efeito a informalidade",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "07",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "O Léxico em Contexto: Variadas Possibilidades Semânticas"
+          ],
+          "skills": [
+            "analise_imagem",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar escolhas lexicais dos personagens à situação comunicativa da tira",
+          "rationale": "A operação decisiva consiste em associe registro e perspectiva de cada personagem.",
+          "strategy": [
+            "Compare detonar e avariar",
+            "Associe registro e perspectiva de cada personagem"
+          ],
+          "trap": "Considerar sinônimos contraditórios",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "08",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Leitura de Textos Cômicos"
+          ],
+          "skills": [
+            "analise_imagem",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Inferir ampliação do conceito de patrimônio público na tira de Armandinho",
+          "rationale": "A operação decisiva consiste em compare alcance das falas de pai e filho.",
+          "strategy": [
+            "Identifique exemplos de patrimônio nos quadros",
+            "Compare alcance das falas de pai e filho"
+          ],
+          "trap": "Restringir patrimônio ao mobiliário urbano",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "09",
+          "page": 4,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Relevo e ocupação humana"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avaliar riscos de ocupação em encostas terraços e planícies fluviais",
+          "rationale": "A operação decisiva consiste em considere cheias e proteção das nascentes.",
+          "strategy": [
+            "Distinga superfícies planas e encostas",
+            "Considere cheias e proteção das nascentes"
+          ],
+          "trap": "Escolher planície inundável como segura",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "10",
+          "page": 4,
+          "subject": "Sociologia",
+          "topicId": "soc_weber",
+          "topic": "Max Weber e a Ação Social",
+          "subtopics": [
+            "Dominação e Poder em Weber"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Confrontar controle territorial das milícias com monopólio legítimo da violência estatal",
+          "rationale": "A operação decisiva consiste em compare extorsão miliciana com esse critério.",
+          "strategy": [
+            "Defina legitimidade da força estatal",
+            "Compare extorsão miliciana com esse critério"
+          ],
+          "trap": "Confundir controle territorial com legitimidade",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "11",
+          "page": 5,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Esterificação"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar reagentes capazes de produzir benzoato de metila na esterificação",
+          "rationale": "A operação decisiva consiste em procure ácido benzoico e metanol nas alternativas.",
+          "strategy": [
+            "Separe porções ácida e alcoólica do éster",
+            "Procure ácido benzoico e metanol nas alternativas"
+          ],
+          "trap": "Trocar a origem dos grupos do éster",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "12",
+          "page": 5,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Interações intermoleculares"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar energia de interação molecular ao alongamento da ligação enxofre oxigênio",
+          "rationale": "A operação decisiva consiste em compare distância de ligação e energia.",
+          "strategy": [
+            "Leia tendência do gráfico",
+            "Compare distância de ligação e energia"
+          ],
+          "trap": "Confundir maior interação com ligação mais curta",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "13",
+          "page": 5,
+          "subject": "Física",
+          "topicId": "fis_termodinamica_gases",
+          "topic": "Termodinâmica dos Gases",
+          "subtopics": [
+            "Energia Interna dos Gases"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar temperatura de equilíbrio de gases isolados com quantidades diferentes",
+          "rationale": "A operação decisiva consiste em iguale à energia dos três mols finais.",
+          "strategy": [
+            "Some energias internas iniciais",
+            "Iguale à energia dos três mols finais"
+          ],
+          "trap": "Fazer média simples das temperaturas",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "14",
+          "page": 6,
+          "subject": "Química",
+          "topicId": "qui_inorganica",
+          "topic": "Química Inorgânica",
+          "subtopics": [
+            "Reações Ácido-Base"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar protonação da metilamina pela acidez do suco de limão",
+          "rationale": "A operação decisiva consiste em acrescente próton preservando a cadeia carbônica.",
+          "strategy": [
+            "Localize par de elétrons do nitrogênio",
+            "Acrescente próton preservando a cadeia carbônica"
+          ],
+          "trap": "Romper ligação carbono nitrogênio",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "15",
+          "page": 6,
+          "subject": "Biologia",
+          "topicId": "bio_evolucao",
+          "topic": "Evolução",
+          "subtopics": [
+            "Mecanismos da Evolução Biológica"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar seleção de tamanho corporal causada pela pesca de indivíduos maiores",
+          "rationale": "A operação decisiva consiste em relacione sobrevivência diferencial à geração seguinte.",
+          "strategy": [
+            "Compare tamanhos antes e depois da pesca",
+            "Relacione sobrevivência diferencial à geração seguinte"
+          ],
+          "trap": "Atribuir redução de tamanho à produtividade primária",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "16",
+          "page": 6,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Sobrepesca e conservação marinha"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avaliar impactos da frota pesqueira nas proximidades das ilhas Galápagos",
+          "rationale": "A operação decisiva consiste em compare retirada com reposição natural.",
+          "strategy": [
+            "Identifique pressão sobre estoques e resíduos",
+            "Compare retirada com reposição natural"
+          ],
+          "trap": "Supor água fria pouco produtiva",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "17",
+          "page": 7,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Solubilidade e coeficiente de partição"
+          ],
+          "skills": [
+            "modelagem",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar lipossolubilidade dos poluentes persistentes ao coeficiente octanol água",
+          "rationale": "A operação decisiva consiste em associe afinidade lipídica a valor elevado.",
+          "strategy": [
+            "Escreva razão concentração orgânica por aquosa",
+            "Associe afinidade lipídica a valor elevado"
+          ],
+          "trap": "Confundir baixa solubilidade aquosa com baixo coeficiente",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "18",
+          "page": 7,
+          "subject": "Geografia",
+          "topicId": "geo_hidrogeografia",
+          "topic": "Hidrogeografia",
+          "subtopics": [
+            "Contaminação de bacias hidrográficas"
+          ],
+          "skills": [
+            "analise_imagem",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avaliar dispersão de agrotóxicos entre bacias no Chapadão Ocidental Baiano",
+          "rationale": "A operação decisiva consiste em considere fluxos subterrâneos além do divisor superficial.",
+          "strategy": [
+            "Localize divisores e áreas cultivadas",
+            "Considere fluxos subterrâneos além do divisor superficial"
+          ],
+          "trap": "Supor divisor topográfico barreira impermeável",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "19",
+          "page": 7,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Agricultura e fertilizantes"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar consumo de fertilizantes às lavouras mecanizadas brasileiras de exportação",
+          "rationale": "A operação decisiva consiste em associe produção comercial e especialização regional.",
+          "strategy": [
+            "Identifique culturas com maior consumo",
+            "Associe produção comercial e especialização regional"
+          ],
+          "trap": "Confundir lavoura mecanizada com baixo impacto",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "20",
+          "page": 8,
+          "subject": "Biologia",
+          "topicId": "bio_biotecnologia",
+          "topic": "Biotecnologia",
+          "subtopics": [
+            "Biotecnologia"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_estrutura_fisio_celular"
+          ],
+          "summary": "Identificar organelas candidatas à transferência de genes fixadores de nitrogênio",
+          "rationale": "A operação decisiva consiste em selecione plastos ou mitocôndrias.",
+          "strategy": [
+            "Recupere a origem endossimbiótica das organelas",
+            "Selecione plastos ou mitocôndrias"
+          ],
+          "trap": "Imaginar incorporação de bactérias inteiras",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "21",
+          "page": 8,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Introdução às Funções"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolher função de preço total crescente com preço unitário decrescente",
+          "rationale": "A operação decisiva consiste em compare crescimento do total e da razão preço por massa.",
+          "strategy": [
+            "Teste o valor para um quilograma",
+            "Compare crescimento do total e da razão preço por massa"
+          ],
+          "trap": "Confundir desconto unitário com queda do total",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "22",
+          "page": 8,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Progressão Aritmética"
+          ],
+          "skills": [
+            "calculo",
+            "modelagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular soma das parcelas de celular descontando prestação não paga",
+          "rationale": "A operação decisiva consiste em subtraia especificamente a décima nona prestação.",
+          "strategy": [
+            "Determine razão e soma das 24 parcelas",
+            "Subtraia especificamente a décima nona prestação"
+          ],
+          "trap": "Subtrair a última prestação",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "23",
+          "page": 8,
+          "subject": "Química",
+          "topicId": "qui_eletroquimica",
+          "topic": "Eletroquímica",
+          "subtopics": [
+            "Corrosão Galvânica"
+          ],
+          "skills": [
+            "interpretacao_tabela",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Escolher metal para aeronaves conciliando corrosão densidade e custo",
+          "rationale": "A operação decisiva consiste em cruze resistência à corrosão com custo e densidade.",
+          "strategy": [
+            "Compare potenciais com fibra de carbono",
+            "Cruze resistência à corrosão com custo e densidade"
+          ],
+          "trap": "Escolher apenas o metal mais barato",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "24",
+          "page": 8,
+          "subject": "Matemática",
+          "topicId": "mat_equacoes",
+          "topic": "Equações, Desigualdades e Modelagem Algébrica",
+          "subtopics": [
+            "Modelagem Algébrica de Problemas I"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar razão dos preços de combustíveis a partir de dois abastecimentos",
+          "rationale": "A operação decisiva consiste em imponha custo de André igual a 1,1 do outro.",
+          "strategy": [
+            "Expresse custos pelas quantidades abastecidas",
+            "Imponha custo de André igual a 1,1 do outro"
+          ],
+          "trap": "Aplicar dez por cento à diferença de litros",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "25",
+          "page": 9,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Cálculo Estequiométrico"
+          ],
+          "skills": [
+            "calculo",
+            "modelagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular diferença de emissão de dióxido de enxofre entre tipos de diesel",
+          "rationale": "A operação decisiva consiste em converta massa de enxofre em massa de dióxido.",
+          "strategy": [
+            "Subtraia concentrações de enxofre em ppm",
+            "Converta massa de enxofre em massa de dióxido"
+          ],
+          "trap": "Manter massa igual após incorporar oxigênio",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "26",
+          "page": 9,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Poluição do Ar"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar chuva ácida como causa de degradação diferencial das florestas",
+          "rationale": "A operação decisiva consiste em relacione dióxido de enxofre e acidificação.",
+          "strategy": [
+            "Compare fatores nas duas regiões",
+            "Relacione dióxido de enxofre e acidificação"
+          ],
+          "trap": "Escolher aquecimento apesar de CO2 igual",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "27",
+          "page": 9,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Fatores Climáticos"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar ocorrência de geadas paulistas à altitude da Mantiqueira",
+          "rationale": "A operação decisiva consiste em associe altitude à redução térmica.",
+          "strategy": [
+            "Localize maiores ocorrências no mapa",
+            "Associe altitude à redução térmica"
+          ],
+          "trap": "Confundir maritimidade com maior geada",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "28",
+          "page": 9,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Climas e sazonalidade vegetal"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar clima temperado pela perda sazonal de folhas e temperaturas",
+          "rationale": "A operação decisiva consiste em localize estação fria e menor pluviosidade.",
+          "strategy": [
+            "Compare curva de folhas e temperaturas mínimas",
+            "Localize estação fria e menor pluviosidade"
+          ],
+          "trap": "Supor queda de folhas sempre associada ao calor",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "29",
+          "page": 10,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_vegetal",
+          "topic": "Fisiologia Vegetal",
+          "subtopics": [
+            "Histologia e Morfologia Vegetal"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar tecido responsável pelo armazenamento de água no caule do xiquexique",
+          "rationale": "A operação decisiva consiste em localize parênquima aquífero no caule.",
+          "strategy": [
+            "Distinga armazenamento e redução de perda",
+            "Localize parênquima aquífero no caule"
+          ],
+          "trap": "Escolher espinhos que apenas reduzem transpiração",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "30",
+          "page": 10,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Graciliano Ramos"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer tempo psicológico em Angústia mediante reflexão agostiniana sobre duração",
+          "rationale": "A operação decisiva consiste em escolha passagem que dissolve marcação objetiva das horas.",
+          "strategy": [
+            "Diferencie relógio e experiência interior",
+            "Escolha passagem que dissolve marcação objetiva das horas"
+          ],
+          "trap": "Tomar data de calendário como duração subjetiva",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "31",
+          "page": 10,
+          "subject": "Filosofia",
+          "topicId": "fil_moderna_racionalismo_empirismo",
+          "topic": "Filosofia Moderna: Racionalismo e Empirismo",
+          "subtopics": [
+            "Empirismo Britânico: Locke, Berkeley e Hume"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Aplicar tese empirista de Hume sobre origem sensorial das ideias",
+          "rationale": "A operação decisiva consiste em teste possibilidade de imaginar sabor nunca experimentado.",
+          "strategy": [
+            "Identifique prioridade das impressões sobre ideias",
+            "Teste possibilidade de imaginar sabor nunca experimentado"
+          ],
+          "trap": "Confundir memória com origem da percepção",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "32",
+          "page": 11,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: Taxonomy and Terminology"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Inferir aplicações dos estudos sonoros no marketing e nas atividades esportivas",
+          "rationale": "A operação decisiva consiste em sintetize áreas atingidas pelo simbolismo sonoro.",
+          "strategy": [
+            "Localize exemplos de marcas e exercício",
+            "Sintetize áreas atingidas pelo simbolismo sonoro"
+          ],
+          "trap": "Restringir estudo ao significado literal das letras",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "33",
+          "page": 11,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Vocabulário em contexto"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer sentido de convey na explicação das emoções transmitidas pela música",
+          "rationale": "A operação decisiva consiste em substitua por transmitir e confira coerência.",
+          "strategy": [
+            "Leia objeto e contexto do verbo",
+            "Substitua por transmitir e confira coerência"
+          ],
+          "trap": "Associar convey a diminuir",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "34",
+          "page": 11,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Leitura seletiva de informações"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Localizar elementos sonoros com efeitos físicos e emocionais sobre ouvintes",
+          "rationale": "A operação decisiva consiste em compare alternativas com a lista textual.",
+          "strategy": [
+            "Recupere enumeração de propriedades musicais",
+            "Compare alternativas com a lista textual"
+          ],
+          "trap": "Confundir letra e idioma com propriedades acústicas",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "35",
+          "page": 11,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Relação entre ortografia e fonética"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "analise_imagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar humor baseado na discrepância entre escrita e pronúncia inglesa",
+          "rationale": "A operação decisiva consiste em identifique irregularidade de correspondências fonéticas.",
+          "strategy": [
+            "Compare grafias e sons exibidos",
+            "Identifique irregularidade de correspondências fonéticas"
+          ],
+          "trap": "Explicar humor por concordância verbal",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "36",
+          "page": 12,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Potências e Radicais",
+            "Razão e Proporção"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar quantidade de tons e semitons na escala musical pitagórica",
+          "rationale": "A operação decisiva consiste em compare expoentes dos fatores primos.",
+          "strategy": [
+            "Expresse razão 990 por 220 como produto",
+            "Compare expoentes dos fatores primos"
+          ],
+          "trap": "Somar razões em vez de multiplicá-las",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "37",
+          "page": 12,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Figuras de Linguagem"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "analise_literaria"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar antítese temporal e metáfora na letra Sujeito de sorte",
+          "rationale": "A operação decisiva consiste em interprete morrer em sentido figurado.",
+          "strategy": [
+            "Compare advérbios e tempos verbais",
+            "Interprete morrer em sentido figurado"
+          ],
+          "trap": "Ler morte como fato literal",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "38",
+          "page": 12,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Fernando Pessoa"
+          ],
+          "skills": [
+            "analise_literaria"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar crítica à felicidade acomodada no poema O Quinto Império",
+          "rationale": "A operação decisiva consiste em contraste acomodação com busca do ideal.",
+          "strategy": [
+            "Observe valoração de lar e sonho",
+            "Contraste acomodação com busca do ideal"
+          ],
+          "trap": "Associar felicidade à realização heroica",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "39",
+          "page": 12,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Fernando Pessoa"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer temporalidade mística do destino português em Mensagem de Pessoa",
+          "rationale": "A operação decisiva consiste em interprete sebastianismo como expectativa metafísica.",
+          "strategy": [
+            "Relacione os quatro impérios ao futuro anunciado",
+            "Interprete sebastianismo como expectativa metafísica"
+          ],
+          "trap": "Reduzir sonho a psicologia individual",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "40",
+          "page": 13,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Nacionalismo e comemorações cívicas"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar símbolos nacionais mexicanos e brasileiros nos centenários das independências",
+          "rationale": "A operação decisiva consiste em associe comemoração e construção da identidade nacional.",
+          "strategy": [
+            "Identifique função pública da delegação e estátua",
+            "Associe comemoração e construção da identidade nacional"
+          ],
+          "trap": "Supor supremacia indígena como valor comum",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "41",
+          "page": 13,
+          "subject": "Sociologia",
+          "topicId": "soc_cultura_identidade",
+          "topic": "Cultura, Identidade e Diversidade",
+          "subtopics": [
+            "Identidade e Diferença"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar exclusão identitária de indígenas na sociedade equatoriana representada no romance",
+          "rationale": "A operação decisiva consiste em relacione trabalho subalterno e invisibilidade social.",
+          "strategy": [
+            "Observe negações de pertencimento",
+            "Relacione trabalho subalterno e invisibilidade social"
+          ],
+          "trap": "Confundir assimilação com emancipação",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "42",
+          "page": 13,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "A Mineração no Brasil Colonial"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar tolerância das autoridades aos vadios na sociedade mineradora colonial",
+          "rationale": "A operação decisiva consiste em relacione atividades auxiliares à mineração.",
+          "strategy": [
+            "Compare regra geral e exceção mineira",
+            "Relacione atividades auxiliares à mineração"
+          ],
+          "trap": "Tomar vadio como ausência total de trabalho",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "43",
+          "page": 13,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Modernismo no Brasil: Primeira Geração"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar autenticidade cultural brasileira aos argumentos de Sérgio Buarque de Holanda",
+          "rationale": "A operação decisiva consiste em associe expressão nacional e vida social.",
+          "strategy": [
+            "Identifique crítica à imitação de modelos",
+            "Associe expressão nacional e vida social"
+          ],
+          "trap": "Defender reprodução fiel de padrões externos",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "44",
+          "page": 14,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Pré-Modernismo"
+          ],
+          "skills": [
+            "analise_literaria",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar representação caricatural da fala ítalo brasileira no poema de Bananére",
+          "rationale": "A operação decisiva consiste em compare paródia com idealização nacional romântica.",
+          "strategy": [
+            "Observe alterações gráficas e sonoras",
+            "Compare paródia com idealização nacional romântica"
+          ],
+          "trap": "Ler representação caricata como simples lirismo",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "45",
+          "page": 14,
+          "subject": "História",
+          "topicId": "his_imperialismo_guerras",
+          "topic": "Imperialismo e Guerras Mundiais",
+          "subtopics": [
+            "Nacionalismos e unificações"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar culto nacional na literatura escolar da Itália recém unificada",
+          "rationale": "A operação decisiva consiste em relacione livro escolar e legitimação nacional.",
+          "strategy": [
+            "Localize oposição entre fragmentação e união",
+            "Relacione livro escolar e legitimação nacional"
+          ],
+          "trap": "Atribuir ideal republicano ao primeiro rei",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "46",
+          "page": 14,
+          "subject": "História",
+          "topicId": "his_idade_antiga",
+          "topic": "Idade Antiga",
+          "subtopics": [
+            "Grécia Antiga"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar alternância de comando e obediência no conceito grego de pólis",
+          "rationale": "A operação decisiva consiste em relacione reversibilidade do poder e isonomia.",
+          "strategy": [
+            "Identifique universo dos cidadãos",
+            "Relacione reversibilidade do poder e isonomia"
+          ],
+          "trap": "Confundir cidadania antiga com sufrágio universal",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "47",
+          "page": 14,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Revoluções Inglesas"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer limites parlamentares à monarquia inglesa no Bill of Rights",
+          "rationale": "A operação decisiva consiste em relacione documento à monarquia constitucional.",
+          "strategy": [
+            "Observe exigência de consentimento parlamentar",
+            "Relacione documento à monarquia constitucional"
+          ],
+          "trap": "Confundir limitação real com república",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "48",
+          "page": 15,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "República Liberal (1945-1964): Desenvolvimentismo e Populismo"
+          ],
+          "skills": [
+            "analise_imagem",
+            "leitura_fontes_historicas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar apoio popular às Reformas de Base no Comício da Central",
+          "rationale": "A operação decisiva consiste em relacione reivindicações ao governo João Goulart.",
+          "strategy": [
+            "Leia faixas e manifestação nas fotografias",
+            "Relacione reivindicações ao governo João Goulart"
+          ],
+          "trap": "Confundir comício com Marcha da Família",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "49",
+          "page": 15,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "O Fim da Guerra Fria"
+          ],
+          "skills": [
+            "analise_imagem",
+            "leitura_fontes_historicas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar soberanias nacionais e colapso soviético à charge de Gorbachev",
+          "rationale": "A operação decisiva consiste em relacione ambos ao enfraquecimento do poder central.",
+          "strategy": [
+            "Compare desagregação política e símbolo despedaçado",
+            "Relacione ambos ao enfraquecimento do poder central"
+          ],
+          "trap": "Ler a charge como reconstrução da URSS",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "50",
+          "page": 16,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Gêneros não Verbais: Fundamentos de Leitura"
+          ],
+          "skills": [
+            "analise_imagem",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar polissemia e relação verbo visual em campanha contra a guerra",
+          "rationale": "A operação decisiva consiste em relacione espectadores e vítimas na imagem.",
+          "strategy": [
+            "Compare desligar televisão e interromper guerra",
+            "Relacione espectadores e vítimas na imagem"
+          ],
+          "trap": "Separar significado da imagem e da frase",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "51",
+          "page": 16,
+          "subject": "Geografia",
+          "topicId": "geo_cartografia",
+          "topic": "Cartografia e Fundamentos",
+          "subtopics": [
+            "Anamorfoses"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar distribuição de refugiados em anamorfose dos países de origem",
+          "rationale": "A operação decisiva consiste em compare padrão espacial às variáveis propostas.",
+          "strategy": [
+            "Observe países ampliados e reduzidos",
+            "Compare padrão espacial às variáveis propostas"
+          ],
+          "trap": "Interpretar tamanho como área territorial",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "52",
+          "page": 16,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "África Contemporânea"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar instabilidade política no Sahel a recursos etnias e herança colonial",
+          "rationale": "A operação decisiva consiste em associe fragilidade ambiental e fronteiras coloniais.",
+          "strategy": [
+            "Localize países citados na região",
+            "Associe fragilidade ambiental e fronteiras coloniais"
+          ],
+          "trap": "Atribuir crises a elevado desenvolvimento tecnológico",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "53",
+          "page": 16,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Fronteiras e diversidade étnica africana"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar fronteiras estatais e distribuição étnica histórica no continente africano",
+          "rationale": "A operação decisiva consiste em identifique menor fragmentação cultural ao norte.",
+          "strategy": [
+            "Compare linhas étnicas e nacionais",
+            "Identifique menor fragmentação cultural ao norte"
+          ],
+          "trap": "Supor que fronteiras coloniais respeitam etnias",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "54",
+          "page": 17,
+          "subject": "Física",
+          "topicId": "fis_leis_newton",
+          "topic": "Leis de Newton e Dinâmica do Movimento Retilíneo",
+          "subtopics": [
+            "A Força de Contato"
+          ],
+          "skills": [
+            "interpretacao_tabela",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Selecionar teor de água que minimiza atrito no transporte de trenós",
+          "rationale": "A operação decisiva consiste em escolha menor coeficiente para mesma força normal.",
+          "strategy": [
+            "Compare coeficientes de atrito tabelados",
+            "Escolha menor coeficiente para mesma força normal"
+          ],
+          "trap": "Supor redução contínua com mais água",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "55",
+          "page": 17,
+          "subject": "Filosofia",
+          "topicId": "fil_aristoteles",
+          "topic": "Aristóteles",
+          "subtopics": [
+            "Lógica e Metafísica Aristotélicas"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "argumentacao"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar função argumentativa do privilégio da visão na tese aristotélica do saber",
+          "rationale": "A operação decisiva consiste em relacione preferência visual à sustentação da tese.",
+          "strategy": [
+            "Enuncie tese sobre tendência ao conhecimento",
+            "Relacione preferência visual à sustentação da tese"
+          ],
+          "trap": "Tratar exemplo como refutação",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "56",
+          "page": 17,
+          "subject": "Química",
+          "topicId": "qui_cinetica",
+          "topic": "Cinética Química",
+          "subtopics": [
+            "Energia de Ativação"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar necessidade de ignição para iniciar combustão espontaneamente favorável da madeira",
+          "rationale": "A operação decisiva consiste em relacione aquecimento inicial à barreira energética.",
+          "strategy": [
+            "Diferencie favorabilidade e velocidade de reação",
+            "Relacione aquecimento inicial à barreira energética"
+          ],
+          "trap": "Confundir reação exotérmica com ausência de barreira",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "57",
+          "page": 18,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Meia-Vida"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avaliar alteração da razão isotópica atmosférica pela queima de combustíveis fósseis",
+          "rationale": "A operação decisiva consiste em reconheça quase ausência de carbono quatorze fóssil.",
+          "strategy": [
+            "Compare idade dos combustíveis com meia vida",
+            "Reconheça quase ausência de carbono quatorze fóssil"
+          ],
+          "trap": "Supor igual composição isotópica ao carbono recente",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "58",
+          "page": 18,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Interpretação de gráficos e acumulação"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "calculo",
+            "modelagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estimar emissão acumulada de dióxido de carbono em série histórica",
+          "rationale": "A operação decisiva consiste em estime áreas sob o gráfico de emissão anual.",
+          "strategy": [
+            "Divida intervalo em faixas temporais",
+            "Estime áreas sob o gráfico de emissão anual"
+          ],
+          "trap": "Usar apenas emissão de um único ano",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "59",
+          "page": 18,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Ciclos Biogeoquímicos – Ciclo do Carbono"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar armazenamento de carbono e extrativismo sustentável nos manguezais brasileiros",
+          "rationale": "A operação decisiva consiste em associe conservação ao uso tradicional de recursos.",
+          "strategy": [
+            "Identifique serviço climático dos manguezais",
+            "Associe conservação ao uso tradicional de recursos"
+          ],
+          "trap": "Escolher exploração madeireira como preservação",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "60",
+          "page": 18,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Poluição: Aquecimento Global, POPs e Biorremediação"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_metabolismo_energetico"
+          ],
+          "summary": "Relacionar emissões brasileiras de metano à fermentação digestiva dos ruminantes",
+          "rationale": "A operação decisiva consiste em identifique metano da digestão celulósica.",
+          "strategy": [
+            "Leia contribuição da agropecuária no gráfico",
+            "Identifique metano da digestão celulósica"
+          ],
+          "trap": "Atribuir emissão de metano à transformação de nitrogênio",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "61",
+          "page": 19,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Relações ecológicas e herbivoria",
+            "Defesa química de plantas"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Inferir pressão de herbivoria pela distribuição de defesa química em plantas",
+          "rationale": "O comando pede inferir pressão de herbivoria pela distribuição da defesa química, sem exigir explicação evolutiva.",
+          "strategy": [
+            "Compare indivíduos defensivos em cidade e floresta",
+            "Relacione menor defesa a menor pressão herbívora"
+          ],
+          "trap": "Considerar variantes como espécies distintas",
+          "confidence": "medium",
+          "reviewNote": "Fronteira ecologia/evolução revista por leitura da página19; adaptação aparece no contexto da fonte, mas não é a operação pedida.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "62",
+          "page": 19,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Relações Ecológicas"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar mutualismo e herbivoria pelos efeitos sobre biomassa de populações",
+          "rationale": "A operação decisiva consiste em associe aumento a benefício e queda a consumo.",
+          "strategy": [
+            "Observe sinal da mudança após chegada do interagente",
+            "Associe aumento a benefício e queda a consumo"
+          ],
+          "trap": "Interpretar toda interação como competição",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "63",
+          "page": 19,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Protozoários e Protozooses"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_estrutura_fisio_celular"
+          ],
+          "summary": "Relacionar sobrevivência da leishmania a lisossomos e prevenção por repelentes",
+          "rationale": "A operação decisiva consiste em associe transmissão ao inseto vetor.",
+          "strategy": [
+            "Identifique organela de digestão intracelular",
+            "Associe transmissão ao inseto vetor"
+          ],
+          "trap": "Confundir leishmaniose com transmissão por esgoto",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "64",
+          "page": 20,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Biomas Brasileiros"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar diversidade de aves entre formações florestais e vegetações abertas brasileiras",
+          "rationale": "A operação decisiva consiste em cruze padrão com limites dos biomas.",
+          "strategy": [
+            "Localize manchas de maior riqueza no mapa",
+            "Cruze padrão com limites dos biomas"
+          ],
+          "trap": "Explicar diversidade apenas pela proximidade marinha",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "65",
+          "page": 20,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Processos geomorfológicos"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classificar processos naturais pela frequência e magnitude das mudanças na superfície",
+          "rationale": "A operação decisiva consiste em compare ação eólica vulcanismo e soerguimento.",
+          "strategy": [
+            "Leia escalas de frequência e magnitude",
+            "Compare ação eólica vulcanismo e soerguimento"
+          ],
+          "trap": "Equiparar processos graduais e eventos raros",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "66",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_eletrostatica",
+          "topic": "Eletrostática e Campo Elétrico",
+          "subtopics": [
+            "Trabalho e Potencial Elétrico"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estimar potência de descarga atmosférica a partir de campo carga e duração",
+          "rationale": "A operação decisiva consiste em use energia carga tensão dividida pelo tempo.",
+          "strategy": [
+            "Calcule tensão pelo produto campo distância",
+            "Use energia carga tensão dividida pelo tempo"
+          ],
+          "trap": "Confundir potência com energia da descarga",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "67",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Resistência Elétrica e Lei de Ohm"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar faixa segura de temperatura para termistor ligado a bateria",
+          "rationale": "A operação decisiva consiste em leia temperaturas correspondentes na curva.",
+          "strategy": [
+            "Calcule resistência mínima por tensão e corrente máxima",
+            "Leia temperaturas correspondentes na curva"
+          ],
+          "trap": "Inverter efeito da queda de resistência sobre corrente",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "68",
+          "page": 21,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: Taxonomy and Terminology"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar expressão sobre inatividade da geração solar e eólica no texto",
+          "rationale": "A operação decisiva consiste em associe noite nuvens e ausência de vento.",
+          "strategy": [
+            "Localize definição da expressão inicial",
+            "Associe noite nuvens e ausência de vento"
+          ],
+          "trap": "Entender expressão como aquecimento global",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "69",
+          "page": 21,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Vocabulário em contexto"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Inferir diminuição da capacidade de baterias pelo verbo inglês dwindles",
+          "rationale": "A operação decisiva consiste em teste decreases na mesma frase.",
+          "strategy": [
+            "Leia contexto dos ciclos de recarga",
+            "Teste decreases na mesma frase"
+          ],
+          "trap": "Confundir menor capacidade com melhora de desempenho",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "70",
+          "page": 21,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Leitura seletiva de informações"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar conversão de energia em armazenamento hidrelétrico descrito em inglês",
+          "rationale": "A operação decisiva consiste em relacione movimento da turbina à eletricidade.",
+          "strategy": [
+            "Localize trecho da água liberada pela barragem",
+            "Relacione movimento da turbina à eletricidade"
+          ],
+          "trap": "Escolher conversão química por causa da palavra bateria",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "71",
+          "page": 21,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Fusão Nuclear"
+          ],
+          "skills": [
+            "modelagem",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_termoquimica"
+          ],
+          "summary": "Identificar subproduto e caráter exotérmico da fusão de deutério e trítio",
+          "rationale": "A operação decisiva consiste em associe liberação energética a entalpia negativa.",
+          "strategy": [
+            "Conserve número de massa e carga nuclear",
+            "Associe liberação energética a entalpia negativa"
+          ],
+          "trap": "Confundir nêutron com próton",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "72",
+          "page": 21,
+          "subject": "Física",
+          "topicId": "fis_fisica_moderna",
+          "topic": "Física Moderna",
+          "subtopics": [
+            "Radiações Ionizantes"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Distinguir radiações ionizantes segundo energia e comprimento de onda",
+          "rationale": "A operação decisiva consiste em compare luz visível micro ondas e ultravioleta.",
+          "strategy": [
+            "Relacione energia inversamente ao comprimento de onda",
+            "Compare luz visível micro ondas e ultravioleta"
+          ],
+          "trap": "Supor toda radiação capaz de ionizar",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "73",
+          "page": 22,
+          "subject": "Física",
+          "topicId": "fis_optica_geometrica",
+          "topic": "Óptica Geométrica",
+          "subtopics": [
+            "Refração da Luz"
+          ],
+          "skills": [
+            "analise_imagem",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar índices de refração de cores dispersadas por prisma de vidro",
+          "rationale": "A operação decisiva consiste em aplique lei de Snell para incidência comum.",
+          "strategy": [
+            "Observe desvios dos raios em relação à normal",
+            "Aplique lei de Snell para incidência comum"
+          ],
+          "trap": "Ordenar índices pelo ângulo refratado diretamente",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "74",
+          "page": 22,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Indicadores Ácido-Base"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar cores de indicador de repolho a materiais ácidos e básicos",
+          "rationale": "A operação decisiva consiste em classifique limão e bicarbonato pelo comportamento ácido base.",
+          "strategy": [
+            "Associe rosa a meio ácido e azul verde a básico",
+            "Classifique limão e bicarbonato pelo comportamento ácido base"
+          ],
+          "trap": "Classificar açúcar como ácido por ser orgânico",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "75",
+          "page": 23,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Leitura de Textos Cômicos"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "analise_imagem"
+          ],
+          "relatedSubjects": [
+            "Inglês"
+          ],
+          "relatedTopicIds": [
+            "ing_01"
+          ],
+          "summary": "Identificar trocadilho responsável pelo humor do meme de conteúdo científico",
+          "rationale": "A operação decisiva consiste em identifique duplo sentido lexical da expressão.",
+          "strategy": [
+            "Compare as duas leituras da resposta",
+            "Identifique duplo sentido lexical da expressão"
+          ],
+          "trap": "Classificar todo sentido figurado como metáfora",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "76",
+          "page": 23,
+          "subject": "Física",
+          "topicId": "fis_leis_newton",
+          "topic": "Leis de Newton e Dinâmica do Movimento Retilíneo",
+          "subtopics": [
+            "As Leis de Newton"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar sustentação dinâmica do lagarto que corre sobre a água",
+          "rationale": "A operação decisiva consiste em aplique ação e reação na componente vertical.",
+          "strategy": [
+            "Identifique força exercida pelas patas na água",
+            "Aplique ação e reação na componente vertical"
+          ],
+          "trap": "Atribuir sustentação apenas ao empuxo estático",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "77",
+          "page": 23,
+          "subject": "Física",
+          "topicId": "fis_dinamica_impulsiva",
+          "topic": "Dinâmica Impulsiva",
+          "subtopics": [
+            "Colisões"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_energia"
+          ],
+          "summary": "Comparar alturas após colisão inelástica entre esferas iguais do brinquedo",
+          "rationale": "A operação decisiva consiste em conserve momento na união e converta energia em altura.",
+          "strategy": [
+            "Obtenha velocidade inicial por conservação de energia",
+            "Conserve momento na união e converta energia em altura"
+          ],
+          "trap": "Conservar energia mecânica durante colisão inelástica",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "78",
+          "page": 23,
+          "subject": "Física",
+          "topicId": "fis_gravitacao_circular",
+          "topic": "Gravitação e Movimento Circular",
+          "subtopics": [
+            "Órbitas"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar forças resultantes sobre Terra e Webb em órbitas de mesmo período",
+          "rationale": "A operação decisiva consiste em forme razão massa vezes raio orbital.",
+          "strategy": [
+            "Use igualdade de velocidades angulares",
+            "Forme razão massa vezes raio orbital"
+          ],
+          "trap": "Usar apenas atração solar e ignorar resultante",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "79",
+          "page": 24,
+          "subject": "Física",
+          "topicId": "fis_energia",
+          "topic": "Dinâmica Energética e Transformações de Energia",
+          "subtopics": [
+            "Trabalho e Energia: o Teorema da Energia Potencial"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular energia dissipada ao arremessar slam ball ao solo",
+          "rationale": "A operação decisiva consiste em converta joules em calorias antes de comparar.",
+          "strategy": [
+            "Some energia potencial inicial e trabalho adicional",
+            "Converta joules em calorias antes de comparar"
+          ],
+          "trap": "Esquecer altura acima da cabeça",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "80",
+          "page": 24,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Deslocamento de Equilíbrios"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Prever formas da hemoglobina pelo acoplamento de equilíbrios oxigênio e gás carbônico",
+          "rationale": "A operação decisiva consiste em aplique deslocamento do equilíbrio da hemoglobina.",
+          "strategy": [
+            "Determine efeito do CO2 sobre concentração de prótons",
+            "Aplique deslocamento do equilíbrio da hemoglobina"
+          ],
+          "trap": "Concluir que CO2 favorece oxigenação nos tecidos",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "81",
+          "page": 25,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Coordenação Endócrina II"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar amplitudes dos ritmos hormonais e térmicos entre jovens e idosos",
+          "rationale": "A operação decisiva consiste em compare amplitudes em cada faixa etária.",
+          "strategy": [
+            "Leia máximos e mínimos de cada curva",
+            "Compare amplitudes em cada faixa etária"
+          ],
+          "trap": "Confundir pico hormonal com ausência de ritmo",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "82",
+          "page": 25,
+          "subject": "Geografia",
+          "topicId": null,
+          "topic": "Demografia Mundial",
+          "subtopics": [
+            "Transição Demográfica",
+            "Pirâmides Etárias"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Selecionar pirâmide etária coerente com projeções de nascimentos e mortes",
+          "rationale": "A operação decisiva consiste em associe envelhecimento a estreitamento da base.",
+          "strategy": [
+            "Observe tendência de queda dos nascimentos",
+            "Associe envelhecimento a estreitamento da base"
+          ],
+          "trap": "Escolher pirâmide expansiva apesar da queda natal",
+          "confidence": "medium",
+          "reviewNote": "Pirâmide de região mundial não identificada; tópico de população brasileira não imposto.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "83",
+          "page": 26,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Introdução à Genética"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular risco de atrofia muscular espinhal em união com parceiro não aparentado",
+          "rationale": "A operação decisiva consiste em multiplique risco parental e chance mendeliana de afetado.",
+          "strategy": [
+            "Obtenha probabilidade de portadora pelo heredograma",
+            "Multiplique risco parental e chance mendeliana de afetado"
+          ],
+          "trap": "Usar certeza de portadora para irmã saudável",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "84",
+          "page": 26,
+          "subject": "Matemática",
+          "topicId": "mat_combinatoria",
+          "topic": "Análise Combinatória",
+          "subtopics": [
+            "O Problema do Grupo"
+          ],
+          "skills": [
+            "calculo",
+            "modelagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Contar provas distintas selecionando questões de matemática e física sem ordenação",
+          "rationale": "A operação decisiva consiste em multiplique escolhas independentes.",
+          "strategy": [
+            "Calcule combinações de cada disciplina",
+            "Multiplique escolhas independentes"
+          ],
+          "trap": "Usar arranjos e contar ordens diferentes",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "85",
+          "page": 26,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Modelagem Exponencial de Problemas"
+          ],
+          "skills": [
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular aumento de pontuação no ranking FIFA usando fórmula exponencial fornecida",
+          "rationale": "A operação decisiva consiste em calcule expectativa e atualização após vitória.",
+          "strategy": [
+            "Substitua diferença de pontuação no expoente",
+            "Calcule expectativa e atualização após vitória"
+          ],
+          "trap": "Somar sessenta pontos sem descontar expectativa",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "86",
+          "page": 26,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Sólidos de Revolução"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar volume de pedra pelo deslocamento de água em recipiente cilíndrico",
+          "rationale": "A operação decisiva consiste em multiplique pela área circular da base.",
+          "strategy": [
+            "Calcule variação da altura da água",
+            "Multiplique pela área circular da base"
+          ],
+          "trap": "Usar altura total final da coluna",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "87",
+          "page": 26,
+          "subject": "Matemática",
+          "topicId": "mat_teoria_numeros",
+          "topic": "Teoria dos Números Inteiros",
+          "subtopics": [
+            "Introdução à Teoria dos Números Inteiros"
+          ],
+          "skills": [
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Encontrar primeiro primorial superior ao limite numérico estabelecido no enunciado",
+          "rationale": "A operação decisiva consiste em multiplique até ultrapassar dois mil.",
+          "strategy": [
+            "Liste primos em ordem crescente",
+            "Multiplique até ultrapassar dois mil"
+          ],
+          "trap": "Incluir números compostos no produto",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "88",
+          "page": 27,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Ângulos em Polígonos"
+          ],
+          "skills": [
+            "analise_imagem",
+            "representacao_espacial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar sequência dos polígonos em ladrilhamento uniforme fotografado no museu",
+          "rationale": "A operação decisiva consiste em conte lados de cada polígono incidente.",
+          "strategy": [
+            "Escolha um vértice e percorra no sentido indicado",
+            "Conte lados de cada polígono incidente"
+          ],
+          "trap": "Trocar ordem cíclica de quadrados e hexágonos",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "89",
+          "page": 27,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Representação Geométrica de Inequações"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "calculo",
+            "modelagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_geometria_plana"
+          ],
+          "summary": "Calcular área comum a losango modular e exterior de circunferência",
+          "rationale": "A operação decisiva consiste em subtraia segmentos circulares da área pertinente.",
+          "strategy": [
+            "Desenhe losango e círculo deslocado",
+            "Subtraia segmentos circulares da área pertinente"
+          ],
+          "trap": "Inverter interior e exterior da desigualdade",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "90",
+          "page": 27,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Equações e Funções Logarítmicas"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar parâmetros de função logarítmica a partir de dois pontos dados",
+          "rationale": "A operação decisiva consiste em resolva sistema linear para a e b.",
+          "strategy": [
+            "Converta cada igualdade logarítmica em potência",
+            "Resolva sistema linear para a e b"
+          ],
+          "trap": "Tratar logaritmo como produto pelo argumento",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        }
+      ],
+      "answerKeyPages": 2
+    },
+    {
+      "id": "fuvest-2023-f2-d1",
+      "phase": "2a-dia1",
+      "version": "Caderno oficial completo",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_1.pdf",
+      "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_abordagens_esperadas_2fase.pdf",
+      "sha256": "9945042f8edfbf11ce743d0ff4995815be9d2b31579232ffbc0788c4f6d6ac96",
+      "answerKeySha256": "a7986775b44738f01df40da2fc23dc3cf6993ebce69be04cb0152eac90a7f43e",
+      "pages": 14,
+      "bytes": 2391859,
+      "answerKeyBytes": 6251228,
+      "expectedQuestions": 11,
+      "questions": [
+        {
+          "number": "P01",
+          "page": 2,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Gêneros não Verbais: Fundamentos de Leitura"
+          ],
+          "skills": [
+            "analise_imagem",
+            "analise_linguistica",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_norma_culta"
+          ],
+          "summary": "Interpretar relação entre raízes memória e preservação em anúncio do Greenpeace",
+          "rationale": "A operação decisiva consiste em explique os referentes possíveis do possessivo suas.",
+          "strategy": [
+            "Relacione árvore viva e retrato formado pelas raízes",
+            "Explique os referentes possíveis do possessivo suas"
+          ],
+          "trap": "Restringir raízes ao sentido botânico",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P02",
+          "page": 2,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Fatores de Textualidade"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_norma_culta"
+          ],
+          "summary": "Explicar ironia sobre ofício artístico e valor aditivo dos conectores textuais",
+          "rationale": "A operação decisiva consiste em identifique correlação não apenas mas também.",
+          "strategy": [
+            "Compare liberdade de definir arte e necessidade de convencer",
+            "Identifique correlação não apenas mas também"
+          ],
+          "trap": "Tratar correlação aditiva como oposição",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P03",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Figuras de Linguagem"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar metáfora bancária e repetição negativa no argumento educacional de Freire",
+          "rationale": "A operação decisiva consiste em relacione já não à ruptura da opressão educativa.",
+          "strategy": [
+            "Transponha depósito financeiro para transmissão de saber",
+            "Relacione já não à ruptura da opressão educativa"
+          ],
+          "trap": "Interpretar educação bancária como ensino de finanças",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P04",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Leitura de Textos Cômicos"
+          ],
+          "skills": [
+            "analise_imagem",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar desigualdade e fragilidade humana na charge que imita infográfico",
+          "rationale": "A operação decisiva consiste em explique símbolo de frágil aplicado à vida do pobre.",
+          "strategy": [
+            "Compare pilhas de dinheiro e papelão",
+            "Explique símbolo de frágil aplicado à vida do pobre"
+          ],
+          "trap": "Entender fragilidade apenas como propriedade da embalagem",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P05",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Figuras de Linguagem"
+          ],
+          "skills": [
+            "analise_literaria",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar esperança e antíteses na canção Ainda há tempo de Criolo",
+          "rationale": "A operação decisiva consiste em explique pares de sentidos opostos da letra.",
+          "strategy": [
+            "Localize versos que admitem mudança humana",
+            "Explique pares de sentidos opostos da letra"
+          ],
+          "trap": "Listar palavras opostas sem explicar relação textual",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P06",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Pontuação I: Princípios para o Uso da Vírgula"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_texto",
+            "por_sintaxe"
+          ],
+          "summary": "Explicar metáfora do dominó e pontuação de circunstanciadores na biografia histórica",
+          "rationale": "A operação decisiva consiste em identifique adjunto e oração temporal deslocados.",
+          "strategy": [
+            "Relacione prestígio do autor homenageado e instituição",
+            "Identifique adjunto e oração temporal deslocados"
+          ],
+          "trap": "Atribuir vírgulas à separação entre sujeito e verbo",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P07",
+          "page": 8,
+          "subject": "Literatura",
+          "topicId": "por_lit_classica_barroca",
+          "topic": "Literatura Clássica, Medieval e Barroca",
+          "subtopics": [
+            "A Estética Barroca"
+          ],
+          "skills": [
+            "analise_literaria",
+            "argumentacao"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconstruir apelo à misericórdia divina e silogismo no soneto de Gregório",
+          "rationale": "A operação decisiva consiste em reescreva premissas e conclusão da ovelha desgarrada.",
+          "strategy": [
+            "Identifique clemência como atributo invocado",
+            "Reescreva premissas e conclusão da ovelha desgarrada"
+          ],
+          "trap": "Confundir humildade retórica com ausência de argumentação",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P08",
+          "page": 8,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Segunda Geração Modernista: Poesia"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [
+            "História"
+          ],
+          "relatedTopicIds": [
+            "his_brasil_colonia"
+          ],
+          "summary": "Relacionar injustiça contra Tiradentes à reflexão ética do Romanceiro da Inconfidência",
+          "rationale": "A operação decisiva consiste em explique temor de opressão nas gerações seguintes.",
+          "strategy": [
+            "Associe ambição e traição ao destino de Tiradentes",
+            "Explique temor de opressão nas gerações seguintes"
+          ],
+          "trap": "Reduzir justos aos participantes de um julgamento",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P09",
+          "page": 10,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Guimarães Rosa"
+          ],
+          "skills": [
+            "analise_literaria",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar valor utilitário paterno e esperança visual de Miguilim em Campo Geral",
+          "rationale": "A operação decisiva consiste em relacione dificuldade de enxergar ao desfecho dos óculos.",
+          "strategy": [
+            "Substitua prestava e bom pelo critério de utilidade",
+            "Relacione dificuldade de enxergar ao desfecho dos óculos"
+          ],
+          "trap": "Ler limitação visual como falta de inteligência",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P10",
+          "page": 10,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Carlos Drummond de Andrade"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_lit_romantismo_realismo"
+          ],
+          "summary": "Comparar nacionalismo romântico e modernista nas relações entre Mário e Drummond",
+          "rationale": "A operação decisiva consiste em compare idealização romântica e distanciamento crítico moderno.",
+          "strategy": [
+            "Relacione títulos da obra à reserva nacionalista",
+            "Compare idealização romântica e distanciamento crítico moderno"
+          ],
+          "trap": "Supor adesão integral de Drummond ao nacionalismo",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "R",
+          "page": 12,
+          "subject": "Redação",
+          "topicId": "por_red_fundamentos",
+          "topic": "Fundamentos da Dissertação",
+          "subtopics": [
+            "Dissertação em prosa; Refugiados ambientais e vulnerabilidade social"
+          ],
+          "skills": [
+            "producao_textual",
+            "argumentacao",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Produzir dissertação sobre deslocamentos ambientais e sua relação com vulnerabilidade social",
+          "rationale": "A operação decisiva consiste em organize argumentos próprios com diálogo crítico com a coletânea.",
+          "strategy": [
+            "Delimite tese que articule ambiente deslocamento e desigualdade",
+            "Organize argumentos próprios com diálogo crítico com a coletânea"
+          ],
+          "trap": "Discutir apenas refugiados de guerra sem abordar causas ambientais",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        }
+      ],
+      "answerKeyPages": 73
+    },
+    {
+      "id": "fuvest-2023-f2-d2",
+      "phase": "2a-dia2",
+      "version": "Caderno oficial completo",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+      "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_abordagens_esperadas_2fase.pdf",
+      "sha256": "1fe9afaf17b1849c8b9aa92882f52a2ef846b03005b13166ebfec9474433379c",
+      "answerKeySha256": "a7986775b44738f01df40da2fc23dc3cf6993ebce69be04cb0152eac90a7f43e",
+      "pages": 38,
+      "bytes": 8524859,
+      "answerKeyBytes": 6251228,
+      "expectedQuestions": 36,
+      "questions": [
+        {
+          "number": "M01",
+          "page": 2,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Função Constante e Função Afim"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Modelar tarifas de entregas por funções afins com mudança de regra",
+          "rationale": "A operação decisiva consiste em resolva comparações e distribuição dos duzentos quilos em cada ramo.",
+          "strategy": [
+            "Escreva função de cada empresa por intervalo de peso",
+            "Resolva comparações e distribuição dos duzentos quilos em cada ramo"
+          ],
+          "trap": "Usar uma só tarifa de B para todos os pesos",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M02",
+          "page": 2,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Função Quadrática"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_trigonometria",
+            "mat_geometria_plana"
+          ],
+          "summary": "Determinar coeficientes da parábola área triangular e existência de composição trigonométrica",
+          "rationale": "A operação decisiva consiste em imponha raiz da quadrática dentro do intervalo do cosseno.",
+          "strategy": [
+            "Use valores dados e coordenadas do vértice",
+            "Imponha raiz da quadrática dentro do intervalo do cosseno"
+          ],
+          "trap": "Aceitar raiz fora do intervalo entre menos um e um",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M03",
+          "page": 4,
+          "subject": "Matemática",
+          "topicId": "mat_combinatoria",
+          "topic": "Análise Combinatória",
+          "subtopics": [
+            "Técnicas de Contagem"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_dados_probabilidade",
+            "mat_funcoes"
+          ],
+          "summary": "Contar funções involuções e probabilidade de pontos fixos em bijeções",
+          "rationale": "A operação decisiva consiste em use complementar dos desarranjos para algum ponto fixo.",
+          "strategy": [
+            "Separe funções gerais e permutações involutivas",
+            "Use complementar dos desarranjos para algum ponto fixo"
+          ],
+          "trap": "Contar funções arbitrárias como bijeções",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M04",
+          "page": 4,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Lugar Geométrico e Equação da Circunferência"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_trigonometria",
+            "mat_sequencias_matrizes"
+          ],
+          "summary": "Determinar raios e área sombreada em sequência de circunferências tangentes",
+          "rationale": "A operação decisiva consiste em obtenha razão geométrica dos raios e some áreas.",
+          "strategy": [
+            "Use distância perpendicular do centro à reta tangente",
+            "Obtenha razão geométrica dos raios e some áreas"
+          ],
+          "trap": "Somar raios onde é necessária soma de áreas",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M05",
+          "page": 6,
+          "subject": "Matemática",
+          "topicId": "mat_equacoes",
+          "topic": "Equações, Desigualdades e Modelagem Algébrica",
+          "subtopics": [
+            "Desigualdades"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_trigonometria"
+          ],
+          "summary": "Otimizar dimensões e inclinação de escada respeitando normas de segurança",
+          "rationale": "A operação decisiva consiste em teste número inteiro de degraus e extremos das desigualdades.",
+          "strategy": [
+            "Converta altura do pavimento em centímetros",
+            "Teste número inteiro de degraus e extremos das desigualdades"
+          ],
+          "trap": "Permitir quantidade fracionária de degraus",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M06",
+          "page": 6,
+          "subject": "Matemática",
+          "topicId": "mat_complexos_polinomios",
+          "topic": "Números Complexos e Polinômios",
+          "subtopics": [
+            "Números Complexos"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo",
+            "representacao_espacial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_geometria_analitica"
+          ],
+          "summary": "Resolver condições algébricas de complexos e reconhecer circunferência no plano",
+          "rationale": "A operação decisiva consiste em complete quadrados e exija raio positivo na última equação.",
+          "strategy": [
+            "Escreva z em partes real e imaginária",
+            "Complete quadrados e exija raio positivo na última equação"
+          ],
+          "trap": "Aceitar raio quadrado negativo como circunferência",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F01",
+          "page": 8,
+          "subject": "Física",
+          "topicId": "fis_energia",
+          "topic": "Dinâmica Energética e Transformações de Energia",
+          "subtopics": [
+            "Potência, Máquina e Rendimento",
+            "Queda Livre",
+            "Lei de Ohm"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo",
+            "interpretacao_grafico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_circuitos"
+          ],
+          "summary": "Relacionar consumo em espera geração hidrelétrica queda dágua e corrente máxima",
+          "rationale": "A operação decisiva consiste em aplique conservação de energia e lei de Ohm usando pico gráfico.",
+          "strategy": [
+            "Compare potência residencial agregada com Itaipu",
+            "Aplique conservação de energia e lei de Ohm usando pico gráfico"
+          ],
+          "trap": "Usar tensão média no lugar da máxima",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F02",
+          "page": 8,
+          "subject": "Física",
+          "topicId": "fis_optica_geometrica",
+          "topic": "Óptica Geométrica",
+          "subtopics": [
+            "Espelhos Esféricos"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Traçar raios e comparar aumentos dos espelhos dos telescópios Hubble e Webb",
+          "rationale": "A operação decisiva consiste em aplique equação dos espelhos e razão das imagens.",
+          "strategy": [
+            "Trace reflexões do raio paralelo e do que passa pelo foco",
+            "Aplique equação dos espelhos e razão das imagens"
+          ],
+          "trap": "Trocar foco e centro de curvatura",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F03",
+          "page": 10,
+          "subject": "Física",
+          "topicId": "fis_estatica",
+          "topic": "Estática dos Corpos Sólidos e dos Fluidos",
+          "subtopics": [
+            "Hidrostática: Densidade e Pressão",
+            "Empuxo",
+            "Lei Geral dos Gases"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_termodinamica_gases"
+          ],
+          "summary": "Avaliar flutuação profundidade e expansão de bolha em mergulho no lago",
+          "rationale": "A operação decisiva consiste em use pressão hidrostática e lei geral dos gases com Kelvin.",
+          "strategy": [
+            "Compare peso total e empuxo do volume deslocado",
+            "Use pressão hidrostática e lei geral dos gases com Kelvin"
+          ],
+          "trap": "Usar pressão manométrica na equação dos gases",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F04",
+          "page": 10,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Associação de Resistores",
+            "Campo Magnético de Fio Retilíneo"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo",
+            "representacao_espacial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_eletromagnetismo"
+          ],
+          "summary": "Comparar potências correntes e campo magnético de fios resistivos em paralelo",
+          "rationale": "A operação decisiva consiste em divida correntes e some campos vetorialmente no ponto médio.",
+          "strategy": [
+            "Expresse resistências pelas resistividades dos fios",
+            "Divida correntes e some campos vetorialmente no ponto médio"
+          ],
+          "trap": "Somar módulos de campos com direções opostas",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F05",
+          "page": 12,
+          "subject": "Física",
+          "topicId": "fis_ondulatoria",
+          "topic": "Ondulatória",
+          "subtopics": [
+            "Efeito Doppler"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar comprimento de onda e velocidade de carro por sonar Doppler",
+          "rationale": "A operação decisiva consiste em aplique Doppler na ida e na reflexão de retorno.",
+          "strategy": [
+            "Calcule comprimento pela razão velocidade frequência",
+            "Aplique Doppler na ida e na reflexão de retorno"
+          ],
+          "trap": "Aplicar apenas uma mudança Doppler no eco",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F06",
+          "page": 12,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "Movimento Uniforme"
+          ],
+          "skills": [
+            "interpretacao_tabela",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar limites de reação e colisão numa fila de carros freando",
+          "rationale": "A operação decisiva consiste em compare tempos máximos e posições dos veículos na tabela.",
+          "strategy": [
+            "Relacione distância extra ao produto velocidade tempo de reação",
+            "Compare tempos máximos e posições dos veículos na tabela"
+          ],
+          "trap": "Usar analogia com buracos negros como cálculo gravitacional",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q01",
+          "page": 14,
+          "subject": "Química",
+          "topicId": "qui_organica_fundamentos",
+          "topic": "Fundamentos e Nomenclatura Orgânica",
+          "subtopics": [
+            "Isomeria Geométrica"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar modelos moleculares ligações e possibilidade de isomeria de hidrocarbonetos",
+          "rationale": "A operação decisiva consiste em verifique substituintes distintos em cada carbono da dupla.",
+          "strategy": [
+            "Identifique carbono e hidrogênio pela valência",
+            "Verifique substituintes distintos em cada carbono da dupla"
+          ],
+          "trap": "Admitir isomeria geométrica no etino",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q02",
+          "page": 14,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Cálculo Estequiométrico",
+            "Alotropia do Carbono",
+            "Equação dos Gases Ideais"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_gases"
+          ],
+          "summary": "Quantificar dióxido de carbono obtido de diamante e comparar alotropias",
+          "rationale": "A operação decisiva consiste em calcule mols de gás e pressão pela equação de estado.",
+          "strategy": [
+            "Compare densidades para volumes iguais de carbono",
+            "Calcule mols de gás e pressão pela equação de estado"
+          ],
+          "trap": "Supor massas iguais para volumes iguais de grafite e diamante",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q03",
+          "page": 16,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Reações de Condensação"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "comparacao_conceitual",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_polaridade_geometria",
+            "qui_estequiometria"
+          ],
+          "summary": "Analisar síntese peptídica solubilidade de reagentes e nitrogênio pelo método Kjeldahl",
+          "rationale": "A operação decisiva consiste em compare interações com água e converta nitrogênios em sulfato de amônio.",
+          "strategy": [
+            "Transfira padrão de formação do subproduto para o DCC",
+            "Compare interações com água e converta nitrogênios em sulfato de amônio"
+          ],
+          "trap": "Contar um mol de sulfato por átomo de nitrogênio",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q04",
+          "page": 16,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Cálculo Estequiométrico"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_eletroquimica"
+          ],
+          "summary": "Calcular gás natural requerido na produção de ureia e discutir hidrogênio sustentável",
+          "rationale": "A operação decisiva consiste em corrija massa de metano pela fração no gás natural.",
+          "strategy": [
+            "Combine proporções das três reações apresentadas",
+            "Corrija massa de metano pela fração no gás natural"
+          ],
+          "trap": "Ignorar teor de cinquenta por cento de metano",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q05",
+          "page": 18,
+          "subject": "Química",
+          "topicId": "qui_eletroquimica",
+          "topic": "Eletroquímica",
+          "subtopics": [
+            "Potenciais de Redução"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar escurecimento e limpeza da prata por alumínio usando potenciais eletroquímicos",
+          "rationale": "A operação decisiva consiste em balanceie elétrons e calcule potencial da reação global.",
+          "strategy": [
+            "Atribua estados de oxidação antes e depois do escurecimento",
+            "Balanceie elétrons e calcule potencial da reação global"
+          ],
+          "trap": "Multiplicar potencial padrão pelos coeficientes estequiométricos",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q06",
+          "page": 18,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Diluição e Titulação"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "analise_experimento",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar adulteração do leite diluição de proteínas e titulação de cobre",
+          "rationale": "A operação decisiva consiste em iguale mols de EDTA e cobre na alíquota titulada.",
+          "strategy": [
+            "Desenhe concentração decrescente com adição de água",
+            "Iguale mols de EDTA e cobre na alíquota titulada"
+          ],
+          "trap": "Dividir mols pelo volume de titulante em vez da alíquota",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B01",
+          "page": 20,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Biomas Brasileiros"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "inferencia_causal",
+            "leitura_fontes_historicas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar cobertura vegetal biomas e história do desmatamento em estados brasileiros",
+          "rationale": "A operação decisiva consiste em associe estados aos biomas e à ocupação histórica.",
+          "strategy": [
+            "Compare proporções naturais entre 1985 e 2021",
+            "Associe estados aos biomas e à ocupação histórica"
+          ],
+          "trap": "Confundir menor cobertura atual com maior perda no intervalo",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B02",
+          "page": 20,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Fisiologia da Excreção"
+          ],
+          "skills": [
+            "analise_imagem",
+            "interpretacao_grafico",
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_estrutura_fisio_celular"
+          ],
+          "summary": "Relacionar ADH morfologia do néfron e adaptação renal de roedores",
+          "rationale": "A operação decisiva consiste em compare especialização epitelial e capacidade de concentrar urina.",
+          "strategy": [
+            "Relacione ADH à reabsorção de água",
+            "Compare especialização epitelial e capacidade de concentrar urina"
+          ],
+          "trap": "Interpretar maior reabsorção como maior volume urinário",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B03",
+          "page": 22,
+          "subject": "Biologia",
+          "topicId": "bio_codigo_genetico_sintese",
+          "topic": "Código Genético e Síntese Proteica",
+          "subtopics": [
+            "Mutações Gênicas",
+            "Receptor CCR5",
+            "Transplante de medula óssea"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "representacao_espacial"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_microbiologia",
+            "bio_biotecnologia"
+          ],
+          "summary": "Relacionar mutação CCR5 resistência ao HIV e tecido após transplante de medula",
+          "rationale": "A operação decisiva consiste em localize deleção que altera região codificante da proteína.",
+          "strategy": [
+            "Identifique origem doadora das células sanguíneas após transplante",
+            "Localize deleção que altera região codificante da proteína"
+          ],
+          "trap": "Esperar mutação doadora em todas as células do receptor",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B04",
+          "page": 22,
+          "subject": "Biologia",
+          "topicId": null,
+          "topic": "Movimentos Vegetais",
+          "subtopics": [
+            "Nastismos",
+            "Turgescência celular",
+            "Fotossíntese e balanço energético"
+          ],
+          "skills": [
+            "analise_imagem",
+            "interpretacao_grafico",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_metabolismo_energetico"
+          ],
+          "summary": "Interpretar movimento dos folíolos da dormideira e seu balanço energético",
+          "rationale": "A operação decisiva consiste em represente curvas e relacione área exposta à fotossíntese.",
+          "strategy": [
+            "Leia fechamento rápido e recuperação lenta na sequência de imagens",
+            "Represente curvas e relacione área exposta à fotossíntese"
+          ],
+          "trap": "Atribuir movimento vegetal a células musculares",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B05",
+          "page": 24,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Fisiologia da Digestão"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_ecologia"
+          ],
+          "summary": "Comparar dietas vitamina C e impactos ambientais da produção de alimentos",
+          "rationale": "A operação decisiva consiste em relacione excesso alimentar a saúde e produção à pressão ambiental.",
+          "strategy": [
+            "Localize grupos ricos em vitamina C e maiores desvios gráficos",
+            "Relacione excesso alimentar a saúde e produção à pressão ambiental"
+          ],
+          "trap": "Confundir maior diferença absoluta com maior diferença proporcional",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B06",
+          "page": 24,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Espécies Invasoras e Controle Biológico"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_zoologia"
+          ],
+          "summary": "Explicar desaparecimento do sururu por fatores ambientais competição e contaminação alimentar",
+          "rationale": "A operação decisiva consiste em relacione filtração de bivalves ao acúmulo de contaminantes.",
+          "strategy": [
+            "Separe competição biótica de queda abiótica da salinidade",
+            "Relacione filtração de bivalves ao acúmulo de contaminantes"
+          ],
+          "trap": "Tratar sedimento e salinidade como fatores bióticos",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G01",
+          "page": 26,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Poluição por Microplásticos"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "argumentacao"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "geo_hidrogeografia"
+          ],
+          "summary": "Identificar fontes ambientes de concentração e redução de microplásticos na sociedade",
+          "rationale": "A operação decisiva consiste em relacione transporte aquático e consumo à acumulação ambiental.",
+          "strategy": [
+            "Liste fontes de fragmentação ou liberação de fibras",
+            "Relacione transporte aquático e consumo à acumulação ambiental"
+          ],
+          "trap": "Supor microplásticos restritos às grandes cidades",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G02",
+          "page": 26,
+          "subject": "Geografia",
+          "topicId": null,
+          "topic": "Segurança Alimentar",
+          "subtopics": [
+            "Segurança e insegurança alimentar",
+            "Políticas de acesso à alimentação"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar segurança alimentar e evolução da fome brasileira com políticas socioeconômicas",
+          "rationale": "A operação decisiva consiste em leia inflexão após 2013 e relacione a renda e políticas.",
+          "strategy": [
+            "Diferencie acesso regular de mera produção nacional de alimentos",
+            "Leia inflexão após 2013 e relacione a renda e políticas"
+          ],
+          "trap": "Confundir exportação agrícola elevada com acesso universal",
+          "confidence": "medium",
+          "reviewNote": "A taxonomia contém população brasileira, mas não representa substantivamente segurança alimentar e suas políticas.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G03",
+          "page": 28,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Monções e Inundações"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar inundação paquistanesa por monções degelo e características da planície",
+          "rationale": "A operação decisiva consiste em relacione água do Himalaia e relevo baixo à inundação.",
+          "strategy": [
+            "Identifique regime sazonal das monções",
+            "Relacione água do Himalaia e relevo baixo à inundação"
+          ],
+          "trap": "Atribuir enchente apenas à proximidade imediata das montanhas",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G04",
+          "page": 28,
+          "subject": "Geografia",
+          "topicId": "geo_cartografia",
+          "topic": "Cartografia e Fundamentos",
+          "subtopics": [
+            "Projeções Cartográficas"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar distorções da projeção Mercator com alternativas de representação terrestre",
+          "rationale": "A operação decisiva consiste em diferencie preservação de ângulos e deformação de áreas.",
+          "strategy": [
+            "Relacione Mercator à navegação moderna",
+            "Diferencie preservação de ângulos e deformação de áreas"
+          ],
+          "trap": "Supor projeção plana totalmente livre de distorções",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G05",
+          "page": 30,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Geopolítica da Energia"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "geo_globalizacao_economica"
+          ],
+          "summary": "Relacionar guerra gasodutos e dependência europeia do gás natural russo",
+          "rationale": "A operação decisiva consiste em relacione territórios atravessados à autonomia ou dependência russa.",
+          "strategy": [
+            "Localize rotas dos gasodutos nos mares Báltico e Negro",
+            "Relacione territórios atravessados à autonomia ou dependência russa"
+          ],
+          "trap": "Ignorar influência turca nas rotas do Mar Negro",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G06",
+          "page": 30,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Correntes Marítimas"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar direção e aquecimento da corrente do Golfo e influência climática europeia",
+          "rationale": "A operação decisiva consiste em relacione origem tropical e transporte de calor ao inverno europeu.",
+          "strategy": [
+            "Trace fluxo da Flórida ao Atlântico Norte",
+            "Relacione origem tropical e transporte de calor ao inverno europeu"
+          ],
+          "trap": "Afirmar resfriamento europeu pela corrente quente",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H01",
+          "page": 32,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Brasil Império: Formação do Estado Nacional Brasileiro"
+          ],
+          "skills": [
+            "analise_imagem",
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "his_brasil_colonia"
+          ],
+          "summary": "Comparar representação das independências brasileira e uruguaia em pinturas históricas",
+          "rationale": "A operação decisiva consiste em associe pompa monárquica e despojamento republicano às imagens.",
+          "strategy": [
+            "Relacione Província Cisplatina ao conflito de independência uruguaio",
+            "Associe pompa monárquica e despojamento republicano às imagens"
+          ],
+          "trap": "Ler pinturas como registros fotográficos neutros",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H02",
+          "page": 32,
+          "subject": "História",
+          "topicId": "his_imperialismo_guerras",
+          "topic": "Imperialismo e Guerras Mundiais",
+          "subtopics": [
+            "Movimento Operário no Século XIX"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar consciência operária e igualdade revolucionária no romance Germinal de Zola",
+          "rationale": "A operação decisiva consiste em confronte igualdade jurídica e desigualdade social.",
+          "strategy": [
+            "Identifique exploração e despertar coletivo no excerto",
+            "Confronte igualdade jurídica e desigualdade social"
+          ],
+          "trap": "Supor que Revolução Francesa eliminou desigualdade econômica",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H03",
+          "page": 34,
+          "subject": "História",
+          "topicId": null,
+          "topic": "Reinos Africanos na Idade Moderna",
+          "subtopics": [
+            "Reino do Congo",
+            "Hierarquia e diplomacia luso-africana"
+          ],
+          "skills": [
+            "analise_imagem",
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar hierarquia e relações diplomáticas na imagem da corte do Congo",
+          "rationale": "A operação decisiva consiste em compare representação da audiência com a hierarquia descrita.",
+          "strategy": [
+            "Observe posição elevada do rei e símbolos de realeza",
+            "Compare representação da audiência com a hierarquia descrita"
+          ],
+          "trap": "Supor ausência de organização política antes dos europeus",
+          "confidence": "medium",
+          "reviewNote": "Reino do Congo ausente dos tópicos históricos existentes; não forçado em história europeia moderna.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H04",
+          "page": 34,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "Regime Militar (1964-1985) I"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Caracterizar Tropicália e contrastar suas propostas com protesto e Jovem Guarda",
+          "rationale": "A operação decisiva consiste em explique mistura estética e relações com tradição e indústria cultural.",
+          "strategy": [
+            "Selecione artista ou canção efetivamente tropicalista",
+            "Explique mistura estética e relações com tradição e indústria cultural"
+          ],
+          "trap": "Equiparar tropicalismo a simples canção de protesto",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H05",
+          "page": 36,
+          "subject": "História",
+          "topicId": "his_idade_antiga",
+          "topic": "Idade Antiga",
+          "subtopics": [
+            "Cultura Helenística"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "his_moderna_iluminismo"
+          ],
+          "summary": "Explicar helenismo memória alexandrina e transmissão clássica ao humanismo renascentista",
+          "rationale": "A operação decisiva consiste em relacione conservação dos textos à recuperação humanista.",
+          "strategy": [
+            "Defina circulação e síntese cultural helenística",
+            "Relacione conservação dos textos à recuperação humanista"
+          ],
+          "trap": "Definir helenismo como isolamento cultural grego",
+          "confidence": "medium",
+          "reviewNote": "Questão integra conceitos; rótulo primário escolhido pela operação central, com conceitos associados preservados.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H06",
+          "page": 36,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Brasil Império: Segundo Reinado (1840-1889)"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "leitura_fontes_historicas",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar rede ferroviária paulista ao café porto de Santos e imigração",
+          "rationale": "A operação decisiva consiste em associe interiorização cafeeira e circulação de trabalhadores.",
+          "strategy": [
+            "Localize convergência das linhas para Santos",
+            "Associe interiorização cafeeira e circulação de trabalhadores"
+          ],
+          "trap": "Explicar traçado apenas pela distribuição populacional atual",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ],
+      "answerKeyPages": 73
+    }
+  ]
+}

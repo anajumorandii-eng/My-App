@@ -1,0 +1,512 @@
+{
+  "reviewedOn": "2026-10-18",
+  "scope": "180 questões de primeira fase, V1, FUVEST 2025 e 2026",
+  "method": "Leitura dos enunciados oficiais extraídos em ordem por pdftotext -raw, com conferência visual dos casos dependentes de imagem; PDFs e hashes do manifesto anual. Harmonização de vínculos secundários, sem edição dos arquivos anuais.",
+  "threshold": "Outra disciplina só quando seu conhecimento é necessário à inferência decisiva; tema do texto, identificação do contexto e aritmética de rotina não bastam. Segundo tópico intradisciplinar só quando representa operação conceitual adicional substantiva, não qualquer pré-requisito.",
+  "sources": [
+    {
+      "year": 2025,
+      "paperId": "fuvest-2025-f1",
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "sha256": "f512449b47ac31abe1ae00d5f88fb14478c7139fa1db137145b7e33cec1b97c8",
+      "pages": 34,
+      "version": "V1"
+    },
+    {
+      "year": 2026,
+      "paperId": "fuvest-2026-f1",
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "pages": 38,
+      "version": "V1"
+    }
+  ],
+  "reviewedIds": [
+    "fuvest-2025-f1:01",
+    "fuvest-2025-f1:02",
+    "fuvest-2025-f1:03",
+    "fuvest-2025-f1:04",
+    "fuvest-2025-f1:05",
+    "fuvest-2025-f1:06",
+    "fuvest-2025-f1:07",
+    "fuvest-2025-f1:08",
+    "fuvest-2025-f1:09",
+    "fuvest-2025-f1:10",
+    "fuvest-2025-f1:11",
+    "fuvest-2025-f1:12",
+    "fuvest-2025-f1:13",
+    "fuvest-2025-f1:14",
+    "fuvest-2025-f1:15",
+    "fuvest-2025-f1:16",
+    "fuvest-2025-f1:17",
+    "fuvest-2025-f1:18",
+    "fuvest-2025-f1:19",
+    "fuvest-2025-f1:20",
+    "fuvest-2025-f1:21",
+    "fuvest-2025-f1:22",
+    "fuvest-2025-f1:23",
+    "fuvest-2025-f1:24",
+    "fuvest-2025-f1:25",
+    "fuvest-2025-f1:26",
+    "fuvest-2025-f1:27",
+    "fuvest-2025-f1:28",
+    "fuvest-2025-f1:29",
+    "fuvest-2025-f1:30",
+    "fuvest-2025-f1:31",
+    "fuvest-2025-f1:32",
+    "fuvest-2025-f1:33",
+    "fuvest-2025-f1:34",
+    "fuvest-2025-f1:35",
+    "fuvest-2025-f1:36",
+    "fuvest-2025-f1:37",
+    "fuvest-2025-f1:38",
+    "fuvest-2025-f1:39",
+    "fuvest-2025-f1:40",
+    "fuvest-2025-f1:41",
+    "fuvest-2025-f1:42",
+    "fuvest-2025-f1:43",
+    "fuvest-2025-f1:44",
+    "fuvest-2025-f1:45",
+    "fuvest-2025-f1:46",
+    "fuvest-2025-f1:47",
+    "fuvest-2025-f1:48",
+    "fuvest-2025-f1:49",
+    "fuvest-2025-f1:50",
+    "fuvest-2025-f1:51",
+    "fuvest-2025-f1:52",
+    "fuvest-2025-f1:53",
+    "fuvest-2025-f1:54",
+    "fuvest-2025-f1:55",
+    "fuvest-2025-f1:56",
+    "fuvest-2025-f1:57",
+    "fuvest-2025-f1:58",
+    "fuvest-2025-f1:59",
+    "fuvest-2025-f1:60",
+    "fuvest-2025-f1:61",
+    "fuvest-2025-f1:62",
+    "fuvest-2025-f1:63",
+    "fuvest-2025-f1:64",
+    "fuvest-2025-f1:65",
+    "fuvest-2025-f1:66",
+    "fuvest-2025-f1:67",
+    "fuvest-2025-f1:68",
+    "fuvest-2025-f1:69",
+    "fuvest-2025-f1:70",
+    "fuvest-2025-f1:71",
+    "fuvest-2025-f1:72",
+    "fuvest-2025-f1:73",
+    "fuvest-2025-f1:74",
+    "fuvest-2025-f1:75",
+    "fuvest-2025-f1:76",
+    "fuvest-2025-f1:77",
+    "fuvest-2025-f1:78",
+    "fuvest-2025-f1:79",
+    "fuvest-2025-f1:80",
+    "fuvest-2025-f1:81",
+    "fuvest-2025-f1:82",
+    "fuvest-2025-f1:83",
+    "fuvest-2025-f1:84",
+    "fuvest-2025-f1:85",
+    "fuvest-2025-f1:86",
+    "fuvest-2025-f1:87",
+    "fuvest-2025-f1:88",
+    "fuvest-2025-f1:89",
+    "fuvest-2025-f1:90",
+    "fuvest-2026-f1:01",
+    "fuvest-2026-f1:02",
+    "fuvest-2026-f1:03",
+    "fuvest-2026-f1:04",
+    "fuvest-2026-f1:05",
+    "fuvest-2026-f1:06",
+    "fuvest-2026-f1:07",
+    "fuvest-2026-f1:08",
+    "fuvest-2026-f1:09",
+    "fuvest-2026-f1:10",
+    "fuvest-2026-f1:11",
+    "fuvest-2026-f1:12",
+    "fuvest-2026-f1:13",
+    "fuvest-2026-f1:14",
+    "fuvest-2026-f1:15",
+    "fuvest-2026-f1:16",
+    "fuvest-2026-f1:17",
+    "fuvest-2026-f1:18",
+    "fuvest-2026-f1:19",
+    "fuvest-2026-f1:20",
+    "fuvest-2026-f1:21",
+    "fuvest-2026-f1:22",
+    "fuvest-2026-f1:23",
+    "fuvest-2026-f1:24",
+    "fuvest-2026-f1:25",
+    "fuvest-2026-f1:26",
+    "fuvest-2026-f1:27",
+    "fuvest-2026-f1:28",
+    "fuvest-2026-f1:29",
+    "fuvest-2026-f1:30",
+    "fuvest-2026-f1:31",
+    "fuvest-2026-f1:32",
+    "fuvest-2026-f1:33",
+    "fuvest-2026-f1:34",
+    "fuvest-2026-f1:35",
+    "fuvest-2026-f1:36",
+    "fuvest-2026-f1:37",
+    "fuvest-2026-f1:38",
+    "fuvest-2026-f1:39",
+    "fuvest-2026-f1:40",
+    "fuvest-2026-f1:41",
+    "fuvest-2026-f1:42",
+    "fuvest-2026-f1:43",
+    "fuvest-2026-f1:44",
+    "fuvest-2026-f1:45",
+    "fuvest-2026-f1:46",
+    "fuvest-2026-f1:47",
+    "fuvest-2026-f1:48",
+    "fuvest-2026-f1:49",
+    "fuvest-2026-f1:50",
+    "fuvest-2026-f1:51",
+    "fuvest-2026-f1:52",
+    "fuvest-2026-f1:53",
+    "fuvest-2026-f1:54",
+    "fuvest-2026-f1:55",
+    "fuvest-2026-f1:56",
+    "fuvest-2026-f1:57",
+    "fuvest-2026-f1:58",
+    "fuvest-2026-f1:59",
+    "fuvest-2026-f1:60",
+    "fuvest-2026-f1:61",
+    "fuvest-2026-f1:62",
+    "fuvest-2026-f1:63",
+    "fuvest-2026-f1:64",
+    "fuvest-2026-f1:65",
+    "fuvest-2026-f1:66",
+    "fuvest-2026-f1:67",
+    "fuvest-2026-f1:68",
+    "fuvest-2026-f1:69",
+    "fuvest-2026-f1:70",
+    "fuvest-2026-f1:71",
+    "fuvest-2026-f1:72",
+    "fuvest-2026-f1:73",
+    "fuvest-2026-f1:74",
+    "fuvest-2026-f1:75",
+    "fuvest-2026-f1:76",
+    "fuvest-2026-f1:77",
+    "fuvest-2026-f1:78",
+    "fuvest-2026-f1:79",
+    "fuvest-2026-f1:80",
+    "fuvest-2026-f1:81",
+    "fuvest-2026-f1:82",
+    "fuvest-2026-f1:83",
+    "fuvest-2026-f1:84",
+    "fuvest-2026-f1:85",
+    "fuvest-2026-f1:86",
+    "fuvest-2026-f1:87",
+    "fuvest-2026-f1:88",
+    "fuvest-2026-f1:89",
+    "fuvest-2026-f1:90"
+  ],
+  "patches": [
+    {
+      "id": "fuvest-2025-f1:05",
+      "relatedSubjects": [
+        "Arte"
+      ],
+      "relatedTopicIds": [],
+      "reason": "O comando exige articular contrastes claro/escuro e linguagem visual da novela gráfica à posição narrativa de Dois irmãos. A análise plástica é parte da comparação pedida, além do conhecimento do romance; não se acrescenta Sociologia pelo tema das hierarquias.",
+      "evidencePage": 4
+    },
+    {
+      "id": "fuvest-2025-f1:07",
+      "relatedSubjects": [
+        "Inglês"
+      ],
+      "relatedTopicIds": [
+        "ing_01"
+      ],
+      "reason": "A ameaça de Lucy no terceiro quadrinho só está apresentada em inglês. É preciso compreender essa fala não traduzida para identificar o apelo à força; não se trata apenas de um cenário anglófono.",
+      "evidencePage": 5
+    },
+    {
+      "id": "fuvest-2025-f1:19",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "fis_ondas_fundamentos"
+      ],
+      "reason": "A fórmula de variação de comprimento de onda é fornecida, mas a alternativa correta exige relacionar aumento de comprimento de onda à diminuição de frequência com velocidade de propagação constante. Esse é o conceito ondulatório adicional decisivo.",
+      "evidencePage": 9
+    },
+    {
+      "id": "fuvest-2025-f1:20",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "qui_radioatividade"
+      ],
+      "reason": "A alternativa correta avalia se a radioatividade é compatível com o átomo indivisível de Dalton. São combinados limites do modelo atômico e transformação radioativa, sem confundir apenas datas históricas dos modelos.",
+      "evidencePage": 9
+    },
+    {
+      "id": "fuvest-2025-f1:49",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "geo_fisica_brasil"
+      ],
+      "reason": "A resposta pede simultaneamente bioma, atividade econômica e efeito no solo: é necessário reconhecer o Cerrado no MATOPIBA e relacionar retirada da cobertura vegetal a processos erosivos, além da expansão agropecuária.",
+      "evidencePage": 20
+    },
+    {
+      "id": "fuvest-2025-f1:61",
+      "relatedSubjects": [
+        "Inglês"
+      ],
+      "relatedTopicIds": [
+        "ing_01"
+      ],
+      "reason": "A referência ao experimento de Galileu deve ser extraída de versos ingleses não traduzidos sobre penas e pesos em queda. A compreensão lexical do verso é necessária à identificação física, diferentemente de uma letra meramente decorativa.",
+      "evidencePage": 24
+    },
+    {
+      "id": "fuvest-2025-f1:72",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "qui_organica_reacoes",
+        "qui_estequiometria"
+      ],
+      "reason": "Não basta converter pH em concentração: a equação não balanceada mostra duas substituições aromáticas e é necessário estabelecer duas unidades de HBr por sulfanilamida para chegar aos mols consumidos. Reação orgânica e proporção estequiométrica compõem a inferência.",
+      "evidencePage": 27
+    },
+    {
+      "id": "fuvest-2025-f1:74",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "fis_leis_newton"
+      ],
+      "reason": "A diferença de pressão deve primeiro ser convertida em força pela área do bocal; depois a segunda lei de Newton é indispensável para obter a aceleração da rolha. Há duas operações físicas distintas, não apenas conversão de unidades.",
+      "evidencePage": 28
+    },
+    {
+      "id": "fuvest-2025-f1:78",
+      "relatedSubjects": [
+        "Matemática"
+      ],
+      "relatedTopicIds": [
+        "mat_equacoes"
+      ],
+      "reason": "O humor exige entender que x é incógnita numa equação, enquanto o aluno o interpreta como numeral romano X. A mudança de estatuto do símbolo é uma noção algébrica efetiva; a simples subtração não motiva a etiqueta secundária.",
+      "evidencePage": 29
+    },
+    {
+      "id": "fuvest-2025-f1:84",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "por_lit_modernismo"
+      ],
+      "reason": "A comparação exige interpretar o símbolo Pégaso tanto na lira árcade de Gonzaga quanto na reelaboração de Cecília Meireles no Romanceiro. O segundo texto é objeto da operação literária comparativa, não apenas citação contextual.",
+      "evidencePage": 31
+    },
+    {
+      "id": "fuvest-2026-f1:04",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "mat_dados_probabilidade"
+      ],
+      "reason": "Para aplicar os logaritmos à expressão da entropia, o candidato precisa determinar as probabilidades de cada cor na composição três-para-uma e identificar sua repetição na sequência. O modelo probabilístico é um componente explícito do problema, sem conteúdo físico de entropia.",
+      "evidencePage": 3
+    },
+    {
+      "id": "fuvest-2026-f1:12",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "por_lit_modernismo"
+      ],
+      "reason": "É necessário conhecer e comparar a trajetória de Noemi em Caminho de pedras e as trajetórias de As meninas. A obra de Rachel pertence à prosa modernista de 1930, além do tópico contemporâneo da obra de Lygia; o panorama histórico fornecido não exige História como disciplina secundária.",
+      "evidencePage": 6
+    },
+    {
+      "id": "fuvest-2026-f1:28",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "qui_estequiometria"
+      ],
+      "reason": "O consumo energético diário deve ser convertido em mols de carbono pelo valor da entalpia e depois em massa de CO2 pela combustão completa. Essa conversão química de reagente em produto é indispensável, além da termoquímica.",
+      "evidencePage": 13
+    },
+    {
+      "id": "fuvest-2026-f1:55",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "mat_sequencias_matrizes"
+      ],
+      "reason": "A alternativa correta combina a paridade do primeiro número perfeito à manutenção da paridade nos termos de uma progressão geométrica de razão três. Reconhecimento de números perfeitos e estrutura de PG são operações efetivamente articuladas.",
+      "evidencePage": 25
+    },
+    {
+      "id": "fuvest-2026-f1:62",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "qui_cinetica"
+      ],
+      "reason": "O sistema é ativado em temperatura elevada e continua gerando oxigênio após disparado. Distinguir a energia inicial de ativação do caráter exotérmico que mantém a reação é o ponto conceitual, combinando cinética e termoquímica; não se acrescenta oxirredução apenas pelos distratores.",
+      "evidencePage": 27
+    },
+    {
+      "id": "fuvest-2026-f1:64",
+      "relatedSubjects": [],
+      "relatedTopicIds": [],
+      "reason": "Remove-se a etiquetagem de virologia e evolução. O comando pergunta quando as mutações ocorrem e o texto localiza os erros na replicação intracelular; seleção de variantes e emergência de pandemia são contexto fornecido. Não é necessário resolver mecanismo evolutivo nem ciclo viral além desse enunciado.",
+      "evidencePage": 28
+    },
+    {
+      "id": "fuvest-2026-f1:84",
+      "relatedSubjects": [],
+      "relatedTopicIds": [
+        "bio_estrutura_fisio_celular"
+      ],
+      "reason": "A figura mostra fechamento estomático e a resposta correta identifica redução de solutos na célula-guarda. É necessário articular fisiologia estomática com osmose e turgor celular através de membranas; a operação não se limita à identificação anatômica do estômato.",
+      "evidencePage": 35
+    }
+  ],
+  "primaryLabelFlags": [
+    {
+      "id": "fuvest-2025-f1:68",
+      "evidencePage": 26,
+      "currentSubject": "Geografia",
+      "currentTopicId": "geo_globalizacao_economica",
+      "recommendedSubject": "Matemática",
+      "recommendedTopicId": "mat_dados_probabilidade",
+      "confidence": "medium",
+      "reason": "Todas as alternativas são verificadas posicionando países em um gráfico em relação às médias de dois indicadores. Não é necessário explicar desenvolvimento econômico ou geografia científica. A classificação atual diverge do critério aplicado ao gráfico de trabalho em 2026Q13; revisão central recomendada antes de alterar.",
+      "status": "resolved-by-root-before-patch-delivery"
+    },
+    {
+      "id": "fuvest-2025-f1:55",
+      "evidencePage": 22,
+      "currentSubject": "Biologia",
+      "currentTopicId": "bio_zoologia",
+      "recommendedSubject": "Biologia",
+      "recommendedTopicId": "bio_fisio_animal",
+      "confidence": "medium",
+      "reason": "O comando compara pressão e eficiência do transporte de oxigênio em circulação aberta/fechada, sem pedir a identificação de filos ou quais grupos têm cada sistema. O conteúdo decisivo parece fisiologia circulatória, apesar do contexto dos invertebrados.",
+      "status": "resolved-by-root-before-patch-delivery"
+    },
+    {
+      "id": "fuvest-2026-f1:23",
+      "evidencePage": 11,
+      "currentSubject": "Geografia",
+      "currentTopicId": "geo_climatologia_socioambiental",
+      "recommendedSubject": "Matemática",
+      "recommendedTopicId": "mat_dados_probabilidade",
+      "confidence": "medium",
+      "reason": "A alternativa correta identifica a tendência na série de área desmatada; as hipóteses causais dos distratores não são demonstradas no texto. É a mesma fronteira entre leitura estatística e geografia do caso 2025Q68, sem erro factual confirmado.",
+      "status": "resolved-by-root-before-patch-delivery"
+    }
+  ],
+  "ambiguities": [
+    {
+      "id": "fuvest-2025-f1:78",
+      "evidencePage": 29,
+      "decision": "Adicionar Matemática pela noção de incógnita, não pela conta 10−4.",
+      "reason": "Caso limítrofe: se a política central considerar a distinção x/X uma convenção cotidiana suficientemente básica, o vínculo matemático poderá ser omitido."
+    },
+    {
+      "id": "fuvest-2026-f1:44",
+      "evidencePage": 20,
+      "decision": "Não adicionar Arte.",
+      "reason": "Apesar da tela de Cézanne e do comando de observá-la, a proposição sobre cor e espessura do mundo é explicitada no excerto de Merleau-Ponty. Não se demanda reconhecer técnica ou movimento artístico adicional, ao contrário de 2026Q46."
+    },
+    {
+      "id": "fuvest-2026-f1:47",
+      "evidencePage": 21,
+      "decision": "Não adicionar Literatura.",
+      "reason": "O poema fornecido e a prosa filosófica são comparados pela mesma atitude ante a morte; não se demanda conhecimento da obra, história literária ou procedimento formal literário."
+    },
+    {
+      "id": "fuvest-2026-f1:40",
+      "evidencePage": 18,
+      "decision": "Não adicionar Literatura.",
+      "reason": "O excerto de Caminho de pedras está integralmente fornecido para aplicação do conceito de reserva de Simmel, sem conhecimento externo do romance ou técnica narrativa."
+    },
+    {
+      "id": "fuvest-2025-f1:29",
+      "evidencePage": 13,
+      "decision": "Não adicionar Inglês.",
+      "reason": "O texto-base coletivo é inglês, mas a resposta depende da imprevisibilidade da evolução e rejeita garantias adaptativas gerais; a informação específica do texto climático não é necessária."
+    },
+    {
+      "id": "fuvest-2026-f1:67",
+      "evidencePage": 29,
+      "decision": "Não adicionar Inglês nem Biologia.",
+      "reason": "A menção à proteômica do texto anterior é contextual; o próprio enunciado português fornece espécie, carga e espectro para o raciocínio isotópico."
+    },
+    {
+      "id": "fuvest-2026-f1:81",
+      "evidencePage": 34,
+      "decision": "Não adicionar Inglês nem Biologia.",
+      "reason": "O próprio enunciado português explicita comunicação aérea ou no solo; a escolha depende de polaridade, volatilidade e solubilidade, sem exigir mecanismo botânico ou ler o texto inglês anterior."
+    },
+    {
+      "id": "fuvest-2025-f1:35",
+      "evidencePage": 15,
+      "decision": "Não adicionar Literatura.",
+      "reason": "O trecho de Os ratos fornece as sensações; basta reconhecer taquicardia e sistema simpático, sem qualquer conhecimento literário externo."
+    },
+    {
+      "id": "fuvest-2025-f1:63",
+      "evidencePage": 24,
+      "decision": "Não adicionar Biologia.",
+      "reason": "O balanço de captura e emissão de carbono de um combustível é o conceito químico exigido; não se demanda resolver fotossíntese ou mecanismo ecológico específico."
+    },
+    {
+      "id": "fuvest-2026-f1:56",
+      "evidencePage": 26,
+      "decision": "Não adicionar Filosofia nem segundo tópico evolutivo.",
+      "reason": "Aristóteles é antecedente contextual. O tópico zoológico já contém explicitamente sistemática filogenética e ancestralidade comum, sem operação evolutiva independente."
+    },
+    {
+      "id": "fuvest-2026-f1:83",
+      "evidencePage": 35,
+      "decision": "Não adicionar Cinética Química.",
+      "reason": "A velocidade de dissolução é fornecida constante; multiplicá-la pelo tempo é cálculo quantitativo da concentração, sem dedução de lei cinética ou efeito sobre velocidade."
+    },
+    {
+      "id": "fuvest-2026-f1:76",
+      "evidencePage": 33,
+      "decision": "Não adicionar Matemática.",
+      "reason": "A transformação logarítmica é o próprio modelo de decibéis explicitado para intensidade sonora; não há problema matemático autônomo além do tratamento da grandeza física."
+    },
+    {
+      "id": "fuvest-2025-f1:57",
+      "evidencePage": 22,
+      "decision": "Não adicionar Soluções.",
+      "reason": "Supersaturação descreve o dispositivo, mas a alternativa correta só exige os sinais energéticos da cristalização e da dissolução, fornecidos pelo aquecimento e regeneração; os cálculos ou critérios próprios de soluções não são necessários."
+    }
+  ],
+  "qualityFlags": [
+    {
+      "id": "fuvest-2025-f2-dia2:M05",
+      "field": "skills",
+      "recommendedSkills": [
+        "calculo",
+        "modelagem"
+      ],
+      "reason": "PA, casas decimais, divisibilidade por potências de dois e soma inteira exigem modelagem e cálculo, não só interpretação textual."
+    },
+    {
+      "id": "fuvest-2025-f2-dia2:Q03",
+      "field": "skills",
+      "recommendedSkills": [
+        "aplicacao_conceitual",
+        "representacao_estrutural"
+      ],
+      "reason": "Desenhar Lewis de eteno/etino e estruturas de tautômeros carbonílicos exige representação estrutural e aplicação conceitual. Coordenado com corpus_2024 para vocabulário final de skills."
+    }
+  ],
+  "confirmedExistingLinks": [
+    {
+      "id": "fuvest-2026-f1:46",
+      "relatedSubjects": [
+        "Arte"
+      ],
+      "relatedTopicIds": [],
+      "evidencePage": 21,
+      "reason": "Conferido na escultura e no comando comparativo; vínculo já aplicado pelo root antes da entrega e por isso não duplicado nos patches."
+    }
+  ]
+}
