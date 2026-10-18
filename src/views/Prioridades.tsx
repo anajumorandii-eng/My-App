@@ -1,3 +1,4 @@
+import { FuvestDepthPanel } from '../components/FuvestDepthPanel';
 import { PriorityStudyPanel } from '../components/PriorityStudyPanel';
 import React, { useMemo, useState } from 'react';
 import { ExamEvidencePanel } from '../components/ExamEvidencePanel';
@@ -10,7 +11,7 @@ import { useAmbienteDaTela } from './visual-boards/ambiente';
 import { ambienteDaMateria } from '../lib/visualAmbiente';
 
 export default function Prioridades() {
-  const subjects = useMemo(() => ['Biologia', 'Matemática', 'Física', 'Química', 'Geografia', 'História', 'Língua Portuguesa', 'Língua Inglesa', 'Literatura', 'Redação', 'Filosofia', 'Sociologia'], []);
+  const subjects = useMemo(() => ['Biologia', 'Matemática', 'Física', 'Química', 'Geografia', 'História', 'Língua Portuguesa', 'Língua Inglesa', 'Literatura', 'Redação', 'Filosofia', 'Sociologia', 'Arte', 'Educação Física'], []);
   const [activeSubject, setActiveSubject] = useState(subjects[0]);
   const [expandedWork, setExpandedWork] = useState<string | null>(null);
 
@@ -77,7 +78,8 @@ export default function Prioridades() {
       </div>
 
       <div className="space-y-4">
-        <PriorityStudyPanel key={activeSubject} subject={activeSubject} />
+        <FuvestDepthPanel key={`depth-${activeSubject}`} subject={activeSubject} />
+        {!['Arte', 'Educação Física'].includes(activeSubject) && <PriorityStudyPanel key={activeSubject} subject={activeSubject} />}
         <ExamEvidencePanel key={`evidence:${activeSubject}`} subject={activeSubject} />
 
         {/* Required reading section for Portuguese */}
