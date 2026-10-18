@@ -1,0 +1,38 @@
+[
+  {
+    "theme": "light",
+    "width": 390,
+    "pages": 5,
+    "synchronousPrint": true,
+    "readableWithoutBackgroundGraphics": true,
+    "allSectionsAndSources": true,
+    "cleanedUp": true
+  },
+  {
+    "theme": "light",
+    "width": 1366,
+    "pages": 5,
+    "synchronousPrint": true,
+    "readableWithoutBackgroundGraphics": true,
+    "allSectionsAndSources": true,
+    "cleanedUp": true
+  },
+  {
+    "theme": "dark",
+    "width": 390,
+    "pages": 5,
+    "synchronousPrint": true,
+    "readableWithoutBackgroundGraphics": true,
+    "allSectionsAndSources": true,
+    "cleanedUp": true
+  },
+  {
+    "theme": "dark",
+    "width": 1366,
+    "pages": 5,
+    "synchronousPrint": true,
+    "readableWithoutBackgroundGraphics": true,
+    "allSectionsAndSources": true,
+    "cleanedUp": true
+  }
+]

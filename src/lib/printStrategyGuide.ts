@@ -1,3 +1,6 @@
+import stationery from '../assets/print/aquarela-crivo.webp?inline';
+import { printStyles } from './printStyles';
+
 let activePrint: (() => void) | undefined;
 
 /** Prints in the current window so browsers do not have to print a hidden frame. */
@@ -11,19 +14,18 @@ export function printStrategyGuide(content: HTMLElement, title: string) {
   printable.querySelectorAll('[data-print-exclude]').forEach(element => element.remove());
   printable.querySelectorAll<HTMLElement>('[data-print-only]').forEach(element => { element.hidden = false; element.style.display = 'block'; element.classList.remove('hidden'); });
   printable.querySelectorAll('details').forEach(element => { element.open = true; });
-  root.appendChild(printable);
+  // Inline artwork is available at the click: printing must not wait on a fetch.
+  const header = document.createElement('header');
+  header.dataset.printMasthead = '';
+  const art = document.createElement('img');
+  art.src = stationery; art.alt = ''; art.setAttribute('aria-hidden', 'true');
+  const brand = document.createElement('span');
+  brand.textContent = 'CRIVO · CADERNO DE ESTUDO';
+  header.append(art, brand);
+  printable.dataset.printContent = '';
+  root.append(header, printable);
   const style = document.createElement('style');
-  style.textContent = `@media print {
-    @page { margin: 18mm; }
-    html, body { background: white !important; color: black !important; height: auto !important; overflow: visible !important; }
-    body > :not([data-crivo-print-root]) { display: none !important; }
-    [data-crivo-print-root] { display: block !important; font: 12pt/1.6 sans-serif; }
-    [data-crivo-print-root], [data-crivo-print-root] * { color: black !important; background: transparent !important; box-shadow: none !important; max-height: none !important; overflow: visible !important; }
-    [data-crivo-print-root] h1, [data-crivo-print-root] h2, [data-crivo-print-root] h3, [data-crivo-print-root] h4 { break-after: avoid; }
-    [data-crivo-print-root] pre { white-space: pre-wrap; overflow-wrap: anywhere; }
-    [data-crivo-print-root] img, [data-crivo-print-root] svg { max-width: 100%; height: auto; }
-    [data-crivo-print-root] button, [data-crivo-print-root] select, [data-crivo-print-root] input { display: none !important; }
-  }`;
+  style.textContent = printStyles;
   const cleanup = () => {
     root.remove(); style.remove(); document.title = previousTitle;
     window.removeEventListener('afterprint', cleanup);

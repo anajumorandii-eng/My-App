@@ -12,6 +12,10 @@ it('imprime somente o guia renderizado na janela atual e restaura a tela ao term
   const printable = document.querySelector('[data-crivo-print-root]')!;
   expect(document.title).toBe('Aprofundamento de Matemática');
   expect(printable.querySelector('strong')!.textContent).toBe('Conceito');
+  const artwork = printable.querySelector<HTMLImageElement>('[data-print-masthead] img')!;
+  expect(artwork.src).toMatch(/^data:image\/webp;base64,/);
+  expect(artwork.alt).toBe('');
+  expect(printable.querySelector('[data-print-content]')!.textContent).toContain('Matemática');
   expect(content.isConnected).toBe(false);
   window.dispatchEvent(new Event('afterprint'));
   expect(document.querySelector('[data-crivo-print-root]')).toBeNull();
