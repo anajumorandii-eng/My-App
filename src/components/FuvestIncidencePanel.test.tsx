@@ -18,7 +18,7 @@ it('separa a primeira fase, Medicina e o banco completo sem trocar denominadores
 
 it('abre o caminho de uma questão real com fonte e estratégia, e exporta a auditoria',async()=>{
  render(<FuvestIncidencePanel subject="Biologia"/>);
- const ecology=await screen.findByRole('button',{name:'Ecologia',exact:true});fireEvent.click(ecology);
+ const ecology=await screen.findByRole('button',{name:'Ecologia'});fireEvent.click(ecology);
  expect(screen.getByText(/14 questões encontradas/)).toBeInTheDocument();
  const summaries=screen.getAllByText(/2026.*questão/);fireEvent.click(summaries[0]);
  expect(screen.getAllByText('Erro a evitar:').length).toBeGreaterThan(0);
