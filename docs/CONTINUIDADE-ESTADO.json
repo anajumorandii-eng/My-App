@@ -2,15 +2,19 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "cb3f2f16f292ea9133d82f508f5cc4cc082b6941",
-  "generated_at_utc": "2026-10-19T20:38:10Z",
+  "source_commit": "c6dcf15790365a93fb550a4a293634520d64c24f",
+  "generated_at_utc": "2026-10-19T21:53:06Z",
   "changed_files": [
-    "src/components/CoverIllustrationButton.test.tsx",
-    "src/components/CoverIllustrationButton.tsx",
+    ".github/workflows/ci.yml",
+    "src/components/DeepeningPdf.test.tsx",
+    "src/components/DeepeningPdf.tsx",
     "src/components/StrategyExplorer.test.tsx",
     "src/components/StrategyExplorer.tsx",
     "src/components/WorkDeepening.test.tsx",
-    "src/components/WorkDeepening.tsx"
+    "src/components/WorkDeepening.tsx",
+    "src/lib/printPdfFile.ts",
+    "src/lib/printStrategyGuide.ts",
+    "src/views/Aprofundamentos.tsx"
   ],
   "next_session": {
     "mode": "delta-only",
