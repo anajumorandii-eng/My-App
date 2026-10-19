@@ -1,4 +1,4 @@
-import { CoverIllustrationButton } from './CoverIllustrationButton';
+import { DeepeningPdf } from './DeepeningPdf';
 import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -26,6 +26,7 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const lock = useRef(false);
+  const [pdfBusy, setPdfBusy] = useState(false);
   const [coverGeneration, setCoverGeneration] = useState<{ key: string; id: number } | null>(null);
   const generationSequence = useRef(0);
   const content = useRef<HTMLDivElement>(null);
@@ -47,11 +48,11 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
         learnerReflection: reflectionForTutor(uid, topicId), level: 40, daysSinceReview: 0,
       }, delta => setPartial(previous => previous + delta));
       if (!result.text.trim()) throw new Error('Guia vazio');
+      setCoverGeneration({ key, id: ++generationSequence.current });
       await persist({ key, subject: 'Literatura', topicId, topicName: title, chapter: unitTitle ?? '', board, targetBoards,
         workSlug: dossier.slug, ...(unitId ? { workUnitId: unitId } : {}),
         studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet,
         text: result.text, savedAt: new Date().toISOString() });
-      setCoverGeneration({ key, id: ++generationSequence.current });
     } catch { setError('Não foi possível aprofundar agora. O conteúdo da obra e o guia salvo anteriormente continuam disponíveis. Tente novamente.'); }
     finally { lock.current = false; setBusy(false); setPartial(''); }
   };
@@ -63,17 +64,19 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
     {targetsError && <p role="alert">{targetsError}</p>}
     {board === 'Todas as bancas' && <p className="text-xs text-[var(--dim)]">{targets.length ? `Bancas do seu perfil: ${targetBoards.join(' · ')}.` : 'Sem bancas pessoais carregadas: o guia se limita às fontes disponíveis, sem assumir inscrições ou cobrança oficial.'}</p>}
     {loadError && <div role="alert"><p>{loadError}</p><button type="button" className="text-sm underline" onClick={reload}>Tentar carregar novamente</button></div>}
-    <button type="button" disabled={busy || (board === 'Todas as bancas' && targetsLoading)} onClick={() => void generate()} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50">{busy ? 'Preparando aprofundamento da obra…' : saved ? 'Gerar novo aprofundamento da obra' : unitId ? 'Aprofundar esta unidade e sua interpretação' : 'Aprofundar esta obra e sua interpretação'}</button>
-    {busy && <p role="status" className="text-sm">Gerando o guia para {title} · {scope}. Aguarde a conclusão para salvar.</p>}
+    <button type="button" disabled={busy || pdfBusy || (board === 'Todas as bancas' && targetsLoading)} onClick={() => void generate()} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50">{busy || pdfBusy ? 'Preparando aprofundamento da obra…' : saved ? 'Gerar novo aprofundamento da obra' : unitId ? 'Aprofundar esta unidade e sua interpretação' : 'Aprofundar esta obra e sua interpretação'}</button>
+    {busy && <p role="status" className="text-sm">Preparando seu aprofundamento completo…</p>}
     {error && <p role="alert" className="text-sm">{error}</p>}
-    {saveMessage && <p role="status" className="text-xs text-[var(--dim)]">{saveMessage}</p>}
+    {saveMessage && !pdfBusy && !busy && <p role="status" className="text-xs text-[var(--dim)]">{saveMessage}</p>}
     <div className="flex flex-wrap gap-3 text-sm">
       <Link to="/aprofundamentos" className="underline">Meus aprofundamentos</Link>
-      {saved && <>
+      {saved && !busy && <>
         <Link to={strategyGuideUrl(saved)} className="underline">Abrir este guia na biblioteca</Link>
-        <button type="button" disabled={busy} className="underline disabled:opacity-50" onClick={() => { try { if (content.current) printStrategyGuide(content.current, `Aprofundamento — ${title} — ${scope} — ${board}`); } catch { setError('Não foi possível abrir a impressão. Tente novamente.'); } }}>Imprimir aprofundamento / Salvar em PDF</button>
-        <CoverIllustrationButton key={key} getContent={() => content.current} autoGenerateKey={coverGeneration?.key === key ? coverGeneration.id : undefined} />
-        {uid && <button type="button" className="underline" disabled={busy} onClick={() => void persist(saved)}>Salvar novamente na conta</button>}
+        {uid ? <DeepeningPdf key={key} getContent={() => content.current}
+          guideKey={key} revision={saved.savedAt} title={`Aprofundamento — ${title} — ${scope} — ${board}`}
+          generateCover={coverGeneration?.key === key} onBusyChange={setPdfBusy} /> :
+          <button type="button" className="underline" onClick={() => { try { if (content.current) printStrategyGuide(content.current, `Aprofundamento — ${title} — ${scope} — ${board}`); } catch { setError('Não foi possível abrir a impressão. Tente novamente.'); } }}>Imprimir aprofundamento / Salvar em PDF</button>}
+        {uid && /Não foi possível/.test(saveMessage) && <button type="button" className="underline" disabled={busy} onClick={() => void persist(saved)}>Salvar novamente na conta</button>}
       </>}
     </div>
     <p className="text-xs text-[var(--dim)]">Guia gerado por IA para seu estudo pessoal. Confira as interpretações nas fontes; ele não altera o dossiê publicado.</p>

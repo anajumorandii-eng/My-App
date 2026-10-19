@@ -33,6 +33,9 @@ jobs:
         run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
 
       - run: npm test
+        env:
+          # Use the same stable browser as the navigation tests, not the runner's Chromium snapshot.
+          CHROMIUM_PATH: /usr/bin/google-chrome
 
       - name: Continuidade do catálogo e conteúdo editorial
         run: npx vitest run src/data/continuityGeography.test.ts

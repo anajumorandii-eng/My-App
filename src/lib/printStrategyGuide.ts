@@ -5,10 +5,8 @@ import { openStudyPdf } from './printPdfFile';
 
 let activePrint: (() => void) | undefined;
 
-/** Prints in the current window so browsers do not have to print a hidden frame. */
-export function printStrategyGuide(content: HTMLElement, title: string) {
-  activePrint?.();
-  const previousTitle = document.title;
+/** Builds the same cover, index and content for native printing and prepared PDFs. */
+export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   const root = document.createElement('div');
   root.dataset.crivoPrintRoot = '';
   root.style.display = 'none';
@@ -36,6 +34,14 @@ export function printStrategyGuide(content: HTMLElement, title: string) {
   printable.dataset.printContent = '';
   layout.createTBody().insertRow().insertCell().append(printable);
   root.append(cover, toc, layout);
+  return root;
+}
+
+/** Prints in the current window so browsers do not have to print a hidden frame. */
+export function printStrategyGuide(content: HTMLElement, title: string) {
+  activePrint?.();
+  const previousTitle = document.title;
+  const root = createStrategyPrintRoot(content, title);
   const style = document.createElement('style');
   style.textContent = printStyles;
   if (needsPdfFile(navigator)) {

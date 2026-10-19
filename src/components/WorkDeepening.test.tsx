@@ -12,7 +12,7 @@ vi.mock('../lib/aiClient', () => ({ requestAiTextStream: mocks.generate }));
 vi.mock('../context/AuthContext', () => ({ useAuth: () => ({ user: mocks.uid ? { uid: mocks.uid } : null }) }));
 vi.mock('../hooks/useStudyTargets', () => ({ useStudyTargets: () => ({ targets: [{ board: 'UNICAMP' }, { board: 'UNESP' }], loading: false, error: null }) }));
 vi.mock('../lib/strategyGuides', async () => ({ ...await vi.importActual('../lib/strategyGuides'), saveStrategyGuide: mocks.save, loadStrategyGuides: mocks.load }));
-vi.mock('../lib/printStrategyGuide', () => ({ printStrategyGuide: vi.fn() }));
+vi.mock('../lib/printStrategyGuide', async () => ({ ...await vi.importActual('../lib/printStrategyGuide'), printStrategyGuide: vi.fn() }));
 const dossier = olhos as WorkDossier;
 const open = (unitId?: string) => render(<MemoryRouter><WorkDeepening dossier={dossier} title="Olhos d’água" unitId={unitId} unitTitle={dossier.units.find(unit => unit.id === unitId)?.title} /></MemoryRouter>);
 beforeEach(() => { localStorage.clear(); mocks.uid = null; mocks.generate.mockReset().mockResolvedValue({ text: 'Interpretação sustentada nas fontes.' }); mocks.save.mockReset().mockResolvedValue(undefined); mocks.load.mockReset().mockResolvedValue({}); vi.mocked(printStrategyGuide).mockClear(); });
@@ -70,22 +70,21 @@ it('salva na conta e mantém uma cópia local se a sincronização falhar', asyn
   expect(Object.values(readStrategyGuides(null))).toHaveLength(0);
 });
 
-it('cria a ilustração automaticamente ao concluir o aprofundamento da obra', async () => {
-  mocks.uid = 'capa-obra';
+
+it('entrega o aprofundamento da obra com o arquivo completo já preparado', async () => {
+  mocks.uid = 'material-completo-obra';
   const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB';
-  const fetch = vi.fn(async (_url, options) => Response.json(options?.method === 'POST' ? { dataUrl: image } : { enabled: true }));
+  const fetch = vi.fn(async (url, options) => url === '/api/study-pdf' ? new Response('%PDF-1.7\n', { headers: { 'Content-Type': 'application/pdf' } }) : Response.json(options?.method === 'POST' ? { dataUrl: image } : { enabled: true }));
   vi.stubGlobal('fetch', fetch);
-  vi.stubGlobal('Image', class { src = ''; decode = async () => {}; });
+  vi.stubGlobal('URL', class extends URL { static createObjectURL = () => 'blob:work'; static revokeObjectURL = () => {}; });
   try {
     open('maria');
     fireEvent.click(screen.getByRole('button', { name: 'Aprofundar esta unidade e sua interpretação' }));
-    await screen.findByText('Ilustração pronta para este material.');
-    expect(screen.getByText('Interpretação sustentada nas fontes.').closest('[data-print-work]')).toHaveAttribute('data-print-generated-art', image);
-    const post = fetch.mock.calls.find(([, options]) => options?.method === 'POST');
-    expect(JSON.parse(post![1]!.body)).toMatchObject({ subject: 'Literatura', work: 'Olhos d’água', subtopic: 'Maria' });
-    fireEvent.change(screen.getByLabelText('Banca do aprofundamento da obra'), { target: { value: 'FUVEST' } });
-    fireEvent.change(screen.getByLabelText('Banca do aprofundamento da obra'), { target: { value: 'Todas as bancas' } });
-    await screen.findByRole('button', { name: 'Personalizar ilustração da capa' });
-    expect(fetch.mock.calls.filter(([, options]) => options?.method === 'POST')).toHaveLength(1);
+    await screen.findByRole('link', { name: 'Abrir PDF' });
+    expect(screen.getByText('Aprofundamento pronto, com capa e índice.')).toBeInTheDocument();
+    expect(screen.queryByRole('button', { name: 'Personalizar ilustração da capa' })).toBeNull();
+    const sent = JSON.parse(fetch.mock.calls.find(([url]) => url === '/api/study-pdf')![1].body);
+    expect(sent.html).toContain(image); expect(sent.html).toContain('Sumário');
+    expect(sent.html).toContain('Interpretação sustentada nas fontes.');
   } finally { vi.unstubAllGlobals(); }
 });
