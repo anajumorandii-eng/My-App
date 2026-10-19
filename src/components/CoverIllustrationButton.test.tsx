@@ -152,3 +152,35 @@ it("sem reutilizar a ilustração quando o material muda durante a geração", a
   expect(root.dataset.printGeneratedArt).toBeUndefined();
   root.remove();
 });
+
+it("cria automaticamente uma capa por aprofundamento, sem repetir ao renderizar", async () => {
+  const root = content();
+  const fetch = vi.fn(async (_url, options) => Response.json(options?.method === 'POST' ? { dataUrl: image } : { enabled: true }));
+  vi.stubGlobal('fetch', fetch);
+  vi.stubGlobal('Image', class { src = ''; decode = async () => {}; });
+  const view = render(<CoverIllustrationButton getContent={() => root} autoGenerateKey={1} />);
+  await screen.findByText('Ilustração pronta para este material.');
+  expect(root.dataset.printGeneratedArt).toBe(image);
+  view.rerender(<CoverIllustrationButton getContent={() => root} autoGenerateKey={1} />);
+  expect(fetch.mock.calls.filter(([, options]) => options?.method === 'POST')).toHaveLength(1);
+  view.rerender(<CoverIllustrationButton getContent={() => root} autoGenerateKey={2} />);
+  await waitFor(() => expect(fetch.mock.calls.filter(([, options]) => options?.method === 'POST')).toHaveLength(2));
+  root.remove();
+});
+
+it("mantém a capa padrão e permite tentar novamente após falha automática", async () => {
+  const root = content();
+  const fetch = vi.fn().mockResolvedValueOnce(Response.json({ enabled: true }))
+    .mockResolvedValueOnce(Response.json({ error: 'Serviço indisponível' }, { status: 503 }))
+    .mockResolvedValueOnce(Response.json({ dataUrl: image }));
+  vi.stubGlobal('fetch', fetch);
+  vi.stubGlobal('Image', class { src = ''; decode = async () => {}; });
+  render(<CoverIllustrationButton getContent={() => root} autoGenerateKey={1} />);
+  expect(await screen.findByRole('alert')).toHaveTextContent('Sua impressão continua disponível');
+  expect(root.dataset.printGeneratedArt).toBeUndefined();
+  expect(fetch).toHaveBeenCalledTimes(2);
+  fireEvent.click(screen.getByRole('button', { name: 'Personalizar ilustração da capa' }));
+  await screen.findByText('Ilustração pronta para este material.');
+  expect(root.dataset.printGeneratedArt).toBe(image);
+  root.remove();
+});

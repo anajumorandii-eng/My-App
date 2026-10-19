@@ -40,6 +40,8 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   const [loadingKey, setLoadingKey] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const busy = useRef(false);
+  const [coverGeneration, setCoverGeneration] = useState<{ key: string; id: number } | null>(null);
+  const generationSequence = useRef(0);
   const topic = topics.find((topic) => topic.id === topicId) ?? topics[0];
   const protocol = studyProtocols.find((item) => item.subject === subject)!;
   const boardProfile = studyBoardProfiles.find((item) => item.board === board);
@@ -50,7 +52,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   const focusName = selections.map(item => item.topicName).join(' + ');
   const scopeName = selections.length > 1 ? focusName : chapter || topic?.name;
   const key = strategySelectionKey(subject, selections, board);
-  useEffect(() => { setSaveMessage(''); }, [key]);
+  useEffect(() => { setSaveMessage(''); setCoverGeneration(null); }, [key]);
   useEffect(() => {
     let cancelled = false;
     if (!topic) return;
@@ -72,6 +74,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
       if (!result.text.trim()) throw new Error('Guia vazio');
       setAnswers((prev) => { const next = { ...prev }; delete next[key]; return next; });
       void persist({ key, subject, topicId: topic.id, topicName: focusName, chapter: selections.length > 1 ? '' : chapter, ...(selections.length > 1 ? { selections } : {}), board, targetBoards, studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet, text: result.text, savedAt: new Date().toISOString() });
+      setCoverGeneration({ key, id: ++generationSequence.current });
     } catch {
       setAnswers((prev) => { const next = { ...prev }; delete next[key]; return next; });
       setErrors((prev) => ({ ...prev, [key]: 'Não foi possível aprofundar agora. O protocolo e o exemplo abaixo continuam disponíveis; tente novamente.' }));
@@ -145,7 +148,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
             setErrors(previous => ({ ...previous, [key]: 'Não foi possível abrir a impressão neste navegador. Seu guia continua salvo; tente novamente em uma aba do Safari ou Chrome.' }));
           }
         }}>Imprimir / Salvar em PDF</button>
-        <CoverIllustrationButton getContent={() => printContent.current} />
+        <CoverIllustrationButton key={key} getContent={() => printContent.current} autoGenerateKey={coverGeneration?.key === key ? coverGeneration.id : undefined} />
         {uid && <button type="button" className="text-sm underline" onClick={() => void persist(guides[key])}>Salvar novamente na conta</button>}
       </div>}
       {(answers[key] || guides[key]) && <div ref={printContent} data-print-subject={subject} data-print-topic={focusName} data-print-subtopic={selections.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join(' · ')} data-print-board={guides[key]?.targetBoards?.join(' · ') || board} data-print-purpose="Aprofundamento dos conceitos e de como são cobrados nas provas">

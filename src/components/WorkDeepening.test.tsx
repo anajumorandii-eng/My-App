@@ -1,3 +1,4 @@
+vi.mock('../lib/auth', () => ({ authHeaders: async () => ({ Authorization: 'Bearer test-token' }) }));
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { beforeEach, expect, it, vi } from 'vitest';
@@ -67,4 +68,24 @@ it('salva na conta e mantém uma cópia local se a sincronização falhar', asyn
   expect(mocks.save).toHaveBeenCalledWith('conta-teste', expect.objectContaining({ workUnitId: 'maria' }));
   expect(Object.values(readStrategyGuides('conta-teste'))).toHaveLength(1);
   expect(Object.values(readStrategyGuides(null))).toHaveLength(0);
+});
+
+it('cria a ilustração automaticamente ao concluir o aprofundamento da obra', async () => {
+  mocks.uid = 'capa-obra';
+  const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB';
+  const fetch = vi.fn(async (_url, options) => Response.json(options?.method === 'POST' ? { dataUrl: image } : { enabled: true }));
+  vi.stubGlobal('fetch', fetch);
+  vi.stubGlobal('Image', class { src = ''; decode = async () => {}; });
+  try {
+    open('maria');
+    fireEvent.click(screen.getByRole('button', { name: 'Aprofundar esta unidade e sua interpretação' }));
+    await screen.findByText('Ilustração pronta para este material.');
+    expect(screen.getByText('Interpretação sustentada nas fontes.').closest('[data-print-work]')).toHaveAttribute('data-print-generated-art', image);
+    const post = fetch.mock.calls.find(([, options]) => options?.method === 'POST');
+    expect(JSON.parse(post![1]!.body)).toMatchObject({ subject: 'Literatura', work: 'Olhos d’água', subtopic: 'Maria' });
+    fireEvent.change(screen.getByLabelText('Banca do aprofundamento da obra'), { target: { value: 'FUVEST' } });
+    fireEvent.change(screen.getByLabelText('Banca do aprofundamento da obra'), { target: { value: 'Todas as bancas' } });
+    await screen.findByRole('button', { name: 'Personalizar ilustração da capa' });
+    expect(fetch.mock.calls.filter(([, options]) => options?.method === 'POST')).toHaveLength(1);
+  } finally { vi.unstubAllGlobals(); }
 });

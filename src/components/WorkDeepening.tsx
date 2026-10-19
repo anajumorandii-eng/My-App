@@ -1,5 +1,5 @@
 import { CoverIllustrationButton } from './CoverIllustrationButton';
-import { useRef, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
 import { useStrategyGuides } from '../hooks/useStrategyGuides';
@@ -26,10 +26,13 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
   const [busy, setBusy] = useState(false);
   const [error, setError] = useState('');
   const lock = useRef(false);
+  const [coverGeneration, setCoverGeneration] = useState<{ key: string; id: number } | null>(null);
+  const generationSequence = useRef(0);
   const content = useRef<HTMLDivElement>(null);
   const topicId = `obra:${dossier.slug}`;
   const key = JSON.stringify(['obra', dossier.slug, unitId ?? '', board]);
   const saved = guides[key];
+  useEffect(() => { setCoverGeneration(null); }, [key]);
   const targetBoards = board === 'Todas as bancas' ? targets.map(target => target.board) : [board];
   const boards = [...new Set(['FUVEST', 'UNICAMP', ...targets.map(target => target.board)])];
   const scope = unitTitle ?? 'Obra completa';
@@ -48,6 +51,7 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
         workSlug: dossier.slug, ...(unitId ? { workUnitId: unitId } : {}),
         studyPacket: result.serverSources?.length ? { ...packet, sources: [...packet.sources, ...result.serverSources] } : packet,
         text: result.text, savedAt: new Date().toISOString() });
+      setCoverGeneration({ key, id: ++generationSequence.current });
     } catch { setError('Não foi possível aprofundar agora. O conteúdo da obra e o guia salvo anteriormente continuam disponíveis. Tente novamente.'); }
     finally { lock.current = false; setBusy(false); setPartial(''); }
   };
@@ -68,7 +72,7 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
       {saved && <>
         <Link to={strategyGuideUrl(saved)} className="underline">Abrir este guia na biblioteca</Link>
         <button type="button" disabled={busy} className="underline disabled:opacity-50" onClick={() => { try { if (content.current) printStrategyGuide(content.current, `Aprofundamento — ${title} — ${scope} — ${board}`); } catch { setError('Não foi possível abrir a impressão. Tente novamente.'); } }}>Imprimir aprofundamento / Salvar em PDF</button>
-        <CoverIllustrationButton getContent={() => content.current} />
+        <CoverIllustrationButton key={key} getContent={() => content.current} autoGenerateKey={coverGeneration?.key === key ? coverGeneration.id : undefined} />
         {uid && <button type="button" className="underline" disabled={busy} onClick={() => void persist(saved)}>Salvar novamente na conta</button>}
       </>}
     </div>
