@@ -71,7 +71,7 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
       </>}
     </div>
     <p className="text-xs text-[var(--dim)]">Guia gerado por IA para seu estudo pessoal. Confira as interpretações nas fontes; ele não altera o dossiê publicado.</p>
-    {(partial || saved) && <article ref={content} className="space-y-3">
+    {(partial || saved) && <article ref={content} className="space-y-3" data-print-subject="Literatura" data-print-work={title} data-print-subtopic={scope} data-print-board={saved?.targetBoards?.join(' · ') || board} data-print-purpose="Aprofundamento da obra, interpretação e formas de cobrança na prova">
       <h4 className="font-display text-lg">{title} · {scope} · {board}</h4>
       <AiText text={partial || saved?.text || ''} className="text-sm leading-relaxed" />
       {saved?.studyPacket && !partial && <StudySourcesPanel packet={saved.studyPacket} />}

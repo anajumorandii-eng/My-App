@@ -138,7 +138,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
         <button type="button" disabled={loadingKey !== null} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50" onClick={() => { if (printContent.current) printStrategyGuide(printContent.current, `Aprofundamento — ${subject} — ${scopeName} — ${board}`); }}>Imprimir / Salvar em PDF</button>
         {uid && <button type="button" className="text-sm underline" onClick={() => void persist(guides[key])}>Salvar novamente na conta</button>}
       </div>}
-      {(answers[key] || guides[key]) && <div ref={printContent}>
+      {(answers[key] || guides[key]) && <div ref={printContent} data-print-subject={subject} data-print-topic={focusName} data-print-subtopic={selections.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join(' · ')} data-print-board={guides[key]?.targetBoards?.join(' · ') || board} data-print-purpose="Aprofundamento dos conceitos e de como são cobrados nas provas">
         <h4 className="font-display text-lg">{subject} · {focusName}{selections.length === 1 && chapter ? ` · ${chapter}` : ''} · {board}</h4>
         <AiText text={answers[key] || guides[key]?.text || ''} className="text-sm leading-relaxed" />
         {guides[key]?.studyPacket && <div className="hidden" data-print-only><StudySourcesPanel packet={guides[key].studyPacket!} /></div>}

@@ -44,3 +44,30 @@ it('limpa a preparação anterior ao imprimir novamente e restaura a tela se o n
   expect(() => printStrategyGuide(content, 'Terceiro')).toThrow('blocked');
   expect(document.querySelector('[data-crivo-print-root]')).toBeNull();expect(document.title).toBe(title);
 });
+it('cria capa contextual e sumário fiel sem alterar IDs ou interpretar os metadados como HTML', () => {
+  vi.spyOn(window, 'print').mockImplementation(() => {});
+  const content = document.createElement('article');
+  Object.assign(content.dataset, { printSubject: 'Literatura', printWork: 'Obra <exemplo>', printSubtopic: 'Capítulo 2', printBoard: 'UNICAMP', printPurpose: 'Interpretar forma e contexto' });
+  content.innerHTML = '<h2 id="crivo-print-section-1">Contexto</h2><p>Texto original</p><h3>Interpretação</h3><p><strong>Aplicação na prova</strong></p><details><summary>Fontes</summary><p>Referência</p></details>';
+  printStrategyGuide(content, 'Guia');
+  const root = document.querySelector('[data-crivo-print-root]')!;
+  const cover = root.querySelector('[data-print-cover]')!;
+  expect(cover.textContent).toContain('Obra <exemplo>');
+  expect(cover.querySelector('exemplo')).toBeNull();
+  expect(cover.textContent).toContain('Capítulo 2'); expect(cover.textContent).toContain('UNICAMP');
+  expect(cover.textContent).toContain('Interpretar forma e contexto');
+  const links = [...root.querySelectorAll<HTMLAnchorElement>('[data-print-toc] a')];
+  expect(links.map(link => link.textContent)).toEqual(['Contexto', 'Interpretação', 'Aplicação na prova', 'Fontes']);
+  for (const link of links) expect(root.querySelector(link.hash)).not.toBeNull();
+  expect(content.querySelectorAll('[data-print-anchor]')).toHaveLength(0);
+  expect(root.querySelector('[data-print-content] h2')!.id).toBe('crivo-print-section-1');
+  expect(root.querySelector('[data-print-layout] [data-print-frame]')).toBeNull();
+});
+it('gera uma entrada honesta quando o material não possui títulos', () => {
+  vi.spyOn(window, 'print').mockImplementation(() => {});
+  const content = document.createElement('article'); content.innerHTML = '<p>Explicação sem seções</p>';
+  printStrategyGuide(content, 'Meu estudo');
+  expect(document.querySelector('[data-print-cover] h1')!.textContent).toBe('Meu estudo');
+  expect(document.querySelector('[data-print-toc] a')!.textContent).toBe('Conteúdo do material');
+  expect(content.querySelector('h2')).toBeNull();
+});

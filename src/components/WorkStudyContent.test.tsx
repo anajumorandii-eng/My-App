@@ -50,10 +50,12 @@ describe('estratégias e resumo aprofundado por obra', () => {
     expect(screen.getByText(/ainda não está disponível/)).toBeInTheDocument();
   });
   it('imprime o escopo escolhido e recupera a visão geral para unidade indisponível', () => {
-    render(<MemoryRouter initialEntries={['/obras/olhos-dagua?aba=resumo&unidade=removida']}><WorkStudyContent dossier={olhos as WorkDossier} mode="summary" /></MemoryRouter>);
+    render(<MemoryRouter initialEntries={['/obras/olhos-dagua?aba=resumo&unidade=removida']}><WorkStudyContent dossier={olhos as WorkDossier} mode="summary" boards={['UNICAMP']} /></MemoryRouter>);
     expect(screen.getByRole('status')).toHaveTextContent('Mostrando a visão geral da obra completa');
     fireEvent.click(screen.getByRole('button', { name: 'Imprimir / Salvar em PDF' }));
     expect(printStrategyGuide).toHaveBeenLastCalledWith(expect.any(HTMLElement), expect.stringContaining('obra completa'));
+    expect(vi.mocked(printStrategyGuide).mock.calls.at(-1)![0].dataset.printBoard).toBe('UNICAMP');
+    expect(vi.mocked(printStrategyGuide).mock.calls.at(-1)![0].dataset.printWork).toBe('Olhos d’água');
     fireEvent.change(screen.getByLabelText('Escopo do estudo da obra'), { target: { value: 'maria' } });
     fireEvent.click(screen.getByRole('button', { name: 'Imprimir / Salvar em PDF' }));
     expect(printStrategyGuide).toHaveBeenLastCalledWith(expect.any(HTMLElement), expect.stringContaining('Maria'));

@@ -283,7 +283,7 @@ export default function ObraDetalhe() {
       {saveError && <p role="alert" className="ni-panel p-3 text-sm text-[var(--text)]">{saveError}</p>}
       <div hidden={tab !== 'laboratorio'}>{labOpened && (dossier ? <LiteraryStudyWorkshop work={work} dossier={dossier} requirements={requirements} /> : tab === 'laboratorio' && <ContentPendingState label="O laboratório com dossiê publicado" />)}</div>
 
-      {(tab === 'resumo' || tab === 'estrategias') && (dossier ? <WorkStudyContent key={`${workSlug}:${tab}`} dossier={dossier} mode={tab === 'resumo' ? 'summary' : 'strategy'} /> : <ContentPendingState label={tab === 'resumo' ? 'O resumo aprofundado' : 'O roteiro de estratégias'} />)}
+      {(tab === 'resumo' || tab === 'estrategias') && (dossier ? <WorkStudyContent key={`${workSlug}:${tab}`} dossier={dossier} boards={requirements.map(item => item.board)} mode={tab === 'resumo' ? 'summary' : 'strategy'} /> : <ContentPendingState label={tab === 'resumo' ? 'O resumo aprofundado' : 'O roteiro de estratégias'} />)}
 
       {/* Tab content */}
       {tab === 'comece_aqui' && (

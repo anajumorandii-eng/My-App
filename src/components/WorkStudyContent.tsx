@@ -30,7 +30,7 @@ function UnitStudy({ unit }: { unit: StudyUnit }) {
   </section>;
 }
 
-export function WorkStudyContent({ dossier, mode }: { dossier: WorkDossier; mode: 'summary' | 'strategy' }) {
+export function WorkStudyContent({ dossier, mode, boards = [] }: { dossier: WorkDossier; boards?: string[]; mode: 'summary' | 'strategy' }) {
   const [searchParams, setSearchParams] = useSearchParams();
   const workLink = (tab: string) => { const params = new URLSearchParams(searchParams); params.set('aba', tab); return `/obras/${dossier.slug}?${params}`; };
   const guide = useMemo(() => getWorkStudyGuide(dossier), [dossier]);
@@ -59,7 +59,7 @@ export function WorkStudyContent({ dossier, mode }: { dossier: WorkDossier; mode
       {requestedUnit && !unit && <p role="status" className="text-sm">A unidade indicada não está disponível. Mostrando a visão geral da obra completa.</p>}
     </div>
     <details><summary className="cursor-pointer text-sm font-semibold">Registrar o que lembro e como interpreto esta obra</summary><StudyReflectionPanel topicId={`obra:${dossier.slug}`} topicName={guide.profile.title} subject="Literatura" /></details>
-    <div ref={content} className="space-y-5">
+    <div ref={content} className="space-y-5" data-print-subject="Literatura" data-print-work={guide.profile.title} data-print-subtopic={unit?.title || 'Obra completa'} data-print-board={mode === 'strategy' ? board : boards.join(' · ') || 'Banca não informada'} data-print-purpose={mode === 'summary' ? 'Resumo aprofundado e compreensão da obra' : 'Estratégias de leitura e resolução de questões'}>
       <h2 className="font-display text-xl">{heading}</h2>
       <p className="text-xs text-[var(--dim)]">Síntese de estudo baseada no dossiê publicado. O resumo inclui desfechos. Edição de referência: {guide.edition.label}</p>
       <p className="text-sm font-semibold">{unit ? `Recorte: ${unit.title}` : 'Visão geral da obra completa'}</p>

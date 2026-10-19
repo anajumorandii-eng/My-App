@@ -8,8 +8,25 @@ export const printStyles = `@media print {
   [data-crivo-print-root], [data-crivo-print-root] * { box-sizing: border-box; box-shadow: none !important; text-shadow: none !important; max-height: none !important; overflow: visible !important; }
   [data-print-content], [data-print-content] * { background: transparent !important; color: #263c3d !important; }
   [data-print-content] { display: block !important; padding: 0 !important; margin: 0 !important; border: 0 !important; overflow-wrap: anywhere; }
-  [data-print-frame] { display: block !important; position: fixed; top: 0; left: 0; width: 210mm !important; height: 297mm !important; max-width: none !important; object-fit: fill; opacity: .18; z-index: 0; }
-  [data-print-veil] { position: fixed; top: 0; left: 0; width: 210mm !important; height: 297mm !important; z-index: 0; }
+  [data-print-cover] { position: relative; height: 296mm; break-after: page; overflow: hidden !important; }
+  [data-print-frame] { display: block !important; position: absolute; top: 0; left: 0; width: 210mm !important; height: 297mm !important; max-width: none !important; object-fit: fill; }
+  [data-print-cover-text] { position: relative; padding: 85mm 27mm 15mm; text-align: center; overflow-wrap: anywhere; }
+  [data-print-cover-brand] { font-size: 9pt; letter-spacing: .18em; color: #145a60; margin: 0 0 10mm; }
+  [data-print-cover] h1 { font: normal 30pt/1.2 Georgia, serif; color: #145a60; margin: 0 0 9mm; }
+  [data-print-long-title] h1 { font-size: 23pt; }
+  [data-print-cover] dl { margin: 0; }
+  [data-print-cover] dl > div { margin: 0 0 4mm; }
+  [data-print-cover] dt { font: 8pt/1.3 Georgia, serif; text-transform: uppercase; letter-spacing: .08em; color: #7d633d; }
+  [data-print-cover] dd { font: 11pt/1.4 Georgia, serif; color: #263c3d; margin: 1mm 0 0; }
+  [data-print-toc] { min-height: 296mm; padding: 22mm 22mm 18mm; break-after: page; }
+  [data-print-toc] h2 { font: normal 25pt/1.2 Georgia, serif; color: #145a60; margin: 0 0 5mm; }
+  [data-print-toc] p { color: #465d5d; font-size: 10pt; margin: 0 0 10mm; }
+  [data-print-toc] ol { padding: 0 0 0 6mm; margin: 0; }
+  [data-print-toc] li { font-size: 11pt; line-height: 1.4; margin: 0 0 3mm; break-inside: avoid; }
+  [data-print-toc] a { color: #263c3d; text-decoration: none; overflow-wrap: anywhere; }
+  [data-print-toc-columns] ol { columns: 2; column-gap: 12mm; }
+  [data-print-toc-columns] li { font-size: 9.5pt; margin-bottom: 2mm; }
+  [data-print-anchor] { display: block; height: 0; break-after: avoid; }
   [data-print-layout] { position: relative; z-index: 1; width: 210mm !important; table-layout: fixed; border-collapse: collapse; border-spacing: 0; }
   [data-print-layout] > thead { display: table-header-group; }
   [data-print-layout] > tfoot { display: table-footer-group; }

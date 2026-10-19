@@ -84,7 +84,7 @@ export default function Resumos() {
       <SubjectAtmosphere subject={summary.subject} focus={0.4}>
         {/* Sem .ni-main o capítulo encostava na lateral e na borda direita, como o
             Visual e a Agenda antes da rodada da junção. */}
-        <div className="ni-main space-y-6" data-study-export data-geometry={subjectProfile.fieldType}>
+        <div className="ni-main space-y-6" data-study-export data-print-subject={summary.subject} data-print-topic={curriculumTopic?.name || summary.topic} data-print-subtopic={summary.title} data-print-board={summary.boards.map(item => item.board).join(' · ')} data-print-purpose="Compreensão, recuperação ativa e revisão do conteúdo" data-geometry={subjectProfile.fieldType}>
           <button onClick={() => { setSearchParams({}); setSelectedId(null); }} className="inline-flex items-center text-sm font-medium text-[var(--primary)] hover:underline"><ArrowLeft className="w-4 h-4 mr-2"/>Voltar à biblioteca</button>
       {syncError && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 p-3 text-sm text-amber-900">{syncError}</div>}
       {requestedQuestionId && !summary.retrieval.some((item) => item.id === requestedQuestionId) && <div role="alert" className="rounded-xl border border-amber-200 bg-amber-50 dark:border-amber-900 dark:bg-amber-950/20 p-3 text-sm text-amber-900 dark:text-amber-200">A pergunta indicada não está mais disponível. O restante do resumo continua acessível.</div>}

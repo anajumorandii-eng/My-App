@@ -73,7 +73,7 @@ function GuideLibrary({ uid }: { uid: string | null }) {
         </div>
         {saveMessage && <p role="status" className="text-xs text-[var(--dim)]">{saveMessage}</p>}
         {printError && <p role="alert" className="text-sm">{printError}</p>}
-        <article ref={printContent} className="ni-panel p-5 space-y-4">
+        <article ref={printContent} className="ni-panel p-5 space-y-4" data-print-subject={selected.subject} data-print-work={selected.workSlug ? selected.topicName : undefined} data-print-topic={selected.workSlug ? undefined : selected.topicName} data-print-subtopic={selected.selections?.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join(' · ') || selected.chapter || (selected.workSlug ? 'Obra completa' : 'Visão geral')} data-print-board={selected.targetBoards?.join(' · ') || selected.board} data-print-purpose={selected.workSlug ? 'Aprofundamento da obra e de sua cobrança na prova' : 'Aprofundamento dos conceitos e de como são cobrados nas provas'}>
           <h2 className="font-display text-xl">{selected.subject} · {selected.chapter || selected.topicName}</h2>
           <p className="text-sm text-[var(--dim)]">{selected.topicName} · {selected.board} · Salvo em {dateLabel(selected.savedAt)}</p>
           {selected.selections?.length ? <p className="text-sm">Recortes: {selected.selections.map(item => `${item.topicName} — ${item.chapter || 'visão geral'}`).join(' + ')}</p> : null}
