@@ -1,4 +1,5 @@
-import { CoverIllustrationButton } from './CoverIllustrationButton';
+import { DeepeningPdf } from './DeepeningPdf';
+import { Link } from 'react-router-dom';
 import { ExamEvidencePanel } from './ExamEvidencePanel';
 import { combineStudyReflections, readAdditionalSelections, strategySelectionKey } from '../lib/strategySelection';
 import { StudyReflectionPanel } from './StudyReflectionPanel';
@@ -40,6 +41,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   const [loadingKey, setLoadingKey] = useState<string | null>(null);
   const [errors, setErrors] = useState<Record<string, string>>({});
   const busy = useRef(false);
+  const [pdfBusy, setPdfBusy] = useState(false);
   const [coverGeneration, setCoverGeneration] = useState<{ key: string; id: number } | null>(null);
   const generationSequence = useRef(0);
   const topic = topics.find((topic) => topic.id === topicId) ?? topics[0];
@@ -83,7 +85,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
   return <section className="space-y-4" aria-labelledby="guia-estrategias">
     <div className="flex flex-wrap items-center justify-between gap-3 rounded-xl border border-[var(--line)] p-4">
       <p className="text-sm text-[var(--dim)]">Os guias que você gera ficam organizados na sua biblioteca.</p>
-      <a href="/aprofundamentos" className="text-sm font-semibold underline">Meus aprofundamentos ({Object.keys(guides).length})</a>
+      <Link to="/aprofundamentos" className="text-sm font-semibold underline">Meus aprofundamentos ({Object.keys(guides).length})</Link>
     </div>
     {guidesError && <div role="alert" className="text-sm"><p>{guidesError}</p><button type="button" className="underline" onClick={reloadGuides}>Tentar carregar novamente</button></div>}
     <div className="ni-panel p-4 space-y-3">
@@ -131,25 +133,24 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
     <div className="ni-panel p-4 space-y-3">
       <h3 className="font-display text-lg">Aprofundamento: {scopeName}</h3>
       <p className="text-xs text-[var(--dim)]">Conceitos, representações, decisão de estratégia, resolução justificada, contrastes, pegadinhas e exercícios. Comparações de cobrança devem indicar evidência; frequência não é inferida pelo nome da banca.</p>
-      <button type="button" disabled={loadingKey !== null || (board === 'Todas as bancas' && targetsLoading)} onClick={() => void generate()} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50">{loadingKey === key ? 'Preparando guia...' : guides[key] ? 'Gerar novo aprofundamento' : 'Aprofundar este tópico e sua cobrança'}</button>
+      <button type="button" disabled={pdfBusy || loadingKey !== null || (board === 'Todas as bancas' && targetsLoading)} onClick={() => void generate()} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50">{loadingKey === key || pdfBusy ? 'Preparando aprofundamento…' : guides[key] ? 'Gerar novo aprofundamento' : 'Aprofundar este tópico e sua cobrança'}</button>
+      {loadingKey === key && <p role="status" className="text-sm">Preparando seu aprofundamento completo…</p>}
       {errors[key] && <p role="alert" className="text-sm">{errors[key]}</p>}
-      {saveMessage && <p role="status" className="text-xs text-[var(--dim)]">{saveMessage}</p>}
-      {guides[key] && !saveMessage && <p className="text-xs text-[var(--dim)]">Salvo neste navegador · {new Date(guides[key].savedAt).toLocaleString('pt-BR')}</p>}
+      {saveMessage && !pdfBusy && loadingKey === null && <p role="status" className="text-xs text-[var(--dim)]">{saveMessage}</p>}
+      {guides[key] && !saveMessage && !pdfBusy && <p className="text-xs text-[var(--dim)]">Salvo neste navegador · {new Date(guides[key].savedAt).toLocaleString('pt-BR')}</p>}
       {guides[key]?.targetBoards?.length ? <p className="text-xs">Bancas deste guia salvo: {guides[key].targetBoards!.join(' · ')}</p> : null}
       <a className="text-sm underline block" href={`/podcast?topic=${encodeURIComponent(topic?.id ?? '')}${chapter ? `&chapter=${encodeURIComponent(chapter)}` : ''}${board !== 'Todas as bancas' ? `&board=${encodeURIComponent(board)}` : ''}`}>{selections.length > 1 ? `Estudar ${topic?.name} em podcast aprofundado` : 'Transformar este recorte em podcast aprofundado'}</a>
-      {guides[key] && <div className="flex flex-wrap gap-3">
-        <a href={strategyGuideUrl(guides[key])} className="text-sm underline">Abrir este guia na biblioteca</a>
-        <button type="button" disabled={loadingKey !== null} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50" onClick={() => {
-          if (!printContent.current) return;
-          try {
-            printStrategyGuide(printContent.current, `Aprofundamento — ${subject} — ${scopeName} — ${board}`);
-            setErrors(previous => ({ ...previous, [key]: '' }));
-          } catch {
-            setErrors(previous => ({ ...previous, [key]: 'Não foi possível abrir a impressão neste navegador. Seu guia continua salvo; tente novamente em uma aba do Safari ou Chrome.' }));
-          }
-        }}>Imprimir / Salvar em PDF</button>
-        <CoverIllustrationButton key={key} getContent={() => printContent.current} autoGenerateKey={coverGeneration?.key === key ? coverGeneration.id : undefined} />
-        {uid && <button type="button" className="text-sm underline" onClick={() => void persist(guides[key])}>Salvar novamente na conta</button>}
+      {guides[key] && loadingKey !== key && <div className="flex flex-wrap gap-3">
+        <Link to={strategyGuideUrl(guides[key])} className="text-sm underline">Abrir este guia na biblioteca</Link>
+        {uid ? <DeepeningPdf key={key} getContent={() => printContent.current}
+          guideKey={key} revision={guides[key].savedAt}
+          title={`Aprofundamento — ${subject} — ${scopeName} — ${board}`}
+          generateCover={coverGeneration?.key === key} onBusyChange={setPdfBusy} /> :
+          <button type="button" className="underline" onClick={() => {
+            try { if (printContent.current) printStrategyGuide(printContent.current, `Aprofundamento — ${subject} — ${scopeName} — ${board}`); setErrors(previous => ({ ...previous, [key]: '' })); }
+            catch { setErrors(previous => ({ ...previous, [key]: 'Não foi possível abrir a impressão. Tente novamente.' })); }
+          }}>Imprimir / Salvar em PDF</button>}
+        {uid && /Não foi possível/.test(saveMessage) && <button type="button" className="text-sm underline" onClick={() => void persist(guides[key])}>Salvar novamente na conta</button>}
       </div>}
       {(answers[key] || guides[key]) && <div ref={printContent} data-print-subject={subject} data-print-topic={focusName} data-print-subtopic={selections.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join(' · ')} data-print-board={guides[key]?.targetBoards?.join(' · ') || board} data-print-purpose="Aprofundamento dos conceitos e de como são cobrados nas provas">
         <h4 className="font-display text-lg">{subject} · {focusName}{selections.length === 1 && chapter ? ` · ${chapter}` : ''} · {board}</h4>

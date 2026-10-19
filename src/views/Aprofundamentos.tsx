@@ -1,4 +1,4 @@
-import { CoverIllustrationButton } from '../components/CoverIllustrationButton';
+import { DeepeningPdf } from '../components/DeepeningPdf';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -64,14 +64,16 @@ function GuideLibrary({ uid }: { uid: string | null }) {
       <Link to={backUrl} className="text-sm underline">Voltar à biblioteca de aprofundamentos</Link>
       {selected ? <>
         <div className="flex flex-wrap items-center gap-3">
-          <button type="button" className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm" onClick={() => {
-            if (!printContent.current) return;
-            try { printStrategyGuide(printContent.current, `Aprofundamento — ${selected.subject} — ${selected.chapter || selected.topicName}`); setPrintError(''); }
-            catch { setPrintError('Não foi possível abrir a impressão. Tente novamente.'); }
-          }}>Imprimir / Salvar em PDF</button>
-        <CoverIllustrationButton getContent={() => printContent.current} />
+          {uid ? <DeepeningPdf key={selected.key} getContent={() => printContent.current}
+            guideKey={selected.key} revision={selected.savedAt}
+            title={`Aprofundamento — ${selected.subject} — ${selected.chapter || selected.topicName}`} /> :
+            <button type="button" className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm" onClick={() => {
+              if (!printContent.current) return;
+              try { printStrategyGuide(printContent.current, `Aprofundamento — ${selected.subject} — ${selected.chapter || selected.topicName}`); setPrintError(''); }
+              catch { setPrintError('Não foi possível abrir a impressão. Tente novamente.'); }
+            }}>Imprimir / Salvar em PDF</button>}
           <Link to={contextUrl} className="text-sm underline">Voltar à estratégia deste tópico</Link>
-          {uid && <button type="button" disabled={saving} className="text-sm underline disabled:opacity-50" onClick={async () => { setSaving(true); try { await persist(selected); } finally { setSaving(false); } }}>{saving ? 'Salvando…' : 'Salvar novamente na conta'}</button>}
+          {uid && /Não foi possível/.test(saveMessage) && <button type="button" disabled={saving} className="text-sm underline disabled:opacity-50" onClick={async () => { setSaving(true); try { await persist(selected); } finally { setSaving(false); } }}>{saving ? 'Salvando…' : 'Salvar novamente na conta'}</button>}
         </div>
         {saveMessage && <p role="status" className="text-xs text-[var(--dim)]">{saveMessage}</p>}
         {printError && <p role="alert" className="text-sm">{printError}</p>}

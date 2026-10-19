@@ -1,4 +1,28 @@
 export const nativeMathPrintStyles = `.katex-html { display: none !important; } .katex-mathml { position: static !important; clip: auto !important; width: auto !important; height: auto !important; overflow: visible !important; } .katex-display { display: block; text-align: center; margin: 3mm 0; } math annotation { display: none; }`;
+/** Prepares a file without opening a dialog or requiring a second generation. */
+export async function requestStudyPdf(root: HTMLElement, title: string, styles: string, signal: AbortSignal): Promise<Blob> {
+  for (const image of root.querySelectorAll<HTMLImageElement>('img')) {
+    if (image.src.startsWith('data:')) continue;
+    const response = await fetch(image.src, { credentials: 'omit', signal });
+    if (!response.ok) throw new Error('Não foi possível incluir uma figura do material. Tente novamente.');
+    const blob = await response.blob();
+    if (!blob.type.startsWith('image/') || blob.size > 6 * 1024 * 1024) throw new Error('Uma figura do material excede o tamanho permitido.');
+    image.src = await new Promise<string>((resolve, reject) => {
+      const reader = new FileReader(); reader.onload = () => resolve(String(reader.result)); reader.onerror = reject; reader.readAsDataURL(blob);
+    });
+  }
+  const { authHeaders } = await import('./auth');
+  const titleNode = document.createElement('title'); titleNode.textContent = title;
+  const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">${titleNode.outerHTML}<style>${styles}\n${nativeMathPrintStyles}</style></head><body>${root.outerHTML}</body></html>`;
+  const response = await fetch('/api/study-pdf', { method: 'POST', headers: { ...(await authHeaders()), 'Content-Type': 'application/json' }, body: JSON.stringify({ title: title.slice(0, 300), html }), signal });
+  if (!response.ok) {
+    const data = await response.json().catch(() => ({}));
+    throw new Error(data.error || 'Não foi possível preparar o PDF. Tente novamente.');
+  }
+  const blob = await response.blob();
+  if (!blob.type.startsWith('application/pdf') || await blob.slice(0, 5).text() !== '%PDF-') throw new Error('O arquivo recebido não é um PDF válido. Tente novamente.');
+  return blob;
+}
 let closeActive: (() => void) | undefined;
 
 /** A second, explicit tap opens/shares the file; no async popup loses iOS activation. */
@@ -38,26 +62,7 @@ export function openStudyPdf(root: HTMLElement, title: string, styles: string): 
   const timeout = setTimeout(() => controller.abort(), 45_000);
   void (async () => {
     try {
-      for (const image of root.querySelectorAll<HTMLImageElement>('img')) {
-        if (image.src.startsWith('data:')) continue;
-        const response = await fetch(image.src, { credentials: 'omit', signal: controller.signal });
-        if (!response.ok) throw new Error('Não foi possível incluir uma figura do material. Tente novamente.');
-        const blob = await response.blob();
-        if (!blob.type.startsWith('image/') || blob.size > 6 * 1024 * 1024) throw new Error('Uma figura do material excede o tamanho permitido.');
-        image.src = await new Promise<string>((resolve, reject) => {
-          const reader = new FileReader(); reader.onload = () => resolve(String(reader.result)); reader.onerror = reject; reader.readAsDataURL(blob);
-        });
-      }
-      const { authHeaders } = await import('./auth');
-      const titleNode = document.createElement('title'); titleNode.textContent = title;
-      const html = `<!doctype html><html lang="pt-BR"><head><meta charset="utf-8">${titleNode.outerHTML}<style>${styles}\n${nativeMathPrintStyles}</style></head><body>${root.outerHTML}</body></html>`;
-      const response = await fetch('/api/study-pdf', { method: 'POST', headers: { ...(await authHeaders()), 'Content-Type': 'application/json' }, body: JSON.stringify({ title: title.slice(0, 300), html }), signal: controller.signal });
-      if (!response.ok) {
-        const data = await response.json().catch(() => ({}));
-        throw new Error(data.error || 'Não foi possível preparar o PDF. Tente novamente.');
-      }
-      const blob = await response.blob();
-      if (!blob.type.startsWith('application/pdf') || await blob.slice(0, 5).text() !== '%PDF-') throw new Error('O arquivo recebido não é um PDF válido. Tente novamente.');
+      const blob = await requestStudyPdf(root, title, styles, controller.signal);
       if (controller.signal.aborted) return;
       objectUrl = URL.createObjectURL(blob);
       const filename = `${title.replace(/[^\p{L}\p{N} ._-]/gu, '').slice(0, 120) || 'Crivo'}.pdf`;
