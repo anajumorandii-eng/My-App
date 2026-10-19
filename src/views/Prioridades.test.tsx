@@ -9,7 +9,7 @@ it('substitui percentuais sem denominador por recortes e explicita áreas sem da
   expect(screen.getByText(/UNICAMP 2026.*1ª fase.*Recorte completo da matéria/)).toBeInTheDocument();
   for (const area of ['Literatura', 'Redação', 'Filosofia', 'Sociologia']) {
     fireEvent.click(screen.getByRole('button', { name: area }));
-    if (area === 'Redação') expect(screen.getByText(/Ainda não há recorte classificado/)).toBeInTheDocument();
+    if (area === 'Redação') expect(screen.getByText(/FUVEST 2022.*2ª fase.*dia 1.*Recorte completo da matéria/)).toBeInTheDocument();
     expect(screen.queryByText('Não há tópico curricular mapeado para esta matéria.')).toBeNull();
   }
 });

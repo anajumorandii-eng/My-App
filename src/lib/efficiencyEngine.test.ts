@@ -111,7 +111,7 @@ test('examFocusFor não altera nada quando não há sinais de banca', () => {
 });
 
 test('examFocusFor usa o maior sinal entre bancas, não a soma (banca secundária perto não sequestra)', () => {
-  const t = topic({ id: 'bio_ecologia', subject: 'Biologia' }); // duas ocorrências num recorte pequeno da segunda fase
+  const t = topic({ id: 'bio_ecologia', subject: 'Biologia' }); // cinco edições completas, com fases separadas
   const onlyStrong = examFocusFor(t, [{ board: 'Fuvest', weight: 1, progress: 0.8 }]);
   const strongPlusWeak = examFocusFor(t, [
     { board: 'Fuvest', weight: 1, progress: 0.8 },
@@ -122,11 +122,11 @@ test('examFocusFor usa o maior sinal entre bancas, não a soma (banca secundári
   // combinador é max(), não soma.
   assert.ok(Math.abs(strongPlusWeak.multiplier - onlyStrong.multiplier) < 1e-9);
   assert.ok(onlyStrong.hasProximityReason);
-  assert.equal(onlyStrong.hasIncidenceReason, false); // amostra pequena não sustenta o destaque forte
+  assert.equal(onlyStrong.hasIncidenceReason, true); // o corpus ampliado ultrapassa o limiar editorial
 });
 
 test('examFocusFor não penaliza tópico sem dado de incidência, mas também não o marca como relevante', () => {
-  const semIncidencia = topic({ id: 'fis_estatica', subject: 'Física' });
+  const semIncidencia = topic({ id: 'fixture_sem_classificacao', subject: 'Física' });
   const focus = examFocusFor(semIncidencia, [{ board: 'Fuvest', weight: 1, progress: 0.8 }]);
   assert.equal(focus.hasIncidenceReason, false);
   assert.ok(focus.multiplier > 1); // ainda ganha o boost geral de urgência, só não o de incidência
@@ -245,7 +245,15 @@ test('generateDailyPlan não desperdiça orçamento de um balde quando falta ite
  test('sinal de primeira fase não usa a incidência da segunda fase e destaca somente base suficiente', () => {
   const ecology = topic({ id: 'bio_ecologia', subject: 'Biologia' });
   const first = examFocusFor(ecology, [{ board: 'FUVEST', weight: 1, progress: 0.8, phaseFocus: '1a-fase' }]);
-  assert.equal(first.multiplier, 1 + 0.8 * 0.3);
+  assert.ok(Math.abs(first.multiplier - (1 + 0.8 * 0.3 + 0.8 * (14 / 71) * 0.5)) < 1e-9);
+  const second = examFocusFor(ecology, [{board:'FUVEST',weight:1,progress:0.8,phaseFocus:'2a-fase'}]);
+  assert.ok(Math.abs(second.multiplier - (1 + 0.8 * 0.3 + 0.8 * (8 / 50) * 0.5)) < 1e-9);
   const english = examFocusFor(topic({ id: 'ing_01', subject: 'Inglês' }), [{ board: 'UNICAMP', weight: 1, progress: 0.8, phaseFocus: '1a-fase' }]);
   assert.ok(english.hasIncidenceReason);
+});
+
+test('sinal de Medicina usa a tríade histórica de BFGQ em vez de todo o banco',()=>{
+ const ecology=topic({id:'bio_ecologia',subject:'Biologia'});
+ const focus=examFocusFor(ecology,[{board:'FUVEST',weight:1,progress:0.8,phaseFocus:'2a-fase'}],'medicina');
+ assert.ok(Math.abs(focus.multiplier-(1+0.8*0.3+0.8*(5/35)*0.5))<1e-9);
 });

@@ -60,8 +60,9 @@ const allocatedActions: AllocatedStudyAction[] = [
       { kind: 'review_urgency', rawValue: 73, contribution: 21.9 },
       { kind: 'recurring_errors', rawValue: 2, contribution: 12 },
       { kind: 'energy_adjustment', rawValue: 1, contribution: 0 },
-      // Proximidade da primeira fase: sem herdar incidência da segunda fase.
-      { kind: 'exam_relevance', rawValue: 1.07, contribution: 4.2 },
+      // 1ª fase, 2022–2026: 7 questões de genética em 51 de Biologia.
+      // Progresso 21/90; incidência conservadora 7/(51+20), sem misturar fases.
+      { kind: 'exam_relevance', rawValue: 1 + (21 / 90) * 0.3 + (21 / 90) * (7 / 71) * 0.5, contribution: 4.881990610328646 },
     ],
     snapshot: { masteryLevel: 35, uncertainty: 0.3, calculatedAt: '2026-08-24T12:00:00.000Z' },
     intervalStart: '2026-08-24T14:40:00-03:00',
@@ -277,6 +278,13 @@ describe('daily plan consistency across views', () => {
     expect(within(context!).getByText('73% de urgência neste tópico')).toBeInTheDocument();
     expect(within(context!).getByText('FUVEST — 1ª fase')).toBeInTheDocument();
     expect(within(context!).queryByText(/Santa Casa/)).not.toBeInTheDocument();
+  });
+
+  it('Dashboard preserva a atribuição de banca após serializar os fatores do plano', () => {
+    currentPlan = { ...sharedPlan, allocatedActions: [{ ...allocatedActions[0], factors: JSON.parse(JSON.stringify(allocatedActions[0].factors)) }] };
+    renderView(<Dashboard />);
+    const context = screen.getByText('Contexto que entrou na decisão').closest('details');
+    expect(within(context!).getByText('FUVEST — 1ª fase')).toBeInTheDocument();
   });
 
   it('Dashboard não atribui causalidade atual a uma pontuação da metodologia antiga', () => {

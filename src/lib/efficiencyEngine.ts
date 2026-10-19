@@ -58,7 +58,7 @@ export interface ExamFocus {
   hasIncidenceReason: boolean;
 }
 
-export function examFocusFor(topic: Topic, signals: BoardSignal[]): ExamFocus {
+export function examFocusFor(topic: Topic, signals: BoardSignal[], fuvestCareer?: 'medicina'): ExamFocus {
   if (signals.length === 0) return { multiplier: 1, hasProximityReason: false, hasIncidenceReason: false };
 
   let urgencyTerm = 0;
@@ -71,7 +71,7 @@ export function examFocusFor(topic: Topic, signals: BoardSignal[]): ExamFocus {
     urgencyTerm = Math.max(urgencyTerm, proximityContribution);
     if (proximityContribution > PROXIMITY_REASON_THRESHOLD) hasProximityReason = true;
 
-    const incidence = Math.min(topicIncidenceWeight(topic, signal.board, signal.phaseFocus), 1);
+    const incidence = Math.min(topicIncidenceWeight(topic, signal.board, signal.phaseFocus, fuvestCareer), 1);
     const incidenceContribution = proximityContribution * incidence;
     incidenceTerm = Math.max(incidenceTerm, incidenceContribution);
     if (incidenceContribution > INCIDENCE_REASON_THRESHOLD) hasIncidenceReason = true;
@@ -122,7 +122,7 @@ export class EfficiencyEngine {
         if (learningNeeded > 80) energyMultiplier = 1.5;
       }
 
-      const examFocus = examFocusFor(topic, boardSignals);
+      const examFocus = examFocusFor(topic, boardSignals, undefined);
 
       // Base Score Calculation — kept as a waterfall (base terms, then each
       // multiplier applied as a delta over the running total) instead of one

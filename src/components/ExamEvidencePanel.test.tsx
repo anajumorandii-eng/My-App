@@ -15,7 +15,7 @@ it('separa recortes completos e amostras e mostra análises com origem e comando
   expect(screen.queryByText(/UNESP 2025/)).toBeNull();
 });
 it('falta de dados permanece explícita sem transferir percentuais de outra matéria', async () => {
-  render(<MemoryRouter><ExamEvidencePanel subject="Redação" /></MemoryRouter>);
+  render(<MemoryRouter><ExamEvidencePanel subject="Área sem classificação" /></MemoryRouter>);
   expect(screen.getByText(/Ainda não há recorte classificado/)).toBeInTheDocument();
   expect(await screen.findByText(/Sem exemplo analisado/)).toBeInTheDocument();
 });

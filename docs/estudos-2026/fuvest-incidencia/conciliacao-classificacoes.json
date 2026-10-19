@@ -1,0 +1,122 @@
+{
+  "reviewedOn": "2026-10-18",
+  "changes": [
+    {
+      "id": "fuvest-2023-f1:61",
+      "before": {
+        "topicId": "bio_evolucao",
+        "topic": "Evolução",
+        "subtopics": [
+          "Mecanismos da Evolução Biológica"
+        ],
+        "confidence": "high",
+        "rationale": "A operação decisiva consiste em relacione menor defesa a menor pressão herbívora.",
+        "reviewNote": ""
+      },
+      "after": {
+        "topicId": "bio_ecologia",
+        "topic": "Ecologia",
+        "subtopics": [
+          "Relações ecológicas e herbivoria",
+          "Defesa química de plantas"
+        ],
+        "confidence": "medium",
+        "rationale": "O comando pede inferir pressão de herbivoria pela distribuição da defesa química, sem exigir explicação evolutiva.",
+        "reviewNote": "Fronteira ecologia/evolução revista por leitura da página19; adaptação aparece no contexto da fonte, mas não é a operação pedida."
+      },
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_primeira_fase_prova_V.pdf",
+      "page": 19,
+      "review": "Integração: leitura direta da questão e conciliação da operação decisiva; não é classificação oficial."
+    },
+    {
+      "id": "fuvest-2025-f1:55",
+      "before": {
+        "topicId": "bio_zoologia",
+        "topic": "Zoologia",
+        "rationale": "A operação decisiva exige sistemas circulatórios dos invertebrados, que fundamenta a interpretação solicitada.",
+        "reviewNote": ""
+      },
+      "after": {
+        "topicId": "bio_fisio_animal",
+        "topic": "Fisiologia Animal e Humana",
+        "rationale": "A comparação exige relacionar circulação fechada, pressão e eficiência de transporte, sem identificar grupos taxonômicos.",
+        "reviewNote": "Revisão de granularidade: fisiologia circulatória é a operação principal; invertebrados são o contexto."
+      },
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "page": 22,
+      "review": "Integração: leitura direta da questão e conciliação da operação decisiva; não é classificação oficial."
+    },
+    {
+      "id": "fuvest-2025-f1:68",
+      "before": {
+        "subject": "Geografia",
+        "topicId": "geo_globalizacao_economica",
+        "topic": "Globalização e Geografia Econômica",
+        "subtopics": [
+          "Desenvolvimento e produção científica"
+        ],
+        "confidence": "medium",
+        "rationale": "A operação decisiva exige desenvolvimento e produção científica, que fundamenta a interpretação solicitada.",
+        "reviewNote": "Comparação de indicadores econômicos e científicos por gráfico; fronteira com interpretação quantitativa."
+      },
+      "after": {
+        "subject": "Matemática",
+        "topicId": "mat_dados_probabilidade",
+        "topic": "Probabilidade e Interpretação de Dados",
+        "subtopics": [
+          "Leitura de gráfico de dispersão",
+          "Comparação com médias de referência"
+        ],
+        "confidence": "medium",
+        "rationale": "A alternativa correta depende de comparar posições em dois eixos e suas médias; não exige mecanismo geográfico.",
+        "reviewNote": "Fronteira matemática/geografia reconciliada com2026Q13 eQ23: a operação quantitativa decide; países e produção científica contextualizam os dados."
+      },
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_primeira_fase_prova_V1.pdf",
+      "page": 26,
+      "review": "Integração: leitura direta da questão e conciliação da operação decisiva; não é classificação oficial."
+    },
+    {
+      "id": "fuvest-2026-f1:23",
+      "before": {
+        "subject": "Geografia",
+        "topicId": "geo_climatologia_socioambiental",
+        "topic": "Climatologia e Problemas Socioambientais",
+        "subtopics": [
+          "Desmatamento da Mata Atlântica"
+        ],
+        "confidence": "high",
+        "rationale": "A classificação decorre de distinguir barras anuais e tendência de longo prazo, operação central para resolver este comando.",
+        "reviewNote": ""
+      },
+      "after": {
+        "subject": "Matemática",
+        "topicId": "mat_dados_probabilidade",
+        "topic": "Probabilidade e Interpretação de Dados",
+        "subtopics": [
+          "Leitura de séries temporais",
+          "Tendência e oscilação em gráficos"
+        ],
+        "confidence": "medium",
+        "rationale": "A alternativa é decidida pela leitura de barras e tendência temporal; o mecanismo ambiental não é necessário à inferência.",
+        "reviewNote": "Fronteira geografia/matemática reconciliada com2026Q13 e2025Q68; Mata Atlântica é o contexto. A leitura não autoriza inferir causas do desmatamento."
+      },
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "page": 10,
+      "review": "Integração: leitura direta da questão e conciliação da operação decisiva; não é classificação oficial."
+    },
+    {
+      "id": "fuvest-2026-f1:46",
+      "before": {
+        "relatedSubjects": []
+      },
+      "after": {
+        "relatedSubjects": [
+          "Arte"
+        ]
+      },
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "page": 21,
+      "review": "Integração: leitura direta da questão e conciliação da operação decisiva; não é classificação oficial."
+    }
+  ]
+}

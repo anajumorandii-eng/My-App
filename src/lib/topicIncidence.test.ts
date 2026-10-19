@@ -15,7 +15,8 @@ test('amostras selecionadas não viram incidência e banca sem dados não herda 
   assert.equal(topicIncidenceWeight(ecology, 'UNESP'), 0);
   assert.equal(topicIncidenceWeight(ecology, 'Banca Inexistente'), 0);
   assert.ok(topicIncidenceWeight(ecology, 'FUVEST', '2a-fase') > 0);
-  assert.equal(topicIncidenceWeight(ecology, 'FUVEST', '1a-fase'), 0);
+  assert.ok(topicIncidenceWeight(ecology, 'FUVEST', '1a-fase') > 0);
+  assert.equal(completeTopicEvidence(ecology, 'FUVEST', '1a-fase').length, 5);
 });
 test('cada denominador usa apenas questões válidas da matéria e recorte', () => {
   const rows = completeTopicEvidence(ecology, 'UNICAMP', '1a-fase');
@@ -31,4 +32,13 @@ test('Literatura não herda todos os temas de Português nem duplica incidência
   const literature = completeTopicEvidence({ id: 'por_lit_classica_barroca', subject: 'Português' }, 'UNICAMP');
   assert.ok(literature.every(row => row.count === 0));
   assert.ok(literature.every(row => row.total < 12));
+});
+
+test('recorte de Medicina usa 15 questões por disciplina em cinco edições, preservando dia 1',()=>{
+ const bio=completeTopicEvidence(ecology,'FUVEST','2a-fase','medicina');
+ assert.equal(bio.reduce((sum,row)=>sum+row.total,0),15);
+ assert.equal(bio.reduce((sum,row)=>sum+row.count,0),5);
+ assert.equal(completeTopicEvidence({id:'mat_funcoes',subject:'Matemática'},'FUVEST','2a-fase','medicina').length,0);
+ assert.equal(completeTopicEvidence({id:'por_texto',subject:'Português'},'FUVEST','2a-fase','medicina').length,5);
+ assert.equal(completeTopicEvidence(ecology,'FUVEST','2a-fase').reduce((sum,row)=>sum+row.total,0),30);
 });

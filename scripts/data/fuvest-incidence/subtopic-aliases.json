@@ -1,0 +1,739 @@
+{
+  "reviewedOn": "2026-10-18",
+  "policy": "Aplicação exata por subject+original. canonical é lista de conceitos; união sem duplicatas por questão. questionPatches, identificados por paper.id + dois-pontos + question.number, substituem integralmente os subtopics somente para incidência; preservar subtopics brutos como evidência. Aplicar primeiro questionPatches e depois aliases aos rótulos resultantes. Ausência de patch ou alias mantém rótulo. Não inferir presença de todos os conteúdos de um capítulo geral, nem decompor automaticamente qualquer conjunção. Cada decomposição abaixo é apoiada por resumo/estratégia ou leitura da prova. Todos os 37 itens de Inglês recebem operações linguísticas; temas científicos/sociais são contexto e permanecem apenas no bruto. Revisão de todos os 516 rótulos originais por disciplina; capítulos existentes preferidos somente com escopo equivalente. Nenhuma fusão entre disciplinas; nenhum acréscimo de contagem ao total de questões quando uma questão possui vários conceitos. Sobreposições de subtemas são permitidas, sem somar percentuais de conceitos como se fossem categorias exclusivas.",
+  "aliases": [
+    {
+      "subject": "Física",
+      "original": "Colisões Mecânicas",
+      "canonical": [
+        "Colisões"
+      ],
+      "reason": "Qualificador mecânicas não altera o conceito no corpus; forma do capítulo existente."
+    },
+    {
+      "subject": "Física",
+      "original": "Dilatação Térmica",
+      "canonical": [
+        "Dilatação ou Contração Térmica dos Sólidos e Líquidos"
+      ],
+      "reason": "Rótulo geral e nome de capítulo para a variação dimensional térmica de sólidos/líquidos. Preserva o tema específico de anomalia da água no resumo da questão."
+    },
+    {
+      "subject": "Física",
+      "original": "Efeito fotoelétrico",
+      "canonical": [
+        "Efeito Fotoelétrico"
+      ],
+      "reason": "Variação de capitalização para o mesmo fenômeno."
+    },
+    {
+      "subject": "Física",
+      "original": "Equação de Estado dos Gases Ideais",
+      "canonical": [
+        "Equação dos Gases Ideais"
+      ],
+      "reason": "Nomes equivalentes da relação PV=nRT, sem confundir com a lei geral entre dois estados de massa fixa."
+    },
+    {
+      "subject": "Física",
+      "original": "Equação fundamental das ondas",
+      "canonical": [
+        "Equação Fundamental da Ondulatória"
+      ],
+      "reason": "Mesma relação entre velocidade frequência e comprimento de onda; capítulo existente."
+    },
+    {
+      "subject": "Física",
+      "original": "Fótons e Energia da Radiação",
+      "canonical": [
+        "Energia de Fótons"
+      ],
+      "reason": "Nos itens revisados o núcleo é E=hf=hc/lambda e contagem de fótons; mantém quantização de níveis como rótulo separado."
+    },
+    {
+      "subject": "Física",
+      "original": "Resistores e Associação de Resistores",
+      "canonical": [
+        "Associação de Resistores"
+      ],
+      "reason": "O item 2026 F05 exige resistências equivalentes e circuito série-paralelo; a menção a resistores não acrescenta outro conceito ao rótulo de associação."
+    },
+    {
+      "subject": "Física",
+      "original": "Resistores ôhmicos e Lei de Ohm",
+      "canonical": [
+        "Lei de Ohm"
+      ],
+      "reason": "Os itens usam a relação entre tensão corrente e resistência ou a inclinação da curva correspondente; não se transforma o rótulo geral Resistores em lei específica."
+    },
+    {
+      "subject": "Física",
+      "original": "Resistência Elétrica e Lei de Ohm",
+      "canonical": [
+        "Lei de Ohm"
+      ],
+      "reason": "Os itens usam a relação entre tensão corrente e resistência ou a inclinação da curva correspondente; não se transforma o rótulo geral Resistores em lei específica."
+    },
+    {
+      "subject": "Geografia",
+      "original": "Correntes marítimas",
+      "canonical": [
+        "Correntes Marítimas"
+      ],
+      "reason": "Apenas capitalização da mesma expressão."
+    },
+    {
+      "subject": "Geografia",
+      "original": "Escalas cartográficas",
+      "canonical": [
+        "Escala cartográfica"
+      ],
+      "reason": "Variação de número para a mesma relação entre distância no mapa e distância real."
+    },
+    {
+      "subject": "História",
+      "original": "Renascimento e Humanismo",
+      "canonical": [
+        "Renascimento"
+      ],
+      "reason": "Nos itens revisados os dois rótulos identificam o humanismo renascentista e a centralidade humana. Mantêm-se separadas as combinações com navegações e conquistas."
+    },
+    {
+      "subject": "Inglês",
+      "original": "Vocabulário contextual em inglês",
+      "canonical": [
+        "Vocabulário em contexto"
+      ],
+      "reason": "Mesma habilidade de inferir sentido de palavra ou expressão pelo contexto; o idioma já é dado pela disciplina."
+    },
+    {
+      "subject": "Matemática",
+      "original": "Logaritmos",
+      "canonical": [
+        "Introdução aos Logaritmos"
+      ],
+      "reason": "O item 2026 V1 Q04 exige propriedades operatórias de logaritmos, como os registros do capítulo introdutório; equações e funções logarítmicas permanecem distintas."
+    },
+    {
+      "subject": "Matemática",
+      "original": "Transformações de Gráficos",
+      "canonical": [
+        "Transformações em Gráficos de Funções"
+      ],
+      "reason": "Mesmo conceito de translação reflexão e escala dos gráficos; capítulo existente."
+    },
+    {
+      "subject": "Química",
+      "original": "Catálise e velocidade das reações",
+      "canonical": [
+        "Catalisadores"
+      ],
+      "reason": "Ambos os registros exigem identificar ou avaliar o efeito catalítico sobre a velocidade; energia de ativação permanece conceito próprio."
+    },
+    {
+      "subject": "Química",
+      "original": "Cálculo Estequiométrico",
+      "canonical": [
+        "Cálculos Estequiométricos"
+      ],
+      "reason": "Variação singular/plural para a mesma conversão quantitativa estequiométrica; capítulo existente."
+    },
+    {
+      "subject": "Química",
+      "original": "Deslocamento de Equilíbrios",
+      "canonical": [
+        "Deslocamento de Equilíbrio"
+      ],
+      "reason": "Mesma operação de prever resposta do equilíbrio a perturbações; forma canônica do capítulo existente. Não engloba equilíbrio iônico ou neutralização em geral."
+    },
+    {
+      "subject": "Química",
+      "original": "Deslocamento de equilíbrio e princípio de Le Chatelier",
+      "canonical": [
+        "Deslocamento de Equilíbrio"
+      ],
+      "reason": "Mesma operação de prever resposta do equilíbrio a perturbações; forma canônica do capítulo existente. Não engloba equilíbrio iônico ou neutralização em geral."
+    },
+    {
+      "subject": "Química",
+      "original": "Deslocamento do Equilíbrio Químico",
+      "canonical": [
+        "Deslocamento de Equilíbrio"
+      ],
+      "reason": "Mesma operação de prever resposta do equilíbrio a perturbações; forma canônica do capítulo existente. Não engloba equilíbrio iônico ou neutralização em geral."
+    },
+    {
+      "subject": "Química",
+      "original": "Interações intermoleculares",
+      "canonical": [
+        "Interações Intermoleculares"
+      ],
+      "reason": "Apenas variação de capitalização; preserva separadamente os rótulos que acrescentam solubilidade, isomeria ou ligações de hidrogênio."
+    },
+    {
+      "subject": "Química",
+      "original": "Lei de Hess e Entalpias de Reação",
+      "canonical": [
+        "Lei de Hess"
+      ],
+      "reason": "A entalpia de reação é o objeto calculado pelo balanço de entalpias de formação; não acrescenta um mecanismo distinto ao conceito Lei de Hess."
+    },
+    {
+      "subject": "Química",
+      "original": "Polaridade e solubilidade",
+      "canonical": [
+        "Polaridade molecular e solubilidade"
+      ],
+      "reason": "Os registros com ambos os rótulos comparam regiões polares/apolares e afinidade com solventes ou membranas; a forma canônica explicita o nível molecular."
+    },
+    {
+      "subject": "Química",
+      "original": "Processos Exotérmicos e Endotérmicos",
+      "canonical": [
+        "Processos exotérmicos e endotérmicos"
+      ],
+      "reason": "A classificação térmica também abrange a cristalização do acetato em 2025 Q57; não se força reação química."
+    },
+    {
+      "subject": "Química",
+      "original": "Reações Exotérmicas e Endotérmicas",
+      "canonical": [
+        "Processos exotérmicos e endotérmicos"
+      ],
+      "reason": "As reações exotérmicas/endotérmicas pertencem ao conceito comum de troca de calor; o contexto químico permanece no registro original."
+    }
+  ],
+  "questionPatches": [
+    {
+      "id": "fuvest-2022-f1:42",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Inferência textual"
+      ],
+      "reason": "A estratégia localiza a avaliação de Adams e interpreta o valor simbólico atribuído aos fatbergs. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2022-f1:43",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Relações de causa e consequência"
+      ],
+      "reason": "O comando recupera a explicação textual e encadeia os mecanismos descritos, sem transformar esgoto em conteúdo curricular de Inglês. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2022-f1:44",
+      "subtopics": [
+        "Inferência textual"
+      ],
+      "reason": "Exige inferir a característica comum à enumeração final. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2022-f1:45",
+      "subtopics": [
+        "Localização de informação explícita"
+      ],
+      "reason": "O benefício comercial é recuperado no trecho de marketing terceirizado. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2022-f1:46",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Relações de causa e consequência"
+      ],
+      "reason": "Relaciona a medida explicitamente descrita ao custo dos aplicativos. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2022-f1:47",
+      "subtopics": [
+        "Vocabulário em contexto"
+      ],
+      "reason": "Substituição contextual de missing out por losing. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2022-f1:48",
+      "subtopics": [
+        "Síntese de ideia central",
+        "Inferência textual"
+      ],
+      "reason": "A leitura acompanha a reflexão do poema até sua conclusão sobre enfrentar a vida. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2022-f1:49",
+      "subtopics": [
+        "Humor e ironia",
+        "Leitura multimodal"
+      ],
+      "reason": "O protesto irônico depende do diálogo e da imagem do aparelho. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2023-f1:32",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Síntese de ideia central"
+      ],
+      "reason": "Localiza exemplos e sintetiza áreas de aplicação dos estudos sonoros. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2023-f1:33",
+      "subtopics": [
+        "Vocabulário em contexto"
+      ],
+      "reason": "O sentido de convey é inferido pelo objeto e pelo contexto. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2023-f1:34",
+      "subtopics": [
+        "Localização de informação explícita"
+      ],
+      "reason": "Localização seletiva de propriedades musicais na enumeração textual. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2023-f1:35",
+      "subtopics": [
+        "Humor e ironia",
+        "Relação entre ortografia e pronúncia"
+      ],
+      "reason": "O efeito cômico usa discrepâncias explícitas entre grafias e sons, conforme estratégia auditada. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2023-f1:68",
+      "subtopics": [
+        "Vocabulário em contexto",
+        "Localização de informação explícita"
+      ],
+      "reason": "A expressão referente à inatividade energética é interpretada com a definição presente no texto. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2023-f1:69",
+      "subtopics": [
+        "Vocabulário em contexto"
+      ],
+      "reason": "A operação é testar decreases como equivalente de dwindles. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2023-f1:70",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Relações de causa e consequência"
+      ],
+      "reason": "Recupera o trecho sobre água e turbina e acompanha a conversão descrita, sem exigir nova modelagem física. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2024-f1:04",
+      "subtopics": [
+        "Vocabulário em contexto",
+        "Inferência textual"
+      ],
+      "reason": "A estratégia interpreta mega-buck prices no contexto de valor e preconceito; preserva inferência específica do anúncio. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2024-f1:05",
+      "subtopics": [
+        "Vocabulário em contexto"
+      ],
+      "reason": "O comando pede valor contextual de be worth. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2024-f1:11",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Inferência textual"
+      ],
+      "reason": "Recupera a descrição dos visitantes e distingue indiferença de outras reações. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2024-f1:12",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Relação entre argumentos"
+      ],
+      "reason": "Localiza a cobrança por headsets e identifica o alvo da crítica do autor. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2024-f1:53",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Relações de causa e consequência"
+      ],
+      "reason": "Localiza cortes e prioridades escolares como causas da desigualdade descrita. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2024-f1:54",
+      "subtopics": [
+        "Vocabulário em contexto",
+        "Intensificação e comparação"
+      ],
+      "reason": "Far é lido como intensificador de less, uma operação gramatical expressamente demandada. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2024-f1:88",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Relação entre argumentos"
+      ],
+      "reason": "A venda de Malinche pela mãe serve como evidência do argumento contrário à acusação de traição. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2025-f1:15",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Distinção e comparação de informações"
+      ],
+      "reason": "O item localiza a definição de substantive justice e distingue conceitos próximos. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2025-f1:27",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Relações de causa e consequência"
+      ],
+      "reason": "Recupera redistribuição da água e efeito climático na rotação descritos na reportagem. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2025-f1:28",
+      "subtopics": [
+        "Localização de informação explícita"
+      ],
+      "reason": "O comando seleciona o fenômeno gravitacional efetivamente mencionado. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2025-f1:41",
+      "subtopics": [
+        "Linguagem figurada",
+        "Inferência textual"
+      ],
+      "reason": "A interpretação depende da metáfora de aprisionamento e do desajuste do eu lírico. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2025-f1:42",
+      "subtopics": [
+        "Vocabulário em contexto",
+        "Inferência textual"
+      ],
+      "reason": "Construct é interpretado em relação à segurança social descrita na letra. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2025-f1:78",
+      "subtopics": [
+        "Humor e ironia",
+        "Vocabulário em contexto"
+      ],
+      "reason": "A ambiguidade de X como incógnita e numeral romano fundamenta o humor verbal. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2026-f1:25",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Distinção e comparação de informações"
+      ],
+      "reason": "Distingue ice sheet e ice shelf e recupera a função de contenção das plataformas. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2026-f1:26",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Distinção e comparação de informações"
+      ],
+      "reason": "Localiza puny portion e distingue exploração presente de potencial futuro. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2026-f1:58",
+      "subtopics": [
+        "Localização de informação explícita"
+      ],
+      "reason": "Recupera a expectativa explícita de esclarecer medições divergentes. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2026-f1:59",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Distinção e comparação de informações"
+      ],
+      "reason": "Compara measured e theoretical prediction e caracteriza o método descrito. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2026-f1:66",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Distinção e comparação de informações"
+      ],
+      "reason": "Distingue os perfis de proteínas descritos após treinamento e pausa. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2026-f1:68",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Síntese de ideia central"
+      ],
+      "reason": "Reúne informações sobre os receptores e a comunicação com o cérebro. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2026-f1:69",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Distinção e comparação de informações"
+      ],
+      "reason": "Distingue o objetivo original da medição da interpretação posterior equivocada. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2026-f1:79",
+      "subtopics": [
+        "Localização de informação explícita",
+        "Relações de causa e consequência"
+      ],
+      "reason": "Relaciona mudança foliar e mortalidade das lagartas explicitamente descritas. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2026-f1:80",
+      "subtopics": [
+        "Localização de informação explícita"
+      ],
+      "reason": "Localiza o mecanismo de imitação vegetal declarado desconhecido pelo texto. O tema científico/social é preservado apenas no registro bruto."
+    },
+    {
+      "id": "fuvest-2024-f1:45",
+      "subtopics": [
+        "Crise de 1929",
+        "Grande Depressão",
+        "New Deal"
+      ],
+      "reason": "Resumo e estratégia citam crise exportadora, depressão e resposta intervencionista; três conceitos explícitos."
+    },
+    {
+      "id": "fuvest-2026-f2-d2:H05",
+      "subtopics": [
+        "Crise de 1929",
+        "Grande Depressão",
+        "Concentração fundiária",
+        "Mecanização agrícola",
+        "Êxodo rural"
+      ],
+      "reason": "O comando situa 1929-1930 e exige consequências fundiárias e sociais; não acrescenta New Deal."
+    },
+    {
+      "id": "fuvest-2022-d2:B02",
+      "subtopics": [
+        "Sistemática filogenética",
+        "Multicelularidade"
+      ],
+      "reason": "Cladograma ancestralidade e origens independentes da multicelularidade são operações explícitas."
+    },
+    {
+      "id": "fuvest-2024-f1:69",
+      "subtopics": [
+        "Sistemática filogenética"
+      ],
+      "reason": "A questão usa cladograma e ancestralidade; não cobra nomenclatura científica apesar do capítulo amplo original."
+    },
+    {
+      "id": "fuvest-2026-f1:56",
+      "subtopics": [
+        "Sistemática filogenética"
+      ],
+      "reason": "O comando exige caracteres compartilhados e ancestralidade comum, sem nomenclatura binomial."
+    },
+    {
+      "id": "fuvest-2026-f1:78",
+      "subtopics": [
+        "Teoria endossimbiótica"
+      ],
+      "reason": "A evidência de DNA circular mitocondrial demanda endossimbiose, não toda a origem da vida."
+    },
+    {
+      "id": "fuvest-2026-f1:70",
+      "subtopics": [
+        "Transdução sensorial gustativa",
+        "Impulsos nervosos"
+      ],
+      "reason": "O item trata explicitamente de paladar e sinal nervoso; o capítulo bruto Visão e Audição não descreve os conceitos efetivos."
+    },
+    {
+      "id": "fuvest-2026-f1:65",
+      "subtopics": [
+        "Vacinação",
+        "Imunidade coletiva"
+      ],
+      "reason": "O item exige proteção indireta por alta cobertura vacinal, sem cobrar o conjunto Sangue e Imunologia."
+    },
+    {
+      "id": "fuvest-2024-f2-dia2:B03",
+      "subtopics": [
+        "Hemograma",
+        "Sorologia"
+      ],
+      "reason": "O diagnóstico depende de distinguir anemia e infecção a partir dos dois exames."
+    },
+    {
+      "id": "fuvest-2022-d2:G01",
+      "subtopics": [
+        "Erosão dos solos",
+        "Conservação dos solos"
+      ],
+      "reason": "A estratégia exige ligar manejo conservacionista à redução da erosão, preservando ambos os conceitos."
+    },
+    {
+      "id": "fuvest-2024-f1:66",
+      "subtopics": [
+        "Erosão dos solos",
+        "Voçorocas",
+        "Controle da erosão"
+      ],
+      "reason": "Resumo identifica a forma erosiva e pede medidas de controle."
+    },
+    {
+      "id": "fuvest-2024-f1:65",
+      "subtopics": [
+        "Deslizamentos",
+        "Riscos socioambientais",
+        "Ocupação de encostas"
+      ],
+      "reason": "Chuva declividade e ocupação humana estão explicitamente relacionadas no comando."
+    },
+    {
+      "id": "fuvest-2026-f1:35",
+      "subtopics": [
+        "Corridas de detritos",
+        "Movimentos de massa",
+        "Monitoramento de riscos"
+      ],
+      "reason": "O objeto é corrida de detritos e localização de sensores; não se equipara a qualquer deslizamento."
+    },
+    {
+      "id": "fuvest-2022-f1:54",
+      "subtopics": [
+        "Campo Magnético de Fio Retilíneo",
+        "Força Magnética"
+      ],
+      "reason": "O item combina cálculo de campo de fios e força sobre carga em movimento."
+    },
+    {
+      "id": "fuvest-2022-d2:F05",
+      "subtopics": [
+        "Lei de Coulomb",
+        "Equilíbrio eletrostático",
+        "Energia potencial elástica"
+      ],
+      "reason": "A estratégia/sinopse exigem equilíbrio das esferas e energia da mola."
+    },
+    {
+      "id": "fuvest-2022-d2:Q04",
+      "subtopics": [
+        "Isomeria",
+        "Interações Intermoleculares",
+        "Solubilidade",
+        "Temperatura de ebulição"
+      ],
+      "reason": "Compara álcoois/éteres quanto às propriedades e exige propor isômeros."
+    },
+    {
+      "id": "fuvest-2022-d2:Q01",
+      "subtopics": [
+        "Solubilidade",
+        "Extração seletiva"
+      ],
+      "reason": "A extração de cafeína e dependência da solubilidade com a temperatura são ambas demandadas."
+    },
+    {
+      "id": "fuvest-2023-f1:17",
+      "subtopics": [
+        "Solubilidade",
+        "Coeficiente de partição"
+      ],
+      "reason": "A lipossolubilidade é relacionada ao coeficiente octanol/água."
+    },
+    {
+      "id": "fuvest-2026-f2-d2:Q02",
+      "subtopics": [
+        "Interações Intermoleculares",
+        "Solubilidade",
+        "Extração seletiva",
+        "Equilíbrio ácido-base",
+        "Rendimento de extração"
+      ],
+      "reason": "As três alíneas exigem fases de extração, desprotonação pelo carbonato e correção quantitativa de 70%."
+    },
+    {
+      "id": "fuvest-2025-f2-dia2:Q05",
+      "subtopics": [
+        "Meia-Vida",
+        "Decaimento Radioativo",
+        "Radiação beta"
+      ],
+      "reason": "O comando exige blindagem beta, transmutação Ni/Cu e vida útil; conceitos não são confundidos num só bloco."
+    },
+    {
+      "id": "fuvest-2026-f2-d2:Q05",
+      "subtopics": [
+        "Oxirredução",
+        "Eletrólise Ígnea",
+        "Estequiometria",
+        "Entalpia de Combustão",
+        "Ligações iônicas e metálicas"
+      ],
+      "reason": "As alíneas cobram NOX, equivalência energética e natureza das ligações/mobilidade iônica na fusão."
+    },
+    {
+      "id": "fuvest-2026-f2-d2:F03",
+      "subtopics": [
+        "Transformações Gasosas",
+        "Máquinas Térmicas",
+        "Ciclo de Stirling",
+        "Rendimento energético"
+      ],
+      "reason": "O diagrama exige isotermas/isócoras e o cálculo liga potência solar ao rendimento."
+    },
+    {
+      "id": "fuvest-2024-f1:72",
+      "subtopics": [
+        "Transformações Gasosas",
+        "Máquinas Térmicas",
+        "Transformações adiabáticas",
+        "Transformações isovolumétricas"
+      ],
+      "reason": "A seleção do ciclo depende das duas adiabáticas e das duas isócoras."
+    },
+    {
+      "id": "fuvest-2026-f2-d2:F06",
+      "subtopics": [
+        "Energia de Fótons",
+        "Irradiância",
+        "Calor Sensível"
+      ],
+      "reason": "O item combina definição operacional de irradiância, aquecimento da água e contagem de fótons."
+    },
+    {
+      "id": "fuvest-2022-f1:50",
+      "subtopics": [
+        "Calor Sensível",
+        "Trocas de Calor"
+      ],
+      "reason": "A mistura de leite e café não muda o estado físico; não deve contar Calor Latente apenas pelo capítulo amplo."
+    },
+    {
+      "id": "fuvest-2024-f2-dia2:F01",
+      "subtopics": [
+        "Calor Sensível",
+        "Calor Latente",
+        "Mudanças de Estado Físico"
+      ],
+      "reason": "Verificação do PDF oficial F01c: gelo inicia a -20 °C; exige aquecimento sensível até fusão e calor latente para derretimento."
+    },
+    {
+      "id": "fuvest-2025-f1:57",
+      "subtopics": [
+        "Processos exotérmicos e endotérmicos",
+        "Cristalização"
+      ],
+      "reason": "Aquece por cristalização e reverte o processo; preserva a natureza física sem impor reação química."
+    },
+    {
+      "id": "fuvest-2023-f2-d1:R",
+      "subtopics": [
+        "Dissertação argumentativa",
+        "Refugiados ambientais",
+        "Vulnerabilidade social"
+      ],
+      "reason": "Separa gênero e os dois eixos explicitamente articulados pela proposta, sem contar duas redações."
+    }
+  ]
+}

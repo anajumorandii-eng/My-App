@@ -1,3 +1,4 @@
+import { FuvestIncidencePanel } from '../components/FuvestIncidencePanel';
 import { FuvestDepthPanel } from '../components/FuvestDepthPanel';
 import { PriorityStudyPanel } from '../components/PriorityStudyPanel';
 import React, { useMemo, useState } from 'react';
@@ -45,8 +46,8 @@ export default function Prioridades() {
       {/* Main Title */}
       <div className="ni-title">
         <div>
-          <h1>Foque onde o retorno é maior.</h1>
-          <p>Escolha o que estudar, entenda a recomendação e transforme a prioridade em resolução e revisão.</p>
+          <h1>O que a FUVEST cobrou desde 2022.</h1>
+          <p>Compare assuntos, fases e questões oficiais. Veja como resolver e quais conceitos precisam se conectar.</p>
         </div>
         <div className="ni-state">
           <i /> {activeSubject} · Evidências de cobrança
@@ -78,7 +79,8 @@ export default function Prioridades() {
       </div>
 
       <div className="space-y-4">
-        <FuvestDepthPanel key={`depth-${activeSubject}`} subject={activeSubject} />
+        <FuvestIncidencePanel key={`incidence-${activeSubject}`} subject={activeSubject} />
+        <details className="ni-panel p-5"><summary className="cursor-pointer font-semibold">Consultar o roteiro curricular complementar</summary><div className="mt-4"><FuvestDepthPanel key={`depth-${activeSubject}`} subject={activeSubject} /></div></details>
         {!['Arte', 'Educação Física'].includes(activeSubject) && <PriorityStudyPanel key={activeSubject} subject={activeSubject} />}
         <ExamEvidencePanel key={`evidence:${activeSubject}`} subject={activeSubject} />
 

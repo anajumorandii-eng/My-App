@@ -1,0 +1,1000 @@
+{
+  "reviewedOn": "2026-10-18",
+  "reviewType": "primary-source-reading",
+  "edition": 2027,
+  "examCalendarYear": 2026,
+  "rules": [
+    {
+      "id": "phase1",
+      "title": "1ª fase: 80 questões em 5 horas",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "01/11/2026. Oitenta questões de múltipla escolha, cinco alternativas e uma correta; cada acerto vale um ponto bruto (máximo 80).",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+      "page": 5,
+      "implication": "Simular 80 questões em 300 minutos, incluindo revisão e preenchimento; não comparar acertos absolutos de 90 e 80 questões sem normalizar."
+    },
+    {
+      "id": "phase2",
+      "title": "2ª fase: dois dias de quatro horas",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "06 e 07/12/2026. Dia 1: dez questões discursivas de Português (interpretação, gramática e literatura) e redação. Dia 2: doze questões de duas a quatro disciplinas da carreira.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+      "page": 7,
+      "implication": "Treinar dez respostas e uma redação em quatro horas; em Medicina, treinar doze respostas B/F/G/Q no dia seguinte."
+    },
+    {
+      "id": "interdisciplinarity",
+      "title": "Programa e interdisciplinaridade já aplicáveis",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "Art.4 da Resolução CoG9008 determina questões interdisciplinares. O programa contempla Arte, Biologia, Educação Física, Filosofia, Física, Geografia, História, Inglês, Matemática, Português, Química e Sociologia.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-resolucao-DOE.pdf",
+      "page": 2,
+      "implication": "Identificar a operação central e relacionar somente conceitos necessários; Arte e Educação Física já integram o programa de 2027 e não devem ser adiadas para 2028."
+    },
+    {
+      "id": "essay-choice",
+      "title": "Redação: escolher e assinalar uma proposta",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "A proposta poderá solicitar mais de um gênero textual; o candidato deve optar por um deles na folha de redação. Não assinalar a escolha implica nota zero. Não existe obrigação de produzir todos os gêneros oferecidos.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+      "page": 10,
+      "implication": "Treinar leitura de comando, interlocutor, finalidade, suporte e estrutura do gênero; conferir a opção marcada antes da entrega."
+    },
+    {
+      "id": "essay-rubric",
+      "title": "Quatro critérios de redação",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "Tema/coletânea/autoria peso3; atendimento da modalidade textual peso2; coesão/coerência/progressão peso3; correção gramatical/convenções/vocabulário peso2.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+      "page": 11,
+      "implication": "Revisar tanto conteúdo e progressão quanto o atendimento específico ao gênero escolhido."
+    },
+    {
+      "id": "weights",
+      "title": "Pesos de Medicina",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "Sem competências específicas, NFC=(F1+D1+D2)/3, com F1 normalizada a100; resultado convertido a1000. D1: Português50+Redação50; D2:100 e questões de igual valor.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+      "page": 13,
+      "implication": "Cada dia da2ªfase tem o mesmo peso global da1ªfase; uma disciplina entre quatro de D2 equivale a25% desse dia, cerca de8,33% da nota final; redação cerca de16,67%."
+    },
+    {
+      "id": "elimination",
+      "title": "Mínimos eliminatórios não são nota de corte",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "Menos de24 acertos (30% de80) elimina. Art.13 §2: zero na redação, no conjunto das questões de Português OU em D2 elimina. Convocação: quatro vezes as vagas por carreira/modalidade, mínimo10 quando habilitados suficientes, incluindo empatados no limite.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-resolucao-DOE.pdf",
+      "page": 6,
+      "implication": "Não interpretar24 como meta competitiva para Medicina; evitar abandonar Português ou redação mesmo com bom desempenho em Natureza."
+    },
+    {
+      "id": "partial-credit",
+      "title": "Correção discursiva",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "Questões recebem de zero a cinco, depois normalização. No mínimo duas avaliações independentes; respostas válidas alternativas são consideradas após uniformização da banca.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+      "page": 9,
+      "implication": "Explicitar relações, unidades e justificativas pedidas em cada subitem; preservar passos válidos, sem inventar um critério de pontos que o guia não publica."
+    },
+    {
+      "id": "reading-list",
+      "title": "Nove obras obrigatórias2027",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "Opúsculo Humanitário; Nebulosas; Memórias de Martha; Caminho de Pedras; A Paixão Segundo G.H.; Geografia; Balada de Amor ao Vento; Canção para Ninar Menino Grande; A Visão das Plantas.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+      "page": 15,
+      "implication": "Usar a lista2027 ao selecionar literatura de provas antigas; a incidência histórica não substitui as obras vigentes."
+    },
+    {
+      "id": "retification",
+      "title": "Retificação oficial consultada",
+      "appliesTo": "FUVEST 2027 — ingresso em 2027; provas em 2026",
+      "description": "Retificação do DOE27/08/2026 corrige apenas o programa de competências específicas de Artes Cênicas no AnexoII da CoG9008.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-retificacao-DOE-2026-08-27.pdf",
+      "page": 1,
+      "implication": "Não altera o conjunto de disciplinas de Medicina nem os formatos2027 descritos acima."
+    }
+  ],
+  "medicine": {
+    "careerCode": "111",
+    "campuses": [
+      {
+        "courseCode": "24",
+        "campus": "Bauru",
+        "unit": "FMBRU"
+      },
+      {
+        "courseCode": "25",
+        "campus": "Ribeirão Preto",
+        "unit": "FMRP"
+      },
+      {
+        "courseCode": "26",
+        "campus": "São Paulo — Quadrilátero",
+        "unit": "FM"
+      }
+    ],
+    "secondDaySubjects": [
+      "Biologia",
+      "Física",
+      "Geografia",
+      "Química"
+    ],
+    "questionsPerSubject": 3,
+    "totalQuestions": 12,
+    "questionSelectionRule": "O recorte histórico depende do campus: em2022–2024, São Paulo recebeuB/F/Q (primeiras4de cada), Bauru recebeuB/G/Q (primeiras4), Ribeirão Preto recebeuB/F/G/Q (primeiras3). Em2025–2026, os três campi integravam carreira111 e receberamB/F/G/Q (primeiras3). As capas dos bancos confirmam primeira tríade/quarteto conforme número de disciplinas. Para2027, guias confirmam carreira111/BFGQ e12questões; ainda não há banco2027publicado para verificar sua numeração.",
+    "questionSelection2027Status": "3 por disciplina é continuidade do formato; primeira tríade do banco2027 ainda não verificável antes da publicação da prova",
+    "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-carreiras.pdf",
+    "page": 9,
+    "historicalSelectionSources": [
+      {
+        "year": 2022,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
+        "page": 1,
+        "description": "Capa do banco oficial: quatro disciplinas recebem sempre as três primeiras questões de cada disciplina.",
+        "sha256": "25d3a4aecd29ea147f961e1a6d8ae32f36f0a447a941fe428c04e0e5b4407b76"
+      },
+      {
+        "year": 2023,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+        "page": 1,
+        "description": "Capa do banco oficial: quatro disciplinas recebem sempre as três primeiras questões de cada disciplina.",
+        "sha256": "1fe9afaf17b1849c8b9aa92882f52a2ef846b03005b13166ebfec9474433379c"
+      },
+      {
+        "year": 2024,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
+        "page": 1,
+        "description": "Capa do banco oficial: quatro disciplinas recebem sempre as três primeiras questões de cada disciplina.",
+        "sha256": "cc591c016f2dbbc3a6f22e80bc4b95539378cce8f2f24fc88dd34cf9e4c8d0c7"
+      },
+      {
+        "year": 2025,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
+        "page": 1,
+        "description": "Capa do banco oficial: quatro disciplinas recebem sempre as três primeiras questões de cada disciplina.",
+        "sha256": "420339db266ec93d9cf8f9491064aacf858b55ffe8f04b4d7bd3b5f47b11aee4"
+      },
+      {
+        "year": 2026,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+        "page": 1,
+        "description": "Capa do banco oficial: quatro disciplinas recebem sempre as três primeiras questões de cada disciplina.",
+        "sha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05"
+      }
+    ],
+    "historicalByCampus": [
+      {
+        "year": 2022,
+        "campus": "sao-paulo",
+        "subjects": [
+          "B",
+          "F",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Química"
+        ],
+        "questionsPerSubject": 4,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2022_manual_20210804.pdf",
+        "page": 22,
+        "printedPage": 18,
+        "careerCode": "500",
+        "courseCode": "26",
+        "unit": "FM",
+        "sourceSha256": "70be1c0096f3ba708664b7fef1170a55cb6260e7920053d096b63f2063c09a77",
+        "selectionRule": "Primeiras 4 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04"
+        ]
+      },
+      {
+        "year": 2022,
+        "campus": "ribeirao-preto",
+        "subjects": [
+          "B",
+          "F",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 3,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2022_manual_20210804.pdf",
+        "page": 23,
+        "printedPage": 19,
+        "careerCode": "505",
+        "courseCode": "28",
+        "unit": "FMRP",
+        "sourceSha256": "70be1c0096f3ba708664b7fef1170a55cb6260e7920053d096b63f2063c09a77",
+        "selectionRule": "Primeiras 3 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "F01",
+          "F02",
+          "F03",
+          "G01",
+          "G02",
+          "G03",
+          "Q01",
+          "Q02",
+          "Q03"
+        ]
+      },
+      {
+        "year": 2022,
+        "campus": "bauru",
+        "subjects": [
+          "B",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 4,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2022_manual_20210804.pdf",
+        "page": 22,
+        "printedPage": 18,
+        "careerCode": "501",
+        "courseCode": "27",
+        "unit": "FOB",
+        "sourceSha256": "70be1c0096f3ba708664b7fef1170a55cb6260e7920053d096b63f2063c09a77",
+        "selectionRule": "Primeiras 4 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2022_segunda_fase_dia_2.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "G01",
+          "G02",
+          "G03",
+          "G04",
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04"
+        ]
+      },
+      {
+        "year": 2023,
+        "campus": "sao-paulo",
+        "subjects": [
+          "B",
+          "F",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Química"
+        ],
+        "questionsPerSubject": 4,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_manual_candidato_retificado_29092022.pdf",
+        "page": 23,
+        "printedPage": 18,
+        "careerCode": "500",
+        "courseCode": "26",
+        "unit": "FM",
+        "sourceSha256": "02389d0d84ffa94b47b84528ac5c73dccbef80a283c06df68d38aa1b65890962",
+        "selectionRule": "Primeiras 4 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04"
+        ]
+      },
+      {
+        "year": 2023,
+        "campus": "ribeirao-preto",
+        "subjects": [
+          "B",
+          "F",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 3,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_manual_candidato_retificado_29092022.pdf",
+        "page": 24,
+        "printedPage": 19,
+        "careerCode": "505",
+        "courseCode": "28",
+        "unit": "FMRP",
+        "sourceSha256": "02389d0d84ffa94b47b84528ac5c73dccbef80a283c06df68d38aa1b65890962",
+        "selectionRule": "Primeiras 3 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "F01",
+          "F02",
+          "F03",
+          "G01",
+          "G02",
+          "G03",
+          "Q01",
+          "Q02",
+          "Q03"
+        ]
+      },
+      {
+        "year": 2023,
+        "campus": "bauru",
+        "subjects": [
+          "B",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 4,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2023_manual_candidato_retificado_29092022.pdf",
+        "page": 23,
+        "printedPage": 18,
+        "careerCode": "501",
+        "courseCode": "27",
+        "unit": "FOB",
+        "sourceSha256": "02389d0d84ffa94b47b84528ac5c73dccbef80a283c06df68d38aa1b65890962",
+        "selectionRule": "Primeiras 4 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2023_segunda_fase_dia_2.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "G01",
+          "G02",
+          "G03",
+          "G04",
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04"
+        ]
+      },
+      {
+        "year": 2024,
+        "campus": "sao-paulo",
+        "subjects": [
+          "B",
+          "F",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Química"
+        ],
+        "questionsPerSubject": 4,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_manual_candidato.pdf",
+        "page": 134,
+        "printedPage": 134,
+        "careerCode": "460",
+        "courseCode": "26",
+        "unit": "FM",
+        "sourceSha256": "2d2a389ecddc8d70e5424ccd0659b06eaa13132c94ca5e6d3380b533590feb20",
+        "selectionRule": "Primeiras 4 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "F01",
+          "F02",
+          "F03",
+          "F04",
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04"
+        ]
+      },
+      {
+        "year": 2024,
+        "campus": "ribeirao-preto",
+        "subjects": [
+          "B",
+          "F",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 3,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_manual_candidato.pdf",
+        "page": 134,
+        "printedPage": 134,
+        "careerCode": "462",
+        "courseCode": "28",
+        "unit": "FMRP",
+        "sourceSha256": "2d2a389ecddc8d70e5424ccd0659b06eaa13132c94ca5e6d3380b533590feb20",
+        "selectionRule": "Primeiras 3 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "F01",
+          "F02",
+          "F03",
+          "G01",
+          "G02",
+          "G03",
+          "Q01",
+          "Q02",
+          "Q03"
+        ]
+      },
+      {
+        "year": 2024,
+        "campus": "bauru",
+        "subjects": [
+          "B",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 4,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_manual_candidato.pdf",
+        "page": 134,
+        "printedPage": 134,
+        "careerCode": "461",
+        "courseCode": "27",
+        "unit": "FOB",
+        "sourceSha256": "2d2a389ecddc8d70e5424ccd0659b06eaa13132c94ca5e6d3380b533590feb20",
+        "selectionRule": "Primeiras 4 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2024_segunda_fase_prova_2dia.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "B04",
+          "G01",
+          "G02",
+          "G03",
+          "G04",
+          "Q01",
+          "Q02",
+          "Q03",
+          "Q04"
+        ]
+      },
+      {
+        "year": 2025,
+        "campus": "sao-paulo",
+        "subjects": [
+          "B",
+          "F",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 3,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_guia-carreiras.pdf",
+        "page": 9,
+        "printedPage": 9,
+        "careerCode": "111",
+        "courseCode": "26",
+        "unit": "FM",
+        "sourceSha256": "bc69432c60dbd22ab42433a0740f903908be99836c185c3efb91e6a4acfd621c",
+        "selectionRule": "Primeiras 3 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "F01",
+          "F02",
+          "F03",
+          "G01",
+          "G02",
+          "G03",
+          "Q01",
+          "Q02",
+          "Q03"
+        ]
+      },
+      {
+        "year": 2025,
+        "campus": "ribeirao-preto",
+        "subjects": [
+          "B",
+          "F",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 3,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_guia-carreiras.pdf",
+        "page": 9,
+        "printedPage": 9,
+        "careerCode": "111",
+        "courseCode": "25",
+        "unit": "FMRP",
+        "sourceSha256": "bc69432c60dbd22ab42433a0740f903908be99836c185c3efb91e6a4acfd621c",
+        "selectionRule": "Primeiras 3 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "F01",
+          "F02",
+          "F03",
+          "G01",
+          "G02",
+          "G03",
+          "Q01",
+          "Q02",
+          "Q03"
+        ]
+      },
+      {
+        "year": 2025,
+        "campus": "bauru",
+        "subjects": [
+          "B",
+          "F",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 3,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_guia-carreiras.pdf",
+        "page": 9,
+        "printedPage": 9,
+        "careerCode": "111",
+        "courseCode": "24",
+        "unit": "FOB",
+        "sourceSha256": "bc69432c60dbd22ab42433a0740f903908be99836c185c3efb91e6a4acfd621c",
+        "selectionRule": "Primeiras 3 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2025_prova_2fase_dia2.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "F01",
+          "F02",
+          "F03",
+          "G01",
+          "G02",
+          "G03",
+          "Q01",
+          "Q02",
+          "Q03"
+        ]
+      },
+      {
+        "year": 2026,
+        "campus": "sao-paulo",
+        "subjects": [
+          "B",
+          "F",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 3,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026_guia-carreiras.pdf",
+        "page": 9,
+        "printedPage": 9,
+        "careerCode": "111",
+        "courseCode": "26",
+        "unit": "FM",
+        "sourceSha256": "42eef658664110e282fb8e29ab224dbf2a7db4b77adc9c03ebc9ec6b412d2f33",
+        "selectionRule": "Primeiras 3 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "F01",
+          "F02",
+          "F03",
+          "G01",
+          "G02",
+          "G03",
+          "Q01",
+          "Q02",
+          "Q03"
+        ]
+      },
+      {
+        "year": 2026,
+        "campus": "ribeirao-preto",
+        "subjects": [
+          "B",
+          "F",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 3,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026_guia-carreiras.pdf",
+        "page": 9,
+        "printedPage": 9,
+        "careerCode": "111",
+        "courseCode": "25",
+        "unit": "FMRP",
+        "sourceSha256": "42eef658664110e282fb8e29ab224dbf2a7db4b77adc9c03ebc9ec6b412d2f33",
+        "selectionRule": "Primeiras 3 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "F01",
+          "F02",
+          "F03",
+          "G01",
+          "G02",
+          "G03",
+          "Q01",
+          "Q02",
+          "Q03"
+        ]
+      },
+      {
+        "year": 2026,
+        "campus": "bauru",
+        "subjects": [
+          "B",
+          "F",
+          "G",
+          "Q"
+        ],
+        "subjectNames": [
+          "Biologia",
+          "Física",
+          "Geografia",
+          "Química"
+        ],
+        "questionsPerSubject": 3,
+        "totalQuestions": 12,
+        "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026_guia-carreiras.pdf",
+        "page": 9,
+        "printedPage": 9,
+        "careerCode": "111",
+        "courseCode": "24",
+        "unit": "FMBRU",
+        "sourceSha256": "42eef658664110e282fb8e29ab224dbf2a7db4b77adc9c03ebc9ec6b412d2f33",
+        "selectionRule": "Primeiras 3 questões de cada disciplina no banco histórico da edição.",
+        "selectionSourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+        "selectionPage": 1,
+        "selectedNumbers": [
+          "B01",
+          "B02",
+          "B03",
+          "F01",
+          "F02",
+          "F03",
+          "G01",
+          "G02",
+          "G03",
+          "Q01",
+          "Q02",
+          "Q03"
+        ]
+      }
+    ],
+    "historicalCareerSources": [
+      {
+        "id": "2022-historical-careers",
+        "year": 2022,
+        "url": "https://www.fuvest.br/wp-content/uploads/fuvest2022_manual_20210804.pdf",
+        "sha256": "70be1c0096f3ba708664b7fef1170a55cb6260e7920053d096b63f2063c09a77",
+        "bytes": 3896953,
+        "pages": 92,
+        "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+      },
+      {
+        "id": "2023-historical-careers",
+        "year": 2023,
+        "url": "https://www.fuvest.br/wp-content/uploads/fuvest2023_manual_candidato_retificado_29092022.pdf",
+        "sha256": "02389d0d84ffa94b47b84528ac5c73dccbef80a283c06df68d38aa1b65890962",
+        "bytes": 3142416,
+        "pages": 96,
+        "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+      },
+      {
+        "id": "2024-historical-careers",
+        "year": 2024,
+        "url": "https://www.fuvest.br/wp-content/uploads/fuvest2024_manual_candidato.pdf",
+        "sha256": "2d2a389ecddc8d70e5424ccd0659b06eaa13132c94ca5e6d3380b533590feb20",
+        "bytes": 10339209,
+        "pages": 158,
+        "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+      },
+      {
+        "id": "2025-historical-careers",
+        "year": 2025,
+        "url": "https://www.fuvest.br/wp-content/uploads/fuvest2025_guia-carreiras.pdf",
+        "sha256": "bc69432c60dbd22ab42433a0740f903908be99836c185c3efb91e6a4acfd621c",
+        "bytes": 14876956,
+        "pages": 25,
+        "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+      },
+      {
+        "id": "2026-historical-careers",
+        "year": 2026,
+        "url": "https://www.fuvest.br/wp-content/uploads/fuvest2026_guia-carreiras.pdf",
+        "sha256": "42eef658664110e282fb8e29ab224dbf2a7db4b77adc9c03ebc9ec6b412d2f33",
+        "bytes": 18539112,
+        "pages": 26,
+        "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+      }
+    ],
+    "historicalScopeWarning": "Não usarBFGQ01–03 como sinônimo de todos os cursos deMedicina em2022–2024. Esse conjunto corresponde aRibeirão Preto nesses anos; os subconjuntos deSão Paulo eBauru têm disciplinas e limite diferentes."
+  },
+  "futureChanges": [
+    {
+      "appliesTo": "FUVEST2028, provas em2027",
+      "description": "Dia1 passa a8 questões de Linguagens e suas Tecnologias (Português/Literatura, Inglês, Arte e Educação Física), além de redação. Dia2 passa a10 questões e seis tipos de prova por áreas; anúncio consultado não define o tipo de Medicina.",
+      "sourceUrl": "https://www.fuvest.br/fuvest-2027-fuvest-anuncia-mudancas-para-as-proximas-edicoes-do-seu-vestibular/",
+      "page": null,
+      "implication": "Não aplicar a redução8/10 nem o dia1 ampliado às provas de2026/FUVEST2027."
+    }
+  ],
+  "sources": [
+    {
+      "id": "guia-provas",
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+      "sha256": "94115ff44f908a7ce2f0ce9527010f33873ab0f1015552a5db6713693bd8c52e",
+      "bytes": 1094032,
+      "pages": 15
+    },
+    {
+      "id": "guia-carreiras",
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-carreiras.pdf",
+      "sha256": "1ba9bfbdc7e504d29ce123e51bc9bcd650e7fb09dcf702573077e3357b5d17eb",
+      "bytes": 1432352,
+      "pages": 26
+    },
+    {
+      "id": "programa-vestibular",
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-programa-vestibular.pdf",
+      "sha256": "82122a290b1819e73b449b22579c49425589f8901e52bb3a10267eb81f8d9522",
+      "bytes": 9692559,
+      "pages": 53
+    },
+    {
+      "id": "resolucao-DOE",
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-resolucao-DOE.pdf",
+      "sha256": "7c2b766f808f4f17926cb665db6744c1e1c7d3c7b0c8a1ea65dc27e84bcc5a30",
+      "bytes": 2931819,
+      "pages": 95
+    },
+    {
+      "id": "retificacao-DOE-2026-08-27",
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-retificacao-DOE-2026-08-27.pdf",
+      "sha256": "baf0afde5ca1f69c855c22c0eb9e21bdb7be14e5ae662cade08d15b7a49573c6",
+      "bytes": 400419,
+      "pages": 3
+    },
+    {
+      "id": "guia-jornada",
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-jornada.pdf",
+      "sha256": "290dadde2aa8bb19af20de2d13f6e84b4a806063204430cf05dd798eaabef925",
+      "bytes": 1732077,
+      "pages": 23
+    },
+    {
+      "id": "announcement",
+      "url": "https://www.fuvest.br/fuvest-2027-fuvest-anuncia-mudancas-para-as-proximas-edicoes-do-seu-vestibular/",
+      "sha256": "367111f68c3fba0d342beeb260392a9e757622c2e2ca43fca20d9b7eb872caf2",
+      "publishedOn": "2025-12-17",
+      "format": "html"
+    },
+    {
+      "id": "2026-guia-provas",
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2026_guia-provas.pdf",
+      "sha256": "8f76a272a9485a5f4565dd2fbb7111e346adf0f164355c32b4c2535e147f56f7",
+      "bytes": 14270464,
+      "pages": 12
+    },
+    {
+      "id": "2022-historical-careers",
+      "year": 2022,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2022_manual_20210804.pdf",
+      "sha256": "70be1c0096f3ba708664b7fef1170a55cb6260e7920053d096b63f2063c09a77",
+      "bytes": 3896953,
+      "pages": 92,
+      "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+    },
+    {
+      "id": "2023-historical-careers",
+      "year": 2023,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2023_manual_candidato_retificado_29092022.pdf",
+      "sha256": "02389d0d84ffa94b47b84528ac5c73dccbef80a283c06df68d38aa1b65890962",
+      "bytes": 3142416,
+      "pages": 96,
+      "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+    },
+    {
+      "id": "2024-historical-careers",
+      "year": 2024,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2024_manual_candidato.pdf",
+      "sha256": "2d2a389ecddc8d70e5424ccd0659b06eaa13132c94ca5e6d3380b533590feb20",
+      "bytes": 10339209,
+      "pages": 158,
+      "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+    },
+    {
+      "id": "2025-historical-careers",
+      "year": 2025,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2025_guia-carreiras.pdf",
+      "sha256": "bc69432c60dbd22ab42433a0740f903908be99836c185c3efb91e6a4acfd621c",
+      "bytes": 14876956,
+      "pages": 25,
+      "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+    },
+    {
+      "id": "2026-historical-careers",
+      "year": 2026,
+      "url": "https://www.fuvest.br/wp-content/uploads/fuvest2026_guia-carreiras.pdf",
+      "sha256": "42eef658664110e282fb8e29ab224dbf2a7db4b77adc9c03ebc9ec6b412d2f33",
+      "bytes": 18539112,
+      "pages": 26,
+      "reviewMethod": "extração textual e inspeção visual das páginas da carreira"
+    }
+  ],
+  "limitations": [
+    "Auditoria das regras relevantes a conteúdo, formato, correção e planejamento de Medicina; não substitui todo o edital administrativo.",
+    "Não há prova2027 aplicada/publicada na data da revisão. Não inferir tópicos garantidos ou proporções por disciplina na1ªfase.",
+    "A distribuição3por disciplina em Medicina é continuidade do formato de quatro disciplinas; o guia2027 explicita total12 e BFGQ, sem frase literal três por disciplina nas fontes consultadas."
+  ],
+  "timeline": [
+    {
+      "editions": "2022–2025",
+      "examYears": "2021–2024",
+      "description": "1ªfase90 questões; dia1 de2ªfase10 de Português+redação; dia2,12 da carreira. O formato anterior não deve definir a composição temática do programa2027. Filosofia/Sociologia podiam aparecer historicamente: não afirmar ausência desses conhecimentos antes2026.",
+      "sourceUrl": "https://www.fuvest.br/acervo/",
+      "verification": "As capas e questões reais do corpus fornecem o histórico; a data inaugural de todas as componentes não foi reconstituída só por esses cadernos."
+    },
+    {
+      "editions": "2026",
+      "examYears": "2025",
+      "description": "Programa renovado por competências e objetos de conhecimento, com Arte, Educação Física, Filosofia e Sociologia explicitadas, já vigente; redação permite escolha entre propostas/gêneros. Mantém90 questões na1ªfase,10+redação noD1 e12 noD2.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026_guia-provas.pdf",
+      "page": 5,
+      "additionalPages": [
+        9,
+        12
+      ],
+      "qualification": "O guia2026 confirma vigência; anúncio17/12/2025 situa aprovação dessas alterações em2024. Não atribuir a2027 a estreia dessas mudanças."
+    },
+    {
+      "editions": "2027",
+      "examYears": "2026",
+      "description": "Redução da1ªfase a80 questões; mantém5h e2ªfase10+redação/12. Programa interdisciplinar e escolha de gênero continuam.",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+      "page": 5,
+      "additionalPages": [
+        7,
+        10
+      ]
+    },
+    {
+      "editions": "2028",
+      "examYears": "2027",
+      "description": "Anunciados8 itens de Linguagens+redação noD1;10 itens noD2 e6 tipos de prova por áreas. Não é regra2027.",
+      "sourceUrl": "https://www.fuvest.br/fuvest-2027-fuvest-anuncia-mudancas-para-as-proximas-edicoes-do-seu-vestibular/",
+      "page": null
+    }
+  ],
+  "cutoffInterpretation": {
+    "description": "Converter um corte antigo de90 para80 por regra de três apenas preserva a proporção de acertos. Não estima corte2027 nem probabilidade de aprovação: dificuldade, composição, concorrência, vagas e modalidade variam; a nota final também depende deD1/D2.",
+    "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2027-guia-provas.pdf",
+    "pages": [
+      6,
+      13
+    ],
+    "status": "inferência estatística/pedagógica, não previsão oficial"
+  }
+}

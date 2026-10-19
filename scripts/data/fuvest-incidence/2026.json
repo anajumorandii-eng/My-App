@@ -1,0 +1,4211 @@
+{
+  "year": 2026,
+  "reviewedOn": "2026-10-18",
+  "reviewType": "single-editor-source-reading",
+  "sourceManifest": [
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-gabarito.pdf",
+      "sha256": "a9e1084a125fa35bcefb875610328c0a8cb9b1a298880f2f0c75b928bd860e8e",
+      "pages": 2,
+      "bytes": 218795
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "pages": 38,
+      "bytes": 8019288
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-abordagem-esperada-redacao.pdf",
+      "sha256": "8f7a7b6ae5915c20fa639ea0bddd9d3bcb5091fff98d23db5eb72a76e6d413ed",
+      "pages": 4,
+      "bytes": 1077365
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-prova.pdf",
+      "sha256": "1a2e017b8a3558da8e797cb61b5882d17165759c98bf59042c49a3644fc300ce",
+      "pages": 16,
+      "bytes": 2764976
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-respostas-esperadas.pdf",
+      "sha256": "5968ddb76ff51c26da32c58236341776423eaab4c0b5b10bc7a8445c45b49b66",
+      "pages": 11,
+      "bytes": 1515499
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+      "sha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05",
+      "pages": 43,
+      "bytes": 7038275
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-respostas-esperadas-biologia.pdf",
+      "sha256": "ee361f09557ecfee211f7c23f36932705a35b3f0160646433c0cbf498a61f6b5",
+      "pages": 7,
+      "bytes": 901356
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-respostas-esperadas-fisica.pdf",
+      "sha256": "0a6681ac294eb3010e9e4692090b0d887fe15e691521d86ca8c1270163d28ce6",
+      "pages": 7,
+      "bytes": 1303041
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-respostas-esperadas-geografia.pdf",
+      "sha256": "288baea532fb964e031b8c0f6a84d331b9a9d19f4c79e315211d338177df3dcd",
+      "pages": 7,
+      "bytes": 1763881
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-respostas-esperadas-historia.pdf",
+      "sha256": "aea8b98435e4866297f5f08ccaebeb42d20fe9fc995c11f228a7a5bfc581acd7",
+      "pages": 7,
+      "bytes": 780701
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-respostas-esperadas-matematica.pdf",
+      "sha256": "9c7373dfdbc1a8f70889f15753e089f42a6c209906df55ddaa5b8e4bb83bab43",
+      "pages": 7,
+      "bytes": 1071784
+    },
+    {
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-respostas-esperadas-quimica.pdf",
+      "sha256": "e96a0197b76b0979053ff6e98737706ad9f3290f3f86dfe36707ca0e0191175d",
+      "pages": 7,
+      "bytes": 1005219
+    }
+  ],
+  "papers": [
+    {
+      "id": "fuvest-2026-f1",
+      "phase": "1a",
+      "version": "V1",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-prova-V1.pdf",
+      "sha256": "93b417ad6ea7e81a3b6adc46337920fd71c213306849846723f13583074f9025",
+      "pages": 38,
+      "bytes": 8019288,
+      "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase1-gabarito.pdf",
+      "answerKeySha256": "a9e1084a125fa35bcefb875610328c0a8cb9b1a298880f2f0c75b928bd860e8e",
+      "expectedQuestions": 90,
+      "questions": [
+        {
+          "number": "01",
+          "page": 2,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Orações Adverbiais"
+          ],
+          "skills": [
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Preservar relações de concessão e finalidade numa paráfrase de Caetano Veloso.",
+          "rationale": "A classificação decorre de identificar embora e para me agradar, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar embora e para me agradar.",
+            "Conservar concessão e finalidade na reescrita."
+          ],
+          "trap": "Converter possibilidade de trapaça em certeza.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "02",
+          "page": 2,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Tipos de Discurso"
+          ],
+          "skills": [
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer a atribuição de expressão alheia pelas aspas do narrador.",
+          "rationale": "A classificação decorre de localizar a avaliação sobre o peso do nome, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar a avaliação sobre o peso do nome.",
+            "Distinguir voz citada da opinião do narrador."
+          ],
+          "trap": "Ler as aspas como reforço denotativo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "03",
+          "page": 2,
+          "subject": "Matemática",
+          "topicId": "mat_combinatoria",
+          "topic": "Análise Combinatória",
+          "subtopics": [
+            "Princípio da casa dos pombos"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar votos necessários para garantir eleição sob desempate por idade.",
+          "rationale": "A classificação decorre de separar cenários com 33 e 34 votos, operação central para resolver este comando.",
+          "strategy": [
+            "Separar cenários com 33 e 34 votos.",
+            "Distribuir votos adversamente entre os outros candidatos."
+          ],
+          "trap": "Confundir possibilidade de eleição com garantia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": true,
+          "excludedReason": "Questão anulada no gabarito oficial retificado em 25/11/2025.",
+          "subitems": []
+        },
+        {
+          "number": "04",
+          "page": 3,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Logaritmos"
+          ],
+          "skills": [
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_dados_probabilidade"
+          ],
+          "summary": "Calcular entropia informacional seguindo a expressão e exemplos de letras coloridas.",
+          "rationale": "A classificação decorre de registrar três probabilidades 3/4 e uma 1/4, operação central para resolver este comando.",
+          "strategy": [
+            "Registrar três probabilidades 3/4 e uma 1/4.",
+            "Aplicar a soma dada e propriedades logarítmicas."
+          ],
+          "trap": "Substituir a definição fornecida por outra fórmula conhecida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Ligações iônicas, covalentes e metálicas"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classificar ligações entre metais e ametais numa tabela de bingo químico.",
+          "rationale": "A classificação decorre de separar Na K Ca dos ametais, operação central para resolver este comando.",
+          "strategy": [
+            "Separar Na K Ca dos ametais.",
+            "Associar cada par ao tipo de ligação."
+          ],
+          "trap": "Classificar ligação entre dois metais como iônica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "06",
+          "page": 4,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Pirâmides"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar percurso pela base quadrada e apótema de uma pirâmide.",
+          "rationale": "A classificação decorre de obter o lado da base pelo volume, operação central para resolver este comando.",
+          "strategy": [
+            "Obter o lado da base pelo volume.",
+            "Somar três lados e meio ao apótema calculado."
+          ],
+          "trap": "Somar a altura vertical como se fosse a rampa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "07",
+          "page": 4,
+          "subject": "Matemática",
+          "topicId": "mat_trigonometria",
+          "topic": "Trigonometria",
+          "subtopics": [
+            "Transformações Trigonométricas"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar erro na resolução de equação envolvendo seno de arco duplo.",
+          "rationale": "A classificação decorre de revisar a passagem de sen(2x), operação central para resolver este comando.",
+          "strategy": [
+            "Revisar a passagem de sen(2x).",
+            "Aplicar a identidade do seno da soma."
+          ],
+          "trap": "Aceitar sen(2x)=2sen(x).",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "08",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Variação Linguística"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar a defesa do respeito às variedades e do ensino linguístico.",
+          "rationale": "A classificação decorre de separar respeito à fala e acesso às variantes, operação central para resolver este comando.",
+          "strategy": [
+            "Separar respeito à fala e acesso às variantes.",
+            "Identificar a alternativa que preserva ambos os direitos."
+          ],
+          "trap": "Supor que respeitar variedades proíbe ensinar norma de prestígio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "09",
+          "page": 5,
+          "subject": "Sociologia",
+          "topicId": "soc_durkheim",
+          "topic": "Émile Durkheim e o Fato Social",
+          "subtopics": [
+            "Educação e Socialização em Durkheim"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar a função social da educação em Durkheim e Nísia Floresta.",
+          "rationale": "A classificação decorre de localizar integração a valores nas duas exposições, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar integração a valores nas duas exposições.",
+            "Relacionar escola socialização e contribuição social."
+          ],
+          "trap": "Confundir educação moral racional com catequese.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "10",
+          "page": 5,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Arte e decolonialidade",
+          "subtopics": [
+            "Arte afro-brasileira e crítica do cânone"
+          ],
+          "skills": [
+            "analise_imagem",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar a categorização da obra de Maria Auxiliadora pelo sistema artístico.",
+          "rationale": "A classificação decorre de relacionar Capoeira à trajetória negra feminina e popular, operação central para resolver este comando.",
+          "strategy": [
+            "Relacionar Capoeira à trajetória negra feminina e popular.",
+            "Avaliar a carga colonial das categorias ingênua e primitivista."
+          ],
+          "trap": "Tomar categorias críticas como neutras.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "11",
+          "page": 6,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Educação feminina em Nísia Floresta e Júlia Lopes"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar projetos de educação feminina em Opúsculo Humanitário e Memórias de Martha.",
+          "rationale": "A classificação decorre de distinguir o ensaio e a trajetória da personagem, operação central para resolver este comando.",
+          "strategy": [
+            "Distinguir o ensaio e a trajetória da personagem.",
+            "Relacionar educação às contradições sociais oitocentistas."
+          ],
+          "trap": "Atribuir a ambas o mesmo programa profissionalizante.",
+          "confidence": "medium",
+          "reviewNote": "Comparação entre obras de períodos diferentes; unidade principal privilegia a operação literária comparativa.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "12",
+          "page": 6,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Personagens femininas e política"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_lit_modernismo"
+          ],
+          "summary": "Relacionar militância e vida privada em Caminho de pedras e As meninas.",
+          "rationale": "A classificação decorre de recuperar os contextos das protagonistas, operação central para resolver este comando.",
+          "strategy": [
+            "Recuperar os contextos das protagonistas.",
+            "Comparar transgressões de padrões públicos e privados."
+          ],
+          "trap": "Transportar a Lei do Divórcio de 1977 para Noemi.",
+          "confidence": "medium",
+          "reviewNote": "Comparação entre obras de períodos diferentes; unidade principal privilegia a operação literária comparativa.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "13",
+          "page": 7,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Estatística Descritiva"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar taxas anuais da participação feminina e masculina na força de trabalho.",
+          "rationale": "O comando exige comparar diferenças anuais nos valores do gráfico; o conteúdo sociológico contextualiza os dados.",
+          "strategy": [
+            "Ler os valores de anos consecutivos.",
+            "Calcular a maior variação anual feminina."
+          ],
+          "trap": "Confundir crescimento anual com maior nível absoluto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "14",
+          "page": 7,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Migrações e vulnerabilidade social"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar imigração baixa renda e setores de emprego formal no Sul.",
+          "rationale": "A classificação decorre de cruzar CadÚnico e distribuição setorial sulista, operação central para resolver este comando.",
+          "strategy": [
+            "Cruzar CadÚnico e distribuição setorial sulista.",
+            "Relacionar indústria alimentícia e baixa remuneração."
+          ],
+          "trap": "Inferir segurança social apenas da formalização.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "15",
+          "page": 8,
+          "subject": "Sociologia",
+          "topicId": "soc_trabalho_sociedade",
+          "topic": "Trabalho e Sociedade",
+          "subtopics": [
+            "Precarização e Uberização do Trabalho"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer a flexibilização e exploração nas relações de trabalho por plataformas.",
+          "rationale": "A classificação decorre de identificar eliminação de direitos e transferência de riscos, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar eliminação de direitos e transferência de riscos.",
+            "Relacionar plataformas a processos anteriores de flexibilização."
+          ],
+          "trap": "Tratar tecnologia como causa única da uberização.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "16",
+          "page": 8,
+          "subject": "Sociologia",
+          "topicId": "soc_trabalho_sociedade",
+          "topic": "Trabalho e Sociedade",
+          "subtopics": [
+            "Precarização e Uberização do Trabalho"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar a condição de trabalhador just-in-time na organização por plataformas.",
+          "rationale": "A classificação decorre de ler a definição de gerenciamento dos trabalhadores, operação central para resolver este comando.",
+          "strategy": [
+            "Ler a definição de gerenciamento dos trabalhadores.",
+            "Associar disponibilidade variável a trabalho sob demanda."
+          ],
+          "trap": "Equiparar just-in-time a escala fixa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "17",
+          "page": 8,
+          "subject": "Sociologia",
+          "topicId": "soc_trabalho_sociedade",
+          "topic": "Trabalho e Sociedade",
+          "subtopics": [
+            "Transformações no Mundo do Trabalho"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Confrontar aspirações empresariais juvenis com dados de renda e ocupação.",
+          "rationale": "A classificação decorre de separar empregadores de autônomos e empregados, operação central para resolver este comando.",
+          "strategy": [
+            "Separar empregadores de autônomos e empregados.",
+            "Cruzar rendimentos com frequência de cada grupo."
+          ],
+          "trap": "Misturar empregador e trabalhador por conta própria.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "18",
+          "page": 9,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Equações Exponenciais"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estimar quando o crescimento exponencial de usuários ultrapassa trezentos mil.",
+          "rationale": "A classificação decorre de escrever 200(1,1)^t maior que 300, operação central para resolver este comando.",
+          "strategy": [
+            "Escrever 200(1,1)^t maior que 300.",
+            "Usar logaritmos para localizar o intervalo temporal."
+          ],
+          "trap": "Tratar o aumento percentual como crescimento linear.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "19",
+          "page": 9,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Arte conceitual brasileira",
+          "subtopics": [
+            "Cildo Meireles e crítica monetária"
+          ],
+          "skills": [
+            "analise_imagem",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar as figuras anônimas na obra monetária Zero Cruzeiro de Cildo Meireles.",
+          "rationale": "A classificação decorre de observar quem substitui os heróis nas faces, operação central para resolver este comando.",
+          "strategy": [
+            "Observar quem substitui os heróis nas faces.",
+            "Relacionar a escolha à desvalorização social."
+          ],
+          "trap": "Ler valor nominal zero como estabilização econômica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "20",
+          "page": 9,
+          "subject": "História",
+          "topicId": null,
+          "topic": "América Latina no século XIX e início do XX",
+          "subtopics": [
+            "Povos indígenas na América republicana"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer continuidades da exploração indígena após independências na América espanhola.",
+          "rationale": "A classificação decorre de separar extinção de instituições e persistência de abusos, operação central para resolver este comando.",
+          "strategy": [
+            "Separar extinção de instituições e persistência de abusos.",
+            "Relacionar trabalho forçado e exclusão republicana."
+          ],
+          "trap": "Concluir que independência eliminou a servidão indígena.",
+          "confidence": "medium",
+          "reviewNote": "Tema republicano pós-independência anterior ao recorte predominante da unidade de Guerra Fria; não se força ID.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "21",
+          "page": 9,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "A Montagem da Colonização"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar catequese infantil como estratégia de alianças entre indígenas e jesuítas.",
+          "rationale": "A classificação decorre de identificar os interesses indígenas mencionados, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar os interesses indígenas mencionados.",
+            "Relacionar ensino e negociação colonial."
+          ],
+          "trap": "Reduzir alianças à submissão total dos indígenas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "22",
+          "page": 10,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Leitura de Textos Cômicos"
+          ],
+          "skills": [
+            "analise_imagem",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar a crítica ao marco temporal pela ironia de uma charge.",
+          "rationale": "A classificação decorre de confrontar perfeitamente integrados com a cena de pobreza, operação central para resolver este comando.",
+          "strategy": [
+            "Confrontar perfeitamente integrados com a cena de pobreza.",
+            "Reconhecer a quebra de expectativa crítica."
+          ],
+          "trap": "Atribuir ao cartunista a opinião do casal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "23",
+          "page": 10,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Leitura de séries temporais",
+            "Tendência e oscilação em gráficos"
+          ],
+          "skills": [
+            "interpretacao_grafico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar a tendência histórica da área anual desmatada na Mata Atlântica.",
+          "rationale": "A alternativa é decidida pela leitura de barras e tendência temporal; o mecanismo ambiental não é necessário à inferência.",
+          "strategy": [
+            "Distinguir barras anuais e tendência de longo prazo.",
+            "Comparar início e fim da série."
+          ],
+          "trap": "Confundir oscilações anuais com tendência crescente.",
+          "confidence": "medium",
+          "reviewNote": "Fronteira geografia/matemática reconciliada com2026Q13 e2025Q68; Mata Atlântica é o contexto. A leitura não autoriza inferir causas do desmatamento.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "24",
+          "page": 11,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Aquecimento global e vegetação polar"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar esverdeamento antártico a temperaturas cobertura de gelo e índices vegetais.",
+          "rationale": "A classificação decorre de comparar índices de vegetação ao longo dos anos, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar índices de vegetação ao longo dos anos.",
+            "Relacionar expansão vegetal e aquecimento regional."
+          ],
+          "trap": "Explicar o processo por aumento da aridez.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "25",
+          "page": 11,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: Global Warming"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compreender a função das plataformas de gelo no controle das geleiras.",
+          "rationale": "A alternativa depende de localizar e interpretar informação do texto em inglês, sem exigir cálculo ou conhecimento científico externo.",
+          "strategy": [
+            "Distinguir ice sheet e ice shelf no texto.",
+            "Localizar a função de contenção das geleiras."
+          ],
+          "trap": "Tomar três quartos da costa por três quartos da área.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "26",
+          "page": 12,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: fontes de energia"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar a participação atual da energia geotérmica na demanda mundial.",
+          "rationale": "A alternativa depende de localizar e interpretar informação do texto em inglês, sem exigir cálculo ou conhecimento científico externo.",
+          "strategy": [
+            "Localizar puny portion e os dados fósseis.",
+            "Separar potencial futuro e utilização presente."
+          ],
+          "trap": "Ler moon shot como tecnologia de exploração lunar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "27",
+          "page": 12,
+          "subject": "Geografia",
+          "topicId": null,
+          "topic": "Geologia e tectônica de placas",
+          "subtopics": [
+            "Tectônica de placas e riftes"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Associar o potencial geotérmico queniano à divergência de placas e rifte.",
+          "rationale": "A classificação decorre de localizar Quênia no rifte africano, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar Quênia no rifte africano.",
+            "Relacionar fraturas e proximidade de calor interno."
+          ],
+          "trap": "Confundir rifte divergente com cadeia de colisão.",
+          "confidence": "high",
+          "reviewNote": "Geologia geral do rifte africano sem unidade específica no catálogo.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "28",
+          "page": 13,
+          "subject": "Química",
+          "topicId": "qui_termoquimica",
+          "topic": "Termoquímica",
+          "subtopics": [
+            "Entalpia de Combustão"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_estequiometria"
+          ],
+          "summary": "Calcular emissões de carbono da energia consumida por imagens de inteligência artificial.",
+          "rationale": "A classificação decorre de multiplicar imagens diárias por energia unitária, operação central para resolver este comando.",
+          "strategy": [
+            "Multiplicar imagens diárias por energia unitária.",
+            "Converter energia em mols de carvão e massa de CO2."
+          ],
+          "trap": "Usar massa molar do carbono como massa do CO2.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "29",
+          "page": 13,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Mercado de créditos de carbono"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer créditos de carbono como resultado da redução de emissões equivalentes.",
+          "rationale": "A classificação decorre de identificar a relação entre crédito e emissão evitada, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar a relação entre crédito e emissão evitada.",
+            "Distinguir redução certificada de simples estoque florestal."
+          ],
+          "trap": "Supor que somente países florestados geram créditos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "30",
+          "page": 13,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Sólidos de Revolução"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Minimizar altura de lata cilíndrica com volume fixo e diâmetro limitado.",
+          "rationale": "A classificação decorre de converter 350 mL em centímetros cúbicos, operação central para resolver este comando.",
+          "strategy": [
+            "Converter 350 mL em centímetros cúbicos.",
+            "Usar o maior raio permitido em V=pi r²h."
+          ],
+          "trap": "Usar oito centímetros como raio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "31",
+          "page": 14,
+          "subject": "Química",
+          "topicId": "qui_inorganica",
+          "topic": "Química Inorgânica",
+          "subtopics": [
+            "Reações de Neutralização"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar proteção do aço por hidróxido de sódio em ambiente ácido.",
+          "rationale": "A classificação decorre de reconhecer dissolução da base pela umidade, operação central para resolver este comando.",
+          "strategy": [
+            "Reconhecer dissolução da base pela umidade.",
+            "Relacionar neutralização à redução da acidez corrosiva."
+          ],
+          "trap": "Tratar sódio do hidróxido como metal de sacrifício.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "32",
+          "page": 14,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Deslocamento de Equilíbrio"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar remoção de depósitos de carbonato pelo ácido cítrico em eletrodomésticos.",
+          "rationale": "A classificação decorre de localizar H+ entre produtos do equilíbrio, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar H+ entre produtos do equilíbrio.",
+            "Aplicar aumento de acidez ao sentido de dissolução."
+          ],
+          "trap": "Tratar ácido cítrico como catalisador não consumido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "33",
+          "page": 14,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Consumo e impactos da indústria têxtil"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar produção barata consumo de roupas e gestão de resíduos têxteis.",
+          "rationale": "A classificação decorre de cruzar aumento produtivo e redução de preços, operação central para resolver este comando.",
+          "strategy": [
+            "Cruzar aumento produtivo e redução de preços.",
+            "Vincular consumo à necessidade de gestão ambiental."
+          ],
+          "trap": "Supor que uso intenso de água elimina poluentes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "34",
+          "page": 15,
+          "subject": "Geografia",
+          "topicId": "geo_hidrogeografia",
+          "topic": "Hidrogeografia",
+          "subtopics": [
+            "Bacias hidrográficas amazônicas"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar águas brancas amazônicas aos sedimentos provenientes das cabeceiras andinas.",
+          "rationale": "A classificação decorre de identificar Solimões no mapa hidrográfico, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar Solimões no mapa hidrográfico.",
+            "Relacionar carga em suspensão e erosão a montante."
+          ],
+          "trap": "Atribuir água branca a matéria orgânica dissolvida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "35",
+          "page": 15,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Movimentos de massa e riscos"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar a posição de sensores no monitoramento de corridas de detritos.",
+          "rationale": "A classificação decorre de localizar drenagens fundos de vale e sensores, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar drenagens fundos de vale e sensores.",
+            "Relacionar convergência do fluxo à prevenção de riscos."
+          ],
+          "trap": "Confundir medição de nível com composição dos detritos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "36",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_trigonometria",
+          "topic": "Trigonometria",
+          "subtopics": [
+            "Trigonometria no Triângulo Retângulo"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular desnível topográfico usando ângulos miras e distâncias horizontais conhecidas.",
+          "rationale": "A classificação decorre de calcular diferenças verticais com as tangentes dadas, operação central para resolver este comando.",
+          "strategy": [
+            "Calcular diferenças verticais com as tangentes dadas.",
+            "Corrigir alturas de instrumento e prisma."
+          ],
+          "trap": "Somar distâncias inclinadas como diferenças de altitude.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "37",
+          "page": 16,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Lugar Geométrico e Equação da Circunferência"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar centro e raio de prédio circular tangente a praça quadrada.",
+          "rationale": "A classificação decorre de localizar centro do quadrado e ponto de tangência, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar centro do quadrado e ponto de tangência.",
+            "Obter centro externo e raio pela distância dada."
+          ],
+          "trap": "Usar distância entre centros como raio do prédio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "38",
+          "page": 17,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Urbanização Brasileira"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar o crescimento das cidades médias nos dados recentes de urbanização brasileira.",
+          "rationale": "A classificação decorre de comparar graus de urbanização de 2010 e 2022, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar graus de urbanização de 2010 e 2022.",
+            "Relacionar aumento urbano à expansão das cidades médias."
+          ],
+          "trap": "Atribuir todo crescimento relativo às grandes metrópoles.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "39",
+          "page": 17,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "A Era Vargas"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar parques infantis paulistanos como equipamento de educação saúde e lazer.",
+          "rationale": "A classificação decorre de localizar funções sanitárias e pedagógicas no relato, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar funções sanitárias e pedagógicas no relato.",
+            "Relacionar lazer infantil e socialização dos trabalhadores."
+          ],
+          "trap": "Identificar os parques como escolas profissionalizantes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "40",
+          "page": 18,
+          "subject": "Sociologia",
+          "topicId": null,
+          "topic": "Sociologia urbana de Simmel",
+          "subtopics": [
+            "Atitude blasé e individualidade urbana"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar a reserva urbana de Simmel com personagens de Rachel de Queiroz.",
+          "rationale": "A classificação decorre de identificar isolamento e vida particular nos dois textos, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar isolamento e vida particular nos dois textos.",
+            "Relacionar reserva metropolitana e liberdade individual."
+          ],
+          "trap": "Tomar a vida privada como refutação da reserva urbana.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "41",
+          "page": 18,
+          "subject": "Sociologia",
+          "topicId": "soc_movimentos_sociais",
+          "topic": "Movimentos Sociais e Cidadania",
+          "subtopics": [
+            "Cultura e direitos de cidadania"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar o carnaval como exercício político de direitos e expressão cultural.",
+          "rationale": "A classificação decorre de identificar direitos associados à ocupação das ruas, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar direitos associados à ocupação das ruas.",
+            "Relacionar fruição cultural e vozes historicamente silenciadas."
+          ],
+          "trap": "Reduzir dimensão política a oposição à folia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "42",
+          "page": 19,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Artes circenses",
+          "subtopics": [
+            "Transformações históricas do circo"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer a transformação do circo por intercâmbio de linguagens e contextos sociais.",
+          "rationale": "A classificação decorre de listar linguagens combinadas no espetáculo, operação central para resolver este comando.",
+          "strategy": [
+            "Listar linguagens combinadas no espetáculo.",
+            "Relacionar mudanças produtivas à apropriação de novos elementos."
+          ],
+          "trap": "Supor que tradição circense permaneça imutável.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "43",
+          "page": 19,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Crítica da experiência estética",
+          "subtopics": [
+            "Exposições imersivas e espetacularização"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Avaliar a crítica à espetacularização da arte em exposições imersivas.",
+          "rationale": "A classificação decorre de separar experiência sensorial e reflexão histórico-estética, operação central para resolver este comando.",
+          "strategy": [
+            "Separar experiência sensorial e reflexão histórico-estética.",
+            "Relacionar entretenimento à diluição do conteúdo das obras."
+          ],
+          "trap": "Supor que êxito de público comprove superioridade estética.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "44",
+          "page": 20,
+          "subject": "Filosofia",
+          "topicId": null,
+          "topic": "Fenomenologia e estética",
+          "subtopics": [
+            "Merleau-Ponty e percepção pictórica"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar a função da cor na percepção pictórica segundo Merleau-Ponty.",
+          "rationale": "A classificação decorre de localizar espessura do mundo na argumentação, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar espessura do mundo na argumentação.",
+            "Relacionar composição cromática e aparição do visível."
+          ],
+          "trap": "Supor que mediação artística deva desaparecer.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "45",
+          "page": 20,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Renascimento e Humanismo"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar a autonomia humana no humanismo de Pico della Mirandola.",
+          "rationale": "A classificação decorre de reconhecer a ausência de forma humana predeterminada, operação central para resolver este comando.",
+          "strategy": [
+            "Reconhecer a ausência de forma humana predeterminada.",
+            "Relacionar livre arbítrio e construção da trajetória."
+          ],
+          "trap": "Definir antropocentrismo como ausência de Deus.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "46",
+          "page": 21,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Literatura Lusófona Contemporânea"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [
+            "Arte"
+          ],
+          "relatedTopicIds": [],
+          "summary": "Comparar corpo divino barroco e despersonalização moderna em O Cristo cigano.",
+          "rationale": "A classificação decorre de distinguir anatomia escultórica e ação poética, operação central para resolver este comando.",
+          "strategy": [
+            "Distinguir anatomia escultórica e ação poética.",
+            "Relacionar faca e amor à despersonalização moderna."
+          ],
+          "trap": "Supor que modernidade implique necessariamente ausência de Deus.",
+          "confidence": "medium",
+          "reviewNote": "Comparação entre obras de períodos diferentes; unidade principal privilegia a operação literária comparativa.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "47",
+          "page": 21,
+          "subject": "Filosofia",
+          "topicId": "fil_niilismo_existencialismo",
+          "topic": "Nietzsche, Existencialismo e Filosofia Contemporânea",
+          "subtopics": [
+            "Heidegger e finitude"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer ocultamento cotidiano da mortalidade em Heidegger e Sophia Andresen.",
+          "rationale": "A classificação decorre de identificar recusa de compreender a morte no poema, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar recusa de compreender a morte no poema.",
+            "Comparar com a tranquilização descrita pelo filósofo."
+          ],
+          "trap": "Confundir fuga da finitude com enfrentamento heroico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "48",
+          "page": 22,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Literatura Lusófona Contemporânea"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar intertextualidade bíblica no despertar amoroso de Mwando em Balada.",
+          "rationale": "A classificação decorre de identificar Adão serpente e perda da inocência, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar Adão serpente e perda da inocência.",
+            "Relacionar paixão conhecimento e conflito religioso."
+          ],
+          "trap": "Ler a descoberta amorosa como serenidade espiritual.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "49",
+          "page": 22,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Rotas comerciais e intercâmbios culturais"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar circulação de bens e hábitos culturais pelas rotas medievais da seda.",
+          "rationale": "A classificação decorre de reconhecer a diversidade dos participantes das rotas, operação central para resolver este comando.",
+          "strategy": [
+            "Reconhecer a diversidade dos participantes das rotas.",
+            "Relacionar circulação material e transformação dos hábitos."
+          ],
+          "trap": "Atribuir papel astrolábio e cartografia exclusivamente à Europa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "50",
+          "page": 23,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Islamismo medieval"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer redes educativas e religiosas entre Sael norte africano e Arábia.",
+          "rationale": "A classificação decorre de localizar peregrinações ulemás e escolas corânicas, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar peregrinações ulemás e escolas corânicas.",
+            "Relacionar mobilidade ao aprendizado e integração islâmica."
+          ],
+          "trap": "Supor homogeneidade étnica dos muçulmanos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "51",
+          "page": 23,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Guerra ao Terror"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar conflitos deslocamentos e perseguições produzidos pelas intervenções após Onze de Setembro.",
+          "rationale": "A classificação decorre de identificar efeitos enumerados das ocupações militares, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar efeitos enumerados das ocupações militares.",
+            "Relacionar radicalização e preconceito étnico-religioso."
+          ],
+          "trap": "Afirmar erradicação do terrorismo após as intervenções.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "52",
+          "page": 24,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Conflitos no Cáucaso"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar o conflito armênio-azerbaijano às rotas estratégicas de energia e comércio.",
+          "rationale": "A classificação decorre de ler fronteiras e corredores no mapa, operação central para resolver este comando.",
+          "strategy": [
+            "Ler fronteiras e corredores no mapa.",
+            "Relacionar ofensiva territorial e acesso à Turquia."
+          ],
+          "trap": "Inverter os interesses e alianças do Azerbaijão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "53",
+          "page": 25,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Disputa territorial de Essequibo"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar a reivindicação venezuelana sobre Essequibo a partir do mapa regional.",
+          "rationale": "A classificação decorre de localizar Guiana e área disputada, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar Guiana e área disputada.",
+            "Relacionar o mapa à integridade territorial dos Estados."
+          ],
+          "trap": "Confundir Essequibo com território brasileiro.",
+          "confidence": "medium",
+          "reviewNote": "Alternativa oficial E identifica Essequibo; a menção a Arbitragem de 1904 no enunciado não corresponde à data histórica usual de 1899.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "54",
+          "page": 25,
+          "subject": "História",
+          "topicId": "his_idade_antiga",
+          "topic": "Idade Antiga",
+          "subtopics": [
+            "Grécia Antiga"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar a exaltação da democracia ateniense no discurso atribuído a Péricles.",
+          "rationale": "A classificação decorre de identificar elogios às instituições de Atenas, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar elogios às instituições de Atenas.",
+            "Distinguir celebração retórica e universalidade efetiva dos direitos."
+          ],
+          "trap": "Tomar cidadãos como toda a população ateniense.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "55",
+          "page": 25,
+          "subject": "Matemática",
+          "topicId": "mat_teoria_numeros",
+          "topic": "Teoria dos Números Inteiros",
+          "subtopics": [
+            "Introdução à Teoria dos Números Inteiros"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_sequencias_matrizes"
+          ],
+          "summary": "Analisar propriedades de números perfeitos primos e progressões a partir de Euclides.",
+          "rationale": "A classificação decorre de testar definições nos primeiros valores inteiros, operação central para resolver este comando.",
+          "strategy": [
+            "Testar definições nos primeiros valores inteiros.",
+            "Verificar paridade dos termos da progressão indicada."
+          ],
+          "trap": "Confundir número primo com número perfeito.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "56",
+          "page": 26,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Classificação Biológica, Nomenclatura Científica e Noções de Sistemática Filogenética"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer ancestralidade comum e caracteres compartilhados na classificação cladística atual.",
+          "rationale": "A classificação decorre de distinguir semelhança isolada e parentesco evolutivo, operação central para resolver este comando.",
+          "strategy": [
+            "Distinguir semelhança isolada e parentesco evolutivo.",
+            "Identificar a busca de ancestrais comuns."
+          ],
+          "trap": "Supor que evolução implica melhoria progressiva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "57",
+          "page": 26,
+          "subject": "Biologia",
+          "topicId": "bio_biotecnologia",
+          "topic": "Biotecnologia",
+          "subtopics": [
+            "Biotecnologia"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Inferir identidade genética da descendência de lobos editados e clonados.",
+          "rationale": "A classificação decorre de identificar a espécie do núcleo doador, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar a espécie do núcleo doador.",
+            "Relacionar edição nuclear e herança das alterações."
+          ],
+          "trap": "Atribuir a espécie dos filhotes ao óvulo receptor.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "58",
+          "page": 26,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: cosmologia"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar a expectativa de resolver divergências sobre expansão cósmica com James Webb.",
+          "rationale": "A alternativa depende de localizar e interpretar informação do texto em inglês, sem exigir cálculo ou conhecimento científico externo.",
+          "strategy": [
+            "Localizar conflicting expansion rates no início.",
+            "Relacionar precisão observacional e constante de Hubble."
+          ],
+          "trap": "Transformar expectativa de esclarecimento em confirmação já obtida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "59",
+          "page": 26,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: metodologia científica"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_experimento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Caracterizar a comparação entre dados observacionais e previsões na pesquisa de Riess.",
+          "rationale": "A alternativa depende de localizar e interpretar informação do texto em inglês, sem exigir cálculo ou conhecimento científico externo.",
+          "strategy": [
+            "Localizar measured e theoretical prediction.",
+            "Reconhecer confronto de observação e modelo."
+          ],
+          "trap": "Supor uso exclusivo dos dados do Webb.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "60",
+          "page": 27,
+          "subject": "Física",
+          "topicId": "fis_gravitacao_circular",
+          "topic": "Gravitação e Movimento Circular",
+          "subtopics": [
+            "Gravitação Universal"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Estimar razão entre densidades de buraco negro e Sol com mesma massa.",
+          "rationale": "A classificação decorre de calcular o raio de Schwarzschild com os dados, operação central para resolver este comando.",
+          "strategy": [
+            "Calcular o raio de Schwarzschild com os dados.",
+            "Elevar ao cubo a razão inversa entre raios."
+          ],
+          "trap": "Usar a razão dos raios sem o cubo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "61",
+          "page": 27,
+          "subject": "Física",
+          "topicId": "fis_fisica_moderna",
+          "topic": "Física Moderna",
+          "subtopics": [
+            "Efeito Fotoelétrico"
+          ],
+          "skills": [
+            "modelagem",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar como aumentar a energia cinética dos elétrons emitidos por luz.",
+          "rationale": "A classificação decorre de escrever energia cinética como hf menos função trabalho, operação central para resolver este comando.",
+          "strategy": [
+            "Escrever energia cinética como hf menos função trabalho.",
+            "Identificar o efeito de aumentar frequência."
+          ],
+          "trap": "Confundir maior intensidade com maior energia por fóton.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "62",
+          "page": 27,
+          "subject": "Química",
+          "topicId": "qui_termoquimica",
+          "topic": "Termoquímica",
+          "subtopics": [
+            "Reações Exotérmicas e Endotérmicas"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_cinetica"
+          ],
+          "summary": "Explicar o caráter autossustentável da decomposição de clorato em máscaras de oxigênio.",
+          "rationale": "A classificação decorre de separar energia de ativação e calor da reação, operação central para resolver este comando.",
+          "strategy": [
+            "Separar energia de ativação e calor da reação.",
+            "Relacionar liberação térmica à manutenção da temperatura."
+          ],
+          "trap": "Classificar como endotérmica porque necessita ignição.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "63",
+          "page": 27,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Cálculos Estequiométricos"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular massa de clorato necessária para fornecer oxigênio respiratório durante quinze minutos.",
+          "rationale": "A classificação decorre de calcular volume e mols de oxigênio consumido, operação central para resolver este comando.",
+          "strategy": [
+            "Calcular volume e mols de oxigênio consumido.",
+            "Balancear a decomposição e obter massa de clorato."
+          ],
+          "trap": "Adotar proporção molar um para um entre sal e oxigênio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "64",
+          "page": 28,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Mutações Gênicas"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar o surgimento de mutações durante replicação do vírus da gripe aviária.",
+          "rationale": "O comando pergunta quando surgem mutações genéticas; seleção e infecção viral contextualizam a origem dos erros.",
+          "strategy": [
+            "Localizar a produção de novas unidades virais.",
+            "Distinguir surgimento aleatório e vantagem seletiva posterior."
+          ],
+          "trap": "Atribuir mutação à necessidade de infectar humanos.",
+          "confidence": "medium",
+          "reviewNote": "Comando cobra origem das mutações; contexto viral e seleção registrados como secundários.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "65",
+          "page": 28,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Sangue e Imunologia"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar proteção indireta de pessoas não vacinadas contra dengue pela cobertura populacional.",
+          "rationale": "A classificação decorre de distinguir imunização individual e redução de circulação, operação central para resolver este comando.",
+          "strategy": [
+            "Distinguir imunização individual e redução de circulação.",
+            "Relacionar alta cobertura a menor risco de epidemias."
+          ],
+          "trap": "Supor transferência de anticorpos pelo contato com vacinados.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "66",
+          "page": 28,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: fisiologia do exercício"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compreender os resultados proteômicos da memória muscular após interrupção do treinamento.",
+          "rationale": "A alternativa depende de localizar e interpretar informação do texto em inglês, sem exigir cálculo ou conhecimento científico externo.",
+          "strategy": [
+            "Separar os dois perfis de proteínas apresentados.",
+            "Reconhecer alterações quantitativas após treino e pausa."
+          ],
+          "trap": "Confundir epigenética com mudança do código genético.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "67",
+          "page": 29,
+          "subject": "Química",
+          "topicId": "qui_modelos_atomicos",
+          "topic": "Modelos Atômicos e Estrutura do Átomo",
+          "subtopics": [
+            "Isótopos"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar múltiplos sinais de massa de uma espécie molecular quimicamente pura.",
+          "rationale": "A classificação decorre de fixar a mesma carga para todos os sinais, operação central para resolver este comando.",
+          "strategy": [
+            "Fixar a mesma carga para todos os sinais.",
+            "Relacionar picos adicionais a isótopos mais pesados."
+          ],
+          "trap": "Tratar cada pico como impureza química.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "68",
+          "page": 29,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: The Human Brain"
+          ],
+          "skills": [
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar a integração corporal dos receptores gustativos descrita em texto científico.",
+          "rationale": "A alternativa depende de localizar e interpretar informação do texto em inglês, sem exigir cálculo ou conhecimento científico externo.",
+          "strategy": [
+            "Localizar receptores na língua e em outros órgãos.",
+            "Reconhecer a comunicação desses sensores com o cérebro."
+          ],
+          "trap": "Manter o mapa de sabores exclusivos da língua.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "69",
+          "page": 30,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: leitura de pesquisa"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Distinguir limiares de sensibilidade e exclusividade gustativa na interpretação do estudo de Hanig.",
+          "rationale": "A alternativa depende de localizar e interpretar informação do texto em inglês, sem exigir cálculo ou conhecimento científico externo.",
+          "strategy": [
+            "Identificar o objetivo original da medição.",
+            "Contrapor sensibilidade relativa e segregação de sabores."
+          ],
+          "trap": "Atribuir ao estudo a interpretação equivocada posterior.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "70",
+          "page": 30,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Sistemas Sensoriais: Visão e Audição"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar transdução gustativa por receptores celulares e transmissão nervosa ao cérebro.",
+          "rationale": "A classificação decorre de identificar interação entre molécula alimentar e receptor, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar interação entre molécula alimentar e receptor.",
+            "Relacionar ativação celular e potenciais de ação."
+          ],
+          "trap": "Substituir transmissão nervosa por impulso hormonal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "71",
+          "page": 30,
+          "subject": "Física",
+          "topicId": "fis_calorimetria",
+          "topic": "Calorimetria",
+          "subtopics": [
+            "Calor Sensível"
+          ],
+          "skills": [
+            "analise_imagem",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Ordenar calor recebido por clara e gema em quatro métodos de cozimento.",
+          "rationale": "A classificação decorre de ler temperaturas finais de cada componente na figura, operação central para resolver este comando.",
+          "strategy": [
+            "Ler temperaturas finais de cada componente na figura.",
+            "Somar mcΔT de clara e gema em cada método."
+          ],
+          "trap": "Ordenar métodos apenas pela temperatura da gema.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "72",
+          "page": 31,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "Queda Livre"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular altura mínima de despejo de água para atingir velocidade desejada.",
+          "rationale": "A classificação decorre de usar v²=2gΔh para o trecho de queda, operação central para resolver este comando.",
+          "strategy": [
+            "Usar v²=2gΔh para o trecho de queda.",
+            "Somar altura da lâmina à queda calculada."
+          ],
+          "trap": "Tomar D como queda efetiva e esquecer H.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "73",
+          "page": 31,
+          "subject": "Física",
+          "topicId": "fis_estatica",
+          "topic": "Estática dos Corpos Sólidos e dos Fluidos",
+          "subtopics": [
+            "Equilíbrio Estável"
+          ],
+          "skills": [
+            "analise_imagem",
+            "representacao_espacial",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer equilíbrio estável de colheres sob pequenos deslocamentos indicados por setas.",
+          "rationale": "A classificação decorre de considerar cada direção de perturbação mostrada, operação central para resolver este comando.",
+          "strategy": [
+            "Considerar cada direção de perturbação mostrada.",
+            "Verificar se o centro de massa tende a retornar."
+          ],
+          "trap": "Julgar estabilidade ignorando a direção das setas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "74",
+          "page": 32,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Transformações de Gráficos"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "modelagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer translações reflexões e mudanças de escala entre gráficos de funções.",
+          "rationale": "A classificação decorre de comparar vértices e abertura das curvas, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar vértices e abertura das curvas.",
+            "Traduzir deslocamentos horizontais e verticais em fórmulas."
+          ],
+          "trap": "Inverter o sinal da translação dentro do argumento.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "75",
+          "page": 32,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "Movimento Uniformemente Variado"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Selecionar gráfico altura-tempo de uma bolinha em queda e rebote vertical.",
+          "rationale": "A classificação decorre de identificar aceleração gravitacional constante entre impactos, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar aceleração gravitacional constante entre impactos.",
+            "Escolher arcos côncavos para baixo e reversão brusca no chão."
+          ],
+          "trap": "Representar movimento por trechos lineares.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "76",
+          "page": 33,
+          "subject": "Física",
+          "topicId": "fis_ondulatoria",
+          "topic": "Ondulatória",
+          "subtopics": [
+            "Intensidade Sonora"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular razão de intensidades a partir dos níveis de um audiograma.",
+          "rationale": "A classificação decorre de ler decibéis em 8000 e 500 Hz, operação central para resolver este comando.",
+          "strategy": [
+            "Ler decibéis em 8000 e 500 Hz.",
+            "Subtrair níveis e aplicar potência de dez."
+          ],
+          "trap": "Dividir valores em decibéis diretamente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "77",
+          "page": 33,
+          "subject": "Física",
+          "topicId": "fis_ondas_fundamentos",
+          "topic": "Fundamentos de Ondas e Oscilações",
+          "subtopics": [
+            "Equação Fundamental da Ondulatória"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Encontrar comprimento de onda correspondente à melhor resposta auditiva no audiograma.",
+          "rationale": "A classificação decorre de localizar menor nível necessário para audição, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar menor nível necessário para audição.",
+            "Calcular lambda=v/f e converter para centímetros."
+          ],
+          "trap": "Escolher maior valor de decibéis no eixo invertido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "78",
+          "page": 33,
+          "subject": "Biologia",
+          "topicId": "bio_estrutura_fisio_celular",
+          "topic": "Estrutura e Fisiologia Celular",
+          "subtopics": [
+            "Origem da Vida e as Primeiras Células"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar evidência molecular da origem endossimbiótica das mitocôndrias em células eucarióticas.",
+          "rationale": "A classificação decorre de comparar características de organelas e bactérias, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar características de organelas e bactérias.",
+            "Reconhecer DNA circular mitocondrial como evidência."
+          ],
+          "trap": "Associar membrana nuclear dupla à endossimbiose mitocondrial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "79",
+          "page": 34,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: respostas vegetais"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_experimento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compreender a descoberta de defesa química foliar no experimento de Rhoades.",
+          "rationale": "A alternativa depende de localizar e interpretar informação do texto em inglês, sem exigir cálculo ou conhecimento científico externo.",
+          "strategy": [
+            "Localizar a alteração química nas folhas.",
+            "Relacionar mudança foliar e mortalidade das lagartas."
+          ],
+          "trap": "Atribuir o resultado apenas à fertilidade do solo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "80",
+          "page": 34,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Text Comprehension: mimetismo vegetal"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_experimento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar a questão científica aberta sobre mimetismo visual de uma vinha chilena.",
+          "rationale": "A alternativa depende de localizar e interpretar informação do texto em inglês, sem exigir cálculo ou conhecimento científico externo.",
+          "strategy": [
+            "Localizar o mecanismo declarado desconhecido.",
+            "Relacionar a dúvida à obtenção de informação sobre plantas vizinhas."
+          ],
+          "trap": "Substituir mimetismo visual por dependência de polinizadores.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "81",
+          "page": 34,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Interações Intermoleculares"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar volatilidade polaridade e meio de transporte de sinais químicos vegetais.",
+          "rationale": "A classificação decorre de distinguir transporte pelo ar e pela água do solo, operação central para resolver este comando.",
+          "strategy": [
+            "Distinguir transporte pelo ar e pela água do solo.",
+            "Relacionar baixa polaridade a maior volatilidade relativa."
+          ],
+          "trap": "Supor que apolaridade favorece dissolução aquosa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "82",
+          "page": 35,
+          "subject": "Química",
+          "topicId": "qui_cinetica",
+          "topic": "Cinética Química",
+          "subtopics": [
+            "Velocidade de Dissolução"
+          ],
+          "skills": [
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar redução da lixiviação por fertilizantes vítreos de liberação lenta.",
+          "rationale": "A classificação decorre de comparar ritmos de dissolução e absorção pelas raízes, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar ritmos de dissolução e absorção pelas raízes.",
+            "Relacionar liberação gradual a menor perda para aquíferos."
+          ],
+          "trap": "Confundir fertilizante vítreo com vidro insolúvel comum.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "83",
+          "page": 35,
+          "subject": "Química",
+          "topicId": "qui_solucoes",
+          "topic": "Soluções",
+          "subtopics": [
+            "Concentração Molar"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular molaridade de fosfato liberado pela dissolução constante de vidro fertilizante.",
+          "rationale": "A classificação decorre de multiplicar taxa de dissolução por cem horas, operação central para resolver este comando.",
+          "strategy": [
+            "Multiplicar taxa de dissolução por cem horas.",
+            "Aplicar fração de fosfato e converter massa em mols."
+          ],
+          "trap": "Usar massa total do vidro como massa de fosfato.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "84",
+          "page": 35,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_vegetal",
+          "topic": "Fisiologia Vegetal",
+          "subtopics": [
+            "Traqueófitas: Transpiração e Reposição Rápida de Água"
+          ],
+          "skills": [
+            "analise_imagem",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_estrutura_fisio_celular"
+          ],
+          "summary": "Relacionar fechamento de estômatos a alterações de solutos e turgescência celular.",
+          "rationale": "A classificação decorre de identificar o sentido de fechamento mostrado por Z, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar o sentido de fechamento mostrado por Z.",
+            "Relacionar perda de solutos à saída de água."
+          ],
+          "trap": "Associar fechamento a aumento do turgor.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "85",
+          "page": 36,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Competição e sobreposição de nichos"
+          ],
+          "skills": [
+            "analise_imagem",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar região de sobreposição de nichos no uso compartilhado de recursos.",
+          "rationale": "A classificação decorre de identificar área comum dos dois nichos, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar área comum dos dois nichos.",
+            "Relacionar uso do recurso a competição intra e interespecífica."
+          ],
+          "trap": "Confundir nicho ecológico com habitat físico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "86",
+          "page": 36,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Respiração dos invertebrados"
+          ],
+          "skills": [
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar respiração cutânea traqueal e dependência de umidade em invertebrados terrestres.",
+          "rationale": "A classificação decorre de associar minhocas besouros e crustáceos a seus sistemas, operação central para resolver este comando.",
+          "strategy": [
+            "Associar minhocas besouros e crustáceos a seus sistemas.",
+            "Distinguir estruturas respiratórias e condições ambientais."
+          ],
+          "trap": "Atribuir traqueias igualmente a insetos e crustáceos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "87",
+          "page": 36,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Literatura Lusófona Contemporânea"
+          ],
+          "skills": [
+            "analise_literaria"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar a indiferença da natureza ao passado criminoso de Celestino.",
+          "rationale": "A classificação decorre de localizar ausência de julgamento pelas plantas, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar ausência de julgamento pelas plantas.",
+            "Distinguir cuidado humano e reciprocidade moral imaginada."
+          ],
+          "trap": "Ler florescimento como perdão dos crimes do jardineiro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "88",
+          "page": 36,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Brasil Império: Segundo Reinado (1840-1889)"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhecer expansão do tráfico interno após proibição do tráfico atlântico de escravizados.",
+          "rationale": "A classificação decorre de distinguir proibição do tráfico e abolição da escravidão, operação central para resolver este comando.",
+          "strategy": [
+            "Distinguir proibição do tráfico e abolição da escravidão.",
+            "Relacionar demanda de trabalho à redistribuição interprovincial."
+          ],
+          "trap": "Supor abolição imediata em 1850.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "89",
+          "page": 37,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Prosa Brasileira Contemporânea"
+          ],
+          "skills": [
+            "analise_literaria",
+            "leitura_fontes_historicas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar sobrenome compartilhado como memória de exploração e reivindicação em Conceição Evaristo.",
+          "rationale": "A classificação decorre de relacionar origem do sobrenome e riqueza das famílias, operação central para resolver este comando.",
+          "strategy": [
+            "Relacionar origem do sobrenome e riqueza das famílias.",
+            "Identificar enfrentamento simbólico dos descendentes escravizados."
+          ],
+          "trap": "Inferir igualdade econômica pela coincidência do sobrenome.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "90",
+          "page": 37,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Prosa Brasileira Contemporânea"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar a masculinidade estereotipada de Fio Jasmim nas relações com mulheres.",
+          "rationale": "A classificação decorre de observar oposição entre esposa santa e outras mulheres, operação central para resolver este comando.",
+          "strategy": [
+            "Observar oposição entre esposa santa e outras mulheres.",
+            "Relacionar discurso íntimo aos padrões sociais de gênero."
+          ],
+          "trap": "Confundir inquietação amorosa com superação do machismo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        }
+      ]
+    },
+    {
+      "id": "fuvest-2026-f2-d1",
+      "phase": "2a-dia1",
+      "version": "A",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-prova.pdf",
+      "sha256": "1a2e017b8a3558da8e797cb61b5882d17165759c98bf59042c49a3644fc300ce",
+      "pages": 16,
+      "bytes": 2764976,
+      "answerKeyUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia1-respostas-esperadas.pdf",
+      "answerKeySha256": "5968ddb76ff51c26da32c58236341776423eaab4c0b5b10bc7a8445c45b49b66",
+      "expectedQuestions": 11,
+      "questions": [
+        {
+          "number": "P01",
+          "page": 2,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "A Estética Romântica: Poesia"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_texto"
+          ],
+          "summary": "Relacionar metáforas cósmicas e ideais abolicionistas na poesia de Narcisa Amália.",
+          "rationale": "A classificação decorre de comparar elementos cósmicos de Sagan e do poema, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar elementos cósmicos de Sagan e do poema.",
+            "Relacionar imagens poéticas à fuga do sofrimento e fraternidade."
+          ],
+          "trap": "Limitar a interpretação aos nomes literais dos astros.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P02",
+          "page": 2,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Gêneros Textuais"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar estratégias de divulgação científica e comercialização de dados num artigo.",
+          "rationale": "A classificação decorre de identificar analogias interlocução e linguagem cotidiana, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar analogias interlocução e linguagem cotidiana.",
+            "Explicar como cookies produzem perfis comercializáveis."
+          ],
+          "trap": "Confundir simples presença na internet com consentimento à venda.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P03",
+          "page": 4,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Prosa Brasileira Contemporânea"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar memória testemunho e efeitos narrativos em Telles e Conceição Evaristo.",
+          "rationale": "A classificação decorre de identificar quem lembra e quem testemunha nos romances, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar quem lembra e quem testemunha nos romances.",
+            "Contrapor memória como tormento e como missão narrativa."
+          ],
+          "trap": "Tratar memória como recordação neutra sem consequências.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P04",
+          "page": 4,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Literatura Lusófona Contemporânea"
+          ],
+          "skills": [
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar violência juvenil isolamento e espaços simbólicos na velhice de Celestino.",
+          "rationale": "A classificação decorre de contrastar reação à mortandade e evocação na casa, operação central para resolver este comando.",
+          "strategy": [
+            "Contrastar reação à mortandade e evocação na casa.",
+            "Relacionar porão casa e aprisionamento na consciência."
+          ],
+          "trap": "Afirmar redenção moral completa sem apoio nos excertos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P05",
+          "page": 6,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "João Cabral de Melo Neto"
+          ],
+          "skills": [
+            "analise_literaria",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [
+            "Português"
+          ],
+          "relatedTopicIds": [
+            "por_norma_culta"
+          ],
+          "summary": "Relacionar seleção poética e neologismos à metáfora de catar feijão.",
+          "rationale": "A leitura metapoética da comparação estrutura a questão; a formação dos neologismos acrescenta uma operação morfológica secundária.",
+          "strategy": [
+            "Comparar valor da pedra nas duas atividades.",
+            "Reconhecer troca de sufixos em fluviante e flutual."
+          ],
+          "trap": "Atribuir o mesmo valor negativo à pedra no poema.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P06",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Gêneros não Verbais: Fundamentos de Leitura"
+          ],
+          "skills": [
+            "analise_imagem",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar fotografia como memória social e o neologismo artistismo em entrevista.",
+          "rationale": "Exige interpretar argumento da entrevista e inferir significado contextual; não requer história especializada da fotografia.",
+          "strategy": [
+            "Relacionar Serra Pelada ao registro de realidade histórica.",
+            "Inferir o sentido crítico de elaboração artificial em artistismo."
+          ],
+          "trap": "Equiparar fotografia documental a qualquer imagem criada por IA.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P07",
+          "page": 8,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Elementos da Narrativa"
+          ],
+          "skills": [
+            "analise_literaria",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar papel do cortiço e da educação na transformação de Martha.",
+          "rationale": "A classificação decorre de comparar permanência e saída do espaço coletivo, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar permanência e saída do espaço coletivo.",
+            "Relacionar estudo emprego e mobilidade social da protagonista."
+          ],
+          "trap": "Transferir mecanicamente o determinismo de O cortiço para Martha.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P08",
+          "page": 8,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Educação feminina em Opúsculo humanitário"
+          ],
+          "skills": [
+            "analise_imagem",
+            "analise_literaria",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [
+            "História"
+          ],
+          "relatedTopicIds": [
+            "his_brasil_imperio"
+          ],
+          "summary": "Relacionar imagens escolares oitocentistas à crítica educacional de Nísia Floresta.",
+          "rationale": "A comparação das imagens testa a leitura da defesa educacional em Opúsculo humanitário, articulada à sociedade oitocentista.",
+          "strategy": [
+            "Observar gênero atividades e composição étnica nas imagens.",
+            "Comparar segregação escolar e defesa da educação igualitária."
+          ],
+          "trap": "Interpretar aula feminina de costura como plena igualdade educacional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P09",
+          "page": 10,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Figuras de Linguagem"
+          ],
+          "skills": [
+            "analise_linguistica",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar generalizações e expressões idiomáticas numa crônica sobre polarização cotidiana.",
+          "rationale": "A classificação decorre de relacionar todo mundo às bolhas de opinião, operação central para resolver este comando.",
+          "strategy": [
+            "Relacionar todo mundo às bolhas de opinião.",
+            "Explicar cumprir tabela e encher linguiça no contexto."
+          ],
+          "trap": "Interpretar as expressões como descrições literais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "P10",
+          "page": 10,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Leitura de Textos Cômicos"
+          ],
+          "skills": [
+            "analise_imagem",
+            "analise_linguistica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar figuras conotativas em charge sobre pecuária desmatamento e crise climática.",
+          "rationale": "A classificação decorre de comparar tamanho do bovino floresta e onça, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar tamanho do bovino floresta e onça.",
+            "Associar hipérbole metonímia e metáfora à crítica."
+          ],
+          "trap": "Ignorar que o bovino representa a atividade pecuária inteira.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "R",
+          "page": 13,
+          "subject": "Redação",
+          "topicId": null,
+          "topic": "Produção textual",
+          "subtopics": [
+            "Perdão, condições e limites",
+            "Dissertação argumentativa",
+            "Carta a personagem hipotética"
+          ],
+          "skills": [
+            "producao_textual",
+            "argumentacao",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "por_red_fundamentos",
+            "por_red_argumentacao",
+            "por_red_repertorio"
+          ],
+          "summary": "Produzir dissertação ou carta argumentando sobre limites e condições do perdão.",
+          "rationale": "O candidato deve produzir um gênero escolhido e argumentar sobre perdão, apropriando-se criticamente da coletânea.",
+          "strategy": [
+            "Escolher uma proposta e planejar destinatário ou tese.",
+            "Articular coletânea razões e estrutura do gênero escolhido."
+          ],
+          "trap": "Misturar os dois gêneros ou assinar a carta fora de Nome.",
+          "confidence": "high",
+          "reviewNote": "Duas propostas alternativas pertencem ao mesmo registro: dissertação argumentativa ou carta. Propostas na página 13; coletânea começa na página 12.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        }
+      ]
+    },
+    {
+      "id": "fuvest-2026-f2-d2",
+      "phase": "2a-dia2",
+      "version": "B-W — banco completo B/F/G/H/M/Q",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest2026-fase2-dia2-prova.pdf",
+      "sha256": "77500abdde9cef9922669412e375665a1a271707f6d53299596feb6ff5917f05",
+      "pages": 43,
+      "bytes": 7038275,
+      "answerKeyUrl": null,
+      "answerKeySha256": null,
+      "expectedQuestions": 36,
+      "questions": [
+        {
+          "number": "B01",
+          "page": 3,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Termorregulação animal"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_ecologia"
+          ],
+          "summary": "Relacionar aquecimento oceânico e diferenças fisiológicas entre animais ectotérmicos e endotérmicos.",
+          "rationale": "A classificação decorre de classificar os animais citados quanto à termorregulação, operação central para resolver este comando.",
+          "strategy": [
+            "Classificar os animais citados quanto à termorregulação.",
+            "Explicar dependência térmica e uma consequência ecossistêmica."
+          ],
+          "trap": "Confundir animais marinhos com um único tipo de termorregulação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B02",
+          "page": 3,
+          "subject": "Biologia",
+          "topicId": "bio_estrutura_fisio_celular",
+          "topic": "Estrutura e Fisiologia Celular",
+          "subtopics": [
+            "Membranas Celulares",
+            "Citoplasma: Estrutura e Componentes II"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [
+            "Química"
+          ],
+          "relatedTopicIds": [
+            "qui_organica_fundamentos",
+            "qui_polaridade_geometria"
+          ],
+          "summary": "Explicar toxicidade de hidrocarbonetos por lipossolubilidade permeabilidade e detoxificação celular.",
+          "rationale": "A classificação decorre de identificar carbono hidrogênio e afinidade pela bicamada, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar carbono hidrogênio e afinidade pela bicamada.",
+            "Associar detoxificação a peroxissomos ou retículo liso e fígado."
+          ],
+          "trap": "Indicar mitocôndrias como principal local de detoxificação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B03",
+          "page": 5,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Biomas Brasileiros"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [
+            "Geografia"
+          ],
+          "relatedTopicIds": [
+            "geo_climatologia_socioambiental"
+          ],
+          "summary": "Relacionar calendário agrícola do milho climograma e adaptações à seca na caatinga.",
+          "rationale": "As adaptações à caatinga e a viabilidade ecológica do cultivo articulam o climograma e os efeitos da mudança climática.",
+          "strategy": [
+            "Comparar meses de plantio e colheita às chuvas.",
+            "Relacionar adaptações xeromórficas e mudanças na precipitação."
+          ],
+          "trap": "Supor irrigação suficiente independentemente do calendário climático.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B04",
+          "page": 5,
+          "subject": "Biologia",
+          "topicId": "bio_metabolismo_energetico",
+          "topic": "Metabolismo Energético",
+          "subtopics": [
+            "Bioenergética: Fotossíntese e Quimiossíntese"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar curvas de fotossíntese respiração e pontos de compensação e saturação luminosa.",
+          "rationale": "A classificação decorre de identificar a curva crescente e a respiração constante, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar a curva crescente e a respiração constante.",
+            "Distinguir compensação luminosa e saturação da fotossíntese."
+          ],
+          "trap": "Supor que plantas deixam de respirar sob iluminação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B05",
+          "page": 7,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Fisiologia da Coordenação Nervosa I"
+          ],
+          "skills": [
+            "analise_imagem",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar neurônio e componentes sinápticos associados à dopamina na doença de Parkinson.",
+          "rationale": "A classificação decorre de reconhecer terminal pré-sináptico vesículas e fenda, operação central para resolver este comando.",
+          "strategy": [
+            "Reconhecer terminal pré-sináptico vesículas e fenda.",
+            "Explicar neurotransmissão e identificar os números do esquema."
+          ],
+          "trap": "Confundir neurotransmissor com o impulso elétrico em si.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "B06",
+          "page": 7,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Artrópodes: Insetos, Crustáceos e Miriápodes"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_botanica"
+          ],
+          "summary": "Comparar crescimento contínuo e descontínuo associando ecdise e quitina em artrópodes.",
+          "rationale": "A classificação decorre de associar curvas a crescimento contínuo e mudas, operação central para resolver este comando.",
+          "strategy": [
+            "Associar curvas a crescimento contínuo e mudas.",
+            "Localizar atuação hormonal e comparar exoesqueleto e parede fúngica."
+          ],
+          "trap": "Supor que quitina está na membrana celular dos fungos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F01",
+          "page": 10,
+          "subject": "Física",
+          "topicId": "fis_leis_newton",
+          "topic": "Leis de Newton e Dinâmica do Movimento Retilíneo",
+          "subtopics": [
+            "Forças de Resistência e Velocidade Terminal"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar lançamento vertical de pipoca e velocidade terminal sob arrasto quadrático.",
+          "rationale": "A classificação decorre de ler deslocamento máximo como diferença entre posições, operação central para resolver este comando.",
+          "strategy": [
+            "Ler deslocamento máximo como diferença entre posições.",
+            "Comparar queda ideal e equilíbrio entre peso e arrasto."
+          ],
+          "trap": "Usar posição máxima como deslocamento sem descontar posição inicial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F02",
+          "page": 10,
+          "subject": "Física",
+          "topicId": "fis_eletrostatica",
+          "topic": "Eletrostática e Campo Elétrico",
+          "subtopics": [
+            "Força Elétrica e Trabalho do Campo"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular penetração força elétrica e desaceleração energética de uma partícula alfa.",
+          "rationale": "A classificação decorre de converter keV micrômetros e milímetros de modo consistente, operação central para resolver este comando.",
+          "strategy": [
+            "Converter keV micrômetros e milímetros de modo consistente.",
+            "Usar carga 2e em F=qE e trabalho qEd."
+          ],
+          "trap": "Tomar a carga da partícula alfa como e.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F03",
+          "page": 12,
+          "subject": "Física",
+          "topicId": "fis_termodinamica_gases",
+          "topic": "Termodinâmica dos Gases",
+          "subtopics": [
+            "Transformações Termodinâmicas e Máquinas Térmicas"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "calculo",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpretar ciclo de Stirling e energia solar requerida por um gerador.",
+          "rationale": "A classificação decorre de identificar isotermas e isócoras no diagrama pV, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar isotermas e isócoras no diagrama pV.",
+            "Aplicar primeira lei e rendimento à energia incidente."
+          ],
+          "trap": "Confundir energia elétrica útil com energia solar recebida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F04",
+          "page": 12,
+          "subject": "Física",
+          "topicId": "fis_dinamica_impulsiva",
+          "topic": "Dinâmica Impulsiva",
+          "subtopics": [
+            "Colisões Mecânicas"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_energia"
+          ],
+          "summary": "Combinar energia e conservação do momento no resgate pendular do Homem-Aranha.",
+          "rationale": "A classificação decorre de calcular velocidade antes do encontro pela queda de vinte metros, operação central para resolver este comando.",
+          "strategy": [
+            "Calcular velocidade antes do encontro pela queda de vinte metros.",
+            "Conservar momento na colisão e energia no novo arco."
+          ],
+          "trap": "Conservar energia mecânica durante a colisão inelástica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F05",
+          "page": 14,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Resistores e Associação de Resistores"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar resistências e tensões de circuito com fusível resistor e lâmpada.",
+          "rationale": "A classificação decorre de ler resistências pelas curvas tensão-corrente, operação central para resolver este comando.",
+          "strategy": [
+            "Ler resistências pelas curvas tensão-corrente.",
+            "Usar corrente do fusível e diferença para tensão no paralelo."
+          ],
+          "trap": "Usar a corrente total igualmente em cada ramo paralelo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "F06",
+          "page": 14,
+          "subject": "Física",
+          "topicId": "fis_fisica_moderna",
+          "topic": "Física Moderna",
+          "subtopics": [
+            "Fótons e Energia da Radiação"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "fis_calorimetria"
+          ],
+          "summary": "Relacionar irradiância solar aquecimento da água e número de fótons vermelhos incidentes.",
+          "rationale": "A conversão entre energia luminosa e fótons fornece o eixo físico; aquecimento da água exige calorimetria complementar.",
+          "strategy": [
+            "Aplicar a definição de irradiância fornecida no enunciado.",
+            "Calcular calor absorvido e dividir energia incidente por hc/lambda."
+          ],
+          "trap": "Aplicar fator de absorção ao número de fótons incidentes.",
+          "confidence": "medium",
+          "reviewNote": "A definição operacional de irradiância do próprio enunciado orienta os cálculos; fotões e calorimetria compartilham a questão.",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G01",
+          "page": 17,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Aquecimento Global e Elevação do Nível do Mar"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar submersão de Tuvalu impactos sociais e respostas à mudança climática.",
+          "rationale": "A classificação decorre de comparar áreas emersas nas três projeções, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar áreas emersas nas três projeções.",
+            "Relacionar avanço marinho a moradias água doce e medidas públicas."
+          ],
+          "trap": "Confundir adaptação local com interrupção imediata da elevação global.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G02",
+          "page": 17,
+          "subject": "Geografia",
+          "topicId": "geo_hidrogeografia",
+          "topic": "Hidrogeografia",
+          "subtopics": [
+            "Saneamento Básico e Poluição das Águas"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [
+            "Biologia"
+          ],
+          "relatedTopicIds": [
+            "bio_ecologia"
+          ],
+          "summary": "Analisar função ambiental e distribuição populacional das estações paulistas de tratamento de esgoto.",
+          "rationale": "A classificação decorre de identificar finalidade da ETE e classes da legenda, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar finalidade da ETE e classes da legenda.",
+            "Relacionar tratamento a oxigenação saúde e concentração metropolitana."
+          ],
+          "trap": "Equiparar número de estações ao número de habitantes atendidos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G03",
+          "page": 19,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Manguezais e Serviços Ecossistêmicos"
+          ],
+          "skills": [
+            "analise_imagem",
+            "inferencia_causal",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identificar manguezal ameaças humanas e serviços ecossistêmicos de proteção costeira.",
+          "rationale": "A classificação decorre de reconhecer localização tropical e raízes do mangue, operação central para resolver este comando.",
+          "strategy": [
+            "Reconhecer localização tropical e raízes do mangue.",
+            "Explicar ameaças e dois serviços como carbono e proteção costeira."
+          ],
+          "trap": "Confundir ambiente estuarino com vegetação de praia arenosa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G04",
+          "page": 19,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Tecnologia Digital e Demanda Energética"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar expansão dos centros de dados impactos ambientais e eficiência energética.",
+          "rationale": "A classificação decorre de ler projeção de consumo e composição tecnológica, operação central para resolver este comando.",
+          "strategy": [
+            "Ler projeção de consumo e composição tecnológica.",
+            "Relacionar demanda digital a refrigeração eficiência e sustentabilidade."
+          ],
+          "trap": "Supor que trocar a fonte energética reduz necessariamente a demanda.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G05",
+          "page": 21,
+          "subject": "Geografia",
+          "topicId": "geo_cartografia",
+          "topic": "Cartografia e Fundamentos",
+          "subtopics": [
+            "Sensoriamento Remoto e Interpretação de Imagens"
+          ],
+          "skills": [
+            "analise_imagem",
+            "interpretacao_mapa",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Comparar imagens temporais de Israel e Gaza por atributos visuais e uso territorial.",
+          "rationale": "A classificação decorre de comparar cor tonalidade textura e contornos nas datas, operação central para resolver este comando.",
+          "strategy": [
+            "Comparar cor tonalidade textura e contornos nas datas.",
+            "Relacionar arranjos urbano-rurais à destruição causada por conflitos."
+          ],
+          "trap": "Tratar a alteração da paisagem como simples variação sazonal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "G06",
+          "page": 21,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Amazônia: Conflitos Territoriais"
+          ],
+          "skills": [
+            "interpretacao_mapa",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar conflitos territoriais e pressões econômicas sobre terras indígenas na Amazônia Legal.",
+          "rationale": "A classificação decorre de localizar sobreposição de terras mineração e desmatamento, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar sobreposição de terras mineração e desmatamento.",
+            "Explicar interferência ilegal e impacto socioambiental numa área concreta."
+          ],
+          "trap": "Descrever a Amazônia como território homogêneo sem localizar conflitos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H01",
+          "page": 24,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Grandes Navegações e Cultura Renascentista"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar expansão marítima coexistência de racionalidade e pensamento mágico na modernidade.",
+          "rationale": "A classificação decorre de exemplificar cálculos instrumentos e práticas de navegação, operação central para resolver este comando.",
+          "strategy": [
+            "Exemplificar cálculos instrumentos e práticas de navegação.",
+            "Contrapor expansão racional e permanência do maravilhoso."
+          ],
+          "trap": "Narrar modernização como substituição instantânea de toda crença mágica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H02",
+          "page": 24,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Brasil Império: Segundo Reinado (1840-1889)"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "interpretacao_textual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar analfabetismo clientelismo e regras do voto no Brasil imperial.",
+          "rationale": "A classificação decorre de identificar denúncia do censo na crônica de Machado, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar denúncia do censo na crônica de Machado.",
+            "Situar voto censitário antes da Lei Saraiva."
+          ],
+          "trap": "Aplicar a exigência de alfabetização de 1881 ao ano de 1876.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H03",
+          "page": 26,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "China: Socialismo e Reformas Econômicas"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Contextualizar protestos chineses de 1989 e continuidade das reformas sob controle partidário.",
+          "rationale": "A classificação decorre de identificar Praça da Paz Celestial e veteranos revolucionários, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar Praça da Paz Celestial e veteranos revolucionários.",
+            "Relacionar abertura econômica ao monopólio político do Partido."
+          ],
+          "trap": "Confundir abertura de mercado com democratização política.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H04",
+          "page": 26,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Cultura e Universidades Medievais"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisar autoridade docente transmissão do saber e autonomia das universidades medievais.",
+          "rationale": "A classificação decorre de identificar disputa de professores no relato de Abelardo, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar disputa de professores no relato de Abelardo.",
+            "Relacionar corporação universitária método escolástico e reputação."
+          ],
+          "trap": "Projetar universidade plenamente secular no século XII.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H05",
+          "page": 28,
+          "subject": "História",
+          "topicId": "his_imperialismo_guerras",
+          "topic": "Imperialismo e Guerras Mundiais",
+          "subtopics": [
+            "Crise de 1929 e Grande Depressão"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relacionar concentração fundiária mecanização e migração à Grande Depressão nos Estados Unidos.",
+          "rationale": "A classificação decorre de situar os diálogos no contexto de 1929-1930, operação central para resolver este comando.",
+          "strategy": [
+            "Situar os diálogos no contexto de 1929-1930.",
+            "Distinguir propriedade familiar arrendamento meação e salário."
+          ],
+          "trap": "Confundir transformação fundiária com simples aumento do emprego rural.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "H06",
+          "page": 28,
+          "subject": "História",
+          "topicId": "his_imperialismo_guerras",
+          "topic": "Imperialismo e Guerras Mundiais",
+          "subtopics": [
+            "Colonialismo Português na África"
+          ],
+          "skills": [
+            "leitura_fontes_historicas",
+            "comparacao_conceitual"
+          ],
+          "relatedSubjects": [
+            "Literatura"
+          ],
+          "relatedTopicIds": [
+            "por_lit_contemporanea"
+          ],
+          "summary": "Analisar dominação colonial gênero trabalho e religiosidade em Angola e Moçambique.",
+          "rationale": "A questão exige contextualização colonial de Angola e Moçambique para explicar trabalho, religião e relações de gênero.",
+          "strategy": [
+            "Situar os territórios sob colonialismo português.",
+            "Relacionar patriarcado e exploração ao sincretismo no excerto."
+          ],
+          "trap": "Descrever as sociedades como politicamente independentes no período.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M01",
+          "page": 31,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Operações com Probabilidades"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular probabilidades sequenciais de retirar letras repetidas e coloridas de ARARA.",
+          "rationale": "A classificação decorre de atualizar quantidades disponíveis após cada retirada, operação central para resolver este comando.",
+          "strategy": [
+            "Atualizar quantidades disponíveis após cada retirada.",
+            "Multiplicar probabilidades distinguindo letras e objetos coloridos."
+          ],
+          "trap": "Tratar letras iguais como distintas no item sem cores.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M02",
+          "page": 31,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Sistemas de Equações"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Modelar vendas de dois tipos de frascos e discutir consistência da arrecadação.",
+          "rationale": "A classificação decorre de escrever equações de quantidade e receita, operação central para resolver este comando.",
+          "strategy": [
+            "Escrever equações de quantidade e receita.",
+            "Resolver o sistema e testar o cenário de preços iguais."
+          ],
+          "trap": "Forçar solução para um sistema impossível.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M03",
+          "page": 33,
+          "subject": "Matemática",
+          "topicId": "mat_trigonometria",
+          "topic": "Trigonometria",
+          "subtopics": [
+            "Trigonometria no Triângulo Retângulo"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular distâncias e profundidades de objetos detectados por sonar esférico.",
+          "rationale": "A classificação decorre de identificar raio mínimo e triângulos com a horizontal, operação central para resolver este comando.",
+          "strategy": [
+            "Identificar raio mínimo e triângulos com a horizontal.",
+            "Projetar distâncias verticalmente usando seno dos ângulos."
+          ],
+          "trap": "Somar profundidade quando o objeto está acima do sonar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M04",
+          "page": 33,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Porcentagem"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "mat_teoria_numeros",
+            "mat_funcoes"
+          ],
+          "summary": "Relacionar reajuste e desconto inversos e investigar os menores percentuais inteiros.",
+          "rationale": "A classificação decorre de representar aumentos e descontos por fatores multiplicativos, operação central para resolver este comando.",
+          "strategy": [
+            "Representar aumentos e descontos por fatores multiplicativos.",
+            "Isolar y e testar condição de integralidade positiva."
+          ],
+          "trap": "Subtrair percentuais como se incidissem sobre a mesma base.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M05",
+          "page": 35,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Pirâmides"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular alturas arestas e projeção ortogonal em pirâmide inscrita num cubo.",
+          "rationale": "A classificação decorre de localizar centro da base e metade da diagonal, operação central para resolver este comando.",
+          "strategy": [
+            "Localizar centro da base e metade da diagonal.",
+            "Aplicar Pitágoras e projeção da aresta no plano indicado."
+          ],
+          "trap": "Usar metade do lado onde se exige metade da diagonal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "M06",
+          "page": 35,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Função Modular"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determinar interseções e áreas triangulares limitadas por função modular e retas horizontais.",
+          "rationale": "A classificação decorre de resolver igualdade entre módulo e nível da reta, operação central para resolver este comando.",
+          "strategy": [
+            "Resolver igualdade entre módulo e nível da reta.",
+            "Usar interceptos para obter base e altura dos triângulos."
+          ],
+          "trap": "Esquecer o ramo negativo na área simétrica final.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q01",
+          "page": 38,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Cálculos Estequiométricos"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_inorganica",
+            "qui_cinetica"
+          ],
+          "summary": "Relacionar produção de cal emissão de CO2 alcalinização e reatividade química.",
+          "rationale": "A relação quantitativa CaO/CO2 constitui o cálculo principal, complementado por alcalinização e fatores de velocidade.",
+          "strategy": [
+            "Escrever hidratação da cal e decomposição do carbonato.",
+            "Usar razão molar CaO/CO2 e discutir temperatura e catalisador."
+          ],
+          "trap": "Aplicar razão entre massas como se massas molares fossem iguais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q02",
+          "page": 38,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Interações Intermoleculares e Solubilidade"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "analise_experimento",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_equilibrio",
+            "qui_solucoes",
+            "qui_estequiometria"
+          ],
+          "summary": "Explicar extração de compostos do açafrão e calcular teor de safranal.",
+          "rationale": "A distribuição entre fases e o efeito do pH exigem interpretar polaridade e interações das estruturas orgânicas.",
+          "strategy": [
+            "Comparar grupos polares e cadeias nas três estruturas.",
+            "Relacionar ionização por base à fase aquosa e corrigir rendimento."
+          ],
+          "trap": "Esquecer que só setenta por cento foi recuperado na extração.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q03",
+          "page": 40,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Deslocamento de Equilíbrio"
+          ],
+          "skills": [
+            "representacao_espacial",
+            "modelagem",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_polaridade_geometria",
+            "qui_organica_reacoes"
+          ],
+          "summary": "Analisar reações de desinfetantes equilíbrio do hipoclorito e polaridade de cloroamina.",
+          "rationale": "A classificação decorre de escrever produtos conservando átomos e cargas, operação central para resolver este comando.",
+          "strategy": [
+            "Escrever produtos conservando átomos e cargas.",
+            "Relacionar consumo de hidróxido à liberação de cloro e geometria molecular."
+          ],
+          "trap": "Assumir NCl3 apolar por conter três ligações iguais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q04",
+          "page": 40,
+          "subject": "Química",
+          "topicId": "qui_termoquimica",
+          "topic": "Termoquímica",
+          "subtopics": [
+            "Lei de Hess e Entalpias de Reação"
+          ],
+          "skills": [
+            "interpretacao_grafico",
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcular gasto energético a partir do oxigênio e comparar combustão com produção láctica.",
+          "rationale": "A classificação decorre de ler consumo de oxigênio e convertê-lo em mols, operação central para resolver este comando.",
+          "strategy": [
+            "Ler consumo de oxigênio e convertê-lo em mols.",
+            "Usar estequiometria e entalpias de formação nos dois processos."
+          ],
+          "trap": "Esquecer o coeficiente dois do ácido láctico na entalpia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q05",
+          "page": 42,
+          "subject": "Química",
+          "topicId": "qui_eletroquimica",
+          "topic": "Eletroquímica",
+          "subtopics": [
+            "Oxirredução e Eletrólise Ígnea"
+          ],
+          "skills": [
+            "modelagem",
+            "calculo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_termoquimica",
+            "qui_estequiometria",
+            "qui_polaridade_geometria"
+          ],
+          "summary": "Relacionar oxidação de alumínio produção de hidrogênio energia e eletrólise de alumina.",
+          "rationale": "A classificação decorre de atribuir números de oxidação às espécies indicadas, operação central para resolver este comando.",
+          "strategy": [
+            "Atribuir números de oxidação às espécies indicadas.",
+            "Converter energia do etanol em hidrogênio e massa de alumínio."
+          ],
+          "trap": "Afirmar que íons presos no retículo sólido conduzem livremente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        },
+        {
+          "number": "Q06",
+          "page": 42,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Interações Intermoleculares"
+          ],
+          "skills": [
+            "comparacao_conceitual",
+            "inferencia_causal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explicar combustão incompleta e gelificação no tratamento de derramamentos de petróleo.",
+          "rationale": "A classificação decorre de associar fuligem a oxigênio insuficiente na combustão, operação central para resolver este comando.",
+          "strategy": [
+            "Associar fuligem a oxigênio insuficiente na combustão.",
+            "Distinguir interações das cadeias apolares e ligações de hidrogênio."
+          ],
+          "trap": "Supor que cadeias menores interajam mais intensamente com petróleo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": [
+            "a",
+            "b",
+            "c"
+          ]
+        }
+      ]
+    }
+  ]
+}
