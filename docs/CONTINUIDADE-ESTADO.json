@@ -2,9 +2,13 @@
   "schema_version": 1,
   "repository": "anajumorandii-eng/My-App",
   "branch": "main",
-  "source_commit": "5b3a7c68f79c4f33546cbccd56d96177170305aa",
-  "generated_at_utc": "2026-10-19T01:39:48Z",
-  "changed_files": [],
+  "source_commit": "85063ce55a7bf280ea4aea4494a3d809756b5c91",
+  "generated_at_utc": "2026-10-19T02:07:03Z",
+  "changed_files": [
+    ".github/workflows/ci.yml",
+    ".github/workflows/continuity-state.yml",
+    "scripts/test-continuity-state.py"
+  ],
   "next_session": {
     "mode": "delta-only",
     "instructions": "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
