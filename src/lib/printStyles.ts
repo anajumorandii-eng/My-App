@@ -1,5 +1,8 @@
+import { printCoverFontStyles } from './printCoverFonts';
+
 /** Scoped to the temporary print copy; screen themes cannot change paper contrast. */
-export const printStyles = `@media print {
+export const printStyles = `${printCoverFontStyles}
+@media print {
   @page { size: A4; margin: 0; }
   html, body { background: white !important; color: #263c3d !important; height: auto !important; overflow: visible !important; color-scheme: light !important; }
   body { margin: 0 !important; padding: 0 !important; }
@@ -8,16 +11,44 @@ export const printStyles = `@media print {
   [data-crivo-print-root], [data-crivo-print-root] * { box-sizing: border-box; box-shadow: none !important; text-shadow: none !important; max-height: none !important; overflow: visible !important; }
   [data-print-content], [data-print-content] * { background: transparent !important; color: #263c3d !important; }
   [data-print-content] { display: block !important; padding: 0 !important; margin: 0 !important; border: 0 !important; overflow-wrap: anywhere; }
-  [data-print-cover] { position: relative; height: 296mm; break-after: page; overflow: hidden !important; }
-  [data-print-frame] { display: block !important; position: absolute; top: 0; left: 0; width: 210mm !important; height: 297mm !important; max-width: none !important; object-fit: fill; }
-  [data-print-cover-text] { position: relative; padding: 85mm 27mm 15mm; text-align: center; overflow-wrap: anywhere; }
-  [data-print-cover-brand] { font-size: 9pt; letter-spacing: .18em; color: #145a60; margin: 0 0 10mm; }
-  [data-print-cover] h1 { font: normal 30pt/1.2 Georgia, serif; color: #145a60; margin: 0 0 9mm; }
-  [data-print-long-title] h1 { font-size: 23pt; }
-  [data-print-cover] dl { margin: 0; }
-  [data-print-cover] dl > div { margin: 0 0 4mm; }
-  [data-print-cover] dt { font: 8pt/1.3 Georgia, serif; text-transform: uppercase; letter-spacing: .08em; color: #7d633d; }
-  [data-print-cover] dd { font: 11pt/1.4 Georgia, serif; color: #263c3d; margin: 1mm 0 0; }
+  [data-print-cover] { position: relative; display: flex; flex-direction: column; height: 296mm; padding: 20mm 22mm 18mm; break-after: page; overflow: hidden !important; font-family: 'Crivo Cover Serif', Georgia, serif; }
+  [data-print-cover], [data-print-cover] * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  [data-print-cover-base] { position: absolute; inset: 0; width: 210mm; height: 296mm; }
+  [data-print-cover-header] { position: relative; flex: none; text-align: center; margin-bottom: 5mm; }
+  [data-print-cover-brand] { font: 600 20pt/1.1 'Crivo Cover Serif', Georgia, serif; letter-spacing: .32em; color: #1C3028; margin: 0 0 2mm; }
+  [data-print-cover-collection] { font: 600 8.5pt/1.4 'Crivo Cover Serif', Georgia, serif; letter-spacing: .22em; color: #3A4A42; margin: 0; }
+  [data-print-cover-text] { position: relative; display: flex; flex: 1; flex-direction: column; min-height: 0; text-align: center; overflow-wrap: anywhere; }
+  [data-print-cover-title] { flex: none; }
+  [data-print-cover-subject] { font: 700 64pt/1.05 'Crivo Cover Display', Georgia, serif; letter-spacing: .035em; text-transform: uppercase; color: #1C3028; margin: 0; }
+  [data-print-long-subject] [data-print-cover-subject] { font-size: 34pt; }
+  [data-print-cover-divider] { display: block; width: 76%; height: 4mm; margin: 2mm auto; }
+  [data-print-cover] h1 { font: 600 15.5pt/1.2 'Crivo Cover Serif', Georgia, serif; letter-spacing: .18em; text-transform: uppercase; color: #7A1F24; margin: 0; }
+  [data-print-long-title] h1 { font-size: 13pt; line-height: 1.2; letter-spacing: .03em; }
+  [data-print-cover-art] { position: relative; flex: 1; min-height: 30mm; margin: 2mm 0; overflow: hidden !important; }
+  [data-print-cover-plate] { background: #F6F2E9; position: absolute; top: 0; left: 50%; height: 100%; aspect-ratio: 4 / 5; max-width: 100%; transform: translateX(-50%); }
+  [data-print-illustration] { position: absolute; inset: 0; width: 100% !important; height: 100% !important; object-fit: contain; mix-blend-mode: multiply; mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent), linear-gradient(transparent, #000 5%, #000 95%, transparent); mask-composite: intersect; }
+  [data-print-vignette] { position: absolute; width: 28%; transform: translateX(-50%); font: italic 11pt/1.1 'Crivo Cover Serif', Georgia, serif; color: #7A1F24; margin: 0; }
+  [data-print-vignette="top_left"] { left: 15%; top: 36%; }
+  [data-print-vignette="top_right"] { left: 85%; top: 36%; }
+  [data-print-vignette="bottom_left"] { left: 15%; top: 94%; }
+  [data-print-vignette="bottom_right"] { left: 85%; top: 94%; }
+  [data-print-cover-cartouche] { position: relative; flex: none; width: 140mm; max-width: 100%; padding: 4mm 7mm; margin: 0 auto; }
+  [data-print-cartouche-frame] { position: absolute; inset: 0; width: 100%; height: 100%; }
+  [data-print-cover] dl { position: relative; display: block; margin: 0; }
+  [data-print-cover] dl > div { margin: 0 0 1.5mm; }
+  [data-print-cover] dl > div:last-child { margin-bottom: 0; }
+  [data-print-cover] dt { font: 400 6.5pt/1.1 'Crivo Cover Serif', Georgia, serif; text-transform: uppercase; letter-spacing: .08em; color: #7A1F24; }
+  [data-print-cover] dd { font: 400 10pt/1.2 'Crivo Cover Serif', Georgia, serif; color: #1C3028; margin: 1mm 0 0; }
+  [data-print-cover-field="board"] dd { font-weight: 600; font-size: 20pt; letter-spacing: .12em; }
+  [data-print-cover-field="keywords"] dt { display: none; }
+  [data-print-cover-field="keywords"] dd { color: #7A1F24; font-size: 11.5pt; letter-spacing: .05em; }
+  [data-print-cover-field="purpose"] dd { font-style: italic; font-size: 11pt; color: #3A4A42; }
+  [data-print-cover-signature] { flex: none; font: 600 8pt/1.2 'Crivo Cover Serif', Georgia, serif; letter-spacing: .24em; color: #6E5A3B; margin: 3mm 0 0; }
+  [data-print-dense-cover] [data-print-cover-subject] { font-size: 38pt; }
+  [data-print-dense-cover] h1 { font-size: 12.5pt; letter-spacing: .01em; }
+  [data-print-dense-cover] [data-print-cover-cartouche] { width: 100%; padding-top: 3mm; padding-bottom: 3mm; }
+  [data-print-dense-cover] dd { font-size: 9.5pt; }
+  [data-print-dense-cover] [data-print-cover-field="board"] dd { font-size: 15pt; }
   [data-print-toc] { min-height: 296mm; padding: 22mm 22mm 18mm; break-after: page; }
   [data-print-toc] h2 { font: normal 25pt/1.2 Georgia, serif; color: #145a60; margin: 0 0 5mm; }
   [data-print-toc] p { color: #465d5d; font-size: 10pt; margin: 0 0 10mm; }
@@ -34,7 +65,7 @@ export const printStyles = `@media print {
   [data-print-layout] > tfoot > tr > td { height: 16mm; padding: 0 !important; border: 0 !important; }
   [data-print-layout] > tbody > tr { break-inside: auto; }
   [data-print-layout] > tbody > tr > td { vertical-align: top; padding: 0 18mm !important; border: 0 !important; }
-  [data-print-brand] { position: fixed; z-index: 1; bottom: 5mm; left: 0; width: 210mm; text-align: center; font: 7pt Georgia, serif; letter-spacing: .12em; color: #466266 !important; }
+  [data-print-brand] { display: block; text-align: center; font: 7pt Georgia, serif; letter-spacing: .12em; color: #466266 !important; }
   [data-print-content] h1, [data-print-content] h2, [data-print-content] h3, [data-print-content] h4, [data-print-content] summary { font-family: Georgia, 'Times New Roman', serif !important; color: #145a60 !important; line-height: 1.25 !important; break-after: avoid; page-break-after: avoid; }
   [data-print-content] h1 { font-size: 23pt !important; margin: 0 0 6mm !important; font-weight: normal !important; }
   [data-print-content] h2 { font-size: 15.5pt !important; margin: 6mm 0 3mm !important; font-weight: normal !important; }

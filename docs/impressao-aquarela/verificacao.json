@@ -8,7 +8,7 @@
     "allSectionsAndSources": true,
     "coverOnPageOne": true,
     "contentsOnPageTwo": true,
-    "artOnlyOnCover": true,
+    "subjectIllustrationOnlyOnCover": true,
     "textInsideNormalMargins": true,
     "cleanedUp": true
   },
@@ -21,7 +21,7 @@
     "allSectionsAndSources": true,
     "coverOnPageOne": true,
     "contentsOnPageTwo": true,
-    "artOnlyOnCover": true,
+    "subjectIllustrationOnlyOnCover": true,
     "textInsideNormalMargins": true,
     "cleanedUp": true
   },
@@ -34,7 +34,7 @@
     "allSectionsAndSources": true,
     "coverOnPageOne": true,
     "contentsOnPageTwo": true,
-    "artOnlyOnCover": true,
+    "subjectIllustrationOnlyOnCover": true,
     "textInsideNormalMargins": true,
     "cleanedUp": true
   },
@@ -47,7 +47,7 @@
     "allSectionsAndSources": true,
     "coverOnPageOne": true,
     "contentsOnPageTwo": true,
-    "artOnlyOnCover": true,
+    "subjectIllustrationOnlyOnCover": true,
     "textInsideNormalMargins": true,
     "cleanedUp": true
   }
