@@ -24,6 +24,9 @@ jobs:
       # exatamente as mesmas versões que o Dockerfile de produção.
       - run: npm ci --no-audit --no-fund
 
+      - name: Testar concorrência do registro de continuidade
+        run: python scripts/test-continuity-state.py
+
       - run: npm run lint
 
       - run: npm test

@@ -7,6 +7,10 @@ on:
 permissions:
   contents: write
 
+concurrency:
+  group: continuidade-main
+  cancel-in-progress: false
+
 jobs:
   registrar-estado:
     if: github.actor != 'github-actions[bot]'
@@ -16,36 +20,57 @@ jobs:
         with:
           fetch-depth: 2
 
-      - name: Gerar instantâneo enxuto
+      - name: Gerar e gravar instantâneo da main atual
         env:
-          SOURCE_SHA: ${{ github.sha }}
-          SOURCE_REF: ${{ github.ref_name }}
-        run: |
-          mkdir -p docs
-          files_json="$(git diff-tree --no-commit-id --name-only -r "$SOURCE_SHA" | jq -Rsc 'split("\n") | map(select(length > 0))')"
-          jq -n \
-            --arg repository "$GITHUB_REPOSITORY" \
-            --arg branch "$SOURCE_REF" \
-            --arg source_commit "$SOURCE_SHA" \
-            --arg generated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
-            --argjson changed_files "$files_json" \
-            '{
-              schema_version: 1,
-              repository: $repository,
-              branch: $branch,
-              source_commit: $source_commit,
-              generated_at_utc: $generated_at,
-              changed_files: $changed_files,
-              next_session: {
-                mode: "delta-only",
-                instructions: "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
-              }
-            }' > docs/CONTINUIDADE-ESTADO.json
-
-      - name: Gravar instantâneo no repositório
+          SOURCE_REF: main
         run: |
           git config user.name "github-actions[bot]"
           git config user.email "41898282+github-actions[bot]@users.noreply.github.com"
-          git add docs/CONTINUIDADE-ESTADO.json
-          git diff --cached --quiet || git commit -m "chore: atualiza estado de continuidade"
-          git push
+          # Merges can advance main even while workflow jobs are serialized.
+          # Regenerate from the new tip after a rejected push; never force it.
+          for attempt in 1 2 3 4 5; do
+            git fetch origin main --depth=2
+            git switch --detach FETCH_HEAD
+            source_sha="$(git rev-parse HEAD)"
+            parent_sha="$(git rev-parse HEAD^1)"
+            changed_files="$(git diff --name-only "$parent_sha" "$source_sha")"
+            recorded_source="$(jq -r '.source_commit // empty' docs/CONTINUIDADE-ESTADO.json 2>/dev/null || true)"
+            if [ "$recorded_source" = "$parent_sha" ] && [ "$changed_files" = "docs/CONTINUIDADE-ESTADO.json" ]; then
+              echo "O instantâneo da main já está atualizado."
+              exit 0
+            fi
+            mkdir -p docs
+            files_json="$(git diff --name-only -z "$parent_sha" "$source_sha" | jq -Rsc 'split("\u0000") | map(select(length > 0))')"
+            jq -n \
+              --arg repository "$GITHUB_REPOSITORY" \
+              --arg branch "$SOURCE_REF" \
+              --arg source_commit "$source_sha" \
+              --arg generated_at "$(date -u +%Y-%m-%dT%H:%M:%SZ)" \
+              --argjson changed_files "$files_json" \
+              '{
+                schema_version: 1,
+                repository: $repository,
+                branch: $branch,
+                source_commit: $source_commit,
+                generated_at_utc: $generated_at,
+                changed_files: $changed_files,
+                next_session: {
+                  mode: "delta-only",
+                  instructions: "Leia docs/CRIVO-CONTINUIDADE.md e este arquivo; então consulte no GitHub apenas os commits posteriores a source_commit. Não clone o repositório completo sem necessidade técnica."
+                }
+              }' > docs/CONTINUIDADE-ESTADO.json
+            git add docs/CONTINUIDADE-ESTADO.json
+            git diff --cached --quiet && exit 0
+            git commit -m "chore: atualiza estado de continuidade"
+            if git push origin HEAD:refs/heads/main; then
+              exit 0
+            fi
+            git fetch origin main --depth=2
+            if [ "$(git rev-parse FETCH_HEAD)" = "$source_sha" ]; then
+              echo "O envio falhou sem avanço da main; não é uma disputa de commits." >&2
+              exit 1
+            fi
+            echo "A main avançou; regenerando o instantâneo (tentativa $attempt/5)."
+          done
+          echo "A main continuou avançando após cinco tentativas." >&2
+          exit 1
