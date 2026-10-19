@@ -57,7 +57,9 @@ function mainReasonFor(action: StudyAction): string {
 }
 
 const CONTRIBUTION_EPSILON = 0.01;
-const EXAM_MULTIPLIER_EPSILON = 0.001;
+// Persisted factors retain double precision. A .001 tolerance accepted an
+// obsolete multiplier (1.08225) as current after the corpus changed (1.081502…).
+const EXAM_MULTIPLIER_EPSILON = 1e-9;
 
 function contributingFactor(action: StudyAction, kind: RecommendationFactorKind) {
   const factor = action.factors?.find((candidate) => candidate.kind === kind);
