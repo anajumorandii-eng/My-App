@@ -1,3 +1,4 @@
+vi.mock('../lib/auth', () => ({ authHeaders: async () => ({ Authorization: 'Bearer test-token' }) }));
 import { fireEvent, render, screen, waitFor } from '@testing-library/react';
 import { MemoryRouter } from 'react-router-dom';
 import { describe, it, expect, vi, beforeEach } from 'vitest';
@@ -127,4 +128,24 @@ it('informa quando o navegador recusa imprimir e preserva o guia para tentar nov
   expect(screen.getByText('Guia do tópico selecionado')).toBeInTheDocument();
   fireEvent.click(screen.getByRole('button', { name: 'Imprimir / Salvar em PDF' }));
   expect(screen.queryByRole('alert')).toBeNull();
+});
+
+it('gera a capa junto com o aprofundamento sem pedir outro clique', async () => {
+  auth.user = { uid: 'capa-automatica' };
+  const image = 'data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB';
+  const fetch = vi.fn(async (_url, options) => Response.json(options?.method === 'POST' ? { dataUrl: image } : { enabled: true }));
+  vi.stubGlobal('fetch', fetch);
+  vi.stubGlobal('Image', class { src = ''; decode = async () => {}; });
+  try {
+    render(<MemoryRouter><StrategyExplorer /></MemoryRouter>);
+    fireEvent.click(screen.getByRole('button', { name: 'Aprofundar este tópico e sua cobrança' }));
+    await screen.findByText('Ilustração pronta para este material.');
+    expect(screen.getByText('Guia do tópico selecionado').closest('[data-print-subject]')).toHaveAttribute('data-print-generated-art', image);
+    expect(fetch.mock.calls.filter(([, options]) => options?.method === 'POST')).toHaveLength(1);
+    fireEvent.change(screen.getByLabelText('Banca do guia'), { target: { value: 'Fuvest' } });
+    expect(screen.queryByText('Ilustração pronta para este material.')).toBeNull();
+    fireEvent.change(screen.getByLabelText('Banca do guia'), { target: { value: 'Todas as bancas' } });
+    await screen.findByRole('button', { name: 'Personalizar ilustração da capa' });
+    expect(fetch.mock.calls.filter(([, options]) => options?.method === 'POST')).toHaveLength(1);
+  } finally { vi.unstubAllGlobals(); }
 });

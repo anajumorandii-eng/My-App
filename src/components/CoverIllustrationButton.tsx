@@ -9,8 +9,10 @@ import {
 
 export function CoverIllustrationButton({
   getContent,
+  autoGenerateKey,
 }: {
   getContent: () => HTMLElement | null;
+  autoGenerateKey?: number;
 }) {
   const { user } = useAuth();
   const [enabled, setEnabled] = useState(false);
@@ -52,20 +54,13 @@ export function CoverIllustrationButton({
   }, [user?.uid]);
   const currentRoot = getContent();
   const currentContext = currentRoot ? readPrintCoverContext(currentRoot) : {};
-  if (
-    !user ||
-    !enabled ||
-    !currentContext.subject ||
-    !(currentContext.topic || currentContext.work)
-  )
-    return null;
   const activePreview =
     preview && preparedRoot.current === getContent() && preparedRoot.current
       ? preparedCoverIllustration(preparedRoot.current)
       : undefined;
   const generate = async () => {
     const root = getContent();
-    if (!root) return;
+    if (!root || request.current) return;
     const context = readPrintCoverContext(root),
       key = coverContextKey(context);
     const controller = new AbortController();
@@ -126,10 +121,25 @@ export function CoverIllustrationButton({
       }
     }
   };
+  const attemptedAutoGeneration = useRef<number | undefined>(undefined);
+  useEffect(() => {
+    if (!autoGenerateKey || busy || !user || !enabled || !currentContext.subject ||
+        !(currentContext.topic || currentContext.work) ||
+        attemptedAutoGeneration.current === autoGenerateKey) return;
+    attemptedAutoGeneration.current = autoGenerateKey;
+    void generate();
+  }, [autoGenerateKey, busy, enabled, user?.uid, currentContext.subject, currentContext.topic, currentContext.work]);
+  if (
+    !user ||
+    !enabled ||
+    !currentContext.subject ||
+    !(currentContext.topic || currentContext.work)
+  )
+    return null;
   return (
     <div data-print-exclude className="space-y-2 text-sm">
       <p className="text-xs text-[var(--dim)]">
-        Opcional: cada nova ilustração usa uma geração de IA.
+        {autoGenerateKey ? "A ilustração da capa é criada automaticamente com este aprofundamento." : "Opcional: cada nova ilustração usa uma geração de IA."}
       </p>
       <button
         type="button"
