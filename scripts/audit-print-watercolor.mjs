@@ -64,7 +64,7 @@ try {
       expect(y1).toBeGreaterThanOrEqual(44);
       expect(y2).toBeLessThanOrEqual(798);
     }
-    await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
+    await page.evaluate(() => (window.dispatchEvent(new Event('afterprint')), document.dispatchEvent(new Event('pointerdown'))));
     expect(await page.locator('[data-crivo-print-root]').count()).toBe(0);
     results.push({ theme, width, pages: pages.length, synchronousPrint: true, readableWithoutBackgroundGraphics: true, allSectionsAndSources: true, coverOnPageOne: true, contentsOnPageTwo: true, subjectIllustrationOnlyOnCover: true, textInsideNormalMargins: true, cleanedUp: true });
     await page.close();

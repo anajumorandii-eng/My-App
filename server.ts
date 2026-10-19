@@ -24,6 +24,7 @@ import { createAdminRouter } from './server/admin/routes';
 import { createApostilaIngestRouter } from './server/admin/apostilaIngestRoutes';
 import { jsonBodyAfter } from './server/http/jsonBodyAfter';
 import { securityHeaders } from './server/http/securityHeaders';
+import { createStudyPdfRouter } from './server/http/studyPdf';
 import { createLiteraryAdminRouter } from './server/literary/literaryAdminRoutes';
 import { createContentAdminRouter } from './server/content/contentAdminRoutes';
 import { createPushRouter, createReviewReminderRouter } from './server/push/routes';
@@ -54,6 +55,9 @@ app.use(compression());
 // responde e encerra a requisição antes do parser global ser atingido. O
 // parser de 20mb mora dentro do próprio roteador, depois da conferência do
 // segredo (ver jsonBodyAfter).
+// Parse large, embedded print assets only after login and the per-user limit.
+app.use('/api/study-pdf', ...jsonBodyAfter('16mb', firebaseAuthMiddleware(), createAiRateLimit({ maxRequests: 5 })), createStudyPdfRouter());
+
 app.use('/api/internal', createApostilaIngestRouter(getFirestore(getFirebaseAdminApp()), process.env.APOSTILA_INGEST_SECRET));
 
 // Feature flag literary_works (seção 13 do roteiro de Obras Obrigatórias):

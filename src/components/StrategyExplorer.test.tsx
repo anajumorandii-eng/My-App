@@ -116,3 +116,15 @@ it('combina Ecologia e Evolução, envia os dois recortes e recupera o guia sem 
   fireEvent.change(screen.getByLabelText('Tópico do guia'), { target: { value: 'bio_ecologia' } });
   expect(screen.getByText('Guia do tópico selecionado')).toBeInTheDocument();
 });
+
+it('informa quando o navegador recusa imprimir e preserva o guia para tentar novamente', async () => {
+  render(<MemoryRouter><StrategyExplorer /></MemoryRouter>);
+  fireEvent.click(screen.getByRole('button', { name: 'Aprofundar este tópico e sua cobrança' }));
+  await screen.findByText('Guia do tópico selecionado');
+  vi.mocked(printStrategyGuide).mockImplementationOnce(() => { throw new Error('Printing unavailable'); });
+  fireEvent.click(screen.getByRole('button', { name: 'Imprimir / Salvar em PDF' }));
+  expect(await screen.findByRole('alert')).toHaveTextContent('Não foi possível abrir a impressão');
+  expect(screen.getByText('Guia do tópico selecionado')).toBeInTheDocument();
+  fireEvent.click(screen.getByRole('button', { name: 'Imprimir / Salvar em PDF' }));
+  expect(screen.queryByRole('alert')).toBeNull();
+});

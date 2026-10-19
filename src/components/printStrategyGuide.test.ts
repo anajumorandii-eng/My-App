@@ -1,6 +1,6 @@
 import { afterEach, expect, it, vi } from 'vitest';
 import { printStrategyGuide } from '../lib/printStrategyGuide';
-afterEach(() => { window.dispatchEvent(new Event('afterprint')); vi.restoreAllMocks(); });
+afterEach(() => { window.dispatchEvent(new Event('afterprint')); document.dispatchEvent(new Event('pointerdown')); vi.restoreAllMocks(); });
 it('imprime somente o guia renderizado na janela atual e restaura a tela ao terminar', () => {
   const title = document.title;
   const content = document.createElement('article');
@@ -13,7 +13,7 @@ it('imprime somente o guia renderizado na janela atual e restaura a tela ao term
   expect(document.title).toBe('Aprofundamento de Matemática');
   expect(printable.querySelector('strong')!.textContent).toBe('Conceito');
   const art = printable.querySelector<HTMLImageElement>('[data-print-cover] img')!;
-  expect(art.src).toMatch(/^data:image\/webp;base64,/);
+  expect(art.src.startsWith('data:image/jpeg;base64,')).toBe(true);
   expect(art.alt).toBe('');
   expect(printable.querySelector('[data-print-content] img')!.getAttribute('alt')).toBe('Diagrama do conteúdo');
   expect(printable.querySelector('[data-print-cover-header]')!.textContent).toContain('CRIVO');
@@ -21,6 +21,7 @@ it('imprime somente o guia renderizado na janela atual e restaura a tela ao term
   expect(printable.querySelector('[data-print-content]')!.textContent).toContain('Matemática');
   expect(content.isConnected).toBe(false);
   window.dispatchEvent(new Event('afterprint'));
+  document.dispatchEvent(new Event('pointerdown'));
   expect(document.querySelector('[data-crivo-print-root]')).toBeNull();
   expect(document.title).toBe(title);
 });
@@ -125,4 +126,23 @@ it('usa moldura idêntica em áreas distintas e mantém as quatro legendas cient
   printStrategyGuide(content, 'Matemática');
   expect(document.querySelector('[data-print-cover-base]')!.outerHTML).toBe(frame);
   expect(document.querySelector('[data-print-cover]')).toHaveAttribute('data-print-art', 'mathematics');
+});
+
+it('mantém o documento disponível quando afterprint chega antes da captura do navegador', () => {
+  vi.spyOn(window, 'print').mockImplementation(() => window.dispatchEvent(new Event('afterprint')));
+  const content = document.createElement('article');
+  content.innerHTML = '<h2>Ecologia</h2><p>Relações entre organismos.</p>';
+  printStrategyGuide(content, 'Ecologia');
+  expect(document.querySelector('[data-print-content]')?.textContent).toContain('Relações entre organismos.');
+  document.dispatchEvent(new Event('pointerdown'));
+  expect(document.querySelector('[data-crivo-print-root]')).toBeNull();
+});
+
+it('usa uma imagem de impressão pronta sem filtros SVG ou máscaras de composição', () => {
+  vi.spyOn(window, 'print').mockImplementation(() => {});
+  printStrategyGuide(document.createElement('article'), 'Ecologia');
+  expect(document.querySelector<HTMLImageElement>('[data-print-illustration]')!.src.startsWith('data:image/jpeg;base64,')).toBe(true);
+  const style = [...document.querySelectorAll('style')].find(element => element.textContent?.includes('data-print-illustration'))!.textContent!;
+  expect(style).not.toMatch(/filter:\s*url\(/);
+  expect(style).not.toContain('mask-composite');
 });

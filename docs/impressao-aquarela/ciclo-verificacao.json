@@ -1,0 +1,46 @@
+[
+  {
+    "route": "estrategias",
+    "earlyAfterprint": false,
+    "nativePrintEvents": {
+      "before": 2,
+      "after": 2
+    },
+    "pages": 3,
+    "blackFraction": 0,
+    "cleanedUp": true
+  },
+  {
+    "route": "aprofundamentos",
+    "earlyAfterprint": false,
+    "nativePrintEvents": {
+      "before": 2,
+      "after": 2
+    },
+    "pages": 3,
+    "blackFraction": 0,
+    "cleanedUp": true
+  },
+  {
+    "route": "estrategias",
+    "earlyAfterprint": true,
+    "nativePrintEvents": {
+      "before": 2,
+      "after": 3
+    },
+    "pages": 3,
+    "blackFraction": 0,
+    "cleanedUp": true
+  },
+  {
+    "route": "aprofundamentos",
+    "earlyAfterprint": true,
+    "nativePrintEvents": {
+      "before": 2,
+      "after": 3
+    },
+    "pages": 3,
+    "blackFraction": 0,
+    "cleanedUp": true
+  }
+]
