@@ -1,4 +1,3 @@
-import stationery from '../assets/print/aquarela-crivo.jpg?inline';
 import { createPrintFrontMatter } from './printFrontMatter';
 import { printStyles } from './printStyles';
 
@@ -15,7 +14,7 @@ export function printStrategyGuide(content: HTMLElement, title: string) {
   printable.querySelectorAll('[data-print-exclude]').forEach(element => element.remove());
   printable.querySelectorAll<HTMLElement>('[data-print-only]').forEach(element => { element.hidden = false; element.style.display = 'block'; element.classList.remove('hidden'); });
   printable.querySelectorAll('details').forEach(element => { element.open = true; });
-  const { cover, toc } = createPrintFrontMatter(printable, title, stationery);
+  const { cover, toc } = createPrintFrontMatter(printable, title);
   const brand = document.createElement('span');
   brand.dataset.printBrand = '';
   brand.textContent = 'CRIVO · CADERNO DE ESTUDO';
@@ -25,11 +24,12 @@ export function printStrategyGuide(content: HTMLElement, title: string) {
   // Repeated groups reserve normal margins on the economical content pages.
   for (const group of [layout.createTHead(), layout.createTFoot()]) {
     const spacer = group.insertRow().insertCell();
-    spacer.setAttribute('aria-hidden', 'true');
+    if (group.tagName === 'TFOOT') spacer.append(brand);
+    else spacer.setAttribute('aria-hidden', 'true');
   }
   printable.dataset.printContent = '';
   layout.createTBody().insertRow().insertCell().append(printable);
-  root.append(cover, toc, layout, brand);
+  root.append(cover, toc, layout);
   const style = document.createElement('style');
   style.textContent = printStyles;
   const cleanup = () => {

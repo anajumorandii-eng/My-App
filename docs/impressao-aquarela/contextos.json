@@ -1,0 +1,83 @@
+[
+  {
+    "id": "sangue",
+    "art": "blood",
+    "height": 1118.734375,
+    "panelBottom": 1050.703125,
+    "artHeight": 524.09375,
+    "pages": 3,
+    "allMetadata": true
+  },
+  {
+    "id": "quimica",
+    "art": "chemistry",
+    "height": 1118.734375,
+    "panelBottom": 1050.703125,
+    "artHeight": 524.09375,
+    "pages": 3,
+    "allMetadata": true
+  },
+  {
+    "id": "matematica",
+    "art": "mathematics",
+    "height": 1118.734375,
+    "panelBottom": 1050.703125,
+    "artHeight": 559.03125,
+    "pages": 3,
+    "allMetadata": true
+  },
+  {
+    "id": "geografia",
+    "art": "geography",
+    "height": 1118.734375,
+    "panelBottom": 1050.703125,
+    "artHeight": 559.03125,
+    "pages": 3,
+    "allMetadata": true
+  },
+  {
+    "id": "historia",
+    "art": "history",
+    "height": 1118.734375,
+    "panelBottom": 1050.703125,
+    "artHeight": 559.03125,
+    "pages": 3,
+    "allMetadata": true
+  },
+  {
+    "id": "fisica",
+    "art": "physics",
+    "height": 1118.734375,
+    "panelBottom": 1050.703125,
+    "artHeight": 559.03125,
+    "pages": 3,
+    "allMetadata": true
+  },
+  {
+    "id": "obra",
+    "art": "literature",
+    "height": 1118.734375,
+    "panelBottom": 1050.703125,
+    "artHeight": 524.09375,
+    "pages": 3,
+    "allMetadata": true
+  },
+  {
+    "id": "combinado",
+    "art": "biology",
+    "height": 1118.734375,
+    "panelBottom": 1050.703125,
+    "artHeight": 536.796875,
+    "pages": 3,
+    "allMetadata": true
+  },
+  {
+    "id": "sem-banca",
+    "art": "literature",
+    "height": 1118.734375,
+    "panelBottom": 1050.703125,
+    "artHeight": 648.21875,
+    "pages": 3,
+    "allMetadata": true
+  }
+]

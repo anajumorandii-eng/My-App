@@ -9,6 +9,7 @@ import { createAiProvider } from './server/ai/provider';
 import { createAiDailyLimit, createAiRateLimit, MemoryDailyQuotaStore } from './server/ai/rateLimit';
 import { createEvaluationService } from './server/ai/evaluationRuntime';
 import { createEvaluationRouter } from './server/ai/evaluationRoutes';
+import { CoverImageService, createCoverImageRouter } from './server/ai/coverImages';
 import { createAiRouter } from './server/ai/routes';
 import { AiService, parseAiTimeout } from './server/ai/service';
 import { adminAuthMiddleware, firebaseAuthMiddleware, getFirebaseAdminApp, requireAdmin } from './server/auth/firebaseAuth';
@@ -240,6 +241,15 @@ app.use('/api/ai', firebaseAuthMiddleware(), createAiRateLimit(), createAiDailyL
 const podcastDailyLimit = createAiDailyLimit({ store: dailyQuotaStore });
 app.use('/api/podcast-audio', firebaseAuthMiddleware(), createAiRateLimit(), (req, res, next) => req.method === 'POST' ? podcastDailyLimit(req, res, next) : next(), createPodcastAudioRouter(podcastTtsService));
 app.use('/api/ai-evaluation', adminAuthMiddleware(), requireAdmin, createAiRateLimit({ maxRequests: 180 }), createEvaluationRouter(aiEvaluation, dailyQuotaStore));
+// Image generation is opt-in, administrative, and isolated from text routing.
+const coverImageRateLimit = createAiRateLimit({ maxRequests: 3 });
+app.use('/api/cover-illustrations', adminAuthMiddleware(), requireAdmin,
+  (req, res, next) => req.method === 'POST' ? coverImageRateLimit(req, res, next) : next(),
+  createCoverImageRouter(new CoverImageService({
+    baseUrl: process.env.AI_IMAGE_BASE_URL || process.env.OMNIROUTE_BASE_URL,
+    apiKey: process.env.AI_IMAGE_API_KEY || process.env.OMNIROUTE_API_KEY,
+    model: process.env.AI_IMAGE_MODEL,
+  }), createAiDailyLimit({ store: dailyQuotaStore })));
 app.use('/api/admin', adminAuthMiddleware(), requireAdmin, createAdminRouter(getFirestore(getFirebaseAdminApp())));
 // Painel /admin/conteudo: questões, métodos de estudo e episódios de
 // podcast, antes hardcoded em src/data/mockData.ts, agora administráveis

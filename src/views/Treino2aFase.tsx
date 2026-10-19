@@ -196,7 +196,7 @@ function DiscursiveTraining() {
   const SubjIcon = SUBJECT_ICONS[question?.subject ?? 'Matemática'] ?? ClipboardEdit;
 
   return (
-    <div className="ni-main" data-study-export>
+    <div className="ni-main" data-study-export data-print-subject={question?.subject} data-print-topic={question?.topic || "Treino discursivo"} data-print-board={question?.board} data-print-purpose="Resolução e correção de questões discursivas">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>Estudar</span>

@@ -9,6 +9,7 @@ const results = [];
 try {
   for (const theme of ['light', 'dark']) for (const width of [390, 1366]) {
     const page = await browser.newPage({ viewport: { width, height: 900 }, colorScheme: theme });
+    await page.routeWebSocket('**', socket => socket.close());
     await page.goto(base);
     // Synthetic content exercises the actual shared helper without an account or AI call.
     await page.evaluate(async theme => {
@@ -26,11 +27,15 @@ try {
     expect(await page.evaluate(() => window.__printCalls)).toBe(1);
     await page.emulateMedia({ media: 'print' });
     await expect(page.locator('[data-crivo-print-root]')).toBeVisible();
-    await page.locator('[data-print-frame]').evaluate(img => img.decode());
+    await page.locator('[data-print-illustration]').evaluate(img => img.decode());
+    expect(await page.locator('[data-print-cover]').getAttribute('data-print-art')).toBe('biology');
     const root = page.locator('[data-print-content]');
     expect(await root.locator('p').first().evaluate(el => getComputedStyle(el).color)).toBe('rgb(38, 60, 61)');
+    await page.evaluate(() => document.fonts.ready);
     const file = `${output}/crivo-${theme}-${width}.pdf`;
     await page.pdf({ path: file, preferCSSPageSize: true, printBackground: false, displayHeaderFooter: false });
+    const fonts = execFileSync('pdffonts', [file], { encoding: 'utf8' });
+    expect(fonts).toContain('Playfair'); expect(fonts).toContain('Cormorant');
     const text = execFileSync('pdftotext', ['-layout', file, '-'], { encoding: 'utf8' });
     const pages = text.split('\f').filter(page => page.trim());
     expect(pages.length).toBe(6);
@@ -61,7 +66,7 @@ try {
     }
     await page.evaluate(() => window.dispatchEvent(new Event('afterprint')));
     expect(await page.locator('[data-crivo-print-root]').count()).toBe(0);
-    results.push({ theme, width, pages: pages.length, synchronousPrint: true, readableWithoutBackgroundGraphics: true, allSectionsAndSources: true, coverOnPageOne: true, contentsOnPageTwo: true, artOnlyOnCover: true, textInsideNormalMargins: true, cleanedUp: true });
+    results.push({ theme, width, pages: pages.length, synchronousPrint: true, readableWithoutBackgroundGraphics: true, allSectionsAndSources: true, coverOnPageOne: true, contentsOnPageTwo: true, subjectIllustrationOnlyOnCover: true, textInsideNormalMargins: true, cleanedUp: true });
     await page.close();
   }
 } finally {

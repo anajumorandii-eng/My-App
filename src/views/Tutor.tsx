@@ -652,7 +652,7 @@ export default function Tutor() {
   useAmbienteDaTela(ambiente);
 
   return (
-    <div className="ni-main" data-study-export>
+    <div className="ni-main" data-study-export data-print-subject={picker.topic.subject} data-print-topic={picker.effectiveTopic} data-print-purpose="Compreensão e aplicação do conteúdo">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>Biblioteca</span>

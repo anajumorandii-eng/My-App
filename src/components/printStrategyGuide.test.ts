@@ -4,7 +4,7 @@ afterEach(() => { window.dispatchEvent(new Event('afterprint')); vi.restoreAllMo
 it('imprime somente o guia renderizado na janela atual e restaura a tela ao terminar', () => {
   const title = document.title;
   const content = document.createElement('article');
-  content.innerHTML = '<h1>Matemática · Unicamp</h1><p><strong>Conceito</strong> e resolução</p>';
+  content.innerHTML = '<h1>Matemática · Unicamp</h1><p><strong>Conceito</strong> e resolução</p><img src="https://example.org/diagrama.svg" alt="Diagrama do conteúdo">';
   const print = vi.spyOn(window, 'print').mockImplementation(() => {});
   printStrategyGuide(content, 'Aprofundamento de Matemática');
   expect(print).toHaveBeenCalledOnce();
@@ -12,9 +12,12 @@ it('imprime somente o guia renderizado na janela atual e restaura a tela ao term
   const printable = document.querySelector('[data-crivo-print-root]')!;
   expect(document.title).toBe('Aprofundamento de Matemática');
   expect(printable.querySelector('strong')!.textContent).toBe('Conceito');
-  const artwork = printable.querySelector<HTMLImageElement>('[data-print-frame]')!;
-  expect(artwork.src).toMatch(/^data:image\/jpeg;base64,/);
-  expect(artwork.alt).toBe('');
+  const art = printable.querySelector<HTMLImageElement>('[data-print-cover] img')!;
+  expect(art.src).toMatch(/^data:image\/webp;base64,/);
+  expect(art.alt).toBe('');
+  expect(printable.querySelector('[data-print-content] img')!.getAttribute('alt')).toBe('Diagrama do conteúdo');
+  expect(printable.querySelector('[data-print-cover-header]')!.textContent).toContain('CRIVO');
+  expect(printable.querySelector('[data-print-cover-base]')).not.toBeNull();
   expect(printable.querySelector('[data-print-content]')!.textContent).toContain('Matemática');
   expect(content.isConnected).toBe(false);
   window.dispatchEvent(new Event('afterprint'));
@@ -61,7 +64,7 @@ it('cria capa contextual e sumário fiel sem alterar IDs ou interpretar os metad
   for (const link of links) expect(root.querySelector(link.hash)).not.toBeNull();
   expect(content.querySelectorAll('[data-print-anchor]')).toHaveLength(0);
   expect(root.querySelector('[data-print-content] h2')!.id).toBe('crivo-print-section-1');
-  expect(root.querySelector('[data-print-layout] [data-print-frame]')).toBeNull();
+  expect(root.querySelector('[data-print-layout] [data-print-illustration]')).toBeNull();
 });
 it('gera uma entrada honesta quando o material não possui títulos', () => {
   vi.spyOn(window, 'print').mockImplementation(() => {});
@@ -70,4 +73,56 @@ it('gera uma entrada honesta quando o material não possui títulos', () => {
   expect(document.querySelector('[data-print-cover] h1')!.textContent).toBe('Meu estudo');
   expect(document.querySelector('[data-print-toc] a')!.textContent).toBe('Conteúdo do material');
   expect(content.querySelector('h2')).toBeNull();
+});
+
+it('preserva todos os metadados de tópicos combinados e usa a capa compacta quando necessário', () => {
+  vi.spyOn(window, 'print').mockImplementation(() => {});
+  const content = document.createElement('article');
+  const context = 'Ecologia de populações, mecanismos evolutivos e relações entre organismos e ambiente. '.repeat(4);
+  Object.assign(content.dataset, { printSubject: 'Biologia', printTopic: context, printSubtopic: context, printPurpose: 'Articular os conceitos e explicar o raciocínio de prova' });
+  content.innerHTML = '<h2>Relações entre conceitos</h2>';
+  printStrategyGuide(content, 'Estudo combinado');
+  const cover = document.querySelector('[data-print-cover]')!;
+  expect(cover).toHaveAttribute('data-print-dense-cover');
+  expect(cover.querySelector('h1')!.textContent).toBe(context);
+  expect(cover.querySelector('[data-print-cover-field="scope"] dd')!.textContent).toBe(context);
+  expect(cover.querySelector('dl')).toHaveAttribute('data-print-single-column');
+  expect(cover.querySelector('[data-print-cover-field="board"]')).toBeNull();
+  expect(content.querySelector('[data-print-cover]')).toBeNull();
+});
+
+it.each([['Biologia', 'biology'], ['Química', 'chemistry'], ['Física', 'physics'], ['Matemática', 'mathematics'], ['Geografia', 'geography'], ['História', 'history'], ['Filosofia', 'history'], ['Redação', 'literature']])('seleciona uma ilustração de %s para o material', (subject, illustration) => {
+  vi.spyOn(window, 'print').mockImplementation(() => {});
+  const content = document.createElement('article');
+  content.dataset.printSubject = subject;
+  content.dataset.printTopic = 'Tópico selecionado';
+  printStrategyGuide(content, 'Meu material');
+  expect(document.querySelector('[data-print-cover]')).toHaveAttribute('data-print-art', illustration);
+  expect(document.querySelector('[data-print-cover-subject]')!.textContent).toBe(subject);
+  expect(document.querySelector('[data-print-cover] h1')!.textContent).toBe('Tópico selecionado');
+});
+it('usa a capa literária para uma obra e preserva seu nome e a banca de origem', () => {
+  vi.spyOn(window, 'print').mockImplementation(() => {});
+  const content = document.createElement('article');
+  Object.assign(content.dataset, { printSubject: 'História', printWork: 'A vida não é útil', printBoard: 'UNICAMP' });
+  printStrategyGuide(content, 'Resumo de obra');
+  const cover = document.querySelector('[data-print-cover]')!;
+  expect(cover).toHaveAttribute('data-print-art', 'literature');
+  expect(cover.querySelector('h1')!.textContent).toBe('A vida não é útil');
+  expect(cover.textContent).toContain('Obra completa');
+  expect(cover.textContent).toContain('UNICAMP');
+});
+
+it('usa moldura idêntica em áreas distintas e mantém as quatro legendas científicas como texto', () => {
+  vi.spyOn(window, 'print').mockImplementation(() => {});
+  const content = document.createElement('article');
+  Object.assign(content.dataset, { printSubject: 'Biologia', printTopic: 'Sangue e imunologia', printBoard: 'FUVEST 2027' });
+  printStrategyGuide(content, 'Biologia');
+  const frame = document.querySelector('[data-print-cover-base]')!.outerHTML;
+  expect(document.querySelector('[data-print-cover]')).toHaveAttribute('data-print-art', 'blood');
+  expect([...document.querySelectorAll('[data-print-vignette]')].map(e => e.textContent)).toEqual(['Hemácias', 'Defesa', 'Anticorpos', 'Circulação']);
+  content.dataset.printSubject = 'Matemática';
+  printStrategyGuide(content, 'Matemática');
+  expect(document.querySelector('[data-print-cover-base]')!.outerHTML).toBe(frame);
+  expect(document.querySelector('[data-print-cover]')).toHaveAttribute('data-print-art', 'mathematics');
 });
