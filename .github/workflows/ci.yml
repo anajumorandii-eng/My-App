@@ -29,6 +29,9 @@ jobs:
 
       - run: npm run lint
 
+      - name: Instalar ferramenta de extração de texto dos PDFs
+        run: sudo apt-get update && sudo apt-get install -y --no-install-recommends poppler-utils
+
       - run: npm test
 
       - name: Continuidade do catálogo e conteúdo editorial
