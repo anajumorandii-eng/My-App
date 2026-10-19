@@ -107,7 +107,7 @@ function EssayEditor({ scope }: { scope: string }) {
   const PenIcon = SUBJECT_ICONS['Português'] ?? PenLine;
 
   return (
-    <div className="ni-main" data-study-export>
+    <div className="ni-main" data-study-export data-print-subject="Língua Portuguesa" data-print-topic={theme || "Redação"} data-print-board={board} data-print-purpose="Planejamento, escrita e revisão da redação">
       {/* Route Breadcrumb */}
       <div className="ni-route">
         <span>REDAÇÃO</span>

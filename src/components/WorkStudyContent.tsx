@@ -1,3 +1,4 @@
+import { CoverIllustrationButton } from './CoverIllustrationButton';
 import { StudyReflectionPanel } from './StudyReflectionPanel';
 import { useMemo, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
@@ -49,6 +50,7 @@ export function WorkStudyContent({ dossier, mode, boards = [] }: { dossier: Work
         try { printStrategyGuide(content.current, `${heading}${unit ? ` — ${unit.title}` : ' — obra completa'}`); setPrintError(''); }
         catch { setPrintError('Não foi possível abrir a impressão. Tente novamente.'); }
       }}>Imprimir / Salvar em PDF</button>
+        <CoverIllustrationButton getContent={() => content.current} />
       <Link className="text-sm underline" to={`/podcast?work=${encodeURIComponent(dossier.slug)}`}>Estudar esta obra em áudio com fontes</Link>
       <Link className="text-sm underline" to={workLink(mode === 'summary' ? 'estrategias' : 'resumo')}>{mode === 'summary' ? 'Ver estratégias desta obra' : 'Abrir resumo aprofundado'}</Link>
     </div>

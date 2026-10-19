@@ -16,7 +16,8 @@ const cases=[
 ];
 const results=[];
 try{for(const context of cases){
- const page=await browser.newPage();await page.goto(process.env.CRIVO_AUDIT_URL || 'http://127.0.0.1:3138', { waitUntil: 'networkidle' });
+ const page=await browser.newPage();await page.routeWebSocket('**', socket => socket.close());
+  await page.goto(process.env.CRIVO_AUDIT_URL || 'http://127.0.0.1:3138', { waitUntil: 'networkidle' });
  await page.evaluate(async context=>{const {printStrategyGuide}=await import('/src/lib/printStrategyGuide.ts');window.print=()=>{};
  const article=document.createElement('article');Object.assign(article.dataset,context);article.innerHTML='<h2>Conceitos fundamentais</h2><p>Conteúdo demonstrativo para conferir a diagramação; este exemplo não é material de estudo.</p><h2>Aplicação na prova</h2><p>Texto sintético para conferir o sumário e a continuação.</p>';
  printStrategyGuide(article,'Crivo — demonstração de diagramação');},context);

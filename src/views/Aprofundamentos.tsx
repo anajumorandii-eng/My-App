@@ -1,3 +1,4 @@
+import { CoverIllustrationButton } from '../components/CoverIllustrationButton';
 import { useEffect, useRef, useState } from 'react';
 import { Link, useSearchParams } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -68,6 +69,7 @@ function GuideLibrary({ uid }: { uid: string | null }) {
             try { printStrategyGuide(printContent.current, `Aprofundamento — ${selected.subject} — ${selected.chapter || selected.topicName}`); setPrintError(''); }
             catch { setPrintError('Não foi possível abrir a impressão. Tente novamente.'); }
           }}>Imprimir / Salvar em PDF</button>
+        <CoverIllustrationButton getContent={() => printContent.current} />
           <Link to={contextUrl} className="text-sm underline">Voltar à estratégia deste tópico</Link>
           {uid && <button type="button" disabled={saving} className="text-sm underline disabled:opacity-50" onClick={async () => { setSaving(true); try { await persist(selected); } finally { setSaving(false); } }}>{saving ? 'Salvando…' : 'Salvar novamente na conta'}</button>}
         </div>

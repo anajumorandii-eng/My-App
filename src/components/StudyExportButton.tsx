@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import { CoverIllustrationButton } from './CoverIllustrationButton';
+import React, { useRef, useState } from 'react';
 import { printStrategyGuide } from '../lib/printStrategyGuide';
 
 /** Freeze editable answers so printing includes the student's current reasoning. */
@@ -25,13 +26,15 @@ export function prepareStudyExport(source: HTMLElement): HTMLElement {
 
 export function StudyExportButton({ title }: { title: string }) {
   const [error, setError] = useState('');
-  return <div data-print-exclude>
+  const controls = useRef<HTMLDivElement>(null);
+  return <div data-print-exclude ref={controls}>
     <button type="button" className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm" onClick={event => {
       const root = event.currentTarget.closest<HTMLElement>('[data-study-export]');
       if (!root) return;
       try { printStrategyGuide(prepareStudyExport(root), title); setError(''); }
       catch { setError('Não foi possível abrir a impressão. Tente novamente.'); }
     }}>Imprimir / Salvar em PDF</button>
+    <CoverIllustrationButton getContent={() => controls.current?.closest<HTMLElement>('[data-study-export]') ?? null} />
     {error && <p role="alert" className="text-sm text-status-error">{error}</p>}
   </div>;
 }

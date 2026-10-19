@@ -25,8 +25,10 @@ export const printStyles = `${printCoverFontStyles}
   [data-print-cover] h1 { font: 600 15.5pt/1.2 'Crivo Cover Serif', Georgia, serif; letter-spacing: .18em; text-transform: uppercase; color: #7A1F24; margin: 0; }
   [data-print-long-title] h1 { font-size: 13pt; line-height: 1.2; letter-spacing: .03em; }
   [data-print-cover-art] { position: relative; flex: 1; min-height: 30mm; margin: 2mm 0; overflow: hidden !important; }
-  [data-print-cover-plate] { background: #F6F2E9; position: absolute; top: 0; left: 50%; height: 100%; aspect-ratio: 4 / 5; max-width: 100%; transform: translateX(-50%); }
-  [data-print-illustration] { position: absolute; inset: 0; width: 100% !important; height: 100% !important; object-fit: contain; mix-blend-mode: multiply; mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent), linear-gradient(transparent, #000 5%, #000 95%, transparent); mask-composite: intersect; }
+  [data-print-cover-plate] { position: absolute; top: 0; left: 50%; height: 100%; aspect-ratio: 4 / 5; max-width: 100%; transform: translateX(-50%); }
+  /* Normalize the source paper in the native SVG color space before print. */
+  [data-print-illustration] { position: absolute; inset: 0; width: 100% !important; height: 100% !important; object-fit: contain; filter: url('#crivo-print-paper-ink'); mask-image: linear-gradient(90deg, transparent, #000 5%, #000 95%, transparent), linear-gradient(transparent, #000 5%, #000 95%, transparent); mask-composite: intersect; }
+  [data-print-generated] [data-print-illustration] { filter: none; mix-blend-mode: normal; mask-image: none; }
   [data-print-vignette] { position: absolute; width: 28%; transform: translateX(-50%); font: italic 11pt/1.1 'Crivo Cover Serif', Georgia, serif; color: #7A1F24; margin: 0; }
   [data-print-vignette="top_left"] { left: 15%; top: 36%; }
   [data-print-vignette="top_right"] { left: 85%; top: 36%; }

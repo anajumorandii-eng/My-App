@@ -1,3 +1,4 @@
+import { CoverIllustrationButton } from './CoverIllustrationButton';
 import { useRef, useState } from 'react';
 import { Link } from 'react-router-dom';
 import { useAuth } from '../context/AuthContext';
@@ -67,6 +68,7 @@ function WorkDeepeningContent({ dossier, title, unitId, unitTitle, uid }: { doss
       {saved && <>
         <Link to={strategyGuideUrl(saved)} className="underline">Abrir este guia na biblioteca</Link>
         <button type="button" disabled={busy} className="underline disabled:opacity-50" onClick={() => { try { if (content.current) printStrategyGuide(content.current, `Aprofundamento — ${title} — ${scope} — ${board}`); } catch { setError('Não foi possível abrir a impressão. Tente novamente.'); } }}>Imprimir aprofundamento / Salvar em PDF</button>
+        <CoverIllustrationButton getContent={() => content.current} />
         {uid && <button type="button" className="underline" disabled={busy} onClick={() => void persist(saved)}>Salvar novamente na conta</button>}
       </>}
     </div>

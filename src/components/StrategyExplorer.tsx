@@ -1,3 +1,4 @@
+import { CoverIllustrationButton } from './CoverIllustrationButton';
 import { ExamEvidencePanel } from './ExamEvidencePanel';
 import { combineStudyReflections, readAdditionalSelections, strategySelectionKey } from '../lib/strategySelection';
 import { StudyReflectionPanel } from './StudyReflectionPanel';
@@ -136,6 +137,7 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
       {guides[key] && <div className="flex flex-wrap gap-3">
         <a href={strategyGuideUrl(guides[key])} className="text-sm underline">Abrir este guia na biblioteca</a>
         <button type="button" disabled={loadingKey !== null} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50" onClick={() => { if (printContent.current) printStrategyGuide(printContent.current, `Aprofundamento — ${subject} — ${scopeName} — ${board}`); }}>Imprimir / Salvar em PDF</button>
+        <CoverIllustrationButton getContent={() => printContent.current} />
         {uid && <button type="button" className="text-sm underline" onClick={() => void persist(guides[key])}>Salvar novamente na conta</button>}
       </div>}
       {(answers[key] || guides[key]) && <div ref={printContent} data-print-subject={subject} data-print-topic={focusName} data-print-subtopic={selections.map(item => `${item.topicName}: ${item.chapter || 'visão geral'}`).join(' · ')} data-print-board={guides[key]?.targetBoards?.join(' · ') || board} data-print-purpose="Aprofundamento dos conceitos e de como são cobrados nas provas">

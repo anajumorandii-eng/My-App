@@ -1,3 +1,4 @@
+import { preparedCoverIllustration, readPrintCoverContext } from './printCoverContext';
 import { printCoverArt } from './printCoverArt';
 import { buildPrintCoverSpec, type PrintCoverContext } from './printCoverSpec';
 
@@ -17,11 +18,20 @@ function coverDivider(diamond = false) {
 /** The same native frame and type system is shared by every cover. */
 export function createPrintFrontMatter(content: HTMLElement, title: string) {
   const data = content.dataset;
-  const context: PrintCoverContext = { subject: data.printSubject, topic: data.printTopic, subtopic: data.printSubtopic, work: data.printWork, board: data.printBoard, purpose: data.printPurpose };
+  const context: PrintCoverContext = readPrintCoverContext(content);
   const spec = buildPrintCoverSpec(context, title);
   const cover = document.createElement('section'); cover.dataset.printCover = '';
   const foundation = svgNode('svg', { viewBox: '0 0 210 296', preserveAspectRatio: 'none', 'aria-hidden': 'true' });
   foundation.dataset.printCoverBase = '';
+  // Rebase the embedded cream ground to the exact native paper color. A
+  // separate opaque CSS plate creates a visible rectangle in printed PDFs.
+  const defs = svgNode('defs');
+  const paperFilter = svgNode('filter', { id: 'crivo-print-paper-ink', 'color-interpolation-filters': 'sRGB' });
+  const normalizePaper = svgNode('feComponentTransfer');
+  for (const channel of ['R', 'G', 'B']) normalizePaper.append(svgNode(`feFunc${channel}`, { type: 'linear', slope: '1.1' }));
+  paperFilter.append(normalizePaper, svgNode('feColorMatrix', { type: 'matrix', values: '0.964705882 0 0 0 0  0 0.949019608 0 0 0  0 0 0.91372549 0 0  0 0 0 1 0' }));
+  defs.append(paperFilter); foundation.append(defs);
+
   foundation.append(svgNode('rect', { width: '210', height: '296', fill: '#F6F2E9' }));
   foundation.append(svgNode('rect', { x: '12', y: '12', width: '186', height: '272', fill: 'none', stroke: '#A6824B', 'stroke-width': '.22' }));
   // Compass geometry is drawn once, never reinterpreted by an image generator.
@@ -46,11 +56,13 @@ export function createPrintFrontMatter(content: HTMLElement, title: string) {
   const heading = document.createElement('h1'); heading.textContent = spec.topic_subtitle;
   titleBlock.append(subject, coverDivider(), heading);
   const art = printCoverArt(context); cover.dataset.printArt = art.key;
+  const generated = preparedCoverIllustration(content);
+  if (generated) cover.dataset.printGenerated = '';
   const illustration = document.createElement('div'); illustration.dataset.printCoverArt = '';
   const plate = document.createElement('div'); plate.dataset.printCoverPlate = '';
-  const image = document.createElement('img'); image.dataset.printIllustration = ''; image.src = art.src;
+  const image = document.createElement('img'); image.dataset.printIllustration = ''; image.src = generated || art.src;
   image.alt = ''; image.setAttribute('aria-hidden', 'true'); plate.append(image);
-  for (const [position, vignette] of Object.entries(spec.visual_spec.vignettes)) {
+  for (const [position, vignette] of Object.entries(generated ? {} : spec.visual_spec.vignettes)) {
     const caption = document.createElement('p'); caption.dataset.printVignette = position; caption.textContent = vignette.label; plate.append(caption);
   }
   illustration.append(plate);

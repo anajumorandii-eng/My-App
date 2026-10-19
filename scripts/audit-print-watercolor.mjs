@@ -9,6 +9,7 @@ const results = [];
 try {
   for (const theme of ['light', 'dark']) for (const width of [390, 1366]) {
     const page = await browser.newPage({ viewport: { width, height: 900 }, colorScheme: theme });
+    await page.routeWebSocket('**', socket => socket.close());
     await page.goto(base);
     // Synthetic content exercises the actual shared helper without an account or AI call.
     await page.evaluate(async theme => {

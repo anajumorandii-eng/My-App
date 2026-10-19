@@ -6,11 +6,25 @@ O contrato tipado de `printCoverSpec.ts` preserva matéria, tópico, subtópico,
 
 Há oito pranchas ilustradas originais incorporadas: Biologia, Sangue e Imunologia, Química, Física, Matemática, Geografia, História e Literatura. A escolha segue os metadados; obras usam Literatura. Sangue e Imunologia possui quatro legendas nativas: Hemácias, Defesa, Anticorpos e Circulação. As demais pranchas não possuem esse conjunto de legendas. São ilustrações decorativas de capa, não diagramas didáticos validados. Nenhuma apostila, PDF pessoal ou imagem de referência foi incorporada.
 
-## Situação da integração com IA
+## Composição sem recorte aparente
 
-Esta entrega usa pranchas previamente geradas e empacotadas com o aplicativo. **Não realiza geração de imagens em tempo de execução pelo CLI Proxy.** A autenticação informada pela usuária é OAuth administrado pelo CLI Proxy; o token deve permanecer no servidor/proxy. O adaptador existente do aplicativo usa um gateway de conversação. O endpoint de imagem, os modelos disponíveis e a autenticação de produção ainda precisam ser verificados no serviço real. O ambiente desta verificação não disponibilizou identidade do Google Cloud nem a configuração privada do proxy. Não se presume que uma rota de geração de imagens aceite o mesmo contrato da rota de conversação.
+As pranchas incorporadas possuem papel creme nos próprios pixels. Multiplicá-lo pelo fundo marfim escurecia o retângulo inteiro da imagem. A composição agora normaliza esse fundo e o converte à cor do papel em um filtro SVG com espaço sRGB, sem uma segunda placa opaca. A imagem continua em `object-fit: contain`; os motivos não são esticados nem cortados para preencher o espaço. O sumário e o miolo mantêm a mesma paginação.
 
-O contrato de capa e a composição nativa permitem substituir a prancha por uma ilustração produzida pelo serviço depois dessa verificação, sem delegar grafia de títulos ou geometria da moldura à IA.
+A auditoria `audit-print-paper.mjs` mede pixels rasterizados do PDF, e não apenas propriedades CSS. Antes da correção, o caso literário excedia a tolerância; depois, as oito áreas ficaram dentro de dois níveis RGB de diferença nas regiões vazias medidas. Isso não substitui inspeção visual da ilustração.
+
+## Personalização opcional pelo serviço de imagens
+
+A geração está conectada ao endpoint de imagens do gateway por uma rota exclusiva, `GET/POST /api/cover-illustrations`. As duas operações exigem conta administradora com e-mail verificado; a geração respeita a cota diária compartilhada e um limite de três solicitações em dez minutos. Consultas de disponibilidade não consomem esse limite de geração.
+
+`AI_IMAGE_MODEL` seleciona explicitamente a rota de imagens no servidor. `AI_IMAGE_BASE_URL` e `AI_IMAGE_API_KEY` são opcionais e herdam `OMNIROUTE_BASE_URL` e `OMNIROUTE_API_KEY`. O identificador deve ser confirmado no catálogo real e validado por uma geração: a presença no catálogo, isoladamente, não prova compatibilidade. A senha administrativa do gateway não é uma chave de cliente e não deve ser utilizada aqui. As rotas de texto permanecem independentes.
+
+O botão **Personalizar ilustração da capa** aparece nas telas de impressão quando o servidor permite a operação. A estudante gera e confere a prévia antes de imprimir. Essa operação não abre o diálogo de impressão automaticamente e não bloqueia a impressão padrão. O arquivo PNG é incorporado em memória no material atual; não é salvo no histórico, no armazenamento do navegador ou no Firestore. Sair da tela, recarregar ou trocar de conta encerra essa preparação. Mudanças de obra, tópico, recorte, banca ou objetivo impedem reutilizar a ilustração anterior em outro contexto.
+
+Somente metadados limitados do material são enviados; não se envia o conteúdo integral do estudo, respostas da estudante ou apostilas. O servidor constrói o pedido visual. Nenhuma chave do proxy ou token OAuth do provedor chega ao navegador. A resposta aceita somente PNG incorporado, com limites de corpo, arquivo, dimensões e tempo; URLs devolvidas pelo provedor não são buscadas, e SVG ativo é recusado. Não há fallback para conversação nem repetição automática de uma geração cobrada.
+
+As artes novas usam transparência, sem o filtro de papel das pranchas incorporadas e sem legendas fixas sobre posições que o gerador pode mudar. Títulos, banca, objetivo e moldura continuam nativos. A ilustração é decorativa e exige conferência humana; não é um diagrama didático validado. Se o provedor falhar, a capa incorporada continua disponível.
+
+O endpoint real foi validado com uma geração direta e uma chamada pelo novo serviço do aplicativo. A configuração da rota de imagens foi preparada no Cloud Run, preservando as referências de segredos e os modelos de texto. A interface nova depende da implantação do código desta PR; configurar a variável sozinha não publica a funcionalidade.
 
 ## Paginação e impressão
 
@@ -27,6 +41,8 @@ Com `PORT=3138 npm run dev` em execução:
 ```sh
 CRIVO_PRINT_OUTPUT=/tmp/crivo-print-cover node scripts/audit-print-watercolor.mjs
 CRIVO_PRINT_CONTEXT_OUTPUT=/tmp/crivo-print-contexts node scripts/audit-print-cover-contexts.mjs
+CRIVO_PRINT_PAPER_OUTPUT=/tmp/crivo-print-paper node scripts/audit-print-paper.mjs
+CRIVO_GENERATED_ART_FILE=/caminho/ilustracao.png node scripts/audit-print-generated.mjs
 ```
 
 A primeira auditoria gera PDFs A4 em larguras 390/1366 e temas claro/escuro, com gráficos de fundo desativados. Confere capa na primeira página, sumário na segunda, quatro páginas de conteúdo, fontes incorporadas, ilustração restrita à capa, links, última seção, limites do texto e limpeza após `afterprint`.
@@ -34,3 +50,14 @@ A primeira auditoria gera PDFs A4 em larguras 390/1366 e temas claro/escuro, com
 A segunda verifica nove contextos: Sangue e Imunologia, Química, Matemática, Geografia, História, Física, obra completa, quatro tópicos combinados e material sem banca. Confere os metadados extraídos do PDF, a prancha escolhida, espaço disponível para a ilustração e a posição da cartela. Os exemplos são sintéticos e não constituem material de estudo.
 
 Os testes verificam metadados escapados, IDs, sumário, temas, contrato visual e contexto denso. A validação automatizada usa Chromium; o diálogo nativo de impressão e Safari/iPad não foram automatizados. Impressão física sem bordas depende do equipamento.
+
+A auditoria de imagem gerada usa um PNG fornecido explicitamente, imprime três páginas, confere texto selecionável, ausência de legendas incompatíveis, proporção preservada e limpeza após impressão. Não chama o gateway nem usa credenciais por conta própria. Os exemplos de conferência são sintéticos. Safari/iPad e o diálogo nativo da impressora continuam fora da automação.
+
+## Evidência desta correção
+
+- `capa-literatura-integrada.png`: página rasterizada do PDF, com a prancha incorporada e o papel corrigido.
+- `capa-personalizada.png`: página rasterizada com o PNG produzido pelo serviço real de imagens; sem legendas fixas sobre a arte.
+- `papel-verificacao.json`: oito áreas conferidas, diferença máxima de um nível RGB nas regiões vazias amostradas.
+- `geracao-verificacao.json`: três páginas, texto nativo, proporção preservada e limpeza da preparação.
+
+As auditorias de PDF requerem Chromium, ferramentas Poppler e Python com Pillow. A conexão de atualização automática do servidor de desenvolvimento é bloqueada apenas nas páginas sintéticas de auditoria, evitando que uma gravação de arquivo durante a verificação destrua a preparação da impressão.
