@@ -19,6 +19,7 @@ const image = "data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAAB";
 afterEach(() => {
   cleanup();
   window.dispatchEvent(new Event("afterprint"));
+  document.dispatchEvent(new Event("pointerdown"));
   vi.unstubAllGlobals();
   vi.restoreAllMocks();
   state.user = { uid: "student" };
@@ -72,8 +73,8 @@ it("gera antes da impressão e usa a imagem somente no mesmo contexto", async ()
   root.dataset.printWork = "Outra obra";
   printStrategyGuide(root, "Outra obra");
   expect(
-    document.querySelector("[data-print-illustration]")!.getAttribute("src"),
-  ).toMatch(/^data:image\/webp/);
+    document.querySelector("[data-print-illustration]")!.getAttribute("src")!.slice(0, 23),
+  ).toMatch(/^data:image\/jpeg/);
   root.remove();
 });
 

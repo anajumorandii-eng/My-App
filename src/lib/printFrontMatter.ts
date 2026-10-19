@@ -23,14 +23,6 @@ export function createPrintFrontMatter(content: HTMLElement, title: string) {
   const cover = document.createElement('section'); cover.dataset.printCover = '';
   const foundation = svgNode('svg', { viewBox: '0 0 210 296', preserveAspectRatio: 'none', 'aria-hidden': 'true' });
   foundation.dataset.printCoverBase = '';
-  // Rebase the embedded cream ground to the exact native paper color. A
-  // separate opaque CSS plate creates a visible rectangle in printed PDFs.
-  const defs = svgNode('defs');
-  const paperFilter = svgNode('filter', { id: 'crivo-print-paper-ink', 'color-interpolation-filters': 'sRGB' });
-  const normalizePaper = svgNode('feComponentTransfer');
-  for (const channel of ['R', 'G', 'B']) normalizePaper.append(svgNode(`feFunc${channel}`, { type: 'linear', slope: '1.1' }));
-  paperFilter.append(normalizePaper, svgNode('feColorMatrix', { type: 'matrix', values: '0.964705882 0 0 0 0  0 0.949019608 0 0 0  0 0 0.91372549 0 0  0 0 0 1 0' }));
-  defs.append(paperFilter); foundation.append(defs);
 
   foundation.append(svgNode('rect', { width: '210', height: '296', fill: '#F6F2E9' }));
   foundation.append(svgNode('rect', { x: '12', y: '12', width: '186', height: '272', fill: 'none', stroke: '#A6824B', 'stroke-width': '.22' }));

@@ -1,0 +1,9 @@
+{
+  "pages": 10,
+  "cover": 1,
+  "contents": 2,
+  "lastLine": true,
+  "nativeMathWithoutDuplicates": true,
+  "blackFraction": 0,
+  "noBrowserHeaders": true
+}

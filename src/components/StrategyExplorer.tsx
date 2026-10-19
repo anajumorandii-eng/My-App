@@ -136,7 +136,15 @@ function StrategyExplorerContent({ uid }: { uid: string | null }) {
       <a className="text-sm underline block" href={`/podcast?topic=${encodeURIComponent(topic?.id ?? '')}${chapter ? `&chapter=${encodeURIComponent(chapter)}` : ''}${board !== 'Todas as bancas' ? `&board=${encodeURIComponent(board)}` : ''}`}>{selections.length > 1 ? `Estudar ${topic?.name} em podcast aprofundado` : 'Transformar este recorte em podcast aprofundado'}</a>
       {guides[key] && <div className="flex flex-wrap gap-3">
         <a href={strategyGuideUrl(guides[key])} className="text-sm underline">Abrir este guia na biblioteca</a>
-        <button type="button" disabled={loadingKey !== null} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50" onClick={() => { if (printContent.current) printStrategyGuide(printContent.current, `Aprofundamento — ${subject} — ${scopeName} — ${board}`); }}>Imprimir / Salvar em PDF</button>
+        <button type="button" disabled={loadingKey !== null} className="rounded-lg border border-[var(--line)] px-4 py-2 text-sm disabled:opacity-50" onClick={() => {
+          if (!printContent.current) return;
+          try {
+            printStrategyGuide(printContent.current, `Aprofundamento — ${subject} — ${scopeName} — ${board}`);
+            setErrors(previous => ({ ...previous, [key]: '' }));
+          } catch {
+            setErrors(previous => ({ ...previous, [key]: 'Não foi possível abrir a impressão neste navegador. Seu guia continua salvo; tente novamente em uma aba do Safari ou Chrome.' }));
+          }
+        }}>Imprimir / Salvar em PDF</button>
         <CoverIllustrationButton getContent={() => printContent.current} />
         {uid && <button type="button" className="text-sm underline" onClick={() => void persist(guides[key])}>Salvar novamente na conta</button>}
       </div>}

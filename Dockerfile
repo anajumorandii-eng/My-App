@@ -13,6 +13,10 @@ COPY package.json package-lock.json ./
 RUN npm ci --omit=dev --no-audit --no-fund
 
 FROM node:22-slim
+# Native PDF files on iPad reuse the same HTML renderer as the print preview.
+RUN apt-get update && apt-get install -y --no-install-recommends chromium fonts-dejavu-core fonts-liberation \
+    && rm -rf /var/lib/apt/lists/*
+ENV CHROMIUM_PATH=/usr/bin/chromium
 WORKDIR /app
 ENV NODE_ENV=production
 ENV PORT=8080

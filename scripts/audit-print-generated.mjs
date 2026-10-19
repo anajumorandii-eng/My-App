@@ -89,7 +89,7 @@ try {
     file,
     `${output}/capa-gerada`,
   ]);
-  await page.evaluate(() => window.dispatchEvent(new Event("afterprint")));
+  await page.evaluate(() => (window.dispatchEvent(new Event("afterprint")), document.dispatchEvent(new Event("pointerdown"))));
   await expect(page.locator("[data-crivo-print-root]")).toHaveCount(0);
   await fs.writeFile(
     `${output}/results.json`,
