@@ -7,7 +7,7 @@ import {
   cleanup,
 } from "@testing-library/react";
 import { CoverIllustrationButton } from "./CoverIllustrationButton";
-import { printStrategyGuide } from "../lib/printStrategyGuide";
+import { createStrategyPrintRoot } from "../lib/printStrategyGuide";
 const state = vi.hoisted(() => ({
   user: { uid: "student" } as { uid: string } | null,
 }));
@@ -64,16 +64,16 @@ it("gera antes da impressão e usa a imagem somente no mesmo contexto", async ()
     work: "Uma obra",
     board: "UNICAMP",
   });
-  printStrategyGuide(root, "Uma obra");
-  expect(document.querySelector("[data-print-illustration]")).toHaveAttribute(
+  const prepared = createStrategyPrintRoot(root, "Uma obra");
+  expect(prepared.querySelector("[data-print-illustration]")).toHaveAttribute(
     "src",
     image,
   );
-  expect(document.querySelectorAll("[data-print-vignette]")).toHaveLength(0);
+  expect(prepared.querySelectorAll("[data-print-vignette]")).toHaveLength(0);
   root.dataset.printWork = "Outra obra";
-  printStrategyGuide(root, "Outra obra");
+  const changed = createStrategyPrintRoot(root, "Outra obra");
   expect(
-    document.querySelector("[data-print-illustration]")!.getAttribute("src")!.slice(0, 23),
+    changed.querySelector("[data-print-illustration]")!.getAttribute("src")!.slice(0, 23),
   ).toMatch(/^data:image\/jpeg/);
   root.remove();
 });
