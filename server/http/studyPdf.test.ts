@@ -60,6 +60,25 @@ test('renderizador real preserva texto e não executa scripts nem acessa a rede'
     const pdf = await renderStudyPdf(`<html><head><style>body { background-image: url('${url}'); }</style></head><body><script>fetch('${url}')</script><h1>Texto preservado</h1></body></html>`);
     assert.equal(Buffer.from(pdf).subarray(0, 5).toString(), '%PDF-'); assert.equal(hits, 0);
     await writeFile(`${directory}/test.pdf`, pdf);
-    assert.match(execFileSync('pdftotext', [`${directory}/test.pdf`, '-'], { encoding: 'utf8' }), /Texto preservado/);
+    const { PDFParse } = await import('pdf-parse');
+    const parser = new PDFParse({ data: pdf });
+    try { assert.match((await parser.getText()).text, /Texto preservado/); }
+    finally { await parser.destroy(); }
   } finally { await rm(directory, { recursive: true, force: true }); await new Promise<void>(resolve => listener.close(() => resolve())); }
+});
+
+test('sumário usa destinos reais e estabiliza mesmo com várias páginas de entradas', async context => {
+  if (!process.env.CHROMIUM_PATH) { context.skip('Defina CHROMIUM_PATH para a validação de paginação.'); return; }
+  const { renderStudyPdf } = await import('./studyPdf');
+  const { readSectionPages } = await import('./studyPdfPagination');
+  const { PDFParse } = await import('pdf-parse');
+  const ids = Array.from({length: 60}, (_, index) => `section-${index}`);
+  const html = `<style>@page{size:A4;margin:20mm}li{break-inside:avoid;margin-bottom:4mm}h2{break-after:avoid}article{break-before:page}</style><h1>Sumário</h1><ol>${ids.map(id => `<li><a href="#${id}">${id}</a> Página <span data-toc-page="${id}">…</span></li>`).join('')}</ol><article>${ids.map(id => `<h2 id="${id}">${id}</h2><p>${'Conteúdo integral preservado. '.repeat(15)}</p>`).join('')}</article>`;
+  const pdf = await renderStudyPdf(html);
+  const destinations = await readSectionPages(pdf, ids);
+  const parser = new PDFParse({data:pdf});
+  try {
+    const {text} = await parser.getText();
+    for (const id of ids) assert.match(text, new RegExp(`${id}\\s+Página\\s+${destinations[id]}\\b`));
+  } finally { await parser.destroy(); }
 });

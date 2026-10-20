@@ -1,11 +1,11 @@
 import { createPrintFrontMatter } from './printFrontMatter';
 import { printStyles } from './printStyles';
-import { needsPdfFile } from './printPlatform';
+
 import { openStudyPdf } from './printPdfFile';
 
-let activePrint: (() => void) | undefined;
 
-/** Builds the same cover, index and content for native printing and prepared PDFs. */
+
+/** Builds the shared cover, semantic index and full content for the PDF renderer. */
 export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   const root = document.createElement('div');
   root.dataset.crivoPrintRoot = '';
@@ -37,37 +37,7 @@ export function createStrategyPrintRoot(content: HTMLElement, title: string) {
   return root;
 }
 
-/** Prints in the current window so browsers do not have to print a hidden frame. */
+/** One prepared file gives every platform the final, verified table of contents. */
 export function printStrategyGuide(content: HTMLElement, title: string) {
-  activePrint?.();
-  const previousTitle = document.title;
-  const root = createStrategyPrintRoot(content, title);
-  const style = document.createElement('style');
-  style.textContent = printStyles;
-  if (needsPdfFile(navigator)) {
-    openStudyPdf(root, title, printStyles);
-    return;
-  }
-  const cleanup = () => {
-    root.remove(); style.remove(); document.title = previousTitle;
-    window.removeEventListener('afterprint', afterPrint);
-    window.removeEventListener('pagehide', cleanup);
-    document.removeEventListener('pointerdown', cleanup, true);
-    document.removeEventListener('keydown', cleanup, true);
-    if (activePrint === cleanup) activePrint = undefined;
-  };
-  const afterPrint = () => {
-    // Safari can signal afterprint before its asynchronous PDF capture ends.
-    // Page interaction resumes only after the native dialog has released it.
-    document.addEventListener('pointerdown', cleanup, { capture: true, once: true });
-    document.addEventListener('keydown', cleanup, { capture: true, once: true });
-  };
-  activePrint = cleanup;
-  document.body.appendChild(root); document.head.appendChild(style);
-  document.title = title;
-  window.addEventListener('afterprint', afterPrint, { once: true });
-  window.addEventListener('pagehide', cleanup, { once: true });
-  // Keep this synchronous with the user's click. Waiting on copied styles or
-  // fonts can lose user activation or leave the print action pending forever.
-  try { window.print(); } catch (error) { cleanup(); throw error; }
+  openStudyPdf(createStrategyPrintRoot(content, title), title, printStyles);
 }

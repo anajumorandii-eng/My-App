@@ -3,6 +3,7 @@ import remarkMath from 'remark-math';
 import remarkGfm from 'remark-gfm';
 import rehypeKatex from 'rehype-katex';
 import 'katex/dist/katex.min.css';
+import { StudyParagraph } from './StudyParagraph';
 
 // A IA às vezes usa delimitadores estilo MathJax (\[ \] e \( \)) em vez do
 // $ $ / $$ $$ que o remark-math reconhece. Normalizamos antes de renderizar.
@@ -31,13 +32,13 @@ export default function AiTextRenderer({ text, className = '' }: { text: string;
           td: ({ children, style }) => (
             <td style={style} className="border-b border-[var(--line)] px-3 py-2 align-top">{children}</td>
           ),
-          p: ({ children }) => <p className="leading-relaxed">{children}</p>,
+          p: StudyParagraph,
           strong: ({ children }) => <strong className="font-semibold">{children}</strong>,
           ul: ({ children }) => <ul className="list-disc pl-5 space-y-1">{children}</ul>,
-          ol: ({ children }) => <ol className="list-decimal pl-5 space-y-1">{children}</ol>,
-          h1: ({ children }) => <h3 className="font-semibold text-base mt-3">{children}</h3>,
-          h2: ({ children }) => <h3 className="font-semibold text-base mt-3">{children}</h3>,
-          h3: ({ children }) => <h4 className="font-semibold mt-2">{children}</h4>,
+          ol: ({ children, start }) => <ol start={start} className="list-decimal pl-5 space-y-1">{children}</ol>,
+          h1: ({ children }) => <h3 data-heading-level="1" className="font-semibold text-base mt-3">{children}</h3>,
+          h2: ({ children }) => <h3 data-heading-level="2" className="font-semibold text-base mt-3">{children}</h3>,
+          h3: ({ children }) => <h4 data-heading-level="3" className="font-semibold mt-2">{children}</h4>,
           code: ({ children }) => (
             <code className="px-1 py-0.5 rounded bg-black/5 dark:bg-white/10 text-[0.9em]">{children}</code>
           ),

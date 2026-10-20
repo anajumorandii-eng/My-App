@@ -1,7 +1,8 @@
 import { printCoverFontStyles } from './printCoverFonts';
+import { printBodyFontStyles } from './printBodyFonts';
 
 /** Scoped to the temporary print copy; screen themes cannot change paper contrast. */
-export const printStyles = `${printCoverFontStyles}
+export const printStyles = `${printCoverFontStyles}\n${printBodyFontStyles}
 @media print {
   @page { size: A4; margin: 0; }
   html, body { background: white !important; color: #263c3d !important; height: auto !important; overflow: visible !important; color-scheme: light !important; }
@@ -88,4 +89,43 @@ export const printStyles = `${printCoverFontStyles}
   [data-print-content] thead { display: table-header-group; }
   [data-print-content] tr { break-inside: avoid; }
   [data-print-content] button, [data-print-content] select, [data-print-content] input, [data-print-content] textarea, [data-print-content] audio, [data-print-content] nav { display: none !important; }
+  /* Content units may flow; only small related units request an intact break. */
+  /* A 210mm ancestor on the narrower named index page makes Chromium shrink
+     the entire PDF, including its cover and body. Each page owns its width. */
+  [data-crivo-print-root] { display: contents !important; width: auto !important; }
+  [data-crivo-print-root], [data-print-content] h1, [data-print-content] h2,
+  [data-print-content] h3, [data-print-content] h4, [data-print-content] h5,
+  [data-print-content] h6, [data-print-content] summary, [data-print-toc] h2,
+  [data-print-brand] { font-family: 'Liberation Serif', Georgia, 'Times New Roman', serif !important; }
+  [data-print-content] div, [data-print-content] section, [data-print-content] details,
+  [data-print-content] blockquote, [data-print-content] ul, [data-print-content] ol {
+    display: block !important; break-inside: auto !important; height: auto !important; min-height: 0 !important;
+  }
+  [data-print-content] p, [data-print-content] li { white-space: normal; }
+  [data-print-content] strong, [data-print-content] b { font-weight: 700; }
+  [data-print-content] h1, [data-print-content] h2, [data-print-content] h3,
+  [data-print-content] h4, [data-print-content] h5, [data-print-content] h6,
+  [data-print-content] summary { break-inside: avoid; break-after: avoid; }
+  [data-print-content] p:has(+ ul), [data-print-content] p:has(+ ol) { break-after: avoid; }
+  [data-print-content] li { break-inside: auto; }
+  [data-print-content] [data-print-keep] { break-inside: avoid !important; }
+  [data-print-content] [data-print-split] { break-inside: auto !important; }
+  [data-print-content] table { min-width: 0 !important; table-layout: fixed; break-inside: auto; }
+  [data-print-content] th, [data-print-content] td { overflow-wrap: anywhere; }
+  [data-print-content] tbody { break-inside: auto; }
+  [data-print-content] thead { break-inside: avoid; break-after: avoid; }
+  [data-print-content] math, [data-print-content] .katex { break-inside: avoid; white-space: nowrap; }
+  [data-print-content] .katex-display { break-inside: avoid !important; }
+  [data-print-content] figure { margin: 3mm 0; break-inside: avoid; }
+  [data-print-content] figcaption { break-before: avoid; }
+  [data-print-content] img, [data-print-content] svg { max-height: 245mm !important; object-fit: contain; }
+  @page crivo-toc { size: A4; margin: 20mm 22mm; }
+  [data-print-toc] { page: crivo-toc; min-height: 0; padding: 0; break-inside: auto; }
+  [data-print-toc] h2, [data-print-toc] > p { break-after: avoid; }
+  [data-print-toc] ol { list-style: none; padding: 0; columns: auto; }
+  [data-print-toc] li { display: flex; align-items: baseline; gap: 3mm; }
+  [data-print-toc] li[data-toc-level="2"] { padding-left: 6mm; font-size: 10pt; }
+  [data-print-toc] li[data-toc-level="1"]:has(+ li[data-toc-level="2"]) { break-after: avoid; }
+  [data-print-toc] a { flex: 1; }
+  [data-toc-page] { flex: none; width: 9mm; text-align: right; font-variant-numeric: tabular-nums; }
 }`;
