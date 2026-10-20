@@ -66,7 +66,7 @@ export function openStudyPdf(root: HTMLElement, title: string, styles: string): 
       if (controller.signal.aborted) return;
       objectUrl = URL.createObjectURL(blob);
       const filename = `${title.replace(/[^\p{L}\p{N} ._-]/gu, '').slice(0, 120) || 'Crivo'}.pdf`;
-      status.textContent = 'PDF pronto. Abra o arquivo e use Compartilhar → Imprimir ou Salvar em Arquivos no iPad.';
+      status.textContent = 'PDF pronto, com sumário paginado. Abra para imprimir ou salve o arquivo. No iPad, use Compartilhar → Imprimir ou Salvar em Arquivos.';
       const open = document.createElement('a'); open.href = objectUrl; open.target = '_blank'; open.rel = 'noopener'; open.textContent = 'Abrir PDF para imprimir';
       const download = document.createElement('a'); download.href = objectUrl; download.download = filename; download.textContent = 'Salvar PDF';
       actions.append(open, download);

@@ -1,6 +1,7 @@
 import { Router } from 'express';
 import { existsSync } from 'node:fs';
 import { launch } from 'puppeteer-core';
+import { readSectionPages } from './studyPdfPagination';
 
 const MAX_HTML_BYTES = 12 * 1024 * 1024;
 
@@ -22,7 +23,30 @@ export async function renderStudyPdf(html: string): Promise<Uint8Array> {
       await document.fonts.ready;
       await Promise.all([...document.images].map(image => image.decode()));
     });
-    return await page.pdf({ format: 'A4', preferCSSPageSize: true, printBackground: true, displayHeaderFooter: false, timeout: 20_000 });
+    await page.evaluate(() => {
+      const usefulHeight = 245 * 96 / 25.4;
+      // Keep modest tables and individual solution steps intact; large units flow.
+      for (const unit of document.querySelectorAll<HTMLElement>('[data-print-content] table, [data-print-content] li, [data-print-step]')) {
+        if (unit.getBoundingClientRect().height < usefulHeight * .35) unit.dataset.printKeep = '';
+      }
+      for (const row of document.querySelectorAll<HTMLElement>('[data-print-content] tr')) {
+        if (row.getBoundingClientRect().height > usefulHeight) row.dataset.printSplit = '';
+      }
+    });
+    const ids = await page.$$eval('[data-toc-page]', entries => entries.map(entry => entry.getAttribute('data-toc-page')!));
+    let previous: Record<string, number> = {};
+    // Reprint the source after filling the index. No PDF pages are cut or reassembled.
+    for (let pass = 0; pass < 5; pass++) {
+      const pdf = await page.pdf({ format: 'A4', preferCSSPageSize: true, printBackground: true, displayHeaderFooter: false, timeout: 20_000 });
+      if (!ids.length) return pdf;
+      const current = await readSectionPages(pdf, ids);
+      if (ids.every(id => previous[id] === current[id])) return pdf;
+      await page.evaluate(numbers => {
+        for (const entry of document.querySelectorAll<HTMLElement>('[data-toc-page]')) entry.textContent = String(numbers[entry.dataset.tocPage!]);
+      }, current);
+      previous = current;
+    }
+    throw new Error('PDF pagination did not converge');
   } finally {
     const watchdog = setTimeout(() => browser.process()?.kill('SIGKILL'), 3_000);
     try { await browser.close(); } finally { clearTimeout(watchdog); }

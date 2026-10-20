@@ -87,34 +87,32 @@ export function createPrintFrontMatter(content: HTMLElement, title: string) {
   const toc = document.createElement('section'); toc.dataset.printToc = '';
   const tocHeading = document.createElement('h2'); tocHeading.textContent = 'Sumário';
   const hint = document.createElement('p'); hint.textContent = 'Seções deste material, na ordem de leitura.';
-  let headings = [...content.querySelectorAll<HTMLElement>('h1, h2, h3, h4, h5, h6, summary, p')]
+  let headings = [...content.querySelectorAll<HTMLElement>('h1, h2, h3, h4, h5, h6, summary')]
     .filter(element => element.textContent?.trim() && !element.closest('[hidden], .hidden'))
-    .filter(element => element.tagName !== 'P' || (element.children.length === 1 && element.firstElementChild?.matches('strong, b') && element.textContent?.trim() === element.firstElementChild.textContent?.trim() && element.textContent!.length < 160));
+    .filter(element => !element.closest('li, table, blockquote, [data-toc-exclude]'));
   if (headings.length > 1 && headings[0].textContent?.trim() === heading.textContent?.trim()) headings.shift();
   if (!headings.length) {
     const fallback = document.createElement('h2'); fallback.textContent = 'Conteúdo do material';
     content.prepend(fallback); headings = [fallback];
   }
-  // Dense outlines keep major sections; never cut the material itself to fit.
-  if (headings.length > 36) {
-    const levels = headings.map(element => ['SUMMARY', 'P'].includes(element.tagName) ? 4 : Number(element.tagName[1]));
-    const levelsInUse = [...new Set(levels)].sort((a, b) => a - b);
-    const maximumLevel = levelsInUse[1] ?? levelsInUse[0];
-    headings = headings.filter((_, index) => levels[index] <= maximumLevel);
-  }
-  if (headings.length > 16) toc.dataset.printTocColumns = '';
+  const level = (element: HTMLElement) => Number(element.dataset.headingLevel || (element.tagName === 'SUMMARY' ? 3 : element.tagName[1]));
+  const levels = [...new Set(headings.map(level))].sort((a, b) => a - b);
+  // Navigation has two semantic levels, independently of document length.
+  headings = headings.filter(element => level(element) <= (levels[1] ?? levels[0]));
   const links = document.createElement('ol');
   const occupied = new Set([...content.querySelectorAll('[id]')].map(element => element.id));
   headings.forEach((element, index) => {
     let id = `crivo-print-section-${index + 1}`;
     while (occupied.has(id) || document.getElementById(id)) id += '-entry';
     occupied.add(id);
-    // A wrapper anchor preserves existing IDs used by figures and equations.
-    const anchor = document.createElement('span'); anchor.id = id; anchor.dataset.printAnchor = '';
-    element.before(anchor);
+    // Anchor the heading itself: a zero-height sibling can remain on the previous page.
+    if (element.id) id = element.id;
+    else element.id = id;
     const item = document.createElement('li');
+    item.dataset.tocLevel = String(level(element) === levels[0] ? 1 : 2);
     const link = document.createElement('a'); link.href = `#${id}`; link.textContent = element.textContent!.trim();
-    item.append(link); links.append(item);
+    const page = document.createElement('span'); page.dataset.tocPage = id; page.textContent = '…';
+    item.append(link, page); links.append(item);
   });
   toc.append(tocHeading, hint, links);
   return { cover, toc };

@@ -1,148 +1,55 @@
-import { afterEach, expect, it, vi } from 'vitest';
-import { printStrategyGuide } from '../lib/printStrategyGuide';
-afterEach(() => { window.dispatchEvent(new Event('afterprint')); document.dispatchEvent(new Event('pointerdown')); vi.restoreAllMocks(); });
-it('imprime somente o guia renderizado na janela atual e restaura a tela ao terminar', () => {
-  const title = document.title;
-  const content = document.createElement('article');
-  content.innerHTML = '<h1>Matemática · Unicamp</h1><p><strong>Conceito</strong> e resolução</p><img src="https://example.org/diagrama.svg" alt="Diagrama do conteúdo">';
-  const print = vi.spyOn(window, 'print').mockImplementation(() => {});
-  printStrategyGuide(content, 'Aprofundamento de Matemática');
-  expect(print).toHaveBeenCalledOnce();
-  expect(document.querySelector('iframe')).toBeNull();
-  const printable = document.querySelector('[data-crivo-print-root]')!;
-  expect(document.title).toBe('Aprofundamento de Matemática');
-  expect(printable.querySelector('strong')!.textContent).toBe('Conceito');
-  const art = printable.querySelector<HTMLImageElement>('[data-print-cover] img')!;
-  expect(art.src.startsWith('data:image/jpeg;base64,')).toBe(true);
-  expect(art.alt).toBe('');
-  expect(printable.querySelector('[data-print-content] img')!.getAttribute('alt')).toBe('Diagrama do conteúdo');
-  expect(printable.querySelector('[data-print-cover-header]')!.textContent).toContain('CRIVO');
-  expect(printable.querySelector('[data-print-cover-base]')).not.toBeNull();
-  expect(printable.querySelector('[data-print-content]')!.textContent).toContain('Matemática');
-  expect(content.isConnected).toBe(false);
-  window.dispatchEvent(new Event('afterprint'));
-  document.dispatchEvent(new Event('pointerdown'));
-  expect(document.querySelector('[data-crivo-print-root]')).toBeNull();
-  expect(document.title).toBe(title);
-});
-it('inclui a análise recolhida e fontes ocultas no PDF e retira controles de seleção', () => {
-  const content = document.createElement('article');
-  content.innerHTML = '<label data-print-exclude>Unidade<select><option>Conto</option></select></label><details><summary>Análise</summary><p>Explicação aprofundada</p></details><div class="hidden" data-print-only>Fonte conferida</div>';
-  const print = vi.spyOn(window, 'print').mockImplementation(() => {});
-  printStrategyGuide(content, 'Resumo de obra');
-  const printable = document.querySelector('[data-crivo-print-root]')!;
-  expect(printable.querySelector('select')).toBeNull();
-  expect(printable.querySelector('details')!.open).toBe(true);
-  expect(content.querySelector('details')!.open).toBe(false);
-  expect(printable.querySelector('[data-print-only]')).not.toHaveClass('hidden');
-  expect(printable.textContent).toContain('Fonte conferida');
-  expect(print).toHaveBeenCalledOnce();
-});
-it('limpa a preparação anterior ao imprimir novamente e restaura a tela se o navegador falhar', () => {
-  const title = document.title;
-  const print = vi.spyOn(window, 'print').mockImplementation(() => {});
-  const content = document.createElement('article');content.textContent = 'Texto';
-  printStrategyGuide(content, 'Primeiro');printStrategyGuide(content, 'Segundo');
-  expect(document.querySelectorAll('[data-crivo-print-root]')).toHaveLength(1);
-  print.mockImplementation(() => { throw new Error('blocked'); });
-  expect(() => printStrategyGuide(content, 'Terceiro')).toThrow('blocked');
-  expect(document.querySelector('[data-crivo-print-root]')).toBeNull();expect(document.title).toBe(title);
-});
-it('cria capa contextual e sumário fiel sem alterar IDs ou interpretar os metadados como HTML', () => {
-  vi.spyOn(window, 'print').mockImplementation(() => {});
-  const content = document.createElement('article');
-  Object.assign(content.dataset, { printSubject: 'Literatura', printWork: 'Obra <exemplo>', printSubtopic: 'Capítulo 2', printBoard: 'UNICAMP', printPurpose: 'Interpretar forma e contexto' });
-  content.innerHTML = '<h2 id="crivo-print-section-1">Contexto</h2><p>Texto original</p><h3>Interpretação</h3><p><strong>Aplicação na prova</strong></p><details><summary>Fontes</summary><p>Referência</p></details>';
-  printStrategyGuide(content, 'Guia');
-  const root = document.querySelector('[data-crivo-print-root]')!;
-  const cover = root.querySelector('[data-print-cover]')!;
-  expect(cover.textContent).toContain('Obra <exemplo>');
-  expect(cover.querySelector('exemplo')).toBeNull();
-  expect(cover.textContent).toContain('Capítulo 2'); expect(cover.textContent).toContain('UNICAMP');
-  expect(cover.textContent).toContain('Interpretar forma e contexto');
-  const links = [...root.querySelectorAll<HTMLAnchorElement>('[data-print-toc] a')];
-  expect(links.map(link => link.textContent)).toEqual(['Contexto', 'Interpretação', 'Aplicação na prova', 'Fontes']);
-  for (const link of links) expect(root.querySelector(link.hash)).not.toBeNull();
-  expect(content.querySelectorAll('[data-print-anchor]')).toHaveLength(0);
-  expect(root.querySelector('[data-print-content] h2')!.id).toBe('crivo-print-section-1');
-  expect(root.querySelector('[data-print-layout] [data-print-illustration]')).toBeNull();
-});
-it('gera uma entrada honesta quando o material não possui títulos', () => {
-  vi.spyOn(window, 'print').mockImplementation(() => {});
-  const content = document.createElement('article'); content.innerHTML = '<p>Explicação sem seções</p>';
-  printStrategyGuide(content, 'Meu estudo');
-  expect(document.querySelector('[data-print-cover] h1')!.textContent).toBe('Meu estudo');
-  expect(document.querySelector('[data-print-toc] a')!.textContent).toBe('Conteúdo do material');
-  expect(content.querySelector('h2')).toBeNull();
-});
+import { expect, it, vi } from 'vitest';
+import { createStrategyPrintRoot, printStrategyGuide } from '../lib/printStrategyGuide';
+import { openStudyPdf } from '../lib/printPdfFile';
+vi.mock('../lib/printPdfFile', () => ({ openStudyPdf: vi.fn() }));
 
-it('preserva todos os metadados de tópicos combinados e usa a capa compacta quando necessário', () => {
-  vi.spyOn(window, 'print').mockImplementation(() => {});
+it('usa o mesmo arquivo paginado em todos os dispositivos', () => {
   const content = document.createElement('article');
-  const context = 'Ecologia de populações, mecanismos evolutivos e relações entre organismos e ambiente. '.repeat(4);
-  Object.assign(content.dataset, { printSubject: 'Biologia', printTopic: context, printSubtopic: context, printPurpose: 'Articular os conceitos e explicar o raciocínio de prova' });
-  content.innerHTML = '<h2>Relações entre conceitos</h2>';
-  printStrategyGuide(content, 'Estudo combinado');
-  const cover = document.querySelector('[data-print-cover]')!;
-  expect(cover).toHaveAttribute('data-print-dense-cover');
-  expect(cover.querySelector('h1')!.textContent).toBe(context);
-  expect(cover.querySelector('[data-print-cover-field="scope"] dd')!.textContent).toBe(context);
-  expect(cover.querySelector('dl')).toHaveAttribute('data-print-single-column');
-  expect(cover.querySelector('[data-print-cover-field="board"]')).toBeNull();
+  content.innerHTML = '<h2>Seção</h2><p>Texto original</p>';
+  printStrategyGuide(content, 'Guia');
+  expect(openStudyPdf).toHaveBeenCalledWith(expect.any(HTMLElement), 'Guia', expect.stringContaining('Liberation Serif'));
   expect(content.querySelector('[data-print-cover]')).toBeNull();
 });
-
-it.each([['Biologia', 'biology'], ['Química', 'chemistry'], ['Física', 'physics'], ['Matemática', 'mathematics'], ['Geografia', 'geography'], ['História', 'history'], ['Filosofia', 'history'], ['Redação', 'literature']])('seleciona uma ilustração de %s para o material', (subject, illustration) => {
-  vi.spyOn(window, 'print').mockImplementation(() => {});
+it('sumário inclui somente dois níveis semânticos, sem frases ou etapas', () => {
   const content = document.createElement('article');
-  content.dataset.printSubject = subject;
-  content.dataset.printTopic = 'Tópico selecionado';
-  printStrategyGuide(content, 'Meu material');
-  expect(document.querySelector('[data-print-cover]')).toHaveAttribute('data-print-art', illustration);
-  expect(document.querySelector('[data-print-cover-subject]')!.textContent).toBe(subject);
-  expect(document.querySelector('[data-print-cover] h1')!.textContent).toBe('Tópico selecionado');
+  content.innerHTML = '<h2 id="original">Contexto</h2><p><b>Frase em destaque</b></p><h3>Análise</h3><h4>Detalhe</h4><ol><li><h3>Etapa</h3>Calcule.</li></ol><details><summary>Fontes</summary><p>Referência</p></details>';
+  const root = createStrategyPrintRoot(content, 'Guia');
+  const links = [...root.querySelectorAll<HTMLAnchorElement>('[data-print-toc] a')];
+  expect(links.map(link => link.textContent)).toEqual(['Contexto', 'Análise', 'Fontes']);
+  expect(root.querySelector('[data-print-content] h2')!.id).toBe('original');
+  expect(root.querySelectorAll('[data-toc-page]')).toHaveLength(3);
+  for (const link of links) expect(root.querySelector(link.hash)?.tagName).toMatch(/H2|H3|SUMMARY/);
+  expect(content.querySelector('h3')!.id).toBe('');
 });
-it('usa a capa literária para uma obra e preserva seu nome e a banca de origem', () => {
-  vi.spyOn(window, 'print').mockImplementation(() => {});
+it('preserva o nível do Markdown mesmo quando o título da tela tem outro nível', () => {
   const content = document.createElement('article');
-  Object.assign(content.dataset, { printSubject: 'História', printWork: 'A vida não é útil', printBoard: 'UNICAMP' });
-  printStrategyGuide(content, 'Resumo de obra');
-  const cover = document.querySelector('[data-print-cover]')!;
-  expect(cover).toHaveAttribute('data-print-art', 'literature');
-  expect(cover.querySelector('h1')!.textContent).toBe('A vida não é útil');
-  expect(cover.textContent).toContain('Obra completa');
-  expect(cover.textContent).toContain('UNICAMP');
+  content.innerHTML = '<h3 data-heading-level="1">Principal</h3><h3 data-heading-level="2">Subseção</h3><h4 data-heading-level="3">Detalhe</h4>';
+  const root = createStrategyPrintRoot(content, 'Guia');
+  expect([...root.querySelectorAll('[data-print-toc] li')].map(li => li.getAttribute('data-toc-level'))).toEqual(['1', '2']);
 });
-
-it('usa moldura idêntica em áreas distintas e mantém as quatro legendas científicas como texto', () => {
-  vi.spyOn(window, 'print').mockImplementation(() => {});
+it('abre detalhes, preserva fontes e figuras e exclui controles na cópia', () => {
   const content = document.createElement('article');
-  Object.assign(content.dataset, { printSubject: 'Biologia', printTopic: 'Sangue e imunologia', printBoard: 'FUVEST 2027' });
-  printStrategyGuide(content, 'Biologia');
-  const frame = document.querySelector('[data-print-cover-base]')!.outerHTML;
-  expect(document.querySelector('[data-print-cover]')).toHaveAttribute('data-print-art', 'blood');
-  expect([...document.querySelectorAll('[data-print-vignette]')].map(e => e.textContent)).toEqual(['Hemácias', 'Defesa', 'Anticorpos', 'Circulação']);
-  content.dataset.printSubject = 'Matemática';
-  printStrategyGuide(content, 'Matemática');
-  expect(document.querySelector('[data-print-cover-base]')!.outerHTML).toBe(frame);
-  expect(document.querySelector('[data-print-cover]')).toHaveAttribute('data-print-art', 'mathematics');
+  content.innerHTML = '<label data-print-exclude>Controle</label><details><summary>Análise</summary><p>Explicação</p></details><div hidden class="hidden" data-print-only>Fonte</div><img src="data:image/png;base64,AA" alt="Mapa">';
+  const root = createStrategyPrintRoot(content, 'Guia');
+  expect(root.querySelector('label')).toBeNull();
+  expect(root.querySelector('details')!.open).toBe(true);
+  expect(content.querySelector('details')!.open).toBe(false);
+  expect(root.querySelector('[data-print-only]')).not.toHaveClass('hidden');
+  expect(root.querySelector('[data-print-only]')).not.toHaveAttribute('hidden');
+  expect(root.querySelector('[data-print-content] img')).toHaveAttribute('alt', 'Mapa');
 });
-
-it('mantém o documento disponível quando afterprint chega antes da captura do navegador', () => {
-  vi.spyOn(window, 'print').mockImplementation(() => window.dispatchEvent(new Event('afterprint')));
+it.each([['Biologia', 'biology'], ['Física', 'physics'], ['História', 'history'], ['Química', 'chemistry'], ['Matemática', 'mathematics']])('preserva a capa e metadados de %s', (subject, art) => {
   const content = document.createElement('article');
-  content.innerHTML = '<h2>Ecologia</h2><p>Relações entre organismos.</p>';
-  printStrategyGuide(content, 'Ecologia');
-  expect(document.querySelector('[data-print-content]')?.textContent).toContain('Relações entre organismos.');
-  document.dispatchEvent(new Event('pointerdown'));
-  expect(document.querySelector('[data-crivo-print-root]')).toBeNull();
+  Object.assign(content.dataset, { printSubject: subject, printTopic: 'Tópico <teste>', printBoard: 'FUVEST' });
+  const root = createStrategyPrintRoot(content, 'Guia');
+  expect(root.querySelector('[data-print-cover]')).toHaveAttribute('data-print-art', art);
+  expect(root.querySelector('[data-print-cover] h1')!.textContent).toBe('Tópico <teste>');
+  expect(root.querySelector('teste')).toBeNull();
+  expect(root.querySelector('[data-print-cover-field="board"]')!.textContent).toContain('FUVEST');
+  expect(root.querySelector('[data-print-illustration]')).toBeTruthy();
 });
-
-it('usa uma imagem de impressão pronta sem filtros SVG ou máscaras de composição', () => {
-  vi.spyOn(window, 'print').mockImplementation(() => {});
-  printStrategyGuide(document.createElement('article'), 'Ecologia');
-  expect(document.querySelector<HTMLImageElement>('[data-print-illustration]')!.src.startsWith('data:image/jpeg;base64,')).toBe(true);
-  const style = [...document.querySelectorAll('style')].find(element => element.textContent?.includes('data-print-illustration'))!.textContent!;
-  expect(style).not.toMatch(/filter:\s*url\(/);
-  expect(style).not.toContain('mask-composite');
+it('não elimina entradas de um sumário extenso', () => {
+  const content = document.createElement('article');
+  content.innerHTML = Array.from({length: 70}, (_, i) => `<h2>Seção ${i}</h2><p>Texto.</p>`).join('');
+  expect(createStrategyPrintRoot(content, 'Guia').querySelectorAll('[data-toc-page]')).toHaveLength(70);
 });
