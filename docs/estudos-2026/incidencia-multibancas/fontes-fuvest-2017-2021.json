@@ -1,0 +1,171 @@
+{
+  "checkedOn": "2026-10-21",
+  "method": "Links extraídos do acervo oficial; PDFs baixados, cabeçalho PDF e páginas conferidos. Conteúdo das questões ainda não classificado nesta retomada. Hashes identificam os arquivos obtidos nesta data; a escolha da versão e eventuais retificações ainda exigem revisão editorial.",
+  "documents": [
+    {
+      "year": 2017,
+      "role": "candidate-manual",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2017",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2017_manual.pdf",
+      "sha256": "bbe7ccf92a09183c155f91f729f6ab444b7f2bd01498710576ca5d5f052768fe",
+      "bytes": 13558193,
+      "pages": 261,
+      "localFilename": "fuvest_2017_manual.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2017,
+      "role": "first-phase-exam",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2017",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2017_1fase_prova_V.pdf",
+      "sha256": "e97b60971d68951a4cb03e75d007961051581850f602fb1845731283febd4f8b",
+      "bytes": 2594366,
+      "pages": 28,
+      "localFilename": "fuvest_2017_1fase_prova_V.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2017,
+      "role": "first-phase-answer-key",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2017",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2017_1fase_prova_gab.pdf",
+      "sha256": "37b8e66a62e2effaaa18a2b34a56d412b87c6f70e3866ee3dfb6abf9756f2943",
+      "bytes": 124982,
+      "pages": 1,
+      "localFilename": "fuvest_2017_1fase_prova_gab.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2018,
+      "role": "candidate-manual",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2018",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuv2018_manual.pdf",
+      "sha256": "ce5c004f45b7f53852055d9c30d384c31524913cd48b7e5875d94dc11594bbf6",
+      "bytes": 5394144,
+      "pages": 257,
+      "localFilename": "fuv2018_manual.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2018,
+      "role": "first-phase-exam",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2018",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuv2018_1fase_prova_V.pdf",
+      "sha256": "bde0364dec1c730101584203a45919d6aebeb026c7517ad07fff7ae0e4f89225",
+      "bytes": 3671993,
+      "pages": 28,
+      "localFilename": "fuv2018_1fase_prova_V.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2018,
+      "role": "first-phase-answer-key",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2018",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuv2018_1fase_prova_gab.pdf",
+      "sha256": "0bd4d2c396704676118602c12c216b52cd135f5ceaa1218ff25f5eecdbd9b8b2",
+      "bytes": 145971,
+      "pages": 1,
+      "localFilename": "fuv2018_1fase_prova_gab.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2019,
+      "role": "candidate-manual",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2019",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest.2019.manual.candidato.pdf",
+      "sha256": "4dd6405c20e540d5d412ece129eaa9e8b0396d37f17d0e267b3a17cd5a8700c8",
+      "bytes": 9521379,
+      "pages": 86,
+      "localFilename": "fuvest.2019.manual.candidato.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2019,
+      "role": "first-phase-exam",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2019",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2019_primeira_fase.pdf",
+      "sha256": "b6ff89a26436635f4fed4af7b9480ed5d51b3310c425b16ebde689c789d70728",
+      "bytes": 6400677,
+      "pages": 25,
+      "localFilename": "fuvest_2019_primeira_fase.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2019,
+      "role": "first-phase-answer-key",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2019",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuv2019.gabarito.oficial.pdf",
+      "sha256": "a6fff130b2be76877753cb4a8ad086efd4a749ed9f790677b2e2a49ecd8dd91b",
+      "bytes": 125036,
+      "pages": 2,
+      "localFilename": "fuv2019.gabarito.oficial.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2020,
+      "role": "candidate-manual",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2020",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/FUVEST2020_ManualdoCandidato.pdf",
+      "sha256": "262ce5193d22dcb72e16eeb2f9aca2c1bc4af9bf989eaa37febdbef69a38ad09",
+      "bytes": 8105065,
+      "pages": 88,
+      "localFilename": "FUVEST2020_ManualdoCandidato.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2020,
+      "role": "first-phase-exam",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2020",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2020_primeira_fase_prova_V.pdf",
+      "sha256": "546ee1a55bc49575b425808ea621a28d3844e7640392294e4d4affc71c3fcd5a",
+      "bytes": 9251739,
+      "pages": 26,
+      "localFilename": "fuvest_2020_primeira_fase_prova_V.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2020,
+      "role": "first-phase-answer-key",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2020",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2020_primeira_fase_gabaritos.pdf",
+      "sha256": "32bc137985ce5f318d4a02e385820d0deb86f46cfc88f56c46183717e93d6c8b",
+      "bytes": 512040,
+      "pages": 2,
+      "localFilename": "fuvest_2020_primeira_fase_gabaritos.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2021,
+      "role": "candidate-manual",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2021",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/manual_fuvest_2021_versao_1_83_2021_03_23.pdf",
+      "sha256": "1125e2a5d90a65245f9c552af09b6b29627cabe34be17c062d1dfb93a346992f",
+      "bytes": 6990017,
+      "pages": 88,
+      "localFilename": "manual_fuvest_2021_versao_1_83_2021_03_23.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2021,
+      "role": "first-phase-exam",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2021",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2021_primeira_fase.pdf",
+      "sha256": "c263cea2fb60468c6085a84473429a967e21c8bc37f200d6d0fff68722f7d8c3",
+      "bytes": 5753077,
+      "pages": 28,
+      "localFilename": "fuvest_2021_primeira_fase.pdf",
+      "classificationStatus": "pending-content-review"
+    },
+    {
+      "year": 2021,
+      "role": "first-phase-answer-key",
+      "archiveUrl": "https://www.fuvest.br/acervo-vestibular-2021",
+      "sourceUrl": "https://www.fuvest.br/wp-content/uploads/fuvest_2021_primeira_fase_gabarito_v2.pdf",
+      "sha256": "316b8834ad412e619f38c37d43dec4103ef4e71c87eaaaa7c600b9e849aea577",
+      "bytes": 520919,
+      "pages": 2,
+      "localFilename": "fuvest_2021_primeira_fase_gabarito_v2.pdf",
+      "classificationStatus": "pending-content-review"
+    }
+  ]
+}
