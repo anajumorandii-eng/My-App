@@ -33,14 +33,14 @@ describe('inventário de qualidade visual', () => {
       .toThrow(/bio-ecologia-sucessao/);
   });
 
-  it('mantém o relatório versionado em sincronia com os 613 capítulos', () => {
+  it('mantém o relatório versionado em sincronia com todos os capítulos publicados', () => {
     const rows = buildQualityInventory(interactiveSummaries, visualQualityReviews);
     if (process.env.UPDATE_VISUAL_QUALITY === '1') {
       writeFileSync('docs/visual-personalizado/27-qualidade-visual.json', `${JSON.stringify(rows, null, 2)}\n`);
     }
     const saved = JSON.parse(readFileSync('docs/visual-personalizado/27-qualidade-visual.json', 'utf8'));
-    expect(rows).toHaveLength(613);
-    expect(new Set(rows.map(row => row.id)).size).toBe(613);
+    expect(rows).toHaveLength(interactiveSummaries.length);
+    expect(new Set(rows.map(row => row.id)).size).toBe(interactiveSummaries.length);
     // A responsável rejeitou o lote de Ecologia; cobertura não é aprovação estética.
     expect(rows.filter(row => row.status === 'aprovado')).toHaveLength(0);
     expect(saved).toEqual(rows);

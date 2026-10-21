@@ -15,18 +15,18 @@ outro assunto. O detalhe capítulo a capítulo está em
 | Representação | Capítulos | Parcela |
 | --- | ---: | ---: |
 | Experimento exato | 8 | 1,3% |
-| Prancha autoral | 43 | 7,0% |
-| Instrumento | 375 | 61,2% |
-| Cena validada | 187 | 30,5% |
-| Lacuna honesta | 0 | 0,0% |
-| **Total** | **613** | |
+| Prancha autoral | 43 | 6,8% |
+| Instrumento | 375 | 59,1% |
+| Cena validada | 187 | 29,5% |
+| Lacuna honesta | 21 | 3,3% |
+| **Total** | **634** | |
 
 ## Por matéria
 
 | Matéria | Capítulos | Experimento exato | Prancha autoral | Instrumento | Cena validada | Lacuna honesta |
 | --- | ---: | ---: | ---: | ---: | ---: | ---: |
 | Física | 85 | 0 | 14 | 63 | 8 | 0 |
-| Atualidades | 1 | 0 | 0 | 1 | 0 | 0 |
+| Atualidades | 22 | 0 | 0 | 1 | 0 | 21 |
 | Biologia | 72 | 1 | 10 | 27 | 34 | 0 |
 | Geografia | 63 | 1 | 0 | 4 | 58 | 0 |
 | História | 49 | 0 | 1 | 3 | 45 | 0 |

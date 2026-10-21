@@ -12,6 +12,132 @@
     "sectionTitle": "Hipóteses e cenários"
   },
   {
+    "id": "atu-onu-poder",
+    "questionId": "atu-onu-poder-recall-v1",
+    "sectionId": "atu-onu-poder-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-doutrina-trump",
+    "questionId": "atu-doutrina-trump-recall-v1",
+    "sectionId": "atu-doutrina-trump-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-china-eua",
+    "questionId": "atu-china-eua-recall-v1",
+    "sectionId": "atu-china-eua-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-tabuleiro-global",
+    "questionId": "atu-tabuleiro-global-recall-v1",
+    "sectionId": "atu-tabuleiro-global-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-taiwan-chips",
+    "questionId": "atu-taiwan-chips-recall-v1",
+    "sectionId": "atu-taiwan-chips-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-enso",
+    "questionId": "atu-enso-recall-v1",
+    "sectionId": "atu-enso-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-petroleo-opep",
+    "questionId": "atu-petroleo-opep-recall-v1",
+    "sectionId": "atu-petroleo-opep-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-foz-amazonas",
+    "questionId": "atu-foz-amazonas-recall-v1",
+    "sectionId": "atu-foz-amazonas-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-venezuela",
+    "questionId": "atu-venezuela-recall-v1",
+    "sectionId": "atu-venezuela-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-desastres-socioclimaticos",
+    "questionId": "atu-desastres-socioclimaticos-recall-v1",
+    "sectionId": "atu-desastres-socioclimaticos-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-desastres-antropicos",
+    "questionId": "atu-desastres-antropicos-recall-v1",
+    "sectionId": "atu-desastres-antropicos-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-sul-global-brics",
+    "questionId": "atu-sul-global-brics-recall-v1",
+    "sectionId": "atu-sul-global-brics-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-trabalho-america-latina",
+    "questionId": "atu-trabalho-america-latina-recall-v1",
+    "sectionId": "atu-trabalho-america-latina-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-povos-tradicionais",
+    "questionId": "atu-povos-tradicionais-recall-v1",
+    "sectionId": "atu-povos-tradicionais-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-copa-geopolitica",
+    "questionId": "atu-copa-geopolitica-recall-v1",
+    "sectionId": "atu-copa-geopolitica-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-russia-ucrania",
+    "questionId": "atu-russia-ucrania-recall-v1",
+    "sectionId": "atu-russia-ucrania-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-america-latina-seguranca",
+    "questionId": "atu-america-latina-seguranca-recall-v1",
+    "sectionId": "atu-america-latina-seguranca-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-sahel-sudao",
+    "questionId": "atu-sahel-sudao-recall-v1",
+    "sectionId": "atu-sahel-sudao-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-ira",
+    "questionId": "atu-ira-recall-v1",
+    "sectionId": "atu-ira-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-libano-iemen",
+    "questionId": "atu-libano-iemen-recall-v1",
+    "sectionId": "atu-libano-iemen-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
+    "id": "atu-palestina-israel",
+    "questionId": "atu-palestina-israel-recall-v1",
+    "sectionId": "atu-palestina-israel-v1-5",
+    "sectionTitle": "L — Leitura de prova e prática autoral"
+  },
+  {
     "id": "bio-ecologia-introducao",
     "questionId": "bio-ecologia-introducao-editorial-recall-v2",
     "sectionId": "bio-ecologia-introducao-editorial-v2-5",
