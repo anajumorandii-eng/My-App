@@ -1,11 +1,11 @@
 {
-  "total": 613,
+  "total": 634,
   "counts": {
     "experiment": 8,
     "board": 43,
     "instrument": 375,
     "scene": 187,
-    "fallback": 0
+    "fallback": 21
   },
   "contested": 107,
   "subjects": [
@@ -22,13 +22,13 @@
     },
     {
       "subject": "Atualidades",
-      "chapters": 1,
+      "chapters": 22,
       "counts": {
         "experiment": 0,
         "board": 0,
         "instrument": 1,
         "scene": 0,
-        "fallback": 0
+        "fallback": 21
       }
     },
     {
@@ -184,6 +184,174 @@
       "title": "COP30 em Belém: avanços, limites e leitura de prova",
       "primary": "instrument",
       "artifact": "cop30-belem",
+      "ignored": []
+    },
+    {
+      "id": "atu-onu-poder",
+      "subject": "Atualidades",
+      "title": "Geopolítica, poder e limites da ONU",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-doutrina-trump",
+      "subject": "Atualidades",
+      "title": "Doutrina Trump: America First, Monroe e Donroe",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-china-eua",
+      "subject": "Atualidades",
+      "title": "China e EUA: desenvolvimento, comércio e Nova Rota da Seda",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-tabuleiro-global",
+      "subject": "Atualidades",
+      "title": "O tabuleiro global: Indo-Pacífico, alianças e canais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-taiwan-chips",
+      "subject": "Atualidades",
+      "title": "Taiwan e semicondutores: tecnologia como poder",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-enso",
+      "subject": "Atualidades",
+      "title": "El Niño e La Niña: do oceano aos impactos sociais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-petroleo-opep",
+      "subject": "Atualidades",
+      "title": "Petróleo, OPEP e OPEP+: oferta, preços e geopolítica",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-foz-amazonas",
+      "subject": "Atualidades",
+      "title": "Petróleo na Foz do Amazonas: pesquisa, licença e riscos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-venezuela",
+      "subject": "Atualidades",
+      "title": "Venezuela: petróleo, chavismo e crise de soberania",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-desastres-socioclimaticos",
+      "subject": "Atualidades",
+      "title": "Desastres no Brasil: clima, cidade e desigualdade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-desastres-antropicos",
+      "subject": "Atualidades",
+      "title": "Maceió, mineração e desmatamento: riscos produzidos",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-sul-global-brics",
+      "subject": "Atualidades",
+      "title": "Sul Global e BRICS: cooperação sem homogeneidade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-trabalho-america-latina",
+      "subject": "Atualidades",
+      "title": "Trabalho na América Latina: direitos, reformas e informalidade",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-povos-tradicionais",
+      "subject": "Atualidades",
+      "title": "Povos tradicionais: território, direitos e conservação",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-copa-geopolitica",
+      "subject": "Atualidades",
+      "title": "Copa de 2026: esporte, fronteiras e poder",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-russia-ucrania",
+      "subject": "Atualidades",
+      "title": "Rússia e Ucrânia: soberania, guerra e redes globais",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-america-latina-seguranca",
+      "subject": "Atualidades",
+      "title": "América Latina: segurança, narcotráfico e democracia",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-sahel-sudao",
+      "subject": "Atualidades",
+      "title": "Sahel e Sudão: clima, golpes e disputas por poder",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-ira",
+      "subject": "Atualidades",
+      "title": "Irã: revolução, programa nuclear e escalada regional",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-libano-iemen",
+      "subject": "Atualidades",
+      "title": "Líbano e Iêmen: Hezbollah, houthis e rotas marítimas",
+      "primary": "fallback",
+      "artifact": null,
+      "ignored": []
+    },
+    {
+      "id": "atu-palestina-israel",
+      "subject": "Atualidades",
+      "title": "Palestina e Israel: território, civis e justiça internacional",
+      "primary": "fallback",
+      "artifact": null,
       "ignored": []
     },
     {

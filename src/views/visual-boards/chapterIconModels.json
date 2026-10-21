@@ -3063,5 +3063,110 @@
     "model": "network",
     "context": "none",
     "label": "A Sociedade da Informação"
+  },
+  "atu-onu-poder": {
+    "model": "scales",
+    "context": "globe",
+    "label": "Geopolítica, poder e limites da ONU"
+  },
+  "atu-doutrina-trump": {
+    "model": "fort",
+    "context": "arrow",
+    "label": "Doutrina Trump: America First, Monroe e Donroe"
+  },
+  "atu-china-eua": {
+    "model": "factory",
+    "context": "globe",
+    "label": "China e EUA: desenvolvimento, comércio e Nova Rota da Seda"
+  },
+  "atu-tabuleiro-global": {
+    "model": "ship",
+    "context": "globe",
+    "label": "O tabuleiro global: Indo-Pacífico, alianças e canais"
+  },
+  "atu-taiwan-chips": {
+    "model": "circuit",
+    "context": "link",
+    "label": "Taiwan e semicondutores: tecnologia como poder"
+  },
+  "atu-enso": {
+    "model": "wave",
+    "context": "globe",
+    "label": "El Niño e La Niña: do oceano aos impactos sociais"
+  },
+  "atu-petroleo-opep": {
+    "model": "drop",
+    "context": "chart",
+    "label": "Petróleo, OPEP e OPEP+: oferta, preços e geopolítica"
+  },
+  "atu-foz-amazonas": {
+    "model": "drop",
+    "context": "globe",
+    "label": "Petróleo na Foz do Amazonas: pesquisa, licença e riscos"
+  },
+  "atu-venezuela": {
+    "model": "drop",
+    "context": "people",
+    "label": "Venezuela: petróleo, chavismo e crise de soberania"
+  },
+  "atu-desastres-socioclimaticos": {
+    "model": "storm",
+    "context": "people",
+    "label": "Desastres no Brasil: clima, cidade e desigualdade"
+  },
+  "atu-desastres-antropicos": {
+    "model": "soil",
+    "context": "people",
+    "label": "Maceió, mineração e desmatamento: riscos produzidos"
+  },
+  "atu-sul-global-brics": {
+    "model": "globe",
+    "context": "link",
+    "label": "Sul Global e BRICS: cooperação sem homogeneidade"
+  },
+  "atu-trabalho-america-latina": {
+    "model": "factory",
+    "context": "balance",
+    "label": "Trabalho na América Latina: direitos, reformas e informalidade"
+  },
+  "atu-povos-tradicionais": {
+    "model": "tree",
+    "context": "people",
+    "label": "Povos tradicionais: território, direitos e conservação"
+  },
+  "atu-copa-geopolitica": {
+    "model": "globe",
+    "context": "people",
+    "label": "Copa de 2026: esporte, fronteiras e poder"
+  },
+  "atu-russia-ucrania": {
+    "model": "map",
+    "context": "balance",
+    "label": "Rússia e Ucrânia: soberania, guerra e redes globais"
+  },
+  "atu-america-latina-seguranca": {
+    "model": "scales",
+    "context": "people",
+    "label": "América Latina: segurança, narcotráfico e democracia"
+  },
+  "atu-sahel-sudao": {
+    "model": "map",
+    "context": "drop",
+    "label": "Sahel e Sudão: clima, golpes e disputas por poder"
+  },
+  "atu-ira": {
+    "model": "atom",
+    "context": "globe",
+    "label": "Irã: revolução, programa nuclear e escalada regional"
+  },
+  "atu-libano-iemen": {
+    "model": "ship",
+    "context": "link",
+    "label": "Líbano e Iêmen: Hezbollah, houthis e rotas marítimas"
+  },
+  "atu-palestina-israel": {
+    "model": "scales",
+    "context": "globe",
+    "label": "Palestina e Israel: território, civis e justiça internacional"
   }
 }

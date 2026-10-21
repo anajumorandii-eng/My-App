@@ -1,0 +1,1074 @@
+[
+  {
+    "id": "atu-onu-poder",
+    "lesson": "01",
+    "title": "Geopolítica, poder e limites da ONU",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Soberania",
+      "Segunda Guerra Mundial"
+    ],
+    "sections": [
+      "A ONU, criada em 1945, organiza a cooperação entre Estados soberanos. O Conselho de Segurança reúne 15 membros; cinco têm assento permanente e veto: China, Estados Unidos, França, Reino Unido e Rússia. A questão central é a distância entre igualdade jurídica dos Estados e distribuição desigual do poder. Este dossiê retoma a aula 01; não é um boletim sobre todas as votações recentes.",
+      "Hard power atua por coerção ou incentivos materiais, como emprego de força e pressão econômica. Soft power depende da atração e da legitimidade percebida: cultura, valores e diplomacia podem levar outros atores a apoiar uma posição. Smart power combina instrumentos conforme o objetivo. Uma obra financiada no exterior pode gerar prestígio, dependência econômica e ganhos logísticos; seu caráter não se define apenas por envolver dinheiro.",
+      "Na Assembleia Geral, todos os Estados-membros participam; no Conselho, decisões substantivas exigem ao menos nove votos favoráveis e ausência de voto contrário dos permanentes. Abstenção de permanente não equivale a veto. A instituição depende da cooperação e dos recursos dos Estados: pode criar normas e coordenar ajuda sem ter um governo mundial capaz de impor qualquer decisão. Agências humanitárias não se confundem com o Conselho.",
+      "A crítica à representatividade liga a composição permanente ao equilíbrio do pós-guerra. Reformar o Conselho envolve interesses conflitantes sobre assentos, veto e distribuição regional. Não conclua que bloqueio de uma resolução torna toda a ONU inexistente. Tampouco trate uma alegação de segurança como autorização automática para usar força: a Carta distingue proibição do uso da força, legítima defesa e medidas autorizadas pelo Conselho.",
+      "Prática autoral 1: dez membros apoiam uma resolução substantiva, mas um permanente vota contra. Ela passa? Resposta: não, por causa do veto. Prática 2: um país conquista apoio por intercâmbio cultural e depois ameaça cortar crédito. Identifique atração e coerção econômica, explicando por que os instrumentos podem coexistir. Em prova, nomeie o órgão, a regra e seu efeito antes de avaliar a eficácia do multilateralismo."
+    ],
+    "prompt": "Como o veto revela a diferença entre igualdade jurídica e assimetria política na ONU?",
+    "elements": [
+      [
+        "igualdade jurídica",
+        [
+          "igualdade",
+          "soberania",
+          "soberanos"
+        ]
+      ],
+      [
+        "poder de veto",
+        [
+          "veto",
+          "permanente",
+          "permanentes"
+        ]
+      ],
+      [
+        "bloqueio de decisão",
+        [
+          "bloqueia",
+          "bloqueio",
+          "impede",
+          "impedir"
+        ]
+      ]
+    ],
+    "transfer": "Uma resolução fracassou no Conselho, mas a ajuda humanitária continuou. Explique por que esses fatos são compatíveis.",
+    "official": [
+      [
+        "ONU — sistema de votação do Conselho",
+        "https://main.un.org/securitycouncil/en/content/voting-system"
+      ]
+    ]
+  },
+  {
+    "id": "atu-doutrina-trump",
+    "lesson": "02",
+    "title": "Doutrina Trump: America First, Monroe e Donroe",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Imperialismo",
+      "Protecionismo"
+    ],
+    "sections": [
+      "A aula 02 aproxima America First da retomada de pretensões de influência dos EUA no hemisfério ocidental. Donroe é um apelido político que associa Donald Trump à Doutrina Monroe; não designa uma nova regra de direito internacional. A intervenção dos EUA na Venezuela em 3 de janeiro de 2026 oferece um caso datado para confrontar discurso de segurança, interesses estratégicos e soberania.",
+      "A Doutrina Monroe, anunciada em 1823, opunha-se à recolonização europeia das Américas. O Corolário Roosevelt, de 1904, ampliou a justificativa para intervenções estadunidenses. Não são políticas idênticas: mudam os contextos, os instrumentos e a posição dos EUA. No século XXI, controle de infraestrutura, mercados, recursos e presença de concorrentes externos recoloca a disputa por influência regional.",
+      "O governo dos EUA mobiliza argumentos de defesa, migração e combate ao crime; governos latino-americanos defendem margens próprias de decisão. Empresas buscam acesso a mercados e recursos, enquanto populações suportam custos de sanções, instabilidade e violência. A China é parte da disputa econômica regional, mas os países latino-americanos têm escolhas e conflitos internos; não são simples peças sem agência.",
+      "Tarifas podem pressionar parceiros e proteger setores domésticos, mas também encarecer insumos e provocar retaliação. A ação militar exerce coerção direta. A ONU manifestou preocupação com a intervenção na Venezuela e com o respeito à Carta. Identificar a justificativa apresentada por um governo não significa endossá-la nem demonstrar sua legalidade. Compare documentos, efeitos e escalas, evitando explicar toda política externa por uma única motivação.",
+      "Prática autoral 1: uma tarifa eleva o custo de um componente importado. Mostre por que uma indústria protegida e outra consumidora do componente podem reagir de maneiras opostas. Prática 2: compare a promessa de não interferência europeia de 1823 com uma intervenção hemisférica posterior. Resposta esperada: diferenciar o contexto histórico e relacionar a assimetria de poder à limitação da soberania do país atingido."
+    ],
+    "prompt": "Por que combater o crime e defender interesses econômicos não são, por si sós, demonstrações de legalidade de uma intervenção?",
+    "elements": [
+      [
+        "soberania",
+        [
+          "soberania",
+          "territorial"
+        ]
+      ],
+      [
+        "uso da força",
+        [
+          "força",
+          "forca",
+          "militar"
+        ]
+      ],
+      [
+        "normas internacionais",
+        [
+          "carta",
+          "direito internacional",
+          "onu"
+        ]
+      ]
+    ],
+    "transfer": "Analise uma ameaça sobre um canal interoceânico separando justificativa pública, interesse logístico e soberania.",
+    "official": [
+      [
+        "ONU — pronunciamento de 5 de janeiro de 2026 sobre a Venezuela",
+        "https://www.un.org/sg/en/content/sg/statements/2026-01-05/secretary-generals-remarks-the-security-council-venezuela"
+      ]
+    ]
+  },
+  {
+    "id": "atu-china-eua",
+    "lesson": "03",
+    "title": "China e EUA: desenvolvimento, comércio e Nova Rota da Seda",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Guerra Fria",
+      "Globalização"
+    ],
+    "sections": [
+      "A expansão econômica chinesa alterou a divisão internacional do trabalho e intensificou a disputa com os EUA. Guerra Fria 2.0 é uma interpretação comparativa usada na aula 03, não a repetição literal da bipolaridade EUA–URSS. A rivalidade contemporânea combina concorrência tecnológica, comércio, investimentos e dissuasão militar com cadeias produtivas fortemente conectadas.",
+      "As reformas iniciadas em 1978 ampliaram mecanismos de mercado e abertura ao capital externo sem eliminar o comando político do Partido Comunista. Zonas econômicas especiais, infraestrutura, trabalho industrial, investimento e exportações integraram a China às cadeias globais. A adesão à OMC em 2001 aprofundou essa inserção. Crescimento resulta dessa combinação histórica, não de uma explicação única como mão de obra barata.",
+      "Lançada em 2013, a Nova Rota da Seda articula projetos de transporte, energia e comunicação. O governo e empresas chinesas procuram mercados, abastecimento e conectividade; governos receptores buscam obras e crédito. As condições de cada contrato, o endividamento e os impactos territoriais variam. Investimento pode produzir influência diplomática, mas não torna todo projeto uma tomada automática da soberania do receptor.",
+      "Um déficit comercial bilateral significa importar mais do parceiro do que exportar para ele, no período e na medida considerados. Não equivale ao déficit de todas as contas externas nem prova sozinho perda de bem-estar. Protecionismo e restrições tecnológicas tentam reorganizar dependências. A diferença para a Guerra Fria clássica é a interdependência entre rivais, além da atuação de outras potências e de países que negociam com ambos.",
+      "Prática autoral 1: um país exporta 30 e importa 50 do parceiro. Seu saldo bilateral é −20, mas isso não determina o saldo com todos os países. Prática 2: uma ferrovia financiada pela China reduz o custo de exportar minério. Explique o ganho logístico, a possibilidade de ampliar a especialização primária e os limites de inferir dependência sem conhecer contrato e diversificação produtiva."
+    ],
+    "prompt": "Explique por que a rivalidade China–EUA pode coexistir com interdependência econômica.",
+    "elements": [
+      [
+        "rivalidade",
+        [
+          "disputa",
+          "rivalidade",
+          "competição",
+          "competicao"
+        ]
+      ],
+      [
+        "cadeias produtivas",
+        [
+          "cadeias",
+          "insumos",
+          "produção",
+          "producao"
+        ]
+      ],
+      [
+        "fluxos comerciais",
+        [
+          "comércio",
+          "comercio",
+          "investimento",
+          "importa",
+          "exporta"
+        ]
+      ]
+    ],
+    "transfer": "Uma sanção tecnológica afeta empresas dos dois lados. Reconstrua o mecanismo sem afirmar que toda globalização acabou."
+  },
+  {
+    "id": "atu-tabuleiro-global",
+    "lesson": "04",
+    "title": "O tabuleiro global: Indo-Pacífico, alianças e canais",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Rotas comerciais",
+      "Soberania marítima"
+    ],
+    "sections": [
+      "A aula 04 desloca a rivalidade entre potências para territórios concretos: Mar do Sul da China, ilhas do Pacífico e Canal do Panamá. A conexão é o controle de circulação, infraestrutura e posições estratégicas. Planos de desenvolvimento e alianças de segurança são instrumentos para reduzir vulnerabilidades e ampliar influência, mas uma intenção anunciada não comprova seu cumprimento.",
+      "Estreitos e canais concentram fluxos em passagens estreitas; uma interrupção pode obrigar desvios, aumentar tempo de viagem e elevar seguros. No Mar do Sul da China, reivindicações sobre ilhas e áreas marítimas envolvem China e países do Sudeste Asiático. Distinguir terra emersa, mar territorial e zona econômica exclusiva evita representar qualquer reivindicação como soberania plena sobre todo o mar.",
+      "O QUAD reúne EUA, Índia, Japão e Austrália como diálogo de cooperação; não é equivalente a um tratado de defesa coletiva como a OTAN. O AUKUS, anunciado em 2021 por Austrália, Reino Unido e EUA, é uma parceria de segurança e tecnologia. Submarino com propulsão nuclear não significa necessariamente armamento nuclear. Países insulares também negociam acordos para atender interesses domésticos.",
+      "O controle do Canal do Panamá foi transferido pelos EUA ao Panamá em 1999. Participação de empresas estrangeiras em terminais portuários não equivale ao controle estatal do canal. Na análise de mapas, separe localização de instalações, propriedade empresarial, administração da via e soberania nacional. A competição logística não apaga o direito dos países menores de definir sua política externa.",
+      "Prática autoral 1: uma rota de 10 dias passa a levar 14 após um desvio. O tempo cresceu 40%; o custo total não necessariamente cresce na mesma proporção. Prática 2: um editorial equipara investimento num porto a anexação. Refute distinguindo contrato econômico, influência estratégica e soberania, e indique quais documentos permitiriam avaliar os poderes efetivamente cedidos."
+    ],
+    "prompt": "Como um gargalo marítimo transforma uma disputa regional em problema para cadeias globais?",
+    "elements": [
+      [
+        "concentração de fluxos",
+        [
+          "fluxos",
+          "rotas",
+          "circulação",
+          "circulacao"
+        ]
+      ],
+      [
+        "interrupção ou desvio",
+        [
+          "desvio",
+          "interrupção",
+          "interrupcao",
+          "bloqueio"
+        ]
+      ],
+      [
+        "custos",
+        [
+          "custo",
+          "frete",
+          "seguro",
+          "preço",
+          "preco"
+        ]
+      ]
+    ],
+    "transfer": "Compare o Canal do Panamá e Bab el-Mandeb sem confundir canal artificial e estreito natural."
+  },
+  {
+    "id": "atu-taiwan-chips",
+    "lesson": "05",
+    "title": "Taiwan e semicondutores: tecnologia como poder",
+    "axis": "ciencia-tecnologia",
+    "prerequisites": [
+      "Revolução Chinesa",
+      "Cadeias globais de valor"
+    ],
+    "sections": [
+      "Taiwan combina governo próprio, reconhecimento diplomático limitado e forte relevância na fabricação de semicondutores. Pequim reivindica a ilha como parte da China; os EUA mantêm relações não oficiais e apoio à capacidade de defesa taiwanesa. A aula 05 permite relacionar essa tensão territorial à concentração de etapas tecnológicas estratégicas, sem reduzir toda a disputa à existência dos chips.",
+      "Em 1949, a vitória comunista no continente levou o governo nacionalista a se refugiar em Taiwan; a República da China já existia antes dessa retirada. Em 1971, a República Popular assumiu a representação da China na ONU. Reconhecimento diplomático e controle efetivo do território são dimensões distintas. A política estadunidense combina reconhecimento de Pequim e vínculos com Taiwan, sem uma garantia simples e incondicional de intervenção militar.",
+      "A cadeia dos chips inclui projeto, equipamentos, materiais, fabricação e encapsulamento. Uma empresa pode projetar um processador e contratar sua fabricação em outro território. Instalar uma fábrica exige capital, conhecimento, energia, água e fornecedores especializados. Por isso, diversificar produção não é apenas mudar o endereço de uma máquina. Percentuais sobre chips avançados não podem ser estendidos a todos os semicondutores.",
+      "Escudo de silício é a hipótese de que a relevância da produção taiwanesa aumenta o custo internacional de um conflito. Não é uma garantia de paz: a mesma concentração cria vulnerabilidade, motiva estoques e novas fábricas. Restrições de exportação e incentivos industriais procuram reorganizar dependências. Distinguir fato produtivo, interpretação estratégica e cenário militar impede transformar um argumento econômico em previsão inevitável.",
+      "Prática autoral 1: uma empresa projeta um chip nos EUA e o fabrica em Taiwan. Identifique as duas etapas e explique por que o produto não tem uma única geografia produtiva. Prática 2: avalie a frase chips impedem qualquer invasão. Resposta: os custos de ruptura podem dissuadir, mas decisões políticas e militares não são determinadas exclusivamente pelo comércio."
+    ],
+    "prompt": "Por que o escudo de silício é uma hipótese de dissuasão, e não uma garantia de segurança?",
+    "elements": [
+      [
+        "concentração produtiva",
+        [
+          "concentração",
+          "concentracao",
+          "produção",
+          "producao"
+        ]
+      ],
+      [
+        "custo de ruptura",
+        [
+          "custo",
+          "ruptura",
+          "cadeias"
+        ]
+      ],
+      [
+        "incerteza política",
+        [
+          "hipótese",
+          "hipotese",
+          "garantia",
+          "política",
+          "politica"
+        ]
+      ]
+    ],
+    "transfer": "Compare autossuficiência tecnológica e diversificação de fornecedores: por que não são sinônimos?",
+    "official": [
+      [
+        "Departamento de Estado — histórico das relações com Taiwan (arquivo 2021–2025)",
+        "https://2021-2025.state.gov/u-s-relations-with-taiwan/"
+      ]
+    ]
+  },
+  {
+    "id": "atu-enso",
+    "lesson": "06",
+    "title": "El Niño e La Niña: do oceano aos impactos sociais",
+    "axis": "clima-energia-meio-ambiente",
+    "prerequisites": [
+      "Ventos alísios",
+      "Circulação atmosférica"
+    ],
+    "sections": [
+      "El Niño e La Niña são fases quentes e frias do ENOS, sistema acoplado entre oceano e atmosfera no Pacífico equatorial. A aula 06 relaciona esse fenômeno a chuvas, secas, agricultura e energia. Este resumo explica o mecanismo e o episódio de 2023–2024 como contexto histórico; não transforma uma previsão sazonal de aula em diagnóstico meteorológico vigente.",
+      "Em condições usuais, alísios de leste favorecem o acúmulo de água superficial quente no oeste do Pacífico e a ressurgência de águas frias no leste. No El Niño, o enfraquecimento dos ventos e o aquecimento do centro-leste alteram a convecção e a circulação atmosférica. Na La Niña, ventos mais fortes e resfriamento nessa região reforçam o contraste. Não é apenas água quente ou fria isolada: o acoplamento atmosférico importa.",
+      "No Brasil, os efeitos variam por região, estação e intensidade do episódio. El Niño frequentemente se associa a maior chuva no Sul e condições mais secas em partes do Norte e Nordeste, mas não determina o tempo de cada cidade. Agricultura, reservatórios e saúde são afetados por mudanças na disponibilidade de água e temperatura. A decisão de plantar ou operar uma hidrelétrica depende também de monitoramento local e capacidade de adaptação.",
+      "Variabilidade natural do ENOS e aquecimento global podem atuar simultaneamente. Uma fase fria não elimina a tendência de aquecimento de longo prazo. Previsões expressam probabilidades; uma probabilidade alta não é certeza. Risco de desastre depende ainda de exposição, ocupação de encostas e várzeas, drenagem e proteção social. Não atribua uma enchente inteira a um único fenômeno sem analisar a bacia e a vulnerabilidade.",
+      "Prática autoral 1: se uma previsão indica 70% de chance de uma fase do ENOS, o que os 30% restantes representam? Outros resultados possíveis, não um erro já demonstrado. Prática 2: duas cidades recebem chuva semelhante, mas só uma sofre desastre. Relacione impermeabilização, moradia, drenagem e alerta à transformação do evento físico em perdas sociais."
+    ],
+    "prompt": "Relacione os alísios, a temperatura do Pacífico e a mudança das chuvas no El Niño.",
+    "elements": [
+      [
+        "ventos enfraquecidos",
+        [
+          "alísios",
+          "alisios",
+          "ventos"
+        ]
+      ],
+      [
+        "aquecimento do Pacífico",
+        [
+          "aquecimento",
+          "quente",
+          "temperatura"
+        ]
+      ],
+      [
+        "circulação e chuvas",
+        [
+          "circulação",
+          "circulacao",
+          "convecção",
+          "conveccao",
+          "chuvas"
+        ]
+      ]
+    ],
+    "transfer": "Uma La Niña ocorreu em um planeta mais quente. Explique por que não há contradição.",
+    "official": [
+      [
+        "NOAA — mecanismo e dúvidas sobre ENOS",
+        "https://www.climate.gov/news-features/understanding-climate/el-nino-and-la-nina-frequently-asked-questions"
+      ]
+    ]
+  },
+  {
+    "id": "atu-petroleo-opep",
+    "lesson": "08",
+    "title": "Petróleo, OPEP e OPEP+: oferta, preços e geopolítica",
+    "axis": "clima-energia-meio-ambiente",
+    "prerequisites": [
+      "Oferta e demanda",
+      "Combustíveis fósseis"
+    ],
+    "sections": [
+      "A aula 08 analisa por que decisões de produtores, conflitos e gargalos marítimos repercutem no preço do petróleo. A OPEP coordena políticas de países exportadores; a OPEP+ acrescenta produtores parceiros, entre eles a Rússia. A participação em um fórum de diálogo não significa automaticamente aceitar todas as obrigações de cortes de produção. Não há cotação atual neste resumo.",
+      "Petróleo é recurso não renovável formado em processos geológicos, associado a bacias sedimentares. Sua extração depende de qualidade da jazida, tecnologia, investimento e custo. Reservas provadas, recursos estimados e produção efetiva são medidas distintas. Um país pode ter grandes reservas e produzir pouco; outro pode ser grande consumidor e importador. O preço de referência internacional não corresponde ao valor final pago na bomba.",
+      "Exportadores procuram receita e influência; importadores desejam abastecimento previsível e preços menores. Empresas decidem investimentos com base em custos e expectativas. Governos também tributam, regulam e mantêm estoques estratégicos. Como transporte e petroquímica dependem de derivados, mudanças nos preços chegam a diferentes setores e grupos de renda de forma desigual.",
+      "Um corte de oferta pode pressionar preços para cima, mas o resultado depende da demanda, dos estoques, de outros produtores e das expectativas. Guerra pode elevar o risco antes de reduzir fisicamente a oferta. Não confunda anúncio de corte com cumprimento integral, nem alta do barril com aumento idêntico da gasolina: câmbio, refino, logística, tributos e política comercial mediam a transmissão.",
+      "Prática autoral 1: o barril mantém preço em dólares, mas o real se desvaloriza. Explique por que o custo de importação em reais pode aumentar. Prática 2: um corte de produção coincide com queda de preços durante uma recessão. Não há contradição necessária: a demanda pode ter recuado mais que a oferta. Indique quais séries seriam necessárias para sustentar essa explicação."
+    ],
+    "prompt": "Por que um corte da OPEP+ não garante alta de preços?",
+    "elements": [
+      [
+        "oferta",
+        [
+          "oferta",
+          "produção",
+          "producao"
+        ]
+      ],
+      [
+        "demanda",
+        [
+          "demanda",
+          "consumo",
+          "recessão",
+          "recessao"
+        ]
+      ],
+      [
+        "outros condicionantes",
+        [
+          "estoque",
+          "expectativas",
+          "outros produtores"
+        ]
+      ]
+    ],
+    "transfer": "Distinga reserva de petróleo, produção diária e receita de exportação em uma comparação entre países."
+  },
+  {
+    "id": "atu-foz-amazonas",
+    "lesson": "09",
+    "title": "Petróleo na Foz do Amazonas: pesquisa, licença e riscos",
+    "axis": "clima-energia-meio-ambiente",
+    "prerequisites": [
+      "Bacias sedimentares",
+      "Licenciamento ambiental"
+    ],
+    "sections": [
+      "A Margem Equatorial brasileira reúne bacias sedimentares offshore, incluindo a Foz do Amazonas. Em 20 de outubro de 2025, foi anunciada a licença para perfurar um poço exploratório no bloco FZA-M-59. A distinção decisiva da aula 09 é entre pesquisar a existência e viabilidade do recurso e autorizar produção comercial. A licença de uma atividade não libera automaticamente todas as etapas posteriores.",
+      "O nome da bacia não significa perfuração dentro do leito do rio Amazonas. A localização marítima deve ser lida no mapa e nas coordenadas do projeto. Pesquisa procura confirmar características geológicas e volumes; uma estimativa de potencial não equivale a reserva provada. A avaliação de risco considera correntes, biodiversidade, distância das bases e capacidade de resposta a acidentes, além da sensibilidade das áreas que poderiam ser atingidas.",
+      "Petrobras e governos interessados em receita defendem o potencial econômico; o Ibama avalia requisitos ambientais, e comunidades e pesquisadores discutem impactos e condições de participação. O anúncio do Ministério de Minas e Energia expressa uma posição favorável ao empreendimento, não uma prova neutra de ausência de risco. Separar competência regulatória, interesse empresarial e direitos territoriais ajuda a comparar argumentos.",
+      "A tensão com a transição energética envolve receita e emprego de um lado e emissões, conservação e dependência de ativos fósseis de outro. Menor emissão na operação não elimina a emissão da combustão do produto. Direitos sobre recursos da plataforma continental também não anulam o licenciamento. Para noticiar um vazamento, é preciso identificar substância, volume, local e data; ocorrência operacional não autoriza inventar dano específico sem evidência.",
+      "Prática autoral 1: uma notícia anuncia licença de pesquisa e conclui produção comercial garantida. Aponte as etapas e incertezas omitidas. Prática 2: compare um argumento de segurança energética com um de precaução ambiental. Resposta: explicitar ganhos esperados, risco de dano, alternativas e condições verificáveis, sem confundir avaliação crítica com certeza sobre reservas ou acidentes."
+    ],
+    "prompt": "Por que uma licença de perfuração exploratória não comprova produção comercial de petróleo?",
+    "elements": [
+      [
+        "pesquisa",
+        [
+          "pesquisa",
+          "exploratória",
+          "exploratoria"
+        ]
+      ],
+      [
+        "viabilidade e reserva",
+        [
+          "viabilidade",
+          "reserva",
+          "incerteza"
+        ]
+      ],
+      [
+        "etapas de autorização",
+        [
+          "licença",
+          "licenca",
+          "etapas",
+          "licenciamento"
+        ]
+      ]
+    ],
+    "transfer": "Uma área tem soberania brasileira e alta sensibilidade ambiental. Explique por que as duas informações podem ser verdadeiras.",
+    "official": [
+      [
+        "MME — licença de perfuração no FZA-M-59, 20/10/2025",
+        "https://www.gov.br/mme/pt-br/assuntos/noticias/silveira-comemora-liberacao-de-licenca-para-exploracao-do-poco-fza-m-59-na-margem-equatorial"
+      ]
+    ]
+  },
+  {
+    "id": "atu-venezuela",
+    "lesson": "10",
+    "title": "Venezuela: petróleo, chavismo e crise de soberania",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Economia exportadora",
+      "Democracia"
+    ],
+    "sections": [
+      "A aula 10 articula dependência do petróleo, chavismo, crise econômica e deslocamento populacional. A intervenção dos EUA em 3 de janeiro de 2026 e a captura de Nicolás Maduro constituem um acontecimento confirmado no registro da ONU. Mudança de liderança, mudança de regime e democratização não são equivalentes: cada afirmação exige evidências institucionais próprias.",
+      "A concentração das receitas externas no petróleo expõe a economia a variações de preços e produção. Entradas de divisas podem financiar importações e políticas públicas; uma queda prolongada estreita essa capacidade. O Caracazo de 1989 expressou conflitos sociais anteriores à eleição de Hugo Chávez em 1998. O chavismo associou redistribuição, nacionalismo e centralização política; seus efeitos devem ser analisados por período e dimensão.",
+      "Governo, oposição, Forças Armadas, empresas e população venezuelana não têm interesses homogêneos. Os EUA mobilizam argumentos de segurança e exercem pressão; países vizinhos lidam com fluxos de pessoas e efeitos fronteiriços. Refugiados e migrantes são categorias que exigem cuidado jurídico e estatístico. A magnitude de um fluxo deve vir acompanhada de data e fonte, em vez de um número apresentado como permanente.",
+      "A crise não se explica exclusivamente por sanções nem exclusivamente por um rótulo ideológico: dependência produtiva, decisões domésticas, deterioração institucional, preços e restrições externas interagem. Em Essequibo, a reivindicação venezuelana sobre território administrado pela Guiana envolve história de fronteiras e recursos. Descoberta de petróleo pode ampliar a disputa sem ser sua origem única.",
+      "Prática autoral 1: o valor exportado cai mesmo com preço estável do petróleo. Qual variável verificar? O volume efetivamente produzido e exportado, além da composição da pauta. Prática 2: uma operação externa remove um governante. É possível concluir democracia restabelecida? Não: seria necessário avaliar eleições, liberdades, separação de poderes e participação, além da legalidade da intervenção."
+    ],
+    "prompt": "Como a dependência petrolífera pode transformar um choque externo em crise fiscal e social?",
+    "elements": [
+      [
+        "concentração das exportações",
+        [
+          "dependência",
+          "dependencia",
+          "concentração",
+          "concentracao"
+        ]
+      ],
+      [
+        "queda de receita",
+        [
+          "receita",
+          "divisas",
+          "arrecadação",
+          "arrecadacao"
+        ]
+      ],
+      [
+        "impactos sociais",
+        [
+          "importações",
+          "importacoes",
+          "serviços",
+          "servicos",
+          "políticas",
+          "politicas"
+        ]
+      ]
+    ],
+    "transfer": "Compare crise econômica, autoritarismo e intervenção externa sem tratá-los como conceitos intercambiáveis.",
+    "official": [
+      [
+        "ONU — intervenção e captura de Maduro, janeiro de 2026",
+        "https://dppa.dfs.un.org/en/un-chief-deeply-concerned-over-possible-intensification-of-instability-venezuela"
+      ]
+    ]
+  },
+  {
+    "id": "atu-desastres-socioclimaticos",
+    "lesson": "11",
+    "title": "Desastres no Brasil: clima, cidade e desigualdade",
+    "axis": "clima-energia-meio-ambiente",
+    "prerequisites": [
+      "Bacias hidrográficas",
+      "Urbanização"
+    ],
+    "sections": [
+      "As enchentes do Rio Grande do Sul em 2024 e os deslizamentos em cidades brasileiras mostram a combinação de ameaça física e vulnerabilidade social. A aula 11 diferencia desastres rápidos, como inundações e movimentos de massa, de processos graduais, como secas. Um evento intenso não produz as mesmas perdas em todos os territórios: exposição, infraestrutura e proteção social alteram o resultado.",
+      "Na bacia hidrográfica, precipitação pode infiltrar, evaporar, ficar armazenada ou escoar. Impermeabilização e ocupação de várzeas tendem a acelerar a chegada de água aos rios e ampliar a exposição às cheias. Em encostas, saturação do solo, declividade, cortes e remoção de vegetação podem favorecer instabilidade. Conectar o mecanismo à ocupação evita atribuir todo deslizamento apenas à quantidade de chuva.",
+      "Poder público, moradores, empresas e serviços de emergência compartilham responsabilidades diferentes. Famílias de baixa renda frequentemente têm acesso restrito a solo urbano seguro. Explicar essa desigualdade não é responsabilizar as vítimas pela ausência de alternativa habitacional. Planos de bacia, habitação, saneamento, manutenção da drenagem e sistemas de alerta atuam em escalas complementares.",
+      "Cidades-esponja procuram infiltrar, reter e liberar água de modo mais lento com áreas permeáveis, parques inundáveis e outras estruturas. Não eliminam toda inundação e dependem de dimensionamento e manutenção. Adaptação reduz danos; mitigação climática reduz emissões. Um alerta sem rota de fuga, transporte ou abrigo pode falhar socialmente mesmo quando a previsão física é correta.",
+      "Prática autoral 1: duas áreas recebem a mesma chuva, mas a mais impermeável registra pico de cheia mais rápido. Explique a redução de infiltração e o aumento do escoamento. Prática 2: proponha duas medidas para uma cidade com famílias em encostas. Resposta possível: moradia segura com participação dos moradores e monitoramento associado a evacuação viável; apenas mandar sair não resolve a vulnerabilidade."
+    ],
+    "prompt": "Por que a mesma ameaça de chuva pode gerar danos diferentes em duas cidades?",
+    "elements": [
+      [
+        "exposição",
+        [
+          "exposição",
+          "exposicao",
+          "várzea",
+          "varzea",
+          "encosta"
+        ]
+      ],
+      [
+        "vulnerabilidade",
+        [
+          "vulnerabilidade",
+          "desigualdade",
+          "moradia"
+        ]
+      ],
+      [
+        "capacidade de resposta",
+        [
+          "drenagem",
+          "alerta",
+          "prevenção",
+          "prevencao",
+          "infraestrutura"
+        ]
+      ]
+    ],
+    "transfer": "Uma cidade ampliou alertas, mas não abrigos. Mostre qual elo da prevenção permanece incompleto."
+  },
+  {
+    "id": "atu-desastres-antropicos",
+    "lesson": "12",
+    "title": "Maceió, mineração e desmatamento: riscos produzidos",
+    "axis": "clima-energia-meio-ambiente",
+    "prerequisites": [
+      "Mineração",
+      "Fronteira agrícola"
+    ],
+    "sections": [
+      "A aula 12 reúne desastres tecnológicos e pressões sobre a vegetação. Em Maceió, a extração subterrânea de sal-gema foi relacionada pelo Serviço Geológico do Brasil à instabilidade de bairros. Mariana, em 2015, e Brumadinho, em 2019, são referências de rompimentos de barragens de rejeitos. Os mecanismos são distintos: subsidência de terreno não é o mesmo processo que ruptura de barragem.",
+      "Retirar sal-gema pode criar cavidades e alterar a estabilidade do subsolo. O afundamento atinge edificações, vias, redes e atividades econômicas, além de exigir deslocamentos. Indenização financeira não recompõe automaticamente vínculos de vizinhança e memória. Prevenção depende de conhecimento geológico, fiscalização, monitoramento e decisões que considerem o risco antes de ampliar a operação.",
+      "Empresas exploradoras respondem por suas atividades; órgãos públicos licenciam, fiscalizam e organizam proteção. Moradores e trabalhadores são atingidos de maneiras distintas. Responsabilidade civil, administrativa e penal seguem procedimentos próprios: investigação ou indiciamento não equivalem a condenação definitiva. Para avaliar reparação, é preciso observar acesso, abrangência, tempo e restauração ambiental, não apenas o valor anunciado.",
+      "O desmatamento liga-se à conversão do uso da terra, à especulação fundiária e à expansão de atividades. MATOPIBA designa partes de Maranhão, Tocantins, Piauí e Bahia; AMACRO articula áreas de Amazonas, Acre e Rondônia. Mapas de perda de vegetação precisam indicar período, bioma e método. Não trate alertas como equivalentes a desmatamento consolidado nem atribua toda perda do país à Amazônia.",
+      "Prática autoral 1: diferencie subsidência, rompimento de barragem e conversão de vegetação pelo mecanismo físico de cada um. Prática 2: uma família recebeu compensação pela casa, mas perdeu renda e rede de apoio. Justifique por que a reparação material pode ser incompleta e proponha indicadores sociais e ambientais para acompanhar a recuperação."
+    ],
+    "prompt": "Por que reparar um desastre de mineração exige mais do que pagar pelo imóvel perdido?",
+    "elements": [
+      [
+        "perdas materiais",
+        [
+          "casa",
+          "imóvel",
+          "imovel",
+          "material"
+        ]
+      ],
+      [
+        "vínculos e renda",
+        [
+          "renda",
+          "vínculos",
+          "vinculos",
+          "memória",
+          "memoria"
+        ]
+      ],
+      [
+        "recuperação e prevenção",
+        [
+          "recuperação",
+          "recuperacao",
+          "ambiental",
+          "monitoramento"
+        ]
+      ]
+    ],
+    "transfer": "Um mapa mostra redução da perda florestal e expansão agrícola no Cerrado. Explique por que os dois resultados podem coexistir.",
+    "official": [
+      [
+        "MME/CPRM — relatório técnico de Maceió, 2019",
+        "https://www.gov.br/mme/pt-br/assuntos/noticias/confira-o-relatorio-sobre-a-instabilidade-do-terreno-no-bairro-pinheiro-e-adjacencias"
+      ]
+    ]
+  },
+  {
+    "id": "atu-sul-global-brics",
+    "lesson": "18",
+    "title": "Sul Global e BRICS: cooperação sem homogeneidade",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Desenvolvimento",
+      "Governança global"
+    ],
+    "sections": [
+      "A aula 18 usa Sul Global para discutir desigualdades na economia e na governança internacional. O termo é histórico e político, não uma divisão pelo Equador: Austrália e Nova Zelândia ilustram por que latitude não define a categoria. Os BRICS articulam cooperação entre países com interesses parcialmente convergentes e trajetórias muito diferentes.",
+      "O acrônimo BRIC surgiu em 2001 como classificação de economias; a cooperação política foi construída depois, com a primeira cúpula em 2009 e a participação da África do Sul na cúpula de 2011. Expansão do agrupamento, convite, adesão efetiva e categoria de parceiro são situações diferentes. Uma lista de membros exige data e confirmação oficial: este resumo não fixa como permanente a relação apresentada nos slides.",
+      "O Novo Banco de Desenvolvimento financia projetos de infraestrutura e desenvolvimento sustentável. Banco, agrupamento diplomático e bloco de integração comercial não são a mesma instituição. Os BRICS não constituem uma união aduaneira com tarifa externa comum. Participar do agrupamento não obriga automaticamente a abandonar outras parcerias, e a composição do banco não deve ser deduzida da lista política de participantes.",
+      "Reformas de instituições multilaterais, financiamento e maior uso de moedas locais podem aproximar os países. Rivalidades, diferenças de regime e assimetrias econômicas limitam essa convergência. Ampliar transações em moedas nacionais não significa criar uma moeda única, nem comprova o fim do dólar. PIB nominal e PIB em paridade de poder de compra medem dimensões diferentes e não devem ser misturados num ranking.",
+      "Prática autoral 1: por que um país do hemisfério sul pode pertencer ao Norte Global? Porque a classificação se refere à posição histórica e socioeconômica. Prática 2: um título anuncia moeda dos BRICS porque duas empresas negociaram em moedas locais. Identifique o salto indevido entre acordo comercial, sistema de pagamentos e união monetária."
+    ],
+    "prompt": "Por que os BRICS não podem ser descritos como um bloco homogêneo ou uma união aduaneira?",
+    "elements": [
+      [
+        "diversidade de interesses",
+        [
+          "interesses",
+          "diversidade",
+          "rivalidades"
+        ]
+      ],
+      [
+        "cooperação",
+        [
+          "cooperação",
+          "cooperacao",
+          "agrupamento"
+        ]
+      ],
+      [
+        "ausência de integração aduaneira",
+        [
+          "tarifa",
+          "aduaneira",
+          "mercado comum"
+        ]
+      ]
+    ],
+    "transfer": "Compare uma proposta de reforma da governança global com a criação de um banco: que problema cada instrumento procura enfrentar?"
+  },
+  {
+    "id": "atu-trabalho-america-latina",
+    "lesson": "19",
+    "title": "Trabalho na América Latina: direitos, reformas e informalidade",
+    "axis": "economia-trabalho-desigualdades",
+    "prerequisites": [
+      "Industrialização",
+      "Direitos sociais"
+    ],
+    "sections": [
+      "A aula 19 relaciona a história de direitos trabalhistas a reformas econômicas e mudanças tecnológicas. A CLT brasileira foi instituída em 1943; a reforma de 2017 alterou relações de trabalho, sem ser a origem de toda a informalidade. Propostas sobre jornada e escala precisam ser distinguidas de leis promulgadas e de regras efetivamente em vigor.",
+      "O trabalho não é apenas uma mercadoria indiferenciada: quem depende do salário pode ter menor poder de negociação do que quem controla vagas e capital. Jornada, descanso, segurança e negociação coletiva buscam enfrentar essa assimetria. Formalização diz respeito ao enquadramento institucional do vínculo; precarização descreve deterioração de condições e proteção. Uma pessoa pode trabalhar muitas horas e continuar com renda insuficiente.",
+      "A OIT tem estrutura tripartite: governos, empregadores e trabalhadores. Seus princípios fundamentais incluem liberdade sindical e negociação coletiva, eliminação do trabalho forçado e infantil, não discriminação e ambiente seguro e saudável. Diferentes grupos avaliam reformas por custos, produtividade, renda, emprego e proteção. Identificar interesses não dispensa examinar dados e efeitos reais.",
+      "Desemprego e informalidade não são sinônimos: trabalhadores informais estão ocupados. A taxa de desemprego usa a força de trabalho como denominador, não toda a população. Reduzir horas pode exigir reorganização da produção; afirmar que isso sempre destrói ou sempre cria empregos elimina condições importantes. Trabalho por aplicativo pode envolver autonomia em alguns aspectos e controle algorítmico em outros, exigindo análise concreta.",
+      "Prática autoral 1: numa força de trabalho de 100 pessoas, 10 buscam emprego e 30 trabalham informalmente. O desemprego é 10%, e os informais não se somam aos desempregados. Prática 2: avalie uma reforma de jornada por três critérios: renda e descanso, produtividade e custos, fiscalização e cobertura. Explique por que observar apenas o PIB não responde a todos eles."
+    ],
+    "prompt": "Diferencie desemprego, informalidade e precarização nas relações de trabalho.",
+    "elements": [
+      [
+        "desemprego",
+        [
+          "procura",
+          "busca",
+          "sem trabalho",
+          "desocupado"
+        ]
+      ],
+      [
+        "informalidade",
+        [
+          "informal",
+          "registro",
+          "proteção",
+          "protecao"
+        ]
+      ],
+      [
+        "condições de trabalho",
+        [
+          "condições",
+          "condicoes",
+          "jornada",
+          "renda",
+          "segurança",
+          "seguranca"
+        ]
+      ]
+    ],
+    "transfer": "Uma queda do desemprego veio acompanhada de aumento da informalidade. Por que isso exige uma avaliação além do número de ocupados?",
+    "official": [
+      [
+        "OIT — princípios e direitos fundamentais no trabalho",
+        "https://www.ilo.org/topics-and-sectors/fundamental-principles-and-rights-work"
+      ]
+    ]
+  },
+  {
+    "id": "atu-povos-tradicionais",
+    "lesson": "20",
+    "title": "Povos tradicionais: território, direitos e conservação",
+    "axis": "sociedade-direitos-cultura",
+    "prerequisites": [
+      "Território",
+      "Diversidade cultural"
+    ],
+    "sections": [
+      "A aula 20 relaciona povos indígenas, quilombolas e outras comunidades tradicionais a direitos territoriais e conservação. Território envolve recursos, pertencimento, práticas culturais, organização social e memória. Povos originários integram esse universo, mas nem toda comunidade tradicional é indígena. Não há um modo de vida único compartilhado por todos esses grupos.",
+      "A continuidade de práticas depende do acesso a rios, caminhos, roças, lugares sagrados e redes de circulação. Uma intervenção pode alterar essa base sem remover imediatamente as casas. O Decreto 6.040/2007 instituiu a política nacional para povos e comunidades tradicionais. Povos indígenas, territórios quilombolas e reservas extrativistas têm fundamentos e regimes jurídicos diferentes; proteção territorial não significa uma categoria legal única.",
+      "Estado, comunidades, empresas e outros ocupantes disputam decisões sobre uso do espaço. Consulta prévia, livre e informada não se reduz a avisar uma obra já decidida. Reconhecer participação exige considerar quem representa a comunidade e como ela delibera. Autoidentificação e direitos coletivos não dependem de isolamento ou de ausência de tecnologia: morar na cidade e usar internet não apagam necessariamente uma identidade.",
+      "O artigo 231 da Constituição reconhece direitos originários indígenas; não é a norma que, sozinha, regula todos os territórios tradicionais. Marco temporal é uma controvérsia jurídica cuja situação processual precisa de fonte e data; não deve ser apresentada como consenso. Relações sustentáveis de manejo podem favorecer conservação, mas não autorizam idealizar todos os povos como iguais ou negar seus direitos por critérios externos de autenticidade.",
+      "Prática autoral 1: uma hidrovia preserva casas, mas dificulta pesca e acesso a lugares de uso coletivo. Há impacto territorial? Sim: o território ultrapassa a parcela residencial. Prática 2: um candidato afirma que toda terra indígena é unidade de conservação. Corrija distinguindo direitos territoriais originários de categorias de proteção ambiental e explique por que podem convergir na conservação."
+    ],
+    "prompt": "Por que o território de uma comunidade tradicional não pode ser reduzido ao valor de mercado da terra?",
+    "elements": [
+      [
+        "reprodução cultural",
+        [
+          "cultura",
+          "cultural",
+          "memória",
+          "memoria"
+        ]
+      ],
+      [
+        "base material",
+        [
+          "pesca",
+          "recursos",
+          "subsistência",
+          "subsistencia"
+        ]
+      ],
+      [
+        "direitos coletivos",
+        [
+          "coletivo",
+          "coletivos",
+          "direitos",
+          "identidade"
+        ]
+      ]
+    ],
+    "transfer": "Mostre por que consulta prévia é diferente de divulgar o projeto depois de definir todas as decisões."
+  },
+  {
+    "id": "atu-copa-geopolitica",
+    "lesson": "21",
+    "title": "Copa de 2026: esporte, fronteiras e poder",
+    "axis": "sociedade-direitos-cultura",
+    "prerequisites": [
+      "Soft power",
+      "Migrações"
+    ],
+    "sections": [
+      "A Copa de 2026 foi organizada com 48 seleções e 104 partidas em Canadá, México e Estados Unidos. A aula 21 propõe ler o megaevento como vitrine da dinâmica internacional. O formato está documentado pela FIFA; já a ideia de que o torneio melhora a imagem de um governo é uma interpretação que precisa de indicadores de recepção e contexto.",
+      "Megaeventos articulam circulação internacional de pessoas, patrocínio, direitos de transmissão e obras urbanas. Uma competição compartilhada por três países não elimina fronteiras nem uniformiza regras de entrada. Distâncias entre sedes podem aumentar custos de deslocamento e emissões. Infraestrutura construída para poucas semanas deve ser avaliada pelo uso posterior e pelo custo de oportunidade do investimento público.",
+      "FIFA, patrocinadores, governos, moradores, trabalhadores e torcedores têm interesses diferentes. Governos procuram prestígio e receitas; empresas buscam audiência e associação de marca; moradores podem receber benefícios ou arcar com custos e deslocamentos. A receita da organizadora não equivale ao lucro dos países anfitriões, e crescimento do turismo não assegura distribuição igual dos ganhos.",
+      "Esporte pode produzir soft power quando gera atração e legitimidade. Propaganda não garante esse resultado: problemas de acesso, direitos ou organização podem gerar crítica. Restrições migratórias e cooperação esportiva podem coexistir no mesmo território, revelando formas seletivas de circulação. Não infira neutralidade política de uma instituição apenas por ela organizar partidas.",
+      "Prática autoral 1: um torneio aumenta a receita de transmissão. Isso comprova retorno positivo de todo estádio público? Não: são agentes e contas diferentes. Prática 2: compare a imagem de integração entre sedes com barreiras enfrentadas por viajantes. Construa uma resposta que relacione globalização seletiva, fronteiras e disputa de imagem sem supor que todos os turistas recebem o mesmo tratamento."
+    ],
+    "prompt": "Como uma Copa pode funcionar como soft power e, ao mesmo tempo, evidenciar desigualdades?",
+    "elements": [
+      [
+        "atração e imagem",
+        [
+          "imagem",
+          "atração",
+          "atracao",
+          "prestígio",
+          "prestigio"
+        ]
+      ],
+      [
+        "interesses econômicos",
+        [
+          "patrocínio",
+          "patrocinio",
+          "receita",
+          "turismo"
+        ]
+      ],
+      [
+        "acesso desigual",
+        [
+          "desigualdade",
+          "fronteiras",
+          "acesso",
+          "custos"
+        ]
+      ]
+    ],
+    "transfer": "Diferencie o faturamento da organizadora do retorno social de um investimento público em estádio.",
+    "official": [
+      [
+        "FIFA — formato de 48 seleções e 104 partidas",
+        "https://www.fifa.com/en/articles/article-fifa-world-cup-2026-mexico-canada-usa-new-format-tournament-football-soccer"
+      ]
+    ]
+  },
+  {
+    "id": "atu-russia-ucrania",
+    "lesson": "22",
+    "title": "Rússia e Ucrânia: soberania, guerra e redes globais",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Fim da URSS",
+      "OTAN"
+    ],
+    "sections": [
+      "A invasão russa em larga escala começou em 24 de fevereiro de 2022, após a anexação da Crimeia e a guerra no Donbass iniciadas em 2014. A aula 22 acompanha as consequências territoriais e globais do conflito. Os antecedentes explicam interesses e decisões, mas não tornam uma invasão inevitável nem transformam justificativas de um governo em fundamento jurídico comprovado.",
+      "A Ucrânia tornou-se independente em 1991. O Euromaidan começou em 2013, e a queda de Viktor Yanukovych ocorreu em 2014: não se deve deslocar todo esse processo para 2013. O Memorando de Budapeste, de 1994, vinculou compromissos de segurança à adesão ucraniana ao TNP; não foi um tratado de defesa coletiva assinado indistintamente pelos cinco permanentes do Conselho de Segurança.",
+      "A Rússia procura influência e controle estratégico; a Ucrânia defende sua integridade territorial e suas escolhas internacionais. Países da OTAN apoiam a Ucrânia em diferentes graus, enquanto outros atores mantêm relações com Moscou. População russófona não equivale automaticamente a apoio político à anexação. Interesses nacionais não podem ser deduzidos apenas de língua, religião ou ascendência histórica.",
+      "Guerra e sanções reorganizam comércio de energia, alimentos, fertilizantes e armamentos. Redirecionar compras não elimina imediatamente dependências: infraestrutura e capacidade produtiva limitam substituições. Ameaças nucleares atuam como dissuasão e coerção. Mapas de avanço militar e números de vítimas exigem data, metodologia e distinção entre mortos, feridos e deslocados; não são reproduzidos aqui como totais atuais.",
+      "Prática autoral 1: por que uma guerra distante pode afetar o custo de fertilizantes no Brasil? Reconstrua interrupção de oferta, logística, preços e dependência de importações. Prática 2: compare a alegação de proteção de uma população com o princípio de soberania territorial. Identifique a narrativa de cada ator e os limites de usar afinidade histórica como autorização para anexar território."
+    ],
+    "prompt": "Explique uma cadeia de efeitos que conecta a guerra na Ucrânia à produção agrícola brasileira.",
+    "elements": [
+      [
+        "insumos ou energia",
+        [
+          "fertilizantes",
+          "energia",
+          "gás",
+          "gas"
+        ]
+      ],
+      [
+        "comércio e logística",
+        [
+          "importações",
+          "importacoes",
+          "logística",
+          "logistica",
+          "oferta"
+        ]
+      ],
+      [
+        "custos agrícolas",
+        [
+          "custos",
+          "preços",
+          "precos",
+          "produção",
+          "producao"
+        ]
+      ]
+    ],
+    "transfer": "Uma notícia confunde mortos e baixas totais. Explique por que a distinção muda a interpretação do dado."
+  },
+  {
+    "id": "atu-america-latina-seguranca",
+    "lesson": "23",
+    "title": "América Latina: segurança, narcotráfico e democracia",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Democracia",
+      "Redes transnacionais"
+    ],
+    "sections": [
+      "A aula 23 compara mudanças políticas e respostas à violência na América Latina, com destaque para El Salvador e Equador. Onda rosa e onda azul são sínteses interpretativas de ciclos eleitorais, não a descrição de países idênticos. A demanda por segurança pode ampliar apoio a governos fortes, mas popularidade e respeito às garantias democráticas devem ser avaliados separadamente.",
+      "Redes do narcotráfico conectam produção, circulação, mercados consumidores, armas e lavagem de dinheiro. Portos e corredores logísticos lícitos podem ser utilizados por essas redes. O deslocamento de uma rota após repressão em outro território mostra que a violência não se resolve apenas dentro de fronteiras nacionais. A geografia dos fluxos ajuda a explicar por que países de trânsito também enfrentam disputas intensas.",
+      "Governos, forças de segurança, Judiciário, comunidades e organizações criminosas atuam sob capacidades e interesses distintos. Em El Salvador, o estado de exceção adotado em 2022 ampliou instrumentos repressivos contra gangues. Avaliar essa política exige observar segurança e proteção contra arbitrariedade, incluindo acesso à defesa. População de áreas pobres não pode ser equiparada coletivamente à criminalidade.",
+      "Redução de um indicador de violência não demonstra, sozinha, ausência de violações de direitos ou sustentabilidade de uma política. Compare homicídios, desaparecimentos, encarceramento, denúncias e metodologia de registro. Medidas de emergência podem produzir efeitos imediatos e custos institucionais de longo prazo. Chamar um grupo de ameaça não resolve automaticamente qual instrumento jurídico se aplica nem autoriza qualquer ação de força.",
+      "Prática autoral 1: homicídios registrados caem, mas faltam dados de desaparecimentos. Qual limite apontar? A evidência é relevante, porém incompleta para descrever toda a segurança. Prática 2: proponha uma análise de combate ao crime que combine investigação financeira, cooperação internacional e garantias processuais, explicando por que o número de presos não mede sozinho o sucesso."
+    ],
+    "prompt": "Por que popularidade e queda dos homicídios não bastam para avaliar uma política de segurança?",
+    "elements": [
+      [
+        "indicadores múltiplos",
+        [
+          "indicadores",
+          "desaparecimentos",
+          "dados"
+        ]
+      ],
+      [
+        "direitos e defesa",
+        [
+          "direitos",
+          "defesa",
+          "garantias"
+        ]
+      ],
+      [
+        "efeitos institucionais",
+        [
+          "instituições",
+          "instituicoes",
+          "democracia",
+          "longo prazo"
+        ]
+      ]
+    ],
+    "transfer": "Uma rota de tráfico muda após repressão em outro país. Relacione redes, portos e necessidade de cooperação."
+  },
+  {
+    "id": "atu-sahel-sudao",
+    "lesson": "24",
+    "title": "Sahel e Sudão: clima, golpes e disputas por poder",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Colonialismo",
+      "Desertificação"
+    ],
+    "sections": [
+      "O Sahel é uma faixa de transição ao sul do Saara, e não um país nem sinônimo de toda a África. A aula 24 reúne golpes militares, grupos armados, competição externa e crise humanitária. O Sudão requer análise própria: a guerra iniciada em abril de 2023 opõe as Forças Armadas Sudanesas às Forças de Apoio Rápido, com violência contra civis e deslocamentos.",
+      "A sazonalidade das chuvas e a pressão sobre terra e água afetam meios de vida agrícolas e pastoris. Mudanças climáticas podem agravar vulnerabilidades, mas não causam automaticamente golpes ou jihadismo. Heranças coloniais, desigualdade, disputas locais, capacidade estatal e circulação de armas mediam a relação. Desertificação é degradação em terras secas; não se resume a uma linha do deserto avançando de maneira uniforme.",
+      "Mali, Burkina Faso e Níger passaram por golpes e articularam a Aliança dos Estados do Sahel. França e outras potências ocidentais, Rússia e atores regionais procuram influência e acesso estratégico. Cooperação militar, inclusive por forças estrangeiras, é instrumento material de poder: não deve ser chamada simplesmente de soft power. Estados e populações africanas também fazem escolhas, contestam governos e negociam alianças.",
+      "Discurso anti-colonial pode legitimar novos governos sem demonstrar melhoria da segurança ou da democracia. Retirar tropas estrangeiras e reduzir dependência são questões relacionadas, mas não idênticas. No Sudão, a disputa pelo controle do Estado e de recursos não deve ser fundida com todos os conflitos sahelianos. Números humanitários precisam diferenciar deslocados internos e refugiados, indicar data e evitar competição de tragédias por totais incomparáveis.",
+      "Prática autoral 1: uma família abandona sua cidade, mas permanece no país. Ela é deslocada interna; atravessar a fronteira exige outra análise de proteção. Prática 2: refute a frase o clima explica todos os conflitos do Sahel. Articule pressão ambiental, desigualdade, instituições e atores armados, mostrando que relações condicionadas são diferentes de determinismo geográfico."
+    ],
+    "prompt": "Por que a crise do Sahel exige combinar fatores ambientais, políticos e históricos?",
+    "elements": [
+      [
+        "pressões ambientais",
+        [
+          "clima",
+          "água",
+          "agua",
+          "seca"
+        ]
+      ],
+      [
+        "instituições e conflitos",
+        [
+          "estado",
+          "instituições",
+          "instituicoes",
+          "golpes",
+          "armados"
+        ]
+      ],
+      [
+        "relações históricas",
+        [
+          "colonial",
+          "colonialismo",
+          "desigualdade",
+          "externa"
+        ]
+      ]
+    ],
+    "transfer": "Um governo troca de parceiro militar. Que evidências seriam necessárias para concluir que sua população ficou mais segura?"
+  },
+  {
+    "id": "atu-ira",
+    "lesson": "26",
+    "title": "Irã: revolução, programa nuclear e escalada regional",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Revolução Iraniana",
+      "Não proliferação nuclear"
+    ],
+    "sections": [
+      "A Revolução de 1979 substituiu a monarquia do xá pela República Islâmica. A aula 26 conecta essa ruptura às tensões nucleares e regionais. Sobre a escalada de 2026, o pronunciamento da ONU em 28 de fevereiro registra ataques dos EUA e de Israel ao Irã e ataques iranianos a países da região. Esse marco corrige a data de 2 de fevereiro indicada nos slides; não descreve sozinho o estado atual do conflito.",
+      "O golpe de 1953 contra Mohammad Mossadegh fortaleceu o poder do xá, que já ocupava o trono desde 1941. A nacionalização do petróleo e a intervenção externa ajudam a compreender a oposição posterior. Em 1979, grupos diversos participaram da revolução; a consolidação do poder religioso não significa que toda a sociedade compartilhasse um único projeto. Teocracia e existência de eleições podem coexistir quando autoridades religiosas limitam a competição e as decisões.",
+      "O programa nuclear mobiliza o Irã, a AIEA e potências negociadoras. O acordo de 2015 vinculou limites e verificação ao alívio de sanções; os EUA se retiraram em 2018. Tecnologia de enriquecimento tem usos distintos conforme material, nível e finalidade. Capacidade técnica, suspeita de intenção militar e posse comprovada de arma são afirmações diferentes: uma não demonstra automaticamente as outras.",
+      "Ormuz liga o Golfo ao oceano Índico por uma passagem estratégica. Ameaças e restrições ao trânsito podem afetar energia, fretes e seguros; o efeito depende da duração e da substituição possível. Na declaração de 28/02/2026, o secretário-geral ainda não confirmava relatos sobre a morte do líder supremo. Não se deve transformar esse documento em confirmação de sucessão nem tratar fechamento de rota como condição permanente sem fonte posterior.",
+      "Prática autoral 1: por que enriquecimento de urânio não equivale automaticamente a bomba pronta? Distinga processo, material e comprovação de armamento. Prática 2: explique como uma escalada em Ormuz pode afetar um importador distante sem ataque direto a seu território: risco logístico, oferta de energia e custos. Identifique quais dados e datas seriam necessários para avaliar a intensidade do impacto."
+    ],
+    "prompt": "Como uma crise em Ormuz conecta segurança regional e economia global?",
+    "elements": [
+      [
+        "passagem estratégica",
+        [
+          "estreito",
+          "ormuz",
+          "rota"
+        ]
+      ],
+      [
+        "energia e transporte",
+        [
+          "petróleo",
+          "petroleo",
+          "energia",
+          "navios"
+        ]
+      ],
+      [
+        "custos e incerteza",
+        [
+          "preços",
+          "precos",
+          "seguro",
+          "frete",
+          "risco"
+        ]
+      ]
+    ],
+    "transfer": "Compare uma alegação de governo, um relato ainda não confirmado e uma inspeção documental no debate nuclear.",
+    "official": [
+      [
+        "ONU — pronunciamento sobre a escalada, 28/02/2026",
+        "https://www.un.org/sg/en/content/sg/statements/2026-02-28/secretary-generals-remarks-the-security-council-meeting-the-situation-the-middle-east-delivered"
+      ]
+    ]
+  },
+  {
+    "id": "atu-libano-iemen",
+    "lesson": "27",
+    "title": "Líbano e Iêmen: Hezbollah, houthis e rotas marítimas",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Estado e soberania",
+      "Oriente Médio"
+    ],
+    "sections": [
+      "A aula 27 aproxima dois países diferentes por sua inserção em tensões regionais. O Líbano está no Mediterrâneo; o Iêmen ocupa posição estratégica junto a Bab el-Mandeb, entre Mar Vermelho e golfo de Áden. Hezbollah e houthis são organizações distintas, com histórias, bases sociais e vínculos externos próprios. Compartilhar alianças não os torna um único ator.",
+      "No Líbano, a repartição confessional de cargos procura acomodar grupos religiosos, mas também se articula à reprodução de elites e disputas institucionais. A guerra civil de 1975–1990 e intervenções estrangeiras marcaram o país. A explosão no porto de Beirute em 2020 agravou uma crise anterior. Religião importa como identidade e organização, sem explicar sozinha finanças, representação política ou violência.",
+      "O Hezbollah combina atuação política e força armada, com vínculos com o Irã. No Iêmen, os houthis têm origem no contexto zaidita do norte e disputam poder com outros atores locais. Apoio externo e conflito regional interferem, mas a guerra iemenita não se reduz à rivalidade Irã–Arábia Saudita. Classificações jurídicas de terrorismo variam conforme país e data; não devem ser deduzidas apenas de uma lista de sanções da ONU.",
+      "Ataques ao transporte no Mar Vermelho podem levar navios a evitar Bab el-Mandeb e Suez, contornando a África. Desvio significa mais distância e pode aumentar custo e emissões. É um mecanismo diferente da circulação pelo estreito de Ormuz. No plano humanitário, destruição de saneamento e serviços amplia insegurança alimentar e doenças. Civis não se confundem com os grupos armados que atuam em seu território.",
+      "Prática autoral 1: localize Mediterrâneo, Suez, Mar Vermelho e Bab el-Mandeb na sequência de uma rota Europa–Ásia. Prática 2: uma empresa anuncia desvio pelo cabo da Boa Esperança. Explique o elo entre conflito regional, tempo de transporte e custos globais. Acrescente uma consequência para populações locais que não apareça na contabilidade do frete, como perda de acesso a alimentos ou saúde."
+    ],
+    "prompt": "Por que conflitos no Iêmen podem afetar fretes entre Europa e Ásia?",
+    "elements": [
+      [
+        "gargalo marítimo",
+        [
+          "bab",
+          "mandeb",
+          "mar vermelho",
+          "suez"
+        ]
+      ],
+      [
+        "desvio",
+        [
+          "desvio",
+          "cabo",
+          "áfrica",
+          "africa"
+        ]
+      ],
+      [
+        "tempo e custo",
+        [
+          "tempo",
+          "custo",
+          "frete",
+          "distância",
+          "distancia"
+        ]
+      ]
+    ],
+    "transfer": "Compare os vínculos externos de um grupo armado com suas bases políticas locais: por que uma dimensão não elimina a outra?"
+  },
+  {
+    "id": "atu-palestina-israel",
+    "lesson": "28",
+    "title": "Palestina e Israel: território, civis e justiça internacional",
+    "axis": "geopolitica-relacoes-internacionais",
+    "prerequisites": [
+      "Nacionalismos",
+      "Direito internacional humanitário"
+    ],
+    "sections": [
+      "A aula 28 aborda o Hamas, os ataques de 7 de outubro de 2023 e a ofensiva israelense em Gaza, relacionando-os à ocupação e à disputa territorial. Ataques deliberados a civis e tomada de reféns não se justificam por uma causa política. A proteção de civis também se aplica às operações militares subsequentes. Este resumo não apresenta contagem atual de vítimas nem confirma acordos de desarmamento sem documentação específica.",
+      "A criação de Israel e a guerra de 1948 produziram deslocamentos palestinos associados à Nakba. A guerra de 1967 ampliou a ocupação israelense de territórios palestinos. O Hamas surgiu em 1987, no contexto da primeira Intifada, e não representa automaticamente todos os palestinos. Gaza, Cisjordânia e Jerusalém Oriental têm situações territoriais e políticas distintas; um mapa deve explicitar essas diferenças.",
+      "Governo israelense, Hamas, Autoridade Palestina, população civil e mediadores internacionais não constituem apenas dois blocos homogêneos. Coalizões domésticas, segurança, controle territorial e autodeterminação entram na disputa. Antissemitismo não se confunde com crítica fundamentada a políticas de Israel; combater antissemitismo tampouco autoriza negar direitos palestinos. Evite responsabilizar coletivamente judeus, muçulmanos ou qualquer população pelas ações de governos e grupos armados.",
+      "A CIJ trata de controvérsias entre Estados e emite pareceres consultivos; o TPI apura responsabilidade penal individual dentro de sua competência. O parecer da CIJ de 19 de julho de 2024 examina as consequências jurídicas das políticas e práticas de Israel no território ocupado. Parecer, medida provisória, mandado de prisão e condenação não são sinônimos. Genocídio tem requisitos jurídicos próprios, incluindo intenção específica; não decorre apenas de uma contagem de mortes.",
+      "Prática autoral 1: um título diz que uma ordem provisória condenou definitivamente um chefe de governo. Identifique a confusão entre fase processual, tribunal e sujeito julgado. Prática 2: explique como fragmentação territorial e assentamentos afetam circulação e autodeterminação. Use o mapa e a fonte jurídica, distinguindo a descrição de uma política, a posição dos envolvidos e a conclusão do órgão competente."
+    ],
+    "prompt": "Diferencie a atuação da CIJ e do TPI e explique por que acusação não equivale a condenação.",
+    "elements": [
+      [
+        "Estados na CIJ",
+        [
+          "estados",
+          "estatal",
+          "estatais"
+        ]
+      ],
+      [
+        "indivíduos no TPI",
+        [
+          "indivíduos",
+          "individuos",
+          "individual",
+          "pessoas"
+        ]
+      ],
+      [
+        "etapas processuais",
+        [
+          "processo",
+          "provisória",
+          "provisoria",
+          "definitiva",
+          "condenação",
+          "condenacao"
+        ]
+      ]
+    ],
+    "transfer": "Uma charge funde todos os palestinos com o Hamas. Identifique o erro de escala e suas consequências para a análise de civis e combatentes.",
+    "official": [
+      [
+        "CIJ — parecer consultivo de 19 de julho de 2024",
+        "https://www.icj-cij.org/case/186/advisory-opinions"
+      ]
+    ]
+  }
+]

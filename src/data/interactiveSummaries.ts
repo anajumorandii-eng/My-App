@@ -1,4 +1,5 @@
 import type { InteractiveSummary } from '../types/summary';
+import { currentAffairsInteractiveSummaries, currentAffairsLessonSources } from './currentAffairsInteractiveSummaries';
 import { biologyInteractiveSummaries } from './biologyInteractiveSummaries';
 import { ecologyInteractiveSummaries } from './ecologyInteractiveSummaries';
 import { expandedInteractiveSummaries } from './expandedInteractiveSummaries';
@@ -40,7 +41,7 @@ const baseSummaries: InteractiveSummary[] = [
   {
     id: 'atu-cop30-belem', title: 'COP30 em Belém: avanços, limites e leitura de prova', subject: 'Atualidades', topic: 'Clima, energia e meio ambiente', priority: 'muito-alta', prerequisites: ['Acordo de Paris', 'NDCs', 'Justiça climática'],
     overview: 'Dossiê A.T.U.A.L. sobre a conferência realizada em Belém em novembro de 2025, distinguindo decisão formal de avaliação crítica.',
-    currentAffairs: { axis: 'clima-energia-meio-ambiente', verifiedAt: '2026-08-24' },
+    currentAffairs: { axis: 'clima-energia-meio-ambiente', verifiedAt: '2026-10-21' },
     boards: [
       { board: 'Fuvest', phases: ['primeira', 'segunda'], guidance: 'Cruze escala global, território amazônico, financiamento e conflito de interesses; na 2ª fase, separe decisão formal de avaliação.' },
       { board: 'Unicamp/Comvest', phases: ['primeira', 'segunda'], guidance: 'C-F-C-R: extraia o dado da fonte, mobilize justiça climática/governança e explicite a relação.' },
@@ -53,18 +54,26 @@ const baseSummaries: InteractiveSummary[] = [
       { id: 'cop-u', title: 'U — Unidades políticas, atores e interesses', stage: 'conceito', depth: 'aprofundamento', evidenceKind: 'contexto', content: 'Estados negociam por consenso, com coalizões e interesses distintos: países vulneráveis pressionam por adaptação e financiamento; produtores e consumidores de fósseis divergem sobre transição; sociedade civil e povos indígenas disputam participação e justiça climática.' },
       { id: 'cop-a2', title: 'A — Antecedentes, articulações e impactos', stage: 'aplicacao', depth: 'aprofundamento', evidenceKind: 'interpretacao', content: 'Leitura sustentada pelas fontes: o pacote preservou a cooperação multilateral e avançou em adaptação/financiamento, mas ficou aquém da ambição defendida por cientistas e organizações porque não incorporou uma rota formal para a transição para longe dos fósseis. “Fracasso total” e “sucesso pleno” são simplificações.' },
       { id: 'cop-l', title: 'L — Leitura de prova', stage: 'estrategia', depth: 'prova', content: 'Conceitos acionáveis: governança global, justiça climática, responsabilidades comuns porém diferenciadas, mitigação × adaptação, NDC e transição energética. Pegadinha: confundir promessa política, decisão formal e implementação. Em charge ou editorial, identifique posição do autor antes de tratar a afirmação como fato.' },
+      { id: 'cop-antropoceno-v1', title: 'Aula 07 — Antropoceno e transformação do sistema Terra', stage: 'conceito', depth: 'aprofundamento', evidenceKind: 'contexto', content: 'Antropoceno é um conceito usado para discutir a intensidade das transformações humanas no sistema Terra: emissões, materiais persistentes, perda de biodiversidade e mudanças no uso do solo. Sua utilidade nas ciências e no debate público deve ser distinguida da aprovação de uma época na escala geológica formal. A rejeição da proposta formal em 2024 não nega a influência humana nem o aquecimento global. Também é necessário perguntar quais sociedades, setores e grupos mais contribuíram para os impactos: a humanidade não emite nem sofre de maneira uniforme.' },
+      { id: 'cop-transicao-v1', title: 'Aula 07 — Transição energética e justiça', stage: 'aplicacao', depth: 'aprofundamento', evidenceKind: 'contexto', content: 'Transição energética envolve reduzir a dependência de combustíveis fósseis, ampliar fontes de baixa emissão, eficiência, redes e armazenamento. Matriz elétrica é apenas parte da matriz energética: transporte, indústria e calor também importam. Renovável não significa impacto ambiental nulo. A transição justa considera trabalhadores, tarifas, acesso e comunidades atingidas por novos empreendimentos. Prática autoral: um país amplia a geração solar, mas mantém o consumo de petróleo no transporte. Explique por que o avanço elétrico não comprova descarbonização de toda a economia. Relacione o caso ao debate sobre novas fronteiras petrolíferas.' },
+      { id: 'cop-roadmap-v1', title: 'Atualização documental — decisão e roteiro da presidência', stage: 'aplicacao', depth: 'aprofundamento', evidenceKind: 'fato', content: 'Em 19 de março de 2026, a presidência da COP30 publicou um balanço e anunciou o desenvolvimento de roteiros para a transição para longe dos combustíveis fósseis e para deter e reverter o desmatamento. Esse compromisso da presidência deve ser distinguido de uma rota formal aprovada por consenso no pacote de 2025. O balanço também menciona o roteiro Baku–Belém de financiamento. Anúncio, decisão negociada, mobilização de recursos e execução são etapas diferentes; citar uma delas não comprova as demais.' },
       { id: 'cop-h', title: 'Hipóteses e cenários', stage: 'exercicio', depth: 'prova', evidenceKind: 'hipotese', content: 'O efeito futuro do pacote dependerá de financiamento, políticas nacionais e prestação de contas. Isso é cenário condicionado, não resultado confirmado. Questão de transferência: quais indicadores permitiriam avaliar, daqui a alguns anos, se adaptação e transição saíram do papel?' },
     ],
     retrieval: [{ id: 'cop-r1', sectionId: 'cop-h', prompt: 'Em 4–6 linhas, diferencie um resultado formal da COP30 de uma avaliação sustentada sobre seus limites.', expectedElements: [
       { label: 'decisão formal', keywords: ['pacote', 'decisão', 'decisoes', 'financiamento', 'adaptação', 'adaptacao'] }, { label: 'ausência de rota fóssil', keywords: ['fóssil', 'fossil', 'combustíveis', 'combustiveis'] }, { label: 'avaliação identificada', keywords: ['avaliação', 'avaliacao', 'interpretação', 'interpretacao', 'limite', 'insuficiente'] },
     ], hint: 'Escreva uma frase de fato documental e outra explicitamente apresentada como avaliação.', transferPrompt: 'Uma charge afirma que “toda COP é inútil”. Use um fato, um conceito de governança e uma limitação para construir uma resposta não binária.' }],
     sources: [
+      ...currentAffairsLessonSources('07'),
+      { label: 'UNFCCC — balanço do quarto trimestre de 2025: 13 decisões financeiras', kind: 'fonte-oficial', url: 'https://www.unfccc.int/about-us/reports-highlights/quarterly-updates/un-climate-change-quarterly-update-q4-2025', verifiedAt: '2026-10-21' },
+      { label: 'UNFCCC — balanço da presidência e roteiros, 19/03/2026', kind: 'fonte-oficial', url: 'https://unfccc.int/news/cop30-presidency-releases-executive-report-and-outlines-next-steps-to-accelerate-global-climate', verifiedAt: '2026-10-21' },
+      { label: 'IUGS/ICS — decisão formal sobre o Antropoceno, 2024', kind: 'fonte-oficial', url: 'https://stratigraphy.org/news/152', verifiedAt: '2026-10-21' },
       { label: 'UNFCCC — Conferência de Belém e documentos oficiais', kind: 'fonte-oficial', url: 'https://unfccc.int/cop30', verifiedAt: '2026-08-24' },
       { label: 'UNFCCC — Belém Political Package', kind: 'fonte-oficial', url: 'https://unfccc.int/cop30/belem-political-package', verifiedAt: '2026-08-24' },
       { label: 'Nature — análise científica dos resultados', kind: 'fonte-independente', url: 'https://www.nature.com/articles/d41586-025-03802-1', verifiedAt: '2026-08-24' },
       { label: 'Associated Press — síntese independente', kind: 'fonte-independente', url: 'https://apnews.com/article/f41d0dac0553825bdbe1fba5ac31ed90', verifiedAt: '2026-08-24' },
     ],
   },
+  ...currentAffairsInteractiveSummaries,
   ...ecologyInteractiveSummaries,
   ...biologyInteractiveSummaries,
   ...physicsInteractiveSummaries,
