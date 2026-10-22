@@ -1,0 +1,1564 @@
+{
+  "board": "UNIFESP",
+  "year": 2024,
+  "reviewedOn": "2026-10-22",
+  "reviewType": "single-editor-source-reading",
+  "coverageNote": "Sistema Misto completo: línguas/redação de 07/01/2024, preservadas pelo Edital 24/2024, e somente Conhecimentos Específicos da reaplicação de 07/02/2024. 46 unidades (25 objetivas, R e 20 discursivas); ENEM e caderno anulado de 08/01 não duplicados. Sem espelho público discursivo localizado; duas limitações de enunciado anotadas em Q07/Q18.",
+  "sourceManifest": [
+    {
+      "role": "exam",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY5OTc3Nw%3d%3d",
+      "sha256": "37dcd1fb0078bec6900e6cd4babeb71bac541a4c9d909a2336bc776a0af96dd5",
+      "pages": 24,
+      "bytes": 2272461,
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos - Reaplicação   07/02/2024",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2304/documento"
+    },
+    {
+      "role": "official-notice",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY4NTQ4MA%3d%3d",
+      "sha256": "d51d84bd5b9dc891c1a401d6929e6b03ff34b070c81d4a865b44e103a3b89142",
+      "pages": 2,
+      "bytes": 234715,
+      "label": "EDITAL DE CANCELAMENTO E REAPLICAÇÃO DE PROVA   22/01/2024",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2304/documento"
+    },
+    {
+      "role": "official-notice",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY2NDc3NA%3d%3d",
+      "sha256": "2e234a9869f7bce9c2f7b560ddebe688bd8c6d70caf9990679602c8dd9623cdc",
+      "pages": 1,
+      "bytes": 94401,
+      "label": "NOTA DE ANULAÇÃO DA PROVA DE CONHECIMENTOS ESPECÍFICOS DO VESTIBULAR PARA O CURSO DE MEDICINA DA UNIFESP 2024 - SISTEMA MISTO DE SELEÇÃO   09/01/2024",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2304/documento"
+    },
+    {
+      "role": "answer-key",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY2MjYxOA%3d%3d",
+      "sha256": "ae5517eb7bf8254058b9245c10f4fcf183a5abd2662c682082955e61964b5c47",
+      "pages": 1,
+      "bytes": 322415,
+      "label": "Gabarito da Prova de LP, LI e Redação - Público (versão 1 para divulgação na imprensa) - Atenção Candidato: para saber qual a sua versão de prova acesse a área do candidato.   07/01/2024",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2304/documento"
+    },
+    {
+      "role": "exam",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY2MjYxOQ%3d%3d",
+      "sha256": "e67ad5d00e4010b7fc7afc9c0d1f9fd938b66fb263d80db2bf45293ee3e82ae2",
+      "pages": 12,
+      "bytes": 750691,
+      "label": "Caderno de Questões da Prova de LP, LI e Redação - Público (versão 1 para divulgação na imprensa) - Atenção Candidato: para saber qual a sua versão de prova acesse a área do candidato.   07/01/2024",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/UFSP2304/documento"
+    }
+  ],
+  "papers": [
+    {
+      "id": "unifesp-2024-linguas-objetiva",
+      "group": "linguas-objetiva",
+      "phase": "Língua Portuguesa, Língua Inglesa e Redação",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "1",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY2MjYxOQ%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NTY2MjYxOA%3d%3d",
+      "sha256": "e67ad5d00e4010b7fc7afc9c0d1f9fd938b66fb263d80db2bf45293ee3e82ae2",
+      "answerKeySha256": "ae5517eb7bf8254058b9245c10f4fcf183a5abd2662c682082955e61964b5c47",
+      "pages": 12,
+      "expectedQuestions": 26,
+      "coverageNote": "Capa e todos os itens lidos. 25 objetivas e R; chave V1 sem anulações; R não recebe chave.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Humor em tirinha",
+            "inversão de expectativas"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a crise do inferno diante da queda na rejeição.",
+          "rationale": "Para o chefe diabólico, maior aceitação constitui problema.",
+          "strategy": [
+            "Relacionar a reunião de crise ao dado de rejeição.",
+            "Inverter a expectativa usual de aprovação positiva."
+          ],
+          "trap": "Tratar queda de rejeição como sucesso do chefe.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "02",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Metalinguagem",
+            "interlocução narrador-leitor"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o comentário do narrador sobre a própria exposição.",
+          "rationale": "A referência ao que já foi narrado e aos leitores tematiza a narração.",
+          "strategy": [
+            "Localizar as referências aos leitores.",
+            "Relacionar o comentário ao ato de narrar."
+          ],
+          "trap": "Confundir menção ao amor com idealização dominante.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "03",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Foco narrativo",
+            "limites da onisciência"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Localiza a declaração de desconhecimento do coração de Leonardo.",
+          "rationale": "O narrador admite não penetrar os motivos íntimos do rapaz.",
+          "strategy": [
+            "Procurar uma limitação explícita do saber.",
+            "Distinguir desconhecimento de simples omissão narrativa."
+          ],
+          "trap": "Supor que toda narrativa em terceira pessoa seja onisciente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "04",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Orações subordinadas adverbiais",
+            "concessão"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o valor de ainda que no comentário sobre o amor.",
+          "rationale": "A diferença de intensidade não impede a universalidade da experiência.",
+          "strategy": [
+            "Separar a afirmação principal da ressalva.",
+            "Substituir ainda que por embora."
+          ],
+          "trap": "Confundir ressalva com condição.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "05",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Oração subordinada substantiva subjetiva",
+            "sujeito oracional"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara a função de dizer a quem com a oração a desandar-lhe.",
+          "rationale": "Ambas as orações ocupam posição de sujeito nas construções apresentadas.",
+          "strategy": [
+            "Perguntar o que é escusado.",
+            "Identificar o sujeito de principiou.",
+            "Comparar funções, sem se guiar pela posição."
+          ],
+          "trap": "Classificar infinitivo automaticamente como objeto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "06",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Ironia",
+            "texto verbal e imagem"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a ironia na descrição benevolente de uma invasão viking.",
+          "rationale": "A legenda elogia os saqueadores e deprecia suas vítimas.",
+          "strategy": [
+            "Comparar os atos representados com a legenda.",
+            "Identificar a inversão avaliativa."
+          ],
+          "trap": "Ler literalmente o elogio a quem saqueia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "07",
+          "page": 5,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Guimarães Rosa",
+            "experimentação linguística"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona invenção lexical e sintaxe singular à prosa de Guimarães Rosa.",
+          "rationale": "A recriação do idioma supera o regionalismo documental.",
+          "strategy": [
+            "Destacar invenções lexicais e sintáticas.",
+            "Relacionar o conjunto à prosa rosiana."
+          ],
+          "trap": "Escolher autor regionalista apenas pelo cenário.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "08",
+          "page": 5,
+          "subject": "Literatura",
+          "topicId": null,
+          "topic": "Arcadismo e Neoclassicismo",
+          "subtopics": [
+            "Arcadismo",
+            "fugere urbem"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a recomendação de trocar a corte pela vida campestre.",
+          "rationale": "O contraste desemboca no convite a abandonar o palácio.",
+          "strategy": [
+            "Comparar o camponês com o nobre.",
+            "Relacionar a conclusão ao fugere urbem."
+          ],
+          "trap": "Confundir descrição aprazível com o movimento de fugir da cidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "09",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Figuras de linguagem",
+            "hipérbole"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o exagero em mil vezes chora.",
+          "rationale": "A quantidade intensifica expressivamente o sofrimento.",
+          "strategy": [
+            "Localizar expressões quantitativas.",
+            "Verificar o emprego não literal de mil vezes."
+          ],
+          "trap": "Confundir interjeição com exagero quantitativo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "10",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Coesão referencial",
+            "pronomes demonstrativos e relativos"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Recupera os referentes pronominais no soneto.",
+          "rationale": "A oposição aquele/este acompanha camponês/nobre; os relativos retomam antecedentes locais.",
+          "strategy": [
+            "Associar aquele ao vilão e este ao nobre.",
+            "Localizar os antecedentes dos dois que."
+          ],
+          "trap": "Atribuir todos os pronomes ao nome mais próximo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "11",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Ordem direta",
+            "sujeito verbo complementos"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona a reordenação que mantém sujeito, verbo e objeto em sequência.",
+          "rationale": "Este encontra a desgraça nas pompas preserva as funções e põe o objeto antes do adjunto.",
+          "strategy": [
+            "Identificar sujeito e predicado de cada verso.",
+            "Conferir a sequência sujeito-verbo-complemento."
+          ],
+          "trap": "Confundir deslocamento de adjunto com ordem direta integral.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "12",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Vocativo",
+            "pontuação expressiva"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica Triste como chamamento ao cortesão.",
+          "rationale": "A exclamação delimita o vocativo que introduz o conselho.",
+          "strategy": [
+            "Separar chamamento e comando Sai.",
+            "Reconhecer o sinal após Triste."
+          ],
+          "trap": "Tomar todo adjetivo exclamativo por predicativo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "13",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Inferência",
+            "formação linguística"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Infere que os dicionários ampliaram a ponderação dos alunos.",
+          "rationale": "A crônica associa consulta lexical ao silêncio e ao julgamento mais cuidadoso.",
+          "strategy": [
+            "Comparar o português de rua ao aprendizado posterior.",
+            "Localizar a mudança nas formas de pensar e julgar."
+          ],
+          "trap": "Atribuir rebeldia ao efeito do dicionário.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "14",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Formação de palavras",
+            "valor afetivo do diminutivo"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a afetividade no diminutivo livrinho.",
+          "rationale": "O vínculo duradouro com o dicionário torna o sufixo avaliativo.",
+          "strategy": [
+            "Localizar os sufixos nas alternativas.",
+            "Interpretar livrinho no contexto de aprendizagem."
+          ],
+          "trap": "Reduzir todo diminutivo a tamanho físico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "15",
+          "page": 7,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Naturalismo",
+            "determinismo",
+            "Émile Zola"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [
+            "Inglês"
+          ],
+          "relatedTopicIds": [
+            "ing_01"
+          ],
+          "summary": "Identifica o Naturalismo na definição de literatura determinista.",
+          "rationale": "Hereditariedade, ambiente e pretensão científica caracterizam o movimento.",
+          "strategy": [
+            "Reunir os traços de determinismo e objetividade.",
+            "Associar Zola e Germinal ao Naturalismo."
+          ],
+          "trap": "Escolher Realismo de modo genérico sem observar a escola pedida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "16",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Vocabulário contextual",
+            "bust"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina o sentido de bust no título sobre natalidade.",
+          "rationale": "A queda das taxas de fecundidade sustenta decrease.",
+          "strategy": [
+            "Relacionar o título à tendência de birth rates.",
+            "Testar decrease no mesmo contexto."
+          ],
+          "trap": "Usar um sentido isolado do dicionário.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "17",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Coesão referencial",
+            "that number"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Recupera o número anterior retomado por that number.",
+          "rationale": "A expressão compara os 98 países de 2010 com os 124 de 2021.",
+          "strategy": [
+            "Localizar o dado de 2010.",
+            "Verificar o aumento referido em 2021."
+          ],
+          "trap": "Confundir o referente com o valor novo 124.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "18",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Conectores",
+            "causa com as"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta a causa da elevação da idade média.",
+          "rationale": "A maior longevidade explica em parte o aumento da idade média.",
+          "strategy": [
+            "Separar o efeito average ages rise.",
+            "Ler as como because no contexto."
+          ],
+          "trap": "Ler as como comparação em toda ocorrência.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "19",
+          "page": 8,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Informação explícita",
+            "fecundidade e escolaridade"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a queda recente da fecundidade entre mulheres menos escolarizadas.",
+          "rationale": "Nevertheless introduz a mudança em relação à tendência antes associada às instruídas.",
+          "strategy": [
+            "Comparar as duas últimas frases do segundo parágrafo.",
+            "Isolar a novidade introduzida por nevertheless."
+          ],
+          "trap": "Repetir a tendência antiga das mulheres escolarizadas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "20",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Conectores",
+            "concessão com though"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Traduz o valor concessivo de though na ressalva sobre longevidade.",
+          "rationale": "O crescimento da longevidade é qualificado pela desaceleração recente.",
+          "strategy": [
+            "Relacionar a ressalva à afirmação anterior.",
+            "Substituir though por embora."
+          ],
+          "trap": "Traduzir o conector como causa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "21",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Leitura de gráfico",
+            "projeção demográfica"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara as populações de 21–30 anos na China em 1970 e 2070.",
+          "rationale": "A curva situa esses dois anos em patamares próximos, apesar das oscilações intermediárias.",
+          "strategy": [
+            "Ler os eixos e a região de projeção.",
+            "Comparar as alturas da curva em 1970 e 2070."
+          ],
+          "trap": "Assumir declínio contínuo desde 2000.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "22",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Informação explícita",
+            "política demográfica"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece a política chinesa de limitação do número de filhos como causa do declínio de jovens.",
+          "rationale": "O terceiro parágrafo atribui parte da queda às políticas de um e dois filhos.",
+          "strategy": [
+            "Localizar a frase sobre one-child e two-child.",
+            "Separar causas de efeitos econômicos."
+          ],
+          "trap": "Tomar a necessidade de subsidiar aposentados como causa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "23",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Intenção comunicativa",
+            "nota editorial"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica a explicação da mudança de chamada e do objetivo da matéria.",
+          "rationale": "A nota esclarece que o foco são causas estruturais da baixa produtividade.",
+          "strategy": [
+            "Ler a justificativa de we have changed.",
+            "Relacionar our aim ao propósito do artigo."
+          ],
+          "trap": "Atribuir à nota o insulto que ela procura corrigir.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "24",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Vocabulário avaliativo",
+            "conotação pejorativa"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece o caráter ofensivo de useless aplicado aos trabalhadores.",
+          "rationale": "O adjetivo desqualifica pessoas, motivando a correção editorial.",
+          "strategy": [
+            "Relacionar useless à crítica recebida.",
+            "Distinguir avaliação negativa de neutralidade descritiva."
+          ],
+          "trap": "Interpretar o termo como tecnicamente neutro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "25",
+          "page": 9,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Informação explícita",
+            "causas estruturais da produtividade"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica o setor informal como obstáculo ao crescimento das empresas.",
+          "rationale": "A nota afirma que a informalidade força negócios a permanecer pequenos.",
+          "strategy": [
+            "Localizar large informal sector.",
+            "Relacionar remain subscale à limitação do porte."
+          ],
+          "trap": "Acrescentar causas não afirmadas, como falta de qualificação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "R",
+          "page": 10,
+          "subject": "Redação",
+          "topicId": "por_red_argumentacao",
+          "topic": "Introdução, Argumentação e Coerência",
+          "subtopics": [
+            "Anonimato digital",
+            "discurso de ódio",
+            "liberdade de expressão"
+          ],
+          "skills": [
+            "interpretacao_textual",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Argumenta sobre a possível redução dos danos do ódio com o fim do anonimato.",
+          "rationale": "A coletânea contrapõe proteção de denunciantes e responsabilidade autoral nas redes.",
+          "strategy": [
+            "Definir uma tese para a pergunta sobre danos e anonimato.",
+            "Confrontar a proteção de dissidentes com a responsabilização de agressores.",
+            "Organizar argumentos sem reduzir o tema a uma proibição abstrata."
+          ],
+          "trap": "Discutir internet genericamente sem responder à relação causal proposta.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": []
+        }
+      ]
+    },
+    {
+      "id": "unifesp-2024-especificos-discursiva",
+      "group": "especificos-discursiva",
+      "phase": "Conhecimentos Específicos",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "004 — reaplicação de 07/02/2024",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NTY5OTc3Nw%3d%3d",
+      "answerKeyUrl": null,
+      "sha256": "37dcd1fb0078bec6900e6cd4babeb71bac541a4c9d909a2336bc776a0af96dd5",
+      "answerKeySha256": null,
+      "pages": 24,
+      "expectedQuestions": 20,
+      "coverageNote": "20 discursivas a/b da reaplicação válida. Original de 08/01 integralmente anulada e não contada. Índice oficial não apresentou espelho público de respostas esperadas; estratégias autorais. Q07 e Q18 têm ressalvas editoriais explícitas.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 2,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Fluxo de energia",
+            "produtividade primária líquida"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta o fluxo energético e calcula a energia líquida dos produtores.",
+          "rationale": "A PPL é a PPB menos a respiração; parte da energia se dissipa como calor.",
+          "strategy": [
+            "Identificar produtores no primeiro bloco.",
+            "Subtrair 11977 de 20810 para obter PPL.",
+            "Explicar a disponibilidade de biomassa aos consumidores."
+          ],
+          "trap": "Tratar energia dissipada como reciclável na cadeia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "02",
+          "page": 3,
+          "subject": "Biologia",
+          "topicId": "bio_microbiologia",
+          "topic": "Microbiologia e Virologia",
+          "subtopics": [
+            "Viroses",
+            "parasitismo intracelular",
+            "transmissão vetorial"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona a dependência celular dos vírus à disseminação da dengue nos EUA.",
+          "rationale": "A replicação viral depende do hospedeiro; a dengue exige circulação do vírus e vetor competente.",
+          "strategy": [
+            "Identificar vírus nos dois casos.",
+            "Explicar a dependência da maquinaria celular.",
+            "Relacionar presença de Aedes e pessoas infectadas à transmissão local."
+          ],
+          "trap": "Afirmar transmissão aérea de dengue por analogia à covid.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "03",
+          "page": 4,
+          "subject": "Biologia",
+          "topicId": "bio_evolucao",
+          "topic": "Evolução",
+          "subtopics": [
+            "Seleção natural",
+            "vantagem heterozigótica",
+            "anemia falciforme"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_codigo_genetico_sintese"
+          ],
+          "summary": "Relaciona alteração de códon à vantagem de heterozigotos em áreas de malária.",
+          "rationale": "A substituição de um aminoácido envolve um códon e o ambiente pode favorecer o alelo em heterozigose.",
+          "strategy": [
+            "Comparar as duas sequências e localizar Glu/Val.",
+            "Relacionar um aminoácido a um códon.",
+            "Explicar sobrevivência diferencial dos heterozigotos diante da malária."
+          ],
+          "trap": "Dizer que a malária produz intencionalmente a mutação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "04",
+          "page": 5,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Segregação independente",
+            "heredograma",
+            "probabilidade genética"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Determina gametas, genótipo e probabilidade de filha não albina sem polidactilia.",
+          "rationale": "Os genes em cromossomos não homólogos segregam independentemente; os pais albinos revelam heterozigose dos filhos.",
+          "strategy": [
+            "Listar AD, Ad, aD e ad.",
+            "Inferir Giulia Aadd e Heitor Aadd pela genealogia.",
+            "Multiplicar 3/4 para pigmentação por 1 para dd e 1/2 para sexo feminino."
+          ],
+          "trap": "Inferir dominância da frequência de fenótipos na família.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "05",
+          "page": 6,
+          "subject": "Biologia",
+          "topicId": "bio_zoologia",
+          "topic": "Zoologia",
+          "subtopics": [
+            "Aves",
+            "funções das penas",
+            "fenótipo e ambiente"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "bio_genetica"
+          ],
+          "summary": "Explica funções das penas e o efeito alimentar sobre a cor dos guarás.",
+          "rationale": "Isolamento e proteção são funções adicionais; carotenoides dietéticos alteram fenótipo sem mudar o genótipo.",
+          "strategy": [
+            "Citar isolamento térmico e proteção/impermeabilização.",
+            "Relacionar pigmento alimentar à coloração.",
+            "Distinguir mudança fenotípica de alteração no DNA."
+          ],
+          "trap": "Supor que a dieta muda os alelos de coloração.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "06",
+          "page": 7,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Rendimento de reação",
+            "balanceamento",
+            "oxidação do tungstênio"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_oxirreducao"
+          ],
+          "summary": "Analisa a extração de tungstênio e dimensiona a massa de scheelita.",
+          "rationale": "O fluxograma preserva W na proporção 1:1 e a etapa com H2 reduz WO3 a metal.",
+          "strategy": [
+            "Obter NOX +6 no WO3 e identificar redução na etapa 3.",
+            "Balancear CaWO4 + 2HCl → H2WO4 + CaCl2.",
+            "Converter 69 kg de W em massa de mineral e dividir por 0,75."
+          ],
+          "trap": "Aplicar o rendimento multiplicando a massa de entrada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "07",
+          "page": 8,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Pureza de amostra",
+            "gases ideais",
+            "geometria do CO2"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [
+            "qui_gases",
+            "qui_polaridade_geometria"
+          ],
+          "summary": "Calcula a quantidade de carbonato e impurezas a partir do CO2 recolhido.",
+          "rationale": "A reação produz um mol de CO2 por mol de CaCO3; o item a mistura terminologia inter e intramolecular.",
+          "strategy": [
+            "Converter 48 mL em 0,048 L e aplicar PV=nRT.",
+            "Usar a proporção 1:1 para achar 0,002 mol de carbonato.",
+            "Subtrair sua massa de 0,25 g e discutir ligação covalente interna versus dispersão entre moléculas."
+          ],
+          "trap": "Aceitar sem ressalva intermolecular como nome da ligação C=O.",
+          "confidence": "medium",
+          "reviewNote": "O PDF traz literalmente “ligação química intermolecular existente na molécula”. Há incompatibilidade terminológica: dentro do CO2 há ligação covalente; entre moléculas, forças de dispersão. A geometria linear e a parte quantitativa são inequívocas; sem espelho público, não se presume qual termo foi esperado.",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "08",
+          "page": 9,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Hidrólise salina",
+            "deslocamento de equilíbrio",
+            "pH"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica a hidrólise do benzoato e calcula o pH do sal.",
+          "rationale": "O ânion de ácido fraco gera OH−; adicionar ácido consome OH− e favorece ácido benzoico.",
+          "strategy": [
+            "Escrever dissociação em Na+ e benzoato.",
+            "Aplicar Le Chatelier ao consumo de OH− pelo HCl.",
+            "Calcular [OH−]=√(KhC)=10⁻5 e pH=9."
+          ],
+          "trap": "Usar a constante de hidrólise como Ka.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "09",
+          "page": 10,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Decaimento beta",
+            "meia-vida",
+            "isóbaros"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica emissão beta e reconstitui a atividade inicial do enxofre-35.",
+          "rationale": "S-35 passa a Cl-35 sem alterar massa; 348 dias correspondem a quatro meias-vidas.",
+          "strategy": [
+            "Conservar massa e carga para identificar beta menos.",
+            "Escrever S-35 → Cl-35 + β− e nomear isóbaros.",
+            "Multiplicar 10 MBq por 2⁴."
+          ],
+          "trap": "Reduzir a atividade linearmente com os dias.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "10",
+          "page": 11,
+          "subject": "Química",
+          "topicId": "qui_organica_fundamentos",
+          "topic": "Fundamentos e Nomenclatura Orgânica",
+          "subtopics": [
+            "Éter",
+            "carbonos terciários",
+            "pares não ligantes",
+            "quiralidade"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Lê a estrutura do miconazol para classificar átomos e localizar carbono assimétrico.",
+          "rationale": "A ligação C–O–C caracteriza éter; conectividade e valências permitem contar carbonos e pares eletrônicos.",
+          "strategy": [
+            "Identificar o éter e contar carbonos ligados a três carbonos.",
+            "Somar pares não ligantes de O, N e quatro Cl.",
+            "Marcar o carbono tetraédrico ligado a H, arila, cadeia nitrogenada e O."
+          ],
+          "trap": "Contar Cl como carbono vizinho na classificação de carbonos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "11",
+          "page": 12,
+          "subject": "Física",
+          "topicId": "fis_estatica",
+          "topic": "Estática dos Corpos Sólidos e dos Fluidos",
+          "subtopics": [
+            "Equilíbrio de torques",
+            "força normal",
+            "plano inclinado"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa as forças na caixa e a tração que equilibra a barra.",
+          "rationale": "A articulação elimina torque local; na segunda posição a força de contato resultante pode incluir atrito.",
+          "strategy": [
+            "Usar N=mg=40 N na barra horizontal.",
+            "Equilibrar 40×1,0 com T sen45°×0,4.",
+            "Na segunda situação distinguir normal e atrito e compor a força total de contato."
+          ],
+          "trap": "Confundir força total da barra com apenas a componente normal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "12",
+          "page": 13,
+          "subject": "Física",
+          "topicId": "fis_calorimetria",
+          "topic": "Calorimetria",
+          "subtopics": [
+            "Equilíbrio térmico",
+            "fusão do gelo",
+            "vazão"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula o tempo de retirada de água e o número de cubos para resfriá-la.",
+          "rationale": "O calor da água aquece o gelo, funde-o e aquece a água fundida até 22 °C.",
+          "strategy": [
+            "Converter 4,5 L/min para m³/s e obter 40 s para 3 L.",
+            "Somar os três termos de calor por cubo de 50 g.",
+            "Igualar ao resfriamento de 3000 g de 40 a 22 °C."
+          ],
+          "trap": "Omitir o aquecimento do gelo abaixo de zero ou da água após fusão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "13",
+          "page": 14,
+          "subject": "Física",
+          "topicId": "fis_optica_geometrica",
+          "topic": "Óptica Geométrica",
+          "subtopics": [
+            "Refração",
+            "reflexão total",
+            "lei de Snell"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Acompanha o laser em espelhos e interfaces de glicerina.",
+          "rationale": "O desenho informa incidência de 60° na superfície horizontal e permite reconstruir as demais direções.",
+          "strategy": [
+            "Calcular v=c/1,5.",
+            "Traçar normais e usar simetria da reflexão para determinar i.",
+            "Usar senL=1/1,5 e Snell na face vertical com incidência de 30°."
+          ],
+          "trap": "Medir ângulos em relação à superfície em vez da normal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "14",
+          "page": 15,
+          "subject": "Física",
+          "topicId": "fis_ondulatoria",
+          "topic": "Ondulatória",
+          "subtopics": [
+            "Refração em cordas",
+            "frequência",
+            "densidade linear"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona oscilações, comprimento de onda e velocidades em cordas diferentes.",
+          "rationale": "A frequência é fixada pela fonte e a velocidade varia como 1/√µ sob igual tração.",
+          "strategy": [
+            "Dividir quatro oscilações por 2 s para achar 2 Hz.",
+            "Usar y=vΔt e x=λ para obter y/x=4.",
+            "Manter f2=2 Hz e calcular v1/v2=√3."
+          ],
+          "trap": "Modificar a frequência na passagem para a corda mais densa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "15",
+          "page": 16,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Segunda lei de Ohm",
+            "associação de resistores"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Modela braços, tórax e pernas como resistores em duas montagens.",
+          "rationale": "Resistências dependem de L/A; os caminhos destacados determinam série e paralelo.",
+          "strategy": [
+            "Expressar RT=RB/6 e RP=RB/2.",
+            "Na figura 1 somar os dois braços e aplicar I=U/(2RB).",
+            "Na figura 2 somar um braço, tórax e as duas pernas em paralelo."
+          ],
+          "trap": "Incluir partes não percorridas pela corrente no circuito equivalente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "16",
+          "page": 17,
+          "subject": "Matemática",
+          "topicId": "mat_sequencias_matrizes",
+          "topic": "Sequências, Matrizes e Sistemas Lineares",
+          "subtopics": [
+            "Soma de progressão aritmética",
+            "otimização de percurso"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Minimiza caminhadas e abastecimentos ao regar 31 palmeiras.",
+          "rationale": "Atender lotes de três a partir das mais distantes reduz retornos, reservando uma carga para a primeira palmeira.",
+          "strategy": [
+            "Para quatro e cinco árvores comparar lotes e deixar a viagem mais distante para o fim.",
+            "Para 31, atender primeiro a árvore junto à torneira e depois lotes de três.",
+            "Somar os retornos por PA e adicionar onze minutos de enchimento."
+          ],
+          "trap": "Voltar à torneira depois da última árvore sem necessidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "17",
+          "page": 18,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Parábola",
+            "distância ponto-reta",
+            "lugar geométrico"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Obtém o vértice e a equação de uma parábola com diretriz inclinada.",
+          "rationale": "A igualdade das distâncias ao foco e à diretriz define a curva mesmo sem eixo paralelo aos eixos cartesianos.",
+          "strategy": [
+            "Calcular o ponto médio de (4,−4) e (0,0).",
+            "Igualar √((x−4)²+(y+4)²) a módulo de (x−y) dividido por √2.",
+            "Elevar ao quadrado e desenvolver a equação."
+          ],
+          "trap": "Usar fórmula de parábola vertical para uma diretriz inclinada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "18",
+          "page": 19,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Pirâmide oblíqua",
+            "planificação",
+            "volume e área"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa volume e planificação de pirâmide de base quadrada.",
+          "rationale": "A classificação espacial é clara, mas a altura não fica numericamente determinada no documento disponível.",
+          "strategy": [
+            "Registrar área da base 16 e MH=3.",
+            "Escrever volume como 16h/3 sem assumir ângulo do arco em M.",
+            "Planificar quadrado e quatro triângulos e expressar suas alturas em função de h."
+          ],
+          "trap": "Inferir 60° ou 45° da aparência do arco desenhado.",
+          "confidence": "medium",
+          "reviewNote": "Na página física 19, inspecionada em renderização individual, há arco sombreado em M, mas nenhuma medida angular legível no PDF nem no texto extraído. Os dados escritos não determinam VH; portanto não se inventa ângulo ou resposta numérica. O tema espacial é seguro, a completude matemática do item precisa de fonte corrigida/espelho não localizado.",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "19",
+          "page": 20,
+          "subject": "Matemática",
+          "topicId": null,
+          "topic": "Lógica e Algoritmos",
+          "subtopics": [
+            "Algoritmos",
+            "sequência olha-e-diz",
+            "execução de laços"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Executa a função Leia e um laço de transformação de algarismos em Julia.",
+          "rationale": "A regra agrupa ocorrências consecutivas, e o código filtra 1 antes de incrementar os demais dígitos.",
+          "strategy": [
+            "Separar 12233 em grupos consecutivos e aplicar Leia duas vezes.",
+            "Calcular Leia(11122)=3122.",
+            "Executar o filtro e incremento para obter respx=433 e depois aplicar Leia."
+          ],
+          "trap": "Contar ocorrências totais de um dígito em vez de blocos consecutivos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "20",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_dados_probabilidade",
+          "topic": "Probabilidade e Interpretação de Dados",
+          "subtopics": [
+            "Probabilidade simples",
+            "probabilidade condicional",
+            "tabela de dupla entrada"
+          ],
+          "skills": [
+            "aplicacao_de_conceitos",
+            "analise_de_dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Calcula probabilidades por nacionalidade e sexo no cruzeiro.",
+          "rationale": "A condição não italiana restringe o denominador às colunas chinesa e sul-africana.",
+          "strategy": [
+            "Somar a tabela para obter 1000 turistas e 180 sul-africanos.",
+            "Restringir a segunda escolha a 650 não italianos.",
+            "Dividir 280 mulheres não italianas por 650."
+          ],
+          "trap": "Usar o total de turistas no denominador da condicional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        }
+      ]
+    }
+  ]
+}

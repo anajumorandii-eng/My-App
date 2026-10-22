@@ -1,0 +1,3116 @@
+{
+  "board": "FAMERP",
+  "year": 2025,
+  "coverageNote": "Edição integral: 80 questões objetivas da versão 1, 20 discursivas e uma proposta de redação, conforme capas. Estratégias autorais; sem espelho público discursivo identificado.",
+  "sourceManifest": [
+    {
+      "board": "FAMERP",
+      "year": 2025,
+      "code": "FMRP2401",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2401/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Gerais - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   12/12/2024",
+      "url": "https://documento.vunesp.com.br/documento/stream/NjY1MTk1Nw%3d%3d",
+      "localPath": "/workspace/work/board-source-discovery/famerp/2025/NjY1MTk1Nw.pdf",
+      "sha256": "a5972bd6c1903350e9033e0a0da253eb503f63c33601a06e0cd0983acd3cd290",
+      "pages": 24,
+      "bytes": 1467187,
+      "phase": "Conhecimentos gerais",
+      "group": "conhecimentos-gerais",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "V1 — imprensa",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1MTk1MA%3d%3d",
+      "answerKeyPath": "/workspace/work/board-source-discovery/famerp/2025/NjY1MTk1MA.pdf",
+      "answerKeySha256": "e0ad3b858d1b6b570c87fb41e174b2b19318185d9d9ae53934764d6ecf6aa964",
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa.",
+      "expectedQuestionsIncludingEssay": 80,
+      "sourceType": "primary",
+      "answerKeySourceType": "primary",
+      "role": "gerais"
+    },
+    {
+      "board": "FAMERP",
+      "year": 2025,
+      "code": "FMRP2401",
+      "indexUrl": "https://documento.vunesp.com.br/projeto/FMRP2401/documento",
+      "label": "Caderno de Questões - Prova de Conhecimentos Específicos e Redação - (versão de divulgação à imprensa) - Atenção candidato acesse sua versão de prova na Área do Candidato   13/12/2024",
+      "url": "https://documento.vunesp.com.br/documento/stream/NjY1MjgxOQ%3d%3d",
+      "localPath": "/workspace/work/board-source-discovery/famerp/2025/NjY1MjgxOQ.pdf",
+      "sha256": "525c48d5613e36baa8f96f9728476b7e368f2b3176e7428c2f111dc14866234e",
+      "pages": 28,
+      "bytes": 1531780,
+      "phase": "Conhecimentos específicos e Redação",
+      "group": "conhecimentos-especificos",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Caderno002 — imprensa",
+      "answerKeyUrl": null,
+      "answerKeyPath": null,
+      "answerKeySha256": null,
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa. Inclui proposta de redação como uma unidade separada das20 questões. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "expectedQuestionsIncludingEssay": 21,
+      "sourceType": "primary",
+      "role": "especificos"
+    }
+  ],
+  "papers": [
+    {
+      "id": "famerp-2025-gerais-objetiva",
+      "group": "gerais-objetiva",
+      "phase": "Conhecimentos Gerais",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "V1 — imprensa",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1MTk1Nw%3d%3d",
+      "answerKeyUrl": "https://documento.vunesp.com.br/documento/stream/NjY1MTk1MA%3d%3d",
+      "sha256": "a5972bd6c1903350e9033e0a0da253eb503f63c33601a06e0cd0983acd3cd290",
+      "answerKeySha256": "e0ad3b858d1b6b570c87fb41e174b2b19318185d9d9ae53934764d6ecf6aa964",
+      "pages": 24,
+      "expectedQuestions": 80,
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 2,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Referente no poema"
+          ],
+          "skills": [
+            "Recupere a interlocutora Glaura",
+            "Relacione teu seio ao esconderijo dos filhos de Vênus"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa referente no poema.",
+          "rationale": "Relacione teu seio ao esconderijo dos filhos de Vênus.",
+          "strategy": [
+            "Recupere a interlocutora Glaura.",
+            "Relacione teu seio ao esconderijo dos filhos de Vênus."
+          ],
+          "trap": "Confundir o peito do eu lírico com o da interlocutora.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "02",
+          "page": 2,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Antítese afetiva"
+          ],
+          "skills": [
+            "Localize os adjetivos cruéis e lindos",
+            "Reconheça sentimentos opostos dirigidos aos Amores"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa antítese afetiva.",
+          "rationale": "Reconheça sentimentos opostos dirigidos aos Amores.",
+          "strategy": [
+            "Localize os adjetivos cruéis e lindos.",
+            "Reconheça sentimentos opostos dirigidos aos Amores."
+          ],
+          "trap": "Escolher uma simples negativa como contradição afetiva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "03",
+          "page": 2,
+          "subject": "Literatura",
+          "topicId": "por_lit_classica_barroca",
+          "topic": "Literatura Clássica, Medieval e Barroca",
+          "subtopics": [
+            "Arcadismo e mitologia"
+          ],
+          "skills": [
+            "Identifique Vênus e Cupido",
+            "Associe as referências clássicas à estética árcade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa arcadismo e mitologia.",
+          "rationale": "Associe as referências clássicas à estética árcade.",
+          "strategy": [
+            "Identifique Vênus e Cupido.",
+            "Associe as referências clássicas à estética árcade."
+          ],
+          "trap": "Pressupor bucolismo sem paisagem pastoril no poema.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "04",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Referenciação pronominal"
+          ],
+          "skills": [
+            "Decomponha lha em lhe e a",
+            "Associe o destinatário a Vênus e o objeto à cinta"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa referenciação pronominal.",
+          "rationale": "Associe o destinatário a Vênus e o objeto à cinta.",
+          "strategy": [
+            "Decomponha lha em lhe e a.",
+            "Associe o destinatário a Vênus e o objeto à cinta."
+          ],
+          "trap": "Inverter objeto indireto e direto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_sintaxe",
+          "topic": "Análise Sintática",
+          "subtopics": [
+            "Voz passiva sintética"
+          ],
+          "skills": [
+            "Substitua o tesouro se procura por o tesouro é procurado",
+            "Diferencie o se apassivador do reflexivo e da conjunção"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa voz passiva sintética.",
+          "rationale": "Diferencie o se apassivador do reflexivo e da conjunção.",
+          "strategy": [
+            "Substitua o tesouro se procura por o tesouro é procurado.",
+            "Diferencie o se apassivador do reflexivo e da conjunção."
+          ],
+          "trap": "Tomar todo se acompanhado de verbo por apassivador.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "06",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Polissemia e humor"
+          ],
+          "skills": [
+            "Compare cinema como arte e como estabelecimento",
+            "Relacione fui em vários à mudança de sentido"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa polissemia e humor.",
+          "rationale": "Relacione fui em vários à mudança de sentido.",
+          "strategy": [
+            "Compare cinema como arte e como estabelecimento.",
+            "Relacione fui em vários à mudança de sentido."
+          ],
+          "trap": "Confundir ambiguidade lexical com exagero.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "07",
+          "page": 3,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Inferência em crônica"
+          ],
+          "skills": [
+            "Observe a repetição anual do edital",
+            "Reconheça a persistência da desobediência popular"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa inferência em crônica.",
+          "rationale": "Reconheça a persistência da desobediência popular.",
+          "strategy": [
+            "Observe a repetição anual do edital.",
+            "Reconheça a persistência da desobediência popular."
+          ],
+          "trap": "Estender a permanência às crendices que o texto considera mutáveis.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "08",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Paradoxo semântico"
+          ],
+          "skills": [
+            "Compare sublime com ridículo",
+            "Reconheça a incompatibilidade na expressão empregada pelo cronista"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa paradoxo semântico.",
+          "rationale": "Reconheça a incompatibilidade na expressão empregada pelo cronista.",
+          "strategy": [
+            "Compare sublime com ridículo.",
+            "Reconheça a incompatibilidade na expressão empregada pelo cronista."
+          ],
+          "trap": "Escolher adjetivos apenas por sua conotação afetiva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "09",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Concessão"
+          ],
+          "skills": [
+            "Substitua não obstante por apesar de",
+            "Identifique o obstáculo que não impede a persistência cultural"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa concessão.",
+          "rationale": "Identifique o obstáculo que não impede a persistência cultural.",
+          "strategy": [
+            "Substitua não obstante por apesar de.",
+            "Identifique o obstáculo que não impede a persistência cultural."
+          ],
+          "trap": "Confundir concessão com condição.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "10",
+          "page": 4,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Substantivação do infinitivo"
+          ],
+          "skills": [
+            "Localize o demonstrativo deste antes de foguetear",
+            "Reconheça a atividade verbal tratada como substantivo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa substantivação do infinitivo.",
+          "rationale": "Reconheça a atividade verbal tratada como substantivo.",
+          "strategy": [
+            "Localize o demonstrativo deste antes de foguetear.",
+            "Reconheça a atividade verbal tratada como substantivo."
+          ],
+          "trap": "Classificar todos os infinitivos como substantivos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "11",
+          "page": 4,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Ideia central sobre aplicativos"
+          ],
+          "skills": [
+            "Relacione a expansão inicial à queda recente de usuários",
+            "Selecione a síntese da mudança de popularidade"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa ideia central sobre aplicativos.",
+          "rationale": "Selecione a síntese da mudança de popularidade.",
+          "strategy": [
+            "Relacione a expansão inicial à queda recente de usuários.",
+            "Selecione a síntese da mudança de popularidade."
+          ],
+          "trap": "Restringir o texto à história tecnológica do namoro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "12",
+          "page": 5,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Conector concessivo"
+          ],
+          "skills": [
+            "Leia although como embora",
+            "Teste despite the fact that preservando o contraste"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa conector concessivo.",
+          "rationale": "Teste despite the fact that preservando o contraste.",
+          "strategy": [
+            "Leia although como embora.",
+            "Teste despite the fact that preservando o contraste."
+          ],
+          "trap": "Escolher uma expressão de finalidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "13",
+          "page": 5,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Polissemia de but"
+          ],
+          "skills": [
+            "Identifique a oposição introduzida no artigo",
+            "Compare com a frase sobre estudar e não passar no exame"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa polissemia de but.",
+          "rationale": "Compare com a frase sobre estudar e não passar no exame.",
+          "strategy": [
+            "Identifique a oposição introduzida no artigo.",
+            "Compare com a frase sobre estudar e não passar no exame."
+          ],
+          "trap": "Interpretar but como exceto em todos os usos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "14",
+          "page": 5,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Informação explícita"
+          ],
+          "skills": [
+            "Localize a transformação da imagem do namoro online",
+            "Associe a facilidade de uso do Tinder à redução do estigma"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa informação explícita.",
+          "rationale": "Associe a facilidade de uso do Tinder à redução do estigma.",
+          "strategy": [
+            "Localize a transformação da imagem do namoro online.",
+            "Associe a facilidade de uso do Tinder à redução do estigma."
+          ],
+          "trap": "Trocar os valores de mercado de Bumble e Match Group.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "15",
+          "page": 5,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Vocabulário contextual"
+          ],
+          "skills": [
+            "Leia roughly antes de uma quantidade",
+            "Substitua por approximately mantendo a estimativa"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa vocabulário contextual.",
+          "rationale": "Substitua por approximately mantendo a estimativa.",
+          "strategy": [
+            "Leia roughly antes de uma quantidade.",
+            "Substitua por approximately mantendo a estimativa."
+          ],
+          "trap": "Confundir aproximação numérica com alcance mundial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "16",
+          "page": 5,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Integração texto e gráfico"
+          ],
+          "skills": [
+            "Observe a queda de usuários após o pico",
+            "Relacione-a à perda recente de atratividade dos aplicativos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa integração texto e gráfico.",
+          "rationale": "Relacione-a à perda recente de atratividade dos aplicativos.",
+          "strategy": [
+            "Observe a queda de usuários após o pico.",
+            "Relacione-a à perda recente de atratividade dos aplicativos."
+          ],
+          "trap": "Confundir percentual de casais com usuários ativos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "17",
+          "page": 5,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Expressão temporal"
+          ],
+          "skills": [
+            "Divida o ano em quatro quarters",
+            "Traduza second quarter como segundo trimestre"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa expressão temporal.",
+          "rationale": "Traduza second quarter como segundo trimestre.",
+          "strategy": [
+            "Divida o ano em quatro quarters.",
+            "Traduza second quarter como segundo trimestre."
+          ],
+          "trap": "Traduzir quarter como quadrimestre.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "18",
+          "page": 5,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Finalidade de campanha"
+          ],
+          "skills": [
+            "Observe recomendações para senhas fortes",
+            "Reconheça a segurança digital como tema comum"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa finalidade de campanha.",
+          "rationale": "Reconheça a segurança digital como tema comum.",
+          "strategy": [
+            "Observe recomendações para senhas fortes.",
+            "Reconheça a segurança digital como tema comum."
+          ],
+          "trap": "Confundir proteção de acesso com cyberbullying.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "19",
+          "page": 6,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Condição e hipótese"
+          ],
+          "skills": [
+            "Identifique a estrutura if e sua consequência",
+            "Reconheça uma hipótese sobre facilidade de quebrar senhas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa condição e hipótese.",
+          "rationale": "Reconheça uma hipótese sobre facilidade de quebrar senhas.",
+          "strategy": [
+            "Identifique a estrutura if e sua consequência.",
+            "Reconheça uma hipótese sobre facilidade de quebrar senhas."
+          ],
+          "trap": "Tratar a construção como obrigação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "20",
+          "page": 6,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Humor em tirinha"
+          ],
+          "skills": [
+            "Leia o título sobre sangue mais frio que gelo",
+            "Relacione as quatro falas à reação de medo da personagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa humor em tirinha.",
+          "rationale": "Relacione as quatro falas à reação de medo da personagem.",
+          "strategy": [
+            "Leia o título sobre sangue mais frio que gelo.",
+            "Relacione as quatro falas à reação de medo da personagem."
+          ],
+          "trap": "Interpretar as falas como incentivo positivo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "21",
+          "page": 6,
+          "subject": "História",
+          "topicId": "his_idade_antiga",
+          "topic": "Idade Antiga",
+          "subtopics": [
+            "Cristianismo no Império Romano"
+          ],
+          "skills": [
+            "Relacione culto ao imperador e ordem política",
+            "Explique por que a recusa cristã era vista como ameaça"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa cristianismo no Império Romano.",
+          "rationale": "Explique por que a recusa cristã era vista como ameaça.",
+          "strategy": [
+            "Relacione culto ao imperador e ordem política.",
+            "Explique por que a recusa cristã era vista como ameaça."
+          ],
+          "trap": "Confundir tolerância geral com aceitação do cristianismo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "22",
+          "page": 6,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Mentalidade religiosa medieval"
+          ],
+          "skills": [
+            "Identifique o castigo ao orgulho humano",
+            "Relacione as calamidades naturais à explicação providencialista"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa mentalidade religiosa medieval.",
+          "rationale": "Relacione as calamidades naturais à explicação providencialista.",
+          "strategy": [
+            "Identifique o castigo ao orgulho humano.",
+            "Relacione as calamidades naturais à explicação providencialista."
+          ],
+          "trap": "Projetar explicação técnica moderna sobre o relato monástico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "23",
+          "page": 7,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Mulheres e comércio colonial"
+          ],
+          "skills": [
+            "Localize as influências africana e portuguesa",
+            "Reconheça sua convergência na divisão sexual do trabalho"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa mulheres e comércio colonial.",
+          "rationale": "Reconheça sua convergência na divisão sexual do trabalho.",
+          "strategy": [
+            "Localize as influências africana e portuguesa.",
+            "Reconheça sua convergência na divisão sexual do trabalho."
+          ],
+          "trap": "Excluir as mulheres da atividade econômica colonial.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "24",
+          "page": 7,
+          "subject": "História",
+          "topicId": "his_brasil_colonia",
+          "topic": "Brasil Colônia",
+          "subtopics": [
+            "Abastecimento das Minas"
+          ],
+          "skills": [
+            "Relacione comércio ambulante e povoamento disperso",
+            "Reconheça sua função no abastecimento interno"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa abastecimento das Minas.",
+          "rationale": "Reconheça sua função no abastecimento interno.",
+          "strategy": [
+            "Relacione comércio ambulante e povoamento disperso.",
+            "Reconheça sua função no abastecimento interno."
+          ],
+          "trap": "Supor exclusividade de trabalhadores livres.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "25",
+          "page": 7,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Expansão marítima e conexões globais"
+          ],
+          "skills": [
+            "Situe as viagens transoceânicas no século XVI",
+            "Associe novas conexões ao tráfico atlântico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa expansão marítima e conexões globais.",
+          "rationale": "Associe novas conexões ao tráfico atlântico.",
+          "strategy": [
+            "Situe as viagens transoceânicas no século XVI.",
+            "Associe novas conexões ao tráfico atlântico."
+          ],
+          "trap": "Confundir conexões iniciais com economia mundial já integrada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "26",
+          "page": 7,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Cafeicultura e modernização"
+          ],
+          "skills": [
+            "Relacione distância ao porto às ferrovias",
+            "Associe mecanização de etapas produtivas à reorganização após o fim do tráfico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa cafeicultura e modernização.",
+          "rationale": "Associe mecanização de etapas produtivas à reorganização após o fim do tráfico.",
+          "strategy": [
+            "Relacione distância ao porto às ferrovias.",
+            "Associe mecanização de etapas produtivas à reorganização após o fim do tráfico."
+          ],
+          "trap": "Selecionar imigração boliviana como solução histórica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "27",
+          "page": 8,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Vacinação obrigatória e coerção"
+          ],
+          "skills": [
+            "Observe Oswaldo Cruz e o aparato armado da charge",
+            "Relacione a sátira ao emprego da força em 1904"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa vacinação obrigatória e coerção.",
+          "rationale": "Relacione a sátira ao emprego da força em 1904.",
+          "strategy": [
+            "Observe Oswaldo Cruz e o aparato armado da charge.",
+            "Relacione a sátira ao emprego da força em 1904."
+          ],
+          "trap": "Confundir vacinação contra varíola com febre amarela.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "28",
+          "page": 8,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "Ditadura e AI-5"
+          ],
+          "skills": [
+            "Identifique o uso de normas de aparência legal",
+            "Associe-as à repressão da oposição e concentração de poder"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa ditadura e AI-5.",
+          "rationale": "Associe-as à repressão da oposição e concentração de poder.",
+          "strategy": [
+            "Identifique o uso de normas de aparência legal.",
+            "Associe-as à repressão da oposição e concentração de poder."
+          ],
+          "trap": "Tomar a forma jurídica como prova de democracia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "29",
+          "page": 8,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Descolonização e industrialização"
+          ],
+          "skills": [
+            "Defina substituir importações por produção interna",
+            "Relacione o projeto ao consumo de massa nos novos Estados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa descolonização e industrialização.",
+          "rationale": "Relacione o projeto ao consumo de massa nos novos Estados.",
+          "strategy": [
+            "Defina substituir importações por produção interna.",
+            "Relacione o projeto ao consumo de massa nos novos Estados."
+          ],
+          "trap": "Interpretar a política como encerramento de todo comércio exterior.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "30",
+          "page": 8,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Dissuasão nuclear"
+          ],
+          "skills": [
+            "Observe a ameaça de destruição recíproca",
+            "Relacione o arsenal à persuasão sem uso direto"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa dissuasão nuclear.",
+          "rationale": "Relacione o arsenal à persuasão sem uso direto.",
+          "strategy": [
+            "Observe a ameaça de destruição recíproca.",
+            "Relacione o arsenal à persuasão sem uso direto."
+          ],
+          "trap": "Concluir que a ausência de guerra nuclear eliminou conflitos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "31",
+          "page": 9,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Incêndios no Pantanal"
+          ],
+          "skills": [
+            "Associe estiagem à vegetação seca",
+            "Relacione ignições e propagação às ações humanas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa incêndios no Pantanal.",
+          "rationale": "Relacione ignições e propagação às ações humanas.",
+          "strategy": [
+            "Associe estiagem à vegetação seca.",
+            "Relacione ignições e propagação às ações humanas."
+          ],
+          "trap": "Atribuir os incêndios somente à densidade vegetal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "32",
+          "page": 9,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Commodities e balança comercial"
+          ],
+          "skills": [
+            "Identifique produtos primários de exportação",
+            "Relacione seu valor exportado ao saldo comercial brasileiro"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa commodities e balança comercial.",
+          "rationale": "Relacione seu valor exportado ao saldo comercial brasileiro.",
+          "strategy": [
+            "Identifique produtos primários de exportação.",
+            "Relacione seu valor exportado ao saldo comercial brasileiro."
+          ],
+          "trap": "Confundir commodities com bens de alta tecnologia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "33",
+          "page": 9,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Rotas migratórias e refúgio"
+          ],
+          "skills": [
+            "Considere o Brasil como escala de deslocamentos",
+            "Relacione os pedidos no aeroporto à rota para os Estados Unidos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa rotas migratórias e refúgio.",
+          "rationale": "Relacione os pedidos no aeroporto à rota para os Estados Unidos.",
+          "strategy": [
+            "Considere o Brasil como escala de deslocamentos.",
+            "Relacione os pedidos no aeroporto à rota para os Estados Unidos."
+          ],
+          "trap": "Inferir que todos chegam por vagas universitárias.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "34",
+          "page": 9,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Grilagem fundiária"
+          ],
+          "skills": [
+            "Observe a aparência fraudulenta de posse regular",
+            "Associe grilagem à falsificação documental"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa grilagem fundiária.",
+          "rationale": "Associe grilagem à falsificação documental.",
+          "strategy": [
+            "Observe a aparência fraudulenta de posse regular.",
+            "Associe grilagem à falsificação documental."
+          ],
+          "trap": "Confundir fraude de terras com reforma agrária.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "35",
+          "page": 10,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Manguezal e proteção costeira"
+          ],
+          "skills": [
+            "Relacione raízes e sedimentos ao amortecimento das águas",
+            "Reconheça a proteção contra erosão costeira"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa manguezal e proteção costeira.",
+          "rationale": "Reconheça a proteção contra erosão costeira.",
+          "strategy": [
+            "Relacione raízes e sedimentos ao amortecimento das águas.",
+            "Reconheça a proteção contra erosão costeira."
+          ],
+          "trap": "Caracterizar manguezal por baixa biodiversidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "36",
+          "page": 10,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Intemperismo e relevo arenítico"
+          ],
+          "skills": [
+            "Identifique a rocha sedimentar da Pedra Furada",
+            "Associe o modelado à ação erosiva eólica na alternativa disponível"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa intemperismo e relevo arenítico.",
+          "rationale": "Associe o modelado à ação erosiva eólica na alternativa disponível.",
+          "strategy": [
+            "Identifique a rocha sedimentar da Pedra Furada.",
+            "Associe o modelado à ação erosiva eólica na alternativa disponível."
+          ],
+          "trap": "Confundir arenito com basalto vulcânico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "37",
+          "page": 10,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Risco urbano em encostas"
+          ],
+          "skills": [
+            "Relacione a permanência dos moradores à exposição ao risco",
+            "Identifique a necessidade de infraestrutura de contenção"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa risco urbano em encostas.",
+          "rationale": "Identifique a necessidade de infraestrutura de contenção.",
+          "strategy": [
+            "Relacione a permanência dos moradores à exposição ao risco.",
+            "Identifique a necessidade de infraestrutura de contenção."
+          ],
+          "trap": "Reduzir a questão à recuperação da rede elétrica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "38",
+          "page": 10,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Matriz elétrica e estiagem"
+          ],
+          "skills": [
+            "Relacione seca à queda de geração hidrelétrica",
+            "Explique o acionamento complementar de termelétricas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa matriz elétrica e estiagem.",
+          "rationale": "Explique o acionamento complementar de termelétricas.",
+          "strategy": [
+            "Relacione seca à queda de geração hidrelétrica.",
+            "Explique o acionamento complementar de termelétricas."
+          ],
+          "trap": "Supor predominância brasileira de óleo combustível.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "39",
+          "page": 11,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Créditos de carbono"
+          ],
+          "skills": [
+            "Reconheça a unidade de uma tonelada de CO2 equivalente evitada ou removida",
+            "Diferencie crédito ambiental de empréstimo financeiro"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa créditos de carbono.",
+          "rationale": "Diferencie crédito ambiental de empréstimo financeiro.",
+          "strategy": [
+            "Reconheça a unidade de uma tonelada de CO2 equivalente evitada ou removida.",
+            "Diferencie crédito ambiental de empréstimo financeiro."
+          ],
+          "trap": "Tratar o crédito como cupom de produtos sustentáveis.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "40",
+          "page": 11,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Separatismo catalão"
+          ],
+          "skills": [
+            "Identifique a vitória do aliado do governo espanhol",
+            "Relacione-a ao enfraquecimento eleitoral separatista"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa separatismo catalão.",
+          "rationale": "Relacione-a ao enfraquecimento eleitoral separatista.",
+          "strategy": [
+            "Identifique a vitória do aliado do governo espanhol.",
+            "Relacione-a ao enfraquecimento eleitoral separatista."
+          ],
+          "trap": "Confundir Catalunha com território curdo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "41",
+          "page": 11,
+          "subject": "Biologia",
+          "topicId": "bio_estrutura_fisio_celular",
+          "topic": "Estrutura e Fisiologia Celular",
+          "subtopics": [
+            "Água e composição dos organismos"
+          ],
+          "skills": [
+            "Reconheça a água presente nos alimentos",
+            "Elimine afirmações de fluxo unidirecional e função enzimática"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa água e composição dos organismos.",
+          "rationale": "Elimine afirmações de fluxo unidirecional e função enzimática.",
+          "strategy": [
+            "Reconheça a água presente nos alimentos.",
+            "Elimine afirmações de fluxo unidirecional e função enzimática."
+          ],
+          "trap": "Confundir circulação da matéria com fluxo energético.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "42",
+          "page": 11,
+          "subject": "Biologia",
+          "topicId": "bio_metabolismo_energetico",
+          "topic": "Metabolismo Energético",
+          "subtopics": [
+            "Fermentação alcoólica"
+          ],
+          "skills": [
+            "Identifique etanol e CO2 no esquema",
+            "Compare o saldo de dois ATP com o da respiração aeróbia"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa fermentação alcoólica.",
+          "rationale": "Compare o saldo de dois ATP com o da respiração aeróbia.",
+          "strategy": [
+            "Identifique etanol e CO2 no esquema.",
+            "Compare o saldo de dois ATP com o da respiração aeróbia."
+          ],
+          "trap": "Atribuir mitocôndrias ou exigência de oxigênio à fermentação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "43",
+          "page": 12,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Caatinga e xeromorfismo"
+          ],
+          "skills": [
+            "Reconheça a região semiárida hachurada",
+            "Associe espinhos à redução da perda de água"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa caatinga e xeromorfismo.",
+          "rationale": "Associe espinhos à redução da perda de água.",
+          "strategy": [
+            "Reconheça a região semiárida hachurada.",
+            "Associe espinhos à redução da perda de água."
+          ],
+          "trap": "Escolher raízes aéreas como acesso ao lençol subterrâneo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "44",
+          "page": 12,
+          "subject": "Biologia",
+          "topicId": "bio_evolucao",
+          "topic": "Evolução",
+          "subtopics": [
+            "Cladograma e parentesco"
+          ],
+          "skills": [
+            "Compare os nós compartilhados pelos pares",
+            "Identifique E e F como os táxons de ancestral comum mais recente"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa cladograma e parentesco.",
+          "rationale": "Identifique E e F como os táxons de ancestral comum mais recente.",
+          "strategy": [
+            "Compare os nós compartilhados pelos pares.",
+            "Identifique E e F como os táxons de ancestral comum mais recente."
+          ],
+          "trap": "Usar apenas proximidade horizontal dos nomes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "45",
+          "page": 12,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Circulação em vertebrados"
+          ],
+          "skills": [
+            "Observe a comunicação no ventrículo",
+            "Reconheça a mistura de sangue arterial e venoso"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa circulação em vertebrados.",
+          "rationale": "Reconheça a mistura de sangue arterial e venoso.",
+          "strategy": [
+            "Observe a comunicação no ventrículo.",
+            "Reconheça a mistura de sangue arterial e venoso."
+          ],
+          "trap": "Atribuir mistura aos átrios separados.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "46",
+          "page": 13,
+          "subject": "Biologia",
+          "topicId": "bio_microbiologia",
+          "topic": "Microbiologia e Virologia",
+          "subtopics": [
+            "Transmissão da amebíase"
+          ],
+          "skills": [
+            "Identifique a forma resistente da ameba",
+            "Associe ingestão de cistos à água e aos alimentos contaminados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa transmissão da amebíase.",
+          "rationale": "Associe ingestão de cistos à água e aos alimentos contaminados.",
+          "strategy": [
+            "Identifique a forma resistente da ameba.",
+            "Associe ingestão de cistos à água e aos alimentos contaminados."
+          ],
+          "trap": "Confundir amebíase com parasitose transmitida por inseto.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "47",
+          "page": 13,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Sinapses e receptores opioides"
+          ],
+          "skills": [
+            "Localize a interação entre fentanil e receptor de membrana",
+            "Associe receptores pós-sinápticos à comunicação neural"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa sinapses e receptores opioides.",
+          "rationale": "Associe receptores pós-sinápticos à comunicação neural.",
+          "strategy": [
+            "Localize a interação entre fentanil e receptor de membrana.",
+            "Associe receptores pós-sinápticos à comunicação neural."
+          ],
+          "trap": "Situar o receptor exclusivamente no núcleo ou na mielina.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "48",
+          "page": 13,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Fator Rh e eritroblastose"
+          ],
+          "skills": [
+            "Deduzca o genótipo heterozigoto de II-5 a partir da mãe Rh negativa",
+            "Combine-o com II-4 Rh negativa sensibilizada e obtenha metade de filhos Rh positivos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa fator Rh e eritroblastose.",
+          "rationale": "Combine-o com II-4 Rh negativa sensibilizada e obtenha metade de filhos Rh positivos.",
+          "strategy": [
+            "Deduzca o genótipo heterozigoto de II-5 a partir da mãe Rh negativa.",
+            "Combine-o com II-4 Rh negativa sensibilizada e obtenha metade de filhos Rh positivos."
+          ],
+          "trap": "Confundir risco de incompatibilidade com herança ligada ao sexo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "49",
+          "page": 14,
+          "subject": "Biologia",
+          "topicId": "bio_evolucao",
+          "topic": "Evolução",
+          "subtopics": [
+            "Especiação alopátrica"
+          ],
+          "skills": [
+            "Observe a dispersão continental dos camelídeos",
+            "Associe separação geográfica à interrupção do fluxo gênico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa especiação alopátrica.",
+          "rationale": "Associe separação geográfica à interrupção do fluxo gênico.",
+          "strategy": [
+            "Observe a dispersão continental dos camelídeos.",
+            "Associe separação geográfica à interrupção do fluxo gênico."
+          ],
+          "trap": "Tratar adaptação como mudança intencional do ancestral.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "50",
+          "page": 14,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Enzimas digestivas e pH"
+          ],
+          "skills": [
+            "Relacione o pico neutro à amilase salivar",
+            "Associe o pico alcalino a enzimas pancreáticas como nucleases"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa enzimas digestivas e pH.",
+          "rationale": "Associe o pico alcalino a enzimas pancreáticas como nucleases.",
+          "strategy": [
+            "Relacione o pico neutro à amilase salivar.",
+            "Associe o pico alcalino a enzimas pancreáticas como nucleases."
+          ],
+          "trap": "Atribuir enzimas digestivas à bile.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "51",
+          "page": 15,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Fusão nuclear e nêutrons"
+          ],
+          "skills": [
+            "Conserve massa e número atômico para determinar o alvo Pu",
+            "Subtraia 116 de 290 para contar os nêutrons"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa fusão nuclear e nêutrons.",
+          "rationale": "Subtraia 116 de 290 para contar os nêutrons.",
+          "strategy": [
+            "Conserve massa e número atômico para determinar o alvo Pu.",
+            "Subtraia 116 de 290 para contar os nêutrons."
+          ],
+          "trap": "Subtrair o número de massa do alvo em lugar do número atômico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "52",
+          "page": 15,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Miscibilidade e densidade"
+          ],
+          "skills": [
+            "Selecione líquidos imiscíveis",
+            "Use a posição inferior e a densidade para identificar tetracloreto sob água"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa miscibilidade e densidade.",
+          "rationale": "Use a posição inferior e a densidade para identificar tetracloreto sob água.",
+          "strategy": [
+            "Selecione líquidos imiscíveis.",
+            "Use a posição inferior e a densidade para identificar tetracloreto sob água."
+          ],
+          "trap": "Escolher dois líquidos apolares miscíveis.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "53",
+          "page": 16,
+          "subject": "Química",
+          "topicId": "qui_gases",
+          "topic": "Gases",
+          "subtopics": [
+            "Lei de Avogadro e massa molar"
+          ],
+          "skills": [
+            "Reconheça iguais quantidades de matéria em volumes iguais nas mesmas condições",
+            "Ordene as massas molares SO2, O3 e O2"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa lei de Avogadro e massa molar.",
+          "rationale": "Ordene as massas molares SO2, O3 e O2.",
+          "strategy": [
+            "Reconheça iguais quantidades de matéria em volumes iguais nas mesmas condições.",
+            "Ordene as massas molares SO2, O3 e O2."
+          ],
+          "trap": "Igualar massas porque os volumes são iguais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "54",
+          "page": 16,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Balanceamento químico"
+          ],
+          "skills": [
+            "Balanceie fósforo, cálcio e silício",
+            "Complete carbono e oxigênio e some 2, 6 e 10"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa balanceamento químico.",
+          "rationale": "Complete carbono e oxigênio e some 2, 6 e 10.",
+          "strategy": [
+            "Balanceie fósforo, cálcio e silício.",
+            "Complete carbono e oxigênio e some 2, 6 e 10."
+          ],
+          "trap": "Somar também os coeficientes dos produtos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "55",
+          "page": 16,
+          "subject": "Química",
+          "topicId": "qui_polaridade_geometria",
+          "topic": "Polaridade das Ligações e Geometria Molecular",
+          "subtopics": [
+            "Ligações de hidrogênio"
+          ],
+          "skills": [
+            "Identifique OH na boldina e NH na dietilamina",
+            "Reconheça doadores e aceptores de ligações de hidrogênio"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa ligações de hidrogênio.",
+          "rationale": "Reconheça doadores e aceptores de ligações de hidrogênio.",
+          "strategy": [
+            "Identifique OH na boldina e NH na dietilamina.",
+            "Reconheça doadores e aceptores de ligações de hidrogênio."
+          ],
+          "trap": "Confundir interação intermolecular com ligação iônica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "56",
+          "page": 17,
+          "subject": "Química",
+          "topicId": "qui_cinetica",
+          "topic": "Cinética Química",
+          "subtopics": [
+            "Fatores da velocidade"
+          ],
+          "skills": [
+            "Compare concentração, temperatura e superfície exposta",
+            "Selecione palha de aço em HCl 6 mol/L a 50 graus"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa fatores da velocidade.",
+          "rationale": "Selecione palha de aço em HCl 6 mol/L a 50 graus.",
+          "strategy": [
+            "Compare concentração, temperatura e superfície exposta.",
+            "Selecione palha de aço em HCl 6 mol/L a 50 graus."
+          ],
+          "trap": "Avaliar um fator isolado e ignorar os demais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "57",
+          "page": 17,
+          "subject": "Química",
+          "topicId": "qui_estequiometria",
+          "topic": "Análises Quantitativas e Estequiometria",
+          "subtopics": [
+            "Quantidade de matéria no rótulo"
+          ],
+          "skills": [
+            "Multiplique o cálcio da porção por oito",
+            "Converta a massa total em gramas e divida pela massa molar do cálcio"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa quantidade de matéria no rótulo.",
+          "rationale": "Converta a massa total em gramas e divida pela massa molar do cálcio.",
+          "strategy": [
+            "Multiplique o cálcio da porção por oito.",
+            "Converta a massa total em gramas e divida pela massa molar do cálcio."
+          ],
+          "trap": "Usar miligramas diretamente como gramas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "58",
+          "page": 17,
+          "subject": "Química",
+          "topicId": "qui_inorganica",
+          "topic": "Química Inorgânica",
+          "subtopics": [
+            "Óxidos e chuva ácida"
+          ],
+          "skills": [
+            "Identifique o SO2 como óxido ácido",
+            "Relacione sua reação com umidade à acidificação da chuva"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa óxidos e chuva ácida.",
+          "rationale": "Relacione sua reação com umidade à acidificação da chuva.",
+          "strategy": [
+            "Identifique o SO2 como óxido ácido.",
+            "Relacione sua reação com umidade à acidificação da chuva."
+          ],
+          "trap": "Escolher nitrogênio molecular por sua abundância atmosférica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "59",
+          "page": 17,
+          "subject": "Química",
+          "topicId": null,
+          "topic": "Método científico",
+          "subtopics": [
+            "Hipótese e experimentação"
+          ],
+          "skills": [
+            "Situe a hipótese após observação e problema",
+            "Reconheça sua testagem por experimentos e coleta de dados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa hipótese e experimentação.",
+          "rationale": "Reconheça sua testagem por experimentos e coleta de dados.",
+          "strategy": [
+            "Situe a hipótese após observação e problema.",
+            "Reconheça sua testagem por experimentos e coleta de dados."
+          ],
+          "trap": "Publicar conclusões antes de testar a hipótese.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "60",
+          "page": 18,
+          "subject": "Química",
+          "topicId": "qui_organica_fundamentos",
+          "topic": "Fundamentos e Nomenclatura Orgânica",
+          "subtopics": [
+            "Heteroátomos e carbonos"
+          ],
+          "skills": [
+            "Localize o enxofre do grupo 16 na estrutura",
+            "Conte os vizinhos carbonados dos dois carbonos ligados a ele"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa heteroátomos e carbonos.",
+          "rationale": "Conte os vizinhos carbonados dos dois carbonos ligados a ele.",
+          "strategy": [
+            "Localize o enxofre do grupo 16 na estrutura.",
+            "Conte os vizinhos carbonados dos dois carbonos ligados a ele."
+          ],
+          "trap": "Contar heteroátomo como carbono para classificar a cadeia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "61",
+          "page": 18,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "Tempo de percurso e frota"
+          ],
+          "skills": [
+            "Divida trinta quilômetros por vinte quilômetros por hora",
+            "Divida noventa minutos por vinte e arredonde para cinco ônibus"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa tempo de percurso e frota.",
+          "rationale": "Divida noventa minutos por vinte e arredonde para cinco ônibus.",
+          "strategy": [
+            "Divida trinta quilômetros por vinte quilômetros por hora.",
+            "Divida noventa minutos por vinte e arredonde para cinco ônibus."
+          ],
+          "trap": "Arredondar o número de veículos para baixo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "62",
+          "page": 18,
+          "subject": "Física",
+          "topicId": "fis_leis_newton",
+          "topic": "Leis de Newton e Dinâmica do Movimento Retilíneo",
+          "subtopics": [
+            "Velocidade terminal e resultante"
+          ],
+          "skills": [
+            "Associe inclinação do gráfico à aceleração",
+            "Identifique resultante nula no intervalo de velocidade constante t1 a t2"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa velocidade terminal e resultante.",
+          "rationale": "Identifique resultante nula no intervalo de velocidade constante t1 a t2.",
+          "strategy": [
+            "Associe inclinação do gráfico à aceleração.",
+            "Identifique resultante nula no intervalo de velocidade constante t1 a t2."
+          ],
+          "trap": "Concluir que velocidade não nula implica força resultante não nula.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "63",
+          "page": 18,
+          "subject": "Física",
+          "topicId": "fis_gravitacao_circular",
+          "topic": "Gravitação e Movimento Circular",
+          "subtopics": [
+            "Velocidade orbital"
+          ],
+          "skills": [
+            "Iguale gravitação e resultante centrípeta",
+            "Cancele a massa do satélite e isole a raiz de GM sobre R"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa velocidade orbital.",
+          "rationale": "Cancele a massa do satélite e isole a raiz de GM sobre R.",
+          "strategy": [
+            "Iguale gravitação e resultante centrípeta.",
+            "Cancele a massa do satélite e isole a raiz de GM sobre R."
+          ],
+          "trap": "Manter a massa do satélite na expressão final.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "64",
+          "page": 19,
+          "subject": "Física",
+          "topicId": "fis_estatica",
+          "topic": "Estática dos Corpos Sólidos e dos Fluidos",
+          "subtopics": [
+            "Empuxo e imersão total"
+          ],
+          "skills": [
+            "Use o peso e os 85 por cento submersos para obter empuxo máximo",
+            "Subtraia o peso do empuxo com volume integral"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa empuxo e imersão total.",
+          "rationale": "Subtraia o peso do empuxo com volume integral.",
+          "strategy": [
+            "Use o peso e os 85 por cento submersos para obter empuxo máximo.",
+            "Subtraia o peso do empuxo com volume integral."
+          ],
+          "trap": "Usar o peso inteiro como força adicional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "65",
+          "page": 19,
+          "subject": "Física",
+          "topicId": "fis_calorimetria",
+          "topic": "Calorimetria",
+          "subtopics": [
+            "Dilatação linear e volumétrica"
+          ],
+          "skills": [
+            "Relacione a dilatação volumétrica a três vezes a linear",
+            "Divida 0,27 por cento por três para o diâmetro"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa dilatação linear e volumétrica.",
+          "rationale": "Divida 0,27 por cento por três para o diâmetro.",
+          "strategy": [
+            "Relacione a dilatação volumétrica a três vezes a linear.",
+            "Divida 0,27 por cento por três para o diâmetro."
+          ],
+          "trap": "Aplicar a variação de volume diretamente ao diâmetro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "66",
+          "page": 19,
+          "subject": "Física",
+          "topicId": "fis_termodinamica_gases",
+          "topic": "Termodinâmica dos Gases",
+          "subtopics": [
+            "Densidade em recipiente rígido"
+          ],
+          "skills": [
+            "Reconheça massa e volume constantes no recipiente fechado",
+            "Aplique densidade igual a massa sobre volume"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa densidade em recipiente rígido.",
+          "rationale": "Aplique densidade igual a massa sobre volume.",
+          "strategy": [
+            "Reconheça massa e volume constantes no recipiente fechado.",
+            "Aplique densidade igual a massa sobre volume."
+          ],
+          "trap": "Confundir mudança de pressão com mudança da massa de gás.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "67",
+          "page": 19,
+          "subject": "Física",
+          "topicId": "fis_optica_geometrica",
+          "topic": "Óptica Geométrica",
+          "subtopics": [
+            "Imagem em espelho plano"
+          ],
+          "skills": [
+            "Reflita a posição de Paula em relação ao plano do espelho",
+            "Identifique o ponto 3 atrás do espelho à mesma distância"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa imagem em espelho plano.",
+          "rationale": "Identifique o ponto 3 atrás do espelho à mesma distância.",
+          "strategy": [
+            "Reflita a posição de Paula em relação ao plano do espelho.",
+            "Identifique o ponto 3 atrás do espelho à mesma distância."
+          ],
+          "trap": "Escolher o ponto sobre o espelho por onde passa o raio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "68",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Energia e potência elétrica"
+          ],
+          "skills": [
+            "Divida 36,3 kWh por 0,110 kW",
+            "Distribua as horas de funcionamento pelos trinta dias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa energia e potência elétrica.",
+          "rationale": "Distribua as horas de funcionamento pelos trinta dias.",
+          "strategy": [
+            "Divida 36,3 kWh por 0,110 kW.",
+            "Distribua as horas de funcionamento pelos trinta dias."
+          ],
+          "trap": "Usar watts e quilowatts sem converter.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "69",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_eletromagnetismo",
+          "topic": "Eletromagnetismo",
+          "subtopics": [
+            "Força magnética e movimento"
+          ],
+          "skills": [
+            "Reconheça que a força é perpendicular à velocidade",
+            "Conclua mudança de direção sem trabalho e sem alteração do módulo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa força magnética e movimento.",
+          "rationale": "Conclua mudança de direção sem trabalho e sem alteração do módulo.",
+          "strategy": [
+            "Reconheça que a força é perpendicular à velocidade.",
+            "Conclua mudança de direção sem trabalho e sem alteração do módulo."
+          ],
+          "trap": "Supor que força sempre aumenta a rapidez.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "70",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_fisica_moderna",
+          "topic": "Física Moderna",
+          "subtopics": [
+            "Limiar fotoelétrico"
+          ],
+          "skills": [
+            "Divida a energia mínima pela constante de Planck",
+            "Compare a frequência limite às cinco frequências da tabela"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa limiar fotoelétrico.",
+          "rationale": "Compare a frequência limite às cinco frequências da tabela.",
+          "strategy": [
+            "Divida a energia mínima pela constante de Planck.",
+            "Compare a frequência limite às cinco frequências da tabela."
+          ],
+          "trap": "Selecionar luz pela intensidade em vez da frequência.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "71",
+          "page": 20,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Porcentagem de candidatos"
+          ],
+          "skills": [
+            "Multiplique vagas pela relação candidato por vaga em cada curso",
+            "Divida os 63 candidatos de Engenharia pelo total 230"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa porcentagem de candidatos.",
+          "rationale": "Divida os 63 candidatos de Engenharia pelo total 230.",
+          "strategy": [
+            "Multiplique vagas pela relação candidato por vaga em cada curso.",
+            "Divida os 63 candidatos de Engenharia pelo total 230."
+          ],
+          "trap": "Somar relações candidato por vaga sem ponderar vagas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "72",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Composição de funções afins"
+          ],
+          "skills": [
+            "Determine m e n com os dois pares A e B",
+            "Determine p e q com os pares B e C e some os quatro parâmetros"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa composição de funções afins.",
+          "rationale": "Determine p e q com os pares B e C e some os quatro parâmetros.",
+          "strategy": [
+            "Determine m e n com os dois pares A e B.",
+            "Determine p e q com os pares B e C e some os quatro parâmetros."
+          ],
+          "trap": "Confundir a função de C em B com a de C em A.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "C"
+        },
+        {
+          "number": "73",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_combinatoria",
+          "topic": "Análise Combinatória",
+          "subtopics": [
+            "Distribuição de objetos idênticos"
+          ],
+          "skills": [
+            "Escreva A mais B igual a duas vezes C e total dez",
+            "Enumere C positivo com D positivo e conte as decomposições positivas de A mais B"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa distribuição de objetos idênticos.",
+          "rationale": "Enumere C positivo com D positivo e conte as decomposições positivas de A mais B.",
+          "strategy": [
+            "Escreva A mais B igual a duas vezes C e total dez.",
+            "Enumere C positivo com D positivo e conte as decomposições positivas de A mais B."
+          ],
+          "trap": "Distinguir artificialmente livros idênticos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "74",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_plana",
+          "topic": "Geometria Plana",
+          "subtopics": [
+            "Ângulo central e inscrito"
+          ],
+          "skills": [
+            "Associe o ângulo inscrito de 108 graus ao arco oposto de 216 graus",
+            "Subtraia de 360 para obter o ângulo central interno de 144 graus"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa ângulo central e inscrito.",
+          "rationale": "Subtraia de 360 para obter o ângulo central interno de 144 graus.",
+          "strategy": [
+            "Associe o ângulo inscrito de 108 graus ao arco oposto de 216 graus.",
+            "Subtraia de 360 para obter o ângulo central interno de 144 graus."
+          ],
+          "trap": "Tomar o arco maior como o ângulo central pedido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "B"
+        },
+        {
+          "number": "75",
+          "page": 21,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_analitica",
+          "topic": "Geometria Analítica",
+          "subtopics": [
+            "Distância de ponto a reta"
+          ],
+          "skills": [
+            "Escreva a bissetriz como x menos y igual a zero",
+            "Aplique a distância do ponto dois,oito à reta e simplifique"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa distância de ponto a reta.",
+          "rationale": "Aplique a distância do ponto dois,oito à reta e simplifique.",
+          "strategy": [
+            "Escreva a bissetriz como x menos y igual a zero.",
+            "Aplique a distância do ponto dois,oito à reta e simplifique."
+          ],
+          "trap": "Usar distância horizontal ou vertical como perpendicular.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "76",
+          "page": 22,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Decaimento exponencial"
+          ],
+          "skills": [
+            "Calcule os expoentes para cinquenta e cento e cinquenta segundos",
+            "Subtraia 7,5 de 30 na unidade dada"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa decaimento exponencial.",
+          "rationale": "Subtraia 7,5 de 30 na unidade dada.",
+          "strategy": [
+            "Calcule os expoentes para cinquenta e cento e cinquenta segundos.",
+            "Subtraia 7,5 de 30 na unidade dada."
+          ],
+          "trap": "Subtrair os tempos antes de aplicar a função.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "77",
+          "page": 22,
+          "subject": "Matemática",
+          "topicId": "mat_geometria_espacial",
+          "topic": "Geometria Espacial",
+          "subtopics": [
+            "Área e volume do cilindro"
+          ],
+          "skills": [
+            "Iguale duas pi r ao quadrado mais duas pi rh a pi r ao quadrado h",
+            "Cancele os fatores e isole r igual a 2h sobre h menos 2"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa área e volume do cilindro.",
+          "rationale": "Cancele os fatores e isole r igual a 2h sobre h menos 2.",
+          "strategy": [
+            "Iguale duas pi r ao quadrado mais duas pi rh a pi r ao quadrado h.",
+            "Cancele os fatores e isole r igual a 2h sobre h menos 2."
+          ],
+          "trap": "Esquecer uma das duas bases na área total.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "D"
+        },
+        {
+          "number": "78",
+          "page": 22,
+          "subject": "Matemática",
+          "topicId": "mat_aritmetica_proporcionalidade",
+          "topic": "Aritmética e Proporcionalidade",
+          "subtopics": [
+            "Consumo e proporcionalidade inversa"
+          ],
+          "skills": [
+            "Calcule o saldo após cinco dias em unidades aluno-dia",
+            "Divida por 850 e identifique o primeiro dia além da duração fracionária"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa consumo e proporcionalidade inversa.",
+          "rationale": "Divida por 850 e identifique o primeiro dia além da duração fracionária.",
+          "strategy": [
+            "Calcule o saldo após cinco dias em unidades aluno-dia.",
+            "Divida por 850 e identifique o primeiro dia além da duração fracionária."
+          ],
+          "trap": "Reiniciar o reservatório cheio após a chegada dos novos alunos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "E"
+        },
+        {
+          "number": "79",
+          "page": 22,
+          "subject": "Matemática",
+          "topicId": "mat_log_exponenciais",
+          "topic": "Logaritmos e Exponenciais",
+          "subtopics": [
+            "Propriedades de logaritmos"
+          ],
+          "skills": [
+            "Escreva 14 como sete vezes dez dividido por cinco",
+            "Aplique soma e diferença dos logaritmos para obter x mais um menos y"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa propriedades de logaritmos.",
+          "rationale": "Aplique soma e diferença dos logaritmos para obter x mais um menos y.",
+          "strategy": [
+            "Escreva 14 como sete vezes dez dividido por cinco.",
+            "Aplique soma e diferença dos logaritmos para obter x mais um menos y."
+          ],
+          "trap": "Confundir logaritmo de quociente com quociente de logaritmos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        },
+        {
+          "number": "80",
+          "page": 22,
+          "subject": "Matemática",
+          "topicId": "mat_funcoes",
+          "topic": "Funções",
+          "subtopics": [
+            "Máximo de função quadrática"
+          ],
+          "skills": [
+            "Localize o vértice em x igual a 410",
+            "Substitua na função de lucro para obter 168100 reais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa máximo de função quadrática.",
+          "rationale": "Substitua na função de lucro para obter 168100 reais.",
+          "strategy": [
+            "Localize o vértice em x igual a 410.",
+            "Substitua na função de lucro para obter 168100 reais."
+          ],
+          "trap": "Usar a raiz 820 como ponto de lucro máximo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [],
+          "answer": "A"
+        }
+      ]
+    },
+    {
+      "id": "famerp-2025-especificos-discursiva",
+      "group": "especificos-discursiva",
+      "phase": "Conhecimentos Específicos e Redação",
+      "phaseGroup": "2a",
+      "format": "open",
+      "version": "Caderno002 — imprensa",
+      "sourceUrl": "https://documento.vunesp.com.br/documento/stream/NjY1MjgxOQ%3d%3d",
+      "answerKeyUrl": null,
+      "sha256": "525c48d5613e36baa8f96f9728476b7e368f2b3176e7428c2f111dc14866234e",
+      "answerKeySha256": null,
+      "pages": 28,
+      "expectedQuestions": 21,
+      "coverageNote": "Caderno e gabarito objetivos publicados na mesma página de documentos da organizadora; versão de imprensa. Inclui proposta de redação como uma unidade separada das20 questões. Não foi encontrado espelho público de respostas esperadas correspondente; a estratégia posterior será autoral e deve declarar essa lacuna.",
+      "questions": [
+        {
+          "number": "01",
+          "page": 3,
+          "subject": "Biologia",
+          "topicId": "bio_ecologia",
+          "topic": "Ecologia",
+          "subtopics": [
+            "Mutualismo e biomagnificação",
+            "Mutualismo",
+            "Pele dos anfíbios",
+            "Carcinogênese"
+          ],
+          "skills": [
+            "Relacione proteção bacteriana e pele permeável",
+            "Explique aumento do arsênio nos níveis tróficos e potencial cancerígeno"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve mutualismo e biomagnificação.",
+          "rationale": "Explique aumento do arsênio nos níveis tróficos e potencial cancerígeno.",
+          "strategy": [
+            "Relacione proteção bacteriana e pele permeável.",
+            "Explique aumento do arsênio nos níveis tróficos e potencial cancerígeno."
+          ],
+          "trap": "Confundir concentração por nível trófico com diluição.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "02",
+          "page": 4,
+          "subject": "Biologia",
+          "topicId": "bio_codigo_genetico_sintese",
+          "topic": "Código Genético e Síntese Proteica",
+          "subtopics": [
+            "Ciclo celular e citocinese",
+            "Replicação do DNA",
+            "Microfilamentos e citocinese",
+            "Quiescência G0"
+          ],
+          "skills": [
+            "Identifique mitose e síntese de DNA na fase S",
+            "Relacione microfilamentos à citocinese e G0 à saída do ciclo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve ciclo celular e citocinese.",
+          "rationale": "Relacione microfilamentos à citocinese e G0 à saída do ciclo.",
+          "strategy": [
+            "Identifique mitose e síntese de DNA na fase S.",
+            "Relacione microfilamentos à citocinese e G0 à saída do ciclo."
+          ],
+          "trap": "Confundir fase S com divisão nuclear.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "03",
+          "page": 5,
+          "subject": "Biologia",
+          "topicId": "bio_metabolismo_energetico",
+          "topic": "Metabolismo Energético",
+          "subtopics": [
+            "Criptobiose e glicólise",
+            "Nematódeos",
+            "Osmose",
+            "Temperatura e enzimas"
+          ],
+          "skills": [
+            "Identifique nematódeos e entrada de água por osmose",
+            "Relacione glicólise à formação de piruvato e frio à redução da atividade enzimática"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve criptobiose e glicólise.",
+          "rationale": "Relacione glicólise à formação de piruvato e frio à redução da atividade enzimática.",
+          "strategy": [
+            "Identifique nematódeos e entrada de água por osmose.",
+            "Relacione glicólise à formação de piruvato e frio à redução da atividade enzimática."
+          ],
+          "trap": "Confundir reidratação com transporte ativo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "04",
+          "page": 6,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Pâncreas e hormônios",
+            "Insulina e glucagon",
+            "Colesterol e esteroidogênese"
+          ],
+          "skills": [
+            "Corrija glicogênio para glucagon e explique a ação hipoglicemiante da insulina",
+            "Relacione síntese hepática de colesterol à produção de esteroides gonadais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve pâncreas e hormônios.",
+          "rationale": "Relacione síntese hepática de colesterol à produção de esteroides gonadais.",
+          "strategy": [
+            "Corrija glicogênio para glucagon e explique a ação hipoglicemiante da insulina.",
+            "Relacione síntese hepática de colesterol à produção de esteroides gonadais."
+          ],
+          "trap": "Tratar glicogênio como hormônio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "05",
+          "page": 7,
+          "subject": "Biologia",
+          "topicId": "bio_botanica",
+          "topic": "Botânica",
+          "subtopics": [
+            "Fruto e dupla fecundação",
+            "Antera e semente",
+            "Partenocarpia",
+            "Endosperma triploide"
+          ],
+          "skills": [
+            "Identifique antera em X e semente em Y",
+            "Relacione hormônios à partenocarpia e dois núcleos polares à dose materna no endosperma"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve fruto e dupla fecundação.",
+          "rationale": "Relacione hormônios à partenocarpia e dois núcleos polares à dose materna no endosperma.",
+          "strategy": [
+            "Identifique antera em X e semente em Y.",
+            "Relacione hormônios à partenocarpia e dois núcleos polares à dose materna no endosperma."
+          ],
+          "trap": "Confundir óvulo com ovário na origem da semente.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "06",
+          "page": 8,
+          "subject": "Biologia",
+          "topicId": "bio_fisio_animal",
+          "topic": "Fisiologia Animal e Humana",
+          "subtopics": [
+            "Néfron e osmorregulação",
+            "Filtração glomerular",
+            "ADH",
+            "Transporte ativo nos túbulos renais"
+          ],
+          "skills": [
+            "Identifique néfron e barreira de filtração a proteínas",
+            "Explique ação do ADH e uso de ATP na reabsorção ativa"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve néfron e osmorregulação.",
+          "rationale": "Explique ação do ADH e uso de ATP na reabsorção ativa.",
+          "strategy": [
+            "Identifique néfron e barreira de filtração a proteínas.",
+            "Explique ação do ADH e uso de ATP na reabsorção ativa."
+          ],
+          "trap": "Atribuir a redução da urina à interrupção da filtração.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "07",
+          "page": 9,
+          "subject": "Biologia",
+          "topicId": "bio_genetica",
+          "topic": "Genética",
+          "subtopics": [
+            "Herança quantitativa",
+            "Poligenia aditiva",
+            "Distribuição de fenótipos"
+          ],
+          "skills": [
+            "Reconheça três pares de alelos aditivos e gameta ABE do extremo superior",
+            "Use a distribuição simétrica para inferir AaBbEe e massa modal 800 g"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve herança quantitativa.",
+          "rationale": "Use a distribuição simétrica para inferir AaBbEe e massa modal 800 g.",
+          "strategy": [
+            "Reconheça três pares de alelos aditivos e gameta ABE do extremo superior.",
+            "Use a distribuição simétrica para inferir AaBbEe e massa modal 800 g."
+          ],
+          "trap": "Tomar dominância completa como explicação da distribuição contínua.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "08",
+          "page": 10,
+          "subject": "Biologia",
+          "topicId": "bio_codigo_genetico_sintese",
+          "topic": "Código Genético e Síntese Proteica",
+          "subtopics": [
+            "Inativação do X e aneuploidias",
+            "Corpúsculo de Barr",
+            "Não disjunção meiótica",
+            "Trissomia sexual e autossômica"
+          ],
+          "skills": [
+            "Relacione número de Barr ao total de X menos um e identifique imagem 2",
+            "Explique não disjunção na anáfase e diferencie trissomia sexual de autossômica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve inativação do X e aneuploidias.",
+          "rationale": "Explique não disjunção na anáfase e diferencie trissomia sexual de autossômica.",
+          "strategy": [
+            "Relacione número de Barr ao total de X menos um e identifique imagem 2.",
+            "Explique não disjunção na anáfase e diferencie trissomia sexual de autossômica."
+          ],
+          "trap": "Afirmar que a figura permite distinguir anáfase I de II.",
+          "confidence": "medium",
+          "reviewNote": "O comando pede a fase da falha meiótica sem dados para discriminar anáfase I ou II; ambas envolvem não disjunção.",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "09",
+          "page": 11,
+          "subject": "Química",
+          "topicId": "qui_termoquimica",
+          "topic": "Termoquímica",
+          "subtopics": [
+            "Lei de Hess e obtenção de ítrio",
+            "Óxido básico",
+            "Sublimação",
+            "Entalpia de reação"
+          ],
+          "skills": [
+            "Classifique o óxido como básico e a passagem sólido-gás como sublimação",
+            "Inverta e combine as equações de modo a obter um mol de Y e some entalpias ajustadas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve lei de Hess e obtenção de ítrio.",
+          "rationale": "Inverta e combine as equações de modo a obter um mol de Y e some entalpias ajustadas.",
+          "strategy": [
+            "Classifique o óxido como básico e a passagem sólido-gás como sublimação.",
+            "Inverta e combine as equações de modo a obter um mol de Y e some entalpias ajustadas."
+          ],
+          "trap": "Somar entalpias sem inverter sinais e dividir coeficientes.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "10",
+          "page": 12,
+          "subject": "Química",
+          "topicId": "qui_radioatividade",
+          "topic": "Radioatividade",
+          "subtopics": [
+            "Decaimento beta e meia-vida",
+            "Cátion Y3+",
+            "Geometria do nitrogênio",
+            "Meia-vida"
+          ],
+          "skills": [
+            "Subtraia três elétrons do número atômico e identifique geometria piramidal do nitrogênio",
+            "Conserve massa no beta negativo e use duas meias-vidas entre 500 e 125 MBq"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve decaimento beta e meia-vida.",
+          "rationale": "Conserve massa no beta negativo e use duas meias-vidas entre 500 e 125 MBq.",
+          "strategy": [
+            "Subtraia três elétrons do número atômico e identifique geometria piramidal do nitrogênio.",
+            "Conserve massa no beta negativo e use duas meias-vidas entre 500 e 125 MBq."
+          ],
+          "trap": "Diminuir número atômico na emissão beta negativa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "11",
+          "page": 13,
+          "subject": "Química",
+          "topicId": "qui_eletroquimica",
+          "topic": "Eletroquímica",
+          "subtopics": [
+            "Pilha recarregável de Edison",
+            "Número de oxidação",
+            "Reação global e potencial da pilha"
+          ],
+          "skills": [
+            "Determine LiOH e número de oxidação mais três do níquel",
+            "Inverta a semirreação do ferro na descarga e some à redução do níquel calculando 1,37 V"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve pilha recarregável de Edison.",
+          "rationale": "Inverta a semirreação do ferro na descarga e some à redução do níquel calculando 1,37 V.",
+          "strategy": [
+            "Determine LiOH e número de oxidação mais três do níquel.",
+            "Inverta a semirreação do ferro na descarga e some à redução do níquel calculando 1,37 V."
+          ],
+          "trap": "Multiplicar potencial pelo coeficiente estequiométrico.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "12",
+          "page": 14,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Ácido forte e pH",
+            "Balanceamento por desproporção",
+            "Concentração molar",
+            "pH de ácido forte"
+          ],
+          "skills": [
+            "Balanceie a desproporção do NO2 com água",
+            "Converta o volume para litros e use concentração milimolar para obter pH três"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve ácido forte e pH.",
+          "rationale": "Converta o volume para litros e use concentração milimolar para obter pH três.",
+          "strategy": [
+            "Balanceie a desproporção do NO2 com água.",
+            "Converta o volume para litros e use concentração milimolar para obter pH três."
+          ],
+          "trap": "Usar 0,050 como volume em litros.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "13",
+          "page": 15,
+          "subject": "Química",
+          "topicId": "qui_equilibrio",
+          "topic": "Equilíbrio Químico",
+          "subtopics": [
+            "Equilíbrio de dimerização",
+            "Estrutura do dímero",
+            "Constante Kc",
+            "Gás inerte e pressão parcial"
+          ],
+          "skills": [
+            "Desenhe Cl-O-O-Cl e escreva Kc com o dímero sobre monômero ao quadrado",
+            "Use a queda de Kc com temperatura para prever dissociação e diferencie pressão total de parcial no gás inerte"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve equilíbrio de dimerização.",
+          "rationale": "Use a queda de Kc com temperatura para prever dissociação e diferencie pressão total de parcial no gás inerte.",
+          "strategy": [
+            "Desenhe Cl-O-O-Cl e escreva Kc com o dímero sobre monômero ao quadrado.",
+            "Use a queda de Kc com temperatura para prever dissociação e diferencie pressão total de parcial no gás inerte."
+          ],
+          "trap": "Deslocar o equilíbrio só pelo aumento de pressão total com gás inerte.",
+          "confidence": "medium",
+          "reviewNote": "O efeito do gás inerte pressupõe volume constante; o comando informa sistema fechado mas não explicita rigidez. A estratégia distingue pressão total e parcial.",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "14",
+          "page": 16,
+          "subject": "Química",
+          "topicId": "qui_organica_reacoes",
+          "topic": "Reações e Aplicações Orgânicas",
+          "subtopics": [
+            "Oxidação de alceno e redução",
+            "Fórmula de alceno",
+            "Polaridade da cetona",
+            "Massa molar do álcool",
+            "Esterificação"
+          ],
+          "skills": [
+            "Use CnH2n para o alceno e reconheça polaridade da cetona",
+            "Conte carbonos do álcool reduzido e identifique éster na reação com ácido carboxílico"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve oxidação de alceno e redução.",
+          "rationale": "Conte carbonos do álcool reduzido e identifique éster na reação com ácido carboxílico.",
+          "strategy": [
+            "Use CnH2n para o alceno e reconheça polaridade da cetona.",
+            "Conte carbonos do álcool reduzido e identifique éster na reação com ácido carboxílico."
+          ],
+          "trap": "Contar a ligação em zigue-zague sem seus vértices carbonados.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "15",
+          "page": 17,
+          "subject": "Física",
+          "topicId": "fis_cinematica",
+          "topic": "Cinemática Escalar",
+          "subtopics": [
+            "MRUV e segunda lei",
+            "Velocidade em MRUV",
+            "Resultante e segunda lei",
+            "Distância de decolagem"
+          ],
+          "skills": [
+            "Calcule velocidade por a vezes t e força por massa vezes aceleração",
+            "Calcule percurso por metade de a t ao quadrado e subtraia de 1600 m"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve mRUV e segunda lei.",
+          "rationale": "Calcule percurso por metade de a t ao quadrado e subtraia de 1600 m.",
+          "strategy": [
+            "Calcule velocidade por a vezes t e força por massa vezes aceleração.",
+            "Calcule percurso por metade de a t ao quadrado e subtraia de 1600 m."
+          ],
+          "trap": "Confundir distância percorrida com distância restante.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "16",
+          "page": 18,
+          "subject": "Física",
+          "topicId": "fis_dinamica_impulsiva",
+          "topic": "Dinâmica Impulsiva",
+          "subtopics": [
+            "Impulso e dissipação",
+            "Quantidade de movimento",
+            "Energia mecânica dissipada"
+          ],
+          "skills": [
+            "Use massa em quilogramas para obter quantidade de movimento e impulso no saque",
+            "Compare energia potencial de queda com a menor altura permitida de retorno para obter perda máxima"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve impulso e dissipação.",
+          "rationale": "Compare energia potencial de queda com a menor altura permitida de retorno para obter perda máxima.",
+          "strategy": [
+            "Use massa em quilogramas para obter quantidade de movimento e impulso no saque.",
+            "Compare energia potencial de queda com a menor altura permitida de retorno para obter perda máxima."
+          ],
+          "trap": "Usar a maior altura de retorno para maximizar perda energética.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "17",
+          "page": 19,
+          "subject": "Física",
+          "topicId": "fis_calorimetria",
+          "topic": "Calorimetria",
+          "subtopics": [
+            "Aquecimento e fusão",
+            "Taxa de calor",
+            "Equilíbrio gelo-água"
+          ],
+          "skills": [
+            "Calcule mc delta T e divida por oito minutos",
+            "Use coexistência de água e gelo para fixar zero grau e calcular massa fundida"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve aquecimento e fusão.",
+          "rationale": "Use coexistência de água e gelo para fixar zero grau e calcular massa fundida.",
+          "strategy": [
+            "Calcule mc delta T e divida por oito minutos.",
+            "Use coexistência de água e gelo para fixar zero grau e calcular massa fundida."
+          ],
+          "trap": "Aplicar calor sensível ao gelo que apenas se funde.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "18",
+          "page": 20,
+          "subject": "Física",
+          "topicId": "fis_optica_geometrica",
+          "topic": "Óptica Geométrica",
+          "subtopics": [
+            "Lente convergente e projeção",
+            "Aumento linear",
+            "Equação de Gauss",
+            "Vergência"
+          ],
+          "skills": [
+            "Use aumento linear com distâncias objeto-imagem e reconheça imagem real",
+            "Aplique a equação de Gauss e converta foco para metros antes da vergência"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve lente convergente e projeção.",
+          "rationale": "Aplique a equação de Gauss e converta foco para metros antes da vergência.",
+          "strategy": [
+            "Use aumento linear com distâncias objeto-imagem e reconheça imagem real.",
+            "Aplique a equação de Gauss e converta foco para metros antes da vergência."
+          ],
+          "trap": "Chamar de virtual uma imagem projetada na parede.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "19",
+          "page": 21,
+          "subject": "Física",
+          "topicId": "fis_ondulatoria",
+          "topic": "Ondulatória",
+          "subtopics": [
+            "Harmônicos em corda e tubos",
+            "Harmônicos da corda",
+            "Tubos abertos e semiabertos"
+          ],
+          "skills": [
+            "Conte três ventres na corda para obter L igual a três meios comprimentos de onda e use v igual a lambda f",
+            "Use lambda sobre quatro para tubo semiaberto e lambda sobre dois para aberto"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve harmônicos em corda e tubos.",
+          "rationale": "Use lambda sobre quatro para tubo semiaberto e lambda sobre dois para aberto.",
+          "strategy": [
+            "Conte três ventres na corda para obter L igual a três meios comprimentos de onda e use v igual a lambda f.",
+            "Use lambda sobre quatro para tubo semiaberto e lambda sobre dois para aberto."
+          ],
+          "trap": "Aplicar o mesmo comprimento fundamental aos dois tubos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "20",
+          "page": 22,
+          "subject": "Física",
+          "topicId": "fis_circuitos",
+          "topic": "Circuitos Elétricos",
+          "subtopics": [
+            "Corrente e resistividade",
+            "Carga elétrica quantizada",
+            "Segunda lei de Ohm"
+          ],
+          "skills": [
+            "Calcule carga por corrente vezes tempo e divida pela carga elementar",
+            "Obtenha resistência por U sobre i e isole comprimento em R igual a rho L sobre A"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve corrente e resistividade.",
+          "rationale": "Obtenha resistência por U sobre i e isole comprimento em R igual a rho L sobre A.",
+          "strategy": [
+            "Calcule carga por corrente vezes tempo e divida pela carga elementar.",
+            "Obtenha resistência por U sobre i e isole comprimento em R igual a rho L sobre A."
+          ],
+          "trap": "Misturar unidades de centímetro e metro na resistividade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": [
+            "a",
+            "b"
+          ]
+        },
+        {
+          "number": "R",
+          "page": 24,
+          "subject": "Redação",
+          "topicId": "por_red_argumentacao",
+          "topic": "Introdução, Argumentação e Coerência",
+          "subtopics": [
+            "Proibição de livros na escola",
+            "Censura e liberdade de expressão",
+            "Adequação etária e mediação escolar"
+          ],
+          "skills": [
+            "Confronte liberdade de expressão e adequação etária nos textos da coletânea",
+            "Defenda uma tese sobre censura e proteção com critérios de seleção e mediação escolar"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Desenvolve proibição de livros na escola.",
+          "rationale": "Defenda uma tese sobre censura e proteção com critérios de seleção e mediação escolar.",
+          "strategy": [
+            "Confronte liberdade de expressão e adequação etária nos textos da coletânea.",
+            "Defenda uma tese sobre censura e proteção com critérios de seleção e mediação escolar."
+          ],
+          "trap": "Equiparar qualquer mediação pedagógica à censura sem discutir critérios.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": null,
+          "subitems": []
+        }
+      ]
+    }
+  ]
+}

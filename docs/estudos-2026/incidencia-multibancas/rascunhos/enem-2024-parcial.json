@@ -1,0 +1,2528 @@
+{
+  "board": "ENEM",
+  "year": 2024,
+  "status": "PARCIAL FORA DO GERADOR: dia1 redigido; dia2 lido mas sem fichas redigidas. Rótulos e confiança do dia1 ainda precisam de revisão editorial final.",
+  "coverageNote": "Leitura textual dos 180 itens e proposta R concluída. Inglês apenas 01–05. Figuras decisivas do D1 e páginas2–31 do D2 inspecionadas. Chave CD5: única anulação102; CD2 sem anulações.",
+  "sourceManifest": [
+    {
+      "board": "ENEM",
+      "year": 2024,
+      "role": "prova-dia1",
+      "url": "https://riep.inep.gov.br/bitstreams/71aaf57d-a5b7-4300-bd8b-fcf2ec490570/download",
+      "localPath": "/workspace/work/board-source-discovery/enem/2024/prova-dia1-46316dcd.pdf",
+      "sha256": "d35ce001b6e6fb978d68c3d4c57f2d08ff8a4eb36487f3dd1696fba831b24a9a",
+      "pages": 32,
+      "bytes": 4810400,
+      "coverageNote": "Opção Inglês nas questões01–05; não duplicar Espanhol ou cores. Inclui proposta de redação, unidade separada das90 questões.",
+      "phase": "Dia 1 — aplicação regular impressa",
+      "group": "regular-impresso-dia1",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "Caderno 2 — Amarelo",
+      "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/01f19cf0-4be9-48df-9a29-f5fe33bbae07/download",
+      "answerKeyPath": "/workspace/work/board-source-discovery/enem/2024/gabarito-dia1-8432b981.pdf",
+      "answerKeySha256": "e1198aa21e9f04e81ceb314848bab39189fd314b27e2b8dac70a7a662defeb1d",
+      "expectedQuestionsIncludingEssay": 91,
+      "sourceType": "primary",
+      "answerKeySourceType": "primary"
+    },
+    {
+      "board": "ENEM",
+      "year": 2024,
+      "role": "prova-dia2",
+      "url": "https://www.curso-objetivo.br/vestibular/resolucao-comentada/enem/2024/2dia/enem2024_2dia_prova_amarelo.pdf",
+      "localPath": "/workspace/work/board-source-discovery/enem/2024/prova-dia2-0ef48121.pdf",
+      "sha256": "44a324acab3b3922293f06b6ee08c90696c00ba82c0357e9e803b15d80b0ea24",
+      "pages": 32,
+      "bytes": 4976057,
+      "coverageNote": "Opção Inglês nas questões01–05; não duplicar Espanhol ou cores. Questões91–180. ",
+      "phase": "Dia 2 — aplicação regular impressa",
+      "group": "regular-impresso-dia2",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "Caderno 5 — Amarelo",
+      "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/109a33f5-e556-4e51-b9e3-8e0bdf3353d8/download",
+      "answerKeyPath": "/workspace/work/board-source-discovery/enem/2024/gabarito-dia2-b81180ee.pdf",
+      "answerKeySha256": "342edd1d18c0266812b9e379c7b9b2ebfcdd739857445bd03cf3c55951861297",
+      "expectedQuestionsIncludingEssay": 90,
+      "sourceType": "identified-mirror",
+      "answerKeySourceType": "primary"
+    }
+  ],
+  "papers": [
+    {
+      "id": "enem-2024-linguagens-humanas",
+      "group": "linguagens-humanas",
+      "phase": "Linguagens, Ciências Humanas e Redação",
+      "phaseGroup": "1a",
+      "format": "multiple-choice",
+      "version": "Caderno 2 — Amarelo",
+      "sourceUrl": "https://riep.inep.gov.br/bitstreams/71aaf57d-a5b7-4300-bd8b-fcf2ec490570/download",
+      "answerKeyUrl": "https://riep.inep.gov.br/bitstreams/01f19cf0-4be9-48df-9a29-f5fe33bbae07/download",
+      "sha256": "d35ce001b6e6fb978d68c3d4c57f2d08ff8a4eb36487f3dd1696fba831b24a9a",
+      "answerKeySha256": "e1198aa21e9f04e81ceb314848bab39189fd314b27e2b8dac70a7a662defeb1d",
+      "pages": 32,
+      "expectedQuestions": 91,
+      "questions": [
+        {
+          "number": "01",
+          "page": 2,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Crítica ambiental em interface digital"
+          ],
+          "skills": [
+            "Interpreta comando de exclusão aplicado à natureza"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta comando de exclusão aplicado à natureza.",
+          "rationale": "A imagem de destruição é articulada ao vocabulário de apagar arquivos.",
+          "strategy": [
+            "Leia deleted e os índices de remoção",
+            "Relacione árvores eliminadas à destruição ambiental."
+          ],
+          "trap": "Confundir tempo restante de exclusão com tempo de crescimento de árvores.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "02",
+          "page": 2,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Conector de substituição e mudança de atitude"
+          ],
+          "skills": [
+            "Explica instead of em canção contra intolerância"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica instead of em canção contra intolerância.",
+          "rationale": "O conector propõe amar em lugar de alimentar guerras.",
+          "strategy": [
+            "Compare os verbos love e care aos referentes bélicos",
+            "Leia instead of como substituição de comportamento."
+          ],
+          "trap": "Ler o conector apenas como apresentação de cenário religioso.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "03",
+          "page": 2,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Comparação de citações e adversidade"
+          ],
+          "skills": [
+            "Relaciona mensagens atribuídas a Einstein e Bob Marley"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona mensagens atribuídas a Einstein e Bob Marley.",
+          "rationale": "Ambas valorizam oportunidades ou experiências em situações difíceis.",
+          "strategy": [
+            "Associe dificuldade a oportunidade na primeira citação",
+            "Compare sentir a chuva a apenas se molhar na segunda."
+          ],
+          "trap": "Concluir que as citações recomendam evitar qualquer dificuldade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "04",
+          "page": 3,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Finalidade de carta editorial"
+          ],
+          "skills": [
+            "Identifica recusa de publicação em carta a Alice Walker"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica recusa de publicação em carta a Alice Walker.",
+          "rationale": "O elogio inicial é seguido pela decisão de rejeitar o manuscrito.",
+          "strategy": [
+            "Leia o contraste introduzido após o elogio",
+            "Interprete pass on your manuscript no contexto editorial."
+          ],
+          "trap": "Tomar comentários sobre pontuação como pedido de correção para publicação aceita.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "05",
+          "page": 3,
+          "subject": "Inglês",
+          "topicId": "ing_01",
+          "topic": "Compreensão de Texto em Inglês",
+          "subtopics": [
+            "Preconceito linguístico e sotaque"
+          ],
+          "skills": [
+            "Identifica repressão ao sotaque espanhol de estudantes chicanos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica repressão ao sotaque espanhol de estudantes chicanos.",
+          "rationale": "Os episódios exigem apagamento das marcas linguísticas de origem.",
+          "strategy": [
+            "Compare as ordens da professora, da mãe e da universidade",
+            "Reconheça a rejeição ao sotaque na fala inglesa."
+          ],
+          "trap": "Reduzir o problema a falta de aulas de espanhol.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "06",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Aproximação entre festival e esporte"
+          ],
+          "skills": [
+            "Reconhece esportivização simbólica da disputa dos bois"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece esportivização simbólica da disputa dos bois.",
+          "rationale": "Torcida, rivalidade e competitividade aproximam festa e competição esportiva.",
+          "strategy": [
+            "Reúna os termos de disputa e torcida",
+            "Relacione essas características à organização do festival."
+          ],
+          "trap": "Confundir aproximação cultural com mudança do festival para modalidade olímpica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "07",
+          "page": 5,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Informação preventiva em reportagem"
+          ],
+          "skills": [
+            "Identifica alerta sobre sinais de câncer de mama masculino"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica alerta sobre sinais de câncer de mama masculino.",
+          "rationale": "A lista orienta reconhecimento de sintomas e fatores de risco.",
+          "strategy": [
+            "Observe caroço e retração do mamilo na enumeração",
+            "Sintetize a função de alertar sobre indicadores da doença."
+          ],
+          "trap": "Escolher índice de crescimento que a reportagem não compara no tempo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "08",
+          "page": 5,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Linguagem expressiva e hibridismo de gêneros"
+          ],
+          "skills": [
+            "Reconhece poeticidade em receita de Vinicius de Moraes"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece poeticidade em receita de Vinicius de Moraes.",
+          "rationale": "A expressividade transforma instruções culinárias em poema.",
+          "strategy": [
+            "Identifique personificações, imagens e ritmo dos versos",
+            "Diferencie essas marcas da simples lista de ingredientes."
+          ],
+          "trap": "Definir poema apenas por haver destinatária nomeada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "09",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Valorização da variedade amazonense"
+          ],
+          "skills": [
+            "Identifica propósito comum de livro e camisetas regionais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica propósito comum de livro e camisetas regionais.",
+          "rationale": "As iniciativas registram e valorizam repertório linguístico local.",
+          "strategy": [
+            "Compare o objetivo do livro ao resgate de orgulho das camisetas",
+            "Sintetize a valorização do falar amazonense."
+          ],
+          "trap": "Restringir a convergência à promoção comercial dos produtos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "10",
+          "page": 6,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Finalidade de minibiografias"
+          ],
+          "skills": [
+            "Reconhece foco na trajetória de atletas paralímpicas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece foco na trajetória de atletas paralímpicas.",
+          "rationale": "Os relatos acompanham mudanças de modalidade e conquistas profissionais.",
+          "strategy": [
+            "Compare a sequência de início, migração e medalhas",
+            "Identifique a finalidade de apresentar trajetórias."
+          ],
+          "trap": "Inferir recomendação técnica de modalidade adequada a cada deficiência.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "11",
+          "page": 6,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Instrumentos musicais e adaptação cultural",
+          "subtopics": [
+            "Instrumentos musicais e adaptação cultural"
+          ],
+          "skills": [
+            "Relaciona transformações de cordófonos à circulação cultural"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona transformações de cordófonos à circulação cultural.",
+          "rationale": "Cavaquinho, machete e ukulele ganham características locais.",
+          "strategy": [
+            "Compare formas e usos em Portugal, Brasil e Havaí",
+            "Associe mudanças à aquisição de novas identidades musicais."
+          ],
+          "trap": "Afirmar fidelidade absoluta ao modelo português original.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "12",
+          "page": 7,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Lirismo do cuidado na narrativa"
+          ],
+          "skills": [
+            "Interpreta sensibilidade afetiva em Marília acorda"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta sensibilidade afetiva em Marília acorda.",
+          "rationale": "A força do carinho ressignifica a experiência do declínio físico.",
+          "strategy": [
+            "Observe os cuidados cotidianos de Marília",
+            "Relacione o reconhecimento final do carinho à atmosfera de afeto."
+          ],
+          "trap": "Reduzir a narrativa à descrição de adaptações arquitetônicas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "13",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Desapego e persuasão em campanha"
+          ],
+          "skills": [
+            "Relaciona frase de despedida a doação de roupas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona frase de despedida a doação de roupas.",
+          "rationale": "A peça vestida e a frase convertem despedida em gesto solidário.",
+          "strategy": [
+            "Compare a roupa exibida ao pedido de doação",
+            "Leia deixar ir como desapego de objeto ainda útil."
+          ],
+          "trap": "Interpretar a campanha como descarte de roupa defeituosa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "14",
+          "page": 7,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Tecnologia e escrita de línguas indígenas"
+          ],
+          "skills": [
+            "Identifica democratização do registro escrito pelo Linklado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica democratização do registro escrito pelo Linklado.",
+          "rationale": "O teclado permite grafar combinações ausentes em programas usuais.",
+          "strategy": [
+            "Localize o problema de diacríticos e letras",
+            "Relacione sua solução à preservação de línguas maternas."
+          ],
+          "trap": "Supor que o aplicativo cria novos fonemas em vez de representações gráficas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "15",
+          "page": 8,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Acaso e experimentação fotográfica",
+          "subtopics": [
+            "Acaso e experimentação fotográfica"
+          ],
+          "skills": [
+            "Analisa fotografia de longa exposição obtida por esquecimento"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa fotografia de longa exposição obtida por esquecimento.",
+          "rationale": "A câmera esquecida produz efeito artístico não inteiramente planejado.",
+          "strategy": [
+            "Compare o projeto inicial ao tempo imprevisto de oito anos",
+            "Reconheça o acaso como parte possível da produção artística."
+          ],
+          "trap": "Concluir que toda criação depende de tecnologia sofisticada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "16",
+          "page": 8,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Transformação histórica do programa olímpico"
+          ],
+          "skills": [
+            "Reconhece adaptação do esporte a novas demandas sociais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece adaptação do esporte a novas demandas sociais.",
+          "rationale": "A inclusão do break aproxima os Jogos de jovens urbanos.",
+          "strategy": [
+            "Observe a sequência de modalidades incorporadas",
+            "Associe a decisão do COI à atualização cultural do evento."
+          ],
+          "trap": "Supor que o esporte abandonou inteiramente elementos culturais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "17",
+          "page": 8,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Letramento midiático e desinformação"
+          ],
+          "skills": [
+            "Identifica crítica à circulação de informações manipuladas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica crítica à circulação de informações manipuladas.",
+          "rationale": "A proposta de leitura crítica reage ao compartilhamento irrefletido.",
+          "strategy": [
+            "Relacione a fala da professora à checagem de informações",
+            "Diferencie crítica à manipulação de rejeição ao humor."
+          ],
+          "trap": "Concluir que todo meme ou uso pedagógico digital é condenado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "18",
+          "page": 9,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Casamento e dinheiro no Romantismo"
+          ],
+          "skills": [
+            "Analisa interferência econômica no amor em Senhora"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa interferência econômica no amor em Senhora.",
+          "rationale": "A fala de Aurélia explicita compra do marido e traição afetiva.",
+          "strategy": [
+            "Localize o vocabulário de mercado e preço",
+            "Relacione-o ao conflito amoroso de Aurélia e Seixas."
+          ],
+          "trap": "Tomar a referência à castidade como centro do conflito apresentado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "19",
+          "page": 9,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Persistência de formas escultóricas",
+          "subtopics": [
+            "Persistência de formas escultóricas"
+          ],
+          "skills": [
+            "Compara padrões estéticos de esculturas distantes no tempo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara padrões estéticos de esculturas distantes no tempo.",
+          "rationale": "As cabeças compartilham simplificação e alongamento formal.",
+          "strategy": [
+            "Compare contornos e representação de olhos e nariz",
+            "Reconheça semelhança estética sem presumir cópia direta."
+          ],
+          "trap": "Atribuir a semelhança apenas ao material das esculturas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "20",
+          "page": 10,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Arte plumária e papéis comunitários",
+          "subtopics": [
+            "Arte plumária e papéis comunitários"
+          ],
+          "skills": [
+            "Relaciona adorno ritual à posição social indígena"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona adorno ritual à posição social indígena.",
+          "rationale": "Uso dos adornos é vinculado à linhagem e à cosmologia.",
+          "strategy": [
+            "Observe o diadema junto à regra de uso por linhagem",
+            "Associe objeto ritualístico à organização comunitária."
+          ],
+          "trap": "Separar valor estético e função social dos adornos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "21",
+          "page": 10,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Metalinguagem e palavra como combate"
+          ],
+          "skills": [
+            "Identifica tematização da violência no próprio fazer verbal do rap"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica tematização da violência no próprio fazer verbal do rap.",
+          "rationale": "A palavra é descrita como tiro e munição.",
+          "strategy": [
+            "Localize os termos bélicos aplicados à palavra e ao verso",
+            "Reconheça reflexão da linguagem sobre sua própria potência."
+          ],
+          "trap": "Escolher apenas crítica social sem explicar a autorreferência verbal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "22",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Intertextualidade e persuasão"
+          ],
+          "skills": [
+            "Reconhece versos de canções usados em defesa da música"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece versos de canções usados em defesa da música.",
+          "rationale": "A autora incorpora letras conhecidas para construir seu argumento.",
+          "strategy": [
+            "Identifique alusões a Metamorfose ambulante e Volta por cima",
+            "Relacione essas citações à defesa de equilíbrio emocional."
+          ],
+          "trap": "Classificar uma única metáfora como recurso dominante do texto inteiro.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "23",
+          "page": 11,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Deslocamento como metáfora de identidade"
+          ],
+          "skills": [
+            "Interpreta tentativa de fuga de si em poema de Alice Ruiz"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta tentativa de fuga de si em poema de Alice Ruiz.",
+          "rationale": "A impossibilidade de chegar onde a pessoa não esteja transforma viagem em metáfora.",
+          "strategy": [
+            "Compare deslocamento físico à permanência do sujeito",
+            "Leia os versos finais como limite da fuga da própria identidade."
+          ],
+          "trap": "Reduzir o poema à busca turística de lugares novos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "24",
+          "page": 11,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Norma-padrão e preconceito linguístico"
+          ],
+          "skills": [
+            "Explica o estigma do falar de Adoniran Barbosa"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica o estigma do falar de Adoniran Barbosa.",
+          "rationale": "As formas estigmatizadas divergem da norma-padrão sem anular estilo e comunicação.",
+          "strategy": [
+            "Observe nóis vai e nóis fizemo",
+            "Relacione a rejeição à imposição da norma-padrão como medida única de valor."
+          ],
+          "trap": "Tratar variedade popular como incapacidade de produzir poesia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "25",
+          "page": 12,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Identidade e preservação linguística"
+          ],
+          "skills": [
+            "Explica manutenção da Língua da Tabatinga"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica manutenção da Língua da Tabatinga.",
+          "rationale": "A identificação afro-brasileira transforma estigma em legado transmitido.",
+          "strategy": [
+            "Compare o antigo estigma ao cuidado em transmitir a língua",
+            "Associe preservação a pertencimento linguístico."
+          ],
+          "trap": "Afirmar que a língua só foi preservada por passar à escrita.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "26",
+          "page": 12,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Função referencial e pobreza menstrual"
+          ],
+          "skills": [
+            "Identifica finalidade informativa em reportagem com dados sociais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica finalidade informativa em reportagem com dados sociais.",
+          "rationale": "Os indicadores explicam impactos da falta de absorventes na vida de meninas.",
+          "strategy": [
+            "Observe o uso de pesquisas e comparações",
+            "Sintetize o problema informado ao público."
+          ],
+          "trap": "Tomar a denúncia por instrução direta de autocuidado.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "27",
+          "page": 12,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Variedade regional do português"
+          ],
+          "skills": [
+            "Reconhece diversidade lexical como constitutiva do idioma"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece diversidade lexical como constitutiva do idioma.",
+          "rationale": "Nomes diferentes para pães pertencem ao português brasileiro.",
+          "strategy": [
+            "Compare pães misturados e francês/suíço",
+            "Relacione o estranhamento ao encontro de variedades regionais."
+          ],
+          "trap": "Concluir que diferenças regionais impossibilitam comunicação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "28",
+          "page": 13,
+          "subject": "Literatura",
+          "topicId": "por_lit_contemporanea",
+          "topic": "Literatura Contemporânea",
+          "subtopics": [
+            "Adoção e representações da parentalidade"
+          ],
+          "skills": [
+            "Interpreta inquietação do narrador de A resistência"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta inquietação do narrador de A resistência.",
+          "rationale": "O adjetivo adotivo expõe representações sociais que diferenciam filiações.",
+          "strategy": [
+            "Compare assentimento social à dúvida filho de quem",
+            "Relacione a inquietação a estigmas da parentalidade."
+          ],
+          "trap": "Reduzir a reflexão a ciúme entre irmãos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "29",
+          "page": 13,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Comparação de teses sobre arte"
+          ],
+          "skills": [
+            "Identifica convergência entre Graciliano Ramos e Antônio Prata"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica convergência entre Graciliano Ramos e Antônio Prata.",
+          "rationale": "Ambos defendem arte que perturba certezas e revela defeitos sociais.",
+          "strategy": [
+            "Compare rejeição a cromos idealizados e crítica à virtude sem conflitos",
+            "Sintetize a função desestabilizadora defendida."
+          ],
+          "trap": "Supor que ambos defendem arte que apenas confirma crenças.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "30",
+          "page": 13,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Ironia machadiana e elite imperial"
+          ],
+          "skills": [
+            "Analisa devaneio de Flora no baile da Ilha Fiscal"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa devaneio de Flora no baile da Ilha Fiscal.",
+          "rationale": "A ideia de governar como contemplação expõe alienação da elite.",
+          "strategy": [
+            "Situe a festa no fim do Império",
+            "Compare poder político e fantasia privada da personagem."
+          ],
+          "trap": "Atribuir à cena esperança explícita no futuro republicano.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "31",
+          "page": 14,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Benefícios e limites da telemedicina"
+          ],
+          "skills": [
+            "Identifica ampliação do acesso como benefício explicitado"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica ampliação do acesso como benefício explicitado.",
+          "rationale": "A assistência remota supera barreiras geográficas de atendimento.",
+          "strategy": [
+            "Localize a referência aos vazios assistenciais",
+            "Diferencie benefício já descrito de projetos e obstáculos técnicos."
+          ],
+          "trap": "Tratar prontuário unificado ainda em discussão como realidade garantida.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "32",
+          "page": 14,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Vivência e referenciais na arte afro-brasileira",
+          "subtopics": [
+            "Vivência e referenciais na arte afro-brasileira"
+          ],
+          "skills": [
+            "Relaciona produção artística a experiências com cultura negra"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona produção artística a experiências com cultura negra.",
+          "rationale": "Origem étnica do autor não é requisito exclusivo do repertório estético.",
+          "strategy": [
+            "Compare trajetórias de Mestre Didi e Carybé",
+            "Reconheça articulação de vivência pessoal e matriz africana."
+          ],
+          "trap": "Supor que toda obra afro-brasileira deve ser feita apenas por pessoa negra.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "33",
+          "page": 14,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Dado estatístico como evidência argumentativa"
+          ],
+          "skills": [
+            "Interpreta experimento sobre alcance racializado em rede social"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta experimento sobre alcance racializado em rede social.",
+          "rationale": "A diferença de 6000% sustenta denúncia de viés racial.",
+          "strategy": [
+            "Compare conteúdos semelhantes com modelos negras e brancas",
+            "Relacione mudança de alcance ao objetivo da denúncia."
+          ],
+          "trap": "Ler a porcentagem apenas como elogio à qualidade das fotos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "34",
+          "page": 15,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Estereótipos de gênero e participação em lutas"
+          ],
+          "skills": [
+            "Identifica causa da menor participação de meninas nas aulas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica causa da menor participação de meninas nas aulas.",
+          "rationale": "A associação cultural da luta ao masculino afasta estudantes.",
+          "strategy": [
+            "Localize as justificativas discentes",
+            "Separe estereótipo de gênero das iniciativas de inclusão já citadas."
+          ],
+          "trap": "Afirmar que a prática é biologicamente incompatível com mulheres.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "35",
+          "page": 15,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Empatia e aproximação do leitor"
+          ],
+          "skills": [
+            "Reconhece identificação de Rita Lee com dificuldades juvenis"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece identificação de Rita Lee com dificuldades juvenis.",
+          "rationale": "A autora assume a perspectiva dos jovens ao avaliar seu contexto.",
+          "strategy": [
+            "Compare carinho declarado e compreensão da experiência alheia",
+            "Selecione a frase que reconhece ser mais complicado ser jovem hoje."
+          ],
+          "trap": "Confundir demonstração de afeto com formulação específica de empatia.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "36",
+          "page": 15,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Reescrita e mudança de foco narrativo"
+          ],
+          "skills": [
+            "Analisa projeto de dar voz a Capitu"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa projeto de dar voz a Capitu.",
+          "rationale": "A contextualização subjetiva culmina em narrativa pela personagem antes silenciada.",
+          "strategy": [
+            "Identifique a crítica ao monopólio narrativo de Bentinho",
+            "Relacione a conclusão à voz póstuma de Capitu."
+          ],
+          "trap": "Afirmar que a nova obra reafirma o ponto de vista do marido.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "37",
+          "page": 16,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Concessão e ressalva em resenha"
+          ],
+          "skills": [
+            "Identifica marcas adversativas que limitam elogios"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica marcas adversativas que limitam elogios.",
+          "rationale": "Mas e outras expressões introduzem reservas à avaliação positiva.",
+          "strategy": [
+            "Localize o contraste entre brilhantismo e problemas do roteiro",
+            "Associe conectores à função de ressalvar."
+          ],
+          "trap": "Tomar a voz pessoal do crítico por impessoalidade técnica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "38",
+          "page": 16,
+          "subject": "Literatura",
+          "topicId": "por_lit_modernismo",
+          "topic": "Simbolismo, Pré-Modernismo e Modernismo",
+          "subtopics": [
+            "Preciosismo e oralidade na escrita literária"
+          ],
+          "skills": [
+            "Interpreta debate de São Bernardo sobre estilo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta debate de São Bernardo sobre estilo.",
+          "rationale": "A fala de Paulo Honório contesta artificialidade do texto de Gondim.",
+          "strategy": [
+            "Compare a escrita pernóstica ao falar cotidiano",
+            "Reconheça oposição entre preciosismo e coloquialidade."
+          ],
+          "trap": "Tratar o debate como simples erro gramatical entre personagens.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "39",
+          "page": 16,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Impressionismo e efeitos de luz",
+          "subtopics": [
+            "Impressionismo e efeitos de luz"
+          ],
+          "skills": [
+            "Identifica estética impressionista em pintura de Visconti"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica estética impressionista em pintura de Visconti.",
+          "rationale": "Pinceladas e luminosidade sugerem instantes fugazes e movimento.",
+          "strategy": [
+            "Observe tratamento de luz e contornos no jardim",
+            "Compare esses efeitos às características dos movimentos listados."
+          ],
+          "trap": "Escolher Realismo apenas por haver cena cotidiana.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "40",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Pressões do alto rendimento e saúde mental"
+          ],
+          "skills": [
+            "Identifica causas de sofrimento nos relatos de atletas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica causas de sofrimento nos relatos de atletas.",
+          "rationale": "Eventos, ritmo competitivo e mídia aparecem como fatores de pressão.",
+          "strategy": [
+            "Compare experiências de Osaka, Kyrgios e Love",
+            "Recupere a causa comum ligada ao circuito e à exposição."
+          ],
+          "trap": "Usar nacionalidade ou modalidade como causa compartilhada do sofrimento.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "41",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Tese sobre divulgação de conhecimento em podcasts"
+          ],
+          "skills": [
+            "Interpreta avaliação de podcasts como meio de aprendizagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta avaliação de podcasts como meio de aprendizagem.",
+          "rationale": "O autor contrapõe imersão informativa à dispersão das redes.",
+          "strategy": [
+            "Observe os exemplos de assuntos aprendidos",
+            "Relacione-os à tese de concentração e conhecimento."
+          ],
+          "trap": "Afirmar que o autor apresenta podcast como evolução direta do rádio.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "42",
+          "page": 17,
+          "subject": "Português",
+          "topicId": "por_norma_culta",
+          "topic": "Domínio da Norma Culta",
+          "subtopics": [
+            "Variação ocupacional e linguagem técnica"
+          ],
+          "skills": [
+            "Classifica vocabulário de um filólogo em entrevista"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classifica vocabulário de um filólogo em entrevista.",
+          "rationale": "Termos de sua especialidade aparecem mesmo em respostas pessoais.",
+          "strategy": [
+            "Localize lexicologia, causa e efeito e estrangeirismos",
+            "Associe repertório à atividade profissional de Bechara."
+          ],
+          "trap": "Explicar os termos técnicos apenas por idade ou origem regional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "43",
+          "page": 18,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Determinantes sociais de atividade física"
+          ],
+          "skills": [
+            "Interpreta perspectiva ampliada de saúde durante a pandemia"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta perspectiva ampliada de saúde durante a pandemia.",
+          "rationale": "Renda e localização condicionam oportunidades de exercício.",
+          "strategy": [
+            "Compare acesso a espaços seguros por renda e área de moradia",
+            "Relacione condições socioeconômicas à manutenção da atividade."
+          ],
+          "trap": "Reduzir a saúde à decisão individual de ter motivação.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "44",
+          "page": 18,
+          "subject": "Literatura",
+          "topicId": "por_lit_romantismo_realismo",
+          "topic": "Romantismo e Realismo",
+          "subtopics": [
+            "Crítica à exploração no pós-abolição"
+          ],
+          "skills": [
+            "Analisa contraste social em A falência"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa contraste social em A falência.",
+          "rationale": "O trabalho exaustivo e sem paga de Sancha expõe continuidade da exploração negra.",
+          "strategy": [
+            "Compare conforto da personagem privilegiada e condições de Sancha",
+            "Relacione o questionamento final à desigualdade pós-abolição."
+          ],
+          "trap": "Inferir que o fim legal da escravidão eliminou relações exploratórias.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "45",
+          "page": 18,
+          "subject": "Português",
+          "topicId": "por_texto",
+          "topic": "Entendimento de Texto",
+          "subtopics": [
+            "Reiteração lexical e unidade temática"
+          ],
+          "skills": [
+            "Identifica repetição de coisa e cognatos na progressão"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica repetição de coisa e cognatos na progressão.",
+          "rationale": "A recorrência lexical amarra exemplos e comentários da crônica.",
+          "strategy": [
+            "Rastreie coisa, coisinha e coisar",
+            "Relacione as retomadas à permanência do tema."
+          ],
+          "trap": "Escolher intertextualidade porque há canções sem atender ao mecanismo de unidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "R",
+          "page": 19,
+          "subject": "Redação",
+          "topicId": "por_red_repertorio",
+          "topic": "Leitura de Coletânea e Repertório Temático",
+          "subtopics": [
+            "Valorização da herança africana no Brasil"
+          ],
+          "skills": [
+            "Planeja dissertação sobre obstáculos ao reconhecimento da herança africana"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Planeja dissertação sobre obstáculos ao reconhecimento da herança africana.",
+          "rationale": "A coletânea contrapõe estereótipos e apagamentos a educação e memória.",
+          "strategy": [
+            "Defina tese sobre mecanismos de desvalorização cultural",
+            "Articule repertório e exemplos sem copiar os motivadores",
+            "Proponha intervenção com agente, ação e finalidade que respeite direitos."
+          ],
+          "trap": "Reduzir herança africana exclusivamente à escravidão.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "46",
+          "page": 20,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Regatões e sociabilidade amazônica"
+          ],
+          "skills": [
+            "Reconhece redes sociais criadas pelo comércio fluvial oitocentista"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece redes sociais criadas pelo comércio fluvial oitocentista.",
+          "rationale": "O regatão conecta comunidades diversas do interior.",
+          "strategy": [
+            "Identifique os grupos abastecidos e as rotas pelos rios",
+            "Associe comércio e construção de vínculos de sociabilidade."
+          ],
+          "trap": "Restringir o comerciante ao fornecimento de lazer ou de medicamentos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "47",
+          "page": 20,
+          "subject": "História",
+          "topicId": "his_guerra_fria_contemporaneo",
+          "topic": "Guerra Fria e Mundo Contemporâneo",
+          "subtopics": [
+            "Ditadura argentina e direitos humanos"
+          ],
+          "skills": [
+            "Identifica denúncia das Madres de Plaza de Mayo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica denúncia das Madres de Plaza de Mayo.",
+          "rationale": "O movimento torna visível a repressão estatal da ditadura.",
+          "strategy": [
+            "Situe protestos frente ao aparato militar",
+            "Relacione desaparecimentos e denúncia à violação de direitos humanos."
+          ],
+          "trap": "Confundir repressão política com violência doméstica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "48",
+          "page": 20,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Produção do espaço e artificialização"
+          ],
+          "skills": [
+            "Compara imagens de transformação de Dubai"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara imagens de transformação de Dubai.",
+          "rationale": "A expansão de construções e ilhas modifica o espaço físico.",
+          "strategy": [
+            "Compare costa e ocupação em 2000 e 2020",
+            "Identifique intervenções humanas na paisagem."
+          ],
+          "trap": "Interpretar ilhas artificiais como redefinição de fronteiras nacionais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "49",
+          "page": 21,
+          "subject": "Filosofia",
+          "topicId": "fil_niilismo_existencialismo",
+          "topic": "Nietzsche, Existencialismo e Filosofia Contemporânea",
+          "subtopics": [
+            "Empirismo lógico e estatuto da linguagem"
+          ],
+          "skills": [
+            "Compara Quine e Carnap sobre significado dos enunciados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara Quine e Carnap sobre significado dos enunciados.",
+          "rationale": "A divergência envolve fundamentação empírica e dogmas semânticos.",
+          "strategy": [
+            "Identifique as teses sobre conteúdo factual",
+            "Compare-as à crítica da separação analítico/sintético e do reducionismo."
+          ],
+          "trap": "Deslocar a divergência para critérios de moralidade.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "50",
+          "page": 21,
+          "subject": "Sociologia",
+          "topicId": "soc_cultura_identidade",
+          "topic": "Cultura, Identidade e Diversidade",
+          "subtopics": [
+            "Indústria cultural e controle social"
+          ],
+          "skills": [
+            "Interpreta crítica à homogeneização dos indivíduos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta crítica à homogeneização dos indivíduos.",
+          "rationale": "A promessa de liberdade mascara padronização e submissão.",
+          "strategy": [
+            "Compare aparência de singularidade ao tratamento como massa",
+            "Associe a crítica ao mecanismo de controle social."
+          ],
+          "trap": "Reduzir indústria cultural à simples propriedade estatal.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "51",
+          "page": 21,
+          "subject": "História",
+          "topicId": "his_brasil_imperio",
+          "topic": "Brasil Império",
+          "subtopics": [
+            "Abolicionismo e atuação de artistas"
+          ],
+          "skills": [
+            "Identifica causa comum de Chiquinha Gonzaga e Castro Alves"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica causa comum de Chiquinha Gonzaga e Castro Alves.",
+          "rationale": "As duas trajetórias ligam produção artística ao combate à escravidão.",
+          "strategy": [
+            "Localize atuação pelo fim da escravatura",
+            "Relacione poesia antiescravista ao movimento abolicionista."
+          ],
+          "trap": "Confundir a mobilização com o Integralismo do século XX.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "52",
+          "page": 21,
+          "subject": "Sociologia",
+          "topicId": "soc_globalizacao",
+          "topic": "Globalização e Sociedade Contemporânea",
+          "subtopics": [
+            "Globalização e identidades plurais"
+          ],
+          "skills": [
+            "Relaciona pluralização identitária a pautas de minorias"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona pluralização identitária a pautas de minorias.",
+          "rationale": "Identidades menos fixas abrem novas posições políticas.",
+          "strategy": [
+            "Observe os termos plurais, diversas e políticas",
+            "Relacione esse deslocamento ao fortalecimento de demandas minoritárias."
+          ],
+          "trap": "Supor que pluralização garante igualdade racial já realizada.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "53",
+          "page": 22,
+          "subject": "Geografia",
+          "topicId": "geo_fisica_brasil",
+          "topic": "Geografia Física do Brasil",
+          "subtopics": [
+            "Tectônica de placas e intensidade sísmica"
+          ],
+          "skills": [
+            "Relaciona tremores à distância de zonas de subducção"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona tremores à distância de zonas de subducção.",
+          "rationale": "A placa de Nazca e suas bordas explicam diferenças regionais de sismicidade.",
+          "strategy": [
+            "Localize Chile, Amazônia e São Paulo em relação à borda de placa",
+            "Compare efeitos da subducção e tremores intraplaca."
+          ],
+          "trap": "Associar terremotos somente à existência de planícies costeiras.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "54",
+          "page": 22,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Sanitarismo e hierarquia profissional"
+          ],
+          "skills": [
+            "Interpreta organização de trabalhadores na saúde pública"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta organização de trabalhadores na saúde pública.",
+          "rationale": "A analogia com oficiais e auxiliares estabelece estratificação de funções.",
+          "strategy": [
+            "Identifique graduados e pessoal de apoio",
+            "Relacione a divisão à hierarquização profissional."
+          ],
+          "trap": "Inferir eugenia apenas pela presença de discurso sanitarista.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "55",
+          "page": 22,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Desastre e vínculos com o lugar"
+          ],
+          "skills": [
+            "Analisa perda de espaço vivido após rompimento de barragem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa perda de espaço vivido após rompimento de barragem.",
+          "rationale": "A destruição de casas e histórias rompe relações afetivas com localidades.",
+          "strategy": [
+            "Localize referências a sonhos, vidas e resquícios abandonados",
+            "Associe deslocamento forçado à fragilização de vínculos."
+          ],
+          "trap": "Afirmar que o desastre consolidou as identidades e práticas locais.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "56",
+          "page": 22,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "Modernização técnica e ideário republicano"
+          ],
+          "skills": [
+            "Relaciona inventos à construção de projeto nacional"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona inventos à construção de projeto nacional.",
+          "rationale": "Ciência e progresso foram associados à imagem republicana de nação.",
+          "strategy": [
+            "Situe as inovações entre 1890 e 1914",
+            "Relacione o entusiasmo técnico à legitimação republicana."
+          ],
+          "trap": "Projetar mercantilismo ou absolutismo sobre a Primeira República.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "57",
+          "page": 23,
+          "subject": "Filosofia",
+          "topicId": "fil_aristoteles",
+          "topic": "Aristóteles",
+          "subtopics": [
+            "Virtude e eudaimonia"
+          ],
+          "skills": [
+            "Interpreta felicidade como atividade de aperfeiçoamento ético"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta felicidade como atividade de aperfeiçoamento ético.",
+          "rationale": "Virtude manifesta-se na conduta deliberada e na excelência humana.",
+          "strategy": [
+            "Compare felicidade-atividade e mero estado psicológico",
+            "Associe prudência à prática de agir bem."
+          ],
+          "trap": "Trocar virtude prática por domínio de técnicas retóricas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "58",
+          "page": 23,
+          "subject": "História",
+          "topicId": "his_idade_media",
+          "topic": "Idade Média",
+          "subtopics": [
+            "Universidade como legado medieval"
+          ],
+          "skills": [
+            "Reconhece continuidade institucional de produção intelectual"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece continuidade institucional de produção intelectual.",
+          "rationale": "A universidade articula tradição histórica e conhecimento científico.",
+          "strategy": [
+            "Identifique a instituição medieval destacada",
+            "Relacione sua permanência à atividade intelectual transmitida."
+          ],
+          "trap": "Reduzir seu legado à função mercantil.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "59",
+          "page": 23,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Reservas extrativistas e gestão local"
+          ],
+          "skills": [
+            "Analisa alternativa produtiva de seringueiros"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa alternativa produtiva de seringueiros.",
+          "rationale": "Decisões locais articulam produtividade ecológica e valores comunitários.",
+          "strategy": [
+            "Observe a passagem da luta sindical à reserva extrativista",
+            "Relacione gestão territorial às decisões dos habitantes."
+          ],
+          "trap": "Supor que a proposta depende de padronização global de preços.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "60",
+          "page": 23,
+          "subject": "Filosofia",
+          "topicId": "fil_niilismo_existencialismo",
+          "topic": "Nietzsche, Existencialismo e Filosofia Contemporânea",
+          "subtopics": [
+            "Finitude e projetos de vida"
+          ],
+          "skills": [
+            "Identifica problema existencial na reflexão da personagem"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica problema existencial na reflexão da personagem.",
+          "rationale": "A impossibilidade de envelhecer confronta desejos e mortalidade.",
+          "strategy": [
+            "Localize consciência de futuro interrompido",
+            "Associe limites dos projetos à finitude humana."
+          ],
+          "trap": "Tratar a reflexão como discussão técnica sobre conhecimento objetivo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "61",
+          "page": 24,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Las Casas e conflito colonial"
+          ],
+          "skills": [
+            "Compara avaliações do defensor dos indígenas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara avaliações do defensor dos indígenas.",
+          "rationale": "Colonizadores rejeitam limites à exploração e indígenas reconhecem sua defesa.",
+          "strategy": [
+            "Identifique quem perde trabalho compulsório e quem é protegido",
+            "Associe cada posição ao julgamento de Las Casas."
+          ],
+          "trap": "Afirmar que o imperador o odiava apesar de promulgar leis favoráveis à sua pauta.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "62",
+          "page": 24,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Valsa e distinção social"
+          ],
+          "skills": [
+            "Explica rejeição aristocrática a prática popular"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Explica rejeição aristocrática a prática popular.",
+          "rationale": "O vínculo com cultura plebeia motiva o afastamento da nobreza.",
+          "strategy": [
+            "Localize a razão da rejeição no século XVI",
+            "Diferencie origem social da dança e justificativas religiosas de outras épocas."
+          ],
+          "trap": "Escolher feitiçaria ou ritual pagão sem apoio na fonte.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "63",
+          "page": 24,
+          "subject": "Sociologia",
+          "topicId": "soc_movimentos_sociais",
+          "topic": "Movimentos Sociais e Cidadania",
+          "subtopics": [
+            "Diversidade interna no Black Lives Matter"
+          ],
+          "skills": [
+            "Interpreta reivindicação inclusiva de movimento antirracista"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta reivindicação inclusiva de movimento antirracista.",
+          "rationale": "O movimento integra gênero, sexualidade e outras condições do grupo.",
+          "strategy": [
+            "Compare nacionalismo restrito à enumeração inclusiva",
+            "Reconheça a incorporação da diversidade identitária."
+          ],
+          "trap": "Reduzir a proposta a liderança masculina heterossexual.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "64",
+          "page": 24,
+          "subject": "Geografia",
+          "topicId": "geo_hidrogeografia",
+          "topic": "Hidrogeografia",
+          "subtopics": [
+            "Inundações e declividade"
+          ],
+          "skills": [
+            "Relaciona resposta fluvial à forma do relevo"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona resposta fluvial à forma do relevo.",
+          "rationale": "Maior declividade acelera escoamento e resposta da inundação.",
+          "strategy": [
+            "Compare pico e duração das duas curvas",
+            "Relacione rapidez do escoamento à inclinação do terreno."
+          ],
+          "trap": "Explicar a diferença apenas por turbidez da água.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "65",
+          "page": 25,
+          "subject": "Filosofia",
+          "topicId": "fil_etica_politica_contemporanea",
+          "topic": "Ética e Política Contemporâneas",
+          "subtopics": [
+            "Injustiça epistêmica e preconceito"
+          ],
+          "skills": [
+            "Reconhece descredibilização desigual de testemunhos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece descredibilização desigual de testemunhos.",
+          "rationale": "Preconceito identitário reduz credibilidade e prejudica circulação do saber.",
+          "strategy": [
+            "Localize quem recebe menos confiança",
+            "Associe a desvalorização da fala à injustiça epistêmica."
+          ],
+          "trap": "Confundir perda de credibilidade com padronização estética do corpo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "66",
+          "page": 25,
+          "subject": "Filosofia",
+          "topicId": "fil_socrates_platao",
+          "topic": "Sócrates e Platão",
+          "subtopics": [
+            "Dualismo entre corpo e alma"
+          ],
+          "skills": [
+            "Identifica concepção metafísica dicotômica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica concepção metafísica dicotômica.",
+          "rationale": "Alma duradoura e corpo corruptível aparecem como polos distintos.",
+          "strategy": [
+            "Compare destinos atribuídos a alma e corpo",
+            "Reconheça oposição dualista da tradição clássica."
+          ],
+          "trap": "Tomar a celebração da alma como negação de qualquer distinção metafísica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "67",
+          "page": 25,
+          "subject": "Sociologia",
+          "topicId": "soc_cultura_identidade",
+          "topic": "Cultura, Identidade e Diversidade",
+          "subtopics": [
+            "Rito funerário e memória coletiva"
+          ],
+          "skills": [
+            "Interpreta função social do Axexe"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta função social do Axexe.",
+          "rationale": "A sequência ritual mantém referências coletivas ao morto e à tradição.",
+          "strategy": [
+            "Observe objetos e ações compartilhados",
+            "Relacione a cerimônia à manutenção da memória da comunidade."
+          ],
+          "trap": "Aplicar rótulo externo de prática pagã como explicação dos adeptos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "68",
+          "page": 25,
+          "subject": "Sociologia",
+          "topicId": "soc_movimentos_sociais",
+          "topic": "Movimentos Sociais e Cidadania",
+          "subtopics": [
+            "Espaço público e democracia"
+          ],
+          "skills": [
+            "Relaciona visibilidade de conflitos à construção democrática"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona visibilidade de conflitos à construção democrática.",
+          "rationale": "O debate permite comunicação e ajustes sem apagar divergências.",
+          "strategy": [
+            "Identifique diálogo e compromissos na descrição",
+            "Associe expressão de oposições à vida democrática."
+          ],
+          "trap": "Definir espaço público como consenso perfeito e definitivo.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "69",
+          "page": 26,
+          "subject": "Filosofia",
+          "topicId": "fil_etica_politica_contemporanea",
+          "topic": "Ética e Política Contemporâneas",
+          "subtopics": [
+            "Democracia e soberania popular"
+          ],
+          "skills": [
+            "Identifica fundamento do exercício coletivo do poder"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica fundamento do exercício coletivo do poder.",
+          "rationale": "O sujeito do mando é a coletividade dos cidadãos.",
+          "strategy": [
+            "Separe quem exerce poder de sua extensão",
+            "Associe participação de todos à soberania popular."
+          ],
+          "trap": "Confundir exercício coletivo com centralização administrativa.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "70",
+          "page": 26,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Adaptação urbana baseada na natureza"
+          ],
+          "skills": [
+            "Seleciona medida de redução de riscos climáticos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona medida de redução de riscos climáticos.",
+          "rationale": "Parques ampliam vegetação, infiltração e regulação térmica.",
+          "strategy": [
+            "Relacione inundações e ondas de calor aos serviços da vegetação",
+            "Escolha implantação de parques entre as intervenções."
+          ],
+          "trap": "Escolher impermeabilização por estacionamento como solução ambiental.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "71",
+          "page": 26,
+          "subject": "Geografia",
+          "topicId": "geo_geopolitica_regional",
+          "topic": "Geopolítica Regional Contemporânea",
+          "subtopics": [
+            "Conselho de Segurança e poder de veto"
+          ],
+          "skills": [
+            "Interpreta desigualdade na organização da ONU"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta desigualdade na organização da ONU.",
+          "rationale": "Cinco membros permanentes têm prerrogativa negada aos demais.",
+          "strategy": [
+            "Compare permanência e veto ao papel dos outros dez membros",
+            "Reconheça assimetria política nas relações internacionais."
+          ],
+          "trap": "Confundir presença numa mesma organização com igualdade de poder.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "72",
+          "page": 26,
+          "subject": "Sociologia",
+          "topicId": "soc_trabalho_sociedade",
+          "topic": "Trabalho e Sociedade",
+          "subtopics": [
+            "Alienação e contradição produtiva"
+          ],
+          "skills": [
+            "Analisa dependência do capital em relação à iniciativa dos trabalhadores"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa dependência do capital em relação à iniciativa dos trabalhadores.",
+          "rationale": "O sistema precisa da atividade humana que simultaneamente busca reduzir.",
+          "strategy": [
+            "Compare obediência mecânica e contribuição autônoma indispensável",
+            "Relacione a contradição à organização alienante do trabalho."
+          ],
+          "trap": "Supor que a fábrica funciona melhor com trabalhadores inteiramente passivos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "73",
+          "page": 27,
+          "subject": "Sociologia",
+          "topicId": "soc_globalizacao",
+          "topic": "Globalização e Sociedade Contemporânea",
+          "subtopics": [
+            "Circulação transnacional de telenovelas"
+          ],
+          "skills": [
+            "Compara influência cultural brasileira na Rússia e em Angola"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara influência cultural brasileira na Rússia e em Angola.",
+          "rationale": "A apropriação de costumes ocorre em sociedades distintas.",
+          "strategy": [
+            "Observe mudanças de rotina e consumo de figurinos",
+            "Relacione-as à incorporação cultural de teledramaturgia estrangeira."
+          ],
+          "trap": "Inferir adoção de sistema político brasileiro pelo consumo de novelas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "74",
+          "page": 27,
+          "subject": "Sociologia",
+          "topicId": "soc_movimentos_sociais",
+          "topic": "Movimentos Sociais e Cidadania",
+          "subtopics": [
+            "Direitos quilombolas e inserção social"
+          ],
+          "skills": [
+            "Relaciona Constituição de 1988 ao reconhecimento territorial e cultural"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona Constituição de 1988 ao reconhecimento territorial e cultural.",
+          "rationale": "A atenção estatal integra direitos de comunidades antes marginalizadas.",
+          "strategy": [
+            "Identifique o patrimônio quilombola reconhecido",
+            "Associe medidas estatais à inserção social e cidadania."
+          ],
+          "trap": "Confundir reconhecimento de diversidade com homogeneização educacional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "75",
+          "page": 27,
+          "subject": "Filosofia",
+          "topicId": "fil_moderna_racionalismo_empirismo",
+          "topic": "Filosofia Moderna: Racionalismo e Empirismo",
+          "subtopics": [
+            "Raciocínio indutivo"
+          ],
+          "skills": [
+            "Reconhece inferência universal a partir de observações particulares"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Reconhece inferência universal a partir de observações particulares.",
+          "rationale": "O peru generaliza alimentação diária de experiências repetidas.",
+          "strategy": [
+            "Liste os casos observados em dias diversos",
+            "Identifique a passagem desses casos para o sempre da conclusão."
+          ],
+          "trap": "Tratar observações repetidas como demonstração lógica indubitável.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "76",
+          "page": 27,
+          "subject": "Geografia",
+          "topicId": "geo_cartografia",
+          "topic": "Cartografia e Fundamentos",
+          "subtopics": [
+            "Cartografia e poder territorial"
+          ],
+          "skills": [
+            "Identifica função política dos mapas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica função política dos mapas.",
+          "rationale": "A seleção de informações atende interesses de grupos dominantes.",
+          "strategy": [
+            "Localize relação entre mapas e dominação",
+            "Associe aperfeiçoamento cartográfico à sustentação de hegemonias."
+          ],
+          "trap": "Presumir neutralidade de toda representação cartográfica.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "77",
+          "page": 28,
+          "subject": "Filosofia",
+          "topicId": "fil_kant_idealismo",
+          "topic": "Kant e o Idealismo Alemão",
+          "subtopics": [
+            "Universalização e imperativo categórico"
+          ],
+          "skills": [
+            "Relaciona regra moral de reciprocidade à ética kantiana"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona regra moral de reciprocidade à ética kantiana.",
+          "rationale": "As alternativas exigem identificar formulação universal de obrigação.",
+          "strategy": [
+            "Observe a pretensão geral da regra",
+            "Compare imperativo categórico a cálculos de consequências."
+          ],
+          "trap": "Escolher utilitarismo por envolver relação com outras pessoas.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "78",
+          "page": 28,
+          "subject": "Geografia",
+          "topicId": "geo_populacao_urbana_brasil",
+          "topic": "Geografia da População e Urbana do Brasil",
+          "subtopics": [
+            "Refugiados e integração socioeconômica"
+          ],
+          "skills": [
+            "Seleciona política de enfrentamento da exclusão de refugiados"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona política de enfrentamento da exclusão de refugiados.",
+          "rationale": "A fronteira é social e política, exigindo integração e acesso a oportunidades.",
+          "strategy": [
+            "Diferencie limite territorial e barreira de inclusão",
+            "Relacione acolhimento a integração socioeconômica."
+          ],
+          "trap": "Propor homogeneização cultural como condição de acolhimento.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "79",
+          "page": 28,
+          "subject": "História",
+          "topicId": "his_primeira_republica_vargas",
+          "topic": "Primeira República e Era Vargas",
+          "subtopics": [
+            "DIP e representação da cultura nacional"
+          ],
+          "skills": [
+            "Interpreta capas de Travel in Brazil"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta capas de Travel in Brazil.",
+          "rationale": "As imagens selecionam tipos e tradições como representação do país.",
+          "strategy": [
+            "Compare figuras e cenários das capas",
+            "Associe a seleção visual à construção de estereótipos nacionais."
+          ],
+          "trap": "Inferir projeto industrial em imagens de tipos culturais e paisagens.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "80",
+          "page": 29,
+          "subject": "Arte",
+          "topicId": null,
+          "topic": "Xilogravura e estética do cordel",
+          "subtopics": [
+            "Xilogravura e estética do cordel"
+          ],
+          "skills": [
+            "Relaciona técnica de talhe local à apresentação de folhetos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona técnica de talhe local à apresentação de folhetos.",
+          "rationale": "A mudança no modo de ilustrar capas renova estética editorial.",
+          "strategy": [
+            "Compare demora dos clichês e produção local em madeira",
+            "Relacione a incorporação de imagens talhadas à aparência das capas."
+          ],
+          "trap": "Supor que a técnica altera necessariamente o enredo dos textos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "81",
+          "page": 29,
+          "subject": "Sociologia",
+          "topicId": "soc_cultura_identidade",
+          "topic": "Cultura, Identidade e Diversidade",
+          "subtopics": [
+            "Patrimônio cultural imaterial"
+          ],
+          "skills": [
+            "Classifica reconhecimento do Círio de Nazaré"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Classifica reconhecimento do Círio de Nazaré.",
+          "rationale": "Celebração e prática ritual integram patrimônio de natureza imaterial.",
+          "strategy": [
+            "Distinga festa e edifício material",
+            "Relacione continuidade ritual ao registro de bem imaterial."
+          ],
+          "trap": "Usar tombamento de sítio arqueológico para classificar celebração viva.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "82",
+          "page": 29,
+          "subject": "História",
+          "topicId": "his_moderna_iluminismo",
+          "topic": "Idade Moderna e Iluminismo",
+          "subtopics": [
+            "Sociabilidade e circulação iluminista"
+          ],
+          "skills": [
+            "Compara salões e cafés no Antigo Regime"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Compara salões e cafés no Antigo Regime.",
+          "rationale": "Os espaços difundem ideias mantendo diferenças de acesso e status.",
+          "strategy": [
+            "Contraste exclusividade dos salões e abertura dos cafés",
+            "Associe segregação social à circulação intelectual."
+          ],
+          "trap": "Presumir igualdade de acesso de todos aos salões aristocráticos.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "83",
+          "page": 29,
+          "subject": "Filosofia",
+          "topicId": "fil_niilismo_existencialismo",
+          "topic": "Nietzsche, Existencialismo e Filosofia Contemporânea",
+          "subtopics": [
+            "Rizoma e pluralidade de interações"
+          ],
+          "skills": [
+            "Aplica conceito de rede não hierárquica à cultura contemporânea"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Aplica conceito de rede não hierárquica à cultura contemporânea.",
+          "rationale": "Conexões entre quaisquer pontos dispensam centro organizador.",
+          "strategy": [
+            "Rastreie ausência de general e ligações preestabelecidas",
+            "Relacione organização rizomática a interações plurais."
+          ],
+          "trap": "Escolher controle homogêneo para conceito que recusa centralização.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "84",
+          "page": 30,
+          "subject": "História",
+          "topicId": "his_republica_liberal_atual",
+          "topic": "República Liberal e Brasil Contemporâneo",
+          "subtopics": [
+            "Contracepção e debate sobre planejamento familiar"
+          ],
+          "skills": [
+            "Analisa efeito social da difusão da pílula"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Analisa efeito social da difusão da pílula.",
+          "rationale": "O novo método amplia discussão pública sobre fecundidade e família.",
+          "strategy": [
+            "Situe o avanço técnico na década de 1960",
+            "Relacione controle reprodutivo ao planejamento familiar."
+          ],
+          "trap": "Supor desaparecimento da autoridade médica na contracepção.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "85",
+          "page": 30,
+          "subject": "Geografia",
+          "topicId": "geo_economica_brasil",
+          "topic": "Geografia Econômica do Brasil",
+          "subtopics": [
+            "Tecnologia e valorização de economias comunitárias"
+          ],
+          "skills": [
+            "Identifica aumento de rentabilidade pela conexão digital"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica aumento de rentabilidade pela conexão digital.",
+          "rationale": "Acesso a mercados e financiamento fortalece produção local.",
+          "strategy": [
+            "Localize integração a cadeias de abastecimento",
+            "Relacione os novos canais à valorização da economia local."
+          ],
+          "trap": "Confundir maior conexão comercial com homogeneização profissional.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "86",
+          "page": 30,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Desmatamento e chuvas convectivas"
+          ],
+          "skills": [
+            "Relaciona perda florestal à redução de umidade atmosférica"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona perda florestal à redução de umidade atmosférica.",
+          "rationale": "Menor evapotranspiração diminui alimentação de chuvas locais.",
+          "strategy": [
+            "Associe água liberada por árvores à umidade do ar",
+            "Relacione desmatamento à menor intensidade de precipitação convectiva."
+          ],
+          "trap": "Inferir menor refletividade da superfície após retirada da floresta.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "87",
+          "page": 31,
+          "subject": "Filosofia",
+          "topicId": "fil_contratualismo_iluminismo",
+          "topic": "Contratualismo Político e Iluminismo",
+          "subtopics": [
+            "Wollstonecraft e reconhecimento das mulheres"
+          ],
+          "skills": [
+            "Interpreta crítica à educação feminina voltada à sedução"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Interpreta crítica à educação feminina voltada à sedução.",
+          "rationale": "A reivindicação exige respeito a capacidades e virtudes.",
+          "strategy": [
+            "Compare imagem de dama sedutora e criatura humana racional",
+            "Associe a crítica à valorização do papel social feminino."
+          ],
+          "trap": "Restringir a reivindicação a cargo ou salário não mencionados.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "88",
+          "page": 31,
+          "subject": "Geografia",
+          "topicId": "geo_globalizacao_economica",
+          "topic": "Globalização e Geografia Econômica",
+          "subtopics": [
+            "Objetos técnicos e redes de circulação"
+          ],
+          "skills": [
+            "Relaciona infraestrutura territorial à dinamização de fluxos"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Relaciona infraestrutura territorial à dinamização de fluxos.",
+          "rationale": "Objetos funcionam articulados em sistemas de transporte e coordenação.",
+          "strategy": [
+            "Observe dependência entre comércio, vias e transportes",
+            "Associe integração técnica à circulação de pessoas e mercadorias."
+          ],
+          "trap": "Afirmar que redes de transporte têm como finalidade desindustrializar.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "89",
+          "page": 31,
+          "subject": "Geografia",
+          "topicId": "geo_climatologia_socioambiental",
+          "topic": "Climatologia e Problemas Socioambientais",
+          "subtopics": [
+            "Governança climática e sociedade civil"
+          ],
+          "skills": [
+            "Identifica atores de pressão para compromissos ambientais"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Identifica atores de pressão para compromissos ambientais.",
+          "rationale": "ONU e mobilização empresarial atuam no tensionamento das metas.",
+          "strategy": [
+            "Localize o papel da conferência e da coalizão de empresas",
+            "Relacione ambos a organismos supranacionais e sociedade civil."
+          ],
+          "trap": "Tratar o setor empresarial como instituição militar ou órgão governamental.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        },
+        {
+          "number": "90",
+          "page": 31,
+          "subject": "Filosofia",
+          "topicId": "fil_etica_politica_contemporanea",
+          "topic": "Ética e Política Contemporâneas",
+          "subtopics": [
+            "Ética do cuidado e vulnerabilidade"
+          ],
+          "skills": [
+            "Seleciona orientação ética para relações assimétricas"
+          ],
+          "relatedSubjects": [],
+          "relatedTopicIds": [],
+          "summary": "Seleciona orientação ética para relações assimétricas.",
+          "rationale": "Proteção e valorização respondem à vulnerabilidade interseccional.",
+          "strategy": [
+            "Identifique assimetrias por deficiência, gênero e idade",
+            "Relacione resposta interpessoal ao cuidado e à dignidade."
+          ],
+          "trap": "Escolher controle e cerceamento como substitutos de proteção.",
+          "confidence": "high",
+          "reviewNote": "",
+          "excluded": false,
+          "excludedReason": "",
+          "subitems": []
+        }
+      ]
+    }
+  ]
+}
